@@ -5,9 +5,9 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to teach one Hour of Code in after-school classes and clubs
+# Πως να διδάξετε την Ώρα του Κώδικα σε τάξεις και ομάδες εκτός σχολικού ωραρίου
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to help run an Hour of Code in your class.
+Γίνετε μέλος του κινήματος και εισάγετε μια ομάδα μαθητών στην πρώτη τους ώρα Επιστήμης Υπολογιστών με αυτά τα βήματα. Η Ώρα του Κώδικα είναι εύκολο να υλοποιηθεί - ακόμα και για αρχάριους! Αν θα θέλατε επιπλέον βοήθεια, μπορείτε να βρείτε έναν [τοπικό εθελοντή](%=resolve_url('https://code.org/volunteer/local')%) για να σας βοηθήσει να πραγματοποιήσετε μια Ώρα Κώδικα στην τάξη σας.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 

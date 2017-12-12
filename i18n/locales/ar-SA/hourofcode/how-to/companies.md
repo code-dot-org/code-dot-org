@@ -5,35 +5,35 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# كيفية تحقيق "ساعة برمجة" ضمن شركتك
+# كيفية تجلب "ساعة من برمجة" لشركتك
 
-## ألهم الطلاب والمتطوعين لساعة البرمجة
+## ألهم الطلاب والمتطوعين لساعة من البرمجة
 
-Code.org offers the opportunity for your employees to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+يوفر موقع code.org الفرصة لموظفي شركتك [ليتواصلوا](%= resolve_url('https://code.org/volunteer') %) مع الفصول المحلية التي تدرس ساعة من البرمجة ليشاركوا خبراتهم في التقنية ويلهموا الطلاب لدراسة علوم الحاسب.
 
 - [سجل](%= resolve_url('https://code.org/volunteer') %) للتطوع.
-- For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
+- لمزيد من التعليمات حول تشجيع الموظفين وربط الموظفين بالفصول الدراسية، تحقق من [دليل الشركاء المتعاونين](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 
-## طرق إضافية لدعم "ساعة البرمجة" من قبل الشركات:
+## طرق إضافية للشركات لدعم "ساعة من البرمجة":
 
-- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word. 
-- Host an Hour of Code Happy Hour with coworkers to try the [activities](%= resolve_url('/learn') %).
-- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+- اسأل المدير التنفيذي الخاص بك ل[ إرسال بريد إلكتروني على مستوى الشركة](%= resolve_url('/promote/resources#sample-emails') %) مؤكدا لهم على أهمية علوم الحاسب الآلي، وتشجيع العاملين على نشر الكلمة. 
+- استضف "ساعة ممتعة من ساعة من برمجة" مع زملاء العمل لتجربة[ الأنشطة](%= resolve_url('/learn') %).
+- استضف حدث "ساعة من البرمجة" لفصول دراسية محلية للطلاب أو شركاء غير ربحيين للقيام ب"ساعة من البرمجة" في مكتب الشركة. انظر حدث دليل الاستخدام أدناه.
 
-# How to host an Hour of Code event with students
+# كيف تستضيف حدث "ساعة من البرمجة" مع الطلاب
 
-## 1. Promote your Hour of Code
+## 3) اعلن عن "ساعة من البرمجة" الخاص بك
 
-- Promote your [Hour of Code](%= resolve_url('/promote') %) event and encourage others to host.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= resolve_url('https://code.org/volunteer/engineer') %) to be connected with a classroom.
+- اعلن عن [ ساعة من البرمجة](%= resolve_url('/promote') %) الخاص بك وشجع الآخرين على الاستضافة.
+- شجع مهندسي البرمجيات في شركتك لزيارة أحد الفصول الدراسية المحلية للمساعدة في "ساعة من البرمجة" والهام الطلاب لدراسة علوم الكمبيوتر. يمكنهم [ التسجيل ](%= resolve_url('https://code.org/volunteer/engineer') %) ليكونوا متصلين بأحد الفصول الدراسية.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 2-شاهد هذا الفديو <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 3. Choose an activity
+## 3. اختر نشاط
 
-We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. <0/>جربهم!</p> 
+نحن نحاول استضافة مقاطع تعليمات ممتعة لجميع الاعمار! بواسطة مجموعة متنوعة من شركائنا. <0/>جربهم!</p> 
 
-**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+**كل فعاليات "ساع برمجة"** تتطلب حد أدنى من الإعداد من المنضمين, وهي ذاتية الاسترشاد - بحيث تسمح للطلاب التعلم كلاً على حسب وتيرته ومستوى مهارته.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
@@ -57,7 +57,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 **Show an inspirational video:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
-- [فيديو ساعة من التعليمات البرمجية في العالم ](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [الفيديو العالمي لساعة من البرمجة ](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 

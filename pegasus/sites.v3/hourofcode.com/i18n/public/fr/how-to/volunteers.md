@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Guide pratique pour les bénévoles
 
-### Faisez une différence en votre classe aujourd'hui!
+### Faites une différence en votre classe aujourd'hui!
 
 ## Pourquoi devenir bénévole?
 
@@ -19,7 +19,7 @@ Découvrez quelques témoignages de volontaires :
 
 ## Tout le monde peut devenir bénévole
 
-**Volunteers and speakers in tech**: Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
+**Bénévoles et dicteurs en la technologie**: Avez-vous une connection à l'informatique ou le tech? Si vous travaillez en génie logiciel, à une compagnie de tech en n'importe quel rôle (technicien ou non), ou vous avez pris des cours d'informatique, vous pouvez aider à encourager les étudiants! Beaucoup d'étudiants n'ont jamais rencontré quelqu'un qui travaille en technologie et nos enseignants adorent pouvoir connecter leurs salles de classe à des professionels et des étudiants d'université.
 
 You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science.
 

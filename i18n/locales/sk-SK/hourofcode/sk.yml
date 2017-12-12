@@ -76,56 +76,56 @@ sk:
   company_dpsnc: Durham Public Schools
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville School District
-  company_enumclawschooldistrict: Enumclaw School District
-  company_everettsd: Everette Public Schools
-  company_fsusd: Fairfield-Suisun Unified School District
-  company_fayettecountypublicschools: Fayette County Public Schools
-  company_forsythcountyschools: Forsyth County Schools
-  company_fcschools: Franklin County School
-  company_fpschools: Franklin Pierce School District
-  company_frederickcountypublicschools: Frederick County Public Schools
-  company_fultonschools: Fulton County Schools
-  company_vadoe: Governor's School Programs
-  company_gcs: Granville County Schools
-  company_gcisd: Grapevine-Colleyville ISD
-  company_godaddy: Go Daddy
-  company_greenupcountyschooldistrict: Greenup County Schools
-  company_gwinnettcountypublicschools: Gwinnett County Public Schools
-  company_HamptonCitySchools: Hampton City Schools
-  company_HanoverCountyPublicSchools: Hanover County Public Schools
-  company_HenricoCountyPublicSchools: Henrico County Public Schools
-  company_highlineschools: Highline School District
-  company_houstonisd: Houston Independent School District
-  company_hcpss: Howard County Public Schools
-  company_idla: Idaho Digital Learning Academy
-  company_janesvilleschooldistrict: Janesville School District
-  company_johnstoncountyschools: Johnston County Schools
-  company_lps: Lincoln Public School
-  company_littletonpublicschools: Littleton Public Schools
-  company_lausd: Los Angeles Unified School District
-  company_lcps: Louisa County Public Schools
-  company_lcsedu: Lynchburg City Schools
-  company_msvl: Marysville School District
-  company_dadeschools: Miami-Dade Public Schools
-  company_miltonps: Milton Public Schools
-  company_montgomeryschoolsmd: Montgomery County Public Schools
-  company_needhampublicschools: Needham Public Schools
-  company_NelsonCountyPublicSchools: Nelson County Public Schools
-  company_newalbanyschools: New Albany Plain Local Schools
-  company_newkentschools: New Kent County Public Schools
-  company_newarkcityschools: Newark City Schools
-  company_nnschools: Newport News Public Schools
-  company_newtonpublicschools: Newton Public Schools
-  company_nps: Norfolk Public Schools
-  company_nycdoe: NYC Department of Education
-  company_ohlsd: Oak Hills Local School District
-  company_oneclay: One Clay County School District
-  company_ocps: Orange County Schools
-  company_orangeusd: Orange Unified School District
-  company_pbsd: Palm Beach School District
-  company_pvusd: Paradise Valley Unified School District
-  company_PetersburgCityPublicSchools: Petersburg City Public Schools
-  company_pylusd: Placentia-Yorba Linda Union School District
+  company_enumclawschooldistrict: Školský okrsok Enumclaw
+  company_everettsd: Verejné školy v Everett
+  company_fsusd: Zjednotený školský okrsok Fairfield-Suisun
+  company_fayettecountypublicschools: Verejné školy v okrese Fayette
+  company_forsythcountyschools: Okresné školy vo Forsyth
+  company_fcschools: Okresné školy vo Frankline
+  company_fpschools: Školský okrsok Franklin Pierce
+  company_frederickcountypublicschools: Verejné školy v okrese Frederick
+  company_fultonschools: Okresné školy vo Fultone
+  company_vadoe: Školské programy guvernéra
+  company_gcs: Okresné školy v Granville
+  company_gcisd: Nezávislý školský okrsok Grapevine-Colleyville
+  company_godaddy: Godaddy
+  company_greenupcountyschooldistrict: Školy v okrese Greenup
+  company_gwinnettcountypublicschools: Verejné školy v okrese Gwinnett
+  company_HamptonCitySchools: Mestské školy v Hamptone
+  company_HanoverCountyPublicSchools: Okresné školy v okrese Hanover
+  company_HenricoCountyPublicSchools: Verejné školy v okrese Henrico
+  company_highlineschools: Školy v okrsku Highline
+  company_houstonisd: Nezávislé školy v okrsku Houston
+  company_hcpss: Verejné školy v okrese Howard
+  company_idla: Digitálna akadémia vzdelávania v Idaho
+  company_janesvilleschooldistrict: Školský okrsok Janesville
+  company_johnstoncountyschools: Okresné školy v Johnston
+  company_lps: Verejné školy v Lincoln
+  company_littletonpublicschools: Verejné školy v Littletone
+  company_lausd: Unifikovaný školský okrsok Los Angeles
+  company_lcps: Verejné školy v okrese Louisa County
+  company_lcsedu: Mestské školy v Lynchburgu
+  company_msvl: Školský okrsok Marysville
+  company_dadeschools: Verejné školy v Miami-Dade
+  company_miltonps: Verejné školy v Miltone
+  company_montgomeryschoolsmd: Okresné školy v okrese Montgomery
+  company_needhampublicschools: Verejné školy v Needhame
+  company_NelsonCountyPublicSchools: Verejné školy v okrese Nelson
+  company_newalbanyschools: Miestne školy v New Albany Plain
+  company_newkentschools: Verejné školy v okrese New Kent
+  company_newarkcityschools: Mestské školy v Newarku
+  company_nnschools: Verejné školy v Newport News
+  company_newtonpublicschools: Verejné školy v Newtone
+  company_nps: Verejné školy v Norfolku
+  company_nycdoe: Oddelenie školstva radnice mesta New York
+  company_ohlsd: Miestny školský okres v Oak Hills
+  company_oneclay: Okresný školský okrsok One Clay
+  company_ocps: Okresné školy v Orange County
+  company_orangeusd: Unifikovaný školský okrsok Orange
+  company_pbsd: Školský okrsok Palm Beach
+  company_pvusd: Unifikovaný školský okrsok Paradise Valley
+  company_PetersburgCityPublicSchools: Mestské verejné školy v Petersburgu
+  company_pylusd: Školský okrsok Placentia-Yorba Linda Union
   company_PowhatanCountyPublicSchools: Powhatan County Public Schools
   company_pgcps: Prince Georges County Public Schools
   company_provocityschooldistrict: Provo Public Schools
@@ -219,13 +219,15 @@ sk:
   front_join_us_more_info: "Pre viac informácií, prosím navštívte <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: "Pre viac informácií navštívte stránku code.org"
   front_join_us_n_students_served: "# podávajú"
+  front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
+  front_join_us_learn_more: "Learn more"
   signup_closed: 'Registrácia pre Hour of Code je nateraz uzavretá. Skontrolujte prosím znova v Októbri možnosť prihlásenia sa do ďalšej Hour of Code.'
   signup_header: 'Zorganizujte Hodinu kódu počas %{campaign_date} a zaregistrujte sa tu.'
   signup_name_label: 'Vaše meno'
   signup_name_error: 'Meno je povinné pole.'
   signup_email_label: 'Váš email'
   signup_email_error: 'Email je povinné pole'
-  signup_invalid_email_error: 'The email address you entered is invalid'
+  signup_invalid_email_error: 'Zadaná emailová adresa nie je platná'
   signup_organization_name_label: 'Názov školy alebo organizácie'
   signup_organization_name_error: 'Meno spoločnosti je povinné pole.'
   signup_event_type_label: 'Typ udalosti'
@@ -332,7 +334,7 @@ sk:
   stats_global: "Viac ako 100 miliónov študentov vyskúšalo Hodinu kódu"
   stats_girls_more: "Viac dievčat skúsilo informatiku ako za posledných 70 rokov"
   stats_females: "Podiel žien v informatike je len 20% na stredoškolských, vysokoškolských smeroch a pracovnej sfére."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females_more: "Počas Hour of Code tvoria ženy <b>50% všetkých účastníkov</b>!"
   stats_nina: '"Každý jeden deň poskytol rovnaký výsledok&mdash; zapojenie na 100%." - Nina Nichols Peery, pedagóg'
   stats_student: '"Vedela som, že je to šanca <b>raz za život</b>." Mariana Alzate, 5. ročníki'
   stats_michael: '"<b>Nikdy som nevidel</b>mojich študentov tak nadšených z učenia."-Michael Clark, učiteľ'
@@ -348,10 +350,10 @@ sk:
   resources_banners: Sociálne médiá
   resources_emails: Vzorové emaily
   resources_logo: Logo Hodiny kódu
-  resources_stats: 'Štatistiky a upútavky'
+  resources_stats: Štatistiky a upútavky
   resources_press_kit: Press balíček
   resources_social: Sociálne médiá
-  resources_country_resources: 'Špecifické zdroje pre krajinu'
+  resources_country_resources: Špecifické zdroje pre krajinu
   resources_stickers: Samolepky
   resources_how_to_guides: 'Príručky - Ako na to'
   resources_promote: 'Šírte ďalej'
@@ -363,15 +365,15 @@ sk:
   resources_banner_howto_text: "Ako na to"
   resources_banner_howto_button: "Zdroje pre učiteľov a partnerov, ako zorganizovať Hodinu kódu."
   handouts_section: Zdieľať tieto podklady
-  handouts_onepager: 'Šírte túto aktivitu pomocou jednostránkového návodu'
+  handouts_onepager: Šírte túto aktivitu pomocou jednostránkového návodu
   handouts_brochure: Poskytnite túto brožúru učiteľom a školám
   handouts_participationguide: Naplánujte si Hodinu kódu s týmto sprievodcom
   videos_title: Ukážte tieto videá študentom a inšpirujte ich
-  videos_what_most_schools_dont_teach: 'Čo školy najčastejšie nevyučujú (5 min)'
+  videos_what_most_schools_dont_teach: Čo školy najčastejšie nevyučujú (5 min)
   videos_hoc_2014: Hodina kódu je tu - ktokoľvek sa môže učiť
   videos_obama_cs: Prezident Obama na informatike
   videos_anybody_can_learn: Každý sa môže učiť (1 min)
-  title_country_resources: 'Špecifické zdroje pre krajinu'
+  title_country_resources: Špecifické zdroje pre krajinu
   title_how_to_districts: Hodina kódu Návody pre kraje
   title_how_to_events: Ako na udalosť Hodina hódu
   title_how_to_organizations: Ako zogranizovať Hodinu kódu - Organizácie
@@ -387,13 +389,13 @@ sk:
   title_stats: Upútavky a štatistiky
   title_partners: Partneri
   title_resources: Zdroje
-  title_signup_thanks: 'Ďakujeme Vám, že organizujete udalosť Hodina kódu!'
+  title_signup_thanks: Ďakujeme Vám, že organizujete udalosť Hodina kódu!
   title_tutorial_guidelines: Výukový návod
-  title_whole_school: 'Účasť celej školy'
+  title_whole_school: Účasť celej školy
   events_nav_title: Udalosti Hodiny kódu
   events_nav_all: Všetky udalosti
   events_nav_whole_schools: Všetky školy
-  events_nav_special: 'Špeciálne udalosti'
+  events_nav_special: Špeciálne udalosti
   events_nav_orgs: Organizácie
   events_all_old_title: "Všetky udalosti Hodiny kódu @year"
   events_all_title: Všetky udalosti Hodiny kódu
@@ -405,22 +407,22 @@ sk:
   highlights_title: Dávame do pozornosti
   highlights_header: Hodina kódu - Highlights
   highlights_description: Niektoré z našich obľúbených momentov kampane Hodina kódu.
-  higlights_see_more: See more highlights
-  highlights_readmore: Read more
+  higlights_see_more: Pozrite si viac momentov
+  highlights_readmore: Čítať viac
   highlights_watchvideo: Pozrite si video
   highlights_facebook: Zdieľať na Facebook
-  highlights_constant_alba_heading: The actress, activist, and entrepreneur hosted an Hour of Code with the entire staff at The Honest Company.
-  highlights_constant_alba_short_heading: Jessica Alba learns an Hour of Code
-  highlights_constant_obama_heading: President Obama is the first president to write a line of code, hosting a historic Hour of Code for students at the White House.
-  highlights_constant_obama_short_heading: Coder in Chief
-  highlights_constant_malala_heading: "\"Every girl deserves to take part in creating the technology that'll change our world, and change who runs it.\""
-  highlights_constant_malala_short_heading: Nobel Peace Prize winner Malala
-  highlights_constant_trudeau_heading: Canadian Prime Minister Justin Trudeau coded a simple game featuring his favorite sport.
-  highlights_constant_trudeau_short_heading: Prime Minister Justin Trudeau codes a game
-  highlights_constant_ny_heading: After an epic battle, 80% of Brooklyn schools did the Hour of Code vs. 60% in Chicago. Not bad!
-  highlights_constant_ny_short_heading: Brooklyn beats Chicago
-  highlights_constant_athletes_heading: Champions and gold medalists Serena Williams, Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
-  highlights_constant_athletes_short_heading: Push yourself
+  highlights_constant_alba_heading: Herečka, aktivistka a podnikateľka zorganizovala Hodinu Kódu so všetkými zamestnancami v The Honest Company.
+  highlights_constant_alba_short_heading: Jessica Alba sa učí Hodinu Kódu
+  highlights_constant_obama_heading: Prezident Obama je prvý prezident, ktorý napísal riadok kódu a zorganizoval historickú Hodinu Kódu pre študentov v Bielom Dome.
+  highlights_constant_obama_short_heading: Hlavný Kóder
+  highlights_constant_malala_heading: "\"Každé dievča si zaslúži, aby sa mohlo podieľať na tvorbe technológií, ktoré zmenia svet a zmeniť každého, ktoré ho vedie.\""
+  highlights_constant_malala_short_heading: Laureátka Nobelovej ceny mieru Malala
+  highlights_constant_trudeau_heading: Kanadský premiér Justin Trudeau nakódoval jednoduchú hru o jeho obľúbenom športe.
+  highlights_constant_trudeau_short_heading: Premiér Justn Trudeau kóduje hru
+  highlights_constant_ny_heading: Po epickej bitke sa 80% škôl v Brooklyne zúčastnilo Hodiny Kódu a porazilo Chicago, kde sa zapojilo len 60%. To vôbec nie je zlé!
+  highlights_constant_ny_short_heading: Brooklyn porazil Chicago
+  highlights_constant_athletes_heading: Šampióni a držitelia zlatých medailí Serena Williams, Neymar Jr, Carmelo Anthony a ďaľší inšpirujú študentov, aby prekročili svoje hranice.
+  highlights_constant_athletes_short_heading: Prekročte svoj tieň
   footer_copyright_message: 'Copyright %{current_year} Code.org. Všetky práva vyhradené.'
   footer_trademark_message: 'Hour of Code™ je ochranná známka spoločnosti Code.org.'
   footer_menu_partners: 'Partneri'
@@ -434,7 +436,7 @@ sk:
   learn_banner_teachers: 'Učitelia: <a id=''teacher_banner_host''> Hosťujte hodinu</a> alebo <a id=''teacher_banner_howto''> prečítajte si návod "Ako na to?"</a>'
   learn_robotics_banner_heading: 'ROBOTIKA'
   learn_robotics_banner_blurb: 'Máte roboty? Využite ich v aktivitách nižšie a vytvorte pre študentov akéhokoľve veku Hodinu kódu s hmatateľným výsledkom!'
-  tutorial_athlete_name: "Code your own sports game"
+  tutorial_athlete_name: "Naprogramujte si vlastnú športovú hru"
   tutorial_moana_name: 'Vaiana: Hľadanie cesty pomocou kódu'
   tutorial_star-wars_name: 'Hviezdne vojny: Budovanie galaxie pomocou kódu'
   tutorial_gumadventure_name: "Gumballovo kódovacie dobrodružstvo"
@@ -477,53 +479,53 @@ sk:
   tutorial_itchj_name: "ITCH Skákanie (v jazyku Scratch)"
   tutorial_tickleo_name: "Plávajúca kosatka od Tickle App"
   tutorial_hopgeo_name: "Geometrický skokan"
-  tutorial_tynkermult_name: "Multiplication Escape STEM Kit"
-  tutorial_monster_name: "Mystery Island Coding Quest"
+  tutorial_tynkermult_name: "Únik násobením (STEM)"
+  tutorial_monster_name: "Programovanie na Tajomnom Ostrove"
   tutorial_tynkerapp_name: "Vybuduj si aplikáciu"
   tutorial_tynkerpup_name: "Dobrodružstvo šteniatka"
-  tutorial_livecode_name: "LiveCode Sound Boards"
+  tutorial_livecode_name: "LiveCode zvukové boardy"
   tutorial_cocomgame_name: 'CodeCombat:  Vytvor si vlastnú hru!'
-  tutorial_tynkerspin_name: "Spin Draw Animation Kit"
-  tutorial_code-avengers_name: "Build a Game with JavaScript"
+  tutorial_tynkerspin_name: "Kit pre animácie v Spin Draw"
+  tutorial_code-avengers_name: "Vytvorte si hru v Java Scripte"
   tutorial_tynkercq_name: "Candy Quest"
-  tutorial_makeschool_name: "Build an iPhone game in your browser!"
-  tutorial_cmgame_name: "CodeMonkey's Game Builder"
+  tutorial_makeschool_name: "Vytvorte si hru pre iPhone vo Vašom prehliadači!"
+  tutorial_cmgame_name: "Tvorca hier CodeMonkey"
   tutorial_codesters_name: "Codester"
-  tutorial_qrm_name: "Accessible programming (with screenreader support)"
+  tutorial_qrm_name: "Prístupné programovanie (s podporou čítačky obrazovky)"
   tutorial_texas-instruments_name: "10 minút kódu"
-  tutorial_cajava_name: "Drawing Flags with JavaScript"
-  tutorial_codehs_name: "Learn to Code with Karel the Dog"
+  tutorial_cajava_name: "Kreslenie vlajok v JavaScripte"
+  tutorial_codehs_name: "Naučte sa programovať s psom Karolom"
   tutorial_hopemo_name: "Kreslenie smajlíkov"
   tutorial_tynkercm_name: "Kódové monštrá"
   tutorial_codesterswintergreet_name: "Zimné prianie"
   tutorial_codestersc_name: "Súradnicová sústava"
   tutorial_codestersturtle_name: "Korytnačie kreslenie"
-  tutorial_penjee_name: "Learn Python with Penjee the Penguin"
-  tutorial_trinket_name: "Trinket's Hour of Python"
-  tutorial_frogger_name: "Make your own 3D Frogger game"
-  tutorial_tynkereco_name: "Ecological Pyramid STEM Kit"
+  tutorial_penjee_name: "Naučte sa Python s tučniakom Penjee"
+  tutorial_trinket_name: "Trinketova hodina Pythonu"
+  tutorial_frogger_name: "Vytvorte si vlastnú 3D Frogger hru"
+  tutorial_tynkereco_name: "Ekologická pyramída (STEM)"
   tutorial_mitedarc_name: "MIT Vzdelávacia arkáda"
-  tutorial_khan_name: 'Khan Academy: Drawing with Code'
+  tutorial_khan_name: 'Akadémia Khan: Kreslenie kódom'
   tutorial_tynkerd_name: "Ladiaci nástroj"
   tutorial_cdmy_name: "Codecademy"
   tutorial_codestersdance_name: "Tanečné pohyby"
   tutorial_codestersbasketball_name: "Basketbal"
   tutorial_nclkarel_name: "Nauč sa kódiť s robotom Karlom"
   tutorial_buildpong_name: "Vybuduj hru Pong s umelou inteligenciou"
-  tutorial_tynkerdrones_name: "Program Drones and Robots"
-  tutorial_carla_name: "Programming with Carla"
+  tutorial_tynkerdrones_name: "Naprogramuj dróny a roboty"
+  tutorial_carla_name: "Programovanie s Carlou"
   tutorial_globaloria_name: "Globaloria MakeQuest"
-  tutorial_capost_name: "Build a Digital Postcard with HTML and CSS"
+  tutorial_capost_name: "Vytvorte si digitálnu pohľadnicu s HTML a CSS"
   tutorial_marco_name: "Bež Marko!"
   tutorial_codestersflappybike_name: "Flappy Bike"
-  tutorial_kanopong_name: "Kano Computing - Make Pong"
-  tutorial_tynkerright_name: "Bill of Rights STEM Kit"
+  tutorial_kanopong_name: "Kano Computing - spravte Pong"
+  tutorial_tynkerright_name: "Listina práv (STEM)"
   tutorial_flatverse_name: "Plochý vesmír"
   tutorial_touchdevelop_name: "TouchDevelop"
   tutorial_tynkercc_name: "Veliteľ kódu"
   tutorial_bamboo_name: "Bambus JS"
-  tutorial_robojav_name: 'Robots and Java: An introduction to Java'
-  tutorial_roboba_name: "Learn Algebra with RoboBlockly"
+  tutorial_robojav_name: 'Roboty a Java: Úvod do Javy'
+  tutorial_roboba_name: "Naučte sa algebru s RoboBlockly"
   tutorial_knodsnake_name: "JavaScript-ový had"
   tutorial_soccharater_name: "Vyvtáranie postavy"
   tutorial_silent_name: "Tichý učiteľ"
@@ -545,31 +547,31 @@ sk:
   tutorial_caphoto_name: "Vybuduj si aplikáciu Fotobúdka"
   tutorial_mozillahw_name: "Generátor výhovoriek Mozilla"
   tutorial_ticklep_name: "Zázrak papagája"
-  tutorial_bbot_name: "Bomberbot Fun and Easy Coding Activities"
-  tutorial_scratchg_name: "Programming Games in Scratch"
+  tutorial_bbot_name: "Ľahké a zábavné programovanie s Bomberbotom"
+  tutorial_scratchg_name: "Programovanie hier v Scratch"
   tutorial_roboticfriends_name: "Moji robotí priatelia"
-  tutorial_sjforest_name: 'ScratchJr: Can I Make a Spooky Forest?'
-  tutorial_sjgreet_name: 'ScratchJr: Can I Make My Characters Greet Each Other?'
-  tutorial_sjsunset_name: 'ScratchJr: Can I Make the Sun Set?'
+  tutorial_sjforest_name: 'SchratchJr: Viem spraviť strašidelný les?'
+  tutorial_sjgreet_name: 'ScratchJr: Môžem primäť moje postavy pozdraviť sa?'
+  tutorial_sjsunset_name: 'ScratchJr: Môžem nechať zapadnúť slnko?'
   tutorial_fufafrenz_name: "fuzzFamily Frenzy"
-  tutorial_bbcgeo_name: "Bitsbox Coding + Geometry"
+  tutorial_bbcgeo_name: "Programovanie a geometria v Bitsbox"
   tutorial_chspixel_name: "CodeHS Pixel Art"
-  tutorial_hummingbird_name: "Creating a Game with Hummingbird"
-  tutorial_recoloring_name: "Recoloring the Universe"
-  tutorial_bbcchem_name: "Bitsbox Coding + Chemistry"
-  tutorial_floalgo_name: 'Coding: Algorithms Lesson Plan'
-  tutorial_flocond_name: 'Coding: Conditionals Lesson Plan'
-  tutorial_floloops_name: 'Coding: For Loops Lesson Plan'
-  tutorial_pgts_name: "Rock, Paper, Scissors"
+  tutorial_hummingbird_name: "Vytvorte hru s Kolibríkom"
+  tutorial_recoloring_name: "Prefarbovanie vesmíru"
+  tutorial_bbcchem_name: "Kódovanie v Bitsboxe + chémia"
+  tutorial_floalgo_name: 'Programovanie: Algoritmy'
+  tutorial_flocond_name: 'Programovanie: Podmienky'
+  tutorial_floloops_name: 'Programovanie: For slučky'
+  tutorial_pgts_name: "Kameň, papier, nožnice"
   tutorial_ozo_name: "Kurz Ozobot"
-  tutorial_bbcla_name: "Bitsbox Coding + Language Arts"
-  tutorial_bbcsci_name: "Bitsbox Coding + Science"
+  tutorial_bbcla_name: "Kódovanie v Bitsboxe + jazyky"
+  tutorial_bbcsci_name: "Kódovanie v Bitsboxe + Vedy"
   tutorial_tlctour_name: "Aktivita Turistický sprievodca"
   tutorial_codesterstj_name: "CS Tech Jam"
   tutorial_tlclocked_name: "Zamknutý"
   tutorial_baubles_name: "Binárne čačky"
-  tutorial_bbcart_name: "Bitsbox Coding + Art"
-  tutorial_tlcknight_name: "Knight's Tour Activity"
+  tutorial_bbcart_name: "Kódovanie v Bitsboxe + umenie"
+  tutorial_tlcknight_name: "Turné kráľa"
   tutorial_fufafit_name: "fuzzFamily Fitnes"
   tutorial_ozodance_name: "Ozobot Dance-Off"
   tutorial_codingrobotics_name: "Intro to Coding through Robotics (ft. Wonder Workshop)"
@@ -581,13 +583,13 @@ sk:
   tutorial_bbcphys_name: "Bitsbox Coding + Physics"
   tutorial_bitsbox_name: "Build Crazy Apps with Bitsbox"
   tutorial_tlcemo_name: 'Emotion Machine: Create-a-Face Card'
-  tutorial_crd_name: "Conditionals with Cards"
-  tutorial_bbcbio_name: "Bitsbox Coding + Biology"
+  tutorial_crd_name: "Podmieňovacie spôsoby s kartami"
+  tutorial_bbcbio_name: "Kódovanie v Bitsboxe + biológia"
   tutorial_ticklebb8_name: "BB-8 Swing"
   tutorial_grok_name: "Učenie Grok"
   tutorial_ijournalist_name: "iNovinár"
-  tutorial_bbcmusic_name: "Bitsbox Coding + Music"
-  tutorial_secretcodes_name: "Secret Codes Activity"
+  tutorial_bbcmusic_name: "Kódovanie v Bitsboxe + hudba"
+  tutorial_secretcodes_name: "Tajné kódy"
   tutorial_tlchex_name: "HexaHexaFlexagon Automata Activity"
   tutorial_tickles_name: "Sphero Run"
   tutorial_ozogame_name: "Create an Ozobot Game Level"
@@ -604,22 +606,22 @@ sk:
   tutorial_introrobo_name: "Úvod do robotiky"
   tutorial_tlcinvis_name: "Invisible Palming Activity"
   tutorial_tlcjflap_name: 'JFLAP: Creating Finite State Machines'
-  tutorial_procolor_name: "Drive to School with Ozobot"
-  tutorial_spiralsfinch_name: "Spirals with the Finch"
-  tutorial_ozoi_name: "An Introduction to Programming and Ozobot"
+  tutorial_procolor_name: "Jazdite do školy s Ozobotom"
+  tutorial_spiralsfinch_name: "Špirály s Finchom"
+  tutorial_ozoi_name: "Úvod do programovania a Ozobotu"
   tutorial_ticklel_name: "LEGO Kockáč"
-  tutorial_spiralsdash_name: "Draw Spirals with Dash"
-  tutorial_ghdebug_name: "Grace Hopper Debugging Activity"
+  tutorial_spiralsdash_name: "Kreslite špirály s Dashom"
+  tutorial_ghdebug_name: "Debugovanie s Grace Hopper"
   tutorial_tlckk_name: "Krížovkové hádanky"
   tutorial_firstcomp_name: "Môj prvý počítač"
-  tutorial_mazefinch_name: "Through the Maze with the Finch Robot"
+  tutorial_mazefinch_name: "Cez bludisko s robotom Finch"
   tutorial_tlccc_name: "Úlohy na kompresný kód"
-  tutorial_tlcdoodle_name: "Algorithmic Doodle Art"
-  tutorial_tlcpunch_name: "Punch Card Searching Activity"
+  tutorial_tlcdoodle_name: "Algoritmické Doodle umenie"
+  tutorial_tlcpunch_name: "Hľadanie diernych štítkov"
   tutorial_finchfract_name: "Finch Fraktály"
-  tutorial_tlcmind_name: "The Red Black Mind Meld Activity"
-  tutorial_tlctelebot_name: "The Teleporting Robot Activity"
-  tutorial_tlcaus_name: "Australian Magician's Dream Activity"
+  tutorial_tlcmind_name: "Červenočierne splynutie mysle"
+  tutorial_tlctelebot_name: "Teleportujúci sa robot"
+  tutorial_tlcaus_name: "Sen austrálskeho kúzelníka"
   tutorial_oralhist_name: "Oral History Project"
   tutorial_tlcmicro_name: "Microwave Racing Video Activity"
   tutorial_imathematician_name: "iMatematik"
@@ -636,11 +638,11 @@ sk:
   tutorial_robomind_name: "Program a virtual robot with RoboMind"
   tutorial_scratchanimwork_name: 'Animate Your Name: Educator Guide'
   tutorial_adventureq_name: "Dobrodružstvo s Q"
-  tutorial_khan-es_name: "An introduction to JavaScript"
-  tutorial_kpt_name: "An introduction to JavaScript"
-  tutorial_kpl_name: "An introduction to JavaScript"
-  tutorial_khe_name: "An introduction to JavaScript"
-  tutorial_kfr_name: "An introduction to JavaScript"
+  tutorial_khan-es_name: "Úvod do Javascriptu"
+  tutorial_kpt_name: "Úvod do Javascriptu"
+  tutorial_kpl_name: "Úvod do Javascriptu"
+  tutorial_khe_name: "Úvod do Javascriptu"
+  tutorial_kfr_name: "Úvod do Javascriptu"
   tutorial_app-inventor_name: "AppInventor Hodina kódu"
   tutorial_bits_name: "Bity a tehly"
   tutorial_blockly_name: "Blockly"
@@ -671,9 +673,9 @@ sk:
   tutorial_pixie_name: "PIXIE výzvy"
   tutorial_play_name: "Hracie laboratórium"
   tutorial_robomind-nl_name: "Program a virtual robot"
-  tutorial_spheroi_name: 'SPRK Lightning Lab Blocks 1: Intro'
-  tutorial_spherol_name: 'SPRK Lightning Lab Blocks 3: Lights'
-  tutorial_spherov_name: 'SPRK Lightning Lab Blocks 3: Variables'
+  tutorial_spheroi_name: 'Blocks 1: Intro'
+  tutorial_spherol_name: 'Blocks 3: Lights'
+  tutorial_spherov_name: 'Blocks 4: Variables'
   tutorial_swb_name: 'Hviezdne vojny: Budovanie galaxie pomocou kódu'
   tutorial_build-a-galaxy_name: 'Hviezdne vojny: Budovanie galaxie pomocou kódu'
   tutorial_alicesims_name: "Storyboarding and Programming with Alice and The Sims"
@@ -692,7 +694,7 @@ sk:
   tutorial_bigevent_name: "Veľká udalosť"
   tutorial_gpp_name: "Graph Paper Programming"
   tutorial_foosgame_name: "codeSpark Academy with the Foos - GameMaker"
-  tutorial_solopython_name: "My First Python Code"
+  tutorial_solopython_name: "Môj prvý kód v Pythone"
   tutorial_kodableint_name: "Úvod do programovania"
   tutorial_kodableadv_name: "Pokročilé koncepty programovania"
   tutorial_tynkertj_name: "Toxická džungľa"
@@ -701,26 +703,26 @@ sk:
   tutorial_wolframspi_name: "Zvuk čísla pí"
   tutorial_wolframsph_name: "Nakresli guľu"
   tutorial_wolframp_name: "Nakresli mnohouholník"
-  tutorial_wolframn_name: "Ninja Name Generator"
-  tutorial_soloweb_name: "Your First Webpage in an Hour!"
-  tutorial_bloxmobapp_name: "Build YOUR mobile APP"
-  tutorial_khanweb_name: 'Khan Academy: Webpages'
-  tutorial_khandata_name: 'Khan Academy: Databases'
+  tutorial_wolframn_name: "Generátor Ninja mien"
+  tutorial_soloweb_name: "Vaša prvá webstránka za hodinu!"
+  tutorial_bloxmobapp_name: "Vytvorte si VLASTNÚ mobilnú appku"
+  tutorial_khanweb_name: 'Akadémia Khan: Webstránky'
+  tutorial_khandata_name: 'Akadémia Khan: Databázy'
   tutorial_robomeshiq_name: "Program VEX IQ Roboty s Blocky"
-  tutorial_googlelogo_name: "Create your own Google logo"
-  tutorial_playtune_name: "Play That Tune App"
-  tutorial_computeit_name: "Compute it"
-  tutorial_codesterssj_name: "Space Jokes"
+  tutorial_googlelogo_name: "Vytvorte si vlastné Google logo"
+  tutorial_playtune_name: "Zahraj tu notu"
+  tutorial_computeit_name: "Vypočítaj to"
+  tutorial_codesterssj_name: "Vtipy o vesmíre"
   tutorial_cmchat_name: "Python Chatbot"
-  tutorial_tynkerdb_name: "Dragon Blast"
-  tutorial_cmbuild_name: "Game Builder"
+  tutorial_tynkerdb_name: "Dračí výbuch"
+  tutorial_cmbuild_name: "Tvorca hier"
   tutorial_robotrattle_name: "Robot Rattle"
-  tutorial_codestersh_name: "Hedgehog Designs"
-  tutorial_codehsdigipixel_name: "Digital Art in Pixels with CodeHS"
-  tutorial_ccbinary_name: "Binary Hero"
-  tutorial_codehsturtle_name: "Program in Python with Tracy the Turtle"
-  tutorial_grokhd_name: "Hydrangea Danger"
-  tutorial_grokem_name: "Emoticon Madness"
+  tutorial_codestersh_name: "Ježkové dizajny"
+  tutorial_codehsdigipixel_name: "Digitálne umenie v pixeloch s CodeHS"
+  tutorial_ccbinary_name: "Binárny hrdina"
+  tutorial_codehsturtle_name: "Programujte v Pythone s korytnačkou Tracy"
+  tutorial_grokhd_name: "Nebezpečenstvo hortenzie"
+  tutorial_grokem_name: "Šialenstvo emotikonov"
   tutorial_kodmaze_name: "Maze Maker Challenges"
   tutorial_codestersa_name: "Asteroid Dodge"
   tutorial_cmdodo_name: "Dodo Does Math"
@@ -732,57 +734,57 @@ sk:
   tutorial_codestersbb_name: "Basketbal"
   tutorial_gfcrossyroad_name: "Learn to Code with Crossy Road"
   tutorial_googleww_name: "Wonder Woman"
-  tutorial_codehsjsapp_name: "Make a Real App with JavaScript"
-  tutorial_gfmihi_name: "Mihi Maker"
+  tutorial_codehsjsapp_name: "Vytvorte reálnu appku s Javascriptom"
+  tutorial_gfmihi_name: "Tvorca Mihi"
   tutorial_hopdropphone_name: "Make \"Don't Drop the Phone\" on iPad/iPhone"
   tutorial_techfaa_name: "Flocking Autonomous Agents"
-  tutorial_codehsjsgraph_name: "JavaScript Graphics with CodeHS"
-  tutorial_thunkable_name: "Learn How to Build 10 Apps in 1 Hour!"
-  tutorial_hopcrossyroad_name: "Make Crossy Road on iPad/iPhone"
+  tutorial_codehsjsgraph_name: "Javascriptová grafika s CodeHS"
+  tutorial_thunkable_name: "Naučte sa, ako spraviť 10 appiek za jednu hodinu!"
+  tutorial_hopcrossyroad_name: "Spravte križovatky na iPade/iPhone"
   tutorial_switchglitch_name: 'Switch & Glitch: Robot Adventure'
-  tutorial_codecar_name: "Code Car Simulator"
+  tutorial_codecar_name: "Simulátor kódu auta"
   tutorial_codesterscp_name: "Súradnicová sústava"
   tutorial_grokpetblock_name: "Virtual Pet (micro:bit Blockly)"
-  tutorial_techbim_name: "Basic Image Manipulation"
-  tutorial_techfpp_name: "Introduction to Functional Programming with Python"
-  tutorial_codesterscr_name: "Cheer Routines"
-  tutorial_grokdisease_name: "Disease Epidemic"
-  tutorial_techec_name: "Explaining Closures in JS"
-  tutorial_rgbegin_name: "RoboGarden - Beginner"
+  tutorial_techbim_name: "Základné úpravy obrázku"
+  tutorial_techfpp_name: "Úvod do funkčného programovania v Pythone"
+  tutorial_codesterscr_name: "Rutiny povzbudenia"
+  tutorial_grokdisease_name: "Epidémia chorôb"
+  tutorial_techec_name: "Vysvetlenie uzávier v JS"
+  tutorial_rgbegin_name: "RoboZáhrada - začiatočník"
   tutorial_myradream_name: 'Actimator: Myra''s Dream'
   tutorial_thinkfun_name: 'Robot Repair: Can You Fix the Robot Brain?'
   tutorial_hopfireworks_name: "Make a Fireworks App on iPad/iPhone"
-  tutorial_grokspace_name: "Space (Blockly)"
-  tutorial_codehspython_name: "Code in Python with CodeHS"
-  tutorial_codehsjava_name: "Coding in Java with CodeHS"
+  tutorial_grokspace_name: "Vesmír (Blockly)"
+  tutorial_codehspython_name: "Programovanie v Pythone s CodeHS"
+  tutorial_codehsjava_name: "Programovanie v Jave s CodeHS"
   tutorial_techioda_name: "Shortest Paths with Dijkstra's Algorithm"
-  tutorial_grokmonster_name: "Monster Maker!"
+  tutorial_grokmonster_name: "Tvorca monštier!"
   tutorial_techmjs_name: "Embrace Modern JavaScript - ES6 and Beyond"
-  tutorial_techga_name: "Genetic Algorithms"
+  tutorial_techga_name: "Generické algoritmy"
   tutorial_techioan_name: "Avoiding Null Anti Patterns"
   tutorial_techiogsr_name: "Getting Started With Rust"
-  tutorial_groktunnel_name: "The Dark Tunnel"
+  tutorial_groktunnel_name: "Tmavý tunel"
   tutorial_stemcod_name: "The Physics of Video Games!"
   tutorial_techikb_name: "Interactive Kotlin Basics"
-  tutorial_kanostreet_name: "Street Artist"
+  tutorial_kanostreet_name: "Pouličný umelec"
   tutorial_nyblebot_name: "Boogie Bot"
-  tutorial_codemojijs_name: "Beginning JavaScript"
+  tutorial_codemojijs_name: "Začíname s Java Scriptom"
   tutorial_bloxmobmath_name: "iOS and Android Math Apps"
   tutorial_techapf_name: "Advanced Python Features"
   tutorial_techfpjs_name: "Practical Introduction to Functional Programming with JS"
   tutorial_techlinq_name: "Using C# LINQ - A Practical Overview"
-  tutorial_gpbcatapult_name: "Build a Catapult"
-  tutorial_quorumastro_name: "Coding in Astronomy"
-  tutorial_alicewonder_name: "Alice in Wonderland"
-  tutorial_rginter_name: "RoboGarden - Intermediate"
+  tutorial_gpbcatapult_name: "Postavte si katapult"
+  tutorial_quorumastro_name: "Kódovanie v astronómií"
+  tutorial_alicewonder_name: "Alica v krajine zázrakov"
+  tutorial_rginter_name: "RoboZáhrada - pokročilý"
   tutorial_bloxmobscience_name: "iOS and Android Science Apps"
-  tutorial_cssgrid_name: "Grid Garden"
+  tutorial_cssgrid_name: "Záhrada v mriežke"
   tutorial_bloxmobdesign_name: "App Design Process"
-  tutorial_jshero_name: "JS Hero"
+  tutorial_jshero_name: "JS Hrdina"
   tutorial_codemojipy_name: "Python Lab"
   tutorial_bloxmobcomp_name: "Computational Problem Solving"
-  tutorial_nclabdrone_name: "Let's Build a Drone!"
-  tutorial_gpbcircle_name: "Make an Interactive Color Circle"
+  tutorial_nclabdrone_name: "Postavme si dróna!"
+  tutorial_gpbcircle_name: "Spravte si interaktívny farebný kruh"
   tutorial_gpbpaint_name: "Make Your Own Paint Editor"
   tutorial_cocomarcade_name: 'CodeCombat: Postav si Arkádu!'
   tutorial_techcpp_name: "7 Features of C++17 that will simplify your code"
@@ -828,11 +830,11 @@ sk:
   tutorial_lbpotato_name: 'littleBits: Hot Potato...of Doom!'
   tutorial_lbguitar_name: 'littlebits: Rockstar Guitar'
   tutorial_lbio_name: "Inputs & Outputs with littleBits"
-  tutorial_wonpuppy_name: 'Dash the Puppy (E3): Dash and Dot Challenge Cards'
-  tutorial_woncue_name: 'Cue: Getting Started with Wonder Workshop''s CUE robot'
-  tutorial_wonzoo_name: 'Dot at the Petting Zoo (B2): Dash and Dot Challenge Cards'
-  tutorial_wontrip_name: 'Dash''s Road Trip (F2): Dash and Dot Challenge Cards'
-  tutorial_woncollect_name: 'Dash the Collector (B1): Dash and Dot Challenge Cards'
+  tutorial_wonpuppy_name: "Dash the Puppy (E3)"
+  tutorial_woncue_name: "Cue's Starter Guide"
+  tutorial_wonzoo_name: "Dot at the Petting Zoo (B2)"
+  tutorial_wontrip_name: "Dash's Road Trip (F2)"
+  tutorial_woncollect_name: "Dash the Collector (B1)"
   tutorial_wonsecret_name: "Cue's Secret Message"
   tutorial_hsscience_name: 'Hopscotch: Make Interactive Science Models on Your iPad/iPhone!'
   tutorial_popculture_name: "Pop Culture Data Science"
@@ -848,7 +850,7 @@ sk:
   tutorial_cacrazy_name: "Code Crazy Creatures"
   tutorial_cajump_name: "Jumping Jam"
   tutorial_carest_name: "Robo-restaurant puzzler"
-  tutorial_accai_name: "Planet Exploration with Artificial Intelligence"
+  tutorial_accai_name: "Accenture Intelligent Space Exploration"
   tutorial_vceclipse_name: "Code the Eclipse"
   tutorial_pmzero_name: "Pac-Man ZERO"
   tutorial_hsela_name: 'Telling stories: ELA + coding'
@@ -859,6 +861,19 @@ sk:
   tutorial_idowedo_name: "iDo WeDo"
   tutorial_diggindwarf_name: "Diggin' Dwarf"
   tutorial_rmedr_name: "Program VEX EDR Robots with Blockly"
+  tutorial_dksky_name: 'DevKit: Build the Sky Fall App'
+  tutorial_dkcurrency_name: 'DevKit: Build the Currency King App'
+  tutorial_dkriver_name: 'DevKit: Build the River Monsters App'
+  tutorial_dkball_name: 'DevKit: Build the Bouncing Ball App'
+  tutorial_spheroit_name: 'Blocks 2: If/Then Else'
+  tutorial_gameofcodes_name: "Game Of Codes"
+  tutorial_blocklygames_name: "Blockly Games"
+  tutorial_spherohello_name: 'Text 1: Hello World'
+  tutorial_spheroarcade_name: "Sphero Arcade Playground"
+  tutorial_bcpy1_name: "World of Python"
+  tutorial_bcpy2_name: "World of Python 2"
+  tutorial_bcjs1_name: "World of JavaScript"
+  tutorial_bcjs2_name: "World of JavaScript 2"
   tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
   tutorial_star-wars_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
@@ -928,7 +943,7 @@ sk:
   tutorial_frogger_shortdescription: "Create and share your own 3D game "
   tutorial_tynkereco_shortdescription: "Code an interactive ecological pyramid."
   tutorial_mitedarc_shortdescription: "Have your sprite collect coins and get points."
-  tutorial_khan_shortdescription: 'Khan Academy: Drawing with Code teaches you how to code using JavaScript by designing your very own snowman'
+  tutorial_khan_shortdescription: 'Akadémia Khan: Kreslenie kódu Vás naučí, ako programovať pomocou Javascriptu vytvorením vlastného snehuliaka'
   tutorial_tynkerd_shortdescription: "Fight bugs to save the motherboard!"
   tutorial_cdmy_shortdescription: "Learn JavaScript programming, in a web-browser"
   tutorial_codestersdance_shortdescription: "Design your own dance routine and program a sprite to perform it! "
@@ -1061,14 +1076,14 @@ sk:
   tutorial_robomind_shortdescription: "Write code for a virtual robot."
   tutorial_scratchanimwork_shortdescription: "A workshop guide for introducing students to Scratch."
   tutorial_adventureq_shortdescription: "Use programming blocks (physical or in game) to learn programming logics."
-  tutorial_khan-es_shortdescription: "Learn to draw in JavaScript"
-  tutorial_kpt_shortdescription: "Learn to draw in JavaScript"
-  tutorial_kpl_shortdescription: "Learn to draw in JavaScript"
-  tutorial_khe_shortdescription: "Learn to draw in JavaScript"
-  tutorial_kfr_shortdescription: "Learn to draw in JavaScript"
+  tutorial_khan-es_shortdescription: "Naučte sa kresliť v Javascripte"
+  tutorial_kpt_shortdescription: "Naučte sa kresliť v Javascripte"
+  tutorial_kpl_shortdescription: "Naučte sa kresliť v Javascripte"
+  tutorial_khe_shortdescription: "Naučte sa kresliť v Javascripte"
+  tutorial_kfr_shortdescription: "Naučte sa kresliť v Javascripte"
   tutorial_app-inventor_shortdescription: "Make your own app. (Android-only)"
   tutorial_bits_shortdescription: "Posúvaj bit po bite!"
-  tutorial_blockly_shortdescription: "Download a ZIP file to learn offline"
+  tutorial_blockly_shortdescription: "Download a ZIP file to learn offline."
   tutorial_tynker_shortdescription: "Learn to code by solving fun puzzles and build your own games."
   tutorial_baypt_shortdescription: "Kód Baymax"
   tutorial_code-combat_shortdescription: "Defeat ogres to learn Python or JavaScript in this epic programming game!"
@@ -1095,10 +1110,10 @@ sk:
   tutorial_thinkersmith-es_shortdescription: "Tutorial para un grupo sin computadoras"
   tutorial_pixie_shortdescription: "A visual language to learn to code step by step through challenges and games."
   tutorial_play_shortdescription: "Create a story or make a game with Play Lab!"
-  tutorial_robomind-nl_shortdescription: "Write code for a virtual robot"
+  tutorial_robomind-nl_shortdescription: "Napíšte kód pre virtuálneho robota"
   tutorial_spheroi_shortdescription: "Introduction to Lightning Lab, The Sphero App for programming Sphero robots."
   tutorial_spherol_shortdescription: "Learn how to control Sphero's lights and get creative with programming."
-  tutorial_spherov_shortdescription: "Learn about Variables and Operators to program Sphero to simulate a speeding car, a hot potato game, and a fortune teller."
+  tutorial_spherov_shortdescription: "Bring Hot Potato to life with Sphero!"
   tutorial_swb_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_build-a-galaxy_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_alicesims_shortdescription: "Tell stories and be creative while learning to code. "
@@ -1129,9 +1144,9 @@ sk:
   tutorial_wolframn_shortdescription: "What is your ninja name?"
   tutorial_soloweb_shortdescription: "Create and share a Webpage with your favorite joke!"
   tutorial_bloxmobapp_shortdescription: "Learn design & systems thinking to create mobile apps for you & your friends."
-  tutorial_khanweb_shortdescription: "Learn how to make webpages with HTML tags and CSS, finishing up by making your very own greeting card."
-  tutorial_khandata_shortdescription: "Like playing with data? Learn how to manipulate data in a database and make your own custom store"
-  tutorial_robomeshiq_shortdescription: "Program either a virtual online robot, or a real VEX IQ robot."
+  tutorial_khanweb_shortdescription: "Naučte sa, ako spraviť webstránky s HTML tagmi a CSS a vytvoriť si vlastné blahoželanie."
+  tutorial_khandata_shortdescription: "Radi sa hráte s dátami? Naučte sa, ako pracovať s dátami v databáze a vytvorte si vlastný obchod"
+  tutorial_robomeshiq_shortdescription: "Students write Google Blockly code to control popular VEX IQ robots."
   tutorial_googlelogo_shortdescription: "Bring the Google logo to life using your imagination and a bit of code."
   tutorial_playtune_shortdescription: "Use coding skills to solve musical puzzles and create an Android app"
   tutorial_computeit_shortdescription: "This time YOU are the computer! Interpret the program to find the path."
@@ -1163,7 +1178,7 @@ sk:
   tutorial_techfaa_shortdescription: "Simulate a visually impressive life-like behavior of group entities"
   tutorial_codehsjsgraph_shortdescription: "Make your own graphics and drawing programs!"
   tutorial_thunkable_shortdescription: "1 hour, 10 apps"
-  tutorial_hopcrossyroad_shortdescription: "Make Crossy Road on iPad/iPhone"
+  tutorial_hopcrossyroad_shortdescription: "Spravte križovatky na iPade/iPhone"
   tutorial_switchglitch_shortdescription: "Program cute robots and help them save the galaxy!"
   tutorial_codecar_shortdescription: "Use typed code to control the lights and buttons of a simulated Code Car!"
   tutorial_codesterscp_shortdescription: "Learn about the coordinate plane by sending your sprite to pick up all its missing winter clothes!"
@@ -1284,6 +1299,19 @@ sk:
   tutorial_idowedo_shortdescription: "Design and build a robotic vehicle then program it to transport mini figures."
   tutorial_diggindwarf_shortdescription: "Dwarfs need your help to navigate, dig, and collect gems using JavaScript."
   tutorial_rmedr_shortdescription: "Program a VEX EDR robot to navigate a maze using Blockly programming."
+  tutorial_dksky_shortdescription: "Are you ready for the app that builds apps? The magic of DevKit awaits you!"
+  tutorial_dkcurrency_shortdescription: "Are you ready for the app that builds apps? The magic of DevKit awaits you!"
+  tutorial_dkriver_shortdescription: "Are you ready for the app that builds apps? The magic of DevKit awaits you!"
+  tutorial_dkball_shortdescription: "Are you ready for the app that builds apps? The magic of DevKit awaits you!"
+  tutorial_spheroit_shortdescription: "Learn about if/then, else conditions while building your very own animal sound game we like to call \"Animal Toss!\""
+  tutorial_gameofcodes_shortdescription: "Build your awesome Dragon game and export it as a standalone app."
+  tutorial_blocklygames_shortdescription: "Blockly Games is a series of educational games that teach programming."
+  tutorial_spherohello_shortdescription: "Let's go beyond blocks and learn to WRITE code. Say hello to the world of JavaScript."
+  tutorial_spheroarcade_shortdescription: "Learn to code classic home and arcade games with Sphero and Apple's Swift Playgrounds."
+  tutorial_bcpy1_shortdescription: "Build your virtual 3D world with Python."
+  tutorial_bcpy2_shortdescription: "Build your own world with Python."
+  tutorial_bcjs1_shortdescription: "Build your own world with JavaScript."
+  tutorial_bcjs2_shortdescription: "Build your world in JavaScript."
   tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
   tutorial_star-wars_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
@@ -1353,7 +1381,7 @@ sk:
   tutorial_frogger_longdescription: "Become a Computational Thinker. Create 3D Objects by drawing 2D images that you turn into amazing 3D shapes. Create 3D Worlds by assembling the shapes you just built into exciting worlds. Rule your World! Bring your world to life by programming using simple drag and drop rules. Play on computers, tablets and smartphones. Share your 3D game with your friends through email and Facebook."
   tutorial_tynkereco_longdescription: "Create an interactive ecological pyramid to track how energy flows through an ecosystem! This project comes with step-by-step instructions that guide you through creating an ecological pyramid for any ecosystem with animals and plants that glide to the proper location in the pyramid when clicked."
   tutorial_mitedarc_longdescription: "Have your sprite collect coins and get points."
-  tutorial_khan_longdescription: "Learn how to program drawings using JavaScript by designing your very own snowman. Try it on your own or with your class!"
+  tutorial_khan_longdescription: "Naučte sa, ako programovať kresby pomocou JavaScriptu vytvorením si vlastného snehuliaka. Skúste to na vlastnú päsť alebo s Vašou triedou!"
   tutorial_tynkerd_longdescription: "Design a custom hero and play as that character through this multi-level adventure game. You'll need to use your coding skills to solve puzzles, fight bugs, and save the motherboard!"
   tutorial_cdmy_longdescription: "Codecademy is an interactive platform for learning STEM skills that are critical for today's jobs. Join millions of Codecademy students and learn the basics of coding and computer science by taking our fun Hour of Code courses. By the end of each course, you'll have a real project that you can show off to your friends and family."
   tutorial_codestersdance_longdescription: "Students use a drag-to-text toolkit that allows them to start coding in Python right away! Students complete a set of guided practice activities in which they learn how to use and modify a variety of programming commands. Then, they apply these skills to create their own dance routine! "
@@ -1486,14 +1514,14 @@ sk:
   tutorial_robomind_longdescription: "Students learn the basics of programming by controlling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. "
   tutorial_scratchanimwork_longdescription: 'This guide offers ideas for leading a one-hour workshop using Scratch. Students will gain experience with coding as they animate their names or a favorite word. This educator guide is designed for use with this Scratch tutorial: scratch.mit.edu/name'
   tutorial_adventureq_longdescription: "Adventure with Q is a lesson plan for teachers (or anyone) to use to introduce programming logic in a group setting. The activity consists of different quests for kids to complete. Kids learn the basic commands through helping Q the alien in his forest adventure. "
-  tutorial_khan-es_longdescription: "Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!"
-  tutorial_kpt_longdescription: "Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!"
-  tutorial_kpl_longdescription: "Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!"
-  tutorial_khe_longdescription: "Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!"
-  tutorial_kfr_longdescription: "Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!"
+  tutorial_khan-es_longdescription: "Naučte sa základy JavaScript programovania vytvorením veselých kresieb pomocou Vášho kódu. Skúste to na vlastnú päsť alebo s Vašou triedou!"
+  tutorial_kpt_longdescription: "Naučte sa základy JavaScript programovania vytvorením veselých kresieb pomocou Vášho kódu. Skúste to na vlastnú päsť alebo s Vašou triedou!"
+  tutorial_kpl_longdescription: "Naučte sa základy JavaScript programovania vytvorením veselých kresieb pomocou Vášho kódu. Skúste to na vlastnú päsť alebo s Vašou triedou!"
+  tutorial_khe_longdescription: "Naučte sa základy JavaScript programovania vytvorením veselých kresieb pomocou Vášho kódu. Skúste to na vlastnú päsť alebo s Vašou triedou!"
+  tutorial_kfr_longdescription: "Naučte sa základy JavaScript programovania vytvorením veselých kresieb pomocou Vášho kódu. Skúste to na vlastnú päsť alebo s Vašou triedou!"
   tutorial_app-inventor_longdescription: "Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes."
   tutorial_bits_longdescription: "Bit is a little, very adventurous LEGO® robot, but as with all small creatures, sometimes Bit cannot get its programs right. You can help Bit solve the challenges by figuring out which programs are needed. You do this by creating a sequence of small behavior blocks that tells Bit what to do."
-  tutorial_blockly_longdescription: "Got PCs with slow (or non-existent) internet access? Download the Blockly tutorials that were the precursor of the Code.org tutorials - a single 3MB ZIP file can be loaded onto any computer or used off a memory stick"
+  tutorial_blockly_longdescription: "Got computers with slow (or non-existent) Internet access? Download the offline version of Blockly Games - a single 3MB ZIP file can be loaded onto any computer or used off a memory stick."
   tutorial_tynker_longdescription: "Play fun coding games to learn to code. Use programming to complete a spooktacular Monster High scavenger hunt, program a Hot Wheels car, plan your war strategy against invading goblins, and even battle monsters. Learn key programming concepts and computational thinking skills as you play. Then build your own games and share them with friends!"
   tutorial_baypt_longdescription: "Kód Baymax"
   tutorial_code-combat_longdescription: "Defeat ogres to learn Python or JavaScript in this epic programming game!"
@@ -1523,7 +1551,7 @@ sk:
   tutorial_robomind-nl_longdescription: "Students learn the basics of programming by controlling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. "
   tutorial_spheroi_longdescription: "Everyone starts somewhere. Welcome to your first Lightning Lab activity!\n\nFollow the steps to get a quick video overview of the app, learn how to create programs using the block-based interface, and gain an understanding of loops. After that, test your skills and curiosity by playing a game with your robot and the app.\n"
   tutorial_spherol_longdescription: "Dive into the power of lights in this activity. You will discover different methods to control Sphero's lights and then build programs to put the lights to work. You will create a program that powers a robotic Jack-o'-Lantern, turns Sphero into a sensor-based spinning top, and also get creative with long exposure light art."
-  tutorial_spherov_longdescription: "In this Sphero Lightning Lab activity you will learn about powerful programming commands. This activity will simulate Sphero getting pulled over by a police officer for speeding. You will also build a hot potato game program, and turn Sphero into a fortune teller to predict the future. All of this will be accomplished with variables that let you set conditional values in the Lightning Lab app. "
+  tutorial_spherov_longdescription: "It's time for another classic game powered by Sphero. Learn how to use variables, loop until, and randomness within bounds to bring Hot Potato to life. When you're all done, grab some friends and start tossing. Don't get caught with the Sphero when the time runs out!"
   tutorial_swb_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_build-a-galaxy_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_alicesims_longdescription: "Follow the animation production process from storyboarding to programming with Alice and The Sims.  Let creativity and storytelling drive your learning in a drag and drop coding environment.  The project will guide you through what is a storyboard, translating a storyboard into a programmable script, and how to program a short 3D animation. "
@@ -1545,7 +1573,7 @@ sk:
   tutorial_solopython_longdescription: "Learn Python basics using the first two modules on SoloLearn's Python app, consult discussions and comments to help you understand better, run code examples in the compiler to help with material retention. Write and compile a simple program that takes your name as input, counts the number of letters, and outputs the result. Share and get community upvotes."
   tutorial_kodableint_longdescription: "Students will learn about the role of a programmer in making machines function. Students will focus on sequence and practice giving instructions in order. This activity includes an unplugged group practice, as well as on-screen, independent practice."
   tutorial_kodableadv_longdescription: "Students will engage in developmentally appropriate lessons on higher level programming concepts such as loops, functions, variables, and object-oriented programming. Lessons included unplugged instruction, guided practice, and on-screen independent practice."
-  tutorial_tynkertj_longdescription: "Learn Python to help Fletch collect the sachets of pixie dust to unlock the mysteries of the jungle and restore the islands to their original beauty. You'll use Python commands and syntax to solve puzzles as you navigate Fletch through the islands and avoid the carnivorous plans. Along the way, you'll practice computational and algorithmic thinking skills."
+  tutorial_tynkertj_longdescription: "Learn Python to help Fletch collect the satchels of pixie dust to unlock the mysteries of the jungle and restore the islands to their original beauty. You'll use Python commands and syntax to solve puzzles as you navigate Fletch through the islands and avoid the carnivorous plants. Along the way, you'll practice computational and algorithmic thinking skills."
   tutorial_wolframa_longdescription: "In this activity, you will create a web-form that calculates your age in days, hours, nanoseconds, any unit of time that you specify!"
   tutorial_wolframm_longdescription: "In this activity, students create random melodies using various musical scales and instruments. Create music through code!"
   tutorial_wolframspi_longdescription: "In this activity, there are a series of steps with code ready to run. Students start with a piece of code that works, and then modify it to do different things. Students can play melodies based on the digits of PI and explore what PI sounds like using many musical instruments."
@@ -1554,8 +1582,8 @@ sk:
   tutorial_wolframn_longdescription: "In this activity, students develop a name generator that transforms their name into ninja names."
   tutorial_soloweb_longdescription: "Go to www.sololearn.com and install HTML and CSS apps or open the relevant lessons on the web (Android users can install the unified SoloLearn app).  Complete 2 modules (Overview and HTML Basics) in HTML and 2 modules (The Basics and Working w/Text) and first 5 lessons of the 3rd module (Properties) in CSS. Get the template at https://code.sololearn.com/WKeg2CtzpRts/ and follow the instructions."
   tutorial_bloxmobapp_longdescription: "Create your own mobile app.  Learn the sequencing and systems thinking to create apps you and your friends can use.  Design using chat Blox, quizzes, flashcards, calendars, maps, pictures and more into stories or interactive apps that work on any iOS or Android phone.  Anyone and everyone can create a mobile app.  Your content, Your customization, Your APP on Your Phone."
-  tutorial_khanweb_longdescription: 'Khan Academy: Webpages teaches you how to make webpages with HTML tags and CSS, finishing up by making your very own greeting card.'
-  tutorial_khandata_longdescription: 'Khan Academy: Databases teaches you to manipulate data in a database and make your own custom store.'
+  tutorial_khanweb_longdescription: 'Akadémia Khan: Webstránky Vás naučia, ako spraviť webstránky s HTML tagmi a CSS a vytvoriť vlastné blahoželanie.'
+  tutorial_khandata_longdescription: 'Akadémia Khan: Databázy Vás naučia, ako pracovať s dátami v databáze a vytvoríte si vlastný obchod.'
   tutorial_robomeshiq_longdescription: "Students write Google Blockly code to control popular VEX IQ robots. They can choose to write code for either a virtual robot, or a real VEX IQ robot that they built themselves, and both options are available in the same web-based development interface. Students learn about basic robot movement, and how to use a sensor and an output device. It is easy and fun."
   tutorial_googlelogo_longdescription: "Use your creativity and imagination to bring the Google logo to life using code. Make the letters dance, tell a story or create a game. With Scratch and CS First, anyone can become a designer and programmer for the day!"
   tutorial_playtune_longdescription: "A blocks language is used to solve musical puzzles by writing code to match tunes played on a piano keyboard. Sequence, selection, and repetition algorithms are needed to solve the puzzles. After the 9th level, users can create their own tune and download it as an app for an Android device. Students can also modify the app by following a link to the App Inventor source code."
@@ -1604,7 +1632,7 @@ sk:
   tutorial_hopfireworks_longdescription: "Your students will be so excited when they code their own (explosion free!) fireworks app! Hopscotch is a simple programming tool on the iPad/iPhone, beloved by millions of students for its freedom of creative expression. This self-guided video tutorial teaches kids age 8+ programming basics while they code custom versions of interactive fireworks. "
   tutorial_grokspace_longdescription: "This activity is designed to give you your first experience programming, and has been specially designed for the Hour of Code. Use the visual programming language Blockly to investigate space and reach for the stars."
   tutorial_codehspython_longdescription: "Learn the basics of coding with the Python programming language by writing programs that you can interact with! This hour will cover printing, variables, math, and getting information from users. Write a program that take in and stores data from a user and returns a unique response!"
-  tutorial_codehsjava_longdescription: "Coding in Java with CodeHS"
+  tutorial_codehsjava_longdescription: "Programovanie v Jave s CodeHS"
   tutorial_techioda_longdescription: "This useful tutorial will interactively teach you how to be able to calculate the shortest path between two nodes in a graph in advance, thanks to the Dijkstra's algorithm."
   tutorial_grokmonster_longdescription: "Get kids into coding with this friendly course specially designed for the Hour of Code! Use drag-and-drop blocks to write your own programs, learn about sequence and ordering, and create fun monster characters!"
   tutorial_techmjs_longdescription: "JavaScript has been an international standard since 1997. In this interactive tutorial, we will explore the modern features of the language that will make your code more robust, concise, and easier to read."
@@ -1616,7 +1644,7 @@ sk:
   tutorial_techikb_longdescription: "Kotlin is a new open-source programming language from JetBrains. It can be of greatest interest to people who work with Java today, although it could also appeal to all programmers who use a garbage collected runtime (Scala, Go, Python, Ruby and JavaScript). Discover Kotlin's basics in this interactive tutorial!"
   tutorial_kanostreet_longdescription: "Art and technology unite! With Kano's Street Art Hour of Code challenges, creative minds of all abilities will code with a paintbrush, making beautiful, unique artwork. Along the way, makers will learn computer science principles while using a real programming language in an intuitive and engaging way. With our teacher resources and guided content, everyone can get in on the fun."
   tutorial_nyblebot_longdescription: "Boogie Bot is a fun and engaging coding app. Bursting with life and energy, this 3D app will introduce kids to the basics of computer programming using Google's visual programming language Blockly. Boogie Bot is a dancing robot, who can be programmed to do dance moves. App Features (all features available in full version) learn to code with coding blocks, create your own dance with code, choose from several different unique dance tracks, transform the room to a trendy party zone, add stunning special effects on stage, earn coins as you learn programming constructs, decorate the room with cool stuff, play and explore in an interactive room full of hidden features, record and save a video of your awesome creation."
-  tutorial_codemojijs_longdescription: "Beginning JavaScript is designed to get students typing simple command that have a big impact on the characters actions. The students will type command that make the characters do everything from backflips to make sounds and even talk. This activity will help you learn basic JavaScript ideas and commands."
+  tutorial_codemojijs_longdescription: "Beginning JavaScript is designed to get students typing simple commands that have a big impact on the characters' actions. The students will type commands that make the characters do everything from backflips to make sounds and even talk. This activity will help you learn basic JavaScript ideas and commands."
   tutorial_bloxmobmath_longdescription: "Create your own mobile app. Learn to be an innovative designer and become a computational thinker by creating apps you and your friends can use. Design using chat Blox, quizzes, flashcards, calendars, maps, pictures and more into stories or interactive apps that work on both iOS or Android phones immediately. Anyone and everyone can create a mobile app."
   tutorial_techapf_longdescription: "The interactive tutorial aims to introduce you to useful advanced Python features and tricks you may not know yet to improve your mastery of the Python language."
   tutorial_techfpjs_longdescription: "Functional programming is one of those things that may look too hard or too theoretical to try. Wait no more! In this interactive tutorial, you'll discover functional programming through hands-on examples and exercises in JavaScript."
@@ -1654,7 +1682,7 @@ sk:
   tutorial_ozoprogram_longdescription: "Students find out how easy it is to program robots, even if their classroom doesn't have any. This teacher-guided online tutorial helps students develop programming skills and gain confidence in their ability to understand computer science through Ozobot's Blockly games. Students discover how Bit and Evo by Ozobot will upload the program through a unique method - colors flash onto the robot's light sensors and teach the it the program."
   tutorial_ozopair_longdescription: "Students who know the OzoBlockly block-based programming language learn how to work in teams as Drivers and Navigators, and then practice by creating a single program on one computer for one Ozobot robot. This is a teacher-led tutorial that requires videos to be shown at the beginning, and then guidance to help students through completing their program when needed."
   tutorial_codesnoopy_longdescription: "Team up with friends and practice your coding skills by programming Snoopy's Beagle Scouts in a fun and silly snowball fight! Beginners and pre-readers welcome - teams write their code in secret while trying to outsmart each other. With words-free code, everyone can get in on the fun! This activity supports 1- 4 players on the same device - play against friends or the computer."
-  tutorial_applabintro_longdescription: "Create your own app in JavaScript using blocks or text. You'll make a simple app with buttons, images, sounds and multiple screens that you can share with your friends or publish to a public gallery. If you've already done some coding with blocks, this is a great next step to take your programming to the next level."
+  tutorial_applabintro_longdescription: "Create your own app in JavaScript using blocks or text. You'll make a simple app with buttons, images, sounds and multiple screens that you can share with your friends or publish to a public gallery. If you've already done some coding with blocks, take your skills to the next level."
   tutorial_cslartist_longdescription: "Did you know that there's a little artist who lives inside every computer? This PDF contains a fun story embedded with puzzles that will teach your students the fundamentals of digital art as they make their own creations using pixels, algorithms and repeat loops."
   tutorial_cslscratchjr_longdescription: "CodeSpeak's \"Let's Play with the ScratchJr Kitten!\" Activity Pack is a Read Aloud Story with accompanying worksheets. The Story walks through the code for a great first project for brand new coders. A grown-up can read the story to a class of pre-reader students and then guide students to code the story in their tablets using the ScratchJr app. Students with early reading skills can read the story themselves and independently complete the Activity Pack."
   tutorial_floevents_longdescription: "Students will explore events, a concept that allows programs to respond to specific stimuli. Events are determined in bits of code called event handlers, which listen for specific events and contain instructions on how to respond. Students will learn key vocabulary and write text for event handlers in a Mad Libs-style exercise in which they create and act out event handlers of their own."
@@ -1709,6 +1737,19 @@ sk:
   tutorial_idowedo_longdescription: "This teacher-led lesson activity, adapted for the Hour of Code, provides opportunities to explore physical programming (robotics). Children design and build models using construction bricks and bring them to life with code! Using a visual drag-and-drop programming environment and LEGO™ WeDo parts (motor and hub and optional sensors), pupils learn that physical systems can be programmed and controlled using algorithms and code. Includes a step-by-step activity plan, associated teacher and pupil resources and ideas for extension and enrichment to take learning further."
   tutorial_diggindwarf_longdescription: "Dwarfs need your help to navigate, dig, and collect gems!  Learn how to use JavaScript to guide your dwarf through mazes and puzzles."
   tutorial_rmedr_longdescription: "Using Blockly in Robot Mesh Studio, program a VEX EDR robot \"mimic\" online and watch it run through a maze. Students learn about basic robot movement, and how to incorporate three sensors and one output into their programming."
+  tutorial_dksky_longdescription: "Build the awesome Sky Fall game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the Sky Fall template, and follow along with the video tutorial!"
+  tutorial_dkcurrency_longdescription: "Build the awesome Currency King game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the Currency King template, and follow along with the video tutorial!"
+  tutorial_dkriver_longdescription: "Build the awesome River Monsters game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the River Monsters template, and follow along with the video tutorial!"
+  tutorial_dkball_longdescription: "Build the awesome Bouncing Ball game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the Bouncing Ball template, and follow along with the video tutorial!"
+  tutorial_spheroit_longdescription: "Learn about if/then, else conditions while building your very own animal sound game we like to call \"Animal Toss!\""
+  tutorial_gameofcodes_longdescription: "Build an awesome Dragon game to defend the wall, then export it as a standalone app (for iOS, Android, PC, and Mac)."
+  tutorial_blocklygames_longdescription: "Blockly Games is a series of educational games that teach programming. It is designed for children who have not had prior experience with computer programming but who wish to learn at a more challenging pace. By the end of these games, players are ready to use conventional text-based languages."
+  tutorial_spherohello_longdescription: "Have you conquered Blocks and need a new challenge? Take the logic you have learned with block-based programming and begin to learn how to program with just text. In this first Text activity learn the basics of the text canvas, loops, and some tips to get started with your first lines of JavaScript code."
+  tutorial_spheroarcade_longdescription: "In this arcade-style playground, you can recreate classic games with a Sphero SPRK+ robot while learning the basics of game design. You'll build your very own robotic renditions of some famous games like Pong, Bop It, and Pac-Man. Each game uses Sphero in a different way such as rolling on the floor, detecting gestures, or using Sphero as a joystick."
+  tutorial_bcpy1_longdescription: 'This Hour of Code lesson teaches you some basic concepts of coding in Python, based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
+  tutorial_bcpy2_longdescription: 'This Hour of Code lesson is a follow-up course to World of Python. You''ll learn more advanced coding concepts in Python based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
+  tutorial_bcjs1_longdescription: 'This Hour of Code lesson teaches you some basic concepts of coding in JavaScript, based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
+  tutorial_bcjs2_longdescription: 'This Hour of Code lesson is a follow-up course to World of JavaScript. You''ll learn more advanced coding concepts in JavaScript based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
   tutorial_athlete_language: "English, French, Spanish, Italian, Portuguese (Brazil)"
   tutorial_moana_language: "English, Arabic, Chinese (Simplified), Chinese (Traditional) Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
   tutorial_star-wars_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
@@ -1918,7 +1959,7 @@ sk:
   tutorial_kfr_language: "Francúzsky"
   tutorial_app-inventor_language: "Iba v angličtine"
   tutorial_bits_language: "Anglicky, nemecky"
-  tutorial_blockly_language: "Spanish, French, many others"
+  tutorial_blockly_language: "English, Spanish, French, 40 others"
   tutorial_tynker_language: "Iba v angličtine"
   tutorial_baypt_language: "Portugalsky"
   tutorial_code-combat_language: "Viacero"
@@ -2123,7 +2164,7 @@ sk:
   tutorial_cacrazy_language: "Iba v angličtine"
   tutorial_cajump_language: "Iba v angličtine"
   tutorial_carest_language: "Iba v angličtine"
-  tutorial_accai_language: "English, Danish, Dutch, French, German, Greek, Italian, Portuguese, Spanish"
+  tutorial_accai_language: "English, French, Italian, and Dutch"
   tutorial_vceclipse_language: "Iba v angličtine"
   tutorial_pmzero_language: "Iba v angličtine"
   tutorial_hsela_language: "Iba v angličtine"
@@ -2134,6 +2175,19 @@ sk:
   tutorial_idowedo_language: "Iba v angličtine"
   tutorial_diggindwarf_language: "Iba v angličtine"
   tutorial_rmedr_language: "Iba v angličtine"
+  tutorial_dksky_language: "Iba v angličtine"
+  tutorial_dkcurrency_language: "Iba v angličtine"
+  tutorial_dkriver_language: "Iba v angličtine"
+  tutorial_dkball_language: "Iba v angličtine"
+  tutorial_spheroit_language: "Iba v angličtine"
+  tutorial_gameofcodes_language: "Iba v angličtine"
+  tutorial_blocklygames_language: "English, Spanish, French, 40 others"
+  tutorial_spherohello_language: "Iba v angličtine"
+  tutorial_spheroarcade_language: "Chinese (Simplified), English, French, German, Japanese, Spanish"
+  tutorial_bcpy1_language: "Iba v angličtine"
+  tutorial_bcpy2_language: "Iba v angličtine"
+  tutorial_bcjs1_language: "Iba v angličtine"
+  tutorial_bcjs2_language: "Iba v angličtine"
   tutorial_athlete_string_detail_grades: "2. ročník a vyššie"
   tutorial_moana_string_detail_grades: "2. ročník a vyššie"
   tutorial_star-wars_string_detail_grades: "2. ročník a vyššie"
@@ -2343,7 +2397,7 @@ sk:
   tutorial_kfr_string_detail_grades: "6. ročník a vyššie"
   tutorial_app-inventor_string_detail_grades: "6. ročník a vyššie"
   tutorial_bits_string_detail_grades: "Grades 2-5"
-  tutorial_blockly_string_detail_grades: "2. ročník a vyššie"
+  tutorial_blockly_string_detail_grades: "6. ročník a vyššie"
   tutorial_tynker_string_detail_grades: "nezobraziť"
   tutorial_baypt_string_detail_grades: "Všetky vekové kategórie"
   tutorial_code-combat_string_detail_grades: "nezobraziť"
@@ -2549,7 +2603,7 @@ sk:
   tutorial_cajump_string_detail_grades: "Ročníky 2-8"
   tutorial_carest_string_detail_grades: "Ročníky 2-8"
   tutorial_accai_string_detail_grades: "Ročníky 2-8"
-  tutorial_vceclipse_string_detail_grades: "9. ročník a vyššie"
+  tutorial_vceclipse_string_detail_grades: "6. ročník a vyššie"
   tutorial_pmzero_string_detail_grades: "6. ročník a vyššie"
   tutorial_hsela_string_detail_grades: "Ročníky 2-8"
   tutorial_ticklear_string_detail_grades: "Ročníky 2-8"
@@ -2559,6 +2613,19 @@ sk:
   tutorial_idowedo_string_detail_grades: "Ročníky 2-8"
   tutorial_diggindwarf_string_detail_grades: "6. ročník a vyššie"
   tutorial_rmedr_string_detail_grades: "Ročníky 2-8"
+  tutorial_dksky_string_detail_grades: "9. ročník a vyššie"
+  tutorial_dkcurrency_string_detail_grades: "9. ročník a vyššie"
+  tutorial_dkriver_string_detail_grades: "9. ročník a vyššie"
+  tutorial_dkball_string_detail_grades: "9. ročník a vyššie"
+  tutorial_spheroit_string_detail_grades: "2. ročník a vyššie"
+  tutorial_gameofcodes_string_detail_grades: "2. ročník a vyššie"
+  tutorial_blocklygames_string_detail_grades: "6. ročník a vyššie"
+  tutorial_spherohello_string_detail_grades: "6. ročník a vyššie"
+  tutorial_spheroarcade_string_detail_grades: "6. ročník a vyššie"
+  tutorial_bcpy1_string_detail_grades: "6. ročník a vyššie"
+  tutorial_bcpy2_string_detail_grades: "6. ročník a vyššie"
+  tutorial_bcjs1_string_detail_grades: "6. ročník a vyššie"
+  tutorial_bcjs2_string_detail_grades: "9. ročník a vyššie"
   tutorial_athlete_string_platforms: "Všetky moderné prehliadače"
   tutorial_moana_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_star-wars_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
@@ -2571,7 +2638,7 @@ sk:
   tutorial_frzn_string_platforms: "All modern browsers, Android, iOS"
   tutorial_cocom_string_platforms: "Všetky moderné prehliadače"
   tutorial_play-lab_string_platforms: "All modern browsers, Android, iOS"
-  tutorial_boxisland_string_platforms: "Android tablet, iPad, Android phone, iPhone"
+  tutorial_boxisland_string_platforms: "Android tablet, iPad, Android telefón, iPhone"
   tutorial_textcomp_string_platforms: "Všetky moderné prehliadače"
   tutorial_encryption_string_platforms: "Všetky moderné prehliadače"
   tutorial_kanopixel_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
@@ -2725,7 +2792,7 @@ sk:
   tutorial_elaseq_string_platforms: "Unplugged, All modern browsers, iPad, Android tablet"
   tutorial_bbcmathi_string_platforms: "nezobraziť"
   tutorial_tlcpixel_string_platforms: "Unplugged"
-  tutorial_arduino_string_platforms: "Arduino Circut Boards"
+  tutorial_arduino_string_platforms: "Arduino plošné spoje"
   tutorial_introrobo_string_platforms: "iPad, Android tablet, Dash and Dot robot"
   tutorial_tlcinvis_string_platforms: "Unplugged"
   tutorial_tlcjflap_string_platforms: "Všetky moderné prehliadače"
@@ -2733,11 +2800,11 @@ sk:
   tutorial_spiralsfinch_string_platforms: "PC, Mac, Linux, Chromebook downloadable, Finch robot"
   tutorial_ozoi_string_platforms: "Ozobot robot"
   tutorial_ticklel_string_platforms: "All modern browsers, iPad, iPhone, LEGO WeDo robot"
-  tutorial_spiralsdash_string_platforms: "Android tablet, Android phone, Dash robot"
+  tutorial_spiralsdash_string_platforms: "Android tablet, Android telefón, Dash robot"
   tutorial_ghdebug_string_platforms: "Všetky moderné prehliadače"
   tutorial_tlckk_string_platforms: "Unplugged"
   tutorial_firstcomp_string_platforms: "Unplugged"
-  tutorial_mazefinch_string_platforms: "All modern browsers, Finch robot"
+  tutorial_mazefinch_string_platforms: "Všetky moderné prehliadače, robot Finch"
   tutorial_tlccc_string_platforms: "Unplugged"
   tutorial_tlcdoodle_string_platforms: "Unplugged"
   tutorial_tlcpunch_string_platforms: "Unplugged"
@@ -2757,7 +2824,7 @@ sk:
   tutorial_grokffblock_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_grokeliza_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_tynkercan_string_platforms: "Všetky moderné prehliadače"
-  tutorial_grokflags_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android Chrome (mobile-optimized), iOS (mobile-optimized)"
+  tutorial_grokflags_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android Chrome (optimalizovaný pre mobilné zariadenie), iOS (optimalizovaný pre mobilné zariadenie)"
   tutorial_robomind_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_scratchanimwork_string_platforms: "Všetky moderné prehliadače"
   tutorial_adventureq_string_platforms: "iPad"
@@ -2774,9 +2841,9 @@ sk:
   tutorial_code-combat_string_platforms: "nezobraziť"
   tutorial_mky_string_platforms: "Všetky moderné prehliadače"
   tutorial_spellcraft_string_platforms: "Windows"
-  tutorial_pirates_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad, Android phone, iPhone"
+  tutorial_pirates_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad, Android telefón, iPhone"
   tutorial_csfirst_string_platforms: "Všetky moderné prehliadače"
-  tutorial_loopedy_string_platforms: "iPad, iPhone, Android tablet, Android phone, Dash and Dot robot"
+  tutorial_loopedy_string_platforms: "iPad, iPhone, Android tablet, Android telefón, Dash and Dot robot"
   tutorial_dsw_string_platforms: "nezobraziť"
   tutorial_dswb_string_platforms: "nezobraziť"
   tutorial_ssw_string_platforms: "nezobraziť"
@@ -2785,10 +2852,10 @@ sk:
   tutorial_scratch_string_platforms: "Všetky moderné prehliadače"
   tutorial_bayes_string_platforms: "Všetky moderné prehliadače"
   tutorial_gumball_string_platforms: "nezobraziť"
-  tutorial_hrm_string_platforms: "PC and Mac downloadable"
+  tutorial_hrm_string_platforms: "Stiahnuteľné na PC a Mac"
   tutorial_ice-age_string_platforms: "nezobraziť"
   tutorial_koapp_string_platforms: "nezobraziť"
-  tutorial_lightbot-intl_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad, Android phone, iPhone"
+  tutorial_lightbot-intl_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad, Android telefón, iPhone"
   tutorial_rmc_string_platforms: "nezobraziť"
   tutorial_smc_string_platforms: "nezobraziť"
   tutorial_minecraft-2016_string_platforms: "nezobraziť"
@@ -2796,19 +2863,19 @@ sk:
   tutorial_pixie_string_platforms: "Všetky moderné prehliadače"
   tutorial_play_string_platforms: "nezobraziť"
   tutorial_robomind-nl_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
-  tutorial_spheroi_string_platforms: "iPad, Android tablet, iPhone, Android phone, Sphero robot"
-  tutorial_spherol_string_platforms: "iPad, Android tablet, iPhone, Android phone, Sphero robot"
-  tutorial_spherov_string_platforms: "iPad, Android tablet, iPhone, Android phone, Sphero robot"
+  tutorial_spheroi_string_platforms: "iPad, Android tablet, iPhone, Android telefón, Sphero robot"
+  tutorial_spherol_string_platforms: "iPad, Android tablet, iPhone, Android telefón, Sphero robot"
+  tutorial_spherov_string_platforms: "iPad, Android tablet, iPhone, Android telefón, Sphero robot"
   tutorial_swb_string_platforms: "nezobraziť"
   tutorial_build-a-galaxy_string_platforms: "nezobraziť"
   tutorial_alicesims_string_platforms: "Všetky moderné prehliadače"
   tutorial_tchr_string_platforms: "nezobraziť"
-  tutorial_robogame_string_platforms: "Android tablet, iPad, Android phone, iPhone, Dash and Dot robot"
+  tutorial_robogame_string_platforms: "Android tablet, iPad, Android telefón, iPhone, Dash and Dot robot"
   tutorial_tap_string_platforms: "Android tablet, iPad"
   tutorial_cintl_string_platforms: "nezobraziť"
   tutorial_itchstop_string_platforms: "Všetky moderné prehliadače"
-  tutorial_tynkerpn_string_platforms: "All modern browsers, iPad, Android tablet"
-  tutorial_tynkerpd_string_platforms: "All modern browsers, iPad, Android tablet"
+  tutorial_tynkerpn_string_platforms: "Všetky moderné prehliadače, iPad, Android tablet"
+  tutorial_tynkerpd_string_platforms: "Všetky moderné prehliadače, iPad, Android tablet"
   tutorial_persistence_string_platforms: "Unplugged"
   tutorial_getloopy_string_platforms: "Unplugged"
   tutorial_createface_string_platforms: "Unplugged"
@@ -2817,7 +2884,7 @@ sk:
   tutorial_bigevent_string_platforms: "Unplugged"
   tutorial_gpp_string_platforms: "Unplugged"
   tutorial_foosgame_string_platforms: "Android tablet, iPad"
-  tutorial_solopython_string_platforms: "All modern browsers, Android tablet, Android phone, iPad, iPhone"
+  tutorial_solopython_string_platforms: "Všetky moderné prehliadače, Android tablet, Android telefón, iPad, iPhone"
   tutorial_kodableint_string_platforms: "Unplugged, All modern browsers, iPad, Android tablet"
   tutorial_kodableadv_string_platforms: "Unplugged, All modern browsers, iPad, Android tablet"
   tutorial_tynkertj_string_platforms: "Všetky moderné prehliadače"
@@ -2827,17 +2894,17 @@ sk:
   tutorial_wolframsph_string_platforms: "Všetky moderné prehliadače"
   tutorial_wolframp_string_platforms: "Všetky moderné prehliadače"
   tutorial_wolframn_string_platforms: "Všetky moderné prehliadače"
-  tutorial_soloweb_string_platforms: "All modern browsers, Android tablet, Android phone, iPad, iPhone"
+  tutorial_soloweb_string_platforms: "Všetky moderné prehliadače, Android tablet, Android telefón, iPad, iPhone"
   tutorial_bloxmobapp_string_platforms: "Všetky moderné prehliadače"
-  tutorial_khanweb_string_platforms: "All modern browsers, Android tablet"
+  tutorial_khanweb_string_platforms: "Všetky moderné prehliadače, Android tablet"
   tutorial_khandata_string_platforms: "Všetky moderné prehliadače"
-  tutorial_robomeshiq_string_platforms: "Internet Explorer 11, Chrome, Firefox, Vex IQ Robots"
+  tutorial_robomeshiq_string_platforms: "Internet Explorer 11, Chrome, Firefox, Vex IQ Roboty"
   tutorial_googlelogo_string_platforms: "Všetky moderné prehliadače"
   tutorial_playtune_string_platforms: "Chrome, Firefox, Safari"
   tutorial_computeit_string_platforms: "Všetky moderné prehliadače"
   tutorial_codesterssj_string_platforms: "Všetky moderné prehliadače"
   tutorial_cmchat_string_platforms: "Všetky moderné prehliadače"
-  tutorial_tynkerdb_string_platforms: "All modern browsers, iPad"
+  tutorial_tynkerdb_string_platforms: "Všetky moderné prehliadače, iPad"
   tutorial_cmbuild_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_robotrattle_string_platforms: "Chrome, Firefox, Android tablet, iPad"
   tutorial_codestersh_string_platforms: "All modern browsers, Android tablet, iPad"
@@ -2846,10 +2913,10 @@ sk:
   tutorial_codehsturtle_string_platforms: "Chrome, Firefox, Safari"
   tutorial_grokhd_string_platforms: "Všetky moderné prehliadače"
   tutorial_grokem_string_platforms: "Všetky moderné prehliadače"
-  tutorial_kodmaze_string_platforms: "All modern browsers, iPad"
+  tutorial_kodmaze_string_platforms: "Všetky moderné prehliadače, iPad"
   tutorial_codestersa_string_platforms: "Všetky moderné prehliadače"
   tutorial_cmdodo_string_platforms: "All modern browsers, Android tablet, iPad"
-  tutorial_tynkerspace_string_platforms: "All modern browsers, iPad, Unplugged"
+  tutorial_tynkerspace_string_platforms: "Všetky moderné prehliadače, iPad, offline"
   tutorial_gfbloons_string_platforms: "Všetky moderné prehliadače"
   tutorial_raspipong_string_platforms: "Chrome"
   tutorial_codehsvr_string_platforms: "Chrome, Firefox, Safari"
@@ -2860,7 +2927,7 @@ sk:
   tutorial_codehsjsapp_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_gfmihi_string_platforms: "Všetky moderné prehliadače"
   tutorial_hopdropphone_string_platforms: "iPad, iPhone"
-  tutorial_techfaa_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
+  tutorial_techfaa_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Windows Phone, Android telefón, iPhone"
   tutorial_codehsjsgraph_string_platforms: "Chrome, Firefox, Safari"
   tutorial_thunkable_string_platforms: "Všetky moderné prehliadače"
   tutorial_hopcrossyroad_string_platforms: "iPad, iPhone"
@@ -2868,11 +2935,11 @@ sk:
   tutorial_codecar_string_platforms: "Chrome, Firefox"
   tutorial_codesterscp_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_grokpetblock_string_platforms: "Všetky moderné prehliadače"
-  tutorial_techbim_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
-  tutorial_techfpp_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
+  tutorial_techbim_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Windows Phone, Android telefón, iPhone"
+  tutorial_techfpp_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Windows Phone, Android telefón, iPhone"
   tutorial_codesterscr_string_platforms: "Všetky moderné prehliadače"
   tutorial_grokdisease_string_platforms: "Všetky moderné prehliadače"
-  tutorial_techec_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
+  tutorial_techec_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Windows Phone, Android telefón, iPhone"
   tutorial_rgbegin_string_platforms: "Chrome, Firefox"
   tutorial_myradream_string_platforms: "Všetky moderné prehliadače"
   tutorial_thinkfun_string_platforms: "Chrome, Firefox, Safari"
@@ -2880,54 +2947,54 @@ sk:
   tutorial_grokspace_string_platforms: "Všetky moderné prehliadače"
   tutorial_codehspython_string_platforms: "Chrome, Firefox, Safari"
   tutorial_codehsjava_string_platforms: "Chrome, Firefox, Safari"
-  tutorial_techioda_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
+  tutorial_techioda_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Windows Phone, Android telefón, iPhone"
   tutorial_grokmonster_string_platforms: "Všetky moderné prehliadače"
-  tutorial_techmjs_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
-  tutorial_techga_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
-  tutorial_techioan_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
-  tutorial_techiogsr_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
+  tutorial_techmjs_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Windows Phone, Android telefón, iPhone"
+  tutorial_techga_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Windows Phone, Android telefón, iPhone"
+  tutorial_techioan_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Windows Phone, Android telefón, iPhone"
+  tutorial_techiogsr_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Windows Phone, Android telefón, iPhone"
   tutorial_groktunnel_string_platforms: "Všetky moderné prehliadače"
   tutorial_stemcod_string_platforms: "Všetky moderné prehliadače"
-  tutorial_techikb_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
+  tutorial_techikb_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Windows Phone, Android telefón, iPhone"
   tutorial_kanostreet_string_platforms: "Všetky moderné prehliadače"
-  tutorial_nyblebot_string_platforms: "Android tablet, iPad, Android phone, iPhone"
+  tutorial_nyblebot_string_platforms: "Android tablet, iPad, Android telefón, iPhone"
   tutorial_codemojijs_string_platforms: "Všetky moderné prehliadače"
   tutorial_bloxmobmath_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Safari"
-  tutorial_techapf_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
-  tutorial_techfpjs_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
-  tutorial_techlinq_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
+  tutorial_techapf_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Windows Phone, Android telefón, iPhone"
+  tutorial_techfpjs_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Windows Phone, Android telefón, iPhone"
+  tutorial_techlinq_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Windows Phone, Android telefón, iPhone"
   tutorial_gpbcatapult_string_platforms: "Všetky moderné prehliadače"
-  tutorial_quorumastro_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
+  tutorial_quorumastro_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Windows Phone, Android telefón, iPhone"
   tutorial_alicewonder_string_platforms: "Všetky moderné prehliadače"
   tutorial_rginter_string_platforms: "Chrome, Firefox, Android tablet"
   tutorial_bloxmobscience_string_platforms: "Všetky moderné prehliadače"
   tutorial_cssgrid_string_platforms: "Všetky moderné prehliadače"
   tutorial_bloxmobdesign_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Safari"
-  tutorial_jshero_string_platforms: "All modern browsers, Android tablet, Android phone"
+  tutorial_jshero_string_platforms: "Všetky moderné prehliadače, Android tablet, Android telefón"
   tutorial_codemojipy_string_platforms: "iPad, iPhone"
   tutorial_bloxmobcomp_string_platforms: "Všetky moderné prehliadače"
   tutorial_nclabdrone_string_platforms: "Všetky moderné prehliadače"
   tutorial_gpbcircle_string_platforms: "Všetky moderné prehliadače"
   tutorial_gpbpaint_string_platforms: "Všetky moderné prehliadače"
   tutorial_cocomarcade_string_platforms: "všetky moderné prehliadače"
-  tutorial_techcpp_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
+  tutorial_techcpp_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Windows Phone, Android telefón, iPhone"
   tutorial_beetik_string_platforms: "Chrome, Firefox, Android tablet, iPad"
   tutorial_codedj_string_platforms: "Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_rgadvan_string_platforms: "Chrome, Firefox, Android tablet"
-  tutorial_codehsrn_string_platforms: "Chrome, Firefox, Safari, Android phone, iPhone"
+  tutorial_codehsrn_string_platforms: "Chrome, Firefox, Safari, Android telefón, iPhone"
   tutorial_codehswd_string_platforms: "Chrome, Firefox, Safari"
-  tutorial_turtlerobot_string_platforms: "Chrome, Android tablet, iPad, Android phone, iPhone"
-  tutorial_ozoevo_string_platforms: "All modern browsers, Android tablets, iPads, Ozobot Evo robot"
-  tutorial_ozoexped_string_platforms: "All modern browsers, Android tablets, iPads, Ozobot Bit or Evo robot"
-  tutorial_ozojourney_string_platforms: "All modern browsers, Android tablets, iPads, Ozobot Bit or Evo robot"
-  tutorial_ozocodes_string_platforms: "All modern browsers, Android tablets, iPads, Ozobot Bit or Evo robot"
-  tutorial_ozoeclipse_string_platforms: "All modern browsers, Android tablets, iPads, Ozobot Bit or Evo robot"
+  tutorial_turtlerobot_string_platforms: "Chrome, Android tablet, iPad, Android telefón, iPhone"
+  tutorial_ozoevo_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Ozobot Evo robot"
+  tutorial_ozoexped_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Ozobot Bit alebo Evo robot"
+  tutorial_ozojourney_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Ozobot Bit alebo Evo robot"
+  tutorial_ozocodes_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Ozobot Bit alebo Evo robot"
+  tutorial_ozoeclipse_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Ozobot Bit alebo Evo robot"
   tutorial_ozosimulator_string_platforms: "Unplugged"
-  tutorial_ozoalgorithm_string_platforms: "All modern browsers, Android tablets, iPads, Ozobot Bit or Evo robot"
-  tutorial_ozotimer_string_platforms: "All modern browsers, Android tablets, iPads, Ozobot Bit or Evo robot"
-  tutorial_ozohabits_string_platforms: "All modern browsers, Android tablets, iPads, Ozobot Bit or Evo robot"
+  tutorial_ozoalgorithm_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Ozobot Bit alebo Evo robot"
+  tutorial_ozotimer_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Ozobot Bit alebo Evo robot"
+  tutorial_ozohabits_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Ozobot Bit alebo Evo robot"
   tutorial_ozoprogram_string_platforms: "Všetky moderné prehliadače"
-  tutorial_ozopair_string_platforms: "All modern browsers, Android tablets, iPads, Ozobot Bit or Evo robot"
+  tutorial_ozopair_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, Ozobot Bit alebo Evo robot"
   tutorial_codesnoopy_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_applabintro_string_platforms: "Všetky moderné prehliadače"
   tutorial_cslartist_string_platforms: "Unplugged"
@@ -2935,37 +3002,37 @@ sk:
   tutorial_floevents_string_platforms: "Unplugged"
   tutorial_florobot_string_platforms: "Unplugged"
   tutorial_isavesanta_string_platforms: "Všetky moderné prehliadače"
-  tutorial_iorder_string_platforms: "All modern borwsers"
-  tutorial_ianimate_string_platforms: "All modern browsers, iPad"
-  tutorial_iloveada_string_platforms: "All modern borwsers"
+  tutorial_iorder_string_platforms: "Všetky moderné prehliadače"
+  tutorial_ianimate_string_platforms: "Všetky moderné prehliadače, iPad"
+  tutorial_iloveada_string_platforms: "Všetky moderné prehliadače"
   tutorial_kodflash_string_platforms: "Unplugged"
   tutorial_kodchoose_string_platforms: "Unplugged"
   tutorial_kodpizzapre_string_platforms: "Unplugged"
   tutorial_kodpizza_string_platforms: "Unplugged"
   tutorial_kodwomen_string_platforms: "Unplugged"
   tutorial_tfunplug_string_platforms: "Unplugged"
-  tutorial_lbvariables_string_platforms: "All modern browsers, littleBits Code Kit"
-  tutorial_lbfunctions_string_platforms: "All modern browsers, littleBits Code Kit"
-  tutorial_lblogic_string_platforms: "All modern browsers, littleBits Code Kit"
-  tutorial_lbworld_string_platforms: "All modern browsers, littleBits Code Kit"
-  tutorial_lbloops_string_platforms: "All modern browsers, littleBits Code Kit"
-  tutorial_lbtug_string_platforms: "All modern browsers, littleBits Code Kit"
-  tutorial_lbpotato_string_platforms: "All modern browsers, littleBits Code Kit"
-  tutorial_lbguitar_string_platforms: "All modern browsers, littleBits Code Kit"
-  tutorial_lbio_string_platforms: "All modern browsers, littleBits Code Kit"
-  tutorial_wonpuppy_string_platforms: "iPads, iPhones, Android tablets, Android phones, Dash robot"
-  tutorial_woncue_string_platforms: "iPads, iPhones, Android tablets, Android phones, Cue robot"
-  tutorial_wonzoo_string_platforms: "iPads, iPhones, Android tablets, Android phones, Dot robot"
-  tutorial_wontrip_string_platforms: "iPads, iPhones, Android tablets, Android phones, Dash robot"
-  tutorial_woncollect_string_platforms: "iPads, iPhones, Android tablets, Android phones, Dash robot"
-  tutorial_wonsecret_string_platforms: "iPads, iPhones, Android tablets, Android phones, Cue robot"
+  tutorial_lbvariables_string_platforms: "Všetky moderné prehliadače, littleBits Code kit"
+  tutorial_lbfunctions_string_platforms: "Všetky moderné prehliadače, littleBits Code kit"
+  tutorial_lblogic_string_platforms: "Všetky moderné prehliadače, littleBits Code kit"
+  tutorial_lbworld_string_platforms: "Všetky moderné prehliadače, littleBits Code kit"
+  tutorial_lbloops_string_platforms: "Všetky moderné prehliadače, littleBits Code kit"
+  tutorial_lbtug_string_platforms: "Všetky moderné prehliadače, littleBits Code kit"
+  tutorial_lbpotato_string_platforms: "Všetky moderné prehliadače, littleBits Code kit"
+  tutorial_lbguitar_string_platforms: "Všetky moderné prehliadače, littleBits Code kit"
+  tutorial_lbio_string_platforms: "Všetky moderné prehliadače, littleBits Code kit"
+  tutorial_wonpuppy_string_platforms: "iPad, iPhone, Android tablet, Android telefón, Dash robot"
+  tutorial_woncue_string_platforms: "iPad, iPhone, Android tablet, Android telefón, Cue robot"
+  tutorial_wonzoo_string_platforms: "iPad, iPhone, Android tablet, Android telefón, Dot robot"
+  tutorial_wontrip_string_platforms: "iPad, iPhone, Android tablet, Android telefón, Dash robot"
+  tutorial_woncollect_string_platforms: "iPad, iPhone, Android tablet, Android telefón, Dash robot"
+  tutorial_wonsecret_string_platforms: "iPad, iPhone, Android tablet, Android telefón, Cue robot"
   tutorial_hsscience_string_platforms: "iPad, iPhone"
-  tutorial_popculture_string_platforms: "All modern browsers, Android tablet, Android phone"
-  tutorial_legorobust_string_platforms: "All modern browsers, Android tablet, iPad, WeDo 2.0"
-  tutorial_legoplants_string_platforms: "All modern browsers, Android tablet, iPad, WeDo 2.0"
-  tutorial_legopark_string_platforms: "All modern browsers, Android tablet, iPad, MINDSTORMS® EV3"
-  tutorial_legodetect_string_platforms: "All modern browsers, Android tablet, iPad, MINDSTORMS® EV3"
-  tutorial_legolight_string_platforms: "All modern browsers, Android tablet, iPad, MINDSTORMS® EV3"
+  tutorial_popculture_string_platforms: "Všetky moderné prehliadače, Android tablet, Android telefón"
+  tutorial_legorobust_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, WeDo 2.0"
+  tutorial_legoplants_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, WeDo 2.0"
+  tutorial_legopark_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, MINDSTORMS® EV3"
+  tutorial_legodetect_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, MINDSTORMS® EV3"
+  tutorial_legolight_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, MINDSTORMS® EV3"
   tutorial_alexa_string_platforms: "Všetky moderné prehliadače"
   tutorial_grokpetmicro_string_platforms: "Všetky moderné prehliadače"
   tutorial_pirateplunder_string_platforms: "Chrome, Firefox"
@@ -2980,17 +3047,30 @@ sk:
   tutorial_ticklear_string_platforms: "iPad, iPhone"
   tutorial_bcrobot_string_platforms: "Chrome, Firefox, Safari"
   tutorial_bcsnow_string_platforms: "Chrome, Firefox, Safari"
-  tutorial_ifly_string_platforms: "Android tablet, iPad, Parrot Minidrones"
-  tutorial_idowedo_string_platforms: "All modern browsers, Android tablet, iPad, WeDo"
+  tutorial_ifly_string_platforms: "Android tablet, iPad, Parrot Minidrony"
+  tutorial_idowedo_string_platforms: "Všetky moderné prehliadače, Android tablet, iPad, WeDo"
   tutorial_diggindwarf_string_platforms: "Chrome, Firefox, Safari"
   tutorial_rmedr_string_platforms: "Všetky moderné prehliadače"
+  tutorial_dksky_string_platforms: "iPad, iPhone"
+  tutorial_dkcurrency_string_platforms: "iPad, iPhone"
+  tutorial_dkriver_string_platforms: "iPad, iPhone"
+  tutorial_dkball_string_platforms: "iPad, iPhone"
+  tutorial_spheroit_string_platforms: "iPad, Android tablet, iPhone, Android telefón, Sphero robot"
+  tutorial_gameofcodes_string_platforms: "All modern browsers, Android tablet, Android phone, iPad"
+  tutorial_blocklygames_string_platforms: "Všetky moderné prehliadače"
+  tutorial_spherohello_string_platforms: "iPad, Android tablet, iPhone, Android telefón, Sphero robot"
+  tutorial_spheroarcade_string_platforms: "iPad, Android tablet, iPhone, Android telefón, Sphero robot"
+  tutorial_bcpy1_string_platforms: "Všetky moderné prehliadače"
+  tutorial_bcpy2_string_platforms: "Všetky moderné prehliadače"
+  tutorial_bcjs1_string_platforms: "Všetky moderné prehliadače"
+  tutorial_bcjs2_string_platforms: "Všetky moderné prehliadače"
   tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
   tutorial_star-wars_string_detail_platforms: ""
   tutorial_gumadventure_string_detail_platforms: ""
   tutorial_mchoc_string_detail_platforms: ""
   tutorial_vidnews_string_detail_platforms: ""
-  tutorial_kodable-pre_string_detail_platforms: "All modern browsers, iPad app"
+  tutorial_kodable-pre_string_detail_platforms: "Všetky moderné prehliadače, iPad aplikácia"
   tutorial_highseas_string_detail_platforms: ""
   tutorial_capython_string_detail_platforms: ""
   tutorial_frzn_string_detail_platforms: ""
@@ -3060,7 +3140,7 @@ sk:
   tutorial_codestersbasketball_string_detail_platforms: ""
   tutorial_nclkarel_string_detail_platforms: ""
   tutorial_buildpong_string_detail_platforms: ""
-  tutorial_tynkerdrones_string_detail_platforms: "Parrot drone, Sphero robot, Ollie robot"
+  tutorial_tynkerdrones_string_detail_platforms: "Parrot dron, Sphero robot, Ollie robot"
   tutorial_carla_string_detail_platforms: ""
   tutorial_globaloria_string_detail_platforms: ""
   tutorial_capost_string_detail_platforms: ""
@@ -3122,7 +3202,7 @@ sk:
   tutorial_tlcknight_string_detail_platforms: "Unplugged"
   tutorial_fufafit_string_detail_platforms: "Unplugged"
   tutorial_ozodance_string_detail_platforms: "Ozobot robot"
-  tutorial_codingrobotics_string_detail_platforms: "iPad app, Dash robot"
+  tutorial_codingrobotics_string_detail_platforms: "iPad aplikácia, Dash robot"
   tutorial_box_string_detail_platforms: "nezobraziť"
   tutorial_hopgame_string_detail_platforms: "Aplikácia pre iOS"
   tutorial_icontrol_string_detail_platforms: "Sphero robot"
@@ -3343,16 +3423,16 @@ sk:
   tutorial_codehswd_string_detail_platforms: ""
   tutorial_turtlerobot_string_detail_platforms: ""
   tutorial_ozoevo_string_detail_platforms: "Ozobot Evo robot"
-  tutorial_ozoexped_string_detail_platforms: "Ozobot Bit or Evo robot"
-  tutorial_ozojourney_string_detail_platforms: "Ozobot Bit or Evo robot"
-  tutorial_ozocodes_string_detail_platforms: "Ozobot Bit or Evo robot"
-  tutorial_ozoeclipse_string_detail_platforms: "Ozobot Bit or Evo robot"
+  tutorial_ozoexped_string_detail_platforms: "Ozobot Bit alebo Evo robot"
+  tutorial_ozojourney_string_detail_platforms: "Ozobot Bit alebo Evo robot"
+  tutorial_ozocodes_string_detail_platforms: "Ozobot Bit alebo Evo robot"
+  tutorial_ozoeclipse_string_detail_platforms: "Ozobot Bit alebo Evo robot"
   tutorial_ozosimulator_string_detail_platforms: "Unplugged"
-  tutorial_ozoalgorithm_string_detail_platforms: "Ozobot Bit or Evo robot"
-  tutorial_ozotimer_string_detail_platforms: "Ozobot Bit or Evo robot"
-  tutorial_ozohabits_string_detail_platforms: "Ozobot Bit or Evo robot"
+  tutorial_ozoalgorithm_string_detail_platforms: "Ozobot Bit alebo Evo robot"
+  tutorial_ozotimer_string_detail_platforms: "Ozobot Bit alebo Evo robot"
+  tutorial_ozohabits_string_detail_platforms: "Ozobot Bit alebo Evo robot"
   tutorial_ozoprogram_string_detail_platforms: ""
-  tutorial_ozopair_string_detail_platforms: "Ozobot Bit or Evo robot"
+  tutorial_ozopair_string_detail_platforms: "Ozobot Bit alebo Evo robot"
   tutorial_codesnoopy_string_detail_platforms: ""
   tutorial_applabintro_string_detail_platforms: ""
   tutorial_cslartist_string_detail_platforms: "Unplugged"
@@ -3405,10 +3485,23 @@ sk:
   tutorial_ticklear_string_detail_platforms: ""
   tutorial_bcrobot_string_detail_platforms: ""
   tutorial_bcsnow_string_detail_platforms: ""
-  tutorial_ifly_string_detail_platforms: "Parrot Minidrones"
+  tutorial_ifly_string_detail_platforms: "Parrot Minidrony"
   tutorial_idowedo_string_detail_platforms: "WeDo"
   tutorial_diggindwarf_string_detail_platforms: ""
-  tutorial_rmedr_string_detail_platforms: ""
+  tutorial_rmedr_string_detail_platforms: "Vex EDR Robots"
+  tutorial_dksky_string_detail_platforms: ""
+  tutorial_dkcurrency_string_detail_platforms: ""
+  tutorial_dkriver_string_detail_platforms: ""
+  tutorial_dkball_string_detail_platforms: ""
+  tutorial_spheroit_string_detail_platforms: "Sphero robot"
+  tutorial_gameofcodes_string_detail_platforms: ""
+  tutorial_blocklygames_string_detail_platforms: ""
+  tutorial_spherohello_string_detail_platforms: "Sphero robot"
+  tutorial_spheroarcade_string_detail_platforms: "Sphero robot"
+  tutorial_bcpy1_string_detail_platforms: ""
+  tutorial_bcpy2_string_detail_platforms: ""
+  tutorial_bcjs1_string_detail_platforms: ""
+  tutorial_bcjs2_string_detail_platforms: ""
   tutorial_athlete_string_detail_programming_languages: "Blocks"
   tutorial_moana_string_detail_programming_languages: "Blocks"
   tutorial_star-wars_string_detail_programming_languages: "Blocks, JavaScript"
@@ -3422,8 +3515,8 @@ sk:
   tutorial_cocom_string_detail_programming_languages: "JavaScript, Python, Lua, CoffeeScript"
   tutorial_play-lab_string_detail_programming_languages: "Blocks"
   tutorial_boxisland_string_detail_programming_languages: "Blocks"
-  tutorial_textcomp_string_detail_programming_languages: "Language independent"
-  tutorial_encryption_string_detail_programming_languages: "Language independent"
+  tutorial_textcomp_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_encryption_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_kanopixel_string_detail_programming_languages: "JavaScript, Coffeescript"
   tutorial_foos_string_detail_programming_languages: "Blocks"
   tutorial_tynkerdd_string_detail_programming_languages: "Blocks"
@@ -3456,7 +3549,7 @@ sk:
   tutorial_monster_string_detail_programming_languages: "Blocks"
   tutorial_tynkerapp_string_detail_programming_languages: "nezobraziť"
   tutorial_tynkerpup_string_detail_programming_languages: "Blocks"
-  tutorial_livecode_string_detail_programming_languages: "Language independent"
+  tutorial_livecode_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_cocomgame_string_detail_programming_languages: "JavaScript, Python, Lua, CoffeeScript"
   tutorial_tynkerspin_string_detail_programming_languages: "Blocks"
   tutorial_code-avengers_string_detail_programming_languages: "JavaScript"
@@ -3483,7 +3576,7 @@ sk:
   tutorial_cdmy_string_detail_programming_languages: "JavaScript"
   tutorial_codestersdance_string_detail_programming_languages: "Blocks, Python"
   tutorial_codestersbasketball_string_detail_programming_languages: "Python"
-  tutorial_nclkarel_string_detail_programming_languages: "Karel (simplified Python)"
+  tutorial_nclkarel_string_detail_programming_languages: "Karel (zjednodušený Python)"
   tutorial_buildpong_string_detail_programming_languages: "Blocks, Ready, Unity"
   tutorial_tynkerdrones_string_detail_programming_languages: "Blocks"
   tutorial_carla_string_detail_programming_languages: "CoffeeScript"
@@ -3514,40 +3607,40 @@ sk:
   tutorial_robobm_string_detail_programming_languages: "Bloky, Ch/C/c ++"
   tutorial_codingrobots_string_detail_programming_languages: "Bloky, Ch/C/c ++"
   tutorial_robob_string_detail_programming_languages: "Bloky, Ch/C/c ++"
-  tutorial_coders_string_detail_programming_languages: "Language independent"
+  tutorial_coders_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_tynkerhw_string_detail_programming_languages: "Blocks"
   tutorial_tynkermh_string_detail_programming_languages: "Blocks"
   tutorial_caphoto_string_detail_programming_languages: "JavaScript, HTML, CSS"
   tutorial_mozillahw_string_detail_programming_languages: "JavaScript"
   tutorial_ticklep_string_detail_programming_languages: "nezobraziť"
-  tutorial_bbot_string_detail_programming_languages: "Visual programming language"
-  tutorial_scratchg_string_detail_programming_languages: "Language independent"
-  tutorial_roboticfriends_string_detail_programming_languages: "Language independent"
+  tutorial_bbot_string_detail_programming_languages: "Visual programovací jazyk"
+  tutorial_scratchg_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_roboticfriends_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_sjforest_string_detail_programming_languages: "Blocks"
   tutorial_sjgreet_string_detail_programming_languages: "Blocks"
   tutorial_sjsunset_string_detail_programming_languages: "Blocks"
-  tutorial_fufafrenz_string_detail_programming_languages: "Language independent"
+  tutorial_fufafrenz_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_bbcgeo_string_detail_programming_languages: "nezobraziť"
   tutorial_chspixel_string_detail_programming_languages: "JavaScript"
   tutorial_hummingbird_string_detail_programming_languages: "Blocks"
   tutorial_recoloring_string_detail_programming_languages: "Coffee Script (Pencil Code)"
   tutorial_bbcchem_string_detail_programming_languages: "nezobraziť"
-  tutorial_floalgo_string_detail_programming_languages: "Language independent"
-  tutorial_flocond_string_detail_programming_languages: "Blocks, Language independent"
-  tutorial_floloops_string_detail_programming_languages: "Blocks, Language independent"
-  tutorial_pgts_string_detail_programming_languages: "Language independent"
+  tutorial_floalgo_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_flocond_string_detail_programming_languages: "Blocks, Nezávislé na jazyku"
+  tutorial_floloops_string_detail_programming_languages: "Blocks, Nezávislé na jazyku"
+  tutorial_pgts_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_ozo_string_detail_programming_languages: "Blocks"
   tutorial_bbcla_string_detail_programming_languages: "nezobraziť"
   tutorial_bbcsci_string_detail_programming_languages: "nezobraziť"
-  tutorial_tlctour_string_detail_programming_languages: "Language independent"
+  tutorial_tlctour_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_codesterstj_string_detail_programming_languages: "Python"
-  tutorial_tlclocked_string_detail_programming_languages: "Language independent"
-  tutorial_baubles_string_detail_programming_languages: "Language independent"
+  tutorial_tlclocked_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_baubles_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_bbcart_string_detail_programming_languages: "nezobraziť"
-  tutorial_tlcknight_string_detail_programming_languages: "Language independent"
-  tutorial_fufafit_string_detail_programming_languages: "Language independent"
+  tutorial_tlcknight_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_fufafit_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_ozodance_string_detail_programming_languages: "Blocks"
-  tutorial_codingrobotics_string_detail_programming_languages: "Language independent"
+  tutorial_codingrobotics_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_box_string_detail_programming_languages: "nezobraziť"
   tutorial_hopgame_string_detail_programming_languages: "Hopscotch"
   tutorial_icontrol_string_detail_programming_languages: "Tickle"
@@ -3555,50 +3648,50 @@ sk:
   tutorial_bbcmathii_string_detail_programming_languages: "nezobraziť"
   tutorial_bbcphys_string_detail_programming_languages: "nezobraziť"
   tutorial_bitsbox_string_detail_programming_languages: "JavaScript"
-  tutorial_tlcemo_string_detail_programming_languages: "Language independent"
-  tutorial_crd_string_detail_programming_languages: "Language independent"
+  tutorial_tlcemo_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_crd_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_bbcbio_string_detail_programming_languages: "nezobraziť"
   tutorial_ticklebb8_string_detail_programming_languages: "Blocks"
   tutorial_grok_string_detail_programming_languages: "nezobraziť"
   tutorial_ijournalist_string_detail_programming_languages: "HTML, CSS"
   tutorial_bbcmusic_string_detail_programming_languages: "nezobraziť"
   tutorial_secretcodes_string_detail_programming_languages: "Blocks"
-  tutorial_tlchex_string_detail_programming_languages: "Language independent"
+  tutorial_tlchex_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_tickles_string_detail_programming_languages: "Blocks"
   tutorial_ozogame_string_detail_programming_languages: "Blocks"
-  tutorial_vidcodeio_string_detail_programming_languages: "Language independent"
+  tutorial_vidcodeio_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_besttech_string_detail_programming_languages: "Blocks, C/C++"
-  tutorial_tlcbrain_string_detail_programming_languages: "Language independent"
+  tutorial_tlcbrain_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_hopquiz_string_detail_programming_languages: "Hopscotch"
   tutorial_unfortunate_string_detail_programming_languages: "Blocks"
-  tutorial_cha_string_detail_programming_languages: "Language independent"
-  tutorial_elaseq_string_detail_programming_languages: "Language independent"
+  tutorial_cha_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_elaseq_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_bbcmathi_string_detail_programming_languages: "nezobraziť"
-  tutorial_tlcpixel_string_detail_programming_languages: "Language independent"
+  tutorial_tlcpixel_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_arduino_string_detail_programming_languages: "Arduino"
   tutorial_introrobo_string_detail_programming_languages: "Blocks, JavaScript"
-  tutorial_tlcinvis_string_detail_programming_languages: "Language independent"
-  tutorial_tlcjflap_string_detail_programming_languages: "Language independent"
-  tutorial_procolor_string_detail_programming_languages: "Language independent"
+  tutorial_tlcinvis_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_tlcjflap_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_procolor_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_spiralsfinch_string_detail_programming_languages: "Blocks"
-  tutorial_ozoi_string_detail_programming_languages: "Language independent"
+  tutorial_ozoi_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_ticklel_string_detail_programming_languages: "Blocks"
   tutorial_spiralsdash_string_detail_programming_languages: "Blocks"
   tutorial_ghdebug_string_detail_programming_languages: "Blocks"
-  tutorial_tlckk_string_detail_programming_languages: "Language independent"
-  tutorial_firstcomp_string_detail_programming_languages: "Language independent"
+  tutorial_tlckk_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_firstcomp_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_mazefinch_string_detail_programming_languages: "Blocks"
-  tutorial_tlccc_string_detail_programming_languages: "Language independent"
-  tutorial_tlcdoodle_string_detail_programming_languages: "Language independent"
-  tutorial_tlcpunch_string_detail_programming_languages: "Language independent"
+  tutorial_tlccc_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_tlcdoodle_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_tlcpunch_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_finchfract_string_detail_programming_languages: "Java, Python"
-  tutorial_tlcmind_string_detail_programming_languages: "Language independent"
-  tutorial_tlctelebot_string_detail_programming_languages: "Language independent"
-  tutorial_tlcaus_string_detail_programming_languages: "Language independent"
-  tutorial_oralhist_string_detail_programming_languages: "Language independent"
-  tutorial_tlcmicro_string_detail_programming_languages: "Language independent"
+  tutorial_tlcmind_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_tlctelebot_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_tlcaus_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_oralhist_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_tlcmicro_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_imathematician_string_detail_programming_languages: "Scratch"
-  tutorial_tlcmagic_string_detail_programming_languages: "Language independent"
+  tutorial_tlcmagic_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_scratchmus_string_detail_programming_languages: "Blocks, Scratch"
   tutorial_scratchanim_string_detail_programming_languages: "Blocks, Scratch"
   tutorial_scratchfly_string_detail_programming_languages: "Blocks, Scratch"
@@ -3617,7 +3710,7 @@ sk:
   tutorial_khe_string_detail_programming_languages: "JavaScript"
   tutorial_kfr_string_detail_programming_languages: "JavaScript"
   tutorial_app-inventor_string_detail_programming_languages: "Blocks"
-  tutorial_bits_string_detail_programming_languages: "Blocks, Language independent"
+  tutorial_bits_string_detail_programming_languages: "Blocks, Nezávislé na jazyku"
   tutorial_blockly_string_detail_programming_languages: "Blocks"
   tutorial_tynker_string_detail_programming_languages: "nezobraziť"
   tutorial_baypt_string_detail_programming_languages: "Blocks"
@@ -3631,8 +3724,8 @@ sk:
   tutorial_dswb_string_detail_programming_languages: "nezobraziť"
   tutorial_ssw_string_detail_programming_languages: "nezobraziť"
   tutorial_sswb_string_detail_programming_languages: "nezobraziť"
-  tutorial_kodable-unplugged_string_detail_programming_languages: "Language independent"
-  tutorial_scratch_string_detail_programming_languages: "Language independent"
+  tutorial_kodable-unplugged_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_scratch_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_bayes_string_detail_programming_languages: "Blocks"
   tutorial_gumball_string_detail_programming_languages: "nezobraziť"
   tutorial_hrm_string_detail_programming_languages: "Assembly"
@@ -3659,17 +3752,17 @@ sk:
   tutorial_itchstop_string_detail_programming_languages: "Blocks"
   tutorial_tynkerpn_string_detail_programming_languages: "Blocks"
   tutorial_tynkerpd_string_detail_programming_languages: "Blocks"
-  tutorial_persistence_string_detail_programming_languages: "Language independent"
-  tutorial_getloopy_string_detail_programming_languages: "Language independent"
-  tutorial_createface_string_detail_programming_languages: "Language independent"
-  tutorial_happymaps_string_detail_programming_languages: "Language independent"
-  tutorial_moveit_string_detail_programming_languages: "Language independent"
-  tutorial_bigevent_string_detail_programming_languages: "Language independent"
-  tutorial_gpp_string_detail_programming_languages: "Language independent"
+  tutorial_persistence_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_getloopy_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_createface_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_happymaps_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_moveit_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_bigevent_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_gpp_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_foosgame_string_detail_programming_languages: "Blocks"
   tutorial_solopython_string_detail_programming_languages: "Python"
-  tutorial_kodableint_string_detail_programming_languages: "Language independent, Symbols"
-  tutorial_kodableadv_string_detail_programming_languages: "Language independent, Javascript"
+  tutorial_kodableint_string_detail_programming_languages: "Nezávislé na jazyku, Symbols"
+  tutorial_kodableadv_string_detail_programming_languages: "Nezávislé na jazyku, Javascript"
   tutorial_tynkertj_string_detail_programming_languages: "Python"
   tutorial_wolframa_string_detail_programming_languages: "Jazyk Wolfram"
   tutorial_wolframm_string_detail_programming_languages: "Jazyk Wolfram"
@@ -3684,19 +3777,19 @@ sk:
   tutorial_robomeshiq_string_detail_programming_languages: "Blocks, Python"
   tutorial_googlelogo_string_detail_programming_languages: "Blocks, Scratch"
   tutorial_playtune_string_detail_programming_languages: "Blocks"
-  tutorial_computeit_string_detail_programming_languages: "Language independent"
+  tutorial_computeit_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_codesterssj_string_detail_programming_languages: "Blocks, Python"
   tutorial_cmchat_string_detail_programming_languages: "Python"
   tutorial_tynkerdb_string_detail_programming_languages: "Blocks"
   tutorial_cmbuild_string_detail_programming_languages: "CoffeeScript"
   tutorial_robotrattle_string_detail_programming_languages: "Blocks"
   tutorial_codestersh_string_detail_programming_languages: "Blocks, Python"
-  tutorial_codehsdigipixel_string_detail_programming_languages: "Language independent"
+  tutorial_codehsdigipixel_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_ccbinary_string_detail_programming_languages: "Blocks"
   tutorial_codehsturtle_string_detail_programming_languages: "Python"
   tutorial_grokhd_string_detail_programming_languages: "Blocks"
   tutorial_grokem_string_detail_programming_languages: "Python"
-  tutorial_kodmaze_string_detail_programming_languages: "Language independent"
+  tutorial_kodmaze_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_codestersa_string_detail_programming_languages: "Python"
   tutorial_cmdodo_string_detail_programming_languages: "CoffeeScript"
   tutorial_tynkerspace_string_detail_programming_languages: "Blocks"
@@ -3710,30 +3803,30 @@ sk:
   tutorial_codehsjsapp_string_detail_programming_languages: "JavaScript"
   tutorial_gfmihi_string_detail_programming_languages: "Blocks"
   tutorial_hopdropphone_string_detail_programming_languages: "Hopscotch"
-  tutorial_techfaa_string_detail_programming_languages: "JavaScript, Language independent"
+  tutorial_techfaa_string_detail_programming_languages: "Javascript, Nezávislé na jazyku"
   tutorial_codehsjsgraph_string_detail_programming_languages: "JavaScript"
   tutorial_thunkable_string_detail_programming_languages: "Blocks"
   tutorial_hopcrossyroad_string_detail_programming_languages: "Hopscotch"
-  tutorial_switchglitch_string_detail_programming_languages: "Language independent"
+  tutorial_switchglitch_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_codecar_string_detail_programming_languages: "C/C++"
   tutorial_codesterscp_string_detail_programming_languages: "Blocks, Python"
   tutorial_grokpetblock_string_detail_programming_languages: "Blocks"
-  tutorial_techbim_string_detail_programming_languages: "Language independent"
+  tutorial_techbim_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_techfpp_string_detail_programming_languages: "Python"
   tutorial_codesterscr_string_detail_programming_languages: "Python"
   tutorial_grokdisease_string_detail_programming_languages: "Python"
   tutorial_techec_string_detail_programming_languages: "JavaScript"
   tutorial_rgbegin_string_detail_programming_languages: "Blocks"
   tutorial_myradream_string_detail_programming_languages: "Blocks"
-  tutorial_thinkfun_string_detail_programming_languages: "Language independent"
+  tutorial_thinkfun_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_hopfireworks_string_detail_programming_languages: "Hopscotch"
   tutorial_grokspace_string_detail_programming_languages: "Blocks"
   tutorial_codehspython_string_detail_programming_languages: "Python"
   tutorial_codehsjava_string_detail_programming_languages: "Java"
-  tutorial_techioda_string_detail_programming_languages: "Language independent"
+  tutorial_techioda_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_grokmonster_string_detail_programming_languages: "Blocks"
   tutorial_techmjs_string_detail_programming_languages: "JavaScript"
-  tutorial_techga_string_detail_programming_languages: "Language independent"
+  tutorial_techga_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_techioan_string_detail_programming_languages: "Java"
   tutorial_techiogsr_string_detail_programming_languages: "Rust"
   tutorial_groktunnel_string_detail_programming_languages: "Python"
@@ -3766,13 +3859,13 @@ sk:
   tutorial_rgadvan_string_detail_programming_languages: "Blocks, JavaScript, Python"
   tutorial_codehsrn_string_detail_programming_languages: "JavaScript"
   tutorial_codehswd_string_detail_programming_languages: "HTML"
-  tutorial_turtlerobot_string_detail_programming_languages: "Language independent"
+  tutorial_turtlerobot_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_ozoevo_string_detail_programming_languages: "Blocks"
   tutorial_ozoexped_string_detail_programming_languages: "OzoCodes"
   tutorial_ozojourney_string_detail_programming_languages: "Blocks"
   tutorial_ozocodes_string_detail_programming_languages: "OzoCodes"
   tutorial_ozoeclipse_string_detail_programming_languages: "Blocks, OzoCodes"
-  tutorial_ozosimulator_string_detail_programming_languages: "Language independent"
+  tutorial_ozosimulator_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_ozoalgorithm_string_detail_programming_languages: "Blocks"
   tutorial_ozotimer_string_detail_programming_languages: "Blocks"
   tutorial_ozohabits_string_detail_programming_languages: "OzoCodes"
@@ -3782,18 +3875,18 @@ sk:
   tutorial_applabintro_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_cslartist_string_detail_programming_languages: "Blocks"
   tutorial_cslscratchjr_string_detail_programming_languages: "Blocks"
-  tutorial_floevents_string_detail_programming_languages: "Language independent"
-  tutorial_florobot_string_detail_programming_languages: "Language independent"
+  tutorial_floevents_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_florobot_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_isavesanta_string_detail_programming_languages: "Blocks, Scratch"
   tutorial_iorder_string_detail_programming_languages: "Blocks, Scratch"
-  tutorial_ianimate_string_detail_programming_languages: "Language independent"
+  tutorial_ianimate_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_iloveada_string_detail_programming_languages: "ChildScript"
-  tutorial_kodflash_string_detail_programming_languages: "Language independent"
-  tutorial_kodchoose_string_detail_programming_languages: "Language independent"
-  tutorial_kodpizzapre_string_detail_programming_languages: "Language independent"
-  tutorial_kodpizza_string_detail_programming_languages: "Language independent"
-  tutorial_kodwomen_string_detail_programming_languages: "Language independent"
-  tutorial_tfunplug_string_detail_programming_languages: "Language independent"
+  tutorial_kodflash_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_kodchoose_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_kodpizzapre_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_kodpizza_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_kodwomen_string_detail_programming_languages: "Nezávislé na jazyku"
+  tutorial_tfunplug_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_lbvariables_string_detail_programming_languages: "Blocks"
   tutorial_lbfunctions_string_detail_programming_languages: "Blocks"
   tutorial_lblogic_string_detail_programming_languages: "Blocks"
@@ -3808,9 +3901,9 @@ sk:
   tutorial_wonzoo_string_detail_programming_languages: "Blocks"
   tutorial_wontrip_string_detail_programming_languages: "Blocks"
   tutorial_woncollect_string_detail_programming_languages: "Blocks"
-  tutorial_wonsecret_string_detail_programming_languages: "JavaScript"
+  tutorial_wonsecret_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_hsscience_string_detail_programming_languages: "Hopscotch"
-  tutorial_popculture_string_detail_programming_languages: "Language independent"
+  tutorial_popculture_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_legorobust_string_detail_programming_languages: "Blocks"
   tutorial_legoplants_string_detail_programming_languages: "Blocks"
   tutorial_legopark_string_detail_programming_languages: "Blocks"
@@ -3819,11 +3912,11 @@ sk:
   tutorial_alexa_string_detail_programming_languages: "JavaScript"
   tutorial_grokpetmicro_string_detail_programming_languages: "Python, MicroPython"
   tutorial_pirateplunder_string_detail_programming_languages: "Blocks"
-  tutorial_cadj_string_detail_programming_languages: "Language independent"
+  tutorial_cadj_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_cacrazy_string_detail_programming_languages: "Blocks"
-  tutorial_cajump_string_detail_programming_languages: "Language independent"
+  tutorial_cajump_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_carest_string_detail_programming_languages: "Blocks"
-  tutorial_accai_string_detail_programming_languages: "Language independent"
+  tutorial_accai_string_detail_programming_languages: "Nezávislé na jazyku"
   tutorial_vceclipse_string_detail_programming_languages: "JavaScript"
   tutorial_pmzero_string_detail_programming_languages: "Blocks"
   tutorial_hsela_string_detail_programming_languages: "Hopscotch"
@@ -3834,14 +3927,27 @@ sk:
   tutorial_idowedo_string_detail_programming_languages: "Scratch"
   tutorial_diggindwarf_string_detail_programming_languages: "JavaScript"
   tutorial_rmedr_string_detail_programming_languages: "Blocks"
-  school_not_found_heading: "We couldn't find your school. Please enter more information."
-  school_name: "School name"
-  school_name_error: "School name is required."
-  school_city: "School city"
-  school_state: "School state"
-  school_zip: "Postal code"
-  school_zip_error: "School postal code is required."
-  census_thanks: 'Thanks for signing up!'
+  tutorial_dksky_string_detail_programming_languages: "Blocks"
+  tutorial_dkcurrency_string_detail_programming_languages: "Blocks"
+  tutorial_dkriver_string_detail_programming_languages: "Blocks"
+  tutorial_dkball_string_detail_programming_languages: "Blocks"
+  tutorial_spheroit_string_detail_programming_languages: "Blocks, C/C++"
+  tutorial_gameofcodes_string_detail_programming_languages: "Blocks, Ready, Unity"
+  tutorial_blocklygames_string_detail_programming_languages: "Blocks"
+  tutorial_spherohello_string_detail_programming_languages: "JavaScript"
+  tutorial_spheroarcade_string_detail_programming_languages: "iOS/Swift"
+  tutorial_bcpy1_string_detail_programming_languages: "Python"
+  tutorial_bcpy2_string_detail_programming_languages: "Python"
+  tutorial_bcjs1_string_detail_programming_languages: "JavaScript"
+  tutorial_bcjs2_string_detail_programming_languages: "JavaScript"
+  school_not_found_heading: "Nemôžeme nájsť Vašu školu. Zadajte prosím Viac informácií."
+  school_name: "Názov školy"
+  school_name_error: "Názov školy je povinný."
+  school_city: "Mesto"
+  school_state: "Kraj"
+  school_zip: "PSČ"
+  school_zip_error: "PSČ je povinné."
+  census_thanks: 'Ďakujeme Vám za Vašu prihlášku!'
   census_header: 'Please take a few minutes to tell us about your school (Optional).'
   census_heading: "Please share how much coding/computer programming is taught at this school. Assume for the purposes of the following questions that coding/computer programming does not include HTML/CSS, Web design, or how to use apps."
   census_how_many_hoc: "How many students will do an Hour of Code?"
@@ -3853,26 +3959,26 @@ sk:
   census_pledge: "I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all."
   census_followup_heading: "Your school offers a semester or year-long computer science class! What topics does this course include?"
   census_followup_frequency: "How often per week does this class meet?"
-  less_than_one: "< 1 hour per week"
-  one_to_three: "1-3 hours per week"
-  three_plus: "3+ hours per week"
-  census_followup_more: "Please tell us more about this course."
-  census_followup_more_placeholder: "For example, name of the class, how often it meets, description of what is taught."
-  census_topics_blocks: "Block-based programming"
-  census_topics_text: "  Text-based programming in a language such as Java, JavaScript, Python, C++, etc. (Excluding HTML or CSS)"
-  census_topics_robots: "Robotics / Physical Computing"
-  census_topics_internet: "Internet and networking"
-  census_topics_security: "Cybersecurity"
-  census_topics_data: "Data analysis"
-  census_topics_web_design: "Web design using HTML and CSS"
-  census_topics_game_design: "Game design using game layout tools without coding or computer programming"
-  teacher: "Teacher"
-  administrator: "Administrator"
-  parent: "Parent"
-  volunteer_or_advocate: "Volunteer/Community Advocate"
-  other: "Other"
-  other_describe: "Other (please describe below)"
-  none: "None"
-  some: "Some"
-  all: "All"
-  dont_know: "I don't know"
+  less_than_one: "< 1 hodina týždenne"
+  one_to_three: "1-3 hodiny týždenne"
+  three_plus: "3 a viac hodín týždenne"
+  census_followup_more: "Povedzte nám prosím viac o tomto kurze."
+  census_followup_more_placeholder: "Napríklad názov triedy, ako často sa stretávajú, popis vyučovanej látky."
+  census_topics_blocks: "Block-based programovanie"
+  census_topics_text: "  Text-based programovanie v jazykoch ako Java, JavaScript, Python, C++ atď. (okrem HTML a CSS)"
+  census_topics_robots: "Robotika/fyzické výpočty"
+  census_topics_internet: "Internet a sieťové technológie"
+  census_topics_security: "Cyberbezpečnosť"
+  census_topics_data: "Analýza dát"
+  census_topics_web_design: "Web design pomocou HTML a cSS"
+  census_topics_game_design: "Dizajn hier pomocou nástrojov na rozloženie bez kódovania alebo programovania"
+  teacher: "Učiteľ"
+  administrator: "Administrátor"
+  parent: "Rodič"
+  volunteer_or_advocate: "Dobrovoľník"
+  other: "Iný"
+  other_describe: "Iné (uveďte nižšie)"
+  none: "Žiadne"
+  some: "Niektoré"
+  all: "Všetky"
+  dont_know: "Neviem"

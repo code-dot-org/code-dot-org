@@ -7,23 +7,23 @@ nav: how_to_nav
 
 <h1>Cum sa sustii o Ora de Programare</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to help run an Hour of Code in your class.
+Alăturaţi-vă mişcării şi introduceți un grup de elevi la prima lor oră de informatică urmând aceşti paşi. Ora de cod este ușor de rulat - chiar și pentru începători! Dacă doriţi un set suplimentar de mâini de ajutor, puteţi găsi un [voluntar local](%= resolve_url('https://code.org/volunteer/local') %) pentru a ajuta la derularea unei Ore de Cod în clasa dvs.
 
-## 1. Priveşte acest video indrumator <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Priveşte acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Choose a tutorial for your hour
+## 2. Alegeți un tutorial pentru ora dumneavoastră
 
-We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+Noi oferim o varietate de distracţie, [ tutoriale ghidate pe student](%= resolve_url('/learn') %) pentru toate grupele de vârstă şi nivelurile de experienţă. Elevii parcurg activităţi pe cont propriu, deşi multe activităţi includ planuri de lecţii pentru profesori (veţi vedea link-ul, atunci când faceţi clic pe activitate) pentru a ghida discuţia sau a extinde activitatea. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
-## 3. Promoveaza ora ta de cod
+## 3. Promovați Ora dvs. de Cod
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources') %) and encourage others to host their own events.
+Promovați evenimentul dvs. Hour of Code [cu aceste unelte](%= resolve_url('/promote/resources') %) și încurajați-i și pe alții să găzduiască propriile lor evenimente.
 
 ## 4. Planificați-vă necesarul de echipamente - computerele sunt opționale
 
 Cea mai buna experienta Hour of Code include calculatoare care au conexiune la Internet. Insa **nu aveti** nevoie de un computer pentru fiecare participant, chiar puteti sa organizati Hour of Code fara niciun calculator.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Testați neapărat tutorialele pe calculatoarele sau dispozitivele elevilor pentru a vă asigura că funcționează corespunzător pe browsere cu sunet și video. **Conexiune lentă la internet?** Planificați să rulați videoclipurile în fața clasei, astfel încât fiecare elev să nu mai descarce propriile videoclipuri. Sau încercaţi tutorialele unplugged / offline.
 
 Oferiti-le casti elevilor din clasa dvs sau spuneti-le sa isi aduca ei propriile casti daca tutorialul pe care l-ati ales merge mai bine cu sunet.
 
@@ -31,9 +31,9 @@ Oferiti-le casti elevilor din clasa dvs sau spuneti-le sa isi aduca ei propriile
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring speaker or video
+## 5. Începeți Ora dvs. de Cod cu un vorbitor sau videoclip inspirațional
 
-**Invite a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+**Invitați un [voluntar local](%= resolve_url('https://code.org/volunteer/local') %) să vă inspire elevii vorbind despre vastitatea posibilităților pe care le oferă informatica. ** Există mii de voluntari în întreaga lume gata să vă ajute cu Ora dvs. de Cod ori printr-o vizită la clasă ori printr-un chat video cu elevii dvs!
 
 **Arată-le un filmulet inspirational:**
 

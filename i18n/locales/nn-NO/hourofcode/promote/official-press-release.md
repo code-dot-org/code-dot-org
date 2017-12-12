@@ -7,9 +7,9 @@ nav: promote_nav
 
 # Mal for pressemelding for tillitsvalgte
 
-For umiddelbar publiseringe  
+For publisering den  
 [**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+Kontakt: [**CONTACT INFORMATION**]  
   
 
 

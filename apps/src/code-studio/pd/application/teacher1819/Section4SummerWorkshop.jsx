@@ -231,10 +231,12 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
           (and in some cases travel costs) will be provided for summer workshops hosted by Regional Partners.
         </p>
 
-        {this.renderAssignedWorkshopList()}
+        <div id="assignedWorkshops">
+          {this.renderAssignedWorkshopList()}
+        </div>
 
         {this.isUnableToAttendAssignedWorkshop() && [1,2].includes(this.props.data.regionalPartnerGroup) &&
-          <div style={styles.indented}>
+          <div style={styles.indented} id="alternateWorkshops">
             <p style={styles.formText}>
               <strong>
                 We strongly encourage participants to attend their assigned summer workshop (based on the region

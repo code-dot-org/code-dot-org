@@ -62,6 +62,15 @@ exports.ApplicationStatuses = {
 };
 
 /**
+ * Statuses that represent "finalized" applications
+ */
+exports.ApplicationFinalStatuses = [
+  'accepted',
+  'declined',
+  'waitlisted',
+];
+
+/**
  * Constants for Regional Partner dropdown
  */
 const allPartnersLabel = "All Regional Partner Applications";
@@ -73,4 +82,3 @@ exports.RegionalPartnerDropdownOptions = {
   unmatched: {value: "none", label: "No Partner/Unmatched Applications"},
   all: {value: allPartnersFilter, label: allPartnersLabel}
 };
-
