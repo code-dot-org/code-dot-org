@@ -104,13 +104,22 @@ export function processResults(onComplete, beforeHook) {
     var results = getResult();
     var response = results.response;
     var result = results.result;
-    var errorType = results.errorType;
+    var errorDialog = results.errorDialog;
     var testResult = results.testResult ? results.testResult : (result ? 100 : 0);
     var submitted = results.submitted || false;
 
     if (!result) {
-      const type = errorType || 'error';
-      showDialog(type, null, type === 'error' ? adjustScroll : null);
+      // errorType is set by multi and by contract_match. In the case of multi,
+      // it's either "toofew" or null.
+      // contract_match generates its DOM for the possible error values here:
+      // https://github.com/code-dot-org/code-dot-org/blob/536da331a97b36824ac433ed667786c0b1e79ba2/dashboard/app/views/levels/_contract_match.html.haml#L24
+      if (errorDialog) {
+        // In this case, errorDialog should be an instance of a React class.
+        showDialog(errorDialog);
+      } else {
+        showDialog('error', null, adjustScroll);
+      }
+
       if (!appOptions.dialog.skipSound) {
         Sounds.getSingleton().play('failure');
       }
