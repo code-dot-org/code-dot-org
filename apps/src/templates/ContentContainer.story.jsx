@@ -28,14 +28,12 @@ export default storybook => {
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              isRtl={false}
             />
             <CourseCard
               title={exampleCard.title}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              isRtl={false}
             />
           </ContentContainer>
         )
@@ -56,14 +54,12 @@ export default storybook => {
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              isRtl={false}
             />
             <CourseCard
               title={exampleCard.title}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              isRtl={false}
             />
         </ContentContainer>
         )
@@ -85,14 +81,12 @@ export default storybook => {
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              isRtl={false}
             />
             <CourseCard
               title={exampleCard.title}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              isRtl={false}
             />
         </ContentContainer>
         )
