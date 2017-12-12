@@ -9,7 +9,8 @@ const styles = {
   },
   question: {
     marginBottom: 5,
-    fontWeight: 'bold',
+    // bolder
+    fontFamily: '"Gotham 7r", sans-serif',
   },
   radio: {
     margin: '0px 10px'
@@ -19,7 +20,7 @@ const styles = {
   },
   errorText: {
     color: 'red',
-  }
+  },
 };
 
 export default class Unit6ValidationStep extends Component {

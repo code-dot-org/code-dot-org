@@ -35,6 +35,10 @@ const styles = {
   error: {
     color: 'red',
     marginTop: 20,
+  },
+  bold: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    display: 'inline',
   }
 };
 
@@ -129,7 +133,7 @@ export default class EligibilityConfirmDialog extends Component {
           <label>
             <div>{i18n.verifySignature()}</div>
             <div style={styles.signature}>
-              <b>Electronic Signature</b> {i18n.typeName()}
+              <div style={styles.bold}>Electronic Signature</div> {i18n.typeName()}
             </div>
             <input
               value={this.state.signature}
