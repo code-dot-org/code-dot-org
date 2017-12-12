@@ -65,5 +65,18 @@ module Pd::Application
 
       assert_equal school_info.effective_school_district_name.titleize, application.district_name
     end
+
+    test 'send_all_decision_notification_emails only sends once per application' do
+      application = create :pd_facilitator1819_application
+      application.update(status: 'declined')
+      application.lock!
+
+      mock_mail = stub
+      mock_mail.stubs(:deliver_now).returns(nil)
+      Pd::Application::Facilitator1819ApplicationMailer.expects(:declined).times(1).returns(mock_mail)
+
+      Pd::Application::ApplicationBase.send_all_decision_notification_emails
+      Pd::Application::ApplicationBase.send_all_decision_notification_emails
+    end
   end
 end
