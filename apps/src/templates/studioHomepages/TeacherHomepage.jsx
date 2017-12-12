@@ -72,7 +72,7 @@ export default class TeacherHomepage extends Component {
   }
 
   handleCensusSubmitSuccess = () => {
-    this.dismissCensusBanner();
+    this.setState({censusSubmittedSuccessfully: true});
   }
 
   handleCensusSubmitError = () => {
@@ -235,6 +235,7 @@ export default class TeacherHomepage extends Component {
                teacherEmail={teacherEmail}
                showInvalidError={this.state.showCensusInvalidError}
                showUnknownError={this.state.showCensusUnknownError}
+               submittedSuccessfully={this.state.censusSubmittedSuccessfully}
                onSubmit={() => this.handleCensusBannerSubmit()}
                onDismiss={() => this.dismissCensusBanner()}
                onPostpone={() => this.postponeCensusBanner()}
