@@ -41,23 +41,11 @@ module SchoolInfoDeduplicator
     attr[:state] ||= school_info_attr[:school_state]
     attr[:zip] ||= school_info_attr[:school_zip]
 
-    # Remove empty attributes.  Notably school_district_id can come through
-    # as an empty string when we don't want anything.
-    attr.delete_if {|_, e| e.blank?}
-
     # The checkbox comes through as "true" when we really want true.
     attr[:school_district_other] &&= attr[:school_district_other].to_bool
     attr[:school_other] &&= attr[:school_other].to_bool
 
-    unless attr.key?(:school_district_id)
-      attr[:school_district_id] = nil
-    end
-
-    unless attr.key?(:school_id)
-      attr[:school_id] = nil
-    end
-
-    attr.slice!(
+    relevant_attributes = [
       :country,
       :school_type,
       :state,
@@ -70,7 +58,22 @@ module SchoolInfoDeduplicator
       :school_name,
       :full_address,
       :validation_type
-    )
+    ]
+
+    # Keep only the relevant attributes to use when we query for a duplicate
+    attr.slice!(*relevant_attributes)
+
+    # Make sure all fields are present so that they will match against only null
+    # values when we run the query for existing school_infos
+    relevant_attributes.map do |attribute|
+      attr[attribute] = nil if attr[attribute].blank?
+    end
+
+    # validation_type defaults to 'full' so make sure we match on that rather than null if it isn't set.
+    # school_district_other and school_other also have default values, but since they are nullable
+    # they will not be given those values unless explicitly set so we don't override what was passed
+    # in for them.
+    attr[:validation_type] ||= 'full'
 
     attr
   end

@@ -75,11 +75,7 @@ class UserTest < ActiveSupport::TestCase
       state: 'CA'
     }
     teachers = create_list(:teacher, 2, school_info_attributes: school_attributes)
-    attr = teachers[0].process_school_info_attributes(school_attributes)
-    school_info = SchoolInfo.where(attr).first
-    assert teachers[0].school_info == school_info, "Teacher info: #{teachers[0].school_info.inspect} not equal to #{school_info.inspect}"
-    assert teachers[1].school_info == school_info, "Teacher info: #{teachers[1].school_info.inspect} not equal to #{school_info.inspect}"
-    assert SchoolInfo.where(attr).count == 1
+    assert_equal teachers[0].school_info, teachers[1].school_info
   end
 
   test 'normalize_email' do
