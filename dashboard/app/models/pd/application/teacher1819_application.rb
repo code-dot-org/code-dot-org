@@ -497,15 +497,23 @@ module Pd::Application
       update(response_scores: response_scores_hash.merge(scores) {|_, old_value, _| old_value}.to_json)
     end
 
-    protected
+    # @override
+    def self.csv_header(course)
+      markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
+      CSV.generate do |csv|
+        columns = filtered_labels(course).values.map {|l| markdown.render(l)}
+        columns.push 'Status', 'Meets Criteria', 'Total Score', 'Notes', 'Regional Partner'
+        csv << columns
+      end
+    end
 
-    def yes_no_response_to_yes_no_score(response)
-      if response == YES
-        YES
-      elsif response == NO
-        NO
-      else
-        nil
+    # @override
+    def to_csv_row
+      answers = full_answers
+      CSV.generate do |csv|
+        row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
+        row.push status, meets_criteria, total_score, notes, regional_partner_name
+        csv << row
       end
     end
 
@@ -531,23 +539,15 @@ module Pd::Application
       ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
     end
 
-    # @override
-    def self.csv_header(course)
-      markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
-      CSV.generate do |csv|
-        columns = filtered_labels(course).values.map {|l| markdown.render(l)}
-        columns.push 'Status', 'Meets Criteria', 'Total Score', 'Notes', 'Regional Partner'
-        csv << columns
-      end
-    end
+    protected
 
-    # @override
-    def to_csv_row
-      answers = full_answers
-      CSV.generate do |csv|
-        row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
-        row.push status, meets_criteria, total_score, notes, regional_partner_name
-        csv << row
+    def yes_no_response_to_yes_no_score(response)
+      if response == YES
+        YES
+      elsif response == NO
+        NO
+      else
+        nil
       end
     end
   end
