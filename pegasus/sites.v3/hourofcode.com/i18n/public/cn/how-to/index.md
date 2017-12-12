@@ -1,5 +1,5 @@
 ---
-title: '如何在课后兴趣班讲授编程一小时'
+title: 如何在课后兴趣班讲授编程一小时
 layout: wide
 nav: how_to_nav
 ---
@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>如何讲授编程一小时</h1>
 
-参加到活动中，通过以下步骤为一群学生介绍他们初始一小时的计算机科学课程。 哪怕是对初学者来说，编程一小时的课程都非常容易学。 如果你有时间愿意帮忙的话，你可以找一名当地的自愿者一起帮忙在你的课程里来教编程一小时课程。
+参与我们的活动，并向学生们介绍他们第一节“编程一小时”的课程吧！下列是教学步骤： 编程一小时的课程哪怕是对初学者来说都非常容易上手！ 如果您需要额外帮助的话，您可以[您可以找一个本地的志愿者](<%= resolve_url('https://code.org/volunteer/local') %>)来运作“编程一小时”课程。
 
 ## 如何在课后兴趣班讲授编程一小时 1. 观看指导视频 2. 选择教程 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
