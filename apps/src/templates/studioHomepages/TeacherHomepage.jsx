@@ -50,17 +50,25 @@ export default class TeacherHomepage extends Component {
     this.censusBanner = banner;
   }
 
-  handleCensusBannerChange(event) {
-    this.setState({censusBannerSelection: (event.target.id==="teachesYes")});
+  handleCensusBannerTeachesChange(event) {
+    this.setState({censusBannerTeachesSelection: (event.target.id==="teachesYes")});
+  }
+
+  handleCensusBannerInClassChange(event) {
+    this.setState({censusBannerInClassSelection: (event.target.id==="inClass")});
   }
 
   handleCensusBannerSubmit() {
-    $.ajax({
-      url: "/dashboardapi/v1/census/CensusTeacherBannerV1",
-      type: "post",
-      dataType: "json",
-      data: this.censusBanner.getData(),
-    }).done(this.handleCensusSubmitSuccess).fail(this.handleCensusSubmitError);
+    if (this.censusBanner.isValid()) {
+      $.ajax({
+        url: "/dashboardapi/v1/census/CensusTeacherBannerV1",
+        type: "post",
+        dataType: "json",
+        data: this.censusBanner.getData(),
+      }).done(this.handleCensusSubmitSuccess).fail(this.handleCensusSubmitError);
+    } else {
+      this.setState({showCensusInvalidError: true});
+    }
   }
 
   handleCensusSubmitSuccess = () => {
@@ -220,15 +228,18 @@ export default class TeacherHomepage extends Component {
                schoolYear={schoolYear}
                ncesSchoolId={ncesSchoolId}
                question={censusQuestion}
-               selection={this.state.censusBannerSelection}
+               teaches={this.state.censusBannerTeachesSelection}
+               inClass={this.state.censusBannerInClassSelection}
                teacherId={teacherId}
                teacherName={teacherName}
                teacherEmail={teacherEmail}
+               showInvalidError={this.state.showCensusInvalidError}
                showUnknownError={this.state.showCensusUnknownError}
                onSubmit={() => this.handleCensusBannerSubmit()}
                onDismiss={() => this.dismissCensusBanner()}
                onPostpone={() => this.postponeCensusBanner()}
-               onChange={(event) => this.handleCensusBannerChange(event)}
+               onTeachesChange={(event) => this.handleCensusBannerTeachesChange(event)}
+               onInClassChange={(event) => this.handleCensusBannerInClassChange(event)}
              />
              <br/>
            </div>
