@@ -5,6 +5,9 @@ require 'cdo/chat_client'
 require 'cdo/test_run_utils'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
+require 'cdo/developers_topic'
+require 'cdo/infra_test_topic'
+require 'cdo/github'
 
 namespace :test do
   desc 'Runs apps tests.'
@@ -62,6 +65,11 @@ namespace :test do
 
   task :wait_for_test_server do
     RakeUtils.wait_for_url CDO.studio_url('', CDO.default_scheme)
+  end
+
+  task :mark_dtt_green do
+    DevelopersTopic.set_dtt 'yes'
+    InfraTestTopic.set_green_commit GitHub.sha('test')
   end
 
   task ui_live: [
@@ -161,7 +169,7 @@ namespace :test do
     end
   end
 
-  task ci: [:pegasus, :shared, :dashboard_ci, :ui_live]
+  task ci: [:pegasus, :shared, :dashboard_ci, :ui_live, :mark_dtt_green]
 
   desc 'Runs dashboard tests.'
   task :dashboard do
