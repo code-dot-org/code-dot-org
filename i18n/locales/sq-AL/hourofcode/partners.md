@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_partners) %>'
+title: <%= hoc_s(:title_partners) %>
 ---
 Ora e Kodimit udhëhiqet nga Ora e Kodimit dhe komunitetet këshilluese dhe shqyrtuese të Javës së Edukimit në shkencat Kompjuterike.
 

@@ -27,37 +27,37 @@ social:
 
 # Takk for at du meldte deg på som vert for Kodetimen!
 
-Som en takk for at du hjelper til å gjøre det mulig for elever å starte å lære informatikk, vil vi gjerne gi deg et gratis sett med profesjonelt trykkede plakater med diverse rollemodeller til klasserommet ditt. Bruk tilbudskode **FREEPOSTERS** i kassa. (Merk: Dette er bare tilgjengelig så lenge beholdningen varer, og du må dekke fraktkostnader. Siden disse plakatene sendes fra USA, kan fraktkostnader være ganske høye for frakt til Norge og internasjonalt. Vi forstår at dette nok ikke er med i budsjettet, så vi oppfordrer deg til å skrive ut [ PDF-filer](https://code.org/inspire) for klasserommet.)   
-<br /> [ <button>få plakater</button>](https://store.code.org/products/code-org-posters-set-of-12) bruk Tilbudskode FREEPOSTERS
+Som en takk for at du hjelper elever å lære om informatikk, vil vi gjerne gi deg et gratis sett med profesjonelt trykkede plakater med diverse rollemodeller til å henge opp i klasserommet. Bruk tilbudskoden **FREEPOSTERS** i kassa. (Merk: Dette er bare tilgjengelig så lenge beholdningen varer, og du må selv dekke fraktkostnader. Siden plakatene sendes fra USA, kan kostnader bli ganske høye for frakt til Norge og andre land utenfor USA. Vi har forståelse for at dette kan bli litt dyrt. Som et alternativ kan vi anbefale å skrive ut [PDF-filene](https://code.org/inspire) til bruk i klasserommet.)  
+<br /> [ <button>Send oss plakater</button>](https://store.code.org/products/code-org-posters-set-of-12) Bruk tilbudskode FREEPOSTERS
 
-<% if @country == 'us' %> Takket være støtten fra Ozobot, Dexter industri, littleBits og Wonder Workshop, vil over 100 klasserom bli valgt å motta roboter eller utstyr til sin klasse! For å være berettiget til å motta et sett, må du fullføre undersøkelsen sendt fra Code.org etter Kodetimen. Code.org vil kåre de klasserommene som vinner. I mellomtiden, sjekk ut noen av aktivitetene med robotikk og kretser. Vær oppmerksom på at dette er bare åpent for amerikanske skoler. <% end %>
+<% if @country == 'us' %> Takket være støtten fra Ozobot, Dexter Industries, littleBits og Wonder Workshop, vil over 100 klasser motta roboter eller annet utstyr! For å delta i trekningen må du fullføre undersøkelsen fra Code.org etter Kodetimen. Code.org vil kåre vinnerne. I mellomtiden kan du se på noen av aktivitetene våre som omhandler robotikk og kretser. NB: Kun amerikanske skoler kan være med i trekningen. <% end %>
 
-<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+<br /> **Kodetimen-kampanjen kjøres <%= campaign_date('full') %>, og vil vil ta kontakt når det foreligger nye introduksjonsoppgaver og andre spennende oppdateringer. Hva kan du gjøre mens du venter?**
 
-## 1. Spread the word in your school and community
+## 1. Spre budskapet på din lokale skole og i nærmiljøet
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Du har akkurat blitt med i Kodetimen-gjengen. Bruk emneknaggen **#Kodetimen** eller **#HourOfCode** for å fortelle dette til omgangskretsen din!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Du trenger ikke gå på skolen for å lære noe nytt. Invite a local politician or policy maker to visit your school for the Hour of Code. Dette kan hjelpe informatikkfaget å få fotfeste i ditt nærområde litt lenger enn én time.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Få flere til å delta, f. eks. ved å sende ut [denne e-posten](<%= resolve_url('/promote/resources#sample-emails') %>). Ta kontakt med din lokale rektor, med en utfordring til å melde på alle klassene på skolen. Rekrutter lokale grupper — speidergrupper, menigheten, universiteter og høyskoler, eldresentre, fagforeninger, eller til og med venner og bekjente. Du trenger ikke gå på skolen for å lære noe nytt. Inviter en lokalpolitiker til å besøke skolen mens de kjører Kodetimen. Dette kan hjelpe informatikkfaget å få fotfeste i ditt nærområde litt lenger enn én time.
 
 Benytt våre [plakater, bannere, klistremerker, videoer og annet](<%= resolve_url('/promote/resources') %>) for å fremme ditt eget arrangement.
 
-## 2. Find a local volunteer to help you with your event.
+## 2. Finn en lokal frivillig som kan hjelpe deg med arrangementet.
 
-[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Søk på kartet over påmeldte frivillige](<%= resolve_url('https://code.org/volunteer/local') %>) for å finne en som kan besøke klassen, eller delta på en videokonferanse, hvor de forteller elevene om de uendelige mulighetene som finnes innenfor informatikkfaget.
 
-## 3. Plan your Hour of Code
+## 3. Planlegging av Kodetimen
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
+Velg en [Kodetime-aktivitet](https://hourofcode.com/learn) som klassen kan prøve seg på, og les vår [veiledning](<%= resolve_url('/how-to') %>).
 
-# Go beyond an Hour of Code
+# Neste steg etter Kodetimen
 
-<% if @country == 'us' %> An Hour of Code is just the beginning. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
+<% if @country == 'us' %> En Kodetime er bare en start. Uansett om du er organisator, lærer eller talsperson, tilbyr vi [profesjonell utvikling, fag og pensum, samt ressurser som kan hjelpe deg å sette informatikk på timeplanen på din skole.](https://code.org/yourschool) Hvis du allerede underviser i informatikk, kan du benytte våre ressurser til å fremme faget på skolen, blant foreldrene, og i nærmiljøet.
 
-You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+Det finnes mange muligheter til å tilpasse opplegget til din klasse eller skole. De fleste organisasjonene som tilbyr veiledningsoppgaver til Kodetimen har også tilbud om annen faglig utvikling og oppfølging. Hvis du finner en oppgave du liker godt, ta kontakt for å utforske mulighetene for videre oppfølging og utvikling. For å komme i gang har vi samlet en liste av [profesjonelle tilbydere som kan være behjelpelig med å ta opplæringen et skritt videre.](https://hourofcode.com/beyond)
 
-<% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+<% else %> Kodetimen er bare en start. De fleste organisasjonene som tilbyr Kodetime-leksjoner har også læreplaner for videre utvikling. For å komme i gang har vi samlet en liste av [profesjonelle tilbydere som kan være behjelpelig med å ta opplæringen et skritt videre.](https://hourofcode.com/beyond)
 
-Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
+Code.org tilbyr også [begynnerkurs i informatikk](https://code.org/educate/curriculum/cs-fundamentals-international) som er oversatt til mer enn 25 ulike språk, kostnadsfritt for deg og skolen din. <% end %>
 
 <%= view 'popup_window.js' %>

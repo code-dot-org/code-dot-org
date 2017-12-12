@@ -17,7 +17,7 @@ Fortell venner og bekjente om **#Kodetimen**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Få den lokale skolen til å arrangere Kodetime
+## 2. Få den lokale skolen til å arrangere en Kodetime
 
 Send [denne e-posten](%= resolve_url('/promote/resources#sample-emails') %) til rektor, med en utfordring til å melde på alle klasser på alle trinn.
 
