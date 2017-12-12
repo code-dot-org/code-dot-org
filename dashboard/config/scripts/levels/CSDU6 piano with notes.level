@@ -89,10 +89,7 @@
       "toggleSwitch.isOpen": null,
       "onBoardEvent": null
     },
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

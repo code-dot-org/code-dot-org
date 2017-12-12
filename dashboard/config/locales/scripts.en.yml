@@ -6829,7 +6829,7 @@ en:
           title: Create - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
-          description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
+          description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
         csp3-reovery:
           stages:
             Under the sea recovery:
