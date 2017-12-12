@@ -40,11 +40,11 @@ module Pd::Application
       assert_equal @regional_partner, application.regional_partner
     end
 
-    test 'open until Dec 15, 2017' do
-      Timecop.freeze Time.zone.local(2017, 12, 14, 23, 59) do
+    test 'open until Feb 1, 2018' do
+      Timecop.freeze Time.zone.local(2018, 1, 31, 23, 59) do
         assert Facilitator1819Application.open?
       end
-      Timecop.freeze Time.zone.local(2017, 12, 15) do
+      Timecop.freeze Time.zone.local(2018, 2, 1) do
         refute Facilitator1819Application.open?
       end
     end
