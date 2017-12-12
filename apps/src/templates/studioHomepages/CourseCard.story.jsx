@@ -10,6 +10,7 @@ const exampleCard = {
 export default storybook => {
   return storybook
     .storiesOf('CourseCard', module)
+    .withReduxStore()
     .addStoryTable([
       {
         name: 'Course Card',
