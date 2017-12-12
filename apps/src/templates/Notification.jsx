@@ -1,12 +1,13 @@
 import React, { PropTypes, Component } from 'react';
 import Radium from 'radium';
+import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from "./Button";
 import styleConstants from '../styleConstants';
 import trackEvent from '../util/trackEvent';
 
-const NotificationType = {
+export const NotificationType = {
   information: 'information',
   success: 'success',
   failure: 'failure',
@@ -204,6 +205,6 @@ class Notification extends Component {
   }
 }
 
-Notification.NotificationType = NotificationType;
-
-export default Radium(Notification);
+export default connect(state => ({
+  isRtl: state.isRtl,
+}))(Radium(Notification));
