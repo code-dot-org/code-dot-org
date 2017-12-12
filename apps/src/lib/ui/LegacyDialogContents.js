@@ -95,3 +95,27 @@ export const ContractMatchErrorDialog = ({text}) => (
 ContractMatchErrorDialog.propTypes = {
   text: PropTypes.string
 };
+
+export const MatchErrorDialog = () => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon scrollable-element">
+      <p className="dialog-title">{i18n.incorrectSolution()}</p>
+      <p>{i18n.incorrectSolutionBody()}</p>
+      <div className="farSide">
+        <button id="ok-button">{i18n.ok()}</button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
+);
+
+export const ErrorDialog = () => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon scrollable-element">
+      <p className="dialog-title">{i18n.incorrectAnswer()}</p>
+      <p>{i18n.incorrectAnswerBody()}</p>
+      <div className="farSide">
+        <button id="ok-button">{i18n.ok()}</button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
+);
