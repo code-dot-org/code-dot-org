@@ -26,8 +26,8 @@ module SolrHelper
 
     kind = Object.const_get(db_form[:kind])
     begin
-      solr_form_doc = JSON.parse(db_form[:data]).
-        merge(JSON.parse(db_form[:processed_data])).
+      solr_form_doc = JSON.load(db_form[:data]).
+        merge(JSON.load(db_form[:processed_data])).
         merge(
           {
             id: db_form[:id],
