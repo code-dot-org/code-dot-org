@@ -20,16 +20,6 @@
           =t('unsubmit')
 .clear
 %div{style: 'display: none;'}
-  #error-dialogcontent
-    .modal-content.no-modal-icon.scrollable-element
-      %p.dialog-title
-        =t("#{app == 'match' ? 'match' : 'multi'}.wrong_title")
-      %p
-        =t("#{app == 'match' ? 'match' : 'multi'}.wrong_body")
-      .farSide
-        %button#ok-button
-          =t('dialog.ok')
-
   #success-dialogcontent
     .modal-content.no-modal-icon.scrollable-element
       %p.dialog-title
