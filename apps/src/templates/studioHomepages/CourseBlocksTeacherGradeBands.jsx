@@ -38,8 +38,6 @@ class CourseBlocksTeacherGradeBands extends Component {
       >
         <CourseBlocksGradeBands
           cards={this.cards}
-          isRtl={this.props.isRtl}
-          responsive={this.props.responsive}
         />
       </ContentContainer>
     );

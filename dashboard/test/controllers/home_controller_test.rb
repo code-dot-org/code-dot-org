@@ -324,7 +324,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'workshop organizers who are regional partner program managers see application dashboard links' do
     sign_in create(:workshop_organizer, :as_regional_partner_program_manager, :with_terms_of_service)
-    assert_queries 10 do
+    assert_queries 11 do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Application Dashboard'

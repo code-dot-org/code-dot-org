@@ -41,6 +41,7 @@ def load_configuration
   {
     'app_servers'                 => {},
     'assets_bucket'               => 'cdo-dist',
+    'assets_bucket_prefix'        => rack_env.to_s,
     'aws_region'                  => 'us-east-1',
     'build_apps'                  => false,
     'build_dashboard'             => true,
@@ -211,16 +212,19 @@ class CDOImpl < OpenStruct
     ''
   end
 
-  def site_url(domain, path = '', scheme = '')
+  def site_host(domain)
     host = canonical_hostname(domain)
     if (rack_env?(:development) && !CDO.https_development) ||
-        (ENV['CI'] && host.include?('localhost'))
+      (ENV['CI'] && host.include?('localhost'))
       port = ['studio.code.org'].include?(domain) ? CDO.dashboard_port : CDO.pegasus_port
       host += ":#{port}"
     end
+    host
+  end
 
+  def site_url(domain, path = '', scheme = '')
     path = '/' + path unless path.empty? || path[0] == '/'
-    "#{scheme}//#{host}#{path}"
+    "#{scheme}//#{site_host(domain)}#{path}"
   end
 
   def studio_url(path = '', scheme = '')

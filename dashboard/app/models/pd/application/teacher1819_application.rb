@@ -2,21 +2,22 @@
 #
 # Table name: pd_applications
 #
-#  id                  :integer          not null, primary key
-#  user_id             :integer
-#  type                :string(255)      not null
-#  application_year    :string(255)      not null
-#  application_type    :string(255)      not null
-#  regional_partner_id :integer
-#  status              :string(255)
-#  locked_at           :datetime
-#  notes               :text(65535)
-#  form_data           :text(65535)      not null
-#  created_at          :datetime         not null
-#  updated_at          :datetime         not null
-#  course              :string(255)
-#  response_scores     :text(65535)
-#  application_guid    :string(255)
+#  id                                  :integer          not null, primary key
+#  user_id                             :integer
+#  type                                :string(255)      not null
+#  application_year                    :string(255)      not null
+#  application_type                    :string(255)      not null
+#  regional_partner_id                 :integer
+#  status                              :string(255)
+#  locked_at                           :datetime
+#  notes                               :text(65535)
+#  form_data                           :text(65535)      not null
+#  created_at                          :datetime         not null
+#  updated_at                          :datetime         not null
+#  course                              :string(255)
+#  response_scores                     :text(65535)
+#  application_guid                    :string(255)
+#  decision_notification_email_sent_at :datetime
 #
 # Indexes
 #
@@ -29,9 +30,33 @@
 #  index_pd_applications_on_type                 (type)
 #  index_pd_applications_on_user_id              (user_id)
 #
+require 'cdo/shared_constants/pd/teacher1819_application_constants'
 
 module Pd::Application
   class Teacher1819Application < ApplicationBase
+    include Rails.application.routes.url_helpers
+    include Teacher1819ApplicationConstants
+
+    def send_decision_notification_email
+      # We only want to email unmatched and G3-matched teachers. All teachers
+      # matched with G1 or G2 partners will be emailed by their partners.
+      return if regional_partner && regional_partner.group != 3
+
+      # Accepted, declined, and waitlisted are the only valid "final" states;
+      # all other states shouldn't need emails
+      return unless %w(accepted declined waitlisted).include?(status)
+
+      # TODO: elijah - enable acceptance emails
+      # The template for the acceptance email is unfinished, and will need the
+      # workshop assignment work to be done before being unblocked (since the
+      # content of the email not only depends on which kind of workshop they end
+      # up with, but also references the specific workshop dates)
+      return if status == "accepted"
+
+      Pd::Application::Teacher1819ApplicationMailer.send(status, self).deliver_now
+      update!(decision_notification_email_sent_at: Time.zone.now)
+    end
+
     def set_type_and_year
       self.application_year = YEAR_18_19
       self.application_type = TEACHER_APPLICATION
@@ -50,9 +75,14 @@ module Pd::Application
       self.course = PROGRAMS.key(program)
     end
 
-    before_create :match_partner, if: -> {regional_partner.nil?}
-    def match_partner
-      self.regional_partner = RegionalPartner.find_by_region(zip_code, state_code)
+    before_create :generate_application_guid, if: -> {application_guid.blank?}
+    def generate_application_guid
+      self.application_guid = SecureRandom.uuid
+    end
+
+    before_save :save_partner, if: -> {form_data_changed?}
+    def save_partner
+      self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
     end
 
     PROGRAMS = {
@@ -82,20 +112,6 @@ module Pd::Application
       OTHER_PLEASE_LIST
     ]
 
-    COURSE_HOURS_PER_YEAR = [
-      'At least 100 course hours',
-      '50 to 99 course hours',
-      'Less than 50 course hours'
-    ]
-
-    TERMS_PER_YEAR = [
-      '1 quarter',
-      '1 trimester',
-      '1 semester',
-      '2 trimesters',
-      'Full year'
-    ]
-
     def self.options
       {
         country: [
@@ -107,6 +123,10 @@ module Pd::Application
         state: COMMON_OPTIONS[:state],
         gender_identity: COMMON_OPTIONS[:gender_identity],
         race: COMMON_OPTIONS[:race],
+
+        school_state: COMMON_OPTIONS[:state],
+        school_type: COMMON_OPTIONS[:school_type],
+
         principal_title: COMMON_OPTIONS[:title],
 
         current_role: [
@@ -127,6 +147,19 @@ module Pd::Application
 
         subjects_teaching: SUBJECTS_THIS_YEAR,
         subjects_expect_to_teach: SUBJECTS_THIS_YEAR,
+
+        does_school_require_cs_license: [
+          YES,
+          NO,
+          "I'm not sure",
+        ],
+
+        have_cs_license: [
+          YES,
+          NO,
+          "I'm not sure",
+          'Not applicable - My district does not require a specific license, certification, or endorsement to teach computer science.'
+        ],
 
         subjects_licensed_to_teach: [
           'Computer Science',
@@ -166,6 +199,15 @@ module Pd::Application
           'ScratchEd',
           OTHER_PLEASE_LIST,
           "I don't have experience teaching any of these courses"
+        ],
+
+        previous_yearlong_cdo_pd: [
+          'CS Discoveries',
+          'CS Principles',
+          'Exploring Computer Science',
+          'CS in Algebra',
+          'CS in Science',
+          "I haven't participated in a yearlong Code.org Professional Learning Program"
         ],
 
         cs_offered_at_school: [
@@ -219,9 +261,9 @@ module Pd::Application
           OTHER_PLEASE_LIST
         ],
 
-        csd_course_hours_per_year: COURSE_HOURS_PER_YEAR,
+        csd_course_hours_per_year: COMMON_OPTIONS[:course_hours_per_year],
 
-        csd_terms_per_year: TERMS_PER_YEAR,
+        csd_terms_per_year: COMMON_OPTIONS[:terms_per_year],
 
         csp_which_grades: (9..12).map(&:to_s),
 
@@ -231,9 +273,9 @@ module Pd::Application
           'Less than 4 course hours per week'
         ],
 
-        csp_course_hours_per_year: COURSE_HOURS_PER_YEAR,
+        csp_course_hours_per_year: COMMON_OPTIONS[:course_hours_per_year],
 
-        csp_terms_per_year: TERMS_PER_YEAR,
+        csp_terms_per_year: COMMON_OPTIONS[:terms_per_year],
 
         csp_how_offer: [
           'As an introductory course',
@@ -253,6 +295,11 @@ module Pd::Application
           "I don't know if I will teach this course (please explain):"
         ],
 
+        pay_fee: [
+          'Yes, my school or I will be able to pay the full summer workshop program fee',
+          'No, my school or I will not be able to pay the summer workshop program fee.'
+        ],
+
         committed: [
           YES,
           'No (please explain):'
@@ -267,6 +314,67 @@ module Pd::Application
       }
     end
 
+    def self.required_fields
+      %i(
+        country
+        school
+        first_name
+        last_name
+        phone
+        address
+        city
+        state
+        zip_code
+        gender_identity
+        race
+        principal_first_name
+        principal_last_name
+        principal_email
+        principal_confirm_email
+        principal_phone_number
+        current_role
+        grades_at_school
+        grades_teaching
+        grades_expect_to_teach
+        subjects_teaching
+        subjects_expect_to_teach
+        does_school_require_cs_license
+        have_cs_license
+        subjects_licensed_to_teach
+        taught_in_past
+        previous_yearlong_cdo_pd
+        cs_offered_at_school
+        cs_opportunities_at_school
+        program
+        plan_to_teach
+        committed
+        willing_to_travel
+        agree
+      )
+    end
+
+    def dynamic_required_fields(hash)
+      [].tap do |required|
+        if hash[:program] == PROGRAMS[:csd]
+          required.concat [
+            :csd_which_grades,
+            :csd_course_hours_per_week,
+            :csd_course_hours_per_year,
+            :csd_terms_per_year
+          ]
+        elsif hash[:program] == PROGRAMS[:csp]
+          required.concat [
+            :csp_which_grades,
+            :csp_course_hours_per_week,
+            :csp_course_hours_per_year,
+            :csp_terms_per_year,
+            :csp_how_offer,
+            :csp_ap_exam
+          ]
+        end
+      end
+    end
+
     def program
       sanitize_form_data_hash[:program]
     end
@@ -279,8 +387,69 @@ module Pd::Application
       sanitize_form_data_hash[:state]
     end
 
+    def first_name
+      hash = sanitize_form_data_hash
+      hash[:preferred_first_name] || hash[:first_name]
+    end
+
+    def last_name
+      sanitize_form_data_hash[:last_name]
+    end
+
+    def teacher_full_name
+      "#{first_name} #{last_name}"
+    end
+
     def state_code
       STATE_ABBR_WITH_DC_HASH.key(state_name).try(:to_s)
+    end
+
+    def principal_email
+      sanitize_form_data_hash[:principal_email]
+    end
+
+    # Title & last name, or full name if no title was provided.
+    def principal_greeting
+      hash = sanitize_form_data_hash
+      title = hash[:principal_title]
+      "#{title.present? ? title : hash[:principal_first_name]} #{hash[:principal_last_name]}"
+    end
+
+    def principal_approval_url
+      pd_application_principal_approval_url(application_guid)
+    end
+
+    # @override
+    def check_idempotency
+      Pd::Application::Teacher1819Application.find_by(user: user)
+    end
+
+    def meets_criteria
+      response_scores = response_scores_hash
+      scored_questions =
+        if course == 'csd'
+          Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSD
+        elsif course == 'csp'
+          Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSP
+        end
+
+      responses = scored_questions.map do |key|
+        response_scores[key]
+      end
+
+      if responses.uniq == [YES]
+        # If all resolve to Yes, applicant meets criteria
+        YES
+      elsif responses.include? NO
+        # If any are No, applicant does not meet criteria
+        NO
+      else
+        'Incomplete'
+      end
+    end
+
+    def total_score
+      response_scores_hash.values.map {|x| x.try(:to_i)}.compact.reduce(:+)
     end
   end
 end

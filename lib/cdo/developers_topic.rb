@@ -9,14 +9,14 @@ module DevelopersTopic
     production: 'DTP: ',
     levelbuilder: 'DTL: '
   }.freeze
-  STAGING = 'staging'
-  STAGING_NEXT = 'staging-next'
-  TEST = 'test'
-  PRODUCTION = 'production'
-  LEVELBUILDER = 'levelbuilder'
+  STAGING = 'staging'.freeze
+  STAGING_NEXT = 'staging-next'.freeze
+  TEST = 'test'.freeze
+  PRODUCTION = 'production'.freeze
+  LEVELBUILDER = 'levelbuilder'.freeze
 
-  DEVELOPERS_ROOM = 'developers'
-  DEPLOY_STATUS_ROOM = 'deploy-status'
+  DEVELOPERS_ROOM = 'developers'.freeze
+  DEPLOY_STATUS_ROOM = 'deploy-status'.freeze
 
   # @return [String] The DOTD (without the '@' symbol), as per the Slack#developers topic.
   def self.dotd
