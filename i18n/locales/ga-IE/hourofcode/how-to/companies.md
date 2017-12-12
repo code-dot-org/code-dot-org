@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_companies) %>'
+title: <%= hoc_s(:title_how_to_companies) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -7,73 +7,73 @@ nav: how_to_nav
 
 # How to bring the Hour of Code to your company
 
-## Inspire students and volunteer for the Hour of Code
+## Spreag mac léinn agus oibrí deonach don Hour of Code
 
-Code.org offers the opportunity for your employees to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Tugann Code.org deis do d'fhostaithe ceangal a dhéanamh le seomraí ranga áitiúla a dhéanann an Uair de Chód áit ar féidir leo a gcuid taithí gairme ardteicneolaíochta a roinnt agus spreagadh a dhéanamh ar dhaltaí chun staidéar a dhéanamh ar eolaíocht ríomhaireachta.
 
-- [Sign up](%= resolve_url('https://code.org/volunteer') %) to volunteer.
-- For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
+- Cláraigh le deonach.
+- Le haghaidh treoracha breise maidir le fostaithe a spreagadh agus do chuid fostaithe a nascadh le seomraí ranga, féach ar ár dtreoir do chomhpháirtithe coporate.
 
-## Additional ways companies can support the Hour of Code:
+## Bealaí breise is féidir le cuideachtaí tacú leis an Uair de Chód:
 
-- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word. 
-- Host an Hour of Code Happy Hour with coworkers to try the [activities](%= resolve_url('/learn') %).
-- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+- Arr ar do Phríomhoifigeach Feidhmiúcháin r-phost ar fud na cuideachta a sheoladh <ag cur béim ar thábhacht na heolaíochta ríomhaireachta agus ar fhostaithe a spreagadh chun an focal a scaipeadh. 
+- Uair Oíche an Chóid a Shórtáil leis an Uair Shona le lucht oibre chun na gníomhaíochtaí a thriail.
+- Imeacht ócáid Uair de Chód do sheomra ranga áitiúil do mhic léinn nó do chomhpháirtithe neamhbhrabúis chun Uair de Chód a dhéanamh in oifig do chuideachta. Féach an teagmhas conas a threorú thíos.
 
-# How to host an Hour of Code event with students
+# Conas imeacht Uair de Chód a óstáil le mic léinn
 
-## 1. Promote your Hour of Code
+## Do Uair de Chód a Chur Chun Cinn
 
-- Promote your [Hour of Code](%= resolve_url('/promote') %) event and encourage others to host.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= resolve_url('https://code.org/volunteer/engineer') %) to be connected with a classroom.
+- Cuir d'imeacht Uair de Chód a chur chun cinn agus daoine eile a spreagadh chun a óstáil.
+- Spreag innealtóirí bogearraí i do chuideachta chun cuairt a thabhairt ar an seomra ranga áitiúil chun cabhrú le huaire an Chóid a threorú agus spreag na scoláirí chun staidéar a dhéanamh ar eolaíocht ríomhaireachta. Is féidir leo clárú le bheith ceangailte leis an seomra ranga.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 2. Féach ar an físeán conas-go <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 3. Choose an activity
+## 3. Roghnaigh gníomhaíocht
 
-We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+Tá éagsúlacht gníomhaíochtaí spraoi againn ar feadh uair an chloig do rannpháirtithe de gach aois, a chruthaíonn comhpháirtithe éagsúla. Bain triail as iad
 
-**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+Ní mór íospartaíocht íosta a bheith ag gníomhaíochtaí uile Uair an Chóid, agus tá siad féin-threoraithe - rud a ligeann do rannpháirtithe a bheith ag obair ar a luas féin agus ar leibhéal scile.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 4. Plan your technology needs - computers are optional
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+Áirítear ar an taithí is fearr leis an gCód Uair den Chód ríomhairí ceangailte le Idirlíon. Ach ní gá duit ríomhaire a úsáid do gach rannpháirtí, agus is féidir leat an Hour of Code a dhéanamh fiú gan ríomhaire ar chor ar bith.
 
-**Plan Ahead!** Do the following before your event starts:
+Plean Ahead! Déan an méid seo a leanas sula dtosaíonn do ócáid:
 
-- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
-- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
-- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. They’ll also see that computer science is social and collaborative.
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- Gníomhaíochtaí tástála ar ríomhairí nó ar fheistí. Déan cinnte go n-oibríonn siad i gceart ar bhrabhsálaithe le fuaim agus físeán.
+- Cluasáin a chur ar fáil, nó iarr ar rannpháirtithe a gcuid féin, má oibríonn an ghníomhaíocht a roghnaíonn tú is fearr le fuaim.
+- Nach bhfuil feistí leordhóthanach ann? Bain úsáid as cláir péire. Nuair a bheidh na rannpháirtithe ag comhpháirtíocht suas, cabhraíonn siad lena chéile agus braitheann siad níos lú ar an eagraí. Feicfidh siad freisin go bhfuil an eolaíocht eolaíochta sóisialta agus comhoibríoch.
+- An bhfuil bandaleithead íseal? Pleanáil chun físeáin a thaispeáint ag tosaigh na hócáide, mar sin níl gach rannpháirtí a gcuid físeáin féin á n-íosluchtú. Nó déan iarracht na gníomhartha neamhphlugáilte / as líne.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. Cuir tús le d'Uairchód le físeán spreagúil
 
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives. Share more about what inspired you to pursue computer science and your role at your company.
+Ciceáil as do Uair de Chód trí rannpháirtithe a spreagadh agus plé a dhéanamh ar an dóigh a mbíonn tionchar ag ríomhaireachta ar gach cuid dár saol. Comhroinn níos mó faoin méid a spreag tú chun eolaíocht ríomhaireachta a shaothrú agus do ról ag do chuideachta.
 
 **Show an inspirational video:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
+- Seol físeán bunaidh Code.org, featuring Bill Gates, Mark Zuckerberg, agus an réalta NBA Chris Bosh (tá [ 1 nóiméad </ a >, [ 5 nóiméad ](https://www.youtube.com/watch?v=nKIu9yen5nc), agus <a href = "https://www.youtube.com/watch?v = dU1xS07N-FA "> 9 nóiméad ](https://www.youtube.com/watch?v=qYZF6oIZtfc) leaganacha).  .
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- [ Uachtarán Obama ag iarraidh ar gach mac léinn ríomhaireachta a fhoghlaim ](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Faigh níos mó físeáin spreagthach [ anseo ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Ideas to introduce your Hour of Code activity to students:**
+**Smaointe chun do ghníomhaíocht Uair de Chód a thabhairt isteach do mhic léinn:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
-- If you are a tech company, demo fun, innovative products your company is working on.
-- If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
+- Mínigh bealaí a dtéann teicneolaíocht i bhfeidhm ar ár saol, le samplaí faoi chúram buachaillí agus cailíní araon - labhairt faoi theicneolaíocht a shábháil beatha, ag cabhrú le daoine, ag nascadh daoine. 
+- Má tá tú ag cuideachta ardteicneolaíochta, taispeántas taispeána, tá táirgí nuálaíocha ag do chuideachta ag obair.
+- Mura bhfuil cuideachta ardteicneolaíochta agat, déan plé ar na bealaí a úsáideann do chuideachta teicneolaíocht chun fadhbanna a réiteach agus spriocanna a bhaint amach.
+- Tabhair cuireadh do innealtóirí bogearraí ó do chuideachta labhairt faoin gcúis a chinn siad staidéar a dhéanamh ar eolaíocht agus ar na tionscadail a oibríonn siad.
 - See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
 
 ## 6. Code!
 
-**Direct participants to the activity**
+**Rannpháirtithe díreacha don ghníomhaíocht**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity](%= resolve_url('/learn') %) under the number of participants.
+- Scríobh an nasc gníomhaíochta ar chlár bán. Faigh an nasc atá liostaithe ar an [ faisnéis maidir le do ghníomhaíocht roghnaithe ](%= resolve_url ('/learn') %) faoi líon na rannpháirtithe.
 - For younger students, load the activity page ahead of time or save it as a bookmark.
 
 **When participants come across difficulties it's okay to respond:**

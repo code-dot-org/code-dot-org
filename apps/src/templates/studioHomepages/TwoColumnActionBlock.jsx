@@ -79,7 +79,7 @@ class UnconnectedTwoColumnActionBlock extends Component {
           </div>
         )}
         <div style={styles.container}>
-          {width === '50%' &&
+          {responsiveSize === 'lg' &&
             <div style={{float, width}}>
               <img src={imageUrl}/>
             </div>

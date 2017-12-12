@@ -7,19 +7,19 @@ nav: how_to_nav
 
 # Veiledning for frivillige
 
-### Gjøre en forskjell i et klasserom i dag!
+### Du kan gjøre en forskjell i en klasse i dag!
 
 ## Hvorfor bli frivillig?
 
 Se hva noen tidligere frivillige har sagt:
 
-- "Den beste erfaringen var at hele klassen var kvinner og fargede. Det lover godt for fremtiden når vi nå har en mulighet til å nå og engasjere disse barna."
-- "Jeg likte spesielt godt å oppmuntre unge jenter i bruk av teknologi. Føltes som jeg hjalp neste generasjon i nærmiljøet mitt."
+- "Det mest positive i mine øyne var at hele klassen besto av bare jenter og fargede. Det lover godt for fremtiden når vi nå har en mulighet til å åpne øynene på og engasjere disse barna."
+- "Jeg likte spesielt godt å oppmuntre unge jenter til å ta i bruk teknologien. Det føltes som jeg hjalp neste generasjon i nærmiljøet mitt."
 - "Jeg ELSKET å se hvor glade barna var. Det var fascinerende for lærerne å se at noen av de elevene som vanligvis ikke gjorde det så godt på skolen viste seg å være svært gode til å tenke som utviklere, og til å hjelpe andre - slik at de fikk en helt ny mestringsarena.
 
 ## Hvem som helst kan stille som frivillig
 
-**Volunteers and speakers in tech**: Do you have a connection to CS or tech? Hvis du arbeider innenfor programvareutvikling, i et teknologifirma (teknisk eller ikke-teknisk stilling), eller har fulgt kurs i programmering, kan du være til inspirasjon for elevene! Mange av elevene har aldri før møtt noen som arbeider innenfor dette fagfeltet, og mange lærere setter pris på å kunne knytte kontakter med fagfolk og studenter.
+**Teknisk kyndige frivillige**: Driver du med IT eller teknologi? Hvis du arbeider innenfor programvareutvikling, i et teknologifirma (teknisk eller ikke-teknisk stilling), eller har fulgt kurs i programmering, kan du være til inspirasjon for elevene! Mange av elevene har aldri før møtt noen som arbeider innenfor dette fagfeltet, og mange lærere setter pris på å kunne knytte kontakter med fagfolk og studenter.
 
 Du kan holde foredrag for klassene, eller hjelpe en lærer med arrangementet. Besøk et klasserom på en skole i nærheten for å inspirere elevene til å lære mer om informatikkfaget.
 
@@ -95,7 +95,7 @@ Du kan holde foredrag for klassene, eller hjelpe en lærer med arrangementet. Be
 </p>
 
 <h3>
-  <strong>Sample agenda:</strong>
+  <strong>Eksempel på timeplan:</strong>
 </h3>
 
 <table>

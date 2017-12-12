@@ -1763,3 +1763,255 @@ hr:
       2:
         image: 'notes/mc_2016_congrats_2.jpg'
         text: "When you're done making your game, choose share to get a link that you can share with your friends or to play your game on your phone. Have fun! I'm looking forward to playing your version of Minecraft."
+    applab_intro_welcome:
+      1:
+        image: 'notes/applab_intro_welcome_1.png'
+        text: "My name is Mei'lani. I'm an intern at code.org and I'm also a computer science student. I like computer science because it's really creative. I get to be the problem solver. I get to make everything function how I want it to. But I also get to be the designer. I get to be the artist and choose everything on the creative side of it."
+      2:
+        image: 'notes/applab_intro_welcome_2.png'
+        text: "Making your own apps is easy with App Lab! Whether you're new to coding or have some experience. App Lab is a great tool for building new apps and sharing them with your friends."
+      3:
+        image: 'notes/applab_intro_welcome_3.png'
+        text: "This is a App Lab. On the left side is your app. On the right side is the code that will make it run. You build your program by dragging in blocks from the toolbox. To start you'll just have one block called 'setProperty'."
+      4:
+        image: 'notes/applab_intro_welcome_4.png'
+        text: "The set property block changes the look of the elements on your screen. Like the buttons, labels, or even the screen itself. First you need to decide which element you want to change. If you hover over an element in your app you can see the name or ID here. Then go select that ID from the first drop down."
+      5:
+        image: 'notes/applab_intro_welcome_5.png'
+        text: "Elements have lots of properties you can change like their text color, background color or font size. You can see the full list and choose which property you want to change in the second drop down."
+      6:
+        image: 'notes/applab_intro_welcome_6.png'
+        text: "The last drop down is where you'll write the value you want to use value you want to use. The block will make a suggestion for you. But you can always type in different colors or numbers yourself."
+      7:
+        image: 'notes/applab_intro_welcome_7.png'
+        text: "Once you're done, the block reads a bit like a sentence:'Set button1's background color to green.' Hit run to see the changes you're building in code. If you reset you can drag in more blocks to change other things about your app. Like the text!"
+      8:
+        image: 'notes/applab_intro_welcome_8.png'
+        text: "For this tutorial we'll be working in block mode but App Lab also supports working in text."
+      9:
+        image: 'notes/applab_intro_welcome_9.png'
+        text: "Either way you'll be programming in JavaScript, the language of the web. Each level has a goal, instructions and an image of what you're aiming to create."
+      10:
+        image: 'notes/applab_intro_welcome_10.png'
+        text: "If you're ever stuck, click on this picture and it will show you exactly how to complete the level. But see if you can do it on your own first."
+      11:
+        image: 'notes/applab_intro_welcome_11.png'
+        text: "Once you've completed the goal for this level click Finish to move on. That's all there is to it! Hit the orange \"continue\" button to go to the next level and start your adventure with an App Lab!"
+    applab_intro_events:
+      1:
+        image: 'notes/applab_intro_events_1.png'
+        text: "Apps are really cool because it's kind of like starting your own business I mean, you get to design everything from the ground up, you get to manage everything, and you're the owner of this piece of work that you just created with code."
+      2:
+        image: 'notes/applab_intro_events_2.png'
+        text: "Now that you can change the look of your app let's make it interactive by responding to events! Events are user actions like clicking a button, scrolling through a menu, or hovering over a picture. Interactive apps need ways to respond to events, like playing a sound when I click this button. To do this in App Lab you need to use a new block called 'onEvent'."
+      3:
+        image: 'notes/applab_intro_events_3.png'
+        text: "This program sets the screen to blue. I want the screen to turn green when I click this button. First I'll need to drag in an onEvent block. By hovering I know the button's ID is \"bigButton\" so I'll select that in the first drop-down."
+      4:
+        image: 'notes/applab_intro_events_4.png'
+        text: "Next I'll choose the type of event. There's lots of options you can pick from but right now I'll leave it as a regular old click."
+      5:
+        image: 'notes/applab_intro_events_5.png'
+        text: 'Finally I''ll add code inside the on event that will change the background color of the screen. You can read this block like a sentence: "On the event that the button is clicked run all this code."'
+      6:
+        image: 'notes/applab_intro_events_6.png'
+        text: "Let's test it. Blocks outside an onEvent still run right away so the screen starts blue."
+      7:
+        image: 'notes/applab_intro_events_7.png'
+        text: "And when I click the big button the code inside my onEvent runs and my screen turns green."
+      8:
+        image: 'notes/applab_intro_events_8.png'
+        text: "If you want to change more things after the event, like the text on the screen just add more code to the onEvent"
+      9:
+        image: 'notes/applab_intro_events_9.png'
+        text: "To make your program respond to more events add more onEvent blocks. Just make sure not to put them inside of each other. Now it's time to try it out for yourself. Have fun!"
+    applab_intro_sounds:
+      1:
+        image: 'notes/applab_intro_sounds_1.png'
+        text: "Next you'll learn about adding images and sounds to your app. Let's start by checking out the sound options."
+      2:
+        image: 'notes/applab_intro_sounds_2.png'
+        text: "In the tool box you'll find a new block called \"playSound\". Drag it into the workspace. You can pick a sound to play by clicking the drop-down then clicking \"Choose\"."
+      3:
+        image: 'notes/applab_intro_sounds_3.png'
+        text: "From here you can either upload a sound file from your computer, or search for a sound from the sound library. The sound library has lots of different categories like instruments, background music or animals."
+      4:
+        image: 'notes/applab_intro_sounds_4.png'
+        text: "Once you've got the sound you want, click \"Choose\". When this block runs, it will play the sound you chose."
+      5:
+        image: 'notes/applab_intro_sounds_5.png'
+        text: "To add images to your elements you can just use the setProperty block. Select the image property in the second drop-down"
+      6:
+        image: 'notes/applab_intro_sounds_6.png'
+        text: "Then select \"Choose\" from the third drop down."
+      7:
+        image: 'notes/applab_intro_sounds_7.png'
+        text: "From here you can upload an image from your computer or you can look through a huge library of icons in the icon library."
+      8:
+        image: 'notes/applab_intro_sounds_8.png'
+        text: "Back in code mode you can use the \"setProperty\" block to change the icon color of your icon. Once you've picked what image your icon to use click \"Run\" to see how it looks."
+      9:
+        image: 'notes/applab_intro_sounds_9.png'
+        text: "That's all there is to it! Now you can start adding images and sounds to make your apps even more fun and dynamic."
+    applab_intro_designmode:
+      1:
+        image: 'notes/applab_intro_designmode_1.png'
+        text: "To build your own apps you're going to need to start designing screens and elements from scratch. App Lab makes this easy to do with Design Mode."
+      2:
+        image: 'notes/applab_intro_designmode_2.png'
+        text: "Use the switch on top of your app to go into Design Mode."
+      3:
+        image: 'notes/applab_intro_designmode_3.png'
+        text: "You can add new elements by dragging them onto the screen. You can move them around to different locations and change their size by dragging the bottom right corner."
+      4:
+        image: 'notes/applab_intro_designmode_4.png'
+        text: "To change an element's properties use the controls on the right. For example, it's really easy to change this button's text, color, and font size."
+      5:
+        image: 'notes/applab_intro_designmode_5.png'
+        text: "When you add a new element to your screen it'll get a generic ID like button1. It's a good idea to change this button's ID to something more meaningful like \"rightButton\". So that you'll know which one it is when you go to the program."
+      6:
+        image: 'notes/applab_intro_designmode_6.png'
+        text: "If you add an element to your app by mistake, just drag it out or hit the delete."
+      7:
+        image: 'notes/applab_intro_designmode_7.png'
+        text: "You can add entirely new screens to your app by dragging in a screen element"
+      8:
+        image: 'notes/applab_intro_designmode_8.png'
+        text: "From the drop-down at the top you can quickly switch back and forth between the screens you create."
+      9:
+        image: 'notes/applab_intro_designmode_9.png'
+        text: "Inside your app, you'll need a way to switch between all of these screens, so the setScreen block has been added to the toolbox. Use \"setScreen\" inside the \"onEvent\" block to change screens at the click of a button."
+      10:
+        image: 'notes/applab_intro_designmode_10.png'
+        text: "In the next few levels you'll be working on a single project. First you'll add a button then you'll add a new screen and finally you'll write code so that the button switches to the new screen."
+    applab_intro_share:
+      1:
+        image: 'notes/applab_intro_share_1.png'
+        text: "Now that you've learned some of the basics of App Lab like adding buttons, sounds, images, text and new screens you can make all sorts of apps."
+      2:
+        image: 'notes/applab_intro_share_2.png'
+        text: "In the next level you'll find the app you just finished building. With a little creativity, you can turn this into a personality quiz for your friends, a greeting card that you can share with your family or a choose-your-own-adventure game. All of these apps are just a combination of the skills you've already learned, and I bet you can come up with even more."
+      3:
+        image: 'notes/applab_intro_share_3.png'
+        text: "Once you're done with your app you can easily send it to your phone to see how it looks. Just click \"Share\" and enter your phone number here."
+      4:
+        image: 'notes/applab_intro_share_4.png'
+        text: "You'll receive a text message that'll let you open up your app instantly."
+      5:
+        image: 'notes/applab_intro_share_5.png'
+        text: "You can also share a link to your app over social media or post it to the code.org public gallery for other people to play and share."
+      6:
+        image: 'notes/applab_intro_share_6.png'
+        text: "You've just scratched the surface of what App Lab can do. Full App Lab features more advanced user interactions, new screen elements and even a built-in database so you can quickly build full featured apps. At \"code.org/applab\" you'll find the full tool and lots of ideas if you want to keep going."
+      7:
+        image: 'notes/applab_intro_share_7.png'
+        text: "Thanks for coming along the ride. Now go build and share your first app, and keep on building apps with App Lab!"
+    mc_2017_agent_intro:
+      1:
+        image: 'notes/mc_2017_agent_intro_1.png'
+        text: 'Stacy: Stampy, Lizzy, Preston - thank you for coming with me. What I want to show you is just over this mesa plateau. I think you''re going to love it!'
+      2:
+        image: 'notes/mc_2017_agent_intro_2.png'
+        text: "Wait a minute - there's a hole in the track! (screaming)"
+      3:
+        image: 'notes/mc_2017_agent_intro_3.png'
+        text: 'Is everyone okay? Stampy: Ah, I see the problem. Look! There was a hole in the track. Stacy: Really, Stampy? Lizzy: Maybe we should gather blocks to fix it. Preston: Let''s make it a race. First one back to the top wins. Stacy: Ok, on your mark, get set, GO! Ok, I''m just gonna gather some of this terracotta. Wait. Guys, I can''t mine! Preston: Same. Lizzy: I can''t either. Stacy: Ok, that is really strange. Stampy, can you mine? Stampy: I can''t mine! Stacy: Ok, everyone stay calm. Stampy: Is the game broken? Stacy: If it is, how do we fix it? Lizzy: I don''t know. Stampy: Does anyone know how to write Minecraft code?'
+      4:
+        image: 'notes/mc_2017_agent_intro_4.png'
+        text: '(poof) Preston: What is that? Stampy: I''ve never seen one of these before. Lizzy: It''s so adorable! Stacy: Is it...is it tameable? Preston: Okay, what is going on? Someone needs to go back to the real world and fix this.  All: Not it! Stacy: Not i- (Sigh.) Ok, I''ll go.'
+      5:
+        image: 'notes/mc_2017_agent_intro_5.png'
+        text: "Oh, okay, hey, so I'm in the real world now. I'm going to go try to find the Minecraft offices."
+      6:
+        image: 'notes/mc_2017_agent_intro_6.png'
+        text: "But, I'm going to need your help. Start doing the tutorial, start learning how to code, and I'll catch up with you guys after a few levels, okay? Wish me luck! I think it's this way. Ow! Cactus! I'm okay!"
+      7:
+        image: 'notes/mc_2017_agent_intro_7.png'
+        text: "To complete the Hour of Code challenge, you'll need to write code to program the agent. You'll work together with The Agent to clear any obstacles in your path, so you can pick up the items you'll need for your journey. Only the Agent can place and break blocks, and only you can collect items. Your screen is split into three main parts. On the left is Minecraft."
+      8:
+        image: 'notes/mc_2017_agent_intro_8.png'
+        text: "The middle area is the toolbox with commands that the Agent can understand."
+      9:
+        image: 'notes/mc_2017_agent_intro_9.png'
+        text: "And on the right, is the workspace. That's where you stack the commands to build your program to control the Agent."
+      10:
+        image: 'notes/mc_2017_agent_intro_10.png'
+        text: "The Agent can walk, turn, and activate pressure plates. It can also destroy blocks and place blocks. When it places the block like these minecart rails, it places it underneath itself."
+      11:
+        image: 'notes/mc_2017_agent_intro_11.png'
+        text: "If you forget what to do, the instructions for each level are at the top."
+      12:
+        image: 'notes/mc_2017_agent_intro_12.png'
+        text: "If you want to try again, you can hit the blue reset button to reset everything to where it started. And if you need to delete a block of code, drag it from your workspace to the toolbox. Remember to hit run to get the Agent moving. Okay, go ahead and try out the first few levels. Good luck!"
+    mc_2017_repeat:
+      1:
+        image: 'notes/mc_2017_repeat_1.png'
+        text: 'Stampy: I wonder what Stacy is up to?'
+      2:
+        image: 'notes/mc_2017_repeat_2.png'
+        text: 'Stacy: Woah, I think I''m in the right place. This is amazing!'
+      3:
+        image: 'notes/mc_2017_repeat_3.png'
+        text: "I feel like I'm back in Minecraft! Hello. How are you? Hello?"
+      4:
+        image: 'notes/mc_2017_repeat_4.png'
+        text: 'Oh, there''s a creeper. You don''t do anything, do you? Katie: Stacy? Stacy:Hi, Katie? Katie: Yes, welcome to Minecraft!'
+      5:
+        image: 'notes/mc_2017_repeat_5.png'
+        text: 'Stacy: This is amazing. So you work here every day as a developer, right? Katie: Yeah, it''s pretty awesome. I''m a developer on the Minecraft marketplace team. Stacy: How many coding languages do you know? Katie: In my career I''ve probably worked with over a dozen. Stacy: A dozen? Katie: Yeah. Stacy: So now, you wouldn''t happen to know anything about this little golem guy that calls himself the Agent? Katie: We use the Agent to do things that Steve or Alex can''t, like go across lava. Stacy: Well, I want to learn how to code, and they want to learn how to code, so what is one of the first things that you need to know when you''re learning?'
+      6:
+        image: 'notes/mc_2017_repeat_6.png'
+        text: 'Katie: Well, you need to learn how to use loops. Loops are things that developers write to give commands to a computer that can be run over and over again. Stacy: Got it, so I think there''s actually some of that coming up in the levels ahead, so go ahead and give loops a try.'
+      7:
+        image: 'notes/mc_2017_repeat_7.png'
+        text: "In the next level, you can use a loop to move the Agent along the path. Drag the repeat block into the workspace and place the move forward block inside the repeat block. This tells the computer to do the same thing many times in a row without having to drag a whole bunch of blocks into the workspace. You can choose how many times to repeat by putting a number in the repeat block."
+      8:
+        image: 'notes/mc_2017_repeat_8.png'
+        text: "You can put turns and multiple commands in the repeat block too, but for now try using a repeat to move the Agent forward a few steps. Remember, if you get stuck on a puzzle you can always hit the blue reset button and try again."
+      9:
+        image: 'notes/mc_2017_repeat_9.png'
+        text: 'If you are thinking about having a cool job like Katie''s, go ahead and click the show code button when you finish every level. That''s going to actually show you the Javascript code that someone like Katie uses when she''s actually programming Minecraft. Katie: Yeah, good luck everyone!'
+    mc_2017_functions:
+      1:
+        image: 'notes/mc_2017_functions_1.png'
+        text: 'Preston: I''m not trying to brag, but I''m pretty good at parkour. Lizzy: Let''s sleep so it''s day when Stacy comes back.'
+      2:
+        image: 'notes/mc_2017_functions_2.png'
+        text: 'Stacy: Ok guys, I am back from the Minecraft offices, and I think I know how to solve the problem I''m having in my game. I think I can use a function. Let me just open this.'
+      3:
+        image: 'notes/mc_2017_functions_3.png'
+        text: "So a function is a specific set of instructions to accomplish a certain task, kind of like a recipe. In the next few levels, you'll have access to functions that you can use to solve the puzzles."
+      4:
+        image: 'notes/mc_2017_functions_4.png'
+        text: "Look at the code in the function when it's in the workspace to see what it does."
+      5:
+        image: 'notes/mc_2017_functions_5.png'
+        text: "Then, find the block with that name in the toolbox and drag it from the toolbox to the when run block."
+      6:
+        image: 'notes/mc_2017_functions_6.png'
+        text: "Remember, you can use the same function every time you need to run the same set of instructions to do something, like build a bridge. Good luck, I know you can do it!"
+    mc_2017_congratulations:
+      1:
+        image: 'notes/mc_2017_congratulations_1.png'
+        text: 'Preston: Congratulations!'
+      2:
+        image: 'notes/mc_2017_congratulations_2.png'
+        text: 'Lizzy: Congratulations!'
+      3:
+        image: 'notes/mc_2017_congratulations_3.png'
+        text: 'Stampy: Congratulations, you did it!'
+      4:
+        image: 'notes/mc_2017_congratulations_4.png'
+        text: 'Stacy: Congratulations guys, you totally rocked that! And now that you''ve completed the Hour of Code, you can start coding in Minecraft. You''ve learned about loops, functions, and what a software Agent does.'
+      5:
+        image: 'notes/mc_2017_congratulations_5.png'
+        text: "Now, it's time for the free play level, where you are the developer. Use any remaining time to write your own functions to explore, mine, and build."
+      6:
+        image: 'notes/mc_2017_congratulations_6.png'
+        text: 'You can take the code that you write in this level into your Minecraft world on Minecraft: Education Edition. Just click ''Finish'' and follow the instructions for getting the link to use in your world. to continue coding with the Agent. Have fun, and good job!'
+      7:
+        image: 'notes/mc_2017_congratulations_7.png'
+        text: 'Stacy: And I''m back! Okay, you guys, this is the Agent! Let me show you what it can do. Look, it''s doing it! I told it to build a staircase out of these terra cotta blocks, now we can just use this to get out of here. And you guys, it''s not just staircases. I can tell the Agent to do anything I want, and it will do it for me.'
+      8:
+        image: 'notes/mc_2017_congratulations_8.png'
+        text: 'Stampy: How did you do that? Stacy: It was easy, actually. I just used code!'

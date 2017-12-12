@@ -10,12 +10,12 @@ class NewRelicClient
     'enabled_alert_policy_id' => ENV['ENABLED_ALERT_POLICY_ID'],
     'disabled_alert_policy_id' => ENV['DISABLED_ALERT_POLICY_ID'],
     'api-key' => ENV['NEWRELIC_API_KEY']
-  }
+  }.freeze
 
   attr_reader :attributes
 
   # Base URL for the NewRelic V2 REST API
-  NEWRELIC_URL = 'https://api.newrelic.com/v2'
+  NEWRELIC_URL = 'https://api.newrelic.com/v2'.freeze
 
   def initialize(attributes=ENV_ATTRS)
     @attributes = attributes

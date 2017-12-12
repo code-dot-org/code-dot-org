@@ -5,15 +5,15 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Cara mengajar satu jam kode di kelas dan klub setelah sekolah
+# Cara mengajar Pemograman selama satu jam pada jam pulang sekolah dan ekstrakulikuler
 
-Bergabunglah dengan gerakan ini dan perkenalkan sekelompok siswa pada jam pertama ilmu komputer mereka dengan langkah-langkah ini. Jam Kode mudah dijalankan - bahkan untuk pemula! Jika Anda ingin set ekstra tangan untuk membantu, Anda dapat menemukan [relawan lokal](%= resolve_url('https://code.org/volunteer/local') %) untuk membantu menjalankan Jam Kode di kelas Anda.
+Bergabung dengan gerakan dan kenalkan para pelajar tentang satu jam pertama mereka dalam mempelajari ilmu komputer dengan langkah-langkah berikut. Kelas pemograman satu jam ini sungguh mudah untuk dilakukan - bahkan untuk pemula sekalipun! Jika anda menginginkan bantuan, anda dapat mencari link berikut [relawan lokal](%= resolve_url('https://code.org/volunteer/local') %) untuk membantu dalam pelaksanaan kelas pemograman satu jam anda.
 
 ## 1. Tonton video how-to ini <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Pilih tutorial
+## 3) Pilih tutorial
 
-Kami menyediakan berbagai [ tutorial yang menyenangkan dan sejam ](%= resolve_url('/learn') %) bagi peserta segala usia, diciptakan oleh berbagai mitra. Ayo dicoba
+Kami menyediakan berbagai [ satu jam tutorial yang menyenangkan ](%= resolve_url('/learn') %) bagi peserta segala usia, diciptakan oleh berbagai mitra. Ayo dicoba
 
 **All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
@@ -119,7 +119,7 @@ Mulai Hour of Code Anda dengan peserta yang menginspirasi dan diskusikan bagaima
 
 Hour of Code adalah langkah pertama dalam suatu perjalanan untuk mempelajari lebih lanjut bagaimana teknologi bekerja dan bagaimana membuat aplikasi perangkat lunak. Untuk melanjutkan perjalanan ini:
 
-- Mendorong siswa untuk terus [ belajar secara online ](%= kode resolve_url('https://.org/learn/beyond') %).
-- <a kode href="%= resolve_url('https://.org/professional-development-workshops') %"> Hadiri </a> workshop 1-hari, di-orang untuk menerima instruksi dari berpengalaman komputer ilmu fasilitator. (Hanya pengajar AS)
+- Mendorong siswa untuk terus [belajar secara online](%= resolve_url('https://code.org/learn/beyond') %).
+- [Hadiri](%= resolve_url('https://code.org/professional-development-workshops') %) workshop 1-hari, di-orang untuk menerima instruksi dari berpengalaman komputer ilmu fasilitator. (Hanya pengajar AS)
 
 <%= view :signup_button %>

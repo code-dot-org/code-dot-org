@@ -4,7 +4,7 @@ import {expect} from '../../../util/configuredChai';
 import RecentCourses from '@cdo/apps/templates/studioHomepages/RecentCourses';
 import ContentContainer from '@cdo/apps/templates/ContentContainer';
 import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';

@@ -87,10 +87,7 @@ class CoursesTeacherEnglish extends Component {
             responsive={responsive}
           />
 
-          <AdministratorResourcesActionBlock
-            isRtl={isRtl}
-            responsive={responsive}
-          />
+          <AdministratorResourcesActionBlock/>
         </div>
       </div>
     );

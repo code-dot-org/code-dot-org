@@ -5,58 +5,58 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-## How to attract media to your Hour of Code event
+## Ako prilákať médiá na Vašu Hodinu Kódovania
 
-*For all press and media inquiries, contact <press@code.org>*
+*Pre tlačové správy a mediálne informácie kontaktujte <press@code.org>*
 
 ### Kľúčové tipy
 
-- Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
-- Ask a school staff member or volunteer to take photos to share online or send to press.
-- Write about the Hour of Code on your website’s homepage and in your school newspaper. Post your event details, and pictures of student activities.
-- On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Kontaktujte médiá e-mailom dva týždne pred Vašou Hodinou. Pripomeňte sa e-mailom a telefonicky, ak nedostanete odpoveď.
+- Opýtajte sa zamestnanca školy alebo dobrovoľníka, aby spravil fotografie pre zdieľanie online alebo zaslanie médiám.
+- Napíšte o Hodine Kódovania na Vašej webstránke a v školských novinách. Pridajte detaily o podujatí a fotografie z aktivít študentov na Hodine.
+- Na Facebooku a Twitteri zdieľajte aktuality o Vašich plánoch, oznamujte podujatia a zdieľajte obrázky počas 5.-11. Decembra. Používajte hashtag **#HourOfCode** aby Vás Code.org mohla vidieť a podporiť Vaše podujatia.
 
 ### Sprievodca krok za krokom:
 
-**1. Naplánuj svoje podujatie**
+**1. Naplánujte svoje podujatie**
 
-- Plan an assembly to kick off the Hour of Code.
-- Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
-- Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-- Organize group activities (like a demonstration of an ‘unplugged’ programming activity), or show off student-created and led activities.
-- Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
+- Naplánujte zhromaždenie pre začiatok Hodiny Kódovania.
+- Pošlite [list](<%= resolve_url('/promote/resources#sample-emails') %>) rodičom. Požiadajte ich o rozšírenie informácie o Hodine.
+- Pošlite [list](<%= resolve_url('/promote/resources#sample-emails') %>) s pozvánkou pre starostu, poslanca, člena vlády alebo vplyvného podnikateľa, aby sa zúčastnil na Hodine a prehovoril k Vašim študentom.
+- Zorganizujte spoločenské aktivity (napríklad demo "unplugged" aktivít) alebo ukážte výsledky študentskej práce.
+- Zobrazte Code.org’s [video Hodiny Kódovania](<%= resolve_url('/') %>) alebo jedno z [týchto videí](<%= resolve_url('/promote/resources#videos') %>) pre inšpiráciu.
 
-**2. Identify specific local reporters that cover education or local events.**
+**2. Identifikujte konkrétnych lokálnych novinárov, ktorí pokrývajú školstvo alebo miestne podujatia.**
 
-Think a local newspaper, TV station, radio station or blog.
+Majte na mysli lokálne noviny, lokálnu televíziu, rádio alebo blog.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+Na internete nájdite kontakt na reportéra. Ak ho nemôžete nájsť, zavolajte do vydavateľstva, alebo napíšte na všeobecnú e-mailovú adresu vydavateľstva (napríklad na tipy@nazovvydavatelstva.sk) a spýtajte sa na nasmerovanie Vašej požiadavky na správnu osobu.
 
-**3. Skontaktuj sa s lokálnymi médiami**
+**3. Skontaktujte sa s lokálnymi médiami**
 
-The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>).**
+Najlepší spôsob, ako ich osloviť, je e-mailom. Oslovenie by malo byť krátke a obsahovať: prečo by sa mali iní ľudia zaujímať o toto podujatie? Priložte kontaktné údaje (vrátane mobilného telefónneho čísla) na osobu, ktorá bude prítomná na samotnom podujatí. **Pozrite si [vzorovú správu pre médiá](<%= resolve_url('/promote/resources#sample-emails') %>).**
 
-**4. Prepare to field questions about your school event. Here are some examples:**
+**4. Pripravte sa na otázky o vašom školskom podujatí. Tu sú niektoré príklady:**
 
 *Prečo vaša škola organizuje Hodinu Kódovania?*
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+Hoci si všetci uvedomujeme, že pre štuentov je dôležité naučiť sa navigovať sa v dnešnom pretechnizovanom svete, veľa učiteľov nemá skúsenosti v informatike a nevie, kde začať. Toto podujatie je možnosťou pre nás všetkých vidieť, o čom je informatika.
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+Veríme, že vzbudí záujem študentov a motivuje ich k učeniu sa. Výskumy takisto ukázali, že deti dokážu pochopiť koncept programovania ešte predtým, ako sa naučia čítať a písať. Ich mozgy su dokonca vnímavejšie k počítačovým jazykom v mladom veku rovnako ako k cudzím jazykom.
 
 *Prečo je to dôležité?*
 
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
+Technológia mení každé odvetvie na tejto planéte. V roku 2015 bolo len v Spojených Štátoch otvorených 7 miliónov pracovných pozícií - vrátane umenia a dizajnu, ktoré vyžadujú znalosť kódovania. Avšak na množstve škôl sa informatika nevyučuje v dostatočnom rozsahu a kvalite. Je čas zmeniť to a prejsť do 21 storočia. Vieme, že bez ohľadu na to, akým smerom sa budú študenti uberať v dospelosti, či pôjdu do medicíny, politiky, podnikania alebo umenia, znalosť technológií a ich budovania im dodá sebavedomie a konkurenčnú výhodu.
 
-**More details and a quote you can use in materials**
+**Viac detailov a fráz, ktoré môžete použiť**
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+"Hodina Kódu je navrhnutá tak, aby demystifikovala kód a ukázala, že informatika nie je raketová veda - každý sa môže naučiť základy," povedal Hadi Partovi, zakladateľ a CEO Code.org. "Viac ako 100 miliónov študentov po celom svete už absolvovalo Hodinu Kódu. Dopyt po vzdelaní v informatike na úrovni 21 storočia prekračuje hranice a nepozná ich."
 
 **O Code.org**
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
+Code.org je 501c3 verejná nezisková organizácia zameraná na šírenie účasti na výuke informatiky a zvyšovaní účasti žien a minorít na nej. Jej víziou je, aby každý študent v každej škole mal možnosť absolvovať hodiny počítačového programovania. Po spustení v roku 2013, Code.org zorganizovalo kampaň Hodina Kódu, v rámci ktorej viac ako 100 miliónov študentov dostalo hodiny informatiky a spolupracovalo s množstvom školských okrskov po celej krajine na šírení výuky informatiky. Code.org je podporovaný darmi zo spoločností, nadácií a filantropov vrátane Microsoftu, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network a inými. Pre viac informácií navštívte: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
-Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
+Viac zdrojov a vzorové emaily nájdete [na tomto odkaze](<%= resolve_url('/promote') %>).
 
 <%= view :signup_button %>

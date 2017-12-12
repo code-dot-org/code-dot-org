@@ -2,6 +2,7 @@ import { assert, expect } from 'chai';
 import Multi from '@cdo/apps/code-studio/levels/multi';
 import { writeSourceForLevel } from '@cdo/apps/code-studio/clientState';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
+import { TooFewDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
 
 describe('multi', () => {
   const levelId = 1028;
@@ -23,6 +24,9 @@ describe('multi', () => {
   after(() => {
     restoreOnWindow('appOptions');
   });
+
+  // Clear source written via writeSourceForLevel
+  afterEach(() => sessionStorage.clear());
 
   describe('validateAnswers', () => {
     it('returns true if user provides the correct answer', () => {
@@ -87,6 +91,32 @@ describe('multi', () => {
         answersFeedback, lastAttemptString, containedMode);
 
       expect(multi.selectedAnswers).to.include(lastAttemptNum);
+    });
+  });
+
+  describe('getResult', () => {
+    it('returns correct data for valid result', () => {
+      const multi = new Multi(levelId, id, app, standalone, numAnswers, answers,
+        answersFeedback, lastAttemptString, containedMode);
+      multi.clickItem(1);
+      const result = multi.getResult(true);
+
+      assert.deepEqual(result, {
+        response: 1,
+        result: true,
+        errorDialog: undefined,
+        submitted: false,
+        valid: true
+      });
+    });
+
+    it('returns a TooFewDialog for too few answers', () => {
+      // numAnswers of 2 instead of 1
+      const multi = new Multi(levelId, id, app, standalone, 2, answers,
+        answersFeedback, null, containedMode);
+      const result = multi.getResult(true);
+
+      assert.strictEqual(result.errorDialog.type, TooFewDialog);
     });
   });
 });

@@ -26,9 +26,14 @@
   twentyhours_heading: "Познакомьтесь с нашим курсом «введение в информатику»"
   twentyhours_text: "Закончили свой первый Час кода? Узнайте больше об информатике и концепциях программирования в следующем курсе."
   og_title: 'Code.org: Любой может научиться'
+  og_title_soon: "The Hour of Code is coming"
+  og_title_here: "The Hour of Code is here!"
   og_description: "Каждый студент в каждой школе заслуживает возможность изучения компьютерных наук."
+  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Час кода настал"
   csedweek_og_description: "4-10 декабря 2017 года. Информатика - это основа для каждого учащегося."
+  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Присоединяйтесь к <a href=\"http://hourofcode.com\">Часу кода</a><br/>8-14 декабря 2014 года<br/>"
   hoc2014_students: "Ученики"
   hoc2014_try: "Попробуйте это"
@@ -412,12 +417,12 @@
   mc_gradelevel: "Возраст 6+"
   mc_platformtext: "Современные браузеры, смартфоны, планшеты"
   mc_specs: "На разных языках | Современные браузеры, смартфоны, планшеты | Возраст от 6 лет и старше"
-  minecraft_agent: 'Minecraft: Hero’s Journey'
+  minecraft_agent: 'Майнкрафт: Путешествие Героя'
   minecraft_designer: "Дизайнер миров Minecraft"
   minecraft_adventurer: "Приключение c Minecraft"
   minecraft_tutorials: "Руководства к часу кода c Minecraft"
   minecraft_specs: "Доступно на разных языках| на всех современных браузерах и планшетах| c 8 лет"
-  minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  minecraft_agent_description: "Майнкрафт возвращается с новыми заданиями для Часа Кода! Путешествуй и программируй с Майнкрафт."
   minecraft_agent_button: "Начать"
   minecraft_designer_description: "Запрограммируй поведение животных и существ своего мира Minecraft."
   minecraft_designer_button: "Начать"
@@ -426,19 +431,19 @@
   minecraft_no_internet: "У Вас нет интернета?"
   minecraft_download_adventurer: "Загрузить оффлайн версию тренажера Minecraft приключение."
   minecraft_subtitle: "Час Кода Minecraft"
-  minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
-  minecraft_host_event: "Host a Minecraft Hour of Code Event"
-  minecraft_teach_resources: "Teacher resources and lesson plan."
-  minecraft_leader_guide: "Download resources to help you plan and lead an event."
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
-  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
-  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign up today</a>."
-  minecraft_future: "Help all youth become future ready"
-  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access the resources</a> they found most valuable."
-  minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
-  minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
+  minecraft_store_camps: "Бесплатный Час Кода с Майнкрафт в Microsoft Store"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'> Подпишитесь</a> на бесплатные семинары Minecraft Час Кода в магазинах Microsoft в Австралии, Канаде, Пуэрто-Рико или США. Узнайте, как программирование сочетает в себе творчество, решение задач и развлечение."
+  minecraft_host_event: "Организуйте час кода с тренажером Майнкрафт"
+  minecraft_teach_resources: "Ресурсы и планы уроков для учителей."
+  minecraft_leader_guide: "Загрузите дополнительные материалы, чтобы организовать и провести мероприятие."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'> Скачайте</a> краткое руководство и PowerPoint презентации."
+  minecraft_join_online_training: "Готовы организовать час кода с Minecraft, но не уверены с чего начать? Посетите наш <a href='%{minecraft_webinar_url}'> вводный вебинар </a>. На вебинаре вы познакомитесь с лучшими практиками, найдете готовые материалы по проведению Час Кода и попробуете пройти путь героя Minecraft на тренажере. Подумайте, что вам нужно для того, чтобы организовать Час Кода для молодых людей во время недели компьютерных наук (4-10 декабря)."
+  minecraft_continue_learning: 'Информатика для всех: А что после окончания Часа кода в__________Майкрософт'
+  minecraft_continue_learning_description: "Опыт в программировании не требуется! Помогите молодым людям получить ценные навыки в области информатики. Присоединяйтесь к нам в Microsoft Store и вы сможете принять участие в бесплатной серии семинаров (3 семинара, каждый продолжительностью 1 час), где вы сможете заняться программированием в веселой и непринужденной обстановке, ознакомиться с концепциями ключевых компьютерных наук и подготовиться к проведению кампании Час Кода в вашем классе или сообществе. <a href='%{minecraft_continue_learning_url}'> Подпишитесь сегодня</a>."
+  minecraft_future: "Помогите молодым людям быть готовыми к завтрашнему дню"
+  minecraft_future_description: "Узнайте, как другие школы и некоммерческие организации приобщают молодежь к приобретению цифровых навыков, от цифровой грамотности до получения образования в области информационных технологий. Изучите различные модели, получите советы, узнаете нюансы и <a href='%{minecraft_future_url}'> получите доступ к ценным ресурсам.</a>."
+  minecraft_og_designer: "У Майнкрафт появились новыми задания для Часа Кода. Программируйте свой мир Майнкрафт."
+  minecraft_og_agent: "Майнкрафт снова с вами на Часе Кода, и вы - главный герой! Напишите код для путешествия по природным зонам Майнкрафт."
   sports_page_title: "Часа Кода Спорт"
   sports_og_title: "Часа Кода Спорт Руководство"
   sports_og_description: "Выбери между игрой в баскетбол и сочетанием различных спортивных игр."
@@ -952,6 +957,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Пост AP: База данных в Приложениях'
   cspassessment_name: "Полный тест - 50 вопросов"
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: 'Тест: часть 1 (25 вопросов)'
   cspexam2-AKwgAh1ac5_name: 'Тест: часть 2 (25 вопросов)'
   cspunit3_gradelevel: "9-12 классы"
@@ -1466,3 +1473,5 @@
   syncing_students: "Syncing your students"
   syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
+  hero_name: 'Майнкрафт: Путешествие Героя'
+  applab-intro_name: App Lab Intro

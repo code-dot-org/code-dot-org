@@ -44,7 +44,7 @@ Trải nghiệm Giờ Lập Trình tốt nhất cần có máy tính được k�
 **Hãy lên kế hoạch trước!** Thực hiện các bước dưới đây trước khi sự kiện bắt đầu:
 
 - Hãy thử các hoạt động trên máy tính hoặc thiết bị. Hãy chắc chắn rằng họ làm việc đúng trên trình duyệt với âm thanh và video.
-- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
+- Hãy cung cấp tai nghe hoặc yêu cầu người tham gia tự mang theo đồ của họ nếu hoạt động bạn chọn diễn ra hiệu quả nhất khi có âm thanh.
 - **Không có đủ thiết bị?** Sử dụng phương thức [ lập trình theo cặp](https://www.youtube.com/watch?v=vgkahOzFH2Q). Khi học sinh học theo nhóm, chúng sẽ giúp đỡ nhau và sẽ ít phải nhờ tới giáo viên hơn. Các em cũng sẽ thấy được tính xã hội và hợp tác trong khoa học máy tính.
 - **Nếu kết nối internet chậm** hãy chiếu video trước sự kiện để mọi người không phải tải video của họ. Hoặc thử các hoạt động không cần mạng/ lập trình không cần máy tính.
 

@@ -2590,7 +2590,7 @@ uk:
       courseC_artist_prog2_instruction: "Drag blocks onto the screen to have the\nartist draw over the grey lines in the picture. (Each line is 100 pixels long)"
       courseC_artist_prog3_instruction: "Each side of the inner square is 100 pixels\nand all of the angles are 90 degrees."
       courseC_artist_prog4_instruction: "Finish Starla's rocket so she can chase\nher pet."
-      courseC_artist_prog5_instruction: "Цей будинок потребує даху! Намалюй трикутник.  Підказка: всі три сторони мають однакову довжину."
+      courseC_artist_prog5_instruction: "Finish this tag by drawing a rectangle around\nthe outside.\\r\n(The long sides are 200 pixels each and the short sides are\neach 100 pixels)"
       courseC_artist_prog6_instruction: "Draw this diamond with 200 pixel sides."
       courseC_artist_prog7_instruction: "**Challenge:** This tag is a special one!  Can\nyou figure out how to draw the outline?"
       courseC_artist_prog8_instruction: "One more tag.  This is a triangle for Pi.\\r\n(Each\nside is 150 pixels)"
@@ -3300,7 +3300,7 @@ uk:
       grade2_MakeDogTag_10_instruction: "Намалюй щось цікаве."
       grade2_MakeDogTag_2_instruction: "This spaceship needs a window!\\r\n\\r\nEach\nside of the inner square is 100 pixels and all of the angles are 90 degrees."
       grade2_MakeDogTag_3_instruction: "Допоможи мені завершити домівку для цього кота."
-      grade2_MakeDogTag_4_instruction: "Цей будинок потребує даху! Намалюй трикутник.  Підказка: всі три сторони мають однакову довжину."
+      grade2_MakeDogTag_4_instruction: "Finish this tag by drawing a rectangle around\nthe outside.\\r\n(The long sides are 200 pixels each and the short sides are\neach 100 pixels)"
       grade2_MakeDogTag_5_instruction: "\"Now a tag for Belle!\"\\r\n\\r\nDraw this\ndiamond with 200 pixel sides."
       grade2_MakeDogTag_6_instruction: Гра без правил! Малюй усе що завгодно.
       grade2_MakeDogTag_7_instruction: "One more tag.  This is a triangle for Pi.\\r\n(Each\nside is 150 pixels)"

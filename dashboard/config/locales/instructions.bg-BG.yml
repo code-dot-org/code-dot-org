@@ -3965,15 +3965,15 @@
         верига като поставиш Agent върху активиращата плоча."
       MC_HOC_2017 Agent Test_instruction: Щракни върху "Старт" за да се премести героя
         до оранжевия квадрат в къщата.
-      MC_HOC_2017_01_instruction: Щракни върху "Старт" за да се премести героя до
+      MC_HOC_2017_01_instruction: Щракни върху "Старт", за да се премести героя до
         оранжевия квадрат в къщата.
       MC_HOC_2017_01_Cole_instruction: "Необходимо е да събереш всички инструменти
         по време на това пътешествие. Придвижвай се с **клавишите със стрелки** и
         стигни до сандъка на пътеката, за да спечелиш"
-      MC_HOC_2017_01_Kiki_instruction: Щракни върху "Старт" за да се премести героя
+      MC_HOC_2017_01_Kiki_instruction: Щракни върху "Старт", за да се премести героя
         до оранжевия квадрат в къщата.
-      MC_HOC_2017_01_RETRY_instruction: "Придвижете Agent до активиращата плоча и
-        след това натиснете „Старт“ и използвайте клавишите със стрелки, за да придвижите
+      MC_HOC_2017_01_RETRY_instruction: "Придвижете Agent до активиращата плоча. След
+        това натиснете „Старт“ и използвайте клавишите със стрелки, за да придвижите
         героя извън къщата, така че да може да прибере сандъка. "
       MC_HOC_2017_02_instruction: "Придвижете Agent до активиращата плоча."
       MC_HOC_2017_02_Cole_instruction: "Придвижете Agent до активиращата плоча, така
@@ -4001,7 +4001,7 @@
       MC_HOC_2017_06_Kiki_instruction: "Коригирайте този код, така че да накара Agent
         да построи мост над реката."
       MC_HOC_2017_07_Cole_instruction: "Разрушете леда и придвижете {currentPlayerName}
-        до вагонетката."
+        до Minecart."
       MC_HOC_2017_07_Kiki_instruction: "Използвайте функция, за да прочистите пътеката
         до оранжевото квадратче."
       MC_HOC_2017_07a_Kiki_instruction: "Прочистете пътеката до оранжевото квадратче."
@@ -7411,7 +7411,7 @@
         Use the `repeat` loop to add waves to the
         water.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
-      courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
+      courseA_artist_loops9_instruction: "Предизвикателство: Поправете стълбите."
       courseA_artist_loops_challenge2_instruction: |-
         "Can you help me make two bird
         houses?"
@@ -7495,7 +7495,7 @@
       courseA_maze_seq12_instruction: 'Get that pig! '
       courseA_maze_seq13_instruction: Get the pig any way you can!
       courseA_maze_seq2_instruction: "Промени кода, за да ме заведеш до прасето!"
-      courseA_maze_seq3_instruction: Fix the code to get the bird to the pig!
+      courseA_maze_seq3_instruction: "Премахни блок, за да стигне птицата да прасето!"
       courseA_maze_seq4_instruction: "ПРЕМАХНИ блок, за да стигне птицата да прасето!"
       courseA_maze_seq4a_instruction: |-
         Get the bird to the pig using the fewest possible
@@ -8388,9 +8388,9 @@
         move the paddle. See how many points you can get before your opponent scores
         twice!
       courseD_bounce_embedded_instruction: Write Instructions Here
-      courseD_bounce_events1_instruction: |-
-        Attach a block to the "when left arrow"
-        block and press "Run" to move the player to the flag.
+      courseD_bounce_events1_instruction: Вземи знамето! Прикачи блок към "когато
+        е натисната стрелка наляво" блок и натисни "Старт", за да преместиш играча
+        към знамето.
       courseD_bounce_events10_instruction: |-
         There is now a goal at the top. Attach
         the "score point" and "score opponent point" blocks to the "when ball
