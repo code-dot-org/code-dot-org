@@ -98,7 +98,7 @@ export default class EligibilityChecklist extends Component {
       return (
         <DiscountCodeInstructions
           discountCode={this.state.discountCode}
-          fullDiscount={true}
+          fullDiscount={this.props.getsFullDiscount}
         />
       );
     }
