@@ -23,7 +23,7 @@ nav: how_to_nav
     
     Hour of Code adalah langkah pertama dalam suatu perjalanan untuk mempelajari lebih lanjut bagaimana teknologi bekerja dan bagaimana membuat aplikasi perangkat lunak. Untuk melanjutkan perjalanan ini:
     
-    - Mendorong siswa untuk terus [ belajar secara online ](%= kode resolve_url('https://.org/learn/beyond') %).
-    - <a kode href="%= resolve_url('https://.org/professional-development-workshops') %"> Hadiri </a> workshop 1-hari, di-orang untuk menerima instruksi dari berpengalaman komputer ilmu fasilitator. (Hanya pengajar AS)
+    - Mendorong siswa untuk terus [belajar secara online](%= resolve_url('https://code.org/learn/beyond') %).
+    - [Hadiri](%= resolve_url('https://code.org/professional-development-workshops') %) workshop 1-hari, di-orang untuk menerima instruksi dari berpengalaman komputer ilmu fasilitator. (Hanya pengajar AS)
     
     <%= view :signup_button %>

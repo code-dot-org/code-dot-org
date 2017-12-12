@@ -7,31 +7,31 @@ nav: how_to_nav
 
 # Etüt/Sosyal etkinlik veya okul sonrası faaliyetler için Kod Saati nasıl öğretilir
 
-Bu harekete katıl ve bir grup öğrenciye onların bilgisayar bilimindeki ilk saatlerinde şu adımlarla yol göster. Kod-saati kolaydır - yeni başlayanlara bile! Sınıfınızda Kod-Saati uygulamaya extradan yardım isterseniz [ yerel bir gönüllü](%= resolve_url('https://code.org/volunteer/local') %) bulabilirsiniz.
+Bu harekete katıl ve bir grup öğrenciye onların bilgisayar bilimindeki ilk saatlerinde şu adımlarla yol göster. Kod-Saati yeni başlayanlar için bile çok kolaydır! Sınıfınızda Kod-Saati eğitimleri için yardım isterseniz [ yerel bir gönüllü](%= resolve_url('https://code.org/volunteer/local') %) bulabilirsiniz.
 
 ## 1. "Nasıl Yapılır" videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Bir eğitim seçin
 
-Çeşitli ortaklarımız tarafından oluşturulmuş, [eğlenceli, bir saatlik eğitimi](%= resolve_url('/learn') %) her yaştan katılımcılarımıza sunuyoruz. [Bunları deneyin!](%= resolve_url('/learn') %)
+Çeşitli ortaklarımız tarafından oluşturulmuş, [eğlenceli, saatlik eğitimleri](%= resolve_url('/learn') %) her yaştan katılımcılarımıza sunuyoruz. [Bunları deneyin!](%= resolve_url('/learn') %)
 
 Çok az bir hazırlık süresi gerektiren ve kendi kendine yapılabilen - katılımcılara kendi tempo ve yetenek seviyelerinde çalışmaya izin veren **tüm Kod-Saati faaliyetleri**.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-**Okul sonrası Kod-saati için ders planına mı ihtiyaç var?** [şablona](/files/AfterschoolEducatorLessonPlanOutline.docx) bakabilirsiniz!
+**Okul sonrası Kodlama Saati için ders planına mı ihtiyaç var?** [şablona](/files/AfterschoolEducatorLessonPlanOutline.docx) bakabilirsiniz!
 
 ## 3. Kendi Kod-Saatinizi tanıtın
 
-[Bu araçlar ile](%= resolve_url('/promote') %) kendi Kod- Saati'nizi tanıtın ve diğerlerini kendi etkinliklerini düzenlemeleri için teşvik edin.
+[Bu araçlar ile](%= resolve_url('/promote') %) kendi Kod- Saatinizi tanıtın ve diğerlerini kendi etkinliklerini düzenlemeleri için teşvik edin.
 
 ## 4. Teknolojik ihtiyaçlarınızı planlayın - bilgisayar kullanmak isteğinize bağlı
 
-En iyi Kodlama Saati deneyimi internete bağlı olan bilgisayarları içerir. Ama her çocuk için bir bilgisayara ihtiyaç **yok** ve hiç bir bilgisayar olmadan bile Kodlama Saati yapabilirsin.
+En iyi Kod-Saati deneyimi için bilgisayarlarınız internete bağlı olmalı. Her çocuk için bir bilgisayara ihtiyaç yok **yok** hatta hiç bilgisayar olmadan bile Kod-Saati dersleri yapabilirsiniz.
 
 Etkinlik öncesinde kullanacağınız öğretici içerikleri, öğrenci bilgisayarlarında ve/veya cihazlarında deneyin, ses ve videoların tarayıcınızda düzgün bir şekilde çalıstığından emin olun. **Bağlantı hızınız düşük mü?** Videoları sınıfın ön tarafından izletin, böylece her öğrencinin kendi videosunu indirmesine gerek kalmayacaktır. Ya da internet bağlantısı gerektirmeyen içerikleri deneyin.
 
-Seçtiğiniz içerik ses ile daha iyi öğrenilecekse sınıflarınız için kulaklıklar sağlayın ya da öğrencilere kendilerininkini getirmelerini söyleyin.
+Seçtiğiniz içerik ses ile daha iyi öğrenilecekse sınıflarınız için kulaklıklar edinin ya da öğrencilere kendilerininkini getirmelerini söyleyin.
 
 **Yeterli ekipman yok mu?** o halde [ eşli programlayı](https://www.youtube.com/watch?v=vgkahOzFH2Q) kullanın. İki kişilik takımlar halinde çalışan öğrenciler birbirlerine yardımcı olurlar ve öğretmene daha az ihtiyaç duyarlar. Ayrıca bu yöntemle öğrenciler bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklar.
 
@@ -39,7 +39,7 @@ Seçtiğiniz içerik ses ile daha iyi öğrenilecekse sınıflarınız için kul
 
 ## 5. Kod-Saati etkinliğinizi ilham verici bir video ile başlatın
 
-Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar biliminin hayatımızın her parçasını nasıl etkilediğini anlatarak başlayın.
+Kod-Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar biliminin hayatımızın her parçasını nasıl etkilediğini anlatarak başlayın.
 
 **İlham verici bir video gösterin:**
 
@@ -96,7 +96,7 @@ Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar bilimi
 [/col-33]
 
 - Öğrencileriniz için [sertifika basın](%= resolve_url('https://code.org/certificates') %).
-- Öğrencileriniz için ["Hour of Code!" ](%= resolve_url('/promote/resources#stickers') %) çıkartmaları yazdırın.
+- Öğrencileriniz için ["Kod-Saati!" ](%= resolve_url('/promote/resources#stickers') %) çıkartmaları yazdırın.
 - Okulunuz için [özel sipariş t-shirtler](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
 - Kod Saati etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
 

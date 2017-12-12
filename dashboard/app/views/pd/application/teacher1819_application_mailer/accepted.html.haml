@@ -1,0 +1,77 @@
+%p
+  Hello
+  = @application.first_name + ","
+
+%p
+  Congratulations! Code.org
+  - if @application.regional_partner_id
+    and
+    = @application.regional_partner.name
+    are
+  - else
+    is
+  excited to offer you a space in Code.org's 2018-19 Professional Learning
+  Program for
+  = @application.course + "!"
+  Please read below for details, and then make sure to register using the link
+  below within two weeks of receiving this message.
+
+%p
+  As a reminder, all participants in the Professional Learning Program are expected to:
+
+%ul
+  %li
+    Attend their assigned summer workshop
+  - if @application.regional_partner_id
+    %li
+      Attend their assigned academic year workshops
+  %li
+    Teach this curriculum in the 2018-19 school year
+
+%p
+  Here are your important next steps:
+%ul
+  %li
+    %strong
+      Within two weeks
+    of receiving this message,
+    %strong
+      please complete this form
+    to let us know whether or not you are accepting your seat in the program. If
+    you are accepting your seat, this form will also be your registration for
+    TeacherCon, your five-day summer workshop.
+    %strong
+      If you do not respond within two weeks, we will need to offer your space
+      to a teacher on our waitlist.
+  %li
+    %strong
+      Mark your calendar for TeacherCon!
+    You have been assigned to TeacherCon <location>, <Month xx - xx, 2018>.
+    Code.org will cover the cost of transportation, lodging, and most meals
+    during TeacherCon. You will receive more details about travel, lodging, and
+    meals approximately six weeks prior to your TeacherCon.
+    %strong
+      Please do not book your travel until you receive those instructions.
+  %li
+    Share the good news with your school! Start talking with your
+    administration, colleagues, students, and parents now about the course you
+    will be teaching next year, and encourage a diverse group of students to
+    enroll. Once you accept your space in the program, you will receive a
+    welcome kit complete with recruitment tips and tools. In the meantime,
+    please checkout these
+    = link_to('recruitment resources', 'https://code.org/educate/resources/recruit') + '.'
+
+%p
+  Please contact
+  = link_to('teacher@code.org', 'mailto:teacher@code.org')
+  with any questions. We look forward to receiving your registration form within
+  two weeks!
+
+%p
+  Thank you,
+%p
+  Sarah Fairweather
+  %br
+  Education Team Program Manager
+  %br
+  Code.org

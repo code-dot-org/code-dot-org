@@ -57,7 +57,7 @@
       cronjob at:'30 17 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
       cronjob at:'0 * * * *', do:deploy_dir('tools', 'scripts', 'brokenLinkChecker', 'brokenLinkChecker.js'), notify:'dev+crontab@code.org'
       cronjob at:'0 14 * * *', do:deploy_dir('bin', 'cron', 'github_dms_tasks')
-      # cronjob at:'0 20 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
+      cronjob at:'0 20 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dts')
     end
 
@@ -78,7 +78,7 @@
       cronjob at:'18 23 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       # This should be run shortly after the commit_content job, running on both levelbuilder and
       # staging.
-      # cronjob at:'5 20 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
+      cronjob at:'5 20 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
     end
 
     if node.chef_environment == 'production' # production daemon

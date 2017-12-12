@@ -13,10 +13,10 @@ Contact: [**Informatii de contact**]
   
 
 
-<strong>
+<strong> 
 
 <center>
-  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
+  GOVERNATORUL/SENATORUL/MEMBRUL DE PARTID/REPREZENTANTUL/PRIMARUL/ MEMBRUL DE CONSILIULUI [INSEREAZĂ NUME][ A PARTICIPAT LA ORA DE COD CU ELEVII LOCALI]</strong><br /> Comunitatea se alătură demersului de conștientizare asupra importanței învățării tehnologiei computerelor și programării prin participarea la Săptămâna Educației în Informatică
 </center>
 
 <br /> <br /></p> 

@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Hvordan innføre Kodetimen i hele skolekretsen
 
-## Få hver skole til å delta, hver elev til å lære!
+## Få alle skoler til å delta, alle elever til å lære!
 
 1. **Rekrutter skoler fra nærområdet.** Del [denne e-posten](%= resolve_url('/promote/resources#sample-emails') %) og [lærerveiledningen](%= resolve_url('/how-to') %), eller skriv et [kort innlegg](%= resolve_url('/promote/stats') %) i et nyhetsbrev eller lignende.
 
