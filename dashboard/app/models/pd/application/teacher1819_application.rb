@@ -508,5 +508,37 @@ module Pd::Application
         nil
       end
     end
+
+    # @override
+    # Filter out extraneous answers based on selected program (course)
+    def self.filtered_labels(course)
+      labels_to_remove = (course == 'csd' ?
+        [:csp_which_grades, :csp_course_hours_per_week, :csp_course_hours_per_year, :csp_terms_per_year, :csp_how_offer, :csp_ap_exam]
+        :
+        [:csd_which_grades, :csd_course_hours_per_week, :csd_course_hours_per_year, :csd_terms_per_year]
+      )
+
+      ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+    end
+
+    # @override
+    def self.csv_header(course)
+      markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
+      CSV.generate do |csv|
+        columns = filtered_labels(course).values.map {|l| markdown.render(l)}
+        columns.push 'Status', 'Meets Criteria', 'Bonus Points', 'Notes', 'Regional Partner'
+        csv << columns
+      end
+    end
+
+    # @override
+    def to_csv_row
+      answers = full_answers
+      CSV.generate do |csv|
+        row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
+        row.push status, meets_criteria, total_score, notes, regional_partner_name
+        csv << row
+      end
+    end
   end
 end
