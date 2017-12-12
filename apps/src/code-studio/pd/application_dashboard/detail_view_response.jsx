@@ -24,10 +24,12 @@ Question.propTypes = {
 };
 
 export default class DetailViewResponse extends React.Component {
+  /* answer should be an element or a string depending on if
+     editing is true and isWorkshopAdmin */
   static propTypes = {
     question: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
     questionId: PropTypes.string,
-    answer: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.bool]),
+    answer: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.bool, PropTypes.element]),
     layout: PropTypes.oneOf(['lineItem', 'panel']).isRequired,
     score: PropTypes.string,
     possibleScores: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),

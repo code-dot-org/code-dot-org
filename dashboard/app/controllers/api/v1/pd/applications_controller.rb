@@ -58,11 +58,18 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   # PATCH /api/v1/pd/applications/1
   def update
-    if application_params[:response_scores]
-      JSON.parse(application_params[:response_scores]).transform_keys! {|x| x.to_s.underscore}.to_json
+    application_data = application_params.except(:locked)
+
+    if application_data[:response_scores]
+      JSON.parse(application_data[:response_scores]).transform_keys! {|x| x.to_s.underscore}.to_json
     end
 
-    @application.update(application_params.except(:locked))
+    if application_data[:regional_partner_filter] == REGIONAL_PARTNERS_NONE
+      application_data[:regional_partner_filter] = nil
+    end
+    application_data["regional_partner_id"] = application_data.delete "regional_partner_filter"
+
+    @application.update(application_data)
 
     # only allow those with full management permission to lock or unlock
     if application_params.key?(:locked) && can?(:manage, @application)
@@ -94,7 +101,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   def application_params
     params.require(:application).permit(
-      :status, :notes, :response_scores, :locked
+      :status, :notes, :regional_partner_filter, :response_scores, :locked
     )
   end
 

@@ -5,7 +5,13 @@ import DetailViewApplicationSpecificQuestions from './detail_view_application_sp
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
 import {ApplicationStatuses, ApplicationFinalStatuses} from './constants';
+import RegionalPartnerDropdown from './regional_partner_dropdown';
 import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
+import {
+  ApplicationStatuses,
+  UnmatchedFilter,
+  UnmatchedLabel
+} from './constants';
 
 const styles = {
   notes: {
@@ -34,6 +40,10 @@ export class DetailViewContents extends React.Component {
     applicationData: PropTypes.shape({
       regional_partner_name: PropTypes.string,
       locked: PropTypes.bool,
+      regional_partner_id: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+      ]),
       notes: PropTypes.string,
       status: PropTypes.string.isRequired,
       school_name: PropTypes.string,
@@ -46,7 +56,8 @@ export class DetailViewContents extends React.Component {
       bonus_points: PropTypes.number
     }),
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
-    reload: PropTypes.func.isRequired
+    reload: PropTypes.func.isRequired,
+    isWorkshopAdmin: PropTypes.bool
   };
 
   state = {
@@ -54,7 +65,9 @@ export class DetailViewContents extends React.Component {
     locked: this.props.applicationData.locked,
     notes: this.props.applicationData.notes || "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:",
     response_scores: this.props.applicationData.response_scores || {},
-    editing: false
+    editing: false,
+    regional_partner_name: this.props.applicationData.regional_partner_name || UnmatchedLabel,
+    regional_partner_filter: this.props.applicationData.regional_partner_id || UnmatchedFilter
   };
 
   componentWillMount() {
@@ -66,7 +79,9 @@ export class DetailViewContents extends React.Component {
       editing: false,
       status: this.props.applicationData.status,
       locked: this.props.applicationData.locked,
-      notes: this.props.applicationData.notes
+      notes: this.props.applicationData.notes,
+      regional_partner_name: this.props.applicationData.regional_partner_name,
+      regional_partner_filter: this.props.applicationData.regional_partner_id
     });
   };
 
@@ -98,7 +113,13 @@ export class DetailViewContents extends React.Component {
     this.setState({
       response_scores: {...this.state.response_scores, [event.target.id.replace('-score', '')]: event.target.value}
     });
-  }
+  };
+
+  handleRegionalPartnerChange = (selected) => {
+    let regionalPartnerFilter = selected ? selected.value : UnmatchedFilter;
+    let regionalPartnerName = selected ? selected.label : UnmatchedLabel;
+    this.setState({ regional_partner_name: regionalPartnerName, regional_partner_filter: regionalPartnerFilter });
+  };
 
   handleSaveClick = () => {
     $.ajax({
@@ -128,6 +149,19 @@ export class DetailViewContents extends React.Component {
         {this.state.locked ? "Unlock" : "Lock"}
       </Button>
     );
+  };
+
+  regionalPartnerAnswer = () => {
+    if (this.state.editing && this.props.isWorkshopAdmin) {
+      return (
+        <RegionalPartnerDropdown
+          onChange={this.handleRegionalPartnerChange}
+          regionalPartnerFilter={this.state.regional_partner_filter}
+          otherOptions={[{label: UnmatchedLabel, value: UnmatchedFilter}]}
+        />
+      );
+    }
+    return this.state.regional_partner_name;
   };
 
   renderEditButtons = () => {
@@ -216,6 +250,7 @@ export class DetailViewContents extends React.Component {
   };
 
   renderTopSection = () => {
+    let regionalPartnerAnswer = this.regionalPartnerAnswer();
     return (
       <div id="TopSection">
         <DetailViewResponse
@@ -223,27 +258,6 @@ export class DetailViewContents extends React.Component {
           answer={this.props.applicationData.email}
           layout="lineItem"
         />
-        {
-          this.props.applicationData.application_type === 'Teacher' ?
-            (
-              <DetailViewResponse
-                question="Regional Partner"
-                questionId="regionalPartnerName"
-                answer={this.props.applicationData.regional_partner_name}
-                layout="panel"
-                score={this.state.response_scores['regionalPartnerName']}
-                possibleScores={TeacherValidScores['regionalPartnerName']}
-                editing={this.state.editing}
-                handleScoreChange={this.handleScoreChange}
-              />
-            ) : (
-            <DetailViewResponse
-              question="Regional Partner"
-              answer={this.props.applicationData.regional_partner_name}
-              layout="lineItem"
-            />
-            )
-        }
         <DetailViewResponse
           question="School Name"
           answer={this.props.applicationData.school_name}
@@ -254,6 +268,27 @@ export class DetailViewContents extends React.Component {
           answer={this.props.applicationData.district_name}
           layout="lineItem"
         />
+        {
+          this.props.applicationData.application_type === 'Teacher' ?
+            (
+              <DetailViewResponse
+                question="Regional Partner"
+                questionId="regionalPartnerName"
+                answer={regionalPartnerAnswer}
+                layout="panel"
+                score={this.state.response_scores['regionalPartnerName']}
+                possibleScores={TeacherValidScores['regionalPartnerName']}
+                editing={this.state.editing}
+                handleScoreChange={this.handleScoreChange}
+              />
+            ) : (
+              <DetailViewResponse
+                question="Regional Partner"
+                answer={regionalPartnerAnswer}
+                layout="panel"
+              />
+            )
+        }
       </div>
     );
   };
@@ -309,4 +344,5 @@ export class DetailViewContents extends React.Component {
 
 export default connect(state => ({
   canLock: state.permissions.lockApplication,
+  isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(DetailViewContents);
