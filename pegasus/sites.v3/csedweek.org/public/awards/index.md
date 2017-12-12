@@ -8,6 +8,8 @@ theme: responsive
 
 # 2017 Champions of Computer Science Awards
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/80-tkIR6o5s?rel=0&amp;start=3137" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
 ## Students
 
 ### [Crystal Reynaga](/awards/reynaga)

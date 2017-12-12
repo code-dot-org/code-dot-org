@@ -9,6 +9,7 @@ import RosterDialog from "@cdo/apps/templates/teacherDashboard/RosterDialog";
 import AddSectionDialog from "@cdo/apps/templates/teacherDashboard/AddSectionDialog";
 import EditSectionDialog from "@cdo/apps/templates/teacherDashboard/EditSectionDialog";
 import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
+import Notification from '@cdo/apps/templates/Notification';
 
 const defaultProps = {
   sectionIds: [11, 12, 13],
@@ -100,7 +101,7 @@ describe('OwnedSections', () => {
     );
     expect(spy).not.to.have.been.called;
 
-    expect(wrapper.find('Notification').length).to.equal(1);
-    expect(wrapper.find('Notification').props().notice).to.equal('Add a new classroom section');
+    expect(wrapper.find(Notification).length).to.equal(1);
+    expect(wrapper.find(Notification).props().notice).to.equal('Add a new classroom section');
   });
 });
