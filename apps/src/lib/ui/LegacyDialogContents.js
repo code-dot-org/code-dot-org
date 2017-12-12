@@ -119,3 +119,20 @@ export const ErrorDialog = () => (
     </div>
   </ProtectedStatefulDiv>
 );
+
+export const StartOverDialog = () => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon scrollable-element">
+      <p className="dialog-title">{i18n.startOverTitle()}</p>
+      <p>{i18n.startOverBody()}</p>
+      <div id="buttons">
+        <button id="cancel-button">
+          {i18n.cancel()}
+        </button>
+        <button id="ok-button" className="btn-danger" style={{float: 'right'}}>
+          {i18n.startOver()}
+        </button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
+);

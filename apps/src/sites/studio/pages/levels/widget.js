@@ -3,13 +3,15 @@
  */
 /* global appOptions */
 import $ from 'jquery';
+import React from 'react';
 import {
   showInstructionsDialog,
-  showStartOverDialog,
+  showDialog,
   processResults
 } from '@cdo/apps/code-studio/levels/dialogHelper';
 import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
+import { setupApp } from '@cdo/apps/code-studio/initApp/loadApp';
+import { StartOverDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
 
 function setupWidgetLevel() {
   window.script_path = location.pathname;
@@ -26,7 +28,7 @@ window.dashboard = window.dashboard || {};
 window.dashboard.widget = {
   setupWidgetLevel: setupWidgetLevel,
   // used by pixelation widget
-  showStartOverDialog: showStartOverDialog,
+  showStartOverDialog: callback => showDialog(<StartOverDialog/>, callback),
   // used eby frequency, vigenere, and pixelation widgets
   processResults: processResults
 };
