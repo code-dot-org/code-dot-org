@@ -2,8 +2,7 @@
   %span.about_list
     -current_url = request.path_info
     -{'About the Program'=>'/international',
-      'Get Involved'=>'/international/getinvolved',
-      'Apply to be a Partner'=> '/international/apply'}.each_pair do |label,url|
+      'International Partner Application'=> '/international/apply'}.each_pair do |label,url|
       - if current_url == url
         %span.about_list_item_selected= label
       -else

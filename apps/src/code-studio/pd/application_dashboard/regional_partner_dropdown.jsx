@@ -23,7 +23,10 @@ export class RegionalPartnerDropdown extends React.Component {
       PropTypes.string,
       PropTypes.number
     ]),
-    regionalPartners: PropTypes.arrayOf(PropTypes.string)
+    regionalPartners: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string
+    }))
   }
 
   componentWillMount() {

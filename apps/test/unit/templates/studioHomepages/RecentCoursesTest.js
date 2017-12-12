@@ -4,7 +4,7 @@ import {expect} from '../../../util/configuredChai';
 import RecentCourses from '@cdo/apps/templates/studioHomepages/RecentCourses';
 import ContentContainer from '@cdo/apps/templates/ContentContainer';
 import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
-import Notification from '@cdo/apps/templates/Notification';
+import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
@@ -55,7 +55,6 @@ describe('RecentCourses', () => {
           isRtl={false}
         >
           <TopCourse
-            isRtl={false}
             assignableName={topCourse.assignableName}
             lessonName={topCourse.lessonName}
             linkToOverview={topCourse.linkToOverview}
@@ -63,13 +62,12 @@ describe('RecentCourses', () => {
           />
           <div>
             <Notification
-              type={Notification.NotificationType.course}
+              type={NotificationType.course}
               notice="Find a course"
               details="Try new courses to add them to your homepage."
               buttonText="Find a course"
               buttonLink="/courses"
               dismissible={false}
-              isRtl={false}
             />
           </div>
         </ContentContainer>
@@ -96,7 +94,6 @@ describe('RecentCourses', () => {
           isRtl={false}
         >
           <TopCourse
-            isRtl={false}
             assignableName={topCourse.assignableName}
             lessonName={topCourse.lessonName}
             linkToOverview={topCourse.linkToOverview}
@@ -122,13 +119,12 @@ describe('RecentCourses', () => {
           </div>
           <div>
             <Notification
-              type={Notification.NotificationType.course}
+              type={NotificationType.course}
               notice="Find a course"
               details="Try new courses to add them to your homepage."
               buttonText="Find a course"
               buttonLink="/courses"
               dismissible={false}
-              isRtl={false}
             />
           </div>
         </ContentContainer>
@@ -152,7 +148,6 @@ describe('RecentCourses', () => {
           isRtl={false}
         >
           <TopCourse
-            isRtl={false}
             assignableName={topCourse.assignableName}
             lessonName={topCourse.lessonName}
             linkToOverview={topCourse.linkToOverview}
@@ -198,13 +193,12 @@ describe('RecentCourses', () => {
           />
           <div>
             <Notification
-              type={Notification.NotificationType.course}
+              type={NotificationType.course}
               notice="Find a course"
               details="Try new courses to add them to your homepage."
               buttonText="Find a course"
               buttonLink="/courses"
               dismissible={false}
-              isRtl={false}
             />
           </div>
         </ContentContainer>
