@@ -13,6 +13,7 @@ const exampleCard = {
 export default storybook => {
   return storybook
     .storiesOf('ContentContainer', module)
+    .withReduxStore()
     .addStoryTable([
       {
         name: 'no link',
@@ -27,14 +28,12 @@ export default storybook => {
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              isRtl={false}
             />
             <CourseCard
               title={exampleCard.title}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              isRtl={false}
             />
           </ContentContainer>
         )
@@ -55,14 +54,12 @@ export default storybook => {
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              isRtl={false}
             />
             <CourseCard
               title={exampleCard.title}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              isRtl={false}
             />
         </ContentContainer>
         )
@@ -84,14 +81,12 @@ export default storybook => {
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              isRtl={false}
             />
             <CourseCard
               title={exampleCard.title}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              isRtl={false}
             />
         </ContentContainer>
         )

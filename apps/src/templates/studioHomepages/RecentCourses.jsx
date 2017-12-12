@@ -56,7 +56,6 @@ export default class RecentCourses extends Component {
                     title={course.title}
                     description={course.description}
                     link={course.link}
-                    isRtl={isRtl}
                   />
                 </div>
               )}
