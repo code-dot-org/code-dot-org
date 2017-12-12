@@ -26,9 +26,14 @@
   twentyhours_heading: "コンピュータサイエンスコースを紹介する"
   twentyhours_text: "初めてのHour of Codeを修了しましたか？フォローアップコースでコンピュータサイエンスやプログラミング概念をさらに学びましょう。"
   og_title: 全ての子供に機会を得る権利があります
+  og_title_soon: "The Hour of Code is coming"
+  og_title_here: "The Hour of Code is here!"
   og_description: "すべての学校のすべての学生が、コンピュータ サイエンスを学ぶ機会を得られる。それはすべてを変えるでしょう。"
+  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Hour of Code がやってくる"
   csedweek_og_description: "Hour of Codeは、すでに180 以上の国々と45 以上の言語で、数千万人の生徒を対象に行われた、世界的な運動です。"
+  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "<a href=\"http://hourofcode.com\">Hour of Code</a> に挑戦しよう <br/> 2014年12月8日から14 日まで<br/>"
   hoc2014_students: "生徒の皆さん"
   hoc2014_try: "挑戦してみる"
@@ -431,16 +436,16 @@
   minecraft_download_adventurer: "Minecraftアドベンチャーのオフライン版をダウンロード。"
   minecraft_subtitle: "Minecraft Hour of Code プログラミング入門"
   minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
   minecraft_host_event: "Host a Minecraft Hour of Code Event"
   minecraft_teach_resources: "Teacher resources and lesson plan."
   minecraft_leader_guide: "Download resources to help you plan and lead an event."
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
-  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
+  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}', target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
-  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign up today</a>."
+  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}', target='_blank'>Sign up today</a>."
   minecraft_future: "Help all youth become future ready"
-  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access the resources</a> they found most valuable."
+  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}', target='_blank'>access the resources</a> they found most valuable."
   minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
   minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   sports_page_title: "Hour of Code スポーツ"
@@ -956,6 +961,8 @@
   csp-ap_name: AP パフォーマンス タスク
   csppostap_name: 'ポストAP: アプリ内でのデータベース'
   cspassessment_name: "完全なテスト - 50 の質問"
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: テストその1 - 25 の質問
   cspexam2-AKwgAh1ac5_name: テストその2 - 25 の質問
   cspunit3_gradelevel: "中学3年～高校3年生向け"
@@ -1377,7 +1384,7 @@
   teachingtree_beyond_longdescription: "TeachingTree は誰でも教育用コンテンツを提供できるオープンなプラットフォームです。私たちのゴールは生徒が個々の概念を学ぶ上で適切なクリップを素早く見つけられるようにすることです。ビデオとそれに関連する概念を紐づけて、私たちのサイトに追加してください。"
   kodu_beyond_longdescription: "Kudo は PC や Xbox 用のゲームをつくるための視覚的なプログラミング言語です。Kudo はプログラミングと同時に、創造性、問題解決、物語の作成方法を教えるためにも利用できます。子供も大人も、デザインやプログラミングのスキルがなかったとしても、だれでも Kudo でゲームを作ることができます。PC 用の Kudo は無料でダウンロードできます。Xbox 用の Kudo は米国で利用可能で Xbox マーケットプレースのインディーズゲームで 5 ドルで購入することができます。"
   cargobot_beyond_longdescription: "Cargo-Bot はロボットに木箱を動かす方法を教えるパズルゲームです。簡単そうに聞こえますよね？恐怖の音楽と驚くほどきれいなグラフィックスからなる 36 個のすごく面白いパズルが用意されています。あなたの解き方を記録して、YouTube に共有してともだちに見せることもできます。"
-  kidsruby_beyond_longdescription: 'Ruby を使って宿題をしたり、ゲームを作ったりして楽しみましょう。両親や先生には Ruby プログラミングの勉強をしているといっておきましょう :-)　無料でどのコンピューターでも動作します [注：インストールが必要です]。'
+  kidsruby_beyond_longdescription: Ruby を使って宿題をしたり、ゲームを作ったりして楽しみましょう。両親や先生には Ruby プログラミングの勉強をしているといっておきましょう :-)　無料でどのコンピューターでも動作します [注：インストールが必要です]。
   w3schools_beyond_longdescription: "あなたのコンピューターでウェブサイトの作り方を学びましょう。サーバーの基本を1日以内に学びましょう。ウェブサイトにデータベースを追加する方法を学びましょう。"
   codeavengers_beyond_longdescription: "どうやってゲームやアプリ、ウェブサイトを作るか知ることができます。専門家が初心者のために難易度を設定しています。説明はわかりやすく、必要なときに使えるヘルプもあります。\nHTML、CSS、そして JavaScript のコースはコード・チャレンジと復習ゲームが含まれており、すべての年齢層へ楽しく効果的に学習できるようになっています。"
   mozilla_beyond_longdescription: "Thimble を使うと、ウェブページの作成と共有が驚くほど簡単になります。HTML と CSS をブラウザの中で編集し、その結果を簡単にプレビューすることができます。クリック一つで歓声したプロジェクトを共有できます。初心者にもエキスパートにも適しています。"
@@ -1470,3 +1477,5 @@
   syncing_students: "Syncing your students"
   syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro
