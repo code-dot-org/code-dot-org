@@ -55,7 +55,6 @@ describe('RecentCourses', () => {
           isRtl={false}
         >
           <TopCourse
-            isRtl={false}
             assignableName={topCourse.assignableName}
             lessonName={topCourse.lessonName}
             linkToOverview={topCourse.linkToOverview}
@@ -96,7 +95,6 @@ describe('RecentCourses', () => {
           isRtl={false}
         >
           <TopCourse
-            isRtl={false}
             assignableName={topCourse.assignableName}
             lessonName={topCourse.lessonName}
             linkToOverview={topCourse.linkToOverview}
@@ -152,7 +150,6 @@ describe('RecentCourses', () => {
           isRtl={false}
         >
           <TopCourse
-            isRtl={false}
             assignableName={topCourse.assignableName}
             lessonName={topCourse.lessonName}
             linkToOverview={topCourse.linkToOverview}

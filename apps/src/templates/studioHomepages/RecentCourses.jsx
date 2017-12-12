@@ -42,7 +42,6 @@ export default class RecentCourses extends Component {
         >
           {topCourse && (
             <TopCourse
-              isRtl={isRtl}
               assignableName={topCourse.assignableName}
               lessonName={topCourse.lessonName}
               linkToOverview={topCourse.linkToOverview}
