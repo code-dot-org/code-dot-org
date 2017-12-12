@@ -88,8 +88,9 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
       school_name: school_id ? School.find(school_id).name : nil,
       # true/false once has_submitted_school is true
       # false implies partial discount
-      gets_full_discount: application.try(:full_discount?),
+      gets_full_discount: application.try(:full_discount),
       discount_code: application.try(:circuit_playground_discount_code).try(:code),
+      expiration: application.try(:circuit_playground_discount_code).try(:expiration),
       admin_set_status: application.try(:admin_set_status) || false
     }
 

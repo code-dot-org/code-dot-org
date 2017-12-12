@@ -102,7 +102,7 @@ describe('EligibilityChecklist', () => {
       />
     );
     wrapper.find('Button').simulate('click');
-    wrapper.instance().handleSuccessDialog('MYCODE');
+    wrapper.instance().handleSuccessDialog('MYCODE', '2018-12-31T00:00:00.000Z');
     assert(wrapper.is('DiscountCodeInstructions'));
   });
 
@@ -112,6 +112,7 @@ describe('EligibilityChecklist', () => {
         {...defaultProps}
         unit6Intention="yes1718"
         initialDiscountCode="MYCODE"
+        initialExpiration="2018-12-31T00:00:00.000Z"
         getsFullDiscount={false}
       />
     );

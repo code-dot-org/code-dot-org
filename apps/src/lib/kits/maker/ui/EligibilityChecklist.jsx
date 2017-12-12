@@ -29,6 +29,7 @@ export default class EligibilityChecklist extends Component {
     hasConfirmedSchool: PropTypes.bool,
     getsFullDiscount: PropTypes.bool,
     initialDiscountCode: PropTypes.string,
+    initialExpiration: PropTypes.string,
     adminSetStatus: PropTypes.bool.isRequired,
   };
 
@@ -72,6 +73,7 @@ export default class EligibilityChecklist extends Component {
     this.state = {
       ...this.state,
       discountCode: props.initialDiscountCode,
+      expiration: props.initialExpiration,
     };
   }
 
@@ -91,7 +93,9 @@ export default class EligibilityChecklist extends Component {
 
   handleCancelDialog = () => this.setState({confirming: false})
 
-  handleSuccessDialog = discountCode => this.setState({discountCode})
+  handleSuccessDialog = (discountCode, expiration) => {
+    this.setState({discountCode, expiration});
+  };
 
   render() {
     if (this.state.discountCode) {
@@ -99,6 +103,7 @@ export default class EligibilityChecklist extends Component {
         <DiscountCodeInstructions
           discountCode={this.state.discountCode}
           fullDiscount={this.props.getsFullDiscount}
+          expiration={this.state.expiration}
         />
       );
     }

@@ -22,16 +22,20 @@ export default class DiscountCodeInstructions extends Component {
   static propTypes = {
     discountCode: PropTypes.string.isRequired,
     fullDiscount: PropTypes.bool.isRequired,
+    expiration: PropTypes.string.isRequired,
   };
 
   render() {
-    // TODO: dont hard code expiration date
+    // Date formated to be in form "December 31, 2018"
+    const expiration = (new Date(this.props.expiration)).toLocaleString('en-us',
+      {timeZone: 'UTC', year: 'numeric', month: 'long', day: 'numeric'});
+
     return (
       <div>
         <h1 style={styles.title}>Subsidized Circuit Playground Kits</h1>
         <h2>
           <div>Discount code for subsidized kit: {this.props.discountCode}</div>
-          <div>(Expires December 31, 2018)</div>
+          <div>(Expires {expiration})</div>
         </h2>
         <div>
           We're happy to share with you this discount code that will bring down the cost of a $325 Circuit Playground kit to
