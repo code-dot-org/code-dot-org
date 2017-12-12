@@ -67,6 +67,7 @@ describe('EligibilityChecklist', () => {
         schoolId="12345"
         schoolName="Code.org Junior Academy"
         hasConfirmedSchool={true}
+        getsFullDiscount={false}
       />
     );
     assert.equal(wrapper.find('Button').length, 1);
@@ -80,6 +81,7 @@ describe('EligibilityChecklist', () => {
         schoolId="12345"
         schoolName="Code.org Junior Academy"
         hasConfirmedSchool={true}
+        getsFullDiscount={false}
       />
     );
     assert.equal(wrapper.find('EligibilityConfirmDialog').length, 0);
@@ -96,6 +98,7 @@ describe('EligibilityChecklist', () => {
         schoolId="12345"
         schoolName="Code.org Junior Academy"
         hasConfirmedSchool={true}
+        getsFullDiscount={false}
       />
     );
     wrapper.find('Button').simulate('click');
@@ -109,6 +112,7 @@ describe('EligibilityChecklist', () => {
         {...defaultProps}
         unit6Intention="yes1718"
         initialDiscountCode="MYCODE"
+        getsFullDiscount={false}
       />
     );
     assert(wrapper.is('DiscountCodeInstructions'));
