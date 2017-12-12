@@ -11,11 +11,11 @@ Bli med og introduser en gruppe elever til deres første time i informatikk ved 
 
 ## 1. Sjå denne rettleiingsvideoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Velg en oppgave
+## 2. Vel ei oppgåve
 
 I samarbeid med våre partnere har vi laget flere [morsomme en-times oppgaver](<%= resolve_url('https://code. org/learn') %>) tilpasset ulike alderstrinn. [Prøv dei!](<%= resolve_url('/learn') %>)
 
-**Ingen av oppgavene i Kodetimen** krever lange forberedelser, og hver oppgave inneholder instruksjoner. Slik kan elevene arbeide i sitt eget tempo.
+**Alle kodetimeaktivitetar** krev minimal førebuingstid, og er sjølvforklarande slik at deltakarane kan arbeide i eige tempo og dugleiksnivå.
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
@@ -23,7 +23,7 @@ Trenger du en **timeplan** for gjennomføring av Kodetimen på SFO / AKS? Sjekk 
 
 ## 3. Marknadsfør Kodetimen din
 
-Skap blest om deres lokale Kodetime med [disse verktøyene](<%= resolve_url('/promote') %>), og få andre til å organisere egne Kodetimer.
+Sprei ordet om Kodetimen [med desse verktya](<%= resolve_url('/promote') %>) og oppmuntre andre til å arrangere eigne kodetimar.
 
 ## 4. Planlegg kva du har bruk for av utstyr - datamaskiner er valfrie
 
@@ -37,24 +37,24 @@ Tilby hovudtelefonar, eller spør deltakarane om å ta med sine eigne, om oppgå
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start Kodetimen med en inspirerende video
+## 5. Start Kodetimen din med ein inspirerande video
 
 Køyr i gong Kodetimen med å inspirere deltakarane og diskutere korleis informatikk påvirkar alle delar av livet vårt.
 
 **Vis ein inspirerande video:**
 
-- Den opprinnelige introduksjonsvideoen fra Code.org, hvor Bill Gates, Mark Zuckerberg og NBA-proffen Chris Bosh deltar, finnes i [1 minutts](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5-minutters](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9-minutters](https://www.youtube.com/watch?v=dU1xS07N-FA) versjoner.
-- Den internasjonale [Kodetimen-videoen](https://www.youtube.com/watch?v=KsOIlDT145A)
+- Den opprinnelege introduksjonsvideoen frå Code.org, der Bill Gates, Mark Zuckerberg og NBA-proffen Chris Bosh deltek, fins i [1 minutts](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5-minutts](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9-minuttsversjonar](https://www.youtube.com/watch?v=dU1xS07N-FA).
+- Den internasjonale [Kodetimevideoen](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama oppmoder alle elevar til å lære informatikk](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Andre inspirerende videoklipp kan du finne [her](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Andre inspirerande videoklipp kan du finne [her](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Det gjør ingenting om du og elevene dine ikke er kjent med programmering fra før. Her er noen ideer til hvordan du kan introdusere Kodetimen:**
+**Det er heilt greitt om du er fersk innan programmering. Her er nokre idear du kan bruke til å presentere Kodetimen:**
 
-- Forklar hvordan teknologi påvirker dagliglivet vårt, med eksempler både gutter og jenter kan kjenne seg igjen i: snakk om app'er og teknologi som brukes til å redde liv, hjelpe folk, knytte mennesker sammen, og lignende.
+- Forklar korleis teknologi påverkar liva våre med eksempel som både gutar og jenter kan kjenne seg igjen i (snakk om appar og teknologi som vert brukte til å redde liv, hjelpe folk, setje menneske i kontakt med kvarandre, eller anna).
 - Snakk om ting i kvardagen som har kode i seg.
 - Sjå tips for å få jenter interessert i informatikk [her](<%= resolve_url('https://code.org/girls') %>).
 
-**Trenger du mer veiledning?** Last ned denne [undervisningsmalen](/files/EducatorHourofCodeLessonPlanOutline.docx).
+**Treng du meir rettleiing?** Last ned denne [læringsmalen](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Start å kode!
 
@@ -95,7 +95,7 @@ Køyr i gong Kodetimen med å inspirere deltakarane og diskutere korleis informa
 
 [/col-33]
 
-- [Skriv ut diplomer](<%= resolve_url('https://code.org/certificates') %>) til elevene.
+- [Skriv ut diplomar](<%= resolve_url('https://code.org/certificates') %>) til elevane dine.
 - [Skriv ut "Eg gjennomførte Kodetimen!"](<%= resolve_url('/promote/resources#stickers') %>)-klistremerke til elevane dine.
 - [Bestill t-skjorter](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) til skulen din.
 - Del bilete og videoar frå Kodetimen på sosiale medier. Bruk #HourOfCode, #Kodetimen og @codeorg så vi og kan vise fram suksessen din!
@@ -108,7 +108,7 @@ Køyr i gong Kodetimen med å inspirere deltakarane og diskutere korleis informa
 
 <p style="clear:both">&nbsp;</p>
 
-## Flere Kodetimen-ressurser for lærere
+## Andre ressursar til Kodetimen for lærarar:
 
 - Se [anbefalte fremgangsmåter](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) fra tidligere arrangører av Kodetimen. 
 - Se på opptaket av vårt webinar [Lærerens Guide til Kodetimen](https://youtu.be/EJeMeSW2-Mw).
@@ -119,7 +119,7 @@ Køyr i gong Kodetimen med å inspirere deltakarane og diskutere korleis informa
 
 Kodetimen er berre første steget på ei reise for å lære seg meir om korleis teknologi fungerer og korleis du lagar dine eigne program. For å halde fram på denne reisa:
 
-- Oppmuntre elevene til å fortsette egen læring [på Internett](<%= resolve_url('https://code.org/learn/beyond') %>).
+- Oppmuntre elevane til å halde fram å [lære på nettet](<%= resolve_url('https://code.org/learn/beyond') %>).
 - [Delta på](<%= resolve_url('https://code.org/professional-development-workshops') %>) en 1-dags seminar der du vil få opplæring fra en erfaren tilretteleggar med kompetanse innan informatikk. (gjeld kun lærarar i USA)
 
 <%= view :signup_button %>

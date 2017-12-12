@@ -38,6 +38,16 @@ module Pd::Application
   class Facilitator1819Application < ApplicationBase
     include Facilitator1819ApplicationConstants
 
+    def send_decision_notification_email
+      # Accepted, declined, and waitlisted are the only valid "final" states;
+      # all other states shouldn't need emails, and we plan to send "Accepted"
+      # emails manually
+      return unless %w(declined waitlisted).include?(status)
+
+      Pd::Application::Facilitator1819ApplicationMailer.send(status, self).deliver_now
+      update!(decision_notification_email_sent_at: Time.zone.now)
+    end
+
     def set_type_and_year
       self.application_year = YEAR_18_19
       self.application_type = FACILITATOR_APPLICATION
@@ -367,6 +377,10 @@ module Pd::Application
       end
     end
 
+    def first_name
+      sanitize_form_data_hash[:first_name]
+    end
+
     def program
       sanitize_form_data_hash[:program]
     end
@@ -424,7 +438,7 @@ module Pd::Application
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
         columns = filtered_labels(course).values.map {|l| markdown.render(l)}
-        columns.push 'Status', 'Notes', 'Regional Partner'
+        columns.push 'Status', 'Locked', 'Notes', 'Regional Partner'
         csv << columns
       end
     end
@@ -434,7 +448,7 @@ module Pd::Application
       answers = full_answers
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
-        row.push status, notes, regional_partner_name
+        row.push status, locked?, notes, regional_partner_name
         csv << row
       end
     end

@@ -16,7 +16,6 @@ describe("Quick View", () => {
   const routeProps = {
     path:'csf_facilitators',
     applicationType:'CSF Facilitators',
-    regionalPartnerName: 'A Great Organization',
     viewType: 'facilitator'
   };
 
@@ -24,12 +23,14 @@ describe("Quick View", () => {
 
     let quickView = shallow(
       <QuickView
-        regionalPartnerName="All Regional Partner Applications"
+        regionalPartnerName="A Great Organization"
         route={routeProps}
       />,
       { context },
     );
 
+    expect(quickView.state('loading')).to.be.true;
+    expect(quickView.find('Row')).to.have.length(0);
     expect(quickView.find('Spinner')).to.have.length(1);
   });
 
@@ -54,14 +55,15 @@ describe("Quick View", () => {
 
     let quickView = shallow(
       <QuickView
-        regionalPartnerName="All Regional Partner Applications"
+        regionalPartnerName="A Great Organization"
         route={routeProps}
       />,
       { context },
     );
 
     server.respond();
-    expect(quickView.find('QuickViewTable')).to.have.length(1);
+    expect(quickView.state('loading')).to.be.false;
+    expect(quickView.find('Row')).to.have.length(1);
     expect(quickView.find('Spinner')).to.have.length(0);
   });
 });
