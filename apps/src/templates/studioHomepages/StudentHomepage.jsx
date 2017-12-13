@@ -44,7 +44,6 @@ export default class StudentHomepage extends Component {
           isRtl={false}
         />
         <ProjectWidgetWithData
-          isRtl={isRtl}
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
         />

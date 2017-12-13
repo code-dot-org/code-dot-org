@@ -151,7 +151,6 @@ export default class TeacherHomepage extends Component {
         />
         <TeacherResources isRtl={isRtl}/>
         <ProjectWidgetWithData
-          isRtl={isRtl}
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
         />

@@ -21,7 +21,7 @@ export class CourseBlocksCsf extends Component {
   }
 }
 
-export class CourseBlocksCsfEnglish extends Component {
+class CourseBlocksCsfEnglish extends Component {
   componentDidMount() {
     $('#coursea').appendTo(ReactDOM.findDOMNode(this.refs.coursea)).show();
     $('#courseb').appendTo(ReactDOM.findDOMNode(this.refs.courseb)).show();
@@ -39,7 +39,6 @@ export class CourseBlocksCsfEnglish extends Component {
         <ContentContainer
           heading={i18n.courseBlocksCsfExpressHeading()}
           description={i18n.courseBlocksCsfExpressDescription()}
-          isRtl={false}
         >
           <div className="row">
             <ProtectedStatefulDiv ref="pre_express"/>
@@ -50,7 +49,6 @@ export class CourseBlocksCsfEnglish extends Component {
         <ContentContainer
           heading={i18n.courseBlocksCsfYoungHeading()}
           description={i18n.courseBlocksCsfYoungDescription()}
-          isRtl={false}
         >
           <div className="row">
             <ProtectedStatefulDiv ref="coursea"/>
@@ -61,7 +59,6 @@ export class CourseBlocksCsfEnglish extends Component {
         <ContentContainer
           heading={i18n.courseBlocksCsfOlderHeading()}
           description={i18n.courseBlocksCsfOlderDescription()}
-          isRtl={false}
         >
           <div className="row">
             <ProtectedStatefulDiv ref="coursec"/>
@@ -76,7 +73,7 @@ export class CourseBlocksCsfEnglish extends Component {
   }
 }
 
-export class CourseBlocksCsfNonEnglish extends Component {
+class CourseBlocksCsfNonEnglish extends Component {
   componentDidMount() {
     $('#course1').appendTo(ReactDOM.findDOMNode(this.refs.course1)).show();
     $('#course2').appendTo(ReactDOM.findDOMNode(this.refs.course2)).show();
@@ -152,7 +149,6 @@ export class CourseBlocksHoc extends Component {
 export class CourseBlocksAll extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
-    isRtl: PropTypes.bool.isRequired,
   };
 
   componentDidMount() {
@@ -167,7 +163,6 @@ export class CourseBlocksAll extends Component {
           description={i18n.csfDescription()}
           link={'/home/#recent-courses'}
           linkText={i18n.viewMyRecentCourses()}
-          isRtl={this.props.isRtl}
         >
           <CourseBlocksCsf isEnglish={this.props.isEnglish}/>
         </ContentContainer>
@@ -175,7 +170,6 @@ export class CourseBlocksAll extends Component {
         <ContentContainer
           heading={i18n.teacherCourseHoc()}
           description={i18n.teacherCourseHocDescription()}
-          isRtl={this.props.isRtl}
           linkText={i18n.teacherCourseHocLinkText()}
           link={pegasus('/hourofcode/overview')}
         >
@@ -184,7 +178,6 @@ export class CourseBlocksAll extends Component {
 
         <CourseBlocksTools
           isEnglish={this.props.isEnglish}
-          isRtl={this.props.isRtl}
         />
       </div>
     );

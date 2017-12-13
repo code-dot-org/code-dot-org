@@ -46,7 +46,6 @@ export default class StudentSections extends Component {
     return (
       <ContentContainer
         heading={heading}
-        isRtl={isRtl}
         description={description}
       >
         <JoinSectionNotifications

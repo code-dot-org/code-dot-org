@@ -10,9 +10,7 @@ export default storybook => {
         name: 'course blocks - grade bands',
         description: `This is a set of course blocks listing teacher grade bands`,
         story: () => (
-            <CourseBlocksTeacherGradeBands
-              isRtl={false}
-            />
+          <CourseBlocksTeacherGradeBands/>
         )
       },
     ]);

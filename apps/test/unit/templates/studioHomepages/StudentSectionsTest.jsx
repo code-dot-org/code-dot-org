@@ -28,7 +28,6 @@ describe('StudentSections', () => {
       <ContentContainer
         heading="Classroom Sections"
         description={i18n.enrollmentDescription()}
-        isRtl={defaultProps.isRtl}
       >
         <JoinSectionNotifications/>
         <JoinSection
@@ -52,7 +51,6 @@ describe('StudentSections', () => {
       <ContentContainer
         heading="Classroom Sections"
         description={i18n.enrollmentDescription()}
-        isRtl={defaultProps.isRtl}
       >
         <JoinSectionNotifications/>
         <SectionsTable
