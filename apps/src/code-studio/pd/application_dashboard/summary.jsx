@@ -33,7 +33,7 @@ export class Summary extends React.Component {
   componentWillMount() {
     $.ajax({
       method: 'GET',
-      url: '/api/v1/pd/applications',
+      url: `/api/v1/pd/applications?regional_partner_filter=${UnmatchedFilter}`,
       dataType: 'json'
     })
     .done(data => {
