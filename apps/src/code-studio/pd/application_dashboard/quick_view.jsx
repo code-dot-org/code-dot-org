@@ -106,7 +106,7 @@ export class QuickView extends React.Component {
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
             regionalPartnerFilter={this.state.regionalPartnerFilter}
-            otherOptions={dropdownOptions}
+            additionalOptions={dropdownOptions}
           />
         }
         <Row>

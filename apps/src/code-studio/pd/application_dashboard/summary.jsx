@@ -70,7 +70,7 @@ export class Summary extends React.Component {
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
             regionalPartnerFilter={this.state.regionalPartnerFilter}
-            otherOptions={dropdownOptions}
+            additionalOptions={dropdownOptions}
           />
         }
         <h1>{this.state.regionalPartnerName}</h1>

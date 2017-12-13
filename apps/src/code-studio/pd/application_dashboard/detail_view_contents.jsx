@@ -41,10 +41,7 @@ export class DetailViewContents extends React.Component {
     applicationData: PropTypes.shape({
       regional_partner_name: PropTypes.string,
       locked: PropTypes.bool,
-      regional_partner_id: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number
-      ]),
+      regional_partner_id: PropTypes.number,
       notes: PropTypes.string,
       status: PropTypes.string.isRequired,
       school_name: PropTypes.string,
@@ -117,9 +114,9 @@ export class DetailViewContents extends React.Component {
   };
 
   handleRegionalPartnerChange = (selected) => {
-    let regionalPartnerFilter = selected ? selected.value : UnmatchedFilter;
-    let regionalPartnerName = selected ? selected.label : UnmatchedLabel;
-    this.setState({ regional_partner_name: regionalPartnerName, regional_partner_filter: regionalPartnerFilter });
+    const regional_partner_filter = selected ? selected.value : UnmatchedFilter;
+    const regional_partner_name = selected ? selected.label : UnmatchedLabel;
+    this.setState({ regional_partner_name, regional_partner_filter});
   };
 
   handleSaveClick = () => {
@@ -161,13 +158,13 @@ export class DetailViewContents extends React.Component {
     );
   };
 
-  regionalPartnerAnswer = () => {
+  renderRegionalPartnerAnswer = () => {
     if (this.state.editing && this.props.isWorkshopAdmin) {
       return (
         <RegionalPartnerDropdown
           onChange={this.handleRegionalPartnerChange}
           regionalPartnerFilter={this.state.regional_partner_filter}
-          otherOptions={[{label: UnmatchedLabel, value: UnmatchedFilter}]}
+          additionalOptions={[{label: UnmatchedLabel, value: UnmatchedFilter}]}
         />
       );
     }
@@ -260,7 +257,7 @@ export class DetailViewContents extends React.Component {
   };
 
   renderTopSection = () => {
-    let regionalPartnerAnswer = this.regionalPartnerAnswer();
+    const regionalPartnerAnswer = this.renderRegionalPartnerAnswer();
     return (
       <div id="TopSection">
         <DetailViewResponse
