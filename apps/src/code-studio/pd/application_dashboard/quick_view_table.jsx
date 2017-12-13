@@ -194,11 +194,11 @@ export class QuickViewTable extends React.Component {
 
   constructRows() {
     let rows = this.props.data;
-    if (this.props.regionalPartnerFilter) {
-      if (this.props.regionalPartnerFilter === UnmatchedFilter) {
-        rows = rows.filter(row => row.regional_partner_id === null);
-      } else if (this.props.regionalPartnerFilter !== AllPartnersFilter) {
+    if (this.props.regionalPartnerFilter !== AllPartnersFilter) {
+      if (this.props.regionalPartnerFilter !== UnmatchedFilter) {
         rows = rows.filter(row => row.regional_partner_id === this.props.regionalPartnerFilter);
+      } else {
+        rows = rows.filter(row => row.regional_partner_id === null);
       }
     }
     rows = this.props.statusFilter ? rows.filter(row => row.status === this.props.statusFilter) : rows;
