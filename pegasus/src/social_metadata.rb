@@ -5,6 +5,12 @@
 #   code.org/challenge
 
 def get_social_metadata_for_page(request)
+  videos = {
+    what_most_schools_dont_teach: {youtube_key: "nKIu9yen5nc", width: 640, height: 360},
+    computer_science_is_changing_everything: {youtube_key: "QvyTEx1wyOY", width: 640, height: 360},
+    hour_of_code_worldwide: {youtube_key: "KsOIlDT145A", width: 640, height: 360}
+  }
+
   # Important:
   #   - image should always come before video
   #   - description should always come before description_twitter
@@ -29,7 +35,7 @@ def get_social_metadata_for_page(request)
         title: I18n.t(:og_title),
         description: I18n.t(:og_description),
         image: {path: "/images/fit-1220/social-media/default-og-image.jpg", width: 1220, height: 640},
-        video: {youtube_key: "nKIu9yen5nc", width: 640, height: 360},
+        video: videos[:what_most_schools_dont_teach]
       }
     },
     "csedweek.org" => {
@@ -37,25 +43,25 @@ def get_social_metadata_for_page(request)
         title: I18n.t(:csedweek_og_title),
         description: I18n.t(:csedweek_og_description_soon),
         image: {path: "/images/cs-is-everything-thumbnail.png", width: 1200, height: 627},
-        video: {youtube_key: "QvyTEx1wyOY", width: 640, height: 360}
+        video: videos[:computer_science_is_changing_everything]
       },
       "week-before-hoc" => {
         title: I18n.t(:csedweek_og_title),
         description: I18n.t(:csedweek_og_description_soon),
         image: {path: "/images/cs-is-everything-thumbnail.png", width: 1200, height: 627},
-        video: {youtube_key: "QvyTEx1wyOY", width: 640, height: 360}
+        video: videos[:computer_science_is_changing_everything]
       },
       "actual-hoc" => {
         title: I18n.t(:og_title_here),
         description: I18n.t(:csedweek_og_description_here),
         image: {path: "/images/cs-is-everything-thumbnail.png", width: 1200, height: 627},
-        video: {youtube_key: "QvyTEx1wyOY", width: 640, height: 360}
+        video: videos[:computer_science_is_changing_everything]
       },
       "default" => {
         title: I18n.t(:csedweek_og_title),
         description: I18n.t(:csedweek_og_description),
         image: {path: "/images/cs-is-everything-thumbnail.png", width: 1200, height: 627},
-        video: {youtube_key: "QvyTEx1wyOY", width: 640, height: 360}
+        video: videos[:computer_science_is_changing_everything]
       }
     },
     "hourofcode.com" => {
@@ -64,28 +70,28 @@ def get_social_metadata_for_page(request)
         description: hoc_s(:meta_tag_og_description),
         description_twitter: hoc_s(:meta_tag_twitter_description),
         image: {path: "/images/social-media/hourofcode-2015-video-thumbnail.jpg", width: 1440, height: 900},
-        video: {youtube_key: "KsOIlDT145A", width: 640, height: 360}
+        video: videos[:hour_of_code_worldwide]
       },
       "week-before-hoc" => {
         title: I18n.t(:og_title_soon),
         description: hoc_s(:meta_tag_og_description),
         description_twitter: hoc_s(:meta_tag_twitter_description),
         image: {path: "/images/social-media/hourofcode-2015-video-thumbnail.jpg", width: 1440, height: 900},
-        video: {youtube_key: "KsOIlDT145A", width: 640, height: 360}
+        video: videos[:hour_of_code_worldwide]
       },
       "actual-hoc" => {
         title: I18n.t(:og_title_here),
         description: hoc_s(:meta_tag_og_description),
         description_twitter: hoc_s(:meta_tag_twitter_description),
         image: {path: "/images/social-media/hourofcode-2015-video-thumbnail.jpg", width: 1440, height: 900},
-        video: {youtube_key: "KsOIlDT145A", width: 640, height: 360}
+        video: videos[:hour_of_code_worldwide]
       },
       "default" => {
         title: hoc_s(:meta_tag_og_title),
         description: hoc_s(:meta_tag_og_description),
         description_twitter: hoc_s(:meta_tag_twitter_description),
         image: {path: "/images/social-media/hourofcode-2015-video-thumbnail.jpg", width: 1440, height: 900},
-        video: {youtube_key: "KsOIlDT145A", width: 640, height: 360}
+        video: videos[:hour_of_code_worldwide]
       }
     },
     "challenge" => {
