@@ -6,8 +6,9 @@ module OPS
 end
 
 Dashboard::Application.routes.draw do
-
-  resources :featured_projects, only: [:create], defaults: {format: 'json'}
+  resources :featured_projects do
+    delete '/:project_id', action: 'destroy_featured_project'
+  end
 
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 
