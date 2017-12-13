@@ -26,9 +26,14 @@
   twentyhours_heading: "Wypróbuj nasz kurs Wstęp do informatyki"
   twentyhours_text: "Czy ukończyłeś pierwszą Godzinę Kodowania? Poznaj więcej podstawowych pojęć informatycznych i dotyczących programowania w tym kursie, który następuje."
   og_title: 'Code.org: Każdy może się uczyć'
+  og_title_soon: "Zbliża się Godzina Kodowania"
+  og_title_here: "The Hour of Code is here!"
   og_description: "Każdy uczeń w każdej szkole zasługuje, by mieć szansę uczyć się informatyki."
+  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Zbliża się Godzina Kodowania"
   csedweek_og_description: "4-10 grudnia 2017. Informatyka jest podstawą w nauce każdego ucznia."
+  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Dołącz do <a href=\"http://hourofcode.com\"> Godziny Kodowania (Hour of Code)</a> <br/> 8-14 grudnia 2014 r. <br/>"
   hoc2014_students: "Uczniowie"
   hoc2014_try: "Wypróbuj"
@@ -293,8 +298,8 @@
   homepage_hero_text_stat_loc: "2,5 mln dziewcząt uczy się w Code Studio"
   homepage_hero_text_stat_students: "#student_count kont uczniów w Studio Kodowania"
   homepage_hero_text_stat_served: 'Godzina Kodowania: #served uczestników'
-  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
-  homepage_hero_hoc_is_here: "The Hour of Code is here"
+  homepage_hero_hoc_is_coming: "Zbliża się Godzina Kodowania"
+  homepage_hero_hoc_is_here: "Zbliża się Godzina Kodowania"
   homepage_slot_text_hoc: "Godzina Kodowania"
   homepage_slot_text_frozen: "Kraina Lodu z Anną i Elsą"
   homepage_slot_text_teacher: "Panel nauczyciela"
@@ -314,7 +319,7 @@
   homepage_action_text_girlvideo: "Zainspiruj dziewczynę"
   homepage_action_text_learn: "Rozpocznij naukę"
   homepage_action_text_signpetition: "Podpisz petycję"
-  homepage_action_text_wincelebritychat: "Win a celebrity chat"
+  homepage_action_text_wincelebritychat: "Wygraj czat z celebrytą"
   homepage_signpetition_dropdown: "Zgadzam się &#x25BE;"
   homepage_diversity_pledge: "Weź zastaw różnorodności"
   homepage_banner_text_prizes: 'Godzina Kodowania nadchodzi ponownie, 7-13 grudnia. '
@@ -421,12 +426,12 @@
   mc_gradelevel: "Wiek 6 +"
   mc_platformtext: "Nowoczesne przeglądarki, smartfony, tablety"
   mc_specs: "Wiele języków | Nowoczesne przeglądarki i tablety | W wieku 6 - 106"
-  minecraft_agent: 'Minecraft: Hero’s Journey'
+  minecraft_agent: 'Minecraft: Podróż Bohatera'
   minecraft_designer: "Projektant Minecrafta"
   minecraft_adventurer: "Poszukiwacz przygód z Minecraftem"
   minecraft_tutorials: "Samouczki Minecrafta w Godzinie Kodowania"
   minecraft_specs: "Wiele języków | Nowoczesne przeglądarki i tablety | Klasy 2 +"
-  minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  minecraft_agent_description: "Minecraft powraca na Godzinę Kodowania z najnowszą serią zadań! Koduj podróżując po świecie Minecraftu."
   minecraft_agent_button: "Start"
   minecraft_designer_description: "Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry Minecraft."
   minecraft_designer_button: "Start"
@@ -435,19 +440,19 @@
   minecraft_no_internet: "Nie masz internetu?"
   minecraft_download_adventurer: "Pobierz wersję offline Poszukiwacza Przygód z Minecraftem."
   minecraft_subtitle: "Godzina Kodowania z Minecraft"
-  minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
-  minecraft_host_event: "Host a Minecraft Hour of Code Event"
-  minecraft_teach_resources: "Teacher resources and lesson plan."
-  minecraft_leader_guide: "Download resources to help you plan and lead an event."
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
-  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
-  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign up today</a>."
-  minecraft_future: "Help all youth become future ready"
-  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access the resources</a> they found most valuable."
-  minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
-  minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
+  minecraft_store_camps: "Darmowe Obozy Godziny Kodowania z Minecraftem w Microsoft Store"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Zarejestruj się</a>na darmowe warsztaty Godziny Kodowania z Minecraftem w sklepach Microsoft w Australii, Kanadzie, Puerto Rico lub USA. Przekonaj się, że kodowanie jest dla każdego i łączy w sobie kreatywność, rozwiązywanie problemów i tonę zabawy."
+  minecraft_host_event: "Zorganizuj wydarzenie Godziny Kodowania z Minecraft"
+  minecraft_teach_resources: "Zasoby i plan lekcji dla nauczyciela."
+  minecraft_leader_guide: "Pobierz zasoby, które pomogą Ci zaplanować i poprowadzić wydarzenie."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Pobierz</a> teraz szybki przewodnik moderatora oraz prezentacje PowerPoint dla młodszych i starszych uczniów."
+  minecraft_join_online_training: "Gotowy na poprowadzenie swojej własnej Godziny Kodowania z Minecraftem, ale nie jesteś pewien, gdzie zacząć? Sprawdź nasz <a href='%{minecraft_webinar_url}'>webminar na żądanie</a>. Poznasz najlepsze praktyki, otrzymasz dostęp do materiałów moderatora oraz przejdziesz przez nowy przewodnik przygotowany przez zespół Minecraftu. Już teraz zacznij myśleć, czego potrzebujesz, by dać młodym ludziom Godzinę Kodowania w czasie Tygodnia Edukacji Informatycznej (4-10 grudnia) i później."
+  minecraft_continue_learning: 'Informatyka dla Każdego: Poza Godzinę Kodowania w Microsoft Store'
+  minecraft_continue_learning_description: "Nie jest wymagane żadne doświadczenie z informatyką! Pomóż nam zapewnić młodzieży możliwość zdobycia wartościowych umiejętności poprzez edukację informatyczną. Dołącz do nas w Microsoft Store, aby uczestniczyć w darmowej serii trzech 1-godzinnych warsztatów, gdzie doświadczysz kodowania w przyjemnym i bezstresowym otoczeniu, zapoznasz się z kluczowymi pojęciami informatyki i przygotujesz się do poprowadzenia Godziny Kodowania w twojej klasie lub społeczności. Dasz radę! <a href='%{minecraft_continue_learning_url}'>Zapisz się dzisiaj</a>."
+  minecraft_future: "Pomóż wszystkim młodym ludziom przygotować się na przyszłość"
+  minecraft_future_description: "Dowiedz się, jak inne szkoły i organizacje rozwijają umiejętności informatyczne w swoich społecznościach, od podstawowych umiejętności do edukacji informatycznej. Rozważ różne modele, otrzymaj wskazówki oraz <a href='%{minecraft_future_url}'>dostęp do zasobów</a>, które one uznały za wartościowe."
+  minecraft_og_designer: "Minecraft powraca z nową serią zadań na Godzinę Kodowania. Zaprogramuj zwierzęta oraz inne stworzenia w swojej własnej wersji Minecraftu."
+  minecraft_og_agent: "Minecraft powraca na Godzinę Kodowania, a ty jesteś bohaterem! Napisz kod, by podróżować poprzez biomy Minecrafu."
   sports_page_title: "Sporty Godziny Kodowania"
   sports_og_title: "Przekonaj się. Każdy może się nauczyć."
   sports_og_description: "Mistrzowie i złoci medaliści zachęcaj Was do wzięcia udziały w Godzinie kodowania (the Hour of Code). Zakoduj własną grę sportową."
@@ -961,6 +966,8 @@
   csp-ap_name: Zadania Wydajnościowe AP
   csppostap_name: 'Post-AP: Bazy Danych w Aplikacjach'
   cspassessment_name: "Pełen test - 50 pytań"
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Test Część 1 - 25 pytań
   cspexam2-AKwgAh1ac5_name: Test Część 2 - 25 pytań
   cspunit3_gradelevel: "Klasy 9-12"
@@ -1475,3 +1482,5 @@
   syncing_students: "Synchronizowanie twoich studentów"
   syncing_students_instructions: 'Jeśli lista uczniów w twojej sekcji Code.org kiedykolwiek się zdezaktualizuje w stosunku do Google Classroom, kliknij na przycisk &ldquor;Zsynchronizuj uczniów z Google Classroom&rdquo; na karcie &ldquor;Zarządzaj studentami&rdquor;.'
   google_sign_in_instruct: 'Z tamtego miejsca powinni wybrać opcję &ldquor;Zaloguj się używając konta Google&rdquo;:'
+  hero_name: 'Minecraft: Podróż Bohatera'
+  applab-intro_name: App Lab Intro

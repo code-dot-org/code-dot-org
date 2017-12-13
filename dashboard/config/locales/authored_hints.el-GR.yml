@@ -7817,6 +7817,8 @@
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to
           see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals2_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
           won't.  If you want your code to run in both cases, make sure to use an
           `if` statement.
@@ -7824,6 +7826,8 @@
           ahead` to move through this maze.
         courseD_bee_conditionals2_c: You don't have to check for honeycombs, there
           will only be flowers or blank spaces under the clouds.
+        courseD_bee_conditionals2_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals2_test_authored_hint:
         courseD_bee_conditionals2_aa: Need help getting started?  Here is a little
           hint video.
@@ -7837,6 +7841,8 @@
         courseD_bee_conditionals2_d: Need help finishing things up?  Watch this hint
           video.
       courseD_bee_conditionals3_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each
           space to see if it has either a flower or nothing.
         courseD_bee_conditionals3_b: You can use a loop to keep the bee moving forward.
@@ -7844,7 +7850,11 @@
         courseD_bee_conditionals3_c: Don't be afraid to make a mistake! Try adding
           blocks and running the code to see what will happen, even if you don't think
           you've solved the puzzle yet.
+        courseD_bee_conditionals3_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals4_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals4_a: You can still treat every space as if there is
           a cloud over it, even though you can see the whole path.
         courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check
@@ -7852,39 +7862,55 @@
         courseD_bee_conditionals4_c: Using the block `while there is a path ahead`,
           you should `move forward` and check for a flower. `if there is a flower`
           what should the bee do?
+        courseD_bee_conditionals4_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals5_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals5_a: Think of every side of the rectangular path as
           a path by itself. Set up a nested loop with a `repeat` block on the outside
           and a `while there is a path ahead` on the inside. How many paths does the
           bee need to buzz down if the bee needs to buzz every side with a flower?
-        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block,
-          you will need to move forward and check for a flower. How do you check if
-          there is a flower? What do you do if there is a flower?
         courseD_bee_conditionals5_c: There are 3 sides of the rectangle with flowers,
           so the code needs to `repeat 3 times`. In every repeat, the bee will need
           to continue along the path, `while there is a path ahead`. To continue down
           the path, the bee will need to `move forward`. While on the path, the bee
           needs to check for a flower. `if there is a flower`, the bee should `get
           nectar`.
+        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block,
+          you will need to move forward and check for a flower. How do you check if
+          there is a flower? What do you do if there is a flower?
+        courseD_bee_conditionals5_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals6_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for
           honeycomb beneath each cloud.
         courseD_bee_conditionals6_b: In this case, you do not need to check for nectar
           under the clouds.
         courseD_bee_conditionals6_c: Is there a loop you can use to make your code
           simpler?
+        courseD_bee_conditionals6_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals7_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
           the challenge."
         courseD_bee_conditionals7_b: If there is not a flower under the cloud, there
           must be a honeycomb, so you don't need to think about the case of an empty
           space.
+        courseD_bee_conditionals7_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals7_predict2_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
           the challenge."
       courseD_bee_conditionals8_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals8_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`)
           to solve the challenge."
@@ -7897,6 +7923,8 @@
         courseD_bee_conditionals8_d: Even though there is a cloud right in front of
           you, you don't have to visit it first. Try starting with the one in the
           bottom right of the square.
+        courseD_bee_conditionals8_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals9_authored_hint: []
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: |-

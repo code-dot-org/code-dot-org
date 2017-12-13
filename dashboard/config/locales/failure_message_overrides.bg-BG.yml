@@ -36,23 +36,18 @@
       Course 4 Artist Vars 10_failure_message_override: |-
         Make sure you use the sides
         variable!
-      Course 4 Playlab For Loops 4b_failure_message_override: |-
-        Remember, both characters
-        should get to their flags in the same number of moves!
-      Course 4 Playlab For Loops 5b_failure_message_override: |-
-        Remember, both characters
-        need to stop in the same place.
-      Eval Strings Images .2_failure_message_override: |-
-        Make sure you append the
-        string "Universe" to make the code create "Hello, Universe"
+      Course 4 Playlab For Loops 4b_failure_message_override: "Не забравяйте, че и
+        двамата героя трябва да стигнат до техните флагове със същия брой ходове!"
+      Course 4 Playlab For Loops 5b_failure_message_override: "Не забравяйте, че героите
+        трябва да спрат на същото място."
+      Eval Strings Images .2_failure_message_override: Уверете се, можете да добавите
+        в низа "Вселена", за да направите кода за създаване на "Здравей, Вселена"
       Kiki_StarWars_Test_5_failure_message_override: "Край на играта!"
       Kiki_StarWars_Test_5_Example_failure_message_override: "Край на играта!"
-      MC HOC 2016 Level 2-2_failure_message_override: |-
-        Use `move forward` and `turn`
-        commands to get your chicken moving.
-      MC HOC 2016 Level 3_failure_message_override: |-
-        Use a `forever do` block and
-        `move forward` and `turn` commands to keep your chicken wandering.
+      MC HOC 2016 Level 2-2_failure_message_override: Използвайте "върви напред" и
+        команди за завъртане, за да преместите пилето.
+      MC HOC 2016 Level 3_failure_message_override: Използвайте "завинаги да" блок
+        и "върви напред" и завъртане команди, за да накарате вашите пилета да скитат.
       MC HOC 2016 Level 4_failure_message_override: |-
         If the chickens are all moving
         in the same direction, use `turn random` to make the chickens turn randomly

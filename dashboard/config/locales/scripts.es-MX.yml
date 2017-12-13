@@ -2355,6 +2355,12 @@
               name: CSP Student Post-Course Survey
             Creating Functions with Parameters:
               name: Creating Functions with Parameters
+            CSP End-of-Semester Mid-course survey:
+              name: CSP End-of-Semester Mid-course survey
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions
@@ -5545,6 +5551,8 @@
               name: Designing Screens with Code
             Arrays:
               name: Arrays
+            Making Music:
+              name: Making Music
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -7893,6 +7901,10 @@
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey:
+              name: Please complete the CSP Mid-course survey
           title: ''
           description_audience: ''
           description_short: Programación
@@ -8486,6 +8498,16 @@
               name: 'Technology Foundations: What is a Computer?'
             'Data Science: Problem Solving with Big Data':
               name: 'Data Science: Problem Solving with Big Data'
+            Personal Innovations:
+              name: Personal Innovations
+            What is a Computer?:
+              name: What is a Computer?
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Programming - Hour of Code:
+              name: Programming - Hour of Code
+            Simple Encryption:
+              name: Encripción simple
           title: PwC Access Your Potential
           description_audience: ''
           description_short: ''
@@ -8568,6 +8590,8 @@
               name: Explore PT - Complete the Task
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Setup: Digital Portfolio and Other Tools'
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and

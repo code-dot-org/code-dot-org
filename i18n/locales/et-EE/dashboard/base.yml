@@ -16,7 +16,7 @@ et:
         name: 'Kuvatav nimi'
         name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'E-post'
-        parent_email: 'Lapsevanem/hooldaja e-posti aadress'
+        parent_email: 'Lapsevanema/hooldaja e-posti aadress'
         personal_email: "Isiklik e-posti aadress <a href=\"%{url}\"> (vajuta siia, kui teil ei ole e-posti aadressi)</a>"
         username: 'Kasutajanimi'
         password: 'Salasõna'
@@ -128,26 +128,26 @@ et:
     school_country: 'School Country'
     select_school_type: 'School Type'
     charter: 'Charter'
-    private: 'Private'
-    public: 'Public'
-    homeschool: 'Homeschool'
+    private: 'Privaatne'
+    public: 'Avalik'
+    homeschool: 'Kodukool'
     after_school: 'After School'
     other: 'Muu'
     state: 'State'
     district: 'District'
     other_district_not_listed: 'Other district not listed above'
     district_name: 'District Name'
-    school: 'School'
+    school: 'Kool'
     other_school_not_listed: 'Other school not listed above'
-    school_name: 'School Name'
-    school_zip: 'School Zip Code'
-    school_address: 'School Address'
-    school_organization_name: 'School/Organization Name'
-    school_organization_zip: 'School/Organization Zip Code'
+    school_name: 'Kooli nimi'
+    school_zip: 'Kooli postiindeks'
+    school_address: 'Kooli aadress'
+    school_organization_name: 'Kooli/organisatsiooni nimi'
+    school_organization_zip: 'Kooli/organisatsiooni postiindeks'
   signin_form:
     title: 'Sul juba on konto? Logi sisse'
     login: 'E-post'
-    login_username: 'Email or Username'
+    login_username: 'E-post või kasutajanimi'
     password: 'Salasõna'
     remember: 'Jäta mind meelde'
     submit: 'Logi sisse'
@@ -184,7 +184,7 @@ et:
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
   teacher_mailer:
-    new_teacher_subject: 'Welcome to Code.org!'
+    new_teacher_subject: 'Tere tulemast Code.org!'
   section:
     your_section:
       one: 'Your section:'
@@ -195,7 +195,7 @@ et:
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
-      word: 'Secret Words'
+      word: 'Salajane sõna'
       email: 'E-post'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
@@ -249,22 +249,22 @@ et:
         applab: 'Loo App Lab rakendus'
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
-      home: "Home"
-      my_dashboard: "My Dashboard"
+      home: "Kodu"
+      my_dashboard: "Minu töölaud"
       courses: "Kursused"
-      course_catalog: "Course Catalog"
+      course_catalog: "Kursuste kataloog"
       project_gallery: "Projektid"
       sections: "Sections"
-      help_support: "Help and support"
+      help_support: "Abi & Klienditugi"
       report_bug: "Report bug"
       teacher_community: "Teacher community"
       professional_learning: "Professional Learning"
-      documentation: "Documentation"
+      documentation: "Dokumentatsioon"
       tutorials: "Tutorials"
       educate_overview: "Educator Overview"
-      educate_elementary: "Elementary School"
-      educate_middle: "Middle School"
-      educate_high: "High School"
+      educate_elementary: "Algkool"
+      educate_middle: "Põhikool"
+      educate_high: "Gümnaasium"
       educate_hoc: "KoodiTund"
       educate_partner: "Partner with Us"
       educate_beyond: "Beyond Code.org"
@@ -284,8 +284,8 @@ et:
       learn: "Learn"
       stats: "Stats"
       help_us: "Help Us"
-      teach: "Teach"
-      about: "About"
+      teach: "Õpeta"
+      about: "Info"
     user:
       classroom: 'Õpetaja kodulehekülg'
       district_dashboard: 'Piirkondlik juhtpaneel'
@@ -351,10 +351,10 @@ et:
     deleted_user: 'deleted user'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
     no_password_because_sponsored: 'See your teacher to manage your password.'
-    create_personal_login: 'Create a personal login'
+    create_personal_login: 'Loo isiklik login'
     create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
-    create_personal_login_under_13_username: "Username (don't use your real name!)"
-    create_personal_login_under_13_parent_email: 'Parent/guardian email address'
+    create_personal_login_under_13_username: "Kasutajanimi (ärge kasutage oma pärisnime!)"
+    create_personal_login_under_13_parent_email: 'Lapsevanem/hooldaja e-posti aadress'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
@@ -365,7 +365,7 @@ et:
     completed: 'Tehtud'
     tried: 'Proovisin'
   home:
-    title: "Kood stuudio"
+    title: "Code Studio"
     description: 'Code Stuudio on koduks online kursustele, mis on loodud Code.org poolt.'
     lines_of_code: "%{lines_count} RIDA KOODI ON ÕPILASTE POOLT KIRJUTATUD"
     lines_of_code_linebreak: "%{lines_count} koodiread <br/> kirjutatud %{students_count} miljonite õpilaste poolt"
@@ -417,7 +417,7 @@ et:
     announcement_petition: "Õpetajana oled sa teejuht liikumises, mis annab igale õpilasele igas koolis võimaluse arvutiteadust õppida. Nüüd on aeg, et ka sinu esindajad sinu arvamust kuuleksid. Sel nädalal kirjutasid haridusjuhid, 28 kuberneri, ameerika suurimate ettevõtete juhid ühise avatud kirja, kus palusid, et U.S.A. kongress rahastaks K-12 hariduse arvutiteaduse programmi."
     announcement_petition_button: "Lisa oma nimi"
     announcement_go_beyond_button: "Go beyond"
-    announcement_apply_now: "Apply now"
+    announcement_apply_now: "Taotle nüüd"
     announcement_all: "Hoia end kursis uute funktsioonide ja uudistega meie õpetajate blogis. <a href='%{teacher_blog_url}' target='_blank'>Vaata vanemaid teadaandeid.</a>"
     announcement_hoc_launch: "Tuhanded õpetajad rohkem kui 180 riigis hakkavad 5.-11. detsembril toimuva KoodiTunni jooksul arvutiteadusi õpetama. Me loodame, et aitate meil jõuda rohkemate õpilasteni kui kunagi varem. <a href='%{signup_url}' target='_blank'> Registreeri oma KoodiTund</a> ja andke ja teistele õpetajatele teada, et igaühest võib saada arvutiteaduste õpetaja."
     announcement_mc_launch: "Ühel meie kõige populaarsemal juhendil on nüüd järg! Uus KoodiTunni Minecraft Designer laseb õpilastel ise luua Minecrafti maailma reegleid. Nad saavad luua täiesti unikaalse Minecrafti kogemuse ning jagada seda sõpradega, kes saavad seda oma telefonides mängida. Kasuta seda oma klassi KoodiTunnis."
@@ -491,8 +491,8 @@ et:
     notes_coming_soon: 'Märkmeid selle video peatsest saabumisest.'
     autoplay_option: 'Käivita videod automaatselt'
     download: 'Lae video alla'
-    show_notes: 'Show Notes'
-    show_video: 'Show Video'
+    show_notes: 'Näita märkmeid'
+    show_video: 'Näita videot'
   compatibility:
     upgrade:
       unsupported_message: "Sinu veebilehitsejat ei toetata. Palun asenda oma veebilehitseja<a href='%{supported_browsers_url}', target='_blank'>ühe veebilehitsejaga, mida me toetame</a>. Võite proovida veebilehte vaadata, kuid selle toimimine võib olla häiritud."
@@ -561,6 +561,9 @@ et:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Vanus 13+"
       cta: "Õpi kuidas"
+    hoc-encryption:
+      title: "Simple Encryption"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -579,6 +582,9 @@ et:
     minecraft2016:
       title: "Minecraft"
       body: "Programmeeri loomi ja teisi Minecrafti tegelasi omaenda Minecrafti versioonis."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond läbi Minecrafti koos koodiga."
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
@@ -594,9 +600,9 @@ et:
       title: "Tingimuslaused"
       body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
     widgets:
-      title: "Widgets"
+      title: "Vidinad"
       body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
-      audience: "Ages 14+"
+      audience: "Vanuses 14 +"
       cta: "Õpi kuidas"
   gallery:
     students_drew_these_with_code: "Õpilased joonistasid need koodi kasutades!"
@@ -619,8 +625,8 @@ et:
     support: "Abi saamine"
     support_url: "//support.code.org"
     help_resources: "Abiinfo ja ressursid"
-    help_support: "Help and support"
-    documentation: "Documentation"
+    help_support: "Abi & Klienditugi"
+    documentation: "Dokumentatsioon"
     tutorials: "Tutorials"
   multi:
     wrong_title: "Vale vastus"
@@ -747,11 +753,11 @@ et:
     rename: "Nimeta ümber"
     save: "Salvesta"
     delete: "Kustuta"
-    import: "Import"
-    share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
-    share_link_import_error_header: "Something went wrong."
-    share_link_import_error_body: "There was a problem importing that share link. Please try again."
+    import: "Impordi"
+    share_link_import_bad_link_header: "Jagamise linki ei tuvastatud"
+    share_link_import_bad_link_body: 'Me ei saanud importida jagamise linki. Veenduge, et kasutate Minecrafti linki: Agent puzzle ja et olete kopeerinud terve lingi.'
+    share_link_import_error_header: "Midagi läks valesti."
+    share_link_import_error_body: "Ilmnes probleem lingi importimisel. Palun proovige uuesti."
     exit: "Tagasi kursuse juurde"
     my_projects: "Minu projektid"
     project_gallery: "Projektid"
@@ -841,7 +847,7 @@ et:
     csf_e_1: 'Ramp Up to Course E (Optional)'
     csf_e_2: 'Course E Content'
     csf_f_1: 'Ramp Up to Course F (Optional)'
-    csf_f_2: 'Course F Content'
+    csf_f_2: 'Kursuse F sisu'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'
@@ -862,7 +868,7 @@ et:
     csp4_1: 'Chapter 1: The World of Big Data and Encryption'
     csp5_1: 'Chapter 1: Event-Driven Programming'
     csp5_2: 'Chapter 2: Programming with Data Structures'
-    cspSurvey: 'Survey'
+    cspSurvey: 'Uuring'
     cspAssessment: 'Chapter Assessment'
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
@@ -940,7 +946,7 @@ et:
   hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
   return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Mine teema ülevaatesse'
-  view_all_units: 'View all units'
+  view_all_units: 'Vaata kõik'
   pd:
     survey:
       number_teachers: 'Number of attending teachers'

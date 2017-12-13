@@ -366,7 +366,7 @@
         'C3_bee_conditionals': 'Bie Betingelser'
         'C3_maze_conditionals': 'Labyrint Betingelser'
         'C3_artist_nested_loops': 'Løkker i løkker'
-        'C3_farmer_while': 'Mens Løkker'
+        'C3_farmer_while': 'Gjenta-løkker'
         'C3_bee_nested_loops': 'Løkker i løkker'
         'C3_bee_debugging': 'Bie feilsøking'
         'C3_bounce': 'sprett'

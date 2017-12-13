@@ -106,7 +106,7 @@ sv:
       2-3 Bee Debugging 7_instruction: "Dessa block irriterar mig. Åtgärda felen för att samla all nektar och göra all honung."
       2-3 Bee Debugging 8_instruction: "Dessa block irriterar mig. Åtgärda felen för att samla all nektar och göra all honung."
       2-3 Bee Debugging 9_instruction: "Dessa block irriterar mig. Åtgärda felen för att samla all nektar och göra all honung."
-      2-3 Bee Debugging Assessment 1_instruction: 'Bedömning:Dessa block irriterar mig. Åtgärda felen för att samla all nektar och göra all honung.'
+      2-3 Bee Debugging Assessment 1_instruction: Bedömning:Dessa block irriterar mig. Åtgärda felen för att samla all nektar och göra all honung.
       2-3 Bee Functions 1_instruction: "Funktioner är block av kod som utför en uppgift. Använd funktionen \"få 2 nektar\" för att samla nektar från varje blomma."
       2-3 Bee Functions 10_instruction: "Lila blommor kan ha antingen 1 eller 0 nektar.  Skapa en funktion som samlar nektar enbart från lila blommor som har nektar."
       2-3 Bee Functions 2_instruction: "Funktioner är block av kod som utför en uppgift. Använd funktionen \"få 5\" för att få 5 nektar i taget. Se till att använda en loop för att få ett perfekt antal block också."
