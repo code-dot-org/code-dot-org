@@ -4,7 +4,6 @@ import * as api from './api';
 import * as dontMarshalApi from './dontMarshalApi';
 import consoleApi from '../consoleApi';
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
-import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
 import * as makerApi from '@cdo/apps/lib/kits/maker/api';
 import color from '../util/color';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
@@ -35,7 +34,6 @@ function applabExecuteCmd(...args) {
   return Applab.executeCmd.call(Applab, ...args);
 }
 audioApi.injectExecuteCmd(applabExecuteCmd);
-timeoutApi.injectExecuteCmd(applabExecuteCmd);
 makerApi.injectExecuteCmd(applabExecuteCmd);
 
 /**
@@ -160,12 +158,12 @@ export var blocks = [
   {func: 'hide', parent: api, category: 'Turtle' },
   {func: 'speed', parent: api, category: 'Turtle', paletteParams: ['value'], params: ["50"], dropdown: { 0: ["25", "50", "75", "100"] } },
 
-  {...timeoutApi.dropletConfig.setTimeout},
-  {...timeoutApi.dropletConfig.clearTimeout},
-  {...timeoutApi.dropletConfig.setInterval},
-  {...timeoutApi.dropletConfig.clearInterval},
-  {...timeoutApi.dropletConfig.timedLoop},
-  {...timeoutApi.dropletConfig.stopTimedLoop},
+  {func: 'setTimeout', parent: api, category: 'Control', type: 'either', paletteParams: ['callback','ms'], params: ["function() {\n  \n}", "1000"], allowFunctionDrop: { 0: true } },
+  {func: 'clearTimeout', parent: api, category: 'Control', paletteParams: ['__'], params: ["__"] },
+  {func: 'setInterval', parent: api, category: 'Control', type: 'either', paletteParams: ['callback','ms'], params: ["function() {\n  \n}", "1000"], allowFunctionDrop: { 0: true } },
+  {func: 'clearInterval', parent: api, category: 'Control', paletteParams: ['__'], params: ["__"] },
+  {func: 'timedLoop', parent: api, category: 'Control', paletteParams: ['ms', 'callback'], params: ['1000', 'function() {\n  \n}'], allowFunctionDrop: { 1: true } },
+  {func: 'stopTimedLoop', parent: api, category: 'Control', paramButtons: { minArgs: 0, maxArgs: 1 }},
 
   {func: 'console.log', parent: consoleApi, category: 'Variables', paletteParams: ['message'], params: ['"message"'] },
   {func: 'declareAssign_str_hello_world', block: 'var str = "Hello World";', category: 'Variables', noAutocomplete: true },
