@@ -68,8 +68,10 @@ namespace :test do
   end
 
   task :mark_dtt_green do
+    test_branch_sha = GitHub.sha('test')
+    ChatClient.log "Marking commit #{test_branch_sha} green"
     DevelopersTopic.set_dtt 'yes'
-    InfraTestTopic.set_green_commit GitHub.sha('test')
+    InfraTestTopic.set_green_commit test_branch_sha
   end
 
   task ui_live: [
