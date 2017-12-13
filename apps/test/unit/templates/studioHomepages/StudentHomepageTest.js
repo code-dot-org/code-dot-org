@@ -2,12 +2,16 @@ import React from 'react';
 import { assert, expect } from 'chai';
 import { shallow } from 'enzyme';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
+import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
+import SectionsTable from '@cdo/apps/templates/studioHomepages/SectionsTable';
+import StudentSections from '@cdo/apps/templates/studioHomepages/StudentSections';
 import { courses, topCourse, joinedSections } from './homepagesTestData';
 import { combineReducers, createStore } from 'redux';
 import responsiveRedux, { setResponsiveSize, ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 describe('StudentHomepage', () => {
-  const store = createStore(combineReducers({responsive: responsiveRedux}));
+  const store = createStore(combineReducers({responsive: responsiveRedux, isRtl}));
   store.dispatch(setResponsiveSize(ResponsiveSize.lg));
 
   it('shows a non-extended Header Banner that says My Dashboard', () => {
@@ -21,7 +25,7 @@ describe('StudentHomepage', () => {
         canLeave={false}
       />
     );
-    const headerBanner = wrapper.find('Connect(HeaderBanner)');
+    const headerBanner = wrapper.find(HeaderBanner);
     assert.deepEqual(headerBanner.props(), {
       headingText: "My Dashboard",
       short: true
@@ -87,7 +91,7 @@ describe('StudentHomepage', () => {
         canLeave={false}
       />
     );
-    const studentSections = wrapper.find('StudentSections');
+    const studentSections = wrapper.find(StudentSections);
     assert.deepEqual(studentSections.props(), {
       initialSections: joinedSections,
       isRtl: false,
@@ -105,7 +109,7 @@ describe('StudentHomepage', () => {
           isRtl={false}
           canLeave={false}
         />
-    ).find('StudentSections').dive({context: {store}}).find('SectionsTable').dive();
+    ).find(StudentSections).dive({context: {store}}).find(SectionsTable).dive({context: {store}}).dive();
     expect(wrapper).to.containMatchingElement(
         <td>ClassOneCode</td>
     );

@@ -55,7 +55,6 @@ describe('StudentSections', () => {
         <JoinSectionNotifications/>
         <SectionsTable
           sections={sections}
-          isRtl={defaultProps.isRtl}
           isTeacher={false}
           canLeave={defaultProps.canLeave}
           updateSections={instance.updateSections}
