@@ -37,7 +37,8 @@ export class QuickViewTable extends React.Component {
     regionalPartnerFilter: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number
-    ])
+    ]),
+    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
   };
 
   static contextTypes = {
@@ -104,6 +105,25 @@ export class QuickViewTable extends React.Component {
       });
     }
 
+    if (this.props.viewType === 'teacher') {
+      columns.push({
+        property: 'principal_approval',
+        header: {
+          label: 'Principal Approval'
+        }
+      }, {
+        property: 'meets_criteria',
+        header: {
+          label: 'Meets Criteria'
+        }
+      }, {
+        property: 'total_score',
+        header: {
+          label: 'Total Score'
+        }
+      });
+    }
+
     columns.push({
       property: 'notes',
       header: {
@@ -126,6 +146,7 @@ export class QuickViewTable extends React.Component {
         format: this.formatViewButton
       }
     });
+
     return columns;
   }
 
