@@ -3,35 +3,35 @@ import React, {PropTypes} from 'react';
 import msg from '@cdo/locale';
 import * as dataStyles from './dataStyles';
 
-const AddTableListRow = React.createClass({
-  propTypes: {
+const INITIAL_STATE = {
+  newTableName: ''
+};
+
+class AddTableListRow extends React.Component {
+  static propTypes = {
     onTableAdd: PropTypes.func.isRequired,
-  },
+  };
 
-  getInitialState() {
-    return {
-      newTableName: ''
-    };
-  },
+  state = {...INITIAL_STATE};
 
-  handleAdd() {
+  handleAdd = () => {
     if (this.state.newTableName) {
       this.props.onTableAdd(this.state.newTableName);
-      this.setState(this.getInitialState());
+      this.setState(INITIAL_STATE);
     }
-  },
+  };
 
-  handleInputChange(event) {
+  handleInputChange = (event) => {
     this.setState({newTableName: event.target.value});
-  },
+  };
 
-  handleKeyUp(event) {
+  handleKeyUp = (event) => {
     if (event.key === 'Enter') {
       this.handleAdd();
     } else if (event.key === 'Escape') {
-      this.setState(this.getInitialState());
+      this.setState(INITIAL_STATE);
     }
-  },
+  };
 
   render() {
     return (
@@ -56,6 +56,6 @@ const AddTableListRow = React.createClass({
       </tr>
     );
   }
-});
+}
 
 export default Radium(AddTableListRow);

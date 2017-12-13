@@ -46,13 +46,13 @@ const styles = {
   },
 };
 
-const TableControls = React.createClass({
-  propTypes: {
+class TableControls extends React.Component {
+  static propTypes = {
     clearTable: PropTypes.func.isRequired,
     exportCsv: PropTypes.func.isRequired,
     importCsv: PropTypes.func.isRequired,
     tableName: PropTypes.string.isRequired,
-  },
+  };
 
   render() {
     return (
@@ -88,5 +88,5 @@ const TableControls = React.createClass({
       </div>
     );
   }
-});
+}
 export default Radium(TableControls);
