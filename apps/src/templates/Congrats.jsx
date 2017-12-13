@@ -96,7 +96,6 @@ class Congrats extends Component {
           {userType === "teacher" && isEnglish && (
             <TeachersBeyondHoc
               responsive={this.responsive}
-              isRtl={isRtl}
             />
           )}
           <StudentsBeyondHoc
@@ -111,7 +110,6 @@ class Congrats extends Component {
           {userType === "signedOut" && isEnglish && (
             <TeachersBeyondHoc
               responsive={this.responsive}
-              isRtl={isRtl}
             />
           )}
         </div>
