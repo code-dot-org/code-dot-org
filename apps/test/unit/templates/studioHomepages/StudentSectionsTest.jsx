@@ -12,7 +12,6 @@ import SectionsTable from "@cdo/apps/templates/studioHomepages/SectionsTable";
 describe('StudentSections', () => {
   const defaultProps = {
     initialSections: [],
-    isRtl: false,
     canLeave: false,
   };
 

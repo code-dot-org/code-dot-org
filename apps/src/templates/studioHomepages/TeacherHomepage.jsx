@@ -27,7 +27,6 @@ export default class TeacherHomepage extends Component {
     courses: shapes.courses,
     topCourse: shapes.topCourse,
     announcements: PropTypes.array.isRequired,
-    isRtl: PropTypes.bool.isRequired,
     queryStringOpen: PropTypes.string,
     canViewAdvancedTools: PropTypes.bool,
     hocLaunch: PropTypes.object,
@@ -41,7 +40,7 @@ export default class TeacherHomepage extends Component {
   }
 
   render() {
-    const { courses, topCourse, announcements, isRtl, queryStringOpen, joinedSections } = this.props;
+    const { courses, topCourse, announcements, queryStringOpen, joinedSections } = this.props;
     const { canViewAdvancedTools, hocLaunch, isEnglish } = this.props;
 
     return (
@@ -139,7 +138,6 @@ export default class TeacherHomepage extends Component {
         )}
 
         <TeacherSections
-          isRtl={isRtl}
           queryStringOpen={queryStringOpen}
         />
         <RecentCourses
@@ -147,9 +145,8 @@ export default class TeacherHomepage extends Component {
           topCourse={topCourse}
           showAllCoursesLink={true}
           isTeacher={true}
-          isRtl={isRtl}
         />
-        <TeacherResources isRtl={isRtl}/>
+        <TeacherResources/>
         <ProjectWidgetWithData
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
@@ -157,7 +154,6 @@ export default class TeacherHomepage extends Component {
         <StudentSections
           initialSections={joinedSections}
           canLeave={true}
-          isRtl={isRtl}
           isTeacher={true}
         />
       </div>

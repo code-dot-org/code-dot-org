@@ -9,7 +9,6 @@ import OwnedSections from "@cdo/apps/templates/teacherDashboard/OwnedSections";
 
 describe('TeacherSections', () => {
   const defaultProps = {
-    isRtl: false,
     asyncLoadSectionData: () => {},
   };
 
