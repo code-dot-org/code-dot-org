@@ -87,6 +87,16 @@ export class Summary extends React.Component {
             data={this.state.applications["csp_facilitators"]}
             path="csp_facilitators"
           />
+          <SummaryTable
+            caption="CS Discoveries Teachers"
+            data={this.state.applications["csd_teachers"]}
+            path="csd_teachers"
+          />
+          <SummaryTable
+            caption="CS Principles Teachers"
+            data={this.state.applications["csp_teachers"]}
+            path="csp_teachers"
+          />
         </div>
       </div>
     );
