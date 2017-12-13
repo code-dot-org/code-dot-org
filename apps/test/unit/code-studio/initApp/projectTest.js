@@ -119,14 +119,12 @@ describe('project.js', () => {
 
             it(`from project edit page`, () => {
               setFakeLocation(`${origin}/projects/${appType}/${fakeProjectId}/edit`);
-              expect(project.getShareUrl())
-                .to.equal(expected);
+              expect(project.getShareUrl()).to.equal(expected);
             });
 
             it(`from a script level`, () => {
               setFakeLocation(`${origin}/s/csp3/stage/10/puzzle/4`);
-              expect(project.getShareUrl())
-                .to.equal(expected);
+              expect(project.getShareUrl()).to.equal(expected);
             });
           });
         });
@@ -138,20 +136,17 @@ describe('project.js', () => {
 
             it(`from project edit page`, () => {
               setFakeLocation(`${origin}/projects/${appType}/${fakeProjectId}/edit`);
-              expect(project.getShareUrl())
-                .to.equal(expected);
+              expect(project.getShareUrl()).to.equal(expected);
             });
 
             it(`from project view page`, () => {
               setFakeLocation(`${origin}/projects/${appType}/${fakeProjectId}/view`);
-              expect(project.getShareUrl())
-                .to.equal(expected);
+              expect(project.getShareUrl()).to.equal(expected);
             });
 
             it(`from a script level`, () => {
               setFakeLocation(`${origin}/s/csp3/stage/10/puzzle/4`);
-              expect(project.getShareUrl())
-                .to.equal(expected);
+              expect(project.getShareUrl()).to.equal(expected);
             });
           });
         });
