@@ -7,71 +7,67 @@ import PendingButton from '../../templates/PendingButton';
 import { castValue, displayableValue, editableValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 
-const EditKeyRow = React.createClass({
-  propTypes: {
+const INITIAL_STATE = {
+  isDeleting: false,
+  isEditing: false,
+  isSaving: false,
+  newValue: ''
+};
+
+class EditKeyRow extends React.Component {
+  static propTypes = {
     keyName: PropTypes.string.isRequired,
     value: PropTypes.any
-  },
+  };
 
-  getInitialState() {
-    return {
-      isDeleting: false,
-      isEditing: false,
-      isSaving: false,
-      newValue: ''
-    };
-  },
+  state = {...INITIAL_STATE};
 
   componentDidMount() {
     this.isMounted_ = true;
-  },
+  }
 
   componentWillUnmount() {
     this.isMounted_ = false;
-  },
+  }
 
-  handleChange(event) {
-    this.setState({newValue: event.target.value});
-  },
+  handleChange = (event) => this.setState({newValue: event.target.value});
 
-  handleEdit() {
-    this.setState({
-      isEditing: true,
-      newValue: editableValue(this.props.value)
-    });
-  },
+  handleEdit = () => this.setState({
+    isEditing: true,
+    newValue: editableValue(this.props.value)
+  });
 
-  handleSave() {
+  handleSave = () => {
     this.setState({isSaving: true});
     FirebaseStorage.setKeyValue(
       this.props.keyName,
       castValue(this.state.newValue),
       this.resetState,
       msg => console.warn(msg));
-  },
+  };
 
-  resetState() {
+  resetState = () => {
     // Deleting a key/value pair could cause this component to become unmounted.
     if (this.isMounted_) {
-      this.setState(this.getInitialState());
+      this.setState(INITIAL_STATE);
     }
-  },
+  };
 
-  handleDelete() {
+  handleDelete = () => {
     this.setState({isDeleting: true});
     FirebaseStorage.deleteKeyValue(
       this.props.keyName,
       this.resetState,
       msg => console.warn(msg));
-  },
+  };
 
-  handleKeyUp(event) {
+  handleKeyUp = (event) => {
     if (event.key === 'Enter') {
       this.handleSave();
     } else if (event.key === 'Escape') {
-      this.setState(this.getInitialState());
+      this.setState(INITIAL_STATE);
     }
-  },
+  };
 
   render() {
     return (
@@ -123,6 +119,6 @@ const EditKeyRow = React.createClass({
       </tr>
     );
   }
-});
+}
 
 export default Radium(EditKeyRow);
