@@ -1445,7 +1445,7 @@ StudioApp.prototype.displayFeedback = function (options) {
       const store = getStore();
       store.dispatch(setFeedbackData({
         isPerfect: feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT,
-        blocksUsed: this.feedback_.getNumBlocksUsed(),
+        blocksUsed: this.feedback_.getNumCountableBlocks(),
         displayFunometer: response && response.puzzle_ratings_enabled,
         studentCode: this.feedback_.getGeneratedCodeProperties(this.config.appStrings),
         canShare: !this.disableSocialShare && !options.disableSocialShare,
