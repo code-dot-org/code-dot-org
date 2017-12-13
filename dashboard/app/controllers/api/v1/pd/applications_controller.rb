@@ -58,18 +58,9 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   # GET /api/v1/pd/applications/cohort_view?role=:role
   def cohort_view
-    applications = get_applications_by_role(params[:role].to_sym).where(status: 'accepted', locked_at: nil)
+    applications = get_applications_by_role(params[:role].to_sym).where(status: 'accepted').where.not(locked_at: nil)
 
-    respond_to do |format|
-      format.json do
-        render json: applications, each_serializer: Api::V1::Pd::ApplicationCohortViewSerializer
-      end
-      format.csv do
-        course = role[0..2] # course is the first 3 characters in role, e.g. 'csf'
-        csv_text = [TYPES_BY_ROLE[role].csv_header(course), *applications.map(&:to_csv_row)].join
-        send_csv_attachment csv_text, "#{role}_cohort_applications.csv"
-      end
-    end
+    render json: applications, each_serializer: Api::V1::Pd::ApplicationCohortViewSerializer
   end
 
   # PATCH /api/v1/pd/applications/1
