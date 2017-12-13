@@ -86,7 +86,6 @@ export default class Congrats extends Component {
           <Certificate
             tutorial={tutorial}
             certificateId={certificateId}
-            responsive={this.responsive}
             randomDonorTwitter={randomDonorTwitter}
           />
           {userType === "teacher" && isEnglish && (

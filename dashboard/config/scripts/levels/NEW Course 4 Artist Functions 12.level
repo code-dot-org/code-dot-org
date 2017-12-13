@@ -37,6 +37,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-12-01 02:20:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 5,
     "repeat_loops": 2,
@@ -46,7 +47,8 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false" usercreated="true">
           <mutation>
             <description>Draw a square with sides length 20</description>
           </mutation>
@@ -62,7 +64,7 @@
                 <block type="controls_repeat">
                   <title name="TIMES">4</title>
                   <statement name="DO">
-                    <block type="draw_move" inline="true">
+                    <block type="draw_move" inline="true" deletable="false" can_disconnect_from_parent="false">
                       <title name="DIR">moveForward</title>
                       <value name="VALUE">
                         <block type="math_number">
@@ -70,7 +72,7 @@
                         </block>
                       </value>
                       <next>
-                        <block type="draw_turn" inline="true">
+                        <block type="draw_turn" inline="true" deletable="false">
                           <title name="DIR">turnLeft</title>
                           <value name="VALUE">
                             <block type="math_number">
@@ -86,7 +88,6 @@
             </block>
           </statement>
         </block>
-        <block type="when_run" deletable="false" movable="false"/>
         <block type="procedures_defnoreturn" editable="false">
           <mutation>
             <description>draw a line of squares</description>

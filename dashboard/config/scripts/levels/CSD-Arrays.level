@@ -1,0 +1,19 @@
+<Map>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2017-11-27T16:36:37.000Z",
+  "level_num": "custom",
+  "user_id": 568,
+  "properties": {
+    "markdown_instructions": "Today you’re going to learn how to use and create **functions**.\r\n\r\nCreating a function lets you make your own blocks! There are two parts to a function: \r\n\r\nMaking a newly named block that has all of the code you want to run inside of it. \r\n-xml of function definition- \r\n\r\nThe single green block itself that you use, or call, to run the function you created.\r\n-xml of function call-\r\n\r\nPrepare to get familiar with functions, learn how to edit them, and create your own!",
+    "instructions_important": "false",
+    "reference": "/csd/csd-arrays/",
+    "display_name": "Modifying and Creating Arrays"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-11-27 16:36:45 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-30 22:51:17 +0000\",\"changed\":[],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Map>
