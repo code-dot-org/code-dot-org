@@ -1,14 +1,11 @@
 ---
-
 title: <%= hoc_s(:title_proclamation) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+### Poniżej znajduje się przykładowa rezolucja wspierająca Tydzień Edukacji Informatycznej i jej cele, która może zostać wykorzystana przez krajowych i lokalnych ustawodawców.
 
   
 [HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;

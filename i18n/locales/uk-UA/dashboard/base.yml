@@ -567,6 +567,9 @@ uk:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Вік 13+"
       cta: "Почати навчання"
+    hoc-encryption:
+      title: "Просте шифрування"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -585,6 +588,9 @@ uk:
     minecraft2016:
       title: "Майнкрафт"
       body: "Запрограмуй тварин та інших істот Майнкрафт у власній версії цієї гри."
+    hero:
+      title: "Майнкрафт"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Спорт"
       body: "Make a basketball game or mix and match across sports."
@@ -753,11 +759,11 @@ uk:
     rename: "Перейменувати"
     save: "зберегти"
     delete: "Видалити"
-    import: "Import"
-    share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
-    share_link_import_error_header: "Something went wrong."
-    share_link_import_error_body: "There was a problem importing that share link. Please try again."
+    import: "Імпорт"
+    share_link_import_bad_link_header: "Посилання на завдання не розпізнано"
+    share_link_import_bad_link_body: 'Не вдалось імпортувати посилання на завдання. Перевірте, чи це дійсно посилання із завдання Minecraft: Agent, яке ви повністю скопіювали.'
+    share_link_import_error_header: "Щось пішло не так."
+    share_link_import_error_body: "Під час імпорту цього посилання на завдання виникла проблема. Спробуйте ще раз."
     exit: "Повернутися до курсу"
     my_projects: "Мої проекти"
     project_gallery: "Проекти"

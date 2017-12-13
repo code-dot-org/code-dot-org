@@ -1,79 +1,79 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_how_to_parents) %>
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# Gewusst wie: Machen Sie eine Hour of Code gemeinsam mit Ihrem Kind
 
-Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
+Führen Sie zuhause eine Hour of Code durch oder schlagen Sie sie in der Klasse Ihres Kindes vor! Hier erfahren Sie, wie Sie vorgehen können:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 1) Schau dir dieses Tutorialvideo an <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+## 2) Wählen Sie ein Video-Tutorial:
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+Wir bieten eine Vielzahl von unterhaltsamen, einstündigen Tutorials für Schülerinnen und Schüler aller Altersstufen, die von einer Vielzahl von Partnern erstellt wurden. [Probieren Sie sie aus!](%= resolve_url('/learn') %)
+
+**Alle Hour of Code Tutorials sind selbsterklärend. Sie erlauben Ihrem Kind, im eigenen Lerntempo und nach eigenem Leistungsvermögen zu arbeiten**
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 3) Plan your technology needs
+## 3) Planen Sie Ihren Bedarf an technischer Ausstattung
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all.
+Die beste Hour of Code Erfahrung macht man mit Computern, die mit dem Internet verbunden sind. Aber man braucht **keinen** Computer. Es gibt viele Aktivitäten, die "offline" und überhaupt ohne Technik durchgeführt werden können.
 
-- Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
-- **Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+- Testen Sie Tutorials auf Ihrem Computer oder Gerät. Stellen Sie sicher, dass sie in Browsern mit Ton und Video ordnungsgemäß funktionieren.
+- **Möchten Sie gemeinsam mit Ihrem Kind lernen?** Versuchen Sie [Paarprogrmmierung](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Informatik erfordert soziale Kontakte und Zusammenarbeit.
 
-## 4) Start your Hour of Code off with an inspiring video
+## 4) Beginnen Sie Ihre Hour of Code mit einem motivierenden Video
 
-Kick off your Hour of Code by inspiring your child and discussing how computer science impacts every part of our lives.
+Beginnen Sie Ihre Hour of Code, indem Sie Ihr Kind begeistern und mit ihm diskutieren, wie Informatik jeden Teil unseres Lebens beeinflusst.
 
 **Show an inspirational video:**
 
 - Das Original-Launch-Video von Code.org Start video, mit Bill Gates, Mark Zuckerberg und NBA-Star Chris Bosh (es stehen mehrere Versionen zur Verfügung: [1 Minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 Minuten](https://www.youtube.com/watch?v=nKIu9yen5nc) und [9 Minuten](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Hier finden Sie weitere inspirierende [Ressourcen](%= resolve_url('https://code.org/inspire') %) und [Videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Es ist in Ordnung, wenn Sie und Ihr Kind absolute Neulinge in Informatik sind. Hier finden Sie einige Ideen, wie Sie Ihr Hour of Code-Training vorstellen können:
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- List things that use code in everyday life.
-- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
+- Beschreiben Sie, wie Technologien unser Leben beeinflussen, mit Beispielen, die Jungen und Mädchen interessieren (Sprechen Sie über Apps und Technologien, die eingesetzt werden, um Leben zu retten, Menschen zu helfen, Menschen zu verbinden etc.).
+- Zählen Sie Dinge auf, die im Alltag Computerprogramme nutzen.
+- [Hier](%= resolve_url('https://code.org/girls') %) sind Tipps, wie Sie Mädchen für Informatik interessieren könnten.
 
-Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
+Brauchen Sie weitere Ideen? Schauen Sie sich unsere [Vorlage Unterrichtsplan](/files/AfterschoolEducatorLessonPlanOutline.docx) mit gelungenen Beispielen erfahrener Pädagoginnen und Pädagogen an.
 
-## 5) Code!
+## 5) Programmieren Sie!
 
 <img src="/images/fit-700/tutorial-short-link.png" />
 
-When you've chosen the tutorial you would like to do, you can bookmark the tutorial's short link.
+Wenn Sie das Tutorial, das Sie durchführen möchten, ausgewählt haben, können Sie das Tutorial Mit einem Lesezeichen versehen.
 
-**When your child come across difficulties**
+**Wenn Ihr Kind auf Schwierigkeiten stösst**
 
-It’s okay to respond:
+Es ist in Ordnung, darauf so zu antworten:
 
-- “I don’t know. Let’s figure this out together.”
-- “Technology doesn’t always work out the way we want.”
-- “Learning to program is like learning a new language; you won’t be fluent right away.”
+- "Ich weiß es nicht. Lass uns das Problem gemeinsam lösen."
+- "Die Technik funktioniert nicht immer so, wie wir es wollen."
+- "Programmieren lernen ist wie das Lernen einer Fremdsprache; wir sprechen sie nicht gleich fließend."
 
-## 6) Celebrate
+## 6) Feiern Sie!
 
-[Print certificates](%= resolve_url('https://code.org/certificates') %) for your child (and yourself!).
+[Drucken Sie Urkunden](%= resolve_url('https://code.org/certificates') %) für Ihr Kind (und für Sie selbst!).
 
-Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+Teilen Sie Fotos und Videos Ihrer Hour of Code-Veranstaltung in den sozialen Medien. Verwenden Sie #HourOfCode und @codeorg, damit wir Ihren Erfolg auch hervorheben können!
 
-**Other Hour of Code resources:**
+**Weitere Hour of Code-Ressourcen:**
 
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-**What comes after the Hour of Code?**
+**Was kommt nach der Hour of Code?**
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Die Hour of Code ist nur der erste Schritt auf einer Reise, auf der man mehr darüber erfährt, wie Technologien funktionieren und wie Software-Anwendungen erstellt werden. Um diese Reise fortzusetzen:
 
-- Encourage your child to continue [to learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
+- Ermutigen Sie Ihr Kind weiter [online zu lernen](%= resolve_url('https://code.org/learn/beyond') %).
+- [Setzen Sie sich ein und werben Sie](%= resolve_url('/promote') %) für die Informatikausbildung in Ihrem Schulamtsbezirk.
 
 <%= view :signup_button %>

@@ -1,4 +1,5 @@
 {
+  "startButton": "Fillo",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "Të gjitha",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "Notat 2-5",
   "filterGrades68": "Notat 6-8",
   "filterGrades9": "Notat 9+",
-  "filterTeacherExperience": "përvojë edukatori",
-  "filterTeacherExperienceBeginner": "Fillestar",
-  "filterTeacherExperienceComfortable": "Rehat",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "përvojë studenti",
   "filterStudentExperienceBeginner": "Fillestar",
   "filterStudentExperienceComfortable": "Rehat",

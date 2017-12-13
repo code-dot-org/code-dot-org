@@ -567,6 +567,9 @@ el:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Ηλικίες 13+"
       cta: "Μάθε πώς"
+    hoc-encryption:
+      title: "Απλή Κρυπτογράφηση"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -585,6 +588,9 @@ el:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
@@ -753,11 +759,11 @@ el:
     rename: "Μετονομασία"
     save: "Αποθήκευση"
     delete: "Διαγραφή"
-    import: "Import"
-    share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
-    share_link_import_error_header: "Something went wrong."
-    share_link_import_error_body: "There was a problem importing that share link. Please try again."
+    import: "Εισαγωγή"
+    share_link_import_bad_link_header: "Η σύνδεση κοινής χρήσης δεν αναγνωρίζεται"
+    share_link_import_bad_link_body: 'Δεν ήταν δυνατή η εισαγωγή αυτής της σύνδεσης κοινής χρήσης. Βεβαιώσου ότι χρησιμοποιείς σύνδεση από παζλ του Minecraft: Agent και ότι αντέγραψες ολόκληρη τη σύνδεση.'
+    share_link_import_error_header: "Κάτι δεν πήγε καλά."
+    share_link_import_error_body: "Παρουσιάστηκε πρόβλημα με την εισαγωγή αυτής της σύνδεσης κοινής χρήσης. Δοκίμασε ξανά."
     exit: "Επιστροφή στο Μάθημα"
     my_projects: "Τα Έργα μου"
     project_gallery: "Έργα"

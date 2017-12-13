@@ -1,4 +1,3 @@
-'use strict';
 process.env.SLACK_ENDPOINT = 'xyz';
 
 const LambdaTester = require( 'lambda-tester' );
@@ -169,6 +168,30 @@ describe( 'handler', ()=> {
         "StartTime": start.toISOString(),
         "Cause": failedCause,
       }
+    },
+    health_event: {
+      "version": "0",
+      "id": "7bf73129-1428-4cd3-a780-95db273d1602",
+      "detail-type": "AWS Health Event",
+      "source": "aws.health",
+      "account": "123456789012",
+      "time": "2016-06-05T06:27:57Z",
+      "region": "ap-southeast-2",
+      "resources": [],
+      "detail": {
+        "eventArn": "arn:aws:health:ap-southeast-2::event/AWS_ELASTICLOADBALANCING_API_ISSUE_90353408594353980",
+        "service": "ELASTICLOADBALANCING",
+        "eventTypeCode": "AWS_ELASTICLOADBALANCING_API_ISSUE",
+        "eventTypeCategory": "issue",
+        "startTime": "Sat, 04 Jun 2016 05:01:10 GMT",
+        "endTime": "Sat, 04 Jun 2016 05:30:57 GMT",
+        "eventDescription": [
+          {
+            "language": "en_US",
+            "latestDescription": "A description of the event will be provided here"
+          }
+        ]
+      }
     }
   };
   let matchers = {
@@ -186,7 +209,7 @@ describe( 'handler', ()=> {
         attachment.author_name.match(instanceId) &&
         attachment.fields.find(f=>f.title === 'Capacity').value.match(`.${from}. to .${to}.`) &&
         attachment.fields.find(f=>f.title === 'Duration').value.match(`.${duration}. min`)
-      )
+      );
     },
     terminate_successful: body => {
       let attachment = body.attachments[0];
@@ -194,7 +217,7 @@ describe( 'handler', ()=> {
         attachment.author_name.match(instanceId) &&
         attachment.fields.find(f=>f.title === 'Capacity').value.match(`.${to}. to .${from}.`) &&
         attachment.fields.find(f=>f.title === 'Duration').value.match(`.${duration}. min`)
-      )
+      );
     },
     launch_unsuccessful: body => {
       let attachment = body.attachments[0];
@@ -202,7 +225,7 @@ describe( 'handler', ()=> {
         attachment.color.match('danger') &&
         attachment.pretext.match(`${instanceId} - EC2 Instance Launch Unsuccessful`) &&
         attachment.fields[0].value.match(`${failedCause}\n${failedStatus}`)
-      )
+      );
     },
     terminate_unsuccessful: body => {
       let attachment = body.attachments[0];
@@ -210,16 +233,25 @@ describe( 'handler', ()=> {
         attachment.color.match('danger') &&
         attachment.pretext.match(`${instanceId} - EC2 Instance Terminate Unsuccessful`) &&
         attachment.fields[0].value.match(`${failedCause}\n${failedStatus}`)
-      )
+      );
+    },
+    health_event: body => {
+      let attachment = body.attachments[0];
+      return (
+        body.username.match('AWS Health Event') &&
+        attachment.color.match('danger') &&
+        attachment.author_name.match('AWS_ELASTICLOADBALANCING_API_ISSUE') &&
+        attachment.text.match('A description')
+      );
     }
   };
 
   Object.keys(matchers).forEach(matcher => {
     it(events[matcher]['detail-type'], () => {
       nock.cleanAll();
-      let scope = nock('https://hooks.slack.com').
-        post(`/services/${process.env.SLACK_ENDPOINT}`, matchers[matcher]).
-        reply(200, 'Ok');
+      let scope = nock('https://hooks.slack.com')
+        .post(`/services/${process.env.SLACK_ENDPOINT}`, matchers[matcher])
+        .reply(200, 'Ok');
       return LambdaTester(myHandler)
         .event(events[matcher])
         .expectResult(result => scope.done());

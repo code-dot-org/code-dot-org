@@ -1,145 +1,135 @@
 ---
-
 title: <%= hoc_s(:title_how_to_companies) %>
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your company
+# Hour of Code (अवर ओफ कोड, संगणक आज्ञावली-programming तासिका) को आप के कंपनी में कैसे लाया जाय
 
-## Inspire students and volunteer for the Hour of Code
+## छात्रो और स्वयंसेवकोंको अवर ओफ कोड के लिए प्रेरित कीजिये
 
-**Code.org offers company employees the opportunity to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
+Code.org offers the opportunity for your employees to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-  * [Sign up](<%= resolve_url('https://code.org/volunteer') %>) to volunteer.
-  * For more instructions on connecting your employees with classrooms, consult our [guide for corporate partners](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>).
+- स्वयंसेवक के लिए  पंजीकरण </ 0></li> 
+    
+    - For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).</ul> 
+    
+    ## अवर ओफ कोड के प्रोत्साहन के लिए अतिरिक्त तरीके:
+    
+    - Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word. 
+    - Host an Hour of Code Happy Hour with coworkers to try the [activities](<%= resolve_url('/learn') %>).
+    - अपने स्थानिक पाठशाला के विद्यार्थियोंके लिए अवर ओफ कोड का आयोजन करे या फिर कई सामाजिक संस्था के लिए अपने कंपनी में अवर ओफ कोड का आयोजन करे. कार्यक्रमका आयोजन करने की मार्गदर्शक पुस्तिका देखिए।
+    
+    # How to host an Hour of Code event with students
+    
+    ## 1. Promote your Hour of Code
+    
+    - आपके </a> अवर ओफ कोड  को बढ़ावा देने के लिए और दूसरों को मेजबानी के लिए प्रोत्साहित करे ।</li> 
+        
+        - Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. वे किसी कक्षासे संलग्न होने के लिए [पंजीकरण](<%= resolve_url('https://code.org/volunteer/engineer') %>) कर सकते है.</ul> 
+        
+        ## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+        
+        ## 3. Choose an activity
+        
+        We host a variety of [fun, hour-long activities](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [ये देखिये!](<%= resolve_url('/learn') %>)
+        
+        **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+        
+        [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
+        
+        ## 4. Plan your technology needs - computers are optional
+        
+        अवर ओफ कोड के उत्तम अनुभव के लिए इन्टरनेट से जुड़ा हुए संगणक की आवश्यकता है. परन्तु सबके पास संगणक हो इसकी आवश्यकता **नहीं** है. आप, अवर ओफ कोड, संगणक के बिना भी कर सकते है.
+        
+        **आगे का पुर्वनियोजन!** कार्यक्रम के प्रारंभ से पहेले निम्नलिखित कार्य करे:
+        
+        - Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
+        - Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
+        - आपके पास **पर्याप्त संगणकीय उपकरण नहीं हैं? ** [ साथ मिलके (युगुल) प्रोग्रामिंग ](https://www.youtube.com/watch?v=vgkahOzFH2Q) करें । जब सहभागी इक साथ कम करते है, वे एक दूसरे की मदद करते है और आयोजक पर कम निर्भर रहेते हैं । सभी को पता चलता है की संगणक शास्त्र साथ मिलके कम करने का सामाजिक शास्त्र है|
+        - **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+        
+        <img src="/images/fit-350/group_ipad.jpg" />
+        
+        ## 5. Start your Hour of Code off with an inspiring video
+        
+        अवर ऑफ कोड की शुरुआत संगणक शास्त्र अपने जीवन में कैसे सर्वव्यापी प्रभाव दाल रहा है, इस सन्दर्भ में प्रोत्साहन देके कीजिये. संगणक शास्त्र में काम करने के बारे में आपकी क्या प्रेरणा थी और आपकी कंपनी में आपके कार्य की अधिक जानकारी दीजिये.
+        
+        **प्रेरणादायी व्हिडीओ दिखाइए:**
+        
+        - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
+        - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+        - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+        - Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+        
+        **Ideas to introduce your Hour of Code activity to students:**
+        
+        - Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
+        - आप अगर तकनीकी क्षेत्र की कंपनी है तो आप कर रहे रंजक और नाविन्यपूर्ण उत्पदानोंका प्रात्यक्षिक दिखाइए.
+        - आपकी कंपनी अगर तकनीकी क्षेत्र की नहीं है तो, आप तकनीक का इस्तमाल समस्याओंको सुलाझाने के लिये और लक्ष्य साध्य करने के लिए कैसे करते है इसके बारे में चर्चा कीजिये.
+        - आपकी कंपनीके साॅफ्टवेअर अभियंताओंको बुला कर, उन्होंने संगणक शास्त्र सिखानेका और उसके प्रकल्पोंपर काम करनेका निर्णय क्यों लिया, इसके बारे में बताने को बोले.
+        - See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+        
+        ## 6. Code!
+        
+        **सहभागींयोंको काम शुरू करेने को बोले**
+        
+        - Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity](<%= resolve_url('/learn') %>) under the number of participants.
+        - For younger students, load the activity page ahead of time or save it as a bookmark.
+        
+        **अगर कोई कठिनाई आये तो निम्नलिखित जवाब देना उचित है:**
+        
+        - "मुझे मालूम नहीं. चलो ये सुलझनेका साथ-साथ प्रयत्न करते है|"
+        - "तकनीक हमेशा जिस तरह से हम चाहते है वैसा काम नहीं करता है."
+        - "संगणक प्रोग्रामिंग सिखाना ये इक नयी भाषा सिखाने जैसा है; आप तुरंत सरलातासे प्रयोग नहीं कर पाएंगे|"
+        
+        **अगर किसीका कार्य जल्दी समाप्त हो तो?**
+        
+        - वे hourofcode.com/learn पर मौजूद अन्य गतिविधियोंकी की कोशिश कर सकते है
+        - या, उन्हें, अगर किसीको कोई समस्या है तो, उनको मदत करने को बोले.
+        
+        [col-33]
+        
+        ![](/images/fit-250/highschoolgirls.jpeg)
+        
+        [/col-33]
+        
+        [col-33]
+        
+        ![](/images/fit-300/group_ar.jpg)
+        
+        [/col-33]
 
-## Additional ways companies can support the Hour of Code:
+<p style="clear:both">&nbsp;</p>
 
-  * Use our [marketing toolkit](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) to create a communications timeline and share promotional content.
-  * Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('/learn') %>).
-  * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+        
+        ## ७) गतिविधि समाप्ति पर जश्न
+        
+        - [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants and students.
+        - ["I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) ऐसे स्टीकर्स की छपाई करे.
+        - आपके कर्मचारियोंके लिए [विशेष (सानुकूल) रूप से बनाये गए टी शर्ट](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) मंगवाइये.
+        - सोशल मीडिया पर अवर ओफ कोड कार्यक्रम के फ़ोटो और वीडियो साझा करें । #HourOfCode और @codeorg का उपयोग करें तो अपनी सफलता को उजागर कर सकते हैं!
+        
+        [col-33]
+        
+        ![](/images/fit-250/celebrate2.jpeg)
+        
+        [/col-33]
+        
+        [col-33]
+        
+        ![](/images/fit-260/highlight-certificates.jpg)
+        
+        [/col-33]
+        
+        [col-33]
+        
+        ![](/images/fit-300/boy-certificate.jpg)
+        
+        [/col-33]
 
-## How to host an Hour of Code event
+<p style="clear:both">&nbsp;</p>
 
-## 1) Promote your Hour of Code
-
-  * Promote your [Hour of Code](<%= resolve_url('/promote') %>) event and encourage others to host.
-  * Encourage **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= resolve_url('https://code.org/volunteer/engineer') %>) to be connected with a classroom.
-
-## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 3) Choose a tutorial:
-
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
-
-**एक घंटा कोड का अभ्यासिकाओंकी विशेषताए:**
-
-  * Require minimal prep-time
-  * Are self-guided - allowing participants to work at their own pace and skill-level
-
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
-
-## 4) Plan your technology needs - computers are optional
-
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
-
-**Plan Ahead!** Do the following before your event starts:
-
-  * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. They’ll also see that computer science is social and collaborative.
-  * **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline tutorials.
-
-![](/images/fit-350/group_ipad.jpg)
-
-## 5) Start your Hour of Code off with an inspiring video
-
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives. Share more about what inspired you to pursue computer science and your role at your company.
-
-**Show an inspirational video:**
-
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
-
-**Ideas to introduce your Hour of Code activity:**
-
-  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about technology that’s saving lives, helping people, connecting people). 
-  * If you are a tech company, demo fun, innovative products your company is working on.
-  * If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-  * Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
-
-## 6) Code!
-
-**Direct participants to the activity**
-
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
-  * For younger students, load the tutorial page ahead of time or save it as a bookmark.
-
-**When participants come across difficulties it's okay to respond:**
-
-  * “I don’t know. Let’s figure this out together.”
-  * “Technology doesn’t always work out the way we want.”
-  * “Learning to program is like learning a new language; you won’t be fluent right away.”
-
-**What to do if someone finishes early?**
-
-  * They can try another Hour of Code activity at hourofcode.com/learn
-  * Or, ask them to help a friend who are having trouble with the activity.
-
-[col-33]
-
-![](/images/fit-250/highschoolgirls.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/group_ar.jpg)
-
-[/col-33]
-
-<p style="clear:both">
-  &nbsp;
-</p>
-
-## 7) Celebrate
-
-  * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants.
-  * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
-  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
-
-[col-33]
-
-![](/images/fit-250/celebrate2.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
-
-[/col-33]
-
-<p style="clear:both">
-  &nbsp;
-</p>
-
-## What comes after the Hour of Code?
-
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-
-<%= view :signup_button %>
+        
+        <%= view :signup_button %>

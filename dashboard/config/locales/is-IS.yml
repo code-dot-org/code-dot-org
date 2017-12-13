@@ -23,7 +23,8 @@
         name_example: Birtingarnafn<br/>(t.d. Kalli kóðari eða Anna J.)
         email: Netfang
         parent_email: Netfang foreldris/forráðamanns
-        personal_email: Einkanetfang
+        personal_email: Einkanetfang <a href="%{url}">(smelltu hér ef þú hefur ekki
+          netfang)</a>
         username: notandanafn
         password: lykilorð
         password_confirmation: Staðfesting lykilorðs

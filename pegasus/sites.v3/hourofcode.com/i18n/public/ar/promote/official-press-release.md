@@ -1,30 +1,18 @@
 ---
-
 title: <%= hoc_s(:title_press_release) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
-# Sample press release for elected officials
+# نموذج البيان الصحفي للمسؤولين المنتخبين
 
-For Immediate Release  
-[**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+الإفراج الفوري عن < br/> [**تاريخ**] < br/> الاتصال: [**معلومات جهة الاتصال**]  
   
 
-
-**
-
-<center>
-  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
-</center>
-
+<strong> <center>حاكم/مجلس الشيوخ/عضو جمعية/ممثل/عمدة/عضو المجلس [أدخل الاسم] [شارك في ساعة من البرمجة مع الطلبة المحليين]</strong> < br/> المجتمع يجتمع معا لزيادة الوعي بشأن أهمية تعليم علوم الكمبيوتر بالمشاركة في "أسبوع تعليم علوم الكمبيوتر"</center>   
   
-  
-</p> 
+
 
 **DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
 

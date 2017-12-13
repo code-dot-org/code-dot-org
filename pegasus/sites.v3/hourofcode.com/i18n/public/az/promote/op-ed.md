@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_op_ed) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ### Dövlət adamları, yerli rəsmilər, işgüzar müəssisə rəhbərləri və digər şəxslər tərəfindən istifadə edilə biləcək, İnformatika Təhsili Həftəsi və onun məqsədlərinə dəstək olan məqalə nümunəsi aşağıda verilib.

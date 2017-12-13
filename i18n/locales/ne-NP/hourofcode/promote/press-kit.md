@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_press_kit) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ## तपाइँको Hour of Code को घटनामा मिडियालाई कसरी आकर्षित गर्ने
@@ -12,20 +11,20 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 ### मुख्य उपायहरू
 
-  * मिडियाको इमेलको माध्यम तपाइँको घटना भन्दा पहिले दो सप्ताह बाहिर सम्म जानुहोस्। यदि तपाइँले प्रारम्भिक प्रतिक्रिया प्राप्त गर्नुभएको छैन भने इमेल र फोनद्वारा पछ्याउनुहोस्।
-  * विद्यालयको कर्मचारी सदस्य वा स्वयंसेवकलाई अनलाइन साझा गर्न फोटोहरू लिन वा प्रेसमा पठाउन सोध्नुहोस्।
-  * तपाइँको वेबसाइटको गृहपृष्ठ र तपाइँको विद्यालयको समाचारपत्रमा Hour of Code को बारेमा लेख्नुहोस्, र तपाइँको घटनाको विवरणहरू, र र विद्यार्थीको गतिविधिका तस्विर पोस्ट गर्नुहोस्।
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- मिडियाको इमेलको माध्यम तपाइँको घटना भन्दा पहिले दो सप्ताह बाहिर सम्म जानुहोस्। यदि तपाइँले प्रारम्भिक प्रतिक्रिया प्राप्त गर्नुभएको छैन भने इमेल र फोनद्वारा पछ्याउनुहोस्।
+- विद्यालयको कर्मचारी सदस्य वा स्वयंसेवकलाई अनलाइन साझा गर्न फोटोहरू लिन वा प्रेसमा पठाउन सोध्नुहोस्।
+- तपाइँको वेबसाइटको गृहपृष्ठ र तपाइँको विद्यालयको समाचारपत्रमा Hour of Code को बारेमा लेख्नुहोस्, र तपाइँको घटनाको विवरणहरू, र र विद्यार्थीको गतिविधिका तस्विर पोस्ट गर्नुहोस्।
+- On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### पालै-पालो मार्गदर्शन गर्न:
 
 **1. Plan your event**
 
-  * Hour of Code को सुरु गर्न सभाको योजना बनाउनुहोस्।
-  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * समूहको गतिविधिहरूलाई ('अनप्लग्ड' प्रोग्रामिङ्को गतिविधिको प्रदर्शन जस्तै) आयोजना गर्नुहोस्, वा विद्यार्थी-बनाइयो र नेतृत्व गर्ने गतिविधिहरू बन्द देखियो।
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
+- Hour of Code को सुरु गर्न सभाको योजना बनाउनुहोस्।
+- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+- समूहको गतिविधिहरूलाई ('अनप्लग्ड' प्रोग्रामिङ्को गतिविधिको प्रदर्शन जस्तै) आयोजना गर्नुहोस्, वा विद्यार्थी-बनाइयो र नेतृत्व गर्ने गतिविधिहरू बन्द देखियो।
+- Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2. Identify specific local reporters that cover education or local events.**
 

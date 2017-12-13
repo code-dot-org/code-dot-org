@@ -1,8 +1,9 @@
-* * *
+---
+title: <%= hoc_s(:title_stats) %>
+layout: wide
+nav: promote_nav
+---
 
-title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
-
-* * *
 
 <a id="blurb"></a>
 
@@ -12,7 +13,7 @@ title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 ## Folosiți acest scurt rezumat în buletinele de știri
 
-### Aduceți tehnologia computerelor si programarea în școala dvs. Începeți cu o Ora de Programare
+### Adu stiinta compitarelor la scoala ta. Incepe cu Ora de Cod!
 
 Cu tehnologia ce schimbă fiecare industrie pe planeta, cunoştinţele It au devenit parte a unei abilităţi bine rotunjite. Dar mai puţin de jumătate din toate şcolile predau astazi stiinta calculatoarelor! Vestea bună e că suntem pe cale să schimbăm acest lucru. Dacă ați auzit de Ora de Programare anul trecut, probabil știți că a făcut istorie. 100 de milioane de studenţi au descoperit cât de accesibila şi distractiva poate fi stiinta computerului si programarea doar prin incercarea unei Ore de Programare.
 

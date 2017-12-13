@@ -459,15 +459,12 @@ class Documents < Sinatra::Base
     end
 
     def social_metadata
-      if request.site == 'csedweek.org'
-        metadata = {
-          'og:site_name'      => 'CSEd Week',
-        }
-      else
-        metadata = {
-          'og:site_name'      => 'Code.org'
-        }
-      end
+      metadata =
+        if request.site == 'csedweek.org'
+          {'og:site_name' => 'CSEd Week'}
+        else
+          {'og:site_name' => 'Code.org'}
+        end
 
       # Metatags common to all sites.
       metadata['og:title'] = @header['title'] unless @header['title'].nil_or_empty?
@@ -485,11 +482,14 @@ class Documents < Sinatra::Base
         end
       end
 
-      unless metadata['og:image']
-        if request.site != 'csedweek.org'
+      if request.site != 'csedweek.org'
+        unless metadata['og:image']
           metadata['og:image'] = CDO.code_org_url('/images/default-og-image.png', 'https:')
           metadata['og:image:width'] = 1220
           metadata['og:image:height'] = 640
+        end
+        unless metadata['twitter:image:src']
+          metadata['twitter:image:src'] = CDO.code_org_url('/images/default-og-image.png', 'https:')
         end
       end
 

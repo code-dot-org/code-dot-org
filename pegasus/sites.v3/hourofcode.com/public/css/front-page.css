@@ -40,12 +40,12 @@
   padding: 8px;
 }
 
-.category-button:hover {
-  opacity: 0.7;
+a.category-link {
+  text-decoration: none;
 }
 
-.category-link:hover {
-  text-decoration: none;
+.category-link .category-button:hover {
+  opacity: 0.7;
 }
 
 .robotics-logo {

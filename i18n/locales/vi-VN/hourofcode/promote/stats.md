@@ -1,8 +1,9 @@
-* * *
+---
+title: <%= hoc_s(:title_stats) %>
+layout: wide
+nav: promote_nav
+---
 
-title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
-
-* * *
 
 <a id="blurb"></a>
 
@@ -12,15 +13,15 @@ title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 ## Sử dụng đoạn giới thiệu ngắn trong bản tin
 
-### Mang khoa học máy tính cho trường học của bạn. Bắt đầu với một giờ lập trình.
+### Bring computer science to your school. Start with an Hour of Code!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But fewer than half of all schools teach computer science! Tin tốt là chúng tôi đang trên đường thay đổi điều đó. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+Công nghệ đã làm thay đổi mọi ngành công nghiệp trên hành tinh, kiến thức máy tính đã trở thành một phần của một well-rounder skillset. Nhưng ít hơn một nửa của tất cả các trường giảng dạy môn khoa học máy tính! Tin tốt là chúng tôi đang trên đường thay đổi điều đó. Nếu bạn đã nghe về Hour of Code năm ngoái, bạn có thể biết nó đã làm nên lịch sử. Có 100 triệu học sinh hiện nay đã phát hiện ra cách để truy cập và niềm vui trong khoa học máy tính bằng một giờ học lập trình.
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+Hour of Code (Giờ lập trình) là một giờ giới thiệu về khoa học máy tính, được thiết kế để đơn giản hóa với mục đích để mọi người đều có thể học những điều cơ bản. Tìm hiểu tại <http://HourofCode.com>, thử 1 giờ học cho bản thân, hoặc tham gia sự kiện của Hour of Code để giới thiệu những người khác đến với thế giới của máy tính!
 
 <a id="infographics"></a>
 
-## Infographics
+## Đồ họa
 
 <%= view :stats_carousel %>
 

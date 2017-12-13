@@ -1,21 +1,21 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_how_to_parents) %>
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# Como completar uma Hora de Código com os seus filhos
 
 Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 1) Assista a este vídeo prático <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+## Escolha um tutorial:
 
 We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+**Todos os tutoriais da Hora de Código são auto-orientados - permitindo aos seus filhos trabalharem a seu próprio passo e nível de capacidades**
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
@@ -33,7 +33,7 @@ Kick off your Hour of Code by inspiring your child and discussing how computer s
 **Show an inspirational video:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 

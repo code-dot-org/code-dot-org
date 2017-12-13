@@ -22,9 +22,11 @@ class ChannelsTest < Minitest::Test
   end
 
   def test_create_published_channel
+    old_user = {name: ' xavier', birthday: 14.years.ago.to_datetime}
+    ChannelsApi.any_instance.stubs(:current_user).returns(old_user)
     start = DateTime.now - 1
-    post '/v3/channels', {shouldPublish: true, key: 'val'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    assert last_response.redirection?
+    post '/v3/channels', {shouldPublish: true, projectType: 'artist', key: 'val'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.redirection?, 'old user can publish artist project'
     follow_redirect!
 
     response = JSON.parse(last_response.body)
@@ -34,6 +36,18 @@ class ChannelsTest < Minitest::Test
     published_at = DateTime.parse(response['publishedAt'])
     assert (start..DateTime.now).cover? published_at
     assert_equal 'val', response['key']
+
+    post '/v3/channels', {shouldPublish: true, projectType: 'bogus', key: 'val'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.client_error?, 'cannot publish invalid project type'
+
+    young_user = {name: ' xavier', birthday: 12.years.ago.to_datetime}
+    ChannelsApi.any_instance.stubs(:current_user).returns(young_user)
+
+    post '/v3/channels', {shouldPublish: true, projectType: 'playlab', key: 'val'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.redirection?, 'young user can publish playlab project'
+
+    post '/v3/channels', {shouldPublish: true, projectType: 'applab', key: 'val'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.client_error?, 'young user cannot publish advanced project type'
   end
 
   def test_update_channel
@@ -112,21 +126,6 @@ class ChannelsTest < Minitest::Test
     get "/v3/channels/#{channel_id}"
     assert last_response.ok?
     assert_equal "\xF0\x9F\x91\x8D", JSON.parse(last_response.body)['emoticon']
-  end
-
-  def test_create_channel_from_src
-    post '/v3/channels', {abc: 123, hidden: true, frozen: true}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    channel_id = last_response.location.split('/').last
-
-    post "/v3/channels?src=#{channel_id}", '', 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    assert last_response.redirection?
-    follow_redirect!
-
-    response = JSON.parse(last_response.body)
-    assert last_request.url.end_with? "/#{response['id']}"
-    assert_equal 123, response['abc']
-    assert_equal false, response['hidden']
-    assert_equal false, response['frozen']
   end
 
   def test_publish_and_unpublish_channel
@@ -312,6 +311,23 @@ class ChannelsTest < Minitest::Test
 
     post "/v3/channels/#{channel_id}", '{', 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert_equal 400, last_response.status
+  end
+
+  def test_remix_parent
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    encrypted_parent_channel_id = last_response.location.split('/').last
+
+    post "/v3/channels?parent=#{encrypted_parent_channel_id}", {def: 456}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.redirection?
+    follow_redirect!
+
+    response = JSON.parse(last_response.body)
+    assert last_request.url.end_with? "/#{response['id']}"
+    assert_equal 456, response['def']
+
+    _, channel_id = storage_decrypt_channel_id(response['id'])
+    _, parent_channel_id = storage_decrypt_channel_id(encrypted_parent_channel_id)
+    assert_equal parent_channel_id, PEGASUS_DB[:storage_apps].where(id: channel_id).first[:remix_parent_id]
   end
 
   private

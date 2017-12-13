@@ -30,29 +30,6 @@
         %button#ok-button
           =t('dialog.ok')
 
-  #toofew-dialogcontent
-    .modal-content.no-modal-icon.scrollable-element
-      %p.dialog-title
-        =t("multi.toofew_title")
-      %p
-        =t("multi.toofew_body")
-      .farSide
-        %button#ok-button
-          =t('dialog.ok')
-
-  #pre-dialogcontent
-    .modal-content.no-modal-icon.scrollable-element
-      %p.dialog-title
-        != string_or_image(app, data['pre_title']) if data['pre_title']
-      %p
-        != string_or_image(app, data['pre_body']) if data['pre_body']
-      - if data['pre_ani']
-        .aniGif.example-image{style: 'overflow: hidden;'}
-          != string_or_image(app, data['pre_ani'])
-      .farSide
-        %button#ok-button
-          =t('dialog.ok')
-
   #success-dialogcontent
     .modal-content.no-modal-icon.scrollable-element
       %p.dialog-title
@@ -103,26 +80,5 @@
       #buttons
         %button#ok-button{style: 'float: right;'}
           =t('ok')
-
-  #levelgroup-submit-incomplete-dialogcontent
-    .modal-content.no-modal-icon
-      %p.dialog-title= t('level_group-submittable.submit-incomplete-title')
-      %p.dialog-body=  t('level_group-submittable.submit-incomplete-body')
-      %button#cancel-button{style: "float: left"}= t('cancel')
-      %button#ok-button{style: "float: right"}= t('okay')
-
-  #levelgroup-submit-complete-dialogcontent
-    .modal-content.no-modal-icon
-      %p.dialog-title= t('level_group-submittable.submit-complete-title')
-      %p.dialog-body=  t('level_group-submittable.submit-complete-body')
-      %button#cancel-button{style: "float: left"}= t('cancel')
-      %button#ok-button{style: "float: right"}= t('okay')
-
-  #unsubmit-dialogcontent
-    .modal-content.no-modal-icon
-      %p.dialog-title= t('level_group-submittable.unsubmit-title')
-      %p.dialog-body=  t('level_group-submittable.unsubmit-body')
-      %button#cancel-button{style: "float: left"}= t('cancel')
-      %button#ok-button{style: "float: right"}= t('okay')
 
 %script{src: minifiable_asset_path('js/levels/_dialog.js')}

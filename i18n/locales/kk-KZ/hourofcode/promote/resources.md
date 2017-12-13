@@ -1,13 +1,11 @@
-* * *
-
-title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_resources) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # Кодтау сағатын жарнамалауға көмектесу
 
@@ -37,15 +35,15 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 [Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Кодтау сағаты" сауда белгісі. Біз бұл сөз тіркесін қолдануға бөгет жасамаймыз, алайда келесі шектеулерге сәйкес келетіндігіне сенімді болғымыз келеді:**
+**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
 
-  1. Кез келген "Кодтау Сағатының" сілтемесі ешқандай сауда белгісін білдіртпейтіндей қолдану керек, керісінше "Кодтау сағаты" әлеуметтік қозғалысына сілтеу керек. Жақсы мысал: "ACMECorp.com-да Кодтау Сағатына™ қатысыңыз". Жаман мысал: "Кодтау Сағатын ACME Corp арқылы байқап көріңіз".
-  2. Веб-сайтта және қосымшалардағы сипаттамаларда, "ТМ" жоғарғы индексті ең көп байқалатын жерде қолданыңыз.
-  3. Веб-парақшаға (немесе парақшаның астына) CSEdWeek және Code.org веб-сайтының сілтемелерін қосыңыз және оның мағынасы келесідегідей болсын:
+1. Кез келген "Кодтау Сағатының" сілтемесі ешқандай сауда белгісін білдіртпейтіндей қолдану керек, керісінше "Кодтау сағаты" әлеуметтік қозғалысына сілтеу керек. **Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".**
+2. Веб-сайтта және қосымшалардағы сипаттамаларда, "ТМ" жоғарғы индексті ең көп байқалатын жерде қолданыңыз.
+3. Веб-парақшаға (немесе парақшаның астына) CSEdWeek және Code.org веб-сайтының сілтемелерін қосыңыз және оның мағынасы келесідегідей болсын:
     
     *" 'Кодтау Сағаты™' бір сағаттың ішінде, миллиондаған студенттерді информатика мен компьютер бағадарламарын жазуменен таныстыру мақсатында, халықаралық Информатика Аптасы[csedweek.org] және Code.org[code.org] ұжымының ықыласы арқасында ұйымдастырылған."*
 
-  4. Телефон қосымшаларында "Кодтау Сағаты" сөзін қолдану тиым салынады.
+4. Телефон қосымшаларында "Кодтау Сағаты" сөзін қолдану тиым салынады.
 
 <a id="stickers"></a>
 
@@ -60,80 +58,108 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <a id="email"></a>
 
-## Сыныптастарыңызды, әріптестеріңізді немесе достарыңызды тіркелуді өтініңіз:
+### Ask your school, employer, or friends to sign up:
 
-Компьютерлер барлық жерде тарлған және кез келген саланы түбегейлі өзгертуде. Алайда мектептердің жартысынан кемі, компьютер ғылымдары сабақтарын жүргізеді. Дегенімен, жақсы хабар да бар, біз бұны өзгерту жолындамыз. Егер де, сіз Кодтау Сағаты жайлы бұрын естіп көрсеңіз, демек, бұл шара тарихқа енгенін де білерсіз. 100 миллионнан астам студенттер Кодтау Сағатына қатысып көрді.
+**Subject line:** Join me and over 100 million students for an Hour of Code
 
-Кодтау Сағатының арқасында, компьютер ғылымдары жайлы мәлімет Google, MSN, Yahoo сияқты сайттардың бастапқы беттерінде болды! және Disney-де. 100ден астам серіктестіктер бұл шараны қолдау мақсатында бірікті. Әлемнің әрбір Apple дүкенінде Кодтау Сағаты аталып өтті. Обама президент кодтың бірінші жолын жазып, осы шараны қолдайтынын көрсетті.
+Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-Бұл жылы, осы шараны бұдан да маңызды етейік. Кодтау Сағаты 2016-ға қосылуыңызды өтінеміз. Информатика Аптасында, Кодтау Сағаты шарасынан қалмаңыз <%= campaign_date('full') %>.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-Сөзді есіңе сақтаңыз. Осы шараға қатысыңыз. Тіркелу үшін жергілікті мектепті сұраңыз. Немесе Кодтау Сағатына өз бетінше қатысып көріңіз. Әрбір қатысушы негіздерді үйренгеннен, пайда көре алады.
+This year, let's make it even bigger. I’m asking you to join the Hour of Code 2017. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+
+Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
 Get started at http://hourofcode.com/<%= @country %>
 
+<a id="help-schools"></a>
+
+### Volunteer at a school:
+
+**Subject line:** Can we help you host and Hour of Code?
+
+Between Dec. 4-10, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
+
+[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
+
+The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+
+Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code.
+
+Thanks to the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+
+You can read more about the event at http://hourofcode.com/. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate.
+
+Thanks!
+
+[Your name], [Your organization]
+
 <a id="media-pitch"></a>
 
-## БАҚ-ты сіздің шараңызға қатысу үшін шақырыңыз:
+### Invite media to attend your event:
 
-**Пәннің аты:** Студенттерді компьютер ғылымдарымен таныстыру үшін, жергілікті мектептер күштерін біріктірді
+**Subject line:** Local school joins mission to introduce students to computer science
 
-Компьютерлер барлық жерде тарлған және кез келген саланы түбегейлі өзгертуде. Алайда, компьютер ғылымдары сабақтарын мектептердің тек жартысынан кемі ғана жүргізеді. Информатика сыныптарында және жалпы техника саласында, қыздар мен кейбір ерекше топтар аз көрсетілген. Дегенімен, жақсы хабар да бар, біз бұны өзгерту жолындамыз.
+Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Дегенімен, жақсы хабар да бар, біз бұны өзгерту жолындамыз.
 
-Кодтау Сағатының арқасында, компьютер ғылымдары жайлы мәлімет Google, MSN, Yahoo сияқты сайттардың бастапқы беттерінде болды! және Disney. 100ден астам серіктестіктер бұл шараны қолдау мақсатында бірікті. Әлемнің әрбір Apple дүкенінде Кодтау Сағаты аталып өтті. Обама президент кодтың бірінші жолын жазып, осы шараны қолдайтынын көрсетті.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
-Сол себепті [МЕКТЕПТІҢ АТЫ] мектебінің [Х сан] әрбір студенті, тарихтағы білім саласындағы ең ауқымды оқиға қосылды. Информатика Аптасы көлеміндегі, Кодтау Сағаты (<%= campaign_date('full') %>).
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-Сізді, біздің бастапқы жиналсымызға қатысуға шақыру үшін, жазып отырмын[DATE].
+I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
-Кодтау Сағаты, Code.org бейкоммерциялық ұйыммен және басқа да жүзден астам серіктестіктерімен ұйымдастырылған. Бұл ауқымды қозғалыс, қазіргі оқушылардың, критикалық дағдыларды үйренуге, 21 ғасырдағы жетістікке жету үшін дайын екендігіне сенімді. Бізгі қосылуға өтінеміз.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
 
-**Байланыс көздері:**[СІЗДІҢ АТЫҢЫЗ], [TITLE] номер: (212) 555-5555
+**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555 **When:** [DATE and TIME of your event] **Where:** [ADDRESS and DIRECTIONS]
 
-**Қашан:**[СІЗДІҢ ШАРАҢЫЗДЫҢ КҮНІ МЕН УАҚЫТЫ]
+I look forward to being in touch.
 
-**Қай жерде:**[АДРЕС ПЕН БАҒЫТЫ]
-
-Болашақта әлі де байаланыста боламыз деген үміттемін.
+[Your Name]
 
 <a id="parents"></a>
 
-## Өзіңіздің ата-аналарыңызға бұл шара жайында айтыңыз:
+### Tell parents about your school's event:
 
-Құрметті ата-аналар,
+**Subject line:** Our students are changing the future with an Hour of Code
 
-Біз технология заманында өмір сүреміз. Және оқушы, болашақта ересек болғанда, кез келген салада неғұрлым технологияны жақсы білсе, соғұрлым үлкен жетістіктерге жетеді.
+Dear Parents,
 
-Бірақ арамыздағы тек кейбір адмадар ғана **қалай** технологияның жұмыс істейтініне үйренеді. Өкінішке орай, жартысынан кем мектпетерде ғана информатика сабағы жүргізіледі.
+We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
-Сол себепті біздің мектеп түгелдей, білім саласы тарихындағы ең ауқымды оқиғаға қосылып отыр. Информатика Апттсаының көлеміндегі, Кодтау сағаты. Бүкіл әлемдегі 100 миллионнан астам оқушылар, Кодтау Сағатын байқап көрді.
+But only a tiny fraction of us are learning **how** technology works. Fewer than half of all schools teach computer science.
 
-Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. Сіздің оқушыларыңызға бағадарламаларды жазу шараларын өткізуді жалғастыру үшін, біз Кодтау Сағатын өте ауқымды шара еткіміз келеді. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Бұл сіздің [ҚАЛАНЫҢ АТЫ] білім саласының болашағын өзгертуге деген мүмкіндігіңіз.
+Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
-http://hourofcode.com/<%= @country %> сайтына толығырақ білу үшін кіріп, осы оқиғаны таратуға көмектесіңіз.
+This is a chance to change the future of education in [TOWN/CITY NAME].
 
-Ізгі тілекпен,
+See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
-Сіздің бағытберушіңіз
+Sincerely,
+
+Your principal
 
 <a id="politicians"></a>
 
-## Жергілікті саясаткерді сіздің мектептегі шараға шақырыңыз:
+### Invite a local politician to your school's event:
 
-Құрметті [ӘКІМ/ГУБЕРНАТОР/ӨКІЛ/СЕНАТОР ТЕГІ]:
+**Subject line:** Join our school as we change the future with an Hour of Code
 
-Did you know that computing is the #1 source of wages in the U.S.? Ел көлемінде 500,000-нан астам есептеу жұмыстары ашық, алайда, былтыр тек қана 42,969 компьютер ғылымдарының студенттері бітіріп, жұмыс күшіне енді.
+Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
-Computer science is foundational for *every* industry today. Yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-Сол себепті біздің мектеп түгелдей, білім саласы тарихындағы ең ауқымды оқиғаға қосылып отыр. Информатика Апттсаының көлеміндегі, Кодтау сағаты. Бүкіл әлемдегі 100 миллионнан астам оқушылар, Кодтау Сағатын байқап көрді.
+Computer science is foundational for *every* industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
+
+I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
 Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
-Шын жүректен [NAME], [TITLE]
+Sincerely,
+
+[Your Name], [Title]
 
 <%= view :signup_button %>

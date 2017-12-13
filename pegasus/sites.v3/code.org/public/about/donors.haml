@@ -34,6 +34,3 @@ style_min: true
   %p
     = view :about_donors_text, supporters: DB[:cdo_donors].where(level_s: category[:level]).where("show_s != 'none'")
 
-%hr
-%a{href:"/about/donors-other"}
-  View all other supporters

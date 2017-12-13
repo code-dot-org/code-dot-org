@@ -1,4 +1,5 @@
 {
+  "startButton": "시작",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "모두",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "초등2-초등5 학년",
   "filterGrades68": "초등6-중등2 학년",
   "filterGrades9": "중등3 학년 이상",
-  "filterTeacherExperience": "교육 경험",
-  "filterTeacherExperienceBeginner": "초보자",
-  "filterTeacherExperienceComfortable": "경험있음",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "학생 경험",
   "filterStudentExperienceBeginner": "초보자",
   "filterStudentExperienceComfortable": "경험있음",

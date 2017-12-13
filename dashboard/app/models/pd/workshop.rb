@@ -331,6 +331,14 @@ class Pd::Workshop < ActiveRecord::Base
     "#{course_subject} workshop on #{start_time} at #{location_name}"[0...255]
   end
 
+  # E.g. "March 1-3, 2017" or "March 30 - April 2, 2017"
+  # Assume no workshops will span a new year
+  def friendly_date_range
+    sessions.first.start.month == sessions.last.start.month ?
+      "#{sessions.first.start.strftime('%B %-d')}-#{sessions.last.start.strftime('%-d, %Y')}" :
+      "#{sessions.first.start.strftime('%B %-d')} - #{sessions.last.start.strftime('%B %-d, %Y')}"
+  end
+
   # Puts workshop in 'In Progress' state
   def start!
     raise 'Workshop must have at least one session to start.' if sessions.empty?

@@ -29,6 +29,7 @@ function showHomepage() {
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
   const query = queryString.parse(window.location.search);
+  const isEnglish = homepageData.isenglish;
 
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
@@ -146,11 +147,14 @@ function showHomepage() {
                 id: announcementId
               }
             ]}
+            hocLaunch={homepageData.hoc_launch}
             courses={homepageData.courses}
             joinedSections={homepageData.joined_sections}
             topCourse={homepageData.topCourse}
             isRtl={isRtl}
             queryStringOpen={query['open']}
+            canViewAdvancedTools={homepageData.canViewAdvancedTools}
+            isEnglish={isEnglish}
           />
         )}
         {!isTeacher && (
@@ -160,6 +164,7 @@ function showHomepage() {
             sections={homepageData.sections}
             canLeave={homepageData.canLeave}
             isRtl={isRtl}
+            canViewAdvancedTools={homepageData.canViewAdvancedTools}
           />
         )}
       </div>

@@ -5,13 +5,24 @@ import Responsive from '../responsive';
 import Certificate from './Certificate';
 import StudentsBeyondHoc from './StudentsBeyondHoc';
 import TeachersBeyondHoc from './TeachersBeyondHoc';
-import { tutorialTypes } from './tutorialTypes.js';
+
+const styles = {
+  container: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+};
 
 export default class Congrats extends Component {
   static propTypes = {
-    completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
+    certificateId: PropTypes.string,
+    tutorial: PropTypes.string,
     MCShareLink: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
+    userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
+    userAge: PropTypes.number,
+    isEnglish: PropTypes.bool.isRequired,
+    randomDonorTwitter: PropTypes.string,
   };
 
   constructor(props) {
@@ -49,24 +60,60 @@ export default class Congrats extends Component {
   }
 
   render() {
-    const { completedTutorialType, MCShareLink, isRtl } = this.props;
+    const {
+      tutorial,
+      certificateId,
+      MCShareLink,
+      isRtl,
+      userType,
+      userAge,
+      isEnglish,
+      randomDonorTwitter
+    } = this.props;
+
+    const tutorialType = {
+      'applab-intro': 'applab',
+      hero: '2017Minecraft',
+      minecraft: 'pre2017Minecraft',
+      mc: 'pre2017Minecraft',
+    }[tutorial] || 'other';
+
     const contentStyle = {
+      ...styles.container,
       width: this.responsive.getResponsiveContainerWidth()
     };
 
     return (
-      <div style={contentStyle}>
-        <Certificate
-          completedTutorialType={completedTutorialType}
-        />
-        <StudentsBeyondHoc
-          completedTutorialType={completedTutorialType}
-          MCShareLink={MCShareLink}
-          responsive={this.responsive}
-          isRtl={isRtl}
-        />
-        <TeachersBeyondHoc/>
-      </div>
+        <div style={contentStyle}>
+          <Certificate
+            tutorial={tutorial}
+            certificateId={certificateId}
+            isRtl={isRtl}
+            responsive={this.responsive}
+            randomDonorTwitter={randomDonorTwitter}
+          />
+          {userType === "teacher" && isEnglish && (
+            <TeachersBeyondHoc
+              responsive={this.responsive}
+              isRtl={isRtl}
+            />
+          )}
+          <StudentsBeyondHoc
+            completedTutorialType={tutorialType}
+            MCShareLink={MCShareLink}
+            responsive={this.responsive}
+            isRtl={isRtl}
+            userType={userType}
+            userAge={userAge}
+            isEnglish={isEnglish}
+          />
+          {userType === "signedOut" && isEnglish && (
+            <TeachersBeyondHoc
+              responsive={this.responsive}
+              isRtl={isRtl}
+            />
+          )}
+        </div>
     );
   }
 }

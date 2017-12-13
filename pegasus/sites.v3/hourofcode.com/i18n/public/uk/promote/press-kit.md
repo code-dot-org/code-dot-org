@@ -1,63 +1,60 @@
 ---
-
 title: <%= hoc_s(:title_press_kit) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ## Як залучити медіа до своїх заходів Години коду
 
-*For all press and media inquiries, contact <press@code.org>*
+*З усіма запитами від преси та ЗМІ звертайтеся через <press@code.org>*
 
 ### Основні поради
 
-  * Зверніться до преси електронною поштою за два тижні до запланованого заходу. Якщо не отримаєте відповіді, спробуйте надіслати листа ще раз або зателефонуйте.
-  * Попросіть колег або волонтерів зробити кілька фотографій заходу для розміщення в Інтернеті або пресі.
-  * Напишіть про Годину коду на головній сторінці свого сайту та у шкільній газеті. Розмістіть інформацію про планований захід, додайте фотографії роботи учнів.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Зверніться до преси електронною поштою за два тижні до запланованого заходу. Якщо не отримаєте відповіді, спробуйте надіслати листа ще раз або зателефонуйте.
+- Попросіть колег або волонтерів зробити кілька фотографій заходу для розміщення в Інтернеті або пресі.
+- Напишіть про Годину коду на головній сторінці свого сайту та у шкільній газеті. Розмістіть інформацію про планований захід, додайте фотографії роботи учнів.
+- Використовуючи Facebook та Twitter, поділіться новинами про свої плани, оголосіть про заходи та поширте фотографії протягом тижня інформатики 5-11 грудня. Використовуйте хеш-тег **#HourOfCode** , щоб Ваш захід можна було побачити на головній сторінці сайту Code.org.
 
 ### Покрокова інструкція:
 
-**1. Plan your event**
+**1. Сплануйте свій захід**
 
-  * Сплануйте збори для початку Години коду.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * Організовуйте групові діяльності (наприклад, безмашинні вправи), та демонструйте результати роботи учнів.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
+- Сплануйте збори для початку Години коду.
+- Розішліть [листа](<%= resolve_url('/promote/resources#sample-emails') %>) батькам. Попросіть їх поширити інформацію.
+- Надішліть [листа](<%= resolve_url('/promote/resources#sample-emails') %>) мерові, депутатові чи підприємцю із запрошенням відвідати Вашу школу та зустрітись із учнями.
+- Організовуйте групові діяльності (наприклад, безмашинні вправи), та демонструйте результати роботи учнів.
+- Для заохочення покажіть [відео Години коду](<%= resolve_url('/') %>) від Code.org або одне із [цих](<%= resolve_url('/promote/resources#videos') %>).
 
-**2. Identify specific local reporters that cover education or local events.**
+**2. З'ясуйте, які конкретно місцеві журналісти висвітлюють освітні або місцеві події.**
 
-Think a local newspaper, TV station, radio station or blog.
+Подумайте про місцеву газету, телеканал, радіостанцію або блог.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+Пошукайте контактні дані журналістів онлайн. Якщо знайти не вдається, зателефонуйте або зв'яжіться з редакцією, яка скерує до відповідного журналіста.
 
-**3. Contact local media**
+**3. Зверніться до місцевих ЗМІ**
 
-The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>).**
+Найкраще передати інформацію електронною поштою. Вона має бути короткою та інформативною: чому людям важливо зацікавитись цим заходом? Включіть контактну інформацію (з номером мобільного) особи, яка буде присутня на заході. **Перегляньте [зразок звернення до преси](<%= resolve_url('/promote/resources#sample-emails') %>).**
 
-**4. Prepare to field questions about your school event. Here are some examples:**
+**4. Підготуйте кілька запитань та коротких відповідей про свій захід. Наприклад:**
 
-*Why is your school doing an Hour of Code?*
+*Чому ваша школа проводить Годину коду?*
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+Хоча ми усі знаємо, як важливо навчити учнів орієнтуватися у сучасному технологічно насиченому світі, багато вчителів самі не володіють інформаційними технологіями і не знають з чого почати. Ця подія є шансом для всіх нас познайомитись із справжньою інформатикою.
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+Ми сподіваємося, що це розпалить в учнів іскру інтересу до продовження навчання. Дослідження показують, що діти можуть опанувати базові поняття програмування, навіть до того, як вони навчаться читати і писати. Власне, їхній мозок більш сприйнятливий до комп'ютерних мов програмування у молодшому віці, так само як і до іноземних мов.
 
-*Why is this important?*
+*Чому це важливо?*
 
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
+Технології змінюють кожну галузь на планеті. 2015 року 7 мільйонів вакансій у США були у професіях, — включно з мистецтвом та дизайном, — для яких мають значення навички кодування. Але 75 відсотків шкіл у США не вчать інформатики. Настав час нам наздоганяти 21-ше сторіччя. Ми знаємо, що незалежно від того, чим вирішать займатися наші учні у дорослому житті, медициною, бізнесом, політикою чи мистецтвом, знання того, як створюються технології, надасть їм впевненості та конкурентоспроможності.
 
-**More details and a quote you can use in materials**
+**Детальніша інформація та цитати, які можна використати у матеріалах**
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+«Годину коду створено для розвінчування міфів про складність програмування, адже основи доступні для кожного», говорить Гаді Партові, засновник і голова Code.org. «Понад 100 мільйонів учнів по всьому світу вже пробували Годину коду. Попит на відповідну 21-шому сторіччю освіту з інформатики перетинає всі межі й не знає кордонів.»
 
-**About Code.org**
+**Про Code.org**
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
+Code.org® є неприбутковою громадською організацією, яка займається розширенням залучення до інформатики, та збільшенням участі жінок та національних меншин. Її бачення полягає в тому, що кожен учень у кожній школі повинен мати можливість вивчати програмування. Після утворення 2013 року Code.org започаткувала кампанію Години коду, яка на даний момент познайомила з інформатикою понад 100 мільйонів учнів, та уклала партнерство з 70-ма освітніми округами для розширення програм з інформатики. Code.org підтримується з філантропічних пожертв від корпорацій, фондів та щедрих людей, включно з Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network та іншими. For more information, please visit: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
 Find more resources and sample emails [here](<%= resolve_url('/promote') %>).

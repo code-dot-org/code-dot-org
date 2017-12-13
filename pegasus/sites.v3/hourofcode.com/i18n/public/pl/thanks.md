@@ -18,7 +18,6 @@ social:
   "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
   "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 ---
-
 <%
     facebook = {:u=>"http://#{request.host}/us"}
 
@@ -28,40 +27,37 @@ social:
 
 # Dziękujemy za rejestrację jako organizator Godziny Kodowania!
 
-Właśnie umożliwiasz uczniom z całego świata naukę jednej Godziny Kodowania, która może *zmienić resztę ich życia*, podczas <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. Co teraz możesz zrobić?
+Dziękujemy za pomoc w umożliwieniu uczniom nauki informatyki. Chcielibyśmy dać wam zestaw profesjonalnych plakatów, pokazujących różne przykłady, do waszej klasy. Użyj kodu **FREEPOSTERS** przy kasie. (Uwaga: jest to wyłącznie dla dostępnych zapasów, należy pokryć koszty wysyłki. Ponieważ plakaty wysyłane są ze Stanów Zjednoczonych, koszty przesyłki mogą być wyższe niż do Kanady i na arenie międzynarodowej. Rozumiemy, że może to przewyższać twój budżet, dlatego zachęcamy do wydrukowania [pliki PDF](https://code.org/inspire) dla Twojej klasy.)  
+<br />[<button>Pobierz plakaty</button>](https://store.code.org/products/code-org-posters-set-of-12) Użyj kodu do pobrania darmowych plakatów
 
-## 1. Rozgłaszaj
+<% if @country == 'us' %> Dzięki hojności Ozobot, Dexter Industries, littleBits, i Wonder Workshop, ponad 100 klas będzie wybranych do otrzymania zestawów robotów lub części dla swojej klasy! Aby mieć możliwość otrzymania zestawu, wypełnij ankietę na Code.org po Godzinie Kodowania. Code.org wylosuje zwycięzców. W międzyczasie, sprawdź niektóre działania robotyki i obwody. Pamiętaj, akcja ta jest dostępna tylko dla szkół w USA. <% end %>
 
-Dołączyłeś właśnie do inicjatywy Godzina Kodowania. Powiedz o tym swoim przyjaciołom z **#HourOfCode**!
+<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+## 1. Spread the word in your school and community
+
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Nie musisz być w szkole, by poznać nowe umiejętności. Invite a local politician or policy maker to visit your school for the Hour of Code. Może to pomóc w tworzeniu wsparcia dla informatyki w twoim obszarze poza tą jedną godziną.
+
+Użyj te [plakaty, banery, naklejki, wideo, i wiele więcej](<%= resolve_url('/promote/resources') %>) dla swojego wydarzenia.
 
 ## 2. Znajdź lokalnego wolontariusza, by pomógł Ci z tym wydarzeniem.
 
-[Znajdź na naszej mapie wolontariuszy](https://code.org/volunteer/local) ochotnika, który może odwiedzić Twoją klasę lub zorganizować zdalnie video chat, aby zainspirować Twoich uczniów, pokazując szerokie możliwości wykorzystania informatyki.
+[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## 3. Poproś całą szkołę, aby zaproponowała Godzinę Kodowania
+## 3. Plan your Hour of Code
 
-[Wyślij tego e-maila](<%= resolve_url('/promote/resources#sample-emails') %>) swojemu dyrektorowi i wezwij każdą klasę w swojej szkole, aby się zarejestrowała.
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
 
-## 4. Poproś swojego pracodawcę o przyłączenie się do tej inicjatywy
+# Go beyond an Hour of Code
 
-[Wyślij tę wiadomość](<%= resolve_url('/promote/resources#sample-emails') %>) do swojego menedżera lub dyrektora firmy.
+<% if @country == 'us' %> An Hour of Code is just the beginning. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
 
-## 5. Promuj Godzinę Kodowania w swojej społeczności
+You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-[Zatrudnij grupę lokalną](<%= resolve_url('/promote/resources#sample-emails') %>) — klub harcerzy lub harcerek, kościół, uniwersytet, grupę weteranów, unię pracy lub nawet kilku znajomych. Nie musisz być w szkole, by nauczyć się nowych umiejętności. Użyj te [plakaty, banery, naklejki, wideo, i wiele więcej](<%= resolve_url('/promote/resources') %>) dla swojego wydarzenia.
+<% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-## 6. Poproś władze lokalne o udzielenie wsparcia Godzinie Kodowania
-
-[Wyślij tę wiadomość](<%= resolve_url('/promote/resources#sample-emails') %>) do przedstawicieli władz lokalnych, rady miasta lub rady szkoły i zaproś ich do swojej szkoły na Godzinę Kodowania. Może to pomóc w tworzeniu wsparcia dla informatyki w twoim obszarze poza tą jedną godziną.
-
-## 7. Zaplanuj swoją Godzinę Kodowania
-
-Wybierz aktywność w ramach Godziny Kodowania i [przejrzyj, jak pokierować](<%= resolve_url('/how-to') %>).
-
-## 8. Go beyond an Hour of Code
-
-Ready to go beyond an hour? Check out [our full courses and teacher resources](<%= resolve_url('https://code.org/teach')%>) including professional learning opportunities for elementary, middle and high school teachers.
+Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
 
 <%= view 'popup_window.js' %>

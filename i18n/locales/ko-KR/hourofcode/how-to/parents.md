@@ -1,17 +1,17 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: < % = hoc_s(:title_how_to_parents) % >
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
 # Hour of Code 과정을 자녀와 함께 완료하는 방법
 
 Hour of Code 과정 하나를 집 또는 자녀의 학급에서 완료해 보세요! 여기에 그 방법이 있습니다.
 
-## 1) 이 설명 동영상을 시청하십시오. <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) 튜토리얼을 선택하십시오.
+## 1) 이 설명 동영상을 살펴보세요. <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+## 2) 튜토리얼을 선택하세요.
 
 We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
@@ -33,7 +33,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 **영감을 주는 동영상을 보여주세요:**
 
 - 빌 게이츠(Bill Gates), 마크 주커버그(Mark Zuckerberg)와 NBA 농구 스타인 크리스 보쉬(Chris Bosh)의 원래 Code.org 소개 동영상이 있습니다.([ 1분 ](https://www.youtube.com/watch?v=qYZF6oIZtfc), [ 5분 ](https://www.youtube.com/watch?v=nKIu9yen5nc), [ 9분 ](https://www.youtube.com/watch?v=dU1xS07N-FA) 버전들이 있습니다.)
-- [2013 Hour of Code 동영상](https://www.youtube.com/watch?v=FC5FbmsH4fw) 또는 <% if @country == 'uk' %> [2015 Hour of Code 동영상](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [2015 Hour of Code 동영상](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [오바마 대통령은 모든 학생들이 컴퓨터과학(정보과학)을 배울 수 있도록 도와달라고 요청하고 있습니다.](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - 영감을 주는 더 많은 [자료](%= resolve_url('https://code.org/inspire') %)와 [비디오](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)를 찾아보세요
 
@@ -51,7 +51,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 여러분이 원하는 튜토리얼을 선택했다면, 그 튜토리얼의 짧은 링크를 북마크할 수 있습니다.
 
-**여러분의 자녀가 어려워 한다면,**
+**여러분의 자녀가 어려워 한다면**
 
 괜찮다고 응답하세요:
 

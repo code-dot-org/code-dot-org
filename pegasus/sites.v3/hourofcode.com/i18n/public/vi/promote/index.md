@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_how_to_promote) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 <%
@@ -15,7 +12,7 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# How to get involved
+# Get your community involved in the Hour of Code
 
 ## 1. Truyền tải thông điệp
 
@@ -25,18 +22,18 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. Đề nghị trường của bạn tổ chức Hour of Code
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up.
+[Gửi email này](<%= resolve_url('/promote/resources#sample-emails') %>) cho hiệu trưởng của bạn và thách thức mỗi lớp học tại trường học của bạn để đăng ký.
 
-## 3. Xin phép ông chủ của bạn để tham gia
+## 3. Xin phép người tổ chức của bạn để tham gia
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
+[Gửi email này](<%= resolve_url('/promote/resources#sample-emails') %>) đến quản lý của bạn hoặc CEO của công ty.
 
-## 4. Promote Hour of Code in your community
+## 4. Quảng bá Hour of Code trong cộng đồng của bạn
 
-[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+[Tuyển dụng một nhóm địa phương](<%= resolve_url('/promote/resources#sample-emails') %>) — hướng đạo câu lạc bộ, nhà thờ, trường đại học, cựu chiến binh nhóm, Liên đoàn lao động, hoặc thậm chí một số người bạn. Bạn không cần phải ở trong trường học để tìm hiểu kỹ năng mới. Sử dụng các [áp phích, biểu ngữ, stickers, video và nhiều hơn nữa](<%= resolve_url('/promote/resources') %>) cho sự kiện của riêng bạn.
 
-## xin phép chính quyền đìa phương để xác nhận hỗ trợ cho sự kiện "Hour of Code"
+## 5. Xin phép chính quyền đìa phương để xác nhận hỗ trợ cho sự kiện "Hour of Code"
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Gửi email](<%= resolve_url('/promote/resources#sample-emails') %>) đến đại diện địa phương, hội đồng thành phố hay hội đồng nhà trường và mời họ đến thăm trường học của bạn cho Hour of Code. Nó có thể giúp xây dựng hỗ trợ cho khoa học máy tính trong khu vực của bạn vượt quá một giờ.
 
 <%= view :signup_button %>

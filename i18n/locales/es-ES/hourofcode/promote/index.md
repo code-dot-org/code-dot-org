@@ -1,24 +1,23 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_promote) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_how_to_promote) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 <% facebook = {:u=>"http://#{request.host}/es"}
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HoraDeCódigo' %>
 
-# ¿Cómo participar?
+# Involucra a tu comunidad en la Hora del Código
 
 ## 1. Corre la voz
 
-Tell your friends about the **#HourOfCode**!
+¡Habla a tus amigos de la **#HoraDelCódigo**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Pídele a toda tu escuela que ofrezca una Hora del Código
+## 2. Pide a tu escuela que ofrezca una "Hora del Código"
 
 [Envíe este correo electrónico](%= resolve_url('/promote/resources#sample-emails') %) a su director y desafíe a cada clase de su escuela para que se inscriba.
 

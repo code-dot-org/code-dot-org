@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_proclamation) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ### Dövlət adamları və yerli rəsmi şəxslər tərəfindən istifadə edilə biləcək, İnformatika Təhsili Həftəsi və onun məqsədlərinə dəstək olan qətnamə nümunəsi aşağıda verilib.

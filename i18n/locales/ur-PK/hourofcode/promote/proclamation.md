@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_proclamation) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ### ذیل میں ایک سیمپل جو کمپیوٹر سائنس ایجوکیشن ویک کی حمایت میں قرارداد ہے اور جس کے مقاصد کو اسٹیٹ اور مقامی لیجسٹیز (قانون ساز) استعمال کرسکتے ہیں۔

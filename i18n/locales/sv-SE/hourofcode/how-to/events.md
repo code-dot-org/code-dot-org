@@ -1,42 +1,45 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_how_to_events) %>
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
 # Hur man organiserar en Hour of Code
 
-## 1) Förbered ditt evenemang
+## 1. Prepare for your event
 
-  * Bestäm en plats, datum och tid
-  * Skicka [ett brev](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) med inbjudan till din lokala borgmästaren, politiker, eller inflytelserika personer.
-  * Bjud in media/press. dvs. lokala nyhetstationer, tidningen, utbildnings/tech bloggare. Se vårt [presskit](%= resolve_url('/promote/press-kit') %) för hjälp.
+- Determine a venue, date, and time.
+- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=resolve_url('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
+- Bjud in media/press. dvs. lokala nyhetstationer, tidningen, utbildnings/tech bloggare. Se vårt [presskit](%= resolve_url('/promote/press-kit') %) för hjälp.
 
-## 2) Under ditt event
+## 2. During your event
 
-  * Sparka igång ditt event med en av våra [inspirerande videor](%= resolve_url('/promote/resources#videos') %).
-  * Håll en introduktion om varför datavetenskap är viktigt, med hjälp av dessa [informationsvisualiseringar och statistik](%= resolve_url('/promote/stats') %).   
+- Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
+- Håll en introduktion om varför datavetenskap är viktigt, med hjälp av dessa [informationsvisualiseringar och statistik](%= resolve_url('/promote/stats') %).   
       
     
-  * Andra event idéer: 
-      * Bjuda in en lokal företagsledare för att diskutera hennes eller hans arbete i samband med datavetenskap
-      * Bjud in lokala politiker och ha elever som lär ut programmering till dem
-      * Har en grupp elever som visar en unplugged aktivitet
-      * Ha en grupp elever som lär rektorn eller en grupp lärare att programmera
-      * Om din skola redan lär ut datavetenskap, låt eleverna visa upp sina projekt
+- Andra event idéer: 
+    - Invite a local industry leader to discuss his or her work involving computer science.
+    - Invite a local politician and have students teach him or her how to code.
+    - Have a group of students demonstrate an unplugged activity.
+    - Have a group of students teach the principal or a group of teachers how to code.
+    - If your school already teaches computer science, have students demo projects.
 
-## 3) Dela hur det gick
+## 3. Share how it went
 
-  * Dela bilder på evenemanget på Facebook och Twitter. 
-  * Använd hashtagen **#HourofCode**
+- Dela bilder på evenemanget på Facebook och Twitter. 
+- Use the hashtag **#HourOfCode**
+
+## Host a Family Code Night with the Hour of Code and invite parents to participate
+
+Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 ## Exempel på evenemang
 
 **Evenemang:** Kick-off för hela skolan och starten på Computer Science Education Week
 
-**Datum:** 5:e december (starten för Computer Science Education Week)
+**Date:** Dec. 5th (start of Computer Science Education Week)
 
 **Tid:** Under skoldagen. Förmiddagsevenemang föredras. Cirka 1 timme.
 
@@ -46,13 +49,13 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 ## Program
 
-| Tid           | Aktivitet                                                                                                                                                             |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 | Sparka igång ditt event med en av våra [inspirerande videor](%= resolve_url('/promote/resources#videos') %)                                                           |
-| 10:05 - 10:15 | Rektorn håller en introduktion om varför datavetenskap är viktigt, med hjälp av dessa [informationsvisualiseringar och statistik](%= resolve_url('/promote/stats') %) |
-| 10:15 - 10:30 | Speciell gäst berättar om sin bakgrund och hur teknik och datavetenskap spelar en viktig roll i deras liv varje dag.                                                  |
-| 10:30 - 10:40 | Studenter gör en demo för skolan. Kul twist: är att låta dem undervisa rektorn, politiker eller andra studenter.                                                      |
-| 10:40 - 11:00 | Studenter gör en demo på en unplugged aktivitet och hur datavetenskap kan läras ut utan att använda datorer.                                                          |
-| 11:00 - 11:05 | Lärare som hjälpte till med att få hela skolan att vara med ger avslutande kommentarer.                                                                               |
+| Tid           | Aktivitet                                                                                                                                        |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 10:00 - 10:05 | Sparka igång ditt event med en av våra [inspirerande videor](%= resolve_url('/promote/resources#videos') %)                                      |
+| 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %). |
+| 10:15 - 10:30 | Speciell gäst berättar om sin bakgrund och hur teknik och datavetenskap spelar en viktig roll i deras liv varje dag.                             |
+| 10:30 - 10:40 | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                        |
+| 10:40 - 11:00 | Studenter gör en demo på en unplugged aktivitet och hur datavetenskap kan läras ut utan att använda datorer.                                     |
+| 11:00 - 11:05 | Lärare som hjälpte till med att få hela skolan att vara med ger avslutande kommentarer.                                                          |
 
 <%= view :signup_button %>

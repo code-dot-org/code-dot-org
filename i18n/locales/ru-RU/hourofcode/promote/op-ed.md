@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_op_ed) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ### Ниже приведен пример обзорных поддержку Недели Компьютерные науки, образования и ее цели, которые могут быть использованы государством, местные законодатели, лидеры бизнеса и т. д.
@@ -17,21 +16,21 @@ Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/
 
 **By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+Компьютеры есть везде. Они в наших карманах. Они на наших стенах. Они в наших автомобилях. Они являются важной частью нашей инфраструктуры, от электросетей до светофоров, до внутренней работы наших финансовых рынков. И все эти компьютеры имеют однно общее свойство. Требуется программное обеспечение, чтобы сказать им, что делать.
 
-But who exactly is going to write this software?
+Но кто именно будет писать это программное обеспечение?
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. Вы ошибаетесь. В самом деле изучением информатики стало заниматься меньше студентов, стало меньше школ информатики, чем десять лет назад.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
+В то время, когда спрос на квалифицированных программистов достиг пика, мы стали выпускать меньше компьютерщиков. Даже в это время высокой безработицы, тысячи рабочих мест, многие из них прямо здесь, в **[INSERT STATE/CITY]**, будут незаполнены изза отсутствия достаточного количества людей с нужным навыком.
 
-Why is this? And how can we address it?
+Почему это? И как можно исправить?
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+Проблема начинается в наших школах. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+Почти все основные вычислительные новшества были изобретены здесь, в этой стране, но мы находимся в опасности потерять это лидерство, если мы не сделаем что-то сейчас.
 
-We need to make some changes.
+Нам нужно внести некоторые изменения.
 
 **[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 

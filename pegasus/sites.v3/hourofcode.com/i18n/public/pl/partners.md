@@ -1,16 +1,13 @@
 ---
-
-Tytuł: <%= hoc_s(:title_partners) %>
-
+title: <%= hoc_s(:title_partners) %>
 ---
+Godziną Kodowania kieruje Komitet Doradczo-Odwoławczy inicjatyw Godzina Kodowania i Tydzień Edukacji Informatycznej.
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+[Komitet Doradczy](<%= resolve_url('/advisory-committee') %>) składa się z przedstawicieli ze szkół K-12, środowisk akademickich, organizacji non-profit, organizacji komercyjnych i organizacji międzynarodowych. Komitet ten kieruje strategią dotyczącą kampanii Godzina Kodowania.
 
-The [Advisory Committee](<%= resolve_url('/advisory-committee') %>) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+[ Komitet ds. Oceny ](<%= resolve_url('/review-committee') %>) składa się z 15 edukatorów z różnych poziomów K-12, oceniających i rekomendujących działania przy użyciu tabeli Komitetu Doradczego. Ci edukatorzy sprawdzają samouczki dla uczniów i scenariusze lekcji dla nauczycieli nadsyłane przez setki partnerów, oceniając edukacyjną wartość działań, zdolność angażowania uczniów i potencjalne odwołania do różnych grup uczniów.
 
-The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led tutorials and teacher-led lesson plans submitted by hundreds of tutorial partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
-
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Zarówno praca, jak i zaangażowanie obu komitetów przyczyniły się do sukcesu Godziny Kodowania i wizji tej inicjatywy proponującej każdemu uczniowi wprowadzenia do informatyki.
 
 <% if @country == 'la' %>
 
@@ -116,7 +113,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% end %>
 
-# Główni Partnerzy oraz Korporacje Wsparające
+# Główni Partnerzy oraz Korporacje Wspierające
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
@@ -134,7 +131,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 ---
 
-# Partnerzy Samouczków
+# Partnerzy Aktywności
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 

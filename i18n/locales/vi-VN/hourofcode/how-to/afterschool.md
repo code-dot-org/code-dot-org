@@ -1,81 +1,77 @@
-* * *
-
-title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_how_to) %>
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
-# Làm thế nào để dạy Một Giờ Lập Trình sau giờ học
+# Làm thế nào để dạy Giờ Lập Trình tại các lớp ngoại khoá và câu lạc bộ
 
-## 1) Xem video hướng dẫn này <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Chọn bài hướng dẫn:
+Tham gia vào các phong trào và giới thiệu nhóm học sinh cho giờ của công nghệ máy tính đầu tiên của họ với các bước sau. Giờ Lập Trình rất dễ dàng để thực hiện - ngay cả với người mới luôn đấy! Nếu bạn muốn có thêm sự trợ giúp, bạn có thể tìm đến [tình nguyện viện địa phương](%= resolve_url('https://code.org/volunteer/local') %) để giúp bạn tổ chức Giờ Lập trình trong lớp của bạn.
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+## 2. Xem video hướng dẫn <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-**Tất cả những khóa học Hour of Code:**
+## 2. Chọn một bài hướng dẫn
 
-  * Require minimal prep-time for organizers
-  * Việc tự điều khiển có cho phép trẻ làm theo trình độ kỹ năng và tốc độ của chúng không?
+Chúng tôi cung cấp một loạt bài [ hướng dẫn vui vẻ, kéo dài một giờ ](%= resolve_url('/learn') %) cho mọi lứa tuổi, do một loạt các đối tác xây dựng nên. [Hãy thử chúng!](%= resolve_url('/learn') %)
+
+**Tất cả bài hướng dẫn Giờ Lập Trình** hãy yêu cầu thời gian chuẩn bị tối thiểu cho những người tổ chức, và hướng dẫn họ tự thực hiện - cho phép trẻ làm việc với tốc độ và mức độ kỹ năng của mỗi trẻ.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Cần một kế hoạch giảng dạy cho Giờ Lập Trình sau giờ học?** Tìm hiểu [mẫu](/files/AfterschoolEducatorLessonPlanOutline.docx) ngay!
 
-## 3) Quảng bá lớp Một Giờ Lập Trình của bạn
+## 1. Quảng bá và thúc đẩy chiến dịch
 
-Quảng bá lớp Một Giờ Lập Trình của bạn [ với các công cụ này ](%= resolve_url('/promote') %) và khuyến khích những người khác mở chương trình của riêng họ.
+Quảng bá Giờ Lập Trình của bạn [với các công cụ sau đây](%= resolve_url('/promote') %) và khuyến khích những bạn khác tổ chức sự kiện của họ.
 
-## 4) Lên kế hoạch các yêu cầu công nghệ - máy tính là tùy chọn
+## 4. Lên kế hoạch các yêu cầu công nghệ - máy tính là tùy chọn không bắt buộc
 
-Trải nghiệm Một Giờ Lập Trình tốt nhất cần có máy tính được kết nối Internet. Nhưng bạn ** không ** cần mỗi đứa trẻ một máy tính, và bạn thậm chí có thể thực hiện Một Giờ Lập Trình mà chẳng cần đến bất cứ máy tính nào.
+Trải nghiệm Giờ Lập Trình tốt nhất cần có máy tính được kết nối Internet. Nhưng bạn không cần cung cấp máy tính cho tất cả học sinh, và bạn có thể thực hiện Giờ lập trình thậm chí chẳng cần bất cứ chiếc máy tính nào.
 
-**Kế hoạch trước!** Thực hiện các bước dưới đây trước khi chương trình bắt đầu:
+Hãy kiểm tra sự hoạt động của các bài hướng dẫn trên máy tính hoặc thiết bị của các học sinh để chắc chắn rằng các âm thanh cũng như video có thể hoạt động trên các trình duyệt. **Nếu có kết nối internet chậm** hãy chiếu video lên máy chiếu để mọi người có thể xem cùng lúc, như vậy từng học sinh không phải tự tải xuống video của mình. Hoặc bạn cũng có thể thử các hướng dẫn trải nghiệm Giờ lập trình không cần máy tính/offline.
 
-  * Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Khi học sinh học theo nhóm, chúng sẽ giúp đỡ nhau và sẽ ít phải nhờ tới giáo viên hơn. Chúng cũng sẽ thấy rằng khoa học máy tính có tính xã hội ,hợp tác.
-  * **Nếu có kết nối internet chậm** hãy chiếu video lên máy chiếu để mọi người có thể xem cùng lúc. Hoặc thực hành với các khóa học không cần mạng/khóa học offline.
+Trang bị tai nghe cho các học sinh hoặc yêu cầu các em mang tới lớp để đảm bảo các em có thể nghe các bài hướng dẫn với âm thanh tốt nhất.
 
-![](/images/fit-350/group_ipad.jpg)
+**Không có đủ thiết bị?** Sử dụng phương thức [ lập trình theo cặp](https://www.youtube.com/watch?v=vgkahOzFH2Q). Khi học sinh học theo nhóm, các em sẽ trợ giúp nhau và sẽ ít phải tìm kiếm sự giúp đỡ của giáo viên. Các em cũng sẽ thấy được tính xã hội và hợp tác trong khoa học máy tính.
 
-## 5) Khởi động Một Giờ Lập Trình của bạn với video truyền cảm hứng
+<img src="/images/fit-350/group_ipad.jpg" />
 
-Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm hứng cho những người tham gia và bàn luận về cách mà khoa học máy tính tác động đến mọi lĩnh vực trong cuộc sống của chúng ta.
+## 5. Bắt đầu buổi Giờ Lập Trình của bạn với một video truyền cảm hứng
+
+Khởi động Giờ Lập Trình của bạn bằng cách truyền cảm hứng cho những người tham gia và thảo luận về cách mà khoa học máy tính tác động đến mọi lĩnh vực trong cuộc sống của chúng ta.
 
 **Chiếu một video truyền cảm hứng:**
 
-  * Video giới thiệu chính thức của Code.org, đặc biệt là Bill Gates, Mark Zuckerberg,Ngôi sao NBA, Chris Bosh (Độ dài lần lượt [1 phút](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 phút](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 phút](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-  * [Tổng thống Obama kêu gọi tất cả học sinh nên học môn tin học](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Video giới thiệu chính thức của Code.org, với các gương mặt là Bill Gates, Mark Zukerberg, và ngôi sao NBA Chris Bosh - lần lượt là [1 phút](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 phút](https://www.youtube.com/watch?v=nKIu9yen5nc), và [9 phút](https://www.youtube.com/watch?v=dU1xS07N-FA) phiên bản có sẵn.
+- [Video toàn thế giới Giờ Lập Trình](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [ Tổng thống Obama kêu gọi tất cả các sinh viên học khoa học máy tính](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Tìm nhiều video cảm hứng hơn [tại đây](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Chẳng sao cả nếu bạn chưa biết gì về khoa học máy tính. Dưới đây là một số ý tưởng để giới thiệu hoạt động Giờ Lập Trình của bạn:**
 
-  * Diễn giải cách mà công nghệ tác động lên cuộc sống của chúng ta, với những ví dụ mà các bé trai và bé gái đều quan tâm đến (Nói về các ứng dụng và công nghệ được sử dụng để tiết kiệm cuộc sống, giúp đỡ con người, kết nối con người, v.v.).
-  * Lên danh sách những thứ sử dụng mã hóa trong đời sống hằng ngày.
-  * Xem những bí kíp làm cho các bé gái quan tâm vào khoa học máy tính [tại đây](%= resolve_url('https://code.org/girls') %).
+- Diễn giải cách mà công nghệ đã tác động đến đời sống của ta, với các ví dụ giữa những chàng trai và những cô gái sẽ quan tâm đến (Nói về các ứng dụng và công nghệ được sử dụng để tiết kiệm cuộc sống, giúp đỡ, kết nối mọi người, vv).
+- Lên danh sách những thứ sử dụng mã hóa trong đời sống hằng ngày.
+- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Cần hướng dẫn thêm?** Tải về [mẫu kế hoạch bài giảng này](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
-** Muốn có thêm ý tưởng giảng dạy?** Xem thử [ bài giảng thực tiễn hay nhất ](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) từ những người đào tạo có kinh nghiệm.
-
-## 6) Lập Trình!
+## 6. Lập trình!
 
 **Chỉ dẫn những người tham gia vào các hoạt động**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
+- Viết đường dẫn bài hướng dẫn lên bảng trắng. Tìm địa chỉ được liệt kê tại [thông tin về bài hướng dẫn mà bạn chọn](%= resolve_url('/learn') %) dựa theo số lượng người tham gia.
 
-**When someone comes across difficulties it's okay to respond:**
+**Khi ai đó gặp khó khăn bạn có thể trả lời:**
 
-  * "Tôi không biết. Chúng ta sẽ cùng nhau tìm cách giải quyết nhé."
-  * "Công nghệ không phải luôn luôn hoạt động theo ý chúng ta muốn."
-  * "Học cách sử dụng một chương trình cũng giống như học một ngôn ngữ mới; bạn chưa thể thành thực ngay lập tức."
+- "Tôi không biết. Chúng ta sẽ cùng nhau tìm cách giải quyết nhé."
+- "Công nghệ không phải luôn luôn hoạt động theo ý chúng ta muốn."
+- "Học cách sử dụng một chương trình cũng giống như học một ngôn ngữ mới; bạn chưa thể thành thực ngay lập tức."
 
 **Phải làm gì nếu ai đó hoàn thành sớm?**
 
-  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
-  * Hoặc, yêu cầu những ai hoàn thành sớm giúp những người mà đang gặp khó khăn.
+- Khuyến khích người tham gia thử một hoạt động Giờ Lập trình khác tại [hourofcode.com/learn](%= resolve_url('/learn') %)
+- Hoặc, yêu cầu những ai đã hoàn thành sớm giúp đỡ những người khác đang gặp khó khăn 
 
 [col-33]
 
@@ -89,11 +85,9 @@ Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm 
 
 [/col-33]
 
-<p style="clear:both">
-  &nbsp;
-</p>
+<p style="clear:both">&nbsp;</p>
 
-## 7) Chúc mừng
+## 7. Tổng kết - chúc mừng
 
 [col-33]
 
@@ -101,10 +95,10 @@ Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm 
 
 [/col-33]
 
-  * [In giấy chứng nhận ](%= resolve_url('https://code.org/certificates') %) cho học sinh của bạn.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
-  * Chia sẻ hình ảnh và video lớp học Một Giờ Lập Trình của bạn lên các phương tiện truyền thông xã hội. Sử dụng #HourOfCode và @codeorg để chúng tôi cũng có thể ghi nhận thành công của bạn!
+- [In ấn giấy chứng nhận](%= resolve_url('https://code.org/certificates') %) cho học sinh của bạn.
+- [In nhãn dán "Tôi đã hoàn thành Giờ Lập Trình!"](%= resolve_url('/promote/resources#stickers') %).
+- [Đặt áo phông](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) cho các em học sinh.
+- Chia sẻ hình ảnh và video lớp học Một Giờ Lập Trình của bạn lên các phương tiện truyền thông xã hội. Sử dụng #HourOfCode và @codeorg để chúng tôi cũng có thể ghi nhận thành công của bạn!
 
 [col-33]
 
@@ -112,23 +106,20 @@ Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm 
 
 [/col-33]
 
-<p style="clear:both">
-  &nbsp;
-</p>
+<p style="clear:both">&nbsp;</p>
 
-## Tài liệu Một Giờ Lập Trình khác cho người đào tạo:
+## Những nguồn tài liệu Giờ Lập trình khác cho giáo viên
 
-  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
-  * Xem bản thu [ Hướng dẫn Người đào tạo với hội thảo Một Giờ Lập Trình qua mạng](https://youtu.be/EJeMeSW2-Mw).
-  * [Tham dự buổi Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) trực tiếp với người sáng lập của chúng tôi, Hadi Partovi để chuẩn bị cho sự kiện Một Giờ Lập Trình.
-  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
-  * Xem lại [ câu hỏi thường gặp (FAQ) của Một Giờ Lập Trình](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+- Hãy xem thử [những kinh nghiệm ](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) của những người tổ chức Giờ Lập trình trước 
+- Hãy xem lại bản ghi webinar của chúng tôi [ về hướng dẫn Giáo viên giảng Giờ Lập trình ](https://youtu.be/EJeMeSW2-Mw).
+- Truy cập [Giờ Lập trình Forum](http://forum.code.org/c/plc/hour-of-code) để hỏi lời khuyên, thống kê và hỗ trợ từ những người tham gia khác. <% if @country == 'us' %>
+- Xem lại [ câu hỏi thường gặp (FAQ) của Một Giờ Lập Trình](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
-## Tiếp sau Một Giờ Lập Trình sẽ là gì?
+## Tiếp theo Hour of Code sẽ là gì?
 
-Một Giờ Lập Trình chỉ là bước đầu tiên trên hành trình học tập nhiều hơn về cách công nghệ hoạt động và cách tạo ra các ứng dụng phần mềm. Để tiếp tục hành trình này:
+Một Giờ Lập Trình chỉ là bước đầu tiên trên hành trình học tập sâu hơn về cách công nghệ hoạt động và cách tạo ra các ứng dụng phần mềm. Để tiếp tục hành trình này:
 
-  * Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-  * [Attend](%= resolve_url('https://code.org/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Khuyến khích học sinh tiếp tục [học trực tuyến](%= resolve_url('https://code.org/learn/beyond') %).
+- [Tham dự](%= resolve_url('https://code.org/professional-development-workshops') %) hội thảo trực tiếp, trong ngày để nhận hướng dẫn từ cố vấn khoa học máy tính giàu kinh nghiệm. (chỉ các cố vấn người Mỹ)
 
 <%= view :signup_button %>

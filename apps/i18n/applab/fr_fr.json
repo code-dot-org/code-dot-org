@@ -345,7 +345,7 @@
   "nextLevel": "Congratulations! You have completed this puzzle.",
   "no": "No",
   "numBlocksNeeded": "This puzzle can be solved with %1 blocks.",
-  "reinfFeedbackMsg": "You're finished! Click \"Continue\" to move on to the next level.",
+  "reinfFeedbackMsg": "Are you finished? With App Lab, you're in control - it's up to you to check your work and decide when you're done.",
   "repeatForever": "repeat forever",
   "repeatDo": "do",
   "repeatForeverTooltip": "Execute the actions in this block repeatedly while the app is running.",

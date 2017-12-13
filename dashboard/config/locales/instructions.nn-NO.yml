@@ -1448,6 +1448,15 @@
       CSDU6 - for loop - why for_instruction: |-
         Write the contents of the array to
         the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays rainbow_instruction: |-
+        Write the contents of the array to the screen
+        in numerical order. (Click to see full instructions)
+      CSDU6 arrays random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays variable_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -3933,16 +3942,16 @@
         oransje ruta inne i huset.
       MC_HOC_2017_01_Kiki_instruction: Klikk "Køyr" for å flytte spelaren til den
         oransje ruta inne i huset.
-      MC_HOC_2017_01_RETRY_instruction: "Get the Agent to the pressure plate, then\npress
-        \"Run\" and use the arrow keys to move the player out of the house to\ncollect
-        the chest. "
+      MC_HOC_2017_01_RETRY_instruction: 'Få agenten til trykkplata, deretter klikk
+        "køyr" og bruk piltastane for å bevege spelaren ut av huset for å kome til
+        kista. '
       MC_HOC_2017_02_instruction: Få agenten til trykkplata.
-      MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that\n{currentPlayerName}
-        can get to the map. "
+      MC_HOC_2017_02_Cole_instruction: 'Flytt agenten til trykkplata slik at {currentPlayerName}
+        kan komme til kartet. '
       MC_HOC_2017_02_Kiki_instruction: Få agenten til trykkplata og få så spelaren
         til den oransje firkanten.
       MC_HOC_2017_02_Will_instruction: Få agenten til trykkplata.
-      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_03_Cole_instruction: 'Programmer agenten til å opne porten. '
       MC_HOC_2017_03_Kiki_instruction: Få agenten til trykkplata.
       MC_HOC_2017_04_instruction: Forandre løkka frå den siste gåta for å hjelpe agenten
         til å lage ein bane over den breiaste delen av elva.
@@ -3987,12 +3996,14 @@
         ferdig denne minevogna.
       MC_HOC_2017_10_RYAN2_instruction: Lag ein funksjon for å hjelpe deg med å gjere
         ferdig denne minevogna.
-      MC_HOC_2017_13_Cole_instruction: "**Freeplay:**  Time to explore on your own!"
+      MC_HOC_2017_13_Cole_instruction: "**Fri leik:** Utforsk på eiga hand!"
       MC_HOC_2017_4.5v2_instruction: Få agenten til trykkplata.
-      MC_HOC_2017_Ali_instruction: Use the functions to find a way across the lava.
-      MC_HOC_2017_FP10x10_instruction: "**Freeplay:** Can you challenge yourself\nto
-        collect all of the diamonds in this level? "
-      MC_HOC_2017_FP20x20_instruction: "**Freeplay:**  Time to explore on your own!"
+      MC_HOC_2017_Ali_instruction: Bruk funksjonane til å finne ein veg over lavaen.
+      MC_HOC_2017_FP10x10_instruction: "**Frileik** Kan du utfordre deg sjølv til
+        å samle alle diamantane på dette nivået? "
+      MC_HOC_2017_FP10x10_RE_instruction: "**Frileik** Kan du utfordre deg sjølv til
+        å samle alle diamantane på dette nivået? "
+      MC_HOC_2017_FP20x20_instruction: "**Fri leik:** Utforsk på eiga hand!"
       MC_HOC_2017_Ryan_03_instruction: No brukar du løkker for å hjelpe agenten med
         å bygge ei bru over elva ved å plassere blokker i vatnet.
       MC_HOC_2017_Ryan_05_instruction: "Øydelegge desse kaktusane slik at spelaren
@@ -4343,6 +4354,7 @@
       New Gumball Project_instruction: Lag det du har lyst til og del med andre!
       New Ice Age Project_instruction: Lag det du har lyst til og del med andre!
       New Infinity Project_instruction: Lag det du har lyst til og del med andre!
+      New Minecraft Hero Project_instruction: "**Frileik:** Utforsk på eiga hand!"
       New Sports Project_instruction: 'Lag ditt eiget spel! Du bestemmer: Du kan endre
         på alle reglar, blande og setje saman ulike sportar. Ver kreativ! Når du er
         ferdig, trykk "Fullført" for å la venene dine prøve det på sine telefonar.'
@@ -4803,6 +4815,10 @@
       SG U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
+      SG U3L08 - introUnderTheSea - recovery_instruction: |-
+        Add an extra fish, starfish,
+        and piece of seagrass to the image. Look at, but don't change, the functions
+        that create them. (Click to see full instructions)
       SG U3L08 - introUnderTheSea_instruction: |-
         Add an extra fish, starfish, and
         piece of seagrass to the image. Look at, but don't change, the functions
@@ -6870,6 +6886,9 @@
         If looping a 3 degree turn 60 times makes a half circle, which of
         these blocks of code will make an additional quarter circle for the corners?
       aEfreeplay_instruction: Free Play!
+      allHallows2017_instruction: |-
+        Trap the Code.org employees in the crayon box
+        by drawing a square with 320 pixel sides!
       allthethings data blocks test_instruction: |-
         Please sign in to test applab levels
         (By design, applab levels only work if signed in. Normally, we make people
@@ -6903,10 +6922,9 @@
       allthethings_ttscsp_instruction: |-
         Debug the program by fixing the logical error
         within the program. (Click to see full instructions)
-      artistDebugVideo1_instruction: Use the `repeat` loop to add waves to the water.
-      artistFunctionsVideo1_instruction: |-
-        Follow the instructions to make your own
-        function.
+      artistDebugVideo1_instruction: Bruk "løkka" for å lage bølger på vatnet.
+      artistFunctionsVideo1_instruction: Følg instruksjonane for å lage ein eigen
+        funksjon.
       artistLoopsK1_instruction: |-
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
@@ -6944,9 +6962,8 @@
         Picture time!  Use what you have learned to draw
         a picture of what you think the Artist saw on stage.
       beeDebugVideo1_instruction: Kan du bruke ei løkke for å samle inn all nektaren?
-      birdsDebugVideo1_instruction: |-
-        Trace the path and lead me to the silly pig.
-        Avoid TNT or feathers will fly!
+      birdsDebugVideo1_instruction: Følg stien og lei meg til den tåpelege grisen.
+        Unngå TNT ellers vil fjøra mine fyke!
       bounce_1_instruction: Fest ei blokk til «når venstre pil»-blokka og trykk «Køyr».
         Flytt rekkerten ved å bruke venstre pil for å nå målet.
       bounce_10_instruction: Det er no eit mål på toppen. Fest «skår eit poeng» og
@@ -7023,11 +7040,12 @@
       collector example_instruction: |-
         Put these blocks in order to collect all of
         the gold and solve the puzzle.
-      collectorDebugVideo2_instruction: |-
-        Put these blocks in order to collect all
-        of the gold and solve the puzzle.
-      collectorSkinVideo1_instruction: Collect all four piles to pass this level.
-      collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      collectorDebugVideo2_instruction: Sett desse blokkane saman for å samle inn
+        alt gullet og løyse oppgåve.
+      collectorSkinVideo1_instruction: Samle inn alle fire haugane for å klare dette
+        nivået.
+      collectorSkinVideo2_instruction: Samle inn ein haug med gull for å klare dette
+        nivået.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -7037,9 +7055,7 @@
       course1_artist_loops_challenge2_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
-      course1_artist_loops_challenge3_instruction: |-
-        "Can you help me make two bird
-        houses?"
+      course1_artist_loops_challenge3_instruction: '"Kan du hjelpe meg å lage to fuglehus?"'
       course1_artist_loops_challenge4_instruction: |-
         "It's time to toss the dice!
         Can you help me draw these?"
@@ -7068,9 +7084,8 @@
       course1_playlab_events_challenge1_instruction: |-
         "Where are my friends hiding?
         Can you write code to show the rest of my friends?"
-      course1_playlab_events_challenge2_instruction: |-
-        "Let's have a party! Give
-        my friends something to do when you click or tap them."
+      course1_playlab_events_challenge2_instruction: '"La oss ha ein fest! Gi mine
+        vener noko å gjere når du klikkar eller trykker på dei."'
       course2_artist_nestedLoops_challenge1_instruction: |-
         Can you figure out how
         to make a picture like this?
@@ -7090,9 +7105,7 @@
       course2_bee_conditionals_challenge2_instruction: |-
         Collect all of the nectar
         or make all the honey.
-      course2_collector_loops_challenge2_instruction: |-
-        Let's hunt for treasure -
-        using loops! Help the collector by debugging this code. Get all of the treasure!
+      course2_collector_loops_challenge2_instruction: Få tak i heile skatten!
       course2_collector_prog_challenge1_instruction: |-
         Look carefully! Can you collect
         all *10* pieces of treasure?
@@ -7309,7 +7322,7 @@
       courseA_artist_loops2_instruction: |-
         Help the artist draw this line two times
         forward.
-      courseA_artist_loops3_instruction: Draw a line forward five times.
+      courseA_artist_loops3_instruction: Teikn ei linje framover fem gongar.
       courseA_artist_loops4_instruction: |-
         Now, use a `repeat` loop to draw this line
         five times!
@@ -7321,87 +7334,69 @@
         Use the `repeat` loop to add waves to the
         water.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
-      courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
-      courseA_artist_loops_challenge2_instruction: |-
-        "Can you help me make two bird
-        houses?"
+      courseA_artist_loops9_instruction: 'Utfordring: Fiks trappa.'
+      courseA_artist_loops_challenge2_instruction: '"Kan du hjelpe meg å lage to fuglehus?"'
       courseA_artist_loops_challenge3_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
-      courseA_collector_loops1_instruction: |-
-        Move Laurel around and get as much treasure
-        as you can!
-      courseA_collector_loops10_instruction: |-
-        Help Laurel get all of the treasure
-        along this path.
-      courseA_collector_loops11_instruction: |-
-        Help Laurel get all of the treasure
-        from this cave.
-      courseA_collector_loops12_instruction: |-
-        Eureka!  Get as much treasure as you
-        can!
-      courseA_collector_loops2_instruction: |-
-        Collect all three piles to pass this
-        level.
-      courseA_collector_loops4_instruction: |-
-        Fix Laurel's path to get all of this
-        treasure.
-      courseA_collector_loops5_instruction: |-
-        Use what you learned to get all of the
-        treasure.
+      courseA_collector_loops1_instruction: Flytt Laurel rundt og få så mykje gull
+        som mogleg!
+      courseA_collector_loops10_instruction: Hjelp Laurel til å få tak i alle skattane
+        langs stien.
+      courseA_collector_loops11_instruction: Hjelp Laurel til å få tak i alle skattane
+        i grotta.
+      courseA_collector_loops12_instruction: Eureka!  Få tak i så mange skattar du
+        berre kan!
+      courseA_collector_loops2_instruction: Samle inn alle tre haugane for å klare
+        dette nivået.
+      courseA_collector_loops4_instruction: Fiks Laurel si bane for å få tak i alle
+        skattane.
+      courseA_collector_loops5_instruction: Bruk det du har lært for å få tak i alle
+        skattane.
       courseA_collector_loops6_instruction: |-
         Add blocks to this code to get all of
         the treasure.
       courseA_collector_loops7_instruction: |-
         What should you add to this code to
         get all of the treasure?
-      courseA_collector_loops8_instruction: Write the code to get all of this gold.
-      courseA_collector_loops9_instruction: |-
-        **Challenge:** The treasure goes all
-        the way up these stairs!  Write the code to help Laurel get it all.
-      courseA_collector_loops_challenge1_instruction: |-
-        *"Can you help me spot some
-        bugs? I know which way I want to go, but I'm not sure how many steps to take."*
-      courseA_collector_loops_challenge2_instruction: "This time you can only use\none
-        of each arrow block. Get all of the treasure! "
+      courseA_collector_loops8_instruction: Skriv koden for å få tak i heile skatten.
+      courseA_collector_loops9_instruction: "**Utfordring:** Skatten går heile vegen
+        opp trappen! Skriv koden slik at Laurel får tak i alt."
+      courseA_collector_loops_challenge1_instruction: '*"Kan du hjelpe med å oppdage
+        nokre feil? Eg veit kva veg eg vil gå, men er ikkje sikker på kor mange skritt
+        eg må ta"*'
+      courseA_collector_loops_challenge2_instruction: 'Få tak i heile skatten! '
+      courseA_collector_loops_challenge2kp_instruction: Samle minst * 3 * deler av
+        skatten for å klare dette nivået.
       courseA_collector_preLoops1_instruction: |-
-        This is Laurel the Adventurer! \r
+        Dette er eventyraren Laurel! \r
         \r
-        Press
-        "Run" to see her walk up to the treasure and grab it.
+        Trykk "Køyr" for å sjå ho gå opp til skatten og ta den.
       courseA_collector_preLoops2_instruction: |-
-        Great!  Now you get to add code yourself!  \r
+        Flott! No kan du kode sjølv! \r
         \r
-        Snap
-        a `get treasure` block to the bottom of the program and click "Run".
+        Sett ein "ta skatten" blokk til botnen av programmet og klikk "Køyr".
       courseA_collector_preLoops3_instruction: |-
         Snap two `E -->` blocks and one `get
         treasure` block to the bottom of the program, then click "Run".
-      courseA_collector_preLoops4_instruction: |-
-        Can you figure out how to solve this
-        puzzle?
-      courseA_collector_preLoops5_instruction: |-
-        Get 1 of these 2 gems to solve this
-        puzzle.
-      courseA_collector_preLoops6_instruction: |-
-        Get both pieces of treasure to solve
-        this puzzle.
-      courseA_collector_preLoops7_instruction: |-
-        Get all three piles to pass this
-        level.
-      courseA_forVideoTest_artist_instruction: |-
-        Use the `repeat` loop to add waves
-        to the water.
-      courseA_maze_seq1_instruction: |-
-        Play with these blocks to see if you can get
-        me to the pig!
+      courseA_collector_preLoops4_instruction: Kan du finne ut korleis du løyser denne
+        oppgåva?
+      courseA_collector_preLoops5_instruction: Få 1 av desse 2 edelsteinane for å
+        løyse denne oppgåva.
+      courseA_collector_preLoops6_instruction: Få begge delane av skatten når du løyser
+        oppgåva.
+      courseA_collector_preLoops7_instruction: Samle inn alle haugane for å klare
+        dette nivået.
+      courseA_forVideoTest_artist_instruction: Bruk "løkka" for å lage bølgjer på
+        vatnet.
+      courseA_maze_seq1_instruction: Få fuglen til den dårlege grisen!
       courseA_maze_seq10_instruction: "Challenge: Go around the TNT to get the bird\nto
         the pig! "
       courseA_maze_seq11_instruction: |-
         Move one way, then another to get the bird
         to the pig.
-      courseA_maze_seq12_instruction: 'Get that pig! '
-      courseA_maze_seq13_instruction: Get the pig any way you can!
+      courseA_maze_seq12_instruction: 'Få tak i grisen! '
+      courseA_maze_seq13_instruction: Få tak i grisen!
       courseA_maze_seq2_instruction: Endre denne koden for å få meg bort til grisen!
       courseA_maze_seq3_instruction: Fix the code to get the bird to the pig!
       courseA_maze_seq4_instruction: REMOVE a block to get the bird to the pig!
@@ -7449,15 +7444,12 @@
       courseA_playlab_events_challenge1_instruction: |-
         "Where are my friends hiding?
         Can you write code to show the rest of my friends?"
-      courseA_playlab_events_challenge2_instruction: |-
-        "Let's have a party! Give
-        my friends something to do when you click or tap them."
-      courseA_playlab_events_challengeClone_instruction: |-
-        Where are my friends hiding?
-        Can you write code to show the rest of my friends?
-      courseA_toMakeLoopsVideo_Collector_instruction: |-
-        Loops let you do whatever
-        is inside over and over again!
+      courseA_playlab_events_challenge2_instruction: '"La oss ha ein fest! Gi mine
+        vener noko å gjere når du klikkar eller trykker på dei."'
+      courseA_playlab_events_challengeClone_instruction: Kor har venene gøymd seg?
+        Kan du skrive koden slik at venene mine kjem fram?
+      courseA_toMakeLoopsVideo_Collector_instruction: Løkker lar deg gjere det som
+        inni igjen og igjen!
       courseA_video_events_instruction: Need a better playlab/events combo
       courseB_artist_loops1_instruction: |-
         This is a new type of puzzle called "Artist".
@@ -7494,12 +7486,10 @@
         X's as you can! Can you get 3 in a row?
       courseB_collector_loops1_instruction: Dette er Laurel, eventyreren!  Kan du
         flytte henne og få ein skatt?
-      courseB_collector_loops10_instruction: |-
-        Help Laurel get all of the treasure
-        from this cave.
-      courseB_collector_loops11_instruction: |-
-        Eureka!  Get as much treasure as you
-        can!
+      courseB_collector_loops10_instruction: Hjelp Laurel til å få tak i alle skattane
+        i grotta.
+      courseB_collector_loops11_instruction: Eureka!  Få tak i så mange skattar du
+        berre kan!
       courseB_collector_loops2_instruction: |-
         Collect all four piles to pass this
         level.
@@ -7611,30 +7601,24 @@
       courseB_playlab_events_challenge2_instruction: |-
         La oss gjøre slik at dyr forsvinner når du trykker på dem! Prøv å spille med hunden nå og etterpå la de andre dyrene få være med på moroa!\r
         Du kan også legge til lyder og poengsummer for å lage et sisten-spill!
-      courseB_playlab_events_challenge2_embed_instruction: |-
-        Here is your finished
-        game!
+      courseB_playlab_events_challenge2_embed_instruction: Her er det ferdige spelet!
       courseB_playlab_events_challenge2_template_instruction: |-
         Let's make the animals
         disappear when you click on them! You can also add sounds and score points
         to create a fun game of Animal Tag!
-      courseB_starWars_prog1_instruction: Help BB-8 get the scrap metal!
-      courseB_starWars_prog10_instruction: Help BB-8 gather the glowing scrap metal
-      courseB_starWars_prog11_instruction: Help BB-8 gather the glowing scrap metal
-      courseB_starWars_prog2_instruction: |-
-        Help BB-8 gather **all** of the glowing
-        scrap metal
-      courseB_starWars_prog3_instruction: |-
-        Help BB-8 gather **all** of the glowing
-        scrap metal
-      courseB_starWars_prog4_instruction: Help BB-8 gather the glowing scrap metal
-      courseB_starWars_prog5_instruction: Help BB-8 gather the glowing scrap metal
-      courseB_starWars_prog6_instruction: Help BB-8 gather the glowing scrap metal
-      courseB_starWars_prog7_instruction: Help BB-8 gather the glowing scrap metal
+      courseB_starWars_prog1_instruction: '"Få tak i skrapmetallet, BB-8!"'
+      courseB_starWars_prog10_instruction: Hjelp BB-8 å samle det glødende skrapmetallet
+      courseB_starWars_prog11_instruction: Hjelp BB-8 å samle det glødende skrapmetallet
+      courseB_starWars_prog2_instruction: Få tak i alt metallet.
+      courseB_starWars_prog3_instruction: Få tak i alt skrapmetallet
+      courseB_starWars_prog4_instruction: Få tak i alt skrapmetallet
+      courseB_starWars_prog5_instruction: Få tak i skrapmetallet
+      courseB_starWars_prog6_instruction: Få tak i alt skrapmetallet
+      courseB_starWars_prog7_instruction: Gå og hent det!
       courseB_starWars_prog8_instruction: |-
         **Challenge:** Help BB-8 gather the glowing
         scrap metal
-      courseB_starWars_prog9_instruction: Help BB-8 gather the glowing scrap metal
+      courseB_starWars_prog9_instruction: Hjelp BB-8 å samle det glødende skrapmetallet
       courseC_PlayLab_events1_instruction: |-
         Make Jorge the Dog (actor 1) say "Hi
         there."
@@ -7724,9 +7708,9 @@
         garden?  \r
         \r
         \r
-      courseC_artist_loops6a_instruction: Add another sticker!
-      courseC_artist_loops7a_instruction: Play with the loops and angles.
-      courseC_artist_loops8a_instruction: Now try something on your own!
+      courseC_artist_loops6a_instruction: Legg til eit anna klistremerke!
+      courseC_artist_loops7a_instruction: Prøv deg fram med løkker og vinklar.
+      courseC_artist_loops8a_instruction: Prøv noko på eigen hand!
       courseC_artist_loopsPre1a_instruction: Time to spin that line around!
       courseC_artist_loopsPrePre1a_instruction: "Get the artist to the center of\nthe
         play area, then draw a line. "
@@ -7758,9 +7742,8 @@
         One more tag.  This is a triangle for Pi.\r
         (Each
         side is 150 pixels)
-      courseC_artist_prog_challenge1-doghouse_instruction: |-
-        Let's build a dog house
-        for Jorge!
+      courseC_artist_prog_challenge1-doghouse_instruction: La oss byggje eit hundehus
+        til Jorge!
       courseC_artist_prog_challenge1_instruction: |-
         Draw rooms for each of the animals.
         There are many different ways to solve this puzzle, so have some fun. The
@@ -7768,15 +7751,12 @@
       courseC_artist_prog_challenge2_instruction: |-
         *Help me paint the yellow lines
         on this road!*
-      courseC_collector_loops_challenge2_instruction: |-
-        Let's hunt for treasure -
-        using loops! Help the collector by debugging this code. Get all of the treasure!
+      courseC_collector_loops_challenge2_instruction: Få tak i heile skatten!
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
         you can help Laurel collect some treasure.
-      courseC_collector_prog2_instruction: |-
-        Move Laurel to the treasure, then use
-        `collect` to pick it up.
+      courseC_collector_prog2_instruction: Flytt Laurel til skatten, og bruk "samle
+        inn" for å plukke den opp.
       courseC_collector_prog3_instruction: |-
         Order these blocks to collect the treasure
         and solve the puzzle.
@@ -7795,7 +7775,7 @@
       courseC_collector_prog8_instruction: |-
         *"Keep up the good work! Help me collect
         all of the treasure."*
-      courseC_collector_prog9_instruction: '*"Let''s get all of the coins!"*'
+      courseC_collector_prog9_instruction: '* "La oss få heile skatten!" *'
       courseC_collector_progA_instruction: Help Laurel collect all of the treasure.
       courseC_collector_progB_instruction: |-
         Collect as many coins as you can to finish
@@ -8191,9 +8171,10 @@
       courseD_bee_conditionals1_predict1_instruction: |-
         Check to see if there's a
         flower under the cloud. If there's a flower, get nectar.
-      courseD_bee_conditionals2_instruction: |
-        Check underneath every cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
+        it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_test_instruction: "Check underneath every cloud to\nsee
+        if it is hiding a flower before you get nectar.  "
       courseD_bee_conditionals3_instruction: |-
         Help the bee collect all of the nectar.
         \r

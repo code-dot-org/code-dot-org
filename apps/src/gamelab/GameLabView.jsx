@@ -10,12 +10,12 @@ import AnimationJsonViewer from './AnimationJsonViewer';
 import {GameLabInterfaceMode, GAME_WIDTH, GAME_HEIGHT} from './constants';
 import GameLabVisualizationHeader from './GameLabVisualizationHeader';
 import GameLabVisualizationColumn from './GameLabVisualizationColumn';
-import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import CodeWorkspace from '../templates/CodeWorkspace';
 import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
 import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
+import VisualizationResizeBar from "../lib/ui/VisualizationResizeBar";
 
 
 /**
@@ -85,10 +85,7 @@ class GameLabView extends React.Component {
            style={{top: 79, left: 17}}
            playButtonStyle={{top: 620, left: 179}}
          />}
-        <ProtectedStatefulDiv
-          id="visualizationResizeBar"
-          className="fa fa-ellipsis-v"
-        />
+        <VisualizationResizeBar/>
         <InstructionsWithWorkspace>
           <CodeWorkspace withSettingsCog/>
         </InstructionsWithWorkspace>

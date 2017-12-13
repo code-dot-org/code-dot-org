@@ -43,9 +43,12 @@ class Ability
       :pd_workshop_admins,
       :peer_review_submissions,
       RegionalPartner,
+      :regional_partner_workshops,
       Pd::RegionalPartnerMapping,
       Pd::Application::ApplicationBase,
-      Pd::Application::Facilitator1819Application
+      Pd::Application::Facilitator1819Application,
+      Pd::Application::Teacher1819Application,
+      :maker_discount
     ]
 
     if user.persisted?
@@ -83,8 +86,11 @@ class Ability
         can :view_level_solutions, Script do |script|
           !script.professional_learning_course?
         end
+        can [:read, :find], :regional_partner_workshops
         can [:new, :create, :read], Pd::WorkshopMaterialOrder, user_id: user.id
         can [:new, :create, :read], Pd::Application::Facilitator1819Application, user_id: user.id
+        can [:new, :create, :read], Pd::Application::Teacher1819Application, user_id: user.id
+        can :manage, :maker_discount
       end
 
       if user.facilitator?
@@ -126,7 +132,15 @@ class Ability
         can :read, :pd_workshop_summary_report
         can :read, :pd_teacher_attendance_report
         if user.regional_partners.any?
+          # regional partners by default have read, quick_view, and update
+          # permissions
           can [:read, :quick_view, :update], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
+
+          # G3 regional partners should have full management permission
+          group_3_partner_ids = user.regional_partners.where(group: 3).pluck(:id)
+          unless group_3_partner_ids.empty?
+            can :manage, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
+          end
         end
       end
 
@@ -145,6 +159,7 @@ class Ability
         can :manage, Pd::RegionalPartnerMapping
         can :manage, Pd::Application::ApplicationBase
         can :manage, Pd::Application::Facilitator1819Application
+        can :manage, Pd::Application::Teacher1819Application
       end
 
       if user.permission?(UserPermission::PLC_REVIEWER)

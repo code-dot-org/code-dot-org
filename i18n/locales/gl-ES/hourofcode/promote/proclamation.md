@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_proclamation) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ### Vexa abaixo un exemplo de resolución en apoio á Semana da Educación en informática e as súas metas, que pode ser usado polos responsábeis da lexislación autonómica e local.

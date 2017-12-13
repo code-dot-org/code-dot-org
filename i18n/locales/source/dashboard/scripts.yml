@@ -2230,6 +2230,12 @@ en:
               name: CSP Student Post-Course Survey
             Creating Functions with Parameters:
               name: Creating Functions with Parameters
+            CSP End-of-Semester Mid-course survey:
+              name: CSP End-of-Semester Mid-course survey
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
         csp4:
           title: CSP Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
@@ -3383,6 +3389,8 @@ en:
               name: Parameters and Randomization
             Shapes and Randomization:
               name: Shapes and Randomization
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -4588,6 +4596,10 @@ en:
               name: Getting Properties
             Designing Screens with Code:
               name: Designing Screens with Code
+            Arrays:
+              name: Arrays
+            Making Music:
+              name: Making Music
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -6114,7 +6126,11 @@ en:
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
-          title: CSP Unit 3 - Intro to Programming
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey:
+              name: Please complete the CSP Mid-course survey
+          title: CSP Unit 3 - Intro to Programming (subgoals)
           description_audience: ''
           description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -6184,10 +6200,14 @@ en:
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
+            'Lesson 1: App Lab Intro':
+              name: 'Lesson 1: App Lab Intro'
           title: Intro to App Lab
           description_audience: ''
-          description_short: ''
-          description: These lessons introduce you to App Lab through a series of creative projects.
+          description_short: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
+          description: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
@@ -6692,10 +6712,20 @@ en:
               name: 'Technology Foundations: What is a Computer?'
             'Data Science: Problem Solving with Big Data':
               name: 'Data Science: Problem Solving with Big Data'
-          title: PwC Access Your Potential
+            Personal Innovations:
+              name: Personal Innovations
+            What is a Computer?:
+              name: What is a Computer?
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Programming - Hour of Code:
+              name: Programming - Hour of Code
+            Simple Encryption:
+              name: Simple Encryption
+          title: PwC Access Your Potential curriculum
           description_audience: ''
           description_short: ''
-          description: ''
+          description: At PwC, we believe that all students have the potential to be tomorrow’s leaders and tech-driven workforce. Access Your Potential is our commitment to help close the opportunity gap by equipping young people, especially those from disadvantaged communities, with the financial, technology and career-selection skills they need to change the trajectory of their lives. As part of our commitment, we’re excited to launch our Access Your Potential middle school technology and careers curriculum.
         allthesurveys:
           stages:
             CSP pre survey Test:
@@ -6718,6 +6748,8 @@ en:
               name: CSD/P pulse check survey 2017
             CSD mid and post survey 2017 staging:
               name: CSD mid and post survey 2017 staging
+            CSP mid and post survey 2017 staging:
+              name: CSP mid and post survey 2017 staging
           title: All the surveys
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
@@ -6737,6 +6769,76 @@ en:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
           title: 'Minecraft: Hero''s Journey'
+          description_audience: ''
+          description_short: Minecraft is back with a brand new activity for Hour of Code!
+          description: Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+            Intro to AppLab - Your First App:
+              name: Intro to AppLab - Your First App
+            Intro to AppLab - Your First App 2:
+              name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
+          title: Intro to App Lab Staging
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-explore:
+          stages:
+            new stage:
+              name: new stage
+            Explore PT Prep - Reviewing the Task:
+              name: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan:
+              name: Explore PT - Making a Plan
+            Explore PT - Complete the Task:
+              name: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Setup: Digital Portfolio and Other Tools'
+          title: Explore - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
+          description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
+        csp-create:
+          stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            Create PT Prep - Reviewing the Task:
+              name: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan:
+              name: Create PT Prep - Making a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+          title: Create - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
+          description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
+        csp3-reovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+          title: 'csp3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-recovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+            standalone template:
+              name: standalone template
+          title: 'CSP3 under the sea student work recovery '
           description_audience: ''
           description_short: ''
           description: ''

@@ -1,19 +1,19 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_how_to_parents) %>
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
 # 如何和你的孩子一起进行“编程一小时”的课程。
 
-在家完成课程，或者帮助我们把活动带到课堂上！以下是一些建议：
+在家完成课程，或者帮助我们把活动带到您孩子的课堂上！以下是一些指导：
 
-## 1) 观看指导视频 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) 观看指导视频 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
 ## 2） 选择一个教程︰
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+我们提供适合所有年龄学生，由多个合作伙伴创作的有趣、一小时长的课程。[现在就试试！](%= resolve_url('/learn') %)
 
 **编程一小时课程含有自学向导-允许孩子们按照他们自己的进度和速度来学习。**
 
@@ -33,7 +33,7 @@ We provide a variety of fun, hour-long tutorials for students of all ages, creat
 **播放鼓舞人心的视频：**
 
 - Code.org推出的原始视频有比尔·盖茨，马克·扎克伯格和NBA球星克里斯 - 波什（它们分别为[1分钟](https://www.youtube.com/watch?v=qYZF6oIZtfc)，[5分钟](https://www.youtube.com/watch?v=nKIu9yen5nc)和[9分钟](https://www.youtube.com/watch?v=dU1xS07N-FA)版本）
-- [2013年编程一小时活动视频](https://www.youtube.com/watch?v=FC5FbmsH4fw)，或者 <% if @country == 'uk' %> [ 2015年编程一小时活动 视频](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [ 2015 年编程一小时活动视频](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- [编程一小时 全球视频 ](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [奥巴马总统号召所有对的学生学习计算机科学](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - 找到更多鼓舞人心的 [资源](%= resolve_url('https://code.org/inspire') %) 和 [视频](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)。
 
@@ -57,7 +57,7 @@ We provide a variety of fun, hour-long tutorials for students of all ages, creat
 
 - "我也不知道。让我们一起来找到问题的答案吧"。
 - “科学技术并不总是同我们期望的方式一样工作。”
-- “学习编程就像是学习一门新的语言（事实上就是-我们一直都将学习编程称作学习编程语言，你现在学的这种叫Blocky?）；不会马上就说得很流利。”
+- “学习编程就像是学习一门新的语言（事实上就是-我们一直都将学习编程称作学习编程语言，你现在学的这种叫Blocky?）；你不会马上就说得很流利。”
 
 ## 6）庆祝
 
@@ -69,7 +69,7 @@ We provide a variety of fun, hour-long tutorials for students of all ages, creat
 
 - 阅读 [编程一小时常见问题](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)。
 
-**编程一小时之后做什么？**
+**编程一小时之后该做什么？**
 
 “编程一小时”只是在学习编程语言的过程中所迈出的第一步。在了解技术如何工作和如何编写一个应用程序的道路上仍有很长的道路要走。继续你的旅程：
 

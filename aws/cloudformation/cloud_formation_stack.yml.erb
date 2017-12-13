@@ -22,12 +22,27 @@ require 'cdo/cron'
 image_id = rack_env?(:adhoc) ? adhoc_image_id : IMAGE_ID
 
 self.log_resource_filter.push %w(FrontendLaunchConfig ASGCount)
+
+# Don't provision daemon where manually-provisioned daemon instances already exist.
+# TODO migrate stacks to cloudformation-provisioned instances.
+self.daemon = true unless %w(
+  autoscale-prod
+  test
+  staging
+  levelbuilder
+).include? stack_name
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
-<% if environment == :adhoc -%>
 Parameters:
+  InstanceType:
+    Type: String
+    Default: <%=INSTANCE_TYPE%>
+  Branch:
+    Type: String
+    Default: <%=branch%>
+<% if environment == :adhoc -%>
   DatabaseUsername:
     Type: String
     Default: master
@@ -49,7 +64,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: <%=image_id%>
-      InstanceType: <%=INSTANCE_TYPE%>
+      InstanceType: !Ref InstanceType
       IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile
       SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
       SubnetId: !ImportValue VPC-Subnet<%=azs.first%>
@@ -91,7 +106,7 @@ Resources:
   LoadBalancer:
     Type: AWS::ElasticLoadBalancing::LoadBalancer
     Properties:
-      LoadBalancerName: <%=stack_name%>
+      LoadBalancerName: !Ref AWS::StackName
       CrossZone: true
       SecurityGroups: [!ImportValue VPC-ELBSecurityGroup]
       Subnets: <%= public_subnets.to_json %>
@@ -117,6 +132,9 @@ Resources:
       ConnectionDrainingPolicy:
         Enabled: true
         Timeout: 300
+<% if !frontends && daemon -%>
+      Instances: [!Ref Daemon]
+<% end -%>
 
 <% if frontends -%>
   Frontends:
@@ -151,7 +169,7 @@ Resources:
     Type: AWS::AutoScaling::LaunchConfiguration
     Properties:
       ImageId: !GetAtt [AMI<%=ami%>, ImageId]
-      InstanceType: <%=INSTANCE_TYPE%>
+      InstanceType: !Ref InstanceType
       IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile
       SecurityGroups: [!ImportValue VPC-FrontendSecurityGroup]
       KeyName: <%=SSH_KEY_NAME%>
@@ -289,6 +307,23 @@ Resources:
       SourceArn: !GetAtt WebServerHookEventRule.Arn
   WebServerHookTopicNew: {Type: 'AWS::SNS::Topic'}
 <%  if environment == :production -%>
+  HealthEventRule:
+    Type: AWS::Events::Rule
+    Properties:
+      Description: !Sub "Health Events for ${AWS::StackName}."
+      EventPattern:
+        source: [aws.health]
+      State: ENABLED
+      Targets:
+      - Arn: !ImportValue SlackEvent
+        Id: HealthEventRuleTarget
+  HealthEventPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !ImportValue SlackEvent
+      Action: 'lambda:InvokeFunction'
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt HealthEventRule.Arn
   ClassroomScaleUp:
     Type: AWS::AutoScaling::ScheduledAction
     Properties:
@@ -342,14 +377,16 @@ Resources:
     Properties:
       DistributionConfig: <%= AWS::CloudFront.distribution_config(
         app.downcase.to_sym,
-        "origin-#{subdomain}",
+        subdomain('origin'),
         app == 'Dashboard' ?
-          [studio_subdomain] :
-          [subdomain] + (['i18n'] + CDO.partners).map{|x| "#{cname}-#{x}.#{domain}"},
+          # TODO: Set prod_stack_name: false after production cutover to CloudFormation-managed CloudFront distribution,
+          # to update CloudFront aliases to the production CNAME entries.
+          [studio_subdomain(prod_stack_name: true)] :
+          [subdomain(prod_stack_name: true)] + (['i18n'] + CDO.partners).map{|x| subdomain(nil, x, prod_stack_name: true)},
         {
           AcmCertificateArn: certificate_arn,
           MinimumProtocolVersion: 'TLSv1',
-          SslSupportMethod: 'sni-only'
+          SslSupportMethod: domain == 'code.org' ? 'vip' : 'sni-only'
         }
       )%>
 <%   end -%>
@@ -360,7 +397,7 @@ Resources:
     Properties:
       HostedZoneName: <%=domain%>.
       RecordSets:
-        - Name: "origin-<%=subdomain%>"
+        - Name: "<%=subdomain('origin')%>"
           Type: A
           AliasTarget:
             HostedZoneId: !GetAtt [LoadBalancer, CanonicalHostedZoneNameID]
@@ -405,12 +442,13 @@ Resources:
       PreferredAvailabilityZones: <%= availability_zones.first(2).to_json %>
       VpcSecurityGroupIds: [!ImportValue VPC-MemcachedSecurityGroup]
 <% end -%>
+<% unless daemon -%>
   ActivitiesQueue:
     Type: AWS::SQS::Queue
     Properties:
       ReceiveMessageWaitTimeSeconds: 20
       VisibilityTimeout: 15
-      QueueName: <%="activities-#{stack_name}"%>
+      QueueName: !Sub "activities-${AWS::StackName}"
       RedrivePolicy:
         maxReceiveCount: 3
         deadLetterTargetArn: !GetAtt [ActivitiesDeadQueue, Arn]
@@ -419,22 +457,22 @@ Resources:
     Properties:
       ReceiveMessageWaitTimeSeconds: 20
       VisibilityTimeout: 15
-      QueueName: <%="activities_dead-#{stack_name}"%>
-<%
-   if environment == :adhoc
-   self.daemon = true
--%>
+      QueueName: !Sub "activities_dead-${AWS::StackName}"
+<% end -%>
+<% if daemon -%>
   Daemon:
     Type: AWS::EC2::Instance
     CreationPolicy:
       ResourceSignal:
-        Timeout: PT60M
+        Timeout: PT2H
     Properties:
       ImageId: <%=image_id%>
-      InstanceType: <%=INSTANCE_TYPE%>
-      IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile
+      InstanceType: !Ref InstanceType
+      IamInstanceProfile: !ImportValue IAM-<%=environment == :adhoc ? 'Frontend' : 'Staging'%>InstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
-      Tags: [{Key: Name, Value: <%=stack_name%>}]
+      Tags:
+      - Key: Name
+        Value: !Ref AWS::StackName
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
@@ -443,7 +481,7 @@ Resources:
       UserData:
         Fn::Base64: <%=file('bootstrap_chef_stack.sh.erb',
           resource_id: 'Daemon',
-          node_name: stack_name,
+          node_name: '$STACK',
           run_list: [
             local_mode ? 'recipe[cdo-apps]' : 'role[daemon]'
           ],
@@ -452,12 +490,14 @@ Resources:
           daemon: true
         )%>
       NetworkInterfaces:
-        - AssociatePublicIpAddress: true
-          DeviceIndex: 0
-          GroupSet:
-            - !ImportValue VPC-FrontendSecurityGroup
-            - !ImportValue VPC-GatewaySecurityGroup
-          SubnetId: !ImportValue VPC-PublicSubnet<%=azs.first%>
+      - AssociatePublicIpAddress: true
+        DeviceIndex: 0
+        SubnetId: !ImportValue VPC-PublicSubnet<%=azs.first%>
+        GroupSet:
+          - !ImportValue VPC-FrontendSecurityGroup
+          - !ImportValue VPC-GatewaySecurityGroup
+<%end-%>
+<% if environment == :adhoc -%>
   Database:
     Type: AWS::RDS::DBInstance
     Properties:

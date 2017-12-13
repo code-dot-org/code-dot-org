@@ -1,4 +1,5 @@
 {
+  "startButton": "Başlayın",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "Hamısı",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "2-5 Siniflər",
   "filterGrades68": "6-8 Siniflər",
   "filterGrades9": "9+ Siniflər",
-  "filterTeacherExperience": "Müəllimin təcrübəsi",
-  "filterTeacherExperienceBeginner": "Yeni başlayan",
-  "filterTeacherExperienceComfortable": "Rahat",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "Tələbənin təcrübəsi",
   "filterStudentExperienceBeginner": "Yeni başlayan",
   "filterStudentExperienceComfortable": "Rahat",

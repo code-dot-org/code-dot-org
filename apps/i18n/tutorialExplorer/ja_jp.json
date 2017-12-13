@@ -1,4 +1,5 @@
 {
+  "startButton": "始める",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "全て",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "小学2年～5年生向け",
   "filterGrades68": "小学6年～中学2年生向け",
   "filterGrades9": "中学3年生以上向け",
-  "filterTeacherExperience": "教育経験",
-  "filterTeacherExperienceBeginner": "初心者向け",
-  "filterTeacherExperienceComfortable": "快適",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "学生の体験",
   "filterStudentExperienceBeginner": "初心者向け",
   "filterStudentExperienceComfortable": "快適",

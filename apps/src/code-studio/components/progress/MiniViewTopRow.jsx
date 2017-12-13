@@ -34,12 +34,12 @@ const styles = {
   }
 };
 
-const MiniViewTopRow = React.createClass({
-  propTypes: {
+export default class MiniViewTopRow extends React.Component {
+  static propTypes = {
     scriptName: PropTypes.string.isRequired,
     // May not have this (i.e if not logged in)
     linesOfCodeText: PropTypes.string,
-  },
+  };
 
   render() {
     const { scriptName, linesOfCodeText } = this.props;
@@ -62,6 +62,4 @@ const MiniViewTopRow = React.createClass({
       </div>
     );
   }
-});
-
-export default MiniViewTopRow;
+}

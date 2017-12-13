@@ -1,96 +1,67 @@
-* * *
-
-title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_how_to) %>
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
-# How to teach one Hour of Code
+<h1>Hour of Code (अवर ऑफ कोड, संगणक आज्ञावली-programming तासिका) उपक्रम कसा शिकवावा</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps:
+Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to help run an Hour of Code in your class.
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial for your hour:
+## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
+## 2. Choose a tutorial for your hour
 
-**[Student-guided Hour of Code tutorials:](%= resolve_url('/learn') %)**
+We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
-  * Require minimal prep-time for teachers
-  * Are self-guided - allowing students to work at their own pace and skill-level
+## 3. Promote your Hour of Code
 
-**[Teacher-guided Hour of Code tutorials:](%= resolve_url('https://code.org/educate/teacher-led') %)**
+Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources') %) and encourage others to host their own events.
 
-  * Are lesson plans that require some advance teacher preparation
-  * Are categorized by grade level *and* by subject area (eg Math, English, etc)
+## 4. Plan your technology needs - computers are optional
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+अवर ऑफ कोड चा सर्वोत्तम अनुभव घेण्यासाठी इंटरनेट ला जोडलेला संगणक आवश्यक आहे. पण सर्वांकडे संगणक पाहिजेच असे काही **नाही** आणि तुम्ही अवर ऑफ कोड संगणकाशिवायपण करू शकता.
 
-## 3) Promote your Hour of Code
+Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
+प्रतीयोगींना स्वत: चा हेडफोन आणावयास सांगणे किंवा उपलब्ध करून देणे. शिकवण्या आवाजासाहित नीट चालतात हे पाहणे.
 
-## 4) Plan your technology needs - computers are optional
+**संगणकीय उपकरणे पर्याप्त नाहीत?** [जोडीने प्रोग्रामिंग](https://www.youtube.com/watch?v=vgkahOzFH2Q) करावे. जेंव्हा प्रतियोगी जोडीने काम करतात, तेंव्हा ते एकमेकांना मदत करतात आणि त्यामुळे आयोजकांवर कमी अवलंबून राहतात. संगणकशास्त्र के परस्पर सहकार्याने करण्याचे आणि सामाजिक असल्याचे याने समजते.
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+<img src="/images/fit-350/group_ipad.jpg" />
 
-**Plan Ahead!** Do the following before your event starts:
+## 5. Start your Hour of Code off with an inspiring speaker or video
 
-  * Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
-  * **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+**Invite a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
-![](/images/fit-350/group_ipad.jpg)
+**प्रेरणादायी व्हिडीओ दाखवावा:**
 
-## 5) Start your Hour of Code off with an inspiring speaker or video
-
-**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
-
-[![](/images/fit-300/volunteer-map.png)](%= resolve_url('https://code.org/volunteer/local') %)
-
-**Show an inspirational video:**
-
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
+- Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-  * Explain ways that technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-  * As a class, list things that use code in everyday life.
-  * See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
+- Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
+- दैनंदिन जीवनात कॉम्पुटर प्रोग्रामिंग (code) कश्याकरिता करता त्याची यादी करा.
+- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls')%).
 
-**Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
-
-**Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
-
-## 6) Code!
+## 6. Code!
 
 **Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
-
-[col-33]
-
-![](/images/fit-300/group_ar.jpg)
-
-[/col-33]
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn')%) under the number of participants.
 
 **When your students come across difficulties it's okay to respond:**
 
-  * “I don’t know. Let’s figure this out together.”
-  * “Technology doesn’t always work out the way we want.”
-  * “Learning to program is like learning a new language; you won’t be fluent right away.”
+- "मला माहिती नाही. आपण एकत्र सोडवण्याचा प्रयत्न करू."
+- "तंत्रज्ञान कायमच आपल्याला पाहिजे तसेच काम करेल असे नाही."
+- "संगणक आज्ञावली शिकणे हे एखादी नवीन भाषा शिकण्यासारखे आहे; लगेचच काही सहजपणे वापरता येणार नाही."
 
-**[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
+**What if a student finishes early?**
 
-**What to do if a student finishes early?**
-
-  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+- Students can see all tutorials and [try another Hour of Code activity](%= resolve_url('/learn')%).
+- किंवा, ज्या विद्यार्थ्यांचे काम लवकर संपले आहे त्यांना, ज्यांना काम करण्यास अडचणी येत आहेत, त्यांना मदत करण्यास सांगणे.
 
 [col-33]
 
@@ -98,11 +69,9 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 [/col-33]
 
-<p style="clear:both">
-  &nbsp;
-</p>
+<p style="clear:both">&nbsp;</p>
 
-## 7) Celebrate
+## 7. Celebrate
 
 [col-33]
 
@@ -110,10 +79,10 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 [/col-33]
 
-  * [Print certificates](%= resolve_url('https://code.org/certificates') %) for your students.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
-  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- [Print certificates](%= resolve_url('https://code.org/certificates')%) for your students.
+- ["I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) असे स्टीकर्स विद्यार्थ्यांकरिता छापणे.
+- तुमच्या शाळेकरिता [विशेष (सानुकूल) बनवलेले टी शर्ट](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) मागवणे.
+- या घटनेची छायाचित्रे आणि व्हिडीओ सोशल मेडिया (समाज माध्यमे) वर उपलब्ध करावी. #HourOfCode आणि @codeorg हे वापरून तसे केल्यास तुमचे यशसुद्धा उठून दिसेल!
 
 [col-33]
 
@@ -121,24 +90,18 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 [/col-33]
 
-<p style="clear:both">
-  &nbsp;
-</p>
+<p style="clear:both">&nbsp;</p>
 
-## Other Hour of Code resources for educators:
+## शिक्षकांकरिता अवरऑफ कोड संदर्भात इतर संसाधने:
 
-  * Use this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx) to organize your Hour of Code.
-  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code teachers. 
-  * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-  * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
-  * Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators. <% if @country == 'us' %>
-  * Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+- सल्ला घेण्यासाठी, इतर शिक्षकांकडून जास्त आकलन, मदत घेण्यासाठी [अवर ऑफ कोड कट्ट्याला](http://forum.code.org/c/plc/hour-of-code) भेट द्या. <% if @country == 'us' %>
+- [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) तपासा. <% end %>
 
-## What comes after the Hour of Code?
+## अवर ऑफ कोड नंतर पुढे काय?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+ही शिकण्याची यात्रा चालू राहण्यासाठी, तंत्रज्ञान कसे काम करते आणि साॅफ्टवेअर अप्लिकेशन कसे बनवावे हे जाणण्याची, अवर ऑफ कोड ही पहिली पायरी आहे:
 
-  * Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-  * [Attend](%= resolve_url('https://code.org/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond')%).
+- अनुभवी संगणक मदतनिसांकडून सूचना घेण्यासाठी एक दिवसीय कार्यशाळेला स्वत: [उपस्थित](%= resolve_url('https://code.org/professional-development-workshops') %) राहावे. (फक्त अमेरिकेतील शिक्षकांसाठी)
 
 <%= view :signup_button %>

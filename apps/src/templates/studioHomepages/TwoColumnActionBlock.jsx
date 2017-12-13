@@ -1,12 +1,17 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import color from "../../util/color";
-import GridContainer from './GridContainer';
 import Button from '@cdo/apps/templates/Button';
-import Responsive from '../../responsive';
+import styleConstants from '../../styleConstants';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
+const contentWidth = styleConstants['content-width'];
+
 const styles = {
+  fullWidthNonResponsive: {
+    width: contentWidth
+  },
   heading: {
     paddingRight: 10,
     paddingTop: 10,
@@ -23,7 +28,7 @@ const styles = {
     boxSizing: 'border-box'
   },
   subheading: {
-    paddingRight: 10,
+    paddingRight: 0,
     paddingBottom: 20,
     fontSize: 27,
     lineHeight: 1.2,
@@ -41,103 +46,138 @@ const styles = {
   clear: {
     clear: 'both',
     marginBottom: 60
-  }
+  },
+  container: {
+    width: '100%'
+  },
 };
 
-class TwoColumnActionBlock extends Component {
+class UnconnectedTwoColumnActionBlock extends Component {
   static propTypes = {
     isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired,
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     imageUrl: PropTypes.string.isRequired,
-    heading: PropTypes.string.isRequired,
-    subHeading: PropTypes.string.isRequired,
+    heading: PropTypes.string,
+    subHeading: PropTypes.string,
     description: PropTypes.string.isRequired,
-    buttonUrl: PropTypes.string.isRequired,
-    buttonText: PropTypes.string.isRequired
+    buttons: PropTypes.arrayOf(PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired
+    })),
   };
 
   render() {
-    const { isRtl, responsive, imageUrl, heading, subHeading, description, buttonUrl, buttonText } = this.props;
+    const { isRtl, responsiveSize, imageUrl, heading, subHeading, description, buttons } = this.props;
+    const float = isRtl ? 'right' : 'left';
+    const width = (responsiveSize === 'lg') ? '50%' : '100%';
 
     return (
       <div>
-        <div style={styles.heading}>
-          {heading}
-        </div>
-        <GridContainer
-          numColumns={2}
-          isRtl={isRtl}
-          responsive={responsive}
-        >
-          {responsive.isResponsiveCategoryActive('lg') && (
-            <img src={imageUrl}/>
-          )}
-          <div style={styles.textItem}>
-            <div style={styles.subheading}>
-              {subHeading}
-            </div>
-            <div style={styles.description}>
-              {description}
-            </div>
-            <Button
-              href={buttonUrl}
-              color={Button.ButtonColor.gray}
-              text={buttonText}
-            />
+        {heading && (
+          <div style={styles.heading}>
+            {heading}
           </div>
-        </GridContainer>
+        )}
+        <div style={styles.container}>
+          {responsiveSize === 'lg' &&
+            <div style={{float, width}}>
+              <img src={imageUrl}/>
+            </div>
+          }
+          <div style={{float, width}}>
+            <div style={styles.textItem}>
+              {subHeading && (
+                <div style={styles.subheading}>
+                  {subHeading}
+                </div>
+              )}
+              <div style={styles.description}>
+                {description}
+              </div>
+              {buttons.map((button, index) =>
+                <span key={index}>
+                  <Button
+                    href={button.url}
+                    color={Button.ButtonColor.gray}
+                    text={button.text}
+                  />
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                </span>
+              )}
+            </div>
+          </div>
+        </div>
         <div style={styles.clear}/>
       </div>
     );
   }
 }
 
+const TwoColumnActionBlock = connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+  isRtl: state.isRtl,
+}))(UnconnectedTwoColumnActionBlock);
+
 export class LocalClassActionBlock extends Component {
   static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired,
     showHeading: PropTypes.bool.isRequired,
   };
 
   render() {
-    const { isRtl, responsive, showHeading } = this.props;
+    const { showHeading } = this.props;
     const heading = showHeading ? i18n.findLocalClassHeading() : '';
 
     return (
       <TwoColumnActionBlock
-        isRtl={isRtl}
-        responsive={responsive}
         imageUrl={pegasus('/shared/images/fill-540x289/misc/beyond-local-map.png')}
         heading={heading}
         subHeading={i18n.findLocalClassSubheading()}
         description={i18n.findLocalClassDescription()}
-        buttonUrl={pegasus('/learn/local')}
-        buttonText={i18n.findLocalClassButton()}
+        buttons={[{url: pegasus('/learn/local'), text: i18n.findLocalClassButton()}]}
       />
     );
   }
 }
 
 export class AdministratorResourcesActionBlock extends Component {
-  static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
-  };
-
   render() {
-    const { isRtl, responsive } = this.props;
-
     return (
       <TwoColumnActionBlock
-        isRtl={isRtl}
-        responsive={responsive}
         imageUrl={pegasus('/images/fill-540x289/2015AR/newcsteacherstrained.png')}
         heading={i18n.administratorResourcesHeading()}
         subHeading={i18n.administratorResourcesSubheading()}
         description={i18n.administratorResourcesDescription()}
-        buttonUrl={pegasus('/administrators')}
-        buttonText={i18n.yourSchoolAdminButton()}
+        buttons={[{url: pegasus('/administrators'), text: i18n.yourSchoolAdminButton()}]}
       />
+    );
+  }
+}
+
+export class SpecialAnnouncementActionBlock extends Component {
+  static propTypes = {
+    imageUrl: PropTypes.string.isRequired,
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    buttons: PropTypes.arrayOf(PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired
+    }))
+  };
+
+  render() {
+    const { imageUrl, heading, description, buttons } = this.props;
+
+    return (
+      <div style={styles.fullWidthNonResponsive}>
+        <TwoColumnActionBlock
+          imageUrl={imageUrl}
+          subHeading={heading}
+          description={description}
+          buttons={buttons}
+        />
+      </div>
     );
   }
 }

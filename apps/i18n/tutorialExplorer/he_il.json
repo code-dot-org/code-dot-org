@@ -1,4 +1,5 @@
 {
+  "startButton": "התחל",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "All",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "רמות 2-5",
   "filterGrades68": "רמות 6-8",
   "filterGrades9": "רמה 9 ומעלה",
-  "filterTeacherExperience": "Educator experience",
-  "filterTeacherExperienceBeginner": "מתחיל",
-  "filterTeacherExperienceComfortable": "Comfortable",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "Student experience",
   "filterStudentExperienceBeginner": "מתחיל",
   "filterStudentExperienceComfortable": "Comfortable",

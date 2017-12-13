@@ -1,53 +1,58 @@
-* * *
-
-title: <%= hoc_s(:title_signup_thanks) %> layout: wide nav: how_to_nav
-
-social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png" "og:image:width": 1440 "og:image:height": 900 "og:url": "http://<%=request.host%>"
-
-"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-
-* * *
-
+---
+title: <%= hoc_s(:title_signup_thanks) %>
+layout: wide
+nav: how_to_nav
+social:
+  "og:title": <%= hoc_s(:meta_tag_og_title) %>
+  "og:description": <%= hoc_s(:meta_tag_og_description) %>
+  "og:image": http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png
+  "og:image:width": 1440
+  "og:image:height": 900
+  "og:url": http://<%=request.host%>
+  "twitter:card": player
+  "twitter:site": '@codeorg'
+  "twitter:url": http://<%=request.host%>
+  "twitter:title": <%= hoc_s(:meta_tag_twitter_title) %>
+  "twitter:description": <%= hoc_s(:meta_tag_twitter_description) %>
+  "twitter:image:src": http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png
+---
 <% facebook = {:u=>"http://#{request.host}/us"}
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# Děkujeme, že jste nabízíte hostování akce Hodina kódu!
+# Děkujeme za přihlášení k hostování akce Hodina kódu!
 
-Dáváte šanci všem studentům po celém světě se zúčastnit Hodiny kódu, která může *změnit zbytek jejich života*, during <%= campaign_date('full') %>. Ozveme se ohledně nových návodů a jiných zajímavých novinek. Co můžete udělat dále?
+As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
+<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
 
-## 1. Povídejte o tom
+<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
 
-Právě jste se připojili do akce Hodina kódu. Povězte to přátelům hashtagem **#HourOfCode**!
+<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+## 1. Spread the word in your school and community
 
-## 2. Najděte lokálná dobrovolníky, aby vám pomohli s vaší událostí.
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-[ Prohledejte naší mapu dobrovolníku](%= resolve_url('https://code.org/volunteer/local') %) pro dobrovolníky, kteří můžou navštívit vaší učebnu nebo video chat na dálku, aby mohli inspirovat vaše studenty škálou možností s počítačovými vědami.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](%= resolve_url('/promote/resources#sample-emails') %) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Nemusíte být ve škole, abyste se naučili nové dovednosti. Invite a local politician or policy maker to visit your school for the Hour of Code. Může to pomoci rozvoji informatiky ve vašem regionu za jednu hodinu.
 
-## 2. Požádejte, aby celá vaše škola nabídla akci Hodinu kódu
+Používejte tyto [plakáty, banery, nálepky, videa a další](%= resolve_url('/promote/resources') %) pro vaši vlastní událost.
 
-[Poslat tento email](%= resolve_url('/promote/resources#sample-emails') %) vašemu řediteli školy a vyzvat každou třídu ve škole se přihlásit.
+## 2. Najděte lokální dobrovolníky, aby vám pomohli s vaší událostí.
 
-## 4. Požádejte svého zaměstnavatele, aby se zapojil
+[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-[Pošlete tento email](%= resolve_url('/promote/resources#sample-emails') %) vašemu nadřízenému nebo řediteli společnosti.
+## 3. Plan your Hour of Code
 
-## 5. Propagujte akci Hodina kódu ve vaší komunitě
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](%= resolve_url('/how-to') %).
 
-[Získejte místní skupinu](%= resolve_url('/promote/resources#sample-emails') %)— chlapecké/dívčí kluby, církev, univerzity, veteránské spolky, odboráře, nebo dokonce některé přátelé. Nemusíte být ve škole, abyste se naučili nové dovednosti. Používejte tyto [plakáty, banery, nálepky, videa a další](%= resolve_url('/promote/resources') %) pro vaši vlastní událost.
+# Go beyond an Hour of Code
 
-## 6. Požádejte místní politity, aby podpořili akci Hodina kódu
+<% if @country == 'us' %> An Hour of Code is just the beginning. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
 
-[Pošlete tento email](%= resolve_url('/promote/resources#sample-emails') %) vašim místním politikům, městské radě nebo školní radě a pozvěte je k návštěvě vaší školy pro Hodinu kódu. Může to pomoci rozvoji informatiky ve vašem regionu za jednu hodinu.
+You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-## 7. Naplánujte svojí Hodinu kódu
+<% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-Vyberte aktivitu Hodiny kódu a [ prohlédněte si tento how-to průvodce](%= resolve_url('/how-to') %).
-
-## 8. Go beyond an Hour of Code
-
-Ready to go beyond an hour? Check out [our full courses and teacher resources](%= resolve_url('https://code.org/teach')%) including professional learning opportunities for elementary, middle and high school teachers.
+Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
 
 <%= view 'popup_window.js' %>

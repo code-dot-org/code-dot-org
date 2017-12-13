@@ -115,7 +115,13 @@ def complete_tutorial(tutorial={})
         weight: weight
       )
     end
-    destination = "http://#{row[:referer]}/congrats?i=#{row[:session]}"
+
+    site = "http://#{row[:referer]}"
+    if DCDO.get('new_congrats', false) && tutorial[:orgname].try(:include?, 'Code.org')
+      site = CDO.studio_url('', CDO.default_scheme)
+    end
+
+    destination = "#{site}/congrats?i=#{row[:session]}"
     destination += "&co=#{row[:company]}" unless row[:company].blank?
     destination += "&s=#{Base64.urlsafe_encode64(tutorial[:code])}" unless tutorial[:code].blank?
   end

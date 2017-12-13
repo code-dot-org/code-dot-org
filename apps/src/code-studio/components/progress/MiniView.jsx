@@ -18,8 +18,8 @@ const styles = {
 /**
  * The course progress dropdown you get when you click the arrow in the header.
  */
-const MiniView = React.createClass({
-  propTypes: {
+class MiniView extends React.Component {
+  static propTypes = {
     linesOfCodeText: PropTypes.string,
 
     // redux backed
@@ -27,7 +27,7 @@ const MiniView = React.createClass({
     hasGroups: PropTypes.bool.isRequired,
     scriptName: PropTypes.string.isRequired,
     hasFullProgress: PropTypes.bool.isRequired,
-  },
+  };
 
   render() {
     const { linesOfCodeText, isSummaryView, hasGroups, scriptName, hasFullProgress } = this.props;
@@ -65,7 +65,7 @@ const MiniView = React.createClass({
       </div>
     );
   }
-});
+}
 
 export const UnconnectedMiniView = MiniView;
 

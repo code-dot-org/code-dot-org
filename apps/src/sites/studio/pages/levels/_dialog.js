@@ -2,20 +2,11 @@
 
 import { showDialog, processResults } from  '@cdo/apps/code-studio/levels/dialogHelper';
 import { getResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import { UnsubmitDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
 
 /**
  * This file does some handling of submit button interactions.
  */
-
-$(document).ready(function () {
-  // This setting (pre_title) is used by only a couple of levels in our system.
-  // Ideally we would get rid of it.
-  if (appOptions.dialog.preTitle) {
-    window.setTimeout(function () {
-      showDialog("pre");
-    }, 1000);
-  }
-});
 
 // Are we read-only?  This can be because we're a teacher OR because an answer
 // has been previously submitted.
@@ -35,7 +26,7 @@ if (appOptions.readonlyWorkspace) {
 
 // Unsubmit button should only be available when this is a standalone level.
 $('.unsubmitButton').click(function () {
-  showDialog('unsubmit', function () {
+  showDialog(UnsubmitDialog, function () {
     $.post(window.appOptions.unsubmitUrl,
       {"_method": 'PUT', user_level: {submitted: false}},
       function () {
@@ -55,10 +46,14 @@ $(document).on('click', '.submitButton', function () {
   }
 
   var result = getResult();
-  var showConfirmationDialog = result.showConfirmationDialog || false;
-  if (showConfirmationDialog) {
-    showDialog(showConfirmationDialog, function () {
-      processResults(onComplete, result.beforeProcessResultsHook);
+  if (result.confirmationDialog) {
+    // This is only used by level_group.js, and only uses the React approach to
+    // showDialog
+    if (typeof result.confirmationDialog === 'string') {
+      throw new Error('result.confirmationDialog only supports React approach to showDialog');
+    }
+    showDialog(result.confirmationDialog, function () {
+      processResults(undefined, result.beforeProcessResultsHook);
     });
   } else {
     // Avoid multiple simultaneous submissions.

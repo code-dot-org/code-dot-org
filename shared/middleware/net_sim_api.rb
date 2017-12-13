@@ -15,20 +15,20 @@ class NetSimApi < Sinatra::Base
     wire: 'w',
     message: 'm',
     log: 'l'
-  }
+  }.freeze
 
   NODE_TYPES = {
     client: 'client',
     router: 'router'
-  }
+  }.freeze
 
   VALIDATION_ERRORS = {
     malformed: 'malformed',
     conflict: 'conflict',
     limit_reached: 'limit_reached'
-  }
+  }.freeze
 
-  DEFAULT_LOCAL_REDIS = 'redis://localhost:6379'
+  DEFAULT_LOCAL_REDIS = 'redis://localhost:6379'.freeze
 
   # Largest request we allow from NetSim clients.
   # Max request size we've observed in normal traffic: 9KB

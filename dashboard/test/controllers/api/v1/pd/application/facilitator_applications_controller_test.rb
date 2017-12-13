@@ -6,6 +6,8 @@ module Api::V1::Pd::Application
       @test_params = {
         form_data: build(:pd_facilitator1819_application_hash)
       }
+
+      @applicant = create :teacher
     end
 
     setup do
@@ -22,7 +24,7 @@ module Api::V1::Pd::Application
       Pd::Application::Facilitator1819ApplicationMailer.expects(:confirmation).returns(
         mock {|mail| mail.expects(:deliver_now)}
       )
-      sign_in create(:teacher)
+      sign_in @applicant
 
       put :create, params: @test_params
       assert_response :success
@@ -30,10 +32,20 @@ module Api::V1::Pd::Application
 
     test 'does not send confirmation mail on unsuccessful create' do
       Pd::Application::Facilitator1819ApplicationMailer.expects(:confirmation).never
-      sign_in create(:teacher)
+      sign_in @applicant
 
       put :create, params: {form_data: {firstName: ''}}
       assert_response :bad_request
+    end
+
+    test 'submit is idempotent' do
+      create :pd_facilitator1819_application, user: @applicant
+
+      sign_in @applicant
+      assert_no_difference 'Pd::Application::Facilitator1819Application.count' do
+        put :create, params: @test_params
+      end
+      assert_response :success
     end
   end
 end

@@ -297,6 +297,16 @@ Sounds.prototype.isPlayingURL = function (url) {
 };
 
 /**
+ * Stop playing url.
+ */
+Sounds.prototype.stopPlayingURL = function (url) {
+  var sound = this.soundsById[url];
+  if (sound) {
+    sound.stop();
+  }
+};
+
+/**
  * Stop all playing sounds immediately.
  */
 Sounds.prototype.stopAllAudio = function () {

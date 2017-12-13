@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_op_ed) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ### U nastavku je uzorak op-ed podrške tjednu računarstva i njegovih ciljeva koje mogu koristiti država, lokalni zakonodavci poslovni ljudi itd.

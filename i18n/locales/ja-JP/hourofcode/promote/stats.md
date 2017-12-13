@@ -1,8 +1,9 @@
-* * *
+---
+title: <%= hoc_s(:title_stats) %>
+layout: wide
+nav: promote_nav
+---
 
-title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
-
-* * *
 
 <a id="blurb"></a>
 
@@ -12,7 +13,7 @@ title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 ## ニュースレター用に以下の宣伝文句をご利用ください
 
-### あなたの学校にもコンピューターサイエンスを導入しましょう。Hour of Codeで始めましょう。
+### Bring computer science to your school. Start with an Hour of Code!
 
 With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But fewer than half of all schools teach computer science! 良いお知らせは、私たちはこれを変えようとしているということです。 If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 

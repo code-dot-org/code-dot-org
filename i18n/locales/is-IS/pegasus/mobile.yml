@@ -26,9 +26,14 @@
   twentyhours_heading: "Prófaðu námskeiðið okkar Inngangur að tölvunarfræði"
   twentyhours_text: "Búin(n) að ljúka fyrstu Klukkustund kóðunar? Fylgdu eftir með því að læra fleiri mikilvæg hugtök í tölvunarfræði og forritun á þessu námskeiði."
   og_title: 'Code.org: Allir geta lært'
+  og_title_soon: "The Hour of Code is coming"
+  og_title_here: "The Hour of Code is here!"
   og_description: "Sérhver nemandi í sérhverjum skóla á skilið að fá tækifæri til að læra tölvunarfræði."
+  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Klukkustund kóðunar er nú"
   csedweek_og_description: "4.-10. desember 2017. Tölvunarfræði er grunnfag sem allir nemendur ættu að læra."
+  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Vertu með í <a href=\"http://hourofcode.com\">Klukkustund kóðunar</a><br/>8. - 14. desember 2014<br/>"
   hoc2014_students: "Nemendur"
   hoc2014_try: "Prófið hana"
@@ -294,6 +299,8 @@
   homepage_hero_text_stat_loc: "8,5 miljón stúlkur er skráðar til náms á Code.org"
   homepage_hero_text_stat_students: "#student_count nemendur skráðir á Code.org"
   homepage_hero_text_stat_served: 'Klukkustund kóðunar: miðlað til #served'
+  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
+  homepage_hero_hoc_is_here: "The Hour of Code is here"
   homepage_slot_text_hoc: "Klukkustund kóðunar"
   homepage_slot_text_frozen: "Frozen með Önnu og Elsu"
   homepage_slot_text_teacher: "Stjórnborð kennara"
@@ -313,6 +320,7 @@
   homepage_action_text_girlvideo: "Veittu stúlku innblástur"
   homepage_action_text_learn: "Byrjaðu að læra"
   homepage_action_text_signpetition: "Skrifa undir áskorunina"
+  homepage_action_text_wincelebritychat: "Win a celebrity chat"
   homepage_signpetition_dropdown: "Ég samþykki &#x25BE;"
   homepage_diversity_pledge: "Vinna fjölbreytniheitið"
   homepage_banner_text_prizes: 'Klukkustund kóðunar kemur aftur 7. - 13. desember. '
@@ -339,7 +347,7 @@
   homepage_slot_text_title_students: "Nemendur"
   homepage_slot_text_blurb_students: "Skoða allt kennsluefni okkar"
   homepage_slot_text_blurb_students_courses: "Kíktu á námskeiðin okkar"
-  homepage_slot_text_link_codestudio: "Prófa námskeið Code.org"
+  homepage_slot_text_link_codestudio: "Prófa Kóðastúdíóið"
   homepage_slot_text_link_local: "Finna nám í nágrenninu"
   homepage_slot_text_link_othercourses: "Önnur námskeið á netinu"
   homepage_slot_text_title_educators: "Fræðsluaðilar"
@@ -419,10 +427,13 @@
   mc_gradelevel: "Aldur 6-106"
   mc_platformtext: "Fyrir nýjustu vafra, snjallsíma, spjaldtölvur"
   mc_specs: "Mörg tungumál | Nýlegir vafrar og spjaldtölvur | Aldur 6-106"
+  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: "Minecraft Hönnuður"
   minecraft_adventurer: "Minecraft Könnuður"
   minecraft_tutorials: "Klukkustund kóðunar með Minecraft efni"
   minecraft_specs: "Mörg tungumál | Nýlegir vafrar og spjaldtölvur | 2. bekkur+"
+  minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  minecraft_agent_button: "Byrja"
   minecraft_designer_description: "Forritaðu dýr og aðrar Minecraft verur í þinni eigin útgáfu af Minecraft."
   minecraft_designer_button: "Byrja"
   minecraft_adventurer_description: "Notaðu kóða til að láta Alex eða Steve fara í ævintýraferð."
@@ -430,6 +441,19 @@
   minecraft_no_internet: "Ertu án internettengingar?"
   minecraft_download_adventurer: "Hlaða niður ónettengdu útgáfunni af Minecraft Könnuði."
   minecraft_subtitle: "Klukkustund kóðunar með Minecraft"
+  minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
+  minecraft_host_event: "Host a Minecraft Hour of Code Event"
+  minecraft_teach_resources: "Teacher resources and lesson plan."
+  minecraft_leader_guide: "Download resources to help you plan and lead an event."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
+  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}', target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
+  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}', target='_blank'>Sign up today</a>."
+  minecraft_future: "Help all youth become future ready"
+  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}', target='_blank'>access the resources</a> they found most valuable."
+  minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
+  minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   sports_page_title: "Klukkustund kóðunar - íþróttir"
   sports_og_title: "Láttu reyna á þig. Allir geta lært."
   sports_og_description: "Meistarar og gullverðlaunarhafar hvetja þig til að prófa Klukkustund kóðunar. Forritaðu þinn eigin íþróttaleik."
@@ -545,7 +569,7 @@
   volunteer_engineer_submission_type_task_remote: "Ég vil að þú notir Skype til að segja nokkur hvatningarorð við börnin í bekknum mínum"
   volunteer_engineer_submission_type_task_mentor: "Ég er að leita að leiðbeinanda til að hjálpa mér að undirbúa að kóða með nemendum mínum"
   petition_age: "Aldur"
-  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_hoc_scaling_progress: "Það er mikið álag á Klukkustund kóðunar. Við getum ekki vistað neina framvindu þessa vikuna en öll framvinda þar á undan er varðveitt."
   dashboard_announce_learn_more_button: "Læra meira"
   dashboard_landing_title: "Heimasíða kennara"
   dashboard_landing_welcome: "Velkomin á nýtt og endurbætt stjórnborð kennara."
@@ -943,6 +967,8 @@
   csp-ap_name: AP verkefni
   csppostap_name: 'Framhald: Gagnagrunnar í öppum'
   cspassessment_name: "Fullt próf - 50 spurningar"
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Prófhluti 1 - 25 spurningar
   cspexam2-AKwgAh1ac5_name: Prófhluti 2 - 25 spurningar
   cspunit3_gradelevel: "Bekkir 9-12"
@@ -1431,8 +1457,8 @@
   user_header_logout: "Skrá út"
   user_header_signin: "Innskráning"
   view_all_sections: "Sjá alla hópa"
-  view_section: "Skoða hóp"
-  view_named_section: "Skoða %{section_name}"
+  view_section: "Sjá hóp"
+  view_named_section: "Sjá %{section_name}"
   privacy_doc_explanation: "Smelltu hér til að fá persónuverndarskjal okkar sem þú getur deilt eða prentað fyrir nemendur þína."
   signing_in: "Innskráning"
   sign_in_overview: 'Nemendur þínir geta skráð sig inn á Code.org aðganga sína með því að fylgja þessum leiðbeiningum:'
@@ -1442,7 +1468,7 @@
   sign_in_instruct_secret: "Velja leyndarmálið %{secret}."
   sign_in_instruct_button: "Smella á \"Skrá inn\" hnappinn."
   sign_in_overview_cards: "Nemendur geta fundið allar þessar upplýsingar, þar á meðal leyndarmálið sitt %{secret}, á innskráningarspjöldunum hér fyrir neðan."
-  reset_student_password: "Endurstilla aðgangsorð nemenda"
+  reset_student_password: "Endurstilling aðgangsorða nemenda"
   reset_student_password_instructions: "Þú getur endurstillt leynilega <orðið/myndina> fyrir nemanda þinn með því að fara á \"Umsjón hóps\" flipann fyrir hópinn, smella á \"Sýna leyndarmál\" hnappinn í dálknum \"Aðgangsorð\" og smella á hnappinn \"Endurstilla leyndarmál\"."
   login_cards: "Innskráningarspjöld"
   print_login_cards: "Prenta innskráningarspjöld"
@@ -1457,3 +1483,5 @@
   syncing_students: "Speglun nemenda"
   syncing_students_instructions: 'Ef upp kemur ósamræmi milli Code.org hópsins þíns og nemendalistans í Google Classroom, getur þú smellt á "Spegla nemendur frá Google Classroom" hnappinn undir flipanum "Umsjón nemenda":'
   google_sign_in_instruct: 'Þaðan ættu þeir að nota valkostinn "Skrá inn með Google aðgangi":'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro

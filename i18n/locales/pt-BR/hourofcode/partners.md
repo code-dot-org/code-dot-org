@@ -1,16 +1,13 @@
-* * *
-
+---
 title: <%= hoc_s(:title_partners) %>
+---
+A Hora do Código é gerenciada pelos Comitês de Assessoria e Revisão da Semana da Educação em Ciência da Computação e da Hora do Código.
 
-* * *
+O [Comitê de Assessoria](%= resolve_url('/advisory-committee') %) é composto por representantes do ensino fundamental e médio, do setor acadêmico e de organizações com e sem fins lucrativos e internacionais. Esse comitê guia as estratégias para a campanha da Hora do Código.
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+O [Comitê de Revisão](%= resolve_url('/review-committee') %) é composto por 15 educadores de grupos do ensino fundamental e médio que avaliam e recomendam atividades utilizando os critérios do Comitê de Assessoria. Esses educadores revisam as atividades conduzidas por alunos e os planos de aula conduzidos por professores enviados por centenas de parceiros, avaliando o valor educacional das atividades, sua capacidade de envolver os alunos e seu potencial atrativo para diversos tipos de estudantes.
 
-The [Advisory Committee](%= resolve_url('/advisory-committee') %) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
-
-The [Review Committee](%= resolve_url('/review-committee') %) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led tutorials and teacher-led lesson plans submitted by hundreds of tutorial partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
-
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+O trabalho e a dedicação dos dois comitês contribuíram para o sucesso da Hora do Código e sua visão de oferecer uma introdução à ciência da computação para todos os estudantes.
 
 <% if @country == 'la' %>
 
@@ -134,13 +131,13 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 * * *
 
-# Parceiros de tutoriais
+# Parceiros de atividades
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Parceiros e ferramentas de infraestrutura
+# Parceiros e ferramentas de Infraestrutura
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

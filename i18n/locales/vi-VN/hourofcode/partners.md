@@ -1,16 +1,13 @@
-* * *
-
+---
 title: <%= hoc_s(:title_partners) %>
+---
+Hour of Code được phát triển bởi Hour of Code và máy tính khoa học giáo dục tuần tư vấn và xem xét các ủy ban.
 
-* * *
+[Ủy ban tư vấn](%= resolve_url('/advisory-committee') %) bao gồm các đại diện từ K-12, học viện, nonprofits, cho lợi nhuận và tổ chức quốc tế. Ủy ban này sẽ hướng dẫn các chiến lược cho các chiến dịch Hour of Code.
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+[Ủy ban xem xét](%= resolve_url('/review-committee') %) bao gồm 15 nhà giáo dục trên toàn K-12 lớp ban nhạc mà đánh giá và đề nghị các hoạt động sử dụng phiếu tự đánh giá của Ủy ban tư vấn. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
-The [Advisory Committee](%= resolve_url('/advisory-committee') %) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
-
-The [Review Committee](%= resolve_url('/review-committee') %) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led tutorials and teacher-led lesson plans submitted by hundreds of tutorial partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
-
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Cả hai Uỷ ban công việc và sự cống hiến đã góp phần vào sự thành công của Hour of Code và tầm nhìn của nó cung cấp một giới thiệu về khoa học máy tính cho mỗi học sinh.
 
 <% if @country == 'la' %>
 
@@ -116,37 +113,37 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% end %>
 
-# Major Partners and Corporate Supporters
+# Đối tác chính và những nhà tài trợ
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# Major Promotional Partners
+# Đối tác quảng cáo chính
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# International Partners
+# Đối tác quốc tế
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# Tutorial Partners
+# Activity Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Infrastructure partners and tools
+# Infrastructure Partners and Tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 * * *
 
-# Additional Partners
+# Các đối tác khác
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

@@ -19,7 +19,9 @@ export default class DesignToolbox extends React.Component {
         width: 270,
         boxSizing: 'border-box',
         borderRight: '1px solid gray',
-        padding: 10
+        overflowY: 'auto',
+        padding: 10,
+        paddingRight: 0 // setting this to 0 allows 2 columns with the potential scrollbar on Windows
     };
 
     return (
