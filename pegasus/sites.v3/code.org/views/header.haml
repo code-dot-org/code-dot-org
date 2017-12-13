@@ -12,11 +12,18 @@
         - else
           .desktop-feature
             #headerlinks
-              %a.headerlink{:href=>"/student"}LEARN
-              %a.headerlink{:href=>"/educate"}TEACH
-              %a.headerlink{:href=>"/promote"}STATS
-              %a.headerlink{:href=>"/help"}HELP US
-              %a.headerlink{:href=>"/about"}ABOUT
+              %nav
+                %ul
+                  %li
+                    %a.headerlink{:href=>"/student"}LEARN
+                  %li
+                    %a.headerlink{:href=>"/educate"}TEACH
+                  %li
+                    %a.headerlink{:href=>"/promote"}STATS
+                  %li
+                    %a.headerlink{:href=>"/help"}HELP US
+                  %li
+                    %a.headerlink{:href=>"/about"}ABOUT
     #clear{:style=>'clear:both'}
     #loc.desktop-feature
       -if banner = @header['banner']

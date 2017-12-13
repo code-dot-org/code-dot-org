@@ -4,23 +4,24 @@
 -if request.language == "en"
   %footer#pagefooter
     #footer-links
-      %ul
-        %li#privacy
-          %a{:href=>'/privacy'} Privacy Policy
-        %li
-          %a{:href=>'/about'} About
-        %li
-          %a{:href =>'/partners'} Partners
-        %li
-          %a{:href=>'http://blog.code.org', :target=>'_blank'} Blog
-        %li
-          %a{:href=>'/donate'} Donate
-        %li
-          %a{:href=>'/shop'} Store
-        %li
-          %a#support{:href=>'https://support.code.org/', target: '_blank'} Support
-        %li
-          %a{:href=>'/tos'} Terms
+      %nav
+        %ul
+          %li#privacy
+            %a{:href=>'/privacy'} Privacy Policy
+          %li
+            %a{:href=>'/about'} About
+          %li
+            %a{:href =>'/partners'} Partners
+          %li
+            %a{:href=>'http://blog.code.org', :target=>'_blank'} Blog
+          %li
+            %a{:href=>'/donate'} Donate
+          %li
+            %a{:href=>'/shop'} Store
+          %li
+            %a#support{:href=>'https://support.code.org/', target: '_blank'} Support
+          %li
+            %a{:href=>'/tos'} Terms
 
       #footer-toggle
         Code.org
