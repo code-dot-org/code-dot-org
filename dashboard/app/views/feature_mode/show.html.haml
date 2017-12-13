@@ -83,18 +83,17 @@
                 - when 'normal'
                   %p All features enabled, normal site operation.
                 - when 'scale'
-                  %p Slightly more scalable, with trivial degradation:
-                  %p - Disable puzzle rating for all tutorials.
-                  %p - Sampled hoc_activity logging (10%).
+                  %p Slightly increased scalability with no user functionality impact
                   %p - Extend cache lifetimes for HOC pages.
-                  %p All features enabled, normal site operation.
+                  %p - Slogging disabled.
                 - when 'fallback'
-                  %p Scale mode above, plus:
-                  %p - Disable progress saving (milestone posts) for FAILED run button presses for HOC Blockly tutorials only
+                  %p Increased scalability with minor degradation. Scale mode above, plus:
+                  %p - Disable progress saving (milestone posts) for FAILED run button presses for HOC Blockly tutorials only.
+                  %p - Disable fun-o-meter.
                 - when 'emergency'
                   %p Very scalable with significant degradation. Fallback mode above, plus:
-                  %p - Disables progess saving (milestone posts) for HOC and CSF levels only. Progress saves remain enabled for CSD & CSP.
-                  %p - Disables activity hints
+                  %p - Disables progess saving (milestone posts) for HOC and CSF levels only. Progress saving remains enabled for CSD & CSP.
+                  %p - Disables activity hints.
                 - else
                   raise "Unexpected mode #{mode}; view needs to be updated."
       %tr

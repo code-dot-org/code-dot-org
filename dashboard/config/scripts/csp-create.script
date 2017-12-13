@@ -4,7 +4,7 @@ hideable_stages true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/csp-create/"], ["teacherForum", "https://forum.code.org/c/csp/ap-prep"], ["standardMappings", "https://curriculum.code.org/csp/csp-create/standards/"]]
 has_verified_resources true
-script_announcements [{"notice"=>"Create PT Prep lesson updates still in progress", "details"=>"The lessons and some of the resources in this unit are currently out-of-date with the updated Scoring Guidelines released by the College Board in the Fall of 2017. We are working to update these resources and have them in place before the new year. Click \"Learn more\" to view the updated guidelines and PT exemplars on the College Board website.", "link"=>"https://apcentral.collegeboard.org/courses/ap-computer-science-principles/exam?course=ap-computer-science-principles#anchorSG", "type"=>"information"}]
+script_announcements [{"notice"=>"Updates Published December 2017", "details"=>"This unit was published on December 13th, 2017. It has been updated to reflect the 2018 AP Create PT Scoring Guidelines. Click the link to learn more.", "link"=>"http://forum.code.org/t/curriculum-updates-2017-18/10762/61", "type"=>"information"}]
 
 stage 'Create PT Prep - Reviewing the Task', flex_category: 'csp_ap_3'
 level 'U6 Create PT Review - Student Links', progression: 'Create PT -  Review - Student Links'
