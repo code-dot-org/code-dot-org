@@ -48,7 +48,13 @@
       "soundSensor.value": null,
       "soundSensor.setScale": null,
       "lightSensor.value": null,
-      "lightSensor.setScale": null
+      "lightSensor.setScale": null,
+      "playSound": null,
+      "stopSound": null,
+      "functionParams_none": null,
+      "callMyFunction": null,
+      "comment": null,
+      "led.pulse": null
     },
     "edit_code": true,
     "embed": "false",
@@ -88,11 +94,12 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-20 22:54:43 +0000\",\"changed\":[\"code_functions\",\"free_play\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-20 22:54:43 +0000\",\"changed\":[\"code_functions\",\"free_play\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-27 20:20:28 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

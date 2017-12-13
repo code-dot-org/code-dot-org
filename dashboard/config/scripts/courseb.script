@@ -94,7 +94,7 @@ level 'courseB_collector_loops9'
 level 'courseB_collector_loops10'
 level 'courseB_collector_loops11'
 bonus 'courseB_collector_loops_challenge1'
-bonus 'courseB_collector_loops_challenge2'
+bonus 'courseB_collector_loops_challenge2a'
 
 stage 'Loops in Artist'
 level 'courseB_video_ArtistIntro'
