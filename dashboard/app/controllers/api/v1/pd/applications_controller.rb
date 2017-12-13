@@ -56,6 +56,13 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     end
   end
 
+  # GET /api/v1/pd/applications/cohort_view?role=:role
+  def cohort_view
+    applications = get_applications_by_role(params[:role].to_sym).where(status: 'accepted').where.not(locked_at: nil)
+
+    render json: applications, each_serializer: Api::V1::Pd::ApplicationCohortViewSerializer
+  end
+
   # PATCH /api/v1/pd/applications/1
   def update
     if application_params[:response_scores]
