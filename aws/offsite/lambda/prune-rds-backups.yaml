@@ -1,0 +1,19 @@
+﻿AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Prunes all but the latest 5 RDS snapshot backups on this account
+Resources:
+  prunerdsbackups:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs4.3
+      CodeUri: .
+      Description: Prunes all but the latest 5 RDS snapshot backups on this account
+      MemorySize: 128
+      Timeout: 300
+      Role: 'arn:aws:iam::215291861542:role/service-role/prune_rds_backups'
+      Events:
+        Schedule1:
+          Type: Schedule
+          Properties:
+            Schedule: rate(1 day)
