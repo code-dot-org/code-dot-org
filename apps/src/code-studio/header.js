@@ -153,7 +153,13 @@ header.build = function (scriptData, stageData, progressData, currentLevelId,
 
 function shareProject() {
   dashboard.project.save().then(() => {
-    const shareUrl = dashboard.project.getShareUrl();
+    var shareUrl;
+    if (appOptions.baseShareUrl) {
+      shareUrl = `${appOptions.baseShareUrl}/${dashboard.project.getCurrentId()}`;
+    } else {
+      const origin = location.protocol + '//' + location.host;
+      shareUrl = origin + dashboard.project.getPathName();
+    }
 
     var i18n = window.dashboard.i18n;
 
