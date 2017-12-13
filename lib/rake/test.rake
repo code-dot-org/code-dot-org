@@ -7,7 +7,6 @@ require 'cdo/rake_utils'
 require 'cdo/git_utils'
 require 'cdo/developers_topic'
 require 'cdo/infra_test_topic'
-require 'cdo/github'
 
 namespace :test do
   desc 'Runs apps tests.'
@@ -68,10 +67,18 @@ namespace :test do
   end
 
   task :mark_dtt_green do
-    test_branch_sha = GitHub.sha('test')
-    ChatClient.log "Marking commit #{test_branch_sha} green"
-    DevelopersTopic.set_dtt 'yes'
-    InfraTestTopic.set_green_commit test_branch_sha
+    # Look at the HEAD revision on the test machine, rather than the one in
+    # GitHub. Otherwise, if someone pushes more changes to the test branch while
+    # the DTT is running, we might accidentally, automatically mark those
+    # untested changes green.
+    test_branch_sha = GitUtils.git_revision_short
+
+    msg = "Marking commit #{test_branch_sha} green (temporarily disabled)"
+    ChatClient.log msg
+    ChatClient.message 'deploy-status', msg
+
+    # DevelopersTopic.set_dtt 'yes'
+    # InfraTestTopic.set_green_commit test_branch_sha
   end
 
   task ui_live: [
