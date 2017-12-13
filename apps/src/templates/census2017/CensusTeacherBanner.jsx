@@ -15,16 +15,24 @@ const styles = {
   buttonDiv: {
     textAlign: 'center'
   },
+  clear: {
+    clear: 'both',
+  },
   error: {
     color: color.red,
   },
   header: {
     marginTop: 10,
-    marginBottom: 10,
+    marginBottom: 5,
     marginLeft: 20,
     marginRight: 20,
   },
+  image: {
+    float: 'right',
+    margin: 5,
+  },
   introQuestion: {
+    marginTop: 10,
     marginBottom: 5
   },
   main: {
@@ -46,6 +54,14 @@ const styles = {
     verticalAlign: 'top',
     marginRight: 10,
   },
+  share: {
+    textAlign: 'center',
+  },
+  shareButton: {
+    color: color.white,
+    backgroundColor: '#7E5CA2',
+    minWidth: 40,
+  },
   title: {
     marginBottom: 0,
   },
@@ -62,14 +78,18 @@ export default class CensusTeacherBanner extends Component {
     onSubmit: PropTypes.func.isRequired,
     onDismiss: PropTypes.func.isRequired,
     onPostpone: PropTypes.func.isRequired,
-    onChange: PropTypes.func.isRequired,
+    onTeachesChange: PropTypes.func.isRequired,
+    onInClassChange: PropTypes.func.isRequired,
     ncesSchoolId: PropTypes.string.isRequired,
     question: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']).isRequired,
-    selection: PropTypes.bool,
+    teaches: PropTypes.bool,
+    inClass: PropTypes.bool,
     teacherId: PropTypes.number.isRequired,
     teacherName: PropTypes.string.isRequired,
     teacherEmail: PropTypes.string.isRequired,
+    showInvalidError: PropTypes.bool,
     showUnknownError: PropTypes.bool,
+    submittedSuccessfully: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -205,6 +225,11 @@ export default class CensusTeacherBanner extends Component {
     this.schoolInfoInputs = inputs;
   }
 
+  isValid = () => {
+    return (!this.props.teaches ||
+            (this.props.inClass === true || this.props.inClass === false));
+  }
+
   getData = () => {
     const schoolId = this.state.ncesSchoolId ? this.state.ncesSchoolId : this.props.ncesSchoolId;
     let data= {
@@ -213,7 +238,8 @@ export default class CensusTeacherBanner extends Component {
       submitter_email_address: this.props.teacherEmail,
       school_year: this.props.schoolYear,
     };
-    data[this.props.question] = "SOME";
+    const question = (this.props.inClass ? this.props.question : 'how_many_after_school');
+    data[question] = "SOME";
 
     if (schoolId === '-1') {
       data["country_s"] = this.state.country;
@@ -229,10 +255,42 @@ export default class CensusTeacherBanner extends Component {
     return data;
   }
 
+  renderThankYou() {
+    const yourschoolUrl = encodeURIComponent('https://code.org/yourschool');
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${yourschoolUrl}`;
+    const twitterText = encodeURIComponent('Does your school teach computer science? Expand computer science at your school or district. @codeorg');
+    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${yourschoolUrl}&related=codeorg&text=${twitterText}`;
+
+    return (
+      <div>
+        <div style={styles.header}>
+          <h2>Thanks for adding your school to the map!</h2>
+        </div>
+        <div style={styles.message}>
+          <p style={styles.introQuestion}>
+            Help us find out about computer science opportunities at every school in the United States!
+          </p>
+        </div>
+        <div style={styles.share}>
+          <a href={facebookShareUrl} target="_blank">
+            <button style={styles.shareButton}>
+              <i className="fa fa-facebook" /> Share on Facebook
+            </button>
+          </a>
+          <a href={twitterShareUrl} target="_blank">
+            <button style={styles.shareButton}>
+              <i className="fa fa-twitter" /> Share on Twitter
+            </button>
+          </a>
+        </div>
+      </div>
+    );
+  }
+
   renderSchoolInfoForm() {
     let schoolId = (this.state.ncesSchoolId !== null) ? this.state.ncesSchoolId : this.props.ncesSchoolId;
     return (
-      <div style={styles.main}>
+      <div>
         <div style={styles.header}>
           <h2>Update your school information</h2>
           {this.state.showSchoolInfoUnknownError && (
@@ -270,7 +328,7 @@ export default class CensusTeacherBanner extends Component {
     const numHours = (this.props.question === 'how_many_20_hours') ? '20' : '10';
     let  buttons;
     let  footer;
-    if (this.props.selection===true) {
+    if (this.props.teaches===true) {
       footer = (<hr/>);
       buttons = (
         <div style={styles.buttonDiv}>
@@ -278,7 +336,7 @@ export default class CensusTeacherBanner extends Component {
           <Button onClick={this.props.onSubmit} style={styles.button} size="large" text="Add my school to the map!" />
         </div>
       );
-    } else if (this.props.selection===false) {
+    } else if (this.props.teaches===false) {
       footer = (
         <div>
           <hr/>
@@ -303,7 +361,7 @@ export default class CensusTeacherBanner extends Component {
 
     if (schoolName) {
       return (
-        <div style={styles.main}>
+        <div>
           <div style={styles.header}>
             <h2 style={styles.title}>Add {schoolName} to our map!</h2>
             <p style={styles.updateSchool}>Not teaching at this school anymore? <a onClick={this.showSchoolInfoForm}>Update here</a></p>
@@ -322,8 +380,8 @@ export default class CensusTeacherBanner extends Component {
                 name={this.props.question}
                 value="SOME"
                 style={styles.radio}
-                onChange={this.props.onChange}
-                checked={this.props.selection===true}
+                onChange={this.props.onTeachesChange}
+                checked={this.props.teaches===true}
               />
               Yes, we’ve done {numHours} hours.
             </label>
@@ -333,12 +391,44 @@ export default class CensusTeacherBanner extends Component {
                 id="teachesNo"
                 name={this.props.question}
                 style={styles.radio}
-                onChange={this.props.onChange}
+                onChange={this.props.onTeachesChange}
                 value="not yet"
-                checked={this.props.selection===false}
+                checked={this.props.teaches===false}
               />
               Not yet.
             </label>
+            {this.props.teaches && this.props.showInvalidError && (
+               <p style={styles.error}>Please select one of the options below.</p>
+            )}
+            {this.props.teaches && (
+               <div>
+                 <p style={styles.introQuestion}>
+                   Which of the following best describes where you teach programming?
+                 </p>
+                 <label>
+                   <input
+                     type="radio"
+                     id="inClass"
+                     value="inclass"
+                     style={styles.radio}
+                     onChange={this.props.onInClassChange}
+                     checked={this.props.inClass===true}
+                   />
+                   In a classroom
+                 </label>
+                 <label>
+                   <input
+                     type="radio"
+                     id="afterSchool"
+                     style={styles.radio}
+                     onChange={this.props.onInClassChange}
+                     value="afterschool"
+                     checked={this.props.inClass===false}
+                   />
+                   In an afterschool program or club
+                 </label>
+               </div>
+            )}
             {footer}
           </div>
           {buttons}
@@ -351,10 +441,29 @@ export default class CensusTeacherBanner extends Component {
   }
 
   render() {
-    if (this.state.showSchoolInfoForm) {
-      return this.renderSchoolInfoForm();
+    let mainForm;
+
+    if (this.props.submittedSuccessfully) {
+      mainForm = this.renderThankYou();
+    } else if (this.state.showSchoolInfoForm) {
+      mainForm = this.renderSchoolInfoForm();
     } else {
-      return this.renderCensusForm();
+      mainForm = this.renderCensusForm();
     }
+
+    return (
+      <div style={styles.main}>
+        <div style={styles.image}>
+          <img
+            src="/shared/images/misc/census-map-with-flag.png"
+            alt="Map with flag"
+            width="180"
+            height="180"
+          />
+        </div>
+        {mainForm}
+        <div style={styles.clear} />
+      </div>
+    );
   }
 }
