@@ -26,9 +26,14 @@
   twentyhours_heading: "Bilgisayar Bilimlerine Giriş kursumuzu deneyin"
   twentyhours_text: "İlk Kod Saati'ni bitirdin mi? Bir sonraki kursta daha fazla bilgisayar bilimleri ve programlama kavramlarını öğrenebilirsin."
   og_title: 'Code.org: Herkes öğrenebilir'
+  og_title_soon: "The Hour of Code is coming"
+  og_title_here: "The Hour of Code is here!"
   og_description: "Her okulda her öğrenci bilgisayar bilimi öğrenme fırsatını hakkediyor. "
+  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Kodlama Saati geliyor"
   csedweek_og_description: "ARALIK 4-10, 2017. Bilgisayar bilimleri her öğrencinin öğrenmesi gereken bir temeldir."
+  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "<a href=\"http://hourofcode.com\">Kod Saatine </a><br/> katılın  8 - 14 Aralık, 2014<br/>"
   hoc2014_students: "Öğrenciler"
   hoc2014_try: "Deneyin"
@@ -291,7 +296,7 @@
   homepage_hero_text_stat_students: "Code Stüdyoda #student_count tane öğrenci hesabı"
   homepage_hero_text_stat_served: 'Code Stüdyo''da #student_count tane öğrenci hesabı'
   homepage_hero_hoc_is_coming: "The Hour of Code is coming"
-  homepage_hero_hoc_is_here: "The Hour of Code is here"
+  homepage_hero_hoc_is_here: "Kod Saati burada"
   homepage_slot_text_hoc: "Kod Saati"
   homepage_slot_text_frozen: "Frozen: Anna ve Elsa "
   homepage_slot_text_teacher: "Öğretmen Panosu"
@@ -311,7 +316,7 @@
   homepage_action_text_girlvideo: "Bir kıza ilham kaynağı ol"
   homepage_action_text_learn: "Öğrenmeye başla"
   homepage_action_text_signpetition: "Üye dilekçesi"
-  homepage_action_text_wincelebritychat: "Win a celebrity chat"
+  homepage_action_text_wincelebritychat: "Ünlü ile sohbet kazan"
   homepage_signpetition_dropdown: "Bizim üye dilekçemiz  &#x25BE;"
   homepage_diversity_pledge: "Çeşitlilik oluştur ! "
   homepage_banner_text_prizes: '`Kod Saati` 7-13 Aralıkta tekrar gerçekleşecek.'
@@ -418,7 +423,7 @@
   mc_gradelevel: "4-104 Yaş"
   mc_platformtext: "Modern tarayıcılar, akıllı telefonlar, tabletler"
   mc_specs: "Çoklu dil | Modern tarayıcılar ve tabletler | 6 ve üzeri yaş"
-  minecraft_agent: 'Minecraft: Hero’s Journey'
+  minecraft_agent: 'Minecraft: Kahramanın yolculuğu'
   minecraft_designer: "Minecraft Tasarımcısı"
   minecraft_adventurer: "Minecraft Maceracısı"
   minecraft_tutorials: "Minecraft Kodlama Saati Eğitimleri"
@@ -432,17 +437,17 @@
   minecraft_no_internet: "İnternetin yok mu?"
   minecraft_download_adventurer: "Minecraft Maceracı'nın çevrimdışı versiyonunu indir."
   minecraft_subtitle: "Minecraft Kod Saati"
-  minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
+  minecraft_store_camps: "Minecraft saat kodu kamplarının Microsoft Store ücretsiz"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
   minecraft_host_event: "Host a Minecraft Hour of Code Event"
-  minecraft_teach_resources: "Teacher resources and lesson plan."
-  minecraft_leader_guide: "Download resources to help you plan and lead an event."
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
-  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
+  minecraft_teach_resources: "Öğretmen kaynakları ve ders planı."
+  minecraft_leader_guide: "Bir etkinlik planlayıp gerçekleştirmenize yardımcı olan kaynakları indirin."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
+  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}', target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
-  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign up today</a>."
+  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}', target='_blank'>Sign up today</a>."
   minecraft_future: "Help all youth become future ready"
-  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access the resources</a> they found most valuable."
+  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}', target='_blank'>access the resources</a> they found most valuable."
   minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
   minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   sports_page_title: "Kodlama Saati Etkinlikleri-Spor"
@@ -823,7 +828,7 @@
   learn_hoc_prizes: "Eğiticilere sunulan ödüller hakkında <a href=\"https://hourofcode.com/prizes\">daha fazlası</a>."
   learn_inspirational_videos: "Bu <a href=\"https://code.org/educate/inspire\">videolar</a> ile öğrenciler ilham verin"
   hoc2014_try_new_tutorials: "Yeni Kod Saati eğitimlerimizi deneyin"
-  hoc2014_try_new_tutorial: "Yeni Kodlama Saati öğreticimizi beta halinde deneyin"
+  hoc2014_try_new_tutorial: "Yeni Kod Saati eğitimimizi beta halinde deneyin"
   hoc2014_try_scrat: "Angry Birds, PvZ  ve Scrat"
   hoc2014_try_frozen: "Karlar Ülkesi'nden Anna ve Elsa ile birlikte bir sanatçı"
   carousel_heading_codeorg: "Code.org eğitimleri"
@@ -958,6 +963,8 @@
   csp-ap_name: AP (Advanced Placement-İleri Düzey Yerleştirme) Performans Görevleri
   csppostap_name: 'Post-AP: Uygulamalardaki veritabanları'
   cspassessment_name: "Tam test - 50 soru"
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Test Bölüm 1 / 25 soru
   cspexam2-AKwgAh1ac5_name: Test Bölüm 2 / 25 soru
   cspunit3_gradelevel: "9-12. Sınıflar"
@@ -1119,7 +1126,7 @@
   codecombat_shortdescription: "Bu efsanevi oyunda Python veya JavaScript öğrenmek için devleri yen!"
   codemonkey_shortdescription: "Öğrenciler bir maymunu muzu yakalaması için programlar."
   codeavengers_shortdescription: "Tarayıcıda JavaScript programlamayı öğrenin"
-  processing_shortdescription: "Processing dili için bir saatlik öğretici"
+  processing_shortdescription: "A one hour tutorial in the Processing languages"
   robomind_shortdescription: "Sanal robotumuz için kod yazın"
   groklearning_shortdescription: "Eliza'ya chatbot öğreterek arkadaşlarınızın onun bir insan olduğunu düşünmelerini sağlayın!"
   quorum_shortdescription: "Quorum programlama dilini öğrenmek için Mary ile bir tura katılın."
@@ -1362,7 +1369,7 @@
   codecademy_beyond_longdescription: "CodeAcademy, JavaScript üzerinden CS temellerini öğreten, interaktif, öğrenci güdümlü, dünyada milyonlarca öğrenci tarafından kullanılan bir sitedir. Problemsiz Hour of Code deneyimini, yapbozlar, sunumlar ve öğrenciler için sonunda tamamlanmış projeler eşliğinde hazırladık."
   kodable_beyond_longdescription: "Kodable, 5 yaş üstü çocukları programlamanın temelleriyle tanıştıran bir kendin-yönlendir İpad oyunudur. Yakınlarda bir öğretmenin ya da ebeveny olması size bağlıdır ancak gerekli değildir."
   scratchjr_beyond_longdescription: "ScratchJr çocuklara kendi interaktif hikayelerini ve oyunları oluşturmayı sağlayan görsel bir programla dilidir. Çocuklar blokları bir araya getirerek karakterlerin hareket etmesini,zıplamasını dans edip şarkı söylemesin sağlayabilirler"
-  hopscotch_beyond_longdescription: "Hopscotch programlama dilini kullanarak iPad üzerinde öğrenci güdümlü öğreticiler. Öğrenciler kendi iPad leri ile oyunlar ve uygulamalar yapabilirler. Tek başlarına ya da arkadaşlarıyla çalışabilirler (bir iPad ile en fazla 3 kişi)."
+  hopscotch_beyond_longdescription: "Hopscotch programlama dilini kullanarak iPad üzerinde öğrenci güdümlü eğitimler. Öğrenciler kendi iPad leri ile oyunlar ve uygulamalar yapabilirler. Tek başlarına ya da arkadaşlarıyla çalışabilirler (bir iPad ile en fazla 3 kişi)."
   pocketcode_beyond_longdescription: "Pocket Code ile akıllı telefonlarınızda kendi oyununuzu oluşturun. Bunu arkadaşlarınızla paylaşabilir ve diğer kullanıcıların denemesini sağlayabilirsiniz!"
   groklearning_beyond_longdescription: "Hiç programlama tecrübesi olmayanlar için Python ile programlamaya giriş dersi. Hazırladığımız içerik sayesinde Python programlama dilini anlayacak kendini programlamaya başlıyacaksınız. Bu içeriği farklı yaşlardaki öğrencilerinize öğretin göreceksinizki onlar için harika bir deneyim olacak."
   hacketyhack_beyond_longdescription: Hackrty Hack size bilgisayar biliminin temellerini anlatacak. Ön deneyime ihtiyaç yok. Ruby programlama dilini öğreneceksiniz. Ruby masaüstü ve web uygulamaları için kullanılabilir
@@ -1379,7 +1386,7 @@
   teachingtree_beyond_longdescription: "TeachingTree herkesin eğitici içerik oluşturmasını sağlayan açık bir platformdur. Amacımız öğrencilere yüzeysel kavramları öğretmektir. Herkesi video ve etiket eklemeye teşvik ediyoruz."
   kodu_beyond_longdescription: "Kodu çocuklara üstünde görsel programlama dili ile PC ve XBox boyunları oluşturmayı sağlar. Kodu yaratıcılık, sorun çözme, hikaye anlatımı, hem de programlama öğretmek için kullanılabilir. Genç çocukların yanı sıra yetişkinlerde ön bir kodlama yada tasarım tecrübesi olmadan Kodu kullanabilir. Kodu PC için ücretsiz indirilebilir. XBox için ABD'de yaklaşık 5 $ ücret karşılığında XBox Pazarda mevcuttur."
   cargobot_beyond_longdescription: "Cargo-Bot robotlara sandıkları hareket ettirmeyi öğreten bir bulmaca oyunudur. Basit, değil mi? 36 zeki bulmaca, müzik ve çarpıcı grafik. Çözümlerinizi kaydedin ve arkadaşlarınızla YouTube'da paylaşın."
-  kidsruby_beyond_longdescription: 'Eğlenin ve oyun yapın yada Ruby kullanarak ev ödevinizi hackle!Sadece ebeveynlerine veya öğretmenlerine Ruby programlama öğrenddiğini söyle... ;).Bedava ve her bilgisayarda çalışıyor.[Not:Masaüstü yüklemesi gerektirir.]'
+  kidsruby_beyond_longdescription: Eğlenin ve oyun yapın yada Ruby kullanarak ev ödevinizi hackle!Sadece ebeveynlerine veya öğretmenlerine Ruby programlama öğrenddiğini söyle... ;).Bedava ve her bilgisayarda çalışıyor.[Not:Masaüstü yüklemesi gerektirir.]
   w3schools_beyond_longdescription: "Kendi bilgisayarında internet sitesi yaratmayı öğren.Bir günden az bir sürede server temellerini öğren.İnternet sitene veritabanı eklemeyi öğren"
   codeavengers_beyond_longdescription: "Oyunlar, uygulamalar ve web sitelerinin nasıl programlandığını öğrenin. Yeni başlayanlar için uygun zorluk düzeyinde, anlaşılması kolay yönlendirmeler içeren ve ihtiyacınız olduğunda size mükemmel bir yardımcı olacak şekilde, konunun uzmanları tarafından tasarlanmıştır. HTML, CSS ve JavaScript kurslarımız, her yaş için etkin ve eğlenceli bir şekilde öğrenmeyi sağlayacak gözden geçirme oyunları ve kod testleri içermektedir."
   mozilla_beyond_longdescription: "Thimble kendi web sayfalarını oluşturma ve paylaşmayı acayipkolaylaştırır.  HTML ve CSS kodlarını doğrudan tarayıcınızda düzenleyin, sonra çalışma anında önizleyin. Tamamlanmış projelerinizi tek bir tıklama ile paylaşın. Yeni başlayanlar ve uzmanlar için idealdir."
@@ -1436,7 +1443,7 @@
   header_teacher_community: "Öğretmen topluluğu"
   header_help_support: 'Yardım ve Destek '
   header_report_bug: "Hata bildir"
-  header_tutorials: "Öğreticiler"
+  header_tutorials: "Eğitmler"
   header_documentation: "Belgeler"
   csp_name: "' 16 - 17' Bilgisayar bilimleri ilkeleri"
   csd_name: "CS Discoveries"
@@ -1472,3 +1479,5 @@
   syncing_students: "Syncing your students"
   syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro

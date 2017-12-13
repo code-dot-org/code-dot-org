@@ -48,7 +48,7 @@ function showDisabledBubblesModal() {
  */
 progress.showDisabledBubblesAlert = function () {
   const store = getStore();
-  const { isHocScript, postMilestoneDisabled } = store.getState().progress;
+  const { postMilestoneDisabled } = store.getState().progress;
   const showAlert = postMilestoneDisabled || experiments.isEnabled('postMilestoneDisabledUI');
   if (!showAlert) {
     return;
@@ -63,7 +63,7 @@ progress.showDisabledBubblesAlert = function () {
   });
   $(document.body).append(div);
 
-  ReactDOM.render(<DisabledBubblesAlert isHocScript={isHocScript}/>, div[0]);
+  ReactDOM.render(<DisabledBubblesAlert/>, div[0]);
 };
 
 /**

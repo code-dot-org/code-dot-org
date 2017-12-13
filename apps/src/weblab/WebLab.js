@@ -18,6 +18,7 @@ var assetListStore = require('../code-studio/assets/assetListStore');
 import project from '@cdo/apps/code-studio/initApp/project';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
@@ -75,6 +76,8 @@ WebLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
+  this.suppliedFilesVersionId = queryParams('version');
+  this.initialFilesVersionId = this.suppliedFilesVersionId;
 
   this.brambleHost = null;
 
@@ -150,6 +153,7 @@ WebLab.prototype.init = function (config) {
     container.className = container.className + " pin_bottom";
 
     // NOTE: if we called studioApp_.init(), these calls would not be needed...
+    this.studioApp_.initProjectTemplateWorkspaceIconCallout();
     this.studioApp_.alertIfCompletedWhilePairing(config);
     this.studioApp_.initVersionHistoryUI(config);
 
@@ -163,12 +167,6 @@ WebLab.prototype.init = function (config) {
       onPuzzleComplete: this.onFinish.bind(this),
       unsubmitUrl: this.level.unsubmitUrl
     });
-
-    // The project template workspace icon callout appears too far to the left
-    // if we don't delay this slightly (currently 0.25 seconds)
-    setTimeout(() => {
-      this.studioApp_.initProjectTemplateWorkspaceIconCallout();
-    }, 250);
   };
 
   // Push initial level properties into the Redux store
@@ -364,7 +362,7 @@ WebLab.prototype.onInspectorChanged = function (inspectorOn) {
 /*
  * Called by Bramble host to set our reference to its interfaces
  * @param {!Object} bramble host interfaces
- * @return {String} current project id
+ * @return {String} current project path (project id plus initial version)
  */
 WebLab.prototype.setBrambleHost = function (obj) {
   this.brambleHost = obj;
@@ -377,7 +375,11 @@ WebLab.prototype.setBrambleHost = function (obj) {
   });
   this.brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
   this.brambleHost.onInspectorChanged(this.onInspectorChanged.bind(this));
-  return project.getCurrentId();
+  if (this.suppliedFilesVersionId) {
+    return `${project.getCurrentId()}-${this.suppliedFilesVersionId}`;
+  } else {
+    return project.getCurrentId();
+  }
 };
 
 // Called by Bramble host to get page constants
@@ -412,7 +414,8 @@ WebLab.prototype.loadFileEntries = function () {
     assetListStore.reset(result.files);
     this.fileEntries = assetListStore.list().map(fileEntry => ({
       name: fileEntry.filename,
-      url: filesApi.basePath(fileEntry.filename)
+      url: filesApi.basePath(fileEntry.filename),
+      versionId: fileEntry.versionId,
     }));
     var latestFilesVersionId = result.filesVersionId;
     this.initialFilesVersionId = this.initialFilesVersionId || latestFilesVersionId;
@@ -429,7 +432,8 @@ WebLab.prototype.loadFileEntries = function () {
   }, xhr => {
     console.error('files API failed, status: ' +  xhr.status);
     this.fileEntries = null;
-  });
+  },
+  this.getCurrentFilesVersionId());
 };
 
 /**

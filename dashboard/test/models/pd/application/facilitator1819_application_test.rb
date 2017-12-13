@@ -40,11 +40,11 @@ module Pd::Application
       assert_equal @regional_partner, application.regional_partner
     end
 
-    test 'open until Dec 15, 2017' do
-      Timecop.freeze Time.zone.local(2017, 12, 14, 23, 59) do
+    test 'open until Feb 1, 2018' do
+      Timecop.freeze Time.zone.local(2018, 1, 31, 23, 59) do
         assert Facilitator1819Application.open?
       end
-      Timecop.freeze Time.zone.local(2017, 12, 15) do
+      Timecop.freeze Time.zone.local(2018, 2, 1) do
         refute Facilitator1819Application.open?
       end
     end
@@ -132,7 +132,28 @@ module Pd::Application
       csv_answers = csv_row.split(',')
       assert_equal "#{@regional_partner.name}\n", csv_answers[-1]
       assert_equal 'notes', csv_answers[-2]
-      assert_equal 'accepted', csv_answers[-3]
+      assert_equal 'false', csv_answers[-3]
+      assert_equal 'accepted', csv_answers[-4]
+    end
+
+    test 'send_decision_notification_email only sends to waitlisted and declined' do
+      mock_mail = stub
+      mock_mail.stubs(:deliver_now).returns(nil)
+
+      Pd::Application::Facilitator1819ApplicationMailer.expects(:accepted).times(0)
+      Pd::Application::Facilitator1819ApplicationMailer.expects(:interview).times(0)
+      Pd::Application::Facilitator1819ApplicationMailer.expects(:pending).times(0)
+      Pd::Application::Facilitator1819ApplicationMailer.expects(:unreviewed).times(0)
+      Pd::Application::Facilitator1819ApplicationMailer.expects(:withdrawn).times(0)
+
+      Pd::Application::Facilitator1819ApplicationMailer.expects(:declined).times(1).returns(mock_mail)
+      Pd::Application::Facilitator1819ApplicationMailer.expects(:waitlisted).times(1).returns(mock_mail)
+
+      application = create :pd_facilitator1819_application
+      Pd::Application::Facilitator1819Application.statuses.values.each do |status|
+        application.update(status: status)
+        application.send_decision_notification_email
+      end
     end
   end
 end

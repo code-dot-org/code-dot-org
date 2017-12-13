@@ -1,3 +1,6 @@
+require 'active_support/core_ext/string/inflections'
+require 'active_support/core_ext/object'
+
 # Returns abbr as an uppercase symbol, stripping whitespace.
 def get_uppercase_symbol(abbr)
   return abbr.to_s.strip.upcase.to_sym
@@ -9,6 +12,20 @@ end
 def get_us_state_from_abbr(abbr, include_dc = false)
   abbr = get_uppercase_symbol(abbr)
   return include_dc ? STATE_ABBR_WITH_DC_HASH[abbr] : STATE_ABBR_HASH[abbr]
+end
+
+# Returns the abbreviation for the supplied state name
+# @param [String|Symbol] name - full state name, e.g. "Washington"
+# @param [Boolean] include_dc - (default: false) Whether to include Washington DC as a state.
+# @returns [String] state abbreviation, or nil
+def get_us_state_abbr_from_name(name, include_dc = false)
+  titleized_name = name.to_s.strip.titleize
+
+  # special case for DC
+  titleized_name = 'Washington DC' if titleized_name == 'Washington Dc'
+
+  abbr_sym = include_dc ? STATE_ABBR_WITH_DC_HASH.key(titleized_name) : STATE_ABBR_HASH.key(titleized_name)
+  return abbr_sym.try(&:to_s)
 end
 
 # Returns whether the abbreviation is a state (including Washington DC)

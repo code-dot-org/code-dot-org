@@ -189,12 +189,6 @@ export function setupApp(appOptions) {
         window.location.href = lastServerResponse.nextRedirect;
       }
     },
-    backToPreviousLevel: function () {
-      var lastServerResponse = reporting.getLastServerResponse();
-      if (lastServerResponse.previousLevelRedirect) {
-        window.location.href = lastServerResponse.previousLevelRedirect;
-      }
-    },
     showInstructionsWrapper: function (showInstructions) {
       // Always skip all pre-level popups on share levels or when configured thus
       if (this.share || appOptions.level.skipInstructionsPopup) {
@@ -486,8 +480,12 @@ let APP_OPTIONS;
 export function setAppOptions(appOptions) {
   APP_OPTIONS = appOptions;
   // ugh, a lot of code expects this to be on the window object pretty early on.
-  /** @type {AppOptionsConfig} */
-  window.appOptions = appOptions;
+  // Don't override existing settings, for example on Multi levels with embedded
+  // blocks.
+  if (!appOptions.nonGlobal) {
+    /** @type {AppOptionsConfig} */
+    window.appOptions = appOptions;
+  }
 }
 
 /** @return {AppOptionsConfig} */

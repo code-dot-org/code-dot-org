@@ -1,17 +1,17 @@
 ---
 title: <%= hoc_s(:title_partners) %>
 ---
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+Hodina Kódu je riadená Komisiou a poradným výborom Hodiny Kódu a Tyždňom výuky informatiky.
 
-The [Advisory Committee](%= resolve_url('/advisory-committee') %) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+[Poradná komisia](%= resolve_url('/advisory-committee') %) sa skladá zo zástupcov základných a stredných škôl, neziskových organizácií, podnikov a medzinárodných organizácií. Tento výbor vedie stratégiu kampane Hodiny Kódovania.
 
-The [Review Committee](%= resolve_url('/review-committee') %) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+[Kontrolný výbor](%= resolve_url('/review-committee') %) sa skladá z 15 školiteľov zo základných a stredných škôl a hodnotí a odporúča aktivity s použitím pravidiel od Poradnej Komisie. Títo školitelia vyhodnocujú žiacke a učiteľské učebné plány navrhnuté stovkami partnerov aktivít, vyhodnocujú učebný prínos aktivít, schopnosť zapojiť študentov a potenciálnu schopnosť osloviť rôzne skupiny študentov.
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Práca obidvoch komisií a ich obetavosť prispeli k úspechu Hodiny Kódovania a jej vízie ponúkať úvod do informatiky pre každého študenta.
 
 <% if @country == 'la' %>
 
-# Latin America Partners
+# Partneri v Južnej Amerike
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
@@ -19,7 +19,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ac' %>
 
-# Africa Partners
+# Partneri v Afrike
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
 
@@ -27,7 +27,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'au' %>
 
-# Australia Partners
+# Partneri v Austrálií
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
 
@@ -35,7 +35,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'cn' %>
 
-# China Partners
+# Partneri v Čine
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
 
@@ -43,7 +43,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'fr' %>
 
-# France Partners
+# Partneri vo Francúzsku
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
@@ -51,7 +51,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'id' %>
 
-# Indonesia Partners
+# Partneri v Indonézií
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
 
@@ -59,7 +59,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ie' %>
 
-# Ireland Partners
+# Partneri v Írsku
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
@@ -67,7 +67,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'in' %>
 
-# India Partners
+# Partneri v Indií
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
@@ -75,7 +75,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'jp' %>
 
-# Japan Partners
+# Partneri v Japonsku
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
@@ -83,7 +83,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'nl' %>
 
-# Netherlands Partners
+# Partneri v Holandsku
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 
@@ -91,7 +91,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'nz' %>
 
-# New Zealand Partners
+# Partneri na Novom Zélande
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
 
@@ -99,7 +99,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'uk' %>
 
-# United Kingdom Partners
+# Partneri v Spojenom Kráľovstve
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
@@ -107,7 +107,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ca' %>
 
-# Canada Partners
+# Partneri v Kanade
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 
@@ -131,13 +131,13 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 * * *
 
-# Activity Partners
+# Partneri aktivít
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Infrastructure Partners and Tools
+# Partneri infraštruktúry a nástrojov
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

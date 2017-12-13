@@ -1,7 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import ResourceCard from './ResourceCard';
 import ResourceCardResponsiveContainer from './ResourceCardResponsiveContainer';
-import Responsive from '../../responsive';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -14,13 +13,11 @@ class CourseBlocksGradeBands extends Component {
         path: PropTypes.string.isRequired
       })
     ).isRequired,
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
   };
 
   render() {
     return (
-      <ResourceCardResponsiveContainer responsive={this.props.responsive}>
+      <ResourceCardResponsiveContainer>
         {this.props.cards.map(
           (card, cardIndex) => (
             <ResourceCard
@@ -29,7 +26,6 @@ class CourseBlocksGradeBands extends Component {
               description={card.description}
               buttonText={i18n.learnMore()}
               link={pegasus(card.path)}
-              isRtl={this.props.isRtl}
             />
           )
         )}

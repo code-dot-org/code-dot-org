@@ -170,19 +170,20 @@ class Pd::TeacherApplication < ActiveRecord::Base
   def accepted_workshop=(workshop_name)
     reload_accepted_program
 
-    if workshop_name.blank?
-      self.accepted_program_attributes = {
-        id: accepted_program.try(:id),
-        _destroy: true
-      }
-    else
-      self.accepted_program_attributes = {
-        id: accepted_program.try(:id),
-        workshop_name: workshop_name,
-        course: selected_course,
-        user_id: user_id
-      }
-    end
+    self.accepted_program_attributes =
+      if workshop_name.blank?
+        {
+          id: accepted_program.try(:id),
+          _destroy: true
+        }
+      else
+        {
+          id: accepted_program.try(:id),
+          workshop_name: workshop_name,
+          course: selected_course,
+          user_id: user_id
+        }
+      end
   end
 
   def accepted_workshop

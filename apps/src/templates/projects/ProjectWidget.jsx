@@ -43,12 +43,10 @@ class ProjectWidget extends React.Component {
         {convertedProjects.length > 0 &&
           <PersonalRecentProjects
             projectList={convertedProjects}
-            isRtl={isRtl}
           />
         }
         <StartNewProject
           projectTypes={this.props.projectTypes}
-          isRtl={isRtl}
           canViewFullList={canViewFullList}
           canViewAdvancedTools={canViewAdvancedTools}
         />

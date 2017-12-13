@@ -33,7 +33,7 @@ tr:
   your_professional_learning_plan: "Profesyonel Eğitim Planın"
   see_your_learning_plan: "Öğrenme planını gör"
   submit: Gönder
-  unsubmit: Gönderme
+  unsubmit: Gönderini gerial
   previous_page: Önceki Sayfa
   next_page: Sonraki Sayfa
   next_resource: Sonraki Kaynak
@@ -84,12 +84,12 @@ tr:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Hesabı'
-    clever: 'Clever Account'
+    clever: 'Akıllı Hesap'
     forgot_password: 'Şifrenizi mi unuttunuz?'
     need_confirmation: "Onay talimatlarını almadınız mı?"
     need_unlock: "Kilit açma talimatlarını almadınız mı?"
     not_linked: "Üzgünüz, Code.org hesabın senin %{provider}a bağlı değildir. Parolanızı yazarak oturum açmanız gerekecek."
-    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
+    use_clever: "Üzgünüz, Code.org %{provider} ile bağlı değildir. Lütfen akıllı portalınız üzerinden oturum açın."
   signup_form:
     student_count: '%{count}öğrenci çoktan kaydoldu.'
     teacher_count: '%{count}öğretmen çoktan kaydoldu.'
@@ -122,7 +122,7 @@ tr:
     user_type_student: "öğrenci"
     field_is_required: "gerekli"
     accept_terms: "Hesap oluşturmak için kabul etmelisiniz"
-    error: "An error occurred."
+    error: "Bir hata oluştu."
   school_info:
     title: 'Okul bilgileri (isteğe bağlı)'
     school_country: 'Okulun bulunduğu ülke'
@@ -336,16 +336,16 @@ tr:
       example: 'Örnek Çözüm'
       example_with_number: 'Örnek Çözüm %{solution_number}'
       submitted_on: '%{date} tarihinde gönderildi'
-      unsubmit: 'Gönderme'
+      unsubmit: 'Gönderini gerial'
       worked_with: 'İle çalıştı'
       update_lock_settings: 'Kilit ayarlarını burada değiştirin.'
       clear_response: 'Net yanıt'
   user:
-    email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
+    email_confirm_needed: 'E-posta adresiniz teyit edilmedi:'
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
     email_confirm_wrong_email: '(Yanlış e-posta adresi?)'
     email_resend_confirm: 'Onay yönergelerini yeniden gönder'
-    new_password_hint: "(Eğer değiştirmek iştemiyorsanız boş bırakın)"
+    new_password_hint: "(Eğer değiştirmek istemiyorsanız boş bırakın)"
     current_password_hint: '(Değişikliklerinizi onaylamak için geçerli parolanız gerekiyor)'
     delete: 'Hesabını Sil'
     delete_text: "Aşağıdaki düğmeye tıklamak hesabınızı siler."
@@ -564,6 +564,9 @@ tr:
       body: "Oyun labı basit animasyonları ve oyunları nesnelerle ve etkilesimli karakterlerle beraber programlayabileceğin bir uygulama geliştirme ortamıdır."
       audience: "13 + Yaş grubu"
       cta: "Nasıl olduğunu öğren"
+    hoc-encryption:
+      title: "Basit şifreleme"
+      body: "Öğrenciler şifreli mesaj yaratma ve şifre kırma tekniklerini öğrenecek."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab, HTML ve CSS kullanarak basit web sayfaları hazırlayabileceğin bir programlama ortamıdır. Web sayfanı tasarla ve saniyeler içinde paylaş."
@@ -582,6 +585,9 @@ tr:
     minecraft2016:
       title: "Minecraft"
       body: "Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sendeki sürümde programla."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Spor"
       body: "Ya bir basketbol ya da sporların karışımından oluşan bir oyun yapmayı seçin."
@@ -788,7 +794,7 @@ tr:
     remix: "karıştır.\n"
     click_to_remix: "Kendi sürümünüzü yaratmak için 'Remix'e basın!"
     edit_project: 'Projeyi Düzenle'
-    sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
+    sharing_disabled: "Üzgünüz, bu proje paylaşım için kullanılabilir değil. Bu sizin projeniz ya da proje öğrencilerinden birinin ise, projeyi görüntülemek için hesabınızda <a href='https://studio.code.org/users/sign_in'> oturum açın</a> lütfen."
     abuse:
       tos: "Bu projenin Code.org <a href='http://code.org/tos'> Hizmet Şartları'nı</a> ihlal ettiği raporlandı ve başkalarıyla paylaşılamaz."
       policy_violation: "Bu projeyi başkalarıyla paylaşılamaz bilgileri içerir. Lütfen onların app içeriğini düzeltmek için app sahibine başvurun."
@@ -841,10 +847,10 @@ tr:
     optional_stages: 'İsteğe bağlı aşamalar'
     main_course: 'Ana ders'
     extra_course_content: 'İlave kurs içeriği'
-    csf_e_1: 'Ramp Up to Course E (Optional)'
-    csf_e_2: 'Course E Content'
-    csf_f_1: 'Ramp Up to Course F (Optional)'
-    csf_f_2: 'Course F Content'
+    csf_e_1: 'Kurs E ye hazırlık (isteğe bağlı)'
+    csf_e_2: 'E dersi içeriği'
+    csf_f_1: 'Kurs F''ye hazırlık (isteğe bağlı)'
+    csf_f_2: 'F dersi içeriği'
     csd1_1: 'Bölüm 1: Problem çözme süreci'
     csd1_2: 'Bölüm 2: Bilgisayar ve Problem çözme'
     csd2_1: 'Bölüm 1: Web içerik ve HTML'

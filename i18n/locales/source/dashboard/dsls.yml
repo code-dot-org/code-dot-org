@@ -2885,15 +2885,21 @@ en:
         description here: description here
       csp-novice-congrats: {}
       csp-post-survey-2017 preamble 1: {}
+      csp-post-survey-2017 preamble 3 this class: {}
+      csp-post-survey-2017 preamble 4 future and outlook: {}
       csp-post-survey-2017 preamble how often did teacher ask you to: {}
       csp-post-survey-2017 preamble how often did teacher do: {}
       csp-post-survey-2017 preamble how often did you: {}
+      csp-post-survey-2017-preamble 5 implementation-teacher: {}
+      csp-post-survey-2017-thanks: {}
+      csp-post-survey-2017-wrapup-preamble: {}
       csp-pre-survey-2017 preamble 1: {}
       csp-pre-survey-2017 preamble 2 cs in general: {}
       csp-pre-survey-2017 preamble 3 this class: {}
       csp-pre-survey-2017 preamble 4 the future: {}
       csp-pre-survey-2017 preamble 5 demographics: {}
       csp-pre-survey-2017-q36-preamble: {}
+      csp-pt-tech-setup-and-tools: {}
       csp-pulse-check-survey-preamble: {}
       csp3_subgoal_mc_levelgroup_preamble: {}
       csp_ap_intro: {}
@@ -3041,6 +3047,21 @@ en:
       pre-assessment survey heading1: {}
       pre-assessment survey heading2: {}
       pre-assessment survey heading3: {}
+      pwc_cybersecurity:
+        description here: description here
+        title: title
+      pwc_data:
+        Data Science & Analytics - Solving Problems with Big Data: Data Science & Analytics - Solving Problems with Big Data
+        description here: description here
+      pwc_problemsolving:
+        Problem Solving - Personal Innovations: Problem Solving - Personal Innovations
+        description here: description here
+      pwc_programming:
+        description here: description here
+        title: title
+      pwc_technologyfoundations:
+        Technology Foundations - What is a Computer?: Technology Foundations - What is a Computer?
+        description here: description here
       rbo-test1: {}
       sample external 1:
         sample external 1: sample external 1
@@ -8104,15 +8125,15 @@ en:
       csd-post-survey-q27:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        ? 'Connect a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
-        : 'Connect a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
+        ? 'Connected a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
+        : 'Connected a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
       csd-post-survey-q28:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        Asked me problem solve when something didn't work the way I wanted it to work.: Asked me problem solve when something didn't work the way I wanted it to work.
+        Asked me to problem solve when something didn't work the way I wanted it to work.: Asked me to problem solve when something didn't work the way I wanted it to work.
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
@@ -8768,7 +8789,7 @@ en:
       csp-post-survey-2017-q19:
         Agree: Agree
         Disagree: Disagree
-        I am going to like this computer science class.: I am going to like this computer science class.
+        I like this computer science class.: I like this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -8786,7 +8807,7 @@ en:
       csp-post-survey-2017-q20:
         Agree: Agree
         Disagree: Disagree
-        I will feel comfortable in this computer science class.: I will feel comfortable in this computer science class.
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -8985,15 +9006,15 @@ en:
       csp-post-survey-2017-q55:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        Considered alternative approaches to my work: Considered alternative approaches to my work
+        Consider alternative approaches to my work.: Consider alternative approaches to my work.
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
       csp-post-survey-2017-q56:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
-        ? Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
-        : Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        ? Consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        : Consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session

@@ -866,7 +866,7 @@
       4-5 While Loops Assessment 1_instruction: Siin on palju auke ja hunnikuid. Aita
         mul neid täita ja eemaldada, et saada maapind tasaseks.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
-      Alien Defender_instruction: 'Project Idea: Make a defender game in Play Lab!'
+      Alien Defender_instruction: 'Projekti idee: Tee kaitsmäng Play Lab''is!'
       AllTheThings Applab - Turtle move with button_instruction: |-
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
@@ -3534,9 +3534,8 @@
         an example of a game you can make in play lab.
       FoodFight_instruction: This is an example of a game you can make in play lab.
       Frequency Analysis_instruction: Test
-      Function intro Ryan_instruction: |-
-        Use the `build bridge` function twice to
-        make a path to the Redstone Torch.
+      Function intro Ryan_instruction: Kasutage funktsiooni "ehitada sild" kaks korda,
+        et teha tee Redstone Torchini.
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -3918,102 +3917,79 @@
       MC_2017_Ryan_02_instruction: |-
         Help the player get out by using loops to get
         the Agent to the pressure plate.
-      MC_HOC_2017 Agent Test_instruction: |-
-        Click "Run" to move the player to the
-        orange square inside of the house.
-      MC_HOC_2017_01_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_Cole_instruction: |-
-        You need to collect all the tools on this
-        journey. Move around using the **arrow keys**, and get to the chest on the
-        path to win
-      MC_HOC_2017_01_Kiki_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_RETRY_instruction: "Write code to get the Agent to the pressure\nplate,
-        then press \"Run\" and use the arrow keys to move the player out of\nthe house
-        to collect the chest. "
-      MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that\n{currentPlayerName}
-        can get to the map. "
-      MC_HOC_2017_02_Kiki_instruction: |-
-        Get the Agent to the pressure plate, then
-        get the player to the orange square.
-      MC_HOC_2017_02_Will_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_instruction: |-
-        Change the loop from the last puzzle to help the
-        Agent make a path over the wider part of this river.
-      MC_HOC_2017_04POINT5_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04POINT5_RYAN_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_05_instruction: |-
-        Use a function to help the Agent get to the pressure
-        plate.
-      MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
-      MC_HOC_2017_05_Josh_instruction: Get the player to the shovel.
-      MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
-      MC_HOC_2017_06_Cole_instruction: |-
-        Fix this code to get the Agent to build a
-        bridge across this river.
-      MC_HOC_2017_06_Josh_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_06_Kiki_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_07_Cole_instruction: |-
-        Destroy the ice and get {currentPlayerName}
-        to the Minecart.
-      MC_HOC_2017_07_Kiki_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07a_Kiki_instruction: Clear the path to the orange square.
-      MC_HOC_2017_08_Cole_instruction: |-
-        Change the provided function to work for
-        this biome.
-      MC_HOC_2017_08_Kiki_instruction: Change the function to work for this puzzle.
-      MC_HOC_2017_08_RY_instruction: |-
-        Use the functions to find a way across the
-        lava.
-      MC_HOC_2017_08_Will_instruction: |-
-        Use the functions to find a way across the
-        lava.
-      MC_HOC_2017_09_Cole_instruction: |-
-        Program the Agent to clear the player's
-        path.
-      MC_HOC_2017_09_Kiki_instruction: |-
-        Program the Agent to clear the player's
-        path and get to the pressure plate.
-      MC_HOC_2017_10_Cole_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_Cole_old_instruction: |-
-        Create a function to help you finish
-        this minecart.
-      MC_HOC_2017_10_Kiki_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_RETRY_instruction: |-
-        Use the functions to finish this minecart
-        track.
-      MC_HOC_2017_10_RYAN_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_RYAN2_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_13_Cole_instruction: "**Freeplay:**  Time to explore on your own!"
-      MC_HOC_2017_4.5v2_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017 Agent Test_instruction: Kliki "Kävita", et liigutada mängija oranži
+        kasti sisse maja sees.
+      MC_HOC_2017_01_instruction: Kliki "Kävita", et liigutada mängija oranži kasti
+        sisse maja sees.
+      MC_HOC_2017_01_Cole_instruction: Sa pead koguma kõik vahendid sellel teekonnal.
+        Liigu ringi kasutades ** nooleklahve ** ja mine kirstu juurde oma rajal, et
+        võita
+      MC_HOC_2017_01_Kiki_instruction: Kliki "Kävita", et liigutada mängija oranži
+        kasti sisse maja sees.
+      MC_HOC_2017_01_RETRY_instruction: 'Kirjutage kood, et saada Agent surveplaadile,
+        siis vajutage "Käivita" ja kasutage nooleklahve, et viia mängija majast välja,
+        et ta saaks saaks kätte kirstu. '
+      MC_HOC_2017_02_instruction: Liiguta Agent surveplaadile.
+      MC_HOC_2017_02_Cole_instruction: 'Liiguta Agent surveplaadile, et {currentPlayerName}
+        saaks minna kaardile. '
+      MC_HOC_2017_02_Kiki_instruction: Liiguta Agent surveplaadile ja siis liiguta
+        mängija oranžile nelinurgale.
+      MC_HOC_2017_02_Will_instruction: Liiguta Agent surveplaadile.
+      MC_HOC_2017_03_Cole_instruction: 'Programmeri Agent väravat avama. '
+      MC_HOC_2017_03_Kiki_instruction: Liiguta Agent surveplaadile.
+      MC_HOC_2017_04_instruction: Muuta viimase pusle tsüklit, et aidata Agendil teha
+        rada üle jõe laiema osa.
+      MC_HOC_2017_04POINT5_Cole_instruction: Liiguta Agent surveplaadile.
+      MC_HOC_2017_04POINT5_RYAN_instruction: Liiguta Agent surveplaadile.
+      MC_HOC_2017_04_Cole_instruction: Liiguta Agent surveplaadile.
+      MC_HOC_2017_04_Kiki_instruction: Liiguta Agent surveplaadile.
+      MC_HOC_2017_05_instruction: Loo funktsiooni, et aidata Agendil liikuda surveplaadile.
+      MC_HOC_2017_05_Cole_instruction: Vii mängija kühvli juurde.
+      MC_HOC_2017_05_Josh_instruction: Vii mängija kühvli juurde.
+      MC_HOC_2017_05_Kiki_instruction: Vii mängija oranži ruudu juurde.
+      MC_HOC_2017_06_Cole_instruction: Paranda kood, et Agent saaks ehitada silla
+        üle selle jõe.
+      MC_HOC_2017_06_Josh_instruction: Paranda kood, et Agent saaks ehitada silla
+        üle selle jõe.
+      MC_HOC_2017_06_Kiki_instruction: Paranda kood, et Agent saaks ehitada silla
+        üle selle jõe.
+      MC_HOC_2017_07_Cole_instruction: Hävita jää hävitada ja saada {currentPlayerName}
+        Minecart'i juurde.
+      MC_HOC_2017_07_Kiki_instruction: Kasuta funktsiooni, et teha rada vabaks oranži
+        ruudu juurde.
+      MC_HOC_2017_07a_Kiki_instruction: Tee rada vabaks oranži ruudu juurde.
+      MC_HOC_2017_08_Cole_instruction: Muuda etteantud funktsiooni, et saaksid selle
+        puslega tööd teha.
+      MC_HOC_2017_08_Kiki_instruction: Muuda funktsiooni, et saaksid selle puslega
+        tööd teha.
+      MC_HOC_2017_08_RY_instruction: Kasutage funktsioone, et leida viis minna üle
+        laava.
+      MC_HOC_2017_08_Will_instruction: Kasutage funktsioone, et leida viis minna üle
+        laava.
+      MC_HOC_2017_09_Cole_instruction: Programmeri Agent, et ta teeks mängija raja
+        puhtaks.
+      MC_HOC_2017_09_Kiki_instruction: Programmeri Agent, et ta teeks mängija raja
+        puhtaks ja saaks minna surveplaadi juurde.
+      MC_HOC_2017_10_Cole_instruction: Koosta funktsioon, mis aitavad teil lõpetada
+        selle minecart'i.
+      MC_HOC_2017_10_Cole_old_instruction: Koosta funktsioon, mis aitavad teil lõpetada
+        selle minecart'i.
+      MC_HOC_2017_10_Kiki_instruction: Koosta funktsioon, mis aitavad teil lõpetada
+        selle Minecart'i.
+      MC_HOC_2017_10_RETRY_instruction: Kasutage funktsioone, et saaksid lõpetada
+        selle minecart'i loo.
+      MC_HOC_2017_10_RYAN_instruction: Koosta funktsioon, mis aitavad teil lõpetada
+        selle minecart'i.
+      MC_HOC_2017_10_RYAN2_instruction: Koosta funktsioon, mis aitavad teil lõpetada
+        selle Minecart'i.
+      MC_HOC_2017_13_Cole_instruction: "** Vabamäng: ** Aeg uurida ise edasi!"
+      MC_HOC_2017_4.5v2_instruction: Liiguta Agent surveplaadile.
       MC_HOC_2017_Ali_instruction: Kasutage funktsioone, et leida viis minna üle laava.
       MC_HOC_2017_FP10x10_instruction: "**Vaba mängimine:** kas suudad kokku koguda
         kõik teemandid sellel mängutasemel? "
       MC_HOC_2017_FP10x10_RE_instruction: "**Vaba mängimine:** kas suudad kokku koguda
         kõik teemandid sellel mängutasemel? "
-      MC_HOC_2017_FP20x20_instruction: "**Freeplay:**  Time to explore on your own!"
+      MC_HOC_2017_FP20x20_instruction: "** Vabamäng: ** Aeg uurida ise edasi!"
       MC_HOC_2017_Ryan_03_instruction: Nüüd kasuta tsüklied, et aidata Agendil ehitada
         silda üle jõe pannes vette plokke.
       MC_HOC_2017_Ryan_05_instruction: Hävitada kaktused, et mängija saaks minna sihtmärgini.
@@ -7402,10 +7378,9 @@
       courseA_collector_loops7_instruction: |-
         What should you add to this code to
         get all of the treasure?
-      courseA_collector_loops8_instruction: Write the code to get all of this gold.
-      courseA_collector_loops9_instruction: |-
-        **Challenge:** The treasure goes all
-        the way up these stairs!  Write the code to help Laurel get it all.
+      courseA_collector_loops8_instruction: Kirjutage kood, et saada kätte kõik aare.
+      courseA_collector_loops9_instruction: "** Väljakutse: ** Aare läheb treppide
+        üles välja! Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
       courseA_collector_loops_challenge1_instruction: |-
         *"Can you help me spot some
         bugs? I know which way I want to go, but I'm not sure how many steps to take."*
@@ -7568,10 +7543,9 @@
       courseB_collector_loops6_instruction: |-
         Figure out the code to help Laurel get
         all of the treasure!
-      courseB_collector_loops7_instruction: Write the code to get all of this gold.
-      courseB_collector_loops8_instruction: |-
-        **Challenge: ** The treasure goes all
-        the way down these stairs!  Write the code to help Laurel get it all.
+      courseB_collector_loops7_instruction: Kirjutage kood, et saada kätte kõik aare.
+      courseB_collector_loops8_instruction: "** Väljakutse: ** Aare läheb treppidest
+        alla välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada."
       courseB_collector_loops9_instruction: |-
         *"Help me get the treasure from this
         deep valley."*
@@ -9102,18 +9076,16 @@
         and right repeatedly.
       courseF_IceAge_6_instruction: "Can you help Sid call for his friends when you\nclick
         on him? "
-      courseF_IceAge_7_instruction: |-
-        Write the code to help Scrat get all of the
-        acorns!
+      courseF_IceAge_7_instruction: Kirjutage kood, mille abil saab Scrat kõik tammetõrud
+        kätte!
       courseF_IceAge_8_instruction: |
         Can you finish this program to make it so that
         you both **play a sound** and **score a point** when Sid and Granny collide?
       courseF_IceAge_9_instruction: |-
         Change the scene to an icy background and set
         Sid’s (actor 1) speed to fast.
-      courseF_IceAge_template_instruction: |-
-        Write the code to help Scrat get all
-        of the acorns!
+      courseF_IceAge_template_instruction: Kirjutage kood, mille abil saab Scrat kõik
+        tammetõrud kätte!
       courseF_artist_embed_for7_instruction: |-
         Press Run to see a program in action!
         This one uses for loops.
@@ -9641,10 +9613,11 @@
       grade1_adventurer_loops5_instruction: |-
         What should you add to this code to
         get all of the gold?
-      grade1_adventurer_loops6_instruction: Write the code to get all of this gold.
-      grade1_adventurer_loops7_challenge_instruction: |-
-        **Challenge: ** The gold goes
-        all the way down these stairs!  Write the code to help me get it all.
+      grade1_adventurer_loops6_instruction: Kirjutage kood, mille abil saab kõik kulla
+        kätte.
+      grade1_adventurer_loops7_challenge_instruction: "** Väljakutse: ** Aare läheb
+        treppidest alla välja! Kirjutage kood, et  aidata Laurelil see kõik kätte
+        saada."
       grade1_adventurer_loops8_challenge_instruction: |-
         Challenge: Try this staircase
         now! It has an extra spike at the end you'll have to climb.
@@ -11264,11 +11237,12 @@
       gradek_adventurer_loops5_instruction: |-
         What should you add to this code to
         get all of the gold?
-      gradek_adventurer_loops6_instruction: Write the code to get all of this gold.
-      gradek_adventurer_loops7_instruction: Write the code to get all of this gold.
-      gradek_adventurer_loops7_challenge_instruction: |-
-        **Challenge:** The gold goes
-        all the way up these stairs!  Write the code to help me get it all.
+      gradek_adventurer_loops6_instruction: Kirjutage kood, mille abil saab kõik kulla
+        kätte.
+      gradek_adventurer_loops7_instruction: Kirjutage kood, mille abil saab kõik kulla
+        kätte.
+      gradek_adventurer_loops7_challenge_instruction: "** Väljakutse: ** Aare läheb
+        treppide üles välja! Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
       gradek_adventurer_loops8_instruction: |-
         Help me get all of the gold from this
         deep valley.
@@ -11391,9 +11365,8 @@
       iceage_hello2_instruction: |-
         Help Manny and Sid greet each other by using the
         the `actor ___ say` block twice.
-      iceage_move_events_instruction: |-
-        Write the code to help Scrat get all of the
-        acorns!
+      iceage_move_events_instruction: Kirjutage kood, mille abil saab Scrat kõik tammetõrud
+        kätte!
       iceage_move_to_actor_instruction: |-
         Connect a block to the `when actor touches`
         event to play a sound when Diego finds Manny.

@@ -15,5 +15,5 @@ nn:
         allthethingscourse:
           title: alt kursinnhald
           description_short: Dette er ei kursrekke som har med alle våre kurs
-          description_student: Dette er ei kursrekke for alle kurs og har ei lengre beskriving for elevar
-          description_teacher: Dette er ei kursrekke for alle kurs og har ei lengre beskriving for lærarar
+          description_student: Dette er ei kursrekke for alle kurs og har lengre skildring for elevar
+          description_teacher: Dette er ei kursrekke for alle kurs og har lengre skildring for lærarar

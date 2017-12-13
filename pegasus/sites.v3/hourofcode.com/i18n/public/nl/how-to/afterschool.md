@@ -5,21 +5,21 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to teach one Hour of Code in after-school classes and clubs
+# Zo kunt u een 'Hour of 'Code' onderwijzen op de na-schoolse opvang of in een club
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to help run an Hour of Code in your class.
+Word lid van de beweging en laat een groep studenten kennismaken met hun eerste 'Hour of Code' met deze stappen. Het 'Hour of Code' is makkelijk te geven - zelfs voor beginners! Wilt u een extra set handen om te helpen, dan kunt u een [ lokale vrijwilliger](<%= resolve_url('https://code.org/volunteer/local') %>) vragen om te helpen een 'Hour of Code' te geven in uw klas.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Kies een tutorial
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Probeer ze uit](<%= resolve_url('/learn') %>)
+Wij bieden een verscheidenheid van [leuke, urenlange tutorials](<%= resolve_url('/learn') %>) voor deelnemers van alle leeftijden, gemaakt door een scala aan partners. [Probeer ze uit](<%= resolve_url('/learn') %>)
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**Alle 'Hour of Code' activiteiten** hebben nauwelijks voorbereidingstijd nodig, en kunnen door de deelnemers zelfstandig worden gevolgd - dit zorgt ervoor dat iedereen op zijn/haar eigen tempo en niveau kan werken.
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Een lesplan nodig voor uw naschoolse 'Hour of Code'?** Bekijk dit [model](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. Promote your Hour of Code
 

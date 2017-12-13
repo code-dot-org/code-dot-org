@@ -289,6 +289,10 @@
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U6 light show predict_callout:
+        CSDUDL03P09: What does this line do?
+      CSD U6 light show_callout:
+        CSDUDL03P09: What does this line do?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Define startGame here
       CSD U6 tugowar variables 2_callout:
@@ -977,6 +981,7 @@
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
           hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
           hat. Du musst überhaupt nicht auf Honigwaben prüfen.
