@@ -122,6 +122,11 @@ def get_social_metadata_for_page(request)
 
   hoc_mode = DCDO.get("hoc_mode", "default")
 
+  # For now, post-hoc looks the same as the default.
+  if hoc_mode == "post-hoc"
+    hoc_mode = "default"
+  end
+
   output = {}
   social_tags[page][hoc_mode].each do |name, value|
     if name == :image
