@@ -149,6 +149,7 @@ export class UnconnectedFinishDialog extends Component {
     return (
       <div style={styles.bubbleContainer}>
         <div
+          className="uitest-bubble"
           style={{
             ...styles.bubble,
             backgroundColor:
