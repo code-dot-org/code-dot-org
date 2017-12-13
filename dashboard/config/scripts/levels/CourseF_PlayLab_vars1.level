@@ -46,13 +46,13 @@
     "never_autoplay_video": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "remove_items_when_actor_collides": "false",
-    "timeout_failure_tick": "200"
+    "timeout_failure_tick": "200",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

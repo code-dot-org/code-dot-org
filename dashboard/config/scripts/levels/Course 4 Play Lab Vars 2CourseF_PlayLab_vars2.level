@@ -43,7 +43,7 @@
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
     "examples_required": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Make sure to set the number for `dog_speed` to something larger than `cat_speed`.\",\r\n  \"hint_id\": \"Course_4_Play_Lab_Vars_2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Make sure to set the number for `dog_speed` to something larger than `cat_speed`.\",\"hint_id\":\"Course_4_Play_Lab_Vars_2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b3533730edb2293697a6f9fcc200fd8a/Course 4 Play Lab Vars 2CourseF_PlayLab_vars2.mp3\"}]",
     "never_autoplay_video": "false",
     "contained_level_names": null
   },

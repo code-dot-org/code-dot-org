@@ -29,7 +29,6 @@
     "instructions": "Collect at least **10** pieces of treasure to finish this challenge!",
     "markdown_instructions": "There are 20 pieces of treasure in this cave. Collect at least **10** to finish the challenge!",
     "callout_json": "[]",
-    "ideal": "20",
     "instructions_important": "false",
     "min_collected": "10",
     "hide_share_and_remix": "false",
@@ -38,11 +37,12 @@
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "ideal": "41"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-28 17:35:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-11-27 22:49:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-27 22:52:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-27 22:54:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 17:35:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-11-27 22:49:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-27 22:52:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-27 22:54:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-13 19:55:28 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-13 19:56:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-13 19:57:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -79,30 +79,45 @@
                 <block type="maze_move">
                   <title name="DIR">moveForward</title>
                   <next>
-                    <block type="collector_collect">
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
                       <next>
-                        <block type="collector_collect">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
                           <next>
                             <block type="collector_collect">
                               <next>
-                                <block type="maze_move">
-                                  <title name="DIR">moveForward</title>
+                                <block type="collector_collect">
                                   <next>
                                     <block type="maze_move">
                                       <title name="DIR">moveForward</title>
                                       <next>
-                                        <block type="collector_collect">
+                                        <block type="maze_turn">
+                                          <title name="DIR">turnRight</title>
                                           <next>
-                                            <block type="collector_collect">
+                                            <block type="maze_move">
+                                              <title name="DIR">moveForward</title>
                                               <next>
-                                                <block type="maze_move">
-                                                  <title name="DIR">moveForward</title>
+                                                <block type="collector_collect">
                                                   <next>
-                                                    <block type="maze_move">
-                                                      <title name="DIR">moveForward</title>
+                                                    <block type="collector_collect">
                                                       <next>
                                                         <block type="collector_collect">
                                                           <next>
+                                                            <block type="maze_move">
+                                                            <title name="DIR">moveForward</title>
+                                                            <next>
+                                                            <block type="maze_move">
+                                                            <title name="DIR">moveForward</title>
+                                                            <next>
+                                                            <block type="collector_collect">
+                                                            <next>
+                                                            <block type="collector_collect">
+                                                            <next>
+                                                            <block type="collector_collect">
+                                                            <next>
+                                                            <block type="collector_collect">
+                                                            <next>
                                                             <block type="maze_move">
                                                             <title name="DIR">moveForward</title>
                                                             <next>
@@ -112,13 +127,13 @@
                                                             <block type="maze_move">
                                                             <title name="DIR">moveForward</title>
                                                             <next>
-                                                            <block type="collector_collect">
-                                                            <next>
-                                                            <block type="collector_collect">
-                                                            <next>
-                                                            <block type="collector_collect">
-                                                            <next>
                                                             <block type="collector_collect"/>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
                                                             </next>
                                                             </block>
                                                             </next>

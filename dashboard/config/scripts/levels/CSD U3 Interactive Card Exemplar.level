@@ -211,9 +211,9 @@
     "show_debug_watch": "true",
     "expand_debugger": "false",
     "encrypted_examples": "4pusEBGYlXPTlpSz8y4Fy5Tpvh7WMRzGg6niijHHjRtCuBkXNQlsus9m1ZkI\npFLs\n",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
