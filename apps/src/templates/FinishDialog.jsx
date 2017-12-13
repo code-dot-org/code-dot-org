@@ -110,6 +110,7 @@ const styles = {
     marginTop: 5,
     display: 'flex',
     flexDirection: 'row-reverse',
+    minHeight: 32,
   },
   button: {
     borderWidth: 0,
@@ -223,16 +224,14 @@ export class UnconnectedFinishDialog extends Component {
   }
 
   getFunometer() {
-    if (!this.props.showFunometer) {
-      return null;
-    }
-
     return (
       <div style={styles.funometer}>
-        <PuzzleRatingButtons
-          useLegacyStyles
-          label={msg.rateButtonsLabel()}
-        />
+        {this.props.showFunometer &&
+          <PuzzleRatingButtons
+            useLegacyStyles
+            label={msg.rateButtonsLabel()}
+          />
+        }
       </div>
     );
   }

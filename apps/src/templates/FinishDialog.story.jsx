@@ -32,14 +32,14 @@ export default storybook =>
     .addStoryTable([
       {
         name: 'Dialog with overlay',
-        description: 'Perfectly finished, no share button, thumbnail, achievements, etc.',
+        description: 'Perfectly finished, no share button, thumbnail, etc.',
         story: () => (
-          <ExampleDialogButton>
+          <ExampleDialogButton closeCallbacks={['onContinue', 'onReplay']} >
             <FinishDialog
               isPerfect={true}
               blockLimit={98}
               blocksUsed={98}
-              achievements={[]}
+              achievements={achievements}
             />
           </ExampleDialogButton>
         ),
@@ -89,6 +89,52 @@ export default storybook =>
               achievements={achievements}
               showFunometer
               canShare
+            />
+          </div>
+        ),
+      },
+      {
+        name: 'Perfect Finish without achievements',
+        description: 'Perfectly finished without achievements or funometer',
+        story: () => (
+          <div style={dialogWrapper}>
+            <FinishDialog
+              hideBackdrop
+
+              isPerfect
+              blockLimit={98}
+              blocksUsed={98}
+              achievements={[]}
+            />
+          </div>
+        ),
+      },
+      {
+        name: 'Perfect Finish without block count',
+        description: 'Perfectly finished with achievements but no block count',
+        story: () => (
+          <div style={dialogWrapper}>
+            <FinishDialog
+              hideBackdrop
+
+              isPerfect
+              blocksUsed={98}
+              achievements={achievements}
+            />
+          </div>
+        ),
+      },
+      {
+        name: 'Perfect Finish without block count or achievements',
+        description: 'Perfectly finished with achievements but no block count',
+        story: () => (
+          <div style={dialogWrapper}>
+            <FinishDialog
+              hideBackdrop
+
+              isPerfect
+              blocksUsed={98}
+              achievements={[]}
             />
           </div>
         ),
