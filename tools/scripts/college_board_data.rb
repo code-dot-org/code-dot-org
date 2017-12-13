@@ -96,7 +96,7 @@ SPECS = [
         females: %w(J74)
       }
     }
-  }, 
+  },
   {
     years: [2012],
     tests: {
