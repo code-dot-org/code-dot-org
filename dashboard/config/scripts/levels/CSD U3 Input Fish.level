@@ -91,17 +91,19 @@
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "show_debug_watch": "true",
-    "encrypted_examples": "N+OyNVSwqMOhaQhcvu/E7nbahSp9vDHWMmN22l0XImZm9oU4WKaZXjnLcbap\nzMFc3325sDF6YpjdKyzTSNPfIw==\n",
+    "encrypted_examples": "az/nZGAlf1emoXqQ350vVTVh0/RLbZ/fCYMzuRVm5sXIGQRYarIzK/PeyfAG\n5n6QE0DorWHF92GB+xrGGHnzBg==\n",
     "start_blocks": "var orangeFish = createSprite(400, randomNumber(0, 100));\r\norangeFish.setAnimation(\"orange_fish\");\r\nvar blueFish = createSprite(250, randomNumber(0, 200));\r\nblueFish.setAnimation(\"blue_fish\");\r\nvar greenFish = createSprite(300, randomNumber(200, 300));\r\ngreenFish.setAnimation(\"green_fish\");\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"navy\");\r\n  \r\n  // Update Values\r\n  orangeFish.x = orangeFish.x - 2;\r\n  blueFish.x = blueFish.x - 3;\r\n  greenFish.x = greenFish.x - 1;\r\n  \r\n  // Draw Animations\r\n  drawSprites();\r\n}",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"7971239b-2cc5-42c7-8f24-cc7628d98d29\",\r\n    \"04fe3dba-6425-4064-87d6-a572685bdd5c\",\r\n    \"d3c518ec-c351-41d4-bc12-d3b885389bf5\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"7971239b-2cc5-42c7-8f24-cc7628d98d29\": {\r\n      \"name\": \"blue_fish\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/qQO8azHNNTyOiiJs3MYLNQ/7971239b-2cc5-42c7-8f24-cc7628d98d29.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 4,\r\n      \"version\": \"UgK56NFFNAcaEgzyGa1kA7Q0ifv.dcK0\"\r\n    },\r\n    \"04fe3dba-6425-4064-87d6-a572685bdd5c\": {\r\n      \"name\": \"orange_fish\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/qQO8azHNNTyOiiJs3MYLNQ/04fe3dba-6425-4064-87d6-a572685bdd5c.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 4,\r\n      \"version\": \"IMlqRruXCoTazPeu.iWQKvo8vtNWEeao\"\r\n    },\r\n    \"d3c518ec-c351-41d4-bc12-d3b885389bf5\": {\r\n      \"name\": \"green_fish\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/qQO8azHNNTyOiiJs3MYLNQ/d3c518ec-c351-41d4-bc12-d3b885389bf5.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 4,\r\n      \"version\": \"l3xz89QJEaPfW4rdHCynWADo_KChYRTj\"\r\n    }\r\n  }\r\n}",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-22 18:57:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-22 18:57:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-07 16:55:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
