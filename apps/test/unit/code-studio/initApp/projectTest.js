@@ -76,27 +76,54 @@ describe('project.js', () => {
         beforeEach(() => sinon.stub(project, 'getStandaloneApp').returns(standaloneApp));
         afterEach(() => project.getStandaloneApp.restore());
 
-        it('studio.code.org', () => {
-          setFakeLocation(`https://studio.code.org/projects/${standaloneApp}/${fakeProjectId}/edit`);
-          expect(project.getShareUrl())
-            .to.equal(`https://studio.code.org/projects/${standaloneApp}/${fakeProjectId}`);
+        describe('from project edit page', () => {
+          it('studio.code.org', () => {
+            setFakeLocation(`https://studio.code.org/projects/${standaloneApp}/${fakeProjectId}/edit`);
+            expect(project.getShareUrl())
+              .to.equal(`https://studio.code.org/projects/${standaloneApp}/${fakeProjectId}`);
+          });
+
+          it('test-studio.code.org', () => {
+            setFakeLocation(`https://test-studio.code.org/projects/${standaloneApp}/${fakeProjectId}/edit`);
+            expect(project.getShareUrl())
+              .to.equal(`https://test-studio.code.org/projects/${standaloneApp}/${fakeProjectId}`);
+          });
+          it('staging-studio.code.org', () => {
+            setFakeLocation(`https://staging-studio.code.org/projects/${standaloneApp}/${fakeProjectId}/edit`);
+            expect(project.getShareUrl())
+              .to.equal(`https://staging-studio.code.org/projects/${standaloneApp}/${fakeProjectId}`);
+          });
+
+          it('localhost-studio.code.org:3000', () => {
+            setFakeLocation(`http://localhost-studio.code.org:3000/projects/${standaloneApp}/${fakeProjectId}/edit`);
+            expect(project.getShareUrl())
+              .to.equal(`http://localhost-studio.code.org:3000/projects/${standaloneApp}/${fakeProjectId}`);
+          });
         });
 
-        it('test-studio.code.org', () => {
-          setFakeLocation(`https://test-studio.code.org/projects/${standaloneApp}/${fakeProjectId}/edit`);
-          expect(project.getShareUrl())
-            .to.equal(`https://test-studio.code.org/projects/${standaloneApp}/${fakeProjectId}`);
-        });
-        it('staging-studio.code.org', () => {
-          setFakeLocation(`https://staging-studio.code.org/projects/${standaloneApp}/${fakeProjectId}/edit`);
-          expect(project.getShareUrl())
-            .to.equal(`https://staging-studio.code.org/projects/${standaloneApp}/${fakeProjectId}`);
-        });
+        describe('from a script level', () => {
+          it('studio.code.org', () => {
+            setFakeLocation('https://studio.code.org/s/csp3/stage/10/puzzle/4');
+            expect(project.getShareUrl())
+              .to.equal(`https://studio.code.org/projects/${standaloneApp}/${fakeProjectId}`);
+          });
 
-        it('localhost-studio.code.org:3000', () => {
-          setFakeLocation(`http://localhost-studio.code.org:3000/projects/${standaloneApp}/${fakeProjectId}/edit`);
-          expect(project.getShareUrl())
-            .to.equal(`http://localhost-studio.code.org:3000/projects/${standaloneApp}/${fakeProjectId}`);
+          it('test-studio.code.org', () => {
+            setFakeLocation('https://test-studio.code.org/s/csp3/stage/10/puzzle/4');
+            expect(project.getShareUrl())
+              .to.equal(`https://test-studio.code.org/projects/${standaloneApp}/${fakeProjectId}`);
+          });
+          it('staging-studio.code.org', () => {
+            setFakeLocation('https://staging-studio.code.org/s/csp3/stage/10/puzzle/4');
+            expect(project.getShareUrl())
+              .to.equal(`https://staging-studio.code.org/projects/${standaloneApp}/${fakeProjectId}`);
+          });
+
+          it('localhost-studio.code.org:3000', () => {
+            setFakeLocation('http://localhost-studio.code.org:3000/s/csp3/stage/10/puzzle/4');
+            expect(project.getShareUrl())
+              .to.equal(`http://localhost-studio.code.org:3000/projects/${standaloneApp}/${fakeProjectId}`);
+          });
         });
       });
     });
