@@ -24,10 +24,9 @@ const styles = {
   }
 };
 
-class StartNewProject extends React.Component {
+export default class StartNewProject extends React.Component {
   static propTypes = {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
-    isRtl: PropTypes.bool,
     canViewFullList: PropTypes.bool,
     canViewAdvancedTools: PropTypes.bool,
   };
@@ -45,14 +44,13 @@ class StartNewProject extends React.Component {
   };
 
   render() {
-    const { canViewAdvancedTools, canViewFullList, isRtl } = this.props;
+    const { canViewAdvancedTools, canViewFullList } = this.props;
     const { showFullList } = this.state;
     return (
       <div>
         <div style={styles.headingStartNew}>{i18n.projectStartNew()}</div>
         <NewProjectButtons
           projectTypes={this.props.projectTypes}
-          isRtl={isRtl}
           canViewAdvancedTools={canViewAdvancedTools}
         />
 
@@ -108,4 +106,3 @@ class StartNewProject extends React.Component {
     );
   }
 }
-export default StartNewProject;

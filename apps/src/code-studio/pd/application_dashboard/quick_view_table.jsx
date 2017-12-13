@@ -1,9 +1,13 @@
 import React, {PropTypes} from 'react';
+import { connect } from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 import {Table} from 'reactabular';
 import {Button} from 'react-bootstrap';
-import {StatusColors} from './constants';
 import _ from 'lodash';
+import {
+  StatusColors,
+  RegionalPartnerDropdownOptions
+} from './constants';
 
 const styles = {
   table: {
@@ -24,16 +28,26 @@ const styles = {
   }
 };
 
-export default class QuickViewTable extends React.Component {
+export class QuickViewTable extends React.Component {
   static propTypes = {
+    showLocked: PropTypes.bool,
     path: PropTypes.string.isRequired,
     data: PropTypes.array.isRequired,
-    statusFilter: PropTypes.string
+    statusFilter: PropTypes.string,
+    regionalPartnerFilter: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ]),
+    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
   };
 
   static contextTypes = {
     router: PropTypes.object.isRequired
   };
+
+  formatBoolean(bool) {
+    return bool ? "Yes" : "No";
+  }
 
   constructColumns() {
     let columns = [];
@@ -77,7 +91,40 @@ export default class QuickViewTable extends React.Component {
           })
         ]
       }
-    },{
+    });
+
+    if (this.props.showLocked) {
+      columns.push({
+        property: 'locked',
+        cell: {
+          format: this.formatBoolean
+        },
+        header: {
+          label: 'Locked?',
+        }
+      });
+    }
+
+    if (this.props.viewType === 'teacher') {
+      columns.push({
+        property: 'principal_approval',
+        header: {
+          label: 'Principal Approval'
+        }
+      }, {
+        property: 'meets_criteria',
+        header: {
+          label: 'Meets Criteria'
+        }
+      }, {
+        property: 'total_score',
+        header: {
+          label: 'Total Score'
+        }
+      });
+    }
+
+    columns.push({
       property: 'notes',
       header: {
         label: 'Notes'
@@ -99,6 +146,7 @@ export default class QuickViewTable extends React.Component {
         format: this.formatViewButton
       }
     });
+
     return columns;
   }
 
@@ -144,7 +192,16 @@ export default class QuickViewTable extends React.Component {
   };
 
   constructRows() {
-    return this.props.statusFilter ? this.props.data.filter(row => row.status === this.props.statusFilter) : this.props.data;
+    let rows = this.props.data;
+    if (this.props.regionalPartnerFilter) {
+      if (this.props.regionalPartnerFilter === RegionalPartnerDropdownOptions.unmatched.value) {
+        rows = rows.filter(row => row.regional_partner_id === null);
+      } else if (this.props.regionalPartnerFilter !== RegionalPartnerDropdownOptions.all.value) {
+        rows = rows.filter(row => row.regional_partner_id === this.props.regionalPartnerFilter);
+      }
+    }
+    rows = this.props.statusFilter ? rows.filter(row => row.status === this.props.statusFilter) : rows;
+    return rows;
   }
 
   render() {
@@ -163,3 +220,7 @@ export default class QuickViewTable extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  showLocked: state.permissions.lockApplication,
+}))(QuickViewTable);

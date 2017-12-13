@@ -4,10 +4,18 @@
     .category-button.purple-background
       %b.category-header=hoc_s(:front_join_us_robotics)
       %span=hoc_s(:front_join_us_robotics_link)
-    %img.robotics-logo{src: '/images/fit-100x100/robotics/ozobot-logo.png'}
-    %img.robotics-logo{src: '/images/fit-100x100/robotics/dexter-logo.png'}
-    %img.robotics-logo{src: '/images/fit-100x100/robotics/littlebits-logo.png'}
-    %img.robotics-logo{src: '/images/fit-100x100/robotics/wonder-workshop-logo.png'}
+    %br
+    %a.category-link{href: 'https://ozobot.com/'}
+      %img.robotics-logo{src: '/images/fit-100x100/robotics/ozobot-logo.png'}
+    %a.category-link{href: 'https://www.dexterindustries.com/'}
+      %img.robotics-logo{src: '/images/fit-100x100/robotics/dexter-logo.png'}
+    %a.category-link{href: 'https://littlebits.cc/education'}
+      %img.robotics-logo{src: '/images/fit-100x100/robotics/littlebits-logo.png'}
+    %p
+    %a.category-link{href: 'https://www.makewonder.com/'}
+      %img.robotics-logo{src: '/images/fit-100x100/robotics/wonder-workshop-logo.png'}
+    %a.category-link{href: 'http://bit.ly/kanohoc17'}
+      %img.robotics-logo{src: '/images/fit-100x100/robotics/kano-logo.png'}
     -if @language == 'en'
       %hr
       %a.category-link{:href=>resolve_url('https://code.org/challenge')}

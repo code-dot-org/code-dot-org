@@ -4,13 +4,30 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
   # This must be included after load_and_authorize_resource so the auth callback runs first
   include Api::CsvDownload
 
-  # GET /api/v1/pd/applications
+  REGIONAL_PARTNERS_ALL = "all"
+  REGIONAL_PARTNERS_NONE = "none"
+
+  # GET /api/v1/pd/applications?regional_partner_filter=:regional_partner_filter
+  # :regional_partner_filter can be "all", "none", or a regional_partner_id
   def index
+    regional_partner_filter = params[:regional_partner_filter]
     application_data = empty_application_data
 
     ROLES.each do |role|
-      get_applications_by_role(role).group(:status).count.each do |status, count|
-        application_data[role][status] = count
+      apps = get_applications_by_role(role).
+        select(:status, :regional_partner_id, "COUNT(locked_at) as total_locked", "COUNT(id) as total")
+
+      if regional_partner_filter == REGIONAL_PARTNERS_NONE
+        apps = apps.where(regional_partner_id: nil)
+      elsif regional_partner_filter && regional_partner_filter != REGIONAL_PARTNERS_ALL
+        apps = apps.where(regional_partner_id: regional_partner_filter)
+      end
+
+      apps.group(:status).each do |group|
+        application_data[role][group.status] = {
+          locked: group.total_locked,
+          unlocked: group.total - group.total_locked
+        }
       end
     end
 
@@ -39,9 +56,25 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     end
   end
 
+  # GET /api/v1/pd/applications/cohort_view?role=:role
+  def cohort_view
+    applications = get_applications_by_role(params[:role].to_sym).where(status: 'accepted').where.not(locked_at: nil)
+
+    render json: applications, each_serializer: Api::V1::Pd::ApplicationCohortViewSerializer
+  end
+
   # PATCH /api/v1/pd/applications/1
   def update
-    @application.update(application_params)
+    if application_params[:response_scores]
+      JSON.parse(application_params[:response_scores]).transform_keys! {|x| x.to_s.underscore}.to_json
+    end
+
+    @application.update(application_params.except(:locked))
+
+    # only allow those with full management permission to lock or unlock
+    if application_params.key?(:locked) && can?(:manage, @application)
+      application_params[:locked] ? @application.lock! : @application.unlock!
+    end
 
     render json: @application, serializer: Api::V1::Pd::ApplicationSerializer
   end
@@ -68,7 +101,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   def application_params
     params.require(:application).permit(
-      :status, :notes, :response_scores
+      :status, :notes, :response_scores, :locked
     )
   end
 
@@ -86,7 +119,10 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
       TYPES_BY_ROLE.each do |role, app_type|
         app_data[role] = {}
         app_type.statuses.keys.each do |status|
-          app_data[role][status] = 0
+          app_data[role][status] = {
+            locked: 0,
+            unlocked: 0
+          }
         end
       end
     end

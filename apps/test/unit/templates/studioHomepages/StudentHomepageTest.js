@@ -1,11 +1,14 @@
 import React from 'react';
 import { assert, expect } from 'chai';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
+import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
+import SectionsTable from '@cdo/apps/templates/studioHomepages/SectionsTable';
 import { courses, topCourse, joinedSections } from './homepagesTestData';
+import {combineReducers, createStore} from 'redux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 describe('StudentHomepage', () => {
-
   it('shows a non-extended Header Banner that says My Dashboard', () => {
     const wrapper = shallow(
       <StudentHomepage
@@ -17,7 +20,7 @@ describe('StudentHomepage', () => {
         canLeave={false}
       />
     );
-    const headerBanner = wrapper.find('HeaderBanner');
+    const headerBanner = wrapper.find(HeaderBanner);
     assert.deepEqual(headerBanner.props(), {
       headingText: "My Dashboard",
       short: true
@@ -92,7 +95,8 @@ describe('StudentHomepage', () => {
   });
 
   it('shows section codes correctly', () => {
-    const wrapper = mount(
+    const store = createStore(combineReducers({isRtl}));
+    const wrapper = shallow(
         <StudentHomepage
           courses={courses}
           topCourse={topCourse}
@@ -101,7 +105,7 @@ describe('StudentHomepage', () => {
           isRtl={false}
           canLeave={false}
         />
-    );
+    ).find('StudentSections').dive().find(SectionsTable).dive({context: {store}}).dive();
     expect(wrapper).to.containMatchingElement(
         <td>ClassOneCode</td>
     );

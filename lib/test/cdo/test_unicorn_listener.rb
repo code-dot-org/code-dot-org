@@ -3,8 +3,8 @@ require 'cdo/unicorn_listener'
 
 class UnicornListenerTest < Minitest::Test
   include Rack::Test::Methods
-  TCP_LISTENER = '0.0.0.0:0000'
-  SOCKET_LISTENER = '/tmp/sock'
+  TCP_LISTENER = '0.0.0.0:0000'.freeze
+  SOCKET_LISTENER = '/tmp/sock'.freeze
 
   def app
     ok = ->(_) do

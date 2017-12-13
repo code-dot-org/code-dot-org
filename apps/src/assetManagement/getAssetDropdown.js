@@ -3,6 +3,7 @@
 var commonMsg = require('@cdo/locale');
 var utils = require('../utils');
 import {getStore} from '../redux';
+import Sounds from '../Sounds';
 
 /**
  * Returns a list of options (optionally filtered by type) for code-mode
@@ -18,7 +19,9 @@ module.exports = function (typeFilter) {
   var handleChooseClick = function (callback) {
     dashboard.assets.showAssetManager(function (filename) {
       callback(utils.quote(filename));
-    }, typeFilter, null, {
+    }, typeFilter, () => {
+      Sounds.getSingleton().stopAllAudio();
+    }, {
       showUnderageWarning: !getStore().getState().pageConstants.is13Plus
     });
   };
