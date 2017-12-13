@@ -1,6 +1,5 @@
 import React, { PropTypes, Component } from 'react';
 import i18n from '@cdo/locale';
-import Responsive from '../responsive';
 import { connect } from 'react-redux';
 import CourseBlocksStudentGradeBands from './studioHomepages/CourseBlocksStudentGradeBands';
 import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
@@ -26,8 +25,6 @@ class StudentsBeyondHoc extends Component {
   static propTypes = {
     completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
     MCShareLink: PropTypes.string,
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
     userAge: PropTypes.number,
@@ -35,7 +32,7 @@ class StudentsBeyondHoc extends Component {
   };
 
   render() {
-    const { isRtl, responsive, responsiveSize, completedTutorialType, userType, isEnglish, MCShareLink, userAge } = this.props;
+    const { responsiveSize, completedTutorialType, userType, isEnglish, MCShareLink, userAge } = this.props;
 
     const signedIn = (userType === "teacher" || userType === "student");
 
@@ -111,8 +108,6 @@ class StudentsBeyondHoc extends Component {
         </h1>
         <VerticalImageResourceCardRow
           cards={cards}
-          isRtl={isRtl}
-          responsive={responsive}
         />
         {isEnglish && (
           <CourseBlocksStudentGradeBands
@@ -131,5 +126,4 @@ class StudentsBeyondHoc extends Component {
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize,
-  isRtl: state.isRtl,
 }))(StudentsBeyondHoc);
