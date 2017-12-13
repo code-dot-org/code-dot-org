@@ -6,6 +6,7 @@ import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
+import _ from 'lodash';
 import {
   ApplicationStatuses,
   ApplicationFinalStatuses,
@@ -122,12 +123,21 @@ export class DetailViewContents extends React.Component {
   };
 
   handleSaveClick = () => {
+    const data = {
+      ...(_.pick(this.state, [
+        'status',
+        'locked',
+        'notes',
+        'regional_partner_filter'
+      ])),
+      response_scores: JSON.stringify(this.state.response_scores)
+    };
     $.ajax({
       method: "PATCH",
       url: `/api/v1/pd/applications/${this.props.applicationId}`,
       dataType: 'json',
       contentType: 'application/json',
-      data: JSON.stringify(Object.assign({}, this.state, {response_scores: JSON.stringify(this.state.response_scores)}))
+      data: JSON.stringify(data)
     }).done((applicationData) => {
       this.setState({
         editing: false
