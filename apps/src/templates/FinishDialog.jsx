@@ -256,6 +256,10 @@ export class UnconnectedFinishDialog extends Component {
   }
 
   render() {
+    if (!this.props.isOpen && !this.props.hideBackdrop) {
+      return null;
+    }
+
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
