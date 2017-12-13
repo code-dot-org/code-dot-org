@@ -87,8 +87,12 @@
                   %p - Disable puzzle rating for all tutorials.
                   %p - Sampled hoc_activity logging (10%).
                   %p - Extend cache lifetimes for HOC pages.
+                  %p All features enabled, normal site operation.
+                - when 'fallback'
+                  %p Scale mode above, plus:
+                  %p - Disable progress saving (milestone posts) for FAILED run button presses for HOC Blockly tutorials only
                 - when 'emergency'
-                  %p Very scalable with significant degradation. Scale mode above plus:
+                  %p Very scalable with significant degradation. Fallback mode above, plus:
                   %p - Disables progess saving (milestone posts) for HOC and CSF levels only. Progress saves remain enabled for CSD & CSP.
                   %p - Disables activity hints
                 - else

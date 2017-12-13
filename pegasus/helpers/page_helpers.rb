@@ -1,4 +1,6 @@
 require 'active_support/core_ext/string/indent'
+require 'honeybadger'
+require 'cdo/pegasus/donor'
 
 def page_title_with_tagline
   title = @header['title'] || @config[:page_default_title].to_s
@@ -68,11 +70,4 @@ def combine_css(*paths)
     style: :compressed
   ).render
   [css_min, css_last_modified]
-end
-
-# Returns a random donor's twitter handle.
-def get_random_donor_twitter
-  weight = SecureRandom.random_number
-  donor = DB[:cdo_donors].where('((twitter_weight_f - ?) >= 0)', weight).first
-  return donor[:twitter_s]
 end

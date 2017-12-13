@@ -1,24 +1,52 @@
 import React, {PropTypes} from 'react';
+import { connect } from 'react-redux';
+import ReactTooltip from 'react-tooltip';
 import {Table} from 'reactabular';
 import {Button} from 'react-bootstrap';
-import color from '@cdo/apps/util/color';
 import _ from 'lodash';
+import {
+  StatusColors,
+  RegionalPartnerDropdownOptions
+} from './constants';
 
 const styles = {
   table: {
     width: '100%',
+  },
+  statusCellCommon: {
+    padding: '5px'
+  },
+  statusCell: StatusColors,
+  notesCell: {
+    maxWidth: '200px',
+  },
+  notesCellContent: {
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    paddingLeft: '2px'
   }
 };
 
-export default class QuickViewTable extends React.Component {
+export class QuickViewTable extends React.Component {
   static propTypes = {
+    showLocked: PropTypes.bool,
     path: PropTypes.string.isRequired,
-    data: PropTypes.array.isRequired
+    data: PropTypes.array.isRequired,
+    statusFilter: PropTypes.string,
+    regionalPartnerFilter: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ])
   };
 
   static contextTypes = {
     router: PropTypes.object.isRequired
   };
+
+  formatBoolean(bool) {
+    return bool ? "Yes" : "No";
+  }
 
   constructColumns() {
     let columns = [];
@@ -54,18 +82,38 @@ export default class QuickViewTable extends React.Component {
       },
       cell: {
         format: (status) => {
-          if (status === 'move_to_interview') {
-            return 'Move to Interview';
-          }
           return _.upperFirst(status);
         },
         transforms: [
           (status) => ({
-            style: {
-              backgroundColor: this.getViewColor(status),
-              color: this.getTextColor(status),
-              padding: '5px'
-            }
+            style: {...styles.statusCellCommon, ...styles.statusCell[status]}
+          })
+        ]
+      }
+    });
+
+    if (this.props.showLocked) {
+      columns.push({
+        property: 'locked',
+        cell: {
+          format: this.formatBoolean
+        },
+        header: {
+          label: 'Locked?',
+        }
+      });
+    }
+
+    columns.push({
+      property: 'notes',
+      header: {
+        label: 'Notes'
+      },
+      cell: {
+        format: this.formatNotesTooltip,
+        transforms: [
+          () => ({
+            style: {...styles.notesCell}
           })
         ]
       }
@@ -81,24 +129,29 @@ export default class QuickViewTable extends React.Component {
     return columns;
   }
 
-  getViewColor = (status) => {
-    switch (status) {
-      case 'unreviewed': return color.charcoal;
-      case 'pending': return color.lighter_orange;
-      case 'accepted': return color.level_perfect;
-      case 'declined': return color.red;
-      case 'waitlisted': return color.level_passed;
-      case 'move_to_interview': return color.orange;
-      case 'withdrawn': return color.lightest_red;
-    }
-  }
-
-  getTextColor = (status) => {
-    if (status === 'declined' || status === 'unreviewed') {
-      return color.white;
-    }
-    return color.black;
-  }
+  formatNotesTooltip = (notes) => {
+    let tooltipId = _.uniqueId();
+    return (
+      <div>
+        <div
+          data-tip
+          data-for={tooltipId}
+          aria-describedby={tooltipId}
+          style={styles.notesCellContent}
+        >
+          {notes}
+        </div>
+        <ReactTooltip
+          id={tooltipId}
+          role="tooltip"
+          wrapper="span"
+          effect="solid"
+        >
+          {notes}
+        </ReactTooltip>
+      </div>
+    );
+  };
 
   formatViewButton = (id) => {
     return (
@@ -117,8 +170,21 @@ export default class QuickViewTable extends React.Component {
     this.context.router.push(`/${this.props.path}/${id}`);
   };
 
+  constructRows() {
+    let rows = this.props.data;
+    if (this.props.regionalPartnerFilter) {
+      if (this.props.regionalPartnerFilter === RegionalPartnerDropdownOptions.unmatched.value) {
+        rows = rows.filter(row => row.regional_partner_id === null);
+      } else if (this.props.regionalPartnerFilter !== RegionalPartnerDropdownOptions.all.value) {
+        rows = rows.filter(row => row.regional_partner_id === this.props.regionalPartnerFilter);
+      }
+    }
+    rows = this.props.statusFilter ? rows.filter(row => row.status === this.props.statusFilter) : rows;
+    return rows;
+  }
+
   render() {
-    const rows = this.props.data;
+    const rows = this.constructRows();
     const columns = this.constructColumns();
 
     return (
@@ -133,3 +199,7 @@ export default class QuickViewTable extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  showLocked: state.permissions.lockApplication,
+}))(QuickViewTable);

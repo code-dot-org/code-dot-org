@@ -18,7 +18,6 @@ social:
   "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
   "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 ---
-
 <%
     facebook = {:u=>"http://#{request.host}/us"}
 
@@ -28,40 +27,37 @@ social:
 
 # Кодтау Сағатының иесі ретінде тіркелгеніңізге рахмет!
 
-Сіз әлемнің түкпіріндегі студенттерге <%= campaign_date('full') %> *қалған өмірін түбегейлі өзгертетін* бір Кодтау Сағатын уйренуге мүмкіндік сыйлаудасыз. Біз жаңа оқулықтар мен басқа да толғандырарлық жаңартулар жөнінде хабардар боламыз. Қазір сіз не істей аласыз?
+As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
+<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
 
-## Сөзді жариялаңыз
+<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
 
-Сіз жақында Кодтау Сағаты қозғалысына қосылдыңыз. Достарыңызбен **#HourOfCode** -пен бөлісіңіз!
+<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+## 1. Spread the word in your school and community
+
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Жаңа дағдыларды үйрену үшін сізге мектепте болу қажет емес. Invite a local politician or policy maker to visit your school for the Hour of Code. Бұл сағаттан тыс уақытта сіздің ауданда компьютер ғылымдарын құруда көмегін тигізеді.
+
+Өзіңіздің шараңыз үшін [мына постер, баннер, стикер, видео және тағы басқаларын](<%= resolve_url('/promote/resources') %>) пайдаланыңыз.
 
 ## Сіздің шараға көмектесетін жергілікті волонтер табыңыз.
 
-Сіздің сынып бөлмеңізді көре алатын волонтерларды табуда [біздің волонтер картасын қараңыз](<%= resolve_url('https://code.org/volunteer/local') %>) немесе студенттеріңізді шабыттандыру мақсатында қашықтан информатика мүмкіндіктерінің кеңдігі туралы видео-чат арқылы айтыңыз.
+[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## Түгел мектебіңізге Кодтау Сағатын ұсыныңыз
+## 3. Plan your Hour of Code
 
-Сіздің басты міндетіңіз ретінде мектебіңіздегі әрбір сыныпты тіркеу үшін оларға [мына электрондық поштаны жіберіңіз](<%= resolve_url('/promote/resources#sample-emails') %>).
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
 
-## Қызметкеріңізді қатысуға шақырыңыз
+# Go beyond an Hour of Code
 
-[Бұл email-ды](<%= resolve_url('/promote/resources#sample-emails') %>) өзіңіздің менеджер немесе компания CEO-сына жіберіңіз.
+<% if @country == 'us' %> An Hour of Code is just the beginning. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
 
-## Өз қауымығызға Код Сағатын жарнамалаңыз
+You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-[Жергілікті топ құрыңыз](<%= resolve_url('/promote/resources#sample-emails') %>) - ер/қыз барлаушы клубтары, шіркеу, университет, ардагерлер тобы, кәсіподақ, тіпті, немесе кейбір достарыңыз. Жаңа дағдыларды үйрену үшін сізге мектепте болу қажет емес. Өзіңіздің шараңыз үшін [мына постер, баннер, стикер, видео және тағы басқаларын](<%= resolve_url('/promote/resources') %>) пайдаланыңыз.
+<% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-## Жергілікті лауазымды тұлғаларды Кодтау Сағатын демеуге шақырыңыз
-
-Жергілікті өкілдерге, қалалық кеңеске немесе мектеп тақтасына [мына электрондық поштаны жіберіңіз](<%= resolve_url('/promote/resources#sample-emails') %>) және Кодтау Сағатында сіздің сыныпты қарауға шақырыңыз. Бұл сағаттан тыс уақытта сіздің ауданда компьютер ғылымдарын құруда көмегін тигізеді.
-
-## Өзіңіздің Код Сағатын жоспарлаңыз
-
-Кодтау Сағаты шарасын таңдаңыз және [қалай қолдану жөнінде шолу](<%= resolve_url('/how-to') %>) жасаңыз.
-
-## Кодтау Сағатынан тыс барыңыз
-
-Сағаттан тыс жерге баруға дайынсыз ба? Төменгі, орта және жоғарғы мектеп мұғалімдеріне арналған професионалды оқу мүмкіндіктерін қамтитын [толық қурстар мен мұғалім қорларды](<%= resolve_url('https://code.org/teach')%>) қараңыз.
+Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
 
 <%= view 'popup_window.js' %>

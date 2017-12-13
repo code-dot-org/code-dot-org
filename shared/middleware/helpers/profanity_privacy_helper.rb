@@ -4,7 +4,7 @@ require_relative './source_bucket.rb'
 
 # The standard source filename used for blockly projects using channels.
 # Check whether it is defined—helpers can be double-included during test running.
-BLOCKLY_SOURCE_FILENAME = 'main.json' unless defined? BLOCKLY_SOURCE_FILENAME
+BLOCKLY_SOURCE_FILENAME = 'main.json'.freeze unless defined? BLOCKLY_SOURCE_FILENAME
 
 def profanity_privacy_violation?(filename, body)
   return false unless filename == BLOCKLY_SOURCE_FILENAME

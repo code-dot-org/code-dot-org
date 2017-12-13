@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_op_ed) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ### Veja abaixo um exemplo de artigo de opinião em apoio à Semana da Educação em Ciência da Computação e a suas metas, que pode ser usado pelos responsáveis pela legislação estadual ou local, por líderes empresariais etc.
@@ -45,6 +42,6 @@ Precisamos contratar mais professores de ciência da computação e incentivar o
 
 De acordo com o Bureau of Labor Statistics (agência norte-americana que analisa estatísticas trabalhistas), até o ano de 2020, haverá 9,2 milhões de empregos nas áreas de Ciências, Tecnologia, Engenharia e Matemática (STEM, na sigla em inglês). Metade desses empregos, isto é, 4,6 milhões, será das áreas de computação ou tecnologia da informação. E a ciência da computação é um conhecimento cada vez mais fundamental para o século XXI. Quem preencherá essas vagas de emprego, uma vez que nossas crianças não têm a oportunidade de desenvolver as habilidades necessárias?
 
-Esta semana, <%= campaign_date('full') %>, é a Semana da Educação em Ciência da Computação. Em todas as escolas de **[ESTADO]**, nossos alunos participarão de uma Hora do Código nacional, desmitificando a ciência da computação e estimulando seu desejo de seguir em frente e aprender mais. Eu estarei junto deles, e convido você a se juntar a nós também. Todos deveriam aprender a programar. Acesse https://hourofcode.com/<%= @country %> para saber mais e começar a aprender. Não deixe de apoiar nossos esforços para levar a ciência da computação para mais escolas de **[ESTADO]**.
+Esta semana, <%= campaign_date('full') %>, é a Semana da Educação em Ciência da Computação. Em todas as escolas de **[ESTADO]**, nossos alunos participarão de uma Hora do Código nacional, desmitificando a ciência da computação e estimulando seu desejo de seguir em frente e aprender mais. Eu estarei junto deles, e convido você a se juntar a nós também. Todos deveriam aprender a programar. Acesse https://hourofcode.com/<%= @country %> para saber mais e começar a aprender. E apoiar nossos esforços para levar a ciência da computação a mais escolas no **[ESTADO]**.
 
 <%= view :signup_button %>

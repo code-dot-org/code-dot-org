@@ -120,6 +120,12 @@ class Craft < Blockly
     topSnow: true,
     water: true,
     wool: true,
+    wool_orange: true,
+    wool_blue: true,
+    wool_magenta: true,
+    wool_pink: true,
+    wool_red: true,
+    wool_yellow: true,
 
     # House parts
     houseTopA: true,
@@ -592,13 +598,14 @@ class Craft < Blockly
   end
 
   def common_blocks(type)
-    if is_event_level == "true"
-      level_specific_blocks = event_blocks
-    elsif is_agent_level == "true"
-      level_specific_blocks = agent_blocks
-    else
-      level_specific_blocks = adventurer_blocks
-    end
+    level_specific_blocks =
+      if is_event_level == "true"
+        event_blocks
+      elsif is_agent_level == "true"
+        agent_blocks
+      else
+        adventurer_blocks
+      end
 
     <<-XML.chomp
 #{level_specific_blocks}

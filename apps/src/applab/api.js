@@ -362,40 +362,6 @@ export function startWebRequest(url, func) {
                            'func': func });
 }
 
-export function setTimeout(func, milliseconds) {
-  return Applab.executeCmd(null,
-                          'setTimeout',
-                          {'func': func,
-                           'milliseconds': milliseconds });
-}
-
-export function clearTimeout(timeoutId) {
-  return Applab.executeCmd(null,
-                           'clearTimeout',
-                           {'timeoutId': timeoutId });
-}
-
-export function setInterval(func, milliseconds) {
-  return Applab.executeCmd(null,
-                          'setInterval',
-                          {'func': func,
-                           'milliseconds': milliseconds });
-}
-
-export function clearInterval(intervalId) {
-  return Applab.executeCmd(null,
-                           'clearInterval',
-                           {'intervalId': intervalId });
-}
-
-export function timedLoop(ms, callback) {
-  return Applab.executeCmd(null, 'timedLoop', {ms, callback});
-}
-
-export function stopTimedLoop(key) {
-  return Applab.executeCmd(null, 'stopTimedLoop', {key});
-}
-
 export function getKeyValue(key, onSuccess, onError) {
   return Applab.executeCmd(null,
                            'getKeyValue',

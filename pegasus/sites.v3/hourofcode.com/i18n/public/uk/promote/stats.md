@@ -1,24 +1,23 @@
 ---
-
 title: <%= hoc_s(:title_stats) %>
 layout: wide
 nav: promote_nav
-
 ---
+
 
 <a id="blurb"></a>
 
 <%= view :signup_button %>
 
-# Цікава статистика
+# Оголошення та корисна статистика
 
-## Використайте ці дані для своїх матеріалів
+## Використовуйте ці дані для оголошень в інформаційних бюлетнях
 
-### Залучіть інформатику до своєї школи. Розпочніть Годиною коду
+### Bring computer science to your school. Start with an Hour of Code!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But fewer than half of all schools teach computer science! Хорошою новиною є те, що ми можемо це змінити. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+Технології змінюються у кожній галузі на планеті, і знання інформаційних технологій стало частиною повноцінного набору навичок. Але інформатики вчить менше ніж половина шкіл! Доброю новиною є те, що ми змінюємо це. Якщо ви чули про Годину коду минулого року, можливо ви знаєте, що вона увійшла в історію. 100 мільйонів учнів тепер дізналися, якою доступною та веселою може бути інформатика, зробивши лише одну Годину коду.
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+Година коду — це одногодинний вступ до інформатики, розроблений для зняття покрову таємничості з неї, та показування, що її основ може навчитися кожен. Дізнайтеся більше на <http://HourofCode.com>, і спробуйте годину самі, або проведіть захід Години коду для знайомства інших зі світом інформаційних технологій!
 
 <a id="infographics"></a>
 

@@ -1,53 +1,51 @@
 ---
-
 title: <%= hoc_s(:title_how_to_parents) %>
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# A Kódolás órája gyerekekkel - útmutató
 
-Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
+Kódolni otthonról is tud, de tudását megmutathatja gyermeke osztályában is. Mutatjuk hogyan:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 1) Nézd meg ezt az útmutató videót <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
+## 2) Válassz bemutatót:
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+Változatos és szórakoztató gyakorlatainkat minden korosztálynak ajánljuk. Próbálja ki Ön is!
+
+**A Kódolás órájának anyagai önállóan is elvégezhetőek, ezáltal a gyerekek saját ritmusukban haladhatnak.**
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 3) Plan your technology needs
+## 3) A szükséges technológiai eszközök ellenőrzése
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all.
+A legjobb Kódolás órája élményt internetkapcsolattal rendelkező számítógépekkel lehet elérni. De **nincs** feltétlenül szükség számítógépre. Nagyon sok tevékenységet a technológia jelenléte nélkül is elvégezhetünk.
 
-- Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
-- **Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+- Ellenőrizd le a gyakorlatokat a használni kívánt számítógépeken vagy egyéb eszközökön. Győződj meg róla, hogy minden anyag működik a böngészőben (például a videók esetében hallható-e a hang).
+- **Együtt tanulna a gyerekével?** Próbálja ki a [páros programozást](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). A technika lehetővé teszi az együttműködést.
 
-## 4) Start your Hour of Code off with an inspiring video
+## 4) Kezdd el a Kódolás óráját egy inspiráló videóval
 
 Kick off your Hour of Code by inspiring your child and discussing how computer science impacts every part of our lives.
 
-**Show an inspirational video:**
+**Mutass egy inspiráló videót az alábbiak közül:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Find more inspirational [resources](<%= resolve_url('https://code.org/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Tekints át további inspiráló [segédanyagokat](<%= resolve_url('https://code.org/inspire') %>) és [videókat](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- List things that use code in everyday life.
+- Sorolj fel olyan dolgokat a midennapi életből amely program alapján működik!
 - See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
 
-## 5) Code!
+## 5) Kódolj!
 
 <img src="/images/fit-700/tutorial-short-link.png" />
 
@@ -57,21 +55,21 @@ When you've chosen the tutorial you would like to do, you can bookmark the tutor
 
 It’s okay to respond:
 
-- “I don’t know. Let’s figure this out together.”
-- “Technology doesn’t always work out the way we want.”
-- “Learning to program is like learning a new language; you won’t be fluent right away.”
+- "Nem tudom. Találjunk együtt megoldást!"
+- "A technika nem mindig úgy működik, mint ahogy azt mi elképzeljük."
+- "Programozni tanulni, olyan mint egy nyelvet tanulni, nem tudsz azonnal folyékonyan beszélni."
 
-## 6) Celebrate
+## 6) Ünnepelj
 
 [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your child (and yourself!).
 
-Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+Oszd meg a "Kódolás Órája"-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd a #HourOfCode és a @codeorg tageket, így mi is ki tudjuk emelni az eredményeidet!
 
 **Other Hour of Code resources:**
 
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Olvasd át a [Kódolás Órája GYIK](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) részét.
 
-**What comes after the Hour of Code?**
+**Mi jön a "Kódolás Órája" után?**
 
 The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 

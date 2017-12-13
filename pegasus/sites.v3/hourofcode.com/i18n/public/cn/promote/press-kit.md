@@ -1,65 +1,62 @@
 ---
-
 title: <%= hoc_s(:title_press_kit) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ## 怎样为你的编程一小时活动吸引媒体
 
-*For all press and media inquiries, contact <press@code.org>*
+*所有的记者和媒体垂询，请联系<press@code.org>*
 
 ### 重点提示
 
-  * 在你的活动开始两周前通过电子邮件主动联系媒体，如果没有得到初步答复跟进邮件或电话联系。
-  * 请学校工作人员或志愿者拍照在网上分享或发送给记者。
-  * 在你的个人网站主页和学校报纸上发表关于编程一小时的内容，发表你的活动细节，和学生活动的照片。
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- 在你的活动开始两周前通过电子邮件主动联系媒体，如果没有得到初步答复跟进邮件或电话联系。
+- 请学校工作人员或志愿者拍照在网上分享或发送给媒体。
+- 在你的个人网站主页和学校报纸上发表关于编程一小时的内容，发表你的活动细节，和学生活动的照片。
+- 在微信和微博上分享你的计划，在12月5-11日宣布你的活动并发布照片，使用井号标签**#HourOfCode**让Code.org能够看到并且推广你的活动。
 
 ### 一步一步指导：
 
-**1. Plan your event**
+**1. 计划你的活动**
 
-  * 策划一系列活动揭开编程一小时的序幕
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * 组织集体活动（如策划“不插电”活动），或展示学生创建并领导的活动。
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
+- 策划一系列活动揭开编程一小时的序幕
+- 寄[信](<%= resolve_url('/promote/resources#sample-emails') %>)给家长并邀请他们帮忙宣传这个活动。
+- 寄[信](<%= resolve_url('/promote/resources#sample-emails') %>)给当地的市长，国会议员，州长，或是有影响力的商人，邀请他们出席并为您的学生讲话。
+- 组织集体活动（如策划“不插电”活动），或展示学生创建并领导的活动。
+- 展示Code.org网站的[编程一小时视频](<%= resolve_url('/') %>)或者用[这些视频](<%= resolve_url('/promote/resources#videos') %>)来宣传。
 
-**2. Identify specific local reporters that cover education or local events.**
+**2. 确定具体的涵盖教育或本地事件的本地记者。**
 
-Think a local newspaper, TV station, radio station or blog.
+借助当地的报纸，电视台，广播电台或博客。
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+在网上查找记者的联系信息。 如果找不到，联系出版方或发送一封邮件到出版社的公开邮件地址，请求把你的信息转到你要找的记者。
 
-**3. Contact local media**
+**3. 联系当地媒体**
 
-The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>).**
+通过电子邮件是最好的联系办法。 邮件应言简意赅：为什么其他人会关注这个活动？ 内容包括在座的出席活动各位的联系信息（含手机号码）。 **参见[联系媒体的通用模式](<%= resolve_url('/promote/resources#sample-emails') %>)。**
 
-**4. Prepare to field questions about your school event. Here are some examples:**
+**4. 准备好回答关于你学校活动的问题，以下是一些例子：**
 
-*Why is your school doing an Hour of Code?*
+*为什么你的学校组织编程一小时活动？*
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+我们都知道对于学生们来说学会如何在当今科技饱和的世界中生存是很重要的，但是许多老师并没有计算机科学相关的教学经验也不知道从哪里开始教。 这个活动对我们来说正是一个了解计算机科学的机会。
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+我们希望它能激发学生们的兴趣并坚持学习下去。 研究也表明，孩子们在学会读写之前就已经可以学会编程概念。 事实上，就像学习外语一样，小时候他们的大脑更容易接受计算机语言。
 
-*Why is this important?*
+*为什么这很重要？*
 
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
+科技正改变着地球上的每一个行业。 在 2015 年，美国有700 万工作机会看重编程技能，其中包括艺术和设计。 但75%的美国学校不教计算机科学。 现在是我们应该迎头赶上21世界步伐的时候了。 我们知道，无论我们的学生们长大后做什么，无论他们从事医药，商业，政治或者艺术工作，知道如何使用科技将会给他们信心并让他们知道成功的诀窍。
 
-**More details and a quote you can use in materials**
+**更多信息以及可在材料中使用的引语**
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+Hadi Partovi，Code.org的创始人和CEO曾说过“打造编程一小时就是为了揭秘代码并表明计算机科学并不是火箭科学，是任何人都可以学习的基础知识， 全球超过 1 亿学生已经尝试过代码一小时。 有关 21 世纪计算机科学教育的需求超越了国界，不分国界。”
 
-**About Code.org**
+**关于Code.org**
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
+Code.org®是501c3公立非营利项目，致力于扩展计算机科学，增加女性和有色弱势学生群体的参与。 其设想是，每所学校的每个学生都应该有机会学习计算机编程。 在2013年启动后，Code.org组织了编程一小时系列活动—向数以百万计的学生介绍计算机科学—和全国超过70所公立学区合作，拓展计算机科学课程。 Code.org由企业、基金会和慷慨个人的慈善捐赠支持，包括微软，印孚瑟斯基金会美国，The Ballmer Family Giving，奥米迪亚网络和其他的慈善捐赠 更多详情, 请访问: [ <%= resolve_url('code.org')%> ](<%= resolve_url('https://code.org') %>)。
 
   
-Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
+更多资讯和示例邮件请见[这里](<%= resolve_url('/promote') %>)
 
 <%= view :signup_button %>

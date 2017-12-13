@@ -598,7 +598,8 @@ Applab.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
-    showDebugWatch: !!config.level.isProjectLevel || config.level.showDebugWatch
+    showDebugWatch: !!config.level.isProjectLevel || config.level.showDebugWatch,
+    showMakerToggle: !!config.level.isProjectLevel || config.level.makerlabEnabled,
   });
 
   config.dropletConfig = dropletConfig;
@@ -933,8 +934,6 @@ Applab.runButtonClick = function () {
 var displayFeedback = function () {
   if (!Applab.waitingForReport) {
     studioApp().displayFeedback({
-      app: 'applab', //XXX
-      skin: skin.id,
       feedbackType: Applab.testResults,
       executionError: Applab.executionError,
       response: Applab.response,

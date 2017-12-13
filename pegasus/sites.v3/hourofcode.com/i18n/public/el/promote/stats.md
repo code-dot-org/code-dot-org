@@ -1,10 +1,9 @@
 ---
-
 title: <%= hoc_s(:title_stats) %>
 layout: wide
 nav: promote_nav
-
 ---
+
 
 <a id="blurb"></a>
 
@@ -14,7 +13,7 @@ nav: promote_nav
 
 ## Χρησιμοποιήστε αυτή τη σύντομη περίληψη στα ενημερωτικά δελτία
 
-### Φέρτε την επιστήμη των υπολογιστών στο σχολείο σας. Ξεκινήστε με μία Ώρα του Κώδικα
+### Φέρτε την επιστήμη των υπολογιστών στο σχολείο σας. Ξεκινήστε με μία Ώρα του Κώδικα!
 
 With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But fewer than half of all schools teach computer science! Τα καλά νέα είναι, ότι πρόκειται να το αλλάξουμε αυτό. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 

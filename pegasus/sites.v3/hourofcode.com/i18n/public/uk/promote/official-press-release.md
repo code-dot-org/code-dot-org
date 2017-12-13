@@ -1,52 +1,62 @@
 ---
-
 title: <%= hoc_s(:title_press_release) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
-# Sample press release for elected officials
+# Простий прес-реліз для виборних посадовців
 
-For Immediate Release  
-[**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+Для негайного розповсюдження  
+[**ДАТА**]  
+Контактна інформація: [**КОНТАКТНА ІНФОРМАЦІЯ**]  
   
 
 
-**
+<strong>
 
 <center>
   GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
 </center>
 
-  
-  
-</p> 
+<br /> <br /></p> 
 
-**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
+<p>
+  <strong>ДАТА</strong> — [<strong>ВСТАВТЕ ІМ'Я</strong>] приєднався сьогодні до керівництва та викладачів школи [<strong>ВСТАВТЕ НАЗВУ ШКОЛИ</strong>], провідних бізнесменів та місцевих сімей на [<strong>НАЗВА ПОДІЇ</strong>], щоби взяти участь у Годині коду в рамках Тижня освіти з інформатики. [ВСТАВТЕ ІМ'Я] та члени громади були сьогодні серед десятків мільйонів людей по всьому світу, хто брав участь у найбільшій навчальній події в історії.
+</p>
 
-[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
+<p>
+  [<strong>ВСТАВТЕ ДЕТАЛІ ПОДІЇ, ВИКОРИСТОВУЙТЕ МОВУ, ЯКА Є ОПИСОВОЮ, ТА ПІДДАЄТЬСЯ КІЛЬКІСНОМУ ВИЗНАЧЕННЮ. НАПРИКЛАД:</strong>]<br /> «Початкова школа Деніелз Ран провела загальношкільну подію «Година коду», щоби познайомити своїх учнів з інформатикою. Понад 700 учнів з усіх класів виконали щонайменше по одній Годині коду. А дюжина батьків та волонтерів з громади допомогли з організацією цього дня, зібравши дітей разом для демонстрації, чому інформатика має важливе значення в житті цих учнів.»
+</p>
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
+<p>
+  [<strong>ПРИКЛАД ТЕКСТУ ДЛЯ КОНТЕКСТУ:</strong>]<br /> Комп'ютери є скрізь, але інформатику викладають в меншій кількості шкіл, ніж 10 років тому. Дівчата та учні з національних менших серйозно недопредставлені. Доброю новиною є те, що ми змінюємо це на краще. Година коду є шляхом до забезпечення всіх учнів доступом до високоякісної освіти з інформатики.
+</p>
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! та Діснею. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+<p>
+  Понад 100 мільйонів учнів по всьому світу вже пробували Годину коду. Завдяки Годині коду інформатика була на домашніх сторінках Google, MSN, Yahoo! та Діснею. Президент Обама, Шакіра та Ештон Кутчер запустили Годину коду своїми відео. Для підтримки цього руху зібралося понад 100 партнерів.
+</p>
 
-[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+<p>
+  [<strong>ВСТАВТЕ ЦИТАТУ ВІД РЕЧНИКА, ПРИКЛАД НИЖЧЕ:</strong>]<br /> «Нам необхідно заохочувати та використовувати зацікавлення наших учнів інформатикою,» сказав [<strong>ВСТАВТЕ ІМ'Я</strong>]. «Кожен учень заслуговує на можливість вивчати інформатику, щоби отримати доступ до найкращих кар'єр XXI сторіччя.»
+</p>
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
+<p>
+  [<strong>ВСТАВТЕ БІЛЬШЕ ІНФОРМАЦІЇ ПРО СВОЮ ПОДІЮ ТА/АБО СВОЮ ОРГАНІЗАЦІЮ</strong>]
+</p>
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
+<p>
+  [<strong>ВСТАВТЕ ЦИТАТУ ВІД ІНШОЇ ОРГАНІЗАЦІЇ, АБО ВІД КОГОСЬ, ХТО ВІДВІДУВАВ ЦЮ ПОДІЮ</strong>]
+</p>
 
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+<p>
+  Для отримання докладнішої інформації про [<strong>ПОДІЯ/ПРОГРАМА/ТОЩО</strong>] відвідайте [<strong>ВСТАВТЕ ВЕБ-САЙТ</strong>], або зверніться [<strong>ВСТАВТЕ КОНТАКТНУ ІНФОРМАЦІЮ</strong>]
+</p>
 
-  
-  
+<p>
+  <br /> <br />
+</p>
 
-
-<%= view :signup_button %>
+<p>
+  <%= view :signup_button %>
+</p>

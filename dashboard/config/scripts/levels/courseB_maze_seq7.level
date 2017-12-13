@@ -26,7 +26,7 @@
     "disable_examples": "false",
     "never_autoplay_video": "true",
     "examples_required": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Add 1 block to move the bird to the pig.\",\"hint_id\":\"courseB_maze_seq7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b0fdd97fa40af52a499052e7237e0eb5/courseB_maze_seq7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try running the code that's given to you and see where you end up.\",\"hint_id\":\"courseB_maze_seq7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/91f0cbe2ee8eb1863489acbd16399cc6/courseB_maze_seq7.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Add 1 block to move the bird to the pig.\",\"hint_id\":\"courseB_maze_seq7_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b0fdd97fa40af52a499052e7237e0eb5/courseB_maze_seq7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try running the code that's given to you and see where you end up.\",\"hint_id\":\"courseB_maze_seq7_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/91f0cbe2ee8eb1863489acbd16399cc6/courseB_maze_seq7.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Can't get to the pig?  Try this path!\",\"hint_id\":\"courseB_maze_seq7_c\",\"hint_type\":\"general\",\"hint_path\":\"[[5,4],[2,4],[2,2]]\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f15eb8b2dbd8d9a98abf2b908314004e/courseB_maze_seq7.mp3\"}]",
     "callout_json": "[]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
@@ -37,7 +37,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-28 22:39:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 21:10:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-28 22:39:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 21:10:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-11-08 22:41:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-08 22:45:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 2,
     "debugging": 2

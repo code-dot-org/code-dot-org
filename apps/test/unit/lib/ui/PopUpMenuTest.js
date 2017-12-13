@@ -19,9 +19,9 @@ describe('PopUpMenu', () => {
   it('renders each menu item', () => {
     const wrapper = mount(
       <MenuBubble targetPoint={targetPoint}>
-        <PopUpMenu.Item>Item one</PopUpMenu.Item>
-        <PopUpMenu.Item>Item two</PopUpMenu.Item>
-        <PopUpMenu.Item>Item three</PopUpMenu.Item>
+        <PopUpMenu.Item onClick={() => {}}>Item one</PopUpMenu.Item>
+        <PopUpMenu.Item onClick={() => {}}>Item two</PopUpMenu.Item>
+        <PopUpMenu.Item onClick={() => {}}>Item three</PopUpMenu.Item>
       </MenuBubble>
     );
     expect(wrapper.text())
@@ -39,7 +39,7 @@ describe('PopUpMenu', () => {
         <PopUpMenu.Item onClick={spy2}>Item two</PopUpMenu.Item>
       </MenuBubble>
     );
-    wrapper.find(PopUpMenu.Item).first().simulate('click');
+    wrapper.find(PopUpMenu.Item).first().children().first().simulate('click');
     expect(spy1).to.have.been.calledOnce;
     expect(spy2).not.to.have.been.called;
   });

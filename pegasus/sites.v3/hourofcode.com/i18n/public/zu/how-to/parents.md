@@ -1,18 +1,16 @@
 ---
-
 title: <%= hoc_s(:title_how_to_parents) %>
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
 # Indlela ongaqeda iHora loKufingqwa nengane yakho
 
 Qeda iHora loKufingqwa ekhaya, okanye uvolontiye ukuyiletha ekilasini lengane yakho! Nansi indlela:
 
-## 1) Bukela levidiyo yendlela yokwenza <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Bukela levidiyo yendlela yokwenza <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
 ## 2) Khetha isifundiso:
 
 We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
@@ -35,7 +33,7 @@ Qala iHora loKufingqwa lwakho ngoku khuthaza ingane yakho kanye noku xoxa ngendl
 **Bonisa ngevidiyo ekhuthazayo:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-- I [Ividiyo yokwethulwa kweHora loKufingqwa 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), okanye i <% if @country == 'uk' %> [Ividiyo yeHora loKufingqwa 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Ividiyo yeHora loKufingqwa 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Thola okuningi ukukhuthazayo [izinsiza](<%= resolve_url('https://code.org/inspire') %>) kanye [amavidiyo](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 

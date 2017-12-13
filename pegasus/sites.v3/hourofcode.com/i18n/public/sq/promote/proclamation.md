@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_proclamation) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ### Më poshtë gjeni model rezolutë mbështetëse për Javën Edukative në Shkencat Kompjuterike dhe qëllimet e saj që të mund të përdoret nga ligjvënësit e qeverisjes qendrore dhe lokale.

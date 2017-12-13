@@ -32,7 +32,7 @@
 
 -if @country == 'us'
   %h2= hoc_s(:hoc_faq_logo_q)
-  %div= hoc_s(:hoc_faq_logo_a)
+  %div= hoc_s(:hoc_faq_logo_a).gsub(/%{logo_url}/, "https://support.code.org/hc/en-us/articles/202518403")
 
 -if @country != 'us'
   %h2= hoc_s(:hoc_faq_international_q).gsub(/<country>/, HOC_COUNTRIES[@country]['full_name'])

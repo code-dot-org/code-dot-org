@@ -7,6 +7,7 @@ import viewAs from './viewAsRedux';
 import shareDialog from './components/shareDialogRedux';
 import hiddenStage from './hiddenStageRedux';
 import isRtl from './isRtlRedux';
+import responsive from './responsiveRedux';
 import publishDialog from '../templates/publishDialog/publishDialogRedux';
 import verifiedTeacher from './verifiedTeacherRedux';
 
@@ -18,6 +19,7 @@ registerReducers({
   shareDialog,
   hiddenStage,
   isRtl,
+  responsive,
   publishDialog,
   verifiedTeacher,
 });

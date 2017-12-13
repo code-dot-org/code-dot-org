@@ -57,11 +57,12 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "timeout_after_when_run": "false",
+    "remove_items_when_actor_collides": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-02 20:02:59 +0000\",\"changed\":[\"notes\",\"ideal\",\"required_blocks\",\"timeout_failure_tick\",\"start_blocks\",\"success_condition\",\"failure_condition\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-02 20:02:59 +0000\",\"changed\":[\"notes\",\"ideal\",\"required_blocks\",\"timeout_failure_tick\",\"start_blocks\",\"success_condition\",\"failure_condition\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-13 20:54:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -133,7 +134,7 @@
           <title name="VALUE">1</title>
         </block>
         <block type="studio_playSound">
-          <title name="SOUND">winpoint</title>
+          <title name="SOUND">???</title>
         </block>
       </xml>
     </required_blocks>

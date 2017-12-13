@@ -28,6 +28,7 @@ var ALLOWED_KEYS = new Set([
   'showDebugConsole',
   'showDebugWatch',
   'showDebugSlider',
+  'showMakerToggle',
   'locale',
   'hasContainedLevels',
   'isDroplet',

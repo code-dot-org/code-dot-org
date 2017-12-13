@@ -428,6 +428,11 @@ export const stageExtrasUrl = (state, stageId) => (
     : ''
 );
 
+export const isPerfect = (state, levelId) => (
+  !!state.levelProgress &&
+    state.levelProgress[levelId] >= TestResults.MINIMUM_OPTIMAL_RESULT
+);
+
 /**
  * Given a level and levelProgress (both from our redux store state), determine
  * the status for that level.

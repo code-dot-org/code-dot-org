@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_press_kit) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ## Как привлечь СМИ на событие "Час программирования"
@@ -14,20 +11,20 @@ nav: promote_nav
 
 ### Ключевые советы
 
-  * Обращайтесь в СМИ за две недели до вашего мероприятия по электронной почте. Далее по электронной почте и телефону, если вы не получили первоначальный ответ.
-  * Попросите сотрудников школы или добровольцев сделать фото, чтобы выложить их в Интернете или отправить прессе.
-  * Напишите о "Часе программирования" на главной странице вашего сайта и в школьной газете. Опубликуйте детали мероприятия и фотографии деятельности учеников.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Обращайтесь в СМИ за две недели до вашего мероприятия по электронной почте. Далее по электронной почте и телефону, если вы не получили первоначальный ответ.
+- Попросите сотрудников школы или добровольцев сделать фото, чтобы выложить их в Интернете или отправить прессе.
+- Напишите о "Часе программирования" на главной странице вашего сайта и в школьной газете. Опубликуйте детали мероприятия и фотографии деятельности учеников.
+- On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Пошаговое руководство:
 
 **1. Plan your event**
 
-  * Спланируйте собрание принимающих участие, для старта "Часа программирования".
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * Организуйте деятельность группы (например продемонстрировать «оффлайн» программирование), или покажите что-то созданное учениками.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
+- Спланируйте собрание принимающих участие, для старта "Часа программирования".
+- Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+- Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+- Организуйте деятельность группы (например продемонстрировать «оффлайн» программирование), или покажите что-то созданное учениками.
+- Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. Identify specific local reporters that cover education or local events.**
 

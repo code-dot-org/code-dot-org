@@ -48,16 +48,17 @@ class CsvToSqlTable
     h = {}
     (0..keys.count - 1).each do |i|
       key_name = keys[i].to_s
-      case key_name[key_name.rindex('_')..-1]
-      when '_b'
-        value = values[i].to_bool
-      when '_f'
-        value = values[i].to_f
-      when '_i'
-        value = values[i].to_i
-      else
-        value = values[i]
-      end
+      value =
+        case key_name[key_name.rindex('_')..-1]
+        when '_b'
+          values[i].to_bool
+        when '_f'
+          values[i].to_f
+        when '_i'
+          values[i].to_i
+        else
+          values[i]
+        end
 
       h[keys[i]] = value
     end

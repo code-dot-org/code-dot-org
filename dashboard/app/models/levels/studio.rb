@@ -283,7 +283,7 @@ class Studio < Grid
     </value>
   </block>
   <block type="studio_throw" />
-  <block type="studio_throwParam">
+  <block type="studio_throwParams">
     <value name="SPRITE">
       <block type="math_number">
         <title name="NUM">1</title>

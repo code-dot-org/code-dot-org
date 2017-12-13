@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_proclamation) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.

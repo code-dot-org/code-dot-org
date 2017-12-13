@@ -1,14 +1,11 @@
 ---
-
-Заглавие: <%= hoc_s(:title_partners) %>
-
+title: <%= hoc_s(:title_partners) %>
 ---
-
 Часът на кода се ръководи от Hour of Code и Computer Science Education Week консултативни и ревизионни комисии.
 
 [ Консултативният комитет](<%= resolve_url('/advisory-committee') %>) се състои от представители на K-12, академичните среди, нестопански и международни организации. Този комитет изработва стратегия за кампанията на часът на кода.
 
-Този[ комитет](<%= resolve_url('/review-committee') %>) се състои от 15 преподаватели в K-12 клас, които оценяват и препоръчват дейностите в помощна рубрика на Консултативния комитет. Тези учители преглеждат уроците за ученици, ръководствата за учителите и урочните планове, представени от стотици партньори, оценяват дейностите от образователната им стойност, способността да ангажират обучаемите, както и потенциалните проблеми при различни ученици.
+Този[ комитет](<%= resolve_url('/review-committee') %>) се състои от 15 преподаватели в K-12 клас, които оценяват и препоръчват дейностите в помощна рубрика на Консултативния комитет. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
 Така тяхната работа допринася за успеха на Hour of Code и визията им за Въведение в компютърните науки за всеки ученик.
 
@@ -134,13 +131,13 @@
 
 ---
 
-# Партньори в създаването на уроци
+# Activity Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Инфраструктурни партньори и инструменти
+# Infrastructure Partners and Tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

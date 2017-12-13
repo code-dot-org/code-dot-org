@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Design Element Events\r\n\r\nNow that all of your screens are designed, you can add any event handlers that will respond to screen interaction. Remember, you create event handlers for design elements using the `onEvent()` block.",
+    "markdown_instructions": "# UI Element Events\r\n\r\nNow that all of your screens are designed, you can add any event handlers that will respond to _screen interaction_. These should be listed in the \"Events\" section of your activity guide. If you run into new events that you hadn't thought of in the planning stage, make sure you add them to your project guide.\r\n\r\nDon't worry about making these completely functional yet. If your events rely on board elements or your own functions, we'll take care of that in later levels.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -227,7 +227,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-11-01 23:09:16 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-01 23:15:54 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"design_mode_at_start\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-11-01 23:09:16 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-01 23:15:54 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"design_mode_at_start\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-07 19:41:12 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-07 19:50:58 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-07 21:14:18 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -1,20 +1,17 @@
 ---
-
 title: <%= hoc_s(:title_partners) %>
-
 ---
+კოდის საათს მართავს კოდის საათისა და კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის საკონსულტაციო და სამეთვალყურეო კომიტეტები.
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+[Advisory Committee](<%= resolve_url('/advisory-committee') %>) შედგება წარმომადგენლებისაგან 1-დან 12-მდე ჩათვლით კლასებიდან, კომერციული, არაკომერციული და საერთაშორისო ორგანიზაციებიდან. კოდის საათის კამპანიის სტრატეგიას ხელმძღვანელობს ეს კომიტეტი.
 
-The [Advisory Committee](<%= resolve_url('/advisory-committee') %>) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+[განმხილველი კომიტეტი](<%= resolve_url('/review-committee') %>) შედგება 15 განმანათლებლისგან K-12 კლასის ჯგუფიდან, რომლებიც ირჩევენ და რეკომენდაციას უწევენ აქტივობებს, რომელთაც გამოიყენებენ მრჩეველთა კომიტეტის რუბრიკაში. ეს პედაგოგები განიხილავენ მოსწავლეების მიერ წარმართულ აქტივობებს და მასწავლებლების მიერ წარმართული გაკვეთილის გეგმებს, რომლებსაც აგზავნის აქტივობის ასობით პარტნიორი. ისინი აფასებენ აქტივობების საგანმანათლებლო ღრებულებას, პროცესში მოსწავლეების ჩართვის შესაძლებლობას და სტუდენტების სხვადასხვა ჯგუფისთვის მიმზიდველობას.
 
-The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led tutorials and teacher-led lesson plans submitted by hundreds of tutorial partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
-
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+ორივე კომიტეტის მუშაობა და საქმისადმი თავდადება დაეხმარა კოდის საათს წარმატების მიღწევასა და მისიის განხორციელებაში, ჩვენ ყველა მოსწავლეს ვთავაზობთ კომპიუტერული მეცნიერების შესავალს.
 
 <% if @country == 'la' %>
 
-# Latin America Partners
+# პარტნიორები ლათინური ამერიკიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
@@ -22,7 +19,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ac' %>
 
-# Africa Partners
+# პარტნიორები აფრიკიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
 
@@ -30,7 +27,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'au' %>
 
-# Australia Partners
+# პარტნიორები ავსტრალიიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
 
@@ -38,7 +35,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'cn' %>
 
-# China Partners
+# პარტნიორები ჩინეთიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
 
@@ -46,7 +43,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'fr' %>
 
-# France Partners
+# პარტნიორები საფრანგეთიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
@@ -54,7 +51,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'id' %>
 
-# Indonesia Partners
+# პარტნიორები ინდონეზიიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
 
@@ -62,7 +59,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ie' %>
 
-# Ireland Partners
+# პარტნიორები ირლანდიიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
@@ -70,7 +67,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'in' %>
 
-# India Partners
+# პარტნიორები ინდოეთიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
@@ -78,7 +75,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'jp' %>
 
-# Japan Partners
+# პარტნიორები იაპონიიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
@@ -86,7 +83,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'nl' %>
 
-# Netherlands Partners
+# პარტნიორები ნიდერლანდებიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 
@@ -94,7 +91,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'nz' %>
 
-# New Zealand Partners
+# პარტნიორები ახალი ზელანდიიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
 
@@ -102,7 +99,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'uk' %>
 
-# United Kingdom Partners
+# პარტნიორები გაერთიანებული სამეფოდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
@@ -110,7 +107,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ca' %>
 
-# Canada Partners
+# პარტნიორები კანადიდან
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 
@@ -134,7 +131,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 ---
 
-# სასწავლო მასალის მომწოდებელი პარტნიორები
+# ღონისძიების პარტნიორები
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 

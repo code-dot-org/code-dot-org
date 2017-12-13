@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_proclamation) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ### 以下はコンピューターサイエンス週間の支援のためのコンピュータサイエンスの目的に関係する例です。州議員、国会議員の方々に利用してもらうことを意図しています。
