@@ -36,12 +36,20 @@
   twentyhours_text: "¿Terminaste tu primera Hora de Código? Conoce más sobre informática
     y conceptos de programación en este curso de seguimiento."
   og_title: Todos los niños merecen oportunidades
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
   og_description: Every student in every school deserves the opportunity to study
     computer science.
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: La Hora del Código está aquí
   csedweek_og_description: La Hora del Código es un movimiento global que llega a
     decenas de millones de estudiantes de todas las edades de más de 180 países y
     45 idiomas.
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
   hoc2014_heading: Únete a la <a href="http://hourofcode.com">Hora del Código</a><br/>Diciembre
     8 - 14, 2014<br/>
   hoc2014_students: Alumnos
@@ -1297,6 +1305,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Bases de datos en Apps'
   cspassessment_name: Prueba completa - 50 preguntas
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Parte del test 1 - 25 preguntas
   cspexam2-AKwgAh1ac5_name: Parte del test 2 - 25 preguntas
   cspunit3_gradelevel: Grados 9-12
@@ -2170,15 +2180,5 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
-  og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
-  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
-    or your class!
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
-    science is foundational for every student to learn.
-  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
-    for every student to learn.
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro

@@ -15,7 +15,6 @@ const defaultProps = {
   sectionIds: [11, 12, 13],
   hiddenSectionIds: [],
   asyncLoadComplete: true,
-  isRtl: false,
   beginEditingNewSection: () => {},
   beginEditingSection: () => {},
   beginImportRosterFlow: () => {},

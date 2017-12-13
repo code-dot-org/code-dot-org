@@ -180,7 +180,7 @@ theme: pdf
           No schools in
           = state_info[:state_code_s]
           offered the AP Computer Science course in 2015-2016.
-        - if state_param != 'ND' && state_param != 'MT'
+        - if state_param != 'AL' && state_param != 'IL' && state_param != 'MD' && state_param != 'MN' && state_param != 'ND' && state_param != 'NE' && state_param != 'NJ'
           There are fewer AP exams taken in computer science than in any other STEM subject area.
       %li
         Universities in
@@ -241,9 +241,9 @@ theme: pdf
         and
         = format_integer_with_commas(state_info[:num_affiliates_i])
         - if state_info[:num_affiliates_i] == 1
-          K-5 facilitator
+          facilitator
         - else
-          K-5 facilitators
+          facilitators
         have provided professional learning for 
         = format_integer_with_commas(state_info[:num_elementary_trained_i])
         - if state_info[:num_elementary_trained_i] == 1
