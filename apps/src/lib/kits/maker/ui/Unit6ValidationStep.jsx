@@ -82,9 +82,9 @@ export default class Unit6ValidationStep extends Component {
           <div>
             {i18n.eligibilityReqYearFail()}
             <form style={styles.unit6Form}>
-              <div style={styles.question}>
+              <strong style={styles.question}>
                 {i18n.eligibilityReqYearConfirmInstructions()}
-              </div>
+              </strong>
               {[
                 ['no', i18n.eligibilityYearNo()],
                 ['yes1718', i18n.eligibilityYearYes1718()],
