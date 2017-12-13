@@ -21,7 +21,6 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
-        isRtl={false}
         canLeave={false}
       />
     );
@@ -39,7 +38,6 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
-        isRtl={false}
         canLeave={false}
       />
     );
@@ -53,7 +51,6 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
-        isRtl={false}
         canLeave={false}
       />
     );
@@ -62,7 +59,6 @@ describe('StudentHomepage', () => {
       courses: courses,
       topCourse: topCourse,
       isTeacher: false,
-      isRtl: false,
     });
   });
 
@@ -73,7 +69,6 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={joinedSections}
         codeOrgUrlPrefix="http://localhost:3000/"
-        isRtl={false}
         canLeave={false}
       />
     );
@@ -87,14 +82,12 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={joinedSections}
         codeOrgUrlPrefix="http://localhost:3000/"
-        isRtl={false}
         canLeave={false}
       />
     );
     const studentSections = wrapper.find(StudentSections);
     assert.deepEqual(studentSections.props(), {
       initialSections: joinedSections,
-      isRtl: false,
       canLeave: false
     });
   });
@@ -106,7 +99,6 @@ describe('StudentHomepage', () => {
           topCourse={topCourse}
           sections={joinedSections}
           codeOrgUrlPrefix="http://localhost:3000/"
-          isRtl={false}
           canLeave={false}
         />
     ).find(StudentSections).dive({context: {store}}).find(SectionsTable).dive({context: {store}}).dive();
