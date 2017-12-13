@@ -24,8 +24,6 @@ Question.propTypes = {
 };
 
 export default class DetailViewResponse extends React.Component {
-  /* answer should be an element or a string depending on if
-     editing is true and isWorkshopAdmin */
   static propTypes = {
     question: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
     questionId: PropTypes.string,

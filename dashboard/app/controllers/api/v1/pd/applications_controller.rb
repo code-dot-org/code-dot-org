@@ -15,7 +15,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
     ROLES.each do |role|
       apps = get_applications_by_role(role).
-        select(:status, "IF(locked_at IS NULL, TRUE, FALSE) AS total_locked", "count(id) as total").
+        select(:status, "IF(locked_at IS NULL, FALSE, TRUE) AS total_locked", "count(id) as total").
           group(:status, :total_locked)
 
       if regional_partner_filter == REGIONAL_PARTNERS_NONE
