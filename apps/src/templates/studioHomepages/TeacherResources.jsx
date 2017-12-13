@@ -30,7 +30,6 @@ export default class TeacherResources extends Component {
     return (
       <ContentContainer
         heading={i18n.resources()}
-        isRtl={isRtl}
       >
         <div style={styles.container}>
           <ImageResourceCard

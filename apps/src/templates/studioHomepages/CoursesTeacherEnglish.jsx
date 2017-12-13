@@ -21,7 +21,6 @@ class CoursesTeacherEnglish extends Component {
     isSignedOut: PropTypes.bool.isRequired,
     showInitialTips: PropTypes.bool.isRequired,
     userId: PropTypes.number,
-    isRtl: PropTypes.bool.isRequired,
     responsive: PropTypes.instanceOf(Responsive).isRequired
   };
 
@@ -31,7 +30,7 @@ class CoursesTeacherEnglish extends Component {
   }
 
   render() {
-    const { isSignedOut, showInitialTips, userId, isRtl, responsive } = this.props;
+    const { isSignedOut, showInitialTips, userId } = this.props;
     return (
       <div>
         {(!isSignedOut &&
@@ -59,32 +58,24 @@ class CoursesTeacherEnglish extends Component {
             description={i18n.courseExplorerDescription()}
             link={'/home/#recent-courses'}
             linkText={i18n.viewMyRecentCourses()}
-            isRtl={isRtl}
-            responsive={responsive}
           >
             <ProtectedStatefulDiv ref="courseExplorer"/>
           </ContentContainer>
 
-          <CourseBlocksTeacherGradeBands
-            isRtl={isRtl}
-          />
+          <CourseBlocksTeacherGradeBands/>
 
           <ContentContainer
             heading={i18n.teacherCourseHoc()}
             description={i18n.teacherCourseHocDescription()}
-            isRtl={isRtl}
             linkText={i18n.teacherCourseHocLinkText()}
             link={pegasus('/hourofcode/overview')}
             showLink={true}
-            responsive={responsive}
           >
             <CourseBlocksHoc rowCount={1}/>
           </ContentContainer>
 
           <CourseBlocksTools
             isEnglish={true}
-            isRtl={isRtl}
-            responsive={responsive}
           />
 
           <AdministratorResourcesActionBlock/>

@@ -18,7 +18,6 @@ describe('TeacherSections', () => {
     expect(wrapper).to.containMatchingElement(
       <ContentContainer
         heading="Classroom Sections"
-        isRtl={defaultProps.isRtl}
       >
         <OwnedSections/>
       </ContentContainer>
