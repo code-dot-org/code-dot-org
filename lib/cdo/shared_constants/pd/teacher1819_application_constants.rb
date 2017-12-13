@@ -197,6 +197,9 @@ module Teacher1819ApplicationConstants
     csp_ap_exam: [2, 0]
   }.freeze
 
+  ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
+  ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.map {|k, v| [k, LABEL_OVERRIDES[k] || v]}.to_h.freeze
+
   CRITERIA_SCORE_QUESTIONS_CSP = (
     VALID_SCORES.select {|_, v| v == YES_NO}.keys - [:csd_which_grades, :csd_terms_per_year]
   ).freeze
