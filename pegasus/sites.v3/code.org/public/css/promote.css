@@ -28,7 +28,7 @@ a.whitefooterlink {
   text-decoration: none;
 }
 
-#text p {
+.text p {
   font-size: 13px;
   line-height: 18px;
 }

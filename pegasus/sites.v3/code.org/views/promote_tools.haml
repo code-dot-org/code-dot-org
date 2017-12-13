@@ -9,8 +9,8 @@
   .promote-tools-resources
     #block.left
       %a{:href=>url, :target=>'_blank'}
-        %i{:class=>"fa fa-file-#{value[:icon_s]}-o", :style => 'margin-bottom:10px;' }
-      #text
+        %i{:class=>"fa fa-file-#{value[:icon_s]}-o", :style => 'margin-bottom:10px;', :alt=>value[:title_s]}
+      .text
       %a{:href=>url, :target=>'_blank'}
         =value[:title_s]
       %p
