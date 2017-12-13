@@ -70,7 +70,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     end
     application_data["regional_partner_id"] = application_data.delete "regional_partner_filter"
 
-    @application.update(application_data)
+    @application.update!(application_data)
 
     # only allow those with full management permission to lock or unlock
     if application_params.key?(:locked) && can?(:manage, @application)
