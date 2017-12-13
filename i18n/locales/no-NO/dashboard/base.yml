@@ -304,7 +304,7 @@
       already_registered: 'Allerede registrert?'
       pair_programming: 'Par Programmering'
       team: 'Team'
-      driver: 'Sjåfør'
+      driver: 'Logget inn som'
       navigator: 'Kartleser'
     popup:
       progress_for_user: "%{name}s fremgang"
@@ -567,6 +567,9 @@
       body: "Spill Lab er et programmerings miljø der du kan lage enkle animasjoner og spill med objekter og karakterer som samhandler med hverandre."
       audience: "Minstealder 13 år"
       cta: "Lær hvordan"
+    hoc-encryption:
+      title: "Enkel kryptering"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab er et programmeringsmiljø hvor du kan gjøre lage web-sider med HTML og CSS. Design din webside og del siden din i løpet av sekunder."
@@ -585,6 +588,9 @@
     minecraft2016:
       title: "Minecraft"
       body: "Programmer dyr og andre Minecraft-vesener i din egen versjon av Minecraft."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft er tilbake for Kodetimen med en helt ny aktivitet! Reis gjennom Minecraft med kode."
     sports:
       title: "Sport"
       body: "Velg mellom å lage et basketballspill eller miks og match på tvers av ulike sporter."

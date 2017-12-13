@@ -273,6 +273,10 @@ vi:
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U6 light show predict_callout:
+        CSDUDL03P09: What does this line do?
+      CSD U6 light show_callout:
+        CSDUDL03P09: What does this line do?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Define startGame here
       CSD U6 tugowar variables 2_callout:
@@ -367,7 +371,7 @@ vi:
         Course 4 Maze 1_callout1: Nhấn "Chạy" để thử chương trình của bạn
         Course 4 Maze 1_callout2: Drag the "move" block and snap it below the other blocks in the workspace
       Course 4 Maze 4_callout:
-        repeat: 'Đặt khối bên trong vòng lặp để lặp lại lệnh'
+        repeat: Đặt khối bên trong vòng lặp để lặp lại lệnh
       Course 4 Play Lab Params 2_callout:
         Course_4 _Play_Lab_Params_2_1: Click "edit" to update this function so that it uses the height parameter.
       Course 4 Play Lab Params 3_callout:
@@ -438,7 +442,7 @@ vi:
       Infinity_move_right_callout:
         Infinity_move_right_runbutton: Thêm khối lệnh di chuyển ở đây
       Infinity_repeat_callout:
-        Infinity_repeat_callout: 'Đặt khối lệnh di chuyển ở trong vị trí này'
+        Infinity_repeat_callout: Đặt khối lệnh di chuyển ở trong vị trí này
       Luigi's Pizza 1 (copy 1)_callout:
         luigi's pizza 1: Try ordering a pepperoni pizza
       Luigi's Pizza 1_callout:
@@ -462,19 +466,19 @@ vi:
       MC_HOC_2017_01_Kiki_callout: [ ]
       MC_HOC_2017_02_Cole_callout: [ ]
       MC_HOC_2017_02_Will_callout:
-        MC_HOC_2017_02_Cole_1: Bây giờ người chơi bạn đã có một bạn đồng hành!  Bạn có thể viết mã lệnh cho Đặc vụ để giúp bạn vượt qua các cấp độ.
+        MC_HOC_2017_02_Cole_1: Bây giờ người chơi của bạn đã có một bạn đồng hành!  Bạn có thể viết mã lệnh cho Đặc vụ để giúp bạn vượt qua các cấp độ.
       MC_HOC_2017_03_Cole_callout:
-        MC_HOC_2017_03_Cole_1: 'Đây là một vòng lặp ''lặp lại''!  Bấm vào khu vực làm việc và thêm mã lệnh mà bạn muốn chạy nhiều lần.'
+        MC_HOC_2017_03_Cole_1: Đây là vòng lặp 'lặp lại'!  Đưa nó vào khu vực làm việc và thêm mã lệnh mà bạn muốn thực hiện nhiều lần.
       MC_HOC_2017_04_Cole_callout:
-        MC_HOC_2017_04_Cole_a: 'Đặc vụ có thể đi trên mặt nước, nhưng người chơi thì không thể!'
+        MC_HOC_2017_04_Cole_a: Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex thì không thể!
       MC_HOC_2017_04_Kiki_callout:
-        MC_HOC_2017_04_Kiki_1: Nhấp chuột vào phần khu vực làm việc và thêm một số mã lệnh để lặp lại nhiều lần!
+        MC_HOC_2017_04_Kiki_1: Di chuyển vào phần khu vực làm việc và thêm một số mã lệnh để lặp lại nhiều lần!
       MC_HOC_2017_06_Cole_callout:
-        MC_HOC_2017_06_Cole_1: Bạn không thể ném các khối đi, nhưng bạn có thể chỉnh sửa chúng!
+        MC_HOC_2017_06_Cole_1: Bạn không thể ném các khối lệnh đi, nhưng bạn có thể chỉnh sửa chúng!
       MC_HOC_2017_08_RY_callout:
-        MC_HOC_2017_08_RY_1: 'Đặc vụ có thể đi trên dung nham, nhưng người chơi thì không thể!'
+        MC_HOC_2017_08_RY_1: 'Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex thì không thể!'
       MC_HOC_2017_08_Will_callout:
-        MC_HOC_2017_08_RY_1: 'Đặc vụ có thể đi trên dung nham, nhưng người chơi thì không thể!'
+        MC_HOC_2017_08_RY_1: 'Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex thì không thể!'
       MC_HOC_2017_Ali_callout:
         MC_HOC_2017_08_RY_1: 'Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex thì không thể!'
       MSM Defining Vars 2_callout:
@@ -492,7 +496,7 @@ vi:
         NEW_Course_4_Artist_Functions_3_1: Click here to edit the new function so that it creates a square.
       NEW Course 4 Artist Functions 5_callout:
         edit_function: Click vào đây để chỉnh sửa hàm của bạn.
-        function_editor_draw_square: 'Đây là định nghĩa về hàm của bạn. Các khối lệnh này luôn vẽ một hình vuông khi bạn dùng lệnh "vẽ một hình vuông"'
+        function_editor_draw_square: Đây là định nghĩa về hàm của bạn. Các khối lệnh này luôn vẽ một hình vuông khi bạn dùng lệnh "vẽ một hình vuông"
       NEW Course 4 Artist Functions 7_callout:
         edit_function: Click vào đây để chỉnh sửa hàm của bạn.
       NEW Course 4 Artist Functions 8_callout:
@@ -800,6 +804,7 @@ vi:
       courseD_artist_ramp12_callout: [ ]
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
         4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO HINTS!
@@ -1109,7 +1114,7 @@ vi:
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Sử dụng khối "tạo ra một nhánh bông tuyết"
       frozen square iterative_callout:
-        frozen_create_square: 'Đính kèm thêm nhiều khối lệnh ở đây để tạo ra một hình vuông'
+        frozen_create_square: Đính kèm thêm nhiều khối lệnh ở đây để tạo ra một hình vuông
       frozen square loop 3x_callout:
         replace_questions: Sử dụng tùy chọn ở trong khối lệnh để thay thế "???" với một số
       frozen square loop_callout:

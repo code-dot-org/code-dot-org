@@ -137,13 +137,13 @@ az:
     district: 'District'
     other_district_not_listed: 'Other district not listed above'
     district_name: 'District Name'
-    school: 'School'
+    school: 'Məktəb'
     other_school_not_listed: 'Other school not listed above'
-    school_name: 'School Name'
-    school_zip: 'School Zip Code'
-    school_address: 'School Address'
-    school_organization_name: 'School/Organization Name'
-    school_organization_zip: 'School/Organization Zip Code'
+    school_name: 'Məktəbin adı'
+    school_zip: 'Məktəbin poçt indeksi'
+    school_address: 'Məktəbin ünvanı'
+    school_organization_name: 'Məktəb və ya təşkilatın adı'
+    school_organization_zip: 'Məktəb və ya təşkilatın poçt indeksi'
   signin_form:
     title: 'Artıq hesabınız var? Daxil olun'
     login: 'E-poçt'
@@ -289,9 +289,9 @@ az:
       about_faqs: "Tez-tez verilən suallar"
       learn: "Learn"
       stats: "Göstəricilər"
-      help_us: "Help Us"
-      teach: "Teach"
-      about: "About"
+      help_us: "Bizə kömək edin"
+      teach: "Öyrədin"
+      about: "Haqqımızda"
     user:
       classroom: 'Müəllimin ev səhifəsi'
       district_dashboard: 'District Dashboard'
@@ -567,6 +567,9 @@ az:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "13+ yaş"
       cta: "Learn how"
+    hoc-encryption:
+      title: "Simple Encryption"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -585,6 +588,9 @@ az:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
