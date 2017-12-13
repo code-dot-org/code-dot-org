@@ -36,6 +36,7 @@ const sections = [
 
 export default storybook => storybook
   .storiesOf('StudentSections', module)
+  .withReduxStore()
   .addStoryTable([
     {
       name: 'Sections - student, no sections yet',
