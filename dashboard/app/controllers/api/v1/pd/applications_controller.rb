@@ -15,8 +15,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
     ROLES.each do |role|
       apps = get_applications_by_role(role).
-        select(:status, "IF(locked_at IS NULL, FALSE, TRUE) AS total_locked", "count(id) as total").
-          group(:status, :total_locked)
+        select(:status, "IF(locked_at IS NULL, FALSE, TRUE) AS locked", "count(id) AS total").
+          group(:status, :locked)
 
       if regional_partner_filter == REGIONAL_PARTNERS_NONE
         apps = apps.where(regional_partner_id: nil)
@@ -26,8 +26,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
       apps.group(:status).each do |group|
         application_data[role][group.status] = {
-          locked: group.total_locked,
-          unlocked: group.total - group.total_locked
+          locked: group.locked,
+          unlocked: group.total - group.locked
         }
       end
     end
@@ -62,7 +62,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     application_data = application_params.except(:locked)
 
     if application_data[:response_scores]
-      JSON.parse(application_data[:response_scores]).transform_keys! {|x| x.to_s.underscore}.to_json
+      JSON.parse(application_data[:response_scores]).transform_keys {|x| x.to_s.underscore}.to_json
     end
 
     if application_data[:regional_partner_filter] == REGIONAL_PARTNERS_NONE

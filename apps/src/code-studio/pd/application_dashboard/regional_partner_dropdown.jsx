@@ -26,13 +26,13 @@ export class RegionalPartnerDropdown extends React.Component {
       id: PropTypes.number,
       name: PropTypes.string
     })),
-    otherOptions: PropTypes.array,
+    additionalOptions: PropTypes.array,
   }
 
   componentWillMount() {
     this.regionalPartners = this.props.regionalPartners.map(v => ({value: v.id, label: v.name}));
-    if (this.props.otherOptions) {
-      this.props.otherOptions.forEach((option) => this.regionalPartners.unshift({value: option.value, label: option.label}));
+    if (this.props.additionalOptions) {
+      this.props.additionalOptions.forEach((option) => this.regionalPartners.unshift({value: option.value, label: option.label}));
     }
   }
 
