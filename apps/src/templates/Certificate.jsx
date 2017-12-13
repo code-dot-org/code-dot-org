@@ -57,7 +57,6 @@ export default class Certificate extends Component {
   static propTypes = {
     tutorial: PropTypes.string,
     certificateId: PropTypes.string,
-    isRtl: PropTypes.bool.isRequired,
     responsive: PropTypes.instanceOf(Responsive).isRequired,
     randomDonorTwitter: PropTypes.string,
   };
@@ -79,7 +78,7 @@ export default class Certificate extends Component {
   }
 
   render() {
-    const {responsive, isRtl, tutorial, certificateId, randomDonorTwitter} = this.props;
+    const {responsive, tutorial, certificateId, randomDonorTwitter} = this.props;
     const certificate = certificateId || 'blank';
     const personalizedCertificate = `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg`;
     const blankCertificate = blankCertificates[tutorial] || blankCertificates.hourOfCode;
@@ -118,7 +117,6 @@ export default class Certificate extends Component {
           <LargeChevronLink
             link={`/s/${tutorial}`}
             linkText={i18n.backToActivity()}
-            isRtl={isRtl}
           />
         )}
         <div style={certificateStyle}>

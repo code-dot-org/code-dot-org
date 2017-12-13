@@ -5,7 +5,6 @@ import Responsive from '../responsive';
 import Certificate from './Certificate';
 import StudentsBeyondHoc from './StudentsBeyondHoc';
 import TeachersBeyondHoc from './TeachersBeyondHoc';
-import { connect } from 'react-redux';
 
 const styles = {
   container: {
@@ -14,12 +13,11 @@ const styles = {
   },
 };
 
-class Congrats extends Component {
+export default class Congrats extends Component {
   static propTypes = {
     certificateId: PropTypes.string,
     tutorial: PropTypes.string,
     MCShareLink: PropTypes.string,
-    isRtl: PropTypes.bool.isRequired,
     userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
     userAge: PropTypes.number,
     isEnglish: PropTypes.bool.isRequired,
@@ -65,7 +63,6 @@ class Congrats extends Component {
       tutorial,
       certificateId,
       MCShareLink,
-      isRtl,
       userType,
       userAge,
       isEnglish,
@@ -89,7 +86,6 @@ class Congrats extends Component {
           <Certificate
             tutorial={tutorial}
             certificateId={certificateId}
-            isRtl={isRtl}
             responsive={this.responsive}
             randomDonorTwitter={randomDonorTwitter}
           />
@@ -102,7 +98,6 @@ class Congrats extends Component {
             completedTutorialType={tutorialType}
             MCShareLink={MCShareLink}
             responsive={this.responsive}
-            isRtl={isRtl}
             userType={userType}
             userAge={userAge}
             isEnglish={isEnglish}
@@ -116,8 +111,3 @@ class Congrats extends Component {
     );
   }
 }
-
-export default connect(state => ({
-  responsiveSize: state.responsive.responsiveSize,
-  isRtl: state.isRtl,
-}))(Congrats);

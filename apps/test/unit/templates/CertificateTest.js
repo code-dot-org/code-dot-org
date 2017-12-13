@@ -10,7 +10,6 @@ describe('Certificate', () => {
     const wrapper = shallow(
       <Certificate
         tutorial="minecraft"
-        isRtl={false}
         responsive={responsive}
       />
     );
@@ -22,7 +21,6 @@ describe('Certificate', () => {
     const wrapper = shallow(
       <Certificate
         type="minecraft"
-        isRtl={false}
         responsive={responsive}
       />
     );
@@ -34,7 +32,6 @@ describe('Certificate', () => {
     const wrapper = shallow(
       <Certificate
         tutorial="frozen"
-        isRtl={false}
         responsive={responsive}
       />
     );
