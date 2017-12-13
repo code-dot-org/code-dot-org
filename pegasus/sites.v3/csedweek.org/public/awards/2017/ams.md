@@ -1,21 +1,31 @@
 ---
 title: Anacapa Middle School
-nav: educate_nav
+nav: about_nav
 theme: responsive
 ---
 
 <a id="top"></a>
 
-# Anacapa Middle School
+# Anacapa Middle School (Ventura, CA)
 
-<br/>
-<br/>
-The Hour of Code exploded schoolwide! We went from 60 participants the first year to having our early adopter students become the teachers who provided classroom support to 791 of their peers. What’s more, this was a multi-lingual event in which students provided coding opportunities in English, Spanish and Arabic.	
+### Champion for Computer Science - Outreach Award (School Category)
 
-We are a Title 1 school that had a single teacher sign up for Hour of Code. Mrs. Steinlicht taught her students about Computer Science using a borrowed set of Chromebooks. In year two, students were eager to expand Hour of Code into a week-long experience where they would become the teachers. 
+The Hour of Code exploded schoolwide at Anacapa STEAM. The first year had 60 participants, and Kristie Steinlicht taught her students about computer science using a borrowed set of Chromebooks. 
 
-Students were trained, emails sent schoolwide, and Chromebooks were borrowed from a variety of departments. Students wrote a script and translated directions into Spanish & Arabic. During our Week of Code, students went across the campus in teams of four to issue Chromebooks and sign students up for a special Google Classroom, as well as Hour of Code. 
+<figure style="margin:10px">
+  <img src="/images/awards/ams_students.jpg" style="display:block;margin:0 auto" width="500" alt="Students at Anacapa Middle School" />
+  <figcaption style="text-align:center;font-style:italic;font-size:12px">
+    Students at Anacapa Middle School
+  </figcaption>
+</figure>
 
-Teachers were impressed by the students’ ability to teach, assist, and support all students including English Language Learners and Special Education students. We had sixty students teaching coding in English, Spanish, & Arabic to 791 students schoolwide (out of 900 total students). After this experience, several teachers and students expressed interest and now we have two Computer classes that are teaching Computer Science topics. In addition, Mrs. Steinlicht is coordinating with our District to make more coding opportunities available for all.
+In year two, students were eager to expand Hour of Code into a week-long experience where they would become the teachers - early adopter students taught and provided classroom support to 791 of their peers. The Hour of Code at Anacapa is a multilingual event where students provided coding opportunities in English, Spanish, and Arabic. Kristie coordinated with the district to make more coding opportunities available for all including sending students to teach coding at feeder elementary schools. What started with one teacher, has been taken over by many students. 
 
-This year, we already have students signed up to teach and support another Week of Code. We plan to expand and are coordinating with our feeder elementary schools. It has been an exciting movement to make Computer Science accessible for ALL students. What started with one teacher, has been taken over by our students. We could not be more proud!
+Anacapa is a Title I suburban school which serves a socioeconomically, culturally, and linguistically diverse population. The first middle school to be recognized with the California Association for Bilingual Education Seal of Excellence, Anacapa has a Spanish/English Two-Way Immersion program which integrates STEAM to provide opportunities for traditionally underserved students. 
+
+<figure style="margin:10px">
+  <img src="/images/awards/ams_rep_kristie_steinlicht.jpg" style="display:block;margin:0 auto" width=150 alt="Kristie Steinlicht" />
+  <figcaption style="text-align:center;font-style:italic;font-size:12px">Kristie Steinlicht</figcaption>
+</figure>
+
+Kristie Steinlicht accepted the award on behalf of Anacapa Middle School. She teaches STEAM electives and has been awarded several grants for STEAM as well as the Ventura County Math Council Educator of the Year.

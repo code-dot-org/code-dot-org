@@ -448,8 +448,8 @@ module Pd::Application
       end
     end
 
-    def total_score
-      response_scores_hash.values.map {|x| x.try(:to_i)}.compact.reduce(:+)
+    def principal_approval
+      sanitize_form_data_hash[:principal_approval] || ''
     end
 
     # Called once after the application is submitted, and the principal approval is done
@@ -495,6 +495,48 @@ module Pd::Application
 
       # Update the hash, but don't override existing scores
       update(response_scores: response_scores_hash.merge(scores) {|_, old_value, _| old_value}.to_json)
+    end
+
+    # @override
+    def self.csv_header(course)
+      markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
+      CSV.generate do |csv|
+        columns = filtered_labels(course).values.map {|l| markdown.render(l)}
+        columns.push 'Status', 'Principal Approval', 'Meets Criteria', 'Total Score', 'Notes', 'Regional Partner'
+        csv << columns
+      end
+    end
+
+    # @override
+    def to_csv_row
+      answers = full_answers
+      CSV.generate do |csv|
+        row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
+        row.push status, principal_approval, meets_criteria, total_score, notes, regional_partner_name
+        csv << row
+      end
+    end
+
+    # @override
+    # Filter out extraneous answers based on selected program (course)
+    def self.filtered_labels(course)
+      labels_to_remove = (course == 'csd' ?
+        [
+          :csp_which_grades,
+          :csp_course_hours_per_week,
+          :csp_course_hours_per_year,
+          :csp_terms_per_year,
+          :csp_how_offer,
+          :csp_ap_exam
+        ] : [
+          :csd_which_grades,
+          :csd_course_hours_per_week,
+          :csd_course_hours_per_year,
+          :csd_terms_per_year
+        ]
+      )
+
+      ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
     end
 
     protected

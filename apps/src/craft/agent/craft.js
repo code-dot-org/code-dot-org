@@ -525,7 +525,7 @@ export default class Craft {
   static minAssetsForLevelNumber(levelNumber) {
     switch (levelNumber) {
       default:
-        return ['allAssetsMinusPlayer', 'playerAgent'];
+        return ['heroAllAssetsMinusPlayer', 'playerAgent'];
     }
   }
 
@@ -534,7 +534,7 @@ export default class Craft {
     switch (levelNumber) {
       default:
         // May want to push this to occur on level with video
-        return ['allAssetsMinusPlayer', 'playerAgent'];
+        return ['heroAllAssetsMinusPlayer', 'playerAgent'];
     }
   }
 
@@ -550,7 +550,7 @@ export default class Craft {
       case 1:
         return ['playerSteve', 'playerAlex'];
       default:
-        return ['allAssetsMinusPlayer'];
+        return ['heroAllAssetsMinusPlayer'];
     }
   }
 

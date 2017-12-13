@@ -615,8 +615,9 @@ FactoryGirl.define do
 
   factory :pd_facilitator1819_application, class: 'Pd::Application::Facilitator1819Application' do
     association :user, factory: :teacher, strategy: :create
+    course 'csp'
     transient do
-      form_data_hash {build :pd_facilitator1819_application_hash}
+      form_data_hash {build :pd_facilitator1819_application_hash, program: Pd::Application::Facilitator1819Application::PROGRAMS[course.to_sym]}
     end
     form_data {form_data_hash.to_json}
   end

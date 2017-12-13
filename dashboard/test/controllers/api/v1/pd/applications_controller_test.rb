@@ -2,6 +2,9 @@ require 'test_helper'
 
 module Api::V1::Pd
   class ApplicationsControllerTest < ::ActionController::TestCase
+    include Teacher1819ApplicationConstants
+    include Facilitator1819ApplicationConstants
+
     setup_all do
       csf_facilitator_application_hash = build :pd_facilitator1819_application_hash,
         program: Pd::Application::Facilitator1819Application::PROGRAMS[:csf]
@@ -27,6 +30,10 @@ module Api::V1::Pd
       @test_quick_view_params = {
         role: 'csf_facilitators'
       }
+
+      @csd_teacher_application = create :pd_teacher1819_application, course: 'csd'
+      @csp_teacher_application = create :pd_teacher1819_application, course: 'csp'
+      @csp_facilitator_application = create :pd_facilitator1819_application, course: 'csp'
     end
 
     test_redirect_to_sign_in_for :index
@@ -165,6 +172,70 @@ module Api::V1::Pd
       assert_response :success
       data = JSON.parse(response.body)
       refute data['locked']
+    end
+
+    test 'csv download for csd teacher returns expected columns' do
+      sign_in @workshop_admin
+
+      get :quick_view, format: 'csv', params: {role: 'csd_teachers'}
+      assert_response :success
+      response_csv = CSV.parse @response.body
+
+      assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+        :csd_which_grades, :csd_course_hours_per_week, :csd_course_hours_per_year, :csd_terms_per_year
+      ).values.all? {|x| response_csv.first.include?(x + "\n")}
+
+      assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+        :csp_which_grades, :csp_course_hours_per_week, :csp_course_hours_per_year, :csp_how_offer, :csp_ap_exam
+      ).values.any? {|x| response_csv.first.exclude?(x + "\n")}
+    end
+
+    test 'csv download for csp teacher returns expected columns' do
+      sign_in @workshop_admin
+
+      get :quick_view, format: 'csv', params: {role: 'csp_teachers'}
+      assert_response :success
+      response_csv = CSV.parse @response.body
+
+      assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+        :csp_which_grades, :csp_course_hours_per_week, :csp_course_hours_per_year, :csp_terms_per_year, :csp_how_offer, :csp_ap_exam
+      ).values.all? {|x| response_csv.first.include?(x + "\n")}
+
+      assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+        :csd_which_grades, :csd_course_hours_per_week, :csd_course_hours_per_year
+      ).values.any? {|x| response_csv.first.exclude?(x + "\n")}
+    end
+
+    test 'csv download for csf facilitator returns expected columns' do
+      sign_in @workshop_admin
+
+      get :quick_view, format: 'csv', params: {role: 'csf_facilitators'}
+      assert_response :success
+      response_csv = CSV.parse @response.body
+
+      assert Facilitator1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+        :csf_availability
+      ).values.all? {|x| response_csv.first.include?(x + "\n")}
+
+      assert Facilitator1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+        :csd_csp_teachercon_availability, :csd_csp_fit_availability
+      ).values.any? {|x| response_csv.first.exclude?(x + "\n")}
+    end
+
+    test 'csv download for csp facilitator returns expected columns' do
+      sign_in @workshop_admin
+
+      get :quick_view, format: 'csv', params: {role: 'csp_facilitators'}
+      assert_response :success
+      response_csv = CSV.parse @response.body
+
+      assert Facilitator1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+        :csd_csp_teachercon_availability, :csd_csp_fit_availability
+      ).values.all? {|x| response_csv.first.include?(x + "\n")}
+
+      assert Facilitator1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+        :csf_availability
+      ).values.any? {|x| response_csv.first.exclude?(x + "\n")}
     end
   end
 end

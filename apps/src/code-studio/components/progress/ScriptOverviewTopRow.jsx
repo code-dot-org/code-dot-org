@@ -48,8 +48,8 @@ const styles = {
   }
 };
 
-export default React.createClass({
-  propTypes: {
+export default class ScriptOverviewTopRow extends React.Component {
+  static propTypes = {
     sectionsInfo: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
@@ -65,7 +65,7 @@ export default React.createClass({
     resources: PropTypes.arrayOf(resourceShape).isRequired,
     scriptHasLockableStages: PropTypes.bool.isRequired,
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
-  },
+  };
 
   render() {
     const {
@@ -140,4 +140,4 @@ export default React.createClass({
       </div>
     );
   }
-});
+}
