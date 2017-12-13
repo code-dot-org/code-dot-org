@@ -30,7 +30,13 @@ def send_receipts(kind, form)
   return 0 if receipts.empty?
   return 0 if form[:email] == 'anonymous@code.org'
 
-  recipient = Poste2.create_recipient(form[:email], name: form[:name], ip_address: form[:updated_ip])
+  begin
+    recipient = Poste2.create_recipient(form[:email], name: form[:name], ip_address: form[:updated_ip])
+  rescue ArgumentError => e
+    raise e unless e.message =~ /Invalid email address/
+    ChatClient.log "Unable to send receipt for form #{form[:id]} because #{e.message}."
+    return 0
+  end
   receipts.each do |template|
     Poste2.send_message(template, recipient, form_id: form[:id])
   end

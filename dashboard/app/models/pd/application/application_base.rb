@@ -192,13 +192,17 @@ module Pd::Application
       end
     end
 
+    def self.filtered_labels(course)
+      raise 'Abstract method must be overridden in base class'
+    end
+
     # Include additional text for all the multi-select fields that have the option
     def full_answers
       sanitize_form_data_hash.tap do |hash|
         additional_text_fields.each do |additional_text_field|
           answer_with_additional_text hash, *additional_text_field
         end
-      end
+      end.slice(*self.class.filtered_labels(course).keys)
     end
 
     # Camelized (js-standard) format of the full_answers. The keys here will match the raw keys in form_data
@@ -225,17 +229,18 @@ module Pd::Application
     end
 
     def school_name
-      user.school_info.try(:effective_school_name).try(:titleize)
+      user.try(:school_info).try(:effective_school_name).try(:titleize)
     end
 
     def district_name
-      user.school_info.try(:effective_school_district_name).try(:titleize)
+      user.try(:school_info).try(:effective_school_district_name).try(:titleize)
     end
 
     def applicant_name
       "#{sanitize_form_data_hash[:first_name]} #{sanitize_form_data_hash[:last_name]}"
     end
 
+    # Convert responses cores to a hash of underscore_cased symbols
     def response_scores_hash
       JSON.parse(response_scores || '{}').transform_keys {|key| key.underscore.to_sym}
     end

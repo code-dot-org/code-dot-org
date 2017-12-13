@@ -2,6 +2,8 @@ import $ from 'jquery';
 import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
+import { ContractMatchErrorDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
+import i18n from '@cdo/locale';
 
 $(window).load(function () {
   $.widget('custom.coloriconselectmenu', $.ui.selectmenu, {
@@ -276,12 +278,15 @@ $(window).load(function () {
 
       // If any succeeded, we succeed. Otherwise, grab the first error.
       const result = answerErrors.some(answerResult => answerResult === '');
-      const errorType = result ? null : answerErrors[0];
+      let errorDialog;
+      if (!result) {
+        errorDialog = <ContractMatchErrorDialog text={answerErrors[0]}/>;
+      }
 
       return {
         response: formattedResponse,
         result: result,
-        errorType: errorType
+        errorDialog
       };
     };
   }
@@ -300,7 +305,7 @@ $(window).load(function () {
    * @param {string} rangeInput
    * @param {string} domainInput
    * @param {string} correctAnswer
-   * @returns {string}
+   * @returns {string} Text to display in error dialog
    */
   function checkAnswer(functionName, rangeInput, domainInput, correctAnswer) {
     const correctAnswerItems = correctAnswer.split('|');
@@ -311,24 +316,23 @@ $(window).load(function () {
 
     if (correctName !== functionName) {
       if (functionName.toLowerCase() === correctName.toLowerCase()) {
-        return 'badname_case';
+        return i18n.contractMatchBadNameCase();
       }
-      return 'badname';
+      return i18n.contractMatchBadName();
     }
     if (correctRange !== rangeInput) {
-      return 'badrange';
+      return i18n.contractMatchBadRange();
     }
     if (correctDomain.length !== domainInputItems.length) {
-      return 'baddomainsize';
+      return i18n.contractMatchBadDomainSize();
     }
     for (let i = 0; i < correctDomain.length; i++) {
       const correctDomainType = correctDomain[i];
       const domainType = domainInputItems[i];
       if (correctDomainType !== domainType) {
-        return 'baddomaintype';
+        return i18n.contractMatchBadDomainType();
       }
     }
     return '';
   }
-
 });

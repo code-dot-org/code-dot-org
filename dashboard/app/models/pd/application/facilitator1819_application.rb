@@ -67,7 +67,7 @@ module Pd::Application
     end
 
     # Are we still accepting applications?
-    APPLICATION_CLOSE_DATE = Date.new(2017, 12, 15)
+    APPLICATION_CLOSE_DATE = Date.new(2018, 2, 1)
     def self.open?
       Time.zone.now < APPLICATION_CLOSE_DATE
     end
@@ -415,6 +415,7 @@ module Pd::Application
       ]
     end
 
+    # @override
     # Filter out extraneous answers, based on selected program (course)
     def self.filtered_labels(course)
       labels_to_remove = (course == 'csf' ?
@@ -424,12 +425,6 @@ module Pd::Application
       )
 
       ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
-    end
-
-    # @override
-    # Filter out extraneous answers, based on selected program (course)
-    def full_answers
-      super.slice(*self.class.filtered_labels(course).keys)
     end
 
     # @override
