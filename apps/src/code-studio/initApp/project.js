@@ -134,14 +134,7 @@ var projects = module.exports = {
    * This method is used so that it can be mocked for unit tests.
    */
   getUrl() {
-    return this.getLocation().href;
-  },
-
-  /**
-   * This method exists to be mocked for unit tests.
-   */
-  getLocation() {
-    return document.location;
+    return location.href;
   },
 
   /**
@@ -175,33 +168,6 @@ var projects = module.exports = {
       }
     }
     return url + fragment + queryString;
-  },
-
-  /**
-   * Returns a share URL for the current project.
-   *
-   * Share URLs can vary by application environment and project type.  For most
-   * project types the share URL is the same as the project edit and view URLs,
-   * but has no action appended to the project's channel ID.Weblab is a special
-   * case right now, because it shares projects to codeprojects.org.
-   *
-   * This function depends on the document location to determine both the
-   * current project id and the current application enviornmnet.  It's unlikely
-   * to work if called when we're not on a project page.
-   *
-   * @returns {string} Fully-qualified share URL for the current project.
-   */
-  getShareUrl() {
-    if (this.isWebLab()) {
-      const location = this.getLocation();
-      const re = /([-.]?studio)?\.?code.org/i;
-      const environmentKey = location.hostname.replace(re, '');
-      const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
-      const port = 'localhost' === environmentKey ? `:${location.port}` : '';
-      return `${location.protocol}//${subdomain}codeprojects.org${port}/${this.getCurrentId()}`;
-    } else {
-      return this.getProjectUrl();
-    }
   },
 
   getCurrentTimestamp() {
@@ -637,10 +603,6 @@ var projects = module.exports = {
       default:
         return null;
     }
-  },
-
-  isWebLab() {
-    return this.getStandaloneApp() === 'weblab';
   },
 
   canServerSideRemix() {
@@ -1232,7 +1194,7 @@ function fetchAbuseScoreAndPrivacyViolations(callback) {
     deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));
   } else if ((dashboard.project.getStandaloneApp() === 'applab') ||
     (dashboard.project.getStandaloneApp() === 'gamelab') ||
-    (dashboard.project.isWebLab())) {
+    (dashboard.project.getStandaloneApp() === 'weblab')) {
     deferredCallsToMake.push(new Promise(fetchSharingDisabled));
   }
   Promise.all(deferredCallsToMake).then(function () {
