@@ -23,6 +23,7 @@ import Sounds from '../../Sounds';
 import {TestResults} from '../../constants';
 import trackEvent from '../../util/trackEvent';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
+import {SignInState} from '../../code-studio/progressRedux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -553,7 +554,7 @@ Craft.minAssetsForLevelNumber = function (levelNumber) {
     case 3:
       return ['levelThreeAssets'];
     default:
-      return ['allAssetsMinusPlayer'];
+      return ['designerAllAssetsMinusPlayer'];
   }
 };
 
@@ -565,7 +566,7 @@ Craft.afterLoadAssetsForLevel = function (levelNumber) {
       return Craft.minAssetsForLevelNumber(2);
     default:
       // May want to push this to occur on level with video
-      return ['allAssetsMinusPlayer'];
+      return ['designerAllAssetsMinusPlayer'];
   }
 };
 
@@ -581,7 +582,7 @@ Craft.niceToHaveAssetsForLevel = function (levelNumber) {
   if (levelNumber === FIRST_CHARACTER_LEVEL) {
     return ['playerSteveEvents', 'playerAlexEvents'];
   }
-  return ['allAssetsMinusPlayer'];
+  return ['designerAllAssetsMinusPlayer'];
 };
 
 Craft.hideSoftButtons = function () {
@@ -842,6 +843,7 @@ Craft.reportResult = function (success) {
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function (response) {
+      const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
       studioApp().displayFeedback({
         feedbackType: testResultType,
         response: response,
@@ -858,6 +860,7 @@ Craft.reportResult = function (success) {
         feedbackImage: image,
         showingSharing: Craft.initialConfig.level.freePlay,
         saveToProjectGallery: true,
+        disableSaveToGallery: !isSignedIn,
       });
     }
   });

@@ -1,0 +1,25 @@
+%p
+  Hi
+  = @application.first_name + ","
+
+%p
+  Thank you for applying to join Code.org's Professional Learning Program for
+  = @application.course + "."
+  All of our seats in the program have been filled, but we have reserved a
+  space for you in our waitlist. As additional spaces become available, we will
+  offer them to waitlisted teachers.
+
+%p
+  Please contact
+  = link_to('teacher@code.org', 'mailto:teacher@code.org') + '.'
+  with any questions, or if you would like us to remove you from our waitlist
+  and close your application.
+
+%p
+  Thank you,
+%p
+  Sarah Fairweather
+  %br
+  Education Team Program Manager
+  %br
+  Code.org

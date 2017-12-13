@@ -30,7 +30,6 @@ const JoinSectionSuccessNotification = ({sectionName}) => (
     notice={i18n.sectionsNotificationSuccess()}
     details={i18n.sectionsNotificationJoinSuccess({sectionName})}
     dismissible={true}
-    isRtl={false}
   />
 );
 JoinSectionSuccessNotification.propTypes = {
@@ -43,7 +42,6 @@ const LeaveSectionSuccessNotification = ({sectionName, sectionId}) => (
     notice={i18n.sectionsNotificationSuccess()}
     details={i18n.sectionsNotificationLeaveSuccess({sectionName, sectionId})}
     dismissible={true}
-    isRtl={false}
   />
 );
 LeaveSectionSuccessNotification.propTypes = JoinSectionSuccessNotification.propTypes;
@@ -54,7 +52,6 @@ const JoinSectionNotFoundNotification = ({sectionId}) => (
     notice={i18n.sectionsNotificationFailure()}
     details={i18n.sectionsNotificationJoinNotFound({sectionId})}
     dismissible={true}
-    isRtl={false}
   />
 );
 JoinSectionNotFoundNotification.propTypes = {
@@ -67,7 +64,6 @@ const JoinSectionFailNotification = ({sectionId}) => (
     notice={i18n.sectionsNotificationFailure()}
     details={i18n.sectionsNotificationJoinFail({sectionId})}
     dismissible={true}
-    isRtl={false}
   />
 );
 JoinSectionFailNotification.propTypes = JoinSectionNotFoundNotification.propTypes;
@@ -78,7 +74,6 @@ const JoinSectionExistsNotification = ({sectionName}) => (
     notice={i18n.sectionsNotificationSuccess()}
     details={i18n.sectionsNotificationJoinExists({sectionName})}
     dismissible={true}
-    isRtl={false}
   />
 );
 JoinSectionExistsNotification.propTypes = JoinSectionSuccessNotification.propTypes;

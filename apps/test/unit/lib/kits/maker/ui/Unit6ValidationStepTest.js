@@ -6,22 +6,22 @@ import {Status} from '@cdo/apps/lib/ui/ValidationStep';
 
 describe('Unit6ValidationStep', () => {
   const defaultProps = {
-    previousStepsSucceeded: true,
+    showRadioButtons: true,
     stepStatus: Status.UNKNOWN,
     onSubmit: () => {}
   };
 
-  it('does not show contents if previous steps did not succeed', () => {
+  it('does not show contents if showRadioButtons is false', () => {
     const wrapper = shallow(
       <Unit6ValidationStep
         {...defaultProps}
-        previousStepsSucceeded={false}
+        showRadioButtons={false}
       />
     );
     assert.equal(wrapper.children().length, 0);
   });
 
-  it('does show contents if previous steps succeeded', () => {
+  it('does show contents if showRadioButtons is true', () => {
     const wrapper = shallow(
       <Unit6ValidationStep
         {...defaultProps}

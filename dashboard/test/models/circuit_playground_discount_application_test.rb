@@ -95,6 +95,7 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
       discount_code: nil,
       is_pd_eligible: true,
       is_progress_eligible: false,
+      admin_set_status: false,
     }
     assert_equal expected, CircuitPlaygroundDiscountApplication.application_status(teacher)
   end
@@ -112,6 +113,26 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
       discount_code: nil,
       is_pd_eligible: true,
       is_progress_eligible: true,
+      admin_set_status: false,
+    }
+    assert_equal expected, CircuitPlaygroundDiscountApplication.application_status(teacher)
+  end
+
+  test 'application_status for admin overriden application' do
+    teacher = create :teacher
+    create :circuit_playground_discount_application, user: teacher, unit_6_intention: 'no',
+      full_discount: true, admin_set_status: true
+
+    expected = {
+      unit_6_intention: 'no',
+      has_confirmed_school: false,
+      school_id: nil,
+      school_name: nil,
+      gets_full_discount: true,
+      discount_code: nil,
+      is_pd_eligible: true,
+      is_progress_eligible: true,
+      admin_set_status: true,
     }
     assert_equal expected, CircuitPlaygroundDiscountApplication.application_status(teacher)
   end
@@ -195,5 +216,14 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
       high_needs: false,
     }
     assert_equal expected_application_school, admin_status[:application_school]
+  end
+
+  test 'admin_application_status for admin overriden application' do
+    teacher = create :teacher
+    create :circuit_playground_discount_application, user: teacher, unit_6_intention: 'no',
+      full_discount: true, admin_set_status: true
+
+    admin_status = CircuitPlaygroundDiscountApplication.admin_application_status(teacher)
+    assert true, admin_status[:admin_set_status]
   end
 end
