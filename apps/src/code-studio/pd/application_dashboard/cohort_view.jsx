@@ -4,6 +4,7 @@
 import React, {PropTypes} from 'react';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
+import CohortViewTable from './cohort_view_table';
 
 export default class CohortView extends React.Component{
   static propTypes = {
@@ -41,6 +42,9 @@ export default class CohortView extends React.Component{
       return (
         <div>
           {this.props.route.applicationType}
+          <CohortViewTable
+            data={this.state.applications}
+          />
         </div>
       );
     }
