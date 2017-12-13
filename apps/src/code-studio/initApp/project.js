@@ -192,15 +192,15 @@ var projects = module.exports = {
    * @returns {string} Fully-qualified share URL for the current project.
    */
   getShareUrl() {
+    const location = this.getLocation();
     if (this.isWebLab()) {
-      const location = this.getLocation();
       const re = /([-.]?studio)?\.?code.org/i;
       const environmentKey = location.hostname.replace(re, '');
       const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
       const port = 'localhost' === environmentKey ? `:${location.port}` : '';
       return `${location.protocol}//${subdomain}codeprojects.org${port}/${this.getCurrentId()}`;
     } else {
-      return this.getProjectUrl();
+      return location.origin + this.getPathName();
     }
   },
 
