@@ -410,7 +410,7 @@ WebLab.prototype.onIsRunningChange = function () {
  * Load the file entry list and store it as this.fileEntries
  */
 WebLab.prototype.loadFileEntries = function () {
-  filesApi.getFiles(this.getCurrentFilesVersionId(), result => {
+  filesApi.getFiles(result => {
     assetListStore.reset(result.files);
     this.fileEntries = assetListStore.list().map(fileEntry => ({
       name: fileEntry.filename,
@@ -432,7 +432,8 @@ WebLab.prototype.loadFileEntries = function () {
   }, xhr => {
     console.error('files API failed, status: ' +  xhr.status);
     this.fileEntries = null;
-  });
+  },
+  this.getCurrentFilesVersionId());
 };
 
 /**
