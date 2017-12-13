@@ -3786,124 +3786,113 @@
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make
           sure blocks are connected under `when run`.
       MC_HOC_2017_01_Cole_authored_hint:
-        MC_HOC_2017_01_Cole_a: Use your arrow keys to direct the player into the house.
-          End up on the orange square to win.
+        MC_HOC_2017_01_Cole_a: Oma nooleklahvide abil saate suunata mängija majja.
+          Võitmiseks lõpeta oranžil väljakul.
       MC_HOC_2017_01_RETRY_authored_hint:
-        MC_HOC_2017_01_RETRY_a: Drag one `move forward` block from the toolbox to
-          the workspace, and snap it into place beneath the `when run` block.
-        MC_HOC_2017_01_RETRY_b: Don't forget to click "Run" to run the code for the
-          Agent.
-        MC_HOC_2017_01_RETRY_c: Once the Agent has run all of its code, you can move
-          the player with the arrow keys!
+        MC_HOC_2017_01_RETRY_a: Lohistage üks `liigu edasi` plokk tööriista kastist
+          töölauale ja kinnita see `pärast käivitamis`ploki alla.
+        MC_HOC_2017_01_RETRY_b: Ära unusta vajutada "Käivita "Agendi koodi käivitamiseks.
+        MC_HOC_2017_01_RETRY_c: Kui Agent läbinud kõik oma koodi, saad mängijat nooleklahvide
+          abil liigutada!
       MC_HOC_2017_02_Cole_authored_hint:
-        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
-          plate.  That will open the door for your player.
-        MC_HOC_2017_02_Cole_b: |-
-          Press "Run"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
-          to move the player to the map!
-        MC_HOC_2017_02_Cole_d: Make sure the Agent is following the path outlined
-          on the map!
+        MC_HOC_2017_02_Cole_a: Liikuda Agenti edasi kaks sammu, et ta saaks seista
+          surveplaadile.  See avab su mängijale ukse.
+        MC_HOC_2017_02_Cole_b: Saad käivitada oma kood isegi siis, kui see ei ole
+          õige.  Vajutage "Käivita'' niipalju kordi, kui saad aru, mis on valesti.
+        MC_HOC_2017_02_Cole_c: Kui Agent on avanud ukse, kasutage nooleklahve mängija
+          liigutamiseks kaardil!
+        MC_HOC_2017_02_Cole_d: Veenduge, et Agent jälgib rada, mis on märgitud kaardil!
       MC_HOC_2017_02_Will_authored_hint:
-        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
-          plate.  That will open the door for your player.
+        MC_HOC_2017_02_Cole_a: Liikuda Agenti edasi kaks sammu, et ta saaks seista
+          surveplaadile.  See avab su mängijale ukse.
         MC_HOC_2017_02_Cole_b: |-
-          Press "Run Agent"!
+          Klikka "Käivita Agent"!
 
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
-          to move the player to the orange square.
+          Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage "Käivita'' niipalju kordi, kui saad aru, mis on valesti.
+        MC_HOC_2017_02_Cole_c: Kui Agent on avanud ukse, kasutage nooleklahve mängija
+          liigutamiseks oranži ruuduni.
       MC_HOC_2017_03_Cole_authored_hint:
-        MC_HOC_2017_03_Cole_a: Once you get the Agent to the pressure plate, you can
-          use your arrow keys to walk the player to the compass!
-        MC_HOC_2017_03_Cole_b: Does the code feel a little long?  Try using a `repeat`
-          loop and see if you can figure out how to make it shorter!
+        MC_HOC_2017_03_Cole_a: Kui oled viinud Agendi surveplaadini, saad kasutada
+          nooleklahve, et liigutada mängija kompassini!
+        MC_HOC_2017_03_Cole_b: Kas kood tundub natukene pikk?  Proovige kasutada "korrata"
+          tsüklikt ja vaata, kuidas koodi lühemaks teha!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
-        MC_HOC_2017_04POINT5_Cole_a: |-
-          Crossing these two pressure plates will open the path for the player.
-
-          ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
+        MC_HOC_2017_04POINT5_Cole_a: |
+          Nende kahe surveplaadi ületamisel avaneb mängijale rada.
+           ! [] (https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
-        MC_HOC_2017_04POINT5_RYAN_b: 'Use the `turn right` block to change the agent''s
-          direction '
-        MC_HOC_2017_04POINT5_RYAN_a: The Agent only needs to get to the first pressure
-          plate to let Alex or Steve through to the axe.
+        MC_HOC_2017_04POINT5_RYAN_b: 'Kasutage "pööra paremale" plokki Agendi suuna
+          muutmiseks '
+        MC_HOC_2017_04POINT5_RYAN_a: Agent peab pääsema ainult esimese surveplaadini,
+          et lubada Alex või Steve kirvest läbi.
       MC_HOC_2017_04_Cole_authored_hint:
-        MC_HOC_2017_04_Cole_a: The Agent needs to `move forward` 7 times.  How can
-          you use a `repeat` loop to make that happen?
-        MC_HOC_2017_04_Cole_c: |-
-          Press "Run"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, he will
-          open the door for the player.
+        MC_HOC_2017_04_Cole_a: Agent peab "liigu edasi" 7 korda.  Kuidas sa saaksid
+          kasutada "korda" tsüklit, et seda teha?
+        MC_HOC_2017_04_Cole_c: Saad käivitada oma kood isegi siis, kui see ei ole
+          õige.  Vajutage "Käivita'' niipalju kordi, kui saad aru, mis on valesti.
+        MC_HOC_2017_04_Cole_b: Kui Agent jõuab surveplaadile, siis Agent saab avada
+          mängijale ukse.
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
-          code inside of a loop?  Try placing a plank **and** moving forward inside
-          of a `repeat` to complete this puzzle.
-        MC_HOC_2017_05_Cole_b: Get the Agent across the river, building a bridge as
-          you go.
+        MC_HOC_2017_05_Cole_a: Kas teadsid, et saad panna rohkem kui ühe tüki koodi
+          tsükli sisse?  Proovige liikuda edasi ** ja** panna laud "korrata" sisse,
+          et lõpetada see pusle.
+        MC_HOC_2017_05_Cole_b: Saada Agent üle jõe ehitades silda samal ajal.
       MC_HOC_2017_05_Josh_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
-          code inside of a loop?  Try placing a plank **and** moving forward inside
-          of a `repeat` to complete this puzzle.
+        MC_HOC_2017_05_Cole_a: Kas teadsid, et saad panna rohkem kui ühe tüki koodi
+          tsükli sisse?  Proovige panna laud ** ja** liigu edasi    "korda" sisse,
+          et lõpetada see pusle.
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: How many times does this loop run?  How many times
-          *should* it run?
-        MC_HOC_2017_06_Cole_b: 'Help the Agent build a bridge all the way across the
-          water! '
+        MC_HOC_2017_06_Cole_a: Mitu korda see tsükkel teeb?  Mitu korda *peaks* see
+          tegema?
+        MC_HOC_2017_06_Cole_b: 'Aita ehitada Agendil sild üle vee! '
       MC_HOC_2017_06_Josh_authored_hint:
-        MC_HOC_2017_06_Cole_a: Try putting more than one instruction inside of a `repeat`
-          loop!
+        MC_HOC_2017_06_Cole_a: Proovige panna rohkem kui üks juhis "korda" tsükli
+          sisse!
       MC_HOC_2017_07_Cole_authored_hint:
-        MC_HOC_2017_07_Cole_c: All you need to have the Agent do is clear the path
-          to the Minecart.
-        MC_HOC_2017_07_Cole_a: To solve this puzzle, figure out what the `clear path`
-          function does and call it as many times as you need using the small green
-          `clear path` block from the toolbox.
-        MC_HOC_2017_07_Cole_b: Try mixing the function blocks with other blocks from
-          the toolbox to help you solve this puzzle.
+        MC_HOC_2017_07_Cole_c: Kõik, mida vajad on, et Agent puhastaks raja Minecartino.
+        MC_HOC_2017_07_Cole_a: Et lahenda see pusle, proovi aru saada, mida "puhasta
+          rada/clear path" funktsioon teeb ja korda seda nii mitu korda kui vajad,
+          kasutades väikest rohelist "puhasta rada/clear path" plokki tööriista kastist.
+        MC_HOC_2017_07_Cole_b: Et saaksid pusle lahendada proovige segada funktsioon
+          plokke muude plokkidega tööriistakastist.
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Press "Run Agent"!
+          Klikka "Käivita Agent"!
 
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+          Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage "Käivita'' niipalju kordi, kui saad aru, mis on valesti.
+        MC_HOC_2017_08_RY_b: On PALJU viise, kuidas seda puslet lahendada. Proovige
+          mõnda!
       MC_HOC_2017_08_Will_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Press "Run Agent"!
+          Klikka "Käivita Agent"!
 
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+          Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage "Käivita'' niipalju kordi, kui saad aru, mis on valesti.
+        MC_HOC_2017_08_RY_b: On PALJU viise, kuidas seda puslet lahendada. Proovige
+          mõnda!
       MC_HOC_2017_10_Cole_authored_hint:
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_a: Kasutage funktsioone, et seda puslet lihtamalt lahendada!
       MC_HOC_2017_10_RETRY_authored_hint:
-        MC_HOC_2017_10_Cole_b: Don't know where to go?  See if you can find the dotted
-          line!
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_b: Ei tea kuhu minna?  Vaata, kasi leiad punktiirjoone!
+        MC_HOC_2017_10_Cole_a: Kasutage funktsioone, et seda puslet lihtamalt lahendada!
       MC_HOC_2017_13_Cole_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
-          or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: Las Agent ehitab mõned sillad, et Alex või Steve saaksid
+          jalutada üle kaardi äärte.
       MC_HOC_2017_4.5v2_authored_hint:
-        MC_HOC_2017_04POINT5_Cole_a: |-
-          Crossing these two pressure plates will open the path for the player.
-
-          ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
+        MC_HOC_2017_04POINT5_Cole_a: |
+          Nende kahe surveplaadi ületamisel avaneb mängijale rada.
+           ! [] (https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_Ali_authored_hint:
-        MC_HOC_2017_08_RY_a: |-
-          Press "Run"!
-
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
-        MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through
-          the lava.
+        MC_HOC_2017_08_RY_a: Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage
+          "Käivita'' niipalju kordi, kui saad aru, mis on valesti.
+        MC_HOC_2017_08_RY_b: On PALJU viise, kuidas seda puslet lahendada. Proovige
+          mõnda!
+        MC_HOC_2017_08_RY_c: Proovi järgida punktiirjoont lihtsa raja leidmiseks läbi
+          laava.
       MC_HOC_2017_FP10x10_authored_hint: []
       MC_HOC_2017_FP10x10_RE_authored_hint: []
       MC_HOC_2017_FP20x20_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
-          or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: Püüa panna Agent ehitama mõned minecartid, et ta saaks
+          maailma avastada!
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:
@@ -4069,8 +4058,8 @@
           is added to your counter variable each time through. \n\nWhat do you need
           to add to each number to get the number after it?"
       New Minecraft Hero Project_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
-          or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: Las Agent ehitab mõned sillad, et Alex või Steve saaksid
+          jalutada üle kaardi äärte.
       Overworld Avoid Monsters_authored_hint:
         mc_8_a: There are a few paths you can take. Which is the shortest?
         mc_8_b: Use `repeat` loops to simplify your code.
@@ -7801,6 +7790,8 @@
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to
           see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals2_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
           won't.  If you want your code to run in both cases, make sure to use an
           `if` statement.
@@ -7808,6 +7799,8 @@
           ahead` to move through this maze.
         courseD_bee_conditionals2_c: You don't have to check for honeycombs, there
           will only be flowers or blank spaces under the clouds.
+        courseD_bee_conditionals2_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals2_test_authored_hint:
         courseD_bee_conditionals2_aa: Need help getting started?  Here is a little
           hint video.
@@ -7821,6 +7814,8 @@
         courseD_bee_conditionals2_d: Need help finishing things up?  Watch this hint
           video.
       courseD_bee_conditionals3_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each
           space to see if it has either a flower or nothing.
         courseD_bee_conditionals3_b: You can use a loop to keep the bee moving forward.
@@ -7828,7 +7823,11 @@
         courseD_bee_conditionals3_c: Don't be afraid to make a mistake! Try adding
           blocks and running the code to see what will happen, even if you don't think
           you've solved the puzzle yet.
+        courseD_bee_conditionals3_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals4_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals4_a: You can still treat every space as if there is
           a cloud over it, even though you can see the whole path.
         courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check
@@ -7836,39 +7835,55 @@
         courseD_bee_conditionals4_c: Using the block `while there is a path ahead`,
           you should `move forward` and check for a flower. `if there is a flower`
           what should the bee do?
+        courseD_bee_conditionals4_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals5_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals5_a: Think of every side of the rectangular path as
           a path by itself. Set up a nested loop with a `repeat` block on the outside
           and a `while there is a path ahead` on the inside. How many paths does the
           bee need to buzz down if the bee needs to buzz every side with a flower?
-        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block,
-          you will need to move forward and check for a flower. How do you check if
-          there is a flower? What do you do if there is a flower?
         courseD_bee_conditionals5_c: There are 3 sides of the rectangle with flowers,
           so the code needs to `repeat 3 times`. In every repeat, the bee will need
           to continue along the path, `while there is a path ahead`. To continue down
           the path, the bee will need to `move forward`. While on the path, the bee
           needs to check for a flower. `if there is a flower`, the bee should `get
           nectar`.
+        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block,
+          you will need to move forward and check for a flower. How do you check if
+          there is a flower? What do you do if there is a flower?
+        courseD_bee_conditionals5_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals6_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for
           honeycomb beneath each cloud.
         courseD_bee_conditionals6_b: In this case, you do not need to check for nectar
           under the clouds.
         courseD_bee_conditionals6_c: Is there a loop you can use to make your code
           simpler?
+        courseD_bee_conditionals6_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals7_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
           the challenge."
         courseD_bee_conditionals7_b: If there is not a flower under the cloud, there
           must be a honeycomb, so you don't need to think about the case of an empty
           space.
+        courseD_bee_conditionals7_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals7_predict2_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
           the challenge."
       courseD_bee_conditionals8_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals8_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`)
           to solve the challenge."
@@ -7881,6 +7896,8 @@
         courseD_bee_conditionals8_d: Even though there is a cloud right in front of
           you, you don't have to visit it first. Try starting with the one in the
           bottom right of the square.
+        courseD_bee_conditionals8_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals9_authored_hint: []
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: |-

@@ -976,7 +976,15 @@
   "yourSchoolTellUs": "Разкажете ни за вашето училище",
   "celebrityChallenge": "Celebrity challenge",
   "confirming": "Confirming...",
+  "contractMatchBadDomainName": "One or more of your domain items has the wrong name.",
+  "contractMatchBadDomainSize": "Your contract doesn't have the right number of items in the domain.",
+  "contractMatchBadDomainType": "One or more of your domain items has the wrong type, or they are in the wrong order.",
+  "contractMatchBadName": "Your contract has the wrong name.",
+  "contractMatchBadNameCase": "Function names are case-sensitive. Try changing the case of your contract's name.",
+  "contractMatchBadRange": "Your contract has the wrong range.",
+  "dragBlocksToMatch": "Drag the blocks to match",
   "getCodePrice": "Get Code for {price} kit",
+  "incorrectAnswer": "Incorrect answer",
   "justDidHourOfCodeDonor": "I just did the #HourOfCode - check it out! (Thanks {donor_twitter} for supporting @codeorg)",
   "minecraftMarketingButton": "Start",
   "minecraftMarketingDesc": "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.",
@@ -996,5 +1004,7 @@
   "submittableIncomplete": "You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?",
   "submittableUnsubmit": "Unsubmitting your assessment will reset the submitted time and date.  Are you sure?",
   "submitting": "Submitting...",
+  "tooFewBody": "Please select two answers before submitting.",
+  "tooFewTitle": "Too few answers.",
   "unsubmitAssessment": "Unsubmit your assessment"
 }

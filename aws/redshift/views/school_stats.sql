@@ -42,8 +42,7 @@ CREATE OR REPLACE VIEW analysis.school_stats AS
            ((student_am_count +
              student_hi_count +
              student_bl_count +
-             student_hp_count +
-             student_tr_count) /
+             student_hp_count) /
              students_total::float)                 AS urm_percent,
            school_stats_by_years.frl_eligible_total AS frl_eligible,
            (CASE WHEN frl_eligible_total IS NULL

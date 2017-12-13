@@ -5,11 +5,11 @@
   'no': 'Nei'
   select_language: "Vel språk"
   upgrade_ie_message: "Code.org vil snart slutte å fungere på Internet Explorer 8, 9 og 10. Vennligst oppgrader til ein moderne nettlesar."
-  upgrade_ie_message_csedweek: "CSEdWeek.org vil snart fjerne støtte for Internet Explorer 8, 9 og 10. Vær venleg å oppgradere til ein meir moderne nettlesar."
+  upgrade_ie_message_csedweek: "CSEdWeek.org vil snart fjerne støtte for Internet Explorer 8, 9 og 10. Vær venleg og oppgradér til ein meir moderne nettlesar."
   upgrade_ie_link: "Lær meir"
   en: "Informatikk"
   computer_science_edweek: "Computer Science Education Week (CSEdWeek)"
-  csedweek_dates: "Desember 8-14, 2014"
+  csedweek_dates: "8.-14. desember, 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kodetimen</a> nærmar seg. Til alle lærarar og arrangørar<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Planlegg kodetimen din</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Er du en lærar i IT? Sjå andre CSEdWeek-ressursar</a>'
   n_have_learned_an_hoc: "<h1>Prøv ein</h1><h2>Kodetime</h2><h3># har prøvd</h3>"
@@ -26,9 +26,14 @@
   twentyhours_heading: "Prøv introduksjonskurset vårt til koding"
   twentyhours_text: "Fullført din første kodetime? Lær meir grunnleggjande koding og programmering i dette oppfølgingskurset."
   og_title: 'Code.org: Alle kan lære'
+  og_title_soon: "Kodetimen kjem"
+  og_title_here: "The Hour of Code is here!"
   og_description: "Alle elevar på alle skular burde få høve til å lære koding."
+  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Kodetimen kjem"
   csedweek_og_description: "4.-10. desember 2017. Informatikk er grunleggande for alle elevar."
+  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Bli med på <a href=\"http://hourofcode.com\">Kodetimen</a><br/> 8. – 14. desember 2014<br/>"
   hoc2014_students: "Elevar"
   hoc2014_try: "Prøv sjølv"
@@ -291,8 +296,8 @@
   homepage_hero_text_stat_loc: "2,5 millionar jenter har registrert seg for å lære på Code.org"
   homepage_hero_text_stat_students: "#student_count elevkontoar på Code.org"
   homepage_hero_text_stat_served: 'Kodetimen: #served servert'
-  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
-  homepage_hero_hoc_is_here: "The Hour of Code is here"
+  homepage_hero_hoc_is_coming: "Kodetimen kjem"
+  homepage_hero_hoc_is_here: "Kodetimen er her"
   homepage_slot_text_hoc: "Kodetimen"
   homepage_slot_text_frozen: "Frost med Anna og Elsa"
   homepage_slot_text_teacher: "Lærarmodus"
@@ -312,7 +317,7 @@
   homepage_action_text_girlvideo: "Inspirér ei jente"
   homepage_action_text_learn: "Start læringa"
   homepage_action_text_signpetition: "Signér oppropet"
-  homepage_action_text_wincelebritychat: "Win a celebrity chat"
+  homepage_action_text_wincelebritychat: "Vinn ein kjendis-chat"
   homepage_signpetition_dropdown: "Eg er einig &#x25BE;"
   homepage_diversity_pledge: "Slå eit slag for mangfaldet"
   homepage_banner_text_prizes: 'Kodetimen kjem tilbake, 7.-13. desember. '
@@ -321,10 +326,10 @@
   homepage_banner_text_link: "Lær meir"
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: "Lær meir"
-  homepage_banner_20k_teachers: "20 000 lærerar er kursa i, og underviser no koding i klasserommet."
+  homepage_banner_20k_teachers: "20 000 lærerar er opplært i, og underviser no koding i klasserommet."
   homepage_banner_20k_teachers_link: "Lær meir"
   homepage_banner_congress: "USAs ledere ber Kongressen om å finansiere K-12 informatikk."
-  homepage_banner_congress_link: "Gje di støtte"
+  homepage_banner_congress_link: "Gi di støtte"
   homepage_banner_emailprivacy: "Vi gjer ei viktig endring i korleis vi støttar personvernet til elevane."
   homepage_banner_emailprivacy_link: "Les meir"
   homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
@@ -424,7 +429,7 @@
   minecraft_adventurer: "Minecraft-eventyrar"
   minecraft_tutorials: "Rettleiingar for Kodetimen i Minecraft"
   minecraft_specs: "Mange språk | Moderne nettlesarar og nettbrett | 2. klasse og oppover"
-  minecraft_agent_description: "Minecraft er tilbake for Kodetimen med en helt ny aktivitet! Reis gjennom Minecraft med kode."
+  minecraft_agent_description: "Minecraft er tilbake i Kodetimen med ein heilt ny aktivitet! Reis gjennom Minecraft med kode."
   minecraft_agent_button: "Start"
   minecraft_designer_description: "Programmer dyr og andre Minecraft-vesen i din eigen versjon av Minecraft."
   minecraft_designer_button: "Start"
@@ -433,19 +438,19 @@
   minecraft_no_internet: "Har du ikkje internett?"
   minecraft_download_adventurer: "Last ned Minecraft-eventyrar for bruk utan internett."
   minecraft_subtitle: "Kodetimen med Minecraft"
-  minecraft_store_camps: "Gratis Minecraft Kodetime-leir på Microsoft Store"
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
-  minecraft_host_event: "Hold en Minecraft Kodetime-arrangement"
-  minecraft_teach_resources: "Teacher resources and lesson plan."
-  minecraft_leader_guide: "Download resources to help you plan and lead an event."
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
-  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
-  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign up today</a>."
-  minecraft_future: "Help all youth become future ready"
-  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access the resources</a> they found most valuable."
-  minecraft_og_designer: "Minecraft er tilbake med en ny aktivitet for Kodetimen. Programmer dyr og andre Minecraft-skapninger i din egen versjon av Minecraft."
-  minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
+  minecraft_store_camps: "Gratis Minecraft Kodetime på Microsoft Store"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Registrer deg</a> for gratis Minecraft-kodetime på Microsoft Stores i Australia, Canada, Puerto Rico eller i USA. Lær korleis koding passar for alle og kombinér kreativitet, problemløysing og masse moro."
+  minecraft_host_event: "Hold et Minecraft Kodetime-arrangement"
+  minecraft_teach_resources: "Lærarressursar og oppgåveplan."
+  minecraft_leader_guide: "Last ned ressursar for å få hjelp til å planlegge og ha ein Kodetime."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Last ned</a> fasilitatorguide for korleis å komme fort i gang og PowerPoint-presentasjoner for yngre og eldre elevar."
+  minecraft_join_online_training: "Klar til å ha din eigen Kodetime med Minecraft, men ikkje sikker på kor du skal starte? Sjekk ut våre <a href='%{minecraft_webinar_url}'>etterspurde webinar</a>. Du vil lære dei beste framgangsmåtane, få tilgang til tilretteleggingsmateriale og få ei gjennomgang av rettleiinga til den nye reisa til helten frå Minecraft-teamet. Få et forsprang på tenke gjennom kva du treng for å ha Kodetimen for unge under Kodetimen-veka (4.-10. desember) og etterpå."
+  minecraft_continue_learning: 'Informatikk for alle: etter Kodetimen på Microsoft Store'
+  minecraft_continue_learning_description: "Ingen programmeringserfaring trengs! Hjelp til å sikre at alle unge kan lære verdifulle ferdigheiter ein når gjennom ei utdanning i informatikk. Bli med oss på Microsoft Store for å vere med på ein gratis serie på tre seminar på ein time kor du opplev koding i eit morosamt og stressfritt miljø, bli kjent med nøkkelomgrep i datavitskap og gjer deg klar til å halde ein Kodetime i klasserommet eller i lokalsamfunnet. Du får til dette! <a href='%{minecraft_continue_learning_url}'>Registrer deg i dag</a>."
+  minecraft_future: "Hjelp alle unge med å bli klare for framtida"
+  minecraft_future_description: "Finn ut korleis andre skular og ideelle organisasjonar lærer bort digitale ferdigheiter, frå digital kompetanse til informatikkutdanning, til lokalsamfunna sine. Vurdér ulike modellar, få tips og triks, og <a href='%{minecraft_future_url}'>få tilgang til ressursane</a> dei fann som mest verdifulle."
+  minecraft_og_designer: "Minecraft er tilbake med en ny aktivitet for Kodetimen. Programmér dyr og andre Minecraft-skapningar i din eigen versjon av Minecraft."
+  minecraft_og_agent: "Minecraft er tilbake til Kodetimen - og du er helten! Skriv koden for å reise gjennom Minecraft-biomer."
   sports_page_title: "Kodetimen med sport"
   sports_og_title: "Utfordre deg sjølv. Alle kan lære."
   sports_og_description: "Mestarar og gullmedaljevinnarar oppfordrer deg til å prøve Kodetimen. Kod ditt eige sportspel."
@@ -561,7 +566,7 @@
   volunteer_engineer_submission_type_task_remote: "Eg ønskjer at du skal komme på besøk i klasserommet mitt via Skype og fortelje nokre inspirerande ord til elevane"
   volunteer_engineer_submission_type_task_mentor: "Eg ser etter ein mentor som kan hjelpa meg med førebuingane til Kodetimen"
   petition_age: "Alder"
-  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_hoc_scaling_progress: "Uff! Vi opplever høg Kodetime-trafikk. Kan ikkje lagre framgangen denne verka, men framgangen fra før denne veka er framleis trygg og lagra."
   dashboard_announce_learn_more_button: "Lær meir"
   dashboard_landing_title: "Side for lærarar"
   dashboard_landing_welcome: "Velkommen til den nye og forbetra lærarsida."
@@ -725,7 +730,7 @@
   dashboard_students_secret_picture: "Denne seksjonen nyttar <b>bilde</b> som type hemmelegheit. Det betyr at kvar elev har eit eige hemmeleg bilde som dei nyttar i staden for passord for å logge seg inn. Elevar bør bruke nettadressa til innlogginga ovanfor for å logge inn."
   dashboard_students_reset_picture: "Du kan tilbakestille det hemmelege bildet til eleven når som helst ved å velje <b>Vis hemmelegheit</b> og så <b>Tilbakestill hemmelegheit</b>. Et nytt hemmelig bilde vil bli generert for den eleven når han loggar inn."
   dashboard_students_secret_word_title: "Hemmeleg ord"
-  dashboard_students_secret_word: "Denne seksjonen nyttar <b>ord</b> som hemmelegheitstyde. Det betyr at kvar elev har eit eige hemmeleg ord som dei nyttar i staden for passord for å logge seg inn. Elevar bør bruke nettadressa til innlogginga ovanfor for å logge seg inn."
+  dashboard_students_secret_word: "Denne seksjonen nyttar <b>ord</b> som hemmelegheitstype. Det betyr at kvar elev har eit eige hemmeleg ord som dei nyttar i staden for passord for å logge seg inn. Elevar bør bruke nettadressa til innlogginga ovanfor for å logge seg inn."
   dashboard_students_reset_word: 'Du kan tilbakestille en elevs hemmelege ord når som helst ved å velje <b>Vis hemmelegheit</b> og så <b>Tilbakestill hemmelegheit</b>. Et nytt par med hemmelege ord vil bli generert for eleven når han/ho loggar inn. '
   dashboard_students_join_link: "Fortell elevane at dei skal opprette sin egen konto og bli med i di gruppe på"
   dashboard_students_no_email: "Om elevane dine ikkje har epostadresser eller om du vil opprette kontoane for dei, endre denne gruppa si hemmelege pålogging til <b>ord</b> eller <b>bilde</b>."
@@ -763,9 +768,9 @@
   dashboard_student_worksheet: "regneark for elevar"
   dashboard_teacher_worksheet: "arbeidsark for lærarar"
   dashboard_curriculum_csina: 'Datavitskap i Algebra:'
-  dashboard_curriculum_csins: 'Datavitenskap i Vitenskap:'
-  dashboard_curriculum_csp: 'AP® Datavitenskapsprinsipper:'
-  dashboard_curriculum_ecs: 'Utforsking av datavitenskap:'
+  dashboard_curriculum_csins: 'Datavitskap i Vitskap:'
+  dashboard_curriculum_csp: 'AP® Prinsipp i Datavitskap:'
+  dashboard_curriculum_ecs: 'Utforsking av datavitskap:'
   dashboard_grade_k: "K"
   dashboard_grade_other: "Anna"
   dashboard_login_word: "Ord"
@@ -776,7 +781,7 @@
   dashboard_puzzle: "Oppgåve"
   dashboard_question: "Spørsmål"
   dashboard_response: "Svar"
-  dashboard_correctness: "Riktighet"
+  dashboard_correctness: "Riktigheit"
   dashboard_correctness_free_response: "Gratis tilbakemelding"
   dashboard_correctness_unsubmitted: "Ikkje innsendte"
   dashboard_correctness_correct: "Rett"
@@ -786,7 +791,7 @@
   dashboard_status: "Status"
   dashboard_multi_correct: "# fleirval riktig"
   dashboard_multi_count: "# fleirval"
-  dashboard_multi_correct_percent: "% fleirval riktig"
+  dashboard_multi_correct_percent: "% riktige fleirval"
   dashboard_submission_timestamp: "Innleveringstidspunkt"
   stats_hoc_2013_heading: 'Utrolig statistikk fra Kodetimen i fjor. På berre ei veke:'
   stats_hoc_2013_image_alt: "Statistikk fra Kodetimen 2013"
@@ -803,7 +808,7 @@
   dashboard_sections_password_account_creation: "Tekstpassord elevane bestemmer"
   dashboard_sections_login_type_explanation: "Denne tabellen hjelper med forklaring på kva av disse innloggingsalternativa, <b>bilde, ord, eller epost</b>, du ønsker velge for ein seksjon."
   dashboard_faq: "Ofte stilte spørsmål"
-  dashboard_faq_k5: "K-5 Ofte stilte spørsmål"
+  dashboard_faq_k5: "Ofte stilte spørsmål om småskulen"
   code_hoc_coming: "Kodetimen er her - 8.- 14. desember!"
   code_sign_up: "Registrer deg for å delta i Kodeveka (CS Education Week)"
   host_an_hour: "Ha ein Kodetime"
@@ -818,7 +823,7 @@
   learn_educator_resources_description: "Lær om korleis du kan gjennomføra Kodetimen"
   learn_educator_resources_button: "Ressursar for læraren"
   learn_are_you_educator: "Er du lærar? Sjekk<a href=\"http://hourofcode.com/resources/how-to\"> korleis du kan gjennomføre Kodetimen</a>"
-  learn_find_volunteer: "<a href=\"https://code.org/volunteer/local\">Finn en lokal frivillig</a> som kan hjelpe deg under Kodetimen"
+  learn_find_volunteer: "<a href=\"https://code.org/volunteer/local\">Finn ein lokal frivillig</a> som kan hjelpe deg under Kodetimen"
   learn_teacher_led_lesson_plans: "Bli inspirert av <a href=\"https://code.org/teacher-led\">Kodetimen sine oppgåveplanar</a>"
   learn_how_to_hoc: "Følg <a href=\"https://hourofcode.com/how-to\"> vår \"slik gjer du det\"-guide</a> for å undervise Kodetimen"
   learn_hoc_prizes: "<a href=\"https://hourofcode.com/prizes\">Lær meir</a> om premiane for kvar lærar."
@@ -854,8 +859,8 @@
   carousel_heading_nointernet: "Dårlig internett? Installér desse programma på datamaskina"
   educator_notes: "Lærarnotat"
   teach_led_lesson_plans: "Lærarrettleiing til Kodetimen"
-  learn_footer_all_tutorials: "Sjå den <a href=\"https://code.org/learn\">omfattande lista av oppskrifter for Kodetimen</a>. For å sjå kriteriene for å sende inn oppgåver til Kodetimen,<a href=\"https://hourofcode.com/activity-guidelines\">klikk her</a>."
-  how_to_teach_hoc: "Korleis undervisa ein Kodetime"
+  learn_footer_all_tutorials: "Sjå den <a href=\"https://code.org/learn\">omfattande lista av oppskrifter for Kodetimen</a>. For å sjå kriteriane for å sende inn oppgåver til Kodetimen,<a href=\"https://hourofcode.com/activity-guidelines\">klikk her.</a>"
+  how_to_teach_hoc: "Korleis undervise ein Kodetime"
   more_resources_educators: "Fleire ressursar for lærarar og utdannarar"
   beyond_submission: "Ønsker du sende inn ei oppskrift til Kodetimen? Sjå vilkår og innleveringsskjemaet."
   third_party_submission: "Vil du sende ei oppskrift og bli oppført her? <a href=\"%{submission_url}\">Sjå kriteria og innleveringsskjemaet.</a>"
@@ -912,7 +917,7 @@
   artist_name: "Kunstnar"
   monstercoding_name: "Kodeoppdraget Mysterieøya"
   allcancode_name: "Kjør Marco!"
-  csfirst_name: "CS først"
+  csfirst_name: "CS First"
   boxisland_name: "Box Island"
   codesters_name: "Codesters"
   texasinstruments_name: "10 minutter med kode"
@@ -951,14 +956,16 @@
   csp1_name: 'Eining 1: Internett'
   csp2_name: 'Eining 2: Digital informasjon'
   csp3_name: 'Unit 3: Algorithms and Programming'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
+  csp3-a_name: 'Eining 3: Intro programmering (versjon A)'
+  csp3-research-mxghyt_name: 'Eining 3: Intro programmering (delmål)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP-ytelseaktivitetar
   csppostap_name: 'Post-AP: Databasar i appar'
   cspassessment_name: "Full test - 50 spørsmål"
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: 'Test del 1: 25 spørsmål'
   cspexam2-AKwgAh1ac5_name: Test del 2 - 25 spørsmål
   cspunit3_gradelevel: "9.-12. klasse"
@@ -1030,7 +1037,7 @@
   projguts_gradelevel: "Alder 10–13 år"
   hourofcode_gradelevel: "Frå 4 - 104 år"
   frozen_gradelevel: "Alderen 8+"
-  starwars_gradelevel: "Alder 6 +"
+  starwars_gradelevel: "Alder 6-106"
   playlab_gradelevel: "Frå 4 - 104 år"
   infinity_gradelevel: "Frå 4 - 104 år"
   artist_gradelevel: "Alderen 8+"
@@ -1143,16 +1150,16 @@
   playlab_shortdescription: "Lag ein historie eller eit spel med Spel-lab!"
   infinity_shortdescription: "Bruk Spill-Lab for å lage ei historie eller spel med Disney Infinity figurar."
   artist_shortdescription: "Teikn stilige bilde og design med Kunstnaren!"
-  monsterocding_shortdescription: "Et fargerikt selvstyrt programmeringseventyr for barn."
-  allcancode_shortdescription: "Et engasjerende spill for å lede Marco med et visuelt programmeringsspråk."
-  csfirst_shortdescription: "Animer en historie om to karakterer på havet. Legg til din egen stil!"
+  monsterocding_shortdescription: "Eit fargerikt sjølvstyrt programmeringseventyr for born."
+  allcancode_shortdescription: "Eit engasjerende spel for å leie Marco med eit visuelt programmeringsspråk."
+  csfirst_shortdescription: "Animér ei historie om to karakterar på havet. Legg til din eigen stil!"
   boxisland_shortdescription: "Ta en kode-tur på Box Island med den modige Hiro."
-  codesters_shortdescription: "Lag dine egne spill, animasjoner og kunstverk ved å bruke Python."
-  texasinstruments_shortdescription: "Lær grunnleggende programmering ved å bruke TI-84&#8482; Plus-kalkulatoren."
-  teacherled_shortdescription: "Bli inspirert til å lage din egen Kodetime med disse økt-planene."
-  course2_shortdescription_congrats: "For elever med grunnleggende leseferdigheter. Dette kurset bygger på Kurs 1. Elevene vil lage prigrammer for å løse problemer og utvikle interaktive spill og historier som de etterpå kan dele. Anbefalt for 2.-5. klasse."
-  course3_shortdescription_congrats: "Klar for neste nivå? Elevene vil gå dypere inn i programmerings-temaer som ble introdusert i de forrige kursene for å finne fleksible løsninger på kompliserte problemer. Til slutt i dette kurset lager elevene interaktive historier og spill som de kan dele med andre. Anbefalt for 4.-5. klasse."
-  course4_shortdescription_congrats: "Klar for å gå videre? Elevene vil gå dypere inn i programmerings-temaer som ble introdusert i de forrige kursene for å finne fleksible løsninger på kompliserte problemer. Til slutt i dette kurset lager elevene interaktive historier og spill som de kan dele med andre. Anbefalt for 4.-8. klasse."
+  codesters_shortdescription: "Lag eigne spel, animasjonar og kunstverk ved å bruke Python."
+  texasinstruments_shortdescription: "Lær grunnleggjande programmering ved å bruke TI-84&#8482; Plus-kalkulatoren."
+  teacherled_shortdescription: "Bli inspirert til å lage din eigen Kodetime med desse økt-planane."
+  course2_shortdescription_congrats: "For elevar med grunnleggjande leseferdigheiter. Dette kurset byggjer på Kurs 1. Elevane vil lage programmer for å løyse problem og utvikle interaktive spel og historier som dei etterpå kan dele. Tilrådd 2.-5. klasse."
+  course3_shortdescription_congrats: "Klar for neste nivå? Elevane vil gå djupare inn i programmeringstema som vart introdusert i kursa før for å finne fleksible løsningar på kompliserte problem. Til slutt i dette kurset lagar elevane interaktive historier og spel som dei kan dele med andre. Tilrådd for 4.-5. klasse."
+  course4_shortdescription_congrats: "Klar for å gå vidare? Elevane vil gå djupare inn i programmeringstema som vart introdusert i kursa før for å finne fleksible løsningar på kompliserte problem. Til slutt i dette kurset lagar elevane interaktive historier og spel som dei kan dele med andre. Tilrådd for 4.-8. klasse."
   coursea_shortdescription_congrats: ""
   courseb_shortdescription_congrats: ""
   coursec_shortdescription_congrats: ""
@@ -1170,7 +1177,7 @@
   khanpl_longdescription: "Lær JavaScript-programmering frå grunnen av medan du lagar artige tekningar ved hjelp av kode. Gjer det for deg sjølv eller saman med klassa di!"
   tynker_longdescription: "Bygg dine eigne spel og del med vener! Løys artige kodeoppgåver og lær programmeringskonsept på kvart nivå! Lag dine eigne variantar av spel med animerte figurar, fleire nivå og mange rekvisitar! Gjer spela realistiske ved å bruke fysikk! Sjå  koden som visuelle blokker eller JavaScript! Tilpass spela dine til iPad- og Android-nettbrett. Over eit dusin morosame aktivitetar å velje i!"
   scratch_longdescription: "Med Scratch kan du lage dine eigne interaktive spel, historier, animasjonar &mdash; og dele dei med venene dine. Kom i gong ved å animere namnet ditt, lage eit julekort eller lage eit pong-spel."
-  lightbot_longdescription: "Styr Lightbot å lyse opp alle dei blå felta! Lightbot er eit puslespill som gjennom programmering av spelmekanismar lar spelarane få praktisk forståing av grunnleggjande koding. Lær å sette instruksjonar i rett rekkefylgje, skrive prosedyrar og bruke løkker for å løyse nivåa. Passar for alle aldrar."
+  lightbot_longdescription: "Styr Lightbot å lyse opp alle dei blå felta! Lightbot er ei oppgåve som gjennom programmering av spelmekanismar lar spelarane få praktisk forståing av grunnleggjande koding. Lær å sette instruksjonar i rett rekkefylgje, skrive prosedyrar og bruke løkker for å løyse nivåa. Passar for alle aldrar."
   thinkersmith_longdescription: "Ved å bruke eit forhåndsdefinert \"Robot-språk\" vil elevar finne ut korleis dei kan styre kvarandre å utføre bestemte oppgåver utan å diskutere dei først. Denne leksjonen lærer barn sambandet mellom symbol og handlingar, i tillegg til den uvurderlege ferdigheita feilsøking. \"Mine Robot-vener\" fungerer best som ein gruppeaktivitet og inkluderer ei arbeidsbok for lærarar til bruk i klasserommet."
   condcards_longdescription: "Lær om algoritmar og vilkår-setningar i denne \"straumlause\" aktiviteten ved å bruke ein kortstokk. Elevane arbeider med denne aktiviteten i grupper, og treng ein kortstokk per gruppe."
   lightbotintl_longdescription: "Lære grunnleggjande programmeringslogikk, frå heilt enkel programmering, for dei på 4 år og oppover, på iOS eller Android (eller nettleser). Lær å sette kommandoar i rett rekkefylgje, identifiserer mønster, bruke prosedyrer og nytte løkker!"
@@ -1185,28 +1192,28 @@
   quorum_longdescription: "Dette opplæringskurset kan brukast også av synshemma og fungerer med skjermlesar. Bli med Mary på ein rundtur i det hun startar på ein biologi-lab som programmerar, og lærer programmeringsspråket Quorum. Denne oppgåva er elevstyrt med dømeaktivitetar på nettet."
   codespark_longdescription: "Fooane er ein artig og barnevenleg måte å lære om programmering.  Programmér søte figurar til å løyse gåter og vekkje til live ei virtuell verd. Spelet er utan ord slik at alle kan spele!"
   kodable_longdescription: "Kodable er eit sjølvstyrt iPad-spel som introduserer barn frå 5 år og oppover for grunnleggjande programmering. Å ha ein lærar eller føresett i nærleiken er optimalt, men ikkje nødvendig."
-  tynkerapp_longdescription: "Lær å programmere ved å løse morsomme kode-oppgaver. Lettbygde spill og historier med tema-grafikk, 10 + spill-kit og tilpasselige tegn. Ingen Internett-tilkobling kreves. Du kan også få tilgang til dine kreasjoner på nettet."
+  tynkerapp_longdescription: "Lær å programmere ved å løyse morosame kode-oppgåver. Lettbygde spel og historier med tema-grafikk, 10+ spel-kit og teikn du kan tilpasse. Krev inga nettilkopling. Du kan også få tilgang til det du lagar på nettet."
   robomindnl_longdescription: 'Elevene lærer grunnleggjande programmering ved å styre sin eigen virtuelle robot. Det nettbaserte kurset er komplett med korte presentasjonar, filmar, oppgåver og automatisk veiledning/tips for hjelp med programmeringsøvingane. '
   flappy_longdescription: "Bruk dra-og-slepp i programmeringa for å lage eit eige Flaksefugl-spel, og tilpass det til å sjå ulikt ut (Flaksehai, Flaksejulenisse, Flakse kva som helst). Legg spelet inn på telefonen din med eit klikk."
-  bitsbox_longdescription: "Tilpass ditt eget virtuelle nettbrett, for deretter å kode en rekke apper som både kan  spilles og deles. Enkle leksjoner gjør det enkelt for selv små barn å programmere skikkelig Javascript. Jo mer avansert du er, jo lenger vil du komme."
-  makeschool_longdescription: "Lær å kode ved å lage et iPhone-spill gjennom å bruke et splitter nytt og brukervennlig programmeringsspråk kalt Swift! Lag et Pok&eacute;mon-inspirert action-spill og skriv kode for å lære monsteret ditt nye bevegelser. Du kommer til å lære og bruke variabler, metoder og objekter for å hjelpe monsteret ditt til å vinne!"
-  touchdevelop_longdescription: 'Touch-vennlig redigeringsverktøy vil hjelpe deg med å lage pixel-kunst, løse bjørne-oppgaven eller bygge ditt eget hoppende fugl-spill. '
+  bitsbox_longdescription: "Tilpass ditt eige virtuelle nettbrett, for deretter å kode ei rekkje appear for å spille og dele. Enkle eksempel gjer det mogeleg for sjølv små barn å programmere skikkeleg Javascript. Jo flinkare du er, jo lenger vil du kome."
+  makeschool_longdescription: "Lær å kode ved å lage eit iPhone-spel med å bruke eit splitter nytt og brukarvenleg programmeringsspråk kalla Swift! Lag eit Pok&eacute;mon-inspirert action-spel og skriv kode for å lære monsteret ditt nye rørsler. Du kjem til å lære å bruke variablar, metodar og objekt for å hjelpe monsteret ditt med å vinne!"
+  touchdevelop_longdescription: 'Touch-vennlig redigeringsverktøy vil hjelpe deg med å lage pixel-kunst, løyse bjørne-oppgåva eller bygge eige hoppande fugl-spel. '
   appinventor_longdescription: "Underhaldande og korte opplæringsvideoar viser deg korleis du lagar tre enkle program for Android-telefonen eller nettbrettet ditt. Denne Kodetimen, som er laga både for novicer og ekspertar, gjør deg i stand til å begynne å lage dine eigne appar før du veit ordet av det. Forestill deg at du kan dele dine eigne appar med venane dine! Aktivitetene passar både for enkeltpersonar og for lærarar i klasseundervisning."
   blockly_longdescription: "Har du langsom (eller ikke-eksisterande) tilgang til internett? Last ned Blockly opplæringsfiler som var forløparen til Code.org sine opplæringsfiler. Ei enkel komprimert fil på 3MB kan lastast inn på ei kvar datamaskin eller brukast frå ein minnepinne"
   thinkersmith2_longdescription: "Elevane lærer om å representere og lagre bokstavar i binærkode med berre på og av. På slutten får klassen kode eigne initialar og ta dei med heim."
   kodableunplugged_longdescription: 'Opplegget er laga for bruk med vanleg papir. fuzzFamily Frenzy er ein introduksjon til programmeringslogikk for barn i alderen 5 år og oppover. Ein lærar bør forklara spelet, så programmerer elevane ein partnar til å fullføre ei enkel hinderløype. '
   projguts_longdescription: "Denne \"analoge\" aktiviteten hjelper elevar å lære korleis modellering og simulering fungerer, ved at ei gruppe elevar spelar ulike versjonar av stein/saks/papir, og ser resultata som forskjellige modelleringseksperiment."
-  hourofcode_longdescription: "Plassholder for ny code.org/hoc"
+  hourofcode_longdescription: "Plasshaldar for ny code.org/hoc"
   frozen_longdescription: "La oss bruke kode og bli med Anna og Elsa når dei utforskar magien og skjønnheita med is. Du vil lage snøfnugg og mønster med kunstløp skøyter og skaper eit magisk vinterlandskap som du kan dele med venane dine!"
   starwars_longdescription: "Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte."
-  playlab_longdescription: "Lag en historie eller lag et spill med \"Spill-Lab\"! Få dyr, pirater, zombier, ninjaer, og mange flere figurer til å bevege seg, lage lyder, få poeng, og til og med kaste flammekuler!"
-  monstercoding_longdescription: "Kodeoppdraget på Mystery Island av Monster Coding, tilbyr et morsomt introduksjonsoppdrag som lærer bort nøkkelbegreper til barn. Hver blokkbasert aktivitet bygger på en tidligere, og introduserer barna til funksjoner, boolske verdier, løkker, betingelser og matriser ved bruk av fargerik og animert grafikk og lydinstruksjoner."
-  allcancode_longdescription: "Elevene spiller et eventyrspill basert på en original historie. De leder Marco, hovedpersonen, gjennom hvert nivå ved å gi ham steg-for-steg instruksjoner i form av et visuellt programmeringsspråk, brukt av Kodetimen. Uten å merke det, blir de introdusert for sekvensering av kommandoer, gjentagelse og betingelser."
-  csfirst_longdescription: "Lag en historie om to figurer på sjøen. Animer vannet og tilpass landskapet slik du ønsker. Fortell din egen historie ved hjelp av kode!"
-  boxisland_longdescription: "Ta en tur til Box Island og hjelp Hiro med å samle alle klokker spredt i ørkenen! I denne opplæringen vil du lære grunnleggende om algoritmer, sekvenser, looper og \"conditionals?\"!"
-  codesters_longdescription: 'Opprette dine egne spill, animasjoner og grafikk ved hjelp av Python.  Når du er ferdig, del dem med venner! Programmér i Python, et ekte programmeringsspråk som brukes hver dag i selskaper - vårt dra og slipp-verktøy gjør det enkelt å lære!  Prøve å bygge en basketballkamp, siden en dans, eller designe et animert kort! '
-  texasinstruments_longdescription: 'De 10 minuttene av kode-aktiviteter kan brukes i klassen for å gi studentenes interesse for koding med TI teknologi de bærer i ryggsekkene sine hver dag.  Lær grunnleggende koding med TI-84 &#8482; pluss og kom i gang programmering på bare 10 minutter – ingen erfaring trengs!  '
-  teacherled_longdescription: "Nå som titusenvis av lærere har prøvd kodetimen, er mange klasserom klar for mer kreative og bedre tilpassede aktiviteter for å lære grunnleggende informatikk. For å inspirere lærere har vi samlet og tilrettelagt entimes lærerledede leksjoner og aktivitetsplaner lagd for ulike fagområder for de som er erfarne med kodetimen."
+  playlab_longdescription: "Lag ei historie eller lag eit spel med Spellan! Få dyr, pirater, zombier, ninjaer, og mange flere figurar til å røre på seg, lage lydar, få poeng og til og med kaste flammekuler!"
+  monstercoding_longdescription: "Kodeoppdraget på Mystery Island av Monster Coding, tilbyr eit morosamt introduksjonsoppdrag som lærer bort nøkkelomgrep til barn. Kvar blokkbaserte aktivitet byggjer på ein tidligare aktivitet, og introduserer borna til funksjonar, boolske verdiar, løkker, betingelsar og matriser ved bruk av fargerik og animert grafikk og lydinstruksjonar."
+  allcancode_longdescription: "Elevane spelar eit eventyrspel basert på ein original historie. Dei leier Marco, hovedpersonen, gjennom kvart nivå ved å gi han steg-for-steg instruksjonar i form av et visuellt programmeringsspråk, brukt av Kodetimen. Utan å merke det, blir dei introduserte for sekvensering av kommandoar, gjentakingar og betingelsar."
+  csfirst_longdescription: "Lag ei historie om to figurar på sjøen. Animér vatnet og tilpass landskapet slik du ønsker det. Fortel di eiga historie ved hjelp av kode!"
+  boxisland_longdescription: "Ta ein tur til Box Island og hjelp Hiro med å samle alle klokkene som er spreidt i ørkenen! I denne opplæringa vil du lære grunnleggjande om algoritmar, sekvensar, looper og \"conditionals?\"!"
+  codesters_longdescription: 'Opprett eigne spel, animasjonar og grafikk ved hjelp av Python. Når du er ferdig, del dei med vener! Programmér i Python, eit ekte programmeringsspråk som blir brukt kvar dag i bedrifter - vårt dra-og-slepp-verktøy gjer det enkelt å lære! Prøve å bygge ein basketballkamp, korregrafér ein dans eller design eit animert kort! '
+  texasinstruments_longdescription: 'Kodeaktivitetane på 10 minutter kan du bruke i klassen for å starte elevane si interesse for koding med teknologien dei bær i ryggsekkane sine kver dag.  Lær grunnleggjande koding med TI-84 &#8482; pluss og kom i gang programmering på berre 10 minutter – du treng ingen erfaring fra før!  '
+  teacherled_longdescription: "Nå som titusenvis av lærarar har prøvd kodetimen, er mange klasserom klaer for meir kreative og betre tilpassa aktivitetar for å undervise grunnleggjande informatikk. For å inspirere lærarar har vi samla og tilrettelagt leksjonar på ein time læraren kan ha, samt aktivitetsplanar for ulike fagområde for dei som er erfarne med kodetimen."
   codeorg_beyond_name: "Introduksjon til koding (1.-8. trinn)"
   khan_beyond_name: "Lær programmering"
   tynker_beyond_name: "Lær programmering heime"
@@ -1329,54 +1336,54 @@
   hopscotch_beyond_shortdescription: "Lær visuell programmering på ein iPad"
   pocketcode_beyond_shortdescription: "Lag eit spel på smarttelefonen din og del det med venene dine!"
   groklearning_beyond_shortdescription: "Grunnleggjande introduksjon til python-programmering"
-  hacketyhack_beyond_shortdescription: "Lær Ruby frå grunnen"
+  hacketyhack_beyond_shortdescription: "Lær Ruby frå grunnen av"
   robomind_beyond_shortdescription: "Skriv kode for ein virtuell robot"
-  makeschool_beyond_shortdescription: "Lær å lage et iPhone-spill på en time"
+  makeschool_beyond_shortdescription: "Lær å lage eit iPhone-spel på ein time"
   appinventor_beyond_shortdescription: "Lag din eigen app! (Berre for Android)"
-  touchdevelop_beyond_shortdescription: "Lag mobilprogram direkte på telefonen din, nettbrett ditt eller den bærbare datamaskina"
+  touchdevelop_beyond_shortdescription: "Lag mobilprogram direkte på telefonen din, nettbrettet ditt eller den bærbare datamaskina"
   codehs_beyond_shortdescription: "Lær å programmere med JavaScript i eit morsomt visuelt miljø"
   udemy_beyond_shortdescription: "Dusinvis av nettbaserte programmeringskurs"
   lynda_beyond_shortdescription: "Dusinvis av nettbaserte programmeringskurs"
   edx_beyond_shortdescription: "Det mest populære kurset på Harvard"
   coursera_beyond_shortdescription: "Start med CS101"
   udacity_beyond_shortdescription: "Start med CS101"
-  teachingtree_beyond_shortdescription: 'Nettbasert kunnskapsbase: raske skrivebordsapplikasjoner'
+  teachingtree_beyond_shortdescription: 'Nettbasert kunnskap: raskt og ubregrensa'
   kodu_beyond_shortdescription: "Design ei spelverd i 3D"
   cargobot_beyond_shortdescription: "Programmer ein robotarm på din iPad"
   kidsruby_beyond_shortdescription: "Lær å programmere med Ruby"
   w3schools_beyond_shortdescription: "Lær å lage nettstader"
   codeavengers_beyond_shortdescription: "Lær å kode spel og nettstader"
-  mozilla_beyond_shortdescription: "Lag og del Internett-sider"
+  mozilla_beyond_shortdescription: "Lag og del nettsider"
   codecombat_beyond_shortdescription: "Spel eit spel og lær JavaScript for å vinne"
   codea_beyond_shortdescription: "Lag app'ar på din iPad"
   lego_beyond_shortdescription: "Bygg og programmer ein robot"
   finch_beyond_shortdescription: "Ein robot til IT-opplæring"
   arduino_beyond_shortdescription: "Lær Arduino med Sparkfun's Digital Sandbox."
-  processing_beyond_shortdescription: "Lær bearbeidingsspråk"
+  processing_beyond_shortdescription: "Lær Processing-språk"
   alice_beyond_shortdescription: "Undervis programmering i eit 3D-miljø"
   sphero_beyond_shortdescription: "SPRK leksjonar gir barn eit morsomt lynkurs i å programmere robotar medan dei utviklar ferdigheiter i matematikk og naturfag."
   codeorg_beyond_longdescription: "Lær dei grunnleggjande omgrepa i datavitskap med dra-og-slepp-programmering. 3 komplette kurs, kvart med 15-20 leksjonar som blandar \"analoge\" klasseromsaktivitetar ispedd spel-liknande, sjølvstyrte opplæringsmodular med videoførelesingar med Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lær repetisjonsløkker, vilkår, grunnleggjande algoritmar, funksjonar og variablar."
   khan_beyond_longdescription: "Lær JavaScript-programmering frå grunnen av medan du lagar artige tekningar ved hjelp av kode. Gjer det for deg sjølv eller saman med klassa di!"
-  tynker_beyond_longdescription: "Tynker gjør det moro og enkelt å lære programmering. Det gjør det visuelt. Barn bygger spill og mobilapplikasjoner ved å organisere kodeblokker. Det fjerner behovet å kunne programmeringssyntaks. Barna omgjør ideer til animerte historier og matematisk kunst umiddelbart. Det fremmer progressiv læring. Ettersom barn lærer det grunnleggende, introduserer Tynker mer avanserte konsepter, inkludert kodebasert programmering."
+  tynker_beyond_longdescription: "Tynker gjer det moro og enkelt å lære programmering. Det gjør det visuelt. Barn byggjer spel og mobilappar ved å organisere kodeblokker. Det fjerner behovet å kunne programmeringssyntaks. Barna omgjer idear til animerte historier og matematisk kunst umiddelbart. Det fremmer progressiv læring. Ettersom barn lærar det grunnleggjande, introduserer Tynker meir avanserte konsept, inkludert kodebasert programmering."
   scratch_beyond_longdescription: "Med Scratch kan du lage dine eigne interaktive spel, historier, animasjonar &mdash; og dele dei med venene dine. Kom i gong ved å animere namnet ditt, lage eit julekort eller lage eit pong-spel."
   lightbot_beyond_longdescription: "Lære grunnleggjande programmeringslogikk, frå heilt enkel programmering, for dei på 4 år og oppover, på iOS eller Android (eller nettleser). Lær å sette kommandoar i rett rekkefylgje, identifiserer mønster, bruke prosedyrer og nytte løkker!"
   codecademy_beyond_longdescription: "Codecademy er ein interaktiv, elevstyrt introduksjon til grunnleggjande datavitskap med JavaScript som blir brukt av millionar av elevar over heile verda. Vi har utarbeida ein problemfri Kodetime-opplevelse med tilhørande kviss, presentasjonar og eit fullført prosjekt for elevar på slutten."
   kodable_beyond_longdescription: "Kodable er eit sjølvstyrt iPad-spel som introduserer barn frå 5 år og oppover for grunnleggjande programmering. Å ha ein lærar eller føresett i nærleiken er optimalt, men ikkje nødvendig."
-  scratchjr_beyond_longdescription: "ScratchJr er et grunnleggende programmeringsspråk som gjør at små barn kan lage sine egne interaktive historier og spill. Barn setter sammen grafiske programmeringsblokker for å få figurer til å bevege seg, hoppe, danse og synge"
-  hopscotch_beyond_longdescription: "Opplæring på iPad, rettet mot elever, som bruker programmeringsspråket Hopscotch. Elever kan bygge spill og applikasjoner til sin iPad på sin iPad. Elever kan arbeide individuelt eller sammen med venner (opptil 3 per iPad)."
-  pocketcode_beyond_longdescription: "Lag ditt eget spill, på smarttelefon din med Pocket kode! Hjelp fallskjermhopperen Steve til å levere sine pakker. Du kan dele den med venner og la andre brukere prøve!"
-  groklearning_beyond_longdescription: "Et introduksjonskurs ved hjelp av programmeringsspråket Python for folk som ikke har erfaring med programmering. Vår unike blanding av innledende innhold og utfordringer vil bringe deg til en grundig forståelse av Python og programmering selv. Vi har lært dette innholdet til elever av ulik alder fra ulike bakgrunner, og vi er sikker på at det vil passe deg også."
-  hacketyhack_beyond_longdescription: 'Hackety Hack vil lære deg det absolutte grunnleggende innen programmering fra grunnen av. Tidligere erfaring med programmering er ikke nødvendig! Med Hackety Hack, vil du lære programmeringsspråket Ruby. Ruby brukes til alle typer programmer, inkludert desktop-applikasjoner og nettsteder. [Merk: nødvendig å installere]'
-  robomind_beyond_longdescription: 'Studentene lærer det grunnleggende innen programmering ved å kontrollere sin egen virtuelle robot. Det nettbaserte kurset er fullt selvforsynt med korte presentasjoner, filmer, quiz og automatisk veiledning / tips for å hjelpe til med praktiske oppgaver. '
-  makeschool_beyond_longdescription: "Kjenner du til ObjectiveC? Lær å lage et iPhone spill på en time! Vi vil veilede deg gjennom prosessen, fra å kode, teste og spille spillet ditt på nettet og deretter dele det til vennene dine på Facebook! Ingen tidligere iPhone utvikling erfaring er nødvendig. Du må forstå hva variabler, metoder og objekter er."
+  scratchjr_beyond_longdescription: "ScratchJr er eit grunnleggjande programmeringsspråk som gjer at små barn kan lage eigne interaktive historier og spel. Barn set saman grafiske programmeringsblokker for å få figurar til å røre på seg, hoppe, danse og synge"
+  hopscotch_beyond_longdescription: "Opplæring på iPad, retta mot elevar, som nyttar programmeringsspråket Hopscotch. Elevar kan bygge spel og appar til iPad på sin eigen iPad. Elevar kan arbeide individuelt eller saman med vener (opptil 3 per iPad)."
+  pocketcode_beyond_longdescription: "Lag ditt eige spel, på smarttelefon din med Pocket-kode! Hjelp fallskjermhopparen Steve til å levere pakkane sine. Du kan dele den med vener og la andre brukarar prøve!"
+  groklearning_beyond_longdescription: "Eit introduksjonskurs ved hjelp av programmeringsspråket Python for folk som ikkje har erfaring med programmering. Vår unike blanding av introduksjonsinnhald og utfordringar vil føre til at du får ei grundig forståing av Python og programmering sjølv. Vi har undervist dette innhaldet til elevar i ulik alder frå ulike bakgrunnar, og vi er sikker på at det vil passe deg også."
+  hacketyhack_beyond_longdescription: 'Hackety Hack vil lære deg det absolutt, grunnleggjande innan programmering fra grunnen av. Tidlegere erfaring med programmering er ikkje nødvendig! Med Hackety Hack, vil du lære programmeringsspråket Ruby. Ruby brukes til alle typer programmer, inkludert desktop-applikasjoner og nettsteder. [Merk: må installere på datamaskina]'
+  robomind_beyond_longdescription: 'Elevane lærer det grunnleggjande innan programmering ved å kontrollere sin egen virtuelle robot. Det nettbaserte kurset er heilt sjølvsforsynt med korte presentasjonar, filmar, quiz og automatisk rettleiing/tips for å hjelpe til med praktiske oppgåver. '
+  makeschool_beyond_longdescription: "Kjenner du til ObjectiveC? Lær å lage eit iPhone-spel på en time! Vi vil rettleie deg gjennom prosessen, frå å kode, teste og spele spelet ditt på nettet og deretter dele det til venene dine på Facebook! Ingen tidligare erfaring med iPhone-utvikling er nødvendig. Du må forstå kva variablar, metodar og objekter er."
   appinventor_beyond_longdescription: "Underhaldande og korte opplæringsvideoar viser deg korleis du lagar tre enkle program for Android-telefonen eller nettbrettet ditt. Denne Kodetimen, som er laga både for novicer og ekspertar, gjør deg i stand til å begynne å lage dine eigne appar før du veit ordet av det. Forestill deg at du kan dele dine eigne appar med venane dine! Aktivitetene passar både for enkeltpersonar og for lærarar i klasseundervisning."
-  touchdevelop_beyond_longdescription: "TouchDevelop lar deg lage apps på iPad, iPhone, Android, PC, Mac, Windows Phone. Vår berøringsvennlige editor gjør koding moro, selv på telefonen eller nettbrettet!"
-  codehs_beyond_longdescription: 'Lær det grunnleggende om programmering med Karel the Dog, en morsom, tilgjengelig og visuell introduksjon til koding, det å gi kommandoer til en datamaskin er akkurat som å gi kommandoer til en hund. Denne opplæringen er flott hvis det ledes av en lærer, men kan også gjøres uavhengig av hverandre. [Merk: betaling kreves]'
-  udemy_beyond_longdescription: 'Enten du aldri har sett en kodelinje eller du aldri har kodet før, så har Udemy et kurs for deg, undervist av profesjonelle instruktører. [Merk: betaling kreves]'
-  lynda_beyond_longdescription: 'Lære å kode, opprette og bygge webapplikasjoner, fra grunnen til objektorientert programmering i C og C ++, til hvordan å skrive Java. Våre utvikler opplæringsfiler kan hjelpe deg å lære og utvikle og skape mobilapper, jobbe med PHP og MySQL-databaser, komme i gang med det statistiske behandlingspråket R, og mye mer. [Merk: betaling kreves]'
-  edx_beyond_longdescription: "S50x er Harvard Colleges, for innledning til de intellektuelle bedriftene i informatikk og kunsten til programmering for hovedfag og ikke-fagretninger er like, med eller uten tidligere erfaring med programmering. Temaer er abstraksjon, algoritmer, datastrukturer, innkapsling, ressursforvaltning, sikkerhet, software engineering, og webutvikling. Språk som inkluderer er C, PHP og Javascript pluss SQL, CSS og HTML. The on-campus versjon av CS50x er Harvards nest største kurs."
-  coursera_beyond_longdescription: 'Tanford CS 101 klasse undervises av Nick Parlante (GRATIS!). I CS101 læres de grunnleggende ideer om informatikk for et publikum med null erfaring. Spill og eksperimenter med korte biter av kode for å gi liv til kraften og begrensninger i en datamaskin. CS101 gir også en generell bakgrunnsinformasjon om datamaskiner i dag: hva er en datamaskin, hva er maskinvare, hva er programvare, hva er internett. Ingen tidligere erfaring er nødvendig annet enn muligheten til å bruke en nettleser.'
-  udacity_beyond_longdescription: "I dette kurset vil du lære viktige omgrep i informatikk og lære å skrive eigne dataprogram i samanheng med å bygge et robotsøkeprogram. Tidligare kunnskap om programmering er ikkje naudsamt for dette kurset. Nybbyrjarar er velkomne! På slutten av dette kurset, vil du ha lært viktige omgrep i informatikk og nok programmering for å kunne skrive Python-program for å løyse problem på eiga hand. Dette kurset vil forberede deg til å gå videre til datakurs på middels nivå."
+  touchdevelop_beyond_longdescription: "TouchDevelop lar deg lage apps på iPad, iPhone, Android, PC, Mac, Windows Phone. Vår berøringsvennlige editor gjer koding moro, sjølv på telefonen eller nettbrettet!"
+  codehs_beyond_longdescription: 'Lær det grunnleggjande om programmering med Karel the Dog, ein morosam, tilgjengeleg og visuell introduksjon til koding, det å gi kommandoar til ei datamaskin er akkurat som å gi kommandoar til ein hund. Denne opplæringa er flott dersom det blir leia av lærar, men kan óg bli gjort uavhengig av kvarandre. [Merk: krev betaling]'
+  udemy_beyond_longdescription: 'Enten du aldri har sett ei kodelinje eller du aldri har koda før, så har Udemy eit kurs for deg, undervist av profesjonelle instruktørar. [Merk: krev betaling]'
+  lynda_beyond_longdescription: 'Lære å kode, opprette og byggje webapplikasjonar fra det grunnleggjande i objektorientert programmering i C og C++, til korleis du skriv Java. Vår opplæringsoppgåver for utviklarar kan hjelpe deg med å lære deg korleis du skal utvikle og skape mobilappar, jobbe med PHP og MySQL-databasar, kome i gang med det statistiske behandlingspråket R, og mykje meir. [Merk: krev betaling]'
+  edx_beyond_longdescription: "S50x er Harvard College si introduksjon til dei intellektuelle IT-bedriftene og programmering på hovudfag, med eller utan tidligare erfaring med programmering. Temaer er abstraksjon, algoritmar, datastrukturar, innkapsling, ressursforvaltning, sikkerhet, software engineerin, og webutvikling. Språk inkluderer C, PHP og Javascript og SQL, CSS og HTML. Versjonen av CS50x-kurset som går på campus er Harvard sitt nest største kurs."
+  coursera_beyond_longdescription: 'Sanford CS 101-kurs blir undervist av Nick Parlante (GRATIS!). I CS101 lærer ein dei grunnleggjande ideane om informatikk for eit publikum med null erfaring. Spel og eksperiment med korte kodebitar gir liv til krafta og avgrensningar i datamaskina. CS101 gir óg generell bakgrunnsinformasjon om datamaskiner i dag: kva er ei datamaskin, kva er maskinvare, kva er programvare, kva er internett. Ingen tidligere erfaring er nauddsamt - anna enn at du må kunne bruke ein nettlesar.'
+  udacity_beyond_longdescription: "I dette kurset vil du lære viktige omgrep i informatikk og lære å skrive eigne dataprogram i samanheng med å bygge et robotsøkeprogram. Tidligare kunnskap om programmering er ikkje naudsamt for dette kurset. Nybyrjarar er velkomne! På slutten av dette kurset, vil du ha lært viktige omgrep i informatikk og nok programmering for å kunne skrive Python-program for å løyse problem på eiga hand. Dette kurset vil forberede deg til å gå videre til datakurs på middels nivå."
   teachingtree_beyond_longdescription: "TeachingTree er ei open plattform som lar kven som helst organisere pedagogisk innhald. Målet vårt er at elevane skal få rask tilgang til de eksakte klippa dei treng for å lære enkelte omgrep. Alle er oppfordra til å bidra ved å legge til videoar eller til å merke konsept med stikkord."
   kodu_beyond_longdescription: "Kodu lar barna lage spel på PC og Xbox via eit enkelt visuelt programmeringsspråk. Kodu kan du bruke til å undervise kreativitet, problemløsning, historiefortelling, samt programmering. Alle kan bruke Kodu til å lage eit spel, små barn så vel som voksne uten design- eller programmeringsferdigheiter. Kodu for PC er tilgjengeleg for gratis nedlasting. Kodu for XBox er også tilgjengeleg i USA på XBox Marketplace, i indiespel-kanalen for rundt $5."
   cargobot_beyond_longdescription: "Cargo-Bot er eit hjernetrimspel der du lærer ein robot korleis den kan flytte kasser. Høres enkelt ut, ikkje sant? Den har 36 utrolege smarte puslespel, skummel musikk og imponerande grafikk. Du kan også spele inn eigne løysinger og dele dei på YouTube for å vise venene dine."
@@ -1384,17 +1391,17 @@
   w3schools_beyond_longdescription: "Lær å lage nettsider på eiga datamaskin. Lær det grunnleggande om ein server på mindre enn ein dag. Lær å legge til databasar til nettstaden din"
   codeavengers_beyond_longdescription: "Lære å programmere spel, appar og nettsider. Designa av ekspertar med perfekt vanskelegheitsgrad for nybyrjarar, lett å forstå instruksjonar og til stor hjelp når du treng det. Kursa våre i HTML, CSS og Javascript inkluderer kodeutfordringar og revisjonsspel som gjer læring morosamt og effektivt i alle aldrar."
   mozilla_beyond_longdescription: "Thimble gjer det latterleg enkelt å lage og dele eigne nettsider. Skriv og redigér HTML og CSS til høgre i nettlesaren din, og sjå arbeidet umiddelbart etterpå. Last opp og del eigne ferdige prosjekt med eit enkelt klikk. Perfekt for både nybyrjarar og ekspertar."
-  codecombat_beyond_longdescription: "Spe som ein trollmann med å kode (trylleformlar) for å kontrollere heltane dine, navigere labyrintar, vinne over troll, lure fiendar og redde allierte! Lær Javascript i dette nettspelet i HTML 5 for nybyrjarar."
+  codecombat_beyond_longdescription: "Spå som ein trollmann med å kode (trylleformlar) for å kontrollere heltane dine, navigere labyrintar, vinne over troll, lure fiendar og redde allierte! Lær Javascript i dette nettspelet i HTML 5 for nybyrjarar."
   codea_beyond_longdescription: "Codea for iPad lar deg lage spel og simuleringar &mdash; eller berre visualisere idear du har. Gjer om tankene dine om til interaktive kreasjonar som gjer bruk av iPad-funksjonar som Multi-Touch og akselerometer. Vi meiner Codea er den vakreste måten ein kan lage kode på, samtidig som det er enkelt. Codea er laga slik at du kan ta på koden din. Vil du endre på eit tal? Berre trykk på det og dra i det. Kva med ein farge, eller eit bilde? Peik på dei for å hente fram visuelle redigeringsfunksjonar som lar deg velgje akkurat det du vil."
   lego_beyond_longdescription: "Lag små, tilpassa og programmerbare robotar ved hjelp LEGO-delar."
   finch_beyond_longdescription: "The Finch er ein ny robot for utdanning i informatikk. Designet er eit resultat av ein fireårsstudie ved Carnegie Mellon CREATE lab. The Finch er utforma for å støtte ei engasjerende innføring i kunsten i å programmere. Den støttar over eit dusin programmeringsspråk og miljø, mellom anna fleire miljø som passar for elevar så unge som åtte år gamle. The Finch er designet for å la elevane skrive aktive, interaktive program."
-  arduino_beyond_longdescription: "Arduino er en populær plattform designa for å la kunstnarar og designearar jobbe med reelle sensorar, LED, buzzarar, og meir. The Sparkfun Virtual Sandbox vil lære deg ekte Arduinokode rett i nettlesaren din."
+  arduino_beyond_longdescription: "Arduino er en populær plattform designa for å la kunstnarar og designarar jobbe med reelle sensorar, LED, buzzarar, og meir. The Sparkfun Virtual Sandbox vil lære deg ekte Arduinokode rett i nettlesaren din."
   processing_beyond_longdescription: "Processing er eit programmeringsspråk, utviklingsmiljø og nettsamfunn. Sidan 2001 har Processing fremma programvareferdigheiter i visuell kunst og visuell kompetanse innan teknologi. Opprinneleg oppretta for å tjene som ei skissebok innan programvare og for å lære grunnleggjande dataprogrammering innan ei visuell samanheng, men Processing har utvikla seg til et utviklingsverktøy for fagfolk. I dag er det titusener av studentar, kunstnarar, designarar, forskarar og amatørar som nyttar Processing for læring, prototypar og produksjon."
   alice_beyond_longdescription: "Alice Project nyttar eit nyskapande programmeringsmiljø som støtte til å lage 3D-animasjonar, og tilbyr verktøy og materialar for undervisning i og læring av rekningsorientert tenkning, problemløsning og programmering over eit breidt spekter av aldre og klassetrinn."
   sphero_beyond_longdescription: "Enten du er lærar eller føresatt, SPRK-leksjonar gir barna et morosamt intensivkurs i å programmere robotar samtidig som dei skjerper ferdigheitene i matematikk og naturfag."
   compatibility_hide_this_warning: "Skjul denne åtvaringa"
   compatibility_unsupported_browser: "Nettleseran din blir ikkje støtta. Ver vennleg å oppdatere til <a href='%{supported_browsers_url}', target='_blank'>ein nettlesar vi støttar</a>. Du må gjerne forsøke å sjå sida, men det kan vere at noko ikkje vil virke slik det er meint."
-  starwars_shortcode: "star"
+  starwars_shortcode: "stjerne"
   mc_shortcode: "mc"
   frozen_shortcode: "frzn"
   hourofcode_shortcode: "code"
@@ -1408,25 +1415,25 @@
   header_course_catalog: "Kurskatalog"
   header_project_gallery: "Prosjekt"
   header_sections: "Seksjonar"
-  header_professional_learning: "Profesjonell opplæring"
-  header_educate_overview: "Oversikt for lærere"
+  header_professional_learning: "Lærarutdanning"
+  header_educate_overview: "Læraroversikt"
   header_educate_elementary: "Grunnskule"
   header_educate_middle: "Ungdomsskule"
   header_educate_high: "Vidaregåande skule"
   header_educate_hoc: "Kodetimen"
-  header_educate_partner: "Jobb med oss"
+  header_educate_partner: "Bli partnar med oss"
   header_educate_beyond: "Utover Code.org"
-  header_educate_inspire: "Inspirer en elev"
+  header_educate_inspire: "Inspirér ein elev"
   header_educate_community: "Nettforum"
   header_educate_tools: "Verktøy og videoar"
   header_about_us: "Om oss"
   header_about_leadership: "Leiarskap"
   header_about_donors: "Givarar"
   header_about_partners: "Partnarar"
-  header_about_team: "Hele teamet"
-  header_about_news: "Nyhetsrom"
+  header_about_team: "Heile teamet"
+  header_about_news: "Nyheitsrom"
   header_about_evaluation: "Evaluering"
-  header_about_jobs: "Jobber"
+  header_about_jobs: "Jobbar"
   header_about_contact: "Kontakt oss"
   header_about_faqs: "Vanlege spørsmål"
   header_learn: "Lær"
@@ -1463,7 +1470,7 @@
   login_cards: "Innloggingskort"
   print_login_cards: "Skriv ut innloggingskort"
   joining_section: "Bli med i seksjonen (berre ein gong)"
-  joining_section_overview: "Om ein student ikkje allereie har blitt med i seksjonen din, be dei om å gjere følgande steg. Merk at dei treng berre å gjere dette ein gong. Ved å bli med i seksjonen din, vil elevane sjå kva kurs dei har fått tildelt og du kan spore framdrifta på det fullførte arbeidet når dei er innlogga."
+  joining_section_overview: "Om ein elev ikkje allereie har blitt med i seksjonen din, be dei om å gjere følgande steg. Merk at dei treng berre å gjere dette ein gong. Ved å bli med i seksjonen din, vil elevane sjå kva kurs dei har fått tildelt og du kan spore framdrifta på det fullførte arbeidet når dei er innlogga."
   joining_section_instruct_website: 'Opprett ein konto på Code.org dersom dei ikkje har gjort det allereie. Dei kan gjere dette på https://studio.code.org/users/sign_up. Merk at de kan enten registrere seg med ei epostadresse og passord, eller registrerer seg gjennom Google, Facebook eller Microsoft ved å klikke på ein av desse knappane:'
   joining_section_instruct_account: "Logg inn på kontoen på Code.org."
   joining_section_instruct_code: 'Gå til %{code_org_url} og skriv inn seksjonskoden: %{section_code}.'
@@ -1473,3 +1480,5 @@
   syncing_students: "Synkronisér elevane"
   syncing_students_instructions: 'Hvis Code.org-seksjonen din blir utdatert etter lista di over elevar i Google Classroom, klikk på knappen "Synkronisér elevar frå Google Classroom" i fana "Administrér elevar":'
   google_sign_in_instruct: 'Derfra bør dei velge alternativet "Logg på med Google-kontoen":'
+  hero_name: 'Minecraft: Helten si reise'
+  applab-intro_name: App Lab Intro

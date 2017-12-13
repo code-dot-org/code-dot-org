@@ -17,6 +17,20 @@ const DROPDOWN_WIDTH = 514;
 const alert = window.alert;
 
 /**
+ * Extracts a channel id from the given abuse url
+ * @returns {string} Channel id, or undefined if we can't get one.
+ */
+export const getChannelIdFromUrl = function (abuseUrl) {
+  let match;
+  if (abuseUrl.indexOf('codeprojects') >= 0) {
+    match = /.*codeprojects.*[^\/]+\/([^\/]+)/.exec(abuseUrl);
+  } else {
+    match = /.*\/projects\/[^\/]+\/([^\/]+)/.exec(abuseUrl);
+  }
+  return match && match[1];
+};
+
+/**
  * A dropdown with the set of ages we use across our site (4-20, 21+)
  */
 class AgeDropdown extends React.Component {
@@ -67,8 +81,8 @@ export default class ReportAbuseForm extends React.Component {
    * @returns {string} Channel id, or undefined if we can't get one.
    */
   getChannelId() {
-    const match = /.*\/projects\/[^\/]+\/([^\/]+)/.exec(this.props.abuseUrl);
-    return match && match[1];
+    const abuseUrl = this.props.abuseUrl;
+    return getChannelIdFromUrl(abuseUrl);
   }
 
   handleSubmit = (event) => {

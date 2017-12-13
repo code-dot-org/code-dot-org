@@ -6,7 +6,7 @@
   "filterSortByDisplayWeight": "Recommended",
   "filterSortByPopularityRank": "Most popular",
   "filterGrades": "Βαθμοί",
-  "filterGradesAll": "Όλων των ηλικιών",
+  "filterGradesAll": "All grades",
   "filterGradesPre": "Νηπιαγωγίο",
   "filterGrades25": "Τάξεις Β' Δημοτικού - Ε΄Γυμνασίου",
   "filterGrades68": "Τάξεις ΣΤ' Δημοτικού - Β΄Γυμνασίου",
@@ -56,7 +56,7 @@
   "headingTutorialsYourLanguage": "Δραστηριότητες στη γλώσσα σας",
   "showAllTutorialsButton": "Εμφάνιση δραστηριοτήτων σε πολλές γλώσσες",
   "hideAllTutorialsButton": "Απόκρυψη δραστηριοτήτων σε πολλές γλώσσες",
-  "noTutorialsYourLanguage": "Δεν υπάρχουν δραστηριότητες στη γλώσσα σας. Δοκιμάστε δραστηριότητες σε άλλες γλώσσες κάνοντας κλικ στο παρακάτω κουμπί.",
+  "noTutorialsYourLanguage": "Δεν υποστηρίζονται δραστηριότητες στη γλώσσα σας. Δοκιμάστε δραστηριότητες σε άλλες γλώσσες, κάνοντας κλικ στο παρακάτω κουμπί.",
   "bottomGuidelinesLink": "Κάντε κλικ εδώ για να δείτε οδηγίες τα κριτήρια και τη διαδικασία υποβολής σεμιναρίων δραστηριοτήτων για την Ώρα του Κώδικα.",
   "bottomSpecialNeedsLink": "Κάντε κλικ εδώ για περισσότερες πληροφορίες σχετικά με την υποστήριξη μαθητών με ειδικές ανάγκες."
 }

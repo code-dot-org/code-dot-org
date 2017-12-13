@@ -110,72 +110,72 @@ pl:
           </next>
           </block>
           </xml>
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code inside the loop.
+        2-3_Artist_Loops_New_11_b: Twój następny ruch powinien zacząć się na ** koniec ** kodu poprzedniej pętli.
       2-3 Artist Loops New 12_authored_hint:
-        2-3_Artist Loops_New_12_a: Before starting the diamond, the artist needs to turn left by 60 degrees to get on the right path.
-        2-3_Artist Loops_New_12_b: After the artist goes forward 100 pixels, he will need to turn right 120 degrees to make the sharp corner.
-        2-3_Artist Loops_New_12_c: The artist will need to turn right only 60 degrees to create a wide corner.
+        2-3_Artist Loops_New_12_a: Przed rozpoczęciem rysunku, artysta musi skręcić w lewo pod kątem 60 stopni aby ustawić się na właściwej pozycji.
+        2-3_Artist Loops_New_12_b: Po artysty idzie do przodu 100 pikseli, będzie musiał włączyć prawo 120 stopni narysować kąt ostry.
+        2-3_Artist Loops_New_12_c: Artysta musi włączyć prawa tylko 60 stopni stworzyć rozwarty kąt.
       2-3 Artist Loops New 13_authored_hint:
-        2-3_Artist_Loops_New_13_a: "At the end of each diamond, the artist is already facing the right direction to start the next one.  \n\nBecause of this, we don't need to add an extra `turn left by` block before we start again."
-        2-3_Artist_Loops_New_13_b: "To make each diamond, the artist needs to:   \n- move\n- turn right 120 degrees\n- move\n- turn right 60 degrees  \n\nThen do it all again!"
+        2-3_Artist_Loops_New_13_a: "Na koniec każdego diamentu artysta jest już skierowany we właściwym kierunku, do rozpoczęcia kolejnego.    W związku z tym nie trzeba dodać dodatkowej komendy 'skręcić w lewo przez', zanim zaczniemy ponownie rysować."
+        2-3_Artist_Loops_New_13_b: "Aby narysować każdy diament, artysta musi wykonać komendy: \n- idź do przodu \n- skręć w prawo o 120 stopni\n- idź do przodu \n- skręć w prawo o 60 stopni\n\nTeraz zrób to wszystko jeszcze raz!"
       2-3 Artist Loops New 9_authored_hint:
-        2-3_Artist_Loops_New_9_a: The artist needs to turn 45 degrees to the right before he starts drawing.
-        2-3_Artist_Loops_New_9_b: This V is really just half of a square.  What would the code be to draw half of a square?
+        2-3_Artist_Loops_New_9_a: Artysta musi skręcić o 45 stopni w prawo, zanim zacznie rysować.
+        2-3_Artist_Loops_New_9_b: Ten kształt grotu jest naprawdę tylko połową kwadratu.  Jaki byłby kod, który rysuje połowę kwadratu?
       2-3 Artist Nested Loops 1_authored_hint:
-        2-3_Artist_Nested_Loops_1_a: Remember to put all of the grey blocks inside of your loop.
+        2-3_Artist_Nested_Loops_1_a: Pamiętaj, aby umieścić wszystkie szare bloki kodu wewnątrz swojej pętli.
       2-3 Artist Nested Loops 3_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
-        2-3_Artist_Nested_Loops_3_b: Remember to put all of the grey code and your turn block inside of a loop.
+        2-3_Artist_Nested_Loops_3_a: "Potrzebujesz pomocy z obliczania kątów?  \n** 360/12 = 30 **"
+        2-3_Artist_Nested_Loops_3_b: Pamiętaj, aby umieścić wszystkie szare bloki kodu i twój ruch wewnątrz pętli.
       2-3 Artist Nested Loops 4_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: "Potrzebujesz pomocy z obliczania kątów?  \n** 360/12 = 30 **"
       2-3 Artist Nested Loops 5_authored_hint:
-        2-3_Artist_Nested_Loops_5_a: "Try using the `jump forward` block to get from the top of one square to the place where you will start the next. \n\nIf your squares are 20 pixels tall and they are 20 pixels apart, how far do you need to jump?"
+        2-3_Artist_Nested_Loops_5_a: "Spróbuj użyć bloku 'skok do przodu', aby przejść o jeden kwadrat do miejsca, w którym rozpocznie się rysowanie następnego.   \n\nJeśli bok Twoich kwadratów to 20 pikseli wysokości i są one oddalone o 20 pikseli od siebie, to jak daleko potrzebujesz skoczyć?"
       2-3 Artist Nested Loops 7_authored_hint:
-        2-3_Artist_Nested_Loops_7_a: "How far should you turn in each loop?  \n\nWhat is 360/10?"
+        2-3_Artist_Nested_Loops_7_a: "Jaki powinien być Twój ruch w każdej pętli?   \n\nIle to jest 360/10?"
       2-3 Artist Nested Loops 9_authored_hint:
-        2-3_Artist_Nested_Loops_9_a: |-
-          Need help finding the correct angle?
+        2-3_Artist_Nested_Loops_9_a: |2
+          Potrzebujesz pomocy w znalezieniu odpowiedniego kąta?
           
-          **360 / 12 = 30**
+           ** 360 / 12 = 30 **
       2-3 Bee Conditionals 14_authored_hint:
-        2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure out how to use an extra `repeat` loop to cut down on code?
-        2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:  \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar, if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n  - Make two honey"
+        2-3_Bee_Conditionals_14_a: Przez dłuższy czas zastanawiasz się jak ułożyć kolejne bloki? Potraktuj czerwony kwiat dokładnie tak samo, jak fioletowy!
+        2-3_Bee_Conditionals_14_b: Gdyby czerwony kwiat był fioletowy, czy możesz sobie wyobrazić, jak używać dodatkowych powtórzeń pętli skrócenia kodu?
+        2-3_Bee_Conditionals_14_c: "Spróbuj zrobić to w 2 oddzielnych krokach:  \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Pobierz nektar 3 razy\n  - Przejdź o 5 pól\n  - Sprawdź, czy jest nektar, jeśli tak, weź go\n  - Skręć w lewo\n  \n2) Zrób miód \n  - Przesuń się na nastepne pole\n  - Zrób miód 2 razy"
       2-3 Bee Conditionals 15_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or 1 nectar and they can change each time you run the program.'
+        2-3_Bee_Conditionals_15_a: 'Pamiętaj: Fioletowe kwiaty mogą mieć nektar lub nie (0 lub 1) i mogą zmienić ten stan za każdym uruchomieniem programu.'
       2-3 Bee Conditionals 3_authored_hint:
-        2-3_Bee_Conditionals_3_a: The code will be shortest if you use a loop each time you move forward, another loop to gather nectar, and another one to make honey.
+        2-3_Bee_Conditionals_3_a: Kod będzie krótszy, jeśli użyjesz 2 pętli, za każdym przejściem do przodu. Innej, aby  zebrać nektar, a innej aby zrobić miód.
       2-3 Bee Conditionals 6_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1 nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: 'Pamiętaj: Fioletowe kwiaty mogą mieć nektar lub nie (0 lub 1), za każdym razem, gdy uruchamiasz program!'
       2-3 Bee Debugging 1_authored_hint:
-        2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_1_a: Jeśli znalazłeś i skorygowałeś jakiś niepoprawny blok, czy widzisz już jakiś wzorzec, który pozwoli Ci wykonać instrukcje prościej, za pomocą pętli 'repeat'?
       2-3 Bee Debugging 2_authored_hint:
-        2-3_Bee_Debugging_2_a: Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_2_a: Jeśli znalazłeś i skorygowałeś jakiś niepoprawny blok, czy widzisz już jakiś wzorzec, który pozwoli Ci wykonać instrukcje prościej, za pomocą pętli 'repeat'?
       2-3 Bee Debugging 4_authored_hint:
-        2-3_Bee_Debugging_4_a: Is there any place where the bee does something that doesn't make sense? What happens when you change that block?
+        2-3_Bee_Debugging_4_a: Czy widzisz jakieś miejsce, gdzie pszczoła robi coś, co nie ma sensu? Co się stanie, gdy zmienisz ten fragment bloku?
       2-3 Bee Functions 4_authored_hint:
         2-3_Bee_Functions_4_a: Nie musisz używać pętli z funkcją. Spróbuj w ruchu, za pomocą funkcji, by przeniósł się ponownie przy użyciu funkcji.
       2-3 Bee Functions 6_authored_hint:
         2-3_Bee_Functions_6_a: Nie musisz używać pętli z funkcją. Spróbuj w ruchu, za pomocą funkcji, by przeniósł się ponownie przy użyciu funkcji.
       2-3 Bee Functions 8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel! \n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       2-3 Bee Functions 9_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel!"
         2-3_Bee_Functions_8_b: |-
-          Remember to build your code inside of the green function block.
+          Pamiętaj, aby budować kodu wewnątrz zielonego bloku funkcji.
           
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       2-3 Bee Loops 2_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: Powinieneś użyć czterech bloków wewnątrz pętli.
       2-3 Bee Loops 3_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Powinieneś mieć 6 bloków wewnątrz pętli.
       2-3 Bee Loops 3B_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
+        2-3_Bee_Loops_3B_a: Będziesz potrzebować dwóch różnych pętli 'repeat', jeden po drugim.
       2-3 Bee Loops 4_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Powinieneś użyć 5 bloków wewnątrz pętli.
       2-3 Bee Loops 4A_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing code at the end of your program outside of your loop.
+        2-3_Bee_Loops_4A_a: Najpierw powinieneś się obrócić, a nie przesunąć na kolejne pole.
+        2-3_Bee_Loops_4A_b: Ostatnią częścią programu będzie napisanie kodu na koniec programu, już poza pętlą.
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.
       2-3 Bee Loops 5_authored_hint:
         2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right away, start by coding out each move and look for a pattern.
@@ -183,7 +183,7 @@ pl:
         2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.
         2-3_Bee_Loops_6_b: Gdy skończysz, powinno być 6 bloków w pętli 'repeat'.
       2-3 Bee Loops 7_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: Najpierw powinieneś się obrócić, a nie przesunąć na kolejne pole.
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  '
       2-3 Maze 1_authored_hint:
         2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbar area out into the workspace and connect it to the `when run` block.
@@ -1547,7 +1547,7 @@ pl:
           </block>
           </xml>
       Course 4 SCFL 1_authored_hint:
-        Course_4_SCFL_1_a: 'Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)'
+        Course_4_SCFL_1_a: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
         Course_4_SCFL_1_b: 'Spróbuj użyć dwóch pętlach "dla": jednej dla wznoszenia się by zebrać nektar, a drugiej dla schodzenia i robienia miodu.'
         Course_4_SCFL_1_c: "Zauważ, że jedna pętla \"dla\" potrzebuje wewnątrz wielu zwykłych pętli, które powtarzaj się 'licznik' razy, aby utworzyć wzór wznoszących się schodów. Inna pętla \"dla\" potrzebuje tylko jednej zwykłej pętli, aby zrobić 'licznik' miodu."
         Course_4_SCFL_1_d: |-
@@ -1767,7 +1767,7 @@ pl:
           </xml>
       Course 4 SCFL 1b_authored_hint:
         Course_4_SCFL_1b_a: Spróbuj użyć pętli "dla".
-        Course_4_SCFL_1b_b: 'Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)'
+        Course_4_SCFL_1b_b: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
         Course_4_SCFL_1b_c: |-
           **Solution:**
           
@@ -1830,7 +1830,7 @@ pl:
           </block>
           </xml>
       Course 4 SCFL 2_authored_hint:
-        Course_4_SCFL_2_a: 'Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)'
+        Course_4_SCFL_2_a: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
         Course_4_SCFL_2_b: Notice that there are three points during each iteration of this `for` loop where you stop to interact with objects.
         Course_4_SCFL_2_c: During each iteration of the `for` loop, the number for each object relates to the `counter` variable in some way.
         Course_4_SCFL_2_d: |-
@@ -3511,68 +3511,68 @@ pl:
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make sure blocks are connected under `when run`.
       MC_HOC_2017_01_Cole_authored_hint:
-        MC_HOC_2017_01_Cole_a: Przejdź postacią gracza do domu, używając klawiszy strzałek. Aby wygrać, trzeba znaleźć się na pomarańczowym polu.
+        MC_HOC_2017_01_Cole_a: Użyj klawiszy strzałek, aby skierować gracza do domu. Aby wygrać, trzeba znaleźć się na pomarańczowym kwadracie.
       MC_HOC_2017_01_RETRY_authored_hint:
-        MC_HOC_2017_01_RETRY_a: Przeciągnij jeden blok "ruch do przodu" ze skrzynki z narzędziami do obszaru roboczego i przymocuj pod blokiem "po uruchomieniu".
-        MC_HOC_2017_01_RETRY_b: Nie zapomnij kliknąć przycisku "Wykonaj", aby Agent wykonał kod.
-        MC_HOC_2017_01_RETRY_c: Po wykonaniu całego kodu przez Agenta możesz poruszać się postacią gracza przy użyciu klawiszy strzałek!
+        MC_HOC_2017_01_RETRY_a: Przeciągnij jeden blok "idź do przodu" ze skrzynki z narzędziami do obszaru roboczego i umieść pod blokiem "po uruchomieniu".
+        MC_HOC_2017_01_RETRY_b: Nie zapomnij kliknąć na "Uruchom", aby uruchomić kod dla Agenta.
+        MC_HOC_2017_01_RETRY_c: Po wykonaniu całego kodu przez Agenta, możesz poruszać się graczem przy użyciu klawiszy strzałek!
       MC_HOC_2017_02_Cole_authored_hint:
         MC_HOC_2017_02_Cole_a: Przesuń Agenta o dwa pola do przodu, aby stanął na płycie naciskowej.  Dzięki temu przed graczem otworzą się drzwi.
         MC_HOC_2017_02_Cole_b: |-
-          Naciśnij przycisk "Wykonaj"! 
-          Twój kod może zostać wykonany, nawet jeśli coś jest w nim nie tak.  Wykonuj i resetuj swój kod, aż zobaczysz, co w nim nie gra.
-        MC_HOC_2017_02_Cole_c: Gdy Agent otworzy drzwi, użyj klawiszy strzałek, aby dotrzeć postacią gracza do mapy!
-        MC_HOC_2017_02_Cole_d: Make sure the Agent is following the path outlined on the map!
+          Naciśnij przycisk "Uruchom"! 
+          Możesz uruchomić swój kod, nawet jeśli nie jest poprawny. Wykonuj i resetuj swój kod, aż zobaczysz, co dzieje się źle.
+        MC_HOC_2017_02_Cole_c: Gdy Agent otworzy drzwi, użyj klawiszy strzałek, aby gracz dotarł do mapy!
+        MC_HOC_2017_02_Cole_d: Upewnij się, że Agent podąża ścieżką nakreśloną na mapie!
       MC_HOC_2017_02_Will_authored_hint:
         MC_HOC_2017_02_Cole_a: Przesuń Agenta o dwa pola do przodu, aby stanął na płycie naciskowej.  Dzięki temu przed graczem otworzą się drzwi.
         MC_HOC_2017_02_Cole_b: |-
-          Naciśnij przycisk "Wykonaj: Agent"! 
-          Twój kod może zostać wykonany, nawet jeśli coś jest w nim nie tak.  Wykonuj i resetuj swój kod, aż zobaczysz, co w nim nie gra.
-        MC_HOC_2017_02_Cole_c: Gdy Agent otworzy drzwi, użyj klawiszy strzałek, aby dotrzeć postacią gracza na pomarańczowe pole.
+          Naciśnij przycisk "Uruchom: Agent"! 
+          Możesz uruchomić swój kod, nawet jeśli nie jest poprawny. Wykonuj i resetuj swój kod, aż zobaczysz, co dzieje się źle.
+        MC_HOC_2017_02_Cole_c: Gdy Agent otworzy drzwi, użyj klawiszy strzałek, aby gracz dotarł na pomarańczowy kwadrat.
       MC_HOC_2017_03_Cole_authored_hint:
-        MC_HOC_2017_03_Cole_a: Gdy Agent dotrze do płyty naciskowej, będzie można użyć klawiszy strzałek i dostać się postacią gracza do kompasu!
-        MC_HOC_2017_03_Cole_b: Czy kod wydaje Ci się trochę za długi?  Spróbuj użyć pętli "powtórzenie", aby zobaczyć, czy da się go jakoś skrócić.
+        MC_HOC_2017_03_Cole_a: Gdy Agent dotrze do płyty naciskowej, możesz użyć klawiszy strzałek, aby gracz dotarł do kompasu!
+        MC_HOC_2017_03_Cole_b: Czy uważasz, że kod jest trochę za długi?  Spróbuj użyć pętli "powtórze", aby zobaczyć, czy da się go skrócić!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
           Przekroczenie tych dwóch płyt naciskowych otworzy przejście dla gracza. 
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
-        MC_HOC_2017_04POINT5_RYAN_b: 'Aby Agent się obrócił, użyj bloku "skręć w prawo" '
+        MC_HOC_2017_04POINT5_RYAN_b: 'Aby Agent się obrócił, Użyj bloku "skręć w prawo", aby Agent się obrócił '
         MC_HOC_2017_04POINT5_RYAN_a: Wystarczy, że Agent dotrze do pierwszej płyty naciskowej, aby Alex lub Steve mogli dotrzeć do siekiery.
       MC_HOC_2017_04_Cole_authored_hint:
-        MC_HOC_2017_04_Cole_a: Agent musi wykonać "ruch do przodu" siedem razy.  Jak użyć pętli "powtórzenie", aby to zrobił?
+        MC_HOC_2017_04_Cole_a: Agent musi wykonać "idź do przodu" siedem razy.  Jak użyjesz pętli "powtórz", aby to zrobił?
         MC_HOC_2017_04_Cole_c: |-
-          Naciśnij przycisk "Wykonaj"! 
-          Twój kod może zostać wykonany, nawet jeśli coś jest w nim nie tak.  Wykonuj i resetuj swój kod, aż zobaczysz, co w nim nie gra.
+          Naciśnij przycisk "Uruchom"! 
+          Możesz uruchomić swój kod, nawet jeśli nie jest poprawny. Wykonuj i resetuj swój kod, aż zobaczysz, co dzieje się źle.
         MC_HOC_2017_04_Cole_b: Gdy Agent dotrze do płyty naciskowej, otworzy drzwi dla gracza.
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Czy wiesz, że w pętli możesz umieścić więcej niż jeden fragment kodu?  Spróbuj umieścić w pętli "powtórzenie" deskę **oraz** "ruch do przodu", aby ukończyć tę łamigłówkę.
-        MC_HOC_2017_05_Cole_b: Get the Agent across the river, building a bridge as you go.
+        MC_HOC_2017_05_Cole_a: Czy wiesz, że w pętli możesz umieścić więcej niż jeden fragment kodu?  Spróbuj umieścić w pętli "powtórz" deskę oraz "idź do przodu", aby ukończyć tę łamigłówkę.
+        MC_HOC_2017_05_Cole_b: Przeprowadź Agenta przez rzekę, budując stopniowo most.
       MC_HOC_2017_05_Josh_authored_hint:
-        MC_HOC_2017_05_Cole_a: Czy wiesz, że w pętli możesz umieścić więcej niż jeden fragment kodu?  Spróbuj umieścić w pętli "powtórzenie" deskę **oraz** "ruch do przodu", aby ukończyć tę łamigłówkę.
+        MC_HOC_2017_05_Cole_a: Czy wiesz, że w pętli możesz umieścić więcej niż jeden fragment kodu?  Spróbuj umieścić w pętli "powtórz" deskę oraz "idź do przodu", aby ukończyć tę łamigłówkę.
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: Ile razy powtarza się ta pętla, a ile razy *powinna* się powtórzyć?
-        MC_HOC_2017_06_Cole_b: 'Help the Agent build a bridge all the way across the water! '
+        MC_HOC_2017_06_Cole_a: Ile razy powtarza się ta pętla, a ile razy powinna się powtórzyć?
+        MC_HOC_2017_06_Cole_b: 'Pomóż Agentowi zbudować most przez calutką wodę! '
       MC_HOC_2017_06_Josh_authored_hint:
-        MC_HOC_2017_06_Cole_a: Spróbuj umieścić w pętli "powtórzenie" więcej niż jedną instrukcję!
+        MC_HOC_2017_06_Cole_a: Spróbuj umieścić w pętli "powtórz" więcej niż jedną instrukcję!
       MC_HOC_2017_07_Cole_authored_hint:
-        MC_HOC_2017_07_Cole_c: All you need to have the Agent do is clear the path to the Minecart.
-        MC_HOC_2017_07_Cole_a: Aby rozwiązać tę łamigłówkę, musisz zrozumieć działanie funkcji "wyczyść drogę". Można ją wywołać w dowolnym momencie, używając zielonego bloczku "wyczyść drogę" znajdującego się w skrzynce z narzędziami.
-        MC_HOC_2017_07_Cole_b: Spróbuj użyć bloków funkcyjnych jednocześnie z innymi blokami. Ułatwi to rozwiązanie tej łamigłówki.
+        MC_HOC_2017_07_Cole_c: Wszystko, co Agent musi zrobić, to wyczyścić ścieżkę do Minecartu.
+        MC_HOC_2017_07_Cole_a: Aby rozwiązać tę łamigłówkę, musisz zrozumieć działanie funkcji "clear path". Można ją wywołać wiele razy, używając zielonego bloczku "clear path" znajdującego się w skrzynce z narzędziami.
+        MC_HOC_2017_07_Cole_b: Spróbuj użyć bloków funkcyjnych jednocześnie z innymi blokami, aby ułatwić sobie rozwiązanie tej łamigłówki.
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Naciśnij przycisk "Wykonaj: Agent"! 
-          Twój kod może zostać wykonany, nawet jeśli coś jest w nim nie tak.  Wykonuj i resetuj swój kod, aż zobaczysz, co w nim nie gra.
+          Naciśnij przycisk "Uruchom: Agent"! 
+          Możesz uruchomić swój kod, nawet jeśli nie jest poprawny. Wykonuj i resetuj swój kod, aż zobaczysz, co dzieje się źle.
         MC_HOC_2017_08_RY_b: Tę łamigłówkę można rozwiązać na WIELE różnych sposobów.  Wypróbuj kilka z nich!
       MC_HOC_2017_08_Will_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Naciśnij przycisk "Wykonaj: Agent"! 
-          Twój kod może zostać wykonany, nawet jeśli coś jest w nim nie tak.  Wykonuj i resetuj swój kod, aż zobaczysz, co w nim nie gra.
+          Naciśnij przycisk "Uruchom: Agent"! 
+          Możesz uruchomić swój kod, nawet jeśli nie jest poprawny. Wykonuj i resetuj swój kod, aż zobaczysz, co dzieje się źle.
         MC_HOC_2017_08_RY_b: Tę łamigłówkę można rozwiązać na WIELE różnych sposobów.  Wypróbuj kilka z nich!
       MC_HOC_2017_10_Cole_authored_hint:
         MC_HOC_2017_10_Cole_a: Użycie funkcji ułatwi rozwiązanie tej łamigłówki!
       MC_HOC_2017_10_RETRY_authored_hint:
-        MC_HOC_2017_10_Cole_b: Don't know where to go?  See if you can find the dotted line!
+        MC_HOC_2017_10_Cole_b: Nie wiesz, gdzie iść? Sprawdź, czy możesz znaleźć wykropkowaną linię!
         MC_HOC_2017_10_Cole_a: Użycie funkcji ułatwi rozwiązanie tej łamigłówki!
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Spróbuj tak pokierować Agentem, aby wybudował kilka mostów. Dzięki temu Alex lub Steve będą mogli wyjść poza granice mapy.
@@ -3582,14 +3582,14 @@ pl:
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_Ali_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Naciśnij przycisk "Wykonaj"! 
-          Twój kod może zostać wykonany, nawet jeśli coś jest w nim nie tak.  Wykonuj i resetuj swój kod, aż zobaczysz, co w nim nie gra.
+          Naciśnij przycisk "Uruchom"! 
+          Możesz uruchomić swój kod, nawet jeśli nie jest poprawny. Wykonuj i resetuj swój kod, aż zobaczysz, co dzieje się źle.
         MC_HOC_2017_08_RY_b: Tę łamigłówkę można rozwiązać na WIELE różnych sposobów.  Wypróbuj kilka z nich!
-        MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through the lava.
+        MC_HOC_2017_08_RY_c: Wykropkowana linia wskaże ci prostą ścieżkę poprzez lawę.
       MC_HOC_2017_FP10x10_authored_hint: [ ]
       MC_HOC_2017_FP10x10_RE_authored_hint: [ ]
       MC_HOC_2017_FP20x20_authored_hint:
-        MC_HOC_2017_13_Cole_a: Spróbuj tak pokierować Agentem, aby wybudował kilka mostów. Dzięki temu Alex lub Steve będą mogli wyjść poza granice mapy.
+        MC_HOC_2017_13_Cole_a: Spróbuj tak pokierować Agentem tak, aby zbudował kilka dróg dla minicart, dzięki temu będziesz mógł wyruszyć w świat!
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:
@@ -4200,10 +4200,10 @@ pl:
           * Make 3 honey
           * Move backward
       course3_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       course3_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       course3_bee_functions_challenge3_authored_hint:
         courseF_bee_functions_challenge1_a: You can use the functions in the tool box to help you. You can call a function inside of another function's definition!
@@ -5191,7 +5191,7 @@ pl:
       courseA_collector_preLoops5_authored_hint:
         courseA_collector_preLoops5_a: You'll need to go two different directions to get even one gem!
       courseA_collector_preLoops6_authored_hint:
-        courseA_collector_preLoops6_a: 'You will need to use two ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) blocks to solve this puzzle.'
+        courseA_collector_preLoops6_a: You will need to use two ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) blocks to solve this puzzle.
       courseA_collector_preLoops7_authored_hint:
         courseA_collector_loops2_b: |-
           After you have moved to a square with treasure, use this block to pick it up.
@@ -5649,7 +5649,7 @@ pl:
       courseB_maze_seq9_challenge1_authored_hint: [ ]
       courseB_maze_seqCold_authored_hint:
         courseB_maze_seqCold_a: Stuck? Try tracing the bird's path with your finger.
-        courseB_maze_seqCold_b: 'The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )'
+        courseB_maze_seqCold_b: The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )
       courseB_maze_seqOld_authored_hint:
         courseB_maze_seqOld_a: If you're having trouble, try writing down the steps on a piece of paper first.
       courseB_maze_seq_challenge1_authored_hint:
@@ -6596,7 +6596,7 @@ pl:
         courseD_artist_nestedLoops2_a: Nest your loops by surrounding your triangle code with another `repeat` loop.
         courseD_artist_nestedLoops2_b: Remember to put the `turn` block inside of the loop so that the artist turns after each triangle.
       courseD_artist_nestedLoops3_authored_hint:
-        courseD_artist_nestedLoops3_a: "Try using the `jump forward` block to get from the top of one square to the place where you will start the next. \n\nIf your squares are 20 pixels tall and they are 20 pixels apart, how far do you need to jump?"
+        courseD_artist_nestedLoops3_a: "Spróbuj użyć bloku 'skok do przodu', aby przejść o jeden kwadrat do miejsca, w którym rozpocznie się rysowanie następnego.   \n\nJeśli bok Twoich kwadratów to 20 pikseli wysokości i są one oddalone o 20 pikseli od siebie, to jak daleko potrzebujesz skoczyć?"
         courseD_artist_nestedLoops3_b: 'Don''t forget to use a nested loop to solve this puzzle quickly. '
         courseD_artist_nestedLoops3_c: 'Start by using a `repeat` loop to make one square.  Next, repeat that square 8 times, jumping 40 pixels in between. '
       courseD_artist_nestedLoops4_authored_hint:
@@ -6743,9 +6743,11 @@ pl:
       courseD_bee_conditionals1_predict1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals2_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.
         courseD_bee_conditionals2_b: You can use a `repeat` loop or a `while path ahead` to move through this maze.
         courseD_bee_conditionals2_c: You don't have to check for honeycombs, there will only be flowers or blank spaces under the clouds.
+        courseD_bee_conditionals2_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals2_test_authored_hint:
         courseD_bee_conditionals2_aa: Need help getting started?  Here is a little hint video.
         courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.
@@ -6753,27 +6755,38 @@ pl:
         courseD_bee_conditionals2_c: You don't have to check for honeycombs, there will only be flowers or blank spaces under the clouds.
         courseD_bee_conditionals2_d: Need help finishing things up?  Watch this hint video.
       courseD_bee_conditionals3_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.
         courseD_bee_conditionals3_b: You can use a `repeat` loop or a `while` loop to keep the bee moving forward. Use whichever one you like!
         courseD_bee_conditionals3_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseD_bee_conditionals3_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals4_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals4_a: You can still treat every space as if there is a cloud over it, even though you can see the whole path.
         courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check each space for nectar. '
         courseD_bee_conditionals4_c: Using <xml><block type="maze_untilBlocked"/></xml> block, you should move forward and check for a flower. If there is a flower, what should the bee do?
+        courseD_bee_conditionals4_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals5_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals5_a: Think of every side of the rectangular path as a path by itself. Set up a nested loop with a `repeat` block on the outside and a `while there is a path ahead` loop on the inside. How many paths does the bee need to buzz down if the bee needs to buzz every side with a flower?
-        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block you will need to move forward and check for a flower. How do you check if there is a flower? What do you do if there is a flower?
         courseD_bee_conditionals5_c: There are 3 sides of the rectangle with flowers, so the code needs to `repeat 3 times`. In every repeat, the bee will need to continue along the path, `while there is a path ahead`. To continue down the path, the bee will need to `move forward`. While on the path, the bee needs to check for a flower. `if there is a flower`, the bee should `get nectar`.
+        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block you will need to move forward and check for a flower. How do you check if there is a flower? What do you do if there is a flower?
+        courseD_bee_conditionals5_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals6_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for honeycomb beneath each cloud.
         courseD_bee_conditionals6_b: In this case, you do not need to check for nectar under the clouds.
         courseD_bee_conditionals6_c: Is there a loop you can use to make your code simpler?
+        courseD_bee_conditionals6_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals7_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
         courseD_bee_conditionals7_b: If there is not a flower under the cloud, there must be a honeycomb, so you don't need to think about the case of an empty space.
+        courseD_bee_conditionals7_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals7_predict2_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
       courseD_bee_conditionals8_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals8_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
         courseD_bee_conditionals8_b: |-
           This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
@@ -6784,6 +6797,7 @@ pl:
           Even though there is a cloud right in front of you, you don't have to visit it first. Try starting with the cloud in the bottom right of the square.
           
           ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
+        courseD_bee_conditionals8_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals9_authored_hint: [ ]
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: Can you find a path that reaches every flower and honeycomb without hitting any trees? The best path is a spiral.
@@ -7731,15 +7745,15 @@ pl:
         courseE_bee_functions5_c: The `move forward` block can be changed into a `move backward` block. Use this instead of turning all the way around at the end of the paths!
         courseE_bee_functions5_b: "Your function should make the bee: \n- turn\n- move forward\n- collect all of the nectar\n- move backward\n- turn back to the direction that the bee started from"
       courseE_bee_functions6_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel! \n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseE_bee_functions6_b: It might help in this case to move inside of the function, but not all of your `move` blocks need to be there.
       courseE_bee_functions6test_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel! \n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseE_bee_functions6_b: It might help in this case to move inside of the function, but not all of your `move` blocks need to be there.
       courseE_bee_functions7_authored_hint:
-        courseE_bee_functions7_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions7_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel!"
         courseE_bee_functions7_b: |-
-          Remember to build your code inside of the green function block.
+          Pamiętaj, aby budować kodu wewnątrz zielonego bloku funkcji.
           
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseE_bee_functions7_c: This function should turn the bee to head him down the path, collect the nectar, make the honey, then turn the bee around and bring him back.
@@ -7751,10 +7765,10 @@ pl:
         courseE_bee_functions9_a: You can use the exact same function for this puzzle as you did in the last puzzle.  All you need to do is create a function that collects all of the nectar when you get to each flower.
         courseE_bee_functions9_b: Even though you know how much nectar some of the flowers have, a `while` loop can make one function work for all of them.
       courseE_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       courseE_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       courseE_bee_ramp14_authored_hint:
         courseE_bee_ramp14_a: The bee works just like the farmer in the previous puzzle. Buzz along the path and collect nectar while there is nectar (while nectar > 0) and make all of the honey.
@@ -8818,7 +8832,7 @@ pl:
         courseF_bee_for9_d: This is very similar to the other stair step puzzle earlier in the stage, but this time you’re counting down!
       courseF_bee_for_challenge1_authored_hint: [ ]
       courseF_bee_for_challenge2_authored_hint:
-        courseF_bee_for_challenge2_a: 'Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)'
+        courseF_bee_for_challenge2_a: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
         courseF_bee_for_challenge2_b: 'Spróbuj użyć dwóch pętlach "dla": jednej dla wznoszenia się by zebrać nektar, a drugiej dla schodzenia i robienia miodu.'
         courseF_bee_for_challenge2_c: "Zauważ, że jedna pętla \"dla\" potrzebuje wewnątrz wielu zwykłych pętli, które powtarzaj się 'licznik' razy, aby utworzyć wzór wznoszących się schodów. Inna pętla \"dla\" potrzebuje tylko jednej zwykłej pętli, aby zrobić 'licznik' miodu."
         courseF_bee_for_challenge2_d: |-
@@ -8955,7 +8969,7 @@ pl:
           </block>
           </xml>
       courseF_bee_for_challenge3_authored_hint:
-        courseF_bee_for_challenge2_a: 'Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)'
+        courseF_bee_for_challenge2_a: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
         courseF_bee_for_challenge2_b: 'Spróbuj użyć dwóch pętlach "dla": jednej dla wznoszenia się by zebrać nektar, a drugiej dla schodzenia i robienia miodu.'
         courseF_bee_for_challenge2_c: "Zauważ, że jedna pętla \"dla\" potrzebuje wewnątrz wielu zwykłych pętli, które powtarzaj się 'licznik' razy, aby utworzyć wzór wznoszących się schodów. Inna pętla \"dla\" potrzebuje tylko jednej zwykłej pętli, aby zrobić 'licznik' miodu."
         courseF_bee_for_challenge2_d: |-
@@ -9113,18 +9127,18 @@ pl:
         courseF_bee_functions5a_b: Use a `while` loop to travel down all of the main paths, since they are different lengths.
         courseF_bee_functions5a_c: Within your `while` loop, make sure to move forward, then use your function to check for a path.
       courseF_bee_functions6_authored_hint:
-        courseF_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseF_bee_functions6_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel! \n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseF_bee_functions6_b: Your function should check if there is a flower or honeycomb, get nectar or make honey, then turn.
         courseF_bee_functions6_c: Since you are turning within your function, you only need one `while` loop to get you through this maze.
       courseF_bee_functions7_authored_hint:
         courseF_bee_functions7_a: You can look back at the last puzzle to see your function.
         courseF_bee_functions7_b: Try drawing a path through this maze with your finger. Where will the bee have to make a decision?
       courseF_bee_functions8a_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel!"
         courseF_bee_functions8a_b: |+
           Remember to build code inside of the function editor.
       courseF_bee_functionsPre7_authored_hint:
-        courseF_bee_functions7_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions7_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel!"
         courseF_bee_functions7_b: |-
           Remember to build code inside of the green function block.
           
@@ -9245,7 +9259,7 @@ pl:
           </block>
           </xml>
       courseF_bee_functions_challenge2_recursion_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel!"
         courseF_bee_functions8a_b: |+
           Remember to build code inside of the function editor.
       courseF_bee_fwp1_authored_hint:
@@ -9930,7 +9944,7 @@ pl:
         grade1_maze_sequence7a: If you're stuck, try adding one block at a time until you solve the puzzle.
       grade1_maze_sequence8_authored_hint:
         grade1_maze_sequence8_a: Stuck? Try tracing the bird's path with your finger.
-        grade1_maze_sequence8_b: 'The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )'
+        grade1_maze_sequence8_b: The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )
       grade1_maze_sequence9_authored_hint:
         grade1_maze_sequence9_a: If you're having trouble, try writing down the steps on a piece of paper first.
       grade1_maze_sequenceA_authored_hint:
@@ -9981,7 +9995,7 @@ pl:
           Remember that the code from the last puzzle was:
           
           ![](https://images.code.org/e5c7492f509dd41efe2888c7e7895c28-image-1461177002636.29.02.png)
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code inside the loop.
+        2-3_Artist_Loops_New_11_b: Twój następny ruch powinien zacząć się na ** koniec ** kodu poprzedniej pętli.
       grade2_MakeDogTag_BFP_authored_hint: [ ]
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
@@ -10053,19 +10067,19 @@ pl:
       grade3_Conditionals_10 BAD_authored_hint:
         4-5_Bee_Nested_Loops_Rows_a: Try treating this puzzle like a long rectangle where the bee needs to move forward, then turn left several times to complete the path.
       grade3_Conditionals_11_authored_hint:
-        2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure out how to use an extra `repeat` loop to cut down on code?
+        2-3_Bee_Conditionals_14_a: Przez dłuższy czas zastanawiasz się jak ułożyć kolejne bloki? Potraktuj czerwony kwiat dokładnie tak samo, jak fioletowy!
+        2-3_Bee_Conditionals_14_b: Gdyby czerwony kwiat był fioletowy, czy możesz sobie wyobrazić, jak używać dodatkowych powtórzeń pętli skrócenia kodu?
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:  \n\n![](https://images.code.org/670ac0889a8f523865ff4099b4c54844-image-1463445460440.36.42.png)\n\n1) Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar, if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n  - Make two honey"
       grade3_Conditionals_12_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or 1 nectar and they can change each time you run the program.'
+        2-3_Bee_Conditionals_15_a: 'Pamiętaj: Fioletowe kwiaty mogą mieć nektar lub nie (0 lub 1) i mogą zmienić ten stan za każdym uruchomieniem programu.'
       grade3_Conditionals_2_authored_hint:
-        2-3_Bee_Conditionals_3_a: The code will be shortest if you use a loop each time you move forward, another loop to gather nectar, and another one to make honey.
+        2-3_Bee_Conditionals_3_a: Kod będzie krótszy, jeśli użyjesz 2 pętli, za każdym przejściem do przodu. Innej, aby  zebrać nektar, a innej aby zrobić miód.
       grade3_Conditionals_4_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1 nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: 'Pamiętaj: Fioletowe kwiaty mogą mieć nektar lub nie (0 lub 1), za każdym razem, gdy uruchamiasz program!'
       grade3_Conditionals_TeacherIDo_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1 nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: 'Pamiętaj: Fioletowe kwiaty mogą mieć nektar lub nie (0 lub 1), za każdym razem, gdy uruchamiasz program!'
       grade3_Debugging_1_authored_hint:
-        2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_1_a: Jeśli znalazłeś i skorygowałeś jakiś niepoprawny blok, czy widzisz już jakiś wzorzec, który pozwoli Ci wykonać instrukcje prościej, za pomocą pętli 'repeat'?
       grade3_Debugging_10_authored_hint:
         grade3_Debugging_10_a: |-
           Start by looking at just the first loop.
@@ -10111,27 +10125,27 @@ pl:
         grade3_Debugging_8_a: "Try using the debugging process a couple of times in a row. \n\nWhat causes the first problem?\n\nOnce that problem is fixed, what goes wrong?"
         grade3_Debugging_8_b: "If you're having a hard time figuring out how to make the stair step pattern, try tracing it with your finger and saying the commands out loud. \n\nDon't forget to point out the direction of the turns!"
       grade3_Debugging_TeacherIDo_authored_hint:
-        2-3_Bee_Debugging_4_a: Is there any place where the bee does something that doesn't make sense? What happens when you change that block?
+        2-3_Bee_Debugging_4_a: Czy widzisz jakieś miejsce, gdzie pszczoła robi coś, co nie ma sensu? Co się stanie, gdy zmienisz ten fragment bloku?
       grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Powinieneś użyć 5 bloków wewnątrz pętli.
       grade3_Loops_11_authored_hint:
         2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right away, start by coding out each move and look for a pattern.
       grade3_Loops_12_authored_hint:
         2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.
         2-3_Bee_Loops_6_b: Gdy skończysz, powinno być 6 bloków w pętli 'repeat'.
       grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
+        2-3_Bee_Loops_3B_a: Będziesz potrzebować dwóch różnych pętli 'repeat', jeden po drugim.
       grade3_Loops_5_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: Najpierw powinieneś się obrócić, a nie przesunąć na kolejne pole.
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  '
       grade3_Loops_6_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing code at the end of your program outside of your loop.
+        2-3_Bee_Loops_4A_a: Najpierw powinieneś się obrócić, a nie przesunąć na kolejne pole.
+        2-3_Bee_Loops_4A_b: Ostatnią częścią programu będzie napisanie kodu na koniec programu, już poza pętlą.
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.
       grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: Powinieneś użyć czterech bloków wewnątrz pętli.
       grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Powinieneś mieć 6 bloków wewnątrz pętli.
       grade3_RunningFarm_1_authored_hint:
         grade3_RunningFarm_1_a: You will need to look for corn 5 times, using a repeat loop.
         grade3_RunningFarm_1_b: Make sure to use an `if at corn` block or you might try to pick something that's not there!
@@ -10343,11 +10357,11 @@ pl:
         grade4_bee_functions6_a: Edit the function so that it solves the puzzle without having to change the main program.
         grade4_bee_functions6_b: "Your function should make the bee: \n- turn\n- move forward\n- collect all of the nectar\n- turn around\n- move back to the main path\n- turn back to the direction that the bee started from"
       grade4_bee_functions7_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel! \n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       grade4_bee_functions8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel!"
         2-3_Bee_Functions_8_b: |-
-          Remember to build your code inside of the green function block.
+          Pamiętaj, aby budować kodu wewnątrz zielonego bloku funkcji.
           
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         2-3_Bee_Functions_8_c: This function should turn the bee to head him down the path, collect the nectar, make the honey, then turn the bee around and bring him back.
@@ -10386,11 +10400,11 @@ pl:
         2-3_Artist_6_b: Skoro już patrzę w prawo, będzie łatwiej pójść najpierw do przodu a potem, skręcając w lewo, stworzyć trójkąt.
         2-3_Artist_6_c: Każdy bok trójkąta ma taką samą długość jak każdy bok kwadratu... 100 pikseli!
       grade4_review_bee1_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
+        2-3_Bee_Loops_3B_a: Będziesz potrzebować dwóch różnych pętli 'repeat', jeden po drugim.
       grade4_review_bee2_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Powinieneś mieć 6 bloków wewnątrz pętli.
       grade4_review_bee3_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Powinieneś użyć 5 bloków wewnątrz pętli.
       grade5_artist_binary10_authored_hint:
         Course_4_Artist_Binary_Free_Play_2b_a: This code uses two `for loops`. One counts up from 1 to 8, the other counts down from 8 to 1.
         Course_4_Artist_Binary_Free_Play_2b_b: Each `for loop` has three repeats.  The first draws the leftmost set of 1s, the second draws the 0s in the middle and the third draws the 1s on the right.
@@ -10597,7 +10611,7 @@ pl:
       gradek_playlab_events1c_authored_hint:
         gradek_playlab_events1c_a: "Here is the block you should connect to the `when run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
       gradek_playlab_events2c_authored_hint:
-        gradek_playlab_events2c_a: 'drag this block out ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) and connect it to ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)'
+        gradek_playlab_events2c_a: drag this block out ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) and connect it to ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
       gradek_playlab_events3c_authored_hint:
         gradek_playlab_events3c_a: |-
           Here is the event block that you will need to get Jorge to move right:
@@ -10668,25 +10682,25 @@ pl:
         iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to have them happen immediately after the program starts.
       k1stickerfreeplay_authored_hint: [ ]
       level 'grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Powinieneś użyć 5 bloków wewnątrz pętli.
       level 'grade3_Loops_11_authored_hint:
         2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right away, start by coding out each move and look for a pattern.
       level 'grade3_Loops_12_authored_hint:
         2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.
         2-3_Bee_Loops_6_b: Gdy skończysz, powinno być 6 bloków w pętli 'repeat'.
       level 'grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
+        2-3_Bee_Loops_3B_a: Będziesz potrzebować dwóch różnych pętli 'repeat', jeden po drugim.
       level 'grade3_Loops_5_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: Najpierw powinieneś się obrócić, a nie przesunąć na kolejne pole.
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  '
       level 'grade3_Loops_6_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing code at the end of your program outside of your loop.
+        2-3_Bee_Loops_4A_a: Najpierw powinieneś się obrócić, a nie przesunąć na kolejne pole.
+        2-3_Bee_Loops_4A_b: Ostatnią częścią programu będzie napisanie kodu na koniec programu, już poza pętlą.
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.
       level 'grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: Powinieneś użyć czterech bloków wewnątrz pętli.
       level 'grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Powinieneś mieć 6 bloków wewnątrz pętli.
       playLabDebugVideo1_authored_hint:
         courseA_playLab_events2_a: "Here is the block you should connect to the `when run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
       sample3_authored_hint:

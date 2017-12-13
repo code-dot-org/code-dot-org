@@ -435,13 +435,13 @@ tr:
           ** Çözüm: **! [Çözüm] blokları (https://images.code.org/d64a0e22c1db1d98c35b243bca6460ab-image-1469727090121.png)
       Course 4 SCF 1a_authored_hint:
         Course_4_SCF_1a_a: 16. aşamadaki fonksiyonları hatırla.
-        Course_4_SCF_1a_b: 'Bu yolu, ana yol olarak kabul et:! [] (https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)'
+        Course_4_SCF_1a_b: Bu yolu, ana yol olarak kabul et:! [] (https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)
         Course_4_SCF_1a_c: Şununla say döngüsü kullanmayı düşün. Adımlar için değil fonksiyon parametreleri için.
         Course_4_SCF_1a_d: |-
           ** Çözüm: **! [Çözüm] blokları (https://images.code.org/aa5a636a1d072e1449b481973ff27337-image-1469727008929.png)
       Course 4 SCF 1b_authored_hint:
         Course_4_SCF_1b_a: "Dikkat bütün bal noktalarının şekilleri benzer.\nFonksiyon için iyi bir yer!"
-        Course_4_SCF_1b_b: 'Arının nasıl yolculuk yapacağıyla ilgili şu fikre bir bak:! [] (https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)'
+        Course_4_SCF_1b_b: Arının nasıl yolculuk yapacağıyla ilgili şu fikre bir bak:! [] (https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)
         Course_4_SCF_1b_c: Arının ilerlemesi gereken mesafe için şununla say döngüsü kullan.
         Course_4_SCF_1b_d: |-
           ** Çözüm: **! [Çözüm blokları] (https://images.code.org/15ef56cd19a1efd510527345f077d6eb-image-1469726894398.png)
@@ -474,11 +474,11 @@ tr:
           ** Çözüm: **! [Çözüm Blokları\t] (https://images.code.org/8742b441717ee3ab7cbc91d84f688dbb-image-1469726297064.png)
       Course 4 SCFL 1b_authored_hint:
         Course_4_SCFL_1b_a: '''Şununla say döngüsü'' (for loop) kullanmayı dene.'
-        Course_4_SCFL_1b_b: 'Hareket için bu seçeneğe bir göz atın:! [] (https://images.code.org/1957633c453f4025a3fd6ce0e201398b-image-1469642319721.png)'
+        Course_4_SCFL_1b_b: Hareket için bu seçeneğe bir göz atın:! [] (https://images.code.org/1957633c453f4025a3fd6ce0e201398b-image-1469642319721.png)
         Course_4_SCFL_1b_c: |-
           ** Çözüm: **! [] (https://images.code.org/349a0baf93e00a679cf7ed348f8309b4-image-1469642354856.png)
       Course 4 SCFL 2_authored_hint:
-        Course_4_SCFL_2_a: 'Hareket için bu seçeneğe bir göz atın:! [] (https://images.code.org/a69c63a039031254097f19231dd7bf95-image-1469726483169.png)'
+        Course_4_SCFL_2_a: Hareket için bu seçeneğe bir göz atın:! [] (https://images.code.org/a69c63a039031254097f19231dd7bf95-image-1469726483169.png)
         Course_4_SCFL_2_b: Dikkatli bakarsan 'Şununla say döngüsü' (for loop) her döndüğünde üç noktada durup nesnelerle etkileşim kuruyorsun. 
         Course_4_SCFL_2_c: Şununla say döngüsünün(for loop) her tekrarında, her nesne bir şekilde 'sayaç' değişkeni ile ilişki kurar. 
         Course_4_SCFL_2_d: |-
@@ -515,7 +515,7 @@ tr:
         Course_4_SCV_1_d: |-
           ** Çözüm: **![Solution] (https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       Course 4 SCV 2_authored_hint:
-        Course_4_SCV_2_a: 'Tamamlanan resim 10 tane bu "çiçeklerden" oluşmakta:! [] (https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)..... ki onlarda 10 adet ongenden oluşmuştur:! [] (https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)'
+        Course_4_SCV_2_a: Tamamlanan resim 10 tane bu "çiçeklerden" oluşmakta:! [] (https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)..... ki onlarda 10 adet ongenden oluşmuştur:! [] (https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)
         Course_4_SCV_2_b: 'Bu tasarım iç içe geçmiş döngüleri (üç derinliğinde) kullanır. Tüm döngüler ''kenar'' sayısı kez çalışmalı. '
         Course_4_SCV_2_c: Her bir ongeni bitirdikten sonra sanatçı sola döner fakat öbür döngülerde sağa döner.
         Course_4_SCV_2_d: Tüm 10 taç yapraklı çiçeklerinizin aynı yere çizilmesini engellemek için '360/kenar sayısı' derece dönmeden önce en dıştaki döngünüzün parçası olarak 'uzunluk/kenar sayısı' kadar atlamayı unutma. 
@@ -747,11 +747,11 @@ tr:
         mc_5_b: Kodu bir defadan fazla çalıştırmak için blokların 'tekrarla' döngüsü içinde olduğundan emin ol.
         mc_5_c: Hata yapmaktan korkma! Bulmacayı çözmemiş olsan bile neler olduğunu görmek için kodu çalıştır.
       Overworld Plant Crops_authored_hint:
-        mc_7_a: Bulunduğunuz yere bitki dikmek için "bitki ek" komutunu kullanın.
-        mc_7_b: Both stripes of dark brown land by the water need to be filled with crops.
+        mc_7_a: Bulunduğunuz yere hasat için "hasat et" komutunu kullanın.
+        mc_7_b: Nehrin iki tarafındaki koyu kahve alanları hasat etmen gerekiyor.
         mc_7_c: '''Tekrarla'' döngüsü içine birden fazla blok ekleyebilirsin.'
       Overworld Powered Minecart_authored_hint:
-        mc_13_a: Use `place rail` to lay rail on the square you are standing in.
+        mc_13_a: '''Yerleştir Ray'' bloğunu kullanarak üzerinde bulunduğun kareye tren rayı yerleştir.'
         mc_13_b: Kodunuzu daha kısaltmak için 'tekrarla' döngülerini kullanın.
       Overworld Shear Sheep_authored_hint:
         mc_3_a: |
@@ -773,19 +773,19 @@ tr:
       Quantum Bee - Ryan_authored_hint:
         test_hint: Bu bir test ipucudur.
       Underground Avoiding Lava_authored_hint:
-        mc_11_a: All of the code is in place to check for lava and deal with it. All you need to do is add a block to move.
+        mc_11_a: Lav olup olmadığını kontrol edip ona göre hareket etmen için bütün kod sana hazır verildi. Tek yapman gereken ilerletmek için gerekli bloğu koyman.
         mc_11_b: '"ilerle" komutu "eğer" bloğunun içinde mi yoksa "eğer" bloğundan sonra mı kullanılmalı?'
       Underground If Statements_authored_hint:
-        mc_12_a: The spaces with red speckles are where you will find Redstone.
+        mc_12_a: Kırmızı lekeler Kırmızıtaş madeni.
         mc_12_b: Kodunuzu kısaltmak için bir 'tekrarla' döngüsü kullanabilir misin?
         mc_12_c: 'Use an `if` statement to check spaces for lava, then place cobblestones. '
       Underground Iron_authored_hint:
-        mc_10_a: The iron blocks are the speckled spaces behind the torch! How are you going to get over there?
-        mc_10_b: When you are standing at the edge of the lava, use `place cobblestone ahead` to make a safe path. Then, you can walk over it!
+        mc_10_a: Meş'alenin arkasındaki lekeli bloklar demir madeni! Oraya nasıl gideceksin?
+        mc_10_b: Lavın kenarında durduğunda, 'ileriye kırıktaş yerleştir' komutunu kullanarak güvenliğini sağlayabilirsin. Sonra da üzerinden yürü!
         mc_10_c: Hata yapmaktan korkma! Bulmacayı çözmemiş olsan bile neler olduğunu görmek için kodu çalıştır.
       Underground Mining Coal_authored_hint:
-        mc_9_a: Are you facing the right way? The `destroy block` mines the block in front of you.
-        mc_9_b: The black specks in the wall are coal! Use `destroy block` on these to mine the coal.
+        mc_9_a: Doğru yöne mi bakıyorsun? 'Bloğu yok et' bloğu önündeki bloğu yok eder.
+        mc_9_b: Duvardaki kara lekeler kömür madeni! 'Bloğu yok et' bloğu ile bu madenleri toplayın.
         mc_9_c: Use `place torch` to put a torch in the space where you are standing.
       aE1_authored_hint: [ ]
       aE2_authored_hint:
@@ -2133,7 +2133,7 @@ tr:
       courseA_collector_preLoops5_authored_hint:
         courseA_collector_preLoops5_a: You'll need to go two different directions to get even one gem!
       courseA_collector_preLoops6_authored_hint:
-        courseA_collector_preLoops6_a: 'You will need to use two ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) blocks to solve this puzzle.'
+        courseA_collector_preLoops6_a: You will need to use two ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) blocks to solve this puzzle.
       courseA_collector_preLoops7_authored_hint:
         courseA_collector_loops2_b: |-
           Hazine olan bir kareye geldiğinde, onu almak için <xml>  <block type="collector_collect"/></xml> bloğunu kullan.
@@ -2542,7 +2542,7 @@ tr:
       courseB_maze_seq9_challenge1_authored_hint: [ ]
       courseB_maze_seqCold_authored_hint:
         courseB_maze_seqCold_a: Stuck? Try tracing the bird's path with your finger.
-        courseB_maze_seqCold_b: 'The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )'
+        courseB_maze_seqCold_b: The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )
       courseB_maze_seqOld_authored_hint:
         courseB_maze_seqOld_a: If you're having trouble, try writing down the steps on a piece of paper first.
       courseB_maze_seq_challenge1_authored_hint:
@@ -3582,9 +3582,11 @@ tr:
       courseD_bee_conditionals1_predict1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals2_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.
         courseD_bee_conditionals2_b: Bu labirent boyunca ilerlemek için 'tekrarla' veya 'yol boyu süresince' bloklarını kullanabilirsiniz.
         courseD_bee_conditionals2_c: Petekleri kontrol etmenize gerek yok, bulutların altında sadece çiçekler veya boş alanlar var.
+        courseD_bee_conditionals2_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals2_test_authored_hint:
         courseD_bee_conditionals2_aa: Need help getting started?  Here is a little hint video.
         courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.
@@ -3592,27 +3594,38 @@ tr:
         courseD_bee_conditionals2_c: Petekleri kontrol etmenize gerek yok, bulutların altında sadece çiçekler veya boş alanlar var.
         courseD_bee_conditionals2_d: Need help finishing things up?  Watch this hint video.
       courseD_bee_conditionals3_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.
         courseD_bee_conditionals3_b: Arının ileriye gitmesini devam ettirmek için 'tekrarla' veya 'süresince' bloklarını kullanabilirsiniz. Hangisini isterseniz onu kullanın!
         courseD_bee_conditionals3_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+        courseD_bee_conditionals3_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals4_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals4_a: You can still treat every space as if there is a cloud over it, even though you can see the whole path.
         courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check each space for nectar. '
         courseD_bee_conditionals4_c: '''Yol olduğu sürece'' bloğu kullandığında ''İlerle'' ve bir çiçek var mı kontrol et. ''Eğer çiçek var ise'' arı ne yapmalı?'
+        courseD_bee_conditionals4_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals5_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals5_a: Dikdörtgen yolun her tarafını ayrı bir yol olarak düşün. "Tekrarla" bloğu içine "sürece bir yol var" bloğu koy. Bütün çiçekleri yoklamak için kaç tane yol gitmek gerekir?
-        courseD_bee_conditionals5_b: '''Sürece bir yol'' bloğu içinde ilerle ve bir çiçek varmı kontrol et. Bir çiçek olup olmadığını nasıl kontrol edebilirim? Bir çiçek ise ne yapıyorsun?'
         courseD_bee_conditionals5_c: Bir üçgenin 3 kenarı vardır bu yüzden 'Tekrarla 3 kez ' döngüsü kullanman gerekir. Her tekrarda 'sürece bir yol' döngüsü ile yol boyunca devam etmek gerekir. Yola devam etmek için 'ilerle ' gerekir. Yolda iken, arının çiçekleri denetlemesi gerekir. 'eğer çiçek ise', 'nektar almalısınız'.
+        courseD_bee_conditionals5_b: '''Sürece bir yol'' bloğu içinde ilerle ve bir çiçek varmı kontrol et. Bir çiçek olup olmadığını nasıl kontrol edebilirim? Bir çiçek ise ne yapıyorsun?'
+        courseD_bee_conditionals5_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals6_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for honeycomb beneath each cloud.
         courseD_bee_conditionals6_b: Bu durumda, bulutların altında nektar var mı diye kontrol etmek zorunda değilsiniz.
         courseD_bee_conditionals6_c: Kodunu daha basit hale getirmek için kullanabileceğin bir döngü var mı?
+        courseD_bee_conditionals6_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals7_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
         courseD_bee_conditionals7_b: Eğer bulutun altında çiçek yoksa, petek olmalı, böylece boş alan durumunu düşünmene gerek kalmaz.
+        courseD_bee_conditionals7_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals7_predict2_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
       courseD_bee_conditionals8_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals8_a: "** Dikkat: ** Bu bulmaca her çalıştırdığınızda değişir.   \nBu problemi çözebilmek için bir koşullu blok kullanmanız ('eğer' veya ' Eğer/Değilse') gerekiyor."
         courseD_bee_conditionals8_b: |-
           This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
@@ -3623,6 +3636,7 @@ tr:
           Her ne kadar tam önünde bir bulut olsa da, ilk olarak onu ziyaret etmek zorunda değilsin. Karenin sağ alt köşesindeki ile başlamayı dene. 
           
           ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
+        courseD_bee_conditionals8_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals9_authored_hint: [ ]
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: "Herhangi bir ağaca vurmadan her çiçeğe ve peteklere ulaşan bir yol bulabilir misin? En iyi yol bir spiraldir.\n\n** Bunu çözmek için sağa dönmeniz yeterlidir **"
@@ -4697,7 +4711,7 @@ tr:
       courseE_farmer_ramp12g_authored_hint:
         courseE_farmer_ramp12G_b: Use an `if/else` block to help the farmer decide if she needs to turn right or left.
       courseE_farmer_ramp13_authored_hint:
-        courseE_farmer_ramp13_a: Her boşlukta bitkilerden biri birden fazla olabilir, bundan dolayı 'sürece' döngüsü kullanarak hepsini aldığından emin ol!
+        courseE_farmer_ramp13_a: Her boşlukta bitkiler birden fazla olabilir, bundan dolayı 'süresince' döngüsü kullanarak hepsini aldığından emin ol!
         courseE_farmer_ramp13_b: '''tekrarla'' döngüsü kullanın böylece her kare için ''eğer'' ifadesi yazmanız gerekmez.'
         courseE_farmer_ramp13_c: If you can't figure out where to put the loops, try writing your code step-by-step and look for patterns.
       courseE_farmer_ramp15_authored_hint:
@@ -4706,7 +4720,7 @@ tr:
         courseE_farmer_ramp15_c: Kabak yolunda hasar etmek için filizler çeşitli miktarlarda mısır ya da marulu gizler.
       courseE_farmer_ramp16_authored_hint:
         courseE_farmer_ramp16_a: Eğer, kabağa doğru yol boyunca lerliyorsak, neyi tekrar tekrar yapmamız gerekmektedir? Ne zaman tekrarlamayı durduracağız?
-        courseE_farmer_ramp16_b: Mısır ya da marulu her boşlukta kontrol etmek kodunu basitleştirmenize yardımcı olacaktır. Eğer bitki varsa ne yapmalısınız? Ya da bir şey yoksa?
+        courseE_farmer_ramp16_b: Mısır ya da marulu her boşlukta kontrol etmek kodunu sadeleştirmeye yardımcı olacaktır. Eğer bitki varsa ne yapmalısın? Ya da bir şey yoksa?
         courseE_farmer_ramp16_c: İlerlemeye devam etmek için 'eğer/değilse' bloku kullanın. İleri yol bloklu ise hangi yola dönmeniz gerekir?
       courseE_maze_predict1_authored_hint: [ ]
       courseE_maze_ramp1_authored_hint:
@@ -6707,7 +6721,7 @@ tr:
         grade1_maze_sequence7a: Eğer zorlanıyorsanız, bu bulmacayı çözene kadar bir defada bir blok eklemeyi deneyin.
       grade1_maze_sequence8_authored_hint:
         grade1_maze_sequence8_a: Stuck? Try tracing the bird's path with your finger.
-        grade1_maze_sequence8_b: 'The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )'
+        grade1_maze_sequence8_b: The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )
       grade1_maze_sequence9_authored_hint:
         grade1_maze_sequence9_a: If you're having trouble, try writing down the steps on a piece of paper first.
       grade1_maze_sequenceA_authored_hint:
@@ -7357,7 +7371,7 @@ tr:
       gradek_playlab_events1c_authored_hint:
         gradek_playlab_events1c_a: "Here is the block you should connect to the `when run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
       gradek_playlab_events2c_authored_hint:
-        gradek_playlab_events2c_a: 'drag this block out ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) and connect it to ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)'
+        gradek_playlab_events2c_a: drag this block out ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) and connect it to ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
       gradek_playlab_events3c_authored_hint:
         gradek_playlab_events3c_a: |-
           Here is the event block that you will need to get Jorge to move right:

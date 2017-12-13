@@ -9,7 +9,7 @@ tr:
           description_audience: 4-6 yaş arası
           stages:
             'Artist: Loops':
-              name: 'Aktör: Döngüler'
+              name: 'Sanatçı: Döngüler'
             'Artist: Sequence':
               name: 'Aktör: Sıra'
             'Artist: Shapes':
@@ -53,7 +53,7 @@ tr:
             'Artist: Debugging':
               name: 'Sanatçı: Hata Ayıklama'
             'Artist: Loops':
-              name: 'Aktör: Döngüler'
+              name: 'Sanatçı: Döngüler'
             'Artist: Nested Loops':
               name: 'Aktör: İç içe Döngüler'
             'Artist: Sequence':
@@ -176,7 +176,7 @@ tr:
             Artist Binary:
               name: Sanaçtı İkili Taban
             'Artist: For Loops':
-              name: 'Sanatçı: For Döngüleri'
+              name: 'Sanatçı: Şununla Say (for) Döngüleri'
             'Artist: Functions':
               name: 'Sanatçı: Fonksiyonlar'
             'Artist: Functions with Parameters':
@@ -224,7 +224,7 @@ tr:
             'Artist: Functions':
               name: 'Sanatçı: Fonksiyonlar'
             'Artist: Loops':
-              name: 'Aktör: Döngüler'
+              name: 'Sanatçı: Döngüler'
             'Artist: Nested Loops':
               name: 'Aktör: İç içe Döngüler'
             'Artist: Sequence':
@@ -2222,6 +2222,12 @@ tr:
               name: Bilgisayar Bilimi ilkeleri kurs sonrası anketi
             Creating Functions with Parameters:
               name: Parametreli Fonksiyonlar yaratma
+            CSP End-of-Semester Mid-course survey:
+              name: CSP End-of-Semester Mid-course survey
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
         csp4:
           title: CSP Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
@@ -2855,7 +2861,7 @@ tr:
           description_audience: Ages 8-98
           stages:
             Artist Functions:
-              name: Aktör Fonksiyonları
+              name: 'Sanatçı: Fonksiyonlar'
             Sample Stage:
               name: Örnek sahne
             The same thing with named levels:
@@ -2863,13 +2869,13 @@ tr:
             You are a coding STAR:
               name: Sen Bir Kodlama YILDIZISIN
         artistExemplar:
-          title: Artist Exemplar
+          title: Sanatçı Örnek
           description: These artist levels will knock the socks off of third graders
           description_short: How can we make the artist levels really hum?
           description_audience: 8 yaş ve üstü (Ders 2 sonrası)
           stages:
             Artist Exemplar:
-              name: Artist Exemplar
+              name: Sanatçı Örnek
         teachercon:
           title: TeacherCon Supports
           description: We will use this during TeacherCon to deliver supports and materials for sessions
@@ -2975,7 +2981,7 @@ tr:
             More Programming with Scratch:
               name: Scratch İle Daha Fazla Programlama
             'New Artist: Functions':
-              name: 'Yeni Aktör: Fonksiyonlar'
+              name: 'Yeni Sanatçı: Fonksiyonlar'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
               name: Scaffolded Proje Sahnesi (Döngüler, Olaylar, Koşullar, Fonksiyonlar)
             Songwriting:
@@ -3027,7 +3033,7 @@ tr:
           description_audience: Ages 10-110
           stages:
             'Artist: For Loops':
-              name: 'Sanatçı: For Döngüleri'
+              name: 'Sanatçı: Şununla Say (for) Döngüleri'
             'Artist: Functions with Parameters':
               name: 'Sanatçı: Fonksiyonlar ve Parametreler'
             'Artist: Variables':
@@ -3786,7 +3792,7 @@ tr:
               description_student: This lesson covers how to use media such as images, video, or music created by others a website while respecting the rights of the creator of that media. After first studying Creative Commons licensing, the class learns how to add images to web pages, and how to give proper attribution when doing so.
               description_teacher: "Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \\r\n\\r\nFinally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag."
             Project - Multi-Page Websites:
-              name: Project - Multi-Page Websites
+              name: Proje - çok sayfalı web siteleri
               description_student: 'This lesson covers hyperlinks, which allow web developers to connect pages together into one website.  The class will link together all the previous pages into one project, and create navigation bars for each page before publishing the entire site to the Web.  '
               description_teacher: "After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \\r\n\\r\n"
             RGB Colors and Classes:
@@ -3794,11 +3800,11 @@ tr:
               description_student: This lesson covers classes and custom colors. The class first learns how to specify custom colors using RGB (red, green, blue) values, then applies these colors to a new Four Seasons web page, which uses CSS classes.  Using classes, the class adds more styles to the Four Seasons web page, then use them to style their personal websites.
               description_teacher: Bu derste öğrenciler RGB (kırmızı, yeşil, mavi) değerlerini kullanarak özel renkleri nasıl belirteceğini öğrenirler. Daha sonra bu renkleri CSS sınıfları kullanan bir Dört Mevsim web sayfasına uygularlar. CSS sınıfları, web geliştiricilerinin öge gruplarına aynı türdeki diğer öge gruplarından farklı olarak istedikleri tarzda davranmalarına izin verir. Sınıfları kullanarak, öğrenciler Dört Mevsim web sayfasına daha fazla tarz eklerler, daha sonra onları kendi kişisel web sayfalarında kullanırlar.
             Project - Personal Portfolio Website:
-              name: Project - Personal Portfolio Website
+              name: 'Proje: Kişisel portföy Web sitesi'
               description_student: In the last few days of the unit, the class finalizes their personal websites, working with peers to get feedback, review the rubric, and put the finishing touches on the site. To cap off the unit, everyone shares their projects and how they were developed.
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\\r\n"
             Headings:
-              name: Headings
+              name: Başlıklar
               description_student: This lesson continues the introduction to HTML tags, this time with headers.  The class practices using header tags to create page and section titles and learns how the different header elements are displayed by default.  Next, the class plans how to organize their content on the personal web pages that will be built across the unit and begins the first page of the project.
               description_teacher: In this lesson, students continue to use HTML to structure text on web pages, this time with headings.  Students learn how the different heading elements are displayed by default and practice using them to create page and section titles.  Students then start to decide how they will organize their content on their own personal web pages.  In the last level, students begin the project that they will continue to work on throughout the unit.
         csp2-support:
@@ -4012,7 +4018,7 @@ tr:
             Loops in Collector:
               name: Loops in Collector
             Loops in Artist:
-              name: Loops in Artist
+              name: Sanatçı- Döngüler
             'Events: The Big Event':
               name: 'Olaylar: Büyük Olay'
             Events in Play Lab:
@@ -4132,7 +4138,7 @@ tr:
             'Functions: Songwriting':
               name: 'Fonksiyonlar: şarkı yazma'
             Functions in Artist:
-              name: Sanatçı fonksiyonları
+              name: Sanatçı- Fonksiyonlar
             Functions in Bee:
               name: Arı fonksiyonları
             Functions in Farmer:
@@ -4178,17 +4184,17 @@ tr:
             Variables in Play Lab:
               name: Değişkenler - Oyun laboratuarı
             Variables in Artist:
-              name: Değişkenler - Sanatçı
+              name: Sanatçı-Değişkenler
             For Loop Fun:
               name: Eğlenceli tekrar için
             For Loops in Bee:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
-              name: Sanatçı-Şununla say
+              name: Sanatçı-Şununla say Döngüleri
             'Functions with Parameters: Songwriting with Parameters':
               name: 'Parametrelerle Fonksiyonlar: Parametrelerle Beste'
             Functions with Parameters in Artist:
-              name: Aktör Parametrelerinde Fonksiyonlar
+              name: Sanatçı Parametrelerinde Fonksiyonlar
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
             Explore Project Ideas:
@@ -4410,7 +4416,7 @@ tr:
             'Functions: Songwriting':
               name: 'Fonksiyonlar: şarkı yazma'
             Functions in Artist:
-              name: Sanatçı fonksiyonları
+              name: Sanatçı- Fonksiyonlar
             Functions in Bee:
               name: Arı fonksiyonları
             Functions in Farmer:
@@ -4422,7 +4428,7 @@ tr:
             Binary:
               name: İkili
             Snowflakes:
-              name: Snowflakes
+              name: Kar taneleri
         sciencepd5:
           title: 'CS in Science: Part 5'
           description_audience: ''
@@ -4582,6 +4588,8 @@ tr:
               name: Designing Screens with Code
             Arrays:
               name: Arrays
+            Making Music:
+              name: Müzik yapma
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5001,11 +5009,11 @@ tr:
             Intellectual Property:
               name: Fikri Mülkiyet
             Images:
-              name: Images
+              name: Görüntüler
             Clean Code and Debugging:
               name: Temiz Kod ve Debugging (Hata Ayıklama)
             Project - Multi-Page Websites:
-              name: Project - Multi-Page Websites
+              name: Proje - çok sayfalı web siteleri
             Styling Text with CSS:
               name: CSS ile Metin Biçimlendirme
             Styling Elements with CSS:
@@ -5015,7 +5023,7 @@ tr:
             RGB Colors and Classes:
               name: RGB Renkleri ve Sınıfları
             Project - Personal Portfolio Website:
-              name: Project - Personal Portfolio Website
+              name: 'Proje: Kişisel portföy Web sitesi'
             Headers:
               name: Başlıklar
             Intellectual Property and Images:
@@ -5217,13 +5225,13 @@ tr:
             B8 BB8:
               name: B8 BB8
             C9 Artist Loops:
-              name: C9 Aktör Döngüleri
+              name: C9 Sanatçı Döngüleri
             C8 to BB8:
               name: C8 BB8 
             D7 to Laurel:
               name: D7 Laurel
             D6 Frozen Artist:
-              name: D6 dondurulmuş Sanatçı 
+              name: D6 Frozen Sanatçı 
             F7 add Conditionals:
               name: F7 add Conditionals
             F5 Minecraft:
@@ -5283,7 +5291,7 @@ tr:
               description_student: ''
               description_teacher: Building on the concept of repeating instructions from "Happy Loops," this stage will have students using loops to collect treasure more efficiently on Code.org.
             Loops in Artist:
-              name: Loops in Artist
+              name: Sanatçı- Döngüler
               description_student: ''
               description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             'Events: The Big Event':
@@ -5319,7 +5327,7 @@ tr:
             Loops in Collector:
               name: Loops in Collector
             Loops in Artist:
-              name: Loops in Artist
+              name: Sanatçı- Döngüler
             'Events: The Big Event':
               name: 'Olaylar: Büyük Olay'
             Events in Play Lab:
@@ -5345,7 +5353,7 @@ tr:
             Programming in Collector:
               name: Programming in Collector
             Programming in Artist:
-              name: Programming in Artist
+              name: Sanatçı ile Programlama
             'Loops: Getting Loopy':
               name: 'Loops: Getting Loopy'
             Loops in Maze:
@@ -5363,7 +5371,7 @@ tr:
             Binary Bracelets:
               name: 'Programlamanın Ötesi: Binary Bilezikleri'
             Loops in Artist:
-              name: Loops in Artist
+              name: Sanatçı- Döngüler
             Loops with Rey and BB-8:
               name: Rey ve BB-8 ile döngüler
           title: Ders C
@@ -5389,7 +5397,7 @@ tr:
               description_student: Döngüler içinde döngüler içinde döngüler. Bu ne anlama geliyor? Bu ders, size, bir döngünün içine başka bir döngüyü yerleştirdiğinizde ne olduğunu öğretecek.
               description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
             Nested Loops in Artist:
-              name: Nested Loops in Artist
+              name: Sanatçı'da İç İçe Döngüler 
               description_student: Daha fazla iç içe döngüler! Bu kez iç içe döngüler ile bazı HARİKA çizimler yapacaksınız.
               description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
             'Algorithms: Relay Programming':
@@ -5447,7 +5455,7 @@ tr:
               description_student: Kodlama esnasında hiç problem yaşadınız mı? Bu ders, size, hata ayıklamanın sırlarını öğretecek. Hata ayıklama, kodunuzdaki hataları bulma ve düzeltme sürecidir.
               description_teacher: Bu çevirim içi etkinlikte, öğrenciler 'toplayıcı' ortamında hata ayıklama üzerinde çalışacaklar. Öğrenciler, basit algoritmalar, döngüler ve iç içe döngüler ile bulmacaları çözmek için kod okuma ve düzenleme alıştırması yapacaklar.
           title: Ders D
-          description_audience: 'Ages: 7-11'
+          description_audience: 'Yaş: 7-11'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
           description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before   creating your very own game or story that you can share.
         coursee:
@@ -5465,7 +5473,7 @@ tr:
             Envelope Variables:
               name: Zarf değişkenleri
             Variables in Artist:
-              name: Değişkenler - Sanatçı
+              name: Sanatçı-Değişkenler
             Variables in Play Lab:
               name: Değişkenler - Oyun laboratuarı
             For Loop Fun:
@@ -5473,13 +5481,13 @@ tr:
             For Loops in Bee:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
-              name: Sanatçı-Şununla say
+              name: Sanatçı-Şununla say Döngüleri
             Songwriting with Parameters:
               name: Parametrelerle Şarkı Yazmak
             Conditionals and Functions in Bee:
               name: Koşullar ve fonksiyonlar- Arı
             Functions with Parameters in Artist:
-              name: Aktör Parametrelerinde Fonksiyonlar
+              name: Sanatçı Parametrelerinde Fonksiyonlar
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
             Explore Project Ideas:
@@ -5489,11 +5497,11 @@ tr:
             The Design Process:
               name: Tasarım işlemi
               description_student: Projects this big take time and plenty planning. Here, you will learn about the design process that you'll use to build your own creation.
-              description_teacher: 'Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).'
+              description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
               name: Projenizi oluşturun
               description_student: Get those hands ready for plenty of coding! It's time to start building your project.
-              description_teacher: 'Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This is likely to be the longest stage of the project. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).'
+              description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This is likely to be the longest stage of the project. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Revise Your Project:
               name: Projenizi Gözden Geçirme
             Presentation Your Project:
@@ -5519,10 +5527,10 @@ tr:
               description_teacher: In this lesson, students will practice using events to build a game that they can share online. Featuring R2-D2 and other Star Wars characters, students will be guided through events, then given space to create their own game.
             'Functions: Songwriting':
               name: 'Fonksiyonlar: şarkı yazma'
-              description_student: Even rockstars need programming skills. This lesson will teach you about functions using lyrics from songs.
-              description_teacher: One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.
+              description_student: Müzik yıldızı için bile programlama yeteneği gerektirir. Bu ders şarkı sözleri kullanarak fonksiyonları öğretecektir.
+              description_teacher: Bilgisayar bilimi dünyasındaki en harika yapılardan birisi de fonksiyonlardır. Fonksiyonlar (ya da bazen method da deriz) asıl büyük programımız içinde tekrar tekrar kullanabildiğimiz mini programlardır. Bu ders öğrencilerin neden bir yığın kodu fonksiyonun içine yerleştirmenin ne kadar yararlı olduğunu kavramalarına yardımcı olacaktır.
             Functions in Artist:
-              name: Sanatçı fonksiyonları
+              name: Sanatçı- Fonksiyonlar
               description_student: Fonksiyonlar ile daha karmaşık çizimleri daha kolay yapın!
               description_teacher: Öğrenciler Code.org' da fonksiyonları kullanmayı öğrenirler. Aktörler içinde fonksiyonları kullanarak muhteşem görüntüler oluşturacak ve düzenleyecekler. Daha karmaşık desenler için, öğrenciler, bir fonksiyonun içinde çağrılan başka bir fonksiyonu öğrenecekler.
             Functions in Bee:
@@ -5544,7 +5552,7 @@ tr:
             Present Your Project:
               name: Projeni sun
               description_student: Göstermeye hazır ol! Bitirdiğiniz projeyi akranlarınıza sunma zaman.
-              description_teacher: 'Dört ders boyunca, öğrenciler, programlama ortamı olarak Play Lab ya da Sanatçı'' yı kullanarak kendi tasarımlarını kullandıkları bir projeyi oluşturacaklar. Sonunda, öğrenciler, bitirdikleri çalışmalarını kendi akranlarıyla ya da sevdikleriyle özel bir bağlantıyla paylaşabilecekler. Sürecin dört aşamasının tamamının ders rehberi, proje sürecinin ilk aşamasından bulunabilir. [burada](https://curriculum.code.org/csf/coursee/12/).'
+              description_teacher: Dört ders boyunca, öğrenciler, programlama ortamı olarak Play Lab ya da Sanatçı' yı kullanarak kendi tasarımlarını kullandıkları bir projeyi oluşturacaklar. Sonunda, öğrenciler, bitirdikleri çalışmalarını kendi akranlarıyla ya da sevdikleriyle özel bir bağlantıyla paylaşabilecekler. Sürecin dört aşamasının tamamının ders rehberi, proje sürecinin ilk aşamasından bulunabilir. [burada](https://curriculum.code.org/csf/coursee/12/).
             Internet:
               name: 'Beyond Programming: The Internet'
               description_student: İnternet üzerinde bilginin nasıl seyahat ettiğini hiç merak ettiniz mi? Bu sihir değil! Bu ders, size, internetin nasıl çalıştığının temellerini öğretecek.
@@ -5562,11 +5570,11 @@ tr:
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
-              name: Programming in Artist
+              name: Sanatçı ile Programlama
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Sanatçı- Döngüler
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
@@ -5574,7 +5582,7 @@ tr:
             Nested Loops:
               name: İç İçe Döngüler
           title: Ders E
-          description_audience: 'Ages: 8-12'
+          description_audience: 8-12 yaş grubu
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
         coursef:
@@ -5600,7 +5608,7 @@ tr:
               description_student: 'Zarflar ve değişkenlerin ortak bir yönü var: ikisi de değerli şeyleri tutarlar. Burada değişkenlerin ne olduğunu ve onların yapabileceği harika şeyleri öğreneceksiniz.'
               description_teacher: Variables are used as placeholders for values such as numbers or words. Variables allow for a lot of freedom in programming. Instead of having to type out a phrase many times or remember an obscure number, computer scientists can use variables to reference them. This lesson helps to explain what variables are and how we can use them in many different ways. The idea of variables isn't an easy concept to grasp, so we recommend allowing plenty of time for discussion at the end of the lesson.
             Variables in Artist:
-              name: Değişkenler - Sanatçı
+              name: Sanatçı-Değişkenler
               description_student: Sınıfa yaratıcılık getirmeyi unutmayın! Bu bulmacalarda değişkenleri kullanarak muhteşem çizimler yapacaksınız.
               description_teacher: In this lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables can be used to make code easier to write and easier to read. After guided puzzles, students will end in a freeplay level to show what they have learned and create their own designs.
             Variables in Play Lab:
@@ -5616,7 +5624,7 @@ tr:
               description_student: Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for` loops!
               description_teacher: Featuring Bee, this lesson focuses on for loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then walked through using for loops to more effectively solve complicated problems.
             For Loops in Artist:
-              name: Sanatçı-Şununla say
+              name: Sanatçı-Şununla say Döngüleri
               description_student: Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.
               description_teacher: In this lesson, students continue to practice for loops, this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and for loops to create complex designs. At the end, they will have a chance to create their own art in a freeplay level.
             Songwriting with Parameters:
@@ -5628,7 +5636,7 @@ tr:
               description_student: The bee needs your help again! Here you will be using functions to get nectar and make honey!
               description_teacher: 'This lesson teaches students how to create simple functions using our sophisticated “modal” function editor, preparing the way for them to incorporate parameters in future lessons. '
             Functions with Parameters in Artist:
-              name: Aktör Parametrelerinde Fonksiyonlar
+              name: Sanatçı Parametrelerinde Fonksiyonlar
               description_student: Programlama yapacağınız parmaklarınızı hazırlayın. Bu bulmacalarda, parametrelerle fonksiyonları kullanarak, Aktörlerde etkileyici çizimler yapacaksınız.
               description_teacher: In this lesson, students continue working with functions with and without parameters. Students will get the chance to create their own drawings with and without parameters, before modifying functions in a freeplay level.
             Functions with Parameters in Bee:
@@ -5642,21 +5650,21 @@ tr:
             The Design Process:
               name: Tasarım işlemi
               description_student: Projects this big take time and plenty planning. Here, you will learn about the design process that you'll use to build your own creation.
-              description_teacher: 'Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).'
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Build Your Project:
               name: Projenizi oluşturun
               description_student: Sonunda projeni oluşturmaya başlayabilirsin!
-              description_teacher: 'Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This will be the longest portion of the project. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).'
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This will be the longest portion of the project. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Revise Your Project:
               name: Projenizi Gözden Geçirme
               description_student: Roma bir günde inşa edilmedi, sizin projeniz de bir günde bitmemeli. Projenizi olabilecek en iyi hale getirmek için, projenizi gözden geçirmeye ve düzenlemeye zaman ayırın.
-              description_teacher: 'Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now that the projects are built, students are given the opportunity to get feedback from peers and revise their projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).'
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now that the projects are built, students are given the opportunity to get feedback from peers and revise their projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Presentation Your Project:
               name: Projenizin Sunumu
             Present Your Project:
               name: Projeni sun
               description_student: Çalışmanızı gösterme zamanı! Burada, akranlarınıza, muhteşem projenizi sunacaksınız.
-              description_teacher: 'Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).'
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Conditionals in Minecraft:
               name: Minecraft' da Koşullar
               description_student: Lavdan Kaçının! Burada Minecraft dünyasındaki koşulları öğreneceksiniz.
@@ -5672,7 +5680,7 @@ tr:
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
-              name: Programming in Artist
+              name: Sanatçı ile Programlama
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
@@ -5954,7 +5962,7 @@ tr:
             Envelope Variables:
               name: Zarf değişkenleri
             Variables in Artist:
-              name: Değişkenler - Sanatçı
+              name: Sanatçı-Değişkenler
             Variables in Play Lab:
               name: Değişkenler - Oyun laboratuarı
             For Loop Fun:
@@ -5962,13 +5970,13 @@ tr:
             For Loops in Bee:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
-              name: Sanatçı-Şununla say
+              name: Sanatçı-Şununla say Döngüleri
             Songwriting with Parameters:
               name: Parametrelerle Şarkı Yazmak
             Functions in Bee:
               name: Arı fonksiyonları
             Functions with Parameters in Artist:
-              name: Aktör Parametrelerinde Fonksiyonlar
+              name: Sanatçı Parametrelerinde Fonksiyonlar
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
             Explore Project Ideas:
@@ -6107,6 +6115,10 @@ tr:
               name: Ünite 3 Bölüm 1 değerlendirme
             foo:
               name: foo
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey:
+              name: Please complete the CSP Mid-course survey
           title: CSP Unit 3 - Intro to Programming (subgoals)
           description_audience: ''
           description_short: Programlama
@@ -6181,10 +6193,10 @@ tr:
               name: Intro to App Lab
             'Lesson 1: App Lab Intro':
               name: 'Lesson 1: App Lab Intro'
-          title: Intro to App Lab (Beta)
+          title: Intro to App Lab
           description_audience: ''
-          description_short: ''
-          description: These lessons introduce you to App Lab through a series of creative projects.
+          description_short: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
+          description: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
@@ -6220,7 +6232,7 @@ tr:
             'Functions: Songwriting':
               name: 'Fonksiyonlar: şarkı yazma'
             Functions in Artist:
-              name: Sanatçı fonksiyonları
+              name: Sanatçı- Fonksiyonlar
             Functions in Bee:
               name: Arı fonksiyonları
             Functions in Farmer:
@@ -6350,7 +6362,7 @@ tr:
             'Variables: Envelope Variables':
               name: 'Variables: Envelope Variables'
             Variables in Artist:
-              name: Değişkenler - Sanatçı
+              name: Sanatçı-Değişkenler
             Variables in Play Lab:
               name: Değişkenler - Oyun laboratuarı
             'For Loops: For Loop Fun':
@@ -6358,13 +6370,13 @@ tr:
             For Loops in Bee:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
-              name: Sanatçı-Şununla say
+              name: Sanatçı-Şununla say Döngüleri
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
             Functions in Bee:
               name: Arı fonksiyonları
             Functions with Parameters in Artist:
-              name: Aktör Parametrelerinde Fonksiyonlar
+              name: Sanatçı Parametrelerinde Fonksiyonlar
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
             Explore Project Ideas:
@@ -6438,7 +6450,7 @@ tr:
             Functions in Bee:
               name: Arı fonksiyonları
             Functions in Artist:
-              name: Sanatçı fonksiyonları
+              name: Sanatçı- Fonksiyonlar
             Functions in Farmer:
               name: Çiftçi fonksiyonları
             Determine the Concept:
@@ -6494,7 +6506,7 @@ tr:
             Envelope Variables:
               name: Zarf değişkenleri
             Variables in Artist:
-              name: Değişkenler - Sanatçı
+              name: Sanatçı-Değişkenler
             Variables in Play Lab:
               name: Değişkenler - Oyun laboratuarı
             For Loop Fun:
@@ -6502,13 +6514,13 @@ tr:
             For Loops in Bee:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
-              name: Sanatçı-Şununla say
+              name: Sanatçı-Şununla say Döngüleri
             Songwriting with Parameters:
               name: Parametrelerle Şarkı Yazmak
             Functions in Bee:
               name: Arı fonksiyonları
             Functions with Parameters in Artist:
-              name: Aktör Parametrelerinde Fonksiyonlar
+              name: Sanatçı Parametrelerinde Fonksiyonlar
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
             Explore Project Ideas:
@@ -6689,10 +6701,20 @@ tr:
               name: 'Technology Foundations: What is a Computer?'
             'Data Science: Problem Solving with Big Data':
               name: 'Data Science: Problem Solving with Big Data'
-          title: PwC Access Your Potential
+            Personal Innovations:
+              name: Kişisel yenilikler
+            What is a Computer?:
+              name: Bilgisayar nedir?
+            Problem Solving with Big Data:
+              name: Büyük veri ile Problem çözme
+            Programming - Hour of Code:
+              name: Programming - Hour of Code
+            Simple Encryption:
+              name: Basit şifreleme
+          title: PwC Access Your Potential curriculum
           description_audience: ''
           description_short: ''
-          description: ''
+          description: At PwC, we believe that all students have the potential to be tomorrow’s leaders and tech-driven workforce. Access Your Potential is our commitment to help close the opportunity gap by equipping young people, especially those from disadvantaged communities, with the financial, technology and career-selection skills they need to change the trajectory of their lives. As part of our commitment, we’re excited to launch our Access Your Potential middle school technology and careers curriculum.
         allthesurveys:
           stages:
             CSP pre survey Test:
@@ -6771,10 +6793,12 @@ tr:
               name: Performans Gorevini Kesfet - Görevi Tamamla
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Teknik kurulum - AP dijital portföy ve diğer araçlar
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Setup: Digital Portfolio and Other Tools'
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
-          description: ''
+          description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
         csp-create:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -6788,7 +6812,7 @@ tr:
           title: Create - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
-          description: ''
+          description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
         csp3-reovery:
           stages:
             Under the sea recovery:

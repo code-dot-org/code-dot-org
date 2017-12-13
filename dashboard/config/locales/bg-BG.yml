@@ -62,7 +62,7 @@
     submit: "Добавяне на препоръка"
   appname: Code.org
   stage: "Етап"
-  stage_number: "Етап %{number}"
+  stage_number: "Урок %{number}"
   puzzle: "Пъзел"
   trophies: "Трофеи"
   courses: "Курсове"
@@ -236,8 +236,8 @@
       remove: "Наистина ли искате да изтриете този раздел/секция?"
     remove: "(remove section)"
     type:
-      picture: Picture Password
-      word: Secret Words
+      picture: "Снимка парола"
+      word: "Тайни думи"
       email: "Имейл"
       google_classroom: Google класна стая
       clever: Clever
@@ -281,8 +281,8 @@
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: The email address you provided doesn't match
-          the email address for this account
+        user_type_change_email_mismatch: "Имейл адреса, който сте посочили не съвпада
+          с имейл адреса за този акаунт"
         personal_login_created_email: "Съдадохте парсонална регистрация за вход успешно.
           Сега можете да влезете в Code.org с вашия имейл и парола"
         personal_login_created_username: "Съдадохте парсонална регистрация за вход
@@ -774,6 +774,9 @@
         and games with objects and characters that interact with each other.
       audience: "Възраст 13 +"
       cta: "Научете как"
+    hoc-encryption:
+      title: Simple Encryption
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -795,6 +798,10 @@
       title: Minecraft
       body: "Програмирай животни и други Minecraft същества в своя собствена версия
         на Minecraft."
+    hero:
+      title: Minecraft
+      body: Minecraft се завръща за часът на кода с чисто нова дейност! Пътешествай
+        през Minecraft с код.
     sports:
       title: "Спорт"
       body: Make a basketball game or mix and match across sports.

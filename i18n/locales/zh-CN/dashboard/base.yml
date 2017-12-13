@@ -547,8 +547,8 @@ zh-CN:
       title: '经典迷宫'
       body: '请尝试计算机科学的基本知识。数百万人尝试了它。'
     flappy:
-      title: '飞扬的代码'
-      body: '想要在 10 分钟内写你自己的游戏吗？请尝试我们飞扬的代码教程 ！'
+      title: '像素鸟编程'
+      body: '想要在 10 分钟内写你自己的游戏吗？请尝试我们像素鸟编程教程 ！'
     20-hour:
       title: '加速课程'
       body: '这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。'
@@ -564,6 +564,9 @@ zh-CN:
       body: "游戏实验室是一个编程环境，它能让你做一些物体和角色的简单互动动画和游戏。"
       audience: "13岁以上"
       cta: "了解操作方法"
+    hoc-encryption:
+      title: "简单加密"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "网站实验室 （测试版）"
       body: "网站实验室是一个你能够通过html和css制作简单网页的编程环境。在几秒钟内，你就能设计并分享自己的网页。"
@@ -582,6 +585,9 @@ zh-CN:
     minecraft2016:
       title: "我的世界"
       body: "在你自己的《我的世界》中编写各种动物和其他生物。"
+    hero:
+      title: "我的世界"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "运动"
       body: "创造一个篮球游戏或跨越各种运动的混合比赛。"
