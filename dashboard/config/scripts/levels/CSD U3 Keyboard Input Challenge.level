@@ -98,9 +98,9 @@
     "expand_debugger": "false",
     "project_template_level_name": "CSD U3- arrows template",
     "display_name": "Challenge: Add More Inputs",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

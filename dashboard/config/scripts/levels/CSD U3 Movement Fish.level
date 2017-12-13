@@ -78,8 +78,8 @@
     },
     "encrypted_examples": "anMQPIUd+WRm37Dyx7COPPHROWqZ58g9d0j7QKZevdphBmrQjmJhFG3Ouyil\nTlEhpfhOnD4C39C8gkjF8UyxGg==\n",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
