@@ -448,8 +448,8 @@ module Pd::Application
       end
     end
 
-    def total_score
-      response_scores_hash.values.map {|x| x.try(:to_i)}.compact.reduce(:+)
+    def principal_approval
+      sanitize_form_data_hash[:principal_approval] || ''
     end
 
     # Called once after the application is submitted, and the principal approval is done
@@ -502,7 +502,7 @@ module Pd::Application
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
         columns = filtered_labels(course).values.map {|l| markdown.render(l)}
-        columns.push 'Status', 'Meets Criteria', 'Total Score', 'Notes', 'Regional Partner'
+        columns.push 'Status', 'Principal Approval', 'Meets Criteria', 'Total Score', 'Notes', 'Regional Partner'
         csv << columns
       end
     end
@@ -512,7 +512,7 @@ module Pd::Application
       answers = full_answers
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
-        row.push status, meets_criteria, total_score, notes, regional_partner_name
+        row.push status, principal_approval, meets_criteria, total_score, notes, regional_partner_name
         csv << row
       end
     end

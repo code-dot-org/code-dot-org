@@ -5,6 +5,8 @@ require 'cdo/chat_client'
 require 'cdo/test_run_utils'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
+require 'cdo/developers_topic'
+require 'cdo/infra_test_topic'
 
 namespace :test do
   desc 'Runs apps tests.'
@@ -62,6 +64,21 @@ namespace :test do
 
   task :wait_for_test_server do
     RakeUtils.wait_for_url CDO.studio_url('', CDO.default_scheme)
+  end
+
+  task :mark_dtt_green do
+    # Look at the HEAD revision on the test machine, rather than the one in
+    # GitHub. Otherwise, if someone pushes more changes to the test branch while
+    # the DTT is running, we might accidentally, automatically mark those
+    # untested changes green.
+    test_branch_sha = GitUtils.git_revision_short
+
+    msg = "Marking commit #{test_branch_sha} green (temporarily disabled)"
+    ChatClient.log msg
+    ChatClient.message 'deploy-status', msg
+
+    # DevelopersTopic.set_dtt 'yes'
+    # InfraTestTopic.set_green_commit test_branch_sha
   end
 
   task ui_live: [
@@ -161,7 +178,7 @@ namespace :test do
     end
   end
 
-  task ci: [:pegasus, :shared, :dashboard_ci, :ui_live]
+  task ci: [:pegasus, :shared, :dashboard_ci, :ui_live, :mark_dtt_green]
 
   desc 'Runs dashboard tests.'
   task :dashboard do
