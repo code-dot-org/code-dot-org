@@ -35,7 +35,6 @@ export default class VerticalImageResourceCardRow extends Component {
                 description={card.description}
                 buttonText={card.buttonText}
                 link={card.link}
-                isRtl={isRtl}
                 image={card.image}
                 MCShareLink={card.MCShareLink}
               />
