@@ -1,43 +1,19 @@
 ---
-title: Champions of Computer Science Awards
-nav: educate_nav
+title: Champions for Computer Science Awards
+nav: about_nav
 theme: responsive
 ---
 
 <a id="top"></a>
 
-# 2017 Champions of Computer Science Awards
+# Champions for Computer Science Awards
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/80-tkIR6o5s?rel=0&amp;start=3137" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+See the [2017 Champions for Computer Science award winners](/awards/2017). 
 
-## Students
-
-### [Crystal Reynaga](/awards/reynaga)
-### [Angela Johana Garcia Pena](/awards/pena)
-### [Shreya Shekhar](/awards/shekhar)
-### [Vidhi Srivastava](/awards/srivastava)
-### [John Mason Branum](/awards/branum)
-
-## Teachers
-
-### [Heather Sutkowski](/awards/sutkowski)
-### [Diane Neville](/awards/neville)
-### [Lawrence Ramos](/awards/ramos)
-### [Efrain Lopez](/awards/lopez)
-
-## Schools
-
-### [Arkansas School for Mathematics, Sciences and the Arts](/awards/asmsa)
-### [Brenham High School](/awards/bhs)
-### [Eufaula High School](/awards/ehs)
-### [Anacapa Middle School](/awards/ams)
-
-## District
-
-### [San Francisco Unified School District](/awards/sfusd)
-
-## Organizations
-
-### [South Bend Code School](/awards/sbcs)
-### [Queen City Robotics Alliance](/awards/qcra)
-
+<div class="row">
+  <div class="col-md-12">
+    <br>
+    <p class="text-center"><strong>In partnership with:</strong></p> 
+    <img src="/images/avatars/computer_science_teachers_association.jpg" width="50%" style="margin: 0 25%"> 
+  </div>
+</div>
