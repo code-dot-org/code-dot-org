@@ -23,33 +23,44 @@ export default () => {
     }
   }
 
-  if ($('.feature_project').length) {
+  if ($('#feature_project').length) {
     if (dashboard.project.isProjectLevel()) {
-      var featured = $('.feature_project').data('featured');
-      if (featured) {
-        $('.feature_project').html($('<button id="feature" class="btn btn-default btn-sm">Stop featuring in gallery</button>')).click(function () {
-          console.log("You clicked the stop button");
+      var featuredProjectId = $('.featured_project_id').data('id');
+      var deleteUrl = '/featured_projects/' + featuredProjectId  + '/' + dashboard.project.getCurrentId();
+      $('#unfeature_project').click(function () {
+        $.ajax({
+          url: deleteUrl,
+          type:'DELETE',
+          dataType:'json',
+          success:function (data){
+            $('#unfeature_project').hide();
+            $('#feature_project').show();
+          },
+          error:function (data){
+            alert("Shucks. Something went wrong - this project is still featured.");
+          }
         });
-      } else {
-        $('.feature_project').html($('<button id="feature" class="btn btn-default btn-sm">Feature in gallery</button>')).click(function () {
-          $.ajax({
-            url:'/featured_projects',
-            type:'POST',
-            dataType:'json',
-            data: {
-              featured_project: {
-                project_id: dashboard.project.getCurrentId(),
-              }
-            },
-            success:function (data){
-              console.log("It worked! You made a new featured_project.");
-            },
-            error:function (data){
-              console.log("It didn't work. You didn't make a new project");
+      });
+
+      $('#feature_project').click(function () {
+        $.ajax({
+          url:'/featured_projects',
+          type:'POST',
+          dataType:'json',
+          data: {
+            featured_project: {
+              project_id: dashboard.project.getCurrentId(),
             }
-          });
+          },
+          success:function (data){
+            $('#unfeature_project').show();
+            $('#feature_project').hide();
+          },
+          error:function (data){
+            alert("Shucks. Something went wrong - this project wasn't featured.");
+          }
         });
-      }
+      });
     }
   }
 
