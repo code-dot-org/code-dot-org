@@ -1,21 +1,29 @@
 ---
 title: Brenham High School
-nav: educate_nav
+nav: about_nav
 theme: responsive
 ---
 
 <a id="top"></a>
 
-# Brenham High School
+# Brenham High School (Brenham, TX)
 
-<br/>
-<br/>
-Brenham High School is a rural high school in Texas that had no Computer Science opportunities until 2013. Veteran Cross Country coach Trenton Hall convinced administration to Computer Science classes and also purchasing a 3D printer. In 2014, the students took on the challenge of 3D printing a prosthetic hand for a local boy. Since then, the CS classes have created a total of 8 prosthetic hands and arms. They are currently working on developing a robotic prosthetic arm for a local girl.
+### Champion for Computer Science - Community Impact Award (School Category)
 
-The first CS class at Brenham High School had 10 students. The opportunity to participate in real-world projects that help people in need has led to increased interest in taking Computer Science in Brenham. There are now over 75 students taking coding classes at Brenham High School. The district has also expanded efforts to promote coding to every student in the district. A district-wide push to participate in the annual Hour of Code event has led to most elementary students having some exposure to coding activities in Brenham ISD.
+Brenham High School is redefining what’s possible in rural high schools through innovative efforts to introduce a diverse student population to computer science and have them not just use, but create technology. 
 
-[First prosthetic created by BHS students (2014)](https://youtu.be/a30u54YKBUM)
+<figure style="margin:10px">
+  <img src="/images/awards/bhs_students.jpg" style="display:block;margin:0 auto" width="100%" alt="Students at Brenham High School" />
+  <figcaption style="text-align:center;font-style:italic;font-size:12px">
+    Students at Brenham High School
+  </figcaption>
+</figure>
 
-[Prosthetic arm created by BHS students for local girl (2016)](http://www.kagstv.com/news/local/third-grader-in-brenham-receives-prosthetic-arm-from-students/329772336)
+In 2013, math teacher Trenton Hall started the first computer science classes, and the district purchased a 3D printer to be used by the students. In 2014, the computer science classes used the 3D printer to create a [prosthetic hand for a local boy](https://youtu.be/a30u54YKBUM). Over the last three years, the students have [created a total of eight prosthetic hands and arms](http://www.kagstv.com/news/local/third-grader-in-brenham-receives-prosthetic-arm-from-students/329772336). They are currently developing a myoelectric arm for a local girl. The opportunity to participate in real-world projects along with a district-wide Hour of Code initiative has inspired a rapid growth in interest in taking computer science classes. The Brenham ISD STEM Advisory Team is exploring ways to enhance STEM education and offer new computer science opportunities throughout the district.
 
-Brenham ISD has created a STEM advisory committee for the 2017-18 school year to investigate ways to create more opportunities for students in STEM and improving computer science opportunities is one of the top priorities. Founded in 1875, Brenham ISD is the oldest public school district in Texas. As a leader in Texas education BISD is looking to set the standard for what is possible through Computer Science.
+<figure style="margin:10px">
+  <img src="/images/awards/bhs_rep_trenton_hall.jpg" style="display:block;margin:0 auto" width=500 alt="Trenton Hall" />
+  <figcaption style="text-align:center;font-style:italic;font-size:12px">Trenton Hall</figcaption>
+</figure>
+
+Trenton Hall accepted the award on behalf of Brenham High School. He is a seasoned educator at BHS. After teaching math for ten years, he was inspired by the first Code.org video to ask if he could start a computer science department at BHS. From an initial class of 10 students, the program now has over 80 students. Many of his former students are now pursuing computer science degrees or working in the software industry.
