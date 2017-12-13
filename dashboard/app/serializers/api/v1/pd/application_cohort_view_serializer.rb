@@ -7,10 +7,12 @@ class Api::V1::Pd::ApplicationCohortViewSerializer < ActiveModel::Serializer
   end
 
   def date_accepted
+    # TODO: mehal - Implement this
     'Not implemented yet'
   end
 
   def registered_for_summer_workshop
+    # TODO: mehal - Implement this
     'Not implemented yet'
   end
 end
