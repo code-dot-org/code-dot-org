@@ -184,9 +184,9 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
         return (
           <div>
             <h5>
-                Your region’s assigned summer workshop will be
-              {' ' + this.state.partnerWorkshops[0].dates} in
-              {' ' + this.state.partnerWorkshops[0].location}.
+              Your region’s assigned summer workshop will be
+              {` ${this.state.partnerWorkshops[0].dates} in`}
+              {` ${this.state.partnerWorkshops[0].location}.`}
             </h5>
 
             {this.renderAbleToAttendSingle()}
