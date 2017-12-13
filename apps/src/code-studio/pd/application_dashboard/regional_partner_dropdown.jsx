@@ -11,7 +11,7 @@ import { SelectStyleProps } from '../constants';
 
 const styles = {
   select: {
-    maxWidth: 500
+    maxWidth: '500px'
   }
 };
 
