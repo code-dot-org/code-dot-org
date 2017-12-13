@@ -111,24 +111,24 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
             </td>
             
             <td>
-              <a href="%= resolve_url('promote/resources#videos') %">Show an inspirational video</a>.
+              <a href="%= resolve_url('promote/resources#videos') %">Pokaż inspirujący film.</a>.
             </td>
           </tr>
           
           <tr>
             <td>
-              5-10 minutes
+              5-10 minut
             </td>
             
             <td>
-              Introduce yourself and learn more about the students: </ul>
+              Przedstaw się i zbierz informacje o uczniach: </ul>
               
               <li>
-                What do you work, what do you do, and what do you love most about your job?
+                Czym zajmujesz się zawodowo i co najbardziej podoba ci się w Twojej pracy?
               </li>
               
               <li>
-                What or who inspired you?
+                Co lub kto Cię zainspirował?
               </li>
               
               <li>
@@ -150,9 +150,9 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
               </li>
               
               <li>
-                Do the students have any questions for you?</ul></td> </tr> <tr>
+                Czy uczniowie mają pytania do Ciebie?</ul></td> </tr> <tr>
                   <td>
-                    30-60 minutes
+                    30-60 minut
                   </td>
                   
                   <td>

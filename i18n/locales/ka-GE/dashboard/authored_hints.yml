@@ -5185,7 +5185,7 @@ ka:
       courseA_collector_preLoops5_authored_hint:
         courseA_collector_preLoops5_a: You'll need to go two different directions to get even one gem!
       courseA_collector_preLoops6_authored_hint:
-        courseA_collector_preLoops6_a: 'You will need to use two ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) blocks to solve this puzzle.'
+        courseA_collector_preLoops6_a: You will need to use two ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) blocks to solve this puzzle.
       courseA_collector_preLoops7_authored_hint:
         courseA_collector_loops2_b: |-
           როდესაც მიაღწევთ განძის შემცველ კვადრატს, მის ასაღებად  გამოიყენეთ ეს ბლოკი.
@@ -5641,7 +5641,7 @@ ka:
       courseB_maze_seq9_challenge1_authored_hint: [ ]
       courseB_maze_seqCold_authored_hint:
         courseB_maze_seqCold_a: Stuck? Try tracing the bird's path with your finger.
-        courseB_maze_seqCold_b: 'The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )'
+        courseB_maze_seqCold_b: The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )
       courseB_maze_seqOld_authored_hint:
         courseB_maze_seqOld_a: If you're having trouble, try writing down the steps on a piece of paper first.
       courseB_maze_seq_challenge1_authored_hint:
@@ -6708,9 +6708,11 @@ ka:
       courseD_bee_conditionals1_predict1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals2_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.
         courseD_bee_conditionals2_b: ამ ლაბირინთის გასავლელად თქვენ შეგიძლიათ `გამეორების` ციკლის ან `სანამ წინ გზა არის` ბლოკების გამოყენება.
         courseD_bee_conditionals2_c: თქვენ არ გიწევთ ღრუბლებში ფიჭების შემოწმება, იქ მხოლოდ ყვავილები ან ცარიელი სივრცეებია.
+        courseD_bee_conditionals2_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals2_test_authored_hint:
         courseD_bee_conditionals2_aa: Need help getting started?  Here is a little hint video.
         courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.
@@ -6718,27 +6720,38 @@ ka:
         courseD_bee_conditionals2_c: თქვენ არ გიწევთ ღრუბლებში ფიჭების შემოწმება, იქ მხოლოდ ყვავილები ან ცარიელი სივრცეებია.
         courseD_bee_conditionals2_d: Need help finishing things up?  Watch this hint video.
       courseD_bee_conditionals3_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.
         courseD_bee_conditionals3_b: თქვენ შეგიძლიათ `გამეორების` ან `სანამ` ციკლის გამოყენება ფუტკრის წინ გადასაადგილებლად. გამოიყენეთ ის, რომელიც უფრო მოგწონთ!
         courseD_bee_conditionals3_c: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე უკეთ მიხვდებით, რა ხდება.
+        courseD_bee_conditionals3_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals4_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals4_a: You can still treat every space as if there is a cloud over it, even though you can see the whole path.
         courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check each space for nectar. '
         courseD_bee_conditionals4_c: <xml><block type="maze_untilBlocked"/></xml> ბლოკის გამოყენებით, თქვენ უნდა იმოძრაოთ წინ და შეამოწმოთ, არის თუ არა სადმე ყვავილი. თუ იქ ყვავილია, რა უნდა გააკეთოს ფუტკარმა?
+        courseD_bee_conditionals4_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals5_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals5_a: განიხილეთ ამ მართკუთხა გზის ყოველი გვერდი, როგორც ცალკე გზა. შექმენით ჩასმული ციკლი გარედან `გამეორების` ბლოკით და შიგნიდან `სანამ წინ გზა არის` ციკლით. რამდენი გზის გავლა მოუწევს ფუტკარს, თუ ფუტკარმა უნდა იბზუილოს ყოველ ყვავილიან მხარეს?
-        courseD_bee_conditionals5_b: '`სანამ წინ არის გზა` ბლოკის შიგნით თქვენ მოგიწევთ წინ მოძრაობა და ყვავილის არსებობის შემოწმება. როგორ შეამოწმებთ, არის თუ არა წინ ყვავილი? რას გააკეთებთ, თუ ყვავილი არის?'
         courseD_bee_conditionals5_c: მართკუთხედს აქვს 3 გვერდი ყვავილებით, ამიტომ კოდი უნდა `განმეორდეს 3-ჯერ`. ყოველი გამეორებისას ფუტკარმა უნდა გააგრძელოს გზაზე მოძრაობა, `სანამ წინ გზა არსებობს`. გზაზე მოძრაობის გასაგრძელებლად, ფუტკარმა უნდა `იმოძრაოს წინ`. გზაში ფუტკარმა უნდა შეამოწმოს ყვავილის არსებობა. `თუ იქ ყვავილია`, ფუტკარმა უნდა `შეაგროვოს ნექტარი`.
+        courseD_bee_conditionals5_b: '`სანამ წინ არის გზა` ბლოკის შიგნით თქვენ მოგიწევთ წინ მოძრაობა და ყვავილის არსებობის შემოწმება. როგორ შეამოწმებთ, არის თუ არა წინ ყვავილი? რას გააკეთებთ, თუ ყვავილი არის?'
+        courseD_bee_conditionals5_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals6_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for honeycomb beneath each cloud.
         courseD_bee_conditionals6_b: ამ შემთხვევაში, თქვენ არ მოგიწევთ ღრუბლების ქვეშ ნექტარის არსებობის შემოწმება.
         courseD_bee_conditionals6_c: არსებობს თუ არა ციკლი, რომელიც თქვენს კოდს გაამარტივებს?
+        courseD_bee_conditionals6_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals7_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
         courseD_bee_conditionals7_b: თუ ღრუბლის ქვეშ ყვავილი არაა, იქ ფიჭაა, ამიტომ თქვენ არ მოგიწევთ ცარიელი ადგილისთვის კოდის მოფიქრება.
+        courseD_bee_conditionals7_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals7_predict2_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
       courseD_bee_conditionals8_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals8_a: "**გახსოვდეთ:**ეს თავსატეხი ყოველ გაშვებაზე იცვლება.\n\nთქვენ დაგჭირდებათ პირობითი ბლოკის (`თუ` ან `თუ/სხვაგვარად`) გამოყენება ამ გამოწვევის დასაძლევად."
         courseD_bee_conditionals8_b: |-
           This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
@@ -6749,6 +6762,7 @@ ka:
           იმის მიუხედავად, რომ თქვენს წინ ღრუბელია, შეგიძლიათ თავიდანვე არ ეწვიოთ მას. სცადეთ კვადრატის მარჯვენა ქვედა მხარეს განლაგებული ღრუბლით დაწყება.
           
           ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
+        courseD_bee_conditionals8_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals9_authored_hint: [ ]
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: შეგიძლიათ მოძებნოთ გზა, რომელიც მივა ყველა ყვავილთან და ფიჭასთან ხესთან დაჯახების გარეშე? საუკეთესო გზა სპირალურია.
@@ -9895,7 +9909,7 @@ ka:
         grade1_maze_sequence7a: თუ გაიჭედეთ, სცადეთ თითო ჯერზე ერთი ბლოკის დამატება მანამდე, სანამ ამოხსნით ამ თავსატეხს.
       grade1_maze_sequence8_authored_hint:
         grade1_maze_sequence8_a: Stuck? Try tracing the bird's path with your finger.
-        grade1_maze_sequence8_b: 'The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )'
+        grade1_maze_sequence8_b: The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )
       grade1_maze_sequence9_authored_hint:
         grade1_maze_sequence9_a: If you're having trouble, try writing down the steps on a piece of paper first.
       grade1_maze_sequenceA_authored_hint:
@@ -10566,7 +10580,7 @@ ka:
       gradek_playlab_events1c_authored_hint:
         gradek_playlab_events1c_a: "Here is the block you should connect to the `when run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
       gradek_playlab_events2c_authored_hint:
-        gradek_playlab_events2c_a: 'drag this block out ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) and connect it to ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)'
+        gradek_playlab_events2c_a: drag this block out ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) and connect it to ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
       gradek_playlab_events3c_authored_hint:
         gradek_playlab_events3c_a: |-
           Here is the event block that you will need to get Jorge to move right:

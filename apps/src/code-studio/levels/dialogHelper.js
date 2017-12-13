@@ -11,28 +11,29 @@ import Sounds from '../../Sounds';
  * This file contains general logic for displaying modal dialogs
  */
 
-var dialogType = null;
 var adjustedScroll = false;
 
-function dialogHidden() {
-  var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
-  if (dialogType === "success" && lastServerResponse.nextRedirect) {
-    window.location.href = lastServerResponse.nextRedirect;
+/**
+ * @param {string|Component} typeOrComponent - Either a string identifying the DOM
+ *   to use in this dialog, or a ReactComponent representing the contents. Of the
+ *   two, the latter is preferable.
+ * @param {function} callback - Method to call when OK is clicked
+ * @param {function} onHidden - Method called when dialog is hidden/closed
+ */
+export function showDialog(typeOrComponent, callback, onHidden) {
+  let content;
+  if (typeof(typeOrComponent) === 'string') {
+    // Use our prefabricated dialog content.
+    content = document.querySelector("#" + typeOrComponent + "-dialogcontent").cloneNode(true);
+  } else {
+    const div = document.createElement('div');
+    ReactDOM.render(typeOrComponent, div);
+    content = div.childNodes[0];
   }
-
-  if (dialogType === "error") {
-    adjustScroll();
-  }
-}
-
-export function showDialog(type, callback, onHidden) {
-  dialogType = type;
-
-  // Use our prefabricated dialog content.
-  var content = document.querySelector("#" + type + "-dialogcontent").cloneNode(true);
-  var dialog = new LegacyDialog({
+  const dialog = new LegacyDialog({
+    // Content is a div with a specific expected structure. See LegacyDialog.
     body: content,
-    onHidden: onHidden || dialogHidden,
+    onHidden,
     autoResizeScrollableElement: '.scrollable-element'
   });
 
@@ -50,6 +51,7 @@ export function showDialog(type, callback, onHidden) {
   });
 
   dialog.show();
+  return dialog;
 }
 
 export function showStartOverDialog(callback) {
@@ -102,12 +104,22 @@ export function processResults(onComplete, beforeHook) {
     var results = getResult();
     var response = results.response;
     var result = results.result;
-    var errorType = results.errorType;
+    var errorDialog = results.errorDialog;
     var testResult = results.testResult ? results.testResult : (result ? 100 : 0);
     var submitted = results.submitted || false;
 
     if (!result) {
-      showDialog(errorType || "error");
+      // errorType is set by multi and by contract_match. In the case of multi,
+      // it's either "toofew" or null.
+      // contract_match generates its DOM for the possible error values here:
+      // https://github.com/code-dot-org/code-dot-org/blob/536da331a97b36824ac433ed667786c0b1e79ba2/dashboard/app/views/levels/_contract_match.html.haml#L24
+      if (errorDialog) {
+        // In this case, errorDialog should be an instance of a React class.
+        showDialog(errorDialog);
+      } else {
+        showDialog('error', null, adjustScroll);
+      }
+
       if (!appOptions.dialog.skipSound) {
         Sounds.getSingleton().play('failure');
       }
@@ -155,7 +167,12 @@ export function processResults(onComplete, beforeHook) {
           dialog.show();
         } else if (lastServerResponse.nextRedirect) {
           if (appOptions.dialog.shouldShowDialog) {
-            showDialog("success");
+            showDialog("success", null, () => {
+              var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
+              if (lastServerResponse.nextRedirect) {
+                window.location.href = lastServerResponse.nextRedirect;
+              }
+            });
           } else {
             window.location.href = lastServerResponse.nextRedirect;
           }

@@ -23,7 +23,7 @@ vi:
             Getting Loopy:
               name: Tạo vòng lặp
             Going Places Safely:
-              name: 'Đến nơi an toàn'
+              name: Đến nơi an toàn
             Happy Maps:
               name: Bản đồ thú vị
             'Jigsaw: Learn to drag and drop':
@@ -67,7 +67,7 @@ vi:
             Binary Bracelets:
               name: Vòng đeo tay nhị phân
             Conditionals:
-              name: 'Điều kiện'
+              name: Điều kiện
             Flappy:
               name: Flappy bird
             Getting Loopy:
@@ -115,7 +115,7 @@ vi:
             Computational Thinking:
               name: suy nghĩ máy móc
             Crowdsourcing:
-              name: 'Đa nguồn'
+              name: Đa nguồn
             Dice Race:
               name: Vòng quay xúc sắc
             Digital Citizenship:
@@ -268,7 +268,7 @@ vi:
             'Eval: Boolean Operators':
               name: Toán tử Boolean
             'Eval: Conditionals':
-              name: 'Điều kiện'
+              name: Điều kiện
             'Eval: Defining Functions':
               name: Chức năng tổng hợp
             'Eval: Functions':
@@ -408,7 +408,7 @@ vi:
             Computational Thinking:
               name: suy nghĩ máy móc
             Conditionals:
-              name: 'Điều kiện'
+              name: Điều kiện
             Functions:
               name: Các hàm
             Graph Paper Programming:
@@ -543,7 +543,7 @@ vi:
             Number Systems:
               name: Hệ thống các con số
             Personal Innovations:
-              name: 'Đổi mới sáng tạo cá nhân'
+              name: Đổi mới sáng tạo cá nhân
             Sending Binary Messages:
               name: Gửi tin nhắn nhị phân
             Sending Binary Messages with the Internet Simulator:
@@ -666,7 +666,7 @@ vi:
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
-              name: 'Đặc vụ dựa trên mô hình các hệ thống phản xạ phức tạp'
+              name: Đặc vụ dựa trên mô hình các hệ thống phản xạ phức tạp
             Computational Thinking And The Framework For K-12 Science Education:
               name: Tư duy máy tính và khuôn khổ K-12 giáo dục khoa học
             Dispositions and Classroom Culture:
@@ -749,7 +749,7 @@ vi:
             Loops and Simulations:
               name: Vòng lặp và mô phỏng
             Multi-screen Apps:
-              name: 'Ứng dụng đa màn hình'
+              name: Ứng dụng đa màn hình
             Practice PT - Design a Digital Scene:
               name: Thực hành PT - thiết kế một cảnh kỹ thuật số
             'Practice PT: Create':
@@ -761,7 +761,7 @@ vi:
             Understanding Program Flow and Logic:
               name: Hiểu dòng chảy và logic của chương trình
             User Input and Strings:
-              name: 'Đầu vào và chuỗi người dùng'
+              name: Đầu vào và chuỗi người dùng
             Using Simple Commands:
               name: Sử dụng các câu lệnh đơn giản
             Using Variables in Apps:
@@ -872,7 +872,7 @@ vi:
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
-              name: 'Đặc vụ dựa trên mô hình các hệ thống phản xạ phức tạp'
+              name: Đặc vụ dựa trên mô hình các hệ thống phản xạ phức tạp
             Computational Thinking And The Framework For K-12 Science Education:
               name: Tư duy máy tính và khuôn khổ K-12 giáo dục khoa học
             Dispositions and Classroom Culture:
@@ -903,7 +903,7 @@ vi:
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
-              name: 'Đặc vụ dựa trên mô hình các hệ thống phản xạ phức tạp'
+              name: Đặc vụ dựa trên mô hình các hệ thống phản xạ phức tạp
             Computational Thinking And The Framework For K-12 Science Education:
               name: Tư duy máy tính và khuôn khổ K-12 giáo dục khoa học
             Dispositions and Classroom Culture:
@@ -1074,7 +1074,7 @@ vi:
             Jigsaw:
               name: Ghép hình
             Long assessment:
-              name: 'Đánh giá dài'
+              name: Đánh giá dài
             Markdown Details:
               name: Các chi tiết đánh dấu
             Match:
@@ -1100,9 +1100,9 @@ vi:
             Public Key Cryptography:
               name: Mật mã khóa chìa khoá chung
             Rich long assessment:
-              name: 'Đánh giá dài phong phú'
+              name: Đánh giá dài phong phú
             Sample PLC Assessment:
-              name: 'Đánh giá mẫu PLC'
+              name: Đánh giá mẫu PLC
             Star wars:
               name: Chiến Tranh Giữa Các Vì Sao
             Studio:
@@ -1116,9 +1116,9 @@ vi:
             Web Lab:
               name: Kho Web
             Multi page assessment:
-              name: 'Đánh giá nhiều trang'
+              name: Đánh giá nhiều trang
             Single page assessment:
-              name: 'Đánh giá một trang'
+              name: Đánh giá một trang
             Standalone video:
               name: Video độc lập
             Curriculum Reference:
@@ -1503,7 +1503,7 @@ vi:
           description_audience: ''
           stages:
             Close & Next Steps:
-              name: 'Đóng lại và Các bước tiếp theo'
+              name: Đóng lại và Các bước tiếp theo
             Getting Started:
               name: Bắt đầu
             Intro to Unit 2:
@@ -1521,7 +1521,7 @@ vi:
           description_audience: ''
           stages:
             Close & Next Steps:
-              name: 'Đóng lại và Các bước tiếp theo'
+              name: Đóng lại và Các bước tiếp theo
             Getting Started:
               name: Bắt đầu
             Intro to Unit 3:
@@ -1539,7 +1539,7 @@ vi:
           description_audience: ''
           stages:
             Close & Next Steps:
-              name: 'Đóng lại và Các bước tiếp theo'
+              name: Đóng lại và Các bước tiếp theo
             Getting Started:
               name: Bắt đầu
             Intro to Unit 4:
@@ -1635,7 +1635,7 @@ vi:
             Rapid Research - Data Innovations:
               name: Nghiên cứu nhanh chóng - Đổi mới dữ liệu
             Reading Records:
-              name: 'Đọc các bản ghi'
+              name: Đọc các bản ghi
             Search Terms:
               name: Tìm kiếm thuật ngữ
             Unique IDs, Delete and Update Records:
@@ -1673,7 +1673,7 @@ vi:
           description_audience: ''
           stages:
             Close and Next Steps:
-              name: 'Đóng lại và Các bước tiếp theo'
+              name: Đóng lại và Các bước tiếp theo
             Getting Started:
               name: Bắt đầu
             Teaching Support - Lessons 1-3:
@@ -1709,7 +1709,7 @@ vi:
             Basic Circuits:
               name: Mạch cơ bản
             Blinky Lights:
-              name: 'Ánh sáng nhấp nháy'
+              name: Ánh sáng nhấp nháy
             JunkBot:
               name: JunkBot
             Making Music:
@@ -1748,15 +1748,15 @@ vi:
             Challenge Overview:
               name: Tổng quan về Thử thách
             Chunk 1 Overview:
-              name: 'Đoạn 1 Tổng quan'
+              name: Đoạn 1 Tổng quan
             Chunk 2 Overview:
-              name: 'Đoạn 2 Tổng quan'
+              name: Đoạn 2 Tổng quan
             Chunk 3 Overview:
-              name: 'Đoạn 3 Tổng quan'
+              name: Đoạn 3 Tổng quan
             Chunk 4 Overview:
-              name: 'Đoạn 4 Tổng quan'
+              name: Đoạn 4 Tổng quan
             Chunk 5 Overview:
-              name: 'Đoạn 5 Tổng quan'
+              name: Đoạn 5 Tổng quan
             Complete the Challenge:
               name: Hoàn thành thách thức
             Getting Started:
@@ -1795,15 +1795,15 @@ vi:
           description_short: Online Exploration of CSP Unit 3
           stages:
             Chunk 1 Overview:
-              name: 'Đoạn 1 Tổng quan'
+              name: Đoạn 1 Tổng quan
             Chunk 2 Overview:
-              name: 'Đoạn 2 Tổng quan'
+              name: Đoạn 2 Tổng quan
             Chunk 3 Overview:
-              name: 'Đoạn 3 Tổng quan'
+              name: Đoạn 3 Tổng quan
             Chunk 4 Overview:
-              name: 'Đoạn 4 Tổng quan'
+              name: Đoạn 4 Tổng quan
             Chunk 5 Overview:
-              name: 'Đoạn 5 Tổng quan'
+              name: Đoạn 5 Tổng quan
             Practice Performance Task:
               name: Nhiệm vụ trình diễn thực hành
             Unit 3 Overview:
@@ -1949,9 +1949,9 @@ vi:
             Permanent Data Storage:
               name: Lưu trữ dữ liệu vĩnh viễn
             Reading Records:
-              name: 'Đọc các bản ghi'
+              name: Đọc các bản ghi
             Sample Apps:
-              name: 'Ứng dụng mẫu'
+              name: Ứng dụng mẫu
             Updating Records:
               name: Cập nhật các bản ghi
             Visualizing Data:
@@ -1992,9 +1992,9 @@ vi:
             Permanent Data Storage:
               name: Lưu trữ dữ liệu vĩnh viễn
             Reading Records:
-              name: 'Đọc các bản ghi'
+              name: Đọc các bản ghi
             Sample Apps:
-              name: 'Ứng dụng mẫu'
+              name: Ứng dụng mẫu
             Updating Records:
               name: Cập nhật các bản ghi
             Visualizing Data:
@@ -2109,7 +2109,7 @@ vi:
             Packets and Making a Reliable Internet:
               name: Gói dữ liệu và tạo một mạng Internet đáng tin cậy
             Personal Innovations:
-              name: 'Đổi mới sáng tạo cá nhân'
+              name: Đổi mới sáng tạo cá nhân
             Practice PT - The Internet and Society:
               name: Thực hành PT - Internet và xã hội
             Routers and Redundancy:
@@ -2222,6 +2222,12 @@ vi:
               name: Khảo sát sau khóa học của học sinh CSP
             Creating Functions with Parameters:
               name: Tạo ra Chức năng với các tham số
+            CSP End-of-Semester Mid-course survey:
+              name: CSP End-of-Semester Mid-course survey
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
         csp4:
           title: CSP Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
@@ -2297,7 +2303,7 @@ vi:
             Loops and Simulations:
               name: Vòng lặp và mô phỏng
             Multi-screen Apps:
-              name: 'Ứng dụng đa màn hình'
+              name: Ứng dụng đa màn hình
             'Practice PT: Create':
               name: 'Thực hành PT: Tạo ra'
             Processing Arrays:
@@ -2305,7 +2311,7 @@ vi:
             Understanding Program Flow and Logic:
               name: Hiểu dòng chảy và logic của chương trình
             User Input and Strings:
-              name: 'Đầu vào và chuỗi người dùng'
+              name: Đầu vào và chuỗi người dùng
             Using Variables in Apps:
               name: Sử dụng các biến số trong ứng dụng
             While Loops:
@@ -2367,7 +2373,7 @@ vi:
             CSP Student Post-Course Survey:
               name: Khảo sát sau khóa học của học sinh CSP
             Multi-Screen Apps:
-              name: 'Ứng dụng đa màn hình'
+              name: Ứng dụng đa màn hình
             '"if" Statements Unplugged':
               name: 'Câu lệnh "If"'
             Boolean Expressions and "if" Statements:
@@ -2419,7 +2425,7 @@ vi:
             Collisions:
               name: Va chạm
             Complex Conditionals:
-              name: 'Điều kiện phức hợp'
+              name: Điều kiện phức hợp
             Complex Sprite Movement:
               name: Di chuyển nhân vật phức tạp
             Conditionals and Keyboard Input:
@@ -2461,7 +2467,7 @@ vi:
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
-              name: 'Đặc vụ dựa trên mô hình các hệ thống phản xạ phức tạp'
+              name: Đặc vụ dựa trên mô hình các hệ thống phản xạ phức tạp
             Computational Thinking And The Framework For K-12 Science Education:
               name: Tư duy máy tính và khuôn khổ K-12 giáo dục khoa học
             Dispositions and Classroom Culture:
@@ -2541,7 +2547,7 @@ vi:
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
-              name: 'Đặc vụ dựa trên mô hình các hệ thống phản xạ phức tạp'
+              name: Đặc vụ dựa trên mô hình các hệ thống phản xạ phức tạp
             Computational Thinking And The Framework For K-12 Science Education:
               name: Tư duy máy tính và khuôn khổ K-12 giáo dục khoa học
             Dispositions and Classroom Culture:
@@ -2674,7 +2680,7 @@ vi:
           description_audience: ''
           stages:
             CS Principles Culminating Assessment:
-              name: 'Đánh giá cao nhất nguyên lý của KHMT'
+              name: Đánh giá cao nhất nguyên lý của KHMT
             CSP Student Post Survey Staging:
               name: Bước Khảo sát học sinh CSP sau đó
             CSP Longitudinal Contact Request:
@@ -2690,19 +2696,19 @@ vi:
         cspexam1-mWU7ilDYM9:
           title: CS Principles Culminating Assessment - Part 1
           description: 'This 25 question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact.'
-          description_short: 'Đánh giá nhiều lựa chọn bao gồm cả những câu hỏi về 7 ý tưởng lớn về khoa học máy tính. Nó là phần 1 của bài kiểm tra 50 phần câu hỏi.'
+          description_short: Đánh giá nhiều lựa chọn bao gồm cả những câu hỏi về 7 ý tưởng lớn về khoa học máy tính. Nó là phần 1 của bài kiểm tra 50 phần câu hỏi.
           description_audience: ''
           stages:
             CS Principles Culminating Assessment Part 1:
-              name: 'Đánh giá cao nhất nguyên lý của KHMT Phần 1'
+              name: Đánh giá cao nhất nguyên lý của KHMT Phần 1
         cspexam2-AKwgAh1ac5:
           title: CS Principles Culminating Assessment - Part 2
           description: 'This 25 question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact.  It is part 2 of a two-part 50 question exam'
-          description_short: 'Đánh giá nhiều lựa chọn bao gồm cả những câu hỏi về 7 ý tưởng lớn về khoa học máy tính. Nó là phần 1 của bài kiểm tra 50 phần câu hỏi.'
+          description_short: Đánh giá nhiều lựa chọn bao gồm cả những câu hỏi về 7 ý tưởng lớn về khoa học máy tính. Nó là phần 1 của bài kiểm tra 50 phần câu hỏi.
           description_audience: ''
           stages:
             CS Principles Culminating Assessment Part 2:
-              name: 'Đánh giá cao nhất nguyên lý của KHMT Phần 2'
+              name: Đánh giá cao nhất nguyên lý của KHMT Phần 2
         CSDU4-Draft:
           title: " TEMP CSD Unit 4 - The Design Process"
           description: Temp place to work on U4 of Disco
@@ -3093,7 +3099,7 @@ vi:
           description_audience: ''
           stages:
             Close & Next Steps:
-              name: 'Đóng lại và Các bước tiếp theo'
+              name: Đóng lại và Các bước tiếp theo
             Getting Started:
               name: Bắt đầu
             Intro to Unit 2:
@@ -3111,7 +3117,7 @@ vi:
           description_audience: ''
           stages:
             Close & Next Steps:
-              name: 'Đóng lại và Các bước tiếp theo'
+              name: Đóng lại và Các bước tiếp theo
             Getting Started:
               name: Bắt đầu
             Intro to Unit 3:
@@ -3129,7 +3135,7 @@ vi:
           description_audience: ''
           stages:
             Close & Next Steps:
-              name: 'Đóng lại và Các bước tiếp theo'
+              name: Đóng lại và Các bước tiếp theo
             Getting Started:
               name: Bắt đầu
             Intro to Unit 4:
@@ -3161,7 +3167,7 @@ vi:
             Unit 5 Challenge:
               name: Phần 5 Thách thức
             Close & Next Steps:
-              name: 'Đóng lại và Các bước tiếp theo'
+              name: Đóng lại và Các bước tiếp theo
         ecs-unit6:
           title: ECS Unit 6
           description: 'Unit 6: Robotics'
@@ -3181,7 +3187,7 @@ vi:
             Unit 6 lessons:
               name: Phần 6 bài học
             Close & Next Steps:
-              name: 'Đóng lại và Các bước tiếp theo'
+              name: Đóng lại và Các bước tiếp theo
         grade3:
           title: Grade 3
           description: Planning Script for CSF 2.0
@@ -3199,7 +3205,7 @@ vi:
             Build a Game:
               name: Xây dựng một trò chơi
             Farmer Conditional with Cards:
-              name: 'Điều của nông dân với Thẻ'
+              name: Điều của nông dân với Thẻ
             Farmer Debug Relay Programming:
               name: Lập trình chuyển tiếp gỡ lỗi người nông dân
             Farmer Graph Paper Programming:
@@ -3257,7 +3263,7 @@ vi:
             Booleans and Conditionals:
               name: Boolean và các điều kiện
             Complex Conditionals:
-              name: 'Điều kiện phức hợp'
+              name: Điều kiện phức hợp
             Conditionals and Keyboard Input:
               name: Các điều kiện và đầu vào của bàn phím
             Draw Loop and Randomization:
@@ -3341,7 +3347,7 @@ vi:
               description_student: By combining the Draw Loop and the Counter Pattern, the class writes programs that move sprites across the screen, as well as animate other sprite properties.
               description_teacher: By combining the Draw Loop and the Counter Pattern, students write programs that move sprites across the screen, as well as animate other sprite properties.
             Conditionals:
-              name: 'Điều kiện'
+              name: Điều kiện
               description_student: The class starts by using booleans to compare the current value of a sprite property with a target value, using that comparison to determine when a sprite has reached a point on the screen, grown to a given size, or otherwise reached a value using the counter pattern. After using booleans directly to investigate the values or sprite properties, the class adds conditional if statements to write code that responds to those boolean comparisons.
               description_teacher: Students start by using booleans to compare the current value of a sprite property with a target value, using that comparison to determine when a sprite has reached a point on the screen, grown to a given size, or otherwise reached a value using the counter pattern. After using booleans directly to investigate the values or sprite properties, students add conditional _if_ statements to write code that responds to those boolean comparisons.
             Keyboard Input:
@@ -3442,7 +3448,7 @@ vi:
             Binary:
               name: Nhị phân
             Conditionals:
-              name: 'Điều kiện'
+              name: Điều kiện
             Events:
               name: Các sự kiện
             For Loops:
@@ -3984,7 +3990,7 @@ vi:
             Fuzz Fiesta:
               name: Fuzz Fiesta
             Going Places Safely:
-              name: 'Đến nơi an toàn'
+              name: Đến nơi an toàn
             'Debugging: Unspotted Bugs':
               name: 'Gỡ lội: Những chú bọ không đốm'
         courseb-draft:
@@ -4156,13 +4162,13 @@ vi:
             Internet:
               name: Kết nối mạng
             Crowdsourcing:
-              name: 'Đa nguồn'
+              name: Đa nguồn
             Determine the Concept:
               name: Determine the Concept
             Introduction:
               name: Giới thiệu
             Conditionals:
-              name: 'Điều kiện'
+              name: Điều kiện
             'Algorithms: Dice Race':
               name: 'Algorithms: Dice Race'
         coursef-draft:
@@ -4483,7 +4489,7 @@ vi:
             Permanent Data Storage:
               name: Lưu trữ dữ liệu vĩnh viễn
             Reading Records:
-              name: 'Đọc các bản ghi'
+              name: Đọc các bản ghi
             Deleting Records:
               name: Xóa các bản ghi
             Updating Records:
@@ -4493,7 +4499,7 @@ vi:
             Visualizing Data:
               name: Làm dự liệu hiển thị được
             Sample Apps:
-              name: 'Ứng dụng mẫu'
+              name: Ứng dụng mẫu
             Final Project:
               name: Dự án cuối cùng
         unit6-csd-draft:
@@ -4582,6 +4588,8 @@ vi:
               name: Designing Screens with Code
             Arrays:
               name: Arrays
+            Making Music:
+              name: Tạo âm nhạc
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -4713,7 +4721,7 @@ vi:
             Introduction:
               name: Giới thiệu
             Conditionals:
-              name: 'Điều kiện'
+              name: Điều kiện
             'Real Life Algorithms: Dice Race':
               name: 'Real Life Algorithms: Dice Race'
         csd6:
@@ -4811,11 +4819,11 @@ vi:
             Booleans and Conditionals:
               name: Boolean và các điều kiện
             Conditionals:
-              name: 'Điều kiện'
+              name: Điều kiện
             Taking Input:
               name: Taking Input
             Complex Conditionals:
-              name: 'Điều kiện phức hợp'
+              name: Điều kiện phức hợp
             'Project: Interactive Card':
               name: 'Dự án: Thẻ tương tác'
             Keyboard Input:
@@ -4935,7 +4943,7 @@ vi:
             Conditionals and Keyboard Input:
               name: Các điều kiện và đầu vào của bàn phím
             Complex Conditionals:
-              name: 'Điều kiện phức hợp'
+              name: Điều kiện phức hợp
             'Project: Interactive Card':
               name: 'Dự án: Thẻ tương tác'
             Velocity:
@@ -5075,7 +5083,7 @@ vi:
             Booleans and Conditionals:
               name: Boolean và các điều kiện
             Conditionals:
-              name: 'Điều kiện'
+              name: Điều kiện
             Keyboard Input:
               name: Keyboard Input
             Other Forms of Input:
@@ -6107,6 +6115,10 @@ vi:
               name: Phần 3 Chương 1 Đánh giá
             foo:
               name: foo
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey:
+              name: Please complete the CSP Mid-course survey
           title: CSP Unit 3 - Intro to Programming (subgoals)
           description_audience: ''
           description_short: Lập trình
@@ -6183,7 +6195,7 @@ vi:
               name: 'Bài 1: Giới thiệu App Lab'
           title: Giới thiệu App Lab (Beta)
           description_audience: ''
-          description_short: ''
+          description_short: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
           description: Những bài học giới thiệu bạn đến App Lab thông qua một loạt các dự án sáng tạo.
         e-f-ramp:
           stages:
@@ -6212,7 +6224,7 @@ vi:
             Course E Introduction:
               name: Khoá học E Giới thiệu
             Conditionals:
-              name: 'Điều kiện'
+              name: Điều kiện
             Private and Personal Information:
               name: Private and Personal Information
             Build a Star Wars Game:
@@ -6240,7 +6252,7 @@ vi:
             Internet:
               name: Kết nối mạng
             Crowdsourcing:
-              name: 'Đa nguồn'
+              name: Đa nguồn
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops in Bee/Zombie:
@@ -6428,7 +6440,7 @@ vi:
             Course E Introduction:
               name: Khoá học E Giới thiệu
             Conditionals:
-              name: 'Điều kiện'
+              name: Điều kiện
             Private and Personal Information:
               name: Private and Personal Information
             Build a Star Wars Game:
@@ -6456,7 +6468,7 @@ vi:
             Internet:
               name: Kết nối mạng
             Crowdsourcing:
-              name: 'Đa nguồn'
+              name: Đa nguồn
           title: Các kịch bản mới cho E
           description_audience: ''
           description_short: ''
@@ -6562,7 +6574,7 @@ vi:
         subgoals-assessment-staging:
           stages:
             subgoal assessments:
-              name: 'đánh giá các tiểu mục'
+              name: đánh giá các tiểu mục
             lg by itself:
               name: lg của chính nó
             test of single level lg:
@@ -6689,10 +6701,20 @@ vi:
               name: 'Technology Foundations: What is a Computer?'
             'Data Science: Problem Solving with Big Data':
               name: 'Data Science: Problem Solving with Big Data'
-          title: PwC Access Your Potential
+            Personal Innovations:
+              name: Đổi mới sáng tạo cá nhân
+            What is a Computer?:
+              name: Máy tính là gì?
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Programming - Hour of Code:
+              name: Programming - Hour of Code
+            Simple Encryption:
+              name: Simple Encryption
+          title: PwC Access Your Potential curriculum
           description_audience: ''
           description_short: ''
-          description: ''
+          description: At PwC, we believe that all students have the potential to be tomorrow’s leaders and tech-driven workforce. Access Your Potential is our commitment to help close the opportunity gap by equipping young people, especially those from disadvantaged communities, with the financial, technology and career-selection skills they need to change the trajectory of their lives. As part of our commitment, we’re excited to launch our Access Your Potential middle school technology and careers curriculum.
         allthesurveys:
           stages:
             CSP pre survey Test:
@@ -6771,10 +6793,12 @@ vi:
               name: Khám phá các PT - hoàn thành nhiệm vụ
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Thiết lập công nghệ - danh mục đầu tư kỹ thuật số AP và các công cụ khác
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Setup: Digital Portfolio and Other Tools'
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
-          description: ''
+          description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
         csp-create:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -6788,7 +6812,7 @@ vi:
           title: Create - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
-          description: ''
+          description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
         csp3-reovery:
           stages:
             Under the sea recovery:

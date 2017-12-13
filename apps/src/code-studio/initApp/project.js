@@ -620,6 +620,12 @@ var projects = module.exports = {
   isSupportedLevelType() {
     return !!this.getStandaloneApp();
   },
+  /*
+   * @returns {boolean} Whether a project should use the sources api.
+   */
+  useSourcesApi() {
+    return this.getStandaloneApp() !== 'weblab';
+  },
   /**
    * @returns {string} The path to the app capable of running
    * this project as a standalone app.
@@ -695,23 +701,32 @@ var projects = module.exports = {
       throw new Error('Attempting to blow away existing levelHtml');
     }
 
-    unpackSources(sourceAndHtml);
     if (this.getStandaloneApp()) {
       current.level = this.appToProjectUrl();
       current.projectType = this.getStandaloneApp();
     }
 
-    var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
-    sources.put(channelId, packSources(), filename, function (err, response) {
-      currentSourceVersionId = response.versionId;
-      current.migratedToS3 = true;
+    unpackSources(sourceAndHtml);
 
+    const updateChannels = () => {
       channels.update(channelId, current, function (err, data) {
         initialSaveComplete = true;
         this.updateCurrentData_(err, data, false);
         executeCallback(callback, data);
       }.bind(this));
-    }.bind(this));
+    };
+
+    if (this.useSourcesApi()) {
+      var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
+      sources.put(channelId, packSources(), filename, function (err, response) {
+        currentSourceVersionId = response.versionId;
+        current.migratedToS3 = true;
+
+        updateChannels();
+      }.bind(this));
+    } else {
+      updateChannels();
+    }
   },
 
   getSourceForChannel(channelId, callback) {
@@ -993,20 +1008,20 @@ var projects = module.exports = {
         }
 
         // Load the project ID, if one exists
-        channels.fetch(pathInfo.channelId, function (err, data) {
+        channels.fetch(pathInfo.channelId, (err, data) => {
           if (err) {
             // Project not found, redirect to the new project experience.
             location.href = location.pathname.split('/')
               .slice(PathPart.START, PathPart.APP + 1).join('/');
           } else {
-            fetchSource(data, function () {
+            fetchSource(data, () => {
               if (current.isOwner && pathInfo.action === 'view') {
                 isEditing = true;
               }
               fetchAbuseScoreAndPrivacyViolations(function () {
                 deferred.resolve();
               });
-            }, queryParams('version'));
+            }, queryParams('version'), this.useSourcesApi());
           }
         });
       } else {
@@ -1015,16 +1030,16 @@ var projects = module.exports = {
       }
     } else if (appOptions.isChannelBacked) {
       isEditing = true;
-      channels.fetch(appOptions.channel, function (err, data) {
+      channels.fetch(appOptions.channel, (err, data) => {
         if (err) {
           deferred.reject();
         } else {
-          fetchSource(data, function () {
+          fetchSource(data, () => {
             projects.showHeaderForProjectBacked();
             fetchAbuseScoreAndPrivacyViolations(function () {
               deferred.resolve();
             });
-          }, queryParams('version'));
+          }, queryParams('version'), this.useSourcesApi());
         }
       });
     } else {
@@ -1098,8 +1113,9 @@ var projects = module.exports = {
  * @param {object} channelData Data we fetched from channels api
  * @param {function} callback
  * @param {string?} version Optional version to load
+ * @param {boolean} useSourcesApi use sources api when true
  */
-function fetchSource(channelData, callback, version) {
+function fetchSource(channelData, callback, version, useSourcesApi) {
   // Explicitly remove levelSource/levelHtml from channels
   delete channelData.levelSource;
   delete channelData.levelHtml;
@@ -1110,7 +1126,7 @@ function fetchSource(channelData, callback, version) {
   current = channelData;
 
   projects.setTitle(current.name);
-  if (channelData.migratedToS3) {
+  if (useSourcesApi && channelData.migratedToS3) {
     var url = current.id + '/' + SOURCE_FILE;
     if (version) {
       url += '?version=' + version;

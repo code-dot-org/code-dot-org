@@ -53,7 +53,6 @@ export default class SeeMoreCourses extends Component {
                   title={course.title}
                   description={course.description}
                   link={course.link}
-                  isRtl={isRtl}
                 />
                 {(index % 2 === 0) && <div style={styles.spacer}>.</div>}
               </div>

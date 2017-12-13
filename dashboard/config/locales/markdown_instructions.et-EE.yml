@@ -1932,15 +1932,15 @@
         green. \r
         \r
         **How:** Drag in a `setProperty()` block. Use the dropdowns
-        to set the screen's `"background-color"` to `"green"`. Then hit "Run"\r
+        to set the screen's `"background-color"` to `"green"`. Then hit "Run".\r
         \r
         **Stuck?
-        Click here** ![expandable](https://images.code.org/817990cbff035c9960b84a4b228ecaba-image-1508521071643.gif)
+        Click here:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)
       AppLab Intro 7 - Change Text 2_markdown_instruction: |-
         <div style="float:right">\r
         <img
         src="https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29
-        PM.png" style="height:150px;">\r
+        PM.png" style="height:200px;">\r
         </div>\r
         \r
         **Goal:** Make the text
@@ -1950,7 +1950,7 @@
         a `"font-size"` of `80` and `"text-color"` of `"blue"`.\r
         \r
         **Stuck?
-        Click here:** ![expandable](https://images.code.org/70f1ef9698ff41c15f9825755fde3782-image-1505958989565.gif)</details>
+        Click here:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)
       AppLab Intro 7 - Full Text_markdown_instruction: |-
         <div style="float:right">\r
         <img
@@ -1963,26 +1963,26 @@
         \r
         **How:**
         \r
-        * Set the `"text"` property of the label to anything you want, like
-        `"Welcome to my app!"`.\r
-        * Set the `"background-color"` of the buttons
-        to `"blue"` and `"red"`\r
-        * Remember you can hover over elements to see
-        their `"id"`\r
+        * Remember you can hover over elements to see their `"id"`.\r
+        * Set
+        the `"background-color"` of the buttons to `"red"` and `"blue"`.\r
+        *
+        Set the `"text"` property of the label to anything you want, like `"Welcome
+        to my app!"`.\r
         \r
-        **Stuck? Click here:** ![expandable](https://images.code.org/709ff200e5b5f553b24d1d0a769db6ed-image-1507565545993.gif)
+        **Stuck? Click here:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)
       AppLab Intro 7 - onEvent intro_markdown_instruction: |-
-        <img src="https://images.code.org/8ac2e62d8940bfbe6e3a8ffdb94dd43b-image-1509043765361.gif"
+        <img src="https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif"
         style="float:right;height:200px">\r
         \r
         **Goal:** The screen will start
         out blue. Add code so it turns green when you click the "Green-ify" button.\r
         \r
         **How:**
-        Add code inside the `"onEvent"` that sets the screen's `"background-color"`
+        Add code inside the `onEvent()` that sets the screen's `"background-color"`
         to `"green"`.\r
         \r
-        **Stuck? Click here:** ![expandable](https://images.code.org/da6f9467a7da28efcbbe2f18a7d4721f-image-1509043778833.gif)
+        **Stuck? Click here:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
       AppLab Intro 7 - onEvent twoButtons_markdown_instruction: |-
         <img src="https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif"
         style="float:right;height:200px">\r
@@ -1996,22 +1996,26 @@
         of the screen to `"black"` and `"text-color"` of the label to `"white"`.\r
         \r
         **Stuck?
-        Click here:** ![expandable](https://images.code.org/64c83d66a723eae01d09e4aea38fbad1-image-1507567249833.gif)
+        Click here:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
       AppLab Intro 7 - playSound_markdown_instruction: |-
-        <img src="https://images.code.org/2bb21cff40cc9823a4ae370895de2953-image-1508294971111.49.16
-        PM.png" style="float:right;height:200px">\r
+        <img src="https://images.code.org/28176329f15dea1a863564b069e72aab-image-1511282702534.44.52
+        AM.png" style="float:right;height:200px">\r
         \r
         **Goal:** This sound board
-        app is almost done! Add an image, text, and sound to the bottom right button.\r
+        is almost done! Run it to see how it works. Then add an image, text, and sound
+        to the last button.\r
         \r
-        **How:**
-        Add an `onEvent()` below the others and use `playSound()` inside of it. Choose
-        any animal sound you like from the library. Use `setProperty()` to set the
-        `"image"` property of the button to either an image or icon of your choosing.
-        Finally, set the `"text"` with a second `setProperty()`.\r
+        **How:** \r
+        * Add an `onEvent()` to the program
+        and set the "id" to `"button4"`. Drag a `playSound()` into the `onEvent()`
+        and choose a sound from the library. \r
+        * Add a `setProperty()` (outside
+        your `onEvent()`) to change the button's `"image"` property. Choose an
+        image using the third dropdown.\r
+        * Add one more `setProperty()` to change
+        the button's `"text"`.\r
         \r
-        **Stuck?
-        Click here:** ![expandable](https://images.code.org/d33c2d008b3f03f7a9775a4a3a1bbfcf-image-1509047489327.gif)
+        **Stuck? Click here:** ![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)
       AppLab Intro 7 - thisOrThatAddButton_markdown_instruction: |-
         <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00
         PM.png" style="float:right;height:200px">\r
@@ -2039,27 +2043,73 @@
         **Stuck?
         Click here:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
       AppLab Intro 7 - thisOrThatPersonalize_markdown_instruction: |-
-        <img src="https://images.code.org/fe6ff9b7605128f999e727487d87908b-image-1510169816629.35.34
-        AM.png" style="float:right;height:200px">\r
+        <a href="https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ"
+        target="_blank"><img src="https://images.code.org/ba6c0db48cc1c3c28c135f1c2f67f361-image-1511244802597.10.18
+        PM.png" style="float:right;height:200px"></a>\r
+        <a href="https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q"
+        target="_blank"><img src="https://images.code.org/284b55697d786e0cd64350d0967c5dda-image-1511244806272.11.05
+        PM.png" style="float:right;height:200px"></a>\r
+        <a href="https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg"
+        target="_blank"><img src="https://images.code.org/445181ff8d84861919512ba9b8e09586-image-1511244809994.12.40
+        PM.png" style="float:right;height:200px"></a>\r
         \r
-        **Goal:** Start building
-        your own "Choose Your Own Adventure" app. Don't forget to "Share" it
-        with someone!\r
+        **Goal:** Build your
+        own app by extending this project. Then "Share" it with someone!\r
         \r
-        **How:** Choose the basic story you want to tell, like
-        who your character is and the setting. Then change the text and images of
-        your app to match the story. You can always add more screens as you keep building
-        out your adventure.\r
+        **How:**
+        Decide what type of app you're interested in building. Then go build it by
+        adding more screens, buttons, text, sound, and user interactions to your app.
+        There's a few more blocks in the toolbox that you can experiment with as
+        well. Once you're done click "Share" to send it to yourself or a friend!
         \r
-        <details><summary><b>Stuck? Click here for some
-        ideas</b></summary>\r
         \r
-        <li>Make an adventure about your favorite fictional
-        character</li>\r
-        <li>Make an adventure about a famous (or not-so-famous person)
-        you're a big fan of</li>\r
-        <li>Make an adventure that has a lot of unexpected
-        twists or has a difficult moral choice</li>\r
+        <details><summary><b>Choose Your Own Adventure Ideas</b></summary>\r
+        \r
+        Try
+        out this <a href="https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg"
+        target="_blank">Example Choose Your Own Adventure App</a> so you can see
+        how one works. Here's some ideas to help you come up with your own story.\r
+        \r
+        <li>Make
+        an adventure about your favorite character, real or fictional.</li>\r
+        <li>Make
+        an adventure that tells the story of your favorite book, movie, or your own
+        creation.</li>\r
+        <li>Make an adventure that has a lot of unexpected twists
+        or has a difficult moral choice.</li>\r
+        <br>\r
+        </details>\r
+        \r
+        <details><summary><b>Greeting
+        Card Ideas</b></summary>\r
+        \r
+        Try out this <a href="https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q"
+        target="_blank">Example Greeting Card App</a> so you can see how one works.
+        Here's some ideas to help you come up with your own card.\r
+        \r
+        <li>Think
+        of a birthday, holiday, or other special day that's coming up. Make a card
+        to celebrate!</li>\r
+        <li>Create a thank you card for someone you appreciate.</li>\r
+        <li>Create
+        an invitation for an upcoming event.</li>\r
+        <br>\r
+        </details>\r
+        \r
+        <details><summary><b>Personality
+        Quiz Ideas</b></summary>\r
+        \r
+        Try out this <a href="https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ"
+        target="_blank">Example Personality Quiz App</a> so you can see how one
+        works. Here's some ideas to help you come up with your own quiz.\r
+        \r
+        <li>Make
+        a quiz that suggests something a person might like, for example a meal, a
+        team, a book, or a place.</li>\r
+        <li>Make an quiz that "predicts the future"
+        based on their answers.</li>\r
+        <li>Make a quiz to help people make a hard
+        decision.</li>\r
         \r
         </details>
       AppLab Intro 7 - thisOrThatSetScreen_markdown_instruction: |-
@@ -8802,7 +8852,6 @@
         * Add code
         to your program that updates your sprites' `sprite.x`, `sprite.y`, or `sprite.rotation`
         properties so that they move. You'll need to update them with `randomNumber()`.\r
-        \r
       CSD U3 Draw Loop Plugged wiggle sprite rotation_markdown_instruction: |-
         <img
         src="https://images.code.org/03f98fedbe59ceb5ef0a8530cb81c367-image-1492040405357.gif",
@@ -9573,13 +9622,13 @@
         learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
         PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png) to send it to your Projects Gallery.\r
-      CSD U3 L15 Freeplay_markdown_instruction: |
+      CSD U3 L15 Freeplay_markdown_instruction: |-
         # Free Play\r
         \r
         Use what you've
         learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
         PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.\r
+        PM.png) to send it to your Projects Gallery.
       CSD U3 L16 Freeplay_markdown_instruction: |
         # Free Play\r
         \r
@@ -15467,32 +15516,45 @@
         is a clicker game, similar to the one that you built in the last lesson.\r
         \r
         Look
-        at the code with your partner and answer the following questions:\r
+        at the code with your partner and answer the following question:\r
         \r
         *
-        What happens when the user clicks picture of the mouse?\r
-        * When will the
-        LED start to blink?\r
+        How many times do you need to click the mouse before the LED starts to blink?\r
         \r
-        Once you have answered the questions, run the code
-        and see what happens.
+        Write
+        your answer in the box below, then run the code and see what happens.
       CSD U6 Catch the Mouse_markdown_instruction: Embedded Prediction
+      CSD U6 LED all_markdown_instruction: |-
+        # Multi-function Light\r
+        \r
+        This app
+        should let you choose between three types of lights: on, blink, and pulse.  It
+        should also have a button that turns the light completely off.  Right now
+        only the "on" button works, and the "off" button is completely missing.\r
+        \r
+        #
+        Do This\r
+        * Add code to make the "blink" and "pulse" buttons work.\r
+        *
+        In design mode, add a new "off" button.\r
+        * Add code to make the "off"
+        button work.
       CSD U6 LED toggle_markdown_instruction: |-
         # Light Switch\r
         \r
-        A light switch
-        should change a light between off and on.  One of the three blocks you haven't
-        used yet will make the button work like a light switch.\r
+        There are three
+        more LED blocks that you haven't used yet. One of them can make the button
+        work like a light switch, turning the LED on when it's off, but off when
+        it's on.\r
         \r
-        ## Do this\r
-        *
-        Try the "blink", "toggle" and "pulse" blocks to see what they do.\r
-        *
-        Use one of the blocks to make the button work like a light switch.\r
-         * If
-        the LED is off, the button should turn it on.\r
-         * If the LED is on, the
-        button should turn it off.
+        # Do This\r
+        * Try the `blink`, `toggle` and `pulse` blocks
+        to see what they do.\r
+        * Use one of the blocks to make the button work like
+        a light switch.\r
+         * If the LED is off, the button should turn it on.\r
+
+        * If the LED is on, the button should turn it off.
       CSD U6 LEDbutton predict embed_markdown_instruction: |-
         # Using Events\r
         \r
@@ -15502,18 +15564,17 @@
         your answer.\r
         \r
         * Will the light turn on when the program is "Run"?  Why
-        or why not?\r
-        * What does the button do?
+        or why not?
       CSD U6 add LED button_markdown_instruction: |-
         # Using Events\r
         \r
-        You'll
-        also want a button that turns your light off.  This program has two buttons.  The
-        "on" button works, but the "off" button still needs to be programmed.\r
+        This program
+        has two buttons.  The "on" button works, but the "off" button still needs
+        to be programmed.\r
         \r
-        ##
-        Do this\r
-        * Add code so that the second button turns the LED off.
+        # Do This\r
+        * Add code so that the second button
+        turns the LED off.
       CSD U6 analog challenge_markdown_instruction: |-
         # Challenge\r
         \r
@@ -15559,7 +15620,12 @@
         This
         app is very similar to the last, but we've added a button with the ID "update_button".
         Write a program that displays the current value of the light sensor every
-        time the update button is clicked.
+        time the update button is clicked.\r
+        \r
+        # Do This\r
+        \r
+        Use an event handler
+        to update the text of "light_value" using the `lightSensor.value` block.
       CSD U6 analog rbg 1_markdown_instruction: |-
         # Displaying Sensor Readings in
         Color\r
@@ -15619,9 +15685,20 @@
       CSD U6 analog sound_markdown_instruction: |-
         # Reading the Sound Sensor\r
         \r
-        In
-        this app we've already added a text label with the id "sound_value". Using
-        the `soundSensor.value` block, display the value of the sound sensor.
+        The
+        `soundSensor.value` block allows you to get the current sound sensor reading\r
+        \r
+        #
+        Do This\r
+        \r
+        In this app we've already added a text label with the id "sound_value".
+        Using the `soundSensor.value` block, display the value of the sound sensor.\r
+        \r
+        _Tip:
+        You can drag the `soundSensor.value` block directly into any other block where
+        you could type a value instead._\r
+        \r
+        ![](https://images.code.org/3bd9ac3f869e42f48aaf190944fe1c22-image-1511293198110.png)
       CSD U6 analog temp_markdown_instruction: |-
         # Make a Thermometer App\r
         \r
@@ -15637,8 +15714,13 @@
         a simple thermometer app that reads in values from the temperature sensor.
         Your app can display the temperature in either Fahrenheit or Celsius (or both!)\r
         \r
-        _Challenge:
-        can you make your app continually update the temperature readings?_
+        *
+        Using Design Mode, create a button for updating and a label to display the
+        temperature\r
+        * Add an event handler to respond to your update button being
+        clicked\r
+        * Add code to your event handler to read the temperature sensor
+        and display the value on screen
       CSD U6 balloon clicker predict_markdown_instruction: |-
         # Make the Balloon Fly\r
         \r
@@ -15678,30 +15760,57 @@
         * Make the buzzer or LED turn on when
         the motorcycle reaches the top or bottom of the screen.
       CSD U6 checkbox_markdown_instruction: Predict Level
-      CSD U6 create LED app_markdown_instruction: |-
-        # Make Your App\r
+      CSD U6 create LED app 2_markdown_instruction: |-
+        # Make Your App - The Code\r
         \r
-        Now's
-        your chance to put your plan into action.  Use what you've learned to make
-        your own LED app.
-      CSD U6 design motorcycle_markdown_instruction: |-
-        # Design Mode is Back!\r
-        \r
-        Now
-        that you have Design Mode back, you can add some elements of your own. The
-        motorcycle should be able to move up and down right now, but how can you control
-        its speed?\r
+        Next,
+        you'll need to add the code that makes your app work.\r
         \r
         # Do This\r
         \r
+        *
+        Discuss with your partner what code you will need in your app.  Do you need...\r
+          *
+        Events?\r
+          * Variables?\r
+          * Setters?\r
+          * Random Numbers?\r
+        * In Code
+        Mode, add in the code that will make your app work.
+      CSD U6 create LED app_markdown_instruction: |-
+        # Make Your App - The Screen\r
+        \r
+        Now,
+        you and your partner can make your own app using the LED.  Discuss with your
+        partner what kind of app you want to make.\r
+        \r
+        # Do This\r
+        \r
+        * Discuss
+        with your partner what screen elements you will need in your app.  Do you
+        want...\r
+          * Buttons?\r
+          * Images?\r
+          * Text?\r
+        * In Design Mode, add
+        the elements, making sure you give each a meaningful ID.
+      CSD U6 design motorcycle_markdown_instruction: |-
+        # Add Your Own Elements\r
+        \r
+        Now
+        it's time to add some elements of your own. The motorcycle should be able
+        to move up and down right now, but how can you control its speed?\r
+        \r
+        #
+        Do This\r
+        \r
         * Add a slider in design mode.\r
-          * Make
-        sure you set the min and max values of the slider in design mode.\r
-        * Create
-        an event that will trigger when the slider value is changed.\r
-        * Add code
-        to get the slider value and store it into the `speed` variable when the event
-        is triggered.
+          * Make sure you set the
+        min and max values of the slider in design mode.\r
+        * Create an event that
+        will trigger when the slider value is changed.\r
+        * Add code to get the slider
+        value and store it into the `speed` variable when the event is triggered.
       CSD U6 emoji race demo_markdown_instruction: |-
         # Emoji Race!\r
         \r
@@ -15741,17 +15850,11 @@
         </div>\r
         \r
         Create
-        an event handler for "sad_button" and make it change to a sad emoji.\r
+        an event handler for "sad_button" and make it change to a sad emoji. To
+        do this you'll need to set the "image" property of the image with id "face".\r
         \r
-        *
-        Drag out an `onEvent` block and select "sad_button" from the id dropdown\r
-        *
-        Add a `setProperty` block inside your new event handler\r
-        * Use your `setProperty`
-        block to set "image" property of "face" to a sad emoji\r
-        \r
-        _Tip: when
-        you click the last dropdown in the `setProperty` block click "Choose..."
+        _Tip:
+        when you click the last dropdown in the `setProperty` block click "Choose..."
         to go to your media library. From there you can select an icon from our icon
         library or upload an image of your own._
       CSD U6 emotion machine 2_markdown_instruction: |-
@@ -15818,12 +15921,15 @@
         has been expanded to control frequency as well, but the code isn't finished
         yet.\r
         \r
-        ## Do This\r
+        # Do This\r
         * Using the `duration` variable as a model, create
         a `frequency` variable that gets the value from the *frequency* slider.\r
         *
         Modify the line of code that makes the buzzer sound so that it uses the `frequency`
-        variable rather than the default frequency of `500`.
+        variable rather than the default frequency of `500`.\r
+        * Run your code, then
+        change the frequency and the duration to hear the difference in the buzzer.  (Don't
+        forget to hit the button after you make a change!)
       CSD U6 game project board events_markdown_instruction: |-
         # Board Events\r
         \r
@@ -15900,7 +16006,7 @@
         that cause the LED and buzzer to reset, it uses functions to organize the
         code.\r
         \r
-        ## Do This\r
+        # Do This\r
         \r
         * Read the `updateLED` function to see what
         it does.\r
@@ -15940,14 +16046,14 @@
       CSD U6 getProperty board predict_markdown_instruction: |-
         Predict Level (See
         contained level for markdown)
-      CSD U6 getProperty buzzer_markdown_instruction: |
+      CSD U6 getProperty buzzer_markdown_instruction: |-
         # Using the Circuit Playground\r
         \r
         Here's
         the same code you saw in the last level, but this time there's another dropdown
         menu to control the buzzer.  You'll have to add the code to make it work.\r
         \r
-        ##
+        #
         Do This\r
         * Using the LED code as a model, add new code inside the buttonL
         event that will play a long or short buzz according to the text property of
@@ -15955,8 +16061,7 @@
         * Add new code that will turn the buzzer
         off when the right button is pressed.\r
           * (Hint: the event is already in
-        the code.)\r
-        \r
+        the code.)
       CSD U6 getProperty debug_markdown_instruction: |-
         # Debug\r
         \r
@@ -15981,12 +16086,14 @@
         # Do This\r
         \r
         * Inside the event block, create a variable
-        called `color` and assign it a value using the `getProperty` block\r
-        * Use
-        the `setProperty` block to set the "background-color" property of "screen1"
-        to your variable `color`\r
+        called `color` and assign it a value using the `getProperty` block.\r
+          *
+        Hint: You'll need to use the "value" property to get the user's choice.\r
+        *
+        Use the `setProperty` block to set the "background-color" property of "screen1"
+        to your variable `color`.\r
         * Test your program by picking a color and clicking
-        "Set Color"
+        "Set Color".
       CSD U6 getProperty input_markdown_instruction: |-
         # getProperty and Variables\r
         \r
@@ -16086,8 +16193,8 @@
         This
         program operates the LED and the buzzer, but it has some problems.\r
         \r
-        ##
-        Do this\r
+        #
+        Do This\r
         * Read the program to understand how it is supposed to work.\r
         *
         Find and correct the bugs so that the program works properly.
@@ -16099,7 +16206,7 @@
         the values for the frequency and duration of the buzzer, we can change the
         value for the blink or pulse interval of the LED.\r
         \r
-        ## Do This\r
+        # Do This\r
         \r
         *
         Read the code and predict what the program will do, then hit "Run" to test
@@ -16116,13 +16223,11 @@
         \r
         * What does this line
         of code do: `  setProperty("screen","background-color",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)))\r
-        });`?\r
-        *
-        Why does the program need this line: `var newNumber = randomNumber(1,4);`?\r
+        });`?
         \r
-        Once
-        you have answered the questions, run the code and click the buttons to see
-        what happens.
+        \r
+        Once you have answered the question, run the code and click the buttons
+        to see what happens.
       CSD U6 move motorcycle_markdown_instruction: |-
         # Movement with Properties\r
         \r
@@ -16144,11 +16249,11 @@
         \r
         In the last level,
         the program only got the interval value from the slider when you pressed the
-        left button.  Sometime, though, you'll want to change the interval of the
+        left button.  Sometimes, though, you'll want to change the interval of the
         LED as soon as the user chooses a new value.   For that, you'll need the
         "onChange" event.\r
         \r
-        ## Do This\r
+        # Do This\r
         \r
         * Look at the first event block
         in the program and find where it says "onChange".\r
@@ -16201,21 +16306,26 @@
       CSD U6 setProperty hidden_markdown_instruction: |-
         # Hidden\r
         \r
-        We are going
-        to start making an alarm app. We have already set up an event handler for
-        the "triggerAlarmButton" which will do two things when clicked:\r
+        Design elements
+        have a property called "hidden" that controls whether the element should
+        show on screen or not. We are going to use this property to create an alarm
+        app. Notice that when the program starts one button is hidden, and one is
+        not.\r
         \r
-        *
-        Change the _text_ property of "statusLabel" to "on"\r
-        * Set the _hidden_
-        property of "stopAlarmButton" to `false`\r
+        We have already set up an event handler for the "triggerAlarmButton"
+        which will do two things when clicked:\r
+        \r
+        * Change the "text" property
+        of "statusLabel" to "on"\r
+        * Set the "hidden" property of "stopAlarmButton"
+        to `false` (meaning it should _not_ be hidden)\r
         \r
         # Do This\r
         \r
-        * Run the
-        program and click "Trigger Alarm" to see how it works\r
-        * Add code to the
-        provided event handler that hides the "triggerAlarmButton"\r
+        * Run
+        the program and click "Trigger Alarm" to see how it works\r
+        * Add code
+        to the provided event handler that hides the "triggerAlarmButton"\r
         \r
         _Note:
         the button "stopAlarmButton" is already on the screen, but because its "hidden"
@@ -16290,9 +16400,9 @@
         for the duration of the buzz, but there's something not quite right about
         how it's working.\r
         \r
-        ## Do This\r
-        * Look over the code and find the
-        bug that's keeping the duration from being set correctly.\r
+        # Do This\r
+        * Look over the code and find the bug
+        that's keeping the duration from being set correctly.\r
         \t* (Hint: Hover
         over the yellow triangles for clues as to what might be wrong with the code.)
       CSD U6 test LED_markdown_instruction: |-
@@ -16301,8 +16411,8 @@
         Now that you
         know your board is working, you can try out the different LED blocks.\r
         \r
-        ##
-        Do this\r
+        #
+        Do This\r
         * Click "Run" and discuss with your partner how the code works.\r
         *
         Try the different LED blocks to see what they do.\r
@@ -22174,7 +22284,7 @@
         to display different images based on sensor values
       CSDU6 - sensors experiment_markdown_instruction: |-
         <iframe width="370" height="620"
-        style="float:right; margin-left: 25px; border: 0px;" src="https://studio.code.org/projects/applab/iCWa6Gsb-W4StwmqFX5TkA/embed"></iframe>\r
+        style="float:right; margin-left: 25px; border: 0px;" src="https://studio.code.org/projects/applab/kxyJyJI1Bg1fV_5NIl8MHQ/embed"></iframe>\r
         \r
         #
         Sensor Experiment\r
@@ -22845,6 +22955,44 @@
         * When the Stop
         button is clicked, stop the buzzer from playing\r
         \r
+      CSDU6 circuit playground piano_markdown_instruction: |-
+        # Circuit Piano\r
+        \r
+        Look
+        at the code below. You're not going to be changing it, but try to see what
+        it does. \r
+        \r
+        # Do this\r
+        \r
+        * Run the program and play with the piano
+        on the screen.
+      CSDU6 frequency creation_markdown_instruction: |-
+        # Making the Buzzer Buzz\r
+        \r
+        Now
+        that you know how to use the frequency block, try to make the buzzer play
+        a high sound when the same button pops back up.\r
+        \r
+        # Do this\r
+        * Add
+        another onBoardEvent block so the buzzer plays a high sound when the left
+        button comes back **up**
+      CSDU6 frequency modification_markdown_instruction: |-
+        # Making the Buzzer Buzz\r
+        \r
+        You've
+        already used the buzzer's duration, now you're going use the buzzer's frequency.
+        \r
+        \r
+        The frequency of the buzzer determines how high or how low the buzzer
+        will sound when it plays. The higher the number you give frequency, the higher
+        the buzzer will sound.\r
+        \r
+        # Do this\r
+        * Right now the buzzer plays a
+        high note when the left button is pressed, make the buzzer play a low note
+        instead.
+      CSDU6 frequency template_markdown_instruction: Do a thing!
       CSDU6 light sensor alarm_markdown_instruction: |-
         # Auto Alarm\r
         \r
@@ -22864,6 +23012,19 @@
         \r
         _Challenge: Can you make both the buttons and the sensor play
         nicely together?_
+      CSDU6 piano with notes_markdown_instruction: |-
+        # Piano Notes\r
+        \r
+        This is
+        the same piano that you saw at the beginning of the lesson, except some keys
+        are using the `buzzer.note()` block, some are still using the `buzzer.frequency()`
+        block, and some are using the `buzzer.note()` block but are giving it a frequency
+        instead of a note and octave.\r
+        \r
+        # Do this\r
+        \r
+        * Edit the code so that
+        all keys are using a `buzzer.note()` block to play the corresponding note.
       CSDU6 toggle state prediction_markdown_instruction: "# More on the Toggle Switch\\r\n\\r\nThe\ntoggle
         switch has different properties that let it be used outside of toggle\nswitch
         related events. Look at the code below, what do you think is going\nto happen
@@ -34281,13 +34442,10 @@
         how long it takes you to crack the cipher! Is this a good method of encrypting
         secret data?\r
         \r
-      Function intro Ryan_markdown_instruction: |-
-        A **function** named `build bridge`
-        is in your workspace.  All of the code you need to cross the river is built
-        right in! \r
-         \r
-        Snap the small, green block twice into your workspace to
-        fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch].
+      Function intro Ryan_markdown_instruction: '** Funktsioon * nimega "ehita sild"
+        on sinu töölaual. Kõik kood, mida vajad üle jõe minemiseks, on ehitatud sinna
+        sissel! \r \r Klõpsa väikest rohelist plokki kaks korda oma tööruumi, et parandada
+        rada ja saada {currentPlayerName} Redstone tõrvik juurde [redstone_torch].'
       'Game Lab Workshop: Random_markdown_instruction': |
         # Randomized Shapes\r
         \r
@@ -35544,234 +35702,144 @@
         \r
         Now get the Agent to the pressure plate using a `repeat`
         loop to help him move forward.
-      MC_HOC_2017 Agent Test_markdown_instruction: |-
-        Click "Run" to move the player
-        using the **arrow keys**.  \r
-        \r
-        To pass this level, you will need to get
-        to the door and open it (using the **space bar**) so you can get to the orange
-        square inside.
-      MC_HOC_2017_01_markdown_instruction: |-
-        Click "Run" to move the player using
-        the **arrow keys**.  \r
-        \r
-        To pass this level, you will need to get to the
-        door and open it (using the **space bar**) so you can get to the orange square
-        inside.
-      MC_HOC_2017_01_Cole_markdown_instruction: |-
-        You need to collect all the tools
-        on this journey. Move around using the **arrow keys**, and get to the chest
-        on the path to win
-      MC_HOC_2017_01_Kiki_markdown_instruction: "To play this level, click the orange\n\"Run\"
-        button beneath the play space, then move the player around using the\n**arrow
-        keys**.  "
-      MC_HOC_2017_01_RETRY_markdown_instruction: |-
-        The door is locked, but the Agent
-        is here to help!\r
-        \r
-        Snap a `move forward` block to the bottom of the `when
-        run` block in the workspace to get the Agent to the pressure plate [PressurePlate_Up],
-        then press "Run" and use the arrow keys to move out of the house to collect
-        the **chest** [chest].
-      MC_HOC_2017_02_markdown_instruction: |-
-        The player needs to get into that secret
-        grove.  Help The Agent open the gate by writing code to get him to the pressure
-        plate.
-      MC_HOC_2017_02_Cole_markdown_instruction: "{currentPlayerName} is headed on\nan
-        adventure! To help, get the **map** [map_empty] behind the locked door\non
-        the right. \\r\n \\r\nSnap the code into the workspace to move the Agent\nto
-        the pressure plate [PressurePlate_Up] so that {currentPlayerName} can get\nthrough. "
-      MC_HOC_2017_02_Kiki_markdown_instruction: |-
-        The player is headed out on an adventure,
-        but first they have to get the torch that is hidden on the other side of that
-        locked door. \r
-        \r
-        Program the Agent to move forward twice to follow the
-        white path and get to the pressure plate so he can open the door for the player.
-      MC_HOC_2017_02_Will_markdown_instruction: |-
-        To finish this level, the player
-        needs to get to the orange square inside of the Secret Grove, which is behind
-        the locked door.  \r
-        \r
-        The code in the workspace will make the Agent move
-        forward twice to get to the pressure plate and open the door for Alex or Steve.
-      MC_HOC_2017_03_Cole_markdown_instruction: "{currentPlayerName} continues on\nthe
-        adventure and needs the **compass** [compass] to prepare for the trip.  \\r\n
-        \  \\r\nCode\nthe Agent to open the gate. "
-      MC_HOC_2017_03_Kiki_markdown_instruction: |-
-        The player's adventure will begin
-        behind the locked door, in the Secret Grove!  \r
-        \r
-        \r
-        Help The Agent open
-        the door by writing code to get him to the pressure plate.
-      MC_HOC_2017_04_markdown_instruction: |-
-        Change the loop from the last puzzle
-        to help the Agent make a path over the wider part of this river.
-      MC_HOC_2017_04POINT5_Cole_markdown_instruction: |-
-        You made it out of the swamp!  Now,
-        get the player safely to the orange square.\r
-        \r
-        Help The Agent clear the
-        path by finding a simple pattern and using loops to cross the first two pressure
-        plates.
-      MC_HOC_2017_04POINT5_RYAN_markdown_instruction: |-
-        You made it across! \r
-        \r
-        Now,
-        get {currentPlayerName} safely through the maze to collect the **axe** [diamond_axe]
-      MC_HOC_2017_04_Cole_markdown_instruction: "The Agent can move across water!
-        \ \\r\n\n\\r\nUse a `repeat` loop to solve this puzzle and help {currentPlayerName}\nget
-        to the **bucket** [bucket_empty] behind the door. "
-      MC_HOC_2017_04_Kiki_markdown_instruction: |-
-        The entry to the Secret Grove led
-        to this beautiful Oasis!  To pass this level, the player needs to get to the
-        orange square in the cabana.  \r
-        \r
-        Use a `repeat` loop to help the Agent
-        get all the way up to the pressure plate, which opens the cabana door.
-      MC_HOC_2017_05_markdown_instruction: |-
-        Loops are not always helpful.\r
-        \r
-        These
-        cacti are not growing in an obvious pattern, so a loop would not clear them
-        correctly.  Instead, we've given you a function called `destroy and move`
-        that will do the hard work for you each time the Agent gets to an obstacle.
-      MC_HOC_2017_05_Cole_markdown_instruction: |-
-        Oh no, the bridge is out! \r
-        \r
-        Code
-        the Agent to rebuild the bridge using the `place` block so that {currentPlayerName}
-        can get to the **shovel** [diamond_shovel].
-      MC_HOC_2017_05_Josh_markdown_instruction: |-
-        Oh no, the bridge is out!\r
-        \r
-        Help
-        the Agent rebuild the bridge so that the player can get to the **shovel**.
-      MC_HOC_2017_05_Kiki_markdown_instruction: |-
-        It's time for the player to leave
-        the Secret Grove and continue the adventure, but the bridge is out! \r
-        \r
-        Help
-        the Agent rebuild the bridge, then move to the wooden plank so that the player
-        can get to the orange square.
-      MC_HOC_2017_06_Cole_markdown_instruction: "Another river, but this one is much\nwider!
-        \\r\n \\r\nFix this code to help the Agent build a bridge so that {currentPlayerName}\ncan
-        get to the **pickaxe** [diamond_pickaxe]. "
-      MC_HOC_2017_06_Josh_markdown_instruction: |-
-        Another river, but this one is much
-        wider!  \r
-        \r
-        Fix this code to help the Agent build a bridge across this
-        river.
-      MC_HOC_2017_06_Kiki_markdown_instruction: |-
-        Another river, but this one is much
-        wider!  \r
-        \r
-        Fix this code to help the Agent build a bridge across the
-        water.
-      MC_HOC_2017_07_Cole_markdown_instruction: "There's ice in the way!  \\r\n \\r\nThe\n`clear
-        path` function can help you destroy the ice and get {currentPlayerName}\nto
-        the Minecart [minecart_normal]! "
-      MC_HOC_2017_07_Kiki_markdown_instruction: "Loops are not the only way to repeat\ncode!
-        \ \\r\n\\r\nHere, we've given you a function called `clear cacti` that\nwill
-        do the hard work of clearing three cacti every time you use it.  Use\ntwo
-        `clear cacti` blocks to clear the path to the orange square. "
-      MC_HOC_2017_07a_Kiki_markdown_instruction: |-
-        Now, edit this loop to help the
-        Agent clear a path to the orange square.
-      MC_HOC_2017_08_Cole_markdown_instruction: |-
-        Now, instead of destroying before
-        you move, you will need to place a block.  \r
-        \r
-        Change the provided function
-        to work for the desert.
-      MC_HOC_2017_08_Kiki_markdown_instruction: |-
-        Now, instead of destroying cacti,
-        you will need to place stone over lava, then destroy standstone.  \r
-        \r
-        Change
-        the function to work for this level.
-      MC_HOC_2017_08_RY_markdown_instruction: |-
-        Now there are **TWO** functions to
-        choose from!\r
-        \r
-        Use these functions to quickly build a bridge across the
-        lava for {currentPlayerName}.
-      MC_HOC_2017_08_Will_markdown_instruction: |-
-        Now there are **TWO** functions
-        to choose from!\r
-        \r
-        Use these functions to quickly build a bridge across
-        the lava for the player.
-      MC_HOC_2017_09_Cole_markdown_instruction: |-
-        Use functions to help the Agent
-        destroy the giant blocks of dirt that are blocking the player's path to the
-        pressure plate.
-      MC_HOC_2017_09_Kiki_markdown_instruction: "This starting code cannot be removed.\\r\n\\r\nAdd\ncommands
-        to the `create trail` function so that the program in the workspace\nwill
-        get the Agent to the pressure plate. "
-      MC_HOC_2017_09_RS_CLONE_markdown_instruction: |-
-        Fix this function to fill in
-        the holes, then step on the pressure plate to clear a path to the torch.
-      MC_HOC_2017_10_Cole_markdown_instruction: |-
-        Use the functions to clear a path
-        for the mine cart, and walk into the Nether Portal.
-      MC_HOC_2017_10_Cole_old_markdown_instruction: |-
-        Try building a function from
-        the beginning that will make it easier for the Agent to finish this minecart
-        and get the player to the orange square.
-      MC_HOC_2017_10_Kiki_markdown_instruction: |-
-        Try building a function from the
-        beginning that will make it easier for the Agent to finish this minecart and
-        get the player to the orange square.
-      MC_HOC_2017_10_RETRY_markdown_instruction: "Can you spot the difference between\nthe
-        two functions in your workspace? \\r\n \\r\nUse these functions with other\ncode
-        from the toolbox to clear a path for the Minecart, then collect the **Flint\nand
-        Steel** [flint_and_steel]. \\r\n "
-      MC_HOC_2017_10_RYAN_markdown_instruction: |-
-        Try building functions from the
-        beginning that will make it easier for the Agent to finish this minecart and
-        get the player to the orange square.
-      MC_HOC_2017_10_RYAN2_markdown_instruction: |-
-        Try building functions from the
-        beginning that will make it easier for the Agent to finish this minecart and
-        get the player to the orange square.
-      MC_HOC_2017_11_Kiki_markdown_instruction: |-
-        Now it's up to you! See what you
-        can create around this frozen lake.
-      MC_HOC_2017_13_Cole_markdown_instruction: |-
-        **Freeplay:** Now it's up to you!
-        Use the Agent's code to help you explore this world.
-      MC_HOC_2017_4.5v2_markdown_instruction: |-
-        You made it out of the swamp!  Now,
-        get the player safely to the orange square.\r
-        \r
-        Help The Agent clear the
-        path by finding a simple pattern and using loops to cross the first two pressure
-        plates.
-      MC_HOC_2017_Ali_markdown_instruction: "Look at the functions below.  How can\nyou
-        use them to avoid the Ghasts and help {currentPlayerName} make it safely\nto
-        the **Enchanted Book** [book_enchanted]?  "
-      MC_HOC_2017_FP10x10_markdown_instruction: "**Freeplay:** Now it's up to you!\nCan
-        you challenge yourself to collect all of the diamonds in this level? "
+      MC_HOC_2017 Agent Test_markdown_instruction: Kliki "Käivita" ja liiguta mängijat
+        **nooleklahvidega**.  \r \r Sa pead jõudma ukseni, avama selle (kasutades
+        ** tühikut **) ja minema oranži ruudini selle sees, et lõpetada see tase.
+      MC_HOC_2017_01_markdown_instruction: Kliki "Käivita" ja liiguta mängijat **nooleklahvidega**.  \r
+        \r Sa pead jõudma ukseni, avama selle (kasutades ** tühikut **) ja minema
+        oranži ruudini selle sees, et lõpetada see tase.
+      MC_HOC_2017_01_Cole_markdown_instruction: Sa pead koguma kõik vahendid sellel
+        teekonnal. Liigu ringi kasutades ** nooleklahve ** ja mine kirstu juurde oma
+        rajal, et võita
+      MC_HOC_2017_01_Kiki_markdown_instruction: 'Mängimiseks klikka oranži "Käivita"
+        mänguala all ja siis liiguta mängijad ringi kasutades **nooleklahve **.  '
+      MC_HOC_2017_01_RETRY_markdown_instruction: "Uks on lukus, kuid Agent on siin,
+        et aidata! \\r \\r Klikka töölaual \"liigu edasi\" plokk \"pärast käivitamist\"
+        ploki alla, et Agent jõuaks surveplaadini [PressurePlate_Up], \nsiis vajutage
+        \"Käivita\" ja kasutage nooleklahve, et liikuda majast välja, et koguda tööruumis
+        koguda ** kirstu** [chest]."
+      MC_HOC_2017_02_markdown_instruction: Mängija peab jõudma Salajasse Parki. Aita
+        Agenti kirjutades koodi, mis aitab ta surveplaadini.
+      MC_HOC_2017_02_Cole_markdown_instruction: "{currentPlayerName} läheb seiklema!
+        Et aidata, võta ** kaart** [map_empty] paremalt lukustatud ukse taga. \\r
+        \\r Klõpsa kood töölauale, et liigutada Agent surveplaadini [PressurePlate_Up],
+        et {currentPlayerName} saaks sealt läbi. "
+      MC_HOC_2017_02_Kiki_markdown_instruction: Mängija läheb seiklema, kuid kõigepealt
+        peavad nad saama tõrviku, mis on peidetud lukustatud ukse teisele poole. \r
+        \r Programmeeri Agent liikuma kaks korda edasi, et ta saaks liikuda mööda
+        valgetrada ja minna surveplaadini ning saaks avada ukse mängija jaoks.
+      MC_HOC_2017_02_Will_markdown_instruction: Selle taseme lõpetamiseks peab mängija
+        saama oranži ruudu sisse Salajases Pargis, mis on lukustatud ukse taga.  \r
+        \r Kood töölaual paneb Agendi liikuma kaks korda edasi, et pääseda surveplaadile
+        ja avada uks Alexile või Steve.
+      MC_HOC_2017_03_Cole_markdown_instruction: "{currentPlayerName} jätkab oma seiklust
+        ja vajab reisiks ettevalmistamiseks **kompassi** [compass].  \\r \\r Programmeeri
+        Agent väravat avama. "
+      MC_HOC_2017_03_Kiki_markdown_instruction: Mängija seiklus algab lukustatud ukse
+        taga Salajases Pargis!  \r \r \r aidata Agent ukse avamiseks koodi saada teda
+        surve plaadile.
+      MC_HOC_2017_04_markdown_instruction: Muuta viimase pusle tsüklit, et aidata
+        Agendil teha rada üle jõe laiema osa.
+      MC_HOC_2017_04POINT5_Cole_markdown_instruction: Sa said mülkast välja!  Nüüd
+        saada mängija ohutult oranži ruudu juurde. \r \r Aita Agendil puhastada rada
+        leides lihtne muster ja kasutades tsükleid, et ületada kaks esimest surveplaati.
+      MC_HOC_2017_04POINT5_RYAN_markdown_instruction: Sa said üle! \r \r Nüüd vii
+        {currentPlayerName} ohutult läbi labürindi, et koguda ** kirves ** [diamond_axe]
+      MC_HOC_2017_04_Cole_markdown_instruction: 'Agent võib liikuda üle vee!  \r \r
+        Kasutada mõistatuse lahendamiseks "korda" tsüklit ja aita {currentPlayerName}
+        saada **ämber ** [bucket_empty] ukse tagant. '
+      MC_HOC_2017_04_Kiki_markdown_instruction: Secret Grove sissepääs viis sellesse
+        kaunisse oaasi! Et seda taset läbida, peab mängija jõudma oranži ruutu majakeses.  \r
+        \r Kasutada "korda" tsüklit, et aidata Agent surveplaadile, mis avab majakese
+        ukse.
+      MC_HOC_2017_05_markdown_instruction: Tsüklid ei ole alati kasulikud. \r \r Need
+        kaktused ei kasva selge mustri järgi ja seepärast tsükkel eemalda neid korrektselt.
+        Selle asemel andsime teile funktsiooni "hävita ja liigu", mis teeb raske töö
+        teile iga kord, kui Agent jõuab takistuseni.
+      MC_HOC_2017_05_Cole_markdown_instruction: Oh ei, silda ei ole! \r \r Programmeri
+        Agent silda ehitama kasutades plokki "aseta", et {currentPlayerName} saaks
+        minna **labidani** [diamond_shovel].
+      MC_HOC_2017_05_Josh_markdown_instruction: Oh ei, silda ei ole! \r \r Programmeri
+        Agent silda ehitama, et {currentPlayerName} saaks minna **labidani**.
+      MC_HOC_2017_05_Kiki_markdown_instruction: Mängija on aeg lahkuda Saladuslikust
+        Pargist ja jätkata oma seiklust aga sild on katki! \r \r Aita Agendil sild
+        uuesti ehitada, seejärel liigutage puidust lauda, nii et mängija saan oranži
+        ruuduni minna.
+      MC_HOC_2017_06_Cole_markdown_instruction: 'Teine jõgi, kuid see on palju laiem!
+        \r \r Paranda koodi, et aidata Agendil silda ehitada, et {currentPlayerName}
+        jõuks **kirkani** [diamond_pickaxe]. '
+      MC_HOC_2017_06_Josh_markdown_instruction: Teine jõgi, kuid see on palju laiem!
+        \r \r Paranda koodi, et aidata Agendil silda ehitada üle jõe.
+      MC_HOC_2017_06_Kiki_markdown_instruction: Teine jõgi, kuid see on palju laiem!
+        \r \r Paranda koodi, et aidata Agendil silda ehitada üle vee.
+      MC_HOC_2017_07_Cole_markdown_instruction: 'Jää on tee peal!  \r \r Puhasta rada
+        funktsioon aitab teil hävitada jää ja saada {currentPlayerName} Minecarti
+        [minecart_normal] juurde! '
+      MC_HOC_2017_07_Kiki_markdown_instruction: 'Tsüklid ei ole ainus viis korrata
+        koodi!  \r \r Siin me andsime sulle funktsiooni "eemalda kaktused", mis teeb
+        ära raske töö eemaldades kolm kaktust igal kasutamisel. Kasuta kaks "eemalda
+        kaktused" plokki, et puhastada rada oranži ruuduni. '
+      MC_HOC_2017_07a_Kiki_markdown_instruction: Nüüd, muuda seda tsüklit, et aidata
+        Agendil puhastada rada oranži ruuduni.
+      MC_HOC_2017_08_Cole_markdown_instruction: Nüüd, selle asemel, et hävitada enne
+        liikuma asumist, peate ploki panema.  \r \r Muuta etteantud funktsooni, et
+        see töötaks kõrbes.
+      MC_HOC_2017_08_Kiki_markdown_instruction: Nüüd, selle asemel, et hävitada kaktused,
+        peate panema kivi laava kohale ja siis hävitama liivakivi.  \r \r. Muuda seda
+        funktsiooni, et see töötaks sellel tasemel.
+      MC_HOC_2017_08_RY_markdown_instruction: Nüüd on sul **KAKS** tegevust, mille
+        vahel valida! \r \r Kasuta neid tegevusi, et kiiresti ehitada sile üle laava
+        {currentPlayerName} jaoks.
+      MC_HOC_2017_08_Will_markdown_instruction: Nüüd on sul **KAKS** tegevust, mille
+        vahel valida! \r \r Kasuta neid tegevusi, et kiiresti ehitada sile üle laava
+        mängija jaoks.
+      MC_HOC_2017_09_Cole_markdown_instruction: Kasuta tegevusi, et aidata Agendil
+        hävitada suured mullaplokid, mis on mängija rajal surveplaadi poole.
+      MC_HOC_2017_09_Kiki_markdown_instruction: 'See alguskoodi ei saa muuta. \r \r
+        Lisa käsud tegevuse "loo rada" juurde, et programm töölaual viiks Agendi surveplaadi
+        juurde. '
+      MC_HOC_2017_09_RS_CLONE_markdown_instruction: Täida augud selle tegevuse parandamiseks,
+        seejärel astu surveplaadi peale, et puhastada rada tõrviku juurde.
+      MC_HOC_2017_10_Cole_markdown_instruction: Kasutage tegevusi, et puhastada rada
+        minecartile ja jalutage Nether Portalisse.
+      MC_HOC_2017_10_Cole_old_markdown_instruction: Proovige luua tegevus otsast peale,
+        mis teeks Agendil lihtsamaks selle minecarti tegemise ja viiks mängija oranži
+        ruuduni.
+      MC_HOC_2017_10_Kiki_markdown_instruction: Proovige luua tegevus otsast peale,
+        mis teeks Agendil lihtsamaks selle minecarti tegemise ja viiks mängija oranži
+        ruuduni.
+      MC_HOC_2017_10_RETRY_markdown_instruction: 'Kas märkad kahe tegevuse erinevusi
+        oma töölaual? \r \r Kasuta neid tegevusi koos teise koodiga tööriista kastist,
+        et puhastada rada Minecartile ja siis kogu **ränikivi ja teras** [flint_and_steel].
+        \r '
+      MC_HOC_2017_10_RYAN_markdown_instruction: Proovige luua tegevusi otsast peale,
+        mis teeksid Agendil lihtsamaks selle minecarti tegemise ja viiksid mängija
+        oranži ruuduni.
+      MC_HOC_2017_10_RYAN2_markdown_instruction: Proovige luua tegevusi otsast peale,
+        mis teeksid Agendil lihtsamaks selle minecarti tegemise ja viiksid mängija
+        oranži ruuduni.
+      MC_HOC_2017_11_Kiki_markdown_instruction: Nüüd on see sinu teha! Vaata, mida
+        saad luua ümber selle jäätunud järve.
+      MC_HOC_2017_13_Cole_markdown_instruction: "**Vaba mängimine: ** Nüüd on kõik
+        sinu kätes! Kasuta Agendi koodi maailma avastamiseks."
+      MC_HOC_2017_4.5v2_markdown_instruction: Sa said mülkast välja!  Nüüd saada mängija
+        ohutult oranži ruudu juurde. \r \r Aita Agendil puhastada rada leides lihtne
+        muster ja kasutades tsükleid, et ületada kaks esimest surveplaati.
+      MC_HOC_2017_Ali_markdown_instruction: 'Vaata funktsioone allpool.  Kuidas saad
+        neid kasutada, et vältida ning Ghasts''e ja aidata {currentPlayerName} ohutult
+        **nõiutud raamatuni** [book_enchanted]?  '
+      MC_HOC_2017_FP10x10_markdown_instruction: "**Vaba mängimine:** kas suudad kokku
+        koguda kõik teemandid sellel mängutasemel? "
       MC_HOC_2017_FP10x10_RE_markdown_instruction: |
-        **Freeplay:** Now it's up to
-        you! Can you challenge yourself to collect all of the diamonds in this level?
-      MC_HOC_2017_FP20x20_markdown_instruction: |-
-        **Freeplay:** Now it's up to you!
-        Use the Agent's code to help you explore this world.
-      MC_HOC_2017_Ryan_03_markdown_instruction: |-
-        Did you know that you can put more
-        than one piece of code into a loop?  \r
-        \r
-        Use a `repeat` loop to help the
-        Agent build a bridge over the river by placing blocks in the water.
-      MC_HOC_2017_Ryan_05_markdown_instruction: |-
-        Sometimes you need to knock down
-        things that get in the way of your player.  \r
-        Use the `destroy` block to
-        clear all of the cactii between the Agent and the pressure plate.
+        **Vaba mängimine:** Kas suudad kokku koguda kõik teemandid sellel mängutasemel?
+      MC_HOC_2017_FP20x20_markdown_instruction: "**Vaba mängimine: ** Nüüd on kõik
+        sinu kätes! Kasuta Agendi koodi maailma avastamiseks."
+      MC_HOC_2017_Ryan_03_markdown_instruction: Kas teadsite, et võite panna rohkem
+        kui ühe tüki koodi tsüklisse?  \r \r Kasuta "korrata" tsüklikt, et aidata
+        Agendil ehitada sild üle jõe pannes vette plokke.
+      MC_HOC_2017_Ryan_05_markdown_instruction: Vahel tekib vajadus maha lõhkuda asju,
+        mis jäävad su mängijale ette.  \r Kasutada "hävita" plokki, et eemaldada kõik
+        kaktused Agendi ja surveplaadi vahel.
       MC_HOC_Kiki_02_markdown_instruction: |-
         Someone needs to be on the pressure plate
         before the side door will open.  Help the Agent get to the plate so the player
@@ -35791,6 +35859,24 @@
       MSM Defining Vars 4_markdown_instruction: |-
         Edit your `my-shape` variable so
         that it draws 75 pixel solid red stars.
+      Making Music_markdown_instruction: |-
+        Today you’re going to learn how to use
+        and create **functions**.\r
+        \r
+        Creating a function lets you make your own
+        blocks! There are two parts to a function: \r
+        \r
+        Making a newly named block
+        that has all of the code you want to run inside of it. \r
+        -xml of function
+        definition- \r
+        \r
+        The single green block itself that you use, or call, to
+        run the function you created.\r
+        -xml of function call-\r
+        \r
+        Prepare to
+        get familiar with functions, learn how to edit them, and create your own!
       Matt Test Level_markdown_instruction: |
         Do 0 bits weigh less than 1 bits?
       Middle School Hackathon Pt 1_markdown_instruction: |-
@@ -58498,13 +58584,45 @@
         specific details, describe\r
         <br>\r
         <br>\r
-        <ul>\r
-        <li>at least one data
-        storage concern, data privacy concern, or data security concern directly related
-        to the computing innovation.</li>\r
-        </ul>\r
+        \r
+        <li>at least one data storage
+        concern, data privacy concern, or data security concern directly related to
+        the computing innovation.</li>\r
+        \r
         </div>\r
         <br>\r
+        \r
+        ## Sample Responses\r
+        \r
+        Two
+        of the responses below qualify as a data storage, privacy or security concern
+        and two do not.  Can you identify the two that do?\r
+        \r
+        ---\r
+        \r
+        **Response
+        A:** *Facial recognition technology stores data mapping a user's face. A
+        privacy concern for this technology is that it could be used by businesses
+        and governments to identify people as they walk around in their daily lives.*\r
+        \r
+        **Response
+        B:** *Software that tracks soccer player movements on the field can be used
+        to generate new statistics that help value contributions of individual players.
+        A data concern is that this information may be used to justify getting rid
+        of less productive players.*\r
+        \r
+        **Response C:** *Social networks allow
+        users to share vast amounts of private information about their lives. A security
+        concern of this technology is that this publicly available data may enable
+        stalkers or other criminals to identify potential targets.*\r
+        \r
+        **Response
+        D:** *Self-driving vehicles store vast amounts of information about their
+        location and the world around them. A data concern for the trucking industry
+        is that all of this information could be coordinated to make trucks more efficient
+        causing many people who drive trucks for a living to lose their jobs.*\r
+        \r
+        ---\r
         \r
         Here's
         the scoring guide for this part of the question\r
@@ -58517,45 +58635,19 @@
         \r
         <br>\r
         \r
-        # Sample Responses\r
         \r
-        The responses
-        below are 4 sample responses to this component of the question.\r
+        ## Choose the two (2) responses
+        that are data concerns\r
         \r
-        **Response
-        A:** "Facial recognition technology stores data mapping a user's face. A
-        privacy concern for this technology is that it could be used by businesses
-        and governments to identify people as they walk around in their daily lives."\r
-        \r
-        **Response
-        B:** "Software that tracks soccer player movements on the field can be used
-        to generate new statistics that help value contributions of individual players.
-        A data concern is that this information may be used to justify firing less
-        productive players."\r
-        \r
-        **Response C:** "Social networks allow users
-        to share vast amounts of private information about their lives. A security
-        concern of this technology is that this publicly available data may enable
-        stalkers or other criminals to identify potential targets."\r
-        \r
-        **Response
-        D:** "Self-driving cars store vast amounts of information about their location
-        and the world around them. A data concern is that this information would be
-        overwhelming for a single human to focus on as they drive."\r
-        \r
-        # Choose
-        the 2 Data Concerns\r
-        \r
-        **Two of these responses would likely earn the
-        point for this row. Two likely would not.**\r
-        \r
-        **Choose the two responses
-        (A, B, C, or D) that would earn the point. Then justify why you chose them.**
-      U4-AP-Practice-Choose-The-Harmful-Effect_markdown_instruction: |-
+        **Choose the two responses (A, B, C, or D) that
+        would earn the point as data storage, security or privacy concern. Then justify
+        why you chose them.**
+      U4-AP-Practice-Choose-The-Harmful-Effect_markdown_instruction: |
         # AP Practice
-        - Choose the Harmful Effect\r
-        One component of the **AP Explore Performance
-        Task** is describing a data concern related to a computing innovation.\r
+        - Justify the Score\r
+        \r
+        One component of the **AP Explore Performance Task**
+        is describing a data concern related to a computing innovation.\r
         \r
         <div
         style="width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px;
@@ -58576,18 +58668,155 @@
         </div>\r
         <br>\r
         \r
-        Here's
-        the scoring guide for this part of the question\r
+        **Sample
+        Student Response:** A student submitted the following response as part of
+        this question.\r
         \r
-        <div style="magin:auto">\r
-        \t<img
-        src="https://images.code.org/6ff69107762c5afb27661625600d2bfb-image-1510609916491.51.42
-        PM.png">\r
+        *"FaceApp has permission to use many devices on your
+        smartphone, including the camera. A data concern that arises from this is
+        that the company could use this permission to see what you're doing."*\r
+        \r
+        \r
+        **Scoring
+        Guide:** Here's the scoring guide for this part of the question\r
+        \r
+        <div
+        style="magin:auto">\r
+        \t<img src="https://images.code.org/96f6c02681616656f107dac058d15de6-image-1511206516901.35.08
+        AM.png">\r
         </div>\r
         \r
         <br>\r
         \r
-        # Choose the Harmful Effect
+        # Justify the Score\r
+        \r
+        Based on
+        the scoring guidelines listed above, the student would NOT get Row 6 of the
+        response and would likely not be awarded Row 7.\r
+        \r
+        **Explain why the student
+        would not be awarded either row. Make a suggestion(s) for ways this response
+        could be improved**\r
+        \r
+        \r
+      U4-AP-Practice-Device-or-Data?_markdown_instruction: |-
+        # AP Practice - Justify
+        the Score\r
+        \r
+        **Written Prompt** -- Here is a portion of the AP Explore
+        Performance Task written response prompt 2d:\r
+        \r
+        <div style="width: 80%;
+        margin: auto; background-color: #EEEEEE; padding: 10px; font-family: serif;
+        font-size: 12pt">\r
+        \r
+        <b>Computing Innovation</b>\r
+        <br>\r
+        <br>\r
+        2d.  Using
+        specific details, describe\r
+        <br><br>\r
+        <li>at least one data storage concern,
+        data privacy concern, or data security concern directly related to the computing
+        innovation.</li>\r
+        </div>\r
+        <br>\r
+        \r
+        **Sample Student Response** -- here
+        is a snippet of a sample student response addressing a data concern:\r
+        \r
+        <div
+        style="width: 80%; margin: auto; background-color: #d9f3f5; padding: 10px;
+        font-family: serif; font-size: 12pt; line-height: 17pt">\r
+        \r
+        <em> The
+        FaceSnap app has permission to use many devices on your smartphone, including
+        the camera. A data privacy concern that arises from this is that the company
+        could access the camera to see what you're doing without your knowledge.</em>\r
+        \r
+        </div>\r
+        \r
+        <br>\r
+        \r
+        **Zero
+        points!!!** -- based on the scoring guidelines listed below the student would
+        **NOT** get a point for Row 6 and would likely **NOT** be awarded a point
+        for Row 7 either.\r
+        \r
+        **Why?** Here are the scoring guidelines for rows
+        6 and 7.\r
+        \r
+        ![](https://images.code.org/96f6c02681616656f107dac058d15de6-image-1511206516901.35.08
+        AM.png)\r
+        \r
+        ## Justify the score\r
+        \r
+        In the space provided below explain:\r
+        \r
+        1.
+        Why the student would not be awarded either row based on the scoring guidelines.
+        \r
+        2. Make a suggestion(s) for how to modify the response so the student
+        would get the point.
+      U4-AP-Practice-Justify-the-Score_markdown_instruction: |-
+        # AP Practice - Justify
+        the Score\r
+        \r
+        **Written Prompt** -- Here is a portion of the AP Explore
+        Performance Task written response prompt 2d:\r
+        \r
+        <div style="width: 80%;
+        margin: auto; background-color: #EEEEEE; padding: 10px; font-family: serif;
+        font-size: 12pt">\r
+        \r
+        <b>Computing Innovation</b>\r
+        <br>\r
+        <br>\r
+        2d.  Using
+        specific details, describe\r
+        <br><br>\r
+        <li>at least one data storage concern,
+        data privacy concern, or data security concern directly related to the computing
+        innovation.</li>\r
+        </div>\r
+        <br>\r
+        \r
+        **Sample Student Response** -- here
+        is a snippet of a sample student response addressing a data concern:\r
+        \r
+        <div
+        style="width: 80%; margin: auto; background-color: #d9f3f5; padding: 10px;
+        font-family: serif; font-size: 12pt; line-height: 17pt">\r
+        \r
+        <em> The
+        FaceSnap app has permission to use many devices on your smartphone, including
+        the camera. A data privacy concern that arises from this is that the company
+        could access the camera to see what you're doing without your knowledge.</em>\r
+        \r
+        </div>\r
+        \r
+        <br>\r
+        \r
+        **Zero
+        points!!!** -- based on the scoring guidelines listed below the student would
+        **NOT** get a point for Row 6 and would likely **NOT** be awarded a point
+        for Row 7 either.\r
+        \r
+        **Why?** Here are the scoring guidelines for rows
+        6 and 7.\r
+        \r
+        ![](https://images.code.org/96f6c02681616656f107dac058d15de6-image-1511206516901.35.08
+        AM.png)\r
+        \r
+        ## Justify the score\r
+        \r
+        In the space provided below explain:\r
+        \r
+        1.
+        Why the student would not be awarded either row based on the scoring guidelines.
+        \r
+        2. Make a suggestion(s) for how to modify the response so the student
+        would get the point.
       U4L01 Free Response_markdown_instruction: |
         This is the free response question
         text.
@@ -66973,6 +67202,9 @@
         \r
          \r
         \r
+      csp-post-survey-2017-FR_markdown_instruction: |-
+        Anything else you'd like to
+        say about your experience in the course?
       csp-post-survey-2017-q36-e_markdown_instruction: |-
         I worry because of another
         reason:

@@ -62,7 +62,7 @@ nn:
         text: "Hei, eg er Paola! I desse oppgåvene er du ein bonde som må få feltet sitt heilt flatt for å byrje å plante avlingar."
       2:
         image: 'notes/stage9_2.jpg'
-        text: "Du må hjelpe ho med å fjerne alle haugane av skitt og fylle ut alle hola."
+        text: "Du må hjelpe ho med å fjerne alle haugane av skitt og fylle i alle hola."
       3:
         image: 'notes/stage9_3.jpg'
         text: "Dei nye blokkene fjernar 1 skuffe med skitt frå ein haug og fyller ut 1 skuffe med skitt i eit hol."
@@ -72,7 +72,7 @@ nn:
     flappy_intro:
       1:
         image: 'notes/flappy01.jpg'
-        text: "Hei, eg er Katie! Ei av dei mest spennande tinga med datavitskap er at eit dataprogram kan vere interaktivt."
+        text: "Hei, eg er Katie! Ei av dei mest spennande tinga med informatikk er at eit dataprogram kan vere interaktivt."
       2:
         image: 'notes/flappy02.jpg'
         text: "Kvar gong nokon klikkar eller trykkjer eller skriv på ei datamaskin eller ein telefon, genererer det ei HENDING, og det er kode som avgjer kva som skjer når ei HENDING inntreffer."
@@ -81,7 +81,7 @@ nn:
         text: "Du kan til dømes ha ein HENDINGSHANDSAMAR som seier \"ved museklikk, spel ein lyd\" "
       4:
         image: 'notes/flappy04.jpg'
-        text: "Har du høyrt om spelet FlakseBird? Ved å bruke hendingshandsamarar, skal vi lære å programmere vår eigen tilpassa versjon av FlakseBird!"
+        text: "Har du høyrt om spelet Flappy Bird? Ved å bruke hendingshandsamarar, skal vi lære å programmere vår eigen tilpassa versjon av Flappy Bird!"
       5:
         image: 'notes/flappy05.jpg'
         text: "Koden du skal skrive inneber å dra og sleppe blokker som representerer kommandoar til datamaskina. Blokkene er ei visualisering, og \"under\" kvar av blokkene er det skrive inn \"verkeleg kode\"."
@@ -106,13 +106,13 @@ nn:
         text: "Hei, eg er Mark! Lat oss lære om sløyfer. Ved å bruke sløyfer kan du fortelje ei datamaskin at ho skal repetere eit sett av handlingar om att og om att, tusenarar eller til og med milliardar av gongar."
       2:
         image: 'notes/hoc2_2.jpg'
-        text: "I denne oppgåva ynskjer me å få fuglen til å flytte 5 plassar framover for å komme til grisen."
+        text: "I denne oppgåva ynskjer me å få fuglen til å flytte fem plassar framover for å komme til grisen."
       3:
         image: 'notes/hoc2_3.jpg'
         text: "Me kan nytte den nye \"gjenta\"-blokka for å hjelpe oss."
       4:
         image: 'notes/hoc2_4.jpg'
-        text: "I staden for å dra ut 5 \"framover\"-blokker..."
+        text: "I staden for å dra ut fem \"framover\"-blokker..."
       5:
         image: 'notes/hoc2_5.jpg'
         text: "Me kan setje \"framover\"-blokka inne i \"gjenta\"-blokka og skrive eit nummer i blokka for å fortelje kor mange gonger me vil gjenta."
@@ -125,7 +125,7 @@ nn:
     loop_until:
       1:
         image: 'notes/hoc3_1.jpg'
-        text: "Hei, eg er Chris. Før eg vart med i Miami Heat, gjekk jeg på Georgia Tech for å studere datavitskap. Lat oss prøve den nye blokka vår, \"gjenta til\"-blokka."
+        text: "Hei, eg er Chris. Før eg vart med i Miami Heat, gjekk eg på Georgia Tech for å studere datavitskap. Lat oss prøve den nye blokka vår, \"gjenta til\"-blokka."
       2:
         image: 'notes/hoc3_2.jpg'
         text: "Kva om me ikkje visste kor langt fuglen måtte flytte for å komme til grisen?"
@@ -134,11 +134,11 @@ nn:
         text: "Viss me sett ei \"framover\"-blokk inne blokka \"gjenta til\", vil fuglen gå framover til han kjem TIL grisen (eller krasjar inn i ein vegg)."
       4:
         image: 'notes/hoc3_4.jpg'
-        text: 'Og dette er viktig: Nett som før, kan me setje fleire blokker inni "gjenta til"-blokka, og alle vil bli gjentekne.'
+        text: 'Og dette er viktig: nett som før kan me setje fleire blokker inni "gjenta til"-blokka, og alle vil bli gjentekne.'
     if:
       1:
         image: 'notes/hoc4_1.jpg'
-        text: 'Hei, eg er  Bill! Lat oss lære eit nytt grunnleggjande konsept: "Viss"-uttrykk. Dette er korleis datamaskiner tek avgjerder.'
+        text: 'Hei, eg er Bill! Lat oss lære eit nytt grunnleggjande konsept: "Viss"-uttrykk. Dette er korleis datamaskiner tek avgjerder.'
       2:
         image: 'notes/hoc4_2.jpg'
         text: "Du nyttar sjølv \"Viss\"-uttrykk kvar dag. Før du går ut om morgonen, seier du VISS det regner ute, må eg bruke jakka mi."
@@ -147,49 +147,49 @@ nn:
         text: "Me kan seie at zombien skal sjekke om det er ei bane til venstre, og VISS han finn ei bane til venstre, kan me få han til å snu i den retninga."
       4:
         image: 'notes/hoc4_4.jpg'
-        text: "For å skrive koden for dette, lat oss dra ut \"viss\"-blokka vår og setje ei \"venstre\"-blokk inni ho."
+        text: "For å skrive koden for dette, lat oss dra ut \"viss\"-blokka vår og setje ei \"snu mot venstre\"-blokk inni ho."
       5:
         image: 'notes/hoc4_5.jpg'
         text: "Om me sett ei \"framover\"-blokk over og ei \"gjenta\"-blokk rundt alt, vil zombien no kvar gong han flyttar seg sjekke om det er ein veg til venstre og i så fall snu dit. Kommandoen \"gjenta\" er avgjerande for å sjå etter om ein skal snu for kvart steg."
       6:
         image: 'notes/hoc4_6.jpg'
-        text: "Viss-setningar er veldig viktige i programmering. Eit av dei første programma eg skreiv, var eit tripp-trapp-tresko-spel der det var ei viss-setning som sa at VISS den andre personen held på å vinne, blokker posisjonen som let den andre personen vinne."
+        text: "Viss-setningar er veldig viktige i programmering. Eit av dei første programma eg skreiv, var eit tripp-trapp-tresko-spel der det var ei viss-setning som sa at VISS den andre personen held på å vinne, blokkér posisjonen som let den andre personen vinne."
       7:
         image: 'notes/hoc4_7.jpg'
         text: "Ha det gøy med \"viss\"-blokka!"
     if_else:
       1:
         image: 'notes/hoc5_1.jpg'
-        text: "Hei, eg heiter Saloni. Eg nyttar programmering for å løyse helseproblem. Lat oss lære om \"viss-elles\"-blokka. Ho ser ut som ei \"viss\"-blokk, men har ein ekstra del på slutten som seier \"elles\"."
+        text: "Hei, eg heiter Saloni. Eg nyttar programmering for å løyse helseproblem. Lat oss lære om \"viss-ellers\"-blokka. Ho ser ut som ei \"viss\"-blokk, men har ein ekstra del på slutten som seier \"ellers\"."
       2:
         image: 'notes/hoc5_2.jpg'
         text: "Viss eg set ei \"framover\"-blokk på plassen der det står \"gjere\" og ei \"snu til venstre\"-blokk der det står \"ellers\", tyder det at zombien vil velje mellom to alternativ. VISS det er ein veg framover, vil han gå dit, og ELLERS (viss det ikkje er ein veg framover) vil han svinge til venstre."
       3:
         image: 'notes/hoc5_3.jpg'
-        text: "Akkurat som \"hvis\"-blokka, kan vi sette \"hvis ellers\"-blokker inni \"gjenta\"-blokkerer slik at zombien held fra med å flytte og \"hvis ellers\"-blokka kontrollerer om det er mogeleg å snu."
+        text: "Akkurat som \"viss\"-blokka, kan vi sette \"viss ellers\"-blokker inni \"gjenta\"-blokker slik at zombien held fram med å flytte og \"viss ellers\"-blokka kontrollerer om det er mogeleg å snu."
       4:
         image: 'notes/hoc5_4.jpg'
         text: "No får du vise zombiene kvar dei høyrer heime!"
     if_else_scrat:
       1:
         image: 'notes/saloni_ifelse_scrat1.jpg'
-        text: "En \"hvis ellers\"-setning er ei avgjersle mellom to ting. La oss sjå på korleis vi kan bruke en \"hvis ellers\"-setninga med vår ven ekornet Scrat."
+        text: "En \"viss ellers\"-setning er ei avgjersle mellom to ting. La oss sjå på korleis vi kan bruke en \"viss ellers\"-setning med vår ven ekornet Scrat."
       2:
         image: 'notes/saloni_ifelse_scrat2.jpg'
-        text: "Denne blokka liknar på \"hvis\"-blokka, men det er ein ekstra del på botnen som seier \"ellers\". Dersom eg set ei \"framover\"-blokk der det står \"gjere\" og ei \"snu venstre\"-blokk der det står \"elles\", betyr det at ekornet Scrat vil gå framover hvis det er ein veg framfor. Hvis det ikkje er ein veg framfor, vil Scrat snu til venstre."
+        text: "Denne blokka liknar på \"viss\"-blokka, men det er ein ekstra del på botnen som seier \"ellers\". Dersom eg set ei \"framover\"-blokk der det står \"gjere\" og ei \"snu venstre\"-blokk der det står \"ellers\", betyr det at ekornet Scrat vil gå framover viss det er ein veg framfor. Viss det ikkje er ein veg framfor, vil Scrat snu til venstre."
       3:
         image: 'notes/saloni_ifelse_scrat3.jpg'
-        text: "Det er å ta ei avgjerd og gjøre ei av to handlingar basert på denne avgjersla. Og akkurat som \"hvis\"-blokker, kan du sette \"hvis-ellers\"-blokker inni \"gjenta\"-blokker."
+        text: "Det er å ta ei avgjerd og gjøre ei av to handlingar basert på denne avgjersla. Og akkurat som \"viss\"-blokker, kan du sette \"viss-ellers\"-blokker inni \"gjenta\"-blokker."
       4:
         image: 'notes/saloni_ifelse_scrat4.jpg'
-        text: "Nå la oss no hjelp ekornet Scrat til å få ei eikenøtt!"
+        text: "La oss hjelpe ekornet Scrat å få ei eikenøtt!"
     function:
       1:
         image: 'notes/stage13_1.jpg'
         text: "Hei, eg er Brina, ingeniør hos Instagram. Ein funksjon er særskilte kodelinjer som du ynskjer å nytte om att og om att, så i staden for å skrive den same koden kvar gong, kan du berre bruke ei blokk."
       2:
         image: 'notes/stage13_2.jpg'
-        text: "Me skal lære korleis ein definerer funksjonar. Blokker der me definerer funksjonar har ei stjerne i hjørnet. Namnet på funksjonen vert skrive på øvste linje."
+        text: "Vi skal lære korleis ein definerer funksjonar. Blokker der vi definerer funksjonar har ei stjerne i hjørnet. Namnet på funksjonen vert skrive på øvste linje."
       3:
         image: 'notes/stage13_3.jpg'
         text: "Blokkene inne i funksjonen fortel oss kva funksjonen gjer. Så denne funksjonsdefinisjonen er kalla \"fyll 5\", og består av ei \"gjenta\"-blokk og ei \"fyll\"-blokk."
@@ -267,13 +267,13 @@ nn:
     frozen_intro:
       1:
         image: 'notes/frozen1_1.jpg'
-        text: "Hei, namnet mitt er Lyndsey. Eg er modell og skodespelar og eg skriv mine egen appar. La oss bruke kode til å utforske isens venleik og magi saman med Anna og Elsa."
+        text: "Hei, namnet mitt er Lyndsey. Eg er modell og skodespelar og eg skriv mine eigne appar. La oss bruke kode til å utforske isens venleik og magi saman med Anna og Elsa."
       2:
         image: 'notes/frozen1_2.jpg'
-        text: "Du skaper snøfnugg og mønster ved å skøyte på isen og lagar eit magisk vinterlandskap som du kan dele med venane dine."
+        text: "Du skaper snøfnugg og mønster ved å skøyte på isen og lagar eit magisk vinterlandskap som du kan dele med venene dine."
       3:
         image: 'notes/frozen1_3.jpg'
-        text: "I den neste timen vil du lære grunnleggande programmering. Tradisjonell programmering er vanligvis med tekst, men vi skal bruke Blockly, som bruker visuelle blokker som du kan dra og sleppe for å skrive programm. Også studenter på universitetet lærer grunnleggande programmering på denne måten. Bak blokkene lager du likvevel kode."
+        text: "I den neste timen vil du lære grunnleggande programmering. Tradisjonell programmering er vanligvis med tekst, men vi skal bruke Blockly, som bruker visuelle blokker som du kan dra og sleppe for å skrive programm. Også studenter på universitetet lærer grunnleggande programmering på denne måten. Bak blokkene lager du likevel kode."
       4:
         image: 'notes/frozen1_4.jpg'
         text: "Eit program er et sett med instruksjonar som fortel ei datamaskin kva den skal gjere. La oss skrive kode eller eit program, som vil hjelpe Elsa til å lage ei enkel line. Vi vil bruke dette seinare for å lage meir kompliserte mønster."
@@ -285,7 +285,7 @@ nn:
         text: "Det midterste området er verktykassa, og kvar av disse blokkene er ei handling som Elsa og Anna kan gjere."
       7:
         image: 'notes/frozen1_7.jpg'
-        text: "Det kvite flata til høyre kallast arbeidsområdet, og dette er her vi skal sette saman programmet vårt. For å flytte rundt på isflata, kan du bruke \"Flytt fremover\"-blokka."
+        text: "Den kvite flata til høyre kallast arbeidsområdet, og dette er her vi skal sette saman programmet vårt. For å flytte rundt på isflata, kan du bruke \"Flytt framover\"-blokka."
       8:
         image: 'notes/frozen1_8.jpg'
         text: "Her sier \"flytt framover\"-blokken, \"flytt fram 100 piksler.\" Når vi trykker \"Køyr\", kva skjer då? Elsa flytter fram en bestemt lengde på skjermen, 100 pikslar faktisk! Piksler er dei minste punkta på dataskjermen."
@@ -304,10 +304,10 @@ nn:
         text: "I programmering kallar vi dette ei løkke. Ei løkke er korleis du gjentek koden igjen og igjen. Målet med den neste oppgåva er å hjelpe Anna med å lage eit kvadrat med \"gjenta\"-blokka."
       3:
         image: 'notes/frozen2_3.jpg'
-        text: "Kodeblokkene som du plasserer inne i \"gjenta\"-blokken, vil bli gjentatt etter kvarandre, så mange gonger du ynskjer."
+        text: "Kodeblokkene som du plasserer inne i \"gjenta\"-blokka, vil bli gjentatt etter kvarandre, så mange gonger du ynskjer."
       4:
         image: 'notes/frozen2_4.jpg'
-        text: "For å teikne eit kvadrat, kan du bruke \"flytt fram\" og \"snu til høgre\"-blokkene 4 gonger. Men det er enklare å be datamaskina \"flytt frem\" og \"snu til høgre 90 grader\" ein gong og deretter be den om å gjenta desse to handlingane 4 gonger. For å gjøre det, må du sette \"flytt fram\" og \"snu til høgre\" blokkene inne i ei \"gjenta\"-blokk."
+        text: "For å teikne eit kvadrat, kan du bruke \"flytt fram\" og \"snu til høgre\"-blokkene 4 gonger. Men det er enklare å be datamaskina \"flytt fram\" og \"snu til høgre 90 grader\" ein gong og deretter be den om å gjenta desse to handlingane 4 gonger. For å gjøre det, må du sette \"flytt fram\" og \"snu til høgre\" blokkene inne i ei \"gjenta\"-blokk."
       5:
         image: 'notes/frozen2_5.jpg'
         text: "Hugs på at du kan endre tallet i \"Gjenta\"-blokka vilkårleg, og det vil gjenta det som er inne i blokka så  mange gongar."
@@ -320,7 +320,7 @@ nn:
         text: "Eit av dei viktigste konsepta i programmering er korleis ein kan definere nye kommandoar. Dei fleste programmeringsspråka har berre omkring 100 ord eller kommandoar. Og kunsten og magien ligg verkeleg i å definere dine eigne, nye ord ut frå desse byggeklossane."
       3:
         image: 'notes/frozen3_3.jpg'
-        text: "Når du har lært ei datamaskin korleis ho skal utføre ei handling ein gong ved bruk av ein sekvensen av kommandoar, så kan du lage ditt eige namn for handlinga selv, slik at det er lett å gjere den på nytt seinare. Når du definerer din eigen kommando og gir den namn blir det kalla det ein funksjon."
+        text: "Når du har lært ei datamaskin korleis ho skal utføre ei handling ein gong ved bruk av ein sekvensen av kommandoar, kan du lage ditt eige namn for handlinga selv, slik at det er lett å gjere den på nytt seinare. Når du definerer din eigen kommando og gir den namn blir det kalla det ein funksjon."
       4:
         image: 'notes/frozen3_4.jpg'
         text: "Hei! Er jeg Jess. Når du programmerer med blokker, ville du bruke funksjonar dersom det er eit sett med handlingar du vil bruke mange gonger. For eksempel har du skrive kode for å laga eit kvadrat."
@@ -336,16 +336,16 @@ nn:
     playlab_intro:
       1:
         image: 'notes/playlab_intro_1.png'
-        text: "Vi skal lage spel ved å bruke Spel Lab. Gode spel har ei historie og kvar historie har skodespelarar. Vi skal lære korleis vi får våre skodespelarar, som hekser, romvesen og dyr til å snakke, bevege seg og samhandle med kvarandre. Ved slutten av denne oppgåva kan du bygge eit spel frå grunnen av og dele det med venane dine."
+        text: "Vi skal lage spel ved å bruke Spel-lab. Gode spel har ei historie og kvar historie har skodespelarar. Vi skal lære korleis vi får våre skodespelarar, som hekser, romvesen og dyr til å snakke, bevege seg og samhandle med kvarandre. Ved slutten av denne oppgåva kan du bygge eit spel frå grunnen av og dele det med venane dine."
       2:
         image: 'notes/playlab_intro_2.png'
         text: "Skjermen din er delt i 3 hovuddelar. Den til venstre er speleflata der spelet ditt vil køyres. Instruksjonane for kvart nivå er skrivne under speleflata."
       3:
         image: 'notes/playlab_intro_3.png'
-        text: "Det midterste området er verktykassen, og kvar av desse blokkene er ein kodedel. Den kvite flata til høyre blir kalla arbeidsområdet og det er der vi skal bygge opp programmet vårt."
+        text: "Det midterste området er verktykassa, og kvar av desse blokkene er ein kodedel. Den kvite flata til høyre blir kalla arbeidsområdet og det er der vi skal bygge opp programmet vårt."
       4:
         image: 'notes/playlab_intro_4.png'
-        text: "For å starte må du koble blokkene dine til den oransje-\"når den køyrer\"-blokka. Du kan knyte fleire blokker saman ved å dra dei til du ser den gule lina og vil dei snappe saman."
+        text: "For å starte må du kople blokkene dine til den oransje-\"når den køyrer\"-blokka. Du kan knyte fleire blokker saman ved å dra dei til du ser den gule lina og vil dei snappe saman."
       5:
         image: 'notes/playlab_intro_5.png'
         text: "I denne første oppgåva er skodespelaren ein pingvin og vi skal få den til å sei \"Hallo\" ved å dra \"sei\"-blokka ut, knytte den til å \"når køyrer\"-blokka og skrive inn \"Hallo.\" Vi kan også få pingvinen til å flytte på seg ved hjelp av bruke blokkene for å flytte til høyre og venstre. Når du har blokkene dine på plass, trykk på Køyr-knappen for å sjå kva du har programmert."
@@ -355,23 +355,23 @@ nn:
     playlab_events:
       1:
         image: 'notes/playlab_events_1.png'
-        text: "No skal vi lære om noko som alle som programmerer spel brukar kvar dag. Dei blir kalla hendingar. Ei hending ber programmet ditt om å lytte etter ting som skjer. Når det skjer, blir ei handlingn utført."
+        text: "No skal vi lære om noko som alle som programmerer spel brukar kvar dag. Dei blir kalla hendingar. Ei hending ber programmet ditt om å lytte etter ting som skjer. Når det skjer, blir ei handling utført."
       2:
         image: 'notes/playlab_events_2.png'
-        text: "Eksempl på hendingar er å vente på eit museklikk, ein piltast eller trykk på skjermen."
+        text: "Døme på hendingar er å vente på eit museklikk, ein piltast eller trykk på skjermen."
       3:
         image: 'notes/playlab_events_3.png'
-        text: "Her skal vi få romboten til å helse på jordbuarane når ein spelar klikker på han. Vi bruker \"når skodespalaren blir klikka\"-blokken og festar \"sei\"-blokka til den. Når spelaren klikkar på romboten vil alt som er fseta til denne \"når skodespelaren blir klikka\"-hendelsesblokka bli utført. Kva skal ditt romvesen sei?"
+        text: "Her skal vi få romboten til å helse på jordbuarane når ein spelar klikker på han. Vi bruker \"når skodespalaren blir klikka\"-blokka og festar \"sei\"-blokka til den. Når spelaren klikkar på romboten vil alt som er fseta til denne \"når skodespelaren blir klikka på\"-hendelsesblokka bli utført. Kva skal romvesenet ditt seie?"
       4:
         image: 'notes/playlab_events_4.png'
         text: "Det fins også \"når pil\"-blokker. Hvis du kobler \"flytt\"-blokker til desse, kan du begynne å flytte skodespelarar opp, ned, til venstre eller høyre. Steg for steg blir spelet ditt meir interaktiv."
     playlab_repeat_forever:
       1:
         image: 'notes/playlab_repeat_forever_1.png'
-        text: "Dette er \"gjenta for alltid\"-blokka. Alt i denne blokken vil skje for alltid i spelet."
+        text: "Dette er \"gjenta for alltid\"-blokka. Alt i denne blokka vil skje for alltid i spelet."
       2:
         image: 'notes/playlab_repeat_forever_2.png'
-        text: "Hvis vi ynskjer at ein skodespelar skal gjere noko fleire gonger uten at spelaren trenger å gjere noko, vil vi sette desse blokkene inne i \"gjenta for alltid\"-blokka."
+        text: "Hvis vi ynskjer at ein skodespelar skal gjere noko fleire gonger uten at spelaren treng å gjere noko, vil vi sette desse blokkene inne i \"gjenta for alltid\"-blokka."
       3:
         image: 'notes/playlab_repeat_forever_3.png'
         text: "I den neste oppgåva er målet vårt å hjelpe trollmannen med å patruljere grensene av kongeriket, venstre og høyre heile tida. Å lære korleis du kan gjenta kommandoar vil spare deg for massevis av tid seinare når du lagar ditt eiget spel."
@@ -398,11 +398,11 @@ nn:
         text: "Ei løkke er ei gjentaking av ein aktivitet. Når eg går inn i bikuben for å inspisere, tar eg opp ei ramme og så setter eg den ned att, så gjentar eg den samme handlinga fleire gongar. Løkka går i ring, der handlinga blir gjort fleire gongar."
       2:
         image: 'notes/C1_bee_loops_2.png'
-        text: "På dette brettet ønsker vi at bia skal samle tre nektar fra blomsten. I staden for å bruke tre \"hent nektar\"-brikker, skal du bruke ei gjenta-brikke for å hente nektar tre gongar. Trykk på \"Kjør\" og sjå om du klarte det!"
+        text: "På dette brettet ønsker vi at bia skal samle tre nektar fra blomen. I staden for å bruke tre \"hent nektar\"-brikker, skal du bruke ei gjenta-brikke for å hente nektar tre gongar. Trykk på \"Kjør\" og sjå om du klarte det!"
     C1_bigevent_unplugged:
       1:
         image: 'notes/C1_bigevent_unplugged_1.png'
-        text: "Denne leksjonen blir kalla for den store hendelsen. Den handler om korleis ein kan kontrollere programma og faktisk endre måten eit program fungerer på, mens det kjører. Dette gjer du ved å bruke hendelsar, som å trykke på ein knapp eller klikke på ei mus."
+        text: "Denne leksjonen blir kalla for den store hendinga. Den handler om korleis ein kan kontrollere programma og faktisk endre måten eit program fungerer på, mens det kjører. Dette gjer du ved å bruke hendingar, som å trykke på ein knapp eller klikke på ei mus."
       2:
         image: 'notes/C1_bigevent_unplugged_2.png'
         text: "I denne økta vil du bli styrt av ein papir-fjernkontroll. Det er akkurat som eit ekte dataspel."
@@ -414,7 +414,7 @@ nn:
         text: "Nokre hendingar får oss til å reagere. Vi blir svoltne og går til kjøleskapet. Det ringer på døra og vi går for å opne. Slike reaksjonar er akkurat som å trykke på ein knapp, ei hending får fram ein gitt reaksjon."
       5:
         image: 'notes/C1_bigevent_unplugged_5.png'
-        text: "I dataspel er det ei handling som heiter \"Update\". Denne blir utført 30 eller 60 gongar i sekundet. For dataspelprogrammerarar er denne handlinga nesten viktigare enn ei tastetrykkhandling eller ei styrespakrørsle."
+        text: "I dataspel er det ei hending som heiter \"Oppdater\". Denne blir utført 30 eller 60 gongar i sekundet. For dataspelprogrammerarar er denne handlinga nesten viktigare enn ei tastetrykkhandling eller ei styrespakrørsle."
       6:
         image: 'notes/C1_bigevent_unplugged_6.png'
         text: "Den viktigaste hendinga vi fyl med på, er \"Oppdater\". Når dette skjer, sjekker vi joysticken. Så vi seier, \"Oj, har nokon trykka på knappen sidan førre gong vi sjekka? Ja eller nei?\" Utan hendingar kan ikkje spelaren flytta på seg eller hoppa, og du vil ikkje klara å kontrollera det som skjer. Dataspelet vil ikkje kunne bevega nokon ting. "
@@ -430,10 +430,10 @@ nn:
         text: "Nokre gonger blir ikkje det vi lagar slik vi hadde tenkt oss. Nokre gonger blir ein frustrert og har lyst å gi opp. Kanskje skjer dette ofte. Men, om vi held fram og prøvar igjen, og gjer så godt vi kan, får vi det til til slutt. "
       4:
         image: 'notes/C1_building_foundation_4.jpg'
-        text: "Å vera uthaldande handar om å ikkje gi seg når ein eigentleg har lyst å gi opp. Dersom du har lyst å laga noko nytt og annleis, kjem du til å oppleva nokre nederlag undervegs."
+        text: "Å vera uthaldande handlar om å ikkje gi seg når ein eigentleg har lyst å gi opp. Dersom du har lyst å laga noko nytt og annleis, kjem du til å oppleva nokre nederlag undervegs."
       5:
         image: 'notes/C1_building_foundation_5.jpg'
-        text: "Kunsten med å vera uthaldande, er å halda fram og læra av feil du gjer, i staden for å gi opp fordi du er frustrert. Frustrasjon tyder eigentleg at det er noko fantastisk som ligg og ventar rett rundt hjørnet. Så ikkje slutt før du får det til. Wooo!"
+        text: "Kunsten med å vera uthaldande, er å halda fram og læra av feila du gjer, i staden for å gi opp fordi du er frustrert. Frustrasjon tyder eigentleg at det er noko fantastisk som ligg og ventar rett rundt hjørnet. Så ikkje slutt før du får det til. Wooo!"
     C1_getting_loopy:
       1:
         image: 'notes/C1_getting_loopy_1.png'
@@ -469,7 +469,7 @@ nn:
     C1_maze_debugging:
       1:
         image: 'notes/C1_maze_debugging_1.png'
-        text: "Å debugge er å finne feil og fikse dei. Det er mange metdar å debugge problemer på. Ein av dei enklaste er å flytte steg for steg til du finn noko som går gale. Her prøvar eg å sprette baklengs på bommen men fell av heile tida."
+        text: "Å debugge er å finne feil og fikse dei. Det er mange metodar å debugge problemer på. Ein av dei enklaste er å flytte steg for steg til du finn noko som går gale. Her prøvar eg å sprette baklengs på bommen men fell av heile tida."
       2:
         image: 'notes/C1_maze_debugging_2.png'
         text: "Eg gjekk gjennom alle stega og skjønte kvar feilen var. Eg satte ikkje henda på bommen på rett måte. Eg prøvde å sprette ein gong til med ein ny måte å sette handa på bommen på og da fekk eg det til. Eg var veldig glad eg debugga turninga mi."
@@ -915,10 +915,10 @@ nn:
     C3_functional_suncatchers:
       1:
         image: 'notes/C3_functional_suncatchers_1.png'
-        text: "Denne leksjonen er funksjonelle solfangere. Du skal lage disse fine solfangerne ved hjelp av funksjoner. Det tar flere steg å lage en slik solfanger. Noen av stegene må du gjenta mange ganger."
+        text: "Denne leksjonen heter solpynt laget med funksjoner. Du skal lage disse fine solpyntene ved hjelp av funksjoner. Det tar flere steg å lage en slik solpynt. Noen av stegene må du gjenta mange ganger."
       2:
         image: 'notes/C3_functional_suncatchers_2.png'
-        text: "Det første steget i å forenkle prosessen med å lage en solfanger er å tenke ut hva vi må gjenta om og om igjen. Vi kan gruppere disse stegene inn i hva vi kaller en funksjon."
+        text: "Det første steget i å forenkle prosessen med å lage en solpynt er å tenke ut hva vi må gjenta om og om igjen. Vi kan gruppere disse stegene inn i hva vi kaller en funksjon."
       3:
         image: 'notes/C3_functional_suncatchers_3.png'
         text: "Men det må mer til for å lage en flott solfanger enn å følge nøyaktige steg. Noen ganger må vi være kreative og endre fargen på perlene som brukes. Vi kan gjøre hver solfanger unik hvis vi bruker forskjellige farger på perlene."
@@ -1169,7 +1169,7 @@ nn:
         text: "En variabel er en beholder som du kan lagre en verdi i. Når du bruker variabelen i en algoritme, åpner den beholderen og ser på verdien inni. Dette gjør at du kan skrive smartere algoritmer som oppfører seg forskjellig avhengig av verdien som er lagret i variabelen."
       2:
         image: 'notes/C4_variables_playlab_2.png'
-        text: "Nå skal du prøve playlab, hvor du får forskjellige spill og du kan endre verdiene på variabler som for eksempel hastighet, høyde og poeng for å endre spillet. Du trenger ikke å endre algoritmen i spillet for å endre hvordan det forløper, bare variabelen."
+        text: "No skal du prøve spellab kor du får ulike spel og du kan endre verdiane på variablane som fart, høgde, poeng for å endre spelet. Du treng ikkje å endre algoritmen i spelet for endre korleis ein speler det, berre variabelen."
       3:
         image: 'notes/C4_variables_playlab_3.png'
         text: "I mitt arbeid for Kindle og X-ray for bøker bruker vi variabler på mange forskjellige måter. En måte er at du kan bruke en variabel for å lagre sidetallene i en bok. En bruker kan øke og redusere størrelsen på skriften på en side. Basert på skriftstørrelse kan antall sider i boken endres. Det kan vi justere ved å lagre antall sider i variabelen."
@@ -1192,7 +1192,7 @@ nn:
         text: "Jeg heter John Vechey, og er en av grunnleggerne av PopCap Games. Vi lager spill som Plants vs Zombies og Bejeweled Peggle. Med spill handler det er ikke bare om hvor perfekt koden er, eller hvor perfekt grafikken er. Det handler om hvordan det føles og hvor moro det er. Du kan bare få følelsen ved å prøve det, gjøre det, ved å lære og tilpasse ferdighetene dine igjen og igjen."
       4:
         image: 'notes/infinity_playlab_intro_4.png'
-        text: "Har du et favorittspill? Vi kommer til å ta ett skritt i retning av å lage spill akkurat som de som bruker Play Lab. Gode spill har en historie og hver historie har skuespillere. Skuespillerne gjør ting som å snakke, flytte og samhandle med hverandre. Kanskje også skåre poeng basert på reglene i spillet. I dag skal vi lære hvordan du gjør alle disse tingene, en etter en, med Disney-karakterer som Anna, Elsa, Hiro, Baymax og Rapunzel. Vi vil bygge et spill fra grunnen, som kan deles og bli spilt på en telefon."
+        text: "Har du eit favorittspel? Vi kjem til å ta eitt skritt i retning av å lage spel akkurat som ein bruker Spellab. Gode spel har ei historie og kvar historie har skodespelarar. Skodespelarane gjer ting som å snakke, flytte og samhandle med kvarandre. Kanskje også skåre poeng basert på reglane i spelet. I dag skal vi lære korleis du gjer alle desse tinga, ein etter ein, med Disney-karakterar som Anna, Elsa, Hiro, Baymax og Rapunzel. Vi vil bygge eit spel frå grunnen av, som du kan dele og spele på telefonen."
       5:
         image: 'notes/infinity_playlab_intro_5.png'
         text: "Skjermen er delt i tre hoveddeler. Til venstre er spillområdet der programmet kjøres. Instruksjoner for hvert nivå er skrevet nedenfor. Det midterste området er verktøykassen, og hver av disse blokkene er et stykke kode. Det hvite området til høyre kalles arbeidsområdet, og det er her vi programmerer."
@@ -1335,274 +1335,274 @@ nn:
     starwars_intro:
       1:
         image: 'notes/starwars_intro_1.JPG'
-        text: 'Hei, jeg heter Kathleen Kennedy og jeg er produsenten av Star Wars: The Force Awakens. I dag vil du arbeide med en av våre stjerner, BB-8. BB-8 er en rund drone. Alt den gjør og alle dens bevegelser kontrolleres av programvare. Informatikk påvirker alle bransjer, fra markedsføring til helsetjenester til filmindustrien. Faktisk jobbet hundrevis av IT-ingeniører sammen for å lage en film som The Force Awakens.'
+        text: 'Hei, eg heiter Kathleen Kennedy og eg er produsenten av Star Wars: The Force Awakens. I dag vil du arbeide med ei av stjernene våre, BB-8. BB-8 er ei rund drone. Kvar einaste rørsle den gjer blir kontrollert av programvare. Informatikk påverkar alle bransjar, frå marknadsføring til helsetenester til filmindustrien. Faktisk, hundrevis av maskiningeniørar jobba saman for å lage filmen The Force Awakens.'
       2:
         image: 'notes/starwars_intro_2.JPG'
-        text: "Hei jeg heter Rachel Rose, og jeg er en senioringeniør ved ILM hvor jeg leder utviklingsteamet for animasjon og skapning. I The Force Awakens er jeg ansvarlig for å hjelpe kunstnere med å bygge delene til filmen slik at de ser troverdige ut i en galakse langt, langt borte."
+        text: "Hei, eg heiter Rachel Rose, og eg er en senioringeniør ved ILM kor eg leiar utviklingsteamet for animasjon og skaping. I The Force Awakens er eg ansvarleg for å hjelpe kunstnarar med å byggje delane til filmen slik at dei ser troverdige ut i ein galakse langt, langt unna."
       3:
         image: 'notes/starwars_intro_3.JPG'
-        text: "Den neste timen skal vi prøve å lage våre egne Star Wars-spill, mens vi lærer deg de grunnleggende konseptene i programmering. Programmering er vanligvis tekstbasert, men her kommer vi istedenfor til å bruke blokker som vi kan dra og slippe for å lage programmene. I bakgrunnen skrives det fremdeles kode. Etter at du har testet det enkleste ved hjelp av blokker, så vil vi bytte over til JavaScript, et av de mest populære programmeringsspråkene på Internett."
+        text: "Den neste timen skal vi prøve å lage våre eigne Star Wars-spel, medan vi lærer deg dei grunnleggjande konsepta i programmering. Programmering er vanlegvis tekstbasert, men her kjem vi i staden til å bruke blokker som vi kan dra og sleppe for å lage programma. I bakgrunnen blir det framleis skrive kode. Etter at du har testa det enklaste ved hjelp av blokker, vil vi bytte over til JavaScript, eitt av dei mest populære programmeringsspråka på internett."
       4:
         image: 'notes/starwars_intro_4.JPG'
-        text: "For å komme igang, skal vi jobbe med Rey for å programmere BB-8 til å gå og samle alle skrapdeler. Skjermen din er delt i tre deler. På venstre side finner du Star Wars spillområde, der koden vil kjøre. Instruksjonen for hvert nivå er skrevet nedenfor spillområdet."
+        text: "For å kome igang, skal vi jobbe med Rey for å programmere BB-8 til å gå og samle alle skrapdelar. Skjermen din er delt i tre delar. På venstre side finn du Star Wars-spelområdet, der koden vil køyre. Instruksjonen for kvart nivå blir skrive nedanfor spelområdet."
       5:
         image: 'notes/starwars_intro_5.JPG'
-        text: "Dette midtre området er verktøykassen og hver av disse blokkene er en kommando som BB-8 kan forstå."
+        text: "Dette midtre området er verktøykassa og kver av desse blokkene er ein kommando som BB-8 kan forstå."
       6:
         image: 'notes/starwars_intro_6.JPG'
-        text: "Det hvite området på høyre side kalles arbeidsområdet og det er der vi skal bygge opp programmet vårt."
+        text: "Det kvite området på høgre side heiter arbeidsområdet og det er der vi skal bygge opp programmet vårt."
       7:
         image: 'notes/starwars_intro_7.JPG'
-        text: "Hva skjer hvis du drar blokken flyttVenstre(); til ditt arbeidsområde og trykker kjør? BB-8 flytter en blokk til venstre på rutenettet."
+        text: "Hva skjer hvis du drar blokken flyttVenstre(); til arbeidsområdet ditt og trykker køyr? BB-8 flyttzr ei blokk til venstre på rutenettet."
       8:
         image: 'notes/starwars_intro_8.JPG'
-        text: "Og hva om jeg vil få BB-8 til å gjøre noe etter blokken moveLeft();? Jeg kan legge en annen blokk til programmet. Jeg velger blokken moveUp(); og jeg drar den under min blokk moveLeft(); til uthevingen vises. Så slipper den og de to blokkene festes sammen."
+        text: "Og kva om eg vil få BB-8 til å gjere noko etter blokka moveLeft();? Eg kan leggje til ei anna blokk til programmet. Eg vel blokka moveUp(); og eg drar den under blokka mi moveLeft(); til eg ser utheving. Så slepp eg den og dei to blokkene blir festa saman."
       9:
         image: 'notes/starwars_intro_9.JPG'
-        text: "Når jeg klikker kjør igjen, utfører BB-8 kommandoene som er stablet fra topp til bunn i arbeidsområdet. Hvis du vil slette en blokk, bare fjerne den fra stabelen og dra den tilbake til verktøykassa."
+        text: "Når eg klikkar køyr igjen, utfører BB-8 kommandoane som er stabla frå topp til botn i arbeidsområdet. Om du vil slette ei blokk, berre fjern den frå stabelen og dra den tilbake til verktøykassa."
       10:
         image: 'notes/starwars_intro_10.JPG'
-        text: "Etter at du har valgt kjør, kan du alltid velge tilbakestill-knappen for å få BB-8 tilbake til start. La oss rulle i gang!"
+        text: "Etter at du har valgt køyr, kan du alltid velge tilbakestill-knappen for å få BB-8 tilbake til start. La oss rulle i gang!"
     starwars_typing:
       1:
         image: 'notes/starwars_typing_1.JPG'
-        text: "Inne i blokkene vi har brukt er JavaScript-kommandoer. JavaScript er det mest populære programmeringsspråket for profesjonelle utviklere i dag. Blokker er en flott måte å komme i gang med å lære koding og selv ved anerkjente universiteter som Harvard og Berkeley begynner man å lære på denne måten. Men så fort man lærer det grunnleggende, skriver ingeniører kode fordi det gir oss muligheten til å jobbe raskere."
+        text: "Inne i blokkene vi har brukt er JavaScript-kommandoer. JavaScript er det mest populære programmeringsspråket for profesjonelle utviklarar i dag. Blokker er ein flott måte å kome i gang med å lære seg koding og til og med ved anerkjende universitet som Harvard og Berkeley startar ein å lære på denne måten. Men så fort ein lærer seg det grunnleggjande, skriv ingeniører kode fordi det gir oss høve til å jobbe raskare."
       2:
         image: 'notes/starwars_typing_2.JPG'
-        text: "Vi kan skrive hundrevis av kommandoer uten å måtte finne dem i verktøykassen eller trekke dem ut. Fordi du lærer å skrive kan være tregere i begynnelsen, men vi ville at du skulle få prøve det."
+        text: "Vi kan skrive hundrevis av kommandoar uten å måtte finne dei i verktøykassen eller trekke dei ut. Fordi du lærer å skrive, kan det vere treigare i starten, men vi ville at du skulle få prøve det."
       3:
         image: 'notes/starwars_typing_3.JPG'
-        text: "Øverst til høyre i arbeidsområdet, kan du klikke knappen Vis tekst på hvilken som helst oppgave for å bytte fra blokker til å skrive koden som tekst."
+        text: "Øvst til høgre i arbeidsområdet, kan du klikke knappen Vis tekst på kva som helst oppgave for å bytte fra blokker til å skrive koden som tekst."
       4:
         image: 'notes/starwars_typing_4.JPG'
-        text: "I neste leksjon vil du starte opp i skrive modus. Her kan du fremdeles dra blokken fra verktøykassen, eller du kan skrive kommandonavnet. Når du begynner å skrive, vil du se at navnene på mulig kommandoer vil vises nedenfor der du skriver. I stedet for å skrive hele kommandonavnet kan du velge en av disse å arbeide raskere. I jobben min bruker jeg denne funksjonen for autofullføring hele tiden når jeg skriver kode."
+        text: "I neste leksjon vil du starte opp i skrivemodus. Her kan du fremleis dra blokka fra verktøykassa, eller du kan skrive kommandonavnet. Når du byrjar å skrive, vil du sjå at namna på moglege kommandoar vil stå nedanfor der du skriv. I staden for å skrive heile kommandonavnet, kan du velgje ein av desse for å arbeide raskere. I jobben min bruker eg denne funksjonen for autofullføring heile tida når eg skriv kode."
       5:
         image: 'notes/starwars_typing_5.JPG'
-        text: "When you're typing code, the computer needs you to be very precise. You need to spell and capitalize the command name exactly correctly, including the parentheses and the semi-colon. Even with a small typing mistake, BB-8 cannot understand the code and won't be able to move."
+        text: "Når du skriv kode, treng datamaskina at du er veldig presis. Du må stave og utnytte kommandonavnet akkurat riktig, inkludert parenteser og semi-kolon. Sjølv med en liten skrivefeil, kan ikkje BB-8 forstå koden og kan ikkje flytte på seg."
       6:
         image: 'notes/starwars_typing_6.JPG'
-        text: "When you make an error on the line, the editor highlights it for you so that you can try changing your text to fix it."
+        text: "Når du gjer ein feil på linja, markerer redigeraren den for deg slik at du kan prøve å endre teksten for å fastsette den."
       7:
         image: 'notes/starwars_typing_7.JPG'
-        text: "If you get stuck, you can always start over with the start over button and you can switch back to block mode at any time by clicking in the top-right corner. Ok, let's give typing a try! And if you make mistakes, don't get frustrated. It takes everybody a few tries to get it right."
+        text: "Dersom du står fast, kan du alltid starte med start på nytt-knappen og du kan bytte tilbake til blokkmodus når som helst ved å klikke i hjørnet øvst til høgre. Ok, la oss prøve oss på skriving! Og om du gjer feil, ikkje bli frustrert. Alle må prøve seg for å få det riktig."
     starwars_events:
       1:
         image: 'notes/starwars_events_1.JPG'
-        text: "Hei, mitt navn er Charita Carter. Jeg er senior creative producer her på Walt Disney Imagineering. Jeg er ansvarlig for å lede et team som faktisk produserer attraksjonene som gjestene våre kan oppleve. Vi er alltid på utkikk etter måter som kan bli bedre og forbedre gjestenes opplevelse og teknologi er kjernen i det."
+        text: "Hei, eg heiter Charita Carter. Eg er senior creative producer her på Walt Disney Imagineering. Eg er ansvarleg for å leie eit team som faktisk produserer attraksjonane som gjestene våre kan oppleve. Vi er alltid på utkikk etter måtar vi kan betre oss og betre opplevinga til gjestene - og teknologi er kjernen i det."
       2:
         image: 'notes/starwars_events_2.JPG'
-        text: "Gratulerer, du klarte det! Du programmerte BB-8. Jeg tror du er klar for noe vanskeligere. La oss gjøre det! Nå som du har lært grunnleggende programmering, reiser vi tilbake i tid, så du kan bygge ditt eget spill med R2-D2 og C-3PO."
+        text: "Gratulerer, du klarte det! Du programmerte BB-8. Eg trur du er klar for noko meir vanskeleg. La oss gjere det! No som du har lært grunnleggjande programmering, reiser vi tilbake i tid, slik at du kan bygge ditt eig spel med R2-D2 og C-3PO."
       3:
         image: 'notes/starwars_events_3.JPG'
-        text: 'For å lage et spill, må vi lære noe som alle programmerere bruker hver eneste dag: det kalles hendelser. Hendelser forteller programmer til å lytte og vente på at noe skal skje, og når det skjer, så skal programmet utføre en handling.'
+        text: 'For å lage eit spel, må vi lære noko som alle programmerarar bruker kvar einaste dag: det blir kalla for hendingar. Hendingar fortell program om å lytte og vente på at noko skal skje, og når det skjer, så skal programmet utføre ei handling.'
       4:
         image: 'notes/starwars_events_4.JPG'
-        text: "Noen eksempler på hendelser er å lytte etter museklikk, en piltast eller et trykk på skjermen."
+        text: "Nokre døme på hendingar er å lytte etter museklikk, ein piltast eller eit trykk på skjermen."
       5:
         image: 'notes/starwars_events_5.JPG'
-        text: "Her skal vi først få R2-D2 til å bevege seg opp og levere en beskjed til en opprørspilot og så bevege seg ned til den andre opprørspiloten. Vi bruker hendelser for å få ham til å flytte på seg: Når spilleren bruker piltastene opp/ned eller opp/ned-knappene."
+        text: "Her skal vi først få R2-D2 til å bevege seg opp og levere ein beskjed til ein opprørspilot og så bevege seg ned til den andre opprørspiloten. Vi bruker hendingar for å få han til å flytte på seg. Når spelaren bruker piltastane opp/ned eller opp/ned-knappene."
       6:
         image: 'notes/starwars_events_6.JPG'
-        text: "Vi bruker whenUp() hendelsesblokken og kobler goUp() blokken til den. Når spilleren trykker pil opp tasten, kjøres koden knyttet til whenUp() blokken. Og vi gjør tilsvarende for å få R2-D2 til å flytte ned."
+        text: "Vi bruker whenUp() hendingblokka og kobler goUp()-blokka til den. Når spelaren trykker pil opp-tasten, køyrer vi koden knytta til whenUp()-blokka. Og vi gjer tilsvarande for å få R2-D2 til å flytte ned."
       7:
         image: 'notes/starwars_events_7.JPG'
-        text: "For å gjøre dette, bruker vi en kommando som heter whenUp(). Når du drar kommandoen ut av verktøykassa, ser du at den starter og slutter med en klammeparentes, i stedet for et semikolon. Dette gir oss plass til å putte andre kommandoer i midten. Hver kommando vi putter inne i disse klammene, vil kjøre når spilleren trykker på pil opp."
+        text: "For å gjere dette, bruker vi en kommando som heter whenUp(). Når du drar kommandoen ut av verktøykassa, ser du at den startar og sluttar med ein klammeparentes, i staden for eit semikolon. Dette gir oss plass til å putte andre kommandoar i midten. Kvar kommando vi puttar inn i desse klammene, vil køyre når spelaren trykker på pil opp."
       8:
         image: 'notes/starwars_events_8.JPG'
-        text: "Vi vil at R2-D2 skal gå opp, så la oss putte en blokk med goUp(); inne i kommandoen. Så gjør vi det samme for å få R2-D2 til å gå ned."
+        text: "Vi vil at R2-D2 skal gå opp, så la oss putte ei blokk med goUp(); inne i kommandoen. Så gjer vi det same for å få R2-D2 til å gå ned."
       9:
         image: 'notes/starwars_events_9.JPG'
-        text: "I stedet for å skrive all koden for å kontrollere doiden på forhånd, kan vi la R2-D2 reagere på kapper som flytter ham rundt på skjermen. Skritt for skritt vil spillet ditt bli mer interaktivt."
+        text: "I staden for å skrive all koden for å kontrollere doiden på førehand, kan vi la R2-D2 reagere på kapper som flytter han rundt på skjermen. Skritt for skritt vil spelet ditt bli meir interaktivt."
     starwars_congrats:
       1:
         image: 'notes/starwars_congrats_1.JPG'
-        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: "Hei, eg heiter Alice og eg leiar produkt- og prosjekteringsteamet her i Code.org og eg jobba på denne opplæringa som du spelar deg gjennom akkurat no."
       2:
         image: 'notes/starwars_congrats_2.JPG'
-        text: "Du har nettopp gjort det til det siste nivået. Gratulerer! Du lærte alt du trenger å vite for å lage ditt eget Star Wars spill. Nå er det ingen flere instruksjoner, ingen oppgaver å løse. Du kan lage ditt eget spill og du bestemmer hvordan det skal fungere. En ting til, du har nå låst opp nye lyder og nye kommandoer for å gjøre enda mer."
+        text: "Du kom deg gjennom til det siste nivået. Gratulerer! Du lærte alt du trengte å vite for å lage ditt eige Star Wars-spel. No er det ingen flere instruksjonar, ingen oppgaver å løuse. Du kan lage ditt eige spel og du bestemmer korleis det skal fungere. Ein ting til, du har no låst opp nye lydar og nye kommandoar for å gjere enda mer."
       3:
         image: 'notes/starwars_congrats_3.JPG'
-        text: "[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win."
+        text: "[elevene snakkar] Så laga vi eit spel der du får poeng når du får puffer grisar. Vrien er at kvar gong du får en puffergris kjem ein storm trooper. Faktisk hele skjermen blir full av puffergrisar og etter du har trykka på 10.000 av dei, vinn du."
       4:
         image: 'notes/starwars_congrats_4.JPG'
-        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+        text: "[elevene snakkar] Vi laag eit spel kor du ikkje kan tape og alt du drep, gir deg poeng. I programmet mitt gjorde eg om på tastene slik at når du klikkar deg opp, går karakteren din ned, og når du går rett, går karakteren din til venstre. Det er skikkeleg vanskeleg! Nokon gonger får du berre ein fordel, en urettferdig fordel dersom du er utviklaren av spelet. Fekk eg det? Yay!"
       5:
         image: 'notes/starwars_congrats_5.JPG'
-        text: "Når du er ferdig med å lage spillet ditt, klikk på Deling å få en link som du kan dele med venner eller spille spillet ditt på telefonen. Ha det gøy!"
+        text: "Når du er ferdig med å lage spelet ditt, klikk på del å få ei lenke du kan dele med venner eller til å spele det på telefonen. Ha det gøy!"
     starwars_blocks_intro:
       1:
         image: 'notes/starwars_blocks_intro_1.JPG'
-        text: 'Hi I''m Kathleen Kennedy and I''m the producer of Star Wars: The Force Awakens. Today you''ll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens.'
+        text: 'Hei, eg heiter Kathleen Kennedy og eg er produsenten av Star Wars: The Force Awakens. I dag vil du arbeide med ei av stjernene våre, BB-8. BB-8 er ei rund drone. Kvar einaste rørsle den gjer blir kontrollert av programvare. Informatikk påverkar alle bransjar, frå marknadsføring til helsetenester til filmindustrien. Faktisk, hundrevis av maskiningeniørar jobba saman for å lage filmen The Force Awakens.'
       2:
         image: 'notes/starwars_blocks_intro_2.JPG'
-        text: "Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artist develop rigs, which are the parts of the character that move that allow the character to look very believable in a galaxy far, far away."
+        text: "Hei, eg heiter Rachel Rose, og eg er en senioringeniør ved ILM kor eg leiar utviklingsteamet for animasjon og skaping. I The Force Awakens er eg ansvarleg for å hjelpe kunstnarar med å byggje delane til filmen slik at dei ser troverdige ut i ein galakse langt, langt unna."
       3:
         image: 'notes/starwars_blocks_intro_3.JPG'
-        text: "In the next hour, we're going to build our own Star Wars game that will teach you the basic concepts of programming. Usually programming is all text but we're going to use blocks here so we can drag and drop to write the programs. To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts."
+        text: "Den neste timen skal vi prøve å lage våre eigne Star Wars-spel, som vil lære deg dei grunnleggjande konsepta i programmering. Programmering er vanlegvis tekstbasert, men her kjem vi i staden til å bruke blokker som vi kan dra og sleppe for å lage programma. Til å begynne med skal vi jobbe med Ray for å programmere BB-8 til å gå for å finne alle skrapdelane."
       4:
         image: 'notes/starwars_blocks_intro_4.JPG'
-        text: "Din skjerm er delt opp i tre deler. Til venstre er Star Wars spillet hvor koden vil bli kjørt. Instruksjonene for hvert nivå er beskrevet nedenfor spillområdet."
+        text: "Skjermen din er delt i 3 hovuddelar. Den til venstre er speleflata der vi køyrer Star Wars-spelet ditt. Instruksjonane for kvart nivå blir skrivne under speleflata."
       5:
         image: 'notes/starwars_blocks_intro_5.JPG'
-        text: "Dette midtre området er verktøykassen og hver av disse blokkene er en kommando som BB-8 kan forstå."
+        text: "Dette midtre området er verktøykassa og kver av desse blokkene er ein kommando som BB-8 kan forstå."
       6:
         image: 'notes/starwars_blocks_intro_6.JPG'
-        text: "Det hvite området på høyre side kalles arbeidsområdet og det er der vi skal bygge opp programmet vårt."
+        text: "Det kvite området på høgre side heiter arbeidsområdet og det er der vi skal bygge opp programmet vårt."
       7:
         image: 'notes/starwars_blocks_intro_7.JPG'
-        text: "Hvis jeg drar moveLeft(); blokken til vårt arbeidsområde, hva skjer? BB-8 flytter seg ett steg på rutenettet."
+        text: "Hva skjer hvis du drar blokken flyttVenstre(); til arbeidsområdet ditt og trykker køyr? BB-8 flyttar ei blokk til venstre på rutenettet."
       8:
         image: 'notes/starwars_blocks_intro_8.JPG'
-        text: "Og hva om jeg ønsker at BB-8 skal gjøre noe etter moveLeft(); puslebit? Jeg kan legge til en annen puslebit til vårt program. Jeg vil velge moveUp(); puslebiten og dra den under min moveLeft(); puslebit for å feste den der. Et lite lys markerer også at den kan bli festet. Slipp puslebiten og den sitter på plass. Når jeg trykker kjør igjen, vil BB-8 utføre kommandoer som er stablet topp til bunn i vårt arbeidsområdet."
+        text: "Og kva om eg vil at ho skal gjere noko etter at ho har flytta seg framover? Då kan eg legge enda ei blokk til programmet. Eg vel moveUp(); og drar den under moveLeft();-blokka til den blir framheva. Deretter slepp eg den, og så blir dei to blokkene festa i kvarandre. Når eg klikker på Køyr igjen, utfører BB-8 kommandoane som er stabla oppå kvarandre i arbeidsvinduet."
       9:
         image: 'notes/starwars_blocks_intro_9.JPG'
-        text: "Om du ønsker å slette en puslebit, så drar du den ønskede puslebiten fra arbeidsområdet tilbake til verktøykassen."
+        text: "Om du ønskjer å slette ei blokk, så berre dreg du den ønska blokka frå arbeidsområdet tilbake til verktøyskassa."
       10:
         image: 'notes/starwars_blocks_intro_10.JPG'
-        text: "Etter at du har klikket kjør, så kan du alltid klikke på nullstill-knappen for å få BB-8 tilbake til start. La oss prøve!"
+        text: "Etter at du har valgt køyr, kan du alltid velge tilbakestill-knappen for å få BB-8 tilbake til start. La oss rulle i gang!"
     starwars_blocks_events:
       1:
         image: 'notes/starwars_blocks_events_1.JPG'
-        text: "Hei, mitt navn er Charita Carter. Jeg er senior creative producer her på Walt Disney Imagineering. Jeg er ansvarlig for å lede et team som faktisk produserer attraksjonene som gjestene våre kan oppleve. Vi er alltid på utkikk etter måter som kan bli bedre og forbedre gjestenes opplevelse og teknologi er kjernen i det."
+        text: "Hei, eg heiter Charita Carter. Eg er senior creative producer her på Walt Disney Imagineering. Eg er ansvarleg for å leie eit team som faktisk produserer attraksjonane som gjestene våre kan oppleve. Vi er alltid på utkikk etter måtar vi kan betre oss og betre opplevinga til gjestene - og teknologi er kjernen i det."
       2:
         image: 'notes/starwars_blocks_events_2.JPG'
-        text: "Gratulerer, du klarte det! Du programmerte BB-8. Jeg tror du er klar for noe vanskeligere. La oss gjøre det! Nå som du har lært grunnleggende programmering, reiser vi tilbake i tid, så du kan bygge ditt eget spill med R2-D2 og C-3PO."
+        text: "Gratulerer, du klarte det! Du programmerte BB-8. Eg trur du er klar for noko meir vanskeleg. La oss gjere det! No som du har lært grunnleggjande programmering, reiser vi tilbake i tid, slik at du kan bygge ditt eig spel med R2-D2 og C-3PO."
       3:
         image: 'notes/starwars_blocks_events_3.JPG'
-        text: 'For å lage et spill, må vi lære noe som alle programmerere bruker hver eneste dag: det kalles hendelser. Hendelser forteller programmer til å lytte og vente på at noe skal skje, og når det skjer, så skal programmet utføre en handling.'
+        text: 'For å lage eit spel, må vi lære noko som alle programmerarar bruker kvar einaste dag: det blir kalla for hendingar. Hendingar fortell program om å lytte og vente på at noko skal skje, og når det skjer, så skal programmet utføre ei handling.'
       4:
         image: 'notes/starwars_blocks_events_4.JPG'
-        text: "Noen eksempler på hendelser er å lytte etter museklikk, en piltast eller et trykk på skjermen."
+        text: "Nokre døme på hendingar er å lytte etter museklikk, ein piltast eller eit trykk på skjermen."
       5:
         image: 'notes/starwars_blocks_events_5.JPG'
-        text: "Her skal vi først få R2-D2 til å bevege seg opp og levere en beskjed til en opprørspilot og så bevege seg ned til den andre opprørspiloten. Vi bruker hendelser for å få ham til å flytte på seg: Når spilleren bruker piltastene opp/ned eller opp/ned-knappene."
+        text: "Her skal vi først få R2-D2 til å bevege seg opp og levere ein beskjed til ein opprørspilot og så bevege seg ned til den andre opprørspiloten. Vi bruker hendingar for å få han til å flytte på seg. Når spelaren bruker piltastane opp/ned eller opp/ned-knappane."
       6:
         image: 'notes/starwars_blocks_events_6.JPG'
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
+        text: "Vi bruker whenUp()-hendingblokka og fester goUp()-blokka til den. Når spelaren trykker pil opp, køyrer vi koden knytta til whenUp()-blokken. Og vi gjer det same for å få R2-D2 til å flytte ned. No skal vi i staden for å skrive all koden for å styre droiden på førehand, kan vi la R2-D2 reagerer på knappen trykk hendingar som får den til å røre på seg på skjermen."
       7:
         image: 'notes/starwars_blocks_events_7.JPG'
-        text: "Steg for steg vil gjøre ditt spill mer interaktivt."
+        text: "Steg for steg, blir spelet ditt meir interaktivt."
     starwars_blocks_congrats:
       1:
         image: 'notes/starwars_blocks_congrats_1.JPG'
-        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: "Hei, eg heiter Alice og eg leiar produkt- og prosjekteringsteamet her i Code.org og eg jobba på denne opplæringa som du spelar deg gjennom akkurat no."
       2:
         image: 'notes/starwars_blocks_congrats_2.JPG'
-        text: "Du har nettopp gjort det til det siste nivået. Gratulerer! Du lærte alt du trenger å vite for å lage ditt eget Star Wars spill. Nå er det ingen flere instruksjoner, ingen oppgaver å løse. Du kan lage ditt eget spill og du bestemmer hvordan det skal fungere. En ting til, du har nå låst opp nye lyder og nye kommandoer for å gjøre enda mer."
+        text: "Du kom deg gjennom til det siste nivået. Gratulerer! Du lærte alt du trengte å vite for å lage ditt eige Star Wars-spel. No er det ingen flere instruksjonar, ingen oppgaver å løuse. Du kan lage ditt eige spel og du bestemmer korleis det skal fungere. Ein ting til, du har no låst opp nye lydar og nye kommandoar for å gjere enda mer."
       3:
         image: 'notes/starwars_blocks_congrats_3.JPG'
-        text: "[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win."
+        text: "[elevene snakkar] Så laga vi eit spel der du får poeng når du får puffer grisar. Vrien er at kvar gong du får en puffergris kjem ein storm trooper. Faktisk hele skjermen blir full av puffergrisar og etter du har trykka på 10.000 av dei, vinn du."
       4:
         image: 'notes/starwars_blocks_congrats_4.JPG'
-        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+        text: "[elevene snakkar] Vi laag eit spel kor du ikkje kan tape og alt du drep, gir deg poeng. I programmet mitt gjorde eg om på tastene slik at når du klikkar deg opp, går karakteren din ned, og når du går rett, går karakteren din til venstre. Det er skikkeleg vanskeleg! Nokon gonger får du berre ein fordel, en urettferdig fordel dersom du er utviklaren av spelet. Fekk eg det? Yay!"
       5:
         image: 'notes/starwars_blocks_congrats_5.JPG'
-        text: "Når du er ferdig med å lage spillet ditt, klikk på Deling å få en link som du kan dele med venner eller spille spillet ditt på telefonen. Ha det gøy!"
+        text: "Når du er ferdig med å lage spelet ditt, klikk på del å få ei lenke du kan dele med venner eller til å spele det på telefonen. Ha det gøy!"
     mc_intro:
       1:
         image: 'notes/mc_intro_1.JPG'
-        text: "Mitt navn er Jens Bergensten, men jeg er mer kjent som Jeb. Jeg er sjefutvikler for Minecraft her hos Mojang i Stockholm. Jeg begynte å programmere da jeg var elleve eller tolv fordi jeg ville lage spill. En venn av faren min sa at for å kunne lage spill måtte du lære å programmere. Slik var det jeg kom i gang. Jeg liker å utforme og finne ut av arkitekturen til spill. Det er det jeg virkelig liker med Minecraft."
+        text: "Eg heiter Jens Bergensten, men eg er meir kjendt som Jeb. Eg er sjefutviklar for Minecraft her hos Mojang i Stockholm. Eg starta å programmere då eg var elleve eller tolv fordi eg ville lage spel. Ein ven av far min sa at for å kunne lage spel måtte du lære å programmere. Slik var det eg kom i gang. Eg likar å utforme og finne ut av arkitekturen i spel. Det er det eg verkeleg likar med Minecraft."
       2:
         image: 'notes/mc_intro_2.JPG'
-        text: "I løpet av den neste timen vil du lære grunnleggende datavitenskap ved å programmere Alex eller Steve til å bevege seg gjennom en simulert del av en Minecraft-verden."
+        text: "I løpet av den neste timen vil du lære grunnleggjande datavitskap ved å programmere Alex eller Steve til å bevege seg gjennom ein simulert del av ei Minecraft-verd."
       3:
         image: 'notes/mc_intro_3.JPG'
-        text: "Tradisjonell programmering skjer vanligvis med tekst, men i dag bruker vi Blockly, et system som lar deg dra og slippe blokker for å skrive programmer. Under det hele lager du kode i Javascript."
+        text: "Tradisjonell programmering skjer vanligvis med tekst, men i dag brukar vi Blockly, eit system som lar deg dra og sleppe blokker for å skrive program. Under det heile, lagar du kode i Javascript."
       4:
         image: 'notes/mc_intro_4.JPG'
-        text: "Konseptene som du skal lære, brukes av programmerere hver dag og utgjør selve grunnlaget for datavitenskap. Her på Mojang bruker vi de samme konseptene for å få Minecraft til å fungere."
+        text: "Konsepta du skal lære deg, blir brukt av programmerarar kvar dag og utgjer sjølve grunnlaget for datavitskap. Her på Mojang bruker vi dei same konsepta for å få Minecraft til å fungere."
       5:
         image: 'notes/mc_intro_5.JPG'
-        text: "Før du begynner, må du velge en figur. Jeg velger Alex. La oss bygge kode til et program som hjelper henne rundt på skjermen."
+        text: "Før du startar, må du velgje ein figur. Eg vel Alex. La oss byggje kode til eit program som hjelper ho rundt på skjermen."
       6:
         image: 'notes/mc_intro_6.JPG'
-        text: "Skjermen er delt i tre hoveddeler. Til venstre er spillevinduet for Minecraft, hvor programmet skal kjøre. Instruksjonene for hvert nivå står skrevet under."
+        text: "Skjermen er delt i tre hoveddelar. Til venstre er spelevindauge for Minecraft, kor programmet blir køyrd. Instruksjonane for kvart nivå blir skrive under."
       7:
         image: 'notes/mc_intro_7.JPG'
-        text: "I midten har du verktøykassen, og hver av blokkene er en kommando som bestemmer hva Alex gjør."
+        text: "I midten har du verktøykassa, og kvar av blokkene er ein kommando som bestemmer kva Alex gjer."
       8:
         image: 'notes/mc_intro_8.JPG'
-        text: "Det hvite området til høyre er arbeidsvinduet, og det er her vi bygger opp programmet."
+        text: "Det kvite området til høgre er arbeidsområdet, og det er her vi bygger opp programmet."
       9:
         image: 'notes/mc_intro_9.JPG'
-        text: "Hva skjer hvis vi drar \"flytt fremover\"-blokken til arbeidsvinduet og klikker på Kjør? Alex beveger seg én plass frem på rutenettet."
+        text: "Hva skjer hvis vi drar \"flytt fremover\"-blokka til arbeidsvinduet og klikker på Køyr? Alex rører seg ein plass fram på rutenettet."
       10:
         image: 'notes/mc_intro_10.JPG'
-        text: "Og hva om vi vil at hun skal gjøre noe etter at hun har flyttet seg fremover? Da kan vi legge enda en blokk til programmet. Jeg velger \"snu mot høyre\" og drar den under \"flytt fremover\" til denne oransje linjen dukker opp. Deretter slipper jeg den, og så festes de to blokkene til hverandre. Når vi klikker på Kjør igjen, utfører Alex kommandoene som er stablet oppå hverandre i arbeidsvinduet."
+        text: "Og kva om vi vil at ho skal gjere noko etter at ho har flytta seg framover? Dp kan vi legge enda ei blokk til programmet. Eg vel \"snu mot høyre\" og drar den under \"flytt fremover\" til denne oransja linja dukker opp. Deretter slepp eg den, og så blir dei to blokkene festa i kvarandre. Når vi klikker på Køyr igjen, utfører Alex kommandoane som er stabla oppå kvarandre i arbeidsvinduet."
       11:
         image: 'notes/mc_intro_11.JPG'
-        text: "Hvis du ønsker å slette en blokk, er det bare å dra den tilbake til verktøykassen."
+        text: "Om du ønsker å slette ei blokk, er det berre å dra den tilbake til verktøykassa."
       12:
         image: 'notes/mc_intro_12.JPG'
-        text: For å gjøre om endringer og tilbakestille nivået kan du bruke Begynn på nytt-knappen øverst i hjørne av arbeidsvinduet. Ser du forresten den lille trekanten på snu-blokkene? Hvis du ser en slik trekant, betyr det at du kan velge et annet alternativ. La oss begynne å programmere!
+        text: For å gjere om endringar og tilbakestille nivået, kan du bruke Begynn på nytt-knappen øvst i hjørnet i arbeidsvinduet. Ser du forresten den vesle trekanten på snu-blokkene? Om du ser ein slik trekant, betyr det at du kan velgje eit anna alternativ. La oss stare programmeringa!
     mc_repeat:
       1:
         image: 'notes/mc_repeat_1.JPG'
-        text: "Jeg er Lydia Winters, merkevaresjef hos Mojang, og vi har laget et lite spill som heter Minecraft."
+        text: "Eg er Lydia Winters, merkevaresjef hos Mojang, og vi har laga eit lite spel som heteir Minecraft."
       2:
         image: 'notes/mc_repeat_2.JPG'
-        text: "Det jeg liker best å gjøre i Minecraft er å utforske. Jeg elsker å dra på eventyr i huler for å se hva jeg finner. Jeg jobber ikke som programmerer, så det er spennende å ta del i Minecraft-timene og faktisk lære litt programmering selv."
+        text: "Det eg likar best å gjere i Minecraft er å utforske. Eg elsker å dra på eventyr i huler for å sjå kva eg finn. Eg jobbar ikkje som programmerar, så det er spanande å ta del i Minecraft-timane og faktisk lære litt programmering sjølv."
       3:
         image: 'notes/mc_repeat_3.JPG'
-        text: "I det siste nivået trengte vi mange \"flytt fremover\"-blokker. Det ville ha vært lettere om vi bare kunne be datamaskinen om å utføre denne kommandoen fire eller fem ganger. Heldigvis for oss er datamaskiner veldig flinke til å gjenta kommandoer med gjenta-løkker."
+        text: "I det siste nivået trengte vi mange \"flytt fremover\"-blokker. Det ville ha vore lettare om vi berre kunne be datamaskina om å gjere denne kommandoen fire eller fem gonger. Heldigvis for oss er datamaskiner veldig flinke til å gjenta kommandoar med gjenta-løkker."
       4:
         image: 'notes/mc_repeat_4.JPG'
-        text: "Når vi bygger Minecraft, bruker vi gjenta-løkker for å plassere alle utgangsmaterialene som trenges til en ny verden. Det innebærer tusenvis av blokker. Vi bruker også løkker på små måter, som for å få føttene til Alex til å bevege seg mens hun går. Gjenta-løkker er en viktig del av all programmering."
+        text: "Når vi bygger Minecraft, bruker vi gjenta-løkker for å plassere alle utgangsmateriala som ein treng til ei ny verd. Det inneber tusenvis av blokker. Vi bruker også løkker på små måtar, som for å få føtene til Alex til å røre på seg mens ho går. Gjenta-løkker er ein viktig del av all programmering."
       5:
         image: 'notes/mc_repeat_5.JPG'
-        text: "Det er snart natt, så i de neste par nivåene skal vi bygge et hus som holder oss trygge. Vi bruker gjenta for å gjøre dette på enkleste måte."
+        text: "Det er snart natt, så i de neste par nivåa skal vi byggje eit hus som held oss trygge. Vi bruker gjenta for å gjere dette på enklaste måte."
       6:
         image: 'notes/mc_repeat_6.JPG'
-        text: "For å bygge en vegg til huset kan vi enten be Alex flytte seg fremover og plassere planker fire ganger, eller så kan vi be henne flytte seg fremover og plassere én planke, så tar vi denne kommandoen og bruker gjenta-blokken til å få henne til å utføre handlingen flere ganger. Deretter klikker vi på gjenta-blokken og forteller henne hvor mange ganger hun skal utføre denne handlingen. La oss bygge huset før det blir natt! Ha det gøy!"
+        text: "For å bygge ein vegg til huset, kan vi enten be Alex flytte seg framover og plassere plankar fire gonger, eller så kan vi be ho flytte seg framover og plassere ein planke, så tar vi denne kommandoen og bruker gjenta-blokka til å få ho til å utføre handlinga fleire gonger. Deretter klikkar vi på gjenta-blokka og fortel ho kor mange gonger ho skal gjere denne handlinga. La oss bygge huset før det blir natt! Ha det gøy."
     mc_if_statements:
       1:
         image: 'notes/mc_if_statements_1.JPG'
-        text: "Nå skal vi lære om hvis-kommandoer. Hvis-kommandoer er en viktig del av det å lære å programmere. De hjelper datamaskinen med å ta beslutninger."
+        text: "No skal vi lære om Viss-kommandoar. Viss-kommandoar er ein viktig del av det å lære å programmere. Dei hjelper datamaskina med å ta beslutningar."
       2:
         image: 'notes/mc_if_statements_2.JPG'
-        text: "Alle datamaskiner bruker hvis-kommandoer, også telefonen min. Når jeg skal låse opp telefonen, kjører den en kode som sier at den låses opp hvis jeg skriver inn riktig passord. Hvis ikke viser den en feilmelding."
+        text: "Alle datamaskiner bruker hvis-kommandoar, også telefonen min. Når eg skal låse opp telefonen, køyrer den ein kode som seier at den skal låsast opp dersom eg skriv inn riktig passord. Hvis ikkje viser den ei feilmelding."
       3:
         image: 'notes/mc_if_statements_3.JPG'
-        text: "Med hvis-kommandoer kan du få Steve og Alex til å reagere på det de ser i verdenen. Hvis det er en stein foran dem, kan de snu seg mot venstre. Eller mot høyre hvis de går inn i et tre."
+        text: "Med viss-kommandoer kan du få Steve og Alex til å reagere på det dei ser i verda. Vis det er ein stein foran dei, kan dei snu seg mot venstre. Eller mot høgre dersom dei går inn i eit tre."
       4:
         image: 'notes/mc_if_statements_4.JPG'
-        text: "Her har vi ikke lyst til å falle ned i lavaen. Det er lett å unngå lavaen. Vi kan se den på skjermen. Men hva med lavaen som vi ikke kan se, den under steinen?"
+        text: "Her har vi ikkje lyst til å falle ned i lavaen. Det er lett å unngå lavaen. Vi kan sjå den på skjermen. Men kva med lavaen som vi ikkje kan sjå, den under steinen?"
       5:
         image: 'notes/mc_if_statements_5.JPG'
-        text: "Når vi har utvunnet steinen, må vi sjekke om det er noe lava der før vi beveger oss fremover. Hvis det er lava der, må vi plassere en stein foran figurene før vi fortsetter. Slik kan vi fortsette trygt på ferden. Tid for mer utvinning! Og husk å bruke hvis-kommandoen for å passe på hvor du går."
+        text: "Når vi har utvunne steinen, må vi sjekke om det er noko lava der før vi beveger oss framover. Om det er lava der, må vi plassere ein stein foran figurene før vi fortsetter. Slik kan vi fortsette trygt på ferda. Tid for mer utvinning! Og husk å bruke viss-kommandoen for å passe på kor du går."
     mc_congrats_share:
       1:
         image: 'notes/mc_congrats_share_1.JPG'
-        text: "Gratulerer! Nå har du lært de grunnleggende byggeklossene i datavitenskap."
+        text: "Gratulerer! No har du lært deg dei grunnleggjande omgrepa i informatikk."
       2:
         image: 'notes/mc_congrats_share_2.JPG'
-        text: "Nå kan du bruke disse blokkene til å skape ting selv. Det er ingen flere instruksjoner, og ingen flere oppgaver å løse. Du kan bygge alt du vil. Det er du som velger."
+        text: "No kan du bruke desse blokkene til å skape eigne program. Det finst ikkje fleire instruksjonar, og ingen fleire oppgåver å løyse. Du kan bygge alt du vil. Du kan velje kva du vil."
       3:
         image: 'notes/mc_congrats_share_3.JPG'
-        text: "[elever snakker] Nå begynner alvoret. Klipp. Jeg lagde en L av fakler. Jeg lagde en A av bjørkeplanker. Det fungerte, det fungerte! Vi bygde et hus av ull!"
+        text: "[elevar snakkar] Nå byrjar alvoret. Klipp. Eg laga en L av faklar. Eg laga en A av bjørkeplanker. Det fungerte, det fungerte! Vi bygde eit hus av ull!"
       4:
         image: 'notes/mc_congrats_share_4.JPG'
-        text: "Når du er ferdig å bygge, kan du velge \"Del\" for å få en lenke å dele med vennene dine. Ha det gøy!"
+        text: "Når du er ferdig med å bygge, kan du velgje \"Del\" for å få ei lenke å dele med venene dine. Ha det gøy!"
     mc_congrats_no_share:
       1:
         image: 'notes/mc_congrats_no_share_1.JPG'
-        text: "Gratulerer! Nå har du lært de grunnleggende byggeklossene i datavitenskap."
+        text: "Gratulerer! No har du lært deg dei grunnleggjande omgrepa i informatikk."
       2:
         image: 'notes/mc_congrats_no_share_2.JPG'
-        text: "Nå kan du bruke disse blokkene til å skape ting selv. Det er ingen flere instruksjoner, og ingen flere oppgaver å løse. Du kan bygge alt du vil. Det er du som velger."
+        text: "No kan du bruke desse blokkene til å skape eigne program. Det finst ikkje fleire instruksjonar, og ingen fleire oppgåver å løyse. Du kan bygge alt du vil. Du kan velje kva du vil."
       3:
         image: 'notes/mc_congrats_no_share_3.JPG'
-        text: "[elever snakker] Nå begynner alvoret. Klipp. Jeg lagde en L av fakler. Jeg lagde en A av bjørkeplanker. Det fungerte, det fungerte! Vi bygde et hus av ull!"
+        text: "[elevar snakkar] Nå byrjar alvoret. Klipp. Eg laga en L av faklar. Eg laga en A av bjørkeplanker. Det fungerte, det fungerte! Vi bygde eit hus av ull!"
       4:
         image: 'notes/mc_congrats_no_share_4.JPG'
-        text: "Nå kan du bygge alt du vil. Ha det gøy!"
+        text: "No kan du byggje alt du vil. Ha det gøy!"
     gumball_intro:
       1:
         image: 'notes/gumball_intro_1.JPG'
         text: "Det er veldig lett å lage ditt eget spill, hvis du har lyst. Alt du trenger er noen få grunnleggende kunnskaper i programmering, så kan du begynne å spille et spill du har laget selv."
       2:
         image: 'notes/gumball_intro_2.JPG'
-        text: "Har du et favorittspill? Vi skal komme et skritt nærmere å kunne lage sånne spill som det i PlayLab. Gode spill har en historie, og alle historier har figurer. Spillfigurer gjør ting som å snakke, flytte rundt og samhandle med hverandre. Kanskje de til og med får poeng, basert på reglene i spillet. I dag skal vi lære å gjøre alle disse tingene, en etter en, med morsomme figurer, og så lage et spill helt fra grunnen av som kan deles og spilles på en telefon."
+        text: "Har du eit favorittspel? Vi kjem til å ta eitt skritt i retning av å lage spel akkurat som ein bruker Spellab. Gode spel har ei historie og kvar historie har skodespelarar. Skodespelarane gjer ting som å snakke, flytte og samhandle med kvarandre. Kanskje også skåre poeng basert på reglane i spelet. I dag skal vi lære korleis du gjer alle desse tinga, ein etter ein, kjekke figurar og deretter bygge eit spel frå grunnen av, som du kan dele og spele på telefonen."
       3:
         image: 'notes/gumball_intro_3.JPG'
         text: "I dag skal vi lære å gjøre alle disse tingene, en etter en, med morsomme figurer. Og så skal vi lage et spill fra grunnen av, som kan deles og spilles på en telefon."
@@ -1614,7 +1614,7 @@ nn:
         text: "I midten er verktøykassa, og hver av disse blokkene er en kommando, et stykke kode."
       6:
         image: 'notes/gumball_intro_6.JPG'
-        text: "Det hvite området til høyre er arbeidsvinduet, og det er her vi bygger opp programmet."
+        text: "Det kvite området til høgre er arbeidsområdet, og det er her vi bygger opp programmet."
       7:
         image: 'notes/gumball_intro_7.JPG'
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
@@ -1653,7 +1653,7 @@ nn:
         text: "Det er veldig lett å lage ditt eget spill, hvis du har lyst. Alt du trenger er noen få grunnleggende kunnskaper i programmering, så kan du begynne å spille et spill du har laget selv."
       2:
         image: 'notes/iceage_intro_2.JPG'
-        text: "Har du et favorittspill? Vi skal komme et skritt nærmere å kunne lage sånne spill som det i PlayLab. Gode spill har en historie, og alle historier har figurer. Spillfigurer gjør ting som å snakke, flytte rundt og samhandle med hverandre. Kanskje de til og med får poeng, basert på reglene i spillet. I dag skal vi lære å gjøre alle disse tingene, en etter en, med morsomme figurer, og så lage et spill helt fra grunnen av som kan deles og spilles på en telefon."
+        text: "Har du eit favorittspel? Vi kjem til å ta eitt skritt i retning av å lage spel akkurat som ein bruker Spellab. Gode spel har ei historie og kvar historie har skodespelarar. Skodespelarane gjer ting som å snakke, flytte og samhandle med kvarandre. Kanskje også skåre poeng basert på reglane i spelet. I dag skal vi lære korleis du gjer alle desse tinga, ein etter ein, kjekke figurar og deretter bygge eit spel frå grunnen av, som du kan dele og spele på telefonen."
       3:
         image: 'notes/iceage_intro_3.JPG'
         text: "I dag skal vi lære å gjøre alle disse tingene, en etter en, med morsomme figurer. Og så skal vi lage et spill fra grunnen av, som kan deles og spilles på en telefon."
@@ -1665,7 +1665,7 @@ nn:
         text: "I midten er verktøykassa, og hver av disse blokkene er en kommando, et stykke kode."
       6:
         image: 'notes/iceage_intro_6.JPG'
-        text: "Det hvite området til høyre er arbeidsvinduet, og det er her vi bygger opp programmet."
+        text: "Det kvite området til høgre er arbeidsområdet, og det er her vi bygger opp programmet."
       7:
         image: 'notes/iceage_intro_7.JPG'
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
@@ -1700,66 +1700,318 @@ nn:
         text: "I detre puslespillet er vårt mål å hjelpe skuespilleren til å gjøre en jobb kontinuerlig. Lær hvordan gjenta kommandoene virker, vil spare deg massevis av tid senere når du bygger ditt eget spill."
     mc_2016_intro:
       1:
-        image: 'notes/mc_2016_intro_1.jpg'
+        image: 'notat/mc_2016_intro_1.jpg'
         text: "Hei, eg heiter Jens og er kreativ sjefs-designar av Minecraft. I den neste timen skal du lage ditt eiga Minecraft-spel. Det ser ut som vanleg Minecraft, men verda har stoppa. Sauene flytter seg ikkje, hønene legg ikkje egg og zombiar står berre stille. Det er opp til deg å legge til koden for å få Minecraft-verda til å verke."
       2:
-        image: 'notes/mc_2016_intro_2.jpg'
-        text: Mitt navn er Melissa og jeg er interaksjonsdesigner i Minecraft. Det jeg egentlig er interessert i er hvordan mennesker tenker og bruker teknologi. Derfor er denne jobben perfekt for meg, jeg bruker både informatikk og psykologi for å finne ut hvordan folk tenker og oppfører seg.
+        image: 'notat/mc_2016_intro_2.jpg'
+        text: Mitt namn er Melissa og eg er interaksjonsdesignar i Minecraft. Det eg eigentleg er interessert i er korleis menneske tenkjer og brukar teknologi. Difor er denne jobben perfekt for meg. Eg brukar både informatikk og psykologi for å finne ut korleis folk tenkjer og oppfører seg.
       3:
-        image: 'notes/mc_2016_intro_3.jpg'
-        text: "Du ser at skjermen er delt i tre hoveddeler. 1) På den venstre er Minecraft-spillet. Akkurat nå er verdenen frosset, men vi skal fikse det ved å bruke kode."
+        image: 'notat/mc_2016_intro_3.jpg'
+        text: "Du ser at skjermen er delt i tre hoveddelar. 1) På den venstre er Minecraft-spelet. Akkurat no er verda frosen, men vi skal fikse det ved å bruke kode."
       4:
-        image: 'notes/mc_2016_intro_4.jpg'
-        text: "2) Dette området i midten er verktøykassa. Hver av disse blokkene er en kommando som kyllinger, sauer og andre Minecraft-skapninger kan forstå."
+        image: 'notat/mc_2016_intro_4.jpg'
+        text: "2) Dette området i midten er verktøykassa. Kvar av desse blokkene er ein kommando som kyllingar, sauer og andre Minecraft-skapningar kan forstå."
       5:
         image: 'notes/mc_2016_intro_5.jpg'
-        text: "3) The space on the right is called the workspace and this is where we'll build our program."
+        text: "3) Området til høgre er arbeidsområdet, og det er her vi bygger programmet."
       6:
         image: 'notes/mc_2016_intro_6.jpg'
-        text: "If you forget what to do, the instructions for each level are at the top."
+        text: "Dersom du gløymer kva du skal gjere, finst instruksjonane for kvart nivå øvst på sida."
       7:
         image: 'notes/mc_2016_intro_7.jpg'
-        text: "To start off, we're going to program a chicken. Let's drag the \"move forward\" command to the workspace. When I hit \"Run\" the chicken moves forward one step. To go further, I'll drag another \"move forward\" block underneath the first \"move forward\" block until the highlight appears. Then I'll drop it and the two blocks snap together. If I hit \"Run\" again, the chicken walks two steps."
+        text: "Til å begynne med skal vi programmere ein kylling. La oss fra 'flytt fram'-kommandoen til arbeidsområdet. Når eg trykker 'Køyr' går kyllingen fram eitt steg. For å gå vidare, da ei anna 'flytt fram'-blokk under den første 'flytt fram'-blokka heilt til framhevinga kjem fram. Då slepper eg den og dei to blokkene går saman. Dersom eg trykkar på 'Køyr' igjen, vil kyllingen gå to steg."
       8:
         image: 'notes/mc_2016_intro_8.jpg'
-        text: "If you ever want to delete a block, just remove it from the stack and drag it back to the toolbox."
+        text: "Om du ønskjer å slette ein blokk, så berre dreg du den ønska blokka frå arbeidsområdet tilbake til verktøyskassa."
       9:
         image: 'notes/mc_2016_intro_9.jpg'
-        text: "Etter du har trykket på \"Kjør\" kan du alltid trykke på \"Nullstill\"-knappen for å nullstille spillet og starte på nytt. Nå er det din tur til å lage din egen versjon av Minecraft. Kos deg!"
+        text: "Etter du har trykka på \"Køyr\" kan du alltid trykke på \"Nullstill\"-knappen for å nullstille spelet og starte på nytt. No er det din tur til å lage din eigen versjon av Minecraft. Kos deg!"
     mc_2016_loops:
       1:
         image: 'notes/mc_2016_loops_1.jpg'
-        text: "Hi, I'm Lisa. I'm a software developer on Minecraft and I work on some of the animals and enemies in the game. One of the animals that I worked on is the ocelot. I worked on the part where you can feed an ocelot a fish to tame it into your own cat."
+        text: "Hei, eg er Lisa. Eg er programvareutviklar på Minecraft og eg jobbar på nokre av dyra og fiendane i spelet. Eit av dyra eg jobbar med er ein ozelot. I har arbeida med den delen der du kan mate ein ocelot med ein fisk for å temme den."
       2:
         image: 'notes/mc_2016_loops_2.jpg'
-        text: "As humans, we get really bored if we have to do the same thing over and over and over again. But the cool thing about computers is that they can do the same thing millions or even billions of times in a row without getting bored. This repetition is called a loop and every creature in Minecraft uses loops."
+        text: "Vi menneske kjedar oss om vi må gjere dei same tingen igjen og igjen og igjen. Det kule med datamaskinar er at dei kan gjere den same tingen millionar eller milliardar av gongar på rad utan å bli lei. Denne repetisjonen blir kalla ei løkke og kvar skapning i Minecraft bruker løkker."
       3:
         image: 'notes/mc_2016_loops_3.jpg'
-        text: "Earlier, we got a chicken to move across the screen but then she stopped. In Minecraft, the chickens wander around forever and ever. Let's use a \"forever do\" loop from our toolbox to keep our chickens moving around forever too. The power of loops will save you tons of time and open up all kinds of neat options as you build your own version of Minecraft."
+        text: "Tidlegare fekk vi ein kylling til å gå over skjermen, men så stoppa den. I Minecraft kan kyllingar gå rundt for evig og alltid. La oss bruke ei 'for alltid gjere'-løkke i verktøyskrinet for å la kyllingane våre gå rundt for evig også. Løkker vil spare deg for tonnevis av tid og opne opp for all slags nette alternativ medan du bygger din eigen versjon av Minecraft."
     mc_2016_events:
       1:
         image: 'notes/mc_2016_events_1.jpg'
-        text: "On this next level, you can pick to be either Steve or Alex. Press the arrow buttons on your keyboard to move up, down, left, and right. Now you can move around a level wherever you want. To use a creature, just walk towards it, turn to face it, and press the spacebar."
+        text: "På neste nivå, kan du velge å enten vere Steve eller Alex. Trykk på piltastane på tastaturet for å flytte opp, ned, til venstre og til høgre. No kan du flytte rundt kor du vil på eit nivå. For å bruke ein skapning, berre gå mot den, snu deg for å sjå på den og trykk på mellomromtasten."
       2:
         image: 'notes/mc_2016_events_2.jpg'
-        text: "If you're using a touch screen, swipe up, down, left, and right to move around. Then tap the game to use the item in front of you."
+        text: "Om du bruker ein berøringsskjerm, sveip opp, ned, til venstre og til høyre for å flytte rundt. Deretter trykk på spelet for å bruke tingen som står foran deg."
       3:
         image: 'notes/mc_2016_events_3.jpg'
-        text: "Men hva skjer når du bruker den? I Minecraft slipper sauer ull når du klipper dem, kuer løper hvis du tar på dem og creepere eksploderer hvis du kommer borti dem. Disse reaksjonene skjer takket være noe som heter hendelser. Hendelser forteller programmet ditt at det skal lytte etter eller vente på at noe skjer og når det skjer, gjøre en handling."
+        text: "Men kva skjer når du bruker den? I Minecraft slipper sauen ull når du klipper dei, kyra spring dersom du kjem borti dei og creeperar eksploderer når du kjem nær dei. Desse reaksjonane skjer takka vere noko som heiter hendingar. Hendingar fortel programmet til å høyre etter eller vente for at noko skjer. Og når noko skjer, skal det gjere ein hending."
       4:
         image: 'notes/mc_2016_events_4.jpg'
-        text: "Fram til nå har du brukt en hendelse. Koden du plasserte under \"når satt ut\" kjører når figuren din er opprettet eller når spillet starter. I de neste oppgavene vil du ha flere nye steder å plassere kommandoer for hendelser, slik som \"når tatt på\" som kjører når du tar på figuren. Et annet eksempel er \"når brukt\" som kjører når du bruker figuren. Hvis du vil at zombien din skal forsvinne når sola går opp, putt den kommandoen under \"når dag\""
+        text: "Fram til no har du brukt ei hending. Koden du plasserte under \"når satt ut\" køyrer når figuren din er oppretta eller når spelet startar. I dei neste oppgåvene vil du ha fleure nye stedar å plassere kommandoar for hendingar, slik som \"når tatt på\" som køyrer når du tar på figuren. Eit anna døme er \"når brukt\" som køyrer når du bruker figuren. Om du vil at zombien din skal forsvinne når sola går opp, putt den kommandoen under \"når dag\""
     mc_2016_spawn:
       1:
         image: 'notes/mc_2016_spawn_1.jpg'
-        text: "I spill betyr sett ut det samme som opprett. I denne oppgaven skal du sette ut zombier når sola går ned. For å gjøre dette må du bruke \"når natt\"-blokka."
+        text: "I spel betyr sett ut det same som opprett. I denne oppgåva skal du sette ut zombier når sola går ned. For å gjøre dette må du bruke \"når natt\"-blokka."
       2:
         image: 'notes/mc_2016_spawn_2.jpg'
-        text: "Siden vi ønsker at zombiene settes ut om natta skal vi legge til blokka \"sett ut zombie\" under blokka \"når natt\". Når de er satt ut vil hver zombie kjøre koden du legger under zombienes \"når satt ut\"-hendelse. Ha det gøy med å sette ut zombier!"
+        text: "Sidan vi ønsker at zombiane skal settast ut om natta skal vi leggje til blokka \"sett ut zombie\" under blokka \"når natt\". Når dei er satt ut, vil kvar zombie køyre koden du legg under zombiane si \"når satt ut\"-hending. Ha det moro med å sette ut zombiar!"
     mc_2016_congrats:
       1:
         image: 'notes/mc_2016_congrats_1.jpg'
-        text: "Gratulerer! Du har lært å bruke datamaskinkommandoer for å få noe til å skje i Minecraft verdenen. Det er du som er utvikleren nå. Du har låst opp alle kommandoene og alle skapningene. Du bestemmer hva som skal skje."
+        text: "Gratulerer! Du har lært å bruke datamaskinkommandoar for å få noko til å skje i Minecraft-verda. Det er du som er utviklaren no. Du har låst opp alle kommandoane og alle skapningane. Du bestemmer kva som skal skje."
       2:
         image: 'notes/mc_2016_congrats_2.jpg'
-        text: "Når du er ferdig å lage spillet ditt, velg deling for å få en lenke som du kan dele med vennene dine eller for å spille spillet ditt på telefonen. Ha det gøy! Jeg gleder meg til å spille din versjon av Minecraft."
+        text: "Når du er ferdig med å lage spelet ditt, velg deling for å få ei lenke som du kan dele med venene dine eller for å spele spelet ditt på telefonen. Ha det gøy! Eg gler meg til å spele din versjon av Minecraft."
+    applab_intro_welcome:
+      1:
+        image: 'notes/applab_intro_welcome_1.png'
+        text: "My name is Mei'lani. I'm an intern at code.org and I'm also a computer science student. I like computer science because it's really creative. I get to be the problem solver. I get to make everything function how I want it to. But I also get to be the designer. I get to be the artist and choose everything on the creative side of it."
+      2:
+        image: 'notes/applab_intro_welcome_2.png'
+        text: "Making your own apps is easy with App Lab! Whether you're new to coding or have some experience. App Lab is a great tool for building new apps and sharing them with your friends."
+      3:
+        image: 'notes/applab_intro_welcome_3.png'
+        text: "This is a App Lab. On the left side is your app. On the right side is the code that will make it run. You build your program by dragging in blocks from the toolbox. To start you'll just have one block called 'setProperty'."
+      4:
+        image: 'notes/applab_intro_welcome_4.png'
+        text: "The set property block changes the look of the elements on your screen. Like the buttons, labels, or even the screen itself. First you need to decide which element you want to change. If you hover over an element in your app you can see the name or ID here. Then go select that ID from the first drop down."
+      5:
+        image: 'notes/applab_intro_welcome_5.png'
+        text: "Elements have lots of properties you can change like their text color, background color or font size. You can see the full list and choose which property you want to change in the second drop down."
+      6:
+        image: 'notes/applab_intro_welcome_6.png'
+        text: "The last drop down is where you'll write the value you want to use value you want to use. The block will make a suggestion for you. But you can always type in different colors or numbers yourself."
+      7:
+        image: 'notes/applab_intro_welcome_7.png'
+        text: "Once you're done, the block reads a bit like a sentence:'Set button1's background color to green.' Hit run to see the changes you're building in code. If you reset you can drag in more blocks to change other things about your app. Like the text!"
+      8:
+        image: 'notes/applab_intro_welcome_8.png'
+        text: "For this tutorial we'll be working in block mode but App Lab also supports working in text."
+      9:
+        image: 'notes/applab_intro_welcome_9.png'
+        text: "Either way you'll be programming in JavaScript, the language of the web. Each level has a goal, instructions and an image of what you're aiming to create."
+      10:
+        image: 'notes/applab_intro_welcome_10.png'
+        text: "If you're ever stuck, click on this picture and it will show you exactly how to complete the level. But see if you can do it on your own first."
+      11:
+        image: 'notes/applab_intro_welcome_11.png'
+        text: "Once you've completed the goal for this level click Finish to move on. That's all there is to it! Hit the orange \"continue\" button to go to the next level and start your adventure with an App Lab!"
+    applab_intro_events:
+      1:
+        image: 'notes/applab_intro_events_1.png'
+        text: "Apps are really cool because it's kind of like starting your own business I mean, you get to design everything from the ground up, you get to manage everything, and you're the owner of this piece of work that you just created with code."
+      2:
+        image: 'notes/applab_intro_events_2.png'
+        text: "Now that you can change the look of your app let's make it interactive by responding to events! Events are user actions like clicking a button, scrolling through a menu, or hovering over a picture. Interactive apps need ways to respond to events, like playing a sound when I click this button. To do this in App Lab you need to use a new block called 'onEvent'."
+      3:
+        image: 'notes/applab_intro_events_3.png'
+        text: "This program sets the screen to blue. I want the screen to turn green when I click this button. First I'll need to drag in an onEvent block. By hovering I know the button's ID is \"bigButton\" so I'll select that in the first drop-down."
+      4:
+        image: 'notes/applab_intro_events_4.png'
+        text: "Next I'll choose the type of event. There's lots of options you can pick from but right now I'll leave it as a regular old click."
+      5:
+        image: 'notes/applab_intro_events_5.png'
+        text: 'Finally I''ll add code inside the on event that will change the background color of the screen. You can read this block like a sentence: "On the event that the button is clicked run all this code."'
+      6:
+        image: 'notes/applab_intro_events_6.png'
+        text: "Let's test it. Blocks outside an onEvent still run right away so the screen starts blue."
+      7:
+        image: 'notes/applab_intro_events_7.png'
+        text: "And when I click the big button the code inside my onEvent runs and my screen turns green."
+      8:
+        image: 'notes/applab_intro_events_8.png'
+        text: "If you want to change more things after the event, like the text on the screen just add more code to the onEvent"
+      9:
+        image: 'notes/applab_intro_events_9.png'
+        text: "To make your program respond to more events add more onEvent blocks. Just make sure not to put them inside of each other. Now it's time to try it out for yourself. Have fun!"
+    applab_intro_sounds:
+      1:
+        image: 'notes/applab_intro_sounds_1.png'
+        text: "Next you'll learn about adding images and sounds to your app. Let's start by checking out the sound options."
+      2:
+        image: 'notes/applab_intro_sounds_2.png'
+        text: "In the tool box you'll find a new block called \"playSound\". Drag it into the workspace. You can pick a sound to play by clicking the drop-down then clicking \"Choose\"."
+      3:
+        image: 'notes/applab_intro_sounds_3.png'
+        text: "From here you can either upload a sound file from your computer, or search for a sound from the sound library. The sound library has lots of different categories like instruments, background music or animals."
+      4:
+        image: 'notes/applab_intro_sounds_4.png'
+        text: "Once you've got the sound you want, click \"Choose\". When this block runs, it will play the sound you chose."
+      5:
+        image: 'notes/applab_intro_sounds_5.png'
+        text: "To add images to your elements you can just use the setProperty block. Select the image property in the second drop-down"
+      6:
+        image: 'notes/applab_intro_sounds_6.png'
+        text: "Then select \"Choose\" from the third drop down."
+      7:
+        image: 'notes/applab_intro_sounds_7.png'
+        text: "From here you can upload an image from your computer or you can look through a huge library of icons in the icon library."
+      8:
+        image: 'notes/applab_intro_sounds_8.png'
+        text: "Back in code mode you can use the \"setProperty\" block to change the icon color of your icon. Once you've picked what image your icon to use click \"Run\" to see how it looks."
+      9:
+        image: 'notes/applab_intro_sounds_9.png'
+        text: "That's all there is to it! Now you can start adding images and sounds to make your apps even more fun and dynamic."
+    applab_intro_designmode:
+      1:
+        image: 'notes/applab_intro_designmode_1.png'
+        text: "To build your own apps you're going to need to start designing screens and elements from scratch. App Lab makes this easy to do with Design Mode."
+      2:
+        image: 'notes/applab_intro_designmode_2.png'
+        text: "Use the switch on top of your app to go into Design Mode."
+      3:
+        image: 'notes/applab_intro_designmode_3.png'
+        text: "You can add new elements by dragging them onto the screen. You can move them around to different locations and change their size by dragging the bottom right corner."
+      4:
+        image: 'notes/applab_intro_designmode_4.png'
+        text: "To change an element's properties use the controls on the right. For example, it's really easy to change this button's text, color, and font size."
+      5:
+        image: 'notes/applab_intro_designmode_5.png'
+        text: "When you add a new element to your screen it'll get a generic ID like button1. It's a good idea to change this button's ID to something more meaningful like \"rightButton\". So that you'll know which one it is when you go to the program."
+      6:
+        image: 'notes/applab_intro_designmode_6.png'
+        text: "If you add an element to your app by mistake, just drag it out or hit the delete."
+      7:
+        image: 'notes/applab_intro_designmode_7.png'
+        text: "You can add entirely new screens to your app by dragging in a screen element"
+      8:
+        image: 'notes/applab_intro_designmode_8.png'
+        text: "From the drop-down at the top you can quickly switch back and forth between the screens you create."
+      9:
+        image: 'notes/applab_intro_designmode_9.png'
+        text: "Inside your app, you'll need a way to switch between all of these screens, so the setScreen block has been added to the toolbox. Use \"setScreen\" inside the \"onEvent\" block to change screens at the click of a button."
+      10:
+        image: 'notes/applab_intro_designmode_10.png'
+        text: "In the next few levels you'll be working on a single project. First you'll add a button then you'll add a new screen and finally you'll write code so that the button switches to the new screen."
+    applab_intro_share:
+      1:
+        image: 'notes/applab_intro_share_1.png'
+        text: "Now that you've learned some of the basics of App Lab like adding buttons, sounds, images, text and new screens you can make all sorts of apps."
+      2:
+        image: 'notes/applab_intro_share_2.png'
+        text: "In the next level you'll find the app you just finished building. With a little creativity, you can turn this into a personality quiz for your friends, a greeting card that you can share with your family or a choose-your-own-adventure game. All of these apps are just a combination of the skills you've already learned, and I bet you can come up with even more."
+      3:
+        image: 'notes/applab_intro_share_3.png'
+        text: "Once you're done with your app you can easily send it to your phone to see how it looks. Just click \"Share\" and enter your phone number here."
+      4:
+        image: 'notes/applab_intro_share_4.png'
+        text: "You'll receive a text message that'll let you open up your app instantly."
+      5:
+        image: 'notes/applab_intro_share_5.png'
+        text: "You can also share a link to your app over social media or post it to the code.org public gallery for other people to play and share."
+      6:
+        image: 'notes/applab_intro_share_6.png'
+        text: "You've just scratched the surface of what App Lab can do. Full App Lab features more advanced user interactions, new screen elements and even a built-in database so you can quickly build full featured apps. At \"code.org/applab\" you'll find the full tool and lots of ideas if you want to keep going."
+      7:
+        image: 'notes/applab_intro_share_7.png'
+        text: "Thanks for coming along the ride. Now go build and share your first app, and keep on building apps with App Lab!"
+    mc_2017_agent_intro:
+      1:
+        image: 'notes/mc_2017_agent_intro_1.png'
+        text: 'Stacy: Stampy, Lizzy, Preston - thank you for coming with me. What I want to show you is just over this mesa plateau. I think you''re going to love it!'
+      2:
+        image: 'notes/mc_2017_agent_intro_2.png'
+        text: "Wait a minute - there's a hole in the track! (screaming)"
+      3:
+        image: 'notes/mc_2017_agent_intro_3.png'
+        text: 'Is everyone okay? Stampy: Ah, I see the problem. Look! There was a hole in the track. Stacy: Really, Stampy? Lizzy: Maybe we should gather blocks to fix it. Preston: Let''s make it a race. First one back to the top wins. Stacy: Ok, on your mark, get set, GO! Ok, I''m just gonna gather some of this terracotta. Wait. Guys, I can''t mine! Preston: Same. Lizzy: I can''t either. Stacy: Ok, that is really strange. Stampy, can you mine? Stampy: I can''t mine! Stacy: Ok, everyone stay calm. Stampy: Is the game broken? Stacy: If it is, how do we fix it? Lizzy: I don''t know. Stampy: Does anyone know how to write Minecraft code?'
+      4:
+        image: 'notes/mc_2017_agent_intro_4.png'
+        text: '(poof) Preston: What is that? Stampy: I''ve never seen one of these before. Lizzy: It''s so adorable! Stacy: Is it...is it tameable? Preston: Okay, what is going on? Someone needs to go back to the real world and fix this.  All: Not it! Stacy: Not i- (Sigh.) Ok, I''ll go.'
+      5:
+        image: 'notes/mc_2017_agent_intro_5.png'
+        text: "Oh, okay, hey, so I'm in the real world now. I'm going to go try to find the Minecraft offices."
+      6:
+        image: 'notes/mc_2017_agent_intro_6.png'
+        text: "But, I'm going to need your help. Start doing the tutorial, start learning how to code, and I'll catch up with you guys after a few levels, okay? Wish me luck! I think it's this way. Ow! Cactus! I'm okay!"
+      7:
+        image: 'notes/mc_2017_agent_intro_7.png'
+        text: "To complete the Hour of Code challenge, you'll need to write code to program the agent. You'll work together with The Agent to clear any obstacles in your path, so you can pick up the items you'll need for your journey. Only the Agent can place and break blocks, and only you can collect items. Your screen is split into three main parts. On the left is Minecraft."
+      8:
+        image: 'notes/mc_2017_agent_intro_8.png'
+        text: "The middle area is the toolbox with commands that the Agent can understand."
+      9:
+        image: 'notes/mc_2017_agent_intro_9.png'
+        text: "And on the right, is the workspace. That's where you stack the commands to build your program to control the Agent."
+      10:
+        image: 'notes/mc_2017_agent_intro_10.png'
+        text: "The Agent can walk, turn, and activate pressure plates. It can also destroy blocks and place blocks. When it places the block like these minecart rails, it places it underneath itself."
+      11:
+        image: 'notes/mc_2017_agent_intro_11.png'
+        text: "Dersom du gløymer kva du skal gjere, finst instruksjonane for kvart nivå øvst på sida."
+      12:
+        image: 'notes/mc_2017_agent_intro_12.png'
+        text: "If you want to try again, you can hit the blue reset button to reset everything to where it started. And if you need to delete a block of code, drag it from your workspace to the toolbox. Remember to hit run to get the Agent moving. Okay, go ahead and try out the first few levels. Good luck!"
+    mc_2017_repeat:
+      1:
+        image: 'notes/mc_2017_repeat_1.png'
+        text: 'Stampy: I wonder what Stacy is up to?'
+      2:
+        image: 'notes/mc_2017_repeat_2.png'
+        text: 'Stacy: Woah, I think I''m in the right place. This is amazing!'
+      3:
+        image: 'notes/mc_2017_repeat_3.png'
+        text: "I feel like I'm back in Minecraft! Hello. How are you? Hello?"
+      4:
+        image: 'notes/mc_2017_repeat_4.png'
+        text: 'Oh, there''s a creeper. You don''t do anything, do you? Katie: Stacy? Stacy:Hi, Katie? Katie: Yes, welcome to Minecraft!'
+      5:
+        image: 'notes/mc_2017_repeat_5.png'
+        text: 'Stacy: This is amazing. So you work here every day as a developer, right? Katie: Yeah, it''s pretty awesome. I''m a developer on the Minecraft marketplace team. Stacy: How many coding languages do you know? Katie: In my career I''ve probably worked with over a dozen. Stacy: A dozen? Katie: Yeah. Stacy: So now, you wouldn''t happen to know anything about this little golem guy that calls himself the Agent? Katie: We use the Agent to do things that Steve or Alex can''t, like go across lava. Stacy: Well, I want to learn how to code, and they want to learn how to code, so what is one of the first things that you need to know when you''re learning?'
+      6:
+        image: 'notes/mc_2017_repeat_6.png'
+        text: 'Katie: Well, you need to learn how to use loops. Loops are things that developers write to give commands to a computer that can be run over and over again. Stacy: Got it, so I think there''s actually some of that coming up in the levels ahead, so go ahead and give loops a try.'
+      7:
+        image: 'notes/mc_2017_repeat_7.png'
+        text: "In the next level, you can use a loop to move the Agent along the path. Drag the repeat block into the workspace and place the move forward block inside the repeat block. This tells the computer to do the same thing many times in a row without having to drag a whole bunch of blocks into the workspace. You can choose how many times to repeat by putting a number in the repeat block."
+      8:
+        image: 'notes/mc_2017_repeat_8.png'
+        text: "You can put turns and multiple commands in the repeat block too, but for now try using a repeat to move the Agent forward a few steps. Remember, if you get stuck on a puzzle you can always hit the blue reset button and try again."
+      9:
+        image: 'notes/mc_2017_repeat_9.png'
+        text: 'If you are thinking about having a cool job like Katie''s, go ahead and click the show code button when you finish every level. That''s going to actually show you the Javascript code that someone like Katie uses when she''s actually programming Minecraft. Katie: Yeah, good luck everyone!'
+    mc_2017_functions:
+      1:
+        image: 'notes/mc_2017_functions_1.png'
+        text: 'Preston: I''m not trying to brag, but I''m pretty good at parkour. Lizzy: Let''s sleep so it''s day when Stacy comes back.'
+      2:
+        image: 'notes/mc_2017_functions_2.png'
+        text: 'Stacy: Ok guys, I am back from the Minecraft offices, and I think I know how to solve the problem I''m having in my game. I think I can use a function. Let me just open this.'
+      3:
+        image: 'notes/mc_2017_functions_3.png'
+        text: "So a function is a specific set of instructions to accomplish a certain task, kind of like a recipe. In the next few levels, you'll have access to functions that you can use to solve the puzzles."
+      4:
+        image: 'notes/mc_2017_functions_4.png'
+        text: "Look at the code in the function when it's in the workspace to see what it does."
+      5:
+        image: 'notes/mc_2017_functions_5.png'
+        text: "Then, find the block with that name in the toolbox and drag it from the toolbox to the when run block."
+      6:
+        image: 'notes/mc_2017_functions_6.png'
+        text: "Remember, you can use the same function every time you need to run the same set of instructions to do something, like build a bridge. Good luck, I know you can do it!"
+    mc_2017_congratulations:
+      1:
+        image: 'notes/mc_2017_congratulations_1.png'
+        text: 'Preston: Congratulations!'
+      2:
+        image: 'notes/mc_2017_congratulations_2.png'
+        text: 'Lizzy: Congratulations!'
+      3:
+        image: 'notes/mc_2017_congratulations_3.png'
+        text: 'Stampy: Congratulations, you did it!'
+      4:
+        image: 'notes/mc_2017_congratulations_4.png'
+        text: 'Stacy: Congratulations guys, you totally rocked that! And now that you''ve completed the Hour of Code, you can start coding in Minecraft. You''ve learned about loops, functions, and what a software Agent does.'
+      5:
+        image: 'notes/mc_2017_congratulations_5.png'
+        text: "Now, it's time for the free play level, where you are the developer. Use any remaining time to write your own functions to explore, mine, and build."
+      6:
+        image: 'notes/mc_2017_congratulations_6.png'
+        text: 'You can take the code that you write in this level into your Minecraft world on Minecraft: Education Edition. Just click ''Finish'' and follow the instructions for getting the link to use in your world. to continue coding with the Agent. Have fun, and good job!'
+      7:
+        image: 'notes/mc_2017_congratulations_7.png'
+        text: 'Stacy: And I''m back! Okay, you guys, this is the Agent! Let me show you what it can do. Look, it''s doing it! I told it to build a staircase out of these terra cotta blocks, now we can just use this to get out of here. And you guys, it''s not just staircases. I can tell the Agent to do anything I want, and it will do it for me.'
+      8:
+        image: 'notes/mc_2017_congratulations_8.png'
+        text: 'Stampy: How did you do that? Stacy: It was easy, actually. I just used code!'

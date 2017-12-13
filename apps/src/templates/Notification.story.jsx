@@ -5,47 +5,42 @@ const information = {
   notice: "Did you know Clark Kent grew up in Kansas?",
   details: "Seriously, Kansas. Earth's greatest hero is from a tiny called Smallville, if you can believe it.",
   dismissible: true,
-  isRtl: false
 };
 
 const success = {
   notice: "Wonder Woman Saved the Day",
   details: "Things were pretty sketchy there for awhile, but don't worry- she's on top of it.",
   dismissible: true,
-  isRtl: false
 };
 
 const failure = {
   notice: "Lex Luther Attacked Metropolis",
   details: "If you're in the Metropolis area, get to saftey as quickly as possible",
   dismissible: false,
-  isRtl: false
 };
 
 const warning = {
   notice: "Batman is on Vacation in the Bahamas",
   details: "Now is probably not the best time to be in Gotham City. Watch your back.",
   dismissible: true,
-  isRtl: false
 };
 
 const findCourse = {
   notice: "Find a course",
   details: "Try new courses to add them to your homepage.",
   dismissible: false,
-  isRtl: false
 };
 
 const announcement = {
   notice: "Here is some news",
   details: "Here are the details of the news.",
   dismissible: false,
-  isRtl: false
 };
 
 export default storybook => {
   return storybook
     .storiesOf('Notification', module)
+    .withReduxStore()
     .addStoryTable([
       {
         name: 'Information - no button',
@@ -84,20 +79,6 @@ export default storybook => {
         )
       },
       {
-        name: 'Information - call to action button RTL',
-        description: `Notification box that displays information and a call to action button`,
-        story: () => (
-          <Notification
-            type="information"
-            {...information}
-            buttonText= "Call to Action"
-            buttonLink="to a new page"
-            dismissible= {false}
-            isRtl={true}
-          />
-        )
-      },
-      {
         name: 'Information - no button - nondefaultwidth',
         description: `Notification box that displays information`,
         story: () => (
@@ -132,7 +113,6 @@ export default storybook => {
               buttonText="Call to Action"
               buttonLink="to a new page"
               dismissible={false}
-              isRtl={false}
               width="100%"
             />
         </div>

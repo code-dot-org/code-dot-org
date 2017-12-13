@@ -26,9 +26,14 @@
   twentyhours_heading: "Încearcă Cursul nostru de Introducere în Informatică"
   twentyhours_text: "Ai terminat prima ta Oră de Cod? Învață mai multe despre informatica de bază și conceptele programării în cadrul cursului următor."
   og_title: Fiecare copil merită o portunitate
+  og_title_soon: "Ora de Cod este aproape"
+  og_title_here: "The Hour of Code is here!"
   og_description: "Hour of Code este o mişcare globală care ajunge la zeci de milioane de elevi si studenţi din peste 180 de ţări şi peste 45 de limbi vorbite."
+  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Ora de Cod este aici"
   csedweek_og_description: "4-10 decembrie, 2017. Informatica este elementară pentru fiecare student."
+  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Alătură-te <a href=\"http://hourofcode.com\"> Orei de cod</a> <br/> 8-14 decembrie, 2014 <br/>"
   hoc2014_students: "Elevi"
   hoc2014_try: "Încearcă"
@@ -69,12 +74,12 @@
   congratulations_on_completing_course2: "Felicitări pentru finalizarea cursului 2"
   congratulations_on_completing_course3: "Felicitări pentru finalizarea cursului 3"
   congratulations_on_completing_course4: "Felicitări pentru finalizarea cursului 4"
-  congratulations_on_completing_coursea: "Congratulations on completing Course A"
-  congratulations_on_completing_courseb: "Congratulations on completing Course B"
-  congratulations_on_completing_coursec: "Congratulations on completing Course C"
-  congratulations_on_completing_coursed: "Congratulations on completing Course D"
-  congratulations_on_completing_coursee: "Congratulations on completing Course E"
-  congratulations_on_completing_coursef: "Congratulations on completing Course F"
+  congratulations_on_completing_coursea: "Felicitări pentru finalizarea Cursului A"
+  congratulations_on_completing_courseb: "Felicitări pentru finalizarea Cursului B"
+  congratulations_on_completing_coursec: "Felicitări pentru finalizarea Cursului C"
+  congratulations_on_completing_coursed: "Felicitări pentru finalizarea Cursului B"
+  congratulations_on_completing_coursee: "Felicitări pentru finalizarea Cursului E"
+  congratulations_on_completing_coursef: "Felicitări pentru finalizarea Cursului F"
   congratulations_on_completing_accelerated: "Felicitări pentru finalizarea Cursului Accelerat"
   congrats_next_tutorials_title: "Mai departe incercati aceste tutoriale"
   congrats_next_tutorials_desc: "Încercați aceste tutoriale mai scurte, de 1 oră sau încercaţi un <a href=\"%{current_path}/next\"> partener tutorial</a>."
@@ -200,25 +205,25 @@
   just_did_course2: "Tocmai am terminat cursul 2 - vizualizeaza-l! @codeorg"
   just_did_course3: "Tocmai am terminat cursul 3 - vizualizeaza-l! @codeorg"
   just_did_course4: "Tocmai am terminat cursul 4 - vizualizeaza-l! @codeorg"
-  just_did_coursea: "I just finished Course A - check it out! @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! @codeorg"
-  just_did_accelerated: "Tocmai am terminat cursul accelerat - vizualizeaza-l! @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
-  just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course4_donor: "I just finished Course 4 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursea_donor: "I just finished Course A - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_courseb_donor: "I just finished Course B - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursec_donor: "I just finished Course C - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursed_donor: "I just finished Course D - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursee_donor: "I just finished Course E - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursef_donor: "I just finished Course F - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_accelerated_donor: "I just finished the Accelerated Course - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursea: "Tocmai am terminat cursul A - vizualizați! @codeorg"
+  just_did_courseb: "Tocmai am terminat cursul B - vizualizați! @codeorg"
+  just_did_coursec: "Tocmai am terminat cursul C - vizualizați! @codeorg"
+  just_did_coursed: "Tocmai am terminat cursul D - vizualizați! @codeorg"
+  just_did_coursee: "Tocmai am terminat cursul E - vizualizați! @codeorg"
+  just_did_coursef: "Tocmai am terminat cursul F - vizualizați! @codeorg"
+  just_did_accelerated: "Tocmai am terminat Cursul intensiv - vizualizați! @codeorg"
+  just_did_hoc_donor: 'Tocmai am parcurs #HourOfCode - vizualizați! (Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg)'
+  just_did_course1_donor: "Tocmai am finalizat Cursul 1 - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
+  just_did_course2_donor: "Tocmai am finalizat Cursul 2 - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
+  just_did_course3_donor: "Tocmai am finalizat Cursul 3 - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
+  just_did_course4_donor: "Tocmai am finalizat Cursul 4 - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
+  just_did_coursea_donor: "Tocmai am finalizat Cursul A - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
+  just_did_courseb_donor: "Tocmai am finalizat Cursul B - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
+  just_did_coursec_donor: "Tocmai am finalizat Cursul C - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
+  just_did_coursed_donor: "Tocmai am finalizat Cursul D - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
+  just_did_coursee_donor: "Tocmai am finalizat Cursul E - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
+  just_did_coursef_donor: "Tocmai am finalizat Cursul F - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
+  just_did_accelerated_donor: "Tocmai am finalizat Cursul intensiv - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
   twitter_teach_cs: "9 din 10 oameni sunt de acord, şcolile ar trebui să înveţe ştiinţa calculatoarelor. http://youtu.be/nKIu9yen5nc. Vizitati https://code.org/."
   twitter_cs_foundational: "Informatica este fundamentală pentru fiecare student. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Învață o Oră de Cod"
@@ -231,7 +236,7 @@
   lines_of_code: "PESTE <b># LINII DE COD</b> SCRISE PÂNĂ ÎN PREZENT."
   lines_of_code_alt: "<b>#</b> LINII DE COD SCRISE DE STUDENȚI"
   who_has_done_hoc: 'Cine a făcut #OraDeCod? @codeorg'
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
+  who_has_done_hoc_donor: 'Cine a parcurs #HourOfCode? - vizualizați! (Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg)'
   hoc_leaderboards: "Clasamentele Orei de Cod"
   students_and_lines: "%{students} studenți au făcut Ora de Cod și au scris %{lines} de linii de cod."
   start_hoc: "Începe Ora de Cod acum"
@@ -268,9 +273,8 @@
     &ldquo;Informatica poate debloca cele mai bune oportunităţi în lume.&rdquo; 
     Satya, CEO al Microsoft
   homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;Informatica capacitează studenţii în a crea lumea de mâine.&rdquo; 
+    Satya, CEO al Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Dacă știi să programezi, atunci poți să decizi care este cursul vieții tale.&rdquo;
     Chris Bosh
@@ -292,8 +296,8 @@
   homepage_hero_text_stat_loc: "2,5 milioane de fete sunt inscrise pentru a invata in cadrul Code Studio"
   homepage_hero_text_stat_students: "#student_count conturi de elev la Code Studio"
   homepage_hero_text_stat_served: 'Ora de cod: #served servite'
-  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
-  homepage_hero_hoc_is_here: "The Hour of Code is here"
+  homepage_hero_hoc_is_coming: "Ora de Cod este aproape"
+  homepage_hero_hoc_is_here: "Ora de Cod este aici"
   homepage_slot_text_hoc: "Ora de Programare"
   homepage_slot_text_frozen: "Tărâmul de gheață cu Anna și Elsa"
   homepage_slot_text_teacher: "Tabloul de bord al profesorilor"
@@ -313,7 +317,7 @@
   homepage_action_text_girlvideo: "Inspira o fata"
   homepage_action_text_learn: "Începe învăţarea"
   homepage_action_text_signpetition: "Semnează petiția"
-  homepage_action_text_wincelebritychat: "Win a celebrity chat"
+  homepage_action_text_wincelebritychat: "Câștigă un chat cu o celebritate"
   homepage_signpetition_dropdown: "Sunt de acord &#x25BE;"
   homepage_diversity_pledge: "Ia-ti angajamentul diversitatii"
   homepage_banner_text_prizes: 'Ora de cod revine, 7-13 decembrie. '
@@ -333,7 +337,7 @@
   homepage_slot_text_title_hoc: "Oră de Programare"
   homepage_slot_text_blurb_hoc: "Oricine poate învăța. Începe astăzi"
   homepage_slot_text_link_hoc: "Încearcă Ora de Programare"
-  homepage_slot_text_link_about_hoc: "About the Hour of Code"
+  homepage_slot_text_link_about_hoc: "Despre Ora de Cod"
   homepage_slot_text_link_host: "Găzduiește o Oră de Cod"
   homepage_slot_text_link_hocserved: "# servit"
   homepage_solot_text_link_volunteer: "Voluntariaza pentru Ora de Cod"
@@ -357,7 +361,7 @@
   homepage_slot_text_link_buy: "Implică-te"
   homepage_slot_text_link_donate: "Fă o donație"
   homepage_slot_text_link_shop: "Tricouri, palarii & mai mult"
-  homepage_slot_text_link_administrators: "Bring to your school or district"
+  homepage_slot_text_link_administrators: "Aduceți la școala dvs. sau în cartier"
   homepage_header_codestudio: "Creațiile elevilor cu Studio-ul Code"
   homepage_header_donors: "Code.org mulţumește suporterilor săi"
   homepage_donors_seall: "Vizualizați toate"
@@ -420,7 +424,7 @@
   mc_gradelevel: "Varsta: peste 6 ani"
   mc_platformtext: "Browsere web moderne, smartphone-uri, tablete"
   mc_specs: "Mai multe limbi |B rowsere moderne si tablete | Varstele 6+"
-  minecraft_agent: 'Minecraft: Hero’s Journey'
+  minecraft_agent: 'Minecraft: Călătoria eroului'
   minecraft_designer: "Minecraft Designer"
   minecraft_adventurer: "Minecraft Adventurer"
   minecraft_tutorials: "Tutoriale Hour of Code Minecraft"
@@ -434,19 +438,19 @@
   minecraft_no_internet: "Nu ai Internet?"
   minecraft_download_adventurer: "Descarcă versiunea offline a Minecraft Adventurer."
   minecraft_subtitle: "Ora de Programare Minecraft"
-  minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
-  minecraft_host_event: "Host a Minecraft Hour of Code Event"
-  minecraft_teach_resources: "Teacher resources and lesson plan."
-  minecraft_leader_guide: "Download resources to help you plan and lead an event."
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
-  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
-  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign up today</a>."
-  minecraft_future: "Help all youth become future ready"
-  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access the resources</a> they found most valuable."
-  minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
-  minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
+  minecraft_store_camps: "Tabere gratuite pentru Ora de Cod cu Minecraft în magazinul Microsoft"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Înscrieți-vă</a> la atelierele gratuite de Ora de Cod cu Minecraft în magazinele Microsoft din Australia, Canada, Puerto Rico și SUA. Aflați personal cum programarea se adresează tuturor și combină creativitatea, abilitatea de rezolvare a problemelor și multă-multă distracție."
+  minecraft_host_event: "Găzduiți un eveniment Hour of Code cu Minecraft"
+  minecraft_teach_resources: "Resurse pentru profesori și plan de lecție."
+  minecraft_leader_guide: "Descărcați resurse care vă ajută să planificaţi şi să conduceți un eveniment."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Descărcați</a> acum ghidul de inițiere rapidă a facilitatorului și prezentări Power Point pentru elevii mai mici și mai mari."
+  minecraft_join_online_training: "Gata pentru a facilita propria Oră de Cod cu Minecraft, dar nu sunteți sigur(ă) unde să începeți? Participați la <a href='%{minecraft_webinar_url}'> webinarul nostru la cerere</a>. Veți învăța cele mai bune practici, veți avea acces la materialele de pregătire pentru facilitator și veți avea parte de un tur al noului tutorial pentru Călătoria Eroului de la echipa Minecraft. Începeți să vă gandiți la ceea ce aveți nevoie pentru a aduce Ora de cod tinerilor în timpul Săptămânii educației în știința informatică (4-10 decembrie) şi în afara ei."
+  minecraft_continue_learning: 'Informatică pentru toată lumea: Dincolo de o Oră de Cod la magazinul Microsoft'
+  minecraft_continue_learning_description: "Nu este necesară nici un fel de experiență în informatică! Contribuiți asigurând tineretului posibilitatea de a învăța abilitățile valoroase dobândite prin educația informatică. Veniți alături de noi la magazinul Microsoft pentru a vă angaja într-o serie gratuită de trei ateliere de lucru de câte 1 oră durată, în care veți experimenta programarea într-un mediu distractiv și lipsit de stres, vă veți familiariza cu conceptele cheie ale informaticii și vă veți pregăti să conduceți o Oră de Cod în clasa sau în comunitatea dvs. Aveți asta! <a href='%{minecraft_continue_learning_url}'>Înregistrați-vă astăzi</a>."
+  minecraft_future: "Ajutați toți tinerii să se pregătească pentru viitor"
+  minecraft_future_description: "Aflați cum alte școli și organizații non-profit aduc competențe digitale, de la alfabetizarea digitală la educația informatică, în comunitatea lor. Luați în considerare modele diferite, obțineți sfaturi și trucuri și <a href='%{minecraft_future_url}'>accesați resursele</a> pe care acestea le-au găsit drept cele mai folositoare."
+  minecraft_og_designer: "Minecraft revine cu o nouă activitate pentru Ora de Cod. Programați animale şi alte creaturi din Minecraft în propria voastră versiune a Minecraft."
+  minecraft_og_agent: "Minecraft revine pentru Ora de Cod iar tu ești eroul principal! Scrie codul de călătorie prin biomurile Minecraft."
   sports_page_title: "Sporturi la Ora de Cod"
   sports_og_title: "Dă-ţi silinţa. Oricine poate învăţa."
   sports_og_description: "Campioni şi medaliaţi cu aur vă încurajează să încercaţi Ora de cod. Programaţi propriul joc sportiv."
@@ -456,25 +460,25 @@
   sports_select_theme: "Selectati tema tutorialului"
   sports_basketball_title: "Realizeaza un joc de baschet"
   sports_all_sports_title: "Amesteca si potriveste sporturile"
-  sports_featured_athletes: "See featured athletes"
-  sports_athletes_title: "Featured athletes"
-  sports_athlete_Draymond: "Draymond Green, Olympic Gold Medalist and NBA Champion, Golden State Warriors"
-  sports_athlete_Serena: "Serena Williams, Olympic Gold Medalist and Tennis Champion"
-  sports_athlete_Russell: "Russell Okung, Super Bowl Champion and NFL player, Denver Broncos"
-  sports_athlete_Sergio: "Sergio Ramos, World Cup Champion and Soccer/Futbol Player, Real Madrid"
-  sports_athlete_Sue: "Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm"
-  sports_athlete_Alana: "Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles Sparks"
-  sports_athlete_Angelo: "Angelo Matthews, Captain of the Sri Lankan Cricket Team"
-  sports_athlete_Nneka: "Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP, Los Angeles Sparks"
-  sports_athlete_Carmelo: "Carmelo Anthony, Olympic Gold Medalist and NBA All-Star, New York Knicks"
-  sports_athlete_Marco: "Marco Belinelli, NBA Champion, Charlotte Hornets"
-  sports_athlete_Neymar: "Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player, FC Barcelona and Brazil National Team"
-  sports_athlete_Sarah: "Sarah Quita Offringa, Windsurfing Champion"
-  sports_athlete_Marcelo: "Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil National Team"
-  sports_athlete_Erika: "Erika Olivera, Champion Marathon Runner"
+  sports_featured_athletes: "Vizualizare sportivi recomandați"
+  sports_athletes_title: "Sportivi recomandați"
+  sports_athlete_Draymond: "Draymond Green, medaliat cu aur Olimpic şi campion NBA, Golden Stat Warriors"
+  sports_athlete_Serena: "Serena Williams, medaliată cu aur Olimpic şi campioană de Tenis"
+  sports_athlete_Russell: "Russell Okung, campion Super Bowl şi jucător NFL, Denver Broncos"
+  sports_athlete_Sergio: "Sergio Ramos, campion mondial la Cupa Mondială şi jucător de fotbal la Real Madrid"
+  sports_athlete_Sue: "Sue Bird, medaliată cu aur Olimpic şi campioană WNBA, Seattle Storm"
+  sports_athlete_Alana: "Alana Beard, medaliată cu aur și top jucător de basketball All-Star WNBA, Los Angeles Sparks"
+  sports_athlete_Angelo: "Angelo Matthews, căpitan al echipei de cricket din Sri Lanka"
+  sports_athlete_Nneka: "Nneka Ogwumike, medaliat cu aur, campion WNBA şi Cel Mai Valoros Jucător în 2016, Los Angeles Sparks"
+  sports_athlete_Carmelo: "Carmelo Anthony, medaliat cu aur Olimpic şi top jucător de basketball All-Star NBA, New York Knicks"
+  sports_athlete_Marco: "Marco Belinelli, campion NBA, Charlotte Hornets"
+  sports_athlete_Neymar: "Neymar Jr., medaliat cu aur Olimpic și jucător de fotbal la FC Barcelona și Echipa Națională a Braziliei"
+  sports_athlete_Sarah: "Sarah Quita Offringa, campion la Windsurfing"
+  sports_athlete_Marcelo: "Marcelo, campion de fotbal la Real Madrid și Echipa Națională a Braziliei"
+  sports_athlete_Erika: "Erika Olivera, campion alergător la Maraton"
   sports_athlete_John: "John Wall, NBA All-Star, Washington Wizards"
-  sports_athlete_Chris: "Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami Heat"
-  sports_athlete_Harrison: "Harrison Barnes, Olympic Gold Medalist and NBA Champion, Dallas Mavericks"
+  sports_athlete_Chris: "Chris Bosh, medaliat cu aur Olimpic şi campion NBA, Miami Heat"
+  sports_athlete_Harrison: "Harrison Barnes, medaliat cu aur Olimpic şi campion NBA, Dallas Mavericks"
   watch_inspirational_videos: "Inainte sa incepi, vizioneaza unul dintre aceste videoclipuri inspirationale"
   video_title_cs_is_everything: "Computer Science is Changing Everything"
   video_title_inspire_girl: "Inspira o fata"
@@ -502,7 +506,7 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} profesorii cauta voluntari pasionati de educatia stiintei calculatorului sa ajute cu Ora lor de programare in decembrie.<br>%{num_volunteers} voluntarii s-au inscris. Alatura-te lor."
   volunteer_engineer_submission_intro_background: "Ora de Cod este o mişcare globala pentru a testa o introducere de o ora in informatica, ajungând la zeci de milioane de elevi din peste 180 de ţări. Va rugam sa va implicati în timpul Săptămânii de Educației în Informatică, în perioada 7-13 decembrie."
   volunteer_engineer_submission_intro_recruit: 'Acesti profesori ar fi incantati sa aiba pe cineva <span style="font-family: ''Gotham 7r'', sans-serif;"> pasionati de informatica </span> care pot ajuta in sala de clasa sau cineva care poate <span style="font-family: ''Gotham 7r'', sans-serif;">inspira</span> studentii vorbindu-le despre nenumaratele posibilitati ale informaticii(care pot fii facute prin intermediul unui video chat).'
-  volunteer_engineer_submission_intro_guide: "Learn more about our <a href=\"%{volunteer_guide}\">volunteer program here</a>."
+  volunteer_engineer_submission_intro_guide: "Aflați mai multe despre <a href=\"%{volunteer_guide}\">programul nostru de voluntariat aici</a>."
   volunteer_engineer_submission_intro_signup: "Te rugăm sa introduci următoarele informaţii, dacă ești un student la automatică și calculatoare sau matematică-informatică sau un profesionist în software. Câmpurile marcate cu un <span class=\"form-required-field\"> *</span> sunt obligatorii."
   volunteer_engineer_submission_intro_links: "Esti un profesor in cautare de voluntari? Gaseste un voluntar local in <a href=\"%{volunteer_local}\">harte de voluntari</a>."
   volunteer_engineer_submission_update_information: "Vă rugăm să actualizați informațiile dumneavoastră"
@@ -531,7 +535,7 @@
   volunteer_engineer_submission_field_email_placeholder: "Adresă de email"
   volunteer_engineer_submission_final_paragraph: "Vei aparea pe o hartă pentru ca profesorii locali sa te contacteze pentru Ora de Cod sau alte oportunitati de voluntariat. Adresa ta de e-mail si adresa exactă nu vor fi distribuite, dar alte informatii (inclusiv locatia aproximativa) vor fi vizibile pentru profesorii locali."
   volunteer_engineer_submission_checkbox_contact: 'Sunt de acord sa fiu contactat de profesori pentru oportunitati de voluntariat (Nota: adresa ta de e-mail nu va fi distribuita)'
-  volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
+  volunteer_engineer_submission_checkbox_age_18_plus: "Confirm că am cel puţin 18 ani."
   volunteer_engineer_submission_submit: "Trimite"
   volunteer_engineer_submission_thankyou: "Îți mulțumim pentru inscrierea ta ca voluntar. Profesorii vor folosi <a href=\"%{url}\">Aceasta harta</a> pentru a cauta si contacta voluntari ca tine."
   volunteer_engineer_submission_commitment_uncertain: "Nesigur"
@@ -562,7 +566,7 @@
   volunteer_engineer_submission_type_task_remote: "Vreau sa te alaturi clasei mele pe Skype pentru a adresa copiilor cateva cuvinte de inspiraţie"
   volunteer_engineer_submission_type_task_mentor: "Caut un mentor care să mă ajute in pregatirea activitatii de programare cu elevii"
   petition_age: "Vârsta"
-  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_hoc_scaling_progress: "Vai! Ne confruntăm cu un trafic mare de Ore de Cod. Suntem în imposibilitatea de a salva orice progres în această săptămână, dar progresul precedent aceastei săptămâni rămâne încă salvat."
   dashboard_announce_learn_more_button: "Află mai mult"
   dashboard_landing_title: "Pagina de Start a Profesorilor"
   dashboard_landing_welcome: "Bine aţi venit la noul şi îmbunătăţitul tablou de bord al profesorilor."
@@ -664,7 +668,7 @@
   dashboard_responses_view: 'Vizualizare raspunsuri text in:'
   dashboard_responses_none: "Cele mai multe dintre clasele noastre sunt proiectate să funcţioneze pentru vârste mai mici şi nu necesită ca elevii să tasteze textul ca Răspunsuri la întrebări, astfel încât nu veţi vedea raspunsuri text aici. Pentru elevii mai mari şi de liceu, puteţi vedea propunerile lor la întrebări cu răspuns deschis prin alegerea cursului atribuit."
   dashboard_sections_new_section: "Secţiune nouă"
-  dashboard_sections_new_google_section: "Import section from Google Classroom"
+  dashboard_sections_new_google_section: "Secțiune de import din Clasa de Google"
   dashboard_sections_jumbotron_instruction: "Creează secţiuni noi şi adaugă la ele elevi. Secțiunile te ajută să organizezi elevii în grupuri mai mici, astfel încât să poţi urmări progresul lor şi să le gestionezi conturile."
   dashboard_sections_table_section: "Secţiune"
   dashboard_sections_table_secret: "Tip de conectare"
@@ -700,7 +704,7 @@
   dashboard_students_add_student: "Adăugare elev"
   dashboard_students_add_students: "Adăugare mai mulți elevi"
   dashboard_students_add_multiple: 'Tastează sau adaugă cu "paste" numele elevilor tăi, câte unul pe linie:'
-  dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
+  dashboard_students_new_google_classroom_section: "Pentru a adăuga elevi, utilizaţi <a href='http://classroom.google.com' target='_blank'>Clasa Google</a> şi apoi faceţi clic pe butonul <b>Sincronizare elevi din Clasa Google</b> de mai sus."
   dashboard_students_new_section: "Ai creat o nouă secţiune! Acum, adaugă elevii tăi utilizând butoanele <b>Adăugare elev</b> şi <b>Adăugare mai mulți elevi</b> de mai sus."
   dashboard_students_placeholder_name: "Numele elevului"
   dashboard_students_name: "Nume"
@@ -720,7 +724,7 @@
   dashboard_students_reset_secret: "Resetare secret"
   dashboard_students_reset_password: "Resetare parolă"
   dashboard_students_share_section: "Distribuie elevilor tăi această pagină de logare din cadrul secțiunii:"
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
+  dashboard_students_share_section_secondary: 'Alternativ, distribuie elevilor tăi această pagină de logare din cadrul secțiunii:'
   dashboard_students_print_info: "Tipărește carduri cu informațiile de logare ale elevilor tăi."
   dashboard_students_secret_picture_title: "Imagine secreta"
   dashboard_students_secret_picture: "Această secţiune utilizează <b>imagine</b> ca tipul său secret.  Aceasta înseamnă că fiecare dintre studenţii tăi are o poză secretă folosită în loc de o parolă pentru a se conecta.  Elevii ar trebui să utilizeze adresa de web de logare de mai sus pentru a se conecta."
@@ -731,7 +735,7 @@
   dashboard_students_join_link: "Spune-le elevilor tăi să își creeze propriile conturi și să se alăture secțiunii tale la"
   dashboard_students_no_email: "Dacă elevii tăi nu au adrese de e-mail sau dacă dorești să creezi conturi pentru ei, schimbă tipul secret al acestei secţiuni la <b>cuvânt</b> sau <b>imagine</b>."
   dashboard_students_print_page: "Tipărește acestă pagină"
-  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
+  dashboard_students_signin_card: "Vizitaţi %{join_url} şi introduceţi %{section_code}"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\"> fă clic aici</a> pentru documentația noastră de confidenţialitate, care poate fi distribuită sau tipărită pentru elevii tăi."
   dashboard_curriculum_k5_title: "Resurse pentru educatori de clase primare"
@@ -743,12 +747,12 @@
   dashboard_course2: 'Curs 2:'
   dashboard_course3: 'Curs 3:'
   dashboard_course4: 'Curs 4: '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
+  dashboard_coursea: 'Curs A: '
+  dashboard_courseb: 'Curs B: '
+  dashboard_coursec: 'Curs C: '
+  dashboard_coursed: 'Curs D: '
+  dashboard_coursee: 'Curs E: '
+  dashboard_coursef: 'Curs F: '
   dashboard_unplugged: "Dacă nu aveți calculatoare, <a href='%{unplugged_url}'>încercați aceste lecţii offline</a> în clasa dvs."
   dashboard_curriculum: "Curriculum"
   dashboard_curriculum_overview: "Prezentare generală Curriculum pentru clasele 1-5"
@@ -848,18 +852,18 @@
   carousel_heading_webpages: "Învață să creezi pagini web"
   carousel_heading_robots: "Învață să programezi cu roboți"
   carousel_heading_ide: "Platforme populare în rândul profesorilor"
-  carousel_heading_desktop: "Learn to code on a computer"
-  carousel_heading_mobtabelem: "For phones and tablets"
-  carousel_heading_prereader: "For pre-readers"
-  carousel_heading_beyondblocks: "Go beyond blocks - learn a programming language"
-  carousel_heading_nointernet: "Poor internet? Install these apps on your computer"
+  carousel_heading_desktop: "Învăţați să lucrați cu cod pe un calculator"
+  carousel_heading_mobtabelem: "Pentru telefoane şi tablete"
+  carousel_heading_prereader: "Pentru preșcolari"
+  carousel_heading_beyondblocks: "Mergi dincolo de blocuri - învață un limbaj de programare"
+  carousel_heading_nointernet: "Internet de slabă calitate? Instalează aceste aplicații pe calculatorul tău"
   educator_notes: "Notițe pentru educatori"
   teach_led_lesson_plans: "Planuri de lectie pentru Ora de Programare"
   learn_footer_all_tutorials: "Vezi <a href=\"https://code.org/educate/allhourofcode\"> lista de tutoriale de la Ora de Programare pe înțelesul tuturor</a>. Pentru a vedea criteriile noastre şi regulile de înscriere la tutorialele de la Ora de Programare, <a href=\"https://hourofcode.com/tutorial-guidelines\">fă clic aici.</a>"
   how_to_teach_hoc: "Cum să predai o Oră de Cod"
   more_resources_educators: "Mai multe resurse pentru profesori și educatori"
   beyond_submission: "Vrei sa prezinti un tutorial mai lung de o ora? Verifica criteriile si formularul necesar."
-  third_party_submission: "Want to submit a tutorial to be listed here? <a href=\"%{submission_url}\">See the criteria and submission form.</a>"
+  third_party_submission: "Doriți să ne trimiteți un tutorial pentru a fi listat aici? <a href=\"%{submission_url}\">Vedeți criteriile și formularul de depunere.</a>"
   participants: "participanți"
   teachers_notes: "Notițele profesorului"
   teachers_notes_hoc: 'Profesori: Citiţi notițele importante pentru educator aici'
@@ -922,21 +926,21 @@
   course2_name: "Cursul 2"
   course3_name: "Cursul 3"
   course4_name: "Curs 4"
-  coursea-draft_name: Course A
-  coursea_name: "Course A"
-  courseb-draft_name: Course B
-  courseb_name: "Course B"
-  coursec-draft_name: Course C
-  coursec_name: "Course C"
-  coursed-draft_name: Course D
-  coursed_name: "Course D"
-  coursee-draft_name: Course E
-  coursee_name: "Course E"
-  coursef-draft_name: Course F
-  coursef_name: "Course F"
+  coursea-draft_name: Curs A
+  coursea_name: "Curs A"
+  courseb-draft_name: Curs B
+  courseb_name: "Curs B"
+  coursec-draft_name: Curs C
+  coursec_name: "Curs C"
+  coursed-draft_name: Curs D
+  coursed_name: "Curs D"
+  coursee-draft_name: Curs E
+  coursee_name: "Curs E"
+  coursef-draft_name: Curs F
+  coursef_name: "Curs F"
   accelerated_name: "Curs intensiv"
   express_name: "Express Course"
-  pre-express_name: Pre-reader Express Course
+  pre-express_name: Curs expres pentru preșcolari
   cspunit1_name: '(vechi) Unitatea 1: Informaţii digitale'
   cspunit2_name: '(vechi) Unitatea 2: Internet'
   cspunit3_name: '(vechi) Unitate 3: programare'
@@ -947,19 +951,21 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
-  csd6_name: 'Unit 6: Physical Computing'
+  csd5_name: 'Unitatea 5: Datele și societatea'
+  csd6_name: 'Unitatea 6: Calcul fizic'
   csp1_name: 'Unitatea 1: Internet'
   csp2_name: 'Unitatea 2: Informaţii digitale'
   csp3_name: 'Unit 3: Algorithms and Programming'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
+  csp3-a_name: 'Unitatea 3: Introducere în programare (versiunea A)'
+  csp3-research-mxghyt_name: 'Unitatea 3: Introducere în programare (obiective subordonate)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-ap_name: AP Performance Tasks
-  csppostap_name: 'Post AP: Databases in Apps'
+  csp-ap_name: Sarcini de performanţă AP
+  csppostap_name: 'Post-AP: Baze de date în aplicaţii'
   cspassessment_name: "Testul complet - 50 întrebări"
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Test partea 1-25 întrebări
   cspexam2-AKwgAh1ac5_name: Test de partea 2-25 întrebări
   cspunit3_gradelevel: "Clasele 9-12"
@@ -975,13 +981,13 @@
   starwarsblocks_name: "Star Wars (blocuri)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
+  hoc-encryption_name: Criptare simplă
   text-compression_name: Text Compression
   math_category_name: "Matematică"
   hoc_category_name: "Oră de Programare"
   csf_category_name: "Fundamentele CS"
-  csf_international_category_name: "CS Fundamentals International"
-  csf2_draft_category_name: 'Under Development: Courses A - F'
+  csf_international_category_name: "Fundamentele internaționale ale Informaticii"
+  csf2_draft_category_name: 'În curs de dezvoltare: Cursuri A - F'
   csd_category_name: "CS Discoveries"
   csp_category_name: "Principii de CS 15-16"
   csp17_category_name: "Principii de CS 16-17"
@@ -1046,12 +1052,12 @@
   course2_gradelevel: "Vârste 6 - 18 ani"
   course3_gradelevel: "Vârste 8 - 18 ani"
   course4_gradelevel: "Vârste 10 - 18 ani"
-  coursea_gradelevel: "Grade 5+"
-  courseb_gradelevel: "Grade 6+"
-  coursec_gradelevel: "Grade 7+"
+  coursea_gradelevel: "Clasele 5+"
+  courseb_gradelevel: "Clasele 6+"
+  coursec_gradelevel: "Clasele 7+"
   coursed_gradelevel: "Gradele 8+"
-  coursee_gradelevel: "Grade 9+"
-  coursef_gradelevel: "Grade 10+"
+  coursee_gradelevel: "Clasele 9+"
+  coursef_gradelevel: "Clasele 10+"
   accelerated_gradelevel: "Vârste 10 - 18 ani"
   codeorg_platformtext: "Browsere web moderne, smartphone-uri, tablete"
   codeintl_platformtext: "Browsere web moderne, smartphone-uri, tablete"
@@ -1436,41 +1442,43 @@
   header_help_us: "Help Us"
   header_about: "About"
   header_teacher_community: "Teacher community"
-  header_help_support: 'Help and support '
+  header_help_support: 'Ajutor şi suport '
   header_report_bug: "Report bug"
   header_tutorials: "Tutorials"
   header_documentation: "Documentation"
   csp_name: "Principii de CS 16-17"
   csd_name: "CS Discoveries"
-  full_course_category_name: "Full Courses"
+  full_course_category_name: "Toate cursurile"
   user_header_label: "Salut %{username}"
   user_header_settings: "Contul meu"
   user_header_logout: "Deloghează-te"
   user_header_signin: "Loghează-te"
-  view_all_sections: "View All Sections"
-  view_section: "View Section"
-  view_named_section: "View %{section_name}"
-  privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
-  signing_in: "Signing In"
-  sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
-  sign_in_instruct_website: "Go to %{code_org_url}."
-  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
-  sign_in_instruct_name: "Choose their display name."
-  sign_in_instruct_secret: "Choose their secret %{secret}."
-  sign_in_instruct_button: "Click the “Sign in” button."
-  sign_in_overview_cards: "Students can find all of this information, including their secret %{secret}, in the login cards below."
-  reset_student_password: "Resetting student passwords"
-  reset_student_password_instructions: "You can reset the secret <word/picture> for any of your students by going to the “Manage Students” tab for the section, clicking the “Show secret” button under the “Password” column, and clicking the “Reset secret” button."
-  login_cards: "Login Cards"
-  print_login_cards: "Print login cards"
-  joining_section: "Joining your section (one-time only)"
-  joining_section_overview: "If a student has not already joined your section, please ask them to do the following steps. Note that they only need to do this once. By joining your section, students will be able see the course assigned to them and you will be able to track the progress of the work they complete while they are signed in."
-  joining_section_instruct_website: 'Create a Code.org account if they haven’t already done so. They can do this at https://studio.code.org/users/sign_up. Note that they can either sign up with an email address and password, or sign up through Google, Facebook, or Microsoft by clicking on one of these buttons:'
-  joining_section_instruct_account: "Sign in to their Code.org account."
-  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section code: %{section_code}.'
-  joining_section_instruct_button: "Once they press the “Go” button, they should be added to your section."
-  signing_in_single_instruct: "Your students can sign in to their Code.org accounts by going to https://code.org/ and clicking on the “Sign in” button on the top right corner."
-  reset_student_password_email: "If your student created a Code.org account by using their email address and password (instead of signing in through their Google, Facebook, Microsoft, or Clever account), you can reset their password by going to the “Manage Students” tab for the section, and clicking the “Reset password” button under the “Password” column."
-  syncing_students: "Syncing your students"
-  syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
-  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
+  view_all_sections: "Vizualizați toate secțiunile"
+  view_section: "Vedeți secţiunea"
+  view_named_section: "Vezi %{section_name}"
+  privacy_doc_explanation: "Faceți clic aici pentru documentul nostru de confidențialitate care poate fi distribuit sau tipărit pentru studenții dvs."
+  signing_in: "În curs de conectare"
+  sign_in_overview: 'Studenții dvs. se pot conecta la conturile lor de pe Code.org urmând acești pași:'
+  sign_in_instruct_website: "Mergeți la %{code_org_url}."
+  sign_in_instruct_code: 'Tastați codul lor de secțiune: %{section_code}.'
+  sign_in_instruct_name: "Alegeți numele lor de afișat pe ecran."
+  sign_in_instruct_secret: "Alegeți codul lor secret %{secret}."
+  sign_in_instruct_button: "Faceți clic pe butonul \"Logare\"."
+  sign_in_overview_cards: "Studenţii pot găsi toate aceste informaţii, inclusiv %{secret} lor secrete, în cardurile de conectare de mai jos."
+  reset_student_password: "Resetarea parolelor elevilor"
+  reset_student_password_instructions: "Aveţi posibilitatea să resetați secretul <word/picture> pentru oricare dintre studenţii dumneavoastră mergând la tab-ul \"Gestionare elevi\" din secţiune, făcând clic pe butonul \"Arată secret\" sub coloana \"Parolă\" şi apoi clic pe butonul \"Resetare secret\"."
+  login_cards: "Carduri de conectare"
+  print_login_cards: "Tipărire carduri de conectare"
+  joining_section: "Aderarea la secţiunea dvs (o singură dată)"
+  joining_section_overview: "În cazul în care un student nu a aderat încă la secțiunea dvs., vă rugăm să-i solicitați să parcurgă următoarele etape. Rețineți că acesta trebuie să facă acest lucru doar o singură dată. Prin aderarea la secțiunea dvs., elevii vor putea vedea cursurile atribuite lor iar dvs veți putea urmări progresul lucrării pe care o realizează în timp ce sunt conectați."
+  joining_section_instruct_website: 'Creați un cont la Code.org dacă ei nu au făcut-o deja. Ei pot face acest lucru la https://studio.code.org/users/sign_up. Rețineți că ei fie se pot înregistra cu o adresă de e-mail și parolă, fie se pot înscrie prin Google, Facebook sau Microsoft facând clic pe unul dintre aceste butoane:'
+  joining_section_instruct_account: "Logați-vă în contul lor de Code.org."
+  joining_section_instruct_code: 'Navigați la %{code_org_url} și tastați în secțiunea lor de code: %{section_code}.'
+  joining_section_instruct_button: "Odată ce au apăsat butonul \"Pornire\", ei ar trebui să fie adăugați la secţiunea dvs."
+  signing_in_single_instruct: "Elevii dvs. se pot conecta la conturile lor de Code.org accesând https://code.org/ și făcând clic pe butonul \"Conectare\" din colțul din dreapta sus."
+  reset_student_password_email: "Dacă elevul dvs. a creat un cont la Code.org folosind adresa de e-mail şi parola proprie (în loc de conectare prin contul de Google, Facebook, Microsoft sau Clever), îi puteţi reseta parola accesând fila \"Gestionare elevi\" din secțiune şi făcând clic pe butonul \"Resetare parolă\" sub coloana \"Parolă\"."
+  syncing_students: "Sincronizarea elevilor dvs"
+  syncing_students_instructions: 'În cazul în care secţiunea Code.org apare vreodată ieșită din actualitate cu lista elevilor dvs. în clasa de Google, faceţi clic pe butonul "Sincronizare elevii din clasa Google" de pe fila "Gestionare elevii":'
+  google_sign_in_instruct: 'De acolo, ei ar trebui să aleagă opțiunea "Conectare cu contul Google":'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro

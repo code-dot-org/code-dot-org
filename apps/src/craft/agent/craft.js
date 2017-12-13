@@ -22,6 +22,7 @@ import Sounds from '../../Sounds';
 
 import { TestResults } from '../../constants';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
+import {SignInState} from '../../code-studio/progressRedux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -524,7 +525,7 @@ export default class Craft {
   static minAssetsForLevelNumber(levelNumber) {
     switch (levelNumber) {
       default:
-        return ['allAssetsMinusPlayer', 'playerAgent'];
+        return ['heroAllAssetsMinusPlayer', 'playerAgent'];
     }
   }
 
@@ -533,7 +534,7 @@ export default class Craft {
     switch (levelNumber) {
       default:
         // May want to push this to occur on level with video
-        return ['allAssetsMinusPlayer', 'playerAgent'];
+        return ['heroAllAssetsMinusPlayer', 'playerAgent'];
     }
   }
 
@@ -549,7 +550,7 @@ export default class Craft {
       case 1:
         return ['playerSteve', 'playerAlex'];
       default:
-        return ['allAssetsMinusPlayer'];
+        return ['heroAllAssetsMinusPlayer'];
     }
   }
 
@@ -803,6 +804,7 @@ export default class Craft {
           trySetLocalStorage('craftHeroShareLink', response.level_source);
         }
 
+        const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
         studioApp().displayFeedback({
           feedbackType: testResultType,
           response,
@@ -820,6 +822,7 @@ export default class Craft {
           feedbackImage: image,
           showingSharing: sharing,
           saveToProjectGallery: true,
+          disableSaveToGallery: !isSignedIn,
         });
       },
     });

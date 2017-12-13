@@ -90,8 +90,6 @@ var drawMap = function () {
   // Hide the left column and the resize bar.
   var visualizationColumn = document.getElementById('visualizationColumn');
   visualizationColumn.style.display = 'none';
-  var visualizationResizeBar = document.getElementById('visualizationResizeBar');
-  visualizationResizeBar.style.display = 'none';
 
   if (level.ghost) {
     var blockCanvas = Blockly.mainBlockSpace.getCanvas();

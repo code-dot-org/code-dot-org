@@ -105,9 +105,9 @@ Pengalaman Jam Pemrograman terbaik termasuk komputer yang terhubung dengan inter
         
         ## 7) Merayakan
         
-        - [ sertifikat Print ](<%= resolve_url('https://code.org/certificates') %>) bagi peserta dan siswa.
+        - [sertifikat Print](<%= resolve_url('https://code.org/certificates') %>) bagi peserta dan siswa.
         - [Cetak stiker "Aku telah menyelesaikan satu Jam Pemrograman!"](<%= resolve_url('/promote/resources#stickers') %>) untuk siswa.
-        - [ Orde custom t-shirt ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) bagi karyawan Anda.
+        - [Orde custom t-shirt](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) bagi karyawan Anda.
         - Bagikan foto dan video Jam Pemrograman Anda pada media sosial. Gunakan tautan #HourOfCode dan @codeorg sehingga kami dapat menyoroti keberhasilan Anda juga!
         
         [col-33]

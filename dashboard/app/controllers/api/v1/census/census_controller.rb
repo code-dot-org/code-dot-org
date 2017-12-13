@@ -96,6 +96,9 @@ class Api::V1::Census::CensusController < ApplicationController
     when 'CensusHoc2017v3'
       submission = ::Census::CensusHoc2017v3.new census_params
       template = 'hoc_census_2017_pledge_receipt' if submission.pledged
+    when 'CensusTeacherBannerV1'
+      submission = ::Census::CensusTeacherBannerV1.new census_params
+      template = nil # No email sent in this case
     else
       errors[:form_version] = "Invalid form_version"
     end
@@ -104,8 +107,8 @@ class Api::V1::Census::CensusController < ApplicationController
 
     if errors.empty?
       ActiveRecord::Base.transaction do
-        school_info.save
-        submission.save
+        school_info.save!
+        submission.save!
       end
       if template
         recipient = Poste2.create_recipient(submission.submitter_email_address,
