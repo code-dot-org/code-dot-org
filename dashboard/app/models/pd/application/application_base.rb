@@ -245,6 +245,10 @@ module Pd::Application
       JSON.parse(response_scores || '{}').transform_keys {|key| key.underscore.to_sym}
     end
 
+    def total_score
+      response_scores_hash.values.map {|x| x.try(:to_i)}.compact.reduce(:+)
+    end
+
     protected
 
     def include_additional_text(hash, field_name, *options)
