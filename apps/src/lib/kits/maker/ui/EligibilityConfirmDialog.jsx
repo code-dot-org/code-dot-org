@@ -133,7 +133,7 @@ export default class EligibilityConfirmDialog extends Component {
           <label>
             <div>{i18n.verifySignature()}</div>
             <div style={styles.signature}>
-              <div style={styles.bold}>Electronic Signature</div> {i18n.typeName()}
+              <strong style={styles.bold}>Electronic Signature</strong> {i18n.typeName()}
             </div>
             <input
               value={this.state.signature}
