@@ -18,7 +18,6 @@ var utils = require('../utils');
 var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
-import * as apiTimeoutList from '../lib/util/timeoutList';
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
@@ -461,8 +460,6 @@ GameLab.prototype.reset = function (ignore) {
   }
   */
 
-  apiTimeoutList.clearTimeouts();
-  apiTimeoutList.clearIntervals();
   Sounds.getSingleton().stopAllAudio();
 
   this.gameLabP5.resetExecution();
