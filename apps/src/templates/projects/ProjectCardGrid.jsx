@@ -48,13 +48,13 @@ class ProjectCardGrid extends Component {
     }
   }
 
-  onSelectApp(appType) {
+  onSelectApp = (appType) => {
     this.setState({showAll: false, showApp: appType});
-  }
+  };
 
-  viewAllProjects() {
+  viewAllProjects = () => {
     this.setState({showAll: true, showApp: ''});
-  }
+  };
 
   render() {
     const { projectLists } = this.props;
