@@ -1,0 +1,20 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2017-11-29T23:26:36.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "markdown_instructions": "# Make a Prediction\r\n\r\nRead through the code for this program and make a prediction about what will happen. Specifically:\r\n\r\n* How is the variable `i` used?\r\n* What will happen each time the button is clicked?\r\n* What will happen if the button is clicked more than 10 times?",
+    "instructions_important": "false",
+    "encrypted_solution": "WwXK2WidfYpXDafPhU4Iqm80OB4QNgYSDPxS1dtKf7ODkRPKmWohwH5ds8r3\neppkHF0IZXNdmIl00zZ7Ual88A4II0KyDyVn85xHD3r15TAhPHtnTeDXLHYg\nd1xrp8UopVhqwc08aOvo2XzpwFTCU3JqUol95b1bPdsqcc5dd8HmVo2tcQ/e\nhZDT5AFcijfIte91dJPeIt2jd/QUgKGRVDGTEpeqyOHpnXA1xCihGR9lLrqo\ng8/znw7I6Nulcs2ZyjnHsYUbc2fgrIefhcJzyj2kwqyycrrTlp6WIR9mL6XZ\nHLUjZw5xIsmut04vWeXwLdADczYiSFfQVrZCE3ONEdWuZlhrsCXdUUFbJhT1\ndrei/6N6zOXZ9t+DHsbrYt+DjP0z9flm+EC/08Lkrmx+9m/86wENibz6JTjk\nMAwoRp35KkdfH3lsiQTNGDRKQn9k\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

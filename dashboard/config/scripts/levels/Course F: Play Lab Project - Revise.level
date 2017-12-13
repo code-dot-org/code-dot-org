@@ -29,7 +29,7 @@
     "disable_examples": "false",
     "project_template_level_name": "Course F: Play Lab Project Template",
     "edge_collisions": "false",
-    "projectile_collisions": "false",
+    "projectile_collisions": "true",
     "allow_sprites_outside_playspace": "true",
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
@@ -37,10 +37,16 @@
     "disable_sharing": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "remove_items_when_actor_collides": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-12-11 22:11:32 +0000\",\"changed\":[\"projectile_collisions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
