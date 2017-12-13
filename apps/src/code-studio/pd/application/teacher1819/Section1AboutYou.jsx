@@ -78,7 +78,9 @@ export default class Section1AboutYou extends ApplicationFormComponent {
         </p>
         <p>
           <strong>
-            The deadline to apply is March 30, 2018.
+            Applications are reviewed on a rolling basis, and spots will fill quickly.
+            The priority deadline to apply is March 30, 2018.
+            All applications received after March 30 will only be considered if space is available.
           </strong>
         </p>
         <p>
