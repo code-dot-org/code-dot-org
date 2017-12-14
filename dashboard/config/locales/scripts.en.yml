@@ -6848,3 +6848,11 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        aws-demo:
+          stages:
+            new stage:
+              name: new stage
+          title: AWS Demo
+          description_audience: ''
+          description_short: ''
+          description: ''
