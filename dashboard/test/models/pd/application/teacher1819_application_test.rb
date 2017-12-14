@@ -6,6 +6,8 @@ module Pd::Application
     include Teacher1819ApplicationConstants
     include ApplicationConstants
 
+    freeze_time
+
     test 'application guid is generated on create' do
       teacher_application = build :pd_teacher1819_application
       assert_nil teacher_application.application_guid
@@ -347,6 +349,29 @@ module Pd::Application
       Pd::Application::Teacher1819Application.statuses.values.each do |status|
         application.update(status: status)
         application.send_decision_notification_email
+      end
+    end
+
+    test 'accepted_at updates times' do
+      time_1 = Date.today.to_time
+      time_2 = Date.tomorrow.to_time
+      application = create :pd_teacher1819_application
+      assert_nil application.accepted_at
+
+      Timecop.freeze(time_1) do
+        application.update(status: 'accepted')
+        application.reload
+        assert_equal time_1, application.accepted_at.to_time
+
+        application.update(status: 'declined')
+        application.reload
+        assert_nil application.accepted_at
+      end
+
+      Timecop.freeze(time_2) do
+        application.update(status: 'accepted')
+        application.reload
+        assert_equal time_2, application.accepted_at.to_time
       end
     end
   end

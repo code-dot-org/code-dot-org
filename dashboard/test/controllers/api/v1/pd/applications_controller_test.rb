@@ -34,6 +34,17 @@ module Api::V1::Pd
       @csd_teacher_application = create :pd_teacher1819_application, course: 'csd'
       @csp_teacher_application = create :pd_teacher1819_application, course: 'csp'
       @csp_facilitator_application = create :pd_facilitator1819_application, course: 'csp'
+
+      @serializing_teacher = create(:teacher,
+        email: 'minerva@hogwarts.edu',
+        school_info: create(
+          :school_info,
+          school: create(
+            :school,
+            name: 'Hogwarts'
+          )
+        )
+      )
     end
 
     test_redirect_to_sign_in_for :index
@@ -238,49 +249,80 @@ module Api::V1::Pd
       ).values.any? {|x| response_csv.first.exclude?(x + "\n")}
     end
 
-    test 'cohort view returns expected columns' do
-      application = create(
-        :pd_teacher1819_application,
-        course: 'csp',
-        regional_partner: @regional_partner,
-        user: (
-          create(
-            :teacher,
-            email: 'minerva@hogwarts.edu',
-            school_info: (
-              create(
-                :school_info,
-                school: (
-                  create(
-                    :school,
-                    name: 'Hogwarts'
-                  )
-                )
-              )
-            )
-          )
+    test 'cohort view returns expected columns for a teacher' do
+      time = Date.new(2017, 3, 15)
+
+      Timecop.freeze(time) do
+        application = create(
+          :pd_teacher1819_application,
+          course: 'csp',
+          regional_partner: @regional_partner,
+          user: @serializing_teacher
         )
-      )
 
-      application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.save
-      application.update(status: 'accepted')
-      application.lock!
+        application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save
+        application.update(status: 'accepted')
+        application.lock!
 
-      sign_in @workshop_organizer
-      get :cohort_view, params: {role: 'csp_teachers'}
-      assert :success
+        sign_in @workshop_organizer
+        get :cohort_view, params: {role: 'csp_teachers'}
+        assert :success
 
-      assert_equal(
-        {
-          date_accepted: 'Not implemented yet',
-          applicant_name: 'Minerva McGonagall',
-          district_name: 'A School District',
-          school_name: 'Hogwarts',
-          email: 'minerva@hogwarts.edu',
-          registered_for_summer_workshop: 'Not implemented yet'
-        }.stringify_keys, JSON.parse(@response.body).first
-      )
+        assert_equal(
+          {
+            id: application.id,
+            date_accepted: 'Mar 15',
+            applicant_name: 'Minerva McGonagall',
+            district_name: 'A School District',
+            school_name: 'Hogwarts',
+            email: 'minerva@hogwarts.edu',
+            notified: 'Not implemented',
+            assigned_workshop: 'Not implemented',
+            registered_workshop: 'Not implemented',
+            accepted_teachercon: 'Not implemented',
+          }.stringify_keys, JSON.parse(@response.body).first
+        )
+      end
+    end
+
+    test 'cohort view returns expected columns for a facilitator' do
+      time = Date.new(2017, 3, 15)
+
+      Timecop.freeze(time) do
+        application = create(
+          :pd_facilitator1819_application,
+          course: 'csp',
+          regional_partner: @regional_partner,
+          user: @serializing_teacher
+        )
+
+        application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save
+        application.update(status: 'accepted')
+        application.lock!
+
+        sign_in @workshop_organizer
+        get :cohort_view, params: {role: 'csp_facilitators'}
+        assert :success
+
+        assert_equal(
+          {
+            id: application.id,
+            date_accepted: 'Mar 15',
+            applicant_name: 'Minerva McGonagall',
+            district_name: 'A School District',
+            school_name: 'Hogwarts',
+            email: 'minerva@hogwarts.edu',
+            notified: 'Not implemented',
+            assigned_workshop: 'Not implemented',
+            registered_workshop: 'Not implemented',
+            assigned_fit: 'Not implemented',
+            registered_fit: 'Not implemented',
+            accepted_fit: 'Not implemented',
+          }.stringify_keys, JSON.parse(@response.body).first
+        )
+      end
     end
   end
 end

@@ -10,8 +10,13 @@ export default class CohortView extends React.Component{
   static propTypes = {
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
-      applicationType: PropTypes.string.isRequired
+      applicationType: PropTypes.string.isRequired,
+      viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
     })
+  }
+
+  static contextTypes = {
+    router: PropTypes.object.isRequired
   }
 
   state = {
@@ -44,6 +49,8 @@ export default class CohortView extends React.Component{
           {this.props.route.applicationType}
           <CohortViewTable
             data={this.state.applications}
+            viewType={this.props.route.viewType}
+            path={this.props.route.path}
           />
         </div>
       );
