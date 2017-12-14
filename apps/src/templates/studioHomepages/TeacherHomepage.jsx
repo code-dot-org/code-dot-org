@@ -75,6 +75,23 @@ export default class TeacherHomepage extends Component {
 
         {hocLaunch &&
          hocLaunch.special_announcement &&
+         hocLaunch.special_announcement === "celebs2017actualhoc" &&
+         !isEnglish && (
+          <SpecialAnnouncementActionBlock
+            isRtl={isRtl}
+            imageUrl={pegasus('/images/mc/fill-540x289/special-announcement-hoc2017.jpg')}
+            heading={i18n.specialAnnouncementHeadingCelebs()}
+            subHeading={""}
+            description={i18n.specialAnnouncementDescription()}
+            buttons={[
+              {url: 'https://hourofcode.com/#join', text: i18n.joinUs()},
+              {url: pegasus('/minecraft'), text: i18n.tryIt()}
+            ]}
+          />
+        )}
+
+        {hocLaunch &&
+         hocLaunch.special_announcement &&
          hocLaunch.special_announcement === "applab2017" &&
          isEnglish && (
           <SpecialAnnouncementActionBlock
