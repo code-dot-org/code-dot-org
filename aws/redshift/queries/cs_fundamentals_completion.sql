@@ -6,6 +6,7 @@ from dashboard_production.levels_script_levels lsl
 join dashboard_production.script_levels sl on sl.id = lsl.script_level_id
 join dashboard_production.stages st on st.id = sl.stage_id
 join dashboard_production.levels le on le.id = lsl.level_id
+-- CSF scripts: Old courses 1-4 (17,18,19,23), new courses A-F (236-241), 20-hour course (1), express (258) and pre-express (259)
 where sl.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
 and type = 'Unplugged';
 
@@ -18,6 +19,7 @@ from dashboard_production.levels_script_levels lsl
 join dashboard_production.script_levels sl on sl.id = lsl.script_level_id
 join dashboard_production.stages st on st.id = sl.stage_id
 join dashboard_production.levels le on le.id = lsl.level_id
+-- CSF scripts: Old courses 1-4 (17,18,19,23), new courses A-F (236-241), 20-hour course (1), express (258) and pre-express (259)
 where sl.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
 group by 1,2
 )
@@ -47,6 +49,7 @@ select st.script_id, count(distinct st.absolute_position::int) stages
 from dashboard_production.stages st
 left join #unplugged_and_standalone_video_stages us on us.script_id = st.script_id and us.stage = st.absolute_position
 where us.stage is null
+-- CSF scripts: Old courses 1-4 (17,18,19,23), new courses A-F (236-241), 20-hour course (1), express (258) and pre-express (259)
 and st.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
 group by 1
 ); 
@@ -65,6 +68,7 @@ join dashboard_production.scripts sc on sc.id = ul.script_id
 join dashboard_production.users u on u.id = ul.user_id
 left join #unplugged_and_standalone_video_stages us on us.stage = st.absolute_position and us.script_id = ul.script_id
 where us.stage is null -- filter out unplugged stages
+-- CSF scripts: Old courses 1-4 (17,18,19,23), new courses A-F (236-241), 20-hour course (1), express (258) and pre-express (259)
 and ul.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
 and u.user_type = 'student'
 group by 1,2,3;
