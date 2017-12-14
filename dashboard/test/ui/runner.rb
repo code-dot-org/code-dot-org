@@ -506,7 +506,7 @@ def first_selenium_error(filename)
   full_error ? full_error.strip.split("\n").first : 'no selenium error found'
 end
 
-# returns the number eyes diff mismatch errors in the cucumber output.
+# returns the number of scenarios with eyes mismatch errors in the cucumber output.
 def count_eyes_errors(cucumber_output)
   cucumber_output.scan(/#{Regexp.quote(EYES_ERROR_PREFIX)}/).count
 end
