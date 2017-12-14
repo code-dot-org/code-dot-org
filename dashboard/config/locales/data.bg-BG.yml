@@ -879,14 +879,14 @@
         applab_hoc_onevent: "Аpp Lab часът на кода -onEvent"
         applab_hoc_designmode: AppLab часът на кода - режим на проектиране
         applab_hoc_share: "Аpp Lab часът на кода -Share"
-        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
-        mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
-        mc_2017_functions: Minecraft Hour of Code - Functions
+        mc_2017_agent_intro: Minecraft Hour of Code - Agent
+        mc_2017_repeat: Minecraft Hour of Code - Повторение на цикли
+        mc_2017_functions: Minecraft Hour of Code - функции
         mc_2017_congratulations: Minecraft Hour of Code - Поздравления
-        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
-        mc_2017_puzzle_8: Minecraft Hour of Code - Functions
-        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
+        mc_2017_puzzle_1: Minecraft Hour of Code - Agent
+        mc_2017_puzzle_3: Minecraft Hour of Code - Повторение на цикли
+        mc_2017_puzzle_8: Minecraft Hour of Code - функции
+        mc_2017_puzzle_12: Minecraft Hour of Code - свободна игра
         hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
         hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
         hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
@@ -901,11 +901,11 @@
         hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
         hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
         hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
-        applab_intro_welcome: App Lab - Getting Started
-        applab_intro_events: App Lab - Make It Interactive
-        applab_intro_sounds: App Lab - Images and Sounds
-        applab_intro_designmode: App Lab - Design Mode
-        applab_intro_share: App Lab - Share Your App
+        applab_intro_welcome: App Lab - първи стъпки
+        applab_intro_events: App Lab - направи го интерактивно
+        applab_intro_sounds: App Lab - изображения и звуци
+        applab_intro_designmode: App Lab - режим на проектиране
+        applab_intro_share: App Lab - Споделяне на вашето приложение
     callout:
       text:
         drag_blocks: "Плъзнете блока за преместване и го поставете под другия блок"

@@ -72,9 +72,7 @@ export const commands ={
   timedLoop(opts) {
     apiValidateType(opts, 'timedLoop', 'ms', opts.ms, 'number');
     apiValidateType(opts, 'timedLoop', 'callback', opts.callback, 'function');
-    return apiTimeoutList.timedLoop(opts.ms, onTimerFired.bind(this, {
-      func: opts.callback
-    }));
+    return apiTimeoutList.timedLoop(opts.ms, onTimerFired.bind(this, opts));
   },
 
   /**

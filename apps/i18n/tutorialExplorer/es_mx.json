@@ -54,9 +54,9 @@
   "tutorialDetailStandards": "Estándares",
   "tutorialDetailDisabled": "Este tutorial no está disponible temporalmente.",
   "headingTutorialsYourLanguage": "Actividades en tu idioma",
-  "showAllTutorialsButton": "Mostrar actividades para muchos idiomas",
-  "hideAllTutorialsButton": "Ocultar actividades para muchos idiomas",
-  "noTutorialsYourLanguage": "No hay actividades disponibles en tu idioma. Prueba actividades en otros idiomas haciendo clic en el botón de abajo.",
+  "showAllTutorialsButton": "Mostrar actividades en varios idiomas",
+  "hideAllTutorialsButton": "Ocultar actividades en varios idiomas",
+  "noTutorialsYourLanguage": "No hay ninguna actividad en tu idioma. Prueba actividades en otros idiomas. Para ello, haz clic en el botón de abajo.",
   "bottomGuidelinesLink": "Haga clic aquí para ver nuestros criterios y reglas de envío para los tutoriales de la Hora del código.",
   "bottomSpecialNeedsLink": "Haga clic aquí para más información sobre el apoyo de estudiantes con necesidades especiales."
 }

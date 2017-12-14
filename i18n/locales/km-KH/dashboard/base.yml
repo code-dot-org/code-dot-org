@@ -32,7 +32,7 @@ km:
   welcome_back: "ស្វាគមន៍​ការ​មក​វិញ, %{name}"
   your_professional_learning_plan: "គំរោងនៃការសិក្សាមុខជំនាញរបស់អ្នក"
   see_your_learning_plan: "ចូលមើលគំរោងនៃការសិក្សារបស់អ្នក"
-  submit: បញ្ជូន
+  submit: ដាក់ស្នើរ
   unsubmit: មិនបានដាក់ចូល
   previous_page: ទំព័រមុន
   next_page: ទំព័របន្ទាប់
@@ -169,9 +169,9 @@ km:
       title: 'បាន​ភ្លេច​ពាក្យ​សម្ងាត់​របស់​អ្នក?'
       instructions: "សូមវាយបញ្ចូល​ email address ដែលបានបង្កើតជាមួយគណនីយរបស់អ្នកខាងក្រោម ហើយពួកយើងនឹងផ្ញើរការណែនាំនៃការ​បង្កើតpasswordសាជាថ្មី។"
       email: 'អាសយដ្ឋាន​អ៊ីមែល'
-      submit: 'បញ្ជូន'
+      submit: 'ដាក់ស្នើរ'
     reset_errors:
-      invalid_email: 'មើលទៅអ្នកប្រហែលជាបានចូលទៅកាន់គណនីជាមួយនឹងemail addressដែលមិនត្រឹមត្រូវ។​ សូមមេត្តាផ្ញើរអ៊ីម៉ែលទៅកាន់ support@code.org​ ដើម្បីទទួលនូវ password recovery link។'
+      invalid_email: 'មើលទៅអ្នកប្រហែលជាបានចូលទៅកាន់គណនីជាមួយនឹងអស័យដ្ឋានអ៊ីម៉េលដែលមិនត្រឹមត្រូវ។​ សូមមេត្តាផ្ញើរអ៊ីម៉ែលទៅកាន់ support@code.org​ ដើម្បីទទួលនូវតំណរភ្ជាប់យកលេខសំងាត់មកវិញ។'
     change_form:
       title: 'ប្ដូរ​ពាក្យ​សម្ងាត់​របស់​អ្នក'
       new_password: 'ពាក្យ​សម្ងាត់​ថ្មី'
@@ -193,12 +193,12 @@ km:
     new_teacher_subject: 'សូមស្វាគមន៏មកកាន់Code.org!'
   section:
     your_section:
-      one: 'sectionរបស់អ្នកគឺ:'
-      other: 'ផ្នែករបស់អ្នកគឺ:'
+      one: 'ផ្នែករបស់អ្នកគឺ៖'
+      other: 'ផ្នែករបស់អ្នក៖'
     code_with_teacher: '%{section_code} ជាមួយ​ %{teacher_name}'
     confirm:
-      remove: 'តើអ្នកប្រកត់ឬអត់ថានឹងធ្វើការចាកចេញពីsectionមួយនេះ។'
-    remove: '(ចាកចេងពីSection)'
+      remove: 'តើអ្នកប្រាកដឬអត់ថានឹងធ្វើការចាកចេញពីផ្នែកមួយនេះ?'
+    remove: '(លុបផ្នែកចេញ)'
     type:
       picture: 'លេខកូដដែលមានទម្រង់ជារូបភាព'
       word: 'ពាក្យដែលរក្សារជាការសម្ងាត់'
@@ -220,7 +220,7 @@ km:
       provider_managed_section: "វគ្គនេះដែរត្រូវបានគ្រប់គ្រងដោយអ្នកបង្កើតដ៏ទៃទៀត និងមិនអាចដាកអោយចូលរួមបានទេ។​ សូមមេត្តាសួរគ្រូរបស់អ្នកដើម្បីដាក់អ្នកចូលជាសមាជិកថ្មីតាមរយៈ%{provider} រួចហើយធ្វើការកែរទម្រង់sectionរបស់ពួកគាត់សារជាថ្មី។"
     mail:
       student_disassociated:
-        subject: 'Code.org notification:​​ %{student_name} មិនបានបន្តដំណើរការជាសិស្សរបស់អ្នកទៀតទេ។'
+        subject: Code.org notification:​​ %{student_name} មិនបានបន្តដំណើរការជាសិស្សរបស់អ្នកទៀតទេ។
   reports:
     error:
       access_denied: "អ្នកមិនអាចដំណើរការទៅកាន់ទិន្នន័យរបស់អ្នកប្រើប្រាស់នេះបានទេ។"
@@ -230,7 +230,7 @@ km:
     edit: 'កែតម្រូវ'
     edit_model: 'កែតម្រូវ%{model}'
     update: 'កែលម្អរ'
-    submit: 'បញ្ជូន'
+    submit: 'ដាក់ស្នើរ'
     destroy: 'កំទេច'
     back: 'ត្រលប់ក្រោយ'
     confirm: 'តើអ្នកប្រកត់ឬអត់?'
@@ -253,8 +253,8 @@ km:
         artist: 'គូសអ្វីមួយ'
         calculate: 'Calculate something'
         applab: 'បង្កើតកម្មវិធី App Lab​មួយ'
-        gamelab: 'បង្កើតកម្មវិធី Game​ App Lab​មួយ'
-        weblab: 'បង្កើត Web Lab (beta) project មួយ'
+        gamelab: 'បង្កើតគម្រោង Game​ Lab​ មួយ'
+        weblab: 'បង្កើតគម្រោង Web Lab មួយ (សាកល្បង)'
       home: "ទំព័រដើម"
       my_dashboard: "ផ្ទាំង​គ្រប់គ្រងរបស់ខ្ញុំ"
       courses: "វគ្គ​សិក្សា"
@@ -293,7 +293,7 @@ km:
       teach: "បង្រៀន"
       about: "អំពី"
     user:
-      classroom: 'Teacher Home Page'
+      classroom: 'ទំព័រដើមគ្រូបង្រៀន'
       district_dashboard: 'District Dashboard'
       label: 'សួស្តី%{username}'
       stats: 'ដំណើការ​របស់​ខ្ញុំ'
@@ -307,7 +307,7 @@ km:
       driver: 'Logged in'
       navigator: 'Partner'
     popup:
-      progress_for_user: "%{name}កំពុងដំណើរការ"
+      progress_for_user: "ដំណើរការរបស់%{name}"
       progress: 'ដំណើរការ​របស់​អ្នក'
       lines: បន្ទាត់​កូដ​សរុប៖ %{lines}
       close: 'បិទ'
@@ -329,7 +329,7 @@ km:
     students:
       dashboard: 'Go to Teacher Dashboard'
     user_not_found: 'គ្រូរបស់អ្នកមិនមាននៅទីនេះទេ។'
-    student_teacher_disassociated: 'ប្អូនបានចាកចេញពីវគ្គ %{section_code} ជាមួយគ្រូ %{teacher_name}។'
+    student_teacher_disassociated: 'អ្នកបានចាកចេញពីវគ្គ %{section_code} ជាមួយគ្រូ %{teacher_name}។'
     panel:
       answer_viewer: 'ពត៌មានគ្រូ'
       student: 'សិស្ស'
@@ -345,15 +345,15 @@ km:
       clear_response: 'លុបចោលលើការទទួលការខុសត្រូវ'
   user:
     email_confirm_needed: 'អ៊ីម៉ែលមិនទាន់បានដាក់សម្រាប់ជាការប្រើប្រាស់'
-    email_confirm_needed_required: 'អ៊ីម៉ែល​ %{email} មិនទាន់បានដាក់សម្រាប់ជាការប្រើប្រាស់'
-    email_confirm_wrong_email: '(ខុស email address?)'
+    email_confirm_needed_required: 'អស័យដ្ឋានអ៊ីម៉ែល​របស់អ្នក %{email} មិនទាន់បានធ្វើការបញ្ជាក់នៅឡើយទេ៖'
+    email_confirm_wrong_email: '(អស័យដ្ឋានអ៊ីម៉េលខុស?)'
     email_resend_confirm: 'សូមផ្ញើរម្តងទៀតនូវការយល់ព្រមអំពីសេចក្តីណែនាំ'
     new_password_hint: "(សូមកុំបំពេញអ្វីទាំងអស់បើសិនជាអ្នកមិនចង់កែរវា)"
     current_password_hint: '(យើងត្រូការលេខសម្ងាត់របស់អ្នកដើម្បីយល់ព្រមសម្រាប់ការផ្លាស់ប្តូររបស់អ្នក)'
     delete: 'លុបចោលគណនីរបស់អ្នកចោល'
     delete_text: "ចុចប៊ូតុងខាងក្រោមនឹងធ្វើការលុបគណនីរបស់អ្នកចោល។"
     delete_text_teacher_note: សូមធ្វើការកំណ់ចំណាំ ការលុបគណនីរបស់អ្នកនឹងមិនធ្វើការលុបគណនីរបស់សិស្សរបស់អ្នកទេ។
-    delete_confirm: 'ប្រកត់ឬអត់ថាចង់លុបគណនីរបស់អ្នក?'
+    delete_confirm: 'តើអ្នកប្រាកដទេថាចង់លុបគណនីរបស់អ្នក?'
     deleted_user: 'លុបអ្នកប្រើប្រាស់ចោល'
     no_password_because_oauth: 'មិនចាំបាច់មានលេខកូដពីព្រោះអ្នកធ្វើការចូលប្រើប្រាស់គណនីជាមួយកម្មវិធីដែលផ្តល់អោយផ្សេងទៀត។'
     no_password_because_sponsored: 'ជួបជាមួយគ្រូរបស់អ្នកដើម្បីធ្វើការគ្រប់គ្រងពាក្យសម្ងាត់របស់អ្នក។'
@@ -376,7 +376,7 @@ km:
     lines_of_code: "%{lines_count} LINES OF CODE WRITTEN BY STUDENTS"
     lines_of_code_linebreak: "%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS"
     all_courses: "ខ្លឹមសារទូទៅនៃមេរៀនទី១ ទី២ និងទី៣"
-    lesson_plans: "គម្រោងមេរៀនសម្រាប់បង្រៀន(កិច្ចតែងការ)"
+    lesson_plans: "គម្រោងមេរៀនសម្រាប់បង្រៀន"
     signin_message: "បាន​ចុះឈ្មោះ​ហើយ​មែនទេ? %{link}"
     student_reg_link: 'ការ​ចុះឈ្មោះ​ជា​សិស្ស'
     teacher_reg_link: 'ការ​ចុះឈ្មោះ​ជា​គ្រូ​បង្រៀន'
@@ -393,7 +393,7 @@ km:
     student_left_off: 'កន្លែងដែលយើងទើបបញ្ចប់'
     student_finished: អ្នកបានបញ្ចប់នូវមេរៀនទាំងអស់របស់Code.org។​ អ្នកអាចបន្តរទៅកម្រិតមួយផ្សេងទៀតតាមរយៈ%{online_link}ឬក៏%{local_school_link}។
     local_school: សាលាក្នុងតំបន់របស់អ្នក
-    online: កំពុងប្រើប្រាស់អ៊ីនធឺនេត
+    online: ប្រព័ន្ធអ៊ីនធើណែត
     see_details: មើលសេចក្តីលម្អិត
     view_course: មើលបន្ថែមអំពីមុខវិជ្ជា
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
@@ -416,7 +416,7 @@ km:
     announcement_title: "Announcements"
     announcement_message_fall2016_features: "We spent the summer turning your feedback into new features. Now, you can <a href=\"%{pp_url}\" target=\"_blank\">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href=\"%{csp_widgets_url}\" target=\"_blank\">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href=\"%{unused_code_url}\" target=\"_blank\">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think."
     announcement_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
-    announcement_learn_more_button: "រៀនបន្ថែមទៀត"
+    announcement_learn_more_button: "សិក្សាបន្ថែម"
     announcement_try_now_button: "សាកល្បង​ឥឡូវ"
     announcement_host_an_hour_button: "Host an Hour"
     announcement_watch_video_button: "មើលវីដេអូ"
@@ -469,7 +469,7 @@ km:
     powered_by_aws: 'Powered by Amazon Web Services'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: 'រក្សាសិទ្ធដោយ'
-    more: 'More'
+    more: 'ផ្សេង​ទៀត'
     feedback: 'ផ្ដល់​មតិ​កែ​លម្អ'
     translate: 'ជួយ​ពួក​យើង​ក្នុង​ការ​បកប្រែ​ទៅ​ភាសា​របស់​អ្នក'
     support: 'ការ​គាំទ្រ'
@@ -502,7 +502,7 @@ km:
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-      link: "រៀនបន្ថែមទៀត"
+      link: "សិក្សាបន្ថែម"
       applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
       gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
       weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
@@ -567,6 +567,9 @@ km:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Ages 13+"
       cta: "Learn how"
+    hoc-encryption:
+      title: "Simple Encryption"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -585,6 +588,9 @@ km:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។"
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
@@ -709,7 +715,7 @@ km:
     title: "We want to bring Computer Science to every student - help us track our progress!"
     message: "Please enter your school information below."
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
-    save: "Save"
+    save: "រក្សា​ទុក"
   race_interstitial:
     title: 'Optional: Help us track our progress toward improving diversity in computer science'
     message: "Please tell us your race (check all that apply)"
@@ -730,7 +736,7 @@ km:
         other: ផ្សេងៗ
       - 
         opt_out: Prefer not to say
-    submit: "បញ្ជូន"
+    submit: "ដាក់ស្នើរ"
     decline: "Close"
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
@@ -750,21 +756,14 @@ km:
     create: "Create Project"
     create_a_project: 'Create a new project:'
     new: "Create New"
-    new_buttons:
-      artist: "Artist"
-      playlab: "Play Lab"
-      applab: "App Lab"
-      gamelab: "Game Lab"
-      weblab: "Web Lab (beta)"
-    new_buttons_header: "ចាប់ផ្ដើមគម្រោងថ្មី"
     rename: "Rename"
-    save: "Save"
-    delete: "Delete"
-    import: "Import"
-    share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
-    share_link_import_error_header: "Something went wrong."
-    share_link_import_error_body: "There was a problem importing that share link. Please try again."
+    save: "រក្សា​ទុក"
+    delete: "លុប"
+    import: "ទាញយក"
+    share_link_import_bad_link_header: "អត់ស្គាល់តំណដែលបានចែកចាយ"
+    share_link_import_bad_link_body: 'យើងមិនអាចទាញយកតំណដែលបានចែកចាយទេ។ ប្រាកដថាអ្នកបានប្រើប្រាស់តំណចេញពីហ្គេម Minecraft: Agent puzzle ហើយត្រូវច្បាស់ថាតំណពេញលេញ។'
+    share_link_import_error_header: "មានកំហុសមួយចំនួន។"
+    share_link_import_error_body: "មានបញ្ហាក្នុងការទាញយកតំណដែលបានចែកចាយ។ សូមព្យាយាមម្តងទៀត។"
     exit: "Return to Course"
     my_projects: "My Projects"
     project_gallery: "Projects"
@@ -779,14 +778,14 @@ km:
     advanced_share: "Show advanced options"
     no_projects: "You currently have no projects. Click on one of the buttons above to start a project."
     close: "Close"
-    more: "More"
+    more: "ផ្សេង​ទៀត"
     name: "ឈ្មោះ"
     updated: "Updated"
     project_type: "Project Type"
     help_text: "Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to start a new project!<br/>You can come back and work on your projects at any time."
     need_help: "Try these courses to help you get started with your new project"
     thumbnail_help: "Not seeing the correct thumbnail for your project? Run your app to generate a new thumbnail. Note that it may take a couple hours for the thumbnail to refresh everywhere."
-    really_delete: 'Delete?'
+    really_delete: 'ប្រាកដថាលុប?'
     delete_yes: 'យល់ព្រម'
     delete_no: 'ទេ'
     saved: "បាន​រក្សាទុក​ក្នុង​វិចិត្រសាល!"

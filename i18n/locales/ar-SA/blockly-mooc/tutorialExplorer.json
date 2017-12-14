@@ -6,7 +6,7 @@
   "filterSortByDisplayWeight": "Recommended",
   "filterSortByPopularityRank": "Most popular",
   "filterGrades": "الصف الدراسي",
-  "filterGradesAll": "كل الاعمار",
+  "filterGradesAll": "All grades",
   "filterGradesPre": "ما قبل القراءة",
   "filterGrades25": "من الصف 2-5",
   "filterGrades68": "من الصف 6-8",
@@ -54,9 +54,9 @@
   "tutorialDetailStandards": "المعايير",
   "tutorialDetailDisabled": "هذا الدرس غير موجود مؤقتا.",
   "headingTutorialsYourLanguage": "أنشطة بلغتك",
-  "showAllTutorialsButton": "إظهار أنشطة للعديد من اللغات",
-  "hideAllTutorialsButton": "إخفاء الأنشطة للعديد من اللغات",
-  "noTutorialsYourLanguage": "لا يوجد أنشطة مدعومة بلغتك. جرب أنشطة بلغات أخرى عبر الضغط على الزر أدناه.",
+  "showAllTutorialsButton": "إظهار الأنشطة بالعديد من اللغات",
+  "hideAllTutorialsButton": "إخفاء الأنشطة بالعديد من اللغات",
+  "noTutorialsYourLanguage": "ليست هناك أنشطة مدعومة بلغتك. جرّب أنشطةً بلغاتٍ أخرى بالنقر على الزر أدناه.",
   "bottomGuidelinesLink": "اضغط هنا لترى معاييرنا و ارشاداتنا لدروس ساعة من البرمجة.",
   "bottomSpecialNeedsLink": "اضغط هنا للمزيد من المعلومات حول دعم التلاميذ ذوي الحاجيات الخاصة."
 }

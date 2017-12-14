@@ -54,9 +54,9 @@
   "tutorialDetailStandards": "Normes",
   "tutorialDetailDisabled": "Ce tutoriel est temporairement indisponible.",
   "headingTutorialsYourLanguage": "Activités dans votre langue",
-  "showAllTutorialsButton": "Afficher les activités pour de nombreuses langues",
-  "hideAllTutorialsButton": "Masquer les activités pour de nombreuses langues",
-  "noTutorialsYourLanguage": "Il n’y a pas d’activités prises en charge dans votre langue. Essayez des activités dans d’autres langues en cliquant sur le bouton ci-dessous.",
+  "showAllTutorialsButton": "Afficher les activités dans plusieurs langues",
+  "hideAllTutorialsButton": "Masquer les activités dans plusieurs langues",
+  "noTutorialsYourLanguage": "Il n’y a pas d’activités disponibles dans votre langue. Essayez des activités dans d’autres langues en cliquant sur le bouton ci-dessous.",
   "bottomGuidelinesLink": "Cliquez ici pour voir nos critères et les lignes directrices de soumission pour les tutoriels d'heure de Code.",
   "bottomSpecialNeedsLink": "Cliquez ici pour plus d’information concernant le soutien aux élèves ayant des besoins spécifiques."
 }

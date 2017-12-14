@@ -554,7 +554,7 @@ Craft.minAssetsForLevelNumber = function (levelNumber) {
     case 3:
       return ['levelThreeAssets'];
     default:
-      return ['allAssetsMinusPlayer'];
+      return ['designerAllAssetsMinusPlayer'];
   }
 };
 
@@ -566,7 +566,7 @@ Craft.afterLoadAssetsForLevel = function (levelNumber) {
       return Craft.minAssetsForLevelNumber(2);
     default:
       // May want to push this to occur on level with video
-      return ['allAssetsMinusPlayer'];
+      return ['designerAllAssetsMinusPlayer'];
   }
 };
 
@@ -582,7 +582,7 @@ Craft.niceToHaveAssetsForLevel = function (levelNumber) {
   if (levelNumber === FIRST_CHARACTER_LEVEL) {
     return ['playerSteveEvents', 'playerAlexEvents'];
   }
-  return ['allAssetsMinusPlayer'];
+  return ['designerAllAssetsMinusPlayer'];
 };
 
 Craft.hideSoftButtons = function () {
