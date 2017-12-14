@@ -32,8 +32,7 @@ module Pd::Application
 
     def find_teachercon_workshop(course:, city:, year: 2018)
       Pd::Workshop.
-        # where(course: course, subject: Pd::Workshop::SUBJECT_TEACHER_CON).
-        where(course: course, subject: 'Code.org TeacherCon').
+        where(course: course, subject: Pd::Workshop::SUBJECT_TEACHER_CON).
         scheduled_start_on_or_after(Date.new(year)).
         scheduled_start_on_or_before(Date.new(year + 1)).
         where('location_address like ?', "%#{city}%").
