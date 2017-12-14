@@ -448,6 +448,11 @@ module Pd::Application
       end
     end
 
+    # Add account_email (based on the associated user's email) to the sanitized form data hash
+    def sanitize_form_data_hash
+      super.merge(account_email: user.email)
+    end
+
     # Formats hour as 0-12(am|pm)
     # e.g. 7 -> 7am, 15 -> 3pm
     private_class_method def self.format_hour(hour)
