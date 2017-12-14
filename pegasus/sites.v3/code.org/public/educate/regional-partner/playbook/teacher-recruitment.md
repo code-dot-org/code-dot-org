@@ -8,32 +8,53 @@ nav: regional_partner_playbook_nav
 
 ## Table of Contents
 - [Teacher Application](#teachapp)
-- [Teacher Onboarding](#teachon)
-- [District Outreach](#district)
 - [Teacher Outreach](#teachout)
+- [District Outreach](#district)
+
 
 ________________
 <a id="teachapp"></a>
 ## Teacher Application
 
 ### What does the application process look like and how is my organization involved?
-Refer to the [Teacher Application Process Document](https://docs.google.com/document/d/1BhWbgYYxDcKnCYTGOQaT1YD_KKjVWE7F1tI6wWDHKa4/edit#) for everything you need to know about the Code.org teacher application process including a timeline, how to use the tools, copies of the communications applicants will receive and a FAQ.
+Review the [2018 Teacher Application Process Document](https://docs.google.com/document/d/10fGyKGqX9ybLn8zaSDFcYZWdIsGELFflLsNyi1llbtM/edit#heading=h.9egyv1wsx26t) for everything you need to know about the Code.org teacher application process including a timeline, how to use the tools, and copies of the communications applicants will receive.
 
-You can also reference the [Application Spreadsheet Guide](https://docs.google.com/document/d/1Y_bRru2qWNMW5A1tS4uXs_YU0Sq70p3O725aJiSMrIY/edit#) for information on how to use the application spreadsheet tool.
+### What are the important dates I need to know about?
+- Jan. 16: Applications open!
+- April 6: Priority deadline for all Group 3 applications
+- April - July: Application link will remain open for Group 1 and 2, and as needed for Group 3
+- April 20: Deadline for accepting teachers for TeacherCon 1
+- May 18: Deadline for accepting teachers for TeacherCon 2
+- June 17 - 22: TeacherCon 1
+- July 22 - 27: TeacherCon 2
+
+**Note:** Two months prior to your summer workshops is the deadline for accepting minimum cohort (for Group 1 & 2 Partners). April 6 is the deadline for accepting minimum cohort for Group 3.
 
 ### Application Links
-- Computer Science Discoveries - <span style="color:red">FULL!</span>
-- Computer Science Principles - [Apply here!](https://code.org/educate/professional-learning/cs-principles)
+- Computer Science Discoveries - Coming Soon
+- Computer Science Principles - Coming Soon
+
+
+________________
+<a id="teachout"></a>
+## Teacher Outreach
+
+### Materials to Share with Teachers
+[CS Principles Webpage](https://code.org/educate/csp)<br/>
+The CS Principles webpage is the most up to date place to find a course one-page description.  Share this url with interested schools and teachers.
+
+[CS Discoveries Webpage](https://code.org/educate/csd)<br/>
+The CS Discoveries webpage is the most up to date place to find a course one-page description.  Share this url with interested schools and teachers.
+
+[Professional​ ​Learning​ ​Programs​ ​Overview
+CS​ ​Principles​ ​and​ ​CS​ ​Discoveries] (https://code.org/files/PLProgramsOverview_1-Pager.pdf)
+
+[Code.org​ ​Professional​ ​Learning​ ​Program:​ ​Which​ ​Program​ ​is​ ​Right​ ​for​ ​Me?](https://code.org/files/PL-Program-for-Me.pdf) 
+
 
 ________________
 <a id="teachon"></a>
-## Teacher Onboarding
 
-### My cohorts are full, now what?
-Refer to the [Teacher Onboarding Plan](https://docs.google.com/document/d/1Z3O_c5db1AvczuNV1uyxegI_1yeOZtFna8tDJgEQPxg/edit) for information on what teachers go through once they are accepted to professional learning. This document includes registration deadlines, how the waitlist is handled, and a list of communications Code.org sends to teachers leading up to TeacherCon.
-
-________________
-<a id="district"></a>
 ## District Outreach
 
 ### The Outreach Pipeline
@@ -69,18 +90,3 @@ This is the version of the terms sheet we looked at during the summit in DC.  It
 
 [**Back to the top**](#top)
 <br/>
-
-________________
-<a id="teachout"></a>
-## Teacher Outreach
-
-### Who to Target
-[Who Should Teach Code.org Courses](https://docs.google.com/document/d/1OAr-2SJOEJoGnXbHbqt2VZHLwqZmo5Sxxpjv3HiSqvo/edit?usp=sharing)<br/>
-This Document outlines the requirements for participating in Code.org programs.
-
-### Materials to Share with Teachers
-[CS Principles Webpage](https://code.org/educate/csp)<br/>
-The CS Principles webpage is the most up to date place to find a course one-page description.  Share this url with interested schools and teachers.
-
-[CS Discoveries Webpage](https://code.org/educate/csd)<br/>
-The CS Discoveries webpage is the most up to date place to find a course one-page description.  Share this url with interested schools and teachers.

@@ -15,7 +15,10 @@ import RegionalPartnerDropdown from './regional_partner_dropdown';
 import QuickViewTable from './quick_view_table';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
-import { ApplicationStatuses } from './constants';
+import {
+  ApplicationStatuses,
+  RegionalPartnerDropdownOptions as dropdownOptions
+} from './constants';
 import {
   Button,
   FormGroup,
@@ -36,7 +39,6 @@ const styles = {
 export class QuickView extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string.isRequired,
-    regionalPartners: PropTypes.arrayOf(PropTypes.string),
     isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
@@ -104,6 +106,7 @@ export class QuickView extends React.Component {
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
             regionalPartnerFilter={this.state.regionalPartnerFilter}
+            additionalOptions={dropdownOptions}
           />
         }
         <Row>
@@ -136,6 +139,7 @@ export class QuickView extends React.Component {
           data={this.state.applications}
           statusFilter={this.state.filter}
           regionalPartnerFilter={this.state.regionalPartnerFilter}
+          viewType={this.props.route.viewType}
         />
       </div>
     );
@@ -144,6 +148,5 @@ export class QuickView extends React.Component {
 
 export default connect(state => ({
   regionalPartnerName: state.regionalPartnerName,
-  regionalPartners: state.regionalPartners,
   isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(QuickView);

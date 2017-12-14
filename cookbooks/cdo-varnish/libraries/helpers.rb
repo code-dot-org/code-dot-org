@@ -31,7 +31,7 @@ def pegasus_hostname
 end
 
 # Basic regex matcher for an optional query part of a URL followed by end-of-string anchor.
-END_URL_REGEX = "(\\?.*)?$"
+END_URL_REGEX = "(\\?.*)?$".freeze
 
 # Takes an array of path-patterns as input, validating and normalizing
 # them for use within a Varnish (or Ruby) regular expression.
@@ -142,7 +142,7 @@ REMOVED_HEADERS = %w(
   Accept-Language:en-US
   Referer
   User-Agent:Cached-Request
-)
+).freeze
 
 def process_request(behavior, _)
   cookies = behavior[:cookies]

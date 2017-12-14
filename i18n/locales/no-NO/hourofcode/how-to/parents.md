@@ -51,19 +51,19 @@ Trenger du flere ideer og forslag? I vårt [forslag til læringsplan](/files/Aft
 
 Når du har funnet en innføringsoppgave du vil bruke, kan du lagre adressen til oppgaven som bokmerke.
 
-**Når barnet møter problemer**
+**Når barnet synes det er vanskelig**
 
 Det er greit å svare:
 
-- "Jeg vet ikke. La oss finne ut sammen."
-- «Det er ikke alltid teknologien oppfører seg slik vi ønsker.»
-- "Å lære seg å programmere er som å lære seg et nytt språk; Du kan ikke være flytende med en gang."
+- "Jeg vet ikke. La oss finne det ut sammen."
+- "Det er ikke alltid teknologien oppfører seg slik vi ønsker."
+- "Å lære seg å programmere er som å lære seg et nytt språk; du kan det ikke flytende med en gang."
 
-## 6) Feire
+## 6) Feiring
 
-[Skriv ut diplomer](%= resolve_url('https://code.org/certificates') %) for barnet ditt (og deg!).
+[Skriv ut diplom](%= resolve_url('https://code.org/certificates') %) til barnet ditt (og deg!).
 
-Del bilder og videoer av Kodetimen arrangement på sosiale medier. Bruk #HourOfCode og @codeorg så vi kan fremheve din suksess også!
+Del bilder og videoer av Kodetimen-arrangement på sosiale medier. Bruk emneknaggene #kodetimen, #HourOfCode og @codeorg så vi også kan dra nytte av dine erfaringer. Husk å spørre barna om tillatelse til å dele bilder der de er med!
 
 **Andre Kodetime-ressurser:**
 
@@ -73,7 +73,7 @@ Del bilder og videoer av Kodetimen arrangement på sosiale medier. Bruk #HourOfC
 
 Kodetimen er bare første steget på en reise for å lære seg mer om hvordan teknologi fungerer og hvordan du lager dine egne programmer. For å fortsette på denne reisen:
 
-- Oppmuntre barnet til å fortsette [å lære online](%= resolve_url('https://code.org/learn/beyond') %).
-- Hjelp [fremme](%= resolve_url('/promote') %) informatikkutdanning i ditt barns skolekrets.
+- Oppmuntre barnet til å fortsette [å lære mer på Internett](%= resolve_url('https://code.org/learn/beyond') %).
+- [Vær pådriver](%= resolve_url('/promote') %) for informatikkutdanning i ditt barns skolekrets.
 
 <%= view :signup_button %>

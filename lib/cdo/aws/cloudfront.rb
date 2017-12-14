@@ -29,6 +29,7 @@ module AWS
     # - `log`: `log.bucket` and `log.prefix` specify where to store CloudFront access logs (or disable if `log` is not provided).
     # - `ssl_cert`: ACM domain name for an SSL certificate previously uploaded to AWS.
     #   If not provided, the default *.cloudfront.net SSL certificate is used.
+    # TODO(asherkach): This is not a constant as it is mutated later. Fix the naming STYLE.
     CONFIG = {
       pegasus: {
         aliases: [CDO.pegasus_hostname] + (['i18n'] + CDO.partners).map {|x| CDO.canonical_hostname("#{x}.code.org")},

@@ -462,6 +462,9 @@ en:
       A Closer Look at the Final Practice for the Explore PT: {}
       A Note On Metadata in the Curriculum Framework: {}
       AP Test Prep Guidance: {}
+      AWS Demo:
+        Demo for Amazon Curriculum: Demo for Amazon Curriculum
+        description here: description here
       Adding Functionality to your App: {}
       'Addressing in the Game of Battleship ': {}
       AlgPD Break:
@@ -2920,6 +2923,9 @@ en:
       deeper learning recommendations- csp:
         Recommendations for Ramping up on Lessons: Recommendations for Ramping up on Lessons
         description here: description here
+      dsl link test:
+        description here: description here
+        title: title
       duino auduino:
         duino auduino: duino auduino
       duino battery led:
@@ -3588,8 +3594,6 @@ en:
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
-        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Drag the blocks to match.: Drag the blocks to match.
         Instructions: Instructions
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
@@ -3698,8 +3702,6 @@ en:
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
-        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Drag the blocks to match.: Drag the blocks to match.
         Instructions: Instructions
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
@@ -4085,7 +4087,6 @@ en:
         Match the Map to the arrow that gets the Flurb to the treasure: Match the Map to the arrow that gets the Flurb to the treasure
         Matching: Matching
       K-1 Maze Match 1:
-        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
         "/script_assets/k_1_images/maze_images/maze_ENE.png": "/script_assets/k_1_images/maze_images/maze_ENE.png"
         "/script_assets/k_1_images/maze_images/maze_WSS.png": "/script_assets/k_1_images/maze_images/maze_WSS.png"
@@ -4094,7 +4095,6 @@ en:
         "/script_assets/k_1_images/move_blocks/ENE.png": "/script_assets/k_1_images/move_blocks/ENE.png"
         "/script_assets/k_1_images/move_blocks/WSS.png": "/script_assets/k_1_images/move_blocks/WSS.png"
         "/script_assets/k_1_images/move_blocks/WW.png": "/script_assets/k_1_images/move_blocks/WW.png"
-        Drag the blocks to match.: Drag the blocks to match.
         Instructions: Instructions
         Match the puzzles and blocks: Match the puzzles and blocks
         Matching: Matching
@@ -4482,7 +4482,6 @@ en:
         "/script_assets/matches/images/q2.jpg": "/script_assets/matches/images/q2.jpg"
         "/script_assets/matches/images/q3.jpg": "/script_assets/matches/images/q3.jpg"
         "/script_assets/matches/images/q4.jpg": "/script_assets/matches/images/q4.jpg"
-        Drag the images from right to center.: Drag the images from right to center.
         Instructions: Instructions
         Match up all the flowers by colour!: Match up all the flowers by colour!
         Matching Images Two: Matching Images Two
@@ -5034,11 +5033,12 @@ en:
         The feather will start to fall again.: The feather will start to fall again.
         The feather will stop moving: The feather will stop moving
       CSD U6 array multi:
-        Question: Question
-        description here: description here
-        right answer: right answer
-        title: title
-        wrong answer: wrong answer
+        <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11 PM.png" width="200px" />: <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11 PM.png" width="200px" />
+        <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00 PM.png" width="200px": <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00 PM.png" width="200px"
+        <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34 PM.png" width="200px" />: <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34 PM.png" width="200px" />
+        <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54 PM.png" width="200px" />: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54 PM.png" width="200px" />
+        Using Arrays: Using Arrays
+        What will App Lab display when the code on the left is run?: What will App Lab display when the code on the left is run?
       CSD U6 setProperty predict multi:
         '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">': '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">'
         '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">': '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">'

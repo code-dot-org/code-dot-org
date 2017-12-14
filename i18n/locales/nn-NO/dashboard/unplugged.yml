@@ -3,7 +3,7 @@ nn:
     unplugged:
       Unplug1:
         title: Introduksjon til informatikk
-        desc: Denne leksjonen introduserer omgrepet informasjonsvitskap og forklarer kva ein informatikar gjer. Den vil også gi elevar høve til å prøve seg som informatikar. Etter aktiviteten vil eleven få eit diplom til å ta med heim som prov på kva han eller ho har lært. Du kan bli fristet til å hoppe over å lære unge barn ordforrådet forbundet med leksonane som kjem, men å presenter dei alt no på ein morsam og leiken måte er langt meir produktivt enn å vente på meir avanserte muligheiter.
+        desc: Denne leksjonen introduserer omgrepet informasjonsvitskap og forklarer kva ein informatikar gjer. Den vil også gi elevar høve til å prøve seg som informatikar. Etter aktiviteten vil eleven få eit diplom til å ta med heim som prov på kva han eller ho har lært. Du kan bli frista til å hoppe over å lære unge barn ordforrådet forbundet med leksjonane som kjem, men å presenter dei alt no på ein morsam og leiken måte er langt meir produktivt enn å vente på meir avanserte muligheiter.
         pdfs:
           - unplug1
         video: Koble fra 1
@@ -27,13 +27,13 @@ nn:
         video: Unplug4
       Unplug5:
         title: Funksjonar
-        desc: I denne leksjonen vil elevane lage ein solfangar av streng, perler og eit spesielt smykke. Elevane vil fylgje ein rekkje repeterande steg, og så bli spurt om å identifisere bestemte "oppgåver", som blir gjentatt fleire gonger. Når desse oppgåvene er defineret, vil dei bli kalla frå hovedprogrammet og heile den vakre, skapande prosessen vil bli notert på eit enkelt papirark. Det endelige programmet vil være felles for heile klassa, uavhengig av type streng, perler og smykker. For å gjere dette effektivt, må elevane "abstrahere" detaljane i deira spesifikke materialer og finne felles begrep for den enkeltes forsyningar.  Denne bruken av generiske plasshaldar er ein nydeleg introduksjon til variablar.
+        desc: I denne leksjonen vil elevane lage ein solfangar av streng, perler og eit spesielt smykke. Elevane vil fylgje ein rekkje repeterande steg, og så bli spurt om å identifisere bestemte "oppgåver", som blir gjentatt fleire gonger. Når desse oppgåvene er definerte, vil dei bli kalla frå hovedprogrammet og heile den vakre, skapande prosessen vil bli notert på eit enkelt papirark. Det endelige programmet vil være felles for heile klassa, uavhengig av type streng, perler og smykker. For å gjere dette effektivt, må elevane "abstrahere" detaljane i deira spesifikke materialer og skape felles omgrep for bidraga til den enkelte.  Denne bruken av generiske plasshaldar er ein nydeleg introduksjon til variablar.
         pdfs:
           - unplug5
         video: Unplug5
       Unplug6:
         title: Vilkår
-        desc: Dette er eit klasse-spel. Etter introduseringa av føresetnader, hvis-setninger og løkker, kan klassa øve saman med eit ferdig-skreve program, ein kortstokk og trekningshell.
+        desc: Dette er eit klasse-spel. Etter introduseringa av føresetnader, hvis-setninger og løkker, kan klassa øve saman med eit ferdigskrive program, ein kortstokk og trekningshell.
         pdfs:
           - unplug6
         video: Unplug6
@@ -45,13 +45,13 @@ nn:
         video: Unplug7
       Unplug8:
         title: Abstraksjon
-        desc: Denne aktiviteten kombinerer elevane sin daglege rutine og en Mad lib stil tankespel, for å hjelpe klassen til å forstå effektiviteten av det abstrakte.
+        desc: Denne aktiviteten kombinerer elevane si daglege rutine og en Mad-Lib-stila tankespel, for å hjelpe klassen til å forstå effektiviteten av det abstrakte.
         pdfs:
           - unplug8
         video: Unplug8
       Unplug9:
         title: Programmeringsstafett
-        desc: Denne oppgåva vil ta ein idé frå ein tidlegare aktivitet (4. Millimeterpapirprogrammering) og bruke desse ferdigheitane til å understreke alvaret i å gjere ferdig program som kjørast i sekvensar og å ofte sjekke programmet for "bugs".
+        desc: Denne oppgåva vil ta ein idé frå ein tidlegare aktivitet (4. Millimeterpapirprogrammering) og bruke desse ferdigheitene til å understreke alvoret i å gjere ferdig program som blir køyrt i sekvensar og å ofte sjekke programmet for "bugs".
         pdfs:
           - unplug9
         video: Unplug9
@@ -75,192 +75,192 @@ nn:
         desc: Elevane lagar enkle algoritmer (sett med instruksjonar) for å flytte ein figur gjennom ein labyrint med berre ein kommando.
       PlantASeed:
         title: 'Verkelege algoritmar: Plante eit frø'
-        desc: Denne oppgåva viser korleis me bruker algoritmer i dagliglivet, her med det å plante eit frø som eksempel. Den fokuserer og på det store større bildet av informatikk og korleis algoritmer er ein viktig del av det.
+        desc: Denne oppgåva viser korleis vi bruker algoritmer i dagleglivet, her med det å plante eit frø som døme. Den fokuserer og på det større biletet av informatikk og korleis algoritmer er ein viktig del av det.
       BuildingAFoundation:
         title: Bygge eit fundament
-        desc: Elevene bygger en struktur med kun tilgjengelig tilbehør. Strukturene må fullføre en oppgave (når en viss høyde eller bære en viss vekt), og elevene diskuterer ideen om å bli værende når ting blir mer komplisert. 
+        desc: Elevane byggjer ein struktur med berre tilgjengeleg tilbehør. Strukturane må fullføre ei oppgåve (når ei viss høgde eller har ei viss vekt), og elevane diskuterer ideen om å være påståelege når ting blir meir komplisert.
       GettingLoopy:
         title: Me blir sløyfete
-        desc: Denne leksjonen introduserer programmeringen av konseptet av sløyfer (gjentatt instruksjon) gjennom en danseaktivitet. Studentene vil lære enkel koreografi, og deretter bli bedt om å gjenta den. 
+        desc: Denne leksjonen introduserer programmeringskonseptet løkker (gjentatt instruksjon) gjennom ein danseaktivitet. Elevane vil lære enkel koreografi, og deretter bli bedt om å gjenta den.
       RelayProgramming:
         title: Programmeringsstafett
-        desc: Elevene skal gjennom et stafettløp der de skal gjennom skolegården for å skrive algoritmer basert på millimeterpapirprogrammering. De har kun lov til å skrive en instruksjon om gangen og dersom det er en feil må de viske ut alt til der de gjorde feilen.
+        desc: Elevane skal gjennom eit stafettløp der dei skal gjennom skulegården for å skrive algoritmar basert på millimeterpapir. Dei har berre lov til å skrive ein instruksjon om gangen og dersom det er oppstår ein feil, må dei viske ut alt til der dei gjorde feilen.
       Conditionals:
         title: Betingelser
-        desc: For å lære om betingete instruksjoner skal elevene spille et kortspill og lage regler som "Hvis jeg tegner et rødt kort, får jeg et poeng" og "Hvis jeg tegner et svart kort, får du et poeng."
+        desc: For å lære om betinga instruksjonar skal elevane spele eit kortspill og lage reglar som "Viss eg trekk eit raudt kort, får eg eit poeng" og "Viss eg trekk eit svart kort, får du poeng."
       BigEvent:
         title: Den store hendinga
-        desc: Eleven blir introdusert for programmeringskonseptet "hendelse" som er handlnger som datamaskinen overvåker. Læreren trykker på knapper på en papirfjernkontroll og elevene svarer basert på hvilken knapp som er trykket.
+        desc: Eleven blir introdusert for programmeringskonseptet "hending" som er handlingar som datamaskina overvåkar. Læraren trykker på knappar på ein papirfjernkontroll og elevane svarer basert på kva knapp som er trykka på.
       GoingPlacesSafely:
         title: Går stader trygt
-        desc: Internett er en kraftig, men noen ganger farlig sted. Lærere presentere hvordan å være trygg når du navigerer på Internett.
+        desc: Internettet er ein mektig, men nokre gongar ein farleg stad. Lærarar introduserer korleis du skal vere trygg når du navigerer på nettet.
       GraphPaperProgramming:
         title: Programmering på millimeterpapir
-        desc: Elevene bruker forhåndsbestemte kommandoer til å lage en algoritme (en samling med instruksjoner) for å styre klassekameratene sine til å lage en tegning.
+        desc: Elevene nyttar forhåndsbestemte kommandoar til å lage ei algoritme (ei samling med instruksjonar) for å styre klassekameratane sine til å lage e teikning.
       PaperPlanes:
         title: 'Verkelege algoritmar: Papirfly'
-        desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv, i dette tilfellet for å å lage et papirfly. Det fokuserer også på det store bildet av informatikk og hvordan algoritmer spiller en essensiell rolle.
+        desc: Denne leksjonen viser måter vi bruker algoritmer i det daglege, i dette tilfellet for å å lage eit papirfly. Det fokuserer også på det store bildet av informatikk og korleis algoritmar spelar ei essensiell rolle.
       BinaryBracelets:
         title: Binær armbånd
-        desc: Elevene skal lage armbånd som en binær representasjon av den første bokstaven i navnet. Elevene lærer at data kan være representert og lagret på mer enn én måte.
+        desc: Elevene skal lage armbånd som ein binær representasjon av den første bokstaven i navnet sitt. Elevane lærar at data kan bli representert og lagra på meir enn ein måte.
       DigitalFootprint:
         title: Dine digitale fotspor
-        desc: Lærere introdusere elever ideen at sette informasjon om seg selv online skaper en digitale fotavtrykk eller "sti" som har konsekvenser.
+        desc: Lærarar introduserer for elevane ideen om å putte informasjon om seg sjølv på nett skapar eit digital fotavtrykk eller "sti" som har konsekvensar.
       ComputationalThinking:
         title: Programmeringstenking
-        desc: Elever bruker trinnene i logisk tenkning (bryte ned problemer, finne mønstre, abstrahere, algoritmer) for å finne ut hvordan spille et spill uten instruksjoner.
+        desc: Elevar bruker trinna i logisk tenkning (bryte ned problem, finne mønstre, abstrahere, algoritmer) for å finne ut korleis dei kan spele eit spel utan instruksjonar.
       FunctionalSuncatchers:
         title: Fungerande solfangarar
-        desc: Elevene lager en algoritme med variabler og funksjoner (biter med kode som du skal bruke mange ganger) for å lage solfangere ved bruk av tråder og perler.
+        desc: Elevene lager ei algoritme med variablar og funksjonar (biter med kode som du skal bruke monge ganger) for å lage solfangarar ved bruk av trådar og perler.
       SongwritingParameters:
-        title: Låtskriving med parametere
-        desc: Elever bruker konseptet med refrenget i en sang for å lære om å sende parametere (som tilpasser en funksjon uten å være nødt til å skrive om hele funksjonen).
+        title: Låtskriving
+        desc: Elevar bruker konseptet med refrenget i ein song for å lære om å definere og kalle på funksjonar.
       DiceRace:
-        title: 'Virkelige algoritmer: Terningrace'
-        desc: Denne leksjonen viser måter vi bruker algoritmer på i vårt daglige liv. Som en del av dette, vil studentene identifisere og skrive ned algoritmen for terningracet.
+        title: 'Verkelige algoritmar: Terningrace'
+        desc: Denne leksjonen viser måtar vi brukar algoritmar i det daglege. Som ein del av dette, vil elevane identifisere og skrive ned algoritmen for terningracet.
       Internet:
         title: Internett
-        desc: Studentene sender meldinger som representerer ulike internett overføringsmetoder ved hjelp av papirark.
+        desc: Elevane sender meldingar som representerer ulike overføringsmetodar på nett ved hjelp av papirark.
       Crowdsourcing:
         title: Crowdsourcing
-        desc: Elevene bruker crowdsourcing, en problemløsningsteknikk som er vanlig å bruke i informatikk, for å fullføre en oppgave sammen i et klasserom mer effektivt enn hvis en elev prøvde det alene.
+        desc: Elevar bruker crowdsourcing, ein problemløsningsteknikk som er vanlig å bruke i informatikk, for å fullføre ei oppgåve saman i eit klasserom meir effektivt enn om ein elev prøvde det åleine.
       DigitalCitizenship:
         title: Digitalt statsborgerskap
-        desc: Elevene utforsker forskjellene mellom privat informasjon og personlig informasjon og skiller mellom hva som er sikkert og hva som er usikkert å dele på nett.
+        desc: Elevene utforskar skilnaden mellom privat informasjon og personlig informasjon, og skil mellom kva som er sikkert og kva som er usikkert å dele på nett.
       TangramAlgorithms:
-        title: Tangram algoritmer
-        desc: Denne leksjonen viser oss noe viktig om algoritmer. Hvis du holder en algoritme enkel finnes det mange måter å bruke den. Hvis du vil sikre at alle ender opp med samme resultat må algoritmen ha flere detaljer.
+        title: Tangram-algoritmar
+        desc: Denne leksjonen viser oss noko viktig om algoritmar. Om du held ein algoritme enkel, finst det mange måtar å bruke den. Om du vil sikre at alle ender opp med same resultat, må algoritmen ha fleire detaljar.
       EnvelopeVariables:
-        title: Konvolutt variabler
-        desc: Variabler gir mye frihet i datavitenskap.  Denne leksjonen bidrar til å forklare hva variabler er og hvordan vi kan bruke dem på mange forskjellige måter. Bruk denne aktiviteten før (eller i forbindelse med) leksjonen på abstraksjon for å virkelig se sammenhengen.
+        title: Konvolutt-variablar
+        desc: Variablar gir mykje fridom i datavitskap. Denne leksjonen bidrar til å forklare kva variablar er og korleis vi kan bruke dei på mange ulike måtar. Bruk denne aktiviteten før (eller i samband med) leksjonen på abstraksjon for å verkeleg sjå samanhengen.
       MadGlibs:
         title: Adjektivhistorie
-        desc: Abstraksjon er en av de viktigste ferdighetene for en programmerer å forstå.  Denne aktiviteten får elevene analysere historier for å finne ulikheter slik at de kan abstrahere dem bort dem bort. Disse abstraherte historiene blir maler for nye morsomme og gale historier.
+        desc: Abstraksjon er ei av de viktigste ferdigheitene for ein programmerar å forstå.  Denne aktiviteten får elevane til å analysere historier for å finne ulikskapar slik at dei kan abstrahere dei vekk. Desse abstraherte historiene blir malar for nye morosame og gale historier.
       ForLoopFun:
-        title: Morro med for løkker
-        desc: Vi vet at vi ved hjelp av løkker kan gjøre de samme tingene flere ganger, men nå skal vi lære hvordan du bruker løkker med ekstra struktur i seg.
+        title: Morro med for-løkker
+        desc: Vi veit at vi, ved hjelp av løkker, kan gjere dei same tinga fleire gonger, men no skal vi lære korleis du bruker løkker med ekstra struktur i seg.
       SongwritingWithParameters:
         title: Låtskriving med parameter
-        desc: 'En av de mest storslåtte strukturene i infromatikkens verden er funksjonen. Funksjoner (noen ganger kalt prosedyrer) er mini-programmer som du kan bruke igjen og igjen i et større program. Vi skal nå hjelpe elver med å intuitivt forstå hvorfor det å kombinere biter av kode inn i funksjoner er en veldig nyttig praksis.  '
+        desc: 'Ein av dei mest storslåtte strukturene i informatikken er funksjonen. Funksjonar (nokre gonger kalla prosedyrar) er mini-programm som du kan bruke igjen og igjen i eit større program. Vi skal no hjelpe elevar med å intuitivt forstå korleis det å kombinere bitar av kode inn i funksjonar, er en veldig nyttig praksis.  '
       BinaryImages:
-        title: Binære Bilder
-        desc: Selv om mange mennesker tenker på binærsystemet som kun 0 og 1, viser vårt forrige kurs elevene at den informasjonen kan bli representert i en rekke av binære alternativer. Denne leksjonen tar det konseptet et steg videre da det illustrerer hvordan en datamaskin kan lagre enda mer kompleks informasjon (som for eksempel bilder og farger) binært også.
+        title: Binære bilete
+        desc: Selv om mange tenker på binærsystemet som kun 0 og 1, viser det førre kurset vårt at den informasjonen kan bli representert i ei rekke av binære alternativer. Denne leksjonen tar det konseptet eit steg vidare då det illustrerer korleis ei datamaskin kan lagre enda meir kompleks informasjon (som til dømes bilete og fargar) binært óg.
       VideoGamesCoordinatePlanes:
-        title: TVspill og koordinatsystemer
-        desc: Oppdag hvordan videospillene du elsker å spille faktisk er drevet av algebra! Utforsk hvordan algebra-utrykk og koordinatsystemet kan hjelpe oss med å forstå hvordan videospill fungerer og begynn å planlegg video-spillet du selv skal lage.
+        title: Tvspill og koordinatsystem
+        desc: Oppdag korleis videospela du elskar å spele faktisk er styrt av algebra! Utforsk korleis algebra-utrykk og koordinatsystemet kan hjelpe oss med å forstå korleis videospel fungerer og start planlegginga av videospelet du skal lage.
       Contracts:
-        title: Kontrakter, domene og rekkevidde
-        desc: Kontraktene gir oss en måte å forstå og diskutere funksjoner. I denne leksjonen skal vi se på hvordan kontrakter kan hjelpe oss til å forstå et nytt programmeringsspråk eller en funksjon.
+        title: Kontraktar, domene og rekkevidde
+        desc: Kontraktane gir oss ein måte å forstå og diskutere funksjonar. I denne leksjonen skal vi sjå på korleis kontraktar kan hjelpe oss til å forstå eit nytt programmeringsspråk eller ein funksjon.
       DesignRecipe:
-        title: Design oppskrifta
-        desc: På det forrige nivået skrev elevene noen veldig enkle funksjoner - men mer avanserte funksjoner krever en mer gjennomtenkt tilnærming. Tilnærmingen "The Design Recipe" er en strukturert tilnærming for å skrive funksjoner som inkluderer å skrive test-tilfeller for å forsikre seg om at funksjonen gjør det som er forventet av den.
+        title: Design-oppskrifta
+        desc: På det førre nivået skreiv elevane nokre veldig enkle funksjoaer - men meir avanserte funksjonar krev ei meir gjennomtenkt tilnærming. Tilnærminga "The Design Recipe" er ei strukturert tilnærming for å skrive funksjonar som inkluderer å skrive test-tilfelle for å sikre seg at funksjonen gjer det som ein ventar den skal.
       Booleans:
-        title: Boolske verdier og logikk
-        desc: Bolske uttrykk er den fjerde og siste data-typen som du vil lære om i dette kurset. Du vil lære om hva bolske uttrykk er og hvordan de kan hjelpe oss med å skrive funksjoner som tenker logisk
+        title: Boolske verdiar og logikk
+        desc: Bolske uttrykk er den fjerde og siste data-typen som du vil lære om i dette kurset. Du vil lære om kva bolske uttrykk er og korleis dei kan hjelpe oss med å skrive funksjonar som tenker logisk
       ConditionalsPiecewiseFunctions:
         title: Vilkår og stykkevise funksjonar
-        desc: Parameterne vi sender til funksjoner gjør at utfallet varierer basert på et mønster. Hvis vi vil at forskjellige verdier i paramterene skal skape forskjellige utfall fra funksjonen, bruker vi forskjellige mønstre for å skille mellom verdiene. Dette er hvor kondisjoner trengs...
+        desc: Parameterane vi sender til funksjonar gjer at utfallet varierer basert på eit mønster. Om vi vil at parametre med nokre verdiar skal skape ulike utfall ved å bruke eitt mønster, medan andre verdiar skaper eit anna mønster. Det er her vi treng kondisjonar...
       CollisionDetection:
-        title: Collision Detection og Pytagoras læresetning
-        desc: Å finne ut når objekter på skjermen berører hverandre er et viktig aspekt i de fleste video-spill. Nå skal vi se på hvordan Pythagoras læresetning og formelen for avstand kan bli brukt til å finne avstanden mellom to punkter på et plan, og så avgjøre om de to punktene (eller spill-figurene) berører hverandre.
+        title: Oppdage kollisjon og Pytagoras læresetning
+        desc: Å finne ut når objekter på skjermen rørar kverandre er eit viktig aspekt i dei fleste videospel. No skal vi sjå på korleis Pythagoras læresetning og formelen for avstand kan bli brukt til å finne avstanden mellom to punkter på eit plan, og så avgjøre om dei to punkta (eller spelefigurane) rører kvarandre.
       ! '':
         title: ""
         desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
-        desc: I denne oppgaven skal du lære om løkker!
+        desc: I denne oppgåve skal du lære om løkker!
       courseB_unplugged_MRF:
         title: Aktivitet utan datamaskinar
-        desc: I denne oppgaven skal du 'programmere' vennene dine!
+        desc: I denne oppgåva skal du 'programmere' venene dine!
       courseB_unplugged_loopyMRF:
         title: Aktivitet utan datamaskinar
-        desc: Akkurat som i "Mine robotvenner" skal du "programmere" vennene dine, men denne gangen med løkker!
+        desc: Akkurat som i "Mine robotvener" skal du "programmere" venene dine, men denne gongen med løkker!
       courseC_Unplugged_ScreenOutTheMean:
         title: Aktivitet utan datamaskinar
-        desc: I dag skal du lære hva du skal gjøre hvis noen er slemme på nett.
+        desc: I dag skal du lære kva du skal gjere om nokon er slemme på nett.
       courseD_unplugged_digitalCitizenship:
         title: Aktivitet utan datamaskinar
-        desc: I dag skal du lære hva det vil si å være en digital borger.
+        desc: I dag skal du lære kva det vil seie å vere ein digital borgar.
       courseE_unplugged_privateInformation:
-        title: 'Sunn fornuft opplæring: Privat og personlig informasjon '
-        desc: I dag vil du lære forskjellen mellom privat og personlig informasjon!
+        title: 'Opplæring i sunn fornuft: Privat og personleg informasjon '
+        desc: I dag vil du lære skilnaden mellom privat og personleg informasjon!
       courseF_unplugged_powerOfWords:
         title: Aktivitet utan datamaskinar
-        desc: I dag skal du lære hva du skal gjøre hvis noen er slemme på nett.
+        desc: I dag skal du lære kva du skal gjere om nokon er slemme på nett.
       deeper learning description:
         title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
+        desc: 'oversetting manglar: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Verkelege algoritmar: Plante eit frø'
-        desc: Denne oppgåva viser korleis me bruker algoritmer i dagliglivet, her med det å plante eit frø som eksempel. Den fokuserer og på det store større bildet av informatikk og korleis algoritmer er ein viktig del av det.
+        desc: Denne oppgåva viser korleis vi bruker algoritmer i dagleglivet, her med det å plante eit frø som døme. Den fokuserer og på det større biletet av informatikk og korleis algoritmer er ein viktig del av det.
       courseA_unplugged_happyMaps:
         title: Glade Kart
         desc: Elevane lagar enkle algoritmer (sett med instruksjonar) for å flytte ein figur gjennom ein labyrint med berre ein kommando.
       courseA_unplugged_goingPlacesSafely:
         title: Går stader trygt
-        desc: Internett er en kraftig, men noen ganger farlig sted. Lærere presentere hvordan å være trygg når du navigerer på Internett.
+        desc: Internettet er ein mektig, men nokre gongar ein farleg stad. Lærarar introduserer korleis du skal vere trygg når du navigerer på nettet.
       courseABC_unplugged_bigEvent:
         title: Den store hendinga
-        desc: Eleven blir introdusert for programmeringskonseptet "hendelse" som er handlnger som datamaskinen overvåker. Læreren trykker på knapper på en papirfjernkontroll og elevene svarer basert på hvilken knapp som er trykket.
+        desc: Eleven blir introdusert for programmeringskonseptet "hending" som er handlingar som datamaskina overvåkar. Læraren trykker på knappar på ein papirfjernkontroll og elevane svarer basert på kva knapp som er trykka på.
       courseB_unplugged_digitalFootprint:
         title: Dine digitale fotspor
-        desc: Lærere introdusere elever ideen at sette informasjon om seg selv online skaper en digitale fotavtrykk eller "sti" som har konsekvenser.
+        desc: Lærarar introduserer for elevane ideen om å putte informasjon om seg sjølv på nett skapar eit digital fotavtrykk eller "sti" som har konsekvensar.
       courseC_unplugged_buildingAFoundation:
         title: Bygge eit fundament
-        desc: Elevene bygger en struktur med kun tilgjengelig tilbehør. Strukturene må fullføre en oppgave (når en viss høyde eller bære en viss vekt), og elevene diskuterer ideen om å bli værende når ting blir mer komplisert. 
+        desc: Elevane byggjer ein struktur med berre tilgjengeleg tilbehør. Strukturane må fullføre ei oppgåve (når ei viss høgde eller har ei viss vekt), og elevane diskuterer ideen om å være påståelege når ting blir meir komplisert.
       courseC_unplugged_paperPlanes:
         title: 'Verkelege algoritmar: Papirfly'
-        desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv, i dette tilfellet for å å lage et papirfly. Det fokuserer også på det store bildet av informatikk og hvordan algoritmer spiller en essensiell rolle.
+        desc: Denne leksjonen viser måter vi bruker algoritmer i det daglege, i dette tilfellet for å å lage eit papirfly. Det fokuserer også på det store bildet av informatikk og korleis algoritmar spelar ei essensiell rolle.
       courseC_unplugged_gettingLoopy:
         title: Me blir sløyfete
-        desc: Denne leksjonen introduserer programmeringen av konseptet av sløyfer (gjentatt instruksjon) gjennom en danseaktivitet. Studentene vil lære enkel koreografi, og deretter bli bedt om å gjenta den. 
+        desc: Denne leksjonen introduserer programmeringskonseptet løkker (gjentatt instruksjon) gjennom ein danseaktivitet. Elevane vil lære enkel koreografi, og deretter bli bedt om å gjenta den.
       courseC_unplugged_binaryBracelets:
         title: Binær armbånd
-        desc: Elevene skal lage armbånd som en binær representasjon av den første bokstaven i navnet. Elevene lærer at data kan være representert og lagret på mer enn én måte.
+        desc: Elevene skal lage armbånd som ein binær representasjon av den første bokstaven i navnet sitt. Elevane lærar at data kan bli representert og lagra på meir enn ein måte.
       courseD_unplugged_graphPaperProgramming:
         title: Programmering på millimeterpapir
-        desc: Elevene bruker forhåndsbestemte kommandoer til å lage en algoritme (en samling med instruksjoner) for å styre klassekameratene sine til å lage en tegning.
+        desc: Elevene nyttar forhåndsbestemte kommandoar til å lage ei algoritme (ei samling med instruksjonar) for å styre klassekameratane sine til å lage e teikning.
       courseD_unplugged_relayProgramming:
         title: Programmeringsstafett
-        desc: Elevene skal gjennom et stafettløp der de skal gjennom skolegården for å skrive algoritmer basert på millimeterpapirprogrammering. De har kun lov til å skrive en instruksjon om gangen og dersom det er en feil må de viske ut alt til der de gjorde feilen.
+        desc: Elevane skal gjennom eit stafettløp der dei skal gjennom skulegården for å skrive algoritmar basert på millimeterpapir. Dei har berre lov til å skrive ein instruksjon om gangen og dersom det er oppstår ein feil, må dei viske ut alt til der dei gjorde feilen.
       courseD_unplugged_conditionalsCards:
         title: Vilkår med kort
-        desc: For å lære om betingete instruksjoner skal elevene spille et kortspill og lage regler som "Hvis jeg tegner et rødt kort, får jeg et poeng" og "Hvis jeg tegner et svart kort, får du et poeng."
+        desc: For å lære om betinga instruksjonar skal elevane spele eit kortspill og lage reglar som "Viss eg trekk eit raudt kort, får eg eit poeng" og "Viss eg trekk eit svart kort, får du poeng."
       courseD_unplugged_binaryImages:
-        title: Binære Bilder
-        desc: Selv om mange mennesker tenker på binærsystemet som kun 0 og 1, viser vårt forrige kurs elevene at den informasjonen kan bli representert i en rekke av binære alternativer. Denne leksjonen tar det konseptet et steg videre da det illustrerer hvordan en datamaskin kan lagre enda mer kompleks informasjon (som for eksempel bilder og farger) binært også.
+        title: Binære bilete
+        desc: Selv om mange tenker på binærsystemet som kun 0 og 1, viser det førre kurset vårt at den informasjonen kan bli representert i ei rekke av binære alternativer. Denne leksjonen tar det konseptet eit steg vidare då det illustrerer korleis ei datamaskin kan lagre enda meir kompleks informasjon (som til dømes bilete og fargar) binært óg.
       courseE_unplugged_diceRace:
-        title: 'Virkelige algoritmer: Terningrace'
-        desc: Denne leksjonen viser måter vi bruker algoritmer på i vårt daglige liv. Som en del av dette, vil studentene identifisere og skrive ned algoritmen for terningracet.
+        title: 'Verkelige algoritmar: Terningrace'
+        desc: Denne leksjonen viser måtar vi brukar algoritmar i det daglege. Som ein del av dette, vil elevane identifisere og skrive ned algoritmen for terningracet.
       courseE_unplugged_songwritingParameters:
         title: Låtskriving med parameter
-        desc: Elever bruker konseptet med refrenget i en sang for å lære om å sende parametere (som tilpasser en funksjon uten å være nødt til å skrive om hele funksjonen).
+        desc: Elevar bruker konseptet med refrenget i ein song for å lære om å definere og kalle på funksjonar.
       courseE_unplugged_internet:
         title: Internett
-        desc: Studentene sender meldinger som representerer ulike internett overføringsmetoder ved hjelp av papirark.
+        desc: Elevane sender meldingar som representerer ulike overføringsmetodar på nett ved hjelp av papirark.
       courseE_unplugged_crowdsourcing:
         title: Crowdsourcing
-        desc: Elevene bruker crowdsourcing, en problemløsningsteknikk som er vanlig å bruke i informatikk, for å fullføre en oppgave sammen i et klasserom mer effektivt enn hvis en elev prøvde det alene.
+        desc: Elevar bruker crowdsourcing, ein problemløsningsteknikk som er vanlig å bruke i informatikk, for å fullføre ei oppgåve saman i eit klasserom meir effektivt enn om ein elev prøvde det åleine.
       courseE_unplugged_songwriting:
-        title: Låtskriving med parametere
-        desc: Elever bruker konseptet med refrenget i en sang for å lære om å sende parametere (som tilpasser en funksjon uten å være nødt til å skrive om hele funksjonen).
+        title: Låtskriving
+        desc: Elevar bruker konseptet med refrenget i ein song for å lære om å definere og kalle på funksjonar.
       courseF_unplugged_tangrams:
-        title: Tangram algoritmer
-        desc: Denne leksjonen viser oss noe viktig om algoritmer. Hvis du holder en algoritme enkel finnes det mange måter å bruke den. Hvis du vil sikre at alle ender opp med samme resultat må algoritmen ha flere detaljer.
+        title: Tangram-algoritmar
+        desc: Denne leksjonen viser oss noko viktig om algoritmar. Om du held ein algoritme enkel, finst det mange måtar å bruke den. Om du vil sikre at alle ender opp med same resultat, må algoritmen ha fleire detaljar.
       courseF_unplugged_envelopeVariables:
-        title: Konvolutt variabler
-        desc: Variabler gir mye frihet i datavitenskap.  Denne leksjonen bidrar til å forklare hva variabler er og hvordan vi kan bruke dem på mange forskjellige måter. Bruk denne aktiviteten før (eller i forbindelse med) leksjonen på abstraksjon for å virkelig se sammenhengen.
+        title: Konvolutt-variablar
+        desc: Variablar gir mykje fridom i datavitskap. Denne leksjonen bidrar til å forklare kva variablar er og korleis vi kan bruke dei på mange ulike måtar. Bruk denne aktiviteten før (eller i samband med) leksjonen på abstraksjon for å verkeleg sjå samanhengen.
       courseF_unplugged_forLoopFun:
-        title: Morro med for løkker
-        desc: Vi vet at vi ved hjelp av løkker kan gjøre de samme tingene flere ganger, men nå skal vi lære hvordan du bruker løkker med ekstra struktur i seg.
+        title: Morro med for-løkker
+        desc: Vi veit at vi, ved hjelp av løkker, kan gjere dei same tinga fleire gonger, men no skal vi lære korleis du bruker løkker med ekstra struktur i seg.
       courseF_unplugged_songwritingParameters:
         title: Låtskriving med parameter
-        desc: 'En av de mest storslåtte strukturene i infromatikkens verden er funksjonen. Funksjoner (noen ganger kalt prosedyrer) er mini-programmer som du kan bruke igjen og igjen i et større program. Vi skal nå hjelpe elver med å intuitivt forstå hvorfor det å kombinere biter av kode inn i funksjoner er en veldig nyttig praksis.  '
+        desc: 'Ein av dei mest storslåtte strukturene i informatikken er funksjonen. Funksjonar (nokre gonger kalla prosedyrar) er mini-programm som du kan bruke igjen og igjen i eit større program. Vi skal no hjelpe elevar med å intuitivt forstå korleis det å kombinere bitar av kode inn i funksjonar, er en veldig nyttig praksis.  '
       swipeRightPassThrough:
-        title: Økt med rekruttering rekrutterings scenarier
+        title: Økt med rekrutteringsscenariar
         desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
       swipeRightPassThrough-test123:
-        title: Økt med rekruttering rekrutterings scenarier
+        title: Økt med rekrutteringsscenariar
         desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
       brad-repro-bug-000:
         title: Brad Repro Bug 000

@@ -104,7 +104,9 @@ For more information, please contact advocacy@code.org.
 * <a href="http://www.techoregon.org/">Technology Association of Oregon</a>
 * <a href="https://stem.utah.gov/">Utah STEM Action Center</a>
 * <a href="https://udtonline.com/portfolio-item/education/">United Data Technologies</a>
+* <a href="http://utahtech.org/">Utah Tech Council</a>
 * <a href="http://www.washingtonstem.org/">Washington STEM</a>
+* <a href="http://stemcenter.wvu.edu/">West Virginia University Center for Excellence in STEM Education</a>
 
 [#tools-section]
 

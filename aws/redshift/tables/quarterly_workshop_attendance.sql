@@ -1,6 +1,6 @@
 drop table if exists analysis.quarterly_workshop_attendance;
 CREATE TABLE analysis.quarterly_workshop_attendance AS
-  SELECT pde.user_id,
+  SELECT u.studio_person_id,
          pdw.course,
          MAX(CASE WHEN pdw.subject IN ('Units 1 and 2: The Internet and Digital Information','Units 2 and 3: Web Development and Animations') THEN 1 ELSE 0 END) q1,
          MAX(CASE WHEN pdw.subject IN ('Units 2 and 3: Processing data, Algorithms, and Programming','Units 3 and 4: Building Games and User Centered Design') THEN 1 ELSE 0 END) q2,
@@ -13,6 +13,8 @@ CREATE TABLE analysis.quarterly_workshop_attendance AS
       ON pde.pd_workshop_id = pdw.id
     JOIN dashboard_production_pii.pd_attendances pda 
       ON pda.pd_enrollment_id = pde.id
+    JOIN dashboard_production_pii.users u 
+      ON u.id = pde.user_id
   WHERE pdw.course IN ('CS Principles','CS Discoveries')
   AND   pds.start >= '2017-08-01'
   AND   pdw.deleted_at IS NULL

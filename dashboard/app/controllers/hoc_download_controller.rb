@@ -4,7 +4,7 @@ class HocDownloadController < ApplicationController
     @hoc_url = CDO.code_org_url("/#{@product_name}")
     @download_urls = {}
 
-    languages = ['Albanian', 'Arabic', 'Azerbaijani', 'Basque', 'Bosnian', 'Bulgarian', 'Catalan', 'Chinese-Taiwan', 'Chinese', 'Croatian', 'Czech', 'Danish', 'Dutch', 'English', 'Finnish', 'French', 'German', 'Greek', 'Hebrew', 'Hungarian', 'Icelandic', 'Indonesian', 'Irish', 'Italian', 'Japanese', 'Korean', 'Latvian', 'Lithuanian', 'Norwegian', 'Norwegian-Nynorsk', 'Polish', 'Portuguese-Brazil', 'Portuguese', 'Romanian', 'Russian', 'Serbian', 'Slovenian', 'Spanish', 'Swedish', 'Turkish', 'Ukrainian', 'Vietnamese']
+    languages = ['Albanian', 'Arabic', 'Azerbaijani', 'Basque', 'Bosnian', 'Bulgarian', 'Catalan', 'Chinese-Taiwan', 'Chinese', 'Croatian', 'Czech', 'Danish', 'Dutch', 'English', 'Finnish', 'French', 'German', 'Greek', 'Hebrew', 'Hungarian', 'Icelandic', 'Indonesian', 'Italian', 'Japanese', 'Korean', 'Latvian', 'Lithuanian', 'Norwegian', 'Norwegian-Nynorsk', 'Polish', 'Portuguese-Brazil', 'Portuguese', 'Romanian', 'Russian', 'Serbian', 'Slovenian', 'Spanish', 'Swedish', 'Turkish', 'Ukrainian', 'Vietnamese']
 
     case @product_name
       when Script::MINECRAFT_NAME

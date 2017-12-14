@@ -1,0 +1,77 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2017-12-07T18:17:16.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "category": ""
+      },
+      "on": {
+        "category": ""
+      },
+      "off": {
+        "category": ""
+      },
+      "led.on": {
+        "category": ""
+      },
+      "led.off": {
+        "category": ""
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "true",
+    "markdown_instructions": "<img src=\"//curriculum.code.org/images/circuitplayground/colorLedonoff.gif\" style=\"float: right; margin: 10px;\">\r\n\r\n# colorLeds\r\n\r\nThe color LEDs can use the same basic commands that you used with the red LED, such as `on()` and `off()`. This program should turn on and off the bottom LEDs as shown in the picture, but only one LED is working.\r\n\r\n# Do This\r\n\r\n* Read and run the code to see how the program turns the bottom left LED on and off.\r\n* Add more code to make both bottom LEDs turn on and off.\r\n",
+    "hide_share_and_remix": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(1.25);\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"on_button\" style=\"padding: 0px; margin: 0px; height: 200px; width: 275px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 25px; top: 20px;\">Turn on bottom color LEDs</button><button id=\"off_button\" style=\"padding: 0px; margin: 0px; height: 200px; width: 275px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(188, 26, 29); position: absolute; left: 25px; top: 230px;\">Turn off bottom color LEDs</button></div></div>",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "start_blocks": "// turn on LEDs when \"on\" button is clicked\r\nonEvent(\"on_button\", \"click\", function() {\r\n  colorLeds[4].on();\r\n});\r\n// turn off LEDs when \"off\" button is clicked.\r\nonEvent(\"off_button\", \"click\", function() {\r\n  colorLeds[4].off();\r\n});",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-12-07 18:23:29 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

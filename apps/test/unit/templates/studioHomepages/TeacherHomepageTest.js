@@ -4,6 +4,7 @@ import sinon from 'sinon';
 import {assert, expect} from '../../../util/configuredChai';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
+import Notification from '@cdo/apps/templates/Notification';
 import { announcement, courses, topCourse } from './homepagesTestData';
 
 describe('TeacherHomepage', () => {
@@ -67,7 +68,7 @@ describe('TeacherHomepage', () => {
         showCensusBanner={false}
       />
     );
-    const announcementContainer = wrapper.find('Notification');
+    const announcementContainer = wrapper.find(Notification);
     assert.deepEqual(announcementContainer.props(), {
       type: "bullhorn",
       notice: announcement.heading,
@@ -77,7 +78,6 @@ describe('TeacherHomepage', () => {
       buttonLink: announcement.link,
       newWindow: true,
       analyticId: announcement.id,
-      isRtl: false
     });
   });
 

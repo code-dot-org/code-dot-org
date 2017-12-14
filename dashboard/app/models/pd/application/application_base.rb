@@ -131,6 +131,19 @@ module Pd::Application
     validates_presence_of :type
     validates_presence_of :status, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
 
+    # decision notifications should be sent to applications that have been
+    # locked but have not yet received a decision_notification email
+    scope :should_send_decision_notification_emails, -> {where("locked_at IS NOT NULL AND decision_notification_email_sent_at IS NULL")}
+
+    # Override in derived class
+    def send_decision_notification_email
+      # intentional noop
+    end
+
+    def self.send_all_decision_notification_emails
+      should_send_decision_notification_emails.each(&:send_decision_notification_email)
+    end
+
     # Override in derived class, if relevant, to specify which multiple choice answers
     # have additional text fields, e.g. "Other (please specify): ______"
     # @return [Array<Array>] - list of fields with additional text. Each field is specified as an array of
@@ -179,13 +192,17 @@ module Pd::Application
       end
     end
 
+    def self.filtered_labels(course)
+      raise 'Abstract method must be overridden in base class'
+    end
+
     # Include additional text for all the multi-select fields that have the option
     def full_answers
       sanitize_form_data_hash.tap do |hash|
         additional_text_fields.each do |additional_text_field|
           answer_with_additional_text hash, *additional_text_field
         end
-      end
+      end.slice(*self.class.filtered_labels(course).keys)
     end
 
     # Camelized (js-standard) format of the full_answers. The keys here will match the raw keys in form_data
@@ -212,19 +229,24 @@ module Pd::Application
     end
 
     def school_name
-      user.school_info.try(:effective_school_name).try(:titleize)
+      user.try(:school_info).try(:effective_school_name).try(:titleize)
     end
 
     def district_name
-      user.school_info.try(:effective_school_district_name).try(:titleize)
+      user.try(:school_info).try(:effective_school_district_name).try(:titleize)
     end
 
     def applicant_name
       "#{sanitize_form_data_hash[:first_name]} #{sanitize_form_data_hash[:last_name]}"
     end
 
+    # Convert responses cores to a hash of underscore_cased symbols
     def response_scores_hash
       JSON.parse(response_scores || '{}').transform_keys {|key| key.underscore.to_sym}
+    end
+
+    def total_score
+      response_scores_hash.values.map {|x| x.try(:to_i)}.compact.reduce(:+)
     end
 
     protected

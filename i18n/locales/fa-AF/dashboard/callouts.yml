@@ -273,6 +273,10 @@ fa:
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U6 light show predict_callout:
+        CSDUDL03P09: What does this line do?
+      CSD U6 light show_callout:
+        CSDUDL03P09: What does this line do?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Define startGame here
       CSD U6 tugowar variables 2_callout:
@@ -800,6 +804,7 @@ fa:
       courseD_artist_ramp12_callout: [ ]
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
         4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO HINTS!
