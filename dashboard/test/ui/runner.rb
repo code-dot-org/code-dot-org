@@ -312,7 +312,8 @@ def run_tests(env, feature, arguments, log_prefix)
     stdout = stdout.read
     stderr = stderr.read
     cucumber_succeeded = wait_thr.value.exitstatus == 0
-    return cucumber_succeeded, stdout, stderr, Time.now - start_time
+    eyes_succeeded = count_eyes_errors(stdout) == 0
+    return cucumber_succeeded, eyes_succeeded, stdout, stderr, Time.now - start_time
   end
 end
 
@@ -505,9 +506,9 @@ def first_selenium_error(filename)
   full_error ? full_error.strip.split("\n").first : 'no selenium error found'
 end
 
-# returns whether the html output contains any eyes errors.
-def contains_eyes_error?(filename)
-  !!File.read(filename).include?(EYES_ERROR_PREFIX)
+# returns the number eyes diff mismatch errors in the cucumber output.
+def count_eyes_errors(cucumber_output)
+  cucumber_output.scan(/#{Regexp.quote(EYES_ERROR_PREFIX)}/).count
 end
 
 # return all text after "Failing Scenarios"
@@ -673,8 +674,7 @@ def run_feature(browser, feature, options)
   reruns = 0
   arguments = cucumber_arguments_for_browser(browser, options)
   arguments += cucumber_arguments_for_feature(options, test_run_string, max_reruns)
-  cucumber_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, arguments, log_prefix)
-  eyes_succeeded = !contains_eyes_error?(html_log)
+  cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, arguments, log_prefix)
   feature_succeeded = cucumber_succeeded && eyes_succeeded
   log_link = upload_log_and_get_public_link(
     html_log,
@@ -697,8 +697,7 @@ def run_feature(browser, feature, options)
 
     rerun_arguments = File.exist?(rerun_file) ? " @#{rerun_file}" : ''
 
-    cucumber_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, arguments + rerun_arguments, log_prefix)
-    eyes_succeeded = !contains_eyes_error?(html_log)
+    cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, arguments + rerun_arguments, log_prefix)
     feature_succeeded = cucumber_succeeded && eyes_succeeded
     log_link = upload_log_and_get_public_link(
       html_log,
@@ -736,6 +735,9 @@ def run_feature(browser, feature, options)
 
   rerun_info = " with #{reruns} reruns" if reruns > 0
 
+  eyes_error_count = count_eyes_errors(output_stdout)
+  eyes_info = ", #{eyes_error_count} eyes mismatches" if eyes_error_count > 0
+
   if !parsed_output.nil? && scenario_count == 0 && feature_succeeded
     # Don't log individual skips because we hit ChatClient rate limits
     # ChatClient.log "<b>dashboard</b> UI tests skipped with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
@@ -746,7 +748,7 @@ def run_feature(browser, feature, options)
     ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     ChatClient.log prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
-    message = "#{log_prefix}<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"
+    message = "#{log_prefix}<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})#{log_link}"
     message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if eyes?} -c #{browser_name} -f #{feature}"
     ChatClient.log message, color: 'red'
   end
@@ -758,7 +760,7 @@ def run_feature(browser, feature, options)
     else
       'failed'.red
     end
-  puts prefix_string("UI tests for #{test_run_string} #{result_string} (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})", log_prefix)
+  puts prefix_string("UI tests for #{test_run_string} #{result_string} (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})", log_prefix)
 
   if scenario_count == 0 && !ENV['CI']
     skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow
