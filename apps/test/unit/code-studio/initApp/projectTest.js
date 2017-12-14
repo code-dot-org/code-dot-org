@@ -61,23 +61,11 @@ describe('project.js', () => {
         codeProjects: 'https://test.codeprojects.org',
       },
       {
-        studio:'https://test.studio.code.org',
-        codeProjects: 'https://test.codeprojects.org',
-      },
-      {
         studio:'https://staging-studio.code.org',
         codeProjects: 'https://staging.codeprojects.org',
       },
       {
-        studio:'https://staging.studio.code.org',
-        codeProjects: 'https://staging.codeprojects.org',
-      },
-      {
         studio:'http://localhost-studio.code.org:3000',
-        codeProjects: 'http://localhost.codeprojects.org:3000',
-      },
-      {
-        studio:'http://localhost.studio.code.org:3000',
         codeProjects: 'http://localhost.codeprojects.org:3000',
       },
     ];
