@@ -50,7 +50,7 @@ class FeatureModeManager
     },
     scale: {
       gatekeeper_general_settings: {
-        puzzle_rating: false,
+        puzzle_rating: true,
         hint_view_request: true,
         postMilestone: true,
         postFailedRunMilestone: true,
@@ -68,7 +68,7 @@ class FeatureModeManager
         shareEnabled: true,
       },
       dcdo_settings: {
-        hoc_activity_sample_weight: 10,
+        hoc_activity_sample_weight: 1,
         hoc_learn_activity_sample_weight: 50,
         public_proxy_max_age: 4.hours.to_i,
         public_max_age: 8.hours.to_i,
@@ -94,7 +94,7 @@ class FeatureModeManager
         shareEnabled: true,
       },
       dcdo_settings: {
-        hoc_activity_sample_weight: 10,
+        hoc_activity_sample_weight: 1,
         hoc_learn_activity_sample_weight: 50,
         public_proxy_max_age: 4.hours.to_i,
         public_max_age: 8.hours.to_i,

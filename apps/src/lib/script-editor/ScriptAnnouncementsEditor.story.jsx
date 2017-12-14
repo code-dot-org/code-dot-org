@@ -22,6 +22,7 @@ const inputStyle = {
 export default storybook => {
   storybook
     .storiesOf('ScriptAnnouncementsEditor', module)
+    .withReduxStore()
     .addStoryTable([
       {
         name:'ScriptAnnouncementsEditor',

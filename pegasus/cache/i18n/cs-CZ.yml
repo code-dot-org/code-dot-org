@@ -34,11 +34,19 @@
   twentyhours_text: Dokončil jsi svou první Hodinu kódu? Nauč se více o informatice
     a programovacích pojmech v  následujícím kurzu.
   og_title: Každé dítě si zaslouží příležitost
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
   og_description: Každý student v každé škole si zaslouží možnost studovat informatiku.
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: Hodina kódu se blíží
   csedweek_og_description: Hodina Kódu je celosvětové hnutí, do kterého se zapojily
     desítky milionů žáků všech věkových kategorií z více než 180 zemí a mluvících
     více než 45 jazyky.
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
   hoc2014_heading: Připojte se k <a href="http://hourofcode.com">Hodině kódu</a> <br/>
     8. až 14. prosince 2014 <br/>
   hoc2014_students: Studenti
@@ -1261,6 +1269,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Po testu: Databáze v aplikacích'
   cspassessment_name: "Úplný test - 50 otázek"
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: 1. část testu - 25 otázek
   cspexam2-AKwgAh1ac5_name: 2. část testu - 25 otázek
   cspunit3_gradelevel: Věk 15-18
@@ -2084,15 +2094,5 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
-  og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
-  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
-    or your class!
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
-    science is foundational for every student to learn.
-  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
-    for every student to learn.
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro

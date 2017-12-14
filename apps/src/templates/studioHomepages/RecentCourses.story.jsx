@@ -49,6 +49,7 @@ const topCourse = {
 export default storybook => {
   return storybook
     .storiesOf('RecentCourses', module)
+    .withReduxStore()
     .addStoryTable([
       {
         name: "Recent Courses - teacher, no courses yet",

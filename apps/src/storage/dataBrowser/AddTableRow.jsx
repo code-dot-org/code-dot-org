@@ -6,43 +6,43 @@ import { castValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 import _ from 'lodash';
 
-const AddTableRow = React.createClass({
-  propTypes: {
+const INITIAL_STATE = {
+  isAdding: false,
+  // An object whose keys are column names and values are the raw user input.
+  newInput: {},
+};
+
+class AddTableRow extends React.Component {
+  static propTypes = {
     columnNames: PropTypes.array.isRequired,
     tableName: PropTypes.string.isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
-      isAdding: false,
-      // An object whose keys are column names and values are the raw user input.
-      newInput: {},
-    };
-  },
+  state = {...INITIAL_STATE};
 
   handleChange(columnName, event) {
     const newInput = Object.assign({}, this.state.newInput, {
       [columnName]: event.target.value
     });
     this.setState({ newInput });
-  },
+  }
 
-  handleAdd() {
+  handleAdd = () => {
     this.setState({isAdding: true});
     FirebaseStorage.createRecord(
       this.props.tableName,
       _.mapValues(this.state.newInput, castValue),
-      () => this.setState(this.getInitialState()),
+      () => this.setState(INITIAL_STATE),
       msg => console.warn(msg));
-  },
+  };
 
-  handleKeyUp(event) {
+  handleKeyUp = (event) => {
     if (event.key === 'Enter') {
       this.handleAdd();
     } else if (event.key === 'Escape') {
-      this.setState(this.getInitialState());
+      this.setState(INITIAL_STATE);
     }
-  },
+  };
 
   render() {
     return (
@@ -79,6 +79,6 @@ const AddTableRow = React.createClass({
       </tr>
     );
   }
-});
+}
 
 export default Radium(AddTableRow);

@@ -26,7 +26,7 @@ class TeacherSections extends Component {
           heading={i18n.sectionsTitle()}
           isRtl={isRtl}
         >
-          <OwnedSections isRtl={isRtl} queryStringOpen={queryStringOpen}/>
+          <OwnedSections queryStringOpen={queryStringOpen}/>
         </ContentContainer>
       </div>
     );

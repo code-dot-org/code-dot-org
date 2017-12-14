@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, {Component, PropTypes} from 'react';
 import ProjectAppTypeArea from './ProjectAppTypeArea.jsx';
 import {projectPropType, Galleries} from './projectConstants';
 import i18n from "@cdo/locale";
@@ -18,8 +18,16 @@ const styles = {
   }
 };
 
-const ProjectCardGrid = React.createClass({
-  propTypes: {
+class ProjectCardGrid extends Component {
+  constructor() {
+    super();
+    this.state = {
+      showAll: true,
+      showApp: ''
+    };
+  }
+
+  static propTypes = {
     projectLists: PropTypes.shape({
       applab: PropTypes.arrayOf(projectPropType),
       gamelab: PropTypes.arrayOf(projectPropType),
@@ -32,28 +40,21 @@ const ProjectCardGrid = React.createClass({
     }).isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
     selectedGallery: PropTypes.string.isRequired
-  },
-
-  getInitialState() {
-    return {
-      showAll: true,
-      showApp: ''
-    };
-  },
+  };
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.selectedGallery !== this.props.selectedGallery && nextProps.selectedGallery === Galleries.PUBLIC) {
       this.setState({showAll: true, showApp: ''});
     }
-  },
+  }
 
-  onSelectApp(appType) {
+  onSelectApp = (appType) => {
     this.setState({showAll: false, showApp: appType});
-  },
+  };
 
-  viewAllProjects() {
+  viewAllProjects = () => {
     this.setState({showAll: true, showApp: ''});
-  },
+  };
 
   render() {
     const { projectLists } = this.props;
@@ -234,7 +235,7 @@ const ProjectCardGrid = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default connect(state => ({
   selectedGallery: state.projects.selectedGallery

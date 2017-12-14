@@ -2,6 +2,8 @@ require 'test_helper'
 
 module Api::V1::Pd::Application
   class TeacherApplicationsControllerTest < ::ActionController::TestCase
+    include Pd::Application::ApplicationConstants
+
     setup_all do
       @test_params = {
         form_data: build(:pd_teacher1819_application_hash)
@@ -36,6 +38,18 @@ module Api::V1::Pd::Application
 
       put :create, params: @test_params
       assert_response :success
+      assert_equal(
+        {
+          regional_partner_name: NO,
+          committed: YES,
+          able_to_attend_single: YES,
+          csp_which_grades: YES,
+          csp_course_hours_per_year: YES,
+          previous_yearlong_cdo_pd: YES,
+          csp_ap_exam: YES,
+          taught_in_past: 2
+        }, Pd::Application::Teacher1819Application.last.response_scores_hash
+      )
     end
 
     test 'does not send confirmation mail on unsuccessful create' do
