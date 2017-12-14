@@ -12,7 +12,6 @@ import {
 } from './PlaygroundComponents';
 import {
   SONG_CHARGE,
-  SONG_1D,
   CP_COMMAND,
   J5_CONSTANTS
 } from './PlaygroundConstants';
@@ -214,7 +213,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
     return Promise.resolve()
         .then(() => buzzer.playSong(SONG_CHARGE, 104))
-        .then(() => buzzer.playNotes(SONG_1D, 104))
         .then(() => forEachLedInSequence(led => led.color('green'), 80))
         .then(() => forEachLedInSequence(led => led.off(), 80));
   }

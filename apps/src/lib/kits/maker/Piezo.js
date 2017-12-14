@@ -39,6 +39,13 @@ Piezo.prototype.play = function (notes, tempo = 120) {
   });
 };
 
+Piezo.prototype.playNotes = function (notes, tempo = 120) {
+  Piezo.play(notes, tempo);
+};
+
+Piezo.prototype.playSong = function (notes, tempo = 120) {
+  Piezo.play(notes, tempo);
+};
 /**
  * We override johnny-five's stop() and off() functions so that they do the
  * same thing.

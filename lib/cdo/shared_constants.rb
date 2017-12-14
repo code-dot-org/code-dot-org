@@ -264,6 +264,7 @@ module SharedConstants
       "buzzer.frequency": null,
       "buzzer.note": null,
       "buzzer.stop": null,
+      "buzzer.play": null,
       "buzzer.playNotes": null,
       "buzzer.playSong": null,
       "accelerometer.getOrientation": null,
