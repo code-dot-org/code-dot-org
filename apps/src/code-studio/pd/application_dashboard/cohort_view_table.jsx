@@ -1,6 +1,12 @@
 import React, {PropTypes} from 'react';
 import {Table} from 'reactabular';
 
+const styles = {
+  table: {
+    width: '100%'
+  }
+};
+
 export default class CohortViewTable extends React.Component {
   static propTypes = {
     data: PropTypes.array.isRequired,
@@ -52,7 +58,7 @@ export default class CohortViewTable extends React.Component {
       <Table.Provider
         className="pure-table table-striped"
         columns={this.constructColumns()}
-        style={{width: '100%'}}
+        style={styles.table}
       >
         <Table.Header />
         <Table.Body rows={this.props.data} rowKey="email"/>
