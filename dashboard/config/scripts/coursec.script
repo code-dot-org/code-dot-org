@@ -67,7 +67,7 @@ level 'courseC_artist_prog7', challenge: true
 level 'courseC_artist_prog8'
 assessment 'courseC_artist_prog6_predict1'
 bonus 'courseC_artist_prog_challenge1'
-bonus 'courseC_artist_prog_challenge2'
+bonus 'courseC_artist_prog_challenge2a'
 
 stage 'Loops: Getting Loopy'
 level 'GettingLoopy'

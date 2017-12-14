@@ -6,7 +6,7 @@
   "user_id": 63,
   "properties": {
     "skin": "collector",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1,\"value\":6,\"range\":6},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1,\"value\":6,\"range\":6},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -34,11 +34,14 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If something goes wrong, don't be afraid to start over. Don't give up!\",\"hint_id\":\"courseB_collector_loops_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b9d00964eead2e104b5efa3b200fb47c/courseB_collector_loops_challenge2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you repeat this pattern, Laurel won't hit the wall at the bottom of the cave!\\n\\n<xml><block type=\\\"maze_moveEast\\\">\\n            <next>\\n              <block type=\\\"collector_collect\\\">\\n                <next>\\n                  <block type=\\\"maze_moveWest\\\">\\n                    <next>\\n                      <block type=\\\"maze_moveWest\\\">\\n                        <next>\\n                          <block type=\\\"maze_moveSouth\\\"/>\\n                        </next>\\n                      </block>\\n                    </next>\\n                  </block>\\n                </next>\\n              </block>\\n            </next>\\n          </block></xml>\",\"hint_id\":\"courseB_collector_loops_challenge2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a01f33fd0d79c81ca3ec1f58fdb761a3/courseB_collector_loops_challenge2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using a `repeat` block to collect the final pile of treasure!\",\"hint_id\":\"courseB_collector_loops_challenge2_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8c10ef92f731766ee164d4eadcd3e9a0/courseB_collector_loops_challenge2.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Try this solution:\\n<xml>\\n  <block type=\\\"when_run\\\" deletable=\\\"false\\\" movable=\\\"false\\\">\\n    <next>\\n      <block type=\\\"controls_repeat_simplified_dropdown\\\">\\n        <title name=\\\"TIMES\\\" config=\\\"3-10\\\">4</title>\\n        <statement name=\\\"DO\\\">\\n          <block type=\\\"maze_moveEast\\\">\\n            <next>\\n              <block type=\\\"collector_collect\\\">\\n                <next>\\n                  <block type=\\\"maze_moveWest\\\">\\n                    <next>\\n                      <block type=\\\"maze_moveWest\\\">\\n                        <next>\\n                          <block type=\\\"maze_moveSouth\\\"/>\\n                        </next>\\n                      </block>\\n                    </next>\\n                  </block>\\n                </next>\\n              </block>\\n            </next>\\n          </block>\\n        </statement>\\n        <next>\\n          <block type=\\\"controls_repeat_simplified_dropdown\\\">\\n            <title name=\\\"TIMES\\\" config=\\\"3-10\\\">6</title>\\n            <statement name=\\\"DO\\\">\\n              <block type=\\\"collector_collect\\\"/>\\n            </statement>\\n          </block>\\n        </next>\\n      </block>\\n    </next>\\n  </block>\\n</xml>\",\"hint_id\":\"courseB_collector_loops_challenge2_d\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/eb3481c38ec8cdbc23ec59a7c974a31a/courseB_collector_loops_challenge2.mp3\"}]",
     "ideal": "9",
     "min_collected": "10",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-03 17:07:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-03 17:14:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-03 17:15:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-03 17:07:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-03 17:14:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-03 17:15:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-11-30 21:26:25 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-30 21:31:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-30 21:32:07 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -68,33 +71,33 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_simplified_dropdown">
-              <title name="TIMES" config="3-10">4</title>
-              <statement name="DO">
-                <block type="maze_moveEast">
-                  <next>
+            <block type="maze_moveEast">
+              <next>
+                <block type="controls_repeat_simplified_dropdown">
+                  <title name="TIMES" config="3-10">4</title>
+                  <statement name="DO">
                     <block type="collector_collect">
                       <next>
-                        <block type="maze_moveWest">
+                        <block type="maze_moveSouth">
                           <next>
-                            <block type="maze_moveWest">
-                              <next>
-                                <block type="maze_moveSouth"/>
-                              </next>
-                            </block>
+                            <block type="maze_moveWest"/>
                           </next>
                         </block>
                       </next>
                     </block>
-                  </next>
-                </block>
-              </statement>
-              <next>
-                <block type="controls_repeat_simplified_dropdown">
-                  <title name="TIMES" config="3-10">6</title>
-                  <statement name="DO">
-                    <block type="collector_collect"/>
                   </statement>
+                  <next>
+                    <block type="maze_moveWest">
+                      <next>
+                        <block type="controls_repeat_simplified_dropdown">
+                          <title name="TIMES" config="3-10">6</title>
+                          <statement name="DO">
+                            <block type="collector_collect"/>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>

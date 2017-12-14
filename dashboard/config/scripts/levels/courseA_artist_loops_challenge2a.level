@@ -1,0 +1,110 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2017-12-01T04:15:37.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "artist",
+    "instructions": "*\"Help me get these three tents set up!\"*",
+    "x": "150",
+    "y": "300",
+    "start_direction": "90",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "free_play": "false",
+    "slider_speed": ".2",
+    "embed": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "discard_background": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Blocks like this <xml>  <block type=\\\"simple_move_up_left\\\"/></xml> will let your artist move at a slant!\",\"hint_id\":\"courseA_artist_loops_challenge2_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4b19a87688425b41f14273d020a747c7/courseA_artist_loops_challenge2a.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"When you finish one tent, `jump` up twice to get to the next!\",\"hint_id\":\"courseA_artist_loops_challenge2_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d0e9e529e68c63de39e23103986701aa/courseA_artist_loops_challenge2a.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"All of your blocks will need to be inside of a loop to finish this puzzle.\",\"hint_id\":\"courseA_artist_loops_challenge2_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7aa3ce6b24e231842c539f7018d5c366/courseA_artist_loops_challenge2a.mp3\"}]",
+    "ideal": "11",
+    "instructions_important": "false",
+    "images": "[\r\n      {\"filename\": \"https://images.code.org/80022fe8213c0fa4413ce0e8ec60da3c-image-1512154174110.png\", \"position\": [0, 0]}\r\n]",
+    "markdown_instructions": "*\"Help me get the camp site ready!\"*\r\n\r\nUse the blocks in the toolbox to draw these three tents.",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/60f591153dd7b79552850153e270fed5=levelbuilder/32739.png",
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 16:24:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-01 14:33:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-03 16:06:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-24 19:35:49 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-12-01 04:17:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 04:22:30 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 04:24:47 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 04:32:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"x\",\"y\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 05:07:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"images\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 05:07:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"images\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 05:08:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"images\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 05:10:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"images\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 05:13:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"images\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 05:15:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"images\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 05:17:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 05:21:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"y\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 05:33:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"images\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 05:35:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"images\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 05:36:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"images\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 05:39:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"images\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 18:16:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 18:44:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"images\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 18:48:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"images\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 18:49:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"images\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-9">???</title>
+        </block>
+        <block type="simple_move_right"/>
+        <block type="simple_move_left"/>
+        <block type="simple_move_up_right"/>
+        <block type="simple_move_down_right"/>
+        <block type="simple_jump_up"/>
+        <block type="simple_jump_down"/>
+        <block type="simple_move_down_left"/>
+        <block type="simple_move_up_left"/>
+        <block type="simple_move_up"/>
+        <block type="simple_move_down"/>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">3</title>
+              <statement name="DO">
+                <block type="simple_move_right">
+                  <next>
+                    <block type="simple_move_right">
+                      <next>
+                        <block type="simple_move_up_left">
+                          <next>
+                            <block type="simple_move_down_left">
+                              <next>
+                                <block type="simple_jump_up">
+                                  <next>
+                                    <block type="simple_jump_up"/>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

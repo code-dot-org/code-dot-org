@@ -25,8 +25,8 @@ const styles = {
   }
 };
 
-const DataProperties = React.createClass({
-  propTypes: {
+class DataProperties extends React.Component {
+  static propTypes = {
     // from redux state
     view: PropTypes.oneOf(Object.keys(DataView)),
     // "if all of the keys are integers, and more than half of the keys between 0 and
@@ -41,23 +41,21 @@ const DataProperties = React.createClass({
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired,
     onViewChange: PropTypes.func.isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
-      showDebugView: false,
-    };
-  },
+  state = {
+    showDebugView: false,
+  };
 
-  toggleDebugView() {
+  toggleDebugView = () => {
     const showDebugView = !this.state.showDebugView;
     this.setState({showDebugView});
-  },
+  };
 
   getKeyValueJson() {
     const keyValueData = _.mapValues(this.props.keyValueData, JSON.parse);
     return JSON.stringify(keyValueData, null, 2);
-  },
+  }
 
   render() {
     const visible = (DataView.PROPERTIES === this.props.view);
@@ -87,7 +85,7 @@ const DataProperties = React.createClass({
             <a
               id="uitest-propertiesDebugLink"
               style={dataStyles.link}
-              onClick={() => this.toggleDebugView()}
+              onClick={this.toggleDebugView}
             >
               {this.state.showDebugView ? 'Key/value view' : 'Debug view'}
             </a>
@@ -127,7 +125,7 @@ const DataProperties = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default connect(state => ({
   view: state.data.view,

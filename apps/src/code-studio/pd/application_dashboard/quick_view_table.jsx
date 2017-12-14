@@ -6,7 +6,8 @@ import {Button} from 'react-bootstrap';
 import _ from 'lodash';
 import {
   StatusColors,
-  RegionalPartnerDropdownOptions
+  UnmatchedFilter,
+  AllPartnersFilter
 } from './constants';
 
 const styles = {
@@ -37,7 +38,8 @@ export class QuickViewTable extends React.Component {
     regionalPartnerFilter: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number
-    ])
+    ]),
+    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
   };
 
   static contextTypes = {
@@ -104,6 +106,25 @@ export class QuickViewTable extends React.Component {
       });
     }
 
+    if (this.props.viewType === 'teacher') {
+      columns.push({
+        property: 'principal_approval',
+        header: {
+          label: 'Principal Approval'
+        }
+      }, {
+        property: 'meets_criteria',
+        header: {
+          label: 'Meets Criteria'
+        }
+      }, {
+        property: 'total_score',
+        header: {
+          label: 'Total Score'
+        }
+      });
+    }
+
     columns.push({
       property: 'notes',
       header: {
@@ -126,6 +147,7 @@ export class QuickViewTable extends React.Component {
         format: this.formatViewButton
       }
     });
+
     return columns;
   }
 
@@ -173,9 +195,9 @@ export class QuickViewTable extends React.Component {
   constructRows() {
     let rows = this.props.data;
     if (this.props.regionalPartnerFilter) {
-      if (this.props.regionalPartnerFilter === RegionalPartnerDropdownOptions.unmatched.value) {
+      if (this.props.regionalPartnerFilter === UnmatchedFilter) {
         rows = rows.filter(row => row.regional_partner_id === null);
-      } else if (this.props.regionalPartnerFilter !== RegionalPartnerDropdownOptions.all.value) {
+      } else if (this.props.regionalPartnerFilter !== AllPartnersFilter) {
         rows = rows.filter(row => row.regional_partner_id === this.props.regionalPartnerFilter);
       }
     }

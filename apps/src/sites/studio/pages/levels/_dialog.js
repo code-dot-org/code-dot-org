@@ -2,7 +2,7 @@
 
 import { showDialog, processResults } from  '@cdo/apps/code-studio/levels/dialogHelper';
 import { getResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import { UnsubmitDialog } from '@cdo/apps/lib/ui/LevelGroupDialogs';
+import { UnsubmitDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
 
 /**
  * This file does some handling of submit button interactions.
@@ -47,6 +47,11 @@ $(document).on('click', '.submitButton', function () {
 
   var result = getResult();
   if (result.confirmationDialog) {
+    // This is only used by level_group.js, and only uses the React approach to
+    // showDialog
+    if (typeof result.confirmationDialog === 'string') {
+      throw new Error('result.confirmationDialog only supports React approach to showDialog');
+    }
     showDialog(result.confirmationDialog, function () {
       processResults(undefined, result.beforeProcessResultsHook);
     });

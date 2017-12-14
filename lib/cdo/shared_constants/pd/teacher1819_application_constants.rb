@@ -180,7 +180,7 @@ module Teacher1819ApplicationConstants
 
   VALID_SCORES = {
     regional_partner_name: YES_NO,
-    # TODO: (mehal) Include whether or not the participant is a new code.org participant
+    previous_yearlong_cdo_pd: YES_NO,
     committed: YES_NO,
     able_to_attend_single: YES_NO,
     csp_which_grades: YES_NO,
@@ -196,6 +196,9 @@ module Teacher1819ApplicationConstants
     taught_in_past: [2, 0],
     csp_ap_exam: [2, 0]
   }.freeze
+
+  ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
+  ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.map {|k, v| [k, LABEL_OVERRIDES[k] || v]}.to_h.freeze
 
   CRITERIA_SCORE_QUESTIONS_CSP = (
     VALID_SCORES.select {|_, v| v == YES_NO}.keys - [:csd_which_grades, :csd_terms_per_year]

@@ -48,7 +48,13 @@
       "soundSensor.value": null,
       "soundSensor.setScale": null,
       "lightSensor.value": null,
-      "lightSensor.setScale": null
+      "lightSensor.setScale": null,
+      "playSound": null,
+      "stopSound": null,
+      "functionParams_none": null,
+      "callMyFunction": null,
+      "comment": null,
+      "led.pulse": null
     },
     "edit_code": true,
     "embed": "false",
@@ -90,11 +96,12 @@
     "markdown_instructions": "# Challenge\r\n\r\n_Check with your teacher before pursuing this challenge_\r\n\r\nNow that you've practiced taking input from the various analog sensors and changing their scale to meet your needs, can you come up with an interesting use for sensor data? It's easy to display the raw numbers coming out of a sensor, but far more interesting to present that data in different ways.\r\n\r\nConsider the following ways you might communicate sensor data:\r\n\r\n* Use the board outputs\r\n* Change the width, height, or position of a UI element\r\n* Use conditionals to display different images based on sensor values",
     "display_name": "Challenge: Making Sense of Sensors",
     "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-21 00:08:33 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-21 00:08:33 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-27 20:20:02 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

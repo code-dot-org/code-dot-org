@@ -1,7 +1,8 @@
 /*global jQuery, CDOSounds, appOptions */
-
+import React from 'react';
 import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import { showDialog } from  '@cdo/apps/code-studio/levels/dialogHelper';
+import { MatchAngiGifDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
 
 jQuery.fn.swap = function (b) {
   // method from: http://blog.pengoworks.com/index.cfm/2008/9/24/A-quick-and-dirty-swap-method-for-jQuery
@@ -16,13 +17,12 @@ jQuery.fn.swap = function (b) {
 
 $(function () {
 
-  // This setting (pre_title) is used by only 3 levels in our application. All
-  // are match levels, so I moved this logic into here from _dialog.js. Ideally,
-  // we might also move the DOM out of haml into this JS (or remove the feature
-  // entirely).
+  // This setting (pre_title) is used by only 3 levels in our application.
   if (appOptions.dialog.preTitle) {
     // Note: This dialog depends on the presence of some haml, found in _dialog.html.haml
-    window.setTimeout(() => showDialog("pre"), 1000);
+    window.setTimeout(() => showDialog(
+      <MatchAngiGifDialog/>
+    ), 1000);
   }
 
   $(".mainblock #answers li").draggable({ revert: "invalid", stack: ".answer" });

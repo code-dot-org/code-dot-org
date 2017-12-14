@@ -76,7 +76,20 @@ STATES_WITH_DC = [
 # Allows extraction of multiple tests (relevant as of 2017)
 SPECS = [
   {
-    years: [2007, 2008, 2009, 2010, 2011],
+    years: [2007, 2008, 2009],
+    tests: {
+      csa: {
+        all: %w(J18 J32 J39 J53 J60 J74),
+        females: %w(J74)
+      },
+      csab: {
+        all: %w(K18 K32 K39 K53 K60 K74),
+        females: %w(K74)
+      }
+    }
+  },
+  {
+    years: [2010, 2011],
     tests: {
       csa: {
         all: %w(J18 J32 J39 J53 J60 J74),
@@ -360,10 +373,10 @@ def main
   print 'SHOULD I DOWNLOAD FILES? (Y/N): '
   download = gets.chomp
   if download == 'Y'
-    if (2007..2017).cover? period.to_i
-      get_xlss(period.to_i)
-    elsif download_year == 'ALL'
+    if period == 'ALL'
       get_xlss
+    elsif (2007..2017).cover? period.to_i
+      get_xlss(period.to_i)
     else
       puts 'NOTHING DOWNLOADED'
     end

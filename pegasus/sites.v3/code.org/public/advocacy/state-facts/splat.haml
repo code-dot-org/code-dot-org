@@ -106,61 +106,62 @@ theme: pdf
             high school students
           in
           = state_info[:state_name_s]
-          took the AP Computer Science exam in 2016.
+          took an AP Computer Science exam in 2017.
         - else
           Only
           %b
             = format_integer_with_commas(state_info[:ap_cs_exams_i])
-            high school students in
+            exams were taken in AP Computer Science by high school students in
           = state_info[:state_name_s]
-          took the AP Computer Science exam in 2016;
-          - if state_info[:percent_ap_female_i] != 0
-            only
-            = succeed "%" do
-              = state_info[:percent_ap_female_i]
+          in 2017.
+      %li
+        - if state_info[:percent_ap_female_i] != 0
+          Only
+          = succeed "%" do
+            = state_info[:percent_ap_female_i]
+        - else
+          none
+        were female;
+        - if state_info[:ap_hispanic_i] != 0
+          only
+          = format_integer_with_commas(state_info[:ap_hispanic_i])
+          - if state_info[:ap_hispanic_i] == 1
+            exam was taken by 
+          - else 
+            exams were taken by 
+        - else
+          no exams were taken by 
+        Hispanic or Latino students;
+        - if state_info[:ap_black_i] != 0
+          only
+          = format_integer_with_commas(state_info[:ap_black_i])
+          - if state_info[:ap_black_i] == 1
+            exam was taken by
           - else
-            none
-          were female;
-          - if state_info[:ap_hispanic_i] != 0
-            only
-            = format_integer_with_commas(state_info[:ap_hispanic_i])
-            - if state_info[:ap_hispanic_i] == 1
-              student was 
-            - else 
-              students were 
+            exams were taken by 
+        - else
+          no exams were taken by
+        Black students;
+        - if state_info[:ap_native_american_i] != 0
+          only
+          = format_integer_with_commas(state_info[:ap_native_american_i])
+          - if state_info[:ap_native_american_i] == 1
+            exam was taken by
           - else
-            no students were 
-          Hispanic or Latino;
-          - if state_info[:ap_black_i] != 0
-            only
-            = format_integer_with_commas(state_info[:ap_black_i])
-            - if state_info[:ap_black_i] == 1
-              student was
-            - else
-              students were 
+            exams were taken by
+        - else
+          no exams were taken by
+        Native American or Alaska Native students;
+        - if state_info[:ap_hawaiian_i] != 0
+          only
+          = format_integer_with_commas(state_info[:ap_hawaiian_i])
+          - if state_info[:ap_hawaiian_i] == 1
+            exam was taken by
           - else
-            no students were 
-          Black;
-          - if state_info[:ap_native_american_i] != 0
-            only
-            = format_integer_with_commas(state_info[:ap_native_american_i])
-            - if state_info[:ap_native_american_i] == 1
-              student was
-            - else
-              students were
-          - else
-            no students were
-          Native American or Alaska Native;
-          - if state_info[:ap_hawaiian_i] != 0
-            only
-            = format_integer_with_commas(state_info[:ap_hawaiian_i])
-            - if state_info[:ap_hawaiian_i] == 1
-              student was
-            - else
-              students were
-          - else
-            no students were
-          Native Hawaiian or Pacific Islander.
+            exams were taken by
+        - else
+          no exams were taken by
+        Native Hawaiian or Pacific Islander students.
       %li
         - if state_info[:schools_ap_cs_i] != 0
           Only
@@ -175,12 +176,12 @@ theme: pdf
           = surround "(", "% of" do
             = state_info[:percent_schools_ap_cs_i]
           = state_info[:state_code_s]
-          schools with AP programs) offered the AP Computer Science course in 2015-2016.
+          schools with AP programs) offered an AP Computer Science course in 2016-2017.
         - else
           No schools in
           = state_info[:state_code_s]
-          offered the AP Computer Science course in 2015-2016.
-        - if state_param != 'ND' && state_param != 'MT'
+          offered an AP Computer Science course in 2016-2017.
+        - if state_param != 'AL' && state_param != 'IL' && state_param != 'MD' && state_param != 'MN' && state_param != 'ND' && state_param != 'NE' && state_param != 'NJ'
           There are fewer AP exams taken in computer science than in any other STEM subject area.
       %li
         Universities in
@@ -241,9 +242,9 @@ theme: pdf
         and
         = format_integer_with_commas(state_info[:num_affiliates_i])
         - if state_info[:num_affiliates_i] == 1
-          K-5 facilitator
+          facilitator
         - else
-          K-5 facilitators
+          facilitators
         have provided professional learning for 
         = format_integer_with_commas(state_info[:num_elementary_trained_i])
         - if state_info[:num_elementary_trained_i] == 1

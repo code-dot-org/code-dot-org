@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
@@ -96,7 +97,7 @@ const styles = {
  * A card used on the homepage to display information about a particular course
  * or script for a user.
  */
-export default class CourseCard extends Component {
+class CourseCard extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
@@ -130,3 +131,7 @@ export default class CourseCard extends Component {
     );
   }
 }
+
+export default connect(state => ({
+  isRtl: state.isRtl,
+}))(CourseCard);

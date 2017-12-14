@@ -1,8 +1,7 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import color from "../../util/color";
-import GridContainer from './GridContainer';
 import Button from '@cdo/apps/templates/Button';
-import Responsive from '../../responsive';
 import styleConstants from '../../styleConstants';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -47,13 +46,16 @@ const styles = {
   clear: {
     clear: 'both',
     marginBottom: 60
-  }
+  },
+  container: {
+    width: '100%'
+  },
 };
 
-class TwoColumnActionBlock extends Component {
+class UnconnectedTwoColumnActionBlock extends Component {
   static propTypes = {
     isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive),
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     imageUrl: PropTypes.string.isRequired,
     heading: PropTypes.string,
     subHeading: PropTypes.string,
@@ -65,7 +67,9 @@ class TwoColumnActionBlock extends Component {
   };
 
   render() {
-    const { isRtl, responsive, imageUrl, heading, subHeading, description, buttons } = this.props;
+    const { isRtl, responsiveSize, imageUrl, heading, subHeading, description, buttons } = this.props;
+    const float = isRtl ? 'right' : 'left';
+    const width = (responsiveSize === 'lg') ? '50%' : '100%';
 
     return (
       <div>
@@ -74,58 +78,59 @@ class TwoColumnActionBlock extends Component {
             {heading}
           </div>
         )}
-        <GridContainer
-          numColumns={2}
-          isRtl={isRtl}
-          responsive={responsive}
-        >
-          {(!responsive || responsive.isResponsiveCategoryActive('lg')) && (
-            <img src={imageUrl}/>
-          )}
-          <div style={styles.textItem}>
-            {subHeading && (
-              <div style={styles.subheading}>
-                {subHeading}
-              </div>
-            )}
-            <div style={styles.description}>
-              {description}
+        <div style={styles.container}>
+          {responsiveSize === 'lg' &&
+            <div style={{float, width}}>
+              <img src={imageUrl}/>
             </div>
-            {buttons.map((button, index) =>
-              <span key={index}>
-                <Button
-                  href={button.url}
-                  color={Button.ButtonColor.gray}
-                  text={button.text}
-                />
-                &nbsp;
-                &nbsp;
-                &nbsp;
-              </span>
-            )}
+          }
+          <div style={{float, width}}>
+            <div style={styles.textItem}>
+              {subHeading && (
+                <div style={styles.subheading}>
+                  {subHeading}
+                </div>
+              )}
+              <div style={styles.description}>
+                {description}
+              </div>
+              {buttons.map((button, index) =>
+                <span key={index}>
+                  <Button
+                    href={button.url}
+                    color={Button.ButtonColor.gray}
+                    text={button.text}
+                  />
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                </span>
+              )}
+            </div>
           </div>
-        </GridContainer>
+        </div>
         <div style={styles.clear}/>
       </div>
     );
   }
 }
 
+const TwoColumnActionBlock = connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+  isRtl: state.isRtl,
+}))(UnconnectedTwoColumnActionBlock);
+
 export class LocalClassActionBlock extends Component {
   static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired,
     showHeading: PropTypes.bool.isRequired,
   };
 
   render() {
-    const { isRtl, responsive, showHeading } = this.props;
+    const { showHeading } = this.props;
     const heading = showHeading ? i18n.findLocalClassHeading() : '';
 
     return (
       <TwoColumnActionBlock
-        isRtl={isRtl}
-        responsive={responsive}
         imageUrl={pegasus('/shared/images/fill-540x289/misc/beyond-local-map.png')}
         heading={heading}
         subHeading={i18n.findLocalClassSubheading()}
@@ -137,18 +142,9 @@ export class LocalClassActionBlock extends Component {
 }
 
 export class AdministratorResourcesActionBlock extends Component {
-  static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
-  };
-
   render() {
-    const { isRtl, responsive } = this.props;
-
     return (
       <TwoColumnActionBlock
-        isRtl={isRtl}
-        responsive={responsive}
         imageUrl={pegasus('/images/fill-540x289/2015AR/newcsteacherstrained.png')}
         heading={i18n.administratorResourcesHeading()}
         subHeading={i18n.administratorResourcesSubheading()}
@@ -161,8 +157,6 @@ export class AdministratorResourcesActionBlock extends Component {
 
 export class SpecialAnnouncementActionBlock extends Component {
   static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive),
     imageUrl: PropTypes.string.isRequired,
     heading: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
@@ -173,13 +167,11 @@ export class SpecialAnnouncementActionBlock extends Component {
   };
 
   render() {
-    const { isRtl, responsive, imageUrl, heading, description, buttons } = this.props;
+    const { imageUrl, heading, description, buttons } = this.props;
 
     return (
       <div style={styles.fullWidthNonResponsive}>
         <TwoColumnActionBlock
-          isRtl={isRtl}
-          responsive={responsive}
           imageUrl={imageUrl}
           subHeading={heading}
           description={description}

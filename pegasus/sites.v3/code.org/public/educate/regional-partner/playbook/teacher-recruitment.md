@@ -17,7 +17,7 @@ ________________
 ## Teacher Application
 
 ### What does the application process look like and how is my organization involved?
-We will post the 2018 Teacher Application Process Document on Dec 13 for everything you need to know about the Code.org teacher application process including a timeline, how to use the tools, copies of the communications applicants will receive and a FAQ.
+Review the [2018 Teacher Application Process Document](https://docs.google.com/document/d/10fGyKGqX9ybLn8zaSDFcYZWdIsGELFflLsNyi1llbtM/edit#heading=h.9egyv1wsx26t) for everything you need to know about the Code.org teacher application process including a timeline, how to use the tools, and copies of the communications applicants will receive.
 
 ### What are the important dates I need to know about?
 - Jan. 16: Applications open!
