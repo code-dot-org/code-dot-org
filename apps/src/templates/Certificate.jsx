@@ -1,13 +1,14 @@
 /* global dashboard */
 
 import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
 import $ from 'jquery';
 import i18n from '@cdo/locale';
 import color from '../util/color';
 import queryString from 'query-string';
 import SocialShare from './SocialShare';
-import Responsive from '../responsive';
 import LargeChevronLink from './LargeChevronLink';
+import { ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
 
 const styles = {
   heading: {
@@ -46,7 +47,7 @@ const blankCertificates = {
   hero: require('@cdo/static/MC_Hour_Of_Code_Certificate_Hero.png'),
 };
 
-export default class Certificate extends Component {
+class Certificate extends Component {
   constructor() {
     super();
     this.state = {
@@ -57,9 +58,8 @@ export default class Certificate extends Component {
   static propTypes = {
     tutorial: PropTypes.string,
     certificateId: PropTypes.string,
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired,
     randomDonorTwitter: PropTypes.string,
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   };
 
   personalizeCertificate(session) {
@@ -79,13 +79,13 @@ export default class Certificate extends Component {
   }
 
   render() {
-    const {responsive, isRtl, tutorial, certificateId, randomDonorTwitter} = this.props;
+    const {responsiveSize, tutorial, certificateId, randomDonorTwitter} = this.props;
     const certificate = certificateId || 'blank';
     const personalizedCertificate = `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg`;
     const blankCertificate = blankCertificates[tutorial] || blankCertificates.hourOfCode;
     const imgSrc = this.state.personalized ? personalizedCertificate : blankCertificate;
     const certificateLink = `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`;
-    const desktop = (responsive.isResponsiveCategoryActive('lg') || responsive.isResponsiveCategoryActive('md'));
+    const desktop = (responsiveSize === ResponsiveSize.lg) || (responsiveSize === ResponsiveSize.md);
     const headingStyle = desktop ? styles.heading : styles.mobileHeading;
     const certificateStyle = desktop ? styles.desktopHalf : styles.mobileFull;
 
@@ -118,7 +118,6 @@ export default class Certificate extends Component {
           <LargeChevronLink
             link={`/s/${tutorial}`}
             linkText={i18n.backToActivity()}
-            isRtl={isRtl}
           />
         )}
         <div style={certificateStyle}>
@@ -161,3 +160,7 @@ export default class Certificate extends Component {
     );
   }
 }
+
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+}))(Certificate);
