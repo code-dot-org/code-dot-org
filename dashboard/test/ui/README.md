@@ -9,9 +9,7 @@ Automated UI tests for the dashboard.
 This is the best option for rapid iteration while writing a new test. ChromeDriver will run your tests in a new window on your machine.
 
 1. `cd` to the directory of this README.
-2. if this is your first time running tests via chromedriver:
-  a. run `bundle install` and then `rbenv rehash`
-  b. confirm that `which chromedriver` returns `~/.rbenv/shims/chromedriver` 
+2. if this is your first time running tests via chromedriver, run `bundle install` and then `rbenv rehash`
 3. `./runner.rb -l`
   - `-l` makes it use the chromedriver, and specifies local dashboard and pegasus domains
   - a window will pop up in the background in which you can watch the tests happen
