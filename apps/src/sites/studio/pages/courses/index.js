@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import Courses from '@cdo/apps/templates/studioHomepages/Courses';
 import {initCourseExplorer} from '@cdo/apps/courseExplorer/courseExplorer';
-import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 
 $(document).ready(showCourses);
@@ -23,7 +22,6 @@ function showCourses() {
   const signedOut = coursesData.signedout;
   const showInitialTips = !coursesData.initialtipsdismissed;
   const userId = coursesData.userid;
-  const isRtl = isRtlFromDOM();
 
   ReactDOM.render (
     <Provider store={getStore()}>
@@ -36,7 +34,6 @@ function showCourses() {
         isSignedOut={signedOut}
         showInitialTips={showInitialTips}
         userId={userId}
-        isRtl={isRtl}
       />
     </Provider>,
     document.getElementById('courses-container')
