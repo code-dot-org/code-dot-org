@@ -51,7 +51,7 @@ And(/^I close my eyes$/) do
   begin
     @eyes.close(fail_on_mismatch)
   rescue Applitools::TestFailedError => e
-    puts "#{EYES_ERROR_PREFIX} #{e}"
+    puts "<span style=\"color: red;\">#{EYES_ERROR_PREFIX} #{linkify(e)}</span>"
   end
 end
 
@@ -68,4 +68,13 @@ def ensure_eyes_available
   # Force eyes to use a consistent host OS identifier for now
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
   @eyes.host_os = ENV['APPLITOOLS_HOST_OS']
+end
+
+# Wraps any http or https url text in an <a> tag pointing to the same url.
+# Only needs to work on urls like:
+# https://eyes.applitools.com/app/batches/00112233/44556677?accountId=abcdefg.
+# Note that applitools strips the trailing dot on this url for us, so we
+# don't need to strip it here.
+def linkify(str)
+  str.to_s.gsub(/(https?:\/\/[^ ]+)/, '<a href="\1">\1</a>')
 end
