@@ -8,7 +8,6 @@ import { CourseBlocksHoc } from './CourseBlocks';
 import CourseBlocksTools from './CourseBlocksTools';
 import CourseBlocksTeacherGradeBands from './CourseBlocksTeacherGradeBands';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import Responsive from '../../responsive';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -21,7 +20,6 @@ class CoursesTeacherEnglish extends Component {
     isSignedOut: PropTypes.bool.isRequired,
     showInitialTips: PropTypes.bool.isRequired,
     userId: PropTypes.number,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
   };
 
   componentDidMount() {
