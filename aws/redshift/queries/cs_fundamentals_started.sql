@@ -11,7 +11,8 @@ FROM (SELECT user_id_teacher,
             FROM dashboard_production.sections se
               JOIN dashboard_production.followers f ON f.section_id = se.id
               JOIN dashboard_production.user_scripts us ON us.user_id = f.student_user_id
-            WHERE se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
+            -- CSF scripts: Old courses 1-4 (17,18,19,23), new courses A-F (236-241), 20-hour course (1), express (258) and pre-express (259)
+            WHERE se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) 
             AND   us.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
             AND   us.started_at IS NOT NULL
             GROUP BY 1,
@@ -32,6 +33,7 @@ FROM (SELECT user_id,
                    us.started_at
             FROM dashboard_production.user_scripts us
               JOIN dashboard_production.users u ON u.id = us.user_id
+            -- CSF scripts: Old courses 1-4 (17,18,19,23), new courses A-F (236-241), 20-hour course (1), express (258) and pre-express (259)
             WHERE us.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
             AND   u.user_type = 'student')
       GROUP BY 1)
@@ -52,6 +54,7 @@ FROM (SELECT user_id,
                    u.gender
             FROM dashboard_production.user_scripts us
               JOIN dashboard_production_pii.users u ON u.id = us.user_id
+            -- CSF scripts: Old courses 1-4 (17,18,19,23), new courses A-F (236-241), 20-hour course (1), express (258) and pre-express (259)
             WHERE us.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
             AND   gender IN ('m','f')
             AND   user_type = 'student')
@@ -78,6 +81,7 @@ FROM (SELECT user_id_teacher,
             FROM dashboard_production.sections se
               JOIN dashboard_production.followers f ON f.section_id = se.id
               JOIN dashboard_production.user_scripts us ON us.user_id = f.student_user_id
+            -- CSF scripts: Old courses 1-4 (17,18,19,23), new courses A-F (236-241), 20-hour course (1), express (258) and pre-express (259)
             WHERE se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
             AND   us.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
             AND   us.started_at IS NOT NULL
@@ -112,6 +116,7 @@ FROM (SELECT user_id,
             FROM dashboard_production.sections se
               JOIN dashboard_production.followers f ON f.section_id = se.id
               JOIN dashboard_production.user_scripts us ON us.user_id = f.student_user_id
+            -- CSF scripts: Old courses 1-4 (17,18,19,23), new courses A-F (236-241), 20-hour course (1), express (258) and pre-express (259)
             WHERE se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
             AND   us.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
             AND   se.user_id IN (SELECT DISTINCT f.student_user_id user_id
@@ -146,6 +151,7 @@ FROM (SELECT user_id,
               JOIN dashboard_production.followers f ON f.section_id = se.id
               JOIN dashboard_production.user_scripts us ON us.user_id = f.student_user_id
               JOIN dashboard_production_pii.users u ON u.id = us.user_id
+            -- CSF scripts: Old courses 1-4 (17,18,19,23), new courses A-F (236-241), 20-hour course (1), express (258) and pre-express (259)
             WHERE se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
             AND   us.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
             AND   u.gender IN ('m','f')
@@ -161,8 +167,8 @@ FROM (SELECT user_id,
                                  WHERE course = 'CS Fundamentals'))
       GROUP BY 1,
                2)
---WHERE DATE_PART(month,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
---AND   DATE_PART(year,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
+WHERE DATE_PART(month,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
+AND   DATE_PART(year,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
 GROUP BY 2
 
 UNION ALL
@@ -181,6 +187,7 @@ FROM (SELECT us.user_id,
         JOIN dashboard_production_pii.pd_enrollments pde ON pde.user_id = se.user_id
         JOIN dashboard_production.school_infos si ON si.id = pde.school_info_id
         JOIN school_stats ss ON ss.school_id = si.school_id
+      -- CSF scripts: Old courses 1-4 (17,18,19,23), new courses A-F (236-241), 20-hour course (1), express (258) and pre-express (259)
       WHERE se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
       AND   us.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
       AND   u.user_type = 'student'
