@@ -8,8 +8,10 @@ import TeachersBeyondHoc from './TeachersBeyondHoc';
 
 const styles = {
   container: {
+    width: '100%',
     marginLeft: 'auto',
     marginRight: 'auto',
+    maxWidth: 970,
   },
 };
 
