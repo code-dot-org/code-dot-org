@@ -34,8 +34,8 @@
             %button.herohocbutton{style: "min-width: 230px; margin-right: 0px; background-color: transparent; border-color: white; border-width: 2px; margin-top: 0px"}= I18n.t(entry[:text1_s])
         %div{style: "clear: both;"}
       - elsif entry[:param1_s] == "video"
-        %button{style: "min-width: 230px; margin-top: 0px; background-color: transparent; border-color: white; border-width: 2px"}
-          %span#playtext{onclick: "return showVideo_mainvideo();", style: "font-size: 18px;"}= I18n.t(entry[:text1_s])
+        %button{onclick: "return showVideo_mainvideo();", style: "min-width: 230px; margin-top: 0px; background-color: transparent; border-color: white; border-width: 2px"}
+          %span#playtext{style: "font-size: 18px;"}= I18n.t(entry[:text1_s])
 
   - if show_census_announcement
     %br/
