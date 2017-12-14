@@ -22,13 +22,9 @@ class Census::ApCsOfferingTest < ActiveSupport::TestCase
   end
 
   test "Offering creation with invalid course fails" do
-    caught = false
-    begin
+    assert_raises ArgumentError do
       build :ap_cs_offering, :with_invalid_course
-    rescue ArgumentError
-      caught = true
     end
-    assert caught, "Expected ArgumentError when creating offering with invalid course"
   end
 
   test "Offering creation with invalid school_year fails" do
