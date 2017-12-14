@@ -62,7 +62,7 @@ In order to download the raw data, click the download icon (a square with an arr
 
 ### General
 
-#### _The total <strong>number of students in CS increased<strong/> as compared to 2016:_
+#### _The total <strong>number of students in CS increased</strong> as compared to 2016:_
 * CS A: +1709 exams, or +3%
 * CS P: 43,780 exams
 * All CS Exams: +45,489 exams, or +84%
@@ -77,13 +77,13 @@ In order to download the raw data, click the download icon (a square with an arr
 * CS P: 11,417 exams
 * All CS Exams: +11,731 exams, or +139% _(CS P is the main reason for overall increase)_
 
-#### _<strong>CS passing rates (score 3+) were lower for female and underrepresented minority students</strong> in 2017. Biggest performance gaps seen in underrepresented minority students._
+#### _<strong>CS passing rates (score 3+) were lower for female and underrepresented minority students</strong> in 2017._
 * All CS Exams: female student passing rate was 67% (-4% as compared to male students)
 * All CS Exams: underrepresented minority student passing rate was 49% (-27% as compared to the students in the majority)
 
 #### _<strong>All states (+ DC) saw an increase in the number of total CS exams</strong> taken in 2017, due to the addition of CS Principles._
 * CS A: 20 states saw a decrease in CS A exams
-* CS P: All states, but Montana offered CS P
+* CS P: All states but Montana offered CS P
 
 #### _<strong>Schools that offered CS increased</strong> as compared to 2016:_
 * CS A: +5% (4,810 schools to 5,040 schools). The increase is not as great as that from 2015-2016, which had a +12% in schools offering CS A
@@ -94,9 +94,9 @@ In order to download the raw data, click the download icon (a square with an arr
 ### Female student participation
 
 #### _Female students <strong>comprised a low percent of AP CS exams</strong>:_
-* CS A: 23% of exams were female students. This is 0% change from 2016 and is the lowest rate of female student participation for any AP Exam (same as 2016)
-* CS P: 30% of exams were female students. This is the 4th lowest rate of female participation for any AP exam (Physics and CS A have lower rates)
-* All CS Exams: 26% of all CS Exams
+* CS A: 23% of exams were taken by female students. This is 0% change from 2016 and is the lowest rate of female student participation for any AP Exam (same as 2016)
+* CS P: 30% of exams were taken by female students. This is the 4th lowest rate of female participation for any AP exam (Physics and CS A have lower rates)
+* All CS Exams: 26% of all CS exams were taken by female students.
 
 #### _Female student <strong>passing rate was lower than male students</strong>:_
 * CS A: female student passing rate was 64% of exams (lower than male students by -3.8% passing rate and a mean score difference of -0.13)
@@ -109,9 +109,9 @@ In order to download the raw data, click the download icon (a square with an arr
 For 2017 College Board data, we consider the following ethnic group categories to be underrepresented minorities: American Indian/Alaska Native, Black, Hispanic/Latino, and Native Hawaiian/Other Pacific Islander. (Other categories reported by the College Board are Asian, White, Two or more races, Other, and No response.) Note that until 2016, the College Board reported demographics using different categories; for those years, the following ethnic group categories are considered to be underrepresented minorities: American Indian, Black, Mexican American, Puerto Rican, and Other Hispanic. (Other ethnic categories reported by the College Board include Asian, White, Other, and Not stated.) The majority is defined as White and Asian students.
 
 #### _Underrepresented minority students <strong>comprised a low percent of AP CS exams</strong>:_
-* CS A: 16% of exams were minority students. This is the 7th lowest rate of participation for any AP exam (calculus, physics and languages have lower rates) and 4th lowest in AP STEM exams.
-* CS P: 26% of exams were minority students. This is the 2nd highest rate of underrepresented minority student participation across STEM AP exams (Environmental Science is higher at 28%).
-* All CS Exams: 20% of all CS exams were minority students.
+* CS A: 16% of exams were taken by minority students. This is the 7th lowest rate of participation for any AP exam (calculus, physics and languages have lower rates) and 4th lowest in AP STEM exams.
+* CS P: 26% of exams were taken by minority students. This is the 2nd highest rate of underrepresented minority student participation across STEM AP exams (Environmental Science is higher at 28%).
+* All CS Exams: 20% of all CS exams were taken by minority students.
 
 #### _Underrepresented minority student <strong>passing rate was lower than the students in the majority</strong>:_
 * CS A: minority student passing rate was 44% of exams (lower than the students in the majority by -28%). Black students scored lower at an average score of 2.08, with a mean difference of 1.40 as compared to students in the majority.
@@ -137,12 +137,12 @@ Idaho (+64 exams from 59 exams), Utah (+104 exams from 129 exams), and Rhode Isl
 
 #### _All states saw increases in the number of all CS exams_
 * CS A: 32 states saw an increase in CS A exams (down by 3 states from 2016) and <strong>6 states doubled their female student participation</strong>.
-* Highest percent gains as compared to 2016 were in Montana (+2 exams from 0 exams), Mississippi (+1 exams from 0 exams), South Dakota (+2 exams from 1 exams), Rhode Island (+19 exams from 12 exams), and Utah (+23  exams from 16 exams)
+* Highest percent gains as compared to 2016 were in Montana (+2 exams from 0 exams), Mississippi (+1 exam from 0 exams), South Dakota (+2 exams from 1 exam), Rhode Island (+19 exams from 12 exams), and Utah (+23  exams from 16 exams)
 * Lowest percent gains as compared to 2016 were in North Dakota (down 83% to 1 exam), Vermont (down 57% to 6 exams), and South Dakota (down 52% to 26 exams)
 * CS P: All states but Montana had CS P exam participants
 * Highest percent of CS P exams from their state total were in Mississippi (23 exams, or 96% were CS P), North Dakota (10 exams, or 90% were CS P), and Alabama (408 exams, or 88% were CS P)
 * All CS Exams: <strong>27 States more than doubled their female student CS exams</strong> in 2017
-* Highest percent gains as compared to 2016 were in Mississippi (+1 exams from 0 exams), Alabama (+402 exams from 61 exams), and Idaho (+78 exams from 14 exams).
+* Highest percent gains as compared to 2016 were in Mississippi (+1 exam from 0 exams), Alabama (+402 exams from 61 exams), and Idaho (+78 exams from 14 exams).
 * 2 states showed the lowest percent gains as compared to 2016: Iowa (+7 exams, or 14% gain from 51 exams) and Washington (+166 exams, or 28% gain from 583 exams)
 * All CS Exams: In <strong>39 States male students had higher passing rates than female students</strong>
 * States with the poorest/higher gender gap passing rate were South Dakota (0 passed; -81% passing rate compared to male students), Wyoming (0 passed; -75% passing rate compared to male students), Montana (0 passed; -64% passing rate compared to male students), and Kansas (22% female students passed; -51% passing rate compared to male students)
@@ -153,7 +153,7 @@ Idaho (+64 exams from 59 exams), Utah (+104 exams from 129 exams), and Rhode Isl
 
 #### _All states but 4 (Wyoming, South Dakota, Kansas, New Hampshire) saw an increases in the number of all CS exams_
 * CS A: 27 states saw an increase in CS A exams and <strong>8 states doubled their minority student participation</strong>.
-* Highest percent gains as compared to 2016 were in: Mississippi (+5 exams from 1 exam), Montana (+2 exams from 0 exams), North Dakota (+1  exams from 0 exams), Nevada (+29 exams from 15 exams), and Rhode Island (+9  exams from 7 exams)
+* Highest percent gains as compared to 2016 were in: Mississippi (+5 exams from 1 exam), Montana (+2 exams from 0 exams), North Dakota (+1  exam from 0 exams), Nevada (+29 exams from 15 exams), and Rhode Island (+9  exams from 7 exams)
 * Lowest percent gains as compared to 2016 were in Wyoming (down 100% to 0 exams), South Dakota (down 66% to 1 exam), and Alaska (down 66% to 1 exam)
 * All CS Exams: <strong>32 States more than doubled their minority student participation</strong> in 2017
 * Highest percent gains as compared to 2016 were in North Dakota (+6 exams from 0 exams), Mississippi (+22 exams from 1 exams), Nevada (+132 exams from 15 exams), and Alabama (+208 exams from 35 exams)

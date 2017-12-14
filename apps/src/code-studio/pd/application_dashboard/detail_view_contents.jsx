@@ -219,7 +219,7 @@ export class DetailViewContents extends React.Component {
     if (this.props.canLock) {
       // Render the select with the lock button in a fancy InputGroup
       return (
-        <InputGroup style={{marginRight: 5}}>
+        <InputGroup style={{maxWidth: 200, marginRight: 5}}>
           <InputGroup.Button>
             {this.renderLockButton()}
           </InputGroup.Button>
