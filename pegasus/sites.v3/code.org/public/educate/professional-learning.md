@@ -80,17 +80,17 @@ At this point, our in-person  workshops are only available in the United States,
 
 You can also contact our [international partners](https://hourofcode.com/international-partners) for more information on local professional learning opportunities.
 
-## Professional Learning Philosophy
+## Goals and approach to professional learning
 
 Code.org has worked with partners and experts in the field to develop and support a blended Professional Learning model that embraces the importance of in-person, cooperative workshops and uses online and asynchronous components to provide an ongoing community and support when teachers are in the classroom.
 
 This experience builds on the work of others and recognizes that one size does not fit all. The Professional Learning is tailored for each course and curriculum developed or selected by Code.org. All of our experiences use engaging techniques to prompt teachers to reflect on the pedagogy of teaching computer science while also becoming more familiar with the subject. All include hands-on experiences, collaboration with colleagues, and are accessible to teachers with any or no prior knowledge of computer science.
 
-For the intellectually curious, we've also published our [professional learning philosophy](/educate/professional-development-philosophy) and [curriculum values](/educate/curriculum/values) which we use to guide our own team's effort as well as our work with our education partners.
+For the intellectually curious, we've also published our [professional learning values](educate/professional-learning/values) and [curriculum values](/educate/curriculum/values) which we use to guide our own team's effort as well as our work with our education partners.
 
 ## Facilitate with Code.org
 
-Code.org's [Facilitator Development Program](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on Code.org's curriculum. 
+Code.org's [Facilitator Development Program](/educate/professional-learning/facilitator) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on Code.org's curriculum. 
 
 Help bring professional learning opportunities to your community by becoming a Code.org Facilitator!
 

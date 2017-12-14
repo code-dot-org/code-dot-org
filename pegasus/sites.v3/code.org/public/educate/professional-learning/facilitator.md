@@ -17,7 +17,7 @@ theme: responsive
 
 Code.org recognizes the need for highly-qualified, flexible, and knowledgeable facilitators who can develop and support the next generation of computer science (CS) educators. 
 
-**If you are interested in joining the program in 2019-2020, please sign up below.**
+Applications for the 2018-19 cohort have closed. **If you are interested in joining the program in 2019-2020, please sign up below.**
 
 [<button>Tell me when applications open!</button>](https://goo.gl/forms/IPyERiuLCRG6jF0G3)
 
