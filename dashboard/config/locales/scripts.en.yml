@@ -4600,6 +4600,8 @@ en:
               name: Arrays
             Making Music:
               name: Making Music
+            Arrays and For Loops:
+              name: Arrays and For Loops
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5258,6 +5260,8 @@ en:
               name: Bounce
             NewBounce:
               name: NewBounce
+            F PlayLab Variables:
+              name: F PlayLab Variables
           title: ''
           description_audience: ''
           description_short: ''
@@ -6788,6 +6792,8 @@ en:
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
           title: Intro to App Lab Staging
           description_audience: ''
           description_short: ''
@@ -6823,7 +6829,7 @@ en:
           title: Create - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
-          description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
+          description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -6839,6 +6845,14 @@ en:
             standalone template:
               name: standalone template
           title: 'CSP3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        aws-demo:
+          stages:
+            new stage:
+              name: new stage
+          title: AWS Demo
           description_audience: ''
           description_short: ''
           description: ''

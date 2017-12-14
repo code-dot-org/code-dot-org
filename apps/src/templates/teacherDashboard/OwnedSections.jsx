@@ -40,7 +40,6 @@ const styles = {
 
 class OwnedSections extends React.Component {
   static propTypes = {
-    isRtl: PropTypes.bool,
     queryStringOpen: PropTypes.string,
 
     // redux provided
@@ -78,7 +77,6 @@ class OwnedSections extends React.Component {
 
   render() {
     const {
-      isRtl,
       sectionIds,
       hiddenSectionIds,
       asyncLoadComplete,
@@ -96,7 +94,7 @@ class OwnedSections extends React.Component {
     return (
       <div className="uitest-owned-sections">
         {!hasSections &&
-          <SetUpSections isRtl={isRtl}/>
+          <SetUpSections/>
         }
         {hasSections && (
           <div>
@@ -107,7 +105,6 @@ class OwnedSections extends React.Component {
               dismissible={false}
               buttonText={i18n.newSectionCreate()}
               newWindow={true}
-              isRtl={isRtl}
               onButtonClick={this.beginEditingNewSection}
               buttonClassName="uitest-newsection"
             />

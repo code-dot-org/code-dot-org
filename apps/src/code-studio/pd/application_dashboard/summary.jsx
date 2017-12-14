@@ -7,13 +7,15 @@ import { connect } from 'react-redux';
 import SummaryTable from './summary_table';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import Spinner from '../components/spinner';
-import { AllPartnersFilter } from './constants';
+import {
+  AllPartnersFilter,
+  RegionalPartnerDropdownOptions as dropdownOptions
+} from './constants';
 import $ from 'jquery';
 
 export class Summary extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string.isRequired,
-    regionalPartners: PropTypes.array,
     isWorkshopAdmin: PropTypes.bool
   }
 
@@ -68,6 +70,7 @@ export class Summary extends React.Component {
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
             regionalPartnerFilter={this.state.regionalPartnerFilter}
+            additionalOptions={dropdownOptions}
           />
         }
         <h1>{this.state.regionalPartnerName}</h1>
@@ -86,6 +89,16 @@ export class Summary extends React.Component {
             caption="CS Principles Facilitators"
             data={this.state.applications["csp_facilitators"]}
             path="csp_facilitators"
+          />
+          <SummaryTable
+            caption="CS Discoveries Teachers"
+            data={this.state.applications["csd_teachers"]}
+            path="csd_teachers"
+          />
+          <SummaryTable
+            caption="CS Principles Teachers"
+            data={this.state.applications["csp_teachers"]}
+            path="csp_teachers"
           />
         </div>
       </div>

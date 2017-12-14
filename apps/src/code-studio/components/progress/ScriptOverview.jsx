@@ -17,8 +17,8 @@ import ScriptOverviewHeader from './ScriptOverviewHeader';
 /**
  * Stage progress component used in level header and script overview.
  */
-const ScriptOverview = React.createClass({
-  propTypes: {
+class ScriptOverview extends React.Component {
+  static propTypes = {
     onOverviewPage: PropTypes.bool.isRequired,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
@@ -39,7 +39,7 @@ const ScriptOverview = React.createClass({
     currentCourseId: PropTypes.number,
     scriptHasLockableStages: PropTypes.bool.isRequired,
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
-  },
+  };
 
   render() {
     const {
@@ -96,10 +96,9 @@ const ScriptOverview = React.createClass({
       </div>
     );
   }
-});
+}
 
-export const UnconnectedScriptOverview = ScriptOverview;
-
+export const UnconnectedScriptOverview = Radium(ScriptOverview);
 export default connect(state => ({
   perLevelProgress: state.progress.levelProgress,
   scriptCompleted: !!state.progress.scriptCompleted,
@@ -113,4 +112,4 @@ export default connect(state => ({
   currentCourseId: state.progress.courseId,
   scriptHasLockableStages: state.stageLock.lockableAuthorized && hasLockableStages(state.progress),
   scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
-}))(Radium(ScriptOverview));
+}))(UnconnectedScriptOverview);

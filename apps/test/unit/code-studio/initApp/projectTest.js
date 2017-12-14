@@ -49,14 +49,46 @@ describe('project.js', () => {
 
   describe('project.getShareUrl', () => {
     let fakeLocation;
-    const fakeProjectId = 'fake-project-id';
+    const fakeProjectId = '<project-id>';
+
+    const ORIGINS = [
+      {
+        studio:'https://studio.code.org',
+        codeProjects: 'https://codeprojects.org',
+      },
+      {
+        studio:'https://test-studio.code.org',
+        codeProjects: 'https://test.codeprojects.org',
+      },
+      {
+        studio:'https://staging-studio.code.org',
+        codeProjects: 'https://staging.codeprojects.org',
+      },
+      {
+        studio:'http://localhost-studio.code.org:3000',
+        codeProjects: 'http://localhost.codeprojects.org:3000',
+      },
+    ];
+
+    const NORMAL_APP_TYPES = [
+      'artist',
+      'playlab',
+      'applab',
+      'gamelab',
+    ];
+
+    const CODEPROJECTS_APP_TYPES = [
+      'weblab'
+    ];
 
     beforeEach(() => {
       sinon.stub(project, 'getLocation').callsFake(() => fakeLocation);
       sinon.stub(project, 'getCurrentId').returns(fakeProjectId);
+      sinon.stub(project, 'getStandaloneApp');
     });
 
     afterEach(() => {
+      project.getStandaloneApp.restore();
       project.getCurrentId.restore();
       project.getLocation.restore();
     });
@@ -66,69 +98,46 @@ describe('project.js', () => {
       fakeLocation.href = url;
     }
 
-    [
-      'artist',
-      'playlab',
-      'applab',
-      'gamelab',
-    ].forEach((standaloneApp) => {
-      describe(standaloneApp, () => {
-        beforeEach(() => sinon.stub(project, 'getStandaloneApp').returns(standaloneApp));
-        afterEach(() => project.getStandaloneApp.restore());
+    ORIGINS.forEach(({studio: origin, codeProjects: codeProjectsOrigin}) => {
+      describe(`on ${origin}`, () => {
+        NORMAL_APP_TYPES.forEach((appType) => {
+          const expected = `${origin}/projects/${appType}/${fakeProjectId}`;
+          describe(`${appType} projects share to ${expected}`, () => {
+            beforeEach(() => project.getStandaloneApp.returns(appType));
 
-        it('studio.code.org', () => {
-          setFakeLocation(`https://studio.code.org/projects/${standaloneApp}/${fakeProjectId}/edit`);
-          expect(project.getShareUrl())
-            .to.equal(`https://studio.code.org/projects/${standaloneApp}/${fakeProjectId}`);
+            it(`from project edit page`, () => {
+              setFakeLocation(`${origin}/projects/${appType}/${fakeProjectId}/edit`);
+              expect(project.getShareUrl()).to.equal(expected);
+            });
+
+            it(`from a script level`, () => {
+              setFakeLocation(`${origin}/s/csp3/stage/10/puzzle/4`);
+              expect(project.getShareUrl()).to.equal(expected);
+            });
+          });
         });
 
-        it('test-studio.code.org', () => {
-          setFakeLocation(`https://test-studio.code.org/projects/${standaloneApp}/${fakeProjectId}/edit`);
-          expect(project.getShareUrl())
-            .to.equal(`https://test-studio.code.org/projects/${standaloneApp}/${fakeProjectId}`);
+        CODEPROJECTS_APP_TYPES.forEach((appType) => {
+          const expected = `${codeProjectsOrigin}/${fakeProjectId}`;
+          describe(`${appType} projects share to ${expected}`, () => {
+            beforeEach(() => project.getStandaloneApp.returns(appType));
+
+            it(`from project edit page`, () => {
+              setFakeLocation(`${origin}/projects/${appType}/${fakeProjectId}/edit`);
+              expect(project.getShareUrl()).to.equal(expected);
+            });
+
+            it(`from project view page`, () => {
+              setFakeLocation(`${origin}/projects/${appType}/${fakeProjectId}/view`);
+              expect(project.getShareUrl()).to.equal(expected);
+            });
+
+            it(`from a script level`, () => {
+              setFakeLocation(`${origin}/s/csp3/stage/10/puzzle/4`);
+              expect(project.getShareUrl()).to.equal(expected);
+            });
+          });
         });
-        it('staging-studio.code.org', () => {
-          setFakeLocation(`https://staging-studio.code.org/projects/${standaloneApp}/${fakeProjectId}/edit`);
-          expect(project.getShareUrl())
-            .to.equal(`https://staging-studio.code.org/projects/${standaloneApp}/${fakeProjectId}`);
-        });
-
-        it('localhost-studio.code.org:3000', () => {
-          setFakeLocation(`http://localhost-studio.code.org:3000/projects/${standaloneApp}/${fakeProjectId}/edit`);
-          expect(project.getShareUrl())
-            .to.equal(`http://localhost-studio.code.org:3000/projects/${standaloneApp}/${fakeProjectId}`);
-        });
-      });
-    });
-
-    describe('weblab', () => {
-      beforeEach(() => sinon.stub(project, 'getStandaloneApp').returns('weblab'));
-      afterEach(() => project.getStandaloneApp.restore());
-
-      it('studio.code.org => codeprojects.org', () => {
-        setFakeLocation('https://studio.code.org/');
-        expect(project.getShareUrl()).to.equal(`https://codeprojects.org/${fakeProjectId}`);
-      });
-
-      it('test-studio.code.org => test.codeprojects.org', () => {
-        setFakeLocation('https://test-studio.code.org/');
-        expect(project.getShareUrl()).to.equal(`https://test.codeprojects.org/${fakeProjectId}`);
-        setFakeLocation('https://test.studio.code.org/');
-        expect(project.getShareUrl()).to.equal(`https://test.codeprojects.org/${fakeProjectId}`);
-      });
-
-      it('staging-studio.code.org => staging.codeprojects.org', () => {
-        setFakeLocation('https://staging-studio.code.org/');
-        expect(project.getShareUrl()).to.equal(`https://staging.codeprojects.org/${fakeProjectId}`);
-        setFakeLocation('https://staging.studio.code.org/');
-        expect(project.getShareUrl()).to.equal(`https://staging.codeprojects.org/${fakeProjectId}`);
-      });
-
-      it('localhost-studio.code.org:3000 => localhost.codeprojects.org:3000', () => {
-        setFakeLocation('http://localhost-studio.code.org:3000/');
-        expect(project.getShareUrl()).to.equal(`http://localhost.codeprojects.org:3000/${fakeProjectId}`);
-        setFakeLocation('http://localhost.studio.code.org:3000/');
-        expect(project.getShareUrl()).to.equal(`http://localhost.codeprojects.org:3000/${fakeProjectId}`);
       });
     });
   });

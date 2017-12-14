@@ -4,18 +4,20 @@ import {expect} from '../../../util/configuredChai';
 import i18n from '@cdo/locale';
 import {joinedSections} from './homepagesTestData';
 import SectionsTable from '@cdo/apps/templates/studioHomepages/SectionsTable';
+import {combineReducers, createStore} from 'redux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 describe('SectionsTable', () => {
+  const store = createStore(combineReducers({isRtl}));
 
   it('shows column headers for students', () => {
     const wrapper = shallow(
       <SectionsTable
         sections={joinedSections}
-        isRtl={false}
         isTeacher={false}
         canLeave={false}
-      />
-    );
+      />, {context: {store}},
+    ).dive();
     [
       i18n.section(),
       i18n.course(),
@@ -36,11 +38,10 @@ describe('SectionsTable', () => {
     const wrapper = shallow(
       <SectionsTable
         sections={joinedSections}
-        isRtl={false}
         isTeacher={true}
         canLeave={false}
-      />
-    );
+      />, {context: {store}},
+    ).dive();
     [
       i18n.section(),
       i18n.course(),
@@ -61,11 +62,10 @@ describe('SectionsTable', () => {
     const wrapper = shallow(
       <SectionsTable
         sections={joinedSections}
-        isRtl={false}
         isTeacher={false}
         canLeave={false}
-      />
-    );
+      />, {context: {store}},
+    ).dive();
     expect(wrapper.find('Button').exists()).to.be.false;
   });
 
@@ -73,11 +73,10 @@ describe('SectionsTable', () => {
     const wrapper = shallow(
       <SectionsTable
         sections={joinedSections}
-        isRtl={false}
         isTeacher={false}
         canLeave={true}
-      />
-    );
+      />, {context: {store}},
+    ).dive();
     expect(wrapper.find('Button').exists()).to.be.true;
   });
 
@@ -85,11 +84,10 @@ describe('SectionsTable', () => {
     const wrapper = shallow(
       <SectionsTable
         sections={joinedSections}
-        isRtl={false}
         isTeacher={true}
         canLeave={false}
-      />
-    );
+      />, {context: {store}},
+    ).dive();
     expect(wrapper.find('Button').exists()).to.be.false;
   });
 
@@ -97,11 +95,10 @@ describe('SectionsTable', () => {
     const wrapper = shallow(
       <SectionsTable
         sections={joinedSections}
-        isRtl={false}
         isTeacher={false}
         canLeave={false}
-      />
-    );
+      />, {context: {store}},
+    ).dive();
     expect(wrapper.find('.test-row')).to.have.length(4);
     joinedSections.forEach((section) => {
       expect(wrapper).to.containMatchingElement(

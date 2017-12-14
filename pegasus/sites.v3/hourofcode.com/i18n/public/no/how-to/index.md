@@ -54,9 +54,9 @@ Ta med hodetelefoner til elevene dine, eller be de ta med sine egne, dersom oppl
 
 **Når elevene har spørsmål eller synes noe er vanskelig, er det helt greit å svare:**
 
-- "Jeg vet ikke. La oss finne ut sammen."
-- «Det er ikke alltid teknologien oppfører seg slik vi ønsker.»
-- "Å lære seg å programmere er som å lære seg et nytt språk; Du kan ikke være flytende med en gang."
+- "Jeg vet ikke. La oss finne det ut sammen."
+- "Det er ikke alltid teknologien oppfører seg slik vi ønsker."
+- "Å lære seg å programmere er som å lære seg et nytt språk; du kan det ikke flytende med en gang."
 
 **Hva hvis en elev blir ferdig før tiden?**
 
@@ -82,7 +82,7 @@ Ta med hodetelefoner til elevene dine, eller be de ta med sine egne, dersom oppl
 - [Skriv ut diplomer](<%= resolve_url('https://code.org/certificates')%>) til elevene.
 - [Skriv ut "Jeg gjennomførte Kodetimen!"](<%= resolve_url('/promote/resources#stickers') %>)-klistremerker til elevene.
 - [Bestill t-skjorter ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)til skolen din.
-- Del bilder og videoer av Kodetimen arrangement på sosiale medier. Bruk #HourOfCode og @codeorg så vi kan fremheve din suksess også!
+- Del bilder og videoer av Kodetimen-arrangement på sosiale medier. Bruk emneknaggene #kodetimen, #HourOfCode og @codeorg så vi også kan dra nytte av dine erfaringer. Husk å spørre barna om tillatelse til å dele bilder der de er med!
 
 [col-33]
 

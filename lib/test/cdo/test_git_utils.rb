@@ -2,8 +2,8 @@ require_relative '../test_helper'
 require 'cdo/git_utils'
 require 'cdo/rake_utils'
 
-DASHBOARD_MATCH_GLOBS = ['dashboard/**/*', 'lib/**/*', 'shared/**/*']
-DASHBOARD_IGNORE_GLOBS = ['dashboard/test/ui/**/*']
+DASHBOARD_MATCH_GLOBS = ['dashboard/**/*', 'lib/**/*', 'shared/**/*'].freeze
+DASHBOARD_IGNORE_GLOBS = ['dashboard/test/ui/**/*'].freeze
 
 class GitUtilsTest < Minitest::Test
   def test_dashboard_globs

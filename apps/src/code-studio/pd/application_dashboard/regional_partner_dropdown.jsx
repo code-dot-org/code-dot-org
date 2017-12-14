@@ -8,11 +8,10 @@ import { connect } from 'react-redux';
 import { FormGroup, ControlLabel } from 'react-bootstrap';
 import Select from "react-select";
 import { SelectStyleProps } from '../constants';
-import { RegionalPartnerDropdownOptions as dropdownOptions } from './constants';
 
 const styles = {
   select: {
-    maxWidth: 500
+    maxWidth: '500px'
   }
 };
 
@@ -23,13 +22,18 @@ export class RegionalPartnerDropdown extends React.Component {
       PropTypes.string,
       PropTypes.number
     ]),
-    regionalPartners: PropTypes.arrayOf(PropTypes.string)
+    regionalPartners: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string
+    })),
+    additionalOptions: PropTypes.array,
   }
 
   componentWillMount() {
     this.regionalPartners = this.props.regionalPartners.map(v => ({value: v.id, label: v.name}));
-    this.regionalPartners.unshift(dropdownOptions.unmatched);
-    this.regionalPartners.unshift(dropdownOptions.all);
+    if (this.props.additionalOptions) {
+      this.props.additionalOptions.forEach((option) => this.regionalPartners.unshift({value: option.value, label: option.label}));
+    }
   }
 
   render() {
