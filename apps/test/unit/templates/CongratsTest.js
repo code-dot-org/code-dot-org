@@ -2,6 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../util/configuredChai';
 import Congrats from '@cdo/apps/templates/Congrats';
+import Certificate from '@cdo/apps/templates/Certificate';
 
 describe('Congrats', () => {
   it('renders a Certificate component', () => {
@@ -13,7 +14,7 @@ describe('Congrats', () => {
         isEnglish={true}
       />
     );
-    expect(wrapper.find('Certificate').exists()).to.be.true;
+    expect(wrapper.find(Certificate).exists()).to.be.true;
   });
 
   it('renders a StudentsBeyondHoc component, regardless of user type', () => {

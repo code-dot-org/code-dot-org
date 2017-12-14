@@ -147,7 +147,6 @@ function showHomepage() {
                 id: announcementId
               }
             ]}
-            hocLaunch={homepageData.hoc_launch}
             courses={homepageData.courses}
             joinedSections={homepageData.joined_sections}
             topCourse={homepageData.topCourse}
