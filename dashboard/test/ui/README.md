@@ -20,6 +20,8 @@ This is the best option for rapid iteration while writing a new test. ChromeDriv
   - `-f` streams the log in your shell, so it will be updated as new lines are written
 8. To run a single ui test, you can simply run `rake test:ui feature=path/to/test.feature`
 
+If you get the error `unknown error: cannot get automation extension`, follow the [chromedriver-helper instructions](https://github.com/flavorjones/chromedriver-helper#updating-to-latest-chromedriver) to upgrade to latest chromedriver.
+
 ### With remote browsers: Saucelabs
 
 Running tests remotely on [Saucelabs](https://saucelabs.com) lets you review results, view visual logs of test runs and even watch live video of your tests running on different browsers in real-time.
