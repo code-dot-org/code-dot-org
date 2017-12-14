@@ -238,7 +238,7 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
           {this.renderAssignedWorkshopList()}
         </div>
 
-        {this.isUnableToAttendAssignedWorkshop() && [1,2].includes(this.props.data.regionalPartnerGroup) &&
+        {this.isUnableToAttendAssignedWorkshop() && !this.props.data.teachercon &&
           <div style={styles.indented}>
             <p style={styles.formText}>
               <strong>
