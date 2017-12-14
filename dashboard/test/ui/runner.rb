@@ -28,6 +28,7 @@ require 'socket'
 require 'parallel_tests/cucumber/scenarios'
 
 require_relative './utils/selenium_browser'
+require_relative './utils/selenium_constants'
 
 require 'active_support/core_ext/object/blank'
 
@@ -39,7 +40,6 @@ LOCAL_LOG_DIRECTORY = 'log'
 S3_LOGS_BUCKET = 'cucumber-logs'
 S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
-EYES_ERROR_PREFIX = '[Applitools Eyes error]'
 
 #
 # Run a set of UI/Eyes tests according to the provided options.
