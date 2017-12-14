@@ -18,6 +18,7 @@
 #  response_scores                     :text(65535)
 #  application_guid                    :string(255)
 #  decision_notification_email_sent_at :datetime
+#  accepted_at                         :date
 #
 # Indexes
 #
@@ -30,6 +31,7 @@
 #  index_pd_applications_on_type                 (type)
 #  index_pd_applications_on_user_id              (user_id)
 #
+
 require 'cdo/shared_constants/pd/teacher1819_application_constants'
 
 module Pd::Application
