@@ -132,7 +132,6 @@ const PictureLoginCard = (props) => (
     subtitle={i18n.loginTypePictureAgeGroup()}
     description={i18n.loginTypePictureDescription()}
     buttonText={i18n.loginTypePictureButton()}
-    isRtl={false}
     onClick={() => props.onClick('picture')}
     disabled={props.disabled}
   />
@@ -149,7 +148,6 @@ const WordLoginCard = (props) => (
     subtitle={i18n.loginTypeWordAgeGroup()}
     description={i18n.loginTypeWordDescription()}
     buttonText={i18n.loginTypeWordButton()}
-    isRtl={false}
     onClick={() => props.onClick('word')}
     disabled={props.disabled}
   />
@@ -163,7 +161,6 @@ const EmailLoginCard = (props) => (
     subtitle={i18n.loginTypeEmailAgeGroup()}
     description={i18n.loginTypeEmailDescription()}
     buttonText={i18n.loginTypeEmailButton()}
-    isRtl={false}
     onClick={() => props.onClick('email')}
     disabled={props.disabled}
   />
@@ -175,7 +172,6 @@ const GoogleClassroomCard = (props) => (
     title={i18n.loginTypeGoogleClassroom()}
     description={i18n.loginTypeGoogleClassroomDescription()}
     buttonText={i18n.loginTypeGoogleClassroomButton()}
-    isRtl={false}
     onClick={() => props.onClick('google')}
     disabled={props.disabled}
   />
@@ -187,7 +183,6 @@ const MicrosoftClassroomCard = (props) => (
     title={i18n.loginTypeMicrosoftClassroom()}
     description={i18n.loginTypeMicrosoftClassroomDescription()}
     buttonText={i18n.loginTypeMicrosoftClassroomButton()}
-    isRtl={false}
     onClick={() => props.onClick('microsoft')}
     disabled={props.disabled}
   />
@@ -199,7 +194,6 @@ const CleverCard = (props) => (
     title={i18n.loginTypeClever()}
     description={i18n.loginTypeCleverDescription()}
     buttonText={i18n.loginTypeCleverButton()}
-    isRtl={false}
     onClick={() => props.onClick('clever')}
     disabled={props.disabled}
   />
