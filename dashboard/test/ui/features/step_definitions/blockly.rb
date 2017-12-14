@@ -49,10 +49,10 @@ When /^I drag block "([^"]*)" into first position in repeat block "([^"]*)"$/ do
   @browser.execute_script code
 end
 
-Then /^block "([^"]*)" is at offset "([^"]*), ([^"]*)"$/ do |block, x, y|
+Then /^block "([^"]*)" is near offset "([^"]*), ([^"]*)"$/ do |block, x, y|
   point = get_block_coordinates(get_block_id(block))
-  expect(point.x).to eq(x.to_i)
-  expect(point.y).to eq(y.to_i)
+  expect(point.x).to be_within(2).of(x.to_i)
+  expect(point.y).to be_within(2).of(y.to_i)
 end
 
 Then /^block "([^"]*)" is((?:n't| not)?) at ((?:blockly )?)location "([^"]*)"$/ do |block, negation, is_blockly, location_identifier|
