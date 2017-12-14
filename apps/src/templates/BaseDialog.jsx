@@ -17,6 +17,7 @@ var BaseDialog = React.createClass({
     fullWidth: PropTypes.bool,
     useUpdatedStyles: PropTypes.bool,
     useDeprecatedGlobalStyles: PropTypes.bool,
+    noModalStyles: PropTypes.bool,
     children: PropTypes.node,
     fixedWidth: PropTypes.number,
     fixedHeight: PropTypes.number,
@@ -111,6 +112,9 @@ var BaseDialog = React.createClass({
       modalClassNames = "modal dash_modal in";
       modalBodyClassNames = "modal-body dash_modal_body";
       modalBackdropClassNames = "modal-backdrop in";
+    } else if (this.props.noModalStyles) {
+      modalClassNames = "";
+      modalBodyClassNames = "";
     }
     bodyStyle = { ...bodyStyle, ...this.props.style };
     let body = (
