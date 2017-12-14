@@ -111,6 +111,7 @@ export const blocks = [
   {func: 'buzzer.off', category: CIRCUIT_CATEGORY},
   {func: 'buzzer.stop', category: CIRCUIT_CATEGORY},
 
+  {func: 'buzzer.play', category: CIRCUIT_CATEGORY, paletteParams: ['notes', 'tempo'], params: [stringifySong(SONG_CHARGE), 120], paramButtons: { minArgs: 1, maxArgs: 2}},
   {func: 'buzzer.playNotes', category: CIRCUIT_CATEGORY, paletteParams: ['notes', 'tempo'], params: [stringifySong(SONG_1D), 120], paramButtons: { minArgs: 1, maxArgs: 2}},
   {func: 'buzzer.playSong', category: CIRCUIT_CATEGORY, paletteParams: ['notes', 'tempo'], params: [stringifySong(SONG_CHARGE), 120], paramButtons: { minArgs: 1, maxArgs: 2}},
   {func: 'accelerometer.getOrientation', category: CIRCUIT_CATEGORY, type: 'value', paletteParams: ['orientationType'], params: ['"inclination"'], dropdown: {0: ['"inclination"', '"pitch"', '"roll"']}},
