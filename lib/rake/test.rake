@@ -7,6 +7,7 @@ require 'cdo/rake_utils'
 require 'cdo/git_utils'
 require 'cdo/developers_topic'
 require 'cdo/infra_test_topic'
+require 'parallel'
 
 namespace :test do
   desc 'Runs apps tests.'
@@ -31,6 +32,7 @@ namespace :test do
         message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
         ChatClient.log message, color: 'red'
         ChatClient.message 'server operations', message, color: 'red', notify: 1
+        raise "UI tests failed"
       end
     end
   end
@@ -48,12 +50,18 @@ namespace :test do
         message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
         ChatClient.log message, color: 'red'
         ChatClient.message 'server operations', message, color: 'red', notify: 1
+        raise "Eyes tests failed"
       end
     end
   end
 
-  # do the eyes and sauce labs ui tests in parallel
-  multitask ui_all: [:eyes_ui, :regular_ui]
+  # Run the eyes tests and ui test suites in parallel. If one of these suites
+  # raises, allow the other suite to complete, then make sure this task raises.
+  task :ui_all do
+    Parallel.each([:eyes_ui, :regular_ui], in_threads: 2) do |target|
+      RakeUtils.rake_stream_output "test:#{target}"
+    end
+  end
 
   task :ui_test_flakiness do
     Dir.chdir(deploy_dir) do
