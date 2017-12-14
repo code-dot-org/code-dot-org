@@ -255,43 +255,43 @@ vi:
         applab: 'Tạo một ứng dụng'
         gamelab: 'Tạo một dự án trò chơi'
         weblab: 'Tạo một dự án Web thử nghiệm (beta)'
-      home: "Home"
+      home: "Trang chủ"
       my_dashboard: "Bảng điều khiển của tôi"
       courses: "Các khóa học"
-      course_catalog: "Course Catalog"
+      course_catalog: "Danh mục khóa học"
       project_gallery: "chương trình"
       sections: "Sections"
-      help_support: "Help and support"
-      report_bug: "Report bug"
-      teacher_community: "Teacher community"
+      help_support: "Giúp đỡ và hỗ trợ"
+      report_bug: "Báo lỗi"
+      teacher_community: "Cộng đồng giáo viên"
       professional_learning: "Học tập nâng cao chuyên môn"
-      documentation: "Documentation"
-      tutorials: "Tutorials"
+      documentation: "Tài liệu"
+      tutorials: "Hướng dẫn"
       educate_overview: "Educator Overview"
-      educate_elementary: "Elementary School"
-      educate_middle: "Middle School"
-      educate_high: "High School"
+      educate_elementary: "Tiểu học"
+      educate_middle: "Trung học"
+      educate_high: "Cao học"
       educate_hoc: "Giờ của mã"
-      educate_partner: "Partner with Us"
-      educate_beyond: "Beyond Code.org"
+      educate_partner: "Đối tác của chúng tôi"
+      educate_beyond: "Đằng sau Code.org"
       educate_inspire: "Inspire a Student"
-      educate_community: "Online Community"
-      educate_tools: "Tools and Videos"
-      about_us: "About Us"
+      educate_community: "Cộng đồng trực tuyến"
+      educate_tools: "Các công cụ và video"
+      about_us: "Thông tin"
       about_leadership: "Leadership"
       about_donors: "Donors"
-      about_partners: "Partners"
+      about_partners: "Đối tác"
       about_team: "Full Team"
       about_news: "Newsroom"
       about_evaluation: "Evaluation"
-      about_jobs: "Jobs"
-      about_contact: "Contact Us"
-      about_faqs: "FAQs"
-      learn: "Learn"
+      about_jobs: "Công việc"
+      about_contact: "Liên hệ"
+      about_faqs: "Hỏi đáp"
+      learn: "Học"
       stats: "Stats"
-      help_us: "Help Us"
-      teach: "Teach"
-      about: "About"
+      help_us: "Giúp đỡ chúng tôi"
+      teach: "Dạy"
+      about: "Thông tin"
     user:
       classroom: 'Trang chủ giáo viên'
       district_dashboard: 'khu vực điều khiển'
@@ -354,19 +354,19 @@ vi:
     delete_text: "Nhấp vào nút bên dưới sẽ xóa tài khoản của bạn."
     delete_text_teacher_note: 'Xin lưu ý: xóa tài khoản của bạn sẽ không xóa tài khoản học viên của bạn.'
     delete_confirm: 'Bạn có chắc rằng bạn muốn xóa tài khoản của bạn không?'
-    deleted_user: 'deleted user'
+    deleted_user: 'người dùng đã bị xóa'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
-    no_password_because_sponsored: 'See your teacher to manage your password.'
+    no_password_because_sponsored: 'Hãy gặp giáo viên của bạn để quản lý mật khẩu của bạn.'
     create_personal_login: 'Create a personal login'
-    create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
-    create_personal_login_under_13_username: "Username (don't use your real name!)"
-    create_personal_login_under_13_parent_email: 'Parent/guardian email address'
+    create_personal_login_under_13_info: 'Nếu bạn muốn tiếp tục sử dụng tài khoản Code.org của bạn sau khi kết thúc năm học, hãy nhờ bố mẹ/ người giám hộ giúp đỡ bạn tạo ra đăng nhập của riêng bạn dưới đây.'
+    create_personal_login_under_13_username: "Tên đăng nhập (đừng dùng tên thật của bạn!)"
+    create_personal_login_under_13_parent_email: 'Địa chỉ email của bố mẹ / người giám hộ'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
-    enter_new_login_info: 'Enter your new login information'
-    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
-    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    enter_new_login_info: 'Nhập thông tin đăng nhập mới của bạn'
+    confirm_secret_words: 'Xác minh đó là bạn bằng cách nhập những từ ngữ bí mật của mình'
+    enter_parent_email: "Nhập địa chỉ email của bố mẹ hoặc người giám hộ (dành cho việc khôi phục mật khẩu)"
   user_level:
     completed: 'Đã hoàn thành'
     tried: 'thử lại'
@@ -386,7 +386,7 @@ vi:
     teacher_student_count: Bạn có %{count} sinh viên.
     teacher_averages: Bình quân, học sinh của bạn đạt được %{trophy_average} trong tổng số %{trophy_max} danh hiệu "Thành Thạo Khái Niệm".
     teacher_print_certificates: 'In giấy chứng nhận cho học sinh hoàn thành khóa học này'
-    teacher_read_blog: 'Đọc về tin tức và cập nhật của chúng tôi tại tài liệu blog giáo dục của chúng tôi'
+    teacher_read_blog: Đọc về tin tức và cập nhật của chúng tôi tại tài liệu blog giáo dục của chúng tôi
     classroom: Lớp học của bạn
     student_progress: Tiến độ học tập của bạn
     student_stats: Bạn đã kiếm được %{trophy_count} trong số %{trophy_max} huy hiệu "Làm Chủ Khái Niệm".
@@ -413,7 +413,7 @@ vi:
     no_primary_course: "Hãy thử một khóa học ở Code Studio"
     choose_next_course: "Thử một khóa Xưởng Mã bằng cách chọn một khóa bên dưới"
     print_certificate: "In giấy chứng nhận"
-    announcement_title: "Announcements"
+    announcement_title: "Thông báo"
     announcement_message_fall2016_features: "We spent the summer turning your feedback into new features. Now, you can <a href=\"%{pp_url}\" target=\"_blank\">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href=\"%{csp_widgets_url}\" target=\"_blank\">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href=\"%{unused_code_url}\" target=\"_blank\">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think."
     announcement_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
     announcement_learn_more_button: "Tìm hiểu thêm"
@@ -422,7 +422,7 @@ vi:
     announcement_watch_video_button: "Xem video"
     announcement_petition: "Là một giáo viên, bạn đang dẫn đầu trong phong trào để trao cho mỗi học sinh ở mỗi trường học cơ hội học về khoa học máy tính. Bây giờ, đã đến lúc để cho đại diện của bạn nghe từ bạn. Tuần này, các nhà lãnh đạo giáo dục, 28 thống đốc, và CEO của các công ty lớn nhất của Mỹ tham gia cùng nhau trong một bức thư ngỏ yêu cầu Quốc hội Hoa Kỳ tài trợ K-12 giáo dục khoa học máy tính."
     announcement_petition_button: "Thêm tên của bạn"
-    announcement_go_beyond_button: "Go beyond"
+    announcement_go_beyond_button: "Tiên phong"
     announcement_apply_now: "Apply now"
     announcement_all: "Cập nhật những tính năng và cập nhật trên blog của giáo viên của chúng tôi.<a href='%{teacher_blog_url}' target='_blank'>Xem thông báo cũ.</a>"
     announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
@@ -567,6 +567,9 @@ vi:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Lứa tuổi 13 +"
       cta: "Học cách làm"
+    hoc-encryption:
+      title: "Simple Encryption"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -585,6 +588,9 @@ vi:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft đã trở lại trong Giờ Lập Trình với một hoạt động mới! Hãy bắt đầu cuộc hành trình Minecraft với việc lập trình."
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
@@ -610,7 +616,7 @@ vi:
     picture_count: "Trong <b>%{days}</b> ngày vừa qua, các học sinh/sinh viên đã vẽ <b>%{count}</b> bức ảnh bằng cách tự viết các chương trình máy tính. Click vào những bức ảnh này để xem mỗi chương trình."
     activity_count: "Trong <b>%{days}</b> ngày vừa qua, học sinh đã thực hiện <b>%{count}</b> các ứng dụng và hình ảnh bằng cách tự viết các chương trình máy tính. Nhấp vào hình ảnh và ảnh chụp màn hình để xem mỗi chương trình trong hành động."
     want_to_make_your_own: "Bạn muốn tự tạo chương trình này?"
-    how_to_save: "On the last level of these tutorials, click \"Finish\" and \"Save\" to save your work to the gallery."
+    how_to_save: "Ở bài cuối cùng của những hướng dẫn này, nhấn \"Hoàn thành\" và \"Lưu\" để lưu dự án của bạn vào trong thư viện."
     more: "Nhiều &rarr;"
     caption_by_name_age: "bởi  %{name}, %{age} tuổi"
     caption_time_ago: "%{time_ago} trước"
@@ -625,9 +631,9 @@ vi:
     support: "Nhận trợ giúp"
     support_url: "//support.code.org"
     help_resources: "Trợ giúp và tài nguyên"
-    help_support: "Help and support"
-    documentation: "Documentation"
-    tutorials: "Tutorials"
+    help_support: "Giúp đỡ và hỗ trợ"
+    documentation: "Tài liệu"
+    tutorials: "Hướng dẫn"
   multi:
     wrong_title: "Câu trả lời không chính xác"
     wrong_body: "Câu trả lời mà bạn đã nhập không chính xác.  Xin vui lòng thử lại!"
@@ -699,16 +705,16 @@ vi:
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "Các điều khoản của Code.org"
     privacy: "Chính sách riêng tư"
-    privacy_notice: "Privacy Notice"
+    privacy_notice: "Thông tin bảo mật"
     accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
     accept: "Đồng ý"
     print: "In"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
-    review_terms: "Review updated terms"
+    review_terms: "Xem những điều khoản mới"
   school_info_interstitial:
     title: "We want to bring Computer Science to every student - help us track our progress!"
-    message: "Please enter your school information below."
-    message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
+    message: "Nhập thông tin trường học của bạn ở dưới đây."
+    message_with_suggestion: "Hãy chắc chắn rằng những thông tin sau đây là chính xác, nếu không vui lòng cập nhật."
     save: "Lưu"
   race_interstitial:
     title: 'Optional: Help us track our progress toward improving diversity in computer science'
@@ -738,9 +744,9 @@ vi:
     in_progress: trong tiến trình
     completed_too_many_blocks: hoàn thành, quá nhiều mảnh gép
     completed_perfect: hoàn thành, hoàn hảo
-    furthest_level_attempted: 'đã cố gắng ở mức độ cao nhất'
-    assessment: 'đánh giá'
-    submitted: 'đã gửi'
+    furthest_level_attempted: đã cố gắng ở mức độ cao nhất
+    assessment: đánh giá
+    submitted: đã gửi
   studio:
     courses_working_on: "Các khóa học bạn đang tiến hành"
     completed_courses: "Hoàn thành khóa học"

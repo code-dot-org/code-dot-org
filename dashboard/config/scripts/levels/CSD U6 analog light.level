@@ -54,11 +54,8 @@
     "makerlab_enabled": "true",
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 33px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 71px; position: absolute; left: 2.22045e-16px; top: 20px; text-align: center;\" id=\"light_label\">Light Sensor Reading</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 100px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 105px; position: absolute; left: -2.22045e-16px; top: 150px; text-align: center;\" id=\"light_value\" class=\"\">value</label><button id=\"update_button\" style=\"padding: 0px; margin: 0px; height: 112px; width: 320px; font-size: 30px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 0px; top: 340px;\">Update</button></div></div>",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -21,6 +21,7 @@ const style = {
   },
   header: {
     fontSize: 26,
+    lineHeight: 'normal',
   },
   body: {
     marginBottom: 15,
@@ -28,6 +29,12 @@ const style = {
     marginLeft: 40,
     marginRight: 0,
     fontSize: 14,
+  },
+  icon: {
+    float: 'left',
+  },
+  headerText: {
+    marginLeft: 40,
   }
 };
 
@@ -51,8 +58,8 @@ export default class ValidationStep extends Component {
     return (
       <div style={style.root}>
         <div style={{...style.header, ...styleFor(stepStatus)}}>
-          {iconFor(stepStatus)}
-          <span>{stepName}</span>
+          <div style={style.icon}>{iconFor(stepStatus)}</div>
+          <div style={style.headerText}>{stepName}</div>
         </div>
         {showChildren &&
           <div style={style.body}>

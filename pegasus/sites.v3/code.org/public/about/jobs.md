@@ -28,7 +28,7 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 **We are currently hiring for:**
 
 - **Administration & Finance**
-	- [Director of Finance & Accounting](#accounting)
+	- [Director of Accounting & Finance](#accounting)
 - **Education Team**
 	- [Facilitator Development Specialist](#facilitator)
 	- [Program Associate](#associate)
@@ -158,7 +158,52 @@ You will be successful in this role if you have:
 
 To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="edintern"href="#edintern">Education Team Intern (Chicago, IL strongly preferred)</a>
+## <a name="dataintern"href="#dataintern">Data Intern (Seattle, WA)</a>
+
+**Internship Summary:**
+
+At Code.org we create and support computer science curriculum that reaches millions of students, and we prepare tens of thousands of teachers to begin teaching computer science each year. The core function of the Analytics Intern role is to help us: 
+
+1. Analyze the impact of our professional development and curriculum programs
+2. Generate dashboards that can empower internal teams and external partners to make informed decisions
+
+
+Our Code.org platform has become the most popular coding platform in K-12 education.  We’re looking for someone who’s passionate about understanding and using data; someone who wants to ask questions and find answers. The responsibility in this job isn't just to answer analytic questions but ultimately to help the team improve outcomes for students, teachers, and schools. This role will help establish the questions to ask in the first place, figure out how to answer them, and ensure we are measuring and collecting the right data across our education products, services, and processes.
+
+Prior industry experience is not required but experience with SQL and a data visualization tool like Tableau is strongly preferred. 
+
+Job responsibilities could include:
+
+- Working with teams across Code.org (product management, professional learning, curriculum, outreach, advocacy) to design and create actionable visualizations and dashboards 
+- Writing code/scripts/queries as well as using Tableau to analyze the data and find answers
+- Analyzing student and teacher data collected through our web-based curriculum to understand how we can improve outcomes, including:
+	- Optimizing courses to be engaging, challenging (but not too challenging) and to increase student learning and coding proficiency outcomes
+	- Recruiting teachers and students, retaining users, and increasing engagement
+
+**Experience and Qualifications:**
+
+The ideal candidate has a breadth of experience and qualifications:
+
+- A degree (or working towards a degree) in applied math, statistics, engineering, computer science, finance or a related field (coursework in applied maths and/or statistics preferred)
+- Strong analytical skills with attention to detail and the ability to create clear reports to communicate actionable findings to others
+- Some experience querying SQL-style databases
+- Ability to communicate effectively with both technical and non-technical audiences to fully understand the experiences of our students, teachers, and facilitators resulting in significantly deeper learning and impact
+- Knowledge of visualization/analysis tools including spreadsheets, Tableau experience preferred
+
+
+
+**Benefits Package:**
+
+Code.org offers a competitive benefits package that includes:
+
+- Hourly rate (DOE) 32-40 hours/week
+- Flexible working environment
+- Pre-paid transit (ORCA) card 
+
+Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. You may also choose to include a LinkedIn or related online profile.
+
+
+## <a name="edintern"href="#edintern">Education Team Intern (Chicago, IL or Seattle, WA preferred)</a>
 
 **Internship Summary:**
 
@@ -191,6 +236,45 @@ Please include lesson plan samples that are your original work, and highlight re
 
 You may also choose to include a LinkedIn or related online profile.
 
+## <a name="eventsintern"href="#eventsintern">Events Intern (Seattle, WA)</a>
+
+**Internship Summary:**
+
+Code.org is looking for an Events Intern to work with and support Code.org’s Events Manager. Internship will primarily support events for Code.org facilitator and teacher professional development workshops across the U.S. This is a spring/summer internship, part-time, approximately 20-30 hours per week.
+
+Intern’s responsibilities would include:
+
+- Coordinating event logistics (booking travel, accommodations, catering); act as logistics point-of-contact for event attendees 
+- Assisting Events Manager with on-site event support
+- Formatting, printing and organizing materials, packing and mailing supplies, proofreading and checking information (rooming lists, flight information, attendee lists and program tracks), and more.
+- Utilizing our customer service system to respond to events-related questions from teachers and facilitators in a timely manner.
+- Attending and participating in meetings and recording notes/follow-up items, as appropriate.
+- Responding to requests for information, distributing materials externally.
+- Special projects (enter data, prepare documentation, develop templates, etc.)
+- Opportunity to travel to and support up to three events this spring/summer
+
+
+**Experience and Qualifications:**
+
+Must be extremely detail-oriented, possess exceptional writing and communications ability in English, and be tech-savvy (computer science background/experience not required). Must also be a self-starter, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
+
+Qualifications:
+
+- 2 years of undergraduate studies preferred (no Computer Science background necessary) 
+- 1 year of work experience preferred 
+- Experience with Google Sheets and suite of products
+- Ability to work legally in the United States
+- Ability to and willingness to travel to support events in the United States, if needed
+
+**Salary and Perks:**
+
+Code.org offers the following:
+
+- $15/hr, 20-30 hours per week expected
+- Flexible working environment
+- ORCA transit card
+
+Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. You may also choose to include a LinkedIn or related online profile.
 
 
 ## <a name="info" href="#info">Working at Code.org</a>

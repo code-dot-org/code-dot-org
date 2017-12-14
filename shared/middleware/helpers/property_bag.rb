@@ -40,7 +40,7 @@ class DynamoPropertyBag
     ).item
 
     raise NotFound, "key '#{name}' not found" unless item
-    JSON.parse(item['value'])
+    JSON.load(item['value'])
   end
 
   def set(name, value, ip_address, time = DateTime.now)
@@ -81,7 +81,7 @@ class DynamoPropertyBag
       ).first
 
       page[:items].each do |item|
-        results[item['name']] = JSON.parse(item['value'])
+        results[item['name']] = JSON.load(item['value'])
       end
 
       last_evaluated_key = page[:last_evaluated_key]

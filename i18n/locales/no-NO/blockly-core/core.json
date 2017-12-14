@@ -64,7 +64,7 @@
     "CONTROLS_WHILEUNTIL_HELPURL": "http://code.google.com/p/blockly/wiki/Repeat",
     "CONTROLS_WHILEUNTIL_OPERATOR_UNTIL": "gjenta til",
     "CONTROLS_WHILEUNTIL_OPERATOR_WHILE": "gjenta hvis",
-    "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "Gjenta blokker helt til en betingelse er oppfylt.",
+    "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "Gjenta helt til en verdi er usann, og så utfør noen blokker.",
     "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "Gjenta blokker hvis en betingelse er oppfylt.",
     "DEFINE_HEADER_DEFINITION": "Definisjon",
     "DEFINE_FUNCTION_DEFINE": "Definer",

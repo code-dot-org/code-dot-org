@@ -36,11 +36,13 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 21:56:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-13 21:58:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-14 17:42:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 21:56:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-13 21:58:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-14 17:42:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-11-22 01:31:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-22 01:37:37 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-22 01:38:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -767,8 +769,7 @@
             </value>
           </block>
         </category>
-        <category name="Functions" custom="PROCEDURE">
-  </category>
+        <category name="Functions" custom="PROCEDURE"/>
         <category name="Variables" custom="VARIABLE">
           <block type="variables_get">
             <title name="VAR">counter</title>
@@ -778,6 +779,11 @@
           </block>
           <block type="variables_get">
             <title name="VAR">length</title>
+          </block>
+        </category>
+        <category name="Comments">
+          <block type="comment">
+            <title name="TEXT"/>
           </block>
         </category>
       </xml>

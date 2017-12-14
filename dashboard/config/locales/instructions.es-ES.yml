@@ -4029,19 +4029,14 @@
       MC_2017_Ryan_02_instruction: |-
         Help the player get out by using loops to get
         the Agent to the pressure plate.
-      MC_HOC_2017 Agent Test_instruction: |-
-        Click "Run" to move the player to the
-        orange square inside of the house.
-      MC_HOC_2017_01_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_Cole_instruction: |-
-        You need to collect all the tools on this
-        journey. Move around using the **arrow keys**, and get to the chest on the
-        path to win
-      MC_HOC_2017_01_Kiki_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
+      MC_HOC_2017 Agent Test_instruction: Vajuta "Käivita", et liigutada mängija oranžile
+        ruudule maja sees.
+      MC_HOC_2017_01_instruction: Vajuta "Käivita", et liigutada mängija oranžile
+        ruudule maja sees.
+      MC_HOC_2017_01_Cole_instruction: Sellel tekonnal pead koguma kokku kõik tööriistad.
+        Kasuta liikumiseks **nooleklahve** ja liigu võitmiseks rajal oleva kirstuni
+      MC_HOC_2017_01_Kiki_instruction: Vajuta "Käivita", et liigutada mängija oranžile
+        ruudule maja sees.
       MC_HOC_2017_01_RETRY_instruction: Lleva al Agent hasta el plato de presión,
         pulsa "Ejecutar" y utiliza las flechas direccionales para mover al jugador
         fuera de la casa y recoger el cofre.
