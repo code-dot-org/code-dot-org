@@ -1,30 +1,11 @@
 ---
-<%
-  mode = DCDO.get('hoc_mode', nil)
-  hoc = mode == 'soon-hoc' || mode == 'actual-hoc'
-  share_image = hoc ? 'celeb-challenge.jpg' : 'default-og-image.jpg'
-  description = hoc ? I18n.t(:og_description_celeb) : I18n.t(:og_description)
-
-  title = I18n.t(:og_title)
-  title = I18n.t(:og_title_soon) if mode == 'soon-hoc'
-  title = I18n.t(:og_title_here) if mode == 'actual-hoc'
-%>
 theme: responsive_wide
 banner: null
 layout: wide
 video_player: true
 social:
-  "og:title": "<%= title %>"
-  "og:description": "<%= description %>"
-  "og:image" : "<%= 'https://' + request.host + '/images/fit-1220/social-media/' + share_image %>"
-  "og:image:width": '1220'
-  "og:image:height": '640'
-  "twitter:image:src" : "<%= 'https://' + request.host + '/images/fit-1220/social-media/' + share_image %>"
-  "twitter:card": "photo"
   "twitter:site": "@codeorg"
   "twitter:url": "https://code.org/"
-  "twitter:title": "<%= title %>"
-  "twitter:description": "<%= description %>"
 critical_font: true
 jquery: defer
 style_min: true

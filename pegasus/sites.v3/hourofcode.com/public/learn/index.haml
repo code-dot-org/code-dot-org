@@ -92,8 +92,6 @@ social:
 %script{src: asset_path("js/#{js_locale}/tutorialExplorer_locale.js")}
 %script{src: minifiable_asset_path("js/tutorialExplorer.js")}
 
-- hoc_launch = DCDO.get('hoc_launch', nil)
-
 -# Load tutorial images from code.org so we don't have to duplicate them on hourofcode.com.
 - tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
 - tutorials_contents.each do |tutorial|
@@ -110,10 +108,6 @@ social:
   - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
   - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
   - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
-
-  - if hoc_launch && hoc_launch["tutorial_explorer_mc2017_image"]
-    - if tutorial[:short_code] == "mchoc"
-      - tutorial[:image] = CDO.code_org_url("/images/tutorials/hoc2017/minecraft2017.png")
 
 #tutorials
 
