@@ -9,7 +9,6 @@ describe('Congrats', () => {
     const wrapper = shallow(
       <Congrats
         completedTutorialType="other"
-        isRtl={false}
         userType="signedOut"
         isEnglish={true}
       />
@@ -21,7 +20,6 @@ describe('Congrats', () => {
     const wrapper = shallow(
       <Congrats
         completedTutorialType="other"
-        isRtl={false}
         signedIn={false}
         userType="signedOut"
         isEnglish={true}
@@ -34,7 +32,6 @@ describe('Congrats', () => {
     const wrapper = shallow(
       <Congrats
         completedTutorialType="other"
-        isRtl={false}
         userType="teacher"
         isEnglish={true}
       />
@@ -46,7 +43,6 @@ describe('Congrats', () => {
     const wrapper = shallow(
       <Congrats
         completedTutorialType="other"
-        isRtl={false}
         userType="signedOut"
         isEnglish={true}
       />
@@ -58,7 +54,6 @@ describe('Congrats', () => {
     const wrapper = shallow(
       <Congrats
         completedTutorialType="other"
-        isRtl={false}
         userType="student"
         isEnglish={true}
       />

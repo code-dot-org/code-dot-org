@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
 import CourseBlocksTools from './CourseBlocksTools';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import Responsive from '../../responsive';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -40,7 +39,6 @@ export class CourseBlocksCsfEnglish extends Component {
         <ContentContainer
           heading={i18n.courseBlocksCsfExpressHeading()}
           description={i18n.courseBlocksCsfExpressDescription()}
-          isRtl={false}
         >
           <div className="row">
             <ProtectedStatefulDiv ref="pre_express"/>
@@ -51,7 +49,6 @@ export class CourseBlocksCsfEnglish extends Component {
         <ContentContainer
           heading={i18n.courseBlocksCsfYoungHeading()}
           description={i18n.courseBlocksCsfYoungDescription()}
-          isRtl={false}
         >
           <div className="row">
             <ProtectedStatefulDiv ref="coursea"/>
@@ -62,7 +59,6 @@ export class CourseBlocksCsfEnglish extends Component {
         <ContentContainer
           heading={i18n.courseBlocksCsfOlderHeading()}
           description={i18n.courseBlocksCsfOlderDescription()}
-          isRtl={false}
         >
           <div className="row">
             <ProtectedStatefulDiv ref="coursec"/>
@@ -153,8 +149,6 @@ export class CourseBlocksHoc extends Component {
 export class CourseBlocksAll extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
   };
 
   componentDidMount() {
@@ -169,8 +163,6 @@ export class CourseBlocksAll extends Component {
           description={i18n.csfDescription()}
           link={'/home/#recent-courses'}
           linkText={i18n.viewMyRecentCourses()}
-          isRtl={this.props.isRtl}
-          responsive={this.props.responsive}
         >
           <CourseBlocksCsf isEnglish={this.props.isEnglish}/>
         </ContentContainer>
@@ -178,18 +170,14 @@ export class CourseBlocksAll extends Component {
         <ContentContainer
           heading={i18n.teacherCourseHoc()}
           description={i18n.teacherCourseHocDescription()}
-          isRtl={this.props.isRtl}
           linkText={i18n.teacherCourseHocLinkText()}
           link={pegasus('/hourofcode/overview')}
-          responsive={this.props.responsive}
         >
           <CourseBlocksHoc rowCount={1}/>
         </ContentContainer>
 
         <CourseBlocksTools
           isEnglish={this.props.isEnglish}
-          isRtl={this.props.isRtl}
-          responsive={this.props.responsive}
         />
       </div>
     );
