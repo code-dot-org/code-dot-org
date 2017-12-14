@@ -29,5 +29,15 @@ module Pd::Application
       return nil if regional_partner.nil?
       REGIONAL_PARTNER_TC_MAPPING[regional_partner.name]
     end
+
+    def find_teachercon_workshop(course:, city:, year: 2018)
+      Pd::Workshop.
+        # where(course: course, subject: Pd::Workshop::SUBJECT_TEACHER_CON).
+        where(course: course, subject: 'Code.org TeacherCon').
+        scheduled_start_on_or_after(Date.new(year)).
+        scheduled_start_on_or_before(Date.new(year + 1)).
+        where('location_address like ?', "%#{city}%").
+        first
+    end
   end
 end
