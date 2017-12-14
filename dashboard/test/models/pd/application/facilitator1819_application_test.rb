@@ -124,33 +124,46 @@ module Pd::Application
       end
     end
 
+    test 'csv_header method' do
+      %w(csf csd csp).each do |course|
+        csv_header_row = Facilitator1819Application.csv_header(course)
+        csv_headers = csv_header_row.strip.split(',')
+        assert_equal 'Account Email', csv_headers[-5]
+        assert_equal 'Status', csv_headers[-4]
+        assert_equal 'Locked', csv_headers[-3]
+        assert_equal 'Notes', csv_headers[-2]
+        assert_equal 'Regional Partner', csv_headers[-1]
+      end
+    end
+
     test 'to_csv method' do
       application = create :pd_facilitator1819_application
       application.update(regional_partner: @regional_partner, status: 'accepted', notes: 'notes')
 
       csv_row = application.to_csv_row
       csv_answers = csv_row.split(',')
-      assert_equal "#{@regional_partner.name}\n", csv_answers[-1]
-      assert_equal 'notes', csv_answers[-2]
-      assert_equal 'false', csv_answers[-3]
+      assert_equal application.user.email, csv_answers[-5]
       assert_equal 'accepted', csv_answers[-4]
+      assert_equal 'false', csv_answers[-3]
+      assert_equal 'notes', csv_answers[-2]
+      assert_equal "#{@regional_partner.name}\n", csv_answers[-1]
     end
 
     test 'send_decision_notification_email only sends to waitlisted and declined' do
-      mock_mail = stub
+      mock_mail = mock
       mock_mail.stubs(:deliver_now).returns(nil)
 
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:accepted).times(0)
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:interview).times(0)
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:pending).times(0)
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:unreviewed).times(0)
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:withdrawn).times(0)
+      Facilitator1819ApplicationMailer.expects(:accepted).times(0)
+      Facilitator1819ApplicationMailer.expects(:interview).times(0)
+      Facilitator1819ApplicationMailer.expects(:pending).times(0)
+      Facilitator1819ApplicationMailer.expects(:unreviewed).times(0)
+      Facilitator1819ApplicationMailer.expects(:withdrawn).times(0)
 
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:declined).times(1).returns(mock_mail)
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:waitlisted).times(1).returns(mock_mail)
+      Facilitator1819ApplicationMailer.expects(:declined).times(1).returns(mock_mail)
+      Facilitator1819ApplicationMailer.expects(:waitlisted).times(1).returns(mock_mail)
 
       application = create :pd_facilitator1819_application
-      Pd::Application::Facilitator1819Application.statuses.values.each do |status|
+      Facilitator1819Application.statuses.values.each do |status|
         application.update(status: status)
         application.send_decision_notification_email
       end
