@@ -212,7 +212,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     }
 
     return Promise.resolve()
-        .then(() => buzzer.playSong(SONG_CHARGE, 104))
+        .then(() => buzzer.play(SONG_CHARGE, 104))
         .then(() => forEachLedInSequence(led => led.color('green'), 80))
         .then(() => forEachLedInSequence(led => led.off(), 80));
   }
