@@ -1,5 +1,5 @@
-Feature: Block auto-layout
 @chrome_after_62
+Feature: Block auto-layout
 
 Background:
   Given I am on "http://studio.code.org/flappy/10?noautoplay=true"
