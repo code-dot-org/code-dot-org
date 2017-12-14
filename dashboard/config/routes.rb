@@ -409,6 +409,7 @@ Dashboard::Application.routes.draw do
       resources :applications, controller: 'applications', only: [:index, :show, :update] do
         collection do
           get :quick_view
+          get :cohort_view
         end
       end
     end

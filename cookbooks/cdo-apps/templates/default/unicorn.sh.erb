@@ -15,7 +15,7 @@ PID=<%= @pid_file %>
 CMD="cd $APP_ROOT; LANG=en_US.UTF-8 bundle exec unicorn -D -c <%= @src_file %> -E <%= @env %>"
 AS_USER=<%= @user %>
 <%= @export_env ? @export_env.map{|k,v|"export #{k}=#{v}"}.join("\n") : '' %>
-UPGRADE_DELAY=${UPGRADE_DELAY-4}
+UPGRADE_DELAY=${UPGRADE_DELAY-30}
 
 action="$1"
 set -u
@@ -102,13 +102,28 @@ upgrade)
                 cur_pid=$(cat $PID)
         fi
 
+        # Send USR2 (upgrade) signal to current process.
+        # This will rename the current PID file and fork a new process
+        # which will write a new PID file in its place.
         if test -n "$cur_pid" &&
-                kill -USR2 "$cur_pid" &&
-                sleep $UPGRADE_DELAY &&
-                new_pid=$(cat $PID) &&
-                test x"$new_pid" != x"$cur_pid" &&
-                kill -0 "$new_pid"
+                kill -USR2 "$cur_pid"
         then
+                # Wait $UPGRADE_DELAY seconds for the PID file to contain the new PID.
+                n=$UPGRADE_DELAY
+                until test $n -lt 0 ||
+                      test -s $PID &&
+                      new_pid=$(cat $PID 2>&-) &&
+                      test x"$new_pid" != x"$cur_pid" &&
+                      kill -0 "$new_pid"
+                do
+                        printf '.' && sleep 1 && n=$(( $n - 1 ))
+                done
+                if test $n -lt 0; then
+                        echo >&2 "Upgraded process still not started after $UPGRADE_DELAY seconds"
+                        exit 1
+                fi
+
+                # Wait $TIMEOUT seconds for the old process to shutdown.
                 n=$TIMEOUT
                 while kill -0 "$cur_pid" 2>/dev/null && test $n -ge 0
                 do
