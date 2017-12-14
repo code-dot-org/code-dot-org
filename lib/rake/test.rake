@@ -81,7 +81,7 @@ namespace :test do
     # untested changes green.
     test_branch_sha = GitUtils.git_revision_short
 
-    msg = "Marking commit #{test_branch_sha} green (temporarily disabled)"
+    msg = "Marking commit #{test_branch_sha} green (temporarily disabled, take 2)"
     ChatClient.log msg
     ChatClient.message 'deploy-status', msg
 
