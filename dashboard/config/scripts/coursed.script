@@ -50,7 +50,7 @@ level 'courseD_bee_nestedLoops8'
 level 'courseD_bee_nestedLoops9'
 assessment 'courseD_bee_nestedLoops9_predict2'
 bonus 'courseD_harvester_nested_loops_challenge1'
-bonus 'courseD_collector_nested_loops_challenge2'
+bonus 'courseD_collector_nested_loops_challenge2a'
 
 stage 'Nested Loops in Artist'
 level 'courseD_artist_nestedLoops1'

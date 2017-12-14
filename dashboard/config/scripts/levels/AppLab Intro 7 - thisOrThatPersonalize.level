@@ -96,11 +96,8 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(1.25); display: block;\"><div class=\"screen\" tabindex=\"1\" id=\"startScreen\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"thisButton\" style=\"padding: 0px; margin: 0px; height: 70px; width: 145px; color: rgb(255, 255, 255); position: absolute; left: 10px; top: 370px; background-image: url(&quot;https://studio.code.org/blockly/media/1x1.gif&quot;); background-size: contain; background-position: 50% 50%; background-repeat: no-repeat; background-color: orange; font-size: 20px;\" data-canonical-image-url=\"\" data-icon-color=\"orangeREd\">This!</button><label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; word-wrap: break-word; max-width: 320px; width: 300px; position: absolute; left: 10px; height: 170px; text-align: center; font-size: 20px; background-color: teal; top: 190px; color: white;\" id=\"label1\">This or That?!</label><img src=\"/blockly/media/1x1.gif\" data-canonical-image-url=\"\" id=\"image1\" style=\"height: 170px; position: absolute; left: 10px; top: 10px; margin: 0px; width: 300px;\"></div><div class=\"screen\" tabindex=\"1\" id=\"thisScreen\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; word-wrap: break-word; max-width: 320px; width: 300px; height: 170px; position: absolute; left: 10px; top: 190px; background-color: orange; color: white; font-size: 20px; text-align: center;\" id=\"label2\">You clicked this!</label><img src=\"/blockly/media/1x1.gif\" data-canonical-image-url=\"\" id=\"image2\" style=\"height: 170px; width: 300px; position: absolute; left: 10px; margin: 0px; top: 10px;\"></div></div>",
     "start_blocks": "onEvent(\"thisButton\", \"click\", function() {\r\n  setScreen(\"thisScreen\");\r\n  playSound(\"sound://default.mp3\", false);\r\n});",
     "project_template_level_name": "AppLab Intro 6 - thisOrThatAddButton Template",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

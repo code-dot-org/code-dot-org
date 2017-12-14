@@ -177,7 +177,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Displaying Sensor Readings in Color\r\n\r\nIn the earlier prediction level you saw how the `setScale()` method can convert the full range of sensor readings (0-1023) into a range that can be used for RGB values (0-255). Let's build on that idea to make an app that can communcate the current value of all three analog sensors with a single color.\r\n\r\n# Do This\r\n\r\nTo start, we just need to set the sensor scales correctly - don't worry about actually setting the color of the background yet.\r\n\r\n<img src=\"https://images.code.org/39de88e19682e905a1e08d5f12398f35-image-1488995498849.png\" style=\"float: right; width: 300px; margin-left: 20px;\"/>\r\n\r\n* Using the `sensor.setScale()` block, set each of the three analog sensors to the right scale for an RGB color channel.\r\n* Create a variable for each of the three colors and assign each one to the `.value` of a different sensor.\r\n* Use `console.log()` to test that your variables are in the correct range.\r\n\r\n_Hint: Order matters. You need to set the scale of a sensor before checking it's value_",
+    "markdown_instructions": "# Displaying Sensor Readings in Color\r\n\r\nIn the earlier prediction level you saw how the `setScale()` method can convert the full range of sensor readings (0-1023) into a range that can be used for RGB values (0-255). Let's build on that idea to make an app that can communcate the current value of all three analog sensors with a single color.\r\n\r\n# Do This\r\n\r\nTo start, we just need to set the sensor scales correctly - don't worry about actually setting the color of the background yet.\r\n\r\n* Using the `sensor.setScale()` block, set each of light and sound sensors to the right scale for an RGB color channel.\r\n* Create a variable for each of the three colors and assign each one to the value of a different sensor.\r\n* Use `console.log()` to test that your variables are in the correct range.\r\n\r\n_Hint: Order matters. You need to set the scale of a sensor before checking it's value_\r\n_Hint: Remember that the temperature sensor can be read in both Celsius and Fahrenheit - either way it should already give you a value that's within the necessary range for RGB_",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -215,11 +215,12 @@
     "makerlab_enabled": "true",
     "project_template_level_name": "CSD U6 analog data template",
     "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-20 22:57:33 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-20 23:06:58 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-20 22:57:33 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-20 23:06:58 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-27 18:59:50 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
