@@ -730,6 +730,9 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
       case TestResults.QUESTION_MARKS_IN_NUMBER_FIELD:
         message = msg.errorQuestionMarksInNumberField();
         break;
+      case TestResults.EXCEEDED_LIMITED_BLOCKS:
+        message = msg.errorExceededLimitedBlocks();
+        break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
           // Allow apps to override the "too many blocks" failure message
           // Passed as a msg function to allow the parameters to be passed in.
@@ -1534,6 +1537,9 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
         TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED :
         TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED;
   }
+  if (this.hasExceededLimitedBlocks_()) {
+    return TestResults.EXCEEDED_LIMITED_BLOCKS;
+  }
   var numEnabledBlocks = this.getNumCountableBlocks();
   if (!levelComplete) {
     if (this.studioApp_.IDEAL_BLOCK_NUM &&
@@ -1729,4 +1735,11 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   return node.childBlocks_.some(function (child) {
     return self.hasMatchingDescendant_(child, filter);
   });
+};
+
+/**
+ * Ensure that all user-declared procedures have associated call blocks.
+ */
+FeedbackUtils.prototype.hasExceededLimitedBlocks_ = function () {
+  return Blockly.mainBlockSpace.blockSpaceEditor.blockLimits.blockLimitExceeded();
 };
