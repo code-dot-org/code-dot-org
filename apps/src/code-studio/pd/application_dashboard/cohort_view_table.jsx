@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
-import Table from 'reactabular';
+import {Table} from 'reactabular';
 
-export default class QuickViewTable extends React.Component {
+export default class CohortViewTable extends React.Component {
   static propTypes = {
     data: PropTypes.array.isRequired,
   }
@@ -19,7 +19,7 @@ export default class QuickViewTable extends React.Component {
           }
         }
       }, {
-        property: 'name',
+        property: 'applicant_name',
         header: {
           label: 'Name'
         }
@@ -52,6 +52,7 @@ export default class QuickViewTable extends React.Component {
       <Table.Provider
         className="pure-table table-striped"
         columns={this.constructColumns()}
+        style={{width: '100%'}}
       >
         <Table.Header />
         <Table.Body rows={this.props.data} rowKey="email"/>
