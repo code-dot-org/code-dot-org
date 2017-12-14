@@ -115,6 +115,7 @@ export default class ApplicationDashboard extends React.Component {
                       breadcrumbs={cohort_path_name}
                       component={CohortView}
                       applicationType={cohort_path_name}
+                      viewType={paths[path].type}
                     />
                   )
                 ];
