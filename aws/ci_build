@@ -154,7 +154,7 @@ Showing last #{CHAT_LOG_TAIL_LENGTH} lines of build log:
 #{log.lines.last(CHAT_LOG_TAIL_LENGTH).join('\n')}
       LOG
       ChatClient.log message, color: 'red'
-      ChatClient.log "/quote #{truncated_log}", color: 'gray', message_format: 'text' unless log.empty?
+      ChatClient.snippet truncated_log.to_s unless log.empty?
       ChatClient.log "/quote #{status}", color: 'gray', message_format: 'text' unless status.is_a?(String) && status.empty?
       ChatClient.log '<!here> build failure', color: 'red'
 

@@ -39,6 +39,10 @@ class ChatClient
     )
   end
 
+  def self.snippet(message)
+    Slack.snippet(CDO.slack_log_room, message)
+  end
+
   def self.wrap(name)
     start_time = Time.now
     ChatClient.log "Running #{name}..."
@@ -50,7 +54,7 @@ class ChatClient
     ChatClient.log message, color: 'red', notify: 1
     ChatClient.message 'server operations', message, color: 'red', notify: 1
 
-    ChatClient.log "/quote #{e}\n#{CDO.backtrace e}", message_format: 'text'
+    ChatClient.snippet "#{e}\n#{CDO.backtrace e}"
     raise
   end
 end
