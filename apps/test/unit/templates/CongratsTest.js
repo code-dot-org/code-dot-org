@@ -2,25 +2,24 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../util/configuredChai';
 import Congrats from '@cdo/apps/templates/Congrats';
+import Certificate from '@cdo/apps/templates/Certificate';
 
 describe('Congrats', () => {
   it('renders a Certificate component', () => {
     const wrapper = shallow(
       <Congrats
         completedTutorialType="other"
-        isRtl={false}
         userType="signedOut"
         isEnglish={true}
       />
     );
-    expect(wrapper.find('Certificate').exists()).to.be.true;
+    expect(wrapper.find(Certificate).exists()).to.be.true;
   });
 
   it('renders a StudentsBeyondHoc component, regardless of user type', () => {
     const wrapper = shallow(
       <Congrats
         completedTutorialType="other"
-        isRtl={false}
         signedIn={false}
         userType="signedOut"
         isEnglish={true}
@@ -33,7 +32,6 @@ describe('Congrats', () => {
     const wrapper = shallow(
       <Congrats
         completedTutorialType="other"
-        isRtl={false}
         userType="teacher"
         isEnglish={true}
       />
@@ -45,7 +43,6 @@ describe('Congrats', () => {
     const wrapper = shallow(
       <Congrats
         completedTutorialType="other"
-        isRtl={false}
         userType="signedOut"
         isEnglish={true}
       />
@@ -57,7 +54,6 @@ describe('Congrats', () => {
     const wrapper = shallow(
       <Congrats
         completedTutorialType="other"
-        isRtl={false}
         userType="student"
         isEnglish={true}
       />

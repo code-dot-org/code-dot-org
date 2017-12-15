@@ -11,7 +11,6 @@ class ProjectWidget extends React.Component {
     projectList: PropTypes.array.isRequired,
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     isLoading: PropTypes.bool,
-    isRtl: PropTypes.bool,
     canViewFullList: PropTypes.bool,
     canViewAdvancedTools: PropTypes.bool, // Default: true
   };
@@ -26,14 +25,13 @@ class ProjectWidget extends React.Component {
 
   render() {
     const convertedProjects = convertChannelsToProjectData(this.props.projectList);
-    const { canViewAdvancedTools, canViewFullList, isRtl } = this.props;
+    const { canViewAdvancedTools, canViewFullList } = this.props;
 
     return (
       <ContentContainer
         heading={i18n.projects()}
         linkText={i18n.projectsViewProjectGallery()}
         link="/projects"
-        isRtl={isRtl}
       >
         {this.props.isLoading &&
           <div style={{height: 280, textAlign: 'center'}}>
@@ -43,7 +41,6 @@ class ProjectWidget extends React.Component {
         {convertedProjects.length > 0 &&
           <PersonalRecentProjects
             projectList={convertedProjects}
-            isRtl={isRtl}
           />
         }
         <StartNewProject

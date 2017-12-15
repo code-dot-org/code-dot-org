@@ -18,16 +18,3 @@
     .clear
     = render partial: 'levels/dialog', locals: {app: app, data: data}
   .clear
-
-
-  %div{style: 'display: none;'}
-    - ['badname', 'badname_case', 'badrange', 'baddomainsize', 'baddomainname', 'baddomaintype'].each do |error_type|
-      %div{id: "#{error_type}-dialogcontent"}
-        .modal-content.no-modal-icon
-          %p.dialog-title
-            =t('contract_match.wrong_title')
-          %p
-            =t("contract_match.#{error_type}")
-          .farSide
-            %button#ok-button
-              =t('dialog.ok')

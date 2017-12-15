@@ -7,23 +7,49 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "onBoardEvent": {
-        "dropdown": {
-          "0": [
-            "buttonL",
-            "buttonR"
-          ],
-          "1": [
-            "\"down\"",
-            "\"up\""
-          ]
-        }
-      },
-      "buzzer.frequency": null
+      "onBoardEvent": null,
+      "buzzer.frequency": null,
+      "pinMode": null,
+      "digitalWrite": null,
+      "digitalRead": null,
+      "analogWrite": null,
+      "analogRead": null,
+      "on": null,
+      "off": null,
+      "toggle": null,
+      "blink": null,
+      "stop": null,
+      "color": null,
+      "intensity": null,
+      "led.on": null,
+      "led.off": null,
+      "led.blink": null,
+      "led.toggle": null,
+      "led.pulse": null,
+      "buzzer.note": null,
+      "buzzer.off": null,
+      "buzzer.stop": null,
+      "buzzer.play": null,
+      "accelerometer.getOrientation": null,
+      "accelerometer.start": null,
+      "accelerometer.getAcceleration": null,
+      "isPressed": null,
+      "holdtime": null,
+      "soundSensor.start": null,
+      "soundSensor.value": null,
+      "soundSensor.getAveragedValue": null,
+      "soundSensor.setScale": null,
+      "lightSensor.start": null,
+      "lightSensor.value": null,
+      "lightSensor.getAveragedValue": null,
+      "lightSensor.setScale": null,
+      "tempSensor.F": null,
+      "tempSensor.C": null,
+      "toggleSwitch.isOpen": null
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Making the Buzzer Buzz\r\n\r\nYou've already used the buzzer's duration, now you're going use the buzzer's frequency. \r\n\r\nThe frequency of the buzzer determines how high or how low the buzzer will sound when it plays. The higher the number you give frequency, the higher the buzzer will sound.\r\n\r\n# Do this\r\n* Right now the buzzer plays a high note when the left button is pressed, make the buzzer play a low note instead.",
+    "markdown_instructions": "# Making the Buzzer Buzz\r\n\r\nYou've already used the buzzer's duration, now you're going use the buzzer's frequency. \r\n\r\nThe frequency of the buzzer determines how high or how low the buzzer will sound when it plays. The higher the number you give frequency, the higher the buzzer will sound.\r\n\r\n# Do this\r\n* Right now the buzzer plays a high note when the left button is pressed. Make the buzzer play a low note instead.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -49,7 +75,7 @@
     "disable_if_else_editing": "false",
     "free_play": "false",
     "autocomplete_palette_apis_only": "false",
-    "hide_view_data_button": "false",
+    "hide_view_data_button": "true",
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",
@@ -59,7 +85,7 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false",
+    "makerlab_enabled": "true",
     "start_blocks": "onBoardEvent(buttonL, \"down\", function(event) {\r\n  buzzer.frequency(500, 100);\r\n});",
     "project_template_level_name": "CSDU6 frequency template",
     "contained_level_names": null,
@@ -69,7 +95,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-11-18 00:19:28 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-20 19:30:25 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-20 19:33:25 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-20 23:09:12 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-20 23:09:36 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"project_template_level_name\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-20 23:11:15 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-21 16:56:52 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-21 16:56:54 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-21 16:57:27 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-11-18 00:19:28 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-20 19:30:25 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-20 19:33:25 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-20 23:09:12 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-20 23:09:36 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"project_template_level_name\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-20 23:11:15 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-21 16:56:52 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-21 16:56:54 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-21 16:57:27 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-08 22:04:47 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-08 22:06:49 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-14 18:05:22 +0000\",\"changed\":[\"code_functions\",\"hide_view_data_button\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

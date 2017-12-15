@@ -33,51 +33,23 @@
     "step_speed": "1",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You have probably already used a loop to create a zig-zag pattern. If you remember that algorithm, you can make a few additions to it here.\",\"hint_id\":\"courseD_harvester_nested_loops_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/35f63d2d7720e820a0bcb4b3d7a265df/courseD_harvester_nested_loops_challenge1.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try following this path to reach all of the corn! \",\"hint_id\":\"courseD_harvester_nested_loops_challenge1_a\",\"hint_type\":\"general\",\"hint_path\":\"[[0,0],[0,2],[2,2],[2,4],[4,4],[4,6],[6,6]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1138100a28b5961eabf230109811f73a/courseD_harvester_nested_loops_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To collect more than one piece of corn, you need to use `pick corn` more than one time.\",\"hint_id\":\"courseD_harvester_nested_loops_challenge1_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b77708bec450312eab55a20e7e6cf528/courseD_harvester_nested_loops_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to put a small loop inside of your main loop to solve this puzzle!\",\"hint_id\":\"courseD_harvester_nested_loops_challenge1_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bacba0f668a72c8a13d734e509c77159/courseD_harvester_nested_loops_challenge1.mp3\"}]",
     "ideal": "10",
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-01 15:44:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-01 15:44:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-11-30 20:33:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-30 20:43:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 21:28:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="controls_repeat">
-              <title name="TIMES">6</title>
-              <statement name="DO">
-                <block type="maze_move">
-                  <title name="DIR">moveForward</title>
-                  <next>
-                    <block type="maze_turn">
-                      <title name="DIR">turnLeft</title>
-                      <next>
-                        <block type="maze_move">
-                          <title name="DIR">moveForward</title>
-                          <next>
-                            <block type="maze_turn">
-                              <title name="DIR">turnRight</title>
-                              <next>
-                                <block type="harvester_corn"/>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

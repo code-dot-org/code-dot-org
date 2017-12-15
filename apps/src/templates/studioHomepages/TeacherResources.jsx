@@ -1,4 +1,4 @@
-import React, {PropTypes, Component} from 'react';
+import React, {Component} from 'react';
 import ImageResourceCard from './ImageResourceCard';
 import ContentContainer from '../ContentContainer';
 import i18n from "@cdo/locale";
@@ -18,19 +18,13 @@ const styles = {
 
 
 export default class TeacherResources extends Component {
-  static propTypes = {
-    isRtl: PropTypes.bool.isRequired
-  };
-
   render() {
-    const { isRtl } = this.props;
     const planUrl = pegasus('/teacher-dashboard#/plan');
     const volunteerUrl = pegasus('/volunteer/local');
 
     return (
       <ContentContainer
         heading={i18n.resources()}
-        isRtl={isRtl}
       >
         <div style={styles.container}>
           <ImageResourceCard
@@ -39,7 +33,6 @@ export default class TeacherResources extends Component {
             image="teacher-community"
             buttonText={i18n.joinCommunity()}
             link="https://forum.code.org"
-            isRtl={isRtl}
           />
           <ImageResourceCard
             title={i18n.professionalLearning()}
@@ -47,7 +40,6 @@ export default class TeacherResources extends Component {
             image="professional-learning"
             buttonText={i18n.learnMore()}
             link="/my-professional-learning"
-            isRtl={isRtl}
           />
           <ImageResourceCard
             title={i18n.standardsAndFramework()}
@@ -55,7 +47,6 @@ export default class TeacherResources extends Component {
             image="standards-framework"
             buttonText={i18n.reviewDocuments()}
             link={planUrl}
-            isRtl={isRtl}
           />
           <ImageResourceCard
             title={i18n.findGuestSpeaker()}
@@ -63,7 +54,6 @@ export default class TeacherResources extends Component {
             image="guest-speaker"
             buttonText={i18n.inspireStudents()}
             link={volunteerUrl}
-            isRtl={isRtl}
           />
         </div>
       </ContentContainer>

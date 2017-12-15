@@ -67,7 +67,7 @@ module Pd::Application
     end
 
     # Are we still accepting applications?
-    APPLICATION_CLOSE_DATE = Date.new(2017, 12, 15)
+    APPLICATION_CLOSE_DATE = Date.new(2018, 2, 1)
     def self.open?
       Time.zone.now < APPLICATION_CLOSE_DATE
     end
@@ -415,6 +415,7 @@ module Pd::Application
       ]
     end
 
+    # @override
     # Filter out extraneous answers, based on selected program (course)
     def self.filtered_labels(course)
       labels_to_remove = (course == 'csf' ?
@@ -424,12 +425,6 @@ module Pd::Application
       )
 
       ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
-    end
-
-    # @override
-    # Filter out extraneous answers, based on selected program (course)
-    def full_answers
-      super.slice(*self.class.filtered_labels(course).keys)
     end
 
     # @override
@@ -451,6 +446,11 @@ module Pd::Application
         row.push status, locked?, notes, regional_partner_name
         csv << row
       end
+    end
+
+    # Add account_email (based on the associated user's email) to the sanitized form data hash
+    def sanitize_form_data_hash
+      super.merge(account_email: user.email)
     end
 
     # Formats hour as 0-12(am|pm)

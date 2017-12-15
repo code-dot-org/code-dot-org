@@ -14,7 +14,6 @@ export default storybook => storybook
             description="You will create accounts for your students. Students will log in with a secret picture."
             buttonText="Use picture logins"
             onClick={storybook.action('onClick')}
-            isRtl={false}
           />
         )
       },
@@ -27,7 +26,6 @@ export default storybook => storybook
             description="Sync your Code.org section with an existing Google Classroom."
             buttonText="Use Google Classroom"
             onClick={storybook.action('onClick')}
-            isRtl={false}
           />
         )
       },

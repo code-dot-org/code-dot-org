@@ -1,7 +1,7 @@
 ---
 title: Dig Deeper into AP Computer Science
 theme: responsive
-social: 
+social:
   "og:title": "Dig Deeper into AP Computer Science"
   "og:description": "View data about the AP Computer Science exam by state"
   "og:image": "<%= 'https://' + request.host + '/images/middleschool.png' %>"
@@ -17,11 +17,9 @@ social:
 
 # Dig Deeper into AP Computer Science
 
-The AP Computer Science A exam is widely accepted by the computer science education community as one of the most reliable measures of computer science high school course-taking patterns. The College Board’s rigorous methodology and data gathering has enabled us to see trends in AP Computer Science A exam-taking over time, by state, by gender, and by ethnic group. This page contains a summary of that data. 
+The AP Computer Science exams are widely accepted by the computer science education community as one of the most reliable measures of computer science high school course-taking patterns. The College Board’s rigorous methodology and data gathering has enabled us to see trends in AP Computer Science A exam-taking over time, by state, by gender, and by ethnic group; as well as the impact of AP Computer Science Principles course, which launched in the 2016-17 school year. This page contains a summary of that data.
 
-In 2016, the College Board debuted a new computer science exam, AP Computer Science Principles. Data on the first administration of this exam should be available in Fall 2017. 
-
-This data comes directly from the public spreadsheets available on a per-state basis from the [College Board](https://research.collegeboard.org/programs/ap/data). 
+This data comes directly from the public spreadsheets available on a per-state basis from the [College Board](https://research.collegeboard.org/programs/ap/data).
 
 ## AP Computer Science A Over Time
 
@@ -55,56 +53,116 @@ This data comes directly from the public spreadsheets available on a per-state b
 
 
 
-_Change in ethnic group categories: In 2016, the College Board changed the ethnic group categories that they report. Prior to 2016, we considered the following to be underrepresented minority groups: American Indian, Black, Mexican American, Puerto Rican, and Other Hispanic. In 2016, we considered the following categories: American Indian/Alaska Native, Black, Hispanic/Latino, and Native Hawaiian/Other Pacific Islander._
+_Change in ethnic group categories: In 2016, the College Board changed the ethnic group categories that they report. Prior to 2016, we considered the following to be underrepresented minority groups: American Indian, Black, Mexican American, Puerto Rican, and Other Hispanic. After 2016, we considered the following categories: American Indian/Alaska Native, Black, Hispanic/Latino, and Native Hawaiian/Other Pacific Islander._
 
-Download a spreadsheet with this data [here](/files/APCollegeBoardDataSummaries.xlsx). 
+In order to download the raw data, click the download icon (a square with an arrow pointing downward) in the bottom right corner of the figure. Be sure to click somewhere on the figure before clicking this icon -- otherwise, the "Data" option will be grayed out. Click "Data", then select the "Full data" tab. Click "Download all rows as text file" to download the data as a CSV.
 
 
-## 2016 Outcomes
+## 2017 Outcomes
 
 ### General
 
-* Numbers of female and underrepresented minority student participation and representation in AP Computer Science A increased from 2015 to 2016. 
-* The proportion of schools with AP programs that offer Computer Science A increased 6 percentage points between 2015 and 2016, from 15.5% of schools to 21.2% of schools.
-* In 2016, there were 8,035 more students in AP Computer Science A, which is a 17% increase from 2015.
-* The vast majority of states saw an increase in the number of students taking AP CS (44 states + DC).
+#### _The total <strong>number of students in CS increased</strong> as compared to 2016:_
+* CS A: +1709 exams, or +3%
+* CS P: 43,780 exams
+* All CS Exams: +45,489 exams, or +84%
+
+#### _<strong>Female student participation in CS increased</strong> as compared to 2016:_
+* CS A: +525 exams, or +4%
+* CS P: 13,172 exams
+* All CS Exams: +13,697 exams, or +108% _(CS P is the main reason for overall increase)_
+
+#### _<strong>Underrepresented minority student participation in CS increased</strong> as compared to 2016:_
+* CS A: +314 exams, or +4%
+* CS P: 11,417 exams
+* All CS Exams: +11,731 exams, or +139% _(CS P is the main reason for overall increase)_
+
+#### _<strong>CS passing rates (score 3+) were lower for female and underrepresented minority students</strong> in 2017._
+* All CS Exams: female student passing rate was 67% (-4% as compared to male students)
+* All CS Exams: underrepresented minority student passing rate was 49% (-27% as compared to the students in the majority)
+
+#### _<strong>All states (+ DC) saw an increase in the number of total CS exams</strong> taken in 2017, due to the addition of CS Principles._
+* CS A: 20 states saw a decrease in CS A exams
+* CS P: All states but Montana offered CS P
+
+#### _<strong>Schools that offered CS increased</strong> as compared to 2016:_
+* CS A: +5% (4,810 schools to 5,040 schools). The increase is not as great as that from 2015-2016, which had a +12% in schools offering CS A
+* CS P: 2,625 schools
+* All CS Exams: +59% (4,810 schools to 7,665 schools). _(However, it’s unclear what percent of schools offer both CS A and CS P)_
+
+
+### Female student participation
+
+#### _Female students <strong>comprised a low percent of AP CS exams</strong>:_
+* CS A: 23% of exams were taken by female students. This is 0% change from 2016 and is the lowest rate of female student participation for any AP Exam (same as 2016)
+* CS P: 30% of exams were taken by female students. This is the 4th lowest rate of female participation for any AP exam (Physics and CS A have lower rates)
+* All CS Exams: 26% of all CS exams were taken by female students.
+
+#### _Female student <strong>passing rate was lower than male students</strong>:_
+* CS A: female student passing rate was 64% of exams (lower than male students by -3.8% passing rate and a mean score difference of -0.13)
+* CS P: female student passing rate was 70% of exams (lower than male students by -6% passing rate and a mean score difference of -0.15)
+* All CS Exams: female student passing rate of exams was 67% (lower than male students by -4% passing rate)
+
+
+### Underrepresented minority student participation
+
+For 2017 College Board data, we consider the following ethnic group categories to be underrepresented minorities: American Indian/Alaska Native, Black, Hispanic/Latino, and Native Hawaiian/Other Pacific Islander. (Other categories reported by the College Board are Asian, White, Two or more races, Other, and No response.) Note that until 2016, the College Board reported demographics using different categories; for those years, the following ethnic group categories are considered to be underrepresented minorities: American Indian, Black, Mexican American, Puerto Rican, and Other Hispanic. (Other ethnic categories reported by the College Board include Asian, White, Other, and Not stated.) The majority is defined as White and Asian students.
+
+#### _Underrepresented minority students <strong>comprised a low percent of AP CS exams</strong>:_
+* CS A: 16% of exams were taken by minority students. This is the 7th lowest rate of participation for any AP exam (calculus, physics and languages have lower rates) and 4th lowest in AP STEM exams.
+* CS P: 26% of exams were taken by minority students. This is the 2nd highest rate of underrepresented minority student participation across STEM AP exams (Environmental Science is higher at 28%).
+* All CS Exams: 20% of all CS exams were taken by minority students.
+
+#### _Underrepresented minority student <strong>passing rate was lower than the students in the majority</strong>:_
+* CS A: minority student passing rate was 44% of exams (lower than the students in the majority by -28%). Black students scored lower at an average score of 2.08, with a mean difference of 1.40 as compared to students in the majority.
+* CS P: minority student passing rate was 53% of exams (lower than the students in the majority by -29%). Black students scored lower at an average score of 2.32, with a mean difference of 1.15 as compared to the students in the majority.
+* All CS Exams: minority student passing rate of exams was 49% (lower than students in the majority by 27%).
 
 
 
-### Female participation
+## 2017 State-Level Highlights
 
-* Female students made up 23% of the AP Computer Science A exam. This is the lowest rate of female participation for any single exam. 
-* Female participation increased from 10,142 female students who took the AP Computer Science A exam in 2015 to 12,694 students who took the exam in 2016. This is a 24.6% increase. (And in 2014, only 7458 students took the exam). 
-* Female representation increased from 21.88% of AP Computer Science A exams taken by females in 2015 to 23.25% in 2016 (and in 2014, it was 19.98%). 
-* In the STEM subjects (Computer Science, Chemistry, Calculus AB and BC, combined Physics exams, Statistics, and Biology), Computer Science had the lowest female participation rate at 23%.
+#### _All states saw increases in the number of all CS exams_
+* CS A: <strong>30 states saw an increase in CS A exams</strong> (down by 4 states from 2016)
+* Highest percent gains as compared to 2016 were in
+Idaho (+64 exams from 59 exams), Utah (+104 exams from 129 exams), and Rhode Island (+52 exams from 94 exams)
+* Lowest percent gains as compared to 2016 were in Alaska (down 57% to 26 exams), Hawaii (down 53% to 88 exams) and South Dakota (down 38% to 16 exams)
+* CS P: All states but Montana had CS P exam participants
+* Highest percent of CS P exams from their state total were in Alabama (1249 exams, or 82% were CS P), Mississippi (86 exams, or 82% were CS P), and Hawaii (202 exams, or 70% were CS P)
+* All CS Exams: <strong>17 States more than doubled their total CS exams</strong> in 2017
+* Highest percent gains as compared to 2016 were in Mississippi (+89 exams from 16 exams, Mississippi showed the biggest percent exam increase in 2016 as well), Idaho (+256 exams from 59 exams), and Alabama (+1217 exams from 303 exams)
+* 2 states with the lowest percent gains as compared to 2016 were Kansas (+1 exam, or 1.75% gain from 57 exams), and Alaska (+8 exams, or 13% gain from 60 exams)
 
-### Underrepresented minority participation
+### Female student participation at the state level
 
-For 2016 College Board data, we consider the following ethnic group categories to be underrepresented minorities: American Indian/Alaska Native, Black, Hispanic/Latino, and Native Hawaiian/Other Pacific Islander. (Other categories reported by the College Board are Asian, White, Two or more races, Other, and No response.) Note that in previous years, the College Board reported demographics using different categories; for those years, the following ethnic group categories are considered to be underrepresented minorities: American Indian, Black, Mexican American, Puerto Rican, and Other Hispanic. (Other ethnic categories reported by the College Board include Asian, White, Other, and Not stated.)
-
-* Underrepresented minority students made up 16% of AP Computer Science A exams. This is the 8th lowest of 38 exams, and the second lowest subject when grouping exams by subject.
-* Underrepresented minority student participation increased from 6,140 (2015) to 8,522 students (2016), which is a 35.3% increase. However, in 2016, the College Board changed their demographic categories, so it is difficult to make direct comparisons between the years. 
-* Underrepresented minority representation increased from 13.25% of AP Computer Science A exams to 15.6% of AP Computer Science A exams (although the demographic categories also changed). 
-* In the STEM subjects (Computer Science, Chemistry, Calculus AB and BC, combined Physics exams, Statistics, and Biology), Computer Science had the lowest underrepresented minority participation rate at 16%.
-
-
-## 2016 State-Level Highlights
-
-* The largest percent increases in AP Computer Science A exam-taking were in Mississippi, which increased from 5 students to 16 students; Nevada, which increased from 39 students to 104 students; and Montana, which increased from 0 students to 9 students. 
-* 6 states saw a slight decrease: Louisiana (-14 students), Maine (-1 student), Oklahoma (-19 students), Oregon (-9 students), South Dakota (-14 students), and West Virginia (-22 students).
-
-### Female participation at the state level
-
-* 34 states saw an increase in the proportion of AP Computer Science A students who are female, with an average increase of 4%. The largest increases came in Wyoming (+33%), Iowa (+10%), and North Dakota (+9.7%).
-* 16 states saw a decrease in the proportion of AP Computer Science A students who are female, with an average decline of 4.5%. The largest decreases came in Alaska (-13.1%), Kansas (-11.7%), and Delaware (-10%).
-* Four states more than doubled the number of female students in AP Computer Science A, including Iowa, Idaho, North Dakota, and Nevada.
+#### _All states saw increases in the number of all CS exams_
+* CS A: 32 states saw an increase in CS A exams (down by 3 states from 2016) and <strong>6 states doubled their female student participation</strong>.
+* Highest percent gains as compared to 2016 were in Montana (+2 exams from 0 exams), Mississippi (+1 exam from 0 exams), South Dakota (+2 exams from 1 exam), Rhode Island (+19 exams from 12 exams), and Utah (+23  exams from 16 exams)
+* Lowest percent gains as compared to 2016 were in North Dakota (down 83% to 1 exam), Vermont (down 57% to 6 exams), and South Dakota (down 52% to 26 exams)
+* CS P: All states but Montana had CS P exam participants
+* Highest percent of CS P exams from their state total were in Mississippi (23 exams, or 96% were CS P), North Dakota (10 exams, or 90% were CS P), and Alabama (408 exams, or 88% were CS P)
+* All CS Exams: <strong>27 States more than doubled their female student CS exams</strong> in 2017
+* Highest percent gains as compared to 2016 were in Mississippi (+1 exam from 0 exams), Alabama (+402 exams from 61 exams), and Idaho (+78 exams from 14 exams).
+* 2 states showed the lowest percent gains as compared to 2016: Iowa (+7 exams, or 14% gain from 51 exams) and Washington (+166 exams, or 28% gain from 583 exams)
+* All CS Exams: In <strong>39 States male students had higher passing rates than female students</strong>
+* States with the poorest/higher gender gap passing rate were South Dakota (0 passed; -81% passing rate compared to male students), Wyoming (0 passed; -75% passing rate compared to male students), Montana (0 passed; -64% passing rate compared to male students), and Kansas (22% female students passed; -51% passing rate compared to male students)
+* States in which female students outperformed male students were Maryland (69% female student passing rate; +17% higher than male students), Iowa (84% female student passing rate; +7% higher than male students), and Vermont (88% female student passing rate; +6% higher than male students)
 
 
-### Underrepresented minority participation at the state level
+### Underrepresented minority student participation at the state level
 
-* 37 states saw an increase in the proportion of AP Computer Science A exam-takers who are underrepresented minorities, with an average increase of 3.7%. The largest increases came in Washington DC (+21.1%), Wyoming (+16.7%), and South Dakota (+9.0%).
-* 11 states saw a decrease in the proportion of AP Computer Science A exam-takers who are underrepresented minorities, with an average decline of 4.3%. The largest decreases came in Kansas (-9.7%), Kentucky (-9.3%), and Louisiana (-7.7%).
-* Eight states more than doubled the number of underrepresented minority students who took the AP Computer Science A exam, including Alaska, Connecticut, Washington DC, Hawaii, Iowa, Nebraska, New Hampshire, and South Dakota.
+#### _All states but 4 (Wyoming, South Dakota, Kansas, New Hampshire) saw an increases in the number of all CS exams_
+* CS A: 27 states saw an increase in CS A exams and <strong>8 states doubled their minority student participation</strong>.
+* Highest percent gains as compared to 2016 were in: Mississippi (+5 exams from 1 exam), Montana (+2 exams from 0 exams), North Dakota (+1  exam from 0 exams), Nevada (+29 exams from 15 exams), and Rhode Island (+9  exams from 7 exams)
+* Lowest percent gains as compared to 2016 were in Wyoming (down 100% to 0 exams), South Dakota (down 66% to 1 exam), and Alaska (down 66% to 1 exam)
+* All CS Exams: <strong>32 States more than doubled their minority student participation</strong> in 2017
+* Highest percent gains as compared to 2016 were in North Dakota (+6 exams from 0 exams), Mississippi (+22 exams from 1 exams), Nevada (+132 exams from 15 exams), and Alabama (+208 exams from 35 exams)
+* 4 states showed decreases compared to 2016: Wyoming (-1 exam, or 100% loss from 1 exam), South Dakota (-2 exams, or 66% loss from 3 exams), Kansas (-2 exams, or 50% loss from 4 exams), and New Hampshire (-1 exam, or 11% loss from 9 exams)
+* All CS Exams: <strong>Only 1 State (New Mexico) showed minority students outperforming students in the majority</strong>.
+* The only state where minority students performed higher was New Mexico (62% passed; +6% higher than the students in the majority)
+* 8 States with the poorest/higher minority student gap passing rate with 0% passing rate for minority students were: Vermont (4 exams compared to 124 exams by students in the majority with a 85% passing rate), Kansas (2 exams compared to 56 exams by students in the majority with a 75% passing rate), South Dakota (1 exam compared to 34 exams by students in the majority with a 74% passing rate), Alaska (5 exams compared to 63 exams by students in the majority with a 74% passing rate), New Hampshire (8 exams compared to 229 exams by students in the majority with a 72% passing rate), North Dakota (6 exams compared to 90 exams by students in the majority with a 71% passing rate), and Montana (2 exams compared to 11 exams by students in the majority with a 60% passing rate).
+* Wyoming had 0 minority students take any CS exams
+
 
 ### Deep Historical Analysis of State Data by Barb Ericson
 
@@ -112,8 +170,8 @@ For 2016 College Board data, we consider the following ethnic group categories t
 
 ## Downloads
 
-* [State-by-state](/files/APCollegeBoardDataSummaries.xlsx) data over time
-* [Comparison](/files/AP2016.xlsx) between STEM subjects and all subject areas for 2015-2016
+* [Comparison](/files/AP2017.xlsx) between STEM subjects and all subject areas for 2016-2017
+* Download the state-by-state data over time powering the map above: In order to download the raw data, click the download icon (a square with an arrow pointing downward) in the bottom right corner of the figure. Be sure to click somewhere on the figure before clicking this icon -- otherwise, the "Data" option will be grayed out. Click "Data", then select the "Full data" tab. Click "Download all rows as text file" to download the data as a CSV.
 
 
 

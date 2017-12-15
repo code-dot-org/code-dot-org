@@ -24,7 +24,7 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
   state = {
     loadingPartner: true,
     partner: null,
-    loadingAlternateWorkshops: true,
+    loadingAlternateWorkshops: false,
     alternateWorkshops: null
   };
 
@@ -80,6 +80,7 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
   }
 
   loadAlternateWorkshops() {
+    this.setState({loadingAlternateWorkshops: true});
     const url = `/api/v1/pd/regional_partner_workshops?${$.param(this.getWorkshopParams())}`;
     this.loadAlternateWorkshopsRequest = $.ajax({
       method: 'GET',
@@ -184,8 +185,8 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
           <div>
             <h5>
               Your region’s assigned summer workshop will be
-              {' ' + this.state.partnerWorkshops[0].dates + ' '} in
-              {' ' + this.state.partnerWorkshops[0].location}.
+              {` ${this.state.partnerWorkshops[0].dates} in`}
+              {` ${this.state.partnerWorkshops[0].location}.`}
             </h5>
 
             {this.renderAbleToAttendSingle()}
@@ -207,7 +208,7 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
   }
 
   renderAlternateWorkshopList() {
-    if (this.state.loadingAlternateWorkshops) {
+    if (this.state.loadingAlternateWorkshops || this.state.alternateWorkshops === null) {
       return null;
     }
 
@@ -236,7 +237,7 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
         </div>
 
         {this.isUnableToAttendAssignedWorkshop() && [1,2].includes(this.props.data.regionalPartnerGroup) &&
-          <div style={styles.indented} id="alternateWorkshops">
+          <div style={styles.indented}>
             <p style={styles.formText}>
               <strong>
                 We strongly encourage participants to attend their assigned summer workshop (based on the region
