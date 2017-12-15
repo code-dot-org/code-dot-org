@@ -7,13 +7,9 @@ import SectionsTable from '@cdo/apps/templates/studioHomepages/SectionsTable';
 import StudentSections from '@cdo/apps/templates/studioHomepages/StudentSections';
 import { courses, topCourse, joinedSections } from './homepagesTestData';
 import { combineReducers, createStore } from 'redux';
-import responsiveRedux, { setResponsiveSize, ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 describe('StudentHomepage', () => {
-  const store = createStore(combineReducers({responsive: responsiveRedux, isRtl}));
-  store.dispatch(setResponsiveSize(ResponsiveSize.lg));
-
   it('shows a non-extended Header Banner that says My Dashboard', () => {
     const wrapper = shallow(
       <StudentHomepage
@@ -93,6 +89,7 @@ describe('StudentHomepage', () => {
   });
 
   it('shows section codes correctly', () => {
+    const store = createStore(combineReducers({isRtl}));
     const wrapper = shallow(
         <StudentHomepage
           courses={courses}
@@ -101,7 +98,7 @@ describe('StudentHomepage', () => {
           codeOrgUrlPrefix="http://localhost:3000/"
           canLeave={false}
         />
-    ).find(StudentSections).dive({context: {store}}).find(SectionsTable).dive({context: {store}}).dive();
+    ).find(StudentSections).dive().find(SectionsTable).dive({context: {store}}).dive();
     expect(wrapper).to.containMatchingElement(
         <td>ClassOneCode</td>
     );

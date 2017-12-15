@@ -18,7 +18,7 @@ describe('Congrats', () => {
     expect(wrapper.find(Certificate).exists()).to.be.true;
   });
 
-  it('renders a StudentsBeyondHoc component', () => {
+  it('renders a StudentsBeyondHoc component, regardless of user type', () => {
     const wrapper = shallow(
       <Congrats
         completedTutorialType="other"
