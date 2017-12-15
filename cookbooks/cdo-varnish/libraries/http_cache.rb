@@ -61,6 +61,7 @@ class HttpCache
       'videos_seen',
       'callouts_seen',
       'rack.session',
+      'remember_user_token',
       session_key,
       storage_id,
     ].concat(default_cookies)

@@ -3,3 +3,4 @@
 %>
 User-agent: *
 
+Disallow: <%= '/' unless rack_env == :production %>

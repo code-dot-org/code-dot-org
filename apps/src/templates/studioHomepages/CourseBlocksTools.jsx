@@ -45,7 +45,9 @@ class CourseBlocksTools extends Component {
   ];
 
   render() {
-    const headingText = this.props.isEnglish
+    const { isEnglish } = this.props;
+
+    const headingText = isEnglish
       ? i18n.courseBlocksToolsTitleTeacher()
       : i18n.courseBlocksToolsTitleNonEn();
 

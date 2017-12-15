@@ -37,11 +37,19 @@
   twentyhours_text: Bạn đã học xong khóa học MỘT TIẾNG LẬP TRÌNH? Hãy học tiếp các
     khóa học về khoa học máy tính và lập trình tiếp theo của chúng tôi.
   og_title: Mỗi đứa trẻ xứng đáng có được cơ hội
+  og_title_soon: Giờ Lập Trình đã đến
+  og_title_here: The Hour of Code is here!
   og_description: Tất cả học sinh ở mọi trường xứng đáng có cơ hội học ngành khoa
     học máy tính. Khoa học máy tính có thể thay đổi mọi thứ.
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: Giờ của mã ở đây
   csedweek_og_description: Ngày 4 đến ngày 10, tháng 12, năm 2017. Khoa học máy tính
     là nền tảng cho mỗi học sinh tìm hiểu.
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
   hoc2014_heading: Tham gia <a href="http://hourofcode.com">Giờ Mã</a> <br/> từ mùng
     8 đến 14 tháng 12, 2014 <br/>
   hoc2014_students: học viên
@@ -1287,6 +1295,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Full Test - 50 questions
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
@@ -2023,43 +2033,43 @@
   infinity_shortcode: inf
   playlab_shortcode: Bắt đầu chơi
   artist_shortcode: art
-  header_home: Home
+  header_home: Trang chủ
   header_my_dashboard: Bảng điều khiển của tôi
   header_courses: Các khóa học
-  header_course_catalog: Course Catalog
+  header_course_catalog: Danh mục khóa học
   header_project_gallery: chương trình
   header_sections: Sections
   header_professional_learning: Học tập nâng cao chuyên môn
   header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
+  header_educate_elementary: Tiểu học
+  header_educate_middle: Trung học
+  header_educate_high: Cao học
   header_educate_hoc: Giờ của mã
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
+  header_educate_partner: "Đối tác của chúng tôi"
+  header_educate_beyond: "Đằng sau Code.org"
   header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
+  header_educate_community: Cộng đồng trực tuyến
+  header_educate_tools: Các công cụ và video
+  header_about_us: Thông tin
   header_about_leadership: Leadership
   header_about_donors: Donors
-  header_about_partners: Partners
+  header_about_partners: "Đối tác"
   header_about_team: Full Team
   header_about_news: Newsroom
   header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
+  header_about_jobs: Công việc
+  header_about_contact: Liên hệ
+  header_about_faqs: Hỏi đáp
+  header_learn: Học
+  header_teach: Dạy
   header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
-  header_teacher_community: Teacher community
+  header_help_us: Giúp đỡ chúng tôi
+  header_about: Thông tin
+  header_teacher_community: Cộng đồng giáo viên
   header_help_support: 'Help and support '
-  header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
+  header_report_bug: Báo lỗi
+  header_tutorials: Hướng dẫn
+  header_documentation: Tài liệu
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
@@ -2120,15 +2130,12 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
-  og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
-  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
-    or your class!
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
-    science is foundational for every student to learn.
-  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
-    for every student to learn.
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
+  video_title_steph_curry: Hour of Code with Steph Curry

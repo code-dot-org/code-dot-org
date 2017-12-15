@@ -95,7 +95,6 @@ WebLab.prototype.init = function (config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
-  config.baseShareUrl = 'https://codeprojects.org';
 
   config.afterClearPuzzle = config => {
     return new Promise((resolve, reject) => {
@@ -213,6 +212,18 @@ WebLab.prototype.init = function (config) {
     });
   }
 
+  function onStartFullScreenPreview() {
+    this.brambleHost.enableFullscreenPreview(() => {
+      getStore().dispatch(actions.changeFullScreenPreviewOn(true));
+    });
+  }
+
+  function onEndFullScreenPreview() {
+    this.brambleHost.disableFullscreenPreview(() => {
+      getStore().dispatch(actions.changeFullScreenPreviewOn(false));
+    });
+  }
+
   function onToggleInspector() {
     if (getStore().getState().inspectorOn) {
       this.brambleHost.disableInspector();
@@ -230,6 +241,8 @@ WebLab.prototype.init = function (config) {
         onUndo={onUndo.bind(this)}
         onRedo={onRedo.bind(this)}
         onRefreshPreview={onRefreshPreview.bind(this)}
+        onStartFullScreenPreview={onStartFullScreenPreview.bind(this)}
+        onEndFullScreenPreview={onEndFullScreenPreview.bind(this)}
         onToggleInspector={onToggleInspector.bind(this)}
         onMount={onMount}
       />

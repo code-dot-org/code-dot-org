@@ -2,13 +2,14 @@ import React, { PropTypes, Component } from 'react';
 import Certificate from './Certificate';
 import StudentsBeyondHoc from './StudentsBeyondHoc';
 import TeachersBeyondHoc from './TeachersBeyondHoc';
+import styleConstants from '../styleConstants';
 
 const styles = {
   container: {
     width: '100%',
+    maxWidth: styleConstants['content-width'],
     marginLeft: 'auto',
     marginRight: 'auto',
-    maxWidth: 970,
   },
 };
 
