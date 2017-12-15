@@ -1,372 +1,238 @@
-import tickWrapper from '../../util/tickWrapper';
-import {TestResults} from '@cdo/apps/constants';
 import {gamelabLevelDefinition} from '../../gamelabLevelDefinition';
-/* global Gamelab */
+import {testAsyncProgramGameLab} from '../../util/levelTestHelpers';
 
 module.exports = {
   app: "gamelab",
   skinId: "gamelab",
   levelDefinition: gamelabLevelDefinition,
   tests: [
-    {
-      description: "Not-overlapping sprites do not collide",
-      editCode: true,
-      xml:
-        'var sprite1 = createSprite(0, 0);\n' +
-        'var sprite2 = createSprite(300, 300);\n' +
-        'if(sprite1.collide(sprite2)){\n' +
-        'console.log("collided");\n' +
-        '}\n' +
-        'console.log("done");\n',
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.tickAppUntil(Gamelab, function () {
-          var debugOutput = document.getElementById('debug-output');
-          return debugOutput.textContent.includes('done');
-        }).then(function () {
-          Gamelab.onPuzzleComplete();
-        });
+    testAsyncProgramGameLab(
+      "Not-overlapping sprites do not collide",
+      `
+        var sprite1 = createSprite(0, 0);
+        var sprite2 = createSprite(300, 300);
+        if(sprite1.collide(sprite2)){
+          console.log("collided");
+        }
+        console.log("done");
+      `,
+      function isProgramDone(){
+        var debugOutput = document.getElementById('debug-output').textContent;
+        return debugOutput.includes('done');
       },
-      customValidator: function (assert) {
-        // No errors in output console
+      function validateResult(assert){
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'collided');
-        return true;
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    },
-    {
-      description: 'Overlapping Sprites collide',
-      editCode: true,
-      xml:
-        'var sprite1 = createSprite(200, 200);\n' +
-        'var sprite2 = createSprite(200, 200);\n' +
-        'if(sprite1.collide(sprite2)){\n' +
-        'console.log("collided");\n' +
-        '}\n' +
-        'console.log("done");\n',
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.tickAppUntil(Gamelab, function () {
+    ),
+    testAsyncProgramGameLab(
+      'Overlapping Sprites collide',
+      `
+        var sprite1 = createSprite(200, 200);
+        var sprite2 = createSprite(200, 200);
+        if(sprite1.collide(sprite2)){
+          console.log("collided");
+        }
+        console.log("done");
+      `,
+      function isProgramDone(){
           var debugOutput = document.getElementById('debug-output');
           return debugOutput.textContent.includes('done');
-        }).then(function () {
-          Gamelab.onPuzzleComplete();
-        });
       },
-      customValidator: function (assert) {
-        // No errors in output console
+      function validateResult(assert){
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'collided');
-        return true;
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    },
-    {
-      description: "Not-overlapping sprites do not bounce",
-      editCode: true,
-      xml:
-        'var sprite1 = createSprite(0, 0);\n' +
-        'var sprite2 = createSprite(300, 300);\n' +
-        'if(sprite1.bounce(sprite2)){\n' +
-        'console.log("bounced");\n' +
-        '}\n' +
-        'console.log("done");\n',
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.tickAppUntil(Gamelab, function () {
+    ),
+    testAsyncProgramGameLab(
+      "Not-overlapping sprites do not bounce",
+      `
+        var sprite1 = createSprite(0, 0);
+        var sprite2 = createSprite(300, 300);
+        if(sprite1.bounce(sprite2)){
+          console.log("bounced");
+        }
+        console.log("done");
+      `,
+      function isProgramDone(){
           var debugOutput = document.getElementById('debug-output');
           return debugOutput.textContent.includes('done');
-        }).then(function () {
-          Gamelab.onPuzzleComplete();
-        });
       },
-      customValidator: function (assert) {
-        // No errors in output console
+      function validateResult(assert){
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'bounced');
-        return true;
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    },
-    {
-      description: 'Overlapping Sprites bounce',
-      editCode: true,
-      xml:
-        'var sprite1 = createSprite(200, 200);\n' +
-        'var sprite2 = createSprite(200, 200);\n' +
-        'if(sprite1.bounce(sprite2)){\n' +
-        'console.log("bounced");\n' +
-        '}\n' +
-        'console.log("done");\n',
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.tickAppUntil(Gamelab, function () {
-          var debugOutput = document.getElementById('debug-output');
-          return debugOutput.textContent.includes('done');
-        }).then(function () {
-          Gamelab.onPuzzleComplete();
-        });
+    ),
+    testAsyncProgramGameLab(
+      'Overlapping Sprites bounce',
+      `
+        var sprite1 = createSprite(200, 200);
+        var sprite2 = createSprite(200, 200);
+        if(sprite1.bounce(sprite2)){
+          console.log("bounced");
+        }
+        console.log("done");
+      `,
+      function isProgramDone(){
+        var debugOutput = document.getElementById('debug-output');
+        return debugOutput.textContent.includes('done');
       },
-      customValidator: function (assert) {
-        // No errors in output console
+      function validateResult(assert){
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'bounced');
-        return true;
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    },
-    {
-      description: "Not-overlapping sprites do not bounce off",
-      editCode: true,
-      xml:
-        'var sprite1 = createSprite(0, 0);\n' +
-        'var sprite2 = createSprite(300, 300);\n' +
-        'if(sprite1.bounceOff(sprite2)){\n' +
-        'console.log("bounced off");\n' +
-        '}\n' +
-        'console.log("done");\n',
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.tickAppUntil(Gamelab, function () {
-          var debugOutput = document.getElementById('debug-output');
-          return debugOutput.textContent.includes('done');
-        }).then(function () {
-          Gamelab.onPuzzleComplete();
-        });
+    ),
+    testAsyncProgramGameLab(
+      "Not-overlapping sprites do not bounce off",
+      `
+        var sprite1 = createSprite(0, 0);
+        var sprite2 = createSprite(300, 300);
+        if(sprite1.bounceOff(sprite2)){
+          console.log("bounced off");
+        }
+        console.log("done");
+      `,
+      function isProgramDone(){
+        var debugOutput = document.getElementById('debug-output');
+        return debugOutput.textContent.includes('done');
       },
-      customValidator: function (assert) {
-        // No errors in output console
+      function validateResult(assert){
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'bounced off');
-        return true;
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    },
-    {
-      description: 'Overlapping Sprites bounce off',
-      editCode: true,
-      xml:
-        'var sprite1 = createSprite(200, 200);\n' +
-        'var sprite2 = createSprite(200, 200);\n' +
-        'if(sprite1.bounceOff(sprite2)){\n' +
-        'console.log("bounced off");\n' +
-        '}\n' +
-        'console.log("done");\n',
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.tickAppUntil(Gamelab, function () {
-          var debugOutput = document.getElementById('debug-output');
-          return debugOutput.textContent.includes('done');
-        }).then(function () {
-          Gamelab.onPuzzleComplete();
-        });
+    ),
+    testAsyncProgramGameLab(
+      'Overlapping Sprites bounce off',
+      `
+        var sprite1 = createSprite(200, 200);
+        var sprite2 = createSprite(200, 200);
+        if(sprite1.bounceOff(sprite2)){
+          console.log("bounced off");
+        }
+        console.log("done");
+      `,
+      function isProgramDone(){
+        var debugOutput = document.getElementById('debug-output');
+        return debugOutput.textContent.includes('done');
       },
-      customValidator: function (assert) {
-        // No errors in output console
+      function validateResults(assert){
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'bounced off');
-        return true;
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    },
-    {
-      description: "Not-overlapping sprites do not displace",
-      editCode: true,
-      xml:
-        'var sprite1 = createSprite(0, 0);\n' +
-        'var sprite2 = createSprite(300, 300);\n' +
-        'if(sprite1.displace(sprite2)){\n' +
-        'console.log("displaced");\n' +
-        '}\n' +
-        'console.log("done");\n',
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.tickAppUntil(Gamelab, function () {
-          var debugOutput = document.getElementById('debug-output');
-          return debugOutput.textContent.includes('done');
-        }).then(function () {
-          Gamelab.onPuzzleComplete();
-        });
+    ),
+    testAsyncProgramGameLab(
+      "Not-overlapping sprites do not displace",
+      `
+        var sprite1 = createSprite(0, 0);
+        var sprite2 = createSprite(300, 300);
+        if(sprite1.displace(sprite2)){
+          console.log("displaced");
+        }
+        console.log("done");
+      `,
+      function isProgramDone(){
+        var debugOutput = document.getElementById('debug-output');
+        return debugOutput.textContent.includes('done');
       },
-      customValidator: function (assert) {
-        // No errors in output console
+      function validateResults(assert){
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'displaced');
-        return true;
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    },
-    {
-      description: 'Overlapping Sprites displaced',
-      editCode: true,
-      xml:
-        'var sprite1 = createSprite(200, 200);\n' +
-        'var sprite2 = createSprite(200, 200);\n' +
-        'if(sprite1.displace(sprite2)){\n' +
-        'console.log("displaced");\n' +
-        '}\n' +
-        'console.log("done");\n',
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.tickAppUntil(Gamelab, function () {
-          var debugOutput = document.getElementById('debug-output');
-          return debugOutput.textContent.includes('done');
-        }).then(function () {
-          Gamelab.onPuzzleComplete();
-        });
+    ),
+    testAsyncProgramGameLab(
+      'Overlapping Sprites displaced',
+      `
+        var sprite1 = createSprite(200, 200);
+        var sprite2 = createSprite(200, 200);
+        if(sprite1.displace(sprite2)){
+          console.log("displaced");
+        }
+        console.log("done");
+      `,
+      function isProgramDone(){
+        var debugOutput = document.getElementById('debug-output');
+        return debugOutput.textContent.includes('done');
       },
-      customValidator: function (assert) {
-        // No errors in output console
+      function validateResults(assert){
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'displaced');
-        return true;
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    },
-    {
-      description: "Not-overlapping sprites do not overlap",
-      editCode: true,
-      xml:
-        'var sprite1 = createSprite(0, 0);\n' +
-        'var sprite2 = createSprite(300, 300);\n' +
-        'if(sprite1.overlap(sprite2)){\n' +
-        'console.log("overlapped");\n' +
-        '}\n' +
-        'console.log("done");\n',
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.tickAppUntil(Gamelab, function () {
-          var debugOutput = document.getElementById('debug-output');
-          return debugOutput.textContent.includes('done');
-        }).then(function () {
-          Gamelab.onPuzzleComplete();
-        });
+    ),
+    testAsyncProgramGameLab(
+      "Not-overlapping sprites do not overlap",
+      `
+        var sprite1 = createSprite(0, 0);
+        var sprite2 = createSprite(300, 300);
+        if(sprite1.overlap(sprite2)){
+          console.log("overlapped");
+        }
+        console.log("done");
+      `,
+      function isProgramDone(){
+        var debugOutput = document.getElementById('debug-output');
+        return debugOutput.textContent.includes('done');
       },
-      customValidator: function (assert) {
-        // No errors in output console
+      function validateResults(assert){
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'overlapped');
-        return true;
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    },
-    {
-      description: 'Overlapping Sprites overlap',
-      editCode: true,
-      xml:
-        'var sprite1 = createSprite(200, 200);\n' +
-        'var sprite2 = createSprite(200, 200);\n' +
-        'if(sprite1.overlap(sprite2)){\n' +
-        'console.log("overlapped");\n' +
-        '}\n' +
-        'console.log("done");\n',
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.tickAppUntil(Gamelab, function () {
-          var debugOutput = document.getElementById('debug-output');
-          return debugOutput.textContent.includes('done');
-        }).then(function () {
-          Gamelab.onPuzzleComplete();
-        });
+    ),
+    testAsyncProgramGameLab(
+      'Overlapping Sprites overlap',
+      `
+        var sprite1 = createSprite(200, 200);
+        var sprite2 = createSprite(200, 200);
+        if(sprite1.overlap(sprite2)){
+          console.log("overlapped");
+        }
+        console.log("done");
+      `,
+      function isProgramDone(){
+        var debugOutput = document.getElementById('debug-output');
+        return debugOutput.textContent.includes('done');
       },
-      customValidator: function (assert) {
-        // No errors in output console
+      function validateResults(assert){
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'overlapped');
-        return true;
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    },
-    {
-      description: "Not-overlapping sprites are not touching",
-      editCode: true,
-      xml:
-        'var sprite1 = createSprite(0, 0);\n' +
-        'var sprite2 = createSprite(300, 300);\n' +
-        'if(sprite1.isTouching(sprite2)){\n' +
-        'console.log("touched");\n' +
-        '}\n' +
-        'console.log("done");\n',
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.tickAppUntil(Gamelab, function () {
-          var debugOutput = document.getElementById('debug-output');
-          return debugOutput.textContent.includes('done');
-        }).then(function () {
-          Gamelab.onPuzzleComplete();
-        });
+    ),
+    testAsyncProgramGameLab(
+      "Not-overlapping sprites are not touching",
+      `
+        var sprite1 = createSprite(0, 0);
+        var sprite2 = createSprite(300, 300);
+        if(sprite1.isTouching(sprite2)){
+          console.log("touched");
+        }
+        console.log("done");
+      `,
+      function isProgramDone(){
+        var debugOutput = document.getElementById('debug-output');
+        return debugOutput.textContent.includes('done');
       },
-      customValidator: function (assert) {
-        // No errors in output console
+      function validateResults(assert){
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'touched');
-        return true;
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    },
-    {
-      description: 'Overlapping Sprites are touching',
-      editCode: true,
-      xml:
-        'var sprite1 = createSprite(200, 200);\n' +
-        'var sprite2 = createSprite(200, 200);\n' +
-        'if(sprite1.isTouching(sprite2)){\n' +
-        'console.log("touched");\n' +
-        '}\n' +
-        'console.log("done");\n',
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.tickAppUntil(Gamelab, function () {
-          var debugOutput = document.getElementById('debug-output');
-          return debugOutput.textContent.includes('done');
-        }).then(function () {
-          Gamelab.onPuzzleComplete();
-        });
+    ),
+    testAsyncProgramGameLab(
+      'Overlapping Sprites are touching',
+      `
+        var sprite1 = createSprite(200, 200);
+        var sprite2 = createSprite(200, 200);
+        if(sprite1.isTouching(sprite2)){
+          console.log("touched");
+        }
+        console.log("done");
+      `,
+      function isProgramDone(){
+        var debugOutput = document.getElementById('debug-output');
+        return debugOutput.textContent.includes('done');
       },
-      customValidator: function (assert) {
-        // No errors in output console
+      function validateResults(assert){
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'touched');
-        return true;
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    },
+    ),
   ]
 };
