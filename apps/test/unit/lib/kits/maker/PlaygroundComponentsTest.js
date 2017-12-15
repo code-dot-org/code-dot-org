@@ -725,7 +725,7 @@ describe('Circuit Playground Components', () => {
     });
 
     ['play', 'playSong', 'playNotes'].forEach(methodUnderTest => {
-      describe(`${methodUnderTest}()`, () => {
+      describe(`stops Piezo.${methodUnderTest}()`, () => {
         let frequencySpy;
 
         beforeEach(() => {
