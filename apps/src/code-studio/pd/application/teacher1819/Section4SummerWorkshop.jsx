@@ -306,9 +306,9 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
 
     if (data.teachercon) {
       requiredFields.push("ableToAttendSingle");
-    } else if (data.regionalPartnerWorkshopIds.length === 1) {
+    } else if (data.regionalPartnerWorkshopIds && data.regionalPartnerWorkshopIds.length === 1) {
       requiredFields.push("ableToAttendSingle");
-    } else if (data.regionalPartnerWorkshopIds.length > 1) {
+    } else if (data.regionalPartnerWorkshopIds && data.regionalPartnerWorkshopIds.length > 1) {
       requiredFields.push("ableToAttendMultiple");
     }
 
