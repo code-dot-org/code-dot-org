@@ -8,6 +8,8 @@ import TeachersBeyondHoc from './TeachersBeyondHoc';
 
 const styles = {
   container: {
+    width: '100%',
+    maxWidth: 970,
     marginLeft: 'auto',
     marginRight: 'auto',
   },
@@ -76,13 +78,8 @@ export default class Congrats extends Component {
       mc: 'pre2017Minecraft',
     }[tutorial] || 'other';
 
-    const contentStyle = {
-      ...styles.container,
-      width: this.responsive.getResponsiveContainerWidth()
-    };
-
     return (
-        <div style={contentStyle}>
+        <div style={styles.container}>
           <Certificate
             tutorial={tutorial}
             certificateId={certificateId}
