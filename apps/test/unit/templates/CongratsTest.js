@@ -26,7 +26,6 @@ describe('Congrats', () => {
         isEnglish={true}
       />
     );
-    console.log(wrapper.debug());
     expect(wrapper.find(StudentsBeyondHoc).exists()).to.be.true;
   });
 
