@@ -226,6 +226,7 @@ module SharedConstants
       "toUpperCase": null,
       "toLowerCase": null,
       "declareAssign_list_abd": null,
+      "accessListItem": null,
       "listLength": null,
       "insertItem": null,
       "appendItem": null,
