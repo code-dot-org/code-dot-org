@@ -162,13 +162,6 @@ if (req.http.Authorization /* || req.http.Cookie */) {
 return (hash);
 }
 
-sub vcl_miss {
-  # Disable range requests on cache miss due to a Varnish 4.0 bug.
-  # Ref: https://varnish-cache.org/trac/ticket/1643
-  unset req.http.range;
-  return (fetch);
-}
-
 # Handle the HTTP response coming from our backend
 # beresp == Back-end response from the web server.
 sub vcl_backend_response {
