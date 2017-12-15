@@ -122,11 +122,6 @@ designMode.attachElement = function (element) {
 };
 
 designMode.editElementProperties = function (element) {
-  var designPropertiesElement = document.getElementById('design-properties');
-  if (!designPropertiesElement) {
-    return;
-  }
-
   highlightElement(element);
 
   currentlyEditedElement = element;
