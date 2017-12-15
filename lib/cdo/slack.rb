@@ -11,7 +11,6 @@ class Slack
   }.freeze
 
   CHANNEL_MAP = {
-    'developers' => 'general',
     'server operations' => 'server-operations',
     'staging' => 'infra-staging',
     'test' => 'infra-test',
