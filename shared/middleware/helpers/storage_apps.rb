@@ -140,7 +140,7 @@ class StorageApps
 
   # Determine if the current user can view the project
   def get_sharing_disabled(channel_id, current_user_id)
-    user_storage_owner_id, _ = storage_decrypt_channel_id(channel_id)
+    user_storage_owner_id, storage_app_id = storage_decrypt_channel_id(channel_id)
     owner_id = user_storage_ids_table.where(id: user_storage_owner_id).first[:user_id]
 
     # Sharing of a project is not disabled for the project owner
@@ -150,6 +150,8 @@ class StorageApps
       return false
     elsif teaches_student?(owner_id, current_user_id)
       return false
+    elsif users_paired_on_level?(storage_app_id, current_user_id, owner_id, user_storage_owner_id)
+      return false
     else
       return get_user_sharing_disabled(owner_id)
     end
@@ -157,6 +159,22 @@ class StorageApps
   # Default to sharing disabled if there is an error
   rescue ArgumentError, OpenSSL::Cipher::CipherError
     true
+  end
+
+  def users_paired_on_level?(storage_app_id, current_user_id, owner_id, user_storage_owner_id)
+    channel_tokens_table = DASHBOARD_DB[:channel_tokens]
+    level_id = channel_tokens_table.where(storage_app_id: storage_app_id, storage_id: user_storage_owner_id).pluck(:level_id)
+    return false unless level_id
+
+    user_levels_table = DASHBOARD_DB[:user_levels]
+    owner_user_level_id = user_levels_table.where(user_id: owner_id, level_id: level_id).pluck(:id)
+    current_user_level_id = user_levels_table.where(user_id: current_user_id, level_id: level_id).pluck(:id)
+
+    paired_user_levels_table = DASHBOARD_DB[:paired_user_levels]
+    paired_level_id = paired_user_levels_table.where(driver_user_level_id: owner_user_level_id, navigator_user_level_id: current_user_level_id).pluck(:id)
+    return false if paired_level_id.empty?
+
+    return true
   end
 
   def increment_abuse(channel_id)
