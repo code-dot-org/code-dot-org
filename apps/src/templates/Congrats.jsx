@@ -5,9 +5,12 @@ import Responsive from '../responsive';
 import Certificate from './Certificate';
 import StudentsBeyondHoc from './StudentsBeyondHoc';
 import TeachersBeyondHoc from './TeachersBeyondHoc';
+import styleConstants from '../styleConstants';
 
 const styles = {
   container: {
+    width: '100%',
+    maxWidth: styleConstants['content-width'],
     marginLeft: 'auto',
     marginRight: 'auto',
   },
@@ -18,7 +21,6 @@ export default class Congrats extends Component {
     certificateId: PropTypes.string,
     tutorial: PropTypes.string,
     MCShareLink: PropTypes.string,
-    isRtl: PropTypes.bool.isRequired,
     userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
     userAge: PropTypes.number,
     isEnglish: PropTypes.bool.isRequired,
@@ -64,7 +66,6 @@ export default class Congrats extends Component {
       tutorial,
       certificateId,
       MCShareLink,
-      isRtl,
       userType,
       userAge,
       isEnglish,
@@ -78,40 +79,25 @@ export default class Congrats extends Component {
       mc: 'pre2017Minecraft',
     }[tutorial] || 'other';
 
-    const contentStyle = {
-      ...styles.container,
-      width: this.responsive.getResponsiveContainerWidth()
-    };
-
     return (
-        <div style={contentStyle}>
+        <div style={styles.container}>
           <Certificate
             tutorial={tutorial}
             certificateId={certificateId}
-            isRtl={isRtl}
-            responsive={this.responsive}
             randomDonorTwitter={randomDonorTwitter}
           />
           {userType === "teacher" && isEnglish && (
-            <TeachersBeyondHoc
-              responsive={this.responsive}
-              isRtl={isRtl}
-            />
+            <TeachersBeyondHoc/>
           )}
           <StudentsBeyondHoc
             completedTutorialType={tutorialType}
             MCShareLink={MCShareLink}
-            responsive={this.responsive}
-            isRtl={isRtl}
             userType={userType}
             userAge={userAge}
             isEnglish={isEnglish}
           />
           {userType === "signedOut" && isEnglish && (
-            <TeachersBeyondHoc
-              responsive={this.responsive}
-              isRtl={isRtl}
-            />
+            <TeachersBeyondHoc/>
           )}
         </div>
     );

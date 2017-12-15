@@ -28,6 +28,7 @@ import DialogButtons from './templates/DialogButtons';
 import DialogInstructions from './templates/instructions/DialogInstructions';
 import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
 import FeedbackUtils from './feedback';
+import FinishDialog from './templates/FinishDialog';
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
 import SmallFooter from './code-studio/components/SmallFooter';
 import Sounds from './Sounds';
@@ -53,6 +54,11 @@ import {resetAniGif} from '@cdo/apps/utils';
 import {setIsRunning} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
+import {
+  setBlockLimit,
+  setFeedbackData,
+  showFeedback,
+} from './redux/feedback';
 import experiments from '@cdo/apps/util/experiments';
 import {
   determineInstructionsConstants,
@@ -264,11 +270,16 @@ StudioApp.prototype.init = function (config) {
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <InstructionsDialogWrapper
-        showInstructionsDialog={(autoClose) => {
-            this.showInstructionsDialog_(config.level, autoClose);
-          }}
-      />
+      <div>
+        <InstructionsDialogWrapper
+          showInstructionsDialog={(autoClose) => {
+              this.showInstructionsDialog_(config.level, autoClose);
+            }}
+        />
+        <FinishDialog
+          handleClose={() => this.onContinue()}
+        />
+      </div>
     </Provider>,
     document.body.appendChild(document.createElement('div'))
   );
@@ -1397,6 +1408,40 @@ StudioApp.prototype.clearHighlighting = function () {
 * @param {FeedbackOptions} options
 */
 StudioApp.prototype.displayFeedback = function (options) {
+  if (experiments.isEnabled('bubbleDialog')) {
+    // eslint-disable-next-line no-unused-vars
+    const { level, response, preventDialog, feedbackType, ...otherOptions } = options;
+    if (Object.keys(otherOptions).length === 0) {
+      const store = getStore();
+      store.dispatch(setFeedbackData({
+        isPerfect: feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT,
+        blocksUsed: this.feedback_.getNumBlocksUsed(),
+        achievements: [
+          {
+            isAchieved: true,
+            message: 'Placeholder achievement!',
+          },
+          {
+            isAchieved: true,
+            message: 'Another achievement!',
+          },
+          {
+            isAchieved: false,
+            message: 'Some lame achievement :(',
+          },
+        ],
+        displayFunometer: response && response.puzzle_ratings_enabled,
+        studentCode: this.feedback_.getGeneratedCodeProperties(this.config.appStrings),
+        canShare: !this.disableSocialShare && !options.disableSocialShare,
+      }));
+      if (!preventDialog) {
+        store.dispatch(showFeedback());
+      }
+
+      this.onFeedback(options);
+      return;
+    }
+  }
   options.onContinue = this.onContinue;
   options.backToPreviousLevel = this.backToPreviousLevel;
   options.sendToPhone = this.sendToPhone;
@@ -1672,6 +1717,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
   this.appMsg = config.appMsg;
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
+  getStore().dispatch(setBlockLimit(this.IDEAL_BLOCK_NUM));
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];

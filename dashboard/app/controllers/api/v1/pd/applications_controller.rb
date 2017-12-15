@@ -15,7 +15,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
     ROLES.each do |role|
       apps = get_applications_by_role(role).
-        select(:status, :regional_partner_id, "COUNT(locked_at) as total_locked", "COUNT(id) as total")
+        select(:status, "IF(locked_at IS NULL, FALSE, TRUE) AS locked", "count(id) AS total").
+          group(:status, :locked)
 
       if regional_partner_filter == REGIONAL_PARTNERS_NONE
         apps = apps.where(regional_partner_id: nil)
@@ -25,8 +26,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
       apps.group(:status).each do |group|
         application_data[role][group.status] = {
-          locked: group.total_locked,
-          unlocked: group.total - group.total_locked
+          locked: group.locked,
+          unlocked: group.total - group.locked
         }
       end
     end
@@ -56,13 +57,27 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     end
   end
 
+  # GET /api/v1/pd/applications/cohort_view?role=:role
+  def cohort_view
+    applications = get_applications_by_role(params[:role].to_sym).where(status: 'accepted').where.not(locked_at: nil)
+
+    render json: applications, each_serializer: Api::V1::Pd::ApplicationCohortViewSerializer
+  end
+
   # PATCH /api/v1/pd/applications/1
   def update
-    if application_params[:response_scores]
-      JSON.parse(application_params[:response_scores]).transform_keys! {|x| x.to_s.underscore}.to_json
+    application_data = application_params.except(:locked)
+
+    if application_data[:response_scores]
+      JSON.parse(application_data[:response_scores]).transform_keys {|x| x.to_s.underscore}.to_json
     end
 
-    @application.update(application_params.except(:locked))
+    if application_data[:regional_partner_filter] == REGIONAL_PARTNERS_NONE
+      application_data[:regional_partner_filter] = nil
+    end
+    application_data["regional_partner_id"] = application_data.delete "regional_partner_filter"
+
+    @application.update!(application_data)
 
     # only allow those with full management permission to lock or unlock
     if application_params.key?(:locked) && can?(:manage, @application)
@@ -94,7 +109,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   def application_params
     params.require(:application).permit(
-      :status, :notes, :response_scores, :locked
+      :status, :notes, :regional_partner_filter, :response_scores, :locked
     )
   end
 

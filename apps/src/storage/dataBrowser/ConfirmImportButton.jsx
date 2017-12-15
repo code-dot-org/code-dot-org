@@ -5,31 +5,31 @@ import Radium from 'radium';
 import applabMsg from '@cdo/applab/locale';
 import * as dataStyles from './dataStyles';
 
-const ConfirmImportButton = React.createClass({
-  propTypes: {
+const INITIAL_STATE = {
+  isConfirmDialogOpen: false,
+  isImporting: false,
+};
+
+class ConfirmImportButton extends React.Component {
+  static propTypes = {
     importCsv: PropTypes.func.isRequired,
     containerStyle: PropTypes.any,
-  },
+  };
 
-  getInitialState() {
-    return {
-      isConfirmDialogOpen: false,
-      isImporting: false,
-    };
-  },
+  state = {...INITIAL_STATE};
 
-  handleClose() {
+  handleClose = () => {
     this.setState({isConfirmDialogOpen: false});
     this.importFileInput.value = "";
-  },
+  };
 
-  handleConfirm() {
+  handleConfirm = () => {
     this.setState({
       isConfirmDialogOpen: false,
       isImporting: true,
     });
     this.uploadFile();
-  },
+  };
 
   uploadFile() {
     const file = this.importFileInput.files[0];
@@ -42,18 +42,16 @@ const ConfirmImportButton = React.createClass({
       this.importFileInput.value = "";
     };
     reader.readAsText(file);
-  },
+  }
 
-  handleImportComplete() {
-    this.setState(this.getInitialState());
-  },
+  handleImportComplete = () => this.setState(INITIAL_STATE);
 
-  handleSelectImportFile() {
+  handleSelectImportFile = () => {
     if (!this.importFileInput.value) {
       return;
     }
     this.setState({isConfirmDialogOpen: true});
-  },
+  };
 
   render() {
     return (
@@ -86,5 +84,5 @@ const ConfirmImportButton = React.createClass({
       </span>
     );
   }
-});
+}
 export default Radium(ConfirmImportButton);
