@@ -149,6 +149,16 @@ class Slack
     end
   end
 
+  def self.snippet(room, text)
+    # omit leading '#' when passing channel names to this API
+    channel = CHANNEL_MAP[room] || room
+    open('https://slack.com/api/files.upload'\
+      "?token=#{SLACK_TOKEN}"\
+      "&content=#{URI.escape(text)}"\
+      "&channels=#{channel}"
+    )
+  end
+
   def self.join_room(name)
     response = open(
       'https://slack.com/api/channels.join'\
