@@ -5,11 +5,12 @@ import Responsive from '../responsive';
 import Certificate from './Certificate';
 import StudentsBeyondHoc from './StudentsBeyondHoc';
 import TeachersBeyondHoc from './TeachersBeyondHoc';
+import styleConstants from '../styleConstants';
 
 const styles = {
   container: {
     width: '100%',
-    maxWidth: 970,
+    maxWidth: styleConstants['content-width'],
     marginLeft: 'auto',
     marginRight: 'auto',
   },
