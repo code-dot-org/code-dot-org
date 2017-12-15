@@ -1,37 +1,46 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import {expect} from '../../util/configuredChai';
 import StudentsBeyondHoc from '@cdo/apps/templates/StudentsBeyondHoc';
-import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/redux';
+import {combineReducers, createStore} from 'redux';
+import responsive from '@cdo/apps/code-studio/responsiveRedux';
 
 describe('StudentsBeyondHoc', () => {
-  let root;
-
-  beforeEach(() => {
-    const store = getStore();
-
-    root = mount(
-      <Provider store={store}>
-        <StudentsBeyondHoc
-          completedTutorialType="other"
-          MCShareLink="code.org/minecraft/sharelink"
-          userType="signedOut"
-          isEnglish={true}
-        />
-      </Provider>
-    );
-  });
+  const store = createStore(combineReducers({responsive}));
 
   it('renders a VerticalImageResourceCardRow component', () => {
-    expect(root.find('VerticalImageResourceCardRow').exists());
+    const wrapper = shallow(
+      <StudentsBeyondHoc
+        completedTutorialType="other"
+        MCShareLink=""
+        userType="signedOut"
+        isEnglish={true}
+      />, {context: {store}},
+    ).dive();
+    expect(wrapper.find('VerticalImageResourceCardRow').exists());
   });
 
   it('renders a CourseBlocksStudentGradeBands component', () => {
-    expect(root.find('CourseBlocksStudentGradeBands').exists());
+    const wrapper = shallow(
+      <StudentsBeyondHoc
+        completedTutorialType="other"
+        MCShareLink="code.org/minecraft/sharelink"
+        userType="signedOut"
+        isEnglish={true}
+      />, {context: {store}},
+    ).dive();
+    expect(wrapper.find('CourseBlocksStudentGradeBands').exists());
   });
 
   it('renders a LocalClassActionBlock component', () => {
-    expect(root.find('LocalClassActionBlock').exists());
+    const wrapper = shallow(
+      <StudentsBeyondHoc
+        completedTutorialType="other"
+        MCShareLink="code.org/minecraft/sharelink"
+        userType="signedOut"
+        isEnglish={true}
+      />, {context: {store}},
+    ).dive();
+    expect(wrapper.find('LocalClassActionBlock').exists());
   });
 });

@@ -373,6 +373,13 @@ function refreshPreview() {
   brambleProxy_.refreshPreview();
 }
 
+function enableFullscreenPreview(callback) {
+  brambleProxy_.enableFullscreenPreview(callback);
+}
+
+function disableFullscreenPreview(callback) {
+  brambleProxy_.disableFullscreenPreview(callback);
+}
 function onProjectChanged(callback) {
   onProjectChangedCallback_ = callback;
 }
@@ -451,20 +458,22 @@ if (parent.getWebLab) {
 // expose object for parent window to talk to us through
 const brambleHost = {
   // return file data from the Bramble editor
-  addFileHTML: addFileHTML,
-  addFileCSS: addFileCSS,
-  undo: undo,
-  redo: redo,
-  hideTutorial: hideTutorial,
-  showTutorial: showTutorial,
-  enableInspector: enableInspector,
-  disableInspector: disableInspector,
-  refreshPreview: refreshPreview,
-  onProjectChanged: onProjectChanged,
-  onBrambleReady: onBrambleReady,
-  onInspectorChanged: onInspectorChanged,
-  startInitialFileSync: startInitialFileSync,
-  syncFiles: syncFiles,
+  addFileHTML,
+  addFileCSS,
+  undo,
+  redo,
+  hideTutorial,
+  showTutorial,
+  enableInspector,
+  disableInspector,
+  refreshPreview,
+  enableFullscreenPreview,
+  disableFullscreenPreview,
+  onProjectChanged,
+  onBrambleReady,
+  onInspectorChanged,
+  startInitialFileSync,
+  syncFiles,
 };
 
 // Give our interface to our parent

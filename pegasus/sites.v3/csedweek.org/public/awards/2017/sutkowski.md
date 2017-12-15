@@ -15,7 +15,7 @@ theme: responsive
 Heather Sutkowski is passionate about advocating for computer science and promoting it starting in elementary school. She has been a teacher for 13 years and currently teaches K-6 Computer Science at the CREC Montessori Magnet School in Hartford, CT.
 
 <figure style="margin:10px">
-  <img src="/images/awards/heather_sutkowski_students.JPG" style="display:block;margin:0 auto" width=450 alt="Students at CREC Montessori Magnet School" />
+  <img src="/images/awards/heather_sutkowski_students.jpg" style="display:block;margin:0 auto" width=450 alt="Students at CREC Montessori Magnet School" />
   <figcaption style="text-align:center;font-style:italic;font-size:12px">
     Students at CREC Montessori Magnet School
   </figcaption>

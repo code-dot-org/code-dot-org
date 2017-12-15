@@ -974,6 +974,7 @@
   "yourSchoolTeacherButton": "Start teaching",
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
   "yourSchoolTellUs": "Put your school on the map",
+  "betterThanPerfectDescription": "WOW!",
   "celebrityChallenge": "Celebrity challenge",
   "confirming": "Confirming...",
   "contractMatchBadDomainName": "One or more of your domain items has the wrong name.",
@@ -989,7 +990,10 @@
   "minecraftMarketingButton": "Start",
   "minecraftMarketingDesc": "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.",
   "minecraftMarketingTitle": "Minecraft: Hero’s Journey",
+  "numBlocksUsedLabel": "Blocks",
   "okay": "Okay",
+  "perfectDescription": "PERFECT!",
+  "rateButtonsLabel": "Rate:",
   "review": "Review",
   "schoolTypeHomeschool": "Homeschool",
   "schoolTypeAfter": "After School",
@@ -1006,5 +1010,6 @@
   "submitting": "Submitting...",
   "tooFewBody": "Please select two answers before submitting.",
   "tooFewTitle": "Too few answers.",
+  "tooManyBlocksDescription": "Too Many!",
   "unsubmitAssessment": "Unsubmit your assessment"
 }
