@@ -24,16 +24,16 @@ action_hoc_title,action,homepage_action_text_hoc,hoc_title,,,,,,,code.org,nah,al
 action_num_served,action,homepage_action_text_num_served,num_served,,,,,,,code.org,nah,all
 action_hoc_buttons,action,homepage_action_text_join_us,hoc_buttons,homepage_action_text_learn,https://hourofcode.com,/learn,,,,code.org,nah,all
 action_cta_button,action,homepage_action_text_learn,cta_button,/student,,,,,,code.org,nah,all
-action_cta_hoc2017_join_us,action,homepage_action_text_join_us,cta_button,https://hourofcode.com/#join,,,,,,code.org,show,all
-action_cta_hoc2017_try_it,action,hoc2014_try,cta_button_secondary,/learn,,,,,,code.org,show,all
+action_learn,action,homepage_action_text_learn,cta_button,/learn,,,,,,both,show,all
+action_cta_hoc2017_join_us,action,homepage_action_text_join_us,cta_button,https://hourofcode.com/#join,,,,,,code.org,nah,all
+action_cta_hoc2017_try_it,action,hoc2014_try,cta_button_secondary,/learn,,,,,,code.org,nah,all
 action_cta_button_noten,action,homepage_action_text_learn,cta_button,/student,,,,,,code.org,nah,not en
-action_codevideo,action,homepage_action_text_codevideo,video,nKIu9yen5nc,//videos.code.org/social/what-most-schools-dont-teach.mp4,https://www.facebook.com/Code.org/videos/10100689712053311/,"Anybody can learn computer science, starting with an #HourOfCode. https://twitter.com/codeorg/status/828716370053304321",,,code.org,nah,all
+action_codevideo,action,homepage_action_text_codevideo,video,nKIu9yen5nc,//videos.code.org/social/what-most-schools-dont-teach.mp4,https://www.facebook.com/Code.org/videos/10100689712053311/,"Anybody can learn computer science, starting with an #HourOfCode. https://twitter.com/codeorg/status/828716370053304321",,,code.org,show,all
 action_teachervideo,action,homepage_action_text_teachervideo,video,2DxWIxec6yo,//videos.code.org/social/hourofcode-2015-50MB.mp4,,,,,csedweek.org,nah,all
 action_girlvideo,action,homepage_action_text_girlvideo,video,mFPg96gdPkc,//videos.code.org/social/ChangeTheWorld_v5.mp4,,,,,code.org,nah,all
 action_hoc2016,action,homepage_action_text_codevideo,video,KsOIlDT145A,//videos.code.org/social/hour-of-code-2016.mp4,,,,,code.org,nah,all
 action_athletesvideo,action,homepage_action_text_watchvideo,video,ip051U7Rvds,//videos.code.org/social/athletes-hour-of-code.mp4,,,,,code.org,nah,all
 action_signup_button,action,get_started,signup_button,/learn,,,,,,code.org,nah,all
-action_learn,action,homepage_action_text_learn,learn,/learn,,,,,,both,nah,all
 action_volunteers,action,homepage_action_text_volunteers,volunteers,,,,,,,code.org,nah,all
 action_signpetition,action,homepage_action_text_signpetition,petition,,,,,,,both,nah,all
 banner_usatoday,banner,homepage_banner_text_main,homepage_banner_text_link,http://www.usatoday.com/story/tech/2015/05/14/codeorg-college-board-computer-science-high-school-diversity/27304593/,,,,,,code.org,nah,all
