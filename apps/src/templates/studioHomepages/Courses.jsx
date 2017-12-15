@@ -6,8 +6,6 @@ import { CourseBlocksAll } from './CourseBlocks';
 import CoursesTeacherEnglish from './CoursesTeacherEnglish';
 import CoursesStudentEnglish from './CoursesStudentEnglish';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import Responsive from '../../responsive';
-import _ from 'lodash';
 import Button from '@cdo/apps/templates/Button';
 import i18n from "@cdo/locale";
 
@@ -29,42 +27,9 @@ class Courses extends Component {
     userId: PropTypes.number,
   };
 
-  constructor(props) {
-    super(props);
-    this.responsive = new Responsive();
-    this.state = {
-      windowWidth: $(window).width(),
-      windowHeight: $(window).height(),
-      mobileLayout: this.responsive.isResponsiveCategoryInactive('md')
-    };
-  }
-
   componentDidMount() {
     // The components used here are implemented in legacy HAML/CSS rather than React.
     $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
-
-    // Resize handler.
-    window.addEventListener('resize', _.debounce(this.onResize, 100).bind(this));
-  }
-
-  onResize() {
-    const windowWidth = $(window).width();
-    const windowHeight = $(window).height();
-
-    // We fire window resize events when the grippy is dragged so that non-React
-    // controlled components are able to rerender the editor. If width/height
-    // didn't change, we don't need to do anything else here
-    if (windowWidth === this.state.windowWidth &&
-        windowHeight === this.state.windowHeight) {
-      return;
-    }
-
-    this.setState({
-      windowWidth: $(window).width(),
-      windowHeight: $(window).height()
-    });
-
-    this.setState({mobileLayout: this.responsive.isResponsiveCategoryInactive('md')});
   }
 
   render() {
