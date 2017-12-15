@@ -29,7 +29,6 @@ export default storybook => {
         story: () => (
           <SeeMoreCourses
             courses={courses}
-            isRtl={false}
           />
         )
       },

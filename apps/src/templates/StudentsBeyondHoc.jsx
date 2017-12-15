@@ -24,7 +24,6 @@ export default class StudentsBeyondHoc extends Component {
   static propTypes = {
     completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
     MCShareLink: PropTypes.string,
-    isRtl: PropTypes.bool.isRequired,
     responsive: PropTypes.instanceOf(Responsive).isRequired,
     userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
     userAge: PropTypes.number,
@@ -32,7 +31,7 @@ export default class StudentsBeyondHoc extends Component {
   };
 
   render() {
-    const { isRtl, responsive, completedTutorialType, userType, isEnglish, MCShareLink, userAge } = this.props;
+    const { responsive, completedTutorialType, userType, isEnglish, MCShareLink, userAge } = this.props;
 
     const signedIn = (userType === "teacher" || userType === "student");
 
@@ -108,13 +107,10 @@ export default class StudentsBeyondHoc extends Component {
         </h1>
         <VerticalImageResourceCardRow
           cards={cards}
-          isRtl={isRtl}
           responsive={responsive}
         />
         {isEnglish && (
           <CourseBlocksStudentGradeBands
-            isRtl={isRtl}
-            responsive={responsive}
             showContainer={false}
             hideBottomMargin={true}
           />
