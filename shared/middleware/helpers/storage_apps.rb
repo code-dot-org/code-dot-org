@@ -163,15 +163,15 @@ class StorageApps
 
   def users_paired_on_level?(storage_app_id, current_user_id, owner_id, user_storage_owner_id)
     channel_tokens_table = DASHBOARD_DB[:channel_tokens]
-    level_id = channel_tokens_table.where(storage_app_id: storage_app_id, storage_id: user_storage_owner_id).pluck(:level_id)
+    level_id = channel_tokens_table.select(:level_id).where(storage_app_id: storage_app_id, storage_id: user_storage_owner_id)
     return false if level_id.empty?
 
     user_levels_table = DASHBOARD_DB[:user_levels]
-    owner_user_level_id = user_levels_table.where(user_id: owner_id, level_id: level_id).pluck(:id)
-    current_user_level_id = user_levels_table.where(user_id: current_user_id, level_id: level_id).pluck(:id)
+    owner_user_level_id = user_levels_table.select(:id).where(user_id: owner_id, level_id: level_id)
+    current_user_level_id = user_levels_table.select(:id).where(user_id: current_user_id, level_id: level_id)
 
     paired_user_levels_table = DASHBOARD_DB[:paired_user_levels]
-    paired_level_id = paired_user_levels_table.where(driver_user_level_id: owner_user_level_id, navigator_user_level_id: current_user_level_id).pluck(:id)
+    paired_level_id = paired_user_levels_table.select(:id).where(driver_user_level_id: owner_user_level_id, navigator_user_level_id: current_user_level_id)
     return false if paired_level_id.empty?
 
     return true
