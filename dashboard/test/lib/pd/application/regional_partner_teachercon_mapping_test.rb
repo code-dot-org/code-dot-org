@@ -20,6 +20,8 @@ module Pd::Application
     end
 
     test 'find_teachercon_workshop' do
+      Pd::Workshop.any_instance.stubs(:process_location)
+
       tc_csd_phoenix = create :pd_workshop, course: Pd::Workshop::COURSE_CSD,
         subject: Pd::Workshop::SUBJECT_TEACHER_CON, location_address: 'Some place in Phoenix, AZ',
         num_sessions: 5, sessions_from: Time.new(2018, 7, 22, 9)
