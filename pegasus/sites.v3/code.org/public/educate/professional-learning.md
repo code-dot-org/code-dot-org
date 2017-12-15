@@ -86,7 +86,7 @@ Code.org has worked with partners and experts in the field to develop and suppor
 
 This experience builds on the work of others and recognizes that one size does not fit all. The Professional Learning is tailored for each course and curriculum developed or selected by Code.org. All of our experiences use engaging techniques to prompt teachers to reflect on the pedagogy of teaching computer science while also becoming more familiar with the subject. All include hands-on experiences, collaboration with colleagues, and are accessible to teachers with any or no prior knowledge of computer science.
 
-For the intellectually curious, we've also published our [professional learning values](educate/professional-learning/values) and [curriculum values](/educate/curriculum/values) which we use to guide our own team's effort as well as our work with our education partners.
+For the intellectually curious, we've also published our [professional learning values](/educate/professional-learning/values) and [curriculum values](/educate/curriculum/values) which we use to guide our own team's effort as well as our work with our education partners.
 
 ## Facilitate with Code.org
 
