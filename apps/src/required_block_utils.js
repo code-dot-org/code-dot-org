@@ -277,8 +277,8 @@ function attributesEquivalent(expected, given) {
 function childrenEquivalent(expected, given) {
   var children1 = expected.childNodes;
   var children2 = given.childNodes;
-  if (children1.length === 0) {
-    // If required block has no children, allow arbitrary children
+  if (expected.getAttribute('inputcount') === '???') {
+    // If required block ignores inputcount, allow arbitrary children
     return true;
   }
   if (children1.length !== children2.length) {
