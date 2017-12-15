@@ -1,5 +1,7 @@
 class Api::V1::Pd::RegionalPartnerWorkshopsSerializer < ActiveModel::Serializer
-  attributes :id, :name, :group, :workshops
+  include Pd::Application::RegionalPartnerTeacherconMapping
+
+  attributes :id, :name, :group, :workshops, :teachercon
 
   def workshops
     object.try do |partner|
@@ -14,5 +16,9 @@ class Api::V1::Pd::RegionalPartnerWorkshopsSerializer < ActiveModel::Serializer
         }
       end
     end
+  end
+
+  def teachercon
+    get_matching_teachercon object
   end
 end
