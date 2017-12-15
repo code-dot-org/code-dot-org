@@ -115,7 +115,7 @@ level 'courseC_harvester_loops9'
 level 'courseC_harvester_loops10'
 level 'courseC_harvester_loops11'
 assessment 'courseC_harvester_loops11_predict1'
-bonus 'courseC_harvester_loops_challenge1'
+bonus 'courseC_harvester_loops_challenge1a'
 bonus 'courseC_harvester_loops_challenge2'
 
 stage 'Events: The Big Event'
