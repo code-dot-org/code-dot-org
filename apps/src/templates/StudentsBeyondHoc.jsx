@@ -107,7 +107,6 @@ export default class StudentsBeyondHoc extends Component {
         </h1>
         <VerticalImageResourceCardRow
           cards={cards}
-          responsive={responsive}
         />
         {isEnglish && (
           <CourseBlocksStudentGradeBands
