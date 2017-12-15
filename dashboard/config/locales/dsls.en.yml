@@ -826,6 +826,7 @@ en:
         CSDU6 SFLP: CSDU6 SFLP
       CSP Abstraction in Programming: {}
       CSP Abstraction in Programming 2: {}
+      CSP Algorithms Map: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -4503,10 +4504,12 @@ en:
         : |-
           1dimension
           var yLocation = 200;
+        Answer 1: Answer 1
         CSD U3 Variables name match: CSD U3 Variables name match
         Labels can't have spaces.: Labels can't have spaces.
         Labels can't start with a number.: Labels can't start with a number.
         Labels should have the same capitalization.: Labels should have the same capitalization.
+        Question: Question
         YLocation: YLocation
         description here: description here
         ? |-
@@ -4515,6 +4518,7 @@ en:
         : |-
           size of circle
           var yLocation = 200;
+        title: title
     multi:
       2-3 Algorithms Multi 1:
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
