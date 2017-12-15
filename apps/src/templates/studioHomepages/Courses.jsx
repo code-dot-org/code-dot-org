@@ -27,7 +27,6 @@ class Courses extends Component {
     studentsCount: PropTypes.string.isRequired,
     showInitialTips: PropTypes.bool.isRequired,
     userId: PropTypes.number,
-    isRtl: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -69,7 +68,7 @@ class Courses extends Component {
   }
 
   render() {
-    const { isEnglish, isTeacher, isSignedOut, userId, showInitialTips, isRtl } = this.props;
+    const { isEnglish, isTeacher, isSignedOut, userId, showInitialTips } = this.props;
     const contentStyle = {
       ...styles.content,
       width: this.responsive.getResponsiveContainerWidth()
@@ -107,25 +106,18 @@ class Courses extends Component {
             isSignedOut={isSignedOut}
             showInitialTips={showInitialTips}
             userId={userId}
-            isRtl={isRtl}
-            responsive={this.responsive}
           />
         )}
 
         {/* English, student.  (Also the default to be shown when signed out.) */}
         {(isEnglish && !isTeacher) && (
-          <CoursesStudentEnglish
-            isRtl={isRtl}
-            responsive={this.responsive}
-          />
+          <CoursesStudentEnglish/>
         )}
 
         {/* Non-English */}
         {(!isEnglish) && (
           <CourseBlocksAll
             isEnglish={false}
-            isRtl={isRtl}
-            responsive={this.responsive}
           />
         )}
       </div>

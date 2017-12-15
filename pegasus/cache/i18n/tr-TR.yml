@@ -36,10 +36,18 @@
   twentyhours_text: "İlk Kod Saati'ni bitirdin mi? Bir sonraki kursta daha fazla bilgisayar
     bilimleri ve programlama kavramlarını öğrenebilirsin."
   og_title: 'Code.org: Herkes öğrenebilir'
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
   og_description: 'Her okulda her öğrenci bilgisayar bilimi öğrenme fırsatını hakkediyor. '
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: Kodlama Saati geliyor
   csedweek_og_description: ARALIK 4-10, 2017. Bilgisayar bilimleri her öğrencinin
     öğrenmesi gereken bir temeldir.
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
   hoc2014_heading: <a href="http://hourofcode.com">Kod Saatine </a><br/> katılın  8
     - 14 Aralık, 2014<br/>
   hoc2014_students: "Öğrenciler"
@@ -394,7 +402,7 @@
   homepage_hero_text_stat_students: 'Code Stüdyoda #student_count tane öğrenci hesabı'
   homepage_hero_text_stat_served: 'Code Stüdyo''da #student_count tane öğrenci hesabı'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
-  homepage_hero_hoc_is_here: The Hour of Code is here
+  homepage_hero_hoc_is_here: Kod Saati burada
   homepage_slot_text_hoc: Kod Saati
   homepage_slot_text_frozen: 'Frozen: Anna ve Elsa '
   homepage_slot_text_teacher: "Öğretmen Panosu"
@@ -414,7 +422,7 @@
   homepage_action_text_girlvideo: Bir kıza ilham kaynağı ol
   homepage_action_text_learn: "Öğrenmeye başla"
   homepage_action_text_signpetition: "Üye dilekçesi"
-  homepage_action_text_wincelebritychat: Win a celebrity chat
+  homepage_action_text_wincelebritychat: "Ünlü ile sohbet kazan"
   homepage_signpetition_dropdown: Bizim üye dilekçemiz  &#x25BE;
   homepage_diversity_pledge: "Çeşitlilik oluştur ! "
   homepage_banner_text_prizes: "`Kod Saati` 7-13 Aralıkta tekrar gerçekleşecek."
@@ -534,7 +542,7 @@
   mc_gradelevel: 4-104 Yaş
   mc_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   mc_specs: "Çoklu dil | Modern tarayıcılar ve tabletler | 6 ve üzeri yaş"
-  minecraft_agent: 'Minecraft: Hero’s Journey'
+  minecraft_agent: 'Minecraft: Kahramanın yolculuğu'
   minecraft_designer: Minecraft Tasarımcısı
   minecraft_adventurer: Minecraft Maceracısı
   minecraft_tutorials: Minecraft Kodlama Saati Eğitimleri
@@ -552,14 +560,15 @@
   minecraft_no_internet: "İnternetin yok mu?"
   minecraft_download_adventurer: Minecraft Maceracı'nın çevrimdışı versiyonunu indir.
   minecraft_subtitle: Minecraft Kod Saati
-  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
+  minecraft_store_camps: Minecraft saat kodu kamplarının Microsoft Store ücretsiz
   minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
     free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
     Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
     problem solving and loads of fun."
   minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_teach_resources: "Öğretmen kaynakları ve ders planı."
+  minecraft_leader_guide: Bir etkinlik planlayıp gerçekleştirmenize yardımcı olan
+    kaynakları indirin.
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
     students now."
@@ -1105,7 +1114,7 @@
   learn_inspirational_videos: Bu <a href="https://code.org/educate/inspire">videolar</a>
     ile öğrenciler ilham verin
   hoc2014_try_new_tutorials: Yeni Kod Saati eğitimlerimizi deneyin
-  hoc2014_try_new_tutorial: Yeni Kodlama Saati öğreticimizi beta halinde deneyin
+  hoc2014_try_new_tutorial: Yeni Kod Saati eğitimimizi beta halinde deneyin
   hoc2014_try_scrat: Angry Birds, PvZ  ve Scrat
   hoc2014_try_frozen: Karlar Ülkesi'nden Anna ve Elsa ile birlikte bir sanatçı
   carousel_heading_codeorg: Code.org eğitimleri
@@ -1251,6 +1260,8 @@
   csp-ap_name: AP (Advanced Placement-İleri Düzey Yerleştirme) Performans Görevleri
   csppostap_name: 'Post-AP: Uygulamalardaki veritabanları'
   cspassessment_name: Tam test - 50 soru
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Test Bölüm 1 / 25 soru
   cspexam2-AKwgAh1ac5_name: Test Bölüm 2 / 25 soru
   cspunit3_gradelevel: 9-12. Sınıflar
@@ -1841,7 +1852,7 @@
     bir araya getirerek karakterlerin hareket etmesini,zıplamasını dans edip şarkı
     söylemesin sağlayabilirler
   hopscotch_beyond_longdescription: Hopscotch programlama dilini kullanarak iPad üzerinde
-    öğrenci güdümlü öğreticiler. Öğrenciler kendi iPad leri ile oyunlar ve uygulamalar
+    öğrenci güdümlü eğitimler. Öğrenciler kendi iPad leri ile oyunlar ve uygulamalar
     yapabilirler. Tek başlarına ya da arkadaşlarıyla çalışabilirler (bir iPad ile
     en fazla 3 kişi).
   pocketcode_beyond_longdescription: Pocket Code ile akıllı telefonlarınızda kendi
@@ -2007,7 +2018,7 @@
   header_teacher_community: "Öğretmen topluluğu"
   header_help_support: 'Yardım ve Destek '
   header_report_bug: Hata bildir
-  header_tutorials: "Öğreticiler"
+  header_tutorials: Eğitmler
   header_documentation: Belgeler
   csp_name: "' 16 - 17' Bilgisayar bilimleri ilkeleri"
   csd_name: CS Discoveries
@@ -2067,15 +2078,12 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
-  og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
-  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
-    or your class!
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
-    science is foundational for every student to learn.
-  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
-    for every student to learn.
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
+  video_title_steph_curry: Hour of Code with Steph Curry

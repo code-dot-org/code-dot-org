@@ -237,5 +237,50 @@ module Api::V1::Pd
         :csf_availability
       ).values.any? {|x| response_csv.first.exclude?(x + "\n")}
     end
+
+    test 'cohort view returns expected columns' do
+      application = create(
+        :pd_teacher1819_application,
+        course: 'csp',
+        regional_partner: @regional_partner,
+        user: (
+          create(
+            :teacher,
+            email: 'minerva@hogwarts.edu',
+            school_info: (
+              create(
+                :school_info,
+                school: (
+                  create(
+                    :school,
+                    name: 'Hogwarts'
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+
+      application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+      application.save
+      application.update(status: 'accepted')
+      application.lock!
+
+      sign_in @workshop_organizer
+      get :cohort_view, params: {role: 'csp_teachers'}
+      assert :success
+
+      assert_equal(
+        {
+          date_accepted: 'Not implemented yet',
+          applicant_name: 'Minerva McGonagall',
+          district_name: 'A School District',
+          school_name: 'Hogwarts',
+          email: 'minerva@hogwarts.edu',
+          registered_for_summer_workshop: 'Not implemented yet'
+        }.stringify_keys, JSON.parse(@response.body).first
+      )
+    end
   end
 end

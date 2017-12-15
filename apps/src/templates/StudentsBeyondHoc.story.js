@@ -1,9 +1,7 @@
 import React from 'react';
 import StudentsBeyondHoc from './StudentsBeyondHoc';
-import Responsive from '../responsive';
 
 export default storybook => {
-  const responsive = new Responsive();
   return storybook
     .storiesOf('StudentsBeyondHoc', module)
     .withReduxStore()
@@ -14,8 +12,6 @@ export default storybook => {
         story: () => (
             <StudentsBeyondHoc
               completedTutorialType="other"
-              responsive={responsive}
-              isRtl={false}
               userType="teacher"
               isEnglish={true}
             />
@@ -27,8 +23,6 @@ export default storybook => {
         story: () => (
             <StudentsBeyondHoc
               completedTutorialType="other"
-              responsive={responsive}
-              isRtl={false}
               userType="student"
               userAge={14}
               isEnglish={true}
@@ -41,8 +35,6 @@ export default storybook => {
         story: () => (
             <StudentsBeyondHoc
               completedTutorialType="other"
-              responsive={responsive}
-              isRtl={false}
               userType="student"
               userAge={10}
               isEnglish={true}
@@ -55,8 +47,6 @@ export default storybook => {
         story: () => (
             <StudentsBeyondHoc
               completedTutorialType="other"
-              responsive={responsive}
-              isRtl={false}
               userType="signedOut"
               isEnglish={true}
             />
@@ -68,8 +58,6 @@ export default storybook => {
         story: () => (
             <StudentsBeyondHoc
               completedTutorialType="other"
-              responsive={responsive}
-              isRtl={false}
               userType="signedOut"
               isEnglish={false}
             />
@@ -81,8 +69,6 @@ export default storybook => {
         story: () => (
             <StudentsBeyondHoc
               completedTutorialType="applab"
-              responsive={responsive}
-              isRtl={false}
               userType="signedOut"
               isEnglish={true}
             />
@@ -94,8 +80,6 @@ export default storybook => {
         story: () => (
             <StudentsBeyondHoc
               completedTutorialType="applab"
-              responsive={responsive}
-              isRtl={false}
               userType="student"
               isEnglish={true}
             />
@@ -107,8 +91,6 @@ export default storybook => {
         story: () => (
             <StudentsBeyondHoc
               completedTutorialType="pre2017Minecraft"
-              responsive={responsive}
-              isRtl={false}
               userType="student"
               isEnglish={true}
               userAge={8}
@@ -121,8 +103,6 @@ export default storybook => {
         story: () => (
             <StudentsBeyondHoc
               completedTutorialType="pre2017Minecraft"
-              responsive={responsive}
-              isRtl={false}
               userType="student"
               isEnglish={true}
               userAge={16}
@@ -135,8 +115,6 @@ export default storybook => {
         story: () => (
             <StudentsBeyondHoc
               completedTutorialType="pre2017Minecraft"
-              responsive={responsive}
-              isRtl={false}
               userType="student"
               isEnglish={false}
             />

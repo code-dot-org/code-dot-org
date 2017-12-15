@@ -64,35 +64,33 @@ const styles = {
   }
 };
 
-const JoinSection = React.createClass({
-  propTypes: {
+const INITIAL_STATE = {
+  sectionCode: ''
+};
+
+export default class JoinSection extends React.Component {
+  static propTypes = {
     enrolledInASection: PropTypes.bool.isRequired,
     updateSections: PropTypes.func.isRequired,
     updateSectionsResult: PropTypes.func.isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
-      sectionCode: ''
-    };
-  },
+  state = {...INITIAL_STATE};
 
-  handleChange(event) {
-    this.setState({sectionCode: event.target.value});
-  },
+  handleChange = (event) => this.setState({sectionCode: event.target.value});
 
-  handleKeyUp(event) {
+  handleKeyUp = (event) => {
     if (event.key === 'Enter') {
       this.joinSection();
     } else if (event.key === 'Escape') {
-      this.setState(this.getInitialState());
+      this.setState(INITIAL_STATE);
     }
-  },
+  };
 
-  joinSection() {
+  joinSection = () => {
     const sectionCode = this.state.sectionCode;
 
-    this.setState(this.getInitialState());
+    this.setState(INITIAL_STATE);
 
     $.post({
       url: `/api/v1/sections/${sectionCode}/join`,
@@ -106,7 +104,7 @@ const JoinSection = React.createClass({
       const result = (data.responseJSON && data.responseJSON.result) ? data.responseJSON.result : "fail";
       this.props.updateSectionsResult("join", result, null, sectionCode.toUpperCase());
     });
-  },
+  };
 
   render() {
     const { enrolledInASection } = this.props;
@@ -142,6 +140,4 @@ const JoinSection = React.createClass({
       </div>
     );
   }
-});
-
-export default JoinSection;
+}
