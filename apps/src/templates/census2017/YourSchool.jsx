@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React, { PropTypes, Component } from 'react';
 import ReactDOM from 'react-dom';
+import { connect } from 'react-redux';
 import Responsive from '../../responsive';
 import {UnconnectedCensusForm as CensusForm} from './CensusForm';
 import YourSchoolResources from './YourSchoolResources';
@@ -9,6 +10,7 @@ import MobileNotification from '../MobileNotification';
 import i18n from "@cdo/locale";
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import _ from 'lodash';
+import { ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
 
 const styles = {
   heading: {
@@ -30,8 +32,9 @@ const styles = {
   }
 };
 
-export default class YourSchool extends Component {
+class YourSchool extends Component {
   static propTypes = {
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     alertHeading: PropTypes.string,
     alertText: PropTypes.string,
     alertUrl: PropTypes.string,
@@ -77,7 +80,8 @@ export default class YourSchool extends Component {
   }
 
   render() {
-    const desktop = (this.responsive.isResponsiveCategoryActive('lg') || this.responsive.isResponsiveCategoryActive('md'));
+    const {responsiveSize} = this.props;
+    const desktop = (responsiveSize === ResponsiveSize.lg) || (responsiveSize === ResponsiveSize.md);
 
     return (
       <div>
@@ -123,3 +127,7 @@ export default class YourSchool extends Component {
     );
   }
 }
+
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+}))(YourSchool);

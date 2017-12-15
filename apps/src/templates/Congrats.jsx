@@ -89,22 +89,17 @@ export default class Congrats extends Component {
             randomDonorTwitter={randomDonorTwitter}
           />
           {userType === "teacher" && isEnglish && (
-            <TeachersBeyondHoc
-              responsive={this.responsive}
-            />
+            <TeachersBeyondHoc/>
           )}
           <StudentsBeyondHoc
             completedTutorialType={tutorialType}
             MCShareLink={MCShareLink}
-            responsive={this.responsive}
             userType={userType}
             userAge={userAge}
             isEnglish={isEnglish}
           />
           {userType === "signedOut" && isEnglish && (
-            <TeachersBeyondHoc
-              responsive={this.responsive}
-            />
+            <TeachersBeyondHoc/>
           )}
         </div>
     );
