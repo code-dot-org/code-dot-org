@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import i18n from "@cdo/locale";
 import CourseCard from './CourseCard';
 import ContentContainer from '../ContentContainer';
@@ -23,7 +23,6 @@ const styles = {
 export default class SeeMoreCourses extends Component {
   static propTypes = {
     courses: shapes.courses,
-    isRtl: PropTypes.bool.isRequired
   };
 
   state = {
@@ -35,7 +34,7 @@ export default class SeeMoreCourses extends Component {
   }
 
   render() {
-    const { courses, isRtl } = this.props;
+    const { courses } = this.props;
 
     return (
       <div>
@@ -45,7 +44,6 @@ export default class SeeMoreCourses extends Component {
             linkText=""
             link=""
             showLink={false}
-            isRtl={isRtl}
           >
             {courses.map((course, index) =>
               <div key={index}>

@@ -5,13 +5,10 @@ import ResourceCard from './ResourceCard';
 import ResourceCardResponsiveContainer from './ResourceCardResponsiveContainer';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import Responsive from '../../responsive';
 
 class CourseBlocksTools extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
   };
 
   cards = [
@@ -48,7 +45,7 @@ class CourseBlocksTools extends Component {
   ];
 
   render() {
-    const { isEnglish, isRtl } = this.props;
+    const { isEnglish } = this.props;
 
     const headingText = isEnglish
       ? i18n.courseBlocksToolsTitleTeacher()
@@ -58,10 +55,8 @@ class CourseBlocksTools extends Component {
       <ContentContainer
         heading={headingText}
         description={i18n.standaloneToolsDescription()}
-        isRtl={isRtl}
-        responsive={this.props.responsive}
       >
-        <ResourceCardResponsiveContainer responsive={this.props.responsive}>
+        <ResourceCardResponsiveContainer>
           {this.cards.map(
             (card, cardIndex) => (
               <ResourceCard

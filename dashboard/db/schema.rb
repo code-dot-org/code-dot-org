@@ -28,6 +28,24 @@ ActiveRecord::Schema.define(version: 20171214191545) do
     t.index ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
   end
 
+  create_table "ap_cs_offerings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "school_code", limit: 6, null: false
+    t.string   "course",      limit: 3, null: false
+    t.integer  "school_year", limit: 2, null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.index ["school_code", "school_year", "course"], name: "index_ap_cs_offerings_on_school_code_and_school_year_and_course", unique: true, using: :btree
+  end
+
+  create_table "ap_school_codes", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "school_code", limit: 6,  null: false
+    t.string   "school_id",   limit: 12, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["school_code"], name: "index_ap_school_codes_on_school_code", unique: true, using: :btree
+    t.index ["school_id"], name: "index_ap_school_codes_on_school_id", unique: true, using: :btree
+  end
+
   create_table "authored_hint_view_requests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",               null: false
     t.integer  "script_id"
@@ -1317,6 +1335,7 @@ ActiveRecord::Schema.define(version: 20171214191545) do
     t.index ["program_type"], name: "index_workshops_on_program_type", using: :btree
   end
 
+  add_foreign_key "ap_school_codes", "schools"
   add_foreign_key "authored_hint_view_requests", "levels"
   add_foreign_key "authored_hint_view_requests", "scripts"
   add_foreign_key "authored_hint_view_requests", "users"

@@ -13,7 +13,7 @@ theme: responsive
 The Queen City Robotics Alliance (QCRA) was founded to increase participation in STEM and FIRST Robotics by more students in Charlotte. 
 
 <figure style="margin:10px">
-  <img src="/images/awards/qcra_students.JPG" style="display:block;margin:0 auto" width="600" alt="Students from the Queen City Robotics Alliance" />
+  <img src="/images/awards/qcra_students.jpg" style="display:block;margin:0 auto" width="600" alt="Students from the Queen City Robotics Alliance" />
   <figcaption style="text-align:center;font-style:italic;font-size:12px">
     Students from the Queen City Robotics Alliance
   </figcaption>

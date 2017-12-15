@@ -1,4 +1,4 @@
-import React, {PropTypes, Component} from 'react';
+import React, {Component} from 'react';
 import ImageResourceCard from './ImageResourceCard';
 import ContentContainer from '../ContentContainer';
 import i18n from "@cdo/locale";
@@ -18,19 +18,13 @@ const styles = {
 
 
 export default class TeacherResources extends Component {
-  static propTypes = {
-    isRtl: PropTypes.bool.isRequired
-  };
-
   render() {
-    const { isRtl } = this.props;
     const planUrl = pegasus('/teacher-dashboard#/plan');
     const volunteerUrl = pegasus('/volunteer/local');
 
     return (
       <ContentContainer
         heading={i18n.resources()}
-        isRtl={isRtl}
       >
         <div style={styles.container}>
           <ImageResourceCard

@@ -60,7 +60,6 @@ export default storybook => {
             showAllCoursesLink={true}
             heading="My Courses"
             isTeacher={true}
-            isRtl={false}
           />
         )
       },
@@ -73,7 +72,6 @@ export default storybook => {
             showAllCoursesLink={true}
             heading="My Courses"
             isTeacher={false}
-            isRtl={false}
           />
         )
       },
@@ -86,7 +84,6 @@ export default storybook => {
             showAllCoursesLink={true}
             heading="My Courses"
             isTeacher={true}
-            isRtl={false}
           />
         )
       },
@@ -99,7 +96,6 @@ export default storybook => {
             showAllCoursesLink={true}
             heading="My Courses"
             isTeacher={false}
-            isRtl={false}
             topCourse={topCourse}
           />
         )
@@ -113,7 +109,6 @@ export default storybook => {
             showAllCoursesLink={true}
             heading="My Courses"
             isTeacher={true}
-            isRtl={false}
           />
         )
       },
@@ -126,7 +121,6 @@ export default storybook => {
             showAllCoursesLink={true}
             heading="My Courses"
             isTeacher={false}
-            isRtl={false}
             topCourse={topCourse}
           />
         )
