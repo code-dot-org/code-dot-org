@@ -8,9 +8,12 @@ import CoursesStudentEnglish from './CoursesStudentEnglish';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import Button from '@cdo/apps/templates/Button';
 import i18n from "@cdo/locale";
+import styleConstants from '@cdo/apps/styleConstants';
 
 const styles = {
   content: {
+    width: '100%',
+    maxWidth: styleConstants['content-width'],
     marginLeft: 'auto',
     marginRight: 'auto'
   }
@@ -34,10 +37,6 @@ class Courses extends Component {
 
   render() {
     const { isEnglish, isTeacher, isSignedOut, userId, showInitialTips } = this.props;
-    const contentStyle = {
-      ...styles.content,
-      width: this.responsive.getResponsiveContainerWidth()
-    };
     const headingText = isTeacher ? i18n.coursesHeadingTeacher() : i18n.coursesHeadingStudent();
     const subHeadingText = i18n.coursesHeadingSubText(
       {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
@@ -45,7 +44,7 @@ class Courses extends Component {
     const headingDescription = isSignedOut ? i18n.coursesHeadingDescription() : null;
 
     return (
-      <div style={contentStyle}>
+      <div style={styles.content}>
         <HeaderBanner
           headingText={headingText}
           subHeadingText={subHeadingText}
