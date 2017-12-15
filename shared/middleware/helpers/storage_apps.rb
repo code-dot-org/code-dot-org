@@ -150,10 +150,10 @@ class StorageApps
       return false
     elsif teaches_student?(owner_id, current_user_id)
       return false
-    elsif users_paired_on_level?(storage_app_id, current_user_id, owner_id, user_storage_owner_id)
-      return false
+    elsif get_user_sharing_disabled(owner_id)
+      !users_paired_on_level?(storage_app_id, current_user_id, owner_id, user_storage_owner_id)
     else
-      return get_user_sharing_disabled(owner_id)
+      return false
     end
 
   # Default to sharing disabled if there is an error
@@ -164,7 +164,7 @@ class StorageApps
   def users_paired_on_level?(storage_app_id, current_user_id, owner_id, user_storage_owner_id)
     channel_tokens_table = DASHBOARD_DB[:channel_tokens]
     level_id = channel_tokens_table.where(storage_app_id: storage_app_id, storage_id: user_storage_owner_id).pluck(:level_id)
-    return false unless level_id
+    return false if level_id.empty?
 
     user_levels_table = DASHBOARD_DB[:user_levels]
     owner_user_level_id = user_levels_table.where(user_id: owner_id, level_id: level_id).pluck(:id)
