@@ -193,7 +193,7 @@ function testsFromFunctionalCall(node, blocksXml) {
  * We consider them equivalent if they have the same tagName, attributes,
  * and children
  */
-function elementsEquivalent(expected, given) {
+export function elementsEquivalent(expected, given) {
   if (!(expected instanceof Element && given instanceof Element)) {
     // if we expect ???, allow match with anything
     if (expected instanceof Text && expected.textContent === '???') {
