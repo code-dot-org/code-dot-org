@@ -10434,41 +10434,32 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: |-
-        Attach a block to the "when click" block, then press
-        "Run". Click or tap the screen to move Flappy to the target.
-      flappy_2_instruction: |-
-        Now we've added some ground.  Attach a block to the
-        "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
-        crashes.
-      flappy_3_instruction: |-
-        The "when run" block allows you to run code when your
-        game starts.  Try setting the level speed and flapping to the target.
-      flappy_4_instruction: |-
-        Flappy will fly through obstacles unless you write code
-        to make him crash. Attach a block to the "when hit an obstacle" block. Your
-        code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-      flappy_5_instruction: |-
-        Let's add a scoreboard, and count points when Flappy
-        makes it past obstacles. Add to the "when pass an obstacle" block, and then
-        score a point by flying Flappy through the first set of pipes.
-      flappy_6_instruction: |-
-        See if you can still score a point after making Flappy
-        flap either a smaller or larger amount.
-      flappy_7_instruction: |-
-        Next, try changing the scene by attaching another block
-        to the "when run" block.
-      flappy_8_instruction: |-
-        You can set visuals anytime, not just when the game
-        starts. Try setting a RANDOM scene when other events happen, for example,
-        when passing an obstacle.
-      flappy_9_instruction: |-
-        To mix things up, when hitting an obstacle, instead
-        of ending the game try setting the score back to 0.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
+      flappy_1_instruction: '"basanda" blokuna bir blok əlavə edin və "İcra et" düyməsini
+        sıxın. Ekrana basmaqla Qanadlını hədəfə çatdırın.'
+      flappy_2_instruction: İndi biz yer səthi də əlavə etmişik. "yerə düşəndə" blokuna
+        bir blok əlavə edin. Sizin kodunuz gərək Qanadlı düşəndə "oyunu bitir"sin.
+      flappy_3_instruction: '"İcra etdikdə" bloku imkan verir ki, oyun başlayanda
+        kodunuz icra edəsiniz. Mərhələ sürətini təyin etməyə və hədəfə doğru qanad
+        çalmağa çalışın.'
+      flappy_4_instruction: Əgər onu toqquşmağa məcbur etməsəniz Qanadlı manelərin
+        içindən keçəcək. "bir maneəyə dəyəndə" blokuna bir blok əlavə edin. Kodunuz
+        gərək Qanadlı birinci dəst borularla toqquşanda "oyunu bitir"sin.
+      flappy_5_instruction: Gəlin xallar cədvəli əlavə edək və Qanadlı maneələri keçdikcə
+        xalları sayaq. "maneə keçiləndə" blokuna bir blok əlavə edin və sonra Qanadlını
+        birinci dəst boruların arasından keçirməklə 1 xal qazanın.
+      flappy_6_instruction: Görək Qanadlıya daha kiçik və ya daha böyük qanad çaldırandan
+        sonra da 1 xal qazana biləcəksiniz.
+      flappy_7_instruction: İndi isə "icra etdikdə" blokuna başqa bir blok əlavə etməklə
+        səhnəni dəyişməyə çalışın.
+      flappy_8_instruction: Siz görüntüləri ancaq oyun başlayanda yox, istənilən vaxt
+        təyin edə bilərsiniz. Başqa bir hadisə baş verdikdə, məsələn, maneə keçildikdə
+        TƏSADÜFİ səhnə təyin etməyi yoxlayın.
+      flappy_9_instruction: "İşləri qarışdırmaq üçün hansısa maneəyə deyəndə oyunu
+        bitirmək yerinə xalı 0 təyin etməyi yoxlayın."
+      flappy_11_instruction: "Öz Qanadlı oyununuzu düzəldin. Siz bütün görüntüləri
+        və qaydaları dəyişə bilərsiniz, hətta yerin cazibə qüvvəsini belə. Bitirdiyinizdə
+        Son düyməsini basın və oyunu paylaşın ki, dostlarınız da sizin oyununuzu sınaqdan
+        keçirsinlər."
       frozen circle function in circle_instruction: |-
         Now let's create 20 overlapping
         circles, turning 18 degrees between each circle.

@@ -617,7 +617,7 @@ sl:
         edit_add_parameter: "Click edit to add a parameter in your function"
         add_and_drag_parameter: "Write in the name of your parameter here, click add, and then drag it into your function definition"
         fill_in_actor: "Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)"
-        repeat: "Put blocks inside the loop to repeat commands"
+        repeat: "Dodaj bloke v zanko, da bi ponavljal ukaze"
         if_bee_nectar: "Use the \"if\" block to decide if the bee should get nectar"
         if_else_bee: "Uporabi \"če/sicer\" blok tako, da bo čebelica nabrala nektar iz cveta in naredila med če ni cvet"
         repeat_full_circle: "Enter in the number of times the zombie has to move to make a full circle"

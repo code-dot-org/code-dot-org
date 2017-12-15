@@ -23,12 +23,11 @@ const styles = {
 
 export default class TeachersBeyondHoc extends Component {
   static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
     responsive: PropTypes.instanceOf(Responsive).isRequired,
   };
 
   render() {
-    const { isRtl, responsive } = this.props;
+    const { responsive } = this.props;
     const desktop = (responsive.isResponsiveCategoryActive('lg') || responsive.isResponsiveCategoryActive('md'));
 
     const codeorgTeacherImage = desktop ? "codeorg-teacher" : "course-catalog";
@@ -70,7 +69,6 @@ export default class TeachersBeyondHoc extends Component {
                 description={card.description}
                 buttonText={card.buttonText}
                 link={card.link}
-                isRtl={isRtl}
                 jumbo={desktop}
                 image={card.image}
               />

@@ -12,7 +12,6 @@ describe('StudentsBeyondHoc', () => {
         completedTutorialType="other"
         MCShareLink=""
         responsive={responsive}
-        isRtl={false}
         userType="signedOut"
         isEnglish={true}
       />
@@ -27,7 +26,6 @@ describe('StudentsBeyondHoc', () => {
         completedTutorialType="other"
         MCShareLink="code.org/minecraft/sharelink"
         responsive={responsive}
-        isRtl={false}
         userType="signedOut"
         isEnglish={true}
       />
@@ -42,7 +40,6 @@ describe('StudentsBeyondHoc', () => {
         completedTutorialType="other"
         MCShareLink="code.org/minecraft/sharelink"
         responsive={responsive}
-        isRtl={false}
         userType="signedOut"
         isEnglish={true}
       />

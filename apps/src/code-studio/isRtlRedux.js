@@ -1,5 +1,5 @@
 const SET_RTL = 'isRtl/SET_RTL';
-const setRtl = isRtl => ({ type: SET_RTL, isRtl });
+export const setRtl = isRtl => ({ type: SET_RTL, isRtl });
 export const setRtlFromDOM = () => setRtl(isRtlFromDOM());
 
 // Dashboard signals whether or not we're in rtl by setting "dir" on the root

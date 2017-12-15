@@ -102,7 +102,7 @@ class PdWorkshopSurvey < Form
   def self.process_(form)
     # Save this form id in the relevant dashboard pd_enrollment row
     id = form[:id]
-    data = JSON.parse(form[:data])
+    data = JSON.load(form[:data])
     enrollment_id = data['enrollment_id_i']
     DASHBOARD_DB[:pd_enrollments].where(id: enrollment_id).update(completed_survey_id: id)
 

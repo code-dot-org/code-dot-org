@@ -28,6 +28,7 @@ require 'socket'
 require 'parallel_tests/cucumber/scenarios'
 
 require_relative './utils/selenium_browser'
+require_relative './utils/selenium_constants'
 
 require 'active_support/core_ext/object/blank'
 
@@ -76,7 +77,7 @@ def main(options)
   return 1 if run_results.nil?
 
   report_tests_finished start_time, run_results
-  run_results.count {|succeeded, _, _| !succeeded}
+  run_results.count {|feature_succeeded, _, _| !feature_succeeded}
 ensure
   close_log_files
 end
@@ -310,8 +311,9 @@ def run_tests(env, feature, arguments, log_prefix)
     stdin.close
     stdout = stdout.read
     stderr = stderr.read
-    succeeded = wait_thr.value.exitstatus == 0
-    return succeeded, stdout, stderr, Time.now - start_time
+    cucumber_succeeded = wait_thr.value.exitstatus == 0
+    eyes_succeeded = count_eyes_errors(stdout) == 0
+    return cucumber_succeeded, eyes_succeeded, stdout, stderr, Time.now - start_time
   end
 end
 
@@ -378,9 +380,9 @@ def report_tests_finished(start_time, run_results)
   total_flaky_successful_reruns = 0
   suite_success_count = 0
   failures = []
-  run_results.each do |succeeded, message, reruns|
+  run_results.each do |feature_succeeded, message, reruns|
     total_flaky_reruns += reruns
-    if succeeded
+    if feature_succeeded
       total_flaky_successful_reruns += reruns
       suite_success_count += 1
     else
@@ -488,9 +490,9 @@ def parallel_config(parallel_limit)
     # This 'finish' lambda runs on the main thread after each Parallel.map work
     # item is completed.
     finish: lambda do |_, _, result|
-      succeeded, _, _ = result
+      feature_succeeded, _, _ = result
       # Count failures so we can abort the whole test run if we exceed the limit
-      $failed_features += 1 unless succeeded
+      $failed_features += 1 unless feature_succeeded
     end
   }
 end
@@ -502,6 +504,11 @@ def first_selenium_error(filename)
   match = error_regex.match(html)
   full_error = match && match[1]
   full_error ? full_error.strip.split("\n").first : 'no selenium error found'
+end
+
+# returns the number of scenarios with eyes mismatch errors in the cucumber output.
+def count_eyes_errors(cucumber_output)
+  cucumber_output.scan(/#{Regexp.quote(EYES_ERROR_PREFIX)}/).count
 end
 
 # return all text after "Failing Scenarios"
@@ -667,18 +674,20 @@ def run_feature(browser, feature, options)
   reruns = 0
   arguments = cucumber_arguments_for_browser(browser, options)
   arguments += cucumber_arguments_for_feature(options, test_run_string, max_reruns)
-  succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, arguments, log_prefix)
+  cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, arguments, log_prefix)
+  feature_succeeded = cucumber_succeeded && eyes_succeeded
   log_link = upload_log_and_get_public_link(
     html_log,
     {
       commit: COMMIT_HASH,
-      success: succeeded.to_s,
+      success: feature_succeeded.to_s,
       attempt: reruns.to_s,
       duration: test_duration.to_s
     }
   )
 
-  while !succeeded && (reruns < max_reruns)
+  # only retry cucumber/selenium errors, not eyes mismatches.
+  while !cucumber_succeeded && (reruns < max_reruns)
     reruns += 1
 
     ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
@@ -688,20 +697,21 @@ def run_feature(browser, feature, options)
 
     rerun_arguments = File.exist?(rerun_file) ? " @#{rerun_file}" : ''
 
-    succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, arguments + rerun_arguments, log_prefix)
+    cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, arguments + rerun_arguments, log_prefix)
+    feature_succeeded = cucumber_succeeded && eyes_succeeded
     log_link = upload_log_and_get_public_link(
       html_log,
       {
         commit: COMMIT_HASH,
         duration: test_duration.to_s,
         attempt: reruns.to_s,
-        success: succeeded.to_s
+        success: feature_succeeded.to_s
       }
     )
   end
 
   $lock.synchronize do
-    if succeeded
+    if feature_succeeded
       log_success prefix_string(Time.now, log_prefix)
       log_success prefix_string(browser.to_yaml, log_prefix)
       log_success prefix_string(output_stdout, log_prefix)
@@ -725,29 +735,32 @@ def run_feature(browser, feature, options)
 
   rerun_info = " with #{reruns} reruns" if reruns > 0
 
-  if !parsed_output.nil? && scenario_count == 0 && succeeded
+  eyes_error_count = count_eyes_errors(output_stdout)
+  eyes_info = ", #{eyes_error_count} eyes mismatches" if eyes_error_count > 0
+
+  if !parsed_output.nil? && scenario_count == 0 && feature_succeeded
     # Don't log individual skips because we hit ChatClient rate limits
     # ChatClient.log "<b>dashboard</b> UI tests skipped with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
-  elsif succeeded
+  elsif feature_succeeded
     # Don't log individual successes because we hit ChatClient rate limits
     # ChatClient.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   else
     ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     ChatClient.log prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
-    message = "#{log_prefix}<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"
+    message = "#{log_prefix}<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})#{log_link}"
     message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if eyes?} -c #{browser_name} -f #{feature}"
     ChatClient.log message, color: 'red'
   end
   result_string =
     if scenario_count == 0
       'skipped'.blue
-    elsif succeeded
+    elsif feature_succeeded
       'succeeded'.green
     else
       'failed'.red
     end
-  puts prefix_string("UI tests for #{test_run_string} #{result_string} (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})", log_prefix)
+  puts prefix_string("UI tests for #{test_run_string} #{result_string} (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})", log_prefix)
 
   if scenario_count == 0 && !ENV['CI']
     skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow
@@ -764,7 +777,7 @@ EOS
     print skip_warning
   end
 
-  [succeeded, message, reruns]
+  [feature_succeeded, message, reruns]
 end
 
 #

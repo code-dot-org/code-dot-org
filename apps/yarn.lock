@@ -46,9 +46,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@github:code-dot-org/craft#65f81632f7a2f3ba4d43b5778d1a0def24cd4b2f":
-  version "0.0.22"
-  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/65f81632f7a2f3ba4d43b5778d1a0def24cd4b2f"
+"@code-dot-org/craft@github:code-dot-org/craft#bacbd8d6f61493f8cf84f2deffc74eeaf7d0dae7":
+  version "0.1.0"
+  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/bacbd8d6f61493f8cf84f2deffc74eeaf7d0dae7"
 
 "@code-dot-org/johnny-five@0.11.1-cdo.1":
   version "0.11.1-cdo.1"
@@ -93,9 +93,9 @@
   version "1.1.9-cdo"
   resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.1.9-cdo.tgz#1e84ab26b1c8a5da62659209e81b74a35688ebef"
 
-"@code-dot-org/piskel@0.10.0-cdo.0":
-  version "0.10.0-cdo.0"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.10.0-cdo.0.tgz#d7a8e52de51af9880d88473355a0d2e1b9d120d6"
+"@code-dot-org/piskel@0.13.0-cdo.0":
+  version "0.13.0-cdo.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.0.tgz#75b51cb66f1de75a298ae0074263c30928f6623f"
 
 "@kadira/react-split-pane@^1.4.0":
   version "1.4.7"
@@ -5047,9 +5047,9 @@ jquery-ui@^1.12.1:
   version "1.12.1"
   resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.1.tgz#bcb4045c8dd0539c134bc1488cdd3e768a7a9e51"
 
-jquery@2.1.4:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-2.1.4.tgz#228bde698a0c61431dc2630a6a154f15890d2317"
+jquery@1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-1.12.1.tgz#9cc34ce4780d4ceb90c44328f071064f01960c18"
 
 js-base64@^2.1.9, js-base64@~2.1.7:
   version "2.1.9"

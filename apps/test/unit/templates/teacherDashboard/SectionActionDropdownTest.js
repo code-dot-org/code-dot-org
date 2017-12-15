@@ -113,12 +113,12 @@ describe('SectionActionDropdown', () => {
     );
     expect(wrapper).to.contain("View Progress");
     expect(wrapper).to.contain('Manage Students');
-    expect(wrapper).to.contain('Print Login Cards');
+    expect(wrapper).to.not.contain('Print Login Cards');
     expect(wrapper).to.contain('Edit Section Details');
     expect(wrapper.find(<PrintCertificates sectionId={2} assignmentName="a"/>).length, 1);
   });
 
-  it('renders the four standard options for not a third party section', () => {
+  it('renders the five standard options for not a third party section', () => {
     const wrapper = shallow(
       <SectionActionDropdown
         {...DEFAULT_PROPS}

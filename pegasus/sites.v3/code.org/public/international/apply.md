@@ -10,11 +10,13 @@ Take the lead to expand computer science education in your country! As a Code.or
 
 ## What you'll get from Code.org
 
-* Official Code.org International Partner logo
-* A directory of International Partners featuring your organization's logo
-* Access to Code.org resources and best practices
-* An online community to share ideas with other International Partners worldwide
-* Latest updates on news, special events, program updates, useful resources, and more
+* You’ll be able to use the official Code.org International Partner logo on your website, communications, and resources. 
+* We’ll help amplify your efforts through Code.org’s social media channels that reach more than 3 million people around the world. 
+* We’ll feature your organization’s logo on our website alongside those of other International Partners.
+* We’ll provide resources that describe the best practices we’ve learned over the last four years of work expanding computer science in U.S. schools. 
+* You’ll be given access to an invite-only online community of global experts, including Code.org employees and fellow Code.org International Partners, who share the goal of expanding computer science education worldwide. 
+* You’ll receive the latest updates on exciting news, special events, program updates, useful resources, and more.
+
 
 ## What Code.org would expect from you
 

@@ -567,6 +567,9 @@ mk:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Ages 13+"
       cta: "Learn how"
+    hoc-encryption:
+      title: "Simple Encryption"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -585,6 +588,9 @@ mk:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."

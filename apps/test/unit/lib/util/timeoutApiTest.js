@@ -236,6 +236,21 @@ describe('Timeout API', () => {
       callback: () => {},
       ms: 0,
     });
+
+    it('sets an interval', () => {
+      const spy = sinon.spy();
+      commands[funcName]({
+        callback: spy,
+        ms: 3
+      });
+      expect(spy).not.to.have.been.called;
+      clock.tick(3);
+      expect(spy).to.have.been.calledOnce;
+      clock.tick(3);
+      expect(spy).to.have.been.calledTwice;
+      clock.tick(3);
+      expect(spy).to.have.been.calledThrice;
+    });
   });
 
   describe('stopTimedLoop', () => {
@@ -263,6 +278,23 @@ describe('Timeout API', () => {
 
     itComplainsIfArgumentIsNotANumber(funcName, 'key', {
       key: 0,
+    });
+
+    it('clears an interval started by setTimedLoop', () => {
+      const spy = sinon.spy();
+      const key = commands.timedLoop({
+        callback: spy,
+        ms: 3
+      });
+      expect(spy).not.to.have.been.called;
+      clock.tick(3);
+      expect(spy).to.have.been.calledOnce;
+
+      commands.stopTimedLoop({key});
+      clock.tick(3);
+      expect(spy).to.have.been.calledOnce;
+      clock.tick(3);
+      expect(spy).to.have.been.calledOnce;
     });
   });
 

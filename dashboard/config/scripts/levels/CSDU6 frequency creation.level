@@ -23,7 +23,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Making the Buzzer Buzz\r\n\r\nNow that you know how to use the frequency block, try to make the buzzer play a high sound when the same button pops back up.\r\n\r\n# Do this\r\n* Add another onBoardEvent block so the buzzer plays a high sound when the left button comes back **up**",
+    "markdown_instructions": "# Making the Buzzer Buzz\r\n\r\nNow that you can use the buzzer's frequency, try to make the buzzer play a high sound when the same button pops back up.\r\n\r\n# Do this\r\n* Add another onBoardEvent block so the buzzer plays a high sound when the left button comes back **up**",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -49,7 +49,7 @@
     "disable_if_else_editing": "false",
     "free_play": "false",
     "autocomplete_palette_apis_only": "false",
-    "hide_view_data_button": "false",
+    "hide_view_data_button": "true",
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",
@@ -68,7 +68,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-11-18 00:19:28 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-20 19:30:25 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-20 19:33:25 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-20 23:08:20 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-21 16:54:15 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-21 16:57:54 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-11-18 00:19:28 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-20 19:30:25 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-20 19:33:25 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-20 23:08:20 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-21 16:54:15 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-21 16:57:54 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-14 18:04:59 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"hide_view_data_button\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

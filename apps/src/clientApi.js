@@ -152,8 +152,9 @@ class AssetsApi extends CollectionsApi {
    * Get a list of all files
    * @callback success {getFiles~success} callback when successful
    * @callback error {Function} callback when failed (includes xhr parameter)
+   * @param version {string} Ignored for this API, but matches other getFiles()
    */
-  getFiles(success, error) {
+  getFiles(success, error, version) {
     return ajaxInternal('GET', this.basePath(''), xhr => {
         var parsedResponse;
         try {
@@ -374,8 +375,9 @@ class FilesApi extends CollectionsApi {
    * Get a list of all files
    * @callback success {getFiles~success} callback when successful
    * @callback error {Function} callback when failed (includes xhr parameter)
+   * @param version {string} Optional filesVersionId for project
    */
-  getFiles(version, success, error) {
+  getFiles(success, error, version) {
     let path = this.basePath('');
     if (version) {
       path = path + `?version=${version}`;
