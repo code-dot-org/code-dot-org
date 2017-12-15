@@ -1,11 +1,12 @@
 import React, { PropTypes, Component } from 'react';
 import i18n from '@cdo/locale';
-import Responsive from '../responsive';
+import { connect } from 'react-redux';
 import CourseBlocksStudentGradeBands from './studioHomepages/CourseBlocksStudentGradeBands';
 import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
 import { LocalClassActionBlock } from './studioHomepages/TwoColumnActionBlock';
 import { tutorialTypes } from './tutorialTypes.js';
 import { cardSets } from './congratsBeyondHocActivityCards';
+import { ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
 
 const styles = {
   heading: {
@@ -20,24 +21,24 @@ const styles = {
   }
 };
 
-export default class StudentsBeyondHoc extends Component {
+class StudentsBeyondHoc extends Component {
   static propTypes = {
     completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
     MCShareLink: PropTypes.string,
-    responsive: PropTypes.instanceOf(Responsive).isRequired,
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
     userAge: PropTypes.number,
     isEnglish: PropTypes.bool.isRequired,
   };
 
   render() {
-    const { responsive, completedTutorialType, userType, isEnglish, MCShareLink, userAge } = this.props;
+    const { responsiveSize, completedTutorialType, userType, isEnglish, MCShareLink, userAge } = this.props;
 
     const signedIn = (userType === "teacher" || userType === "student");
 
     const under13 = userAge < 13;
 
-    const desktop = (responsive.isResponsiveCategoryActive('lg') || responsive.isResponsiveCategoryActive('md'));
+    const desktop = responsiveSize !== ResponsiveSize.xs;
 
     const headingStyle = desktop ? styles.heading : styles.mobileHeading;
 
@@ -122,3 +123,7 @@ export default class StudentsBeyondHoc extends Component {
     );
   }
 }
+
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+}))(StudentsBeyondHoc);
