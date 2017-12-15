@@ -77,24 +77,14 @@ class WebLabView extends React.Component {
                 </div>
               }
               <div>
-                {this.props.isFullScreenPreviewOn &&
-                  <PaneButton
-                    iconClass="fa fa-compress"
-                    leftJustified={false}
-                    headerHasFocus={true}
-                    isRtl={false}
-                    onClick={this.props.onEndFullScreenPreview}
-                  />
-                }
-                {!this.props.isFullScreenPreviewOn &&
-                  <PaneButton
-                    iconClass="fa fa-arrows-alt"
-                    leftJustified={false}
-                    headerHasFocus={true}
-                    isRtl={false}
-                    onClick={this.props.onStartFullScreenPreview}
-                  />
-                }
+                <PaneButton
+                  iconClass={this.props.isFullScreenPreviewOn ? "fa fa-compress" : "fa fa-arrows-alt"}
+                  leftJustified={false}
+                  headerHasFocus={true}
+                  isRtl={false}
+                  onClick={this.props.isFullScreenPreviewOn ? this.props.onEndFullScreenPreview : this.props.onStartFullScreenPreview}
+                  label=""
+                />
                 {!this.props.isFullScreenPreviewOn && !this.props.isReadOnlyWorkspace &&
                   <div>
                     <PaneButton
