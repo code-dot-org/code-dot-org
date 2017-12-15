@@ -1,7 +1,4 @@
-import $ from 'jquery';
-import _ from 'lodash';
 import React, { PropTypes, Component } from 'react';
-import Responsive from '../responsive';
 import Certificate from './Certificate';
 import StudentsBeyondHoc from './StudentsBeyondHoc';
 import TeachersBeyondHoc from './TeachersBeyondHoc';
@@ -26,40 +23,6 @@ export default class Congrats extends Component {
     isEnglish: PropTypes.bool.isRequired,
     randomDonorTwitter: PropTypes.string,
   };
-
-  constructor(props) {
-    super(props);
-    this.responsive = new Responsive();
-    this.state = {
-      windowWidth: $(window).width(),
-      windowHeight: $(window).height(),
-      mobileLayout: this.responsive.isResponsiveCategoryInactive('md')
-    };
-  }
-
-  componentDidMount() {
-    // Resize handler.
-    window.addEventListener('resize', _.debounce(this.onResize, 100).bind(this));
-  }
-
-  onResize() {
-    const windowWidth = $(window).width();
-    const windowHeight = $(window).height();
-    // We fire window resize events when the grippy is dragged so that non-React
-    // controlled components are able to rerender the editor. If width/height
-    // didn't change, we don't need to do anything else here
-    if (windowWidth === this.state.windowWidth &&
-        windowHeight === this.state.windowHeight) {
-      return;
-    }
-
-    this.setState({
-      windowWidth: $(window).width(),
-      windowHeight: $(window).height()
-    });
-
-    this.setState({mobileLayout: this.responsive.isResponsiveCategoryInactive('md')});
-  }
 
   render() {
     const {
