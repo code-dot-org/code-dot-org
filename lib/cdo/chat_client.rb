@@ -43,7 +43,7 @@ class ChatClient
     Slack.snippet(CDO.slack_log_room, message)
   end
 
-  def self.wrap(name)
+  def self.wrap(name, backtrace: false)
     start_time = Time.now
     ChatClient.log "Running #{name}..."
     yield if block_given?
@@ -54,7 +54,7 @@ class ChatClient
     ChatClient.log message, color: 'red', notify: 1
     ChatClient.message 'server operations', message, color: 'red', notify: 1
 
-    ChatClient.snippet "#{e}\n#{CDO.backtrace e}"
+    ChatClient.snippet "#{e}\n#{CDO.backtrace e}" if backtrace
     raise
   end
 end

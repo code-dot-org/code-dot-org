@@ -90,7 +90,7 @@ end
 
 desc 'Update the server as part of continuous integration.'
 task :ci do
-  ChatClient.wrap('CI build') {Rake::Task[rack_env?(:test) ? 'ci:test' : 'ci:all'].invoke}
+  ChatClient.wrap('CI build', backtrace: true) {Rake::Task[rack_env?(:test) ? 'ci:test' : 'ci:all'].invoke}
 end
 
 # Returns true if upgrade succeeded, false if failed.
