@@ -41,14 +41,14 @@
     "timeout_after_when_run": "false",
     "min_workspace_height": "600",
     "examples_required": "false",
-    "contained_level_names": null,
     "instructions_important": "false",
     "never_autoplay_video": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
