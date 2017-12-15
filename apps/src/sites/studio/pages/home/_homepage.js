@@ -2,7 +2,6 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import queryString from 'query-string';
-import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
@@ -20,7 +19,6 @@ import LinkCleverAccountModal from '@cdo/apps/code-studio/LinkCleverAccountModal
 $(document).ready(showHomepage);
 
 function showHomepage() {
-  const isRtl = isRtlFromDOM();
   const script = document.querySelector('script[data-homepage]');
   const homepageData = JSON.parse(script.dataset.homepage);
   const isTeacher = homepageData.isTeacher;
@@ -150,7 +148,6 @@ function showHomepage() {
             courses={homepageData.courses}
             joinedSections={homepageData.joined_sections}
             topCourse={homepageData.topCourse}
-            isRtl={isRtl}
             queryStringOpen={query['open']}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
             isEnglish={isEnglish}
@@ -162,7 +159,6 @@ function showHomepage() {
             topCourse={homepageData.topCourse}
             sections={homepageData.sections}
             canLeave={homepageData.canLeave}
-            isRtl={isRtl}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
           />
         )}
