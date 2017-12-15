@@ -140,18 +140,18 @@ class StorageApps
 
   # Determine if the current user can view the project
   def get_sharing_disabled(channel_id, current_user_id)
-    user_storage_owner_id, storage_app_id = storage_decrypt_channel_id(channel_id)
-    owner_id = user_storage_ids_table.where(id: user_storage_owner_id).first[:user_id]
+    owner_storage_id, storage_app_id = storage_decrypt_channel_id(channel_id)
+    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
 
     # Sharing of a project is not disabled for the project owner
     # or the teachers of the project owner
     # or if the current user paired with the owner
-    if current_user_id == owner_id
+    if current_user_id == owner_user_id
       return false
-    elsif teaches_student?(owner_id, current_user_id)
+    elsif teaches_student?(owner_user_id, current_user_id)
       return false
-    elsif get_user_sharing_disabled(owner_id)
-      !users_paired_on_level?(storage_app_id, current_user_id, owner_id, user_storage_owner_id)
+    elsif get_user_sharing_disabled(owner_user_id)
+      !users_paired_on_level?(storage_app_id, current_user_id, owner_user_id, owner_storage_id)
     else
       return false
     end
@@ -161,18 +161,19 @@ class StorageApps
     true
   end
 
-  def users_paired_on_level?(storage_app_id, current_user_id, owner_id, user_storage_owner_id)
+  def users_paired_on_level?(storage_app_id, current_user_id, owner_user_id, owner_storage_id)
     channel_tokens_table = DASHBOARD_DB[:channel_tokens]
-    level_id = channel_tokens_table.select(:level_id).where(storage_app_id: storage_app_id, storage_id: user_storage_owner_id)
-    return false if level_id.empty?
+    level_id_row = channel_tokens_table.where(storage_app_id: storage_app_id, storage_id: owner_storage_id).first
+    return false if level_id_row.nil?
+    level_id = level_id_row[:level_id]
 
     user_levels_table = DASHBOARD_DB[:user_levels]
-    owner_user_level_id = user_levels_table.select(:id).where(user_id: owner_id, level_id: level_id)
+    owner_user_level_id = user_levels_table.select(:id).where(user_id: owner_user_id, level_id: level_id)
     current_user_level_id = user_levels_table.select(:id).where(user_id: current_user_id, level_id: level_id)
 
     paired_user_levels_table = DASHBOARD_DB[:paired_user_levels]
-    paired_level_id = paired_user_levels_table.select(:id).where(driver_user_level_id: owner_user_level_id, navigator_user_level_id: current_user_level_id)
-    return false if paired_level_id.empty?
+    paired_level_row = paired_user_levels_table.where(driver_user_level_id: owner_user_level_id, navigator_user_level_id: current_user_level_id).first
+    return false if paired_level_row.nil?
 
     return true
   end
