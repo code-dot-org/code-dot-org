@@ -234,5 +234,47 @@ module.exports = {
         assert.include(debugOutput.textContent, 'touched');
       },
     ),
+    testAsyncProgramGameLab(
+      "A collider larger than the sprite collides with target",
+      `
+        var sprite = createSprite(0, 0, 200, 200);
+        sprite.setCollider("rectangle", 200, 200, 300, 300);
+        var target = createSprite(300, 300, 100, 100);
+        if (target.collide(sprite)){
+          console.log('collided');
+        }
+
+        console.log('done');
+      `,
+      function isProgramDone(){
+        var debugOutput = document.getElementById('debug-output');
+        return debugOutput.textContent.includes('done');
+      },
+      function validateResults(assert){
+        var debugOutput = document.getElementById('debug-output');
+        assert.include(debugOutput.textContent, 'collided');
+      },
+    ),
+    testAsyncProgramGameLab(
+      'A collider smaller than the sprite does not collide when target touches the sprite, but not collider',
+      `
+        var sprite = createSprite(100, 100, 200, 200);
+        sprite.setCollider("rectangle", -50, -50, 100, 100);
+        var target = createSprite(170, 170, 120, 120);
+        if (target.collide(sprite)){
+          console.log('collided');
+        }
+
+        console.log('done');
+      `,
+      function isProgramDone(){
+        var debugOutput = document.getElementById('debug-output');
+        return debugOutput.textContent.includes('done');
+      },
+      function validateResults(assert){
+        var debugOutput = document.getElementById('debug-output');
+        assert.notInclude(debugOutput.textContent, 'collided');
+      },
+    ),
   ]
 };
