@@ -333,10 +333,10 @@ var projects = module.exports = {
     // we'll load the project and show them a small alert
     const pageAction = parsePath().action;
 
-    // NOTE: appOptions.isAdmin is not a security setting as it can be manipulated
-    // by the user. In this case that's okay, since all that does is allow them to
-    // view a project that was marked as abusive.
-    const hasEditPermissions = this.isOwner() || appOptions.isAdmin;
+    // NOTE: appOptions.canResetAbuse is not a security setting as it can be
+    // manipulated by the user. In this case that's okay, since all that does
+    // is allow them to view a project that was marked as abusive.
+    const hasEditPermissions = this.isOwner() || appOptions.canResetAbuse;
     const isEditOrViewPage = pageAction === 'edit' || pageAction === 'view';
 
     return hasEditPermissions && isEditOrViewPage;
