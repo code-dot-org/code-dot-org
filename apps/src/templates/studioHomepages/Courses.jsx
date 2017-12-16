@@ -8,11 +8,12 @@ import CoursesStudentEnglish from './CoursesStudentEnglish';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import Button from '@cdo/apps/templates/Button';
 import i18n from "@cdo/locale";
+import styleConstants from '@cdo/apps/styleConstants';
 
 const styles = {
   content: {
     width: '100%',
-    maxWidth: 970,
+    maxWidth: styleConstants['content-width'],
     marginLeft: 'auto',
     marginRight: 'auto',
   }
