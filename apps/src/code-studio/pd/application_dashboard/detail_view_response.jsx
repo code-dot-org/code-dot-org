@@ -27,7 +27,7 @@ export default class DetailViewResponse extends React.Component {
   static propTypes = {
     question: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
     questionId: PropTypes.string,
-    answer: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.bool]),
+    answer: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.bool, PropTypes.element]),
     layout: PropTypes.oneOf(['lineItem', 'panel']).isRequired,
     score: PropTypes.string,
     possibleScores: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
@@ -84,7 +84,7 @@ export default class DetailViewResponse extends React.Component {
               scoredQuestion && (
                 <div className="col-md-3">
                   {
-                    this.props.layout === 'yesNoScore' ? 'Meets requirements' : 'Score'
+                    _.isEqual(this.props.possibleScores, ['Yes', 'No']) ? 'Meets requirements' : 'Score'
                   }
                 </div>
               )

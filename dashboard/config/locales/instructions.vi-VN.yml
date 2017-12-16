@@ -572,16 +572,12 @@
       4-5 Artist 8_instruction: Nửa đường kẻ trong lĩnh vực bóng đá là vuông góc với
         lề.   \r Hình chữ nhật này có chu vi tổng cộng là 800 pixel, và nó dài 240
         pixel. Nó cao bao nhiêu?   \r \r Vẽ các đường bao và nửa dòng kẻ.
-      4-5 Artist 9_instruction: |-
-        Draw the right half of this image so that the design
-        is symmetrical. The triangles are equilateral and have sides that are 50 pixels
-        long.
-      4-5 Artist Assessment 1_instruction: |-
-        Assessment: Use a loop to draw the equilateral
-        triangle. Each side is 300 pixels.
-      4-5 Artist For Loops 1_instruction: |-
-        Put the numbers 1 through 10 into the
-        width blocks and run the code.
+      4-5 Artist 9_instruction: Vẽ nửa bên phải của hình ảnh này để thiết kế trở nên
+        đối xứng. Các hình tam giác đều là tam giác đều và các cạnh dài 50 pixel.
+      4-5 Artist Assessment 1_instruction: "Đánh giá: Sử dụng một vòng lặp để vẽ hình
+        tam giác đều. Mỗi cạnh là 300 pixel."
+      4-5 Artist For Loops 1_instruction: Thử số 1 đến 10 ở trong khối lệnh chiều
+        rộng và chạy đoạn mã.
       4-5 Artist For Loops 11_instruction: |-
         Complete the "for" block so that it
         counts 0, 20, 40, 60, 80... 200.
@@ -3976,9 +3972,8 @@
         an example of a game you can make in play lab.
       FoodFight_instruction: This is an example of a game you can make in play lab.
       Frequency Analysis_instruction: Test
-      Function intro Ryan_instruction: |-
-        Use the `build bridge` function twice to
-        make a path to the Redstone Torch.
+      Function intro Ryan_instruction: Sử dụng nhóm lệnh chức năng 'xây cầu' hai lần
+        để tạo ra con đường đi tới với ngọn đuốc.
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -4282,7 +4277,7 @@
         Challenge: Move me around the TNT to get to
         the pig.
       K2.0 sequence 12_instruction: 'Let''s get that pig! '
-      K2.0 sequence 2_instruction: Change the code to get me to the pig!
+      K2.0 sequence 2_instruction: Sửa chữa các dòng mã để có bắt được con lợn!
       K2.0 sequence 3_instruction: |-
         Something is not quite right. REMOVE a block
         to get me to the pig!
@@ -4300,7 +4295,8 @@
       K2.0 sequence 8_instruction: |-
         Debug this level by adding blocks to get me to
         the pig!
-      K2.0 sequence 9_instruction: "Challenge: Go around the TNT to get me to the\npig! "
+      K2.0 sequence 9_instruction: 'Thách thức: Đi xung quanh khối TNT để bắt được
+        con lợn! '
       K2.0 sequence FP_instruction: |-
         Now figure out how to get the pig any way you
         can!
@@ -4428,9 +4424,9 @@
         xây một cây cầu bắc ngang qua con sông.
       MC_HOC_2017_07_Cole_instruction: Phá băng và để cho {currentPlayerName} tới
         Minecart.
-      MC_HOC_2017_07_Kiki_instruction: Sử dụng một nhóm lệnh chức năng để xóa đường
-        dẫn đi tới ô vuông màu cam.
-      MC_HOC_2017_07a_Kiki_instruction: Xóa đường dẫn tới ô vuông màu cam.
+      MC_HOC_2017_07_Kiki_instruction: Sử dụng một nhóm lệnh chức năng để dọn đường
+        đi tới ô vuông màu cam.
+      MC_HOC_2017_07a_Kiki_instruction: Dọn đường đi tới ô vuông màu cam.
       MC_HOC_2017_08_Cole_instruction: Thay đổi nhóm lệnh chức năng đã có để chúng
         hoạt động với quần xã sinh vật này.
       MC_HOC_2017_08_Kiki_instruction: Thay đổi nhóm các lệnh chức năng để chúng hoạt
@@ -4439,22 +4435,22 @@
         đi qua dung nham.
       MC_HOC_2017_08_Will_instruction: Sử dụng các nhóm lệnh chức năng để tìm đường
         đi qua dung nham.
-      MC_HOC_2017_09_Cole_instruction: Lập trình để nhân vật đặc vụ xóa đường của
+      MC_HOC_2017_09_Cole_instruction: Lập trình để nhân vật đặc vụ dọn đường đi cho
         nhân vật.
-      MC_HOC_2017_09_Kiki_instruction: Lập trình để nhân vật đặc vụ xóa con đường
-        của nhân vật và tới tấm áp lực.
+      MC_HOC_2017_09_Kiki_instruction: Lập trình để nhân vật đặc vụ dọn đường cho
+        nhân vật và đi tới tấm áp lực.
       MC_HOC_2017_10_Cole_instruction: Tạo ra một nhóm lệnh chức năng để giúp bạn
-        hoàn thành nhiệm vụ minecraft này.
+        hoàn thành nhiệm vụ tới xe chở quặng này.
       MC_HOC_2017_10_Cole_old_instruction: Tạo ra một nhóm lệnh chức năng để giúp
-        bạn hoàn thành nhiệm vụ minecraft này.
+        bạn hoàn thành nhiệm vụ tới xe chở quặng này.
       MC_HOC_2017_10_Kiki_instruction: Tạo ra một nhóm lệnh chức năng để giúp bạn
-        hoàn thành nhiệm vụ minecraft này.
+        hoàn thành nhiệm vụ tới xe chở quặng này.
       MC_HOC_2017_10_RETRY_instruction: Sử dụng các lệnh chức năng này để hoàn thành
-        nhiệm vụ minecraft này.
+        nhiệm vụ xe chở quặng này.
       MC_HOC_2017_10_RYAN_instruction: Tạo ra một nhóm lệnh chức năng để giúp bạn
-        hoàn thành nhiệm vụ minecraft này.
+        hoàn thành nhiệm vụ tới xe chở quặng này.
       MC_HOC_2017_10_RYAN2_instruction: Tạo ra một nhóm lệnh chức năng để giúp bạn
-        hoàn thành nhiệm vụ minecraft này.
+        hoàn thành nhiệm vụ tới xe chở quặng này.
       MC_HOC_2017_13_Cole_instruction: 'Chơi tự do: Thời gian để bạn tự khám phá và
         sáng tạo!'
       MC_HOC_2017_4.5v2_instruction: "Để nhân vật đặc vụ di chuyển đến tấm áp lực."
@@ -4563,7 +4559,7 @@
         một đường gồm các hình vuông" từ câu đố trước để vẽ mô hình này.
       NEW Course 4 Artist Functions 13_instruction: 'Bạn có thể vẽ một hình ngôi sao
         sử dụng nhóm lệnh chức năng "vẽ một đường bao gồm các hình vuông" được không?  '
-      NEW Course 4 Artist Functions 14_instruction: 'Free Play time! '
+      NEW Course 4 Artist Functions 14_instruction: 'Thời gian chơi tự do! '
       NEW Course 4 Artist Functions 2_instruction: 'Bạn có thể vẽ 3 hình vuông 20
         điểm ảnh khác nhau? Gợi ý: mỗi ô vuông chứa 100 điểm ảnh'
       NEW Course 4 Artist Functions 3_instruction: |-
@@ -4871,9 +4867,8 @@
         nó!
       New Infinity Project_instruction: Tạo ra bất cứ điều gì bạn thích và chia sẻ
         nó!
-      New Minecraft Hero Project_instruction: |-
-        **Freeplay:**  Time to explore on
-        your own!
+      New Minecraft Hero Project_instruction: "**Chơi tự do:** Thời gian để bạn tự
+        khám phá và sáng tạo!"
       New Sports Project_instruction: |-
         Create your own game! You're in charge here:
         you can change all the rules, mix and match sports, get creative! When you're
@@ -10266,7 +10261,7 @@
         of what you think the artist saw when he got home.
       grade1_maze_sequence1_instruction: A bug! Fix the code to get me to the pig.
       grade1_maze_sequence10_instruction: Move me around the TNT to get to the pig.
-      grade1_maze_sequence2_instruction: Fix the code to get me to the pig!
+      grade1_maze_sequence2_instruction: Sửa chữa các dòng mã để có bắt được con lợn!
       grade1_maze_sequence3_instruction: |
         Can you add 2 blocks to get the bird to
         the pig.

@@ -18,6 +18,7 @@ class DesignWorkspace extends React.Component {
     isDimmed: PropTypes.bool.isRequired,
 
     // provided by redux
+    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
     showMakerToggle: PropTypes.bool,
@@ -35,6 +36,7 @@ class DesignWorkspace extends React.Component {
         handleVersionHistory={this.props.handleVersionHistory}
         onToggleToolbox={this.onToggleToolbox}
         isToolboxVisible={this.state.isToolboxVisible}
+        showProjectTemplateWorkspaceIcon={this.props.showProjectTemplateWorkspaceIcon}
         isRtl={this.props.isRtl}
         isRunning={this.props.isRunning}
         showMakerToggle={this.props.showMakerToggle}
@@ -56,6 +58,7 @@ class DesignWorkspace extends React.Component {
   }
 }
 export default connect(state => ({
+  showProjectTemplateWorkspaceIcon: !!state.pageConstants.showProjectTemplateWorkspaceIcon,
   isRtl: state.isRtl,
   isRunning: !!state.runState.isRunning,
   showMakerToggle: !!state.pageConstants.showMakerToggle,

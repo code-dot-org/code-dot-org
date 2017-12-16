@@ -115,13 +115,14 @@ end
 
 And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) (people|facilitators)(.*)$/) do |course, role, name, number, number_type, post_create_actions|
   # Organizer
-  if role == 'organized'
-    organizer = User.find_by(name: name)
-  else
-    organizer = User.find_or_create_teacher(
-      {name: 'Organizer', email: "organizer#{SecureRandom.hex[0..5]}@code.org"}, nil, 'workshop_organizer'
-    )
-  end
+  organizer =
+    if role == 'organized'
+      User.find_by(name: name)
+    else
+      User.find_or_create_teacher(
+        {name: 'Organizer', email: "organizer#{SecureRandom.hex[0..5]}@code.org"}, nil, 'workshop_organizer'
+      )
+    end
 
   workshop = Pd::Workshop.create!(
     on_map: true,
@@ -145,12 +146,7 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
       workshop.facilitators << create_facilitator(course)
     end
   else
-    if role == 'facilitated'
-      facilitator = User.find_by(name: name)
-    else
-      facilitator = create_facilitator(course)
-    end
-
+    facilitator = role == 'facilitated' ? User.find_by(name: name) : create_facilitator(course)
     workshop.facilitators << facilitator
   end
 

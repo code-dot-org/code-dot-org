@@ -12,7 +12,7 @@ module Facilitator1819ApplicationConstants
     section_5_your_approach_to_learning_and_leading: 'Your Approach to Learning and Leading',
     section_6_logistics: 'Logistics',
     section_7_submission: 'Submission'
-  }
+  }.freeze
 
   PAGE_LABELS = {
     section_1_about_you: {
@@ -137,7 +137,7 @@ module Facilitator1819ApplicationConstants
 
       agree: "By submitting this application, I agree to share my contact information and application with Code.org's Regional Partners."
     }
-  }
+  }.freeze
 
   LABEL_OVERRIDES = {
     program: 'Please choose one curriculum for which you would like to become a facilitator this year.',
@@ -146,10 +146,10 @@ module Facilitator1819ApplicationConstants
     grades_currently_teaching: 'What grade levels do you teach?',
     experience_leading: 'Which of the following do you have experience leading as a teacher?',
     completed_pd: 'Which of the following Code.org professional learning programs did you complete as a teacher?'
-  }
+  }.freeze
 
-  ALL_LABELS = PAGE_LABELS.values.reduce(:merge)
-  ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.map {|k, v| [k, LABEL_OVERRIDES[k] || v]}.to_h
+  ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
+  ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.map {|k, v| [k, LABEL_OVERRIDES[k] || v]}.to_h.freeze
 
   NUMBERED_QUESTIONS = %w(
     workedInCsJob csRelatedJobRequirements diversityTraining program
@@ -160,5 +160,5 @@ module Facilitator1819ApplicationConstants
     groupsLedPd describePriorPd whoShouldHaveOpportunity howSupportEquity
     expectedTeacherNeeds describeAdaptingLessonPlan describeStrategies
     exampleHowUsedFeedback exampleHowProvidedFeedback hopeToLearn
-  )
+  ).freeze
 end

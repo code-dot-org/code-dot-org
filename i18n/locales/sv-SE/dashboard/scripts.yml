@@ -2228,6 +2228,12 @@ sv:
               name: CSP Student Post-Course Survey
             Creating Functions with Parameters:
               name: Creating Functions with Parameters
+            CSP End-of-Semester Mid-course survey:
+              name: CSP End-of-Semester Mid-course survey
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
         csp4:
           title: CSP Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
@@ -4590,6 +4596,8 @@ sv:
               name: Designing Screens with Code
             Arrays:
               name: Arrays
+            Making Music:
+              name: Making Music
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5497,11 +5505,11 @@ sv:
             The Design Process:
               name: The Design Process
               description_student: Projects this big take time and plenty planning. Here, you will learn about the design process that you'll use to build your own creation.
-              description_teacher: 'Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).'
+              description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
               name: Build Your Project
               description_student: Get those hands ready for plenty of coding! It's time to start building your project.
-              description_teacher: 'Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This is likely to be the longest stage of the project. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).'
+              description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This is likely to be the longest stage of the project. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Revise Your Project:
               name: Revise Your Project
             Presentation Your Project:
@@ -5552,7 +5560,7 @@ sv:
             Present Your Project:
               name: Present Your Project
               description_student: Get ready to show off! It's time to present your finished project to your peers.
-              description_teacher: 'Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).'
+              description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
               name: 'Beyond Programming: The Internet'
               description_student: Ever wondered how information travels across the internet? It's not magic! This lesson will teach you the basics of how the internet works.
@@ -5650,21 +5658,21 @@ sv:
             The Design Process:
               name: The Design Process
               description_student: Projects this big take time and plenty planning. Here, you will learn about the design process that you'll use to build your own creation.
-              description_teacher: 'Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).'
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Build Your Project:
               name: Build Your Project
               description_student: Finally you can start building your project!
-              description_teacher: 'Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This will be the longest portion of the project. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).'
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This will be the longest portion of the project. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Revise Your Project:
               name: Revise Your Project
               description_student: Rome wasn't built in a day and your project shouldn't be, either. Take time to edit and revise your project to make it the best it can be.
-              description_teacher: 'Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now that the projects are built, students are given the opportunity to get feedback from peers and revise their projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).'
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now that the projects are built, students are given the opportunity to get feedback from peers and revise their projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Presentation Your Project:
               name: Presentation Your Project
             Present Your Project:
               name: Present Your Project
               description_student: Time to show your work! Here you will be presenting your awesome project to your peers.
-              description_teacher: 'Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).'
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Conditionals in Minecraft:
               name: Conditionals in Minecraft
               description_student: Avoid the lava! Here you will learn about conditionals in the world of Minecraft.
@@ -6115,6 +6123,10 @@ sv:
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey:
+              name: Please complete the CSP Mid-course survey
           title: CSP Unit 3 - Intro to Programming (subgoals)
           description_audience: ''
           description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
@@ -6189,10 +6201,10 @@ sv:
               name: Intro to App Lab
             'Lesson 1: App Lab Intro':
               name: 'Lesson 1: App Lab Intro'
-          title: Intro to App Lab (Beta)
+          title: Intro to App Lab
           description_audience: ''
-          description_short: ''
-          description: These lessons introduce you to App Lab through a series of creative projects.
+          description_short: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
+          description: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
@@ -6697,10 +6709,20 @@ sv:
               name: 'Technology Foundations: What is a Computer?'
             'Data Science: Problem Solving with Big Data':
               name: 'Data Science: Problem Solving with Big Data'
-          title: PwC Access Your Potential
+            Personal Innovations:
+              name: Personal Innovations
+            What is a Computer?:
+              name: What is a Computer?
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Programming - Hour of Code:
+              name: Programming - Hour of Code
+            Simple Encryption:
+              name: Simple Encryption
+          title: PwC Access Your Potential curriculum
           description_audience: ''
           description_short: ''
-          description: ''
+          description: At PwC, we believe that all students have the potential to be tomorrow’s leaders and tech-driven workforce. Access Your Potential is our commitment to help close the opportunity gap by equipping young people, especially those from disadvantaged communities, with the financial, technology and career-selection skills they need to change the trajectory of their lives. As part of our commitment, we’re excited to launch our Access Your Potential middle school technology and careers curriculum.
         allthesurveys:
           stages:
             CSP pre survey Test:
@@ -6779,10 +6801,12 @@ sv:
               name: Explore PT - Complete the Task
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Setup: Digital Portfolio and Other Tools'
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
-          description: ''
+          description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
         csp-create:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -6796,7 +6820,7 @@ sv:
           title: Create - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
-          description: ''
+          description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
         csp3-reovery:
           stages:
             Under the sea recovery:

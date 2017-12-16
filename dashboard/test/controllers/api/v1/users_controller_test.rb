@@ -55,4 +55,24 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     @user.reload
     assert @user.ui_tip_dismissed_homepage_header
   end
+
+  test 'a post request to postpone_census_banner updates next_census_display' do
+    test_user = create :user
+    sign_in(test_user)
+    post :postpone_census_banner, params: {user_id: 'me'}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    test_user.reload
+    assert_equal response["next_census_display"], test_user.next_census_display
+  end
+
+  test 'a post request to dismiss_census_banner updates next_census_display' do
+    test_user = create :user
+    sign_in(test_user)
+    post :dismiss_census_banner, params: {user_id: 'me'}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    test_user.reload
+    assert_equal response["next_census_display"], test_user.next_census_display
+  end
 end

@@ -1,4 +1,5 @@
 {
+  "startButton": "เริ่มต้น",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "All",
   "filterSortBy": "Sort by",
@@ -44,7 +45,7 @@
   "filterHeaderHideFilters": "นำไปใช้",
   "filterHeaderTutorialCountSingle": "1 ผลลัพธ์",
   "filterHeaderTutorialCountPlural": "{tutorial_count} ผลลัพธ์",
-  "roboticsButtonText": "View robotics activities",
+  "roboticsButtonText": "Robotics and Circuits",
   "roboticsText": "Got robots? Use these activities and make a tangible Hour of Code for students of any age!",
   "tutorialSetNoTutorials": "Your search returned no results.\nPlease try changing some filters to see more activities.",
   "tutorialDetailsTeacherNotes": "Teacher notes",

@@ -567,6 +567,9 @@ ru:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Возраст 13+"
       cta: "Узнать подробности"
+    hoc-encryption:
+      title: "Простое шифрование"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -585,6 +588,9 @@ ru:
     minecraft2016:
       title: "Minecraft"
       body: "Запрограммируй поведение животных и существ своего мира Minecraft."
+    hero:
+      title: "Minecraft"
+      body: "Майнкрафт возвращается с новыми заданиями для Часа Кода! Путешествуй и программируй с Майнкрафт."
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
@@ -753,9 +759,9 @@ ru:
     rename: "Переименовать"
     save: "Сохранить"
     delete: "Удалить"
-    import: "Импорт"
+    import: "Импортировать"
     share_link_import_bad_link_header: "Ссылка общего доступа не распознана"
-    share_link_import_bad_link_body: 'Не удалось импортировать ссылку общего доступа. Убедитесь, что вы используете ссылку из задачи Minecraft: Agent и что вы скопировали ссылку целиком.'
+    share_link_import_bad_link_body: 'Не удалось импортировать ссылку общего доступа. Убедитесь, что вы используете ссылку из задачи Minecraft: Исполнитель и что вы скопировали ссылку целиком.'
     share_link_import_error_header: "Что-то пошло не так."
     share_link_import_error_body: "При импорте ссылки общего доступа возникла проблема. Попробуйте еще раз."
     exit: "Вернуться к курсу"

@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to) %>'
+title: <%= hoc_s(:title_how_to) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -7,60 +7,60 @@ nav: how_to_nav
 
 <h1>Slik arrangerer du ein Kodetime</h1>
 
-Bli med i bevegelsen og introduser en gruppe elever til deres første time i informatikk med disse stegene. Kodetimen er enkel å organisere, selv for nybegynnere! Hvis du trenger litt hjelp, kan du ta kontakt med en [lokal frivillig](<%= resolve_url('https://code.org/volunteer/local') %>) som kan hjelpe til med å organisere Kodetimen for klassen din.
+Bli med og introduser en gruppe elever til deres første time i informatikk ved å følge disse stegene. Kodetimen er enkel å organisere, sjølv for nybyrjarar! Dersom du ønsker eit ekstra sett med hender for å hjelpe, kan du finne ein [lokal frivillig](<%= resolve_url('https://code.org/volunteer/local') %>) til å hjelpe til med Kodetimen i klassen.
 
-## 1. Se denne veiledningsvideoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Sjå denne rettleiingsvideoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Velg et undervisningsopplegg for din time
+## 2. Vel ei oppgåve for timen din
 
-We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+Vi byr på eit utval av morosame [opplæringsguidar for elevar](<%= resolve_url('/learn') %>) i alle aldersgrupper og erfaringsnivå. Elevane gjer aktiviteten på eiga hand, sjølv om mange aktivitetar inkluderer oppgåver for lærarar (du ser lenka når du trykker på aktiviteten) som gir ein guide på korleis du kan ha diskusjonar eller utvide aktiviteten. [![](/images/Fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
-## 3. Markedsfør Kodetimen din
+## 3. Marknadsfør Kodetimen din
 
-Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources') %>) and encourage others to host their own events.
+Sprei ordet om Kodetimen [med desse verktya](<%= resolve_url('/promote/resources') %>) og oppmuntre andre til å arrangere eigne kodetimar.
 
-## 4. Planlegg hva du trenger av utstyr - datamaskiner er valgfrie
+## 4. Planlegg kva du har bruk for av utstyr - datamaskiner er valfrie
 
 Den beste Kodetime-opplevinga får du med datamaskiner tilkopla internett. Men du treng **ikkje** ei datamaskin hver for kvart born, og du kan til og med gjennomføre Kodetimen uten datamaskiner i det heile.
 
-Husk å teste undervisningsopplegg på elevenes datamaskiner eller enheter for å sikre at de fungerer riktig i nettlesere med lyd og video. **Har dere dårlig eller treg internettforbindelse?** Planlegg å vise videoene for hele klassen samlet, slik at hver elev ikke trenger å laste ned sine egne videoer. Eller prøv de frakoblede/offline veiledningene.
+Prøv ut øvingane på elevane sine datamaskiner eller nettbrett. Ver viss på at dei fungerer skikkeleg med på nettlesaren med både lyd og video. **Er internettlinja treg?** Planlegg å vise videoane for heile klassa samla, slik at alle elev ikkje lastar ned kvar sin video. Eller prøv oppgåver utan datamaskin.
 
 Tilby hovudtelefonar, eller spør deltakarane om å ta med sine eigne, om oppgåva du vel fungerer best med lyd.
 
-**Manglar du datamaskiner eller einingar?** Bruk [par-programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Når elevane går saman to og to, vil dei hjelpe kvarandre og kreve mindre av læraren. Dei vil også oppleva at programmering er sosialt og handlar om samarbeid.
+**Manglar du datamaskiner eller einingar?** Gjer [par-programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Når elevane går saman to og to, vil dei hjelpe kvarandre og kreve mindre av læraren. Dei vil også oppleva at programmering er sosialt og handlar om samarbeid.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start Kodetimen med en inspirerende foreleser eller video
+## 5. Start Kodetimen med ein inspirerande førelesar eller video
 
-**Invite a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+**Inviter ein[lokal frivillig](<%= resolve_url('https://code.org/volunteer/local') %>)til å inspirere elevane med å fortelje om bredda og kva som er mogleg innan informatikk.**Det er tusenvis av frivillige verda over som er klare for å hjelpe til med Kodetimen dykkar, enten gjennom eit klassebesøk eller til å preike via nett med elevane!
 
 **Vis ein inspirerande video:**
 
-- Den opprinnelige lanseringsvideoen fra Code.org med Bill Gates, Mark Zuckerberg og NBA stjerne Chris Bosh. (Det finnes versjoner på [1 minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutter](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutter](https://www.youtube.com/watch?v=dU1xS07N-FA))
+- Den opprinnelege lanseringsvideoen fra Code.org med Bill Gates, Mark Zuckerberg og NBA-stjerna Chris Bosh. (Det finst versjonar på [1 minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutt](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutt](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - Finn fleire inspirerande [ressursar](<%= resolve_url('https://code.org/inspire') %>) og [videoar](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Det er heilt greit om du og elevane dine ikkje er kjend med datavitskap frå før. Her er nokre idear til korleis du kan introdusere kodetimen din:**
 
-- Forklar hvordan teknologi påvirker livene våre. Bruk gjerne eksempler som både jenter og gutter kan kjenne seg igjen i (Snakk om å redde liv, hjelpe andre, sosiale medier o.l.).
+- Forklar korleis teknologi påverkar liva våre. Bruk gjerne døme som både jenter og gutar kan kjenne seg att i (snakk om å redde liv, hjelpe andre eller om sosiale medier).
 - Lag ei liste over daglegdagse ting som er programmert.
-- Se tips for å få jenter interessert i informatikk [her](<%= resolve_url('https://code.org/girls')%>).
+- Sjå tips for å få jenter interessert i informatikk [her](<%= resolve_url('https://code.org/girls') %>).
 
-## 6. Koding!
+## 6. Start å kode!
 
-**Direct students to the activity**
+**Sett elevane i gong med aktiviteten**
 
-- Skriv oppgavelenken på en tavle. Finn lenken på siden med [informasjon om den valgte oppgaven](<%= resolve_url('/learn')%>) under antall deltakere.
+- Skriv oppgåvelenka på ei tavle. Finn lenka under [informasjonen for den valde oppgåva](<%= resolve_url('/learn')%>) under talet på deltakarar.
 
-**When your students come across difficulties it's okay to respond:**
+**Når elevane har spørsmål eller meiner noko er vanskeleg, er det greit å svare:**
 
-- "Eg veit ikkje. Lat oss finne det ut i lag."
+- "Eg veit ikkje. La oss finne ut av det i lag."
 - «Det er ikkje alltid teknologien gjer seg slik vi vil.»
 - "Å lære seg å kode er som å lære seg eit nytt språk - du snakkar ikkje perfekt med ein gong."
 
-**What if a student finishes early?**
+**Kva kan eg gjere om ein elev blir tidleg ferdig?**
 
-- Elever kan se på alle oppgavene og [prøve en annen aktivitet fra Kodetimen](<%= resolve_url('/learn')%>).
+- Elevar kan sjå på alle oppgavene og [prøve ei anna oppgåve frå Kodetimen](<%= resolve_url('/learn')%>).
 - Eller du kan be dei elevane som blir fort ferdige om å hjelpe dei som slit med å få det til.
 
 [col-33]
@@ -71,7 +71,7 @@ Tilby hovudtelefonar, eller spør deltakarane om å ta med sine eigne, om oppgå
 
 <p style="clear:both">&nbsp;</p>
 
-## 7. Feire
+## 7. Gjer stas på deltakarane
 
 [col-33]
 
@@ -79,9 +79,9 @@ Tilby hovudtelefonar, eller spør deltakarane om å ta med sine eigne, om oppgå
 
 [/col-33]
 
-- [Skriv ut diplomer](<%= resolve_url('https://code.org/certificates')%>) til elevene.
+- [Skriv ut diplomar](<%= resolve_url('https://code.org/certificates') %>) til elevane.
 - [Skriv ut "Eg gjennomførte Kodetimen!"](<%= resolve_url('/promote/resources#stickers') %>)-klistremerke til elevane dine.
-- [Bestill t-skjorter](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)til skulen din.
+- [Bestill t-skjorter](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) til skulen din.
 - Del bilete og videoar frå Kodetimen på sosiale medier. Bruk #HourOfCode, #Kodetimen og @codeorg så vi og kan vise fram suksessen din!
 
 [col-33]
@@ -92,7 +92,7 @@ Tilby hovudtelefonar, eller spør deltakarane om å ta med sine eigne, om oppgå
 
 <p style="clear:both">&nbsp;</p>
 
-## Andre ressursar til Kodetimen for for lærarar:
+## Andre ressursar til Kodetimen for lærarar:
 
 - Besøk [Kodetimen sitt lærarforum](http://forum.code.org/c/plc/hour-of-code) for å få råd, innsikt og støtte frå andre lærarar. <% if @country == 'us' %>
 - Sjå på [ofte stilte spørsmål om Kodetimen](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
@@ -101,7 +101,7 @@ Tilby hovudtelefonar, eller spør deltakarane om å ta med sine eigne, om oppgå
 
 Kodetimen er berre første steget på ei reise for å lære seg meir om korleis teknologi fungerer og korleis du lagar dine eigne program. For å halde fram på denne reisa:
 
-- Oppmuntre elevene til å fortsette å [lære på nettet](<%= resolve_url('https://code.org/learn/beyond')%>).
+- Oppmuntre elevane til å halde fram med å [lære på nettet](<%= resolve_url('https://code.org/learn/beyond') %>).
 - [Delta på](<%= resolve_url('https://code.org/professional-development-workshops') %>) en 1-dags seminar der du vil få opplæring fra en erfaren tilretteleggar med kompetanse innan informatikk. (gjeld kun lærarar i USA)
 
 <%= view :signup_button %>

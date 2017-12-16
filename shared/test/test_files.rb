@@ -285,8 +285,22 @@ class FilesTest < FilesApiTestBase
     refute project_versions[1]['isLatest']
     refute project_versions[2]['isLatest']
 
+    # View previous project version
+    first_project_version = project_versions[2]['versionId']
+    get "v3/files/#{@channel_id}?version=#{project_versions[2]['versionId']}"
+    response_from_first_version = JSON.parse(last_response.body)
+    # There should be only one file with filename, category, and size matching our expectations
+    expected_file_info = {'filename' => filename, 'category' => 'image', 'size' => v1_file_data.length}
+    file_infos = response_from_first_version['files']
+    assert_equal(1, file_infos.length)
+    assert_fileinfo_equal(expected_file_info, file_infos[0])
+    # The version of the file should match our previous retrieval of that file version
+    assert_equal(versions[1]['versionId'], file_infos[0]['versionId'])
+    # The version of the project should match the one that we requested
+    assert_equal(response_from_first_version['filesVersionId'], first_project_version)
+
     # Restore previous version
-    @api.restore_files_version(project_versions[2]['versionId'])
+    @api.restore_files_version(first_project_version)
     assert successful?
     assert_equal v1_file_data, @api.get_object(filename)
 

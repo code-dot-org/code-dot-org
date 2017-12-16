@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_promote) %>'
+title: <%= hoc_s(:title_how_to_promote) %>
 layout: wide
 nav: promote_nav
 ---
@@ -9,7 +9,7 @@ nav: promote_nav
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# Zapojte vašich známych do projektu Hour of Code
+# Zapojte vašich známych do projektu Hodina Kódu
 
 ## 1. Informujte ostatných
 

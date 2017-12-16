@@ -2,14 +2,13 @@ drop table if exists analysis_pii.regional_partner_stats;
 create table analysis_pii.regional_partner_stats AS
   SELECT d.course,
          d.location,
-         d.user_id,
          d.first_name,
          d.last_name,
          d.email,
          d.school_id,
          d.regional_partner,
-         d.regional_partner_id,
-         u.current_sign_in_at,
+         d.user_id,
+         u.studio_person_id,
          ss.school_name,
          ss.city,
          ss.state,
@@ -38,12 +37,12 @@ create table analysis_pii.regional_partner_stats AS
   LEFT JOIN analysis.school_stats ss 
          ON ss.school_id = d.school_id
   LEFT JOIN analysis.quarterly_workshop_attendance qwa
-         ON qwa.user_id = d.user_id
+         ON qwa.studio_person_id = u.studio_person_id
         AND qwa.course = d.course -- only include attendance at the workshop for which you were trained
   LEFT JOIN analysis.teacher_most_progress tmp 
-         ON tmp.user_id = d.user_id
+         ON tmp.studio_person_id = u.studio_person_id
   LEFT JOIN analysis.student_activity sa 
-         ON sa.user_id = d.user_id;
+         ON sa.studio_person_id = u.studio_person_id;
 
 GRANT ALL PRIVILEGES ON analysis_pii.regional_partner_stats TO GROUP admin;
 GRANT SELECT ON analysis_pii.regional_partner_stats TO GROUP reader_pii;

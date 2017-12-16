@@ -238,14 +238,14 @@
       CSD U3 collisions types_callout:
         CSD_U3_L13_S6_C1: Add your code here.
       CSD U3 debug_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Her er koden
+        CSD_U3_rect_c2: Dra denne blokken inn i kode-området.
       CSD U3 ellipse_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Her er koden
+        CSD_U3_rect_c2: Dra denne blokken inn i kode-området.
       CSD U3 fill_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Her er koden
+        CSD_U3_rect_c2: Dra denne blokken inn i kode-området.
       CSD U3 game backgrounds_callout:
         CSD_U3_S18_L4_C1: This block calls your function.
         CSD_U3_L18_S4_C2: Functions area
@@ -254,8 +254,8 @@
         CSD_U3_L18_S3_C2: Variables area
       CSD U3 keydown conditional_callout: [ ]
       CSD U3 my-rect_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Here is the "Run" button.
+        CSD_U3_rect_c1: Her er koden
+        CSD_U3_rect_c2: Her er "Kjør"-knappen.
       CSD U3 picture_callout: [ ]
       CSD U3 platform background1_callout:
         CSD_U3_L16_S3_C1: the function that draws the background
@@ -268,17 +268,21 @@
       CSD U3 platform variable1_callout:
         callout: This block creates a variable.
       CSD U3 rect_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Here is the "Run" button.
+        CSD_U3_rect_c1: Her er koden
+        CSD_U3_rect_c2: Her er "Kjør"-knappen.
       CSD U3 sequence_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Her er koden
+        CSD_U3_rect_c2: Dra denne blokken inn i kode-området.
+      CSD U6 light show predict_callout:
+        CSDUDL03P09: What does this line do?
+      CSD U6 light show_callout:
+        CSDUDL03P09: What does this line do?
       CSD U6 tugowar variables 1_callout:
-        CSD_U6_startGame: Define startGame here
+        CSD_U6_startGame: Definer startGame her
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Define movePlayer() here
       CSD U6 tugowar variables 3_callout:
-        CSD_U6_checkWin: Check if the player has won
+        CSD_U6_checkWin: Sjekk hvis spilleren har vunnet
       CSDU4 - Design Mode - 3_callout: [ ]
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
@@ -464,11 +468,11 @@
       MC_HOC_2017_02_Will_callout:
         MC_HOC_2017_02_Cole_1: Nå har spilleren en kompis!  Du kan skrive kode for Agenten for å komme deg gjennom nivåene.
       MC_HOC_2017_03_Cole_callout:
-        MC_HOC_2017_03_Cole_1: This is a `repeat` loop!  Click it into the workspace and add code that you want to run over and over.
+        MC_HOC_2017_03_Cole_1: Dette er en `gjenta`-løkke! Dra den inn i arbeidsområdet for å legge til kode som du vil kjøre om og om igjen.
       MC_HOC_2017_04_Cole_callout:
         MC_HOC_2017_04_Cole_a: Agenten kan sveve over vannet, men ikke spilleren!
       MC_HOC_2017_04_Kiki_callout:
-        MC_HOC_2017_04_Kiki_1: Click this into the workspace and add some code to repeat it over and over again!
+        MC_HOC_2017_04_Kiki_1: Dra denne inn i arbeidsområdet og legg til kode for å gjenta det om og om igjen!
       MC_HOC_2017_06_Cole_callout:
         MC_HOC_2017_06_Cole_1: Du kan ikke kaste disse blokkene, men du kan redigere dem!
       MC_HOC_2017_08_RY_callout:
@@ -588,7 +592,7 @@
         goals_tab: drag goals out from here
       SG U3L2_TurtleSquare_right_callout: [ ]
       SGU3L2A Introducing Subgoals_callout:
-        goals_palette_show: Here is a list of subgoals
+        goals_palette_show: Her er en liste over delmål
         goals_workspace: Example of code with subgoals in it
       Sam the Butterfly 3_callout:
         Sam the Butterfly 3 1: Rediger denne funksjonen for å hindre at Sam forsvinner ut til høyre
@@ -695,7 +699,7 @@
         gradek_adventurer_loops2_1: Dette tallet angir hvor mange av disse blokkene du kan bruke i denne oppgaven.
       courseA_collector_loops3_predict1_callout: [ ]
       courseA_collector_preLoops1_callout:
-        courseA_collector_preLoops1_1: Click here to watch the code run!
+        courseA_collector_preLoops1_1: Klikk her for å kjøre koden!
       courseA_collector_preLoops2_callout:
         courseA_collector_loops1_1: Ser du noen nye blokker i verktøykassen?  Ta det helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
       courseA_collector_preLoops3_callout:
@@ -708,7 +712,7 @@
         courseA_collector_loops1_1: Ser du noen nye blokker i verktøykassen?  Ta det helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
       courseA_forVideoTest_artist_callout: [ ]
       courseA_maze_seq1_callout:
-        courseA_maze_seq1_1: Click the lightbulb when you need a hint!
+        courseA_maze_seq1_1: Klikk på lyspæren når du trenger hjelp!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
       courseA_maze_seq4_callout:
@@ -730,7 +734,7 @@
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Ser du noen nye blokker i verktøykassen?  Ta det helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
       courseB_maze_seq1_callout:
-        courseB_maze_seq1: Click the lightbulb when you need a hint!
+        courseB_maze_seq1: Klikk på lyspæren når du trenger hjelp!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
       courseB_maze_seq3_callout:
@@ -758,7 +762,7 @@
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: The number four on the pumpkin tells you that there are four pumpkins available to pick.
       courseC_maze_debugging5_callout:
-        courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
+        courseC_maze_debugging5_1: Disse blokkene er låste og kan ikke bli slettet!
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: You only have one of these blocks available in this puzzle.
       courseC_maze_loops2_predict1_callout: [ ]
@@ -800,6 +804,7 @@
       courseD_artist_ramp12_callout: [ ]
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt.
+        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt.
         4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO HINTS!

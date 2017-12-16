@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_events) %>'
+title: <%= hoc_s(:title_how_to_events) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. 準備你的活動
 
 - 決定場地、日期、與時間。
-- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=resolve_url('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
+- 寄 [一封信](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) 邀請當地的市長、議員、政府長官、或有影響力的生意人等給與演說。 請查看我們的 [ how-to 工具組 ](%=resolve_url('/files/elected-official.pdf')%), 在一個小時的代碼中託管一個民選官員以瞭解更多資訊。
 - 邀請新聞媒體等，例如地方新聞台、報紙、教育與科技部落客。請參考我們的 [新聞稿](%= resolve_url('/promote/press-kit') %) 。
 
 ## 2) 活動進行時

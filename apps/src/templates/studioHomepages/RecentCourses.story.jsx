@@ -49,6 +49,7 @@ const topCourse = {
 export default storybook => {
   return storybook
     .storiesOf('RecentCourses', module)
+    .withReduxStore()
     .addStoryTable([
       {
         name: "Recent Courses - teacher, no courses yet",
@@ -59,7 +60,6 @@ export default storybook => {
             showAllCoursesLink={true}
             heading="My Courses"
             isTeacher={true}
-            isRtl={false}
           />
         )
       },
@@ -72,7 +72,6 @@ export default storybook => {
             showAllCoursesLink={true}
             heading="My Courses"
             isTeacher={false}
-            isRtl={false}
           />
         )
       },
@@ -85,7 +84,6 @@ export default storybook => {
             showAllCoursesLink={true}
             heading="My Courses"
             isTeacher={true}
-            isRtl={false}
           />
         )
       },
@@ -98,7 +96,6 @@ export default storybook => {
             showAllCoursesLink={true}
             heading="My Courses"
             isTeacher={false}
-            isRtl={false}
             topCourse={topCourse}
           />
         )
@@ -112,7 +109,6 @@ export default storybook => {
             showAllCoursesLink={true}
             heading="My Courses"
             isTeacher={true}
-            isRtl={false}
           />
         )
       },
@@ -125,7 +121,6 @@ export default storybook => {
             showAllCoursesLink={true}
             heading="My Courses"
             isTeacher={false}
-            isRtl={false}
             topCourse={topCourse}
           />
         )

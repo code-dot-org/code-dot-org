@@ -257,13 +257,14 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def summarize(include_prev_next=true)
-    if level.unplugged?
-      kind = LEVEL_KIND.unplugged
-    elsif assessment
-      kind = LEVEL_KIND.assessment
-    else
-      kind = LEVEL_KIND.puzzle
-    end
+    kind =
+      if level.unplugged?
+        LEVEL_KIND.unplugged
+      elsif assessment
+        LEVEL_KIND.assessment
+      else
+        LEVEL_KIND.puzzle
+      end
 
     ids = level_ids
 
