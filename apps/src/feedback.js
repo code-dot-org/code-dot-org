@@ -731,7 +731,10 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
         message = msg.errorQuestionMarksInNumberField();
         break;
       case TestResults.EXCEEDED_LIMITED_BLOCKS:
-        message = msg.errorExceededLimitedBlocks();
+        var exceededBlockType = this.hasExceededLimitedBlocks_();
+        var limit = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits.getLimit(exceededBlockType);
+        var block = `<xml><block type='${this.hasExceededLimitedBlocks_()}'></block></xml>`;
+        message = msg.errorExceededLimitedBlocks({limit}) + block;
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
           // Allow apps to override the "too many blocks" failure message
@@ -1738,7 +1741,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
 };
 
 /**
- * Ensure that all user-declared procedures have associated call blocks.
+ * Ensure that all limited toolbox blocks aren't exceeded.
  */
 FeedbackUtils.prototype.hasExceededLimitedBlocks_ = function () {
   return Blockly.mainBlockSpace.blockSpaceEditor.blockLimits.blockLimitExceeded();
