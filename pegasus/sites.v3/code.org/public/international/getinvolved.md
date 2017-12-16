@@ -25,7 +25,7 @@ The [Hour of Code](https://hourofcode.com) is the largest learning event in hist
 ## Apply to become a Code.org International Partner 
 Are you an organization committed to expanding CS education in your country? Have you already hosted successful Hour of Code events and feel ready for more? Will Code.org's resources and partnership help you take CS education in your country to the next level? 
 
-[Learn about the application process and apply.] (https://code.org/international/apply)
+[Learn about the application process and apply.](https://code.org/international/apply)
 
 ***
 
@@ -34,5 +34,5 @@ If you speak a language other than English, you can help others access Code.org 
 
 If you can dedicate 8-10 hours per week and have strong project management skills, you may be a good candidate to serve your language community as Lead Translator. See a volunteer job description and learn how to apply to become a Lead Translator [here](https://code.org/translate/leadt). 
 
-[Get started translating.] (https://code.org/translate)
+[Get started translating.](https://code.org/translate)
 

@@ -132,7 +132,15 @@ class Ability
         can :read, :pd_workshop_summary_report
         can :read, :pd_teacher_attendance_report
         if user.regional_partners.any?
-          can [:read, :quick_view, :update], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
+          # regional partners by default have read, quick_view, and update
+          # permissions
+          can [:read, :quick_view, :cohort_view, :update], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
+
+          # G3 regional partners should have full management permission
+          group_3_partner_ids = user.regional_partners.where(group: 3).pluck(:id)
+          unless group_3_partner_ids.empty?
+            can :manage, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
+          end
         end
       end
 

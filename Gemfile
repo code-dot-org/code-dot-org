@@ -90,6 +90,7 @@ group :development, :test do
   gem 'minitest-around'
   gem 'minitest-reporters'
   gem 'net-http-persistent'
+  gem 'rinku'
   gem 'rspec'
   gem 'selenium-webdriver', '~> 3.0.3'
   gem 'spring'

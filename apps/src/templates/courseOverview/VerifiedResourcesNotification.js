@@ -11,7 +11,6 @@ export default function VerifiedResourcesNotification({width}) {
       buttonText={i18n.learnMore()}
       buttonLink="https://support.code.org/hc/en-us/articles/115001550131"
       dismissible={true}
-      isRtl={false}
       width={width}
     />
   );

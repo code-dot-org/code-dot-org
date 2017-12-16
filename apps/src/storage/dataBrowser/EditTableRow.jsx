@@ -6,46 +6,46 @@ import { castValue, displayableValue, editableValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 import _ from 'lodash';
 
-const EditTableRow = React.createClass({
-  propTypes: {
+const INITIAL_STATE = {
+  isDeleting: false,
+  isEditing: false,
+  isSaving: false,
+  // An object whose keys are column names and values are the raw user input.
+  newInput: {}
+};
+
+class EditTableRow extends React.Component {
+  static propTypes = {
     columnNames: PropTypes.array.isRequired,
     tableName: PropTypes.string.isRequired,
     record: PropTypes.object.isRequired
-  },
+  };
 
   componentDidMount() {
     this.isMounted_ = true;
-  },
+  }
 
   componentWillUnmount() {
     this.isMounted_ = false;
-  },
+  }
 
-  getInitialState() {
-    return {
-      isDeleting: false,
-      isEditing: false,
-      isSaving: false,
-      // An object whose keys are column names and values are the raw user input.
-      newInput: {}
-    };
-  },
+  state = {...INITIAL_STATE};
 
   // Optimization: skip rendering when nothing has changed.
   shouldComponentUpdate(nextProps, nextState) {
     const propsChanged = !_.isEqual(this.props, nextProps);
     const stateChanged = !_.isEqual(this.state, nextState);
     return propsChanged || stateChanged;
-  },
+  }
 
   handleChange(columnName, event) {
     const newInput = Object.assign({}, this.state.newInput, {
       [columnName]: event.target.value
     });
     this.setState({ newInput });
-  },
+  }
 
-  handleSave() {
+  handleSave = () => {
     this.setState({isSaving: true});
     const newRecord = _.mapValues(this.state.newInput, castValue);
     FirebaseStorage.updateRecord(
@@ -54,23 +54,23 @@ const EditTableRow = React.createClass({
       this.resetState,
       msg => console.warn(msg)
     );
-  },
+  };
 
-  resetState() {
+  resetState = () => {
     // Deleting a row may have caused this component to become unmounted.
     if (this.isMounted_) {
-      this.setState(this.getInitialState());
+      this.setState(INITIAL_STATE);
     }
-  },
+  };
 
-  handleEdit() {
+  handleEdit = () => {
     this.setState({
       isEditing: true,
       newInput: _.mapValues(this.props.record, editableValue),
     });
-  },
+  };
 
-  handleDelete() {
+  handleDelete = () => {
     this.setState({isDeleting: true});
     FirebaseStorage.deleteRecord(
       this.props.tableName,
@@ -78,15 +78,15 @@ const EditTableRow = React.createClass({
       this.resetState,
       msg => console.warn(msg)
     );
-  },
+  };
 
-  handleKeyUp(event) {
+  handleKeyUp = (event) => {
     if (event.key === 'Enter') {
       this.handleSave();
     } else if (event.key === 'Escape') {
-      this.setState(this.getInitialState());
+      this.setState(INITIAL_STATE);
     }
-  },
+  };
 
   render() {
     return (
@@ -146,6 +146,6 @@ const EditTableRow = React.createClass({
       </tr>
     );
   }
-});
+}
 
 export default Radium(EditTableRow);

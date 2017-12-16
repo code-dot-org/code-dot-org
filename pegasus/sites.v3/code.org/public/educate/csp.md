@@ -13,7 +13,7 @@ style_min: true
 
 Computer Science Principles introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. More than a traditional introduction to programming, it is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in. 
 <p>
-This year-long course can be taught as an AP or non-AP course - no prerequisites required for students or for teachers new to computer science! In addition, our curriculum is available at no cost for anyone, anywhere to teach.
+This year-long course can be taught as an AP or non-AP course - no prerequisites required for students or for teachers new to computer science! In addition, our curriculum is available at no cost for anyone, anywhere to teach. For more information about our goals and approach to our courses, please see our [curriculum values](/educate/curriculum/values) and our [professional learning values](/educate/professional-learning/values).
 
 <div class="col-50" style="padding-right: 20px;">
 

@@ -1,11 +1,9 @@
-name 'K-1 Maze Match 1' 
+name 'K-1 Maze Match 1'
 
 title 'Matching'
 banner 'Match the puzzles and blocks'
 
 pre_title 'Instructions'
-pre_body 'Drag the blocks to match.'
-pre_ani '/script_assets/images/matching_ani.gif'
 
 height '150'
 
@@ -20,4 +18,3 @@ answer '/script_assets/k_1_images/move_blocks/WW.png'
 
 question '/script_assets/k_1_images/maze_images/maze_WSS.png'
 answer '/script_assets/k_1_images/move_blocks/WSS.png'
-

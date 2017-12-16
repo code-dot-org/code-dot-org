@@ -13,6 +13,7 @@ Each of our Regional Partners is listed below in alphabetical order by organizat
 - **[Illinois](#il)**<br/>
 - **[Indiana](#in)**<br/>
 - **[Iowa](#ia)**<br/>
+- **[Kansas](#ks)**<br/>
 - **[Kentucky](#ky)**<br/>
 - **[Maine](#me)**</br/>
 - **[Maryland](#md)**<br/>
@@ -21,6 +22,7 @@ Each of our Regional Partners is listed below in alphabetical order by organizat
 - **[Mississippi](#ms)**<br/>
 - **[Missouri](#mo)**<br/>
 - **[Montana](#mt)**</br/>
+- **[Nebraska](#ne)**</br/>
 - **[Nevada](#nv)**</br/>
 - **[New Hampshire](#nh)**</br/>
 - **[New Jersey](#nj)**</br/>
@@ -510,6 +512,32 @@ Kristine@newbo.co
 
 [**Back to the top**](#top)
 <br/>
+
+________________
+<a id="ks"></a>
+
+## Kansas
+### [Science City - Union Station](http://www.sciencecity.com/)<br/>
+Kansas City, Kansas
+
+Science City Kansas City is a dynamic, hands-on science center featuring more than 200 individual interactive exhibits and daily programming. Kids, of all ages, can experience the amazing world of science first-hand through fun and engaging exhibits and programs. In addition to changing monthly themes and daily programs and activities open to all guests, the science center offers onsite curriculum-based programs to school groups (K-12), outreach programs and an onsite 8-week STEM-themed summer camp. STEM education (science, technology, engineering and math) is at the core of everything in Science City, be it exhibits, demonstrations, classes, shows, presentations or special events and programs. Annually, 250,000+ guests visit Science City.
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact us for advice on:** 
+We would be willing to help answer any code related questions but we are still new, not sure we are comfortable giving advice. But we can sure try!  <br/>
+
+**Contact Information**<br/>
+Emily Meyer<br/>
+emeyer@unionstation.org<br/>
+
+<br/>
+
+[**Back to the top**](#top)
+<br/>
+
 ________________
 <a id="ky"></a>
 
@@ -670,6 +698,25 @@ Jaime Gilligan<br/>
 gilliganj@wustl.edu
 
 
+<br/>
+
+
+### [Science City - Union Station](http://www.sciencecity.com/)<br/>
+Kansas City, Missouri
+
+Science City Kansas City is a dynamic, hands-on science center featuring more than 200 individual interactive exhibits and daily programming. Kids, of all ages, can experience the amazing world of science first-hand through fun and engaging exhibits and programs. In addition to changing monthly themes and daily programs and activities open to all guests, the science center offers onsite curriculum-based programs to school groups (K-12), outreach programs and an onsite 8-week STEM-themed summer camp. STEM education (science, technology, engineering and math) is at the core of everything in Science City, be it exhibits, demonstrations, classes, shows, presentations or special events and programs. Annually, 250,000+ guests visit Science City.
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact us for advice on:** 
+We would be willing to help answer any code related questions but we are still new, not sure we are comfortable giving advice. But we can sure try!  <br/>
+
+**Contact Information**<br/>
+Emily Meyer<br/>
+emeyer@unionstation.org<br/>
+
 [**Back to the top**](#top)
 <br/>
 
@@ -693,7 +740,27 @@ Lander@bigskycodeacademy.org<br/>
 
 [**Back to the top**](#top)
 <br/>
+________________
+<a id="ne"></a>
 
+## Nebraska
+### [University of Nebraska - Lincoln](https://cehs.unl.edu/tlte/techedge/)<br/>
+Nebraska
+
+UNL Tech EDGE is a partnership between Nebraska school districts and teacher education programs at the University of Nebraska-Lincoln to define and implement best practices in using 21st century technologies in the k12 classrooms. The partnership uses open lines of communication regarding what is happening with technology in schools currently, what we desire to have happen, and how to best reach these goals.  This project is infusing current best practices and research to existing teachers as well as teacher preparation programs to improve student learning, impacting teacher educators, master teachers who work with practicum or student teachers, as well as pre-service teachers. 
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact us for advice on:** Working with Universities, Service Units, Teacher Education
+
+**Contact Information**<br/>
+Koichi Sato<br/>
+ksato2@unl.edu<br/>
+
+[**Back to the top**](#top)
+<br/>
 ________________
 <a id="nv"></a>
 
@@ -795,6 +862,26 @@ CS Discoveries<br/>
 Jen Noborikawa<br/>
 jen@codeinteractive.org
 
+
+
+<br/>
+
+
+### [WNY STEM](http://www.wnystem.org/)<br/>
+Western New York<br/>
+
+The WNY STEM Hub is an incorporated nonprofit with more than 700 individual members representing nearly 300 organizations in Western New York.  It is an initiative of the United Way of Buffalo and Erie County and is affiliated with the National STEM Funders Network, the national STEMx network and the Empire State STEM Learning Network. Its aim is to create awareness and partnerships that serve learners of all ages in accessing STEM/STEAM learning and careers.
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact us for advice on:** Our programs!<br/>
+
+**Contact Information**<br/>
+Cherie Messore<br/>
+cheriemessore.wnystem@gmail.com
+
 [**Back to the top**](#top)
 <br/>
 ________________
@@ -875,7 +962,7 @@ ________________
 
 ## Pennsylvania
 ### [Delaware County Intermediate Unit](http://www.dciu.org/)<br/>
-Philadelphia, PA
+Eastern PA
 
 **Programs**<br/>
 CS Principles<br/>
@@ -890,6 +977,28 @@ jregino@dciu.org<br/>
 
 Rebecca Jervey<br/>
 rjervery@dciu.org<br/>
+
+
+<br/>
+
+
+### [Allegheny Intermediate Unit](http://www.aiu3.net/)<br/>
+Western PA
+
+The Allegheny Intermediate Unit, also known as the AIU, is part of Pennsylvania's public education system and is one of 29 Intermediate Units across the state.  
+
+Our organization provides specialized educational services to Allegheny County's 42 suburban school districts and five career  technical centers.  We employ approximately 1,500 educators at 420 sites and operate 11 family centers and three schools for exceptional children. We offer about 130 programs and services for infants, young children, students and adults. 
+
+**Programs**<br/>
+CS Principles<br/>
+CS Discoveries<br/>
+
+**Contact us for advice on:**
+Strategic planning with district-level administration, information on regional educational service providers, public school districts in Western Pennsylvania
+
+**Contact Information**<br/>
+Tyler Samstag<br/>	
+tyler.samstag@aiu3.net
 
 [**Back to the top**](#top)
 <br/>

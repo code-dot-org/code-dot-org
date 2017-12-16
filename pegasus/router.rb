@@ -33,6 +33,7 @@ end
 require 'honeybadger'
 
 require src_dir 'database'
+require src_dir 'social_metadata'
 require src_dir 'forms'
 require src_dir 'curriculum_router'
 
@@ -459,15 +460,12 @@ class Documents < Sinatra::Base
     end
 
     def social_metadata
-      if request.site == 'csedweek.org'
-        metadata = {
-          'og:site_name'      => 'CSEd Week',
-        }
-      else
-        metadata = {
-          'og:site_name'      => 'Code.org'
-        }
-      end
+      metadata =
+        if request.site == 'csedweek.org'
+          {'og:site_name' => 'CSEd Week'}
+        else
+          {'og:site_name' => 'Code.org'}
+        end
 
       # Metatags common to all sites.
       metadata['og:title'] = @header['title'] unless @header['title'].nil_or_empty?
@@ -484,6 +482,9 @@ class Documents < Sinatra::Base
           metadata[key] = value
         end
       end
+
+      # A few pages have specific metadata defined here.
+      metadata.merge! get_social_metadata_for_page(request)
 
       if request.site != 'csedweek.org'
         unless metadata['og:image']

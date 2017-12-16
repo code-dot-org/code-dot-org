@@ -53,28 +53,32 @@ module.exports = function (testCollection, testData, dataItem, done) {
 
   // Validate successful solution.
   var validateResult = function (report) {
-    assert(testData.expected, 'Have expectations');
-    assert(Object.keys(testData.expected).length > 0, 'No expected keys specified');
-    Object.keys(testData.expected).forEach(function (key) {
-      if (report[key] !== testData.expected[key]) {
-        var failureMsg = 'Failure for key: ' + key + '. Expected: ' + testData.expected[key] + '. Got: ' + report[key] + '\n';
-        assert(false, failureMsg);
+    try {
+      assert(testData.expected, 'Have expectations');
+      assert(Object.keys(testData.expected).length > 0, 'No expected keys specified');
+      Object.keys(testData.expected).forEach(function (key) {
+        if (report[key] !== testData.expected[key]) {
+          var failureMsg = 'Failure for key: ' + key + '. Expected: ' + testData.expected[key] + '. Got: ' + report[key] + '\n';
+          assert(false, failureMsg);
+        }
+      });
+
+      // define a customValidator to run/validate arbitrary code at the point when
+      // StudioApp.report gets called. Allows us to access some things that
+      // aren't on the options object passed into report
+      if (testData.customValidator) {
+        assert(testData.customValidator(assert), 'Custom validator failed');
       }
-    });
 
-    // define a customValidator to run/validate arbitrary code at the point when
-    // StudioApp.report gets called. Allows us to access some things that
-    // aren't on the options object passed into report
-    if (testData.customValidator) {
-      assert(testData.customValidator(assert), 'Custom validator failed');
-    }
-
-    // Notify the app that the report operation is complete
-    // (important to do this asynchronously to simulate a service call or else
-    //  we will have problems with the animating_ / waitingForReport_ states
-    //  in the maze state machine)
-    if (report.onComplete) {
-      setTimeout(report.onComplete, 0);
+      // Notify the app that the report operation is complete
+      // (important to do this asynchronously to simulate a service call or else
+      //  we will have problems with the animating_ / waitingForReport_ states
+      //  in the maze state machine)
+      if (report.onComplete) {
+        setTimeout(report.onComplete, 0);
+      }
+    } catch (e) {
+      done(e);
     }
   };
 

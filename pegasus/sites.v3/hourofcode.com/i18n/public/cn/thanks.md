@@ -23,7 +23,7 @@ social:
 
     twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
-%>
+%> '#HourOfCode' %>
 
 # 感谢注册并组织编程一小时活动！
 

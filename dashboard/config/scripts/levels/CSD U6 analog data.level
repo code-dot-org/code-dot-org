@@ -88,14 +88,15 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "disable_procedure_autopopulate": "false",
-    "markdown_instructions": "# Data Event\r\n\r\nEach of these analog sensors emits a special event called \"data\" which occurs every time new data comes in from the sensor. Using this event, we can write programs that continually update.\r\n\r\n# Do This\r\n\r\nThis is the first program you worked on in this lesson, let's see if we can make it continually update the sound reading using the \"data\" event.\r\n\r\n* Drag out an `onBoardEvent` block\r\n* Choose `lightSensor` as the input to watch and \"data\" as the event\r\n* Move the existing code into your event handler",
+    "markdown_instructions": "# Data Event\r\n\r\nEach of these analog sensors emits a special event called \"data\" which occurs every time new data comes in from the sensor. Using this event, we can write programs that continually update.\r\n\r\n# Do This\r\n\r\nThis is the first program you worked on in this lesson, let's see if we can make it continually update the sound reading using the \"data\" event.\r\n\r\n* Create an event handler to respond to light sensor's \"data\" event\r\n* Move the existing code into your event handler",
     "start_blocks": "// Set the text of \"sound_value\"\r\n// to the current sound sensor value\r\nsetProperty(\"sound_value\", \"text\", soundSensor.value);",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px; transform: scale(0.9375);\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 33px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 71px; position: absolute; left: 2.22045e-16px; top: 20px; text-align: center;\" id=\"sound_label\">Sound Sensor Reading</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 100px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 105px; position: absolute; left: 0px; top: 190px; text-align: center;\" id=\"sound_value\">value</label></div></div>",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-20 22:54:43 +0000\",\"changed\":[\"code_functions\",\"free_play\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-21 00:04:31 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-20 22:54:43 +0000\",\"changed\":[\"code_functions\",\"free_play\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-21 00:04:31 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-27 18:53:17 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

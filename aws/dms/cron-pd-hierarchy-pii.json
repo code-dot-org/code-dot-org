@@ -6,7 +6,7 @@
       "rule-name": "1",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "pd_workshops"
+        "table-name": "regional_partners"
       },
       "rule-action": "include"
     },
@@ -16,7 +16,7 @@
       "rule-name": "2",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "pd_enrollments"
+        "table-name": "regional_partners_school_districts"
       },
       "rule-action": "include"
     },
@@ -26,94 +26,14 @@
       "rule-name": "3",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "regional_partners"
-      },
-      "rule-action": "include"
-    },
-    {
-      "rule-type": "selection",
-      "rule-id": "4",
-      "rule-name": "4",
-      "object-locator": {
-        "schema-name": "dashboard_production",
-        "table-name": "pd_attendances"
-      },
-      "rule-action": "include"
-    },
-    {
-      "rule-type": "selection",
-      "rule-id": "5",
-      "rule-name": "5",
-      "object-locator": {
-        "schema-name": "dashboard_production",
-        "table-name": "pd_sessions"
-      },
-      "rule-action": "include"
-    },
-    {
-      "rule-type": "selection",
-      "rule-id": "6",
-      "rule-name": "6",
-      "object-locator": {
-        "schema-name": "dashboard_production",
-        "table-name": "regional_partners_school_districts"
-      },
-      "rule-action": "include"
-    },
-    {
-      "rule-type": "selection",
-      "rule-id": "7",
-      "rule-name": "7",
-      "object-locator": {
-        "schema-name": "dashboard_production",
-        "table-name": "pd_workshops_facilitators"
-      },
-      "rule-action": "include"
-    },
-    {
-      "rule-type": "selection",
-      "rule-id": "8",
-      "rule-name": "8",
-      "object-locator": {
-        "schema-name": "dashboard_production",
-        "table-name": "pd_teacher_applications"
-      },
-      "rule-action": "include"
-    },
-    {
-      "rule-type": "selection",
-      "rule-id": "9",
-      "rule-name": "9",
-      "object-locator": {
-        "schema-name": "dashboard_production",
-        "table-name": "pd_teachercon_surveys"
-      },
-      "rule-action": "include"
-    },
-    {
-      "rule-type": "selection",
-      "rule-id": "10",
-      "rule-name": "10",
-      "object-locator": {
-        "schema-name": "dashboard_production",
-        "table-name": "pd_regional_partner_program_registrations"
-      },
-      "rule-action": "include"
-    },
-    {
-      "rule-type": "selection",
-      "rule-id": "11",
-      "rule-name": "11",
-      "object-locator": {
-        "schema-name": "dashboard_production",
-        "table-name": "pd_facilitator_program_registrations"
+        "table-name": "pd_%"
       },
       "rule-action": "include"
     },
     {
       "rule-type": "transformation",
-      "rule-id": "12",
-      "rule-name": "12",
+      "rule-id": "4",
+      "rule-name": "4",
       "rule-target": "schema",
       "object-locator": {
         "schema-name": "dashboard_production"

@@ -44,7 +44,6 @@ class ShareDisallowedDialog extends Component {
         useUpdatedStyles
         isOpen={this.props.isOpen}
         handleClose={this.props.hideShareDialog}
-        assetUrl={() => ''}
       >
         <div style={styles.container}>
           <div style={styles.heading}>
