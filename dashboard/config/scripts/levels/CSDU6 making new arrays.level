@@ -54,11 +54,8 @@
       "mathRandom": null,
       "listLength": null
     },
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "project_template_level_name": "CSD U6 random song generator template"
+    "project_template_level_name": "CSD U6 random song generator template",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

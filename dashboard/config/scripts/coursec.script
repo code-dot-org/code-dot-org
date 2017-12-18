@@ -85,7 +85,7 @@ level 'courseC_starWars_loops9'
 level 'courseC_starWars_loops10'
 assessment 'courseC_starWars_loops10_predict2'
 level 'courseC_starWars_loops11'
-bonus 'courseC_maze_loops_challenge1'
+bonus 'courseC_maze_loops_challenge1a'
 bonus 'courseC_collector_loops_challenge2'
 
 stage 'Loops in Artist'
