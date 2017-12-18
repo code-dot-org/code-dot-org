@@ -35,5 +35,5 @@ This program sets the fill color and turns off the stroke outside the draw loop.
 |---|---|
 |![](https://images.code.org/fbca9ea705ee67c65a761a8f30344111-image-1492196937332.07.56 PM.png)|<img src="https://images.code.org/b2c4dc68aa90fc1b56421ec69a66fa77-image-1492196934112.gif" style="height:150px">|
 
-This program creates a sprite and sets its animation outside the draw loop. Then it repeatedly gives the sprite a new x location and redraws the white background and the sprite to make it move.
+This program creates a sprite and sets its animation outside the draw loop. Then it repeatedly gives the sprite a new x location and redraws the orange background and the sprite to make it move.
 MARKDOWN
