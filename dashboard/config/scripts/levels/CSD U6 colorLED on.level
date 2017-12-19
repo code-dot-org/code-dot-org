@@ -55,11 +55,8 @@
     "start_blocks": "// turn on LEDs when \"on\" button is clicked\r\nonEvent(\"on_button\", \"click\", function() {\r\n  colorLeds[4].on();\r\n});\r\n// turn off LEDs when \"off\" button is clicked.\r\nonEvent(\"off_button\", \"click\", function() {\r\n  colorLeds[4].off();\r\n});",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "palette_category_at_start": "Circuit"
+    "palette_category_at_start": "Circuit",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
