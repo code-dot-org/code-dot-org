@@ -18,14 +18,15 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
     ...Object.keys(PageLabels.section4SummerWorkshop),
     "regionalPartnerId",
     "regionalPartnerGroup",
-    "regionalPartnerWorkshopCount"
+    "regionalPartnerWorkshopIds"
   ];
 
   state = {
     loadingPartner: true,
     partner: null,
     loadingAlternateWorkshops: false,
-    alternateWorkshops: null
+    alternateWorkshops: null,
+    teachercon: null
   };
 
   componentDidMount() {
@@ -64,11 +65,11 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
     }).done(data => {
       this.loadPartnerRequest = null;
 
-      // Persist in the form data
       this.handleChange({
         regionalPartnerId: data.id,
         regionalPartnerGroup: data.group,
-        regionalPartnerWorkshopCount: data.workshops ? data.workshops.length : 0
+        regionalPartnerWorkshopIds: (data.workshops || []).map(workshop => workshop.id),
+        teachercon: data.teachercon
       });
 
       // Update state with all the partner workshop data to display
@@ -159,13 +160,14 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
           If a seat opens in the program, we will invite you to a TeacherCon and provide you with more details.
         </div>
       );
-    } else if (this.props.data.regionalPartnerGroup === 3 && this.props.data.regionalPartnerWorkshopCount === 0) {
-      // TODO (Andrew): find TC based on G3 partner match
-      const teacherCon = "TeacherCon Phoenix, July 22-27, 2018";
+    } else if (this.props.data.teachercon) {
+      const teacherconSummary =
+        `TeacherCon ${this.props.data.teachercon.city}, ${this.props.data.teachercon.dates}`;
+
       return (
         <div>
           <h5>
-            You have been assigned to {teacherCon}.
+            You have been assigned to {teacherconSummary}.
             More details will be provided if you are accepted into the program.
           </h5>
 
@@ -236,7 +238,7 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
           {this.renderAssignedWorkshopList()}
         </div>
 
-        {this.isUnableToAttendAssignedWorkshop() && [1,2].includes(this.props.data.regionalPartnerGroup) &&
+        {this.isUnableToAttendAssignedWorkshop() && !this.props.data.teachercon &&
           <div style={styles.indented}>
             <p style={styles.formText}>
               <strong>
@@ -302,12 +304,11 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
   static getDynamicallyRequiredFields(data) {
     const requiredFields = [];
 
-    if (data.regionalPartnerGroup === 3 && data.regionalPartnerWorkshopCount === 0) {
-      // Teachercon
+    if (data.teachercon) {
       requiredFields.push("ableToAttendSingle");
-    } else if (data.regionalPartnerWorkshopCount === 1) {
+    } else if (data.regionalPartnerWorkshopIds && data.regionalPartnerWorkshopIds.length === 1) {
       requiredFields.push("ableToAttendSingle");
-    } else if (data.regionalPartnerWorkshopCount > 1) {
+    } else if (data.regionalPartnerWorkshopIds && data.regionalPartnerWorkshopIds.length > 1) {
       requiredFields.push("ableToAttendMultiple");
     }
 
@@ -330,10 +331,9 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
     if (!data.regionalPartnerId) {
       changes.ableToAttendSingle = undefined;
       changes.ableToAttendMultiple = undefined;
-    } else if (data.regionalPartnerGroup === 3 && data.regionalPartnerWorkshopCount === 0) {
-      // Teachercon
+    } else if (data.teachercon) {
       changes.ableToAttendMultiple = undefined;
-    } else if (data.regionalPartnerWorkshopCount === 1) {
+    } else if (data.regionalPartnerWorkshopIds.length === 1) {
       changes.ableToAttendMultiple = undefined;
     } else {
       changes.ableToAttendSingle = undefined;

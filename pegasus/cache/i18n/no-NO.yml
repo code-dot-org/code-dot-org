@@ -34,10 +34,18 @@
   twentyhours_text: Fullført din første kodetime? Lær mer grunnleggende koding og
     programmering i dette oppfølgingskurset.
   og_title: Alle kan lære
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
   og_description: Alle elever i alle skoler fortjener mulighet til å lære seg å programmere.
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: Kodetimen kommer
   csedweek_og_description: 4.-10. desember 2017. Informatikk er grunnleggende for
     alle elever.
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
   hoc2014_heading: Bli med i <a href="http://hourofcode.com">Kodetimen</a><br/> 8.
     – 14. desember 2014<br/>
   hoc2014_students: Elever
@@ -149,14 +157,14 @@
     og samarbeide - grunnleggende ferdigheter for livet i det 21. århundre.
   third_party_scratch_btn_curriculum: Last ned Scratch Curriculum
   third_party_scratch_btn_forum: Scratch lærer-forum
-  third_party_scratch_btn_site: Besøk Bunnen
+  third_party_scratch_btn_site: Besøk Scratch
   third_party_lightbot_desc: I Lightbot må elever programmere en robot med kommandoer
     for å løse oppgaver. Elevene kan spille det i en nettleser (krever Flash Player),
     på Android- eller iOS-enheter. Elevene spiller det første settet med "Grunnleggende"
     nivåer i Lightbot. De vil lære hvordan fortelle en datamaskin hva den skal gjøre
     ved en serie med grunnleggende kommandoer og de vil få brukt den generelle prosessen
     som dataprogrammer er skrevet med.
-  third_party_lightbot_btn_curriculum: Last ned Lightbot Curriculun
+  third_party_lightbot_btn_curriculum: Last ned Lightbot Curriculum
   third_party_lightbot_btn_site: Besøk Lightbot
   third_party_khan_desc: Lær hvordan du kan programmere tegninger, animasjoner og
     spill ved bruk av JavaScript og ProcessingJS, eller lær hvordan du kan lage nettsider
@@ -659,7 +667,8 @@
     Lær mer</a> om å organisere din egen "Hour of code" begivenhet og finne en lokal
     frivillig på våre <a href="%{volunteer_local}"> frivillige kart</a>.
   volunteer_engineer_submission_update_information: Oppdater din informasjon
-  volunteer_engineer_submission_header_shared: Informasjon deles med lærere på frivillig-kartet
+  volunteer_engineer_submission_header_shared: Informasjon som deles med lærere på
+    frivillig-kartet
   volunteer_engineer_submission_field_name: Navn
   volunteer_engineer_submission_field_name_placeholder: Fullt navn
   volunteer_engineer_submission_field_company: Bedrift (eller universitet)
@@ -835,8 +844,8 @@
     kan du finne anbefalte spørsmål og områder i oppgaveplanene. Disse blir gjort
     utenfor CodeStudio.
   dashboard_assessments_none_part2: Hvis du underviser på ungdomstrinnet eller videregående,
-    har vi vurdering spørsmål tilgjengelig som en del av Code Studio for å hjelpe
-    studentene med å forberede AP testen. For å bruke disse vurderingene, må du først
+    har vi vurderingsspørsmål tilgjengelig som en del av Code Studio for å hjelpe
+    elevenemed å forberede AP testen. For å bruke disse vurderingene, må du først
     tilordne kurset til klassen og deretter velge kurset fra rullegardinmenyen ovenfor
     og du vil se elevsvarene her.
   dashboard_assessments_summaries: Vurderings-oppsummeringer
@@ -1023,7 +1032,7 @@
   dashboard_curriculum_ecs: 'Utforsking av datavitenskap:'
   dashboard_grade_k: K
   dashboard_grade_other: Andre
-  dashboard_login_word: ord
+  dashboard_login_word: Ord
   dashboard_login_picture: Bilde
   dashboard_login_none: E-post
   dashboard_new_password: nytt passord
@@ -1051,7 +1060,7 @@
   dashboard_sections_account_creation_question: Hvem lager elevens konto?
   dashboard_sections_password_question: Hva bruker elevene som "passord"?
   dashboard_sections_picture_account_creation: Et bilde tildelt av Code.org
-  dashboard_sections_word_account_creation: Et enkelt ord tildelt av Code.org
+  dashboard_sections_word_account_creation: Et par enkle ord tildelt av Code.org
   dashboard_sections_sign_in_question: Hvor logger elevene på?
   dashboard_sections_sign_in_unique: Unik nettside listet opp under fanen "Administrer
     elever"
@@ -1074,7 +1083,7 @@
   learn_sign_up_description: Registrer deg for å delta på Kodetimen under CS Code
     Week
   learn_sign_up_button: Meld deg på
-  learn_videos_watch: Se på denne inspirerende filmen
+  learn_videos_watch: Se på denne inspirerende filmen med klassen
   learn_videos_show: Vis denne inspirerende filmen til klassen din
   learn_videos_before_hoc: Se en inspirerende film før Kodetimen
   learn_educator_resources_description: Lær om hvordan du kan gjennomføre Kodetimen
@@ -1082,11 +1091,11 @@
   learn_are_you_educator: Du er lærer? Sjekk<a href="http://hourofcode.com/resources/how-to">
     hvordan du kan gjennomføre Kodetimen</a>
   learn_find_volunteer: <a href="https://code.org/volunteer/local"> Finn en lokal
-    frivillig</a> å hjelpe deg under "Hour of Code"
+    frivillig</a> som kan hjelpe deg under Kodetimen
   learn_teacher_led_lesson_plans: Bli inspirert av <a href="https://code.org/teacher-led">Kodetimens
     oppgaveplaner</a>
   learn_how_to_hoc: Følg <a href="https://hourofcode.com/how-to"> vår "how-to guide"</a>
-    for undervisning av "Hour of Code"
+    for å gjennomføre Kodetimen
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Lær mer</a> om premiene
     for hver lærer.
   learn_inspirational_videos: Inspirere elevene ved å vise dem <a href="https://code.org/educate/inspire">
@@ -1163,9 +1172,9 @@
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
-  codeavengers_name: Bygg eit spel med JavaScript
-  processing_name: "Å teikne med kode"
-  robomind_name: Programmer ein virtuell robot
+  codeavengers_name: Bygg et spill med JavaScript
+  processing_name: "Å tegne med kode"
+  robomind_name: Programmer en virtuell robot
   groklearning_name: Chatterbot-doktotren Eliza
   quorum_name: Tilgjengelig koding (med skjemleserstøtte)
   codespark_name: Foos (velkommen, førskolebarn)
@@ -1173,14 +1182,14 @@
   tynkerapp_name: Tynker – på nettbrett
   robomindnl_name: Programmer ein virtuell robot
   flappy_name: Lag et Flappy spill
-  bitsbox_name: Blitsbox - lag et spill
-  makeschool_name: Bygg eit iphone-spel i nettlesaren din!
+  bitsbox_name: Bitsbox - lag et spill
+  makeschool_name: Lag et spill til iPhone i nettleseren!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Kodetimen
   blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
-  projguts_name: Stein, saks papir
+  projguts_name: Stein, saks, papir
   hourofcode_name: Klassisk labyrint
   playlab_name: Spill-lab
   infinity_name: Infinity Spill-Lab
@@ -1234,6 +1243,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Full Test - 50 spørsmål
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: 'Test del 1: 25 spørsmål'
   cspexam2-AKwgAh1ac5_name: Test del 2 - 25 spørsmål
   cspunit3_gradelevel: 9.-12. klasse
@@ -1267,7 +1278,7 @@
   research_studies_category_name: Research Studies
   applab_name: App Lab
   basketball_name: Lag et basketball-spill
-  sports_name: Sport
+  sports_name: Kod ditt eget sportsspill
   applab_gradelevel: Minstealder 13 år
   applab_shortdescription_congrats: App Lab er et programmeringsmiljø hvor du kan
     lage enkle apper. Design en app, programmer med blokker eller JavaScript for å
@@ -2062,15 +2073,12 @@
     listen din over elever i Google Classroom, klikk på knappen "Synkroniser elever
     fra Google Classroom" i fanen "Administrer elever":'
   google_sign_in_instruct: 'Derfra bør de velge alternativet "Logg på med Google-kontoen":'
-  og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
-  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
-    or your class!
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
-    science is foundational for every student to learn.
-  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
-    for every student to learn.
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
-  hero_name: 'Minecraft: Hero''s Journey'
+  hero_name: 'Minecraft: Heltens reise'
   applab-intro_name: App Lab Intro
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
+  video_title_steph_curry: Hour of Code with Steph Curry

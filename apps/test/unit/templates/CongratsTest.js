@@ -3,6 +3,8 @@ import {shallow} from 'enzyme';
 import {expect} from '../../util/configuredChai';
 import Congrats from '@cdo/apps/templates/Congrats';
 import Certificate from '@cdo/apps/templates/Certificate';
+import StudentsBeyondHoc from '@cdo/apps/templates/StudentsBeyondHoc';
+import TeachersBeyondHoc from '@cdo/apps/templates/TeachersBeyondHoc';
 
 describe('Congrats', () => {
   it('renders a Certificate component', () => {
@@ -20,12 +22,11 @@ describe('Congrats', () => {
     const wrapper = shallow(
       <Congrats
         completedTutorialType="other"
-        signedIn={false}
         userType="signedOut"
         isEnglish={true}
       />
     );
-    expect(wrapper.find('StudentsBeyondHoc').exists()).to.be.true;
+    expect(wrapper.find(StudentsBeyondHoc).exists()).to.be.true;
   });
 
   it('renders a TeachersBeyondHoc component, for teachers', () => {
@@ -36,7 +37,7 @@ describe('Congrats', () => {
         isEnglish={true}
       />
     );
-    expect(wrapper.find('TeachersBeyondHoc').exists()).to.be.true;
+    expect(wrapper.find(TeachersBeyondHoc).exists()).to.be.true;
   });
 
   it('renders a TeachersBeyondHoc component, for signed out', () => {
@@ -47,7 +48,7 @@ describe('Congrats', () => {
         isEnglish={true}
       />
     );
-    expect(wrapper.find('TeachersBeyondHoc').exists()).to.be.true;
+    expect(wrapper.find(TeachersBeyondHoc).exists()).to.be.true;
   });
 
   it('does not render a TeachersBeyondHoc component, for students', () => {
@@ -58,6 +59,6 @@ describe('Congrats', () => {
         isEnglish={true}
       />
     );
-    expect(wrapper.find('TeachersBeyondHoc').exists()).to.be.false;
+    expect(wrapper.find(TeachersBeyondHoc).exists()).to.be.false;
   });
 });

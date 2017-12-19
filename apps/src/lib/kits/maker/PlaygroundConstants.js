@@ -40,6 +40,8 @@ export const SONG_CHARGE = [
   [null, 3/8], ['E4', 3/16], ['G4', 1]
 ];
 
+export const SONG_1D = ["B4", null, "B4", null, "G#4", "F#4", "E4", null, "E4"];
+
 // Circuit playground command codes for certain needed overrides
 // See playground-io/lib/index.js
 export const CP_COMMAND = 0x40;

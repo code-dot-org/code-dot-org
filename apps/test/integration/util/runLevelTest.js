@@ -124,7 +124,6 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
     firebaseName: 'test-firebase-name',
     firebaseAuthToken: 'test-firebase-auth-token',
     isSignedIn: true,
-    isAdmin: true,
     onFeedback: finished,
     onExecutionError: testData.onExecutionError ? testData.onExecutionError :
       () => { throw unexpectedExecutionErrorMsg; },
