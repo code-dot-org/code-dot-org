@@ -27,7 +27,6 @@ export default class TeacherHomepage extends Component {
     announcements: PropTypes.array.isRequired,
     queryStringOpen: PropTypes.string,
     canViewAdvancedTools: PropTypes.bool,
-    isEnglish: PropTypes.bool.isRequired
   };
 
   componentDidMount() {
