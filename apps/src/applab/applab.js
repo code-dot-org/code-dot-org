@@ -387,7 +387,6 @@ Applab.init = function (config) {
   copyrightStrings = config.copyrightStrings;
   Applab.user = {
     labUserId: config.labUserId,
-    isAdmin: (config.isAdmin === true),
     isSignedIn: config.isSignedIn
   };
   Applab.isReadOnlyView = config.readonlyWorkspace;
