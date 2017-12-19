@@ -13,7 +13,6 @@ export default storybook => {
         story: () => (
             <ProjectWidget
               projectList={generateFakePersonalProjects(5)}
-              isRtl={false}
             />
         )
       }, {
@@ -22,7 +21,6 @@ export default storybook => {
         story: () => (
             <ProjectWidget
               projectList={generateFakePersonalProjects(5)}
-              isRtl={false}
               canViewFullList={true}
             />
         )
@@ -32,7 +30,6 @@ export default storybook => {
         story: () => (
             <ProjectWidget
               projectList={generateFakePersonalProjects(5)}
-              isRtl={false}
               canViewFullList={true}
               canViewAdvancedTools={false}
             />
