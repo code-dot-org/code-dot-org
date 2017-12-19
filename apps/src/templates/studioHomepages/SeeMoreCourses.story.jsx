@@ -22,6 +22,7 @@ const courses = [
 export default storybook => {
   return storybook
     .storiesOf('SeeMoreCourses', module)
+    .withReduxStore()
     .addStoryTable([
       {
         name: 'See More Courses for homepages',

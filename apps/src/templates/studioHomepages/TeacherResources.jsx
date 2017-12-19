@@ -16,7 +16,6 @@ const styles = {
   },
 };
 
-
 export default class TeacherResources extends Component {
   render() {
     const planUrl = pegasus('/teacher-dashboard#/plan');
