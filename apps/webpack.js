@@ -21,7 +21,7 @@ var toTranspileWithinNodeModules = [
 // Our base config, on which other configs are derived
 var baseConfig = {
   resolve: {
-    extensions: ["", ".js", ".jsx"],
+    extensions: [".js", ".jsx"],
     alias: {
       '@cdo/locale': path.resolve(__dirname, 'src', 'util', 'locale-do-not-import.js'),
       '@cdo/netsim/locale': path.resolve(__dirname, 'src', 'netsim', 'locale-do-not-import.js'),
@@ -39,15 +39,19 @@ var baseConfig = {
       http: 'stream-http',
     }
   },
-  sassLoader: {
-    includePaths: [path.resolve(__dirname, '..', 'shared', 'css')]
-  },
   module: {
-    loaders: [
-      {test: /\.json$/, loader: 'json'},
-      {test: /\.ejs$/, loader: 'ejs-compiled'},
+    rules: [
+      {test: /\.json$/, loader: 'json-loader'},
+      {test: /\.ejs$/, loader: 'ejs-compiled-loader'},
       {test: /\.css$/, loader: 'style-loader!css-loader'},
       {test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'},
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader!sass-loader',
+        include: [
+          path.resolve(__dirname, '../shared'),
+        ],
+      },
       {
         test:/\.(png|jpg|jpeg|gif|svg)$/,
         include: [
@@ -63,10 +67,9 @@ var baseConfig = {
         // be able to find the file without the hash. :( :(
         loader: "url-loader?limit=1024&name=[name]wp[hash].[ext]",
       },
-    ],
-    preLoaders: [
       {
         test: /\.jsx?$/,
+        enforce: 'pre',
         include: [
           path.resolve(__dirname, 'src'),
           path.resolve(__dirname, 'test'),
@@ -74,7 +77,7 @@ var baseConfig = {
         exclude: [
           path.resolve(__dirname, 'src', 'lodash.js'),
         ],
-        loader: "babel",
+        loader: "babel-loader",
         query: {
           cacheDirectory: path.resolve(__dirname, '.babel-cache'),
           compact: false,
@@ -90,7 +93,7 @@ var baseConfig = {
 if (envConstants.HOT) {
   baseConfig.module.loaders.push({
     test: /\.jsx?$/,
-    loader: 'react-hot',
+    loader: 'react-hot-loader',
     include: [path.resolve(__dirname, 'src')]
   });
 }
@@ -101,20 +104,22 @@ if (process.env.CI) {
 
 // modify baseConfig's preLoaders if looking for code coverage info
 if (envConstants.COVERAGE) {
-  baseConfig.module.preLoaders = [
+  baseConfig.module.rules = [
     {
       test: /\.jsx?$/,
+      enforce: 'pre',
       include: [
         path.resolve(__dirname, 'test'),
       ].concat(toTranspileWithinNodeModules),
-      loader: "babel",
+      loader: "babel-loader",
       query: {
         cacheDirectory: true,
         compact: false,
       }
     }, {
       test: /\.jsx?$/,
-      loader: 'babel-istanbul',
+      enforce: 'pre',
+      loader: 'babel-istanbul-loader',
       include: path.resolve(__dirname, 'src'),
       exclude: [
         path.resolve(__dirname, 'src', 'lodash.js'),
