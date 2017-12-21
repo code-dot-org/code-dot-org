@@ -21,7 +21,7 @@ var toTranspileWithinNodeModules = [
 // Our base config, on which other configs are derived
 var baseConfig = {
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: ["*", ".js", ".jsx"],
     alias: {
       '@cdo/locale': path.resolve(__dirname, 'src', 'util', 'locale-do-not-import.js'),
       '@cdo/netsim/locale': path.resolve(__dirname, 'src', 'netsim', 'locale-do-not-import.js'),
