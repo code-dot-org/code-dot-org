@@ -55,11 +55,6 @@ export function showDialog(typeOrComponent, callback, onHidden) {
   return dialog;
 }
 
-export function showInstructionsDialog() {
-  showDialog('instructions', null);
-  $('details').details();
-}
-
 function adjustScroll() {
   if (adjustedScroll) {
     return;

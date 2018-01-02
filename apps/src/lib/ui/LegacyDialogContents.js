@@ -136,3 +136,26 @@ export const StartOverDialog = () => (
     </div>
   </ProtectedStatefulDiv>
 );
+
+/* eslint-disable react/no-danger */
+export const InstructionsDialog = ({title, markdownContent}) => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon markdown-instructions-container">
+      <p className="dialog-title">{title}</p>
+      <p/>
+      <div
+        className="instructions-markdown scrollable-element"
+        dangerouslySetInnerHTML={{ __html: markdownContent }}
+      />
+      <div id="buttons">
+        <button id="ok-button" style={{float: 'right'}}>
+          {i18n.ok()}
+        </button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
+);
+InstructionsDialog.propTypes = {
+  title: PropTypes.string.isRequired,
+  markdownContent: PropTypes.string.isRequired,
+};
