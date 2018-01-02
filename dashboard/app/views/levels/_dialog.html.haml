@@ -46,17 +46,4 @@
         %button#ok-button
           =t('dialog.ok')
 
-  #instructions-dialogcontent
-    .modal-content.no-modal-icon.markdown-instructions-container
-      %p.dialog-title
-        ="#{t('puzzle')} #{@script_level.try(:position) || 1} #{t('of')} #{@script_level.try(:stage_total) || 1}"
-      .instructions-markdown.scrollable-element
-        %p
-          -# CSP is en_us only, always show markdown instructions
-          - markdown = @level.properties['markdown_instructions']
-          =ActionView::Base.new.render(inline: markdown, type: :md) unless markdown.blank?
-      #buttons
-        %button#ok-button{style: 'float: right;'}
-          =t('ok')
-
 %script{src: minifiable_asset_path('js/levels/_dialog.js')}
