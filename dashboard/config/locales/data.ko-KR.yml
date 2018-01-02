@@ -530,6 +530,7 @@
         C4_unplugged_forloops: "반복을 위한"
         C4_unplugged_parameters: "매개변수를 사용하는 음악 작곡"
         C4_unplugged_binary: 2진
+        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Angles in Artist
         CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
         CSF_collector_repeat_loops: Collector Repeat Loops

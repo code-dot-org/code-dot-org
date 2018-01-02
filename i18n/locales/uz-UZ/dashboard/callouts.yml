@@ -273,6 +273,11 @@ uz:
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U6 colorLeds intensity_callout:
+        CSDU6L10_rainbow: Add your code here
+      CSD U6 colorLeds predict_callout: [ ]
+      CSD U6 getProperty input_callout:
+        CSD_U6L06P03: Add your block here.
       CSD U6 light show predict_callout:
         CSDUDL03P09: What does this line do?
       CSD U6 light show_callout:
@@ -394,6 +399,13 @@ uz:
       Course 4 Playlab For Loops 6b_callout: [ ]
       Course 4 SCV 6_callout:
         Course_4_SCV_6: This block allows you to customize your color to almost anything you want to see!  Play around with the numbers to see what happens!
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Use the arrows to move the actor
+      CourseF_PlayLab_vars10_callout:
+        Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories! Click on a label to see the pieces inside.
+      CourseF_PlayLab_vars6_callout: [ ]
+      CourseF_PlayLab_vars7_callout: [ ]
+      CourseF_PlayLab_vars8_callout: [ ]
       Eval Booleans 2_callout:
         Eval Booleans 2 1: Select a number that will make this expression evaluate to true
       Eval Cond 1_callout:
@@ -443,6 +455,8 @@ uz:
         Infinity_move_right_runbutton: Add move block here
       Infinity_repeat_callout:
         Infinity_repeat_callout: Place Move blocks inside here
+      InspirationalArtwork_callout:
+        InspirationalArtwork_1: Try using the new `comment` block under this label to leave yourself notes inside your program!
       Luigi's Pizza 1 (copy 1)_callout:
         luigi's pizza 1: Try ordering a pepperoni pizza
       Luigi's Pizza 1_callout:
@@ -546,6 +560,8 @@ uz:
       PDAlg Big Game History_callout: [ ]
       PDAlg Big Game Remix_callout: [ ]
       PDAlg Design Recipe Delete_callout: [ ]
+      PS clone CSD U3 Variables Predict Where XY_callout:
+        grid: Click here to show the grid.
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
         grid: Click here to show the grid.
       PS copy 2-3 Bee Conditionals 5_callout:
@@ -566,7 +582,7 @@ uz:
       Quantum Bee - Ryan_callout:
         feeling_stuck_callout_test: " Feeling Stuck?<br />Click the lightbulb for a hint!"
       Robot Doodle_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this label to leave yourself notes inside your program!
       Robot Drawing_callout:
         4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
       Robot_callout:
@@ -691,6 +707,8 @@ uz:
         courseA_artist_loops4_1: This number tells you how many of these blocks you can use in this puzzle.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
+      courseA_artist_loops7_forVideo_callout:
+        courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
       courseA_artist_loops8_callout:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
       courseA_collector_loops1_callout:
@@ -814,12 +832,15 @@ uz:
         courseD_bee_conditionals_challenge3_1: Try repeating the move forward block using this loop.
       courseD_bee_debugging_challenge1_callout:
         courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
+      courseD_bee_debugging_challenge1a_callout:
+        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
       courseD_bee_debugging_challenge2_callout:
         courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
       courseD_bee_nested_loops_challenge1_callout: [ ]
       courseD_bee_nested_loops_challenge2_callout: [ ]
       courseD_collector_debugging_challenge2_callout: [ ]
       courseD_collector_nested_loops_challenge2_callout: [ ]
+      courseD_collector_nested_loops_challenge2a_callout: [ ]
       courseD_collector_ramp10_callout: [ ]
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '

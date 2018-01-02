@@ -421,7 +421,7 @@
           20 ភីកសែលមុនពេលអ្នកធ្វើរង្វិល 60 ដឺក្រេ។
         solution: |-
           ** ដំណោះស្រាយ **
-          ![រូបភាពនៃដំណោះស្រាយប្លុក](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+          ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: "ដើម្បីប្រើប្លុកកូដ 'រំកិលទៅមុខ' អ្នកត្រូវទាញវាចេញពីប្រអប់ដាក់ប្លុកកូដដែលនៅខាងឆ្វេងដាក់ចូលក្នុងកន្លែងធ្វើការហើយភ្ជាប់វាននឹងប្លុក
           'ពេលដំណើរការ' ។"
@@ -3687,6 +3687,9 @@
           </next>
           </block>
           </xml>
+      CourseF_PlayLab_vars2_authored_hint:
+        Course_4_Play_Lab_Vars_2_a: Make sure to set the number for `dog_speed` to
+          something larger than `cat_speed`.
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           This is the first hint.
@@ -3727,7 +3730,7 @@
           20 ភីកសែលមុនពេលអ្នកធ្វើរង្វិល 60 ដឺក្រេ។
         solution: |-
           ** ដំណោះស្រាយ **
-          ![រូបភាពនៃដំណោះស្រាយប្លុក](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+          ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       InspirationalArtwork_authored_hint: []
       K2.0 sequence 1_authored_hint:
         K2.0_sequence_1_a: This program is missing one block. Can you figure out which
@@ -3772,124 +3775,107 @@
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make
           sure blocks are connected under `when run`.
       MC_HOC_2017_01_Cole_authored_hint:
-        MC_HOC_2017_01_Cole_a: Use your arrow keys to direct the player into the house.
-          End up on the orange square to win.
+        MC_HOC_2017_01_Cole_a: "ប្រើគ្រាប់ចុចដែលមានសញ្ញាព្រួញដើម្បីអោយតួអង្គទៅកាន់ផ្ទះ។
+          ទៅឲដល់ការ៉េពណ៌ទឹកក្រូចដើម្បីឈ្នះ។"
       MC_HOC_2017_01_RETRY_authored_hint:
-        MC_HOC_2017_01_RETRY_a: Drag one `move forward` block from the toolbox to
-          the workspace, and snap it into place beneath the `when run` block.
-        MC_HOC_2017_01_RETRY_b: Don't forget to click "Run" to run the code for the
-          Agent.
-        MC_HOC_2017_01_RETRY_c: Once the Agent has run all of its code, you can move
-          the player with the arrow keys!
+        MC_HOC_2017_01_RETRY_a: |-
+          ទាញប្លុក`move forward`មួយពីប្រអប់ឧបករណ៍ទៅក្នុងកន្លែងសរសេរកូដ រួចដាក់វា
+          នៅក្នុងប្លុក`when run`។
+        MC_HOC_2017_01_RETRY_b: កុំភ្លេចចុចប៊ូតុង"ដំណើរការ" ដើម្បីដំណើរការកូដរបស់ជំនួយការ។
+        MC_HOC_2017_01_RETRY_c: "នៅពេលដែលជំនួយការដំណើរការកូដទាំងអស់ អ្នកនឹងអាចរំកិលតួអង្គជាមួយគ្រាប់ចុចដែលមានសញ្ញាព្រួញបាន!"
       MC_HOC_2017_02_Cole_authored_hint:
-        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
-          plate.  That will open the door for your player.
+        MC_HOC_2017_02_Cole_a: "រំកិលជំនួយការទៅមុខពីរជំហ៊ានដើម្បីទៅសង្កត់បន្ទះក្តារ។
+          ពេលនោះទ្វារហ្នឹងបើកសំរាប់តួអង្គ។"
         MC_HOC_2017_02_Cole_b: |-
-          Press "Run"!
+          ចុចប៊ូតុង "ដំណើរការ"!
 
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
-          to move the player to the map!
-        MC_HOC_2017_02_Cole_d: Make sure the Agent is following the path outlined
-          on the map!
+          អ្នកអាចដំណើរការកូដទោះបីជាវាខុសក៏ដោយ។ ដំណើរការវា រួចសរសេរកូដឡើងវិញម្តងហើយម្តងទៀតរហូតដល់អ្នកស្វែងរកឃើញចំនុចដែលខុស។
+        MC_HOC_2017_02_Cole_c: "នៅពេលដែលជំនួយការបើកទ្វារ ប្រើគ្រាប់ចុចដែលមានសញ្ញាព្រួញដើម្បីរំកិលតួអង្គទៅកាន់ផែនទី!"
+        MC_HOC_2017_02_Cole_d: "ត្រូវប្រាកដថាជំនួយការដើរផ្លូវត្រូវតាមផែនទី!"
       MC_HOC_2017_02_Will_authored_hint:
-        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
-          plate.  That will open the door for your player.
+        MC_HOC_2017_02_Cole_a: "រំកិលជំនួយការទៅមុខពីរជំហ៊ានដើម្បីទៅសង្កត់បន្ទះក្តារ។
+          ពេលនោះទ្វារហ្នឹងបើកសំរាប់តួអង្គ។"
         MC_HOC_2017_02_Cole_b: |-
-          Press "Run Agent"!
+          ​ចុចប៊ុតុង"ដំណើរការជំនួយការ"!
 
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
-          to move the player to the orange square.
+          អ្នកអាចដំណើរការកូដទោះបីជាវាខុសក៏ដោយ។ ដំណើរការវា រួចសរសេរកូដឡើងវិញម្តងហើយម្តងទៀតរហូតដល់អ្នកស្វែងរកឃើញចំនុចដែលខុស។
+        MC_HOC_2017_02_Cole_c: "នៅពេលដែលជំនួយការបើកទ្វារ ប្រើគ្រាប់ចុចដែលមានសញ្ញាព្រួញដើម្បីរំកិលតួអង្គទៅកាន់ការ៉េពណ៌ទឹកក្រូច។"
       MC_HOC_2017_03_Cole_authored_hint:
-        MC_HOC_2017_03_Cole_a: Once you get the Agent to the pressure plate, you can
-          use your arrow keys to walk the player to the compass!
-        MC_HOC_2017_03_Cole_b: Does the code feel a little long?  Try using a `repeat`
-          loop and see if you can figure out how to make it shorter!
+        MC_HOC_2017_03_Cole_a: "នៅពេលដែលជំនួយការបានសង្កត់បន្ទះក្តារ អ្នកអាចប្រើគ្រាប់ចុចដែលសញ្ញាព្រួញដេើម្បីឲតួអង្គដើរទៅរកត្រីវិស័យ!"
+        MC_HOC_2017_03_Cole_b: "តើអ្នកមានអារម្មណ៍ថាកូដវែងទេ? សាកល្បងប្រើរង្វិលជុំ`repeat`រួចសង្កេតមើលថាតើអ្នកអាចធ្វើឲវាខ្លីបានដែរឬទេ!"
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
-          Crossing these two pressure plates will open the path for the player.
+          ឆ្លងកាត់ដោយសង្កត់បន្ទះក្តារទាំងពីរនេះដើម្បីបើកផ្លូវសំរាប់តួអង្គ។
 
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
-        MC_HOC_2017_04POINT5_RYAN_b: 'Use the `turn right` block to change the agent''s
-          direction '
-        MC_HOC_2017_04POINT5_RYAN_a: The Agent only needs to get to the first pressure
-          plate to let Alex or Steve through to the axe.
+        MC_HOC_2017_04POINT5_RYAN_b: "ប្រើប្លុក`turn right`ដើម្បីប្តូរទិសដៅរបស់ជំនួយការ "
+        MC_HOC_2017_04POINT5_RYAN_a: "ជំនួយការត្រូវសង្កត់បន្ទះក្តារដំបូងដើម្បី Alex
+          ឬ Steve សំដៅទៅកាន់ពូថៅ។"
       MC_HOC_2017_04_Cole_authored_hint:
-        MC_HOC_2017_04_Cole_a: The Agent needs to `move forward` 7 times.  How can
-          you use a `repeat` loop to make that happen?
+        MC_HOC_2017_04_Cole_a: "ជំនួយការត្រូវ`move forward`៧ដង។ តើអាចប្រើរង្វិលជុំ
+          `repeat`យ៉ាងដូចម្តេចដើម្បីឲវាដំណើរការបាន?"
         MC_HOC_2017_04_Cole_c: |-
-          Press "Run"!
+          ចុចប៊ូតុង "ដំណើរការ"!
 
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, he will
-          open the door for the player.
+          អ្នកអាចដំណើរការកូដទោះបីជាវាខុសក៏ដោយ។ ដំណើរការវា រួចសរសេរកូដឡើងវិញម្តងហើយម្តងទៀតរហូតដល់អ្នកស្វែងរកឃើញចំនុចដែលខុស។
+        MC_HOC_2017_04_Cole_b: "នៅពេលដែលជំនួយការសង្កត់បន្ទះក្តារបាន វានឹងទៅបើកទ្វារឲតួអង្គ។"
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
-          code inside of a loop?  Try placing a plank **and** moving forward inside
-          of a `repeat` to complete this puzzle.
-        MC_HOC_2017_05_Cole_b: Get the Agent across the river, building a bridge as
-          you go.
+        MC_HOC_2017_05_Cole_a: "តើអ្នកបានដឹងទេថាអ្នកអាចដាក់កូដលើសពីមួយក្នុងរង្វិលជុំ?
+          សាកល្បងដើរទៅមុខ **ហើយ**ដាក់ក្តារនៅក្នុង`repeat`ដើម្បីចញ្ចប់រូបផ្គុំមួយនេះ។"
+        MC_HOC_2017_05_Cole_b: "អោយជំនួយការឆ្លងកាត់ទន្លេ រួចសង់ស្ពាន។"
       MC_HOC_2017_05_Josh_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
-          code inside of a loop?  Try placing a plank **and** moving forward inside
-          of a `repeat` to complete this puzzle.
+        MC_HOC_2017_05_Cole_a: "តើអ្នកបានដឹងទេថាអ្នកអាចដាក់កូដលើសពីមួយក្នុងរង្វិលជុំ?
+          សាកល្បងដាក់ក្តារ **ហើយ**ដើរទៅមុខនៅក្នុង`repeat`ដើម្បីចញ្ចប់រូបផ្គុំមួយនេះ។"
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: How many times does this loop run?  How many times
-          *should* it run?
-        MC_HOC_2017_06_Cole_b: 'Help the Agent build a bridge all the way across the
-          water! '
+        MC_HOC_2017_06_Cole_a: "តើរង្វិលជុំនេះដំណើរការប៉ុន្មានដង? តើវា**គួរតែ**ដំណើរការប៉ុន្មានដង?"
+        MC_HOC_2017_06_Cole_b: "ជួយជំនួយការសាងសង់ស្ពានមួយដើម្បីឆ្លងទន្លេ! "
       MC_HOC_2017_06_Josh_authored_hint:
-        MC_HOC_2017_06_Cole_a: Try putting more than one instruction inside of a `repeat`
-          loop!
+        MC_HOC_2017_06_Cole_a: "ព្យាយាមដាក់ពាក្យបញ្ជាលើសពីមួយនៅក្នុងរង្វិលជុំ`repeat`!"
       MC_HOC_2017_07_Cole_authored_hint:
-        MC_HOC_2017_07_Cole_c: All you need to have the Agent do is clear the path
-          to the Minecart.
-        MC_HOC_2017_07_Cole_a: To solve this puzzle, figure out what the `clear path`
-          function does and call it as many times as you need using the small green
-          `clear path` block from the toolbox.
-        MC_HOC_2017_07_Cole_b: Try mixing the function blocks with other blocks from
-          the toolbox to help you solve this puzzle.
+        MC_HOC_2017_07_Cole_c: "អ្វីដែលអ្នកត្រូវធ្វើគឺឲជំនួយការសំអាតផ្លូវសំរាប់រទេះដឹករ៉ែ។"
+        MC_HOC_2017_07_Cole_a: "ដើម្បីដោះស្រាយរូបផ្គុំនេះ ចូរស្វែងរកនូវមុខងារ`clear
+          path`រួចយកវាមកប្រើតាមតាមតម្រូវការដោយប្រើប្លុក`clear path`ពណ៌បៃតងនៅក្នុងប្រអប់ឧបករណ៍។"
+        MC_HOC_2017_07_Cole_b: "សាកល្បងដាក់បញ្ចូលគ្នានូវប្លុកមុខងារនិងប្លុកដ៏ទៃទៀតនៅក្នុងប្រអប់ឧបករណ៍ដើម្បីជួយអ្នកក្នុងការដោះស្រាយរូបផ្គុំ។"
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Press "Run Agent"!
+          ​ចុចប៊ុតុង"ដំណើរការជំនួយការ"!
 
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+          អ្នកអាចដំណើរការកូដទោះបីជាវាខុសក៏ដោយ។ ដំណើរការវា រួចសរសេរកូដឡើងវិញម្តងហើយម្តងទៀតរហូតដល់អ្នកស្វែងរកឃើញចំនុចដែលខុស។
+        MC_HOC_2017_08_RY_b: "វាមានវិធីជាច្រើនក្នុងការដោះស្រាយរូបផ្គុំមួយនេះ។ ចូរសាកល្បង២
+          ៣វិធី!"
       MC_HOC_2017_08_Will_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Press "Run Agent"!
+          ​ចុចប៊ុតុង"ដំណើរការជំនួយការ"!
 
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+          អ្នកអាចដំណើរការកូដទោះបីជាវាខុសក៏ដោយ។ ដំណើរការវា រួចសរសេរកូដឡើងវិញម្តងហើយម្តងទៀតរហូតដល់អ្នកស្វែងរកឃើញចំនុចដែលខុស។
+        MC_HOC_2017_08_RY_b: "វាមានវិធីជាច្រើនក្នុងការដោះស្រាយរូបផ្គុំមួយនេះ។ ចូរសាកល្បង២
+          ៣វិធី!"
       MC_HOC_2017_10_Cole_authored_hint:
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_a: "ប្រើមុខងារដើម្បីដោះស្រាយរូបផ្គុំមួយនេះដោយងាយ!"
       MC_HOC_2017_10_RETRY_authored_hint:
-        MC_HOC_2017_10_Cole_b: Don't know where to go?  See if you can find the dotted
-          line!
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_b: "អត់ដឹងផ្លូវដើម្បីទៅ? មើលថាតើអ្នកអាចរកឃើញបន្ទាត់ចុចចុចទេ!"
+        MC_HOC_2017_10_Cole_a: "ប្រើមុខងារដើម្បីដោះស្រាយរូបផ្គុំមួយនេះដោយងាយ!"
       MC_HOC_2017_13_Cole_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
-          or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: "សាកល្បងឲជំនួយការសាងសង់ស្ពានមួយចំនួនដើម្បីឲ Alex ឬ
+          Steve អាចដើរជំវិញជ្រុងនៃផែនទីបាន។"
       MC_HOC_2017_4.5v2_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
-          Crossing these two pressure plates will open the path for the player.
+          ឆ្លងកាត់ដោយសង្កត់បន្ទះក្តារទាំងពីរនេះដើម្បីបើកផ្លូវសំរាប់តួអង្គ។
 
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_Ali_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Press "Run"!
+          ចុចប៊ូតុង "ដំណើរការ"!
 
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
-        MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through
-          the lava.
+          អ្នកអាចដំណើរការកូដទោះបីជាវាខុសក៏ដោយ។ ដំណើរការវា រួចសរសេរកូដឡើងវិញម្តងហើយម្តងទៀតរហូតដល់អ្នកស្វែងរកឃើញចំនុចដែលខុស។
+        MC_HOC_2017_08_RY_b: "វាមានវិធីជាច្រើនក្នុងការដោះស្រាយរូបផ្គុំមួយនេះ។ ចូរសាកល្បង២
+          ៣វិធី!"
+        MC_HOC_2017_08_RY_c: "សំរាប់ផ្លូវឆ្លងកាត់កំអែភ្នុំភ្លើងធម្មតាមួយចូរព្យាយាមដើរតាមបន្ទាត់ចុចចុច។"
       MC_HOC_2017_FP10x10_authored_hint: []
       MC_HOC_2017_FP10x10_RE_authored_hint: []
       MC_HOC_2017_FP20x20_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
-          or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: "ព្យាយាមឲជំនួយការសាងសង់ផ្លូវដែកមួយចំនួនដូច្នេះអ្នកអាចស្វែងយល់ពីពិភពលោក!"
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:
@@ -4055,8 +4041,8 @@
           is added to your counter variable each time through. \n\nWhat do you need
           to add to each number to get the number after it?"
       New Minecraft Hero Project_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
-          or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: "សាកល្បងឲជំនួយការសាងសង់ស្ពានមួយចំនួនដើម្បីឲ Alex ឬ
+          Steve អាចដើរជំវិញជ្រុងនៃផែនទីបាន។"
       Overworld Avoid Monsters_authored_hint:
         mc_8_a: There are a few paths you can take. Which is the shortest?
         mc_8_b: Use `repeat` loops to simplify your code.
@@ -5659,6 +5645,15 @@
           can repeat that to draw the other two.
         courseA_artist_loops7_c: Remember you can put more than one block in a `repeat`
           loop.
+      courseA_artist_loops7_forVideo_authored_hint:
+        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
+          the code step-by-step and look for a pattern.
+        courseA_artist_loops7_b: Write the code for one wave first, then repeat that
+          to draw the other two.
+        courseA_artist_loops7_c: |-
+          Remember you can put more than one block in a <xml><block type="controls_repeat">
+          <title name="TIMES">???</title>
+          </block></xml> loop.
       courseA_artist_loops8_authored_hint:
         courseA_artist_loops8_a: Try running the code to see what has been written
           for you.
@@ -5681,6 +5676,13 @@
           to the next!
         courseA_artist_loops_challenge2_c: You will need a LOT of blocks inside the
           loop for this challenge.
+      courseA_artist_loops_challenge2a_authored_hint:
+        courseA_artist_loops_challenge2_a: Blocks like this <xml>  <block type="simple_move_up_left"/></xml>
+          will let your artist move at a slant!
+        courseA_artist_loops_challenge2_b: When you finish one tent, `jump` up twice
+          to get to the next!
+        courseA_artist_loops_challenge2_c: All of your blocks will need to be inside
+          of a loop to finish this puzzle.
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: You can use `jump` blocks to move to other spaces.
       courseA_collector_loops1_authored_hint:
@@ -6303,6 +6305,14 @@
           </next>
           </block>
           </xml>
+      courseB_collector_loops_challenge2a_authored_hint:
+        courseB_collector_loops_challenge2a_a: If something goes wrong, try debugging
+          it. Don't give up!
+        courseB_collector_loops_challenge2a_b: Look at this option for getting through
+          the maze. Do you see a pattern that you can repeat?
+        courseB_collector_loops_challenge2a_c: To collect all of the treasure, you
+          will either need to add two  <xml> <block type="collector_collect"/></xml>
+          blocks inside your loop, or put the block inside of its own `repeat` block.
       courseB_collector_loops_challenge`_authored_hint:
         courseA_collector_loops_challenge2_b: |
           You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.
@@ -6990,9 +7000,12 @@
           \                   <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n
           \                 </block>\n                </next>\n              </block>\n
           \             </statement></block></xml>"
+      courseC_artist_prog_challenge2a_authored_hint:
+        courseC_artist_prog_challenge2_a: After you draw the first line, try turning
+          left before you draw your second line.
+        courseC_artist_prog_challenge2_b: After you draw the second line, try turning
+          right before you draw your third line.
       courseC_collector_loops_challenge2_authored_hint:
-        courseC_maze_loops_challenge2_a: The original code would work great - if there
-          was only one piece of treasure in each pile!
         courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect`
           blocks!
       courseC_collector_prog1_authored_hint:
@@ -7053,6 +7066,8 @@
       courseC_collector_prog_challenge2_authored_hint:
         courseC_collector_prog_challenge1_a: You can use the `collect` command more
           often to collect the extra treasure.
+        courseC_collector_prog_challenge1_b: Lost your way?  Try this path to solve
+          the puzzle!
       courseC_external_events_authored_hint: []
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
@@ -7167,6 +7182,37 @@
           </block>
           </statement>
           </block></next></block></xml>
+      courseC_harvester_loops_challenge1a_authored_hint:
+        courseC_harvester_loops_challenge1_a: This is too hard without loops!
+        courseC_harvester_loops_challenge1_b: You can repeat `move forward` and `pick
+          corn` as many times as you need, then turn right at each corner.
+        courseC_harvester_loops_challenge1_c: |-
+          The best way to collect the first four corn uses a `repeat` block inside of another `repeat` block. You can use this pattern for the rest of the puzzle too!
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></next></block></xml>
       courseC_harvester_loops_challenge2_authored_hint:
         courseC_harvester_loops_challenge2_a: One way to solve this looks like a zig-zag.
           Another way looks like a spiral! There are lots of different solutions to
@@ -7251,8 +7297,6 @@
         courseC_maze_debugging_challenge1_c: If you are getting stuck, you can always
           start over, or remove all the code and find your own way!
       courseC_maze_debugging_challenge2_authored_hint:
-        courseC_maze_debugging_challenge2_a: One way to solve this is to add more
-          steps forward in between the turns.
         courseC_maze_debugging_challenge2_b: If you are getting stuck, you can always
           start over or remove all the code and find your own way!
         courseC_maze_debugging_challenge2_c: |-
@@ -7314,6 +7358,11 @@
           pieces. Each one has a pattern you can repeat.
         courseC_maze_loops_challenge1_b: In between each `repeat` block, you will
           need to `turn left` or `turn right` to get ready Scrat for the next pattern.
+      courseC_maze_loops_challenge1a_authored_hint:
+        courseC_maze_loops_challenge1_a: Think about this path as being two different
+          pieces. Each one has a pattern you can repeat.
+        courseC_maze_loops_challenge1_b: Can you remember how to use loops to repeat
+          a staircase pattern?
       courseC_maze_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_a: The original code would work great - if there
           was only one piece of treasure in each pile!
@@ -7511,8 +7560,8 @@
         courseD_artist_binary8_c: Don't be afraid to make a mistake! Try writing binary
           and running the code to see what will happen, even if you don't think you've
           solved the puzzle yet.
-      courseD_artist_binaryFP_authored_hint:
-        courseD_artist_binaryFP_a: Run this code to see what happens!
+      courseD_artist_binaryFP_authored_hint: []
+      courseD_artist_binaryFP8_authored_hint: []
       courseD_artist_binary_challenge2_authored_hint:
         courseD_artist_binary_challenge2_a: |-
           The best tip I have for you is to press `⟲ Start Over` if it starts to get really messy.
@@ -7701,6 +7750,8 @@
           - draw a triangle
           - jump forward 50 pixels
           - turn right by 90 degrees
+        courseD_artist_nestedLoops_challenge1_d: Put all of your code inside of a
+          `repeat 4 times` loop to finish it off.
       courseD_artist_nestedLoops_challenge2_authored_hint:
         courseD_artist_nestedLoops_challenge2_a: To draw a regular octagon, the artist
           needs to turn 45 degrees 8 times.
@@ -7788,6 +7839,8 @@
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to
           see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals2_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
           won't.  If you want your code to run in both cases, make sure to use an
           `if` statement.
@@ -7795,6 +7848,8 @@
           ahead` to move through this maze.
         courseD_bee_conditionals2_c: You don't have to check for honeycombs, there
           will only be flowers or blank spaces under the clouds.
+        courseD_bee_conditionals2_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals2_test_authored_hint:
         courseD_bee_conditionals2_aa: Need help getting started?  Here is a little
           hint video.
@@ -7808,6 +7863,8 @@
         courseD_bee_conditionals2_d: Need help finishing things up?  Watch this hint
           video.
       courseD_bee_conditionals3_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each
           space to see if it has either a flower or nothing.
         courseD_bee_conditionals3_b: You can use a loop to keep the bee moving forward.
@@ -7815,7 +7872,11 @@
         courseD_bee_conditionals3_c: Don't be afraid to make a mistake! Try adding
           blocks and running the code to see what will happen, even if you don't think
           you've solved the puzzle yet.
+        courseD_bee_conditionals3_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals4_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals4_a: You can still treat every space as if there is
           a cloud over it, even though you can see the whole path.
         courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check
@@ -7823,39 +7884,55 @@
         courseD_bee_conditionals4_c: Using the block `while there is a path ahead`,
           you should `move forward` and check for a flower. `if there is a flower`
           what should the bee do?
+        courseD_bee_conditionals4_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals5_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals5_a: Think of every side of the rectangular path as
           a path by itself. Set up a nested loop with a `repeat` block on the outside
           and a `while there is a path ahead` on the inside. How many paths does the
           bee need to buzz down if the bee needs to buzz every side with a flower?
-        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block,
-          you will need to move forward and check for a flower. How do you check if
-          there is a flower? What do you do if there is a flower?
         courseD_bee_conditionals5_c: There are 3 sides of the rectangle with flowers,
           so the code needs to `repeat 3 times`. In every repeat, the bee will need
           to continue along the path, `while there is a path ahead`. To continue down
           the path, the bee will need to `move forward`. While on the path, the bee
           needs to check for a flower. `if there is a flower`, the bee should `get
           nectar`.
+        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block,
+          you will need to move forward and check for a flower. How do you check if
+          there is a flower? What do you do if there is a flower?
+        courseD_bee_conditionals5_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals6_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for
           honeycomb beneath each cloud.
         courseD_bee_conditionals6_b: In this case, you do not need to check for nectar
           under the clouds.
         courseD_bee_conditionals6_c: Is there a loop you can use to make your code
           simpler?
+        courseD_bee_conditionals6_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals7_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
           the challenge."
         courseD_bee_conditionals7_b: If there is not a flower under the cloud, there
           must be a honeycomb, so you don't need to think about the case of an empty
           space.
+        courseD_bee_conditionals7_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals7_predict2_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
           the challenge."
       courseD_bee_conditionals8_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals8_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`)
           to solve the challenge."
@@ -7868,6 +7945,8 @@
         courseD_bee_conditionals8_d: Even though there is a cloud right in front of
           you, you don't have to visit it first. Try starting with the one in the
           bottom right of the square.
+        courseD_bee_conditionals8_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals9_authored_hint: []
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: |-
@@ -7985,6 +8064,19 @@
           * Repeat 2 times:
           * Move forward
           * Make 3 honey
+          * Move backward
+      courseD_bee_debugging_challenge1a_authored_hint:
+        courseD_bee_debugging_challenge1_a: Why does the first half of this program
+          work? Think about why the bee needs to move backward. How much nectar does
+          the bee collect each time it moves over a flower?
+        courseD_bee_debugging_challenge1_b: 'To solve this puzzle, have the bee follow
+          the same pattern to make honey that he does when collecting nectar. '
+        courseD_bee_debugging_challenge1_c: |-
+          After the bee makes it to the bottom row, have it repeat these commands:
+
+          * Repeat 2 times:
+          * Move forward
+          * Make honey
           * Move backward
       courseD_bee_debugging_challenge2_authored_hint:
         courseD_bee_debugging_challenge1_a: Why the first half of this program work?
@@ -8385,6 +8477,11 @@
           </next>
           </block>
           </xml>
+      courseD_collector_nested_loops_challenge2a_authored_hint:
+        courseD_collector_nested_loops_challenge2a_a: Don't forget that you can `repeat`
+          a single command or a longer pattern. You can even `repeat` a `repeat` block!
+        courseD_collector_nested_loops_challenge2a_b: Can you figure out how to get
+          all four gems without using any more blocks than it takes to get two?
       courseD_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
           Instead of using four `move forward` blocks for each side, try putting one `move forward` block inside of a `repeat` loop, like this:
@@ -8649,6 +8746,10 @@
         courseD_harvester_nested_loops_challenge1_a: You have probably already used
           a loop to create a zig-zag pattern. If you remember that algorithm, you
           can make a few additions to it here.
+        courseD_harvester_nested_loops_challenge1_b: To collect more than one piece
+          of corn, you need to use `pick corn` more than one time.
+        courseD_harvester_nested_loops_challenge1_c: You will need to put a small
+          loop inside of your main loop to solve this puzzle!
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: Don't forget that you can `repeat`
           a single command or a longer pattern. You can even `repeat` a `repeat` block!

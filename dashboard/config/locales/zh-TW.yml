@@ -627,6 +627,9 @@
         and games with objects and characters that interact with each other.
       audience: "年齡 13+"
       cta: "學習如何做"
+    hoc-encryption:
+      title: "簡單加密"
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -646,6 +649,10 @@
     minecraft2016:
       title: "當個創世神"
       body: "在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。"
+    hero:
+      title: Minecraft
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: Sports
       body: Make a basketball game or mix and match across sports.

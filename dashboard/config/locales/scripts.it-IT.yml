@@ -331,10 +331,10 @@
               name: Tradizionale &ndash; Videogiochi e Piani Cartesiani
         infinity:
           title: Disney Infinity
-          description: Crea una storia o inventa un gioco con i personaggi di Disney
-            Infinity come protagonisti!
-          description_short: Crea una storia o inventa un gioco con i personaggi di
-            Disney Infinity come protagonisti!
+          description: Usa il Laboratorio per creare una storia o inventare un gioco
+            con i personaggi di Disney Infinity come protagonisti!
+          description_short: Usa il Laboratorio per creare una storia o inventare
+            un gioco con i personaggi di Disney Infinity come protagonisti!
           stages:
             Infinity:
               name: Infinito
@@ -1226,7 +1226,7 @@
             Text Compression Lesson:
               name: Lezione Compressione del Testo
             Text Compression Widget:
-              name: Compressione del Testo
+              name: Componente per la compressione del testo
             Welcome!:
               name: Benvenuto!
         K5-OnlinePD:
@@ -2366,6 +2366,12 @@
               name: CSP Student Post-Course Survey
             Creating Functions with Parameters:
               name: Creating Functions with Parameters
+            CSP End-of-Semester Mid-course survey:
+              name: CSP End-of-Semester Mid-course survey
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions
@@ -3435,7 +3441,8 @@
             games, using the same programming concepts and the design process computer
             scientists use daily. In the final project, you’ll develop a personalized,
             interactive program."
-          description_short: Programmazione
+          description_short: Impara a programmare animazioni, arte interattiva e giochi
+            in Sviluppo Giochi.
           description_audience: ''
           stages:
             Booleans and Conditionals:
@@ -4246,7 +4253,8 @@
         csd2:
           title: 'CSD Unit 2 - The Internet: Web Development'
           description_audience: ''
-          description_short: "  Learn to build your own web site in Web Lab."
+          description_short: "  Imparare a costruire il tuo sito web con Sviluppo
+            Web."
           description: " In Unit 2, you’ll learn how to create and share the content
             on your own web pages. After deciding what content you want to share with
             the world, you’ll learn how to structure and style your pages using HTML
@@ -5556,6 +5564,10 @@
               name: Designing Screens with Code
             Arrays:
               name: Arrays
+            Making Music:
+              name: Making Music
+            Arrays and For Loops:
+              name: Arrays and For Loops
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5683,7 +5695,7 @@
             to the breadth of App Lab and the Maker Toolkit.
           stages:
             App Lab Basics:
-              name: App Lab Basics
+              name: Le basi di Sviluppo App
             The Circuit Playground:
               name: The Circuit Playground
             Physical Input:
@@ -6256,6 +6268,8 @@
                 deciding what to do with data that does not easily fit into the visualization
                 scheme that they have chosen.  Last, students look at what parts of
                 this process can be automated, and what need a human to make decisions.
+            Keeping Data Secret:
+              name: Keeping Data Secret
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -6594,6 +6608,8 @@
               name: Ping-Pong
             NewBounce:
               name: NewBounce
+            F PlayLab Variables:
+              name: F PlayLab Variables
           title: ''
           description_audience: ''
           description_short: ''
@@ -7903,6 +7919,10 @@
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey:
+              name: Please complete the CSP Mid-course survey
           title: ''
           description_audience: ''
           description_short: Programmazione
@@ -7960,9 +7980,9 @@
         applab-intro:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
-              name: Intro to AppLab - Choose Your Own Adventure
+              name: Introduzione a Sviluppo App - Scegli la Tua Avventura
             Intro to AppLab - Choose Your Own Adventure 2:
-              name: Intro to AppLab - Choose Your Own Adventure 2
+              name: Introduzione a Sviluppo App - Scegli la Tua Avventura 2
             Intro to AppLab - Your First App:
               name: Intro to AppLab - Your First App
             Intro to AppLab - Your First App 2:
@@ -7972,12 +7992,12 @@
             Intro to AppLab - Your First App 4:
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
-              name: Intro to AppLab - Getting Started
+              name: Introduzione a Sviluppo App - Per cominciare
             Intro to App Lab:
-              name: Intro to App Lab
+              name: Introduzione a Sviluppo App
             'Lesson 1: App Lab Intro':
               name: 'Lesson 1: App Lab Intro'
-          title: Intro to App Lab
+          title: Introduzione a Sviluppo App
           description_audience: ''
           description_short: ''
           description: These lessons introduce you to App Lab through a series of
@@ -8496,6 +8516,16 @@
               name: 'Technology Foundations: What is a Computer?'
             'Data Science: Problem Solving with Big Data':
               name: 'Data Science: Problem Solving with Big Data'
+            Personal Innovations:
+              name: Innovazione personale
+            What is a Computer?:
+              name: What is a Computer?
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Programming - Hour of Code:
+              name: Programming - Hour of Code
+            Simple Encryption:
+              name: Crittografia semplice
           title: PwC Access Your Potential
           description_audience: ''
           description_short: ''
@@ -8545,13 +8575,14 @@
           title: 'Minecraft: Il viaggio dell''eroe'
           description_audience: ''
           description_short: ''
-          description: ''
+          description: Minecraft è tornato per l'Ora del Codice con una nuovissima
+            attività! Viaggia attraverso Minecraft grazie al coding.
         applab-intro-staging:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
-              name: Intro to AppLab - Choose Your Own Adventure
+              name: Introduzione a Sviluppo App - Scegli la Tua Avventura
             Intro to AppLab - Choose Your Own Adventure 2:
-              name: Intro to AppLab - Choose Your Own Adventure 2
+              name: Introduzione a Sviluppo App - Scegli la Tua Avventura 2
             Intro to AppLab - Your First App:
               name: Intro to AppLab - Your First App
             Intro to AppLab - Your First App 2:
@@ -8561,7 +8592,9 @@
             Intro to AppLab - Your First App 4:
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
-              name: Intro to AppLab - Getting Started
+              name: Introduzione a Sviluppo App - Per cominciare
+            Intro to App Lab:
+              name: Introduzione a Sviluppo App
           title: Intro to App Lab Staging
           description_audience: ''
           description_short: ''
@@ -8578,6 +8611,8 @@
               name: Explore PT - Complete the Task
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Setup: Digital Portfolio and Other Tools'
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
@@ -8613,6 +8648,14 @@
             standalone template:
               name: standalone template
           title: 'CSP3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        aws-demo:
+          stages:
+            new stage:
+              name: new stage
+          title: AWS Demo
           description_audience: ''
           description_short: ''
           description: ''

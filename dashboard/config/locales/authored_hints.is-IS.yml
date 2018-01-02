@@ -1121,6 +1121,9 @@
           **Lausn:**
 
           ![Solution](https://images.code.org/72f0ce970999deffe87bd93af0db959f-image-1469642214408.png)
+      CourseF_PlayLab_vars2_authored_hint:
+        Course_4_Play_Lab_Vars_2_a: Gættu þess að talan fyrir `dog_speed` (hraða hunds)
+          sé hærri en fyrir `cat_speed` (hraða kattar).
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           Þetta er fyrsta vísbendingin.
@@ -2995,6 +2998,15 @@
           Mundu að þú getur sett fleiri en einn kubb inn í <xml><block type="controls_repeat">
           <title name="TIMES">???</title>
           </block></xml> ` lykkju.
+      courseA_artist_loops7_forVideo_authored_hint:
+        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
+          the code step-by-step and look for a pattern.
+        courseA_artist_loops7_b: Skrifaðu kóðann fyrir eina bylgju fyrst og reyndu
+          svo að endurtaka það til að teikna hinar tvær.
+        courseA_artist_loops7_c: |-
+          Mundu að þú getur sett fleiri en einn kubb inn í <xml><block type="controls_repeat">
+          <title name="TIMES">???</title>
+          </block></xml> ` lykkju.
       courseA_artist_loops8_authored_hint:
         courseA_artist_loops8_a: Try running the code to see what has been written
           for you.
@@ -3018,6 +3030,13 @@
           að `hoppa` á það næsta!"
         courseA_artist_loops_challenge2_c: "Þú þarft MARGA kubba innan í lykkjunni
           fyrir þessa áskorun."
+      courseA_artist_loops_challenge2a_authored_hint:
+        courseA_artist_loops_challenge2_a: 'Svona kubbar: <xml>  <block type="simple_move_up_left"/></xml>
+          láta listamanninn færast á ská!'
+        courseA_artist_loops_challenge2_b: When you finish one tent, `jump` up twice
+          to get to the next!
+        courseA_artist_loops_challenge2_c: All of your blocks will need to be inside
+          of a loop to finish this puzzle.
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: "Þú getur notað `hoppa` kubba til að fara á önnur svæði."
       courseA_collector_loops1_authored_hint:
@@ -3646,6 +3665,14 @@
           </next>
           </block>
           </xml>
+      courseB_collector_loops_challenge2a_authored_hint:
+        courseB_collector_loops_challenge2a_a: If something goes wrong, try debugging
+          it. Don't give up!
+        courseB_collector_loops_challenge2a_b: Look at this option for getting through
+          the maze. Do you see a pattern that you can repeat?
+        courseB_collector_loops_challenge2a_c: To collect all of the treasure, you
+          will either need to add two  <xml> <block type="collector_collect"/></xml>
+          blocks inside your loop, or put the block inside of its own `repeat` block.
       courseB_collector_loops_challenge`_authored_hint:
         courseA_collector_loops_challenge2_b: |
           Þú þarft bara að nota einn ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) kubb til að leysa þetta.
@@ -4330,9 +4357,12 @@
           name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\"
           config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n
           \               </next>\n              </block>\n              </statement></block></xml>"
+      courseC_artist_prog_challenge2a_authored_hint:
+        courseC_artist_prog_challenge2_a: After you draw the first line, try turning
+          left before you draw your second line.
+        courseC_artist_prog_challenge2_b: After you draw the second line, try turning
+          right before you draw your third line.
       courseC_collector_loops_challenge2_authored_hint:
-        courseC_maze_loops_challenge2_a: Upphaflegi kóðinn mundi virka vel - ef það
-          væri aðeins einn fjársjóður í hverri hrúgu!
         courseC_maze_loops_challenge2_b: Notaðu lykkjur svo þú klárir ekki `taka`
           kubbana!
       courseC_collector_prog1_authored_hint:
@@ -4391,6 +4421,8 @@
       courseC_collector_prog_challenge2_authored_hint:
         courseC_collector_prog_challenge1_a: "Þú getur notað `taka` skipunina oftar
           til að safna öðrum fjársjóðum."
+        courseC_collector_prog_challenge1_b: Lost your way?  Try this path to solve
+          the puzzle!
       courseC_external_events_authored_hint: []
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
@@ -4468,6 +4500,39 @@
           reyndar sett eina lykkju innan í aðra! Það er kallað að **falda** lykkju.
       courseC_harvester_loops9_authored_hint: []
       courseC_harvester_loops_challenge1_authored_hint:
+        courseC_harvester_loops_challenge1_a: Ekki láta þér detta í hug að reyna þetta
+          án þess að nota lykkjur!
+        courseC_harvester_loops_challenge1_b: "Þú getur endurtekið `færa áfram` og
+          `tína maís` eins oft og þú þarft, síðan notað `snúa til hægri` á hverju
+          horni."
+        courseC_harvester_loops_challenge1_c: |-
+          Besta leiðin til að safna fyrstu fjórum af maís er að nota `endurtaka` kubb innan í öðrum `endurtaka` kubbi. Þú getur líka notað þetta fyrir afganginn af þrautinni!
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></next></block></xml>
+      courseC_harvester_loops_challenge1a_authored_hint:
         courseC_harvester_loops_challenge1_a: Ekki láta þér detta í hug að reyna þetta
           án þess að nota lykkjur!
         courseC_harvester_loops_challenge1_b: "Þú getur endurtekið `færa áfram` og
@@ -4583,8 +4648,6 @@
         courseC_maze_debugging_challenge1_c: Ef þú kemst ekki áfram getur þú alltaf
           byrjað upp á nýtt eða fjarlægt allan kóðann og fundið þína eigin lausn!
       courseC_maze_debugging_challenge2_authored_hint:
-        courseC_maze_debugging_challenge2_a: Ein leið til að leysa þetta er að bæta
-          við fleiri áfram-hreyfingum á milli snúninganna.
         courseC_maze_debugging_challenge2_b: Ef þú ert að lenda í festum, getur þú
           alltaf byrjað upp á nýtt eða fjarlægt allan kóðann og fundið þína eigin
           lausn!
@@ -4646,6 +4709,11 @@
         courseC_maze_loops_challenge1_b: Inn á milli `endurtaka` kubbanna þarft þú
           að `snúa til vinstri` eða `snúa til hægri` svo Scrat sé tilbúinn fyrir næsta
           mynstur.
+      courseC_maze_loops_challenge1a_authored_hint:
+        courseC_maze_loops_challenge1_a: Think about this path as being two different
+          pieces. Each one has a pattern you can repeat.
+        courseC_maze_loops_challenge1_b: Can you remember how to use loops to repeat
+          a staircase pattern?
       courseC_maze_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_a: Upphaflegi kóðinn mundi virka vel - ef það
           væri aðeins einn fjársjóður í hverri hrúgu!
@@ -4837,8 +4905,8 @@
           ert með í höndunum.
         courseD_artist_binary8_c: Ekki hræðast að gera mistök! Prófaðu að skrifa tvíundir
           og keyra svo kóðann til að sjá hvað gerist. Prófaðu þig áfram.
-      courseD_artist_binaryFP_authored_hint:
-        courseD_artist_binaryFP_a: Keyrðu þennan kóða til að sjá hvað gerist!
+      courseD_artist_binaryFP_authored_hint: []
+      courseD_artist_binaryFP8_authored_hint: []
       courseD_artist_binary_challenge2_authored_hint:
         courseD_artist_binary_challenge2_a: "Það eru aðeins nokkrar rangar línur í
           upphaflega forritinu."
@@ -5025,6 +5093,8 @@
           - teiknaðu þríhyrning
           - hoppaðu áfram 50 díla
           - snúðu til hægri um 90 gráður
+        courseD_artist_nestedLoops_challenge1_d: Put all of your code inside of a
+          `repeat 4 times` loop to finish it off.
       courseD_artist_nestedLoops_challenge2_authored_hint:
         courseD_artist_nestedLoops_challenge2_a: Til að teikna reglulegan átthyrning,
           þarf listamaðurinn að snúa 45 gráður í hvert sinn.
@@ -5116,6 +5186,8 @@
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to
           see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals2_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
           won't.  If you want your code to run in both cases, make sure to use an
           `if` statement.
@@ -5123,6 +5195,8 @@
           slóð framundan` til að fara í gegnum þetta völundarhús."
         courseD_bee_conditionals2_c: "Þú þarft ekki að athuga með býkúpur. Undir skýi
           eru annað hvort blóm eða ekkert."
+        courseD_bee_conditionals2_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals2_test_authored_hint:
         courseD_bee_conditionals2_aa: Need help getting started?  Here is a little
           hint video.
@@ -5136,6 +5210,8 @@
         courseD_bee_conditionals2_d: Need help finishing things up?  Watch this hint
           video.
       courseD_bee_conditionals3_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each
           space to see if it has either a flower or nothing.
         courseD_bee_conditionals3_b: "Þú getur notað `endurtaka` lykkju eða `meðan`
@@ -5143,7 +5219,11 @@
         courseD_bee_conditionals3_c: Ekki hræðast að gera mistök! Prófaðu að bæta
           við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist
           þú ekki hafa klárað lausnina.
+        courseD_bee_conditionals3_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals4_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals4_a: You can still treat every space as if there is
           a cloud over it, even though you can see the whole path.
         courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check
@@ -5151,36 +5231,52 @@
         courseD_bee_conditionals4_c: Notaðu kubbinn <xml><block type="maze_untilBlocked"/></xml>
           og í honum `færa áfram` og athuga með blóm. Ef það er blóm, hvað ætti býflugan
           að gera?
+        courseD_bee_conditionals4_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals5_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals5_a: Hugsaðu hverja hlið á rétthyrndu slóðinni sem
           sjálfstæða slóð. Faldaðu `meðan slóð framundan` lykkju innan í `endurtaka`
           lykkju. Eftir hve mörgum slóðum þarf býflugan að fljúga, ef býflugan þarf
           að fara hverja slóð sem hefur blóm?
-        courseD_bee_conditionals5_b: Innan í `meðan slóð framundan` kubbi þarft þú
-          að hafa `færa áfram` og athuga með blóm. Hvernig athugar þú með blóm? Hvað
-          gerir þú ef þar er blóm?
         courseD_bee_conditionals5_c: "Þrjár hliðar rétthyrningsins hafa blóm, svo
           að kóðinn þarf að `endurtaka 3 sinnum`. Í hverri umferð þarf býflugan að
           fara eftir slóðinni `meðan slóð framundan`. Til að fara eftir slóðinni þarf
           býflugan að `færa áfram`. Á slóðinni þarf býflugan að athuga með blóm. Ef
           þar er blóm, á býflugan að `sækja blómasafa`."
+        courseD_bee_conditionals5_b: Innan í `meðan slóð framundan` kubbi þarft þú
+          að hafa `færa áfram` og athuga með blóm. Hvernig athugar þú með blóm? Hvað
+          gerir þú ef þar er blóm?
+        courseD_bee_conditionals5_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals6_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals6_a: Gættu þess að nota `ef` yrðingu til að athuga
           með býkúpu undir hverju skýi.
         courseD_bee_conditionals6_b: "Í þessu tilfelli þarftu ekki að athuga með blómasafa
           undir skýjunum."
         courseD_bee_conditionals6_c: Er til lykkja sem gæti einfaldað kóðann þinn?
+        courseD_bee_conditionals6_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals7_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
           the challenge."
         courseD_bee_conditionals7_b: Ef ský felur ekki blóm þá hlýtur það að fela
           býkúpu, svo þú þarft ekki að hafa áhyggjur af tómum reitum.
+        courseD_bee_conditionals7_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals7_predict2_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
           the challenge."
       courseD_bee_conditionals8_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals8_a: "**Mundu:** Þessi þraut breytist í hvert sinn
           sem hún er keyrð. \n\nÞú þarft að nota skilyrðiskubb (`ef` eða `ef/annars`)
           til að leysa þessa áskorun."
@@ -5194,6 +5290,8 @@
           Þó að það sé ský beint fyrir framan þig þarftu ekki að fara þangað fyrst. Prófaðu að byrja með skýið sem er neðst til hægri í ferningnum.
 
           ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
+        courseD_bee_conditionals8_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals9_authored_hint: []
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: Getur þú fundið leið sem nær til allra
@@ -5311,6 +5409,19 @@
           * Færa áfram
           * Búa til 3 hunang
           * Fara aftur á bak
+      courseD_bee_debugging_challenge1a_authored_hint:
+        courseD_bee_debugging_challenge1_a: Hvers vegna virkar fyrri helmingur þessa
+          forrits? Hugsaðu um hvers vegna býflugan þarf að fara aftur á bak. Hvað
+          safnar hún miklum blómasafa í hvert sinn sem hún fer yfir blóm?
+        courseD_bee_debugging_challenge1_b: 'To solve this puzzle, have the bee follow
+          the same pattern to make honey that he does when collecting nectar. '
+        courseD_bee_debugging_challenge1_c: |-
+          After the bee makes it to the bottom row, have it repeat these commands:
+
+          * Repeat 2 times:
+          * Move forward
+          * Make honey
+          * Move backward
       courseD_bee_debugging_challenge2_authored_hint:
         courseD_bee_debugging_challenge1_a: Hvers vegna virkar fyrri helmingur þessa
           forrits? Hugsaðu um hvers vegna býflugan þarf að fara aftur á bak. Hvað
@@ -5715,6 +5826,11 @@
           </next>
           </block>
           </xml>
+      courseD_collector_nested_loops_challenge2a_authored_hint:
+        courseD_collector_nested_loops_challenge2a_a: Ekki gleyma að þú getur `endurtekið`
+          eina skipun eða fleiri. Þú getur meira að segja endurtekið `endurtaka` kubb!
+        courseD_collector_nested_loops_challenge2a_b: Can you figure out how to get
+          all four gems without using any more blocks than it takes to get two?
       courseD_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
           Í stað þess að nota fjóra `færa áfram` kubba fyrir hverja hlið, skaltu prófa að setja einn `færa áfram` kubb inn í `endurtaka` lykkju, þannig:
@@ -5979,6 +6095,10 @@
         courseD_harvester_nested_loops_challenge1_a: "Þú hefur líklega nú þegar notað
           lykkju til að búa til sikksakk mynstur. Ef þú manst það algrím, getur þú
           bætt nokkrum atriðum við það hér."
+        courseD_harvester_nested_loops_challenge1_b: To collect more than one piece
+          of corn, you need to use `pick corn` more than one time.
+        courseD_harvester_nested_loops_challenge1_c: You will need to put a small
+          loop inside of your main loop to solve this puzzle!
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: Ekki gleyma að þú getur `endurtekið`
           eina skipun eða fleiri. Þú getur meira að segja endurtekið `endurtaka` kubb!

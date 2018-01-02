@@ -2334,6 +2334,12 @@
               name: Khảo sát sau khóa học của học sinh CSP
             Creating Functions with Parameters:
               name: Tạo ra Chức năng với các tham số
+            CSP End-of-Semester Mid-course survey:
+              name: CSP End-of-Semester Mid-course survey
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions
@@ -5489,6 +5495,10 @@
               name: Designing Screens with Code
             Arrays:
               name: Arrays
+            Making Music:
+              name: Tạo âm nhạc
+            Arrays and For Loops:
+              name: Arrays and For Loops
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -6196,6 +6206,8 @@
                 deciding what to do with data that does not easily fit into the visualization
                 scheme that they have chosen.  Last, students look at what parts of
                 this process can be automated, and what need a human to make decisions.
+            Keeping Data Secret:
+              name: Keeping Data Secret
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -6534,6 +6546,8 @@
               name: Bật lại
             NewBounce:
               name: NewBounce
+            F PlayLab Variables:
+              name: F PlayLab Variables
           title: ''
           description_audience: ''
           description_short: ''
@@ -7848,6 +7862,10 @@
               name: Phần 3 Chương 1 Đánh giá
             foo:
               name: foo
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey:
+              name: Please complete the CSP Mid-course survey
           title: ''
           description_audience: ''
           description_short: Lập trình
@@ -8441,6 +8459,16 @@
               name: 'Technology Foundations: What is a Computer?'
             'Data Science: Problem Solving with Big Data':
               name: 'Data Science: Problem Solving with Big Data'
+            Personal Innovations:
+              name: "Đổi mới sáng tạo cá nhân"
+            What is a Computer?:
+              name: Máy tính là gì?
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Programming - Hour of Code:
+              name: Programming - Hour of Code
+            Simple Encryption:
+              name: Simple Encryption
           title: PwC Access Your Potential
           description_audience: ''
           description_short: ''
@@ -8508,6 +8536,8 @@
               name: Giới thiệu về AppLab - ứng dụng đầu tiên của bạn 4
             Intro to AppLab - Getting Started:
               name: Giới thiệu về AppLab - bắt đầu
+            Intro to App Lab:
+              name: Giới thiệu App Lab (Beta)
           title: Intro to App Lab Staging
           description_audience: ''
           description_short: ''
@@ -8525,6 +8555,8 @@
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Thiết lập công nghệ - danh mục đầu tư kỹ thuật số AP và các công
                 cụ khác
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Setup: Digital Portfolio and Other Tools'
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
@@ -8561,6 +8593,14 @@
             standalone template:
               name: standalone template
           title: 'CSP3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        aws-demo:
+          stages:
+            new stage:
+              name: giai đoạn mới
+          title: AWS Demo
           description_audience: ''
           description_short: ''
           description: ''

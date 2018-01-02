@@ -1430,6 +1430,18 @@
       CSDU6 arrays random_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select icons_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select rainbow_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_instruction: |-
+        Write a program that displays a
+        randomly chosen color from the array. (Click to see full instructions)
       CSDU6 arrays variable_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
@@ -3257,6 +3269,53 @@
         op, daarna een andere kant, om me bij het varken te krijgen
       Course1MazeAssessment2_instruction: Dit is een test!\r Beweeg me eerst één kant
         op, daarna een andere kant, om me bij het varken te krijgen.
+      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
+        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars10_instruction: |-
+        Free Play time! Here are all of the variables
+        we've played with so far in this stage, as well as a few more in case you
+        want them. \r
+        \r
+        Notice that there are now so many blocks in our toolbox
+        that they need to be organized!  Here, we've put each piece into an appropriate
+        category.  Take some time to explore everything that is available. When you're
+        done browsing, make a game or story using repeats, variables, and events.  \r
+        \r
+        Hint:
+        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars2_instruction: |-
+        The race in that last puzzle wasn't very
+        fair! Change the `dog_speed` variable to make sure you can collect more flags
+        than Cat. The first to collect 10 flags wins!
+      CourseF_PlayLab_vars3_instruction: Dit is een nieuw soort spel! Gebruik de pijltjes
+        naar links en rechts om te beweeg en het pijltje omhoog om te springen. Kijk
+        of je alle vlaggen kunt verzamelen.
+      CourseF_PlayLab_vars4_instruction: 'Nu gebruiken we de variabele "hoogte" om
+        de hoogte van de sprong te beheren. Verander de "hoogte"-variabele zodat de
+        hond hoog genoeg kan springen om alle vlaggen te pakken. Tip: de nieuwe vlaggen
+        zijn 200 pixels hoog.'
+      CourseF_PlayLab_vars5_instruction: 'Laten we een spel maken! Allereerst heb
+        je een score nodig. Gebruik de "zet punten op"-blok om de score op 10 te zetten. '
+      CourseF_PlayLab_vars6_instruction: |-
+        Hoe moeten we punten scoren in ons spel?
+        Voeg elke keer als de hond de kat raakt met een vuurbal 1 punt toe.
+        Gebruik de "wanneer actor 2 iets raakt-gebeurtenis om je score te verhogen. Je kunt je score verhogen door "score = score + 1".
+        Als je score 10 is, heb je de level gehaald.
+      CourseF_PlayLab_vars7_instruction: |-
+        Hoe moeten we punten scoren in ons spel?
+        Voeg elke keer als de hond de kat raakt met een vuurbal 1 punt toe.
+        Gebruik de "wanneer actor 2 iets raakt-gebeurtenis om je score te verhogen. Je kunt je score verhogen door "score = score + 1".
+        Als je score 10 is, heb je de level gehaald.
+      CourseF_PlayLab_vars8_instruction: |-
+        Hoe moeten we punten scoren in ons spel?
+        Voeg elke keer als de hond de kat raakt met een vuurbal 1 punt toe.
+        Gebruik de "wanneer actor 2 iets raakt-gebeurtenis om je score te verhogen. Je kunt je score verhogen door "score = score + 1".
+        Als je score 10 is, heb je de level gehaald.
+      CourseF_PlayLab_vars9_instruction: |-
+        Nice, now let's make sure this game isn't
+        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
+        2), you should lose a point. Start with 10 points so it's not too hard. Let
+        your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution_instruction: Instructies
       Crack a Caesar Cipher_instruction: Instructies
       ECSPD Binary Odometer_instruction: |-
@@ -7350,11 +7409,16 @@
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_forVideo_instruction: Gebruik de 'herhaal` lus om golven
+        aan het water toe te voegen.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: 'Uitdaging: Herstel de trappen.'
       courseA_artist_loops_challenge2_instruction: |-
         "Kan je me helpen twee vogelhuisjes
         te maken?"
+      courseA_artist_loops_challenge2a_instruction: |-
+        *"Help me get these three tents
+        set up!"*
       courseA_artist_loops_challenge3_instruction: Laten we een spel spelen! Teken
         zoveel mogelijk X'en als je maar kan! Kan er 3 in een rij tekenen?
       courseA_collector_loops1_instruction: |-
@@ -7527,6 +7591,9 @@
       courseB_collector_loops_challenge2_instruction: |-
         Laten we de schatten verzamelen! Help me door iedere rij en kom iedere keer terug om aan de volgende rij te beginnen.
         Kan jij een patroon vinden?
+      courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: 'Je kan deze keer slechts één
         van ieder pijltjesblok gebruiken. Verzamel alle schatten! '
       courseB_collector_prog1_instruction: Dit is Laurel de Avonturier! Kan jij haar
@@ -7737,6 +7804,8 @@
         De kortst mogelijke oplossing bevat slechts 6 blokken. Je kan gebruik maken van zoveel blokken je maar wil.
       courseC_artist_prog_challenge2_instruction: Help me de gele lijnen op deze weg
         schilderen! *
+      courseC_artist_prog_challenge2a_instruction: Help me de gele lijnen op deze
+        weg schilderen! *
       courseC_collector_loops_challenge2_instruction: Verzamel alle schatten!
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
@@ -7830,6 +7899,7 @@
         Collect all of the corn and all of the
         pumpkins.
       courseC_harvester_loops_challenge1_instruction: Verzamel alle maïs.
+      courseC_harvester_loops_challenge1a_instruction: Verzamel alle maïs.
       courseC_harvester_loops_challenge2_instruction: |-
         Verzamel alle sla.
         Vermijd de bomen en de velden!
@@ -7889,6 +7959,8 @@
         puzzles to complete this level.
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
       courseC_maze_loops_challenge1_instruction: 'Nu wil Scrat proberen gebruikmaken
+        van lussen om zijn eikel te vinden! '
+      courseC_maze_loops_challenge1a_instruction: 'Nu wil Scrat proberen gebruikmaken
         van lussen om zijn eikel te vinden! '
       courseC_maze_loops_challenge2_instruction: |-
         Laten we naar schatten zoeken, gebruik makende van loops!
@@ -7999,6 +8071,8 @@
         \r
         See what happens when we start to
         get creative with the bits!
+      courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
+        binary! "
       courseD_artist_binary_challenge0_instruction: Probeer gebruik te maken van geneste
         lussen om deze tekening te voltooien.
       courseD_artist_binary_challenge1_instruction: Je kan elk van de binaire waardes
@@ -8191,6 +8265,10 @@
         Watch how the bees gets the
         nectar. Can you use the same kind of pattern to help the bee make all of the
         honey?
+      courseD_bee_debugging_challenge1a_instruction: |-
+        Watch how the bees gets the
+        nectar. Can you use the same kind of pattern to help the bee make all of the
+        honey?
       courseD_bee_debugging_challenge2_instruction: |-
         Watch how the bees gets the
         nectar. Can you use the same kind of pattern to help the bee make all of honey?
@@ -8338,6 +8416,10 @@
         Are you an expert of nested
         loops? Use what you have learned so far to collect all of the treasure!
       courseD_collector_nested_loops_challenge2_instruction: |-
+        Help the collector
+        reach at least two piles of treasure using only the blocks in your toolbox.
+        It is possible to collect all 4.
+      courseD_collector_nested_loops_challenge2a_instruction: |-
         Help the collector
         reach at least two piles of treasure using only the blocks in your toolbox.
         It is possible to collect all 4.
@@ -8577,8 +8659,9 @@
         down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
         **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: |-
-        If the pirate is in the safe zone, wait
-        one second, then deduct a point as long as he stays beneath the octopus line.
+        If the pirate (actor 1) is in the safe
+        zone, wait one second, then deduct a point as long as he stays beneath the
+        octopus line.
       courseD_playLab_cond6cloneForTest_instruction: Testing
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to

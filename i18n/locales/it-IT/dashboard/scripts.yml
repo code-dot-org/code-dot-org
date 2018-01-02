@@ -303,8 +303,8 @@ it:
               name: Tradizionale &ndash; Videogiochi e Piani Cartesiani
         infinity:
           title: Disney Infinity
-          description: Crea una storia o inventa un gioco con i personaggi di Disney Infinity come protagonisti!
-          description_short: Crea una storia o inventa un gioco con i personaggi di Disney Infinity come protagonisti!
+          description: Usa il Laboratorio per creare una storia o inventare un gioco con i personaggi di Disney Infinity come protagonisti!
+          description_short: Usa il Laboratorio per creare una storia o inventare un gioco con i personaggi di Disney Infinity come protagonisti!
           stages:
             Infinity:
               name: Infinito
@@ -1170,7 +1170,7 @@ it:
             Text Compression Lesson:
               name: Lezione Compressione del Testo
             Text Compression Widget:
-              name: Compressione del Testo
+              name: Componente per la compressione del testo
             Welcome!:
               name: Benvenuto!
         K5-OnlinePD:
@@ -3265,7 +3265,7 @@ it:
         csd3:
           title: CSD Unit 3 - Animations and Games
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
-          description_short: "Programmazione"
+          description_short: "Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi."
           description_audience: ''
           stages:
             Booleans and Conditionals:
@@ -3718,7 +3718,7 @@ it:
         csd2:
           title: CSD Unit 2 - Web Development
           description_audience: ''
-          description_short: "  Learn to build your own web site in Web Lab."
+          description_short: "  Imparare a costruire il tuo sito web con Sviluppo Web."
           description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet."
           stages:
             new stage:
@@ -4598,6 +4598,8 @@ it:
               name: Arrays
             Making Music:
               name: Making Music
+            Arrays and For Loops:
+              name: Arrays and For Loops
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -4713,7 +4715,7 @@ it:
           description: This level progression is intended to accompany an in-person Maker Toolkit Workshop. This is not intended to teach the tool or CS concepts, but rather to support a workshop facilitator in introducing attendees to the breadth of App Lab and the Maker Toolkit.
           stages:
             App Lab Basics:
-              name: App Lab Basics
+              name: Le basi di Sviluppo App
             The Circuit Playground:
               name: The Circuit Playground
             Physical Input:
@@ -4928,6 +4930,8 @@ it:
               name: Structuring Data
               description_student: This lesson goes further into the interpretation of data, including cleaning and visualizing raw data sets.  The class first looks at the how presenting data in different ways can help people to understand it better.  After seeing how cleaning and visualization can help people make better decisions, the class looks at what parts of this process can be automated, and what need a human.
               description_teacher: In this lesson, students go further into the collection and interpretation of data, including cleaning and visualizing raw data sets.  Students first look at the how presenting data in different ways can help people to understand it better.  They then visualize their own raw data set, in the context of a pizza topping survey, deciding what to do with data that does not easily fit into the visualization scheme that they have chosen.  Last, students look at what parts of this process can be automated, and what need a human to make decisions.
+            Keeping Data Secret:
+              name: Keeping Data Secret
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -5256,6 +5260,8 @@ it:
               name: Ping-Pong
             NewBounce:
               name: NewBounce
+            F PlayLab Variables:
+              name: F PlayLab Variables
           title: ''
           description_audience: ''
           description_short: ''
@@ -6184,9 +6190,9 @@ it:
         applab-intro:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
-              name: Intro to AppLab - Choose Your Own Adventure
+              name: Introduzione a Sviluppo App - Scegli la Tua Avventura
             Intro to AppLab - Choose Your Own Adventure 2:
-              name: Intro to AppLab - Choose Your Own Adventure 2
+              name: Introduzione a Sviluppo App - Scegli la Tua Avventura 2
             Intro to AppLab - Your First App:
               name: Intro to AppLab - Your First App
             Intro to AppLab - Your First App 2:
@@ -6196,12 +6202,12 @@ it:
             Intro to AppLab - Your First App 4:
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
-              name: Intro to AppLab - Getting Started
+              name: Introduzione a Sviluppo App - Per cominciare
             Intro to App Lab:
-              name: Intro to App Lab
+              name: Introduzione a Sviluppo App
             'Lesson 1: App Lab Intro':
               name: 'Lesson 1: App Lab Intro'
-          title: Intro to App Lab
+          title: Introduzione a Sviluppo App
           description_audience: ''
           description_short: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
           description: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
@@ -6772,9 +6778,9 @@ it:
         applab-intro-staging:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
-              name: Intro to AppLab - Choose Your Own Adventure
+              name: Introduzione a Sviluppo App - Scegli la Tua Avventura
             Intro to AppLab - Choose Your Own Adventure 2:
-              name: Intro to AppLab - Choose Your Own Adventure 2
+              name: Introduzione a Sviluppo App - Scegli la Tua Avventura 2
             Intro to AppLab - Your First App:
               name: Intro to AppLab - Your First App
             Intro to AppLab - Your First App 2:
@@ -6784,7 +6790,9 @@ it:
             Intro to AppLab - Your First App 4:
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
-              name: Intro to AppLab - Getting Started
+              name: Introduzione a Sviluppo App - Per cominciare
+            Intro to App Lab:
+              name: Introduzione a Sviluppo App
           title: Intro to App Lab Staging
           description_audience: ''
           description_short: ''
@@ -6820,7 +6828,7 @@ it:
           title: Create - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
-          description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
+          description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -6836,6 +6844,14 @@ it:
             standalone template:
               name: standalone template
           title: 'CSP3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        aws-demo:
+          stages:
+            new stage:
+              name: new stage
+          title: AWS Demo
           description_audience: ''
           description_short: ''
           description: ''
