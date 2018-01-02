@@ -1,61 +1,61 @@
 ---
-title: '<%= hoc_s(:title_how_to_events) %>'
+title: <%= hoc_s(:title_how_to_events) %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Hvordan organisere Kodetimen
+# Hvordan arrangere en Kodetime
 
-## 1. Prepare for your event
+## Forberedelser til arrangementet
 
-- Determine a venue, date, and time.
-- Send [et brev](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) for å invitere din lokale ordfører, fylkesmann, stortingsrepresentant eller annen innflytelsesrik person for holde tale.
-- Inviter media/presse, som lokalnytt, aviser, bloggere, eller lignende. Se vår [pressepakke](%= resolve_url('/promote/press-kit') %) for hjelp.
+- Velg tid og sted for arrangementet.
+- [Inviter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) borgermesteren, rådmannen, en lokalpolitiker, eller en sentral aktør fra det lokale næringslivet, til å tale. Sjekk ut [våre tips](%=resolve_url('/files/elected-official.pdf')%) til hvordan man gjennomfører Kodetimen med en offisiell representant tilstede.
+- Inviter pressen, f.eks. journalister fra lokalaviser og riksdekkende presse, lokale tv-stasjoner, og bloggere. Se vår [pressepakke](%= resolve_url('/promote/press-kit') %) for hjelp.
 
-## 2. During your event
+## 2. I løpet av arrangementet
 
-- Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
-- Gi en introduksjon hvor du beskriver viktigheten av informastikk ved hjelp av denne [statistikken and infografikken](%= resolve_url('/promote/stats') %).   
+- Start arrangementet med å vise en av våre [inspirerende videoer](%= resolve_url('/promote/resources#videos') %).
+- Gi en kort introduksjon hvor du forklarer hvorfor informatikk er viktig, benytt gjerne [statistikk og grafikk](%= resolve_url('/promote/stats') %) fra våre nettsider.   
       
     
 - Andre ideer: 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
-    - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+    - Inviter en representant fra næringslivet til å beskrive og diskutere deres bruk av informasjonsteknologi.
+    - Inviter en lokalpolitiker og få elevene til å lære ham/henne litt koding.
+    - Få en gruppe studenter til å demonstrere en aktivitet som ikke krever nettilgang.
+    - Sett en gruppe elever til å lære rektor eller en håndfull lærere å kode.
+    - Hvis skolen deres allerede har informatikk på timeplanen, be noen elever om å vise frem hva de driver med.
 
-## 3. Share how it went
+## 3. Del resultater og erfaringer
 
-- Del bilder fra arrangementet på Facebook og Twitter. 
-- Use the hashtag **#HourOfCode**
+- Del bilder fra arrangementet på Facebook og Twitter. Husk å be om tillatelse fra alle deltagerne. 
+- Bruk emneknaggen **#kodetimen**.
 
-## Host a Family Code Night with the Hour of Code and invite parents to participate
+## Arranger en Kodekveld der dere inviterer familie og foreldre
 
-Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Vurder et arrangement for småtrinnet på skolen, og inviter med foreldrene på en informatikktime. Det er en fin måte å engasjere lokalsamfunnet, og å få foreldrene til å støtte opp under informatikk i skolen. Partnerne våre i Familie-Kodekvelden tilbyr et alt-i-ett-opplegg med planleggingslister, arrangørinformasjon, invitasjonsbrev, plakater, presentasjonsmateriell og annet for å forenkle gjennomføringen. [Klikk her for å laste ned planleggingsmalen](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 ## Eksempel på arrangementsplan
 
-**Arrangement:** Kodeuka kick-off samling for hele skolen
+**Arrangement:** Kodeuka kick-off - samling for hele skolen
 
-**Date:** Dec. 5th (start of Computer Science Education Week)
+**Dato:** 5. desember (starten på Kodeuka)
 
-**Tid:** I løpet av skoledagen, fortrinnsvis på formiddagen. Ca 1. time.
+**Tid:** I løpet av skoledagen, fortrinnsvis på formiddagen. Ca 1 time.
 
-**Sted:**Skolens forsamlingslokale, f.eks. amfiet, gymsalen, kantinen e.l   
+**Sted:**Skolens forsamlingslokale, f.eks. amfiet, gymsalen, kantinen e.l.   
   
 
 
 ## Kjøreplan
 
-| Tid           | Oppgave                                                                                                                                          |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 10:00 - 10:05 | Åpne med en av våre [inspirerende videoer](%= resolve_url('/promote/resources#videos') %)                                                        |
-| 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %). |
-| 10:15 - 10:30 | Spesielt inviterte gjester snakker om sin bakgrunn og hvordan teknologi og datavitenskap spiller en viktig rolle i deres hverdag.                |
-| 10:30 - 10:40 | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                        |
-| 10:40 - 11:00 | Elever demonstrerer en aktivitet uten pc, og hvordan datavitenskap kan læres uten å bruke datamaskiner.                                          |
-| 11:00 - 11:05 | Lærer som var med på å få arrangementet til skolen, gir noen sluttkommentarer.                                                                   |
+| Tid           | Oppgave                                                                                                                                                                            |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 | Start med en av våre [inspirerende videoer](%= resolve_url('/promote/resources#videos') %).                                                                                        |
+| 10:05 - 10:15 | Rektor introduserer arrangementet, og forteller litt om hvorfor informatikk er viktig. Bruk gjerne [grafer og statistikk](%= resolve_url('/promote/stats') %) fra nettsidene våre. |
+| 10:15 - 10:30 | Spesielt inviterte gjester forteller om sin bakgrunn og hvordan informasjonsteknologi og datavitenskap påvirker deres hverdag.                                                     |
+| 10:30 - 10:40 | Studenter demonstrerer hvordan Kodetimen fungerer. En artig vri kan være å få dem til å lære bort til rektor, en politiker, eller andre studenter!                                 |
+| 10:40 - 11:00 | Elever demonstrerer en oppgave uten pc, og hvordan datavitenskap kan læres uten bruk av datamaskiner.                                                                              |
+| 11:00 - 11:05 | Læreren som var med på å få arrangementet til skolen, gir noen sluttkommentarer.                                                                                                   |
 
 <%= view :signup_button %>

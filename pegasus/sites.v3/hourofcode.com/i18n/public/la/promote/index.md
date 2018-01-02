@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_promote) %>'
+title: <%= hoc_s(:title_how_to_promote) %>
 layout: wide
 nav: promote_nav
 ---
@@ -16,7 +16,7 @@ nav: promote_nav
 
 ## 1. Corre la voz
 
-¡Habla a tus amigos de la **#HoraDelCódigo**!
+¡Dile a tus amigos sobre la #HoraDelCódigo!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 

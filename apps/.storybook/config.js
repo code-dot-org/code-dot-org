@@ -5,6 +5,7 @@ import Node from '@kadira/react-storybook-addon-info/dist/components/Node';
 import {Pre} from '@kadira/react-storybook-addon-info/dist/components/markdown/code';
 import addStoriesGroup from 'react-storybook-addon-add-stories-group';
 import experiments from '@cdo/apps/util/experiments';
+import withReduxStore from '../test/util/withReduxStore';
 
 import '../style/common.scss';
 import '../style/netsim/style.scss';
@@ -39,7 +40,6 @@ const styles = {
     float: 'right',
   },
 };
-
 
 const storybookWrapper = Object.create(storybook);
 storybookWrapper.deprecatedStoriesOf = (name, module, options) => {
@@ -102,6 +102,8 @@ storybook.setAddon({
     this.experiments = experimentList;
   }
 });
+
+storybook.setAddon(withReduxStore);
 
 storybook.setAddon({
   addStoryTable(items) {

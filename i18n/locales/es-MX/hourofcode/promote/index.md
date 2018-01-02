@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_promote) %>'
+title: <%= hoc_s(:title_how_to_promote) %>
 layout: wide
 nav: promote_nav
 ---
@@ -13,7 +13,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 1. Corre la voz
 
-¡Habla a tus amigos de la **#HoraDelCódigo**!
+¡Dile a tus amigos sobre la #HoraDelCódigo!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 

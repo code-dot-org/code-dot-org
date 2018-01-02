@@ -128,21 +128,6 @@ class ChannelsTest < Minitest::Test
     assert_equal "\xF0\x9F\x91\x8D", JSON.parse(last_response.body)['emoticon']
   end
 
-  def test_create_channel_from_src
-    post '/v3/channels', {abc: 123, hidden: true, frozen: true}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    channel_id = last_response.location.split('/').last
-
-    post "/v3/channels?src=#{channel_id}", '', 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    assert last_response.redirection?
-    follow_redirect!
-
-    response = JSON.parse(last_response.body)
-    assert last_request.url.end_with? "/#{response['id']}"
-    assert_equal 123, response['abc']
-    assert_equal false, response['hidden']
-    assert_equal false, response['frozen']
-  end
-
   def test_publish_and_unpublish_channel
     stub_user = {name: ' xavier', birthday: 14.years.ago.to_datetime}
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
@@ -326,6 +311,23 @@ class ChannelsTest < Minitest::Test
 
     post "/v3/channels/#{channel_id}", '{', 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert_equal 400, last_response.status
+  end
+
+  def test_remix_parent
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    encrypted_parent_channel_id = last_response.location.split('/').last
+
+    post "/v3/channels?parent=#{encrypted_parent_channel_id}", {def: 456}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.redirection?
+    follow_redirect!
+
+    response = JSON.parse(last_response.body)
+    assert last_request.url.end_with? "/#{response['id']}"
+    assert_equal 456, response['def']
+
+    _, channel_id = storage_decrypt_channel_id(response['id'])
+    _, parent_channel_id = storage_decrypt_channel_id(encrypted_parent_channel_id)
+    assert_equal parent_channel_id, PEGASUS_DB[:storage_apps].where(id: channel_id).first[:remix_parent_id]
   end
 
   private

@@ -2,13 +2,13 @@
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`,
-          I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        2-3_Artist_1_new_a: Agar "oldinga 100 piksel yur" blogini menga qo'llasangiz,
+          men avtomatik tarzda chiqiz chizaman.
+        2-3_Artist_1_new_b: Burishga qiynalyapsizmi? "90 gradusga burish" blogidan
+          foydalaning.
       2-3 Artist 11_authored_hint:
-        2-3_Artist_11_a: 'Having trouble with the angles? You need to go 360 degrees
-          in 8 turns.  What is 360/8? '
+        2-3_Artist_11_a: 'Burchaklar qiyinchilik tug''diryaptimi? Siz 360 gradusning
+          8 dan 1 ulushicha burishingiz kerak. 360/8 nimaga teng? '
       2-3 Artist 12_authored_hint:
         2-3_Artist_12_a: There are 360 degrees in a circle, so if the artist turns
           1 degree each time through the loop, he'll need to go through 360 times.
@@ -10959,6 +10959,7 @@
           *if* there is a honeycomb.
         courseF_bee_functions3_c: Use the green `only make honey` block to call your
           function.
+        courseF_bee_functions3_d: Check out this path.
       courseF_bee_functions3a_authored_hint:
         courseF_bee_functions3a_a: 'Your function for this puzzle only needs to get
           nectar or make honey, it shouldn''t have any `move forward` or `turn` blocks
@@ -11981,10 +11982,10 @@
         grade2_CaringForNewPet_7D_a: Don't forget to use the "Step" button to go through
           block by block and look for errors.
       grade2_MakeDogTag_1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`,
-          I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        2-3_Artist_1_new_a: Agar "oldinga 100 piksel yur" blogini menga qo'llasangiz,
+          men avtomatik tarzda chiqiz chizaman.
+        2-3_Artist_1_new_b: Burishga qiynalyapsizmi? "90 gradusga burish" blogidan
+          foydalaning.
       grade2_MakeDogTag_2_authored_hint:
         2-3_Artist_2_new_a: To create this window, just draw a square with 100 pixel
           sides.
@@ -12572,10 +12573,10 @@
       grade4_bee_nestedLoops5_authored_hint:
         grade4_bee_nestedLoops5_a: You will need 4 repeat blocks!
       grade4_review_artist1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`,
-          I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        2-3_Artist_1_new_a: Agar "oldinga 100 piksel yur" blogini menga qo'llasangiz,
+          men avtomatik tarzda chiqiz chizaman.
+        2-3_Artist_1_new_b: Burishga qiynalyapsizmi? "90 gradusga burish" blogidan
+          foydalaning.
       grade4_review_artist2_authored_hint:
         2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each
           time than you did with the square.   '

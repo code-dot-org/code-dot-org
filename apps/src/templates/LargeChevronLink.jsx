@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import FontAwesome from './FontAwesome';
 import color from "../util/color";
-import Radium from 'radium';
 
 const styles = {
   link: {
@@ -10,6 +10,7 @@ const styles = {
   linkBox: {
     marginTop: 10,
     marginBottom: 10,
+    width: '100%'
   },
   linkText: {
     fontSize: 20,
@@ -44,12 +45,12 @@ class LargeChevronLink extends Component {
   };
 
   render() {
-    const { link, linkText, isRtl }= this.props;
+    const { link, linkText, isRtl } = this.props;
     const localeStyle = isRtl ? styles.right : styles.left;
     const icon = isRtl ? "chevron-right" : "chevron-left";
 
     return (
-      <div style={[styles.linkBox, localeStyle]}>
+      <div style={{...styles.linkBox, ...localeStyle}}>
         <a href={link} style={styles.link}>
           {!isRtl && (
             <FontAwesome icon={icon} style={styles.chevron}/>
@@ -68,4 +69,6 @@ class LargeChevronLink extends Component {
   }
 }
 
-export default Radium(LargeChevronLink);
+export default connect(state => ({
+  isRtl: state.isRtl,
+}))(LargeChevronLink);

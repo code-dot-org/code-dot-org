@@ -13,6 +13,20 @@ level 'courseD_maze_ramp5b', challenge: true
 level 'courseD_maze_ramp5c'
 level 'courseD_maze_ramp5d'
 
+stage 'Building a Foundation'
+level 'BuildingAFoundation'
+
+stage 'Debugging in Collector'
+level 'courseD_video_debugging'
+level 'courseD_collector_debugging1a'
+level 'courseD_collector_debugging2a'
+level 'courseD_collector_debugging3a'
+level 'courseD_collector_debugging4a'
+level 'courseD_collector_debugging5a'
+level 'courseD_collector_debugging6a', challenge: true
+level 'courseD_collector_debugging8a'
+level 'courseD_collector_debugging9a'
+
 stage 'Events in Bounce'
 variants
   level 'courseD_bounce_events1s'
@@ -46,20 +60,6 @@ variants
   level 'courseD_bounce_events12s'
   level 'bounce_12'
 endvariants
-
-stage 'Building a Foundation'
-level 'BuildingAFoundation'
-
-stage 'Debugging in Collector'
-level 'courseD_video_debugging'
-level 'courseD_collector_debugging1a'
-level 'courseD_collector_debugging2a'
-level 'courseD_collector_debugging3a'
-level 'courseD_collector_debugging4a'
-level 'courseD_collector_debugging5a'
-level 'courseD_collector_debugging6a', challenge: true
-level 'courseD_collector_debugging8a'
-level 'courseD_collector_debugging9a'
 
 stage 'Loops in Artist'
 level 'ramp_video_artistIntro'

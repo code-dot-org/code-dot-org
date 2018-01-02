@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_partners) %>'
+title: <%= hoc_s(:title_partners) %>
 ---
 Programmēšanas stundu vada Programmēšanas stundas un datorzinātnes izglītības nedēļas konsultēšanas un vērtēšanas komitejas.
 

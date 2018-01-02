@@ -1,14 +1,14 @@
 import $ from 'jquery';
 import React, { PropTypes, Component } from 'react';
 import ReactDOM from 'react-dom';
-import Responsive from '../../responsive';
+import { connect } from 'react-redux';
 import {UnconnectedCensusForm as CensusForm} from './CensusForm';
 import YourSchoolResources from './YourSchoolResources';
 import Notification, { NotificationType } from '../Notification';
 import MobileNotification from '../MobileNotification';
 import i18n from "@cdo/locale";
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import _ from 'lodash';
+import { ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
 
 const styles = {
   heading: {
@@ -30,54 +30,24 @@ const styles = {
   }
 };
 
-export default class YourSchool extends Component {
+class YourSchool extends Component {
   static propTypes = {
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     alertHeading: PropTypes.string,
     alertText: PropTypes.string,
     alertUrl: PropTypes.string,
     hideMap: PropTypes.bool
   };
 
-  constructor(props) {
-    super(props);
-    this.responsive = new Responsive();
-    this.state = {
-      windowWidth: $(window).width(),
-      windowHeight: $(window).height(),
-      mobileLayout: this.responsive.isResponsiveCategoryInactive('md')
-    };
-  }
-
   componentDidMount() {
     if (!this.props.hideMap) {
       $('#map').appendTo(ReactDOM.findDOMNode(this.refs.map)).show();
     }
-    // Resize handler.
-    window.addEventListener('resize', _.debounce(this.onResize, 100).bind(this));
-  }
-
-  onResize() {
-    const windowWidth = $(window).width();
-    const windowHeight = $(window).height();
-
-    // We fire window resize events when the grippy is dragged so that non-React
-    // controlled components are able to rerender the editor. If width/height
-    // didn't change, we don't need to do anything else here
-    if (windowWidth === this.state.windowWidth &&
-        windowHeight === this.state.windowHeight) {
-      return;
-    }
-
-    this.setState({
-      windowWidth: $(window).width(),
-      windowHeight: $(window).height()
-    });
-
-    this.setState({mobileLayout: this.responsive.isResponsiveCategoryInactive('md')});
   }
 
   render() {
-    const desktop = (this.responsive.isResponsiveCategoryActive('lg') || this.responsive.isResponsiveCategoryActive('md'));
+    const {responsiveSize} = this.props;
+    const desktop = (responsiveSize === ResponsiveSize.lg) || (responsiveSize === ResponsiveSize.md);
 
     return (
       <div>
@@ -90,7 +60,6 @@ export default class YourSchool extends Component {
             buttonLink={this.props.alertUrl}
             dismissible={false}
             newWindow={true}
-            isRtl={false}
             width="100%"
           />
         )}
@@ -124,3 +93,7 @@ export default class YourSchool extends Component {
     );
   }
 }
+
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+}))(YourSchool);

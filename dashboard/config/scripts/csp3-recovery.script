@@ -1,0 +1,7 @@
+login_required true
+hideable_stages true
+student_detail_progress_view true
+has_verified_resources true
+
+stage 'Under the sea recovery'
+level 'U3L08 - introUnderTheSea - clone for recovery', progression: 'Click here for instructions on how to recover your Under the Sea project code.'

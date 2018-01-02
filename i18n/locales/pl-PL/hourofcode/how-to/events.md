@@ -1,16 +1,16 @@
 ---
-title: '<%= hoc_s(:title_how_to_events) %>'
+title: <%= hoc_s(:title_how_to_events) %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Jak zorganizować wydarzenie Godzin Kodowania
+# Jak zorganizować wydarzenie Godziny Kodowania
 
 ## 1. Przygotuj własne wydarzenie
 
 - Określ miejsce, datę i czas.
-- Wyślij [list](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) z zaproszeniem do miejscowych władz. Zaproponuj, aby wygłosili krótkie przemówienie na otwarciu.
+- Wyślij [list](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) z zaproszeniem do miejscowych władz. Zaproponuj, aby wygłosili krótkie przemówienie na otwarciu. Sprawdź nasze [ instrukcje](%=resolve_url('/files/elected-official.pdf')%), gdy gościsz oficjeli podczas Godziny Kodowania, aby uzyskać więcej informacji.
 - Zaproś media i prasę, np. lokalną rozgłośnię radiową, gazetę, blogerów zajmujących się techniką lub edukacją. Sprawdź nasz [pakiet dla prasy](%= resolve_url('/promote/press-kit') %).
 
 ## 2. W czasie Twojego wydarzenia
@@ -20,7 +20,7 @@ nav: how_to_nav
       
     
 - Inne pomysły: 
-    - Zaproś lokalnego lidera z branży It, by porozmawiać o jej lub jego pracy związanej z informatyk.
+    - Zaproś lokalnego lidera z branży IT, by porozmawiać o jej lub jego pracy związanej z informatyk.
     - Zaproś lokalnego polityka i niech uczniowie nauczą go, jak się koduje.
     - Zaproponuj, aby grupa uczniów zademonstrowała ćwiczenia bez komputera.
     - Niech grupa uczniów nauczy, jak się koduje dyrektora lub grupę nauczycieli.
@@ -29,7 +29,7 @@ nav: how_to_nav
 ## 3. Podziel się, jak poszło
 
 - Udostępnij zdjęcia z Twojej Godziny Kodowania na Facebooku i Twitterze. 
-- Użyj hasztag **#HourofCode**
+- Użyj hasztaga **#HourofCode**
 
 ## Zorganizuj Rodzinną Noc Kodowania z Godziną Kodowania i zaproś rodziców do udziału
 

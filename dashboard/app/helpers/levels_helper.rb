@@ -113,11 +113,7 @@ module LevelsHelper
       callout_hash.delete('localization_key')
       callout_hash['seen'] = always_show ? nil : callouts_seen[callout.localization_key]
       callout_text = data_t('callout.text', callout.localization_key)
-      if callout_text.nil?
-        callout_hash['localized_text'] = callout.callout_text
-      else
-        callout_hash['localized_text'] = callout_text
-      end
+      callout_hash['localized_text'] = callout_text.nil? ? callout.callout_text : callout_text
       callout_hash
     end
   end
@@ -203,22 +199,23 @@ module LevelsHelper
       end
     end
 
-    if @level.is_a? Blockly
-      @app_options = blockly_options
-    elsif @level.is_a? Weblab
-      @app_options = weblab_options
-    elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse) || @level.is_a?(CurriculumReference)
-      @app_options = question_options
-    elsif @level.is_a? Widget
-      @app_options = widget_options
-    elsif @level.is_a? Scratch
-      @app_options = scratch_options
-    elsif @level.unplugged?
-      @app_options = unplugged_options
-    else
-      # currently, all levels are Blockly or DSLDefined except for Unplugged
-      @app_options = view_options.camelize_keys
-    end
+    @app_options =
+      if @level.is_a? Blockly
+        blockly_options
+      elsif @level.is_a? Weblab
+        weblab_options
+      elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse) || @level.is_a?(CurriculumReference)
+        question_options
+      elsif @level.is_a? Widget
+        widget_options
+      elsif @level.is_a? Scratch
+        scratch_options
+      elsif @level.unplugged?
+        unplugged_options
+      else
+        # currently, all levels are Blockly or DSLDefined except for Unplugged
+        view_options.camelize_keys
+      end
 
     # Blockly caches level properties, whereas this field depends on the user
     @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if current_user.try(:authorized_teacher?)
@@ -240,12 +237,13 @@ module LevelsHelper
     end
 
     if current_user
-      if @script
-        section = current_user.sections_as_student.detect {|s| s.script_id == @script.id} ||
+      section =
+        if @script
+          current_user.sections_as_student.detect {|s| s.script_id == @script.id} ||
+            current_user.sections_as_student.first
+        else
           current_user.sections_as_student.first
-      else
-        section = current_user.sections_as_student.first
-      end
+        end
       if section && section.first_activity_at.nil?
         section.first_activity_at = DateTime.now
         section.save(validate: false)
@@ -544,7 +542,6 @@ module LevelsHelper
       app_options[:firebaseAuthToken] = firebase_auth_token
       app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
     end
-    app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::RESET_ABUSE)
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?
@@ -607,17 +604,31 @@ module LevelsHelper
       base_level = File.basename(path, ext)
       level = Level.find_by(name: base_level)
       block_type = ext.slice(1..-1)
-      content_tag(
-        :iframe,
-        '',
-        {
-          src: url_for(controller: :levels, action: :embed_blocks, level_id: level.id, block_type: block_type).strip,
-          width: width ? width.strip : '100%',
-          scrolling: 'no',
-          seamless: 'seamless',
-          style: 'border: none;',
-        }
-      )
+      options = {
+        readonly: true,
+        embedded: true,
+        locale: js_locale,
+        baseUrl: Blockly.base_url,
+        blocks: '<xml></xml>',
+        dialog: {},
+        nonGlobal: true,
+      }
+      app = level.game.app
+      blocks = content_tag(:xml, level.blocks_to_embed(level.properties[block_type]).html_safe)
+
+      unless @blockly_loaded
+        @blockly_loaded = true
+        blocks = blocks + content_tag(:div, '', {id: 'codeWorkspace', style: 'display: none'}) +
+        content_tag(:style, '.blocklySvg { background: none; }') +
+        content_tag(:script, '', src: asset_path('js/blockly.js')) +
+        content_tag(:script, '', src: asset_path("js/#{js_locale}/blockly_locale.js")) +
+        content_tag(:script, '', src: minifiable_asset_path('js/common.js')) +
+        content_tag(:script, '', src: asset_path("js/#{js_locale}/#{app}_locale.js")) +
+        content_tag(:script, '', src: minifiable_asset_path("js/#{app}.js"), 'data-appoptions': options.to_json) +
+        content_tag(:script, '', src: minifiable_asset_path('js/embedBlocks.js'))
+      end
+
+      blocks
 
     elsif File.extname(path) == '.level'
       base_level = File.basename(path, '.level')

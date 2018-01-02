@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import Radium from 'radium';
+import { connect } from 'react-redux';
 import color from "../util/color";
 import Button from './Button';
 
@@ -12,7 +13,6 @@ const styles = {
     position: 'relative',
     height: 440,
     width: 308,
-    marginBottom: 20,
     backgroundColor: color.white
   },
   jumboCard: {
@@ -111,6 +111,7 @@ class VerticalImageResourceCard extends Component {
       "course-catalog": require('@cdo/static/resource_cards/coursecatalog.png'),
       "new-minecraft": require('@cdo/static/resource_cards/newminecraft.png'),
       "old-minecraft": require('@cdo/static/resource_cards/oldminecraft.png'),
+      "minecraft-marketing": require('@cdo/static/resource_cards/minecraftmarketing.png'),
       "codeorg-teacher":
       require('@cdo/static/resource_cards/codeorgteacher.png'),
       "third-party-teacher":
@@ -131,9 +132,13 @@ class VerticalImageResourceCard extends Component {
           <div style={[styles.text, styles.description, localeStyle]}>
            {description}
            {MCShareLink && (
-             <div style={[styles.text, styles.shareLink, localeStyle]}>
-              {MCShareLink}
-             </div>
+             <input
+               type="text"
+               style={[styles.text, styles.shareLink, localeStyle]}
+               value={MCShareLink}
+               onChange={() => {}}
+               onClick={e => e.target.select()}
+             />
            )}
           </div>
           <Button
@@ -148,4 +153,6 @@ class VerticalImageResourceCard extends Component {
   }
 }
 
-export default Radium(VerticalImageResourceCard);
+export default connect(state => ({
+  isRtl: state.isRtl,
+}))(Radium(VerticalImageResourceCard));

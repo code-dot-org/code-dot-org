@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_partners) %>'
+title: <%= hoc_s(:title_partners) %>
 ---
 The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
 
@@ -113,7 +113,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% end %>
 
-# Основные Партнеры и Корпоративные Спонсоры
+# Главные Партнеры и Корпоративные Спонсоры
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 

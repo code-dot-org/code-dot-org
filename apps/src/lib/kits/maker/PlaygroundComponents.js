@@ -252,9 +252,23 @@ function initializeAccelerometer(board) {
     accelerometer.io.sysexCommand([CP_COMMAND, CP_ACCEL_STREAM_ON]);
   };
   accelerometer.getOrientation = function (orientationType) {
+    if (undefined === orientationType) {
+      return [
+        accelerometer.getOrientation('x'),
+        accelerometer.getOrientation('y'),
+        accelerometer.getOrientation('z')
+      ];
+    }
     return accelerometer[orientationType];
   };
   accelerometer.getAcceleration = function (accelerationDirection) {
+    if (undefined === accelerationDirection) {
+      return [
+        accelerometer.getAcceleration('x'),
+        accelerometer.getAcceleration('y'),
+        accelerometer.getAcceleration('z')
+      ];
+    }
     if (accelerationDirection === 'total') {
       return accelerometer.acceleration;
     }

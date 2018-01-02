@@ -1,13 +1,13 @@
 ---
-title: '<%= hoc_s(:title_how_to_parents) %>'
+title: <%= hoc_s(:title_how_to_parents) %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Bir kodlama saatini çocuklarınızla nasıl tamamlarsınız
+# Bir Kod-Saatini çocuklarınızla nasıl tamamlarsınız
 
-Kodlama saatini evde tamamlayın ya da çocuklarınızın sınıfına götürmek için gönüllü olun. Nasıl olacağı şöyle:
+Kod-Saatini evde tamamlayın ya da çocuklarınızın sınıfına götürmek için gönüllü olun. Şöyle başlayın:
 
 ## 1) "Nasıl Yapılır" videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -15,13 +15,13 @@ Kodlama saatini evde tamamlayın ya da çocuklarınızın sınıfına götürmek
 
 Çeşitli ortaklar tarafından oluşturulan, her yaştaki öğrenciye yönelik eğlenceli saatlik eğitimler sunuyoruz. [Bunları deneyin](%= resolve_url('/learn') %)
 
-**Tüm kodlama saati uygulamaları kendi kendine rehberlik eder. Çocuğunuza kendi temposunda ve beceri seviyesinde çalışmasına izin verir**
+**Tüm Kod-Saati uygulamaları kendi kendine rehberlik eder. Çocuğunuza kendi temposunda ve beceri seviyesinde çalışmasına izin verir**
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 3) teknolojik gereksinimlerinizi planlayın
+## 3) Teknolojik gereksinimlerinizi planlayın
 
-En iyi kodlama saati deneyimi internet bağlantısı olan bir bilgisayarda gerçekleşir. Ama bilgisayara ihtiyacınız ** yok**. "fişe takılı olmayan" ve herhangi bir teknolojiye ihtiyacınız olmadan yapılabilen birçok etkinlik var.
+En iyi Kod-Saati deneyimi internet bağlantısı olan bir bilgisayarda gerçekleşir. Ama bilgisayara ihtiyacınız ** yok.** "fişe takılı olmayan" ve herhangi bir teknolojiye ihtiyacınız olmadan yapılabilen birçok etkinlik var.
 
 - Öğreticileri bilgisayarınızda veya cihazınızda test edin. Ses ve video içeren tarayıcılarda düzgün şekilde çalıştığından emin olun.
 - **çocuğunuzla birlikte mi öğrenmek istiyorsunuz? ** [çift programlamayı ](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning)deneyin. bilgisayar bilimleri sosyal ve işbirlikçidir.
@@ -34,7 +34,7 @@ En iyi kodlama saati deneyimi internet bağlantısı olan bir bilgisayarda gerç
 
 - Bill Gates, Mark Zuckerberg ve NBA yıldızı Chris Bosh'un yer aldığı ilk Code.org yayın videosu ( 1 dakika </ 0>,  5 dakika </ 1> ve  9 dakika < / 2> sürümler)</li> 
     
-    - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+    - [ Dünya geneli Kod-Saati videosu](https://www.youtube.com/watch?v=KsOIlDT145A)
     - [Başkan Obama, tüm öğrencileri bilgisayar bilimi öğrenmeye çağırıyor](https://www.youtube.com/watch?v=6XvmhE1J9PY)
     - Daha fazla ilham verici [kaynaklar](%= resolve_url('https://code.org/inspire') %) ve [videolar](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) bulun.</ul> 
     

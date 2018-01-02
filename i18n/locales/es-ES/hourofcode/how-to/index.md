@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to) %>'
+title: <%= hoc_s(:title_how_to) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -7,15 +7,13 @@ nav: how_to_nav
 
 <h1>Cómo enseñar una Hora de Código</h1>
 
-Únete al movimiento e introduce a un grupo de estudiantes a su primera hora de Informática con estos pasos. ¡La Hora del Código es fácil de organizar - incluso para los principiantes! Si necesitas que te echen una mano, puedes encontrar un[voluntario local](%= resolve_url('https://code.org/volunteer/local') %) para que te ayude a organizar una Hora de Código en tu clase.
+Únete al movimiento e introduce a un grupo de estudiantes a su primera hora de Informática con estos pasos. ¡La hora del código es fácil de ejecutar - incluso para los principiantes! Si desea un juego extra de manos para ayudar, usted puede encontrar un [ voluntario local](%= resolve_url('https://code.org/volunteer/local') %) para ayudar a ejecutar un hora de código en la clase.
 
 ## 1. Mira este vídeo explicativo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Elige un tutorial para tu hora
 
-Ofrecemos una variedad de divertidos [tutoriales guiados por estudiantes](%= resolve_url('/learn') %) así como [tutoriales guiados por maestros](%= resolve_url('https://code.org/educate/teacher-led') %) para participantes de todas las edades, creados por una variedad de socios.
-
-[![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+Ofrecemos una variedad de divertidos [tutoriales guiados por estudiantes](%= resolve_url('/learn') %) para todos los grupos de edad y niveles de experiencia. Los estudiantes realizan las actividades por su cuenta, aunque muchas actividades incluyen planes de lecciones para los profesores (verás el enlace cuando hagas clic en la actividad) para guiar la discusión o ampliar la actividad. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
 ## 3. Promueve tu Hora de Código
 
@@ -35,7 +33,7 @@ Proporcione auriculares para su clase, o pida a los estudiantes que traign los s
 
 ## 5. Comienza tu Hora del Código con un orador o video inspirador
 
-**Invita a un[voluntario local](%= resolve_url('https://code.org/volunteer/local') %) para motivar a tus estudiantes, hablándoles sobre la amplitud de posibilidades de la Informática.** ¡Hay miles de voluntarios en todo el mundo listos para ayudar con tu Hora del Código con una visitaa a la clase o a través de un video chat con tus estudiantes!
+**Invita a un[voluntario local](%= resolve_url('https://code.org/volunteer/local') %) para motivar a tus estudiantes, hablándoles sobre la amplitud de posibilidades de la Informática.** ¡Hay miles de voluntarios en todo el mundo listos para ayudar con tu Hora del Código haciendo una visita a la clase o a través de un video chat con tus estudiantes!
 
 **Muestre un video inspirador:**
 
@@ -50,7 +48,7 @@ Proporcione auriculares para su clase, o pida a los estudiantes que traign los s
 
 ## 6. ¡A Programar!
 
-**Dirija a los estudiantes en la actividad**
+**Dirije a los estudiantes a la actividad**
 
 - Escribe el enlace del tutorial en una pizarra. Encuentra el enlace que figura en la [información del tutorial seleccionado](%= resolve_url('/learn')%) debajo del número de participantes.
 

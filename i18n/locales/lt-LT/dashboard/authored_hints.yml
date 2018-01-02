@@ -16,64 +16,61 @@ lt:
       2-3 Artist 4_authored_hint:
         2-3_Artist_4_a: Norint pabaigti namą, viskas ką mums reikia padaryti, tai nupiešti kvadratą!
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each time than you did with the square.   '
-        2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start by moving forward, then make left turns to create the triangle.
-        2-3_Artist_6_c: Each side of the triangle is the same length as each side of the square...100 pixels!
+        2-3_Artist_6_a: 'Norint padaryti mažesnius kampus, reikia pasisukti *daugiau* laipsnių.   '
+        2-3_Artist_6_b: Kadangi aš jau esu atsisukęs į dešinę pusę, lengviausia būtų pradėti judinant mane pirmyn, o tada pasukti mane kairėn, kad gautųsi trikampis.
+        2-3_Artist_6_c: 'Visos trikampio kraštinės yra vienodo ilgio: 100 pikselių!'
       2-3 Artist 7_authored_hint:
-        2-3_Artist_7_a: The easiest way to solve this puzzle is to draw the first square and end with the artist pointing down before starting your second square.
+        2-3_Artist_7_a: Lengviausias būdas išspręsti šią užduotį – nupiešk pirmąjį kvadratą. O kai jį nupieši, įsitikink, kad menininkas žiūri žemyn – ir tik tada piešk antrąjį kvadratą.
       2-3 Artist 8_authored_hint:
-        2-3_Artist_8_a: If you cut 200 in half, how many pixels wide does each square need to be?
+        2-3_Artist_8_a: Koks bus kiekvieno kvadrato plotis, jei 200 padalinsi iš dviejų?
       2-3 Artist 9 NEW_authored_hint:
-        2-3_Artist_9_a: This diamond is really just a square on its side
+        2-3_Artist_9_a: Šis rombas iš tikrųjų yra pasisukęs kvadratas
       2-3 Artist 9 REPLACEMENT_authored_hint:
-        step_size: Each step is 100 pixels wide and 100 pixels high.
+        step_size: Kiekvienas laiptas yra 100 pikselių aukščio ir 100 pikselių pločio.
       2-3 Artist 9_authored_hint:
-        2-3_Artist_9_a: This diamond is really just a square turned 45 degrees.
+        2-3_Artist_9_a: Šis rombas iš tikrųjų yra kvadratas, pasuktas 45 laipsnių kampu.
         2-3_Artist_9_b: |-
-          Don't forget to turn the artist left by 45 degrees before you start drawing your square!
+          Neužmiršk pasukti menininko 45 laipsniais, prieš pradedant piešti kvadratą!
           
           ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
-        2-3_Artist_Debugging_10_a: Remember, you want the control panel 10 pixels *wider*...so be sure to **add** 10 to whatever number you change.
-        2-3_Artist_Debugging_10_b: "**Trial and error is perfectly fine here!**  \n\nStart by changing one number at a time.   \n\nWhich numbers do what?  \n\nIf you get too lost, just click \"Start over\" and your code will be reset."
+        2-3_Artist_Debugging_10_a: Prisimink, kad tau reikia 10 pikselių *platesnio* pliuso. Taigi, *pridėk* 10 prie skaičiaus, kurį jau naudoji.
+        2-3_Artist_Debugging_10_b: "**Klaidų ieškojimas jau čia!**\nPradėk ieškoti klaidų pakeisdama(-s) po vieną skaičių.\nIšsiaiškink, kurie skaičiai ką reiškia\nJei labai susipainiosi, spustelėk „Pradėti iš naujo“."
       2-3 Artist Debugging 2_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Each whisker is 75 pixels long.'
+        2-3_Artist_Debugging_2_a: 'Sufleris: kiekvienas ūsas yra 75 pikselių ilgio.'
       2-3 Artist Debugging 3_authored_hint:
-        2-3_Artist_Debugging_3_a: One of the turns is 15 degrees too small.
-        2-3_Artist_Debugging_3_b: If the program runs too fast to see what's happening, try slowing it down with the slider.
+        2-3_Artist_Debugging_3_a: Vienas iš posūkių yra 15 laipsnių per mažas.
+        2-3_Artist_Debugging_3_b: Jei programa veikia per greitai, gali ją sulėtinti judindama(-s) slankiklį.
       2-3 Artist Debugging 7_authored_hint:
-        2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump backward after he draws the first line?
+        2-3_Artist_Debugging_7_a: Kas nutiks, jeigu menininkas pajudės arba peršoks atgal, nupiešęs pirmąją liniją?
       2-3 Artist Debugging 8_authored_hint:
         2-3_Artist_Debugging_8_a: |-
-          How many times did my shape repeat?
-          
-          How many times *should* the shape repeat?
-          
-          Where can you change that in the program?
+          Kiek kartų buvo nupiešta ta pati figūra?
+          Kiek kartų figūra *turėtų* būti nupiešta?
+          Kurioje programos vietoje tai galima pakeisti?
       2-3 Artist Debugging 9_authored_hint:
-        2-3_Artist_Debugging_9_a: The artist needs to turn 60 degrees farther left before starting to draw!
-        2-3_Artist_Debugging_9_b: You don't need to add another block to get the full turn, just add 60 degrees to the `turn left` block that's already there!
+        2-3_Artist_Debugging_9_a: Prieš pradėdamas piešti, menininkas turi pasisukti į kairę 60 laipsnių daugiau!
+        2-3_Artist_Debugging_9_b: Tau nereikia papildomo blokelio, kad pasisuktum tinkamu kampu – pridėk 60 laipsnių prie jau turimo blokelio, kuris pasuka menininką kairėn!
       2-3 Artist Functions 1_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
-        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your glasses.
+        2-3_Artist_Functions_1_a: Abiejų kvadratų kraštinės yra po 100 pikselių, o tai reiškia, kad tau reikia paeiti 175 pikselius prieš brėžiant antrąjį kvadratą.
+        2-3_Artist_Functions_1_b: Jeigu dukart nupieši kurią nors liniją – nieko baisaus.
       2-3 Artist Functions 11_authored_hint:
-        2-3_Artist_Functions_11_a: You will need to change not only the number and length of sides within the function, but also the angle the artist turns between each side.
+        2-3_Artist_Functions_11_a: Tau reikia pakeisti ne tik kraštinių ilgį (komandos kūrimo srityje), bet ir kampą, kokiu menininkas turi pasisukti nupiešęs kiekvieną šešiakampį.
       2-3 Artist Functions 12_authored_hint:
-        2-3_Artist_Functions_12_a: Try running the code first to see what you need to add.
+        2-3_Artist_Functions_12_a: Prieš pridedant blokelius, pamėgink paleisti programą.
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Tavo programoje turi būti:
+          – Panaudota komanda
+          – Judama pirmyn 100 + 75 pikselių
+          – Panaudota komanda
       2-3 Artist Functions 3_authored_hint:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Functions 4_authored_hint:
-        2-3_Artist_Functions_4_a: The artist needs to turn 120 degrees between each square to complete this design.
+        2-3_Artist_Functions_4_a: Menininkas turi pasisukti 120 laipsnių, prieš piešdamas naują kvadratą.
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
-          Remember that the code from the last puzzle was:
-          
+          Prisimink, kad paskutinės užduoties kodas buvo:
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -114,36 +111,36 @@ lt:
           </next>
           </block>
           </xml>
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code inside the loop.
+        2-3_Artist_Loops_New_11_b: Naujas posūkis turi būti *paskutinis* kartojimo viduje.
       2-3 Artist Loops New 12_authored_hint:
-        2-3_Artist Loops_New_12_a: Before starting the diamond, the artist needs to turn left by 60 degrees to get on the right path.
-        2-3_Artist Loops_New_12_b: After the artist goes forward 100 pixels, he will need to turn right 120 degrees to make the sharp corner.
-        2-3_Artist Loops_New_12_c: The artist will need to turn right only 60 degrees to create a wide corner.
+        2-3_Artist Loops_New_12_a: Prieš brėždamas rombą, menininkas turi pasisukti 60 laipsnių, kad atsisuktų reikiama kryptimi.
+        2-3_Artist Loops_New_12_b: Menininkui paėjus 100 pikselių, jis turės pasisukti 120 laipsnių, kad gautų smailų kampą.
+        2-3_Artist Loops_New_12_c: Menininkas turės pasisukti dešinėn tik 60 laipsnių, kad gautų norimą kampą.
       2-3 Artist Loops New 13_authored_hint:
-        2-3_Artist_Loops_New_13_a: "At the end of each diamond, the artist is already facing the right direction to start the next one.  \n\nBecause of this, we don't need to add an extra `turn left by` block before we start again."
-        2-3_Artist_Loops_New_13_b: "To make each diamond, the artist needs to:   \n- move\n- turn right 120 degrees\n- move\n- turn right 60 degrees  \n\nThen do it all again!"
+        2-3_Artist_Loops_New_13_a: "Kai menininkas nubrėžia kiekvieną rombą, jis jau žiūri reikiama kryptimi, kuria reikia brėžti kitą rombą."
+        2-3_Artist_Loops_New_13_b: "Kad nubrėžtų kiekvieną rombą, menininkas turi:\n– judėti\n– pasisukti 120 laipsnių\n– pajudėti\n– pasisukti 60 laipsnių\n\nO tada visa tai reikia pakartoti!"
       2-3 Artist Loops New 9_authored_hint:
-        2-3_Artist_Loops_New_9_a: The artist needs to turn 45 degrees to the right before he starts drawing.
-        2-3_Artist_Loops_New_9_b: This V is really just half of a square.  What would the code be to draw half of a square?
+        2-3_Artist_Loops_New_9_a: Prieš pradėdamas piešti, menininkas turi pasisukti 45 laipsnius dešinėn.
+        2-3_Artist_Loops_New_9_b: V raidė iš tikro yra pusė kvadrato. Kokį kodą reikėtų parašyti, norint gauti pusę kvadrato?
       2-3 Artist Nested Loops 1_authored_hint:
-        2-3_Artist_Nested_Loops_1_a: Remember to put all of the grey blocks inside of your loop.
+        2-3_Artist_Nested_Loops_1_a: Neužmiršk, kad visus pilkus blokelius reikia naudoti kartojimo viduje.
       2-3 Artist Nested Loops 3_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
-        2-3_Artist_Nested_Loops_3_b: Remember to put all of the grey code and your turn block inside of a loop.
+        2-3_Artist_Nested_Loops_3_a: "Reikia pagalbos su kampais? \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_b: Neužmiršk, kad reikia įdėti visus pilkus blokelius bei posūkį į kartojimo vidų.
       2-3 Artist Nested Loops 4_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: "Reikia pagalbos su kampais? \n**360/12 = 30**"
       2-3 Artist Nested Loops 5_authored_hint:
-        2-3_Artist_Nested_Loops_5_a: "Try using the `jump forward` block to get from the top of one square to the place where you will start the next. \n\nIf your squares are 20 pixels tall and they are 20 pixels apart, how far do you need to jump?"
+        2-3_Artist_Nested_Loops_5_a: "Pamėgink panaudoti blokelį „peršok“, kad atsidurtum nuo vieno kvadrato prie kito. \n\nJei kiekvieno kvadrato kraštinės yra po 20 pikselių, o tarpai tarp jų irgi yra 20 pikselių, kaip toli tau reikia peršokti?"
       2-3 Artist Nested Loops 7_authored_hint:
-        2-3_Artist_Nested_Loops_7_a: "How far should you turn in each loop?  \n\nWhat is 360/10?"
+        2-3_Artist_Nested_Loops_7_a: "Kiek laipsnių reikia pasisukti kiekviename kartojime? \n\nKiek bus 360 padalinti iš 10?"
       2-3 Artist Nested Loops 9_authored_hint:
         2-3_Artist_Nested_Loops_9_a: |-
-          Need help finding the correct angle?
+          Reikia pagalbos ieškant tinkamo kampo?
           
           **360 / 12 = 30**
       2-3 Bee Conditionals 14_authored_hint:
-        2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure out how to use an extra `repeat` loop to cut down on code?
+        2-3_Bee_Conditionals_14_a: Susidūrei su sunkumais? Pamėgink su rausva gėle elgtis taip pat, kaip ir su violetine!
+        2-3_Bee_Conditionals_14_b: Jei rausva gėlė būtų violetinė, ar sugalvotum, kaip reikia panaudoti dar vieną kartojimo blokelį?
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:  \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar, if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n  - Make two honey"
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or 1 nectar and they can change each time you run the program.'
@@ -3601,7 +3598,7 @@ lt:
       MC_HOC_2017_FP10x10_authored_hint: [ ]
       MC_HOC_2017_FP10x10_RE_authored_hint: [ ]
       MC_HOC_2017_FP20x20_authored_hint:
-        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map.
+        MC_HOC_2017_13_Cole_a: Try having the Agent build some minecart tracks so you can explore the world!
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:
@@ -5203,7 +5200,7 @@ lt:
       courseA_collector_preLoops5_authored_hint:
         courseA_collector_preLoops5_a: You'll need to go two different directions to get even one gem!
       courseA_collector_preLoops6_authored_hint:
-        courseA_collector_preLoops6_a: 'You will need to use two ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) blocks to solve this puzzle.'
+        courseA_collector_preLoops6_a: You will need to use two ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) blocks to solve this puzzle.
       courseA_collector_preLoops7_authored_hint:
         courseA_collector_loops2_b: |-
           After you have moved to a square with treasure, use this block to pick it up.
@@ -5661,7 +5658,7 @@ lt:
       courseB_maze_seq9_challenge1_authored_hint: [ ]
       courseB_maze_seqCold_authored_hint:
         courseB_maze_seqCold_a: Stuck? Try tracing the bird's path with your finger.
-        courseB_maze_seqCold_b: 'The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )'
+        courseB_maze_seqCold_b: The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )
       courseB_maze_seqOld_authored_hint:
         courseB_maze_seqOld_a: If you're having trouble, try writing down the steps on a piece of paper first.
       courseB_maze_seq_challenge1_authored_hint:
@@ -6562,10 +6559,10 @@ lt:
         courseD_artist_functions10_a: To get around using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Tavo programoje turi būti:
+          – Panaudota komanda
+          – Judama pirmyn 100 + 75 pikselių
+          – Panaudota komanda
       courseD_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -6608,7 +6605,7 @@ lt:
         courseD_artist_nestedLoops2_a: Nest your loops by surrounding your triangle code with another `repeat` loop.
         courseD_artist_nestedLoops2_b: Remember to put the `turn` block inside of the loop so that the artist turns after each triangle.
       courseD_artist_nestedLoops3_authored_hint:
-        courseD_artist_nestedLoops3_a: "Try using the `jump forward` block to get from the top of one square to the place where you will start the next. \n\nIf your squares are 20 pixels tall and they are 20 pixels apart, how far do you need to jump?"
+        courseD_artist_nestedLoops3_a: "Pamėgink panaudoti blokelį „peršok“, kad atsidurtum nuo vieno kvadrato prie kito. \n\nJei kiekvieno kvadrato kraštinės yra po 20 pikselių, o tarpai tarp jų irgi yra 20 pikselių, kaip toli tau reikia peršokti?"
         courseD_artist_nestedLoops3_b: 'Don''t forget to use a nested loop to solve this puzzle quickly. '
         courseD_artist_nestedLoops3_c: 'Start by using a `repeat` loop to make one square.  Next, repeat that square 8 times, jumping 40 pixels in between. '
       courseD_artist_nestedLoops4_authored_hint:
@@ -6755,9 +6752,11 @@ lt:
       courseD_bee_conditionals1_predict1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals2_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.
         courseD_bee_conditionals2_b: You can use a `repeat` loop or a `while path ahead` to move through this maze.
         courseD_bee_conditionals2_c: You don't have to check for honeycombs, there will only be flowers or blank spaces under the clouds.
+        courseD_bee_conditionals2_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals2_test_authored_hint:
         courseD_bee_conditionals2_aa: Need help getting started?  Here is a little hint video.
         courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.
@@ -6765,27 +6764,38 @@ lt:
         courseD_bee_conditionals2_c: You don't have to check for honeycombs, there will only be flowers or blank spaces under the clouds.
         courseD_bee_conditionals2_d: Need help finishing things up?  Watch this hint video.
       courseD_bee_conditionals3_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.
         courseD_bee_conditionals3_b: You can use a `repeat` loop or a `while` loop to keep the bee moving forward. Use whichever one you like!
         courseD_bee_conditionals3_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseD_bee_conditionals3_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals4_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals4_a: You can still treat every space as if there is a cloud over it, even though you can see the whole path.
         courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check each space for nectar. '
         courseD_bee_conditionals4_c: Using <xml><block type="maze_untilBlocked"/></xml> block, you should move forward and check for a flower. If there is a flower, what should the bee do?
+        courseD_bee_conditionals4_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals5_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals5_a: Think of every side of the rectangular path as a path by itself. Set up a nested loop with a `repeat` block on the outside and a `while there is a path ahead` loop on the inside. How many paths does the bee need to buzz down if the bee needs to buzz every side with a flower?
-        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block you will need to move forward and check for a flower. How do you check if there is a flower? What do you do if there is a flower?
         courseD_bee_conditionals5_c: There are 3 sides of the rectangle with flowers, so the code needs to `repeat 3 times`. In every repeat, the bee will need to continue along the path, `while there is a path ahead`. To continue down the path, the bee will need to `move forward`. While on the path, the bee needs to check for a flower. `if there is a flower`, the bee should `get nectar`.
+        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block you will need to move forward and check for a flower. How do you check if there is a flower? What do you do if there is a flower?
+        courseD_bee_conditionals5_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals6_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for honeycomb beneath each cloud.
         courseD_bee_conditionals6_b: In this case, you do not need to check for nectar under the clouds.
         courseD_bee_conditionals6_c: Is there a loop you can use to make your code simpler?
+        courseD_bee_conditionals6_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals7_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
         courseD_bee_conditionals7_b: If there is not a flower under the cloud, there must be a honeycomb, so you don't need to think about the case of an empty space.
+        courseD_bee_conditionals7_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals7_predict2_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
       courseD_bee_conditionals8_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals8_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
         courseD_bee_conditionals8_b: |-
           This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
@@ -6796,6 +6806,7 @@ lt:
           Even though there is a cloud right in front of you, you don't have to visit it first. Try starting with the cloud in the bottom right of the square.
           
           ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
+        courseD_bee_conditionals8_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals9_authored_hint: [ ]
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: Can you find a path that reaches every flower and honeycomb without hitting any trees? The best path is a spiral.
@@ -7566,8 +7577,8 @@ lt:
           </block></xml>
       courseE_artist_embed_functions8_authored_hint: [ ]
       courseE_artist_functions1_authored_hint:
-        courseE_artist_functions1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
-        courseE_artist_functions1_b: It is okay to draw overlapping lines to make your glasses.
+        courseE_artist_functions1_a: Abiejų kvadratų kraštinės yra po 100 pikselių, o tai reiškia, kad tau reikia paeiti 175 pikselius prieš brėžiant antrąjį kvadratą.
+        courseE_artist_functions1_b: Jeigu dukart nupieši kurią nors liniją – nieko baisaus.
         courseE_artist_functions1_c: For shorter code, try using a `repeat` loop to draw the square frames of the glasses.
       courseE_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except the function draws a different kind of line.
@@ -7582,10 +7593,10 @@ lt:
           Use the green `draw a square` block to "call" your function under the `when run` block. Otherwise, the code in your function will not run.
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Tavo programoje turi būti:
+          – Panaudota komanda
+          – Judama pirmyn 100 + 75 pikselių
+          – Panaudota komanda
       courseE_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -9110,6 +9121,7 @@ lt:
         courseF_bee_functions3_a: 'Your function for this puzzle only needs to make honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
         courseF_bee_functions3_b: Remember that your function should only get honey *if* there is a honeycomb.
         courseF_bee_functions3_c: Use the green `only make honey` block to call your function.
+        courseF_bee_functions3_d: Check out this path.
       courseF_bee_functions3a_authored_hint:
         courseF_bee_functions3a_a: 'Your function for this puzzle only needs to get nectar or make honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
         courseF_bee_functions3a_b: Use a stairstep pattern to check the first four clouds.
@@ -9941,7 +9953,7 @@ lt:
         grade1_maze_sequence7a: If you're stuck, try adding one block at a time until you solve the puzzle.
       grade1_maze_sequence8_authored_hint:
         grade1_maze_sequence8_a: Stuck? Try tracing the bird's path with your finger.
-        grade1_maze_sequence8_b: 'The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )'
+        grade1_maze_sequence8_b: The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )
       grade1_maze_sequence9_authored_hint:
         grade1_maze_sequence9_a: If you're having trouble, try writing down the steps on a piece of paper first.
       grade1_maze_sequenceA_authored_hint:
@@ -9992,15 +10004,13 @@ lt:
           Remember that the code from the last puzzle was:
           
           ![](https://images.code.org/e5c7492f509dd41efe2888c7e7895c28-image-1461177002636.29.02.png)
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code inside the loop.
+        2-3_Artist_Loops_New_11_b: Naujas posūkis turi būti *paskutinis* kartojimo viduje.
       grade2_MakeDogTag_BFP_authored_hint: [ ]
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
-          How many times did my shape repeat?
-          
-          How many times *should* the shape repeat?
-          
-          Where can you change that in the program?
+          Kiek kartų buvo nupiešta ta pati figūra?
+          Kiek kartų figūra *turėtų* būti nupiešta?
+          Kurioje programos vietoje tai galima pakeisti?
       grade2_PuppyLoops_3_authored_hint:
         hint1: This puzzle is very similar to the last one.
         hint2: Use a `repeat 5 times` block to create the loop.
@@ -10014,9 +10024,9 @@ lt:
         2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
         2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over` to get it back!
       grade2_PuppyLoops_8_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Each whisker is 75 pixels long.'
+        2-3_Artist_Debugging_2_a: 'Sufleris: kiekvienas ūsas yra 75 pikselių ilgio.'
       grade2_PuppyLoops_9_authored_hint:
-        2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump backward after he draws the first line?
+        2-3_Artist_Debugging_7_a: Kas nutiks, jeigu menininkas pajudės arba peršoks atgal, nupiešęs pirmąją liniją?
       grade2_collector_2_authored_hint:
         hint1: You can use four `move forward` blocks or use the `repeat 4 times` block to make your program shorter.
       grade2_collector_A_authored_hint: [ ]
@@ -10068,8 +10078,8 @@ lt:
       grade3_Conditionals_10 BAD_authored_hint:
         4-5_Bee_Nested_Loops_Rows_a: Try treating this puzzle like a long rectangle where the bee needs to move forward, then turn left several times to complete the path.
       grade3_Conditionals_11_authored_hint:
-        2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure out how to use an extra `repeat` loop to cut down on code?
+        2-3_Bee_Conditionals_14_a: Susidūrei su sunkumais? Pamėgink su rausva gėle elgtis taip pat, kaip ir su violetine!
+        2-3_Bee_Conditionals_14_b: Jei rausva gėlė būtų violetinė, ar sugalvotum, kaip reikia panaudoti dar vieną kartojimo blokelį?
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:  \n\n![](https://images.code.org/670ac0889a8f523865ff4099b4c54844-image-1463445460440.36.42.png)\n\n1) Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar, if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n  - Make two honey"
       grade3_Conditionals_12_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or 1 nectar and they can change each time you run the program.'
@@ -10253,14 +10263,14 @@ lt:
       grade4_arist_nested_loop_triangles6_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       grade4_artist_functions1_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
-        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your glasses.
+        2-3_Artist_Functions_1_a: Abiejų kvadratų kraštinės yra po 100 pikselių, o tai reiškia, kad tau reikia paeiti 175 pikselius prieš brėžiant antrąjį kvadratą.
+        2-3_Artist_Functions_1_b: Jeigu dukart nupieši kurią nors liniją – nieko baisaus.
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Tavo programoje turi būti:
+          – Panaudota komanda
+          – Judama pirmyn 100 + 75 pikselių
+          – Panaudota komanda
       grade4_artist_functions2a_authored_hint:
         grade4_artist_functions2a_a: To get around using multiple `move forward` blocks, create a `draw triangle` function and call that multiple times.
       grade4_artist_functions3a_authored_hint:
@@ -10397,9 +10407,9 @@ lt:
         2-3_Artist_1_new_a: Jei panaudosi bloką kad aš 'pajudėčiau į priekį 100 pixelių', aš linija nupiešiu automatiškai.
         2-3_Artist_1_new_b: Problemos pasukant? Panaudok 'pasukti 90 laipsnių dešinėn bloką.
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each time than you did with the square.   '
-        2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start by moving forward, then make left turns to create the triangle.
-        2-3_Artist_6_c: Each side of the triangle is the same length as each side of the square...100 pixels!
+        2-3_Artist_6_a: 'Norint padaryti mažesnius kampus, reikia pasisukti *daugiau* laipsnių.   '
+        2-3_Artist_6_b: Kadangi aš jau esu atsisukęs į dešinę pusę, lengviausia būtų pradėti judinant mane pirmyn, o tada pasukti mane kairėn, kad gautųsi trikampis.
+        2-3_Artist_6_c: 'Visos trikampio kraštinės yra vienodo ilgio: 100 pikselių!'
       grade4_review_bee1_authored_hint:
         2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
       grade4_review_bee2_authored_hint:
@@ -10612,7 +10622,7 @@ lt:
       gradek_playlab_events1c_authored_hint:
         gradek_playlab_events1c_a: "Here is the block you should connect to the `when run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
       gradek_playlab_events2c_authored_hint:
-        gradek_playlab_events2c_a: 'drag this block out ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) and connect it to ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)'
+        gradek_playlab_events2c_a: drag this block out ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) and connect it to ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
       gradek_playlab_events3c_authored_hint:
         gradek_playlab_events3c_a: |-
           Here is the event block that you will need to get Jorge to move right:

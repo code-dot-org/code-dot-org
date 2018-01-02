@@ -3,38 +3,36 @@ import ProjectWidget from './ProjectWidget';
 import {generateFakePersonalProjects} from './generateFakePersonalProjects';
 
 export default storybook => {
-  storybook
+  return storybook
     .storiesOf('ProjectWidget', module)
+    .withReduxStore()
     .addStoryTable([
       {
         name: 'Project widget',
         description: 'Most recent projects and a set of new projects to start.',
         story: () => (
-          <ProjectWidget
-            projectList={generateFakePersonalProjects(5)}
-            isRtl={false}
-          />
+            <ProjectWidget
+              projectList={generateFakePersonalProjects(5)}
+            />
         )
       }, {
         name: 'Project widget with "view full list" button',
         description: 'Most recent projects and a set of new projects to start.',
         story: () => (
-          <ProjectWidget
-            projectList={generateFakePersonalProjects(5)}
-            isRtl={false}
-            canViewFullList={true}
-          />
+            <ProjectWidget
+              projectList={generateFakePersonalProjects(5)}
+              canViewFullList={true}
+            />
         )
       }, {
         name: 'Project widget with full list without advanced tools',
         description: 'Most recent projects and a set of new projects to start.',
         story: () => (
-          <ProjectWidget
-            projectList={generateFakePersonalProjects(5)}
-            isRtl={false}
-            canViewFullList={true}
-            canViewAdvancedTools={false}
-          />
+            <ProjectWidget
+              projectList={generateFakePersonalProjects(5)}
+              canViewFullList={true}
+              canViewAdvancedTools={false}
+            />
         )
       },
     ]);

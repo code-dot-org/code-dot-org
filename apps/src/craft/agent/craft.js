@@ -22,6 +22,7 @@ import Sounds from '../../Sounds';
 
 import { TestResults } from '../../constants';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
+import {SignInState} from '../../code-studio/progressRedux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -524,7 +525,7 @@ export default class Craft {
   static minAssetsForLevelNumber(levelNumber) {
     switch (levelNumber) {
       default:
-        return ['allAssetsMinusPlayer', 'playerAgent'];
+        return ['heroAllAssetsMinusPlayer', 'playerAgent'];
     }
   }
 
@@ -533,7 +534,7 @@ export default class Craft {
     switch (levelNumber) {
       default:
         // May want to push this to occur on level with video
-        return ['allAssetsMinusPlayer', 'playerAgent'];
+        return ['heroAllAssetsMinusPlayer', 'playerAgent'];
     }
   }
 
@@ -549,7 +550,7 @@ export default class Craft {
       case 1:
         return ['playerSteve', 'playerAlex'];
       default:
-        return ['allAssetsMinusPlayer'];
+        return ['heroAllAssetsMinusPlayer'];
     }
   }
 
@@ -798,9 +799,13 @@ export default class Craft {
       // typically delay feedback until response back
       // for things like e.g. crowdsourced hints & hint blocks
       onComplete: function (response) {
+        const sharing = Craft.initialConfig.level.freePlay;
+        if (sharing && response.level_source) {
+          trySetLocalStorage('craftHeroShareLink', response.level_source);
+        }
+
+        const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
         studioApp().displayFeedback({
-          app: 'craft',
-          skin: Craft.initialConfig.skin.id,
           feedbackType: testResultType,
           response,
           level: Craft.initialConfig.level,
@@ -815,8 +820,9 @@ export default class Craft {
             generatedCodeDescription: craftMsg.generatedCodeDescription(),
           },
           feedbackImage: image,
-          showingSharing: Craft.initialConfig.level.freePlay,
+          showingSharing: sharing,
           saveToProjectGallery: true,
+          disableSaveToGallery: !isSignedIn,
         });
       },
     });

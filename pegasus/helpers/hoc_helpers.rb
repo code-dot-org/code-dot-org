@@ -25,6 +25,12 @@ def create_session_row_unless_unsampled(attrs)
   # correct call to action on the congrats page.
   weight = attrs[:company].nil? ? DCDO.get('hoc_activity_sample_weight', 1).to_i : 1
 
+  # DANGER - as of 12/2017 we believe this doesn't behave as expected. Setting
+  # weight to 10 should yield 10% saved rows. In practice, it appears to yield
+  # between 5 - 6% saved rows. We don't presently understand what the bug is.
+  # (Possibly the cookie is leading to overfiltering?) We should understand/fix
+  # this before setting weight to anything besides 1 in the future.
+
   if weight > 0 && Kernel.rand < (1.0 / weight)
     # If we decided to make the session sampled, create the session row and set the hoc cookie.
     row = create_session_row(attrs, weight: weight)
@@ -115,7 +121,13 @@ def complete_tutorial(tutorial={})
         weight: weight
       )
     end
-    destination = "http://#{row[:referer]}/congrats?i=#{row[:session]}"
+
+    site = "http://#{row[:referer]}"
+    if DCDO.get('new_congrats', false) && tutorial[:orgname].try(:include?, 'Code.org')
+      site = CDO.studio_url('', CDO.default_scheme)
+    end
+
+    destination = "#{site}/congrats?i=#{row[:session]}"
     destination += "&co=#{row[:company]}" unless row[:company].blank?
     destination += "&s=#{Base64.urlsafe_encode64(tutorial[:code])}" unless tutorial[:code].blank?
   end

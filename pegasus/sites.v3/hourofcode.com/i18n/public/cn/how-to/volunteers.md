@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_volunteers) %>'
+title: <%= hoc_s(:title_how_to_volunteers) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -15,7 +15,7 @@ nav: how_to_nav
 
 - “我体验中最好的部分是整个班级都是有色人种的女性。它预示着在未来我们的行业可以有机会触及并激发这些孩子。”
 - “由衷地喜欢可以有机会鼓励年轻女孩学习计算机科学。感觉就像是在帮助本地的下一代一样。”
-- “我喜欢看到这些孩子这么兴奋！ 有个让人惊讶的发现是，有的老师发现有些在学习上不是很好的学生却有着和开发者一样的超凡思考能力，而且在帮着其他人学习的过程中找到了自信。
+- “我喜欢看到这些孩子这么兴奋！” 有个让人惊讶的发现是，有的老师发现有些在学习上不是很好的学生却有着和开发者一样的超凡思考能力，而且在帮着其他人学习的过程中找到了自信。
 
 ## 任何人都可以做志愿者
 
@@ -26,7 +26,7 @@ nav: how_to_nav
 <a href="https://code.org/volunteer/engineer"><button>马上注册成为科技志愿者</button></p> 
 
 <p>
-  <strong>任何对扩展机会感兴趣的人</strong>: 你相信学习计算机科学可以打开学生机会之门吗？ 在当地课堂里帮忙，或组织课后活动。 你不需要有计算机科学的背景来主办编程一小时的活动。 而且，你的帮助已经足以说服你孩子的老师，朋友或社团来尝试一小时。
+  <strong>任何对扩展机会感兴趣的人</strong>: 你相信学习计算机科学可以打开学生机会之门吗？ 在当地课堂里帮忙，或组织课后活动。 无需要深入学习过计算机科学的内容，你也可以主办编程一小时的活动。 而且，仅是提供些帮助，便足以说服你孩子的老师、你的朋友或某个社团来尝试一小时。
 </p>
 
 <p>
@@ -36,23 +36,23 @@ nav: how_to_nav
 <ol>
   <li>
     <p>
-      <a href="%= resolve_url('/promote/resources#help-schools') %">发这份邮件</a> 给你孩子的孩子，告诉他们你愿意帮他们举办编程一小时的活动。
+      <a href="%= resolve_url('/promote/resources#help-schools') %">发送邮件</a> 来告诉你孩子的教师：你愿意协助举办编程一小时的活动。
     </p>
   </li>
   
   <li>
     <p>
-      提议在当地学校主持课后编程一小时活动。<a href="%= resolve_url('/how-to') %">用如何引导指南</a>来帮你筹划。
+      提议在你孩子的学校举办一次《编程一小时》的课余活动。你可以借助这份<a href="%= resolve_url('/how-to') %">引导指南</a>来筹划活动。
     </p>
   </li>
 </ol>
 
 <h2>
-  招募你的同事作为志愿者。
+  招募你的同事作为志愿者
 </h2>
 
 <p>
-  把编程一小时告诉给你的朋友和同事们。 成千的老师在找志愿者，所以让他们<a href="https://code.org/volunteer">注册成为一名志愿者</a> 邀请你的雇主一起参加。 <a href="%= resolve_url('/promote/resources#sample-email') %">发这封邮件</a>给你的经理或公司总裁，让公司每个人都参与。
+  把编程一小时告诉给你的朋友和同事们。 成千的老师在寻找志愿者，所以让他们<a href="https://code.org/volunteer">注册</a>以成为一名志愿者。 亦可邀请你的老板一起参加。 <a href="%= resolve_url('/promote/resources#sample-email') %">发这封邮件</a>给你的经理或公司总裁，让公司每个人都参与。
 </p>
 
 <h2>
@@ -61,10 +61,10 @@ nav: how_to_nav
 
 <ul>
   <li>
-    <a href="%= resolve_url('/promote/resources#videos') %">播放视频</a>让学生专注并期待着编程一小时的开始。
+    <a href="%= resolve_url('/promote/resources#videos') %">播放视频</a>，以让学生了解何为《编程一小时》，并吸引他们的注意力。
   </li>
   <li>
-    查阅<a href="/files/hoc-volunteer-toolkit.pdf">编程一小时志愿者工具册</a>，它含有教程概括，时间准备材料和推广材料。 所有你可以成为志愿者的资料。
+    查阅<a href="/files/hoc-volunteer-toolkit.pdf">编程一小时志愿者工具册</a>，它含有教程概括，时间准备材料和推广材料。 所有你需要的志愿服务资料都在其中！
   </li>
   <li>
     如果你在这过程中需要做课程指南的话，花30 分钟的时间至少完成<a href="%= resolve_url('/learn') %">编程一小时课程指南</a>的演示。
@@ -95,17 +95,17 @@ nav: how_to_nav
 </p>
 
 <h3>
-  <strong>示范日常表</strong>
+  <strong>时间安排示例</strong>
 </h3>
 
 <table>
   <tr>
     <th>
-      时间
+      时长
     </th>
     
     <th>
-      日程项目
+      活动内容
     </th>
   </tr>
   
@@ -115,7 +115,7 @@ nav: how_to_nav
     </td>
     
     <td>
-      <a href="%= resolve_url('promote/resources#videos') %">播放激励人心的视频</a>
+      <a href="%= resolve_url('promote/resources#videos') %">播放预热视频</a>
     </td>
   </tr>
   
@@ -147,7 +147,7 @@ nav: how_to_nav
         分享一个技术如何影响每个人的故事。
       </li>
       
-      <br />问学生问题，并留下时间问问题</br> 
+      <br />问学生提问，并留下学生提问时间</br> 
       
       <li>
         他们对什么工作感兴趣？他们主喜欢的科技产品或应用程序时什么？以及他们认为这些东西是怎么制作的？
@@ -160,7 +160,7 @@ nav: how_to_nav
           </td>
           
           <td>
-            <strong>编程！</strong> 四处走动，问问题，并指导学生解决难题。 尽量不要马上给学生答案。试着问他们问题，这样他们自己可以回答哪里出错了，并鼓励学生相互间问问题。 Learning from each other is a great learning opportunity.
+            <strong>编程！</strong> 四处走动，问问题，并指导学生解决难题。 尽量不要马上给学生答案。试着问他们问题，这样他们自己可以回答哪里出错了，并鼓励学生相互间问问题。 互相学习是一个很好的学习机会。
           </td>
         </tr>
         
@@ -170,13 +170,13 @@ nav: how_to_nav
           </td>
           
           <td>
-            Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!
+            感谢大家并分享鼓舞人心的临别赠言。分发一些你公司的小饰品 （ 贴纸是个好主意！）
           </td>
         </tr>
         
         <tr>
           <td>
-            After
+            之后
           </td>
           
           <td>
@@ -219,7 +219,7 @@ nav: how_to_nav
           </li>
         </ul>
         <h2>
-          在编程一小时中做志愿者服务的常见问题
+          在编程一小时活动中做志愿服务时的常见问题
         </h2>
         <h3>
           <strong>还没有老师联系我，我该如何做志愿者？</strong>
@@ -231,7 +231,7 @@ nav: how_to_nav
           <strong>课堂访问持续多长时间？</strong>
         </h3>
         <p>
-          亲自课堂访问通常为60-90分钟，而网络课堂通常为20-30分钟。
+          线下课堂通常为60-90分钟，而网络课堂通常为20-30分钟。
         </p>
         <h3>
           <strong>编程一小时教程适合哪个年龄层？</strong>

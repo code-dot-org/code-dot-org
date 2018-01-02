@@ -437,7 +437,7 @@
     title: Officina del Codice
     description: Code Studio è la base di partenza per i corsi online creati da Code.org
     lines_of_code: "%{lines_count} LINEE DI CODICE SCRITTE DAGLI STUDENTI"
-    lines_of_code_linebreak: "%{lines_count} linee di codice <br/> scritte da %{students_count}
+    lines_of_code_linebreak: "%{lines_count} di linee di codice <br/> scritte da %{students_count}
       milioni di studenti"
     all_courses: Panoramica dei corsi 1, 2, 3 e 4 (in inglese)
     lesson_plans: Piani di lavoro delle lezioni
@@ -813,7 +813,7 @@
       title: Sports
       body: Crea una partita di basket o abbina diversi sport.
     text-compression:
-      title: Text Compression
+      title: Compressione del Testo
       body: In questa lezione impari come si comprime un testo sostituendo le sequenze
         di caratteri che si ripetono con dei simboli.
     unplugged:
@@ -1015,13 +1015,6 @@
     create: Crea progetto
     create_a_project: 'Crea un nuovo progetto:'
     new: Nuovo
-    new_buttons:
-      artist: Artista
-      playlab: Laboratorio
-      applab: Sviluppo App
-      gamelab: Sviluppo Giochi
-      weblab: Sviluppo Web (versione provvisoria)
-    new_buttons_header: 'Inizia un nuovo progetto:'
     rename: Rinomina
     save: Salva
     delete: Elimina

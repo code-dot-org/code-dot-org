@@ -1,11 +1,12 @@
 {
+  "startButton": "开始",
   "filterOrgNames": "创建者",
   "filterOrgNamesAll": "全部",
   "filterSortBy": "排序方式",
   "filterSortByDisplayWeight": "推荐",
   "filterSortByPopularityRank": "最受欢迎的",
   "filterGrades": "年级",
-  "filterGradesAll": "All grades",
+  "filterGradesAll": "所有年级",
   "filterGradesPre": "预读",
   "filterGrades25": "2-5年级",
   "filterGrades68": "6-8年级",

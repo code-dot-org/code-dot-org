@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_officials) %>'
+title: <%= hoc_s(:title_how_to_officials) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -17,13 +17,13 @@ nav: how_to_nav
 
 ## Hãy để mọi học sinh đều có cơ hội tham gia!
 
-1. **Đọc trang nhất của chúng tôi** trên lý do tại sao giáo dục công nghệ máy tính là quan trọng, và làm thế nào bạn có thể giúp sự cố gắng bằng cách hỗ trợ Giờ Lập Trình. [Nhận trang nhất của chúng tôi.](/files/hoc-one-pager-public-officials-2016.pdf)
+1. **Đọc trang nhất của chúng tôi** để hiểu lý do tại sao giáo dục công nghệ máy tính là quan trọng, và làm thế nào bạn có thể thúc đẩy nỗ lực đó bằng cách hỗ trợ Giờ Lập Trình. [Get the one-pager here.](/files/hoc-one-pager.pdf)
 
-2. **Tuyển trường học địa phương và quận, huyện.** Sử dụng [email này](%= resolve_url('/promote/resources#sample-emails') %) hoặc [quảng cáo này](%= resolve_url('/promote/stats') %) như một điểm bắt đầu, và nhìn qua về [làm thế nào](%= resolve_url('/how-to') %) cho trường học và quận huyện.
+2. **Huy động trường học địa phương và quận, huyện.** Sử dụng [email này](%= resolve_url('/promote/resources#sample-emails') %) hoặc [quảng cáo này](%= resolve_url('/promote/stats') %) như một điểm bắt đầu, và nhìn qua về [làm thế nào](%= resolve_url('/how-to') %) cho trường học và quận huyện có thể tham gia.
 
-3. **Host an Hour of Code event.** See our [event how-to guide](%= resolve_url('/how-to/events') %) for a sample run of show, media outreach kit and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
+3. **Tổ chức một sự kiện Giờ Lập trình.** Xem [hướng dẫn cách tổ chức sự kiện](<%= hoc_uri('/resources/how-to-event') %>) một sự kiện mẫu, bộ công cụ truyền thông và các nguồn tài liệu dùng để tổ chức sự kiện sự kiện khác. Tổ chức một sự kiện là cách tuyệt vời để thúc đẩy Giờ Lập trình và tăng cường sự tham gia.
 
-4. **Attend an event during Computer Science Education Week (<%= campaign_date('short') %>).** [Find classrooms and schools](%= resolve_url('/events') %) participating in your district, city or state.
+4. **Tham dự một sự kiện trong Tuần lễ Giáo Dục Khoa học Máy tính (8/12-14/12).** [Tìm các lớp, các trường](<%= hoc_uri('/events') %>) đang tham gia thuộc huyện, thành phố hoặc tiểu bang của bạn.
 
 5. **Issue a proclamation or resolution.** See this [sample resolution](%= resolve_url('resources/proclamation') %) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
 

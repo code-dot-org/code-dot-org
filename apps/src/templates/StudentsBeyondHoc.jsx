@@ -1,35 +1,52 @@
 import React, { PropTypes, Component } from 'react';
 import i18n from '@cdo/locale';
-import Responsive from '../responsive';
+import { connect } from 'react-redux';
 import CourseBlocksStudentGradeBands from './studioHomepages/CourseBlocksStudentGradeBands';
 import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
 import { LocalClassActionBlock } from './studioHomepages/TwoColumnActionBlock';
 import { tutorialTypes } from './tutorialTypes.js';
 import { cardSets } from './congratsBeyondHocActivityCards';
+import { ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
 
 const styles = {
   heading: {
     width: '100%',
   },
+  mobileHeading: {
+    fontSize: 24,
+    lineHeight: 1.5,
+  },
+  spacer: {
+    height: 20
+  }
 };
 
-export default class StudentsBeyondHoc extends Component {
+class StudentsBeyondHoc extends Component {
   static propTypes = {
     completedTutorialType: PropTypes.oneOf(tutorialTypes).isRequired,
     MCShareLink: PropTypes.string,
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired,
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
+    userAge: PropTypes.number,
     isEnglish: PropTypes.bool.isRequired,
   };
 
   render() {
+    const { responsiveSize, completedTutorialType, userType, isEnglish, MCShareLink, userAge } = this.props;
 
-    const { isRtl, responsive, completedTutorialType, userType, isEnglish, MCShareLink } = this.props;
     const signedIn = (userType === "teacher" || userType === "student");
+
+    const under13 = userAge < 13;
+
+    const desktop = responsiveSize !== ResponsiveSize.xs;
+
+    const headingStyle = desktop ? styles.heading : styles.mobileHeading;
 
     var specificCardSet;
     switch (true) {
+      case completedTutorialType === 'pre2017Minecraft' && isEnglish && under13:
+          specificCardSet = 'youngerThan13pre2017MinecraftCards';
+        break;
       case completedTutorialType === 'pre2017Minecraft' && isEnglish:
           specificCardSet = 'pre2017MinecraftCards';
         break;
@@ -39,6 +56,9 @@ export default class StudentsBeyondHoc extends Component {
       case completedTutorialType === '2017Minecraft' && isEnglish:
           specificCardSet = 'newMinecraftCards';
         break;
+      case completedTutorialType === '2017Minecraft' && isEnglish && under13:
+          specificCardSet = 'youngerThan13NewMinecraftCards';
+        break;
       case completedTutorialType === '2017Minecraft' && !isEnglish:
           specificCardSet = 'nonEnglishNewMinecraftCards';
         break;
@@ -47,6 +67,9 @@ export default class StudentsBeyondHoc extends Component {
         break;
       case completedTutorialType === 'applab' && !signedIn:
           specificCardSet = 'signedOutApplabCards';
+        break;
+      case completedTutorialType === 'other' && isEnglish && under13:
+          specificCardSet = 'youngerThan13DefaultCards';
         break;
       case completedTutorialType === 'other' && signedIn && isEnglish:
           specificCardSet = 'signedInDefaultCards';
@@ -80,28 +103,27 @@ export default class StudentsBeyondHoc extends Component {
 
     return (
       <div style={styles.container}>
-        <h1 style={styles.heading}>
+        <h1 style={headingStyle}>
           {heading}
         </h1>
         <VerticalImageResourceCardRow
           cards={cards}
-          isRtl={isRtl}
-          responsive={responsive}
         />
         {isEnglish && (
           <CourseBlocksStudentGradeBands
-            isRtl={isRtl}
-            responsive={responsive}
             showContainer={false}
-            hideBottomMargin={false}
+            hideBottomMargin={true}
           />
         )}
+        <div style={styles.spacer}/>
         <LocalClassActionBlock
-          isRtl={isRtl}
-          responsive={responsive}
           showHeading={false}
         />
       </div>
     );
   }
 }
+
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+}))(StudentsBeyondHoc);

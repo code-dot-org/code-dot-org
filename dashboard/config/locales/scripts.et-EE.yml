@@ -1898,9 +1898,9 @@
               name: Gumballi Play Lab
         starwars:
           title: 'Star Wars: galaktika loomine koodiga'
-          description: "Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges,
+          description: "Õpi programmeerima droide ja loo oma Star Wars’i mäng kauges,
             kauges galaktikas."
-          description_short: "Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
+          description_short: "Õpi programmeerima droide ja loo oma Star Wars’i mäng
             kauges, kauges galaktikas."
           description_audience: ''
           stages:
@@ -1908,9 +1908,9 @@
               name: Kooditund 2015
         starwarsblocks:
           title: 'Star Wars: galaktika loomine koodiga'
-          description: "Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges,
+          description: "Õpi programmeerima droide ja loo oma Star Wars’i mäng kauges,
             kauges galaktikas."
-          description_short: "Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
+          description_short: "Õpi programmeerima droide ja loo oma Star Wars’i mäng
             kauges, kauges galaktikas."
           description_audience: ''
           stages:
@@ -1918,8 +1918,8 @@
               name: Kooditund 2015
         mc:
           title: Minecrafti KoodiTund
-          description: Kasuta koodiplokke, et viia Steve või Alex seiklusele selles
-            Minecrafti maailmas
+          description: Kasuta koodi plokke, et viia Steve või Alex seiklusele läbi
+            selle Minecrafti maailma.
           description_short: Uuri Minecrafti maailma koodi kaudu
           stages:
             Hour of Code 2015:
@@ -2338,6 +2338,12 @@
               name: CSP Student Post-Course Survey
             Creating Functions with Parameters:
               name: Creating Functions with Parameters
+            CSP End-of-Semester Mid-course survey:
+              name: CSP End-of-Semester Mid-course survey
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions
@@ -5184,8 +5190,8 @@
         sports:
           title: Tee oma spordimäng
           description_audience: ''
-          description_short: Sega omavahel ja sobita kokku üle spordialade
-          description: Sega omavahel ja sobita kokku üle spordialade
+          description_short: Sega omavahel ja sobita kokku erinevaid spordialasid
+          description: Sega omavahel ja sobita kokku erinevaid spordialasid
           stages:
             Sports:
               name: Sports
@@ -5527,6 +5533,10 @@
               name: Getting Properties
             Designing Screens with Code:
               name: Designing Screens with Code
+            Arrays:
+              name: Arrays
+            Making Music:
+              name: Making Music
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -7874,6 +7884,10 @@
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey:
+              name: Please complete the CSP Mid-course survey
           title: ''
           description_audience: ''
           description_short: ''
@@ -8467,6 +8481,16 @@
               name: 'Technology Foundations: What is a Computer?'
             'Data Science: Problem Solving with Big Data':
               name: 'Data Science: Problem Solving with Big Data'
+            Personal Innovations:
+              name: Personal Innovations
+            What is a Computer?:
+              name: What is a Computer?
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Programming - Hour of Code:
+              name: Programming - Hour of Code
+            Simple Encryption:
+              name: Simple Encryption
           title: PwC Access Your Potential
           description_audience: ''
           description_short: ''
@@ -8493,6 +8517,8 @@
               name: CSD/P pulse check survey 2017
             CSD mid and post survey 2017 staging:
               name: CSD mid and post survey 2017 staging
+            CSP mid and post survey 2017 staging:
+              name: CSP mid and post survey 2017 staging
           title: All the surveys
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
@@ -8508,13 +8534,14 @@
         hero:
           stages:
             'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'Minecraft\: Hero''s Journey Hour of Code'
+              name: 'Minecraft\: Kangelase teekond KoodiTund'
             Minecraft Hour of Code:
               name: Minecrafti KoodiTund
-          title: 'Minecraft: Hero''s Journey'
+          title: 'Minecraft: Kangelase teekond'
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Minecraft on tagasi uhiuue tegevusega KoodiTunniks!
+          description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond
+            läbi Minecrafti koos koodiga.
         applab-intro-staging:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
@@ -8532,6 +8559,58 @@
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
           title: Intro to App Lab Staging
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-explore:
+          stages:
+            new stage:
+              name: new stage
+            Explore PT Prep - Reviewing the Task:
+              name: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan:
+              name: Explore PT - Making a Plan
+            Explore PT - Complete the Task:
+              name: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Setup: Digital Portfolio and Other Tools'
+          title: Explore - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and
+            complete the AP Explore Performance Tasks.
+          description: ''
+        csp-create:
+          stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            Create PT Prep - Reviewing the Task:
+              name: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan:
+              name: Create PT Prep - Making a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+          title: Create - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and
+            complete the AP Create Performance Tasks.
+          description: ''
+        csp3-reovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+          title: 'csp3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-recovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+            standalone template:
+              name: standalone template
+          title: 'CSP3 under the sea student work recovery '
           description_audience: ''
           description_short: ''
           description: ''

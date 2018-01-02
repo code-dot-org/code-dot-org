@@ -68,7 +68,6 @@ import {getRandomDonorTwitter} from '../util/twitterHelper';
 
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
-import {applabObjectFitImages} from './applabObjectFitImages';
 
 /**
  * Create a namespace for the application.
@@ -351,11 +350,6 @@ Applab.init = function (config) {
   // Necessary for tests.
   thumbnailUtils.init();
 
-  // Enable polyfill so we can use object-fit (we must additionally specify
-  // the style in font-family and avoid scale-down & using it in media queries)
-  // See https://www.npmjs.com/package/object-fit-images for details.
-  applabObjectFitImages(null, { watchMQ: true });
-
   // replace studioApp methods with our own
   studioApp().reset = this.reset.bind(this);
   studioApp().runButtonClick = this.runButtonClick.bind(this);
@@ -393,7 +387,6 @@ Applab.init = function (config) {
   copyrightStrings = config.copyrightStrings;
   Applab.user = {
     labUserId: config.labUserId,
-    isAdmin: (config.isAdmin === true),
     isSignedIn: config.isSignedIn
   };
   Applab.isReadOnlyView = config.readonlyWorkspace;
@@ -604,7 +597,8 @@ Applab.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
-    showDebugWatch: !!config.level.isProjectLevel || config.level.showDebugWatch
+    showDebugWatch: !!config.level.isProjectLevel || config.level.showDebugWatch,
+    showMakerToggle: !!config.level.isProjectLevel || config.level.makerlabEnabled,
   });
 
   config.dropletConfig = dropletConfig;
@@ -939,8 +933,6 @@ Applab.runButtonClick = function () {
 var displayFeedback = function () {
   if (!Applab.waitingForReport) {
     studioApp().displayFeedback({
-      app: 'applab', //XXX
-      skin: skin.id,
       feedbackType: Applab.testResults,
       executionError: Applab.executionError,
       response: Applab.response,

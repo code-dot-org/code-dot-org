@@ -8,7 +8,7 @@
     "skin": "artist",
     "embed": "false",
     "instructions": "Use what you've learned to draw this triangle inside of a square.",
-    "markdown_instructions": "Use what you've learned to draw this triangle inside of a square.\r\n___\r\n#####The sides are each 200 pixels long. You will need to turn 90 degrees to make the square and 120 degrees to make the triangle.",
+    "markdown_instructions": "Use what you've learned to draw this triangle inside of a square.\r\n___\r\n##### The sides are each 200 pixels long. You will need to turn 90 degrees to make the square and 120 degrees to make the triangle.",
     "instructions_important": "true",
     "is_k1": "false",
     "skip_instructions_popup": "false",

@@ -2,6 +2,7 @@ require 'aws-sdk'
 require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
+require 'cdo/aws/s3'
 
 SOUND_LIBRARY_BUCKET = 'cdo-sound-library'.freeze
 
@@ -28,7 +29,7 @@ class SoundLibraryApi < Sinatra::Base
 
     begin
       result = Aws::S3::Bucket.
-        new(SOUND_LIBRARY_BUCKET).
+        new(SOUND_LIBRARY_BUCKET, client: AWS::S3.create_client).
         object_versions(prefix: sound_name).
         find {|version| !version.head.delete_marker}.
         get

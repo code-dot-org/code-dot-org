@@ -123,7 +123,7 @@ Students may need a bit of a refresher here about what an algorithm is and how t
 
 [tip]
 	
-#Teaching Tip
+# Teaching Tip
 It is not recommended that you lecture on the topic of Kruskal's algorithm, but rather present the information in a visual way.  One alternative is to explain the algorithm as you demonstrate it. It is  a fairly intuitive algorithm when seen in action.
 	
 [/tip]

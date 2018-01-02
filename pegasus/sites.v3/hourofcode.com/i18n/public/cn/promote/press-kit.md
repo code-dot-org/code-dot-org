@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_press_kit) %>'
+title: <%= hoc_s(:title_press_kit) %>
 layout: wide
 nav: promote_nav
 ---
@@ -54,9 +54,9 @@ Hadi Partovi，Code.org的创始人和CEO曾说过“打造编程一小时就是
 
 **关于Code.org**
 
-Code.org®是501c3公立非营利项目，致力于扩展计算机科学，增加女性和有色弱势学生群体的参与。 其设想是，每所学校的每个学生都应该有机会学习计算机编程。 在2013年启动后，Code.org组织了编程一小时系列活动—向数以百万计的学生介绍计算机科学—和全国超过70所公立学区合作，拓展计算机科学课程。 Code.org由企业、基金会和慷慨个人的慈善捐赠支持，包括微软，印孚瑟斯基金会美国，The Ballmer Family Giving，奥米迪亚网络和其他的慈善捐赠 For more information, please visit: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
+Code.org®是501c3公立非营利项目，致力于扩展计算机科学，增加女性和有色弱势学生群体的参与。 其设想是，每所学校的每个学生都应该有机会学习计算机编程。 在2013年启动后，Code.org组织了编程一小时系列活动—向数以百万计的学生介绍计算机科学—和全国超过70所公立学区合作，拓展计算机科学课程。 Code.org由企业、基金会和慷慨个人的慈善捐赠支持，包括微软，印孚瑟斯基金会美国，The Ballmer Family Giving，奥米迪亚网络和其他的慈善捐赠 更多详情, 请访问: [ <%= resolve_url('code.org')%> ](<%= resolve_url('https://code.org') %>)。
 
   
-Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
+更多资讯和示例邮件请见[这里](<%= resolve_url('/promote') %>)
 
 <%= view :signup_button %>

@@ -23,6 +23,14 @@ unless dry_run
   update_cookbooks.call
   update_bootstrap_script.call
 end
+
+# Branch off existing AMI for adhoc.
+# This allows us to spin up standalone servers for other environments
+# without bringing over certain baked-in adhoc-specific characteristics
+# from an adhoc image (like the repo root folder name)
+image_id = rack_env?(:adhoc) ? adhoc_image_id : IMAGE_ID
+
+iam_instance_profile = stack_name == 'staging-next' ? 'StagingInstanceProfile' : 'StandaloneFrontendInstanceProfile'
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -52,9 +60,9 @@ Resources:
       ResourceSignal:
         Timeout: PT60M
     Properties:
-      ImageId: <%=adhoc_image_id%>
+      ImageId: <%=image_id%>
       InstanceType: <%=INSTANCE_TYPE%>
-      IamInstanceProfile: !ImportValue IAM-StandaloneFrontendInstanceProfile
+      IamInstanceProfile: !ImportValue IAM-<%=iam_instance_profile%>
       KeyName: <%=SSH_KEY_NAME%>
       Tags: [{Key: Name, Value: <%=stack_name%>}]
       BlockDeviceMappings:

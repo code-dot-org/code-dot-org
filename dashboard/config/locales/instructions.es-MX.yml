@@ -1419,6 +1419,15 @@
       CSDU6 - for loop - why for_instruction: |-
         Write the contents of the array to
         the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays rainbow_instruction: |-
+        Write the contents of the array to the screen
+        in numerical order. (Click to see full instructions)
+      CSDU6 arrays random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays variable_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -3960,19 +3969,14 @@
       MC_2017_Ryan_02_instruction: |-
         Help the player get out by using loops to get
         the Agent to the pressure plate.
-      MC_HOC_2017 Agent Test_instruction: |-
-        Click "Run" to move the player to the
-        orange square inside of the house.
-      MC_HOC_2017_01_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_Cole_instruction: |-
-        You need to collect all the tools on this
-        journey. Move around using the **arrow keys**, and get to the chest on the
-        path to win
-      MC_HOC_2017_01_Kiki_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
+      MC_HOC_2017 Agent Test_instruction: Vajuta "Käivita", et liigutada mängija oranžile
+        ruudule maja sees.
+      MC_HOC_2017_01_instruction: Vajuta "Käivita", et liigutada mängija oranžile
+        ruudule maja sees.
+      MC_HOC_2017_01_Cole_instruction: Sellel tekonnal pead koguma kokku kõik tööriistad.
+        Kasuta liikumiseks **nooleklahve** ja liigu võitmiseks rajal oleva kirstuni
+      MC_HOC_2017_01_Kiki_instruction: Vajuta "Käivita", et liigutada mängija oranžile
+        ruudule maja sees.
       MC_HOC_2017_01_RETRY_instruction: Lleva al Agent a la placa de presión, luego
         presiona "Ejecutar" y usa las teclas de flecha para mover al jugador fuera
         de la casa para recoger el cofre.
@@ -4888,6 +4892,10 @@
       SG U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
+      SG U3L08 - introUnderTheSea - recovery_instruction: |-
+        Add an extra fish, starfish,
+        and piece of seagrass to the image. Look at, but don't change, the functions
+        that create them. (Click to see full instructions)
       SG U3L08 - introUnderTheSea_instruction: |-
         Add an extra fish, starfish, and
         piece of seagrass to the image. Look at, but don't change, the functions

@@ -59,7 +59,7 @@ Continuing Professional Development: (September - June of the following academic
 
 ## <a name="locations"></a>Where is the program offered?
 
-The CS Principles Professional Learning Program is available in regions served by Code.org's Regional Partners. Please check our map to learn more about where our Regional Partners are located, when they will be hosting summer workshops, and about any associated program fees (where applicable).
+The CS Principles Professional Learning Program is available in regions served by Code.org's Regional Partners. Please check our map to learn more about where our Regional Partners are located and when they will be hosting summer workshops.
 <br>
 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dKLjL6y3AKo45c7weK__JI3sxijfbmzq" width="640" height="480"></iframe>
@@ -71,7 +71,7 @@ The CS Principles Professional Learning Program is open to educators who are int
 * Commit to participating in the full, year-long professional learning program
 * Work with their school administration to ensure that this course will be offered on the school's 2018-19 master schedule
 * Support the recruitment and enrollment of a diverse group of students in the course, representative of the school's student population
-* Teach the course in a school served by one of Code.org's Regional Partners. To find out if your area is served by one of our Regional Partners, please visit our  [Regional Partner Map](https://code.org/educate/professional-learning-partner/partners).
+* Teach the course in a school served by one of Code.org's Regional Partners. To find out if your area is served by one of our Regional Partners, please see our  [Regional Partner Map](#locations).
 
 Not sure if this is the right Code.org program for you? [Check out our program recommendations](/files/PL-Program-for-Me.pdf) to determine the best fit for your teaching situation.
 
