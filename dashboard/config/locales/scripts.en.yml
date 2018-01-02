@@ -4932,6 +4932,8 @@ en:
               name: Structuring Data
               description_student: This lesson goes further into the interpretation of data, including cleaning and visualizing raw data sets.  The class first looks at the how presenting data in different ways can help people to understand it better.  After seeing how cleaning and visualization can help people make better decisions, the class looks at what parts of this process can be automated, and what need a human.
               description_teacher: In this lesson, students go further into the collection and interpretation of data, including cleaning and visualizing raw data sets.  Students first look at the how presenting data in different ways can help people to understand it better.  They then visualize their own raw data set, in the context of a pizza topping survey, deciding what to do with data that does not easily fit into the visualization scheme that they have chosen.  Last, students look at what parts of this process can be automated, and what need a human to make decisions.
+            Keeping Data Secret:
+              name: Keeping Data Secret
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
