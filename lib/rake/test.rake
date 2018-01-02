@@ -57,7 +57,7 @@ namespace :test do
   # raises, allow the other suite to complete, then make sure this task raises.
   task :ui_all do
     Parallel.each([:eyes_ui, :regular_ui], in_threads: 2) do |target|
-      RakeUtils.rake_stream_output "test:#{target}"
+      Rake::Task["test:#{target}"].invoke
     end
   end
 
