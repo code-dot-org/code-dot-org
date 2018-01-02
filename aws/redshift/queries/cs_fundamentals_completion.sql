@@ -97,7 +97,7 @@ group by 1,2,3,4;
 drop table if exists public.bb_csf_monthly_script_completion;
 create table public.bb_csf_monthly_script_completion as
 select user_id, script_id, min(end_of_month) first_month_complete
-from public.bb_csf_monthly_stage_progress msp
+from #monthly_stage_progress msp
 where progress_stages >= script_stages
 group by 1,2;
 
@@ -110,7 +110,7 @@ select teacher_user_id, eom.end_of_month, count(distinct case when first_month_c
 from
 (
 select se.user_id teacher_user_id, msc.first_month_complete, student_user_id
-from #test2 msc
+from public.bb_csf_monthly_script_completion msc
 join followers f on f.student_user_id = msc.user_id
 join sections se on se.id = f.section_id
 )
