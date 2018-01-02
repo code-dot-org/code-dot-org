@@ -1,4 +1,4 @@
-import { AllPartnersLabel } from './constants';
+import { UnmatchedLabel } from './constants';
 
 const SET_REGIONAL_PARTNER_NAME = 'application_dashboard/SET_REGIONAL_PARTNER_NAME';
 const SET_REGIONAL_PARTNERS = 'application_dashboard/SET_REGIONAL_PARTNERS';
@@ -6,7 +6,7 @@ const SET_WORKSHOP_ADMIN_PERMISSION = 'application_dashboard/SET_WORKSHOP_ADMIN_
 const SET_LOCK_APPLICATION_PERMISSION = 'application_dashboard/SET_LOCK_APPLICATION_PERMISSION';
 
 const initialState = {
-  regionalPartnerName: AllPartnersLabel,
+  regionalPartnerName: UnmatchedLabel,
   regionalPartners: [],
   permissions: {}
 };
