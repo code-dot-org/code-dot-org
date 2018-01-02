@@ -44,7 +44,6 @@ export default storybook => storybook
       story: () => (
         <StudentSections
           initialSections={[]}
-          isRtl={false}
           canLeave={false}
         />
       )
@@ -55,7 +54,6 @@ export default storybook => storybook
       story: () => (
         <StudentSections
           initialSections={sections}
-          isRtl={false}
           canLeave={false}
         />
       )
@@ -66,7 +64,6 @@ export default storybook => storybook
       story: () => (
         <StudentSections
           initialSections={sections}
-          isRtl={false}
           canLeave={true}
         />
       )

@@ -68,6 +68,8 @@ class Pd::Workshop < ActiveRecord::Base
     STATE_ENDED = 'Ended'.freeze
   ].freeze
 
+  SUBJECT_TEACHER_CON = 'Code.org TeacherCon'.freeze
+  SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze
   SUBJECTS = {
     COURSE_ECS => [
       SUBJECT_ECS_PHASE_2 = 'Phase 2 in-person'.freeze,
@@ -92,8 +94,8 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CSP_WORKSHOP_2 = 'Units 2 and 3: Processing data, Algorithms, and Programming'.freeze,
       SUBJECT_CSP_WORKSHOP_3 = 'Units 4 and 5: Big Data, Privacy, and Building Apps'.freeze,
       SUBJECT_CSP_WORKSHOP_4 = 'Units 5 and 6: Building Apps and AP Assessment Prep'.freeze,
-      SUBJECT_CSP_TEACHER_CON = 'Code.org TeacherCon'.freeze,
-      SUBJECT_CSP_FIT = 'Code.org Facilitator Weekend'.freeze
+      SUBJECT_CSP_TEACHER_CON = SUBJECT_TEACHER_CON,
+      SUBJECT_CSP_FIT = SUBJECT_FIT
     ],
     COURSE_CSD => [
       SUBJECT_CSD_SUMMER_WORKSHOP = '5-day Summer'.freeze,
@@ -101,8 +103,8 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CSD_UNIT_3_4 = 'Units 3 and 4: Building Games and User Centered Design'.freeze,
       SUBJECT_CSD_UNITS_4_5 = 'Units 4 and 5: App Prototyping and Data & Society'.freeze,
       SUBJECT_CSD_UNIT_6 = 'Unit 6: Physical Computing'.freeze,
-      SUBJECT_CSD_TEACHER_CON = 'Code.org TeacherCon'.freeze,
-      SUBJECT_CSD_FIT = 'Code.org Facilitator Weekend'.freeze
+      SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
+      SUBJECT_CSD_FIT = SUBJECT_FIT
     ]
   }.freeze
 

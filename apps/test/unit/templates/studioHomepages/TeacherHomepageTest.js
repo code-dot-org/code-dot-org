@@ -28,9 +28,7 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={[]}
         topCourse={topCourse}
-        isRtl={false}
         joinedSections={[]}
-        isEnglish={true}
       />
     );
     const headerBanner = wrapper.find('Connect(HeaderBanner)');
@@ -46,9 +44,7 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={[]}
         topCourse={topCourse}
-        isRtl={false}
         joinedSections={[]}
-        isEnglish={true}
       />
     );
     expect(wrapper.find('ProtectedStatefulDiv')).to.have.length(2);
@@ -60,9 +56,7 @@ describe('TeacherHomepage', () => {
         announcements={[announcement]}
         courses={[]}
         topCourse={topCourse}
-        isRtl={false}
         joinedSections={[]}
-        isEnglish={true}
       />
     );
     const announcementContainer = wrapper.find(Notification);
@@ -84,15 +78,11 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={[]}
         topCourse={topCourse}
-        isRtl={false}
         joinedSections={[]}
-        isEnglish={true}
       />
     );
     expect(wrapper).to.containMatchingElement(
-      <TeacherSections
-        isRtl={false}
-      />
+      <TeacherSections/>
     );
   });
 
@@ -102,9 +92,7 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={[]}
         topCourse={topCourse}
-        isRtl={false}
         joinedSections={[]}
-        isEnglish={true}
       />
     );
     expect(wrapper.find('StudentSections').exists()).to.be.true;
@@ -116,9 +104,7 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         topCourse={topCourse}
         courses={courses}
-        isRtl={false}
         joinedSections={[]}
-        isEnglish={true}
       />
     );
     const recentCourses = wrapper.find('RecentCourses');
@@ -127,7 +113,6 @@ describe('TeacherHomepage', () => {
       isTeacher: true,
       courses: courses,
       topCourse: topCourse,
-      isRtl: false
     });
   });
 
@@ -138,9 +123,7 @@ describe('TeacherHomepage', () => {
         courses={courses}
         topCourse={topCourse}
         codeOrgUrlPrefix="http://localhost:3000/"
-        isRtl={false}
         joinedSections={[]}
-        isEnglish={true}
       />
     );
     expect(wrapper.find('ProjectWidgetWithData').exists()).to.be.true;
