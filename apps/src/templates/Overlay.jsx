@@ -24,12 +24,12 @@ const craftStyle = {
   opacity: 0.8
 };
 
-const Overlay = React.createClass({
-  propTypes: {
+class Overlay extends React.Component {
+  static propTypes = {
     visible: PropTypes.bool,
     hide: PropTypes.func,
     isMinecraft: PropTypes.bool,
-  },
+  };
 
   render() {
     return (this.props.visible ?
@@ -42,8 +42,8 @@ const Overlay = React.createClass({
         ]}
       /> :
       null);
-  },
-});
+  }
+}
 
 export default connect(function propsFromStore(state) {
   return {
