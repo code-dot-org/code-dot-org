@@ -306,10 +306,10 @@ module LevelsHelper
   end
 
   def set_tts_options(level_options, app_options)
-    # Text to speech
+    # Text to speech - set url to empty string if the instructions are empty
     if @script && @script.text_to_speech_enabled?
-      level_options['ttsInstructionsUrl'] = @level.tts_url(@level.tts_instructions_text)
-      level_options['ttsMarkdownInstructionsUrl'] = @level.tts_url(@level.tts_markdown_instructions_text)
+      level_options['ttsInstructionsUrl'] = @level.tts_instructions_text.empty? ? "" : @level.tts_url(@level.tts_instructions_text)
+      level_options['ttsMarkdownInstructionsUrl'] = @level.tts_markdown_instructions_text.empty? ? "" : @level.tts_url(@level.tts_markdown_instructions_text)
     end
 
     app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
