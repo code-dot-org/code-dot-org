@@ -6,7 +6,8 @@ import ReactDOM from 'react-dom';
 import { getResult } from './codeStudioLevels';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import Sounds from '../../Sounds';
-import { ErrorDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
+import { ErrorDialog, SuccessDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
+import i18n from '@cdo/locale';
 
 /*
  * This file contains general logic for displaying modal dialogs
@@ -159,7 +160,7 @@ export function processResults(onComplete, beforeHook) {
           dialog.show();
         } else if (lastServerResponse.nextRedirect) {
           if (appOptions.dialog.shouldShowDialog) {
-            showDialog("success", null, () => {
+            showDialog(getSuccessDialog(appOptions), null, () => {
               var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
               if (lastServerResponse.nextRedirect) {
                 window.location.href = lastServerResponse.nextRedirect;
@@ -172,4 +173,42 @@ export function processResults(onComplete, beforeHook) {
       }
     });
   }
+}
+
+/**
+ * Figures out the right title/body for our success dialog. This depends on our
+ * app type, and potentially a few other appOptions.
+ * @param appOptions
+ * @returns {ReactComponent}
+ */
+function getSuccessDialog(appOptions) {
+  let title, body;
+  const data = appOptions.level;
+  const options = data.options || {};
+  const app = appOptions.dialog.app;
+
+  if (options.success_title) {
+    title = data.options.success_title;
+  } else if ((app === 'text_match' && !data.answers) || data.submittable ||
+      app === 'level_group') {
+    title = i18n.thankyou();
+  } else {
+    title = i18n.correct();
+  }
+
+  if (options.success_body) {
+    body = options.success_body;
+  } else if (app === 'text_match' && !data.answers) {
+    body = i18n.thanksForYourResponse();
+  } else if (data.submittable && app === 'multi') {
+    body = i18n.thankyouForAnswer();
+  } else if (data.submittable || app === 'level_group') {
+    body = i18n.thankyouForAnswers();
+  } else {
+    body = i18n.correctAnswer();
+  }
+
+  return (
+    <SuccessDialog title={title} body={body}/>
+  );
 }
