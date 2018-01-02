@@ -155,7 +155,7 @@ const Button = React.createClass({
         href={href}
         target={target}
         disabled={disabled}
-        onClick={onClick}
+        onClick={disabled ? null : onClick}
         id={id}
       >
         <div>
