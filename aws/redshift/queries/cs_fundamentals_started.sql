@@ -140,7 +140,7 @@ UNION ALL
 -- note: no check on when their teachers started teaching vs. when they went through PD.
 -- Could have started teaching before going through PD
 SELECT COUNT(DISTINCT CASE WHEN gender = 'f' THEN user_id END)::FLOAT/ COUNT(DISTINCT user_id) value,
-       'New CSF students, % female' metric
+       'New PDd CSF students, % female' metric
 FROM (SELECT user_id,
              gender,
              MIN(started_at) date_first_activity
