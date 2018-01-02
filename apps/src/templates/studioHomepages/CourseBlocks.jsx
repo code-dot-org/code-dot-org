@@ -21,7 +21,7 @@ export class CourseBlocksCsf extends Component {
   }
 }
 
-export class CourseBlocksCsfEnglish extends Component {
+class CourseBlocksCsfEnglish extends Component {
   componentDidMount() {
     $('#coursea').appendTo(ReactDOM.findDOMNode(this.refs.coursea)).show();
     $('#courseb').appendTo(ReactDOM.findDOMNode(this.refs.courseb)).show();
@@ -73,7 +73,7 @@ export class CourseBlocksCsfEnglish extends Component {
   }
 }
 
-export class CourseBlocksCsfNonEnglish extends Component {
+class CourseBlocksCsfNonEnglish extends Component {
   componentDidMount() {
     $('#course1').appendTo(ReactDOM.findDOMNode(this.refs.course1)).show();
     $('#course2').appendTo(ReactDOM.findDOMNode(this.refs.course2)).show();

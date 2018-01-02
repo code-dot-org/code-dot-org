@@ -59,7 +59,7 @@ export default storybook => {
               image={exampleCard.image}
               link={exampleCard.link}
             />
-        </ContentContainer>
+          </ContentContainer>
         )
       },
       {
@@ -85,7 +85,7 @@ export default storybook => {
               image={exampleCard.image}
               link={exampleCard.link}
             />
-        </ContentContainer>
+          </ContentContainer>
         )
       },
     ]);
