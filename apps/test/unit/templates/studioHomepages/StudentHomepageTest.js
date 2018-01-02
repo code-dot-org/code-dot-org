@@ -4,8 +4,9 @@ import { shallow } from 'enzyme';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import SectionsTable from '@cdo/apps/templates/studioHomepages/SectionsTable';
+import StudentSections from '@cdo/apps/templates/studioHomepages/StudentSections';
 import { courses, topCourse, joinedSections } from './homepagesTestData';
-import {combineReducers, createStore} from 'redux';
+import { combineReducers, createStore } from 'redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 describe('StudentHomepage', () => {
@@ -80,7 +81,7 @@ describe('StudentHomepage', () => {
         canLeave={false}
       />
     );
-    const studentSections = wrapper.find('StudentSections');
+    const studentSections = wrapper.find(StudentSections);
     assert.deepEqual(studentSections.props(), {
       initialSections: joinedSections,
       canLeave: false
@@ -97,7 +98,7 @@ describe('StudentHomepage', () => {
           codeOrgUrlPrefix="http://localhost:3000/"
           canLeave={false}
         />
-    ).find('StudentSections').dive().find(SectionsTable).dive({context: {store}}).dive();
+    ).find(StudentSections).dive().find(SectionsTable).dive({context: {store}}).dive();
     expect(wrapper).to.containMatchingElement(
         <td>ClassOneCode</td>
     );

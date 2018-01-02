@@ -15,7 +15,7 @@ const styles = {
     width: '100%',
     maxWidth: styleConstants['content-width'],
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
   }
 };
 
