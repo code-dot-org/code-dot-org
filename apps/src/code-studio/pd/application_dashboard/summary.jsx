@@ -8,7 +8,7 @@ import SummaryTable from './summary_table';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import Spinner from '../components/spinner';
 import {
-  AllPartnersFilter,
+  UnmatchedFilter,
   RegionalPartnerDropdownOptions as dropdownOptions
 } from './constants';
 import $ from 'jquery';
@@ -33,7 +33,7 @@ export class Summary extends React.Component {
   componentWillMount() {
     $.ajax({
       method: 'GET',
-      url: '/api/v1/pd/applications',
+      url: `/api/v1/pd/applications?regional_partner_filter=${UnmatchedFilter}`,
       dataType: 'json'
     })
     .done(data => {
@@ -50,7 +50,7 @@ export class Summary extends React.Component {
     this.setState({ regionalPartnerName, regionalPartnerFilter });
     $.ajax({
       method: 'GET',
-      url: `/api/v1/pd/applications?regional_partner_filter=${regionalPartnerFilter ? regionalPartnerFilter : AllPartnersFilter}`,
+      url: `/api/v1/pd/applications?regional_partner_filter=${regionalPartnerFilter ? regionalPartnerFilter : UnmatchedFilter}`,
       dataType: 'json'
     }).done((data) => {
       this.setState({
