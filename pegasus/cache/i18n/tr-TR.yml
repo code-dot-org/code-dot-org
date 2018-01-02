@@ -36,18 +36,18 @@
   twentyhours_text: "İlk Kod Saati'ni bitirdin mi? Bir sonraki kursta daha fazla bilgisayar
     bilimleri ve programlama kavramlarını öğrenebilirsin."
   og_title: 'Code.org: Herkes öğrenebilir'
-  og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
+  og_title_soon: Kodlama Saati geliyor
+  og_title_here: Kodlama saati buradadır!
   og_description: 'Her okulda her öğrenci bilgisayar bilimi öğrenme fırsatını hakkediyor. '
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
   csedweek_og_title: Kodlama Saati geliyor
   csedweek_og_description: ARALIK 4-10, 2017. Bilgisayar bilimleri her öğrencinin
     öğrenmesi gereken bir temeldir.
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
-    science is foundational for every student to learn.
-  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
-    for every student to learn.
+  csedweek_og_description_soon: Kodlama saati 04-10 Aralık 2017 tariheri arasında
+    geliyor. Bilgisayar bilimi bütün öğrencilerin öğrenmesi için başlangıç düzeyindedir.
+  csedweek_og_description_here: Kodlama saati 04-10 Aralık 2017 tarihleri arasında
+    geliyor. Bilgisayar bilimi bütün öğrencilerin öğrenmesi için başlangıç düzeyindedir.
   hoc2014_heading: <a href="http://hourofcode.com">Kod Saatine </a><br/> katılın  8
     - 14 Aralık, 2014<br/>
   hoc2014_students: "Öğrenciler"
@@ -360,6 +360,12 @@
   studiobar_donate_body: Bağış yapacağın her dolar ile bir çocuk daha öğrenecek
   studiobar_shop_title: Mağaza
   studiobar_shop_body: Kalıplarını kır. Logomuzu gururla taşı.
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: |
     &ldquo;Her bir ülkedeki kızları, bir saat boyunca kod öğrenmek için kendini zorlamaya davet ediyorum.&rdquo; Malala, Nobel Barış Ödüllü aktivist
   homepage_hero_text_susan: "&ldquo;Eğer teknolojiyi değiştirebilirseniz, dünyayı
@@ -401,7 +407,7 @@
   homepage_hero_text_stat_loc: "öğrenciler tarafından #loc satır kod yazılmıştır"
   homepage_hero_text_stat_students: 'Code Stüdyoda #student_count tane öğrenci hesabı'
   homepage_hero_text_stat_served: 'Code Stüdyo''da #student_count tane öğrenci hesabı'
-  homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_coming: Kodlama Saati geliyor
   homepage_hero_hoc_is_here: Kod Saati burada
   homepage_slot_text_hoc: Kod Saati
   homepage_slot_text_frozen: 'Frozen: Anna ve Elsa '
@@ -643,6 +649,7 @@
   video_title_obama: Başkan Obama'nın bilgisayar bilimi hakkında konuşması
   video_title_hoc_is_here: Kod Saati Burada - Herkes Öğrenebilir
   video_title_anybody_can_learn: Herkes Öğrenebilir
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: Draymond Green ile Hour of Code
   video_title_russell_okung: Russel Okung ile Hour of Code
   video_title_real_madrid: Real Madrıd ile Hour of Code
@@ -2080,10 +2087,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
-  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
-  video_title_steph_curry: Hour of Code with Steph Curry
