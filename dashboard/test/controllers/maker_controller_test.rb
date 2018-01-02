@@ -139,22 +139,41 @@ class MakerControllerTest < ActionController::TestCase
   test "complete: returns a new code" do
     sign_in @teacher
 
+    expiration = Time.now + 30.days
     CircuitPlaygroundDiscountApplication.create!(
       user_id: @teacher.id,
       unit_6_intention: 'yes1718',
       school_id: @school.id,
       full_discount: true
     )
+    code = CircuitPlaygroundDiscountCode.create!(
+      code: 'FAKE100_asdf123',
+      full_discount: true,
+      expiration: expiration
+    )
+
+    post :complete, params: {signature: "My name"}
+    assert_response :success
+    expected = {code: code.code, expiration: code.expiration}.to_json
+    assert_equal expected, @response.body
+  end
+
+  test "complete: works after admin override" do
+    sign_in @admin
+
+    post :override, params: {user: @teacher.id, full_discount: true}
+    assert_response :success
+    sign_out @admin
+
     CircuitPlaygroundDiscountCode.create!(
       code: 'FAKE100_asdf123',
       full_discount: true,
       expiration: Time.now + 30.days
     )
 
+    sign_in @teacher
     post :complete, params: {signature: "My name"}
     assert_response :success
-    expected = {"code" => "FAKE100_asdf123"}
-    assert_equal expected, JSON.parse(@response.body)
   end
 
   test "application_status: fails if not admin" do

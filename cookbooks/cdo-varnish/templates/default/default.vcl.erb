@@ -185,6 +185,12 @@ if(bereq.method == "GET" || bereq.method == "HEAD") {
   # Ref: https://www.varnish-cache.org/docs/4.0/users-guide/vcl-grace.html
   set beresp.grace = 1h;
 
+  # Workaround for https://www.varnish-cache.org/trac/ticket/1643
+  # Fixed in Varnish 4.1 (TODO: Remove workaround after upgrade)
+  if (bereq.http.range) {
+    set beresp.do_stream = false;
+  }
+
 ### UPSTREAM VARY HEADER
 <%= setup_behavior(config, 'bereq', &method(:process_vary)) %>
 ###

@@ -976,7 +976,7 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function (options, challenge=fal
       (options.response.total_lines !== numLinesWritten));
   const totalNumLinesWritten = shouldShowTotalLines ? options.response.total_lines : 0;
 
-  const generatedCodeProperties = this.getGeneratedCodeProperties_({
+  const generatedCodeProperties = this.getGeneratedCodeProperties({
     generatedCodeDescription: options.appStrings && options.appStrings.generatedCodeDescription
   });
 
@@ -1038,7 +1038,7 @@ FeedbackUtils.prototype.getGeneratedCodeString_ = function () {
  * @returns {React}
  * @private
  */
-FeedbackUtils.prototype.getGeneratedCodeProperties_ = function (options) {
+FeedbackUtils.prototype.getGeneratedCodeProperties = function (options) {
   options = options || {};
 
   var codeInfoMsgParams = {
@@ -1084,7 +1084,7 @@ FeedbackUtils.prototype.getGeneratedCodeDescription = function (codeInfoMsgParam
 FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
   var codeDiv = document.createElement('div');
 
-  var generatedCodeProperties = this.getGeneratedCodeProperties_({
+  var generatedCodeProperties = this.getGeneratedCodeProperties({
     generatedCodeDescription: appStrings && appStrings.generatedCodeDescription
   });
 

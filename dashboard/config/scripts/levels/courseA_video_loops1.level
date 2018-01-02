@@ -5,13 +5,14 @@
   "level_num": "custom",
   "user_id": 302,
   "properties": {
-    "video_key": "C2_artist_loops",
+    "video_key": "CSF_a_b_artist_loops",
     "skip_dialog": true,
     "skip_sound": true,
     "instructions_important": "false"
   },
   "published": true,
   "notes": "Is there a way for these videos to start automatically (and if so, is that a good idea for this stage)?",
+  "audit_log": "[{\"changed_at\":\"2017-12-14 18:01:09 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

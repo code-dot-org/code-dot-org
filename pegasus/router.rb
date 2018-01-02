@@ -33,6 +33,7 @@ end
 require 'honeybadger'
 
 require src_dir 'database'
+require src_dir 'social_metadata'
 require src_dir 'forms'
 require src_dir 'curriculum_router'
 
@@ -481,6 +482,9 @@ class Documents < Sinatra::Base
           metadata[key] = value
         end
       end
+
+      # A few pages have specific metadata defined here.
+      metadata.merge! get_social_metadata_for_page(request)
 
       if request.site != 'csedweek.org'
         unless metadata['og:image']

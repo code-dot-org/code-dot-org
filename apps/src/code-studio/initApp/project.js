@@ -134,7 +134,14 @@ var projects = module.exports = {
    * This method is used so that it can be mocked for unit tests.
    */
   getUrl() {
-    return location.href;
+    return this.getLocation().href;
+  },
+
+  /**
+   * This method exists to be mocked for unit tests.
+   */
+  getLocation() {
+    return document.location;
   },
 
   /**
@@ -168,6 +175,32 @@ var projects = module.exports = {
       }
     }
     return url + fragment + queryString;
+  },
+
+  /**
+   * Returns a share URL for the current project.
+   *
+   * Share URLs can vary by application environment and project type.  For most
+   * project types the share URL is the same as the project edit and view URLs,
+   * but has no action appended to the project's channel ID. Weblab is a special
+   * case right now, because it shares projects to codeprojects.org.
+   *
+   * This function depends on the document location to determine the current
+   * application environment.
+   *
+   * @returns {string} Fully-qualified share URL for the current project.
+   */
+  getShareUrl() {
+    const location = this.getLocation();
+    if (this.isWebLab()) {
+      const re = /([-.]?studio)?\.?code.org/i;
+      const environmentKey = location.hostname.replace(re, '');
+      const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
+      const port = 'localhost' === environmentKey ? `:${location.port}` : '';
+      return `${location.protocol}//${subdomain}codeprojects.org${port}/${this.getCurrentId()}`;
+    } else {
+      return location.origin + this.getPathName();
+    }
   },
 
   getCurrentTimestamp() {
@@ -300,10 +333,10 @@ var projects = module.exports = {
     // we'll load the project and show them a small alert
     const pageAction = parsePath().action;
 
-    // NOTE: appOptions.isAdmin is not a security setting as it can be manipulated
-    // by the user. In this case that's okay, since all that does is allow them to
-    // view a project that was marked as abusive.
-    const hasEditPermissions = this.isOwner() || appOptions.isAdmin;
+    // NOTE: appOptions.canResetAbuse is not a security setting as it can be
+    // manipulated by the user. In this case that's okay, since all that does
+    // is allow them to view a project that was marked as abusive.
+    const hasEditPermissions = this.isOwner() || appOptions.canResetAbuse;
     const isEditOrViewPage = pageAction === 'edit' || pageAction === 'view';
 
     return hasEditPermissions && isEditOrViewPage;
@@ -603,6 +636,10 @@ var projects = module.exports = {
       default:
         return null;
     }
+  },
+
+  isWebLab() {
+    return this.getStandaloneApp() === 'weblab';
   },
 
   canServerSideRemix() {
@@ -1194,7 +1231,7 @@ function fetchAbuseScoreAndPrivacyViolations(callback) {
     deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));
   } else if ((dashboard.project.getStandaloneApp() === 'applab') ||
     (dashboard.project.getStandaloneApp() === 'gamelab') ||
-    (dashboard.project.getStandaloneApp() === 'weblab')) {
+    (dashboard.project.isWebLab())) {
     deferredCallsToMake.push(new Promise(fetchSharingDisabled));
   }
   Promise.all(deferredCallsToMake).then(function () {

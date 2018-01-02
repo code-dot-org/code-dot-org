@@ -9,9 +9,9 @@
   version "1.6.28"
   resolved "https://codeload.github.com/code-dot-org/blockly/tar.gz/962b170b537628d07b0cb17a3adbbba2a2e45955"
 
-"@code-dot-org/bramble@0.1.22":
-  version "0.1.22"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/bramble/-/bramble-0.1.22.tgz#bc37afb05339d0623ba44e86bb54cb04f6728463"
+"@code-dot-org/bramble@0.1.23":
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/bramble/-/bramble-0.1.23.tgz#2a9eeaece13b50303ee9be15a645ef047e00ef91"
   dependencies:
     autoprefixer-core "5.1.8"
     aws-sdk "^2.2.9"
@@ -5047,9 +5047,9 @@ jquery-ui@^1.12.1:
   version "1.12.1"
   resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.1.tgz#bcb4045c8dd0539c134bc1488cdd3e768a7a9e51"
 
-jquery@2.1.4:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-2.1.4.tgz#228bde698a0c61431dc2630a6a154f15890d2317"
+jquery@1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-1.12.1.tgz#9cc34ce4780d4ceb90c44328f071064f01960c18"
 
 js-base64@^2.1.9, js-base64@~2.1.7:
   version "2.1.9"

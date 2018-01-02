@@ -43,7 +43,7 @@
   "devDependencies": {
     "@cdo/apps": "file:src",
     "@code-dot-org/blockly": "github:code-dot-org/blockly#962b170b537628d07b0cb17a3adbbba2a2e45955",
-    "@code-dot-org/bramble": "0.1.22",
+    "@code-dot-org/bramble": "0.1.23",
     "@code-dot-org/craft": "github:code-dot-org/craft#bacbd8d6f61493f8cf84f2deffc74eeaf7d0dae7",
     "@code-dot-org/johnny-five": "0.11.1-cdo.1",
     "@code-dot-org/js-interpreter-tyrant": "0.2.2",
@@ -121,7 +121,7 @@
     "html2canvas": "^0.5.0-beta4",
     "http-server": "^0.9.0",
     "immutable": "3.8.1",
-    "jquery": "2.1.4",
+    "jquery": "1.12.1",
     "jquery-ui": "^1.12.1",
     "js-cookie": "^2.1.2",
     "js-yaml": "^3.6.0",

@@ -1,23 +1,9 @@
 name 'unique level name here'
-title 'CSD U3 Variables name match'
+title 'title'
 description 'description here'
-question 'Labels can\'t have spaces.'
-answer 'size of circle
-var yLocation = 200;'
-question 'Labels can\'t start with a number.'
-answer '1dimension
-var yLocation = 200;'
-question 'Labels should have the same capitalization.'
-answer 'YLocation'
+question 'Question'
+answer 'Answer 1'
 
-markdown <<MARKDOWN
-# Debug: Naming Variables
-
-This program has multiple errors caused by bad label names.  The errors prevent the program from being viewed in block mode.
-
-# Do This
-
-* Match the variable label to the rule that it violates.
-* **Correct the errors by picking new names that follow the rules listed above.**
-* If your program works it should draw the image on the right.
+teacher_markdown <<MARKDOWN
+test
 MARKDOWN
