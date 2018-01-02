@@ -1,25 +1,25 @@
 import React, {PropTypes} from 'react';
 
-const UiTip = React.createClass({
-  propTypes: {
+export default class UiTip extends React.Component {
+  static propTypes = {
     index: PropTypes.number,
     position: PropTypes.object,
     text: PropTypes.string,
     arrowDirection: PropTypes.string,
     closeClicked: PropTypes.func.isRequired
-  },
+  };
 
-  closeClicked(index) {
-    this.props.closeClicked(index);
-  },
+  closeClicked = () => {
+    this.props.closeClicked(this.props.index);
+  };
 
   render() {
-    const { index, position, text, arrowDirection } = this.props;
+    const { position, text, arrowDirection } = this.props;
     return (
       <div>
         <div
           className={`arrow_box_${arrowDirection}`}
-          onClick={this.closeClicked.bind(this, index)}
+          onClick={this.closeClicked}
           style={position}
         >
           <div style={{textAlign: "right"}}>
@@ -32,6 +32,4 @@ const UiTip = React.createClass({
       </div>
     );
   }
-});
-
-export default UiTip;
+}

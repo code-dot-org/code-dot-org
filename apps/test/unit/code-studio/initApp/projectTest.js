@@ -47,6 +47,101 @@ describe('project.js', () => {
     });
   });
 
+  describe('project.getShareUrl', () => {
+    let fakeLocation;
+    const fakeProjectId = '<project-id>';
+
+    const ORIGINS = [
+      {
+        studio:'https://studio.code.org',
+        codeProjects: 'https://codeprojects.org',
+      },
+      {
+        studio:'https://test-studio.code.org',
+        codeProjects: 'https://test.codeprojects.org',
+      },
+      {
+        studio:'https://staging-studio.code.org',
+        codeProjects: 'https://staging.codeprojects.org',
+      },
+      {
+        studio:'http://localhost-studio.code.org:3000',
+        codeProjects: 'http://localhost.codeprojects.org:3000',
+      },
+    ];
+
+    const NORMAL_APP_TYPES = [
+      'artist',
+      'playlab',
+      'applab',
+      'gamelab',
+    ];
+
+    const CODEPROJECTS_APP_TYPES = [
+      'weblab'
+    ];
+
+    beforeEach(() => {
+      sinon.stub(project, 'getLocation').callsFake(() => fakeLocation);
+      sinon.stub(project, 'getCurrentId').returns(fakeProjectId);
+      sinon.stub(project, 'getStandaloneApp');
+    });
+
+    afterEach(() => {
+      project.getStandaloneApp.restore();
+      project.getCurrentId.restore();
+      project.getLocation.restore();
+    });
+
+    function setFakeLocation(url) {
+      fakeLocation = document.createElement('a');
+      fakeLocation.href = url;
+    }
+
+    ORIGINS.forEach(({studio: origin, codeProjects: codeProjectsOrigin}) => {
+      describe(`on ${origin}`, () => {
+        NORMAL_APP_TYPES.forEach((appType) => {
+          const expected = `${origin}/projects/${appType}/${fakeProjectId}`;
+          describe(`${appType} projects share to ${expected}`, () => {
+            beforeEach(() => project.getStandaloneApp.returns(appType));
+
+            it(`from project edit page`, () => {
+              setFakeLocation(`${origin}/projects/${appType}/${fakeProjectId}/edit`);
+              expect(project.getShareUrl()).to.equal(expected);
+            });
+
+            it(`from a script level`, () => {
+              setFakeLocation(`${origin}/s/csp3/stage/10/puzzle/4`);
+              expect(project.getShareUrl()).to.equal(expected);
+            });
+          });
+        });
+
+        CODEPROJECTS_APP_TYPES.forEach((appType) => {
+          const expected = `${codeProjectsOrigin}/${fakeProjectId}`;
+          describe(`${appType} projects share to ${expected}`, () => {
+            beforeEach(() => project.getStandaloneApp.returns(appType));
+
+            it(`from project edit page`, () => {
+              setFakeLocation(`${origin}/projects/${appType}/${fakeProjectId}/edit`);
+              expect(project.getShareUrl()).to.equal(expected);
+            });
+
+            it(`from project view page`, () => {
+              setFakeLocation(`${origin}/projects/${appType}/${fakeProjectId}/view`);
+              expect(project.getShareUrl()).to.equal(expected);
+            });
+
+            it(`from a script level`, () => {
+              setFakeLocation(`${origin}/s/csp3/stage/10/puzzle/4`);
+              expect(project.getShareUrl()).to.equal(expected);
+            });
+          });
+        });
+      });
+    });
+  });
+
   describe('toggleMakerEnabled()', () => {
     let sourceHandler;
 
