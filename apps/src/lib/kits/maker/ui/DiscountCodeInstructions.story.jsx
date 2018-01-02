@@ -12,6 +12,7 @@ export default storybook => {
           <DiscountCodeInstructions
             discountCode="123abc"
             fullDiscount={true}
+            expiration="2018-12-31T00:00:00.000Z"
           />
         )
       },
@@ -22,6 +23,7 @@ export default storybook => {
           <DiscountCodeInstructions
             discountCode="456def"
             fullDiscount={false}
+            expiration="2018-12-31T00:00:00.000Z"
           />
         )
       },

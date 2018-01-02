@@ -63,7 +63,7 @@ class Pardot
 
   # Exception to throw to ourselves if Pardot API key is invalid (which probably
   # means it needs to be re-authed)
-  class InvalidApiKeyException < Exception
+  class InvalidApiKeyException < RuntimeError
   end
 
   # Deletes a list of prospects from Pardot. For Pardot API documentation, see
