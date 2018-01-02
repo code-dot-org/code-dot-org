@@ -38,6 +38,7 @@ module Pd::Application
   class Teacher1819Application < ApplicationBase
     include Rails.application.routes.url_helpers
     include Teacher1819ApplicationConstants
+    include RegionalPartnerTeacherconMapping
 
     def send_decision_notification_email
       # We only want to email unmatched and G3-matched teachers. All teachers
@@ -424,6 +425,36 @@ module Pd::Application
     # @override
     def check_idempotency
       Pd::Application::Teacher1819Application.find_by(user: user)
+    end
+
+    def workshop
+      return unless regional_partner
+
+      # If this application is associated with a G3 partner who in turn is
+      # associated with a specific teachercon, return the workshop for that
+      # teachercon
+      if regional_partner.group == 3
+        teachercon = get_matching_teachercon(regional_partner)
+        if teachercon
+          return find_teachercon_workshop(course, teachercon, 2018)
+        end
+      else
+
+      # Default to just assigning whichever of the partner's workshops is
+      # scheduled to start first. We expect to hit this case for G1 and G2
+      # partners, and for any G3 partners without an associated teachercon
+      regional_partner.workshops.order_by_scheduled_start.first
+    end
+
+    def assign_workshop!
+      return unless workshop
+
+      ::Pd::Enrollment.new(
+        workshop: workshop,
+        user: user,
+        full_name: user.name,
+        email: user.email,
+      )
     end
 
     def meets_criteria
