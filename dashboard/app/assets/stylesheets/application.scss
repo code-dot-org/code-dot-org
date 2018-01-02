@@ -34,6 +34,7 @@
 @import "color";
 @import "font";
 @import "mixins";
+@import "style-constants";
 
 $baseFontFamily: $gotham-regular;
 $headingsFontWeight: normal;
@@ -2012,6 +2013,10 @@ a.download-video {
     display: block;
     margin-bottom: 1em;
   }
+}
+
+.container {
+  width: $content-width;
 }
 
 .container,

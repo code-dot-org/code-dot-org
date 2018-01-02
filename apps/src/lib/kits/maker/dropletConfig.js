@@ -6,7 +6,8 @@ import {
   N_COLOR_LEDS,
   BUTTON_VARS,
   COMPONENT_EVENTS,
-  SONG_CHARGE
+  SONG_CHARGE,
+  SONG_1D
 } from './PlaygroundConstants';
 
 export const MAKER_CATEGORY = 'Maker';
@@ -109,8 +110,10 @@ export const blocks = [
   {func: 'buzzer.note', category: CIRCUIT_CATEGORY, paletteParams: ['note', 'duration'], params: ['"A4"', '100'], paramButtons: { minArgs: 1, maxArgs: 2}},
   {func: 'buzzer.off', category: CIRCUIT_CATEGORY},
   {func: 'buzzer.stop', category: CIRCUIT_CATEGORY},
-  {func: 'buzzer.play', category: CIRCUIT_CATEGORY, paletteParams: ['notes', 'tempo'], params: [stringifySong(SONG_CHARGE), 120], paramButtons: { minArgs: 1, maxArgs: 2}},
 
+  {func: 'buzzer.play', category: CIRCUIT_CATEGORY, paletteParams: ['notes', 'tempo'], params: [stringifySong(SONG_CHARGE), 120], paramButtons: { minArgs: 1, maxArgs: 2}},
+  {func: 'buzzer.playNotes', category: CIRCUIT_CATEGORY, paletteParams: ['notes', 'tempo'], params: [stringifySong(SONG_1D), 120], paramButtons: { minArgs: 1, maxArgs: 2}},
+  {func: 'buzzer.playSong', category: CIRCUIT_CATEGORY, paletteParams: ['notes', 'tempo'], params: [stringifySong(SONG_CHARGE), 120], paramButtons: { minArgs: 1, maxArgs: 2}},
   {func: 'accelerometer.getOrientation', category: CIRCUIT_CATEGORY, type: 'value', paletteParams: ['orientationType'], params: ['"inclination"'], dropdown: {0: ['"inclination"', '"pitch"', '"roll"']}},
   {func: 'accelerometer.getAcceleration', category: CIRCUIT_CATEGORY, type: 'value', paletteParams: ['orientationType'], params: ['"x"'], dropdown: {0: ['"x"', '"y"', '"z"', '"total"']}},
   {func: 'accelerometer.start', category: CIRCUIT_CATEGORY},

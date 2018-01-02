@@ -10,7 +10,7 @@ theme: responsive
 
 ## <a name="what"></a>What is CS Discoveries?
 
-Computer Science Discoveries is appropriate for 6 - 10th grade students and can be taught as a semester or year long introductory course (3-5 hours per week of instruction for 9+ weeks). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. The course inspires students as they build their own websites, apps, games, and physical computing devices. Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. You can read more about our curriculum values [here](/educate/curriculum/values).
+Computer Science Discoveries is appropriate for 6 - 10th grade students and can be taught as a semester or year long introductory course (3-5 hours per week of instruction for 9+ weeks). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. The course inspires students as they build their own websites, apps, games, and physical computing devices. Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. For more information about our goals and approach to our courses, please see our [curriculum values](/educate/curriculum/values) and our [professional learning values](/educate/professional-learning/values).
 
 <div class="col-50" style="padding-right: 20px">
 <%=view :display_video_thumbnail, id: "intro_csp", video_code: "2-QpgNHknds", play_button: 'center', letterbox: 'false' %>

@@ -1,15 +1,4 @@
-- hoc_launch = DCDO.get('hoc_launch', nil)
 - census_announcement = DCDO.get('census_announcement', nil)
-- hoc_mode = DCDO.get('hoc_mode', nil)
-
--# Whether we show a HOC launch background
-- show_hoc_launch_layout = hoc_launch && hoc_launch["homepage"]
-
--# Non-en users get mc instead of applab/celebs
-- if show_hoc_launch_layout
-  - hoc_launch_hero_variation = hoc_launch["homepage"]
-  - if ["applab", "celebs"].include?(hoc_launch_hero_variation) && request.language != "en"
-    - hoc_launch_hero_variation = "mc"
 
 -# Whether we show non-rotating background image and center options on desktop.
 - show_census_layout = request.language == "en"
@@ -19,61 +8,9 @@
 
 - census_announcement_hero = [{"id":99,"id_s":"hero_census_announcement","type_s":"widehero","text1_s":"homepage_hero_text_stat_students","param1_s":"50% 30%","param2_s":"stat","param3_s":"bottom","param4_s":nil,"param5_s":nil,"watermark_s":nil,"image_t":"/images/homepage/announcement.jpg","site_s":"both","active_s":"show","language_supported_s":"all"}]
 
-- hoc_launch_hero = {}
-
--# Temporary for mc 2017 hoc tutorial launch page
-- hoc_launch_hero["mc"] = [{"id":99,"id_s":"mchoc2017","type_s":"widehero","text1_s":"homepage_hero_text_stat_students","param1_s":"50% 30%","param2_s":"stat","param3_s":"bottom","param4_s":nil,"param5_s":nil,"watermark_s":nil,"image_t":"/images/homepage/mchoc2017.jpg","site_s":"both","active_s":"show","language_supported_s":"all"}]
-
--# Temporary for applab 2017 hoc tutorial launch page
-- hoc_launch_hero["applab"] = [{"id":99,"id_s":"applab2017","type_s":"widehero","text1_s":"homepage_hero_text_stat_students","param1_s":"50% 30%","param2_s":"stat","param3_s":"bottom","param4_s":nil,"param5_s":nil,"watermark_s":nil,"image_t":"/images/homepage/applab_hoc2017.jpg","site_s":"both","active_s":"show","language_supported_s":"all"}]
-
--# Temporary for celebs 2017 launch page: mostly unused but needs an entry.
-- hoc_launch_hero["celebs"] = [{"param1_s":"50% 30%"}]
-
--# hoc_launch_hero["celebs"] = [{"id":99,"id_s":"mchoc2017","type_s":"widehero","text1_s":"homepage_hero_text_stat_students","param1_s":"50% 30%","param2_s":"stat","param3_s":"bottom","param4_s":nil,"param5_s":nil,"watermark_s":nil,"image_t":"/images/homepage/celebs_hoc2017_3.jpg","site_s":"both","active_s":"show","language_supported_s":"all"}]
-
 - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
 
--# Temporary for mc 2017 hoc tutorial launch page
-- if show_hoc_launch_layout && hoc_launch_hero_variation == "mc"
-  .desktop-feature
-    %img{src: "/images/fit-300/mc/MC_Logo_Large.png", style: "position: absolute; width: 300px; left: 20px; top: 237px;"}
-  .mobile-feature{style: "width: 100%; text-align: center; "}
-    %img{src: "/images/fit-300/mc/MC_Logo_Large.png", style: "position: absolute; width: 300px; top: 237px; margin-left: auto; margin-right: auto; left: 0; right: 0;"}
-
-  -# Since we're up to real Hour of Code, non-en users should see actual-hoc actions
-  - if request.language != "en"
-    - actions = [{param1_s: "cta_button", text1_s: "get_started", param2_s: "/learn"}]
-
--# Temporary for applab 2017 hoc tutorial launch page
-- if show_hoc_launch_layout && hoc_launch_hero_variation == "applab"
-  .desktop-feature
-    %img{src: "/images/homepage/fit-300/applab_hoc2017_logo.png", style: "position: absolute; width: 300px; right: 60px; top: 237px;"}
-  .mobile-feature{style: "width: 100%; text-align: center; "}
-    %img{src: "/images/homepage/fit-300/applab_hoc2017_logo.png", style: "position: absolute; width: 300px; top: 237px; margin-left: auto; margin-right: auto; left: 0; right: 0;"}
-
-  - actions = [{param1_s: "cta_button", text1_s: "homepage_action_text_join_us", param2_s: "https://hourofcode.com/#join"}, {param1_s: "cta_button_secondary", text1_s: "homepage_action_text_try_it", param2_s: "/hourofcode/overview"}]
-
--# Temporary for celebs 2017 launch page
-- if show_hoc_launch_layout && hoc_launch_hero_variation == "celebs"
-  .mobile-feature{style: "width: 100%; text-align: center; "}
-    %img{src: "/images/homepage/fit-300/celebs_hoc2017_logo.png", style: "position: absolute; width: 250px; top: 137px; margin-left: auto; margin-right: auto; left: 0; right: 0;"}
-
-  - actions = [{param1_s: "cta_button", text1_s: "get_started", param2_s: "/learn"}, {param1_s: "cta_button_secondary", text1_s: "homepage_action_text_wincelebritychat", param2_s: "/challenge"}]
-
 - main_actions = capture_haml do
-  -# Temporary heading text for the Hour of Code
-  - if request.language == "en"
-    - if show_hoc_launch_layout && hoc_launch_hero_variation == "celebs" && hoc_mode == 'actual-hoc'
-      = I18n.t(:homepage_hero_hoc_is_here)
-    - else
-      = I18n.t(:homepage_hero_hoc_is_coming)
-  - elsif show_hoc_launch_layout && hoc_launch_hero_variation == "mc"
-    -# Now that Hour of Code is here, we want to show non-en users a heading
-    = I18n.t(:homepage_action_text_hoc)
-    %br/
-    %br/
-
   - actions.each_with_index do |entry, index|
     - display = entry[:active_s] == "hide" ? "none" : "block"
     .action
@@ -97,8 +34,8 @@
             %button.herohocbutton{style: "min-width: 230px; margin-right: 0px; background-color: transparent; border-color: white; border-width: 2px; margin-top: 0px"}= I18n.t(entry[:text1_s])
         %div{style: "clear: both;"}
       - elsif entry[:param1_s] == "video"
-        %button{style: "min-width: 230px; margin-top: 0px; background-color: transparent; border-color: white; border-width: 2px"}
-          %span#playtext{onclick: "return showVideo_mainvideo();", style: "font-size: 18px;"}= I18n.t(entry[:text1_s])
+        %button{onclick: "return showVideo_mainvideo();", style: "min-width: 230px; margin-top: 0px; background-color: transparent; border-color: white; border-width: 2px"}
+          %span#playtext{style: "font-size: 18px;"}= I18n.t(entry[:text1_s])
 
   - if show_census_announcement
     %br/
@@ -107,12 +44,7 @@
       .bigheading{style: "font-size: 20px; line-height: 1.2em; font-family: 'Gotham 7r', sans-serif;"}
         = census_announcement['homepage_text']
     .subheading{style: "padding-top: 0px; font-size: 18px;"}
-      -# Temporary for celebs 2017 launch page: narrow text
-      - if show_hoc_launch_layout && hoc_launch_hero_variation == "celebs"
-        .subheadingtext{style: "width: 230px; display: inline-block"}
-          = census_announcement['homepage_subtext']
-      - else
-        = census_announcement['homepage_subtext']
+      = census_announcement['homepage_subtext']
 
     %a{href: "/yourschool"}
       %button{style: "min-width: 230px; font-size: 18px; margin-top: 15px; background-color: transparent; border-color: white; border-width: 2px"}
@@ -130,8 +62,6 @@
   - elsif rack_env != :production && request.params["lock-hero"]
     -# for UI tests just lock to the first hero image
     - heroes_arranged = heroes[0, 1]
-  - elsif show_hoc_launch_layout
-    - heroes_arranged = hoc_launch_hero[hoc_launch_hero_variation]
   - elsif show_census_layout
     - heroes_arranged = census_announcement_hero
   - else
@@ -166,19 +96,12 @@
     - display = entry[:active_s] == "hide" ? "none" : "block"
     -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
     - if index == 0
-      - if show_hoc_launch_layout && hoc_launch_hero_variation == "celebs"
-        - response.add_header 'Link', "</images/homepage/celebs_hoc2017_mobile_1x.jpg>; rel=preload; as=image; media=\"#{css_retina?(false)}\";"
-        - response.add_header 'Link', "</images/homepage/celebs_hoc2017_desktop_1x.jpg>; rel=preload; as=image; media=\"#{css_retina?}\";"
-        .widehero_do_not_hide.mobile-feature{style: "background-image: url(\"/images/homepage/celebs_hoc2017_mobile_1x.jpg\"); background-position: #{entry[:param1_s]}; z-index: -5"}
-        .widehero_do_not_hide.desktop-feature{style: "background-image: url(\"/images/homepage/celebs_hoc2017_desktop_1x.jpg\"); background-position: #{entry[:param1_s]}; z-index: -5"}
-
-      - else
-        -#
-          Use Link rel=preload HTTP headers to preload as early as possible.
-          Two headers with inverse media queries conditionally load the correctly-sized image.
-        - response.add_header 'Link', "<#{entry[:image_t]}>; rel=preload; as=image; media=\"#{css_retina?(false)}\";"
-        - response.add_header 'Link', "<#{entry[:image_t].gsub('.jpg', '_2x.jpg')}>; rel=preload; as=image; media=\"#{css_retina?}\";"
-        .widehero#fullwidth0{style: "background-position: #{entry[:param1_s]}; background-image: url(#{entry[:image_t]});"}
+      -#
+        Use Link rel=preload HTTP headers to preload as early as possible.
+        Two headers with inverse media queries conditionally load the correctly-sized image.
+      - response.add_header 'Link', "<#{entry[:image_t]}>; rel=preload; as=image; media=\"#{css_retina?(false)}\";"
+      - response.add_header 'Link', "<#{entry[:image_t].gsub('.jpg', '_2x.jpg')}>; rel=preload; as=image; media=\"#{css_retina?}\";"
+      .widehero#fullwidth0{style: "background-position: #{entry[:param1_s]}; background-image: url(#{entry[:image_t]});"}
     - else
       .widehero.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image_t]}", style: "background-position: #{entry[:param1_s]}"}
 
@@ -192,7 +115,7 @@
         = view :mobile_header_responsive
 
   #caption_container.container_responsive
-    - if show_census_layout || show_hoc_launch_layout
+    - if show_census_layout
       .bigannounce{style: "padding: 20px; text-align: center"}
         #actions
           = main_actions
