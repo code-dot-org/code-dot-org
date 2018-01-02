@@ -49,8 +49,16 @@ const styles = {
   }
 };
 
-const DataTable = React.createClass({
-  propTypes: {
+const INITIAL_STATE = {
+  editingColumn: null,
+  pendingAdd: false,
+  // The old name of the column currently being renamed or deleted.
+  pendingColumn: null,
+  showDebugView: false,
+};
+
+class DataTable extends React.Component {
+  static propTypes = {
     // from redux state
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     tableName: PropTypes.string.isRequired,
@@ -67,26 +75,18 @@ const DataTable = React.createClass({
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired,
     onViewChange: PropTypes.func.isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
-      editingColumn: null,
-      pendingAdd: false,
-      // The old name of the column currently being renamed or deleted.
-      pendingColumn: null,
-      showDebugView: false,
-    };
-  },
+  state = {...INITIAL_STATE};
 
   componentWillReceiveProps(nextProps) {
     // Forget about new columns or editing columns when switching between tables.
     if (this.props.tableName !== nextProps.tableName) {
-      this.setState(this.getInitialState());
+      this.setState(INITIAL_STATE);
     }
-  },
+  }
 
-  addColumn() {
+  addColumn = () => {
     const columnName = this.getNextColumnName();
     this.setState({pendingAdd: true});
     // Show the spinner icon before updating the data.
@@ -106,9 +106,9 @@ const DataTable = React.createClass({
         }
       );
     }, 0);
-  },
+  };
 
-  deleteColumn(columnToRemove) {
+  deleteColumn = (columnToRemove) => {
     this.setState({
       pendingColumn: columnToRemove,
     });
@@ -124,16 +124,14 @@ const DataTable = React.createClass({
         }
       );
     }, 0);
-  },
+  };
 
   /**
    * @param {string|null} columnName Column to edit, or null to not edit any column.
    */
-  editColumn(columnName) {
-    this.setState({editingColumn: columnName});
-  },
+  editColumn = (columnName) => this.setState({editingColumn: columnName});
 
-  renameColumn(oldName, newName) {
+  renameColumn = (oldName, newName) => {
     this.setState({
       editingColumn: null,
       pendingColumn: oldName,
@@ -156,15 +154,15 @@ const DataTable = React.createClass({
         this.resetColumnState();
       }
     }, 0);
-  },
+  };
 
-  resetColumnState() {
+  resetColumnState = () => {
     this.setState({
       editingColumn: null,
       pendingAdd: false,
       pendingColumn: null,
     });
-  },
+  };
 
   /**
    * @param {Array} records Array of JSON-encoded records.
@@ -181,7 +179,7 @@ const DataTable = React.createClass({
     });
 
     return columnNames;
-  },
+  }
 
   getNextColumnName() {
     const names = this.getColumnNames(this.props.tableRecords, this.props.tableColumns);
@@ -190,14 +188,14 @@ const DataTable = React.createClass({
       i++;
     }
     return `column${i}`;
-  },
+  }
 
-  importCsv(csvData, onComplete) {
+  importCsv = (csvData, onComplete) => {
     FirebaseStorage.importCsv(
       this.props.tableName,
       csvData,
       () => {
-        this.setState(this.getInitialState());
+        this.setState(INITIAL_STATE);
         onComplete();
       },
       msg => {
@@ -208,27 +206,27 @@ const DataTable = React.createClass({
         }
         onComplete();
       });
-  },
+  };
 
-  exportCsv() {
+  exportCsv = () => {
     const tableName = encodeURIComponent(this.props.tableName);
     location.href = `/v3/export-firebase-tables/${Applab.channelId}/${tableName}`;
-  },
+  };
 
   /** Delete all rows, but preserve the columns. */
-  clearTable() {
+  clearTable = () => {
     FirebaseStorage.clearTable(
       this.props.tableName,
       () => {},
       msg => console.warn(msg));
-  },
+  };
 
-  toggleDebugView() {
+  toggleDebugView = () => {
     const showDebugView = !this.state.showDebugView;
     this.setState({showDebugView});
-  },
+  };
 
-  coerceColumn(columnName, columnType) {
+  coerceColumn = (columnName, columnType) => {
     this.setState({
       editingColumn: null,
       pendingColumn: columnName,
@@ -249,7 +247,7 @@ const DataTable = React.createClass({
         }
       );
     }, 0);
-  },
+  };
 
   getTableJson() {
     const records = [];
@@ -259,7 +257,7 @@ const DataTable = React.createClass({
       records.push(JSON.parse(tableRecords[id]));
     }
     return JSON.stringify(records, null, 2);
-  },
+  }
 
   render() {
     let columnNames = this.getColumnNames(this.props.tableRecords, this.props.tableColumns);
@@ -297,7 +295,7 @@ const DataTable = React.createClass({
             <a
               id="uitest-tableDebugLink"
               style={dataStyles.link}
-              onClick={() => this.toggleDebugView()}
+              onClick={this.toggleDebugView}
             >
               {this.state.showDebugView ? 'Table view' : 'Debug view'}
             </a>
@@ -376,7 +374,7 @@ const DataTable = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default connect(state => ({
   view: state.data.view,

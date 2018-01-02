@@ -1,8 +1,7 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import ContentContainer from './ContentContainer';
 import ResourceCardResponsiveContainer from './studioHomepages/ResourceCardResponsiveContainer';
 import VerticalImageResourceCard from './VerticalImageResourceCard';
-import Responsive from '../responsive';
 import shapes from './studioHomepages/shapes';
 
 /**
@@ -11,22 +10,18 @@ import shapes from './studioHomepages/shapes';
 
 export default class VerticalImageResourceCardRow extends Component {
   static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired,
     cards: shapes.courses,
   };
 
   render() {
-    const { isRtl, responsive, cards } = this.props;
+    const { cards } = this.props;
     return (
       <ContentContainer
         heading=""
         description=""
-        isRtl={isRtl}
-        responsive={responsive}
         hideBottomMargin={true}
       >
-        <ResourceCardResponsiveContainer responsive={responsive}>
+        <ResourceCardResponsiveContainer>
           {cards.map(
             (card, cardIndex) => (
               <VerticalImageResourceCard
@@ -35,7 +30,6 @@ export default class VerticalImageResourceCardRow extends Component {
                 description={card.description}
                 buttonText={card.buttonText}
                 link={card.link}
-                isRtl={isRtl}
                 image={card.image}
                 MCShareLink={card.MCShareLink}
               />

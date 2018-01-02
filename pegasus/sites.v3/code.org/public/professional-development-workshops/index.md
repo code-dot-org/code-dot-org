@@ -3,7 +3,7 @@ title: Find a workshop
 theme: responsive
 ---
 # Find a workshop (for US teachers only, grades K-5)
-We welcome elementary school teachers to sign up for a free, high-quality professional development workshop from an experienced computer science facilitator. The workshop will provide an intro to computer science, pedagogy, overview of the online curriculum, teacher dashboard, and strategies for teaching “unplugged” classroom activities. Workshops last 6-7 hours and will prepare you to teach the Code Studio courses for grades K-5. See [what else you'll get](#get) from attending a workshop.
+We welcome elementary school teachers to sign up for a free, high-quality professional development workshop from an experienced computer science facilitator. The workshop will provide an intro to computer science, pedagogy, overview of the online curriculum, teacher dashboard, and strategies for teaching “unplugged” classroom activities. Workshops last 6-7 hours and will prepare you to teach the Code Studio courses for grades K-5. For more information about our goals and approach to our courses, please see our [curriculum values](/educate/curriculum/values) and our [professional learning values](/educate/professional-learning/values). See [what else you'll get](#get) from attending a workshop.
 <br />
 <br />
 ### No workshop in your area or outside the United States? <br />
@@ -48,7 +48,7 @@ If there is no workshop near you, teachers anywhere in the world can use [our se
 <div style="clear:both"></div>
 
 ## Become a CS Fundamentals Facilitator
-Code.org's [Facilitator Development Program](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on the CS Fundamentals curriculum.
+Code.org's [Facilitator Development Program](/educate/professional-learning/facilitator) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on the CS Fundamentals curriculum.
 
 Help bring professional learning opportunities to your community by becoming a Code.org Facilitator!
 
