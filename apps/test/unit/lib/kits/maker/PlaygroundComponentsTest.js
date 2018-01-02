@@ -724,24 +724,25 @@ describe('Circuit Playground Components', () => {
       expect(spy).to.have.been.calledOnce;
     });
 
-    describe('stops Piezo.play()', () => {
-      let frequencySpy;
+    ['play', 'playSong', 'playNotes'].forEach(methodUnderTest => {
+      describe(`stops Piezo.${methodUnderTest}()`, () => {
+        let frequencySpy;
 
-      beforeEach(() => {
-        // Spy on 'frequency' which play calls internally.
-        frequencySpy = sinon.spy(Playground.Piezo.frequency, 'value');
-      });
+        beforeEach(() => {
+          // Spy on 'frequency' which play calls internally.
+          frequencySpy = sinon.spy(Playground.Piezo.frequency, 'value');
+        });
 
-      afterEach(() => {
-        frequencySpy.restore();
-      });
+        afterEach(() => {
+          frequencySpy.restore();
+        });
 
-      it('stops Piezo.play()', function () {
-        // Make a new one since we're spying on a 'prototype'
-        return createCircuitPlaygroundComponents(board).then(({buzzer}) => {
+        it('stops Piezo.play()', function () {
+          // Make a new one since we're spying on a 'prototype'
+          return createCircuitPlaygroundComponents(board).then(({buzzer}) => {
           // Set up a song
           const tempoBPM = 120;
-          buzzer.play(['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5'], tempoBPM);
+          buzzer[methodUnderTest](['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5'], tempoBPM);
           expect(frequencySpy).to.have.been.calledOnce;
 
           // Make sure the song is playing
@@ -761,6 +762,7 @@ describe('Circuit Playground Components', () => {
           expect(frequencySpy).to.have.been.calledThrice;
         });
       });
+     });
     });
 
     it('calls disable on the soundSensor', () => {

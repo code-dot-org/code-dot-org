@@ -53,20 +53,16 @@
           %button.btn.btn-danger{'ng-click' => 'removeProject(project)'}= t('project.delete_yes')
           %button.btn.btn-white{'ng-click' => 'project.deleting = false'}= I18n.t('project.delete_no')
 
-  .row
-    .span12{'ng-show' => 'projects.length !== 0'}
-      = t('project.thumbnail_help')
+  %span{'ng-show' => 'projects.length !== 0'}
+    = t('project.thumbnail_help')
 
 -if !@gallery_activities.empty?
-  .row
-    = render partial: 'home/gallery'
+  = render partial: 'home/gallery'
 
-.row
-  .span12
-    %h3.lesson{style: 'text-align:center'}
-      = t('project.need_help')
-.row
-  .center{style: 'width: 720px;'}
-    = render partial: 'shared/course_tall_block', locals: { id: 'applab' }
-    = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
-    = render partial: 'shared/course_tall_block', locals: { id: 'artist' }
+%h3.lesson{style: 'text-align:center'}
+  = t('project.need_help')
+
+.center{style: 'width: 720px;'}
+  = render partial: 'shared/course_tall_block', locals: { id: 'applab' }
+  = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
+  = render partial: 'shared/course_tall_block', locals: { id: 'artist' }

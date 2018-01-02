@@ -10,24 +10,24 @@ import { connect } from 'react-redux';
  *   Efficiently transforming mouse position into app-space
  * @constructor
  */
-export let VisualizationOverlay = React.createClass({
-  propTypes: {
+export class VisualizationOverlay extends React.Component {
+  static propTypes = {
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,
     areOverlaysVisible: PropTypes.bool.isRequired,
     areRunStateOverlaysVisible: PropTypes.bool.isRequired,
     onMouseMove: PropTypes.func,
     children: PropTypes.node,
-  },
+  };
 
-  getInitialState: () => ({
+  state = {
     /** @type {number} */
     mouseX: -1,
     /** @type {number} */
     mouseY: -1,
     /** @type {SVGMatrix} */
     screenSpaceToAppSpaceTransform: null
-  }),
+  };
 
   componentDidMount() {
     /** @private {SVGPoint} Build a reusable position point for efficient transforms */
@@ -39,19 +39,19 @@ export let VisualizationOverlay = React.createClass({
     // of depending on props passed in - hence, these globals.
     window.addEventListener('resize', this.recalculateTransform);
     document.addEventListener('mousemove', this.onMouseMove);
-  },
+  }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.width !== nextProps.width || this.props.height !== nextProps.height) {
       this.recalculateTransform();
     }
-  },
+  }
 
   componentWillUnmount() {
     document.removeEventListener('mousemove', this.onMouseMove);
-  },
+  }
 
-  recalculateTransform() {
+  recalculateTransform = () => {
     const svg = this.refs.root;
     const clientRect = svg.getBoundingClientRect();
 
@@ -65,9 +65,9 @@ export let VisualizationOverlay = React.createClass({
         .scale(this.props.width / clientRect.width)
         .translate(-clientRect.left, -clientRect.top);
     this.setState({ screenSpaceToAppSpaceTransform });
-  },
+  };
 
-  onMouseMove(event) {
+  onMouseMove = (event) => {
     if (!this.state.screenSpaceToAppSpaceTransform) {
       return;
     }
@@ -83,7 +83,7 @@ export let VisualizationOverlay = React.createClass({
     if (typeof this.props.onMouseMove === 'function') {
       this.props.onMouseMove(this.mousePos_.x, this.mousePos_.y);
     }
-  },
+  };
 
   renderOverlays() {
     return React.Children.map(this.props.children, (child, index) => {
@@ -97,7 +97,7 @@ export let VisualizationOverlay = React.createClass({
         });
       }
     });
-  },
+  }
 
   render() {
     return (
@@ -115,7 +115,7 @@ export let VisualizationOverlay = React.createClass({
       </svg>
     );
   }
-});
+}
 export default connect((state) => ({
   areOverlaysVisible: shouldOverlaysBeVisible(state),
   areRunStateOverlaysVisible: shouldRunStateOverlaysBeVisible(state)

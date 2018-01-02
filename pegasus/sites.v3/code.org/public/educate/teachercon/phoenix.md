@@ -1,6 +1,5 @@
 ---
 title: TeacherCon Phoenix
-nav: educate_nav
 theme: responsive
 ---
 <a id="top"></a>
@@ -10,25 +9,30 @@ theme: responsive
 TeacherCon Phoenix
 
 [/solid-block-header]
-## July 16-21, 2017
-<p align="left"><img src="/images/PhoenixSkyline.jpg" width="100%"></p> 
+## July 22-27, 2018
+<p align="left"><img src="/images/PhoenixSkyline.jpg" width="50%"></p> 
 
 ## **What is TeacherCon?**
 
 TeacherCon is an intensive, hands-on, in-person workshop providing foundational experiences with computer science and the Code.org suite of tools. The five-day workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are also using this curriculum.
 
+<details>
+<summary>**What expenses are covered during TeacherCon?**</summary>
+  <p>
+  <br>
+Code.org will pay for relevant travel, accommodation and meal expenses for your summer conference. 
+
+**These include:**
+
+* Flights to and from your assigned TeacherCon Location **OR** mileage gift card for attendees driving over 25 miles one-way.
+* A room for you at the hotel -- No need to make a reservation, we have booked this for you!
+* Catered breakfast, lunch, and snacks, Monday through Friday; dinner on Sunday and Wednesday
+
+All participants will receive a $300 gift card upon their arrival to cover any additional expenses such as meals we do not provide, and other incidentals such as baggage fees, parking, taxis, public transportation, etc. No additional reimbursements will be provided to attendees or districts.
+</p>
+</details>
+
 ## **Travel & Hotel Information**
-### NEW INFO: How to get from the airport to the hotel!
-**Want to share a ride from the airport to the hotel with fellow TeacherCon attendees?**
-<p>
-For privacy reasons, Code.org is not able to share attendee contact information, but you're welcome to meet up with each other at the airport and ride together to the hotel. If you'd like to share a ride, our suggestion is to join a group meeting every 30 minutes between 10 am and 4:30 pm inside the airport (see suggested meeting locations below), and then find a taxi, Uber, or Lyft together. **Please note that Code.org staff will not be at the meeting location.** When you get to the meeting location, make sure to ask others nearby if they are part of TeacherCon.
-</p> 
-
-**Suggested meeting locations at PHX Sky Harbor:**
-
-- Terminal 2: Meet at door 7
-- Terminal 3: Meet at door 4
-- Terminal 4: Meet at door 1
 
 <details>
   <summary>**Hotel Information**</summary>
@@ -69,19 +73,11 @@ You will not need to rent a vehicle while at TeacherCon since all conference ses
 </details>
 
 <details>
-<summary>**What expenses are covered during TeacherCon?**</summary>
-  <p>
-  <br>
-Code.org will pay for relevant travel, accommodation and meal expenses for your summer conference. 
-
-**These include:**
-
-* Flights to and from your assigned TeacherCon Location **OR** mileage gift card for attendees driving over 25 miles one-way.
-* A room for you at the hotel -- No need to make a reservation, we have booked this for you!
-* Catered breakfast, lunch, and snacks, Monday through Friday; dinner on Sunday and Wednesday
-
-All participants will receive a $300 gift card upon their arrival to cover any additional expenses such as meals we do not provide, and other incidentals such as baggage fees, parking, taxis, public transportation, etc. No additional reimbursements will be provided to attendees or districts.
-</p>
+<summary>**Want to share a ride from the airport to the hotel with fellow TeacherCon attendees?**</summary>
+<p>
+<br>
+For privacy reasons, Code.org is not able to share attendee contact information, but you're welcome to meet up with each other at the airport and ride together to the hotel. If you'd like to share a ride, our suggestion is to join a group meeting every 30 minutes between 10 am and 4:30 pm at the designated rideshare pickup location, and then order a taxi, Uber, or Lyft together. **Please note that Code.org staff will not be at the meeting location.** When you get to the meeting location, make sure to ask others nearby if they are part of TeacherCon.
+</p> 
 </details>
 
 ## **What to Bring**
@@ -108,6 +104,8 @@ Please bring your laptop/Chromebook and charger, as well as any adapters. If you
   <summary>**Schedule for the Week**</summary>
   <p>
 <p align="left"><img src="/images/teachercon-schedule.png" width="80%"></p>
+
+Schedule times are subject to change.
 </p>
 </details>
 
@@ -134,57 +132,27 @@ We expect you to attend for the full conference. Make plans to be with us from R
 <summary>**Code.org Staff**</summary>
  <p>
  <br>
-<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconstaff_phoenix') %></p>
+More information coming soon!
 </details>
 
 <details>
 <summary>**Session Lead Facilitators**</summary>
  <p>
  <br>
-<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconfacilitators_phoenix') %></p>
+More information coming soon!
 </details>
 
 <details>
 <summary>**Regional Partners**</summary>
  <p>
  <br>
-<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconrp_phoenix') %></p>
+More information coming soon!
 </p>
 </details>
 
 <a id="previous"></a>
 ## **Previous Email Updates**
 This section will be updated as emails are sent for this event.
-
-<details>
-<summary>**It's time to book your travel to TeacherCon. Complete by June 12th!**</summary>
- <p>
- <br>
-[Click here](http://go.pardot.com/webmail/153401/191426343/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update for teachers.
-</p>
-</details>
-
-<details>
-<summary>**Pre-work and important info about your upcoming TeacherCon!**</summary>
- <p>
- <br>
-**CS Principles Teachers:** [Click here](http://go.pardot.com/webmail/153401/210813081/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email.
-</p>
- <p>
-**CS Discoveries Teachers:** [Click here](http://go.pardot.com/webmail/153401/210813485/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email.
-</p>
-</details>
-
-<details>
-<summary>**We're one week away from TeacherCon!**</summary>
- <p>
- <br>
-**CS Principles Teachers:** [Click here](http://go.pardot.com/webmail/153401/218257869/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email.</p>
-<p>
-**CS Discoveries Teachers:** [Click here](http://go.pardot.com/webmail/153401/218257875/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email.
-</p>
-</details>
-
 
 ## **Contact Us**
 Check out our [FAQ's!](https://goo.gl/udZKLR)
