@@ -24,6 +24,7 @@ namespace :build do
 
       ChatClient.log 'Installing <b>apps</b> dependencies...'
       RakeUtils.npm_install
+      Rake::Task['circle:check_for_unexpected_apps_changes'].invoke
 
       # Workaround for https://github.com/karma-runner/karma-phantomjs-launcher/issues/120
       RakeUtils.npm_rebuild 'phantomjs-prebuilt'
