@@ -18,15 +18,15 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
     ...Object.keys(PageLabels.section4SummerWorkshop),
     "regionalPartnerId",
     "regionalPartnerGroup",
-    "regionalPartnerWorkshopIds"
+    "regionalPartnerWorkshopIds",
+    "teachercon"
   ];
 
   state = {
     loadingPartner: true,
     partner: null,
     loadingAlternateWorkshops: false,
-    alternateWorkshops: null,
-    teachercon: null
+    alternateWorkshops: null
   };
 
   componentDidMount() {
