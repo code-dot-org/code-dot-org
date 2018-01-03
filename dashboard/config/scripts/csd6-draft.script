@@ -148,7 +148,6 @@ level 'CSDU6 play predict code', progression: 'Making Songs'
 level 'CSDU6 play songs', progression: 'Making Songs'
 level 'CSDU6 play null notes', progression: 'Making Songs'
 level 'CDU U6 Playground Sound Board', progression: 'Making Songs'
-bonus 'CSDU6 challenge play songs'
 bonus 'CSDU6 buzzer 2d arrays'
 bonus 'CSDU6 buzzer.stop'
 
