@@ -6,6 +6,7 @@
 // It doesn't do proper cleanup of the click handler for the non-React component
 // if UiTips goes away.
 
+import $ from 'jquery';
 import React, {PropTypes} from 'react';
 import UiTip from './UiTip';
 import Dialog from '../Dialog';
@@ -20,7 +21,7 @@ const UiTips = React.createClass({
     showInitialTips: PropTypes.bool,
     beforeDialog: PropTypes.object,
     afterDialog: PropTypes.object,
-    tips: PropTypes.array
+    tips: PropTypes.array.isRequired,
   },
 
   getInitialState() {
