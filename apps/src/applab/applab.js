@@ -937,7 +937,7 @@ var displayFeedback = function () {
       executionError: Applab.executionError,
       response: Applab.response,
       level: level,
-      showingSharing: level.freePlay,
+      showingSharing: false,
       tryAgainText: applabMsg.tryAgainText(),
       feedbackImage: Applab.feedbackImage,
       twitter: twitterOptions,
