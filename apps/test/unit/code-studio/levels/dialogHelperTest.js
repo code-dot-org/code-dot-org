@@ -45,25 +45,6 @@ describe('dialogHelper', () => {
       </div>
     );
 
-    // Note: Though it can do this, we'd like to get away from this usage
-    it('can take a string type including DOM contents', () => {
-      const child = `
-        <div id="my-type-dialogcontent">
-          <div class="modal-content no-modal-icon">
-            <p class="dialog-title">Title</p>
-            <p class="dialog-body">Body</p>
-            <button id="cancel-button">Cancel</button>
-            <button id="ok-button">Okay</button>
-          </div>
-        </div>
-      `;
-      // const child = document.createElement('div');
-      // child.setAttribute('id', 'my-type-dialogcontent');
-      $(parent).append(child);
-      const dialog = showDialog('my-type');
-      dialog.hide();
-    });
-
     it('can take a React component to generate DOM contents', () => {
       const dialog = showDialog(<MyComponent/>);
       dialog.hide();
