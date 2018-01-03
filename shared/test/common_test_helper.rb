@@ -75,7 +75,7 @@ module SetupTest
 
     # Cached S3-client objects contain AWS credentials,
     # so reset them to ensure that they are not reused across tests.
-    BucketHelper.s3 = nil
+    BucketHelper.s3 = nil if defined?(BucketHelper)
     AWS::S3.s3 = nil
 
     # Reset AUTO_INCREMENT, since it is unaffected by transaction rollback.
