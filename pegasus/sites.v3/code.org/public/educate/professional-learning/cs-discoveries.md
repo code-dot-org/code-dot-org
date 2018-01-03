@@ -27,7 +27,7 @@ This program prepares educators to provide high quality instruction based on the
 
 <div style="margin-left: 20px;">
 
-<%=view :display_video_thumbnail, id: "intro_csp", video_code: "2-QpgNHknds", play_button: 'center' %>
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "uQim0hBHco0", play_button: 'center' %>
 
 </div>
 
