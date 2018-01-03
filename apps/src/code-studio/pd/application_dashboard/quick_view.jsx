@@ -139,6 +139,7 @@ export class QuickView extends React.Component {
           data={this.state.applications}
           statusFilter={this.state.filter}
           regionalPartnerFilter={this.state.regionalPartnerFilter}
+          regionalPartnerName={this.props.regionalPartnerName}
           viewType={this.props.route.viewType}
         />
       </div>

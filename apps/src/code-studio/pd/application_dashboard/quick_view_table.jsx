@@ -6,6 +6,7 @@ import {Button} from 'react-bootstrap';
 import _ from 'lodash';
 import {
   StatusColors,
+  UnmatchedLabel,
   UnmatchedFilter,
   AllPartnersFilter
 } from './constants';
@@ -39,6 +40,7 @@ export class QuickViewTable extends React.Component {
       PropTypes.string,
       PropTypes.number
     ]),
+    regionalPartnerName: PropTypes.string,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
   };
 
@@ -194,11 +196,13 @@ export class QuickViewTable extends React.Component {
 
   constructRows() {
     let rows = this.props.data;
-    if (this.props.regionalPartnerFilter !== AllPartnersFilter) {
-      if (this.props.regionalPartnerFilter === UnmatchedFilter || this.props.regionalPartnerFilter === null) {
-        rows = rows.filter(row => row.regional_partner_id === null);
-      } else {
-        rows = rows.filter(row => row.regional_partner_id === this.props.regionalPartnerFilter);
+    if (this.props.regionalPartnerName === UnmatchedLabel) {
+      if (this.props.regionalPartnerFilter !== AllPartnersFilter) {
+        if (this.props.regionalPartnerFilter === UnmatchedFilter || this.props.regionalPartnerFilter === null) {
+          rows = rows.filter(row => row.regional_partner_id === null);
+        } else {
+          rows = rows.filter(row => row.regional_partner_id === this.props.regionalPartnerFilter);
+        }
       }
     }
     rows = this.props.statusFilter ? rows.filter(row => row.status === this.props.statusFilter) : rows;
