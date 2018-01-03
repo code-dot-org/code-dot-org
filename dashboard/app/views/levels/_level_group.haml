@@ -10,7 +10,7 @@
   text.  It's very important that we don't lose or miss this check.
   Check that @script_level exists, because it won't for a /level/ view.
 
-- unless @script_level && @script_level.can_view_last_attempt(current_user, @user)
+- if @script_level.try(:anonymous?) && current_user.teacher? && current_user != @user
   - page = @pages.first
   %h2= t('heading_x_of_y', heading: data["title"], x: page.page_number, y: @level.pages.length)
   %br/
@@ -35,8 +35,14 @@
           %h2= t('heading_x_of_y', heading: data["title"], x: page.page_number, y: @level.pages.length)
           %br/
 
+        - if @script_level.try(:anonymous?) && current_user.user_level_for(@script_level, @level).try(:submitted?)
+          #survey-submission-thankyou
+            = I18n.t('level_group.survey_submission_thankyou')
+
         - page.levels.each_with_index do |level, index|
-          - sublevel_last_attempt = LevelGroup.get_sublevel_last_attempt(current_user, @user, level)
+          -# Don't show last attempt for anonymous LGs, even for the current user
+          - unless @script_level.try(:anonymous?)
+            - sublevel_last_attempt = LevelGroup.get_sublevel_last_attempt(current_user, @user, level)
 
           -# Show any text from an external level.
           - if data["texts"]

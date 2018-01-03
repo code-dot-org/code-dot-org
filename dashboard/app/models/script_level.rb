@@ -367,17 +367,6 @@ class ScriptLevel < ActiveRecord::Base
     position.to_s
   end
 
-  # Given the signed-in user and an optional user that is being viewed
-  # (e.g. a student viewed by a teacher), tell us whether we are allowed
-  # to view their prior answer.
-  def can_view_last_attempt(user, viewed_user)
-    # If it's an anonymous survey, then teachers can't view student answers
-    return false if user && viewed_user && user != viewed_user && anonymous?
-
-    # Everything else is okay.
-    return true
-  end
-
   # Is this script_level hidden for the current section, either because the stage
   # it is contained in is hidden, or the script it is contained in is hidden.
   def hidden_for_section?(section_id)
