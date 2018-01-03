@@ -177,20 +177,21 @@ export function processResults(onComplete, beforeHook) {
 
 /**
  * Figures out the right title/body for our success dialog. This depends on our
- * app type, and potentially a few other appOptions.
+ * app type, and potentially a few other appOptions. Note this is only used by
+ * our non-coding levels (i.e. things like match, multi)
+ * LevelGroups should not get here, as they have skip_dialog: true
  * @param appOptions
  * @returns {ReactComponent}
  */
-function getSuccessDialog(appOptions) {
+export function getSuccessDialog(appOptions) {
   let title, body;
   const data = appOptions.level;
   const options = data.options || {};
   const app = appOptions.dialog.app;
 
   if (options.success_title) {
-    title = data.options.success_title;
-  } else if ((app === 'text_match' && !data.answers) || data.submittable ||
-      app === 'level_group') {
+    title = options.success_title;
+  } else if ((app === 'text_match' && !data.answers) || data.submittable) {
     title = i18n.thankyou();
   } else {
     title = i18n.correct();
@@ -202,8 +203,6 @@ function getSuccessDialog(appOptions) {
     body = i18n.thanksForYourResponse();
   } else if (data.submittable && app === 'multi') {
     body = i18n.thankyouForAnswer();
-  } else if (data.submittable || app === 'level_group') {
-    body = i18n.thankyouForAnswers();
   } else {
     body = i18n.correctAnswer();
   }
