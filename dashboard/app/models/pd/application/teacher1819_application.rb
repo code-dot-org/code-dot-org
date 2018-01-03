@@ -90,6 +90,16 @@ module Pd::Application
       self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
     end
 
+    before_save :enroll_user, if: -> {pd_workshop_changed?}
+    def enroll_user
+      ::Pd::Enrollment.find_or_create(
+        pd_workshop: pd_workshop,
+        user: user,
+        full_name: user.name,
+        email: user.email,
+      )
+    end
+
     PROGRAMS = {
       csd: 'Computer Science Discoveries (appropriate for 6th - 10th grade)',
       csp: 'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)',
@@ -429,8 +439,15 @@ module Pd::Application
       Pd::Application::Teacher1819Application.find_by(user: user)
     end
 
-    def workshop
+    def find_default_workshop
       return unless regional_partner
+
+      workshop_course =
+        if course == 'csd'
+          Pd::Workshop::COURSE_CSD
+        elsif course == 'csp'
+          Pd::Workshop::COURSE_CSP
+        end
 
       # If this application is associated with a G3 partner who in turn is
       # associated with a specific teachercon, return the workshop for that
@@ -438,25 +455,25 @@ module Pd::Application
       if regional_partner.group == 3
         teachercon = get_matching_teachercon(regional_partner)
         if teachercon
-          return find_teachercon_workshop(course, teachercon, 2018)
+          return find_teachercon_workshop(workshop_course, teachercon, 2018)
         end
-      else
+      end
 
-      # Default to just assigning whichever of the partner's workshops is
-      # scheduled to start first. We expect to hit this case for G1 and G2
+      # Default to just assigning whichever of the partner's eligible workshops
+      # is scheduled to start first. We expect to hit this case for G1 and G2
       # partners, and for any G3 partners without an associated teachercon
-      regional_partner.workshops.order_by_scheduled_start.first
-    end
-
-    def assign_workshop!
-      return unless workshop
-
-      ::Pd::Enrollment.new(
-        workshop: workshop,
-        user: user,
-        full_name: user.name,
-        email: user.email,
-      )
+      regional_partner.
+        pd_workshops_organized.
+        where(
+          course: workshop_course,
+          subject: [
+            Pd::Workshop::SUBJECT_TEACHER_CON,
+            Pd::Workshop::SUBJECT_FIT,
+            Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+          ]
+        ).
+        order_by_scheduled_start.
+        first
     end
 
     def meets_criteria
