@@ -21,7 +21,7 @@ var toTranspileWithinNodeModules = [
 // Our base config, on which other configs are derived
 var baseConfig = {
   resolve: {
-    extensions: ["*", ".js", ".jsx"],
+    extensions: [".js", ".jsx"],
     alias: {
       '@cdo/locale': path.resolve(__dirname, 'src', 'util', 'locale-do-not-import.js'),
       '@cdo/netsim/locale': path.resolve(__dirname, 'src', 'netsim', 'locale-do-not-import.js'),
@@ -104,7 +104,7 @@ if (process.env.CI) {
 
 // modify baseConfig's preLoaders if looking for code coverage info
 if (envConstants.COVERAGE) {
-  baseConfig.module.rules = [
+  baseConfig.module.rules.splice(-1, 1,
     {
       test: /\.jsx?$/,
       enforce: 'pre',
@@ -133,8 +133,8 @@ if (envConstants.COVERAGE) {
         cacheDirectory: true,
         compact: false,
       }
-    },
-  ];
+    }
+  );
 }
 
 var devtool = process.env.CHEAP ?
