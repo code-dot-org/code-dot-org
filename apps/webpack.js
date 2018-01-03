@@ -98,10 +98,6 @@ if (envConstants.HOT) {
   });
 }
 
-if (process.env.CI) {
-  baseConfig.progress = false;
-}
-
 // modify baseConfig's preLoaders if looking for code coverage info
 if (envConstants.COVERAGE) {
   baseConfig.module.rules.splice(-1, 1,
