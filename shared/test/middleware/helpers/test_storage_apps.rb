@@ -32,4 +32,70 @@ class StorageAppsTest < Minitest::Test
     channel_id = StorageApps.new(signedin_storage_id).create({projectType: 'applab'}, ip: 123)
     StorageApps.new(signedout_storage_id).get(channel_id)
   end
+
+  def test_users_paired_on_level_when_no_level
+    signedin_storage_id = @user_storage_ids_table.insert(user_id: 123)
+    storage_apps = StorageApps.new(signedin_storage_id)
+
+    mock_where = mock
+    mock_where.expects(:first).returns(nil).once
+    mock_table = mock
+    mock_table.expects(:where).returns(mock_where).once
+    DASHBOARD_DB.expects(:[]).with(:channel_tokens).returns(mock_table).once
+
+    # If there is no level associated with the channel, it's not possible for it to be paired.
+    refute storage_apps.users_paired_on_level?(12345, 123, 124, 67890)
+  end
+
+  def test_users_paired_on_level_with_level_not_paired
+    signedin_storage_id = @user_storage_ids_table.insert(user_id: 123)
+    storage_apps = StorageApps.new(signedin_storage_id)
+
+    mock_where = mock
+    mock_where.expects(:first).returns(nil).once
+    mock_table = mock
+    mock_table.expects(:where).returns(mock_where).once
+    DASHBOARD_DB.expects(:[]).with(:paired_user_levels).returns(mock_table).once
+
+    mock_select = mock
+    mock_select.expects(:where).returns(123).twice
+    mock_table = mock
+    mock_table.expects(:select).returns(mock_select).twice
+    DASHBOARD_DB.expects(:[]).with(:user_levels).returns(mock_table).once
+
+    mock_where = mock
+    mock_where.expects(:first).returns({level_id: 123}).once
+    mock_table = mock
+    mock_table.expects(:where).returns(mock_where).once
+    DASHBOARD_DB.expects(:[]).with(:channel_tokens).returns(mock_table).once
+
+    # If there is no paired_user_level, it's not possible for it to be paired.
+    refute storage_apps.users_paired_on_level?(12345, 123, 124, 67890)
+  end
+
+  def test_users_paired_on_level_with_level_paired
+    signedin_storage_id = @user_storage_ids_table.insert(user_id: 123)
+    storage_apps = StorageApps.new(signedin_storage_id)
+
+    mock_where = mock
+    mock_where.expects(:first).returns({paired: true}).once
+    mock_table = mock
+    mock_table.expects(:where).returns(mock_where).once
+    DASHBOARD_DB.expects(:[]).with(:paired_user_levels).returns(mock_table).once
+
+    mock_select = mock
+    mock_select.expects(:where).returns(123).twice
+    mock_table = mock
+    mock_table.expects(:select).returns(mock_select).twice
+    DASHBOARD_DB.expects(:[]).with(:user_levels).returns(mock_table).once
+
+    mock_where = mock
+    mock_where.expects(:first).returns({level_id: 123}).once
+    mock_table = mock
+    mock_table.expects(:where).returns(mock_where).once
+    DASHBOARD_DB.expects(:[]).with(:channel_tokens).returns(mock_table).once
+
+    # If there is a paired_user_level, then the level was paired.
+    assert storage_apps.users_paired_on_level?(12345, 123, 124, 67890)
+  end
 end
