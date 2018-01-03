@@ -56,15 +56,11 @@ exports.handler = (event, context, callback) => {
             // Wait until about 2 minutes before this Lambda function reaches its 5 minute timeout before attempting to connect to the database
             setTimeout(function () {
                 // check if password update is pending
-                rds.describeDBInstances({
+                var describeDBInstancesPromise = rds.describeDBInstances({
                     DBInstanceIdentifier: 'verification-copy'
-                }, function (error, data) {
-                    if (error) {
-                        status_message = 'Terminating verification of database copy because database is not available due to pending password change.  ' + error.stack;
-                        console.error(status_message);
-                        postStatusToSlack(status_message);
-                        callback(error);
-                    } else if (data.DBInstances[0].PendingModifiedValues.hasOwnProperty('MasterUserPassword')) {
+                }).promise();
+                describeDBInstancesPromise.then(function (data) {
+                    if (data.DBInstances[0].PendingModifiedValues.hasOwnProperty('MasterUserPassword')) {
                         status_message = 'Terminating verification of database copy because database password change has not started yet.';
                         console.error(status_message);
                         postStatusToSlack(status_message);
@@ -114,6 +110,11 @@ exports.handler = (event, context, callback) => {
                             }
                         });
                     }
+                }).catch(function (error){
+                    status_message = 'Terminating verification of database copy because database is not available due to pending password change.  ' + error.stack;
+                    console.error(status_message);
+                    postStatusToSlack(status_message);
+                    callback(error);
                 });
             }, context.getRemainingTimeInMillis() - 60000);
         }).catch(function (error) {
