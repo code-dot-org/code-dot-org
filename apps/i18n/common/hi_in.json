@@ -984,6 +984,7 @@
   "contractMatchBadNameCase": "Function names are case-sensitive. Try changing the case of your contract's name.",
   "contractMatchBadRange": "Your contract has the wrong range.",
   "dragBlocksToMatch": "Drag the blocks to match",
+  "errorExceededLimitedBlocks": "You did it! Now go find the pattern in your code and take out the extra blocks. You can only use {limit} of these blocks:",
   "getCodePrice": "Get Code for {price} kit",
   "incorrectAnswer": "Incorrect answer",
   "incorrectAnswerBody": "The answer you've entered is not correct.  Please try again!",
