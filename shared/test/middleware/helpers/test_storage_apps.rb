@@ -43,7 +43,7 @@ class StorageAppsTest < Minitest::Test
     mock_table.expects(:where).returns(mock_where).once
     DASHBOARD_DB.expects(:[]).with(:channel_tokens).returns(mock_table).once
 
-    # If there is no level assosciated with the channel, it's not possible for it to be paired.
+    # If there is no level associated with the channel, it's not possible for it to be paired.
     refute storage_apps.users_paired_on_level?(12345, 123, 124, 67890)
   end
 
