@@ -99,7 +99,6 @@ module Pd::Application
       %i(
         first_name
         last_name
-        title
         email
         do_you_approve
         confirm_principal
