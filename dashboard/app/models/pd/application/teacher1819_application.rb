@@ -650,6 +650,14 @@ module Pd::Application
     end
 
     # @override
+    def self.cohort_csv_header
+      CSV.generate do |csv|
+        ['Date Accepted', 'Applicant Name', 'District Name', 'School Name',
+          'Email', 'Notified', 'Assigned Workshop', 'Registered Workshop']
+      end
+    end
+
+    # @override
     def to_csv_row
       answers = full_answers
       CSV.generate do |csv|
@@ -670,6 +678,13 @@ module Pd::Application
           school_zip_code
         )
         csv << row
+      end
+    end
+
+    # @override
+    def to_cohort_csv_row
+      CSV.generate do |csv|
+        row
       end
     end
 
