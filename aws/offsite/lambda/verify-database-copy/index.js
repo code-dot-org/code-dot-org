@@ -3,6 +3,8 @@ console.log('Loading function');
 const AWS = require('aws-sdk');
 const mysqlPromise = require('promise-mysql');
 const Slack = require('slack-node');
+const promisify = require('util-promisify');
+const setTimeoutPromise = promisify(setTimeout);
 
 const SLACK_WEBHOOK_URL = `https://hooks.slack.com/services/${process.env.SLACK_WEBHOOK_URL}`;
 const SLACK_CHANNEL = process.env.SLACK_CHANNEL;
@@ -54,7 +56,7 @@ exports.handler = (event, context, callback) => {
             // 2) Not Available (Status = resetting-master-credentials).  Attempt to connect as a mysql client or to invoke AWS describeDBInstances API fails
             // 3) Available with new password
             // Wait until about 2 minutes before this Lambda function reaches its 5 minute timeout before attempting to connect to the database
-            setTimeout(function () {
+            setTimeoutPromise(context.getRemainingTimeInMillis() - 60000, null).then(function (value) {
                 // check if password update is pending
                 var describeDBInstancesPromise = rds.describeDBInstances({
                     DBInstanceIdentifier: 'verification-copy'
@@ -110,7 +112,7 @@ exports.handler = (event, context, callback) => {
                     postStatusToSlack(status_message);
                     callback(error);
                 });
-            }, context.getRemainingTimeInMillis() - 60000);
+            });
         }).catch(function (error) {
             status_message = 'Terminating verification of database copy due to error modifying database master password.  ' + error.stack;
             console.error(status_message);
