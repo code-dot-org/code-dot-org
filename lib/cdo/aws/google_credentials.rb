@@ -107,8 +107,7 @@ module Cdo
       assume_role = begin
         client = google_client
         return unless client
-        id_token = google_client.id_token ||
-          google_client.tap(&:refresh!).id_token
+        id_token = google_client.tap(&:refresh!).id_token
         # Decode the JWT id_token to use the Google email as the AWS role session name.
         token_params = JWT.decode(id_token, nil, false).first
         @client.assume_role_with_web_identity(
