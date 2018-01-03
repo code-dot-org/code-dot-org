@@ -161,10 +161,6 @@
     "start_blocks": "write(\"My Division Calculator!\");\r\nvar num1 = promptNum(\"Enter the FIRST number to divide\");\r\nvar num2 = promptNum(\"Enter the SECOND number to divide\");\r\nvar result = num1 / num2;\r\n\r\nwrite(num1 + \" divided by \" + num2 + \" is:\");\r\nwrite(result);",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -173,7 +169,8 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
