@@ -9,9 +9,9 @@
   version "1.6.28"
   resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.28.tgz#5dff3ea371b63fb3635e8f5f08f597bba0a1af59"
 
-"@code-dot-org/bramble@0.1.23":
-  version "0.1.23"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/bramble/-/bramble-0.1.23.tgz#2a9eeaece13b50303ee9be15a645ef047e00ef91"
+"@code-dot-org/bramble@0.1.24":
+  version "0.1.24"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/bramble/-/bramble-0.1.24.tgz#faf4789d5308f8da3e04247d81d7ed5ef0500825"
   dependencies:
     autoprefixer-core "5.1.8"
     aws-sdk "^2.2.9"
