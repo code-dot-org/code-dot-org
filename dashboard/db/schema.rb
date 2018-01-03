@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171214191545) do
+ActiveRecord::Schema.define(version: 20180103012437) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -471,10 +471,12 @@ ActiveRecord::Schema.define(version: 20171214191545) do
     t.string   "application_guid"
     t.datetime "decision_notification_email_sent_at"
     t.datetime "accepted_at"
+    t.integer  "pd_workshop_id"
     t.index ["application_guid"], name: "index_pd_applications_on_application_guid", using: :btree
     t.index ["application_type"], name: "index_pd_applications_on_application_type", using: :btree
     t.index ["application_year"], name: "index_pd_applications_on_application_year", using: :btree
     t.index ["course"], name: "index_pd_applications_on_course", using: :btree
+    t.index ["pd_workshop_id"], name: "index_pd_applications_on_pd_workshop_id", using: :btree
     t.index ["regional_partner_id"], name: "index_pd_applications_on_regional_partner_id", using: :btree
     t.index ["status"], name: "index_pd_applications_on_status", using: :btree
     t.index ["type"], name: "index_pd_applications_on_type", using: :btree
@@ -1343,6 +1345,7 @@ ActiveRecord::Schema.define(version: 20171214191545) do
   add_foreign_key "circuit_playground_discount_applications", "schools"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
+  add_foreign_key "pd_applications", "pd_workshops"
   add_foreign_key "pd_payment_terms", "regional_partners"
   add_foreign_key "pd_regional_partner_cohorts", "pd_workshops", column: "summer_workshop_id"
   add_foreign_key "pd_workshops", "regional_partners"
