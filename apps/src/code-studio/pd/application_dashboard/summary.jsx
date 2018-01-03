@@ -31,12 +31,24 @@ export class Summary extends React.Component {
   };
 
   componentWillMount() {
+    this.load();
+  }
+
+  load(selected = null) {
+    let url = '/api/v1/pd/applications';
+    if (this.props.isWorkshopAdmin) {
+      const regionalPartnerFilter = selected ? selected.value : null;
+      const regionalPartnerName = selected ? selected.label : this.props.regionalPartnerName;
+      this.setState({ regionalPartnerName, regionalPartnerFilter });
+
+      url += `?regional_partner_filter=${regionalPartnerFilter ? regionalPartnerFilter : UnmatchedFilter}`;
+    }
+
     $.ajax({
       method: 'GET',
-      url: `/api/v1/pd/applications?regional_partner_filter=${UnmatchedFilter}`,
+      url,
       dataType: 'json'
-    })
-    .done(data => {
+    }).done((data) => {
       this.setState({
         loading: false,
         applications: data
@@ -45,19 +57,7 @@ export class Summary extends React.Component {
   }
 
   handleRegionalPartnerChange = (selected) => {
-    const regionalPartnerFilter = selected ? selected.value : null;
-    const regionalPartnerName = selected ? selected.label : this.props.regionalPartnerName;
-    this.setState({ regionalPartnerName, regionalPartnerFilter });
-    $.ajax({
-      method: 'GET',
-      url: `/api/v1/pd/applications?regional_partner_filter=${regionalPartnerFilter ? regionalPartnerFilter : UnmatchedFilter}`,
-      dataType: 'json'
-    }).done((data) => {
-      this.setState({
-        loading: false,
-        applications: data
-      });
-    });
+    this.load(selected);
   };
 
   render() {
