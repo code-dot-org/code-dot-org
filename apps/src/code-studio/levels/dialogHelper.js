@@ -16,28 +16,23 @@ import i18n from '@cdo/locale';
 var adjustedScroll = false;
 
 /**
- * @param {string|Component} typeOrComponent - Either a string identifying the DOM
- *   to use in this dialog, or a ReactComponent representing the contents. Of the
- *   two, the latter is preferable.
+ * @param {ReactComponent} component - a ReactComponent representing the contents
  * @param {function} callback - Method to call when OK is clicked
  * @param {function} onHidden - Method called when dialog is hidden/closed
  */
-export function showDialog(typeOrComponent, callback, onHidden) {
-  let content;
-  if (typeof(typeOrComponent) === 'string') {
-    // Use our prefabricated dialog content.
-    content = document.querySelector("#" + typeOrComponent + "-dialogcontent").cloneNode(true);
-  } else {
-    const div = document.createElement('div');
-    ReactDOM.render(typeOrComponent, div);
-    content = div.childNodes[0];
-  }
+export function showDialog(component, callback, onHidden) {
+  const div = document.createElement('div');
+  ReactDOM.render(component, div);
+  const content = div.childNodes[0];
   const dialog = new LegacyDialog({
     // Content is a div with a specific expected structure. See LegacyDialog.
     body: content,
     onHidden,
     autoResizeScrollableElement: '.scrollable-element'
   });
+
+  // Note: This approach of rendering a React component to the dom and then
+  // adding click handlers via jquery is very much not ideal.
 
   // Clicking the okay button in the dialog box dismisses it, and calls the callback.
   $(content).find("#ok-button").click(function () {
