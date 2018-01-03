@@ -111,12 +111,11 @@ exports.handler = (event, context, callback) => {
                                         callback(null, status_message);
                                     }
                                 });
-
                             }
                         });
                     }
                 });
-            }, context.getRemainingTimeInMillis() - 120000);
+            }, context.getRemainingTimeInMillis() - 60000);
         }).catch(function (error) {
             status_message = 'Terminating verification of database copy due to error modifying database master password.  ' + error.stack;
             console.error(status_message);
