@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import ReadOnlyBlockSpace from '../ReadOnlyBlockSpace';
 import ChatBubble from './ChatBubble';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import { connect } from 'react-redux';
 import { convertXmlToBlockly } from './utils';
 import VideoThumbnail from '../VideoThumbnail';
@@ -27,6 +28,16 @@ const InlineHint = React.createClass({
     }
   },
 
+  onVideoClick() {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'hint-videos',
+        event: 'Click',
+      },
+    );
+  },
+
   render() {
     return (
       <ChatBubble borderColor={this.props.borderColor} ttsUrl={this.props.ttsUrl} ttsMessage={this.props.ttsMessage}>
@@ -34,7 +45,12 @@ const InlineHint = React.createClass({
           dangerouslySetInnerHTML={{ __html: this.props.content }}
         />
         {this.props.block && <ReadOnlyBlockSpace block={this.props.block} />}
-        {this.props.video && <VideoThumbnail video={this.props.video} />}
+        {this.props.video &&
+          <VideoThumbnail
+            onClick={this.onVideoClick}
+            video={this.props.video}
+          />
+        }
       </ChatBubble>
     );
   }
