@@ -36,6 +36,7 @@ export default storybook => {
               }
             ]}
             viewType="teacher"
+            path="path"
           />
         )
       }, {
@@ -71,6 +72,7 @@ export default storybook => {
               }
             ]}
             viewType="facilitator"
+            path="path"
           />
         )
       }
