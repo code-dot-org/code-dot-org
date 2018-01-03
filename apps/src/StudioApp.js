@@ -1561,12 +1561,14 @@ StudioApp.prototype.report = function (options) {
 
   this.lastTestResult = options.testResult;
 
+  const readOnly = getStore().getState().pageConstants.isReadOnlyWorkspace;
+
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
   // or call the onComplete() callback expected. The app will just sit
   // there with the Reset button as the only option.
   var self = this;
-  if (!(this.hideSource && this.share)) {
+  if (!(this.hideSource && this.share) && !readOnly) {
     var onAttemptCallback = (function () {
       return function (builderDetails) {
         for (var option in builderDetails) {
