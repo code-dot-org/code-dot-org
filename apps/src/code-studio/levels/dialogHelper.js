@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 import { getResult } from './codeStudioLevels';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import Sounds from '../../Sounds';
+import { ErrorDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
 
 /*
  * This file contains general logic for displaying modal dialogs
@@ -52,15 +53,6 @@ export function showDialog(typeOrComponent, callback, onHidden) {
 
   dialog.show();
   return dialog;
-}
-
-export function showStartOverDialog(callback) {
-  showDialog('startover', callback);
-}
-
-export function showInstructionsDialog() {
-  showDialog('instructions', null);
-  $('details').details();
 }
 
 function adjustScroll() {
@@ -117,7 +109,7 @@ export function processResults(onComplete, beforeHook) {
         // In this case, errorDialog should be an instance of a React class.
         showDialog(errorDialog);
       } else {
-        showDialog('error', null, adjustScroll);
+        showDialog(<ErrorDialog/>, null, adjustScroll);
       }
 
       if (!appOptions.dialog.skipSound) {
