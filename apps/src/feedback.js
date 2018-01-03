@@ -730,10 +730,10 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
       case TestResults.QUESTION_MARKS_IN_NUMBER_FIELD:
         message = msg.errorQuestionMarksInNumberField();
         break;
-      case TestResults.EXCEEDED_LIMITED_BLOCKS:
+      case TestResults.BLOCK_LIMIT_FAIL:
         var exceededBlockType = this.hasExceededLimitedBlocks_();
         var limit = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits.getLimit(exceededBlockType);
-        var block = `<xml><block type='${this.hasExceededLimitedBlocks_()}'></block></xml>`;
+        var block = `<xml><block type='${exceededBlockType}'></block></xml>`;
         message = msg.errorExceededLimitedBlocks({limit}) + block;
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
@@ -1541,7 +1541,7 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
         TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED;
   }
   if (this.hasExceededLimitedBlocks_()) {
-    return TestResults.EXCEEDED_LIMITED_BLOCKS;
+    return TestResults.BLOCK_LIMIT_FAIL;
   }
   var numEnabledBlocks = this.getNumCountableBlocks();
   if (!levelComplete) {
