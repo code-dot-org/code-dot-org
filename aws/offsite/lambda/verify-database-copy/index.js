@@ -1,7 +1,7 @@
 console.log('Loading function');
 
 const AWS = require('aws-sdk');
-const mysql = require('mysql');
+const mysqlPromise = require('promise-mysql');
 const Slack = require('slack-node');
 
 const SLACK_WEBHOOK_URL = `https://hooks.slack.com/services/${process.env.SLACK_WEBHOOK_URL}`;
@@ -66,48 +66,42 @@ exports.handler = (event, context, callback) => {
                         postStatusToSlack(status_message);
                         callback(new Error(status_message));
                     } else {
-                        var connection = mysql.createConnection({
+                        var connection;
+
+                        mysqlPromise.createConnection({
                             host: DB_HOST,
                             database: DB_NAME,
                             user: DB_USER,
                             password: DB_PASSWORD
-                        });
-                        connection.connect(function (error) {
-                            if (error) {
-                                status_message = 'Error connecting to mysql: ' + error.stack;
-                                console.error(status_message);
-                                postStatusToSlack(status_message);
-                                callback(error);
-                            } else {
-                                console.log('Connected to mysql as id ' + connection.threadId);
-                                connection.query("SELECT count(*) AS number_of_users FROM users", function (error, result, fields) {
-                                    if (error) {
-                                        status_message = 'Error executing mysql query:' + error.stack;
-                                        console.error(status_message);
-                                        postStatusToSlack(status_message);
-                                        connection.end();
-                                        callback(error);
-                                    } else {
-                                        status_message = 'Successfully queried offsite backup of database.  Number of Users = ' + result[0].number_of_users;
-                                        console.log(status_message);
-                                        postStatusToSlack(status_message);
-                                        connection.end();
+                        }).then(function (conn){
+                            connection = conn;
+                            return connection.query('SELECT count(*) AS number_of_users FROM users');
+                        }).then(function (rows){
+                            status_message = 'Successfully queried offsite backup of database.  Number of Users = ' + rows[0].number_of_users;
+                            console.log(status_message);
+                            postStatusToSlack(status_message);
+                            connection.end();
 
-                                        var deleteDBInstanceParams = {
-                                            DBInstanceIdentifier: DB_INSTANCE_IDENTIFIER,
-                                            SkipFinalSnapshot: true
-                                        };
-                                        rds.deleteDBInstance(deleteDBInstanceParams, function (error, data) {
-                                            if (error) {
-                                                console.log('Error deleting backup DB instance: ' + JSON.stringify(error), error.stack);
-                                            } else {
-                                                console.log('Backup DB instance successfully deleted:  ' + JSON.stringify(data));
-                                            }
-                                        });
-                                        callback(null, status_message);
-                                    }
-                                });
+                            var deleteDBInstanceParams = {
+                                DBInstanceIdentifier: DB_INSTANCE_IDENTIFIER,
+                                SkipFinalSnapshot: true
+                            };
+                            rds.deleteDBInstance(deleteDBInstanceParams, function (error, data) {
+                                if (error) {
+                                    console.log('Error deleting backup DB instance: ' + JSON.stringify(error), error.stack);
+                                } else {
+                                    console.log('Backup DB instance successfully deleted:  ' + JSON.stringify(data));
+                                }
+                            });
+                            callback(null, status_message);
+                        }).catch(function (error){
+                            if (connection && connection.end) {
+                                connection.end();
                             }
+                            status_message = 'mysql error: ' + JSON.stringify(error);
+                            console.log(status_message);
+                            postStatusToSlack(status_message);
+                            callback(error);
                         });
                     }
                 }).catch(function (error){
