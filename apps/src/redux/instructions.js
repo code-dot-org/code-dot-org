@@ -51,7 +51,8 @@ const instructionsInitialState = {
   maxAvailableHeight: Infinity,
   hasAuthoredHints: false,
   overlayVisible: false,
-  levelVideos: []
+  levelVideos: [],
+  app: undefined
 };
 
 export default function reducer(state = {...instructionsInitialState}, action) {
@@ -68,7 +69,8 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       hasContainedLevels,
       overlayVisible,
       teacherMarkdown,
-      levelVideos
+      levelVideos,
+      app
     } = action;
     let collapsed = state.collapsed;
     if (!longInstructions && !hasContainedLevels) {
@@ -85,7 +87,8 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       hasContainedLevels,
       overlayVisible,
       collapsed,
-      levelVideos
+      levelVideos,
+      app
     });
   }
 
@@ -141,7 +144,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
 
 export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
     shortInstructions, shortInstructions2, longInstructions,
-    hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown, levelVideos }) => ({
+    hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown, levelVideos, app }) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
   hasInlineImages,
@@ -152,6 +155,7 @@ export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
   overlayVisible,
   teacherMarkdown,
   levelVideos,
+  app
 });
 
 export const setInstructionsRenderedHeight = height => ({
@@ -253,7 +257,9 @@ export const determineInstructionsConstants = config => {
     locale,
     noInstructionsWhenCollapsed,
     hasContainedLevels,
-    teacherMarkdown
+    teacherMarkdown,
+    //TOD0- REMOVE after resources tab A/B testing
+    app
   } = config;
   const {
     instructions,
@@ -334,5 +340,6 @@ export const determineInstructionsConstants = config => {
     teacherMarkdown,
     hasContainedLevels,
     levelVideos,
+    app
   };
 };

@@ -13,6 +13,7 @@ import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
 import experiments from '@cdo/apps/util/experiments';
 import InstructionsTab from './InstructionsTab';
 import HelpTabContents from './HelpTabContents';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 var instructions = require('../../redux/instructions');
 var color = require("../../util/color");
@@ -202,10 +203,24 @@ var TopInstructions = React.createClass({
 
   handleHelpTabClick() {
     this.setState({helpTabSelected: true});
+    this.recordResourcesTabButtonClick();
   },
 
   handleInstructionTabClick() {
     this.setState({helpTabSelected: false});
+  },
+
+  recordResourcesTabButtonClick() {
+    console.log("FOUND THIS HERE");
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'instructions-resources-tab',
+        study_group: 'resources-tab',
+        event: 'resources-tab-click'
+        //what level (different field) or what type of app (in json)
+      }
+    );
   },
 
   render() {
