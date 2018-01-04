@@ -67,6 +67,7 @@ import {
 } from './redux/instructions';
 import { addCallouts } from '@cdo/apps/code-studio/callouts';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 var copyrightStrings;
 
@@ -1826,6 +1827,19 @@ StudioApp.prototype.configureDom = function (config) {
     belowViz.appendChild(referenceArea);
   }
 
+  // TODO (epeach) - remove after resources tab A/B testing
+  // Temporarily attach an event listener to log clicks
+  // Logs the type of app and the ids of the puzzle
+  var videoThumbnail = document.getElementsByClassName('video_thumbnail');
+  videoThumbnail[0].addEventListener('click', firehoseClient.putRecord(
+    'analysis-events',
+    {
+      study: 'instructions-resources-tab-wip',
+      study_group: 'under-app',
+      event: 'under-app-video-click',
+      data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
+    }
+  ));
   var visualizationColumn = document.getElementById('visualizationColumn');
 
   if (!config.hideSource || config.embed || config.level.iframeEmbed) {
