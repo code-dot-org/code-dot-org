@@ -1884,7 +1884,7 @@ Artist.prototype.report = function (enableOnComplete = true) {
     result: this.levelComplete,
     testResult: this.testResults,
     program: encodeURIComponent(this.getUserCode()),
-    save_to_gallery: this.level.impressive
+    save_to_gallery: !!this.level.impressive
   };
 
   if (enableOnComplete) {
