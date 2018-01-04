@@ -19,6 +19,7 @@
 #  application_guid                    :string(255)
 #  decision_notification_email_sent_at :datetime
 #  accepted_at                         :datetime
+#  properties                          :text(65535)
 #
 # Indexes
 #
