@@ -1,6 +1,6 @@
 class Api::V1::Pd::FacilitatorApplicationCohortViewSerializer < ActiveModel::Serializer
   attributes :id, :date_accepted, :applicant_name, :district_name, :school_name, :email,
-    :notified, :assigned_fit, :registered_fit, :accepted_fit
+    :notified, :assigned_fit, :registered_fit
 
   def date_accepted
     object.accepted_at.try(:strftime, '%b %e')

@@ -315,11 +315,8 @@ module Api::V1::Pd
             school_name: 'Hogwarts',
             email: 'minerva@hogwarts.edu',
             notified: 'Not implemented',
-            assigned_workshop: 'Not implemented',
-            registered_workshop: 'Not implemented',
             assigned_fit: 'Not implemented',
-            registered_fit: 'Not implemented',
-            accepted_fit: 'Not implemented',
+            registered_fit: 'Not implemented'
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
