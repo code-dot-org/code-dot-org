@@ -236,11 +236,11 @@ module Pd::Application
     end
 
     def school_name
-      user.try(:school_info).try(:effective_school_name).try(:titleize)
+      school.try(:name).try(:titleize)
     end
 
     def district_name
-      user.try(:school_info).try(:effective_school_district_name).try(:titleize)
+      District.find_by_id(school.try(:school_district_id)).try(:name).try(:titleize)
     end
 
     def applicant_name
@@ -260,6 +260,11 @@ module Pd::Application
 
     def include_additional_text(hash, field_name, *options)
       hash[field_name] = answer_with_additional_text hash, field_name, *options
+    end
+
+    def school
+      school_id = sanitize_form_data_hash[:school].to_i
+      School.find_by_id(school_id)
     end
   end
 end
