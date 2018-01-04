@@ -9,7 +9,7 @@ theme: responsive
 TeacherCon Phoenix
 
 [/solid-block-header]
-# July 22-27, 2018
+## July 22-27, 2018
 
 [col-50]
 
