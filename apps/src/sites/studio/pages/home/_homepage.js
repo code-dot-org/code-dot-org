@@ -149,7 +149,6 @@ function showHomepage() {
             topCourse={homepageData.topCourse}
             queryStringOpen={query['open']}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
-            isEnglish={isEnglish}
             ncesSchoolId={homepageData.ncesSchoolId}
             censusQuestion={homepageData.censusQuestion}
             showCensusBanner={homepageData.showCensusBanner}
