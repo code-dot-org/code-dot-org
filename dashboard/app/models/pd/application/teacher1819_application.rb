@@ -98,7 +98,7 @@ module Pd::Application
     def enroll_user
       return unless pd_workshop_id
 
-      ::Pd::Enrollment.find_or_create(
+      ::Pd::Enrollment.find_or_create_by!(
         pd_workshop_id: pd_workshop_id,
         user: user,
         full_name: user.name,
@@ -461,7 +461,7 @@ module Pd::Application
       if regional_partner.group == 3
         teachercon = get_matching_teachercon(regional_partner)
         if teachercon
-          return find_teachercon_workshop(workshop_course, teachercon, 2018)
+          return find_teachercon_workshop(course: workshop_course, city: teachercon[:city], year: 2018)
         end
       end
 
@@ -474,7 +474,6 @@ module Pd::Application
           course: workshop_course,
           subject: [
             Pd::Workshop::SUBJECT_TEACHER_CON,
-            Pd::Workshop::SUBJECT_FIT,
             Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
           ]
         ).
