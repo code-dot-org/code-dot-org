@@ -9,6 +9,8 @@ import i18n from "@cdo/locale";
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import QuickActionsCell from "../tables/QuickActionsCell";
 import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
+import color from "../../util/color";
+import FontAwesome from '../FontAwesome';
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -35,6 +37,12 @@ export const COLUMNS = {
   GENDER: 2,
   PASSWORD: 3,
   ACTIONS: 4,
+};
+
+const styles = {
+  xIcon: {
+    paddingRight: 5,
+  }
 };
 
 // Cell formatters.
@@ -92,8 +100,10 @@ const actionsFormatter = function (actions, {rowData}) {
       </PopUpMenu.Item>
       <MenuBreak/>
       <PopUpMenu.Item
-        onClick={() => {}}
+        onClick={()=>{}}
+        color={color.red}
       >
+        <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
         {"Remove student"}
       </PopUpMenu.Item>
     </QuickActionsCell>
