@@ -8,6 +8,7 @@ import weblabMsg from '@cdo/weblab/locale';
 import PaneHeader, {PaneSection, PaneButton} from '../templates/PaneHeader';
 import CompletionButton from '../templates/CompletionButton';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
+import styleConstants from '../styleConstants';
 
 /**
  * Top-level React wrapper for WebLab
@@ -36,11 +37,12 @@ class WebLabView extends React.Component {
   }
 
   render() {
-    let iframeBottom = this.props.isProjectLevel ? '20px' : '90px';
+    let headersHeight = styleConstants["workspace-headers-height"];
+    let iframeHeightOffset = headersHeight + (this.props.isProjectLevel ? 0 : 70);
     let iframeStyles = {
       position: 'absolute',
       width: '100%',
-      height: `calc(100% - ${iframeBottom})`
+      height: `calc(100% - ${iframeHeightOffset}px)`
     };
 
     return (

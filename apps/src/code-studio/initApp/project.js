@@ -402,8 +402,10 @@ var projects = module.exports = {
   },
 
   showHeaderForProjectBacked() {
-    if (this.shouldUpdateHeaders() && !this.shouldHideShareAndRemix()) {
-      header.showHeaderForProjectBacked();
+    if (this.shouldUpdateHeaders()) {
+      header.showHeaderForProjectBacked({
+        showShareAndRemix: !this.shouldHideShareAndRemix()
+      });
     }
   },
   setName(newName) {
