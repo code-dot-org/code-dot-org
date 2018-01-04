@@ -18,15 +18,15 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
     ...Object.keys(PageLabels.section4SummerWorkshop),
     "regionalPartnerId",
     "regionalPartnerGroup",
-    "regionalPartnerWorkshopIds"
+    "regionalPartnerWorkshopIds",
+    "teachercon"
   ];
 
   state = {
     loadingPartner: true,
     partner: null,
     loadingAlternateWorkshops: false,
-    alternateWorkshops: null,
-    teachercon: null
+    alternateWorkshops: null
   };
 
   componentDidMount() {
@@ -282,7 +282,7 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
                 One five-day, in-person summer workshop in 2018
               </li>
               <li>
-                Four one-day, in-person local workshops during the 2018 - 19 school year (typically held on Saturdays)
+                Up to four one-day, in-person local workshops during the 2018 - 19 school year (typically held on Saturdays)
               </li>
             </ul>
           </strong>

@@ -49,13 +49,9 @@ this is used as context for translators.
 ### Apps
 
 -   Make changes in `code-dot-org/apps/i18n/<app>/en_us.json`
--   After you push to staging, rake build:apps will run sync-apps.sh and update
-    all locale files.
 -   If you are creating a new app:
     -   Add the strings in a new file in `code-dot-org/apps/i18n/<new
         app>/en_us.json`
-    -   Add the app name to the list of "untranslated apps" in
-        `code-dot-org/i18n/code.org/copy-untranslated-apps.rb`
 
 ### Dashboard
 

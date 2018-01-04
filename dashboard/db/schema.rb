@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171214191545) do
+ActiveRecord::Schema.define(version: 20180104192659) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -471,6 +471,7 @@ ActiveRecord::Schema.define(version: 20171214191545) do
     t.string   "application_guid"
     t.datetime "decision_notification_email_sent_at"
     t.datetime "accepted_at"
+    t.text     "properties",                          limit: 65535
     t.index ["application_guid"], name: "index_pd_applications_on_application_guid", using: :btree
     t.index ["application_type"], name: "index_pd_applications_on_application_type", using: :btree
     t.index ["application_year"], name: "index_pd_applications_on_application_year", using: :btree
