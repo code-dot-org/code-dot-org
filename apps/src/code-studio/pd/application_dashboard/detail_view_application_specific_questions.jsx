@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import _ from 'lodash';
 import DetailViewResponse from './detail_view_response';
 import {
   SectionHeaders as TeacherSectionHeaders,
@@ -37,7 +38,7 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
     super(props);
 
     this.state = {
-      sectionHeaders: this.props.applicationType === TEACHER ? TeacherSectionHeaders : FacilitatorSectionHeaders,
+      sectionHeaders: this.props.applicationType === TEACHER ? _.omit(TeacherSectionHeaders, ['section5Submission']) : FacilitatorSectionHeaders,
       pageLabels: this.props.applicationType === TEACHER ? TeacherPageLabels : FacilitatorPageLabels,
       labelOverrides: this.props.applicationType === TEACHER ? TeacherLabelOverrides : FacilitatorLabelOverrides,
       numberedQuestions: this.props.applicationType === TEACHER ? [] : NumberedQuestions,
@@ -57,6 +58,29 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
     return questionNumber + questionText;
   };
 
+  renderResponsesForSection(section) {
+    // Lame edge case but has to be done
+    if (section === 'detailViewPrincipalApproval' && !this.props.formResponses['principal_approval']) {
+      return (<h4>Not yet submitted</h4>);
+    } else {
+      return Object.keys(this.state.pageLabels[section]).map((question, j) => {
+        return (
+          <DetailViewResponse
+            question={this.getQuestionText(section, question)}
+            questionId={question}
+            answer={this.props.formResponses[question]}
+            key={j}
+            layout={this.state.paneledQuestions.indexOf(question) >= 0 ? 'panel' : 'lineItem'}
+            score={this.props.scores[question]}
+            possibleScores={this.state.validScores[question]}
+            editing={this.props.editing}
+            handleScoreChange={this.props.handleScoreChange}
+          />
+        );
+      });
+    }
+  }
+
   render() {
     return (
       <div>
@@ -67,23 +91,7 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
                 <h3>
                   {this.state.sectionHeaders[section]}
                 </h3>
-                {
-                  Object.keys(this.state.pageLabels[section]).map((question, j) => {
-                    return (
-                      <DetailViewResponse
-                        question={this.getQuestionText(section, question)}
-                        questionId={question}
-                        answer={this.props.formResponses[question]}
-                        key={j}
-                        layout={this.state.paneledQuestions.indexOf(question) >= 0 ? 'panel' : 'lineItem'}
-                        score={this.props.scores[question]}
-                        possibleScores={this.state.validScores[question]}
-                        editing={this.props.editing}
-                        handleScoreChange={this.props.handleScoreChange}
-                      />
-                    );
-                  })
-                }
+                {this.renderResponsesForSection(section)}
               </div>
             );
           })
