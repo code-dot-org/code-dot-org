@@ -84,7 +84,6 @@
         #feature_project{'style' => ('display: none;' if featured)}
           %button{id: "feature", class: "btn btn-default btn-sm"}
             Feature in gallery
-        = content_tag 'div', '', class: 'featured_project_id', data: {id: featured_project_id}
 
     - if current_user.permission?(UserPermission::RESET_ABUSE)
       %br
