@@ -11,7 +11,6 @@ import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWit
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 
 const styles = {
@@ -116,7 +115,6 @@ export default class TeacherHomepage extends Component {
 
   render() {
     const { courses, topCourse, announcements, queryStringOpen, joinedSections } = this.props;
-    const { canViewAdvancedTools, hocLaunch, isEnglish } = this.props;
     const { ncesSchoolId, censusQuestion, schoolYear } = this.props;
     const { teacherId, teacherName, teacherEmail } = this.props;
     const { canViewAdvancedTools } = this.props;
