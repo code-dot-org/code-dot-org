@@ -21,7 +21,7 @@ module PrincipalApproval1819ApplicationConstants
     american_indian: 'American Indian or Native Alaskan',
     other: 'Other',
     do_you_approve: "Do you approve of this teacher's application to participate in Code.org’s 2018 - 19 Professional Learning Program?",
-    committed_to_master_schedule: 'Are you committed to including this program on the master schedule in 2018-19 if accepted into the program. Note: the program may be listed under a different course name as determined by your district.',
+    committed_to_master_schedule: 'Are you committed to including this program on the master schedule in 2018-19 if this teacher is accepted into the program. Note: the program may be listed under a different course name as determined by your district.',
     hours_per_year: 'Approximately how many course hours per school year will your school offer this course?',
     terms_per_year: 'How many terms will this course span in one school year?',
     replace_course: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) that will be replaced.',

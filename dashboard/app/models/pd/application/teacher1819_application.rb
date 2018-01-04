@@ -308,10 +308,10 @@ module Pd::Application
         ],
 
         willing_to_travel: [
-          'Less than 10 miles',
-          '10 to 25 miles',
-          '25 to 50 miles',
-          'More than 50 miles'
+          'Up to 10 miles',
+          'Up to 25 miles',
+          'Up to 50 miles',
+          'Any distance'
         ]
       }
     end
