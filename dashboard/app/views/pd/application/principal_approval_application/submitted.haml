@@ -1,7 +1,15 @@
-Thank you for submitting your response for the application of
-= @teacher_application[:name]
-for the program
-= @teacher_application[:course] + '.'
-%br
-%br
-Please contact us if you need to edit your response.
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%h1
+  Thank you for submitting this form!
+
+%p
+  We will provide status updates to all applicants by mid-April, 2018.
+  In the meantime, please send any questions to
+  = mail_to('teacher@code.org') + '.'
+  You can visit
+  = link_to 'https://code.org/educate', 'https://code.org/educate'
+  for additional resources and opportunities to bring computer science opportunities
+  to your school or learn more about your Regional Partner here.
+  Thank you for supporting computer science for every student!
