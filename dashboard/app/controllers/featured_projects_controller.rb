@@ -5,7 +5,7 @@ class FeaturedProjectsController < ApplicationController
     @featured_project.save!
   end
 
-  def destroy_featured_project
+  def destroy_by_project_id
     _, channel_id = storage_decrypt_channel_id(params[:project_id])
     @featured_project = FeaturedProject.find_by_storage_app_id(channel_id)
     @featured_project.destroy
