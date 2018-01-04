@@ -60,7 +60,8 @@ Dashboard::Application.routes.draw do
 
   get 'redirected_url', to: 'redirect_proxy#get', format: false
 
-  get 'docs/*docs_route', to: 'docs_proxy#get'
+  get 'docs/*docs_route', to: 'curriculum_proxy#get'
+  get 'curriculum/*curriculum_route', to: 'curriculum_proxy#get'
 
   # User-facing section routes
   resources :sections, only: [:show, :update] do
