@@ -45,5 +45,21 @@ class HourOfCodeHelpersTest < Minitest::Test
     header 'X_FORWARDED_FOR', [user_ip, untrusted_proxy_ip, cloudfront_ip, local_load_balancer].join(', ')
     response = get '/xyz', {}, {'REMOTE_ADDR' => cloudfront_ip}
     assert_equal 'http://hourofcode.com/uk/xyz', response.headers['Location']
+
+    # Canonical url formats shouldn't redirect.
+    %w(
+      /uk/xyz
+      /uk/gb/xyz
+      /afterschool/xyz
+      /afterschool/en/xyz
+    ).each do |path|
+      response = get path
+      assert_equal 404, response.status
+    end
+
+    # Redirect to /us/ by default when IP doesn't resolve to a country.
+    header 'X_FORWARDED_FOR', "#{cloudfront_ip}, #{local_load_balancer}"
+    response = get '/xyz'
+    assert_equal 'http://hourofcode.com/us/xyz', response.headers['Location']
   end
 end
