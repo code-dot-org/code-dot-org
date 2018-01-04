@@ -122,7 +122,7 @@ export default class PrincipalApprovalComponent extends ApplicationFormComponent
         </div>
         <p>
           Code.org works closely with local Regional Partners to organize and deliver the
-          Professional Learning Program.  By enrolling in this workshop, teachers are
+          Professional Learning Program.  By submitting this form, teachers are
           agreeing to allow Code.org to share information on how they use Code.org and the
           Professional Learning resources with their Regional Partner and school district.
           In order to organize the workshops and support teachers, our partners need to
