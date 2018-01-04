@@ -60,7 +60,7 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
 
   renderResponsesForSection(section) {
     // Lame edge case but has to be done
-    if (section === 'detailViewPrincipalApproval' && !this.props.formResponses['principal_approval']) {
+    if (section === 'detailViewPrincipalApproval' && !this.props.formResponses['principalApproval']) {
       return (<h4>Not yet submitted</h4>);
     } else {
       return Object.keys(this.state.pageLabels[section]).map((question, j) => {
