@@ -26,24 +26,13 @@ const styles = {
     paddingRight: 5,
     color: color.white,
   },
-  xIcon: {
-    paddingRight: 5,
-  },
-  heading: {
-    borderTopWidth: 0,
-    borderBottomWidth: 1,
-    borderRightWidth: 0,
-    borderLeftWidth: 0,
-    borderStyle: 'solid',
-    borderColor: color.default_text,
-    paddingBottom: 20,
-    marginBottom: 30,
-  },
 };
 
 class QuickActionsCell extends Component {
   static propTypes = {
-    children: PropTypes.arrayOf(PropTypes.element).isRequired
+    children: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.array]).isRequired,
   };
 
   state = {
