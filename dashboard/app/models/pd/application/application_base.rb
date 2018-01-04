@@ -236,11 +236,15 @@ module Pd::Application
     end
 
     def school_name
-      school.try(:name).try(:titleize)
+      if school
+        school.try(:name).try(:titleize)
+      else
+        sanitize_form_data_hash[:school_name]
+      end
     end
 
     def district_name
-      District.find_by_id(school.try(:school_district_id)).try(:name).try(:titleize)
+      school.try(:school_district).try(:name).try(:titleize)
     end
 
     def applicant_name
@@ -264,7 +268,11 @@ module Pd::Application
 
     def school
       school_id = sanitize_form_data_hash[:school].to_i
-      School.find_by_id(school_id)
+      if school_id == -1
+        nil
+      else
+        School.find(school_id)
+      end
     end
   end
 end
