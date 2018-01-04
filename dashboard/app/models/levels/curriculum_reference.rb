@@ -31,7 +31,8 @@ class CurriculumReference < Level
 
   validates :reference, format: {
     with: /\A\/(docs|curriculum)\//,
-    message: "Must begin with /docs or /curriculum"
+    message: "Must begin with /docs or /curriculum",
+    allow_blank: true
   }
 
   def self.create_from_level_builder(params, level_params)
