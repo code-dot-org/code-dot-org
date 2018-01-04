@@ -9,37 +9,41 @@ markdown <<MARKDOWN
 
 An algorithm is a precise sequence of instructions for a process that completes a task. Algorithms can be executed by a computer and are implemented using programming languages.
 
-**Completing Tasks in Daily Life**
+<div style="clear: both"> </div>
 
-<div style="float:right;width:300px">
+<div style="float:right;width:200px">
 <img src="https://images.code.org/3f6dc46078eb19ba8885fb6d02fe0203-image-1515092634132.jpg">
 
 By asobuno (Own work) [<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>], <a href="https://commons.wikimedia.org/wiki/File%3ATying_one&#039;s_shoe.jpg">via Wikimedia Commons</a>
 </div>
 
+## Automating Physical Tasks
+
+**Physical Tasks in Daily Life**
+
 One way to look at your typical day is as a series of tasks you need to complete. For example you'll need to get dressed, pack your things, travel from one place to another, complete work, keep up with friends and family, prepare and eat meals, clean and organize your things, and relax and have fun.
 
-The types of tasks that make up our days haven't actually changed all that much through history. 100, 1,000, or 10,000 years ago people still more or less completed these same tasks. Over history what we see is significant shifts in how we complete these tasks, and one of the most significant shifts in this regard is through automation.
+<div style="clear: both"> </div>
+
+<img src="https://images.code.org/a2835a98c80954695d1db19f0d66cf6b-image-1515092970066.jpg" style="float:right;width:200px">
 
 **Automating Tasks**
 
-<img src="![](https://images.code.org/a2835a98c80954695d1db19f0d66cf6b-image-1515092970066.jpg)" style="float:right;width:100px">
+Over history one of the most significant shifts in how we complete tasks is through automation. Historically humans have invented tools to solve problems. Shovels have helped us dig holes, trucks help us move heavy loads, and writing tools make it much easier to keep track of important information.
 
-Many of the tasks we've completed across history are, frankly, unenjoyable. They might be physically demanding, boring, dangerous, or require intense focus or memory. To solve these problems we've designed many types of tools. Shovels have helped us dig holes, trucks help us move heavy loads, and writing tools make it much easier to keep track of important information.
+With automation instead of just making tools to help us complete tasks, we created tools that essentially did the entire task for us. We invented machines to weave cloth, harvest food, and assemble tools that could complete these tasks with almost no human input at all!
 
-Automation brought even more significant changes. Instead of just making tools to help us complete tasks, we created tools that essentially did the entire task for us. Machines to weave cloth, harvest food, and assemble tools could complete these tasks with almost no human input at all!
+<div style="clear: both"> </div>
 
-**Automation Requires Algorithms**
-
-<div style="float:right;width:300px">
+<div style="float:right;width:200px">
 <img src="https://images.code.org/28011d19f50522a3b3b5c563e9a79c37-image-1515091698632.JPG">
 
 By Clem Rutter, Rochester, Kent. (self) [<a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> or <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>], <a href="https://commons.wikimedia.org/wiki/File%3AQSMM_John_Pilling_%26_Son_Loom_2707.JPG">via Wikimedia Commons</a>
 </div>
 
-Machines are best at completing well-structured tasks. If you want to design a machine to plant and harvest crops, for example, it's usually much easier to assume the plants will all be planted in neat rows and a set distance apart. If you want a machine to weave a piece of cloth it should probably have the same number of stitches in each row.
+**Automation Requires Algorithms**
 
-Not only should the task itself be well-structured, but the process to complete it needs to be well-structured as well. Every stitch, every plant, or every part of a tool needs to be done in the same way each time. These precise steps that automate a task are algorithms!
+Automation typically results in tasks that are completed more quickly, easily, and reliably. In order to build a machine to automate a task, however, you need to be able to describe precisely how the task should be completed. For example, you need to know all the steps to make each stitch in a piece of cloth, or exactly how close to one another and at what depth each seed should be planted. These precise steps that automate a task are algorithms!
 
 <div style="clear: both"> </div>
 
@@ -55,7 +59,7 @@ Not only should the task itself be well-structured, but the process to complete 
 
 Many of the daily tasks we do are thinking tasks like keeping track of money, remembering birthdays, or scheduling tasks for the day. Just like physical tasks, thinking tasks can be monotonous or challenging, and so we've made tools to help us complete them. Calendars, clocks, financial records, and books help us keep track of and make sense of information.
 
-Just like physical tasks, however, we don't just want tools to help us complete thinking tasks, we want tools that can essentially do the entire task for us. This desire led to the creation of the computer! Computers store and process information to complete all kinds of information tasks automatically.
+Just like physical tasks, humans want tools to automate our thinking tasks. It was this desire that led to the creation of the computer. Computers store and process information to complete all kinds of information tasks automatically.
 
 **Programming - Communicating algorithms to a computer**
 
