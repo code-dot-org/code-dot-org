@@ -35,7 +35,6 @@ export default class TeacherHomepage extends Component {
     teacherId: PropTypes.number,
     teacherEmail: PropTypes.string,
     schoolYear: PropTypes.number,
-    isEnglish: PropTypes.bool.isRequired
   };
 
   state = {
