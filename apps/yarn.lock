@@ -2741,13 +2741,6 @@ ejs-compiled-loader@2.1.1:
     merge "^1.2.0"
     uglify-js "~2.6.1"
 
-ejs-loader@0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/ejs-loader/-/ejs-loader-0.2.1.tgz#55ca51b0a56bfd7427739323a721bfe3fb61cbf4"
-  dependencies:
-    loader-utils "^0.2.7"
-    lodash "^3.6.0"
-
 ejs@0.8.4:
   version "0.8.4"
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-0.8.4.tgz#52e61755e5e97fbc5aeeb07df49a4e062bff30d5"
@@ -3213,13 +3206,6 @@ expand-tilde@^1.2.1, expand-tilde@^1.2.2:
   dependencies:
     os-homedir "^1.0.1"
 
-exports-loader@^0.6.3:
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/exports-loader/-/exports-loader-0.6.3.tgz#57dc78917f709b96f247fa91e69b554c855013c8"
-  dependencies:
-    loader-utils "0.2.x"
-    source-map "0.1.x"
-
 express@^4.13.3:
   version "4.14.0"
   resolved "https://registry.yarnpkg.com/express/-/express-4.14.0.tgz#c1ee3f42cdc891fb3dc650a8922d51ec847d0d66"
@@ -3362,12 +3348,6 @@ file-entry-cache@^2.0.0:
   dependencies:
     flat-cache "^1.2.1"
     object-assign "^4.0.1"
-
-file-loader@^0.8.5:
-  version "0.8.5"
-  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-0.8.5.tgz#9275d031fe780f27d47f5f4af02bd43713cc151b"
-  dependencies:
-    loader-utils "~0.2.5"
 
 file-loader@^0.9.0:
   version "0.9.0"
@@ -5829,7 +5809,7 @@ lodash@4.x.x, lodash@^4.0.0, lodash@^4.0.1, lodash@^4.14.0, lodash@^4.16.2, loda
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
-lodash@^3.10.1, lodash@^3.6.0, lodash@^3.8.0:
+lodash@^3.10.1, lodash@^3.8.0:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
