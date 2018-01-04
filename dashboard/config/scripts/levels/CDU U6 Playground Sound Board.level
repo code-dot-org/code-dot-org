@@ -7,14 +7,28 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "buzzer.play": null,
       "onBoardEvent": null,
       "buzzer.note": null,
-      "buzzer.frequency": null
+      "buzzer.frequency": null,
+      "buzzer.playNotes": null,
+      "accessListItem": null,
+      "led.on": null,
+      "led.off": null,
+      "color": null,
+      "on": null,
+      "intensity": null,
+      "stop": null,
+      "toggle": null,
+      "led.blink": null,
+      "blink": null,
+      "led.toggle": null,
+      "led.pulse": null,
+      "off": null,
+      "randomNumber_min_max": null
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Sound Board 2.0\r\n\r\nYou're gonna turn your board into a sound board, one that can play actual songs!\r\n\r\n# Do This\r\n\r\n* Use all of the button related board events (up, down), to play a unique song at each event.\r\n* Are there any other events you could use to play even more songs?",
+    "markdown_instructions": "# Sound Board 2.0\r\n\r\nYou can now play sounds, notes, and songs! With this new knowledge, you can even turn your board into a sound board.\r\n\r\nIn the toolbox you all of the buzzer and led related blocks at your disposal. See what cool stuff you can come up with!\r\n\r\n# Do This\r\n\r\n* Use all of the button related board events (up, down), to play a unique sound or song at each event.\r\n* Are there any other events you could use to play even more sounds/songs?",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -55,7 +69,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-12-16 00:04:48 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-16 00:05:56 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"markdown_instructions\",\"hide_view_data_button\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-12-16 00:04:48 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-16 00:05:56 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"markdown_instructions\",\"hide_view_data_button\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-02 18:54:20 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-02 19:10:53 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-02 19:43:09 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
