@@ -374,4 +374,11 @@ class ScriptLevel < ActiveRecord::Base
     !SectionHiddenStage.find_by(stage_id: stage.id, section_id: section_id).nil? ||
       !SectionHiddenScript.find_by(script_id: stage.script.id, section_id: section_id).nil?
   end
+
+  # Given the signed-in user and an optional user that is being viewed
+  # (e.g. a student viewed by a teacher), tell us whether we should be hiding
+  # prior answers
+  def should_hide_survey(user, viewed_user)
+    anonymous? && user.teacher? && user != viewed_user
+  end
 end
