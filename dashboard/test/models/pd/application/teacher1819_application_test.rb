@@ -430,8 +430,8 @@ module Pd::Application
         program_manager: program_manager,
         regional_partner: partner
 
-      # where "appropriate workshop" is the earliest teachercon, fit, or local
-      # summer workshop matching the application course.
+      # where "appropriate workshop" is the earliest teachercon or local summer
+      # workshop matching the application course.
 
       invalid_workshop = create :pd_workshop, organizer: program_manager
       create :pd_session,
@@ -464,12 +464,14 @@ module Pd::Application
       assert_creates(Pd::Enrollment) do
         application.save!
       end
+      assert_equal Pd::Enrollment.last.workshop, first_workshop
 
       application.pd_workshop_id = second_workshop.id
 
       assert_creates(Pd::Enrollment) do
         application.save!
       end
+      assert_equal Pd::Enrollment.last.workshop, second_workshop
     end
   end
 end
