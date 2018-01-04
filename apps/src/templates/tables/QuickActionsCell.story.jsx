@@ -14,7 +14,7 @@ export default storybook => {
               <PopUpMenu.Item
                 onClick={() => {console.log("clicked");}}
               >
-                {"Action 2"}
+                {"Action 1"}
               </PopUpMenu.Item>
               <MenuBreak/>
               <PopUpMenu.Item
