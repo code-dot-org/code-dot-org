@@ -260,6 +260,12 @@
   studiobar_donate_body: "One child learns for each dollar you donate"
   studiobar_shop_title: "Shop"
   studiobar_shop_body: "Break stereotypes. Wear our logo with pride."
+  homepage_stats_students: "of US students have accounts on Code.org"
+  homepage_stats_female: "of our students are female"
+  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
+  homepage_stats_policy: "states changed policy to support computer science"
+  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner"
   homepage_hero_text_susan: |-
     &ldquo;If you can change technology,

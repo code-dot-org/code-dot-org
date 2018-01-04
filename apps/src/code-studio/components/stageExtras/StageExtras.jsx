@@ -49,7 +49,6 @@ export default class StageExtras extends React.Component {
         {this.props.showProjectWidget &&
           <ProjectWidgetWithData
             projectTypes={this.props.projectTypes}
-            isRtl={false}
           />
         }
         <div className="clear" />

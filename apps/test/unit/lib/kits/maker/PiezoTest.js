@@ -22,47 +22,49 @@ describe('Piezo', function () {
     expect(piezo).to.be.an.instanceOf(five.Piezo);
   });
 
-  describe('play()', function () {
-    let piezo;
+  ['play', 'playSong', 'playNotes'].forEach(methodUnderTest => {
+    describe(`${methodUnderTest}()`, () => {
+      let piezo;
 
-    beforeEach(function () {
-      sinon.stub(five.Piezo.prototype, 'play');
-      piezo = new Piezo({
-        controller: makeStubPiezoController()
+      beforeEach(function () {
+        sinon.stub(five.Piezo.prototype, 'play');
+        piezo = new Piezo({
+          controller: makeStubPiezoController()
+        });
       });
-    });
 
-    afterEach(function () {
-      five.Piezo.prototype.play.restore();
-    });
-
-    it(`converts a song and tempo to the 'tune' format expected by five.Piezo`, function () {
-      const song = [['C4', 1/2], ['D4', 1/2], ['E4', 1]];
-      const tempo = 100;
-      piezo.play(song, tempo);
-      expect(five.Piezo.prototype.play).to.have.been.calledWith({song, tempo});
-    });
-
-    it(`assumes quarter notes if given a 1D note array`, function () {
-      const song = ['C4', 'D4', 'E4'];
-      const tempo = 100;
-      piezo.play(song, tempo);
-      expect(five.Piezo.prototype.play).to.have.been.calledWith({
-        song: [
-          ['C4', 1/4],
-          ['D4', 1/4],
-          ['E4', 1/4]
-        ],
-        tempo
+      afterEach(function () {
+        five.Piezo.prototype.play.restore();
       });
-    });
 
-    it(`passes a default tempo of 120bpm`, function () {
-      const song = [['C4', 1/2], ['D4', 1/2], ['E4', 1]];
-      piezo.play(song);
-      expect(five.Piezo.prototype.play).to.have.been.calledWith({
-        song,
-        tempo: 120
+      it(`converts a song and tempo to the 'tune' format expected by five.Piezo`, function () {
+        const song = [['C4', 1/2], ['D4', 1/2], ['E4', 1]];
+        const tempo = 100;
+        piezo[methodUnderTest](song, tempo);
+        expect(five.Piezo.prototype.play).to.have.been.calledWith({song, tempo});
+      });
+
+      it(`assumes quarter notes if given a 1D note array`, function () {
+        const song = ['C4', 'D4', 'E4'];
+        const tempo = 100;
+        piezo[methodUnderTest](song, tempo);
+        expect(five.Piezo.prototype.play).to.have.been.calledWith({
+          song: [
+            ['C4', 1/4],
+            ['D4', 1/4],
+            ['E4', 1/4]
+          ],
+          tempo
+        });
+      });
+
+      it(`passes a default tempo of 120bpm`, function () {
+        const song = [['C4', 1/2], ['D4', 1/2], ['E4', 1]];
+        piezo[methodUnderTest](song);
+        expect(five.Piezo.prototype.play).to.have.been.calledWith({
+          song,
+          tempo: 120
+        });
       });
     });
   });
@@ -108,6 +110,7 @@ describe('Piezo', function () {
   // These two methods should be identical in our implementation, so run them
   // through the same set of tests.
   ['stop', 'off'].forEach(methodUnderTest => {
+
     describe(`${methodUnderTest}()`, () => {
       let clock, controller, piezo;
 

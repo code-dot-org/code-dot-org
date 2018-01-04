@@ -42,9 +42,7 @@ export default storybook => {
               <TeacherHomepage
                 announcements={[announcement]}
                 courses={[]}
-                isRtl={false}
                 joinedSections={[]}
-                isEnglish={true}
                 showCensusBanner={false}
               />
             </Provider>
@@ -64,9 +62,7 @@ export default storybook => {
                 announcements={[announcement]}
                 topCourse={topCourse}
                 courses={courses}
-                isRtl={false}
                 joinedSections={[]}
-                isEnglish={true}
                 showCensusBanner={false}
               />
             </Provider>
@@ -85,9 +81,7 @@ export default storybook => {
               <TeacherHomepage
                 announcements={[announcement]}
                 courses={[]}
-                isRtl={false}
                 joinedSections={[]}
-                isEnglish={true}
                 showCensusBanner={false}
               />
             </Provider>
@@ -107,9 +101,7 @@ export default storybook => {
                 announcements={[announcement]}
                 courses={courses}
                 topCourse={topCourse}
-                isRtl={false}
                 joinedSections={[]}
-                isEnglish={true}
                 showCensusBanner={false}
               />
             </Provider>
@@ -129,9 +121,7 @@ export default storybook => {
                 announcements={[announcement]}
                 courses={courses}
                 topCourse={topCourse}
-                isRtl={false}
                 joinedSections={joinedSections}
-                isEnglish={true}
                 showCensusBanner={false}
               />
             </Provider>

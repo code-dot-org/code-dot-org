@@ -28,9 +28,7 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={[]}
         topCourse={topCourse}
-        isRtl={false}
         joinedSections={[]}
-        isEnglish={true}
         showCensusBanner={false}
       />
     );
@@ -47,9 +45,7 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={[]}
         topCourse={topCourse}
-        isRtl={false}
         joinedSections={[]}
-        isEnglish={true}
         showCensusBanner={false}
       />
     );
@@ -62,9 +58,7 @@ describe('TeacherHomepage', () => {
         announcements={[announcement]}
         courses={[]}
         topCourse={topCourse}
-        isRtl={false}
         joinedSections={[]}
-        isEnglish={true}
         showCensusBanner={false}
       />
     );
@@ -87,16 +81,12 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={[]}
         topCourse={topCourse}
-        isRtl={false}
         joinedSections={[]}
-        isEnglish={true}
         showCensusBanner={false}
       />
     );
     expect(wrapper).to.containMatchingElement(
-      <TeacherSections
-        isRtl={false}
-      />
+      <TeacherSections/>
     );
   });
 
@@ -106,9 +96,7 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={[]}
         topCourse={topCourse}
-        isRtl={false}
         joinedSections={[]}
-        isEnglish={true}
         showCensusBanner={false}
       />
     );
@@ -121,9 +109,7 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         topCourse={topCourse}
         courses={courses}
-        isRtl={false}
         joinedSections={[]}
-        isEnglish={true}
         showCensusBanner={false}
       />
     );
@@ -133,7 +119,6 @@ describe('TeacherHomepage', () => {
       isTeacher: true,
       courses: courses,
       topCourse: topCourse,
-      isRtl: false
     });
   });
 
@@ -144,9 +129,7 @@ describe('TeacherHomepage', () => {
         courses={courses}
         topCourse={topCourse}
         codeOrgUrlPrefix="http://localhost:3000/"
-        isRtl={false}
         joinedSections={[]}
-        isEnglish={true}
         showCensusBanner={false}
       />
     );

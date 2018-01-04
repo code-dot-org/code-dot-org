@@ -12,26 +12,23 @@ const styles = {
   }
 };
 
-const Lightbulb = React.createClass({
-
-  propTypes: {
+export default class Lightbulb extends React.Component {
+  static propTypes = {
     shouldAnimate: PropTypes.bool,
     count: PropTypes.number,
     lit: PropTypes.bool,
     size: PropTypes.number,
     style: PropTypes.object,
     isMinecraft: PropTypes.bool,
-  },
+  };
 
-  getDefaultProps() {
-    return {
-      shouldAnimate: false,
-      count: 0,
-      lit: true,
-      size: 40,
-      style: {}
-    };
-  },
+  static defaultProps = {
+    shouldAnimate: false,
+    count: 0,
+    lit: true,
+    size: 40,
+    style: {}
+  };
 
   render() {
     let bulbDisplay;
@@ -226,6 +223,4 @@ const Lightbulb = React.createClass({
       </svg>
     );
   }
-});
-
-export default Lightbulb;
+}
