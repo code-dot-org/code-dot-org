@@ -1724,6 +1724,9 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.requiredBlocks_ = config.level.requiredBlocks || [];
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];
 
+  // Always use the source code from the level definition for contained levels,
+  // so that changes made in levelbuilder will show up for users who have
+  // already run the level.
   if (config.ignoreLastAttempt || config.hasContainedLevels) {
     config.level.lastAttempt = '';
   }
