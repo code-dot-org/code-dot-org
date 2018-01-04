@@ -7,11 +7,6 @@ namespace :build do
   desc 'Builds apps.'
   task :apps do
     Dir.chdir(apps_dir) do
-      if rack_env?(:staging)
-        ChatClient.log 'Updating <b>apps</b> i18n strings...'
-        RakeUtils.system './sync-apps.sh'
-      end
-
       # Only rebuild if apps contents have changed since last build.
       commit_hash = apps_dir('build/commit_hash')
       if !RakeUtils.git_staged_changes?(apps_dir) &&
