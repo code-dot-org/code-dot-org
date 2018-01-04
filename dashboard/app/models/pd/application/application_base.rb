@@ -19,6 +19,7 @@
 #  application_guid                    :string(255)
 #  decision_notification_email_sent_at :datetime
 #  accepted_at                         :datetime
+#  properties                          :text(65535)
 #
 # Indexes
 #
@@ -97,12 +98,17 @@ module Pd::Application
     before_create -> {self.status = :unreviewed}
     after_initialize :set_type_and_year
     before_validation :set_type_and_year
+    before_save :update_accepted_date, if: :status_changed?
 
     def set_type_and_year
       # Override in derived classes and set to valid values.
       # Setting them to nil here fails those validations and prevents this base class from being saved.
       self.application_year = nil
       self.application_type = nil
+    end
+
+    def update_accepted_date
+      self.accepted_at = status == 'accepted' ? Time.now : nil
     end
 
     self.table_name = 'pd_applications'

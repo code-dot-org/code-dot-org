@@ -1,9 +1,6 @@
 /**
  * This file contains a set of dialogs used by showDialog in dialogHelper.js to
- * create LegacyDialogs. LegacyDialog expects a semi-specific format. Eventually
- * we may be able to get away from using LegacyDialog and do this all in React.
- * These are similar to the dialogs defined in haml in _dialog.html.haml, but
- * defined using React instead.
+ * create LegacyDialogs. LegacyDialog expects a semi-specific format.
  */
 
 import React, { PropTypes } from 'react';
@@ -94,4 +91,84 @@ export const ContractMatchErrorDialog = ({text}) => (
 );
 ContractMatchErrorDialog.propTypes = {
   text: PropTypes.string
+};
+
+export const MatchErrorDialog = () => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon scrollable-element">
+      <p className="dialog-title">{i18n.incorrectSolution()}</p>
+      <p>{i18n.incorrectSolutionBody()}</p>
+      <div className="farSide">
+        <button id="ok-button">{i18n.ok()}</button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
+);
+
+export const ErrorDialog = () => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon scrollable-element">
+      <p className="dialog-title">{i18n.incorrectAnswer()}</p>
+      <p>{i18n.incorrectAnswerBody()}</p>
+      <div className="farSide">
+        <button id="ok-button">{i18n.ok()}</button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
+);
+
+export const StartOverDialog = () => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon scrollable-element">
+      <p className="dialog-title">{i18n.startOverTitle()}</p>
+      <p>{i18n.startOverBody()}</p>
+      <div id="buttons">
+        <button id="cancel-button">
+          {i18n.cancel()}
+        </button>
+        <button id="ok-button" className="btn-danger" style={{float: 'right'}}>
+          {i18n.startOver()}
+        </button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
+);
+
+/* eslint-disable react/no-danger */
+export const InstructionsDialog = ({title, markdownContent}) => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon markdown-instructions-container">
+      <p className="dialog-title">{title}</p>
+      <p/>
+      <div
+        className="instructions-markdown scrollable-element"
+        dangerouslySetInnerHTML={{ __html: markdownContent }}
+      />
+      <div id="buttons">
+        <button id="ok-button" style={{float: 'right'}}>
+          {i18n.ok()}
+        </button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
+);
+InstructionsDialog.propTypes = {
+  title: PropTypes.string.isRequired,
+  markdownContent: PropTypes.string.isRequired,
+};
+
+export const SuccessDialog = ({title, body}) => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon scrollable-element">
+      <p className="dialog-title">{title}</p>
+      <p>{body}</p>
+      <div className="farSide">
+        <button id="ok-button">{i18n.ok()}</button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
+);
+SuccessDialog.propTypes = {
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
 };

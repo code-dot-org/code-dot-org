@@ -47,17 +47,14 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "markdown_instructions": "# Piano Panic\r\n\r\nSo far you’ve just been using the elements of an array. Now, you're going to change what's inside the array.\r\n\r\nOur good friend the piano is back, except now it plays notes from two arrays: `notes`, which holds natural notes (C, D, E, F, G, A, B), and `sharpNotes`, which holds sharp notes (C#, D#, F#, G#, A#).\r\n\r\n# Do this\r\n\r\nThe `sharpNotes` array only has one item inside of it right now.\r\n\r\n* Fix the array so that the sharp keys on the piano can actually play the right note.",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "code_functions": {
       "buzzer.note": null,
       "accessListItem": null,
       "onBoardEvent": null,
       "setProperty": null,
       "buzzer.frequency": null
-    }
+    },
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

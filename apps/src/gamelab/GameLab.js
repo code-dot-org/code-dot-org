@@ -313,9 +313,11 @@ GameLab.prototype.init = function (config) {
   }
 
   // Push project-sourced animation metadata into store. Always use the
-  // animations specified by the level definition for embed levels.
-  const initialAnimationList = (config.initialAnimationList && !config.embed) ?
-      config.initialAnimationList : this.startAnimations;
+  // animations specified by the level definition for embed and contained
+  // levels.
+  const initialAnimationList =
+    (config.initialAnimationList && !config.embed && !config.hasContainedLevels) ?
+    config.initialAnimationList : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
   ReactDOM.render((
