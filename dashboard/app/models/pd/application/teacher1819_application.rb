@@ -40,6 +40,11 @@ module Pd::Application
     include Rails.application.routes.url_helpers
     include Teacher1819ApplicationConstants
     include RegionalPartnerTeacherconMapping
+    include SerializedProperties
+
+    serialized_attrs %w(
+      pd_workshop_id
+    )
 
     def send_decision_notification_email
       # We only want to email unmatched and G3-matched teachers. All teachers
@@ -89,10 +94,12 @@ module Pd::Application
       self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
     end
 
-    before_save :enroll_user, if: -> {pd_workshop_changed?}
+    before_save :enroll_user, if: -> {properties_changed?}
     def enroll_user
+      return unless pd_workshop_id
+
       ::Pd::Enrollment.find_or_create(
-        pd_workshop: pd_workshop,
+        pd_workshop_id: pd_workshop_id,
         user: user,
         full_name: user.name,
         email: user.email,
