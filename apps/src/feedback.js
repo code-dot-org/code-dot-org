@@ -1540,9 +1540,6 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
         TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED :
         TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED;
   }
-  if (this.hasExceededLimitedBlocks_()) {
-    return TestResults.BLOCK_LIMIT_FAIL;
-  }
   var numEnabledBlocks = this.getNumCountableBlocks();
   if (!levelComplete) {
     if (this.studioApp_.IDEAL_BLOCK_NUM &&
@@ -1551,6 +1548,9 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
       return TestResults.TOO_FEW_BLOCKS_FAIL;
     }
     return TestResults.LEVEL_INCOMPLETE_FAIL;
+  }
+  if (this.hasExceededLimitedBlocks_()) {
+    return TestResults.BLOCK_LIMIT_FAIL;
   }
   if (this.studioApp_.IDEAL_BLOCK_NUM &&
       numEnabledBlocks > this.studioApp_.IDEAL_BLOCK_NUM) {
