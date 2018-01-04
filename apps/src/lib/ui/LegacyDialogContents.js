@@ -95,3 +95,67 @@ export const ContractMatchErrorDialog = ({text}) => (
 ContractMatchErrorDialog.propTypes = {
   text: PropTypes.string
 };
+
+export const MatchErrorDialog = () => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon scrollable-element">
+      <p className="dialog-title">{i18n.incorrectSolution()}</p>
+      <p>{i18n.incorrectSolutionBody()}</p>
+      <div className="farSide">
+        <button id="ok-button">{i18n.ok()}</button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
+);
+
+export const ErrorDialog = () => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon scrollable-element">
+      <p className="dialog-title">{i18n.incorrectAnswer()}</p>
+      <p>{i18n.incorrectAnswerBody()}</p>
+      <div className="farSide">
+        <button id="ok-button">{i18n.ok()}</button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
+);
+
+export const StartOverDialog = () => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon scrollable-element">
+      <p className="dialog-title">{i18n.startOverTitle()}</p>
+      <p>{i18n.startOverBody()}</p>
+      <div id="buttons">
+        <button id="cancel-button">
+          {i18n.cancel()}
+        </button>
+        <button id="ok-button" className="btn-danger" style={{float: 'right'}}>
+          {i18n.startOver()}
+        </button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
+);
+
+/* eslint-disable react/no-danger */
+export const InstructionsDialog = ({title, markdownContent}) => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon markdown-instructions-container">
+      <p className="dialog-title">{title}</p>
+      <p/>
+      <div
+        className="instructions-markdown scrollable-element"
+        dangerouslySetInnerHTML={{ __html: markdownContent }}
+      />
+      <div id="buttons">
+        <button id="ok-button" style={{float: 'right'}}>
+          {i18n.ok()}
+        </button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
+);
+InstructionsDialog.propTypes = {
+  title: PropTypes.string.isRequired,
+  markdownContent: PropTypes.string.isRequired,
+};

@@ -12,7 +12,8 @@
       "declareAssign_list_abd": null,
       "assign_x": null,
       "randomNumber_min_max": null,
-      "buzzer.frequency": null
+      "buzzer.frequency": null,
+      "accessListItem": null
     },
     "edit_code": true,
     "embed": "false",
@@ -52,14 +53,14 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "start_blocks": "var notes = [\"C#4\", \"C4\", \"F4\"];\r\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  //Make your changes below\r\n  var i = randomNumber(_, _);\r\n});\r\n",
+    "start_blocks": "var notes = [\"C#4\", \"C4\", \"F4\"];\r\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  //Make your changes below\r\n  var index = randomNumber(_, _);\r\n});\r\n",
     "markdown_instructions": "# Random Song Generator\r\n\r\nYou're going to make a random song generator. When you press a button, a random note should play. Press it enough times, and you have yourself a beautiful arrangement of bleeps and bloops. \r\n\r\nYou used `randomNumber()` to select an element from an array in the previous lesson, so this should be familiar.\r\n\r\n# Do This\r\n\r\n* Add code to randomly select a note from the `notes` array.\r\n* Run the program and press the left button to hear your buzzer sing it's beautiful tune.",
     "project_template_level_name": "CSD U6 random song generator template",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-12-15 22:29:13 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-15 22:33:57 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"lock_zero_param_functions\",\"makerlab_enabled\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-15 23:07:10 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-15 23:17:19 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-15 23:25:16 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-12-15 22:29:13 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-15 22:33:57 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"lock_zero_param_functions\",\"makerlab_enabled\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-15 23:07:10 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-15 23:17:19 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-15 23:25:16 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-02 16:38:00 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-02 18:35:18 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
