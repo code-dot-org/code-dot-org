@@ -353,25 +353,25 @@ module Pd::Application
     end
 
     test 'accepted_at updates times' do
-      time_1 = Date.today.to_time
-      time_2 = Date.tomorrow.to_time
+      today = Date.today.to_time
+      tomorrow = Date.tomorrow.to_time
       application = create :pd_teacher1819_application
       assert_nil application.accepted_at
 
-      Timecop.freeze(time_1) do
+      Timecop.freeze(today) do
         application.update(status: 'accepted')
         application.reload
-        assert_equal time_1, application.accepted_at.to_time
+        assert_equal today, application.accepted_at.to_time
 
         application.update(status: 'declined')
         application.reload
         assert_nil application.accepted_at
       end
 
-      Timecop.freeze(time_2) do
+      Timecop.freeze(tomorrow) do
         application.update(status: 'accepted')
         application.reload
-        assert_equal time_2, application.accepted_at.to_time
+        assert_equal tomorrow, application.accepted_at.to_time
       end
     end
   end
