@@ -6,6 +6,12 @@
   z-index: 99;
 }
 
+@media (max-width: 970px) {
+  #pageheader-wrapper {
+    padding-top: 5px;
+  }
+}
+
 #hamburger {
 
   &.hide-always {
