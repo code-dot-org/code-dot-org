@@ -1,4 +1,5 @@
 const TestResults = require('@cdo/apps/constants.js').TestResults;
+const blockUtils = require('@cdo/apps/block_utils');
 
 const levelDef = {
   'map': [
@@ -38,7 +39,11 @@ module.exports = {
       testResult: TestResults.BLOCK_LIMIT_FAIL,
     },
     missingBlocks: [],
-    xml: '<xml><block type="when_run"><next><block type="maze_moveForward"><next><block type="maze_moveForward"></block></next></block></next></block></xml>'
+    xml: '<xml>' +
+    blockUtils.blocksFromList([
+      "maze_moveForward",
+      "maze_moveForward",
+      ]) + '</xml>',
   }, {
     description: "Limited toolbox blocks - under limit",
     expected: {
@@ -46,6 +51,9 @@ module.exports = {
       testResult: TestResults.ALL_PASS,
     },
     missingBlocks: [],
-    xml: '<xml><block type="when_run"><next><block type="maze_moveForward"></block></next></block></xml>'
+    xml: '<xml>' +
+    blockUtils.blocksFromList([
+      "maze_moveForward",
+    ]) + '</xml>',
   }]
 };
