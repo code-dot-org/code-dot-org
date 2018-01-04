@@ -115,7 +115,7 @@ export default class PrincipalApprovalComponent extends ApplicationFormComponent
               <div>
                 Would you like to be considered for funding support? Note that funding
                 support is not guaranteed.
-                {this.singleCheckboxFor('wantFunding')}
+                {this.singleCheckboxFor('wantFunding', {required: false})}
               </div>
             )
           }
