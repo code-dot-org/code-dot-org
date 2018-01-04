@@ -465,7 +465,8 @@ Applab.init = function (config) {
     // is stored in startHtml, not levelHtml. Also ignore levelHtml for embedded
     // levels so that updates made to startHtml by levelbuilders are shown.
     if (!getStore().getState().pageConstants.hasDesignMode ||
-        getStore().getState().pageConstants.isEmbedView) {
+        getStore().getState().pageConstants.isEmbedView ||
+        getStore().getState().pageConstants.hasContainedLevels) {
       config.level.levelHtml = '';
     }
 

@@ -1724,7 +1724,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.requiredBlocks_ = config.level.requiredBlocks || [];
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];
 
-  if (config.ignoreLastAttempt) {
+  if (config.ignoreLastAttempt || config.hasContainedLevels) {
     config.level.lastAttempt = '';
   }
 
