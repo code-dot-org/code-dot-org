@@ -98,12 +98,13 @@ module Pd::Application
     def enroll_user
       return unless pd_workshop_id
 
-      ::Pd::Enrollment.find_or_create_by!(
+      Pd::Enrollment.find_or_create_by!(
         pd_workshop_id: pd_workshop_id,
-        user: user,
-        full_name: user.name,
-        email: user.email,
-      )
+        email: user.email
+      ) do |enrollment|
+        enrollment.user = user
+        enrollment.full_name = user.name
+      end
     end
 
     PROGRAMS = {
