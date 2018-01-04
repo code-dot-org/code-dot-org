@@ -495,6 +495,7 @@ class Pd::Workshop < ActiveRecord::Base
     self.processed_location = {
       latitude: result.latitude,
       longitude: result.longitude,
+      city: result.city,
       formatted_address: result.formatted_address
     }.to_json
   end
