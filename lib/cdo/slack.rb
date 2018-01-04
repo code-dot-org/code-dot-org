@@ -11,7 +11,6 @@ class Slack
   }.freeze
 
   CHANNEL_MAP = {
-    'developers' => 'general',
     'server operations' => 'server-operations',
     'staging' => 'infra-staging',
     'test' => 'infra-test',
@@ -147,6 +146,16 @@ class Slack
     rescue
       return false
     end
+  end
+
+  def self.snippet(room, text)
+    # omit leading '#' when passing channel names to this API
+    channel = CHANNEL_MAP[room] || room
+    open('https://slack.com/api/files.upload'\
+      "?token=#{SLACK_TOKEN}"\
+      "&content=#{URI.escape(text)}"\
+      "&channels=#{channel}"
+    )
   end
 
   def self.join_room(name)

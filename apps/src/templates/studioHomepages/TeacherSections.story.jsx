@@ -69,7 +69,7 @@ const storyTable = [
       store.dispatch(setSections(serverSections));
       return (
         <Provider store={store}>
-          <TeacherSections isRtl={false}/>
+          <TeacherSections/>
         </Provider>
       );
     }
@@ -83,7 +83,7 @@ const storyTable = [
       const store = createStoreWithReducers();
       return (
         <Provider store={store}>
-          <TeacherSections isRtl={false}/>
+          <TeacherSections/>
         </Provider>
       );
     }

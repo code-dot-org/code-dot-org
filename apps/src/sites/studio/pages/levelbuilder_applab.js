@@ -24,7 +24,8 @@ $(document).ready(function () {
     "buzzer.note": null,
     "buzzer.off": null,
     "buzzer.stop": null,
-    "buzzer.play": null,
+    "buzzer.playNotes": null,
+    "buzzer.playSong": null,
     "accelerometer.getOrientation": null,
     "accelerometer.start": null,
     "accelerometer.getAcceleration": null,
@@ -52,4 +53,3 @@ $(document).ready(function () {
     }
   });
 });
-

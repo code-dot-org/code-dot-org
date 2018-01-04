@@ -21,6 +21,7 @@ import {createHistory} from 'history';
 import Summary from './summary';
 import QuickView from './quick_view';
 import DetailView from './detail_view';
+import CohortView from './cohort_view';
 import _ from 'lodash';
 
 const ROOT_PATH = '/pd/application_dashboard';
@@ -47,7 +48,10 @@ const paths = {
 export default class ApplicationDashboard extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string,
-    regionalPartners: PropTypes.array,
+    regionalPartners: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string
+    })),
     isWorkshopAdmin: PropTypes.bool,
     canLockApplications: PropTypes.bool,
   };
@@ -83,6 +87,7 @@ export default class ApplicationDashboard extends React.Component {
             />
             {
               _.flatten(Object.keys(paths).map((path, i) => {
+                const cohort_path_name = paths[path].name.replace('Applications', 'Cohort');
                 return [
                   (
                     <Route
@@ -104,6 +109,15 @@ export default class ApplicationDashboard extends React.Component {
                       component={QuickView}
                       applicationType={paths[path].name}
                       viewType={paths[path].type}
+                    />
+                  ),
+                  (
+                    <Route
+                      key={`cohort_view_${i}`}
+                      path={`${path}_cohort`}
+                      breadcrumbs={cohort_path_name}
+                      component={CohortView}
+                      applicationType={cohort_path_name}
                     />
                   )
                 ];

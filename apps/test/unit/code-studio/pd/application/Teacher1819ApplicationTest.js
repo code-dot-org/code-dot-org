@@ -27,14 +27,16 @@ const UNABLE_TO_ATTEND_SINGLE = "No, I'm unable to attend (please explain):";
 const UNABLE_TO_ATTEND_MULTIPLE = "No (please explain):";
 
 const assignedWorkshops = [
-  {dates: 'January 15-19, 2018', location: 'Seattle, WA'},
-  {dates: 'January 22-26, 2018', location: 'Seattle, WA'}
+  {id: 101, dates: 'January 15-19, 2018', location: 'Seattle, WA'},
+  {id: 102, dates: 'January 22-26, 2018', location: 'Seattle, WA'}
 ];
 
 const alternateWorkshops = [
-  {dates: 'February 5-9, 2018', location: 'Seattle, WA'},
-  {dates: 'February 12-16, 2018', location: 'Seattle, WA'}
+  {id: 201, dates: 'February 5-9, 2018', location: 'Seattle, WA'},
+  {id: 202, dates: 'February 12-16, 2018', location: 'Seattle, WA'}
 ];
+
+const exampleTeachercon = {city: 'Atlanta', dates: 'June 17 - 22, 2018'};
 
 describe("Section4SummerWorkshop", () => {
   let sandbox;
@@ -113,7 +115,8 @@ describe("Section4SummerWorkshop", () => {
         {
           id: 99,
           group: 2,
-          workshops: assignedWorkshops
+          workshops: assignedWorkshops,
+          teachercon: null
         }
       );
       server.respond();
@@ -121,10 +124,40 @@ describe("Section4SummerWorkshop", () => {
       expect(handleChange).to.have.been.calledWith({
         regionalPartnerId: 99,
         regionalPartnerGroup: 2,
-        regionalPartnerWorkshopCount: 2
+        regionalPartnerWorkshopIds: [101, 102],
+        teachercon: null
       });
       expect(section4.state().loadingPartner).to.be.false;
       expect(section4.state().partnerWorkshops).to.eql(assignedWorkshops);
+    });
+
+    it("Sets teachercon data and state based on API response for G3 teachercon partners", () => {
+      const section4 = mountSection4SummerWorkshopWithData({
+        program: PROGRAM_CSD,
+        school: '12345'
+      });
+
+      expect(section4.state().loadingPartner).to.be.true;
+      expect(server.requests).to.have.length(1);
+      setServerResponse(
+        "/api/v1/pd/regional_partner_workshops/find?course=CS+Discoveries&subject=5-day+Summer&school=12345",
+        {
+          id: 99,
+          group: 3,
+          workshops: [],
+          teachercon: exampleTeachercon
+        }
+      );
+      server.respond();
+
+      expect(handleChange).to.have.been.calledWith({
+        regionalPartnerId: 99,
+        regionalPartnerGroup: 3,
+        regionalPartnerWorkshopIds: [],
+        teachercon: exampleTeachercon
+      });
+      expect(section4.state().loadingPartner).to.be.false;
+      expect(section4.state().partnerWorkshops).to.eql([]);
     });
 
     describe("With single assigned workshop", () => {
@@ -327,22 +360,26 @@ describe("Section4SummerWorkshop", () => {
         data: {
           regionalPartnerId: 123,
           regionalPartnerGroup: 3,
-          regionalPartnerWorkshopCount: 0
+          regionalPartnerWorkshopIds: [],
+          teachercon: exampleTeachercon
+        },
+        state: {
+          teachercon: exampleTeachercon
         }
       });
 
       expect(section4.find("#assignedWorkshops")).to.contain.text(
-        "You have been assigned to TeacherCon"
+        "You have been assigned to TeacherCon Atlanta, June 17 - 22, 2018"
       );
     });
 
-    [1,2].forEach(group => {
+    [1,2,3].forEach(group => {
       it(`Renders yet to be determined message for group ${group} with no local workshops`, () => {
         const section4 = wrapSection4SummerWorkshop({
           data: {
             regionalPartnerId: 123,
             regionalPartnerGroup: 1,
-            regionalPartnerWorkshopCount: 0
+            regionalPartnerWorkshopIds: []
           },
           state: {
             partnerWorkshops: []
@@ -353,25 +390,21 @@ describe("Section4SummerWorkshop", () => {
           "Your region’s assigned summer workshop is yet to be determined."
         );
       });
-    });
 
-    [1,2,3].forEach(group => {
       it(`Renders single local workshop for group ${group}`, () => {
         const section4 = wrapSection4SummerWorkshop({
           data: {
             regionalPartnerId: 123,
             regionalPartnerGroup: group,
-            regionalPartnerWorkshopCount: 1
+            regionalPartnerWorkshopIds: [101]
           },
           state: {
-            partnerWorkshops: [
-              {dates: 'January 25-29, 2018', location: 'Seattle, WA'}
-            ]
+            partnerWorkshops: [assignedWorkshops[0]]
           }
         });
 
         expect(section4.find("#assignedWorkshops")).to.contain.text(
-          "Your region’s assigned summer workshop will be January 25-29, 2018 in Seattle, WA"
+          "Your region’s assigned summer workshop will be January 15-19, 2018 in Seattle, WA"
         );
       });
 
@@ -382,13 +415,10 @@ describe("Section4SummerWorkshop", () => {
           data: {
             regionalPartnerId: 123,
             regionalPartnerGroup: group,
-            regionalPartnerWorkshopCount: 2
+            regionalPartnerWorkshopIds: [101, 102]
           },
           state: {
-            partnerWorkshops: [
-              {dates: 'January 25-29, 2018', location: 'Seattle, WA'},
-              {dates: 'January 25-29, 2018', location: 'Seattle, WA'}
-            ]
+            partnerWorkshops: assignedWorkshops
           }
         });
 
@@ -398,6 +428,22 @@ describe("Section4SummerWorkshop", () => {
       });
     });
 
+    it("Renders teachercon for (group 3) partner with teachercon", () => {
+      // G3 is assumed, but actually any partner mapped to a teachercon will use that.
+      const section4 = wrapSection4SummerWorkshop({
+        data: {
+          regionalPartnerId: 123,
+          regionalPartnerGroup: 3,
+          regionalPartnerWorkshopIds: [],
+          teachercon: exampleTeachercon
+        }
+      });
+
+      expect(section4.find("#assignedWorkshops")).to.contain.text(
+        "You have been assigned to TeacherCon Atlanta, June 17 - 22, 2018"
+      );
+    });
+
     it("Renders alternate workshop checklist when alternate workshop data exists", () => {
       const section4 = wrapSection4SummerWorkshop({
         // Mount instead of shallow here because the label text in this case is buried inside the child ButtonList.
@@ -405,7 +451,7 @@ describe("Section4SummerWorkshop", () => {
         data: {
           regionalPartnerId: 123,
           regionalPartnerGroup: 1,
-          regionalPartnerWorkshopCount: 1,
+          regionalPartnerWorkshopIds: [101],
           ableToAttendSingle: UNABLE_TO_ATTEND_SINGLE
         },
         state: {

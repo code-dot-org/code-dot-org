@@ -27,8 +27,8 @@ export const styles = {
  * Should be rendered inside a VisualizationOverlay.
  * @constructor
  */
-let TooltipOverlay = React.createClass({
-  propTypes: {
+export default class TooltipOverlay extends React.Component {
+  static propTypes = {
     // width, height, mouseX and mouseY are given in app-space, not screen-space
     width: PropTypes.number,
     height: PropTypes.number,
@@ -38,13 +38,13 @@ let TooltipOverlay = React.createClass({
     providers: PropTypes.arrayOf(PropTypes.func),
     // Normally the tooltip is below the curosr
     tooltipAboveCursor: PropTypes.bool
-  },
+  };
 
   getTooltipStrings() {
     return (this.props.providers || [])
         .map(provider => provider(this.props))
         .filter(s => typeof s === 'string');
-  },
+  }
 
   /**
    * Simple getter for tooltip dimensions, useful to override in child class.
@@ -52,20 +52,20 @@ let TooltipOverlay = React.createClass({
    * @private
    */
   getTooltipDimensions() {
-    var tooltipCount = this.getTooltipStrings().length;
+    const tooltipCount = this.getTooltipStrings().length;
     return {
       width: TEXT_RECT_WIDTH,
       height: tooltipCount * TEXT_RECT_HEIGHT + Math.max(0, tooltipCount-1) * BETWEEN_RECT_MARGIN
     };
-  },
+  }
 
   /**
    * Given current properties, calculates the position for rendering the tooltip.
    * @returns {{rectX: number, rectY: number}}
    */
   getTooltipTopLeft() {
-    var tooltipSize = this.getTooltipDimensions();
-    var rectX, rectY;
+    const tooltipSize = this.getTooltipDimensions();
+    let rectX, rectY;
     rectX = this.props.mouseX + TOOLTIP_MARGIN;
     if (rectX + tooltipSize.width + EDGE_MARGIN > this.props.width) {
       // This response gives a smooth horizontal reposition when near the edge
@@ -74,8 +74,8 @@ let TooltipOverlay = React.createClass({
       //rectX = this.props.mouseX - TOOLTIP_MARGIN - tooltipSize.width;
     }
 
-    var abovePosition = this.props.mouseY - TOOLTIP_MARGIN - tooltipSize.height;
-    var belowPosition = this.props.mouseY + TOOLTIP_MARGIN;
+    const abovePosition = this.props.mouseY - TOOLTIP_MARGIN - tooltipSize.height;
+    const belowPosition = this.props.mouseY + TOOLTIP_MARGIN;
     if (belowPosition + tooltipSize.height + TOOLTIP_MARGIN > this.props.height) {
       rectY = abovePosition;
     } else if (abovePosition - TOOLTIP_MARGIN < 0) {
@@ -87,17 +87,17 @@ let TooltipOverlay = React.createClass({
     }
 
     return {rectX: rectX, rectY: rectY};
-  },
+  }
 
   renderTooltips() {
-    var bubbleCoordinates = this.getTooltipTopLeft();
-    var rectX = bubbleCoordinates.rectX;
-    var textX = rectX + TEXT_RECT_WIDTH / 2;
+    const bubbleCoordinates = this.getTooltipTopLeft();
+    const rectX = bubbleCoordinates.rectX;
+    const textX = rectX + TEXT_RECT_WIDTH / 2;
 
     return this.getTooltipStrings().map((string, index) => {
-      var indexYOffset = index * (TEXT_RECT_HEIGHT + BETWEEN_RECT_MARGIN);
-      var rectY = bubbleCoordinates.rectY + indexYOffset;
-      var textY = rectY + TEXT_RECT_HEIGHT + TEXT_Y_OFFSET;
+      const indexYOffset = index * (TEXT_RECT_HEIGHT + BETWEEN_RECT_MARGIN);
+      const rectY = bubbleCoordinates.rectY + indexYOffset;
+      const textY = rectY + TEXT_RECT_HEIGHT + TEXT_Y_OFFSET;
       return (
         <g key={index}>
           <rect
@@ -115,7 +115,7 @@ let TooltipOverlay = React.createClass({
         </g>
       );
     });
-  },
+  }
 
   render() {
     if (!isPointInBounds(this.props.mouseX, this.props.mouseY,
@@ -125,8 +125,7 @@ let TooltipOverlay = React.createClass({
     }
     return <g className="tooltip-overlay">{this.renderTooltips()}</g>;
   }
-});
-export default TooltipOverlay;
+}
 
 // A 'tip provider is a function that will generate an appropriate string label
 // for a tooltip, given the TooltipOverlay's props.  It can return a string,
@@ -135,7 +134,7 @@ export default TooltipOverlay;
 
 /**
  * Example provider generator.  This function creates a provider that always
- * displays a static string, which you provide as an argument..
+ * displays a static string, which you provide as an argument.
  * @param {!string} label
  * @returns {function(): string}
  */

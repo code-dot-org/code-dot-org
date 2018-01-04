@@ -90,6 +90,7 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
       # false implies partial discount
       gets_full_discount: application.try(:full_discount),
       discount_code: application.try(:circuit_playground_discount_code).try(:code),
+      expiration: application.try(:circuit_playground_discount_code).try(:expiration),
       admin_set_status: application.try(:admin_set_status) || false
     }
 
