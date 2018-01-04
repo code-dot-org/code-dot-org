@@ -19,7 +19,6 @@
 #  application_guid                    :string(255)
 #  decision_notification_email_sent_at :datetime
 #  accepted_at                         :datetime
-#  pd_workshop_id                      :integer
 #
 # Indexes
 #
@@ -27,7 +26,6 @@
 #  index_pd_applications_on_application_type     (application_type)
 #  index_pd_applications_on_application_year     (application_year)
 #  index_pd_applications_on_course               (course)
-#  index_pd_applications_on_pd_workshop_id       (pd_workshop_id)
 #  index_pd_applications_on_regional_partner_id  (regional_partner_id)
 #  index_pd_applications_on_status               (status)
 #  index_pd_applications_on_type                 (type)
