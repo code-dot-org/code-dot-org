@@ -1,4 +1,4 @@
-import artistShareFrame from '!!url-loader!@cdo/static/turtle/blank_sharing_drawing.png';
+import artistShareFrame from '@cdo/static/turtle/blank_sharing_drawing.png';
 import './util/svgelement-polyfill';
 
 export function fetchURLAsBlob(url, onComplete) {

@@ -1,6 +1,6 @@
 import { blobToDataURI, dataURIFromURI, dataURIToFramedBlob } from '@cdo/apps/imageUtils';
 import {expect} from '../../util/configuredChai';
-import expected from '!!url-loader!./expected.png';
+import expected from './expected.png';
 
 describe('image utils', () => {
   it("overlays an image inside the Artist frame", done => {

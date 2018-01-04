@@ -1,5 +1,5 @@
 import applabCommands from './commands';
-import turtleImageSrc from '!!url-loader!@cdo/static/applab/723-location-arrow-toolbar-48px-centered.png';
+import turtleImageSrc from '@cdo/static/applab/723-location-arrow-toolbar-48px-centered.png';
 
 var applabTurtle = {};
 export default applabTurtle;
