@@ -10,7 +10,7 @@
   text.  It's very important that we don't lose or miss this check.
   Check that @script_level exists, because it won't for a /level/ view.
 
-- if @script_level.try(:anonymous?) && current_user.teacher? && current_user != @user
+- if @script_level && @script_level.should_hide_survey(current_user, @user)
   - page = @pages.first
   %h2= t('heading_x_of_y', heading: data["title"], x: page.page_number, y: @level.pages.length)
   %br/
