@@ -147,8 +147,7 @@ export default class EligibilityChecklist extends Component {
             onSchoolConfirmed={this.handleSchoolConfirmed}
           />
         }
-        {this.state.discountAmount && !this.state.getsFullDiscount &&
-            !this.props.adminSetStatus &&
+        {this.state.discountAmount === "$97.50" && !this.props.adminSetStatus &&
           <div style={styles.discountMessage}>
             According to our data, your school has fewer than 50% of students that are
             eligible for free/reduced-price lunches. This means that we can bring down
