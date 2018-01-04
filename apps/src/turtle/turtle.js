@@ -176,7 +176,7 @@ const REMIX_PROPS_BY_SKIN = {
   elsa: FROZEN_REMIX_PROPS,
 };
 
-const PUBLISHABLE_SKINS = ['artist', 'anna', 'elsa'];
+const PUBLISHABLE_SKINS = ['artist', 'artist_zombie', 'anna', 'elsa'];
 
 /**
  * An instantiable Artist class
