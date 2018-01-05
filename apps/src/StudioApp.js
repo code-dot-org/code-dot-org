@@ -1853,15 +1853,17 @@ StudioApp.prototype.configureDom = function (config) {
   // Temporarily attach an event listener to log clicks
   // Logs the type of app and the ids of the puzzle
   var videoThumbnail = document.getElementsByClassName('video_thumbnail');
-  videoThumbnail[0].addEventListener('click', firehoseClient.putRecord(
-    'analysis-events',
-    {
-      study: 'instructions-resources-tab-wip',
-      study_group: 'under-app',
-      event: 'under-app-video-click',
-      data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
-    }
-  ));
+  if (videoThumbnail[0]){
+    videoThumbnail[0].addEventListener('click', firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'instructions-resources-tab-wip',
+        study_group: 'under-app',
+        event: 'under-app-video-click',
+        data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
+      }
+    ));
+  }
   var visualizationColumn = document.getElementById('visualizationColumn');
 
   if (!config.hideSource || config.embed || config.level.iframeEmbed) {
