@@ -6,7 +6,8 @@ import {
   N_COLOR_LEDS,
   BUTTON_VARS,
   COMPONENT_EVENTS,
-  SONG_CHARGE
+  SONG_CHARGE,
+  SONG_1D
 } from './PlaygroundConstants';
 
 export const MAKER_CATEGORY = 'Maker';
@@ -86,7 +87,7 @@ export const blocks = [
   /**
    * Circuit-Playground-specific blocks
    */
-  {func: 'onBoardEvent', parent: api, category: CIRCUIT_CATEGORY, paletteParams: ['component', 'event', 'callback'], params: ['buttonL', '"press"', "function(event) {\n  \n}"], allowFunctionDrop: { 2: true }, dropdown: { 0: Object.keys(COMPONENT_EVENTS), 1: boardEventDropdownGenerator }},
+  {func: 'onBoardEvent', parent: api, category: CIRCUIT_CATEGORY, paletteParams: ['component', 'event', 'callback'], params: ['buttonL', '"down"', "function(event) {\n  \n}"], allowFunctionDrop: { 2: true }, dropdown: { 0: Object.keys(COMPONENT_EVENTS), 1: boardEventDropdownGenerator }},
 
   {func: 'led', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
   {func: 'led.on', category: CIRCUIT_CATEGORY},
@@ -101,7 +102,6 @@ export const blocks = [
 
   {func: 'toggle', blockPrefix: colorLedBlockPrefix, category: CIRCUIT_CATEGORY, tipPrefix: pixelType, modeOptionName: "*.toggle", objectDropdown: { options: colorPixelVariables }  },
   {func: 'blink', blockPrefix: colorLedBlockPrefix, category: CIRCUIT_CATEGORY, paletteParams: ['interval'], params: ['100'], tipPrefix: pixelType, modeOptionName: "*.blink", objectDropdown: { options: colorPixelVariables }  },
-  {func: 'stop', blockPrefix: colorLedBlockPrefix, category: CIRCUIT_CATEGORY, tipPrefix: pixelType, modeOptionName: "*.stop", objectDropdown: { options: colorPixelVariables }  },
   {func: 'intensity', blockPrefix: colorLedBlockPrefix, category: CIRCUIT_CATEGORY, params: ['25'], tipPrefix: pixelType, modeOptionName: "*.intensity", objectDropdown: { options: colorPixelVariables }  },
   {func: 'color', blockPrefix: colorLedBlockPrefix, category: CIRCUIT_CATEGORY, paletteParams: ['color'], params: ['"#FF00FF"'], paramButtons: { minArgs: 1, maxArgs: 3}, tipPrefix: pixelType, modeOptionName: "*.color", objectDropdown: { options: colorPixelVariables }  },
 
@@ -110,8 +110,10 @@ export const blocks = [
   {func: 'buzzer.note', category: CIRCUIT_CATEGORY, paletteParams: ['note', 'duration'], params: ['"A4"', '100'], paramButtons: { minArgs: 1, maxArgs: 2}},
   {func: 'buzzer.off', category: CIRCUIT_CATEGORY},
   {func: 'buzzer.stop', category: CIRCUIT_CATEGORY},
-  {func: 'buzzer.play', category: CIRCUIT_CATEGORY, paletteParams: ['notes', 'tempo'], params: [stringifySong(SONG_CHARGE), 120], paramButtons: { minArgs: 1, maxArgs: 2}},
 
+  {func: 'buzzer.play', category: CIRCUIT_CATEGORY, paletteParams: ['notes', 'tempo'], params: [stringifySong(SONG_CHARGE), 120], paramButtons: { minArgs: 1, maxArgs: 2}},
+  {func: 'buzzer.playNotes', category: CIRCUIT_CATEGORY, paletteParams: ['notes', 'tempo'], params: [stringifySong(SONG_1D), 120], paramButtons: { minArgs: 1, maxArgs: 2}},
+  {func: 'buzzer.playSong', category: CIRCUIT_CATEGORY, paletteParams: ['notes', 'tempo'], params: [stringifySong(SONG_CHARGE), 120], paramButtons: { minArgs: 1, maxArgs: 2}},
   {func: 'accelerometer.getOrientation', category: CIRCUIT_CATEGORY, type: 'value', paletteParams: ['orientationType'], params: ['"inclination"'], dropdown: {0: ['"inclination"', '"pitch"', '"roll"']}},
   {func: 'accelerometer.getAcceleration', category: CIRCUIT_CATEGORY, type: 'value', paletteParams: ['orientationType'], params: ['"x"'], dropdown: {0: ['"x"', '"y"', '"z"', '"total"']}},
   {func: 'accelerometer.start', category: CIRCUIT_CATEGORY},

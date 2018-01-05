@@ -38,10 +38,12 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "markdown_instructions": "Let's play a game! Draw as many X's as you can! Can you get 3 in a row?",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/7bac282a123b42b9c0d0fafc7359963f=levelbuilder/32332.png",
     "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-11-18 00:04:55 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-11-18 00:05:14 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -90,7 +92,13 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="potential solution"/>
+            </block>
+          </next>
+        </block>
         <block type="procedures_defnoreturn">
           <mutation/>
           <title name="NAME">potential solution</title>

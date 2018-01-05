@@ -85,11 +85,7 @@ class ScriptLevelsController < ApplicationController
     # generation of the script level path.
     extra_params = {}
     if @script_level.long_assessment?
-      if params[:puzzle_page]
-        extra_params[:puzzle_page] = params[:puzzle_page]
-      else
-        extra_params[:puzzle_page] = 1
-      end
+      extra_params[:puzzle_page] = params[:puzzle_page] ? params[:puzzle_page] : 1
     end
 
     if request.path != (canonical_path = build_script_level_path(@script_level, extra_params))
@@ -112,11 +108,7 @@ class ScriptLevelsController < ApplicationController
   def hidden_stage_ids
     authorize! :read, ScriptLevel
 
-    if current_user
-      stage_ids = current_user.get_hidden_stage_ids(params[:script_id])
-    else
-      stage_ids = []
-    end
+    stage_ids = current_user ? current_user.get_hidden_stage_ids(params[:script_id]) : []
 
     render json: stage_ids
   end
@@ -180,11 +172,12 @@ class ScriptLevelsController < ApplicationController
 
     script = Script.get_from_cache(params[:script_id])
 
-    if params[:stage_position]
-      stage = script.stage_by_relative_position(params[:stage_position])
-    else
-      stage = script.stage_by_relative_position(params[:lockable_stage_position], true)
-    end
+    stage =
+      if params[:stage_position]
+        script.stage_by_relative_position(params[:stage_position])
+      else
+        script.stage_by_relative_position(params[:lockable_stage_position], true)
+      end
 
     render json: stage.summary_for_lesson_plans
   end
@@ -230,15 +223,16 @@ class ScriptLevelsController < ApplicationController
   end
 
   def load_script_level
-    if params[:chapter]
-      @script_level = @script.get_script_level_by_chapter(params[:chapter])
-    elsif params[:stage_position]
-      @script_level = @script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
-    elsif params[:lockable_stage_position]
-      @script_level = @script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
-    else
-      @script_level = @script.get_script_level_by_id(params[:id])
-    end
+    @script_level =
+      if params[:chapter]
+        @script.get_script_level_by_chapter(params[:chapter])
+      elsif params[:stage_position]
+        @script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
+      elsif params[:lockable_stage_position]
+        @script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
+      else
+        @script.get_script_level_by_id(params[:id])
+      end
     raise ActiveRecord::RecordNotFound unless @script_level
     authorize! :read, @script_level
   end
@@ -306,6 +300,12 @@ class ScriptLevelsController < ApplicationController
   def select_level
     # If there's only one level in this scriptlevel, use that
     return @script_level.levels[0] if @script_level.levels.length == 1
+
+    # If there's an override, use that
+    if params[:level_name]
+      specified_level = @script_level.levels.find {|l| l.name == params[:level_name]}
+      return specified_level if specified_level
+    end
 
     # For teachers, load the student's most recent attempt
     if @user && current_user != @user

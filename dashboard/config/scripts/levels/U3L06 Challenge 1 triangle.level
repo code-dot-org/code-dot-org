@@ -96,17 +96,23 @@
         ],
         "matchType": "exact",
         "minTimes": 2,
-        "maxTimes": 3,
-        "message": "App Lab is expecting that you'll need to call turnRight(degrees) twice, or three times, to do this task."
+        "maxTimes": 6,
+        "message": "App Lab is expecting that you'll need to call turnRight(degrees) exactly twice, or three times, to do this task."
       }
     ],
     "instructions_important": "false",
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-12-04 20:27:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-12-04 20:37:55 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

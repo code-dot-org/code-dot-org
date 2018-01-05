@@ -285,10 +285,10 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   const fourDirections = [
-    [i18n.directionForward(), 0],
-    [i18n.directionBack(), 2],
-    [i18n.directionLeft(), 3],
-    [i18n.directionRight(), 1],
+    [i18n.directionForward(), '0'],
+    [i18n.directionBack(), '2'],
+    [i18n.directionLeft(), '3'],
+    [i18n.directionRight(), '1'],
   ];
 
   blockly.Blocks.craft_placeBlockDirection = {

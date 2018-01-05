@@ -75,6 +75,7 @@ For more information, please contact advocacy@code.org.
 * <a href="https://sites.google.com/a/csta-hq.org/new-mexico/">CSTA-New Mexico</a>
 * <a href="https://cyberinnovationcenter.org/">Cyber Innovation Center</a>
 * <a href="https://eisca.org/">Elementary Institute of Science</a>
+* <a href="https://www.esd105.org/domain/175">Educational Service District 105</a>
 * <a href="http://expandingcomputing.cs.umass.edu/">Expanding Computing Education Pathways (ECEP)</a>
 * <a href="https://www.facebook.com/facebookdiversity">Facebook</a>
 * <a href="https://www.google.com/edu/">Google</a>
@@ -104,7 +105,9 @@ For more information, please contact advocacy@code.org.
 * <a href="http://www.techoregon.org/">Technology Association of Oregon</a>
 * <a href="https://stem.utah.gov/">Utah STEM Action Center</a>
 * <a href="https://udtonline.com/portfolio-item/education/">United Data Technologies</a>
+* <a href="http://utahtech.org/">Utah Tech Council</a>
 * <a href="http://www.washingtonstem.org/">Washington STEM</a>
+* <a href="http://stemcenter.wvu.edu/">West Virginia University Center for Excellence in STEM Education</a>
 
 [#tools-section]
 

@@ -2,23 +2,28 @@
 #
 # Table name: pd_applications
 #
-#  id                  :integer          not null, primary key
-#  user_id             :integer          not null
-#  type                :string(255)      not null
-#  application_year    :string(255)      not null
-#  application_type    :string(255)      not null
-#  regional_partner_id :integer
-#  status              :string(255)      not null
-#  locked_at           :datetime
-#  notes               :text(65535)
-#  form_data           :text(65535)      not null
-#  created_at          :datetime         not null
-#  updated_at          :datetime         not null
-#  course              :string(255)
-#  response_scores     :text(65535)
+#  id                                  :integer          not null, primary key
+#  user_id                             :integer
+#  type                                :string(255)      not null
+#  application_year                    :string(255)      not null
+#  application_type                    :string(255)      not null
+#  regional_partner_id                 :integer
+#  status                              :string(255)
+#  locked_at                           :datetime
+#  notes                               :text(65535)
+#  form_data                           :text(65535)      not null
+#  created_at                          :datetime         not null
+#  updated_at                          :datetime         not null
+#  course                              :string(255)
+#  response_scores                     :text(65535)
+#  application_guid                    :string(255)
+#  decision_notification_email_sent_at :datetime
+#  accepted_at                         :datetime
+#  properties                          :text(65535)
 #
 # Indexes
 #
+#  index_pd_applications_on_application_guid     (application_guid)
 #  index_pd_applications_on_application_type     (application_type)
 #  index_pd_applications_on_application_year     (application_year)
 #  index_pd_applications_on_course               (course)
@@ -34,6 +39,16 @@ require 'cdo/shared_constants/pd/facilitator1819_application_constants'
 module Pd::Application
   class Facilitator1819Application < ApplicationBase
     include Facilitator1819ApplicationConstants
+
+    def send_decision_notification_email
+      # Accepted, declined, and waitlisted are the only valid "final" states;
+      # all other states shouldn't need emails, and we plan to send "Accepted"
+      # emails manually
+      return unless %w(declined waitlisted).include?(status)
+
+      Pd::Application::Facilitator1819ApplicationMailer.send(status, self).deliver_now
+      update!(decision_notification_email_sent_at: Time.zone.now)
+    end
 
     def set_type_and_year
       self.application_year = YEAR_18_19
@@ -54,7 +69,7 @@ module Pd::Application
     end
 
     # Are we still accepting applications?
-    APPLICATION_CLOSE_DATE = Date.new(2017, 12, 1)
+    APPLICATION_CLOSE_DATE = Date.new(2018, 2, 1)
     def self.open?
       Time.zone.now < APPLICATION_CLOSE_DATE
     end
@@ -364,6 +379,10 @@ module Pd::Application
       end
     end
 
+    def first_name
+      sanitize_form_data_hash[:first_name]
+    end
+
     def program
       sanitize_form_data_hash[:program]
     end
@@ -398,6 +417,7 @@ module Pd::Application
       ]
     end
 
+    # @override
     # Filter out extraneous answers, based on selected program (course)
     def self.filtered_labels(course)
       labels_to_remove = (course == 'csf' ?
@@ -410,18 +430,12 @@ module Pd::Application
     end
 
     # @override
-    # Filter out extraneous answers, based on selected program (course)
-    def full_answers
-      super.slice(*self.class.filtered_labels(course).keys)
-    end
-
-    # @override
     def self.csv_header(course)
       # strip all markdown formatting out of the labels
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
         columns = filtered_labels(course).values.map {|l| markdown.render(l)}
-        columns.push :Status, :Notes
+        columns.push 'Status', 'Locked', 'Notes', 'Regional Partner'
         csv << columns
       end
     end
@@ -431,15 +445,25 @@ module Pd::Application
       answers = full_answers
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
-        row.push status, notes, regional_partner_name
+        row.push status, locked?, notes, regional_partner_name
         csv << row
       end
+    end
+
+    # Add account_email (based on the associated user's email) to the sanitized form data hash
+    def sanitize_form_data_hash
+      super.merge(account_email: user.email)
     end
 
     # Formats hour as 0-12(am|pm)
     # e.g. 7 -> 7am, 15 -> 3pm
     private_class_method def self.format_hour(hour)
       (Date.today + hour.hours).strftime("%l%P").strip
+    end
+
+    # @override
+    def check_idempotency
+      Pd::Application::Facilitator1819Application.find_by(user: user)
     end
   end
 end

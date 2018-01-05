@@ -18,6 +18,7 @@ var utils = require('../utils');
 var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
+import * as apiTimeoutList from '../lib/util/timeoutList';
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
@@ -312,9 +313,11 @@ GameLab.prototype.init = function (config) {
   }
 
   // Push project-sourced animation metadata into store. Always use the
-  // animations specified by the level definition for embed levels.
-  const initialAnimationList = (config.initialAnimationList && !config.embed) ?
-      config.initialAnimationList : this.startAnimations;
+  // animations specified by the level definition for embed and contained
+  // levels.
+  const initialAnimationList =
+    (config.initialAnimationList && !config.embed && !config.hasContainedLevels) ?
+    config.initialAnimationList : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
   ReactDOM.render((
@@ -460,6 +463,8 @@ GameLab.prototype.reset = function (ignore) {
   }
   */
 
+  apiTimeoutList.clearTimeouts();
+  apiTimeoutList.clearIntervals();
   Sounds.getSingleton().stopAllAudio();
 
   this.gameLabP5.resetExecution();
@@ -1106,8 +1111,6 @@ GameLab.prototype.displayFeedback_ = function () {
   var level = this.level;
 
   this.studioApp_.displayFeedback({
-    app: 'gamelab',
-    skin: this.skin.id,
     feedbackType: this.testResults,
     message: this.message,
     response: this.response,

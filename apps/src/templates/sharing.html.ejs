@@ -7,13 +7,13 @@
 <% } %>
 
 
-<% if (options.response && options.response.level_source) { %>
+<% if (options.shareLink) { %>
   <% if (options.appStrings && options.appStrings.sharingText) { %>
     <div><%= options.appStrings.sharingText %></div>
   <% } %>
 
   <div>
-    <input type="text" id="sharing-input" value=<%= options.response.level_source %> readonly>
+    <input type="text" id="sharing-input" value=<%= options.shareLink %> readonly>
   </div>
   <div class='social-buttons'>
     <% if (options.facebookUrl) { -%>
@@ -41,7 +41,7 @@
       </button>
     <% } else if (options.saveToProjectGallery && !options.disableSaveToGallery) { %>
       <button id="save-to-project-gallery-button">
-        <%= msg.save() %>
+        <%= msg.addToProjects() %>
       </button>
       <button id="publish-to-project-gallery-button">
           <%= msg.publish() %>

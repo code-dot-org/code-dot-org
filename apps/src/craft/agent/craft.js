@@ -21,8 +21,8 @@ import { getStore } from '../../redux';
 import Sounds from '../../Sounds';
 
 import { TestResults } from '../../constants';
-import experiments from '../../util/experiments';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
+import {SignInState} from '../../code-studio/progressRedux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -525,7 +525,7 @@ export default class Craft {
   static minAssetsForLevelNumber(levelNumber) {
     switch (levelNumber) {
       default:
-        return ['allAssetsMinusPlayer', 'playerAgent'];
+        return ['heroAllAssetsMinusPlayer', 'playerAgent'];
     }
   }
 
@@ -534,7 +534,7 @@ export default class Craft {
     switch (levelNumber) {
       default:
         // May want to push this to occur on level with video
-        return ['allAssetsMinusPlayer', 'playerAgent'];
+        return ['heroAllAssetsMinusPlayer', 'playerAgent'];
     }
   }
 
@@ -550,7 +550,7 @@ export default class Craft {
       case 1:
         return ['playerSteve', 'playerAlex'];
       default:
-        return ['allAssetsMinusPlayer'];
+        return ['heroAllAssetsMinusPlayer'];
     }
   }
 
@@ -764,7 +764,6 @@ export default class Craft {
   static reportResult(success) {
     const studioTestResults = studioApp().getTestResults(success);
     const testResultType = Craft.getTestResultFrom(success, studioTestResults);
-    const saveToProjectGallery = experiments.isEnabled('publishMoreProjects');
 
     const image = Craft.initialConfig.level.freePlay
       ? Craft.gameController.getScreenshot()
@@ -800,9 +799,13 @@ export default class Craft {
       // typically delay feedback until response back
       // for things like e.g. crowdsourced hints & hint blocks
       onComplete: function (response) {
+        const sharing = Craft.initialConfig.level.freePlay;
+        if (sharing && response.level_source) {
+          trySetLocalStorage('craftHeroShareLink', response.level_source);
+        }
+
+        const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
         studioApp().displayFeedback({
-          app: 'craft',
-          skin: Craft.initialConfig.skin.id,
           feedbackType: testResultType,
           response,
           level: Craft.initialConfig.level,
@@ -817,8 +820,9 @@ export default class Craft {
             generatedCodeDescription: craftMsg.generatedCodeDescription(),
           },
           feedbackImage: image,
-          showingSharing: Craft.initialConfig.level.freePlay,
-          saveToProjectGallery,
+          showingSharing: sharing,
+          saveToProjectGallery: true,
+          disableSaveToGallery: !isSignedIn,
         });
       },
     });

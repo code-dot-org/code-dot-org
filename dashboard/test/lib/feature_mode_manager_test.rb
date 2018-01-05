@@ -77,8 +77,6 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
   def test_allows
     FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, HOC_SCRIPTS, CSF_SCRIPTS)
 
-    puts "Gatekeeper: #{Gatekeeper.to_hash}"
-
     assert FeatureModeManager.allows(@gatekeeper, 'normal', 'postMilestone', HOC_SCRIPT)
     assert FeatureModeManager.allows(@gatekeeper, 'normal', 'postMilestone', nil)
     assert FeatureModeManager.allows(@gatekeeper, 'normal', 'hint_view_request', HOC_SCRIPT)
@@ -111,7 +109,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
 
   def test_scale_mode
     FeatureModeManager.set_mode('scale', @gatekeeper, @dcdo, HOC_SCRIPTS, CSF_SCRIPTS)
-    refute @gatekeeper.allows('puzzle_rating')
+    assert @gatekeeper.allows('puzzle_rating')
     assert @gatekeeper.allows('hint_view_request')
     HOC_AND_CSF_SCRIPTS.each do |script|
       assert @gatekeeper.allows('postMilestone', where: {script_name: script})
@@ -121,7 +119,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     assert @gatekeeper.allows('postFailedRunMilestone')
     assert @gatekeeper.allows('shareEnabled')
     refute @gatekeeper.allows('slogging')
-    assert_equal 10, @dcdo.get('hoc_activity_sample_weight', nil).to_i
+    assert_equal 1, @dcdo.get('hoc_activity_sample_weight', nil).to_i
     assert_equal 14400, @dcdo.get('public_proxy_max_age', nil)
     assert_equal 28800, @dcdo.get('public_max_age', nil)
   end
@@ -144,7 +142,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     assert @gatekeeper.allows('postFailedRunMilestone')
     assert @gatekeeper.allows('shareEnabled')
     refute @gatekeeper.allows('slogging')
-    assert_equal 10, @dcdo.get('hoc_activity_sample_weight', nil).to_i
+    assert_equal 1, @dcdo.get('hoc_activity_sample_weight', nil).to_i
     assert_equal 14400, @dcdo.get('public_proxy_max_age', nil)
     assert_equal 28800, @dcdo.get('public_max_age', nil)
   end

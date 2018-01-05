@@ -112,4 +112,62 @@ describe('convertBlocksXml', () => {
       expect(resultingBlock.textContent).to.equal(expected[i]);
     });
   });
+
+  it('can convert placeBlock blockTypes to numeric slot ids', () => {
+    const blocksToExpected = {
+      "bricks": "1",
+      "logAcacia": "7",
+      "wool_blue": "22",
+      "nonExistantBlock": "1" // default
+    };
+
+    Object.keys(blocksToExpected).forEach((block) => {
+      const expected = blocksToExpected[block];
+      const xml = `
+        <xml>
+          <block type="craft_placeBlock">
+            <title name="TYPE">${block}</title>
+          </block>
+        </xml>
+      `;
+
+      // We expect our title[name=TYPE] to turn in to a title[name=NUM]
+      const result = parseElement(convertBlocksXml(xml));
+      const titles = result.getElementsByTagName('title');
+      let resultingBlock;
+      for (let i = 0; i < titles.length; i++) {
+        if (titles[i].getAttribute("name") === "NUM") {
+          resultingBlock = titles[i];
+        }
+      }
+
+      expect(resultingBlock.textContent).to.equal(expected);
+    });
+  });
+
+  it('can convert placeBlockDirection directions', () => {
+    const directions = ['forward', 'right', 'back', 'left'];
+
+    directions.forEach((dirString, dirNumber) => {
+      const xml = `
+        <xml>
+          <block type="craft_placeBlockDirection">
+            <title name="TYPE">dirt</title>
+            <title name="DIR">${dirNumber}</title>
+          </block>
+        </xml>
+      `;
+
+      const result = parseElement(convertBlocksXml(xml));
+      const titles = result.getElementsByTagName('title');
+      let resultingBlock;
+      for (let i = 0; i < titles.length; i++) {
+        if (titles[i].getAttribute("name") === "DIR") {
+          resultingBlock = titles[i];
+        }
+      }
+
+      expect(resultingBlock.textContent).to.equal(dirString);
+    });
+  });
 });

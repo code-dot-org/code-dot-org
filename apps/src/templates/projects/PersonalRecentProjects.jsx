@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React, {Component, PropTypes} from 'react';
+import { connect } from 'react-redux';
 import ProjectCard from './ProjectCard.jsx';
 import {personalProjectDataPropType} from './projectConstants';
 import color from "../../util/color";
@@ -34,11 +35,11 @@ const styles = {
   }
 };
 
-const ProjectCardGrid = React.createClass({
-  propTypes: {
+class PersonalRecentProjects extends Component {
+  static propTypes = {
     projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired,
-    isRtl: PropTypes.bool.isRequired
-  },
+    isRtl: PropTypes.bool.isRequired,
+  };
 
   render() {
     const { isRtl } = this.props;
@@ -63,6 +64,8 @@ const ProjectCardGrid = React.createClass({
       </div>
     );
   }
-});
+}
 
-export default Radium(ProjectCardGrid);
+export default connect(state => ({
+  isRtl: state.isRtl,
+}))(Radium(PersonalRecentProjects));

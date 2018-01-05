@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import Responsive from '../responsive';
+import {connect} from 'react-redux';
 import styleConstants from '../styleConstants';
 import FontAwesome from './FontAwesome';
 import color from "../util/color";
@@ -126,20 +126,24 @@ class ContentContainer extends Component {
     link: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     description: PropTypes.string,
-    responsive: PropTypes.instanceOf(Responsive),
-    hideBottomMargin: PropTypes.bool
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
+    hideBottomMargin: PropTypes.bool,
   };
 
   render() {
-    const { heading, link, linkText, description, isRtl, responsive, hideBottomMargin }= this.props;
+    const {
+      heading,
+      link,
+      linkText,
+      description,
+      isRtl,
+      responsiveSize,
+      hideBottomMargin
+    } = this.props;
 
-    const showLinkTop =
-      (!responsive || responsive.isResponsiveCategoryActive('lg')) &&
-      link && linkText;
-    const showLinkBottom =
-      responsive && responsive.isResponsiveCategoryInactive('lg') &&
-      link && linkText;
-    const boxStyles = responsive ? styles.boxResponsive : styles.box;
+    const showLinkTop = (responsiveSize === 'lg') && link && linkText;
+    const showLinkBottom = (responsiveSize !== 'lg') && link && linkText;
+    const boxStyles = styles.boxResponsive;
     const bottomMargin = hideBottomMargin ? '' : styles.bottomMargin;
 
     return (
@@ -222,4 +226,7 @@ class Link extends Component {
   }
 }
 
-export default Radium(ContentContainer);
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+  isRtl: state.isRtl,
+}))(Radium(ContentContainer));

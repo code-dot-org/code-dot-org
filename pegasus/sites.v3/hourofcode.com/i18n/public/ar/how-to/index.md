@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to) %>'
+title: <%= hoc_s(:title_how_to) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -7,15 +7,13 @@ nav: how_to_nav
 
 <h1>كيف تدرس ساعة واحدة لتعلم البرمحة</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to help run an Hour of Code in your class.
+انضم للحراك وعرف مجموعة طلابك على ساعتهم الأولى من علوم الحاسب بهذه الخطوات. "ساعة من البرمجة" تعتبر سهلة التعليم - حتى للمبتدئين! إذا كنت تحب بعض المساعدة, يمكنك العثور على [ متطوعين محليين ](<%= resolve_url('https://code.org/volunteer/local') %>) لمساعدتك في تعليم "ساعة من البرمجة" داخل فصلك.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Choose a tutorial for your hour
 
-We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) as well as [teacher-guided tutorials](<%= resolve_url('https://code.org/educate/teacher-led') %>) for participants of all ages, created by a variety of partners.
-
-[![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. Promote your Hour of Code
 
@@ -23,11 +21,11 @@ Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources
 
 ## 4. Plan your technology needs - computers are optional
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+The best Hour of Code experience includes Internet-connected computers. لكن **لا** تحتاج إلى جهاز كمبيوتر لكل طفل، ويمكنك حتى تعليم "ساعة من البرمجة" دون كمبيوتر على الإطلاق.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+تأكد من اختبار البرامج التعليمية على كمبيوترات الطلاب أو أجهزتهم للتأكد من أنها تعمل بشكل صحيح من ناحية الصوت والفيديو داخل المتصفحات. **هل سرعة النت ضعيفة ؟** قم أنت بعرض مقاطع الفيديو أمام كل طلاب الفصل، بحيث لا يحتاج كل طالب تحميل المقاطع بنفسه. أو حاول البرامج التعليمية الغير متصلة بالانترنت.
 
-Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
+**وفر سماعات لطلاب الفصل**، أو أطلب من الطلاب إحضار سماعاتهم، إذا اخترت برنامجا تعليميا يعمل بشكل أفضل مع الصوت.
 
 **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). عندما يتعاون الطلبة، يقل الاعتماد على المعلم. سيعرفون ان علوم الحاسوب اجتماعية و تعاونية.
 

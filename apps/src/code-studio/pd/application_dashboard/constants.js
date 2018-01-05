@@ -60,3 +60,29 @@ exports.ApplicationStatuses = {
     'Withdrawn'
   ]
 };
+
+/**
+ * Statuses that represent "finalized" applications
+ */
+exports.ApplicationFinalStatuses = [
+  'accepted',
+  'declined',
+  'waitlisted',
+];
+
+/**
+ * Constants for Regional Partner dropdown
+ */
+const allPartnersLabel = "All Regional Partners' Applications";
+const allPartnersFilter = "all";
+const unmatchedLabel = "No Partner/Unmatched";
+const unmatchedFilter = "none";
+exports.AllPartnersLabel = allPartnersLabel;
+exports.AllPartnersFilter = allPartnersFilter;
+exports.UnmatchedLabel = unmatchedLabel;
+exports.UnmatchedFilter = unmatchedFilter;
+
+exports.RegionalPartnerDropdownOptions = [
+  {value: unmatchedFilter, label: unmatchedLabel},
+  {value: allPartnersFilter, label: allPartnersLabel}
+];

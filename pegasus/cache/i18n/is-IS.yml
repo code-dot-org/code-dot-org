@@ -37,11 +37,19 @@
   twentyhours_text: Búin(n) að ljúka fyrstu Klukkustund kóðunar? Fylgdu eftir með
     því að læra fleiri mikilvæg hugtök í tölvunarfræði og forritun á þessu námskeiði.
   og_title: 'Code.org: Allir geta lært'
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
   og_description: Sérhver nemandi í sérhverjum skóla á skilið að fá tækifæri til að
     læra tölvunarfræði.
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: Klukkustund kóðunar er nú
   csedweek_og_description: 4.-10. desember 2017. Tölvunarfræði er grunnfag sem allir
     nemendur ættu að læra.
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
   hoc2014_heading: Vertu með í <a href="http://hourofcode.com">Klukkustund kóðunar</a><br/>8.
     - 14. desember 2014<br/>
   hoc2014_students: Nemendur
@@ -388,6 +396,7 @@
   homepage_hero_text_stat_students: "#student_count nemendur skráðir á Code.org"
   homepage_hero_text_stat_served: 'Klukkustund kóðunar: miðlað til #served'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Klukkustund kóðunar
   homepage_slot_text_frozen: Frozen með Önnu og Elsu
   homepage_slot_text_teacher: Stjórnborð kennara
@@ -407,6 +416,7 @@
   homepage_action_text_girlvideo: Veittu stúlku innblástur
   homepage_action_text_learn: Byrjaðu að læra
   homepage_action_text_signpetition: Skrifa undir áskorunina
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: "Ég samþykki &#x25BE;"
   homepage_diversity_pledge: Vinna fjölbreytniheitið
   homepage_banner_text_prizes: 'Klukkustund kóðunar kemur aftur 7. - 13. desember. '
@@ -554,11 +564,12 @@
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
     students now."
-  minecraft_join_online_training: Join us on November 16th, 2017 for a special webinar
-    for those who want to facilitate Hour of Code with Minecraft. Get a walkthrough
-    of the new tutorial by the Minecraft team and learn about the resources and best
-    practices to help you confidently facilitate an exciting Hour of Code with Minecraft.
-    <a href='%{minecraft_webinar_url}'>Sign up today</a>!
+  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
+    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
+    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
+    Get a head start on thinking through what you need to bring Hour of Code to young
+    people during Computer Science Education week (December 4-10) and beyond.
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
     at the Microsoft Store'
   minecraft_continue_learning_description: No computer science experience required!
@@ -1253,6 +1264,8 @@
   csp-ap_name: AP verkefni
   csppostap_name: 'Framhald: Gagnagrunnar í öppum'
   cspassessment_name: Fullt próf - 50 spurningar
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Prófhluti 1 - 25 spurningar
   cspexam2-AKwgAh1ac5_name: Prófhluti 2 - 25 spurningar
   cspunit3_gradelevel: Bekkir 9-12
@@ -2082,3 +2095,12 @@
     Classroom" hnappinn undir flipanum "Umsjón nemenda":'
   google_sign_in_instruct: 'Þaðan ættu þeir að nota valkostinn "Skrá inn með Google
     aðgangi":'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
+  video_title_steph_curry: Hour of Code with Steph Curry

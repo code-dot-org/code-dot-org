@@ -2,13 +2,14 @@ FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
   factory :census_submission, class: Census::CensusSubmission do
+    submitter_email_address "parent@school.edu"
     school_year 2017
     how_many_20_hours "none"
     how_many_10_hours "none"
     how_many_do_hoc "none"
     how_many_after_school "none"
     submitter_role "parent"
-    class_frequency "one_hour_per_week"
+    class_frequency "less_than_one_hour_per_week"
 
     transient do
       school_info_count 1
@@ -74,7 +75,6 @@ FactoryGirl.define do
   end
 
   factory :census_your_school2017v0, parent: :census_submission, class: Census::CensusYourSchool2017v0 do
-    submitter_email_address "parent@school.edu"
   end
 
   factory :census_your_school2017v1, parent: :census_your_school2017v0, class: Census::CensusYourSchool2017v1 do
@@ -96,8 +96,11 @@ FactoryGirl.define do
   factory :census_your_school2017v4, parent: :census_your_school2017v3, class: Census::CensusYourSchool2017v4 do
   end
 
+  factory :census_your_school2017v5, parent: :census_your_school2017v4, class: Census::CensusYourSchool2017v5 do
+    share_with_regional_partners true
+  end
+
   factory :census_hoc2017v1, parent: :census_submission, class: Census::CensusHoc2017v1 do
-    submitter_email_address "hoc@email.address"
     submitter_name "Hoc Submitter"
   end
 
@@ -117,6 +120,57 @@ FactoryGirl.define do
 
     trait :with_form do
       form_id 1
+    end
+  end
+
+  factory :census_teacher_banner_v1, parent: :census_submission, class: Census::CensusTeacherBannerV1 do
+    submitter_role "TEACHER"
+  end
+
+  factory :ap_school_code, class: 'Census::ApSchoolCode' do
+    school_code "123456"
+    school {create :school}
+
+    trait :without_school_code do
+      school_code nil
+    end
+
+    trait :without_school do
+      school nil
+    end
+
+    trait :with_too_long_school_code do
+      school_code "12345678"
+    end
+
+    trait :with_invalid_school_code do
+      school_code "ABCDEF"
+    end
+  end
+
+  factory :ap_cs_offering, class: 'Census::ApCsOffering' do
+    ap_school_code {build :ap_school_code}
+    course "CSP"
+    school_year 2017
+
+    trait :without_course do
+      course nil
+    end
+
+    trait :with_invalid_course do
+      course "ABC"
+    end
+
+    trait :without_school_code do
+      ap_school_code nil
+    end
+
+    trait :without_school_year do
+      school_year nil
+    end
+
+    trait :with_invalid_school_year do
+      school_year 1900
     end
   end
 end

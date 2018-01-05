@@ -38,6 +38,7 @@ ________________
 <a id="recruitment"></a>
 ## Facilitator Recruitment Resources
 
+- [2017-2018 (CURRENT) Facilitator Application Process Doc] (https://docs.google.com/document/d/11-I1qsTrvODrZgKDNP2frGLrMjmUb-C9ChOt7nbqV2Y/edit#)
 - [Facilitator Program Page](https://code.org/facilitator) - General webpage to share with potential facilitators
 - [Facilitator Development Program Overview](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit#heading=h.psnytlkvnqcd)
 - [K-12 Facilitator Qualifications and Rubric](https://docs.google.com/document/d/14yKszp5_eYiTgZ4t8KpDTi2cBB4wd5SGxCV-a_eE6c8/edit) - Guide for recruitment
@@ -80,7 +81,7 @@ ________________
 - This summer, Code.org will directly pay any non-local veteran faciiltators as they are only working at your site this summer.
 - Starting with the first Academic Year Workshop, each Regional Partner is responsible for contracting with and paying all facilitators. We will include the funding for you to pay them in our checks to your organization.
 
-**CS Principles and CS Discoveries Facilitator Payments**
+**CS Principles Facilitator Payments**
 
 - All facilitators are paid $500 per workshop day. There is no urban multiplier applied to this amount as it is considered a pass through expense.
 - Each Regional Partner is responsible for contracting with and paying any facilitators who run local workshops. *(Note: this includes any out of region facilitators)*

@@ -3,7 +3,7 @@ login_required true
 hideable_stages true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit3/"], ["teacherForum", "https://forum.code.org/c/csp3"], ["vocabulary", "https://curriculum.code.org/csp/unit3/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp/unit3/code/"], ["standardMappings", "https://curriculum.code.org/csp/unit3/standards/"], ["professionalLearning", "https://studio.code.org/s/csp3-support"]]
-script_announcements [{"notice"=>"", "details"=>"", "link"=>"", "type"=>"bullhorn"}]
+script_announcements [{"notice"=>"Check out the CSP mid-course survey", "details"=>"We recently added a mid-course survey to the end of Unit 3.  Please allow your students some time to complete it.", "link"=>"", "type"=>"success"}]
 
 stage 'The Need For Programming Languages', flex_category: 'csp3_1'
 level 'v2 U3L01 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
@@ -120,6 +120,7 @@ assessment 'subgoals_u3_top_down_FR', progression: 'Check Your Understanding'
 stage 'Practice PT - Design a Digital Scene', flex_category: 'csp3_1'
 named_level 'SG v2 U3L10 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'U3L08 - individualCode', progression: 'Design Your Components'
+named_level 'How To: Share Code with Teammates'
 level 'U3L08 - digitalScene', progression: 'Challenge: Design Your Digital Scene'
 
 stage 'Unit 3 Chapter 1 Assessment', lockable: true, flex_category: 'cspAssessment'
@@ -128,3 +129,6 @@ variants
   level 'csp_affirmation_intervention_3', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
 endvariants
 assessment 'CSP Unit 3 Ch1 Cumulative Assessment MC Group'
+
+stage 'Please complete the CSP Mid-course survey', lockable: true, flex_category: 'cspSurvey'
+assessment 'csp-post-survey-2017-levelgroup'

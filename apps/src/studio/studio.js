@@ -72,7 +72,6 @@ const turnRight90 = constants.turnRight90;
 const turnLeft90 = constants.turnLeft90;
 
 import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
-import experiments from '../util/experiments';
 import {SignInState} from '../code-studio/progressRedux';
 
 // Whether we are showing debug information
@@ -122,8 +121,8 @@ let skin;
 
 // These skins can be published as projects.
 const PUBLISHABLE_SKINS = [
-  'gumball', 'studio', 'iceage', 'infinity'
-].concat(experiments.isEnabled('publishMoreProjects') ? 'hoc2015' : undefined);
+  'gumball', 'studio', 'iceage', 'infinity', 'hoc2015'
+];
 
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
@@ -2801,8 +2800,6 @@ Studio.displayFeedback = function () {
     const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
 
     studioApp().displayFeedback({
-      app: 'studio', //XXX
-      skin: skin.id,
       feedbackType: Studio.testResults,
       executionError: Studio.executionError,
       tryAgainText: tryAgainText,

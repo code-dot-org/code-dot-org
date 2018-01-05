@@ -45,11 +45,14 @@
     "block_moving_into_walls": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "remove_items_when_actor_collides": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "This is the final project level template for Course F",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 22:11:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 22:11:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-11-22 02:21:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-01-04 20:11:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-01-04 20:14:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-01-04 20:15:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -421,6 +424,12 @@
         </category>
         <category name="Logic">
           <block type="controls_if" inline="false"/>
+          <block type="controls_if" inline="false">
+            <mutation else="1"/>
+          </block>
+          <block type="controls_if" inline="false">
+            <mutation elseif="1" else="1"/>
+          </block>
           <block type="logic_compare" inline="true">
             <title name="OP">EQ</title>
           </block>
@@ -575,6 +584,11 @@
                 </value>
               </block>
             </value>
+          </block>
+        </category>
+        <category name="Comments">
+          <block type="comment">
+            <title name="TEXT"/>
           </block>
         </category>
       </xml>

@@ -9,6 +9,7 @@ import { SignInState } from '@cdo/apps/code-studio/progressRedux';
 import i18n from '@cdo/locale';
 import { reload } from '@cdo/apps/utils';
 import { environmentSpecificCookieName } from '@cdo/apps/code-studio/utils';
+import { pegasus } from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   container: {
@@ -121,7 +122,6 @@ class SignInOrAgeDialog extends Component {
         <BaseDialog
           useUpdatedStyles
           isOpen={true}
-          assetUrl={() => ''}
           uncloseable
         >
           <div style={styles.container}>
@@ -133,7 +133,7 @@ class SignInOrAgeDialog extends Component {
             </div>
             <div style={styles.tooYoungButton}>
               <Button
-                href="/courses"
+                href={pegasus('/hourofcode/overview')}
                 text="See all tutorials"
                 color={Button.ButtonColor.orange}
               />
@@ -147,7 +147,6 @@ class SignInOrAgeDialog extends Component {
       <BaseDialog
         useUpdatedStyles
         isOpen={this.state.open}
-        assetUrl={() => ''}
         uncloseable
       >
         <div style={styles.container}>
