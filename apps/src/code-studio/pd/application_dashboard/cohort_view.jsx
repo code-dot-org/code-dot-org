@@ -36,7 +36,7 @@ class CohortView extends React.Component{
   }
 
   componentWillMount() {
-    this.load();
+    this.load(UnmatchedFilter);
   }
 
   load(selected = null) {
