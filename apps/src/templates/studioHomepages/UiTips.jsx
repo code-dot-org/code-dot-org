@@ -26,17 +26,15 @@ export default class UiTips extends React.Component {
 
   constructor(props) {
     super(props);
-
-    let tipsShowing = [];
-
-    let showInitialTips = this.props.showInitialTips;
+    const tipsShowing = [];
+    const showInitialTips = this.props.showInitialTips;
 
     // We might start by showing the "before" dialog.
     const showingDialog = (showInitialTips && this.props.beforeDialog) ? "before" : null;
 
     // If we want to show the initial tips but there is no dialog, show the initial tips immediately.
     if (showInitialTips && !showingDialog) {
-      this.props.tips.map((tip, index) => {
+      this.props.tips.forEach((tip, index) => {
         if (tip.type === "initial") {
           tipsShowing[index] = true;
         }
@@ -44,16 +42,16 @@ export default class UiTips extends React.Component {
     }
 
     this.state = {
-      showInitialTips: showInitialTips,
-      tipsShowing: tipsShowing,
-      showingDialog: showingDialog,
+      showInitialTips,
+      tipsShowing,
+      showingDialog,
       mobileWidth: $(window).width() <= styleConstants['content-width']
     };
   }
 
   closeClicked = (index) => {
     // Update state so it's no longer showing.
-    let newTipsShowing = [...this.state.tipsShowing];
+    const newTipsShowing = [...this.state.tipsShowing];
     newTipsShowing[index] = false;
     let newState = {...this.state, tipsShowing: newTipsShowing};
 
@@ -87,8 +85,7 @@ export default class UiTips extends React.Component {
   };
 
   afterDialogCancel = () => {
-    let newState = {...this.state, showingDialog: null};
-    this.setState(newState);
+    this.setState({...this.state, showingDialog: null});
 
     trackEvent("ui_tips", this.props.tipId, "after_dialog_cancel");
   };
@@ -97,15 +94,13 @@ export default class UiTips extends React.Component {
     if (this.props.afterDialog.onConfirm.action === "url") {
       window.open(this.props.afterDialog.onConfirm.url, "_blank");
     }
-    let newState = {...this.state, showingDialog: null};
-    this.setState(newState);
+    this.setState({...this.state, showingDialog: null});
 
     trackEvent("ui_tips", this.props.tipId, "after_dialog_confirm");
   };
 
   beforeDialogCancel = () => {
-    let newState = {...newState, showInitialTips: false, showingDialog: null};
-    this.setState(newState);
+    this.setState({...this.state, showInitialTips: false, showingDialog: null});
 
     $.post(
       `/api/v1/users/${this.props.userId}/post_ui_tip_dismissed`,
@@ -116,18 +111,17 @@ export default class UiTips extends React.Component {
   };
 
   beforeDialogConfirm = () => {
-    let tipsShowing = [];
+    const tipsShowing = [];
 
     if (this.state.showInitialTips) {
-      this.props.tips.map((tip, index) => {
+      this.props.tips.forEach((tip, index) => {
         if (tip.type === "initial") {
           tipsShowing[index] = true;
         }
       });
     }
 
-    let newState = {...this.state, tipsShowing: tipsShowing, showingDialog: null};
-    this.setState(newState);
+    this.setState({...this.state, tipsShowing: tipsShowing, showingDialog: null});
 
     trackEvent("ui_tips", this.props.tipId, "before_dialog_confirm");
   };
@@ -137,7 +131,7 @@ export default class UiTips extends React.Component {
 
     // For each triggered tip, just use jquery to set up an onClick handler
     // that will call back into us and set state to show that tip.
-    this.props.tips.map((tip, index) => {
+    this.props.tips.forEach((tip, index) => {
       if (tip.type === "triggered") {
         $(`#${tip.triggerId}`).click(e => {
           if (!this.state.showInitialTips) {
