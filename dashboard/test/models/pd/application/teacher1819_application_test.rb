@@ -401,6 +401,9 @@ module Pd::Application
     end
 
     test 'find_default_workshop finds a teachercon workshop for applications with a G3 partner' do
+      # stub process_location to prevent making Geocoder requests in test
+      Pd::Workshop.any_instance.stubs(:process_location)
+
       teachercon_workshops = {}
       [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP].each do |course|
         TEACHERCONS.each do |teachercon|
