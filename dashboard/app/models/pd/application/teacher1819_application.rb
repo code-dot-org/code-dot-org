@@ -560,7 +560,7 @@ module Pd::Application
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
         columns = filtered_labels(course).values.map {|l| markdown.render(l)}
-        columns.push 'Status', 'Principal Approval', 'Meets Criteria', 'Total Score', 'Notes', 'Regional Partner'
+        columns.push 'Status', 'Principal Approval', 'Meets Criteria', 'Total Score', 'Notes', 'Regional Partner', 'School', 'School District'
         csv << columns
       end
     end
@@ -570,7 +570,7 @@ module Pd::Application
       answers = full_answers
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
-        row.push status, principal_approval, meets_criteria, total_score, notes, regional_partner_name
+        row.push status, principal_approval, meets_criteria, total_score, notes, regional_partner_name, school_name, district_name
         csv << row
       end
     end
