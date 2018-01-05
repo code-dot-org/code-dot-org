@@ -39,16 +39,19 @@ var baseConfig = {
       http: 'stream-http',
     }
   },
-  sassLoader: {
-    includePaths: [path.resolve(__dirname, '..', 'shared', 'css')]
-  },
   module: {
     loaders: [
       {test: /\.json$/, loader: 'json-loader'},
       {test: /\.ejs$/, loader: 'ejs-compiled-loader'},
       {test: /\.css$/, loader: 'style-loader!css-loader'},
-      {test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'},
       {
+        test: /\.scss$/,
+        include: [
+          path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, '..', 'shared', 'css'),
+        ],
+        loader: 'style-loader!css-loader!sass-loader',
+      }, {
         test:/\.(png|jpg|jpeg|gif|svg)$/,
         include: [
           path.resolve(__dirname, 'static'),
