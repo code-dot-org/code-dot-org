@@ -14,17 +14,19 @@ import _ from 'lodash';
 import styleConstants from '../../styleConstants';
 import trackEvent from '../../util/trackEvent';
 
-const UiTips = React.createClass({
-  propTypes: {
+export default class UiTips extends React.Component {
+  static propTypes = {
     userId: PropTypes.number,
     tipId: PropTypes.string,
     showInitialTips: PropTypes.bool,
     beforeDialog: PropTypes.object,
     afterDialog: PropTypes.object,
     tips: PropTypes.array.isRequired,
-  },
+  };
 
-  getInitialState() {
+  constructor(props) {
+    super(props);
+
     let tipsShowing = [];
 
     let showInitialTips = this.props.showInitialTips;
@@ -41,15 +43,15 @@ const UiTips = React.createClass({
       });
     }
 
-    return {
+    this.state = {
       showInitialTips: showInitialTips,
       tipsShowing: tipsShowing,
       showingDialog: showingDialog,
       mobileWidth: $(window).width() <= styleConstants['content-width']
     };
-  },
+  }
 
-  closeClicked(index) {
+  closeClicked = (index) => {
     // Update state so it's no longer showing.
     let newTipsShowing = [...this.state.tipsShowing];
     newTipsShowing[index] = false;
@@ -82,16 +84,16 @@ const UiTips = React.createClass({
     }
 
     this.setState(newState);
-  },
+  };
 
-  afterDialogCancel() {
+  afterDialogCancel = () => {
     let newState = {...this.state, showingDialog: null};
     this.setState(newState);
 
     trackEvent("ui_tips", this.props.tipId, "after_dialog_cancel");
-  },
+  };
 
-  afterDialogConfirm() {
+  afterDialogConfirm = () => {
     if (this.props.afterDialog.onConfirm.action === "url") {
       window.open(this.props.afterDialog.onConfirm.url, "_blank");
     }
@@ -99,9 +101,9 @@ const UiTips = React.createClass({
     this.setState(newState);
 
     trackEvent("ui_tips", this.props.tipId, "after_dialog_confirm");
-  },
+  };
 
-  beforeDialogCancel() {
+  beforeDialogCancel = () => {
     let newState = {...newState, showInitialTips: false, showingDialog: null};
     this.setState(newState);
 
@@ -111,9 +113,9 @@ const UiTips = React.createClass({
     );
 
     trackEvent("ui_tips", this.props.tipId, "before_dialog_cancel");
-  },
+  };
 
-  beforeDialogConfirm() {
+  beforeDialogConfirm = () => {
     let tipsShowing = [];
 
     if (this.state.showInitialTips) {
@@ -128,7 +130,7 @@ const UiTips = React.createClass({
     this.setState(newState);
 
     trackEvent("ui_tips", this.props.tipId, "before_dialog_confirm");
-  },
+  };
 
   componentDidMount() {
     window.addEventListener('resize', _.debounce(this.onResize, 100));
@@ -148,11 +150,11 @@ const UiTips = React.createClass({
         });
       }
     });
-  },
+  }
 
-  onResize() {
+  onResize = () => {
     this.setState({mobileWidth: $(window).width() <= styleConstants['content-width']});
-  },
+  };
 
   render() {
     const { tips } = this.props;
@@ -206,6 +208,4 @@ const UiTips = React.createClass({
       </div>
     );
   }
-});
-
-export default UiTips;
+}
