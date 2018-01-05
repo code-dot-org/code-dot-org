@@ -135,7 +135,6 @@ def main
 
       if rack_env == :test
         ChatClient.log "<@#{DevelopersTopic.dotd}> DTT finished", color: 'purple'
-        DevelopersTopic.set_dtt 'no (robo-DTT built)'
         mark_dtt_green
       end
 
@@ -183,12 +182,12 @@ def mark_dtt_green
   # untested changes green.
   test_branch_sha = GitUtils.git_revision_short
 
-  msg = "Marking commit #{test_branch_sha} green (temporarily disabled, take 2)"
+  msg = "Automatically marking commit #{test_branch_sha} green"
   ChatClient.log msg
   ChatClient.message 'deploy-status', msg
 
-  # DevelopersTopic.set_dtt 'yes'
-  # InfraTestTopic.set_green_commit test_branch_sha
+  DevelopersTopic.set_dtt 'yes'
+  InfraTestTopic.set_green_commit test_branch_sha
 end
 
 def emit_deploy_metric(deployment_stage, successful)
