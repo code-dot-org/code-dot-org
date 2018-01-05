@@ -18,6 +18,8 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'craft'),
 ];
 
+const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
+
 // Our base config, on which other configs are derived
 var baseConfig = {
   resolve: {
@@ -39,14 +41,7 @@ var baseConfig = {
       {test: /\.json$/, loader: 'json-loader'},
       {test: /\.ejs$/, loader: 'ejs-compiled-loader'},
       {test: /\.css$/, loader: 'style-loader!css-loader'},
-      {test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'},
-      {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader!sass-loader',
-        include: [
-          path.resolve(__dirname, '../shared'),
-        ],
-      },
+      {test: /\.scss$/, loader: `style-loader!css-loader!sass-loader?includePaths=${scssIncludePath}`},
       {
         test:/\.(png|jpg|jpeg|gif|svg)$/,
         include: [

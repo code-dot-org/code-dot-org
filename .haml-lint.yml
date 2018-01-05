@@ -1,4 +1,5 @@
 skip_frontmatter: true
+inherits_from: .haml-lint_todo.yml
 
 # Linters which don't succeed on the current codebase are disabled.
 linters:
