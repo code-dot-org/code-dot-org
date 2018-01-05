@@ -507,13 +507,13 @@ GEM
       webfinger (>= 1.0.1)
     orm_adapter (0.5.0)
     os (0.9.6)
-    parallel (1.9.0)
+    parallel (1.12.1)
     parallel_tests (2.13.0)
       parallel
     paranoia (2.3.1)
       activerecord (>= 4.0, < 5.2)
-    parser (2.3.3.1)
-      ast (~> 2.2)
+    parser (2.4.0.2)
+      ast (~> 2.3)
     pdf-reader (1.4.0)
       Ascii85 (~> 1.0.0)
       afm (~> 0.2.1)
@@ -576,7 +576,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rainbow (2.2.1)
+    rainbow (3.0.0)
     raindrops (0.19.0)
     rake (11.3.0)
     rambling-trie (1.0.0)
@@ -617,14 +617,15 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
-    rubocop (0.46.0)
-      parser (>= 2.3.1.1, < 3.0)
+    rubocop (0.52.1)
+      parallel (~> 1.10)
+      parser (>= 2.4.0.2, < 3.0)
       powerpack (~> 0.1)
-      rainbow (>= 1.99.1, < 3.0)
+      rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-prof (0.15.9)
-    ruby-progressbar (1.8.1)
+    ruby-progressbar (1.9.0)
     ruby-rc4 (0.1.5)
     ruby_parser (3.8.2)
       sexp_processor (~> 4.1)
@@ -710,7 +711,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
-    unicode-display_width (1.1.2)
+    unicode-display_width (1.3.0)
     unicode_utils (1.4.0)
     unicorn (5.1.0)
       kgio (~> 2.6)
@@ -863,7 +864,7 @@ DEPENDENCIES
   rinku
   rmagick
   rspec
-  rubocop (= 0.46.0)
+  rubocop (~> 0.52)
   ruby-prof
   ruby-progressbar
   sass-rails!
@@ -898,4 +899,4 @@ DEPENDENCIES
   youtube-dl.rb
 
 BUNDLED WITH
-   1.16.0
+   1.16.1

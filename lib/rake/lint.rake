@@ -5,7 +5,7 @@ require 'cdo/rake_utils'
 namespace :lint do
   desc 'Lints Ruby code with rubocop.'
   task :ruby do
-    RakeUtils.bundle_exec 'rubocop'
+    RakeUtils.bundle_exec 'rubocop', '--parallel'
   end
 
   desc 'Lints Haml code with haml-lint.'
