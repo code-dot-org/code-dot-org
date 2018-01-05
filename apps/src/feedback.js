@@ -1744,5 +1744,6 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
  * Ensure that all limited toolbox blocks aren't exceeded.
  */
 FeedbackUtils.prototype.hasExceededLimitedBlocks_ = function () {
-  return Blockly.mainBlockSpace.blockSpaceEditor.blockLimits.blockLimitExceeded();
+  const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
+  return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
 };
