@@ -5,6 +5,7 @@ module Pd::Application
   class Teacher1819ApplicationTest < ActiveSupport::TestCase
     include Teacher1819ApplicationConstants
     include ApplicationConstants
+    include RegionalPartnerTeacherconMapping
 
     test 'application guid is generated on create' do
       teacher_application = build :pd_teacher1819_application
@@ -348,6 +349,88 @@ module Pd::Application
         application.update(status: status)
         application.send_decision_notification_email
       end
+    end
+
+    test 'find_default_workshop find no workhsop for applications without a regional partner' do
+      application = build :pd_teacher1819_application
+      assert_nil application.find_default_workshop
+    end
+
+    test 'find_default_workshop finds a teachercon workshop for applications with a G3 partner' do
+      # stub process_location to prevent making Geocoder requests in test
+      Pd::Workshop.any_instance.stubs(:process_location)
+
+      teachercon_workshops = {}
+      [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP].each do |course|
+        TEACHERCONS.each do |teachercon|
+          city = teachercon[:city]
+          teachercon_workshops[[course, city]] = create :pd_workshop,
+            num_sessions: 1, course: course, subject: Pd::Workshop::SUBJECT_TEACHER_CON, location_address: city
+        end
+      end
+
+      g3_partner_name = REGIONAL_PARTNER_TC_MAPPING.keys.sample
+      g3_partner = build :regional_partner, group: 3, name: g3_partner_name
+      application = build :pd_teacher1819_application, regional_partner: g3_partner
+
+      [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP].each do |course|
+        city = get_matching_teachercon(g3_partner)[:city]
+        workshop = teachercon_workshops[[course, city]]
+
+        application.course = course === Pd::Workshop::COURSE_CSD ? 'csd' : 'csp'
+        assert_equal workshop, application.find_default_workshop
+      end
+    end
+
+    test 'find_default_workshop find an appropriate partner workshop for G1 and G2 partners' do
+      program_manager = create :workshop_organizer
+      partner = create :regional_partner
+      create :regional_partner_program_manager,
+        program_manager: program_manager,
+        regional_partner: partner
+
+      # where "appropriate workshop" is the earliest teachercon or local summer
+      # workshop matching the application course.
+
+      invalid_workshop = create :pd_workshop, organizer: program_manager
+      create :pd_session,
+        workshop: invalid_workshop,
+        start: Date.new(2018, 1, 10)
+
+      earliest_valid_workshop = create :pd_workshop, :local_summer_workshop, organizer: program_manager
+      create :pd_session,
+        workshop: earliest_valid_workshop,
+        start: Date.new(2018, 1, 15)
+
+      latest_valid_workshop = create :pd_workshop, :local_summer_workshop, organizer: program_manager
+      create :pd_session,
+        workshop: latest_valid_workshop,
+        start: Date.new(2018, 12, 15)
+
+      application = build :pd_teacher1819_application, course: 'csp', regional_partner: partner
+      assert_equal earliest_valid_workshop, application.find_default_workshop
+    end
+
+    test 'setting and changing pd_workshop_id automatically enrolls user' do
+      school_info = create :school_info
+      user = create :teacher, school_info: school_info
+      application = create :pd_teacher1819_application, user: user
+      first_workshop = create :pd_workshop
+      second_workshop = create :pd_workshop
+
+      application.pd_workshop_id = first_workshop.id
+
+      assert_creates(Pd::Enrollment) do
+        application.save!
+      end
+      assert_equal Pd::Enrollment.last.workshop, first_workshop
+
+      application.pd_workshop_id = second_workshop.id
+
+      assert_creates(Pd::Enrollment) do
+        application.save!
+      end
+      assert_equal Pd::Enrollment.last.workshop, second_workshop
     end
   end
 end

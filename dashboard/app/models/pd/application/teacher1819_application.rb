@@ -103,6 +103,7 @@ module Pd::Application
         email: user.email
       ) do |enrollment|
         enrollment.user = user
+        enrollment.school_info = user.school_info
         enrollment.full_name = user.name
       end
     end
