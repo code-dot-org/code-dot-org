@@ -9,7 +9,7 @@ class CurriculumProxyControllerTest < ActionController::TestCase
       to_return(body: 'docs.code.org content', headers: {})
 
     request.host = "studio.code.org"
-    get :get, params: {docs_route: 'csd/maker_leds/index.html'}
+    get :get, params: {docs_path: 'csd/maker_leds/index.html'}
     assert_response :success
     assert_equal response.body, 'docs.code.org content'
   end
@@ -19,7 +19,7 @@ class CurriculumProxyControllerTest < ActionController::TestCase
       to_return(body: 'curriculum.code.org content', headers: {})
 
     request.host = "studio.code.org"
-    get :get, params: {curriculum_route: 'csd/maker_leds/index.html'}
+    get :get, params: {curriculum_path: 'csd/maker_leds/index.html'}
     assert_response :success
     assert_equal response.body, 'curriculum.code.org content'
   end
