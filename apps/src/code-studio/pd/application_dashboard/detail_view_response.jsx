@@ -29,7 +29,7 @@ export default class DetailViewResponse extends React.Component {
     questionId: PropTypes.string,
     answer: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.bool, PropTypes.element]),
     layout: PropTypes.oneOf(['lineItem', 'panel']).isRequired,
-    score: PropTypes.string,
+    score: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     possibleScores: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
     editing: PropTypes.bool,
     handleScoreChange: PropTypes.func

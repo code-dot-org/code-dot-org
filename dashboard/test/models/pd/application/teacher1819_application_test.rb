@@ -58,7 +58,7 @@ module Pd::Application
       teacher_application = build :pd_teacher1819_application, response_scores: {
         committed: 'Yes'
       }.to_json
-      assert_equal 'Incomplete', teacher_application.meets_criteria
+      assert_equal 'Reviewing incomplete', teacher_application.meets_criteria
     end
 
     test 'total score calculates the sum of all response scores' do

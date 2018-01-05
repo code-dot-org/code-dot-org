@@ -241,7 +241,7 @@ export class DetailViewContents extends React.Component {
             {`${this.props.applicationData.form_data.firstName} ${this.props.applicationData.form_data.lastName}`}
           </h1>
           <h4>
-            Meets all criteria: {this.props.applicationData.meets_criteria}
+            Meets minimum requirements? {this.props.applicationData.meets_criteria}
           </h4>
           <h4>
             Bonus Points: {this.props.applicationData.bonus_points}
