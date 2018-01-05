@@ -253,4 +253,38 @@ describe('UiTips', () => {
       expect(wrapper.find(UiTip)).to.have.prop('text', TRIGGERED_TIP.text);
     });
   });
+
+  describe('beforeDialog', () => {
+    let wrapper;
+
+    beforeEach(() => {
+      wrapper = mount(
+        <UiTips
+          {...DEFAULT_PROPS}
+          tips={[INITIAL_TIP, TRIGGERED_TIP]}
+          showInitialTips
+          beforeDialog={TEST_BEFORE_DIALOG}
+        />
+      );
+    });
+
+    it('delays appearance of initial tips', () => {
+      expect(wrapper.find(Dialog)).to.exist.and.to.have.prop('isOpen', true);
+      expect(wrapper.find(UiTip)).not.to.exist;
+    });
+
+    it('only initial tips appear when beforeDialog is confirmed', () => {
+      wrapper.instance().beforeDialogConfirm();
+      expect(wrapper.find(Dialog)).to.have.prop('isOpen', false);
+      expect(wrapper.find(UiTip)).to.exist
+        .and.to.have.length(1)
+        .and.to.have.prop('text', INITIAL_TIP.text);
+    });
+
+    it('initial tips are skipped when beforeDialog is canceled', () => {
+      wrapper.instance().beforeDialogCancel();
+      expect(wrapper.find(Dialog)).to.have.prop('isOpen', false);
+      expect(wrapper.find(UiTip)).not.to.exist;
+    });
+  });
 });
