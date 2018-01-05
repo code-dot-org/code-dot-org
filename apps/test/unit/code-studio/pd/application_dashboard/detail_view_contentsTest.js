@@ -43,8 +43,8 @@ describe("DetailViewContents", () => {
   };
 
   const expectedTestData = [
-    {type: 'Teacher', applicationSpecificQuestions: 6, scoredQuestions: 2, sections: 6},
-    {type: 'Facilitator', applicationSpecificQuestions: 7, scoredQuestions: 0, sections: 4}
+    {type: 'Teacher', applicationSpecificQuestions: 5, scoredQuestions: 2},
+    {type: 'Facilitator', applicationSpecificQuestions: 7, scoredQuestions: 0}
   ];
 
   for (const applicationData of expectedTestData) {
