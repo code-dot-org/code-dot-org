@@ -270,7 +270,7 @@ StudioApp.prototype.init = function (config) {
   this.configureDom(config);
 
   //Only log a page load when there are videos present
-  if (config.level.levelVideos.length > 0){
+  if (config.level.levelVideos && config.level.levelVideos.length > 0){
     if (experiments.isEnabled('resourcesTab')){
       firehoseClient.putRecord(
         'analysis-events',
