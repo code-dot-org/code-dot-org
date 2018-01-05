@@ -531,6 +531,7 @@ var projects = module.exports = {
       case 'turtle':
         switch (appOptions.skinId) {
           case 'artist':
+          case 'artist_zombie':
             return msg.defaultProjectNameArtist();
           case 'anna':
           case 'elsa':
