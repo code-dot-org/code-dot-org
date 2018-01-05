@@ -1,5 +1,5 @@
 ---
-title: Code.org Regional Parter Program
+title: Code.org Regional Partner Program
 nav: plc_regional_partner_nav
 ---
 
@@ -90,7 +90,7 @@ We will cooperate together to transition your work to 100% local funding by year
 We will collaborate to establish your organization as a certified regional provider of computer science Professional Learning, so teachers from local districts can receive formal credit.
 We will cooperate to identify, recruit, build and maintain local facilitator capacity. Facilitators need to meet Code.org’s established selection criteria.
 
-We view this to be a long-term partnership. We see your organization as joining a network of organizations supporting a nationwide movement to build local computer science hubs. We hope to find many ways beyond the scope of this document to cooperate in spreading computer science in K-12 schools. That could mean hosting workshops for elementary school teachers, cooperating on state-level policy efforts, and more. For now, we want to focus on a limited set of work to begin our relationship. 
+We view this to be a long-term partnership. We see your organization as joining a network of organizations supporting a nationwide movement to build local computer science hubs. We hope to find many ways beyond the scope of this document to cooperate in spreading computer science in K-12 schools. That could mean hosting workshops for elementary school teachers, cooperating on state-level policy efforts, and more. For now, we want to focus on a limited set of work to begin our relationship.
 
 This is not a binding document. This is a new program, so Code.org may change some of these terms in subsequent years.
 
