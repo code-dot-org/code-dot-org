@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_promote) %>'
+title: <%= hoc_s(:title_how_to_promote) %>
 layout: wide
 nav: promote_nav
 ---
@@ -12,11 +12,11 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Get your community involved in the Hour of Code
+# Zapojte vašich známych do projektu Hodina Kódu
 
 ## 1. Informujte ostatných
 
-Tell your friends about the **#HourOfCode**!
+Povedzte svojim priateľom o **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 

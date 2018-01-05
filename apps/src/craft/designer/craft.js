@@ -22,8 +22,8 @@ import Sounds from '../../Sounds';
 
 import {TestResults} from '../../constants';
 import trackEvent from '../../util/trackEvent';
-import experiments from '../../util/experiments';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
+import {SignInState} from '../../code-studio/progressRedux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -554,7 +554,7 @@ Craft.minAssetsForLevelNumber = function (levelNumber) {
     case 3:
       return ['levelThreeAssets'];
     default:
-      return ['allAssetsMinusPlayer'];
+      return ['designerAllAssetsMinusPlayer'];
   }
 };
 
@@ -566,7 +566,7 @@ Craft.afterLoadAssetsForLevel = function (levelNumber) {
       return Craft.minAssetsForLevelNumber(2);
     default:
       // May want to push this to occur on level with video
-      return ['allAssetsMinusPlayer'];
+      return ['designerAllAssetsMinusPlayer'];
   }
 };
 
@@ -582,7 +582,7 @@ Craft.niceToHaveAssetsForLevel = function (levelNumber) {
   if (levelNumber === FIRST_CHARACTER_LEVEL) {
     return ['playerSteveEvents', 'playerAlexEvents'];
   }
-  return ['allAssetsMinusPlayer'];
+  return ['designerAllAssetsMinusPlayer'];
 };
 
 Craft.hideSoftButtons = function () {
@@ -829,7 +829,6 @@ Craft.reportResult = function (success) {
       Craft.gameController.getScreenshot() : null;
   // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
   const encodedImage = image ? encodeURIComponent(image.split(',')[1]) : null;
-  const saveToProjectGallery = experiments.isEnabled('publishMoreProjects');
 
   studioApp().report({
     app: 'craft',
@@ -844,9 +843,8 @@ Craft.reportResult = function (success) {
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function (response) {
+      const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
       studioApp().displayFeedback({
-        app: 'craft',
-        skin: Craft.initialConfig.skin.id,
         feedbackType: testResultType,
         response: response,
         level: Craft.initialConfig.level,
@@ -861,7 +859,8 @@ Craft.reportResult = function (success) {
         },
         feedbackImage: image,
         showingSharing: Craft.initialConfig.level.freePlay,
-        saveToProjectGallery,
+        saveToProjectGallery: true,
+        disableSaveToGallery: !isSignedIn,
       });
     }
   });

@@ -7,6 +7,7 @@ import $ from "jquery";
 import _ from "lodash";
 import Select from "react-select";
 import "react-select/dist/react-select.css";
+import {SelectStyleProps} from '../constants';
 import ServerSortWorkshopTable from "./components/server_sort_workshop_table";
 import DatePicker from "./components/date_picker";
 import {DATE_FORMAT} from "./workshopConstants";
@@ -25,19 +26,6 @@ import {
   MenuItem,
   Clearfix
 } from "react-bootstrap";
-
-// Default max height for the React-Select menu popup, as defined in the imported react-select.css,
-// is 200px for the container, and 198 for the actual menu (to accommodate 2px for the border).
-// React-Select has props for overriding these default css styles. Increase the max height here:
-const selectMenuMaxHeight = 400;
-const selectStyleProps = {
-  menuContainerStyle: {
-    maxHeight: selectMenuMaxHeight
-  },
-  menuStyle: {
-    maxHeight: selectMenuMaxHeight - 2
-  }
-};
 
 const limitOptions = [
   {value: 25, text: 'first 25'},
@@ -320,7 +308,7 @@ export default class WorkshopFilter extends React.Component {
                 onChange={this.handleCourseChange}
                 placeholder={null}
                 options={window.dashboard.workshop.COURSES.map(v => ({value: v, label: v}))}
-                {...selectStyleProps}
+                {...SelectStyleProps}
               />
             </FormGroup>
           </Col>
@@ -335,7 +323,7 @@ export default class WorkshopFilter extends React.Component {
                   onChange={this.handleSubjectChange}
                   placeholder={null}
                   options={window.dashboard.workshop.SUBJECTS[filters.course].map(v => ({value: v, label: v}))}
-                  {...selectStyleProps}
+                  {...SelectStyleProps}
                 />
               </FormGroup>
             </Col>
@@ -353,7 +341,7 @@ export default class WorkshopFilter extends React.Component {
                   isLoading={this.state.organizersLoading}
                   matchProp="label"
                   placeholder={null}
-                  {...selectStyleProps}
+                  {...SelectStyleProps}
                 />
               </FormGroup>
             </Col>

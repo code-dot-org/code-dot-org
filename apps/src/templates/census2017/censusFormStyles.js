@@ -23,6 +23,10 @@ export const styles = {
     paddingTop: 10,
     marginLeft: 18,
   },
+  share: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.charcoal,
+  },
   otherCS : {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
@@ -43,6 +47,14 @@ export const styles = {
     height: 30,
     width: 120,
     marginLeft: 18,
+    marginTop: 5
+  },
+  shareDropdown: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.charcoal,
+    height: 30,
+    width: 50,
+    marginLeft: 5,
     marginTop: 5
   },
   schoolNotFoundDropdown: {

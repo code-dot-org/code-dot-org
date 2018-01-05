@@ -1,7 +1,5 @@
-- data = {}
-- data[:is_pd_eligible] = current_user.circuit_playground_pd_eligible?
-- data[:is_progress_eligible] = current_user.circuit_playground_student_progress_eligible?
+- script_data = local_assigns[:script_data]
 
-%script{src: minifiable_asset_path('js/maker/discountcode.js'), data: {discountcode: data.to_json}}}
+%script{src: minifiable_asset_path('js/maker/discountcode.js'), data: {discountcode: script_data.to_json}}}
 
 #discountcode

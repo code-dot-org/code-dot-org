@@ -22,7 +22,7 @@ bg:
       2-3 Artist 7_authored_hint:
         2-3_Artist_7_a: Най-лесният начин за решаване на този пъзел е да се начертае първия квадрат, така че художника да завършва насочен надолу, преди да започне втория квадрат.
       2-3 Artist 8_authored_hint:
-        2-3_Artist_8_a: Ако се разделите 200 на половина, колко пиксела ще бъде квадрата тогава?
+        2-3_Artist_8_a: Ако разделите 200 на половина, колко пиксела ще бъде квадрата тогава?
       2-3 Artist 9 NEW_authored_hint:
         2-3_Artist_9_a: Този диамант е като един квадрат- с равни страни
       2-3 Artist 9 REPLACEMENT_authored_hint:
@@ -32,7 +32,7 @@ bg:
         2-3_Artist_9_b: |-
           Не забравяйте да завъртите художника наляво с 45 градуса, преди да започнете да чертаете вашите квадратни! ! [] (https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
-        2-3_Artist_Debugging_10_a: Не забравяйте, че вие искате контролния панел да е 10 пиксела * широк *... така че ** добавете ** 10 към числото, което трябва да се променя.
+        2-3_Artist_Debugging_10_a: Не забравяйте, че вие искате контролния панел да е 10 пиксела * широк *... така че ** добавете ** 10 към числото, което трябва да се промени.
         2-3_Artist_Debugging_10_b: "**Проба и грешка е нещо нормално тук!**\n\nЗапочнете с промяна на едно число за определено време.\n\nКои числа, какво правят?\n\nАко се изгубите твърде много, просто натиснете \"Започни отново\" и вашия код ще бъде възстановен."
       2-3 Artist Debugging 2_authored_hint:
         2-3_Artist_Debugging_2_a: 'Подсказка: Всеки мустак е дълъг 75 пиксела.'
@@ -3515,61 +3515,61 @@ bg:
       MC_HOC_2017_01_Cole_authored_hint:
         MC_HOC_2017_01_Cole_a: Използвайте вашите клавиши със стрелки, за да насочите играча към къщата. Достигнете оранжевото квадратче, за да спечелите.
       MC_HOC_2017_01_RETRY_authored_hint:
-        MC_HOC_2017_01_RETRY_a: Плъзнете един блок „движение напред“ от кутията за инструменти към работното пространство и го фиксирайте намясто под блока „при изпълняване“.
-        MC_HOC_2017_01_RETRY_b: Не забравяйте да щракнете върху „Изпълняване“, за да изпълните кода за Agent.
-        MC_HOC_2017_01_RETRY_c: Щом Agent е изпълнил целия си код, можете да движите играча с клавишите със стрелки!
+        MC_HOC_2017_01_RETRY_a: Плъзнете един блок „върви напред“ от кутията за инструменти към работното пространство и го фиксирайте на място под блока „при стартиране“.
+        MC_HOC_2017_01_RETRY_b: Не забравяйте да щракнете върху „Старт“, за да изпълните кода за Agent.
+        MC_HOC_2017_01_RETRY_c: Щом Agent е изпълнил целия код, можете да движите играча с клавишите със стрелки!
       MC_HOC_2017_02_Cole_authored_hint:
-        MC_HOC_2017_02_Cole_a: Придвижете агента две разстояния напред, така че да застане на активиращата плоча.  Това ще отвори вратата за вашия играч.
+        MC_HOC_2017_02_Cole_a: Придвижете Agent два пъти напред, така че да застане на активиращата плоча.  Това ще отвори вратата за вашия герой.
         MC_HOC_2017_02_Cole_b: |-
-          Натиснете „Изпълняване“! 
+          Натиснете „Старт“! 
           Можете да изпълните вашия код дори ако не е правилен.  Изпълнявайте и нулирайте кода отново и отново, докато не разберете къде е грешката.
-        MC_HOC_2017_02_Cole_c: Щом Agent отвори вратата, използвайте клавишите със стрелки, за да придвижите играча към картата!
-        MC_HOC_2017_02_Cole_d: Make sure the Agent is following the path outlined on the map!
+        MC_HOC_2017_02_Cole_c: Щом Agent отвори вратата, използвайте клавишите със стрелки, за да придвижите героя към картата!
+        MC_HOC_2017_02_Cole_d: Уверете се, че Agent следва пътя, очертан на картата!
       MC_HOC_2017_02_Will_authored_hint:
-        MC_HOC_2017_02_Cole_a: Придвижете агента две разстояния напред, така че да застане на активиращата плоча.  Това ще отвори вратата за вашия играч.
+        MC_HOC_2017_02_Cole_a: Придвижете Agent два пъти напред, така че да застане на активиращата плоча.  Това ще отвори вратата за вашия герой.
         MC_HOC_2017_02_Cole_b: |-
-          Натиснете „Изпълняване на Agent“! 
-          Можете да изпълните вашия код дори ако не е правилен.  Изпълнявайте и нулирайте кода отново и отново, докато не разберете къде е грешката.
+          Натиснете „Старт на Agent“! 
+          Можете да изпълните вашия код дори ако не е правилен.  Стартирайте и нулирайте кода отново и отново, докато не разберете къде е грешката.
         MC_HOC_2017_02_Cole_c: Щом Agent отвори вратата, използвайте клавишите със стрелки, за да преместите играча към оранжевото квадратче.
       MC_HOC_2017_03_Cole_authored_hint:
         MC_HOC_2017_03_Cole_a: Щом придвижите Agent към активиращата плоча, можете да използвате клавишите със стрелки, за да придвижите агента до компаса!
-        MC_HOC_2017_03_Cole_b: Смятате кода за прекалено дълъг?  Пробвайте да използвате цикъла „повтаряне“ и вижте дали можете да разберете как да го посъкратите!
+        MC_HOC_2017_03_Cole_b: Смятате кода за прекалено дълъг?  Пробвайте да използвате цикъла „повтори“ и вижте дали можете да разберете как да го посъкратите!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
-          Преминаването на тези две активиращи плочи ще отвори пътя за играча. 
+          Преминаването на тези две активиращи плочи ще отвори пътя за героя. 
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
-        MC_HOC_2017_04POINT5_RYAN_b: 'Използвайте блока „завъртане надясно“, за да промените посоката на агента '
+        MC_HOC_2017_04POINT5_RYAN_b: 'Използвайте блока „завърти надясно“, за да промените посоката на Agent '
         MC_HOC_2017_04POINT5_RYAN_a: Необходимо е Agent да премине само през първата активираща плоча, за да пусне Алекс или Стийв да достигнат до брадвата.
       MC_HOC_2017_04_Cole_authored_hint:
-        MC_HOC_2017_04_Cole_a: Agent трябва да извърши „движение напред“ 7 пъти.  Как можете да използвате цикъл „повтаряне“, за да осъществите това?
+        MC_HOC_2017_04_Cole_a: Agent трябва да направи „върви напред“ 7 пъти.  Как можете да използвате цикъл „повтари“, за да осъществите това?
         MC_HOC_2017_04_Cole_c: |-
-          Натиснете „Изпълняване“! 
+          Натиснете „Старт“! 
           Можете да изпълните вашия код дори ако не е правилен.  Изпълнявайте и нулирайте кода отново и отново, докато не разберете къде е грешката.
         MC_HOC_2017_04_Cole_b: Щом Agent достигне до активиращата плоча, той ще отвори вратата за играча.
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Знаехте ли, че можете да поставите повече от една част от код в цикъл?  Пробвайте да поставите дъска **и** движение напред в „повтаряне“, за да завършите пъзела.
-        MC_HOC_2017_05_Cole_b: Get the Agent across the river, building a bridge as you go.
+        MC_HOC_2017_05_Cole_a: Знаехте ли, че можете да поставите повече от един блок  код в цикъла?  Пробвайте да поставите дъска **и** върви напред в „повтари“, за да завършите пъзела.
+        MC_HOC_2017_05_Cole_b: Накарайте Agent да построи мост през реката, по който да мине героя.
       MC_HOC_2017_05_Josh_authored_hint:
-        MC_HOC_2017_05_Cole_a: Знаехте ли, че можете да поставите повече от една част от код в цикъл?  Пробвайте да поставите дъска **и** движение напред в „повтаряне“, за да завършите пъзела.
+        MC_HOC_2017_05_Cole_a: Знаехте ли, че можете да поставите повече от един блок  код в цикъла?  Пробвайте да поставите дъска **и** върви напред в „повтари“, за да завършите пъзела.
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: Колко пъти се изпълнява цикълът?  Колко пъти *трябва* да се изпълнява?
-        MC_HOC_2017_06_Cole_b: 'Help the Agent build a bridge all the way across the water! '
+        MC_HOC_2017_06_Cole_b: 'Помогнете на Agent да изгради мост през водата! '
       MC_HOC_2017_06_Josh_authored_hint:
-        MC_HOC_2017_06_Cole_a: Пробвайте да поставите повече от една инструкция в цикъл „повтаряне“!
+        MC_HOC_2017_06_Cole_a: Пробвайте да поставите повече от една инструкция в цикъл „повтари“!
       MC_HOC_2017_07_Cole_authored_hint:
-        MC_HOC_2017_07_Cole_c: All you need to have the Agent do is clear the path to the Minecart.
+        MC_HOC_2017_07_Cole_c: Всичко, което трябва Agent да направи е да разчисти пътя до Minecart.
         MC_HOC_2017_07_Cole_a: За да решите този пъзел, разберете какво прави функцията „прочистване на пътека“ и я извикайте колкото пъти желаете чрез малкия зелен блок „прочистване на пътека“ от кутията за инструменти.
         MC_HOC_2017_07_Cole_b: Пробвайте да смесите функционалните блокове с други блокове от кутията за инструменти, за да ви помогнат да решите пъзела.
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Натиснете „Изпълняване на Agent“! 
-          Можете да изпълните вашия код дори ако не е правилен.  Изпълнявайте и нулирайте кода отново и отново, докато не разберете къде е грешката.
+          Натиснете „Старт на Agent“! 
+          Можете да изпълните вашия код дори ако не е правилен.  Стартирайте и нулирайте кода отново и отново, докато не разберете къде е грешката.
         MC_HOC_2017_08_RY_b: Има МНОГО начини за решаване на пъзела.  Пробвайте някои от тях!
       MC_HOC_2017_08_Will_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Натиснете „Изпълняване на Agent“! 
-          Можете да изпълните вашия код дори ако не е правилен.  Изпълнявайте и нулирайте кода отново и отново, докато не разберете къде е грешката.
+          Натиснете „Старт на Agent“! 
+          Можете да изпълните вашия код дори ако не е правилен.  Стартирайте и нулирайте кода отново и отново, докато не разберете къде е грешката.
         MC_HOC_2017_08_RY_b: Има МНОГО начини за решаване на пъзела.  Пробвайте някои от тях!
       MC_HOC_2017_10_Cole_authored_hint:
         MC_HOC_2017_10_Cole_a: Използвайте функции, за да улесните решаването на пъзела!
@@ -3580,11 +3580,11 @@ bg:
         MC_HOC_2017_13_Cole_a: Пробвайте да накарате Agent да построи няколко моста, така че Алекс и Стийв да могат да се придвижват около и извън краищата на картата.
       MC_HOC_2017_4.5v2_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
-          Преминаването на тези две активиращи плочи ще отвори пътя за играча. 
+          Преминаването на тези две активиращи плочи ще отвори пътя за героя. 
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_Ali_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Натиснете „Изпълняване“! 
+          Натиснете „Старт“! 
           Можете да изпълните вашия код дори ако не е правилен.  Изпълнявайте и нулирайте кода отново и отново, докато не разберете къде е грешката.
         MC_HOC_2017_08_RY_b: Има МНОГО начини за решаване на пъзела.  Пробвайте някои от тях!
         MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through the lava.
@@ -5193,7 +5193,7 @@ bg:
       courseA_collector_preLoops5_authored_hint:
         courseA_collector_preLoops5_a: You'll need to go two different directions to get even one gem!
       courseA_collector_preLoops6_authored_hint:
-        courseA_collector_preLoops6_a: 'You will need to use two ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) blocks to solve this puzzle.'
+        courseA_collector_preLoops6_a: You will need to use two ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) blocks to solve this puzzle.
       courseA_collector_preLoops7_authored_hint:
         courseA_collector_loops2_b: |-
           After you have moved to a square with treasure, use this block to pick it up.
@@ -5229,7 +5229,7 @@ bg:
         courseA_maze_seq3_c: This <xml><block type="maze_moveNorth"/></xml> block doesn't seem to be moving the bird in the right direction. Can you replace it with a different block?
       courseA_maze_seq4_authored_hint:
         courseA_maze_seq4_a: If you are having trouble, try to figure out what the correct path is and then remove the block that doesn't fit.
-        courseA_maze_seq4_b: Try running the code as it is. Does something go wrong? Which block can you remove? How can you fix it?
+        courseA_maze_seq4_b: Опитайте да изпълните готовия код. Има ли нещо объркано? Кой блок трябва да премахнете? Как ще поправите кода?
       courseA_maze_seq4a_authored_hint:
         courseA_maze_seq4_a: If you are having trouble, try using your finger to figure out the correct path by pointing it out on the map. What moves did your finger make?
       courseA_maze_seq5_authored_hint:
@@ -5651,7 +5651,7 @@ bg:
       courseB_maze_seq9_challenge1_authored_hint: [ ]
       courseB_maze_seqCold_authored_hint:
         courseB_maze_seqCold_a: Stuck? Try tracing the bird's path with your finger.
-        courseB_maze_seqCold_b: 'The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )'
+        courseB_maze_seqCold_b: The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )
       courseB_maze_seqOld_authored_hint:
         courseB_maze_seqOld_a: If you're having trouble, try writing down the steps on a piece of paper first.
       courseB_maze_seq_challenge1_authored_hint:
@@ -6338,9 +6338,7 @@ bg:
           - What does Scrat do?
           - What does that tell you?
         courseC_maze_debugging6_b: |-
-          Once you've found and fixed the first bug, go through the debugging process again to find the second one.
-          
-          Repeat the process until the program works!
+          След като сте остановили и поправили първата грешка, повторете процеса за отстраняване на грешки отново, за да намерите втората. Повтаряйте процеса, докато програмата проработи!
       courseC_maze_debugging7_authored_hint:
         courseC_maze_debugging7_a: |-
           - Does everything work at the first step?
@@ -6745,9 +6743,11 @@ bg:
       courseD_bee_conditionals1_predict1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals2_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.
         courseD_bee_conditionals2_b: You can use a `repeat` loop or a `while path ahead` to move through this maze.
         courseD_bee_conditionals2_c: You don't have to check for honeycombs, there will only be flowers or blank spaces under the clouds.
+        courseD_bee_conditionals2_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals2_test_authored_hint:
         courseD_bee_conditionals2_aa: Need help getting started?  Here is a little hint video.
         courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.
@@ -6755,27 +6755,38 @@ bg:
         courseD_bee_conditionals2_c: You don't have to check for honeycombs, there will only be flowers or blank spaces under the clouds.
         courseD_bee_conditionals2_d: Need help finishing things up?  Watch this hint video.
       courseD_bee_conditionals3_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.
         courseD_bee_conditionals3_b: You can use a `repeat` loop or a `while` loop to keep the bee moving forward. Use whichever one you like!
         courseD_bee_conditionals3_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseD_bee_conditionals3_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals4_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals4_a: You can still treat every space as if there is a cloud over it, even though you can see the whole path.
         courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check each space for nectar. '
         courseD_bee_conditionals4_c: Using <xml><block type="maze_untilBlocked"/></xml> block, you should move forward and check for a flower. If there is a flower, what should the bee do?
+        courseD_bee_conditionals4_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals5_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals5_a: Think of every side of the rectangular path as a path by itself. Set up a nested loop with a `repeat` block on the outside and a `while there is a path ahead` loop on the inside. How many paths does the bee need to buzz down if the bee needs to buzz every side with a flower?
-        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block you will need to move forward and check for a flower. How do you check if there is a flower? What do you do if there is a flower?
         courseD_bee_conditionals5_c: There are 3 sides of the rectangle with flowers, so the code needs to `repeat 3 times`. In every repeat, the bee will need to continue along the path, `while there is a path ahead`. To continue down the path, the bee will need to `move forward`. While on the path, the bee needs to check for a flower. `if there is a flower`, the bee should `get nectar`.
+        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block you will need to move forward and check for a flower. How do you check if there is a flower? What do you do if there is a flower?
+        courseD_bee_conditionals5_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals6_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for honeycomb beneath each cloud.
         courseD_bee_conditionals6_b: In this case, you do not need to check for nectar under the clouds.
         courseD_bee_conditionals6_c: Is there a loop you can use to make your code simpler?
+        courseD_bee_conditionals6_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals7_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
         courseD_bee_conditionals7_b: If there is not a flower under the cloud, there must be a honeycomb, so you don't need to think about the case of an empty space.
+        courseD_bee_conditionals7_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals7_predict2_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
       courseD_bee_conditionals8_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals8_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
         courseD_bee_conditionals8_b: |-
           This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
@@ -6786,6 +6797,7 @@ bg:
           Even though there is a cloud right in front of you, you don't have to visit it first. Try starting with the cloud in the bottom right of the square.
           
           ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
+        courseD_bee_conditionals8_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals9_authored_hint: [ ]
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: Can you find a path that reaches every flower and honeycomb without hitting any trees? The best path is a spiral.
@@ -9100,6 +9112,7 @@ bg:
         courseF_bee_functions3_a: 'Your function for this puzzle only needs to make honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
         courseF_bee_functions3_b: Remember that your function should only get honey *if* there is a honeycomb.
         courseF_bee_functions3_c: Use the green `only make honey` block to call your function.
+        courseF_bee_functions3_d: Check out this path.
       courseF_bee_functions3a_authored_hint:
         courseF_bee_functions3a_a: 'Your function for this puzzle only needs to get nectar or make honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
         courseF_bee_functions3a_b: Use a stairstep pattern to check the first four clouds.
@@ -9931,7 +9944,7 @@ bg:
         grade1_maze_sequence7a: If you're stuck, try adding one block at a time until you solve the puzzle.
       grade1_maze_sequence8_authored_hint:
         grade1_maze_sequence8_a: Stuck? Try tracing the bird's path with your finger.
-        grade1_maze_sequence8_b: 'The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )'
+        grade1_maze_sequence8_b: The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )
       grade1_maze_sequence9_authored_hint:
         grade1_maze_sequence9_a: If you're having trouble, try writing down the steps on a piece of paper first.
       grade1_maze_sequenceA_authored_hint:
@@ -10602,7 +10615,7 @@ bg:
       gradek_playlab_events1c_authored_hint:
         gradek_playlab_events1c_a: "Here is the block you should connect to the `when run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
       gradek_playlab_events2c_authored_hint:
-        gradek_playlab_events2c_a: 'drag this block out ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) and connect it to ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)'
+        gradek_playlab_events2c_a: drag this block out ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) and connect it to ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
       gradek_playlab_events3c_authored_hint:
         gradek_playlab_events3c_a: |-
           Here is the event block that you will need to get Jorge to move right:

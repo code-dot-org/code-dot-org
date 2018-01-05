@@ -21,6 +21,7 @@ const style = {
   },
   header: {
     fontSize: 26,
+    lineHeight: 'normal',
   },
   body: {
     marginBottom: 15,
@@ -28,6 +29,12 @@ const style = {
     marginLeft: 40,
     marginRight: 0,
     fontSize: 14,
+  },
+  icon: {
+    float: 'left',
+  },
+  headerText: {
+    marginLeft: 40,
   }
 };
 
@@ -36,24 +43,28 @@ export default class ValidationStep extends Component {
     children: PropTypes.node,
     stepName: PropTypes.string.isRequired,
     stepStatus: PropTypes.oneOf(Object.values(Status)).isRequired,
-    displayExplanation: PropTypes.bool,
+    alwaysShowChildren: PropTypes.bool
   };
 
   render() {
-    const {stepName, stepStatus, children, displayExplanation} = this.props;
+    const {stepName, stepStatus, alwaysShowChildren, children} = this.props;
+    // By default, we only show the children if the step failed. If alwaysShowChildren
+    // is set, show them regardless
+    let showChildren = alwaysShowChildren || stepStatus === Status.FAILED;
+
     if (stepStatus === Status.HIDDEN) {
       return null;
     }
     return (
       <div style={style.root}>
         <div style={{...style.header, ...styleFor(stepStatus)}}>
-          {iconFor(stepStatus)}
-          <span>{stepName}</span>
+          <div style={style.icon}>{iconFor(stepStatus)}</div>
+          <div style={style.headerText}>{stepName}</div>
         </div>
-        {(stepStatus === Status.FAILED || displayExplanation) &&
-        <div style={style.body}>
-          {children}
-        </div>
+        {showChildren &&
+          <div style={style.body}>
+            {children}
+          </div>
         }
       </div>
     );

@@ -24,13 +24,11 @@ const styles = {
   }
 };
 
-class StartNewProject extends React.Component {
+export default class StartNewProject extends React.Component {
   static propTypes = {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
-    isRtl: PropTypes.bool,
     canViewFullList: PropTypes.bool,
     canViewAdvancedTools: PropTypes.bool,
-    shouldLogEvents: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -46,20 +44,19 @@ class StartNewProject extends React.Component {
   };
 
   render() {
-    const { canViewAdvancedTools, canViewFullList, isRtl, shouldLogEvents } = this.props;
+    const { canViewAdvancedTools, canViewFullList } = this.props;
     const { showFullList } = this.state;
     return (
       <div>
         <div style={styles.headingStartNew}>{i18n.projectStartNew()}</div>
         <NewProjectButtons
           projectTypes={this.props.projectTypes}
-          isRtl={isRtl}
           canViewAdvancedTools={canViewAdvancedTools}
-          shouldLogEvents={shouldLogEvents}
         />
 
         {canViewFullList &&
           <Button
+            id="uitest-view-full-list"
             onClick={this.toggleShowFullList}
             color={Button.ButtonColor.gray}
             icon={showFullList ? "caret-up" : "caret-down"}
@@ -75,39 +72,32 @@ class StartNewProject extends React.Component {
           <NewProjectButtons
             description={i18n.projectGroupPlaylab()}
             projectTypes={['playlab', 'infinity', 'gumball', 'iceage']}
-            shouldLogEvents={shouldLogEvents}
           />
           <NewProjectButtons
             description={i18n.projectGroupEvents()}
             projectTypes={['flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball']}
-            shouldLogEvents={shouldLogEvents}
           />
           <NewProjectButtons
             description={i18n.projectGroupArtist()}
             projectTypes={['artist', 'frozen']}
-            shouldLogEvents={shouldLogEvents}
           />
           <NewProjectButtons
             description={i18n.projectGroupMinecraft()}
-            projectTypes={['minecraft_designer', 'minecraft_adventurer']}
-            shouldLogEvents={shouldLogEvents}
+            projectTypes={['minecraft_hero', 'minecraft_designer', 'minecraft_adventurer']}
           />
           {canViewAdvancedTools &&
             <NewProjectButtons
               description={i18n.projectGroupAdvancedTools()}
               projectTypes={['applab', 'gamelab', 'weblab']}
-              shouldLogEvents={shouldLogEvents}
             />
           }
           <NewProjectButtons
             description={i18n.projectGroupPreReader()}
             projectTypes={['playlab_k1', 'artist_k1']}
-            shouldLogEvents={shouldLogEvents}
           />
           <NewProjectButtons
             description={i18n.projectGroupMath()}
             projectTypes={['calc', 'eval']}
-            shouldLogEvents={shouldLogEvents}
           />
         </div>
         }
@@ -116,4 +106,3 @@ class StartNewProject extends React.Component {
     );
   }
 }
-export default StartNewProject;

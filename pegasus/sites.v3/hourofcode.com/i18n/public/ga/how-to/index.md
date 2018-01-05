@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to) %>'
+title: <%= hoc_s(:title_how_to) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -13,9 +13,7 @@ Join the movement and introduce a group of students to their first hour of compu
 
 ## 2. Choose a tutorial for your hour
 
-We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) as well as [teacher-guided tutorials](<%= resolve_url('https://code.org/educate/teacher-led') %>) for participants of all ages, created by a variety of partners.
-
-[![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. Promote your Hour of Code
 
@@ -23,13 +21,13 @@ Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources
 
 ## 4. Plan your technology needs - computers are optional
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+Áirítear ar an taithí is fearr leis an gCód Uair den Chód ríomhairí ceangailte le Idirlíon. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
 Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+Nach bhfuil feistí leordhóthanach ann? Bain úsáid as cláir péire. When students partner up, they help each other and rely less on the teacher. Feicfidh siad freisin go bhfuil an eolaíocht eolaíochta sóisialta agus comhoibríoch.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 

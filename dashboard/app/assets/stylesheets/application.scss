@@ -34,6 +34,7 @@
 @import "color";
 @import "font";
 @import "mixins";
+@import "style-constants";
 
 $baseFontFamily: $gotham-regular;
 $headingsFontWeight: normal;
@@ -2014,6 +2015,10 @@ a.download-video {
   }
 }
 
+.container {
+  width: $content-width;
+}
+
 .container,
 .external,
 .text-match,
@@ -2392,6 +2397,9 @@ $information-desktop: "only screen and (min-width: 1024px)";
     text-align: left;
     vertical-align: top;
     white-space: normal;
+    .teacher & {
+      margin-right: 30px;
+    }
     label {
       font-size: 14px;
     }

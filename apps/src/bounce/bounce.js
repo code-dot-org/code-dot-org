@@ -26,7 +26,6 @@ var SquareType = tiles.SquareType;
 import {TestResults, ResultType} from '../constants';
 
 import '../util/svgelement-polyfill';
-import experiments from '../util/experiments';
 import {SignInState} from '../code-studio/progressRedux';
 
 /**
@@ -1019,8 +1018,6 @@ var displayFeedback = function () {
   const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
   if (!Bounce.waitingForReport) {
     studioApp().displayFeedback({
-      app: 'bounce', //XXX
-      skin: skin.id,
       feedbackType: Bounce.testResults,
       response: Bounce.response,
       level: level,
@@ -1031,7 +1028,7 @@ var displayFeedback = function () {
         reinfFeedbackMsg: bounceMsg.reinfFeedbackMsg(),
         sharingText: bounceMsg.shareGame()
       },
-      saveToProjectGallery: experiments.isEnabled('publishMoreProjects'),
+      saveToProjectGallery: true,
       disableSaveToGallery: !isSignedIn,
     });
   }

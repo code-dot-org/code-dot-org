@@ -416,6 +416,7 @@ export default class FormController extends React.Component {
       backButton = (
         <Button
           key="back"
+          id="back"
           onClick={this.prevPage}
         >
           Back
@@ -427,6 +428,7 @@ export default class FormController extends React.Component {
       <Button
         bsStyle="primary"
         key="next"
+        id="next"
         onClick={this.nextPage}
       >
         Next

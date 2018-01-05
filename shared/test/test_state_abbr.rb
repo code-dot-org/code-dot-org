@@ -59,6 +59,61 @@ class StateAbbrTest < Minitest::Test
     assert_equal 'Washington DC', get_us_state_from_abbr('DC', true)
   end
 
+  def test_get_us_state_abbr_from_name_lowercase_symbol
+    assert_equal 'IL', get_us_state_abbr_from_name(:illinois)
+    assert_equal 'WA', get_us_state_abbr_from_name(:washington)
+  end
+
+  def test_get_us_state_abbr_from_name_uppercase_symbol
+    assert_equal 'IL', get_us_state_abbr_from_name(:ILLINOIS)
+    assert_equal 'WA', get_us_state_abbr_from_name(:WASHINGTON)
+  end
+
+  def test_get_us_state_abbr_from_name_lowercase_string
+    assert_equal 'IL', get_us_state_abbr_from_name('illinois')
+    assert_equal 'WA', get_us_state_abbr_from_name('washington')
+  end
+
+  def test_get_us_state_abbr_from_name_uppercase_string
+    assert_equal 'IL', get_us_state_abbr_from_name('ILLINOIS')
+    assert_equal 'WA', get_us_state_abbr_from_name('WASHINGTON')
+  end
+
+  def test_get_us_state_abbr_from_name_string_with_whitespace
+    assert_equal 'IL', get_us_state_abbr_from_name(' Illinois   ')
+    assert_equal 'WA', get_us_state_abbr_from_name('  Washington  ')
+  end
+
+  def test_get_us_state_abbr_from_name_nonstate
+    assert_nil get_us_state_abbr_from_name('Nonexistent')
+    assert_nil get_us_state_abbr_from_name('Nonexistent', false)
+    assert_nil get_us_state_abbr_from_name('Nonexistent', true)
+  end
+
+  def test_get_us_state_abbr_from_name_with_include_dc
+    assert_equal 'IL', get_us_state_abbr_from_name('Illinois', false)
+    assert_equal 'IL', get_us_state_abbr_from_name('Illinois', true)
+    assert_equal 'WA', get_us_state_abbr_from_name('Washington', false)
+    assert_equal 'WA', get_us_state_abbr_from_name('Washington', true)
+  end
+
+  def test_get_us_state_abbr_from_name_washington_dc
+    assert_nil get_us_state_abbr_from_name(:washington_dc)
+    assert_nil get_us_state_abbr_from_name(:WASHINGTON_DC)
+    assert_nil get_us_state_abbr_from_name('Washington DC')
+    assert_nil get_us_state_abbr_from_name('WASHINGTON DC')
+
+    assert_nil get_us_state_abbr_from_name(:washington_dc, false)
+    assert_nil get_us_state_abbr_from_name(:WASHINGTON_DC, false)
+    assert_nil get_us_state_abbr_from_name('Washington DC', false)
+    assert_nil get_us_state_abbr_from_name('WASHINGTON DC', false)
+
+    assert_equal 'DC', get_us_state_abbr_from_name(:washington_dc, true)
+    assert_equal 'DC', get_us_state_abbr_from_name(:WASHINGTON_DC, true)
+    assert_equal 'DC', get_us_state_abbr_from_name('Washington DC', true)
+    assert_equal 'DC', get_us_state_abbr_from_name('WASHINGTON DC', true)
+  end
+
   def test_us_state_abbr
     assert_equal true, us_state_abbr?(:IL)
     assert_equal true, us_state_abbr?(:IL, false)

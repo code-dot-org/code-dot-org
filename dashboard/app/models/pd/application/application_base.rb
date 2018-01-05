@@ -2,23 +2,28 @@
 #
 # Table name: pd_applications
 #
-#  id                  :integer          not null, primary key
-#  user_id             :integer          not null
-#  type                :string(255)      not null
-#  application_year    :string(255)      not null
-#  application_type    :string(255)      not null
-#  regional_partner_id :integer
-#  status              :string(255)      not null
-#  locked_at           :datetime
-#  notes               :text(65535)
-#  form_data           :text(65535)      not null
-#  created_at          :datetime         not null
-#  updated_at          :datetime         not null
-#  course              :string(255)
-#  response_scores     :text(65535)
+#  id                                  :integer          not null, primary key
+#  user_id                             :integer
+#  type                                :string(255)      not null
+#  application_year                    :string(255)      not null
+#  application_type                    :string(255)      not null
+#  regional_partner_id                 :integer
+#  status                              :string(255)
+#  locked_at                           :datetime
+#  notes                               :text(65535)
+#  form_data                           :text(65535)      not null
+#  created_at                          :datetime         not null
+#  updated_at                          :datetime         not null
+#  course                              :string(255)
+#  response_scores                     :text(65535)
+#  application_guid                    :string(255)
+#  decision_notification_email_sent_at :datetime
+#  accepted_at                         :datetime
+#  properties                          :text(65535)
 #
 # Indexes
 #
+#  index_pd_applications_on_application_guid     (application_guid)
 #  index_pd_applications_on_application_type     (application_type)
 #  index_pd_applications_on_application_year     (application_year)
 #  index_pd_applications_on_course               (course)
@@ -38,10 +43,12 @@ module Pd::Application
 
     OTHER = 'Other'.freeze
     OTHER_WITH_TEXT = 'Other:'.freeze
+    OTHER_PLEASE_EXPLAIN = 'Other (Please Explain):'.freeze
     OTHER_PLEASE_LIST = 'Other (Please List):'
     YES = 'Yes'.freeze
     NO = 'No'.freeze
     NONE = 'None'.freeze
+    INCOMPLETE = 'Incomplete'.freeze
 
     COMMON_OPTIONS = {
       title: %w(Mr. Mrs. Ms. Dr.),
@@ -64,6 +71,26 @@ module Pd::Application
         'American Indian/Alaska Native',
         OTHER,
         'Prefer not to say'
+      ],
+
+      course_hours_per_year: [
+        'At least 100 course hours',
+        '50 to 99 course hours',
+        'Less than 50 course hours'
+      ],
+
+      terms_per_year: [
+        '1 quarter',
+        '1 trimester',
+        '1 semester',
+        '2 trimesters',
+        'Full year'
+      ],
+      school_type: [
+        'Public school',
+        'Private school',
+        'Charter school',
+        'Other'
       ]
     }
 
@@ -71,8 +98,7 @@ module Pd::Application
     before_create -> {self.status = :unreviewed}
     after_initialize :set_type_and_year
     before_validation :set_type_and_year
-    after_initialize :set_notes_template, if: :new_record?
-    before_create :set_notes_template
+    before_save :update_accepted_date, if: :status_changed?
 
     def set_type_and_year
       # Override in derived classes and set to valid values.
@@ -81,10 +107,8 @@ module Pd::Application
       self.application_type = nil
     end
 
-    def set_notes_template
-      unless notes
-        self.notes = "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:"
-      end
+    def update_accepted_date
+      self.accepted_at = status == 'accepted' ? Time.now : nil
     end
 
     self.table_name = 'pd_applications'
@@ -108,11 +132,24 @@ module Pd::Application
     belongs_to :user
     belongs_to :regional_partner
 
-    validates_presence_of :user_id
+    validates_presence_of :user_id, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
     validates_inclusion_of :application_type, in: APPLICATION_TYPES
     validates_inclusion_of :application_year, in: APPLICATION_YEARS
     validates_presence_of :type
-    validates_presence_of :status
+    validates_presence_of :status, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
+
+    # decision notifications should be sent to applications that have been
+    # locked but have not yet received a decision_notification email
+    scope :should_send_decision_notification_emails, -> {where("locked_at IS NOT NULL AND decision_notification_email_sent_at IS NULL")}
+
+    # Override in derived class
+    def send_decision_notification_email
+      # intentional noop
+    end
+
+    def self.send_all_decision_notification_emails
+      should_send_decision_notification_emails.each(&:send_decision_notification_email)
+    end
 
     # Override in derived class, if relevant, to specify which multiple choice answers
     # have additional text fields, e.g. "Other (please specify): ______"
@@ -162,13 +199,17 @@ module Pd::Application
       end
     end
 
+    def self.filtered_labels(course)
+      raise 'Abstract method must be overridden in base class'
+    end
+
     # Include additional text for all the multi-select fields that have the option
     def full_answers
       sanitize_form_data_hash.tap do |hash|
         additional_text_fields.each do |additional_text_field|
           answer_with_additional_text hash, *additional_text_field
         end
-      end
+      end.slice(*self.class.filtered_labels(course).keys)
     end
 
     # Camelized (js-standard) format of the full_answers. The keys here will match the raw keys in form_data
@@ -195,15 +236,24 @@ module Pd::Application
     end
 
     def school_name
-      user.school_info.try(:effective_school_name).try(:titleize)
+      user.try(:school_info).try(:effective_school_name).try(:titleize)
     end
 
     def district_name
-      user.school_info.try(:effective_school_district_name).try(:titleize)
+      user.try(:school_info).try(:effective_school_district_name).try(:titleize)
     end
 
     def applicant_name
       "#{sanitize_form_data_hash[:first_name]} #{sanitize_form_data_hash[:last_name]}"
+    end
+
+    # Convert responses cores to a hash of underscore_cased symbols
+    def response_scores_hash
+      JSON.parse(response_scores || '{}').transform_keys {|key| key.underscore.to_sym}
+    end
+
+    def total_score
+      response_scores_hash.values.map {|x| x.try(:to_i)}.compact.reduce(:+)
     end
 
     protected

@@ -1,54 +1,67 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
-import color from "../util/color";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import Responsive from '../responsive';
 import VerticalImageResourceCard from './VerticalImageResourceCard';
 import ResourceCardResponsiveContainer from './studioHomepages/ResourceCardResponsiveContainer';
+import { ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
 
 const styles = {
   heading: {
-    color: color.teal,
     width: '100%'
+  },
+  mobileHeading: {
+    fontSize: 24,
+    lineHeight: 1.5,
   },
   clear: {
     clear: 'both'
-  }
+  },
+  spacer: {
+    height: 50,
+  },
 };
 
-export default class TeachersBeyondHoc extends Component {
+class TeachersBeyondHoc extends Component {
   static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired,
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   };
 
   render() {
-    const { isRtl, responsive } = this.props;
-    const desktop = (responsive.isResponsiveCategoryActive('lg') || responsive.isResponsiveCategoryActive('md'));
+    const { responsiveSize } = this.props;
+    const desktop = (responsiveSize === ResponsiveSize.lg) || (responsiveSize === ResponsiveSize.md);
+
+    const codeorgTeacherImage = desktop ? "codeorg-teacher" : "course-catalog";
+
+    const thirdPartyTeacherImage = desktop ? "third-party-teacher" : "third-party-teacher-small";
+
+    const thirdPartyTeacherTitle = desktop ? i18n.congratsTeacherExternalTitle() : i18n.congratsTeacherExternalTitleShort();
+
+    const headingStyle = desktop ? styles.heading : styles.mobileHeading;
 
     const cards = [
       {
         title: i18n.congratsTeacherCodeOrgTitle(),
         description: i18n.congratsTeacherCodeOrgDesc(),
         buttonText: i18n.congratsTeacherCodeOrgButton(),
-        link: "/courses?view=teacher",
-        image: "codeorg-teacher"
+        link: '/courses?view=teacher',
+        image: codeorgTeacherImage
       },
       {
-        title: i18n.congratsTeacherExternalTitle(),
+        title: thirdPartyTeacherTitle,
         description: i18n.congratsTeacherExternalDesc(),
         buttonText: i18n.congratsTeacherExternalButton(),
-        link: '/educate/curriculum/3rd-party',
-        image: "third-party-teacher"
+        link: pegasus('/educate/curriculum/3rd-party'),
+        image: thirdPartyTeacherImage
       }
     ];
 
     return (
       <div>
-        <h1 style={styles.heading}>
+        <h1 style={headingStyle}>
           {i18n.congratsTeacherHeading()}
         </h1>
-        <ResourceCardResponsiveContainer responsive={responsive}>
+        <ResourceCardResponsiveContainer>
           {cards.map(
             (card, cardIndex) => (
               <VerticalImageResourceCard
@@ -56,8 +69,7 @@ export default class TeachersBeyondHoc extends Component {
                 title={card.title}
                 description={card.description}
                 buttonText={card.buttonText}
-                link={pegasus(`/${card.link}`)}
-                isRtl={isRtl}
+                link={card.link}
                 jumbo={desktop}
                 image={card.image}
               />
@@ -65,7 +77,14 @@ export default class TeachersBeyondHoc extends Component {
           )}
         </ResourceCardResponsiveContainer>
         <div style={styles.clear}/>
+        {!desktop && (
+          <div style={styles.spacer}/>
+        )}
       </div>
     );
   }
 }
+
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+}))(TeachersBeyondHoc);

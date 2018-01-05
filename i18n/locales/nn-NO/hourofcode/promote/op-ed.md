@@ -1,11 +1,11 @@
 ---
-title: '<%= hoc_s(:title_op_ed) %>'
+title: <%= hoc_s(:title_op_ed) %>
 layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### Below is a sample op-ed supportive of Computer Science Education Week and its goals that could be used by state, local legislators, business leaders etc.
+### Nedanfor finn du eit eksempel på eit skriv til støtte for Programmeringsveka og hennar mål, som kan nyttast av offentlege instanser, politikarar, føretaksleiarar osv.
 
   
 

@@ -14,6 +14,6 @@ vi:
           description_short: An introductory computer science course that empowers students to create authentic artifacts.
         allthethingscourse:
           title: allthethingscourse
-          description_short: This is a course for allthethings
-          description_student: This is a course for allthethings and has a longer description for students
-          description_teacher: This is a course for allthethings and has a longer description for teachers
+          description_short: Đây là một khóa học cho allthethings
+          description_student: Đây là một khóa học cho allthethings và có mô tả dài hơn cho học sinh
+          description_teacher: Đây là một khóa học cho allthethings và có mô tả dài hơn cho giáo viên

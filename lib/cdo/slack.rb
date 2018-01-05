@@ -11,7 +11,6 @@ class Slack
   }.freeze
 
   CHANNEL_MAP = {
-    'developers' => 'general',
     'server operations' => 'server-operations',
     'staging' => 'infra-staging',
     'test' => 'infra-test',
@@ -119,21 +118,22 @@ class Slack
     params[:channel] = "\##{Slack::CHANNEL_MAP[params[:channel]] || params[:channel]}"
     slackified_text = slackify text
 
-    if params[:color]
-      payload = {
-        attachments: [{
-          fallback: slackified_text,
+    payload =
+      if params[:color]
+        {
+          attachments: [{
+            fallback: slackified_text,
+            text: slackified_text,
+            mrkdwn_in: [:text],
+            color: COLOR_MAP[params[:color].to_sym] || params[:color]
+          }]
+        }.merge params
+      else
+        {
           text: slackified_text,
-          mrkdwn_in: [:text],
-          color: COLOR_MAP[params[:color].to_sym] || params[:color]
-        }]
-      }.merge params
-    else
-      payload = {
-        text: slackified_text,
-        unfurl_links: true
-      }.merge params
-    end
+          unfurl_links: true
+        }.merge params
+      end
 
     url = URI.parse("https://hooks.slack.com/services/#{CDO.slack_endpoint}")
     begin
@@ -146,6 +146,16 @@ class Slack
     rescue
       return false
     end
+  end
+
+  def self.snippet(room, text)
+    # omit leading '#' when passing channel names to this API
+    channel = CHANNEL_MAP[room] || room
+    open('https://slack.com/api/files.upload'\
+      "?token=#{SLACK_TOKEN}"\
+      "&content=#{URI.escape(text)}"\
+      "&channels=#{channel}"
+    )
   end
 
   def self.join_room(name)

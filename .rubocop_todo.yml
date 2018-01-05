@@ -10,13 +10,6 @@
 Lint/AmbiguousRegexpLiteral:
   Enabled: false
 
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: runtime_error, standard_error
-Lint/InheritException:
-  Enabled: false
-
 # Offense count: 22
 Lint/ParenthesesAsGroupedExpression:
   Enabled: false
@@ -108,13 +101,6 @@ Style/ClassVars:
 # Cop supports --auto-correct.
 # Configuration parameters: PreferredMethods.
 Style/CollectionMethods:
-  Enabled: false
-
-# Offense count: 39
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, SingleLineConditionsOnly.
-# SupportedStyles: assign_to_condition, assign_inside_condition
-Style/ConditionalAssignment:
   Enabled: false
 
 # Offense count: 284

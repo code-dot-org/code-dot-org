@@ -68,6 +68,9 @@ class Pd::Workshop < ActiveRecord::Base
     STATE_ENDED = 'Ended'.freeze
   ].freeze
 
+  SUBJECT_TEACHER_CON = 'Code.org TeacherCon'.freeze
+  SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze
+  SUBJECT_SUMMER_WORKSHOP = '5-day Summer'.freeze
   SUBJECTS = {
     COURSE_ECS => [
       SUBJECT_ECS_PHASE_2 = 'Phase 2 in-person'.freeze,
@@ -87,22 +90,22 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'.freeze
     ],
     COURSE_CSP => [
-      SUBJECT_CSP_SUMMER_WORKSHOP = '5-day Summer'.freeze,
+      SUBJECT_CSP_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
       SUBJECT_CSP_WORKSHOP_1 = 'Units 1 and 2: The Internet and Digital Information'.freeze,
       SUBJECT_CSP_WORKSHOP_2 = 'Units 2 and 3: Processing data, Algorithms, and Programming'.freeze,
       SUBJECT_CSP_WORKSHOP_3 = 'Units 4 and 5: Big Data, Privacy, and Building Apps'.freeze,
       SUBJECT_CSP_WORKSHOP_4 = 'Units 5 and 6: Building Apps and AP Assessment Prep'.freeze,
-      SUBJECT_CSP_TEACHER_CON = 'Code.org TeacherCon'.freeze,
-      SUBJECT_CSP_FIT = 'Code.org Facilitator Weekend'.freeze
+      SUBJECT_CSP_TEACHER_CON = SUBJECT_TEACHER_CON,
+      SUBJECT_CSP_FIT = SUBJECT_FIT
     ],
     COURSE_CSD => [
-      SUBJECT_CSD_SUMMER_WORKSHOP = '5-day Summer'.freeze,
+      SUBJECT_CSD_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
       SUBJECT_CSD_UNITS_2_3 = 'Units 2 and 3: Web Development and Animations'.freeze,
       SUBJECT_CSD_UNIT_3_4 = 'Units 3 and 4: Building Games and User Centered Design'.freeze,
       SUBJECT_CSD_UNITS_4_5 = 'Units 4 and 5: App Prototyping and Data & Society'.freeze,
       SUBJECT_CSD_UNIT_6 = 'Unit 6: Physical Computing'.freeze,
-      SUBJECT_CSD_TEACHER_CON = 'Code.org TeacherCon'.freeze,
-      SUBJECT_CSD_FIT = 'Code.org Facilitator Weekend'.freeze
+      SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
+      SUBJECT_CSD_FIT = SUBJECT_FIT
     ]
   }.freeze
 
@@ -331,6 +334,14 @@ class Pd::Workshop < ActiveRecord::Base
     "#{course_subject} workshop on #{start_time} at #{location_name}"[0...255]
   end
 
+  # E.g. "March 1-3, 2017" or "March 30 - April 2, 2017"
+  # Assume no workshops will span a new year
+  def friendly_date_range
+    sessions.first.start.month == sessions.last.start.month ?
+      "#{sessions.first.start.strftime('%B %-d')}-#{sessions.last.start.strftime('%-d, %Y')}" :
+      "#{sessions.first.start.strftime('%B %-d')} - #{sessions.last.start.strftime('%B %-d, %Y')}"
+  end
+
   # Puts workshop in 'In Progress' state
   def start!
     raise 'Workshop must have at least one session to start.' if sessions.empty?
@@ -544,7 +555,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def local_summer?
-    course == COURSE_CSP && subject == SUBJECT_CSP_SUMMER_WORKSHOP
+    subject == SUBJECT_SUMMER_WORKSHOP
   end
 
   def teachercon?

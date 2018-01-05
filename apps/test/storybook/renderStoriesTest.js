@@ -12,7 +12,7 @@ const BLACKLIST = [
   // 'templates/progress/ProgressLessonTeacherInfo.story.jsx',
 ];
 
-describe('react-storybook stories render without errors or warnings', () => {
+describe('react-storybook stories render without errors or warnings', function () {
   throwOnConsoleErrorsEverywhere();
   throwOnConsoleWarningsEverywhere();
   clearTimeoutsBetweenTests();

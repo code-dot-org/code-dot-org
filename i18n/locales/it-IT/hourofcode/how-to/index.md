@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to) %>'
+title: <%= hoc_s(:title_how_to) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -7,15 +7,13 @@ nav: how_to_nav
 
 <h1>Come insegnare l'Ora del Codice</h1>
 
-Unisciti al movimento ed introduci un gruppo di studenti alla loro prima ora di informatica seguendo questi passi. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to help run an Hour of Code in your class.
+Unisciti al movimento ed introduci un gruppo di studenti alla loro prima ora di informatica seguendo questi passi. L'Ora del Codice è facile da eseguire - anche per i principianti! Se hai bisogno di una mano, puoi trovare (solo per gli USA) un [volontario locale](%= resolve_url('https://code.org/volunteer/local') %) che ti aiuti a tenere l'Ora del Codice nella tua aula.
 
 ## 1. Guarda questo video introduttivo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Scegli un'esercitazione
 
-Noi forniamo un'ampia scelta di divertenti [esercitazioni autogestite](%= resolve_url('/learn') %) ed altrettante [gestite dall'insegnante](%= resolve_url('https://code.org/educate/teacher-led') %) per partecipanti di tutte le età, creati diversi partner.
-
-[![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+Ti forniamo un'ampia varietà di divertenti [esercitazioni guidate](%= resolve_url('/learn') %) per partecipanti di tutte le età e di diversi livelli di esperienza. Gli studenti svolgono le esercitazioni autonomamente, anche se molte attività includono il piano della lezione per gli insegnanti, per guidare la discussione o estendere l'attività (vedrai il link quando sceglierai l'attività). [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
 ## 3. Promuovi la tua Ora del Codice
 
@@ -35,7 +33,7 @@ Se l'esercitazione che hai scelto funziona meglio con il sonoro, fornisci delle 
 
 ## 5. Inizia la tua Ora del Codice con un testimonial o un video stimolante
 
-**Invita un [volontario locale](%= resolve_url('https://code.org/volunteer/local') %) per ispirare i tuoi studenti parlando loro delle enormi possibilità a cui apre la conoscenza dell'informatica.** Nel mondo ci sono migliaia di volontari pronti ad aiutarti nella tua Ora del Codice venendo direttamente in classe o collegandosi con una video chiamata!
+**Invita un [volontario locale](%= resolve_url('https://code.org/volunteer/local') %) (solo per gli USA) per ispirare i tuoi studenti parlando loro delle enormi possibilità a cui apre la conoscenza dell'informatica.** Nel mondo ci sono migliaia di volontari pronti ad aiutarti nella tua Ora del Codice venendo direttamente in classe o collegandosi con una video chiamata!
 
 **Mostra un video stimolante:**
 
@@ -46,13 +44,13 @@ Se l'esercitazione che hai scelto funziona meglio con il sonoro, fornisci delle 
 
 - Spiega in che modo la tecnologia influisce sulle nostre vite con degli esempi che interessino sia i ragazzi che le ragazze (puoi parlare di come venga utilizzata per salvare delle vite, aiutare la gente, mettere in comunicazione le persone, ecc.).
 - Elenca tutto ciò che utilizza programmi informatici nella vita quotidiana.
-- [Qui](%= resolve_url('https://code.org/girls') %) puoi trovare dei suggerimenti per far interessare le ragazze all'informatica.
+- [Qui](%= resolve_url('https://code.org/girls') %) puoi trovare dei suggerimenti (in inglese) per far interessare le ragazze all'informatica.
 
 ## 6. Scrivi del codice!
 
 **Guida gli studenti nell'attività**
 
-- Scrivi il link dell'esercitazione sulla lavagna. Puoi trovare i link nelle [informazioni dell'esercitazione da te selezionata](%= resolve_url('/learn') %) ("Link breve" nella tabella sotto alla descrizione dell'esercitazione).
+- Scrivi il link dell'esercitazione sulla lavagna. Puoi recuperare questo link cliccando sull'[esercitazione](%= resolve_url('/learn') %) che desideri e copiando l'indirizzo che appare nella tabella accanto all'indicazione "Link breve".
 
 **Quando i partecipanti incontrano delle difficoltà, si può rispondere così:**
 
@@ -81,7 +79,7 @@ Se l'esercitazione che hai scelto funziona meglio con il sonoro, fornisci delle 
 
 [/col-33]
 
-- [Stampa gli attestati](%= resolve_url('https://code.org/certificates')%) originali in inglese per i tuoi studenti oppure <a href="https://www.programmailfuturo.it/come/attestati-personalizzati" target="_blank">la versione italiana di Programma il Futuro</a>.
+- [Stampa gli attestati](%= resolve_url('https://code.org/certificates')%) in inglese oppure <a href="https://www.programmailfuturo.it/come/attestati-personalizzati" target="_blank">la versione italiana di Programma il Futuro</a>.
 - Stampa gli adesivi ["Ho completato un'Ora del Codice!"](%= resolve_url('/promote/resources#stickers') %)
 - [Ordina T-shirt personalizzate](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) per i tuoi studenti (solo per gli USA).
 - Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #OradelCodice, #HourOfCode, @codeorg e @programmafuturo così anche noi possiamo condividere il tuo successo!
@@ -97,13 +95,13 @@ Se l'esercitazione che hai scelto funziona meglio con il sonoro, fornisci delle 
 ## Altre risorse dell'Ora del Codice per gli insegnanti:
 
 - È disponibile un [Forum in inglese di discussione per gli insegnanti](http://forum.code.org/c/plc/hour-of-code). Se sei italiano visita il [Forum italiano di Programma il Futuro](https://www.programmailfuturo.it/aiuto/forum-di-aiuto) per ricevere consigli, opinioni e assistenza dagli altri insegnanti. <% if @country == 'us' %>
-- Controlla le [FAQ dell'Ora del Codice](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+- Controlla le [FAQ dell'Ora del Codice](https://hourofcode.com/it#faq). <% end %>
 
 ## Cosa c'è dopo l'Ora del Codice?
 
 L'Ora del Codice è solo il primo passo in un viaggio per imparare di più su come funziona la tecnologia e come creare applicazioni software. Per continuare questo viaggio:
 
-- Incoraggia gli studenti a continuare a [imparare online](%= resolve_url('https://code.org/learn/beyond') %).
+- Incoraggia gli studenti a continuare ad [imparare online](%= resolve_url('https://code.org/learn/beyond') %).
 - [Frequentate](%= resolve_url('https://code.org/professional-development-workshops') %) un seminario di un giorno, per ricevere istruzioni da un esperto di informatica. (Solo per gli USA)
 
 <%= view :signup_button %>

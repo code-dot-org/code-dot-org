@@ -1463,6 +1463,15 @@
       CSDU6 - for loop - why for_instruction: |-
         Write the contents of the array to
         the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays rainbow_instruction: |-
+        Write the contents of the array to the screen
+        in numerical order. (Click to see full instructions)
+      CSDU6 arrays random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays variable_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2586,8 +2595,12 @@
         обекти са цветя, така че проверете цветята за събиране на нектар."
       Course 4 Artist 1_instruction: "Помогнете ми да завърша моята кутия. (Всеки
         ред е дълъг 200 пиксела) "
-      Course 4 Artist 10_instruction: "Сега е време за импровизации! Забавлявайте
-        се и направете това, което Ви харесва. "
+      Course 4 Artist 10_instruction: "Щракнете тук, за да видите съветите отново!
+        \\r \\r Тук е кодът за създаване на интересна форма.  Какво се случва, когато
+        го повтаряте?   При завоите в тази форма се добавят до 420 градуса, което
+        означава, че когато вашият художник  прави чертеж, той ще бъде е с различна
+        посока от първоначалната.  Тази нова посока е точно 60 градуса вдясно от мястото,
+        където сте започнали."
       Course 4 Artist 11_instruction: "Сега е време за  предизвикателство!  Ето един
         дизайн, който използва само блокове, които вече са показали.  Можеш ли да
         разбереш как да го пресъздадеш без никаква допълнителна информация?  Съвет:
@@ -2652,12 +2665,8 @@
         съвети."
       Course 4 Artist Binary Free Play_instruction: "Свободна игра: Нарисувате каквото
         си искате с двоичен код!"
-      Course 4 Artist Binary pre1_instruction: Binary е начин на представяне на информация,
-        използвайки само две опции.  Тук, ние ще да използвате опциите "изключване"
-        (представлявана от цифрата 0) и "включване" (представлявана от номер 1).  \r
-        \r Ние сме ви предоставили  решетка от "пиксели", за да си направите дизайн
-        като включите само някои квадратчета.  Може ли да накарате художника да начертае
-        двоичния код "01010101" в първия ред?
+      Course 4 Artist Binary pre1_instruction: Може ли да накарате художника да начертае
+        двоичния код "01010101" в първия ред.
       Course 4 Artist Binary ryan_instruction: Binary е начин на представяне на информация,
         използвайки само две опции.  Тук, ние ще да използвате опциите "изключване"
         (представлявана от цифрата 0) и "включване" (представлявана от номер 1).  \r
@@ -3120,7 +3129,7 @@
         резултата като зададете резултат+резултат+1. Достигнете до 10 ( увеличавайки
         с 1), за да преминете нивото.
       Course 4 Play Lab Vars 6_instruction: Как да печелим точки в нашата игра? Прибавете
-        1 към променливата "точки" всеки път когато Кучето удари котката с огнено
+        1 към променливата "точки" всеки път когато кучето удари котката с огнено
         кълбо. Използвайте събитието "когато актьор 2 докосне нещо" да задейства актуализация
         на резултата. Можете да увеличавате променливите като зададете "точки=точки+1."
         Достигнете до резултат 10 ( точка по точка), за да преминете нивото.
@@ -3952,25 +3961,20 @@
         за победа!"
       MC HOC 2016 Village Test_instruction: "О не! Зомбита са те вкарали в капан вътре!
         Напиши код за железния голем, за да го накараш да гони и атакува зомбитата!"
-      MC_2017_Ryan_02_instruction: |-
-        Help the player get out by using loops to get
-        the Agent to the pressure plate.
-      MC_HOC_2017 Agent Test_instruction: |-
-        Click "Run" to move the player to the
-        orange square inside of the house.
-      MC_HOC_2017_01_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_Cole_instruction: |-
-        You need to collect all the tools on this
-        journey. Move around using the **arrow keys**, and get to the chest on the
-        path to win
-      MC_HOC_2017_01_Kiki_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_RETRY_instruction: "Придвижете агента до активиращата плоча и
-        след това натиснете „Изпълняване“ и използвайте клавишите със стрелки, за
-        да придвижите Agent извън къщата, така че да може да прибере сандъка."
+      MC_2017_Ryan_02_instruction: "Помогни на героя да се измъкне с помощта на електрическа
+        верига като поставиш Agent върху активиращата плоча."
+      MC_HOC_2017 Agent Test_instruction: Щракни върху "Старт" за да се премести героя
+        до оранжевия квадрат в къщата.
+      MC_HOC_2017_01_instruction: Щракни върху "Старт", за да се премести героя до
+        оранжевия квадрат в къщата.
+      MC_HOC_2017_01_Cole_instruction: "Необходимо е да събереш всички инструменти
+        по време на това пътешествие. Придвижвай се с **клавишите със стрелки** и
+        стигни до сандъка на пътеката, за да спечелиш"
+      MC_HOC_2017_01_Kiki_instruction: Щракни върху "Старт", за да се премести героя
+        до оранжевия квадрат в къщата.
+      MC_HOC_2017_01_RETRY_instruction: "Придвижете Agent до активиращата плоча. След
+        това натиснете „Старт“ и използвайте клавишите със стрелки, за да придвижите
+        героя извън къщата, така че да може да прибере сандъка. "
       MC_HOC_2017_02_instruction: "Придвижете Agent до активиращата плоча."
       MC_HOC_2017_02_Cole_instruction: "Придвижете Agent до активиращата плоча, така
         че {currentPlayerName} да може да стигне до картата. "
@@ -3980,24 +3984,24 @@
       MC_HOC_2017_03_Cole_instruction: "Напишете код, чрез който Agent да отвори портата. "
       MC_HOC_2017_03_Kiki_instruction: "Придвижете Agent до активиращата плоча."
       MC_HOC_2017_04_instruction: "Променете цикъла от последния пъзел, за да помогнете
-        на агента да проправи пътека през широката част на реката."
+        на Agent да проправи пътека през широката част на реката."
       MC_HOC_2017_04POINT5_Cole_instruction: "Придвижете Agent до активиращата плоча."
       MC_HOC_2017_04POINT5_RYAN_instruction: "Придвижете Agent до активиращата плоча."
       MC_HOC_2017_04_Cole_instruction: "Придвижете Agent до активиращата плоча."
       MC_HOC_2017_04_Kiki_instruction: "Придвижете Agent до активиращата плоча."
       MC_HOC_2017_05_instruction: "Използвайте функция, за да помогнете на Agent да
         стигне до активиращата плоча."
-      MC_HOC_2017_05_Cole_instruction: "Придвижете играча до лопатата."
-      MC_HOC_2017_05_Josh_instruction: "Придвижете играча до лопатата."
-      MC_HOC_2017_05_Kiki_instruction: "Придвижете играча до оранжевото квадратче."
+      MC_HOC_2017_05_Cole_instruction: "Придвижете героя до лопатата."
+      MC_HOC_2017_05_Josh_instruction: "Придвижете героя до лопатата."
+      MC_HOC_2017_05_Kiki_instruction: "Придвижете героя до оранжевото квадратче."
       MC_HOC_2017_06_Cole_instruction: "Коригирайте този код, така че да накара Agent
         да построи мост над реката."
-      MC_HOC_2017_06_Josh_instruction: "Коригирайте този код, така че да помогне на
-        Agent да построи мост над реката."
-      MC_HOC_2017_06_Kiki_instruction: "Коригирайте този код, така че да помогне на
-        Agent да построи мост над реката."
+      MC_HOC_2017_06_Josh_instruction: "Коригирайте този код, така че да накара Agent
+        да построи мост над реката."
+      MC_HOC_2017_06_Kiki_instruction: "Коригирайте този код, така че да накара Agent
+        да построи мост над реката."
       MC_HOC_2017_07_Cole_instruction: "Разрушете леда и придвижете {currentPlayerName}
-        до вагонетката."
+        до Minecart."
       MC_HOC_2017_07_Kiki_instruction: "Използвайте функция, за да прочистите пътеката
         до оранжевото квадратче."
       MC_HOC_2017_07a_Kiki_instruction: "Прочистете пътеката до оранжевото квадратче."
@@ -4009,10 +4013,10 @@
         да преминете през лавата."
       MC_HOC_2017_08_Will_instruction: "Използвайте функциите, за да намерите начин
         да преминете през лавата."
-      MC_HOC_2017_09_Cole_instruction: "Програмирайте Agent да прочисти пътеката на
-        играча."
-      MC_HOC_2017_09_Kiki_instruction: "Програмирайте Agent да прочисти пътеката на
-        играча и стигне до активиращата плоча."
+      MC_HOC_2017_09_Cole_instruction: "Програмирайте Agent да прочисти пътеката за
+        героя."
+      MC_HOC_2017_09_Kiki_instruction: "Програмирайте Agent да прочисти пътеката за
+        героя и стигне до активиращата плоча."
       MC_HOC_2017_10_Cole_instruction: "Създайте функция, която да ви помогне да завършите
         тази вагонетка."
       MC_HOC_2017_10_Cole_old_instruction: "Създайте функция, която да ви помогне
@@ -4038,7 +4042,7 @@
         сами!"
       MC_HOC_2017_Ryan_03_instruction: "Сега използвайте цикли, за да помогнете на
         Agent да построи мост над реката чрез поставяне на блокове във водата."
-      MC_HOC_2017_Ryan_05_instruction: "Унищожете тези кактуси, така че играчът да
+      MC_HOC_2017_Ryan_05_instruction: "Унищожете тези кактуси, така че героят да
         може да стигне до целта."
       MC_HOC_Kiki_02_instruction: "Придвижете Agent до активиращата плоча."
       MSM Big Game Empty_instruction: |-
@@ -4881,6 +4885,10 @@
       SG U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
+      SG U3L08 - introUnderTheSea - recovery_instruction: |-
+        Add an extra fish, starfish,
+        and piece of seagrass to the image. Look at, but don't change, the functions
+        that create them. (Click to see full instructions)
       SG U3L08 - introUnderTheSea_instruction: |-
         Add an extra fish, starfish, and
         piece of seagrass to the image. Look at, but don't change, the functions
@@ -7403,7 +7411,7 @@
         Use the `repeat` loop to add waves to the
         water.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
-      courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
+      courseA_artist_loops9_instruction: "Предизвикателство: Поправете стълбите."
       courseA_artist_loops_challenge2_instruction: |-
         "Can you help me make two bird
         houses?"
@@ -7482,21 +7490,19 @@
         me to the pig!
       courseA_maze_seq10_instruction: "Challenge: Go around the TNT to get the bird\nto
         the pig! "
-      courseA_maze_seq11_instruction: |-
-        Move one way, then another to get the bird
-        to the pig.
+      courseA_maze_seq11_instruction: "Премести ме в една посока, после в друга, за
+        да стигна до прасето."
       courseA_maze_seq12_instruction: 'Get that pig! '
       courseA_maze_seq13_instruction: Get the pig any way you can!
       courseA_maze_seq2_instruction: "Промени кода, за да ме заведеш до прасето!"
-      courseA_maze_seq3_instruction: Fix the code to get the bird to the pig!
-      courseA_maze_seq4_instruction: REMOVE a block to get the bird to the pig!
+      courseA_maze_seq3_instruction: "Премахни блок, за да стигне птицата да прасето!"
+      courseA_maze_seq4_instruction: "ПРЕМАХНИ блок, за да стигне птицата да прасето!"
       courseA_maze_seq4a_instruction: |-
         Get the bird to the pig using the fewest possible
         blocks.
       courseA_maze_seq5_instruction: Try this one yourself from the beginning.
-      courseA_maze_seq6_instruction: |-
-        Move one way, then another to get the bird
-        to the pig!
+      courseA_maze_seq6_instruction: "Премести ме в една посока, после в друга, за
+        да стигна до прасето!"
       courseA_maze_seq7_instruction: |-
         Figure out what is missing and then add blocks
         to get the bird to the pig!
@@ -7635,9 +7641,8 @@
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
-      courseB_maze_seq6_instruction: |-
-        Move one way, then another to get the bird
-        to the pig!
+      courseB_maze_seq6_instruction: "Премести ме в една посока, после в друга, за
+        да стигна до прасето!"
       courseB_maze_seq7_instruction: |-
         Figure out what is missing and then add blocks
         to get the bird to the pig!
@@ -8383,9 +8388,9 @@
         move the paddle. See how many points you can get before your opponent scores
         twice!
       courseD_bounce_embedded_instruction: Write Instructions Here
-      courseD_bounce_events1_instruction: |-
-        Attach a block to the "when left arrow"
-        block and press "Run" to move the player to the flag.
+      courseD_bounce_events1_instruction: Вземи знамето! Прикачи блок към "когато
+        е натисната стрелка наляво" блок и натисни "Старт", за да преместиш играча
+        към знамето.
       courseD_bounce_events10_instruction: |-
         There is now a goal at the top. Attach
         the "score point" and "score opponent point" blocks to the "when ball
@@ -8413,9 +8418,9 @@
       courseD_bounce_events1s_instruction: |-
         Attach a block to the "when left arrow"
         block and press "Run" to move the player to the net.
-      courseD_bounce_events2_instruction: |-
-        Attach a block to the "when right arrow"
-        and "when left arrow" blocks. Move the paddle to reach both finish targets.
+      courseD_bounce_events2_instruction: Долепете блокче до блокчетата "Когато е
+        натисната стрелка надясно" и "Когато е натисната стрелка наляво". Натиснете
+        "Старт ". Местете платформата така, че да достигне и двете цели.
       courseD_bounce_events2s_instruction: |-
         Now, attach a block to the `when right
         event` so that the hand can get to both baskets.
@@ -8425,12 +8430,10 @@
       courseD_bounce_events3s_instruction: |-
         Now try something similar with the "when
         up arrow" block. Move the paddle to the finish target at the top.
-      courseD_bounce_events4_instruction: |-
-        This time you need to add four blocks.
-        Move the paddle to all four finish targets to complete this puzzle.
-      courseD_bounce_events4s_instruction: |-
-        This time you need to add four blocks.
-        Move the paddle to all four finish targets to complete this puzzle.
+      courseD_bounce_events4_instruction: "Този път трябва да добавите четири блокчета.
+        Преместете платформата до всички четири цели, за да завършите тази задача."
+      courseD_bounce_events4s_instruction: "Този път трябва да добавите четири блокчета.
+        Преместете платформата до всички четири цели, за да завършите тази задача."
       courseD_bounce_events5_instruction: |-
         We're going to send a ball flying down
         towards the paddle. Attach a block to the "when ball hits paddle" block
@@ -10823,7 +10826,7 @@
       grade4_playlab_freeplay_instruction: "It's free play time! Have fun with all\nthe
         blocks in your tool box. "
       grade4_playlab_test_instruction: Как да печелим точки в нашата игра? Прибавете
-        1 към променливата "точки" всеки път когато Кучето удари котката с огнено
+        1 към променливата "точки" всеки път когато кучето удари котката с огнено
         кълбо. Използвайте събитието "когато актьор 2 докосне нещо" да задейства актуализация
         на резултата. Можете да увеличавате променливите като зададете "точки=точки+1."
         Достигнете до резултат 10 ( точка по точка), за да преминете нивото.
@@ -11259,7 +11262,7 @@
         build a game! First we'll need a score. Try setting the 'points' variable
         to give yourself 10 free points!
       grade5_playlab_variables6_instruction: Как да печелим точки в нашата игра? Прибавете
-        1 към променливата "точки" всеки път когато Кучето удари котката с огнено
+        1 към променливата "точки" всеки път когато кучето удари котката с огнено
         кълбо. Използвайте събитието "когато актьор 2 докосне нещо" да задейства актуализация
         на резултата. Можете да увеличавате променливите като зададете "точки=точки+1."
         Достигнете до резултат 10 ( точка по точка), за да преминете нивото.

@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_partners) %>'
+title: <%= hoc_s(:title_partners) %>
 ---
 Kod Saati, Kod Saatleri ve Bilgisayar Bilimleri Eğitim Haftası Danışma ve Değerlendirme Komiteleri tarafından yönetilmektedir.
 

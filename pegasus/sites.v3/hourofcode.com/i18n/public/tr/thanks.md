@@ -30,7 +30,9 @@ social:
 Bilgisayar eğitimini öğrenmek isteyen öğrencilere yaptığınız yardım için teşekkür ederiz. Profesyonel bir şekilde hazırladığımız paketi ücretsiz olarak vermek istiyoruz. </strong>FREEPOSTERS</0> Promosyon kuponunuzdur ücretsiz posterinizi almak için kodu kullanınız. (Not: gönderdiğimiz posterleri ücretsiz kullana bilirsiniz. Almak için sevkiyat ve kargo ücretini sizin ödemeniz gerekli. Posterler Amerika'dan kargolandığı için, Kanada ve diğer ülkelere kargo ücreti oldukça fazla olabilir. Bunun, bütçenize göre olmayabileceğini anlıyoruz ve sınıfınız için  PDF dosyalarını </ 0> basmanızı öneriyoruz.)   
 <br /> [<button>Poster edinin</button>](https://store.code.org/products/code-org-posters-set-of-12) Bedava poster için teklif kodunu kullanın</p> 
 
-<br /> **Kod Saati projesi <%= campaign_date('full')%> tarihine kadar sürecektir. Yeni uygulamalar ve diğer güncellemeler hakkında sizinle irtibat halinde olacağız. Bu arada, şimdi neler yapabilirsiniz? **
+<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
+
+<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
 ## 1. Okuldakilere ve tanıdıklarınıza Kod Saati'ni duyurun
 
@@ -56,6 +58,6 @@ You have many choices to fit your school. Most of the organizations offering Hou
 
 <% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-Code.org sitesi hiçbir ücret ödemeden size, okulunuza veya öğrencilere 25 bilgisayar dillerinin tam eğitimini[bilgisayar giriş dili dersi](https://code.org/educate/curriculum/cs-fundamentals-international)size ücretsiz sunuyor. <% end %>
+Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
 
 <%= view 'popup_window.js' %>

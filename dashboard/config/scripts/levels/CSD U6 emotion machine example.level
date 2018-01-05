@@ -187,7 +187,7 @@
     "instructions_important": "false",
     "display_name": "Emotion Machine Example",
     "submittable": "false",
-    "start_blocks": "onEvent(\"happy_button\", \"click\", function(event) {\r\n  setProperty(\"face\", \"image\", \"icon://fa-smile-o\");\r\n  setProperty(\"face\", \"icon-color\", \"yellow\");\r\n  setProperty(\"feeling\", \"text\", \"happy!\");\r\n});\r\nonEvent(\"sad_button\", \"click\", function(event) {\r\n  setProperty(\"face\", \"image\", \"icon://fa-frown-o\");\r\n  setProperty(\"face\", \"icon-color\", \"blue\");\r\n  setProperty(\"feeling\", \"text\", \"sad\");\r\n});\r\nonEvent(\"meh_button\", \"click\", function(event) {\r\n  setProperty(\"face\", \"image\", \"icon://fa-meh-o\");\r\n  setProperty(\"face\", \"icon-color\", \"gray\");\r\n  setProperty(\"feeling\", \"text\", \"meh\");\r\n});",
+    "start_blocks": "onEvent(\"happy_button\", \"click\", function(event) {\r\n  setProperty(\"face\", \"image\", \"icon://fa-smile-o\");\r\n  setProperty(\"face\", \"icon-color\", \"darkkhaki\");\r\n  setProperty(\"feeling\", \"text\", \"happy!\");\r\n});\r\nonEvent(\"sad_button\", \"click\", function(event) {\r\n  setProperty(\"face\", \"image\", \"icon://fa-frown-o\");\r\n  setProperty(\"face\", \"icon-color\", \"blue\");\r\n  setProperty(\"feeling\", \"text\", \"sad\");\r\n});\r\nonEvent(\"meh_button\", \"click\", function(event) {\r\n  setProperty(\"face\", \"image\", \"icon://fa-meh-o\");\r\n  setProperty(\"face\", \"icon-color\", \"gray\");\r\n  setProperty(\"feeling\", \"text\", \"meh\");\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -222,11 +222,12 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-11-03 19:09:14 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-11-03 19:09:14 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-21 19:16:19 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

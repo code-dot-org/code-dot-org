@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_partners) %>'
+title: <%= hoc_s(:title_partners) %>
 ---
 Hour of Code được phát triển bởi Hour of Code và máy tính khoa học giáo dục tuần tư vấn và xem xét các ủy ban.
 

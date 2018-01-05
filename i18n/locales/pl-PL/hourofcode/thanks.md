@@ -1,20 +1,20 @@
 ---
-title: '<%= hoc_s(:title_signup_thanks) %>'
+title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
 nav: how_to_nav
 social:
-  "og:title": '<%= hoc_s(:meta_tag_og_title) %>'
-  "og:description": '<%= hoc_s(:meta_tag_og_description) %>'
-  "og:image": 'http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png'
+  "og:title": <%= hoc_s(:meta_tag_og_title) %>
+  "og:description": <%= hoc_s(:meta_tag_og_description) %>
+  "og:image": http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png
   "og:image:width": 1440
   "og:image:height": 900
-  "og:url": 'http://<%=request.host%>'
+  "og:url": http://<%=request.host%>
   "twitter:card": player
   "twitter:site": '@codeorg'
-  "twitter:url": 'http://<%=request.host%>'
-  "twitter:title": '<%= hoc_s(:meta_tag_twitter_title) %>'
-  "twitter:description": '<%= hoc_s(:meta_tag_twitter_description) %>'
-  "twitter:image:src": 'http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png'
+  "twitter:url": http://<%=request.host%>
+  "twitter:title": <%= hoc_s(:meta_tag_twitter_title) %>
+  "twitter:description": <%= hoc_s(:meta_tag_twitter_description) %>
+  "twitter:image:src": http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png
 ---
 <% facebook = {:u=>"http://#{request.host}/us"}
 
@@ -22,10 +22,12 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Dziękujemy za rejestrację jako organizator Godziny Kodowania!
 
-As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
-<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
+Dziękujemy za pomoc w umożliwieniu uczniom nauki informatyki. Chcielibyśmy dać wam zestaw profesjonalnych plakatów, pokazujących różne przykłady, do waszej klasy. Użyj kodu **FREEPOSTERS** przy kasie. (Uwaga: jest to wyłącznie dla dostępnych zapasów, należy pokryć koszty wysyłki. Ponieważ plakaty wysyłane są ze Stanów Zjednoczonych, koszty przesyłki mogą być wyższe niż do Kanady i na arenie międzynarodowej. Rozumiemy, że może to przewyższać twój budżet, dlatego zachęcamy do wydrukowania [pliki PDF](https://code.org/inspire) dla Twojej klasy.)  
+<br />[<button>Pobierz plakaty</button>](https://store.code.org/products/code-org-posters-set-of-12) Użyj kodu do pobrania darmowych plakatów
 
-<br /> **Hour of Code runs during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+<% if @country == 'us' %> Dzięki hojności Ozobot, Dexter Industries, littleBits, i Wonder Workshop, ponad 100 klas będzie wybranych do otrzymania zestawów robotów lub części dla swojej klasy! Aby mieć możliwość otrzymania zestawu, wypełnij ankietę na Code.org po Godzinie Kodowania. Code.org wylosuje zwycięzców. W międzyczasie, sprawdź niektóre działania robotyki i obwody. Pamiętaj, akcja ta jest dostępna tylko dla szkół w USA. <% end %>
+
+<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
 ## 1. Spread the word in your school and community
 

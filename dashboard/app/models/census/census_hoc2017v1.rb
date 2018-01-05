@@ -29,6 +29,7 @@
 #  pledged                      :boolean
 #  created_at                   :datetime         not null
 #  updated_at                   :datetime         not null
+#  share_with_regional_partners :boolean
 #
 # Indexes
 #
@@ -39,6 +40,5 @@
 # the Hour of Code signup page.
 #
 class Census::CensusHoc2017v1 < Census::CensusSubmission
-  validates :submitter_email_address, presence: true
   validates :submitter_name, presence: true
 end

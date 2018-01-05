@@ -75,11 +75,7 @@ class UserTest < ActiveSupport::TestCase
       state: 'CA'
     }
     teachers = create_list(:teacher, 2, school_info_attributes: school_attributes)
-    attr = teachers[0].process_school_info_attributes(school_attributes)
-    school_info = SchoolInfo.where(attr).first
-    assert teachers[0].school_info == school_info, "Teacher info: #{teachers[0].school_info.inspect} not equal to #{school_info.inspect}"
-    assert teachers[1].school_info == school_info, "Teacher info: #{teachers[1].school_info.inspect} not equal to #{school_info.inspect}"
-    assert SchoolInfo.where(attr).count == 1
+    assert_equal teachers[0].school_info, teachers[1].school_info
   end
 
   test 'normalize_email' do
@@ -2641,47 +2637,5 @@ class UserTest < ActiveSupport::TestCase
 
     user_scripts = UserScript.where(user: user)
     assert_equal 0, user_scripts.length
-  end
-
-  class CircuitPlaygroundPdEligible < ActiveSupport::TestCase
-    setup do
-      @csd_cohort = create :cohort, name: 'CSD-TeacherConPhiladelphia'
-      @other_cohort = create :cohort
-    end
-    test 'returns true if attended a CSD TeacherCon' do
-      teacher = create :teacher
-      @csd_cohort.teachers << teacher
-      assert_equal true, teacher.circuit_playground_pd_eligible?
-    end
-
-    test 'returns false if a member of other cohorts, not CSD' do
-      teacher = create :teacher
-      @other_cohort.teachers << teacher
-      assert_equal false, teacher.circuit_playground_pd_eligible?
-    end
-
-    test 'returns true if a CSD facilitator' do
-      course_facilitator = create :pd_course_facilitator, course: Pd::Workshop::COURSE_CSD
-      user = course_facilitator.facilitator
-      assert_equal true, user.circuit_playground_pd_eligible?
-    end
-
-    test 'returns false if a non-CSD facilitator' do
-      course_facilitator = create :pd_course_facilitator, course: Pd::Workshop::COURSE_CSP
-      user = course_facilitator.facilitator
-      assert_equal false, user.circuit_playground_pd_eligible?
-    end
-
-    test 'studio_person_circuit_playground_pd_eligible returns true if studio_person_id associated User is eligible' do
-      user1 = create :teacher
-      user2 = create :teacher, studio_person_id: user1.studio_person_id
-
-      @csd_cohort.teachers << user1
-      assert_equal true, user1.circuit_playground_pd_eligible?
-      assert_equal false, user2.circuit_playground_pd_eligible?
-
-      assert_equal true, user1.studio_person_circuit_playground_pd_eligible?
-      assert_equal true, user2.studio_person_circuit_playground_pd_eligible?
-    end
   end
 end

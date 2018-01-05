@@ -1,6 +1,9 @@
 /* global Applab */
 import $ from 'jquery';
-import 'jquery-ui'; // for $.fn.resizable();
+import 'jquery-ui/ui/effects/effect-drop';
+import 'jquery-ui/ui/widgets/draggable';
+import 'jquery-ui/ui/widgets/droppable';
+import 'jquery-ui/ui/widgets/resizable';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import DesignWorkspace from './DesignWorkspace';
@@ -119,12 +122,6 @@ designMode.attachElement = function (element) {
 };
 
 designMode.editElementProperties = function (element) {
-  var designPropertiesElement = document.getElementById('design-properties');
-  if (!designPropertiesElement) {
-    // design-properties won't exist when !user.isAdmin
-    return;
-  }
-
   highlightElement(element);
 
   currentlyEditedElement = element;
@@ -937,7 +934,9 @@ function makeDraggable(jqueryElements) {
 
     elm.css('position', 'static');
   });
-  applabObjectFitImages();
+  setTimeout(() => {
+    applabObjectFitImages();
+  }, 0);
 }
 
 /**

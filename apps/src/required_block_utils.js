@@ -193,7 +193,7 @@ function testsFromFunctionalCall(node, blocksXml) {
  * We consider them equivalent if they have the same tagName, attributes,
  * and children
  */
-function elementsEquivalent(expected, given) {
+export function elementsEquivalent(expected, given) {
   if (!(expected instanceof Element && given instanceof Element)) {
     // if we expect ???, allow match with anything
     if (expected instanceof Text && expected.textContent === '???') {
@@ -222,7 +222,7 @@ function elementsEquivalent(expected, given) {
  * A list of attributes we want to ignore when comparing attributes, and a
  * function for easily determining whether an attribute is in the list.
  */
-var ignorableAttributes = [
+var ignoredAttributes = [
   'deletable',
   'movable',
   'editable',
@@ -230,19 +230,25 @@ var ignorableAttributes = [
   'uservisible',
   'usercreated',
   'id',
+];
+
+/**
+ * A list of attributes that can be ignored if set to '???'
+ */
+var ignorableAttributes = [
   'inputcount',
 ];
 
-ignorableAttributes.contains = function (attr) {
-  return ignorableAttributes.indexOf(attr.name) !== -1;
-};
+var filterAttributes = (attr) =>
+  ignoredAttributes.includes(attr.name);
+
 
 /**
  * Checks whether the attributes for two different elements are equivalent
  */
 function attributesEquivalent(expected, given) {
-  var attributes1 = _.reject(expected.attributes, ignorableAttributes.contains);
-  var attributes2 = _.reject(given.attributes, ignorableAttributes.contains);
+  var attributes1 = _.reject(expected.attributes, filterAttributes);
+  var attributes2 = _.reject(given.attributes, filterAttributes);
   if (attributes1.length !== attributes2.length) {
     return false;
   }
@@ -252,8 +258,14 @@ function attributesEquivalent(expected, given) {
     if (attr1.name !== attr2.name) {
       return false;
     }
-    if (attr1.value !== attr2.value) {
-      return false;
+    if (ignorableAttributes.includes(attr1.name)) {
+      if (attr1.value !== '???' && attr1.value !== attr2.value) {
+        return false;
+      }
+    } else {
+      if (attr1.value !== attr2.value) {
+        return false;
+      }
     }
   }
   return true;
@@ -265,6 +277,10 @@ function attributesEquivalent(expected, given) {
 function childrenEquivalent(expected, given) {
   var children1 = expected.childNodes;
   var children2 = given.childNodes;
+  if (expected.getAttribute('inputcount') === '???') {
+    // If required block ignores inputcount, allow arbitrary children
+    return true;
+  }
   if (children1.length !== children2.length) {
     return false;
   }

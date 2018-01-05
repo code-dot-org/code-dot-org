@@ -1,20 +1,20 @@
 ---
-title: '<%= hoc_s(:title_signup_thanks) %>'
+title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
 nav: how_to_nav
 social:
-  "og:title": '<%= hoc_s(:meta_tag_og_title) %>'
-  "og:description": '<%= hoc_s(:meta_tag_og_description) %>'
-  "og:image": 'http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png'
+  "og:title": <%= hoc_s(:meta_tag_og_title) %>
+  "og:description": <%= hoc_s(:meta_tag_og_description) %>
+  "og:image": http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png
   "og:image:width": 1440
   "og:image:height": 900
-  "og:url": 'http://<%=request.host%>'
+  "og:url": http://<%=request.host%>
   "twitter:card": player
   "twitter:site": '@codeorg'
-  "twitter:url": 'http://<%=request.host%>'
-  "twitter:title": '<%= hoc_s(:meta_tag_twitter_title) %>'
-  "twitter:description": '<%= hoc_s(:meta_tag_twitter_description) %>'
-  "twitter:image:src": 'http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png'
+  "twitter:url": http://<%=request.host%>
+  "twitter:title": <%= hoc_s(:meta_tag_twitter_title) %>
+  "twitter:description": <%= hoc_s(:meta_tag_twitter_description) %>
+  "twitter:image:src": http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png
 ---
 <% facebook = {:u=>"http://#{request.host}/us"}
 
@@ -25,11 +25,13 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 Como forma de agradecer sua ajuda em tornar possível que novos alunos aprendam ciência da computação, gostaríamos de oferecer um conjunto gratuito de pôsteres impressos profissionalmente para uso em sala de aula. Use o código de oferta **FREEPOSTERS** na hora de fechar o pedido. (Nota: A oferta só estará disponível enquanto durar o estoque do material, e você precisará cobrir os custos de envio. Uma vez que esses pôsteres são enviados dos Estados Unidos, os custos de envio podem ser bastante elevados se forem enviados para o Canadá e internacionalmente. Entendemos que isso pode não estar em seu orçamento e nós encorajamos você a imprimir os arquivos PDF para sua sala de aula.)  
 <br /> [<button>Obtenha cartazes</button>](https://store.code.org/products/code-org-posters-set-of-12) Use o código de oferta FREEPOSTERS</p> 
 
-<br /> **A Hora do Código funciona durante <%= campaign_date('full') %>. Entraremos em contato sobre novos tutoriais e outras atualizações emocionantes à medida que surgirem. Enquanto isso, o que você pode fazer agora?**
+<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
+
+<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
 ## 1. Divulgue o evento em sua escola e comunidade
 
-Você acabou de se juntar ao movimento Hora do Código. Diga aos seus amigos com **#HourOfCode**!
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Incentive os outros a participar [com nossos e-mails de amostra.](%= resolve_url('/promote/resources#sample-emails') %) Entre em contato com seu diretor e desafie todas as salas de aula da sua escola para se inscrever. Recrute um grupo local - clubes de escoteiros ou escoteiras, igrejas, universidades, sindicatos ou até mesmo alguns amigos. Você não precisa estar na escola para aprender novas habilidades. Convide um político local ou legislador para visitar sua escola para a Hora do Código. Isso pode ajudá-lo a conseguir suporte para o ensino da Ciência da Computação para além de uma hora.
 
@@ -37,11 +39,11 @@ Use estes [cartazes, banners, adesivos, vídeos e muito mais](%= resolve_url('/p
 
 ## 2. Encontre um voluntário da região para ajudar com o seu evento.
 
-[Procure em nosso mapa de voluntários](%= resolve_url('https://code.org/volunteer/local') %) por pessoas que possam visitar sua sala de aula ou participar remotamente de uma vídeo-conferência para inspirar os alunos sobre o grande espectro de possibilidades da ciência da computação.
+[Procure em nosso mapa de voluntários](%= resolve_url('https://code.org/volunteer/local') %) para ver os voluntários que podem visitar sua sala de aula ou participar de uma videoconferência remota para inspirar seus alunos sobre as várias possibilidades trazidas pela ciência da computação.
 
 ## 3. Planeje sua Hora do Código
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](%= resolve_url('/how-to') %).
+Escolha uma [atividade da Hora do Código](https://hourofcode.com/learn) para sua classe e [reveja este guia de instruções](%= resolve_url('/how-to') %).
 
 # Vá além da Hora do Código
 
