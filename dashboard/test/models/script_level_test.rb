@@ -366,7 +366,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     student = create :student
 
-    refute script_level.should_hide_survey(student, nil)
+    assert script_level.can_view_last_attempt(student, nil)
   end
 
   test 'can view other user last attempt for regular levelgroup' do
@@ -381,7 +381,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     teacher = create :teacher
     student = create :student
 
-    refute script_level.should_hide_survey(teacher, student)
+    assert script_level.can_view_last_attempt(teacher, student)
   end
 
   test 'can view my last attempt for anonymous levelgroup' do
@@ -396,7 +396,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     student = create :student
 
-    refute script_level.should_hide_survey(student, nil)
+    assert script_level.can_view_last_attempt(student, nil)
   end
 
   test 'can not view other user last attempt for anonymous levelgroup' do
@@ -412,7 +412,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     student = create :student
     teacher = create :teacher
 
-    assert script_level.should_hide_survey(teacher, student)
+    assert_not script_level.can_view_last_attempt(teacher, student)
   end
 
   test 'anonymous levels must be assessments' do

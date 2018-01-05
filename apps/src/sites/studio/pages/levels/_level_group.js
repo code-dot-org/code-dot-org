@@ -1,13 +1,10 @@
 /* global appOptions */
 
 import $ from 'jquery';
-import React from 'react';
 import throttle from 'lodash/throttle';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {SingleLevelGroupDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
-import i18n from '@cdo/locale';
-
+import {IncompleteDialog, CompleteDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 window.Multi = require('@cdo/apps/code-studio/levels/multi.js');
 window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch.js');
 var saveAnswers = require('@cdo/apps/code-studio/levels/saveAnswers.js').saveAnswers;
@@ -131,24 +128,7 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
       }
     }
 
-    let id, title, body;
-    const isSurvey = appOptions.level.anonymous === true ||
-      appOptions.level.anonymous === 'true';
-    title = isSurvey ? i18n.submitSurvey() : i18n.submitAssessment();
-    if (validCount === levelCount) {
-      id = "levelgroup-submit-complete-dialogcontent";
-      body = isSurvey ? i18n.submittableSurveyComplete() : i18n.submittableComplete();
-    } else {
-      id = "levelgroup-submit-incomplete-dialogcontent";
-      body = isSurvey ? i18n.submittableSurveyIncomplete() : i18n.submittableIncomplete();
-    }
-    const confirmationDialog = (
-      <SingleLevelGroupDialog
-        id={id}
-        title={title}
-        body={body}
-      />
-    );
+    const confirmationDialog = (validCount === levelCount) ? CompleteDialog : IncompleteDialog;
 
     return {
       response: encodeURIComponent(JSON.stringify(lastAttempt)),
