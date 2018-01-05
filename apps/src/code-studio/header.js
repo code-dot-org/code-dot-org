@@ -349,15 +349,22 @@ header.showMinimalProjectHeader = function () {
 // Project header for script levels that are backed by a project. Shows a
 // Share and Remix button, and places a last_modified time below the stage
 // name
-header.showHeaderForProjectBacked = function () {
-  if ($('.project_info .project_share').length !== 0) {
+/**
+ * @param {object} options{{
+ *   showShareAndRemix: boolean
+ * }}
+ */
+header.showHeaderForProjectBacked = function (options) {
+  if ($('.project_updated_at').length !== 0) {
     return;
   }
-  $('.project_info')
-      .append($('<div class="project_share header_button header_button_light">').text(dashboard.i18n.t('project.share')))
-      .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')));
-  $('.project_share').click(shareProject);
-  $('.project_remix').click(remixProject);
+  if (options.showShareAndRemix) {
+    $('.project_info')
+        .append($('<div class="project_share header_button header_button_light">').text(dashboard.i18n.t('project.share')))
+        .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')));
+    $('.project_share').click(shareProject);
+    $('.project_remix').click(remixProject);
+  }
 
   // Add updated_at below the level name. Do this by creating a new div, moving
   // the level text into it, applying some styling, and placing that div where
