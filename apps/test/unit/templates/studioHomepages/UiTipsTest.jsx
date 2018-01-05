@@ -27,7 +27,8 @@ const TEST_BEFORE_DIALOG = {
 };
 
 const TEST_AFTER_DIALOG = {
-  title: 'Test After Dialog Title'
+  title: 'Test After Dialog Title',
+  onConfirm: {}
 };
 
 const DEFAULT_PROPS = {
@@ -43,9 +44,13 @@ describe('UiTips', () => {
     sinon.stub($.fn, 'width')
       // Default to a desktop width for these tests
       .returns(MAX_MOBILE_WIDTH + 1);
+
+    // Happy to ignore API calls in this test
+    sinon.stub($, 'post');
   });
 
   afterEach(() => {
+    $.post.restore();
     $.fn.width.restore();
   });
 
@@ -285,6 +290,53 @@ describe('UiTips', () => {
       wrapper.instance().beforeDialogCancel();
       expect(wrapper.find(Dialog)).to.have.prop('isOpen', false);
       expect(wrapper.find(UiTip)).not.to.exist;
+    });
+  });
+
+  describe('afterDialog', () => {
+    let wrapper;
+
+    beforeEach(() => {
+      wrapper = mount(
+        <UiTips
+          {...DEFAULT_PROPS}
+          tips={[INITIAL_TIP, TRIGGERED_TIP]}
+          showInitialTips
+          afterDialog={TEST_AFTER_DIALOG}
+        />
+      );
+    });
+
+    it('appears after initial tips are closed', () => {
+      expect(wrapper.find(Dialog)).to.exist.and.to.have.prop('isOpen', false);
+      expect(wrapper.find(UiTip)).to.exist
+        .and.to.have.length(1)
+        .and.to.have.prop('text', INITIAL_TIP.text);
+
+      // Close one of the initial tips
+      const firstTip = wrapper.find(UiTip).first();
+      firstTip.prop('closeClicked')(firstTip.prop('index'));
+
+      expect(wrapper.find(Dialog)).to.have.prop('isOpen', true);
+      expect(wrapper.find(UiTip)).not.to.exist;
+    });
+
+    it('closes on confirm', () => {
+      // Close the tooltip to show the dialog
+      const firstTip = wrapper.find(UiTip).first();
+      firstTip.prop('closeClicked')(firstTip.prop('index'));
+
+      wrapper.instance().afterDialogConfirm();
+      expect(wrapper.find(Dialog)).to.have.prop('isOpen', false);
+    });
+
+    it('closes on cancel', () => {
+      // Close the tooltip to show the dialog
+      const firstTip = wrapper.find(UiTip).first();
+      firstTip.prop('closeClicked')(firstTip.prop('index'));
+
+      wrapper.instance().afterDialogCancel();
+      expect(wrapper.find(Dialog)).to.have.prop('isOpen', false);
     });
   });
 });
