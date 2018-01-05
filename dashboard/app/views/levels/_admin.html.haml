@@ -77,7 +77,6 @@
       - if params[:channel_id]
         - _, channel_id = storage_decrypt_channel_id(params[:channel_id])
         - featured = FeaturedProject.exists?(:storage_app_id => channel_id)
-        - featured_project_id = featured ? FeaturedProject.find_by_storage_app_id(channel_id).id : nil
         #unfeature_project{'style' => ('display: none;' unless featured)}
           %button{id: "feature", class: "btn btn-default btn-sm"}
             Stop featuring in gallery
