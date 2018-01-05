@@ -176,7 +176,13 @@ theme: pdf
           = surround "(", "% of" do
             = state_info[:percent_schools_ap_cs_i]
           = state_info[:state_code_s]
-          schools with AP programs) offered an AP Computer Science course in 2016-2017.
+          schools with AP programs) offered an AP Computer Science course in 2016-2017
+          - if state_info[:number_additional_schools_i] != 0
+            , which is
+            = state_info[:number_additional_schools_i]
+            more than the previous year.
+          - else
+            \.
         - else
           No schools in
           = state_info[:state_code_s]
