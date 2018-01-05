@@ -46,7 +46,8 @@
   %li
     %strong
       Mark your calendar for TeacherCon!
-    You have been assigned to TeacherCon <location>, <Month xx - xx, 2018>.
+    You have been assigned to TeacherCon 
+    = "#{@workshop.location_city}, #{@workshop.friendly_date_range}."
     Code.org will cover the cost of transportation, lodging, and most meals
     during TeacherCon. You will receive more details about travel, lodging, and
     meals approximately six weeks prior to your TeacherCon.
