@@ -32,21 +32,22 @@ class CohortView extends React.Component{
     loading: true,
     applications: null,
     regionalPartnerName: this.props.regionalPartnerName,
-    regionalPartnerFilter: null
+    regionalPartnerFilter: UnmatchedFilter
   }
 
   componentWillMount() {
-    this.load(UnmatchedFilter);
+    this.load();
   }
 
   load(selected = null) {
     let url = `/api/v1/pd/applications/cohort_view.json_view?role=${this.props.route.path.replace('_cohort', '')}`;
-    if (this.props.isWorkshopAdmin && selected) {
-      const regionalPartnerFilter = selected ? selected.value : null;
-      const regionalPartnerName = selected ? selected.label : this.props.regionalPartnerName;
+    if (this.props.isWorkshopAdmin) {
+      const regionalPartnerFilter = selected ? selected.value : this.state.regionalPartnerFilter;
+      const regionalPartnerName = selected ? selected.label : this.state.regionalPartnerName;
       this.setState({ regionalPartnerName, regionalPartnerFilter });
+      console.log(regionalPartnerName);
 
-      url += `&regional_partner_filter=${regionalPartnerFilter ? regionalPartnerFilter : UnmatchedFilter}`;
+      url += `&regional_partner_filter=${regionalPartnerFilter}`;
     }
 
     $.ajax({
@@ -67,6 +68,8 @@ class CohortView extends React.Component{
   };
 
   render() {
+    console.log(this.state.regionalPartnerName);
+
     if (this.state.loading) {
       return (
         <Spinner/>
