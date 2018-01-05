@@ -138,4 +138,119 @@ describe('UiTips', () => {
       expect(wrapper.find(Dialog)).to.have.prop('isOpen', false);
     });
   });
+
+  describe('triggered tips', () => {
+    let targetElement;
+
+    beforeEach(() => {
+      targetElement = document.createElement('div');
+      targetElement.id = TRIGGERED_TIP.triggerId;
+      document.body.appendChild(targetElement);
+    });
+
+    afterEach(() => {
+      document.body.removeChild(targetElement);
+      targetElement = null;
+    });
+
+    it('show when the target element is clicked', () => {
+      const wrapper = mount(
+        <UiTips
+          {...DEFAULT_PROPS}
+          tips={[TRIGGERED_TIP]}
+        />
+      );
+      expect(wrapper.find(UiTip)).not.to.exist;
+
+      // Click the target element
+      $(targetElement).click();
+      expect(wrapper.find(UiTip)).to.exist;
+      expect(wrapper.find(UiTip)).to.have.prop('text', TRIGGERED_TIP.text);
+    });
+
+    it('unless showInitialTips is true', () => {
+      const wrapper = mount(
+        <UiTips
+          {...DEFAULT_PROPS}
+          tips={[TRIGGERED_TIP]}
+          showInitialTips={true}
+        />
+      );
+      expect(wrapper.find(UiTip)).not.to.exist;
+
+      // Click the target element
+      $(targetElement).click();
+      expect(wrapper.find(UiTip)).not.to.exist;
+    });
+
+    it('in which case it can be triggered after all initial tips are closed', () => {
+      const wrapper = mount(
+        <UiTips
+          {...DEFAULT_PROPS}
+          tips={[INITIAL_TIP, INITIAL_TIP, TRIGGERED_TIP]}
+          showInitialTips={true}
+        />
+      );
+      expect(wrapper.find(UiTip)).to.have.length(2);
+      wrapper.find(UiTip).forEach(tip => expect(tip).to.have.prop('text', INITIAL_TIP.text));
+
+      // Click the target element
+      // Expect nothing to happen, initial tips are still open
+      $(targetElement).click();
+      expect(wrapper.find(UiTip)).to.have.length(2);
+      wrapper.find(UiTip).forEach(tip => expect(tip).to.have.prop('text', INITIAL_TIP.text));
+
+      // Close one of the initial tips
+      const firstTip = wrapper.find(UiTip).first();
+      firstTip.prop('closeClicked')(firstTip.prop('index'));
+      expect(wrapper.find(UiTip)).to.have.length(1);
+      expect(wrapper.find(UiTip)).to.have.prop('text', INITIAL_TIP.text);
+
+      // Click the target element
+      // Still nothing to happens, one initial tip is still open
+      $(targetElement).click();
+      expect(wrapper.find(UiTip)).to.have.length(1);
+      expect(wrapper.find(UiTip)).to.have.prop('text', INITIAL_TIP.text);
+
+      // Close the other initial tip
+      const secondTip = wrapper.find(UiTip).first();
+      secondTip.prop('closeClicked')(secondTip.prop('index'));
+      expect(wrapper.find(UiTip)).not.to.exist;
+
+      // This time when we click the target element, the triggered tip opens
+      $(targetElement).click();
+      expect(wrapper.find(UiTip)).to.have.length(1);
+      expect(wrapper.find(UiTip)).to.have.prop('text', TRIGGERED_TIP.text);
+
+      // Close the triggered tip
+      const triggeredTip = wrapper.find(UiTip).first();
+      triggeredTip.prop('closeClicked')(triggeredTip.prop('index'));
+      expect(wrapper.find(UiTip)).not.to.exist;
+    });
+
+    it('can be shown again after closing', () => {
+      const wrapper = mount(
+        <UiTips
+          {...DEFAULT_PROPS}
+          tips={[TRIGGERED_TIP]}
+        />
+      );
+      expect(wrapper.find(UiTip)).not.to.exist;
+
+      // Click the target element
+      $(targetElement).click();
+      expect(wrapper.find(UiTip)).to.exist;
+      expect(wrapper.find(UiTip)).to.have.prop('text', TRIGGERED_TIP.text);
+
+      // Close the triggered tip
+      const triggeredTip = wrapper.find(UiTip).first();
+      triggeredTip.prop('closeClicked')(triggeredTip.prop('index'));
+      expect(wrapper.find(UiTip)).not.to.exist;
+
+      // Click the target element again
+      $(targetElement).click();
+      expect(wrapper.find(UiTip)).to.exist;
+      expect(wrapper.find(UiTip)).to.have.prop('text', TRIGGERED_TIP.text);
+    });
+  });
 });
