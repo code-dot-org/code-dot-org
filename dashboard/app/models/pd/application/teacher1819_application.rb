@@ -64,9 +64,9 @@ module Pd::Application
         workshop = Pd::Workshop.find(pd_workshop_id)
 
         if workshop.teachercon?
-          Pd::Application::Teacher1819ApplicationMailer.teachercon_accepted.deliver_now
+          Pd::Application::Teacher1819ApplicationMailer.teachercon_accepted(self).deliver_now
         elsif workshop.local_summer?
-          Pd::Application::Teacher1819ApplicationMailer.local_summer_accepted.deliver_now
+          Pd::Application::Teacher1819ApplicationMailer.local_summer_accepted(self).deliver_now
         end
       else
         Pd::Application::Teacher1819ApplicationMailer.send(status, self).deliver_now
