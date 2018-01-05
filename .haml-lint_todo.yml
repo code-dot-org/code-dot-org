@@ -31,9 +31,3 @@ linters:
   # Offense count: 84
   ViewLength:
     enabled: false
-
-  # Offense count: 2
-  Indentation:
-    exclude:
-      - "dashboard/app/views/scripts/stage_extras.html.haml"
-      - "pegasus/sites.v3/code.org/public/promote/stats.haml"
