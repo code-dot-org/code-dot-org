@@ -55,13 +55,17 @@ Automation typically results in tasks that are completed more quickly, easily, a
   <em>drawRectangle()</em> and <em>right()</em> are examples of abstraction because they capture the code for more complex behavior and simplify the representation of that behavior by giving it a single name.
 </div>
 
-**Computers - Information Machines**
+**Tools for Thinking Tasks**
 
-Many of the daily tasks we do are thinking tasks like keeping track of money, remembering birthdays, or scheduling tasks for the day. Just like physical tasks, thinking tasks can be monotonous or challenging, and so we've made tools to help us complete them. Calendars, clocks, financial records, and books help us keep track of and make sense of information.
-
-Just like physical tasks, humans want tools to automate our thinking tasks. It was this desire that led to the creation of the computer. Computers store and process information to complete all kinds of information tasks automatically.
+Many of our daily tasks don't involve physical work and instead just require thinking. For example keeping track of money, remembering birthdays, or scheduling activities. Just like physical tasks, thinking tasks can be monotonous or challenging, and so we've made tools to help us complete them. For example calendars, clocks, financial records, and books help us with different thinking tasks. 
 
 **Programming - Communicating algorithms to a computer**
+
+Thinking tasks deal with information. In order to automate thinking tasks humans needed to design
+
+Just like with physical tasks, humans want tools to automate their thinking tasks. This is essentially what computers are, information processing tools for automating thinking tasks.
+
+Computers 
 
 A program is a set of instructions to complete some task using the tools made available to you in a programming language. In other words, a program is an algorithm for completing a task. The difference between a computer and human algorithm is the extreme precision of a programming language. Computers require instructions that can only have a single, unambiguous meaning. Computer languages only contain a relatively small set of single individual commands that the computer is capable of running. In order to design an algorithm, you need to combine these commands together.
 
