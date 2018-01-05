@@ -6,10 +6,11 @@ markdown <<MARKDOWN
 
 Conditional logic is particularly useful for situations where we want to compare the current state of a variable or other element to some value and execute particular code depending on the state. For example, we might construct a tree of possible states and associated outcomes for the current weather if we were trying to determine what we need to leave the house in the morning. A few possible states of weather could be sunny, raining, or snowing, and the associated outcomes we want to plan for might be to wear sun glasses, bring an umbrella, or wear a heavy coat. The more you work with conditionals, the more you'll notice that we use conditional logic in real life all of the time!
 ## Events Vs. Conditionals
-While conditionals and events can both determine what code is executed and what is not, it is important to recognize that they are used in very different ways.  In everyday conversation, it is common to interchange the words “when” and “if,” as in “If the user presses the button, execute this function.” The English language is tricky. We often say “if” the button is clicked when really we mean “when” a button is clicked. “When” relates to This can cause confusion because “if” has a well-defined meaning in programming.
-How are conditionals (if statements) different from events?
-Here is one way to think about it:
-Events are set up by a programmer, but triggered by the computer at any moment in time.  Events are used when we want to monitor for a particular action ALL OF THE TIME
+While conditionals and events can both determine what code is executed and what is not, it is important to recognize that they are used in very different ways.  In everyday conversation, it is common to interchange the words “when” and “if,” as in “If the user presses the button, execute this function.” The English language is tricky. We often say “if” the button is clicked when really we mean “when” a button is clicked. This can cause confusion because “if” has a well-defined meaning in programming.
+
+
+## How are conditionals (if statements) different from events?
+Here is one way to think about it: Events are set up by a programmer, but triggered by the computer at any moment in time.  Events are used when we want to monitor for a particular action ALL OF THE TIME
 If statements are a way a programmer can have her code make a decision during the normal flow of execution to do one thing or another. Conditionals are only evaluated when they're executed in the code. This means you have to actively check a conditional statement in order to evaluate it.
 
 ## How If-statements work

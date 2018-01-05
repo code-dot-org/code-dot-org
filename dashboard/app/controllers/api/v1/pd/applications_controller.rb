@@ -61,7 +61,14 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
   def cohort_view
     applications = get_applications_by_role(params[:role].to_sym).where(status: 'accepted').where.not(locked_at: nil)
 
-    render json: applications, each_serializer: Api::V1::Pd::ApplicationCohortViewSerializer
+    serializer =
+      if TYPES_BY_ROLE[params[:role].to_sym] == Pd::Application::Facilitator1819Application
+        Api::V1::Pd::FacilitatorApplicationCohortViewSerializer
+      elsif TYPES_BY_ROLE[params[:role].to_sym] == Pd::Application::Teacher1819Application
+        Api::V1::Pd::TeacherApplicationCohortViewSerializer
+      end
+
+    render json: applications, each_serializer: serializer
   end
 
   # PATCH /api/v1/pd/applications/1

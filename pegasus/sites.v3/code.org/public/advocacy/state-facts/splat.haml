@@ -176,7 +176,13 @@ theme: pdf
           = surround "(", "% of" do
             = state_info[:percent_schools_ap_cs_i]
           = state_info[:state_code_s]
-          schools with AP programs) offered an AP Computer Science course in 2016-2017.
+          schools with AP programs) offered an AP Computer Science course in 2016-2017
+          - if state_info[:number_additional_schools_i] != 0
+            , which is
+            = state_info[:number_additional_schools_i]
+            more than the previous year.
+          - else
+            \.
         - else
           No schools in
           = state_info[:state_code_s]
@@ -232,61 +238,71 @@ theme: pdf
       = succeed '.' do
         = state_info[:state_name_s]
     %p
-      - if state_info[:professional_learning_partners_t] == 'none' && (state_info[:num_elementary_trained_i] != 0 || state_info[:num_ecs_csd_i] != 0 || state_info[:num_csp_i] != 0)
-        Code.org
-      - elsif state_info[:professional_learning_partners_t] != 'none'
-        Code.org, its regional partner(s)
-        = succeed "," do
-          = state_info[:professional_learning_partners_t]
-      - if state_info[:num_affiliates_i] != 0
-        and
-        = format_integer_with_commas(state_info[:num_affiliates_i])
-        - if state_info[:num_affiliates_i] == 1
-          facilitator
+      - if state_info[:professional_learning_partners_t] == 'none' && state_info[:num_affiliates_i] == 0
+        Code.org has
+      - elsif state_info[:professional_learning_partners_t] != 'none' && state_info[:num_affiliates_i] == 0
+        Code.org and its regional partner(s)
+        = state_info[:professional_learning_partners_t]
+        have
+      - elsif state_info[:num_affiliates_i] != 0
+        - if state_info[:professional_learning_partners_t] != 'none'
+          Code.org, its regional partner(s)
+          = succeed "," do
+            = state_info[:professional_learning_partners_t]
+          and 
+          = format_integer_with_commas(state_info[:num_affiliates_i])
+          - if state_info[:num_affiliates_i] == 1
+            facilitator has
+          - else
+            facilitators have
         - else
-          facilitators
-        have provided professional learning for 
-        = format_integer_with_commas(state_info[:num_elementary_trained_i])
-        - if state_info[:num_elementary_trained_i] == 1
-          teacher
-        - else
-          teachers
-        in CS Fundamentals (K-5)
-        - if state_info[:num_ecs_csd_i] != 0
-          - if state_info[:num_csp_i] == 0
-            and
-            = format_integer_with_commas(state_info[:num_ecs_csd_i])
-            - if state_info[:num_ecs_csd_i] == 1
-              teacher
-            -else 
-              teachers
-            in Exploring Computer Science or Computer Science Discoveries
-          - else 
-            , 
-            = format_integer_with_commas(state_info[:num_ecs_csd_i])
-            - if state_info[:num_ecs_csd_i] == 1
-              teacher
-            -else 
-              teachers
-            in Exploring Computer Science or Computer Science Discoveries, and
-            = format_integer_with_commas(state_info[:num_csp_i])
-            - if state_info[:num_csp_i] == 1
-              teacher
-            -else 
-              teachers
-            in Computer Science Principles
-        - elsif state_info[:num_csp_i] != 0 
+          Code.org and
+          = format_integer_with_commas(state_info[:num_affiliates_i])
+          - if state_info[:num_affiliates_i] == 1
+            facilitator has
+          - else
+            facilitators have
+      provided professional learning for 
+      = format_integer_with_commas(state_info[:num_elementary_trained_i])
+      - if state_info[:num_elementary_trained_i] == 1
+        teacher
+      - else
+        teachers
+      in CS Fundamentals (K-5)
+      - if state_info[:num_ecs_csd_i] != 0
+        - if state_info[:num_csp_i] == 0
           and
+          = format_integer_with_commas(state_info[:num_ecs_csd_i])
+          - if state_info[:num_ecs_csd_i] == 1
+            teacher
+          -else 
+            teachers
+          in Exploring Computer Science or Computer Science Discoveries
+        - else 
+          , 
+          = format_integer_with_commas(state_info[:num_ecs_csd_i])
+          - if state_info[:num_ecs_csd_i] == 1
+            teacher
+          -else 
+            teachers
+          in Exploring Computer Science or Computer Science Discoveries, and
           = format_integer_with_commas(state_info[:num_csp_i])
           - if state_info[:num_csp_i] == 1
             teacher
-          - else
+          -else 
             teachers
           in Computer Science Principles
-      - if state_info[:professional_learning_partners_t] != 'none' || state_info[:num_affiliates_i] != 0
-        in 
-        = succeed "." do
-          = state_info[:state_name_s]
+      - elsif state_info[:num_csp_i] != 0 
+        and
+        = format_integer_with_commas(state_info[:num_csp_i])
+        - if state_info[:num_csp_i] == 1
+          teacher
+        - else
+          teachers
+        in Computer Science Principles 
+      in 
+      = succeed "." do
+        = state_info[:state_name_s]
     %p
       - if state_info[:other_partners_t] != 'none'
         Code.org has a partnership with 

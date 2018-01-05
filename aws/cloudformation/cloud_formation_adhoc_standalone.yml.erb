@@ -58,7 +58,7 @@ Resources:
     Type: AWS::EC2::Instance
     CreationPolicy:
       ResourceSignal:
-        Timeout: PT60M
+        Timeout: PT2H
     Properties:
       ImageId: <%=image_id%>
       InstanceType: <%=INSTANCE_TYPE%>

@@ -282,7 +282,7 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
                 One five-day, in-person summer workshop in 2018
               </li>
               <li>
-                Four one-day, in-person local workshops during the 2018 - 19 school year (typically held on Saturdays)
+                Up to four one-day, in-person local workshops during the 2018 - 19 school year (typically held on Saturdays)
               </li>
             </ul>
           </strong>
