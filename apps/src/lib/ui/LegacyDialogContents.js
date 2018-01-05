@@ -7,7 +7,7 @@ import React, { PropTypes } from 'react';
 import i18n from '@cdo/locale';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 
-export const SingleLevelGroupDialog = ({id, title, body}) => (
+const SingleLevelGroupDialog = ({id, title, body}) => (
   <ProtectedStatefulDiv id={id}>
     <div className="modal-content no-modal-icon">
       <p className="dialog-title">{title}</p>
@@ -26,6 +26,22 @@ SingleLevelGroupDialog.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
 };
+
+export const IncompleteDialog = (
+  <SingleLevelGroupDialog
+    id="levelgroup-submit-incomplete-dialogcontent"
+    title={i18n.submitAssessment()}
+    body={i18n.submittableIncomplete()}
+  />
+);
+
+export const CompleteDialog = (
+  <SingleLevelGroupDialog
+    id="levelgroup-submit-complete-dialogcontent"
+    title={i18n.submitAssessment()}
+    body={i18n.submittableComplete()}
+  />
+);
 
 export const UnsubmitDialog = (
   <SingleLevelGroupDialog
