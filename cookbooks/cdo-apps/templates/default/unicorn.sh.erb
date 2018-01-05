@@ -110,11 +110,12 @@ upgrade)
         then
                 # Wait $UPGRADE_DELAY seconds for the PID file to contain the new PID.
                 n=$UPGRADE_DELAY
-                until test $n -lt 0 ||
+                until test $n -lt 0 || (
                       test -s $PID &&
                       new_pid=$(cat $PID 2>&-) &&
                       test x"$new_pid" != x"$cur_pid" &&
                       kill -0 "$new_pid"
+                )
                 do
                         printf '.' && sleep 1 && n=$(( $n - 1 ))
                 done

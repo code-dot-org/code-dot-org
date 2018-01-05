@@ -502,7 +502,7 @@ module Pd::Application
         # If any are No, applicant does not meet criteria
         NO
       else
-        'Incomplete'
+        'Reviewing incomplete'
       end
     end
 
