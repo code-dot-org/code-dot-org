@@ -11,14 +11,14 @@ class CurriculumProxyController < ApplicationController
 
   def get
     full_route = URI.parse(request.original_url).path
-    if params[:docs_route]
+    if request.path.start_with?('/docs')
       # request.original_url will look something like https://studio.code.org/docs/csd/maker_leds/index.html
       # We want to redirect them to https://docs.code.org/csd/maker_leds/index.html
       redirect_route = full_route.sub(/^\/docs/, 'https://docs.code.org')
       allowed_hostname_suffixes = %w(
         docs.code.org
       )
-    elsif params[:curriculum_route]
+    elsif request.path.start_with?('/curriculum')
       redirect_route = full_route.sub(/^\/curriculum/, 'https://curriculum.code.org')
       allowed_hostname_suffixes = %w(
         curriculum.code.org
