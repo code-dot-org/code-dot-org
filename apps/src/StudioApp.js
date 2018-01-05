@@ -269,26 +269,29 @@ StudioApp.prototype.init = function (config) {
 
   this.configureDom(config);
 
-  if (experiments.isEnabled('resourcesTab')){
-    firehoseClient.putRecord(
-      'analysis-events',
-      {
-        study: 'instructions-resources-tab-wip',
-        study_group: 'resources-tab',
-        event: 'resources-tab-load',
-        data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
-      }
-    );
-  } else {
-    firehoseClient.putRecord(
-      'analysis-events',
-      {
-        study: 'instructions-resources-tab-wip',
-        study_group: 'under-app',
-        event: 'under-app-load',
-        data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
-      }
-    );
+  //Only log a page load when there are videos present
+  if (config.level.levelVideos.length > 0){
+    if (experiments.isEnabled('resourcesTab')){
+      firehoseClient.putRecord(
+        'analysis-events',
+        {
+          study: 'instructions-resources-tab-wip',
+          study_group: 'resources-tab',
+          event: 'resources-tab-load',
+          data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
+        }
+      );
+    } else {
+      firehoseClient.putRecord(
+        'analysis-events',
+        {
+          study: 'instructions-resources-tab-wip',
+          study_group: 'under-app',
+          event: 'under-app-load',
+          data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
+        }
+      );
+    }
   }
 
   ReactDOM.render(

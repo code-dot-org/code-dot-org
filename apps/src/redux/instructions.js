@@ -103,8 +103,6 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     });
   }
 
-
-
   if (action.type === TOGGLE_INSTRUCTIONS_COLLAPSED) {
     return Object.assign({}, state, {
       collapsed: !state.collapsed
