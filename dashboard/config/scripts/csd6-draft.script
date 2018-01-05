@@ -206,6 +206,10 @@ level 'CSDU6 - sensors love tester 2', progression: 'Love Tester Project'
 level 'CSDU6 - sensors love tester 3', progression: 'Love Tester Project'
 named_level 'CSDU6 - sensor projects challenge'
 
+stage 'Circuits and Physical Prototypes', flex_category: 'csd6_2'
+level 'CSD U6 circuit predict', progression: 'Simple Circuits'
+level 'CSD U6 circuit pinMode', progression: 'Simple Circuits'
+
 stage 'Project: Prototype an Innovation', flex_category: 'csd6_2'
 level 'CSDU6 - final project 1', progression: 'Project Work'
 level 'CSDU6 - final project 2', progression: 'Project Work'
