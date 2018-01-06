@@ -235,18 +235,6 @@ module Pd::Application
       regional_partner.try(:name)
     end
 
-    def school_name
-      if school
-        school.try(:name).try(:titleize)
-      else
-        sanitize_form_data_hash[:school_name]
-      end
-    end
-
-    def district_name
-      school.try(:school_district).try(:name).try(:titleize)
-    end
-
     def applicant_name
       "#{sanitize_form_data_hash[:first_name]} #{sanitize_form_data_hash[:last_name]}"
     end
@@ -264,15 +252,6 @@ module Pd::Application
 
     def include_additional_text(hash, field_name, *options)
       hash[field_name] = answer_with_additional_text hash, field_name, *options
-    end
-
-    def school
-      school_id = sanitize_form_data_hash[:school].to_i
-      if school_id == -1
-        nil
-      else
-        School.find(school_id)
-      end
     end
   end
 end
