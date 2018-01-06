@@ -90,15 +90,15 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
       dataType: 'json'
     }).done(data => {
       this.loadAlternateWorkshopsRequest = null;
-      const alternateWorkshops = data.reduce((workshops, partner) => {
-        if (partner.id === this.props.data.regionalPartnerId) {
-          return workshops;
-        }
 
-        // Add partner name to workshop data
-        partner.workshops.forEach(w => w.partnerName = partner.name);
-        return workshops.concat(partner.workshops);
-      }, []);
+      const alternateWorkshops = data.reduce((workshops, partner) => (
+        partner.id === this.props.data.regionalPartnerId
+          ? workshops
+          : workshops.concat(
+            // Add partner name to each alternate workshop
+            partner.workshops.map(w => ({...w, partnerName: partner.name}))
+          )
+      ), []);
 
       this.setState({
         loadingAlternateWorkshops: false,
