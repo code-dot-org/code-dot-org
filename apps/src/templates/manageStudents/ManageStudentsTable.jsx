@@ -11,6 +11,7 @@ import QuickActionsCell from "../tables/QuickActionsCell";
 import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
+import ManageStudentsNameCell from './ManageStudentsNameCell';
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -47,13 +48,16 @@ const styles = {
 
 // Cell formatters.
 const nameFormatter = (name, {rowData}) => {
-  const url = `/teacher-dashboard#/sections/${rowData.sectionId}/student/${rowData.id}`;
-  return (<div>
-    <a style={tableLayoutStyles.link} href={url} target="_blank">{name}</a>
-    {rowData.loginType === SectionLoginType.email &&
-      <p>{i18n.usernameLabel() + rowData.username}</p>
-    }
-  </div>);
+  return (
+    <ManageStudentsNameCell
+      id={rowData.id}
+      sectionId={rowData.sectionId}
+      name={name}
+      loginType={rowData.loginType}
+      username={rowData.username}
+      isEditing={false}
+    />
+  );
 };
 
 const ageFormatter = (age, {rowData}) => {
