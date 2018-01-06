@@ -12,6 +12,7 @@ import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import ManageStudentsNameCell from './ManageStudentsNameCell';
+import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -61,9 +62,13 @@ const nameFormatter = (name, {rowData}) => {
 };
 
 const ageFormatter = (age, {rowData}) => {
-  return (<div>
-    {age}
-  </div>);
+  return (
+    <ManageStudentsAgeCell
+      age={age}
+      id={rowData.id}
+      isEditing={false}
+    />
+  );
 };
 
 const genderFormatter = (gender, {rowData}) => {
