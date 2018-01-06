@@ -9,7 +9,6 @@ import RegionalPartnerDropdown from './regional_partner_dropdown';
 import Spinner from '../components/spinner';
 import {
   UnmatchedFilter,
-  UnmatchedLabel,
   RegionalPartnerDropdownOptions as dropdownOptions
 } from './constants';
 import $ from 'jquery';
@@ -37,7 +36,7 @@ export class Summary extends React.Component {
 
   load(selected = null) {
     let url = '/api/v1/pd/applications';
-    if (this.props.regionalPartnerName === UnmatchedLabel) {
+    if (this.props.isWorkshopAdmin) {
       const regionalPartnerFilter = selected ? selected.value : null;
       const regionalPartnerName = selected ? selected.label : this.props.regionalPartnerName;
       this.setState({ regionalPartnerName, regionalPartnerFilter });

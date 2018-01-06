@@ -6,7 +6,6 @@ import {Button} from 'react-bootstrap';
 import _ from 'lodash';
 import {
   StatusColors,
-  UnmatchedLabel,
   UnmatchedFilter,
   AllPartnersFilter
 } from './constants';
@@ -41,7 +40,8 @@ export class QuickViewTable extends React.Component {
       PropTypes.number
     ]),
     regionalPartnerName: PropTypes.string,
-    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
+    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
+    isWorkshopAdmin: PropTypes.bool
   };
 
   static contextTypes = {
@@ -196,13 +196,11 @@ export class QuickViewTable extends React.Component {
 
   constructRows() {
     let rows = this.props.data;
-    if (this.props.regionalPartnerName === UnmatchedLabel) {
-      if (this.props.regionalPartnerFilter !== AllPartnersFilter) {
-        if (this.props.regionalPartnerFilter === UnmatchedFilter || this.props.regionalPartnerFilter === null) {
-          rows = rows.filter(row => row.regional_partner_id === null);
-        } else {
-          rows = rows.filter(row => row.regional_partner_id === this.props.regionalPartnerFilter);
-        }
+    if (this.props.isWorkshopAdmin && this.props.regionalPartnerFilter !== AllPartnersFilter) {
+      if (this.props.regionalPartnerFilter === UnmatchedFilter || this.props.regionalPartnerFilter === null) {
+        rows = rows.filter(row => row.regional_partner_id === null);
+      } else {
+        rows = rows.filter(row => row.regional_partner_id === this.props.regionalPartnerFilter);
       }
     }
     rows = this.props.statusFilter ? rows.filter(row => row.status === this.props.statusFilter) : rows;
@@ -228,4 +226,5 @@ export class QuickViewTable extends React.Component {
 
 export default connect(state => ({
   showLocked: state.permissions.lockApplication,
+  isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(QuickViewTable);
