@@ -235,6 +235,14 @@ module Pd::Application
       regional_partner.try(:name)
     end
 
+    def school_name
+      user.try(:school_info).try(:effective_school_name).try(:titleize)
+    end
+
+    def district_name
+      user.try(:school_info).try(:effective_school_district_name).try(:titleize)
+    end
+
     def applicant_name
       "#{sanitize_form_data_hash[:first_name]} #{sanitize_form_data_hash[:last_name]}"
     end
