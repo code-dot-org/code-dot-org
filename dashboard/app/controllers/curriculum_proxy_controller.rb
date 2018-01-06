@@ -9,28 +9,23 @@ class CurriculumProxyController < ApplicationController
 
   EXPIRY_TIME = 30.minutes
 
-  def get
-    full_route = URI.parse(request.original_url).path
-    if request.path.start_with?('/docs')
-      # request.original_url will look something like https://studio.code.org/docs/csd/maker_leds/index.html
-      # We want to redirect them to https://docs.code.org/csd/maker_leds/index.html
-      redirect_route = full_route.sub(/^\/docs/, 'https://docs.code.org')
-      allowed_hostname_suffixes = %w(
-        docs.code.org
-      )
-    elsif request.path.start_with?('/curriculum')
-      redirect_route = full_route.sub(/^\/curriculum/, 'https://curriculum.code.org')
-      allowed_hostname_suffixes = %w(
-        curriculum.code.org
-      )
-    else
-      render_500
-    end
-
+  # Proxy from studio.code.org/docs/foo to docs.code.org/foo
+  def get_doc
     render_proxied_url(
-      redirect_route,
+      URI.parse(request.original_url).path.sub(/^\/docs/, 'https://docs.code.org'),
       allowed_content_types: nil,
-      allowed_hostname_suffixes: allowed_hostname_suffixes,
+      allowed_hostname_suffixes: %w(docs.code.org),
+      expiry_time: EXPIRY_TIME,
+      infer_content_type: true
+    )
+  end
+
+  # Proxy from studio.code.org/curriculum/foo to curriculum.code.org/foo
+  def get_curriculum
+    render_proxied_url(
+      URI.parse(request.original_url).path.sub(/^\/curriculum/, 'https://curriculum.code.org'),
+      allowed_content_types: nil,
+      allowed_hostname_suffixes: %w(curriculum.code.org),
       expiry_time: EXPIRY_TIME,
       infer_content_type: true
     )
