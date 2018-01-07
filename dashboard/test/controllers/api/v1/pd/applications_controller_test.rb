@@ -253,7 +253,7 @@ module Api::V1::Pd
       time = Date.new(2017, 3, 15)
 
       Timecop.freeze(time) do
-        workshop = create :pd_workshop, location_address: '1 Bills Drive, Orchard Park NY'
+        workshop = create :pd_workshop, processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
         application = create(
