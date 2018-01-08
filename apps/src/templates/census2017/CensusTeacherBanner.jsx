@@ -345,8 +345,21 @@ export default class CensusTeacherBanner extends Component {
       );
       buttons = (
         <div style={styles.buttonDiv}>
-          <Button onClick={this.props.onPostpone} style={styles.button} color="gray" size="large" text="Not now" />
-          <Button onClick={this.props.onPostpone} href={pegasus('/yourschool')} style={styles.button} size="large" text="Take the survey" />
+          <Button
+            onClick={this.props.onPostpone}
+            style={styles.button}
+            color="gray"
+            size="large"
+            text="Not now"
+          />
+          <Button
+            onClick={this.props.onPostpone}
+            href={pegasus('/yourschool')}
+            target="_blank"
+            style={styles.button}
+            size="large"
+            text="Take the survey"
+          />
         </div>
       );
     }
