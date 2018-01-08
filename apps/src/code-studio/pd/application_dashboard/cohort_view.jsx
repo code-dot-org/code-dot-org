@@ -67,8 +67,6 @@ class CohortView extends React.Component{
   };
 
   render() {
-    console.log(this.state.regionalPartnerName);
-
     if (this.state.loading) {
       return (
         <Spinner/>
@@ -98,6 +96,5 @@ class CohortView extends React.Component{
 
 export default connect(state => ({
   regionalPartnerName: state.regionalPartnerName,
-  regionalPartners: state.regionalPartners,
   isWorkshopAdmin: state.permissions.workshopAdmin
 }))(CohortView);
