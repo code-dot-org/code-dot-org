@@ -1,8 +1,8 @@
 /* script used to manually create metrics table on dev-internal db */
 CREATE TABLE metrics
 (
-	id INT NOT NULL AUTO_INCREMENT,
-	created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    id INT NOT NULL AUTO_INCREMENT,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     name VARCHAR(512) NOT NULL,
     metadata VARCHAR(512),
     value double,
