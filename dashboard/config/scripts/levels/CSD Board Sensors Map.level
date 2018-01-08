@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Analog Sensors",
-    "reference": "/csd/maker_sensors/index.html"
+    "reference": "/docs/csd/maker_sensors/index.html"
   },
   "published": true,
   "notes": ""

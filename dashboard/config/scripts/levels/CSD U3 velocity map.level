@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Sprite Velocity",
-    "reference": "/csd/velocity/index.html"
+    "reference": "/docs/csd/velocity/index.html"
   },
   "published": true,
   "notes": "",
