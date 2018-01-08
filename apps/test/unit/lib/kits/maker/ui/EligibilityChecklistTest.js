@@ -178,4 +178,32 @@ describe('EligibilityChecklist', () => {
     );
     assert.equal(wrapper.find('div').last().text(), i18n.eligibilityReqYearFail());
   });
+
+  it('shows discount message when partial discount', () => {
+    const wrapper = shallow(
+      <EligibilityChecklist
+        {...defaultProps}
+        unit6Intention="yes1718"
+        schoolId="12345"
+        schoolName="Code.org Junior Academy"
+        hasConfirmedSchool={true}
+        getsFullDiscount={false}
+      />
+    );
+    assert(wrapper.text().includes("According to our data, your school has fewer than 50% of students"));
+  });
+
+  it('does not show discount message when full discount', () => {
+    const wrapper = shallow(
+      <EligibilityChecklist
+        {...defaultProps}
+        unit6Intention="yes1718"
+        schoolId="12345"
+        schoolName="Code.org Junior Academy"
+        hasConfirmedSchool={true}
+        getsFullDiscount={true}
+      />
+    );
+    assert(!wrapper.text().includes("According to our data, your school has fewer than 50% of students"));
+  });
 });

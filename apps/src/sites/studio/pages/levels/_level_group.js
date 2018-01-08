@@ -18,7 +18,7 @@ $(document).ready(() => {
   window.levelData = levelData;
 
   if (initData) {
-    window.initLevelGroup(
+    initLevelGroup(
       initData.total_level_count,
       initData.page,
       initData.last_attempt
@@ -26,7 +26,7 @@ $(document).ready(() => {
   }
 });
 
-window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
+function initLevelGroup(levelCount, currentPage, lastAttempt) {
 
   // Whenever an embedded level notifies us that the user has made a change,
   // check for any changes in the response set, and if so, attempt to save
@@ -212,4 +212,4 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
   $(".previousPageButton").click(function (event) {
     gotoPage(currentPage-1);
   });
-};
+}

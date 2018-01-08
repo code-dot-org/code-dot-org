@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Circuit Playground: Color LEDs",
-    "reference": "/csd/maker_rgbleds/index.html"
+    "reference": "/docs/csd/maker_rgbleds/index.html"
   },
   "published": true,
   "notes": ""
