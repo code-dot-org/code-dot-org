@@ -53,8 +53,8 @@ describe("DetailViewContents", () => {
     });
 
     it("Uses entered value for facilitator applications with notes", () => {
-      const teacherDetailView = mountDetailView('Facilitator', {notes: "actual notes"});
-      expect(teacherDetailView.state().notes).to.eql("actual notes");
+      const facilitatorDetailView = mountDetailView('Facilitator', {notes: "actual notes"});
+      expect(facilitatorDetailView.state().notes).to.eql("actual notes");
     });
 
     it("Does not supply value for teacher applications with no notes", () => {
