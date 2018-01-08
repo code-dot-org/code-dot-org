@@ -23,20 +23,23 @@ class ManageStudentNameCell extends Component {
 
   render() {
     const {id, sectionId, name, loginType, username} = this.props;
-    const url = `/teacher-dashboard#/sections/${sectionId}/student/${id}`;
     return (
       <div>
-        {
-          !this.props.isEditing &&
+        {!this.props.isEditing &&
           <div>
-            <a style={tableLayoutStyles.link} href={url} target="_blank">{name}</a>
+            <a
+              style={tableLayoutStyles.link}
+              href={`/teacher-dashboard#/sections/${sectionId}/student/${id}`}
+              target="_blank"
+            >
+              {name}
+            </a>
             {loginType === SectionLoginType.email &&
               <p>{i18n.usernameLabel() + username}</p>
             }
           </div>
         }
-        {
-          this.props.isEditing &&
+        {this.props.isEditing &&
           <input value={this.state.nameValue} onChange={this.onChangeName}/>
         }
       </div>

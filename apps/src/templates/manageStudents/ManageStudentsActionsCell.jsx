@@ -20,26 +20,24 @@ class ManageStudentActionsCell extends Component {
   render() {
     return (
       <div>
-        {
-          !this.props.isEditing &&
+        {!this.props.isEditing &&
           <QuickActionsCell>
             <PopUpMenu.Item
               onClick={() => {}}
             >
-              {"Edit"}
+              Edit
             </PopUpMenu.Item>
             <MenuBreak/>
             <PopUpMenu.Item
               onClick={()=>{}}
               color={color.red}
             >
-              <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
-              {"Remove student"}
+              <FontAwesome icon="times-circle" style={styles.xIcon}/>
+              Remove student
             </PopUpMenu.Item>
           </QuickActionsCell>
         }
-        {
-          this.props.isEditing &&
+        {this.props.isEditing &&
           <div>
             <Button onClick={() => {}} color={Button.ButtonColor.white} text={"Save"} />
             <Button onClick={() => {}} color={Button.ButtonColor.blue} text={"Cancel"} />
