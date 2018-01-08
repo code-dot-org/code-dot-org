@@ -688,8 +688,8 @@ module Pd::Application
     end
 
     def school
-      school_id = sanitize_form_data_hash[:school].to_i
-      if school_id == -1
+      school_id = sanitize_form_data_hash[:school]
+      if school_id == '-1'
         nil
       else
         School.find(school_id)
