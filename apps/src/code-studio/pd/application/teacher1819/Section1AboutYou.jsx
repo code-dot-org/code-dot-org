@@ -84,7 +84,7 @@ export default class Section1AboutYou extends ApplicationFormComponent {
           </strong>
         </p>
         <p>
-          If you need more information on the program before you apply,
+          If you need more information about the program before you apply,
           please visit
           {' '}<a href={CSD_URL} target="_blank">CS Discoveries</a>{' '}
           and
