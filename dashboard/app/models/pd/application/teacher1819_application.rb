@@ -67,6 +67,17 @@ module Pd::Application
           Pd::Application::Teacher1819ApplicationMailer.teachercon_accepted(self).deliver_now
         elsif workshop.local_summer?
           Pd::Application::Teacher1819ApplicationMailer.local_summer_accepted(self).deliver_now
+        else
+          # Applications should only ever be associated with a workshop that
+          # falls into one of the above two categories, but if a mistake was
+          # made, notify honeybadger
+          Honeybadger.notify(
+            error_message: 'Accepted application has invalid workshop',
+            context: {
+              application_id: id,
+              pd_workshop_id: pd_workshop_id,
+            }
+          )
         end
       else
         Pd::Application::Teacher1819ApplicationMailer.send(status, self).deliver_now
