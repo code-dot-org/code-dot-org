@@ -5,10 +5,10 @@ import i18n from "@cdo/locale";
 
 class ManageStudentNameCell extends Component {
   static propTypes = {
-    id: PropTypes.number,
+    id: PropTypes.number.isRequired,
     sectionId: PropTypes.number,
-    name: PropTypes.string,
-    loginType: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    loginType: PropTypes.string.isRequired,
     username: PropTypes.string,
     isEditing: PropTypes.bool,
   };

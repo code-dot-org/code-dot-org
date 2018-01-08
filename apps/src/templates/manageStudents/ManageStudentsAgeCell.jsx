@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 
 class ManageStudentAgeCell extends Component {
   static propTypes = {
-    id: PropTypes.number,
+    id: PropTypes.number.isRequired,
     age: PropTypes.number,
     isEditing: PropTypes.bool,
   };

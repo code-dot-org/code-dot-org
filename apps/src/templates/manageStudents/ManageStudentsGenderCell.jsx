@@ -8,7 +8,7 @@ const GENDERS = {
 
 class ManageStudentGenderCell extends Component {
   static propTypes = {
-    id: PropTypes.number,
+    id: PropTypes.number.isRequired,
     gender: PropTypes.string,
     isEditing: PropTypes.bool,
   };
