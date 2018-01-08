@@ -117,8 +117,8 @@ module Pd::Application
     # override
     def lock!
       return if locked?
-      super.lock!
-      enroll_user
+      super
+      enroll_user if status == "accepted"
     end
 
     def enroll_user
