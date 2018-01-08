@@ -34,6 +34,8 @@ const styles = {
   }
 };
 
+const DEFAULT_NOTES = "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:";
+
 export class DetailViewContents extends React.Component {
   static propTypes = {
     canLock: PropTypes.bool,
@@ -61,7 +63,7 @@ export class DetailViewContents extends React.Component {
   state = {
     status: this.props.applicationData.status,
     locked: this.props.applicationData.locked,
-    notes: this.props.applicationData.notes || "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:",
+    notes: this.props.applicationData.notes,
     response_scores: this.props.applicationData.response_scores || {},
     editing: false,
     regional_partner_name: this.props.applicationData.regional_partner_name || UnmatchedLabel,
@@ -70,6 +72,9 @@ export class DetailViewContents extends React.Component {
 
   componentWillMount() {
     this.statuses = ApplicationStatuses[this.props.viewType];
+    if (this.props.applicationData.application_type === 'Facilitator' && !this.props.applicationData.notes) {
+      this.setState({notes: DEFAULT_NOTES});
+    }
   }
 
   handleCancelEditClick = () => {
