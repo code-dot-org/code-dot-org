@@ -3,10 +3,7 @@
 .wrapper
   = view :unsupported_browser
   -unless header['theme'] == 'responsive_wide'
-    - if request.site == 'code.org'
-      = view :header2
-    - else
-      = view :header
+    = view :header
 
   -containerClass = "container_fullwidth"
 

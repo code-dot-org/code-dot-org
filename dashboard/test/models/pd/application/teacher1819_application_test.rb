@@ -58,7 +58,7 @@ module Pd::Application
       teacher_application = build :pd_teacher1819_application, response_scores: {
         committed: 'Yes'
       }.to_json
-      assert_equal 'Incomplete', teacher_application.meets_criteria
+      assert_equal 'Reviewing incomplete', teacher_application.meets_criteria
     end
 
     test 'total score calculates the sum of all response scores' do
@@ -341,7 +341,8 @@ module Pd::Application
       Pd::Application::Teacher1819ApplicationMailer.expects(:unreviewed).times(0)
       Pd::Application::Teacher1819ApplicationMailer.expects(:withdrawn).times(0)
 
-      Pd::Application::Teacher1819ApplicationMailer.expects(:accepted).times(0).returns(mock_mail)
+      Pd::Application::Teacher1819ApplicationMailer.expects(:teachercon_accepted).times(0).returns(mock_mail)
+      Pd::Application::Teacher1819ApplicationMailer.expects(:local_summer_accepted).times(0).returns(mock_mail)
       Pd::Application::Teacher1819ApplicationMailer.expects(:declined).times(1).returns(mock_mail)
       Pd::Application::Teacher1819ApplicationMailer.expects(:waitlisted).times(1).returns(mock_mail)
 
@@ -350,6 +351,24 @@ module Pd::Application
         application.update(status: status)
         application.send_decision_notification_email
       end
+    end
+
+    test 'send_decision_notification_email only send acceptances if there is an associated workshop' do
+      Pd::Workshop.any_instance.stubs(:process_location)
+
+      mock_mail = stub
+      mock_mail.stubs(:deliver_now).returns(nil)
+
+      application = create :pd_teacher1819_application
+      application.update(status: 'accepted')
+      Pd::Application::Teacher1819ApplicationMailer.expects(:teachercon_accepted).times(0).returns(mock_mail)
+      application.send_decision_notification_email
+
+      workshop = create(:pd_workshop, :teachercon, location_address: "Seattle, Washington")
+      application.pd_workshop_id = workshop.id
+      assert workshop.teachercon?
+      Pd::Application::Teacher1819ApplicationMailer.expects(:teachercon_accepted).times(1).returns(mock_mail)
+      application.send_decision_notification_email
     end
 
     test 'accepted_at updates times' do
