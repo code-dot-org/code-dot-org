@@ -45,7 +45,6 @@ class CohortView extends React.Component{
       const regionalPartnerFilter = selected ? selected.value : this.state.regionalPartnerFilter;
       const regionalPartnerName = selected ? selected.label : this.state.regionalPartnerName;
       this.setState({ regionalPartnerName, regionalPartnerFilter });
-      console.log(regionalPartnerName);
 
       url += `&regional_partner_filter=${regionalPartnerFilter}`;
     }
@@ -68,8 +67,6 @@ class CohortView extends React.Component{
   };
 
   render() {
-    console.log(this.state.regionalPartnerName);
-
     if (this.state.loading) {
       return (
         <Spinner/>
@@ -99,6 +96,5 @@ class CohortView extends React.Component{
 
 export default connect(state => ({
   regionalPartnerName: state.regionalPartnerName,
-  regionalPartners: state.regionalPartners,
   isWorkshopAdmin: state.permissions.workshopAdmin
 }))(CohortView);
