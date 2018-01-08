@@ -1,23 +1,4 @@
 AWSTemplateFormatVersion: 2010-09-09
-Metadata:
-  'AWS::CloudFormation::Designer':
-    c7e1256e-46a8-43e1-bbf5-d155c46c8300:
-      size:
-        width: 60
-        height: 60
-      position:
-        x: 470
-        'y': 150
-      z: 0
-      embeds: []
-    a0d5acf4-dd8b-4b19-825f-e8d569f7502d:
-      size:
-        width: 60
-        height: 60
-      position:
-        x: 300
-        'y': 150
-      z: 0
 Resources:
   VerifyDatabaseLambdaRole:
     Type: 'AWS::IAM::Role'
@@ -43,20 +24,27 @@ Resources:
                   - 'logs:CreateLogStream'
                   - 'logs:PutLogEvents'
                 Resource: 'arn:aws:logs:*:*:*'
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: c7e1256e-46a8-43e1-bbf5-d155c46c8300
   RestoreDatabaseCopyForVerification:
     Type: 'AWS::Lambda::Function'
     Properties:
       Description: 'Restore Database from Snapshot copied from primary Account so it can be verified by a separate Lambda.'
       FunctionName: RestoreDatabaseCopyForVerification
       Code:
-        var foo = bar;
+        S3Bucket: cdo-secondary-dist
+        S3Key: restore-database-copy-for-verification.zip
       Handler: index.handler
       Runtime: nodejs6.10
       Timeout: 30
       Role: !GetAtt VerifyDatabaseLambdaRole.Arn
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: a0d5acf4-dd8b-4b19-825f-e8d569f7502d
+      Environment:
+        Variables:
+          DB_PORT: '3306'
+          DB_ENGINE: mysql
+          DB_LICENSE_MODEL: general-public-license
+          DB_SUBNET_GROUP_NAME: default
+          DB_SNAPSHOT_IDENTIFIER_PREFIX: production
+          DB_AVAILABILITY_ZONE: us-east-1f
+          DB_INSTANCE_CLASS: db.t2.medium
+          DB_INSTANCE_IDENTIFIER: verification-copy
+          DB_OPTION_GROUP_NAME: 'default:mysql-5-6'
+          DB_STORAGE_TYPE: gp2
