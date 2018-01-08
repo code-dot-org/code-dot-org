@@ -13,7 +13,7 @@ const styles = {
 
 class ManageStudentActionsCell extends Component {
   static propTypes = {
-    id: PropTypes.number,
+    id: PropTypes.number.isRequired,
     isEditing: PropTypes.bool,
   };
 
