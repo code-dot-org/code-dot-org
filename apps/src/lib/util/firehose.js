@@ -2,6 +2,7 @@
 
 import AWS from 'aws-sdk';
 import {createUuid, trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
+import {getStore} from '@cdo/apps/redux';
 
 /**
  * A barebones client for posting data to an AWS Firehose stream.
@@ -142,13 +143,28 @@ class FirehoseClient {
   /**
    * Merge various key-value pairs into data.
    * @param {hash} data The data to add the key-value pairs to.
+   * @option {boolean} includeUserId Include userId in records, if signed in
    * @return {hash} The data, including the newly added key-value pairs.
    */
-  addCommonValues(data) {
+  addCommonValues(data, includeUserId) {
     data['created_at'] = new Date().toISOString();
     data['environment'] = this.getEnvironment();
     data['uuid'] = this.getAnalyticsUuid();
     data['device'] = JSON.stringify(this.getDeviceInfo());
+
+    const state = getStore().getState();
+    if (includeUserId) {
+      const constants = state.pageConstants;
+      if (constants) {
+        data['user_id'] = constants.userId;
+      }
+    }
+    const progress = state.progress;
+    if (progress) {
+      data['scriptId'] = progress.scriptId;
+      data['stageId'] = progress.currentStageId;
+      data['levelId'] = progress.currentLevelId;
+    }
 
     return data;
   }
@@ -159,10 +175,12 @@ class FirehoseClient {
    * @param {hash} data The data to push.
    * @param {hash} options Additional (optional) options.
    *   (default {alwaysPut: false})
-   * @option options [String] alwaysPut Forces the record to be sent.
+   * @option options [boolean] alwaysPut Forces the record to be sent.
+   * @option options [boolean] includeUserId Include userId in records, if signed in
+   * @option options [function(err, data)] callback Invoked upon completion with error or data
    */
-  putRecord(deliveryStreamName, data, options = {alwaysPut: false, callback: null}) {
-    data = this.addCommonValues(data);
+  putRecord(deliveryStreamName, data, options = {alwaysPut: false, includeUserId: false, callback: null}) {
+    data = this.addCommonValues(data, options.includeUserId);
     if (!this.shouldPutRecord(options['alwaysPut'])) {
       console.groupCollapsed("Skipped sending record to " + deliveryStreamName);
       console.log(data);
@@ -194,10 +212,11 @@ class FirehoseClient {
    * @param {array[hash]} data The data to push.
    * @param {hash} options Additional (optional) options.
    *   (default {alwaysPut: false})
-   * @option options [String] alwaysPut Forces the record to be sent.
+   * @option options [boolean] alwaysPut Forces the record to be sent.
+   * @option options [boolean] includeUserId Include userId in records, if signed in
    */
-  putRecordBatch(deliveryStreamName, data, options = {alwaysPut: false}) {
-    data.map(function (record) { return this.AddCommonValues(record); });
+  putRecordBatch(deliveryStreamName, data, options = {alwaysPut: false, includeUserId: false}) {
+    data.map(function (record) { return this.AddCommonValues(record, options.includeUserId); });
 
     if (!this.shouldPutRecord(options['alwaysPut'])) {
       console.groupCollapsed("Skipped sending record batch to " + deliveryStreamName);
