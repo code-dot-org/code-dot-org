@@ -45,7 +45,6 @@ class CohortView extends React.Component{
       const regionalPartnerFilter = selected ? selected.value : this.state.regionalPartnerFilter;
       const regionalPartnerName = selected ? selected.label : this.state.regionalPartnerName;
       this.setState({ regionalPartnerName, regionalPartnerFilter });
-      console.log(regionalPartnerName);
 
       url += `&regional_partner_filter=${regionalPartnerFilter}`;
     }
