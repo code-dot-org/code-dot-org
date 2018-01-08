@@ -39,8 +39,8 @@ class ManageStudentActionsCell extends Component {
         }
         {this.props.isEditing &&
           <div>
-            <Button onClick={() => {}} color={Button.ButtonColor.white} text={"Save"} />
-            <Button onClick={() => {}} color={Button.ButtonColor.blue} text={"Cancel"} />
+            <Button onClick={() => {}} color={Button.ButtonColor.white} text="Save" />
+            <Button onClick={() => {}} color={Button.ButtonColor.blue} text="Cancel" />
           </div>
         }
       </div>

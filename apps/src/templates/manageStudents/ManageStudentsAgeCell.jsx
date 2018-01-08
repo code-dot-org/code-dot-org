@@ -27,7 +27,6 @@ class ManageStudentAgeCell extends Component {
         }
         {this.props.isEditing &&
           <select
-            ref={element => this.root = element}
             name="age"
             value={this.state.ageValue}
             onChange={this.onChangeAge}
