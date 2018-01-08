@@ -55,14 +55,33 @@ module Pd::Application
       # all other states shouldn't need emails
       return unless %w(accepted declined waitlisted).include?(status)
 
-      # TODO: elijah - enable acceptance emails
-      # The template for the acceptance email is unfinished, and will need the
-      # workshop assignment work to be done before being unblocked (since the
-      # content of the email not only depends on which kind of workshop they end
-      # up with, but also references the specific workshop dates)
-      return if status == "accepted"
+      if status == "accepted"
+        # Acceptance emails need to be handled specially, since they not only
+        # require an associated workshop but also come in two flavors depending
+        # on the nature of the workshop
+        return unless pd_workshop_id
 
-      Pd::Application::Teacher1819ApplicationMailer.send(status, self).deliver_now
+        workshop = Pd::Workshop.find(pd_workshop_id)
+
+        if workshop.teachercon?
+          Pd::Application::Teacher1819ApplicationMailer.teachercon_accepted(self).deliver_now
+        elsif workshop.local_summer?
+          Pd::Application::Teacher1819ApplicationMailer.local_summer_accepted(self).deliver_now
+        else
+          # Applications should only ever be associated with a workshop that
+          # falls into one of the above two categories, but if a mistake was
+          # made, notify honeybadger
+          Honeybadger.notify(
+            error_message: 'Accepted application has invalid workshop',
+            context: {
+              application_id: id,
+              pd_workshop_id: pd_workshop_id,
+            }
+          )
+        end
+      else
+        Pd::Application::Teacher1819ApplicationMailer.send(status, self).deliver_now
+      end
       update!(decision_notification_email_sent_at: Time.zone.now)
     end
 
@@ -414,6 +433,52 @@ module Pd::Application
       sanitize_form_data_hash[:state]
     end
 
+    def district_name
+      school.try(:school_district).try(:name).try(:titleize)
+    end
+
+    def school_name
+      school ? school.name.try(:titleize) : sanitize_form_data_hash[:school_name]
+    end
+
+    def school_zip_code
+      school ? school.zip : sanitize_form_data_hash[:zip_code]
+    end
+
+    def school_state
+      if school
+        school.state.try(:upcase)
+      else
+        STATE_ABBR_WITH_DC_HASH.key(sanitize_form_data_hash[:state]).try(:to_s)
+      end
+    end
+
+    def school_city
+      school ? school.city.try(:titleize) : sanitize_form_data_hash[:city]
+    end
+
+    def school_address
+      if school
+        address = ""
+        [
+          school.address_line1,
+          school.address_line2,
+          school.address_line3
+        ].each do |line|
+          if line
+            address << line << " "
+          end
+        end
+        address.titleize
+      else
+        sanitize_form_data_hash[:address]
+      end
+    end
+
+    def school_type
+      school ? school.try(:school_type).try(:titleize) : sanitize_form_data_hash[:school_type]
+    end
+
     def first_name
       hash = sanitize_form_data_hash
       hash[:preferred_first_name] || hash[:first_name]
@@ -565,7 +630,21 @@ module Pd::Application
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
         columns = filtered_labels(course).values.map {|l| markdown.render(l)}
-        columns.push 'Status', 'Principal Approval', 'Meets Criteria', 'Total Score', 'Notes', 'Regional Partner'
+        columns.push(
+          'Status',
+          'Principal Approval',
+          'Meets Criteria',
+          'Total Score',
+          'Notes',
+          'Regional Partner',
+          'School District',
+          'School',
+          'School Type',
+          'School Address',
+          'School City',
+          'School State',
+          'School Zip Code'
+        )
         csv << columns
       end
     end
@@ -575,7 +654,21 @@ module Pd::Application
       answers = full_answers
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
-        row.push status, principal_approval, meets_criteria, total_score, notes, regional_partner_name
+        row.push(
+          status,
+          principal_approval,
+          meets_criteria,
+          total_score,
+          notes,
+          regional_partner_name,
+          district_name,
+          school_name,
+          school_type,
+          school_address,
+          school_city,
+          school_state,
+          school_zip_code
+        )
         csv << row
       end
     end
@@ -598,6 +691,10 @@ module Pd::Application
           :csd_terms_per_year
         ]
       )
+      # school contains NCES id
+      # the other fields are empty in the form data unless they selected "Other" school,
+      # so we add it when we construct the csv row.
+      labels_to_remove.push(:school, :school_name, :school_address, :school_type, :school_city, :school_state, :school_zip_code)
 
       ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
     end
@@ -631,6 +728,15 @@ module Pd::Application
         NO
       else
         nil
+      end
+    end
+
+    def school
+      school_id = sanitize_form_data_hash[:school]
+      if school_id == '-1'
+        nil
+      else
+        School.find(school_id)
       end
     end
   end
