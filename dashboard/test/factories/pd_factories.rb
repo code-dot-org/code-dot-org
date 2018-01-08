@@ -693,7 +693,7 @@ FactoryGirl.define do
   end
 
   factory :pd_teacher1819_application, class: 'Pd::Application::Teacher1819Application' do
-    association :user, factory: :teacher, strategy: :create
+    association :user, factory: [:teacher, :with_school_info], strategy: :create
     course 'csp'
     form_data {build(:pd_teacher1819_application_hash, program: Pd::Application::Teacher1819Application::PROGRAMS[course.to_sym]).to_json}
     application_guid nil
