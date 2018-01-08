@@ -633,7 +633,6 @@ describe('entry tests', () => {
   var ext = envConstants.DEV ? 'uncompressed' : 'compressed';
   config.concat = {
     vendor: {
-      nonull: true,
       src: [
         'lib/blockly/preamble_' + ext + '.js',
         'lib/blockly/blockly_' + ext + '.js',
@@ -643,7 +642,6 @@ describe('entry tests', () => {
       dest: 'build/package/js/blockly.js'
     }
   };
-
 
   config.uglify = {
     lib: {
