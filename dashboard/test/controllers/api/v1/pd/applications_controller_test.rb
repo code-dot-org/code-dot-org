@@ -275,7 +275,7 @@ module Api::V1::Pd
             date_accepted: 'Mar 15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
-            school_name: 'Hogwarts',
+            school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
             notified: 'Not implemented',
             assigned_workshop: 'Not implemented',
