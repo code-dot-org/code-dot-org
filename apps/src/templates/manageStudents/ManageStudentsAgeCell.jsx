@@ -21,14 +21,12 @@ class ManageStudentAgeCell extends Component {
       '15', '16', '17', '18', '19', '20', '21+'];
     return (
       <div>
-        {
-          !this.props.isEditing &&
+        {!this.props.isEditing &&
           <div>
             {age}
           </div>
         }
-        {
-          this.props.isEditing &&
+        {this.props.isEditing &&
           <select
             ref={element => this.root = element}
             name="age"

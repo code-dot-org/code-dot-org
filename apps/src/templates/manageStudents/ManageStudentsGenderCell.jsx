@@ -22,24 +22,21 @@ class ManageStudentGenderCell extends Component {
   }
 
   render() {
-    const genders = ['m', 'f'];
     return (
       <div>
-        {
-          !this.props.isEditing &&
+        {!this.props.isEditing &&
           <div>
             {GENDERS[this.props.gender]}
           </div>
         }
-        {
-          this.props.isEditing &&
+        {this.props.isEditing &&
           <select
             ref={element => this.root = element}
             name="age"
             value={this.state.genderValue}
             onChange={this.onChangeGender}
           >
-           {genders.map(gender => <option key={gender} value={gender}>{GENDERS[gender]}</option>)}
+           {Object.keys(GENDERS).map(gender => <option key={gender} value={gender}>{GENDERS[gender]}</option>)}
           </select>
         }
       </div>
