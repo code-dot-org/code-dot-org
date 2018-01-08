@@ -1436,6 +1436,18 @@
       CSDU6 arrays random_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select icons_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select rainbow_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_instruction: |-
+        Write a program that displays a
+        randomly chosen color from the array. (Click to see full instructions)
       CSDU6 arrays variable_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
@@ -3179,6 +3191,51 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
+        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars10_instruction: |-
+        Free Play time! Here are all of the variables
+        we've played with so far in this stage, as well as a few more in case you
+        want them. \r
+        \r
+        Notice that there are now so many blocks in our toolbox
+        that they need to be organized!  Here, we've put each piece into an appropriate
+        category.  Take some time to explore everything that is available. When you're
+        done browsing, make a game or story using repeats, variables, and events.  \r
+        \r
+        Hint:
+        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars2_instruction: |-
+        The race in that last puzzle wasn't very
+        fair! Change the `dog_speed` variable to make sure you can collect more flags
+        than Cat. The first to collect 10 flags wins!
+      CourseF_PlayLab_vars3_instruction: Sol ve sağ ok tuşlarıyla hareket ettirin.
+        Yukarı ok tuşu ile zıplayın. Bütün bayrakları toplaya bilir misin?
+      CourseF_PlayLab_vars4_instruction: Height yükseklik değişkeni köpeğin ne kadar
+        zıplayacağını kontrol ediyor. Bu değişkeni güncelleyerek köpeğin bayrağa ulaşmasını
+        sağla.
+      CourseF_PlayLab_vars5_instruction: 'Oyun yaratalım! Önce puan gerekli. Bir önceki
+        seviyede gördüğün kodu yeniden düzenle ve puanı 10 yap. '
+      CourseF_PlayLab_vars6_instruction: Sağ ok tuşu ile kalp fırlatabilirsin. Oyunumuzda
+        bunlarla puan kazanacağız. Köpek kediyi kalp ile vurduğunda puan "points"
+        değişkenine 1 ekliyoruz. "Oyuncu dokunduğu zaman" olayını kullan ve puanı
+        güncelle. Değişkeninizi points=points+1 diye artıra bilirsiniz. Puanınızı
+        10 yapın (birer birer arttırarak) ve seviyeyi geçin.
+      CourseF_PlayLab_vars7_instruction: Sağ ok tuşu ile kalp fırlatabilirsin. Oyunumuzda
+        bunlarla puan kazanacağız. Köpek kediyi kalp ile vurduğunda puan "points"
+        değişkenine 1 ekliyoruz. "Oyuncu dokunduğu zaman" olayını kullan ve puanı
+        güncelle. Değişkeninizi points=points+1 diye artıra bilirsiniz. Puanınızı
+        10 yapın (birer birer arttırarak) ve seviyeyi geçin.
+      CourseF_PlayLab_vars8_instruction: Sağ ok tuşu ile kalp fırlatabilirsin. Oyunumuzda
+        bunlarla puan kazanacağız. Köpek kediyi kalp ile vurduğunda puan "points"
+        değişkenine 1 ekliyoruz. "Oyuncu dokunduğu zaman" olayını kullan ve puanı
+        güncelle. Değişkeninizi points=points+1 diye artıra bilirsiniz. Puanınızı
+        10 yapın (birer birer arttırarak) ve seviyeyi geçin.
+      CourseF_PlayLab_vars9_instruction: |-
+        Nice, now let's make sure this game isn't
+        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
+        2), you should lose a point. Start with 10 points so it's not too hard. Let
+        your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution_instruction: Talimatlar
       Crack a Caesar Cipher_instruction: Talimatlar
       ECSPD Binary Odometer_instruction: |-
@@ -3835,13 +3892,11 @@
       MC_HOC_2017_01_instruction: |-
         Click "Run" to move the player to the orange
         square inside of the house.
-      MC_HOC_2017_01_Cole_instruction: |-
-        You need to collect all the tools on this
-        journey. Move around using the **arrow keys**, and get to the chest on the
-        path to win
-      MC_HOC_2017_01_Kiki_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
+      MC_HOC_2017_01_Cole_instruction: Bu yolculukta tüm aletleri toplaman gerekiyor.
+        **Ok tuşlarını** kullanarak etrafta dolaş ve kazanmak için yol üzerindeki
+        sandığa ulaş
+      MC_HOC_2017_01_Kiki_instruction: Evin içindeki turuncu kareye oyuncuyu taşımak
+        için "Çalıştır" ı tıklatın.
       MC_HOC_2017_01_RETRY_instruction: 'Agent''ı baskı plakasına götür, ardından
         "Çalıştır" düğmesine bas ve sandığı toplaması için ok tuşlarını kullanarak
         oyuncuyu evin dışına çıkar. '
@@ -4244,9 +4299,8 @@
       New Gumball Project_instruction: Kendi zevkinize göre bir şey yarat ve paylaş!
       New Ice Age Project_instruction: Kendi zevkinize göre bir şey yarat ve paylaş!
       New Infinity Project_instruction: Kendi zevkinize göre bir şey yarat ve paylaş!
-      New Minecraft Hero Project_instruction: |-
-        **Freeplay:**  Time to explore on
-        your own!
+      New Minecraft Hero Project_instruction: "**Serbest Oyun:**  Kendi başına keşfetme
+        zamanı!"
       New Sports Project_instruction: 'Kendi oyununu oluştur! Burada sen ne dersen
         o olur: bütün kuralları değiştirebilir, sporları karıştırabilir ve birbirine
         uydurabilirsin, yaratıcı ol! Oluşturduğunda, bitir düğmesine tıklayarak oyununu
@@ -4639,9 +4693,8 @@
       SG U3L06 Challenge 2 purple square_instruction: |-
         Read the documentation for
         penColor() and penWidth() before using them to draw the blue square.
-      SG U3L06 Challenge 3 fill pink_instruction: |-
-        Fill in the background of the
-        screen with your favorite color. (Click to see full instructions)
+      SG U3L06 Challenge 3 fill pink_instruction: En sevdiğiniz renk ile ekranın arka
+        planını doldurun. (Tüm talimatları için tıklayınız)
       SG U3L06 Challenge 4 bullseye_instruction: |-
         Create the bullseye using hexadecimal
         colors and dot(). (Click to see full instructions)
@@ -4652,9 +4705,8 @@
       SG U3L06 Challenge 6 squiggles_instruction: |
         Read the documentation for the
         "arcLeft" and "arcRight" commands and then draw the squiggles as shown.
-      SG U3L06 Challenge 7 smiley face_instruction: |-
-        Use turnTo() and moveTo() to
-        help draw a smiley face. (Click to see full instructions)
+      SG U3L06 Challenge 7 smiley face_instruction: TurnTo() ve moveTo() bir gülen
+        yüz çizmek için kullanın. (Tüm talimatları için tıklayınız)
       SG U3L06 Challenge 8 make your own_instruction: |-
         Create a drawing of your own.
         (Click to see full instructions)
@@ -4736,27 +4788,23 @@
       SG U3L08 - paramsToStarfish_instruction: |-
         Add a parameter to drawStarfish that
         changes the size of the starfish drawn. (Click to see full instructions)
-      SG U3L08 - randomInput_instruction: |-
-        Use the randomNumber() blocks to test
-        the functions you designed with random input. (Click to see full instructions)
+      SG U3L08 - randomInput_instruction: RandomNumber() bloğunu tasarladığınız fonksiyonları
+        rastgele girdilerle test etmek için kullanın. (Tüm talimatları için tıklayınız)
       SG U3L08 - seaGrass_instruction: |-
         Add a parameter to drawSeagrass that changes
         the size of the piece of seagrass drawn. (Click to see full instructions)
-      SG U3L08 - squareTwoParams_instruction: |-
-        Call drawSquare() to complete the
-        drawing of two squares. (Click to see full instructions)
-      SG U3L08 comments_instruction: |-
-        Use the randomNumber() blocks to test the functions
-        you designed with random input. (Click to see full instructions)
-      SG U3L08 how to add comments_instruction: |-
-        Use the randomNumber() blocks to
-        test the functions you designed with random input. (Click to see full instructions)
+      SG U3L08 - squareTwoParams_instruction: "İki kare çizimini tamamlamak için drawSquare()
+        fonksiyonunu çağırın. (Tüm talimatlar için tıklayınız)"
+      SG U3L08 comments_instruction: RandomNumber() bloğunu tasarladığınız fonksiyonları
+        rastgele girdilerle test etmek için kullanın. (Tüm talimatları için tıklayınız)
+      SG U3L08 how to add comments_instruction: RandomNumber() bloğunu tasarladığınız
+        fonksiyonları rastgele girdilerle test etmek için kullanın. (Tüm talimatları
+        için tıklayınız)
       SG U3L2 Using Simple Commands part 1_instruction: |-
         Draw a 1x1 square above
         and to the left of the turtle's starting position. Click to see full instructions.
-      SG U3L2 Using Simple Commands_instruction: |-
-        Draw a 1x1 square above and to
-        the left of the turtle's starting position. Click to see full instructions.
+      SG U3L2 Using Simple Commands_instruction: Kaplumbağanın başlangıç konumunun
+        solunda 1 x 1 kare çizin tüm talimatları görmek için tıklatın.
       SG U3L2_Add-subgoals_instruction: |-
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original
@@ -5867,9 +5915,9 @@
       U3L08 - triangleTwoParams_instruction: |-
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
-      U3L08 how to add comments_instruction: |-
-        Use the randomNumber() blocks to test
-        the functions you designed with random input. (Click to see full instructions)
+      U3L08 how to add comments_instruction: RandomNumber() bloğunu tasarladığınız
+        fonksiyonları rastgele girdilerle test etmek için kullanın. (Tüm talimatları
+        için tıklayınız)
       U3L1 - Simulation - Template_instruction: |-
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
@@ -7176,10 +7224,15 @@
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_forVideo_instruction: "'Tekrar' döngüsü kullanarak suya
+        dalga ekleyin."
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: 'Meydan okuma: Merdivenleri düzelt.'
       courseA_artist_loops_challenge2_instruction: Tweet tweet! İki kuş evi yapmama
         yardımcı olabilir misin?
+      courseA_artist_loops_challenge2a_instruction: |-
+        *"Help me get these three tents
+        set up!"*
       courseA_artist_loops_challenge3_instruction: Bir oyun oynayalım! Çizebildiğin
         kadar X çiz! Üst üste 3 alabilir miyim?
       courseA_collector_loops1_instruction: Laureli etrafta dolaştırın ve alabileceğiniz
@@ -7342,6 +7395,9 @@
         birini kullanabilirsiniz. Tüm hazineyi al! '
       courseB_collector_loops_challenge2_instruction: Hazineyi alalım! Her satır boyunca
         ilerleyip bir sonraki satır için geri dön. Bir tekrar bulabilirsiniz mi?
+      courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: 'Bu sefer sadece ok bloklrından
         birini kullanabilirsiniz. Tüm hazineyi al! '
       courseB_collector_prog1_instruction: Laurel maceracı bu!  Onu hareket ettir
@@ -7552,6 +7608,8 @@
         çözmek için birçok farklı yol vardır. En kısa çözüm 6 blok kullanır!
       courseC_artist_prog_challenge2_instruction: "* Bana bu yoldaki sarı çizgileri
         boyamaya yardım et! *"
+      courseC_artist_prog_challenge2a_instruction: "* Bana bu yoldaki sarı çizgileri
+        boyamaya yardım et! *"
       courseC_collector_loops_challenge2_instruction: Hadi döngüler kullanarak hazine
         - avı yapalım! Toplayıcıya hata ayıklayarak yardımcı ol. Tüm hazineyi al!
       courseC_collector_prog1_instruction: |-
@@ -7644,6 +7702,7 @@
         Collect all of the corn and all of the
         pumpkins.
       courseC_harvester_loops_challenge1_instruction: Bütün mısırları topla.
+      courseC_harvester_loops_challenge1a_instruction: Bütün mısırları topla.
       courseC_harvester_loops_challenge2_instruction: Tüm marulları topla. Ağaçlardan
         ve tarlalardan sakın!
       courseC_maze_debugging1_instruction: Scrat'in meşe palamuduna ulaşması için
@@ -7698,6 +7757,8 @@
         puzzles to complete this level.
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
       courseC_maze_loops_challenge1_instruction: "Şimdi Scrat meşe palamudu bulmak
+        için döngüleri kullanmak istiyor! "
+      courseC_maze_loops_challenge1a_instruction: "Şimdi Scrat meşe palamudu bulmak
         için döngüleri kullanmak istiyor! "
       courseC_maze_loops_challenge2_instruction: Hadi döngüler kullanarak hazine -
         avı yapalım! Toplayıcıya hata ayıklayarak yardımcı ol. Tüm hazineyi al!
@@ -7807,6 +7868,8 @@
         \r
         See what happens when we start to
         get creative with the bits!
+      courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
+        binary! "
       courseD_artist_binary_challenge0_instruction: Bu çizimi tamamlamak için iç içe
         geçmiş döngüleri kullanmayı deneyin.
       courseD_artist_binary_challenge1_instruction: Bulmaca içinde her ikili değeri
@@ -7994,6 +8057,9 @@
       courseD_bee_debugging_challenge1_instruction: Arıların nasıl nektar topladığını
         izle. Benzer deseni kullanarak arıların bütün balı yapmasına yardım edebilir
         misin?
+      courseD_bee_debugging_challenge1a_instruction: Arıların nasıl nektar topladığını
+        izle. Benzer deseni kullanarak arıların bütün balı yapmasına yardım edebilir
+        misin?
       courseD_bee_debugging_challenge2_instruction: Arıların nasıl nektar topladığını
         izle. Benzer deseni kullanarak arıların bütün balı yapmasına yardım edebilir
         misin?
@@ -8032,20 +8098,17 @@
       courseD_bounce_events1_instruction: |-
         Attach a block to the "when left arrow"
         block and press "Run" to move the player to the flag.
-      courseD_bounce_events10_instruction: |-
-        There is now a goal at the top. Attach
-        the "score point" and "score opponent point" blocks to the "when ball
-        in goal" and "when ball misses paddle" blocks to make a game. See how many
-        points you can score before your opponent scores twice.
+      courseD_bounce_events10_instruction: Şimdi yukarıda bir kale var. Oyun oluşturmak
+        için "Puan yaz" ve "Rakibe puan yaz" bloklarını "top gol olduğunda" ve "top
+        raketi ıskaladığında"  bloklarına ekle. Bakalım rakibin 2 kere sayı almadan
+        önce sen ne kadar sayı yapabileceksin.
       courseD_bounce_events10s_instruction: "Attach the `score point` block to the\n`when
         ball in goal` event and the `score opponent point` block to the `when\nball
         misses hand` event to make a game. "
-      courseD_bounce_events11_instruction: |-
-        You can now attach blocks to the "when
-        run" block. You have to attach the new "launch new ball" block in more
-        than one place. Also, try changing the scene or the speed of the paddle and
-        the ball and see how many points you can score before your opponent scores
-        twice.
+      courseD_bounce_events11_instruction: Şimdi "çalıştığı zaman" bloğuna ekleme
+        yapabilirsin. "Yeni top fırlat" bloğunu birden fazla yerde kullanmalısın.
+        Birde, arkaplanı, raket ve top hızını değiştirip, rakibin 2 puan almadan önce
+        kaç puan alabileceksin görelim.
       courseD_bounce_events11s_instruction: "Attach the `throw new ball` block in\nall
         of the places where the game needs a new ball. "
       courseD_bounce_events12_instruction: Kendi zıplama oyununu oluştur. Bütün kuralları
@@ -8128,6 +8191,9 @@
       courseD_collector_debugging_challenge2_instruction: "İç içe döngülerin uzmanı
         mısınız? Hazinenin tümünü toplamak öğrendiklerinizi kullanın!"
       courseD_collector_nested_loops_challenge2_instruction: Hadi döngüler kullanarak
+        hazine avı yapalım! Toplayıcıya yardımcı ol ve araç kutusunda ki blokları
+        kullanarak en az iki yığın hazine topla. 3 yığın toplamak mümkün.
+      courseD_collector_nested_loops_challenge2a_instruction: Hadi döngüler kullanarak
         hazine avı yapalım! Toplayıcıya yardımcı ol ve araç kutusunda ki blokları
         kullanarak en az iki yığın hazine topla. 3 yığın toplamak mümkün.
       courseD_collector_ramp10_instruction: Help Laurel collect all of the treasure.
@@ -8486,7 +8552,7 @@
       courseE_bee_functions9_instruction: |-
         Create a function to collect all of the
         nectar from each flower.
-      courseE_bee_functions9b_instruction: Now try it in Bee!
+      courseE_bee_functions9b_instruction: "Şimdi arı için deneyin!"
       courseE_bee_functions_challenge1_instruction: Bu meydan okuma için kendi başınasın.
         Bu "Arı" göründüğünden daha zor olabilir!
       courseE_bee_functions_challenge2_instruction: Bu mücadelede tamamen kendi başınasın!
@@ -8601,21 +8667,17 @@
       courseE_farmer_ramp11a_instruction: 'Marul olduğu sürece marlu topla. '
       courseE_farmer_ramp11b_instruction: 'Marul olduğu sürece marlu topla. '
       courseE_farmer_ramp12_instruction: 'Marul olduğu sürece marlu topla. '
-      courseE_farmer_ramp12_forswap_instruction: |-
-        Now use nested loops to solve this
-        puzzle.
+      courseE_farmer_ramp12_forswap_instruction: Bu bulmacayı çözmek için bir tane
+        iç içe döngü kullanın.
       courseE_farmer_ramp12a_instruction: Eğer marul ise marul topla. değilse, mısır
         al.
-      courseE_farmer_ramp12b_instruction: While there is lettuce, pick lettuce!
-      courseE_farmer_ramp12c_instruction: |-
-        Move forward until you reach the lettuce,
-        then pick it all using a `while` loop.
-      courseE_farmer_ramp12d_instruction: |-
-        Move forward until you reach the lettuce,
-        then pick it all using a `while` loop.
-      courseE_farmer_ramp12e_instruction: |-
-        Move forward until you reach the lettuce,
-        then pick it all using a `while` loop.
+      courseE_farmer_ramp12b_instruction: Marul olduğu sürece marul topla!
+      courseE_farmer_ramp12c_instruction: Marula ulaşana kadar ilerle, sonra hepsine
+        sürece döngüsü ile topla.
+      courseE_farmer_ramp12d_instruction: Marula ulaşana kadar ilerle, sonra hepsine
+        sürece döngüsü ile topla.
+      courseE_farmer_ramp12e_instruction: Marula ulaşana kadar ilerle, sonra hepsine
+        sürece döngüsü ile topla.
       courseE_farmer_ramp12f_instruction: |-
         Move forward until you reach the lettuce,
         then turn left **if** there is a path to the left.  Otherwise, turn right.
@@ -10904,18 +10966,17 @@
       harvey_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.
-      harvey_snowflake_artist1_instruction: Get your snowflake ready for 3d printing!
-      harvey_snowflake_artist2_instruction: Get your snowflake ready for 3d printing!
+      harvey_snowflake_artist1_instruction: Kar tanesini 3 boyutlu baskı için hazırlayın!
+      harvey_snowflake_artist2_instruction: Kar tanesini 3 boyutlu baskı için hazırlayın!
       harvey_tictactoe_instruction: Bir oyun oynayalım! Çizebildiğin kadar X çiz!
         Üst üste 3 alabilir miyim?
-      iceage_click_hello_instruction: "Can you help Sid call for his friends when\nyou
-        click on him? "
+      iceage_click_hello_instruction: 'Sid a üzerine tıkladığında arkadaşına seslenmesi
+        için yardımcı olurmusun? '
       iceage_free_play_instruction: 'Kendi oyununu veya hikayeni oluşturma zamanı! '
       iceage_free_playcourseF_IceAge_11_instruction: 'Kendi oyununu veya hikayeni
         oluşturma zamanı! '
-      iceage_hello1_instruction: |-
-        Help Sid say "Hello!" by dragging the `say` block
-        out and connecting it to the bottom of the `when run` event.
+      iceage_hello1_instruction: Sid in arkadaşlarına merhaba demesi için "aktör 1
+        de bloğunu" çekip çalıştığı zaman bloğuna birleştirin.
       iceage_hello2_instruction: |-
         Help Manny and Sid greet each other by using the
         the `actor ___ say` block twice.
@@ -11071,15 +11132,11 @@
       ramp_artist_loops4_instruction: |-
         What happens when you add a 72 degree right
         turn after everything else inside your loop?
-      ramp_artist_loops5_instruction: Use loops to draw this staircase.
-      ramp_artist_loops6_instruction: Edit your loop to draw this staircase.
-      ramp_artist_loops7_instruction: |-
-        Look for a pattern and make this code shorter
-        using loops!
-      ramp_artist_loops8_instruction: |-
-        Look for a pattern and make this code shorter
-        using loops.
-      ramp_artist_loops9_instruction: Solve this puzzle by drawing a square.
+      ramp_artist_loops5_instruction: Döngüleri bu merdiven çizmek için kullanın.
+      ramp_artist_loops6_instruction: Bu merdiven çizmek için döngüyü düzenleyin.
+      ramp_artist_loops7_instruction: Tekrarlayan deseni bulun ve kodu daha kısa yapın!
+      ramp_artist_loops8_instruction: Tekrarlayan deseni bulun ve kodu daha kısa yapın.
+      ramp_artist_loops9_instruction: Bir kare çizerek bu bulmacayı çöz,.
       sample1_instruction: |-
         Our adventurer wants to collect coins.  But she can only
         use 4 blocks to get them.\r
@@ -11151,9 +11208,8 @@
       subgoal U3L2 Using Simple Commands_instruction: |-
         Draw a 1x1 square above and
         to the left of the turtle's starting position. Click to see full instructions.
-      subgoalU3L2_TurtleSquare_right_instruction: |-
-        Draw a square to the front and
-        to the right of the starting location. (Click to show full instructions)
+      subgoalU3L2_TurtleSquare_right_instruction: "Ön ve başlangıç konumunun sağında
+        bir kare çizin. (Tüm talimatları görüntülemek için tıklatın)"
       template test_instruction: what up
       testArtistForTestK_instruction: |-
         The Artist is trying to draw a line five times,

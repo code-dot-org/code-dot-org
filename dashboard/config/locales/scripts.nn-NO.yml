@@ -142,7 +142,7 @@
             'Maze: Conditionals':
               name: 'Labyrint: Vilkår'
             Songwriting:
-              name: Låtskriving med parametere
+              name: Låtskriving
             'Studio: Create a Game':
               name: 'Spel-laboratorium: Lag eit spel'
             'Studio: Create a Story':
@@ -295,11 +295,11 @@
             'Eval: Defining Functions':
               name: Samansatte funksjonar
             'Eval: Functions':
-              name: Solving Word Problems with the Design Recipe
+              name: Løys tekstproblem med designoppskrifta
             'Eval: Strings and Images':
               name: Strenger og bilder
             'Eval: Writing Contracts':
-              name: Writing Contracts
+              name: Skriv kontrakter
             'Play Lab: Animation (Big Game)':
               name: Det Store Spelet - Animasjon
             'Play Lab: Boolean (Big Game)':
@@ -313,13 +313,13 @@
             'Play Lab: Defining Variables (Big Game)':
               name: Det Store Spelet - Variabler
             'Unplugged: Booleans':
-              name: 'Unplugged: Booleans and Logic'
+              name: 'Fråkobla: boolske variablar og logikk'
             'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Unplugged: Collision Detection and the Pythagorean Theorem'
+              name: 'Trådlaust: Deteksjon av kollisjonar og Pytagoras'
             'Unplugged: Conditionals and Piecewise Functions':
               name: 'Trådlaust: Vilkår og stykkevise funksjonar'
             'Unplugged: Contracts':
-              name: 'Unplugged: Contracts, Domain, and Range'
+              name: 'Fråkobla: Kontrakter, domene og rekkevidde'
             'Unplugged: The Design Recipe':
               name: 'Trådlaust: Design oppskrifta'
             'Unplugged: Video Games and Coordinate Planes':
@@ -349,7 +349,7 @@
             Making Pictures:
               name: "Å lage bilder"
             The Design Recipe:
-              name: Design oppskrifta
+              name: Design-oppskrifta
         K5PD:
           title: K5 Professional Development
           description: Professional Development for K5 Courses
@@ -359,7 +359,7 @@
             Computer Science Pedagogy:
               name: Pedagogikk for Informatikk
             Introduction to PD:
-              name: Introduction to PD
+              name: Introduksjon til PD
             K-5 Courses:
               name: Kurs for 5. klasse
             Next Steps:
@@ -369,17 +369,17 @@
             'Programming Concept: Events':
               name: 'Programmeringskonsepter: hendingar'
             'Programming Concept: Functions':
-              name: 'Programming Concept: Functions'
+              name: 'Programmeringskonsept: Funksjonar'
             'Programming Concept: Loops':
-              name: 'Programming Concept: Loops'
+              name: 'Programmeringskonsept: Løkker'
             Reflection:
-              name: Reflection
+              name: Refleksjon
             Teacher Dashboard:
               name: Lærarmodus
             Unplugged lessons:
-              name: Unplugged lessons
+              name: Fråkobla leksjonar
             Writing computer programs:
-              name: Writing computer programs
+              name: "Å skrive dataprogram"
         netsim:
           title: Internettsimulator
           description: Lær om hvordan Internett fungerer
@@ -387,25 +387,25 @@
           description_audience: ''
           stages:
             Automatic DNS node:
-              name: Automatic DNS node
+              name: Automatisk DNS-node
             Broadcasting messages:
-              name: Broadcasting messages
+              name: Kringkasting av meldingar
             Internet Simulator Freeplay:
-              name: Internet Simulator Freeplay
+              name: Frileik med internettsimulator
             Manual DNS:
-              name: Manual DNS
+              name: Manuell DNS
             Overview and Setup Instructions:
-              name: Overview and Setup Instructions
+              name: Oversikt og installasjonsinstruksjon
             Packets and Reliability:
-              name: Packets and Reliability
+              name: Pakker og pålitelegheit
             Peer to Peer - Sending Ascii:
-              name: Peer to Peer - Sending Ascii
+              name: Peer to Peer - sende Ascii
             Peer to Peer - Sending Bits on a Shared Wire:
-              name: Peer to Peer - Sending Bits on a Shared Wire
+              name: Peer to Peer - sender biter på en delt Wire
             Peer to Peer - Sending Numbers:
-              name: Peer to Peer - Sending Numbers
+              name: Peer to Peer - sende tall
             Routers and addresses:
-              name: Routers and addresses
+              name: Rutere og adresser
         pixelation:
           title: Pixelation
           description: Create images with bits and bytes.
@@ -413,15 +413,15 @@
           description_audience: ''
           stages:
             Black & White Pixelation Freeplay:
-              name: Black & White Pixelation Freeplay
+              name: Frileik svart og hvit pikselering
             Black & White Pixelation Tutorial:
-              name: Black & White Pixelation Tutorial
+              name: Rettleiingar svart og hvit pikselering
             Color Pixelation Examples:
-              name: Color Pixelation Examples
+              name: Døme på fargepikselering
             Color Pixelation Freeplay:
-              name: Color Pixelation Freeplay
+              name: Frileik i fargepikselering
             Color Pixelation Tutorial:
-              name: Color Pixelation Tutorial
+              name: Rettleiing i fargepikselering
         20-hour:
           title: Aksellerert intro til CS-kurs
           description: Dette kurset på 20 timar introduserer grunnleggjande informasjonsvitskap
@@ -478,7 +478,7 @@
           description_audience: ''
           stages:
             Applab:
-              name: Applab
+              name: AppLab
             Hoc2015 Blockly:
               name: Hoc2015 Blockly
             Play Lab:
@@ -557,37 +557,37 @@
           description_short: Make Black and White Images with the pixelation tool
           stages:
             Binary Numbers:
-              name: Binary Numbers
+              name: Binære tal
             Bytes and File Sizes:
-              name: Bytes and File Sizes
+              name: Byte- og arkivstorleikar
             Encode a Complex Thing:
-              name: Encode an Experience
+              name: Kode ei oppleving
             Encoding B&W Images:
-              name: Encoding B&W Images
+              name: Kode svart/kvit-bilete
             Encoding Color Images:
-              name: Encoding Color Images
+              name: Kode fargebilete
             Encoding Numbers in the Real World:
-              name: Encoding Numbers in the Real World
+              name: Kode tal i den verkelege verda
             Encoding and Sending Text:
-              name: Encoding and Sending Text
+              name: Koding og sende tekst
             Lossy Compression and File Formats:
-              name: Lossy Compression and File Formats
+              name: Lossykomprimering og filformat
             Number Systems:
-              name: Number Systems
+              name: Talsystem
             Personal Innovations:
-              name: Personal Innovations
+              name: Personlege innovasjonar
             Sending Binary Messages:
-              name: Sending Binary Messages
+              name: Sende binære meldingar
             Sending Binary Messages with the Internet Simulator:
-              name: Sending Binary Messages with the Internet Simulator
+              name: Sende binære meldingar med Internett Simulator
             Sending Bits in the Real World:
-              name: Sending Bits in the Real World
+              name: Sende bits i den verkelege verda
             Sending Complex Messages:
-              name: Sending Complex Messages
+              name: Sende komplekse meldingar
             Sending Formatted Text:
-              name: Sending Formatted Text
+              name: Sende formatert tekst
             Sending Numbers:
-              name: Sending Numbers
+              name: Sende tal
             Text Compression:
               name: Text Compression
           description_audience: ''
@@ -598,17 +598,17 @@
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Kursoversikt
             Evaluation Blocks:
               name: Evalueringsblokker
             Introduction to PD:
-              name: Introduction to PD
+              name: Introduksjon til PD
             Preparing for in-person PD:
-              name: Preparing for in-person PD
+              name: Førebu personleg PD
             Teacher Dashboard:
               name: Lærarmodus
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: Kvifor informatikk tilhøyrer Algebra
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
@@ -618,25 +618,25 @@
             Booleans:
               name: Boolske verdiar
             Design Recipe Practice:
-              name: Design Recipe Practice
+              name: "Øvingar i designoppskrift"
             Evaluation Blocks:
               name: Evalueringsblokker
             Luigi's Pizza:
-              name: Luigi's Pizza
+              name: Luigis pizza
             Rocket-Height:
-              name: Rocket-Height
+              name: Raketthøgde
             Sam the Bat:
               name: Flaggermusa Sam
             Strings and Images:
               name: Strenger og bilder
             Your Game - Animation:
-              name: Your Game - Animation
+              name: Spelet ditt - Animasjon
             Your Game - Booleans:
-              name: Your Game - Booleans
+              name: Spelet ditt - Boolske verdier
             Your Game - Collision Detection:
-              name: Your Game - Collision Detection
+              name: Spelet ditt - Kollisjonsdeteksjon
             Your Game - Player Movement:
-              name: Your Game - Player Movement
+              name: Spelet ditt - Rørsle på spelar
         text-compression:
           title: Text Compression
           description: Compress text by identifying repeated patterns.
@@ -651,19 +651,19 @@
           description_short: 'Phase 1: Online Introduction for CSP'
           stages:
             Exploring CSP Instructional Materials:
-              name: Exploring CSP Instructional Materials
+              name: Utforske undervisningsmateriell i datavitskap
             Growth Mindset:
-              name: Growth Mindset
+              name: Tankesett på vekst
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: Verkning av informatikk
             Introduction to PD:
-              name: Introduction to PD
+              name: Introduksjon til PD
             Preparing for in-person PD:
-              name: Preparing for in-person PD
+              name: Førebu personleg PD
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Læringsstrategiar
             What is CSP?:
-              name: What is CSP?
+              name: Kva er datavitskap?
         CSPLessonSamples:
           title: CSP Lesson Samples
           description: Lesson samples for csp
@@ -671,24 +671,24 @@
           description_audience: ''
           stages:
             Lesson 14:
-              name: Lesson 14
+              name: Leksjon 14
             Lesson 15:
-              name: Lesson 15
+              name: Leksjon 15
         ECSPD:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           stages:
             Growth Mindset:
-              name: Growth Mindset
+              name: Tankesett på vekst
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: Verkning av informatikk
             Introduction to PD:
-              name: Introduction to PD
+              name: Introduksjon til PD
             Preparing for in-person PD:
-              name: Preparing for in-person PD
+              name: Førebu personleg PD
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Læringsstrategiar
             What is ECS?:
               name: What is ECS?
         sciencePD:
@@ -708,7 +708,7 @@
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
-              name: Introduction to PD
+              name: Introduksjon til PD
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -809,7 +809,7 @@
             Computer Science Pedagogy:
               name: Pedagogikk for Informatikk
             Course Overview:
-              name: Course Overview
+              name: Kursoversikt
             Evaluation Blocks:
               name: Evalueringsblokker
             Next Steps:
@@ -821,7 +821,7 @@
             The Big Game:
               name: The Big Game
             The Design Recipe:
-              name: Design oppskrifta
+              name: Design-oppskrifta
         ECSPD-NexTech:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -829,15 +829,15 @@
           logo_image: nextech_logo.png
           stages:
             Growth Mindset:
-              name: Growth Mindset
+              name: Tankesett på vekst
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: Verkning av informatikk
             Introduction to PD:
-              name: Introduction to PD
+              name: Introduksjon til PD
             Preparing for in-person PD:
-              name: Preparing for in-person PD
+              name: Førebu personleg PD
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Læringsstrategiar
             What is ECS?:
               name: What is ECS?
         ECSPD-iZone:
@@ -847,15 +847,15 @@
           logo_image: izone_logo.png
           stages:
             Growth Mindset:
-              name: Growth Mindset
+              name: Tankesett på vekst
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: Verkning av informatikk
             Introduction to PD:
-              name: Introduction to PD
+              name: Introduksjon til PD
             Preparing for in-person PD:
-              name: Preparing for in-person PD
+              name: Førebu personleg PD
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Læringsstrategiar
             What is ECS?:
               name: What is ECS?
         algebraPD-NexTech:
@@ -866,17 +866,17 @@
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Kursoversikt
             Evaluation Blocks:
               name: Evalueringsblokker
             Introduction to PD:
-              name: Introduction to PD
+              name: Introduksjon til PD
             Preparing for in-person PD:
-              name: Preparing for in-person PD
+              name: Førebu personleg PD
             Teacher Dashboard:
               name: Lærarmodus
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: Kvifor informatikk tilhøyrer Algebra
         algebraPD-iZone:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -885,17 +885,17 @@
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Kursoversikt
             Evaluation Blocks:
               name: Evalueringsblokker
             Introduction to PD:
-              name: Introduction to PD
+              name: Introduksjon til PD
             Preparing for in-person PD:
-              name: Preparing for in-person PD
+              name: Førebu personleg PD
             Teacher Dashboard:
               name: Lærarmodus
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: Kvifor informatikk tilhøyrer Algebra
         sciencePD-NexTech:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -914,7 +914,7 @@
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
-              name: Introduction to PD
+              name: Introduksjon til PD
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -945,7 +945,7 @@
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
-              name: Introduction to PD
+              name: Introduksjon til PD
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -1071,15 +1071,15 @@
             Free Play:
               name: Gjer kva du vil
             Luigi's Pizza:
-              name: Luigi's Pizza
+              name: Luigis pizza
             Rocket-Height:
-              name: Rocket-Height
+              name: Raketthøgde
             Sam the Bat:
               name: Flaggermusa Sam
             Strings and Images:
               name: Strenger og bilder
             The Design Recipe:
-              name: Design oppskrifta
+              name: Design-oppskrifta
         allthethings:
           title: Alt!
           description: Alle nivå typer for UI tester
@@ -1133,7 +1133,7 @@
             Pixelation:
               name: Pixelation
             PlayLab:
-              name: PlayLab
+              name: Spellab
             Public Key Cryptography:
               name: Public Key Cryptography
             Rich long assessment:
@@ -1171,7 +1171,7 @@
             Booleans:
               name: Boolske verdiar
             Course Overview:
-              name: Course Overview
+              name: Kursoversikt
             Defining Functions:
               name: Definering av funksjonar
             Defining Variables:
@@ -1183,13 +1183,13 @@
             Next Steps:
               name: Neste steg
             Rocket-Height:
-              name: Rocket-Height
+              name: Raketthøgde
             Strings and Images:
               name: Strenger og bilder
             Teacher Dashboard:
               name: Lærarmodus
             Writing Contracts:
-              name: Writing Contracts
+              name: Skriv kontrakter
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
@@ -1199,13 +1199,13 @@
             App Lab:
               name: App Lab
             Broadcast Lesson:
-              name: Broadcast Lesson
+              name: Kringkaste leksjon
             Internet Simulator:
               name: Internettsimulator
             Pixelation Widget:
               name: Pixelation Widget
             Text Compression Lesson:
-              name: Text Compression Lesson
+              name: Leksjon i tekskomprimering
             Text Compression Widget:
               name: Text Compression Widget
             Welcome!:
@@ -1286,7 +1286,7 @@
           description_audience: ''
           stages:
             Lesson Prep:
-              name: Lesson Prep
+              name: Førebuing av leksjon
             Teacher Dashboard:
               name: Lærarmodus
             Teaching with Puzzles:
@@ -1294,7 +1294,7 @@
             Teaching with the Design Recipe:
               name: Teaching with the Design Recipe
             The Design Recipe:
-              name: Design oppskrifta
+              name: Design-oppskrifta
             Welcome!:
               name: Velkomen!
         sciencePD2b:
@@ -1450,13 +1450,13 @@
             Getting Started:
               name: Getting Started
             Lesson Chunk 1- Sending Binary Messages:
-              name: Lesson Chunk 1- Sending Binary Messages
+              name: Leksjon del 1 - Sende binære meldingar
             Lesson Chunk 2- Encoding and Sending Numbers:
-              name: Lesson Chunk 2- Encoding and Sending Numbers
+              name: Leksjon del 2 - Kode og sende tal
             Lesson Chunk 3- Encoding and Sending Text:
-              name: Lesson Chunk 3- Encoding and Sending Text
+              name: Leksjon del 3 - Kode og sende tekst
             Lesson Chunk 4- Compressing and Storing Information:
-              name: Lesson Chunk 4- Compressing and Storing Information
+              name: Leksjon del 4 - Komprimering og lagring av informasjon
             Practice PT:
               name: Practice PT
             Welcome to the Course!:
@@ -1498,7 +1498,7 @@
             'Real-life Algorithms: Plant a Seed':
               name: 'Verkelege algoritmar: Plante eit frø'
             Songwriting:
-              name: Låtskriving med parametere
+              name: Låtskriving
             The Big Event:
               name: Den store hendinga
         afterschool1:
@@ -1528,7 +1528,7 @@
           description_audience: ''
           stages:
             Lesson Prep:
-              name: Lesson Prep
+              name: Førebuing av leksjon
             Updates - The Big Game and Projects:
               name: Updates - The Big Game and Projects
             Updates - The Design Recipe:
@@ -1570,9 +1570,9 @@
             Intro to Unit 2:
               name: Intro to Unit 2
             Lesson Overviews:
-              name: Lesson Overviews
+              name: Gjennomgang av oppgåva
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Læringsstrategiar
             Unit 2 Challenge:
               name: Unit 2 Challenge
         ECSPD3-Unit3:
@@ -1588,7 +1588,7 @@
             Intro to Unit 3:
               name: Intro to Unit 3
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Læringsstrategiar
             Unit 3 Challenge:
               name: Unit 3 Challenge
             Unit 3 Day-by-Day:
@@ -1606,7 +1606,7 @@
             Intro to Unit 4:
               name: Intro to Unit 4
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Læringsstrategiar
             Unit 4 Challenge:
               name: Unit 4 Challenge
             Unit 4 Day-by-Day:
@@ -1628,7 +1628,7 @@
             Unit 5 Overview:
               name: Unit 5 Overview
             Unit 5 lessons:
-              name: Unit 5 lessons
+              name: Eining 5-leksjonar
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1646,7 +1646,7 @@
             Unit 6 Overview:
               name: Unit 6 Overview
             Unit 6 lessons:
-              name: Unit 6 lessons
+              name: Eining 6-leksjonar
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description: |-
@@ -1741,15 +1741,15 @@
             Getting Started:
               name: Getting Started
             Teaching Support - Lessons 1-3:
-              name: Teaching Support - Lessons 1-3
+              name: Undervisningsstøtte - Leksjonar 1-3
             Teaching Support - Lessons 13-16:
-              name: Teaching Support - Lessons 13-16
+              name: Undervisningsstøtte - Leksjonar 13-16
             Teaching Support - Lessons 17-20:
-              name: Teaching Support - Lessons 17-20
+              name: Undervisningsstøtte - Leksjonar 17-20
             Teaching Support - Lessons 4-7:
-              name: Teaching Support - Lessons 4-7
+              name: Undervisningsstøtte - Leksjonar 4-7
             Teaching Support - Lessons 8-12:
-              name: Teaching Support - Lessons 8-12
+              name: Undervisningsstøtte - Leksjonar 8-12
         CSPPD3-Unit2:
           title: 'Computer Science Principles: Unit 2 PD'
           description: Online Exploration of CSP Unit 2
@@ -2108,7 +2108,7 @@
             'Eval: Writing Contracts':
               name: 'Eval: Skrive kontrakter'
             'Play Lab: Defining Functions':
-              name: 'Play Lab: Defining Functions'
+              name: 'Spellab: Definerande funksjonar'
             'Unplugged: Contracts':
               name: 'Trådlaust: Kontrakter'
             'Unplugged: Fast Functions':
@@ -2157,17 +2157,17 @@
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Kursoversikt
             Evaluation Blocks:
               name: Evalueringsblokker
             Introduction to PD:
-              name: Introduction to PD
+              name: Introduksjon til PD
             Preparing for in-person PD:
-              name: Preparing for in-person PD
+              name: Førebu personleg PD
             Teacher Dashboard:
               name: Lærarmodus
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: Kvifor informatikk tilhøyrer Algebra
         algebraPD3c:
           title: Computer Science in Algebra PD
           description: CS in Algebra end of year reflection
@@ -2191,7 +2191,7 @@
           description_audience: ''
           stages:
             Binary Numbers:
-              name: Binary Numbers
+              name: Binære tal
             CS Principles Pre-survey:
               name: CS Principles Pre-survey
             Encoding and Sending Formatted Text:
@@ -2199,21 +2199,21 @@
             HTTP and Abstraction:
               name: HTTP and Abstraction
             Number Systems:
-              name: Number Systems
+              name: Talsystem
             Packets and Making a Reliable Internet:
               name: Packets and Making a Reliable Internet
             Personal Innovations:
-              name: Personal Innovations
+              name: Personlege innovasjonar
             Practice PT - The Internet and Society:
               name: Practice PT - The Internet and Society
             Routers and Redundancy:
               name: Routers and Redundancy
             Sending Binary Messages:
-              name: Sending Binary Messages
+              name: Sende binære meldingar
             Sending Binary Messages with the Internet Simulator:
-              name: Sending Binary Messages with the Internet Simulator
+              name: Sende binære meldingar med Internett Simulator
             Sending Numbers:
-              name: Sending Numbers
+              name: Sende tal
             The Internet:
               name: Internett
             The Need for Addressing:
@@ -2244,7 +2244,7 @@
           description_audience: ''
           stages:
             Bytes and File Sizes:
-              name: Bytes and File Sizes
+              name: Byte- og arkivstorleikar
             Check Your Assumptions:
               name: Check Your Assumptions
             Cleaning Data:
@@ -2256,9 +2256,9 @@
             Encode a Complex Thing:
               name: Encode a Complex Thing
             Encoding B&W Images:
-              name: Encoding B&W Images
+              name: Kode svart/kvit-bilete
             Encoding Color Images:
-              name: Encoding Color Images
+              name: Kode fargebilete
             Finding Trends with Visualizations:
               name: Finding Trends with Visualizations
             Good and Bad Data Visualizations:
@@ -2266,7 +2266,7 @@
             Intro to Data:
               name: Intro to Data
             Lossy Compression and File Formats:
-              name: Lossy Compression and File Formats
+              name: Lossykomprimering og filformat
             Making Data Visualizations:
               name: Making Data Visualizations
             Practice PT - Tell a Data Story:
@@ -2327,6 +2327,12 @@
               name: CSP Student Post-Course Survey
             Creating Functions with Parameters:
               name: Creating Functions with Parameters
+            CSP End-of-Semester Mid-course survey:
+              name: CSP End-of-Semester Mid-course survey
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions
@@ -2424,7 +2430,7 @@
             While Loops:
               name: Medan-løkker
             Edited lessons ABOVE this line:
-              name: Edited lessons ABOVE this line
+              name: Redigerte leksjonar OVER denne linja
             Buttons and Events:
               name: Buttons and Events
             Make Your Own Multi-Screen App:
@@ -2585,7 +2591,7 @@
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
-              name: Introduction to PD
+              name: Introduksjon til PD
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -2644,11 +2650,11 @@
             Evaluation Blocks:
               name: Evalueringsblokker
             Introduction to PD:
-              name: Introduction to PD
+              name: Introduksjon til PD
             Teacher Dashboard:
               name: Lærarmodus
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: Kvifor informatikk tilhøyrer Algebra
         sciencePD1:
           title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
@@ -2666,7 +2672,7 @@
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
-              name: Introduction to PD
+              name: Introduksjon til PD
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -2721,7 +2727,7 @@
             Running a Constructive Classroom:
               name: Running a Constructive Classroom
             Sending Binary Messages:
-              name: Sending Binary Messages
+              name: Sende binære meldingar
             Strategies for Student Writing:
               name: Strategies for Student Writing
             Supporting Peer Learning:
@@ -2756,7 +2762,7 @@
             Contained Levels:
               name: Contained Levels
             Game Lab:
-              name: Spel lab
+              name: Spel-lab
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
@@ -3015,21 +3021,21 @@
             Introduction to Teachercon:
               name: Introduction to Teachercon
             Lesson 1,10:
-              name: 'Lesson 1.10: Routers and Redundancy'
+              name: 'Leksjon 1.10: Rutarar og redundans'
             Lesson 1,11:
-              name: 'Lesson 1.11: Packets and Making a Reliable Internet'
+              name: 'Leksjon 1.11: Pakkar og lage eit påliteleg internett'
             Lesson 1,4:
-              name: 'Lesson 1.4: Number Systems (Circle Triangle Square)'
+              name: 'Leksjon 1.4: Talsystem (sirkel trekant firkant)'
             Lesson 1,6:
-              name: 'Lesson 1.6: Sending Numbers'
+              name: 'Leksjon 1.6: Sende tal'
             Lesson 1,9:
-              name: 'Lesson 1.9: Internet Addressing (Battleship)'
+              name: 'Leksjon 1.9: Internettadressering (slagskip)'
             Lesson 2,10:
-              name: 'Lesson 2.10: Good and Bad Data Visualizations'
+              name: 'Leksjon 2.10: Gode og dårlege datavisualiseringar'
             Lesson 2,2:
-              name: 'Lesson 2.2: Text Compression'
+              name: 'Leksjon 2.2: Tekstkomprimering'
             Lesson 2,3:
-              name: 'Lesson 2.3: Black and White Pixelation'
+              name: 'Leksjon 2.3: Svart-kvit pikselering'
             Measuring Student Learning:
               name: Measuring Student Learning
         kinderTest:
@@ -3109,7 +3115,7 @@
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
               name: Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
             Songwriting:
-              name: Låtskriving med parametere
+              name: Låtskriving
             'Unplugged: Funky Functions':
               name: 'Unplugged: Funky Functions'
         grade1:
@@ -3231,9 +3237,9 @@
             Intro to Unit 2:
               name: Intro to Unit 2
             Lesson Overviews:
-              name: Lesson Overviews
+              name: Gjennomgang av oppgåva
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Læringsstrategiar
             Unit 2 Challenge:
               name: Unit 2 Challenge
         ecs-unit3:
@@ -3249,7 +3255,7 @@
             Intro to Unit 3:
               name: Intro to Unit 3
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Læringsstrategiar
             Unit 3 Challenge:
               name: Unit 3 Challenge
             Unit 3 Day-by-Day:
@@ -3267,7 +3273,7 @@
             Intro to Unit 4:
               name: Intro to Unit 4
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Læringsstrategiar
             Unit 4 Challenge:
               name: Unit 4 Challenge
             Unit 4 Day-by-Day:
@@ -3289,7 +3295,7 @@
             Unit 5 Overview:
               name: Unit 5 Overview
             Unit 5 lessons:
-              name: Unit 5 lessons
+              name: Eining 5-leksjonar
             Unit 5 Challenge:
               name: Unit 5 Challenge
             Close & Next Steps:
@@ -3311,7 +3317,7 @@
             Unit 6 Overview:
               name: Unit 6 Overview
             Unit 6 lessons:
-              name: Unit 6 lessons
+              name: Eining 6-leksjonar
             Close & Next Steps:
               name: Close & Next Steps
         grade3:
@@ -3366,21 +3372,21 @@
             Introduction to Teachercon:
               name: Introduction to Teachercon
             Lesson 1,10:
-              name: Lesson 1,10
+              name: Leksjon 1,10
             Lesson 1,11:
-              name: Lesson 1,11
+              name: Leksjon 1,11
             Lesson 1,4:
-              name: Lesson 1,4
+              name: Leksjon 1,4
             Lesson 1,6:
-              name: Lesson 1,6
+              name: Leksjon 1,6
             Lesson 1,9:
-              name: Lesson 1,9
+              name: Leksjon 1,9
             Lesson 2,10:
-              name: Lesson 2,10
+              name: Leksjon 2,10
             Lesson 2,2:
-              name: Lesson 2,2
+              name: Leksjon 2,2
             Lesson 2,3:
-              name: Lesson 2,3
+              name: Leksjon 2,3
             Test stage with bubbles:
               name: Test stage with bubbles
         csd3:
@@ -3840,7 +3846,7 @@
           description_audience: ''
           stages:
             Lesson Prep:
-              name: Lesson Prep
+              name: Førebuing av leksjon
             Teacher Dashboard:
               name: Lærarmodus
             Teaching with Puzzles:
@@ -3848,7 +3854,7 @@
             Teaching with the Design Recipe:
               name: Teaching with the Design Recipe
             The Design Recipe:
-              name: Design oppskrifta
+              name: Design-oppskrifta
             Welcome!:
               name: Velkomen!
         csp-pre-survey:
@@ -4054,7 +4060,7 @@
             Unit 1 Overview:
               name: Unit 1 Overview
             'Lessons 2-3: Binary Messages':
-              name: 'Lessons 2-3: Binary Messages'
+              name: 'Leksjonar 2-3: Binære meldingar'
             Group Work and Peer Learning:
               name: Group Work and Peer Learning
             Balancing Teachers and Tools:
@@ -4064,36 +4070,35 @@
             Measuring Student Learning:
               name: Measuring Student Learning
             'Lessons 4-6: Encoding and Sending Numbers':
-              name: 'Lessons 4-6: Encoding and Sending Numbers'
+              name: 'Leksjonar 4-6: Koding og sende tal'
             'Lesson 7: Encoding and Sending Text':
-              name: 'Lesson 7: Encoding and Sending Text'
+              name: 'Leksjon 7: Koding og sende tekst'
             'lessons 9: Internet Addressing':
-              name: 'lessons 9: Internet Addressing'
+              name: 'leksjonar 9: Internettadressering'
             'lessons 10: Routers and Redundancy':
-              name: 'lessons 10: Routers and Redundancy'
+              name: 'leksjonar 10: Rutarar og redundans'
             'lessons 11-12: Protocols and Abstraction':
-              name: 'lessons 11-12: Protocols and Abstraction'
+              name: 'leksjonar 11-12: Protokollar og abstraksjon'
             'Lessons 2 - 3: Binary Messages':
-              name: 'Lessons 2 - 3: Binary Messages'
+              name: 'Leksjonar 2 - 3: Binære meldingar'
             'Lessons 4 - 6: Encoding and Sending Numbers':
-              name: 'Lessons 4 - 6: Encoding and Sending Numbers'
+              name: 'Leksjonar 4 - 6: Koding og sende tal'
             'Lesson 9: Internet Addressing':
-              name: 'Lesson 9: Internet Addressing'
+              name: 'Leksjon 9: Internettadressering'
             'Lessons 10 - 11: Redundancy and Packets':
-              name: 'Lessons 10 - 11: Redundancy and Packets'
+              name: 'Leksjonar 10 - 11: Redundans og pakkar'
             'Lessons 12 - 13: Abstraction on the Internet':
-              name: 'Lessons 12 - 13: Abstraction on the Internet'
+              name: 'Leksjonar 12 - 13: Abstraksjon på internett'
             'Lessons 10 - 11: Routers, Redundancy, and Packets':
-              name: 'Lessons 10 - 11: Routers, Redundancy, and Packets'
+              name: 'Leksjonar 10 - 11: Rutarar, redundans og pakkar'
             'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
-              name: 'Lessons 1 - 2: Bytes, File Sizes, and Text Compression'
+              name: 'Leksjonar 1 - 2: Bytes, filsstorleikar og tekstkomprimering'
             'Lessons 3 - 4 : Encoding Images':
-              name: 'Lessons 3 - 4 : Encoding Images'
+              name: 'Leksjonar 3-4: Kode bilete'
             'Lesson 5 - 6: Compression Formats and Developing your own Encoding Scheme':
-              name: 'Lesson 5 - 6: Compression Formats and Developing your own Encoding
-                Scheme'
+              name: 'Leksjon 5 - 6: Komprimeringsformat og utvikle din eigen kodeplan'
             'Lessons 7 - 11: Interpreting Visual Data':
-              name: 'Lessons 7 - 11: Interpreting Visual Data'
+              name: 'Leksjonar 7 - 11: Tolking av visuelle data'
             'Lessons 12 - 15: Communicating with Visualizations':
               name: 'Lessons 12 - 15: Communicating with Visualizations'
             'Lessons 7 - 10: Interpreting Visual Data':
@@ -4135,17 +4140,17 @@
             Unit 1 Overview:
               name: Unit 1 Overview
             'Lessons 2 - 3: Binary Messages':
-              name: 'Lessons 2 - 3: Binary Messages'
+              name: 'Leksjonar 2 - 3: Binære meldingar'
             'Lessons 4 - 6: Encoding and Sending Numbers':
-              name: 'Lessons 4 - 6: Encoding and Sending Numbers'
+              name: 'Leksjonar 4 - 6: Koding og sende tal'
             'Lesson 7: Encoding and Sending Text':
-              name: 'Lesson 7: Encoding and Sending Text'
+              name: 'Leksjon 7: Koding og sende tekst'
             'Lesson 9: Internet Addressing':
-              name: 'Lesson 9: Internet Addressing'
+              name: 'Leksjon 9: Internettadressering'
             'Lessons 10 - 11: Routers, Redundancy, and Packets':
-              name: 'Lessons 10 - 11: Routers, Redundancy, and Packets'
+              name: 'Leksjonar 10 - 11: Rutarar, redundans og pakkar'
             'Lessons 12 - 13: Abstraction on the Internet':
-              name: 'Lessons 12 - 13: Abstraction on the Internet'
+              name: 'Leksjonar 12 - 13: Abstraksjon på internett'
             Group Work and Peer Learning:
               name: Group Work and Peer Learning
             Balancing Teachers and Tools:
@@ -4187,7 +4192,7 @@
             Binary Bracelets:
               name: Binær armbånd
             Binary Images:
-              name: Binære Bilder
+              name: Binære bilete
             Binary Artist Puzzles:
               name: Binary Artist Puzzles
             RGB Color:
@@ -4446,9 +4451,9 @@
             Unit 2 Overview:
               name: Unit 2 Overview
             'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
-              name: 'Lessons 1 - 2: Bytes, File Sizes, and Text Compression'
+              name: 'Leksjonar 1 - 2: Bytes, filsstorleikar og tekstkomprimering'
             'Lessons 3 - 4 : Encoding Images':
-              name: 'Lessons 3 - 4 : Encoding Images'
+              name: 'Leksjonar 3-4: Kode bilete'
             'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme':
               name: 'Lessons 5 - 6: Compression Formats and Developing your own Encoding
                 Scheme'
@@ -4836,7 +4841,7 @@
             'Events: The Big Event':
               name: 'Events: The Big Event'
             Events in Play Lab:
-              name: Events in Play Lab
+              name: Hendingar i Spellab
             Fuzz Fiesta:
               name: Fuzz Fiesta
             Going Places Safely:
@@ -4876,7 +4881,7 @@
             'Events: The Big Event':
               name: 'Events: The Big Event'
             Events in Play Lab:
-              name: Events in Play Lab
+              name: Hendingar i Spellab
             More Computer Science:
               name: More Computer Science
             Keep it Private:
@@ -4918,7 +4923,7 @@
             Binary Bracelets:
               name: Binær armbånd
             Events in Play Lab:
-              name: Events in Play Lab
+              name: Hendingar i Spellab
             Your Digital Footprint:
               name: Dine digitale fotspor
             Building a Foundation:
@@ -4964,7 +4969,7 @@
             More Programming with CS4FN:
               name: More Programming with CS4FN
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Bygg eit spel i Spellab
             Conditionals in Bee:
               name: Conditionals in Bee
             Digital Citizenship:
@@ -5006,7 +5011,7 @@
             Determine the Concept in Bee:
               name: Determine the Concept in Bee
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Bygg eit spel i Spellab
             Explore Project Ideas:
               name: Explore Project Ideas
             The Design Process:
@@ -5042,13 +5047,13 @@
             Digital Citizenship:
               name: Digitalt statsborgerskap
             Envelope Variables:
-              name: Konvolutt variabler
+              name: Konvolutt-variablar
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: Variablar i Spellab
             Variables in Artist:
               name: Variables in Artist
             For Loop Fun:
-              name: Morro med for løkker
+              name: Morro med for-løkker
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
@@ -5461,6 +5466,10 @@
               name: Designing Screens with Code
             Arrays:
               name: Arrays
+            Making Music:
+              name: Making Music
+            Arrays and For Loops:
+              name: Arrays and For Loops
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -6168,6 +6177,8 @@
                 deciding what to do with data that does not easily fit into the visualization
                 scheme that they have chosen.  Last, students look at what parts of
                 this process can be automated, and what need a human to make decisions.
+            Keeping Data Secret:
+              name: Keeping Data Secret
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -6506,6 +6517,8 @@
               name: Sprett
             NewBounce:
               name: NewBounce
+            F PlayLab Variables:
+              name: F PlayLab Variables
           title: ''
           description_audience: ''
           description_short: ''
@@ -6591,7 +6604,7 @@
                 the user exactly when the user wants it to. That is what events are
                 for.
             Events in Play Lab:
-              name: Events in Play Lab
+              name: Hendingar i Spellab
               description_student: ''
               description_teacher: In this online activity, students will have the
                 opportunity to learn how to use events in Play Lab and to apply all
@@ -6632,7 +6645,7 @@
             'Events: The Big Event':
               name: 'Events: The Big Event'
             Events in Play Lab:
-              name: Events in Play Lab
+              name: Hendingar i Spellab
             More Programming in Maze:
               name: More Programming in Maze
             Programming with Rey and BB-8:
@@ -6669,7 +6682,7 @@
             Build a Flappy Game:
               name: Build a Flappy Game
             Events in Play Lab:
-              name: Events in Play Lab
+              name: Hendingar i Spellab
             Screen Out the Mean:
               name: Screen Out the Mean
             Binary Bracelets:
@@ -6811,7 +6824,7 @@
 
                 Students will also explore what it means to be responsible and respectful to their offline and online communities as a step toward learning how to be good digital citizens.
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Bygg eit spel i Spellab
               description_student: This lesson will guide you through making your
                 very own video game.
               description_teacher: In this online activity, students will have the
@@ -6884,13 +6897,13 @@
             Ice Age Play Lab:
               name: Istid Spel-lab
             Envelope Variables:
-              name: Konvolutt variabler
+              name: Konvolutt-variablar
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: Variablar i Spellab
             For Loop Fun:
-              name: Morro med for løkker
+              name: Morro med for-løkker
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
@@ -7029,7 +7042,7 @@
                 to apply. Students will review basic algorithms, debugging, `repeat`
                 loops, conditionals, `while` loops, and functions.
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Bygg eit spel i Spellab
               description_student: Practice making games to share with your friends
                 and family.
               description_teacher: This lesson features Play Lab, a platform where
@@ -7162,7 +7175,7 @@
                 and easier to read. After guided puzzles, students will end in a freeplay
                 level to show what they have learned and create their own designs.
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: Variablar i Spellab
               description_student: Soon you will learn about making characters interact
                 in a game using variables!
               description_teacher: Students will get further practice with variables
@@ -7660,13 +7673,13 @@
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             Envelope Variables:
-              name: Konvolutt variabler
+              name: Konvolutt-variablar
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: Variablar i Spellab
             For Loop Fun:
-              name: Morro med for løkker
+              name: Morro med for-løkker
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
@@ -7746,7 +7759,7 @@
             'Events: The Big Event':
               name: 'Events: The Big Event'
             Events in Play Lab:
-              name: Events in Play Lab
+              name: Hendingar i Spellab
             Spelling Bee:
               name: Stavekonkurranse
           title: ''
@@ -7815,6 +7828,10 @@
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey:
+              name: Please complete the CSP Mid-course survey
           title: ''
           description_audience: ''
           description_short: ''
@@ -7937,7 +7954,7 @@
             Determine the Concept:
               name: Determine the Concept
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Bygg eit spel i Spellab
             Explore Project Ideas:
               name: Explore Project Ideas
             The Design Process:
@@ -7991,7 +8008,7 @@
             Digital Citizenship:
               name: Digitalt statsborgerskap
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Bygg eit spel i Spellab
             'Unplugged: Binary':
               name: 'Trådlaust: Binær'
             Artist Binary:
@@ -8063,7 +8080,7 @@
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: Variablar i Spellab
             'For Loops: For Loop Fun':
               name: 'For Loops: For Loop Fun'
             For Loops in Bee:
@@ -8155,7 +8172,7 @@
             Determine the Concept:
               name: Determine the Concept
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Bygg eit spel i Spellab
             Explore Project Ideas:
               name: Explore Project Ideas
             The Design Process:
@@ -8203,13 +8220,13 @@
             Conditionals in Minecraft:
               name: Betingelser i Minecraft
             Envelope Variables:
-              name: Konvolutt variabler
+              name: Konvolutt-variablar
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: Variablar i Spellab
             For Loop Fun:
-              name: Morro med for løkker
+              name: Morro med for-løkker
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
@@ -8408,6 +8425,16 @@
               name: 'Technology Foundations: What is a Computer?'
             'Data Science: Problem Solving with Big Data':
               name: 'Data Science: Problem Solving with Big Data'
+            Personal Innovations:
+              name: Personlege innovasjonar
+            What is a Computer?:
+              name: What is a Computer?
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Programming - Hour of Code:
+              name: Programming - Hour of Code
+            Simple Encryption:
+              name: Enkel kryptering
           title: PwC Access Your Potential
           description_audience: ''
           description_short: ''
@@ -8451,13 +8478,13 @@
         hero:
           stages:
             'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'Minecraft\: Hero''s Journey Hour of Code'
+              name: 'Minecraft\: Helten si reise i Kodetimen'
             Minecraft Hour of Code:
               name: Kodetimen med Minecraft
-          title: 'Minecraft: Heltens reise'
+          title: 'Minecraft: Helten si reise'
           description_audience: ''
-          description_short: Minecraft er tilbake med en helt ny aktivitet til Kodetimen!
-          description: Minecraft er tilbake for Kodetimen med en helt ny aktivitet!
+          description_short: Minecraft er tilbake med ein heilt ny aktivitet i Kodetimen!
+          description: Minecraft er tilbake i Kodetimen med ein heilt ny aktivitet!
             Reis gjennom Minecraft med kode.
         applab-intro-staging:
           stages:
@@ -8475,6 +8502,8 @@
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
           title: Intro to App Lab Staging
           description_audience: ''
           description_short: ''
@@ -8491,6 +8520,8 @@
               name: Explore PT - Complete the Task
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Setup: Digital Portfolio and Other Tools'
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
@@ -8526,6 +8557,14 @@
             standalone template:
               name: standalone template
           title: 'CSP3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        aws-demo:
+          stages:
+            new stage:
+              name: new stage
+          title: AWS Demo
           description_audience: ''
           description_short: ''
           description: ''

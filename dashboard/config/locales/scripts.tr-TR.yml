@@ -14,7 +14,7 @@
           description_audience: 4-6 yaş arası
           stages:
             'Artist: Loops':
-              name: 'Aktör: Döngüler'
+              name: 'Sanatçı: Döngüler'
             'Artist: Sequence':
               name: 'Aktör: Sıra'
             'Artist: Shapes':
@@ -61,7 +61,7 @@
             'Artist: Debugging':
               name: 'Sanatçı: Hata Ayıklama'
             'Artist: Loops':
-              name: 'Aktör: Döngüler'
+              name: 'Sanatçı: Döngüler'
             'Artist: Nested Loops':
               name: 'Aktör: İç içe Döngüler'
             'Artist: Sequence':
@@ -199,7 +199,7 @@
             Artist Binary:
               name: Sanaçtı İkili Taban
             'Artist: For Loops':
-              name: 'Sanatçı: For Döngüleri'
+              name: 'Sanatçı: Şununla Say (for) Döngüleri'
             'Artist: Functions':
               name: 'Sanatçı: Fonksiyonlar'
             'Artist: Functions with Parameters':
@@ -248,7 +248,7 @@
             'Artist: Functions':
               name: 'Sanatçı: Fonksiyonlar'
             'Artist: Loops':
-              name: 'Aktör: Döngüler'
+              name: 'Sanatçı: Döngüler'
             'Artist: Nested Loops':
               name: 'Aktör: İç içe Döngüler'
             'Artist: Sequence':
@@ -2325,6 +2325,12 @@
               name: Bilgisayar Bilimi ilkeleri kurs sonrası anketi
             Creating Functions with Parameters:
               name: Parametreli Fonksiyonlar yaratma
+            CSP End-of-Semester Mid-course survey:
+              name: CSP End-of-Semester Mid-course survey
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions
@@ -2984,7 +2990,7 @@
           description_audience: Ages 8-98
           stages:
             Artist Functions:
-              name: Aktör Fonksiyonları
+              name: 'Sanatçı: Fonksiyonlar'
             Sample Stage:
               name: "Örnek sahne"
             The same thing with named levels:
@@ -2992,13 +2998,13 @@
             You are a coding STAR:
               name: Sen Bir Kodlama YILDIZISIN
         artistExemplar:
-          title: Artist Exemplar
+          title: Sanatçı Örnek
           description: These artist levels will knock the socks off of third graders
           description_short: How can we make the artist levels really hum?
           description_audience: 8 yaş ve üstü (Ders 2 sonrası)
           stages:
             Artist Exemplar:
-              name: Artist Exemplar
+              name: Sanatçı Örnek
         teachercon:
           title: TeacherCon Supports
           description: We will use this during TeacherCon to deliver supports and
@@ -3106,7 +3112,7 @@
             More Programming with Scratch:
               name: Scratch İle Daha Fazla Programlama
             'New Artist: Functions':
-              name: 'Yeni Aktör: Fonksiyonlar'
+              name: 'Yeni Sanatçı: Fonksiyonlar'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
               name: Scaffolded Proje Sahnesi (Döngüler, Olaylar, Koşullar, Fonksiyonlar)
             Songwriting:
@@ -3158,7 +3164,7 @@
           description_audience: Ages 10-110
           stages:
             'Artist: For Loops':
-              name: 'Sanatçı: For Döngüleri'
+              name: 'Sanatçı: Şununla Say (for) Döngüleri'
             'Artist: Functions with Parameters':
               name: 'Sanatçı: Fonksiyonlar ve Parametreler'
             'Artist: Variables':
@@ -4412,7 +4418,7 @@
                 \r
                 Finally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag.
             Project - Multi-Page Websites:
-              name: Project - Multi-Page Websites
+              name: Proje - çok sayfalı web siteleri
               description_student: 'This lesson covers hyperlinks, which allow web
                 developers to connect pages together into one website.  The class
                 will link together all the previous pages into one project, and create
@@ -4438,7 +4444,7 @@
                 web sayfasına daha fazla tarz eklerler, daha sonra onları kendi kişisel
                 web sayfalarında kullanırlar.
             Project - Personal Portfolio Website:
-              name: Project - Personal Portfolio Website
+              name: 'Proje: Kişisel portföy Web sitesi'
               description_student: In the last few days of the unit, the class finalizes
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
@@ -4446,7 +4452,7 @@
               description_teacher: |
                 Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
             Headings:
-              name: Headings
+              name: Başlıklar
               description_student: This lesson continues the introduction to HTML
                 tags, this time with headers.  The class practices using header tags
                 to create page and section titles and learns how the different header
@@ -4895,7 +4901,7 @@
             Loops in Collector:
               name: Loops in Collector
             Loops in Artist:
-              name: Loops in Artist
+              name: Sanatçı- Döngüler
             'Events: The Big Event':
               name: 'Olaylar: Büyük Olay'
             Events in Play Lab:
@@ -5024,7 +5030,7 @@
             'Functions: Songwriting':
               name: 'Fonksiyonlar: şarkı yazma'
             Functions in Artist:
-              name: Sanatçı fonksiyonları
+              name: Sanatçı- Fonksiyonlar
             Functions in Bee:
               name: Arı fonksiyonları
             Functions in Farmer:
@@ -5073,17 +5079,17 @@
             Variables in Play Lab:
               name: Değişkenler - Oyun laboratuarı
             Variables in Artist:
-              name: Değişkenler - Sanatçı
+              name: Sanatçı-Değişkenler
             For Loop Fun:
               name: Eğlenceli tekrar için
             For Loops in Bee:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
-              name: Sanatçı-Şununla say
+              name: Sanatçı-Şununla say Döngüleri
             'Functions with Parameters: Songwriting with Parameters':
               name: 'Parametrelerle Fonksiyonlar: Parametrelerle Beste'
             Functions with Parameters in Artist:
-              name: Aktör Parametrelerinde Fonksiyonlar
+              name: Sanatçı Parametrelerinde Fonksiyonlar
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
             Explore Project Ideas:
@@ -5313,7 +5319,7 @@
             'Functions: Songwriting':
               name: 'Fonksiyonlar: şarkı yazma'
             Functions in Artist:
-              name: Sanatçı fonksiyonları
+              name: Sanatçı- Fonksiyonlar
             Functions in Bee:
               name: Arı fonksiyonları
             Functions in Farmer:
@@ -5325,7 +5331,7 @@
             Binary:
               name: "İkili"
             Snowflakes:
-              name: Snowflakes
+              name: Kar taneleri
         sciencepd5:
           title: 'CS in Science: Part 5'
           description_audience: ''
@@ -5490,6 +5496,10 @@
               name: Designing Screens with Code
             Arrays:
               name: Arrays
+            Making Music:
+              name: Müzik yapma
+            Arrays and For Loops:
+              name: Arrays and For Loops
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -6204,6 +6214,8 @@
                 deciding what to do with data that does not easily fit into the visualization
                 scheme that they have chosen.  Last, students look at what parts of
                 this process can be automated, and what need a human to make decisions.
+            Keeping Data Secret:
+              name: Keeping Data Secret
         csd3-old:
           title: CSD ünite 3 (kullanım dışı)
           description_audience: ''
@@ -6298,11 +6310,11 @@
             Intellectual Property:
               name: Fikri Mülkiyet
             Images:
-              name: Images
+              name: Görüntüler
             Clean Code and Debugging:
               name: Temiz Kod ve Debugging (Hata Ayıklama)
             Project - Multi-Page Websites:
-              name: Project - Multi-Page Websites
+              name: Proje - çok sayfalı web siteleri
             Styling Text with CSS:
               name: CSS ile Metin Biçimlendirme
             Styling Elements with CSS:
@@ -6312,7 +6324,7 @@
             RGB Colors and Classes:
               name: RGB Renkleri ve Sınıfları
             Project - Personal Portfolio Website:
-              name: Project - Personal Portfolio Website
+              name: 'Proje: Kişisel portföy Web sitesi'
             Headers:
               name: Başlıklar
             Intellectual Property and Images:
@@ -6516,13 +6528,13 @@
             B8 BB8:
               name: B8 BB8
             C9 Artist Loops:
-              name: C9 Aktör Döngüleri
+              name: C9 Sanatçı Döngüleri
             C8 to BB8:
               name: C8 BB8
             D7 to Laurel:
               name: D7 Laurel
             D6 Frozen Artist:
-              name: D6 dondurulmuş Sanatçı
+              name: D6 Frozen Sanatçı
             F7 add Conditionals:
               name: F7 add Conditionals
             F5 Minecraft:
@@ -6539,6 +6551,8 @@
               name: Sıçrama
             NewBounce:
               name: NewBounce
+            F PlayLab Variables:
+              name: F PlayLab Variables
           title: ''
           description_audience: ''
           description_short: ''
@@ -6609,7 +6623,7 @@
                 from "Happy Loops," this stage will have students using loops to collect
                 treasure more efficiently on Code.org.
             Loops in Artist:
-              name: Loops in Artist
+              name: Sanatçı- Döngüler
               description_student: ''
               description_teacher: Returning to loops, students learn to draw images
                 by looping simple sequences of instructions. In the previous plugged
@@ -6658,7 +6672,7 @@
             Loops in Collector:
               name: Loops in Collector
             Loops in Artist:
-              name: Loops in Artist
+              name: Sanatçı- Döngüler
             'Events: The Big Event':
               name: 'Olaylar: Büyük Olay'
             Events in Play Lab:
@@ -6686,7 +6700,7 @@
             Programming in Collector:
               name: Programming in Collector
             Programming in Artist:
-              name: Programming in Artist
+              name: Sanatçı ile Programlama
             'Loops: Getting Loopy':
               name: 'Loops: Getting Loopy'
             Loops in Maze:
@@ -6704,7 +6718,7 @@
             Binary Bracelets:
               name: 'Programlamanın Ötesi: Binary Bilezikleri'
             Loops in Artist:
-              name: Loops in Artist
+              name: Sanatçı- Döngüler
             Loops with Rey and BB-8:
               name: Rey ve BB-8 ile döngüler
           title: Ders C
@@ -6761,7 +6775,7 @@
                 encouraged to figure out how little changes in either loop will affect
                 their program when they click `Run`.
             Nested Loops in Artist:
-              name: Nested Loops in Artist
+              name: Sanatçı'da İç İçe Döngüler
               description_student: Daha fazla iç içe döngüler! Bu kez iç içe döngüler
                 ile bazı HARİKA çizimler yapacaksınız.
               description_teacher: Students will create intricate designs using Artist
@@ -6884,7 +6898,7 @@
                 döngüler ve iç içe döngüler ile bulmacaları çözmek için kod okuma
                 ve düzenleme alıştırması yapacaklar.
           title: Ders D
-          description_audience: ''
+          description_audience: 'Yaş: 7-11'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
             hikayelerinizi ve sanatınızı oluşturun.
           description: |-
@@ -6914,7 +6928,7 @@
             Envelope Variables:
               name: Zarf değişkenleri
             Variables in Artist:
-              name: Değişkenler - Sanatçı
+              name: Sanatçı-Değişkenler
             Variables in Play Lab:
               name: Değişkenler - Oyun laboratuarı
             For Loop Fun:
@@ -6922,13 +6936,13 @@
             For Loops in Bee:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
-              name: Sanatçı-Şununla say
+              name: Sanatçı-Şununla say Döngüleri
             Songwriting with Parameters:
               name: Parametrelerle Şarkı Yazmak
             Conditionals and Functions in Bee:
               name: Koşullar ve fonksiyonlar- Arı
             Functions with Parameters in Artist:
-              name: Aktör Parametrelerinde Fonksiyonlar
+              name: Sanatçı Parametrelerinde Fonksiyonlar
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
             Explore Project Ideas:
@@ -7016,15 +7030,16 @@
                 given space to create their own game.
             'Functions: Songwriting':
               name: 'Fonksiyonlar: şarkı yazma'
-              description_student: Even rockstars need programming skills. This lesson
-                will teach you about functions using lyrics from songs.
-              description_teacher: One of the most magnificent structures in the computer
-                science world is the function. Functions (sometimes called procedures)
-                are mini programs that you can use over and over inside of your bigger
-                program. This lesson will help students intuitively understand why
-                combining chunks of code into functions can be such a helpful practice.
+              description_student: Müzik yıldızı için bile programlama yeteneği gerektirir.
+                Bu ders şarkı sözleri kullanarak fonksiyonları öğretecektir.
+              description_teacher: Bilgisayar bilimi dünyasındaki en harika yapılardan
+                birisi de fonksiyonlardır. Fonksiyonlar (ya da bazen method da deriz)
+                asıl büyük programımız içinde tekrar tekrar kullanabildiğimiz mini
+                programlardır. Bu ders öğrencilerin neden bir yığın kodu fonksiyonun
+                içine yerleştirmenin ne kadar yararlı olduğunu kavramalarına yardımcı
+                olacaktır.
             Functions in Artist:
-              name: Sanatçı fonksiyonları
+              name: Sanatçı- Fonksiyonlar
               description_student: Fonksiyonlar ile daha karmaşık çizimleri daha kolay
                 yapın!
               description_teacher: "Öğrenciler Code.org' da fonksiyonları kullanmayı
@@ -7102,11 +7117,11 @@
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
-              name: Programming in Artist
+              name: Sanatçı ile Programlama
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Sanatçı- Döngüler
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
@@ -7114,7 +7129,7 @@
             Nested Loops:
               name: "İç İçe Döngüler"
           title: Ders E
-          description_audience: ''
+          description_audience: 8-12 yaş grubu
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
             hikayelerinizi ve sanatınızı oluşturun.
           description: Created with fourth grade students in mind, this course begins
@@ -7180,7 +7195,7 @@
                 to grasp, so we recommend allowing plenty of time for discussion at
                 the end of the lesson.
             Variables in Artist:
-              name: Değişkenler - Sanatçı
+              name: Sanatçı-Değişkenler
               description_student: Sınıfa yaratıcılık getirmeyi unutmayın! Bu bulmacalarda
                 değişkenleri kullanarak muhteşem çizimler yapacaksınız.
               description_teacher: In this lesson, students will explore the creation
@@ -7214,7 +7229,7 @@
                 walked through using for loops to more effectively solve complicated
                 problems.
             For Loops in Artist:
-              name: Sanatçı-Şununla say
+              name: Sanatçı-Şununla say Döngüleri
               description_student: Get ready to make your next masterpiece. Here you
                 will be using `for` loops to make some jaw-dropping pictures.
               description_teacher: In this lesson, students continue to practice for
@@ -7242,7 +7257,7 @@
                 functions using our sophisticated “modal” function editor, preparing
                 the way for them to incorporate parameters in future lessons. '
             Functions with Parameters in Artist:
-              name: Aktör Parametrelerinde Fonksiyonlar
+              name: Sanatçı Parametrelerinde Fonksiyonlar
               description_student: Programlama yapacağınız parmaklarınızı hazırlayın.
                 Bu bulmacalarda, parametrelerle fonksiyonları kullanarak, Aktörlerde
                 etkileyici çizimler yapacaksınız.
@@ -7343,7 +7358,7 @@
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
-              name: Programming in Artist
+              name: Sanatçı ile Programlama
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
@@ -7690,7 +7705,7 @@
             Envelope Variables:
               name: Zarf değişkenleri
             Variables in Artist:
-              name: Değişkenler - Sanatçı
+              name: Sanatçı-Değişkenler
             Variables in Play Lab:
               name: Değişkenler - Oyun laboratuarı
             For Loop Fun:
@@ -7698,13 +7713,13 @@
             For Loops in Bee:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
-              name: Sanatçı-Şununla say
+              name: Sanatçı-Şununla say Döngüleri
             Songwriting with Parameters:
               name: Parametrelerle Şarkı Yazmak
             Functions in Bee:
               name: Arı fonksiyonları
             Functions with Parameters in Artist:
-              name: Aktör Parametrelerinde Fonksiyonlar
+              name: Sanatçı Parametrelerinde Fonksiyonlar
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
             Explore Project Ideas:
@@ -7847,6 +7862,10 @@
               name: "Ünite 3 Bölüm 1 değerlendirme"
             foo:
               name: foo
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey:
+              name: Please complete the CSP Mid-course survey
           title: ''
           description_audience: ''
           description_short: Programlama
@@ -7961,7 +7980,7 @@
             'Functions: Songwriting':
               name: 'Fonksiyonlar: şarkı yazma'
             Functions in Artist:
-              name: Sanatçı fonksiyonları
+              name: Sanatçı- Fonksiyonlar
             Functions in Bee:
               name: Arı fonksiyonları
             Functions in Farmer:
@@ -8093,7 +8112,7 @@
             'Variables: Envelope Variables':
               name: 'Variables: Envelope Variables'
             Variables in Artist:
-              name: Değişkenler - Sanatçı
+              name: Sanatçı-Değişkenler
             Variables in Play Lab:
               name: Değişkenler - Oyun laboratuarı
             'For Loops: For Loop Fun':
@@ -8101,13 +8120,13 @@
             For Loops in Bee:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
-              name: Sanatçı-Şununla say
+              name: Sanatçı-Şununla say Döngüleri
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
             Functions in Bee:
               name: Arı fonksiyonları
             Functions with Parameters in Artist:
-              name: Aktör Parametrelerinde Fonksiyonlar
+              name: Sanatçı Parametrelerinde Fonksiyonlar
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
             Explore Project Ideas:
@@ -8181,7 +8200,7 @@
             Functions in Bee:
               name: Arı fonksiyonları
             Functions in Artist:
-              name: Sanatçı fonksiyonları
+              name: Sanatçı- Fonksiyonlar
             Functions in Farmer:
               name: "Çiftçi fonksiyonları"
             Determine the Concept:
@@ -8237,7 +8256,7 @@
             Envelope Variables:
               name: Zarf değişkenleri
             Variables in Artist:
-              name: Değişkenler - Sanatçı
+              name: Sanatçı-Değişkenler
             Variables in Play Lab:
               name: Değişkenler - Oyun laboratuarı
             For Loop Fun:
@@ -8245,13 +8264,13 @@
             For Loops in Bee:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
-              name: Sanatçı-Şununla say
+              name: Sanatçı-Şununla say Döngüleri
             Songwriting with Parameters:
               name: Parametrelerle Şarkı Yazmak
             Functions in Bee:
               name: Arı fonksiyonları
             Functions with Parameters in Artist:
-              name: Aktör Parametrelerinde Fonksiyonlar
+              name: Sanatçı Parametrelerinde Fonksiyonlar
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
             Explore Project Ideas:
@@ -8441,6 +8460,16 @@
               name: 'Technology Foundations: What is a Computer?'
             'Data Science: Problem Solving with Big Data':
               name: 'Data Science: Problem Solving with Big Data'
+            Personal Innovations:
+              name: Kişisel yenilikler
+            What is a Computer?:
+              name: Bilgisayar nedir?
+            Problem Solving with Big Data:
+              name: Büyük veri ile Problem çözme
+            Programming - Hour of Code:
+              name: Programming - Hour of Code
+            Simple Encryption:
+              name: Basit şifreleme
           title: PwC Access Your Potential
           description_audience: ''
           description_short: ''
@@ -8507,6 +8536,8 @@
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
           title: Intro to App Lab Staging
           description_audience: ''
           description_short: ''
@@ -8523,6 +8554,8 @@
               name: Performans Gorevini Kesfet - Görevi Tamamla
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Teknik kurulum - AP dijital portföy ve diğer araçlar
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Setup: Digital Portfolio and Other Tools'
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
@@ -8558,6 +8591,14 @@
             standalone template:
               name: standalone template
           title: 'CSP3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        aws-demo:
+          stages:
+            new stage:
+              name: yeni kademe
+          title: AWS Demo
           description_audience: ''
           description_short: ''
           description: ''
