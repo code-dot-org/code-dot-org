@@ -6,10 +6,17 @@ import { connect } from 'react-redux';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
 import CohortViewTable from './cohort_view_table';
+import RegionalPartnerDropdown from './regional_partner_dropdown';
+import {
+  RegionalPartnerDropdownOptions as dropdownOptions,
+  UnmatchedFilter
+} from './constants';
+
 
 class CohortView extends React.Component{
   static propTypes = {
     regionalPartnerName: PropTypes.string.isRequired,
+    isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired,
@@ -23,24 +30,46 @@ class CohortView extends React.Component{
 
   state = {
     loading: true,
-    applications: null
+    applications: null,
+    regionalPartnerName: this.props.regionalPartnerName,
+    regionalPartnerFilter: UnmatchedFilter
   }
 
   componentWillMount() {
-    $.ajax({
-      method: 'GET',
-      url: `/api/v1/pd/applications/cohort_view.json_view?role=${this.props.route.path.replace('_cohort', '')}`,
-      dataType: 'json'
-    })
-    .done(data => {
-      this.setState({
-        loading: false,
-        applications: data
-      });
-    });
+    this.load();
   }
 
+  load(selected = null) {
+    let url = `/api/v1/pd/applications/cohort_view.json_view?role=${this.props.route.path.replace('_cohort', '')}`;
+    if (this.props.isWorkshopAdmin) {
+      const regionalPartnerFilter = selected ? selected.value : this.state.regionalPartnerFilter;
+      const regionalPartnerName = selected ? selected.label : this.state.regionalPartnerName;
+      this.setState({ regionalPartnerName, regionalPartnerFilter });
+      console.log(regionalPartnerName);
+
+      url += `&regional_partner_filter=${regionalPartnerFilter}`;
+    }
+
+    $.ajax({
+      method: 'GET',
+      url: url,
+      dataType: 'json'
+    })
+      .done(data => {
+        this.setState({
+          loading: false,
+          applications: data
+        });
+      });
+  }
+
+  handleRegionalPartnerChange = (selected) => {
+    this.load(selected);
+  };
+
   render() {
+    console.log(this.state.regionalPartnerName);
+
     if (this.state.loading) {
       return (
         <Spinner/>
@@ -48,7 +77,14 @@ class CohortView extends React.Component{
     } else {
       return (
         <div>
-          <h1>{this.props.regionalPartnerName}</h1>
+          {this.props.isWorkshopAdmin &&
+            <RegionalPartnerDropdown
+              onChange={this.handleRegionalPartnerChange}
+              regionalPartnerFilter={this.state.regionalPartnerFilter}
+              additionalOptions={dropdownOptions}
+            />
+          }
+          <h1>{this.state.regionalPartnerName}</h1>
           <h2>{this.props.route.applicationType}</h2>
           <CohortViewTable
             data={this.state.applications}
@@ -63,4 +99,6 @@ class CohortView extends React.Component{
 
 export default connect(state => ({
   regionalPartnerName: state.regionalPartnerName,
+  regionalPartners: state.regionalPartners,
+  isWorkshopAdmin: state.permissions.workshopAdmin
 }))(CohortView);

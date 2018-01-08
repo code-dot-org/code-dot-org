@@ -24,7 +24,7 @@ module PrincipalApproval1819ApplicationConstants
     committed_to_master_schedule: 'Are you committed to including this program on the master schedule in 2018-19 if this teacher is accepted into the program. Note: the program may be listed under a different course name as determined by your district.',
     hours_per_year: 'Approximately how many course hours per school year will your school offer this course?',
     terms_per_year: 'How many terms will this course span in one school year?',
-    replace_course: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) that will be replaced.',
+    replace_course: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) tha t will be replaced.',
     replace_which_course_csp: 'Which existing course or curriculum will CS Principles replace? Mark all that apply.',
     replace_which_course_csd: 'Which existing course or curriculum will CS Discoveries replace? Mark all that apply.',
     committed_to_diversity: 'Do you commit to recruiting and enrolling a diverse group of students in this course, representative of  the overall demographics of your school?',
