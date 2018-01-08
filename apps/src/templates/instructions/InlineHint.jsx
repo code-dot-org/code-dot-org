@@ -19,7 +19,7 @@ const InlineHint = React.createClass({
     video: videoDataShape,
     ttsUrl: PropTypes.string,
     ttsMessage: PropTypes.string,
-    isBlockly: PropTypes.bool
+    isBlockly: PropTypes.bool,
   },
 
   componentDidMount() {
@@ -35,6 +35,7 @@ const InlineHint = React.createClass({
         study: 'hint-videos',
         event: 'Click',
       },
+      { includeUserId: true }
     );
   },
 
@@ -59,5 +60,5 @@ const InlineHint = React.createClass({
 
 export const StatelessInlineHint = Radium(InlineHint);
 export default connect(state => ({
-  isBlockly: state.pageConstants.isBlockly
+  isBlockly: state.pageConstants.isBlockly,
 }))(Radium(InlineHint));
