@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {PropTypes, Component} from 'react';
 import VideoThumbnail from '../VideoThumbnail';
 import {videoDataShape} from '../types';
 
@@ -10,6 +10,7 @@ const styles = {
 
 export default class HelpTabContents extends Component {
   static propTypes = {
+    logText: PropTypes.string,
     videoData: videoDataShape,
   };
 
@@ -18,6 +19,7 @@ export default class HelpTabContents extends Component {
       <div style={styles.referenceArea}>
         {this.props.videoData &&
           <VideoThumbnail
+            logText={this.props.logText}
             video={this.props.videoData}
           />
         }
