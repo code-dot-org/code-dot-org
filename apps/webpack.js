@@ -18,6 +18,8 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'craft'),
 ];
 
+const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
+
 // Our base config, on which other configs are derived
 var baseConfig = {
   resolve: {
@@ -39,15 +41,12 @@ var baseConfig = {
       http: 'stream-http',
     }
   },
-  sassLoader: {
-    includePaths: [path.resolve(__dirname, '..', 'shared', 'css')]
-  },
   module: {
     loaders: [
-      {test: /\.json$/, loader: 'json'},
-      {test: /\.ejs$/, loader: 'ejs-compiled'},
+      {test: /\.json$/, loader: 'json-loader'},
+      {test: /\.ejs$/, loader: 'ejs-compiled-loader'},
       {test: /\.css$/, loader: 'style-loader!css-loader'},
-      {test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'},
+      {test: /\.scss$/, loader: `style-loader!css-loader!sass-loader?includePaths=${scssIncludePath}`},
       {
         test:/\.(png|jpg|jpeg|gif|svg)$/,
         include: [
@@ -74,7 +73,7 @@ var baseConfig = {
         exclude: [
           path.resolve(__dirname, 'src', 'lodash.js'),
         ],
-        loader: "babel",
+        loader: "babel-loader",
         query: {
           cacheDirectory: path.resolve(__dirname, '.babel-cache'),
           compact: false,
@@ -90,7 +89,7 @@ var baseConfig = {
 if (envConstants.HOT) {
   baseConfig.module.loaders.push({
     test: /\.jsx?$/,
-    loader: 'react-hot',
+    loader: 'react-hot-loader',
     include: [path.resolve(__dirname, 'src')]
   });
 }
@@ -107,14 +106,14 @@ if (envConstants.COVERAGE) {
       include: [
         path.resolve(__dirname, 'test'),
       ].concat(toTranspileWithinNodeModules),
-      loader: "babel",
+      loader: "babel-loader",
       query: {
         cacheDirectory: true,
         compact: false,
       }
     }, {
       test: /\.jsx?$/,
-      loader: 'babel-istanbul',
+      loader: 'babel-istanbul-loader',
       include: path.resolve(__dirname, 'src'),
       exclude: [
         path.resolve(__dirname, 'src', 'lodash.js'),

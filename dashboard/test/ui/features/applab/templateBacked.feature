@@ -2,7 +2,6 @@
 @dashboard_db_access
 @as_student
 Feature: App Lab Scenarios
-# Do not re-enable on circle until https://github.com/elgalu/docker-selenium/issues/20 is addressed.
 
   Scenario: Template backed level
     # One of two levels backed by the same template

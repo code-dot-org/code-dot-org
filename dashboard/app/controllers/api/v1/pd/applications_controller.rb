@@ -57,11 +57,22 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     end
   end
 
-  # GET /api/v1/pd/applications/cohort_view?role=:role
+  # GET /api/v1/pd/applications/cohort_view?role=:role&regional_partner_filter=:regional_partner_name
   def cohort_view
-    applications = get_applications_by_role(params[:role].to_sym).where(status: 'accepted').where.not(locked_at: nil)
+    applications = get_applications_by_role(params[:role].to_sym).where(status: 'accepted')
 
-    render json: applications, each_serializer: Api::V1::Pd::ApplicationCohortViewSerializer
+    unless params[:regional_partner_filter].nil? || params[:regional_partner_filter] == 'all'
+      applications = applications.where(regional_partner_id: params[:regional_partner_filter] == 'none' ? nil : params[:regional_partner_filter])
+    end
+
+    serializer =
+      if TYPES_BY_ROLE[params[:role].to_sym] == Pd::Application::Facilitator1819Application
+        Api::V1::Pd::FacilitatorApplicationCohortViewSerializer
+      elsif TYPES_BY_ROLE[params[:role].to_sym] == Pd::Application::Teacher1819Application
+        Api::V1::Pd::TeacherApplicationCohortViewSerializer
+      end
+
+    render json: applications, each_serializer: serializer
   end
 
   # PATCH /api/v1/pd/applications/1

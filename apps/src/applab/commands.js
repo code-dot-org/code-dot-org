@@ -1001,27 +1001,19 @@ applabCommands.deleteElement = function (opts) {
 };
 
 applabCommands.showElement = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(opts, 'showElement', 'id', opts.elementId, true);
-
-  var div = document.getElementById(opts.elementId);
-  if (divApplab.contains(div)) {
-    div.style.visibility = 'visible';
-    return true;
-  }
-  return false;
+  return applabCommands.setProperty({
+    elementId: opts.elementId,
+    property: 'hidden',
+    value: false,
+  });
 };
 
 applabCommands.hideElement = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(opts, 'hideElement', 'id', opts.elementId, true);
-
-  var div = document.getElementById(opts.elementId);
-  if (divApplab.contains(div)) {
-    div.style.visibility = 'hidden';
-    return true;
-  }
-  return false;
+  return applabCommands.setProperty({
+    elementId: opts.elementId,
+    property: 'hidden',
+    value: true,
+  });
 };
 
 applabCommands.setStyle = function (opts) {

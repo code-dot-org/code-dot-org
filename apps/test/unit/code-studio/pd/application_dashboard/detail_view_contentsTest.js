@@ -1,50 +1,72 @@
 import {DetailViewContents} from '@cdo/apps/code-studio/pd/application_dashboard/detail_view_contents';
 import {ApplicationStatuses, ApplicationFinalStatuses} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
 import React from 'react';
+import _ from 'lodash';
 import {expect} from 'chai';
 import {mount} from 'enzyme';
 
 describe("DetailViewContents", () => {
-  const mountDetailView = (applicationType) => {
+  const mountDetailView = (applicationType, applicationDataOverrides = {}) => {
+    const defaultApplicationData = {
+      regionalPartner: 'partner',
+      notes: 'notes',
+      status: 'accepted',
+      school_name: 'School Name',
+      district_name: 'District Name',
+      email: 'email',
+      application_type: applicationType,
+      form_data: {
+        firstName: 'First Name',
+        lastName: 'Last Name',
+        title: 'Title',
+        phone: 'Phone',
+        preferredFirstName: 'Preferred First Name',
+        accountEmail: 'accountEmail',
+        alternateEmail: 'alternateEmail',
+        program: 'program',
+        planOnTeachering: ['Yes'],
+        abilityToMeetRequirements: '10',
+        committed: 'Yes',
+        taughtInPast: 'No'
+      },
+      response_scores: {
+        committed: 'Yes'
+      }
+    };
+
     return mount(
       <DetailViewContents
         canLock
         applicationId="1"
-        applicationData={{
-          regionalPartner: 'partner',
-          notes: 'notes',
-          status: 'accepted',
-          school_name: 'School Name',
-          district_name: 'District Name',
-          email: 'email',
-          application_type: applicationType,
-          form_data: {
-            firstName: 'First Name',
-            lastName: 'Last Name',
-            title: 'Title',
-            phone: 'Phone',
-            preferredFirstName: 'Preferred First Name',
-            accountEmail: 'accountEmail',
-            alternateEmail: 'alternateEmail',
-            program: 'program',
-            planOnTeachering: ['Yes'],
-            abilityToMeetRequirements: '10',
-            committed: 'Yes',
-            taughtInPast: 'No'
-          },
-          response_scores: {
-            committed: 'Yes'
-          }
-        }}
+        applicationData={_.merge(defaultApplicationData, applicationDataOverrides)}
         viewType="facilitator"
         reload={() => {}}
       />
     );
   };
 
+  describe("Notes", () => {
+    it("Uses default value for facilitator applications with no notes", () => {
+      const facilitatorDetailView = mountDetailView('Facilitator', {notes: ''});
+      expect(facilitatorDetailView.state().notes).to.eql(
+        "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:"
+      );
+    });
+
+    it("Uses entered value for facilitator applications with notes", () => {
+      const facilitatorDetailView = mountDetailView('Facilitator', {notes: "actual notes"});
+      expect(facilitatorDetailView.state().notes).to.eql("actual notes");
+    });
+
+    it("Does not supply value for teacher applications with no notes", () => {
+      const facilitatorDetailView = mountDetailView('Teacher', {notes: ''});
+      expect(facilitatorDetailView.state().notes).to.eql('');
+    });
+  });
+
   const expectedTestData = [
-    {type: 'Teacher', applicationSpecificQuestions: 6, scoredQuestions: 2, sections: 6},
-    {type: 'Facilitator', applicationSpecificQuestions: 7, scoredQuestions: 0, sections: 4}
+    {type: 'Teacher', applicationSpecificQuestions: 5, scoredQuestions: 2},
+    {type: 'Facilitator', applicationSpecificQuestions: 7, scoredQuestions: 0}
   ];
 
   for (const applicationData of expectedTestData) {

@@ -77,7 +77,7 @@ ________________
 <a id="community"></a>
 <br/>
 ## Community Events
-To receive reimbursement for a community event, send an official invoice and an attendance list to invoices@code.org within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
+To receive reimbursement for a community event, send an official invoice, receipts, and an attendance list to invoices@code.org within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
 
 Need an example of an official invoice? Visit [this site](http://www.wikihow.com/Sample/Services-Rendered-Invoice).
 

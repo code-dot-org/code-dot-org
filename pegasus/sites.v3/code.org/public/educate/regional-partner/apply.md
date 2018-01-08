@@ -1,5 +1,5 @@
 ---
-title: Code.org Regional Parter Program
+title: Code.org Regional Partner Program
 nav: plc_regional_partner_nav
 ---
 
@@ -7,7 +7,7 @@ nav: plc_regional_partner_nav
 
 We're so excited that you are interested in becoming a Code.org Regional Partner for the 2018-19 school year and look forward to starting to work with you this Fall!
 
-Please note that we will only accept applicants from regions in the United States where we do not currently have a Regional Partner. Check out a map of those regions <a href="/educate/regional-partner/partners" target=_blank>here</a>. 
+Please note that we will only accept applicants from regions in the United States where we do not currently have a Regional Partner. Check out a map of those regions <a href="/educate/regional-partner/partners" target=_blank>here</a>.
 
 ### Application Process ###
 
@@ -26,6 +26,6 @@ Visit our <a href="/educate/regional-partner/faq"target=_blank>FAQ</a> for answe
 
 ## Application ##
 
-**Please <a href="/educate/regional-partner/terms" target=_blank>click on this link</a> to read the terms of partnership prior to accepting the terms and proceeding with the rest of the application.** 
+**Please <a href="/educate/regional-partner/terms" target=_blank>click on this link</a> to read the terms of partnership prior to accepting the terms and proceeding with the rest of the application.**
 
 <iframe src="https://goo.gl/forms/TGvSk6ioa6Dj8Wym2" width="760" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>

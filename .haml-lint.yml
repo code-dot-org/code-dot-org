@@ -1,41 +1,8 @@
 skip_frontmatter: true
+inherits_from: .haml-lint_todo.yml
 
-# Linters which don't succeed on the current codebase are disabled.
 linters:
-  ClassAttributeWithStaticValue:
-    enabled: false
-
-  ClassesBeforeIds:
-    enabled: false
-
-  ConsecutiveSilentScripts:
-    enabled: false
-
-  HtmlAttributes:
-    enabled: false
-
-  ImplicitDiv:
-    enabled: false
-
-  LineLength:
-    enabled: false
-
-  RuboCop:
-    enabled: false
-
-  SpaceBeforeScript:
-    enabled: false
-
-  SpaceInsideHashAttributes:
-    enabled: false
-
   TrailingWhitespace:
     exclude:
       - '/**/pegasus/**/*.haml'
       - 'pegasus/**/*.haml'
-
-  UnnecessaryInterpolation:
-    enabled: false
-
-  UnnecessaryStringOutput:
-    enabled: false

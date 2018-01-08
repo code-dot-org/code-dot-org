@@ -19,6 +19,7 @@
 #  application_guid                    :string(255)
 #  decision_notification_email_sent_at :datetime
 #  accepted_at                         :datetime
+#  properties                          :text(65535)
 #
 # Indexes
 #
@@ -38,6 +39,12 @@ module Pd::Application
   class Teacher1819Application < ApplicationBase
     include Rails.application.routes.url_helpers
     include Teacher1819ApplicationConstants
+    include RegionalPartnerTeacherconMapping
+    include SerializedProperties
+
+    serialized_attrs %w(
+      pd_workshop_id
+    )
 
     def send_decision_notification_email
       # We only want to email unmatched and G3-matched teachers. All teachers
@@ -87,6 +94,20 @@ module Pd::Application
       self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
     end
 
+    before_save :enroll_user, if: -> {properties_changed?}
+    def enroll_user
+      return unless pd_workshop_id
+
+      Pd::Enrollment.find_or_create_by!(
+        pd_workshop_id: pd_workshop_id,
+        email: user.email
+      ) do |enrollment|
+        enrollment.user = user
+        enrollment.school_info = user.school_info
+        enrollment.full_name = user.name
+      end
+    end
+
     PROGRAMS = {
       csd: 'Computer Science Discoveries (appropriate for 6th - 10th grade)',
       csp: 'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)',
@@ -114,6 +135,10 @@ module Pd::Application
       OTHER_PLEASE_LIST
     ]
 
+    NOT_TEACHING_THIS_YEAR = "I'm not teaching this year (please explain):"
+    DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN = "I don't know if I will teach this course (please explain):"
+    UNABLE_TO_ATTEND = "No, I'm unable to attend (please explain):"
+    NO_EXPLAIN = "No (please explain):"
     def self.options
       {
         country: [
@@ -143,7 +168,7 @@ module Pd::Application
         grades_at_school: GRADES,
         grades_teaching: [
           *GRADES,
-          "I'm not teaching this year (please explain):"
+          NOT_TEACHING_THIS_YEAR
         ],
         grades_expect_to_teach: GRADES,
 
@@ -294,7 +319,7 @@ module Pd::Application
         plan_to_teach: [
           'Yes, I plan to teach this course',
           'No, someone else from my school will teach this course',
-          "I don't know if I will teach this course (please explain):"
+          DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN
         ],
 
         pay_fee: [
@@ -308,10 +333,10 @@ module Pd::Application
         ],
 
         willing_to_travel: [
-          'Less than 10 miles',
-          '10 to 25 miles',
-          '25 to 50 miles',
-          'More than 50 miles'
+          'Up to 10 miles',
+          'Up to 25 miles',
+          'Up to 50 miles',
+          'Any distance'
         ]
       }
     end
@@ -426,6 +451,42 @@ module Pd::Application
       Pd::Application::Teacher1819Application.find_by(user: user)
     end
 
+    def find_default_workshop
+      return unless regional_partner
+
+      workshop_course =
+        if course == 'csd'
+          Pd::Workshop::COURSE_CSD
+        elsif course == 'csp'
+          Pd::Workshop::COURSE_CSP
+        end
+
+      # If this application is associated with a G3 partner who in turn is
+      # associated with a specific teachercon, return the workshop for that
+      # teachercon
+      if regional_partner.group == 3
+        teachercon = get_matching_teachercon(regional_partner)
+        if teachercon
+          return find_teachercon_workshop(course: workshop_course, city: teachercon[:city], year: 2018)
+        end
+      end
+
+      # Default to just assigning whichever of the partner's eligible workshops
+      # is scheduled to start first. We expect to hit this case for G1 and G2
+      # partners, and for any G3 partners without an associated teachercon
+      regional_partner.
+        pd_workshops_organized.
+        where(
+          course: workshop_course,
+          subject: [
+            Pd::Workshop::SUBJECT_TEACHER_CON,
+            Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+          ]
+        ).
+        order_by_scheduled_start.
+        first
+    end
+
     def meets_criteria
       response_scores = response_scores_hash
       scored_questions =
@@ -446,7 +507,7 @@ module Pd::Application
         # If any are No, applicant does not meet criteria
         NO
       else
-        'Incomplete'
+        'Reviewing incomplete'
       end
     end
 
@@ -539,6 +600,26 @@ module Pd::Application
       )
 
       ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+    end
+
+    # @override
+    # Include additional text for all the multi-select fields that have the option
+    def additional_text_fields
+      [
+        [:current_role, OTHER_PLEASE_LIST],
+        [:grades_teaching, NOT_TEACHING_THIS_YEAR, :grades_teaching_not_teaching_explanation],
+        [:subjects_teaching, OTHER_PLEASE_LIST],
+        [:subjects_expect_to_teach, OTHER_PLEASE_LIST],
+        [:subjects_licensed_to_teach, OTHER_PLEASE_LIST],
+        [:taught_in_past, OTHER_PLEASE_LIST],
+        [:cs_offered_at_school, OTHER_PLEASE_LIST],
+        [:cs_opportunities_at_school, OTHER_PLEASE_LIST],
+        [:csd_course_hours_per_week, OTHER_PLEASE_LIST],
+        [:plan_to_teach, DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN, :plan_to_teach_dont_know_explain],
+        [:able_to_attend_single, UNABLE_TO_ATTEND, :able_to_attend_single_explain],
+        [:able_to_attend_multiple, NO_EXPLAIN, :able_to_attend_multiple_explain],
+        [:committed, NO_EXPLAIN, :committed_explain]
+      ]
     end
 
     protected

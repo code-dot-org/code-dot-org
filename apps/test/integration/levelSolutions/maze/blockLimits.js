@@ -1,4 +1,5 @@
 const TestResults = require('@cdo/apps/constants.js').TestResults;
+const blockUtils = require('@cdo/apps/block_utils');
 
 const levelDef = {
   'map': [
@@ -17,7 +18,7 @@ const levelDef = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, -1, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -25,6 +26,7 @@ const levelDef = {
   flowerType: 'redWithNectar',
   toolbox: '<xml id="toolbox"><block type="maze_moveForward" limit="1"></block></xml>',
   requiredBlocks: [],
+  honeyGoal: 1,
 };
 
 module.exports = {
@@ -32,20 +34,41 @@ module.exports = {
   skinId: "bee",
   levelDefinition: levelDef,
   tests: [{
-    description: "Limited toolbox blocks - over limit",
+    description: "Limited toolbox blocks - fail goal",
+    expected: {
+      result: false,
+      testResult: TestResults.APP_SPECIFIC_FAIL,
+    },
+    missingBlocks: [],
+    xml: '<xml>' +
+    blockUtils.blocksFromList([
+      "maze_moveForward",
+      "maze_moveForward",
+    ]) + '</xml>',
+  }, {
+    description: "Limited toolbox blocks - pass goal, over limit",
     expected: {
       result: true,
       testResult: TestResults.BLOCK_LIMIT_FAIL,
     },
     missingBlocks: [],
-    xml: '<xml><block type="when_run"><next><block type="maze_moveForward"><next><block type="maze_moveForward"></block></next></block></next></block></xml>'
+    xml: '<xml>' +
+    blockUtils.blocksFromList([
+      "maze_moveForward",
+      "maze_honey",
+      "maze_moveForward",
+      ]) + '</xml>',
   }, {
-    description: "Limited toolbox blocks - under limit",
+    description: "Limited toolbox blocks - pass goal, under limit",
     expected: {
       result: true,
       testResult: TestResults.ALL_PASS,
     },
     missingBlocks: [],
-    xml: '<xml><block type="when_run"><next><block type="maze_moveForward"></block></next></block></xml>'
+    xml: '<xml>' +
+    blockUtils.blocksFromList([
+      "maze_moveForward",
+      "maze_honey",
+    ]) + '</xml>',
   }]
 };
