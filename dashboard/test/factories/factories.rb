@@ -61,6 +61,9 @@ FactoryGirl.define do
       factory :admin do
         admin true
       end
+      trait :with_school_info do
+        school_info
+      end
       trait :with_terms_of_service do
         terms_of_service_version 1
       end
