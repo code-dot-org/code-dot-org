@@ -20,3 +20,11 @@ export function getChromeVersion() {
 export function isWindows() {
   return navigator.platform.indexOf('Win') > -1;
 }
+
+export function isOSX() {
+  return navigator.platform.indexOf('Mac') > -1;
+}
+
+export function isChromeOS() {
+  return /\bCrOS\b/.test(navigator.userAgent);
+}
