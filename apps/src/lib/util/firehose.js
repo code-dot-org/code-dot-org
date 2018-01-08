@@ -161,9 +161,8 @@ class FirehoseClient {
     }
     const progress = state.progress;
     if (progress) {
-      data['scriptId'] = progress.scriptId;
-      data['stageId'] = progress.currentStageId;
-      data['levelId'] = progress.currentLevelId;
+      data['script_id'] = progress.scriptId;
+      data['level_id'] = parseInt(progress.currentLevelId);
     }
 
     return data;

@@ -33,7 +33,8 @@ const InlineHint = React.createClass({
       'analysis-events',
       {
         study: 'hint-videos',
-        event: 'Click',
+        event: 'click',
+        data_string: this.props.video.key,
       },
       { includeUserId: true }
     );
