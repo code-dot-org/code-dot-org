@@ -7,11 +7,6 @@ namespace :build do
   desc 'Builds apps.'
   task :apps do
     Dir.chdir(apps_dir) do
-      if rack_env?(:staging)
-        ChatClient.log 'Updating <b>apps</b> i18n strings...'
-        RakeUtils.system './sync-apps.sh'
-      end
-
       # Only rebuild if apps contents have changed since last build.
       commit_hash = apps_dir('build/commit_hash')
       if !RakeUtils.git_staged_changes?(apps_dir) &&
@@ -24,7 +19,6 @@ namespace :build do
 
       ChatClient.log 'Installing <b>apps</b> dependencies...'
       RakeUtils.npm_install
-      Rake::Task['circle:check_for_unexpected_apps_changes'].invoke
 
       # Workaround for https://github.com/karma-runner/karma-phantomjs-launcher/issues/120
       RakeUtils.npm_rebuild 'phantomjs-prebuilt'

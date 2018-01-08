@@ -1,16 +1,13 @@
 /**
  * This file contains a set of dialogs used by showDialog in dialogHelper.js to
- * create LegacyDialogs. LegacyDialog expects a semi-specific format. Eventually
- * we may be able to get away from using LegacyDialog and do this all in React.
- * These are similar to the dialogs defined in haml in _dialog.html.haml, but
- * defined using React instead.
+ * create LegacyDialogs. LegacyDialog expects a semi-specific format.
  */
 
 import React, { PropTypes } from 'react';
 import i18n from '@cdo/locale';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 
-const SingleLevelGroupDialog = ({id, title, body}) => (
+export const SingleLevelGroupDialog = ({id, title, body}) => (
   <ProtectedStatefulDiv id={id}>
     <div className="modal-content no-modal-icon">
       <p className="dialog-title">{title}</p>
@@ -29,22 +26,6 @@ SingleLevelGroupDialog.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
 };
-
-export const IncompleteDialog = (
-  <SingleLevelGroupDialog
-    id="levelgroup-submit-incomplete-dialogcontent"
-    title={i18n.submitAssessment()}
-    body={i18n.submittableIncomplete()}
-  />
-);
-
-export const CompleteDialog = (
-  <SingleLevelGroupDialog
-    id="levelgroup-submit-complete-dialogcontent"
-    title={i18n.submitAssessment()}
-    body={i18n.submittableComplete()}
-  />
-);
 
 export const UnsubmitDialog = (
   <SingleLevelGroupDialog
@@ -158,4 +139,20 @@ export const InstructionsDialog = ({title, markdownContent}) => (
 InstructionsDialog.propTypes = {
   title: PropTypes.string.isRequired,
   markdownContent: PropTypes.string.isRequired,
+};
+
+export const SuccessDialog = ({title, body}) => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon scrollable-element">
+      <p className="dialog-title">{title}</p>
+      <p>{body}</p>
+      <div className="farSide">
+        <button id="ok-button">{i18n.ok()}</button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
+);
+SuccessDialog.propTypes = {
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
 };
