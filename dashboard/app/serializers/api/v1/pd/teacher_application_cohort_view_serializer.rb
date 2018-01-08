@@ -1,6 +1,6 @@
 class Api::V1::Pd::TeacherApplicationCohortViewSerializer < ActiveModel::Serializer
   attributes :id, :date_accepted, :applicant_name, :district_name, :school_name, :email,
-    :notified, :assigned_workshop, :registered_workshop, :accepted_teachercon
+    :assigned_workshop, :registered_workshop
 
   def date_accepted
     object.accepted_at.try(:strftime, '%b %e')
@@ -10,22 +10,11 @@ class Api::V1::Pd::TeacherApplicationCohortViewSerializer < ActiveModel::Seriali
     object.user.email
   end
 
-  def notified
-    # TODO: (mehal) implement this
-    'Not implemented'
-  end
-
   def assigned_workshop
-    # TODO: (mehal) implement this
-    'Not implemented'
+    Pd::Workshop.find(object.pd_workshop_id).location_city
   end
 
   def registered_workshop
-    # TODO: (mehal) implement this
-    'Not implemented'
-  end
-
-  def accepted_teachercon
-    'Not implemented'
+    Pd::Enrollment.exists?(pd_workshop_id: object.pd_workshop_id, user_id: object.user_id) ? 'Yes' : 'No'
   end
 end
