@@ -135,6 +135,10 @@ module Pd::Application
       OTHER_PLEASE_LIST
     ]
 
+    NOT_TEACHING_THIS_YEAR = "I'm not teaching this year (please explain):"
+    DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN = "I don't know if I will teach this course (please explain):"
+    UNABLE_TO_ATTEND = "No, I'm unable to attend (please explain):"
+    NO_EXPLAIN = "No (please explain):"
     def self.options
       {
         country: [
@@ -164,7 +168,7 @@ module Pd::Application
         grades_at_school: GRADES,
         grades_teaching: [
           *GRADES,
-          "I'm not teaching this year (please explain):"
+          NOT_TEACHING_THIS_YEAR
         ],
         grades_expect_to_teach: GRADES,
 
@@ -315,7 +319,7 @@ module Pd::Application
         plan_to_teach: [
           'Yes, I plan to teach this course',
           'No, someone else from my school will teach this course',
-          "I don't know if I will teach this course (please explain):"
+          DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN
         ],
 
         pay_fee: [
@@ -408,6 +412,52 @@ module Pd::Application
 
     def state_name
       sanitize_form_data_hash[:state]
+    end
+
+    def district_name
+      school.try(:school_district).try(:name).try(:titleize)
+    end
+
+    def school_name
+      school ? school.name.try(:titleize) : sanitize_form_data_hash[:school_name]
+    end
+
+    def school_zip_code
+      school ? school.zip : sanitize_form_data_hash[:zip_code]
+    end
+
+    def school_state
+      if school
+        school.state.try(:upcase)
+      else
+        STATE_ABBR_WITH_DC_HASH.key(sanitize_form_data_hash[:state]).try(:to_s)
+      end
+    end
+
+    def school_city
+      school ? school.city.try(:titleize) : sanitize_form_data_hash[:city]
+    end
+
+    def school_address
+      if school
+        address = ""
+        [
+          school.address_line1,
+          school.address_line2,
+          school.address_line3
+        ].each do |line|
+          if line
+            address << line << " "
+          end
+        end
+        address.titleize
+      else
+        sanitize_form_data_hash[:address]
+      end
+    end
+
+    def school_type
+      school ? school.try(:school_type).try(:titleize) : sanitize_form_data_hash[:school_type]
     end
 
     def first_name
@@ -561,7 +611,21 @@ module Pd::Application
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
         columns = filtered_labels(course).values.map {|l| markdown.render(l)}
-        columns.push 'Status', 'Principal Approval', 'Meets Criteria', 'Total Score', 'Notes', 'Regional Partner'
+        columns.push(
+          'Status',
+          'Principal Approval',
+          'Meets Criteria',
+          'Total Score',
+          'Notes',
+          'Regional Partner',
+          'School District',
+          'School',
+          'School Type',
+          'School Address',
+          'School City',
+          'School State',
+          'School Zip Code'
+        )
         csv << columns
       end
     end
@@ -571,7 +635,21 @@ module Pd::Application
       answers = full_answers
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
-        row.push status, principal_approval, meets_criteria, total_score, notes, regional_partner_name
+        row.push(
+          status,
+          principal_approval,
+          meets_criteria,
+          total_score,
+          notes,
+          regional_partner_name,
+          district_name,
+          school_name,
+          school_type,
+          school_address,
+          school_city,
+          school_state,
+          school_zip_code
+        )
         csv << row
       end
     end
@@ -594,8 +672,32 @@ module Pd::Application
           :csd_terms_per_year
         ]
       )
+      # school contains NCES id
+      # the other fields are empty in the form data unless they selected "Other" school,
+      # so we add it when we construct the csv row.
+      labels_to_remove.push(:school, :school_name, :school_address, :school_type, :school_city, :school_state, :school_zip_code)
 
       ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+    end
+
+    # @override
+    # Include additional text for all the multi-select fields that have the option
+    def additional_text_fields
+      [
+        [:current_role, OTHER_PLEASE_LIST],
+        [:grades_teaching, NOT_TEACHING_THIS_YEAR, :grades_teaching_not_teaching_explanation],
+        [:subjects_teaching, OTHER_PLEASE_LIST],
+        [:subjects_expect_to_teach, OTHER_PLEASE_LIST],
+        [:subjects_licensed_to_teach, OTHER_PLEASE_LIST],
+        [:taught_in_past, OTHER_PLEASE_LIST],
+        [:cs_offered_at_school, OTHER_PLEASE_LIST],
+        [:cs_opportunities_at_school, OTHER_PLEASE_LIST],
+        [:csd_course_hours_per_week, OTHER_PLEASE_LIST],
+        [:plan_to_teach, DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN, :plan_to_teach_dont_know_explain],
+        [:able_to_attend_single, UNABLE_TO_ATTEND, :able_to_attend_single_explain],
+        [:able_to_attend_multiple, NO_EXPLAIN, :able_to_attend_multiple_explain],
+        [:committed, NO_EXPLAIN, :committed_explain]
+      ]
     end
 
     protected
@@ -607,6 +709,15 @@ module Pd::Application
         NO
       else
         nil
+      end
+    end
+
+    def school
+      school_id = sanitize_form_data_hash[:school].to_i
+      if school_id == -1
+        nil
+      else
+        School.find(school_id)
       end
     end
   end
