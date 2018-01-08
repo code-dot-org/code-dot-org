@@ -395,7 +395,7 @@ module Pd::Application
       end
     end
 
-    test 'find_default_workshop find no workhsop for applications without a regional partner' do
+    test 'find_default_workshop finds no workshop for applications without a regional partner' do
       application = build :pd_teacher1819_application
       assert_nil application.find_default_workshop
     end
@@ -452,26 +452,37 @@ module Pd::Application
       assert_equal earliest_valid_workshop, application.find_default_workshop
     end
 
-    test 'setting and changing pd_workshop_id automatically enrolls user' do
-      school_info = create :school_info
-      user = create :teacher, school_info: school_info
-      application = create :pd_teacher1819_application, user: user
+    test 'locking an application with pd_workshop_id automatically enrolls user' do
+      application = create :pd_teacher1819_application
+      workshop = create :pd_workshop
+
+      application.pd_workshop_id = workshop.id
+      application.status = "accepted"
+
+      assert_creates(Pd::Enrollment) do
+        application.lock!
+      end
+      assert_equal Pd::Enrollment.last.workshop, workshop
+      assert_equal Pd::Enrollment.last.id, application.auto_assigned_enrollment_id
+    end
+
+    test 'updating and re-locking an application with an auto-assigned enrollment will delete old enrollment' do
+      application = create :pd_teacher1819_application
       first_workshop = create :pd_workshop
       second_workshop = create :pd_workshop
 
       application.pd_workshop_id = first_workshop.id
+      application.status = "accepted"
+      application.lock!
 
-      assert_creates(Pd::Enrollment) do
-        application.save!
-      end
-      assert_equal Pd::Enrollment.last.workshop, first_workshop
+      first_enrollment = Pd::Enrollment.find(application.auto_assigned_enrollment_id)
 
+      application.unlock!
       application.pd_workshop_id = second_workshop.id
+      application.lock!
 
-      assert_creates(Pd::Enrollment) do
-        application.save!
-      end
-      assert_equal Pd::Enrollment.last.workshop, second_workshop
+      assert first_enrollment.reload.deleted?
+      assert_not_equal first_enrollment.id, application.auto_assigned_enrollment_id
     end
   end
 end
