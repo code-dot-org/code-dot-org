@@ -90,7 +90,8 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
     name,
     stages: [stageData],
     disablePostMilestone,
-    age_13_required
+    age_13_required,
+    id: stageData.script_id,
   }, currentLevelId, false, saveAnswersBeforeNavigation);
 
   store.dispatch(mergeProgress(_.mapValues(progressData.levels,
