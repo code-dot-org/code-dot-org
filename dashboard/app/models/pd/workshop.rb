@@ -495,8 +495,35 @@ class Pd::Workshop < ActiveRecord::Base
     self.processed_location = {
       latitude: result.latitude,
       longitude: result.longitude,
+      city: result.city,
+      state: result.state,
       formatted_address: result.formatted_address
     }.to_json
+  end
+
+  # helper methods for retrieving processed location data, with a possible side
+  # effect of reprocessing the data. Useful for fields newly-added to process
+  # location which may or may not be defined on older data
+  def location_city
+    location_hash = JSON.parse processed_location
+    unless location_hash.key? 'city'
+      process_location
+      update_column :processed_location, processed_location
+      location_hash = JSON.parse processed_location
+    end
+
+    location_hash['city']
+  end
+
+  def location_state
+    location_hash = JSON.parse processed_location
+    unless location_hash.key? 'state'
+      process_location
+      update_column :processed_location, processed_location
+      location_hash = JSON.parse processed_location
+    end
+
+    location_hash['state']
   end
 
   # Min number of days a teacher must attend for it to count.
