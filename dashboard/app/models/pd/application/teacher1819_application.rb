@@ -135,6 +135,10 @@ module Pd::Application
       OTHER_PLEASE_LIST
     ]
 
+    NOT_TEACHING_THIS_YEAR = "I'm not teaching this year (please explain):"
+    DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN = "I don't know if I will teach this course (please explain):"
+    UNABLE_TO_ATTEND = "No, I'm unable to attend (please explain):"
+    NO_EXPLAIN = "No (please explain):"
     def self.options
       {
         country: [
@@ -164,7 +168,7 @@ module Pd::Application
         grades_at_school: GRADES,
         grades_teaching: [
           *GRADES,
-          "I'm not teaching this year (please explain):"
+          NOT_TEACHING_THIS_YEAR
         ],
         grades_expect_to_teach: GRADES,
 
@@ -315,7 +319,7 @@ module Pd::Application
         plan_to_teach: [
           'Yes, I plan to teach this course',
           'No, someone else from my school will teach this course',
-          "I don't know if I will teach this course (please explain):"
+          DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN
         ],
 
         pay_fee: [
@@ -596,6 +600,26 @@ module Pd::Application
       )
 
       ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+    end
+
+    # @override
+    # Include additional text for all the multi-select fields that have the option
+    def additional_text_fields
+      [
+        [:current_role, OTHER_PLEASE_LIST],
+        [:grades_teaching, NOT_TEACHING_THIS_YEAR, :grades_teaching_not_teaching_explanation],
+        [:subjects_teaching, OTHER_PLEASE_LIST],
+        [:subjects_expect_to_teach, OTHER_PLEASE_LIST],
+        [:subjects_licensed_to_teach, OTHER_PLEASE_LIST],
+        [:taught_in_past, OTHER_PLEASE_LIST],
+        [:cs_offered_at_school, OTHER_PLEASE_LIST],
+        [:cs_opportunities_at_school, OTHER_PLEASE_LIST],
+        [:csd_course_hours_per_week, OTHER_PLEASE_LIST],
+        [:plan_to_teach, DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN, :plan_to_teach_dont_know_explain],
+        [:able_to_attend_single, UNABLE_TO_ATTEND, :able_to_attend_single_explain],
+        [:able_to_attend_multiple, NO_EXPLAIN, :able_to_attend_multiple_explain],
+        [:committed, NO_EXPLAIN, :committed_explain]
+      ]
     end
 
     protected
