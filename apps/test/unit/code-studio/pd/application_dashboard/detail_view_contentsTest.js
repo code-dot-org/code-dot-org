@@ -24,7 +24,6 @@ describe("DetailViewContents", () => {
         accountEmail: 'accountEmail',
         alternateEmail: 'alternateEmail',
         program: 'program',
-        planOnTeachering: ['Yes'],
         abilityToMeetRequirements: '10',
         committed: 'Yes',
         taughtInPast: 'No'
@@ -54,13 +53,13 @@ describe("DetailViewContents", () => {
     });
 
     it("Uses entered value for facilitator applications with notes", () => {
-      const facilitatorDetailView = mountDetailView('Facilitator', {notes: "actual notes"});
-      expect(facilitatorDetailView.state().notes).to.eql("actual notes");
+      const teacherDetailView = mountDetailView('Facilitator', {notes: "actual notes"});
+      expect(teacherDetailView.state().notes).to.eql("actual notes");
     });
 
     it("Does not supply value for teacher applications with no notes", () => {
-      const facilitatorDetailView = mountDetailView('Teacher', {notes: ''});
-      expect(facilitatorDetailView.state().notes).to.eql('');
+      const teacherDetailView = mountDetailView('Teacher', {notes: ''});
+      expect(teacherDetailView.state().notes).to.eql('');
     });
   });
 
