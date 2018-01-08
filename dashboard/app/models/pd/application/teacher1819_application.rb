@@ -44,6 +44,7 @@ module Pd::Application
 
     serialized_attrs %w(
       pd_workshop_id
+      auto_assigned_enrollment_id
     )
 
     def send_decision_notification_email
@@ -113,17 +114,36 @@ module Pd::Application
       self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
     end
 
-    before_save :enroll_user, if: -> {properties_changed?}
+    # override
+    def lock!
+      return if locked?
+      super.lock!
+      enroll_user
+    end
+
     def enroll_user
       return unless pd_workshop_id
 
-      Pd::Enrollment.find_or_create_by!(
+      enrollment = Pd::Enrollment.where(
         pd_workshop_id: pd_workshop_id,
         email: user.email
-      ) do |enrollment|
-        enrollment.user = user
-        enrollment.school_info = user.school_info
-        enrollment.full_name = user.name
+      ).first_or_initialize
+
+      # If this is a new enrollment, we want to:
+      #   - save it with all required data
+      #   - save a reference to it in properties
+      #   - delete the previous auto-created enrollment if it exists
+      if enrollment.new_record?
+        enrollment.update(
+          user: user,
+          school_info: user.school_info,
+          full_name: user.name
+        )
+        enrollment.save!
+
+        Pd::Enrollment.find_by(id: auto_assigned_enrollment_id).try(:destroy) if auto_assigned_enrollment_id
+
+        self.auto_assigned_enrollment_id = enrollment.id
       end
     end
 
