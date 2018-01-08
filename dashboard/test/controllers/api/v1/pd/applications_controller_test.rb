@@ -253,11 +253,15 @@ module Api::V1::Pd
       time = Date.new(2017, 3, 15)
 
       Timecop.freeze(time) do
+        workshop = create :pd_workshop, processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+        create :pd_enrollment, workshop: workshop, user: @serializing_teacher
+
         application = create(
           :pd_teacher1819_application,
           course: 'csp',
           regional_partner: @regional_partner,
-          user: @serializing_teacher
+          user: @serializing_teacher,
+          pd_workshop_id: workshop.id
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
@@ -277,10 +281,8 @@ module Api::V1::Pd
             district_name: 'A School District',
             school_name: 'Hogwarts',
             email: 'minerva@hogwarts.edu',
-            notified: 'Not implemented',
-            assigned_workshop: 'Not implemented',
-            registered_workshop: 'Not implemented',
-            accepted_teachercon: 'Not implemented',
+            assigned_workshop: 'Orchard Park',
+            registered_workshop: 'Yes'
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -314,9 +316,6 @@ module Api::V1::Pd
             district_name: 'A School District',
             school_name: 'Hogwarts',
             email: 'minerva@hogwarts.edu',
-            notified: 'Not implemented',
-            assigned_fit: 'Not implemented',
-            registered_fit: 'Not implemented'
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
