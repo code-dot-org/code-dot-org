@@ -1,0 +1,62 @@
+AWSTemplateFormatVersion: 2010-09-09
+Metadata:
+  'AWS::CloudFormation::Designer':
+    c7e1256e-46a8-43e1-bbf5-d155c46c8300:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 470
+        'y': 150
+      z: 0
+      embeds: []
+    a0d5acf4-dd8b-4b19-825f-e8d569f7502d:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 300
+        'y': 150
+      z: 0
+Resources:
+  VerifyDatabaseLambdaRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action:
+              - 'sts:AssumeRole'
+            Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/AmazonRDSFullAccess'
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole'
+      Policies:
+        - PolicyName: AWSLambdaBasicExecutionRole
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'logs:CreateLogGroup'
+                  - 'logs:CreateLogStream'
+                  - 'logs:PutLogEvents'
+                Resource: 'arn:aws:logs:*:*:*'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: c7e1256e-46a8-43e1-bbf5-d155c46c8300
+  RestoreDatabaseCopyForVerification:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      Description: 'Restore Database from Snapshot copied from primary Account so it can be verified by a separate Lambda.'
+      FunctionName: RestoreDatabaseCopyForVerification
+      Code:
+        var foo = bar;
+      Handler: index.handler
+      Runtime: nodejs6.10
+      Timeout: 30
+      Role: !GetAtt VerifyDatabaseLambdaRole.Arn
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: a0d5acf4-dd8b-4b19-825f-e8d569f7502d
