@@ -13,6 +13,7 @@ import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
+import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -26,11 +27,6 @@ export const studentSectionDataPropType = PropTypes.shape({
   secretPicturePath: PropTypes.string,
   sectionId: PropTypes.number,
 });
-
-const GENDERS = {
-  m: i18n.genderMale(),
-  f: i18n.genderFemale()
-};
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -72,9 +68,13 @@ const ageFormatter = (age, {rowData}) => {
 };
 
 const genderFormatter = (gender, {rowData}) => {
-  return (<div>
-    {GENDERS[gender]}
-  </div>);
+  return (
+    <ManageStudentsGenderCell
+      gender={gender}
+      id={rowData.id}
+      isEditing={false}
+    />
+  );
 };
 
 const passwordFormatter = (loginType, {rowData}) => {
