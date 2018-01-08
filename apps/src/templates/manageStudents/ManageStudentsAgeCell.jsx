@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import {ages} from '../AgeDropdown';
 
 class ManageStudentAgeCell extends Component {
   static propTypes = {
@@ -17,8 +18,6 @@ class ManageStudentAgeCell extends Component {
 
   render() {
     const {age} = this.props;
-    const ages = ['', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14',
-      '15', '16', '17', '18', '19', '20', '21+'];
     return (
       <div>
         {!this.props.isEditing &&
