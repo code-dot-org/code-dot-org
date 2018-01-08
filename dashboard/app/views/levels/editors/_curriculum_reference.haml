@@ -10,8 +10,10 @@
 
 .field
   = f.label :reference, 'Curriculum Reference'
-  %p String representing the URL on docs.code.org you want to embed, i.e. "/csd/maker_leds/index.html"
-  = f.text_field :reference, placeholder: 'i.e /csd/maker_leds/index.html', style: 'width: 100%'
+  %p
+    String representing the URL on docs.code.org or curriculum.code.org that you want to embed,
+    i.e. "/docs/csd/maker_leds/index.html" or "/curriculum/csd/index.html"
+  = f.text_field :reference, placeholder: 'i.e /docs/csd/maker_leds/index.html', style: 'width: 100%'
 
 .field
   %p Edit Teacher Only Markdown:
