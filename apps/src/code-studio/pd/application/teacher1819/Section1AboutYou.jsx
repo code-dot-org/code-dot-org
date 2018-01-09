@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import ApplicationFormComponent from "../ApplicationFormComponent";
+import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import UsPhoneNumberInput from "../../form_components/UsPhoneNumberInput";
 import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
@@ -18,9 +18,9 @@ const TEACHER_EMAIL = 'teacher@code.org';
 const INTERNATIONAL = 'International';
 const US = 'United States';
 
-export default class Section1AboutYou extends ApplicationFormComponent {
+export default class Section1AboutYou extends LabeledFormComponent {
   static propTypes = {
-    ...ApplicationFormComponent.propTypes,
+    ...LabeledFormComponent.propTypes,
     accountEmail: PropTypes.string.isRequired
   };
 
