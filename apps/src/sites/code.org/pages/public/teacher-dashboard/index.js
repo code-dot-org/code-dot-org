@@ -49,6 +49,13 @@ function renderSectionProjects(sectionId) {
   });
 }
 
+function renderSectionProgress(sectionId) {
+  ReactDOM.render(
+    <div>Progress here for section {sectionId}</div>,
+      document.getElementById('section-progress-react')
+  );
+}
+
 //  Everything below was copied wholesale from index.haml, where we had no linting.
 // TODO (bjvanminnen): Fix remaining lint errors and re-enable rules.
 /* eslint-disable eqeqeq, no-unused-vars */
@@ -729,32 +736,45 @@ function main() {
       }
     );
 
+    $scope.tab = 'progress';
+    $scope.page = {zoom: false};
+    $scope.react_progress = false;
+
+    // We want to make our sections service request whether using react or angular
+    // because our tabs haml (in nav.haml) depends on the section being loaded. It
+    // could probably be cleaned up to behave differently without too much difficulty,
+    // which would make this unnecessary.
+    $scope.section = sectionsService.get({id: $routeParams.id});
+    // sections is used by our section dropdown, which at least initially will
+    // still be in angular
+    $scope.sections = sectionsService.query();
+
+    // error handling
     $scope.genericError = function (result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
-
-    $scope.section = sectionsService.get({id: $routeParams.id});
-    $scope.sections = sectionsService.query();
-    const paginatedPromise = paginatedSectionProgressService.get($routeParams.id)
-      .then(result => {
-        $scope.progress = result;
-      })
-      .catch($scope.genericError);
-
-    $scope.tab = 'progress';
-    $scope.page = {zoom: false};
-
-    // error handling
     $scope.section.$promise.catch($scope.genericError);
     $scope.sections.$promise.catch($scope.genericError);
 
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
-    $scope.sections.$promise.then(
-      function ( sections ){
-        $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
-      }
-    );
+    $scope.sections.$promise.then(sections => {
+      $scope.selectedSection = sections.find(section => section.id.toString() === $routeParams.id);
+    });
+
+    if (experiments.isEnabled('sectionProgressRedesign')) {
+      $scope.react_progress = true;
+      $scope.$on('section-progress-rendered', () => renderSectionProgress($routeParams.id));
+      return;
+    }
+
+    // The below is not run if our experiment is not enabled
+
+    const paginatedPromise = paginatedSectionProgressService.get($routeParams.id)
+      .then(result => {
+        $scope.progress = result;
+      })
+      .catch($scope.genericError);
 
     $scope.progressLoadedFirst = false;
     $scope.progressLoaded = false;
@@ -793,22 +813,6 @@ function main() {
     $scope.progressWidth = function () {
       return $scope.page.zoom ? Math.max(34 * $scope.progress.script.levels_count, 770) : 770;
     };
-
-    // refresh progress every 30s
-    // TODO: 'update' progress instead of replacing it
-    //$interval(function() {
-    //  if (!$scope.progressLoaded) { return; } // don't refresh if loading
-    //   $scope.progressLoaded = false;
-    //   if ($scope.scriptId) {
-    //     $scope.progress = sectionsService.progress({id: $routeParams.id, script_id: $scope.scriptId});
-    //   } else {
-    //     $scope.progress = sectionsService.progress({id: $routeParams.id});
-    //   }
-    //   $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function(data){
-    //     $scope.mergeProgress();
-    //     $scope.progressLoaded = true;
-    //   });
-    // }, 30 * 1000);
 
     $scope.scrollToStage = function ($event){
       var doScroll = function () {
