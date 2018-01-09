@@ -334,10 +334,8 @@ export const install = (blockly, blockInstallOptions) => {
   function generatorFor(blockType, statementNames = defaultEventOrder) {
     return function () {
       return statementNames.map((statementName) => {
-        return `
-        onEventTriggered("${blockType}", ${statementNameToEvent[statementName]}, function(event) {
-          ${blockly.Generator.get('JavaScript').statementToCode(this, statementName)}
-        }, 'block_id_${this.id}');`;
+        const callback = blockly.Generator.get('JavaScript').statementToCode(this, statementName).replace(/\n/g, '');
+        return `onEventTriggered("${blockType}", ${statementNameToEvent[statementName]}, "${callback}", 'block_id_${this.id}');`;
       }).join("\n");
     };
   }
