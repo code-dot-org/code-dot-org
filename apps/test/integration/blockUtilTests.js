@@ -1,5 +1,6 @@
 import {assert} from '../util/configuredChai';
 import {setupTestBlockly} from './util/testBlockly';
+import {parseElement} from '@cdo/apps/xml';
 
 var requiredBlockUtils = require('@cdo/apps/required_block_utils');
 var blockUtils = require('@cdo/apps/block_utils');
@@ -79,6 +80,42 @@ describe("requiredBlockUtils", function () {
     var blockUser = blockUtils.domStringToBlock('<block type="block_with_3_titles"><title name="A">1</title><title name="B">2</title></block>');
     var blockRequired = blockUtils.domStringToBlock('<block type="block_with_3_titles"><title name="A">2</title><title name="B">1</title></block>');
     assert(!requiredBlockUtils.blockTitlesMatch(blockUser, blockRequired));
+  });
+
+  it("can recognize matching blocks with mismatched ignored attributes", function () {
+    var blockUser = parseElement('<block type="block_with_3_titles" deletable="false"><title name="A">1</title><title name="B">2</title></block>');
+    var blockRequired = parseElement('<block type="block_with_3_titles"><title name="A">1</title><title name="B">2</title></block>');
+    assert(requiredBlockUtils.elementsEquivalent(blockRequired, blockUser));
+  });
+
+  it("can recognize non-matching blocks with mismatched ignorarable attributes", function () {
+    var blockUser = parseElement('<block type="block_with_3_titles" inputcount="3"><title name="A">1</title><title name="B">2</title></block>');
+    var blockRequired = parseElement('<block type="block_with_3_titles" inputcount="2"><title name="A">1</title><title name="B">2</title></block>');
+    assert.isFalse(requiredBlockUtils.elementsEquivalent(blockRequired, blockUser));
+  });
+
+  it("can recognize matching blocks with mismatched ignored ignorarable attributes", function () {
+    var blockUser = parseElement('<block type="block_with_3_titles" inputcount="3"><title name="A">1</title><title name="B">2</title></block>');
+    var blockRequired = parseElement('<block type="block_with_3_titles" inputcount="???"><title name="A">1</title><title name="B">2</title></block>');
+    assert(requiredBlockUtils.elementsEquivalent(blockRequired, blockUser));
+  });
+
+  it("can recognize matching blocks with unspecified children", function () {
+    var blockUser = parseElement('<block type="block_with_3_titles" inputcount="2"><title name="A">1</title><title name="B">2</title></block>');
+    var blockRequired = parseElement('<block type="block_with_3_titles" inputcount="???"></block>');
+    assert(requiredBlockUtils.elementsEquivalent(blockRequired, blockUser));
+  });
+
+  it("can recognize non-matching blocks with specified children", function () {
+    var blockUser = parseElement('<block type="block_with_3_titles" inputcount="2"><title name="A">1</title><title name="B">2</title></block>');
+    var blockRequired = parseElement('<block type="block_with_3_titles" inputcount="2"><title name="A">2</title><title name="B">2</title></block>');
+    assert.isFalse(requiredBlockUtils.elementsEquivalent(blockRequired, blockUser));
+  });
+
+  it("can recognize non-matching blocks with missing children", function () {
+    var blockUser = parseElement('<block type="block_with_3_titles" inputcount="2"></block>');
+    var blockRequired = parseElement('<block type="block_with_3_titles" inputcount="2"><title name="A">2</title><title name="B">2</title></block>');
+    assert.isFalse(requiredBlockUtils.elementsEquivalent(blockRequired, blockUser));
   });
 });
 

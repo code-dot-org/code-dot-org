@@ -48,7 +48,10 @@ const paths = {
 export default class ApplicationDashboard extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string,
-    regionalPartners: PropTypes.array,
+    regionalPartners: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string
+    })),
     isWorkshopAdmin: PropTypes.bool,
     canLockApplications: PropTypes.bool,
   };
@@ -115,6 +118,7 @@ export default class ApplicationDashboard extends React.Component {
                       breadcrumbs={cohort_path_name}
                       component={CohortView}
                       applicationType={cohort_path_name}
+                      viewType={paths[path].type}
                     />
                   )
                 ];

@@ -70,6 +70,7 @@ class Pd::Workshop < ActiveRecord::Base
 
   SUBJECT_TEACHER_CON = 'Code.org TeacherCon'.freeze
   SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze
+  SUBJECT_SUMMER_WORKSHOP = '5-day Summer'.freeze
   SUBJECTS = {
     COURSE_ECS => [
       SUBJECT_ECS_PHASE_2 = 'Phase 2 in-person'.freeze,
@@ -89,7 +90,7 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'.freeze
     ],
     COURSE_CSP => [
-      SUBJECT_CSP_SUMMER_WORKSHOP = '5-day Summer'.freeze,
+      SUBJECT_CSP_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
       SUBJECT_CSP_WORKSHOP_1 = 'Units 1 and 2: The Internet and Digital Information'.freeze,
       SUBJECT_CSP_WORKSHOP_2 = 'Units 2 and 3: Processing data, Algorithms, and Programming'.freeze,
       SUBJECT_CSP_WORKSHOP_3 = 'Units 4 and 5: Big Data, Privacy, and Building Apps'.freeze,
@@ -98,7 +99,7 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CSP_FIT = SUBJECT_FIT
     ],
     COURSE_CSD => [
-      SUBJECT_CSD_SUMMER_WORKSHOP = '5-day Summer'.freeze,
+      SUBJECT_CSD_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
       SUBJECT_CSD_UNITS_2_3 = 'Units 2 and 3: Web Development and Animations'.freeze,
       SUBJECT_CSD_UNIT_3_4 = 'Units 3 and 4: Building Games and User Centered Design'.freeze,
       SUBJECT_CSD_UNITS_4_5 = 'Units 4 and 5: App Prototyping and Data & Society'.freeze,
@@ -494,8 +495,35 @@ class Pd::Workshop < ActiveRecord::Base
     self.processed_location = {
       latitude: result.latitude,
       longitude: result.longitude,
+      city: result.city,
+      state: result.state,
       formatted_address: result.formatted_address
     }.to_json
+  end
+
+  # helper methods for retrieving processed location data, with a possible side
+  # effect of reprocessing the data. Useful for fields newly-added to process
+  # location which may or may not be defined on older data
+  def location_city
+    location_hash = JSON.parse processed_location
+    unless location_hash.key? 'city'
+      process_location
+      update_column :processed_location, processed_location
+      location_hash = JSON.parse processed_location
+    end
+
+    location_hash['city']
+  end
+
+  def location_state
+    location_hash = JSON.parse processed_location
+    unless location_hash.key? 'state'
+      process_location
+      update_column :processed_location, processed_location
+      location_hash = JSON.parse processed_location
+    end
+
+    location_hash['state']
   end
 
   # Min number of days a teacher must attend for it to count.
@@ -554,7 +582,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def local_summer?
-    course == COURSE_CSP && subject == SUBJECT_CSP_SUMMER_WORKSHOP
+    subject == SUBJECT_SUMMER_WORKSHOP
   end
 
   def teachercon?

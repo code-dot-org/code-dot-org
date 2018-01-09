@@ -279,7 +279,7 @@ function tryToUploadShareImageToS3({image, level}) {
 function loadProjectAndCheckAbuse(appOptions) {
   return new Promise((resolve, reject) => {
     project.load().then(() => {
-      if (project.hideBecauseAbusive() && !appOptions.canResetAbuse) {
+      if (project.hideBecauseAbusive()) {
         renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
         return;
       }

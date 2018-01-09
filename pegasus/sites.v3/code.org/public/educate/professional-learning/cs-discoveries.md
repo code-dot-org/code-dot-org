@@ -27,7 +27,7 @@ This program prepares educators to provide high quality instruction based on the
 
 <div style="margin-left: 20px;">
 
-<%=view :display_video_thumbnail, id: "intro_csp", video_code: "2-QpgNHknds", play_button: 'center' %>
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "uQim0hBHco0", play_button: 'center' %>
 
 </div>
 
@@ -70,7 +70,7 @@ Continuing Professional Development: (September - June of the following academic
 
 ## <a name="locations"></a>Where is the program offered?
 
-The CS Discoveries Professional Learning Program is available in regions served by Code.org's Regional Partners. Please check our map to learn more about where our Regional Partners are located and when they will be hosting summer workshops.
+The CS Discoveries Professional Learning Program is available in regions served by Code.org's Regional Partners. Please check our map to learn more about where our Regional Partners are located and when they will be hosting summer workshops (dates and locations subject to change).
 <br>
 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dKLjL6y3AKo45c7weK__JI3sxijfbmzq" width="640" height="480"></iframe>

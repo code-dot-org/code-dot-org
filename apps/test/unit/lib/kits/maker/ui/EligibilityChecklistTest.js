@@ -67,6 +67,7 @@ describe('EligibilityChecklist', () => {
         schoolId="12345"
         schoolName="Code.org Junior Academy"
         hasConfirmedSchool={true}
+        getsFullDiscount={false}
       />
     );
     assert.equal(wrapper.find('Button').length, 1);
@@ -80,6 +81,7 @@ describe('EligibilityChecklist', () => {
         schoolId="12345"
         schoolName="Code.org Junior Academy"
         hasConfirmedSchool={true}
+        getsFullDiscount={false}
       />
     );
     assert.equal(wrapper.find('EligibilityConfirmDialog').length, 0);
@@ -96,10 +98,11 @@ describe('EligibilityChecklist', () => {
         schoolId="12345"
         schoolName="Code.org Junior Academy"
         hasConfirmedSchool={true}
+        getsFullDiscount={false}
       />
     );
     wrapper.find('Button').simulate('click');
-    wrapper.instance().handleSuccessDialog('MYCODE');
+    wrapper.instance().handleSuccessDialog('MYCODE', '2018-12-31T00:00:00.000Z');
     assert(wrapper.is('DiscountCodeInstructions'));
   });
 
@@ -109,6 +112,8 @@ describe('EligibilityChecklist', () => {
         {...defaultProps}
         unit6Intention="yes1718"
         initialDiscountCode="MYCODE"
+        initialExpiration="2018-12-31T00:00:00.000Z"
+        getsFullDiscount={false}
       />
     );
     assert(wrapper.is('DiscountCodeInstructions'));
@@ -172,5 +177,33 @@ describe('EligibilityChecklist', () => {
       />
     );
     assert.equal(wrapper.find('div').last().text(), i18n.eligibilityReqYearFail());
+  });
+
+  it('shows discount message when partial discount', () => {
+    const wrapper = shallow(
+      <EligibilityChecklist
+        {...defaultProps}
+        unit6Intention="yes1718"
+        schoolId="12345"
+        schoolName="Code.org Junior Academy"
+        hasConfirmedSchool={true}
+        getsFullDiscount={false}
+      />
+    );
+    assert(wrapper.text().includes("According to our data, your school has fewer than 50% of students"));
+  });
+
+  it('does not show discount message when full discount', () => {
+    const wrapper = shallow(
+      <EligibilityChecklist
+        {...defaultProps}
+        unit6Intention="yes1718"
+        schoolId="12345"
+        schoolName="Code.org Junior Academy"
+        hasConfirmedSchool={true}
+        getsFullDiscount={true}
+      />
+    );
+    assert(!wrapper.text().includes("According to our data, your school has fewer than 50% of students"));
   });
 });

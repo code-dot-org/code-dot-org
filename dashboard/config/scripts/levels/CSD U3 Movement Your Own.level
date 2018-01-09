@@ -70,13 +70,17 @@
       "addOperator": null,
       "subtractOperator": null,
       "multiplyOperator": null,
-      "divideOperator": null
+      "divideOperator": null,
+      "World.frameRate": null
     },
     "start_blocks": "// Create sprites and set animation images\r\n\r\nfunction draw(){\r\n  // Draw a background\r\n  \r\n  // Update properties using the counter pattern\r\n  \r\n  // Draw sprites\r\n  \r\n}",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-01-02 17:50:10 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
