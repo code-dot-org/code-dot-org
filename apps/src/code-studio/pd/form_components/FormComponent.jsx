@@ -101,7 +101,7 @@ export default class FormComponent extends React.Component {
         required={required}
         {...props}
       >
-        {placeholder && <option key="placeholder" value="">{placeholder}</option>}
+        {placeholder && <option key="placeholder">{placeholder}</option>}
         {renderedOptions}
       </FieldGroup>
     );
