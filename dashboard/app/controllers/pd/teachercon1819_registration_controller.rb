@@ -9,6 +9,13 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
   end
 
   def new
+    # TODO: elijah create the Facilitator and Partner versions of this form and
+    # remove this requirement
+    if @application.application_type != "Teacher"
+      render :invalid
+      return
+    end
+
     if Pd::Teachercon1819Registration.exists?(pd_application_id: @application.id)
       @registration = Pd::Teachercon1819Registration.find_by(pd_application_id: @application)
       render :submitted
