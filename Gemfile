@@ -92,7 +92,7 @@ group :development, :test do
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
-  gem 'selenium-webdriver', '~> 3.0.3'
+  gem 'selenium-webdriver', '3.8.0'
   gem 'spring'
   gem 'spring-commands-testunit'
 
