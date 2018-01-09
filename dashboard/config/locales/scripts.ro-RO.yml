@@ -288,41 +288,41 @@
           description_audience: "[șir gol]"
           stages:
             'Calc: Defining Variables':
-              name: Defining Variables and Substitution
+              name: Definirea variabilelor și substituției
             'Calc: Evaluation Blocks':
-              name: Evaluation Blocks and Arithmetic Expressions
+              name: Blocuri de evaluare şi expresii aritmetice
             'Eval: Boolean Operators':
-              name: Boolean Operators
+              name: Operatori booleeni
             'Eval: Conditionals':
               name: Condiţionale
             'Eval: Defining Functions':
-              name: Composite Functions
+              name: Funcţiile compozit
             'Eval: Functions':
               name: Solving Word Problems with the Design Recipe
             'Eval: Strings and Images':
               name: "Șiruri și Imagini"
             'Eval: Writing Contracts':
-              name: Writing Contracts
+              name: Scrierea de contracte
             'Play Lab: Animation (Big Game)':
-              name: The Big Game - Animation
+              name: Marele joc - animaţie
             'Play Lab: Boolean (Big Game)':
-              name: The Big Game - Booleans
+              name: Marble Joc - boleeni
             'Play Lab: Booleans':
-              name: Sam the Bat
+              name: Liliacul Sam
             'Play Lab: Collision Detection (Big Game)':
-              name: The Big Game - Collision Detection
+              name: Marele joc - detectarea coliziunii
             'Play Lab: Defining Functions':
               name: Rocket Height
             'Play Lab: Defining Variables (Big Game)':
-              name: The Big Game - Variables
+              name: Marele doc - variabile
             'Unplugged: Booleans':
-              name: 'Unplugged: Booleans and Logic'
+              name: 'Unplugged: Boolean şi logica'
             'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Unplugged: Collision Detection and the Pythagorean Theorem'
+              name: 'Unplugged: Detectarea coliziunii şi teorema lui Pitagora'
             'Unplugged: Conditionals and Piecewise Functions':
               name: 'Fără calculator: Condiționale și funcții pe porțiuni'
             'Unplugged: Contracts':
-              name: 'Unplugged: Contracts, Domain, and Range'
+              name: 'Unplugged: contracte, domeniu și gamă'
             'Unplugged: The Design Recipe':
               name: 'Fără calculator: Rețeta pentru design'
             'Unplugged: Video Games and Coordinate Planes':
@@ -360,23 +360,23 @@
           description_audience: "[șir gol]"
           stages:
             Computer Science Pedagogy:
-              name: Computer Science Pedagogy
+              name: Pedagogia Informaticii
             Introduction to PD:
               name: Introducere in Dezvoltarea Profesională
             K-5 Courses:
-              name: K-5 Courses
+              name: Cursuri pentru clasa a cincea
             Next Steps:
-              name: Next Steps
+              name: Pașii următori
             'Programming Concept: Conditionals':
-              name: 'Programming Concept: Conditionals'
+              name: 'Concept de programare: condiţionale'
             'Programming Concept: Events':
-              name: 'Programming Concept: Events'
+              name: 'Concept de programare: evenimente'
             'Programming Concept: Functions':
-              name: 'Programming Concept: Functions'
+              name: 'Concept de programare: funcţii'
             'Programming Concept: Loops':
-              name: 'Programming Concept: Loops'
+              name: 'Concept de programare: bucle'
             Reflection:
-              name: Reflection
+              name: Reflecţie
             Teacher Dashboard:
               name: Tabloul de bord al profesorilor
             Unplugged lessons:
@@ -390,17 +390,17 @@
           description_audience: "[șir gol]"
           stages:
             Automatic DNS node:
-              name: Automatic DNS node
+              name: Nod automat DNS
             Broadcasting messages:
-              name: Broadcasting messages
+              name: Difuzarea mesajelor
             Internet Simulator Freeplay:
-              name: Internet Simulator Freeplay
+              name: Simulator de internet Freeplay
             Manual DNS:
               name: Manual DNS
             Overview and Setup Instructions:
-              name: Overview and Setup Instructions
+              name: Privire de ansamblu şi instrucţiuni de configurare
             Packets and Reliability:
-              name: Packets and Reliability
+              name: Pachete şi fiabilitate
             Peer to Peer - Sending Ascii:
               name: Peer to Peer - Sending Ascii
             Peer to Peer - Sending Bits on a Shared Wire:
@@ -481,7 +481,7 @@
           description_audience: "[șir gol]"
           stages:
             Applab:
-              name: Applab
+              name: Laborator de Aplicații
             Hoc2015 Blockly:
               name: Hoc2015 Blockly
             Play Lab:
@@ -560,7 +560,7 @@
           description_short: Make Black and White Images with the pixelation tool
           stages:
             Binary Numbers:
-              name: Binary Numbers
+              name: Numerele binare
             Bytes and File Sizes:
               name: Bytes and File Sizes
             Encode a Complex Thing:
@@ -629,7 +629,7 @@
             Rocket-Height:
               name: Rocket-Height
             Sam the Bat:
-              name: Sam the Bat
+              name: Liliacul Sam
             Strings and Images:
               name: "Șiruri și Imagini"
             Your Game - Animation:
@@ -810,13 +810,13 @@
           description_audience: "[șir gol]"
           stages:
             Computer Science Pedagogy:
-              name: Computer Science Pedagogy
+              name: Pedagogia Informaticii
             Course Overview:
               name: Course Overview
             Evaluation Blocks:
               name: Blocuri de evaluare
             Next Steps:
-              name: Next Steps
+              name: Pașii următori
             Strings and Images:
               name: "Șiruri și Imagini"
             Teacher Dashboard:
@@ -1078,7 +1078,7 @@
             Rocket-Height:
               name: Rocket-Height
             Sam the Bat:
-              name: Sam the Bat
+              name: Liliacul Sam
             Strings and Images:
               name: "Șiruri și Imagini"
             The Design Recipe:
@@ -1184,7 +1184,7 @@
             Evaluation Blocks:
               name: Blocuri de evaluare
             Next Steps:
-              name: Next Steps
+              name: Pașii următori
             Rocket-Height:
               name: Rocket-Height
             Strings and Images:
@@ -1192,7 +1192,7 @@
             Teacher Dashboard:
               name: Tabloul de bord al profesorilor
             Writing Contracts:
-              name: Writing Contracts
+              name: Scrierea de contracte
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
@@ -1240,7 +1240,7 @@
             'Mastering the Basics: Sequencing':
               name: 'Mastering the Basics: Sequencing'
             Next Steps:
-              name: Next Steps
+              name: Pașii următori
             Planning:
               name: Planning
         ECSPD2:
@@ -1365,7 +1365,7 @@
             Introduction to Equity:
               name: Introduction to Equity
             Next Steps:
-              name: Next Steps
+              name: Pașii următori
         sciencePD2b-iZone:
           title: Computer Science in Science PD Phase 2b
           description: 'Etapa 2 online: Studiu de vara mixt'
@@ -2196,7 +2196,7 @@
           description_audience: "[șir gol]"
           stages:
             Binary Numbers:
-              name: Binary Numbers
+              name: Numerele binare
             CS Principles Pre-survey:
               name: CS Principles Pre-survey
             Encoding and Sending Formatted Text:
@@ -2333,6 +2333,12 @@
               name: CSP Student Post-Course Survey
             Creating Functions with Parameters:
               name: Creating Functions with Parameters
+            CSP End-of-Semester Mid-course survey:
+              name: CSP End-of-Semester Mid-course survey
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions
@@ -2360,7 +2366,7 @@
             Rapid Research - Data Innovations:
               name: Rapid Research - Data Innovations
             Simple Encryption:
-              name: Simple Encryption
+              name: Criptare simplă
             The Cost of Free:
               name: The Cost of Free
             What is Big Data?:
@@ -2569,7 +2575,7 @@
             'Project: Build a Game':
               name: 'Project: Build a Game'
             Velocity:
-              name: Velocity
+              name: Viteza
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -2762,7 +2768,7 @@
             Contained Levels:
               name: Contained Levels
             Game Lab:
-              name: Game Lab
+              name: Laborator de jocuri
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
@@ -3151,7 +3157,7 @@
             Sequences & Algorithms:
               name: Sequences & Algorithms
             Unspotted Bugs:
-              name: Unspotted Bugs
+              name: Bug-uri neidentificate
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Events Unplugged: The Big Event':
@@ -3428,7 +3434,7 @@
             Variables and Animation:
               name: Variables and Animation
             Velocity:
-              name: Velocity
+              name: Viteza
               description_student: After a brief review of how the counter pattern
                 is used to move sprites, the class is introduced to the properties
                 that set velocity and rotation speed directly.   As they use these
@@ -4183,7 +4189,7 @@
             and simple techniques for breaking (or cracking) secret messages.
           stages:
             Simple Encryption:
-              name: Simple Encryption
+              name: Criptare simplă
         fesbinary:
           title: Binar
           description_audience: "[șir gol]"
@@ -5469,6 +5475,10 @@
               name: Designing Screens with Code
             Arrays:
               name: Arrays
+            Making Music:
+              name: Making Music
+            Arrays and For Loops:
+              name: Arrays and For Loops
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5833,7 +5843,7 @@
             Other Forms of Input:
               name: Other Forms of Input
             Velocity:
-              name: Velocity
+              name: Viteza
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6176,6 +6186,8 @@
                 deciding what to do with data that does not easily fit into the visualization
                 scheme that they have chosen.  Last, students look at what parts of
                 this process can be automated, and what need a human to make decisions.
+            Keeping Data Secret:
+              name: Keeping Data Secret
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: "[șir gol]"
@@ -6206,7 +6218,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Viteza
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6353,7 +6365,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Viteza
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6514,6 +6526,8 @@
               name: Săritură
             NewBounce:
               name: NewBounce
+            F PlayLab Variables:
+              name: F PlayLab Variables
           title: "[șir gol]"
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -6605,7 +6619,7 @@
                 opportunity to learn how to use events in Play Lab and to apply all
                 of the coding skills they've learned to create an animated game. It's
                 time to get creative and make a story in the Play Lab!
-          title: 'CS Fundamentals: Course A'
+          title: Curs A
           description_audience: "[șir gol]"
           description_short: An introduction to computer science for early readers.
           description: Course A offers computer science curriculum for beginning readers
@@ -6645,7 +6659,7 @@
               name: More Programming in Maze
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
-          title: 'CS Fundamentals: Course B'
+          title: Curs B
           description_audience: "[șir gol]"
           description_short: An introduction to computer science for early readers.
           description: |-
@@ -6686,7 +6700,7 @@
               name: Loops in Artist
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
-          title: 'CS Fundamentals: Course C'
+          title: Curs C
           description_audience: "[șir gol]"
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -6863,7 +6877,7 @@
                 debugging in the "collector" environment. Students will get to practice
                 reading and editing code to fix puzzles with simple algorithms, loops
                 and nested loops.
-          title: 'CS Fundamentals: Course D'
+          title: Curs D
           description_audience: "[șir gol]"
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7094,7 +7108,7 @@
               name: Nested Loops with Frozen
             Nested Loops:
               name: Repetiții imbricate
-          title: 'CS Fundamentals: Course E'
+          title: Curs E
           description_audience: "[șir gol]"
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7332,7 +7346,7 @@
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
-          title: 'CS Fundamentals: Course F'
+          title: Curs F
           description_audience: "[șir gol]"
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7823,6 +7837,10 @@
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey:
+              name: Please complete the CSP Mid-course survey
           title: "[șir gol]"
           description_audience: "[șir gol]"
           description_short: Invata bazele programarii JavaScript printr-un design
@@ -8417,6 +8435,16 @@
               name: 'Technology Foundations: What is a Computer?'
             'Data Science: Problem Solving with Big Data':
               name: 'Data Science: Problem Solving with Big Data'
+            Personal Innovations:
+              name: Personal Innovations
+            What is a Computer?:
+              name: What is a Computer?
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Programming - Hour of Code:
+              name: Programming - Hour of Code
+            Simple Encryption:
+              name: Criptare simplă
           title: PwC Access Your Potential
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -8483,6 +8511,8 @@
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
           title: Intro to App Lab Staging
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -8499,6 +8529,8 @@
               name: Explore PT - Complete the Task
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Setup: Digital Portfolio and Other Tools'
           title: Explore - AP Performance Task Prep
           description_audience: "[șir gol]"
           description_short: Lessons and resources to help students prepare for and
@@ -8534,6 +8566,14 @@
             standalone template:
               name: standalone template
           title: 'CSP3 under the sea student work recovery '
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        aws-demo:
+          stages:
+            new stage:
+              name: new stage
+          title: AWS Demo
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"

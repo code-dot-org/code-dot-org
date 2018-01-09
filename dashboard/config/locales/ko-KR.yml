@@ -702,6 +702,9 @@
         and games with objects and characters that interact with each other.
       audience: 13세 이상
       cta: "방법 알아보기"
+    hoc-encryption:
+      title: "간단한 암호화"
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -721,6 +724,10 @@
     minecraft2016:
       title: "마인크래프트"
       body: "자신만의 마인크래프트에서 동물들과, 또 다른 마인크래프트 생명체를 프로그램 해보세요."
+    hero:
+      title: "마인크래프트"
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: Sports
       body: Make a basketball game or mix and match across sports.
@@ -793,6 +800,9 @@
     correct_body: "답변 주셔서 감사 합니다."
     hide_survey_last_answer: "이 설문조사는 익명으로 처리됩니다. 결과를 확인하시려면 교사 대시보드를 방문하세요. 다섯 명
       이상의 학생이 설문에 응해야만 결과를 볼 수 있음을 알아두시기 바랍니다."
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: "고마워"
     wrong_body: "답변 주셔서 감사 합니다."

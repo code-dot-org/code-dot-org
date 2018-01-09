@@ -690,6 +690,7 @@
         C4_unplugged_forloops: For Loops
         C4_unplugged_parameters: Pisanje pesmi s parametri
         C4_unplugged_binary: Binarno
+        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Angles in Artist
         CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
         CSF_collector_repeat_loops: Collector Repeat Loops
@@ -940,7 +941,7 @@
           and then drag it into your function definition
         fill_in_actor: Fill in the ??? with numbers that correspond to each actor
           (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
+        repeat: Dodaj bloke v zanko, da bi ponavljal ukaze
         if_bee_nectar: Use the "if" block to decide if the bee should get nectar
         if_else_bee: Uporabi "če/sicer" blok tako, da bo čebelica nabrala nektar iz
           cveta in naredila med če ni cvet

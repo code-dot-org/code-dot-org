@@ -154,7 +154,7 @@
     user_type_student: Oppilas
     field_is_required: vaaditaan
     accept_terms: Sinun on hyväksyttävä luodaksesi tili
-    error: An error occurred.
+    error: Virhe.
   school_info:
     title: Koulun tiedot (valinnainen)
     school_country: Koulun maa
@@ -223,9 +223,9 @@
 
       %{name}
   parent_mailer:
-    student_associated_subject: Login information for Code.org
+    student_associated_subject: Code.org Kirjautumistiedot
   teacher_mailer:
-    new_teacher_subject: Welcome to Code.org!
+    new_teacher_subject: Tervetuloa Code.org:n!
   section:
     your_section:
       one: 'Jakso:'
@@ -235,11 +235,11 @@
       remove: Oletko varma että haluat poistua tältä osiolta?
     remove: "(poista osio)"
     type:
-      picture: Picture Password
+      picture: Kuvallinen Salasana
       word: Secret Words
       email: Sähköposti
       google_classroom: Google Classroom
-      clever: Clever
+      clever: Fiksu
   follower:
     invite_sent: Kutsu lähetetty
     added_teacher: "%{name} lisätty opettajaksesi"
@@ -295,14 +295,14 @@
         artist: Piirrä jotakin
         calculate: Calculate Something
         applab: Tee sovellus
-        gamelab: Make a Game Lab project
-        weblab: Make a Web Lab (beta) project
+        gamelab: Tee Pelilabra projekti
+        weblab: Tee Nettilabra (beta) projekti
       home: Etusivu
-      my_dashboard: My Dashboard
+      my_dashboard: Kojelauta
       courses: Kurssit
-      course_catalog: Course Catalog
+      course_catalog: Kurssiluettelo
       project_gallery: Projektit
-      sections: Sections
+      sections: Osiot
       help_support: Ohjeet ja tuki
       report_bug: Raportoi ongelma
       teacher_community: Opettajayhteisö
@@ -404,13 +404,12 @@
     deleted_user: poistettu käyttäjä
     no_password_because_oauth: Ei salasanaa koska kirjaudut kolmannelta osapuolelta.
     no_password_because_sponsored: Kysy opettajalta oma salasanasi.
-    create_personal_login: Create a personal login
+    create_personal_login: Luo henkilökohtainen tunnus
     create_personal_login_under_13_info: If you want to keep using your Code.org account
       even after the end of the school year, ask your parent/guardian to help you
       create your own personal login below.
-    create_personal_login_under_13_username: Username (don't use your real name!)
-    create_personal_login_under_13_parent_email: Parent/guardian email address (to
-      recover your password)
+    create_personal_login_under_13_username: Käyttäjänimi (Älä käytä oikeaa nimeäsi!)
+    create_personal_login_under_13_parent_email: Huoltajan sähköpostiosoite
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -661,8 +660,8 @@
     notes_coming_soon: Muistiinpanot tälle videolle tulossa pian.
     autoplay_option: Toista videot automaattisesti
     download: Lataa video
-    show_notes: Show Notes
-    show_video: Show Video
+    show_notes: Näytä Muistiinpanot
+    show_video: Näytä Video
   compatibility:
     upgrade:
       unsupported_message: Your browser is not supported. Please upgrade your browser
@@ -718,12 +717,11 @@
       unused: Käyttämättömät tasot
   upsell:
     applab:
-      title: Sovelluksien laboratorio
-      body: App Lab is a programming environment where you can make simple apps. Design
-        an app, code with blocks or JavaScript to make it work, then share your app
-        in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
+      title: Sovelluslabra
+      body: Sovelluslabra on koodausympäristö jossa tehdään ykksinkertaisia sovelluksia.
+        Suunnittele ohjelma, koodaa lohkoilla tai javaScriptillä, ja jaa työsi sekunneissa.
+      body_short: Suunnittele sovellus, koodaa lohkoilla tai JavaScriptillä, jaa sitten
+        kavereille sekunneissa.
       audience: Ikäryhmille 13+
       cta: Lisätietoja
     hoc:
@@ -756,9 +754,9 @@
       title: Simple Encryption
       body: Students will learn techniques to create and crack encrypted messages.
     weblab:
-      title: Web Lab (beta)
-      body: Web Lab is a programming environment where you can make simple web pages
-        using HTML and CSS. Design your web pages and share your site in seconds.
+      title: Nettilabra (beta)
+      body: Nettilabra on koodausympäristö jossa tehdään yksikertaisia nettisivuja
+        käyttäen HTML ja CSS kieliä. Suunnittele omat sivusi ja jaa kavereille.
       audience: Ikäryhmille 13+
       cta: Lisätietoja
     frozen:
@@ -773,7 +771,7 @@
       body: Tutki Minecraft-maailmaa koodin kautta.
     minecraft2016:
       title: Minecraft
-      body: Program animals and other Minecraft creatures in your own version of Minecraft.
+      body: Koodaa eläimiä ja muita Minecraft otuksia omalla Minecraft versiollasi.
     hero:
       title: Minecraft
       body: Minecraft is back for the Hour of Code with a brand new activity! Journey
@@ -799,11 +797,11 @@
       body: Learn about algorithms and conditional statements in this “unplugged”
         activity using a deck of cards.
     widgets:
-      title: Widgets
+      title: Pienoisohjelmat
       body: Students can explore concepts from our Computer Science Principles course
         hands-on using these digital tools. Use the widgets on their own, or create
         a single-concept lesson for your class.
-      audience: Ages 14+
+      audience: Ikäryhmille 14+
       cta: Lisätietoja
   gallery:
     students_drew_these_with_code: Oppilaat piirsivät nämä koodilla!
@@ -859,6 +857,9 @@
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
       students submitted the survey.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Kiitos
     wrong_body: Kiitos vastauksistasi.
@@ -1120,14 +1121,14 @@
     csp4_1: 'Chapter 1: The World of Big Data and Encryption'
     csp5_1: 'Chapter 1: Event-Driven Programming'
     csp5_2: 'Chapter 2: Programming with Data Structures'
-    cspSurvey: Survey
+    cspSurvey: Kysely
     cspAssessment: Chapter Assessment
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
     dlp: Reflection Prompts
   external_links:
-    disclaimer: Disclaimer
+    disclaimer: Vastuuvapauslauseke
     leaving_domain: You are now leaving this domain, to a site that is not operated
       by Code.org.
     disclaimer_text: This site may have privacy policies that differ from Code.org's.
@@ -1215,9 +1216,9 @@
     sinun kuuluisi olla.
   hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
     which unit you should be on.
-  return_unit_overview: Go to unit overview
+  return_unit_overview: Siirry sarjan yleisesittelyyn
   return_course_overview: Siirry sarjan yleisesittelyyn
-  view_all_units: View all units
+  view_all_units: Näytä kaikki sarjat
   pd:
     survey:
       number_teachers: Number of attending teachers

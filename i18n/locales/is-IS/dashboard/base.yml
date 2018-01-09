@@ -654,6 +654,7 @@ is:
     correct_title: "Takk fyrir"
     correct_body: "Takk fyrir að senda inn svör."
     hide_survey_last_answer: "Þessi könnun er nafnlaus. Þú getur séð samanteknar niðurstöður á stjórnborði kennara. Athugaðu að niðurstöður sjást ekki nema a.m.k. fimm nemendur hafi svarað."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Takk fyrir"
     wrong_body: "Takk fyrir að senda inn svör."

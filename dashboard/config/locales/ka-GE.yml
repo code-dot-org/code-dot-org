@@ -782,6 +782,9 @@
         და პერსონაჟების გამოყენებით."
       audience: "ასაკი 13+"
       cta: "ისწავლეთ, როგორ"
+    hoc-encryption:
+      title: "მარტივი შიფრირება"
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: "ვებ ლაბორატორია (ბეტა)"
       body: "თამაშების ლაბორატორია პროგრამირების გარემოა, რომელშიც თქვენ შეგიძლიათ
@@ -803,6 +806,10 @@
     minecraft2016:
       title: "მაინკრაფტი"
       body: "დააპროგრამე ცხოველები და სხვა ქმნილებები მაინკრაფტის საკუთარ სამყაროში."
+    hero:
+      title: "მაინკრაფტი"
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: "სპორტი"
       body: "შექმენით კალათბურთის თამაში ან შეურიეთ ერთმანეთს სპორტის სახეობები."
@@ -884,6 +891,9 @@
     hide_survey_last_answer: "გამოკითხვა ანონიმურია. გთხოვთ, დაგროვილი შედეგებისთვის
       ეწვიოთ თქვენი მასწავლებლის მართვის პანელს. ყურადღება მიაქციეთ, რომ შედეგები
       გამოჩნდება მხოლოდ იმ შემთხვევაში, თუ ხუთმა მოსწავლემ მაინც უპასუხა გამოკითხვას."
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: "მადლობა"
     wrong_body: "მადლობა პასუხისთვის"

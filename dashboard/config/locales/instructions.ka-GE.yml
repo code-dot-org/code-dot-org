@@ -1464,6 +1464,18 @@
       CSDU6 arrays random_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select icons_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select rainbow_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_instruction: |-
+        Write a program that displays a
+        randomly chosen color from the array. (Click to see full instructions)
       CSDU6 arrays variable_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
@@ -3263,6 +3275,49 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
+        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars10_instruction: |-
+        Free Play time! Here are all of the variables
+        we've played with so far in this stage, as well as a few more in case you
+        want them. \r
+        \r
+        Notice that there are now so many blocks in our toolbox
+        that they need to be organized!  Here, we've put each piece into an appropriate
+        category.  Take some time to explore everything that is available. When you're
+        done browsing, make a game or story using repeats, variables, and events.  \r
+        \r
+        Hint:
+        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars2_instruction: |-
+        The race in that last puzzle wasn't very
+        fair! Change the `dog_speed` variable to make sure you can collect more flags
+        than Cat. The first to collect 10 flags wins!
+      CourseF_PlayLab_vars3_instruction: "ესეც ახალი ტიპის თამაში! გამოიყენეთ მარცხენა
+        და მარჯვენა ისრები მოძრაობისთვის და ზედა ისარი ახტომისთვის. ნახეთ, შეძლებთ
+        თუ არა ყველა დროშის შეგროვებას."
+      CourseF_PlayLab_vars4_instruction: ახლა ვიყენებთ ცვლადს სახელად "სიმაღლე", რომ
+        ვაკონტროლოთ ძაღლის ახტომის სიმაღლე. განაახლეთ ცვლადი "სიმაღლე" ისე, რომ ძაღლს
+        შეეძლოს, ყველა დროშას მისწვდეს.
+      CourseF_PlayLab_vars5_instruction: 'ავაგოთ თამაში! პირველ რიგში ქულა დაგვჭირდება.
+        გამოიყენეთ "მიანიჭე ქულა" ბლოკი და ჩაწერეთ საწყის ქულად 10. '
+      CourseF_PlayLab_vars6_instruction: |-
+        გამოიყენეთ მარჯვენა ისარი და ისროლეთ ნამცხვრები.\r
+        \r
+        როგორ დავაგროვოთ ქულები ჩვენს თამაშში? დაამატეთ 1 თქვენს "ქულების" ცვლადს ყოველ ჯერზე, როცა ძაღლი კატას ნამცხვარს მოახვედრებს. გამოიყენეთ "როდესაც პერსონაჟი 2 შეეხება რამეს" მოვლენა, რათა განაახლოთ თქვენი ქულა. თქვენი ცვლადი შეგიძლიათ ასე ზარდოთ: "ქულები= ქულები + 1." აიყვანეთ თქვენი ქულა 10-მდე (თითო ჯერზე ერთით!), რათა გადალახოთ ეს დონე.
+      CourseF_PlayLab_vars7_instruction: |-
+        გამოიყენეთ მარჯვენა ისარი და ისროლეთ ნამცხვრები.\r
+        \r
+        როგორ დავაგროვოთ ქულები ჩვენს თამაშში? დაამატეთ 1 თქვენს "ქულების" ცვლადს ყოველ ჯერზე, როცა ძაღლი კატას ნამცხვარს მოახვედრებს. გამოიყენეთ "როდესაც პერსონაჟი 2 შეეხება რამეს" მოვლენა, რათა განაახლოთ თქვენი ქულა. თქვენი ცვლადი შეგიძლიათ ასე ზარდოთ: "ქულები= ქულები + 1." აიყვანეთ თქვენი ქულა 10-მდე (თითო ჯერზე ერთით!), რათა გადალახოთ ეს დონე.
+      CourseF_PlayLab_vars8_instruction: |-
+        გამოიყენეთ მარჯვენა ისარი და ისროლეთ ნამცხვრები.\r
+        \r
+        როგორ დავაგროვოთ ქულები ჩვენს თამაშში? დაამატეთ 1 თქვენს "ქულების" ცვლადს ყოველ ჯერზე, როცა ძაღლი კატას ნამცხვარს მოახვედრებს. გამოიყენეთ "როდესაც პერსონაჟი 2 შეეხება რამეს" მოვლენა, რათა განაახლოთ თქვენი ქულა. თქვენი ცვლადი შეგიძლიათ ასე ზარდოთ: "ქულები= ქულები + 1." აიყვანეთ თქვენი ქულა 10-მდე (თითო ჯერზე ერთით!), რათა გადალახოთ ეს დონე.
+      CourseF_PlayLab_vars9_instruction: |-
+        Nice, now let's make sure this game isn't
+        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
+        2), you should lose a point. Start with 10 points so it's not too hard. Let
+        your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution_instruction: "ინსტრუქციები"
       Crack a Caesar Cipher_instruction: "ინსტრუქციები"
       ECSPD Binary Odometer_instruction: |-
@@ -7300,10 +7355,15 @@
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_forVideo_instruction: "გამოიყენეთ `გამეორების` ციკლი,
+        რათა დაუმატოთ წყალს ტალღები."
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: "გამოწვევა: შეაკეთეთ კიბე."
       courseA_artist_loops_challenge2_instruction: '"როგორ შეგიძლიათ დამეხმაროთ ორი
         ჩიტის სახლის შექმნაში?"'
+      courseA_artist_loops_challenge2a_instruction: |-
+        *"Help me get these three tents
+        set up!"*
       courseA_artist_loops_challenge3_instruction: |-
         მოდით ვითამაშოთ თამაში!
         დახატეთ იმდენი X-ი რამდენიც შეგიძლიათ! შეგიძლიათ დახატოთ 3 ერთ მწკრივში?
@@ -7476,6 +7536,9 @@
       courseB_collector_loops_challenge2_instruction: "მოდით ავიღოთ განძი! დამეხმარეთ
         ყველა მწკრივში, შემდეგ დაუბრუნდით შემდეგი მწკრივის დასაწყისს. შეგიძლიათ დაინახოთ
         საერთო პრინციპი?"
+      courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: "ამჯერად, თქვენ შეგიძლიათ გამოიყენოთ
         მხოლოდ თითო ისრის ბლოკი. შეაგროვეთ მთელი განძი! "
       courseB_collector_prog1_instruction: "ეს მოგზაური ლაურიელია! შეგიძლიათ გადაადგილოთ
@@ -7686,6 +7749,8 @@
         გაგიხარდებათ!"
       courseC_artist_prog_challenge2_instruction: "*დამეხმარეთ დავხატო გზაზე ყვითელი
         ხაზები!*"
+      courseC_artist_prog_challenge2a_instruction: "*დამეხმარეთ დავხატო გზაზე ყვითელი
+        ხაზები!*"
       courseC_collector_loops_challenge2_instruction: "შეაგროვეთ მთელი განძი!"
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
@@ -7780,6 +7845,7 @@
         Collect all of the corn and all of the
         pumpkins.
       courseC_harvester_loops_challenge1_instruction: "შეაგროვეთ მთელი სიმინდი."
+      courseC_harvester_loops_challenge1a_instruction: "შეაგროვეთ მთელი სიმინდი."
       courseC_harvester_loops_challenge2_instruction: "შეაგროვეთ მთელი სალათი. თავი
         აარიდეთ ხეებს და მინდვრებს!"
       courseC_maze_debugging1_instruction: |-
@@ -7839,6 +7905,8 @@
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
       courseC_maze_loops_challenge1_instruction: "ამჯერად სკრატს რკოს საპოვნელად ციკლების
         გამოყენება სურს! "
+      courseC_maze_loops_challenge1a_instruction: "ამჯერად სკრატს რკოს საპოვნელად
+        ციკლების გამოყენება სურს! "
       courseC_maze_loops_challenge2_instruction: |-
         მოდით ვინადიროთ განძზე ციკლების გამოყენებით!
         დაადებაგირეთ კოდი, რათა დაეხმაროთ შემგროვებელს.
@@ -7946,6 +8014,8 @@
         \r
         See what happens when we start to
         get creative with the bits!
+      courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
+        binary! "
       courseD_artist_binary_challenge0_instruction: "სცადეთ ჩადგმული ციკლების გამოყენება
         ამ ნახატის დასარულებლად."
       courseD_artist_binary_challenge1_instruction: "ამ თავსატეხში, თქვენ შეგიძლიათ
@@ -8128,6 +8198,9 @@
       courseD_bee_debugging_challenge1_instruction: "შეხედეთ თუ როგორ აგროვებენ ფუტკრები
         ნექტარს. შეგიძლიათ გამოიყენოთ იგივე პრინციპი, რათა დაეხმაროთ ფუტკარს თაფლის
         სრული რაოდენობის დამზადებაში?"
+      courseD_bee_debugging_challenge1a_instruction: "შეხედეთ თუ როგორ აგროვებენ ფუტკრები
+        ნექტარს. შეგიძლიათ გამოიყენოთ იგივე პრინციპი, რათა დაეხმაროთ ფუტკარს თაფლის
+        სრული რაოდენობის დამზადებაში?"
       courseD_bee_debugging_challenge2_instruction: "შეხედეთ თუ როგორ აგროვებენ ფუტკრები
         ნექტარს. შეგიძლიათ გამოიყენოთ იგივე პრინციპი, რათა დაეხმაროთ ფუტკარს თაფლის
         სრული რაოდენობის დამზადებაში?"
@@ -8243,6 +8316,9 @@
       courseD_collector_debugging_challenge2_instruction: "ხართ თუ არა ჩადგმული ციკლების
         ექსპერტი? გამოიყენეთ აქამდე შესწავლილი მასალა, რათა შეაგროვოთ მთელი განძი!"
       courseD_collector_nested_loops_challenge2_instruction: "დაეხმარეთ შემგროვებელს
+        მინიმუმ ორი განძეულობის გროვასთან მიღწევაში. შეგიძლიათ მხოლოდ ინსტრუმენტების
+        პანელში არსებული ბლოკბის გამოყენება. 4-ვეს შეგროვებაა შესაძლებელი."
+      courseD_collector_nested_loops_challenge2a_instruction: "დაეხმარეთ შემგროვებელს
         მინიმუმ ორი განძეულობის გროვასთან მიღწევაში. შეგიძლიათ მხოლოდ ინსტრუმენტების
         პანელში არსებული ბლოკბის გამოყენება. 4-ვეს შეგროვებაა შესაძლებელი."
       courseD_collector_ramp10_instruction: Help Laurel collect all of the treasure.

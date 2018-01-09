@@ -640,6 +640,9 @@
       body: "ゲーム ラボは、簡単なアニメーションや、オブジェクトとキャラクターがやり取りするゲームを作ることができるプログラミング環境です。"
       audience: 13才以上
       cta: "もっと知る"
+    hoc-encryption:
+      title: "単純な暗号化"
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web 研究室 (ベータ版)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -659,6 +662,10 @@
     minecraft2016:
       title: "マインクラフト"
       body: "ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。"
+    hero:
+      title: "マインクラフト"
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: Sports
       body: Make a basketball game or mix and match across sports.
@@ -726,6 +733,9 @@
     correct_title: "ありがとうございます"
     correct_body: "回答していただきありがとうございました。"
     hide_survey_last_answer: "アンケートは匿名です。 集計結果は先生用のダッシュ ボードを参照してください。 少なくとも 5 人の学生がアンケートに回答した場合のみ、結果が表示されることに注意してください。"
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: "ありがとうございます"
     wrong_body: "回答していただきありがとうございました。"
