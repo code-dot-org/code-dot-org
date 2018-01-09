@@ -212,7 +212,7 @@ describe('UiTips', () => {
       expect(wrapper.find(UiTip)).to.have.prop('text', INITIAL_TIP.text);
 
       // Click the target element
-      // Still nothing to happens, one initial tip is still open
+      // Still nothing happens, one initial tip is still open
       $(targetElement).click();
       expect(wrapper.find(UiTip)).to.have.length(1);
       expect(wrapper.find(UiTip)).to.have.prop('text', INITIAL_TIP.text);
