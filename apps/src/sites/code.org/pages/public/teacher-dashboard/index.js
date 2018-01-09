@@ -50,9 +50,12 @@ function renderSectionProjects(sectionId) {
   });
 }
 
-function renderSectionProgress(sectionId) {
+function renderSectionProgress(section, validScripts) {
   ReactDOM.render(
-    <SectionProgress sectionId={sectionId}/>,
+    <SectionProgress
+      section={section}
+      validScripts={validScripts}
+    />,
     document.getElementById('section-progress-react')
   );
 }
@@ -765,7 +768,11 @@ function main() {
 
     if (experiments.isEnabled('sectionProgressRedesign')) {
       $scope.react_progress = true;
-      $scope.$on('section-progress-rendered', () => renderSectionProgress($routeParams.id));
+      $scope.$on('section-progress-rendered', () => {
+        $scope.section.$promise.then(script =>
+          renderSectionProgress(script, valid_scripts)
+        );
+      });
       return;
     }
 
