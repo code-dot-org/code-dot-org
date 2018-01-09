@@ -442,6 +442,9 @@ Dashboard::Application.routes.draw do
       get 'principal_approval/:application_guid', to: 'principal_approval_application#new', as: 'principal_approval'
     end
 
+    # persistent namespace for teachercon registrations, can be updated/replaced each year
+    get 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#new'
+
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
     get 'regional_partner_program_registration', to: 'regional_partner_program_registration#new'
 
