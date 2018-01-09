@@ -1,10 +1,10 @@
-import FormComponent from '../form_components/FormComponent';
+import LabeledFormComponent from '../form_components/LabeledFormComponent';
 
 const TEACHER = "Teacher";
 const FACILITATOR = "Facilitator";
 const PARTNER = "Partner";
 
-export default class Teachercon1819FormComponent extends FormComponent {
+export default class Teachercon1819FormComponent extends LabeledFormComponent {
 
   isTeacherApplication() {
     return this.props.applicationType === TEACHER;

@@ -8,9 +8,9 @@ import {
 import UsPhoneNumberInput from "../form_components/UsPhoneNumberInput";
 import {isZipCode} from '@cdo/apps/util/formatValidation';
 
-import FormComponent from '../form_components/FormComponent';
+import Teachercon1819FormComponent from 'Teachercon1819FormComponent';
 
-export default class TravelPlans extends FormComponent {
+export default class TravelPlans extends Teachercon1819FormComponent {
   static associatedFields = [
     'contactFirstName',
     'contactLastName',
@@ -26,6 +26,21 @@ export default class TravelPlans extends FormComponent {
     'needHotel',
     'needAda',
   ];
+
+  static labels = {
+    contactFirstName: "First name:",
+    contactLastName: "Last name:",
+    contactRelationship: "Relationship to you:",
+    contactPhone: "Phone number:",
+    dietaryNeeds: "Do you have any dietary needs or food allergies?",
+    addressStreet: "Street",
+    addressCity: "City",
+    addressState: "State",
+    addressZip: "Zip",
+    howTraveling: "Code.org provides a round trip flight for every TeacherCon attendee. If you choose to fly, we will provide you with detailed flight booking instructions approximately six weeks prior to TeacherCon. If you choose not to fly, and live at least 25 miles from the TeacherCon location, Code.org will provide you with a $150 gift card to help cover the cost of driving, trains, or public transit. Code.org is not able to provide reimbursement for the cost of driving, trainings, or public transit if you live less than 25 miles from the TeacherCon location. How will you travel to TeacherCon?",
+    needHotel: "Code.org provides a hotel room for every TeacherCon attendee. Attendees will not be required to share a room. Would you like a hotel room at TeacherCon?",
+    needAda: "Do you require an ADA accessible hotel room?",
+  }
 
   /**
    * @override
@@ -75,46 +90,15 @@ export default class TravelPlans extends FormComponent {
             Please provide the name and phone number of someone we can contact in
             case of an emergency.
           </ControlLabel>
-          {this.buildFieldGroup({
-            controlWidth: {md: 6},
-            label: "First name:",
-            name: "contactFirstName",
-            required: true,
-            type: "text",
-          })}
-          {this.buildFieldGroup({
-            controlWidth: {md: 6},
-            label: "Last name:",
-            name: "contactLastName",
-            required: true,
-            type: "text",
-          })}
-          {this.buildFieldGroup({
-            controlWidth: {md: 6},
-            label: "Relationship to you:",
-            name: "contactRelationship",
-            required: true,
-            type: "text",
-          })}
-          {this.buildUsPhoneNumberInput({
-            controlWidth: {md: 6},
-            label: "Phone number:",
-            name: "contactPhone",
-            placeholder: "XXX-XXX-XXXX",
-            required: true,
-            type: "tel",
-          })}
+          {this.inputFor("contactFirstName")}
+          {this.inputFor("contactLastName")}
+          {this.inputFor("contactRelationship")}
+          {this.usPhoneNumberInputFor("contactPhone")}
         </FormGroup>
 
         <FormGroup>
-          {this.buildButtonsWithAdditionalTextFieldsFromOptions({
-            name: 'dietaryNeeds',
-            label: "Do you have any dietary needs or food allergies?",
-            type: 'check',
-            required: true,
-            textFieldMap: {
-              "Food Allergy": "food_allergy_details"
-            }
+          {this.radioButtonsWithAdditionalTextFieldsFor("dietaryNeeds", {
+            "Food Allergy": "food_allergy_details"
           })}
         </FormGroup>
 
@@ -131,62 +115,22 @@ export default class TravelPlans extends FormComponent {
                 <ControlLabel>
                   Please provide your home address
                 </ControlLabel>
-                {this.buildFieldGroup({
-                  controlWidth: {md: 6},
-                  label: "Street",
-                  name: "addressStreet",
-                  required: true,
-                  type: "text",
-                })}
-                {this.buildFieldGroup({
-                  controlWidth: {md: 6},
-                  label: "City",
-                  name: "addressCity",
-                  required: true,
-                  type: "text",
-                })}
-                {this.buildSelectFieldGroupFromOptions({
-                  controlWidth: {md: 6},
-                  label: "State",
-                  name: "addressState",
-                  placeholder: "-",
-                  required: true,
-                })}
-                {this.buildFieldGroup({
-                  controlWidth: {md: 6},
-                  label: "Zip",
-                  name: "addressZip",
-                  required: true,
-                  type: "text",
-                })}
+                {this.inputFor("addressStreet")}
+                {this.inputFor("addressCity")}
+                {this.selectFor("addressState", { placeholder: "Select a state" })}
+                {this.inputFor("addressZip")}
               </FormGroup>
           }
         </FormGroup>
 
         <FormGroup>
-          {this.buildButtonsFromOptions({
-            label: "Code.org provides a round trip flight for every TeacherCon attendee. If you choose to fly, we will provide you with detailed flight booking instructions approximately six weeks prior to TeacherCon. If you choose not to fly, and live at least 25 miles from the TeacherCon location, Code.org will provide you with a $150 gift card to help cover the cost of driving, trains, or public transit. Code.org is not able to provide reimbursement for the cost of driving, trainings, or public transit if you live less than 25 miles from the TeacherCon location. How will you travel to TeacherCon?",
-            name: 'howTraveling',
-            required: true,
-            type: 'radio',
-          })}
-          {this.buildButtonsFromOptions({
-            label: "Code.org provides a hotel room for every TeacherCon attendee. Attendees will not be required to share a room. Would you like a hotel room at TeacherCon?",
-            name: 'needHotel',
-            required: true,
-            type: 'radio',
-          })}
+          {this.radioButtonsFor("howTraveling")}
+          {this.radioButtonsFor("needHotel")}
           {
             this.props.data.needHotel &&
               this.props.data.needHotel === 'Yes' &&
-              this.buildButtonsWithAdditionalTextFieldsFromOptions({
-                label: "Do you require an ADA accessible hotel room?",
-                name: 'needAda',
-                required: true,
-                type: 'radio',
-                textFieldMap: {
-                  "Other (please explain):": "ada_details"
-                }
+              this.radioButtonsWithAdditionalTextFieldsFor("needAda", {
+                "Other (please explain):": "ada_details"
               })
           }
         </FormGroup>
