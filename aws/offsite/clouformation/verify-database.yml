@@ -56,6 +56,9 @@ Resources:
       FunctionName: VerifyDatabaseCopy
       Handler: index.handler
       Runtime: nodejs6.10
+      Code:
+        S3Bucket: cdo-secondary-dist
+        S3Key: restore-database-copy-for-verification.zip
       Timeout: 300 # This function takes about 4 minutes to run because updating the db password takes ~3 minutes
       Role: !GetAtt VerifyDatabaseLambdaRole.Arn
       VpcConfig:
@@ -77,6 +80,10 @@ Resources:
     Properties:
       TopicName: restore-database-copy
       DisplayName: restore db
+      Subscription:
+        -
+          Endpoint: !GetAtt VerifyDatabaseCopy.Arn
+          Protocol: lambda
   RestoreDatabaseCopyRDSEvent:
     Type: 'AWS::RDS::EventSubscription'
     Properties: 
