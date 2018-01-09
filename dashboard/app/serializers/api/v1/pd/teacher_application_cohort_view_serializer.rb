@@ -11,10 +11,14 @@ class Api::V1::Pd::TeacherApplicationCohortViewSerializer < ActiveModel::Seriali
   end
 
   def assigned_workshop
-    Pd::Workshop.find(object.pd_workshop_id).location_city
+    object.pd_workshop_id ? Pd::Workshop.find(object.pd_workshop_id).location_city : ''
   end
 
   def registered_workshop
-    Pd::Enrollment.exists?(pd_workshop_id: object.pd_workshop_id, user_id: object.user_id) ? 'Yes' : 'No'
+    if object.pd_workshop_id
+      Pd::Enrollment.exists?(pd_workshop_id: object.pd_workshop_id, user_id: object.user_id) ? 'Yes' : 'No'
+    else
+      ''
+    end
   end
 end
