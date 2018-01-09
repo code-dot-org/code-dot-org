@@ -14,6 +14,14 @@ export default class Joining extends Teachercon1819FormComponent {
     'phone',
   ]
 
+  static labels = {
+    preferredFirstName: "Preferred first name",
+    lastName: "Last name",
+    email: "Email",
+    phone: "Phone number",
+    teacherAcceptSeat: "Do you want to accept your seat in the Professional Learning Program? (Select one)",
+  }
+
   /**
    * @override
    */
@@ -33,35 +41,10 @@ export default class Joining extends Teachercon1819FormComponent {
         <h4>Section 1: Are you joining us?</h4>
 
         <FormGroup>
-          {this.buildFieldGroup({
-            controlWidth: {md: 6},
-            label: "Preferred first name:",
-            name: "preferredFirstName",
-            required: true,
-            type: "text",
-          })}
-          {this.buildFieldGroup({
-            controlWidth: {md: 6},
-            label: "Last name:",
-            name: "lastName",
-            required: true,
-            type: "text",
-          })}
-          {this.buildFieldGroup({
-            controlWidth: {md: 6},
-            readOnly: true,
-            label: "Email:",
-            name: "email",
-            required: true,
-            type: "text",
-          })}
-          {this.buildUsPhoneNumberInput({
-            controlWidth: {md: 6},
-            label: "Phone number:",
-            name: "phone",
-            required: true,
-            type: "tel",
-          })}
+          {this.inputFor("preferredFirstName")}
+          {this.inputFor("lastName")}
+          {this.inputFor("email", { readOnly: true })}
+          {this.usPhoneNumberInputFor("phone")}
         </FormGroup>
         <FormGroup>
           <ControlLabel>
@@ -84,12 +67,7 @@ export default class Joining extends Teachercon1819FormComponent {
             <li>Attend their assigned academic year workshops</li>
             <li>Teach this curriculum in the 2018-19 school year</li>
           </ul>
-          {this.buildButtonsFromOptions({
-            label: "Do you want to accept your seat in the Professional Learning Program? (Select one)",
-            name: 'teacherAcceptSeat',
-            required: true,
-            type: 'radio',
-          })}
+          {this.radioButtonsForm("teacherAcceptSeat")}
           {/* TOTO elijah replace these with constants */}
           {(
             this.data.teacherAcceptSeat === "Yes, I want to participate, but I'm unable to attend my assigned summer workshop date. Please place me on your waitlist. I understand that I am not guaranteed a space in a different summer workshop." ||
