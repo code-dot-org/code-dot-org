@@ -114,6 +114,14 @@ module Pd::Application
       self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
     end
 
+    before_save :destroy_autoenrollment, if: -> {status_changed? && status != "accepted"}
+    def destroy_autoenrollment
+      return unless auto_assigned_enrollment_id
+
+      Pd::Enrollment.find_by(id: auto_assigned_enrollment_id).try(:destroy)
+      self.auto_assigned_enrollment_id = nil
+    end
+
     # override
     def lock!
       return if locked?
@@ -141,8 +149,7 @@ module Pd::Application
         )
         enrollment.save!
 
-        Pd::Enrollment.find_by(id: auto_assigned_enrollment_id).try(:destroy) if auto_assigned_enrollment_id
-
+        destroy_autoenrollment
         self.auto_assigned_enrollment_id = enrollment.id
       end
     end
