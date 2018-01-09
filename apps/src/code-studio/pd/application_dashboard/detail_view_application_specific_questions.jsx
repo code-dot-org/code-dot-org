@@ -34,7 +34,7 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
     handleScoreChange: PropTypes.func
   }
 
-   constructor(props) {
+  constructor(props) {
     super(props);
 
     this.state = {
