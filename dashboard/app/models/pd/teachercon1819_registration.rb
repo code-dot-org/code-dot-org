@@ -41,6 +41,12 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       ],
       needHotel: [YES, NO],
       needAda: [YES, NO, 'Other (please explain):'],
+      teacherAcceptSeat: [
+        "Yes, I accept my seat in the Professional Learning Program",
+        "Yes, I want to participate, but I'm unable to attend my assigned summer workshop date. Please place me on your waitlist. I understand that I am not guaranteed a space in a different summer workshop.",
+        "Yes, I want to participate, but I'm not able to for a different reason. Please place me on your waitlist. I understand that I am not guaranteed a space in a different summer workshop.",
+        "No, I decline my seat in the Professional Learning Program.",
+      ]
     }.freeze
   end
 

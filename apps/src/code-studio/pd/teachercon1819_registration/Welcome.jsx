@@ -1,18 +1,14 @@
 import React from 'react';
 import {FormGroup} from 'react-bootstrap';
-import FormComponent from '../form_components/FormComponent';
+import Teachercon1819FormComponent from 'Teachercon1819FormComponent';
 
-const TEACHER = "Teacher";
-const FACILITATOR = "Facilitator";
-const PARTNER = "Partner";
-
-export default class Welcome extends FormComponent {
+export default class Welcome extends Teachercon1819FormComponent {
   static associatedFields = []
 
   render() {
     return (
       <FormGroup>
-        {this.props.applicationType === TEACHER &&
+        {this.isTeacherApplication() &&
           <p>
             Congratulations on your acceptance to Code.org's Professional
             Learning Program for {this.props.course}! Please complete this
@@ -22,7 +18,7 @@ export default class Welcome extends FormComponent {
           </p>
         }
 
-        {this.props.applicationType === FACILITATOR &&
+        {this.isFacilitatorApplication() &&
           <p>
             Congratulations on your acceptance to Code.org’s Facilitator Development
             Program for {this.props.course}! Please complete this registration
@@ -32,7 +28,7 @@ export default class Welcome extends FormComponent {
           </p>
         }
 
-        {this.props.applicationType === PARTNER &&
+        {this.isPartnerApplication() &&
           <p>
             We're looking forward to seeing you at TeacherCon this summer!
             Please complete this registration form <strong>within two
