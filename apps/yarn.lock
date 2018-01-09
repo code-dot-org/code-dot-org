@@ -9,9 +9,9 @@
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.7.0.tgz#e070dd9f23d64f0c35777c20a4d47d0ad4022923"
 
-"@code-dot-org/bramble@0.1.24":
-  version "0.1.24"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/bramble/-/bramble-0.1.24.tgz#faf4789d5308f8da3e04247d81d7ed5ef0500825"
+"@code-dot-org/bramble@0.1.25":
+  version "0.1.25"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/bramble/-/bramble-0.1.25.tgz#d169e03336ec16790ddd8be2ee5c5812404a3269"
   dependencies:
     autoprefixer-core "5.1.8"
     aws-sdk "^2.2.9"
@@ -10671,14 +10671,7 @@ temporal@latest:
   dependencies:
     es6-shim latest
 
-test262-compiler@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/test262-compiler/-/test262-compiler-2.0.0.tgz#d9c300c2a46616932e08a3b2fd03ade5bc1bcf11"
-  dependencies:
-    test262-parser "^2.0.7"
-    yargs "^4.7.1"
-
-"test262-compiler@github:pcardune/test262-compiler#ffa0dff":
+test262-compiler@^2.0.0, "test262-compiler@github:pcardune/test262-compiler#ffa0dff":
   version "2.0.1"
   resolved "https://codeload.github.com/pcardune/test262-compiler/tar.gz/ffa0dff"
   dependencies:
