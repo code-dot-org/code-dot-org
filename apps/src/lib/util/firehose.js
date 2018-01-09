@@ -153,16 +153,18 @@ class FirehoseClient {
     data['device'] = JSON.stringify(this.getDeviceInfo());
 
     const state = getStore().getState();
-    if (includeUserId) {
-      const constants = state.pageConstants;
-      if (constants) {
-        data['user_id'] = constants.userId;
+    if (state) {
+      if (includeUserId) {
+        const constants = state.pageConstants;
+        if (constants) {
+          data['user_id'] = constants.userId;
+        }
       }
-    }
-    const progress = state.progress;
-    if (progress) {
-      data['script_id'] = progress.scriptId;
-      data['level_id'] = parseInt(progress.currentLevelId);
+      const progress = state.progress;
+      if (progress) {
+        data['script_id'] = progress.scriptId;
+        data['level_id'] = parseInt(progress.currentLevelId);
+      }
     }
 
     return data;
