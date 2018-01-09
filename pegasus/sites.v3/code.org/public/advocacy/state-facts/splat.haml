@@ -137,62 +137,62 @@ theme: pdf
           only
           = format_integer_with_commas(state_info[:ap_hispanic_i])
           - if state_info[:ap_hispanic_i] == 1
-            exam was taken by
+            exam was taken by Hispanic or Latino students
           - else
-            exams were taken by
+            exams were taken by Hispanic or Latino students
         - else
-          no exams were taken by
-        Hispanic or Latino students
-        = precede "(" do
-          = format_integer_with_commas(state_info[:ap_csa_hispanic_i])
-        took AP CS A and
-        = format_integer_with_commas(state_info[:ap_csp_hispanic_i])
-        took AP CSP);
+          no exams were taken by Hispanic or Latino students;
+        - if state_info[:ap_hispanic_i] != 0
+          = precede "(" do
+            = format_integer_with_commas(state_info[:ap_csa_hispanic_i])
+          took AP CS A and
+          = format_integer_with_commas(state_info[:ap_csp_hispanic_i])
+          took AP CSP);
         - if state_info[:ap_black_i] != 0
           only
           = format_integer_with_commas(state_info[:ap_black_i])
           - if state_info[:ap_black_i] == 1
-            exam was taken by
+            exam was taken by Black students
           - else
-            exams were taken by
+            exams were taken by Black students
         - else
-          no exams were taken by
-        Black students
-        = precede "(" do
-          = format_integer_with_commas(state_info[:ap_csa_black_i])
-        took AP CS A and
-        = format_integer_with_commas(state_info[:ap_csp_black_i])
-        took AP CSP);
+          no exams were taken by Black students;
+        - if state_info[:ap_black_i] != 0
+          = precede "(" do
+            = format_integer_with_commas(state_info[:ap_csa_black_i])
+          took AP CS A and
+          = format_integer_with_commas(state_info[:ap_csp_black_i])
+          took AP CSP);
         - if state_info[:ap_native_american_i] != 0
           only
           = format_integer_with_commas(state_info[:ap_native_american_i])
           - if state_info[:ap_native_american_i] == 1
-            exam was taken by
+            exam was taken by Native American or Alaska Native students
           - else
-            exams were taken by
+            exams were taken by Native American or Alaska Native students
         - else
-          no exams were taken by
-        Native American or Alaska Native students
-        = precede "(" do
-          = state_info[:ap_csa_native_american_i]
-        took AP CS A and
-        = state_info[:ap_csp_native_american_i]
-        took AP CSP);
+          no exams were taken by Native American or Alaska Native students;
+        - if state_info[:ap_native_american_i] != 0
+          = precede "(" do
+            = state_info[:ap_csa_native_american_i]
+          took AP CS A and
+          = state_info[:ap_csp_native_american_i]
+          took AP CSP);
         - if state_info[:ap_hawaiian_i] != 0
           only
           = format_integer_with_commas(state_info[:ap_hawaiian_i])
           - if state_info[:ap_hawaiian_i] == 1
-            exam was taken by
+            exam was taken by Native Hawaiian or Pacific Islander students
           - else
-            exams were taken by
+            exams were taken by Native Hawaiian or Pacific Islander students
         - else
-          no exams were taken by
-        Native Hawaiian or Pacific Islander students
-        = precede "(" do
-          = state_info[:ap_csa_hawaiian_i]
-        took AP CS A and
-        = state_info[:ap_csp_hawaiian_i]
-        took AP CSP).
+          no exams were taken by Native Hawaiian or Pacific Islander students.
+        - if state_info[:ap_hawaiian_i] != 0
+          = precede "(" do
+            = state_info[:ap_csa_hawaiian_i]
+          took AP CS A and
+          = state_info[:ap_csp_hawaiian_i]
+          took AP CSP).
       %li
         - if state_info[:schools_ap_cs_i] != 0
           Only
@@ -211,15 +211,16 @@ theme: pdf
           = surround "(", "%" do
             = state_info[:percent_schools_ap_csa_i]
           offered AP CS A and
-          = succeed "%" do
-            = state_info[:percent_schools_ap_csp_i]
-          offered AP CSP),
           - if state_info[:number_additional_schools_i] != 0
-            which is
+            = succeed "%" do
+              = state_info[:percent_schools_ap_csp_i]
+            offered AP CSP), which is
             = state_info[:number_additional_schools_i]
             more than the previous year.
           - else
-            \.
+            = succeed "%" do
+              = state_info[:percent_schools_ap_csp_i]
+            offered AP CSP).
         - else
           No schools in
           = state_info[:state_code_s]
