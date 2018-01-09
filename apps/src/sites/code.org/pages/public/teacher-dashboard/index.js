@@ -8,6 +8,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
+import SectionProgress from '@cdo/apps/lib/kits/teacher-dashboard/SectionProgress';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -51,8 +52,8 @@ function renderSectionProjects(sectionId) {
 
 function renderSectionProgress(sectionId) {
   ReactDOM.render(
-    <div>Progress here for section {sectionId}</div>,
-      document.getElementById('section-progress-react')
+    <SectionProgress sectionId={sectionId}/>,
+    document.getElementById('section-progress-react')
   );
 }
 
