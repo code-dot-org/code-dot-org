@@ -94,7 +94,7 @@ namespace :circle do
 
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
             " --eyes" \
-            " --feature angleHelper" \
+            " --feature features/angleHelper.feature" \
             " --config ChromeLatestWin7" \
             " --pegasus localhost.code.org:3000" \
             " --dashboard localhost-studio.code.org:3000" \
