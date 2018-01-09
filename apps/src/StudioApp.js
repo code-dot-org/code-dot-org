@@ -275,7 +275,7 @@ StudioApp.prototype.init = function (config) {
       firehoseClient.putRecord(
         'analysis-events',
         {
-          study: 'instructions-resources-tab-wip',
+          study: 'instructions-resources-tab-wip-v1',
           study_group: 'resources-tab',
           event: 'resources-tab-load',
           data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
@@ -285,7 +285,7 @@ StudioApp.prototype.init = function (config) {
       firehoseClient.putRecord(
         'analysis-events',
         {
-          study: 'instructions-resources-tab-wip',
+          study: 'instructions-resources-tab-wip-v1',
           study_group: 'under-app',
           event: 'under-app-load',
           data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
@@ -1855,23 +1855,25 @@ StudioApp.prototype.configureDom = function (config) {
   const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && experiments.isEnabled('resourcesTab');
   if (!referenceAreaInTopInstructions && referenceArea) {
     belowViz.appendChild(referenceArea);
+    // TODO (epeach) - remove after resources tab A/B testing
+    // Temporarily attach an event listener to log clicks
+    // Logs the type of app and the ids of the puzzle
+    var videoThumbnail = document.getElementsByClassName('video_thumbnail');
+    if (videoThumbnail[0]){
+      videoThumbnail[0].addEventListener('click', () => {
+        firehoseClient.putRecord(
+          'analysis-events',
+          {
+            study: 'instructions-resources-tab-wip-v1',
+            study_group: 'under-app',
+            event: 'under-app-video-click',
+            data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
+          }
+        );
+      });
+    }
   }
 
-  // TODO (epeach) - remove after resources tab A/B testing
-  // Temporarily attach an event listener to log clicks
-  // Logs the type of app and the ids of the puzzle
-  var videoThumbnail = document.getElementsByClassName('video_thumbnail');
-  if (videoThumbnail[0]){
-    videoThumbnail[0].addEventListener('click', firehoseClient.putRecord(
-      'analysis-events',
-      {
-        study: 'instructions-resources-tab-wip',
-        study_group: 'under-app',
-        event: 'under-app-video-click',
-        data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
-      }
-    ));
-  }
   var visualizationColumn = document.getElementById('visualizationColumn');
 
   if (!config.hideSource || config.embed || config.level.iframeEmbed) {
