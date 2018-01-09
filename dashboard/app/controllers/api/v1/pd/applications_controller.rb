@@ -72,7 +72,15 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
         Api::V1::Pd::TeacherApplicationCohortViewSerializer
       end
 
-    render json: applications, each_serializer: serializer
+    respond_to do |format|
+      format.json do
+        render json: applications, each_serializer: serializer
+      end
+      format.csv do
+        csv_text = [TYPES_BY_ROLE[params[:role].to_sym].cohort_csv_header, applications.map(&:to_cohort_csv_row)].join
+        send_csv_attachment csv_text, "#{params[:role]}_cohort_applications.csv"
+      end
+    end
   end
 
   # PATCH /api/v1/pd/applications/1
