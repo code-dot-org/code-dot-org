@@ -29,22 +29,6 @@ class DummyFormWithOptions < DummyForm
   end
 end
 
-class DummyFormWithRequiredOptions < DummyForm
-  def self.options
-    {
-      first_option: ["Yes", "No"],
-      second_option: ["I don't know", "Maybe so"]
-    }.freeze
-  end
-
-  def self.required_fields
-    [
-      :first_option,
-      :second_option
-    ].freeze
-  end
-end
-
 class DummyFormWithDynamicOptions < DummyForm
   def self.options
     {
@@ -151,19 +135,16 @@ class Pd::FormTest < ActiveSupport::TestCase
     assert form.valid?
   end
 
-  test 'pd form always fails validation for nil required options' do
-    form = DummyFormWithRequiredOptions.new
+  test 'pd form always fails validation for nil options' do
+    form = DummyFormWithDynamicOptions.new
 
-    form.form_data = {firstOption: 'Yes', secondOption: nil}.to_json
+    form.form_data = {optionSet: '3', option: 'some value'}.to_json
     refute form.valid?
-    assert_equal ['secondOption'], form.errors.messages[:form_data]
-  end
+    assert_equal ['option'], form.errors.messages[:form_data]
 
-  test 'pd form passes validation with nil nonrequired options' do
-    form = DummyFormWithOptions.new
-
-    form.form_data = {firstOption: 'Yes', secondOption: nil}.to_json
-    assert form.valid?
+    form.form_data = {optionSet: '3', option: nil}.to_json
+    refute form.valid?
+    assert_equal ['option'], form.errors.messages[:form_data]
   end
 
   test 'pd form enforces dynamic options' do

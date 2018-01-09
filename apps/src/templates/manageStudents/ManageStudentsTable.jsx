@@ -7,10 +7,10 @@ import ShowSecret from './ShowSecret';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from "@cdo/locale";
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
-import QuickActionsCell from "../tables/QuickActionsCell";
-import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
-import color from "../../util/color";
-import FontAwesome from '../FontAwesome';
+import ManageStudentsNameCell from './ManageStudentsNameCell';
+import ManageStudentsAgeCell from './ManageStudentsAgeCell';
+import ManageStudentsGenderCell from './ManageStudentsGenderCell';
+import ManageStudentsActionsCell from './ManageStudentsActionsCell';
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -25,11 +25,6 @@ export const studentSectionDataPropType = PropTypes.shape({
   sectionId: PropTypes.number,
 });
 
-const GENDERS = {
-  m: i18n.genderMale(),
-  f: i18n.genderFemale()
-};
-
 /** @enum {number} */
 export const COLUMNS = {
   NAME: 0,
@@ -39,33 +34,38 @@ export const COLUMNS = {
   ACTIONS: 4,
 };
 
-const styles = {
-  xIcon: {
-    paddingRight: 5,
-  }
-};
-
 // Cell formatters.
 const nameFormatter = (name, {rowData}) => {
-  const url = `/teacher-dashboard#/sections/${rowData.sectionId}/student/${rowData.id}`;
-  return (<div>
-    <a style={tableLayoutStyles.link} href={url} target="_blank">{name}</a>
-    {rowData.loginType === SectionLoginType.email &&
-      <p>{i18n.usernameLabel() + rowData.username}</p>
-    }
-  </div>);
+  return (
+    <ManageStudentsNameCell
+      id={rowData.id}
+      sectionId={rowData.sectionId}
+      name={name}
+      loginType={rowData.loginType}
+      username={rowData.username}
+      isEditing={false}
+    />
+  );
 };
 
 const ageFormatter = (age, {rowData}) => {
-  return (<div>
-    {age}
-  </div>);
+  return (
+    <ManageStudentsAgeCell
+      age={age}
+      id={rowData.id}
+      isEditing={false}
+    />
+  );
 };
 
 const genderFormatter = (gender, {rowData}) => {
-  return (<div>
-    {GENDERS[gender]}
-  </div>);
+  return (
+    <ManageStudentsGenderCell
+      gender={gender}
+      id={rowData.id}
+      isEditing={false}
+    />
+  );
 };
 
 const passwordFormatter = (loginType, {rowData}) => {
@@ -92,21 +92,10 @@ const passwordFormatter = (loginType, {rowData}) => {
 
 const actionsFormatter = function (actions, {rowData}) {
   return (
-    <QuickActionsCell>
-      <PopUpMenu.Item
-        onClick={() => {}}
-      >
-        {"Edit"}
-      </PopUpMenu.Item>
-      <MenuBreak/>
-      <PopUpMenu.Item
-        onClick={()=>{}}
-        color={color.red}
-      >
-        <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
-        {"Remove student"}
-      </PopUpMenu.Item>
-    </QuickActionsCell>
+    <ManageStudentsActionsCell
+      id={rowData.id}
+      isEditing={false}
+    />
   );
 };
 
