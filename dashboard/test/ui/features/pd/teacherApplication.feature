@@ -49,7 +49,8 @@ Scenario: Basic teacher application submission
    And I press the first "input[name='subjectsExpectToTeach']" element
    And I press the first "input[name='doesSchoolRequireCsLicense']" element
    And I press the first "input[name='haveCsLicense']" element
-   And I press keys "All the licenses" for element "input#whatLicenseRequired"
+  Then I wait until element "input#whatLicenseRequired" is visible
+   And I press keys "license" for element "input#whatLicenseRequired"
    And I press the first "input[name='subjectsLicensedToTeach']" element
    And I press the first "input[name='taughtInPast']" element
    And I press the first "input[name='previousYearlongCdoPd']" element
