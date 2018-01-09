@@ -1,13 +1,16 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
 
+// publishedAt data is normally a timestamp, but for Storybook
+// display purposes, use a descriptive string
 const defaultData = {
   channel: 'abcdef',
   name: 'Puppy Playdate',
   studentName: 'Penelope',
   studentAgeRange: '8+',
   type: 'applab',
-  publishedAt: '2016-12-31T23:59:59.999-08:00',
+  publishedAt: 'a day ago',
+  updatedAt: 'about a week ago'
 };
 
 export default storybook => {
@@ -15,11 +18,22 @@ export default storybook => {
     .storiesOf('ProjectCard', module)
     .addStoryTable([
       {
-        name: 'Project card',
-        description: 'Project Gallery card used in the public gallery and personal projects widget on /home',
+        name: 'Project card - public',
+        description: 'Project Gallery card used in the public gallery',
         story: () => (
           <ProjectCard
             projectData={defaultData}
+            currentGallery={'public'}
+          />
+        )
+      },
+      {
+        name: 'Project card - personal',
+        description: 'Project Gallery card used in the personl project widget',
+        story: () => (
+          <ProjectCard
+            projectData={defaultData}
+            currentGallery={'personal'}
           />
         )
       },
