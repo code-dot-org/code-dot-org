@@ -202,7 +202,7 @@
   - @level.contained_level_names = [''] unless @level.contained_level_names.try(:present?)
   - @level.contained_level_names.each do |level_name|
     = text_field_tag 'level[contained_level_names][]', level_name, placeholder: 'name of contained level'
-  #plusanswer
+  #plusAnswerContainedLevel
     %i.fa.fa-plus-circle
 
 :ruby
