@@ -34,9 +34,9 @@
     "disable_if_else_editing": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Does this stair step look familiar from the previous puzzle? The movements should be similar, just remember to collect crops along the way.\",\"hint_id\":\"courseC_harvester_loops8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/169af1e5e6d00bd77714945461ebe4d1/courseC_harvester_loops8.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.\",\"hint_id\":\"courseC_harvester_loops8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6c428f9c713bab3d126b741b1119665e/courseC_harvester_loops8.mp3\"}]",
     "shape_shift": "false",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
