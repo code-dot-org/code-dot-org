@@ -694,27 +694,6 @@ Craft.executeUserCode = function () {
     moveForward: function (blockID) {
       appCodeOrgAPI.moveForward(studioApp().highlight.bind(studioApp(), blockID));
     },
-    onEventTriggered: function (type, eventType, callback, blockID) {
-      appCodeOrgAPI.registerEventCallback(studioApp().highlight.bind(studioApp(), blockID),
-          function (event) {
-            if (event.eventType !== eventType) {
-              return;
-            }
-            if (event.targetType !== type) {
-              return;
-            }
-            callback(event);
-          });
-    },
-    onGlobalEventTriggered: function (eventType, callback, blockID) {
-      appCodeOrgAPI.registerEventCallback(studioApp().highlight.bind(studioApp(), blockID),
-          function (event) {
-            if (event.eventType !== eventType) {
-              return;
-            }
-            callback(event);
-          });
-    },
     drop: function (blockType, targetEntity, blockID) {
       appCodeOrgAPI.drop(studioApp().highlight.bind(studioApp(), blockID), blockType, targetEntity);
     },
@@ -793,7 +772,35 @@ Craft.executeUserCode = function () {
     };
   });
 
-  CustomMarshalingInterpreter.evalWith(code, evalApiMethods, {legacy: true});
+  const userEvents = {};
+  const eventGenerationMethods = {
+    onEventTriggered: function (type, eventType, callback, blockID) {
+      userEvents[`event-${type}-${eventType}`] = {code: callback};
+      userEvents[`event--${eventType}`] = {code: callback};
+    },
+    onGlobalEventTriggered: function (eventType, callback, blockID) {
+      userEvents[`event--${eventType}`] = {code: callback};
+    },
+  };
+
+  CustomMarshalingInterpreter.evalWith(code, eventGenerationMethods);
+
+  const hooks = {};
+  CustomMarshalingInterpreter.evalWithEvents(evalApiMethods, userEvents).hooks.forEach(hook => {
+    hooks[hook.name] = hook.func;
+  });
+
+  appCodeOrgAPI.registerEventCallback(() => {},
+    function (event) {
+      const type = event.type || '';
+      const eventType = event.eventType;
+      const callback = hooks[`event-${type}-${eventType}`];
+
+      if (callback) {
+        callback();
+      }
+    });
+
   appCodeOrgAPI.startAttempt(function (success) {
     Craft.hideSoftButtons();
     if (Craft.level.freePlay) {
