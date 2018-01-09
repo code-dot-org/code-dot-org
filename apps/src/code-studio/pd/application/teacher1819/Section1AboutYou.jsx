@@ -91,7 +91,7 @@ export default class Section1AboutYou extends ApplicationFormComponent {
           {' '}<a href={CSP_URL} target="_blank">CS Principles</a>.{' '}
           If you’re not sure which program is the right fit for your classroom,
           we encourage you to check our guidance in
-          {' '}<a href={WHICH_PROGRAM_URL} target="_blank">Which Program is Right for Me?</a>.{' '}
+          {' '}<a href={WHICH_PROGRAM_URL} target="_blank">Which Program is Right for Me?</a>{' '}
           For additional questions regarding the program or application,
           please contact
           {' '}<a href={`mailto:${TEACHER_EMAIL}`}>{TEACHER_EMAIL}</a>.
