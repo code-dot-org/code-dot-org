@@ -92,7 +92,18 @@ const SetupMacDownloads = () => (
 class SetupUnsupportedBrowser extends React.Component {
   render() {
     return (
-      <div/>
+      <div>
+        <h2>Use a different computer</h2>
+        Maker Toolkit is not compatible on your computer. To set up Maker
+        Toolkit, please open this page on a device running one of the
+        following operating systems:
+        <ul>
+          <li>Windows</li>
+          <li>OSX</li>
+          <li>Chrome OS</li>
+        </ul>
+        <SurveySupportSection/>
+      </div>
     );
   }
 }
