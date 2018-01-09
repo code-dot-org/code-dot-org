@@ -23,7 +23,7 @@ export default storybook => {
         story: () => (
           <ProjectCard
             projectData={defaultData}
-            currentGallery={'public'}
+            currentGallery="public"
           />
         )
       },
@@ -33,7 +33,7 @@ export default storybook => {
         story: () => (
           <ProjectCard
             projectData={defaultData}
-            currentGallery={'personal'}
+            currentGallery="personal"
           />
         )
       },

@@ -84,9 +84,9 @@ const ProjectCard = React.createClass({
   render() {
     const { projectData, currentGallery } = this.props;
     const { type, channel } = this.props.projectData;
-    const personalGallery = currentGallery === 'personal';
-    const publicGallery = currentGallery === 'public';
-    const url = personalGallery ? `/projects/${type}/${channel}/edit` : `/projects/${type}/${channel}`;
+    const isPersonalGallery = currentGallery === 'personal';
+    const isPublicGallery = currentGallery === 'public';
+    const url = isPersonalGallery ? `/projects/${type}/${channel}/edit` : `/projects/${type}/${channel}`;
 
     return (
       <div className="project_card">
@@ -95,7 +95,7 @@ const ProjectCard = React.createClass({
             <a
               href={url}
               style={{width: '100%'}}
-              target={publicGallery ? '_blank' : undefined}
+              target={isPublicGallery ? '_blank' : undefined}
             >
               <img
                 src={projectData.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
@@ -106,25 +106,25 @@ const ProjectCard = React.createClass({
           <a
             style={styles.titleLink}
             href={url}
-            target={publicGallery ? '_blank' : undefined}
+            target={isPublicGallery ? '_blank' : undefined}
           >
             <div style={styles.title}>{projectData.name}</div>
           </a>
           <span>
-            {publicGallery && projectData.studentName && (
+            {isPublicGallery && projectData.studentName && (
               <span style={styles.firstInitial}>
                 {i18n.by()}:&nbsp;
                 <span style={styles.bold}>{projectData.studentName}</span>
               </span>
             )}
-            {publicGallery && projectData.studentAgeRange && (
+            {isPublicGallery && projectData.studentAgeRange && (
               <span style={styles.ageRange}>
                 {i18n.age()}:&nbsp;
                 <span style={styles.bold}>{projectData.studentAgeRange}</span>
               </span>
             )}
           </span>
-          {publicGallery && (
+          {isPublicGallery && (
             <div style={styles.lastEdit}>
               {i18n.published()}:&nbsp;
               <time
@@ -136,7 +136,7 @@ const ProjectCard = React.createClass({
               </time>
             </div>
           )}
-          {personalGallery && (
+          {isPersonalGallery && (
             <div style={styles.lastEdit}>
               {i18n.projectLastUpdated()}:&nbsp;
               <time
