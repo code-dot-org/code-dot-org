@@ -64,6 +64,8 @@ module Teacher1819ApplicationConstants
         'Does your school district require any specific licenses, certifications, or endorsements to teach computer science?',
       have_cs_license:
         'Do you have the required licenses, certifications, or endorsements to teach computer science in your district?',
+      what_license_required:
+        'What license, certification, or endorsement is required?',
       subjects_licensed_to_teach:
         'Which subject area(s) are you currently licensed to teach? (select all that apply)',
       taught_in_past: clean_multiline(
@@ -182,7 +184,6 @@ module Teacher1819ApplicationConstants
     regional_partner_name: YES_NO,
     previous_yearlong_cdo_pd: YES_NO,
     committed: YES_NO,
-    able_to_attend_single: YES_NO,
     csp_which_grades: YES_NO,
     csp_course_hours_per_year: YES_NO,
     csd_which_grades: YES_NO,

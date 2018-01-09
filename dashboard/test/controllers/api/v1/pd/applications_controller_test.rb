@@ -288,6 +288,41 @@ module Api::V1::Pd
       end
     end
 
+    test 'cohort view returns expected columns for a teacher without a workshop' do
+      time = Date.new(2017, 3, 15)
+
+      Timecop.freeze(time) do
+        application = create(
+          :pd_teacher1819_application,
+          course: 'csp',
+          regional_partner: @regional_partner,
+          user: @serializing_teacher,
+        )
+
+        application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save
+        application.update(status: 'accepted')
+        application.lock!
+
+        sign_in @workshop_organizer
+        get :cohort_view, params: {role: 'csp_teachers'}
+        assert :success
+
+        assert_equal(
+          {
+            id: application.id,
+            date_accepted: 'Mar 15',
+            applicant_name: 'Minerva McGonagall',
+            district_name: 'A School District',
+            school_name: 'Hogwarts',
+            email: 'minerva@hogwarts.edu',
+            assigned_workshop: '',
+            registered_workshop: ''
+          }.stringify_keys, JSON.parse(@response.body).first
+        )
+      end
+    end
+
     test 'cohort view returns expected columns for a facilitator' do
       time = Date.new(2017, 3, 15)
 
