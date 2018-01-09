@@ -333,10 +333,10 @@ var projects = module.exports = {
     // we'll load the project and show them a small alert
     const pageAction = parsePath().action;
 
-    // NOTE: appOptions.isAdmin is not a security setting as it can be manipulated
-    // by the user. In this case that's okay, since all that does is allow them to
-    // view a project that was marked as abusive.
-    const hasEditPermissions = this.isOwner() || appOptions.isAdmin;
+    // NOTE: appOptions.canResetAbuse is not a security setting as it can be
+    // manipulated by the user. In this case that's okay, since all that does
+    // is allow them to view a project that was marked as abusive.
+    const hasEditPermissions = this.isOwner() || appOptions.canResetAbuse;
     const isEditOrViewPage = pageAction === 'edit' || pageAction === 'view';
 
     return hasEditPermissions && isEditOrViewPage;
@@ -402,8 +402,10 @@ var projects = module.exports = {
   },
 
   showHeaderForProjectBacked() {
-    if (this.shouldUpdateHeaders() && !this.shouldHideShareAndRemix()) {
-      header.showHeaderForProjectBacked();
+    if (this.shouldUpdateHeaders()) {
+      header.showHeaderForProjectBacked({
+        showShareAndRemix: !this.shouldHideShareAndRemix()
+      });
     }
   },
   setName(newName) {
@@ -531,6 +533,7 @@ var projects = module.exports = {
       case 'turtle':
         switch (appOptions.skinId) {
           case 'artist':
+          case 'artist_zombie':
             return msg.defaultProjectNameArtist();
           case 'anna':
           case 'elsa':

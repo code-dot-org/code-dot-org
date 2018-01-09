@@ -672,7 +672,7 @@ FactoryGirl.define do
         able_to_attend_single: 'Yes',
         able_to_attend_multiple: 'Yes',
         committed: 'Yes',
-        willing_to_travel: 'More than 50 miles',
+        willing_to_travel: 'Up to 50 miles',
         agree: 'Yes'
       }.tap do |hash|
         if program == 'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)'
@@ -693,7 +693,7 @@ FactoryGirl.define do
   end
 
   factory :pd_teacher1819_application, class: 'Pd::Application::Teacher1819Application' do
-    association :user, factory: :teacher, strategy: :create
+    association :user, factory: [:teacher, :with_school_info], strategy: :create
     course 'csp'
     form_data {build(:pd_teacher1819_application_hash, program: Pd::Application::Teacher1819Application::PROGRAMS[course.to_sym]).to_json}
     application_guid nil

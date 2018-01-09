@@ -155,9 +155,9 @@ class ActiveSupport::TestCase
     expressions = Array(expressions)
 
     exps = expressions.map do |e|
-      # rubocop:disable Lint/Eval
+      # rubocop:disable Security/Eval
       e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
-      # rubocop:enable Lint/Eval
+      # rubocop:enable Security/Eval
     end
     before = exps.map(&:call)
 
@@ -176,9 +176,9 @@ class ActiveSupport::TestCase
     expressions = Array(expressions)
 
     exps = expressions.map do |e|
-      # rubocop:disable Lint/Eval
+      # rubocop:disable Security/Eval
       e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
-      # rubocop:enable Lint/Eval
+      # rubocop:enable Security/Eval
     end
     before = exps.map(&:call)
 

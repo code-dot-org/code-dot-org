@@ -4110,7 +4110,7 @@ en:
             Conditionals & Loops in Maze:
               name: Conditionals & Loops in Maze
             Conditionals & Loops in Farmer:
-              name: Conditionals & Loops in Farmer
+              name: Conditionals & Loops in Harvester
             Impacts of Computing:
               name: Impacts of Computing
             More Programming with CS4FN:
@@ -4602,6 +4602,8 @@ en:
               name: Making Music
             Arrays and For Loops:
               name: Arrays and For Loops
+            Circuits and Physical Prototypes:
+              name: Circuits and Physical Prototypes
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -4932,6 +4934,8 @@ en:
               name: Structuring Data
               description_student: This lesson goes further into the interpretation of data, including cleaning and visualizing raw data sets.  The class first looks at the how presenting data in different ways can help people to understand it better.  After seeing how cleaning and visualization can help people make better decisions, the class looks at what parts of this process can be automated, and what need a human.
               description_teacher: In this lesson, students go further into the collection and interpretation of data, including cleaning and visualizing raw data sets.  Students first look at the how presenting data in different ways can help people to understand it better.  They then visualize their own raw data set, in the context of a pizza topping survey, deciding what to do with data that does not easily fit into the visualization scheme that they have chosen.  Last, students look at what parts of this process can be automated, and what need a human to make decisions.
+            Keeping Data Secret:
+              name: Keeping Data Secret
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -5439,7 +5443,7 @@ en:
               description_student: You can do some amazing things when you use conditionals and loops together!
               description_teacher: 'In this lesson, students will be pairing together two key concepts: loops and conditionals. This set of puzzles bridges the gaps in understanding that occur when working on puzzles that use multiple kinds of blocks. By bringing two ideas together, students will create more complex code that shows both impressive creativity and critical thinking!'
             Conditionals & Loops in Farmer:
-              name: Conditionals & Loops in Farmer
+              name: Conditionals & Loops in Harvester
               description_student: It's not always clear when to use each conditional.  This lesson will help you get practice deciding what to do.
               description_teacher: Students will practice `while` loops, `until` loops, and `if / else` statements. All of these blocks use conditionals. By practicing all three, students will learn to write complex and flexible code.
             Digital Citizenship:

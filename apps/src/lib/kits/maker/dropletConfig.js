@@ -87,7 +87,7 @@ export const blocks = [
   /**
    * Circuit-Playground-specific blocks
    */
-  {func: 'onBoardEvent', parent: api, category: CIRCUIT_CATEGORY, paletteParams: ['component', 'event', 'callback'], params: ['buttonL', '"press"', "function(event) {\n  \n}"], allowFunctionDrop: { 2: true }, dropdown: { 0: Object.keys(COMPONENT_EVENTS), 1: boardEventDropdownGenerator }},
+  {func: 'onBoardEvent', parent: api, category: CIRCUIT_CATEGORY, paletteParams: ['component', 'event', 'callback'], params: ['buttonL', '"down"', "function(event) {\n  \n}"], allowFunctionDrop: { 2: true }, dropdown: { 0: Object.keys(COMPONENT_EVENTS), 1: boardEventDropdownGenerator }},
 
   {func: 'led', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
   {func: 'led.on', category: CIRCUIT_CATEGORY},

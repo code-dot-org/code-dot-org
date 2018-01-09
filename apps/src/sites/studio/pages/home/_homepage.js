@@ -27,7 +27,6 @@ function showHomepage() {
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
   const query = queryString.parse(window.location.search);
-  const isEnglish = homepageData.isenglish;
 
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
@@ -150,7 +149,6 @@ function showHomepage() {
             topCourse={homepageData.topCourse}
             queryStringOpen={query['open']}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
-            isEnglish={isEnglish}
           />
         )}
         {!isTeacher && (

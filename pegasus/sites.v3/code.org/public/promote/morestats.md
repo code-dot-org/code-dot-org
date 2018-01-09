@@ -52,18 +52,32 @@ We are interested in seeing what's happening in computer science education inter
 
 ## Outside resources
 
+### K-12 education
+
 - The [K-12 Computer Science Framework](https://k12cs.org/) provides a vision for computer science education for all students, including concepts and practices by grade band. 
 - [Landscape of K-12 Computer Science Education in the U.S.](http://csedu.gallup.com/home.aspx): A series of reports  from Gallup, commissioned by Google, including "Images of Computer Science: Perceptions Among Students, Parents and Educators in the U.S." and "Searching for Computer Science: Access and Barriers in U.S. K-12 Education."
 - [Arkansas has seen a major boost in computer science enrollment and diversity](http://amppob.com/nearly-4000-arkansas-students-enrolled-in-computer-science-in-fall-15/). Arkansas passed a law requiring (and funding) every high school to teach computer science. Months later, Arkansas saw a 260% increase in total CS enrollment, a 300% increase among female students, and a 600% increase among African American female students. This shows the massive impact of state policy on CS, and helps our advocacy efforts in other states.
 - Low-income or underrepresented minority students are [less likely](http://changetheequation.org/blog/new-data-bridging-computer-science-access-gap-0) than other demographic groups to attend a school that offers computer science. 
-- Half of the highest paying jobs in America require you to know how to code, according to [this report](http://burning-glass.com/research/coding-skills/) by Burning Glass.
-- On average, a computer science degree from ANY university earns a [significantly higher](http://www.economist.com/news/united-states/21646220-it-depends-what-you-study-not-where) financial return on investment than an arts & humanities degree from even the best schools.
-- [Twice as many Americans](http://changetheequation.org/blog/hidden-half) use computing in their jobs than previously reported, and half of those are in non-STEM fields. Outside of STEM fields, 40% of those doing complex computing work are [women](http://changetheequation.org/blog/grid-uncounted-women-computing). 
+- The [Computational Thinking for a Computational World report] (http://digitalpromise.org/wp-content/uploads/2017/12/dp-comp-thinking-v1r5.pdf) from Digital Promise describes the role of computational thinking and provides recommendations for expanding it in K-12.
+
+### State policy
+
 - A [new report](http://www.sreb.org/sites/main/files/file-attachments/cs_commission_2016_0.pdf) by the SREB recommends 5 policy actions states can take to expand access to computer science education.
-- A [report](http://www.ecs.org/ec-content/uploads/09.13.2016_Computer-Science-in-High-School-Graduation-Requirements.pdf) by the Education Commission of the States provides details on computer science in high school graduation requirements.  
+- A [report](http://www.ecs.org/ec-content/uploads/09.13.2016_Computer-Science-in-High-School-Graduation-Requirements.pdf) by the Education Commission of the States provides details on computer science in high school graduation requirements.
+- [Americans believe](http://www.prnewswire.com/news-releases/horizon-media-study-reveals-americans-prioritize-stem-subjects-over-the-arts-science-is-cool-coding-is-new-literacy-300154137.html) computer science is cool and one of the most important subjects of study in school. 
+
+### Computing skills across all jobs
+
+- Half of the highest paying jobs in America require you to know how to code, according to [this report](http://burning-glass.com/research/coding-skills/) by Burning Glass.
+- [Twice as many Americans](http://changetheequation.org/blog/hidden-half) use computing in their jobs than previously reported, and half of those are in non-STEM fields. Outside of STEM fields, 40% of those doing complex computing work are [women](http://changetheequation.org/blog/grid-uncounted-women-computing). 
+- A quarter of all jobs are now "highly digitalized" and they're the highest paying quartile of jobs (up from 5% of jobs in 2002), according to a [Brookings report](https://www.brookings.edu/research/digitalization-and-the-american-workforce/). 
+- Computer science skills are [increasingly valued] (https://blogs.oracle.com/certification/five-job-categories-increasingly-requiring-computer-science-skills) in marketing and design jobs. 
+
+### Jobs in computing
+
+- On average, a computer science degree from ANY university earns a [significantly higher](http://www.economist.com/news/united-states/21646220-it-depends-what-you-study-not-where) financial return on investment than an arts & humanities degree from even the best schools.
 - 91% of open software jobs are [outside Silicon Valley](http://www.inc.com/salvador-rodriguez/act-software-developers-map.html). 
 - BSA released a report on the [economic impact of software](http://softwareimpact.bsa.org/). 
 - Change the Equation has a [summary](http://changetheequation.org/blog/talent-hidden-plain-sight-addressing-gaps-computer-science) of untapped minority talent in computing.
-- [Americans believe](http://www.prnewswire.com/news-releases/horizon-media-study-reveals-americans-prioritize-stem-subjects-over-the-arts-science-is-cool-coding-is-new-literacy-300154137.html) computer science is cool and one of the most important subjects of study in school. 
 - For each new high-tech job in a city, five jobs outside of tech are [ultimately created](http://eml.berkeley.edu//~moretti/book.htm).
 

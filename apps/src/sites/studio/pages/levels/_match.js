@@ -2,7 +2,7 @@
 import React from 'react';
 import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import { showDialog } from  '@cdo/apps/code-studio/levels/dialogHelper';
-import { MatchAngiGifDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
+import { MatchAngiGifDialog, MatchErrorDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
 
 jQuery.fn.swap = function (b) {
   // method from: http://blog.pengoworks.com/index.cfm/2008/9/24/A-quick-and-dirty-swap-method-for-jQuery
@@ -119,6 +119,7 @@ registerGetResult(() => {
   }
   return {
     response: response,
-    result: !wrongAnswer
+    result: !wrongAnswer,
+    errorDialog: wrongAnswer ? <MatchErrorDialog/> : null,
   };
 });

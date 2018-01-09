@@ -1,4 +1,4 @@
-import * as storybook from '@kadira/storybook';
+import * as storybook from '@storybook/react';
 import React from 'react';
 
 const styles = {

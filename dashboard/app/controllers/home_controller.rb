@@ -128,6 +128,5 @@ class HomeController < ApplicationController
         }
       end
     end
-    @is_english = request.language == 'en'
   end
 end
