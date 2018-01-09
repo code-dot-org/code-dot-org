@@ -244,6 +244,17 @@ class ApiController < ApplicationController
     render json: data
   end
 
+  def section_level_progress
+    section = load_section
+    script = load_script(section)
+
+    data = {}
+    section.students.each do |student|
+      data[student.id] = summarize_user_progress(script, student)[:levels]
+    end
+    render json: data
+  end
+
   def student_progress
     student = load_student(params.require(:student_id))
     section = load_section
