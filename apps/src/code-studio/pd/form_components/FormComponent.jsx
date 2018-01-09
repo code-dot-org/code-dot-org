@@ -59,15 +59,17 @@ export default class FormComponent extends React.Component {
         FormComponent is an abstract class; cannot construct instances directly
       `);
     }
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
   /**
    * @see FormController.handleChange
    * @param {Object} newState
    */
-  handleChange = (newState) => {
+  handleChange(newState) {
     this.props.onChange(newState);
-  };
+  }
 
   /**
    * @param {String} name
