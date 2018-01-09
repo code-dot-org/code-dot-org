@@ -1,26 +1,45 @@
 import React, {PropTypes} from 'react';
+import Button, {ButtonColor, ButtonSize} from '../../../../templates/Button';
 
 export default class SurveySupportSection extends React.Component {
   static propTypes = {
-    surveyUrl: PropTypes.string.isRequired,
+    surveyUrl: PropTypes.string,
   };
 
   render() {
+    const {surveyUrl} = this.props;
     return (
       <div>
-        <h2>Survey / Support</h2>
-        <div>
-          <p>Did it work? Having trouble?</p>
-
-          <a
-            href={this.props.surveyUrl}
-            style={{'fontSize': '20px', marginBottom: 14, marginTop: 12, display: 'block'}}
-          >
-            Submit our quick survey&nbsp;
-            <i className="fa fa-arrow-circle-o-right" />
-          </a>
-          <p>Results of setup status detection and browser/platform information will be pre-filled in the survey through the link above.</p>
-        </div>
+        <h2>
+          {surveyUrl ? 'Survey / Support' : 'Support'}
+        </h2>
+        <p>
+          Check out our general
+          {' '}
+          <a href="https://codeorg.zendesk.com/hc/en-us/articles/115003407851">Maker Toolkit support article</a>
+          {' '}
+          to get help debugging common issues.
+        </p>
+        {surveyUrl &&
+          <div>
+            <p>Still having trouble?</p>
+            <Button
+              text="Submit our quick survey"
+              href={surveyUrl}
+              color={ButtonColor.gray}
+              size={ButtonSize.large}
+            />
+          </div>
+        }
+        {!surveyUrl &&
+          <p>
+            You can also contact us at
+            {' '}
+            <a href="mailto:support@code.org">support@code.org</a>
+            {' '}
+            with any additional questions.
+          </p>
+        }
       </div>
     );
   }
