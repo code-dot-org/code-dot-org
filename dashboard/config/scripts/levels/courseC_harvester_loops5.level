@@ -35,9 +35,9 @@
     "disable_if_else_editing": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you get stuck, try drawing the entire program and then looking for repeating patterns.\",\"hint_id\":\"courseC_harvester_loops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5941e2b5d373af18e378cbb59c1436ea/courseC_harvester_loops5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Does this stair step look familiar from other puzzles? The movements should be similar, just remember to collect crops along the way.\",\"hint_id\":\"courseC_harvester_loops5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e3ddb12425183642b4756b572f267972/courseC_harvester_loops5.mp3\"}]",
     "shape_shift": "false",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
