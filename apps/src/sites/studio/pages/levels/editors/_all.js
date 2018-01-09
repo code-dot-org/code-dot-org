@@ -3,6 +3,14 @@ import $ from 'jquery';
 
 $(document).ready(initPage);
 
+$("#plusAnswerMap").on("click", () => {
+  $("#plusAnswerMap").prev().clone().insertBefore("#plusAnswerMap");
+});
+
+$("#plusAnswerReference").on("click", () => {
+  $("#plusAnswerReference").prev().clone().insertBefore("#plusAnswerReference");
+});
+
 function initPage() {
   const script = document.querySelector('script[data-editorall]');
   const config = JSON.parse(script.dataset.editorall);
