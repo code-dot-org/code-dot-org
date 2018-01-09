@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Buttons and Switch",
-    "reference": "/csd/maker_buttons/index.html"
+    "reference": "/docs/csd/maker_buttons/index.html"
   },
   "published": true,
   "notes": ""
