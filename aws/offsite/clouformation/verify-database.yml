@@ -91,3 +91,27 @@ Resources:
         - 'backup'
       SnsTopicArn: !Ref RestoreDatabaseCopyTopic
       SourceType: 'db-instance'
+  InvokeVerifyDatabaseLambdaPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      Principal: sns.amazonaws.com
+      SourceArn: !Ref RestoreDatabaseCopyTopic
+      FunctionName: !GetAtt VerifyDatabaseCopy.Arn
+  InvokeRestoreDBLambda:
+    Type: "AWS::Events::Rule"
+    Properties: 
+      Name: DailyVerifyDatabaseCopy
+      Description: Trigger Lambda that restores copy of database, which in turn will trigger Lambda that verifies db copy when restore is complete.
+      ScheduleExpression: rate(1 day)
+      Targets:
+        - 
+          Arn: !GetAtt RestoreDatabaseCopyForVerification.Arn
+          Id: RestoreDatabaseCopyForVerificationTarget
+  InvokeRestoreDBLambdaPermission: 
+    Type: "AWS::Lambda::Permission"
+    Properties: 
+      FunctionName: !Ref RestoreDatabaseCopyForVerification
+      Action: "lambda:InvokeFunction"
+      Principal: "events.amazonaws.com"
+      SourceArn: !GetAtt InvokeRestoreDBLambda.Arn
