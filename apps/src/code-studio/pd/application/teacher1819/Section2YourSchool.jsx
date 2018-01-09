@@ -1,5 +1,5 @@
 import React from 'react';
-import ApplicationFormComponent from "../ApplicationFormComponent";
+import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
@@ -11,7 +11,7 @@ import {
 } from 'react-bootstrap';
 import {styles} from './TeacherApplicationConstants';
 
-export default class Section2YourSchool extends ApplicationFormComponent {
+export default class Section2YourSchool extends LabeledFormComponent {
   static labels = PageLabels.section2YourSchool;
 
   static associatedFields = [
