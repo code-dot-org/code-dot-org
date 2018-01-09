@@ -275,7 +275,7 @@ StudioApp.prototype.init = function (config) {
       firehoseClient.putRecord(
         'analysis-events',
         {
-          study: 'instructions-resources-tab-wip',
+          study: 'instructions-resources-tab-wip-v1',
           study_group: 'resources-tab',
           event: 'resources-tab-load',
           data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
@@ -285,7 +285,7 @@ StudioApp.prototype.init = function (config) {
       firehoseClient.putRecord(
         'analysis-events',
         {
-          study: 'instructions-resources-tab-wip',
+          study: 'instructions-resources-tab-wip-v1',
           study_group: 'under-app',
           event: 'under-app-load',
           data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
@@ -1859,7 +1859,7 @@ StudioApp.prototype.configureDom = function (config) {
         firehoseClient.putRecord(
           'analysis-events',
           {
-            study: 'instructions-resources-tab-wip',
+            study: 'instructions-resources-tab-wip-v1',
             study_group: 'under-app',
             event: 'under-app-video-click',
             data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
