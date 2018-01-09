@@ -71,16 +71,7 @@ const styles = {
 const ProjectCard = React.createClass({
   propTypes: {
     projectData: PropTypes.object.isRequired,
-  },
-
-  dateFormatter(dateString) {
-    const date = new Date(dateString);
-    return date.toLocaleDateString();
-  },
-
-  timeFormatter(dateString) {
-    const date = new Date(dateString);
-    return date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+    currentGallery: PropTypes.oneOf(['personal', 'public']).isRequired,
   },
 
   getLastModifiedTimestamp: function (timestamp) {
@@ -91,9 +82,11 @@ const ProjectCard = React.createClass({
   },
 
   render() {
-    const { projectData } = this.props;
+    const { projectData, currentGallery } = this.props;
     const { type, channel } = this.props.projectData;
-    const url = `/projects/${type}/${channel}`;
+    const personalGallery = currentGallery === 'personal';
+    const publicGallery = currentGallery === 'public';
+    const url = personalGallery ? `/projects/${type}/${channel}/edit` : `/projects/${type}/${channel}`;
 
     return (
       <div className="project_card">
@@ -102,7 +95,7 @@ const ProjectCard = React.createClass({
             <a
               href={url}
               style={{width: '100%'}}
-              target={'_blank'}
+              target={publicGallery ? '_blank' : undefined}
             >
               <img
                 src={projectData.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
@@ -113,24 +106,48 @@ const ProjectCard = React.createClass({
           <a
             style={styles.titleLink}
             href={url}
-            target={"_blank"}
+            target={publicGallery ? '_blank' : undefined}
           >
             <div style={styles.title}>{projectData.name}</div>
           </a>
           <span>
-            {projectData.studentName && (
+            {publicGallery && projectData.studentName && (
               <span style={styles.firstInitial}>
-                {i18n.by()}:
+                {i18n.by()}:&nbsp;
                 <span style={styles.bold}>{projectData.studentName}</span>
               </span>
-            )};
-            {projectData.studentAgeRange && (
+            )}
+            {publicGallery && projectData.studentAgeRange && (
               <span style={styles.ageRange}>
-                {i18n.age()}:
+                {i18n.age()}:&nbsp;
                 <span style={styles.bold}>{projectData.studentAgeRange}</span>
               </span>
             )}
           </span>
+          {publicGallery && (
+            <div style={styles.lastEdit}>
+              {i18n.published()}:&nbsp;
+              <time
+                style={styles.bold}
+                className="versionTimestamp"
+                dateTime={projectData.publishedAt}
+              >
+                {this.getLastModifiedTimestamp(projectData.publishedAt)}
+              </time>
+            </div>
+          )}
+          {personalGallery && (
+            <div style={styles.lastEdit}>
+              {i18n.projectLastUpdated()}:&nbsp;
+              <time
+                style={styles.bold}
+                className="versionTimestamp"
+                dateTime={projectData.updatedAt}
+              >
+                {this.getLastModifiedTimestamp(projectData.updatedAt)}
+              </time>
+            </div>
+          )}
         </div>
       </div>
     );
