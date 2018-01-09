@@ -221,7 +221,7 @@ var TopInstructions = React.createClass({
     firehoseClient.putRecord(
       'analysis-events',
       {
-        study: 'instructions-resources-tab-wip',
+        study: 'instructions-resources-tab-wip-v1',
         study_group: 'resources-tab',
         event: 'resources-tab-click',
         data_json: JSON.stringify([this.props.app, this.props.scriptName, this.props.stagePosition, this.props.levelPosition]),

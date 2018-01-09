@@ -4602,6 +4602,10 @@ en:
               name: Making Music
             Arrays and For Loops:
               name: Arrays and For Loops
+            Circuits and Physical Prototypes:
+              name: Circuits and Physical Prototypes
+            Accelerometer:
+              name: Accelerometer
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
