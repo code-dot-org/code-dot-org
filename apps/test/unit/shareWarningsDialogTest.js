@@ -4,7 +4,7 @@ var React = require('react');
 var ReactTestUtils = require('react-addons-test-utils');
 var ShareWarningsDialog = require('@cdo/apps/templates/ShareWarningsDialog');
 var ShareWarnings = require('@cdo/apps/templates/ShareWarnings');
-var AgeDropdown = require('@cdo/apps/templates/AgeDropdown');
+import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 
 var msg = require('@cdo/locale');
 
