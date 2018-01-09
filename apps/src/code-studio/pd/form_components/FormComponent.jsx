@@ -14,6 +14,43 @@ import SingleCheckbox from "../form_components/SingleCheckbox";
  * @see the pageComponents of FacilitatorProgramRegistration for example usage.
  */
 export default class FormComponent extends React.Component {
+  static propTypes = {
+    options: PropTypes.object.isRequired,
+    errors: PropTypes.arrayOf(PropTypes.string).isRequired,
+    errorMessages: PropTypes.object.isRequired,
+    data: PropTypes.object.isRequired,
+    onChange: PropTypes.func.isRequired
+  };
+
+  /**
+   * Override in derived classes
+   * @param {Object} data - form data
+   * @returns {String[]} - list of dynamic required fields based on other responses in this page
+   */
+  static getDynamicallyRequiredFields(data) {
+    return [];
+  }
+
+  /**
+   * Override in derived classes
+   * @param {Object} data - form data for this page
+   * @returns {Object} - custom error messages per field
+   */
+  static getErrorMessages(data) {
+    return {};
+  }
+
+  /**
+   * Override in derived classes
+   * Process and transform this page's form data before validation,
+   * for example to remove answers to questions that are no longer relevant based on other selections.
+   * @param {Object} data - form data for this page, as entered
+   * @returns {Object} - fields to update with new values, or undefined to clear
+   */
+  static processPageData(data) {
+    return {};
+  }
+
   constructor(props) {
     super(props);
 
@@ -22,15 +59,13 @@ export default class FormComponent extends React.Component {
         FormComponent is an abstract class; cannot construct instances directly
       `);
     }
-
-    this.handleChange = this.handleChange.bind(this);
   }
 
   /**
    * @see FormController.handleChange
    * @param {Object} newState
    */
-  handleChange(newState) {
+  handleChange = (newState) => {
     this.props.onChange(newState);
   }
 
@@ -302,41 +337,4 @@ export default class FormComponent extends React.Component {
       />
     );
   }
-
-  /**
-   * Override in derived classes
-   * @param {Object} data - form data
-   * @returns {String[]} - list of dynamic required fields based on other responses in this page
-   */
-  static getDynamicallyRequiredFields(data) {
-    return [];
-  }
-
-  /**
-   * Override in derived classes
-   * @param {Object} data - form data for this page
-   * @returns {Object} - custom error messages per field
-   */
-  static getErrorMessages(data) {
-    return {};
-  }
-
-  /**
-   * Override in derived classes
-   * Process and transform this page's form data before validation,
-   * for example to remove answers to questions that are no longer relevant based on other selections.
-   * @param {Object} data - form data for this page, as entered
-   * @returns {Object} - fields to update with new values, or undefined to clear
-   */
-  static processPageData(data) {
-    return {};
-  }
 }
-
-FormComponent.propTypes = {
-  options: PropTypes.object.isRequired,
-  errors: PropTypes.arrayOf(PropTypes.string).isRequired,
-  errorMessages: PropTypes.object.isRequired,
-  data: PropTypes.object.isRequired,
-  onChange: PropTypes.func.isRequired
-};
