@@ -26,5 +26,5 @@ class Census::ApCsOffering < ApplicationRecord
   validates_presence_of :course
   enum course: COURSES
 
-  validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2017, less_than_or_equal_to: 2030}
+  validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2016, less_than_or_equal_to: 2030}
 end
