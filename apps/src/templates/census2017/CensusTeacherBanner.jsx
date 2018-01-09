@@ -387,7 +387,7 @@ export default class CensusTeacherBanner extends Component {
           </div>
           <div style={styles.message}>
             <p style={styles.introQuestion}>
-              Looks like you teach computer science. Have your students already done {numHours} hours of programming content this year (not including HTML/CSS)?
+              It looks like you teach computer science. Have your students already done {numHours} hours of programming content this year (not including HTML/CSS)?
             </p>
             <label>
               <input
