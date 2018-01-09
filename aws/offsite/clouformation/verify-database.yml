@@ -1,3 +1,4 @@
+---
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   VerifyDatabaseLambdaRole:
@@ -29,11 +30,11 @@ Resources:
     Properties:
       Description: 'Restore Database from Snapshot copied from primary Account so it can be verified by a separate Lambda.'
       FunctionName: RestoreDatabaseCopyForVerification
+      Handler: index.handler
+      Runtime: nodejs6.10
       Code:
         S3Bucket: cdo-secondary-dist
         S3Key: restore-database-copy-for-verification.zip
-      Handler: index.handler
-      Runtime: nodejs6.10
       Timeout: 30
       Role: !GetAtt VerifyDatabaseLambdaRole.Arn
       Environment:
@@ -48,3 +49,38 @@ Resources:
           DB_INSTANCE_IDENTIFIER: verification-copy
           DB_OPTION_GROUP_NAME: 'default:mysql-5-6'
           DB_STORAGE_TYPE: gp2
+  VerifyDatabaseCopy:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      Description: Verify offsite copy of production database
+      FunctionName: VerifyDatabaseCopy
+      Handler: index.handler
+      Runtime: nodejs6.10
+      Timeout: 300 # This function takes about 4 minutes to run because updating the db password takes ~3 minutes
+      Role: !GetAtt VerifyDatabaseLambdaRole.Arn
+      VpcConfig:
+        SecurityGroupIds:
+          - sg-ac16d9d1
+        SubnetIds:
+          - subnet-9224b59e
+      Environment:
+        Variables:
+          DB_INSTANCE_IDENTIFIER: verification-copy
+          SLACK_CHANNEL: '@suresh'
+          DB_USER: db
+          DB_NAME: dashboard_production
+          DB_HOST: verification-copy.czzzvkjgetnw.us-east-1.rds.amazonaws.com
+          DB_PASSWORD: expect-neck-bill-beautiful
+          SLACK_WEBHOOK_URL: T039SAH7W/B85EJM39N/4EPCUIZVLWm6Tq0WgA8Xrt31
+  RestoreDatabaseCopyTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: restore-database-copy
+      DisplayName: restore db
+  RestoreDatabaseCopyRDSEvent:
+    Type: 'AWS::RDS::EventSubscription'
+    Properties: 
+      EventCategories:
+        - 'backup'
+      SnsTopicArn: !Ref RestoreDatabaseCopyTopic
+      SourceType: 'db-instance'
