@@ -580,6 +580,22 @@ module Pd::Application
       sanitize_form_data_hash[:principal_approval] || ''
     end
 
+    def date_accepted
+      accepted_at.try(:strftime, '%b %e')
+    end
+
+    def assigned_workshop
+      pd_workshop_id ? Pd::Workshop.find(pd_workshop_id).location_city : ''
+    end
+
+    def registered_workshop
+      if pd_workshop_id
+        Pd::Enrollment.exists?(pd_workshop_id: pd_workshop_id, user: user) ? 'Yes' : 'No'
+      else
+        ''
+      end
+    end
+
     # Called once after the application is submitted, and the principal approval is done
     # Automatically scores the application based on given responses for this and the
     # principal approval application. It is idempotent, and will not override existing
@@ -652,8 +668,8 @@ module Pd::Application
     # @override
     def self.cohort_csv_header
       CSV.generate do |csv|
-        ['Date Accepted', 'Applicant Name', 'District Name', 'School Name',
-          'Email', 'Notified', 'Assigned Workshop', 'Registered Workshop']
+        csv << ['Date Accepted', 'Applicant Name', 'District Name', 'School Name',
+                'Email', 'Assigned Workshop', 'Registered Workshop']
       end
     end
 
@@ -684,7 +700,15 @@ module Pd::Application
     # @override
     def to_cohort_csv_row
       CSV.generate do |csv|
-        row
+        csv << [
+          date_accepted,
+          applicant_name,
+          district_name,
+          school_name,
+          user.email,
+          assigned_workshop,
+          registered_workshop
+        ]
       end
     end
 
