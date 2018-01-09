@@ -4,6 +4,8 @@ import FormController from '../form_components/FormController';
 import Welcome from './Welcome';
 import Joining from './Joining';
 import TravelPlans from './TravelPlans';
+import Releases from './Releases';
+import Confirmation from './Confirmation';
 
 export default class Teachercon1819Registration extends FormController {
   static propTypes = {
@@ -33,17 +35,31 @@ export default class Teachercon1819Registration extends FormController {
     };
   }
 
-  static sessionStorageKey = "Teachercon1819Registration";
+  //static sessionStorageKey = "Teachercon1819Registration";
 
   /**
    * @override
    */
   getPageComponents() {
-    return [
+    const pageComponents = [
       Welcome,
       Joining,
-      TravelPlans
+      TravelPlans,
+      Releases,
     ];
+
+    // We want to include the confirmation page by default, but remove it if the
+    // teacher has responded to the "accept seat" question with something other
+    // than yes. It would of course be easier to just add the confirmation page
+    // once they respond yes, but if we do that then the user-visible page count
+    // will _grow_ as they progress through the form, which is a much weirder
+    // user experience than it shrinking.
+    // TODO elijah replace this string with a shared constant
+    if (!(this.data.teacherAcceptSeat && this.data.teacherAceptSeat !== "Yes, I accept my seat in the Professional Learning Program")) {
+      pageComponents.push(Confirmation);
+    }
+
+    return pageComponents;
   }
 
   /**
@@ -69,5 +85,14 @@ export default class Teachercon1819Registration extends FormController {
   onSuccessfulSubmit() {
     // Let the server display a confirmation page as appropriate
     window.location.reload(true);
+  }
+
+  /**
+   * @override
+   * TODO elijah replace this string with a shared constant
+   */
+  shouldShowSubmit() {
+    return super.shouldShowSubmit() ||
+        this.state.data.teacherAcceptSeat === "No, I decline my seat in the Professional Learning Program.";
   }
 }
