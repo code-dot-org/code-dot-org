@@ -23,8 +23,6 @@ export default class Teachercon1819Registration extends FormController {
   constructor(props) {
     super(props);
 
-    console.log(this.props);
-
     // initialize some fields with reasonable defaults
     this.state.data = {
       ...this.state.data,
@@ -55,7 +53,7 @@ export default class Teachercon1819Registration extends FormController {
     // will _grow_ as they progress through the form, which is a much weirder
     // user experience than it shrinking.
     // TODO elijah replace this string with a shared constant
-    if (!(this.data.teacherAcceptSeat && this.data.teacherAceptSeat !== "Yes, I accept my seat in the Professional Learning Program")) {
+    if (!(this.state.data.teacherAcceptSeat && this.state.data.teacherAcceptSeat !== "Yes, I accept my seat in the Professional Learning Program")) {
       pageComponents.push(Confirmation);
     }
 

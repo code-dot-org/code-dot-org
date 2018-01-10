@@ -21,6 +21,11 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   YES_OR_NO = [YES, NO].freeze
   OTHER = 'Other'.freeze
 
+  TEACHER_ACCEPT_SEAT = "Yes, I accept my seat in the Professional Learning Program"
+  TEACHER_DECLINE_SEAT = "No, I decline my seat in the Professional Learning Program."
+  TEACHER_WITHDRAW_DATE = "Yes, I want to participate, but I'm unable to attend my assigned summer workshop date. Please place me on your waitlist. I understand that I am not guaranteed a space in a different summer workshop."
+  TEACHER_WITHDRAW_OTHER = "Yes, I want to participate, but I'm not able to for a different reason. Please place me on your waitlist. I understand that I am not guaranteed a space in a different summer workshop."
+
   def self.options
     {
       dietaryNeeds: [
@@ -43,10 +48,10 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       needHotel: YES_OR_NO,
       needAda: [YES, NO, 'Other (please explain):'],
       teacherAcceptSeat: [
-        "Yes, I accept my seat in the Professional Learning Program",
-        "Yes, I want to participate, but I'm unable to attend my assigned summer workshop date. Please place me on your waitlist. I understand that I am not guaranteed a space in a different summer workshop.",
-        "Yes, I want to participate, but I'm not able to for a different reason. Please place me on your waitlist. I understand that I am not guaranteed a space in a different summer workshop.",
-        "No, I decline my seat in the Professional Learning Program.",
+        TEACHER_ACCEPT_SEAT,
+        TEACHER_WITHDRAW_DATE,
+        TEACHER_WITHDRAW_OTHER,
+        TEACHER_DECLINE_SEAT,
       ],
       photoRelease: YES_OR_NO,
       liabilityWaiver: YES_OR_NO,
@@ -55,6 +60,11 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
   def self.required_fields
     [
+      :preferredFirstName,
+      :lastName,
+      :email,
+      :phone,
+      :teacherAcceptSeat,
       :contactFirstName,
       :contactLastName,
       :contactRelationship,
@@ -63,6 +73,40 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       :liveFarAway,
       :howTraveling,
       :needHotel,
+      :photoRelease,
+      :liabilityWaiver,
+      :agreeShareContact,
     ].freeze
+  end
+
+  def validate_required_fields
+    hash = sanitize_form_data_hash
+
+    if hash.try(:[], :teacher_accept_seat) == TEACHER_DECLINE_SEAT
+      # then we don't care about the rest of the fields
+      return
+    end
+
+    super
+  end
+
+  def dynamic_required_fields(hash)
+    requireds = []
+    if hash[:live_far_away] == YES
+      requireds.concat [
+        :address_street,
+        :address_city,
+        :address_state,
+        :address_zip
+      ]
+    end
+
+    if hash[:need_hotel] == YES
+      requireds.concat [
+        :need_ada
+      ]
+    end
+
+    return requireds
   end
 end
