@@ -234,7 +234,7 @@ function initializeThermometer(board) {
   });
 }
 
-function initializeButton(board, pin) {
+export function initializeButton(board, pin) {
   const button = new five.Button({board, pin});
   Object.defineProperty(button, 'isPressed', {
     get: () => button.value === 1

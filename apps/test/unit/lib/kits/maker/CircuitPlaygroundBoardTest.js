@@ -2,6 +2,7 @@ import sinon from 'sinon';
 import {expect} from '../../../../util/configuredChai';
 import {EventEmitter} from 'events'; // see node-libs-browser
 import Playground from 'playground-io';
+import five from '@code-dot-org/johnny-five';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
 import {SONG_CHARGE} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 import Led from '@cdo/apps/lib/kits/maker/Led';
@@ -184,6 +185,14 @@ describe('CircuitPlaygroundBoard', () => {
         });
       });
     });
+
+    it('does not require special cleanup for created buttons', () => {
+      return board.connect().then(() => {
+        board.createButton(0);
+        board.createButton(1);
+        return board.destroy();
+      });
+    });
   });
 
   describe(`celebrateSuccessfulConnection()`, () => {
@@ -338,6 +347,16 @@ describe('CircuitPlaygroundBoard', () => {
         const pin = 13;
         const newLed = board.createLed(pin);
         expect(newLed).to.be.an.instanceOf(Led);
+      });
+    });
+  });
+
+  describe(`createButton(pin)`, () => {
+    it('makes a button controller', () => {
+      return board.connect().then(() => {
+        const pin = 13;
+        const newButton = board.createButton(pin);
+        expect(newButton).to.be.an.instanceOf(five.Button);
       });
     });
   });
