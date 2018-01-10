@@ -1,23 +1,61 @@
-#pageheader-wrapper
-  - pageheader_class = request.path_info == "/" ? "pageheader-translucent" : ""
-  #pageheader{class: pageheader_class}
-    .content
-      #left
-        %a{:href=>"/"}
-          %img#logo{:src=>'/images/logo.png'}
-      #right
-        #sign_in_or_user{:style=>'display:block; float: right; width: 80px; margin: .6875em 0 0 30px;'}
-          =view :sign_in_or_user
-        - if page_translated? && !partner_site?
-        - else
-          .desktop-feature
-            #headerlinks
-              %a.headerlink{:href=>"/student"}LEARN
-              %a.headerlink{:href=>"/educate"}TEACH
-              %a.headerlink{:href=>"/promote"}STATS
-              %a.headerlink{:href=>"/help"}HELP US
-              %a.headerlink{:href=>"/about"}ABOUT
-    #clear{:style=>'clear:both'}
-    #loc.desktop-feature
-      -if banner = @header['banner']
-        =view banner
+:ruby
+  cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
+  user_type = request.cookies[cookie_key]
+
+  hamburger_options = {}
+  hamburger_options[:level] = nil
+  hamburger_options[:script_level] = nil
+  hamburger_options[:user_type] = user_type
+  hamburger_options[:language] = request.language
+  hamburger_options[:show_gallery] = true
+  hamburger_options[:loc_prefix] = "header_"
+  hamburger_options[:page_mode] = request.cookies['pm']
+
+  header_contents_options = {}
+  header_contents_options[:user_type] = user_type
+  header_contents_options[:language] = request.language
+  header_contents_options[:loc_prefix] = "header_"
+  header_contents_options[:page_mode] = request.cookies['pm']
+
+  require 'cdo/hamburger'
+
+  # A note on the use of language_dir_class below:
+  #
+  # Ideally, Pegasus would have <head dir="rtl"> on all pages as the dashboard
+  # does.  It would even be helpful if it had it on pages that are localized.
+  # As it is, dir="rtl" is not featured anywhere.  To make the header look the
+  # same as on dashboard, when in an RTL language, we wrap the header in this
+  # locale_dir_class and use CSS to make the header's options display RTL when
+  # at desktop width.
+
+=inline_css 'header.css'
+=inline_css 'hamburger.css'
+
+#language_dir{class: language_dir_class}
+  #pageheader2-wrapper
+    #pageheader
+      .content
+        #left
+          #logo-wrapper
+            - if current_user
+              %a{:href=>CDO.studio_url("/home")}
+                %img#logo{:src=>'/images/logo.png'}
+            - else
+              %a{:href=>CDO.code_org_url}
+                %img#logo{:src=>'/images/logo.png'}
+          #headerlinks.desktop-feature
+            - Hamburger.get_header_contents(header_contents_options).each do |entry|
+              %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
+
+        #right
+          #sign_in_or_user{:style=>'display:block; float: left; margin: .6875em 0 0 30px;'}
+            =view :sign_in_or_user
+          = view :hamburger, hamburger_options
+
+      #clear{:style=>'clear:both'}
+
+      #loc.desktop-feature
+        -if banner = @header['banner']
+          =view banner
+
+#clear{:style=>'clear:both'}
