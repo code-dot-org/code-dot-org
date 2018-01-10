@@ -53,6 +53,10 @@ export default class SectionProgress extends Component {
     this.loadScript(scriptId);
   }
 
+  /**
+   * Query the server for script data (info about the levels in the script) and
+   * also for user progress on that script
+   */
   loadScript(scriptId) {
     $.getJSON(`/dashboardapi/script_structure/${scriptId}`, scriptData => {
       this.setState({
@@ -92,8 +96,6 @@ export default class SectionProgress extends Component {
       levelDataInitialized = true;
     }
 
-    // TODO: does scriptData contain scriptId?
-
     return (
       <div>
         <ScriptSelector
@@ -105,7 +107,6 @@ export default class SectionProgress extends Component {
         {levelDataInitialized &&
           <SectionScriptProgress
             section={section}
-            scriptId={scriptId}
             scriptData={scriptData}
             studentLevelProgress={studentLevelProgress}
           />

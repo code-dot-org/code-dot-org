@@ -23,12 +23,11 @@ export default class SectionScriptProgress extends Component {
     }).isRequired,
     // TODO: better document probably
     scriptData: PropTypes.object.isRequired,
-    scriptId: PropTypes.string.isRequired,
     studentLevelProgress: PropTypes.object.isRequired,
   };
 
   render() {
-    const { section, scriptData, scriptId, studentLevelProgress } = this.props;
+    const { section, scriptData, studentLevelProgress } = this.props;
 
     // Merges levelProgress for a student with our fixed scriptData (i.e. level structure)
     // thus giving us a "levels" object in the desired form
@@ -44,7 +43,7 @@ export default class SectionScriptProgress extends Component {
       <div>
         {section.students.map((student, index) => (
           <div key={student.id}>
-            <a href={`/teacher-dashboard#/sections/${section.id}/student/${student.id}/script/${scriptId}`}>
+            <a href={`/teacher-dashboard#/sections/${section.id}/student/${student.id}/script/${scriptData.id}`}>
               {student.name}
             </a>
             <div style={styles.bubbles}>
