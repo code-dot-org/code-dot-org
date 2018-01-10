@@ -734,12 +734,21 @@ FactoryGirl.define do
   factory :public_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
     id {(School.maximum(:id).to_i + 1).to_s}
+    state_school_id "WA-123-4321"
     name "A seattle public school"
     city "Seattle"
     state "WA"
     zip "98122"
     school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
     association :school_district
+
+    trait :without_state_school_id do
+      state_school_id nil
+    end
+
+    trait :with_invalid_state_school_id do
+      state_school_id "123456789"
+    end
   end
 
   factory :private_school, class: School do
