@@ -468,7 +468,7 @@ export default class JSInterpreter {
       let selectCodeFunc;
       if (this.studioApp.hideSource && atMaxSpeed) {
         selectCodeFunc = function () { return -1; };
-      } else if (this.studioApp.hideSource || (atMaxSpeed && !this.paused)) {
+      } else if (this.studioApp.hideSource || atMaxSpeed) {
         selectCodeFunc = this.getUserCodeLine;
       } else {
         selectCodeFunc = this.selectCurrentCode;
@@ -614,8 +614,10 @@ export default class JSInterpreter {
                        stackDepth > this.firstCallStackDepthThisStep) {
               // trying to step over, and we're in deeper inside a function call... continue next onTick
             } else {
-              // Our step operation is complete, reset nextStep to StepType.RUN to
-              // return to a normal 'break' state:
+              // Our step operation is complete, set reachedBreak to ensure the
+              // current code will be selected before returning from this function.
+              reachedBreak = true;
+              // Reset nextStep to StepType.RUN to return to a normal 'break' state:
               this.nextStep = StepType.RUN;
               this.onNextStepChanged.notifyObservers();
               if (inUserCode) {
