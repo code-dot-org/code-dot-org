@@ -434,7 +434,7 @@ module Pd::Application
       # strip all markdown formatting out of the labels
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
-        columns = filtered_labels(course).values.map {|l| markdown.render(l)}
+        columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
         columns.push 'Status', 'Locked', 'Notes', 'Regional Partner'
         csv << columns
       end
@@ -450,6 +450,7 @@ module Pd::Application
       end
     end
 
+    # @override
     # Add account_email (based on the associated user's email) to the sanitized form data hash
     def sanitize_form_data_hash
       super.merge(account_email: user.email)
