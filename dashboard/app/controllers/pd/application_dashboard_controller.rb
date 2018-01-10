@@ -20,7 +20,7 @@ module Pd
       summer_workshops = workshops.map do |workshop|
         {
           value: workshop.id,
-          label: "#{workshop.friendly_date_range}, #{workshop.location_city}"
+          label: "#{workshop.friendly_date_range}, #{workshop.location_city} #{workshop.location_state}"
         }
       end
 

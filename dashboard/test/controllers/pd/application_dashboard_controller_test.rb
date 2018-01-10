@@ -71,7 +71,7 @@ class Pd::ApplicationDashboardControllerTest < ::ActionController::TestCase
     get :index
     response = JSON.parse(assigns(:script_data)[:props])
     assert_response :success
-    assert_equal [{'label' => "#{@workshop_1.friendly_date_range}, Amherst", 'value' => @workshop_1.id}], response['summerWorkshops']
+    assert_equal [{'label' => "#{@workshop_1.friendly_date_range}, Amherst NY", 'value' => @workshop_1.id}], response['summerWorkshops']
   end
 
   test 'Retrieve all workshops for workshop admins' do
@@ -80,6 +80,6 @@ class Pd::ApplicationDashboardControllerTest < ::ActionController::TestCase
     get :index
     response = JSON.parse(assigns(:script_data)[:props])
     assert_response :success
-    assert_equal [{'label' => "#{@workshop_1.friendly_date_range}, Amherst", 'value' => @workshop_1.id}, {'label' => "#{@workshop_2.friendly_date_range}, Seattle", 'value' => @workshop_2.id}], response['summerWorkshops']
+    assert_equal [{'label' => "#{@workshop_1.friendly_date_range}, Amherst NY", 'value' => @workshop_1.id}, {'label' => "#{@workshop_2.friendly_date_range}, Seattle WA", 'value' => @workshop_2.id}], response['summerWorkshops']
   end
 end
