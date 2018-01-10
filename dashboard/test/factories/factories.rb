@@ -734,7 +734,11 @@ FactoryGirl.define do
   factory :public_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
     id {(School.maximum(:id).to_i + 1).to_s}
-    state_school_id "WA-123-4321"
+    # state_school_id must be unique
+    sequence(:state_school_id) do |n|
+      padded_n = format("%07d", n)
+      "WA-#{padded_n[0..2]}-#{padded_n[3..6]}"
+    end
     name "A seattle public school"
     city "Seattle"
     state "WA"
