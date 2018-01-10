@@ -8,7 +8,7 @@ import {
 import UsPhoneNumberInput from "../form_components/UsPhoneNumberInput";
 import {isZipCode} from '@cdo/apps/util/formatValidation';
 
-import Teachercon1819FormComponent from 'Teachercon1819FormComponent';
+import Teachercon1819FormComponent from './Teachercon1819FormComponent';
 
 export default class TravelPlans extends Teachercon1819FormComponent {
   static associatedFields = [
@@ -105,7 +105,7 @@ export default class TravelPlans extends Teachercon1819FormComponent {
         <FormGroup>
           {this.buildButtonsFromOptions({
             name: 'liveFarAway',
-            label: `Do you live more than 25 miles from downtown ${this.props.teacherconLocation}?`,
+            label: `Do you live more than 25 miles from downtown ${this.props.city}?`,
             type: 'radio'
           })}
           {
