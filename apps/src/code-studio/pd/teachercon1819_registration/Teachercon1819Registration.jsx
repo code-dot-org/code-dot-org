@@ -7,6 +7,8 @@ import TravelPlans from './TravelPlans';
 import Releases from './Releases';
 import Confirmation from './Confirmation';
 
+import { TeacherSeatAcceptanceOptions } from '@cdo/apps/generated/pd/teachercon1819RegistrationConstants';
+
 export default class Teachercon1819Registration extends FormController {
   static propTypes = {
     ...FormController.propTypes,
@@ -53,8 +55,7 @@ export default class Teachercon1819Registration extends FormController {
     // once they respond yes, but if we do that then the user-visible page count
     // will _grow_ as they progress through the form, which is a much weirder
     // user experience than it shrinking.
-    // TODO elijah replace this string with a shared constant
-    if (!(this.state.data.teacherAcceptSeat && this.state.data.teacherAcceptSeat !== "Yes, I accept my seat in the Professional Learning Program")) {
+    if (!(this.state.data.teacherAcceptSeat && this.state.data.teacherAcceptSeat !== TeacherSeatAcceptanceOptions.accept)) {
       pageComponents.push(Confirmation);
     }
 
@@ -98,10 +99,9 @@ export default class Teachercon1819Registration extends FormController {
 
   /**
    * @override
-   * TODO elijah replace this string with a shared constant
    */
   shouldShowSubmit() {
     return super.shouldShowSubmit() ||
-        this.state.data.teacherAcceptSeat === "No, I decline my seat in the Professional Learning Program.";
+        this.state.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions.decline;
   }
 }
