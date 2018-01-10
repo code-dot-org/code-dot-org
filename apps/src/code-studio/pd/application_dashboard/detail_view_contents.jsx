@@ -98,7 +98,7 @@ export class DetailViewContents extends React.Component {
     this.setState({
       locked: !this.state.locked,
     });
-  }
+  };
 
   handleStatusChange = (event) => {
     this.setState({
@@ -261,8 +261,32 @@ export class DetailViewContents extends React.Component {
     );
   };
 
+  renderRegionalPartnerPanel = () => {
+    if (this.props.applicationData.application_type === 'Teacher') {
+      return (
+        <DetailViewResponse
+          question="Regional Partner"
+          questionId="regionalPartnerName"
+          answer={this.renderRegionalPartnerAnswer()}
+          layout="panel"
+          score={this.state.response_scores['regionalPartnerName']}
+          possibleScores={TeacherValidScores['regionalPartnerName']}
+          editing={this.state.editing}
+          handleScoreChange={this.handleScoreChange}
+        />
+      );
+    } else {
+      return (
+        <DetailViewResponse
+          question="Regional Partner"
+          answer={this.renderRegionalPartnerAnswer()}
+          layout="panel"
+        />
+      );
+    }
+  };
+
   renderTopSection = () => {
-    const regionalPartnerAnswer = this.renderRegionalPartnerAnswer();
     return (
       <div id="TopSection">
         <DetailViewResponse
@@ -280,27 +304,7 @@ export class DetailViewContents extends React.Component {
           answer={this.props.applicationData.district_name}
           layout="lineItem"
         />
-        {
-          this.props.applicationData.application_type === 'Teacher' ?
-            (
-              <DetailViewResponse
-                question="Regional Partner"
-                questionId="regionalPartnerName"
-                answer={regionalPartnerAnswer}
-                layout="panel"
-                score={this.state.response_scores['regionalPartnerName']}
-                possibleScores={TeacherValidScores['regionalPartnerName']}
-                editing={this.state.editing}
-                handleScoreChange={this.handleScoreChange}
-              />
-            ) : (
-              <DetailViewResponse
-                question="Regional Partner"
-                answer={regionalPartnerAnswer}
-                layout="panel"
-              />
-            )
-        }
+        {this.props.isWorkshopAdmin && this.renderRegionalPartnerPanel()}
       </div>
     );
   };
@@ -329,7 +333,7 @@ export class DetailViewContents extends React.Component {
               id="Notes"
               disabled={!this.state.editing}
               componentClass="textarea"
-              value={this.state.notes}
+              value={this.state.notes || ''}
               onChange={this.handleNotesChange}
               style={styles.notes}
             />
