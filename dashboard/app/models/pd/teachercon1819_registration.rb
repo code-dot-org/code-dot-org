@@ -13,18 +13,16 @@
 #  index_pd_teachercon1819_registrations_on_pd_application_id  (pd_application_id)
 #
 
+require 'cdo/shared_constants/pd/teachercon1819_registration_constants'
+
 class Pd::Teachercon1819Registration < ActiveRecord::Base
   include Pd::Form
+  include Teachercon1819RegistrationConstants
 
   YES = 'Yes'.freeze
   NO = 'No'.freeze
   YES_OR_NO = [YES, NO].freeze
   OTHER = 'Other'.freeze
-
-  TEACHER_ACCEPT_SEAT = "Yes, I accept my seat in the Professional Learning Program"
-  TEACHER_DECLINE_SEAT = "No, I decline my seat in the Professional Learning Program."
-  TEACHER_WITHDRAW_DATE = "Yes, I want to participate, but I'm unable to attend my assigned summer workshop date. Please place me on your waitlist. I understand that I am not guaranteed a space in a different summer workshop."
-  TEACHER_WITHDRAW_OTHER = "Yes, I want to participate, but I'm not able to for a different reason. Please place me on your waitlist. I understand that I am not guaranteed a space in a different summer workshop."
 
   def self.options
     {
@@ -48,10 +46,10 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       needHotel: YES_OR_NO,
       needAda: [YES, NO, 'Other (please explain):'],
       teacherAcceptSeat: [
-        TEACHER_ACCEPT_SEAT,
-        TEACHER_WITHDRAW_DATE,
-        TEACHER_WITHDRAW_OTHER,
-        TEACHER_DECLINE_SEAT,
+        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept],
+        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:withdraw_date],
+        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:withdraw_other],
+        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline],
       ],
       photoRelease: YES_OR_NO,
       liabilityWaiver: YES_OR_NO,
@@ -82,7 +80,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   def validate_required_fields
     hash = sanitize_form_data_hash
 
-    if hash.try(:[], :teacher_accept_seat) == TEACHER_DECLINE_SEAT
+    if hash.try(:[], :teacher_accept_seat) == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
       # then we don't care about the rest of the fields
       return
     end

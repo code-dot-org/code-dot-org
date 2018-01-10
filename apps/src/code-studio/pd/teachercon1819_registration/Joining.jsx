@@ -6,6 +6,8 @@ import {
 import Teachercon1819FormComponent from './Teachercon1819FormComponent';
 import UsPhoneNumberInput from "../form_components/UsPhoneNumberInput";
 
+import { TeacherSeatAcceptanceOptions } from '@cdo/apps/generated/pd/teachercon1819RegistrationConstants';
+
 export default class Joining extends Teachercon1819FormComponent {
   static associatedFields = [
     'preferredFirstName',
@@ -73,10 +75,9 @@ export default class Joining extends Teachercon1819FormComponent {
             <li>Teach this curriculum in the 2018-19 school year</li>
           </ul>
           {this.radioButtonsFor("teacherAcceptSeat")}
-          {/* TODO elijah replace these with shared constants */}
           {(
-            this.props.data.teacherAcceptSeat === "Yes, I want to participate, but I'm unable to attend my assigned summer workshop date. Please place me on your waitlist. I understand that I am not guaranteed a space in a different summer workshop." ||
-            this.props.data.teacherAcceptSeat === "Yes, I want to participate, but I'm not able to for a different reason. Please place me on your waitlist. I understand that I am not guaranteed a space in a different summer workshop."
+            this.props.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions.withdrawDate ||
+            this.props.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions.withdrawOther
           ) &&
             <FormGroup>
               <p>
@@ -90,7 +91,7 @@ export default class Joining extends Teachercon1819FormComponent {
             </FormGroup>
           }
 
-          {this.props.data.teacherAcceptSeat === "No, I decline my seat in the Professional Learning Program." &&
+          {this.props.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions.decline &&
             <FormGroup>
               <p>
                 Thank you for letting us know. You do not need to complete the rest
