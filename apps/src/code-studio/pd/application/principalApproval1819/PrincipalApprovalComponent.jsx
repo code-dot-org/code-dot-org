@@ -106,12 +106,10 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
           look here</a> to find more information about the workshop.
         </p>
         <div>
-          By checking this box, you indicate that you understand there may be a program
-          fee for the summer workshop your teacher attends.
           {this.singleCheckboxFor('understandFee')}
           {this.radioButtonsFor('payFee')}
           {
-            this.props.data.payFee && this.props.data.payFee.startsWith('No') && (
+            this.props.data.payFee && this.props.data.payFee.startsWith('No,') && (
               <div>
                 Would you like to be considered for funding support? Note that funding
                 support is not guaranteed.
