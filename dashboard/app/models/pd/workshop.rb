@@ -504,6 +504,7 @@ class Pd::Workshop < ActiveRecord::Base
   # Retrieve a single location value (like city or state) from the processed
   # location hash. Attribute can be passed as a string or symbol
   def get_processed_location_value(key)
+    return unless processed_location
     location_hash = JSON.parse processed_location
     location_hash[key.to_s]
   end
