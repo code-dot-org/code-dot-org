@@ -73,7 +73,7 @@ export class SummaryTable extends React.Component {
   handleViewCohortClick = (event) => {
     event.preventDefault();
     this.context.router.push(`/${this.props.path}_cohort`);
-  }
+  };
 
   render() {
     return (
