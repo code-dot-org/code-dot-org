@@ -14,7 +14,8 @@ class Pd::ApplicationDashboardControllerTest < ::ActionController::TestCase
       regional_partner: @regional_partner,
       processed_location: {city: 'Amherst', state: 'NY'}.to_json,
       sessions_from: Date.today,
-      num_sessions: 1)
+      num_sessions: 1
+    )
 
     # Workshop not to retrieve because it has been ended
     create(:pd_workshop,
@@ -33,14 +34,16 @@ class Pd::ApplicationDashboardControllerTest < ::ActionController::TestCase
       regional_partner: @regional_partner,
       processed_location: {city: 'Philadelphia', state: 'PA'}.to_json,
       sessions_from: Date.today.next_year,
-      num_sessions: 1)
+      num_sessions: 1
+    )
 
     # Workshop not to retrieve because it is the wrong subject
     create(:pd_workshop,
       regional_partner: @regional_partner,
       processed_location: {city: 'Washington', state: 'DC'}.to_json,
       sessions_from: Date.today,
-      num_sessions: 1)
+      num_sessions: 1
+    )
 
     # Workshop not to retrieve because is for a different regional partner (but admin should retrieve)
     @workshop_2 = create(:pd_workshop,
@@ -48,7 +51,8 @@ class Pd::ApplicationDashboardControllerTest < ::ActionController::TestCase
       regional_partner: (create :regional_partner),
       processed_location: {city: 'Seattle', state: 'WA'}.to_json,
       sessions_from: Date.today,
-      num_sessions: 1)
+      num_sessions: 1
+    )
   end
 
   test_redirect_to_sign_in_for :index
