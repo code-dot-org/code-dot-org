@@ -19,6 +19,8 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   include Pd::Form
   include Teachercon1819RegistrationConstants
 
+  belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
+
   YES = 'Yes'.freeze
   NO = 'No'.freeze
   YES_OR_NO = [YES, NO].freeze
@@ -58,22 +60,22 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
   def self.required_fields
     [
-      :preferredFirstName,
-      :lastName,
+      :preferred_first_name,
+      :last_name,
       :email,
       :phone,
-      :teacherAcceptSeat,
-      :contactFirstName,
-      :contactLastName,
-      :contactRelationship,
-      :contactPhone,
-      :dietaryNeeds,
-      :liveFarAway,
-      :howTraveling,
-      :needHotel,
-      :photoRelease,
-      :liabilityWaiver,
-      :agreeShareContact,
+      :teacher_accept_seat,
+      :contact_first_name,
+      :contact_last_name,
+      :contact_relationship,
+      :contact_phone,
+      :dietary_needs,
+      :live_far_away,
+      :how_traveling,
+      :need_hotel,
+      :photo_release,
+      :liability_waiver,
+      :agree_share_contact,
     ].freeze
   end
 
