@@ -672,13 +672,11 @@ module Pd::Application
     def self.csv_header(course)
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
-        columns = filtered_labels(course).values.map {|l| markdown.render(l)}
+        columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
         columns.push(
-          'Status',
           'Principal Approval',
           'Meets Criteria',
           'Total Score',
-          'Notes',
           'Regional Partner',
           'School District',
           'School',
@@ -686,7 +684,9 @@ module Pd::Application
           'School Address',
           'School City',
           'School State',
-          'School Zip Code'
+          'School Zip Code',
+          'Notes',
+          'Status'
         )
         csv << columns
       end
@@ -706,11 +706,9 @@ module Pd::Application
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
         row.push(
-          status,
           principal_approval,
           meets_criteria,
           total_score,
-          notes,
           regional_partner_name,
           district_name,
           school_name,
@@ -718,7 +716,9 @@ module Pd::Application
           school_address,
           school_city,
           school_state,
-          school_zip_code
+          school_zip_code,
+          notes,
+          status
         )
         csv << row
       end
@@ -783,6 +783,12 @@ module Pd::Application
         [:able_to_attend_multiple, NO_EXPLAIN, :able_to_attend_multiple_explain],
         [:committed, NO_EXPLAIN, :committed_explain]
       ]
+    end
+
+    # @override
+    # Add account_email (based on the associated user's email) to the sanitized form data hash
+    def sanitize_form_data_hash
+      super.merge(account_email: user.email)
     end
 
     protected
