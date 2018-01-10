@@ -1,18 +1,16 @@
 import React, { PropTypes, Component } from 'react';
 import ScriptSelector from './ScriptSelector';
-import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
-import { levelsByLesson } from '@cdo/apps/code-studio/progressRedux';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { TestResults } from '@cdo/apps/constants';
+import SectionScriptProgress from './SectionScriptProgress';
 import _ from 'lodash';
 
-const styles = {
-  bubbles: {
-    overflowX: 'scroll',
-    whiteSpace: 'nowrap',
-  }
-};
-
+/**
+ * Given a particular section, this component owns figuring out which script to
+ * show progress for (selected via a dropdown), and querying the server for
+ * student progress. Child components then have the responsibility for displaying
+ * that progress.
+ */
 export default class SectionProgress extends Component {
   static propTypes = {
     // The section we get directly from angular right now. This gives us a
@@ -89,20 +87,12 @@ export default class SectionProgress extends Component {
     const { section, validScripts } = this.props;
     const { scriptId, scriptData, studentLevelProgress } = this.state;
 
-    // Merges levelProgress for a student with our fixed scriptData (i.e. level structure)
-    // thus giving us a "levels" object in the desired form
-    const progressAndLevelState = (levelProgress) => {
-      let state = {
-        ...scriptData,
-        levelProgress
-      };
-      return levelsByLesson(state);
-    };
-
     let levelDataInitialized = false;
     if (scriptData && studentLevelProgress) {
       levelDataInitialized = true;
     }
+
+    // TODO: does scriptData contain scriptId?
 
     return (
       <div>
@@ -111,24 +101,15 @@ export default class SectionProgress extends Component {
           scriptId={scriptId}
           onChange={this.onChangeScript}
         />
-        {section.students.map((student, index) => (
-          <div key={student.id}>
-            <a href={`/teacher-dashboard#/sections/${section.id}/student/${student.id}/script/${scriptId}`}>
-              {student.name}
-            </a>
-            {levelDataInitialized &&
-              <div style={styles.bubbles}>
-                {progressAndLevelState(studentLevelProgress[student.id]).map((levels, i) =>
-                  <ProgressBubbleSet
-                    key={i}
-                    levels={levels}
-                    disabled={false}
-                  />
-                )}
-              </div>
-            }
-          </div>
-        ))}
+        {!levelDataInitialized && <div>Loading...</div>}
+        {levelDataInitialized &&
+          <SectionScriptProgress
+            section={section}
+            scriptId={scriptId}
+            scriptData={scriptData}
+            studentLevelProgress={studentLevelProgress}
+          />
+        }
       </div>
     );
   }
