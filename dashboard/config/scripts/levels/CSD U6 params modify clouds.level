@@ -192,7 +192,7 @@
 
     ],
     "embed": "false",
-    "instructions": "# Clouds\r\n\r\nThis program makes the clouds move when you blow on the sound sensor, but it's not finished.\r\n\r\n# Do This\r\n* Look at the `loopCloud(name)` and `moveCloud0()` functions to see how they work.\r\n* Create a new function `moveCloud(name)` that will move any cloud.\r\n  * (Hint: you will use almost all the same code as the `moveCloud0` function)\r\n* Call your new `moveCloud(name)` function inside the event block, once for each cloud name.\r\n * (Hint: this is similar to how the `loopCloud(name)` function is called many times.",
+    "instructions": "# Clouds\r\n\r\nThis program makes the clouds move when you blow on the sound sensor, but it's not finished.\r\n\r\n# Do This\r\n* Create a new function `moveCloud(name)` that will move any cloud.\r\n  * (Hint: you will use almost all the same code as the `moveCloud0` function)\r\n* Call your new `moveCloud(name)` function inside the event block, once for each cloud name.\r\n * (Hint: this is similar to how the `loopCloud(name)` function is called many times.",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "soundSensor.threshold = 50;\r\nonBoardEvent(soundSensor, \"change\", function() {\r\n  moveCloud0();\r\n  loopCloud(\"cloud0\");\r\n  loopCloud(\"cloud1\");\r\n  loopCloud(\"cloud2\");\r\n  loopCloud(\"cloud3\");\r\n  loopCloud(\"cloud4\");\r\n});\r\nfunction loopCloud(name) {\r\n  if (getProperty(name, \"x\") < -100) {\r\n    setProperty(name, \"x\", 325);\r\n  }\r\n}\r\nfunction moveCloud0() {\r\n  var cloudX = getProperty(\"cloud0\", \"x\");\r\n  setProperty(\"cloud0\", \"x\", cloudX - randomNumber(4,12));\r\n}",
@@ -234,7 +234,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-10 23:16:21 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-01-10 23:16:50 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"makerlab_enabled\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-01-10 23:17:16 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-10 23:16:21 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-01-10 23:16:50 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"makerlab_enabled\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-01-10 23:17:16 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-01-10 23:55:42 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
