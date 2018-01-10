@@ -179,8 +179,8 @@ class Documents < Sinatra::Base
 
   get '/style.css' do
     content_type :css
-    css, digest = combine_css 'styles', 'styles_min'
-    etag digest
+    css, css_last_modified = combine_css 'styles', 'styles_min'
+    last_modified(css_last_modified) if css_last_modified > Time.at(0)
     cache :static
     css
   end
