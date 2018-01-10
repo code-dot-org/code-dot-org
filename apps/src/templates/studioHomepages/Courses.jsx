@@ -6,9 +6,11 @@ import { CourseBlocksAll } from './CourseBlocks';
 import CoursesTeacherEnglish from './CoursesTeacherEnglish';
 import CoursesStudentEnglish from './CoursesStudentEnglish';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
 import Button from '@cdo/apps/templates/Button';
 import i18n from "@cdo/locale";
 import styleConstants from '@cdo/apps/styleConstants';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   content: {
@@ -66,11 +68,25 @@ class Courses extends Component {
 
         {/* English, teacher.  (Also can be shown when signed out.) */}
         {(isEnglish && isTeacher) && (
-          <CoursesTeacherEnglish
-            isSignedOut={isSignedOut}
-            showInitialTips={showInitialTips}
-            userId={userId}
-          />
+          <span>
+            <SpecialAnnouncementActionBlock
+              imageUrl={pegasus('/images/mc/fill-540x289/special-announcement-hoc2017.jpg')}
+              heading={i18n.specialAnnouncementHeading()}
+              subHeading={""}
+              description={i18n.specialAnnouncementDescription()}
+              buttons={[
+                {
+                  url: pegasus('/educate/professional-learning'),
+                  text: i18n.learnMore()
+                },
+              ]}
+            />
+            <CoursesTeacherEnglish
+              isSignedOut={isSignedOut}
+              showInitialTips={showInitialTips}
+              userId={userId}
+            />
+          </span>
         )}
 
         {/* English, student.  (Also the default to be shown when signed out.) */}
