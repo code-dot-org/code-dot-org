@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180108234845) do
+ActiveRecord::Schema.define(version: 20180110191512) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -969,9 +969,11 @@ ActiveRecord::Schema.define(version: 20180108234845) do
     t.string   "address_line3",      limit: 30,                                      comment: "Location address, street 3"
     t.decimal  "latitude",                      precision: 8, scale: 6,              comment: "Location latitude"
     t.decimal  "longitude",                     precision: 9, scale: 6,              comment: "Location longitude"
+    t.string   "state_school_id",    limit: 11
     t.index ["id"], name: "index_schools_on_id", unique: true, using: :btree
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id", using: :btree
+    t.index ["state_school_id"], name: "index_schools_on_state_school_id", unique: true, using: :btree
     t.index ["zip"], name: "index_schools_on_zip", using: :btree
   end
 
