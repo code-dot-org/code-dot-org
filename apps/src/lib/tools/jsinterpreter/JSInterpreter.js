@@ -468,7 +468,7 @@ export default class JSInterpreter {
       let selectCodeFunc;
       if (this.studioApp.hideSource && atMaxSpeed) {
         selectCodeFunc = function () { return -1; };
-      } else if (this.studioApp.hideSource || atMaxSpeed) {
+      } else if (this.studioApp.hideSource || (atMaxSpeed && !this.paused)) {
         selectCodeFunc = this.getUserCodeLine;
       } else {
         selectCodeFunc = this.selectCurrentCode;
