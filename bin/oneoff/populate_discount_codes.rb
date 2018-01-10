@@ -115,7 +115,7 @@ end
 # It will print out a bunch of rows, one per line. You can then copy paste this
 # into google sheets. After pasting, click on the little icon that shows up and
 # select "Split text into columns"
-def discount_code_reporting(filepath)
+def discount_code_reporting
   rows = []
   rows << [
     'User Id', 'User Name', 'Unit6Intention', 'AdminOverrode',
