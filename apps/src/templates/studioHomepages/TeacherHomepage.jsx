@@ -68,6 +68,7 @@ export default class TeacherHomepage extends Component {
 
   handleCensusSubmitSuccess = () => {
     this.setState({censusSubmittedSuccessfully: true});
+    this.dismissCensusBanner(null, this.logDismissCensusBannerError);
   }
 
   handleCensusSubmitError = () => {
@@ -76,21 +77,29 @@ export default class TeacherHomepage extends Component {
     });
   }
 
+  dismissCensusBanner(onSuccess, onFailure) {
+    $.ajax({
+      url: `/api/v1/users/${this.props.teacherId}/dismiss_census_banner`,
+      type: "post",
+    }).done(onSuccess).fail(onFailure);
+  }
+
+  logDismissCensusBannerError = (xhr) => {
+    console.error(`Failed to dismiss future census banner! ${xhr.responseText}`);
+  }
+
   hideCensusBanner= () =>  {
     this.setState({
       showCensusBanner: false,
     });
   }
 
-  dismissCensusBanner() {
-    $.ajax({
-      url: `/api/v1/users/${this.props.teacherId}/dismiss_census_banner`,
-      type: "post",
-    }).done(this.hideCensusBanner).fail(this.handleDismissCensusBannerError);
+  dismissAndHideCensusBanner() {
+    this.dismissCensusBanner(this.hideCensusBanner, this.handleDismissAndHideCensusBannerError);
   }
 
-  handleDismissCensusBannerError = (xhr) => {
-    console.error(`Failed to dismiss census banner! ${xhr.responseText}`);
+  handleDismissAndHideCensusBannerError = (xhr) => {
+    this.logDismissCensusBannerError(xhr);
     this.hideCensusBanner();
   }
 
@@ -162,7 +171,7 @@ export default class TeacherHomepage extends Component {
                showUnknownError={this.state.showCensusUnknownError}
                submittedSuccessfully={this.state.censusSubmittedSuccessfully}
                onSubmit={() => this.handleCensusBannerSubmit()}
-               onDismiss={() => this.dismissCensusBanner()}
+               onDismiss={() => this.dismissAndHideCensusBanner()}
                onPostpone={() => this.postponeCensusBanner()}
                onTeachesChange={(event) => this.handleCensusBannerTeachesChange(event)}
                onInClassChange={(event) => this.handleCensusBannerInClassChange(event)}
