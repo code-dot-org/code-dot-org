@@ -49,22 +49,22 @@ exports.handler = (event, context, callback) => {
             DBInstanceIdentifier: DB_INSTANCE_IDENTIFIER,
             MasterUserPassword: DB_PASSWORD
         }).promise()
-            .then(function (data) {
+            .then(data => {
                 console.log('Modify database password request has been submitted successfully.  Sleep for a few minutes until it completes.');
                 // updating an RDS database master password typically takes 2-3 minutes, during which time the database transitions through several states:
                 // 1) Available with old/unknown password.  Attempting to connect with new password will fail authentication
                 // 2) Not Available (Status = resetting-master-credentials).  Attempt to connect as a mysql client or to invoke AWS describeDBInstances API fails
                 // 3) Available with new password
                 // Wait until about 2 minutes before this Lambda function reaches its 5 minute timeout before attempting to connect to the database
-                return setTimeoutPromise(context.getRemainingTimeInMillis() - 60000, null);
+                return setTimeoutPromise(context.getRemainingTimeInMillis() - 120000, null);
             })
-            .then(function (value) {
+            .then(value => {
                 // check if password update is pending
                 return rds.describeDBInstances({
                         DBInstanceIdentifier: 'verification-copy'
                     }).promise();
             })
-            .then(function (data) {
+            .then(data => {
                 if (data.DBInstances[0].PendingModifiedValues.hasOwnProperty('MasterUserPassword')) {
                     status_message = 'Terminating verification of database copy because database password change has not started yet.';
                     console.error(status_message);
@@ -79,11 +79,11 @@ exports.handler = (event, context, callback) => {
                     });
                 }
             })
-            .then(function (conn){
+            .then(conn => {
                 mysqlConnection = conn;
                 return mysqlConnection.query('SELECT count(*) AS number_of_users FROM users');
             })
-            .then(function (rows){
+            .then(rows => {
                 status_message = 'Successfully queried offsite backup of database.  Number of Users = ' + rows[0].number_of_users;
                 console.log(status_message);
                 postStatusToSlack(status_message);
@@ -94,10 +94,10 @@ exports.handler = (event, context, callback) => {
                     SkipFinalSnapshot: true
                 }).promise();
             })
-            .then(function (data){
+            .then(data => {
                 callback(null, status_message);
             })
-            .catch(function (error){
+            .catch(error => {
                 if (mysqlConnection && mysqlConnection.end) {
                     mysqlConnection.end();
                 }
