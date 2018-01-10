@@ -18,6 +18,8 @@ class Census::IbCsOffering < ApplicationRecord
   belongs_to :ib_school_code, foreign_key: :school_code, primary_key: :school_code, required: true
   has_one :school, through: :ib_school_code
 
+  # IB offers two differnt CS course: Standard Level (SL) and Higher Level (HL)
+  # http://www.ibo.org/programmes/diploma-programme/curriculum/sciences/computer-science/
   LEVELS = {
     HL: "HL",
     SL: "SL",
