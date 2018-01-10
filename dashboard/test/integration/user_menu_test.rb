@@ -26,14 +26,13 @@ class UserMenuTest < ActionDispatch::IntegrationTest
     open_pairing_test false
   end
 
-  test 'student does not see links to ops dashboard or teacher dashboard' do
+  test 'student does not see links to teacher dashboard' do
     student = create :student
     sign_in student
 
     get '/home'
 
     assert_response :success
-    assert_select 'a[href="//test.code.org/ops-dashboard"]', 0
     assert_select 'a[href="//test.code.org/teacher-dashboard"]', 0
   end
 
