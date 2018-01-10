@@ -1,4 +1,4 @@
-require 'aws-sdk'
+require 'aws-sdk-cloudwatch'
 require 'active_support/core_ext/module/attribute_accessors'
 require 'concurrent/async'
 require 'honeybadger'
