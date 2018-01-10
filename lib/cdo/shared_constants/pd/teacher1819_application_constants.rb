@@ -100,7 +100,7 @@ module Teacher1819ApplicationConstants
          is not available for grades K-5. (select all that apply)'
       ),
       csd_course_hours_per_week:
-        'How many course hours per week will your school offer CS Discoveries per class?',
+        'How many course hours per week will your school offer CS Discoveries for each class?',
       csd_course_hours_per_year:
         'Approximately how many course hours per school year will your school offer CS Discoveries?',
       csd_terms_per_year: 'How many terms will this course span in one school year?',
