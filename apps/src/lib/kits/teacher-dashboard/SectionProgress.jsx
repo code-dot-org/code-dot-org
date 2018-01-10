@@ -15,9 +15,23 @@ const styles = {
 
 export default class SectionProgress extends Component {
   static propTypes = {
-    // TODO: better detail shape?
-    section: PropTypes.object.isRequired,
-    validScripts: PropTypes.array.isRequired,
+    // The section we get directly from angular right now. This gives us a
+    // different shape than some other places we use sections. For now, I'm just
+    // going to document the parts of section that we use here
+    section: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      students: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+      })).isRequired
+    }).isRequired,
+    validScripts: PropTypes.arrayOf(PropTypes.shape({
+      category: PropTypes.string.isRequired,
+      category_priority: PropTypes.number.isRequired,
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      position: PropTypes.number,
+    })).isRequired,
   };
 
   state = {

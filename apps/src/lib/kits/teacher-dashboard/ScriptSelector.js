@@ -16,8 +16,16 @@ const groupedAssignments = assignments => (
 
 export default class ScriptSelector extends Component {
   static propTypes = {
-    // TODO: better detail shape?
-    validScripts: PropTypes.array.isRequired,
+    validScripts: PropTypes.arrayOf(PropTypes.shape({
+      // This shape is similar to that used by AssignmentSelector, but in that
+      // case they've been semi-processed and given assignIds to diferentiate
+      // courses and scripts
+      category: PropTypes.string.isRequired,
+      category_priority: PropTypes.number.isRequired,
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      position: PropTypes.number,
+    })).isRequired,
     scriptId: PropTypes.string,
     onChange: PropTypes.func.isRequired,
   };
@@ -30,7 +38,6 @@ export default class ScriptSelector extends Component {
     return (
       <div>
         <select
-          id="uitest-primary-assignment"
           value={scriptId}
           onChange={event => onChange(event.target.value)}
         >
