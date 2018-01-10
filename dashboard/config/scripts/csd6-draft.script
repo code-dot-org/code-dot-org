@@ -7,6 +7,7 @@ project_widget_visible true
 project_widget_types ["applab", "gamelab", "weblab"]
 
 stage 'Computing Innovations', flex_category: 'csd6_1'
+named_level 'CSD U6L01 TFMD'
 named_level 'CSDU6 Innovation'
 
 stage 'Designing Screens with Code', flex_category: 'csd6_1'
@@ -85,6 +86,7 @@ level 'CSD U6 analog predict', progression: 'Reading Sensors'
 named_level 'CSD Polling Events Map'
 level 'CSD U6 analog data', progression: 'Sensor Events'
 level 'CSD U6 analog change', progression: 'Sensor Events'
+level 'CSD U6 analog threshold', progression: 'Sensor Events'
 named_level 'CSD Set Scale Map'
 level 'CSD U6 analog rbg 1', progression: 'Sensors to Colors'
 level 'CSD U6 analog rbg 2', progression: 'Sensors to Colors'
@@ -173,6 +175,8 @@ bonus 'CSD U6 for loop led bonus 3'
 
 stage 'Accelerometer', flex_category: 'csd6_2'
 level 'CSD U6 Airplane predict', progression: 'Orientation'
+level 'CSD U6 directional leds pitch', progression: 'Orientation'
+level 'CSD U6 directional LEDs roll', progression: 'Orientation'
 
 stage 'For Loops', flex_category: 'csd6_2'
 named_level 'CSD: For Loops'
