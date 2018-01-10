@@ -4,7 +4,7 @@
 
 @import 'color';
 
-#pageheader-wrapper, #pageheader2-wrapper {
+#pageheader2-wrapper {
   padding-top: 0;
 
   .pageheader-translucent {
@@ -44,7 +44,6 @@
       #logo {
         width: 42px;
         height: 42px;
-        margin-left: 5px;
       }
 
       #logo-uk {
@@ -63,7 +62,6 @@
       float: left;
       position: relative;
       padding-left: 6px;
-      position: relative;
 
       .rtl & {
         float: right;
@@ -99,8 +97,6 @@
 
     #sign_in_or_user {
       margin: 5px 0 0 0;
-      display: block;
-      float: right;
 
       .button-signin {
         margin-top: -3px;
@@ -157,6 +153,4 @@
       top: 55px;
     }
   }
-
 }
-
