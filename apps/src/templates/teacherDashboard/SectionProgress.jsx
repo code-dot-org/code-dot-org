@@ -1,7 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import ScriptSelector from './ScriptSelector';
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
-import { TestResults } from '@cdo/apps/constants';
+import { getLevelResult } from '@cdo/apps/code-studio/progressRedux';
 import SectionScriptProgress from './SectionScriptProgress';
 import _ from 'lodash';
 
@@ -69,16 +68,7 @@ export default class SectionProgress extends Component {
       // are a map of levelId to status
       let studentLevelProgress = {};
       Object.keys(dataByStudent).forEach(studentId => {
-        studentLevelProgress[studentId] = _.mapValues(dataByStudent[studentId], level => {
-          if (level.status === LevelStatus.locked) {
-            return TestResults.LOCKED_RESULT;
-          }
-          if (level.submitted || level.readonly_answers) {
-            return TestResults.SUBMITTED_RESULT;
-          }
-
-          return level.result;
-        });
+        studentLevelProgress[studentId] = _.mapValues(dataByStudent[studentId], getLevelResult);
       });
 
       this.setState({
