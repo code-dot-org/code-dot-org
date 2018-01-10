@@ -166,70 +166,12 @@ namespace :seed do
     School.seed_all
   end
 
-  CENSUS_BUCKET_NAME = "cdo-census".freeze
-
-  # school_code is a 6-character string but in the input files we may have treated
-  # them as integers and cut off leading zeros. Add them back if necessary.
-  def normalize_school_code(raw_school_code)
-    format("%06d", raw_school_code)
-  end
-
   task ap_school_codes: :environment do
-    AWS::S3.process_file(CENSUS_BUCKET_NAME, "ap_school_codes.csv") do |filename|
-      ActiveRecord::Base.transaction do
-        CSV.foreach(filename, {headers: true}) do |row|
-          normalized_school_code = normalize_school_code(row.to_hash['school_code'])
-          begin
-            school = School.find(row.to_hash['school_id'])
-            Census::ApSchoolCode.find_or_create_by!(school_code: normalized_school_code, school: school)
-          rescue ActiveRecord::RecordNotFound
-            # Skip the row if we don't have the school in the DB
-            puts "AP School Code seed: school not found - skipping row for school_code:#{normalized_school_code} school_id:#{school.id}"
-          end
-        end
-      end
-    end
+    Census::ApSchoolCode.seed
   end
 
   task ap_cs_offerings: :environment do
-    # AP CS Offering data files are named
-    # "ap_cs_offerings/<COURSE>-<SCHOOL_YEAR_START>-<SCHOOL_YEAR_END>.csv"
-    # where COURSE is either 'CSP' or 'CSA'
-    # The first school year where we have data is 2016-2017
-    current_year = Date.today.year
-    (2016..current_year).each do |school_year|
-      ['CSP', 'CSA'].each do |course|
-        object_key = "ap_cs_offerings/#{course}-#{school_year}-#{school_year + 1}.csv"
-        begin
-          AWS::S3.process_file(CENSUS_BUCKET_NAME, object_key) do |filename|
-            ActiveRecord::Base.transaction do
-              CSV.foreach(filename, {headers: true}) do |row|
-                raw_school_code = row.to_hash['School Code']
-                next unless raw_school_code
-                normalized_school_code = normalize_school_code(raw_school_code)
-                unless normalized_school_code == '000000'
-                  begin
-                    ap_school_code = Census::ApSchoolCode.find(normalized_school_code)
-                    Census::ApCsOffering.find_or_create_by!(
-                      ap_school_code: ap_school_code,
-                      course: course,
-                      school_year: school_year
-                    )
-                  rescue ActiveRecord::RecordNotFound
-                    # We don't have mapping for every school code so skip over any that
-                    # can't be found in the database.
-                    puts "AP CS Offering seeding: skipping unknown school code #{normalized_school_code}"
-                  end
-                end
-              end
-            end
-          end
-        rescue Aws::S3::Errors::NoSuchKey
-          # We don't expect every school year to be there so skip anything that isn't found.
-          puts "AP CS Offering seeding: object #{object_key} not found in S3 - skipping."
-        end
-      end
-    end
+    Census::ApCsOffering.seed
   end
 
   # Seeds the data in regional_partners
