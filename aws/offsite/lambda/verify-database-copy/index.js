@@ -61,15 +61,13 @@ exports.handler = (event, context, callback) => {
             .then(value => {
                 // check if password update is pending
                 return rds.describeDBInstances({
-                        DBInstanceIdentifier: 'verification-copy'
+                        DBInstanceIdentifier: DB_INSTANCE_IDENTIFIER
                     }).promise();
             })
             .then(data => {
                 if (data.DBInstances[0].PendingModifiedValues.hasOwnProperty('MasterUserPassword')) {
                     status_message = 'Terminating verification of database copy because database password change has not started yet.';
-                    console.error(status_message);
-                    postStatusToSlack(status_message);
-                    callback(new Error(status_message));
+                    return Promise.reject(new Error(status_message));
                 } else {
                     return mysqlPromise.createConnection({
                         host: DB_HOST,
