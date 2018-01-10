@@ -230,7 +230,9 @@ GameLab.prototype.init = function (config) {
   // able to turn them on.
   config.noInstructionsWhenCollapsed = true;
 
-  var breakpointsEnabled = !config.level.debuggerDisabled;
+  // NOTE: We will go back to using !config.level.debuggerDisabled soon,
+  // but are testing with project levels only for now
+  var breakpointsEnabled = config.level.isProjectLevel;
   config.enableShowCode = true;
   config.enableShowLinesCount = false;
 
@@ -276,7 +278,9 @@ GameLab.prototype.init = function (config) {
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
 
-  var showDebugButtons = (!config.hideSource && !config.level.debuggerDisabled);
+  // NOTE: We will go back to using !config.level.debuggerDisabled soon,
+  // but are testing with project levels only for now
+  var showDebugButtons = (!config.hideSource && config.level.isProjectLevel);
   var showDebugConsole = !config.hideSource;
 
   if (showDebugButtons || showDebugConsole) {
