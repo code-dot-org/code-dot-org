@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
 import Notification from '../Notification';
+import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
 import StudentSections from './StudentSections';
@@ -11,6 +12,7 @@ import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWit
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   clear: {
@@ -51,7 +53,18 @@ export default class TeacherHomepage extends Component {
         <ProtectedStatefulDiv
           ref="termsReminder"
         />
-
+        <SpecialAnnouncementActionBlock
+          imageUrl={pegasus('/images/mc/fill-540x289/special-announcement-hoc2017.jpg')}
+          heading={i18n.specialAnnouncementHeading()}
+          subHeading={""}
+          description={i18n.specialAnnouncementDescription()}
+          buttons={[
+            {
+              url: pegasus('/educate/professional-learning'),
+              text: i18n.learnMore()
+            },
+          ]}
+        />
         {announcements.length > 0 && (
           <div>
             <Notification

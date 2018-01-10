@@ -2,20 +2,14 @@ import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import color from "../../util/color";
 import Button from '@cdo/apps/templates/Button';
-import styleConstants from '../../styleConstants';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-const contentWidth = styleConstants['content-width'];
-
 const styles = {
-  fullWidthNonResponsive: {
-    width: contentWidth
-  },
   heading: {
     paddingRight: 10,
     paddingTop: 10,
-    paddingBottom: 20,
+    paddingBottom: 10,
     fontSize: 24,
     lineHeight: '26px',
     fontFamily: 'Gotham 3r',
@@ -23,7 +17,10 @@ const styles = {
   },
   textItem: {
     backgroundColor: color.teal,
-    padding: 30,
+    paddingLeft: 30,
+    paddingRight: 20,
+    paddingBottom: 20,
+    paddingTop: 20,
     height: 260,
     boxSizing: 'border-box'
   },
@@ -170,14 +167,12 @@ export class SpecialAnnouncementActionBlock extends Component {
     const { imageUrl, heading, description, buttons } = this.props;
 
     return (
-      <div style={styles.fullWidthNonResponsive}>
-        <TwoColumnActionBlock
-          imageUrl={imageUrl}
-          subHeading={heading}
-          description={description}
-          buttons={buttons}
-        />
-      </div>
+      <TwoColumnActionBlock
+        imageUrl={imageUrl}
+        subHeading={heading}
+        description={description}
+        buttons={buttons}
+      />
     );
   }
 }
