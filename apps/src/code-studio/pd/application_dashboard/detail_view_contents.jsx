@@ -98,7 +98,7 @@ export class DetailViewContents extends React.Component {
     this.setState({
       locked: !this.state.locked,
     });
-  }
+  };
 
   handleStatusChange = (event) => {
     this.setState({
