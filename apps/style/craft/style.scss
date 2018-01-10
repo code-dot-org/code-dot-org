@@ -196,6 +196,10 @@ body {
   -ms-touch-action: none;
 }
 
+.header-wrapper {
+  background-color: $original-background-color;
+}
+
 .workspace-header {
   background-color: $blockly-header;
 }
