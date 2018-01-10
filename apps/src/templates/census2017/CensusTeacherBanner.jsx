@@ -70,6 +70,9 @@ const styles = {
     marginTop: 0,
     marginBottom: 0,
   },
+  updateSchoolLink: {
+    cursor: 'pointer',
+  },
 };
 
 export default class CensusTeacherBanner extends Component {
@@ -345,8 +348,21 @@ export default class CensusTeacherBanner extends Component {
       );
       buttons = (
         <div style={styles.buttonDiv}>
-          <Button onClick={this.props.onPostpone} style={styles.button} color="gray" size="large" text="Not now" />
-          <Button onClick={this.props.onPostpone} href={pegasus('/yourschool')} style={styles.button} size="large" text="Take the survey" />
+          <Button
+            onClick={this.props.onPostpone}
+            style={styles.button}
+            color="gray"
+            size="large"
+            text="Not now"
+          />
+          <Button
+            onClick={this.props.onPostpone}
+            href={pegasus('/yourschool')}
+            target="_blank"
+            style={styles.button}
+            size="large"
+            text="Take the survey"
+          />
         </div>
       );
     }
@@ -364,14 +380,19 @@ export default class CensusTeacherBanner extends Component {
         <div>
           <div style={styles.header}>
             <h2 style={styles.title}>Add {schoolName} to our map!</h2>
-            <p style={styles.updateSchool}>Not teaching at this school anymore? <a onClick={this.showSchoolInfoForm}>Update here</a></p>
+            <p style={styles.updateSchool}>
+              Not teaching at this school anymore?&ensp;
+              <a style={styles.updateSchoolLink} onClick={this.showSchoolInfoForm}>
+                Update here
+              </a>
+            </p>
             {this.props.showUnknownError && (
                <p style={styles.error}>We encountered an error with your submission. Please try again.</p>
             )}
           </div>
           <div style={styles.message}>
             <p style={styles.introQuestion}>
-              Looks like you teach computer science. Have your students already done {numHours} hours of programming content this year (not including HTML/CSS)?
+              It looks like you teach computer science. Have your students already done {numHours} hours of programming content this year (not including HTML/CSS)?
             </p>
             <label>
               <input
