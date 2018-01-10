@@ -59,7 +59,7 @@ class FileBucket < BucketHelper
       {
         bucket: @bucket,
         key: key,
-        expires_in: expires_in
+        expires_in: expires_in.to_i
       }
     )
   end

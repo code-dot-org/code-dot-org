@@ -1,4 +1,5 @@
 require 'singleton'
+require 'aws-sdk-firehose'
 
 # A wrapper client to the AWS Firehose service.
 # @example

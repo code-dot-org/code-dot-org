@@ -367,7 +367,7 @@ class CDOImpl < OpenStruct
   # appending to the static list already provided by configuration files.
   def app_servers
     return super unless CDO.chef_managed
-    require 'aws-sdk'
+    require 'aws-sdk-ec2'
     servers = Aws::EC2::Client.new.describe_instances(
       filters: [
         {name: 'tag:aws:cloudformation:stack-name', values: [CDO.stack_name]},
