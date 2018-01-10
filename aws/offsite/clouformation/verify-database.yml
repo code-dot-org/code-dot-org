@@ -1,5 +1,15 @@
 ---
 AWSTemplateFormatVersion: 2010-09-09
+Parameters:
+  DatabasePasswordParameter:
+    Type: String
+    Description: Specify a new password for the database copy to use when verifying it.
+  SlackWebHookURLParameter:
+    Type: String
+    Description: Slack Webhook URL for notifications such as ('T039SAH7W/B85EJM39N/4EPCUIZVLWm6Tq0WgA8Xrt31')
+  SlackChannelParameter:
+    Type: String
+    Description: Slack Channel to post notifications
 Resources:
   VerifyDatabaseLambdaRole:
     Type: 'AWS::IAM::Role'
@@ -58,7 +68,7 @@ Resources:
       Runtime: nodejs6.10
       Code:
         S3Bucket: cdo-secondary-dist
-        S3Key: restore-database-copy-for-verification.zip
+        S3Key: verify-database-copy.zip
       Timeout: 300 # This function takes about 4 minutes to run because updating the db password takes ~3 minutes
       Role: !GetAtt VerifyDatabaseLambdaRole.Arn
       VpcConfig:
@@ -69,12 +79,12 @@ Resources:
       Environment:
         Variables:
           DB_INSTANCE_IDENTIFIER: verification-copy
-          SLACK_CHANNEL: '@suresh'
           DB_USER: db
           DB_NAME: dashboard_production
           DB_HOST: verification-copy.czzzvkjgetnw.us-east-1.rds.amazonaws.com
-          DB_PASSWORD: expect-neck-bill-beautiful
-          SLACK_WEBHOOK_URL: T039SAH7W/B85EJM39N/4EPCUIZVLWm6Tq0WgA8Xrt31
+          DB_PASSWORD: !Ref DatabasePasswordParameter
+          SLACK_WEBHOOK_URL: !Ref SlackWebHookURLParameter
+          SLACK_CHANNEL: !Ref SlackChannelParameter
   RestoreDatabaseCopyTopic:
     Type: AWS::SNS::Topic
     Properties:
