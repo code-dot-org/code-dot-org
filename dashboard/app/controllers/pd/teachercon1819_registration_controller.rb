@@ -26,7 +26,8 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
       props: {
         options: Pd::Teachercon1819Registration.options.camelize_keys,
         requiredFields: Pd::Teachercon1819Registration.camelize_required_fields,
-        apiEndpoint: "/api/v1/pd/teachercon1819_registrations",
+        apiEndpoint: "/api/v1/pd/teachercon_registrations",
+        applicationId: @application.id,
         applicationType: @application.application_type,
         course: @application.workshop.course,
         city: @application.workshop.location_city,

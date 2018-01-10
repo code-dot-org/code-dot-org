@@ -394,6 +394,9 @@ Dashboard::Application.routes.draw do
       get :teacher_applications, to: 'teacher_applications#index'
       post :teacher_applications, to: 'teacher_applications#create'
 
+      # persistent namespace for teachercon registrations, can be updated/replaced each year
+      post 'teachercon_registrations', to: 'teachercon1819_registrations#create'
+
       post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
       post :regional_partner_program_registrations, to: 'regional_partner_program_registrations#create'
 

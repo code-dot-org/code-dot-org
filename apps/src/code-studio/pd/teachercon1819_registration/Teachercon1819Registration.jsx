@@ -10,6 +10,7 @@ import Confirmation from './Confirmation';
 export default class Teachercon1819Registration extends FormController {
   static propTypes = {
     ...FormController.propTypes,
+    applicationId: PropTypes.number.isRequired,
     applicationType: PropTypes.string.isRequired,
     course: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
@@ -74,6 +75,16 @@ export default class Teachercon1819Registration extends FormController {
       firstName: this.props.firstName,
       lastName: this.props.lastName,
       phone: this.props.phone,
+    };
+  }
+
+  /**
+   * @override
+   */
+  serializeFormData() {
+    return {
+      ...super.serializeFormData(),
+      applicationId: this.props.applicationId
     };
   }
 
