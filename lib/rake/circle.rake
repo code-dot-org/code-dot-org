@@ -104,11 +104,12 @@ namespace :circle do
 
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
             " --eyes" \
-            " --feature features/angleHelper.feature" \
+            " --feature features/angleHelper.feature,features/belowVisualization.feature" \
             " --config ChromeLatestWin7" \
             " --pegasus localhost.code.org:3000" \
             " --dashboard localhost-studio.code.org:3000" \
             " --circle" \
+            " --parallel 2" \
             " --retry_count 1" \
             " --html"
       # end
