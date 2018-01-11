@@ -3,6 +3,7 @@ import VirtualizedSelect from 'react-virtualized-select';
 import 'react-virtualized/styles.css';
 import 'react-select/dist/react-select.css';
 import 'react-virtualized-select/styles.css';
+import debounce from 'lodash/debounce';
 import i18n from "@cdo/locale";
 
 export default class SchoolAutocompleteDropdown extends Component {
@@ -27,6 +28,17 @@ export default class SchoolAutocompleteDropdown extends Component {
     label: i18n.schoolNotFound()
   });
 
+  debouncedSearch = debounce((q) => {
+    const searchUrl = `/dashboardapi/v1/schoolsearch/${encodeURIComponent(q)}/40`;
+    return fetch(searchUrl)
+      .then(response => response.ok ? response.json() : [])
+      .then(json => {
+        const schools = json.map(school => this.constructSchoolOption(school));
+        schools.unshift(this.constructSchoolNotFoundOption());
+        return { options: schools };
+    });
+  }, 200);
+
   getOptions = (q) => {
     // Existing value? Construct the matching option for display.
     if (q.length === 0 && this.props.value) {
@@ -44,14 +56,8 @@ export default class SchoolAutocompleteDropdown extends Component {
     if (q.length < 4) {
       return Promise.resolve();
     }
-    const searchUrl = `/dashboardapi/v1/schoolsearch/${encodeURIComponent(q)}/40`;
-    return fetch(searchUrl)
-      .then(response => response.ok ? response.json() : [])
-      .then(json => {
-        const schools = json.map(school => this.constructSchoolOption(school));
-        schools.unshift(this.constructSchoolNotFoundOption());
-        return { options: schools };
-    });
+
+    return this.debouncedSearch(q);
   };
 
   render() {
