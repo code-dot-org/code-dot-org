@@ -47,12 +47,12 @@ const styles = {
     padding: 8,
   },
   bubble: {
-    borderColor: color.level_perfect,
     borderWidth: 7,
     borderStyle: 'solid',
     width: 60,
     height: 60,
     borderRadius: '50%',
+    transition: 'background-color 250ms linear, border-color 250ms linear',
   },
   buttonContainer: {
     height: 38,
@@ -128,6 +128,15 @@ const styles = {
 };
 
 export class UnconnectedFinishDialog extends Component {
+  constructor() {
+    super();
+    this.state = {
+      blocksCounted: false,
+      blockCountDescriptionShown: false,
+      achievementsHighlighted: 0,
+    };
+  }
+
   static propTypes = {
     isOpen: PropTypes.bool,
     hideBackdrop: PropTypes.bool,
@@ -148,14 +157,24 @@ export class UnconnectedFinishDialog extends Component {
   };
 
   getBubble() {
+    let backgroundColor = color.white;
+    let borderColor = color.light_gray;
+    if (this.state.blocksCounted) {
+      borderColor = color.level_perfect;
+      if (this.props.isPerfect) {
+        backgroundColor = color.level_perfect;
+      } else {
+        backgroundColor = color.level_passed;
+      }
+    }
     return (
       <div style={styles.bubbleContainer}>
         <div
           className="uitest-bubble"
           style={{
             ...styles.bubble,
-            backgroundColor:
-              this.props.isPerfect ? color.level_perfect : color.level_passed,
+            backgroundColor,
+            borderColor,
           }}
         />
       </div>
@@ -190,7 +209,7 @@ export class UnconnectedFinishDialog extends Component {
             styles.blockCountPass : styles.blockCountPerfect}
         >
           <span style={styles.blockCount}>
-            <Odometer value={this.props.blocksUsed} />
+            <Odometer value={this.props.blocksUsed} onRest={() => this.setState({blocksCounted: true})} />
             {this.props.blockLimit && ('/' + this.props.blockLimit.toString())}
           </span>
           <span style={styles.blockCountDescriptor}>
@@ -247,7 +266,7 @@ export class UnconnectedFinishDialog extends Component {
         Replay
       </button>,
       <button
-        key="contnue"
+        key="continue"
         style={{...styles.button, ...styles.continueButton}}
         onClick={this.props.onContinue}
       >

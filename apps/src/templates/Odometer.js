@@ -21,6 +21,7 @@ export default class Odometer extends Component {
   }
   static propTypes = {
     value: PropTypes.number.isRequired,
+    onRest: PropTypes.func,
   };
 
   render() {
@@ -28,8 +29,13 @@ export default class Odometer extends Component {
     for (let i = 1; i <= this.props.value; i *= 10) {
       const placeValue = Math.floor(this.props.value / i);
       digits.push(
-        <Motion defaultStyle={{value: 0}} style={{value: spring(placeValue, {stiffness: 150, damping: 25})}}>
-          {interpolatingStyle => <OdometerDigit key={i} value={interpolatingStyle.value} />}
+        <Motion
+          defaultStyle={{value: 0}}
+          style={{value: spring(placeValue, {stiffness: 150, damping: 25})}}
+          onRest={i === 1 ? this.props.onRest : undefined}
+          key={i}
+        >
+          {interpolatingStyle => <OdometerDigit value={interpolatingStyle.value} />}
         </Motion>
       );
     }
