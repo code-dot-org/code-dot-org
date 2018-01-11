@@ -335,6 +335,8 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def short_name
+    return '' unless sessions.size && processed_location
+
     "#{friendly_date_range}, #{location_city} #{location_state}#{teachercon? ? ' TeacherCon' : ''}"
   end
 
