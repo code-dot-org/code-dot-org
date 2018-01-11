@@ -91,8 +91,9 @@ module Pd::Application
         ],
         committed_to_diversity: [YES, NO, OTHER_PLEASE_EXPLAIN],
         pay_fee: [
-          'Yes, my school or my teacher will be able to pay the full summer workshop program fee',
-          'No, my school or my teacher will not be able to pay the summer workshop program fee.'
+          'Yes, my school or my teacher will be able to pay the full summer workshop program fee.',
+          'No, my school or my teacher will not be able to pay the summer workshop program fee.',
+          'Not applicable: there is no fee for the summer workshop for teachers in my region.'
         ]
       }
     end

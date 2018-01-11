@@ -57,10 +57,7 @@
     "beginner_mode": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

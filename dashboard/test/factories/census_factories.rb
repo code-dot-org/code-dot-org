@@ -174,6 +174,28 @@ FactoryGirl.define do
     end
   end
 
+  factory :state_cs_offering, class: 'Census::StateCsOffering' do
+    school {build :school}
+    course "Some Random CS Course"
+    school_year 2017
+
+    trait :without_course do
+      course nil
+    end
+
+    trait :without_school do
+      school nil
+    end
+
+    trait :without_school_year do
+      school_year nil
+    end
+
+    trait :with_invalid_school_year do
+      school_year 1900
+    end
+  end
+
   factory :ib_school_code, class: 'Census::IbSchoolCode' do
     school_code "123456"
     school {create :school}
