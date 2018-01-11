@@ -256,7 +256,6 @@ module Pd::Application
         ],
 
         taught_in_past: [
-          'Hour of Code',
           'CS Fundamentals',
           'CS in Algebra',
           'CS in Science',
