@@ -89,4 +89,8 @@ class SchoolStatsByYear < ActiveRecord::Base
       end
     end
   end
+
+  def has_high_school_grades?
+    grade_09_offered || grade_10_offered || grade_11_offered || grade_12_offered || grade_13_offered
+  end
 end
