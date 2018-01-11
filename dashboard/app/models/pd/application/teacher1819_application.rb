@@ -44,6 +44,7 @@ module Pd::Application
 
     serialized_attrs %w(
       pd_workshop_id
+      auto_assigned_enrollment_id
     )
 
     def send_decision_notification_email
@@ -113,17 +114,43 @@ module Pd::Application
       self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
     end
 
-    before_save :enroll_user, if: -> {properties_changed?}
+    before_save :destroy_autoenrollment, if: -> {status_changed? && status != "accepted"}
+    def destroy_autoenrollment
+      return unless auto_assigned_enrollment_id
+
+      Pd::Enrollment.find_by(id: auto_assigned_enrollment_id).try(:destroy)
+      self.auto_assigned_enrollment_id = nil
+    end
+
+    # override
+    def lock!
+      return if locked?
+      super
+      enroll_user if status == "accepted"
+    end
+
     def enroll_user
       return unless pd_workshop_id
 
-      Pd::Enrollment.find_or_create_by!(
+      enrollment = Pd::Enrollment.where(
         pd_workshop_id: pd_workshop_id,
         email: user.email
-      ) do |enrollment|
-        enrollment.user = user
-        enrollment.school_info = user.school_info
-        enrollment.full_name = user.name
+      ).first_or_initialize
+
+      # If this is a new enrollment, we want to:
+      #   - save it with all required data
+      #   - save a reference to it in properties
+      #   - delete the previous auto-created enrollment if it exists
+      if enrollment.new_record?
+        enrollment.update(
+          user: user,
+          school_info: user.school_info,
+          full_name: user.name
+        )
+        enrollment.save!
+
+        destroy_autoenrollment
+        self.auto_assigned_enrollment_id = enrollment.id
       end
     end
 
@@ -342,8 +369,9 @@ module Pd::Application
         ],
 
         pay_fee: [
-          'Yes, my school or I will be able to pay the full summer workshop program fee',
-          'No, my school or I will not be able to pay the summer workshop program fee.'
+          'Yes, my school or I will be able to pay the full summer workshop program fee.',
+          'No, my school or I will not be able to pay the summer workshop program fee.',
+          'Not applicable: there is no fee for the summer workshop for teachers in my region.'
         ],
 
         committed: [
@@ -580,6 +608,22 @@ module Pd::Application
       sanitize_form_data_hash[:principal_approval] || ''
     end
 
+    def date_accepted
+      accepted_at.try(:strftime, '%b %e')
+    end
+
+    def assigned_workshop
+      pd_workshop_id ? Pd::Workshop.find(pd_workshop_id).location_city : ''
+    end
+
+    def registered_workshop
+      if pd_workshop_id
+        Pd::Enrollment.exists?(pd_workshop_id: pd_workshop_id, user: user) ? 'Yes' : 'No'
+      else
+        ''
+      end
+    end
+
     # Called once after the application is submitted, and the principal approval is done
     # Automatically scores the application based on given responses for this and the
     # principal approval application. It is idempotent, and will not override existing
@@ -629,13 +673,11 @@ module Pd::Application
     def self.csv_header(course)
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
-        columns = filtered_labels(course).values.map {|l| markdown.render(l)}
+        columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
         columns.push(
-          'Status',
           'Principal Approval',
           'Meets Criteria',
           'Total Score',
-          'Notes',
           'Regional Partner',
           'School District',
           'School',
@@ -643,9 +685,19 @@ module Pd::Application
           'School Address',
           'School City',
           'School State',
-          'School Zip Code'
+          'School Zip Code',
+          'Notes',
+          'Status'
         )
         csv << columns
+      end
+    end
+
+    # @override
+    def self.cohort_csv_header
+      CSV.generate do |csv|
+        csv << ['Date Accepted', 'Applicant Name', 'District Name', 'School Name',
+                'Email', 'Assigned Workshop', 'Registered Workshop']
       end
     end
 
@@ -655,11 +707,9 @@ module Pd::Application
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
         row.push(
-          status,
           principal_approval,
           meets_criteria,
           total_score,
-          notes,
           regional_partner_name,
           district_name,
           school_name,
@@ -667,9 +717,26 @@ module Pd::Application
           school_address,
           school_city,
           school_state,
-          school_zip_code
+          school_zip_code,
+          notes,
+          status
         )
         csv << row
+      end
+    end
+
+    # @override
+    def to_cohort_csv_row
+      CSV.generate do |csv|
+        csv << [
+          date_accepted,
+          applicant_name,
+          district_name,
+          school_name,
+          user.email,
+          assigned_workshop,
+          registered_workshop
+        ]
       end
     end
 
@@ -717,6 +784,12 @@ module Pd::Application
         [:able_to_attend_multiple, NO_EXPLAIN, :able_to_attend_multiple_explain],
         [:committed, NO_EXPLAIN, :committed_explain]
       ]
+    end
+
+    # @override
+    # Add account_email (based on the associated user's email) to the sanitized form data hash
+    def sanitize_form_data_hash
+      super.merge(account_email: user.email)
     end
 
     protected

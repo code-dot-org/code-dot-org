@@ -1,8 +1,8 @@
 import React from 'react';
-import FormComponent from '../form_components/FormComponent';
+import FormComponent from './FormComponent';
 import MarkdownSpan from '../components/markdownSpan';
 
-export default class ApplicationFormComponent extends FormComponent {
+export default class LabeledFormComponent extends FormComponent {
   /**
    * Override in derived classes
    * @type {Object} - map of control name to label
