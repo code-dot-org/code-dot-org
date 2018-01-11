@@ -3,6 +3,7 @@ require 'test_helper'
 class Api::V1::SchoolsControllerTest < ActionController::TestCase
   ALBERT_EINSTEIN_ACADEMY_ELEMENTARY = {
     nces_id: '60000113717',
+    school_type: 'charter',
     name: 'Albert Einstein Academy Elementary',
     city: 'Santa Clarita',
     state: 'CA',
@@ -11,6 +12,7 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
 
   GLADYS_JUNG_ELEMENTARY = {
     nces_id: '20000100207',
+    school_type: 'public',
     name: 'Gladys Jung Elementary',
     city: 'Bethel',
     state: 'AK',
@@ -19,6 +21,7 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
 
   JOANN_A_ALEXIE_MEMORIAL_SCHOOL = {
     nces_id: '20000100206',
+    school_type: 'public',
     name: 'Joann A. Alexie Memorial School',
     city: 'Atmautluak',
     state: 'AK',
