@@ -19,9 +19,9 @@ export const studentSectionDataPropType = PropTypes.shape({
   userType: PropTypes.string,
   age: PropTypes.number,
   gender: PropTypes.string,
-  secretWords: PropTypes.string,
-  secretPictureName: PropTypes.string,
-  secretPicturePath: PropTypes.string,
+  secret_words: PropTypes.string,
+  secret_picture_name: PropTypes.string,
+  secret_picture_path: PropTypes.string,
   sectionId: PropTypes.number,
 });
 
