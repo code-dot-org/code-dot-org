@@ -340,7 +340,7 @@ module Pd::Application
 
         csd_terms_per_year: COMMON_OPTIONS[:terms_per_year],
 
-        csp_which_grades: (9..12).map(&:to_s),
+        csp_which_grades: (6..12).map(&:to_s),
 
         csp_course_hours_per_week: [
           'More than 5 course hours per week',
