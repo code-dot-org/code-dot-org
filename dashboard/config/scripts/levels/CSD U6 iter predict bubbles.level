@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2018-01-10T23:57:42.000Z",
+  "created_at": "2018-01-11T17:01:51.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
@@ -187,11 +187,16 @@
       "lightSensor.start": null
     },
     "edit_code": true,
+    "contained_level_names": [
+      "CSD U6 iter predict bubbles contained"
+    ],
+    "encrypted_examples": [
+
+    ],
     "embed": "false",
-    "instructions": "# Multi-plane Controller\r\n\r\nThis program moves the three planes using the board accelerometer and the on-screen check boxes.  Right now, only the red plane works.\r\n\r\n# Do This\r\n* Create a new `movePlane(name)` function that can move any plane.\r\n* Call the `movePlane(name)` function inside the event block, such that it only moves when its checkbox is checked.",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "onBoardEvent(accelerometer, \"data\", function() {\r\n  if (getChecked(\"red\")) {\r\n    //move the red plane\r\n    moveRed();\r\n  }\r\n  if (getChecked(\"green\")) {\r\n    //move the green plane\r\n  }\r\n  if (getChecked(\"blue\")) {\r\n    // move the blue plane\r\n  }\r\n});\r\nfunction moveRed() {\r\n  setProperty(\"redPlane\", \"x\", accelerometer.getOrientation(\"roll\") + getProperty(\"redPlane\", \"x\"));\r\n  setProperty(\"redPlane\", \"y\", accelerometer.getOrientation(\"pitch\") + getProperty(\"redPlane\", \"y\"));\r\n}",
+    "start_blocks": "var bubbles = [\"bubble0\", \"bubble1\", \"bubble2\", \"bubble3\", \"bubble4\", \"bubble5\", \"bubble6\", \"bubble7\"];\r\nsoundSensor.threshold = 50;\r\nonBoardEvent(soundSensor, \"change\", function() {\r\n  for (var i=0; i<bubbles.length; i++) {\r\n    bubbleMove(bubbles[i]);\r\n  }\r\n});\r\n\r\n\r\nfunction bubbleMove(bubble) {\r\n  setProperty(bubble, \"x\", 190 + randomNumber(-5, 5));\r\n  setProperty(bubble, \"y\" , getProperty(bubble, \"y\") - 4);\r\n  if (getProperty(bubble, \"y\") < -30) {\r\n    setProperty(bubble, \"y\", 370);\r\n  }\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -220,18 +225,18 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 451px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><img data-canonical-image-url=\"icon://fa-paper-plane\" data-object-fit=\"contain\" id=\"redPlane\" style=\"height: 50px; width: 50px; position: absolute; left: 115px; top: 110px; margin: 0px;\" data-icon-color=\"red\"><img data-canonical-image-url=\"icon://fa-plane\" data-object-fit=\"contain\" id=\"bluePlane\" style=\"height: 50px; width: 50px; position: absolute; left: 160px; top: 195px; margin: 0px;\" data-icon-color=\"blue\"><input type=\"checkbox\" id=\"red\" style=\"width: 35px; height: 25px; margin: 0px; position: absolute; left: 40px; top: 385px;\"><input type=\"checkbox\" id=\"green\" style=\"width: 35px; height: 25px; margin: 0px; position: absolute; left: 125px; top: 385px;\"><input type=\"checkbox\" id=\"blue\" style=\"width: 35px; height: 25px; margin: 0px; position: absolute; left: 210px; top: 385px;\"><img data-canonical-image-url=\"icon://fa-paper-plane\" data-object-fit=\"contain\" id=\"image1\" style=\"height: 30px; width: 30px; position: absolute; left: 40px; top: 415px; margin: 0px;\" data-icon-color=\"red\"><img data-canonical-image-url=\"icon://fa-paper-plane-o\" data-object-fit=\"contain\" id=\"image4\" style=\"height: 30px; width: 30px; position: absolute; left: 125px; top: 415px; margin: 0px;\" data-icon-color=\"green\"><img data-canonical-image-url=\"icon://fa-plane\" data-object-fit=\"contain\" id=\"image5\" style=\"height: 30px; width: 30px; position: absolute; left: 210px; top: 415px; margin: 0px;\" data-icon-color=\"blue\"><img data-canonical-image-url=\"icon://fa-paper-plane-o\" data-object-fit=\"contain\" id=\"greenPlane\" style=\"height: 50px; width: 50px; position: absolute; left: 70px; top: 205px; margin: 0px;\" data-icon-color=\"green\"></div></div>",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 451px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(118, 224, 232);\"><img data-canonical-image-url=\"icon://fa-circle-thin\" data-object-fit=\"contain\" id=\"bubble3\" style=\"height: 30px; width: 30px; position: absolute; left: 190px; top: 220px; margin: 0px;\" data-icon-color=\"#FFFFFF\"><img data-canonical-image-url=\"icon://fa-circle-thin\" data-object-fit=\"contain\" id=\"bubble2\" style=\"height: 30px; width: 30px; position: absolute; left: 190px; top: 270px; margin: 0px;\" data-icon-color=\"#FFFFFF\"><img data-canonical-image-url=\"icon://fa-circle-thin\" data-object-fit=\"contain\" id=\"bubble1\" style=\"height: 30px; width: 30px; position: absolute; left: 190px; top: 320px; margin: 0px;\" data-icon-color=\"#FFFFFF\"><img data-canonical-image-url=\"icon://fa-circle-thin\" data-object-fit=\"contain\" id=\"bubble0\" style=\"height: 30px; width: 30px; position: absolute; left: 190px; top: 370px; margin: 0px;\" data-icon-color=\"#FFFFFF\"><img src=\"https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png\" data-canonical-image-url=\"https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png\" data-object-fit=\"contain\" id=\"image1\" style=\"height: 100px; width: 100px; position: absolute; left: 210px; top: 349px; margin: 0px;\"><img data-canonical-image-url=\"icon://fa-circle-thin\" data-object-fit=\"contain\" id=\"bubble4\" style=\"height: 30px; width: 30px; position: absolute; margin: 0px; left: 190px; top: 170px;\" data-icon-color=\"#FFFFFF\"><img data-canonical-image-url=\"icon://fa-circle-thin\" data-object-fit=\"contain\" id=\"bubble7\" style=\"height: 30px; width: 30px; position: absolute; margin: 0px; left: 190px; top: 20px;\" data-icon-color=\"#FFFFFF\"><img data-canonical-image-url=\"icon://fa-circle-thin\" data-object-fit=\"contain\" id=\"bubble6\" style=\"height: 30px; width: 30px; position: absolute; margin: 0px; left: 190px; top: 70px;\" data-icon-color=\"#FFFFFF\"><img data-canonical-image-url=\"icon://fa-circle-thin\" data-object-fit=\"contain\" id=\"bubble5\" style=\"height: 30px; width: 30px; position: absolute; margin: 0px; left: 190px; top: 120px;\" data-icon-color=\"#FFFFFF\"></div></div>",
     "hide_view_data_button": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "contained_level_names": null
+    "markdown_instructions": "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-11 00:04:33 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-11 17:06:21 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-01-11 17:06:48 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-01-11 17:07:13 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-01-11 17:08:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_html\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-01-11 17:08:45 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_html\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

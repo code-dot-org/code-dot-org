@@ -187,10 +187,6 @@
       "lightSensor.start": null
     },
     "edit_code": true,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "# Clouds\r\n\r\nThis program makes the clouds move when you blow on the sound sensor, but it's not finished.\r\n\r\n# Do This\r\n* Create a new function `moveCloud(name)` that will move any cloud.\r\n  * (Hint: you will use almost all the same code as the `moveCloud0` function)\r\n* Call your new `moveCloud(name)` function inside the event block, once for each cloud name.\r\n * (Hint: this is similar to how the `loopCloud(name)` function is called many times.",
     "instructions_important": "false",
@@ -230,7 +226,8 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true"
+    "makerlab_enabled": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

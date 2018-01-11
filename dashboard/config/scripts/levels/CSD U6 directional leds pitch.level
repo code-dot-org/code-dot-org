@@ -57,11 +57,8 @@
       "lessThanOperator": null,
       "greaterThanOperator": null
     },
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "project_template_level_name": "CSD U6 directional LEDs template"
+    "project_template_level_name": "CSD U6 directional LEDs template",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

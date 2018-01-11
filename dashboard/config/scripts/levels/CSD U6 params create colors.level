@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2018-01-10T23:57:42.000Z",
+  "created_at": "2018-01-11T03:56:59.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
@@ -187,11 +187,14 @@
       "lightSensor.start": null
     },
     "edit_code": true,
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
     "embed": "false",
-    "instructions": "# Multi-plane Controller\r\n\r\nThis program moves the three planes using the board accelerometer and the on-screen check boxes.  Right now, only the red plane works.\r\n\r\n# Do This\r\n* Create a new `movePlane(name)` function that can move any plane.\r\n* Call the `movePlane(name)` function inside the event block, such that it only moves when its checkbox is checked.",
+    "markdown_instructions": "# Color Picker\r\n\r\nIn this program, pressing the buttons at the bottom of the screen changes the color of the images and the color LEDs.\r\n\r\n# Do This\r\n* Create a function `chooseColor(color)` that changes each of the images and the color LEDs to the given color.\r\n* Call your function in the event blocks so that all the buttons work.",
     "instructions_important": "false",
-    "submittable": "false",
-    "start_blocks": "onBoardEvent(accelerometer, \"data\", function() {\r\n  if (getChecked(\"red\")) {\r\n    //move the red plane\r\n    moveRed();\r\n  }\r\n  if (getChecked(\"green\")) {\r\n    //move the green plane\r\n  }\r\n  if (getChecked(\"blue\")) {\r\n    // move the blue plane\r\n  }\r\n});\r\nfunction moveRed() {\r\n  setProperty(\"redPlane\", \"x\", accelerometer.getOrientation(\"roll\") + getProperty(\"redPlane\", \"x\"));\r\n  setProperty(\"redPlane\", \"y\", accelerometer.getOrientation(\"pitch\") + getProperty(\"redPlane\", \"y\"));\r\n}",
+    "start_blocks": "onEvent(\"redButton\", \"click\", function() {\r\n  setProperty(\"star0\", \"icon-color\", \"red\");\r\n  setProperty(\"star1\", \"icon-color\", \"red\");\r\n  setProperty(\"star2\", \"icon-color\", \"red\");\r\n  setProperty(\"star3\", \"icon-color\", \"red\");\r\n  setProperty(\"star4\", \"icon-color\", \"red\");\r\n  setProperty(\"lightbulb\", \"icon-color\", \"red\");\r\n  for (var i=0; i<colorLeds.length; i++) {\r\n    colorLeds[i].color(\"red\");\r\n  }\r\n});\r\nonEvent(\"yellowButton\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"blueButton\", \"click\", function() {\r\n  \r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -214,24 +217,24 @@
     "lock_zero_param_functions": "false",
     "disable_if_else_editing": "false",
     "free_play": "false",
+    "submittable": "false",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 451px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><img data-canonical-image-url=\"icon://fa-paper-plane\" data-object-fit=\"contain\" id=\"redPlane\" style=\"height: 50px; width: 50px; position: absolute; left: 115px; top: 110px; margin: 0px;\" data-icon-color=\"red\"><img data-canonical-image-url=\"icon://fa-plane\" data-object-fit=\"contain\" id=\"bluePlane\" style=\"height: 50px; width: 50px; position: absolute; left: 160px; top: 195px; margin: 0px;\" data-icon-color=\"blue\"><input type=\"checkbox\" id=\"red\" style=\"width: 35px; height: 25px; margin: 0px; position: absolute; left: 40px; top: 385px;\"><input type=\"checkbox\" id=\"green\" style=\"width: 35px; height: 25px; margin: 0px; position: absolute; left: 125px; top: 385px;\"><input type=\"checkbox\" id=\"blue\" style=\"width: 35px; height: 25px; margin: 0px; position: absolute; left: 210px; top: 385px;\"><img data-canonical-image-url=\"icon://fa-paper-plane\" data-object-fit=\"contain\" id=\"image1\" style=\"height: 30px; width: 30px; position: absolute; left: 40px; top: 415px; margin: 0px;\" data-icon-color=\"red\"><img data-canonical-image-url=\"icon://fa-paper-plane-o\" data-object-fit=\"contain\" id=\"image4\" style=\"height: 30px; width: 30px; position: absolute; left: 125px; top: 415px; margin: 0px;\" data-icon-color=\"green\"><img data-canonical-image-url=\"icon://fa-plane\" data-object-fit=\"contain\" id=\"image5\" style=\"height: 30px; width: 30px; position: absolute; left: 210px; top: 415px; margin: 0px;\" data-icon-color=\"blue\"><img data-canonical-image-url=\"icon://fa-paper-plane-o\" data-object-fit=\"contain\" id=\"greenPlane\" style=\"height: 50px; width: 50px; position: absolute; left: 70px; top: 205px; margin: 0px;\" data-icon-color=\"green\"></div></div>",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 451px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><img data-canonical-image-url=\"icon://fa-star\" data-object-fit=\"contain\" id=\"star0\" style=\"height: 55px; width: 80px; position: absolute; left: 5px; top: 150px; margin: 0px;\" data-icon-color=\"black\"><img data-canonical-image-url=\"icon://fa-star\" data-object-fit=\"contain\" id=\"star3\" style=\"height: 55px; width: 80px; position: absolute; left: 170px; top: 105px; margin: 0px;\" data-icon-color=\"black\"><img data-canonical-image-url=\"icon://fa-star\" data-object-fit=\"contain\" id=\"star2\" style=\"height: 55px; width: 80px; position: absolute; left: 110px; top: 85px; margin: 0px;\" data-icon-color=\"black\"><img data-canonical-image-url=\"icon://fa-star\" data-object-fit=\"contain\" id=\"star1\" style=\"height: 55px; width: 80px; position: absolute; left: 50px; top: 105px; margin: 0px;\" data-icon-color=\"black\"><img data-canonical-image-url=\"icon://fa-star\" data-object-fit=\"contain\" id=\"star4\" style=\"height: 55px; width: 80px; position: absolute; left: 215px; top: 155px; margin: 0px;\" data-icon-color=\"black\"><img data-canonical-image-url=\"icon://fa-lightbulb-o\" data-object-fit=\"contain\" id=\"lightbulb\" style=\"height: 100px; width: 100px; position: absolute; left: 100px; top: 205px; margin: 0px;\" data-icon-color=\"black\"><button id=\"redButton\" style=\"padding: 0px; margin: 0px; height: 30px; width: 65px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); position: absolute; left: 20px; top: 355px;\">Red</button><button id=\"yellowButton\" style=\"padding: 0px; margin: 0px; height: 30px; width: 65px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); position: absolute; left: 120px; top: 355px;\">Yellow</button><button id=\"blueButton\" style=\"padding: 0px; margin: 0px; height: 30px; width: 65px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); position: absolute; left: 225px; top: 355px;\">Blue</button></div></div>",
     "hide_view_data_button": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
-    "contained_level_names": null
+    "makerlab_enabled": "true"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-11 00:04:33 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-11 04:00:50 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-01-11 04:02:06 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"start_html\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
