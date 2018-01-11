@@ -4,26 +4,12 @@
   show_census_layout, show_census_announcement, census_announcement = Homepage.get_census(request)
 
 - main_actions = capture_haml do
-  - actions.each_with_index do |entry, index|
+  - actions.each do |entry|
     .action
-      - if entry[:type] == "hoc_title"
-        #title= I18n.t(entry[:text])
-      - elsif entry[:type] == "num_served"
-        #subtitle.students-served= I18n.t(entry[:text]).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
-      - elsif entry[:type] == "hoc_buttons"
-        .buttongroup
-          %a{href: "/learn"}
-            %button.herohocbutton= I18n.t(entry[:text])
-        %div{style: "clear: both;"}
-      - elsif entry[:type] == "cta_button"
+      - if entry[:type] == "cta_button"
         .buttongroup{style: "margin-bottom: 15px"}
           %a{href: entry[:url]}
             %button.herohocbutton{style: "min-width: 230px; margin-right: 0px"}= I18n.t(entry[:text])
-        %div{style: "clear: both;"}
-      - elsif entry[:type] == "cta_button_secondary"
-        .buttongroup{style: "margin-bottom: 15px"}
-          %a{href: entry[:url]}
-            %button.herohocbutton{style: "min-width: 230px; margin-right: 0px; background-color: transparent; border-color: white; border-width: 2px; margin-top: 0px"}= I18n.t(entry[:text])
         %div{style: "clear: both;"}
       - elsif entry[:type] == "video"
         %button{onclick: "return showVideo_mainvideo();", style: "min-width: 230px; margin-top: 0px; background-color: transparent; border-color: white; border-width: 2px"}
