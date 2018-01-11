@@ -26,11 +26,11 @@ export default class Releases extends Teachercon1819FormComponent {
         <h4>Section 3: Releases</h4>
         <FormGroup>
           <ControlLabel>
-            Please read this <a href="https://docs.google.com/document/d/12NVUcqccNRbVukoGMCserwSpg4vfG0vNlEqTxr6oit0/edit">photo release.</a>
+            Please read this <a target="_blank" href="https://docs.google.com/document/d/12NVUcqccNRbVukoGMCserwSpg4vfG0vNlEqTxr6oit0/edit">photo release.</a>
           </ControlLabel>
           {this.selectFor("photoRelease", { placeholder: "--" })}
           <ControlLabel>
-            Please read this <a href="https://docs.google.com/document/d/15N5N1m-BPCU7obQDf7FLLhEt3IComFGB1u3N6kEQR6k/edit">liability waiver.</a>
+            Please read this <a target="_blank" href="https://docs.google.com/document/d/15N5N1m-BPCU7obQDf7FLLhEt3IComFGB1u3N6kEQR6k/edit">liability waiver.</a>
           </ControlLabel>
           {this.selectFor("liabilityWaiver", { placeholder: "--" })}
         </FormGroup>
