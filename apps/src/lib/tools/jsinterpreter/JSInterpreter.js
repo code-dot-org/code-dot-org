@@ -288,6 +288,13 @@ export default class JSInterpreter {
       // away so it can be returned in the native event handler
       this.seenReturnFromCallbackDuringExecution = true;
       this.lastCallbackRetVal = retVal;
+
+      // If we were stepping in the debugger, go back to running state:
+      if (this.paused) {
+        this.nextStep = StepType.RUN;
+        this.onNextStepChanged.notifyObservers();
+        this.handlePauseContinue();
+      }
     }
     // Provide warnings to the user if this function has been called with a
     // meaningful return value while we are no longer in the native event handler
