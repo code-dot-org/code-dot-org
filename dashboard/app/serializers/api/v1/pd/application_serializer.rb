@@ -27,4 +27,8 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   def bonus_points
     object.try(:total_score) || nil
   end
+
+  def pd_workshop_id
+    object.try(:pd_workshop_id)
+  end
 end
