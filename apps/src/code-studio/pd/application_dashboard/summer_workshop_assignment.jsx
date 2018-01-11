@@ -2,11 +2,17 @@ import React, {PropTypes} from 'react';
 import Select from 'react-select';
 import { Grid, Row, Col, ControlLabel } from 'react-bootstrap';
 import { SelectStyleProps } from '../constants';
-import DetailViewResponse from './detail_view_response';
 
 const styles = {
   select: {
     maxWidth: '400px'
+  },
+  grid: {
+    marginBottom: '20px',
+    paddingLeft: '0px'
+  },
+  row: {
+    width: '63%'
   }
 };
 
@@ -30,14 +36,14 @@ export default class SummerWorkshopAssignment extends React.Component {
 
   render() {
     return (
-      <Grid fluid>
-        <Row>
+      <Grid fluid style={styles.grid}>
+        <Row style={styles.row}>
           <Col md={2} sm={3}>
             <ControlLabel>
               Assigned Workshop
             </ControlLabel>
           </Col>
-          <Col md={3} sm={4}>
+          <Col md={10} sm={9}>
             <Select
               value={this.props.assignedWorkshopId}
               onChange={this.props.onChange}
@@ -48,12 +54,6 @@ export default class SummerWorkshopAssignment extends React.Component {
             />
           </Col>
         </Row>
-        <DetailViewResponse
-          question={this.props.canYouAttendQuestion}
-          answer={this.props.canYouAttendAnswer}
-          layout="lineItem"
-        />
-        <br/>
       </Grid>
     );
   }
