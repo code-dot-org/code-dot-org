@@ -42,10 +42,21 @@ class Census::ApSchoolCode < ApplicationRecord
   end
 
   CENSUS_BUCKET_NAME = "cdo-census".freeze
+  CSV_OBJECT_KEY = "ap_school_codes.csv".freeze
 
   def self.seed_from_s3
-    AWS::S3.process_file(CENSUS_BUCKET_NAME, "ap_school_codes.csv") do |filename|
-      seed_from_csv(filename)
+    etag = AWS::S3.create_client.head_object({bucket: CENSUS_BUCKET_NAME, key: CSV_OBJECT_KEY}).etag
+    unless SeededS3Object.where(bucket: CENSUS_BUCKET_NAME, key: CSV_OBJECT_KEY, etag: etag).count > 0
+      AWS::S3.process_file(CENSUS_BUCKET_NAME, CSV_OBJECT_KEY) do |filename|
+        ActiveRecord::Base.transaction do
+          seed_from_csv(filename)
+          SeededS3Object.create!(
+            bucket: CENSUS_BUCKET_NAME,
+            key: CSV_OBJECT_KEY,
+            etag: etag,
+          )
+        end
+      end
     end
   end
 
