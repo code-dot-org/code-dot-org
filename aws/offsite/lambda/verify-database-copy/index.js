@@ -17,23 +17,34 @@ const DB_PASSWORD = process.env.DB_PASSWORD;
 
 var status_message = '';
 
-
-var postStatusToSlack = function postStatusToSlack(message) {
+var publishStatus = function publishStatus(message) {
     console.log('Posting status to Slack');
     var slack = new Slack();
     slack.setWebhook(SLACK_WEBHOOK_URL);
-    slack.webhook({
-            channel: SLACK_CHANNEL,
-            text: message
-        },
-        function (error, response) {
-            if (error) {
-                console.log('Slack Post Error: ' + JSON.stringify(error));
-            } else {
-                console.log('Slack Post Response: ' + JSON.stringify(response));
-            }
-        }
-    );
+    var webhookPromise = promisify(slack.webhook);
+    webhookPromise({
+        channel: SLACK_CHANNEL,
+        text: message
+    })
+        .then(response => {
+            console.log(response);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+
+    var sns = new AWS.SNS();
+    sns.publish({
+        Message: message,
+        Subject: 'code.org verify offsite copy of database',
+        TopicArn: 'arn:aws:sns:us-east-1:215291861542:verify-database-status'
+    }).promise()
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.log(error);
+        });
 };
 
 
@@ -61,8 +72,8 @@ exports.handler = (event, context, callback) => {
             .then(value => {
                 // check if password update is pending
                 return rds.describeDBInstances({
-                        DBInstanceIdentifier: DB_INSTANCE_IDENTIFIER
-                    }).promise();
+                    DBInstanceIdentifier: DB_INSTANCE_IDENTIFIER
+                }).promise();
             })
             .then(data => {
                 if (data.DBInstances[0].PendingModifiedValues.hasOwnProperty('MasterUserPassword')) {
@@ -84,7 +95,7 @@ exports.handler = (event, context, callback) => {
             .then(rows => {
                 status_message = 'Successfully queried offsite backup of database.  Number of Users = ' + rows[0].number_of_users;
                 console.log(status_message);
-                postStatusToSlack(status_message);
+                publishStatus(status_message);
                 mysqlConnection.end();
 
                 return rds.deleteDBInstance({
@@ -101,7 +112,7 @@ exports.handler = (event, context, callback) => {
                 }
                 status_message = JSON.stringify(error);
                 console.log(status_message);
-                postStatusToSlack(status_message);
+                publishStatus(status_message);
                 callback(error);
             });
     } else {
