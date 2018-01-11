@@ -4604,6 +4604,8 @@ en:
               name: Arrays and For Loops
             Circuits and Physical Prototypes:
               name: Circuits and Physical Prototypes
+            Accelerometer:
+              name: Accelerometer
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -6730,7 +6732,7 @@ en:
               name: Programming - Hour of Code
             Simple Encryption:
               name: Simple Encryption
-          title: PwC Access Your Potential curriculum
+          title: PwC's Access Your Potential curriculum
           description_audience: ''
           description_short: ''
           description: At PwC, we believe that all students have the potential to be tomorrow’s leaders and tech-driven workforce. Access Your Potential is our commitment to help close the opportunity gap by equipping young people, especially those from disadvantaged communities, with the financial, technology and career-selection skills they need to change the trajectory of their lives. As part of our commitment, we’re excited to launch our Access Your Potential middle school technology and careers curriculum.
