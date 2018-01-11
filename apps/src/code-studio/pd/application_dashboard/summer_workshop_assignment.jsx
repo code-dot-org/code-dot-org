@@ -32,7 +32,7 @@ export default class SummerWorkshopAssignment extends React.Component {
     return (
       <Grid fluid>
         <Row>
-          <Col md={3} sm={4}>
+          <Col md={2} sm={3}>
             <ControlLabel>
               Assigned Workshop
             </ControlLabel>

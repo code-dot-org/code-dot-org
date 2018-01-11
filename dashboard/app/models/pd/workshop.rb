@@ -335,7 +335,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def short_name
-    "#{friendly_date_range}, #{location_city} #{location_state}"
+    "#{friendly_date_range}, #{location_city} #{location_state}#{teachercon? ? ' TeacherCon' : ''}"
   end
 
   # E.g. "March 1-3, 2017" or "March 30 - April 2, 2017"
