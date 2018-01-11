@@ -79,10 +79,17 @@ export function renderSectionTable(sectionId, loginType) {
     url: dataUrl,
     dataType: 'json'
   }).done(studentData => {
-    studentData = studentData.map((section) => {
+    studentData = studentData.map((student) => {
       return {
-        ...section,
-        loginType: loginType
+        id: student.id,
+        name: student.name,
+        username: student.username,
+        age: student.age,
+        gender: student.gender,
+        secretWords: student.secret_words,
+        secretPicturePath: student.secret_picture_path,
+        sectionId: sectionId,
+        loginType: loginType,
       };
     });
     ReactDOM.render(

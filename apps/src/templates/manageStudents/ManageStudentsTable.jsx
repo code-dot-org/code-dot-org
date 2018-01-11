@@ -16,12 +16,10 @@ export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string,
   username: PropTypes.string,
-  userType: PropTypes.string,
   age: PropTypes.number,
   gender: PropTypes.string,
-  secret_words: PropTypes.string,
-  secret_picture_name: PropTypes.string,
-  secret_picture_path: PropTypes.string,
+  secretWords: PropTypes.string,
+  secretPicturePath: PropTypes.string,
   sectionId: PropTypes.number,
   loginType: PropTypes.string,
 });
@@ -82,8 +80,8 @@ const passwordFormatter = (loginType, {rowData}) => {
         <ShowSecret
           resetSecret={()=>{}}
           initialIsShowing={false}
-          secretWord={rowData.secret_words}
-          secretPicture={rowData.secret_picture_path}
+          secretWord={rowData.secretWords}
+          secretPicture={rowData.secretPicturePath}
           loginType={rowData.loginType}
         />
       }
