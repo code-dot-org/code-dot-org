@@ -429,6 +429,8 @@ GameLabP5.prototype.init = function (options) {
  */
 GameLabP5.prototype.resetExecution = function () {
 
+  gameLabSprite.setCreateWithDebug(false);
+
   if (this.p5) {
     this.p5.remove();
     this.p5 = null;
@@ -539,25 +541,35 @@ GameLabP5.prototype.startExecution = function () {
         if (typeof context.setup === 'function') {
           context.setup();
         } else {
-          this._setupEpilogue();
+          this._setupEpiloguePhase1();
+          this._setupEpiloguePhase2();
         }
 
       }.bind(p5obj);
 
-      p5obj._setupEpilogue = function () {
+      p5obj._setupEpiloguePhase1 = function () {
         /*
-         * Copied code from p5 _setup()
+         * Modified code from p5 _setup()
          */
 
-        // unhide any hidden canvases that were created
-        var canvases = document.getElementsByTagName('canvas');
-        for (var i = 0; i < canvases.length; i++) {
-          var k = canvases[i];
-          if (k.dataset.hidden === 'true') {
-            k.style.visibility = '';
-            delete(k.dataset.hidden);
+        if (!this._setupPhase1Done){
+          // unhide any hidden canvases that were created
+          var canvases = document.getElementsByTagName('canvas');
+          for (var i = 0; i < canvases.length; i++) {
+            var k = canvases[i];
+            if (k.dataset.hidden === 'true') {
+              k.style.visibility = '';
+              delete(k.dataset.hidden);
+            }
           }
+          this._setupPhase1Done = true;
         }
+      }.bind(p5obj);
+
+      p5obj._setupEpiloguePhase2 = function () {
+        /*
+         * Modified code from p5 _setup()
+         */
         this._setupDone = true;
 
       }.bind(p5obj);
@@ -794,13 +806,40 @@ GameLabP5.prototype.getFrameRate = function () {
   return this.p5 ? this.p5.frameRate() : 0;
 };
 
+/**
+ * Mark all current and future sprites as debug=true.
+ */
+GameLabP5.prototype.debugSprites = function () {
+  if (this.p5) {
+    gameLabSprite.setCreateWithDebug(true);
+    this.p5.allSprites.forEach(sprite => {
+      sprite.debug = true;
+    });
+  }
+};
+
 GameLabP5.prototype.afterDrawComplete = function () {
   this.p5.afterUserDraw();
   this.p5.afterRedraw();
 };
 
+/**
+ * Setup has started and the debugger may be at a breakpoint. Run Phase1 of
+ * of the epilogue so the student can see what they may be drawing in their
+ * setup code while debugging.
+ */
+GameLabP5.prototype.afterSetupStarted = function () {
+  this.p5._setupEpiloguePhase1();
+};
+
+/**
+ * Setup has completed. Run Phase1 and Phase2 of the epilogue. It is safe to
+ * call _setupEpiloguePhase1() multiple times in the event that it may already
+ * have been called.
+ */
 GameLabP5.prototype.afterSetupComplete = function () {
-  this.p5._setupEpilogue();
+  this.p5._setupEpiloguePhase1();
+  this.p5._setupEpiloguePhase2();
 };
 
 /**
