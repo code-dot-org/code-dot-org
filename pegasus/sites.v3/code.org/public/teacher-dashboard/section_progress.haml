@@ -3,11 +3,10 @@ layout: none
 theme: none
 content-type: text/ng-template
 ---
+%link{:rel => 'stylesheet', :type => 'text/css', :href => '/shared/css/teacher-announcement.css'}
 
 #section-progress-react{'ng-init' => '$emit("section-progress-rendered");', 'ng-show' => 'react_progress'}
 #section-progress-angular{'ng-hide' => 'react_progress'}
-  %link{:rel => 'stylesheet', :type => 'text/css', :href => '/shared/css/teacher-announcement.css'}
-
   %br/
 
   .loading{'ng-hide' => 'progressLoadedFirst'}
