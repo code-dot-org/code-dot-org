@@ -53,8 +53,8 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:withdraw_other],
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline],
       ],
-      photoRelease: YES_OR_NO,
-      liabilityWaiver: YES_OR_NO,
+      photoRelease: [YES],
+      liabilityWaiver: [YES],
     }.freeze
   end
 
