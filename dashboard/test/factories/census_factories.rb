@@ -182,7 +182,7 @@ FactoryGirl.define do
     trait :without_course do
       course nil
     end
-    
+
     trait :without_school do
       school nil
     end
