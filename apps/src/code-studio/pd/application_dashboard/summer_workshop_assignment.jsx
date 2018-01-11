@@ -17,8 +17,12 @@ export default class SummerWorkshopAssignment extends React.Component {
     onChange: PropTypes.func.isRequired,
     editing: PropTypes.bool.isRequired,
     regionalPartnerGroup: PropTypes.number,
-    canYouAttendQuestion: PropTypes.string.isRequired,
-    canYouAttendAnswer: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]).isRequired
+    canYouAttendQuestion: PropTypes.string,
+    canYouAttendAnswer: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)])
+  }
+
+  state = {
+    loading: true
   }
 
   render() {
@@ -29,7 +33,7 @@ export default class SummerWorkshopAssignment extends React.Component {
             Assigned Workshop
           </ControlLabel>
           <Select
-            value={this.props.assignedWorkshop.value}
+            value={this.props.assignedWorkshop ? this.props.assignedWorkshop.value : -1}
             onChange={this.props.onChange}
             options={this.props.workshops}
             disabled={!this.props.editing}

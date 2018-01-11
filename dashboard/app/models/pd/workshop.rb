@@ -334,6 +334,10 @@ class Pd::Workshop < ActiveRecord::Base
     "#{course_subject} workshop on #{start_time} at #{location_name}"[0...255]
   end
 
+  def short_name
+    "#{friendly_date_range}, #{location_city} #{location_state}"
+  end
+
   # E.g. "March 1-3, 2017" or "March 30 - April 2, 2017"
   # Assume no workshops will span a new year
   def friendly_date_range

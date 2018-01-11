@@ -41,6 +41,7 @@ export class DetailViewContents extends React.Component {
     canLock: PropTypes.bool,
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
+      course_name: PropTypes.string,
       regional_partner_name: PropTypes.string,
       locked: PropTypes.bool,
       regional_partner_id: PropTypes.number,
@@ -313,6 +314,7 @@ export class DetailViewContents extends React.Component {
         editing={this.state.editing}
         scores={this.state.response_scores}
         handleScoreChange={this.handleScoreChange}
+        courseName={this.props.applicationData.course_name}
       />
     );
   };
@@ -329,7 +331,7 @@ export class DetailViewContents extends React.Component {
               id="Notes"
               disabled={!this.state.editing}
               componentClass="textarea"
-              value={this.state.notes}
+              value={this.state.notes || ''}
               onChange={this.handleNotesChange}
               style={styles.notes}
             />

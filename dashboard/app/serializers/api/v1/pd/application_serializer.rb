@@ -1,6 +1,6 @@
 class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   attributes :regional_partner_name, :regional_partner_id, :locked, :notes, :form_data, :status,
-    :school_name, :district_name, :email, :application_type, :response_scores,
+    :school_name, :district_name, :email, :application_type, :response_scores, :course_name,
     :meets_criteria, :bonus_points
 
   def email
