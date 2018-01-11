@@ -30,10 +30,6 @@ export default class SummerWorkshopAssignment extends React.Component {
     canYouAttendAnswer: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)])
   }
 
-  state = {
-    loading: true
-  }
-
   render() {
     return (
       <Grid fluid style={styles.grid}>
