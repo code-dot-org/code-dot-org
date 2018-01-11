@@ -2,6 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import ScriptSelector from './ScriptSelector';
 import { getLevelResult } from '@cdo/apps/code-studio/progressRedux';
 import SectionScriptProgress from './SectionScriptProgress';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
 
 /**
@@ -90,7 +91,7 @@ export default class SectionProgress extends Component {
           scriptId={scriptId}
           onChange={this.onChangeScript}
         />
-        {!levelDataInitialized && <div>Loading...</div>}
+        {!levelDataInitialized && <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>}
         {levelDataInitialized &&
           <SectionScriptProgress
             section={section}
