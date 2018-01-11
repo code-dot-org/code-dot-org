@@ -20,7 +20,7 @@
     "build:blockly": "DEV=1 grunt preconcat && grunt concat",
     "build:dist": "NODE_ENV=production node --max_old_space_size=4096 ./node_modules/.bin/grunt clean build && grunt logBuildTimes",
     "postinstall": "npm rebuild node-sass",
-    "start": "DEV=1 grunt dev; grunt logBuildTimes",
+    "start": "DEV=1 node --max_old_space_size=4096 ./node_modules/.bin/grunt dev; grunt logBuildTimes",
     "start:cheap": "DEV=1 CHEAP=1 grunt dev; grunt logBuildTimes",
     "start:notify": "DEV=1 grunt dev --watch-notify; grunt logBuildTimes",
     "start:applab": "DEV=1 grunt dev --app=applab; grunt logBuildTimes",
