@@ -52,6 +52,7 @@ class YourSchool extends Component {
 
     return (
       <div>
+        <SpecialAnnouncementActionBlock/>
         {this.props.alertHeading && this.props.alertText && this.props.alertUrl && desktop && (
           <Notification
             type={NotificationType.bullhorn}
@@ -79,7 +80,6 @@ class YourSchool extends Component {
         <h3 style={styles.description}>
           {i18n.yourSchoolDescription()}
         </h3>
-        <SpecialAnnouncementActionBlock/>
         <YourSchoolResources/>
         <h1 style={styles.heading}>
           Put your school on the map
