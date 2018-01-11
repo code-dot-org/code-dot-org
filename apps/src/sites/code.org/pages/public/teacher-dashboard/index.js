@@ -14,7 +14,8 @@ import {
   renderSyncOauthSectionControl,
   unmountSyncOauthSectionControl,
   renderLoginTypeAndSharingControls,
-  unmountLoginTypeAndSharingControls
+  unmountLoginTypeAndSharingControls,
+  renderSectionTable,
 } from './sections';
 import logToCloud from '@cdo/apps/logToCloud';
 
@@ -382,6 +383,10 @@ function main() {
 
       $scope.$on('login-type-react-rendered', () => {
         $scope.section.$promise.then(section => renderLoginTypeAndSharingControls(section.id));
+      });
+
+      $scope.$on('student-table-react-rendered', () => {
+        $scope.section.$promise.then(section => renderSectionTable(section.id, section.login_type));
       });
 
       $scope.$on('$destroy', () => {

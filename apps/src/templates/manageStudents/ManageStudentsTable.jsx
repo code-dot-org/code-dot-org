@@ -81,8 +81,8 @@ const passwordFormatter = (loginType, {rowData}) => {
         <ShowSecret
           resetSecret={()=>{}}
           initialIsShowing={false}
-          secretWord={rowData.secretWords}
-          secretPicture={rowData.secretPicturePath}
+          secretWord={rowData.secret_words}
+          secretPicture={rowData.secret_picture_path}
           loginType={rowData.loginType}
         />
       }
