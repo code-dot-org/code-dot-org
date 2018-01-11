@@ -734,7 +734,7 @@ FactoryGirl.define do
               replace_course: replace_course,
               committed_to_diversity: 'Yes',
               understand_fee: 'Yes',
-              pay_fee: 'Yes, my school or my teacher will be able to pay the full summer workshop program fee'
+              pay_fee: 'Yes, my school or my teacher will be able to pay the full summer workshop program fee.'
             }
           )
 

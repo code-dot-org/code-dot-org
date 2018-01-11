@@ -1,39 +1,39 @@
 import React from 'react';
-import ApplicationFormComponent from './ApplicationFormComponent';
+import LabeledFormComponent from './LabeledFormComponent';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
 
 const OTHER = "Other (please specify):";
 
-class SingleCheckboxComponent extends ApplicationFormComponent {
+class SingleCheckboxComponent extends LabeledFormComponent {
   static labels = {singleCheckbox: "This is a single checkbox"};
   render = () => this.singleCheckboxFor("singleCheckbox");
 }
 
-class CheckboxesComponent extends ApplicationFormComponent {
+class CheckboxesComponent extends LabeledFormComponent {
   static labels = {checkBoxes: "Select options"};
   render = () => this.checkBoxesFor("checkBoxes");
 }
 
-class CheckboxesWithAdditionalTextComponent extends ApplicationFormComponent {
+class CheckboxesWithAdditionalTextComponent extends LabeledFormComponent {
   static labels = {checkBoxesWithOther: "Select options and add text"};
   render = () => this.checkBoxesWithAdditionalTextFieldsFor("checkBoxesWithOther", {
     [OTHER]: "other"
   });
 }
 
-class RadioButtonsComponent extends ApplicationFormComponent {
+class RadioButtonsComponent extends LabeledFormComponent {
   static labels = {radioButtons: "Select an option"};
   render = () => this.radioButtonsFor("radioButtons");
 }
 
-class RadioButtonsWithAdditionalTextComponent extends ApplicationFormComponent {
+class RadioButtonsWithAdditionalTextComponent extends LabeledFormComponent {
   static labels = {radioButtonsWithOther: "Select an option and add text"};
   render = () => this.checkBoxesWithAdditionalTextFieldsFor("radioButtonsWithOther", {
     [OTHER]: "other"
   });
 }
 
-class DynamicRadioButtonsWithAdditionalTextComponent extends ApplicationFormComponent {
+class DynamicRadioButtonsWithAdditionalTextComponent extends LabeledFormComponent {
   static labels = {dynamicRadioButtonsWithOther: "Select a dynamic option and add text"};
   render = () => this.dynamicRadioButtonsWithAdditionalTextFieldsFor("dynamicRadioButtonsWithOther",
     [1,2,3].map(n => `Dynamic option #${n}`).concat([OTHER]),
@@ -41,14 +41,14 @@ class DynamicRadioButtonsWithAdditionalTextComponent extends ApplicationFormComp
   );
 }
 
-class DynamicCheckboxesComponent extends ApplicationFormComponent {
+class DynamicCheckboxesComponent extends LabeledFormComponent {
   static labels = {dynamicCheckBoxes: "Select all dynamic options that apply"};
   render = () => this.dynamicCheckBoxesFor("dynamicCheckBoxes",
     [1,2,3].map(n => `Dynamic option #${n}`)
   );
 }
 
-class DynamicCheckboxesWithAdditionalTextComponent extends ApplicationFormComponent {
+class DynamicCheckboxesWithAdditionalTextComponent extends LabeledFormComponent {
   static labels = {dynamicCheckboxesWithOther: "Select a dynamic option and add text"};
   render = () => this.dynamicRadioButtonsWithAdditionalTextFieldsFor("dynamicCheckboxesWithOther",
     [1,2,3].map(n => `Dynamic option #${n}`).concat([OTHER]),
@@ -56,22 +56,22 @@ class DynamicCheckboxesWithAdditionalTextComponent extends ApplicationFormCompon
   );
 }
 
-class SelectComponent extends ApplicationFormComponent {
+class SelectComponent extends LabeledFormComponent {
   static labels = {select: "Select an option"};
   render = () => this.selectFor("select", {placeholder: 'Select an option'});
 }
 
-class InputComponent extends ApplicationFormComponent {
+class InputComponent extends LabeledFormComponent {
   static labels = {input: "Enter some text"};
   render = () => this.inputFor("input");
 }
 
-class LargeInputComponent extends ApplicationFormComponent {
+class LargeInputComponent extends LabeledFormComponent {
   static labels = {largeInput: "Enter some longer text"};
   render = () => this.largeInputFor("largeInput");
 }
 
-class UsPhoneNumberComponent extends ApplicationFormComponent {
+class UsPhoneNumberComponent extends LabeledFormComponent {
   static labels = {usPhoneNumber: "Enter a phone number"};
   render = () => this.usPhoneNumberInputFor("usPhoneNumber");
 }
@@ -86,7 +86,7 @@ export default storybook => {
   };
 
   storybook
-  .storiesOf('ApplicationFormComponent', module)
+  .storiesOf('LabeledFormComponent', module)
   .addDecorator(reactBootstrapStoryDecorator)
   .addStoryTable([{
     name: 'Single Checkbox',
