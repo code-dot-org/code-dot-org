@@ -13,6 +13,7 @@ import LookbackLogger from './LookbackLogger';
 import _ from 'lodash';
 import five from '@code-dot-org/johnny-five';
 import PlaygroundIO from 'playground-io';
+import Button from './Button';
 import Thermometer from './Thermometer';
 import TouchSensor from './TouchSensor';
 import Piezo from './Piezo';
@@ -59,9 +60,9 @@ export function createCircuitPlaygroundComponents(board) {
 
       accelerometer: initializeAccelerometer(board),
 
-      buttonL: initializeButton(board, '4'),
+      buttonL: new Button({board, pin: 4}),
 
-      buttonR: initializeButton(board, '19'),
+      buttonR: new Button({board, pin: 19}),
 
       ...(experiments.isEnabled('maker-captouch') && initializeTouchPads(board))
     };
@@ -115,7 +116,7 @@ export function destroyCircuitPlaygroundComponents(components) {
   }
   delete components.accelerometer;
 
-  // No reset needed for five.Button
+  // No reset needed for Button
   delete components.buttonL;
   delete components.buttonR;
 
@@ -132,10 +133,10 @@ export function destroyCircuitPlaygroundComponents(components) {
  * objects, allowing it to make methods and properties of instances available.
  */
 export const componentConstructors = {
-  Led: Led,
+  Led,
   Board: five.Board,
-  NeoPixel: NeoPixel,
-  Button: five.Button,
+  NeoPixel,
+  Button,
   Switch,
   Piezo,
   Sensor: five.Sensor,
@@ -232,14 +233,6 @@ function initializeThermometer(board) {
     });
     thermometer.once('data', () => resolve(thermometer));
   });
-}
-
-export function initializeButton(board, pin) {
-  const button = new five.Button({board, pin});
-  Object.defineProperty(button, 'isPressed', {
-    get: () => button.value === 1
-  });
-  return button;
 }
 
 function initializeAccelerometer(board) {
