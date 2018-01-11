@@ -14,6 +14,7 @@ const DB_HOST = process.env.DB_HOST;
 const DB_NAME = process.env.DB_NAME;
 const DB_USER = process.env.DB_USER;
 const DB_PASSWORD = process.env.DB_PASSWORD;
+const STATUS_SNS_TOPIC = process.env.STATUS_SNS_TOPIC;
 
 var status_message = '';
 
@@ -37,7 +38,7 @@ var publishStatus = function publishStatus(message) {
     sns.publish({
         Message: message,
         Subject: 'code.org verify offsite copy of database',
-        TopicArn: 'arn:aws:sns:us-east-1:215291861542:verify-database-status'
+        TopicArn: STATUS_SNS_TOPIC
     }).promise()
         .then(data => {
             console.log(data);
