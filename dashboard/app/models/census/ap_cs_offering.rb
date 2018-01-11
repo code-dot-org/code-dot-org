@@ -65,7 +65,7 @@ class Census::ApCsOffering < ApplicationRecord
         object_key = "ap_cs_offerings/#{course}-#{school_year}-#{school_year + 1}.csv"
         begin
           etag = AWS::S3.create_client.head_object({bucket: CENSUS_BUCKET_NAME, key: object_key}).etag
-          unless SeededS3Object.where(bucket: CENSUS_BUCKET_NAME, key: object_key, etag: etag).count > 0
+          unless SeededS3Object.exists?(bucket: CENSUS_BUCKET_NAME, key: object_key, etag: etag)
             AWS::S3.process_file(CENSUS_BUCKET_NAME, object_key) do |filename|
               ActiveRecord::Base.transaction do
                 seed_from_csv(course, school_year, filename)
