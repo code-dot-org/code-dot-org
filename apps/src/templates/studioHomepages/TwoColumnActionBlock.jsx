@@ -32,6 +32,10 @@ const styles = {
     fontFamily: '"Gotham 7r", sans-serif',
     color: color.white
   },
+  image: {
+    width: 485,
+    height: 260
+  },
   description: {
     paddingRight: 10,
     paddingBottom: 20,
@@ -78,7 +82,7 @@ class UnconnectedTwoColumnActionBlock extends Component {
         <div style={styles.container}>
           {responsiveSize === 'lg' &&
             <div style={{float, width}}>
-              <img src={imageUrl}/>
+              <img src={imageUrl} style={styles.image}/>
             </div>
           }
           <div style={{float, width}}>
@@ -153,25 +157,19 @@ export class AdministratorResourcesActionBlock extends Component {
 }
 
 export class SpecialAnnouncementActionBlock extends Component {
-  static propTypes = {
-    imageUrl: PropTypes.string.isRequired,
-    heading: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    buttons: PropTypes.arrayOf(PropTypes.shape({
-      url: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired
-    }))
-  };
 
   render() {
-    const { imageUrl, heading, description, buttons } = this.props;
-
     return (
       <TwoColumnActionBlock
-        imageUrl={imageUrl}
-        subHeading={heading}
-        description={description}
-        buttons={buttons}
+        imageUrl={pegasus('/images/mc/fill-540x289/special-announcement-hoc2017.jpg')}
+        subHeading={i18n.specialAnnouncementHeading()}
+        description={i18n.specialAnnouncementDescription()}
+        buttons={[
+          {
+            url: pegasus('/educate/professional-learning'),
+            text: i18n.learnMore()
+          },
+        ]}
       />
     );
   }

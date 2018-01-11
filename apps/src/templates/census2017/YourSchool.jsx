@@ -6,6 +6,7 @@ import {UnconnectedCensusForm as CensusForm} from './CensusForm';
 import YourSchoolResources from './YourSchoolResources';
 import Notification, { NotificationType } from '../Notification';
 import MobileNotification from '../MobileNotification';
+import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnActionBlock';
 import i18n from "@cdo/locale";
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import { ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
@@ -78,6 +79,7 @@ class YourSchool extends Component {
         <h3 style={styles.description}>
           {i18n.yourSchoolDescription()}
         </h3>
+        <SpecialAnnouncementActionBlock/>
         <YourSchoolResources/>
         <h1 style={styles.heading}>
           Put your school on the map
