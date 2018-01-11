@@ -94,8 +94,8 @@ class SetupUnsupportedBrowser extends React.Component {
     return (
       <div>
         <h2>Use a different computer</h2>
-        Maker Toolkit is not compatible on your computer. To set up Maker
-        Toolkit, please open this page on a device running one of the
+        Maker Toolkit is not supported on your current operating system. To set
+        up Maker Toolkit, please open this page on a device running one of the
         following operating systems:
         <ul>
           <li>Windows</li>
