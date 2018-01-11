@@ -379,6 +379,6 @@ class ScriptLevel < ActiveRecord::Base
   # (e.g. a student viewed by a teacher), tell us whether we should be hiding
   # prior answers
   def should_hide_survey(user, viewed_user)
-    anonymous? && user.teacher? && !viewed_user.nil? && user != viewed_user
+    anonymous? && user.try(:teacher?) && !viewed_user.nil? && user != viewed_user
   end
 end
