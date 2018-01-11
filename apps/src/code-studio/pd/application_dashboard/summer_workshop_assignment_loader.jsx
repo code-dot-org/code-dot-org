@@ -53,6 +53,7 @@ export default class SummerWorkshopAssignmentLoader extends React.Component {
       return (
         <SummerWorkshopAssignment
           workshops={this.state.workshops}
+          assignedWorkshopId={this.props.assignedWorkshopId}
           onChange={this.props.onChange}
           editing={this.props.editing}
           canYouAttendQuestion={this.props.canYouAttendQuestion}

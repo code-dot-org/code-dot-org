@@ -54,7 +54,8 @@ export class DetailViewContents extends React.Component {
       application_type: PropTypes.oneOf(['Facilitator', 'Teacher']),
       response_scores: PropTypes.object,
       meets_criteria: PropTypes.string,
-      bonus_points: PropTypes.number
+      bonus_points: PropTypes.number,
+      pd_workshop_id: PropTypes.number
     }),
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     reload: PropTypes.func.isRequired,
@@ -315,6 +316,7 @@ export class DetailViewContents extends React.Component {
         scores={this.state.response_scores}
         handleScoreChange={this.handleScoreChange}
         courseName={this.props.applicationData.course_name}
+        assignedWorkshopId={this.props.applicationData.pd_workshop_id}
       />
     );
   };
