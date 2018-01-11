@@ -8,13 +8,13 @@ import Firmata from 'firmata';
 import {
   createCircuitPlaygroundComponents,
   destroyCircuitPlaygroundComponents,
-  initializeButton,
   componentConstructors
 } from './PlaygroundComponents';
 import {
   SONG_CHARGE,
   CP_COMMAND,
-  J5_CONSTANTS
+  J5_CONSTANTS,
+  TOUCH_PINS,
 } from './PlaygroundConstants';
 import Led from './Led';
 import {isNodeSerialAvailable} from './portScanning';
@@ -247,7 +247,14 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   createButton(pin) {
-    const newButton = initializeButton(this.fiveBoard_, pin);
+    const newButton = new five.Button({
+      board: this.fiveBoard_,
+      pin,
+      pullup: TOUCH_PINS.includes(pin),
+    });
+    Object.defineProperty(newButton, 'isPressed', {
+      get: () => newButton.value === 1
+    });
     this.dynamicComponents_.push(newButton);
     return newButton;
   }
