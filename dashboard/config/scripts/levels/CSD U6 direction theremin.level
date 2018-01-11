@@ -27,10 +27,6 @@
       "onBoardEvent": null
     },
     "edit_code": true,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -69,11 +65,15 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "markdown_instructions": "# Accelerated Music\r\n\r\nWe're going to make music with the board again, this time using the accelerometer. Since `buzzer.frequency` takes a number as a parameter, we can use the number that the accelerometer's pitch and roll properties return to change the frequency.\r\n\r\n# Do This\r\n* Make a variable to store either the accelerometer's pitch or roll, name it accordingly.\r\n* Use this variable with the buzzer, and alter it in some way. You can add or subtract from it, multiply it by another number, etc.\r\n* Run the program and try to alter it in another way to see what sort of sounds you get."
+    "markdown_instructions": "# Accelerated Music\r\n\r\nWe're going to make music with the board again, this time using the accelerometer. \r\n\r\nSince `buzzer.frequency` takes a number as a parameter, we can use the number that the accelerometer's pitch and roll properties return to change the frequency.\r\n\r\n# Do This\r\n* Make a variable to store either the accelerometer's pitch or roll, name it accordingly.\r\n* Use this variable with the buzzer, and alter it in some way. You can add or subtract from it, multiply it by another number, etc.\r\n* Run the program and alter it again to see what sort of sounds you get this time.",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-10 21:13:58 +0000\",\"changed\":[\"name\",\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-10 21:14:26 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"makerlab_enabled\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-10 21:16:12 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-10 21:16:38 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-10 21:48:03 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-10 21:49:02 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-10 21:13:58 +0000\",\"changed\":[\"name\",\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-10 21:14:26 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"makerlab_enabled\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-10 21:16:12 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-10 21:16:38 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-10 21:48:03 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-10 21:49:02 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-11 16:31:42 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
