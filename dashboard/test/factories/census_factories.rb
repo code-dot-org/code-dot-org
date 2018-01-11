@@ -173,4 +173,51 @@ FactoryGirl.define do
       school_year 1900
     end
   end
+
+  factory :ib_school_code, class: 'Census::IbSchoolCode' do
+    school_code "123456"
+    school {create :school}
+
+    trait :without_school_code do
+      school_code nil
+    end
+
+    trait :with_too_long_school_code do
+      school_code "12345678"
+    end
+
+    trait :without_school do
+      school nil
+    end
+
+    trait :with_invalid_school_code do
+      school_code "ABCDEF"
+    end
+  end
+
+  factory :ib_cs_offering, class: 'Census::IbCsOffering' do
+    ib_school_code {build :ib_school_code}
+    level "HL"
+    school_year 2017
+
+    trait :without_level do
+      level nil
+    end
+
+    trait :with_invalid_level do
+      level "ABC"
+    end
+
+    trait :without_school_code do
+      ib_school_code nil
+    end
+
+    trait :without_school_year do
+      school_year nil
+    end
+
+    trait :with_invalid_school_year do
+      school_year 1900
+    end
+  end
 end
