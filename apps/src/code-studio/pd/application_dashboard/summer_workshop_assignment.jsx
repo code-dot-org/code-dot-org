@@ -32,12 +32,12 @@ export default class SummerWorkshopAssignment extends React.Component {
     return (
       <Grid fluid>
         <Row>
-          <Col md={2} sm={3}>
+          <Col md={3} sm={4}>
             <ControlLabel>
               Assigned Workshop
             </ControlLabel>
           </Col>
-          <Col md={2} sm={3}>
+          <Col md={3} sm={4}>
             <Select
               value={this.props.assignedWorkshopId}
               onChange={this.props.onChange}

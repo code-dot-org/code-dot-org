@@ -120,7 +120,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   def application_params
     params.require(:application).permit(
-      :status, :notes, :regional_partner_filter, :response_scores, :locked
+      :status, :notes, :regional_partner_filter, :response_scores, :locked, :pd_workshop_id
     )
   end
 

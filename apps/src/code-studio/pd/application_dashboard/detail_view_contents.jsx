@@ -69,7 +69,8 @@ export class DetailViewContents extends React.Component {
     response_scores: this.props.applicationData.response_scores || {},
     editing: false,
     regional_partner_name: this.props.applicationData.regional_partner_name || UnmatchedLabel,
-    regional_partner_filter: this.props.applicationData.regional_partner_id || UnmatchedFilter
+    regional_partner_filter: this.props.applicationData.regional_partner_id || UnmatchedFilter,
+    pd_workshop_id: this.props.applicationData.pd_workshop_id
   };
 
   componentWillMount() {
@@ -114,6 +115,12 @@ export class DetailViewContents extends React.Component {
     });
   };
 
+  handleSelectedWorkshopChange = (event) => {
+    this.setState({
+      pd_workshop_id: event.value
+    });
+  };
+
   handleScoreChange = (event) => {
     this.setState({
       response_scores: {...this.state.response_scores, [event.target.id.replace('-score', '')]: event.target.value}
@@ -132,7 +139,8 @@ export class DetailViewContents extends React.Component {
         'status',
         'locked',
         'notes',
-        'regional_partner_filter'
+        'regional_partner_filter',
+        'pd_workshop_id'
       ])),
       response_scores: JSON.stringify(this.state.response_scores)
     };
@@ -316,7 +324,8 @@ export class DetailViewContents extends React.Component {
         scores={this.state.response_scores}
         handleScoreChange={this.handleScoreChange}
         courseName={this.props.applicationData.course_name}
-        assignedWorkshopId={this.props.applicationData.pd_workshop_id}
+        assignedWorkshopId={this.state.pd_workshop_id}
+        handleSelectedWorkshopChange={this.handleSelectedWorkshopChange}
       />
     );
   };

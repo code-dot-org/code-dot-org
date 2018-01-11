@@ -34,7 +34,8 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
     scores: PropTypes.object,
     handleScoreChange: PropTypes.func,
     courseName: PropTypes.string,
-    assignedWorkshopId: PropTypes.number
+    assignedWorkshopId: PropTypes.number,
+    handleSelectedWorkshopChange: PropTypes.func
   }
 
    constructor(props) {
@@ -71,7 +72,7 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
       <SummerWorkshopAssignmentLoader
         courseName={this.props.courseName}
         assignedWorkshopId={this.props.assignedWorkshopId}
-        onChange={() => {}}
+        onChange={this.props.handleSelectedWorkshopChange}
         editing={this.props.editing}
         canYouAttendQuestion={canYouAttendQuestion}
         canYouAttendAnswer={this.props.formResponses[questionKey]}
