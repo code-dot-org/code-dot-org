@@ -1043,6 +1043,7 @@ GameLab.prototype.completeSetupIfSetupComplete = function () {
       !this.JSInterpreter.startedHandlingEvents) {
     // Global code should run during the setup phase, but global code hasn't
     // completed.
+    this.gameLabP5.afterSetupStarted();
     return;
   }
 
