@@ -19,37 +19,37 @@ module Teacher1819ApplicationConstants
     section_1_about_you: {
       country: 'Country',
       title: 'Title',
-      first_name: 'First Name',
-      preferred_first_name: 'Preferred First Name',
-      last_name: 'Last Name',
-      account_email: 'Account Email',
+      first_name: 'First name',
+      preferred_first_name: 'Preferred first name',
+      last_name: 'Last name',
+      account_email: 'Account email',
       alternate_email: 'If you use another email, enter it here:',
       phone: 'Phone',
-      address: 'Home Address',
+      address: 'Home address',
       city: 'City',
       state: 'State',
-      zip_code: 'Zip Code',
-      gender_identity: 'Gender Identity',
+      zip_code: 'Zip code',
+      gender_identity: 'Gender identity',
       race: 'Race',
     },
 
     section_2_your_school: {
       school: 'School',
-      school_name: 'School Name',
-      school_address: 'School Address',
+      school_name: 'School name',
+      school_address: 'School address',
       school_city: 'City',
       school_state: 'State',
-      school_zip_code: 'Zip Code',
+      school_zip_code: 'Zip code',
       school_type: 'My school is a',
 
       principal_first_name: "Principal's first name",
       principal_last_name: "Principal's last name",
-      principal_title: "Principal's Title",
+      principal_title: "Principal's title",
       principal_email: "Principal's email address",
       principal_confirm_email: "Confirm principal's email address",
       principal_phone_number: "Principal's phone number",
       current_role: 'What is your current role at your school?',
-      grades_at_school: 'What grades are served at your school? (Select all that apply)',
+      grades_at_school: 'What grades are served at your school? (select all that apply)',
       grades_teaching: 'What grades are you teaching this year (2017-18)? (select all that apply)',
       grades_expect_to_teach: clean_multiline(
         'Based on current plans for the 2018-19 school year, what grade(s) do you expect
@@ -100,7 +100,7 @@ module Teacher1819ApplicationConstants
          is not available for grades K-5. (select all that apply)'
       ),
       csd_course_hours_per_week:
-        'How many course hours per week will your school offer CS Discoveries per class?',
+        'How many course hours per week will your school offer CS Discoveries for each class?',
       csd_course_hours_per_year:
         'Approximately how many course hours per school year will your school offer CS Discoveries?',
       csd_terms_per_year: 'How many terms will this course span in one school year?',
