@@ -9,16 +9,6 @@ import UsPhoneNumberInput from "../form_components/UsPhoneNumberInput";
 import { TeacherSeatAcceptanceOptions } from '@cdo/apps/generated/pd/teachercon1819RegistrationConstants';
 
 export default class Joining extends Teachercon1819FormComponent {
-  static associatedFields = [
-    'preferredFirstName',
-    'lastName',
-    'email',
-    'phone',
-    'teacherAcceptSeat',
-    'teacherWaitlistExplain',
-    'teacherDeclineExplain',
-  ]
-
   static labels = {
     preferredFirstName: "Preferred first name",
     lastName: "Last name",
@@ -28,6 +18,8 @@ export default class Joining extends Teachercon1819FormComponent {
     teacherWaitlistExplain: "Optional: Please explain more why you cannot accept your seat in the Professional Learning Program.",
     teacherDeclineExplain: "Optional: Please explain more why you cannot accept your seat in the Professional Learning Program.",
   }
+
+  static associatedFields = Object.keys(Joining.labels)
 
   /**
    * @override
