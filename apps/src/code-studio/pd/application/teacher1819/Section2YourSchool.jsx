@@ -18,6 +18,7 @@ export default class Section2YourSchool extends LabeledFormComponent {
     ...Object.keys(PageLabels.section2YourSchool),
     "currentRole_other",
     "gradesTeaching_notTeachingExplanation",
+    "gradesExpectToTeach_notExpectingToTeachExplanation",
     "subjectsTeaching_other",
     "subjectsExpectToTeach_other",
     "subjectsLicensedToTeach_other",
@@ -107,7 +108,9 @@ export default class Section2YourSchool extends LabeledFormComponent {
           "I'm not teaching this year (please explain):" : "notTeachingExplanation"
         })}
 
-        {this.checkBoxesFor("gradesExpectToTeach")}
+        {this.checkBoxesWithAdditionalTextFieldsFor("gradesExpectToTeach", {
+          "I'm not teaching next year (please explain):" : "notExpectingToTeachExplanation"
+        })}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("subjectsTeaching", {
           "Other (Please List):" : "other"

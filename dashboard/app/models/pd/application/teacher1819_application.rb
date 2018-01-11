@@ -183,6 +183,7 @@ module Pd::Application
       OTHER_PLEASE_LIST
     ]
 
+    NOT_TEACHING_NEXT_YEAR = "I'm not teaching next year (please explain):"
     NOT_TEACHING_THIS_YEAR = "I'm not teaching this year (please explain):"
     DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN = "I don't know if I will teach this course (please explain):"
     UNABLE_TO_ATTEND = "No, I'm unable to attend (please explain):"
@@ -218,7 +219,10 @@ module Pd::Application
           *GRADES,
           NOT_TEACHING_THIS_YEAR
         ],
-        grades_expect_to_teach: GRADES,
+        grades_expect_to_teach: [
+          *GRADES,
+          NOT_TEACHING_NEXT_YEAR
+        ],
 
         subjects_teaching: SUBJECTS_THIS_YEAR,
         subjects_expect_to_teach: SUBJECTS_THIS_YEAR,
@@ -773,6 +777,7 @@ module Pd::Application
       [
         [:current_role, OTHER_PLEASE_LIST],
         [:grades_teaching, NOT_TEACHING_THIS_YEAR, :grades_teaching_not_teaching_explanation],
+        [:grades_expect_to_teach, NOT_TEACHING_NEXT_YEAR, :grades_expect_to_teach_not_expecting_to_teach_explanation],
         [:subjects_teaching, OTHER_PLEASE_LIST],
         [:subjects_expect_to_teach, OTHER_PLEASE_LIST],
         [:subjects_licensed_to_teach, OTHER_PLEASE_LIST],
