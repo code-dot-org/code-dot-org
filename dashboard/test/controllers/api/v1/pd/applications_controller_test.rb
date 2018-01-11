@@ -185,6 +185,14 @@ module Api::V1::Pd
       refute data['locked']
     end
 
+    test 'notes field will strip pandas' do
+      sign_in @workshop_organizer
+      put :update, params: {id: @csf_facilitator_application_with_partner, application: {notes: panda_panda}}
+      assert_response :success
+      data = JSON.parse(response.body)
+      assert_equal data['notes'], "Panda"
+    end
+
     test 'csv download for csd teacher returns expected columns' do
       sign_in @workshop_admin
 
@@ -194,11 +202,11 @@ module Api::V1::Pd
 
       assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
         :csd_which_grades, :csd_course_hours_per_week, :csd_course_hours_per_year, :csd_terms_per_year
-      ).values.all? {|x| response_csv.first.include?(x + "\n")}
+      ).values.all? {|x| response_csv.first.include?(x)}
 
       assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
         :csp_which_grades, :csp_course_hours_per_week, :csp_course_hours_per_year, :csp_how_offer, :csp_ap_exam
-      ).values.any? {|x| response_csv.first.exclude?(x + "\n")}
+      ).values.any? {|x| response_csv.first.exclude?(x)}
     end
 
     test 'csv download for csp teacher returns expected columns' do
@@ -210,11 +218,11 @@ module Api::V1::Pd
 
       assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
         :csp_which_grades, :csp_course_hours_per_week, :csp_course_hours_per_year, :csp_terms_per_year, :csp_how_offer, :csp_ap_exam
-      ).values.all? {|x| response_csv.first.include?(x + "\n")}
+      ).values.all? {|x| response_csv.first.include?(x)}
 
       assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
         :csd_which_grades, :csd_course_hours_per_week, :csd_course_hours_per_year
-      ).values.any? {|x| response_csv.first.exclude?(x + "\n")}
+      ).values.any? {|x| response_csv.first.exclude?(x)}
     end
 
     test 'csv download for csf facilitator returns expected columns' do
@@ -226,11 +234,11 @@ module Api::V1::Pd
 
       assert Facilitator1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
         :csf_availability
-      ).values.all? {|x| response_csv.first.include?(x + "\n")}
+      ).values.all? {|x| response_csv.first.include?(x)}
 
       assert Facilitator1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
         :csd_csp_teachercon_availability, :csd_csp_fit_availability
-      ).values.any? {|x| response_csv.first.exclude?(x + "\n")}
+      ).values.any? {|x| response_csv.first.exclude?(x)}
     end
 
     test 'csv download for csp facilitator returns expected columns' do
@@ -242,11 +250,11 @@ module Api::V1::Pd
 
       assert Facilitator1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
         :csd_csp_teachercon_availability, :csd_csp_fit_availability
-      ).values.all? {|x| response_csv.first.include?(x + "\n")}
+      ).values.all? {|x| response_csv.first.include?(x)}
 
       assert Facilitator1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
         :csf_availability
-      ).values.any? {|x| response_csv.first.exclude?(x + "\n")}
+      ).values.any? {|x| response_csv.first.exclude?(x)}
     end
 
     test 'cohort view returns expected columns for a teacher' do

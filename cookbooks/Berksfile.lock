@@ -115,7 +115,7 @@ GRAPH
     cdo-java-7 (>= 0.0.0)
     poise-service (>= 0.0.0)
   cdo-users (0.1.20)
-  cdo-varnish (0.3.174)
+  cdo-varnish (0.3.175)
     apt (>= 0.0.0)
   chef-client (4.2.4)
     cron (>= 1.2.0)

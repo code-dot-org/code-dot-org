@@ -55,7 +55,6 @@ class PersonalRecentProjects extends Component {
                 <ProjectCard
                   projectData={project}
                   currentGallery={'personal'}
-                  hideActions={true}
                 />
               </div>
             ))

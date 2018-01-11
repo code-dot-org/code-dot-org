@@ -10,7 +10,6 @@ export const projectDataPropType = PropTypes.shape({
   type: PropTypes.string.isRequired,
   publishedAt: PropTypes.string.isRequired,
   publishedToPublic: PropTypes.bool.isRequired,
-  publishedToClass: PropTypes.bool.isRequired,
 });
 
 
