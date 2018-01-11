@@ -1,4 +1,3 @@
----
 AWSTemplateFormatVersion: 2010-09-09
 Parameters:
   DatabasePasswordParameter:
@@ -6,7 +5,9 @@ Parameters:
     Description: Specify a new password for the database copy to use when verifying it.
   SlackWebHookURLParameter:
     Type: String
-    Description: Slack Webhook URL for notifications such as ('T039SAH7W/B85EJM39N/4EPCUIZVLWm6Tq0WgA8Xrt31')
+    Description: >-
+      Slack Webhook URL for notifications such as
+      ('T039SAH7W/B85EJM39N/4EPCUIZVLWm6Tq0WgA8Xrt31')
   SlackChannelParameter:
     Type: String
     Description: Slack Channel to post notifications
@@ -38,7 +39,9 @@ Resources:
   RestoreDatabaseCopyForVerification:
     Type: 'AWS::Lambda::Function'
     Properties:
-      Description: 'Restore Database from Snapshot copied from primary Account so it can be verified by a separate Lambda.'
+      Description: >-
+        Restore Database from Snapshot copied from primary Account so it can be
+        verified by a separate Lambda.
       FunctionName: RestoreDatabaseCopyForVerification
       Handler: index.handler
       Runtime: nodejs6.10
@@ -46,7 +49,9 @@ Resources:
         S3Bucket: cdo-secondary-dist
         S3Key: restore-database-copy-for-verification.zip
       Timeout: 30
-      Role: !GetAtt VerifyDatabaseLambdaRole.Arn
+      Role: !GetAtt
+        - VerifyDatabaseLambdaRole
+        - Arn
       Environment:
         Variables:
           DB_PORT: '3306'
@@ -55,7 +60,7 @@ Resources:
           DB_SUBNET_GROUP_NAME: default
           DB_SNAPSHOT_IDENTIFIER_PREFIX: production
           DB_AVAILABILITY_ZONE: us-east-1f
-          DB_INSTANCE_CLASS: db.t2.medium
+          DB_INSTANCE_CLASS: db.t2.2xlarge
           DB_INSTANCE_IDENTIFIER: verification-copy
           DB_OPTION_GROUP_NAME: 'default:mysql-5-6'
           DB_STORAGE_TYPE: gp2
@@ -69,8 +74,10 @@ Resources:
       Code:
         S3Bucket: cdo-secondary-dist
         S3Key: verify-database-copy.zip
-      Timeout: 300 # This function takes about 4 minutes to run because updating the db password takes ~3 minutes
-      Role: !GetAtt VerifyDatabaseLambdaRole.Arn
+      Timeout: 300
+      Role: !GetAtt
+        - VerifyDatabaseLambdaRole
+        - Arn
       VpcConfig:
         SecurityGroupIds:
           - sg-ac16d9d1
@@ -85,43 +92,64 @@ Resources:
           DB_PASSWORD: !Ref DatabasePasswordParameter
           SLACK_WEBHOOK_URL: !Ref SlackWebHookURLParameter
           SLACK_CHANNEL: !Ref SlackChannelParameter
+          STATUS_SNS_TOPIC: !Ref VerifyDatabaseStatusTopic
   RestoreDatabaseCopyTopic:
-    Type: AWS::SNS::Topic
+    Type: 'AWS::SNS::Topic'
     Properties:
       TopicName: restore-database-copy
       DisplayName: restore db
       Subscription:
-        -
-          Endpoint: !GetAtt VerifyDatabaseCopy.Arn
+        - Endpoint: !GetAtt
+            - VerifyDatabaseCopy
+            - Arn
           Protocol: lambda
   RestoreDatabaseCopyRDSEvent:
     Type: 'AWS::RDS::EventSubscription'
-    Properties: 
-      EventCategories:
-        - 'backup'
-      SnsTopicArn: !Ref RestoreDatabaseCopyTopic
-      SourceType: 'db-instance'
-  InvokeVerifyDatabaseLambdaPermission:
-    Type: AWS::Lambda::Permission
     Properties:
-      Action: lambda:InvokeFunction
+      EventCategories:
+        - backup
+      SnsTopicArn: !Ref RestoreDatabaseCopyTopic
+      SourceType: db-instance
+  InvokeVerifyDatabaseLambdaPermission:
+    Type: 'AWS::Lambda::Permission'
+    Properties:
+      Action: 'lambda:InvokeFunction'
       Principal: sns.amazonaws.com
       SourceArn: !Ref RestoreDatabaseCopyTopic
-      FunctionName: !GetAtt VerifyDatabaseCopy.Arn
+      FunctionName: !GetAtt
+        - VerifyDatabaseCopy
+        - Arn
   InvokeRestoreDBLambda:
-    Type: "AWS::Events::Rule"
-    Properties: 
+    Type: 'AWS::Events::Rule'
+    Properties:
       Name: DailyVerifyDatabaseCopy
-      Description: Trigger Lambda that restores copy of database, which in turn will trigger Lambda that verifies db copy when restore is complete.
+      Description: >-
+        Trigger Lambda that restores copy of database, which in turn will
+        trigger Lambda that verifies db copy when restore is complete.
       ScheduleExpression: rate(1 day)
       Targets:
-        - 
-          Arn: !GetAtt RestoreDatabaseCopyForVerification.Arn
+        - Arn: !GetAtt
+            - RestoreDatabaseCopyForVerification
+            - Arn
           Id: RestoreDatabaseCopyForVerificationTarget
-  InvokeRestoreDBLambdaPermission: 
-    Type: "AWS::Lambda::Permission"
-    Properties: 
+  InvokeRestoreDBLambdaPermission:
+    Type: 'AWS::Lambda::Permission'
+    Properties:
       FunctionName: !Ref RestoreDatabaseCopyForVerification
-      Action: "lambda:InvokeFunction"
-      Principal: "events.amazonaws.com"
-      SourceArn: !GetAtt InvokeRestoreDBLambda.Arn
+      Action: 'lambda:InvokeFunction'
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt
+        - InvokeRestoreDBLambda
+        - Arn
+  VerifyDatabaseStatusTopic:
+    Type: 'AWS::SNS::Topic'
+    Properties:
+      TopicName: verify-database-status
+      DisplayName: verifydb
+      Subscription:
+        - Endpoint: suresh@code.org
+          Protocol: email
+        - Endpoint: code.org@suresh.com
+          Protocol: email
+        - Endpoint: '+12063908177'
+          Protocol: sms
