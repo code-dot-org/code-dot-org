@@ -23,6 +23,7 @@ export const studentSectionDataPropType = PropTypes.shape({
   secret_picture_name: PropTypes.string,
   secret_picture_path: PropTypes.string,
   sectionId: PropTypes.number,
+  loginType: PropTypes.string,
 });
 
 /** @enum {number} */
