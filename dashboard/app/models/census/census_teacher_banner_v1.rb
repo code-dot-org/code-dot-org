@@ -39,13 +39,18 @@
 # This class represents census submissions coming from the teacher banner
 # on code.org. That banner goes to any teacher using code.org and only
 # asks either the 10 or 20 hour question (based on the teacher's school.)
+# Additionally, the user is asked if those hours were in a class or in an
+# after school program. Based on the answers we either record
+# how_many_XX_hours or how_many_after_school
 #
 class Census::CensusTeacherBannerV1 < Census::CensusSubmission
   # Note: the value of submitter_role that gets validated is the key from the ROLES hash, not the value
   validates_inclusion_of :submitter_role, in: %w(teacher), message: "%{value} is not allowed"
-  validate :how_many_10_or_20
+  validate :how_many_10_20_or_afterschool
 
-  def how_many_10_or_20
-    errors.add(:base, "how_many_10_hours or how_many_20_hours must be provided") unless how_many_10_hours || how_many_20_hours
+  def how_many_10_20_or_afterschool
+    unless how_many_10_hours || how_many_20_hours || how_many_after_school
+      errors.add(:base, "how_many_10_hours or how_many_20_hours or how_many_after_school must be provided")
+    end
   end
 end

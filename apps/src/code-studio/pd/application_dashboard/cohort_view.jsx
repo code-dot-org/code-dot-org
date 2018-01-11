@@ -7,11 +7,17 @@ import Spinner from '../components/spinner';
 import $ from 'jquery';
 import CohortViewTable from './cohort_view_table';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
+import { Button, Col } from 'react-bootstrap';
 import {
   RegionalPartnerDropdownOptions as dropdownOptions,
   UnmatchedFilter
 } from './constants';
 
+const styles = {
+  button: {
+    margin: '20px auto'
+  }
+};
 
 class CohortView extends React.Component{
   static propTypes = {
@@ -40,7 +46,7 @@ class CohortView extends React.Component{
   }
 
   load(selected = null) {
-    let url = `/api/v1/pd/applications/cohort_view.json_view?role=${this.props.route.path.replace('_cohort', '')}`;
+    let url = this.getJsonUrl();
     if (this.props.isWorkshopAdmin) {
       const regionalPartnerFilter = selected ? selected.value : this.state.regionalPartnerFilter;
       const regionalPartnerName = selected ? selected.label : this.state.regionalPartnerName;
@@ -66,6 +72,21 @@ class CohortView extends React.Component{
     this.load(selected);
   };
 
+  getApiUrl = (format = '') => `/api/v1/pd/applications/cohort_view${format}?role=${this.props.route.path.replace('_cohort', '')}`;
+  getJsonUrl = () => this.getApiUrl();
+  getCsvUrl = () => {
+    let url = this.getApiUrl('.csv');
+    if (this.props.isWorkshopAdmin && this.state.regionalPartnerFilter) {
+      url += `&regional_partner_filter=${this.state.regionalPartnerFilter}`;
+    }
+
+    return url;
+  }
+
+  handleDownloadCsvClick = () => {
+    window.open(this.getCsvUrl());
+  }
+
   render() {
     if (this.state.loading) {
       return (
@@ -83,6 +104,14 @@ class CohortView extends React.Component{
           }
           <h1>{this.state.regionalPartnerName}</h1>
           <h2>{this.props.route.applicationType}</h2>
+          <Col md={6} sm={6}>
+            <Button
+              style={styles.button}
+              onClick={this.handleDownloadCsvClick}
+            >
+              Download CSV
+            </Button>
+          </Col>
           <CohortViewTable
             data={this.state.applications}
             viewType={this.props.route.viewType}
