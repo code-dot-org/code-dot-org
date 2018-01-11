@@ -70,6 +70,43 @@ module Api::V1::Pd::Application
       assert_equal expected_principal_fields, actual_principal_fields
     end
 
+    test 'application update includes Other fields' do
+      teacher_application = create :pd_teacher1819_application, application_guid: SecureRandom.uuid
+
+      test_params = {
+        application_guid: teacher_application.application_guid,
+        form_data: build(:pd_principal_approval1819_application_hash).merge(
+          {
+            do_you_approve: "Other:",
+            do_you_approve_other: "this is the other for do you approve",
+            committed_to_master_schedule: "Other:",
+            committed_to_master_schedule_other: "this is the other for master schedule",
+            committed_to_diversity: "Other (Please Explain):",
+            committed_to_diversity_other: "this is the other for diversity",
+            replace_course: "I don't know (please explain):",
+            replace_course_other: "this is the other for replace course",
+          }.stringify_keys
+        )
+      }
+
+      assert_creates(Pd::Application::PrincipalApproval1819Application) do
+        put :create, params: test_params
+        assert_response :success
+      end
+
+      expected_principal_fields = {
+        principal_approval: "Other: this is the other for do you approve",
+        schedule_confirmed: "Other: this is the other for master schedule",
+        diversity_recruitment: "Other (Please Explain): this is the other for diversity",
+        wont_replace_existing_course: "I don't know (please explain): this is the other for replace course",
+      }
+      actual_principal_fields = teacher_application.reload.sanitize_form_data_hash.select do |k, _|
+        expected_principal_fields.keys.include? k
+      end
+
+      assert_equal expected_principal_fields, actual_principal_fields
+    end
+
     test 'Sends principal approval received email on successful create' do
       ::Pd::Application::Teacher1819ApplicationMailer.expects(:principal_approval_received).
         with(@teacher_application).
