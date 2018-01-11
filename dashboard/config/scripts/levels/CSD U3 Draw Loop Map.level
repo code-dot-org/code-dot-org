@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "The Draw Loop",
-    "reference": "/csd/draw_loop/index.html"
+    "reference": "/docs/csd/draw_loop/index.html"
   },
   "published": true,
   "notes": ""

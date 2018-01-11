@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Headings in HTML",
-    "reference": "/csd/headers/index.html",
+    "reference": "/docs/csd/headers/index.html",
     "teacher_markdown": "# Updating the Tags List\r\n\r\nThis map level recaps the tags that students learned throughout this lesson.  Encourage students to use this resource to update their HTML tags list or poster."
   },
   "published": true,

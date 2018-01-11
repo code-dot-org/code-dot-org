@@ -1,5 +1,5 @@
 import React from 'react';
-import ApplicationFormComponent from "../ApplicationFormComponent";
+import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
@@ -11,7 +11,7 @@ import {
 } from 'react-bootstrap';
 import {styles} from './TeacherApplicationConstants';
 
-export default class Section2YourSchool extends ApplicationFormComponent {
+export default class Section2YourSchool extends LabeledFormComponent {
   static labels = PageLabels.section2YourSchool;
 
   static associatedFields = [
@@ -124,11 +124,17 @@ export default class Section2YourSchool extends ApplicationFormComponent {
           course in the coming school year.
         </p>
         <p style={styles.formText}>
-          Note: Code.org does not require specific licences to teach these courses, but to participate in this
+          Note: Code.org does not require specific licenses to teach these courses, but to participate in this
           program, you must be able to teach this course during the 2018-19 school year.
         </p>
 
         {this.radioButtonsFor("doesSchoolRequireCsLicense")}
+        {this.props.data.doesSchoolRequireCsLicense && this.props.data.doesSchoolRequireCsLicense === 'Yes' &&
+          <div style={styles.indented}>
+            {this.inputFor("whatLicenseRequired")}
+          </div>
+        }
+
         {this.radioButtonsFor("haveCsLicense")}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("subjectsLicensedToTeach", {
@@ -158,6 +164,12 @@ export default class Section2YourSchool extends ApplicationFormComponent {
    */
   static getDynamicallyRequiredFields(data) {
     const requiredFields = [];
+
+    if (data.doesSchoolRequireCsLicense === 'Yes') {
+      requiredFields.push(
+        "whatLicenseRequired"
+      );
+    }
 
     if (data.school && data.school === '-1') {
       requiredFields.push(
@@ -208,6 +220,10 @@ export default class Section2YourSchool extends ApplicationFormComponent {
       changes.schoolState = undefined;
       changes.schoolZipCode = undefined;
       changes.schoolType = undefined;
+    }
+
+    if (data.doesSchoolRequireCsLicense !== 'Yes') {
+      changes.whatLicenseRequired = undefined;
     }
 
     return changes;

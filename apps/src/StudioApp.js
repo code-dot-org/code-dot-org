@@ -67,6 +67,7 @@ import {
 } from './redux/instructions';
 import { addCallouts } from '@cdo/apps/code-studio/callouts';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 var copyrightStrings;
 
@@ -267,6 +268,31 @@ StudioApp.prototype.init = function (config) {
   this.setConfigValues_(config);
 
   this.configureDom(config);
+
+  //Only log a page load when there are videos present
+  if (config.level.levelVideos && config.level.levelVideos.length > 0){
+    if (experiments.isEnabled('resourcesTab')){
+      firehoseClient.putRecord(
+        'analysis-events',
+        {
+          study: 'instructions-resources-tab-wip-v1',
+          study_group: 'resources-tab',
+          event: 'resources-tab-load',
+          data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
+        }
+      );
+    } else {
+      firehoseClient.putRecord(
+        'analysis-events',
+        {
+          study: 'instructions-resources-tab-wip-v1',
+          study_group: 'under-app',
+          event: 'under-app-load',
+          data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
+        }
+      );
+    }
+  }
 
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -1561,12 +1587,14 @@ StudioApp.prototype.report = function (options) {
 
   this.lastTestResult = options.testResult;
 
+  const readOnly = getStore().getState().pageConstants.isReadOnlyWorkspace;
+
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
   // or call the onComplete() callback expected. The app will just sit
   // there with the Reset button as the only option.
   var self = this;
-  if (!(this.hideSource && this.share)) {
+  if (!(this.hideSource && this.share) && !readOnly) {
     var onAttemptCallback = (function () {
       return function (builderDetails) {
         for (var option in builderDetails) {
@@ -1722,7 +1750,10 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.requiredBlocks_ = config.level.requiredBlocks || [];
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];
 
-  if (config.ignoreLastAttempt) {
+  // Always use the source code from the level definition for contained levels,
+  // so that changes made in levelbuilder will show up for users who have
+  // already run the level.
+  if (config.ignoreLastAttempt || config.hasContainedLevels) {
     config.level.lastAttempt = '';
   }
 
@@ -1824,6 +1855,23 @@ StudioApp.prototype.configureDom = function (config) {
   const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && experiments.isEnabled('resourcesTab');
   if (!referenceAreaInTopInstructions && referenceArea) {
     belowViz.appendChild(referenceArea);
+    // TODO (epeach) - remove after resources tab A/B testing
+    // Temporarily attach an event listener to log clicks
+    // Logs the type of app and the ids of the puzzle
+    var videoThumbnail = document.getElementsByClassName('video_thumbnail');
+    if (videoThumbnail[0]){
+      videoThumbnail[0].addEventListener('click', () => {
+        firehoseClient.putRecord(
+          'analysis-events',
+          {
+            study: 'instructions-resources-tab-wip-v1',
+            study_group: 'under-app',
+            event: 'under-app-video-click',
+            data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
+          }
+        );
+      });
+    }
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');

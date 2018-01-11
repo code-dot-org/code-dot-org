@@ -15,10 +15,9 @@ describe('maker/dropletConfig.js', () => {
         '"change"',
         '"close"',
         '"data"',
-        '"doubleTap"',
         '"down"',
         '"open"',
-        '"singleTap"',
+        '"shake"',
         '"up"'
       ]);
     });
@@ -49,8 +48,7 @@ describe('maker/dropletConfig.js', () => {
       expect(getBoardEventDropdownForParam('accelerometer')).to.deep.equal([
         '"change"',
         '"data"',
-        '"doubleTap"',
-        '"singleTap"'
+        '"shake"'
       ]);
     });
 

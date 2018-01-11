@@ -22,6 +22,16 @@ class SchoolTest < ActiveSupport::TestCase
     )
   end
 
+  test 'null state_school_id is valid' do
+    school = build :school, :without_state_school_id
+    assert school.valid?, school.errors.full_messages
+  end
+
+  test 'invalid state_school_id is invalid' do
+    school = build :school, :with_invalid_state_school_id
+    refute school.valid?
+  end
+
   test 'high needs false when no stats data' do
     school = create :school
     refute school.high_needs?

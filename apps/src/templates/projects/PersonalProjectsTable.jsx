@@ -8,8 +8,8 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {PROJECT_TYPE_MAP, personalProjectDataPropType} from './projectConstants';
 import QuickActionsCell from '../tables/QuickActionsCell';
-import QuickAction from '../tables/QuickAction';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
+import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -89,20 +89,22 @@ const isPublishedFormatter = function (isPublished) {
 const actionsFormatter = function (actions, {rowData}) {
   return (
     <QuickActionsCell>
-      <QuickAction
-        text={i18n.rename()}
-        action={()=>{}}
-      />
-      <QuickAction
-        text={i18n.remix()}
-        action={()=>{}}
-      />
-      <QuickAction
-        text={i18n.deleteProject()}
-        action={()=>{}}
-        hasLineAbove={true}
-        isDelete={true}
-      />
+      <PopUpMenu.Item
+        onClick={() => {}}
+      >
+        {i18n.rename()}
+      </PopUpMenu.Item>
+      <PopUpMenu.Item
+        onClick={() => {}}
+      >
+        {i18n.remix()}
+      </PopUpMenu.Item>
+      <MenuBreak/>
+      <PopUpMenu.Item
+        onClick={() => {}}
+      >
+        {i18n.deleteProject()}
+      </PopUpMenu.Item>
     </QuickActionsCell>
   );
 };

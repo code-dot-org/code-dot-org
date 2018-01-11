@@ -243,6 +243,22 @@ function bestResultLevelId(levelIds, progressData) {
 }
 
 /**
+ * Given a level that we get from the server using either /api/user_progress or
+ * /dashboardapi/section_level_progress, extracts the result, appropriately
+ * discerning a locked/submitted result for certain levels.
+ */
+export const getLevelResult = level => {
+  if (level.status === LevelStatus.locked) {
+    return TestResults.LOCKED_RESULT;
+  }
+  if (level.submitted || level.readonly_answers) {
+    return TestResults.SUBMITTED_RESULT;
+  }
+
+  return level.result;
+};
+
+/**
  * Does some processing of our passed in stages, namely
  * - Removes 'hidden' field
  * - Adds 'stageNumber' field for non-lockable, non-PLC stages
