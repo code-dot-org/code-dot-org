@@ -81,10 +81,7 @@ export default class SectionProgress extends Component {
     const { section, validScripts } = this.props;
     const { scriptId, scriptData, studentLevelProgress } = this.state;
 
-    let levelDataInitialized = false;
-    if (scriptData && studentLevelProgress) {
-      levelDataInitialized = true;
-    }
+    let levelDataInitialized = scriptData && studentLevelProgress;
 
     return (
       <div>
