@@ -7,9 +7,11 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Creating Sprites",
-    "reference": "/csd/sprites/index.html"
+    "reference": "/docs/csd/sprites/index.html"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Map>

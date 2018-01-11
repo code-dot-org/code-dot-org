@@ -61,6 +61,9 @@ FactoryGirl.define do
       factory :admin do
         admin true
       end
+      trait :with_school_info do
+        school_info
+      end
       trait :with_terms_of_service do
         terms_of_service_version 1
       end
@@ -731,12 +734,25 @@ FactoryGirl.define do
   factory :public_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
     id {(School.maximum(:id).to_i + 1).to_s}
+    # state_school_id must be unique
+    sequence(:state_school_id) do |n|
+      padded_n = format("%07d", n)
+      "WA-#{padded_n[0..2]}-#{padded_n[3..6]}"
+    end
     name "A seattle public school"
     city "Seattle"
     state "WA"
     zip "98122"
     school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
     association :school_district
+
+    trait :without_state_school_id do
+      state_school_id nil
+    end
+
+    trait :with_invalid_state_school_id do
+      state_school_id "123456789"
+    end
   end
 
   factory :private_school, class: School do

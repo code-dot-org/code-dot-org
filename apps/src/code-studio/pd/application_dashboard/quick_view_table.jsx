@@ -39,7 +39,9 @@ export class QuickViewTable extends React.Component {
       PropTypes.string,
       PropTypes.number
     ]),
-    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
+    regionalPartnerName: PropTypes.string,
+    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
+    isWorkshopAdmin: PropTypes.bool
   };
 
   static contextTypes = {
@@ -194,7 +196,7 @@ export class QuickViewTable extends React.Component {
 
   constructRows() {
     let rows = this.props.data;
-    if (this.props.regionalPartnerFilter !== AllPartnersFilter) {
+    if (this.props.isWorkshopAdmin && this.props.regionalPartnerFilter !== AllPartnersFilter) {
       if (this.props.regionalPartnerFilter === UnmatchedFilter || this.props.regionalPartnerFilter === null) {
         rows = rows.filter(row => row.regional_partner_id === null);
       } else {
@@ -224,4 +226,5 @@ export class QuickViewTable extends React.Component {
 
 export default connect(state => ({
   showLocked: state.permissions.lockApplication,
+  isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(QuickViewTable);

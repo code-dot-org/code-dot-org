@@ -19,6 +19,7 @@
 #  application_guid                    :string(255)
 #  decision_notification_email_sent_at :datetime
 #  accepted_at                         :datetime
+#  properties                          :text(65535)
 #
 # Indexes
 #
@@ -43,6 +44,7 @@ module Pd::Application
     belongs_to :teacher_application, class_name: 'Pd::Application::Teacher1819Application',
       primary_key: :application_guid, foreign_key: :application_guid
 
+    DONT_KNOW_EXPLAIN = "I don't know (please explain):"
     def self.options
       {
         title: COMMON_OPTIONS[:title],
@@ -55,7 +57,7 @@ module Pd::Application
         replace_course: [
           YES,
           "No, this course will be added to the schedule, but it won't replace an existing computer science course",
-          "I don't know (please explain):"
+          DONT_KNOW_EXPLAIN
         ],
         replace_which_course_csp: [
           'Beauty and Joy of Computing',
@@ -89,8 +91,9 @@ module Pd::Application
         ],
         committed_to_diversity: [YES, NO, OTHER_PLEASE_EXPLAIN],
         pay_fee: [
-          'Yes, my school or my teacher will be able to pay the full summer workshop program fee',
-          'No, my school or my teacher will not be able to pay the summer workshop program fee.'
+          'Yes, my school or my teacher will be able to pay the full summer workshop program fee.',
+          'No, my school or my teacher will not be able to pay the summer workshop program fee.',
+          'Not applicable: there is no fee for the summer workshop for teachers in my region.'
         ]
       }
     end
@@ -99,7 +102,6 @@ module Pd::Application
       %i(
         first_name
         last_name
-        title
         email
         do_you_approve
         confirm_principal
@@ -141,9 +143,12 @@ module Pd::Application
 
     def additional_text_fields
       [
-        [:do_you_approve],
         [:committed_to_master_schedule],
-        [:committed_to_diversity]
+        [:replace_course, DONT_KNOW_EXPLAIN, :replace_course_other],
+        [:committed_to_diversity, OTHER_PLEASE_EXPLAIN, :committed_to_diversity_other],
+        [:replace_which_course_csd, OTHER_PLEASE_EXPLAIN, :replace_which_course_csd_other],
+        [:replace_which_course_csp, OTHER_PLEASE_EXPLAIN, :replace_which_course_csp_other],
+        [:do_you_approve]
       ]
     end
 

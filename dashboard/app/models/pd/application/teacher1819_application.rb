@@ -19,6 +19,7 @@
 #  application_guid                    :string(255)
 #  decision_notification_email_sent_at :datetime
 #  accepted_at                         :datetime
+#  properties                          :text(65535)
 #
 # Indexes
 #
@@ -38,6 +39,17 @@ module Pd::Application
   class Teacher1819Application < ApplicationBase
     include Rails.application.routes.url_helpers
     include Teacher1819ApplicationConstants
+    include RegionalPartnerTeacherconMapping
+    include SerializedProperties
+
+    serialized_attrs %w(
+      pd_workshop_id
+      auto_assigned_enrollment_id
+    )
+
+    def workshop
+      Pd::Workshop.find(pd_workshop_id) if pd_workshop_id
+    end
 
     def send_decision_notification_email
       # We only want to email unmatched and G3-matched teachers. All teachers
@@ -48,14 +60,31 @@ module Pd::Application
       # all other states shouldn't need emails
       return unless %w(accepted declined waitlisted).include?(status)
 
-      # TODO: elijah - enable acceptance emails
-      # The template for the acceptance email is unfinished, and will need the
-      # workshop assignment work to be done before being unblocked (since the
-      # content of the email not only depends on which kind of workshop they end
-      # up with, but also references the specific workshop dates)
-      return if status == "accepted"
+      if status == "accepted"
+        # Acceptance emails need to be handled specially, since they not only
+        # require an associated workshop but also come in two flavors depending
+        # on the nature of the workshop
+        return unless pd_workshop_id
 
-      Pd::Application::Teacher1819ApplicationMailer.send(status, self).deliver_now
+        if workshop.teachercon?
+          Pd::Application::Teacher1819ApplicationMailer.teachercon_accepted(self).deliver_now
+        elsif workshop.local_summer?
+          Pd::Application::Teacher1819ApplicationMailer.local_summer_accepted(self).deliver_now
+        else
+          # Applications should only ever be associated with a workshop that
+          # falls into one of the above two categories, but if a mistake was
+          # made, notify honeybadger
+          Honeybadger.notify(
+            error_message: 'Accepted application has invalid workshop',
+            context: {
+              application_id: id,
+              pd_workshop_id: pd_workshop_id,
+            }
+          )
+        end
+      else
+        Pd::Application::Teacher1819ApplicationMailer.send(status, self).deliver_now
+      end
       update!(decision_notification_email_sent_at: Time.zone.now)
     end
 
@@ -87,6 +116,46 @@ module Pd::Application
       self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
     end
 
+    before_save :destroy_autoenrollment, if: -> {status_changed? && status != "accepted"}
+    def destroy_autoenrollment
+      return unless auto_assigned_enrollment_id
+
+      Pd::Enrollment.find_by(id: auto_assigned_enrollment_id).try(:destroy)
+      self.auto_assigned_enrollment_id = nil
+    end
+
+    # override
+    def lock!
+      return if locked?
+      super
+      enroll_user if status == "accepted"
+    end
+
+    def enroll_user
+      return unless pd_workshop_id
+
+      enrollment = Pd::Enrollment.where(
+        pd_workshop_id: pd_workshop_id,
+        email: user.email
+      ).first_or_initialize
+
+      # If this is a new enrollment, we want to:
+      #   - save it with all required data
+      #   - save a reference to it in properties
+      #   - delete the previous auto-created enrollment if it exists
+      if enrollment.new_record?
+        enrollment.update(
+          user: user,
+          school_info: user.school_info,
+          full_name: user.name
+        )
+        enrollment.save!
+
+        destroy_autoenrollment
+        self.auto_assigned_enrollment_id = enrollment.id
+      end
+    end
+
     PROGRAMS = {
       csd: 'Computer Science Discoveries (appropriate for 6th - 10th grade)',
       csp: 'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)',
@@ -114,6 +183,10 @@ module Pd::Application
       OTHER_PLEASE_LIST
     ]
 
+    NOT_TEACHING_THIS_YEAR = "I'm not teaching this year (please explain):"
+    DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN = "I don't know if I will teach this course (please explain):"
+    UNABLE_TO_ATTEND = "No, I'm unable to attend (please explain):"
+    NO_EXPLAIN = "No (please explain):"
     def self.options
       {
         country: [
@@ -143,7 +216,7 @@ module Pd::Application
         grades_at_school: GRADES,
         grades_teaching: [
           *GRADES,
-          "I'm not teaching this year (please explain):"
+          NOT_TEACHING_THIS_YEAR
         ],
         grades_expect_to_teach: GRADES,
 
@@ -294,12 +367,13 @@ module Pd::Application
         plan_to_teach: [
           'Yes, I plan to teach this course',
           'No, someone else from my school will teach this course',
-          "I don't know if I will teach this course (please explain):"
+          DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN
         ],
 
         pay_fee: [
-          'Yes, my school or I will be able to pay the full summer workshop program fee',
-          'No, my school or I will not be able to pay the summer workshop program fee.'
+          'Yes, my school or I will be able to pay the full summer workshop program fee.',
+          'No, my school or I will not be able to pay the summer workshop program fee.',
+          'Not applicable: there is no fee for the summer workshop for teachers in my region.'
         ],
 
         committed: [
@@ -308,10 +382,10 @@ module Pd::Application
         ],
 
         willing_to_travel: [
-          'Less than 10 miles',
-          '10 to 25 miles',
-          '25 to 50 miles',
-          'More than 50 miles'
+          'Up to 10 miles',
+          'Up to 25 miles',
+          'Up to 50 miles',
+          'Any distance'
         ]
       }
     end
@@ -389,6 +463,52 @@ module Pd::Application
       sanitize_form_data_hash[:state]
     end
 
+    def district_name
+      school.try(:school_district).try(:name).try(:titleize)
+    end
+
+    def school_name
+      school ? school.name.try(:titleize) : sanitize_form_data_hash[:school_name]
+    end
+
+    def school_zip_code
+      school ? school.zip : sanitize_form_data_hash[:zip_code]
+    end
+
+    def school_state
+      if school
+        school.state.try(:upcase)
+      else
+        STATE_ABBR_WITH_DC_HASH.key(sanitize_form_data_hash[:state]).try(:to_s)
+      end
+    end
+
+    def school_city
+      school ? school.city.try(:titleize) : sanitize_form_data_hash[:city]
+    end
+
+    def school_address
+      if school
+        address = ""
+        [
+          school.address_line1,
+          school.address_line2,
+          school.address_line3
+        ].each do |line|
+          if line
+            address << line << " "
+          end
+        end
+        address.titleize
+      else
+        sanitize_form_data_hash[:address]
+      end
+    end
+
+    def school_type
+      school ? school.try(:school_type).try(:titleize) : sanitize_form_data_hash[:school_type]
+    end
+
     def first_name
       hash = sanitize_form_data_hash
       hash[:preferred_first_name] || hash[:first_name]
@@ -426,6 +546,42 @@ module Pd::Application
       Pd::Application::Teacher1819Application.find_by(user: user)
     end
 
+    def find_default_workshop
+      return unless regional_partner
+
+      workshop_course =
+        if course == 'csd'
+          Pd::Workshop::COURSE_CSD
+        elsif course == 'csp'
+          Pd::Workshop::COURSE_CSP
+        end
+
+      # If this application is associated with a G3 partner who in turn is
+      # associated with a specific teachercon, return the workshop for that
+      # teachercon
+      if regional_partner.group == 3
+        teachercon = get_matching_teachercon(regional_partner)
+        if teachercon
+          return find_teachercon_workshop(course: workshop_course, city: teachercon[:city], year: 2018)
+        end
+      end
+
+      # Default to just assigning whichever of the partner's eligible workshops
+      # is scheduled to start first. We expect to hit this case for G1 and G2
+      # partners, and for any G3 partners without an associated teachercon
+      regional_partner.
+        pd_workshops_organized.
+        where(
+          course: workshop_course,
+          subject: [
+            Pd::Workshop::SUBJECT_TEACHER_CON,
+            Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+          ]
+        ).
+        order_by_scheduled_start.
+        first
+    end
+
     def meets_criteria
       response_scores = response_scores_hash
       scored_questions =
@@ -446,12 +602,28 @@ module Pd::Application
         # If any are No, applicant does not meet criteria
         NO
       else
-        'Incomplete'
+        'Reviewing incomplete'
       end
     end
 
     def principal_approval
       sanitize_form_data_hash[:principal_approval] || ''
+    end
+
+    def date_accepted
+      accepted_at.try(:strftime, '%b %e')
+    end
+
+    def assigned_workshop
+      pd_workshop_id ? Pd::Workshop.find(pd_workshop_id).location_city : ''
+    end
+
+    def registered_workshop
+      if pd_workshop_id
+        Pd::Enrollment.exists?(pd_workshop_id: pd_workshop_id, user: user) ? 'Yes' : 'No'
+      else
+        ''
+      end
     end
 
     # Called once after the application is submitted, and the principal approval is done
@@ -503,9 +675,31 @@ module Pd::Application
     def self.csv_header(course)
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
-        columns = filtered_labels(course).values.map {|l| markdown.render(l)}
-        columns.push 'Status', 'Principal Approval', 'Meets Criteria', 'Total Score', 'Notes', 'Regional Partner'
+        columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
+        columns.push(
+          'Principal Approval',
+          'Meets Criteria',
+          'Total Score',
+          'Regional Partner',
+          'School District',
+          'School',
+          'School Type',
+          'School Address',
+          'School City',
+          'School State',
+          'School Zip Code',
+          'Notes',
+          'Status'
+        )
         csv << columns
+      end
+    end
+
+    # @override
+    def self.cohort_csv_header
+      CSV.generate do |csv|
+        csv << ['Date Accepted', 'Applicant Name', 'District Name', 'School Name',
+                'Email', 'Assigned Workshop', 'Registered Workshop']
       end
     end
 
@@ -514,8 +708,37 @@ module Pd::Application
       answers = full_answers
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
-        row.push status, principal_approval, meets_criteria, total_score, notes, regional_partner_name
+        row.push(
+          principal_approval,
+          meets_criteria,
+          total_score,
+          regional_partner_name,
+          district_name,
+          school_name,
+          school_type,
+          school_address,
+          school_city,
+          school_state,
+          school_zip_code,
+          notes,
+          status
+        )
         csv << row
+      end
+    end
+
+    # @override
+    def to_cohort_csv_row
+      CSV.generate do |csv|
+        csv << [
+          date_accepted,
+          applicant_name,
+          district_name,
+          school_name,
+          user.email,
+          assigned_workshop,
+          registered_workshop
+        ]
       end
     end
 
@@ -537,8 +760,38 @@ module Pd::Application
           :csd_terms_per_year
         ]
       )
+      # school contains NCES id
+      # the other fields are empty in the form data unless they selected "Other" school,
+      # so we add it when we construct the csv row.
+      labels_to_remove.push(:school, :school_name, :school_address, :school_type, :school_city, :school_state, :school_zip_code)
 
       ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+    end
+
+    # @override
+    # Include additional text for all the multi-select fields that have the option
+    def additional_text_fields
+      [
+        [:current_role, OTHER_PLEASE_LIST],
+        [:grades_teaching, NOT_TEACHING_THIS_YEAR, :grades_teaching_not_teaching_explanation],
+        [:subjects_teaching, OTHER_PLEASE_LIST],
+        [:subjects_expect_to_teach, OTHER_PLEASE_LIST],
+        [:subjects_licensed_to_teach, OTHER_PLEASE_LIST],
+        [:taught_in_past, OTHER_PLEASE_LIST],
+        [:cs_offered_at_school, OTHER_PLEASE_LIST],
+        [:cs_opportunities_at_school, OTHER_PLEASE_LIST],
+        [:csd_course_hours_per_week, OTHER_PLEASE_LIST],
+        [:plan_to_teach, DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN, :plan_to_teach_dont_know_explain],
+        [:able_to_attend_single, UNABLE_TO_ATTEND, :able_to_attend_single_explain],
+        [:able_to_attend_multiple, NO_EXPLAIN, :able_to_attend_multiple_explain],
+        [:committed, NO_EXPLAIN, :committed_explain]
+      ]
+    end
+
+    # @override
+    # Add account_email (based on the associated user's email) to the sanitized form data hash
+    def sanitize_form_data_hash
+      super.merge(account_email: user.email)
     end
 
     protected
@@ -550,6 +803,15 @@ module Pd::Application
         NO
       else
         nil
+      end
+    end
+
+    def school
+      school_id = sanitize_form_data_hash[:school]
+      if school_id == '-1'
+        nil
+      else
+        School.find(school_id)
       end
     end
   end

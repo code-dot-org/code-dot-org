@@ -402,8 +402,10 @@ var projects = module.exports = {
   },
 
   showHeaderForProjectBacked() {
-    if (this.shouldUpdateHeaders() && !this.shouldHideShareAndRemix()) {
-      header.showHeaderForProjectBacked();
+    if (this.shouldUpdateHeaders()) {
+      header.showHeaderForProjectBacked({
+        showShareAndRemix: !this.shouldHideShareAndRemix()
+      });
     }
   },
   setName(newName) {
@@ -531,6 +533,7 @@ var projects = module.exports = {
       case 'turtle':
         switch (appOptions.skinId) {
           case 'artist':
+          case 'artist_zombie':
             return msg.defaultProjectNameArtist();
           case 'anna':
           case 'elsa':
