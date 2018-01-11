@@ -28,6 +28,7 @@ export default class TeacherHomepage extends Component {
     announcements: PropTypes.array.isRequired,
     queryStringOpen: PropTypes.string,
     canViewAdvancedTools: PropTypes.bool,
+    isEnglish: PropTypes.bool.isRequired
   };
 
   componentDidMount() {
@@ -37,7 +38,7 @@ export default class TeacherHomepage extends Component {
   }
 
   render() {
-    const { courses, topCourse, announcements, queryStringOpen, joinedSections } = this.props;
+    const { courses, topCourse, announcements, queryStringOpen, joinedSections, isEnglish } = this.props;
     const { canViewAdvancedTools } = this.props;
 
     return (
@@ -52,7 +53,9 @@ export default class TeacherHomepage extends Component {
         <ProtectedStatefulDiv
           ref="termsReminder"
         />
-        <SpecialAnnouncementActionBlock/>
+        {(isEnglish &&
+          <SpecialAnnouncementActionBlock/>
+        )}
         {announcements.length > 0 && (
           <div>
             <Notification

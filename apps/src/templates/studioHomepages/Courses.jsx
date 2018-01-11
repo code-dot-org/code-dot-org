@@ -67,14 +67,14 @@ class Courses extends Component {
 
         {/* English, teacher.  (Also can be shown when signed out.) */}
         {(isEnglish && isTeacher) && (
-          <span>
+          <div>
             <SpecialAnnouncementActionBlock/>
             <CoursesTeacherEnglish
               isSignedOut={isSignedOut}
               showInitialTips={showInitialTips}
               userId={userId}
             />
-          </span>
+          </div>
         )}
 
         {/* English, student.  (Also the default to be shown when signed out.) */}
