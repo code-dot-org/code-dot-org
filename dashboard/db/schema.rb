@@ -987,9 +987,11 @@ ActiveRecord::Schema.define(version: 20180110233855) do
     t.string   "address_line3",      limit: 30,                                      comment: "Location address, street 3"
     t.decimal  "latitude",                      precision: 8, scale: 6,              comment: "Location latitude"
     t.decimal  "longitude",                     precision: 9, scale: 6,              comment: "Location longitude"
+    t.string   "state_school_id",    limit: 11
     t.index ["id"], name: "index_schools_on_id", unique: true, using: :btree
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id", using: :btree
+    t.index ["state_school_id"], name: "index_schools_on_state_school_id", unique: true, using: :btree
     t.index ["zip"], name: "index_schools_on_zip", using: :btree
   end
 
@@ -1112,6 +1114,15 @@ ActiveRecord::Schema.define(version: 20180110233855) do
     t.integer  "relative_position",                               null: false
     t.text     "properties",        limit: 65535
     t.index ["script_id"], name: "index_stages_on_script_id", using: :btree
+  end
+
+  create_table "state_cs_offerings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "state_school_id", limit: 11, null: false
+    t.string   "course",                     null: false
+    t.integer  "school_year",     limit: 2,  null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.index ["state_school_id", "school_year", "course"], name: "index_state_cs_offerings_on_id_and_year_and_course", unique: true, using: :btree
   end
 
   create_table "studio_people", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1397,6 +1408,7 @@ ActiveRecord::Schema.define(version: 20180110233855) do
   add_foreign_key "school_stats_by_years", "schools"
   add_foreign_key "schools", "school_districts"
   add_foreign_key "sections", "courses"
+  add_foreign_key "state_cs_offerings", "schools", column: "state_school_id", primary_key: "state_school_id"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"
