@@ -126,7 +126,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
   end
 
   test 'filter_workshops with subject' do
-    expects(:where).with(subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP)
+    expects(:where).with(subject: [Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP])
     params subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
     @controller.filter_workshops @workshop_query
   end
