@@ -14,8 +14,8 @@ import {
   SONG_CHARGE,
   CP_COMMAND,
   J5_CONSTANTS,
-  TOUCH_PINS,
 } from './PlaygroundConstants';
+import Button from './Button';
 import Led from './Led';
 import {isNodeSerialAvailable} from './portScanning';
 
@@ -247,14 +247,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   createButton(pin) {
-    const newButton = new five.Button({
-      board: this.fiveBoard_,
-      pin,
-      pullup: TOUCH_PINS.includes(pin),
-    });
-    Object.defineProperty(newButton, 'isPressed', {
-      get: () => newButton.value === 1
-    });
+    const newButton = new Button({board: this.fiveBoard_, pin});
     this.dynamicComponents_.push(newButton);
     return newButton;
   }
