@@ -1,8 +1,14 @@
 import React, {PropTypes} from 'react';
 import Select from 'react-select';
-import { FormGroup, ControlLabel } from 'react-bootstrap';
+import { Grid, Row, Col, ControlLabel } from 'react-bootstrap';
 import { SelectStyleProps } from '../constants';
 import DetailViewResponse from './detail_view_response';
+
+const styles = {
+  select: {
+    maxWidth: '400px'
+  }
+};
 
 export default class SummerWorkshopAssignment extends React.Component {
   static propTypes = {
@@ -10,10 +16,7 @@ export default class SummerWorkshopAssignment extends React.Component {
       label: PropTypes.isRequired,
       value: PropTypes.number.isRequired
     })).isRequired,
-    assignedWorkshop: PropTypes.shape({
-      label: PropTypes.isRequired,
-      value: PropTypes.number.isRequired
-    }),
+    assignedWorkshopId: PropTypes.number,
     onChange: PropTypes.func.isRequired,
     editing: PropTypes.bool.isRequired,
     regionalPartnerGroup: PropTypes.number,
@@ -27,25 +30,31 @@ export default class SummerWorkshopAssignment extends React.Component {
 
   render() {
     return (
-      <div>
-        <FormGroup>
-          <ControlLabel>
-            Assigned Workshop
-          </ControlLabel>
-          <Select
-            value={this.props.assignedWorkshop ? this.props.assignedWorkshop.value : -1}
-            onChange={this.props.onChange}
-            options={this.props.workshops}
-            disabled={!this.props.editing}
-            {...SelectStyleProps}
-          />
-        </FormGroup>
+      <Grid fluid>
+        <Row>
+          <Col md={2} sm={3}>
+            <ControlLabel>
+              Assigned Workshop
+            </ControlLabel>
+          </Col>
+          <Col md={2} sm={3}>
+            <Select
+              value={this.props.assignedWorkshopId}
+              onChange={this.props.onChange}
+              options={this.props.workshops}
+              disabled={!this.props.editing}
+              style={styles.select}
+              {...SelectStyleProps}
+            />
+          </Col>
+        </Row>
         <DetailViewResponse
           question={this.props.canYouAttendQuestion}
           answer={this.props.canYouAttendAnswer}
           layout="lineItem"
         />
-      </div>
+        <br/>
+      </Grid>
     );
   }
 }
