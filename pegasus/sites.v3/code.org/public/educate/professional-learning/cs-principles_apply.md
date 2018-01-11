@@ -99,7 +99,7 @@ Ready to get started?
 
 _The priority deadline for applications is March 30, 2018. Applications submitted after March 30 will only be reviewed at our Regional Partners' discretion._ 
 
-### <a name="facilitate"></a>Code.org Facilitator Development Program for CS Principles
+### <a name="facilitate"></a>How do I become a CS Discoveries Facilitator?
 
 Code.org's [Facilitator Development Program](/educate/professional-learning/facilitator) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on the CS Principles curriculum. 
 
