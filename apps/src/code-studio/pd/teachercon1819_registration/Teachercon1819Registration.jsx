@@ -36,7 +36,7 @@ export default class Teachercon1819Registration extends FormController {
     };
   }
 
-  //static sessionStorageKey = "Teachercon1819Registration";
+  static sessionStorageKey = "Teachercon1819Registration";
 
   /**
    * @override
