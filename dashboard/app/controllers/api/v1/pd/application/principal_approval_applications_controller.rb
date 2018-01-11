@@ -22,7 +22,8 @@ module Api::V1::Pd::Application
           diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
           free_lunch_percent: principal_response[:free_lunch_percent],
           underrepresented_minority_percent: @application.underrepresented_minority_percent.to_s,
-          wont_replace_existing_course: principal_response.values_at(:replace_course, :replace_course_other).compact.join(" ")
+          wont_replace_existing_course: principal_response.values_at(:replace_course, :replace_course_other).compact.join(" "),
+          can_pay_fee: principal_response[:pay_fee]
         }
       )
       teacher_application.save

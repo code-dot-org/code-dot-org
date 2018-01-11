@@ -42,7 +42,8 @@ module Api::V1::Pd::Application
         diversity_recruitment: 'Yes',
         free_lunch_percent: '50%',
         underrepresented_minority_percent: '52.0',
-        wont_replace_existing_course: Pd::Application::PrincipalApproval1819Application.options[:replace_course][1]
+        wont_replace_existing_course: Pd::Application::PrincipalApproval1819Application.options[:replace_course][1],
+        can_pay_fee: 'Yes, my school or my teacher will be able to pay the full summer workshop program fee.'
       }
       actual_principal_fields = @teacher_application.sanitize_form_data_hash.select do |k, _|
         expected_principal_fields.keys.include? k
