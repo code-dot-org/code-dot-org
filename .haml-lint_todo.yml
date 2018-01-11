@@ -90,7 +90,6 @@ linters:
       - "dashboard/app/views/scripts/_form.html.haml"
       - "dashboard/test/ui/test_status.haml"
       - "pegasus/sites.v3/code.org/public/manage-professional-development-workshops/index.haml"
-      - "pegasus/sites.v3/code.org/public/ops-dashboard/index.haml"
       - "pegasus/sites.v3/code.org/public/teacher-dashboard/index.haml"
       - "pegasus/sites.v3/code.org/public/teacher-dashboard/section_progress.haml"
       - "pegasus/sites/virtual/curriculum-algebra/index.haml"

@@ -32,27 +32,25 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
     editing: PropTypes.bool,
     scores: PropTypes.object,
     handleScoreChange: PropTypes.func
-  }
+  };
 
-   constructor(props) {
+  constructor(props) {
     super(props);
 
-    this.state = {
-      sectionHeaders: this.props.applicationType === TEACHER ? _.omit(TeacherSectionHeaders, ['section5Submission']) : FacilitatorSectionHeaders,
-      pageLabels: this.props.applicationType === TEACHER ? TeacherPageLabels : FacilitatorPageLabels,
-      labelOverrides: this.props.applicationType === TEACHER ? TeacherLabelOverrides : FacilitatorLabelOverrides,
-      numberedQuestions: this.props.applicationType === TEACHER ? [] : NumberedQuestions,
-      paneledQuestions: paneledQuestions[this.props.applicationType],
-      validScores: this.props.applicationType === TEACHER ? TeacherValidScores : {}
-    };
+    this.sectionHeaders = props.applicationType === TEACHER ? _.omit(TeacherSectionHeaders, ['section5Submission']) : FacilitatorSectionHeaders;
+    this.pageLabels = props.applicationType === TEACHER ? TeacherPageLabels : FacilitatorPageLabels;
+    this.labelOverrides = props.applicationType === TEACHER ? TeacherLabelOverrides : FacilitatorLabelOverrides;
+    this.numberedQuestions = props.applicationType === TEACHER ? [] : NumberedQuestions;
+    this.paneledQuestions = paneledQuestions[props.applicationType];
+    this.validScores = props.applicationType === TEACHER ? TeacherValidScores : {};
   }
 
   getQuestionText = (section, question) => {
-    let questionText = this.state.labelOverrides[question] || this.state.pageLabels[section][question];
+    let questionText = this.labelOverrides[question] || this.pageLabels[section][question];
 
     let questionNumber = '';
-    if (this.state.numberedQuestions.indexOf(question) >= 0) {
-      questionNumber = this.state.numberedQuestions.indexOf(question) + 1 + ". ";
+    if (this.numberedQuestions.indexOf(question) >= 0) {
+      questionNumber = this.numberedQuestions.indexOf(question) + 1 + ". ";
     }
 
     return questionNumber + questionText;
@@ -63,16 +61,16 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
     if (section === 'detailViewPrincipalApproval' && !this.props.formResponses['principalApproval']) {
       return (<h4>Not yet submitted</h4>);
     } else {
-      return Object.keys(this.state.pageLabels[section]).map((question, j) => {
+      return Object.keys(this.pageLabels[section]).map((question, j) => {
         return (
           <DetailViewResponse
             question={this.getQuestionText(section, question)}
             questionId={question}
             answer={this.props.formResponses[question]}
             key={j}
-            layout={this.state.paneledQuestions.indexOf(question) >= 0 ? 'panel' : 'lineItem'}
+            layout={this.paneledQuestions.indexOf(question) >= 0 ? 'panel' : 'lineItem'}
             score={this.props.scores[question]}
-            possibleScores={this.state.validScores[question]}
+            possibleScores={this.validScores[question]}
             editing={this.props.editing}
             handleScoreChange={this.props.handleScoreChange}
           />
@@ -85,11 +83,11 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
     return (
       <div>
         {
-          Object.keys(this.state.sectionHeaders).map((section, i) => {
+          Object.keys(this.sectionHeaders).map((section, i) => {
             return (
               <div key={i}>
                 <h3>
-                  {this.state.sectionHeaders[section]}
+                  {this.sectionHeaders[section]}
                 </h3>
                 {this.renderResponsesForSection(section)}
               </div>
