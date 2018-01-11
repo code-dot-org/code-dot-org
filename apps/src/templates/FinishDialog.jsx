@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { hideFeedback } from '../redux/feedback';
 import BaseDialog from './BaseDialog';
+import Odometer from './Odometer';
 import PuzzleRatingButtons from  './PuzzleRatingButtons';
 import React, { Component, PropTypes } from 'react';
 import color from '../util/color';
@@ -189,7 +190,7 @@ export class UnconnectedFinishDialog extends Component {
             styles.blockCountPass : styles.blockCountPerfect}
         >
           <span style={styles.blockCount}>
-            {(this.props.blocksUsed || 0).toString()}
+            <Odometer value={this.props.blocksUsed} />
             {this.props.blockLimit && ('/' + this.props.blockLimit.toString())}
           </span>
           <span style={styles.blockCountDescriptor}>
