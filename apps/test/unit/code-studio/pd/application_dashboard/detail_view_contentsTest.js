@@ -9,8 +9,7 @@ import sinon from 'sinon';
 
 describe("DetailViewContents", () => {
   // We aren't testing any of the responses of the workshop selector control, so just
-  // return success for all requests for the time being to suppress the warning message
-  // in the test output
+  // have a fake server to handle calls and suppress warnings
   sinon.fakeServer.create();
 
   const mountDetailView = (applicationType, overrides = {}) => {
