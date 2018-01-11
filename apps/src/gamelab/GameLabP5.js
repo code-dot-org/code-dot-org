@@ -549,20 +549,19 @@ GameLabP5.prototype.startExecution = function () {
 
       p5obj._setupEpiloguePhase1 = function () {
         /*
-         * Modified code from p5 _setup()
+         * Modified code from p5 _setup() (safe to call multiple times in the
+         * event that the debugger has slowed down the process of completing
+         * the setup phase)
          */
 
-        if (!this._setupPhase1Done){
-          // unhide any hidden canvases that were created
-          var canvases = document.getElementsByTagName('canvas');
-          for (var i = 0; i < canvases.length; i++) {
-            var k = canvases[i];
-            if (k.dataset.hidden === 'true') {
-              k.style.visibility = '';
-              delete(k.dataset.hidden);
-            }
+        // unhide any hidden canvases that were created
+        var canvases = document.getElementsByTagName('canvas');
+        for (var i = 0; i < canvases.length; i++) {
+          var k = canvases[i];
+          if (k.dataset.hidden === 'true') {
+            k.style.visibility = '';
+            delete(k.dataset.hidden);
           }
-          this._setupPhase1Done = true;
         }
       }.bind(p5obj);
 
