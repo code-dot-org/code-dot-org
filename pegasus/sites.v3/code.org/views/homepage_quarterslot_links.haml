@@ -1,18 +1,17 @@
-- display = entry[:active_s] == "hide" ? "none" : "block"
-.quarterslot-links.div.col-25.col-mobile-50{style: "display: #{display}"}
-  %a{id: "#{entry[:id_s]}_link", href: entry[:param4_s]}
-    - entry[:image_t] = entry[:image_t].gsub("/images/", "/images/fit-400/")
-    .slotbox{style: "background-image: url(#{entry[:image_t]})"}
-      .headerbox{style: "background-color: rgb(#{entry[:param2_s]}); background-color: rgba(#{entry[:param2_s]}, 0.92)"}
+.quarterslot-links.div.col-25.col-mobile-50
+  %a{href: entry[:url]}
+    - entry[:image] = entry[:image].gsub("/images/", "/images/fit-400/")
+    .slotbox{style: "background-image: url(#{entry[:image]})"}
+      .headerbox{style: "background-color: rgb(#{entry[:color1]}); background-color: rgba(#{entry[:color1]}, 0.92)"}
         .header.underscorehover
-          = I18n.t(entry[:text1_s])
+          = I18n.t(entry[:title])
         .sentence
-          - unless entry[:param1_s].nil_or_empty?
-            = I18n.t(entry[:param1_s])
+          - unless entry[:text].nil_or_empty?
+            = I18n.t(entry[:text])
           - else
             &nbsp;
-  .thelinks{style: "background-color: rgb(#{entry[:param3_s]})"}
+  .thelinks{style: "background-color: rgb(#{entry[:color2]})"}
     - entry[:links].each do |link|
       %p.linkentry
-        %a.link{id: "#{link[:id_s]}_link", href: link[:param2_s]}
-          = I18n.t(link[:param1_s]).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
+        %a.link{href: link[:url]}
+          = I18n.t(link[:text]).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
