@@ -26,16 +26,7 @@ Resources:
       ManagedPolicyArns:
         - 'arn:aws:iam::aws:policy/AmazonRDSFullAccess'
         - 'arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole'
-      Policies:
-        - PolicyName: AWSLambdaBasicExecutionRole
-          PolicyDocument:
-            Statement:
-              - Effect: Allow
-                Action:
-                  - 'logs:CreateLogGroup'
-                  - 'logs:CreateLogStream'
-                  - 'logs:PutLogEvents'
-                Resource: 'arn:aws:logs:*:*:*'
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
   RestoreDatabaseCopyForVerification:
     Type: 'AWS::Lambda::Function'
     Properties:
@@ -146,10 +137,4 @@ Resources:
     Properties:
       TopicName: verify-database-status
       DisplayName: verifydb
-      Subscription:
-        - Endpoint: suresh@code.org
-          Protocol: email
-        - Endpoint: code.org@suresh.com
-          Protocol: email
-        - Endpoint: '+12063908177'
-          Protocol: sms
+
