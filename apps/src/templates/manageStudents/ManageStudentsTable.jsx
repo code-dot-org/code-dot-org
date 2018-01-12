@@ -101,9 +101,8 @@ const actionsFormatter = function (actions, {rowData}) {
 
 class ManageStudentsTable extends Component {
   static propTypes = {
-    studentData: PropTypes.arrayOf(studentSectionDataPropType),
-
     //Provided by redux
+    studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
   };
 
@@ -266,5 +265,6 @@ class ManageStudentsTable extends Component {
 export const UnconnectedManageStudentsTable = ManageStudentsTable;
 
 export default connect(state => ({
-  loginType: state.manageStudents.loginType
+  loginType: state.manageStudents.loginType,
+  studentData: state.manageStudents.studentData,
 }))(ManageStudentsTable);

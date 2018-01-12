@@ -6,7 +6,12 @@ import teacherSections, {
   setOAuthProvider,
   asyncLoadSectionData
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import manageStudents, {setLoginType} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import manageStudents, {
+  setLoginType,
+  setSectionId,
+  setStudents,
+  convertStudentServerData,
+} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 import SectionsSharingButton from '@cdo/apps/templates/teacherDashboard/SectionsSharingButton';
@@ -76,6 +81,7 @@ export function renderSectionTable(sectionId, loginType) {
   const store = getStore();
 
   store.dispatch(setLoginType(loginType));
+  store.dispatch(setSectionId(sectionId));
 
   const dataUrl = `/v2/sections/${sectionId}/students`;
   const element = document.getElementById('student-table-react');
@@ -85,25 +91,12 @@ export function renderSectionTable(sectionId, loginType) {
     url: dataUrl,
     dataType: 'json'
   }).done(studentData => {
-    studentData = studentData.map((student) => {
-      return {
-        id: student.id,
-        name: student.name,
-        username: student.username,
-        age: student.age,
-        gender: student.gender,
-        secretWords: student.secret_words,
-        secretPicturePath: student.secret_picture_path,
-        sectionId: sectionId,
-        loginType: loginType,
-      };
-    });
+    store.dispatch(
+      setStudents(convertStudentServerData(studentData, loginType, sectionId))
+    );
     ReactDOM.render(
       <Provider store={store}>
-        <ManageStudentsTable
-          studentData={studentData}
-          id={sectionId}
-        />
+        <ManageStudentsTable />
       </Provider>,
       element);
   });
