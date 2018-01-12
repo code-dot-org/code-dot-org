@@ -29,6 +29,7 @@ describe('TeacherHomepage', () => {
         courses={[]}
         topCourse={topCourse}
         joinedSections={[]}
+        isEnglish={true}
         showCensusBanner={false}
       />
     );
@@ -46,6 +47,7 @@ describe('TeacherHomepage', () => {
         courses={[]}
         topCourse={topCourse}
         joinedSections={[]}
+        isEnglish={true}
         showCensusBanner={false}
       />
     );
@@ -59,6 +61,7 @@ describe('TeacherHomepage', () => {
         courses={[]}
         topCourse={topCourse}
         joinedSections={[]}
+        isEnglish={true}
         showCensusBanner={false}
       />
     );
@@ -82,6 +85,7 @@ describe('TeacherHomepage', () => {
         courses={[]}
         topCourse={topCourse}
         joinedSections={[]}
+        isEnglish={true}
         showCensusBanner={false}
       />
     );
@@ -97,6 +101,7 @@ describe('TeacherHomepage', () => {
         courses={[]}
         topCourse={topCourse}
         joinedSections={[]}
+        isEnglish={true}
         showCensusBanner={false}
       />
     );
@@ -110,6 +115,7 @@ describe('TeacherHomepage', () => {
         topCourse={topCourse}
         courses={courses}
         joinedSections={[]}
+        isEnglish={true}
         showCensusBanner={false}
       />
     );
@@ -130,6 +136,7 @@ describe('TeacherHomepage', () => {
         topCourse={topCourse}
         codeOrgUrlPrefix="http://localhost:3000/"
         joinedSections={[]}
+        isEnglish={true}
         showCensusBanner={false}
       />
     );
