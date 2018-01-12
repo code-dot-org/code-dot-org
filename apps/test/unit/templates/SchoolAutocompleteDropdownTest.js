@@ -40,6 +40,10 @@ describe('SchoolAutocompleteDropdown', () => {
     expect(select).to.have.prop('value', '12345');
   });
 
+  it('Disables cache on the select control', () => {
+    expect(select).to.have.prop('cache', false);
+  });
+
   it("Calls props.onChange when the selection changes", () => {
     select.simulate("change", {value: '1', label: 'selected school'});
     expect(handleChange).to.be.calledOnce;
