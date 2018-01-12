@@ -410,6 +410,15 @@ describe('The Exporter,', function () {
   }
 
   describe("Regression tests", () => {
+    let originalBodyInnerHTML;
+    beforeEach(() => {
+      originalBodyInnerHTML = document.body.innerHTML;
+    });
+
+    afterEach(() => {
+      document.body.innerHTML = originalBodyInnerHTML;
+    });
+
     it("should allow screens to be switched programmatically", (done) => {
       runExportedApp(
         `console.log("before switch"); setScreen("screen2"); console.log("after switch");`,
