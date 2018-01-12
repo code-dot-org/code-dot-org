@@ -32,6 +32,7 @@ function setupVizDom() {
   return $(sampleDom);
 }
 describe('applab', () => {
+  testUtils.sandboxDocumentBody();
   testUtils.setExternalGlobals();
 
 describe('applab: designMode.addScreenIfNecessary', function () {
