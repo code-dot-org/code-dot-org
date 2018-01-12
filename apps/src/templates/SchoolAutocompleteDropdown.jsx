@@ -3,7 +3,7 @@ import VirtualizedSelect from 'react-virtualized-select';
 import 'react-virtualized/styles.css';
 import 'react-select/dist/react-select.css';
 import 'react-virtualized-select/styles.css';
-import debounce from 'lodash/debounce';
+import _ from 'lodash';
 import i18n from "@cdo/locale";
 
 export default class SchoolAutocompleteDropdown extends Component {
@@ -28,7 +28,7 @@ export default class SchoolAutocompleteDropdown extends Component {
     label: i18n.schoolNotFound()
   });
 
-  debouncedSearch = debounce((q) => {
+  debouncedSearch = _.debounce((q) => {
     const searchUrl = `/dashboardapi/v1/schoolsearch/${encodeURIComponent(q)}/40`;
     return fetch(searchUrl)
       .then(response => response.ok ? response.json() : [])
