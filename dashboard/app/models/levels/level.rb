@@ -59,7 +59,7 @@ class Level < ActiveRecord::Base
     instructions_important
     display_name
     map_levels
-    reference_link
+    reference_links
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
