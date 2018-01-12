@@ -664,7 +664,7 @@ FactoryGirl.define do
         subjects_teaching: ['Computer Science'],
         subjects_expect_to_teach: ['Computer Science'],
         subjects_licensed_to_teach: ['Computer Science'],
-        taught_in_past: ['Hour of Code'],
+        taught_in_past: ['CS Fundamentals'],
         previous_yearlong_cdo_pd: ['CS in Science'],
         cs_offered_at_school: ['AP CS A'],
         cs_opportunities_at_school: ['Courses for credit'],
@@ -734,7 +734,7 @@ FactoryGirl.define do
               replace_course: replace_course,
               committed_to_diversity: 'Yes',
               understand_fee: 'Yes',
-              pay_fee: 'Yes, my school or my teacher will be able to pay the full summer workshop program fee'
+              pay_fee: 'Yes, my school or my teacher will be able to pay the full summer workshop program fee.'
             }
           )
 
@@ -758,5 +758,58 @@ FactoryGirl.define do
     end
     course 'csp'
     form_data {build(:pd_principal_approval1819_application_hash, course: course, approved: approved, replace_course: replace_course).to_json}
+  end
+
+  factory :pd_teachercon1819_registration_hash, class: 'Hash' do
+    transient do
+      accepted true
+    end
+
+    initialize_with do
+      {
+        email: "ssnape@hogwarts.edu",
+        preferredFirstName: "Sevvy",
+        lastName: "Snape",
+        phone: "5558675309",
+      }.tap do |hash|
+        if accepted
+          hash.merge!(
+            {
+              teacherAcceptSeat: "Yes, I accept my seat in the Professional Learning Program",
+              addressCity: "Albuquerque",
+              addressState: "Alabama",
+              addressStreet: "123 Street Ave",
+              addressZip: "12345",
+              agreeShareContact: true,
+              contactFirstName: "Dumble",
+              contactLastName: "Dore",
+              contactPhone: "1597534862",
+              contactRelationship: "it's complicated",
+              dietaryNeeds: "Food Allergy",
+              dietaryNeeds_food_allergy_details: "memories",
+              howTraveling: "Amtrak or regional train service",
+              liabilityWaiver: "Yes",
+              liveFarAway: "Yes",
+              needHotel: "No",
+              photoRelease: "Yes",
+            }
+          )
+        else
+          hash.merge!(
+            {
+              teacherAcceptSeat: "No, I decline my seat in the Professional Learning Program.",
+            }
+          )
+        end
+      end.stringify_keys
+    end
+  end
+
+  factory :pd_teachercon1819_registration, class: 'Pd::Teachercon1819Registration' do
+    association :pd_application, factory: :pd_teacher1819_application
+    transient do
+      accepted false
+    end
+    form_data {build(:pd_teachercon1819_registration_hash, accepted: accepted).to_json}
   end
 end

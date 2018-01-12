@@ -72,7 +72,15 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
         Api::V1::Pd::TeacherApplicationCohortViewSerializer
       end
 
-    render json: applications, each_serializer: serializer
+    respond_to do |format|
+      format.json do
+        render json: applications, each_serializer: serializer
+      end
+      format.csv do
+        csv_text = [TYPES_BY_ROLE[params[:role].to_sym].cohort_csv_header, applications.map(&:to_cohort_csv_row)].join
+        send_csv_attachment csv_text, "#{params[:role]}_cohort_applications.csv"
+      end
+    end
   end
 
   # PATCH /api/v1/pd/applications/1
@@ -87,6 +95,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
       application_data[:regional_partner_filter] = nil
     end
     application_data["regional_partner_id"] = application_data.delete "regional_partner_filter"
+
+    application_data["notes"] = application_data["notes"].strip_utf8mb4 if application_data["notes"]
 
     @application.update!(application_data)
 
@@ -120,7 +130,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   def application_params
     params.require(:application).permit(
-      :status, :notes, :regional_partner_filter, :response_scores, :locked
+      :status, :notes, :regional_partner_filter, :response_scores, :locked, :pd_workshop_id
     )
   end
 

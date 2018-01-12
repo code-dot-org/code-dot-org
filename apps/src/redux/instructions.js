@@ -56,8 +56,10 @@ const instructionsInitialState = {
   // Used to provide access to level data for the logging
   app: undefined,
   scriptName: undefined,
+  scriptId: undefined,
   stagePosition: 0,
   levelPosition: 0,
+  serverLevelId: undefined,
 };
 
 export default function reducer(state = {...instructionsInitialState}, action) {
@@ -78,7 +80,9 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       app,
       scriptName,
       stagePosition,
-      levelPosition
+      levelPosition,
+      scriptId,
+      serverLevelId
     } = action;
     let collapsed = state.collapsed;
     if (!longInstructions && !hasContainedLevels) {
@@ -99,7 +103,9 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       app,
       scriptName,
       stagePosition,
-      levelPosition
+      levelPosition,
+      scriptId,
+      serverLevelId
     });
   }
 
@@ -156,7 +162,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
 export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
     shortInstructions, shortInstructions2, longInstructions,
     hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown, levelVideos,
-    app, scriptName, stagePosition, levelPosition }) => ({
+    app, scriptName, stagePosition, levelPosition, serverLevelId, scriptId }) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
   hasInlineImages,
@@ -170,7 +176,9 @@ export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
   app,
   scriptName,
   stagePosition,
-  levelPosition
+  levelPosition,
+  scriptId,
+  serverLevelId
 });
 
 export const setInstructionsRenderedHeight = height => ({
@@ -277,8 +285,9 @@ export const determineInstructionsConstants = config => {
     app,
     scriptName,
     stagePosition,
-    levelPosition
-  } = config;
+    levelPosition,
+    serverLevelId,
+    scriptId  } = config;
   const {
     instructions,
     instructions2,
@@ -362,5 +371,7 @@ export const determineInstructionsConstants = config => {
     scriptName,
     stagePosition,
     levelPosition,
+    serverLevelId,
+    scriptId,
   };
 };

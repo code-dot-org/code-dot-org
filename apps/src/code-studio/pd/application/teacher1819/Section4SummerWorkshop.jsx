@@ -1,6 +1,6 @@
 import React from 'react';
 import $ from "jquery";
-import ApplicationFormComponent from "../ApplicationFormComponent";
+import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import {FormGroup} from 'react-bootstrap';
 import {styles, PROGRAM_CSD, PROGRAM_CSP} from "./TeacherApplicationConstants";
@@ -11,7 +11,7 @@ const NO_PAY_FEE = "No, my school or I will not be able to pay the summer worksh
 
 const WORKSHOP_FEES_URL = "https://docs.google.com/spreadsheets/d/1YFrTFp-Uz0jWk9-UR9JVuXfoDcCL6J0hxK5CYldv_Eo";
 
-export default class Section4SummerWorkshop extends ApplicationFormComponent {
+export default class Section4SummerWorkshop extends LabeledFormComponent {
   static labels = PageLabels.section4SummerWorkshop;
 
   static associatedFields = [
@@ -161,8 +161,10 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
     if (!this.props.data.regionalPartnerId) {
       return (
         <div>
-          There currently is no Regional Partner in your area.
-          If a seat opens in the program, we will invite you to a TeacherCon and provide you with more details.
+          <p>
+            <strong>There currently is no Regional Partner in your area. </strong>
+            If a seat opens in the program, we will invite you to a TeacherCon and provide you with more details.
+          </p>
         </div>
       );
     } else if (this.props.data.teachercon) {
