@@ -83,7 +83,7 @@ module Pd::Application
           csp_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].first,
           previous_yearlong_cdo_pd: ['CS Discoveries'],
           csp_how_offer: Pd::Application::Teacher1819Application.options[:csp_how_offer].last,
-          taught_in_past: ['Hour of Code']
+          taught_in_past: ['CS in Algebra']
         }
       )
 
@@ -153,7 +153,7 @@ module Pd::Application
           csp_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].first,
           previous_yearlong_cdo_pd: ['CS Discoveries'],
           csp_how_offer: Pd::Application::Teacher1819Application.options[:csp_how_offer].last,
-          taught_in_past: ['Hour of Code']
+          taught_in_past: ['CS in Algebra']
         }
       )
 
