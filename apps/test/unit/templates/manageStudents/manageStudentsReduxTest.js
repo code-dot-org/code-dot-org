@@ -1,5 +1,4 @@
 import { assert } from '../../../util/configuredChai';
-import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
 import manageStudents, {
   setLoginType,
   setSectionId,
@@ -50,15 +49,6 @@ const studentEmailData = [
 
 describe('manageStudentsRedux', () => {
   const initialState = manageStudents(undefined, {});
-
-  beforeEach(() => {
-    stubRedux();
-    registerReducers({manageStudents: manageStudents});
-  });
-
-  afterEach(() => {
-    restoreRedux();
-  });
 
   describe('setLoginType', () => {
     it('sets login type for the section in view', () => {
