@@ -4,7 +4,7 @@ set -e
 # 'npm test' normally does all three of these things.
 # We break them up here so they each run in isolation.
 
-alias grunt="node --max_old_space_size=4096 `npm bin`/grunt"
+GRUNT_CMD="node --max_old_space_size=4096 `npm bin`/grunt"
 
 if [ -n "$CIRCLECI" ]; then
   mkdir -p log
@@ -13,27 +13,27 @@ if [ -n "$CIRCLECI" ]; then
   curl -s https://codecov.io/bash > codecov.sh
   chmod +x codecov.sh
 
-  grunt preconcat concat
+  $GRUNT_CMD preconcat concat
 
   SHELL=/bin/bash parallel -j 4 --joblog - ::: "npm run lint" \
-  "(grunt unitTest && ./codecov.sh -cF unit) > log/unitTest.log" \
-  "(grunt storybookTest && ./codecov.sh -cF storybook) > log/storybookTest.log" \
-  "(grunt scratchTest && ./codecov.sh -cF scratch) > log/scratchTest.log" \
-  "(LEVEL_TYPE='turtle' grunt karma:integration && \
+  "($GRUNT_CMD unitTest && ./codecov.sh -cF unit) > log/unitTest.log" \
+  "($GRUNT_CMD storybookTest && ./codecov.sh -cF storybook) > log/storybookTest.log" \
+  "($GRUNT_CMD scratchTest && ./codecov.sh -cF scratch) > log/scratchTest.log" \
+  "(LEVEL_TYPE='turtle' $GRUNT_CMD karma:integration && \
     ./codecov.sh -cF integration) > log/turtleTest.log" \
-  "(LEVEL_TYPE='maze|bounce|calc|eval|flappy|studio' grunt karma:integration && \
+  "(LEVEL_TYPE='maze|bounce|calc|eval|flappy|studio' $GRUNT_CMD karma:integration && \
     ./codecov.sh -cF integration) > log/integrationTest.log" \
-  "(LEVEL_TYPE='applab|gamelab' grunt karma:integration && \
+  "(LEVEL_TYPE='applab|gamelab' $GRUNT_CMD karma:integration && \
     ./codecov.sh -cF integration) > log/appLabgameLabTest.log" \
-  "(LEVEL_TYPE='craft' grunt karma:integration && \
+  "(LEVEL_TYPE='craft' $GRUNT_CMD karma:integration && \
     ./codecov.sh -cF integration) > log/craftTest.log"
 else
   npm run lint
-  grunt unitTest
-  grunt storybookTest
-  grunt scratchTest
-  LEVEL_TYPE='turtle' grunt integrationTest
-  LEVEL_TYPE='maze|bounce|calc|eval|flappy|studio' grunt integrationTest
-  LEVEL_TYPE='applab|gamelab' grunt integrationTest
-  LEVEL_TYPE='craft' grunt integrationTest
+  $GRUNT_CMD unitTest
+  $GRUNT_CMD storybookTest
+  $GRUNT_CMD scratchTest
+  LEVEL_TYPE='turtle' $GRUNT_CMD integrationTest
+  LEVEL_TYPE='maze|bounce|calc|eval|flappy|studio' $GRUNT_CMD integrationTest
+  LEVEL_TYPE='applab|gamelab' $GRUNT_CMD integrationTest
+  LEVEL_TYPE='craft' $GRUNT_CMD integrationTest
 fi
