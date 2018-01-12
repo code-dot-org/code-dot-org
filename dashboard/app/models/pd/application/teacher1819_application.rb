@@ -96,7 +96,7 @@ module Pd::Application
     def update_user_school_info!
       if school_id || user.school_info.try(&:school).nil?
         school_info = get_duplicate_school_info(school_info_attr) || SchoolInfo.create!(school_info_attr)
-        user.update!(school_info: school_info)
+        user.update_column(:school_info_id, school_info.id)
       end
     end
 
