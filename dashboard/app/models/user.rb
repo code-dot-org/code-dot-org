@@ -1612,9 +1612,12 @@ class User < ActiveRecord::Base
   end
 
   def show_census_teacher_banner?
+    # Note: Jan 2018, there is concern that the census banner will distract from the
+    # announcement about facilitator applications. For the time being we will stop showing it
+    return false
     # Must have an NCES school to show the banner
-    users_school = try(:school_info).try(:school)
-    teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
+    #    users_school = try(:school_info).try(:school)
+    #    teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
   end
 
   def show_race_interstitial?(ip = nil)
