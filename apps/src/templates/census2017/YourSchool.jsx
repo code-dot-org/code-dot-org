@@ -79,15 +79,19 @@ class YourSchool extends Component {
           {i18n.yourSchoolDescription()}
         </h3>
         <YourSchoolResources/>
-        <h1 style={styles.heading}>
-          Put your school on the map
-        </h1>
-        <h3 style={styles.description}>
-          {i18n.yourSchoolMapDesc()}
-          If you are located in the US, please <a href="#form">fill out the form below</a>.
-          If you are outside the US, <a href="/learn/local">add your school here</a>.
-        </h3>
-        <ProtectedStatefulDiv ref="map"/>
+        {!this.props.hideMap && (
+           <div>
+             <h1 style={styles.heading}>
+               Put your school on the map
+             </h1>
+             <h3 style={styles.description}>
+               {i18n.yourSchoolMapDesc()}
+               If you are located in the US, please <a href="#form">fill out the form below</a>.
+               If you are outside the US, <a href="/learn/local">add your school here</a>.
+             </h3>
+             <ProtectedStatefulDiv ref="map"/>
+           </div>
+        )}
         <CensusForm/>
       </div>
     );
