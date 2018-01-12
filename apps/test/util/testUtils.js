@@ -343,6 +343,27 @@ export function restoreOnWindow(key) {
 }
 
 /**
+ * Saves the contents of `document.body.innerHTML` before each test, and
+ * restores those contents after the test, allowing tests to do (almost)
+ * whatever they want with elements in the document body without worrying
+ * about cleanup.
+ *
+ * This is a big hammer and should be used sparingly - if you can write
+ * components that do precise setup and tear-down, you should.  In a few cases,
+ * though, this is the quickest path to test coverage.
+ *
+ * Warning: This can cause issues with event handlers.  Handlers attached
+ * to elements within the body will go away because their targets go away,
+ * but handlers attached to body, document, or window will persist - and may
+ * depend on DOM that gets removed during cleanup.
+ */
+export function sandboxDocumentBody() {
+  let originalDocumentBody;
+  beforeEach(() => originalDocumentBody = document.body.innerHTML);
+  afterEach(() => document.body.innerHTML = originalDocumentBody);
+}
+
+/**
  * Track whenever we create a timeout/interval, and then clear all timeouts/intervals
  * upon completion of each test.
  */
