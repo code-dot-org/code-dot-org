@@ -410,14 +410,7 @@ describe('The Exporter,', function () {
   }
 
   describe("Regression tests", () => {
-    let originalBodyInnerHTML;
-    beforeEach(() => {
-      originalBodyInnerHTML = document.body.innerHTML;
-    });
-
-    afterEach(() => {
-      document.body.innerHTML = originalBodyInnerHTML;
-    });
+    testUtils.sandboxDocumentBody();
 
     it("should allow screens to be switched programmatically", (done) => {
       runExportedApp(

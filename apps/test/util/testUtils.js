@@ -342,6 +342,12 @@ export function restoreOnWindow(key) {
   delete originalWindowValues[key];
 }
 
+export function sandboxDocumentBody() {
+  let originalDocumentBody;
+  beforeEach(() => originalDocumentBody = document.body.innerHTML);
+  afterEach(() => document.body.innerHTML = originalDocumentBody);
+}
+
 /**
  * Track whenever we create a timeout/interval, and then clear all timeouts/intervals
  * upon completion of each test.
