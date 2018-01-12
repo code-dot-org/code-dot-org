@@ -13,6 +13,7 @@ import {
   LabelOverrides as FacilitatorLabelOverrides,
   NumberedQuestions
 } from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
+import SummerWorkshopAssignmentLoader from "./summer_workshop_assignment_loader";
 
 const TEACHER = 'Teacher';
 const FACILITATOR = 'Facilitator';
@@ -31,7 +32,10 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
     applicationType: PropTypes.oneOf([TEACHER, FACILITATOR]).isRequired,
     editing: PropTypes.bool,
     scores: PropTypes.object,
-    handleScoreChange: PropTypes.func
+    handleScoreChange: PropTypes.func,
+    courseName: PropTypes.string,
+    assignedWorkshopId: PropTypes.number,
+    handleSelectedWorkshopChange: PropTypes.func
   };
 
   constructor(props) {
@@ -55,6 +59,24 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
 
     return questionNumber + questionText;
   };
+
+  renderSummerWorkshopAssignmentSection() {
+    let questionKey = !!(this.props.formResponses['ableToAttendSingle']) ?
+      'ableToAttendSingle' : 'ableToAttendMultiple';
+
+    let canYouAttendQuestion = this.getQuestionText('section4SummerWorkshop', questionKey);
+
+    return (
+      <SummerWorkshopAssignmentLoader
+        courseName={this.props.courseName}
+        assignedWorkshopId={this.props.assignedWorkshopId}
+        onChange={this.props.handleSelectedWorkshopChange}
+        editing={this.props.editing}
+        canYouAttendQuestion={canYouAttendQuestion}
+        canYouAttendAnswer={this.props.formResponses[questionKey]}
+      />
+    );
+  }
 
   renderResponsesForSection(section) {
     // Lame edge case but has to be done
@@ -89,6 +111,7 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
                 <h3>
                   {this.sectionHeaders[section]}
                 </h3>
+                {section === 'section4SummerWorkshop' && this.renderSummerWorkshopAssignmentSection()}
                 {this.renderResponsesForSection(section)}
               </div>
             );
