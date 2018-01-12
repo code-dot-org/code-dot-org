@@ -802,4 +802,10 @@ FactoryGirl.define do
 
   factory :circuit_playground_discount_application do
   end
+
+  factory :seeded_s3_object do
+    bucket "Bucket containing object"
+    key "Object Key"
+    etag "Object etag"
+  end
 end

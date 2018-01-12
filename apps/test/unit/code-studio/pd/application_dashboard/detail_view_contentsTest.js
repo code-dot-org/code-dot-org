@@ -5,8 +5,13 @@ import React from 'react';
 import _ from 'lodash';
 import {expect} from 'chai';
 import {mount} from 'enzyme';
+import sinon from 'sinon';
 
 describe("DetailViewContents", () => {
+  // We aren't testing any of the responses of the workshop selector control, so just
+  // have a fake server to handle calls and suppress warnings
+  sinon.fakeServer.create();
+
   const mountDetailView = (applicationType, overrides = {}) => {
     const defaultApplicationData = {
       regionalPartner: 'partner',
@@ -16,6 +21,7 @@ describe("DetailViewContents", () => {
       district_name: 'District Name',
       email: 'email',
       application_type: applicationType,
+      course_name: 'CS Fundamentals',
       form_data: {
         firstName: 'First Name',
         lastName: 'Last Name',
@@ -27,7 +33,7 @@ describe("DetailViewContents", () => {
         program: 'program',
         abilityToMeetRequirements: '10',
         committed: 'Yes',
-        taughtInPast: 'No'
+        taughtInPast: 'No',
       },
       response_scores: {
         committed: 'Yes'
