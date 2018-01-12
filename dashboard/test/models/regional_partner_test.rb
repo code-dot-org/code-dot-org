@@ -151,4 +151,21 @@ class RegionalPartnerTest < ActiveSupport::TestCase
 
     assert_equal partner_workshops, regional_partner.pd_workshops_organized
   end
+
+  test 'future_pd_workshops_organized' do
+    regional_partner = create :regional_partner
+    partner_organizer = create :workshop_organizer
+    create :regional_partner_program_manager, regional_partner: regional_partner, program_manager: partner_organizer
+
+    future_partner_workshops = [
+      create(:pd_workshop, organizer: partner_organizer, num_sessions: 1, sessions_from: Date.today),
+      create(:pd_workshop, organizer: partner_organizer, num_sessions: 1, sessions_from: Date.tomorrow)
+    ]
+
+    # excluded (past or ended) partner workshops
+    create :pd_workshop, organizer: partner_organizer, num_sessions: 1, sessions_from: Date.yesterday
+    create :pd_ended_workshop, organizer: partner_organizer, num_sessions: 1, sessions_from: Date.today
+
+    assert_equal future_partner_workshops, regional_partner.future_pd_workshops_organized
+  end
 end
