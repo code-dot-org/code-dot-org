@@ -664,7 +664,7 @@ FactoryGirl.define do
         subjects_teaching: ['Computer Science'],
         subjects_expect_to_teach: ['Computer Science'],
         subjects_licensed_to_teach: ['Computer Science'],
-        taught_in_past: ['Hour of Code'],
+        taught_in_past: ['CS Fundamentals'],
         previous_yearlong_cdo_pd: ['CS in Science'],
         cs_offered_at_school: ['AP CS A'],
         cs_opportunities_at_school: ['Courses for credit'],
