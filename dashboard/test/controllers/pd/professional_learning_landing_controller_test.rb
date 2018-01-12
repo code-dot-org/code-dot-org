@@ -28,7 +28,11 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     assert_response :success
     response = assigns(:landing_page_data)
 
-    assert_equal CDO.code_org_url("/pd-workshop-survey/#{@ended_enrollment.code}", 'https:'), response[:last_workshop_survey_url]
+    expected_url = CDO.code_org_url(
+      "/pd-workshop-survey/#{@ended_enrollment.code}",
+      CDO.default_scheme
+    )
+    assert_equal expected_url, response[:last_workshop_survey_url]
     assert_equal Pd::Workshop::COURSE_CSF, response[:last_workshop_survey_course]
   end
 
