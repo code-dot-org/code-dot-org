@@ -228,16 +228,16 @@ GEM
       sass (~> 3.2)
     builder (3.2.3)
     cancancan (1.15.0)
-    capybara (2.17.0)
+    capybara (2.14.0)
       addressable
-      mini_mime (>= 0.1.3)
+      mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
-      xpath (>= 2.0, < 4.0)
+      xpath (~> 2.0)
     celluloid (0.16.0)
       timers (~> 4.0.0)
-    childprocess (0.8.0)
+    childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
     chromedriver-helper (0.0.9)
       archive-zip (~> 0.7.0)
@@ -298,14 +298,14 @@ GEM
     eventmachine (1.2.0.1)
     execjs (2.7.0)
     exifr (1.2.5)
-    eyes_core (3.14.2)
+    eyes_core (3.5.4)
       chunky_png (= 1.3.6)
       faraday
       oily_png (~> 1.2)
       oj
-    eyes_selenium (3.14.2)
+    eyes_selenium (3.5.4)
       capybara
-      eyes_core (= 3.14.2)
+      eyes_core (= 3.5.4)
       selenium-webdriver
       watir
     factory_girl (4.7.0)
@@ -634,7 +634,7 @@ GEM
     ruby-rc4 (0.1.5)
     ruby_parser (3.8.2)
       sexp_processor (~> 4.1)
-    rubyzip (1.2.1)
+    rubyzip (1.2.0)
     safe_yaml (1.0.4)
     sass (3.4.22)
     sawyer (0.8.1)
@@ -647,9 +647,10 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     securecompare (1.0.0)
-    selenium-webdriver (3.8.0)
+    selenium-webdriver (3.0.3)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
+      websocket (~> 1.0)
     sequel (4.45.0)
     sexp_processor (4.7.0)
     shotgun (0.9.1)
@@ -734,8 +735,8 @@ GEM
     vcr (3.0.3)
     warden (1.2.6)
       rack (>= 1.0)
-    watir (6.10.2)
-      selenium-webdriver (~> 3.4, >= 3.4.1)
+    watir (6.2.1)
+      selenium-webdriver (~> 3.0)
     web-console (3.3.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -749,10 +750,11 @@ GEM
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
+    websocket (1.2.3)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
-    xpath (2.1.0)
+    xpath (2.0.0)
       nokogiri (~> 1.3)
     xxhash (0.4.0)
     youtube-dl.rb (0.3.1.2016.08.19)
@@ -788,7 +790,7 @@ DEPENDENCIES
   devise (~> 4.2.0)
   devise_invitable (~> 1.6.0)
   execjs
-  eyes_selenium (= 3.14.2)
+  eyes_selenium (= 3.5.4)
   factory_girl_rails
   fake_sqs
   fakeredis
@@ -874,7 +876,7 @@ DEPENDENCIES
   scss_lint
   sdoc
   seamless_database_pool!
-  selenium-webdriver (= 3.8.0)
+  selenium-webdriver (~> 3.0.3)
   sequel (~> 4.30)
   shotgun
   simplecov (~> 0.9)
