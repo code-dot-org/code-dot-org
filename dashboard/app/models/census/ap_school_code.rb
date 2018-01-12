@@ -23,7 +23,7 @@ class Census::ApSchoolCode < ApplicationRecord
   # school_code is a 6-character string but in the input files we may have treated
   # them as integers and cut off leading zeros. Add them back if necessary.
   def self.normalize_school_code(raw_school_code)
-    format("%06d", raw_school_code)
+    format("%06d", raw_school_code.to_i)
   end
 
   def self.seed_from_csv(filename)
