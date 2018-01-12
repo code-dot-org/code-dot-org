@@ -492,7 +492,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Generator.get('JavaScript').craft_forever = function () {
     const innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    return `repeat('block_id_${this.id}', function() { ${innerCode} }, -1, event.targetIdentifier);`;
+    return `repeat('block_id_${this.id}', function(event) { ${innerCode} }, -1, event.targetIdentifier);`;
   };
 
   blockly.Blocks.craft_repeatTimes = {
@@ -512,7 +512,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Generator.get('JavaScript').craft_repeatTimes = function () {
     const times = this.getTitleValue('TIMES');
     const innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    return `repeat('block_id_${this.id}', function() { ${innerCode} }, ${times}, event.targetIdentifier);`;
+    return `repeat('block_id_${this.id}', function(event) { ${innerCode} }, ${times}, event.targetIdentifier);`;
   };
 
   blockly.Blocks.craft_repeatRandom = {
@@ -530,7 +530,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Generator.get('JavaScript').craft_repeatRandom = function () {
     const innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    return `repeatRandom('block_id_${this.id}', function() { ${innerCode} }, event.targetIdentifier);`;
+    return `repeatRandom('block_id_${this.id}', function(event) { ${innerCode} }, event.targetIdentifier);`;
   };
 
   blockly.Blocks.craft_repeatDropdown = {
@@ -554,7 +554,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Generator.get('JavaScript').craft_repeatDropdown = function () {
     const times = this.getTitleValue('TIMES');
     const innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    return `repeat('block_id_${this.id}', function() { ${innerCode} }, ${times}, event.targetIdentifier);`;
+    return `repeat('block_id_${this.id}', function(event) { ${innerCode} }, ${times}, event.targetIdentifier);`;
   };
 
   blockly.Blocks[`craft_spawnEntity`] = {

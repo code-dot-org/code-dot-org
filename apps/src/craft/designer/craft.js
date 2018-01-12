@@ -709,7 +709,7 @@ Craft.executeUserCode = function () {
     repeat: function (blockID, callback, iterations, targetEntity) {
       // if resurrected, move blockID be last parameter to fix "Show Code"
       appCodeOrgAPI.repeat(studioApp().highlight.bind(studioApp(), blockID),
-          callback, iterations, targetEntity);
+          callback.bind(null, {targetIdentifier: targetEntity}), iterations, targetEntity);
     },
     repeatRandom: function (blockID, callback, targetEntity) {
       // if resurrected, move blockID be last parameter to fix "Show Code"
@@ -775,18 +775,28 @@ Craft.executeUserCode = function () {
   const userEvents = {};
   const eventGenerationMethods = {
     onEventTriggered: function (type, eventType, callback, blockID) {
-      userEvents[`event-${type}-${eventType}`] = {code: callback};
-      userEvents[`event--${eventType}`] = {code: callback};
+      userEvents[`event-${type}-${eventType}`] = {code: callback, args: ['event']};
+      userEvents[`event--${eventType}`] = {code: callback, args: ['event']};
     },
     onGlobalEventTriggered: function (eventType, callback, blockID) {
-      userEvents[`event--${eventType}`] = {code: callback};
+      userEvents[`event--${eventType}`] = {code: callback, args: ['event']};
     },
   };
 
   CustomMarshalingInterpreter.evalWith(code, eventGenerationMethods);
 
+  const customMarshalObjects = [
+    {
+      instance: evalApiMethods.repeat,
+      methodOpts: {
+        nativeCallsBackInterpreter: true,
+        run: true,
+      }
+    },
+  ];
+
   const hooks = {};
-  CustomMarshalingInterpreter.evalWithEvents(evalApiMethods, userEvents).hooks.forEach(hook => {
+  CustomMarshalingInterpreter.evalWithEvents(evalApiMethods, userEvents, '', customMarshalObjects).hooks.forEach(hook => {
     hooks[hook.name] = hook.func;
   });
 
@@ -797,7 +807,7 @@ Craft.executeUserCode = function () {
       const callback = hooks[`event-${type}-${eventType}`];
 
       if (callback) {
-        callback();
+        callback(event);
       }
     });
 
