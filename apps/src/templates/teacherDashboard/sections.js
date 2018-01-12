@@ -6,6 +6,7 @@ import teacherSections, {
   setOAuthProvider,
   asyncLoadSectionData
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import manageStudents, {setLoginType} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 import SectionsSharingButton from '@cdo/apps/templates/teacherDashboard/SectionsSharingButton';
@@ -71,6 +72,11 @@ export function renderLoginTypeAndSharingControls(sectionId) {
 }
 
 export function renderSectionTable(sectionId, loginType) {
+  registerReducers({manageStudents});
+  const store = getStore();
+
+  store.dispatch(setLoginType(loginType));
+
   const dataUrl = `/v2/sections/${sectionId}/students`;
   const element = document.getElementById('student-table-react');
 
@@ -93,11 +99,12 @@ export function renderSectionTable(sectionId, loginType) {
       };
     });
     ReactDOM.render(
-      <ManageStudentsTable
-        studentData={studentData}
-        id={sectionId}
-        loginType={loginType}
-      />,
+      <Provider store={store}>
+        <ManageStudentsTable
+          studentData={studentData}
+          id={sectionId}
+        />
+      </Provider>,
       element);
   });
 }
