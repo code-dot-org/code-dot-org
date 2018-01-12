@@ -4,7 +4,7 @@ import i18n from "@cdo/locale";
 import GallerySwitcher from '@cdo/apps/templates/projects/GallerySwitcher';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 
-const ProjectHeader = React.createClass({
+export default class ProjectHeader extends React.Component {
   render() {
     return (
       <div>
@@ -17,6 +17,4 @@ const ProjectHeader = React.createClass({
       </div>
     );
   }
-});
-
-export default ProjectHeader;
+}

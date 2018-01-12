@@ -67,6 +67,7 @@ import {
 } from './redux/instructions';
 import { addCallouts } from '@cdo/apps/code-studio/callouts';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 var copyrightStrings;
 
@@ -267,6 +268,35 @@ StudioApp.prototype.init = function (config) {
   this.setConfigValues_(config);
 
   this.configureDom(config);
+
+  //Only log a page load when there are videos present
+  if (config.level.levelVideos && config.level.levelVideos.length > 0 && (config.app === 'applab' || config.app === 'gamelab')){
+    if (experiments.isEnabled('resourcesTab')){
+      firehoseClient.putRecord(
+        'analysis-events',
+        {
+          study: 'instructions-resources-tab-wip-v2',
+          study_group: 'resources-tab',
+          event: 'resources-tab-load',
+          script_id: config.scriptId,
+          level_id: config.serverLevelId,
+          data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
+        }
+      );
+    } else {
+      firehoseClient.putRecord(
+        'analysis-events',
+        {
+          study: 'instructions-resources-tab-wip-v2',
+          study_group: 'under-app',
+          event: 'under-app-load',
+          script_id: config.scriptId,
+          level_id: config.serverLevelId,
+          data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
+        }
+      );
+    }
+  }
 
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -1829,6 +1859,25 @@ StudioApp.prototype.configureDom = function (config) {
   const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && experiments.isEnabled('resourcesTab');
   if (!referenceAreaInTopInstructions && referenceArea) {
     belowViz.appendChild(referenceArea);
+    // TODO (epeach) - remove after resources tab A/B testing
+    // Temporarily attach an event listener to log clicks
+    // Logs the type of app and the ids of the puzzle
+    var videoThumbnail = document.getElementsByClassName('video_thumbnail');
+    if (videoThumbnail[0]){
+      videoThumbnail[0].addEventListener('click', () => {
+        firehoseClient.putRecord(
+          'analysis-events',
+          {
+            study: 'instructions-resources-tab-wip-v2',
+            study_group: 'under-app',
+            event: 'under-app-video-click',
+            script_id: config.scriptId,
+            level_id: config.serverLevelId,
+            data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
+          }
+        );
+      });
+    }
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
@@ -2881,6 +2930,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
+    userId: config.userId,
     textToSpeechEnabled: config.textToSpeechEnabled,
     isK1: config.level.isK1,
     appType: config.app,

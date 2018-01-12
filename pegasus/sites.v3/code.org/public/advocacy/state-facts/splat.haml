@@ -38,9 +38,9 @@ theme: pdf
 
   .intro
     .intro-text
-      Computer science drives job growth and innovation throughout our economy and society. Computing occupations are the 
+      Computer science drives job growth and innovation throughout our economy and society. Computing occupations are the
       %b
-        number 1 source of all new wages in the U.S. 
+        number 1 source of all new wages in the U.S.
       and make up two-thirds of all projected new jobs in STEM fields, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. Fewer than half of U.S. schools offer any computer science courses and only 8% of STEM graduates study it. We need to improve access for all students, including groups who have traditionally been underrepresented.
 
     %img.chart{src: "/images/charts/jobs_degrees.png"}
@@ -77,9 +77,9 @@ theme: pdf
         = surround "($", ")." do
           = format_integer_with_commas(state_info[:avg_sal_all_i])
         The existing open jobs alone represent a
-        %b 
+        %b
           = precede "$" do
-            = format_integer_with_commas(state_info[:sal_x_jobs_bi]) 
+            = format_integer_with_commas(state_info[:sal_x_jobs_bi])
           opportunity
         in terms of annual salaries.
       %li
@@ -113,7 +113,12 @@ theme: pdf
             = format_integer_with_commas(state_info[:ap_cs_exams_i])
             exams were taken in AP Computer Science by high school students in
           = state_info[:state_name_s]
-          in 2017.
+          in 2017
+          = precede "(" do
+            = format_integer_with_commas(state_info[:ap_csa_exams_i])
+          took AP CS A and
+          = format_integer_with_commas(state_info[:ap_csp_exams_i])
+          took AP CSP).
       %li
         - if state_info[:percent_ap_female_i] != 0
           Only
@@ -121,47 +126,73 @@ theme: pdf
             = state_info[:percent_ap_female_i]
         - else
           none
-        were female;
+        were female
+        = surround "(", "%" do
+          = format_integer_with_commas(state_info[:percent_ap_csa_female_i])
+        for AP CS A and
+        = succeed "%" do
+          = format_integer_with_commas(state_info[:percent_ap_csp_female_i])
+        for AP CSP);
         - if state_info[:ap_hispanic_i] != 0
           only
           = format_integer_with_commas(state_info[:ap_hispanic_i])
           - if state_info[:ap_hispanic_i] == 1
-            exam was taken by 
-          - else 
-            exams were taken by 
+            exam was taken by Hispanic or Latino students
+          - else
+            exams were taken by Hispanic or Latino students
         - else
-          no exams were taken by 
-        Hispanic or Latino students;
+          no exams were taken by Hispanic or Latino students;
+        - if state_info[:ap_hispanic_i] != 0
+          = precede "(" do
+            = format_integer_with_commas(state_info[:ap_csa_hispanic_i])
+          took AP CS A and
+          = format_integer_with_commas(state_info[:ap_csp_hispanic_i])
+          took AP CSP);
         - if state_info[:ap_black_i] != 0
           only
           = format_integer_with_commas(state_info[:ap_black_i])
           - if state_info[:ap_black_i] == 1
-            exam was taken by
+            exam was taken by Black students
           - else
-            exams were taken by 
+            exams were taken by Black students
         - else
-          no exams were taken by
-        Black students;
+          no exams were taken by Black students;
+        - if state_info[:ap_black_i] != 0
+          = precede "(" do
+            = format_integer_with_commas(state_info[:ap_csa_black_i])
+          took AP CS A and
+          = format_integer_with_commas(state_info[:ap_csp_black_i])
+          took AP CSP);
         - if state_info[:ap_native_american_i] != 0
           only
           = format_integer_with_commas(state_info[:ap_native_american_i])
           - if state_info[:ap_native_american_i] == 1
-            exam was taken by
+            exam was taken by Native American or Alaska Native students
           - else
-            exams were taken by
+            exams were taken by Native American or Alaska Native students
         - else
-          no exams were taken by
-        Native American or Alaska Native students;
+          no exams were taken by Native American or Alaska Native students;
+        - if state_info[:ap_native_american_i] != 0
+          = precede "(" do
+            = state_info[:ap_csa_native_american_i]
+          took AP CS A and
+          = state_info[:ap_csp_native_american_i]
+          took AP CSP);
         - if state_info[:ap_hawaiian_i] != 0
           only
           = format_integer_with_commas(state_info[:ap_hawaiian_i])
           - if state_info[:ap_hawaiian_i] == 1
-            exam was taken by
+            exam was taken by Native Hawaiian or Pacific Islander students
           - else
-            exams were taken by
+            exams were taken by Native Hawaiian or Pacific Islander students
         - else
-          no exams were taken by
-        Native Hawaiian or Pacific Islander students.
+          no exams were taken by Native Hawaiian or Pacific Islander students.
+        - if state_info[:ap_hawaiian_i] != 0
+          = precede "(" do
+            = state_info[:ap_csa_hawaiian_i]
+          took AP CS A and
+          = state_info[:ap_csp_hawaiian_i]
+          took AP CSP).
       %li
         - if state_info[:schools_ap_cs_i] != 0
           Only
@@ -177,12 +208,19 @@ theme: pdf
             = state_info[:percent_schools_ap_cs_i]
           = state_info[:state_code_s]
           schools with AP programs) offered an AP Computer Science course in 2016-2017
+          = surround "(", "%" do
+            = state_info[:percent_schools_ap_csa_i]
+          offered AP CS A and
           - if state_info[:number_additional_schools_i] != 0
-            , which is
+            = succeed "%" do
+              = state_info[:percent_schools_ap_csp_i]
+            offered AP CSP), which is
             = state_info[:number_additional_schools_i]
             more than the previous year.
           - else
-            \.
+            = succeed "%" do
+              = state_info[:percent_schools_ap_csp_i]
+            offered AP CSP).
         - else
           No schools in
           = state_info[:state_code_s]
@@ -197,10 +235,10 @@ theme: pdf
         - else
           only graduated
           = state_info[:preservice_prepared_i]
-          new 
+          new
           - if state_info[:preservice_prepared_i] == 1
-            teacher 
-          - else 
+            teacher
+          - else
             teachers
           prepared to teach computer science in 2016.
 
@@ -212,7 +250,7 @@ theme: pdf
       %ol
         %li Call on your school to expand computer science offerings at every grade level.
         %li Ask your local school district to allow computer science courses to satisfy a core math or science requirement.
-        %li 
+        %li
           Visit
           %a{href: "www.code.org/educate/3rdparty"} www.code.org/educate/3rdparty
           to find out about courses and curriculum from a variety of third parties, including Code.org.
@@ -249,20 +287,20 @@ theme: pdf
           Code.org, its regional partner(s)
           = succeed "," do
             = state_info[:professional_learning_partners_t]
-          and 
+          and
           = format_integer_with_commas(state_info[:num_affiliates_i])
           - if state_info[:num_affiliates_i] == 1
-            facilitator has
+            facilitator have
           - else
             facilitators have
         - else
           Code.org and
           = format_integer_with_commas(state_info[:num_affiliates_i])
           - if state_info[:num_affiliates_i] == 1
-            facilitator has
+            facilitator have
           - else
             facilitators have
-      provided professional learning for 
+      provided professional learning for
       = format_integer_with_commas(state_info[:num_elementary_trained_i])
       - if state_info[:num_elementary_trained_i] == 1
         teacher
@@ -275,39 +313,39 @@ theme: pdf
           = format_integer_with_commas(state_info[:num_ecs_csd_i])
           - if state_info[:num_ecs_csd_i] == 1
             teacher
-          -else 
+          -else
             teachers
           in Exploring Computer Science or Computer Science Discoveries
-        - else 
-          , 
+        - else
+          ,
           = format_integer_with_commas(state_info[:num_ecs_csd_i])
           - if state_info[:num_ecs_csd_i] == 1
             teacher
-          -else 
+          -else
             teachers
           in Exploring Computer Science or Computer Science Discoveries, and
           = format_integer_with_commas(state_info[:num_csp_i])
           - if state_info[:num_csp_i] == 1
             teacher
-          -else 
+          -else
             teachers
           in Computer Science Principles
-      - elsif state_info[:num_csp_i] != 0 
+      - elsif state_info[:num_csp_i] != 0
         and
         = format_integer_with_commas(state_info[:num_csp_i])
         - if state_info[:num_csp_i] == 1
           teacher
         - else
           teachers
-        in Computer Science Principles 
-      in 
+        in Computer Science Principles
+      in
       = succeed "." do
         = state_info[:state_name_s]
     %p
       - if state_info[:other_partners_t] != 'none'
-        Code.org has a partnership with 
+        Code.org has a partnership with
         = state_info[:other_partners_t]
-        to help spread K-5 computer science to its schools. 
+        to help spread K-5 computer science to its schools.
 
   .quote-center
     %h3 “Computer Science is a liberal art: it’s something that everybody should be exposed to and everyone should have a mastery of to some extent.”
@@ -315,7 +353,7 @@ theme: pdf
 
   %div
     %h2.together What can the federal government do to support computer science in grades K-12?
-    Access to computer science courses is a bipartisan issue that can be addressed without adding to the Federal budget. Tell your representatives in Washington, D.C. that you support funding to expand access to this foundational 21st-century subject in your community that will America remain secure and globally competitive. Over 100,000 Americans, CEOs of the largest companies in every major industry, 29 governors, and major K-12 education leaders have all joined forces to call on Congress to support this idea. You can see their open letter (and add your name in support) at 
+    Access to computer science courses is a bipartisan issue that can be addressed without adding to the Federal budget. Tell your representatives in Washington, D.C. that you support funding to expand access to this foundational 21st-century subject in your community that will America remain secure and globally competitive. Over 100,000 Americans, CEOs of the largest companies in every major industry, 29 governors, and major K-12 education leaders have all joined forces to call on Congress to support this idea. You can see their open letter (and add your name in support) at
     = succeed "." do
       %a{href: "www.change.org/computerscience"} www.change.org/computerscience
 
@@ -509,4 +547,3 @@ theme: pdf
     %div
       %p Launched in 2013, Code.org® is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science.
     %p.clear-both.sources Data is from the Conference Board for job demand, the Bureau of Labor Statistics for state salary and national job projections data, the College Board for AP exam data, the National Center for Education Statistics for university graduate data, the Gallup and Google research study Education Trends in the State of Computer Science in U.S. K-12 Schools for schools that offer computer science and parent demand, and Code.org for its own courses, professional learning programs, and participation data.
-

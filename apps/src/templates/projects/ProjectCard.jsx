@@ -1,9 +1,7 @@
 import React, {PropTypes} from 'react';
 import color from "../../util/color";
-import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
 import $ from 'jquery';
-import ProjectActionBox from './ProjectActionBox';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -38,14 +36,6 @@ const styles = {
     fontFamily: '"Gotham", sans-serif',
     color: color.charcoal
   },
-  studentName: {
-    paddingLeft: 15,
-    paddingRight: 10,
-    paddingTop: 5,
-    fontSize: 11,
-    fontFamily: '"Gotham", sans-serif',
-    color: color.charcoal
-  },
   ageRange: {
     paddingLeft: 10,
     paddingTop: 5,
@@ -60,9 +50,6 @@ const styles = {
     fontFamily: '"Gotham", sans-serif',
     color: color.charcoal
   },
-  arrowIcon: {
-    paddingRight: 8
-  },
   thumbnail: {
     width: 214,
     height: 150,
@@ -76,115 +63,36 @@ const styles = {
     minWidth: '100%',
     minHeight: '100%'
   },
-  xIcon: {
-    paddingRight: 5
-  },
   bold: {
     fontFamily: '"Gotham 5r", sans-serif'
   },
-  actionBox: {
-    position: 'absolute',
-    marginLeft: 10,
-    marginTop: -10
-  }
 };
 
-const ProjectCard = React.createClass({
-  propTypes: {
+export default class ProjectCard extends React.Component {
+  static propTypes = {
     projectData: PropTypes.object.isRequired,
-    currentGallery: PropTypes.string.isRequired,
-    hideActions: PropTypes.bool
-  },
+    currentGallery: PropTypes.oneOf(['personal', 'public']).isRequired,
+  };
 
-  getInitialState() {
-   return {actionsOpen: false};
-  },
-
-  dateFormatter(dateString) {
-    const date = new Date(dateString);
-    return date.toLocaleDateString();
-  },
-
-  timeFormatter(dateString) {
-    const date = new Date(dateString);
-    return date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-  },
-
-  renderStudentName() {
-  // The student's name should only be visible in the classroom gallery.
-    if (this.props.currentGallery === 'class'){
-      return this.props.projectData.studentName && (
-        <div style={styles.studentName}>
-          {i18n.by()}:
-          <span style={styles.bold} > {this.props.projectData.studentName}</span>
-        </div>
-      );
-    }
-  },
-
-  renderFirstInitial() {
-    if (this.props.currentGallery === 'public'){
-      // The server provides only a single letter for the student name in the
-      // public gallery for privacy reasons.
-      return this.props.projectData.studentName && (
-          <span style={styles.firstInitial}>
-          {i18n.by()}:
-          <span style={styles.bold} > {this.props.projectData.studentName}</span>
-        </span>
-        );
-    }
-  },
-
-  renderStudentAgeRange(studentAgeRange) {
-  // The student's age range should only be visible in the public gallery.
-    if (this.props.currentGallery === 'public') {
-      return studentAgeRange && (
-        <span style={styles.ageRange}>
-          {i18n.age()}:
-          <span style={styles.bold} > {studentAgeRange}</span>
-        </span>
-      );
-    }
-  },
-
-  renderArrowIcon() {
-    if (!this.props.hideActions) {
-      // Only the student can access the menu options when viewing their personal projects.
-      const icon = this.state.actionsOpen ? 'chevron-up' : 'chevron-down';
-      return (
-        <FontAwesome icon={icon} style={styles.arrowIcon} onClick={this.toggleActionBox}/>
-      );
-    }
-  },
-
-  toggleActionBox() {
-    this.setState({actionsOpen: !this.state.actionsOpen});
-  },
-
-  renderProjectName(url, name) {
-    return (
-      <a
-        style={styles.titleLink}
-        href={url}
-        target={this.props.currentGallery === 'public' ? "_blank" : undefined}
-      >
-        <div style={styles.title}>{name}</div>
-      </a>
-    );
-  },
-
-  getLastModifiedTimestamp: function (timestamp) {
+  getLastModifiedTimestamp(timestamp) {
     if (timestamp.toLocaleString) {
       return timestamp.toLocaleString();
     }
     return timestamp.toString();
-  },
+  }
+
+  componentDidMount() {
+    if ($('.versionTimestamp').timeago) {
+      $('.versionTimestamp').timeago();
+    }
+  }
 
   render() {
     const { projectData, currentGallery } = this.props;
-
-    const {type, channel, name} = this.props.projectData;
-    const url = currentGallery === 'personal' ? `/projects/${type}/${channel}/edit` : `/projects/${type}/${channel}`;
+    const { type, channel } = this.props.projectData;
+    const isPersonalGallery = currentGallery === 'personal';
+    const isPublicGallery = currentGallery === 'public';
+    const url = isPersonalGallery ? `/projects/${type}/${channel}/edit` : `/projects/${type}/${channel}`;
 
     return (
       <div className="project_card">
@@ -193,7 +101,7 @@ const ProjectCard = React.createClass({
             <a
               href={url}
               style={{width: '100%'}}
-              target={currentGallery === 'public' ? '_blank' : undefined}
+              target={isPublicGallery ? '_blank' : undefined}
             >
               <img
                 src={projectData.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
@@ -201,52 +109,53 @@ const ProjectCard = React.createClass({
               />
             </a>
           </div>
-
-          {this.renderProjectName(url, name)}
-
-          {this.renderStudentName()}
-
+          <a
+            style={styles.titleLink}
+            href={url}
+            target={isPublicGallery ? '_blank' : undefined}
+          >
+            <div style={styles.title}>{projectData.name}</div>
+          </a>
           <span>
-            {this.renderFirstInitial()}
-            {this.renderStudentAgeRange(projectData.studentAgeRange)}
+            {isPublicGallery && projectData.studentName && (
+              <span style={styles.firstInitial}>
+                {i18n.by()}:&nbsp;
+                <span style={styles.bold}>{projectData.studentName}</span>
+              </span>
+            )}
+            {isPublicGallery && projectData.studentAgeRange && (
+              <span style={styles.ageRange}>
+                {i18n.age()}:&nbsp;
+                <span style={styles.bold}>{projectData.studentAgeRange}</span>
+              </span>
+            )}
           </span>
-
-          {(currentGallery !== 'personal' && projectData.publishedAt) &&
+          {isPublicGallery && (
             <div style={styles.lastEdit}>
               {i18n.published()}:&nbsp;
-              <time style={styles.bold} className="versionTimestamp" dateTime={projectData.publishedAt}>
+              <time
+                style={styles.bold}
+                className="versionTimestamp"
+                dateTime={projectData.publishedAt}
+              >
                 {this.getLastModifiedTimestamp(projectData.publishedAt)}
               </time>
             </div>
-          }
-
-          {(currentGallery === 'personal' && projectData.updatedAt) &&
+          )}
+          {isPersonalGallery && (
             <div style={styles.lastEdit}>
-              {this.renderArrowIcon()}
               {i18n.projectLastUpdated()}:&nbsp;
-              <time style={styles.bold} className="versionTimestamp" dateTime={projectData.updatedAt}>
+              <time
+                style={styles.bold}
+                className="versionTimestamp"
+                dateTime={projectData.updatedAt}
+              >
                 {this.getLastModifiedTimestamp(projectData.updatedAt)}
               </time>
             </div>
-          }
+          )}
         </div>
-
-        {this.state.actionsOpen &&
-          <ProjectActionBox
-            isPublished={this.props.projectData.publishedToPublic}
-            style={styles.actionBox}
-          />
-        }
-
       </div>
     );
-  },
-
-  componentDidMount: function () {
-    if ($('.versionTimestamp').timeago) {
-      $('.versionTimestamp').timeago();
-    }
   }
-});
-
-export default ProjectCard;
+}
