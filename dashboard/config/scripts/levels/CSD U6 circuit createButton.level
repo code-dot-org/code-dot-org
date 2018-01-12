@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2018-01-12T19:59:41.000Z",
+  "created_at": "2018-01-12T23:16:46.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -56,16 +56,11 @@
     "makerlab_enabled": "true",
     "markdown_instructions": "# Wiring Multiple LEDs\r\n\r\nUsing the `createLed()` block you can connect and control as many LEDs as your board has room for. Each LED needs to be connected to a separate numbered pin, but they can all share the same ground pin.\r\n\r\n# Do This\r\n\r\nLeave the current LED connected to pin 2, but add another one to a numbered pin of your choice. For your new LED:\r\n\r\n* Add a `var myLed = createLed()` block.\r\n* Replace the variable label `myLed` with a unique label.\r\n* Make sure you're in text mode, not block mode.\r\n* Add an `led.blink()` command.\r\n* Replace the text `led` with your new LED variable.\r\n* Test your code.\r\n\r\n_Challenge: Try adding a third LED and make all three LED blink at different intervals._",
     "text_mode_at_start": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-05 20:35:24 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:51:32 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_view_data_button\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:53:36 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-06 01:06:27 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-12 20:06:31 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
-  "level_concept_difficulty": {
-  }
+  "audit_log": "[{\"changed_at\":\"2018-01-05 20:35:24 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:51:32 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_view_data_button\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:53:36 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-06 01:06:27 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-12 20:06:31 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
