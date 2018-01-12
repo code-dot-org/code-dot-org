@@ -50,7 +50,7 @@ export default {
    * @param {string} prefix
    * @returns {string}
    */
-  // TODO (brent) - the following seems a little bit strange to me:
+  // Potentially strange behavior here:
   // 1) Add item1, item2, delete item1
   // 2) Add another item, it gets id item3
   // 3) Reload page, add another item, it gets item1
