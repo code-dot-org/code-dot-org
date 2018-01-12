@@ -175,10 +175,6 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
     "markdown_instructions": "# Free Play\r\n\r\nDo as you will, make something awesome",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -186,7 +182,8 @@
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

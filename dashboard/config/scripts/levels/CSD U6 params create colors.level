@@ -187,10 +187,6 @@
       "lightSensor.start": null
     },
     "edit_code": true,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "# Color Picker\r\n\r\nIn this program, pressing the buttons at the bottom of the screen changes the color of the images and the color LEDs.\r\n\r\n# Do This\r\n* Create a function `chooseColor(color)` that changes each of the images and the color LEDs to the given color.\r\n* Call your function in the event blocks so that all the buttons work.",
     "instructions_important": "false",
@@ -230,7 +226,8 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true"
+    "makerlab_enabled": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
