@@ -35,6 +35,7 @@ named_level 'CSD U5 binary video'
 
 stage 'Keeping Data Secret', flex_category: 'csd5_1'
 named_level 'CSD-U5-SFLP Representing Numbers Part 2'
+level 'CSD U5 Encryption 2', progression: 'Keeping Data Secret'
 level 'CSD U5 Encryption 1', progression: 'Keeping Data Secret'
 
 stage 'Combining Representations', flex_category: 'csd5_1'

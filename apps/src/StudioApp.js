@@ -1591,12 +1591,14 @@ StudioApp.prototype.report = function (options) {
 
   this.lastTestResult = options.testResult;
 
+  const readOnly = getStore().getState().pageConstants.isReadOnlyWorkspace;
+
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
   // or call the onComplete() callback expected. The app will just sit
   // there with the Reset button as the only option.
   var self = this;
-  if (!(this.hideSource && this.share)) {
+  if (!(this.hideSource && this.share) && !readOnly) {
     var onAttemptCallback = (function () {
       return function (builderDetails) {
         for (var option in builderDetails) {
@@ -1752,7 +1754,10 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.requiredBlocks_ = config.level.requiredBlocks || [];
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];
 
-  if (config.ignoreLastAttempt) {
+  // Always use the source code from the level definition for contained levels,
+  // so that changes made in levelbuilder will show up for users who have
+  // already run the level.
+  if (config.ignoreLastAttempt || config.hasContainedLevels) {
     config.level.lastAttempt = '';
   }
 
@@ -2925,6 +2930,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
+    userId: config.userId,
     textToSpeechEnabled: config.textToSpeechEnabled,
     isK1: config.level.isK1,
     appType: config.app,

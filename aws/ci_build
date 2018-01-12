@@ -34,7 +34,6 @@ require 'cdo/rake_utils'
 require 'cdo/only_one'
 
 STARTED = 'build-started'.freeze
-CHAT_LOG_TAIL_LENGTH = 40
 S3_LOGS_BUCKET = 'cdo-build-logs'.freeze
 S3_LOGS_PREFIX = CDO.name.freeze
 
@@ -135,7 +134,6 @@ def main
 
       if rack_env == :test
         ChatClient.log "<@#{DevelopersTopic.dotd}> DTT finished", color: 'purple'
-        DevelopersTopic.set_dtt 'no (robo-DTT built)'
         mark_dtt_green
       end
 
@@ -151,13 +149,7 @@ def main
       end
     else
       message = "<b>#{projects}</b> failed to build!" + time_message + log_link
-      truncated_log = <<-LOG
-Showing last #{CHAT_LOG_TAIL_LENGTH} lines of build log:
-#{log.lines.last(CHAT_LOG_TAIL_LENGTH).join('\n')}
-      LOG
-      truncated_log += "\n\nci_build backtrace:\n#{status}" unless status.is_a?(String) && status.empty?
       ChatClient.log message, color: 'red'
-      ChatClient.snippet truncated_log.to_s unless log.empty?
       ChatClient.log '<!here> build failure', color: 'red'
 
       ChatClient.message 'server operations', message, color: 'red', notify: 1
@@ -183,12 +175,12 @@ def mark_dtt_green
   # untested changes green.
   test_branch_sha = GitUtils.git_revision_short
 
-  msg = "Marking commit #{test_branch_sha} green (temporarily disabled, take 2)"
+  msg = "Automatically marking commit #{test_branch_sha} green"
   ChatClient.log msg
   ChatClient.message 'deploy-status', msg
 
-  # DevelopersTopic.set_dtt 'yes'
-  # InfraTestTopic.set_green_commit test_branch_sha
+  DevelopersTopic.set_dtt 'yes'
+  InfraTestTopic.set_green_commit test_branch_sha
 end
 
 def emit_deploy_metric(deployment_stage, successful)

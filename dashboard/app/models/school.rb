@@ -16,12 +16,14 @@
 #  address_line3      :string(30)
 #  latitude           :decimal(8, 6)
 #  longitude          :decimal(9, 6)
+#  state_school_id    :string(11)
 #
 # Indexes
 #
 #  index_schools_on_id                  (id) UNIQUE
 #  index_schools_on_name_and_city       (name,city)
 #  index_schools_on_school_district_id  (school_district_id)
+#  index_schools_on_state_school_id     (state_school_id) UNIQUE
 #  index_schools_on_zip                 (zip)
 #
 
@@ -33,6 +35,8 @@ class School < ActiveRecord::Base
   belongs_to :school_district
 
   has_many :school_stats_by_year
+
+  validates :state_school_id, allow_blank: true, length: {is: 11}, format: {with: /\A[A-Z]{2}-[0-9]{3}-[0-9]{4}\z/, message: "must be {State Code}-xxx-xxxx where each x is a numeral"}
 
   # Gets the full address of the school.
   # @return [String] The full address.

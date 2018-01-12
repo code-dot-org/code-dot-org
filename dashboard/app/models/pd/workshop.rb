@@ -70,6 +70,7 @@ class Pd::Workshop < ActiveRecord::Base
 
   SUBJECT_TEACHER_CON = 'Code.org TeacherCon'.freeze
   SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze
+  SUBJECT_SUMMER_WORKSHOP = '5-day Summer'.freeze
   SUBJECTS = {
     COURSE_ECS => [
       SUBJECT_ECS_PHASE_2 = 'Phase 2 in-person'.freeze,
@@ -89,7 +90,7 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'.freeze
     ],
     COURSE_CSP => [
-      SUBJECT_CSP_SUMMER_WORKSHOP = '5-day Summer'.freeze,
+      SUBJECT_CSP_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
       SUBJECT_CSP_WORKSHOP_1 = 'Units 1 and 2: The Internet and Digital Information'.freeze,
       SUBJECT_CSP_WORKSHOP_2 = 'Units 2 and 3: Processing data, Algorithms, and Programming'.freeze,
       SUBJECT_CSP_WORKSHOP_3 = 'Units 4 and 5: Big Data, Privacy, and Building Apps'.freeze,
@@ -98,7 +99,7 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CSP_FIT = SUBJECT_FIT
     ],
     COURSE_CSD => [
-      SUBJECT_CSD_SUMMER_WORKSHOP = '5-day Summer'.freeze,
+      SUBJECT_CSD_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
       SUBJECT_CSD_UNITS_2_3 = 'Units 2 and 3: Web Development and Animations'.freeze,
       SUBJECT_CSD_UNIT_3_4 = 'Units 3 and 4: Building Games and User Centered Design'.freeze,
       SUBJECT_CSD_UNITS_4_5 = 'Units 4 and 5: App Prototyping and Data & Society'.freeze,
@@ -494,8 +495,26 @@ class Pd::Workshop < ActiveRecord::Base
     self.processed_location = {
       latitude: result.latitude,
       longitude: result.longitude,
+      city: result.city,
+      state: result.state,
       formatted_address: result.formatted_address
     }.to_json
+  end
+
+  # Retrieve a single location value (like city or state) from the processed
+  # location hash. Attribute can be passed as a string or symbol
+  def get_processed_location_value(key)
+    return unless processed_location
+    location_hash = JSON.parse processed_location
+    location_hash[key.to_s]
+  end
+
+  def location_city
+    get_processed_location_value('city')
+  end
+
+  def location_state
+    get_processed_location_value('state')
   end
 
   # Min number of days a teacher must attend for it to count.
@@ -554,7 +573,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def local_summer?
-    course == COURSE_CSP && subject == SUBJECT_CSP_SUMMER_WORKSHOP
+    subject == SUBJECT_SUMMER_WORKSHOP
   end
 
   def teachercon?
