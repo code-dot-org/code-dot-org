@@ -106,7 +106,6 @@ Hang these posters in the halls along with the course number for your computer s
 [![image](/images/fit-150/malala.png)](/files/malala-poster.pdf)
 [![image](/images/fit-150/obama-new.png)](/files/obama-poster-new.pdf)
 [![image](/images/fit-150/sheryl-sandberg.png)](/files/sheryl-poster.pdf)
-[![image](/images/fit-150/marissa-mayer.png)](/files/marissa-mayer-poster.pdf)
 
 <a id="info"></a>
 
@@ -166,16 +165,6 @@ No matter what you want to do one day—whether it’s art, medicine, or history
 **[SCHOOL NAME]** is offering new computer science program next fall that will unlock an entirely new future for students. With this program, even the youngest learners will begin to learn the basics of how technology works. They’ll move away from just learning how to *use* technology, and instead start to *create* their own programs with the foundations of computer science. The program will introduce computer sciecne concepts to these youngsters, such as logic, problem-solving, and creativity. **Why is this important for even elementary school students?** Introducing computer science in elementary school allows students to enjoy the possibilities of creating with code before stereotypes set in. But that’s only the beginning of why every student should have the opportunity to learn computer science. [Watch this inspiring video](http://www.youtube.com/watch?v=nKIu9yen5nc) to learn more. 
 
 We can bring this to *even more* elementary school students through a local program in partnership with Code.org, a non-profit dedicated to giving every K-12 student in the US the opportunity to learn computer science. Ask your school or district to have [more elementary school teachers trained](https://code.org/professional-development-workshops) (absolutely free, and no experience necessary)! 
-
-### Include these images on your website, letter, or email:
-
-[![image](/images/newclass.jpg)](/images/classlogoB.jpg)
-[![image](/images/newclasswide.jpg)](/images/classlogoD.jpg)
-
-[![image](/images/classlogoC.jpg)](/images/classlogoC.jpg)
-[![image](/images/classlogoA.jpg)](/images/classlogoA.jpg)
-
-[Download graphics file](https://www.dropbox.com/s/38tledlbucf0tql/New%20Class%20Graphics.zip)
 
 
 <br />

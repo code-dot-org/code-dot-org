@@ -17,8 +17,9 @@ const options = {
     'More than 50 miles'
   ],
   payFee: [
-    'Yes, my school or I will be able to pay the full summer workshop program fee',
-    'No, my school or I will not be able to pay the summer workshop program fee.'
+    'Yes, my school or I will be able to pay the full summer workshop program fee.',
+    'No, my school or I will not be able to pay the summer workshop program fee.',
+    'Not applicable: there is no fee for the summer workshop for teachers in my region.'
   ]
 };
 
@@ -35,6 +36,8 @@ const alternateWorkshops = [
   {id: 201, dates: 'February 5-9, 2018', location: 'Seattle, WA'},
   {id: 202, dates: 'February 12-16, 2018', location: 'Seattle, WA'}
 ];
+
+const alternateWorkshopsWithPartnerName = alternateWorkshops.map(w => ({...w, partnerName: 'Other Partner'}));
 
 const exampleTeachercon = {city: 'Atlanta', dates: 'June 17 - 22, 2018'};
 
@@ -173,9 +176,11 @@ describe("Section4SummerWorkshop", () => {
 
       const allWorkshopsData = [{
         id: 100, // Same partner (meaning same single workshop): excluded
+        name: 'Assigned Partner',
         workshops: [assignedWorkshops[0]]
       }, {
         id: 101, // Different partner: included
+        name: 'Other Partner',
         workshops: alternateWorkshops
       }];
 
@@ -193,7 +198,7 @@ describe("Section4SummerWorkshop", () => {
         server.respond();
 
         expect(section4.state().loadingAlternateWorkshops).to.be.false;
-        expect(section4.state().alternateWorkshops).to.eql(alternateWorkshops);
+        expect(section4.state().alternateWorkshops).to.eql(alternateWorkshopsWithPartnerName);
       });
 
       it("Does not initially load alternate workshops when able to attend", () => {
@@ -232,7 +237,7 @@ describe("Section4SummerWorkshop", () => {
           server.respond();
 
           expect(section4.state().loadingAlternateWorkshops).to.be.false;
-          expect(section4.state().alternateWorkshops).to.eql(alternateWorkshops);
+          expect(section4.state().alternateWorkshops).to.eql(alternateWorkshopsWithPartnerName);
         });
 
         it("Does not load alternate workshops when yes is selected", () => {
@@ -255,9 +260,11 @@ describe("Section4SummerWorkshop", () => {
 
       const allWorkshopsData = [{
         id: 200, // Same partner (meaning same assigned workshops): excluded
+        name: 'Assigned Partner',
         workshops: assignedWorkshops
       }, {
         id: 201, // Different partner: included
+        name: 'Other Partner',
         workshops: alternateWorkshops
       }];
 
@@ -275,7 +282,7 @@ describe("Section4SummerWorkshop", () => {
         server.respond();
 
         expect(section4.state().loadingAlternateWorkshops).to.be.false;
-        expect(section4.state().alternateWorkshops).to.eql(alternateWorkshops);
+        expect(section4.state().alternateWorkshops).to.eql(alternateWorkshopsWithPartnerName);
       });
 
       it("Does not initially load alternate workshops when able to attend", () => {
@@ -314,7 +321,7 @@ describe("Section4SummerWorkshop", () => {
           server.respond();
 
           expect(section4.state().loadingAlternateWorkshops).to.be.false;
-          expect(section4.state().alternateWorkshops).to.eql(alternateWorkshops);
+          expect(section4.state().alternateWorkshops).to.eql(alternateWorkshopsWithPartnerName);
         });
 
         it("Does not load alternate workshops when yes is selected", () => {

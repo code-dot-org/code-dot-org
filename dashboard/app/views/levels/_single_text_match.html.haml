@@ -9,7 +9,7 @@
     %textarea.response{placeholder: data['placeholder'] ? string_or_image(app, data['placeholder']) : t(app + '.placeholder'), style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}
 
     - if standalone
-      = render partial: 'levels/dialog', locals: {app: app, data: data}
+      = render partial: 'levels/dialog', locals: {app: app}
 
     = render partial: 'levels/teacher_markdown', locals: {data: data}
 

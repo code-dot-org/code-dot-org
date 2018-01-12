@@ -1,11 +1,8 @@
 #audienceblocks{style: "text-align:center; margin-top:0px"}
-  - blocks = DB[:cdo_homepage].where(type_s: ["block", "blockshort"], active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
+  - blocks = Homepage.get_blocks(request)
   - blocks.each do |block|
-    - display = block[:active_s] == "hide" ? "none" : "block"
-    .block{style: "display: #{display}"}
-      - hoc_block = block[:id_s] == "block_hoc" || block[:id_s] == "blockshort_hoc_noten"
-      - block[:links] = DB[:cdo_homepage].where(type_s: "blocklink", text1_s: block[:id_s], active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
-      - if block[:type_s] == "block"
+    .block
+      - if block[:type] == "block"
         = view :homepage_quarterslot_links, entry: block
-      - elsif block[:type_s] == "blockshort"
+      - elsif block[:type] == "blockshort"
         = view :homepage_quarterslot, entry: block

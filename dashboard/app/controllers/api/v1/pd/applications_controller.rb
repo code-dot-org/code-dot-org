@@ -57,11 +57,30 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     end
   end
 
-  # GET /api/v1/pd/applications/cohort_view?role=:role
+  # GET /api/v1/pd/applications/cohort_view?role=:role&regional_partner_filter=:regional_partner_name
   def cohort_view
-    applications = get_applications_by_role(params[:role].to_sym).where(status: 'accepted').where.not(locked_at: nil)
+    applications = get_applications_by_role(params[:role].to_sym).where(status: 'accepted')
 
-    render json: applications, each_serializer: Api::V1::Pd::ApplicationCohortViewSerializer
+    unless params[:regional_partner_filter].nil? || params[:regional_partner_filter] == 'all'
+      applications = applications.where(regional_partner_id: params[:regional_partner_filter] == 'none' ? nil : params[:regional_partner_filter])
+    end
+
+    serializer =
+      if TYPES_BY_ROLE[params[:role].to_sym] == Pd::Application::Facilitator1819Application
+        Api::V1::Pd::FacilitatorApplicationCohortViewSerializer
+      elsif TYPES_BY_ROLE[params[:role].to_sym] == Pd::Application::Teacher1819Application
+        Api::V1::Pd::TeacherApplicationCohortViewSerializer
+      end
+
+    respond_to do |format|
+      format.json do
+        render json: applications, each_serializer: serializer
+      end
+      format.csv do
+        csv_text = [TYPES_BY_ROLE[params[:role].to_sym].cohort_csv_header, applications.map(&:to_cohort_csv_row)].join
+        send_csv_attachment csv_text, "#{params[:role]}_cohort_applications.csv"
+      end
+    end
   end
 
   # PATCH /api/v1/pd/applications/1
@@ -76,6 +95,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
       application_data[:regional_partner_filter] = nil
     end
     application_data["regional_partner_id"] = application_data.delete "regional_partner_filter"
+
+    application_data["notes"] = application_data["notes"].strip_utf8mb4 if application_data["notes"]
 
     @application.update!(application_data)
 
@@ -109,7 +130,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   def application_params
     params.require(:application).permit(
-      :status, :notes, :regional_partner_filter, :response_scores, :locked
+      :status, :notes, :regional_partner_filter, :response_scores, :locked, :pd_workshop_id
     )
   end
 

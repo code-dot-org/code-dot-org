@@ -7,26 +7,22 @@ import ShowSecret from './ShowSecret';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from "@cdo/locale";
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
-import QuickAction from "../tables/QuickAction";
-import QuickActionsCell from "../tables/QuickActionsCell";
+import ManageStudentsNameCell from './ManageStudentsNameCell';
+import ManageStudentsAgeCell from './ManageStudentsAgeCell';
+import ManageStudentsGenderCell from './ManageStudentsGenderCell';
+import ManageStudentsActionsCell from './ManageStudentsActionsCell';
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string,
   username: PropTypes.string,
-  userType: PropTypes.string,
   age: PropTypes.number,
   gender: PropTypes.string,
   secretWords: PropTypes.string,
-  secretPictureName: PropTypes.string,
   secretPicturePath: PropTypes.string,
   sectionId: PropTypes.number,
+  loginType: PropTypes.string,
 });
-
-const GENDERS = {
-  m: i18n.genderMale(),
-  f: i18n.genderFemale()
-};
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -39,25 +35,36 @@ export const COLUMNS = {
 
 // Cell formatters.
 const nameFormatter = (name, {rowData}) => {
-  const url = `/teacher-dashboard#/sections/${rowData.sectionId}/student/${rowData.id}`;
-  return (<div>
-    <a style={tableLayoutStyles.link} href={url} target="_blank">{name}</a>
-    {rowData.loginType === SectionLoginType.email &&
-      <p>{i18n.usernameLabel() + rowData.username}</p>
-    }
-  </div>);
+  return (
+    <ManageStudentsNameCell
+      id={rowData.id}
+      sectionId={rowData.sectionId}
+      name={name}
+      loginType={rowData.loginType}
+      username={rowData.username}
+      isEditing={false}
+    />
+  );
 };
 
 const ageFormatter = (age, {rowData}) => {
-  return (<div>
-    {age}
-  </div>);
+  return (
+    <ManageStudentsAgeCell
+      age={age}
+      id={rowData.id}
+      isEditing={false}
+    />
+  );
 };
 
 const genderFormatter = (gender, {rowData}) => {
-  return (<div>
-    {GENDERS[gender]}
-  </div>);
+  return (
+    <ManageStudentsGenderCell
+      gender={gender}
+      id={rowData.id}
+      isEditing={false}
+    />
+  );
 };
 
 const passwordFormatter = (loginType, {rowData}) => {
@@ -84,18 +91,10 @@ const passwordFormatter = (loginType, {rowData}) => {
 
 const actionsFormatter = function (actions, {rowData}) {
   return (
-    <QuickActionsCell>
-      <QuickAction
-        text={"Edit"}
-        action={()=>{}}
-      />
-      <QuickAction
-        text={"Remove student"}
-        action={()=>{}}
-        hasLineAbove={true}
-        isDelete={true}
-      />
-    </QuickActionsCell>
+    <ManageStudentsActionsCell
+      id={rowData.id}
+      isEditing={false}
+    />
   );
 };
 

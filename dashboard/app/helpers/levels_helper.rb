@@ -132,6 +132,8 @@ module LevelsHelper
     # Always pass user age limit
     view_options(is_13_plus: current_user && !current_user.under_13?)
 
+    view_options(user_id: current_user.id) if current_user
+
     view_options(server_level_id: @level.id)
     if @script_level
       view_options(
@@ -289,6 +291,7 @@ module LevelsHelper
     app_options[:level] ||= {}
     app_options[:level].merge! @level.properties.camelize_keys
     app_options.merge! view_options.camelize_keys
+    set_puzzle_position_options(app_options[:level])
     app_options
   end
 
@@ -321,6 +324,12 @@ module LevelsHelper
     end
   end
 
+  def set_puzzle_position_options(level_options)
+    script_level = @script_level
+    level_options['puzzle_number'] = script_level ? script_level.position : 1
+    level_options['stage_total'] = script_level ? script_level.stage_total : 1
+  end
+
   # Options hash for Weblab
   def weblab_options
     # Level-dependent options
@@ -332,10 +341,7 @@ module LevelsHelper
     level_options = l.weblab_level_options.dup
     app_options[:level] = level_options
 
-    # ScriptLevel-dependent option
-    script_level = @script_level
-    level_options['puzzle_number'] = script_level ? script_level.position : 1
-    level_options['stage_total'] = script_level ? script_level.stage_total : 1
+    set_puzzle_position_options(level_options)
 
     # Ensure project_template_level allows start_sources to be overridden
     level_options['startSources'] = @level.try(:project_template_level).try(:start_sources) || @level.start_sources

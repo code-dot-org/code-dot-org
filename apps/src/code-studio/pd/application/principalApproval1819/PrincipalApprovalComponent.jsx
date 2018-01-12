@@ -1,7 +1,7 @@
 import React from 'react';
 import {FormGroup, Row, Col, ControlLabel} from "react-bootstrap";
 import {PageLabels} from '@cdo/apps/generated/pd/principalApproval1819ApplicationConstants';
-import ApplicationFormComponent from '../ApplicationFormComponent';
+import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {isInt, isPercent} from '@cdo/apps/util/formatValidation';
 import {styles} from '../teacher1819/TeacherApplicationConstants';
@@ -15,7 +15,7 @@ const REQUIRED_SCHOOL_INFO_FIELDS = ['school', 'totalStudentEnrollment',
 ];
 const REPLACE_COURSE_FIELDS = ['replaceWhichCourseCsp', 'replaceWhichCourseCsd'];
 
-export default class PrincipalApprovalComponent extends ApplicationFormComponent {
+export default class PrincipalApprovalComponent extends LabeledFormComponent {
   static labels = PageLabels;
 
   static associatedFields = Object.keys(PageLabels);
@@ -106,23 +106,21 @@ export default class PrincipalApprovalComponent extends ApplicationFormComponent
           look here</a> to find more information about the workshop.
         </p>
         <div>
-          By checking this box, you indicate that you understand there may be a program
-          fee for the summer workshop your teacher attends.
           {this.singleCheckboxFor('understandFee')}
           {this.radioButtonsFor('payFee')}
           {
-            this.props.data.payFee && this.props.data.payFee.startsWith('No') && (
+            this.props.data.payFee && this.props.data.payFee.startsWith('No,') && (
               <div>
                 Would you like to be considered for funding support? Note that funding
                 support is not guaranteed.
-                {this.singleCheckboxFor('wantFunding')}
+                {this.singleCheckboxFor('wantFunding', {required: false})}
               </div>
             )
           }
         </div>
         <p>
           Code.org works closely with local Regional Partners to organize and deliver the
-          Professional Learning Program.  By enrolling in this workshop, teachers are
+          Professional Learning Program.  By submitting this form, teachers are
           agreeing to allow Code.org to share information on how they use Code.org and the
           Professional Learning resources with their Regional Partner and school district.
           In order to organize the workshops and support teachers, our partners need to
