@@ -4606,6 +4606,8 @@ en:
               name: Circuits and Physical Prototypes
             Accelerometer:
               name: Accelerometer
+            Functions with Parameters:
+              name: Functions with Parameters
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
