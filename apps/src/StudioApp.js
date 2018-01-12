@@ -270,25 +270,29 @@ StudioApp.prototype.init = function (config) {
   this.configureDom(config);
 
   //Only log a page load when there are videos present
-  if (config.level.levelVideos && config.level.levelVideos.length > 0){
+  if (config.level.levelVideos && config.level.levelVideos.length > 0 && (config.app === 'applab' || config.app === 'gamelab')){
     if (experiments.isEnabled('resourcesTab')){
       firehoseClient.putRecord(
         'analysis-events',
         {
-          study: 'instructions-resources-tab-wip-v1',
+          study: 'instructions-resources-tab-wip-v2',
           study_group: 'resources-tab',
           event: 'resources-tab-load',
-          data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
+          script_id: config.scriptId,
+          level_id: config.serverLevelId,
+          data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
         }
       );
     } else {
       firehoseClient.putRecord(
         'analysis-events',
         {
-          study: 'instructions-resources-tab-wip-v1',
+          study: 'instructions-resources-tab-wip-v2',
           study_group: 'under-app',
           event: 'under-app-load',
-          data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
+          script_id: config.scriptId,
+          level_id: config.serverLevelId,
+          data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
         }
       );
     }
@@ -1864,10 +1868,12 @@ StudioApp.prototype.configureDom = function (config) {
         firehoseClient.putRecord(
           'analysis-events',
           {
-            study: 'instructions-resources-tab-wip-v1',
+            study: 'instructions-resources-tab-wip-v2',
             study_group: 'under-app',
             event: 'under-app-video-click',
-            data_json: JSON.stringify([config.app, config.scriptName, config.stagePosition, config.levelPosition]),
+            script_id: config.scriptId,
+            level_id: config.serverLevelId,
+            data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
           }
         );
       });
