@@ -56,6 +56,7 @@ export class DetailViewContents extends React.Component {
       bonus_points: PropTypes.number
     }),
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
+    course: PropTypes.oneOf(['csf', 'csd', 'csp']),
     reload: PropTypes.func.isRequired,
     isWorkshopAdmin: PropTypes.bool
   };
@@ -98,7 +99,7 @@ export class DetailViewContents extends React.Component {
     this.setState({
       locked: !this.state.locked,
     });
-  }
+  };
 
   handleStatusChange = (event) => {
     this.setState({
@@ -251,6 +252,20 @@ export class DetailViewContents extends React.Component {
           <h4>
             Bonus Points: {this.props.applicationData.bonus_points}
           </h4>
+          {this.props.course === 'csp' &&
+            <h4>
+              <a target="_blank" href="https://docs.google.com/document/d/1ounHnw4fdihHiMwcNNjtQeK4avHz8Inw7W121PbDQRw/edit#heading=h.p1d568zb27s0">
+                View CS Principles Rubric
+              </a>
+            </h4>
+          }
+          {this.props.course === 'csd' &&
+            <h4>
+              <a target="_blank" href="https://docs.google.com/document/d/1Sjzd_6zjHyXLgzIUgHVp-AeRK2y3hZ1PUjg8lTtWsHs/edit#heading=h.fqiranmp717e">
+                View CS Discoveries Rubric
+              </a>
+            </h4>
+          }
         </div>
 
         <div id="DetailViewHeader" style={styles.detailViewHeader}>
@@ -261,8 +276,32 @@ export class DetailViewContents extends React.Component {
     );
   };
 
+  renderRegionalPartnerPanel = () => {
+    if (this.props.applicationData.application_type === 'Teacher') {
+      return (
+        <DetailViewResponse
+          question="Regional Partner"
+          questionId="regionalPartnerName"
+          answer={this.renderRegionalPartnerAnswer()}
+          layout="panel"
+          score={this.state.response_scores['regionalPartnerName']}
+          possibleScores={TeacherValidScores['regionalPartnerName']}
+          editing={this.state.editing}
+          handleScoreChange={this.handleScoreChange}
+        />
+      );
+    } else {
+      return (
+        <DetailViewResponse
+          question="Regional Partner"
+          answer={this.renderRegionalPartnerAnswer()}
+          layout="panel"
+        />
+      );
+    }
+  };
+
   renderTopSection = () => {
-    const regionalPartnerAnswer = this.renderRegionalPartnerAnswer();
     return (
       <div id="TopSection">
         <DetailViewResponse
@@ -280,27 +319,7 @@ export class DetailViewContents extends React.Component {
           answer={this.props.applicationData.district_name}
           layout="lineItem"
         />
-        {
-          this.props.applicationData.application_type === 'Teacher' ?
-            (
-              <DetailViewResponse
-                question="Regional Partner"
-                questionId="regionalPartnerName"
-                answer={regionalPartnerAnswer}
-                layout="panel"
-                score={this.state.response_scores['regionalPartnerName']}
-                possibleScores={TeacherValidScores['regionalPartnerName']}
-                editing={this.state.editing}
-                handleScoreChange={this.handleScoreChange}
-              />
-            ) : (
-              <DetailViewResponse
-                question="Regional Partner"
-                answer={regionalPartnerAnswer}
-                layout="panel"
-              />
-            )
-        }
+        {this.props.isWorkshopAdmin && this.renderRegionalPartnerPanel()}
       </div>
     );
   };
@@ -329,7 +348,7 @@ export class DetailViewContents extends React.Component {
               id="Notes"
               disabled={!this.state.editing}
               componentClass="textarea"
-              value={this.state.notes}
+              value={this.state.notes || ''}
               onChange={this.handleNotesChange}
               style={styles.notes}
             />

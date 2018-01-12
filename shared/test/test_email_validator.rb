@@ -18,7 +18,8 @@ class EmailValidatorTest < Minitest::Test
       'email@example.name',
       'email@example.museum',
       'email@example.co.jp',
-      'firstname-lastname@example.com'
+      'firstname-lastname@example.com',
+      'あいうえお@example.com'
     ]
 
     valid_addresses.each do |address|
@@ -43,7 +44,6 @@ class EmailValidatorTest < Minitest::Test
       '<email@example.com>',
       'email.example.com',
       'email@example@example.com',
-      'あいうえお@example.com',
       '(Joe',
       'Smith)',
       'email@example',

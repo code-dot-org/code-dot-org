@@ -180,6 +180,13 @@ module Pd::Application
       raise 'Abstract method must be overridden by inheriting class'
     end
 
+    # Override in derived class to provide csv data for cohort view
+    # @return [String] csv text row of values for cohort view ending in newline
+    #         The order of fields must be consistent between this and #self.cohort_csv_header
+    def to_cohort_csv_row
+      raise 'Abstract method must be overridden by inheriting class'
+    end
+
     # Get the answers from form_data with additional text appended
     # @param [Hash] hash - sanitized form data hash (see #sanitize_form_data_hash)
     # @param [Symbol] field_name - name of the multi-choice option
@@ -253,7 +260,10 @@ module Pd::Application
     end
 
     def total_score
-      response_scores_hash.values.map {|x| x.try(:to_i)}.compact.reduce(:+)
+      numeric_scores = response_scores_hash.values.select do |score|
+        score.is_a?(Numeric) || score =~ /^\d+$/
+      end
+      numeric_scores.map(&:to_i).reduce(:+)
     end
 
     protected

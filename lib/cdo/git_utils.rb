@@ -59,7 +59,7 @@ module GitUtils
   end
 
   def self.git_revision_short
-    `git rev-parse --short HEAD`.strip
+    `git rev-parse --short=8 HEAD`.strip
   end
 
   def self.git_revision_branch(branch)

@@ -68,6 +68,7 @@ export const additionalPredefValues = Object.keys(COMPONENT_EVENTS);
 
 // Block properties we'll reuse in multiple entries
 const createLedProps = {parent: api, category: MAKER_CATEGORY, paletteParams: ['pin'], params: ["0"]};
+const createButtonProps = {parent: api, category: MAKER_CATEGORY, paletteParams: ['pin'], params: ["0"]};
 
 export const blocks = [
   /**
@@ -83,6 +84,9 @@ export const blocks = [
 
   {func: 'createLed', ...createLedProps, type: 'either' },
   {func: 'var myLed = createLed', ...createLedProps, noAutocomplete: true, docFunc: 'createLed' },
+
+  {func: 'createButton', ...createButtonProps, type: 'either' },
+  {func: 'var myButton = createButton', ...createButtonProps, noAutocomplete: true, docFunc: 'createButton' },
 
   /**
    * Circuit-Playground-specific blocks

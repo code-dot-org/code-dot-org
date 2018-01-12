@@ -5,6 +5,7 @@ module Pd::Application
   class Teacher1819ApplicationTest < ActiveSupport::TestCase
     include Teacher1819ApplicationConstants
     include ApplicationConstants
+    include RegionalPartnerTeacherconMapping
 
     freeze_time
 
@@ -82,7 +83,7 @@ module Pd::Application
           csp_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].first,
           previous_yearlong_cdo_pd: ['CS Discoveries'],
           csp_ap_exam: Pd::Application::Teacher1819Application.options[:csp_ap_exam].first,
-          taught_in_past: ['Hour of Code']
+          taught_in_past: ['CS in Algebra']
         }
       )
 
@@ -153,7 +154,7 @@ module Pd::Application
           csp_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].first,
           previous_yearlong_cdo_pd: ['CS Discoveries'],
           csp_ap_exam: Pd::Application::Teacher1819Application.options[:csp_ap_exam].first,
-          taught_in_past: ['Hour of Code']
+          taught_in_past: ['CS in Algebra']
         }
       )
 
@@ -392,6 +393,124 @@ module Pd::Application
         application.reload
         assert_equal tomorrow, application.accepted_at.to_time
       end
+    end
+
+    test 'find_default_workshop finds no workshop for applications without a regional partner' do
+      application = build :pd_teacher1819_application
+      assert_nil application.find_default_workshop
+    end
+
+    test 'find_default_workshop finds a teachercon workshop for applications with a G3 partner' do
+      # stub process_location to prevent making Geocoder requests in test
+      Pd::Workshop.any_instance.stubs(:process_location)
+
+      teachercon_workshops = {}
+      [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP].each do |course|
+        TEACHERCONS.each do |teachercon|
+          city = teachercon[:city]
+          teachercon_workshops[[course, city]] = create :pd_workshop,
+            num_sessions: 1, course: course, subject: Pd::Workshop::SUBJECT_TEACHER_CON, location_address: city
+        end
+      end
+
+      g3_partner_name = REGIONAL_PARTNER_TC_MAPPING.keys.sample
+      g3_partner = build :regional_partner, group: 3, name: g3_partner_name
+      application = build :pd_teacher1819_application, regional_partner: g3_partner
+
+      [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP].each do |course|
+        city = get_matching_teachercon(g3_partner)[:city]
+        workshop = teachercon_workshops[[course, city]]
+
+        application.course = course === Pd::Workshop::COURSE_CSD ? 'csd' : 'csp'
+        assert_equal workshop, application.find_default_workshop
+      end
+    end
+
+    test 'find_default_workshop find an appropriate partner workshop for G1 and G2 partners' do
+      program_manager = create :workshop_organizer
+      partner = create :regional_partner
+      create :regional_partner_program_manager,
+        program_manager: program_manager,
+        regional_partner: partner
+
+      # where "appropriate workshop" is the earliest teachercon or local summer
+      # workshop matching the application course.
+
+      invalid_workshop = create :pd_workshop, organizer: program_manager
+      create :pd_session,
+        workshop: invalid_workshop,
+        start: Date.new(2018, 1, 10)
+
+      earliest_valid_workshop = create :pd_workshop, :local_summer_workshop, organizer: program_manager
+      create :pd_session,
+        workshop: earliest_valid_workshop,
+        start: Date.new(2018, 1, 15)
+
+      latest_valid_workshop = create :pd_workshop, :local_summer_workshop, organizer: program_manager
+      create :pd_session,
+        workshop: latest_valid_workshop,
+        start: Date.new(2018, 12, 15)
+
+      application = build :pd_teacher1819_application, course: 'csp', regional_partner: partner
+      assert_equal earliest_valid_workshop, application.find_default_workshop
+    end
+
+    test 'locking an application with pd_workshop_id automatically enrolls user' do
+      application = create :pd_teacher1819_application
+      workshop = create :pd_workshop
+
+      application.pd_workshop_id = workshop.id
+      application.status = "accepted"
+
+      assert_creates(Pd::Enrollment) do
+        application.lock!
+      end
+      assert_equal Pd::Enrollment.last.workshop, workshop
+      assert_equal Pd::Enrollment.last.id, application.auto_assigned_enrollment_id
+    end
+
+    test 'updating and re-locking an application with an auto-assigned enrollment will delete old enrollment' do
+      application = create :pd_teacher1819_application
+      first_workshop = create :pd_workshop
+      second_workshop = create :pd_workshop
+
+      application.pd_workshop_id = first_workshop.id
+      application.status = "accepted"
+      application.lock!
+
+      first_enrollment = Pd::Enrollment.find(application.auto_assigned_enrollment_id)
+
+      application.unlock!
+      application.pd_workshop_id = second_workshop.id
+      application.lock!
+
+      assert first_enrollment.reload.deleted?
+      assert_not_equal first_enrollment.id, application.auto_assigned_enrollment_id
+    end
+
+    test 'upading the application to unaccepted will also delete the autoenrollment' do
+      application = create :pd_teacher1819_application
+      workshop = create :pd_workshop
+
+      application.pd_workshop_id = workshop.id
+      application.status = "accepted"
+      application.lock!
+      first_enrollment = Pd::Enrollment.find(application.auto_assigned_enrollment_id)
+
+      application.unlock!
+      application.status = "waitlisted"
+      application.lock!
+
+      assert first_enrollment.reload.deleted?
+
+      application.unlock!
+      application.status = "accepted"
+
+      assert_creates(Pd::Enrollment) do
+        application.lock!
+      end
+
+      assert_not_equal first_enrollment.id, application.auto_assigned_enrollment_id
     end
   end
 end
