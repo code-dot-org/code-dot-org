@@ -9,7 +9,7 @@ const styles = {
   heading: {
     paddingRight: 10,
     paddingTop: 10,
-    paddingBottom: 10,
+    paddingBottom: 20,
     fontSize: 24,
     lineHeight: '26px',
     fontFamily: 'Gotham 3r',
@@ -17,10 +17,7 @@ const styles = {
   },
   textItem: {
     backgroundColor: color.teal,
-    paddingLeft: 30,
-    paddingRight: 20,
-    paddingBottom: 20,
-    paddingTop: 20,
+    padding: 30,
     height: 260,
     boxSizing: 'border-box'
   },
@@ -83,7 +80,8 @@ class UnconnectedTwoColumnActionBlock extends Component {
           {responsiveSize === 'lg' &&
             <div style={{float, width}}>
               <img
-                src={imageUrl} style={styles.image}
+                src={imageUrl}
+                style={styles.image}
               />
             </div>
           }
@@ -138,7 +136,12 @@ export class LocalClassActionBlock extends Component {
         heading={heading}
         subHeading={i18n.findLocalClassSubheading()}
         description={i18n.findLocalClassDescription()}
-        buttons={[{url: pegasus('/learn/local'), text: i18n.findLocalClassButton()}]}
+        buttons={[
+          {
+            url: pegasus('/learn/local'),
+            text: i18n.findLocalClassButton()
+          }
+        ]}
       />
     );
   }
@@ -152,7 +155,12 @@ export class AdministratorResourcesActionBlock extends Component {
         heading={i18n.administratorResourcesHeading()}
         subHeading={i18n.administratorResourcesSubheading()}
         description={i18n.administratorResourcesDescription()}
-        buttons={[{url: pegasus('/administrators'), text: i18n.yourSchoolAdminButton()}]}
+        buttons={[
+          {
+            url: pegasus('/administrators'),
+            text: i18n.yourSchoolAdminButton()
+          }
+        ]}
       />
     );
   }
