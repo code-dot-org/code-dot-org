@@ -26,6 +26,19 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   YES_OR_NO = [YES, NO].freeze
   OTHER = 'Other'.freeze
 
+  after_create :update_application_status
+  def update_application_status
+    status = sanitize_form_data_hash.try(:[], :teacher_accept_seat)
+    return unless status
+
+    if status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:withdraw_date] ||
+      status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:withdraw_other]
+      pd_application.update!(status: "waitlisted")
+    elsif status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
+      pd_application.update!(status: "declined")
+    end
+  end
+
   def self.options
     {
       dietaryNeeds: [
