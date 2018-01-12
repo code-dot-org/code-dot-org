@@ -403,5 +403,31 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
         expect(led.pulse).to.be.a('function');
       });
     });
+
+    /**
+     * @function
+     * @name MakerBoard#createButton
+     * @param {number} pin
+     * @return {Button} a newly constructed Button component
+     */
+    describe(`createButton(pin)`, () => {
+      // Example code:
+      // var newButton = createButton(2);
+      // onBoardEvent(newButton, "down", function() {
+      //   console.log("pressed");
+      // });
+
+      beforeEach(() => {
+        return board.connect();
+      });
+
+      it(`returns an Led component`, () => {
+        const button = board.createButton(10);
+        // Check the basic button shape
+        expect(button).to.be.an.instanceOf(EventEmitter);
+        expect(button).to.have.property('isPressed');
+        expect(button).to.have.property('holdtime');
+      });
+    });
   });
 }

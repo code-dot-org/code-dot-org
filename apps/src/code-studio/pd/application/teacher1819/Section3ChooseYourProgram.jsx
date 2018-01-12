@@ -45,7 +45,7 @@ export default class Section3ChooseYourProgram extends LabeledFormComponent {
         }
 
         {this.radioButtonsWithAdditionalTextFieldsFor("planToTeach", {
-          "I don't know if I will teach this course (please explain):" : "dontKnowExplain"
+          "I don't know if I will teach this course (Please Explain):" : "dontKnowExplain"
         })}
       </FormGroup>
     );

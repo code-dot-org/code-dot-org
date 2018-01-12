@@ -35,6 +35,10 @@ export function createLed(pin) {
   return executeCmd(null, 'createLed', {pin});
 }
 
+export function createButton(pin) {
+  return executeCmd(null, 'createButton', {pin});
+}
+
 export function onBoardEvent(component, event, callback) {
   return executeCmd(null, 'onBoardEvent', {component, event, callback});
 }

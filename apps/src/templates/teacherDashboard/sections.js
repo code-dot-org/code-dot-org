@@ -9,6 +9,7 @@ import teacherSections, {
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 import SectionsSharingButton from '@cdo/apps/templates/teacherDashboard/SectionsSharingButton';
+import ManageStudentsTable from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
 
 /**
  * On the manage students tab of an oauth section, use React to render a button
@@ -67,6 +68,38 @@ export function renderLoginTypeAndSharingControls(sectionId) {
     </Provider>,
     shareSettingMountPoint()
   );
+}
+
+export function renderSectionTable(sectionId, loginType) {
+  const dataUrl = `/v2/sections/${sectionId}/students`;
+  const element = document.getElementById('student-table-react');
+
+  $.ajax({
+    method: 'GET',
+    url: dataUrl,
+    dataType: 'json'
+  }).done(studentData => {
+    studentData = studentData.map((student) => {
+      return {
+        id: student.id,
+        name: student.name,
+        username: student.username,
+        age: student.age,
+        gender: student.gender,
+        secretWords: student.secret_words,
+        secretPicturePath: student.secret_picture_path,
+        sectionId: sectionId,
+        loginType: loginType,
+      };
+    });
+    ReactDOM.render(
+      <ManageStudentsTable
+        studentData={studentData}
+        id={sectionId}
+        loginType={loginType}
+      />,
+      element);
+  });
 }
 
 export function unmountLoginTypeAndSharingControls() {
