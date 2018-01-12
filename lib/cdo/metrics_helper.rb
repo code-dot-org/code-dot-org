@@ -11,3 +11,16 @@ module Metrics
     dataset.insert(data)
   end
 end
+
+# Summary of the data currently being logged in the metrics table:
+# -----------------------------------------------------------------------------
+# |       name        |          metadata           |          value           |
+# -----------------------------------------------------------------------------
+# |    dtt_start      |        commit hash          |  0 - if automatic        |
+# |                   |                             |  1 - if manual           |
+# |----------------------------------------------------------------------------|
+# |    dtt_green      |        commit hash          |  0 - if automatic        |
+# |                   |                             |  1 - if manual           |
+# |----------------------------------------------------------------------------|
+# |    dtt_red        |        commit hash          |  1 - always manual       |
+# |----------------------------------------------------------------------------|
