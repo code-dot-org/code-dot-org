@@ -10,7 +10,7 @@ describe('Free Response', () => {
   const otherLastAttemptString = 'This is some other answer';
   let textarea;
 
-  before(() => {
+  beforeEach(() => {
     // FreeResponse expects to find a textarea element in the document with id
     // "level_<levelID>" and class "response"
     textarea = document.createElement('textarea');
@@ -21,8 +21,10 @@ describe('Free Response', () => {
     replaceOnWindow('appOptions', {});
   });
 
-  after(() => {
+  afterEach(() => {
     restoreOnWindow('appOptions');
+
+    document.body.removeChild(textarea);
   });
 
   describe('Shows last attempt', () => {
