@@ -7,7 +7,7 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   heading: {
-    paddingRight: 10,
+    paddingRight: 5,
     paddingTop: 10,
     paddingBottom: 20,
     fontSize: 24,
@@ -17,7 +17,7 @@ const styles = {
   },
   textItem: {
     backgroundColor: color.teal,
-    padding: 30,
+    padding: 25,
     height: 260,
     boxSizing: 'border-box'
   },
