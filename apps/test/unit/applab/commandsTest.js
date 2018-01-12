@@ -63,6 +63,17 @@ describe("setSelectionRange", () => {
     expect(testInput.selectionEnd).to.equal(6);
   });
 
+  it('sets the selection direction on the found element', () => {
+    expect(testInput.selectionDirection).to.equal('forward');
+    setSelectionRange({
+      elementId: testInputId,
+      selectionStart: 3,
+      selectionEnd: 6,
+      selectionDirection: 'backward',
+    });
+    expect(testInput.selectionDirection).to.equal('backward');
+  });
+
   it('warns if element is not found', () => {
     setSelectionRange({
       elementId: 'fakeElementId',
