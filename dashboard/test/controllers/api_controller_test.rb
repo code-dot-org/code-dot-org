@@ -1035,14 +1035,6 @@ class ApiControllerTest < ActionController::TestCase
     level_id = script_level.level.id
     assert_equal 'perfect', body['levels'][level_id.to_s]['status']
     assert_equal 100, body['levels'][level_id.to_s]['result']
-
-    # Test user_progress_for_all_scripts.
-    get :user_progress_for_all_scripts
-    assert_response :success
-    body = JSON.parse(response.body)
-    assert_equal 2, body['linesOfCode']
-    assert_equal 1, body['scripts'].size
-    assert_equal 'perfect', body['scripts'][script.name]['levels'][level_id.to_s]['status']
   end
 
   test "should get user progress for stage" do
