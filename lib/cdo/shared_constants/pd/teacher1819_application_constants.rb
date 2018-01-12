@@ -166,7 +166,8 @@ module Teacher1819ApplicationConstants
       wont_replace_existing_course: 'Will this replace an existing CS course?',
       diversity_recruitment: 'Principal has committed to recruiting diverse students',
       free_lunch_percent: 'Percent of students that receive free/reduced lunch',
-      underrepresented_minority_percent: 'Percent of students that are underrepresented minorities'
+      underrepresented_minority_percent: 'Percent of students that are underrepresented minorities',
+      can_pay_fee: 'Can the school or teacher pay the summer workshop program fee?'
     }
   }.freeze
 
