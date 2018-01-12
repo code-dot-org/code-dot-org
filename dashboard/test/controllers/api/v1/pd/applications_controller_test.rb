@@ -185,6 +185,14 @@ module Api::V1::Pd
       refute data['locked']
     end
 
+    test 'notes field will strip pandas' do
+      sign_in @workshop_organizer
+      put :update, params: {id: @csf_facilitator_application_with_partner, application: {notes: panda_panda}}
+      assert_response :success
+      data = JSON.parse(response.body)
+      assert_equal data['notes'], "Panda"
+    end
+
     test 'csv download for csd teacher returns expected columns' do
       sign_in @workshop_admin
 

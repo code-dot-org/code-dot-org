@@ -96,6 +96,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     end
     application_data["regional_partner_id"] = application_data.delete "regional_partner_filter"
 
+    application_data["notes"] = application_data["notes"].strip_utf8mb4 if application_data["notes"]
+
     @application.update!(application_data)
 
     # only allow those with full management permission to lock or unlock
