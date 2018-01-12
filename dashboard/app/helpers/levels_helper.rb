@@ -587,7 +587,7 @@ module LevelsHelper
   end
 
   def build_copyright_strings
-    # TODO(brent): These would ideally also go in _javascript_strings.html right now, but it can't
+    # These would ideally also go in _javascript_strings.html right now, but it can't
     # deal with params.
     {
       thank_you: URI.escape(I18n.t('footer.thank_you')),
