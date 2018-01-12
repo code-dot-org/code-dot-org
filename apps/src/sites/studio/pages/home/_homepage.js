@@ -150,6 +150,13 @@ function showHomepage() {
             queryStringOpen={query['open']}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
             isEnglish={isEnglish}
+            ncesSchoolId={homepageData.ncesSchoolId}
+            censusQuestion={homepageData.censusQuestion}
+            showCensusBanner={homepageData.showCensusBanner}
+            teacherName={homepageData.teacherName}
+            teacherId={homepageData.teacherId}
+            teacherEmail={homepageData.teacherEmail}
+            schoolYear={homepageData.currentSchoolYear}
           />
         )}
         {!isTeacher && (

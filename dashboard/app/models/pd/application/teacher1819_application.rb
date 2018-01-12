@@ -47,6 +47,10 @@ module Pd::Application
       auto_assigned_enrollment_id
     )
 
+    def workshop
+      Pd::Workshop.find(pd_workshop_id) if pd_workshop_id
+    end
+
     def send_decision_notification_email
       # We only want to email unmatched and G3-matched teachers. All teachers
       # matched with G1 or G2 partners will be emailed by their partners.
@@ -61,8 +65,6 @@ module Pd::Application
         # require an associated workshop but also come in two flavors depending
         # on the nature of the workshop
         return unless pd_workshop_id
-
-        workshop = Pd::Workshop.find(pd_workshop_id)
 
         if workshop.teachercon?
           Pd::Application::Teacher1819ApplicationMailer.teachercon_accepted(self).deliver_now
@@ -369,8 +371,9 @@ module Pd::Application
         ],
 
         pay_fee: [
-          'Yes, my school or I will be able to pay the full summer workshop program fee',
-          'No, my school or I will not be able to pay the summer workshop program fee.'
+          'Yes, my school or I will be able to pay the full summer workshop program fee.',
+          'No, my school or I will not be able to pay the summer workshop program fee.',
+          'Not applicable: there is no fee for the summer workshop for teachers in my region.'
         ],
 
         committed: [

@@ -17,8 +17,9 @@ const options = {
     'More than 50 miles'
   ],
   payFee: [
-    'Yes, my school or I will be able to pay the full summer workshop program fee',
-    'No, my school or I will not be able to pay the summer workshop program fee.'
+    'Yes, my school or I will be able to pay the full summer workshop program fee.',
+    'No, my school or I will not be able to pay the summer workshop program fee.',
+    'Not applicable: there is no fee for the summer workshop for teachers in my region.'
   ]
 };
 
