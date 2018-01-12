@@ -1,4 +1,5 @@
 import {assert} from '../util/configuredChai';
+import {sandboxDocumentBody} from "../util/testUtils";
 
 function setGlobals() {
   document.body.innerHTML = '<div id="svgMaze"><div class="pegman-location"></div></div>';
@@ -106,6 +107,8 @@ function validateImages(setup, defaultFlower) {
 }
 
 describe("beeItemDrawer", function () {
+  sandboxDocumentBody();
+
   it ("red flower default", function () {
     setGlobals();
 

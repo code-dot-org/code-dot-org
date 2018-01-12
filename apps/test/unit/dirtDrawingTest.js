@@ -1,4 +1,5 @@
 import {assert} from '../util/configuredChai';
+import {sandboxDocumentBody} from "../util/testUtils";
 
 function setGlobals() {
   document.body.innerHTML = '<div id="svgMaze"><div class="pegman-location"></div></div>';
@@ -18,6 +19,8 @@ function createFakeSkin() {
 }
 
 describe("DirtDrawer", function () {
+  sandboxDocumentBody();
+
   // The actual values of these are ignored by most of these tests
   var dirtMap = MazeMap.parseFromOldValues([
     [1, 1, 1, 1, 1, 1, 1, 1, 1],
