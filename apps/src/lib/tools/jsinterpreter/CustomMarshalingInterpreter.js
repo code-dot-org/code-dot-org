@@ -383,7 +383,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    * @return {{hooks: Array<{name: string, func: Function}>, interpreter: CustomMarshalingInterpreter}} Mapping of
    *     hook names to the corresponding event handler, and the interpreter that was created to evaluate the code.
    */
-  static evalWithEvents(apis, events, evalCode = '') {
+  static evalWithEvents(apis, events, evalCode = '', customMarshalObjectList) {
     let interpreter, currentCallback, lastReturnValue;
     const hooks = [];
 
@@ -408,11 +408,11 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
     // The event loop pauses the interpreter until the native async function
     // `currentCallback` returns a value. The value contains the name of the event
     // to call, and any arguments.
-    const eventLoop = ';while(true){var event=wait();setReturnValue(this[event.name].apply(null,event.args));}';
+    const eventLoop = ';while(true){var _e=wait();setReturnValue(this[_e.name].apply(null,_e.args));}';
 
     interpreter = new CustomMarshalingInterpreter(
       evalCode + eventLoop,
-      new CustomMarshaler({}),
+      new CustomMarshaler({objectList: customMarshalObjectList}),
       (interpreter, scope) => {
         interpreter.marshalNativeToInterpreterObject(apis, 5, scope);
         interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
@@ -512,7 +512,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         // Mark if this should be nativeIsAsync:
         makeNativeOpts.nativeIsAsync = true;
       }
-      var extraOpts = this.customMarshaler.getCustomMarshalMethodOptions(this, nativeParentObj);
+      var extraOpts = this.customMarshaler.getCustomMarshalMethodOptions(this, nativeParentObj, nativeVar);
       // Add extra options if the parent of this function is in our custom marshal
       // modified object list:
       for (var prop in extraOpts) {
@@ -672,7 +672,10 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       var state = opts.callbackState || {};
       state.node = {
         type: 'CallExpression',
-        arguments: intArgs /* this just needs to be an array of the same size */
+        arguments: intArgs, /* this just needs to be an array of the same size */
+        // give this node an end so that the interpreter doesn't treat it
+        // like polyfill code and do weird weird scray terrible things.
+        end: 1,
       };
       state.doneCallee_ = true;
       state.func_ = intFunc;
@@ -684,7 +687,15 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         state.value = state.arguments_.pop();
       }
 
-      this.pushStackFrame(state);
+      const depth = this.pushStackFrame(state);
+
+      if (opts.run) {
+        this.paused_ = false;
+        while (this.getStackDepth() >= depth) {
+          this.step();
+        }
+        this.paused_ = true;
+      }
     };
   }
 
