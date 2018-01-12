@@ -273,6 +273,8 @@ class LevelsController < ApplicationController
       {soft_buttons: []},
       {contained_level_names: []},
       {examples: []},
+      {reference_links: []},
+      {map_levels: []},
 
       # Minecraft-specific
       {available_blocks: []},
