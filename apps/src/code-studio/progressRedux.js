@@ -387,8 +387,7 @@ const peerReviewLevels = state => state.peerReviewStage.levels.map((level, index
  * in our header
  * @returns {boolean}
  */
-const isCurrentLevel = (state, level) => {
-  const currentLevelId = state.currentLevelId;
+const isCurrentLevel = (currentLevelId, level) => {
   return !!currentLevelId &&
     ((level.ids && level.ids.map(id => id.toString()).indexOf(currentLevelId) !== -1) ||
     level.uid === currentLevelId);
@@ -400,14 +399,14 @@ const isCurrentLevel = (state, level) => {
  * about and (b) determines current status based on the current state of
  * state.levelProgress
  */
-const levelWithStatus = (state, level) => {
+const levelWithStatus = ({levelProgress, currentLevelId}, level) => {
   if (level.kind !== LevelKind.unplugged) {
     if (!level.title || typeof(level.title) !== 'number') {
       throw new Error('Expect all non-unplugged levels to have a numerical title');
     }
   }
   return {
-    status: statusForLevel(level, state.levelProgress),
+    status: statusForLevel(level, levelProgress),
     url: level.url,
     name: level.name,
     progression: level.progression,
@@ -415,7 +414,7 @@ const levelWithStatus = (state, level) => {
     icon: level.icon,
     isUnplugged: level.kind === LevelKind.unplugged,
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
-    isCurrentLevel: isCurrentLevel(state, level),
+    isCurrentLevel: isCurrentLevel(currentLevelId, level),
     isConceptLevel: level.is_concept_level,
   };
 };
@@ -423,9 +422,9 @@ const levelWithStatus = (state, level) => {
 /**
  * Get level data for all lessons/stages
  */
-export const levelsByLesson = state => (
-  state.stages.map(stage => (
-    stage.levels.map(level => levelWithStatus(state, level))
+export const levelsByLesson = ({stages, levelProgress, currentLevelId}) => (
+  stages.map(stage => (
+    stage.levels.map(level => levelWithStatus({levelProgress, currentLevelId}, level))
   ))
 );
 
