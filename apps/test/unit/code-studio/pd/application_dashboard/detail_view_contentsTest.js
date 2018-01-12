@@ -94,7 +94,15 @@ describe("DetailViewContents", () => {
     });
 
     describe("Regional Partner Panel", () => {
-      const regionalPartnerPanel = <DetailViewResponse question="Regional Partner" />;
+      let regionalPartnerPanel;
+      before(() => {
+        regionalPartnerPanel = (
+          <DetailViewResponse
+            question="Regional Partner"
+            layout="panel"
+          />
+        );
+      });
 
       it("Does not render for regional partners", () => {
         const regionalPartnerDetailView = mountDetailView(applicationData.type, {isWorkshopAdmin: false});
