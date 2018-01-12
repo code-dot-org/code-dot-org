@@ -17,7 +17,8 @@ export const STUDENT_SECTION_ID = 'STUDENT';
 const HiddenState = Immutable.Record({
   hiddenStagesInitialized: false,
   hideableStagesAllowed: false,
-  // mapping of section id to hidden stages for that section
+  // A mapping, where the key is the sectionId, and the value is a mapping from
+  // stageId to a bool indicating whether that stage is hidden (true) or not (false)
   // Teachers will potentially have a number of section ids. For students we
   // use a sectionId of STUDENT_SECTION_ID, which represents the hidden state
   // for the student based on the sections they are in.
@@ -46,19 +47,18 @@ function validateSectionIds(state) {
 }
 
 /**
- * hidden stage reducer
- * Mapping of stage ids to bools indicating whether it's hidden or not
+ * Hidden stage reducer
  */
 export default function reducer(state = new HiddenState(), action) {
   if (action.type === SET_HIDDEN_STAGES) {
-    const { stagesPerSection, hideableStagesAllowed } = action;
+    const { hiddenStagesPerSection, hideableStagesAllowed } = action;
 
     // Iterate through each section
-    const sectionIds = Object.keys(stagesPerSection);
+    const sectionIds = Object.keys(hiddenStagesPerSection);
     let nextState = state;
     sectionIds.forEach(sectionId => {
       // And iterate through each hidden stage within that section
-      const hiddenStageIds = stagesPerSection[sectionId];
+      const hiddenStageIds = hiddenStagesPerSection[sectionId];
       hiddenStageIds.forEach(stageId => {
         nextState = nextState.setIn(['stagesBySection', sectionId, stageId.toString()], true);
       });
@@ -91,14 +91,14 @@ export default function reducer(state = new HiddenState(), action) {
 // action creators
 
 /**
- * @param {object} stagesPerSection - Mapping from sectionId to a list of stageIds
+ * @param {object} hiddenStagesPerSection - Mapping from sectionId to a list of stageIds
  *   that are hidden for that section.
  * @param {bool} hideableStagesAllowed - True if we're able to toggle hidden stages
  */
-export function setHiddenStages(stagesPerSection, hideableStagesAllowed) {
+export function setHiddenStages(hiddenStagesPerSection, hideableStagesAllowed) {
   return {
     type: SET_HIDDEN_STAGES,
-    stagesPerSection,
+    hiddenStagesPerSection,
     hideableStagesAllowed
   };
 }
