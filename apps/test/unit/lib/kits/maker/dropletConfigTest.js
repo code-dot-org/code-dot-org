@@ -192,6 +192,65 @@ describe('maker/dropletConfig.js', () => {
     });
   });
 
+  describe(`createButton(pin)`, () => {
+    let block;
+
+    beforeEach(() => {
+      block = blocks.find(x => x.func === 'createButton');
+    });
+
+    it('is an exported block', () => {
+      expect(block).not.to.be.undefined;
+    });
+
+    it('is in the Maker category', () => {
+      expect(block).to.have.property('category', MAKER_CATEGORY);
+    });
+
+    it('has one argument', () => {
+      expect(block.paletteParams).to.have.length(1);
+      expect(block.params).to.have.length(1);
+      expect(block.paletteParams[0]).to.equal('pin');
+      expect(block.params[0]).to.equal('0');
+    });
+
+    it('can be a value block or not', () => {
+      expect(block.type).to.equal('either');
+    });
+
+    it('has a matching export in commands.js', () => {
+      expect(commands).to.haveOwnProperty('createButton');
+      expect(commands.createButton).to.be.a('function');
+    });
+  });
+
+  describe(`var myButton = createButton(pin)`, () => {
+    let block;
+
+    beforeEach(() => {
+      block = blocks.find(x => x.func === 'var myButton = createButton');
+    });
+
+    it('is an exported block', () => {
+      expect(block).not.to.be.undefined;
+    });
+
+    it('is in the Maker category', () => {
+      expect(block).to.have.property('category', MAKER_CATEGORY);
+    });
+
+    it('has one argument', () => {
+      expect(block.paletteParams).to.have.length(1);
+      expect(block.params).to.have.length(1);
+      expect(block.paletteParams[0]).to.equal('pin');
+      expect(block.params[0]).to.equal('0');
+    });
+
+    it('does not autocomplete', () => {
+      expect(block.noAutocomplete).to.be.true;
+    });
+  });
+
   describe(`onBoardEvent(component, event, callback)`, () => {
     it('has a matching export in commands.js', () => {
       expect(commands).to.haveOwnProperty('onBoardEvent');

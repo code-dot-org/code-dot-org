@@ -56,6 +56,7 @@ export class DetailViewContents extends React.Component {
       bonus_points: PropTypes.number
     }),
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
+    course: PropTypes.oneOf(['csf', 'csd', 'csp']),
     reload: PropTypes.func.isRequired,
     isWorkshopAdmin: PropTypes.bool
   };
@@ -251,6 +252,20 @@ export class DetailViewContents extends React.Component {
           <h4>
             Bonus Points: {this.props.applicationData.bonus_points}
           </h4>
+          {this.props.course === 'csp' &&
+            <h4>
+              <a target="_blank" href="https://docs.google.com/document/d/1ounHnw4fdihHiMwcNNjtQeK4avHz8Inw7W121PbDQRw/edit#heading=h.p1d568zb27s0">
+                View CS Principles Rubric
+              </a>
+            </h4>
+          }
+          {this.props.course === 'csd' &&
+            <h4>
+              <a target="_blank" href="https://docs.google.com/document/d/1Sjzd_6zjHyXLgzIUgHVp-AeRK2y3hZ1PUjg8lTtWsHs/edit#heading=h.fqiranmp717e">
+                View CS Discoveries Rubric
+              </a>
+            </h4>
+          }
         </div>
 
         <div id="DetailViewHeader" style={styles.detailViewHeader}>
