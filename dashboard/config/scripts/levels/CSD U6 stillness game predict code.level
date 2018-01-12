@@ -10,9 +10,10 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "arcRight": null,
       "addOperator": null,
-      "subtractOperator": null
+      "subtractOperator": null,
+      "accelerometer.getOrientation": null,
+      "onBoardEvent": null
     },
     "edit_code": true,
     "contained_level_names": null,
@@ -58,11 +59,11 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "markdown_instructions": "# Change with the Accelerometer\r\n\r\nJust like the sensors, the accelerometer has a change event. "
+    "markdown_instructions": "# Change with the Accelerometer\r\n\r\nJust like the sensors, the accelerometer has a change event.\r\n\r\nThis program uses the change event to create the ultimate steadiness test. Every time the board detects a change in movement, the movement meter increased by 1. When the movement meter reaches 100, the alarm will sound. Your goal is to pass your board to another person without setting off the alarm.\r\n\r\n\r\n# Do This\r\nThis program has some bugs in it. To fix these, add code that will:\r\n\r\n* Increase the `movement` variable each time the `change` event is triggered.\r\n* Display the current value of `movement` under the movement meter text.\r\n\r\nGet a partner and test your game to make sure it works!"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-12 16:38:31 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-12 16:38:46 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"makerlab_enabled\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-12 16:48:18 +0000\",\"changed\":[\"notes\",\"code_functions\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-12 19:24:47 +0000\",\"changed\":[\"notes\",\"code_functions\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-12 19:26:11 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-12 16:38:31 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-12 16:38:46 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"makerlab_enabled\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-12 16:48:18 +0000\",\"changed\":[\"notes\",\"code_functions\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-12 19:24:47 +0000\",\"changed\":[\"notes\",\"code_functions\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-12 19:26:11 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-12 20:43:11 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"markdown_instructions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-12 23:04:24 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"markdown_instructions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
