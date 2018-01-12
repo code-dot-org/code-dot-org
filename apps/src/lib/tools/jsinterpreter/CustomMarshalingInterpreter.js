@@ -408,14 +408,14 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
     // The event loop pauses the interpreter until the native async function
     // `currentCallback` returns a value. The value contains the name of the event
     // to call, and any arguments.
-    const eventLoop = ';while(true){var _e=wait();setReturnValue(this[_e.name].apply(null,_e.args));}';
+    const eventLoop = ';while(true){var _e=_w();setReturnValue(this[_e.name].apply(null,_e.args));}';
 
     interpreter = new CustomMarshalingInterpreter(
       evalCode + eventLoop,
       new CustomMarshaler({objectList: customMarshalObjectList}),
       (interpreter, scope) => {
         interpreter.marshalNativeToInterpreterObject(apis, 5, scope);
-        interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
+        interpreter.setProperty(scope, '_w', interpreter.createAsyncFunction(callback => {
           currentCallback = callback;
         }));
         interpreter.setProperty(scope, 'setReturnValue', interpreter.createNativeFunction(returnValue => {
