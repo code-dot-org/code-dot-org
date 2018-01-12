@@ -263,6 +263,12 @@ describe('determineInstructionsConstants', () => {
           overlayVisible,
           teacherMarkdown: undefined,
           levelVideos: undefined,
+          app: undefined,
+          scriptName: undefined,
+          stagePosition: undefined,
+          levelPosition: undefined,
+          serverLevelId: undefined,
+          scriptId: undefined
         });
       });
     });
@@ -291,6 +297,12 @@ describe('determineInstructionsConstants', () => {
         overlayVisible,
         teacherMarkdown: undefined,
         levelVideos: undefined,
+        app: undefined,
+        scriptName: undefined,
+        stagePosition: undefined,
+        levelPosition: undefined,
+        serverLevelId: undefined,
+        scriptId: undefined
       });
     });
 
@@ -319,6 +331,12 @@ describe('determineInstructionsConstants', () => {
         overlayVisible,
         teacherMarkdown: undefined,
         levelVideos: undefined,
+        app: undefined,
+        scriptName: undefined,
+        stagePosition: undefined,
+        levelPosition: undefined,
+        serverLevelId: undefined,
+        scriptId: undefined
       });
     });
 
@@ -404,6 +422,12 @@ describe('determineInstructionsConstants', () => {
         teacherMarkdown: undefined,
         hasContainedLevels: undefined,
         levelVideos: ["notEmpty"],
+        app: undefined,
+        scriptName: undefined,
+        stagePosition: undefined,
+        levelPosition: undefined,
+        serverLevelId: undefined,
+        scriptId: undefined
       });
     });
   });

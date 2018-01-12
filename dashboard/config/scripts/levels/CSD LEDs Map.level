@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Circuit Playground: LEDs",
-    "reference": "/csd/maker_leds/index.html"
+    "reference": "/docs/csd/maker_leds/index.html"
   },
   "published": true,
   "notes": ""

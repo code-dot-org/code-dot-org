@@ -34,7 +34,6 @@ require 'cdo/rake_utils'
 require 'cdo/only_one'
 
 STARTED = 'build-started'.freeze
-CHAT_LOG_TAIL_LENGTH = 40
 S3_LOGS_BUCKET = 'cdo-build-logs'.freeze
 S3_LOGS_PREFIX = CDO.name.freeze
 
@@ -150,13 +149,7 @@ def main
       end
     else
       message = "<b>#{projects}</b> failed to build!" + time_message + log_link
-      truncated_log = <<-LOG
-Showing last #{CHAT_LOG_TAIL_LENGTH} lines of build log:
-#{log.lines.last(CHAT_LOG_TAIL_LENGTH).join('\n')}
-      LOG
-      truncated_log += "\n\nci_build backtrace:\n#{status}" unless status.is_a?(String) && status.empty?
       ChatClient.log message, color: 'red'
-      ChatClient.snippet truncated_log.to_s unless log.empty?
       ChatClient.log '<!here> build failure', color: 'red'
 
       ChatClient.message 'server operations', message, color: 'red', notify: 1

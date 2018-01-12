@@ -22,7 +22,7 @@ export default class CohortViewTable extends React.Component {
   constructColumns() {
     let columns = [
       {
-        property: 'accepted_at',
+        property: 'date_accepted',
         header: {
           label: 'Date Accepted'
         }
@@ -45,11 +45,6 @@ export default class CohortViewTable extends React.Component {
         property: 'email',
         header: {
           label: 'Email'
-        }
-      }, {
-        property: 'notified',
-        header: {
-          label: 'Notified'
         }
       }
     ];

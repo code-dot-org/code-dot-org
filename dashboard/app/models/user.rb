@@ -1626,10 +1626,6 @@ class User < ActiveRecord::Base
     SchoolInfoInterstitialHelper.show_school_info_interstitial?(self)
   end
 
-  def school_info_suggestion?
-    !(school.blank? && full_address.blank?)
-  end
-
   # Removes PII and other information from the user and marks the user as having been purged.
   # WARNING: This (permanently) destroys data and cannot be undone.
   # WARNING: This does not purge the user, only marks them as such.
