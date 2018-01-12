@@ -183,11 +183,11 @@ module Pd::Application
       OTHER_PLEASE_LIST
     ]
 
-    NOT_TEACHING_NEXT_YEAR = "I'm not teaching next year (please explain):"
-    NOT_TEACHING_THIS_YEAR = "I'm not teaching this year (please explain):"
-    DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN = "I don't know if I will teach this course (please explain):"
-    UNABLE_TO_ATTEND = "No, I'm unable to attend (please explain):"
-    NO_EXPLAIN = "No (please explain):"
+    NOT_TEACHING_THIS_YEAR = "I'm not teaching this year (Please Explain):"
+    NOT_TEACHING_NEXT_YEAR = "I'm not teaching next year (Please Explain):"
+    DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN = "I don't know if I will teach this course (Please Explain):"
+    UNABLE_TO_ATTEND = "No, I'm unable to attend (Please Explain):"
+    NO_EXPLAIN = "No (Please Explain):"
     def self.options
       {
         country: [
@@ -217,11 +217,13 @@ module Pd::Application
         grades_at_school: GRADES,
         grades_teaching: [
           *GRADES,
-          NOT_TEACHING_THIS_YEAR
+          NOT_TEACHING_THIS_YEAR,
+          OTHER_PLEASE_EXPLAIN
         ],
         grades_expect_to_teach: [
           *GRADES,
-          NOT_TEACHING_NEXT_YEAR
+          NOT_TEACHING_NEXT_YEAR,
+          OTHER_PLEASE_EXPLAIN
         ],
 
         subjects_teaching: SUBJECTS_THIS_YEAR,
@@ -777,7 +779,9 @@ module Pd::Application
       [
         [:current_role, OTHER_PLEASE_LIST],
         [:grades_teaching, NOT_TEACHING_THIS_YEAR, :grades_teaching_not_teaching_explanation],
+        [:grades_teaching, OTHER_PLEASE_EXPLAIN, :grades_teaching_other],
         [:grades_expect_to_teach, NOT_TEACHING_NEXT_YEAR, :grades_expect_to_teach_not_expecting_to_teach_explanation],
+        [:grades_expect_to_teach, OTHER_PLEASE_EXPLAIN, :grades_expect_to_teach_other],
         [:subjects_teaching, OTHER_PLEASE_LIST],
         [:subjects_expect_to_teach, OTHER_PLEASE_LIST],
         [:subjects_licensed_to_teach, OTHER_PLEASE_LIST],
