@@ -41,6 +41,7 @@ module Pd::Application
     include Teacher1819ApplicationConstants
     include RegionalPartnerTeacherconMapping
     include SerializedProperties
+    include SchoolInfoDeduplicator
 
     serialized_attrs %w(
       pd_workshop_id
@@ -86,6 +87,17 @@ module Pd::Application
         Pd::Application::Teacher1819ApplicationMailer.send(status, self).deliver_now
       end
       update!(decision_notification_email_sent_at: Time.zone.now)
+    end
+
+    # Updates the associated user's school info with the info from this teacher application
+    # based on these rules in order:
+    # 1. Application has a specific school? always overwrite the user's school info
+    # 2. User doesn't have a specific school? overwrite with the custom school info.
+    def update_user_school_info!
+      if school_id || user.school_info.try(&:school).nil?
+        school_info = get_duplicate_school_info(school_info_attr) || SchoolInfo.create!(school_info_attr)
+        user.update!(school_info: school_info)
+      end
     end
 
     def set_type_and_year
@@ -800,6 +812,33 @@ module Pd::Application
     # Add account_email (based on the associated user's email) to the sanitized form data hash
     def sanitize_form_data_hash
       super.merge(account_email: user.email)
+    end
+
+    def school_id
+      raw_school_id = sanitize_form_data_hash[:school]
+
+      # -1 designates custom school info, in which case return nil
+      raw_school_id.to_i == -1 ? nil : raw_school_id
+    end
+
+    def school_info_attr
+      if school_id
+        {
+          school_id: school_id
+        }
+      else
+        hash = sanitize_form_data_hash
+        {
+          country: 'US',
+          # Take the first word in school type, downcased. E.g. "Public school" -> "public"
+          school_type: hash[:school_type].split(' ').first.downcase,
+          state: hash[:school_state],
+          zip: hash[:school_zip_code],
+          school_name: hash[:school_name],
+          full_address: hash[:school_address],
+          validation_type: SchoolInfo::VALIDATION_NONE
+        }
+      end
     end
 
     protected

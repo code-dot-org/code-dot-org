@@ -70,5 +70,12 @@ module Api::V1::Pd::Application
       end
       assert_response :success
     end
+
+    test 'updates user school info on successful create' do
+      Pd::Application::Teacher1819Application.any_instance.expects(:update_user_school_info!)
+
+      sign_in @applicant
+      put :create, params: @test_params
+    end
   end
 end
