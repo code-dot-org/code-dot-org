@@ -30,6 +30,7 @@ describe('TeacherHomepage', () => {
         topCourse={topCourse}
         joinedSections={[]}
         isEnglish={true}
+        showCensusBanner={false}
       />
     );
     const headerBanner = wrapper.find('Connect(HeaderBanner)');
@@ -47,6 +48,7 @@ describe('TeacherHomepage', () => {
         topCourse={topCourse}
         joinedSections={[]}
         isEnglish={true}
+        showCensusBanner={false}
       />
     );
     expect(wrapper.find('ProtectedStatefulDiv')).to.have.length(2);
@@ -60,6 +62,7 @@ describe('TeacherHomepage', () => {
         topCourse={topCourse}
         joinedSections={[]}
         isEnglish={true}
+        showCensusBanner={false}
       />
     );
     const announcementContainer = wrapper.find(Notification);
@@ -83,6 +86,7 @@ describe('TeacherHomepage', () => {
         topCourse={topCourse}
         joinedSections={[]}
         isEnglish={true}
+        showCensusBanner={false}
       />
     );
     expect(wrapper).to.containMatchingElement(
@@ -98,6 +102,7 @@ describe('TeacherHomepage', () => {
         topCourse={topCourse}
         joinedSections={[]}
         isEnglish={true}
+        showCensusBanner={false}
       />
     );
     expect(wrapper.find('StudentSections').exists()).to.be.true;
@@ -111,6 +116,7 @@ describe('TeacherHomepage', () => {
         courses={courses}
         joinedSections={[]}
         isEnglish={true}
+        showCensusBanner={false}
       />
     );
     const recentCourses = wrapper.find('RecentCourses');
@@ -131,6 +137,7 @@ describe('TeacherHomepage', () => {
         codeOrgUrlPrefix="http://localhost:3000/"
         joinedSections={[]}
         isEnglish={true}
+        showCensusBanner={false}
       />
     );
     expect(wrapper.find('ProjectWidgetWithData').exists()).to.be.true;

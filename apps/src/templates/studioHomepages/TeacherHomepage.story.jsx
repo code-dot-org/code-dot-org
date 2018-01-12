@@ -44,6 +44,7 @@ export default storybook => {
                 courses={[]}
                 joinedSections={[]}
                 isEnglish={true}
+                showCensusBanner={false}
               />
             </Provider>
           );
@@ -64,6 +65,7 @@ export default storybook => {
                 courses={courses}
                 joinedSections={[]}
                 isEnglish={true}
+                showCensusBanner={false}
               />
             </Provider>
           );
@@ -83,6 +85,7 @@ export default storybook => {
                 courses={[]}
                 joinedSections={[]}
                 isEnglish={true}
+                showCensusBanner={false}
               />
             </Provider>
           );
@@ -103,6 +106,7 @@ export default storybook => {
                 topCourse={topCourse}
                 joinedSections={[]}
                 isEnglish={true}
+                showCensusBanner={false}
               />
             </Provider>
           );
@@ -123,6 +127,7 @@ export default storybook => {
                 topCourse={topCourse}
                 joinedSections={joinedSections}
                 isEnglish={true}
+                showCensusBanner={false}
               />
             </Provider>
           );

@@ -260,7 +260,10 @@ module Pd::Application
     end
 
     def total_score
-      response_scores_hash.values.map {|x| x.try(:to_i)}.compact.reduce(:+)
+      numeric_scores = response_scores_hash.values.select do |score|
+        score.is_a?(Numeric) || score =~ /^\d+$/
+      end
+      numeric_scores.map(&:to_i).reduce(:+)
     end
 
     protected

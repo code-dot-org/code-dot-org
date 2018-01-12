@@ -17,12 +17,12 @@ module Api::V1::Pd::Application
 
       teacher_application.update_form_data_hash(
         {
-          principal_approval: principal_response[:do_you_approve],
-          schedule_confirmed: principal_response[:committed_to_master_schedule],
-          diversity_recruitment: principal_response[:committed_to_diversity],
+          principal_approval: principal_response.values_at(:do_you_approve, :do_you_approve_other).compact.join(" "),
+          schedule_confirmed: principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
+          diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
           free_lunch_percent: principal_response[:free_lunch_percent],
           underrepresented_minority_percent: @application.underrepresented_minority_percent.to_s,
-          wont_replace_existing_course: principal_response[:replace_course]
+          wont_replace_existing_course: principal_response.values_at(:replace_course, :replace_course_other).compact.join(" ")
         }
       )
       teacher_application.save

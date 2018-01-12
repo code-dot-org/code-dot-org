@@ -14,6 +14,22 @@
     - homepage_data[:isTeacher] = true
     - homepage_data[:joined_sections] = @student_sections
     - homepage_data[:announcement] = DCDO.get('census_announcement', nil)
+    - homepage_data[:hoc_launch] = DCDO.get('hoc_launch', nil)
+    - show_census_banner = !!(current_user.show_census_teacher_banner?)
+    - homepage_data[:showCensusBanner] = show_census_banner
+    - if show_census_banner
+      %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
+      - teachers_school = current_user.school_info.school
+      - school_stats = SchoolStatsByYear.where(school_id: teachers_school.id).order(school_year: :desc).first
+      - homepage_data[:ncesSchoolId] = teachers_school.id
+      - homepage_data[:censusQuestion] = school_stats.try(:has_high_school_grades?) ? "how_many_20_hours" : "how_many_10_hours"
+      - homepage_data[:teacherName] = current_user.name
+      - homepage_data[:teacherId] = current_user.id
+      - homepage_data[:teacherEmail] = current_user.email
+      - today = Date.today
+      - month = today.month
+      - year = today.year
+      - homepage_data[:currentSchoolYear] = (month > 7) ? year : (year - 1)
   - else
     - homepage_data[:sections] = @student_sections
     - homepage_data[:isTeacher] = false
