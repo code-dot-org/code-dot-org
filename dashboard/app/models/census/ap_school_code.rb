@@ -31,7 +31,8 @@ class Census::ApSchoolCode < ApplicationRecord
       CSV.foreach(filename, {headers: true}) do |row|
         normalized_school_code = normalize_school_code(row.to_hash['school_code'])
         begin
-          school = School.find(row.to_hash['school_id'])
+          school_id = School.normalize_school_id(row.to_hash['school_id'])
+          school = School.find(school_id)
           find_or_create_by!(school_code: normalized_school_code, school: school)
         rescue ActiveRecord::RecordNotFound
           # Skip the row if we don't have the school in the DB
