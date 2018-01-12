@@ -73,7 +73,7 @@ export class SummaryTable extends React.Component {
   handleViewCohortClick = (event) => {
     event.preventDefault();
     this.context.router.push(`/${this.props.path}_cohort`);
-  }
+  };
 
   render() {
     return (
@@ -105,7 +105,7 @@ export class SummaryTable extends React.Component {
               href={this.context.router.createHref(`/${this.props.path}_cohort`)}
               onClick={this.handleViewCohortClick}
             >
-              View Accepted Cohort
+              View accepted cohort
             </Button>
           )
         }

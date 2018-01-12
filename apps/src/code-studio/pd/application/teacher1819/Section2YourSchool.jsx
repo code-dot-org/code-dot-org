@@ -1,5 +1,5 @@
 import React from 'react';
-import ApplicationFormComponent from "../ApplicationFormComponent";
+import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
@@ -11,13 +11,16 @@ import {
 } from 'react-bootstrap';
 import {styles} from './TeacherApplicationConstants';
 
-export default class Section2YourSchool extends ApplicationFormComponent {
+export default class Section2YourSchool extends LabeledFormComponent {
   static labels = PageLabels.section2YourSchool;
 
   static associatedFields = [
     ...Object.keys(PageLabels.section2YourSchool),
     "currentRole_other",
     "gradesTeaching_notTeachingExplanation",
+    "gradesTeaching_other",
+    "gradesExpectToTeach_notExpectingToTeachExplanation",
+    "gradesExpectToTeach_other",
     "subjectsTeaching_other",
     "subjectsExpectToTeach_other",
     "subjectsLicensedToTeach_other",
@@ -104,10 +107,14 @@ export default class Section2YourSchool extends ApplicationFormComponent {
         {this.checkBoxesFor("gradesAtSchool")}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("gradesTeaching", {
-          "I'm not teaching this year (please explain):" : "notTeachingExplanation"
+          "I'm not teaching this year (Please Explain):" : "notTeachingExplanation",
+          "Other (Please Explain):" : "other"
         })}
 
-        {this.checkBoxesFor("gradesExpectToTeach")}
+        {this.checkBoxesWithAdditionalTextFieldsFor("gradesExpectToTeach", {
+          "I'm not teaching next year (Please Explain):" : "notExpectingToTeachExplanation",
+          "Other (Please Explain):" : "other"
+        })}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("subjectsTeaching", {
           "Other (Please List):" : "other"

@@ -129,6 +129,12 @@ module Pd::Application
       csp
     ).index_by(&:to_sym).freeze
 
+    COURSE_NAME_MAP = {
+      csp: Pd::Workshop::COURSE_CSP,
+      csd: Pd::Workshop::COURSE_CSD,
+      csf: Pd::Workshop::COURSE_CSF
+    }
+
     belongs_to :user
     belongs_to :regional_partner
 
@@ -177,6 +183,13 @@ module Pd::Application
     # @return [String] csv text row of values, ending in a newline
     #         The order of fields must be consistent between this and #self.csv_header
     def to_csv_row
+      raise 'Abstract method must be overridden by inheriting class'
+    end
+
+    # Override in derived class to provide csv data for cohort view
+    # @return [String] csv text row of values for cohort view ending in newline
+    #         The order of fields must be consistent between this and #self.cohort_csv_header
+    def to_cohort_csv_row
       raise 'Abstract method must be overridden by inheriting class'
     end
 
@@ -253,7 +266,14 @@ module Pd::Application
     end
 
     def total_score
-      response_scores_hash.values.map {|x| x.try(:to_i)}.compact.reduce(:+)
+      numeric_scores = response_scores_hash.values.select do |score|
+        score.is_a?(Numeric) || score =~ /^\d+$/
+      end
+      numeric_scores.map(&:to_i).reduce(:+)
+    end
+
+    def course_name
+      COURSE_NAME_MAP[course.to_sym]
     end
 
     protected
