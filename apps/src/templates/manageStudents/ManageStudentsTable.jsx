@@ -16,13 +16,12 @@ export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string,
   username: PropTypes.string,
-  userType: PropTypes.string,
   age: PropTypes.number,
   gender: PropTypes.string,
   secretWords: PropTypes.string,
-  secretPictureName: PropTypes.string,
   secretPicturePath: PropTypes.string,
   sectionId: PropTypes.number,
+  loginType: PropTypes.string,
 });
 
 /** @enum {number} */
