@@ -103,4 +103,34 @@ class SchoolTest < ActiveSupport::TestCase
     school.save!
     assert_equal(true, school.high_needs?)
   end
+
+  test 'normalize_school_id works for short ids without leading zeros' do
+    normalized_id = School.normalize_school_id("123456")
+    assert_equal "123456", normalized_id
+  end
+
+  test 'normalize_school_id works for alphanumeric short ids' do
+    normalized_id = School.normalize_school_id("A00123")
+    assert_equal "A00123", normalized_id
+  end
+
+  test 'normalize_school_id works for short ids with leading zeros' do
+    normalized_id = School.normalize_school_id("000123")
+    assert_equal "000123", normalized_id
+  end
+
+  test 'normalize_school_id works for 12-character ids without leading zeros' do
+    normalized_id = School.normalize_school_id("123456789012")
+    assert_equal "123456789012", normalized_id
+  end
+
+  test 'normalize_school_id works for 12-character ids with leading zeros' do
+    normalized_id = School.normalize_school_id("012345678901")
+    assert_equal "12345678901", normalized_id
+  end
+
+  test 'normalize_school_id works for 12-character ids with leading zeros missing' do
+    normalized_id = School.normalize_school_id("12345678901")
+    assert_equal "12345678901", normalized_id
+  end
 end
