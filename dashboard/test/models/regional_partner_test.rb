@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class RegionalPartnerTest < ActiveSupport::TestCase
+  freeze_time
+
   test "regional partners initialized from tsv" do
     RegionalPartner.find_or_create_all_from_tsv('test/fixtures/regional_partners.tsv')
 
