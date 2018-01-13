@@ -638,7 +638,6 @@ FactoryGirl.define do
         first_name: 'Severus',
         preferred_first_name: 'Sevvy',
         last_name: 'Snape',
-        account_meail: 'severus@hogwarts.edu',
         alternate_email: 'ilovepotions@gmail.com',
         phone: '5558675309',
         address: '123 Fake Street',
@@ -689,6 +688,30 @@ FactoryGirl.define do
           hash['csd_terms_per_year'] = '1 quarter'
         end
       end.stringify_keys
+    end
+
+    trait :with_custom_school do
+      transient do
+        school_name 'Code.org'
+        school_address '1501 4th Ave'
+        school_city 'Seattle'
+        school_state 'Washington'
+        school_zip_code '98101'
+        school_type 'Public school'
+      end
+      after(:build) do |hash, evaluator|
+        hash.merge!(
+          {
+            school: -1,
+            school_name: evaluator.school_name,
+            school_address: evaluator.school_address,
+            school_city: evaluator.school_city,
+            school_state: evaluator.school_state,
+            school_zip_code: evaluator.school_zip_code,
+            school_type: evaluator.school_type
+          }.stringify_keys
+        )
+      end
     end
   end
 
