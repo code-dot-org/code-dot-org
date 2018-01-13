@@ -296,6 +296,13 @@ class ApiController < ApplicationController
 
   # Return a JSON summary of the user's progress across all scripts.
   def user_progress_for_all_scripts
+    # I do not believe this API is used anywhere. I would like to remove it, but
+    # as a first step, I thought I would add some logging
+    Honeybadger.notify(
+      error_message: "user_progress_for_all_scripts called",
+      error_class: "ApiController.user_progress_for_all_scripts",
+    )
+
     user = current_user
     if user
       render json: summarize_user_progress_for_all_scripts(user)
