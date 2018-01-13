@@ -26,7 +26,7 @@ export default class Odometer extends Component {
 
   render() {
     const digits = [];
-    for (let i = 1; i <= this.props.value; i *= 10) {
+    for (let i = 1; i === 1 || i <= this.props.value; i *= 10) {
       const placeValue = Math.floor(this.props.value / i);
       digits.push(
         <Motion
