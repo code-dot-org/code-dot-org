@@ -71,7 +71,7 @@
 
 .field
   = f.label :reference_link, 'Reference Links'
-  %p Add links to pages on Curriculum Builder below. They will show up in the 'Help & Tips tab below any videos and map levels.'
+  %p Add links to pages on Curriculum Builder below. They will show up in the 'Help & Tips' tab below any videos and map levels.
   %p These should be strings representing the URL on docs.code.org you want to embed, i.e. '/cs/maker_leds/index.html'
   %p Click the + sign if you want to add multiple links
   - @level.reference_links = [''] unless @level.reference_links.try(:present?)
