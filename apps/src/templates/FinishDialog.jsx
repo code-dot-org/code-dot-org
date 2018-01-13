@@ -127,14 +127,16 @@ const styles = {
   },
 };
 
+const DEFAULT_STATE = {
+  blocksCounted: false,
+  blockCountDescriptionShown: false,
+  achievementsHighlighted: 0,
+};
+
 export class UnconnectedFinishDialog extends Component {
   constructor() {
     super();
-    this.state = {
-      blocksCounted: false,
-      blockCountDescriptionShown: false,
-      achievementsHighlighted: 0,
-    };
+    this.state = DEFAULT_STATE;
   }
 
   static propTypes = {
@@ -155,6 +157,13 @@ export class UnconnectedFinishDialog extends Component {
     showFunometer: PropTypes.bool,
     canShare: PropTypes.bool,
   };
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.isOpen && !nextProps.isOpen) {
+      // Reset state when closing the dialog
+      this.setState(DEFAULT_STATE);
+    }
+  }
 
   getBubble() {
     let backgroundColor = color.white;
@@ -209,7 +218,10 @@ export class UnconnectedFinishDialog extends Component {
             styles.blockCountPass : styles.blockCountPerfect}
         >
           <span style={styles.blockCount}>
-            <Odometer value={this.props.blocksUsed} onRest={() => this.setState({blocksCounted: true})} />
+            <Odometer
+              value={this.props.blocksUsed}
+              onRest={() => this.setState({blocksCounted: true})}
+            />
             {this.props.blockLimit && ('/' + this.props.blockLimit.toString())}
           </span>
           <span style={styles.blockCountDescriptor}>
