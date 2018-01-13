@@ -2,7 +2,7 @@ var webpackConfig = require('./webpack').karmaConfig;
 var envConstants = require('./envConstants');
 var tty = require('tty');
 
-var PORT = 9876;
+var PORT = process.env.PORT || 9876;
 
 var reporters = ['mocha'];
 if (envConstants.CIRCLECI) {

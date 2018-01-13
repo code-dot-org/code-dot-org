@@ -15,17 +15,17 @@ if [ -n "$CIRCLECI" ]; then
 
   $GRUNT_CMD preconcat concat
 
-  SHELL=/bin/bash parallel -j 4 --joblog - ::: "npm run lint" \
-  "($GRUNT_CMD unitTest && ./codecov.sh -cF unit) > log/unitTest.log" \
-  "($GRUNT_CMD storybookTest && ./codecov.sh -cF storybook) > log/storybookTest.log" \
-  "($GRUNT_CMD scratchTest && ./codecov.sh -cF scratch) > log/scratchTest.log" \
-  "(LEVEL_TYPE='turtle' $GRUNT_CMD karma:integration && \
+  SHELL=/bin/bash parallel -j 4 --joblog - --delay 1 ::: "npm run lint" \
+  "(PORT=9876 $GRUNT_CMD unitTest && ./codecov.sh -cF unit) > log/unitTest.log" \
+  "(PORT=9877 $GRUNT_CMD storybookTest && ./codecov.sh -cF storybook) > log/storybookTest.log" \
+  "(PORT=9878 $GRUNT_CMD scratchTest && ./codecov.sh -cF scratch) > log/scratchTest.log" \
+  "(PORT=9879 LEVEL_TYPE='turtle' $GRUNT_CMD karma:integration && \
     ./codecov.sh -cF integration) > log/turtleTest.log" \
-  "(LEVEL_TYPE='maze|bounce|calc|eval|flappy|studio' $GRUNT_CMD karma:integration && \
+  "(PORT=9880 LEVEL_TYPE='maze|bounce|calc|eval|flappy|studio' $GRUNT_CMD karma:integration && \
     ./codecov.sh -cF integration) > log/integrationTest.log" \
-  "(LEVEL_TYPE='applab|gamelab' $GRUNT_CMD karma:integration && \
+  "(PORT=9881 LEVEL_TYPE='applab|gamelab' $GRUNT_CMD karma:integration && \
     ./codecov.sh -cF integration) > log/appLabgameLabTest.log" \
-  "(LEVEL_TYPE='craft' $GRUNT_CMD karma:integration && \
+  "(PORT=9882 LEVEL_TYPE='craft' $GRUNT_CMD karma:integration && \
     ./codecov.sh -cF integration) > log/craftTest.log"
 else
   npm run lint
