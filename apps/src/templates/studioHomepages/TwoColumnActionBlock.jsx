@@ -2,18 +2,12 @@ import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import color from "../../util/color";
 import Button from '@cdo/apps/templates/Button';
-import styleConstants from '../../styleConstants';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-const contentWidth = styleConstants['content-width'];
-
 const styles = {
-  fullWidthNonResponsive: {
-    width: contentWidth
-  },
   heading: {
-    paddingRight: 10,
+    paddingRight: 5,
     paddingTop: 10,
     paddingBottom: 20,
     fontSize: 24,
@@ -23,7 +17,7 @@ const styles = {
   },
   textItem: {
     backgroundColor: color.teal,
-    padding: 30,
+    padding: 25,
     height: 260,
     boxSizing: 'border-box'
   },
@@ -34,6 +28,10 @@ const styles = {
     lineHeight: 1.2,
     fontFamily: '"Gotham 7r", sans-serif',
     color: color.white
+  },
+  image: {
+    width: 485,
+    height: 260
   },
   description: {
     paddingRight: 10,
@@ -81,7 +79,10 @@ class UnconnectedTwoColumnActionBlock extends Component {
         <div style={styles.container}>
           {responsiveSize === 'lg' &&
             <div style={{float, width}}>
-              <img src={imageUrl}/>
+              <img
+                src={imageUrl}
+                style={styles.image}
+              />
             </div>
           }
           <div style={{float, width}}>
@@ -135,7 +136,12 @@ export class LocalClassActionBlock extends Component {
         heading={heading}
         subHeading={i18n.findLocalClassSubheading()}
         description={i18n.findLocalClassDescription()}
-        buttons={[{url: pegasus('/learn/local'), text: i18n.findLocalClassButton()}]}
+        buttons={[
+          {
+            url: pegasus('/learn/local'),
+            text: i18n.findLocalClassButton()
+          }
+        ]}
       />
     );
   }
@@ -149,35 +155,32 @@ export class AdministratorResourcesActionBlock extends Component {
         heading={i18n.administratorResourcesHeading()}
         subHeading={i18n.administratorResourcesSubheading()}
         description={i18n.administratorResourcesDescription()}
-        buttons={[{url: pegasus('/administrators'), text: i18n.yourSchoolAdminButton()}]}
+        buttons={[
+          {
+            url: pegasus('/administrators'),
+            text: i18n.yourSchoolAdminButton()
+          }
+        ]}
       />
     );
   }
 }
 
 export class SpecialAnnouncementActionBlock extends Component {
-  static propTypes = {
-    imageUrl: PropTypes.string.isRequired,
-    heading: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    buttons: PropTypes.arrayOf(PropTypes.shape({
-      url: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired
-    }))
-  };
 
   render() {
-    const { imageUrl, heading, description, buttons } = this.props;
-
     return (
-      <div style={styles.fullWidthNonResponsive}>
-        <TwoColumnActionBlock
-          imageUrl={imageUrl}
-          subHeading={heading}
-          description={description}
-          buttons={buttons}
-        />
-      </div>
+      <TwoColumnActionBlock
+        imageUrl={pegasus('/images/fill-540x289/teacher-apps.png')}
+        subHeading={i18n.specialAnnouncementHeading()}
+        description={i18n.specialAnnouncementDescription()}
+        buttons={[
+          {
+            url: pegasus('/educate/professional-learning'),
+            text: i18n.learnMore()
+          },
+        ]}
+      />
     );
   }
 }
