@@ -118,11 +118,6 @@ Lint/ShadowedArgument:
 Lint/UnneededDisable:
   Enabled: false
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Lint/UnneededRequireStatement:
-  Enabled: false
-
 # Offense count: 70
 # Cop supports --auto-correct.
 # Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods.
