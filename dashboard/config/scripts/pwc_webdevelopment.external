@@ -1,0 +1,15 @@
+name 'pwc_webdevelopment'
+display_name 'Introduction'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Web Development - Creating Webpages with Khan Academy
+
+In this lesson, students head over to Khan Academy to learn the basics of creating webpages using HTML and CSS. 
+
+* [Creating Webpages tutorial](https://www.khanacademy.org/computing/hour-of-code/hour-of-html)
+
+---
+## For the PwC Facilitator
+[Click here for the Facilitator Guide](https://curriculum.code.org/pwc/ayp/5) for this lesson. The Facilitator Guide contains detailed activity and discussion guidance.
+MARKDOWN

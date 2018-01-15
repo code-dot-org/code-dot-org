@@ -10,6 +10,7 @@
       "pinMode": null,
       "digitalWrite": null,
       "var myLed = createLed": null,
+      "var myButton = createButton": null,
       "led.on": null,
       "led.off": null,
       "led.blink": null,
@@ -18,7 +19,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
-    "start_blocks": "// Create two new LEDs\r\nvar myLed = createLed(2);\r\n\r\n// Blink both LEDs\r\nmyLed.blink(500);\r\n",
+    "start_blocks": "// Create a button attached to pin 2\r\nvar myButton = createButton(2);\r\n\r\n// Buzz when the button goes down\r\nonBoardEvent(myButton, \"down\", function() {\r\n  buzzer.frequency(500, 100);\r\n});\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -54,13 +55,15 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "markdown_instructions": "# Wiring Multiple LEDs\r\n\r\nUsing the `createLed()` block you can connect and control as many LEDs as your board has room for. Each LED needs to be connected to a separate numbered pin, but they can all share the same ground pin.\r\n\r\n# Do This\r\n\r\nLeave the current LED connected to pin 2, but add another one to a numbered pin of your choice. For your new LED:\r\n\r\n* Add a `var myLed = createLed()` block.\r\n* Replace the variable label `myLed` with a unique label.\r\n* Make sure you're in text mode, not block mode.\r\n* Add an `led.blink()` command.\r\n* Replace the text `led` with your new LED variable.\r\n* Test your code.\r\n\r\n_Challenge: Try adding a third LED and make all three LED blink at different intervals._",
+    "markdown_instructions": "# Make Your Own Buttons\r\n\r\nSimilar to LEDs, buttons are a really simple circuit that you can add to your board pretty easily. Like LEDs, buttons should be wired from a numbered pin to a ground pin, but unlike LEDs, a button circuit should be disconnected in the middle. When you connect the circuit, it will produce a button press event.\r\n\r\n# Do This\r\n\r\nDisconnect any circuits you've already wired, and get two wires ready.\r\n\r\n* Connect one wire to pin 2.\r\n* Connect the second wire to a ground pin.\r\n* Run the provided code.\r\n* With the program running, touch the unconnected ends of both wires together to \"press\" the button.\r\n\r\n_Tip: A button circuit can be made with many different kinds of materials, as long as they are electrically conductive. Try making buttons with foil, silverware, or paper clips._",
     "text_mode_at_start": "true",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-05 20:35:24 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:51:32 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_view_data_button\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:53:36 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-06 01:06:27 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-12 20:06:31 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-01-05 20:35:24 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:51:32 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_view_data_button\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:53:36 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-06 01:06:27 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-12 20:06:31 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-12 23:23:26 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

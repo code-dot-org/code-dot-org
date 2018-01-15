@@ -19,13 +19,12 @@
       "declareNoAssign_x": null,
       "assign_x": null,
       "console.log": null,
-      "onBoardEvent": null
+      "onBoardEvent": null,
+      "setProperty": null,
+      "getProperty": null,
+      "setScreen": null
     },
     "edit_code": true,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -62,11 +61,17 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true"
+    "makerlab_enabled": "true",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: block;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><img data-canonical-image-url=\"icon://fa-plane\" data-object-fit=\"contain\" id=\"plane\" style=\"height: 100px; width: 100px; position: absolute; left: 10px; top: 335px; margin: 0px;\" data-icon-color=\"#490764\"><label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 210px; height: 85px; position: absolute; left: 35px; top: 10px; font-size: 20px; text-align: center;\" id=\"instructions\">Shake the plane into flight!</label></div></div>",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "markdown_instructions": "# Shaking Things Up\r\n\r\nThe accelerometer also has a `shake` event. As the name suggests, you trigger it by shaking the board. \r\n\r\n# Do This\r\n\r\nThe airplane needs to be shaken in order to take off.\r\n\r\n* Add code to make"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-12 23:11:51 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-12 23:11:51 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-12 23:26:16 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-12 23:26:54 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-12 23:28:45 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-12 23:47:56 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
