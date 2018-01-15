@@ -10,8 +10,12 @@ theme: responsive
   }
 </style>
 
-# K-12 Code.org Professional Learning#
+# Professional Learning#
 
+<%= view :three_circles, circles: [
+{img: '/images/testimonials/fit-150/twoteachers.jpg', text: '"I do not have a computer science background. I would change nothing about the training. It was an incredible experience, and I felt valued and respected."'},
+{img: '/images/testimonials/fit-150/teacher-renee.jpg', text: '"I would absolutely recommend anything Code.org has to offer to any teacher. Period. The lesson plans are incredible."'},
+{img: '/images/testimonials/fit-150/teacher-juan.jpg', text: '"It was absolutely rich and the most meaningful training I have ever attended in 16 years of teaching."'}] %>
 
 
 ## New to computer science? No worries.
@@ -21,6 +25,7 @@ Code.org offers hands-on workshops and online support at no charge. Over 72,000 
 ## Professional Learning Program Offerings
 Select the grade level below to learn more about our programs. Have questions about which program is for you? Learn more about [implementation options](/files/PL-Program-for-Me.pdf) or contact us at [teacher@code.org](mailto: teacher@code.org):
 <br>
+<br/>
 
 <details>
  <summary style="font-size: 20px; color: #7665a0;">**Elementary School Professional Learning**</summary>
@@ -42,7 +47,7 @@ Select the grade level below to learn more about our programs. Have questions ab
 </details>
 
 <details>
-<summary>**Middle School Professional Learning** - *Applications for 2018 Just Opened!*<img src="/images/professional-learning/plane.png" width="4%"/></summary>
+<summary style="font-size: 20px; color: #7665a0;">**Middle School Professional Learning** - *Applications for 2018 Just Opened!*<img src="/images/professional-learning/plane.png" width="3%"/></summary>
  <p>
 
 * You don't need any prior computer science experience to get started
@@ -60,7 +65,7 @@ Select the grade level below to learn more about our programs. Have questions ab
 
 
 <details>
-<summary>**High School Professional Learning** - *Applications for 2018 Just Opened!*<img src="/images/professional-learning/plane.png" width="4%"/></summary>
+<summary style="font-size: 20px; color: #7665a0;">**High School Professional Learning** - *Applications for 2018 Just Opened!*<img src="/images/professional-learning/plane.png" width="3%"/></summary>
 <p> 
 
 
@@ -82,7 +87,7 @@ Select the grade level below to learn more about our programs. Have questions ab
 </details>
 
 <details>
-<summary>**International Professional Learning**</summary>
+<summary style="font-size: 20px; color: #7665a0;">**International Professional Learning**</summary>
 <p>
 Teachers anywhere in the world can use our free, self-paced [online workshop](https://studio.code.org/s/K5-onlinePD) to get started. The intended audience for this online workshop is primary school teachers.
 
@@ -100,10 +105,6 @@ You can also contact our [international partners](https://hourofcode.com/interna
 98% of attendees would recommend our program to another teacher.
 The majority of our workshop attendees rank it the **best professional development ever.**
 
-<%= view :three_circles, circles: [
-{img: '/images/testimonials/fit-150/twoteachers.jpg', text: '"I do not have a computer science background. I would change nothing about the training. It was an incredible experience, and I felt valued and respected."'},
-{img: '/images/testimonials/fit-150/teacher-renee.jpg', text: '"I would absolutely recommend anything Code.org has to offer to any teacher. Period. The lesson plans are incredible."'},
-{img: '/images/testimonials/fit-150/teacher-juan.jpg', text: '"It was absolutely rich and the most meaningful training I have ever attended in 16 years of teaching."'}] %>
 
 <br>
 
