@@ -905,6 +905,9 @@
     hide_survey_last_answer: Cette enquête est anonyme. Veuillez consulter le tableau
       de bord de l'enseignant pour des résultats agrégés.  Notez que les résultats
       ne sont visibles que si au moins cinq élèves ont répondu à l’enquête.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Merci
     wrong_body: Merci d'avoir envoyé des réponses.

@@ -693,6 +693,7 @@
         C4_unplugged_forloops: '"მიზნისთვის" ციკლები'
         C4_unplugged_parameters: "სიმღერის დაწერა პარამეტრების გამოყენებით"
         C4_unplugged_binary: "ორობითი"
+        CSF_a_b_artist_loops: "ციკლები მხატვარში"
         CSF_artist_angles: "კუთხეები მხარვარში"
         CSF_collector_k1_blocks: "კომპიუტერული მეცნიერების საფუძვლები: შემგროვებელი"
         CSF_collector_repeat_loops: "შემგროვებლის გამეორების ციკლები"

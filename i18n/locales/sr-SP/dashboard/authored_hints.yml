@@ -2,77 +2,74 @@ sr:
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right 90 degrees` block.
+        2-3_Artist_1_new_a: Ако ме блокираш да би ме ухватио ”настави напред за 100 пиксела”, аутоматски ћу нацртати линију.
+        2-3_Artist_1_new_b: Проблеми са скретањем? Користи ”скрени десно за 90 степени”, блокирај.
       2-3 Artist 11_authored_hint:
-        2-3_Artist_11_a: 'Having trouble with the angles? You need to go 360 degrees in 8 turns.  What is 360/8? '
+        2-3_Artist_11_a: 'Имаш проблема са угловима? Треба ти 360 степени у 8 кругова. Колико је 360/8? '
       2-3 Artist 12_authored_hint:
-        2-3_Artist_12_a: There are 360 degrees in a circle, so if the artist turns 1 degree each time through the loop, he'll need to go through 360 times.
+        2-3_Artist_12_a: Круг има 360 степени, ако се уметник креће за 1степен по кругу, треба да се помера 360 пута да би га описао.
       2-3 Artist 2 new_authored_hint:
-        2-3_Artist_2_new_a: The artist doesn't seem to be pointing in the correct direction. Can you make them turn first before drawing the line?
+        2-3_Artist_2_new_a: Изгледа да уметник није окренут у како треба. Можеш ли га окренути пре него што почне да црта линију?
       2-3 Artist 3new_authored_hint:
-        2-3_Artist_3new_a: What is 100-70?  Based on the story problem, that's how tall the hat needs to be!
-        2-3_Artist_3new_b: The artist doesn't seem to be pointing in the correct direction. Can you make them turn first before drawing the line?
+        2-3_Artist_3new_a: Колико је 100-70? На основу приче то је висина шешира!
+        2-3_Artist_3new_b: Изгледа да уметник није окренут у како треба. Можеш ли га окренути пре него што почне да црта линију?
       2-3 Artist 4_authored_hint:
-        2-3_Artist_4_a: To finish the house, all we need to do is draw a square!
+        2-3_Artist_4_a: Да би завршили кућу, све што треба је да нацртамо квадрат!
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each time than you did with the square.   '
-        2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start by moving forward, then make left turns to create the triangle.
-        2-3_Artist_6_c: Each side of the triangle is the same length as each side of the square...100 pixels!
+        2-3_Artist_6_a: 'Да би направили мале углове треба да укључимо *даље* сваки пут пре него што то урадимо са квадратом.   '
+        2-3_Artist_6_b: Кад сам већ окренут на десно, лакше је да ме помериш напред и после на лево као да формираш тоугао.
+        2-3_Artist_6_c: Свака страница троугла је исте дужине као страница квадрата....100 пиксела!
       2-3 Artist 7_authored_hint:
-        2-3_Artist_7_a: The easiest way to solve this puzzle is to draw the first square and end with the artist pointing down before starting your second square.
+        2-3_Artist_7_a: Најлакши начин да решиш ови слагалицу је да прво нацрташ квадарат и на крају са уметником који креће према доле започети следећи.
       2-3 Artist 8_authored_hint:
-        2-3_Artist_8_a: If you cut 200 in half, how many pixels wide does each square need to be?
+        2-3_Artist_8_a: Ако преполовиш 200 на пола, колико пиксела дуга треба да буде страница сваког квадрата?
       2-3 Artist 9 NEW_authored_hint:
-        2-3_Artist_9_a: This diamond is really just a square on its side
+        2-3_Artist_9_a: Овај дијамант је уствари само квадрат са сваке своје стране
       2-3 Artist 9 REPLACEMENT_authored_hint:
-        step_size: Each step is 100 pixels wide and 100 pixels high.
+        step_size: Сваки корак је дугачак 100 пиксела и висок исто толико.
       2-3 Artist 9_authored_hint:
-        2-3_Artist_9_a: This diamond is really just a square turned 45 degrees.
+        2-3_Artist_9_a: Овај дијамант је квадрат окренут за 45 степени.
         2-3_Artist_9_b: |-
-          Don't forget to turn the artist left by 45 degrees before you start drawing your square!
-          
-          ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
+          Не заборави да окренеш уметника за 45 степени улево пре него почнеш да црташ квадрат (https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
-        2-3_Artist_Debugging_10_a: Remember, you want the control panel 10 pixels *wider*...so be sure to **add** 10 to whatever number you change.
-        2-3_Artist_Debugging_10_b: "**Trial and error is perfectly fine here!**  \n\nStart by changing one number at a time.   \n\nWhich numbers do what?  \n\nIf you get too lost, just click \"Start over\" and your code will be reset."
+        2-3_Artist_Debugging_10_a: Запамти, желиш да контролна табла буде 10 пиксела *шира*....тако да треба да будеш сигуран да си **додао** 10 било којем броју који треба да промениш.
+        2-3_Artist_Debugging_10_b: "**Покушаји и грешке се овде очекују!**\nПочни тако што ћеш мењати сваки пут по један број. \nКоји број има коју улогу?\nАко се изгубиш, једноставно притисни ”Почни поново” и твоје програмирање ће бити поново учитано."
       2-3 Artist Debugging 2_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Each whisker is 75 pixels long.'
+        2-3_Artist_Debugging_2_a: 'Савет: Сваки реп - брк је дугачак 75 пиксела.'
       2-3 Artist Debugging 3_authored_hint:
-        2-3_Artist_Debugging_3_a: One of the turns is 15 degrees too small.
-        2-3_Artist_Debugging_3_b: If the program runs too fast to see what's happening, try slowing it down with the slider.
+        2-3_Artist_Debugging_3_a: Један од кругоца је 15 степени мањи.
+        2-3_Artist_Debugging_3_b: Ако програм почне да се учитава пребрзо, пробај да га успориш курсором.
       2-3 Artist Debugging 7_authored_hint:
-        2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump backward after he draws the first line?
+        2-3_Artist_Debugging_7_a: Шта се дешава ако уметника треба да помериш или пребациш пошто је нацртао прву линију?
       2-3 Artist Debugging 8_authored_hint:
         2-3_Artist_Debugging_8_a: |-
-          How many times did my shape repeat?
-          
-          How many times *should* the shape repeat?
-          
-          Where can you change that in the program?
+          Колико се пута понавља мој облик?
+          Колико пута би требало да се понови?
+          Где би то могло да се промени у твом програму?
       2-3 Artist Debugging 9_authored_hint:
-        2-3_Artist_Debugging_9_a: The artist needs to turn 60 degrees farther left before starting to draw!
-        2-3_Artist_Debugging_9_b: You don't need to add another block to get the full turn, just add 60 degrees to the `turn left` block that's already there!
+        2-3_Artist_Debugging_9_a: Уметник треба да се окрене за 60 степени улево пре него што почне да слика!
+        2-3_Artist_Debugging_9_b: Не треба да уносиш нови део програма да би направио пун круг, само унеси 60 степени код 'скрени лево' део програма који ти треба је већ тамо!
       2-3 Artist Functions 1_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
-        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your glasses.
+        2-3_Artist_Functions_1_a: Сваки квадрат има страницу 100 пиксела, што значи да треба да кренеш напред 175 пиксела пре него нацрташ свој следећи квадрат.
+        2-3_Artist_Functions_1_b: Сасвим је у реду да понављаш кружне линије да би направио наочаре.
       2-3 Artist Functions 11_authored_hint:
-        2-3_Artist_Functions_11_a: You will need to change not only the number and length of sides within the function, but also the angle the artist turns between each side.
+        2-3_Artist_Functions_11_a: Треба не само да промениш број и дужину страница у функцији, него и углове међу којима се уметник креће док је између њих.
       2-3 Artist Functions 12_authored_hint:
-        2-3_Artist_Functions_12_a: Try running the code first to see what you need to add.
+        2-3_Artist_Functions_12_a: Покушај да учиташ програм и да видиш шта прво треба да додаш.
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Твој програм треба да:
+          - Користи функцију
+          - Помери напред за 100 + 75 пиксела
+          - Користи функцију
       2-3 Artist Functions 3_authored_hint:
-        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+        2-3_Artist_Functions_3_a: "*115 + 45 = 160**"
       2-3 Artist Functions 4_authored_hint:
-        2-3_Artist_Functions_4_a: The artist needs to turn 120 degrees between each square to complete this design.
+        2-3_Artist_Functions_4_a: Уметник треба да направи испуни 120 степени између сваког квадрата пре него заврши цртеж.
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
-          Remember that the code from the last puzzle was:
+          Запамти да је тај део програма из задњег дела слагалице: 
+          
           
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -114,19 +111,19 @@ sr:
           </next>
           </block>
           </xml>
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code inside the loop.
+        2-3_Artist_Loops_New_11_b: Следећи нови ред треба да је *крај* петље програма.
       2-3 Artist Loops New 12_authored_hint:
-        2-3_Artist Loops_New_12_a: Before starting the diamond, the artist needs to turn left by 60 degrees to get on the right path.
-        2-3_Artist Loops_New_12_b: After the artist goes forward 100 pixels, he will need to turn right 120 degrees to make the sharp corner.
-        2-3_Artist Loops_New_12_c: The artist will need to turn right only 60 degrees to create a wide corner.
+        2-3_Artist Loops_New_12_a: Пре дијаматнта, уметник треба да скрене лево за 60 степени и да настави право.
+        2-3_Artist Loops_New_12_b: Пошто уметник крене напред 100 пиксела, треба да скрене десно 120 степени и направи оштар угао.
+        2-3_Artist Loops_New_12_c: Уметник мора да скрене десно само за 60 степени да би направио туп угао.
       2-3 Artist Loops New 13_authored_hint:
-        2-3_Artist_Loops_New_13_a: "At the end of each diamond, the artist is already facing the right direction to start the next one.  \n\nBecause of this, we don't need to add an extra `turn left by` block before we start again."
-        2-3_Artist_Loops_New_13_b: "To make each diamond, the artist needs to:   \n- move\n- turn right 120 degrees\n- move\n- turn right 60 degrees  \n\nThen do it all again!"
+        2-3_Artist_Loops_New_13_a: "На крају сваког дијамата, уметник је већ окренут у правом смеру да започне следећи.\nЗато није потребно додати још једном ’скрени лево од’ пре него почне поново."
+        2-3_Artist_Loops_New_13_b: "Да би направио сваки дијамант, уметник мора да:\n- крене\n- скрене десно 120 степени\n- крене\n- скрене десно 60\n\nПосле да понови све!"
       2-3 Artist Loops New 9_authored_hint:
-        2-3_Artist_Loops_New_9_a: The artist needs to turn 45 degrees to the right before he starts drawing.
-        2-3_Artist_Loops_New_9_b: This V is really just half of a square.  What would the code be to draw half of a square?
+        2-3_Artist_Loops_New_9_a: Уметник мора да скрене 45 степени улево пре него почне да црта.
+        2-3_Artist_Loops_New_9_b: Ово V је само половина квадрата. Какав би програм написали за пола квадрата?
       2-3 Artist Nested Loops 1_authored_hint:
-        2-3_Artist_Nested_Loops_1_a: Remember to put all of the grey blocks inside of your loop.
+        2-3_Artist_Nested_Loops_1_a: Не заборави да све сиве потпрограме ставиш унутар петље.
       2-3 Artist Nested Loops 3_authored_hint:
         2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
         2-3_Artist_Nested_Loops_3_b: Remember to put all of the grey code and your turn block inside of a loop.
@@ -3449,6 +3446,8 @@ sr:
           </next>
           </block>
           </xml>
+      CourseF_PlayLab_vars2_authored_hint:
+        Course_4_Play_Lab_Vars_2_a: Make sure to set the number for `dog_speed` to something larger than `cat_speed`.
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           This is the first hint.
@@ -5118,6 +5117,13 @@ sr:
           Remember you can put more than one block in a <xml><block type="controls_repeat">
           <title name="TIMES">???</title>
           </block></xml> loop.
+      courseA_artist_loops7_forVideo_authored_hint:
+        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
+        courseA_artist_loops7_b: Write the code for one wave first, then repeat that to draw the other two.
+        courseA_artist_loops7_c: |-
+          Remember you can put more than one block in a <xml><block type="controls_repeat">
+          <title name="TIMES">???</title>
+          </block></xml> loop.
       courseA_artist_loops8_authored_hint:
         courseA_artist_loops8_a: Try running the code to see what has been written for you.
         courseA_artist_loops8_b: How would you loop the code that has been given to you?
@@ -5131,6 +5137,10 @@ sr:
         courseA_artist_loops_challenge2_a: Blocks like this <xml>  <block type="simple_move_up_left"/></xml> will let your artist move at a slant!
         courseA_artist_loops_challenge2_b: When you finish one bird house, `jump` to the next!
         courseA_artist_loops_challenge2_c: You will need a LOT of blocks inside the loop for this challenge.
+      courseA_artist_loops_challenge2a_authored_hint:
+        courseA_artist_loops_challenge2_a: Blocks like this <xml>  <block type="simple_move_up_left"/></xml> will let your artist move at a slant!
+        courseA_artist_loops_challenge2_b: When you finish one tent, `jump` up twice to get to the next!
+        courseA_artist_loops_challenge2_c: All of your blocks will need to be inside of a loop to finish this puzzle.
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: You can use `jump` blocks to move to other spaces.
       courseA_collector_loops1_authored_hint:
@@ -5606,6 +5616,10 @@ sr:
           </next>
           </block>
           </xml>
+      courseB_collector_loops_challenge2a_authored_hint:
+        courseB_collector_loops_challenge2a_a: If something goes wrong, try debugging it. Don't give up!
+        courseB_collector_loops_challenge2a_b: Look at this option for getting through the maze. Do you see a pattern that you can repeat?
+        courseB_collector_loops_challenge2a_c: To collect all of the treasure, you will either need to add two  <xml> <block type="collector_collect"/></xml> blocks inside your loop, or put the block inside of its own `repeat` block.
       courseB_collector_loops_challenge`_authored_hint:
         courseA_collector_loops_challenge2_b: |+
           You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.
@@ -6184,8 +6198,10 @@ sr:
         courseC_artist_prog_challenge1_a: You can draw this as a rectangle with a line in the middle or two different squares!
       courseC_artist_prog_challenge2_authored_hint:
         courseC_artist_prog_challenge2_a: "You can put commands inside `repeat` block to loop them over and over. Try it!\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
+      courseC_artist_prog_challenge2a_authored_hint:
+        courseC_artist_prog_challenge2_a: After you draw the first line, try turning left before you draw your second line.
+        courseC_artist_prog_challenge2_b: After you draw the second line, try turning right before you draw your third line.
       courseC_collector_loops_challenge2_authored_hint:
-        courseC_maze_loops_challenge2_a: The original code would work great - if there was only one piece of treasure in each pile!
         courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect` blocks!
       courseC_collector_prog1_authored_hint:
         courseC_collector_prog1_a: When you are standing on a space with treasure, use the <xml><block type="collector_collect"/></xml> block to pick it up.
@@ -6220,7 +6236,8 @@ sr:
       courseC_collector_prog_challenge1_authored_hint:
         courseC_collector_prog_challenge1_a: You can use the `collect` command more often to collect the extra treasure.
       courseC_collector_prog_challenge2_authored_hint:
-        courseC_collector_prog_challenge1_a: You can use the `collect` command more often to collect the extra treasure.
+        courseC_collector_prog_challenge1_a: You can use more than one `collect` block to collect more than one time at each piece of treasure.
+        courseC_collector_prog_challenge1_b: Lost your way?  Try this path to solve the puzzle!
       courseC_external_events_authored_hint: [ ]
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
@@ -6273,6 +6290,36 @@ sr:
         courseC_harvester_loops8_b: If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.
       courseC_harvester_loops9_authored_hint: [ ]
       courseC_harvester_loops_challenge1_authored_hint:
+        courseC_harvester_loops_challenge1_a: This is too hard without loops!
+        courseC_harvester_loops_challenge1_b: You can repeat `move forward` and `pick corn` as many times as you need, then turn right at each corner.
+        courseC_harvester_loops_challenge1_c: |-
+          The best way to collect the first four corn uses a `repeat` block inside of another `repeat` block. You can use this pattern for the rest of the puzzle too!
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></next></block></xml>
+      courseC_harvester_loops_challenge1a_authored_hint:
         courseC_harvester_loops_challenge1_a: This is too hard without loops!
         courseC_harvester_loops_challenge1_b: You can repeat `move forward` and `pick corn` as many times as you need, then turn right at each corner.
         courseC_harvester_loops_challenge1_c: |-
@@ -6373,8 +6420,7 @@ sr:
         courseC_maze_debugging_challenge1_b: Scrat's path is the shape of a rectangle! He needs to turn the same way each time!
         courseC_maze_debugging_challenge1_c: If you are getting stuck, you can always start over, or remove all the code and find your own way!
       courseC_maze_debugging_challenge2_authored_hint:
-        courseC_maze_debugging_challenge2_a: One way to solve this is to add more steps forward in between the turns.
-        courseC_maze_debugging_challenge2_b: If you are getting stuck, you can always start over or remove all the code and find your own way!
+        courseC_maze_debugging_challenge2_b: If you are getting stuck, try debugging the code.  Where does it go wrong?
         courseC_maze_debugging_challenge2_c: |-
           There are two different paths you can follow just moving forward, and turning four times. If you find a way to use a loop, there may be even more!
           
@@ -6413,6 +6459,9 @@ sr:
       courseC_maze_loops_challenge1_authored_hint:
         courseC_maze_loops_challenge1_a: Think about this path as being three different pieces. Each one has a pattern you can repeat.
         courseC_maze_loops_challenge1_b: In between each `repeat` block, you will need to `turn left` or `turn right` to get ready Scrat for the next pattern.
+      courseC_maze_loops_challenge1a_authored_hint:
+        courseC_maze_loops_challenge1_a: Think about this path as being two different pieces. Each one has a pattern you can repeat.
+        courseC_maze_loops_challenge1_b: Can you remember how to use loops to repeat a staircase pattern?
       courseC_maze_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_a: The original code would work great - if there was only one piece of treasure in each pile!
         courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect` blocks!
@@ -6546,8 +6595,8 @@ sr:
         courseD_artist_binary8_a: The spiral can be confusing sometimes. Isolate each horizontal line in your mind as you create this design.
         courseD_artist_binary8_b: Try running the code first to see what you have to work with.
         courseD_artist_binary8_c: Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you haven't solved the puzzle yet.
-      courseD_artist_binaryFP_authored_hint:
-        courseD_artist_binaryFP_a: Run this code to see what happens!
+      courseD_artist_binaryFP_authored_hint: [ ]
+      courseD_artist_binaryFP8_authored_hint: [ ]
       courseD_artist_binary_challenge2_authored_hint:
         courseD_artist_binary_challenge2_a: There are only few lines wrong in the original program.
       courseD_artist_binary_challenge3_authored_hint:
@@ -6562,10 +6611,10 @@ sr:
         courseD_artist_functions10_a: To get around using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Твој програм треба да:
+          - Користи функцију
+          - Помери напред за 100 + 75 пиксела
+          - Користи функцију
       courseD_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -6680,15 +6729,10 @@ sr:
           This image was made using a single nested loop that repeats a pentagon (with 50px sides) 15 times using a 48 degree turn.
       courseD_artist_nestedLoopsPre1_authored_hint: [ ]
       courseD_artist_nestedLoops_challenge1_authored_hint:
-        courseD_artist_nestedLoops_challenge1_a: Start by making a nested loop to create four octagons. Turn 45 degrees to make the octagon. Jump, then turn 90 degrees after each one.
-        courseD_artist_nestedLoops_challenge1_b: Add code to draw a triangle inside of your nested loop. Use 120 degree turns for your triangle.
-        courseD_artist_nestedLoops_challenge1_c: |-
-          Use a nested loop:
-          - Repeat 4 times
-          - draw an octagon
-          - draw a triangle
-          - jump forward 50 pixels
-          - turn right by 90 degrees
+        courseD_artist_nestedLoops_challenge1_a: Start by changing the color to blue, then create an octagon with 50 pixel sides and 45 degree left turns.
+        courseD_artist_nestedLoops_challenge1_b: Add the code to change the color to green, and make a triangle with 50 pixel sides and 120 degree left turns.
+        courseD_artist_nestedLoops_challenge1_c: After you've drawn both shapes, you will need to jump forward by 50 pixels before you turn right by 90 degrees.
+        courseD_artist_nestedLoops_challenge1_d: Put all of your code inside of a `repeat 4 times` loop to finish it off.
       courseD_artist_nestedLoops_challenge2_authored_hint:
         courseD_artist_nestedLoops_challenge2_a: To draw a regular octagon, the artist needs to turn 45 degrees 8 times.
         courseD_artist_nestedLoops_challenge2_b: To draw a square, the artist needs to turn 90 degrees 4 times.
@@ -6900,6 +6944,16 @@ sr:
           * Repeat 2 times:
           * Move forward
           * Make 3 honey
+          * Move backward
+      courseD_bee_debugging_challenge1a_authored_hint:
+        courseD_bee_debugging_challenge1_a: Why does the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?
+        courseD_bee_debugging_challenge1_b: 'To solve this puzzle, have the bee follow the same pattern to make honey that he does when collecting nectar. '
+        courseD_bee_debugging_challenge1_c: |-
+          After the bee makes it to the bottom row, have it repeat these commands:
+          
+          * Repeat 2 times:
+          * Move forward
+          * Make honey
           * Move backward
       courseD_bee_debugging_challenge2_authored_hint:
         courseD_bee_debugging_challenge1_a: Why the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?
@@ -7212,6 +7266,9 @@ sr:
           </next>
           </block>
           </xml>
+      courseD_collector_nested_loops_challenge2a_authored_hint:
+        courseD_collector_nested_loops_challenge2a_a: Don't forget that you can `repeat` a single command or a longer pattern. You can even `repeat` a `repeat` block!
+        courseD_collector_nested_loops_challenge2a_b: Can you figure out how to get all four gems without using any more blocks than it takes to get two?
       courseD_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
           Instead of using four `move forward` blocks for each side, try putting one `move forward` block inside of a `repeat` loop, like this:
@@ -7391,7 +7448,9 @@ sr:
       courseD_harvester_nested_loops_challenge1-broken_authored_hint:
         courseD_harvester_nested_loops_challenge1_a: You have probably already used a loop to create a zig-zag pattern. If you remember that algorithm, you can make a few additions to it here.
       courseD_harvester_nested_loops_challenge1_authored_hint:
-        courseD_harvester_nested_loops_challenge1_a: You have probably already used a loop to create a zig-zag pattern. If you remember that algorithm, you can make a few additions to it here.
+        courseD_harvester_nested_loops_challenge1_a: 'Try following this path to reach all of the corn! '
+        courseD_harvester_nested_loops_challenge1_b: To collect more than one piece of corn, you need to use `pick corn` more than one time.
+        courseD_harvester_nested_loops_challenge1_c: You will need to put a small loop inside of your main loop to solve this puzzle!
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: Don't forget that you can `repeat` a single command or a longer pattern. You can even `repeat` a `repeat` block!
         courseD_bee_nested_loops_challenge1_b: To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the *entire* cave!
@@ -7580,8 +7639,8 @@ sr:
           </block></xml>
       courseE_artist_embed_functions8_authored_hint: [ ]
       courseE_artist_functions1_authored_hint:
-        courseE_artist_functions1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
-        courseE_artist_functions1_b: It is okay to draw overlapping lines to make your glasses.
+        courseE_artist_functions1_a: Сваки квадрат има страницу 100 пиксела, што значи да треба да кренеш напред 175 пиксела пре него нацрташ свој следећи квадрат.
+        courseE_artist_functions1_b: Сасвим је у реду да понављаш кружне линије да би направио наочаре.
         courseE_artist_functions1_c: For shorter code, try using a `repeat` loop to draw the square frames of the glasses.
       courseE_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except the function draws a different kind of line.
@@ -7596,10 +7655,10 @@ sr:
           Use the green `draw a square` block to "call" your function under the `when run` block. Otherwise, the code in your function will not run.
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Твој програм треба да:
+          - Користи функцију
+          - Помери напред за 100 + 75 пиксела
+          - Користи функцију
       courseE_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -9986,8 +10045,8 @@ sr:
       grade2_CaringForNewPet_7D_authored_hint:
         grade2_CaringForNewPet_7D_a: Don't forget to use the "Step" button to go through block by block and look for errors.
       grade2_MakeDogTag_1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right 90 degrees` block.
+        2-3_Artist_1_new_a: Ако ме блокираш да би ме ухватио ”настави напред за 100 пиксела”, аутоматски ћу нацртати линију.
+        2-3_Artist_1_new_b: Проблеми са скретањем? Користи ”скрени десно за 90 степени”, блокирај.
       grade2_MakeDogTag_2_authored_hint:
         2-3_Artist_2_new_a: To create this window, just draw a square with 100 pixel sides.
       grade2_MakeDogTag_3_authored_hint:
@@ -10007,15 +10066,13 @@ sr:
           Remember that the code from the last puzzle was:
           
           ![](https://images.code.org/e5c7492f509dd41efe2888c7e7895c28-image-1461177002636.29.02.png)
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code inside the loop.
+        2-3_Artist_Loops_New_11_b: Следећи нови ред треба да је *крај* петље програма.
       grade2_MakeDogTag_BFP_authored_hint: [ ]
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
-          How many times did my shape repeat?
-          
-          How many times *should* the shape repeat?
-          
-          Where can you change that in the program?
+          Колико се пута понавља мој облик?
+          Колико пута би требало да се понови?
+          Где би то могло да се промени у твом програму?
       grade2_PuppyLoops_3_authored_hint:
         hint1: This puzzle is very similar to the last one.
         hint2: Use a `repeat 5 times` block to create the loop.
@@ -10029,9 +10086,9 @@ sr:
         2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
         2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over` to get it back!
       grade2_PuppyLoops_8_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Each whisker is 75 pixels long.'
+        2-3_Artist_Debugging_2_a: 'Савет: Сваки реп - брк је дугачак 75 пиксела.'
       grade2_PuppyLoops_9_authored_hint:
-        2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump backward after he draws the first line?
+        2-3_Artist_Debugging_7_a: Шта се дешава ако уметника треба да помериш или пребациш пошто је нацртао прву линију?
       grade2_collector_2_authored_hint:
         hint1: You can use four `move forward` blocks or use the `repeat 4 times` block to make your program shorter.
       grade2_collector_A_authored_hint: [ ]
@@ -10268,14 +10325,14 @@ sr:
       grade4_arist_nested_loop_triangles6_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       grade4_artist_functions1_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
-        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your glasses.
+        2-3_Artist_Functions_1_a: Сваки квадрат има страницу 100 пиксела, што значи да треба да кренеш напред 175 пиксела пре него нацрташ свој следећи квадрат.
+        2-3_Artist_Functions_1_b: Сасвим је у реду да понављаш кружне линије да би направио наочаре.
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Твој програм треба да:
+          - Користи функцију
+          - Помери напред за 100 + 75 пиксела
+          - Користи функцију
       grade4_artist_functions2a_authored_hint:
         grade4_artist_functions2a_a: To get around using multiple `move forward` blocks, create a `draw triangle` function and call that multiple times.
       grade4_artist_functions3a_authored_hint:
@@ -10409,12 +10466,12 @@ sr:
       grade4_bee_nestedLoops5_authored_hint:
         grade4_bee_nestedLoops5_a: You will need 4 repeat blocks!
       grade4_review_artist1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right 90 degrees` block.
+        2-3_Artist_1_new_a: Ако ме блокираш да би ме ухватио ”настави напред за 100 пиксела”, аутоматски ћу нацртати линију.
+        2-3_Artist_1_new_b: Проблеми са скретањем? Користи ”скрени десно за 90 степени”, блокирај.
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each time than you did with the square.   '
-        2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start by moving forward, then make left turns to create the triangle.
-        2-3_Artist_6_c: Each side of the triangle is the same length as each side of the square...100 pixels!
+        2-3_Artist_6_a: 'Да би направили мале углове треба да укључимо *даље* сваки пут пре него што то урадимо са квадратом.   '
+        2-3_Artist_6_b: Кад сам већ окренут на десно, лакше је да ме помериш напред и после на лево као да формираш тоугао.
+        2-3_Artist_6_c: Свака страница троугла је исте дужине као страница квадрата....100 пиксела!
       grade4_review_bee1_authored_hint:
         2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
       grade4_review_bee2_authored_hint:

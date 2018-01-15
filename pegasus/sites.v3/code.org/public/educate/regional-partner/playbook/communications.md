@@ -60,7 +60,7 @@ There are two types of emails regarding logistical information for locally hoste
 	- Workshop Sign Up Confirmations will be automatically sent to a teacher that signs up for a workshop.
 	- Workshop Reminder Emails will be automatically sent to every teacher that is signed up for a workshop 10 and 3 calendar days before it begins. These include details from the workshop dashboard about the location, dates, parking information and what to bring to the workshop.
 
-In addition to workshop communications, partners may also be responsible for various communications in the teacher and facilitator applications process. Up to date information can be found in the 2018 Teacher Application Process Document (*Link to be added on Dec 13, 2017*) and the [2018 Facilitator Application Process Document](https://docs.google.com/document/d/11-I1qsTrvODrZgKDNP2frGLrMjmUb-C9ChOt7nbqV2Y/edit#).
+In addition to workshop communications, partners may also be responsible for various communications in the teacher and facilitator applications process. Up to date information can be found in the [2018 Teacher Application Process Document](https://docs.google.com/document/d/10fGyKGqX9ybLn8zaSDFcYZWdIsGELFflLsNyi1llbtM/edit) and the [2018 Facilitator Application Process Document](https://docs.google.com/document/d/11-I1qsTrvODrZgKDNP2frGLrMjmUb-C9ChOt7nbqV2Y/edit#).
 
 <br/>
 [**Back to the top**](#top)

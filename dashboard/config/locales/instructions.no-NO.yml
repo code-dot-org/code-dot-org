@@ -8,15 +8,15 @@
         Gi stoppskiltet en kant ved å lage en åttekant med 100 piksler lange sider. \r
         \r
       2-3 Artist 12_instruction: |-
-        Sett "Gjenta" blokken slik at den lager en sirkel til å fullføre øyet. \r
+        Lag en sirkel for å fullføre øyeeplet! \r
         \r
-        Hvis hver bevegelse blir dreid med en grad, hvor mange ganger må du repetere for å fullføre sirkelen? 180? 360? 500?
+        Hvis artisten snur seg med 1 grad hver gjentakelse, hvor mange ganger må du gjenta koden for å fullføre sirkelen? 180? 360? 500?
       2-3 Artist 2 new_instruction: 'Dette huset har en halvferdig vegg. Hver side
         er 100, men den halvferdige veggen er bare 50. Fullfør veggen. '
       2-3 Artist 2_instruction: 'Dette huset har en halv ferdig vegg. Hver side er
         100, men den halvferdige veggen er bare 50. Fullfør veggen. '
-      2-3 Artist 3.4_instruction: Hoppeblokken beveger kunstneren uten å tegne. Tegn
-        den stiplede linjen ved hjelp av både hoppe- og tegne blokker.
+      2-3 Artist 3.4_instruction: Blokken `hopp` beveger kunstneren uten å tegne.
+        Tegn den stiplede linjen ved hjelp av både `hopp fremover` og `flytt fremover`-blokker.
       2-3 Artist 3_instruction: Denne hatten er 100 pixler høy. Tegn en hatt som er
         70 piksler lavere.
       2-3 Artist 3new_instruction: Den røde hatten er 100 pixler høy. Fullfør tegningen
@@ -56,13 +56,17 @@
       2-3 Artist Debugging 3_instruction: |-
         Båten min har et hull! \r
         \r
-        Kan du fikse det ved å endre vinkelen til linjen? Hint: Den siste vinkelen er feil med 15 grader?
+        Kan du fikse det ved å få endene til å møtes?
       2-3 Artist Debugging 4_instruction: Hva er bildet som vi prøver å tegne? Fullfør
         å koble prikkene sammen med riktige linjer og vinkler.
-      2-3 Artist Debugging 5_instruction: 'Denne koden for benet og foten som du ser
-        er feil. Hint: Foten er for lang. Vi må kansje slette et steg (ordspill ment)'
-      2-3 Artist Debugging 6_instruction: Ser ut som om jeg sitter på en stol som
-        mangler ett ben. Refiger blokker fpr å få benet.
+      2-3 Artist Debugging 5_instruction: |-
+        Denne koden for benet og foten som du ser er feil.\r
+        \r
+        Kan du fikse det?
+      2-3 Artist Debugging 6_instruction: |-
+        Det ser ut som om jeg sitter på en stol som mangler ett ben! \r
+        \r
+        Rediger koden for å tegne det siste benet.
       2-3 Artist Debugging 7_instruction: Ser ut som om C-en i "Code" er tegnet feil
         vei. Kan du får den til å se ut som en C?
       2-3 Artist Debugging 8_instruction: Hjulet mitt er ikke fullført. Hvor mange
@@ -275,9 +279,9 @@
         3 honning om gangen.'
       2-3 Bee Loops 1_instruction: 'Hver blomst inneholder en enhet med nektar. Samle
         inn nektar fra alle blomstene. '
-      2-3 Bee Loops 10_instruction: Får du til å bruke en mens-løkke inni to andre
+      2-3 Bee Loops 10_instruction: Får du til å bruke en gjenta-løkke inni to andre
         løkker for å samle inn all nektaren?
-      2-3 Bee Loops 11_instruction: Bruk en mens-løkke til å samle alle nektarene
+      2-3 Bee Loops 11_instruction: Bruk en gjenta-løkke til å samle alle nektarene
         fra blomstene i dette feltet.
       2-3 Bee Loops 12_instruction: Bruk en mens-løkke til å samle alle nektarene
         fra blomstene i dette feltet.
@@ -312,7 +316,7 @@
       2-3 Bee Loops Assessment 1_instruction: Lekse – Bruke en mens-løkke til å samle
         inn all nektaren fra denne blomsten.
       2-3 Maze 1_instruction: 'Kan du hjelpe meg å fange den slemme grisen? Sett sammen
-        et par «gå fremover» blokker og trykk "Kjør Program" '
+        et par "gå fremover"-blokker og trykk "Kjør". '
       2-3 Maze 10_instruction: Før meg til den grønne ondskapen! (Se opp for dynamitt)
       2-3 Maze 11_instruction: Få meg bort til blomsten, jeg er sulten! Hvor mange
         ganger er du nødt til å repetere en blokk?
@@ -701,10 +705,9 @@
       4-5 Bee Conditionals 7_instruction: Husk at lilla blomster kan ha 3,2 eller
         1 nektar. Fullfør "kontroller lilla blomster" funksjonen og bruk den til å
         samle inn nektar fra alle blomstene.
-      4-5 Bee Conditionals 8_instruction: Skriv en funksjon inni blokken som heter
-        "Sjekk blomst og lag honning". Funksjonen din skal sjekke hvor mye nektar
-        det er i den lilla blomsten og hente den. Deretter skal den bevege seg fremover
-        og så lage honning.
+      4-5 Bee Conditionals 8_instruction: |-
+        Skriv en funksjon inni blokken som heter `check flower make
+        honey`. Funksjonen din skal sjekke hvor mye nektar det er i den lilla blomsten og hente den. Deretter skal den bevege seg fremover og så lage honning.
       4-5 Bee Conditionals Assessment 1_instruction: |-
         Lekse: Denne koden er feil.
         Fullfør "hent nektar og lag honning" funksjonen, deretter bruker du den til å samle inn all nektar og honning. Husk at lilla blomster kan ha 3, 2 eller 1 nektar.
@@ -736,8 +739,8 @@
       4-5 Bee Nested Loops 7_instruction: Putt denne løkken inni en annen løkke for
         å opprette en løkke i løkke til å samle inn all nektaren fra blomstene.
       4-5 Bee Nested Loops 8_instruction: 'Samle all nektaren fra disse blomstene
-        ved å bruke løkke i en annen mens-løkke. Erstatt den indre repeter antall-blokka
-        med en mens-løkke. '
+        ved å bruke løkke i en annen gjenta-løkke. Erstatt den indre repeter antall-blokka
+        med en gjenta-løkke. '
       4-5 Bee Nested Loops 9_instruction: Samle inn all nektaren fra disse blomstene
         ved å bruke en løkke i løkke ved å legge "så lenge"-brikken i en "gjenta"-brikke.
       4-5 Bee Nested Loops Assessment 1_instruction: Lekse - Samle inn all nektaren
@@ -829,11 +832,12 @@
         designet.
       4-5 While Loops 1_instruction: Flytt meg til hullet og bruk en "fylle"-blokk
         til å fylle det med to spader med jord.
-      4-5 While Loops 2_instruction: Flytt meg til jordhaugen og bruk "Fjern 1" blokken
+      4-5 While Loops 2_instruction: Flytt meg til jordhaugen og bruk "fjern 1" blokken
         til å fjern den på fem spadetak.
-      4-5 While Loops 3_instruction: 'Flytt meg til jordhaugen og fjern alt sammen.
-        Etterpå flytter du meg til hullet og fyller det helt opp. Tips: bruk så få
-        blokker som mulig.'
+      4-5 While Loops 3_instruction: |-
+        Bruk så få blokker som mulig! \r
+        \r
+        Flytt meg til jordhaugen og fjern all jorda. Etterpå flytter du meg til hullet og fyller det helt opp.
       4-5 While Loops 4_instruction: Wow, jeg fant et virkelig dypt hull! Jeg vet
         ikke hvor mange spadetak med jord det tar å fylle det. Kan du skrive et program
         som fyller oppi det til bakken er helt jevn? Tips bruk en mens-løkke denne
@@ -1421,6 +1425,18 @@
       CSDU6 arrays random_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select icons_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select rainbow_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_instruction: |-
+        Write a program that displays a
+        randomly chosen color from the array. (Click to see full instructions)
       CSDU6 arrays variable_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
@@ -2858,9 +2874,9 @@
       Course 4 Bee 1_instruction: 'Bien ser ikke forskjell på blomst og bikube.  Sjekk
         først om det er blomst eller bikube og samle kun inn nektar dersom det er
         en blomst. '
-      Course 4 Bee 2_instruction: Kontroller hvert objekt for å se om det er en blomst.
-        Dersom det er en blomst så samler du inn nekter,,, hvis ikke kan du overse
-        det!
+      Course 4 Bee 2_instruction: Bruk en hvis/ellers-blokk for å sjekke om det er
+        honning en blomst eller bikuben. Hvis det er en blomst, samle nektar... Hvis
+        ikke lager du honning!
       Course 4 Bee 3_instruction: Det ukjente objektet er enten en blomst eller en
         bikube. bruk "hvis/ellers" blokk til å samle inn nekter dersom det er en blomst,
         hvis ikke så lager du honning (fordi det er en bikube).
@@ -3223,6 +3239,49 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
+        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars10_instruction: |-
+        Free Play time! Here are all of the variables
+        we've played with so far in this stage, as well as a few more in case you
+        want them. \r
+        \r
+        Notice that there are now so many blocks in our toolbox
+        that they need to be organized!  Here, we've put each piece into an appropriate
+        category.  Take some time to explore everything that is available. When you're
+        done browsing, make a game or story using repeats, variables, and events.  \r
+        \r
+        Hint:
+        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars2_instruction: |-
+        The race in that last puzzle wasn't very
+        fair! Change the `dog_speed` variable to make sure you can collect more flags
+        than Cat. The first to collect 10 flags wins!
+      CourseF_PlayLab_vars3_instruction: Her er et nytt type spill! Bruk venstre-
+        og høyre-pilene til å bevege deg og opp-pila til å hoppe. Se om du kan samle
+        alle flaggene.
+      CourseF_PlayLab_vars4_instruction: Nå bruker vi en variabel kalt "høyde" for
+        å kontrollere hvor høyt hunden kan hoppe. Oppdater "høyde"-variabelen slik
+        at hunden kan hoppe høyt nok til å nå alle flaggene.
+      CourseF_PlayLab_vars5_instruction: 'La oss bygge et spill! Først trenger vi
+        en poengsum. Bruk "sett poeng til"-blokk for å sette scoren til 10. '
+      CourseF_PlayLab_vars6_instruction: |-
+        Bruk høyre piltast til å skyte hjerter.\r
+        \r
+        I vårt spill, hvordan skal vi score poeng? Legg til 1 til din "poeng"-variabel hver gang Hund treffer Katt med et hjerte. Bruk "når figur 2 berører noe"-hendelsen til å utølse en oppdatering av poeng-scoren din. Du kan øke variabelen ved å sette "poeng = poeng + 1". Få din poeng-score opp til 10 (ved å gå opp 1 poeng av gangen!) for å bestå nivå.
+      CourseF_PlayLab_vars7_instruction: |-
+        Bruk høyre piltast til å skyte hjerter.\r
+        \r
+        I vårt spill, hvordan skal vi score poeng? Legg til 1 til din "poeng"-variabel hver gang Hund treffer Katt med et hjerte. Bruk "når figur 2 berører noe"-hendelsen til å utølse en oppdatering av poeng-scoren din. Du kan øke variabelen ved å sette "poeng = poeng + 1". Få din poeng-score opp til 10 (ved å gå opp 1 poeng av gangen!) for å bestå nivå.
+      CourseF_PlayLab_vars8_instruction: |-
+        Bruk høyre piltast til å skyte hjerter.\r
+        \r
+        I vårt spill, hvordan skal vi score poeng? Legg til 1 til din "poeng"-variabel hver gang Hund treffer Katt med et hjerte. Bruk "når figur 2 berører noe"-hendelsen til å utølse en oppdatering av poeng-scoren din. Du kan øke variabelen ved å sette "poeng = poeng + 1". Få din poeng-score opp til 10 (ved å gå opp 1 poeng av gangen!) for å bestå nivå.
+      CourseF_PlayLab_vars9_instruction: |-
+        Nice, now let's make sure this game isn't
+        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
+        2), you should lose a point. Start with 10 points so it's not too hard. Let
+        your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution_instruction: Instruksjoner
       Crack a Caesar Cipher_instruction: Instruksjoner
       ECSPD Binary Odometer_instruction: |-
@@ -3502,8 +3561,8 @@
         an example of a game you can make in play lab.
       FoodFight_instruction: Dette er et eksempel på hva du kan lage i laben.
       Frequency Analysis_instruction: Test
-      Function intro Ryan_instruction: Bruk funksjonen `bygg bro` to ganger for å
-        lage en vei til redstonefakkelen.
+      Function intro Ryan_instruction: Bruk funksjonen `build bridge` to ganger for
+        å lage en vei til redstonefakkelen.
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -7034,9 +7093,9 @@
       course1_collector_loops_challenge4_instruction: |-
         Let's get the treasure! Help
         me across each row then come back to start the next row. Can you find a pattern?
-      course1_maze_debugging_challenge1_instruction: |-
-        Debug this level. Remove the
-        extra blocks and add the missing blocks. Get the bird to the pig!
+      course1_maze_debugging_challenge1_instruction: Finn feilene i denne oppgaven.
+        Fjern de blokkene som ikke skal være der og legg til de som mangler. Få fuglen
+        bort til grisen!
       course1_maze_debugging_challenge2_instruction: |-
         Debug this level. These are
         the right blocks, but they're in the wrong order!
@@ -7169,10 +7228,9 @@
       course3_farmer_condLoops_challenge2_instruction: |-
         Collect everything to complete
         the level.
-      course3_farmer_until_challenge2_instruction: |-
-        Use If/Else blocks to follow
-        the curvy path. At each corner, use the `remove 1` command in a loop to clear
-        the piles.
+      course3_farmer_until_challenge2_instruction: Bruk blokken hvis/ellers til å
+        følge den svingete banen. På hvert hjørne, bruk kommandoen `fjern 1` i en
+        løkke for å fjerne haugene.
       course3_maze_debugging_challenge1_instruction: |-
         *"Am I just going around in
         circles?"*
@@ -7303,11 +7361,17 @@
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_forVideo_instruction: |-
+        Use the `repeat` loop to add waves
+        to the water.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
       courseA_artist_loops_challenge2_instruction: |-
         "Can you help me make two bird
         houses?"
+      courseA_artist_loops_challenge2a_instruction: |-
+        *"Help me get these three tents
+        set up!"*
       courseA_artist_loops_challenge3_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
@@ -7516,6 +7580,9 @@
       courseB_collector_loops_challenge2_instruction: |-
         Let's get the treasure! Help
         me across each row then come back to start the next row. Can you find a pattern?
+      courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
       courseB_collector_prog1_instruction: |-
@@ -7756,9 +7823,12 @@
       courseC_artist_prog_challenge2_instruction: |-
         *Help me paint the yellow lines
         on this road!*
+      courseC_artist_prog_challenge2a_instruction: |-
+        *Help me paint the yellow lines
+        on this road!*
       courseC_collector_loops_challenge2_instruction: |-
-        Let's hunt for treasure -
-        using loops! Help the collector by debugging this code. Get all of the treasure!
+        Get at least **5** pieces
+        of treasure!
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
         you can help Laurel collect some treasure.
@@ -7792,8 +7862,8 @@
         Look carefully! Can you collect
         all *10* pieces of treasure?
       courseC_collector_prog_challenge2_instruction: |-
-        There are 20 pieces of treasure
-        to be found. Collect at least half to finish this challenge!
+        Collect at least **10** pieces
+        of treasure to finish this challenge!
       courseC_flappy_embed_events_instruction: |-
         Here's an example of a game that
         you're about to create yourself! Play through it one or two times to get
@@ -7860,6 +7930,7 @@
         Collect all of the corn and all of the
         pumpkins.
       courseC_harvester_loops_challenge1_instruction: Collect all of the corn.
+      courseC_harvester_loops_challenge1a_instruction: Collect all of the corn.
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
@@ -7921,6 +7992,8 @@
         puzzles to complete this level.
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
       courseC_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops\nto
+        find his acorn! "
+      courseC_maze_loops_challenge1a_instruction: "Now Scrat wants to try using loops\nto
         find his acorn! "
       courseC_maze_loops_challenge2_instruction: |-
         Let's hunt for treasure - using
@@ -8041,6 +8114,8 @@
         \r
         See what happens when we start to
         get creative with the bits!
+      courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
+        binary! "
       courseD_artist_binary_challenge0_instruction: |-
         Try using nested loops to complete
         this drawing.
@@ -8135,8 +8210,8 @@
         Can you figure out how
         to make a picture like this?
       courseD_artist_nestedLoops_challenge2_instruction: |-
-        Can you figure out how
-        to make a picture like this?
+        Fix the code to make this
+        picture!
       courseD_artist_project1_instruction: "Draw a small shape, between **20 and\n50**
         pixels wide.  It can be any shape that you like.  "
       courseD_artist_project1a_instruction: |-
@@ -8241,6 +8316,10 @@
         Help the bee fix the code to get all the
         nectar.
       courseD_bee_debugging_challenge1_instruction: |-
+        Watch how the bees gets the
+        nectar. Can you use the same kind of pattern to help the bee make all of the
+        honey?
+      courseD_bee_debugging_challenge1a_instruction: |-
         Watch how the bees gets the
         nectar. Can you use the same kind of pattern to help the bee make all of the
         honey?
@@ -8399,6 +8478,10 @@
         Help the collector
         reach at least two piles of treasure using only the blocks in your toolbox.
         It is possible to collect all 4.
+      courseD_collector_nested_loops_challenge2a_instruction: |-
+        Help the collector
+        reach at least two piles of treasure using only the blocks in your toolbox.
+        It is possible to collect all 4.
       courseD_collector_ramp10_instruction: Help Laurel collect all of the treasure.
       courseD_collector_ramp8_instruction: Help Laurel collect all of the treasure.
       courseD_collector_ramp9_instruction: Help Laurel collect all of the treasure.
@@ -8486,10 +8569,9 @@
         as few blocks as possible. "
       courseD_farmer_conditionals9_instruction: "Flatten all of these piles using\nas
         few blocks as possible. "
-      courseD_farmer_until_challenge2_instruction: |-
-        Use If/Else blocks to follow
-        the curvy path. At each corner, use the `remove 1` command in a loop to clear
-        the piles.
+      courseD_farmer_until_challenge2_instruction: Bruk blokken hvis/ellers til å
+        følge den svingete banen. På hvert hjørne, bruk kommandoen `fjern 1` i en
+        løkke for å fjerne haugene.
       courseD_farmer_while1_instruction: |-
         Move to the pile of dirt and use the `remove`
         block to remove it.
@@ -8520,12 +8602,10 @@
         few blocks as possible. "
       courseD_farmer_while9_instruction: "Flatten all of these piles using as few\nblocks
         as possible. "
-      courseD_farmer_while_challenge1_instruction: |-
-        Fill all of the holes and remove
-        all of the piles.
-      courseD_farmer_while_challenge2_instruction: |-
-        Fill all of the holes and remove
-        all of the piles.
+      courseD_farmer_while_challenge1_instruction: Fyll inn alle hullene og fjern
+        alle haugene.
+      courseD_farmer_while_challenge2_instruction: Fyll inn alle hullene og fjern
+        alle haugene.
       courseD_harvester_nested_loops_challenge1-broken_instruction: |-
         "I need some
         help on the farm! Help me harvest this corn using only the blocks in your
@@ -8636,8 +8716,9 @@
         down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
         **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: |-
-        If the pirate is in the safe zone, wait
-        one second, then deduct a point as long as he stays beneath the octopus line.
+        If the pirate (actor 1) is in the safe
+        zone, wait one second, then deduct a point as long as he stays beneath the
+        octopus line.
       courseD_playLab_cond6cloneForTest_instruction: Testing
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
@@ -8908,9 +8989,8 @@
       courseE_farmer_ramp11_instruction: |-
         This puzzle also uses nested loops.  Can
         you figure out how?
-      courseE_farmer_ramp11a_instruction: "Pick lettuce only while there is still\nlettuce
-        to pick. "
-      courseE_farmer_ramp11b_instruction: While there is a pile, remove dirt.
+      courseE_farmer_ramp11a_instruction: Så lenge det er en haug, fjern jord.
+      courseE_farmer_ramp11b_instruction: Så lenge det er en haug, fjern jord.
       courseE_farmer_ramp12_instruction: |-
         Now use nested loops (`repeat` and `while`)
         to solve this puzzle.

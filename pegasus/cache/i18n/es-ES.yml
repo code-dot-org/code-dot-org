@@ -367,6 +367,12 @@
   studiobar_donate_body: Un niño aprende por cada dólar que donas
   studiobar_shop_title: Tienda
   studiobar_shop_body: Rompe los estereotipos. Usa nuestro logotipo con orgullo.
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: “Desafía a chicas en cada país a aprender una "Hora de
     Code", Malala, ganadora del Premio Nobel de la paz
   homepage_hero_text_susan: '"Si puedes cambiar la tecnología, puedes cambiar el mundo".
@@ -647,6 +653,7 @@
   video_title_obama: El presidente Obama sobre las Ciencias de la Computación
   video_title_hoc_is_here: La Hora del Código ha llegado - Todo el mundo puede aprender
   video_title_anybody_can_learn: Todo el mundo puede aprender
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: Hora de código con Draymond Green
   video_title_russell_okung: Hora de código con Russell Okung
   video_title_real_madrid: Hora de código con el Real Madrid
@@ -2177,10 +2184,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
-  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
-  video_title_steph_curry: Hour of Code with Steph Curry

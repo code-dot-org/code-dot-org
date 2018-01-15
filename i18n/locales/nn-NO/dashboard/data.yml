@@ -396,6 +396,7 @@ nn:
         'C4_unplugged_forloops': 'For-løkker'
         'C4_unplugged_parameters': 'Låtskriving med parameter'
         'C4_unplugged_binary': 'Binær'
+        'CSF_a_b_artist_loops': 'Loops in Artist'
         'CSF_artist_angles': 'Vinklar i Kunstner'
         'CSF_collector_k1_blocks': 'Grunnleggande: Samlaren'
         'CSF_collector_repeat_loops': 'Collector gjenta-løkker'

@@ -11,6 +11,7 @@ import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
+import { connect } from 'react-redux';
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -100,6 +101,7 @@ const actionsFormatter = function (actions, {rowData}) {
 
 class ManageStudentsTable extends Component {
   static propTypes = {
+    //Provided by redux
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
   };
@@ -260,4 +262,9 @@ class ManageStudentsTable extends Component {
   }
 }
 
-export default ManageStudentsTable;
+export const UnconnectedManageStudentsTable = ManageStudentsTable;
+
+export default connect(state => ({
+  loginType: state.manageStudents.loginType,
+  studentData: state.manageStudents.studentData,
+}))(ManageStudentsTable);

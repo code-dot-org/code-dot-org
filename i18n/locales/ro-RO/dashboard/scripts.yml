@@ -262,41 +262,41 @@ ro:
           description_audience: '[șir gol]'
           stages:
             'Calc: Defining Variables':
-              name: Defining Variables and Substitution
+              name: Definirea variabilelor și substituției
             'Calc: Evaluation Blocks':
-              name: Evaluation Blocks and Arithmetic Expressions
+              name: Blocuri de evaluare şi expresii aritmetice
             'Eval: Boolean Operators':
-              name: Boolean Operators
+              name: Operatori booleeni
             'Eval: Conditionals':
               name: Condiţionale
             'Eval: Defining Functions':
-              name: Composite Functions
+              name: Funcţiile compozit
             'Eval: Functions':
               name: Solving Word Problems with the Design Recipe
             'Eval: Strings and Images':
               name: Șiruri și Imagini
             'Eval: Writing Contracts':
-              name: Writing Contracts
+              name: Scrierea de contracte
             'Play Lab: Animation (Big Game)':
-              name: The Big Game - Animation
+              name: Marele joc - animaţie
             'Play Lab: Boolean (Big Game)':
-              name: The Big Game - Booleans
+              name: Marble Joc - boleeni
             'Play Lab: Booleans':
-              name: Sam the Bat
+              name: Liliacul Sam
             'Play Lab: Collision Detection (Big Game)':
-              name: The Big Game - Collision Detection
+              name: Marele joc - detectarea coliziunii
             'Play Lab: Defining Functions':
               name: Rocket Height
             'Play Lab: Defining Variables (Big Game)':
-              name: The Big Game - Variables
+              name: Marele doc - variabile
             'Unplugged: Booleans':
-              name: 'Unplugged: Booleans and Logic'
+              name: 'Unplugged: Boolean şi logica'
             'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Unplugged: Collision Detection and the Pythagorean Theorem'
+              name: 'Unplugged: Detectarea coliziunii şi teorema lui Pitagora'
             'Unplugged: Conditionals and Piecewise Functions':
               name: 'Fără calculator: Condiționale și funcții pe porțiuni'
             'Unplugged: Contracts':
-              name: 'Unplugged: Contracts, Domain, and Range'
+              name: 'Unplugged: contracte, domeniu și gamă'
             'Unplugged: The Design Recipe':
               name: 'Fără calculator: Rețeta pentru design'
             'Unplugged: Video Games and Coordinate Planes':
@@ -330,23 +330,23 @@ ro:
           description_audience: '[șir gol]'
           stages:
             Computer Science Pedagogy:
-              name: Computer Science Pedagogy
+              name: Pedagogia Informaticii
             Introduction to PD:
               name: Introducere in Dezvoltarea Profesională
             K-5 Courses:
-              name: K-5 Courses
+              name: Cursuri pentru clasa a cincea
             Next Steps:
-              name: Next Steps
+              name: Pașii următori
             'Programming Concept: Conditionals':
-              name: 'Programming Concept: Conditionals'
+              name: 'Concept de programare: condiţionale'
             'Programming Concept: Events':
-              name: 'Programming Concept: Events'
+              name: 'Concept de programare: evenimente'
             'Programming Concept: Functions':
-              name: 'Programming Concept: Functions'
+              name: 'Concept de programare: funcţii'
             'Programming Concept: Loops':
-              name: 'Programming Concept: Loops'
+              name: 'Concept de programare: bucle'
             Reflection:
-              name: Reflection
+              name: Reflecţie
             Teacher Dashboard:
               name: Tabloul de bord al profesorilor
             Unplugged lessons:
@@ -360,17 +360,17 @@ ro:
           description_audience: '[șir gol]'
           stages:
             Automatic DNS node:
-              name: Automatic DNS node
+              name: Nod automat DNS
             Broadcasting messages:
-              name: Broadcasting messages
+              name: Difuzarea mesajelor
             Internet Simulator Freeplay:
-              name: Internet Simulator Freeplay
+              name: Simulator de internet Freeplay
             Manual DNS:
               name: Manual DNS
             Overview and Setup Instructions:
-              name: Overview and Setup Instructions
+              name: Privire de ansamblu şi instrucţiuni de configurare
             Packets and Reliability:
-              name: Packets and Reliability
+              name: Pachete şi fiabilitate
             Peer to Peer - Sending Ascii:
               name: Peer to Peer - Sending Ascii
             Peer to Peer - Sending Bits on a Shared Wire:
@@ -448,7 +448,7 @@ ro:
           description_audience: '[șir gol]'
           stages:
             Applab:
-              name: Applab
+              name: Laborator de Aplicații
             Hoc2015 Blockly:
               name: Hoc2015 Blockly
             Play Lab:
@@ -525,7 +525,7 @@ ro:
           description_short: This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.
           stages:
             Binary Numbers:
-              name: Binary Numbers
+              name: Numerele binare
             Bytes and File Sizes:
               name: Bytes and File Sizes
             Encode a Complex Thing:
@@ -594,7 +594,7 @@ ro:
             Rocket-Height:
               name: Rocket-Height
             Sam the Bat:
-              name: Sam the Bat
+              name: Liliacul Sam
             Strings and Images:
               name: Șiruri și Imagini
             Your Game - Animation:
@@ -775,13 +775,13 @@ ro:
           description_audience: '[șir gol]'
           stages:
             Computer Science Pedagogy:
-              name: Computer Science Pedagogy
+              name: Pedagogia Informaticii
             Course Overview:
               name: Course Overview
             Evaluation Blocks:
               name: Blocuri de evaluare
             Next Steps:
-              name: Next Steps
+              name: Pașii următori
             Strings and Images:
               name: Șiruri și Imagini
             Teacher Dashboard:
@@ -1038,7 +1038,7 @@ ro:
             Rocket-Height:
               name: Rocket-Height
             Sam the Bat:
-              name: Sam the Bat
+              name: Liliacul Sam
             Strings and Images:
               name: Șiruri și Imagini
             The Design Recipe:
@@ -1144,7 +1144,7 @@ ro:
             Evaluation Blocks:
               name: Blocuri de evaluare
             Next Steps:
-              name: Next Steps
+              name: Pașii următori
             Rocket-Height:
               name: Rocket-Height
             Strings and Images:
@@ -1152,7 +1152,7 @@ ro:
             Teacher Dashboard:
               name: Tabloul de bord al profesorilor
             Writing Contracts:
-              name: Writing Contracts
+              name: Scrierea de contracte
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
@@ -1198,7 +1198,7 @@ ro:
             'Mastering the Basics: Sequencing':
               name: 'Mastering the Basics: Sequencing'
             Next Steps:
-              name: Next Steps
+              name: Pașii următori
             Planning:
               name: Planning
         ECSPD2:
@@ -1321,7 +1321,7 @@ ro:
             Introduction to Equity:
               name: Introduction to Equity
             Next Steps:
-              name: Next Steps
+              name: Pașii următori
         sciencePD2b-iZone:
           title: Computer Science in Science PD Phase 2b
           description: 'Etapa 2 online: Studiu de vara mixt'
@@ -2103,7 +2103,7 @@ ro:
           description_audience: '[șir gol]'
           stages:
             Binary Numbers:
-              name: Binary Numbers
+              name: Numerele binare
             CS Principles Pre-survey:
               name: CS Principles Pre-survey
             Encoding and Sending Formatted Text:
@@ -4108,7 +4108,7 @@ ro:
             Conditionals & Loops in Maze:
               name: Conditionals & Loops in Maze
             Conditionals & Loops in Farmer:
-              name: Conditionals & Loops in Farmer
+              name: Conditionals & Loops in Harvester
             Impacts of Computing:
               name: Impacts of Computing
             More Programming with CS4FN:
@@ -4598,6 +4598,8 @@ ro:
               name: Arrays
             Making Music:
               name: Making Music
+            Arrays and For Loops:
+              name: Arrays and For Loops
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -4928,6 +4930,8 @@ ro:
               name: Structuring Data
               description_student: This lesson goes further into the interpretation of data, including cleaning and visualizing raw data sets.  The class first looks at the how presenting data in different ways can help people to understand it better.  After seeing how cleaning and visualization can help people make better decisions, the class looks at what parts of this process can be automated, and what need a human.
               description_teacher: In this lesson, students go further into the collection and interpretation of data, including cleaning and visualizing raw data sets.  Students first look at the how presenting data in different ways can help people to understand it better.  They then visualize their own raw data set, in the context of a pizza topping survey, deciding what to do with data that does not easily fit into the visualization scheme that they have chosen.  Last, students look at what parts of this process can be automated, and what need a human to make decisions.
+            Keeping Data Secret:
+              name: Keeping Data Secret
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: '[șir gol]'
@@ -5256,6 +5260,8 @@ ro:
               name: Săritură
             NewBounce:
               name: NewBounce
+            F PlayLab Variables:
+              name: F PlayLab Variables
           title: '[șir gol]'
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -5432,7 +5438,7 @@ ro:
               description_student: You can do some amazing things when you use conditionals and loops together!
               description_teacher: 'In this lesson, students will be pairing together two key concepts: loops and conditionals. This set of puzzles bridges the gaps in understanding that occur when working on puzzles that use multiple kinds of blocks. By bringing two ideas together, students will create more complex code that shows both impressive creativity and critical thinking!'
             Conditionals & Loops in Farmer:
-              name: Conditionals & Loops in Farmer
+              name: Conditionals & Loops in Harvester
               description_student: It's not always clear when to use each conditional.  This lesson will help you get practice deciding what to do.
               description_teacher: Students will practice `while` loops, `until` loops, and `if / else` statements. All of these blocks use conditionals. By practicing all three, students will learn to write complex and flexible code.
             Digital Citizenship:
@@ -6785,6 +6791,8 @@ ro:
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
           title: Intro to App Lab Staging
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -6820,7 +6828,7 @@ ro:
           title: Create - AP Performance Task Prep
           description_audience: '[șir gol]'
           description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
-          description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
+          description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -6836,6 +6844,14 @@ ro:
             standalone template:
               name: standalone template
           title: 'CSP3 under the sea student work recovery '
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        aws-demo:
+          stages:
+            new stage:
+              name: new stage
+          title: AWS Demo
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
