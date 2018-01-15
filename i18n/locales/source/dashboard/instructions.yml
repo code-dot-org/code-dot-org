@@ -1168,6 +1168,19 @@ en:
       CSD U5 black white images pixelation 5_instruction: "Draw anything you like"
       CSD U5 black white images pixelation_instruction: "Complete the X shape by
         typing 0s and 1s"
+      CSD U6 params modify clouds_instruction: "# Clouds\r\n\r\nThis program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r\n\r\n#
+        Do This\r\n* Create a new function `moveCloud(name)` that will move any cloud.\r\n  *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r\n*
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r\n * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times."
+      CSD U6 params modify planes_instruction: "# Multi-plane Controller\r\n\r\nThis
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r\n\r\n# Do This\r\n* Create
+        a new `movePlane(name)` function that can move any plane.\r\n* Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked."
       CSDU4 - AppLab - 1_instruction: "Read the documentation for penColor() and
         penWidth() before using them to draw the blue square."
       CSDU4 - AppLab - 2_instruction: "Write a program that acts as a simple calculator.
@@ -6293,6 +6306,8 @@ en:
       courseC_harvester_loops_challenge1a_instruction: "Collect all of the corn."
       courseC_harvester_loops_challenge2_instruction: "Collect all of the lettuce.
         Avoid the trees and fields!"
+      courseC_harvester_loops_forVid_instruction: "Collect all of the corn and all
+        of the pumpkins."
       courseC_maze_debugging1_instruction: "Fix the code to help get Scrat get to
         the acorn."
       courseC_maze_debugging10_instruction: "Debug this level by rearranging and
