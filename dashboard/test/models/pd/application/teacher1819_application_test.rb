@@ -82,8 +82,8 @@ module Pd::Application
           csp_which_grades: ['12'],
           csp_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].first,
           previous_yearlong_cdo_pd: ['CS Discoveries'],
-          csp_ap_exam: Pd::Application::Teacher1819Application.options[:csp_ap_exam].first,
-          taught_in_past: ['Hour of Code']
+          csp_how_offer: Pd::Application::Teacher1819Application.options[:csp_how_offer].last,
+          taught_in_past: ['CS in Algebra']
         }
       )
 
@@ -98,7 +98,7 @@ module Pd::Application
           csp_which_grades: YES,
           csp_course_hours_per_year: YES,
           previous_yearlong_cdo_pd: YES,
-          csp_ap_exam: YES,
+          csp_how_offer: 2,
           taught_in_past: 2
         }, application.response_scores_hash
       )
@@ -117,7 +117,6 @@ module Pd::Application
       application.update(response_scores: application.response_scores_hash.merge({regional_partner_name: NO}).to_json)
 
       application.auto_score!
-      application.reload
       assert_equal(
         {
           regional_partner_name: NO,
@@ -132,7 +131,7 @@ module Pd::Application
           csp_which_grades: YES,
           csp_course_hours_per_year: YES,
           previous_yearlong_cdo_pd: YES,
-          csp_ap_exam: YES,
+          csp_how_offer: 2,
           taught_in_past: 2
         }, application.response_scores_hash
       )
@@ -153,8 +152,8 @@ module Pd::Application
           csp_which_grades: ['12'],
           csp_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].first,
           previous_yearlong_cdo_pd: ['CS Discoveries'],
-          csp_ap_exam: Pd::Application::Teacher1819Application.options[:csp_ap_exam].first,
-          taught_in_past: ['Hour of Code']
+          csp_how_offer: Pd::Application::Teacher1819Application.options[:csp_how_offer].last,
+          taught_in_past: ['CS in Algebra']
         }
       )
 
@@ -176,7 +175,7 @@ module Pd::Application
           csp_which_grades: YES,
           csp_course_hours_per_year: YES,
           previous_yearlong_cdo_pd: YES,
-          csp_ap_exam: YES,
+          csp_how_offer: 2,
           taught_in_past: 2
         }, application.response_scores_hash
       )
@@ -197,7 +196,7 @@ module Pd::Application
           csp_which_grades: ['12'],
           csp_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].last,
           previous_yearlong_cdo_pd: ['CS Principles'],
-          csp_ap_exam: Pd::Application::Teacher1819Application.options[:csp_ap_exam].last,
+          csp_how_offer: Pd::Application::Teacher1819Application.options[:csp_how_offer].first,
           taught_in_past: ['AP CS A']
         }
       )
@@ -219,7 +218,7 @@ module Pd::Application
           csp_which_grades: YES, # Not possible to select responses for which this would be No
           csp_course_hours_per_year: NO,
           previous_yearlong_cdo_pd: NO,
-          csp_ap_exam: NO,
+          csp_how_offer: 0,
           taught_in_past: 0
         }, application.response_scores_hash
       )
@@ -379,18 +378,15 @@ module Pd::Application
       assert_nil application.accepted_at
 
       Timecop.freeze(today) do
-        application.update(status: 'accepted')
-        application.reload
+        application.update!(status: 'accepted')
         assert_equal today, application.accepted_at.to_time
 
-        application.update(status: 'declined')
-        application.reload
+        application.update!(status: 'declined')
         assert_nil application.accepted_at
       end
 
       Timecop.freeze(tomorrow) do
-        application.update(status: 'accepted')
-        application.reload
+        application.update!(status: 'accepted')
         assert_equal tomorrow, application.accepted_at.to_time
       end
     end

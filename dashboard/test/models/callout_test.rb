@@ -6,8 +6,8 @@ class CalloutTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
     @level = create(:level, :blockly, level_num: 'level1_2_3')
-    @script = create(:script, id: 333)
-    @script2 = create(:script, id: 321)
+    @script = create(:script, id: 10333)
+    @script2 = create(:script, id: 10321)
     @script_level = create(:script_level, script: @script, levels: [@level])
     @script_level2 = create(:script_level, script: @script2, levels: [@level])
     @csv_callouts = Callout.find_or_create_all_from_tsv!('test/fixtures/callouts.tsv')

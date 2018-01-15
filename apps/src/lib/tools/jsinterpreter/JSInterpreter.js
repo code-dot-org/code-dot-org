@@ -288,6 +288,13 @@ export default class JSInterpreter {
       // away so it can be returned in the native event handler
       this.seenReturnFromCallbackDuringExecution = true;
       this.lastCallbackRetVal = retVal;
+
+      // If we were stepping in the debugger, go back to running state:
+      if (this.paused) {
+        this.nextStep = StepType.RUN;
+        this.onNextStepChanged.notifyObservers();
+        this.handlePauseContinue();
+      }
     }
     // Provide warnings to the user if this function has been called with a
     // meaningful return value while we are no longer in the native event handler
@@ -614,8 +621,10 @@ export default class JSInterpreter {
                        stackDepth > this.firstCallStackDepthThisStep) {
               // trying to step over, and we're in deeper inside a function call... continue next onTick
             } else {
-              // Our step operation is complete, reset nextStep to StepType.RUN to
-              // return to a normal 'break' state:
+              // Our step operation is complete, set reachedBreak to ensure the
+              // current code will be selected before returning from this function.
+              reachedBreak = true;
+              // Reset nextStep to StepType.RUN to return to a normal 'break' state:
               this.nextStep = StepType.RUN;
               this.onNextStepChanged.notifyObservers();
               if (inUserCode) {

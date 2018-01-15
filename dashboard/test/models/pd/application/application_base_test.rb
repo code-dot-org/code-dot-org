@@ -78,5 +78,39 @@ module Pd::Application
       Pd::Application::ApplicationBase.send_all_decision_notification_emails
       Pd::Application::ApplicationBase.send_all_decision_notification_emails
     end
+
+    test 'total score' do
+      application = ApplicationBase.new
+
+      # initially nil
+      assert_nil application.total_score
+
+      # non-numeric only, still nil
+      # Also handles nil values
+      application.response_scores = {
+        q1: 'Yes',
+        q2: nil,
+      }.to_json
+      assert_nil application.total_score
+
+      # Numeric with 0
+      application.response_scores = {
+        q1: 'Yes',
+        q2: nil,
+        q3: '0',
+        q4: 0
+      }.to_json
+      assert_equal 0, application.total_score
+
+      # Numeric non-zero
+      application.response_scores = {
+        q1: 'Yes',
+        q2: nil,
+        q3: '1',
+        q4: 2,
+        q5: '0',
+      }.to_json
+      assert_equal 3, application.total_score
+    end
   end
 end
