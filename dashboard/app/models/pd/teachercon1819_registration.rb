@@ -31,11 +31,11 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
     status = sanitize_form_data_hash.try(:[], :teacher_accept_seat)
     return unless status
 
-    if status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:withdraw_date] ||
-      status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:withdraw_other]
+    if status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_date] ||
+      status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_other]
       pd_application.update!(status: "waitlisted")
     elsif status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
-      pd_application.update!(status: "declined")
+      pd_application.update!(status: "withdrawn")
     end
   end
 
@@ -62,8 +62,8 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       needAda: [YES, NO, 'Other (please explain):'],
       teacherAcceptSeat: [
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept],
-        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:withdraw_date],
-        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:withdraw_other],
+        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_date],
+        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_other],
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline],
       ],
       photoRelease: [YES],
