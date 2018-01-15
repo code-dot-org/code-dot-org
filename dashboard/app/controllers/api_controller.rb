@@ -261,7 +261,7 @@ class ApiController < ApplicationController
     # that has some limitations and was largely meant as a quick and dirty fix for
     # pagination when it was implemented
     section.students.each do |student|
-      data[student.id] = summarize_user_progress(script, student)[:levels]
+      data[student.id] = get_level_progress(student, script)
     end
     render json: data
   end
