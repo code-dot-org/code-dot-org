@@ -367,6 +367,12 @@
   studiobar_donate_body: Isang bata ang natututo sa bawat dolyar na inaabuloy ninyo
   studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
     learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
   homepage_hero_text_susan: |
@@ -566,8 +572,8 @@
   minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
     new activity! Journey through Minecraft with code.
   minecraft_agent_button: Panimula
-  minecraft_designer_description: Program animals and enemies in your own version
-    of Minecraft.
+  minecraft_designer_description: Mag-program ng mga hayop at iba pang nilalang sa
+    mga Minecraft sa iyong sariling bersyon ng Minecraft.
   minecraft_designer_button: Panimula
   minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
   minecraft_adventurer_button: Panimula
@@ -657,6 +663,7 @@
   video_title_obama: President Obama on computer science
   video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
   video_title_anybody_can_learn: Anybody Can Learn
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: Hour of Code with Draymond Green
   video_title_russell_okung: Hour of Code with Russell Okung
   video_title_real_madrid: Hour of Code with Real Madrid
@@ -796,11 +803,11 @@
   dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Magtanong ng personal! Bisitahin ang aming monthly
     video office hours.
-  dashboard_landing_print_certificates: Print certificates for students who finish
-    this course
-  dashboard_landing_educator_blog: Read about news and updates to our materials at
-    our Educator Blog
-  dashboard_landing_video_player: Test our new video player at your school
+  dashboard_landing_print_certificates: I-print ang mga sertipiko para sa mga estudyante
+    na nakatapos ng kursong ito
+  dashboard_landing_educator_blog: Magbasa ng mga balita at mga update sa ating mga
+    materyales sa aming Educator na Blog
+  dashboard_landing_video_player: Subukan ang aming bagong video player sa iyong paaralan
   dashboard_landing_progress_title: Progress ng pangunahing klase
   dashboard_landing_progress_biggest: Ito ang progress ng iyong pinakamalaking section.
   dashboard_landing_view_progress: Tingnan ang Progress para sa %{biggest_section}
@@ -856,7 +863,7 @@
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
     course that explores the foundational ideas of computing.
   dashboard_landing_loading: Loading...
-  dashboard_action_edit: Edit
+  dashboard_action_edit: Mag-Edit
   dashboard_action_save: I-save
   dashboard_action_save_all: I-save lahat
   dashboard_action_cancel: Kanselahin
@@ -904,13 +911,14 @@
   dashboard_navigation_view_stats: Tingnan ang mga Stat
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: hindi pa nasimulan
+  dashboard_progress_in_progress: nasimulan na
   dashboard_progress_not_completed: hindi natapos
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
-  dashboard_progress_submitted: submitted
+  dashboard_progress_completed_too_many_blocks: natapos, masyadong marami ang mga
+    bloke
+  dashboard_progress_completed_perfect: natapos, magaling
+  dashboard_progress_furthest_level_attempted: pinakadulong antas na nasubukan
+  dashboard_progress_submitted: nasumite
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
@@ -927,7 +935,7 @@
   dashboard_sections_table_secret: Klase ng Login
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Kurso
-  dashboard_sections_table_pairing_allowed: Pair Programming
+  dashboard_sections_table_pairing_allowed: Pair programming
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Mga mag-aaral
   dashboard_sections_table_code: Section Code
@@ -947,7 +955,7 @@
     ng mga baraha na naglalaman ng impormasyon ng account upang ibahagi sa iyong mga
     mag-aaral nang paisa-isa.
   dashboard_sections_switch_section: 'Magpalit ng section:'
-  dashboard_sections_close: Close
+  dashboard_sections_close: Isara
   dashboard_sections_move_students_desc: Select students to move to a new section.
     Moving students will not clear their progress.
   dashboard_sections_one_per_teacher: Students can only be in one section for each
@@ -1147,7 +1155,7 @@
   hoc2014_try_new_tutorials: Subukan ang aming bagong Hour of Code na mga tutorial
   hoc2014_try_new_tutorial: Subukan ang aming bagong Oras ng Code tutorial nasa beta
   hoc2014_try_scrat: Angry Birds, PvZ, at Scrat
-  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  hoc2014_try_frozen: Mga artista kasama sina Anna at Elsa, mula sa Frozen
   carousel_heading_codeorg: Tutorials by Code.org
   carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
@@ -1198,8 +1206,8 @@
   mobile_devices: Mga tutorial para sa mga mobile device
   frozen_name: Code with Anna and Elsa
   starwars_name: 'Star Wars: Building a Galaxy with Code'
-  codeorg_name: Isulat ang iyong unang computer program
-  codeintl_name: Isulat ang iyong unang computer program
+  codeorg_name: Klasiko na Maze
+  codeintl_name: Klasiko na Maze
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Isang introduksyon sa JavaScript
   khanes_name: Isang introduksyon sa JavaScript
@@ -1235,7 +1243,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Bato, Papel, Gunting
-  hourofcode_name: Isulat ang iyong unang computer program
+  hourofcode_name: Klasiko na Maze
   playlab_name: Play Lab
   infinity_name: Infinity Play Lab
   artist_name: Artist
@@ -1262,7 +1270,7 @@
   coursee_name: Course E
   coursef-draft_name: Course F
   coursef_name: Course F
-  accelerated_name: Accelerated Course
+  accelerated_name: Pinabilis na Kurso
   express_name: Express Course
   pre-express_name: Pre-reader Express Course
   cspunit1_name: 'Unit 1: Digital Information'
@@ -1298,12 +1306,12 @@
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
-  20-hour_name: Accelerated Course
+  20-hour_name: Pinabilis na Kurso
   algebra_name: CS in Algebra
   AlgebraA_name: CS in Algebra Course A
   AlgebraB_name: CS in Algebra Course B
   gumball_name: Gumball
-  classicmaze_name: Classic Maze
+  classicmaze_name: Klasiko na Maze
   iceage_name: Ice Age
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Blocks)
@@ -1321,10 +1329,10 @@
   csp17_category_name: "'16-'17 CS Principles"
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
-  applab_name: App Lab
+  applab_name: App na Lab
   basketball_name: Make a basketball game
   sports_name: Code your own sports game
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Edad 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds
@@ -2011,10 +2019,10 @@
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
   compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.
+  compatibility_unsupported_browser: Ang iyong browser ay hindi suportado. Paki-upgrade
+    ang iyong browser sa <a href='%{supported_browsers_url}', target='_blank'>isa
+    sa mga suportadong browser</a>. Maari mong subukang tingnan ang pahina, pero asahan
+    mo na may mga sira na mga functionality.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -2026,9 +2034,9 @@
   header_home: Home
   header_my_dashboard: My Dashboard
   header_courses: Mga kurso
-  header_course_catalog: Course Catalog
-  header_project_gallery: Project Gallery
-  header_sections: Sections
+  header_course_catalog: Katalogo ng Kurso
+  header_project_gallery: Mga Proyekto
+  header_sections: Mga Seksyon
   header_professional_learning: Professional Learning
   header_educate_overview: Overview ng Nagtuturo
   header_educate_elementary: Mababang Paaralan
@@ -2055,11 +2063,11 @@
   header_stats: Stats
   header_help_us: Tulungan Kami
   header_about: Tungkol
-  header_teacher_community: Teacher community
+  header_teacher_community: Komunidad ng mga Guro
   header_help_support: 'Help and support '
-  header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
+  header_report_bug: I-report ang bug
+  header_tutorials: Mga Tutorial
+  header_documentation: Dokumentasyon
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
@@ -2122,10 +2130,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
-  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
-  video_title_steph_curry: Hour of Code with Steph Curry

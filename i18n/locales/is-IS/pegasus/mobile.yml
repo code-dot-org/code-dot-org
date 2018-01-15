@@ -260,6 +260,12 @@
   studiobar_donate_body: "Eitt barn lærir fyrir hvern dollar sem þú gefur"
   studiobar_shop_title: "Verslun"
   studiobar_shop_body: "Klæðstu merkinu okkar með stolti."
+  homepage_stats_students: "of US students have accounts on Code.org"
+  homepage_stats_female: "of our students are female"
+  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
+  homepage_stats_policy: "states changed policy to support computer science"
+  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "&ldquo;Ég skora á stúlkur í hverju einasta landi að læra Klukkustund kóðunar&rdquo; \nMalala, Nóbelsverðlaunahafi"
   homepage_hero_text_susan: |-
     &ldquo;Getir þú breytt tækninni, getur þú breytt heiminum.&rdquo;
@@ -490,6 +496,7 @@
   video_title_obama: "Obama forseti talar um tölvunarfræði"
   video_title_hoc_is_here: "Klukkustund kóðunar er hér - Allir geta lært"
   video_title_anybody_can_learn: "Allir geta lært"
+  video_title_steph_curry: "Hour of Code with Steph Curry"
   video_title_draymond_green: "Klukkustund kóðunar með Draymond Green"
   video_title_russell_okung: "Klukkustund kóðunar með Russell Okung"
   video_title_real_madrid: "Klukkustund kóðunar með Real Madrid"

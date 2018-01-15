@@ -298,6 +298,12 @@
   studiobar_donate_body: 1ドルの寄付ごとに、一人の子供が学びます
   studiobar_shop_title: "ショップ"
   studiobar_shop_body: "いままでの考え方を変えよう。誇りを持って私たちのロゴをつけよう。"
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "&ldquo;私はすべての国の女の子に、Hour of Code を 1 つ学ぶことを提案します。&rdquo;
     \nマララ, ノーベル平和賞受賞者"
   homepage_hero_text_susan: |-
@@ -370,7 +376,7 @@
   homepage_slot_text_title_hoc: Hour of Code（コーディングを学ぶ時間）
   homepage_slot_text_blurb_hoc: "誰でも学べる！早速始めよう。"
   homepage_slot_text_link_hoc: "「コードの時間」に挑戦する"
-  homepage_slot_text_link_about_hoc: Hour of Code（アウアオブコード）について
+  homepage_slot_text_link_about_hoc: Hour of Code（アワー オブ コード）について
   homepage_slot_text_link_host: Hour of Code を主催する
   homepage_slot_text_link_hocserved: "# 人が試しました"
   homepage_solot_text_link_volunteer: Hour of Code のボランティア
@@ -543,6 +549,7 @@
   video_title_obama: "オバマ大統領もコンピューターサイエンスを"
   video_title_hoc_is_here: Hour of Code - 誰でも学べるプログラミング
   video_title_anybody_can_learn: "誰もが学ぶことができます"
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: "ドレイモンド・グリーンとHour of Code"
   video_title_russell_okung: "ラッセル・オコングとHour of Code"
   video_title_real_madrid: "レアル マドリードとHour of Code"
@@ -1655,10 +1662,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
-  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
-  video_title_steph_curry: Hour of Code with Steph Curry
