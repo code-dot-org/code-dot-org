@@ -4,6 +4,8 @@ import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import Button from '../Button';
+import {startEditingStudent, cancelEditingStudent} from './manageStudentsRedux';
+import { connect } from 'react-redux';
 
 const styles = {
   xIcon: {
@@ -15,6 +17,17 @@ class ManageStudentActionsCell extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
     isEditing: PropTypes.bool,
+    //Provided by redux
+    startEditingStudent: PropTypes.func,
+    cancelEditingStudent: PropTypes.func,
+  };
+
+  onEdit = () => {
+    this.props.startEditingStudent(this.props.id);
+  };
+
+  onCancel = () => {
+    this.props.cancelEditingStudent(this.props.id);
   };
 
   render() {
@@ -23,7 +36,7 @@ class ManageStudentActionsCell extends Component {
         {!this.props.isEditing &&
           <QuickActionsCell>
             <PopUpMenu.Item
-              onClick={() => {}}
+              onClick={this.onEdit}
             >
               Edit
             </PopUpMenu.Item>
@@ -40,7 +53,7 @@ class ManageStudentActionsCell extends Component {
         {this.props.isEditing &&
           <div>
             <Button onClick={() => {}} color={Button.ButtonColor.white} text="Save" />
-            <Button onClick={() => {}} color={Button.ButtonColor.blue} text="Cancel" />
+            <Button onClick={this.onCancel} color={Button.ButtonColor.blue} text="Cancel" />
           </div>
         }
       </div>
@@ -48,4 +61,11 @@ class ManageStudentActionsCell extends Component {
   }
 }
 
-export default ManageStudentActionsCell;
+export default connect(state => ({}), dispatch => ({
+  startEditingStudent(id) {
+    dispatch(startEditingStudent(id));
+  },
+  cancelEditingStudent(id) {
+    dispatch(cancelEditingStudent(id));
+  },
+}))(ManageStudentActionsCell);

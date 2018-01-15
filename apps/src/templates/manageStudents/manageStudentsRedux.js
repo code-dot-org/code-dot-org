@@ -1,11 +1,14 @@
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
 const SET_STUDENTS = 'manageStudents/SET_STUDENTS';
 const SET_SECTION_ID = 'manageStudents/SET_SECTION_ID';
+const START_EDITING_STUDENT = 'manageStudents/START_EDITING_STUDENT';
+const CANCEL_EDITING_STUDENT = 'manageStudents/CANCEL_EDITING_STUDENT';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
 export const setStudents = studentData => ({ type: SET_STUDENTS, studentData });
-export const startEditingStudent = (studentId) => ({ type: startEditingStudent, studentId });
+export const startEditingStudent = (studentId) => ({ type: START_EDITING_STUDENT, studentId });
+export const cancelEditingStudent = (studentId) => ({ type: CANCEL_EDITING_STUDENT, studentId });
 
 const initialState = {
   loginType: '',
@@ -30,6 +33,22 @@ export default function manageStudents(state=initialState, action) {
     return {
       ...state,
       studentData: action.studentData,
+    };
+  }
+  if (action.type === START_EDITING_STUDENT) {
+    let updatedStudentData = state.studentData;
+    updatedStudentData[action.studentId].isEditing = true;
+    return {
+      ...state,
+      studentData: updatedStudentData,
+    };
+  }
+  if (action.type === CANCEL_EDITING_STUDENT) {
+    let updatedStudentData = state.studentData;
+    updatedStudentData[action.studentId].isEditing = false;
+    return {
+      ...state,
+      studentData: updatedStudentData,
     };
   }
 

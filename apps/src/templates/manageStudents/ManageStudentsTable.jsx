@@ -44,7 +44,7 @@ const nameFormatter = (name, {rowData}) => {
       name={name}
       loginType={rowData.loginType}
       username={rowData.username}
-      isEditing={false}
+      isEditing={rowData.isEditing}
     />
   );
 };
@@ -54,7 +54,7 @@ const ageFormatter = (age, {rowData}) => {
     <ManageStudentsAgeCell
       age={age}
       id={rowData.id}
-      isEditing={false}
+      isEditing={rowData.isEditing}
     />
   );
 };
@@ -64,7 +64,7 @@ const genderFormatter = (gender, {rowData}) => {
     <ManageStudentsGenderCell
       gender={gender}
       id={rowData.id}
-      isEditing={false}
+      isEditing={rowData.isEditing}
     />
   );
 };
@@ -72,20 +72,29 @@ const genderFormatter = (gender, {rowData}) => {
 const passwordFormatter = (loginType, {rowData}) => {
   return (
     <div>
-      {rowData.loginType === SectionLoginType.email &&
-        <PasswordReset
-          resetAction={()=>{}}
-          initialIsResetting={false}
-        />
+      {!rowData.isEditing &&
+        <div>
+          {rowData.loginType === SectionLoginType.email &&
+            <PasswordReset
+              resetAction={()=>{}}
+              initialIsResetting={false}
+            />
+          }
+          {(rowData.loginType === SectionLoginType.word || rowData.loginType === SectionLoginType.picture) &&
+            <ShowSecret
+              resetSecret={()=>{}}
+              initialIsShowing={false}
+              secretWord={rowData.secretWords}
+              secretPicture={rowData.secretPicturePath}
+              loginType={rowData.loginType}
+            />
+          }
+        </div>
       }
-      {(rowData.loginType === SectionLoginType.word || rowData.loginType === SectionLoginType.picture) &&
-        <ShowSecret
-          resetSecret={()=>{}}
-          initialIsShowing={false}
-          secretWord={rowData.secretWords}
-          secretPicture={rowData.secretPicturePath}
-          loginType={rowData.loginType}
-        />
+      {rowData.isEditing &&
+        <div>
+          Auto-generated
+        </div>
       }
     </div>
   );
@@ -95,7 +104,7 @@ const actionsFormatter = function (actions, {rowData}) {
   return (
     <ManageStudentsActionsCell
       id={rowData.id}
-      isEditing={false}
+      isEditing={rowData.isEditing}
     />
   );
 };
