@@ -1,0 +1,43 @@
+%p
+  Hi
+  = @registration.pd_application.first_name + ','
+
+%p
+  Thank you for submitting your TeacherCon registration form for Code.org's
+  Professional Learning Program.
+
+- if @registration.accepted?
+  %p
+    We look forward to meeting you this summer! You will receive more
+    information about travel approximately six weeks before TeacherCon. In the
+    meantime, please visit
+    - info_link = "code.org/educate/teachercon/#{@registration.pd_application.workshop.location_city.downcase}"
+    = link_to(info_link, "https://#{info_link}")
+    to learn more about your upcoming TeacherCon experience, and check out your
+    Welcome Kit <link to digital welcome kit> for information about the
+    Professional Learning Program and resources to help you recruit students for
+    your course.
+
+- if @registration.waitlisted?
+  %p
+    Thank you for submitting your registration form. We've added you to our
+    waitlist, and we will make sure to reach out if a space becomes available.
+
+- if @registration.declined?
+  %p
+    If you responded that you are not able to join the program this year, please
+    feel free to access all of our curricula and materials at
+    = link_to("code.org/educate", "https://code.org/educate") + "."
+    We hope that you'll consider applying again in 2019.
+
+%p
+  Please contact
+  = link_to("teacher@code.org", "mailto:teacher@code.org")
+  with any questions.
+
+%p
+  Sarah Fairweather
+  %br
+  Education Team Program Manager
+  %br
+  Code.org
