@@ -781,6 +781,9 @@
         sobą.
       audience: Wiek 13+
       cta: Zobacz instrukcję
+    hoc-encryption:
+      title: Proste szyfrowanie
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Laboratorium Sieci (beta)
       body: Web Lab to środowisko programowania, w którym można tworzyć proste strony
@@ -803,6 +806,10 @@
       title: Minecraft
       body: Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry
         Minecraft.
+    hero:
+      title: Minecraft
+      body: Minecraft powraca na Godzinę Kodowania z najnowszą serią zadań! Koduj
+        podróżując po świecie Minecraftu.
     sports:
       title: Zawody
       body: Stwórz grę w koszykówkę albo włąsną mieszankę różnych sportów.
@@ -884,6 +891,9 @@
     hide_survey_last_answer: Ankieta jest anonimowa.  Odwiedź panel nauczyciela, by
       zobaczyć tabelę wyników.  Zauważ, że wyniki są widoczne tylko, jeśli co najmniej
       pięciu uczniów wypełniło ankiety.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Dziękujemy
     wrong_body: Dziękujemy za przesłanie odpowiedzi.
@@ -1018,8 +1028,8 @@
       linka. Upewnij się, że ten link pochodzi z łamigłówki Minecraft: Agent i że
       został skopiowany w całości.'
     share_link_import_error_header: Coś poszło nie tak.
-    share_link_import_error_body: Wystąpił problem podczas importowania tego udostępnionego
-      linka. Spróbuj ponownie.
+    share_link_import_error_body: Wystąpił problem podczas importowania tego linku
+      udostępniania. Proszę spróbować ponownie.
     exit: Powrót do Kursu
     my_projects: Moje Projekty
     project_gallery: Projekty

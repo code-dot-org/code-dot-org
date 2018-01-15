@@ -3764,6 +3764,9 @@
           </next>
           </block>
           </xml>
+      CourseF_PlayLab_vars2_authored_hint:
+        Course_4_Play_Lab_Vars_2_a: "დარწმუნდით, რომ `dog_speed`-ზე მინიჭებული რიცხვი
+          აღემატება `cat_speed`-ზე მინიჭებულს."
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           ეს არის პირველი მინიშნება.
@@ -5776,6 +5779,15 @@
           გახსოვდეთ, რომ შეგიძლია ჩასვათ 1-ზე მეტი ბლოკი შემდეგ ციკლში: <xml><block type="controls_repeat">
           <title name="TIMES">???</title>
           </block></xml>.
+      courseA_artist_loops7_forVideo_authored_hint:
+        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
+          the code step-by-step and look for a pattern.
+        courseA_artist_loops7_b: "ჯერ დაწერეთ კოდი ერთი ტალღისთვის, შემდეგ გაიმეორეთ
+          იგივე მოქმედება მომდევნო ორი ტალღის დასახატად."
+        courseA_artist_loops7_c: |-
+          გახსოვდეთ, რომ შეგიძლია ჩასვათ 1-ზე მეტი ბლოკი შემდეგ ციკლში: <xml><block type="controls_repeat">
+          <title name="TIMES">???</title>
+          </block></xml>.
       courseA_artist_loops8_authored_hint:
         courseA_artist_loops8_a: Try running the code to see what has been written
           for you.
@@ -5800,6 +5812,13 @@
           `გადახტით` შემდეგზე!"
         courseA_artist_loops_challenge2_c: "ამ გამოწვევისთვის დაგჭირდებათ ციკლში ძალიან
           ბევრი ბლოკის განთავსება."
+      courseA_artist_loops_challenge2a_authored_hint:
+        courseA_artist_loops_challenge2_a: 'ამის მსგავსი ბლოკები: <xml>  <block type="simple_move_up_left"/></xml>
+          დაეხმარებიან თქვენს მხატვარს დახრილ ზედაპირებზე მოძრაობაში!'
+        courseA_artist_loops_challenge2_b: When you finish one tent, `jump` up twice
+          to get to the next!
+        courseA_artist_loops_challenge2_c: All of your blocks will need to be inside
+          of a loop to finish this puzzle.
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: "თქვენ შეგიძლიათ `ახტომის` ბლოკების გამოყენება სხვა ადგილებზე
           მოსახვედრად."
@@ -6424,6 +6443,14 @@
           </next>
           </block>
           </xml>
+      courseB_collector_loops_challenge2a_authored_hint:
+        courseB_collector_loops_challenge2a_a: If something goes wrong, try debugging
+          it. Don't give up!
+        courseB_collector_loops_challenge2a_b: Look at this option for getting through
+          the maze. Do you see a pattern that you can repeat?
+        courseB_collector_loops_challenge2a_c: To collect all of the treasure, you
+          will either need to add two  <xml> <block type="collector_collect"/></xml>
+          blocks inside your loop, or put the block inside of its own `repeat` block.
       courseB_collector_loops_challenge`_authored_hint:
         courseA_collector_loops_challenge2_b: |
           ამ პრობლემის გადასაჭრელად თქვენ მხოლოდ ერთი ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) ბლოკის გამოყენება გჭირდებათ.
@@ -7082,9 +7109,12 @@
           name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\"
           config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n
           \               </next>\n              </block>\n              </statement></block></xml>"
+      courseC_artist_prog_challenge2a_authored_hint:
+        courseC_artist_prog_challenge2_a: After you draw the first line, try turning
+          left before you draw your second line.
+        courseC_artist_prog_challenge2_b: After you draw the second line, try turning
+          right before you draw your third line.
       courseC_collector_loops_challenge2_authored_hint:
-        courseC_maze_loops_challenge2_a: "საწყისი კოდი მშვენივრად მუშაობს - მაშინმ
-          როდესაც თითოეულ გროვაში მხოლოდ ერთი განძის ნაწილაკია!"
         courseC_maze_loops_challenge2_b: "გამოიყენეთ ციკლები, რათა გეყოთ `შეგროვების`
           ბლოკები!"
       courseC_collector_prog1_authored_hint:
@@ -7142,6 +7172,8 @@
       courseC_collector_prog_challenge2_authored_hint:
         courseC_collector_prog_challenge1_a: "გამოიყენეთ `შეგროვების` ბრძანება უფრო
           ხშირად, რათა შეაგროვოთ დამატებითი განძი."
+        courseC_collector_prog_challenge1_b: Lost your way?  Try this path to solve
+          the puzzle!
       courseC_external_events_authored_hint: []
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
@@ -7222,6 +7254,39 @@
           ჩასვათ ერთი ციკლი მეორეში! ამას ეწოდება **ჩასმული ციკლი**."
       courseC_harvester_loops9_authored_hint: []
       courseC_harvester_loops_challenge1_authored_hint:
+        courseC_harvester_loops_challenge1_a: "ციკლების გარეშე ამის შესრულება ძალიან
+          რთული იქნება!"
+        courseC_harvester_loops_challenge1_b: "თქვენ შეგიძლიათ გამოიყენოთ `წინ მოძრაობა`
+          და `სიმინდის შეგროვება` იმდენჯერ, რამდენჯერაც დაგჭირდებათ, შემდეგ კი შეტრიალდეთ
+          მარჯვნივ ყოველ კუთხესთან."
+        courseC_harvester_loops_challenge1_c: |-
+          სიმინდის შესაგროვებლად საუკეთესო ამონახსნი იყენებს `გამეორების` ბლოკს სხვა `გამეორების` ბლოკის შიგნით. თქვენ შეგიძლიათ ამ ნიმუშის გამოყენება დანარჩენი თავსატეხისთვისაც!
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">მოძრაობაწინ</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">მობრუნებამარჯვნივ</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></next></block></xml>
+      courseC_harvester_loops_challenge1a_authored_hint:
         courseC_harvester_loops_challenge1_a: "ციკლების გარეშე ამის შესრულება ძალიან
           რთული იქნება!"
         courseC_harvester_loops_challenge1_b: "თქვენ შეგიძლიათ გამოიყენოთ `წინ მოძრაობა`
@@ -7336,8 +7401,6 @@
         courseC_maze_debugging_challenge1_c: "თუ გაიჭედეთ, ყოველთვის შეგიძლიათ დაიწყოთ
           თავიდან, ან მოაშოროთ მთელი კოდი და იპოვოთ თქვენი გზა!"
       courseC_maze_debugging_challenge2_authored_hint:
-        courseC_maze_debugging_challenge2_a: "ამის ამოხსნის ერთ-ერთი გზაა წინ, მოხვევებს
-          შორის დაამატოთ მეტი საფეხურები."
         courseC_maze_debugging_challenge2_b: "თუ გაიჭედეთ, ყოველთვის შეგიძლიათ დაიწყოთ
           თავიდან, ან მოაშოროთ მთელი კოდი და იპოვოთ თქვენი გზა!"
         courseC_maze_debugging_challenge2_c: |-
@@ -7397,6 +7460,11 @@
         courseC_maze_loops_challenge1_b: გამეორების ბლოკებს შორის ციყვის მომდევნო
           მოქმედებისათვის გასამზადებლად, დაგჭირდებათ "მარცხნივ შეხვევა" ან "მარჯვნივ
           შეხვევა".
+      courseC_maze_loops_challenge1a_authored_hint:
+        courseC_maze_loops_challenge1_a: Think about this path as being two different
+          pieces. Each one has a pattern you can repeat.
+        courseC_maze_loops_challenge1_b: Can you remember how to use loops to repeat
+          a staircase pattern?
       courseC_maze_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_a: "საწყისი კოდი მშვენივრად მუშაობს - მაშინმ
           როდესაც თითოეულ გროვაში მხოლოდ ერთი განძის ნაწილაკია!"
@@ -7593,8 +7661,8 @@
         courseD_artist_binary8_c: "არ შეუშინდეთ შეცდომის დაშვებას! სცადეთ ორობითად
           დაწერა და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე
           უკეთ გაიგებთ, რა ხდება."
-      courseD_artist_binaryFP_authored_hint:
-        courseD_artist_binaryFP_a: "გაუშვით ეს კოდი და ნახეთ, რა მოხდება!"
+      courseD_artist_binaryFP_authored_hint: []
+      courseD_artist_binaryFP8_authored_hint: []
       courseD_artist_binary_challenge2_authored_hint:
         courseD_artist_binary_challenge2_a: "თავდაპირველ პროგრამაში რამდენიმე ხაზი
           შეცდომითაა."
@@ -7785,6 +7853,8 @@
           - დახატეთ სამკუთხედი
           - გადახტით წინ 50 პიქსელით
           - მობრუნდით მარჯვნივ 90 გრადუსით
+        courseD_artist_nestedLoops_challenge1_d: Put all of your code inside of a
+          `repeat 4 times` loop to finish it off.
       courseD_artist_nestedLoops_challenge2_authored_hint:
         courseD_artist_nestedLoops_challenge2_a: "ჩვეულებრივი რვაკუთხედის დასახატად
           მხატვარმა უნდა შეასრულოს 45 გრადუსიანი ბრუნი 8-ჯერ."
@@ -7873,6 +7943,8 @@
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to
           see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals2_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
           won't.  If you want your code to run in both cases, make sure to use an
           `if` statement.
@@ -7880,6 +7952,8 @@
           ციკლის ან `სანამ წინ გზა არის` ბლოკების გამოყენება."
         courseD_bee_conditionals2_c: "თქვენ არ გიწევთ ღრუბლებში ფიჭების შემოწმება,
           იქ მხოლოდ ყვავილები ან ცარიელი სივრცეებია."
+        courseD_bee_conditionals2_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals2_test_authored_hint:
         courseD_bee_conditionals2_aa: Need help getting started?  Here is a little
           hint video.
@@ -7893,6 +7967,8 @@
         courseD_bee_conditionals2_d: Need help finishing things up?  Watch this hint
           video.
       courseD_bee_conditionals3_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each
           space to see if it has either a flower or nothing.
         courseD_bee_conditionals3_b: "თქვენ შეგიძლიათ `გამეორების` ან `სანამ` ციკლის
@@ -7900,7 +7976,11 @@
         courseD_bee_conditionals3_c: "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების
           დამატება და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე
           უკეთ მიხვდებით, რა ხდება."
+        courseD_bee_conditionals3_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals4_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals4_a: You can still treat every space as if there is
           a cloud over it, even though you can see the whole path.
         courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check
@@ -7908,36 +7988,52 @@
         courseD_bee_conditionals4_c: <xml><block type="maze_untilBlocked"/></xml>
           ბლოკის გამოყენებით, თქვენ უნდა იმოძრაოთ წინ და შეამოწმოთ, არის თუ არა სადმე
           ყვავილი. თუ იქ ყვავილია, რა უნდა გააკეთოს ფუტკარმა?
+        courseD_bee_conditionals4_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals5_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals5_a: "განიხილეთ ამ მართკუთხა გზის ყოველი გვერდი, როგორც
           ცალკე გზა. შექმენით ჩასმული ციკლი გარედან `გამეორების` ბლოკით და შიგნიდან
           `სანამ წინ გზა არის` ციკლით. რამდენი გზის გავლა მოუწევს ფუტკარს, თუ ფუტკარმა
           უნდა იბზუილოს ყოველ ყვავილიან მხარეს?"
-        courseD_bee_conditionals5_b: "`სანამ წინ არის გზა` ბლოკის შიგნით თქვენ მოგიწევთ
-          წინ მოძრაობა და ყვავილის არსებობის შემოწმება. როგორ შეამოწმებთ, არის თუ
-          არა წინ ყვავილი? რას გააკეთებთ, თუ ყვავილი არის?"
         courseD_bee_conditionals5_c: "მართკუთხედს აქვს 3 გვერდი ყვავილებით, ამიტომ
           კოდი უნდა `განმეორდეს 3-ჯერ`. ყოველი გამეორებისას ფუტკარმა უნდა გააგრძელოს
           გზაზე მოძრაობა, `სანამ წინ გზა არსებობს`. გზაზე მოძრაობის გასაგრძელებლად,
           ფუტკარმა უნდა `იმოძრაოს წინ`. გზაში ფუტკარმა უნდა შეამოწმოს ყვავილის არსებობა.
           `თუ იქ ყვავილია`, ფუტკარმა უნდა `შეაგროვოს ნექტარი`."
+        courseD_bee_conditionals5_b: "`სანამ წინ არის გზა` ბლოკის შიგნით თქვენ მოგიწევთ
+          წინ მოძრაობა და ყვავილის არსებობის შემოწმება. როგორ შეამოწმებთ, არის თუ
+          არა წინ ყვავილი? რას გააკეთებთ, თუ ყვავილი არის?"
+        courseD_bee_conditionals5_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals6_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for
           honeycomb beneath each cloud.
         courseD_bee_conditionals6_b: "ამ შემთხვევაში, თქვენ არ მოგიწევთ ღრუბლების
           ქვეშ ნექტარის არსებობის შემოწმება."
         courseD_bee_conditionals6_c: "არსებობს თუ არა ციკლი, რომელიც თქვენს კოდს გაამარტივებს?"
+        courseD_bee_conditionals6_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals7_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
           the challenge."
         courseD_bee_conditionals7_b: "თუ ღრუბლის ქვეშ ყვავილი არაა, იქ ფიჭაა, ამიტომ
           თქვენ არ მოგიწევთ ცარიელი ადგილისთვის კოდის მოფიქრება."
+        courseD_bee_conditionals7_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals7_predict2_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
           the challenge."
       courseD_bee_conditionals8_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals8_a: |-
           **გახსოვდეთ:**ეს თავსატეხი ყოველ გაშვებაზე იცვლება.
 
@@ -7952,6 +8048,8 @@
           იმის მიუხედავად, რომ თქვენს წინ ღრუბელია, შეგიძლიათ თავიდანვე არ ეწვიოთ მას. სცადეთ კვადრატის მარჯვენა ქვედა მხარეს განლაგებული ღრუბლით დაწყება.
 
           ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
+        courseD_bee_conditionals8_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals9_authored_hint: []
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: "შეგიძლიათ მოძებნოთ გზა, რომელიც მივა
@@ -8072,6 +8170,19 @@
           * გადაადგილდი წინ
           * გააკეთე 3 თაფლი
           * გადაადგილდი უკანა მიმართულებით
+      courseD_bee_debugging_challenge1a_authored_hint:
+        courseD_bee_debugging_challenge1_a: "რატომ არ მუშაობს პროგრამის პირველი ნაწილი?
+          იფიქრეთ იმაზე, რატომ უნდა იმოძრაოს ფუტკარმა უკანა მიმართულებით. რამდენ ნექტარს
+          აგროვებს ფუტკარი, როდესაც ყვავილზე გადადის?"
+        courseD_bee_debugging_challenge1_b: 'To solve this puzzle, have the bee follow
+          the same pattern to make honey that he does when collecting nectar. '
+        courseD_bee_debugging_challenge1_c: |-
+          After the bee makes it to the bottom row, have it repeat these commands:
+
+          * Repeat 2 times:
+          * Move forward
+          * Make honey
+          * Move backward
       courseD_bee_debugging_challenge2_authored_hint:
         courseD_bee_debugging_challenge1_a: "რატომ არ მუშაობს პროგრამის პირველი ნაწილი?
           იფიქრეთ იმაზე, თუ რატომ უნდა იმოძრაოს ფუტკარმა უკანა მიმართულებით. რამდენ
@@ -8475,6 +8586,12 @@
           </next>
           </block>
           </xml>
+      courseD_collector_nested_loops_challenge2a_authored_hint:
+        courseD_collector_nested_loops_challenge2a_a: "არ დაგავიწყდეთ, რომ შეგიძლიათ
+          `გაიმეოროთ` როგორც ერთი ბრძანება, ასევე უფრო გრძელი კოდი. თქვენ ასევე შეგიძლიათ
+          `გაიმეოროთ` `გამეორების` ბლოკი!"
+        courseD_collector_nested_loops_challenge2a_b: Can you figure out how to get
+          all four gems without using any more blocks than it takes to get two?
       courseD_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
           ყოველი მხრიდან ოთხი `წინ გადაადგილების` ბლოკის გამოყენების მაგივრად, სცადეთ `გამეორების` ციკლში ერთი `წინ გადაადგილების` ბლოკის განთავსება. ასე გააკეთეთ:
@@ -8738,6 +8855,10 @@
         courseD_harvester_nested_loops_challenge1_a: "სავარაუდოდ, თქვენ უკვე გამოიყენეთ
           ციკლი, რათა შექმნათ ტეხილის მსგავსი ნიმუში. თუ გახსოვთ ეს ალგორითმი, შეგიძლიათ
           შეიტანოთ მასში მცირე ცვლილებები."
+        courseD_harvester_nested_loops_challenge1_b: To collect more than one piece
+          of corn, you need to use `pick corn` more than one time.
+        courseD_harvester_nested_loops_challenge1_c: You will need to put a small
+          loop inside of your main loop to solve this puzzle!
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: "არ დაგავიწყდეთ, რომ შეგიძლიათ `გაიმეოროთ`
           როგორც ერთი ბრძანება, ასევე უფრო გრძელი კოდი. თქვენ ასევე შეგიძლიათ `გაიმეოროთ`

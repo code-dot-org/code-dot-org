@@ -32,7 +32,7 @@
       2-3 Artist 8_instruction: Dokončaj sobi za vsako žival z razdelitvijo pravokotnika
         na 2 enaka kvadrata. Širina pravokotnika je 200 pikslov, višina pa 100 pikslov!
       2-3 Artist 9 NEW_instruction: Končaj zmaja
-      2-3 Artist 9 REPLACEMENT_instruction: Finish drawing these stairs!
+      2-3 Artist 9 REPLACEMENT_instruction: Do konca narišite te stopnice!
       2-3 Artist 9_instruction: Končaj zmaja
       2-3 Artist Assessment 1_instruction: Nariši še drugi zob s širino in višino
         25 pikslov.
@@ -260,9 +260,8 @@
         tako, da dobi 4 nektarje in jo uporabi, da dobiš ves nektar iz cveta.
       2-3 Bee Functions 6_instruction: Zdaj pa uporabi isto funkcijo, da dobiš nektar
         iz treh cvetov.
-      2-3 Bee Functions 7_instruction: |-
-        The flowers are now further away. Edit the
-        given function and use it to collect all of the nectar from the flowers.
+      2-3 Bee Functions 7_instruction: Rože so sedaj bolj oddaljene. Uredi funkcijo
+        in z njo zberi ves nektar iz cvetov.
       2-3 Bee Functions 8_instruction: Ustvari svojo funkcijo, ki dobi 7 nektarjev,
         se premakne naprej in naredi 7 medu. Uporabi to funkcijo, da dobiš med iz
         obeh cvetov in narediš med pri obeh satovjih.
@@ -283,9 +282,8 @@
       2-3 Bee Loops 12_instruction: |-
         Use while loops to collect all of the nectar
         from the flowers in this field.
-      2-3 Bee Loops 13_instruction: |-
-        Assessment: Collect all of the nectar using
-        the fewest blocks possible.
+      2-3 Bee Loops 13_instruction: 'Naloga: Poberi ves nektar tako, da uporabiš čim
+        manj blokov.'
       2-3 Bee Loops 1A_instruction: "Živio, jaz sem čebela. Mi pomagaš nabrati nektar
         od teh rožic? "
       2-3 Bee Loops 2_instruction: Uporabi zanko, da nabereš nektar in narediš med.
@@ -318,38 +316,33 @@
       2-3 Maze 1_instruction: 'Mi pomagaš ujeti prašička? Poskusi z večimi ukazi "Premakni
         se", da me premakneš v smeri prašička in klikni "Zaženi". '
       2-3 Maze 10_instruction: Pelji me k tej zeleni zlobi! (Pazi se TNTja)
-      2-3 Maze 11_instruction: |-
-        Get me to the flower I'm hungry! How many times
-        do you have to repeat a block?
+      2-3 Maze 11_instruction: Spravi me k cvetu, lačen sem! Kolikokrat je treba blok
+        ponoviti?
       2-3 Maze 12 (copy 1)_instruction: |-
         Can you replace the previous answer with
         only two blocks? (Hint: Create a loop using a "repeat times" block.)
       2-3 Maze 12 (copy 2)_instruction: |-
         Can you replace the previous answer with
         only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (old)_instruction: |-
-        Get me to the pig, now with the Repeat times
-        block!
-      2-3 Maze 12 - One Move Block_instruction: |-
-        Get to the pig! But this time, you
-        can only use one `move forward` block. Do you see any other blocks that could
-        help you?
+      2-3 Maze 12 (old)_instruction: 'Spravi me k pujsu, sedaj z uporabo bloka: Ponavljaj
+        tolikokrat!'
+      2-3 Maze 12 - One Move Block_instruction: Spravi me k pujsu! A tokrat lahko
+        uporabiš le blok 'premakni se naprej'. Ali vidiš še kakšen blok, ki bi ti
+        lahko bil v pomoč?
       2-3 Maze 12_instruction: "Ali lahko nadomestiš teh 5 blokov z dvemi? \n(Namig:
         Ustvari zanko z uporabo bloka za ponavljanje.)"
-      2-3 Maze 13 (old)_instruction: |-
-        Get me to the pig, now with the Repeat until
-        block!
+      2-3 Maze 13 (old)_instruction: Spravi me k pujsu, tokrat z uporabo bloka Ponavljaj
+        dokler!
       2-3 Maze 13_instruction: Pelji me do prašička z uporabo samo dveh blokov.
-      2-3 Maze 14 (old)_instruction: Get me to the pig with the Repeat until block!
+      2-3 Maze 14 (old)_instruction: Spravi me k pujsu z uporabo bloka Ponavljaj dokler!
       2-3 Maze 14_instruction: Pelji me do sončnice! (Kje je blok za ponavljanje,
         ko ga najbolj potrebujem?)
-      2-3 Maze 15 (old)_instruction: Get me to the pig with the Repeat until block!
+      2-3 Maze 15 (old)_instruction: Spravi me k pujsu z uporabo bloka Ponavljaj dokler!
       2-3 Maze 15_instruction: Uporabi dve zanki, da prideš do prašička in da uporabiš
         čim manj blokov.
-      2-3 Maze 16 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 16 before_instruction: |-
-        Can you figure out the fastest way to get
-        me to the pig?
+      2-3 Maze 16 (old)_instruction: Spravi me k pujsu z uporabo bloka Ponavljaj dokler!
+      2-3 Maze 16 before_instruction: Ali najdeš najhitrejši način, kako me spraviti
+        k pujsu?
       2-3 Maze 16_instruction: Pelji me do sončnice. Uporabi zanko!
       2-3 Maze 2_instruction: Ta prašiček kodra moje peruti. Pomagaj mi, da ga dobim!
       2-3 Maze 3_instruction: Najdi pot do prašička in me popelji po njej. Izogni
@@ -362,21 +355,16 @@
       2-3 Maze 8_instruction: Pelji me k prašičku!
       2-3 Maze 9_instruction: Pelji me k tej zeleni zlobi! (Pazi se TNTja)
       2-3 Maze Loops 1_instruction: Me lahko pelješ do prašička z uporabo 5 blokov?
-      2-3 Maze Loops 17_instruction: Get me to the sunflower!
+      2-3 Maze Loops 17_instruction: Uporabi, kar si se naučil, da bi me spravil k
+        sončnici!
       2-3 Maze Loops 18_instruction: |-
-        Get me to the sunflower using the fewest blocks
-        possible!  \r
-        \r
-        Try using one `repeat` loop inside of another to cut down
-        on the amount of code you need.
+        Spravi me k sončnici tako, a uporabiš čim manj blokov! \r \r
+        Poskušaj uporabiti blok ponovi -krat znotraj še enega, da zmanjšaš število blokov.
       2-3 Maze Loops 19_instruction: |-
-        Let's take this to another level! \r
-        Use
-        loops to get me to the sunflower with the fewest loops possible.
+        Pojdimo na naslednjo stopnjo! \r
+        Uporabi zanke tako, da me spraviš k sončnici, s čim manj uporabljenimi zankami.
       2-3 Maze Loops 20_instruction: Pripelji me do sončnice z uporabo čim manj blokov!
-      2-3 Maze Loops 21_instruction: |-
-        Get me to the sunflower using the fewest blocks
-        possible!
+      2-3 Maze Loops 21_instruction: Spravi me k sončnici z uporabo čim manj blokov!
       2-3 Maze Loops Assessment 1_instruction: Pelji me do sončnice z uporabo 5 blokov!
       2-3 Maze sq1_instruction: |-
         This pig is ruffling my feathers.  Help me find
@@ -394,10 +382,10 @@
       2-3 Maze sq6_instruction: |-
         Can you replace the previous answer with only two
         blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze sq7_instruction: Get me to the green intruder using only three blocks.
-      2-3 Maze sq8_instruction: |-
-        Get me to the pig! (Where is that "repeat times"
-        block when I need it?)
+      2-3 Maze sq7_instruction: Pripelji me do zelenega vsiljivca z uporabo zgolj
+        treh blokov.
+      2-3 Maze sq8_instruction: Spravi me k pujsu! (Kje je sedaj tisti "ponovi -krat"
+        blok, ko ga potrebuješ?)
       2-3 Maze sq9_instruction: Create loops to get to the pig using less blocks.
       2-3 maze sq11_instruction: Get me to the pig! What blocks got repeated?
       2-3 maze sq12_instruction: |-
@@ -408,14 +396,14 @@
         Naredi zanko s "ponavljaj do" bloki.
       2-3 maze sq14_instruction: Ali lahko prideš do sončnice, tako da uporabiš le
         4 bloke?
-      2-3 maze sq15_instruction: Can you get to the sunflower using only five blocks?
-      2-3 maze sq16_instruction: |-
-        Ok, this is similar, but slightly different. Can
-        you do it in only five blocks?
+      2-3 maze sq15_instruction: Ali lahko prideš do sončnice z uporabo le petih blokov?
+      2-3 maze sq16_instruction: Dobro, to je podobno. Ali ti lahko uspe le s petimi
+        bloki?
       2-3_instruction: |-
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
-      2-3level1_instruction: Help the bird catch the naughty pig by moving it forward
+      2-3level1_instruction: Pomagaj ptici ujeti nagajivega pujsa tako, da jo premakneš
+        naprej
       20hr_farmer_stage9_1_instruction: |-
         Hi, I'm a farmer. I need your help to flatten
         the field on my farm so it's ready for planting. Move me to the pile of dirt
@@ -523,9 +511,8 @@
         Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
       4-5 Artist 1_instruction: Pomagaj mi narisati kvadrat. (Vsaka stranica je dolga
         300 pikslov)
-      4-5 Artist 10_instruction: |-
-        Press "Run" to try the code. Then, repeat it
-        enough times to complete the drawing. The colors will be different every time.
+      4-5 Artist 10_instruction: Klikni "Zaženi" da preizkusiš kodo. Nato jo ponovi
+        tolikokrat, da dokončaš risbo. Barva bo vedno drugačna.
       4-5 Artist 11_instruction: Dokončaj zelene črte. Dolge so 300 pikslov, razmaknjene
         pa za 15 pikslov.
       4-5 Artist 2_instruction: Zankaj kodo z uporabo bloka "ponovi", da dokončaš
@@ -550,9 +537,8 @@
         Trikotniki so enakostranični s stranico dolžine 50 pikslov.
       4-5 Artist Assessment 1_instruction: Uporabi zanko, da narišeš enakostranični
         trikotnik. Vsaka stranica je dolga 300 pikslov.
-      4-5 Artist For Loops 1_instruction: |-
-        Put the numbers 1 through 10 into the
-        width blocks and run the code.
+      4-5 Artist For Loops 1_instruction: Vstavi števila med 1 in 10 v polje širina
+        in zaženi kodo.
       4-5 Artist For Loops 11_instruction: |-
         Complete the "for" block so that it
         counts 0, 20, 40, 60, 80... 200.
@@ -1471,6 +1457,18 @@
       CSDU6 arrays random_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select icons_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select rainbow_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_instruction: |-
+        Write a program that displays a
+        randomly chosen color from the array. (Click to see full instructions)
       CSDU6 arrays variable_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
@@ -2733,44 +2731,38 @@
         we use the counter variable to make the sides smaller as there are more of
         them? Instead of moving forward by a set amount, try moving forward (100 /
         counter) pixels.
-      Course 4 Artist For Loops 14_instruction: |-
-        If you turn a little bit more or
-        less than you normally would for a shape, it creates a neat effect. Try using
-        some of the code from the last level, but turning 89 degrees to create this
-        twisted square spiral.
+      Course 4 Artist For Loops 14_instruction: "Če se obrneš amlo manj ali malo več,
+        kot bi se pri risanju lika, lahko nastane ličen učinek. Poskusi uporabiti
+        del kode iz prejšnje naloge, vendar obračanje za 89 stopinj naredi tako zanimivo
+        kvadratno spiralo."
       Course 4 Artist For Loops 15_instruction: |-
         Free Play: Try making some drawings
         of your own using "for loops". We've added a few useful variables for you
         as well.
-      Course 4 Artist For Loops 2_instruction: |-
-        I've put the code for drawing a
-        triangle inside a for loop that counts from 50 to 100 by 10.  NOTE: Make sure
-        you look at the code before you hit "Run".
-      Course 4 Artist For Loops 3_instruction: |
-        Use the last puzzle as a reference
-        to complete this one.  The smallest triangle has 20 pixel sides, the largest
-        has 200 pixel sides, and each triangle is 20 pixels larger than the last.
-      Course 4 Artist For Loops 4_instruction: "How would you modify what you've\nlearned
-        to draw these squares? They start at 15 pixels long, the largest is\n300 pixels
-        long, and each square is 15 pixels larger than the last. "
+      Course 4 Artist For Loops 2_instruction: "Koda za risanje trikotnika je v zanki,
+        ki od 50 do 100 prišteva po 10. \nOPOZORILO: Preglej kodo, preden pritisneš
+        \"Zaženi\"."
+      Course 4 Artist For Loops 3_instruction: "Uporabite prejšnjo rešitev kot predlogo
+        za dokončanje te naloge. \nNajmanjši trikotnik ima stranice dolge 20 pikslov,
+        največji pa 200 pikslov. Vsak naslednji trikotnik je za 20 pikslov večji.\n"
+      Course 4 Artist For Loops 4_instruction: 'Kaj bi spremenil pri tej nalogi, da
+        bodo tokrat narisani kvadrati? Začetna dolžina stranice je 15 pikslov, najdaljša
+        pa meri 300 pikslov. Vsaka naslednja je za 15 pikslov daljša. '
       Course 4 Artist For Loops 5_instruction: "Good job on the last puzzle! Let's\nuse
         that \"counter\" variable block again to draw this cool picture. "
       Course 4 Artist For Loops 6_instruction: |-
         Free Play! Try using a for loop to
         draw a growing shape pattern of your own design.
-      Course 4 Artist For Loops 6a_instruction: |-
-        Make three small changes to the
-        code from the last level to get this!
+      Course 4 Artist For Loops 6a_instruction: Naredi tri majhne sprememb v kodi
+        iz prejšnje naloge, da narišeš tole!
       Course 4 Artist For Loops 7_instruction: |-
         What happens if you remove the "Repeat
         3" from this algorithm, keeping the "move" and "turn" blocks in the for
         loop? In this spiraling triangle, each side is 20 pixels longer than the last.
       Course 4 Artist For Loops 8_instruction: |-
-        Just one little change to the code
-        from the last image can create this drawing. Can you figure out what that
-        change is?\r
+        Samo majhna sprememba kode iz prejšnje naloge lahko nariše tole sliko. Lahko ugotoviš, kaj je treba spremeniti? \r
         \r
-        Hint:  You need to remove something!
+        Namig: Nekaj je treba odstraniti!
       Course 4 Artist For Loops 8a_instruction: |-
         Just one little change to the code
         from the last image can create this image. Can you figure out what that change
@@ -3240,18 +3232,14 @@
         and decrease each time that Cat tags Dog with a sandwich.\\r\n\\r\nNote:\nWhen
         you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
         on to the next puzzle. "
-      Course 4 Play Lab Vars 1_instruction: |-
-        This time you don't have to write any
-        code, just hit "Run" to play the game! In this game, you're the dog who
-        is trying to collect more flags than the cat. Use the down arrow to control
-        the dog. Press "Finish" when you're done playing.
-      Course 4 Play Lab Vars 2_instruction: |-
-        The race in that last puzzle wasn't
-        very fair! Change the `dog_speed` variable to make sure you can collect more
-        flags than Cat. The first to collect 10 flags wins!
-      Course 4 Play Lab Vars 3_instruction: |-
-        Use the left and right arrows to move,
-        and the up arrow to jump. See if you can collect all of the flags.
+      Course 4 Play Lab Vars 1_instruction: Tokrat bo šlo brez kode. Le pritisni "Zaženi"
+        in igraj igro. V tej igri si pes, ki poskuša zbrati več zastavic kot maček.
+        Za nadzor nad psom uporabi puščico navzdol. Potem pritisni "končaj".
+      Course 4 Play Lab Vars 2_instruction: Igra v prejšnji nalogi ni bila najbolj
+        poštena. Spremeni vrednost spremenljivke hitrost psa 'dog speed' tako, da
+        boš lahko pobral več zastavic, kot maček. Prvi, ki prvi zbere 10 točk, zmaga!
+      Course 4 Play Lab Vars 3_instruction: Uporabi puščici levo in desno za premikanje
+        psa in puščico gor za skok. Ali lahko zbereš vse zastave?
       Course 4 Play Lab Vars 4_instruction: |-
         Now we're using a variable called "height"
         to control how high the dog can jump. Update the "height" variable so that
@@ -3479,6 +3467,64 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
+        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars10_instruction: |-
+        Free Play time! Here are all of the variables
+        we've played with so far in this stage, as well as a few more in case you
+        want them. \r
+        \r
+        Notice that there are now so many blocks in our toolbox
+        that they need to be organized!  Here, we've put each piece into an appropriate
+        category.  Take some time to explore everything that is available. When you're
+        done browsing, make a game or story using repeats, variables, and events.  \r
+        \r
+        Hint:
+        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars2_instruction: Igra v prejšnji nalogi ni bila najbolj poštena.
+        Spremeni vrednost spremenljivke hitrost psa 'dog speed' tako, da boš lahko
+        pobral več zastavic, kot maček. Prvi, ki prvi zbere 10 točk, zmaga!
+      CourseF_PlayLab_vars3_instruction: Uporabi puščici levo in desno za premikanje
+        psa in puščico gor za skok. Ali lahko zbereš vse zastave?
+      CourseF_PlayLab_vars4_instruction: |-
+        Now we're using a variable called "height"
+        to control how high the dog can jump. Update the "height" variable so that
+        the dog can jump high enough to reach all the flags.
+      CourseF_PlayLab_vars5_instruction: "Let's build a game! First we'll need\na
+        score. Rebuild the code that you saw in the last level to set the score\nto
+        10. "
+      CourseF_PlayLab_vars6_instruction: |-
+        Use the right arrow to throw pie.\r
+        \r
+        In
+        our game, how should we score points? Add 1 to your "points" variable each
+        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
+        event to trigger an update to your score. You can increment your variable
+        by setting "points = points + 1." Get your score up to 10 (going one at
+        a time!) to pass the level.
+      CourseF_PlayLab_vars7_instruction: |-
+        Use the right arrow to throw pie.\r
+        \r
+        In
+        our game, how should we score points? Add 1 to your "points" variable each
+        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
+        event to trigger an update to your score. You can increment your variable
+        by setting "points = points + 1." Get your score up to 10 (going one at
+        a time!) to pass the level.
+      CourseF_PlayLab_vars8_instruction: |-
+        Use the right arrow to throw pie.\r
+        \r
+        In
+        our game, how should we score points? Add 1 to your "points" variable each
+        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
+        event to trigger an update to your score. You can increment your variable
+        by setting "points = points + 1." Get your score up to 10 (going one at
+        a time!) to pass the level.
+      CourseF_PlayLab_vars9_instruction: |-
+        Nice, now let's make sure this game isn't
+        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
+        2), you should lose a point. Start with 10 points so it's not too hard. Let
+        your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution_instruction: Navodila
       Crack a Caesar Cipher_instruction: Navodila
       ECSPD Binary Odometer_instruction: |-
@@ -7672,11 +7718,17 @@
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_forVideo_instruction: |-
+        Use the `repeat` loop to add waves
+        to the water.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
       courseA_artist_loops_challenge2_instruction: |-
         "Can you help me make two bird
         houses?"
+      courseA_artist_loops_challenge2a_instruction: |-
+        *"Help me get these three tents
+        set up!"*
       courseA_artist_loops_challenge3_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
@@ -7885,6 +7937,9 @@
       courseB_collector_loops_challenge2_instruction: |-
         Let's get the treasure! Help
         me across each row then come back to start the next row. Can you find a pattern?
+      courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
       courseB_collector_prog1_instruction: |-
@@ -8128,9 +8183,12 @@
       courseC_artist_prog_challenge2_instruction: |-
         *Help me paint the yellow lines
         on this road!*
+      courseC_artist_prog_challenge2a_instruction: |-
+        *Help me paint the yellow lines
+        on this road!*
       courseC_collector_loops_challenge2_instruction: |-
-        Let's hunt for treasure -
-        using loops! Help the collector by debugging this code. Get all of the treasure!
+        Get at least **5** pieces
+        of treasure!
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
         you can help Laurel collect some treasure.
@@ -8164,8 +8222,8 @@
         Look carefully! Can you collect
         all *10* pieces of treasure?
       courseC_collector_prog_challenge2_instruction: |-
-        There are 20 pieces of treasure
-        to be found. Collect at least half to finish this challenge!
+        Collect at least **10** pieces
+        of treasure to finish this challenge!
       courseC_flappy_embed_events_instruction: |-
         Here's an example of a game that
         you're about to create yourself! Play through it one or two times to get
@@ -8232,6 +8290,7 @@
         Collect all of the corn and all of the
         pumpkins.
       courseC_harvester_loops_challenge1_instruction: Collect all of the corn.
+      courseC_harvester_loops_challenge1a_instruction: Collect all of the corn.
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
@@ -8293,6 +8352,8 @@
         puzzles to complete this level.
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
       courseC_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops\nto
+        find his acorn! "
+      courseC_maze_loops_challenge1a_instruction: "Now Scrat wants to try using loops\nto
         find his acorn! "
       courseC_maze_loops_challenge2_instruction: |-
         Let's hunt for treasure - using
@@ -8415,6 +8476,8 @@
         \r
         See what happens when we start to
         get creative with the bits!
+      courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
+        binary! "
       courseD_artist_binary_challenge0_instruction: |-
         Try using nested loops to complete
         this drawing.
@@ -8509,8 +8572,8 @@
         Can you figure out how
         to make a picture like this?
       courseD_artist_nestedLoops_challenge2_instruction: |-
-        Can you figure out how
-        to make a picture like this?
+        Fix the code to make this
+        picture!
       courseD_artist_project1_instruction: "Draw a small shape, between **20 and\n50**
         pixels wide.  It can be any shape that you like.  "
       courseD_artist_project1a_instruction: |-
@@ -8615,6 +8678,10 @@
         Help the bee fix the code to get all the
         nectar.
       courseD_bee_debugging_challenge1_instruction: |-
+        Watch how the bees gets the
+        nectar. Can you use the same kind of pattern to help the bee make all of the
+        honey?
+      courseD_bee_debugging_challenge1a_instruction: |-
         Watch how the bees gets the
         nectar. Can you use the same kind of pattern to help the bee make all of the
         honey?
@@ -8770,6 +8837,10 @@
         Are you an expert of nested
         loops? Use what you have learned so far to collect all of the treasure!
       courseD_collector_nested_loops_challenge2_instruction: |-
+        Help the collector
+        reach at least two piles of treasure using only the blocks in your toolbox.
+        It is possible to collect all 4.
+      courseD_collector_nested_loops_challenge2a_instruction: |-
         Help the collector
         reach at least two piles of treasure using only the blocks in your toolbox.
         It is possible to collect all 4.
@@ -9010,8 +9081,9 @@
         down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
         **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: |-
-        If the pirate is in the safe zone, wait
-        one second, then deduct a point as long as he stays beneath the octopus line.
+        If the pirate (actor 1) is in the safe
+        zone, wait one second, then deduct a point as long as he stays beneath the
+        octopus line.
       courseD_playLab_cond6cloneForTest_instruction: Testing
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
@@ -10179,13 +10251,13 @@
       grade2_PuppyLoops_4_instruction: |-
         In this puzzle, two `repeat` loops will help
         you get to the pig with the fewest number of blocks!
-      grade2_PuppyLoops_5_instruction: |-
-        Can you figure out the fastest way to get
-        me to the pig?
+      grade2_PuppyLoops_5_instruction: Ali najdeš najhitrejši način, kako me spraviti
+        k pujsu?
       grade2_PuppyLoops_6_instruction: |-
         Loops even work with more than one block
         inside!  Can you loop this sequence to get me to the pig?
-      grade2_PuppyLoops_7_instruction: Use what you learned to get me to the sunflower!
+      grade2_PuppyLoops_7_instruction: Uporabi, kar si se naučil, da bi me spravil
+        k sončnici!
       grade2_PuppyLoops_8_instruction: 'Koda za risanje brkov ni pravilno napisana.
         Namig: Vsak brk je dolg 75 pixlov. Ustrezno uredi kodo, da bodo brki taki,
         kot na sliki. '
@@ -10574,9 +10646,7 @@
         Get the zombie to the sunflower using only
         the blocks available.
       grade3_maze_loops4_instruction: Pripelji me do sončnice z uporabo čim manj blokov!
-      grade3_maze_loops5_instruction: |-
-        Get me to the sunflower using the fewest blocks
-        possible!
+      grade3_maze_loops5_instruction: Spravi me k sončnici z uporabo čim manj blokov!
       grade3_maze_nestedLoops1_instruction: |-
         Can you get me to the pig using 5 of
         the same kind of blocks?
@@ -11521,13 +11591,11 @@
         \r
         Pay attention to how
         this program is written!
-      grade5_playlab_variables2_instruction: |-
-        The race in that last puzzle wasn't
-        very fair! Change the `dog_speed` variable to make sure you can collect more
-        flags than Cat. The first to collect 10 flags wins!
-      grade5_playlab_variables3_instruction: |-
-        Use the left and right arrows to move,
-        and the up arrow to jump. See if you can collect all of the flags.
+      grade5_playlab_variables2_instruction: Igra v prejšnji nalogi ni bila najbolj
+        poštena. Spremeni vrednost spremenljivke hitrost psa 'dog speed' tako, da
+        boš lahko pobral več zastavic, kot maček. Prvi, ki prvi zbere 10 točk, zmaga!
+      grade5_playlab_variables3_instruction: Uporabi puščici levo in desno za premikanje
+        psa in puščico gor za skok. Ali lahko zbereš vse zastave?
       grade5_playlab_variables4_instruction: |-
         Now we're using a variable called
         "height" to control how high the dog can jump. Update the "height" variable

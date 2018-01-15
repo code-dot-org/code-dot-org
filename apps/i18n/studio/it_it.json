@@ -790,7 +790,7 @@
   "whenSpriteCollidedWithAnyEdge": "tocca un qualunque bordo",
   "whenSpriteCollidedWithAnyProjectile": "tocca un qualunque proiettile",
   "whenSpriteCollidedWithAnyGoal": "tocca una bandierina",
-  "whenSpriteCollidedWithAnyObstacle": "touches an obstacle",
+  "whenSpriteCollidedWithAnyObstacle": "tocca un ostacolo",
   "whenSpriteCollidedWithAnything": "tocca una cosa qualunque",
   "whenSpriteCollidedWithN": "tocca il personaggio {spriteIndex}",
   "whenSpriteCollidedWithAirplane": "tocca un aereoplano",

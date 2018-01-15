@@ -10,15 +10,15 @@
         access sa content na ito. Magagawa ito ng iyong guro sa pag-login sa Code
         Studio at pag-click sa "I-review ang updated terms" button malapit sa itaas
         ng Code Studio homepage.
-      pair_programmer: You are currently pair programming with a student who does
-        not have access to this content. To access this content, stop pair programming
-        and try again.
+      pair_programmer: Ikaw ay kasalukuyang nakapair programming sa isang estudyante
+        na walang access sa nilalaman na ito. Para ma-access ang nilalamang ito, ihinto
+        ang pair programming at subukan ulit.
   activerecord:
     errors:
       messages:
         blank: ay kailangan
-        blank_plural: are required
-        invalid_plural: are invalid
+        blank_plural: ay kinakailangan
+        invalid_plural: ay hindi balido
     attributes:
       user:
         name: Ipapakita na Pangalan
@@ -868,6 +868,9 @@
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
       students submitted the survey.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Thank you
     wrong_body: Thank you for submitting answers.

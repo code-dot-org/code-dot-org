@@ -260,6 +260,12 @@
   studiobar_donate_body: "طفل واحد يتعلم البرمجه مع كل دولار تتبرع به"
   studiobar_shop_title: "تسوق"
   studiobar_shop_body: "اكسر الصور النمطية. و قم بارتداء شعارنا بكل فخر."
+  homepage_stats_students: "of US students have accounts on Code.org"
+  homepage_stats_female: "of our students are female"
+  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
+  homepage_stats_policy: "states changed policy to support computer science"
+  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "&ldquo;اتحدى البنات في كل بلد تعلّم ساعة واحدة من البرمجة&rdquo; مالالى،  الحاصلة على جائزة نوبل للسلام"
   homepage_hero_text_susan: |-
     &ldquo;إذا كان بإمكانك تغيير التكنولوجيا، يمكنك تغيير العالم.&rdquo; سوزان، الرئيس التنفيذي لموقع يوتيوب
@@ -480,6 +486,7 @@
   video_title_obama: "الرئيس أوباما في علوم الحاسوب"
   video_title_hoc_is_here: "هنا ساعة البرمجة - يمكن لأي كان أي يتعلم"
   video_title_anybody_can_learn: "يمكن لأي كان أن يتعلم"
+  video_title_steph_curry: "Hour of Code with Steph Curry"
   video_title_draymond_green: "ساعة البرمجة مع درايمن كرين"
   video_title_russell_okung: "ساعة البرمجة مع راسل أوكون"
   video_title_real_madrid: "ساعة البرمجة مع ريال مدريد"

@@ -654,6 +654,7 @@ ja:
     correct_title: "ありがとうございます"
     correct_body: "回答していただきありがとうございました。"
     hide_survey_last_answer: "アンケートは匿名です。 集計結果は先生用のダッシュ ボードを参照してください。 少なくとも 5 人の学生がアンケートに回答した場合のみ、結果が表示されることに注意してください。"
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "ありがとうございます"
     wrong_body: "回答していただきありがとうございました。"
