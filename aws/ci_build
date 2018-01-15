@@ -182,7 +182,7 @@ def mark_dtt_green
 
   DevelopersTopic.set_dtt 'yes'
   InfraTestTopic.set_green_commit test_branch_sha
-  Metrics.write_metric('dtt_green', test_branch_sha, 0)
+  Metrics.write_metric('dtt_green', test_branch_sha, Metrics::AUTOMATIC)
 end
 
 def emit_deploy_metric(deployment_stage, successful)

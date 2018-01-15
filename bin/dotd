@@ -69,7 +69,7 @@ end
 def mark_dtt_red
   DevelopersTopic.set_dtt 'yes'
   InfraTestTopic.set_red_commit GitHub.sha('test')
-  Metrics.write_metric('dtt_red', GitHub.sha('test'), 1)
+  Metrics.write_metric('dtt_red', GitHub.sha('test'), Metrics::MANUAL)
 
   puts <<-EOS.unindent
 
@@ -84,7 +84,7 @@ end
 def mark_dtt_green
   DevelopersTopic.set_dtt 'yes'
   InfraTestTopic.set_green_commit GitHub.sha('test')
-  Metrics.write_metric('dtt_green', GitHub.sha('test'), 1)
+  Metrics.write_metric('dtt_green', GitHub.sha('test'), Metrics::MANUAL)
 
   puts <<-EOS.unindent
 
@@ -260,7 +260,7 @@ def dotd_menu(dotd_name)
         EOS
         @logger.info 'manually DTTs from staging'
         DevelopersTopic.set_dtt 'no (manual DTT in progress)'
-        Metrics.write_metric('dtt_start', GitHub.sha('test'), 1)
+        Metrics.write_metric('dtt_start', GitHub.sha('test'), Metrics::MANUAL)
       end
       menu.choice(:G) {mark_dtt_green}
       menu.choice(:R) {mark_dtt_red}
