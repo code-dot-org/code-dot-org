@@ -776,7 +776,6 @@ Craft.executeUserCode = function () {
   const eventGenerationMethods = {
     onEventTriggered: function (type, eventType, callback, blockID) {
       userEvents[`event-${type}-${eventType}`] = {code: callback, args: ['event']};
-      userEvents[`event--${eventType}`] = {code: callback, args: ['event']};
     },
     onGlobalEventTriggered: function (eventType, callback, blockID) {
       userEvents[`event--${eventType}`] = {code: callback, args: ['event']};
@@ -802,13 +801,15 @@ Craft.executeUserCode = function () {
 
   appCodeOrgAPI.registerEventCallback(() => {},
     function (event) {
-      const type = event.type || '';
+      const type = event.targetType || '[^-]*';
       const eventType = event.eventType;
-      const callback = hooks[`event-${type}-${eventType}`];
+      const regex = new RegExp(`^event-${type}-${eventType}$`);
 
-      if (callback) {
-        callback(event);
-      }
+      Object.keys(hooks).forEach(name => {
+        if (regex.test(name)) {
+          hooks[name](event);
+        }
+      });
     });
 
   appCodeOrgAPI.startAttempt(function (success) {
