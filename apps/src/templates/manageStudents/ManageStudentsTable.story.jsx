@@ -1,5 +1,5 @@
 import React from 'react';
-import ManageStudentsTable from './ManageStudentsTable';
+import {UnconnectedManageStudentsTable} from './ManageStudentsTable';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 // Student names out of alphabetical order to demonstrate
@@ -196,7 +196,7 @@ export default storybook => {
         name: 'Table for email accounts',
         description: 'Ability to edit/delete all data including the password',
         story: () => (
-          <ManageStudentsTable
+          <UnconnectedManageStudentsTable
             studentData={passwordAccountData}
             id={53}
             loginType={SectionLoginType.email}
@@ -207,7 +207,7 @@ export default storybook => {
         name: 'Table for word accounts',
         description: 'Ability to edit/delete all data and reset the secret word',
         story: () => (
-          <ManageStudentsTable
+          <UnconnectedManageStudentsTable
             studentData={wordAccountData}
             id={53}
             loginType={SectionLoginType.word}
@@ -218,7 +218,7 @@ export default storybook => {
         name: 'Table for picture accounts',
         description: 'Ability to edit/delete all data and reset the secret picture',
         story: () => (
-          <ManageStudentsTable
+          <UnconnectedManageStudentsTable
             studentData={pictureAccountData}
             id={53}
             loginType={SectionLoginType.picture}
@@ -229,7 +229,7 @@ export default storybook => {
         name: 'Table for Google accounts',
         description: 'Read only table',
         story: () => (
-          <ManageStudentsTable
+          <UnconnectedManageStudentsTable
             studentData={googleData}
             id={53}
             loginType={SectionLoginType.google_classroom}
@@ -240,7 +240,7 @@ export default storybook => {
         name: 'Table for Clever accounts',
         description: 'Ready only table',
         story: () => (
-          <ManageStudentsTable
+          <UnconnectedManageStudentsTable
             studentData={cleverData}
             id={53}
             loginType={SectionLoginType.clever}

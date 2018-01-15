@@ -23,7 +23,7 @@
   - current_page = params[:puzzle_page] || 1
 
   -# Is this a survey where we've already submitted
-  - submitted_survey = @script_level.try(:anonymous?) && current_user.user_level_for(@script_level, @level).try(:submitted?)
+  - submitted_survey = @script_level.try(:anonymous?) && current_user && current_user.user_level_for(@script_level, @level).try(:submitted?)
 
   -# anonymous users shouldn't ever see lockable stages, but give them the locked_stage message if they do
   - if @script_level && @script_level.stage.lockable? && (!current_user || @script_level.locked?(current_user))

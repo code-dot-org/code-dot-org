@@ -36,6 +36,7 @@ require src_dir 'database'
 require src_dir 'social_metadata'
 require src_dir 'forms'
 require src_dir 'curriculum_router'
+require src_dir 'homepage'
 
 def http_vary_add_type(vary, type)
   types = vary.to_s.split(',').map(&:strip)

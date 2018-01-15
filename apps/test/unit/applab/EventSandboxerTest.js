@@ -386,6 +386,27 @@ describe('EventSandboxer', function () {
     });
   });
 
+  describe('hoisted event target properties', () => {
+    it('copies "selectionStart" from the original event target to the new event', () => {
+      const originalEvent = {target: {selectionStart: Math.random()}};
+      const newEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.equal(newEvent.selectionStart, originalEvent.target.selectionStart);
+    });
+
+    it('copies "selectionEnd" from the original event target to the new event', () => {
+      const originalEvent = {target: {selectionEnd: Math.random()}};
+      const newEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.equal(newEvent.selectionEnd, originalEvent.target.selectionEnd);
+    });
+
+    it('does not add selectionStart or selectionEnd to the new event if they are missing or undefined', () => {
+      const originalEvent = {target: {selectionEnd: undefined}};
+      const newEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.isFalse(newEvent.hasOwnProperty('selectionStart'));
+      assert.isFalse(newEvent.hasOwnProperty('selectionEnd'));
+    });
+  });
+
   describe('DOM element substitution', function () {
     function assertPropertyElementToElementId(originalName) {
       var randomId = Math.random();
