@@ -213,6 +213,7 @@ level 'CSD U6 circuit predict', progression: 'Simple Circuits'
 level 'CSD U6 circuit LED map', progression: 'Simple Circuits'
 level 'CSD U6 circuit pinMode', progression: 'Simple Circuits'
 level 'CSD U6 circuit createLed', progression: 'Simple Circuits'
+level 'CSD U6 circuit multi led', progression: 'Simple Circuits'
 
 stage 'Project: Prototype an Innovation', flex_category: 'csd6_2'
 named_level 'CSD U6L16 TFMD'
