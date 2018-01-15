@@ -7,7 +7,11 @@ module Metrics
   AUTOMATIC = 0
   MANUAL = 1
 
-  # Insert data into the metrics table.
+  # Insert new row into the metrics table.
+  # @param name [String] The name of the metric.
+  # @param metadata [String] Data relevant to the specific metric. For example, the commit hash for DTT metrics.
+  # @param value [Float] Numerical value relevant to the specific metric. See constants above for examples.
+  # @param timestamp [Datetime] Only used if we want to explicitly set the created_at value for a particular metric.
   def self.write_metric(name, metadata, value, timestamp=nil)
     dataset = DEVINTERNAL_DB[:metrics]
     data = {name: name, metadata: metadata, value: value}
