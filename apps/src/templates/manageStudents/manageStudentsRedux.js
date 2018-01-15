@@ -5,10 +5,11 @@ const SET_SECTION_ID = 'manageStudents/SET_SECTION_ID';
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
 export const setStudents = studentData => ({ type: SET_STUDENTS, studentData });
+export const startEditingStudent = (studentId) => ({ type: startEditingStudent, studentId });
 
 const initialState = {
   loginType: '',
-  studentData: [],
+  studentData: {},
   sectionId: null,
 };
 
@@ -35,9 +36,13 @@ export default function manageStudents(state=initialState, action) {
   return state;
 }
 
+// Converts data from /v2/sections/sectionid/students to a set of key/value
+// objects for the redux store
 export const convertStudentServerData = (studentData, loginType, sectionId) => {
-  return studentData.map((student) => {
-    return {
+  let studentLookup = {};
+  for (let i=0; i < studentData.length; i++) {
+    let student = studentData[i];
+    studentLookup[student.id] = {
       id: student.id,
       name: student.name,
       username: student.username,
@@ -47,6 +52,19 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       secretPicturePath: student.secret_picture_path,
       loginType: loginType,
       sectionId: sectionId,
+      isEditing: false,
     };
-  });
+  }
+  return studentLookup;
+};
+
+// Converts key/value id/student pairs to an array of student objects for the
+// component to display
+// TODO: memoize this - sections could be a few thousand students
+export const convertStudentDataToArray = (studentData) => {
+  let studentDataArray = [];
+  for (var id in studentData) {
+    studentDataArray.push(studentData[id]);
+  }
+  return studentDataArray;
 };
