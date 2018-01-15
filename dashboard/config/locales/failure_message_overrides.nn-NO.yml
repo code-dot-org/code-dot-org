@@ -73,7 +73,7 @@
         dei i å jakte på deg. Om dei er for raske, legg til ei "vent"-blokk for å
         sinke dei.
       MC HOC 2016 Level 8_failure_message_override: Du må bruke den eksploderande
-        Creeperen til å sprenge muren slik at du kan nå sauane.
+        Creeperen til å sprenge muren slik at du kan nå sauene.
       MC HOC 2016 New Drop_failure_message_override: Bruk piltastane for å gå til
         sauene og trykk mellomromstasten eller trykk klikk på spelebrettet for å bruke
         sauene. Ikkje gløym å legge til "Slepp"-blokka i koden din.
@@ -94,5 +94,5 @@
       kikiTesta_failure_message_override: Gratulerer! Du har samla X myntar!
       sample1_failure_message_override: Gratulerer! Du har samla X myntar!
       sample4_failure_message_override: Gratulerer! Du har samla X myntar!
-      sample6_failure_message_override: Ikkje heilt. Prøv igjen! [Gå til Play Zone]
+      sample6_failure_message_override: Ikkje heilt. Prøv igjen! [Gå til Spelsona]
       sample8_failure_message_override: Gratulerer! Du har samla X myntar!

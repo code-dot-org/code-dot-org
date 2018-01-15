@@ -1349,6 +1349,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -1467,6 +1496,18 @@
       CSDU6 arrays random_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select icons_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select rainbow_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_instruction: |-
+        Write a program that displays a
+        randomly chosen color from the array. (Click to see full instructions)
       CSDU6 arrays variable_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
@@ -3211,6 +3252,58 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
+        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars10_instruction: |-
+        Free Play time! Here are all of the variables
+        we've played with so far in this stage, as well as a few more in case you
+        want them. \r
+        \r
+        Notice that there are now so many blocks in our toolbox
+        that they need to be organized!  Here, we've put each piece into an appropriate
+        category.  Take some time to explore everything that is available. When you're
+        done browsing, make a game or story using repeats, variables, and events.  \r
+        \r
+        Hint:
+        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars2_instruction: |-
+        The race in that last puzzle wasn't very
+        fair! Change the `dog_speed` variable to make sure you can collect more flags
+        than Cat. The first to collect 10 flags wins!
+      CourseF_PlayLab_vars3_instruction: |-
+        이번에는 새로운 종류의 게임입니다!
+        왼쪽/오른쪽 화살표를 이용해 움직이고, 위/아래 화살표를 이용해서 점프합니다. 모든 깃발을 모을 수 있는지 해보세요.
+      CourseF_PlayLab_vars4_instruction: |-
+        이제 "높이" 라는 변수를 사용해서 강아지가 뛰는 높이를 조정할 수 있습니다.
+        모든 깃발에 닿을 수 있도록 "높이" 변수를 조정해주세요.
+      CourseF_PlayLab_vars5_instruction: "자 이제 게임을 만들어보세요!\n일단 먼저 점수가 필요합니다. 이전 레벨에서
+        보았던 코드를 다시 만들어서\n점수를 10으로 설정해주세요. "
+      CourseF_PlayLab_vars6_instruction: |-
+        오른쪽 방향키를 이용해 하트를 맞춰보세요.\r
+        \r
+        이 게임에서는 어떻게 포인트를 올려야 할까요?
+        강아지가 하트로 고양이를 맞출 때마다 "점수" 변수에 1씩 더해보세요.
+        "캐릭터 2가 물체에 닿으면" 이벤트를 이용해 점수를 업데이트하면 됩니다. "점수=점수+1"로 설정해서
+        변수의 값을 하나씩 올리면 됩니다. 점수를 10 까지(한 번에 1 씩) 올려서 이 레벨을 통과해보세요.
+      CourseF_PlayLab_vars7_instruction: |-
+        오른쪽 방향키를 이용해 하트를 맞춰보세요.\r
+        \r
+        이 게임에서는 어떻게 포인트를 올려야 할까요?
+        강아지가 하트로 고양이를 맞출 때마다 "점수" 변수에 1씩 더해보세요.
+        "캐릭터 2가 물체에 닿으면" 이벤트를 이용해 점수를 업데이트하면 됩니다. "점수=점수+1"로 설정해서
+        변수의 값을 하나씩 올리면 됩니다. 점수를 10 까지(한 번에 1 씩) 올려서 이 레벨을 통과해보세요.
+      CourseF_PlayLab_vars8_instruction: |-
+        오른쪽 방향키를 이용해 하트를 맞춰보세요.\r
+        \r
+        이 게임에서는 어떻게 포인트를 올려야 할까요?
+        강아지가 하트로 고양이를 맞출 때마다 "점수" 변수에 1씩 더해보세요.
+        "캐릭터 2가 물체에 닿으면" 이벤트를 이용해 점수를 업데이트하면 됩니다. "점수=점수+1"로 설정해서
+        변수의 값을 하나씩 올리면 됩니다. 점수를 10 까지(한 번에 1 씩) 올려서 이 레벨을 통과해보세요.
+      CourseF_PlayLab_vars9_instruction: |-
+        Nice, now let's make sure this game isn't
+        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
+        2), you should lose a point. Start with 10 points so it's not too hard. Let
+        your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution_instruction: "소개"
       Crack a Caesar Cipher_instruction: "소개"
       ECSPD Binary Odometer_instruction: |-
@@ -7209,11 +7302,17 @@
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_forVideo_instruction: |-
+        Use the `repeat` loop to add waves
+        to the water.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
       courseA_artist_loops_challenge2_instruction: |-
         "Can you help me make two bird
         houses?"
+      courseA_artist_loops_challenge2a_instruction: |-
+        *"Help me get these three tents
+        set up!"*
       courseA_artist_loops_challenge3_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
@@ -7422,6 +7521,9 @@
       courseB_collector_loops_challenge2_instruction: |-
         Let's get the treasure! Help
         me across each row then come back to start the next row. Can you find a pattern?
+      courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
       courseB_collector_prog1_instruction: |-
@@ -7665,9 +7767,12 @@
       courseC_artist_prog_challenge2_instruction: |-
         *Help me paint the yellow lines
         on this road!*
+      courseC_artist_prog_challenge2a_instruction: |-
+        *Help me paint the yellow lines
+        on this road!*
       courseC_collector_loops_challenge2_instruction: |-
-        Let's hunt for treasure -
-        using loops! Help the collector by debugging this code. Get all of the treasure!
+        Get at least **5** pieces
+        of treasure!
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
         you can help Laurel collect some treasure.
@@ -7701,8 +7806,8 @@
         Look carefully! Can you collect
         all *10* pieces of treasure?
       courseC_collector_prog_challenge2_instruction: |-
-        There are 20 pieces of treasure
-        to be found. Collect at least half to finish this challenge!
+        Collect at least **10** pieces
+        of treasure to finish this challenge!
       courseC_flappy_embed_events_instruction: |-
         Here's an example of a game that
         you're about to create yourself! Play through it one or two times to get
@@ -7769,9 +7874,13 @@
         Collect all of the corn and all of the
         pumpkins.
       courseC_harvester_loops_challenge1_instruction: Collect all of the corn.
+      courseC_harvester_loops_challenge1a_instruction: Collect all of the corn.
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -7830,6 +7939,8 @@
         puzzles to complete this level.
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
       courseC_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops\nto
+        find his acorn! "
+      courseC_maze_loops_challenge1a_instruction: "Now Scrat wants to try using loops\nto
         find his acorn! "
       courseC_maze_loops_challenge2_instruction: |-
         Let's hunt for treasure - using
@@ -7950,6 +8061,8 @@
         \r
         See what happens when we start to
         get creative with the bits!
+      courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
+        binary! "
       courseD_artist_binary_challenge0_instruction: |-
         Try using nested loops to complete
         this drawing.
@@ -8044,8 +8157,8 @@
         Can you figure out how
         to make a picture like this?
       courseD_artist_nestedLoops_challenge2_instruction: |-
-        Can you figure out how
-        to make a picture like this?
+        Fix the code to make this
+        picture!
       courseD_artist_project1_instruction: "Draw a small shape, between **20 and\n50**
         pixels wide.  It can be any shape that you like.  "
       courseD_artist_project1a_instruction: |-
@@ -8150,6 +8263,10 @@
         Help the bee fix the code to get all the
         nectar.
       courseD_bee_debugging_challenge1_instruction: |-
+        Watch how the bees gets the
+        nectar. Can you use the same kind of pattern to help the bee make all of the
+        honey?
+      courseD_bee_debugging_challenge1a_instruction: |-
         Watch how the bees gets the
         nectar. Can you use the same kind of pattern to help the bee make all of the
         honey?
@@ -8305,6 +8422,10 @@
         Are you an expert of nested
         loops? Use what you have learned so far to collect all of the treasure!
       courseD_collector_nested_loops_challenge2_instruction: |-
+        Help the collector
+        reach at least two piles of treasure using only the blocks in your toolbox.
+        It is possible to collect all 4.
+      courseD_collector_nested_loops_challenge2a_instruction: |-
         Help the collector
         reach at least two piles of treasure using only the blocks in your toolbox.
         It is possible to collect all 4.
@@ -8544,8 +8665,9 @@
         down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
         **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: |-
-        If the pirate is in the safe zone, wait
-        one second, then deduct a point as long as he stays beneath the octopus line.
+        If the pirate (actor 1) is in the safe
+        zone, wait one second, then deduct a point as long as he stays beneath the
+        octopus line.
       courseD_playLab_cond6cloneForTest_instruction: Testing
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
@@ -9399,6 +9521,8 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: '"클릭되면"블럭을 붙인 후 "실행하기"를 누르세요. 플래피 버드가 목표 지점에 도착할 수 있도록
         화면을 클릭하거나 터치하면 됩니다.'
+      flappy_11_instruction: "자신만의 플래피 게임을 만들어보세요. 화면에 보이는 것들과 규칙들, 떨어지는 중력마저도 마음대로
+        만들어보세요. 친구들이 스마트폰에서 해볼 수 있도록 공유해 보세요."
       flappy_2_instruction: 바닥 땅을 만들었습니다. "땅에 떨어지면" 블럭에 다른 블럭을 붙여보세요. 플래피가 땅에 닿으면
         게임이 끝나도록 해야합니다.
       flappy_3_instruction: '"실행하면" 블럭은 프로그램을 실행시켰을 때 코드들이 동작하게 합니다. 목표 지점에 도착하기 위한
@@ -9412,8 +9536,6 @@
       flappy_8_instruction: "화면에 보이는 것들은 언제 든지 바꿀 수 있습니다. 물체를 피해 통과하는 것과 같은 이벤트들이
         발생했을 때 랜덤 배경으로 바뀌도록 해보세요."
       flappy_9_instruction: "사물들을 뒤섞으려면, 장애물에 부딪혔을 때 게임을 끝내는 대신 점수를 0으로 설정하세요."
-      flappy_11_instruction: "자신만의 플래피 게임을 만들어보세요. 화면에 보이는 것들과 규칙들, 떨어지는 중력마저도 마음대로
-        만들어보세요. 친구들이 스마트폰에서 해볼 수 있도록 공유해 보세요."
       frozen circle function in circle_instruction: "이제 20개의 원을 겹치고, 각각을 18도씩 회전시키세요."
       frozen circle function with parameter_instruction: 원하는 크기로 그릴 수 있는 "원 그리기" 블럭이
         있습니다. 이 블럭을 사용해 5 크기의 원과 10 크기의 원을 그릴 수 있겠어요?

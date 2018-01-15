@@ -651,6 +651,7 @@ tr:
     correct_title: "Teşekkür ederiz"
     correct_body: "Cevaplarınızı gönderdiğiniz için teşekkürler."
     hide_survey_last_answer: "Bu anket anonimdir.  Öğretmen Pano yu  sonuçları görmek için ziyaret edin.  Not sonuçlar yalnızca en az beş öğrenci Anketi gönderdiyseniz görülebilir."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Teşekkür ederiz"
     wrong_body: "Cevaplarınızı gönderdiğiniz için teşekkürler."
@@ -979,4 +980,4 @@ tr:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
-  courses_category: 'Tüm Dersler'
+  courses_category: 'Tüm Kurslar'
