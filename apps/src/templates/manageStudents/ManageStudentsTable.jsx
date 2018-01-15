@@ -11,6 +11,7 @@ import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
+import {convertStudentDataToArray} from './manageStudentsRedux';
 import { connect } from 'react-redux';
 
 export const studentSectionDataPropType = PropTypes.shape({
@@ -266,5 +267,5 @@ export const UnconnectedManageStudentsTable = ManageStudentsTable;
 
 export default connect(state => ({
   loginType: state.manageStudents.loginType,
-  studentData: state.manageStudents.studentData,
+  studentData: convertStudentDataToArray(state.manageStudents.studentData),
 }))(ManageStudentsTable);
