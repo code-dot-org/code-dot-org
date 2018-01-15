@@ -14,6 +14,7 @@ module Api::V1::Pd::Application
       @application.auto_score!
       workshop = @application.find_default_workshop
       @application.pd_workshop_id = workshop.id if workshop
+      @application.update_user_school_info!
 
       ::Pd::Application::Teacher1819ApplicationMailer.confirmation(@application).deliver_now
       ::Pd::Application::Teacher1819ApplicationMailer.principal_approval(@application).deliver_now
