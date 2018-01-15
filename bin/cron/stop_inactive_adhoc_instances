@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+require_relative '../../dashboard/config/environment'
+require 'aws-sdk'
+require 'cdo/chat_client'
+
+# This script stops AWS EC2 instances being used to run adhoc environments if they have not been used recently:
+#
+# 1) for each AWS CloudFormation Stacks with the 'adhoc' tag or with 'adhoc' at the beginning of the name
+#   a) get AWS CloudWatch Metrics to determine if it has been inactive for more than a configurable time period
+#   b) if instance is inactive
+#     i) stop EC2 instance
+#     ii) notify owner of the CloudFormation stack (via email? Slack?)
+# 2) publish final status to slack cron-job (list of all adhoc environments and which ones were stopped)
+
+def main
+  ChatClient.message 'cron-daily', 'Beginning to stop inactive adhoc instances'
+
+  cloudformation_client = Aws::CloudFormation::Client.new
+  cloudformation_client.describe_stacks.stacks.each do |stack|
+    puts stack.stack_name if stack.stack_name.starts_with?('adhoc-')
+  end
+end
+
+main
