@@ -98,12 +98,12 @@
         turtle_4_9: "这是你在上一个关卡写的代码。要完成这幅画，你需要转多少度呢？（你可能需要猜几次）"
         turtle_4_10: "这是你在上一个关卡写的代码。你需要重复多少次来完成这幅画呢？"
         turtle_4_11: "试试看改变“转向”块和“重复”块上的数字来画不同的花样。或者，试试看改变其余的代码来画你想要画的东西。"
-        maze_karel_1_1: 你好，我是一个农夫。我需要你帮我把一块地翻平来为种植做准备。把我移动到那堆土上面，并使用"删除"块来移除它。
+        maze_karel_1_1: 你好，我是一个农夫。我需要你帮我把一块地翻平来为种植做准备。把我移动到那堆土上面，并使用"移走"块来移除它。
         maze_karel_1_2: "下一步，把我移动到那个洞，并且用“填充”块来把它填平。这个洞需要两铲子土。"
         maze_karel_1_3: "把我移到那堆土那里，告诉我需要多少铲子才能把这堆土移除。尽量使用少的块来解开这个谜题。"
         maze_karel_1_4: "可以帮我移除这所有四堆土么？提示：试试用”重复“块。"
         maze_karel_1_5: 帮我用五铲子的土来填充这些洞。提示： 你可以把"重复"块放在"当"块里面试试。
-        maze_karel_1_6: "删除所有的土堆，尽可能使用尽量少的块。在”当“块的下拉菜单中有新的选项，它能告诉我现在是否站在一个土堆或一个洞上。"
+        maze_karel_1_6: "移走所有的土堆，尽可能使用尽量少的块。在”当“块的下拉菜单中有新的选项，它能告诉我现在是否站在一个土堆或一个洞上。"
         maze_karel_1_7: "哇，我发现一个很深的洞 ！我不知道它需要多少铲子的土。您能不能编一个程序，往洞里填土直到地面被填平？"
         maze_karel_1_8: "用尽量少的块帮我把田地那边的洞填平。"
         maze_karel_1_9: "请尝试用尽可能少的块来移除所有的土堆。提示：请尝试使用‘当'块"
@@ -130,7 +130,7 @@
         maze_karel_2_5: "创建一个新的函数，从一个土堆中“移除6铲土”，并用它来帮我移平所有的土堆。"
         maze_karel_2_6: 用这两个新的函数，"填充 8"和"移除 8"，帮我移除所有的土堆并填平所有的洞。
         maze_karel_2_7: "在我的田里有一头牛！编写一个新的函数，帮助我躲开牛并且移除一个土堆。把你所有需要用到的块都放到新函数块里面。"
-        maze_karel_2_8: 使用这个新功能，"避免母牛和移除 1"，来帮我移除所有的土堆。
+        maze_karel_2_8: 使用这个新功能，"避免母牛和移走一堆"，来帮我移除所有的土堆。
         maze_karel_2_9: "好的，这个函数能移除4个一列的土堆。试试把它放在循环里面，看看你能不能只用几个新的块来移除所有的土堆。"
         maze_karel_2_10: "我要走到田地的另一边，用这两个函数帮我来移除所有的土堆并且填充所有的洞。"
         turtle_3_1: 我们在这个关卡里给了你两个函数，"画一个正方形"和"画一个圆"的定义。只是定义一个函数是不会运行其中的块的。你必须拖出来"画一个正方形"函数块才能让它画一个正方形给你。
@@ -405,13 +405,14 @@
         C4_unplugged_forloops: "计数循环"
         C4_unplugged_parameters: "通过输入参数来作曲。"
         C4_unplugged_binary: "二进制"
+        CSF_a_b_artist_loops: "艺术家里的循环"
         CSF_artist_angles: "艺术家的角度"
         CSF_collector_k1_blocks: "计算机科学基础：收集器"
         CSF_collector_repeat_loops: "收集器重复循环"
         CSF_collector_text_blocks: "计算机科学基础：收集器"
         CSF_create_functions: "创建函数"
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
+        CSF_debugging_k1_blocks: "调试"
+        CSF_debugging_text_blocks: "调试"
         CSF_EF_cs_matters: "计算机科学的重要性"
         CSF_maze_intro_k1_blocks: "代码工作室简介"
         CSF_maze_intro_text_blocks: "代码工作室简介"
@@ -431,12 +432,18 @@
         infinity_playlab_intro: "游戏实验室 -- 简介"
         infinity_playlab_events: "游戏实验室 - 事件"
         infinity_playlab_repeat_forever: "游戏实验室 - 一直重复"
+        csd_concept_how_computers_work: Introducing How Computers Work
         csd_concept_computer: "计算机是如何工作的：什么制造了计算机？"
         csd_concept_binary_data: "计算机是如何工作的：二进制和数据"
+        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
+        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
+          & Output'
+        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
         csd_concept_search: "搜索是怎样完成的"
         csd_external_amazon_data: "亚马逊推荐系统中的大数据是如何改变我们生活的。"
+        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
         csd_external_waze_data: "为什么如此多的用户都着迷于Waze？"
-        csd_gamelab_animation_tab: "动画标签"
+        csd_gamelab_animation_tab: "动画标签页"
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
@@ -539,7 +546,7 @@
         mc_2016_congrats: "《我的世界》编程一小时——祝贺"
         applab_hoc_welcome: "《编程一小时》应用实验室 - 欢迎"
         applab_hoc_setproperty: "《编程一小时》应用实验室 - 设置属性"
-        applab_hoc_onevent: "《编程一小时》应用实验室 - 事件"
+        applab_hoc_onevent: "《编程一小时》应用实验室 - onEvent（当事件发生时）"
         applab_hoc_designmode: "《编程一小时》应用实验室 - 设计模式"
         applab_hoc_share: "《编程一小时》应用实验室 - 共享"
         mc_2017_agent_intro: "《我的世界》编程一小时—— 代理人"
@@ -552,23 +559,23 @@
         mc_2017_puzzle_12: "《我的世界》编程一小时——自由发挥"
         hint_videos_d_11_3_first: "提示视频：D.11.3 第一个"
         hint_videos_d_11_3_last: "提示视频：D.11.3 最后一个"
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
-        applab_intro_welcome: App Lab - Getting Started
-        applab_intro_events: App Lab - Make It Interactive
-        applab_intro_sounds: App Lab - Images and Sounds
-        applab_intro_designmode: App Lab - Design Mode
-        applab_intro_share: App Lab - Share Your App
+        hint_videos_d_11_4_first: "提示视频: D.11.4 第一个"
+        hint_videos_d_11_4_last: "提示视频：D.11.4 最后一个"
+        hint_videos_d_11_5_first: "提示视频：D.11.5 第一个"
+        hint_videos_d_11_5_last: "提示视频：D.11.5 最后一个"
+        hint_videos_d_11_6_first: "提示视频：D.11.6 第一个"
+        hint_videos_d_11_6_last: "提示视频：D.11.6 最后一个"
+        hint_videos_d_11_7_first: "提示视频：D.11.7 第一个"
+        hint_videos_d_11_7_last: "提示视频：D.11.7 最后一个"
+        hint_videos_d_11_9_first: "提示视频: D.11.9 第一个"
+        hint_videos_d_11_9_last: "提示视频：D.11.9 最后一个"
+        hint_videos_d_11_11_first: "提示视频: D.11.11 第一个"
+        hint_videos_d_11_11_last: "提示视频：D.11.11 最后一个"
+        applab_intro_welcome: "应用程序实验室 - 入门"
+        applab_intro_events: "应用程序实验室 - 创建交互"
+        applab_intro_sounds: "应用程序实验室 - 图像和声音"
+        applab_intro_designmode: "应用程序实验室 - 设计模式"
+        applab_intro_share: "应用程序实验室 - 共享您的应用程序"
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

@@ -1386,6 +1386,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -1504,6 +1533,18 @@
       CSDU6 arrays random_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select icons_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select rainbow_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_instruction: |-
+        Write a program that displays a
+        randomly chosen color from the array. (Click to see full instructions)
       CSDU6 arrays variable_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
@@ -3412,6 +3453,60 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
+        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars10_instruction: |-
+        Free Play time! Here are all of the variables
+        we've played with so far in this stage, as well as a few more in case you
+        want them. \r
+        \r
+        Notice that there are now so many blocks in our toolbox
+        that they need to be organized!  Here, we've put each piece into an appropriate
+        category.  Take some time to explore everything that is available. When you're
+        done browsing, make a game or story using repeats, variables, and events.  \r
+        \r
+        Hint:
+        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars2_instruction: |-
+        The race in that last puzzle wasn't very
+        fair! Change the `dog_speed` variable to make sure you can collect more flags
+        than Cat. The first to collect 10 flags wins!
+      CourseF_PlayLab_vars3_instruction: "Úsáid na saighde ar chlé agus ar dheis chun
+        an madra a aistriú, agus an tsaighead suas chun léim. Féach an féidir leat
+        na bratacha go léir a bhailiú."
+      CourseF_PlayLab_vars4_instruction: Anois táimid ag baint úsáide as athróg darb
+        ainm "height" a rialaíonn cé chomh hard atá an madra ábalta léim. Athraigh
+        luach na hathróige seo sa chaoi go mbeidh an madra ábalta na bratacha go léir
+        a shroicheadh.
+      CourseF_PlayLab_vars5_instruction: 'Tógaimis cluiche! Ar dtús, teastaíonn uainn
+        scór. Atóg an cód a chonaic tú sa leibhéal roimhe seo agus socraigh an scór
+        ag a 10. '
+      CourseF_PlayLab_vars6_instruction: Úsáid an tsaighead dheas chun píosa pióige
+        a chaitheamh. Conas ba chóir dúinn pointí a bhronnadh inár gcluiche? Cuir
+        pointe amháin leis an athróg "points" gach uair a bhuaileann an madra an cat
+        le píosa pióige. Úsáid an bloc "nuair a theagmhaíonn aisteoir 2 aon rud" chun
+        an scór a nuashonrú. Breisigh an athróg leis an ráiteas "points = points +
+        1". Caithfidh tú 10 bpointe a ghnóthú (ceann sa turas!) chun dul ar aghaidh
+        go dtí an chéad leibhéal eile.
+      CourseF_PlayLab_vars7_instruction: Úsáid an tsaighead dheas chun píosa pióige
+        a chaitheamh. Conas ba chóir dúinn pointí a bhronnadh inár gcluiche? Cuir
+        pointe amháin leis an athróg "points" gach uair a bhuaileann an madra an cat
+        le píosa pióige. Úsáid an bloc "nuair a theagmhaíonn aisteoir 2 aon rud" chun
+        an scór a nuashonrú. Breisigh an athróg leis an ráiteas "points = points +
+        1". Caithfidh tú 10 bpointe a ghnóthú (ceann sa turas!) chun dul ar aghaidh
+        go dtí an chéad leibhéal eile.
+      CourseF_PlayLab_vars8_instruction: Úsáid an tsaighead dheas chun píosa pióige
+        a chaitheamh. Conas ba chóir dúinn pointí a bhronnadh inár gcluiche? Cuir
+        pointe amháin leis an athróg "points" gach uair a bhuaileann an madra an cat
+        le píosa pióige. Úsáid an bloc "nuair a theagmhaíonn aisteoir 2 aon rud" chun
+        an scór a nuashonrú. Breisigh an athróg leis an ráiteas "points = points +
+        1". Caithfidh tú 10 bpointe a ghnóthú (ceann sa turas!) chun dul ar aghaidh
+        go dtí an chéad leibhéal eile.
+      CourseF_PlayLab_vars9_instruction: |-
+        Nice, now let's make sure this game isn't
+        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
+        2), you should lose a point. Start with 10 points so it's not too hard. Let
+        your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution_instruction: Treoracha
       Crack a Caesar Cipher_instruction: Treoracha
       ECSPD Binary Odometer_instruction: |-
@@ -7592,11 +7687,17 @@
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_forVideo_instruction: |-
+        Use the `repeat` loop to add waves
+        to the water.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: 'Dúshlán: Deisigh an staighre.'
       courseA_artist_loops_challenge2_instruction: |-
         "Can you help me make two bird
         houses?"
+      courseA_artist_loops_challenge2a_instruction: |-
+        *"Help me get these three tents
+        set up!"*
       courseA_artist_loops_challenge3_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
@@ -7788,6 +7889,9 @@
       courseB_collector_loops_challenge2_instruction: |-
         Let's get the treasure! Help
         me across each row then come back to start the next row. Can you find a pattern?
+      courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
       courseB_collector_prog1_instruction: Seo Laurel an tEachtránaí! An féidir leat
@@ -8027,9 +8131,11 @@
         shortest possible solution is 6 blocks, but use as many as you like!
       courseC_artist_prog_challenge2_instruction: "*Cabhraigh liom na línte buí a
         phéinteáil ar an mbóthar seo!*"
+      courseC_artist_prog_challenge2a_instruction: "*Cabhraigh liom na línte buí a
+        phéinteáil ar an mbóthar seo!*"
       courseC_collector_loops_challenge2_instruction: |-
-        Let's hunt for treasure -
-        using loops! Help the collector by debugging this code. Get all of the treasure!
+        Get at least **5** pieces
+        of treasure!
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
         you can help Laurel collect some treasure.
@@ -8063,8 +8169,8 @@
         Look carefully! Can you collect
         all *10* pieces of treasure?
       courseC_collector_prog_challenge2_instruction: |-
-        There are 20 pieces of treasure
-        to be found. Collect at least half to finish this challenge!
+        Collect at least **10** pieces
+        of treasure to finish this challenge!
       courseC_flappy_embed_events_instruction: |-
         Here's an example of a game that
         you're about to create yourself! Play through it one or two times to get
@@ -8131,8 +8237,12 @@
         Collect all of the corn and all of the
         pumpkins.
       courseC_harvester_loops_challenge1_instruction: Bailigh an t-arbhar go léir.
+      courseC_harvester_loops_challenge1a_instruction: Bailigh an t-arbhar go léir.
       courseC_harvester_loops_challenge2_instruction: Bailigh an leitís go léir. Seachain
         na crainn agus na páirceanna!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -8191,6 +8301,8 @@
         puzzles to complete this level.
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
       courseC_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops\nto
+        find his acorn! "
+      courseC_maze_loops_challenge1a_instruction: "Now Scrat wants to try using loops\nto
         find his acorn! "
       courseC_maze_loops_challenge2_instruction: |-
         Let's hunt for treasure - using
@@ -8308,6 +8420,8 @@
         \r
         See what happens when we start to
         get creative with the bits!
+      courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
+        binary! "
       courseD_artist_binary_challenge0_instruction: |-
         Try using nested loops to complete
         this drawing.
@@ -8402,8 +8516,8 @@
         Can you figure out how
         to make a picture like this?
       courseD_artist_nestedLoops_challenge2_instruction: |-
-        Can you figure out how
-        to make a picture like this?
+        Fix the code to make this
+        picture!
       courseD_artist_project1_instruction: "Draw a small shape, between **20 and\n50**
         pixels wide.  It can be any shape that you like.  "
       courseD_artist_project1a_instruction: |-
@@ -8505,6 +8619,10 @@
         Help the bee fix the code to get all the
         nectar.
       courseD_bee_debugging_challenge1_instruction: |-
+        Watch how the bees gets the
+        nectar. Can you use the same kind of pattern to help the bee make all of the
+        honey?
+      courseD_bee_debugging_challenge1a_instruction: |-
         Watch how the bees gets the
         nectar. Can you use the same kind of pattern to help the bee make all of the
         honey?
@@ -8662,6 +8780,10 @@
         Are you an expert of nested
         loops? Use what you have learned so far to collect all of the treasure!
       courseD_collector_nested_loops_challenge2_instruction: |-
+        Help the collector
+        reach at least two piles of treasure using only the blocks in your toolbox.
+        It is possible to collect all 4.
+      courseD_collector_nested_loops_challenge2a_instruction: |-
         Help the collector
         reach at least two piles of treasure using only the blocks in your toolbox.
         It is possible to collect all 4.
@@ -8899,8 +9021,9 @@
         down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
         **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: |-
-        If the pirate is in the safe zone, wait
-        one second, then deduct a point as long as he stays beneath the octopus line.
+        If the pirate (actor 1) is in the safe
+        zone, wait one second, then deduct a point as long as he stays beneath the
+        octopus line.
       courseD_playLab_cond6cloneForTest_instruction: Testing
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
@@ -9735,6 +9858,10 @@
       flappy_1_instruction: Ceangail bloc leis an mbloc "nuair a chliceáiltear", ansin
         cliceáil "Rith". Cliceáil nó tapáil an scáileán le Flappy a threorú chuig
         an sprioc.
+      flappy_11_instruction: Cruthaigh do chluiche Flappy féin. Is féidir leat an
+        leagan amach agus na rialacha go léir a athrú, an domhantarraingt san áireamh!
+        Nuair a bheidh tú críochnaithe, cliceáil "Críochnaigh" agus lig do chairde
+        an cluiche a imirt ar a nguthán.
       flappy_2_instruction: Tá an talamh ann anois. Ceangail bloc leis an mbloc "nuair
         a bhuailtear an talamh". Ní mór duit deireadh a chur leis an gcluiche nuair
         a bhuaileann Flappy leis an talamh.
@@ -9758,10 +9885,6 @@
         nuair a ghlanann Flappy constaic, mar shampla.
       flappy_9_instruction: Mar athrú, nuair a bhuaileann Flappy le constaic, athraigh
         an scór go 0, in áit deireadh a chur leis an gcluiche.
-      flappy_11_instruction: Cruthaigh do chluiche Flappy féin. Is féidir leat an
-        leagan amach agus na rialacha go léir a athrú, an domhantarraingt san áireamh!
-        Nuair a bheidh tú críochnaithe, cliceáil "Críochnaigh" agus lig do chairde
-        an cluiche a imirt ar a nguthán.
       frozen circle function in circle_instruction: Anois déanaimis fiche ciorcal
         forluite, ag casadh ocht gcéim déag tar éis gach ciorcal.
       frozen circle function with parameter_instruction: Seo é bloc nua "cruthaigh

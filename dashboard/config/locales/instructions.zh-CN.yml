@@ -1146,6 +1146,35 @@
       CSD U5 black white images pixelation 4_instruction: "给笑脸添加眉毛(点击此处查看图像)"
       CSD U5 black white images pixelation 5_instruction: "绘制任何你喜欢的图案"
       CSD U5 black white images pixelation_instruction: "通过键入0和1来完成图形X"
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -1256,15 +1285,17 @@
       CSDU6 - for loop - why for_instruction: |-
         Write the contents of the array to
         the screen in numerical order. (Click to see full instructions)
-      CSDU6 arrays rainbow_instruction: |-
-        Write the contents of the array to the screen
-        in numerical order. (Click to see full instructions)
-      CSDU6 arrays random_instruction: |-
-        Write a program that displays a randomly
-        chosen color from the array. (Click to see full instructions)
-      CSDU6 arrays variable_instruction: |-
-        Write a program that displays a randomly
-        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays rainbow_instruction: "按数字顺序将数组的内容写入屏幕。(点击查看完整说明)"
+      CSDU6 arrays random_instruction: "编写一个程序, 在数组中显示随机选择的颜色。(点击查看完整说明)"
+      CSDU6 arrays select icons_instruction: "编写一个程序, 在数组中显示随机选择的颜色。(点击查看完整说明)"
+      CSDU6 arrays select rainbow_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: "编写一个程序, 在数组中显示随机选择的颜色。(点击查看完整说明)"
+      CSDU6 arrays select variable_instruction: |-
+        Write a program that displays a
+        randomly chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays variable_instruction: "编写一个程序, 在数组中显示随机选择的颜色。(点击查看完整说明)"
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2752,6 +2783,44 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
+        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars10_instruction: |-
+        Free Play time! Here are all of the variables
+        we've played with so far in this stage, as well as a few more in case you
+        want them. \r
+        \r
+        Notice that there are now so many blocks in our toolbox
+        that they need to be organized!  Here, we've put each piece into an appropriate
+        category.  Take some time to explore everything that is available. When you're
+        done browsing, make a game or story using repeats, variables, and events.  \r
+        \r
+        Hint:
+        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars2_instruction: |-
+        The race in that last puzzle wasn't very
+        fair! Change the `dog_speed` variable to make sure you can collect more flags
+        than Cat. The first to collect 10 flags wins!
+      CourseF_PlayLab_vars3_instruction: "用左右方向键来移动，上方向键跳跃。看看你能否收集到所有的旗帜。"
+      CourseF_PlayLab_vars4_instruction: "现在，我们用一个叫做“高度”的变量来控制小狗能跳多高。修改“高度”变量，让小狗能跳足够高，得到所有旗帜。"
+      CourseF_PlayLab_vars5_instruction: "让我们编写一个游戏！首先我们需要一个分数。重新构造代码来做出像上一关的分数，并且设置为10分。 "
+      CourseF_PlayLab_vars6_instruction: |-
+        用右方向键来发射馅饼。\r
+        \r
+        在游戏中，怎么才能得分呢？每次小狗用馅饼击中小猫时，往“points”（分数）变量上加1。用“当演员2碰到任何东西”来触发分数的更新。通过使用"points = points + 1"来增加分数。将分数增加到10分（每次只加1分！）来通过这一关。
+      CourseF_PlayLab_vars7_instruction: |-
+        用右方向键来发射馅饼。\r
+        \r
+        在游戏中，怎么才能得分呢？每次小狗用馅饼击中小猫时，往“points”（分数）变量上加1。用“当演员2碰到任何东西”来触发分数的更新。通过使用"points = points + 1"来增加分数。将分数增加到10分（每次只加1分！）来通过这一关。
+      CourseF_PlayLab_vars8_instruction: |-
+        用右方向键来发射馅饼。\r
+        \r
+        在游戏中，怎么才能得分呢？每次小狗用馅饼击中小猫时，往“points”（分数）变量上加1。用“当演员2碰到任何东西”来触发分数的更新。通过使用"points = points + 1"来增加分数。将分数增加到10分（每次只加1分！）来通过这一关。
+      CourseF_PlayLab_vars9_instruction: |-
+        Nice, now let's make sure this game isn't
+        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
+        2), you should lose a point. Start with 10 points so it's not too hard. Let
+        your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution_instruction: "说明"
       Crack a Caesar Cipher_instruction: "说明"
       ECSPD Binary Odometer_instruction: |-
@@ -3473,9 +3542,7 @@
         每个图形的周长是200像素。你还记得当多边形有不同数量的边时，如何让它们一样长的等式吗？
       NEW Course 4 Artist Params 14_instruction: "编辑“画一个螺旋边缘”来使用“长度”和“边数”参数，然后重新画这些图形。"
       NEW Course 4 Artist Params 15_instruction: "自由发挥：这里除了你写的函数，还有更多的函数让你发挥。画些令人惊叹的东西吧！用不同的笔宽度来看看你能画出什么不一样的图形！"
-      NEW Course 4 Artist Params 2_instruction: |-
-        Create a `draw triangle` function
-        from scratch that makes a triangle with  50 pixel sides.
+      NEW Course 4 Artist Params 2_instruction: 从头开始创建一个 "绘制三角形" 函数, 使三角形具有50像素边。
       NEW Course 4 Artist Params 3_instruction: |
         现在让我们用函数来在一行里画5个三角形。每个三角形之间相隔30像素。\r
       NEW Course 4 Artist Params 4_instruction: "你注意到这些函数模块有什么不同吗？点击“运行”来看看会发生什么。"
@@ -3774,8 +3841,8 @@
       Pattern Bee 1_instruction: |-
         What a strange field of goodies! I wonder if there's
         a pattern here...
-      Pixelation - AllTheThings 4_instruction: 此像素级别演示了 "hide_encoding_controls" 选项的使用。
-        请注意, 该级别以十六进制显示图像数据, 并且不允许您将其更改回二进制。
+      Pixelation - AllTheThings 4_instruction: 这个像素级别演示了 "hide_encoding_controls"
+        选项的使用。 请注意, 该级别以十六进制显示图像数据, 并且不允许您将其更改回二进制。
       Pixelation - AllTheThings 5_instruction: 此像素级别演示如何使用 "隐藏滑块" 选项。 请注意, "宽度" 和
         "高度" 滑块不可用, 并且 "宽度" 和 "高度" 栏不可编辑。
       Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |-
@@ -3892,7 +3959,7 @@
       Practice Create Performance Task_instruction: |-
         Design and implement your practice
         Create Performance Task. (Click to see full instructions)
-      Project - Final Image Scroller_instruction: "更新图像滚动以回应按钮和按键。(点击查看完整说明)"
+      Project - Final Image Scroller_instruction: "更新图像滚动条以响应按钮和按键。(点击查看完整说明)"
       Project - Finish your canvas app_instruction: "扩展其中一个效果的功能, 或创建一个全新的。(点击查看完整说明)"
       Project - Make Your Own Clicker Game_instruction: "完成你的遥控器游戏 ！（点击查看完整的说明）"
       Project - Your Own Multi Screen App_instruction: |-
@@ -3926,8 +3993,9 @@
         only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
         \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to
         move to the next puzzle. "
-      RyanTest3_instruction: "这个级别已打开了形状转换功能! 刷新来查看不同的变体。"
-      SG Add Subgoals practice_instruction: "尽快在乌龟的正面和右侧绘制一个3x3 的网格。海龟应该处在原来的位置, 保持原来的朝向。(点击查看完整说明)"
+      RyanTest3_instruction: "这个级别已打开了形状转换功能! 刷新来查看不同的变量。"
+      SG Add Subgoals practice_instruction: "尽量用简练的代码在乌龟的右前方绘制一个3x3 的网格。乌龟应该处在原来的位置,
+        保持原来的朝向。(点击查看完整说明)"
       SG U3L03 - draw rect function_instruction: |-
         Write a function called drawRectangle().\r
         (Click
@@ -3938,14 +4006,14 @@
       SG U3L03 Define and use turnAround_instruction: |-
         Define a function called turnAround.
         Call the function and then move the turtle forward. (Click to see full instructions)
-      SG U3L03 Draw a T using turnAround_instruction: "使用提供的周转版 () 来画一个加号。 (点击查看完整说明)"
-      SG U3L03 Three Steps_instruction: "定义一个名为 drawSide () 的函数, 它绘制三步骤，并移动乌龟来为下一张篇做准备
+      SG U3L03 Draw a T using turnAround_instruction: "使用提供的turnAround() 来画一个加号。 (点击查看完整说明)"
+      SG U3L03 Three Steps_instruction: "定义一个名为 drawSide () 的函数，来画三步，并移动乌龟来为下一篇做准备
         (单击查看完整说明)"
       SG U3L03 define turnRight and draw a rectangle_instruction: |-
         Define a function
         called right() that turns the turtle to the right. Then use this function
         to draw a rectangle, as shown below. (Click to see full instructions)
-      SG U3L03 draw diamond_instruction: "创建一个名为 drawDiamond () 的函数, 它利用您以前的作品来绘制完整的菱形。(点击查看完整说明)"
+      SG U3L03 draw diamond_instruction: "创建一个名为 drawDiamond () 的函数, 它利用您以前的工作来绘制完整的菱形。(点击查看完整说明)"
       SG U3L04 - 3 by 3 with functions_instruction: |-
         Make the 3x3 square as efficiently
         as you can. (Click to see full instructions)
@@ -3953,23 +4021,23 @@
         Create the design by breaking it down into
         layers of functions. (Click to see full instructions)
       SG U3L06 - moveForwardwithParams_instruction: "使用单个命令将乌龟移到屏幕边缘。(点击查看完整说明)"
-      SG U3L06 Challenge 1 triangle_instruction: "使用乌龟命令模块的参数化版本，用100 像素长边来创建一个三角形。(点击查看完整说明)"
+      SG U3L06 Challenge 1 triangle_instruction: "使用乌龟命令模块的参数化版本，以100 像素为边长来创建一个三角形。(点击查看完整说明)"
       SG U3L06 Challenge 2 purple square_instruction: "请阅读 penColor () 和 penWidth
         () 的文档, 然后再使用它们绘制蓝色正方形。"
       SG U3L06 Challenge 3 fill pink_instruction: "用你喜欢的颜色填充屏幕的背景。(点击查看完整说明)"
       SG U3L06 Challenge 4 bullseye_instruction: |-
         Create the bullseye using hexadecimal
         colors and dot(). (Click to see full instructions)
-      SG U3L06 Challenge 5 overlapping circles_instruction: "这个图像只是使用点 () 和 penColor
-        () 来创建, 但是, 我们如何让这些圆圈变透明？ 如果你还没有得到提示: 请参照文档!"
+      SG U3L06 Challenge 5 overlapping circles_instruction: "创建这个图像时，只使用了dot() 和 penColor
+        () 。但是, 我们如何让这些圆圈变成透明的？ 如果你还没有得到提示: 请参照文档!"
       SG U3L06 Challenge 6 squiggles_instruction: |
-        阅读 "arcLeft" 和 "arcRight" 命令的文档, 然后按所示绘制波浪。
+        阅读 "arcLeft" 和 "arcRight" 命令的文档, 然后按所示画出曲线。
       SG U3L06 Challenge 7 smiley face_instruction: "使用 turnTo () 和 moveTo () 来帮助绘制笑脸。(点击查看完整说明)"
       SG U3L06 Challenge 8 make your own_instruction: |-
         Create a drawing of your own.
         (Click to see full instructions)
       SG U3L07 - Free Play Loops and Random_instruction: "自由游戏! 使用你从循环和随机中学到的东西, 来制作你自己的小场景。祝您玩得愉快。"
-      SG U3L07 - allSeaGrass_instruction: "通过写 drawAllSeagrass循环来添加50片海草到图像。(点击查看完整说明)"
+      SG U3L07 - allSeaGrass_instruction: "通过写循环drawAllSeagrass来添加50片海草到图像里。(点击查看完整说明)"
       SG U3L07 - bubbles_instruction: |-
         Add 200 bubbles to the image by writing drawAllBubbles
         with a loop. (Click to see full instructions)
@@ -3977,20 +4045,20 @@
       SG U3L07 - fish_instruction: |-
         Add 15 fish to the image by writing drawAllFish
         with a loop. (Click to see full instructions)
-      SG U3L07 - introSquare_instruction: "使用循环功能绘制正方形。然后添加另一个循环来绘制多个方块, 每一个方块等量旋转。(点击查看完整说明)"
-      SG U3L07 - loopsWithRandom_instruction: "增加循环代数，来用白色填充屏幕。(点击查看完整说明)"
+      SG U3L07 - introSquare_instruction: "使用循环功能绘制正方形。然后添加另一个循环来绘制多个方块, 每一个方块旋转相同的角度。(点击查看完整说明)"
+      SG U3L07 - loopsWithRandom_instruction: "增加循环的数字，来用白色填满屏幕。(点击查看完整说明)"
       SG U3L07 - randomDots1_instruction: |-
         Increase the number of iterations to fully
         fill the screen with random dots. (Click to see full instructions)
-      SG U3L07 - randomSquare_instruction: "使用循环绘制图。(点击查看完整说明)"
+      SG U3L07 - randomSquare_instruction: "使用循环绘制图形。(点击查看完整说明)"
       SG U3L07 - seaGrass_instruction: |-
         Add a parameter to drawSeagrass that controls
         the number of waves in the grass. (Click to see full instructions)
       SG U3L07 - seaStar_instruction: |-
         Add 5 sea stars to the image by writing drawAllSeaStars
         with a loop. (Click to see full instructions)
-      SG U3L07 - sunBeams_instruction: "通过写 drawAllSunbeams 循环来添加100阳光的图像。(点击查看完整说明)"
-      SG U3L07 - topDownDesign_instruction: "让自己对这个程序的结构感到满意, 然后继续下一个练习。(点击查看完整说明)"
+      SG U3L07 - sunBeams_instruction: "通过在 drawAllSunbeams 函数中添加循环，来添加100束阳光到图片里。(点击查看完整说明)"
+      SG U3L07 - topDownDesign_instruction: "当你对这个程序的结构感到满意时, 继续下一个练习。(点击查看完整说明)"
       SG U3L07 More Subgoals_instruction: |-
         Read the documentation for penColor()
         and penWidth() before using them to draw the blue square.
@@ -4004,14 +4072,14 @@
       SG U3L08 - drawSquareWithParam_instruction: |-
         Use drawSquare() to recreate the
         image of both squares, this time using parameters. (Click to see full instructions)
-      SG U3L08 - fish_instruction: "将参数添加到 drawFish, 来更改所绘制的鱼的大小。(点击查看完整说明)"
-      SG U3L08 - freePlay_instruction: "通过使用参数对新函数进行更多调用, 继续添加到映像中。(点击查看完整说明)"
+      SG U3L08 - fish_instruction: "添加一个参数到 drawFish, 来更改所画的鱼的大小。(点击查看完整说明)"
+      SG U3L08 - freePlay_instruction: "通过增加对新函数的参数调用来不断增加您的图像。（单击以查看完整的说明）"
       SG U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
-      SG U3L08 - introUnderTheSea - recovery_instruction: "在图片里添加另外一条鱼, 海星, 和一条海草。看看,
+      SG U3L08 - introUnderTheSea - recovery_instruction: "在图片里再添加一条鱼, 海星, 以及海草。看一看,
         但不要改变创建它们的函数。(点击查看完整说明)"
-      SG U3L08 - introUnderTheSea_instruction: "在图像中添加一个额外的鱼, 海星, 和一条海草。看看, 但不要改变创建它们的函数。(点击查看完整说明)"
+      SG U3L08 - introUnderTheSea_instruction: "在图像中再添加一条鱼, 海星, 和一条海草。看一看，但不要改变创建它们的函数。(点击查看完整说明)"
       SG U3L08 - multiParamFish_instruction: |-
         Add three parameters to your drawFish
         function to accept red, green and blue values to make your fish different
@@ -4019,11 +4087,11 @@
       SG U3L08 - paramsToStarfish_instruction: |-
         Add a parameter to drawStarfish that
         changes the size of the starfish drawn. (Click to see full instructions)
-      SG U3L08 - randomInput_instruction: "使用 randomNumber () 块来测试您设计的随机输入的函数。(点击查看完整说明)"
+      SG U3L08 - randomInput_instruction: "使用 randomNumber() 模块来测试您设计的随机输入的函数。(点击查看完整说明)"
       SG U3L08 - seaGrass_instruction: |-
         Add a parameter to drawSeagrass that changes
         the size of the piece of seagrass drawn. (Click to see full instructions)
-      SG U3L08 - squareTwoParams_instruction: "调用 drawSquare () 完成两个正方形的绘制。(点击查看完整说明)"
+      SG U3L08 - squareTwoParams_instruction: "调用 drawSquare () 画两个正方形。(点击查看完整说明)"
       SG U3L08 comments_instruction: "使用 randomNumber () 块来测试您设计的随机输入的函数。(点击查看完整说明)"
       SG U3L08 how to add comments_instruction: "使用 randomNumber () 块来测试您设计的随机输入的函数。(点击查看完整说明)"
       SG U3L2 Using Simple Commands part 1_instruction: |-
@@ -4034,8 +4102,9 @@
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original
         location, facing its original direction. (Click to see full instructions)
-      SG U3L2_Turtle3by3Grid_instruction: "尽快在乌龟的正面和右侧绘制一个3x3 的网格。海龟应该处在原来的位置, 保持原来的朝向。(点击查看完整说明)"
-      SG U3L2_TurtleSquare_right_instruction: "在起始位置的前面和右侧绘制一个正方形。(单击以显示完整说明)"
+      SG U3L2_Turtle3by3Grid_instruction: "尽量用简练的代码在乌龟的右前方绘制一个3x3 的网格。乌龟应该处在原来的位置,
+        保持原来的朝向。(点击查看完整说明)"
+      SG U3L2_TurtleSquare_right_instruction: "在起始位置的右前方绘制一个正方形。(单击以显示完整说明)"
       SGU3L07 - randomDots1_instruction: |-
         Increase the number of iterations to fully
         fill the screen with random dots. (Click to see full instructions)
@@ -4101,7 +4170,7 @@
       Standalone_Artist_v2_instruction: "欢迎小艺术家！首先，一起用“右转“块和”向前移“块来画一个简单的正方形。正方形每边的长度是100像素。"
       StepIntro_instruction: Here's how to use the "Step" button.
       Test Play Lab_instruction: This is a test play lab level.
-      Test of comment block_instruction: "拖出所需的子标签块。"
+      Test of comment block_instruction: "拖拽出你想用的子目标模块。"
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
         many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
         keeps using the `fill` block until the ground is even?  "
@@ -5081,7 +5150,7 @@
       U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
-      U3L08 - introUnderTheSea with comments_instruction: "在图片里添加另外一条鱼, 海星, 和一条海草。看看,
+      U3L08 - introUnderTheSea with comments_instruction: "在图片里再添加一条鱼, 海星, 以及海草。看一看,
         但不要改变创建它们的函数。(点击查看完整说明)"
       U3L08 - introUnderTheSea_instruction: |-
         Add an extra fish, starfish, and piece
@@ -5113,7 +5182,7 @@
       U3L08 - triangleTwoParams_instruction: |-
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
-      U3L08 how to add comments_instruction: "使用 randomNumber () 块来测试您设计的随机输入的函数。(点击查看完整说明)"
+      U3L08 how to add comments_instruction: "使用 randomNumber() 模块来测试您设计的随机输入的函数。(点击查看完整说明)"
       U3L1 - Simulation - Template_instruction: |-
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
@@ -5888,7 +5957,7 @@
         you add are saved to the database.  Verify that after restarting your app,
         the contacts you added no longer show in the app, but still exist in the database.
         (Click to see full instructions)
-      U4 Model App_instruction: "使用设计模式在屏幕上添加一个大红色按钮。(单击以获取完整说明。）"
+      U4 Model App_instruction: "使用设计模式在屏幕上添加一个大的红色按钮。(单击以获取完整说明。）"
       U4 Model Design 1_instruction: |-
         Add a large red button to your screen using
         Design Mode. (Click for full instructions.)
@@ -6135,61 +6204,43 @@
       collector example_instruction: |-
         Put these blocks in order to collect all of
         the gold and solve the puzzle.
-      collectorDebugVideo2_instruction: "用这些方块来收集所有的黄金和过关。"
+      collectorDebugVideo2_instruction: "用这些方块来收集所有的黄金来过关。"
       collectorSkinVideo1_instruction: "收集所有四个土堆以通过这个关卡。"
       collectorSkinVideo2_instruction: "收集一堆黄金以通过这个关卡。"
       course1_artist_loops_challenge1_instruction: |-
-        您可以使用循环来绘制一行中的许多行. \r
+        您可以使用循环来在一行中画多条线. \r
         \r
         你能画一所房子吗？让它看起来就像你喜欢的样子! 尝试寻找重复的模式!
       course1_artist_loops_challenge2_instruction: "让我们玩游戏吧! 尽可能多地画 X。你可以做到一排放3 个吗？"
-      course1_artist_loops_challenge3_instruction: "\"你能帮我做两个鸟的房子吗？"
-      course1_artist_loops_challenge4_instruction: "\"是时候掷骰子了! 你能帮我画这些吗？"
-      course1_collector_loops_challenge1_instruction: "\"你能帮我找出一些错误吗？我知道我想走哪条路, 但我不确定要走多少步。"
-      course1_collector_loops_challenge2_instruction: "这一次您只能使用每个箭头块中的一个。去拿所有的宝藏吧! "
-      course1_collector_loops_challenge3_instruction: "这一次您只能使用每个箭头块中的一个。去拿所有的宝藏吧! "
+      course1_artist_loops_challenge3_instruction: '"你能帮我做两个鸟舍吗？"'
+      course1_artist_loops_challenge4_instruction: '"是时候掷骰子了! 你能帮我画这些吗？"'
+      course1_collector_loops_challenge1_instruction: '"你能帮我找出一些错误吗？我知道我想的路, 但我不确定要走多少步。"'
+      course1_collector_loops_challenge2_instruction: "这一次您只能每个箭头使用一次。去拿所有的宝藏吧! "
+      course1_collector_loops_challenge3_instruction: "这一次您只能每个箭头使用一次。去拿所有的宝藏吧! "
       course1_collector_loops_challenge4_instruction: "让我们去拿宝藏吧! 帮助我越过每一行, 然后回来开始下一行。你能找到规律吗？"
-      course1_maze_debugging_challenge1_instruction: "解决此级别错误。去掉多余的块并添加缺少的块。把鸟给猪!"
-      course1_maze_debugging_challenge2_instruction: "排除此级别错误。这些是正确的区块, 但他们顺序错误!"
-      course1_maze_seq_challenge1_instruction: "沿着这条路带我去找那只笨猪。躲开 TNT 炸药，不然我的羽毛就要被炸飞了！"
-      course1_maze_seq_challenge2_instruction: "在每个方向上最多只能移动四次。在你跑出块之前, 你能找到一条路吗？"
-      course1_playlab_events_challenge1_instruction: "\"我的朋友躲在哪里？你能写代码, 以显示其余的我的朋友吗？"
-      course1_playlab_events_challenge2_instruction: "\"让我们开狂欢晚会吧! 在你点击或碰他们的时候，指派一些事情给他们。"
+      course1_maze_debugging_challenge1_instruction: "调试本关卡。去掉多余的模块并添加缺少的块。把鸟给猪!"
+      course1_maze_debugging_challenge2_instruction: "调试本关卡。这些模块是正确的, 但他们的顺序错了!"
+      course1_maze_seq_challenge1_instruction: '"沿着这条路带我去找那只笨猪。躲开 TNT 炸药，不然我的羽毛就要被炸飞了！"'
+      course1_maze_seq_challenge2_instruction: "在每个方向上最多只能移动四次。在你用完所有模块之前, 你能找到一条路吗？"
+      course1_playlab_events_challenge1_instruction: "我的朋友躲在哪里？你能写代码, 以显示我的其他朋友吗？"
+      course1_playlab_events_challenge2_instruction: '"让我们开狂欢晚会吧! 在你点击或碰他们的时候，让他们做点事情。"'
       course2_artist_nestedLoops_challenge1_instruction: "你能想出怎么制作出这样的照片吗？"
       course2_artist_nestedLoops_challenge2_instruction: "你能想出怎么制作出这样的照片吗？"
-      course2_artist_prog_challenge1_instruction: |-
-        Draw rooms for each of the animals.
-        There are many different ways to solve this puzzle, so have some fun. The
-        shortest possible solution is 6 blocks, but use as many as you like!
-      course2_artist_prog_challenge2_instruction: |-
-        *Help me paint the yellow lines
-        on this road!*
+      course2_artist_prog_challenge1_instruction: "为每一个动物绘制房间。有许多不同的方法来解决这个关卡。所以让我们有一些乐趣。最短的解决方案是6块,
+        但是你可以按你的想法尽可能多地使用!"
+      course2_artist_prog_challenge2_instruction: "* 帮我在这条路上涂上黄线!*"
       course2_bee_conditionals_challenge1_instruction: "收集所有的花蜜或制作蜂蜜。"
       course2_bee_conditionals_challenge2_instruction: "收集所有的花蜜或制作蜂蜜。"
-      course2_collector_loops_challenge2_instruction: |-
-        Let's hunt for treasure -
-        using loops! Help the collector by debugging this code. Get all of the treasure!
-      course2_collector_prog_challenge1_instruction: |-
-        Look carefully! Can you collect
-        all *10* pieces of treasure?
-      course2_collector_prog_challenge2_instruction: |-
-        There are 20 pieces of treasure
-        to be found. Collect at least half to finish this challenge!
-      course2_harvester_loops_challenge1_instruction: Collect all of the corn.
-      course2_harvester_loops_challenge2_instruction: |-
-        Collect all of the lettuce.
-        Avoid the trees and fields!
-      course2_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops\nto
-        find his acorn! "
-      course2_maze_programming_challenge1_instruction: |-
-        *"The pig is hiding! Can
-        you help me find a way around?"*
-      course2_maze_programming_challenge2_instruction: |-
-        Sometimes there is more than
-        one way to solve the same problem. Sometimes it's faster to go backwards
-        than it is to go forwards!
+      course2_collector_loops_challenge2_instruction: "得到所有的宝藏!"
+      course2_collector_prog_challenge1_instruction: "仔细看! 你能收集所有 * 10 * 块宝藏吗？"
+      course2_collector_prog_challenge2_instruction: "有20件宝藏要找。收集至少一半完成这一挑战!"
+      course2_harvester_loops_challenge1_instruction: "收集所有的玉米。"
+      course2_harvester_loops_challenge2_instruction: "收集所有的生菜。避开树木和田野!"
+      course2_maze_loops_challenge1_instruction: "现在, 斯奎特想尝试使用循环来找到他的橡子! "
+      course2_maze_programming_challenge1_instruction: "\"猪藏起来了! 你能帮我找到一条路吗？*"
+      course2_maze_programming_challenge2_instruction: "有时, 解决同一问题的方法不止一种。有时候向后走比前进快!"
       course2_maze_seq_challenge1_instruction: "沿着这条路带我去找那只笨猪。躲开 TNT 炸药，不然我的羽毛就要被炸飞了！"
-      course2_maze_seq_challenge2_instruction: "在每个方向上最多只能移动四次。在你跑出块之前, 你能找到一条路吗？"
+      course2_maze_seq_challenge2_instruction: "在每个方向上最多只能移动四次。在你用完所有模块之前, 你能找到一条路吗？"
       course2_playlab_stage17_1_instruction: "你能尝试让乔治（演员1）说“嗨！”吗？"
       course2_playlab_stage17_10_instruction: |-
         添加模块到“当运行时”事件中来改变背景和企鹅的速度\r
@@ -6207,64 +6258,27 @@
         \r
         完成后玩一下，用箭头移动企鹅来试试。
       course2_playlab_stage17_9_instruction: "添加一个模块，在企鹅碰到奥克塔维亚（演员3）时得1分？\\r然​​后试玩一下，用箭头移动企鹅直到得分！"
-      course3_artist_concept_challenge1_instruction: |-
-        Feel free to use trial and
-        error. You are not expected to get the image perfect the first time.   Want
-        to see more hints?  Click here!
-      course3_artist_functions_challenge1_instruction: |-
-        Once you define a function,
-        you can call it over and over again - whenever and wherever you want! Try
-        this code to see how it works, then change it to make your own impressive
-        design!
-      course3_artist_functions_challenge2_instruction: |-
-        Try this code to see how
-        it works, then make the program your own!
-      course3_bee_debugging_challenge1_instruction: "看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂制造所有的蜂蜜吗？"
-      course3_bee_functions_challenge1_instruction: |-
-        You are on your own for this
-        challenge. This could "bee" harder than it looks!
-      course3_bee_functions_challenge2_instruction: |-
-        You are on your own for this
-        challenge!
-      course3_bee_functions_challenge3_instruction: |-
-        Create a new function to collect
-        all the nectar and honey while there is a path ahead. Use it to complete the
-        puzzle!
-      course3_bee_functions_challenge4_instruction: |-
-        Use everything you have learned
-        to complete this puzzle!
-      course3_collector_debugging_challenge2_instruction: |-
-        Are you an expert of nested
-        loops? Use what you have learned so far to collect all of the treasure!
-      course3_farmer_condLoops_challenge1_instruction: |-
-        Turn right at the pumpkins.
-        Collect everything to complete the level. Each hidden crop has only one corn
-        or lettuce.
-      course3_farmer_condLoops_challenge2_instruction: |-
-        Collect everything to complete
-        the level.
-      course3_farmer_until_challenge2_instruction: |-
-        Use If/Else blocks to follow
-        the curvy path. At each corner, use the `remove 1` command in a loop to clear
-        the piles.
-      course3_maze_debugging_challenge1_instruction: |-
-        *"Am I just going around in
-        circles?"*
-      course3_maze_debugging_challenge2_instruction: |-
-        *"If I turn too often, I might
-        get dizzy! Help me reach the acorn with only four `turn` commands."*
-      course3_maze_until_challenge1_instruction: |-
-        No hints, just challenge. Get the
-        zombie to the sunflower.
-      course3_playLab_challenge1_instruction: |-
-        Something should happen when you get
-        enough points or when you run out of points. Add some code to the `win game`
-        and `lose game` functions to make the game work the way it should. \r
-        Click
-        the hints for ideas!
-      course3_playlab_challenge2_instruction: |-
-        Can you figure out how this "Fortune
-        Teller" app works? Click `MORE` to see your challenges.
+      course3_artist_concept_challenge1_instruction: "随意的反复试试。不指望你第一次就能得到完美的图像。  想看更多的提示吗？
+        点击这里!"
+      course3_artist_functions_challenge1_instruction: "一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它!
+        尝试此代码, 看看它是如何工作的, 然后改变它, 让您自己的设计更出色！"
+      course3_artist_functions_challenge2_instruction: "试试此代码, 看看它是如何工作的, 然后试着自己编程!"
+      course3_bee_debugging_challenge1_instruction: "看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂酿造所有的蜂蜜吗？"
+      course3_bee_functions_challenge1_instruction: "你得自己独立接受这个挑战。这可能比看起来更难!"
+      course3_bee_functions_challenge2_instruction: "你得自己独立面对这个挑战。"
+      course3_bee_functions_challenge3_instruction: "创建一个新的函数, 当前方有路的时候，收集所有的花蜜和蜂蜜。用它来完成关卡!"
+      course3_bee_functions_challenge4_instruction: "用你所学的来解决这个关卡。"
+      course3_collector_debugging_challenge2_instruction: "您是嵌套循环的专家吗？使用你所学到的收集所有的宝藏!"
+      course3_farmer_condLoops_challenge1_instruction: "在南瓜处右边向右拐。收集所有的一切来过这关。每个隐藏的作物只有一个玉米或莴苣。"
+      course3_farmer_condLoops_challenge2_instruction: "收集一切作物来通过这关。"
+      course3_farmer_until_challenge2_instruction: 使用 如果 或 否则 模块来跟着曲线路径前进。在每个转角, 在循环中使用
+        "移走一个" 的命令来清除土堆。
+      course3_maze_debugging_challenge1_instruction: '"我只是绕圈子走吗？"*'
+      course3_maze_debugging_challenge2_instruction: '*"如果我转得太频繁, 我可能会头晕! 帮助我只通过四个“转”向命令来拿到橡子。"*'
+      course3_maze_until_challenge1_instruction: "没有提示，只有挑战。把僵尸带到向日葵那里。"
+      course3_playLab_challenge1_instruction: "当你得到足够的分数或者当你的积分不足时, 应该要有些后果。添加一些代码到
+        ' 赢得游戏' 和 ' 输去游戏 ' 函数, 让游戏按应有的方式进行下去。\\r 点击想法提示!"
+      course3_playlab_challenge2_instruction: 你能想出这个 "算命先生" 应用程序是如何工作的吗？单击 "更多" 以查看您的挑战。
       course3_playlab_stage16_1_instruction: 你可以让这个狗说"你好世界"吗？
       course3_playlab_stage16_2_instruction: "你可以让狗说些什么，接着让猫说些什么吗？"
       course3_playlab_stage16_3_instruction: "你可以写一个程序来将这只狗移动到猫那里吗？"
@@ -6278,46 +6292,25 @@
       course3_playlab_stage17_5_instruction: "你能添加一个模块，在企鹅碰到章鱼时得1分吗？然​​后试玩一下，用箭头移动企鹅直到得分。"
       course3_playlab_stage17_6_instruction: "你能否通过添加模块来改变背景和企鹅的速度，然后将它按箭头移动而最终得分？"
       course3_playlab_stage17_7_instruction: "创建你自己的故事。当你完成后，单击完成，让朋友在他们手机上试试你的故事."
-      course4_artist_binary_challenge1_instruction: "您只能使用每个二进制值 (0 或 1) 在这个谜题。请尝试使用嵌套循环来完成此绘图。"
+      course4_artist_binary_challenge1_instruction: "在这个谜题中，您只能使用每个二进制值 (0 或 1) 一次。请尝试使用嵌套循环来完成此绘图。"
       course4_artist_binary_challenge2_instruction: "你是否有足够的毅力让这个标志回到正常状态？"
-      course4_artist_concept_challenge2_instruction: |-
-        Create five pinwheel designs
-        using the code below.
-      course4_artist_functions_challenge2_instruction: |-
-        Try this code to see how
-        it works, then make the program your own!
-      course4_artist_fwp_challenge1_instruction: |-
-        Try running this program, and make
-        changes to see what happens. Can you figure out how it works? (Or delete it
-        and replace it with something totally different)
-      course4_artist_variables_challenge1_instruction: |-
-        You've now learned everything
-        you need to know to make a pattern like this! This puzzle is meant to be difficult.  Can
-        you stick with it until you figure out the solution?
-      course4_artist_variables_challenge2_instruction: |-
-        You've now learned everything
-        you need to know to make a pattern like this! This puzzle is meant to be difficult.  Can
-        you stick with it until you figure out the solution?
-      course4_bee_for_challenge1_instruction: |-
-        Use this for loop to collect all of
-        the nectar. There are a few actions that you will want to repeat 'counter'
-        times.
+      course4_artist_concept_challenge2_instruction: "使用下面的代码创建五个风车的设计。"
+      course4_artist_functions_challenge2_instruction: "试试此代码, 看看它是如何工作的, 然后试着自己编程!"
+      course4_artist_fwp_challenge1_instruction: "请尝试运行此程序, 并做些改动看看什么变化。你能弄清楚它是如何工作的吗？(或删除它,
+        用完全不同的东西来取代它)"
+      course4_artist_variables_challenge1_instruction: "现在你已经学到了做这个模样需要的所有东西! 这个关卡本来就很困难。
+        你能坚持下去直到你找到解决办法吗？"
+      course4_artist_variables_challenge2_instruction: "现在你已经学到了做这个模样需要的所有东西! 这个关卡本来就很困难。
+        你能坚持下去直到你找到解决办法吗？"
+      course4_bee_for_challenge1_instruction: "用这个循环来收集所有的花蜜。有几个动作, 你需要重复 ' 计数器 '
+        次。"
       course4_bee_fwp_challenge1_instruction: "在函数中使用一个“计数循环”来收集所有的玉米。通过使用“length（长度）”参数，同样的“计数循环”可以数到不同的最大值。"
       course4_bee_fwp_challenge2_instruction: "在函数中使用一个“计数循环”来收集所有的蔬菜。通过使用“length（长度）”参数，使这个“计数循环”数到不同的最大值。通过在函数外部再加一个“计数循环”，来让你的程序写得更短。"
-      course4_collector_nested_loops_challenge2_instruction: |-
-        Help the collector
-        reach at least two piles of treasure using only the blocks in your toolbox.
-        It is possible to collect all 4.
-      course4_harvester_nested_loops_challenge1_instruction: |-
-        "I need some help
-        on the farm! Help me harvest this corn using only the blocks in your toolbox."
-      course4_playlab_variables_challenge1_instruction: |-
-        Use these blocks to make
-        the actors share a knock-knock joke. Change the setup and punchline to tell
-        your own joke!
-      course4_playlab_variables_challenge3_instruction: |-
-        Can you figure out how this
-        "Fortune Teller" app works? Click `MORE` to see your challenges.
+      course4_collector_nested_loops_challenge2_instruction: "帮助收藏家只使用你工具箱里的块来拿到至少两堆宝藏。这里可能收集到所有4堆。"
+      course4_harvester_nested_loops_challenge1_instruction: "\"我的农村需要一些帮助! 只使用您工具箱里的块来帮助我收割这个玉米。"
+      course4_playlab_variables_challenge1_instruction: "使用这些模块使演员分享一个敲门问答的笑话。改变设置和警句来讲你自己的笑话!"
+      course4_playlab_variables_challenge3_instruction: 你能想出这个 "算命先生" 应用程序是如何工作的吗？单击
+        "更多" 以查看您的挑战。
       courseA_artist_loops1_instruction: |-
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
@@ -6338,52 +6331,56 @@
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_forVideo_instruction: 使用 "重复" 循环在水中添加波浪。
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: "挑战: 修楼梯。"
-      courseA_artist_loops_challenge2_instruction: "\"你能帮我做两个鸟的房子吗？"
+      courseA_artist_loops_challenge2_instruction: '"你能帮我做两个鸟舍吗？"'
+      courseA_artist_loops_challenge2a_instruction: |-
+        *"Help me get these three tents
+        set up!"*
       courseA_artist_loops_challenge3_instruction: "让我们玩游戏吧! 尽可能多地画 X。你可以做到一排放3 个吗？"
-      courseA_collector_loops1_instruction: "四处移动Laurel, 得到尽可能多的宝藏!"
-      courseA_collector_loops10_instruction: "帮助Laurel沿着这条道路得到所有的宝藏。"
-      courseA_collector_loops11_instruction: "帮助Laurel从这个洞穴得到所有的宝藏。"
-      courseA_collector_loops12_instruction: "尤里卡! 得到尽可能多的财富!"
+      courseA_collector_loops1_instruction: "四处移动罗瑞尔, 得到尽可能多的宝藏!"
+      courseA_collector_loops10_instruction: "帮助罗瑞尔沿着这条道路得到所有的宝藏。"
+      courseA_collector_loops11_instruction: "帮助罗瑞尔从这个洞穴得到所有的宝藏。"
+      courseA_collector_loops12_instruction: "发现宝藏了! 得到尽可能多的财富!"
       courseA_collector_loops2_instruction: "收集所有三个土堆来通关。"
-      courseA_collector_loops4_instruction: "修复Laurel的路径得到所有这些宝藏。"
+      courseA_collector_loops4_instruction: "修复罗瑞尔的路径得到所有这些宝藏。"
       courseA_collector_loops5_instruction: "用你学到的东西来获取所有的宝藏。"
       courseA_collector_loops6_instruction: "在此代码中添加块以获取所有的宝藏。"
       courseA_collector_loops7_instruction: "你应该添加什么到这个代码来获得所有的宝藏？"
       courseA_collector_loops8_instruction: "编写代码来获取所有这些宝藏。"
-      courseA_collector_loops9_instruction: "** 挑战: ** 宝藏在楼梯最上面! 编写代码来帮助Laurel得到所有宝藏。"
-      courseA_collector_loops_challenge1_instruction: "\"你能帮我找出一些错误吗？我知道我想走哪条路, 但我不确定要走多少步。"
+      courseA_collector_loops9_instruction: "** 挑战: ** 宝藏在楼梯最上面! 编写代码来帮助罗瑞尔得到所有宝藏。"
+      courseA_collector_loops_challenge1_instruction: '*"你能帮我找出一些错误吗？我知道我想走哪条路, 但我不确定要走多少步。"*'
       courseA_collector_loops_challenge2_instruction: "得到所有的宝藏! "
       courseA_collector_loops_challenge2kp_instruction: "收集至少 * 3 * 件的宝藏通过这个关。"
       courseA_collector_preLoops1_instruction: |-
-        这是冒险家Laurel!\r
+        这是冒险家罗瑞尔!\r
         \r
-        按 "运行", 看到她走到宝藏, 并抓住它。
+        按 "运行", 看到她走到宝藏, 并拿到它。
       courseA_collector_preLoops2_instruction: "太好了! 现在你可以自己添加代码了! \\r \n\\r \n把\"获取宝藏\"
         块拉倒程序的底部, 然后单击 \"运行\"。"
-      courseA_collector_preLoops3_instruction: 将两个 "E-->" 块和一个 "获取宝藏" 块放到程序的底部, 然后单击
+      courseA_collector_preLoops3_instruction: 将两个 "向东" 块和一个 "获取宝藏" 块放到程序的底部, 然后单击
         "运行"。
       courseA_collector_preLoops4_instruction: "你能想出解决这个关卡的办法吗？"
-      courseA_collector_preLoops5_instruction: "得到这2宝石的1 块来过关"
+      courseA_collector_preLoops5_instruction: "得到这两块宝石的中的1块来过关。"
       courseA_collector_preLoops6_instruction: "得到这两件宝物来过关。"
       courseA_collector_preLoops7_instruction: "收集所有三个土堆来通关。"
       courseA_forVideoTest_artist_instruction: 使用 "重复" 循环在水中添加波浪。
       courseA_maze_seq1_instruction: "把鸟交给坏猪!"
-      courseA_maze_seq10_instruction: "挑战: 饶开 TNT炸药, 把鸟放到猪身上。 "
+      courseA_maze_seq10_instruction: "挑战: 绕开TNT炸药, 把鸟撞到猪身上。 "
       courseA_maze_seq11_instruction: "向一个方向移动，然后往另一个方向移动来帮鸟到达猪那里！"
       courseA_maze_seq12_instruction: "去找那头猪! "
-      courseA_maze_seq13_instruction: "现在使劲方法把那头猪给我拿来!"
+      courseA_maze_seq13_instruction: "用各种方法把那头猪抓来!"
       courseA_maze_seq2_instruction: "修改代码来让我到达那只猪！"
       courseA_maze_seq3_instruction: "修复代码, 让鸟到猪那!"
-      courseA_maze_seq4_instruction: "修复代码, 让鸟到猪那!"
-      courseA_maze_seq4a_instruction: "用尽可能少的块把鸟带到猪身上。"
+      courseA_maze_seq4_instruction: "移除一个模块, 让鸟到猪那!"
+      courseA_maze_seq4a_instruction: "用尽可能少的块模块把鸟带到猪那里。"
       courseA_maze_seq5_instruction: Try this one yourself from the beginning.
       courseA_maze_seq6_instruction: "向一个方向移动，然后往另一个方向移动来帮鸟到达猪那里！"
       courseA_maze_seq7_instruction: "想想这里缺了什么，然后添加模块让鸟到达那只猪那！"
       courseA_maze_seq8_instruction: "通过这关, 把鸟送到猪那!"
-      courseA_maze_seq9_instruction: "通过添加块来排除这关错误, 将鸟送到猪那!"
-      courseA_maze_seq_challenge1_instruction: "这里出了点问题。帮助修复代码, 把鸟交给猪!"
+      courseA_maze_seq9_instruction: "通过添加块来排除这关错误, 让鸟到达猪那里!"
+      courseA_maze_seq_challenge1_instruction: "这里出了点问题。帮助修复代码, 让鸟到达猪那里!"
       courseA_maze_seq_challenge2_instruction: "沿着这条路带我去找那只笨猪。躲开 TNT 炸药，不然我的羽毛就要被炸飞了！"
       courseA_playLab_events1_instruction: |-
         This is a Play Lab level.  Move blocks
@@ -6391,7 +6388,7 @@
       courseA_playLab_events2_instruction: |-
         Jorge the Dog wants to say "Hi there."  Can
         you help him?
-      courseA_playLab_events3_instruction: 将 "向左移动" 块连接到工作区中已经存在的 "左" 事件块。
+      courseA_playLab_events3_instruction: 将 "向左移动" 块连接到工作区中的 "当点击向左时"的事件块。
       courseA_playLab_events4_instruction: |-
         Now, get Jorge to move right when the
         `right` button is clicked.
@@ -6404,10 +6401,10 @@
       courseA_playLab_events7_instruction: |-
         Add anything you want to this game.  Can
         you make the dinosaur disappear when Jorge runs into him?
-      courseA_playlab_events_challenge1_instruction: "\"我的朋友躲在哪里？你能写代码, 以显示其余的我的朋友吗？"
-      courseA_playlab_events_challenge2_instruction: "\"让我们开狂欢晚会吧! 在你点击或碰他们的时候，指派一些事情给他们。"
-      courseA_playlab_events_challengeClone_instruction: "\"我的朋友躲在哪里？你能写代码, 以显示其余的我的朋友吗？"
-      courseA_toMakeLoopsVideo_Collector_instruction: "循环让你不断地在里面重复!"
+      courseA_playlab_events_challenge1_instruction: "我的朋友躲在哪里？你能写代码, 以显示我的其他朋友吗？"
+      courseA_playlab_events_challenge2_instruction: '"让我们开狂欢晚会吧! 在你点击或碰他们的时候，让他们做点事情。"'
+      courseA_playlab_events_challengeClone_instruction: "我的朋友躲在哪里？你能写代码, 以显示我的其他朋友吗？"
+      courseA_toMakeLoopsVideo_Collector_instruction: "循环能让里面的代码不断的重复执行!"
       courseA_video_events_instruction: Need a better playlab/events combo
       courseB_artist_loops1_instruction: |-
         This is a new type of puzzle called "Artist".
@@ -6415,61 +6412,64 @@
       courseB_artist_loops10_instruction: |-
         Use what you have learned to draw a picture
         of what you think the artist saw when he got home.
-      courseB_artist_loops2_instruction: "艺术家试图画一条线 ** 6 ** 次, 但始终不能画好。 你能帮忙吗？"
+      courseB_artist_loops2_instruction: "艺术家试图画一条线 ** 6 ** 次, 但还没画好。 你能帮忙吗？"
       courseB_artist_loops3_instruction: "帮助艺术家画一条线7次, 来做花园墙。"
       courseB_artist_loops4_instruction: "Now we need to get the soil ready to plant.\nFind
         the bugs in the code and help the artist prepare the ground. "
       courseB_artist_loops5_instruction: "该去修楼梯了! 重复这个图案 ** 5** 次, 这样艺术家就可以到达灌木丛的顶端。"
       courseB_artist_loops6_instruction: "爬上藤蔓, 看看它延到哪里？"
-      courseB_artist_loops7_instruction: "** 挑战: ** 这是一个隐蔽的花园! 让我们四处走动。"
+      courseB_artist_loops7_instruction: "** 挑战: ** 这是一个隐蔽的花园! 让我们四处走动一下。"
       courseB_artist_loops8_instruction: "该回家了。你可以只用一个模块就能修好这个梯子让艺术家下来吗？"
       courseB_artist_loops9_instruction: |-
         Let's take the short way home, over the
         pond. Can you help the artist stay on the stones?
-      courseB_artist_loops_challenge1_instruction: "\"是时候掷骰子了! 你能帮我画这些吗？"
+      courseB_artist_loops_challenge1_instruction: '"是时候掷骰子了! 你能帮我画这些吗？"'
       courseB_artist_loops_challenge2_instruction: "让我们玩游戏吧! 尽可能多地画 X。你可以做到一排放3 个吗？"
-      courseB_collector_loops1_instruction: "这是冒险家Laurel! 你能把她带到附近去找宝藏吗？"
-      courseB_collector_loops10_instruction: "帮助Laurel从这个洞穴得到所有的宝藏。"
-      courseB_collector_loops11_instruction: "尤里卡! 得到尽可能多的财富!"
+      courseB_collector_loops1_instruction: "这是冒险家罗瑞尔! 你能把她带到附近去找宝藏吗？"
+      courseB_collector_loops10_instruction: "帮助罗瑞尔从这个洞穴得到所有的宝藏。"
+      courseB_collector_loops11_instruction: "发现宝藏了! 得到尽可能多的财富!"
       courseB_collector_loops2_instruction: "收集所有四个土堆来通关。"
-      courseB_collector_loops3_instruction: Laurel怎么能只用一个 "E -->` 块来得到五堆财宝呢？
+      courseB_collector_loops3_instruction: 罗瑞尔怎么能只用一个 "向东" 模块来得到五堆财宝呢？
       courseB_collector_loops3_predict1_instruction: |-
         How can Laurel collect all
         five piles of gold using only one `E -->` block?
-      courseB_collector_loops4_instruction: "修复Laure的路径，得到所有的宝藏!"
+      courseB_collector_loops4_instruction: "修复罗瑞尔的路径，得到所有的宝藏!"
       courseB_collector_loops5_instruction: "添加代码到最后的关卡，得到所有的宝藏。 "
-      courseB_collector_loops6_instruction: "找出代码, 帮助 Laurel 得到所有的宝藏!"
+      courseB_collector_loops6_instruction: "写出代码, 帮助罗瑞尔得到所有的宝藏!"
       courseB_collector_loops7_instruction: "编写代码来获取所有这些宝藏。"
-      courseB_collector_loops8_instruction: "** 挑战: ** 宝藏在楼梯最底下! 编写代码来帮助Laurel得到所有宝藏。"
+      courseB_collector_loops8_instruction: "** 挑战: ** 宝藏在楼梯最底下! 编写代码来帮助罗瑞尔得到所有宝藏。"
       courseB_collector_loops9_instruction: '"帮我从这个深谷里得到宝藏"*'
       courseB_collector_loops_challenge1_instruction: "这次你的模块有限。得到所有的宝藏! "
       courseB_collector_loops_challenge2_instruction: "让我们去拿宝藏吧! 帮助我越过每一行, 然后回来开始下一行。你能找到规律吗？"
-      courseB_collector_loops_challenge`_instruction: "这一次您只能使用每个箭头块中的一个。去拿所有的宝藏吧! "
-      courseB_collector_prog1_instruction: "这是冒险家Laurel! 你能把她带到附近去找黄金吗？"
+      courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
+      courseB_collector_loops_challenge`_instruction: "这一次您只能每个箭头使用一次。去拿所有的宝藏吧! "
+      courseB_collector_prog1_instruction: "这是冒险家罗瑞尔! 你能把她带到附近去找黄金吗？"
       courseB_collector_prog2_instruction: Four piles of gold!  Collect all four.
       courseB_collector_prog3_instruction: |-
         How can Laurel collect all five piles
         of gold using only one `E -->` block?
       courseB_maze_seq1_instruction: |-
-        玩耍这些模块, 看看他们能让小鸟做什么吧! \r
+        玩一玩这些模块, 看看他们能让小鸟做什么吧! \r
         \r
-        把鸟给猪来完成这关。
+        把鸟送到猪那里来完成这关。
       courseB_maze_seq10_instruction: Fix the bugs to get the bird to the pig.
       courseB_maze_seq11_instruction: It's all you!  Get the bird to the pig.
-      courseB_maze_seq12_instruction: "现在使劲方法把那头猪给我拿来!"
-      courseB_maze_seq2_instruction: "\"出错! 修复代码把我带到猪那里。*"
+      courseB_maze_seq12_instruction: "现在不管用什么办法，抓到那头猪!"
+      courseB_maze_seq2_instruction: "\"有错误! 修复代码把我带到猪那里。*"
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
       courseB_maze_seq6_instruction: "向一个方向移动，然后往另一个方向移动来帮鸟到达猪那里！"
       courseB_maze_seq7_instruction: "想想这里缺了什么，然后添加模块让鸟到达那只猪那！"
-      courseB_maze_seq8_instruction: "该你了！ 你要怎么做才能把鸟弄到猪身上？"
-      courseB_maze_seq9_instruction: "挑战: 饶开 TNT炸药, 把鸟放到猪身上。"
+      courseB_maze_seq8_instruction: "该你了！ 你要怎么做才能把鸟送到猪那里？"
+      courseB_maze_seq9_instruction: "挑战: 绕开TNT炸药, 让鸟到达猪那里。"
       courseB_maze_seq9_challenge1_instruction: "那只猪现在藏在哪里？"
-      courseB_maze_seqCold_instruction: "挑战: 通过添加模块来接除这个级别错误, 把鸟交给猪!"
-      courseB_maze_seqOld_instruction: "绕过 TNT, 把鸟放到猪身上! "
-      courseB_maze_seq_challenge1_instruction: "在每个方向上最多只能移动四次。在你跑出块之前, 你能找到一条路吗？"
-      courseB_maze_seq_challenge2_instruction: "排除此级别错误。这些是正确的区块, 但他们顺序错误!"
-      courseB_playLab_events1_instruction: "看看你是否能找出每个方块是做什么的。"
+      courseB_maze_seqCold_instruction: "挑战：通过添加模块来调试这关, 让鸟到达猪那里!"
+      courseB_maze_seqOld_instruction: "绕过 TNT炸药, 让鸟到达猪那里! "
+      courseB_maze_seq_challenge1_instruction: "在每个方向上最多只能移动四次。在你用完所有模块之前, 你能找到一条路吗？"
+      courseB_maze_seq_challenge2_instruction: "调试本关卡。这些模块是正确的, 但他们的顺序错了!"
+      courseB_playLab_events1_instruction: "看看你是否明白每个方块是做什么的。"
       courseB_playlab_events2_instruction: |-
         Have Daisy the Dragon say something when
         you click "Run".
@@ -6501,17 +6501,17 @@
       courseB_playlab_eventsToolbox_instruction: |-
         Finish by playing a sound and making
         the knight vanish when he runs into the dragon!
-      courseB_playlab_events_challenge1_instruction: "这是大型动物赛跑的时候了! 当你按下时, 让动物们往下移动。看谁跑得最快？"
+      courseB_playlab_events_challenge1_instruction: "大型的动物比赛的时间到了! 当你按下时, 让动物们往下移动。看谁跑得最快？"
       courseB_playlab_events_challenge2_instruction: |-
-        点击他们让动物消失！现在试着和狗玩, 然后帮助其他的动物加入到有趣的游戏中来. \r
-        你也可以添加声音和得分点来创建一个动物标记游戏!
+        点击让动物消失！现在试着和狗玩, 然后帮助其他的动物加入到有趣的游戏中来。 \r
+        你也可以添加声音和得分点来创建一个动物标签的游戏!
       courseB_playlab_events_challenge2_embed_instruction: "这是你完成的游戏!"
-      courseB_playlab_events_challenge2_template_instruction: "点击来使动物消失！你也可以添加声音和得分点,
+      courseB_playlab_events_challenge2_template_instruction: "点击来使动物们消失！你也可以添加声音和得分点,
         创建一个有趣的动物标签游戏!"
-      courseB_starWars_prog1_instruction: "\"去拿废金属, BB-8!"
+      courseB_starWars_prog1_instruction: "\"去收集废金属, BB-8!”"
       courseB_starWars_prog10_instruction: "帮助 BB-8 收集发光的废旧金属"
       courseB_starWars_prog11_instruction: "帮助 BB-8 收集发光的废旧金属"
-      courseB_starWars_prog2_instruction: "把所有的金属都拿来"
+      courseB_starWars_prog2_instruction: "把所有的金属都收集起来。"
       courseB_starWars_prog3_instruction: "得到所有的废金属"
       courseB_starWars_prog4_instruction: "得到所有的废金属"
       courseB_starWars_prog5_instruction: "获取废旧金属"
@@ -6560,54 +6560,39 @@
       courseC_PlayLab_eventsFP_instruction: 创造你自己的故事。完成后, 单击 "完成" 以与朋友共享。在提示中有故事的想法。
       courseC_PlayLab_events_challenge1_instruction: |-
         用一块新模块，让企鹅在碰到恐龙和得分的时候能自动回到原点。\r
-        玩这个游戏，并用箭头移动企鹅，知道你得到足够的分数。
+        玩这个游戏，并用箭头移动企鹅，直到你得到足够的分数。
       courseC_PlayLab_events_challenge1_xy_blocks_instruction: |-
-        这里是一个有点复杂的新块。用来让企鹅在遇到恐龙和得分的时候回到原点。这将使你的游戏更具挑战性和有趣! \r
+        这里是一个有点复杂的新模块。用来让企鹅在遇到恐龙和得分的时候回到原点。这将使你的游戏更具挑战性和有趣! \r
         \r
         玩游戏和用箭头移动企鹅, 直到你得分足够的分数。
-      courseC_artist_loop1_instruction: "让我们添加一些潇洒!"
-      courseC_artist_loops1_instruction: "\"僵尸\" 画!\"\\r\n\\r\n僵尸想画一条线他到花园的向日葵的线。
+      courseC_artist_loop1_instruction: "让我们添加一些活泼的东西!"
+      courseC_artist_loops1_instruction: "\"僵尸。 画图!\"\\r\n\\r\n僵尸想画一条线，从它这里到花园向日葵的线。
         你能帮他吗？ \\r \n* (花园在250像素以外) *  "
       courseC_artist_loops1a_instruction: "把艺术家带到游戏区的中心, 然后用贴纸画一只鸟。 "
-      courseC_artist_loops2_instruction: |-
-        Now that the zombie knows his way, help
-        him dig holes along the path to plant more flowers!
-      courseC_artist_loops2a_instruction: |-
-        Now, use a loop to spin your bird around
-        12 times with a 30 degree turn.
-      courseC_artist_loops3_instruction: |-
-        Excellent!  Now that the flowers have sprouted,
-        help the zombie place a friend every 50 pixels to guard over them until they
-        are grown.
-      courseC_artist_loops3a_instruction: Now add a bat!
-      courseC_artist_loops4_instruction: |-
-        The zombie has found an empty farm!  Can
-        you help him bring it to life by stamping animal stickers every 100 pixels
-        around the border?
-      courseC_artist_loops4a_instruction: Try jumping forward by 75 pixels.
+      courseC_artist_loops2_instruction: "现在, 僵尸知道他的路线, 帮助他沿路挖洞种植更多的花朵!"
+      courseC_artist_loops2a_instruction: "现在, 用一个循环旋转你的鸟大约12次, 每次转30度。"
+      courseC_artist_loops3_instruction: "非常好！ 现在, 花朵已经发芽, 帮助僵尸每隔50像素安置一个朋友来保护花朵,
+        直到他们长大。"
+      courseC_artist_loops3a_instruction: "现在添加一只蝙蝠!"
+      courseC_artist_loops4_instruction: "僵尸发现了一个空农场! 你能帮他把沿着边缘每100 像素贴上动物贴来让农场变热闹/活跃起来吗？"
+      courseC_artist_loops4a_instruction: "尝试向前跳跃75像素。"
       courseC_artist_loops5_instruction: |
-        Great!  Now it's time to make a fence
-        inside to keep the animals out.   \r
+        很好! 现在是时候做一个围栏, 以防止动物跑出去。  \r
         \r
-      courseC_artist_loops5a_instruction: Try new stickers!
-      courseC_artist_loops5b_instruction: Try adding lines!
+      courseC_artist_loops5a_instruction: "尝试新的贴纸!"
+      courseC_artist_loops5b_instruction: "尝试添加线条!"
       courseC_artist_loops6_instruction: |
-        What should the zombie put inside of the
-        garden?  \r
+        僵尸应该放在花园里什么？ \r
         \r
         \r
-      courseC_artist_loops6a_instruction: Add another sticker!
-      courseC_artist_loops7a_instruction: Play with the loops and angles.
-      courseC_artist_loops8a_instruction: Now try something on your own!
-      courseC_artist_loopsPre1a_instruction: Time to spin that line around!
-      courseC_artist_loopsPrePre1a_instruction: "Get the artist to the center of\nthe
-        play area, then draw a line. "
-      courseC_artist_loopsTemplate_instruction: |-
-        Excellent!  Now that the flowers
-        have sprouted, help the zombie place a friend every 50 pixels to guard over
-        them until they are grown.
-      courseC_artist_loopsTemplateA_instruction: "Get the artist to the center of\nthe
-        play area, then draw a bird using a sticker. "
+      courseC_artist_loops6a_instruction: "添加另一个标签!"
+      courseC_artist_loops7a_instruction: "操练循环和角度。"
+      courseC_artist_loops8a_instruction: "现在尝试自己练习!"
+      courseC_artist_loopsPre1a_instruction: "是时候把那条线转过来了!"
+      courseC_artist_loopsPrePre1a_instruction: "把艺术家带到游戏区的中心, 然后画一条线。 "
+      courseC_artist_loopsTemplate_instruction: "非常好！ 现在, 花朵已经发芽, 帮助僵尸每隔50像素安置一个朋友来保护花朵,
+        直到他们长大。"
+      courseC_artist_loopsTemplateA_instruction: "把艺术家带到游戏区的中心, 然后用贴纸画一只鸟。 "
       courseC_artist_prog1_instruction: |-
         Play with the blocks in the toolbox to see
         what they do!
@@ -6629,25 +6614,16 @@
         One more tag.  This is a triangle for Pi.\r
         (Each
         side is 150 pixels)
-      courseC_artist_prog_challenge1-doghouse_instruction: |-
-        Let's build a dog house
-        for Jorge!
-      courseC_artist_prog_challenge1_instruction: |-
-        Draw rooms for each of the animals.
-        There are many different ways to solve this puzzle, so have some fun. The
-        shortest possible solution is 6 blocks, but use as many as you like!
-      courseC_artist_prog_challenge2_instruction: |-
-        *Help me paint the yellow lines
-        on this road!*
-      courseC_collector_loops_challenge2_instruction: |-
-        Let's hunt for treasure -
-        using loops! Help the collector by debugging this code. Get all of the treasure!
+      courseC_artist_prog_challenge1-doghouse_instruction: "让我们为乔治建个狗屋吧!"
+      courseC_artist_prog_challenge1_instruction: "为每一个动物绘制房间。有许多不同的方法来解决这个关卡。所以让我们有一些乐趣。最短的解决方案是6块,
+        但是你可以按你的想法尽可能多地使用!"
+      courseC_artist_prog_challenge2_instruction: "* 帮我在这条路上涂上黄线!*"
+      courseC_artist_prog_challenge2a_instruction: "* 帮我在这条路上涂上黄线!*"
+      courseC_collector_loops_challenge2_instruction: "得到至少**5**个宝藏!"
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
         you can help Laurel collect some treasure.
-      courseC_collector_prog2_instruction: |-
-        Move Laurel to the treasure, then use
-        `collect` to pick it up.
+      courseC_collector_prog2_instruction: 把罗瑞尔移到宝藏上, 然后用 "收藏" 来捡起来。
       courseC_collector_prog3_instruction: |-
         Order these blocks to collect the treasure
         and solve the puzzle.
@@ -6666,53 +6642,26 @@
       courseC_collector_prog8_instruction: |-
         *"Keep up the good work! Help me collect
         all of the treasure."*
-      courseC_collector_prog9_instruction: '*"Let''s get all of the coins!"*'
+      courseC_collector_prog9_instruction: '*"让我们得到所有的宝藏!*'
       courseC_collector_progA_instruction: Help Laurel collect all of the treasure.
       courseC_collector_progB_instruction: |-
         Collect as many coins as you can to finish
         the stage!
-      courseC_collector_prog_challenge1_instruction: |-
-        Look carefully! Can you collect
-        all *10* pieces of treasure?
-      courseC_collector_prog_challenge2_instruction: |-
-        There are 20 pieces of treasure
-        to be found. Collect at least half to finish this challenge!
-      courseC_flappy_embed_events_instruction: |-
-        Here's an example of a game that
-        you're about to create yourself! Play through it one or two times to get
-        an idea of what you are about to make.
-      courseC_flappy_events1_instruction: |-
-        Attach the `flap normal amount` block
-        to the `when click` event, then press "Run".    Click or tap on the play
-        space to move Flappy to the target.
-      courseC_flappy_events10_instruction: 'Create your own Flappy game! '
-      courseC_flappy_events2_instruction: |-
-        Try adding a block that sets the level
-        speed when the "Run" button is pressed.  Play the game and flap to the target
-        to continue.
-      courseC_flappy_events3_instruction: |-
-        Attach the `end game` block to the `when
-        hit the ground` event.   Play the game and crash the bird into the ground
-        to continue.
-      courseC_flappy_events4_instruction: |-
-        Attach a block to the `when hit an obstacle`
-        event so that the game ends when Flappy crashes into the first set of pipes.
-      courseC_flappy_events5_instruction: |-
-        Add a block to the `when pass an obstacle`
-        event, then press "Run" to score a point by flying Flappy through the first
-        set of pipes.
-      courseC_flappy_events6_instruction: |-
-        See if you can still score a point after
-        making Flappy flap either a smaller or larger amount each time you click.
-      courseC_flappy_events7_instruction: |-
-        Next, try changing the scene by attaching
-        a block to the `when run` event.
-      courseC_flappy_events8_instruction: |-
-        Try setting a **random** scene when other
-        events happen...for example, when passing an obstacle.
-      courseC_flappy_events9_instruction: |-
-        To mix things up, instead of ending the
-        game when Flappy hits an obstacle, try setting the score back to 0.
+      courseC_collector_prog_challenge1_instruction: "仔细看! 你能收集所有 * 10 * 块宝藏吗？"
+      courseC_collector_prog_challenge2_instruction: "收集至少**10**个宝藏完成这一挑战!"
+      courseC_flappy_embed_events_instruction: "这里有一个游戏的例子, 你要自己来创造! 通过一两次游戏来想想自己要做什么。"
+      courseC_flappy_events1_instruction: 将 "拍打正常数量" 块附加到 "单击时" 情景, 然后按 "运行"。单击或点击播放空间,
+        将像素鸟移动到目的地。
+      courseC_flappy_events10_instruction: "创建自己的像素鸟游戏! "
+      courseC_flappy_events2_instruction: 在按下 "运行" 按钮时, 尝试添加一个设置速度级别的模块。 玩游戏并飞到目的地来继续。
+      courseC_flappy_events3_instruction: "附加 ' 结束游戏 ' 块到 ' 当击中地面 ' 时的下面。  玩游戏, 把小鸟撞向地面来继续。"
+      courseC_flappy_events4_instruction: "附加一个块到 ' 当击中障碍 ' 情况中, 以便在像素鸟撞到第一条管道的时候，游戏结束时。"
+      courseC_flappy_events5_instruction: 在 "通过障碍" 情况时添加一个块, 然后等像素鸟飞过第一组管道的时候，按 "运行"
+        得一分。
+      courseC_flappy_events6_instruction: "看你是否可以在每次你点击的时候，让像素鸟拍打更大或更小的距离，来得分。"
+      courseC_flappy_events7_instruction: 接下来, 尝试通过将一个模块附加到 "运行时" 事件来更改场景。
+      courseC_flappy_events8_instruction: "当其他事件发生时, 尝试设置一个 **随机** 场景.....比如，当通过一个障碍物时。"
+      courseC_flappy_events9_instruction: "把事情混合起来, 在像素鸟击倒障碍物的时候不是让游戏停止，试着把分数归零。"
       courseC_harvester_loops1_instruction: Use loops to pick all of the pumpkins.
       courseC_harvester_loops10_instruction: |-
         Collect all of the corn and all of
@@ -6742,10 +6691,12 @@
       courseC_harvester_loops9_instruction: |-
         Collect all of the corn and all of the
         pumpkins.
-      courseC_harvester_loops_challenge1_instruction: Collect all of the corn.
-      courseC_harvester_loops_challenge2_instruction: |-
-        Collect all of the lettuce.
-        Avoid the trees and fields!
+      courseC_harvester_loops_challenge1_instruction: "收集所有的玉米。"
+      courseC_harvester_loops_challenge1a_instruction: "收集所有的玉米。"
+      courseC_harvester_loops_challenge2_instruction: "收集所有的生菜。避开树木和田野!"
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -6774,12 +6725,8 @@
       courseC_maze_debugging9_instruction: |-
         Debug this level to get Scrat to the
         acorn.
-      courseC_maze_debugging_challenge1_instruction: |-
-        *"Am I just going around in
-        circles?"*
-      courseC_maze_debugging_challenge2_instruction: |-
-        *"If I turn too often, I might
-        get dizzy! Help me reach the acorn with only four `turn` commands."*
+      courseC_maze_debugging_challenge1_instruction: '"我只是绕圈子走吗？"*'
+      courseC_maze_debugging_challenge2_instruction: '*"如果我转得太频繁, 我可能会头晕! 帮助我只通过四个“转”向命令来拿到橡子。"*'
       courseC_maze_loops1_instruction: |-
         Can you get the bird to the pig using 5 of
         the same kind of blocks?
@@ -6803,11 +6750,9 @@
         Challenge: Combine ideas from the last few
         puzzles to complete this level.
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
-      courseC_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops\nto
-        find his acorn! "
-      courseC_maze_loops_challenge2_instruction: |-
-        Let's hunt for treasure - using
-        loops! Help the collector by debugging this code. Get all of the treasure!
+      courseC_maze_loops_challenge1_instruction: "现在, 斯奎特想尝试使用循环来找到他的橡子! "
+      courseC_maze_loops_challenge1a_instruction: "现在, 斯奎特想尝试使用循环来找到他的橡子! "
+      courseC_maze_loops_challenge2_instruction: "让我们使用循环来寻找宝藏! 通过找出此代码错误来帮助收集者得到所有的宝藏!"
       courseC_maze_programming1_instruction: |-
         For this puzzle, drag all of the blocks
         together and click "Run" to watch it go!
@@ -6834,19 +6779,10 @@
       courseC_maze_programming9_instruction: |-
         *"Now, help me sneak up on the pig
         any way you want to!"*
-      courseC_maze_programming_challenge1_instruction: |-
-        *"The pig is hiding! Can
-        you help me find a way around?"*
-      courseC_maze_programming_challenge2_instruction: |-
-        Sometimes there is more than
-        one way to solve the same problem. Sometimes it's faster to go backwards
-        than it is to go forwards!
-      courseC_playLab_embedded_instruction: |-
-        Here's a game for you to play! To win,
-        use your arrow keys to get the penguin to run into the octopus.\r
-        \r
-        Once
-        you are done, you will learn how to make this game!
+      courseC_maze_programming_challenge1_instruction: "\"猪藏起来了! 你能帮我找到一条路吗？*"
+      courseC_maze_programming_challenge2_instruction: "有时, 解决同一问题的方法不止一种。有时候向后走比前进快!"
+      courseC_playLab_embedded_instruction: "这里有一个游戏给你玩! 要赢的话, 用你的方向键让企鹅遇到章鱼. \n\\r\n一旦你完成了,
+        你将学会如何做这个游戏!"
       courseC_puppy_loops10_instruction: You are doing great! Keep it up!
       courseC_puppy_loops11_instruction: |-
         You are almost there! This time, choose
@@ -6858,32 +6794,23 @@
         Challenge: Combine ideas
         from the last few puzzles to complete this level.
       courseC_puppy_loops9_instruction: You are doing great! Keep it up!
-      courseC_starWars_loops1_instruction: |-
-        BB-8 will pick up any metal scraps along
-        the path where he moves. Use 5 of the same block to get BB-8 to pick up all
-        of the scrap metal in the play area.
+      courseC_starWars_loops1_instruction: BB-8 会在他移动的路上捡起任何金属废料。用同一个模块5次, 让 BB-8
+        捡起场地中所有的废旧金属。
       courseC_starWars_loops10_instruction: You are doing great! Keep it up!
-      courseC_starWars_loops10_predict2_instruction: |-
-        You are doing great! Keep it
-        up!
+      courseC_starWars_loops10_predict2_instruction: "你做得很好! 继续!"
       courseC_starWars_loops11_instruction: |-
         You are almost there! This time, choose
         any path you like!
-      courseC_starWars_loops1_predict1_instruction: |-
-        BB-8 will pick up any metal
-        scraps along the path where he moves. Use 5 of the same block to get BB-8
-        to pick up all of the scrap metal in the play area.
-      courseC_starWars_loops2_instruction: |-
-        To get all the scrap metal, try creating
-        a loop that uses only one block inside of a `repeat` block.
-      courseC_starWars_loops4_instruction: |-
-        In this puzzle, two `repeat` loops will
-        help you get BB-8 to all of the scrap metal with the fewest number of blocks!
+      courseC_starWars_loops1_predict1_instruction: BB-8 会在他通过的地方捡起任何金属废料。用同一个模块5次,
+        让 BB-8 捡起场地中所有的废旧金属。
+      courseC_starWars_loops2_instruction: 要获取所有的废金属, 请尝试创建一个在 "重复"模块内只有一个模块的循环。
+      courseC_starWars_loops4_instruction: "在这个关卡中, 两个 ' 重复 ' 循环将帮助您用最少的模块获得 BB-8
+        的所有金属废料。"
       courseC_starWars_loops5_instruction: "让 BB-8 尽快拿起所有的废金属!"
       courseC_starWars_loops6_instruction: |-
         Loops even work with more than one block
         inside!  Can you loop this sequence?
-      courseC_starWars_loops7_instruction: "你能试着只用一个循环就能得到所有的废金属吗？尝试将其全部编程出来, 然后找到重复的代码放入循环中。"
+      courseC_starWars_loops7_instruction: "你能试着只用一个循环就能得到所有的废金属吗？尝试先把所有代码写出来出来, 然后找到重复的代码放入循环中。"
       courseC_starWars_loops9_instruction: "用你所学的东西来捡起所有的废铁!"
       courseD_artist_binary1_instruction: |-
         Use the blocks below to have the artist
@@ -6906,19 +6833,21 @@
       courseD_artist_binary6_instruction: "哪个6位的二进制字符串重复11次后能够画出这个图形?"
       courseD_artist_binary7_instruction: "能让你重复并画出这个图形的最短的二进制字符串是什么?"
       courseD_artist_binary8_instruction: Finish the code to create this drawing.
-      courseD_artist_binary8_predict1_instruction: "完成代码来创建此绘图。"
+      courseD_artist_binary8_predict1_instruction: "完成代码来创建此图。"
       courseD_artist_binaryFP_instruction: |-
         Here's a higher resolution canvas to
         draw on - 16 pixels by 16 pixels!\r
         \r
         See what happens when we start to
         get creative with the bits!
-      courseD_artist_binary_challenge0_instruction: "请尝试使用嵌套循环来完成此绘图。"
-      courseD_artist_binary_challenge1_instruction: "您只能使用每个二进制值 (0 或 1) 在这个谜题。请尝试使用嵌套循环来完成此绘图。"
+      courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
+        binary! "
+      courseD_artist_binary_challenge0_instruction: "请尝试使用嵌套循环来完成此图。"
+      courseD_artist_binary_challenge1_instruction: "在这个谜题中，您只能使用每个二进制值 (0 或 1) 一次。请尝试使用嵌套循环来完成此绘图。"
       courseD_artist_binary_challenge2_instruction: "你是否有足够的毅力让这个标志回到正常状态？"
       courseD_artist_binary_challenge3_instruction: "你是否有足够的毅力让这个标志回到正常状态？"
-      courseD_artist_embed_frozen_instruction: "按下运行键看到雪花设计!"
-      courseD_artist_embed_frozen2_instruction: "按下运行键看到雪花设计!"
+      courseD_artist_embed_frozen_instruction: "按下运行键来看看雪花设计!"
+      courseD_artist_embed_frozen2_instruction: "按下运行键来看看雪花设计!"
       courseD_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
@@ -6994,20 +6923,20 @@
         this stage.
       courseD_artist_nestedLoops_challenge1_instruction: "你能想出怎么制作出这样的照片吗？"
       courseD_artist_nestedLoops_challenge2_instruction: "你能想出怎么制作出这样的照片吗？"
-      courseD_artist_project1_instruction: "绘制一个小形状, 介于 ** 20 和50像素宽之间。 它可以是任何你喜欢的形状。
+      courseD_artist_project1_instruction: "绘制一个小形状, 介于 ** 20 和50 **像素宽之间。 它可以是任何你喜欢的形状。
         \ "
-      courseD_artist_project1a_instruction: "画一个阶梯楼梯模式, 使用75和105度之间的转弯。"
-      courseD_artist_project2_instruction: "现在用你选的形状来连续画两或三个!"
+      courseD_artist_project1a_instruction: "画一个阶梯楼梯模式, 使用75和105度之间的角度来转弯。"
+      courseD_artist_project2_instruction: "现在用你选的形状在一行里连续画两或三个!"
       courseD_artist_project2a_instruction: "现在, 转180度左右, 再次绘制楼梯图案!"
       courseD_artist_project3_instruction: "让我们旋转那个形状的线吧!"
-      courseD_artist_project3a_instruction: "在一个圆圈内旋转该形状大约5或6倍。"
+      courseD_artist_project3a_instruction: "在一个圆圈内旋转该形状大约5或6次。"
       courseD_artist_project4_instruction: "是时候把这些形状分层了!"
       courseD_artist_project4a_instruction: |-
-        试着玩弄你所创造的东西。画任何你喜欢的东西! \r
+        试着改动一下你所创造的东西。画任何你喜欢的东西! \r
         - 如果你在台阶上使用两个不同的角度, 会发生什么？\r
-        - 如果你把你的钻石图案长或短, 会发生什么？\r
-        - 如果把两片雪花放到一起会是什么样的？
-      courseD_artist_project5_instruction: "玩弄雪花功能!"
+        - 如果你把你的钻石图案变长或变短, 会发生什么？\r
+        - 如果把两片雪花叠起来是什么样的？
+      courseD_artist_project5_instruction: "玩一玩雪花功能!"
       courseD_artist_project_embedded_instruction: "这是你即将要做的!"
       courseD_artist_ramp11_instruction: "现在用艺术家做一个正方形!"
       courseD_artist_ramp12_instruction: "用你学过的东西在正方形里面画这个三角形。"
@@ -7039,7 +6968,7 @@
       courseD_bee_conditionals7_instruction: |-
         Use the `if/else` block to collect
         nectar at flowers and make honey at honeycomb.
-      courseD_bee_conditionals7_predict2_instruction: 使用 "如果/其他" 块收集花朵的花蜜, 在蜂窝里制作蜂蜜。
+      courseD_bee_conditionals7_predict2_instruction: 使用 "如果/否则" 模块收集花朵的花蜜, 在蜂窝里制作蜂蜜。
       courseD_bee_conditionals8_instruction: |-
         Collect nectar if there is a flower.\r
         Otherwise,
@@ -7071,6 +7000,7 @@
         Help the bee fix the code to get all the
         nectar.
       courseD_bee_debugging_challenge1_instruction: "看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂制造所有的蜂蜜吗？"
+      courseD_bee_debugging_challenge1a_instruction: "看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂制造所有的蜂蜜吗？"
       courseD_bee_debugging_challenge2_instruction: "看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂制造所有的蜂蜜吗？"
       courseD_bee_nestedLoops1_instruction: Help the bee collect all of the nectar.
       courseD_bee_nestedLoops1a_instruction: Help the bee collect all of the nectar.
@@ -7103,31 +7033,30 @@
         only the blocks in your toolbox.
       courseD_bounce_embed_endgame_instruction: "使用左右箭头移动乒乓球拍。看看你的对手两次得分之前你能得到多少分!"
       courseD_bounce_embedded_instruction: "在此处编写说明"
-      courseD_bounce_events1_instruction: 将一个块附加到 "当左箭头" 块中, 然后按 "运行" 将播放机移动到旗帜上。
-      courseD_bounce_events10_instruction: 现在有一个目标在顶部。把 "得分点" 和 "对手得分点" 方块加到"当球命中"
-        和 "当球错过球拍" 方块做一个游戏。看看你能在对手得分两次之前得分多少分。
-      courseD_bounce_events10s_instruction: '游戏规则是：把 "得分点" 块加到“球击中”的情况上。如果“球错过球拍”的情况就用
-        '' 对手得分点 '' 块。 '
-      courseD_bounce_events11_instruction: 现在可以将块附加到 "运行时" 块。你必须在一个以上的地方附加新的 "发新球"
-        块。此外, 尝试改变的场景或球拍和球的速度，看你在对手得分前可以得几分。
-      courseD_bounce_events11s_instruction: '在所有需要新球的游戏里面加上"抛出新球" 块。 '
+      courseD_bounce_events1_instruction: 将一个模块附加到 "当按左键" 块中, 然后按 "运行" 将播放机移动到旗帜上。
+      courseD_bounce_events10_instruction: 顶部有一个目标。添加 "得分点" 和 "得分对手点" 方块到"当球在球门" 和
+        "当球错过桨" 方块，来做一个游戏。看看你能在对手得分两次之前得分多少分。
+      courseD_bounce_events10s_instruction: '把 "得分点" 块加到“当球击中”的事件上。将 '' 对手得分点 '' 模块加到“球错过球拍”的事件上。这样来创建这个游戏。 '
+      courseD_bounce_events11_instruction: 现在可以将块附加到 "运行时" 块。你必须在一个以上的地方附加新的 "发射新球"
+        块。此外, 尝试改变桨和球的场景或速度, 来看看你可以在你对手得到两倍的分数前得多少点。
+      courseD_bounce_events11s_instruction: '在所有需要新球的游戏里面加上"扔出新球" 模块。 '
       courseD_bounce_events12_instruction: 创建自己的弹跳游戏。你可以改变所有的视觉效果和规则。完成后, 单击 "完成"
         ，让朋友在手机上试用您的游戏。
       courseD_bounce_events12s_instruction: 让这个游戏成为你自己的。你可以改变所有的视觉效果和规则。完成后, 单击 "完成",
         让朋友在手机上试用您的游戏。
-      courseD_bounce_events1s_instruction: 将一个块加到 "当左箭头" 块，并按 "运行" 将播放机移动到网格上。
-      courseD_bounce_events2_instruction: 将块附加到 "当右箭头" 和 "当左箭头" 块。移动球拍来完成两个目标。
-      courseD_bounce_events2s_instruction: 现在, 在 "当右场景" 中附加一个方块, 这样手就可以拿到两个篮子。
-      courseD_bounce_events3_instruction: 现在，尝试类似的做法用"当按上方向键时"块，来移动球拍到顶部目标。
-      courseD_bounce_events3s_instruction: 现在，尝试类似的做法用"当按上方向键时"块，来移动球拍到顶部目标。
-      courseD_bounce_events4_instruction: "这次你需要添加四个块。移动球拍到所有四个目标来通关。"
-      courseD_bounce_events4s_instruction: "这次你需要添加四个块。移动球拍到所有四个目标来通关。"
-      courseD_bounce_events5_instruction: 我们要向球拍反向发球。将一个模块附加到"当球击中球拍"模块以确保球能到达目标。
+      courseD_bounce_events1s_instruction: 将一个模块加到 "当按下左键时"模块下，并按 "运行" 将播放机移动到网上。
+      courseD_bounce_events2_instruction: 将块附加到 "当按右键时" 和 "当按左键时"模块块。移动桨, 以达到两个完成目标。
+      courseD_bounce_events2s_instruction: 现在, 在 "当向右时" 中附加一个方块, 这样手就可以够到两个篮子。
+      courseD_bounce_events3_instruction: 现在，尝试类似的做法用"当按上键时"块，来移动球拍到顶部目标。
+      courseD_bounce_events3s_instruction: 现在，尝试类似的做法用"当按上键时"块，来移动球拍到顶部目标。
+      courseD_bounce_events4_instruction: "这次你需要添加四个模块。移动球拍到所有四个目标来通关。"
+      courseD_bounce_events4s_instruction: "这次你需要添加四个模块。移动球拍到所有四个目标来通关。"
+      courseD_bounce_events5_instruction: 我们要向球拍发一个球。将一个模块附加到"当球击中球拍时"模块以确保球能到达目标。
       courseD_bounce_events5s_instruction: "将一个方块连接到 ' 当球击中手 ' 情景, 以确保球到达篮框。"
-      courseD_bounce_events6_instruction: 现在完成的目标在顶上。您需要将模块附加到这两个"当球击中"模块中得以通过这关。
-      courseD_bounce_events6s_instruction: "附加代码, 使球弹跳时, 可以击中墙壁, 这样你才可以通关。"
-      courseD_bounce_events7_instruction: 将模块附加到每个"何时"模块。弹起球，直到它击中目标。
-      courseD_bounce_events7s_instruction: "把声音块加到当你击中篮筐时, 网发出沙沙声。当球没打到你的手时, 哨子会响。弹起球,
+      courseD_bounce_events6_instruction: 现在完成的目标在最上面。您需要将模块附加到这两个"当球击中"模块中得以通过这关。
+      courseD_bounce_events6s_instruction: "添加代码, 使球弹跳时, 可以击中墙壁, 这样你才可以通关。"
+      courseD_bounce_events7_instruction: 将模块附加到每个"当.... 时"中模块。弹起球，直到它击中目标。
+      courseD_bounce_events7s_instruction: "加入声音模块，当你击中篮筐时, 网会发出沙沙声。当球没碰到你的手时, 哨子会响。弹起球,
         直到它击中完成目标。"
       courseD_collector_debugging1_instruction: "修复错误来收集所有的宝藏。"
       courseD_collector_debugging1a_instruction: "修复错误来收集所有的宝藏。"
@@ -7137,37 +7066,18 @@
       courseD_collector_debugging3a_instruction: "修复错误来收集所有的宝藏。"
       courseD_collector_debugging4_instruction: "修复错误来收集所有的宝藏。"
       courseD_collector_debugging4a_instruction: "修复错误来收集所有的宝藏。"
-      courseD_collector_debugging5_instruction: |-
-        All of the commands that you need
-        are already here...now use your debugging skills to figure out how to solve
-        this puzzle.
-      courseD_collector_debugging5a_instruction: |-
-        All of the commands that you need
-        are already here...now use your debugging skills to figure out how to solve
-        this puzzle.
-      courseD_collector_debugging6_instruction: |-
-        Challenge: Use your debugging skills
-        to fix the errors and collect all of the treasure.
-      courseD_collector_debugging6a_instruction: |-
-        Challenge: Use the code in the
-        work area to get at least **6** pieces of treasure!
-      courseD_collector_debugging7_instruction: |-
-        Challenge: All of the commands that
-        you need are already here...now use your debugging skills to figure out how
-        to solve this puzzle.
-      courseD_collector_debugging_challenge2_instruction: |-
-        Are you an expert of nested
-        loops? Use what you have learned so far to collect all of the treasure!
-      courseD_collector_nested_loops_challenge2_instruction: |-
-        Help the collector
-        reach at least two piles of treasure using only the blocks in your toolbox.
-        It is possible to collect all 4.
+      courseD_collector_debugging5_instruction: "你需要的所有命令都已经在这里... 现在, 使用你的排错能力来找出如何解决这个难题。"
+      courseD_collector_debugging5a_instruction: "你需要的所有命令都已经在这里... 现在, 使用你的排错能力来找出如何解决这个难题。"
+      courseD_collector_debugging6_instruction: "挑战: 使用您的排错技巧来修复错误并收集所有的宝藏。"
+      courseD_collector_debugging6a_instruction: "挑战: 使用工作区的代码得到至少 ** 6 ** 块宝藏!"
+      courseD_collector_debugging7_instruction: "挑战: 所有你需要的命令已经在这里了... 现在, 使用您的排错技巧来找出如何解决这个难题。"
+      courseD_collector_debugging_challenge2_instruction: "您是嵌套循环的专家吗？使用你所学到的收集所有的宝藏!"
+      courseD_collector_nested_loops_challenge2_instruction: "帮助收藏家只使用你工具箱里的块来拿到至少两堆宝藏。这里可能收集到所有4堆。"
+      courseD_collector_nested_loops_challenge2a_instruction: "帮助收藏家只使用你工具箱里的块来拿到至少两堆宝藏。这里可能收集到所有4堆。"
       courseD_collector_ramp10_instruction: Help Laurel collect all of the treasure.
       courseD_collector_ramp8_instruction: Help Laurel collect all of the treasure.
       courseD_collector_ramp9_instruction: Help Laurel collect all of the treasure.
-      courseD_collector_until_challenge1_instruction: |-
-        Are you an expert of nested
-        loops? Use what you have learned so far to collect all of the treasure!
+      courseD_collector_until_challenge1_instruction: "您是嵌套循环的专家吗？使用你所学到的收集所有的宝藏!"
       courseD_debugging_1_instruction: Fix the error(s) to collect all of the nectar.
       courseD_debugging_2_instruction: Fix the error(s) to collect all of the nectar.
       courseD_debugging_3_instruction: "改正错误，从而能够采集所有花蜜，并酿成蜂蜜。"
@@ -7194,9 +7104,7 @@
       courseD_farmer_condLoops4a_instruction: |-
         Help the farmer pick all of the lettuce
         in each cluster before moving on to the next bunch.
-      courseD_farmer_condLoops5_instruction: |-
-        Collect all of the corn and lettuce,
-        then grab the pumpkin at the end.
+      courseD_farmer_condLoops5_instruction: "收集所有的玉米和生菜, 然后最后去拿南瓜。"
       courseD_farmer_condLoops6_instruction: |-
         Can you figure out how to pick the
         pumpkin?  Make sure to collect all of the corn along the way!
@@ -7212,16 +7120,9 @@
       courseD_farmer_condLoops9_predict1_instruction: |-
         Collect all of the corn and
         lettuce, then pick the pumpkin.
-      courseD_farmer_condLoops_challenge1_instruction: |-
-        Turn right at the pumpkins.
-        Collect everything to complete the level. Each hidden crop has only one corn
-        or lettuce.
-      courseD_farmer_condLoops_challenge2_instruction: |-
-        Collect everything to complete
-        the level.
-      courseD_farmer_condLoops_challenge2_clone_instruction: |-
-        Collect everything
-        to complete the level.
+      courseD_farmer_condLoops_challenge1_instruction: "在南瓜处右边向右拐。收集所有的一切来过这关。每个隐藏的作物只有一个玉米或莴苣。"
+      courseD_farmer_condLoops_challenge2_instruction: "收集一切作物来通过这关。"
+      courseD_farmer_condLoops_challenge2_clone_instruction: "收集一切作物来通过这关。"
       courseD_farmer_conditionals1_instruction: |-
         Move to the pile of dirt and use
         the `remove` block to remove it.
@@ -7248,10 +7149,8 @@
         as few blocks as possible. "
       courseD_farmer_conditionals9_instruction: "Flatten all of these piles using\nas
         few blocks as possible. "
-      courseD_farmer_until_challenge2_instruction: |-
-        Use If/Else blocks to follow
-        the curvy path. At each corner, use the `remove 1` command in a loop to clear
-        the piles.
+      courseD_farmer_until_challenge2_instruction: 使用 如果 或 否则 模块来跟着曲线路径前进。在每个转角, 在循环中使用
+        "移走一个" 的命令来清除土堆。
       courseD_farmer_while1_instruction: |-
         Move to the pile of dirt and use the `remove`
         block to remove it.
@@ -7282,23 +7181,12 @@
         few blocks as possible. "
       courseD_farmer_while9_instruction: "Flatten all of these piles using as few\nblocks
         as possible. "
-      courseD_farmer_while_challenge1_instruction: |-
-        Fill all of the holes and remove
-        all of the piles.
-      courseD_farmer_while_challenge2_instruction: |-
-        Fill all of the holes and remove
-        all of the piles.
-      courseD_harvester_nested_loops_challenge1-broken_instruction: |-
-        "I need some
-        help on the farm! Help me harvest this corn using only the blocks in your
-        toolbox."
-      courseD_harvester_nested_loops_challenge1_instruction: |-
-        "I need some help
-        on the farm! Help me harvest this corn using only the blocks in your toolbox."
-      courseD_maze_loops_challenge1_instruction: |-
-        Let's hunt for treasure - using
-        loops! Help the collector reach at least two piles of treasure using only
-        the blocks in your toolbox.
+      courseD_farmer_while_challenge1_instruction: "填补所有的洞, 并移走所有的土堆。"
+      courseD_farmer_while_challenge2_instruction: "填补所有的洞, 并移走所有的土堆。"
+      courseD_harvester_nested_loops_challenge1-broken_instruction: "\"我的农村需要一些帮助!
+        只使用您工具箱里的块来帮助我收割这个玉米。"
+      courseD_harvester_nested_loops_challenge1_instruction: "\"我的农村需要一些帮助! 只使用您工具箱里的块来帮助我收割这个玉米。"
+      courseD_maze_loops_challenge1_instruction: "让我们用循环来寻找宝藏! 只用您工具箱里的快来帮助收藏家至少拿到两堆宝藏。"
       courseD_maze_nestedLoops3_instruction: |-
         Get the zombie to the sunflower using
         the fewest number of blocks possible.
@@ -7310,32 +7198,18 @@
       courseD_maze_nestedLoops6_instruction: |-
         Get the zombie to the sunflower using
         only the blocks available.
-      courseD_maze_ramp1_instruction: |-
-        For this puzzle, snap all of the blocks together
-        and click "Run" to watch it go!
-      courseD_maze_ramp2_instruction: |-
-        Drag an extra `move forward` block out of
-        the toolbox, then attach all blocks to `when run` to finish your code.
-      courseD_maze_ramp3_instruction: |-
-        There is one extra block that is going to
-        cause the bird to crash. Throw it away by dragging it back to the toolbox.
+      courseD_maze_ramp1_instruction: 对于这个谜题, 把所有的块都拼在一起, 并点击 "运行" 看它去!
+      courseD_maze_ramp2_instruction: 将额外的 "向前移动" 块拖出工具箱, 然后将所有块附加到 "运行时" 以完成代码。
+      courseD_maze_ramp3_instruction: "有一个额外的块将导致鸟坠落。将其拖回工具箱中扔掉它。"
       courseD_maze_ramp4_instruction: Avoid TNT or feathers will fly!
       courseD_maze_ramp5_instruction: Avoid the TNT.
-      courseD_maze_ramp5a_instruction: |-
-        Pay attention to the sequence and see if
-        you can figure out how to get to that pig!
-      courseD_maze_ramp5b_instruction: |-
-        Navigate this maze to help the bird find
-        the pig!
+      courseD_maze_ramp5a_instruction: "注意顺序, 看看你是否能找到那头猪!"
+      courseD_maze_ramp5b_instruction: "导航这个迷宫帮助鸟找到猪!"
       courseD_maze_ramp5c_instruction: Help the bird get to the pig.
       courseD_maze_ramp5d_instruction: Get the bird to the pig.
-      courseD_maze_ramp6_instruction: |-
-        "Keep calm and help me find the bad pig.
-        Otherwise I might get angry!"
-      courseD_maze_ramp6a_instruction: |-
-        "Keep calm and help me find the bad pig.
-        Otherwise I might get angry!"
-      courseD_maze_ramp7_instruction: "**Challenge:**  Get the bird to the pig!"
+      courseD_maze_ramp6_instruction: "\"保持冷静, 帮助我找到那只坏猪。否则我会生气的!“"
+      courseD_maze_ramp6a_instruction: "\"保持冷静, 帮助我找到那只坏猪。否则我会生气的!“"
+      courseD_maze_ramp7_instruction: "帮小鸟到达那只猪。"
       courseD_maze_until1_instruction: Get the angry bird to the pig.
       courseD_maze_until10_instruction: Help the zombie get to the sunflower.
       courseD_maze_until10_predict2_instruction: Help the zombie get to the sunflower.
@@ -7355,18 +7229,10 @@
       courseD_maze_until9_instruction: |-
         **Challenge:** Avoid the chompers and help
         the zombie get to the sunflower.
-      courseD_maze_until_challenge_instruction: |-
-        No hints, just challenge. Get the
-        zombie to the sunflower.
-      courseD_maze_until_challenge1-delete-this-copy_instruction: |-
-        No hints, just
-        challenge. Get the zombie to the sunflower.
-      courseD_maze_until_challenge1_instruction: |-
-        No hints, just challenge. Get the
-        zombie to the sunflower.
-      courseD_maze_until_challenge2_instruction: |-
-        No hints, just challenge. Get the
-        zombie to the sunflower.
+      courseD_maze_until_challenge_instruction: "没有提示，只有挑战。把僵尸带到向日葵那里。"
+      courseD_maze_until_challenge1-delete-this-copy_instruction: "没有提示，只有挑战。把僵尸带到向日葵那里。"
+      courseD_maze_until_challenge1_instruction: "没有提示，只有挑战。把僵尸带到向日葵那里。"
+      courseD_maze_until_challenge2_instruction: "没有提示，只有挑战。把僵尸带到向日葵那里。"
       courseD_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.
@@ -7377,14 +7243,9 @@
         to the dragon. "
       courseD_playLab_cond3_instruction: "Make the dragon change between random emotions\nevery
         second.  "
-      courseD_playLab_cond3a_instruction: |-
-        Make it so when Pegleg gets to the dragon,
-        he gets 2 points if the dragon is happy and 1 otherwise.
-      courseD_playLab_cond3b_instruction: |-
-        1) Make the dragon change between random
-        emotions every second.  \r
-        2) Make it so when Pegleg gets to the dragon,
-        he gets 2 points if the dragon is happy and 1 otherwise.
+      courseD_playLab_cond3a_instruction: "当Pegleg到达龙那里时, 如果龙是快乐的，得到2分, 否则1分。"
+      courseD_playLab_cond3b_instruction: "1) 让龙在每一秒的随机情绪之间变化。 \\r \n2) 当 Pegleg 到达龙那里时,
+        如果龙是快乐的，得到2分, 否则1分。"
       courseD_playLab_cond4_instruction: |-
         Add some code so that the ninja (actor
         3) starts chasing Pegleg as soon as the game begins.  End the game as a loss
@@ -7397,52 +7258,31 @@
         set him to chase the pirate.  \\r\n2)  If the pirate is greater than 225\npixels
         down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
         **chase** the pirate.  "
-      courseD_playLab_cond6a_instruction: |-
-        If the pirate is in the safe zone, wait
-        one second, then deduct a point as long as he stays beneath the octopus line.
+      courseD_playLab_cond6a_instruction: "如果海盗在安全区, 等一秒钟，如果他还停留在章鱼线之下，就扣除一分。"
       courseD_playLab_cond6cloneForTest_instruction: Testing
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
         your friends!
       courseD_playLab_embedded_instruction: |-
-        Move Pegleg the Pirate with the arrow
-        keys. Get to the dragon to score points, but avoid the ninja! Standing below
-        the line of octopuses will make the ninja stop chasing you, but beware! The
-        longer you stay there, the more points you lose. \r
-        \r
-        Get 5 points to win!
-      courseD_scrat_ramp1_instruction: |-
-        For this puzzle, snap all of the blocks together
-        and click "Run" to watch it go!
-      courseD_scrat_ramp2_instruction: |-
-        Drag an extra `move forward` block out of
-        the toolbox, then attach all blocks to `when run` to finish your code.
-      courseD_scrat_ramp3_instruction: |-
-        There is one extra block that is going to
-        cause Scrat to crash. Throw it away by dragging it back to the toolbox.
-      courseD_scrat_ramp4_instruction: Avoid the cracked ice to keep Scrat safe!
-      courseD_scrat_ramp5_instruction: Avoid the cracked ice.
-      courseD_scrat_ramp6_instruction: Help Scrat get to the acorn using a loop!
+        用箭头键移动海盗Pegleg。到达龙得分, 但要躲开忍者！站在章鱼线下面会使忍者停止追逐你, 但要当心! 你呆在那里的时间越长, 你失去的分数就越多。\r \r
+        得到5分就能赢!
+      courseD_scrat_ramp1_instruction: 对于这个谜题, 把所有的块都拼在一起, 并点击 "运行" 看它去!
+      courseD_scrat_ramp2_instruction: 将额外的 "向前移动" 块拖出工具箱, 然后将所有块附加到 "运行时" 以完成代码。
+      courseD_scrat_ramp3_instruction: "这儿有一个多余的模块将导致斯奎特崩溃。将其拖回工具箱扔掉。"
+      courseD_scrat_ramp4_instruction: "绕开裂纹的冰来保持斯奎特的安全!"
+      courseD_scrat_ramp5_instruction: "绕开破冰。"
+      courseD_scrat_ramp6_instruction: "使用循环帮助斯奎特得到橡子!"
       courseD_scrat_ramp7_instruction: Help Scrat get to the acorn!
-      courseD_scrat_ramp8_instruction: |-
-        Use what you've learned to get Scrat to
-        the acorn!
+      courseD_scrat_ramp8_instruction: "用你学到的东西让斯奎特得到橡子!"
       courseE_artist_concept1_instruction: 'Recreate this image. '
       courseE_artist_concept4_instruction: |-
         Recreate this drawing using 13 blocks
         or fewer.
-      courseE_artist_concept_challenge1_instruction: |-
-        Feel free to use trial and
-        error. You are not expected to get the image perfect the first time.   Want
-        to see more hints?  Click here!
-      courseE_artist_concept_challenge2_instruction: |-
-        Create five pinwheel designs
-        using the code below.
-      courseE_artist_embed_functions8_instruction: |-
-        Look at this level carefully.
-        What kind of functions do you see a program needing in order to create a design
-        like this. You'll soon make this on your own, so come back here if you need
-        help.
+      courseE_artist_concept_challenge1_instruction: "随意的反复试试。不指望你第一次就能得到完美的图像。  想看更多的提示吗？
+        点击这里!"
+      courseE_artist_concept_challenge2_instruction: "使用下面的代码创建五个风车的设计。"
+      courseE_artist_embed_functions8_instruction: "仔细看这个关卡。要创建这样的设计，你看看需要什么样的函数。你很快就会自己动手做,
+        所以如果你需要帮助就回到这里吧。"
       courseE_artist_functions1_instruction: |-
         Help the zombie draw glasses using
         squares with sides of 100 pixels.  \r
@@ -7451,8 +7291,7 @@
       courseE_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
-      courseE_artist_functions2_instruction: "This time, use the `draw a square`\nfunction
-        to create the glasses. "
+      courseE_artist_functions2_instruction: '这一次, 使用 "绘制正方形" 函数来创建眼镜。 '
       courseE_artist_functions3_instruction: |-
         You can make this drawing by adding
         a repeat block.
@@ -7474,30 +7313,18 @@
       courseE_artist_functions9_instruction: |-
         Create this image using only the blocks
         provided.
-      courseE_artist_functions_challenge_instruction: |-
-        Once you define a function,
-        you can call it over and over again - whenever and wherever you want! Try
-        this code to see how it works, then change it to make your own impressive
-        design!
-      courseE_artist_functions_challenge1_instruction: |-
-        Once you define a function,
-        you can call it over and over again - whenever and wherever you want! Try
-        this code to see how it works, then change it to make your own impressive
-        design!
-      courseE_artist_functions_challenge2_instruction: |-
-        Try this code to see how
-        it works, then make the program your own!
-      courseE_artist_ramp10_instruction: |-
-        Now, drag the code for the last triangle
-        into a new loop to spin it around and make a snowflake!
+      courseE_artist_functions_challenge_instruction: "一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它!
+        尝试此代码, 看看它是如何工作的, 然后改变它, 让您自己的设计更出色！"
+      courseE_artist_functions_challenge1_instruction: "一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它!
+        尝试此代码, 看看它是如何工作的, 然后改变它, 让您自己的设计更出色！"
+      courseE_artist_functions_challenge2_instruction: "试试此代码, 看看它是如何工作的, 然后试着自己编程!"
+      courseE_artist_ramp10_instruction: "现在, 将最后一个三角形的代码拖动到一个新的循环中, 将其旋转并制作一个雪花!"
       courseE_artist_ramp11_instruction: "现在用艺术家做一个正方形!"
       courseE_artist_ramp12_instruction: "用你学过的东西在正方形里面画这个三角形。"
       courseE_artist_ramp8_instruction: "现在用艺术家做一个正方形!"
       courseE_artist_ramp8_2_instruction: "现在用艺术家做一个正方形!"
-      courseE_artist_ramp9_instruction: Use what you've learned to draw this triangle.
-      courseE_artist_ramp9_2_instruction: |-
-        Use what you've learned to draw this
-        triangle.
+      courseE_artist_ramp9_instruction: "用你学过的画这个三角形。"
+      courseE_artist_ramp9_2_instruction: "用你学过的画这个三角形。"
       courseE_bee_concept1_instruction: "从每朵花里收集所有的花蜜。用嵌套循环。 "
       courseE_bee_concept2_instruction: |-
         Help the bee make all of the honey. You
@@ -7513,10 +7340,7 @@
         Help the bee collect the nectar from the
         flowers?
       courseE_bee_functions1_instruction: "采集每一朵花的花蜜。"
-      courseE_bee_functions10_instruction: |-
-        Solve this puzzle by creating a function
-        that helps the bee go get all of the honey before returning back to the main
-        path.
+      courseE_bee_functions10_instruction: "通过创建一个函数, 帮助蜜蜂在回到主路径前得到所有的蜂蜜来解决这道关卡。"
       courseE_bee_functions2_instruction: |-
         Use the `get 2 nectar` function to collect
         the nectar from each flower.
@@ -7547,17 +7371,11 @@
       courseE_bee_functions9_instruction: |-
         Create a function to collect all of the
         nectar from each flower.
-      courseE_bee_functions9b_instruction: Now try it in Bee!
-      courseE_bee_functions_challenge1_instruction: |-
-        You are on your own for this
-        challenge. This could "bee" harder than it looks!
-      courseE_bee_functions_challenge2_instruction: |-
-        You are on your own for this
-        challenge!
-      courseE_bee_ramp14_instruction: |-
-        Help the bee follow the path to gather all
-        of the honey and all of the nectar.
-      courseE_bee_ramp17_instruction: Use what you have learned to solve this puzzle.
+      courseE_bee_functions9b_instruction: "现在试试!"
+      courseE_bee_functions_challenge1_instruction: "你得自己独立接受这个挑战。这可能比看起来更难!"
+      courseE_bee_functions_challenge2_instruction: "你得自己独立面对这个挑战。"
+      courseE_bee_ramp14_instruction: "帮助蜜蜂沿着小路, 收集所有的蜂蜜和所有的花蜜。"
+      courseE_bee_ramp17_instruction: "用你所学的来解决这个关卡。"
       courseE_collector_ramp10_instruction: Help Laurel collect all of the treasure.
       courseE_collector_ramp8_instruction: Help Laurel collect all of the treasure.
       courseE_collector_ramp9_instruction: Help Laurel collect all of the treasure.
@@ -7597,9 +7415,7 @@
       courseE_farmer_functions2b_instruction: |-
         Help the farmer pick the corn and
         pumpkins.
-      courseE_farmer_functions2ba_instruction: |-
-        Help the farmer pick the corn and
-        pumpkins using the `corn and pumpkin` function.
+      courseE_farmer_functions2ba_instruction: 帮助农民用 "玉米和南瓜" 的函数来采摘玉米和南瓜。
       courseE_farmer_functions3_instruction: |-
         What happens when the paths to the
         pumpkins are all different lengths?   \r
@@ -7654,90 +7470,39 @@
       courseE_farmer_functions8b_instruction: "**Challenge:** Collect all of the\npumpkins
         using the method from the last puzzle. "
       courseE_farmer_functions9_instruction: Use conditionals to simplify your program.
-      courseE_farmer_functions9b_instruction: |-
-        Can you figure out the pattern that
-        you need to solve this puzzle?
-      courseE_farmer_functions9b_clone_instruction: |-
-        Can you figure out the pattern
-        that you need to solve this puzzle?
-      courseE_farmer_predict1_instruction: |-
-        Pick all of the lettuce (only while there
-        is some to pick.)
-      courseE_farmer_ramp11_instruction: |-
-        This puzzle also uses nested loops.  Can
-        you figure out how?
-      courseE_farmer_ramp11a_instruction: "Pick lettuce only while there is still\nlettuce
-        to pick. "
-      courseE_farmer_ramp11b_instruction: While there is a pile, remove dirt.
-      courseE_farmer_ramp12_instruction: |-
-        Now use nested loops (`repeat` and `while`)
-        to solve this puzzle.
-      courseE_farmer_ramp12_forswap_instruction: |-
-        Now use nested loops to solve this
-        puzzle.
-      courseE_farmer_ramp12a_instruction: |-
-        Help the farmer correctly travel the path
-        to gather all of the lettuce.
-      courseE_farmer_ramp12b_instruction: While there is lettuce, pick lettuce!
-      courseE_farmer_ramp12c_instruction: |-
-        Move forward until you reach the lettuce,
-        then pick it all using a `while` loop.
-      courseE_farmer_ramp12d_instruction: |-
-        Move forward until you reach the lettuce,
-        then pick it all using a `while` loop.
-      courseE_farmer_ramp12e_instruction: |-
-        Move forward until you reach the lettuce,
-        then pick it all using a `while` loop.
-      courseE_farmer_ramp12f_instruction: |-
-        Move forward until you reach the lettuce,
-        then turn left **if** there is a path to the left.  Otherwise, turn right.
-      courseE_farmer_ramp12g_instruction: |-
-        Move forward until you reach the lettuce,
-        then turn left **if** there is a path to the left.  Otherwise, turn right.
-      courseE_farmer_ramp13_instruction: |-
-        Pick corn if there is corn, and pick lettuce
-        while there is lettuce.
-      courseE_farmer_ramp15_instruction: |-
-        Solve this puzzle using only the blocks
-        available.
-      courseE_farmer_ramp16_instruction: |-
-        **Challenge:** Solve this puzzle with the
-        fewest number of blocks.
-      courseE_maze_predict1_instruction: |-
-        This code includes a new block. What do
-        you think would happen if you press the "Run" block?
-      courseE_maze_ramp1_instruction: |-
-        For this puzzle, drag all of the blocks together
-        and click "Run" to watch it go!
-      courseE_maze_ramp13_instruction: Time for one last puzzle to pull it all together!
-      courseE_maze_ramp2_instruction: |-
-        Drag an extra `move forward` block out of
-        the toolbox, then attach all blocks to `when run` to finish your code.
-      courseE_maze_ramp3_instruction: |-
-        There is one extra block that is going to
-        cause the bird to crash. Throw it away by dragging it back to the toolbox.
+      courseE_farmer_functions9b_instruction: "你能找出解决这个关卡所需的规律吗？"
+      courseE_farmer_functions9b_clone_instruction: "你能找出解决这个关卡所需的规律吗？"
+      courseE_farmer_predict1_instruction: "摘下所有的生菜 (只在当有生菜的时候)"
+      courseE_farmer_ramp11_instruction: "这个关卡也使用嵌套循环。 你知道是什么吗？"
+      courseE_farmer_ramp11a_instruction: "当有一堆土，移走它。"
+      courseE_farmer_ramp11b_instruction: "当有一堆土，移走它。"
+      courseE_farmer_ramp12_instruction: "现在使用嵌套循环来解决这个难题。"
+      courseE_farmer_ramp12_forswap_instruction: "现在使用嵌套循环来解决这个难题。"
+      courseE_farmer_ramp12a_instruction: "帮助农民正确地行走在道路上, 收集所有的莴苣。"
+      courseE_farmer_ramp12b_instruction: "当有生菜的时候, 采摘生菜!"
+      courseE_farmer_ramp12c_instruction: 向前移动, 直到到达生菜, 然后用 "当 循环" 来采摘。
+      courseE_farmer_ramp12d_instruction: 向前移动, 直到到达生菜, 然后用 "当 循环" 来采摘。
+      courseE_farmer_ramp12e_instruction: 向前移动, 直到到达生菜, 然后用 "当 循环" 来采摘。
+      courseE_farmer_ramp12f_instruction: "向前走, 直到你到达生菜, 然后** 如果 ** 有一条路径向左，左转。否则就右拐。"
+      courseE_farmer_ramp12g_instruction: "向前走, 直到你到达生菜, 然后** 如果 ** 有一条路径向左，左转。否则就右拐。"
+      courseE_farmer_ramp13_instruction: "如果有玉米, 摘玉米, 在有莴苣的时候摘生菜。"
+      courseE_farmer_ramp15_instruction: "仅使用可用的模块来解决此关卡。"
+      courseE_farmer_ramp16_instruction: "** 挑战: ** 用最少的块数解决这个关卡。"
+      courseE_maze_predict1_instruction: 此代码包含一个新模块。如果你按下 "运行" 块, 你认为会发生什么？
+      courseE_maze_ramp1_instruction: 对于这个关卡, 把所有的方块拖在一起, 并点击 "运行" 开始!
+      courseE_maze_ramp13_instruction: "是时候解决最后一个关卡!"
+      courseE_maze_ramp2_instruction: 将额外的 "向前移动" 块拖出工具箱, 然后将所有块附加到 "运行时" 以完成代码。
+      courseE_maze_ramp3_instruction: "有一个额外的块将导致鸟坠落。将其拖回工具箱中扔掉它。"
       courseE_maze_ramp4_instruction: Avoid TNT or feathers will fly!
       courseE_maze_ramp5_instruction: Avoid the TNT.
-      courseE_maze_ramp6_instruction: |-
-        "Keep calm and help me find the bad pig.
-        Otherwise I might get angry!"
-      courseE_maze_ramp7_instruction: |-
-        Use what you've learned to get the bird to
-        the pig!
-      courseE_maze_ramp_predict1_instruction: |-
-        This code includes a new block. What
-        do you think would happen if you press the "Run" block?
+      courseE_maze_ramp6_instruction: "\"保持冷静, 帮助我找到那只坏猪。否则我会生气的!“"
+      courseE_maze_ramp7_instruction: "使用你学会的，让小鸟飞到猪那里！"
+      courseE_maze_ramp_predict1_instruction: 此代码包含一个新模块。如果你按下 "运行" 块, 你认为会发生什么？
       courseE_multi_maze_ramp5_instruction: Avoid the TNT.
-      courseE_playLab_challenge1_instruction: |-
-        Something should happen when you get
-        enough points or when you run out of points. Add some code to the `win game`
-        and `lose game` functions to make the game work the way it should. \r
-        Click
-        the hints for ideas!
-      courseE_playLab_embedded_instruction: |-
-        This is an example game you can play
-        around with. Move the dog with your arrow keys. When the dog touches one of
-        the cats, he scores a point! Score 5 points to win!
+      courseE_playLab_challenge1_instruction: "当你得到足够的分数或者当你的积分不足时, 应该要有些后果。添加一些代码到
+        ' 赢得游戏' 和 ' 输去游戏 ' 函数, 让游戏按应有的方式进行下去。\\r 点击想法提示!"
+      courseE_playLab_embedded_instruction: "这是一个你可以玩的例子游戏 。用你的方向键移动狗。当狗碰到一只猫时, 他得一分!
+        得5分来赢得比赛!"
       courseE_playLab_exampleProject2_instruction: |-
         Here's all of your code to choose
         a card - try adding some other fun features!
@@ -7753,65 +7518,36 @@
       courseE_playLab_scaffold4_instruction: |-
         Find some interesting ways to change
         the score in your game. Get the score to show something other than 0 to continue.
-      courseE_playLab_scaffold5_instruction: |-
-        Now spend some time making sure the
-        game works the way you want. Include a way to win or lose your game, then
-        play until you meet one of those conditions.
+      courseE_playLab_scaffold5_instruction: "现在花点时间来确保游戏是按你所要的方式作业。包括赢或输游戏的方法, 然后继续玩,
+        直到你遇到这些条件其中之一。"
       courseE_playLab_scaffold6_instruction: |-
         You've finished! Now you can play
         your game or share it with your friends and classmates!
-      courseE_playlab_challenge2_instruction: |-
-        Can you figure out how this "Fortune
-        Teller" app works? Click `MORE` to see your challenges.
-      courseE_playlab_variables_challenge2_instruction: |-
-        Can you figure out how this
-        "Fortune Teller" app works? Click `MORE` to see your challenges.
+      courseE_playlab_challenge2_instruction: 你能想出这个 "算命先生" 应用程序是如何工作的吗？单击 "更多" 以查看您的挑战。
+      courseE_playlab_variables_challenge2_instruction: 你能想出这个 "算命先生" 应用程序是如何工作的吗？单击
+        "更多" 以查看您的挑战。
       courseE_video_createFunctions_instruction: |-
         We don't have a video for creating
         functions, yet. This is a placeholder.
       courseE_video_createFunctions2_instruction: |-
         We don't have a video for creating
         functions, yet. This is a placeholder.
-      courseF_IceAge_1_instruction: |-
-        Help Sid say "Hello!" by dragging the `actor
-        1 say` block out and connecting it to the bottom of the `when run` event.
-      courseF_IceAge_10_instruction: |-
-        Use the `actor __ throw` command to have Sid
-        (actor 1) throw hearts at Granny (actor 2) and set Granny's mood to happy
-        when she gets hit with them.
-      courseF_IceAge_11_instruction: 'Time to create your own game or story! '
-      courseF_IceAge_2_instruction: |-
-        Help Manny and Sid greet each other by using
-        the the `actor ___ say` block twice.
-      courseF_IceAge_3_instruction: |-
-        Scrat is looking for his acorn! Can you help
-        him move the last 200 pixels?
-      courseF_IceAge_4_instruction: |-
-        Connect a block to the `when actor touches`
-        event to play a sound when Diego finds Manny.
-      courseF_IceAge_5_instruction: |-
-        Help Granny get some exercise by moving left
-        and right repeatedly.
-      courseF_IceAge_6_instruction: "Can you help Sid call for his friends when you\nclick
-        on him? "
-      courseF_IceAge_7_instruction: |-
-        Write the code to help Scrat get all of the
-        acorns!
+      courseF_IceAge_1_instruction: 通过把 "演员1说"模块拽出来并连接到 "当运行时" 事件的底部帮助 喜得 说 "你好!",
+      courseF_IceAge_10_instruction: 使用 "演员 __ 抛出" 命令让 喜得 (演员 1) 把心扔向格瑞尼 (演员 2), 并设置格瑞尼的心情,
+        让她在被击中时高兴。
+      courseF_IceAge_11_instruction: "是时候创造你自己的游戏或故事了! "
+      courseF_IceAge_2_instruction: "帮助曼尼和喜得使用的 ' 演员 _____ 说 ' 块两次互相打招呼, 。"
+      courseF_IceAge_3_instruction: "斯奎特 在找他的橡子! 你能帮他移动最后200像素吗？"
+      courseF_IceAge_4_instruction: 当迭戈发现曼尼时, 通过将一个方块连接到 "当演员触碰" 事件时播放声音。
+      courseF_IceAge_5_instruction: "通过反复左右移动来帮助格瑞尼锻炼身体。"
+      courseF_IceAge_6_instruction: "你能帮喜得在你点击他的时候呼叫他的朋友们吗？ "
+      courseF_IceAge_7_instruction: "写代码, 帮助 斯奎特 得到所有的橡子!"
       courseF_IceAge_8_instruction: |
-        Can you finish this program to make it so that
-        you both **play a sound** and **score a point** when Sid and Granny collide?
-      courseF_IceAge_9_instruction: |-
-        Change the scene to an icy background and set
-        Sid’s (actor 1) speed to fast.
-      courseF_IceAge_template_instruction: |-
-        Write the code to help Scrat get all
-        of the acorns!
-      courseF_artist_embed_for7_instruction: |-
-        Press Run to see a program in action!
-        This one uses for loops.
-      courseF_artist_embed_variables9_instruction: |-
-        Press Run to see this program
-        in action!
+        你能完成这个程序, 当希德和奶奶相撞时，你可以同时 ** 播放一个声音 ** 和 ** 得分 **吗？
+      courseF_IceAge_9_instruction: "改变场景为一个冰冷的背景并设置 喜得的 (演员 1) 速度为快。"
+      courseF_IceAge_template_instruction: "写代码, 帮助 斯奎特 得到所有的橡子!"
+      courseF_artist_embed_for7_instruction: 请按 "运行" 以查看程序如何执行的! 这个用计数循环。
+      courseF_artist_embed_variables9_instruction: "点击“运行”来看程序如何运行"
       courseF_artist_for1_instruction: |-
         Experiment with the `for` loop and play with
         the `counter` variable.
@@ -7841,56 +7577,26 @@
       courseF_artist_for9_instruction: |-
         **Inspiration:**  Use the counter inside
         the `set alpha` block to get this faded center.
-      courseF_artist_for_Template_instruction: |-
-        Try using some of the code from the
-        last level, but turning 89 degrees to create this twisted square spiral.
-      courseF_artist_for_challenge1_instruction: |-
-        Can you figure out how to re-create
-        this drawing?
-      courseF_artist_for_challenge2_instruction: |-
-        Can you figure out how to re-create
-        this drawing with a single loop?
-      courseF_artist_fwp1_instruction: |-
-        Edit the function 'draw a square' to find
-        bugs.
-      courseF_artist_fwp2_instruction: |-
-        Edit the function to accept a parameter called
-        `length`.
-      courseF_artist_fwp2_predict1_instruction: |-
-        Edit the function to accept a parameter
-        called `length`.
-      courseF_artist_fwp3_instruction: |-
-        Create a function called 'draw a square'
-        and use it to outline these four boxes using parameters.
-      courseF_artist_fwp4_instruction: |-
-        Edit this function to add a parameter for
-        the number of sides in your polygon.
-      courseF_artist_fwp5_instruction: "Use the function from the last puzzle to\ndraw
-        this series of shapes.  "
-      courseF_artist_fwp6_instruction: |-
-        Challenge: Edit `draw a spiral edge` to use
-        `length` and `sides` parameters, then recreate these shapes.
-      courseF_artist_fwp7_instruction: |-
-        Finish off the `draw a spiral edge` function
-        to also ask for a minimum length for the center of the spiral.
-      courseF_artist_fwp8_instruction: |-
-        Can you figure out how to make this drawing
-        using the function that you just created?
-      courseF_artist_fwp9_instruction: |-
-        Freeplay: Draw something awesome! Play with
-        the pen width to see how different your drawings look!
-      courseF_artist_fwp_challenge1_instruction: |-
-        Try running this program, and make
-        changes to see what happens. Can you figure out how it works? (Or delete it
-        and replace it with something totally different)
-      courseF_artist_fwp_challenge2_instruction: "Use what you learned in the previous\nlevel
-        to draw an image like this. Note: The code becomes more simple if you\nincorporate
-        parameters. "
-      courseF_artist_ramp10_instruction: |-
-        Now, drag the code for the last triangle
-        into a new loop to spin it around and make a snowflake!
+      courseF_artist_for_Template_instruction: "尝试使用上一关卡的一些代码, 但转向89度来创建这个扭曲的方形螺旋。"
+      courseF_artist_for_challenge1_instruction: "你能想出如何重新创建这幅画吗？"
+      courseF_artist_for_challenge2_instruction: "你能想出如何用一个循环来重新创建这个绘图吗？"
+      courseF_artist_fwp1_instruction: 编辑函数 "绘制正方形" 来查找缺陷。
+      courseF_artist_fwp2_instruction: 编辑函数以接收一个叫做 "长度" 的参数。
+      courseF_artist_fwp2_predict1_instruction: 编辑函数以接收一个叫做 "长度" 的参数。
+      courseF_artist_fwp3_instruction: 创建一个名为 "绘制正方形" 的函数, 并使用它用参数来来描这四个盒子。
+      courseF_artist_fwp4_instruction: "编辑此函数，为多边形的边数添加参数。"
+      courseF_artist_fwp5_instruction: "使用最后一个关卡中的函数来绘制这一系列形状。  "
+      courseF_artist_fwp6_instruction: '挑战: 用 "长度" 和 "边" 参数来编辑"画一个螺旋边缘"函数, 然后重新创建这些形状。'
+      courseF_artist_fwp7_instruction: "完成' 画一个螺旋边缘 ' 的函数, 也需要求一个最小长度为中心的螺旋。"
+      courseF_artist_fwp8_instruction: "你能想出如何使用刚才创建的函数来绘制这个图吗？"
+      courseF_artist_fwp9_instruction: "自由发挥: 画一些很棒的东西！ 调整笔的宽度来看看画出来的图像有什么不同！"
+      courseF_artist_fwp_challenge1_instruction: "请尝试运行此程序, 并做些改动看看什么变化。你能弄清楚它是如何工作的吗？(或删除它,
+        用完全不同的东西来取代它)"
+      courseF_artist_fwp_challenge2_instruction: "用你在上一关卡中学到的东西来画这样的图像。注意: 如果使用参数,
+        代码将变得更加简单。 "
+      courseF_artist_ramp10_instruction: "现在, 将最后一个三角形的代码拖动到一个新的循环中, 将其旋转并制作一个雪花!"
       courseF_artist_ramp8_instruction: "现在用艺术家做一个正方形!"
-      courseF_artist_ramp9_instruction: Use what you've learned to draw this triangle.
+      courseF_artist_ramp9_instruction: "用你学过的画这个三角形。"
       courseF_artist_variables1_instruction: |-
         Let's draw an equilateral triangle
         that is exactly 50 pixels long on each side.
@@ -7956,37 +7662,28 @@
         \r
         How can you use variables with squares,
         pentagons, or hexagons?
-      courseF_artist_variables_challenge1_instruction: |-
-        You've now learned everything
-        you need to know to make a pattern like this! This puzzle is meant to be difficult.  Can
-        you stick with it until you figure out the solution?
-      courseF_artist_variables_challenge1a_instruction: |-
-        You've now learned everything
-        you need to know to make a pattern like this! This puzzle is meant to be difficult.  Can
-        you stick with it until you figure out the solution?
-      courseF_artist_variables_challenge2_instruction: |-
-        You've now learned everything
-        you need to know to make a pattern like this! This puzzle is meant to be difficult.  Can
-        you stick with it until you figure out the solution?
-      courseF_artistembed_variables9_instruction: |-
-        See what happens when you repeat
-        the code from the last puzzle 30 times instead of only 3!  Feel free to make
-        your lines any color or pattern for some extra zest.
+      courseF_artist_variables_challenge1_instruction: "现在你已经学到了做这个模样需要的所有东西! 这个关卡本来就很困难。
+        你能坚持下去直到你找到解决办法吗？"
+      courseF_artist_variables_challenge1a_instruction: "现在你已经学到了做这个模样需要的所有东西! 这个关卡本来就很困难。
+        你能坚持下去直到你找到解决办法吗？"
+      courseF_artist_variables_challenge2_instruction: "现在你已经学到了做这个模样需要的所有东西! 这个关卡本来就很困难。
+        你能坚持下去直到你找到解决办法吗？"
+      courseF_artistembed_variables9_instruction: "看看当你重复最后一个关卡的代码30次, 而不是3次会是什么结果!
+        你可以选择任何颜色的线条或图案，"
       courseF_bee_conditionals10_instruction: |-
         Collect all of the nectar and make
         all of the honey.
       courseF_bee_conditionals1_predict1_instruction: "看看云下是否有朵花。如果有一朵花, 就采集花蜜。"
-      courseF_bee_conditionals2_instruction: "Check underneath each cloud to see\nif
-        it is hiding a flower before you get nectar.  "
+      courseF_bee_conditionals2_instruction: "在您得到花蜜之前，先检查在每朵云彩之下是否藏着一朵花。  "
       courseF_bee_conditionals3_instruction: |
-        Help the bee collect all of the nectar.
+        帮助蜜蜂收集所有的花蜜。
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
         blocks as possible.
       courseF_bee_conditionals5_instruction: |-
         Collect all of the nectar using as
         few blocks as possible
-      courseF_bee_conditionals7_predict2_instruction: 使用 "如果/其他" 块收集花朵的花蜜, 在蜂窝里制作蜂蜜。
+      courseF_bee_conditionals7_predict2_instruction: 使用 "如果/否则" 模块收集花朵的花蜜, 在蜂窝里制作蜂蜜。
       courseF_bee_conditionals8_instruction: |-
         Collect nectar if there is a flower.\r
         Otherwise,
@@ -8021,26 +7718,13 @@
       courseF_bee_for9_instruction: |-
         Use the `counter` variable to navigate this
         garden with the fewest number of blocks possible.
-      courseF_bee_for_challenge1_instruction: |-
-        Use this for loop to collect all of
-        the nectar. There are a few actions that you will want to repeat 'counter'
-        times.
-      courseF_bee_for_challenge2_instruction: |-
-        Solve this puzzle using the fewest
-        number of blocks possible.
-      courseF_bee_for_challenge3_instruction: |-
-        Solve this puzzle using the fewest
-        number of blocks possible.
-      courseF_bee_functions2_instruction: |-
-        Use the `get only nectar` function to
-        collect the nectar from each flower.
-      courseF_bee_functions3_instruction: |-
-        Click "edit" to put code inside the
-        `only make honey` function, then use it to solve this puzzle.
-      courseF_bee_functions3a_instruction: |-
-        Write a function that gets nectar if
-        the bee is at a flower, otherwise it gets honey.  Use your function to solve
-        the puzzle!
+      courseF_bee_for_challenge1_instruction: "用这个循环来收集所有的花蜜。有几个动作, 你需要重复 ' 计数器 '
+        次。"
+      courseF_bee_for_challenge2_instruction: "使用尽可能少的模块来解决这个关卡。"
+      courseF_bee_for_challenge3_instruction: "使用尽可能少的模块来解决这个关卡。"
+      courseF_bee_functions2_instruction: 使用 "只得到花蜜" 的函数来收集每朵花的花蜜。
+      courseF_bee_functions3_instruction: 点击 "编辑" 把代码放入 "只做蜂蜜" 函数, 然后用它来解决这个关卡。
+      courseF_bee_functions3a_instruction: "如果蜜蜂在一朵花上, 写一个能得到花蜜的函数, 否则它会得到蜂蜜。 使用您的函数来解决这个关卡！"
       courseF_bee_functions4_instruction: |-
         “移动并获得花蜜”函数会让蜜蜂转身并收集花蜜，然后会让蜜蜂返回出发的地方。\r
         \r
@@ -8048,72 +7732,36 @@
       courseF_bee_functions5_instruction: |-
         Now write the function to collect nectar
         from the flowers.
-      courseF_bee_functions5a_instruction: |-
-        Use the `move and check` function to
-        collect all of the nectar.
-      courseF_bee_functions6_instruction: |-
-        Help the bee through the maze by turning
-        left at flowers and right at honeycomb.
-      courseF_bee_functions7_instruction: |-
-        Rebuild your function from the last puzzle
-        to solve this maze.
-      courseF_bee_functions8a_instruction: |-
-        Collect all the nectar or make all of
-        the honey!
-      courseF_bee_functionsPre7_instruction: |-
-        Now try building a function to solve
-        this maze.  How is it different from last time?
-      courseF_bee_functions_challenge1_instruction: |-
-        Create a new function to collect
-        all the nectar and honey while there is a path ahead. Use it to complete the
-        puzzle!
-      courseF_bee_functions_challenge2_instruction: |-
-        Use everything you have learned
-        to complete this puzzle!
-      courseF_bee_functions_challenge2_recursion_instruction: |-
-        Collect all the nectar
-        or make all of the honey!
-      courseF_bee_fwp2_instruction: |-
-        Pull this code into a function, then call the
-        function to check this row for nectar.
-      courseF_bee_fwp3_instruction: |-
-        Let's see if the function makes collecting
-        these three rows of nectar any easier.
-      courseF_bee_fwp4_instruction: |-
-        Add a `length` parameter to the function so
-        that it will still work when the row is a different length.
-      courseF_bee_fwp5_instruction: Use this function to collect the nectar.
-      courseF_bee_fwp6_instruction: Build a short and sweet solution to this puzzle.
-      courseF_bee_fwp7_instruction: |-
-        **Challenge:** Modify your function to make
-        honey as well.
-      courseF_bee_fwp8_instruction: Use your new function to solve this spiral.
+      courseF_bee_functions5a_instruction: 使用 "移动和检查" 函数来收集所有的花蜜。
+      courseF_bee_functions6_instruction: "帮助蜜蜂通过在花那里左转和蜂窝那右转来穿过迷宫。"
+      courseF_bee_functions7_instruction: "从最后一个关卡重建你的函数, 来解决这个迷宫。"
+      courseF_bee_functions8a_instruction: "收集所有的花蜜或酿造所有的蜂蜜!"
+      courseF_bee_functionsPre7_instruction: "现在尝试构建一个函数来解决这个迷宫。 这和上次有什么不同？"
+      courseF_bee_functions_challenge1_instruction: "创建一个新的函数, 当前方有路的时候，收集所有的花蜜和蜂蜜。用它来完成关卡!"
+      courseF_bee_functions_challenge2_instruction: "用你所学的来解决这个关卡。"
+      courseF_bee_functions_challenge2_recursion_instruction: "收集所有的花蜜或酿造所有的蜂蜜!"
+      courseF_bee_fwp2_instruction: "将此代码拉入一个函数, 然后调用该函数以检查此行是否有花蜜。"
+      courseF_bee_fwp3_instruction: "让我们看看这个函数是否能使收集这三行花蜜变得更加容易。"
+      courseF_bee_fwp4_instruction: 向函数中添加一个 "长度" 参数, 以便它在该行的长度不同时仍能正常工作。
+      courseF_bee_fwp5_instruction: "使用此函数收集花蜜。"
+      courseF_bee_fwp6_instruction: "为这个关卡建立一个简短而甜美的解决方案。"
+      courseF_bee_fwp7_instruction: "** 挑战: ** 修改你的函数也来制作蜂蜜。"
+      courseF_bee_fwp8_instruction: "使用你的新函数来解决这个螺旋。"
       courseF_bee_fwp9_instruction: "使用你的新函数来通关。"
       courseF_bee_fwp9_predict1_instruction: |-
         Use your new function to solve this
         puzzle.
       courseF_bee_fwp_challenge1_instruction: "在函数中使用一个“计数循环”来收集所有的玉米。通过使用“length（长度）”参数，同样的“计数循环”可以数到不同的最大值。"
       courseF_bee_fwp_challenge2_instruction: "在函数中使用一个“计数循环”来收集所有的蔬菜。通过使用“length（长度）”参数，使这个“计数循环”数到不同的最大值。通过在函数外部再加一个“计数循环”，来让你的程序写得更短。"
-      courseF_farmer_ramp11_instruction: |-
-        This puzzle also uses nested loops.  Can
-        you figure out how?
-      courseF_maze_predict1_instruction: |-
-        This code includes a new block. What do
-        you think would happen if you press the "Run" block?
+      courseF_farmer_ramp11_instruction: "这个关卡也使用嵌套循环。 你知道是什么吗？"
+      courseF_maze_predict1_instruction: 此代码包含一个新模块。如果你按下 "运行" 块, 你认为会发生什么？
       courseF_maze_ramp13_instruction: "是时候把它都放在一起，来玩一关新的愤怒的小鸟了！"
       courseF_maze_ramp15_instruction: "使用你学会的，让小鸟飞到猪那里！"
       courseF_maze_ramp4_instruction: Avoid TNT or feathers will fly!
       courseF_maze_ramp5_instruction: Avoid the TNT.
-      courseF_maze_ramp6_instruction: |-
-        "Keep calm and help me find the bad pig.
-        Otherwise I might get angry!"
-      courseF_maze_ramp7_instruction: |-
-        Use what you've learned to get the bird to
-        the pig!
-      courseF_playlab_embed_vars_instruction: |-
-        Answer Pegleg the Pirate's questions.
-        What happens if you enter the codename "password"? What about some other
-        code name?
+      courseF_maze_ramp6_instruction: "\"保持冷静, 帮助我找到那只坏猪。否则我会生气的!“"
+      courseF_maze_ramp7_instruction: "使用你学会的，让小鸟飞到猪那里！"
+      courseF_playlab_embed_vars_instruction: 回答 Pegleg 海盗的问题。如果输入代号 "密码" 会发生什么情况？或者其他的代码名称呢？
       courseF_playlab_variables0_instruction: |-
         This is Pirate Pegleg.  He's awfully
         hard to understand these days!
@@ -8172,19 +7820,15 @@
         Use what you've learned to create
         an improv scene between the actors.
       courseF_playlab_variables8c_instruction: "使用变量来使你的游戏更个性化。"
-      courseF_playlab_variables_challenge1_instruction: |-
-        Use these blocks to make
-        the actors share a knock-knock joke. Change the setup and punchline to tell
-        your own joke!
+      courseF_playlab_variables_challenge1_instruction: "使用这些模块使演员分享一个敲门问答的笑话。改变设置和警句来讲你自己的笑话!"
       courseF_playlab_variables_challenge2_instruction: |-
         现在是捉人游戏！这个游戏将使用变量来保存得分。
         捉住小猫得2分。捉住企鹅得3分。正好得到10分时就赢了！\r
         但要小心，当小猫和企鹅互相捉到时，他们就会把分数要回去。\r
         \r
         添加所需的模块来让这个游戏按照上面的规则的运行。怎样用方向键让小狗能往所有方向移动？怎样在小狗捉住小猫或者企鹅时加分？怎样在小猫和企鹅碰到时扣分？
-      courseF_playlab_variables_challenge3_instruction: |-
-        Can you figure out how this
-        "Fortune Teller" app works? Click `MORE` to see your challenges.
+      courseF_playlab_variables_challenge3_instruction: 你能想出这个 "算命先生" 应用程序是如何工作的吗？单击
+        "更多" 以查看您的挑战。
       courseF_video_createFunctions_instruction: |-
         We don't have a video for creating
         functions, yet. This is a placeholder.
@@ -8206,14 +7850,13 @@
       coursef_explore_playlab_cat_game_instruction: |-
         You can do whatever you want
         in play lab! Here's an example of game you can make.
-      coursef_maze_ramp3_instruction: |-
-        There is one extra block that is going to
-        cause the bird to crash. Throw it away by dragging it back to the toolbox.
+      coursef_maze_ramp3_instruction: "有一个额外的块将导致鸟坠落。将其拖回工具箱中扔掉它。"
       drawings!_instruction: |-
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: 将一个模块附加到"单击时"模块上，然后按"运行"。单击或点击屏幕去移动Flappy到目标.
+      flappy_11_instruction: "创建你自己的Flappy游戏。你可以改变所有的有视效果，所有的规则，甚至重力。当你完成后，单击完成，让朋友在他们手机上试试你的手机游戏。"
       flappy_2_instruction: 现在我们已经添加了一些地面。将一个块附加到"撞到地面时"块。当Flappy 撞地时，您的代码需要 ' 结束游戏
         '。
       flappy_3_instruction: "“运行时”块允许你在游戏开始时运行你的代码. 尝试设置水平速度和扑向目标。"
@@ -8225,7 +7868,6 @@
       flappy_7_instruction: 接下来, 请尝试将另一个块附加到"运行时"块来更改场景.
       flappy_8_instruction: "不只是在游戏开始时，您可以随时设置的视觉效果。请尝试在其他事件发生时设置一个随机场景，例如，在通过障碍时。"
       flappy_9_instruction: "现在我们要把前面学的全部混在一起啦，当击中一个障碍物，请尝试把分数设置回0分，而不是将游戏结束。"
-      flappy_11_instruction: "创建你自己的Flappy游戏。你可以改变所有的有视效果，所有的规则，甚至重力。当你完成后，单击完成，让朋友在他们手机上试试你的手机游戏。"
       frozen circle function in circle_instruction: "现在让我们创建20个交叠的圆圈，在每个圆圈之间转18度。"
       frozen circle function with parameter_instruction: "这里有一个“创建圆圈”的模块，可以画不同大小的圆圈。你可以用它来创建一个5像素的小圆圈和10像素的大圆圈吗?"
       frozen circle function_instruction: 使用新的"创建一个圆"块来创建 10 个相互重叠的圆圈。画圈之间别忘了跳一下哦。
@@ -9944,25 +9586,17 @@
       harvey_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.
-      harvey_snowflake_artist1_instruction: Get your snowflake ready for 3d printing!
-      harvey_snowflake_artist2_instruction: Get your snowflake ready for 3d printing!
-      harvey_tictactoe_instruction: |-
-        Let's play a game! Draw as many X's as you
-        can! Can you get 3 in a row?
+      harvey_snowflake_artist1_instruction: "让你的雪花准备好可以进行3d 打印!"
+      harvey_snowflake_artist2_instruction: "让你的雪花准备好可以进行3d 打印!"
+      harvey_tictactoe_instruction: "让我们玩游戏吧! 尽可能多地画 X。你能一排放3个吗？"
       iceage_click_hello_instruction: "你能帮喜得在你点击他的时候呼叫他的朋友们吗？ "
-      iceage_free_play_instruction: 'Time to create your own game or story! '
+      iceage_free_play_instruction: "是时候创造你自己的游戏或故事了! "
       iceage_free_playcourseF_IceAge_11_instruction: "是时候来创作你自己的游戏或者故事了！ "
       iceage_hello1_instruction: "通过拖拽“说”模块出来，并连接“当运行时”事件的底部来帮助喜得说“Hello！”"
       iceage_hello2_instruction: "使用`演员___ 说`模块两次来帮助曼尼和喜得相互打招呼。"
-      iceage_move_events_instruction: |-
-        Write the code to help Scrat get all of the
-        acorns!
-      iceage_move_to_actor_instruction: |-
-        Connect a block to the `when actor touches`
-        event to play a sound when Diego finds Manny.
-      iceage_move_to_flag_instruction: |-
-        Scrat is looking for his acorn! Can you help
-        him move the last 200 pixels?
+      iceage_move_events_instruction: "写代码, 帮助 斯奎特 得到所有的橡子!"
+      iceage_move_to_actor_instruction: 当迭戈发现曼尼时, 通过将一个方块连接到 "当演员触碰" 事件时播放声音。
+      iceage_move_to_flag_instruction: "斯奎特 在找他的橡子! 你能帮他移动最后200像素吗？"
       iceage_repeat_instruction: "重复左右移动来帮助格瑞尼做锻炼。"
       iceage_sound_and_points_instruction: "你可以完成这个程序，使它在喜得和格瑞尼相撞的时候同时**发出声音**并**得一分**吗？ "
       iceage_throw_hearts_instruction: "使用`演员__ 扔`的命令使喜得(演员1) 向格瑞尼(演员2) 扔红心，并且当格瑞尼被红心砸中的时候，设定她的心情为开心。"
@@ -10089,25 +9723,15 @@
       playLabDebugVideo1_instruction: |-
         Jorge the Dog wants to say "Hi there."  Can
         you help him?
-      ramp_artist_loops1_instruction: |-
-        Move forward by 60 pixels to complete this
-        puzzle.
-      ramp_artist_loops2_instruction: |-
-        Move forward five times and make this colored
-        line.
-      ramp_artist_loops3_instruction: Use a `repeat` loop to draw five colored dashes.
-      ramp_artist_loops4_instruction: |-
-        What happens when you add a 72 degree right
-        turn after everything else inside your loop?
-      ramp_artist_loops5_instruction: Use loops to draw this staircase.
-      ramp_artist_loops6_instruction: Edit your loop to draw this staircase.
-      ramp_artist_loops7_instruction: |-
-        Look for a pattern and make this code shorter
-        using loops!
-      ramp_artist_loops8_instruction: |-
-        Look for a pattern and make this code shorter
-        using loops.
-      ramp_artist_loops9_instruction: Solve this puzzle by drawing a square.
+      ramp_artist_loops1_instruction: "向前移动60像素, 来完成这个关卡。"
+      ramp_artist_loops2_instruction: "向前移动五次, 画这条彩色线。"
+      ramp_artist_loops3_instruction: 使用 "重复" 循环绘制五色虚线。
+      ramp_artist_loops4_instruction: "当您在循环的最后添加了右转72度后, 会发生什么？"
+      ramp_artist_loops5_instruction: "使用循环来绘制这个楼梯。"
+      ramp_artist_loops6_instruction: "编辑您的循环来绘制此楼梯。"
+      ramp_artist_loops7_instruction: "寻找一个模式, 使用循环使此代码更短!"
+      ramp_artist_loops8_instruction: "寻找一个模式, 使用循环使此代码更短!"
+      ramp_artist_loops9_instruction: "通过绘制正方形来解决这个关卡。"
       sample1_instruction: |-
         Our adventurer wants to collect coins.  But she can only
         use 4 blocks to get them.\r

@@ -360,6 +360,12 @@
   studiobar_donate_body: Jedno dítě se učí za každý dollar, který darujete
   studiobar_shop_title: Obchod
   studiobar_shop_body: Opusťte stereotypy. Noste hrdě naše logo.
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "&ldquo;Vyzývám divky v každé zemi, aby se učily jednu
     Hodinu kódu&rdquo; \nMalala, nosiltelka Nobelovy ceny za mír"
   homepage_hero_text_susan: |-
@@ -643,6 +649,7 @@
   video_title_obama: Prezident Obama o informatice
   video_title_hoc_is_here: Hodina kódu je zde - každý se může naučit
   video_title_anybody_can_learn: Každý se může naučit
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: Hodina kódu s Draymonden Greenem
   video_title_russell_okung: Hodina kódu s Russellem Okungem
   video_title_real_madrid: Hodina kódu s Realem Madrid
@@ -2096,10 +2103,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
-  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
-  video_title_steph_curry: Hour of Code with Steph Curry

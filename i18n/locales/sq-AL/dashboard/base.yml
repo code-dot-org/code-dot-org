@@ -654,6 +654,7 @@ sq:
     correct_title: "Faleminderit"
     correct_body: "Ju faleminderit për përgjigjen."
     hide_survey_last_answer: "Ky studim është anonim. Ju lutem vizitoni panelin e mësuesve për rezultatet agregate. Vini re se rezultatet janë të dukshme vetëm në qoftë se të paktën pesë studentë kanë dorëzuar studimin."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Faleminderit"
     wrong_body: "Ju faleminderit për përgjigjen."

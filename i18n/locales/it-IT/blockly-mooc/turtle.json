@@ -75,7 +75,7 @@
   "penUp": "alza il pennello",
   "reinfFeedbackMsg": "Ecco il tuo disegno! Continua a lavorarci sopra oppure passa al prossimo esercizio.",
   "setAlpha": "imposta l'opacità",
-  "setCharacter": "set character to {character}",
+  "setCharacter": "imposta carattere come {character}",
   "setColour": "Imposta il colore",
   "setPattern": "imposta lo schema",
   "setWidth": "imposta la larghezza",

@@ -2,7 +2,7 @@
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
-        2-3_Artist_1_new_a: Nếu bạn sử dụng block để tôi `di chuyển về phía trước
+        2-3_Artist_1_new_a: Nếu bạn sử dụng khối lệnh để tôi `di chuyển về phía trước
           100 pixel`, tôi sẽ tự động vẽ một đường thẳng.
         2-3_Artist_1_new_b: Gặp khó khăn khi quẹo/rẽ ở góc? Hãy dùng block `quẹo/rẽ
           90 độ`.
@@ -93,13 +93,14 @@
           - Move forward 100 + 75 pixels
           - Use function
       2-3 Artist Functions 3_authored_hint:
-        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+        2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
       2-3 Artist Functions 4_authored_hint:
         2-3_Artist_Functions_4_a: The artist needs to turn 120 degrees between each
           square to complete this design.
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
-          Remember that the code from the last puzzle was:
+          Hãy nhớ, đây là mã nguồn của câu đố lúc nãy:
+
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -180,10 +181,8 @@
         2-3_Artist_Nested_Loops_7_a: "How far should you turn in each loop?  \n\nWhat
           is 360/10?"
       2-3 Artist Nested Loops 9_authored_hint:
-        2-3_Artist_Nested_Loops_9_a: |-
-          Need help finding the correct angle?
-
-          **360 / 12 = 30**
+        2-3_Artist_Nested_Loops_9_a: Cần trợ giúp tìm góc chính xác? ** 360 / 12 =
+          30 **
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the
           blocks down?  Try treating the red flower exactly the same as a purple flower!
@@ -3699,6 +3698,9 @@
           </next>
           </block>
           </xml>
+      CourseF_PlayLab_vars2_authored_hint:
+        Course_4_Play_Lab_Vars_2_a: Make sure to set the number for `dog_speed` to
+          something larger than `cat_speed`.
       Farmer for Authored Hint testing_authored_hint:
         first_hint: "Đây là gợi ý đầu tiên. Có *một số * ** cơ bản ** 'đánh dấu'"
         second_hint: "Đây là gợi ý thứ hai. Nó là một hình ảnh. ! [] (https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)"
@@ -3710,9 +3712,9 @@
         last_hint: "Đây là gợi ý thứ ba và cuối cùng. Nó không có bất cứ điều gì đặc
           biệt."
       Function intro Ryan_authored_hint:
-        Function_intro_Ryan_b: Nếu bạn gọi chính xác các chức năng, đây là con đường
-          bạn sẽ phải đi...
-        Function_intro_Ryan_a: Bạn có thể gọi một chức năng nhiều lần bên trong chương
+        Function_intro_Ryan_b: Nếu bạn sử dụng chính xác các chức năng, sẽ có một
+          con đường bạn có thể di chuyển...
+        Function_intro_Ryan_a: Bạn có thể sử dụng một chức năng nhiều lần trong chương
           trình của bạn!  Hãy thử dùng nó hai lần để giải quyết câu đố này.
       Harvesting_authored_hint:
         pointer_harvester_test: Tôi có thể sử dụng loại khối lệnh nào để kiểm tra
@@ -3776,109 +3778,112 @@
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make
           sure blocks are connected under `when run`.
       MC_HOC_2017_01_Cole_authored_hint:
-        MC_HOC_2017_01_Cole_a: Sử dụng các phím mũi tên để cho người chơi đi vào nhà.
-          Kết thúc trên hình vuông màu cam là giành chiến thắng.
+        MC_HOC_2017_01_Cole_a: Sử dụng các phím mũi tên để di chuyển người chơi vào
+          nhà. Bạn sẽ chiến thắng khi dừng lại tại hình vuông màu cam.
       MC_HOC_2017_01_RETRY_authored_hint:
         MC_HOC_2017_01_RETRY_a: Kéo khối lệnh 'di chuyển về phía trước' từ hộp công
-          cụ tới không gian làm việc, và đặt nó vào trong vị trí bên dưới khối lệnh
-          'khi chạy'.
-        MC_HOC_2017_01_RETRY_b: Đừng quên nhấn "Chạy" để chạy dòng lệnh cho Đặc vụ.
-        MC_HOC_2017_01_RETRY_c: Một khi Đặc vụ đã chạy tất cả các dòng mã của nó,
-          bạn có thể di chuyển người chơi bằng các phím mũi tên!
+          cụ tới không gian làm việc, và đặt nó vào vị trí bên dưới khối lệnh 'khi
+          chạy chương trình'.
+        MC_HOC_2017_01_RETRY_b: Đừng quên nhấn "Chạy" để kích hoạt các dòng lệnh cho
+          Đặc vụ.
+        MC_HOC_2017_01_RETRY_c: Một khi Đặc vụ đã thực hiện hết các dòng lệnh bạn
+          lập trình cho nó, bạn có thể di chuyển người chơi bằng các phím mũi tên!
       MC_HOC_2017_02_Cole_authored_hint:
-        MC_HOC_2017_02_Cole_a: Di chuyển Đặc vụ về phía trước hai ô để đứng trên tấm
-          áp lực. Việc đó sẽ giúp mở cửa cho người chơi của bạn.
+        MC_HOC_2017_02_Cole_a: Di chuyển Đặc vụ về phía trước 2 ô để đứng trên tấm
+          áp lực. Như vậy cánh cửa cho người chơi của bạn sẽ được mở ra.
         MC_HOC_2017_02_Cole_b: |-
           Nhấn "Chạy"!
 
-          Bạn có thể chạy dòng mã lệnh ngay cả khi nó không dúng. Chạy và khởi động lại mã lệnh hết lần này đến lần khác cho đến khi bạn phát hiện ra sai ở đâu.
-        MC_HOC_2017_02_Cole_c: Một khi Đặc vụ đã mở cửa, sử dụng phím mũi tên để di
-          chuyển người chơi đến bản đồ!
-        MC_HOC_2017_02_Cole_d: "Đảm bảo rằng Đặc vụ đang theo đúng con đường đã vạch
-          ra trên bản đồ!"
+          Bạn có thể chạy dòng mã lệnh ngay cả khi nó chưa đúng. Bạn có thể chạy và khởi động lại mã lệnh hết lần này đến lần khác cho đến khi bạn phát hiện ra sai ở đâu.
+        MC_HOC_2017_02_Cole_c: Khi Đặc vụ đã giúp mở cánh cửa, bạn hãy sử dụng phím
+          mũi tên để di chuyển người chơi đến vị trí tấm bản đồ!
+        MC_HOC_2017_02_Cole_d: "Đảm bảo rằng Đặc vụ đang đi theo đúng con đường được
+          chỉ dẫn trên tấm bản đồ!"
       MC_HOC_2017_02_Will_authored_hint:
-        MC_HOC_2017_02_Cole_a: Di chuyển Đặc vụ về phía trước hai ô để đứng trên tấm
-          áp lực. Việc đó sẽ giúp mở cửa cho người chơi của bạn.
+        MC_HOC_2017_02_Cole_a: Di chuyển Đặc vụ về phía trước 2 ô để đứng trên tấm
+          áp lực. Như vậy cánh cửa cho người chơi của bạn sẽ được mở ra.
         MC_HOC_2017_02_Cole_b: |-
           Nhấn "Chạy Đặc vụ"!
 
-          Bạn có thể chạy dòng mã lệnh ngay cả khi nó không dúng. Chạy và khởi động lại mã lệnh hết lần này đến lần khác cho đến khi bạn phát hiện ra sai ở đâu.
-        MC_HOC_2017_02_Cole_c: Một khi Đặc vụ đã mở cửa, sử dụng phím mũi tên để di
-          chuyển người chơi đến hình vuông màu cam.
+          Bạn có thể chạy dòng mã lệnh ngay cả khi nó chưa đúng. Bạn có thể chạy và khởi động lại mã lệnh hết lần này đến lần khác cho đến khi bạn phát hiện ra sai ở đâu.
+        MC_HOC_2017_02_Cole_c: Khi Đặc vụ đã mở được cánh cửa, bạn hãy sử dụng phím
+          mũi tên để di chuyển người chơi đi đến hình vuông màu cam.
       MC_HOC_2017_03_Cole_authored_hint:
-        MC_HOC_2017_03_Cole_a: Một khi bạn đưa Đặc vụ đến tấm áp lực, bạn có thể sử
-          dụng các phím mũi tên để đưa người chơi đến La bàn!
+        MC_HOC_2017_03_Cole_a: Khi bạn đưa Đặc vụ đi đến tấm áp lực, bạn có thể sử
+          dụng các phím mũi tên để đưa người chơi đi đến vị trí La bàn!
         MC_HOC_2017_03_Cole_b: Mã lệnh này có hơi dài không?  Hãy thử sử dụng vòng
-          lặp 'lặp lại' và tìm hiểu cách làm thế nào để làm cho nó ngắn hơn!
+          lặp 'lặp lại' và tìm hiểu cách làm thế nào để rút gọn các mã lệnh!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
-          Vượt qua hai tấm áp lực này sẽ mở được đường cho người chơi.
+          Vượt qua hai tấm áp lực này sẽ mở đường được cho người chơi.
 
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
-        MC_HOC_2017_04POINT5_RYAN_b: Sử dụng các khối 'rẽ phải' để thay đổi hướng
-          của Đặc vụ
-        MC_HOC_2017_04POINT5_RYAN_a: "Đặc vụ chỉ cần để có được tấm áp lực đầu tiên
-          để đưa Alex hay Steve đi đến cái rìu."
+        MC_HOC_2017_04POINT5_RYAN_b: 'Sử dụng các khối lệnh ''rẽ phải'' để thay đổi
+          hướng của Đặc vụ '
+        MC_HOC_2017_04POINT5_RYAN_a: "Đặc vụ chỉ cần đi đến tấm áp lực đầu tiên để
+          đưa Alex hoặc Steve đi đến cái rìu."
       MC_HOC_2017_04_Cole_authored_hint:
         MC_HOC_2017_04_Cole_a: "Đặc vụ cần phải 'di chuyển về phía trước' 7 lần.  Làm
-          thế nào để làm được điều này bằng cách sử dụng một vòng lặp 'lặp lại'?"
+          thế nào để thực hiện được bằng cách sử dụng một vòng lặp 'lặp lại'?"
         MC_HOC_2017_04_Cole_c: |-
           Nhấn "Chạy"!
 
-          Bạn có thể chạy dòng mã lệnh ngay cả khi nó không dúng. Chạy và khởi động lại mã lệnh hết lần này đến lần khác cho đến khi bạn phát hiện ra sai ở đâu.
-        MC_HOC_2017_04_Cole_b: Một khi Đặc vụ đi đến tấm áp lực, Đặc vụ sẽ mở cửa
-          cho người chơi.
+          Bạn có thể chạy dòng mã lệnh ngay cả khi nó chưa đúng. Bạn có thể chạy và khởi động lại mã lệnh hết lần này đến lần khác cho đến khi bạn phát hiện ra sai ở đâu.
+        MC_HOC_2017_04_Cole_b: Khi Đặc vụ đi đến tấm áp lực, nó sẽ giúp mở cửa cho
+          người chơi.
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Bạn có biết rằng bạn có thể đặt nhiều hơn một đoạn
-          mã bên trong một vòng lặp?  Hãy thử di chuyển về phía trước ** và ** đặt
-          một tấm ván bên trong của một 'lặp lại' để hoàn thành câu đố này.
-        MC_HOC_2017_05_Cole_b: "Đưa Đặc vụ qua bên kia sông, xây dựng một cây cầu."
+        MC_HOC_2017_05_Cole_a: Bạn có biết rằng bạn có thể sử dụng nhiều hơn một mã
+          lệnh bên trong một vòng lặp?  Hãy sử dụng các mã lệnh để di chuyển về phía
+          trước ** và ** đặt một tấm ván bên trong vòng lặp 'lặp lại' để hoàn thành
+          câu đố này.
+        MC_HOC_2017_05_Cole_b: "Đưa đặc vụ qua bên kia sông, vừa đi vừa xây một cây
+          cầu."
       MC_HOC_2017_05_Josh_authored_hint:
-        MC_HOC_2017_05_Cole_a: Bạn có biết rằng bạn có thể đặt nhiều hơn một đoạn
-          mã bên trong một vòng lặp?  Hãy thử đặt một tấm ván **và** di chuyển về
-          phía trước vào trong của một 'lặp lại' để hoàn thành câu đố này.
+        MC_HOC_2017_05_Cole_a: Bạn có biết rằng bạn có thể sử dụng nhiều hơn một mã
+          lệnh bên trong một vòng lặp?  Hãy sử dụng các mã lệnh để đặt một tấm ván
+          **và** di chuyển về phía trước vào trong vòng lặp 'lặp lại' để hoàn thành
+          câu đố này.
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: Vòng lặp này đã chạy bao nhiêu lần?  Vòng lặp này *nên*
           chạy bao nhiêu lần?
         MC_HOC_2017_06_Cole_b: 'Giúp đỡ Đặc vụ xây dựng một cây cầu để vượt qua dòng
           nước! '
       MC_HOC_2017_06_Josh_authored_hint:
-        MC_HOC_2017_06_Cole_a: Cố gắng đưa nhiều hơn một chỉ dẫn bên trong vòng lặp
-          "nhắc lại"!
+        MC_HOC_2017_06_Cole_a: Cố gắng đưa nhiều hơn một mã lệnh vào trong vòng lặp
+          "lặp lại"!
       MC_HOC_2017_07_Cole_authored_hint:
-        MC_HOC_2017_07_Cole_c: Tất cả những gì bạn cần để Đặc vụ làm là dọn đường
-          tới xe chở quặng.
+        MC_HOC_2017_07_Cole_c: Tất cả những gì Đặc vụ cần làm là dọn đường tới xe
+          chở quặng.
         MC_HOC_2017_07_Cole_a: "Để giải quyết câu đố này, tìm hiểu chức năng 'dọn
           đường' và sử dụng nó nhiều lần như bạn cần, sử dụng khối lệnh nhỏ màu xanh
           lá cây 'dọn đường' từ hộp công cụ."
-        MC_HOC_2017_07_Cole_b: Hãy thử pha trộn các khối lệnh chức năng với các khối
-          lệnh khác từ hộp công cụ để giúp bạn giải quyết câu đố này.
+        MC_HOC_2017_07_Cole_b: Hãy thử pha trộn các nhóm lệnh chức năng với các lệnh
+          khác từ hộp công cụ để giúp bạn giải quyết câu đố này.
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           Nhấn "Chạy Đặc vụ"!
 
-          Bạn có thể chạy dòng mã lệnh ngay cả khi nó không dúng. Chạy và khởi động lại mã lệnh hết lần này đến lần khác cho đến khi bạn phát hiện ra sai ở đâu.
+          Bạn có thể chạy dòng mã lệnh ngay cả khi nó chưa đúng. Chạy và khởi động lại mã lệnh hết lần này đến lần khác cho đến khi bạn phát hiện ra sai ở đâu.
         MC_HOC_2017_08_RY_b: Có rất nhiều cách để giải quyết câu đố này.  Hãy thử
           một vài cách!
       MC_HOC_2017_08_Will_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           Nhấn "Chạy Đặc vụ"!
 
-          Bạn có thể chạy dòng mã lệnh ngay cả khi nó không dúng. Chạy và khởi động lại mã lệnh hết lần này đến lần khác cho đến khi bạn phát hiện ra sai ở đâu.
+          Bạn có thể chạy dòng mã lệnh ngay cả khi nó chưa đúng. Chạy và khởi động lại mã lệnh hết lần này đến lần khác cho đến khi bạn phát hiện ra sai ở đâu.
         MC_HOC_2017_08_RY_b: Có rất nhiều cách để giải quyết câu đố này.  Hãy thử
           một vài cách!
       MC_HOC_2017_10_Cole_authored_hint:
-        MC_HOC_2017_10_Cole_a: Sử dụng chức năng để giải quyết câu đố này dễ dàng
-          hơn!
+        MC_HOC_2017_10_Cole_a: Sử dụng các nhóm lệnh chức năng để giải quyết câu đố
+          này dễ dàng hơn!
       MC_HOC_2017_10_RETRY_authored_hint:
-        MC_HOC_2017_10_Cole_b: Không biết đi đâu?  Xem liệu bạn có thể tìm thấy các
-          dòng chấm!
-        MC_HOC_2017_10_Cole_a: Sử dụng chức năng để giải quyết câu đố này dễ dàng
-          hơn!
+        MC_HOC_2017_10_Cole_b: Không biết đi đâu?  Hãy tìm các dòng chấm!
+        MC_HOC_2017_10_Cole_a: Sử dụng nhóm lệnh chức năng để giải quyết câu đố này
+          dễ dàng hơn!
       MC_HOC_2017_13_Cole_authored_hint:
-        MC_HOC_2017_13_Cole_a: Hãy thử để Đặc vụ xây một vài chiếc cầu để Alex hay
-          Steve có thể đi bộ bên trên các cạnh của bản đồ.
+        MC_HOC_2017_13_Cole_a: Hãy thử để Đặc vụ xây một vài chiếc cầu để Alex hoặc
+          Steve có thể đi bộ xung quanh các cạnh của bản đồ.
       MC_HOC_2017_4.5v2_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
           Qua hai tấm áp lực này thì sẽ mở được đường cho người chơi.
@@ -3888,11 +3893,11 @@
         MC_HOC_2017_08_RY_a: |-
           Nhấn "Chạy"!
 
-          Bạn có thể chạy dòng mã lệnh ngay cả khi nó không dúng. Chạy và khởi động lại mã lệnh hết lần này đến lần khác cho đến khi bạn phát hiện ra sai ở đâu.
+          Bạn có thể chạy dòng mã lệnh ngay cả khi nó chưa đúng. Bạn có thể chạy và khởi động lại mã lệnh hết lần này đến lần khác cho đến khi bạn phát hiện ra sai ở đâu.
         MC_HOC_2017_08_RY_b: Có rất nhiều cách để giải quyết câu đố này.  Hãy thử
           một vài cách!
-        MC_HOC_2017_08_RY_c: Hãy thử theo các đường chấm, đó là đường đơn giản nhất
-          qua được dung nham.
+        MC_HOC_2017_08_RY_c: Hãy thử đi theo các đường chấm, đó là đường đơn giản
+          nhất để qua được dung nham.
       MC_HOC_2017_FP10x10_authored_hint: []
       MC_HOC_2017_FP10x10_RE_authored_hint: []
       MC_HOC_2017_FP20x20_authored_hint:
@@ -4063,8 +4068,8 @@
           is added to your counter variable each time through. \n\nWhat do you need
           to add to each number to get the number after it?"
       New Minecraft Hero Project_authored_hint:
-        MC_HOC_2017_13_Cole_a: Hãy thử để Đặc vụ xây một vài chiếc cầu để Alex hay
-          Steve có thể đi bộ bên trên các cạnh của bản đồ.
+        MC_HOC_2017_13_Cole_a: Hãy thử để Đặc vụ xây một vài chiếc cầu để Alex hoặc
+          Steve có thể đi bộ xung quanh các cạnh của bản đồ.
       Overworld Avoid Monsters_authored_hint:
         mc_8_a: There are a few paths you can take. Which is the shortest?
         mc_8_b: Use `repeat` loops to simplify your code.
@@ -5665,6 +5670,15 @@
           can repeat that to draw the other two.
         courseA_artist_loops7_c: Remember you can put more than one block in a `repeat`
           loop.
+      courseA_artist_loops7_forVideo_authored_hint:
+        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
+          the code step-by-step and look for a pattern.
+        courseA_artist_loops7_b: Write the code for one wave first, then repeat that
+          to draw the other two.
+        courseA_artist_loops7_c: |-
+          Remember you can put more than one block in a <xml><block type="controls_repeat">
+          <title name="TIMES">???</title>
+          </block></xml> loop.
       courseA_artist_loops8_authored_hint:
         courseA_artist_loops8_a: Try running the code to see what has been written
           for you.
@@ -5687,6 +5701,13 @@
           to the next!
         courseA_artist_loops_challenge2_c: You will need a LOT of blocks inside the
           loop for this challenge.
+      courseA_artist_loops_challenge2a_authored_hint:
+        courseA_artist_loops_challenge2_a: Blocks like this <xml>  <block type="simple_move_up_left"/></xml>
+          will let your artist move at a slant!
+        courseA_artist_loops_challenge2_b: When you finish one tent, `jump` up twice
+          to get to the next!
+        courseA_artist_loops_challenge2_c: All of your blocks will need to be inside
+          of a loop to finish this puzzle.
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: You can use `jump` blocks to move to other spaces.
       courseA_collector_loops1_authored_hint:
@@ -6309,6 +6330,14 @@
           </next>
           </block>
           </xml>
+      courseB_collector_loops_challenge2a_authored_hint:
+        courseB_collector_loops_challenge2a_a: If something goes wrong, try debugging
+          it. Don't give up!
+        courseB_collector_loops_challenge2a_b: Look at this option for getting through
+          the maze. Do you see a pattern that you can repeat?
+        courseB_collector_loops_challenge2a_c: To collect all of the treasure, you
+          will either need to add two  <xml> <block type="collector_collect"/></xml>
+          blocks inside your loop, or put the block inside of its own `repeat` block.
       courseB_collector_loops_challenge`_authored_hint:
         courseA_collector_loops_challenge2_b: |
           You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.
@@ -6996,9 +7025,12 @@
           \                   <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n
           \                 </block>\n                </next>\n              </block>\n
           \             </statement></block></xml>"
+      courseC_artist_prog_challenge2a_authored_hint:
+        courseC_artist_prog_challenge2_a: After you draw the first line, try turning
+          left before you draw your second line.
+        courseC_artist_prog_challenge2_b: After you draw the second line, try turning
+          right before you draw your third line.
       courseC_collector_loops_challenge2_authored_hint:
-        courseC_maze_loops_challenge2_a: The original code would work great - if there
-          was only one piece of treasure in each pile!
         courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect`
           blocks!
       courseC_collector_prog1_authored_hint:
@@ -7059,6 +7091,8 @@
       courseC_collector_prog_challenge2_authored_hint:
         courseC_collector_prog_challenge1_a: You can use the `collect` command more
           often to collect the extra treasure.
+        courseC_collector_prog_challenge1_b: Lost your way?  Try this path to solve
+          the puzzle!
       courseC_external_events_authored_hint: []
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
@@ -7173,6 +7207,37 @@
           </block>
           </statement>
           </block></next></block></xml>
+      courseC_harvester_loops_challenge1a_authored_hint:
+        courseC_harvester_loops_challenge1_a: This is too hard without loops!
+        courseC_harvester_loops_challenge1_b: You can repeat `move forward` and `pick
+          corn` as many times as you need, then turn right at each corner.
+        courseC_harvester_loops_challenge1_c: |-
+          The best way to collect the first four corn uses a `repeat` block inside of another `repeat` block. You can use this pattern for the rest of the puzzle too!
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></next></block></xml>
       courseC_harvester_loops_challenge2_authored_hint:
         courseC_harvester_loops_challenge2_a: One way to solve this looks like a zig-zag.
           Another way looks like a spiral! There are lots of different solutions to
@@ -7187,6 +7252,7 @@
           This spiral pattern can be coded with just 18 blocks!
 
           ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
+      courseC_harvester_loops_forVid_authored_hint: []
       courseC_maze_debugging1_authored_hint:
         courseC_maze_debugging1_a: |-
           - Does everything work after the first step?
@@ -7257,8 +7323,6 @@
         courseC_maze_debugging_challenge1_c: If you are getting stuck, you can always
           start over, or remove all the code and find your own way!
       courseC_maze_debugging_challenge2_authored_hint:
-        courseC_maze_debugging_challenge2_a: One way to solve this is to add more
-          steps forward in between the turns.
         courseC_maze_debugging_challenge2_b: If you are getting stuck, you can always
           start over or remove all the code and find your own way!
         courseC_maze_debugging_challenge2_c: |-
@@ -7320,6 +7384,11 @@
           pieces. Each one has a pattern you can repeat.
         courseC_maze_loops_challenge1_b: In between each `repeat` block, you will
           need to `turn left` or `turn right` to get ready Scrat for the next pattern.
+      courseC_maze_loops_challenge1a_authored_hint:
+        courseC_maze_loops_challenge1_a: Think about this path as being two different
+          pieces. Each one has a pattern you can repeat.
+        courseC_maze_loops_challenge1_b: Can you remember how to use loops to repeat
+          a staircase pattern?
       courseC_maze_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_a: The original code would work great - if there
           was only one piece of treasure in each pile!
@@ -7517,8 +7586,8 @@
         courseD_artist_binary8_c: Don't be afraid to make a mistake! Try writing binary
           and running the code to see what will happen, even if you don't think you've
           solved the puzzle yet.
-      courseD_artist_binaryFP_authored_hint:
-        courseD_artist_binaryFP_a: Run this code to see what happens!
+      courseD_artist_binaryFP_authored_hint: []
+      courseD_artist_binaryFP8_authored_hint: []
       courseD_artist_binary_challenge2_authored_hint:
         courseD_artist_binary_challenge2_a: |-
           The best tip I have for you is to press `⟲ Start Over` if it starts to get really messy.
@@ -7708,6 +7777,8 @@
           - draw a triangle
           - jump forward 50 pixels
           - turn right by 90 degrees
+        courseD_artist_nestedLoops_challenge1_d: Put all of your code inside of a
+          `repeat 4 times` loop to finish it off.
       courseD_artist_nestedLoops_challenge2_authored_hint:
         courseD_artist_nestedLoops_challenge2_a: To draw a regular octagon, the artist
           needs to turn 45 degrees 8 times.
@@ -7795,6 +7866,8 @@
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to
           see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals2_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
           won't.  If you want your code to run in both cases, make sure to use an
           `if` statement.
@@ -7802,6 +7875,8 @@
           ahead` to move through this maze.
         courseD_bee_conditionals2_c: You don't have to check for honeycombs, there
           will only be flowers or blank spaces under the clouds.
+        courseD_bee_conditionals2_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals2_test_authored_hint:
         courseD_bee_conditionals2_aa: Need help getting started?  Here is a little
           hint video.
@@ -7815,6 +7890,8 @@
         courseD_bee_conditionals2_d: Need help finishing things up?  Watch this hint
           video.
       courseD_bee_conditionals3_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each
           space to see if it has either a flower or nothing.
         courseD_bee_conditionals3_b: You can use a loop to keep the bee moving forward.
@@ -7822,7 +7899,11 @@
         courseD_bee_conditionals3_c: Don't be afraid to make a mistake! Try adding
           blocks and running the code to see what will happen, even if you don't think
           you've solved the puzzle yet.
+        courseD_bee_conditionals3_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals4_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals4_a: You can still treat every space as if there is
           a cloud over it, even though you can see the whole path.
         courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check
@@ -7830,39 +7911,55 @@
         courseD_bee_conditionals4_c: Using the block `while there is a path ahead`,
           you should `move forward` and check for a flower. `if there is a flower`
           what should the bee do?
+        courseD_bee_conditionals4_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals5_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals5_a: Think of every side of the rectangular path as
           a path by itself. Set up a nested loop with a `repeat` block on the outside
           and a `while there is a path ahead` on the inside. How many paths does the
           bee need to buzz down if the bee needs to buzz every side with a flower?
-        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block,
-          you will need to move forward and check for a flower. How do you check if
-          there is a flower? What do you do if there is a flower?
         courseD_bee_conditionals5_c: There are 3 sides of the rectangle with flowers,
           so the code needs to `repeat 3 times`. In every repeat, the bee will need
           to continue along the path, `while there is a path ahead`. To continue down
           the path, the bee will need to `move forward`. While on the path, the bee
           needs to check for a flower. `if there is a flower`, the bee should `get
           nectar`.
+        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block,
+          you will need to move forward and check for a flower. How do you check if
+          there is a flower? What do you do if there is a flower?
+        courseD_bee_conditionals5_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals6_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for
           honeycomb beneath each cloud.
         courseD_bee_conditionals6_b: In this case, you do not need to check for nectar
           under the clouds.
         courseD_bee_conditionals6_c: Is there a loop you can use to make your code
           simpler?
+        courseD_bee_conditionals6_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals7_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
           the challenge."
         courseD_bee_conditionals7_b: If there is not a flower under the cloud, there
           must be a honeycomb, so you don't need to think about the case of an empty
           space.
+        courseD_bee_conditionals7_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals7_predict2_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
           the challenge."
       courseD_bee_conditionals8_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Need help getting started?  Watch the
+          video!
         courseD_bee_conditionals8_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`)
           to solve the challenge."
@@ -7875,6 +7972,8 @@
         courseD_bee_conditionals8_d: Even though there is a cloud right in front of
           you, you don't have to visit it first. Try starting with the one in the
           bottom right of the square.
+        courseD_bee_conditionals8_hintVid2: Watch this video for help solving this
+          puzzle.
       courseD_bee_conditionals9_authored_hint: []
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: |-
@@ -7992,6 +8091,19 @@
           * Repeat 2 times:
           * Move forward
           * Make 3 honey
+          * Move backward
+      courseD_bee_debugging_challenge1a_authored_hint:
+        courseD_bee_debugging_challenge1_a: Why does the first half of this program
+          work? Think about why the bee needs to move backward. How much nectar does
+          the bee collect each time it moves over a flower?
+        courseD_bee_debugging_challenge1_b: 'To solve this puzzle, have the bee follow
+          the same pattern to make honey that he does when collecting nectar. '
+        courseD_bee_debugging_challenge1_c: |-
+          After the bee makes it to the bottom row, have it repeat these commands:
+
+          * Repeat 2 times:
+          * Move forward
+          * Make honey
           * Move backward
       courseD_bee_debugging_challenge2_authored_hint:
         courseD_bee_debugging_challenge1_a: Why the first half of this program work?
@@ -8392,6 +8504,11 @@
           </next>
           </block>
           </xml>
+      courseD_collector_nested_loops_challenge2a_authored_hint:
+        courseD_collector_nested_loops_challenge2a_a: Don't forget that you can `repeat`
+          a single command or a longer pattern. You can even `repeat` a `repeat` block!
+        courseD_collector_nested_loops_challenge2a_b: Can you figure out how to get
+          all four gems without using any more blocks than it takes to get two?
       courseD_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
           Instead of using four `move forward` blocks for each side, try putting one `move forward` block inside of a `repeat` loop, like this:
@@ -8656,6 +8773,10 @@
         courseD_harvester_nested_loops_challenge1_a: You have probably already used
           a loop to create a zig-zag pattern. If you remember that algorithm, you
           can make a few additions to it here.
+        courseD_harvester_nested_loops_challenge1_b: To collect more than one piece
+          of corn, you need to use `pick corn` more than one time.
+        courseD_harvester_nested_loops_challenge1_c: You will need to put a small
+          loop inside of your main loop to solve this puzzle!
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: Don't forget that you can `repeat`
           a single command or a longer pattern. You can even `repeat` a `repeat` block!
@@ -9593,8 +9714,8 @@
           event to change the direction the block controls.
         courseE_playLab_scaffold1_b: You should have four `when arrow` event blocks,
           with a direction to move underneath each.
-        courseE_playLab_scaffold1_c: Khi bạn hoàn thành, bạn có thể di chuyển anh
-          hùng của bạn bằng các phím mũi tên!
+        courseE_playLab_scaffold1_c: Khi bạn hoàn thành, bạn có thể di chuyển nhân
+          vật anh hùng của bạn bằng các phím mũi tên!
       courseE_playLab_scaffold3_authored_hint: []
       courseE_playLab_scaffold4_authored_hint:
         courseE_playLab_scaffold4_a: Use `score point` to add a point, and `remove
@@ -11976,7 +12097,7 @@
         grade2_CaringForNewPet_7D_a: Don't forget to use the "Step" button to go through
           block by block and look for errors.
       grade2_MakeDogTag_1_authored_hint:
-        2-3_Artist_1_new_a: Nếu bạn sử dụng block để tôi `di chuyển về phía trước
+        2-3_Artist_1_new_a: Nếu bạn sử dụng khối lệnh để tôi `di chuyển về phía trước
           100 pixel`, tôi sẽ tự động vẽ một đường thẳng.
         2-3_Artist_1_new_b: Gặp khó khăn khi quẹo/rẽ ở góc? Hãy dùng block `quẹo/rẽ
           90 độ`.
@@ -12567,7 +12688,7 @@
       grade4_bee_nestedLoops5_authored_hint:
         grade4_bee_nestedLoops5_a: You will need 4 repeat blocks!
       grade4_review_artist1_authored_hint:
-        2-3_Artist_1_new_a: Nếu bạn sử dụng block để tôi `di chuyển về phía trước
+        2-3_Artist_1_new_a: Nếu bạn sử dụng khối lệnh để tôi `di chuyển về phía trước
           100 pixel`, tôi sẽ tự động vẽ một đường thẳng.
         2-3_Artist_1_new_b: Gặp khó khăn khi quẹo/rẽ ở góc? Hãy dùng block `quẹo/rẽ
           90 độ`.
