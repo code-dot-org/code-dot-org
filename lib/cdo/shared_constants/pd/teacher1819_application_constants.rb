@@ -185,6 +185,7 @@ module Teacher1819ApplicationConstants
     regional_partner_name: YES_NO,
     previous_yearlong_cdo_pd: YES_NO,
     committed: YES_NO,
+    able_to_attend_single: YES_NO,
     csp_which_grades: YES_NO,
     csp_course_hours_per_year: YES_NO,
     csd_which_grades: YES_NO,
