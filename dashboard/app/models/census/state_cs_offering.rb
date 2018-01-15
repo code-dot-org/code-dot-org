@@ -3,7 +3,7 @@
 # Table name: state_cs_offerings
 #
 #  id              :integer          not null, primary key
-#  state_school_id :string(11)       not null
+#  state_school_id :string(255)      not null
 #  course          :string(255)      not null
 #  school_year     :integer          not null
 #  created_at      :datetime         not null
