@@ -176,7 +176,7 @@ export class SpecialAnnouncementActionBlock extends Component {
         description={i18n.specialAnnouncementDescription()}
         buttons={[
           {
-            url: pegasus('/educate/professional-learning'),
+            url: pegasus('/educate/professional-learning-2018'),
             text: i18n.learnMore()
           },
         ]}
