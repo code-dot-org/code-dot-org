@@ -36,7 +36,7 @@ def main
     "robo-DTT created and merged <a href=\"#{GitHub.url(pr_number)}\">PR#{pr_number}</a>",
     color: 'green'
   )
-  Metrics.write_metric('dtt_start', GitHub.sha('test'), 0)
+  Metrics.write_metric('dtt_start', GitHub.sha('test'), Metrics::AUTOMATIC)
 rescue Exception => e
   ChatClient.message(
     'infra-test',

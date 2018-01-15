@@ -3,6 +3,10 @@ require_relative './db'
 module Metrics
   DEVINTERNAL_DB = sequel_connect(CDO.devinternal_db_writer, CDO.devinternal_db_writer)
 
+  # Values for DTT metrics.
+  AUTOMATIC = 0
+  MANUAL = 1
+
   # Insert data into the metrics table.
   def self.write_metric(name, metadata, value, timestamp=nil)
     dataset = DEVINTERNAL_DB[:metrics]
