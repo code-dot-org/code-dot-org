@@ -22,18 +22,6 @@ describe('ValidationStep', () => {
     });
   });
 
-  it('renders nothing when step is hidden', () => {
-    const wrapper = mount(
-      <ValidationStep
-        stepName="Hidden step"
-        stepStatus={Status.HIDDEN}
-      >
-        Some help content.
-      </ValidationStep>
-    );
-    expect(wrapper.html()).to.be.null;
-  });
-
   it('renders help text when step is failed', () => {
     const helpString = 'XYZZY help content';
     const wrapper = mount(
@@ -50,7 +38,7 @@ describe('ValidationStep', () => {
   it('does not render help text when step is not failed', () => {
     const helpString = 'XYZZY help content';
     Object.values(Status).forEach(status => {
-      if (status === Status.FAILED || status === Status.HIDDEN) {
+      if (status === Status.FAILED) {
         return;
       }
 
