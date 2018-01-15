@@ -382,10 +382,8 @@ export const install = (blockly, blockInstallOptions) => {
     };
 
     blockly.Generator.get('JavaScript')[`craft_${functionName}`] = function () {
-      return `
-        onGlobalEventTriggered(${eventType}, function(event) {
-          ${blockly.Generator.get('JavaScript').statementToCode(this, 'DO')}
-        }, 'block_id_${this.id}');`;
+      const callback = blockly.Generator.get('JavaScript').statementToCode(this, 'DO').replace(/\n/g, '');
+      return `onGlobalEventTriggered(${eventType}, "${callback}", 'block_id_${this.id}');`;
     };
   }
 
@@ -698,7 +696,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Generator.get('JavaScript').craft_playSound = function () {
     const blockType = this.getTitleValue('TYPE');
-    return `playSound("${blockType}", event.targetIdentifier, "block_id_${this.id}");\n`;
+    return `playSound('${blockType}', event.targetIdentifier, 'block_id_${this.id}');\n`;
   };
 
   blockly.Blocks.craft_addScore = {
@@ -720,6 +718,6 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Generator.get('JavaScript').craft_addScore = function () {
     const score = this.getTitleValue('SCORE');
-    return 'addScore("' + score + '", \'block_id_' + this.id + '\');\n';
+    return `addScore('${score}', 'block_id_${this.id}');\n`;
   };
 };
