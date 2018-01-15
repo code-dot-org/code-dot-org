@@ -47,7 +47,7 @@ module UsersHelper
   # }
   def summarize_user_progress(script, user = current_user, exclude_level_progress = false)
     user_data = user_summary(user)
-    merge_script_progress(user_data, user, script, exclude_level_progress)
+    user_data.merge!(get_script_progress(user, script, exclude_level_progress))
 
     if script.has_peer_reviews?
       user_data[:peerReviewsPerformed] = PeerReview.get_peer_review_summaries(user, script).try(:map) do |summary|
@@ -92,7 +92,8 @@ module UsersHelper
   end
 
   # Merge the progress for the specified script and user into the user_data result hash.
-  private def merge_script_progress(user_data, user, script, exclude_level_progress = false)
+  private def get_script_progress(user, script, exclude_level_progress = false)
+    user_data = {}
     return user_data unless user
 
     if script.professional_learning_course?
