@@ -31,7 +31,7 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 <hr/>
 
-## <a name="what"></a>Professional Learning - Applications now availiable!
+## <a name="what"></a>Professional Learning - Applications now available!
 
 Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever.
 
