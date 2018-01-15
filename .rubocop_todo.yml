@@ -336,10 +336,6 @@ Style/MixinUsage:
 Style/MultilineTernaryOperator:
   Enabled: false
 
-# Offense count: 4
-Style/MultipleComparison:
-  Enabled: false
-
 # Offense count: 205
 # Cop supports --auto-correct.
 Style/MutableConstant:
