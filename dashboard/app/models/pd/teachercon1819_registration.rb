@@ -28,13 +28,9 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
   after_create :update_application_status
   def update_application_status
-    status = sanitize_form_data_hash.try(:[], :teacher_accept_seat)
-    return unless status
-
-    if status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_date] ||
-      status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_other]
+    if waitlisted?
       pd_application.update!(status: "waitlisted")
-    elsif status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
+    elsif declined?
       pd_application.update!(status: "withdrawn")
     end
   end
@@ -121,5 +117,22 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
     end
 
     return requireds
+  end
+
+  def accepted?
+    accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept]
+  end
+
+  def waitlisted?
+    accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_date] ||
+      accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_other]
+  end
+
+  def declined?
+    accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
+  end
+
+  def accept_status
+    sanitize_form_data_hash.try(:[], :teacher_accept_seat)
   end
 end
