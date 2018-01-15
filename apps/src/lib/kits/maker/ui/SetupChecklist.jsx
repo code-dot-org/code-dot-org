@@ -234,7 +234,7 @@ export default class SetupChecklist extends Component {
             {isWindows() &&
               <ValidationStep
                 stepStatus={this.state[STATUS_WINDOWS_DRIVERS]}
-                stepName="Windows drivers installed? (cannot auto-check)"
+                stepName="Adafruit drivers installed"
               >
                 We can't actually check this, but you should double-check that
                 you have the <a href="https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only">Adafruit Windows Driver</a> installed.
