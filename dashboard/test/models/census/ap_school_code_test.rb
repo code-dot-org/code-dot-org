@@ -25,4 +25,19 @@ class Census::ApSchoolCodeTest < ActiveSupport::TestCase
     school_code = build :ap_school_code, :without_school
     refute school_code.valid?
   end
+
+  test "normalize_school_code works with leading zeros" do
+    school_code = Census::ApSchoolCode.normalize_school_code("000123")
+    assert_equal "000123", school_code
+  end
+
+  test "normalize_school_code works without leading zeros" do
+    school_code = Census::ApSchoolCode.normalize_school_code("123")
+    assert_equal "000123", school_code
+  end
+
+  test "normalize_school_code works with partial leading zeros" do
+    school_code = Census::ApSchoolCode.normalize_school_code("0123")
+    assert_equal "000123", school_code
+  end
 end
