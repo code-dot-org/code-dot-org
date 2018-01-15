@@ -14,7 +14,7 @@ require 'cdo/aws/cdo_google_credentials'
 
 def load_yaml_file(path)
   return nil unless File.file?(path)
-  YAML.load(IO.read(path))
+  YAML.safe_load(IO.read(path))
 end
 
 def load_languages(path)

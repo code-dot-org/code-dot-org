@@ -144,7 +144,7 @@ module AWS
       end
 
       def parameters(template)
-        params = YAML.load(template)['Parameters']
+        params = YAML.safe_load(template)['Parameters']
         return [] unless params
         params.keys.map do |key|
           value = CDO[key.underscore] || ENV[key.underscore.upcase]

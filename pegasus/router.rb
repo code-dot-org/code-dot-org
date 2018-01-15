@@ -280,7 +280,7 @@ class Documents < Sinatra::Base
       original_line_count = content.lines.count
       match = content.match(/^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
       if match
-        @header = @locals[:header] = YAML.load(render_(match[:yaml], '.erb'))
+        @header = @locals[:header] = YAML.safe_load(render_(match[:yaml], '.erb'))
         content = match.post_match
       end
       line_number_offset = content.lines.count - original_line_count

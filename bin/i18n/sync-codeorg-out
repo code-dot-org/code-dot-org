@@ -108,8 +108,8 @@ def check_for_mismatching_links_or_images
       # value is a hash with the single key 'data' whose value is a hash
       # with a single key representing the category name whose value is
       # (finally) the data we actually want.
-      source_data = YAML.load(File.open(source_file)).values.first.values.first.values.first
-      locale_data = YAML.load(File.open(locale_file)).values.first.values.first.values.first
+      source_data = YAML.safe_load(File.open(source_file)).values.first.values.first.values.first
+      locale_data = YAML.safe_load(File.open(locale_file)).values.first.values.first.values.first
 
       if source_data.keys != locale_data.keys
         outputfile.write "mismatching keys in #{locale_file}"
