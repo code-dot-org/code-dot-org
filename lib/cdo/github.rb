@@ -65,7 +65,7 @@ module GitHub
     configure_octokit
     response = Octokit.update_issue(REPO, id, {labels: labels})
 
-    response['labels'].map { |label| label[:name] }
+    response['labels'].map {|label| label[:name]}
   end
 
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#merge_pull_request-instance_method
