@@ -29,11 +29,11 @@ describe('SetupChecklist', () => {
     utils.reload.restore();
   });
 
-  describe('on Chrome', () => {
-    before(() => sinon.stub(browserChecks, 'isChrome').returns(true));
+  describe('on Chrome OS', () => {
+    before(() => sinon.stub(browserChecks, 'isChromeOS').returns(true));
     before(() => sinon.stub(browserChecks, 'isCodeOrgBrowser').returns(false));
     after(() => browserChecks.isCodeOrgBrowser.restore());
-    after(() => browserChecks.isChrome.restore());
+    after(() => browserChecks.isChromeOS.restore());
 
     it('renders success', () => {
       const wrapper = mount(
@@ -47,7 +47,7 @@ describe('SetupChecklist', () => {
       return yieldUntilDoneDetecting(wrapper)
           .then(() => {
             expect(wrapper.find(REDETECT_BUTTON)).not.to.be.disabled;
-            expect(wrapper.find(SUCCESS_ICON)).to.have.length(5);
+            expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
             expect(window.console.error).not.to.have.been.called;
           });
     });
@@ -55,25 +55,6 @@ describe('SetupChecklist', () => {
     describe('test with expected console.error', () => {
       // Allow console.error calls and squelch actual logging
       beforeEach(() => console.error.reset());
-
-      it('fails if chrome version is wrong', () => {
-        const error = new Error('test error');
-        checker.detectSupportedBrowser.rejects(error);
-        const wrapper = mount(
-          <SetupChecklist
-            setupChecker={checker}
-            stepDelay={STEP_DELAY_MS}
-          />
-        );
-        expect(wrapper.find(WAITING_ICON)).to.have.length(4);
-        return yieldUntilDoneDetecting(wrapper)
-          .then(() => {
-            expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
-            expect(wrapper.find(WAITING_ICON)).to.have.length(3);
-            expect(wrapper.text()).to.include('Your current browser is not supported at this time.');
-            expect(window.console.error).to.have.been.calledWith(error);
-          });
-      });
 
       it('reloads the page on re-detect if plugin not installed', () => {
         checker.detectChromeAppInstalled.rejects(new Error('not installed'));
@@ -85,7 +66,7 @@ describe('SetupChecklist', () => {
         );
         return yieldUntilDoneDetecting(wrapper)
           .then(() => {
-            expect(wrapper.find(SUCCESS_ICON)).to.have.length(1);
+            expect(wrapper.find(SUCCESS_ICON)).to.have.length(0);
             expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
             expect(wrapper.find(WAITING_ICON)).to.have.length(3);
             wrapper.find(REDETECT_BUTTON).simulate('click');
@@ -103,13 +84,13 @@ describe('SetupChecklist', () => {
       );
       return yieldUntilDoneDetecting(wrapper)
         .then(() => {
-          expect(wrapper.find(SUCCESS_ICON)).to.have.length(5);
+          expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
           wrapper.find(REDETECT_BUTTON).simulate('click');
           expect(wrapper.find(WAITING_ICON)).to.have.length(4);
         })
         .then(() => yieldUntilDoneDetecting(wrapper))
         .then(() => {
-          expect(wrapper.find(SUCCESS_ICON)).to.have.length(5);
+          expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
           expect(utils.reload).not.to.have.been.called;
         });
     });
@@ -156,7 +137,6 @@ describe('SetupChecklist', () => {
           .then(() => {
             expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
             expect(wrapper.find(WAITING_ICON)).to.have.length(3);
-            expect(wrapper.text()).to.include('Your current browser is not supported at this time.');
             expect(window.console.error).to.have.been.calledWith(error);
           });
       });
