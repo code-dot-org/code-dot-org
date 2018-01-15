@@ -118,8 +118,8 @@ const styles = {
   },
 };
 
-const Button = React.createClass({
-  propTypes: {
+class Button extends React.Component {
+  static propTypes = {
     className: PropTypes.string,
     href: PropTypes.string,
     text: PropTypes.string.isRequired,
@@ -133,7 +133,7 @@ const Button = React.createClass({
     disabled: PropTypes.bool,
     onClick: PropTypes.func,
     id: PropTypes.string,
-  },
+  };
 
   render() {
     const { className, href, text, icon, iconClassName, iconStyle, target,
@@ -171,7 +171,7 @@ const Button = React.createClass({
       </Tag>
     );
   }
-});
+}
 
 Button.ButtonColor = ButtonColor;
 Button.ButtonSize = ButtonSize;
