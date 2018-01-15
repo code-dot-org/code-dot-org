@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import ApplicationFormComponent from "../ApplicationFormComponent";
+import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import UsPhoneNumberInput from "../../form_components/UsPhoneNumberInput";
 import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
@@ -11,16 +11,16 @@ import {
 
 const CSD_URL = 'https://code.org/educate/professional-learning/cs-discoveries';
 const CSP_URL = 'https://code.org/educate/professional-learning/cs-principles';
-const PD_RESOURCES_URL = 'https://support.code.org/hc/en-us/articles/115003865532?flash_digest=4d6f39af640b1d65d4a66a37e7de1f5260f2cf42';
+const PD_RESOURCES_URL = 'https://support.code.org/hc/en-us/articles/115003865532';
 const CS_TEACHERS_URL = 'https://code.org/educate/community';
 const WHICH_PROGRAM_URL = 'https://code.org/files/PL-Program-for-Me.pdf';
 const TEACHER_EMAIL = 'teacher@code.org';
 const INTERNATIONAL = 'International';
 const US = 'United States';
 
-export default class Section1AboutYou extends ApplicationFormComponent {
+export default class Section1AboutYou extends LabeledFormComponent {
   static propTypes = {
-    ...ApplicationFormComponent.propTypes,
+    ...LabeledFormComponent.propTypes,
     accountEmail: PropTypes.string.isRequired
   };
 

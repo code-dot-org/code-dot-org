@@ -16,12 +16,14 @@
 #  address_line3      :string(30)
 #  latitude           :decimal(8, 6)
 #  longitude          :decimal(9, 6)
+#  state_school_id    :string(11)
 #
 # Indexes
 #
 #  index_schools_on_id                  (id) UNIQUE
 #  index_schools_on_name_and_city       (name,city)
 #  index_schools_on_school_district_id  (school_district_id)
+#  index_schools_on_state_school_id     (state_school_id) UNIQUE
 #  index_schools_on_zip                 (zip)
 #
 
@@ -33,6 +35,8 @@ class School < ActiveRecord::Base
   belongs_to :school_district
 
   has_many :school_stats_by_year
+
+  validates :state_school_id, allow_blank: true, length: {is: 11}, format: {with: /\A[A-Z]{2}-[0-9]{3}-[0-9]{4}\z/, message: "must be {State Code}-xxx-xxxx where each x is a numeral"}
 
   # Gets the full address of the school.
   # @return [String] The full address.
@@ -50,6 +54,14 @@ class School < ActiveRecord::Base
       return false
     end
     stats.frl_eligible_total.to_f / stats.students_total.to_f > 0.5
+  end
+
+  # Public school ids from NCES are always 12 digits, possibly with
+  # leading zeros. In the DB, those leading zeros have been stripped out.
+  # Other school types are less than 12 characters and in the DB they
+  # have not had their leading zeros removed.
+  def self.normalize_school_id(raw_school_id)
+    raw_school_id.length == 12 ? raw_school_id.to_i.to_s : raw_school_id
   end
 
   # Use the zero byte as the quote character to allow importing double quotes

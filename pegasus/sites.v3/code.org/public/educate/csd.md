@@ -27,15 +27,25 @@ Computer Science Discoveries is appropriate for 6 - 10th grade students and can 
 <div style="clear:both"></div>
 
 <hr/>
-## <a name="what"></a>Professional Learning
+## <a name="what"></a>Professional Learning - Applications now available!
 
 Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever.
 
-**General applications for the 2018-19 [CS Discoveries Professional Learning Program](/educate/professional-learning/cs-discoveries) will open in January, 2018.** 
+**Applications for the [CS Discoveries Professional Learning Program](/educate/professional-learning/cs-discoveries) are now available!** 
 
-If you are interested in joining in 2018-19, sign up below. 
+[col-50]
 
-[<button>Tell me when applications open!</button>](https://studio.code.org/pd/regional_partner_contact/new) [<button>Learn more</button>](/educate/professional-learning/cs-discoveries)
+<center><img src="/images/recruitment_banner.png" width="90%"></center>
+
+[/col-50]
+
+[col-50]
+
+[<button>Learn more and apply now!</button>](/educate/professional-learning/cs-discoveries)
+
+[/col-50]
+
+<div style="clear:both"></div>
 
 <hr/>
 ## <a name="content"></a>Curriculum Resources and Features
@@ -222,7 +232,7 @@ We have forums for educators to discuss and trade ideas about CS Discoveries and
 
 ### <a name="timeline"></a>What is the timeline for CS Discoveries?
 
-All units are released at this time and can be used by teachers and classrooms. In Winter 2017, we will be releasing a revised version of Unit 6 to incorporate feedback from our Spring 2017 pilot.
+All units are released at this time and can be used by teachers and classrooms. In early 2018, we will be releasing a revised version of Unit 6 to incorporate feedback from our Spring 2017 pilot.
 
 ### <a name="standards"></a>Will CS Discoveries be mapped to standards?
 
@@ -244,7 +254,7 @@ Some schools may want to use parts of the CS Discoveries curriculum without runn
 * Containers that can hold water 
 * [Adafruit's Circuit Playground Boards](/circuitplayground) and Micro USB cables. The curriculum is designed for a ratio of 2 students to 1 board & 1 usb cable.***
 
-\*** For teachers participating in our 2017-18 Professional Learning Program who are implementing the full-year version of the course, we will be subsidizing or partially subsidizing one classroom kit of Adafruit Circuit Playground Boards. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. To learn more about the classroom kit, software requirements, and the details of the subsidy visit [code.org/circuitplayground](/circuitplayground)  \***
+\*** Participants in our 2018-19 Professional Learning Program who are implementing the full course and teaching in schools with 50%+ free and reduced meal rates will receive a subsidized Adafruit Circuit Playground classroom kit. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. To learn more about the classroom kit, software requirements, and the details of the subsidy visit [code.org/circuitplayground](/circuitplayground)  \***
 
 ### <a name="pathway"></a>How does CS Discoveries fit with the other Code.org courses?
 
@@ -262,5 +272,9 @@ As lessons are completed we will also be publishing them on the website we invit
 We are now accepting applications for the 2017-18 Professional Learning Program for CS Discoveries!
 
 <a href="/educate/professional-learning/cs-discoveries-apply"><button>Apply now!</button></a>
+
+If you are interested in joining in 2018-19, sign up below. 
+
+[<button>Tell me when applications open!</button>](https://studio.code.org/pd/regional_partner_contact/new)
 
 -->
