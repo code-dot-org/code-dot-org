@@ -40,6 +40,8 @@ module Pd::Application
   class Facilitator1819Application < ApplicationBase
     include Facilitator1819ApplicationConstants
 
+    OTHER_WITH_TEXT = TEXT_FIELDS[:other_with_text]
+
     def send_decision_notification_email
       # Accepted, declined, and waitlisted are the only valid "final" states;
       # all other states shouldn't need emails, and we plan to send "Accepted"
@@ -82,9 +84,9 @@ module Pd::Application
       'Participants in a tech bootcamp or professional development program'
     ].freeze
 
-    HOW_HEARD_FACILITATOR = 'A Code.org facilitator (please share name):'
-    HOW_HEARD_CODE_ORG_STAFF = 'A Code.org staff member (please share name):'
-    HOW_HEARD_REGIONAL_PARTNER = 'A Code.org Regional Partner (please share name):'
+    HOW_HEARD_FACILITATOR = TEXT_FIELDS[:how_heard_facilitator]
+    HOW_HEARD_CODE_ORG_STAFF = TEXT_FIELDS[:how_heard_code_org_staff]
+    HOW_HEARD_REGIONAL_PARTNER = TEXT_FIELDS[:how_heard_regional_partner]
 
     PROGRAMS = {
       csf: 'CS Fundamentals (Pre-K - 5th grade)',
@@ -160,13 +162,13 @@ module Pd::Application
         csd_csp_teachercon_availability: [
           'TeacherCon 1: June 17 - 22, 2018',
           'TeacherCon 2: July 22 - 27, 2018',
-          "I'm not available for either TeacherCon. (Please Explain):"
+          TEXT_FIELDS[:not_available_for_teachercon]
         ],
 
         csd_csp_fit_availability: [
           'June 23 - 24, 2018 (immediately following TeacherCon 1)',
           'July 28 - 29, 2018 (immediately following TeacherCon 2)',
-          "I'm not available for either Facilitator-in-Training workshop. (Please Explain):"
+          TEXT_FIELDS[:not_available_for_fit_weekend]
         ],
 
         led_cs_extracurriculars: [

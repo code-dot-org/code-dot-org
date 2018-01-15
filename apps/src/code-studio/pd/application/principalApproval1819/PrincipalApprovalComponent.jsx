@@ -1,6 +1,9 @@
 import React from 'react';
 import {FormGroup, Row, Col, ControlLabel} from "react-bootstrap";
-import {PageLabels} from '@cdo/apps/generated/pd/principalApproval1819ApplicationConstants';
+import {
+  PageLabels,
+  TextFields
+} from '@cdo/apps/generated/pd/principalApproval1819ApplicationConstants';
 import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {isInt, isPercent} from '@cdo/apps/util/formatValidation';
@@ -81,7 +84,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
         }
         {
           this.radioButtonsWithAdditionalTextFieldsFor('committedToMasterSchedule', {
-            "Other:": "other"
+            [TextFields.otherWithText]: "other"
           }, {
             label: `Are you committed to including ${this.props.teacherApplication.course}
                     on the master schedule in 2018-19 if accepted into the program? Note:
@@ -92,13 +95,13 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
         {this.radioButtonsFor('hoursPerYear')}
         {this.radioButtonsFor('termsPerYear')}
         {this.radioButtonsWithAdditionalTextFieldsFor('replaceCourse', {
-          "I don't know (please explain):": "other"
+          [TextFields.dontKnowExplain] : "other"
         })}
         {
           this.props.data.replaceCourse === 'Yes' && this.renderCourseReplacementSection()
         }
         {this.radioButtonsWithAdditionalTextFieldsFor('committedToDiversity', {
-          "Other (Please Explain):": "other"
+          [TextFields.otherPleaseExplain] : "other"
         })}
         <p>
           There may be a fee associated with your teacher’s summer workshop. Please
@@ -140,11 +143,11 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
   renderCourseReplacementSection() {
     if (this.props.teacherApplication.course === 'Computer Science Discoveries') {
       return this.checkBoxesWithAdditionalTextFieldsFor('replaceWhichCourseCsd', {
-        "Other (Please Explain):" : "other"
+        [TextFields.otherPleaseExplain] : "other"
       });
     } else if (this.props.teacherApplication.course === 'Computer Science Principles') {
       return this.checkBoxesWithAdditionalTextFieldsFor('replaceWhichCourseCsp',{
-        "Other (Please Explain):" : "other"
+        [TextFields.otherPleaseExplain] : "other"
       });
     }
   }
@@ -171,7 +174,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
         {this.inputFor('email')}
         {
           this.radioButtonsWithAdditionalTextFieldsFor('doYouApprove', {
-            "Other:": "other"
+            [TextFields.otherWithText]: "other"
           }, {
             label: `Do you approve of ${this.props.teacherApplication.name} participating
                     in Code.org's 2018 - 19 Professional Learning Program?`,

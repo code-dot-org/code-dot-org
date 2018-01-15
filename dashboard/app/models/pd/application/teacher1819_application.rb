@@ -43,6 +43,10 @@ module Pd::Application
     include SerializedProperties
     include SchoolInfoDeduplicator
 
+    OTHER_WITH_TEXT = TEXT_FIELDS[:other_with_text]
+    OTHER_PLEASE_LIST = TEXT_FIELDS[:other_please_list]
+    OTHER_PLEASE_EXPLAIN = TEXT_FIELDS[:other_please_explain]
+
     serialized_attrs %w(
       pd_workshop_id
       auto_assigned_enrollment_id
@@ -195,11 +199,11 @@ module Pd::Application
       OTHER_PLEASE_LIST
     ]
 
-    NOT_TEACHING_THIS_YEAR = "I'm not teaching this year (Please Explain):"
-    NOT_TEACHING_NEXT_YEAR = "I'm not teaching next year (Please Explain):"
-    DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN = "I don't know if I will teach this course (Please Explain):"
-    UNABLE_TO_ATTEND = "No, I'm unable to attend (Please Explain):"
-    NO_EXPLAIN = "No (Please Explain):"
+    NOT_TEACHING_THIS_YEAR = TEXT_FIELDS[:not_teaching_this_year]
+    NOT_TEACHING_NEXT_YEAR = TEXT_FIELDS[:not_teaching_next_year]
+    DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN = TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
+    UNABLE_TO_ATTEND = TEXT_FIELDS[:unable_to_attend]
+    NO_EXPLAIN = TEXT_FIELDS[:no_explain]
     def self.options
       {
         country: [
@@ -389,7 +393,7 @@ module Pd::Application
 
         pay_fee: [
           'Yes, my school or I will be able to pay the full summer workshop program fee.',
-          'No, my school or I will not be able to pay the summer workshop program fee.',
+          TEXT_FIELDS[:no_pay_fee],
           'Not applicable: there is no fee for the summer workshop for teachers in my region.'
         ],
 
