@@ -391,7 +391,7 @@
   "eligibilityExplanation": "In order to be eligible to receive a code for a subsidized Circuit Playground kit, you must meet the following requirements:",
   "eligibilityReqPD": "You attended CS Discoveries TeacherCon 2017, or are a CS Discoveries facilitator.",
   "eligibilityReqPDFail": "We did not find the email address associated with this account under the list of people who attended CS Discoveries TeacherCon 2017, or in our list of CS Discoveries facilitators and piloters. If you meet the above requirements, please email us at teacher@code.org.",
-  "eligibilityReqStudentCount": "Ten students in one of your have completed the first three units of CS Discoveries.",
+  "eligibilityReqStudentCount": "Ten students in one of your sections have completed the first three units of CS Discoveries.",
   "eligibilityReqStudentCountFail": "Sorry, it doesn't look like you have enough students in your sections that have made progress in Units 2 and 3. Please check back here once your students have finished the first semester of CS Discoveries. If you are using a different account to track the progress of students or if you think there has been an error in detecting how much progress your students have made in Units 2 and 3, please contact us at teacher@code.org.",
   "eligibilityReqYear": "You commit to teach the second semester of CS Discoveries, including Unit 6.",
   "eligibilityReqYearConfirmInstructions": "Please confirm that you will be teaching Unit 6 of CS Discoveries with your students and when you will be teaching it:",
