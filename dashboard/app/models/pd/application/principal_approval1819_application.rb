@@ -35,6 +35,8 @@
 
 module Pd::Application
   class PrincipalApproval1819Application < ApplicationBase
+    include PrincipalApproval1819ApplicationConstants
+
     def set_type_and_year
       self.application_year = YEAR_18_19
       self.application_type = PRINCIPAL_APPROVAL_APPLICATION
@@ -44,7 +46,8 @@ module Pd::Application
     belongs_to :teacher_application, class_name: 'Pd::Application::Teacher1819Application',
       primary_key: :application_guid, foreign_key: :application_guid
 
-    DONT_KNOW_EXPLAIN = "I don't know (please explain):"
+    OTHER_PLEASE_EXPLAIN = TEXT_FIELDS[:other_please_explain]
+    DONT_KNOW_EXPLAIN = TEXT_FIELDS[:dont_know_explain]
     def self.options
       {
         title: COMMON_OPTIONS[:title],

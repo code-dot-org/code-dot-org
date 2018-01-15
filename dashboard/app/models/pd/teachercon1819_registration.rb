@@ -34,7 +34,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
         'Vegan',
         'Halal',
         'Gluten Free',
-        'Food Allergy',
+        TEXT_FIELDS[:food_allergy],
       ],
       liveFarAway: YES_OR_NO,
       addressState: get_all_states_with_dc.to_h.values,
@@ -46,7 +46,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
         'Public transit (e.g., city bus or light rail)',
       ],
       needHotel: YES_OR_NO,
-      needAda: [YES, NO, 'Other (please explain):'],
+      needAda: [YES, NO, TEXT_FIELDS[:other_please_explain]],
       teacherAcceptSeat: [
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept],
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:withdraw_date],
