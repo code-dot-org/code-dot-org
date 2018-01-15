@@ -28,6 +28,7 @@ export default class TeacherHomepage extends Component {
     announcements: PropTypes.array.isRequired,
     queryStringOpen: PropTypes.string,
     canViewAdvancedTools: PropTypes.bool,
+    isEnglish: PropTypes.bool.isRequired,
     showCensusBanner: PropTypes.bool.isRequired,
     ncesSchoolId: PropTypes.string,
     censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
