@@ -264,11 +264,6 @@ Security/JSONLoad:
 Security/MarshalLoad:
   Enabled: false
 
-# Offense count: 12
-# Cop supports --auto-correct.
-Security/YAMLLoad:
-  Enabled: false
-
 # Offense count: 10
 Style/CaseEquality:
   Enabled: false
