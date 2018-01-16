@@ -4,6 +4,8 @@ import manageStudents, {
   setSectionId,
   setStudents,
   convertStudentDataToArray,
+  startEditingStudent,
+  cancelEditingStudent,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const studentEmailData = {
@@ -82,6 +84,28 @@ describe('manageStudentsRedux', () => {
       assert.equal(studentDataArray[0], studentEmailData[1]);
       assert.equal(studentDataArray[1], studentEmailData[2]);
       assert.equal(studentDataArray[2], studentEmailData[3]);
+    });
+  });
+
+  describe('startEditingStudent', () => {
+    it('sets student isEditing to true', () => {
+      const setStudentsAction = setStudents(studentEmailData);
+      const nextState = manageStudents(initialState, setStudentsAction);
+      const startEditingStudentAction = startEditingStudent(1);
+      const finalState = manageStudents(nextState, startEditingStudentAction);
+      assert.deepEqual(finalState.studentData[1].isEditing, true);
+    });
+  });
+
+  describe('cancelEditingStudent', () => {
+    it('sets student isEditing to false', () => {
+      const setStudentsAction = setStudents(studentEmailData);
+      const nextState = manageStudents(initialState, setStudentsAction);
+      const startEditingStudentAction = startEditingStudent(1);
+      const stateAfterEditing = manageStudents(nextState, startEditingStudentAction);
+      const cancelEditingStudentAction = cancelEditingStudent(1);
+      const finalState = manageStudents(stateAfterEditing, cancelEditingStudentAction);
+      assert.deepEqual(finalState.studentData[1].isEditing, false);
     });
   });
 });
