@@ -654,6 +654,7 @@ cs:
     correct_title: "Děkuji"
     correct_body: "Děkujeme vám za odeslání odpovědí."
     hide_survey_last_answer: "Tento průzkum je anonymní. Pro souhrné informace o výsledcích navštiv prosím nástěnku tvého učitele. Výsledky budou zobrazené pouze při účasti pěti žáků."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Děkuji"
     wrong_body: "Děkujeme vám za odeslání odpovědí."

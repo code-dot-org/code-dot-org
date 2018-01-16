@@ -15,6 +15,7 @@ require_relative '../lib/cdo/infra_test_topic'
 require_relative '../lib/cdo/infra_production_topic'
 require_relative '../lib/cdo/github'
 require_relative '../lib/cdo/honeybadger'
+require_relative '../lib/cdo/metrics_helper'
 include CdoCli
 
 LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
@@ -64,10 +65,11 @@ end
 
 # Marks the most recent DTT red, updating Slack#developers topic to allow a new
 # test run, but leaving the Slack#infra-test topic with the hash of the previous
-# green run
+# green run. Inserts a 'dtt_red' row into the metrics table.
 def mark_dtt_red
   DevelopersTopic.set_dtt 'yes'
   InfraTestTopic.set_red_commit GitHub.sha('test')
+  Metrics.write_metric('dtt_red', GitHub.sha('test'), Metrics::MANUAL)
 
   puts <<-EOS.unindent
 
@@ -78,10 +80,11 @@ def mark_dtt_red
 end
 
 # Marks the most recent DTT green, updating Slack#infra-test and Slack#developers topics
-# appropriately.
+# appropriately. Inserts a 'dtt_green' row into the metrics table.
 def mark_dtt_green
   DevelopersTopic.set_dtt 'yes'
   InfraTestTopic.set_green_commit GitHub.sha('test')
+  Metrics.write_metric('dtt_green', GitHub.sha('test'), Metrics::MANUAL)
 
   puts <<-EOS.unindent
 
@@ -257,6 +260,7 @@ def dotd_menu(dotd_name)
         EOS
         @logger.info 'manually DTTs from staging'
         DevelopersTopic.set_dtt 'no (manual DTT in progress)'
+        Metrics.write_metric('dtt_start', GitHub.sha('test'), Metrics::MANUAL)
       end
       menu.choice(:G) {mark_dtt_green}
       menu.choice(:R) {mark_dtt_red}

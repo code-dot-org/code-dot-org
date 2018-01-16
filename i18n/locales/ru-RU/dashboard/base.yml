@@ -654,6 +654,7 @@ ru:
     correct_title: "Спасибо"
     correct_body: "Спасибо за ответ"
     hide_survey_last_answer: "Это анонимный опрос. Пожалуйста, посетите информационную страницу учителей для сбора результатов. Обратите внимание, что результаты будут видны, только если в опросе участвовало хотя бы пять студентов."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Спасибо"
     wrong_body: "Спасибо за ответ"

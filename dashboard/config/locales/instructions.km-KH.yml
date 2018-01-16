@@ -1864,6 +1864,18 @@
       CSDU6 arrays random_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select icons_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select rainbow_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_instruction: |-
+        Write a program that displays a
+        randomly chosen color from the array. (Click to see full instructions)
       CSDU6 arrays variable_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
@@ -3934,6 +3946,66 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
+        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars10_instruction: |-
+        Free Play time! Here are all of the variables
+        we've played with so far in this stage, as well as a few more in case you
+        want them. \r
+        \r
+        Notice that there are now so many blocks in our toolbox
+        that they need to be organized!  Here, we've put each piece into an appropriate
+        category.  Take some time to explore everything that is available. When you're
+        done browsing, make a game or story using repeats, variables, and events.  \r
+        \r
+        Hint:
+        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars2_instruction: |-
+        The race in that last puzzle wasn't very
+        fair! Change the `dog_speed` variable to make sure you can collect more flags
+        than Cat. The first to collect 10 flags wins!
+      CourseF_PlayLab_vars3_instruction: |-
+        Use the left and right arrows to move,
+        and the up arrow to jump. See if you can collect all of the flags.
+      CourseF_PlayLab_vars4_instruction: |-
+        Now we're using a variable called "height"
+        to control how high the dog can jump. Update the "height" variable so that
+        the dog can jump high enough to reach all the flags.
+      CourseF_PlayLab_vars5_instruction: "Let's build a game! First we'll need\na
+        score. Rebuild the code that you saw in the last level to set the score\nto
+        10. "
+      CourseF_PlayLab_vars6_instruction: |-
+        Use the right arrow to throw pie.\r
+        \r
+        In
+        our game, how should we score points? Add 1 to your "points" variable each
+        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
+        event to trigger an update to your score. You can increment your variable
+        by setting "points = points + 1." Get your score up to 10 (going one at
+        a time!) to pass the level.
+      CourseF_PlayLab_vars7_instruction: |-
+        Use the right arrow to throw pie.\r
+        \r
+        In
+        our game, how should we score points? Add 1 to your "points" variable each
+        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
+        event to trigger an update to your score. You can increment your variable
+        by setting "points = points + 1." Get your score up to 10 (going one at
+        a time!) to pass the level.
+      CourseF_PlayLab_vars8_instruction: |-
+        Use the right arrow to throw pie.\r
+        \r
+        In
+        our game, how should we score points? Add 1 to your "points" variable each
+        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
+        event to trigger an update to your score. You can increment your variable
+        by setting "points = points + 1." Get your score up to 10 (going one at
+        a time!) to pass the level.
+      CourseF_PlayLab_vars9_instruction: |-
+        Nice, now let's make sure this game isn't
+        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
+        2), you should lose a point. Start with 10 points so it's not too hard. Let
+        your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution_instruction: "សេចក្ដី​ណែនាំ"
       Crack a Caesar Cipher_instruction: "សេចក្ដី​ណែនាំ"
       ECSPD Binary Odometer_instruction: |-
@@ -4214,9 +4286,7 @@
         an example of a game you can make in play lab.
       FoodFight_instruction: This is an example of a game you can make in play lab.
       Frequency Analysis_instruction: Test
-      Function intro Ryan_instruction: |-
-        Use the `build bridge` function twice to
-        make a path to the Redstone Torch.
+      Function intro Ryan_instruction: "ប្រើប្រាស់មុខងារ `build bridge`២ដងដើម្បីបង្កើតផ្លូវទៅកាន់ភ្លើងគប់។"
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -4654,108 +4724,57 @@
       MC_2017_Ryan_02_instruction: |-
         Help the player get out by using loops to get
         the Agent to the pressure plate.
-      MC_HOC_2017 Agent Test_instruction: |-
-        Click "Run" to move the player to the
-        orange square inside of the house.
-      MC_HOC_2017_01_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_Cole_instruction: |-
-        You need to collect all the tools on this
-        journey. Move around using the **arrow keys**, and get to the chest on the
-        path to win
-      MC_HOC_2017_01_Kiki_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_RETRY_instruction: "Write code to get the Agent to the pressure\nplate,
-        then press \"Run\" and use the arrow keys to move the player out of\nthe house
-        to collect the chest. "
-      MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that\n{currentPlayerName}
-        can get to the map. "
-      MC_HOC_2017_02_Kiki_instruction: |-
-        Get the Agent to the pressure plate, then
-        get the player to the orange square.
-      MC_HOC_2017_02_Will_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_instruction: |-
-        Change the loop from the last puzzle to help the
-        Agent make a path over the wider part of this river.
-      MC_HOC_2017_04POINT5_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04POINT5_RYAN_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_05_instruction: |-
-        Use a function to help the Agent get to the pressure
-        plate.
-      MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
-      MC_HOC_2017_05_Josh_instruction: Get the player to the shovel.
-      MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
-      MC_HOC_2017_06_Cole_instruction: |-
-        Fix this code to get the Agent to build a
-        bridge across this river.
-      MC_HOC_2017_06_Josh_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_06_Kiki_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_07_Cole_instruction: |-
-        Destroy the ice and get {currentPlayerName}
-        to the Minecart.
-      MC_HOC_2017_07_Kiki_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07a_Kiki_instruction: Clear the path to the orange square.
-      MC_HOC_2017_08_Cole_instruction: |-
-        Change the provided function to work for
-        this biome.
-      MC_HOC_2017_08_Kiki_instruction: Change the function to work for this puzzle.
-      MC_HOC_2017_08_RY_instruction: |-
-        Use the functions to find a way across the
-        lava.
-      MC_HOC_2017_08_Will_instruction: |-
-        Use the functions to find a way across the
-        lava.
-      MC_HOC_2017_09_Cole_instruction: |-
-        Program the Agent to clear the player's
-        path.
-      MC_HOC_2017_09_Kiki_instruction: |-
-        Program the Agent to clear the player's
-        path and get to the pressure plate.
-      MC_HOC_2017_10_Cole_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_Cole_old_instruction: |-
-        Create a function to help you finish
-        this minecart.
-      MC_HOC_2017_10_Kiki_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_RETRY_instruction: |-
-        Use the functions to finish this minecart
-        track.
-      MC_HOC_2017_10_RYAN_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_RYAN2_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_13_Cole_instruction: "**Freeplay:**  Time to explore on your own!"
-      MC_HOC_2017_4.5v2_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_Ali_instruction: Use the functions to find a way across the lava.
-      MC_HOC_2017_FP10x10_instruction: "**Freeplay:** Can you challenge yourself\nto
-        collect all of the diamonds in this level? "
-      MC_HOC_2017_FP10x10_RE_instruction: "**Freeplay:** Can you challenge yourself\nto
-        collect all of the diamonds in this level? "
-      MC_HOC_2017_FP20x20_instruction: "**Freeplay:**  Time to explore on your own!"
-      MC_HOC_2017_Ryan_03_instruction: |-
-        Now use loops to help The Agent build a bridge
-        over the river by placing blocks in the water.
-      MC_HOC_2017_Ryan_05_instruction: |-
-        Destroy these cacti so that the player can
-        get to the goal.
+      MC_HOC_2017 Agent Test_instruction: ចុចប៊ូតុង "Run" ដើម្បីរំកិលតួអង្គទៅរកការេពណ៏ទឹកក្រូចនៅក្នុងផ្ទះ។
+      MC_HOC_2017_01_instruction: ចុចប៊ូតុង "Run" ដើម្បីរំកិលតួអង្គទៅរកការេពណ៏ទឹកក្រូចនៅក្នុងផ្ទះ។
+      MC_HOC_2017_01_Cole_instruction: "អ្នកត្រូវតែប្រមូលនូវសំភារៈទាំងអស់ក្នុងការផ្សងព្រេងមួយនេះ។
+        ធ្វើចលនាដោយប្រើ **គ្រាប់ចុចដែលមានសញ្ញាព្រួញ** ហើយស្វែងរកប្រអប់នៅតាមផ្លូវដើម្បីឈ្នះ"
+      MC_HOC_2017_01_Kiki_instruction: ចុចប៊ូតុង "Run" ដើម្បីរំកិលតួអង្គទៅរកការេពណ៏ទឹកក្រូចនៅក្នុងផ្ទះ។
+      MC_HOC_2017_01_RETRY_instruction: 'សរសេរកូដដើម្បីអោយជំនួយការទៅសង្កត់បន្ទះក្តារ
+        រួចចុចប៊ូតុង "Run" ហើយប្រើគ្រាប់ចុចដែលមានសញ្ញាព្រួញដើម្បីអោយតួអង្គធ្វើចលនាចេញពីផ្ទះដើម្បីប្រមូលប្រអប់។ '
+      MC_HOC_2017_02_instruction: "អោយជំនួយការសង្កត់បន្ទះក្តារ។"
+      MC_HOC_2017_02_Cole_instruction: "រំកិលជំនួយការដើម្បីសង្កត់បន្ទះក្តារ ដូច្នេះ​
+        \n{currentPlayerName} អាចទៅតាមផែនទីបាន។ "
+      MC_HOC_2017_02_Kiki_instruction: "អោយជំនួយការសង្កត់បន្ទះក្តារ ហើយអោយតួអង្គទៅរកការេពណ៏ទឹកក្រូច។"
+      MC_HOC_2017_02_Will_instruction: "អោយជំនួយការសង្កត់បន្ទះក្តារ។"
+      MC_HOC_2017_03_Cole_instruction: "សរសេរកូដដើម្បីអោយជំនួយការបើករបង។ "
+      MC_HOC_2017_03_Kiki_instruction: "អោយជំនួយការសង្កត់បន្ទះក្តារ។"
+      MC_HOC_2017_04_instruction: "ប្តូររង្វិលជុំរបស់រូបផ្គុំចុងក្រោយដើម្បីជាជំនួយដល់ជំនួយការក្នុងការបង្កើតផ្លូវឆ្លងទន្លេ។"
+      MC_HOC_2017_04POINT5_Cole_instruction: "អោយជំនួយការសង្កត់បន្ទះក្តារ។"
+      MC_HOC_2017_04POINT5_RYAN_instruction: "អោយជំនួយការសង្កត់បន្ទះក្តារ។"
+      MC_HOC_2017_04_Cole_instruction: "អោយជំនួយការសង្កត់បន្ទះក្តារ។"
+      MC_HOC_2017_04_Kiki_instruction: "អោយជំនួយការសង្កត់បន្ទះក្តារ។"
+      MC_HOC_2017_05_instruction: "ប្រើមុខងារមួយដើម្បីជួយដល់ជំនួយការក្នុងសង្កត់បន្ទះក្តារ។"
+      MC_HOC_2017_05_Cole_instruction: "អោយតួអង្គទៅរកចបជីក។"
+      MC_HOC_2017_05_Josh_instruction: "អោយតួអង្គទៅរកចបជីក។"
+      MC_HOC_2017_05_Kiki_instruction: "អោយតួអង្គទៅរកការេពណ៏ទឹកក្រូច។"
+      MC_HOC_2017_06_Cole_instruction: "កែតម្រូវកូដដើម្បីអោយជំនួយការសាងសង់ស្ពានដើម្បីឆ្លងទន្លេ។"
+      MC_HOC_2017_06_Josh_instruction: "កែតម្រូវកូដដើម្បីអោយជំនួយការសាងសង់ស្ពានដើម្បីឆ្លងទន្លេ។"
+      MC_HOC_2017_06_Kiki_instruction: "កែតម្រូវកូដដើម្បីអោយជំនួយការសាងសង់ស្ពានដើម្បីឆ្លងទន្លេ។"
+      MC_HOC_2017_07_Cole_instruction: "បំបែកដុំទឹកកកដើម្បីអោយ{currentPlayerName}
+        ទៅរកឧបករណ៏ដឹកជញ្ជូនតាមផ្លូវដែក។"
+      MC_HOC_2017_07_Kiki_instruction: "ប្រើមុខងារមួយដើម្បីសំអាតផ្លូវទៅកាន់ការ៉េពណ៏ទឹកក្រូច។"
+      MC_HOC_2017_07a_Kiki_instruction: "សំអាតផ្លូវទៅកាន់ការ៉េពណ៏ទឹកក្រូច។"
+      MC_HOC_2017_08_Cole_instruction: "ផ្លាស់ប្តូរមុខងារដែលអោយដើម្បីវាអោយដំណើរការសំរាប់តំបន់ជីវចំរុះ។"
+      MC_HOC_2017_08_Kiki_instruction: "ប្តូរមុខងារដែលដំណើរការចំពោះរូបផ្គុំនេះ។"
+      MC_HOC_2017_08_RY_instruction: "ប្រើមុខងារដើម្បីរកផ្លូវឆ្លងកំអែរភ្នំភ្លើង។"
+      MC_HOC_2017_08_Will_instruction: "ប្រើមុខងារដើម្បីរកផ្លូវឆ្លងកំអែរភ្នំភ្លើង។"
+      MC_HOC_2017_09_Cole_instruction: "សរសេរកម្មវិធីដើម្បីអោយជំនួយការសំអាតផ្លូវអោយតួអង្គ។"
+      MC_HOC_2017_09_Kiki_instruction: "សរសេរកម្មវិធីដើម្បីអោយជំនួយការធ្វើការសំអាតផ្លូវរបស់តួអង្គ
+        និងដើម្បីទៅសង្កត់បន្ទះក្តារ។"
+      MC_HOC_2017_10_Cole_instruction: "បង្កើតមុខងារមួយដើម្បីជួយក្នុងការបញ្ចប់ការធ្វើរទេះដឹករ៉ែ។"
+      MC_HOC_2017_10_Cole_old_instruction: "បង្កើតមុខងារមួយដើម្បីជួយក្នុងការបញ្ចប់ការធ្វើរទេះដឹករ៉ែ។"
+      MC_HOC_2017_10_Kiki_instruction: "បង្កើតមុខងារមួយដើម្បីជួយក្នុងការបញ្ចប់ការធ្វើរទេះដឹករ៉ែ។"
+      MC_HOC_2017_10_RETRY_instruction: "ប្រើប្រាស់មុខងារដើម្បីបញ្ចប់ការធ្វើផ្លូវដែក។"
+      MC_HOC_2017_10_RYAN_instruction: "បង្កើតមុខងារមួយដើម្បីជួយក្នុងការបញ្ចប់ការធ្វើរទេះដឹករ៉ែ។"
+      MC_HOC_2017_10_RYAN2_instruction: "បង្កើតមុខងារមួយដើម្បីជួយក្នុងការបញ្ចប់ការធ្វើរទេះដឹករ៉ែ។"
+      MC_HOC_2017_13_Cole_instruction: "**លេងដោយសេរី** វាជាពេលដែលអ្នកស្រាវជ្រាវដោយខ្លួនឯង!"
+      MC_HOC_2017_4.5v2_instruction: "អោយជំនួយការសង្កត់បន្ទះក្តារ។"
+      MC_HOC_2017_Ali_instruction: "ប្រើមុខងារដើម្បីរកផ្លូវឆ្លងកំអែភ្នំភ្លើង។"
+      MC_HOC_2017_FP10x10_instruction: "**លេងដោយសេរី** តើអ្នកអាចប្រកួតជាមួយខ្លួនឯងក្នុងការប្រមូលគ្រាប់ពេជ្រទាំងអស់នៅក្នុងវគ្គនេះទេ? "
+      MC_HOC_2017_FP10x10_RE_instruction: "**លេងដោយសេរី** តើអ្នកអាចប្រកួតជាមួយខ្លួនឯងក្នុងការប្រមូលគ្រាប់ពេជ្រទាំងអស់នៅក្នុងវគ្គនេះទេ? "
+      MC_HOC_2017_FP20x20_instruction: "**លេងដោយសេរី** វាជាពេលដែលអ្នកស្រាវជ្រាវដោយខ្លួនឯង!"
+      MC_HOC_2017_Ryan_03_instruction: "ឥលូវនេះចូលប្រើការរង្វិលជុំដើម្បីជួយជំនួយការក្នុងការសាងសង់ស្ពានឆ្លងទន្លេដោយដាក់ប្លុកទៅក្នុងទឹក។"
+      MC_HOC_2017_Ryan_05_instruction: "កំទេចដើមដំបងយក្សទាំងនេះដើម្បីអោយតួអង្គទៅដល់គោលដៅ។"
       MC_HOC_Kiki_02_instruction: Get The Agent to the pressure plate.
       MSM Big Game Empty_instruction: |-
         All variables and functions are currently
@@ -8250,11 +8269,17 @@
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_forVideo_instruction: |-
+        Use the `repeat` loop to add waves
+        to the water.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
       courseA_artist_loops_challenge2_instruction: |-
         "Can you help me make two bird
         houses?"
+      courseA_artist_loops_challenge2a_instruction: |-
+        *"Help me get these three tents
+        set up!"*
       courseA_artist_loops_challenge3_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
@@ -8463,6 +8488,9 @@
       courseB_collector_loops_challenge2_instruction: |-
         Let's get the treasure! Help
         me across each row then come back to start the next row. Can you find a pattern?
+      courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
       courseB_collector_prog1_instruction: |-
@@ -8710,9 +8738,12 @@
       courseC_artist_prog_challenge2_instruction: |-
         *Help me paint the yellow lines
         on this road!*
+      courseC_artist_prog_challenge2a_instruction: |-
+        *Help me paint the yellow lines
+        on this road!*
       courseC_collector_loops_challenge2_instruction: |-
-        Let's hunt for treasure -
-        using loops! Help the collector by debugging this code. Get all of the treasure!
+        Get at least **5** pieces
+        of treasure!
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
         you can help Laurel collect some treasure.
@@ -8746,8 +8777,8 @@
         Look carefully! Can you collect
         all *10* pieces of treasure?
       courseC_collector_prog_challenge2_instruction: |-
-        There are 20 pieces of treasure
-        to be found. Collect at least half to finish this challenge!
+        Collect at least **10** pieces
+        of treasure to finish this challenge!
       courseC_flappy_embed_events_instruction: |-
         Here's an example of a game that
         you're about to create yourself! Play through it one or two times to get
@@ -8814,6 +8845,7 @@
         Collect all of the corn and all of the
         pumpkins.
       courseC_harvester_loops_challenge1_instruction: Collect all of the corn.
+      courseC_harvester_loops_challenge1a_instruction: Collect all of the corn.
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
@@ -8875,6 +8907,8 @@
         puzzles to complete this level.
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
       courseC_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops\nto
+        find his acorn! "
+      courseC_maze_loops_challenge1a_instruction: "Now Scrat wants to try using loops\nto
         find his acorn! "
       courseC_maze_loops_challenge2_instruction: |-
         Let's hunt for treasure - using
@@ -8997,6 +9031,8 @@
         \r
         See what happens when we start to
         get creative with the bits!
+      courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
+        binary! "
       courseD_artist_binary_challenge0_instruction: |-
         Try using nested loops to complete
         this drawing.
@@ -9091,8 +9127,8 @@
         Can you figure out how
         to make a picture like this?
       courseD_artist_nestedLoops_challenge2_instruction: |-
-        Can you figure out how
-        to make a picture like this?
+        Fix the code to make this
+        picture!
       courseD_artist_project1_instruction: "Draw a small shape, between **20 and\n50**
         pixels wide.  It can be any shape that you like.  "
       courseD_artist_project1a_instruction: |-
@@ -9197,6 +9233,10 @@
         Help the bee fix the code to get all the
         nectar.
       courseD_bee_debugging_challenge1_instruction: |-
+        Watch how the bees gets the
+        nectar. Can you use the same kind of pattern to help the bee make all of the
+        honey?
+      courseD_bee_debugging_challenge1a_instruction: |-
         Watch how the bees gets the
         nectar. Can you use the same kind of pattern to help the bee make all of the
         honey?
@@ -9352,6 +9392,10 @@
         Are you an expert of nested
         loops? Use what you have learned so far to collect all of the treasure!
       courseD_collector_nested_loops_challenge2_instruction: |-
+        Help the collector
+        reach at least two piles of treasure using only the blocks in your toolbox.
+        It is possible to collect all 4.
+      courseD_collector_nested_loops_challenge2a_instruction: |-
         Help the collector
         reach at least two piles of treasure using only the blocks in your toolbox.
         It is possible to collect all 4.
@@ -9593,8 +9637,9 @@
         down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
         **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: |-
-        If the pirate is in the safe zone, wait
-        one second, then deduct a point as long as he stays beneath the octopus line.
+        If the pirate (actor 1) is in the safe
+        zone, wait one second, then deduct a point as long as he stays beneath the
+        octopus line.
       courseD_playLab_cond6cloneForTest_instruction: Testing
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to

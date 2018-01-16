@@ -2,7 +2,7 @@ import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
-import Notification from '../Notification';
+import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
 import StudentSections from './StudentSections';
@@ -13,13 +13,6 @@ import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 
-const styles = {
-  clear: {
-    clear: 'both',
-    height: 30
-  }
-};
-
 export default class TeacherHomepage extends Component {
   static propTypes = {
     joinedSections: shapes.sections,
@@ -28,6 +21,7 @@ export default class TeacherHomepage extends Component {
     announcements: PropTypes.array.isRequired,
     queryStringOpen: PropTypes.string,
     canViewAdvancedTools: PropTypes.bool,
+    isEnglish: PropTypes.bool.isRequired,
     showCensusBanner: PropTypes.bool.isRequired,
     ncesSchoolId: PropTypes.string,
     censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
@@ -122,10 +116,10 @@ export default class TeacherHomepage extends Component {
   }
 
   render() {
-    const { courses, topCourse, announcements, queryStringOpen, joinedSections } = this.props;
+    const { courses, topCourse, joinedSections } = this.props;
     const { ncesSchoolId, censusQuestion, schoolYear } = this.props;
     const { teacherId, teacherName, teacherEmail } = this.props;
-    const { canViewAdvancedTools } = this.props;
+    const { canViewAdvancedTools, isEnglish, queryStringOpen } = this.props;
 
     return (
       <div>
@@ -139,21 +133,8 @@ export default class TeacherHomepage extends Component {
         <ProtectedStatefulDiv
           ref="termsReminder"
         />
-
-        {announcements.length > 0 && (
-          <div>
-            <Notification
-              type={announcements[0].type || "bullhorn"}
-              notice={announcements[0].heading}
-              details={announcements[0].description}
-              dismissible={false}
-              buttonText={announcements[0].buttonText}
-              buttonLink={announcements[0].link}
-              newWindow={true}
-              analyticId={announcements[0].id}
-            />
-            <div style={styles.clear}/>
-          </div>
+        {(isEnglish &&
+          <SpecialAnnouncementActionBlock/>
         )}
         {this.state.showCensusBanner && (
            <div>

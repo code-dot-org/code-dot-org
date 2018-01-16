@@ -1766,50 +1766,50 @@ zh-CN:
     applab_intro_welcome:
       1:
         image: 'notes/applab_intro_welcome_1.png'
-        text: "My name is Mei'lani. I'm an intern at code.org and I'm also a computer science student. I like computer science because it's really creative. I get to be the problem solver. I get to make everything function how I want it to. But I also get to be the designer. I get to be the artist and choose everything on the creative side of it."
+        text: "我的名字叫Mei'lani。 我是code.org 的一名实习生，也是一名计算机科学的学生。 我喜欢计算机科学因为它很富有创造性。 我会成为问题解决的能手。我要按我的想法制作任何的事物。 但我也想成为设计师。我要成为艺术家并选择任何有创意的事。"
       2:
         image: 'notes/applab_intro_welcome_2.png'
-        text: "Making your own apps is easy with App Lab! Whether you're new to coding or have some experience. App Lab is a great tool for building new apps and sharing them with your friends."
+        text: "使用应用程序实验室来制作你自己的应用程序很容易！不管编程对你来说是新的，还是你已经有了一些经验。应用程序实验室是帮助你创建新应用程序，并和你的朋友们一起分享的好工具。"
       3:
         image: 'notes/applab_intro_welcome_3.png'
-        text: "This is a App Lab. On the left side is your app. On the right side is the code that will make it run. You build your program by dragging in blocks from the toolbox. To start you'll just have one block called 'setProperty'."
+        text: "这是一个应用程序实验室。左边的是你的应用程序。右边的是能够让你的应用程序运行的代码。你从工具箱里把模块拖出来生成你自己的程序。 从一块叫作'设置属性'的模块开始吧。"
       4:
         image: 'notes/applab_intro_welcome_4.png'
-        text: "The set property block changes the look of the elements on your screen. Like the buttons, labels, or even the screen itself. First you need to decide which element you want to change. If you hover over an element in your app you can see the name or ID here. Then go select that ID from the first drop down."
+        text: "设置属性模块可以更改屏幕上的元素外观，像按钮，标签或者甚至是屏幕本身。 首先你要决定所要更改的元素。 如果你把鼠标悬停在应用程序的某个元素上，就可以在此处看到名称或标识。然后从第一个下拉中选择该标识。"
       5:
         image: 'notes/applab_intro_welcome_5.png'
-        text: "Elements have lots of properties you can change like their text color, background color or font size. You can see the full list and choose which property you want to change in the second drop down."
+        text: "元素有很多属性是可以改变的，比如他们的文本颜色，背景色或字体大小。你可以看到完整的列表并在第二个下拉中选择你所要更改的属性。"
       6:
         image: 'notes/applab_intro_welcome_6.png'
-        text: "The last drop down is where you'll write the value you want to use value you want to use. The block will make a suggestion for you. But you can always type in different colors or numbers yourself."
+        text: "最后一个下拉框是你要书写你所要使用的数值的地方。 模块会为你推荐一个建议。但你总是可以自己输入不同的颜色或数字。"
       7:
         image: 'notes/applab_intro_welcome_7.png'
-        text: "Once you're done, the block reads a bit like a sentence:'Set button1's background color to green.' Hit run to see the changes you're building in code. If you reset you can drag in more blocks to change other things about your app. Like the text!"
+        text: "完成后，该模块读起来有点像句子：‘设置按钮1 的背景色为绿色。’ 点击运行查看你在代码中所做的更改。 如果重新设置，你可以拖入更多的模块来改变你应用程序的其他东西。比如文本！"
       8:
         image: 'notes/applab_intro_welcome_8.png'
-        text: "For this tutorial we'll be working in block mode but App Lab also supports working in text."
+        text: "对于此教程，我们将在模块模式下工作。但是应用程序实验室也支持用文本编程。"
       9:
         image: 'notes/applab_intro_welcome_9.png'
-        text: "Either way you'll be programming in JavaScript, the language of the web. Each level has a goal, instructions and an image of what you're aiming to create."
+        text: "无论哪种方法，你都将用JavaScript网络语言编程。每个级别都有他们的目标，指令以及你想要创建的图像。"
       10:
         image: 'notes/applab_intro_welcome_10.png'
-        text: "If you're ever stuck, click on this picture and it will show you exactly how to complete the level. But see if you can do it on your own first."
+        text: "如果你被难到了，可以点击此图片。它将显示具体如何来完成这关卡。 但试着看你是否可以先自己解决。"
       11:
         image: 'notes/applab_intro_welcome_11.png'
-        text: "Once you've completed the goal for this level click Finish to move on. That's all there is to it! Hit the orange \"continue\" button to go to the next level and start your adventure with an App Lab!"
+        text: "一旦你完成此关卡的目标后，请点击完成来继续。就是这样简单！点击橙色的“继续”按钮到下一个级别。开始你应用程序实验室的冒险吧！"
     applab_intro_events:
       1:
         image: 'notes/applab_intro_events_1.png'
-        text: "Apps are really cool because it's kind of like starting your own business I mean, you get to design everything from the ground up, you get to manage everything, and you're the owner of this piece of work that you just created with code."
+        text: "应用程序真的很酷，因为它有点象开始你自己的生意一样。我的意思是，你将从零开始设计每个事物，你要管理所有的一切。你是你刚用代码创建起来的作品的主人。"
       2:
         image: 'notes/applab_intro_events_2.png'
-        text: "Now that you can change the look of your app let's make it interactive by responding to events! Events are user actions like clicking a button, scrolling through a menu, or hovering over a picture. Interactive apps need ways to respond to events, like playing a sound when I click this button. To do this in App Lab you need to use a new block called 'onEvent'."
+        text: "现在你可以改变你的应用程序的外观。让我们通过响应事件来进行互动！ 事件是用户行为，比如点击按钮，滚动菜单，或者悬停在某张图片上。互动式应用程序需要响应事件的方法，比如当点击此按钮时会发出声音。要在应用程序实验室里做到这个，需要使用一个新的模块叫 'onEvent（当事件发生时）'。"
       3:
         image: 'notes/applab_intro_events_3.png'
-        text: "This program sets the screen to blue. I want the screen to turn green when I click this button. First I'll need to drag in an onEvent block. By hovering I know the button's ID is \"bigButton\" so I'll select that in the first drop-down."
+        text: "该程序把屏幕设置成蓝色。 当我点击此按钮时，我希望屏幕变绿色。首先，我需要拖进一个onEvent（当事件发生时）模块。 把鼠标悬停在它上面，我知道按钮的ID 是\"bigButton\"（大按钮） ，所以我会在第一个下拉菜单中选择它。"
       4:
         image: 'notes/applab_intro_events_4.png'
-        text: "Next I'll choose the type of event. There's lots of options you can pick from but right now I'll leave it as a regular old click."
+        text: "接下来，我将选择事件的种类。有很多你可以选择的选项。但现在我先保留传统的老式点击的方法。"
       5:
         image: 'notes/applab_intro_events_5.png'
         text: 'Finally I''ll add code inside the on event that will change the background color of the screen. You can read this block like a sentence: "On the event that the button is clicked run all this code."'

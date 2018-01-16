@@ -441,7 +441,7 @@ exports.selectCurrentCode = function (interpreter,
       if (editor.session && editor.session.currentlyUsingBlocks) {
         var style = {color: '#FFFF22'};
         editor.clearLineMarks();
-        editor.mark({row: userCodeRow, col: start - cumulativeLength[userCodeRow]}, style);
+        editor.mark({row: userCodeRow, col: start - cumulativeLength[userCodeRow], type: 'block'}, style);
       } else {
         selectAndHighlightCode(editor.aceEditor, cumulativeLength, start, end,
             highlightClass);

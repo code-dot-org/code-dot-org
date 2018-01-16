@@ -244,6 +244,28 @@ class ApiController < ApplicationController
     render json: data
   end
 
+  # This API returns data similar to user_progress, but aggregated for all users
+  # in the section. It also only returns the "levels" portion
+  def section_level_progress
+    section = load_section
+    script = load_script(section)
+
+    data = {}
+    # TODO: This could likely be constructed more efficiently. At the very least,
+    # instead of asking for a summary, and then using only one portion of it (levels)
+    # we could probably expose a way to get just levels and have it be in the same
+    # form as user_progress. However, we might be able to do even better and query
+    # all the data that we need in a single db request
+    # TODO: We'll want to support some form of pagination for this API. One option
+    # would be to imitate the approach used by the section_progress API, however
+    # that has some limitations and was largely meant as a quick and dirty fix for
+    # pagination when it was implemented
+    section.students.each do |student|
+      data[student.id] = summarize_user_progress(script, student)[:levels]
+    end
+    render json: data
+  end
+
   def student_progress
     student = load_student(params.require(:student_id))
     section = load_section
@@ -274,6 +296,13 @@ class ApiController < ApplicationController
 
   # Return a JSON summary of the user's progress across all scripts.
   def user_progress_for_all_scripts
+    # I do not believe this API is used anywhere. I would like to remove it, but
+    # as a first step, I thought I would add some logging
+    Honeybadger.notify(
+      error_message: "user_progress_for_all_scripts called",
+      error_class: "ApiController.user_progress_for_all_scripts",
+    )
+
     user = current_user
     if user
       render json: summarize_user_progress_for_all_scripts(user)
