@@ -115,17 +115,33 @@ module UsersHelper
   end
 
   # Get the level progress for the specified script and user
-  # @param {User} user
+  # @param {User[]} users
   # @param {Script} script
   # TODO: describe shape of return data
   def get_level_progress(users, script)
     level_progress = {}
 
+    # We need to get users_levels (and paired user_levels) for each student. Get
+    # them all in advance, so that we can have 3 total db queries, instead of
+    # having 3 per user
+    if users.length == 1
+      # If we have a single user, do this so that the result is cached on the user
+      # instance
+      all_user_levels = users.first.user_levels.where(script_id: script.id)
+      user_levels_by_user = {users.first.id => all_user_levels}
+    else
+      all_user_levels = UserLevel.where(user_id: users.map(&:id), script_id: script.id)
+      user_levels_by_user = all_user_levels.group_by(&:user_id)
+    end
+
+    all_paired_user_levels = PairedUserLevel.pairs(all_user_levels.map(&:id))
+    paired_user_levels_by_user = all_paired_user_levels.group_by(&:user_id)
+
     users.each do |user|
       level_progress[user.id] = {}
       user_level_progress = level_progress[user.id]
-      uls = user.user_levels_by_level(script)
-      paired_user_level_ids = PairedUserLevel.pairs(uls.values.map(&:id))
+      uls = (user_levels_by_user[user.id] || []).index_by(&:level_id)
+      paired_user_level_ids = paired_user_levels_by_user[user.id] || []
       script_levels = script.script_levels
 
       script_levels.each do |sl|
