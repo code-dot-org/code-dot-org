@@ -3673,7 +3673,7 @@
         `<img>` 标签是一个**空元素**的例子，因为它的开始、关闭都在同一个标签里。为了标记它，我们将通常放在结束标签里的`/`放到了图片标签的结尾处。空元素不需要关闭标签，因为它不需要再标签之间插入文本内容。影响内容显示的都在属性中进行了设置。\r
         </details>\r
         <details>\r
-        <summary>**为社么么图片标签没有结束元素？**</summary>\r
+        <summary>**为什么图片标签没有结束元素？**</summary>\r
         图片标签是一个空标签，而空标签不需要结束标签。因为它里面不需要有文本内容。影响显示的数据都设置到了标签的属性里。\r
         </details>\r
         <details>\r
@@ -4472,9 +4472,28 @@
         ![](https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03
         PM.png)
       CSD U2 project review_markdown_instruction: |
-        # 查看您的项目 \r \r 您几乎已经准备好发布您的项目, 但是, 您应该再次检查您是否已经完成了此项目的所有要求.\r\r# 请执行此操作,\r* 检查您是否可以轻松地共享站点上的所有信息。\r*检查您的所有图像是否都正确地归入, 并且您有权将它们放在您的网站上. \r*检查您的项目是否包括项目专栏中包含的所有内容. \r*使用注释和空格使您的网站可读。*询问合作伙伴, 让他们来帮助您找到您的网站的任何潜在问题。
+        # 复查你的项目\r
+        \r
+        你快要准备好发布自己的项目了，但在此之前，你最好在检查一次是否完成了项目的所有要求。\r
+        \r
+        # 做这些\r
+        *
+        检查一下，你是否愿意在你的网站上共享所有信息。\r
+        * 检查是否所有图片的属性都正确，你是否有权利将它们放到你的网站上。\r
+        * 检查是否你的网站包括了所有rubric项目的内容。\r
+        * 用注释和空白符增加网站的可读性。\r
+        * 请你的伙伴来帮忙找找网站可能的问题。\r
       CSD U2 project share_markdown_instruction: |
-        # 分享你的项目 \r 是时候与世界分享你的项目了! 请点击![] (https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27 AM. png) 按钮在本页顶部. 复制它给您的 URL, 并将其发送给您想要查看其页面的用户。
+        # 分享你的项目\r
+        \r
+        到了把你的项目分享给全世界的时候了！\r
+        \r
+        # 做这些\r
+        * 点击页面最上面的
+        ![](https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27
+        AM.png)按钮\r
+        * 复制获得的链接，并发给你想要分享的人。\r
+        \r
       CSD U2 style background_markdown_instruction: |-
         <div style="float: right; height:
         150px; width: 400px; overflow-y: scroll; margin-left: 20px;">\r
@@ -4773,10 +4792,24 @@
         "fantasy", and "monospace"\r
         * Add a font family rule for the h1 or h3
         tags.
-      CSD U2 text style freeplay - OLD_markdown_instruction: '# 添加样式 \r \r 现在, 您可以在您的个人网站上设置文本的样式!
-        \r\r*打开您的样式表并将您的选择的样式添加到页面中。请务必使用至少3不同的 css 属性. \r\r# 清单 \r\r * 至少使用了以下 css
-        属性的 3: \r * "字体" \ "字体-家庭" \r "" 颜色 "\r\n 文本修饰" \r\n "文本对齐" \r \r 如果您使用了清单里至少3属性,
-        您可以浏览一些附加的文本属性添加到您的项目。'
+      CSD U2 text style freeplay - OLD_markdown_instruction: |-
+        # 添加样式\r
+        \r
+        你可以给个人网站的文本添加样式了！\r
+        \r
+        * 打开你的样式表，添加选择的样式到页面中。确保使用了至少三种不同的CSS属性。\r
+        \r
+        # 检查清单\r
+        \r
+        * 至少用了三种下面的样式属性：\r
+        * `font-size`\r
+        * `font-family`\r
+
+        * `color`\r
+        * `text-decoration`\r
+        * `text-align`\r
+        \r
+        如果你用了清单中的至少3中属性，你可以浏览一下别的文本属性，并加到你的项目中。
       CSD U2 text style freeplay_markdown_instruction: |-
         # Adding Styles\r
         \r
@@ -5318,10 +5351,74 @@
         ![](https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04
         PM.png)
       CSD U2 upload image_markdown_instruction: |-
-        # 上传新图像 \r <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"> \r <details> \r <summary> ** 如何添加图像？ ** </summary> \r "<img>" 标签允许您在 网页上显示图像.<br> <br> \r \r 示例: \r <pre> &lt; img src = "狗. png" alt = "狗跳跃"/&gt; </pre> <br> <br> \r \r 为了告诉浏览器要使用哪个文件, 额外的信息 (称为 ** 属性 **) 被添加到括号内的 &lt; img &gt; 标记中。属性 "src" 代表 ***s**ou**rc**e
-        （来源）, 并告诉该图像的名称的。图像文件的名称包括扩展, 告诉计算机他们使用的是哪种类型的图像。通用扩展名为. jpg、. jpeg、. png。<br> <br> \r \r 除了具有 src 属性外, 图像元素还具有描述图像的 "alt" 属性。这是在图像无法加载或对有视力问题的人来说非常重要。<br> <br> \r \r "<img>" 标记是 ** 空元素 ** 的一个示例, 因为它在一个标记中开始和结束。为了标记这一点, 我们放"/", 它通常会在图片标签末尾的结束标签中。 \r \r </details> \r <details> \r <summary> ** 什么是空标签？ ** </summary> \r <img> "标记是 **空元素 ** 的一个示例, 因为它在一个标记中开始和关闭。为了标记这一点, 我们用 "/"，它通常是在图片标签末尾的结束标签里。Void 标记不需要结束标记, 因为没有文本内容在标签内。在屏幕上显示的内容是通过标记属性指定的. </details> \r <details> \r <summary> ** 为什么图像标记没有结束标记？ ** </summary> \r 一个图像标记是 空标记, 而 空标记不需要结束标记, 因为没有文本内容包含在标记内。在屏幕上显示的内容是通过标记属性指定的. \r <details> \r <summary> ** 什么是属性？ ** </summary> \r 属性是标记中包含的额外信息。 属性具有名称和值。该名称告诉您正在提供何种类型的信息, 然后该值提供该标记的特定信息。\r \r 例如 &lt; img &gt; 标签有两个属性, src 和 alt. src 指定图像文件的名称, alt 在可读文本中告诉浏览器图像的内容. \r </details> \r </div> \r 您现在可以将自己的图像添加到个人网站。 如果您的计算机上没有所需的图像, 则可以在此处搜索并下载它们. \r <form action="https://www.google.com/search" method="GET" target="_blank"> \r <input type=hidden name=site value="imghp"/> \r 输入类型 =隐藏名称 = tbm 值 = isch/>> \r <input type=hidden name=tbs value="sur:fmc"/> \r <input name=q/> \r <input type=submit value="search"> \r <br/> \r </form> 一旦你有你的图像, 点击!(https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49 PM. png) 并将该图像从您的计算机上载到项目中. \r#请操作\r*请将至少两个图像上载到您的项目 \r * 使用 "<img>" 标记来显示图片在您的网站。
+        # 上传新图片\r
+        <div style="float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">\r
+        <details>\r
+        <summary>**如何增加图片？**</summary>\r
+        `<img>`标签允许你在网页上显示图片。 <br><br>\r
+        \r
+        例子\r
+        <pre>&lt;img src="dog.png"
+        alt="跳跃的狗"/&gt;</pre><br><br>\r
+        \r
+        为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\r
+        \r
+        除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\r
+        \r
+        因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**空元素**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\r
+        </details>\r
+        <details>\r
+        <summary>**什么是空元素？**</summary>\r
+        `<img>` 标签是一个**空元素**的例子，因为它的开始、关闭都在同一个标签里。为了标记它，我们将通常放在结束标签里的`/`放到了图片标签的结尾处。空元素不需要关闭标签，因为它不需要再标签之间插入文本内容。影响内容显示的都在属性中进行了设置。\r
+        </details>\r
+        <details>\r
+        <summary>**为什么图片标签没有结束元素？**</summary>\r
+        图片标签是一个空标签，而空标签不需要结束标签。因为它里面不需要有文本内容。影响显示的数据都设置到了标签的属性里。\r
+        </details>\r
+        <details>\r
+        <summary>**什么是attribute（属性）？**</summary>\r
+        属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\r
+        \r
+        例如&lt;img&gt;标签有两个属性，src和alt。
+        src表明了图片文件的名字，而alt表明了图片所表达的文字含义。\r
+        </details>\r
+        </div>\r
+        \r
+        你现在可以往自己的网站里加图片了。你能再这里搜索并下载它们。\r
+        <form action="https://www.google.com/search" method="GET"
+        target="_blank">\r
+        <input type=hidden name=site value="imghp" />\r
+        <input
+        type=hidden name=tbm value=isch />\r
+        <input type=hidden name=tbs value="sur:fmc"
+        />\r
+        <input name=q />\r
+        <input type=submit value="search">\r
+        <br />\r
+        </form>\r
+        \r
+        一旦你找到了图片，点击![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49
+        PM.png)并将它从你的电脑上传到项目中。\r
+        \r
+        #
+        做这些\r
+        * 上传至少两张图片到项目中。\r
+        * 用`<img>`标签在网站中显示图片。
       CSD U2 upload images_markdown_instruction: |
-        # 上传图片 \r \r 下一步, 您需要将所有图像上载到您的项目中. \r\r请执行此操作, \r*将所有您想要的图像下载到您的计算机上。如果需要, 请访问 <a href="/s/csd2/stage/7/puzzle/5" target="_new"> 7 课5级 </a> 以获得帮助. \r*确保您有权使用这些图像. \r*记下您需要的所有属性信息. \r* 将所有图像都上载到项目中. 如果忘记了如何操作, 请访问 <a href="/s/csd2/stage/7/puzzle/5" target="_new"> 8 课6级 </a>。\r
+        # 上传图片\r
+        \r
+        接下来，你需要将所有图片上传到你的项目中。\r
+        \r
+        # 做这些\r
+        *
+        将想要的图片都下载到你的电脑里。如果需要帮助，就浏览<a href="/s/csd2/stage/7/puzzle/5"
+        target="_new">课程7 关卡5</a>。\r
+        * 确保你有权利使用这些图片。\r
+        * 写下所有你需要的属性信息。\r
+        * 将所有图片上传到你的项目中。如果忘了怎么做，就浏览
+        <a href="/s/csd2/stage/7/puzzle/5" target="_new">课程 8 关卡 6</a>。\r
+        \r
       CSD U3 - Booleans Video_markdown_instruction: "# Boolean Expressions Video"
       CSD U3 - Simple Counter Predict_markdown_instruction: |
         # The Counter Pattern\r
@@ -6580,13 +6677,30 @@
         _You might notice some new blocks in the Sprites
         drawer, experiment with them and see if you can incorporate them into your
         conditionals._
-      CSD U3 Conditionals Apple 2_markdown_instruction: '#变红色\r\r现在我们知道如何使用 _如果_ 语句，你可以做的不仅仅是检查苹果是否达到了2的规模,
-        一旦它发生, 你就把它变成红色. \r \r #请操作\r\r在绘制循环中使用一个条件来检查 "苹果" 是否更大比 2-如果它是, 设置苹果新的动画
-        "apple_red". _Challenge: \r\r挑战：你还能让苹果在变红的时候停止生长吗？'
-      CSD U3 Conditionals Apple_markdown_instruction: '# 使用布尔值进行更多的练习 \r \r 让我们再用一个布尔表达式来检查精灵的条件.\r\r#请操作\r
-        有一个给你创建的不断增长的苹果精灵。它开始是绿色的, 当它到达2的比例时应该变成红色。我们还不用担心让它变红，让我们只用一个 "console.log"
-        命令来检查大小是否已经达到 2.\r\r* 添加一个 "console.log" 语句.\r* 在 "console.log" 中添加一个布尔表达式,
-        用于检查 "apple. 缩放" 是否大于2。'
+      CSD U3 Conditionals Apple 2_markdown_instruction: |-
+        # 变成红色\r
+        \r
+        现在，我们知道了如何使用_如果_语句了，除了检查苹果是否被放大了两倍，你还可以在放大后将它变为红色。\r
+        \r
+        #
+        做这些\r
+        \r
+        在画画的循环里添加一个条件，检查是否 `apple.scale`（苹果尺寸）大于2。- 如果是，那么设置新动画为"apple_red"（苹果_红）。\r
+        \r
+        _挑战:
+        你能在苹果变红时，同时让它停止变大吗？_
+      CSD U3 Conditionals Apple_markdown_instruction: |-
+        # 更多的布尔练习\r
+        \r
+        让我们再多加一个布尔表达式来检查精灵的条件。\r
+        \r
+        #
+        做这些\r
+        这里有个正在变大的苹果精灵。开始它是绿的，当它增加到两倍时应该变成红色。我们先不用担心如何将它变红，先用一条`console.log`（命令行.打印日志）命令来检查是否它到了两倍大。\r
+        \r
+        * 添加一条`console.log`语句.\r
+        * 在`console.log`中添加一个布尔表达式，来检查是否`apple.scale`
+        大于2。
       CSD U3 Counters assigning an expression_markdown_instruction: |-
         # Assignment
         and Expressions\r
@@ -7032,10 +7146,18 @@
         in the "Watch" window.\r
         * **Talk to a neighbor**. How large is `size`
         when the dot covers the whole screen?
-      CSD U3 Diagonal Movement_markdown_instruction: '<img src="https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif"
-        style="float: right; margin-left: 20px;"> \r\r对角线移动 \r \r 只更新 "x" 或 "y" 属性的精灵，使它只能直向上和向下或左和右移动。如果你想让一个精灵在对角线上移动,
-        你需要更新这些属性的 _both_. \r\r这个程序目前使鼠标直接移动到屏幕上-你可以更新它, 使它在屏幕上沿对角线方向移动像向右的图像？ \r
-        \r _挑战: 你能使鼠标指向与图像相同的方向吗？ _'
+      CSD U3 Diagonal Movement_markdown_instruction: |-
+        <img src="https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif"
+        style="float: right; margin-left: 20px;">\r
+        \r
+        # 对角线移动\r
+        \r
+        如果只改动精灵的`x`或`y`属性， 它就只能上下或左右移动。如果你想让精灵在对角线上移动，就需要_同时_改动这两个属性。\r
+        \r
+        程序现在让老鼠直线移动到屏幕下方 - 你能改动程序，让它像图片里一样穿过屏幕对角线吗？\r
+        \r
+        _挑战:
+        你能让老鼠的方向和图片中一样吗？_
       CSD U3 Direction Animations_markdown_instruction: |-
         # Changing Images as you
         Move\r
@@ -7106,32 +7228,114 @@
         Experiment
         with adding code before and after the `draw()` loop. Can you figure out what
         gets called when?
-      CSD U3 Draw Loop Plugged orange and green_markdown_instruction: '<img src="https://images.code.org/2b5b2ce029e2f1d7377db7dcd7760cf0-image-1492031771047.15.45
-        PM.png" style="float:right;width:150px"> \r\r#使用绘制循环 \r \r 现在轮到你做一些工作与绘制循环。请记住,
-        绘制循环中的代码是由游戏实验室一遍又一遍地运行的. \r \r # 将代码添加到此程序中, 这样您的绘图也会被绘制成橙色圆圈.\r* 当程序看起来像右边的图片时,
-        请继续。'
-      CSD U3 Draw Loop Plugged predict 1 embed_markdown_instruction: "# 预测 \\r \\r
-        此程序在绘制循环中有一些代码, 并且在它的外部也有一些。请记住: \\r\\r *在绘制循环之外的所有代码都是先运行一次 \\r *在绘制循环中的所有代码都将永远运行,
-        \\r 该程序将执行什么操作？写下你的预测。"
-      CSD U3 Draw Loop Plugged predict 1_markdown_instruction: "# 画环 \\r \\r 这是一个在工作中绘制循环的示例.
-        \\r\\r#请操作\\r*请运行代码, 看看它是如何工作的. \\r与您的合作伙伴讨论这是否像您在视频中看到的翻转书。 为什么和为什么不？"
-      CSD U3 Draw Loop Plugged predict 2 embed_markdown_instruction: "# 预测 \\r 这个程序有一个小的差异,
-        将使其运行有点不同。不过, 请记住: \\r\\r *在绘制循环之外的所有代码都是先运行一次的 \\r * 所有在绘制循环中的代码都将永远运行, \\r\\r
-        这个程序会做什么？在下面写下你的预测。"
+      CSD U3 Draw Loop Plugged orange and green_markdown_instruction: |-
+        <img src="https://images.code.org/2b5b2ce029e2f1d7377db7dcd7760cf0-image-1492031771047.15.45
+        PM.png" style="float:right;width:150px">\r
+        \r
+        # 使用画图循环\r
+        \r
+        现在，你需要用画图循环来做些事情了。记住，画图循环里的代码会被游戏实验室不停的运行。\r
+        \r
+        # 做这些\r
+        \r
+        *
+        将代码加到程序中，让你的图画也能画一个橙色的圈。\r
+        * 当你的程序和右边一样时，就可以进行下一步了。
+      CSD U3 Draw Loop Plugged predict 1 embed_markdown_instruction: |-
+        # 预测\r
+        \r
+        这个程序在画图循环的里面和外面都有些代码。记住：\r
+        \r
+        *
+        首先，将你的所有代码都放到画图循环外运行一次。\r
+        * 将你的代码都放到画图循环里不停的运行\r
+        \r
+        这个程序会做什么？将你的预测写下来。
+      CSD U3 Draw Loop Plugged predict 1_markdown_instruction: |-
+        # 画图循环\r
+        \r
+        这是一个画图循环的例子。\r
+        \r
+        # 做这些\r
+        * 运行代码看看它是如何工作的。\r
+        * 和你的伙伴讨论一下，这和视频中的手翻书是否看起来是一样的。为什么是或不是呢？
+      CSD U3 Draw Loop Plugged predict 2 embed_markdown_instruction: |-
+        # 预测\r
+        \r
+        这个程序有一处小小的的不同，这会让它的结果也有点不同。再提醒一次：\r
+        \r
+        * 所有画图循环外的代码都会先执行，只执行一次。\r
+        * 所有循环内的代码都会循环不断的执行\r
+        \r
+        这个程序会做什么？把你的预测写下来。
       CSD U3 Draw Loop Plugged update your scene_markdown_instruction: |
-        #扩展你的场景 \r\r 这是你在上一课中所做的精灵场景。现在, 您将对它进行一点点更新, 使用 "绘制循环" 和 "雪碧" 属性. \r \r <img src="https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29 PM.png" style="float:right;height:100px"> \r\r#请执行此操作 \r\r* 添加绘制循环到您的程序 (你应该只有一个). \r*使用套索选择器 (单击、按住和拖动) 选择所有代码并将其放在绘制循环中。Ctrl Z 将使您能够撤消您所犯的任何错误. \r*将代码添加到您的程序中, 以更新您的精灵 ""、"精灵"、"精灵" 或 "雪碧. 旋转" 属性, 以便它们移动。您需要用 "randomNumber（随机号码） ()" 来更新它们。\r\r
-      CSD U3 Draw Loop Plugged wiggle sprite rotation_markdown_instruction: '<img
+        # 扩展你的场景\r
+        \r
+        这是你上一次课做的精灵场景。你需要做些更新，加上画图循环和精灵属性。\r
+        \r
+        <img
+        src="https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29
+        PM.png" style="float:right;height:100px">\r
+        \r
+        # 做这些\r
+        \r
+        * 在程序里加一个画图循环（只需要一个）。\r
+        * 用套索选择器（点击，按住后拖动）来选择你的代码，并放到画图循环中。如果发生任何错误，用ctrl+z可以撤销上一步操作。\r
+        * 加入代码来更新你的精灵的sprite.x`, `sprite.y`，或 `sprite.rotation`属性，来让它们移动。你可以一起用上`randomNumber()`（随机数）。\r
+      CSD U3 Draw Loop Plugged wiggle sprite rotation_markdown_instruction: |-
+        <img
         src="https://images.code.org/03f98fedbe59ceb5ef0a8530cb81c367-image-1492040405357.gif",
-        style="float:right;height:150px"> \r 更新属性 \r \r 此关卡结合了您已经看到的一些技能。它在背景中绘制椭圆,
-        还会更新精灵属性。这一次, 它正在改变精灵的 '' 精灵. "旋转" 属性 \r \r #请操作这些\r\r此动画已在更新一个精灵的旋转属性, 使其看起来像是在抖动.
-        \r\r*运行程序以查看它的工作原理. *将代码添加到此程序, 使其他外星人和第一个一样震动.* 当程序看起来和右边的一样的时候，请继续。'
+        style="float:right;height:150px">\r
+        # Updating Properties\r
+        \r
+        这个关组合了一些你已经见过的技能。这会在背景绘制椭圆，还会更新精灵的属性。这次，它会改变精灵的`sprite.rotation`属性。\r
+        \r
+        # 做这些\r
+        \r
+        这个动画已经更新了精灵的一个旋转属性，使它看起来像是在晃动。\r
+        \r
+        * 运行一下程序，看看它是如何工作的。\r
+        * 加入代码让其它外星人也像第一个一样晃动。\r
+        * 当你的程序和右边的图片一样时就可以进入下一步了。
       CSD U3 Draw Loop Plugged wiggle sprite x_markdown_instruction: |
-        <img src="https://images.code.org/71ae26edcc3286ff4d7697aaffecf144-image-1492036602240.gif", style="float:right;height:150px"> \r# 更新属性 \r \r 精灵具有让计算机知道在何处绘制它们的属性。要使用的两个常用属性是 "精灵. x" 和 "精灵.y", 它控制精灵的位置。为这些属性分配一个新值将会将您的精灵移动到屏幕上的新位置. \r \r #请操作这些\r\r此动画已在更新一个精灵的 x 属性, 使其看起来像是在抖动 \r * 运行程序以查看它的工作原理.\r 编辑代码程序, 使第二个精灵像第一个抖动.\r 当程序看起来像右图时, 请继续\r\r。
+        <img src="https://images.code.org/71ae26edcc3286ff4d7697aaffecf144-image-1492036602240.gif",
+        style="float:right;height:150px">\r
+        # Updating Properties\r
+        \r
+        精灵上的属性让计算机知道在何处，如何画它们。两个通用的属性是`sprite.x`和`sprite.y`，用来控制精灵的位置。给这些属性赋值，会让你的精灵移动到屏幕上新的位置。\r
+        \r
+        # 做这些\r
+        \r
+        这个动画已经更新了一个精灵的x属性，让它看起来像是在晃动。\r
+        \r
+        *
+        运行程序来看看它是如何工作的。\r
+        * 编辑程序代码，让第二个精灵也像第一个一样晃动。\r
+        * 当你的程序看起来像右边的图片时，就可以开始下一步了。\r
+        \r
       CSD U3 Draw Loop Plugged wiggle sprite y_markdown_instruction: |
-        <img src="https://images.code.org/1e22fb89bcdf99168aee6324d17137ee-image-1493138232702.gif", style="float:right;height:150px"> \r # 更新属性 \r \r 此关卡与最后一个非常相似, 但这次, 您将自己添加绘图循环. \r \r #请操作这些\r* 将绘图循环块添加到该程序的底部. \r*移动任何需要位于绘制循环内的块. \r当程序看起来像右图时, 请继续。
-      CSD U3 Drawing Squares to Corners_markdown_instruction: <img src="https://images.code.org/9e09a96901b1e5ad9d5869b2b1fd3897-image-1498671940133.45.12
-        AM.png" style="float:right;width:150px"> \r\r# 在角落里放置方块 \r \r 使用游戏实验室的一个重要部分是了解位置。请记住,
-        您可以随时打开网格或用鼠标悬停, 以帮助查找所需的 x 和 y 位置. \r\r#请操作这些 \r \r * 将两个矩形完全放置在屏幕的角上, 就像图片一样。
+        <img src="https://images.code.org/1e22fb89bcdf99168aee6324d17137ee-image-1493138232702.gif",
+        style="float:right;height:150px">\r
+        # 更新属性\r
+        \r
+        这和上一关非常类似。但是这次，你要自己加一个画图循环。\r
+        \r
+        #
+        做这些\r
+        * 在程序的最底部添加画图循环模块。\r
+        * 将所有模块都挪到画图循环里。\r
+        * 当你的程序和右边的图片一样时就可以进入下一步了。\r
+      CSD U3 Drawing Squares to Corners_markdown_instruction: |-
+        <img src="https://images.code.org/9e09a96901b1e5ad9d5869b2b1fd3897-image-1498671940133.45.12
+        AM.png" style="float:right;width:150px">\r
+        \r
+        # 在角落里放置正方形\r
+        \r
+        游戏实验室中很重要的一部分，就是理解位置。记住，你可以任何时候打开网格，或者用鼠标悬停来查看所需位置的x和y值。\r
+        \r
+        # 做这些\r
+        \r
+        * 像图片中那样，将两个矩形精确的放在屏幕的角落里。
       CSD U3 Else_markdown_instruction: |-
         # What If My Condition Isn't True?\r
         \r
@@ -7158,14 +7362,30 @@
         if block to add an else.\r
         * Add commands to make the gears spin opposite
         of the direction that they do when the space bar is pressed.
-      CSD U3 Entertainment Sample 1_markdown_instruction: "#外星人跳跃者\\r\\r按“运行”来开始玩左边的游戏。你可以用空格键让外星人跳跃。并用箭头键把它左右移动。通过收集星星来得分。如果你得足够的高分，背景将改变。"
-      CSD U3 Entertainment Sample 2_markdown_instruction: '# 饥饿的小兔子\r\r 兔子饿了, 它正在寻找蘑菇和胡萝卜作为晚餐.\r\r
-        为了赢得胜利, 你需要找到一个晚餐碗, 然后收集至少十胡萝卜和五蘑菇. \r\r确保避免臭虫。 瓢虫和蜗牛会吃掉你的食物, 蜜蜂会蛰你, 让你丢掉所有!
-        \r\r使用空格键跳转。 你可以通过跳过瓢虫和蜗牛把他们压碎.\r\r 单击 "运行" 以启动程序。'
+      CSD U3 Entertainment Sample 1_markdown_instruction: |-
+        # 外星人跳跃\r
+        \r
+        按下“运行”按钮来播放左边的游戏。你能用空格键让外星人跳起来，并用方向键让它左右移动。收集星星可以得分，如果得到足够高的分，背景就会改变。
+      CSD U3 Entertainment Sample 2_markdown_instruction: |-
+        # 饥饿的小兔子\r
+        \r
+        兔子饿了, 它正在寻找蘑菇和胡萝卜作为晚餐。\r
+        \r
+        为了赢得胜利，你需要找到一个晚餐碗，然后收集至少10个胡萝卜和5个蘑菇。\r
+        \r
+        确保躲过虫子。瓢虫和蜗牛会吃掉你的食物，蜜蜂会蛰你，让你的所有东西都掉下来！\r
+        \r
+        用空格键来跳跃。你可以通过跳到瓢虫和蜗牛上来把它们踩死。\r
+        \r
+        单击 "运行" 以启动程序。
       CSD U3 Entertainment Sample 3_markdown_instruction: |
-        # 动画漫画\r\r组合图像, 文本和一些微妙的动画，可以制作真正有趣的漫画或图形故事。 单击 "运行" 以查看示例。\r
+        # 会动的漫画书\r
+        \r
+        将图片、文本和一些巧妙的动画组合在一起，可以做出非常有趣的漫画或者图片故事。点击“运行”来看看示例。\r
       CSD U3 Entertainment Sample 4_markdown_instruction: |
-        # 邮票垫 \r \r 单击 "运行" 以启动程序, 然后使用图章垫来绘制带有简单颜色和动物标记的图片。
+        # 印台\r
+        \r
+        点击“运行”来开始程序。然后用印台来画简单颜色和动物邮票的图画。\r
       CSD U3 Expressions calculator_markdown_instruction: |-
         # Adding and Multiplying\r
         \r
@@ -7510,11 +7730,25 @@
         * Set the `visible` property
         of each bee inside both the if and else statements appropriately to make the
         bees only show near the flower.
-      CSD U3 Input Fish_markdown_instruction: "#带箭的鱼\\r\\r鱼回来了。你可以只在按下左箭头键时让鱼向左移动吗？
-        \\r \\r # 请操纵这些\\r\\r*当左箭头压下去的时候，添加如果语句以检查.\\r* 移动命令让鱼移动到如果语句中。"
-      CSD U3 Input Gears_markdown_instruction: '# 带条件的齿轮 \r \r 让我们仅当空间键被按住时才使齿轮旋转.
-        \r \r # 请操作这些\r\r*添加 "如果" 语句. \r*使用 "keyDown" 作为 如果语句的输入, 以检查何时按下空格键.\r* 移动代码,
-        使齿轮在 '' 如果 ''里旋转。'
+      CSD U3 Input Fish_markdown_instruction: |-
+        # 鱼和方向键\r
+        \r
+        这条鱼回来了。你能让鱼只有在按下左键时才往左移动吗？\r
+        \r
+        # 做这些\r
+        \r
+        * 增加如果语句来检查是否左方向键按下了。\r
+        * 将移动鱼的命令挪到如果语句里。
+      CSD U3 Input Gears_markdown_instruction: |-
+        # 齿轮和条件语句\r
+        \r
+        让我们只让齿轮在按住空格键时才旋转。\r
+        \r
+        # 做这些\r
+        \r
+        * 增加一个`if` （如果）语句。\r
+        * 用`keyDown`（按下键时）当做如果语句的输入来检查是否空格键被按下了。\r
+        * 把让齿轮旋转的代码挪到`if`（如果）语句中。
       CSD U3 Interactive Card Background_markdown_instruction: |-
         # Laying Out Your
         Background\r
@@ -7641,13 +7875,23 @@
         **Challenge:**
         Can you create more sophisticated conditionals by nesting them or using compound
         booleans?
-      CSD U3 Keyboard Input Challenge_markdown_instruction: '#挑战\r在尝试这一挑战之前, 先和你的老师_核对.\r\r
-        这是你在过去几个关卡上一直在做的 臭虫 程序。选择一个或多个以下挑战, 或添加您自己的新功能! \r\r* 使用 "空格" 键来控制您的 臭虫精灵的另一个属性,
-        如旋转或缩放. \r*为您的移动添加一些随机化. \r * 用不同的键 ("w", "a", "s", 和 "d" 是共同的选择) 来添加第二个精灵，\r*在背景中添加一些形状,
-        使场景更有趣。'
-      CSD U3 Keypress Boolean Predict_markdown_instruction: '#做出预测: keyDown () \r
-        "keyDown ()" 块是一组新块的第一块, 它将让我们从用户那里得到回馈。这是我们在实际制作游戏时的第一步! 看看你是否能找出 "keyDown
-        ()" 块是如何工作的. 当\r\r你运行程序并按下 "向上" 箭头时, 你认为会发生什么？在下面写下你的预测, 然后运行程序, 看看你的预测是否准确。'
+      CSD U3 Keyboard Input Challenge_markdown_instruction: |-
+        # 挑战\r
+        _在尝试挑战前，先与你的老师商量一下。_\r
+        \r
+        这是前几关中你做过的虫子的程序。选择一个或几个挑战，或者添加一个你自己的功能！\r
+        \r
+        * 用空格键来控制你的虫子精灵的另一个属性，比如旋转或者缩放。\r
+        *
+        添加一些随机数到移动过程里。\r
+        * 添加第二个精灵，并用另一组键来控制它（一般大家会用"w", "a", "s", 和 "d"）。\r
+        * 在背景中加一些形状来让场景看起来更有趣。
+      CSD U3 Keypress Boolean Predict_markdown_instruction: |-
+        # 做出预测：
+        keyDown()（按下键时）\r
+        `keyDown()`（按下键时）模块是我们的第一个能从用户得到输入的模块。这是我们做一个真正的游戏的第一步！看看你是否能明白`keyDown()`（按下键时）模块是如何工作的。\r
+        \r
+        你觉得当你运行程序并按下”上方向键”时会发生什么？将你的预测写下来，并运行程序来看看你的预测是否精确。
       CSD U3 Keypress Boolean embed_markdown_instruction: |-
         # Prediction - keyDown()\r
         \r
@@ -7686,11 +7930,20 @@
         the up arrow on your keyboard.\r
         * Were you correct? Were you surprised?
         Discuss with a classmate.
-      CSD U3 Keypress Watchers Predict_markdown_instruction: '#作出预测: 用户输入 \r \r 到目前为止,
-        您已经使用 "keyDown" 作为一种让用户控制您程序的方法, 但这只是多种输入方式中的一种。事实上, 只有一种方法优异检测 keypresses_!
-        根据您对按键的反应方式, 您可能还需要使用其他几个块. \r\r请阅读该程序, 并在您按下每一个向上、向下、向左和向右箭头的情况下预测将会发生什么.
-        \r\r在做出预测后, 运行代码, 记下或与邻居共享您的观察.\r\r "keyDown ()"、"keyWentDown ()" 和 "keyWentUp
-        ()" 之间的区别是什么？\r你怎么看在第10 行的感叹号 ("!") ？\r你怎么使用游戏中不同的按键块？'
+      CSD U3 Keypress Watchers Predict_markdown_instruction: |-
+        # 做出预测：用户输入\r
+        \r
+        目前，你已经学会用`keyDown`（按下键时）来让用户控制你的程序了，但这只是多种输入方法中的一种。实际上这只是很多种_检测键盘按下_方法中的一种！取决于你希望怎样对按下键进行响应，这里可能有一些其它你想用的模块。\r
+        \r
+        读读程序，预测一下当你按下上、下、左、右方向键时会发生什么。\r
+        \r
+        当你做出预测后，运行代码并写下来，或者与邻近的同学分享你的发现。\r
+        \r
+        *
+        `keyDown()`（按下键时）, `keyWentDown()`（键被按下时），和
+        `keyWentUp()`（键被释放时）事件看上去有什么不同？\r
+        * 你觉得第10行的(`!`)（叹号）的作用是什么？\r
+        * 你在游戏中会如何使用不同的按键相关的事件模块？
       CSD U3 Keypress Watchers_markdown_instruction: |-
         # More Ways to Get User Input\r
         \r
@@ -7718,65 +7971,204 @@
             * How
         might you use the different keypress blocks in a game?
       CSD U3 L11 Freeplay_markdown_instruction: |
-        # 自由播放 \r\r 使用你所学到的东西来创造你想要的东西。 当你完成后, 你可以点击![] (https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM. png) 将您的创作发送给朋友, 或![] (https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM. png) 将其发送到您的项目库。
-      CSD U3 L12 Freeplay_markdown_instruction: "# 自由播放 \\r\\r 使用你所学到的东西来创造你想要的东西。
-        当你完成后, 你可以点击![] (https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM. png) 将您的创作发送给朋友, 或![] (https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM. png) 将其发送到您的项目库。"
+        # 自由发挥\r
+        \r
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) 将它发送到你的作品集里。\r
+      CSD U3 L12 Freeplay_markdown_instruction: |-
+        # 自由发挥\r
+        \r
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) 将它发送到你的作品集里。
       CSD U3 L13 Freeplay_markdown_instruction: |
-        # 自由播放 \r\r 使用你所学到的东西来创造你想要的东西。 当你完成后, 你可以点击![] (https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM. png) 将您的创作发送给朋友, 或![] (https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM. png) 将其发送到您的项目库。
-      CSD U3 L15 Freeplay_markdown_instruction: "# 自由播放 \\r\\r 使用你所学到的东西来创造你想要的东西。
-        当你完成后, 你可以点击![] (https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM. png) 将您的创作发送给朋友, 或![] (https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM. png) 将其发送到您的项目库。"
+        # 自由发挥\r
+        \r
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) 将它发送到你的作品集里。\r
+      CSD U3 L15 Freeplay_markdown_instruction: |-
+        # 自由发挥\r
+        \r
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) 将它发送到你的作品集里。
       CSD U3 L16 Freeplay_markdown_instruction: |
-        # 自由播放 \r\r 使用你所学到的东西来创造你想要的东西。 当你完成后, 你可以点击![] (https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM. png) 将您的创作发送给朋友, 或![] (https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM. png) 将其发送到您的项目库。
+        # 自由发挥\r
+        \r
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) 将它发送到你的作品集里。\r
       CSD U3 L17 Freeplay_markdown_instruction: |
-        # 自由播放 \r\r 使用你所学到的东西来创造你想要的东西。 当你完成后, 你可以点击![] (https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM. png) 将您的创作发送给朋友, 或![] (https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM. png) 将其发送到您的项目库。
+        # 自由发挥\r
+        \r
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) 将它发送到你的作品集里。\r
       CSD U3 L18 Freeplay_markdown_instruction: |
-        # 自由播放 \r\r 使用你所学到的东西来创造你想要的东西。 当你完成后, 你可以点击![] (https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM. png) 将您的创作发送给朋友, 或![] (https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM. png) 将其发送到您的项目库。
+        # 自由发挥\r
+        \r
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) 将它发送到你的作品集里。\r
       CSD U3 L19 Freeplay_markdown_instruction: |
-        # 自由播放 \r 使用你所学到的东西来创造你想要的东西。 当你完成后, 你可以点击![] (https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM. png) 将您的创作发送给朋友, 或![] (https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM. png) 将其发送到您的项目库。
+        # 自由发挥\r
+        \r
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) 将它发送到你的作品集里。\r
+        \r
       CSD U3 L3 Freeplay_markdown_instruction: |
-        # 自由播放 \r\r 使用你所学到的东西来创造你想要的东西。 当你完成后, 你可以点击![] (https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM. png) 将您的创作发送给朋友, 或![] (https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM. png) 将其发送到您的项目库。\r\r\r\r
+        # 自由发挥\r
+        \r
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) 将它发送到你的作品集里。\r
+        \r
+        \r
+        \r
       CSD U3 L4 Freeplay_markdown_instruction: |
-        # 自由播放 \r\r 使用你所学到的东西来创造你想要的东西。 当你完成后, 你可以点击![] (https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM. png) 将您的创作发送给朋友, 或![] (https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM. png) 将其发送到您的项目库。\r\r\r\r
+        # 自由发挥\r
+        \r
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) 将它发送到你的作品集里。\r
+        \r
+        \r
+        \r
       CSD U3 L5 Freeplay_markdown_instruction: |
-        # 自由播放 \r\r 使用你所学到的东西来创造你想要的东西。 当你完成后, 你可以点击![] (https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM. png) 将您的创作发送给朋友, 或![] (https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM. png) 将其发送到您的项目库。\r\r\r\r
+        # 自由发挥\r
+        \r
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) 将它发送到你的作品集里。\r
+        \r
+        \r
+        \r
       CSD U3 L6 Freeplay_markdown_instruction: |
-        # 自由播放 \r\r 使用你所学到的东西来创造你想要的东西。 当你完成后, 你可以点击![] (https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM. png) 将您的创作发送给朋友, 或![] (https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM. png) 将其发送到您的项目库。
-      CSD U3 L7 Freeplay_markdown_instruction: "# 自由播放 \\r\\r 使用你所学到的东西来创造你想要的东西。
-        当你完成后, 你可以点击![] (https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM. png) 将您的创作发送给朋友, 或![] (https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM. png) 将其发送到您的项目库。"
+        # 自由发挥\r
+        \r
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) 将它发送到你的作品集里。\r
+      CSD U3 L7 Freeplay_markdown_instruction: |-
+        # 自由发挥\r
+        \r
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) 将它发送到你的作品集里。
       CSD U3 L9 Freeplay_markdown_instruction: |
-        # 自由播放 \r\r 使用你所学到的东西来创造你想要的东西。 当你完成后, 你可以点击![] (https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM. png) 将您的创作发送给朋友, 或![] (https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM. png) 将其发送到您的项目库。
+        # 自由发挥\r
+        \r
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) 将它发送到你的作品集里。\r
       CSD U3 Mouse Input Bee 1_markdown_instruction: |
-        <img src="https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif" style="float:right"> \r \r # 鼠标 x 和 Y \r \r 最简单的输入方式之一就是让精灵跟随用户的鼠标位置. ** 你可以得到 X和 y 位置的鼠标使用 "世界. mouseX" 和 "世界. 老鼠". ** 这遵循了使用 "精灵属性" 学习的模式。"世界" 是对象的名称。"mouseX" 和 "老鼠" 是属性的名称. \r \r #请操作这个\r\r 你要让一个蜜蜂精灵跟随鼠标围绕着游戏区域. \r\r 已在 "动画" 选项卡中为您加载了蜜蜂映像. \r创建一个蜜蜂精灵, 让它在中心窗口. \r在绘图循环中, 将精灵的位置更新为鼠标的位置: \r 将精灵的 x 位置设置为 "世界mouseY" 的值. \r将精灵的 y 位置设置为 "世界mouseY" 的值. \r. 运行程序来测试结果。
-      CSD U3 Mouse Input Bee 2_markdown_instruction: '# 随机围绕点 \r \r <img src="https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif"
-        style="float:right"> \r \r 现在您可以让蜜蜂跟随鼠标, 让蜜蜂在鼠标周围飞行, 如图所示在右边。 为了做到这一点, 你需要
-        ** 在-50 和50之间添加一个随机数量的 "mouseX" 或 "老鼠". * \r\r 请执行此操作 \r 您已经有一个跟随鼠标的蜂精灵. \r\r
-        将 x 和 y 位置更新为随机靠近鼠标. \r添加一个随机介于-50 和50之间的 数到'' 世界. mouseX '' 和 '' 世界. 老鼠 ''.\r
-        如果有必要, 使用 "世界帧块“来减慢动画速度, 并找到最佳帧速率\r\r. _挑战: ** 再加3只蜜蜂, 以同样的方式来做成群的蜜蜂。'
-      CSD U3 Movement Fish_markdown_instruction: '<img src="https://images.code.org/7852ab38a8222ee827edeff2767e8efd-image-1492037897236.gif"
-        style="float: right; margin-left: 20px;"> \r\n 鱼动画 \r \r 使用计数器模式, 使所有三的鱼在图像中向右移动。蓝色的鱼应该移动的最快,
-        其次是橙色的鱼, 绿色的鱼是最慢的。'
+        <img src="https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif"
+        style="float:right">\r
+        \r
+        # 鼠标的X和Y\r
+        \r
+        最简单的输入方式之一，就是让一个精灵跟随用户的鼠标位置。
+        **你能通过`World.mouseX`和`World.mouseY`来获得鼠标的x、y值。**这和你以前学的精灵的属性是一致的。`World`是目标对象的名字。`mouseX`和`mouseY`是属性的名字。\r
+        \r
+        #
+        做这些\r
+        \r
+        让蜜蜂精灵在游戏区域跟随鼠标。\r
+        \r
+        * 蜜蜂图片已经帮你加到了动画标签页。\r
+        * 在窗口中间画出蜜蜂精灵。\r
+        *
+        在画图循环里更新精灵的位置来跟随鼠标的位置。：\r
+        \t* 将精灵的x位置设置为`World.mouseX`的值。\r
+        *
+        将精灵的y位置设置为`World.mouseY`的值。\r
+        * 运行程序来看看它是否工作。\r
+      CSD U3 Mouse Input Bee 2_markdown_instruction: |-
+        # 随机围绕某点\r
+        \r
+        <img
+        src="https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif"
+        style="float:right">\r
+        \r
+        现在你能让蜜蜂跟随鼠标了，让我们像右边的图一样，让蜜蜂在鼠标周围飞行。要做到这样，你需要**增加一个-50到50的随机数到`mouseX`或`mouseY`上**。\r
+        \r
+        # 做这些\r
+        你已经有了一个跟随鼠标的蜜蜂精灵了。\r
+        \r
+        * 更新x和y的位置，让它随机的靠近鼠标。\r
+        \t* 添加一个-50到50的随机数到`World.mouseX`和`World.mouseY`。\r
+        * 如果需要的话，可以用`World.frameRate`模块来减缓动画，找到最佳帧率。\r
+        \r
+        _挑战
+        再**增加3只蜜蜂**以同样的方法来跟随鼠标，从而形成蜂群。_
+      CSD U3 Movement Fish_markdown_instruction: |-
+        <img src="https://images.code.org/7852ab38a8222ee827edeff2767e8efd-image-1492037897236.gif"
+        style="float: right; margin-left: 20px;">\r
+        \r
+        # 鱼与动画\r
+        \r
+        用计数器的模式，来让这三条鱼都从图片移动到左边。蓝色的鱼要移动得最快，橙色的鱼跟在后面，绿色的鱼最慢。
       CSD U3 Movement Gears_markdown_instruction: |-
         <img src="https://images.code.org/eac110e64ccad62482c82d4ef66f237b-image-1465518920408.gif"
-        style="width:200px; float:right; margin-left: 20px;">\r\r#旋转方向\r\r
-        当您使用 "旋转" 属性的计数器模式时, 对象将始终顺时针旋转。但有时你会希望你的精灵旋转另一个方向。要做到这一点, 你可以只使用减法! \r \r#请操作这些\r\r 有三齿轮已经为您设置好。你需要使所有的齿轮看起来像他们在同步旋转. \r\r*使齿轮旋转, 使他们看起来像一个系统的工作. \r\r*** 提示: 它们不会全部旋转相同的方向 **。
-      CSD U3 Movement Your Own 1_markdown_instruction: '#制作自己的动画 \r \r 使用计数器模式和精灵属性,
-        制作自己的动画。你可以考虑建立在你过去做过的静态图像上, 或者拿出一个新的图像来创建或讲述. \r \r#这样操作\r\r 让我们先设置静态场景开始.\r\r
-        *在 "动画" 选项卡中添加图像. \r\r*创建精灵并分配图像. \r * 设置绘制循环以绘制背景和精灵。'
-      CSD U3 Movement Your Own 2_markdown_instruction: '# 添加动作到您的动画 \r \r 你现在可以添加一些动作在您的静态场景设置里。当您对您的程序感到满意时,
-        单击 "提交" 按钮将其打开。如果要添加功能, 您可以随时 取消递交并继续工作. \r\r#请操作这些\r\r 在绘图循环 \r \r * 确定要更改的精灵属性.
-        \r * 使用计数器模式更新这些属性. _提示: 如果你的计数器模式不像您希望的那样，添加观察程序来帮助调试您的应用程序。'
-      CSD U3 Plotting Shapes Shape Lab Open_markdown_instruction: '# 绘图形状 \r \r 使用此工具可以绘制不同颜色的形状。\r
-        \r 确保您命中 "运行", 并尝试打开网格以帮助您精确地放置形状。[] (https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
-        PM. png)'
-      CSD U3 Plotting Shapes Shape Lab_markdown_instruction: '# 绘图形状 \r \r 使用此工具可以绘制不同颜色的形状。\r
-        \r 确保您命中 "运行", 并尝试打开网格以帮助您精确地放置形状。[] (https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
-        PM. png)'
+        style="width:200px; float:right; margin-left: 20px;">\r
+        \r
+        # 旋转方向\r
+        \r
+        当你在`rotation`（旋转）属性上使用计数器模式时，目标总是正时针方向旋转。有时，你需要让精灵反过来旋转。你能通过减法做到这点！\r
+        \r
+        # 做这些\r
+        \r
+        这里为你设置了三个齿轮。你需要让它们看起来像是在同步旋转。\r
+        \r
+        * 让齿轮同步旋转起来，就像是一个系统。\r
+        * **提示：它们不能往同一个方向旋转**。
+      CSD U3 Movement Your Own 1_markdown_instruction: |-
+        # 制作自己的动画\r
+        \r
+        用计数器模式和精灵的属性来创造属于自己的动画。你可以用以前做的静态图，或者新的图片来创造故事。\r
+        \r
+        #
+        做这些\r
+        \r
+        开始时，让我们从设置静态场景开始。\r
+        \r
+        * 添加在动画标签页中的图片。\r
+        * 创建图片，并分配图片。\r
+        * 用画图循环来画背景和你的精灵。
+      CSD U3 Movement Your Own 2_markdown_instruction: |-
+        # 在动画中增加移动\r
+        \r
+        当你设置好静态场景后，可以开始加一些动画了。当你对程序感到满意时，点击“提交”按钮来上传。如果你想添加新功能，可以随时取消提交，并继续工作。\r
+        \r
+        # 做这些\r
+        \r
+        在画图循环中\r
+        \r
+        * 找到需要改动的精灵属性。\r
+        * 用计数器模式来更新属性。\r
+        \r
+        _提示：如果你的计数器模式不像你期待那样工作，添加监视器来帮助调试程序。_
+      CSD U3 Plotting Shapes Shape Lab Open_markdown_instruction: |-
+        # 画形状\r
+        \r
+        探索通过这个工具来画出不同的有颜色的形状。\r
+        \r
+        确保你点击了“运行”并打开网格来帮助精确的放置形状。\r
+        \r
+        ![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
+        PM.png)
+      CSD U3 Plotting Shapes Shape Lab_markdown_instruction: |-
+        # 画形状\r
+        \r
+        探索通过这个工具来画出不同的有颜色的形状。\r
+        \r
+        确保你点击了“运行”并打开网格来帮助精确的放置形状。\r
+        \r
+        ![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
+        PM.png)
       CSD U3 Property Conditional Multi_markdown_instruction: |
         # Get Creative\r
         \r
@@ -7844,9 +8236,14 @@
         _BTW, if you're looking
         for the `keyDown()` block, you'll notice that it's now in the 'Game Lab'
         category._ \r
-      CSD U3 Random Add a Door_markdown_instruction: '<img src="https://images.code.org/fd746a708d8a94ad0aad863f3284a1ad-image-1490826372819.25.25
-        PM.png" style="float:right;height:150px"> \r \r #请操作这些\r\r* 编写代码, 使红色矩形的宽度比绘图中已经有的形状高。*
-        只要您的新矩形更高, 就不要担心确切的尺寸。'
+      CSD U3 Random Add a Door_markdown_instruction: |-
+        <img src="https://images.code.org/fd746a708d8a94ad0aad863f3284a1ad-image-1490826372819.25.25
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # 做这些\r
+        \r
+        * 写代码来创造一个红色的矩形，要比图画中已有的要高。\r
+        * 不用担心确切的尺寸，新矩形只要更高就行。
       CSD U3 Random Animation_markdown_instruction: |-
         <img src="https://images.code.org/f249b981ead9d196b0f136c402dd0c41-image-1478803334302.gif"
         style="float:right; width:200px"/>\r
@@ -7909,17 +8306,40 @@
         \r
         Can you generate random colors that are limited to a narrow
         range of colors, such as a random shade or purple, or a random shade of teal?
-      CSD U3 Random Debug Cloud_markdown_instruction: '<img src="https://images.code.org/529b7e5ddda4683e6a0cc5b3028e4dbf-image-1490824752133.58.50
-        PM.png" style="float:right;height:150px"> \r\r# 调试-使用4参数 \r \r 现在草已经完成, 让我们添加云到天空中。不幸的是,
-        它现在看起来有点滑稽. \r\r#请执行此操作, \r\r调试程序，使该程序的云比它的高还宽，就和图像中那样.\r *提示: 您需要更改两个参数。哪一个是设置你的云的宽度和高度？
-        _挑战: 太阳没有在和图片中一样的地方。你能改变太阳的坐标, 使图片完全匹配吗？'
-      CSD U3 Random Debug Grass_markdown_instruction: '<img src="https://images.code.org/83269268e1c4f8af8551253ff4573b43-image-1490825158453.03.45
-        PM.png" style="float:right;height:150px"> \r \r#调试-使用4参数 \r \r 此程序使用四参数版本的
-        "矩形 ()" 和 "椭圆 () '' 画一个简单的场景. \r \r #请 执行此程序\r\r更正错误, 使草延伸到整个底部. \r提示: 您只需更改一个数字。哪个参数使你的长方形
-        (草) 更宽？'
-      CSD U3 Random Ellipse Behind_markdown_instruction: <img src="https://images.code.org/a8ed6092389aedceceb38a83ac59fae1-image-1490832453029.07.10
-        PM.png" style="float:right;height:150px"> \r\r#请 这样做 \r\r 写代码, 让橙色椭圆在绿色之后.\r*
-        不要担心精确的大小, 只要绿色椭圆形是完全在橙色里面。
+      CSD U3 Random Debug Cloud_markdown_instruction: |-
+        <img src="https://images.code.org/529b7e5ddda4683e6a0cc5b3028e4dbf-image-1490824752133.58.50
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # 调试 - 用4个参数\r
+        \r
+        现在，草地好了。让我们在天上加一朵云。不幸的是，现在看起来有点滑稽。\r
+        \r
+        # 做这些\r
+        \r
+        * 调试程序让云像图片里一样，宽度大于高度。\r
+        * 提示：你需要改动两个参数。哪些设置了云的宽度和高度？\r
+        \r
+        _挑战：太阳和图片中的位置不完全一样。你能改变太阳的坐标，让它和图片里的完全一致吗？_
+      CSD U3 Random Debug Grass_markdown_instruction: |-
+        <img src="https://images.code.org/83269268e1c4f8af8551253ff4573b43-image-1490825158453.03.45
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # 调试 - 用4个参数\r
+        \r
+        这个程序用了`rect()` （矩形）and `ellipse()`（椭圆）的4个参数版本来画一个简单的场景。\r
+        \r
+        # 做这些\r
+        \r
+        * 调试程序并改正错误，让草地延伸到整个底部。\r
+        * 提示：你只需要改动一个数字。那个参数让你的矩形（草地）更宽？
+      CSD U3 Random Ellipse Behind_markdown_instruction: |-
+        <img src="https://images.code.org/a8ed6092389aedceceb38a83ac59fae1-image-1490832453029.07.10
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # 做这些\r
+        \r
+        * 写代码在绿色椭圆后面画一个橙色的椭圆。\r
+        * 别担心确切的尺寸，只要整个绿色椭圆在橙色里就行。
       CSD U3 Random FreeResponse_markdown_instruction: |-
         # Randomness\r
         \r
@@ -8006,25 +8426,25 @@
         \r
         Can you come up with a range that includes negative
         numbers? What about both positive and negative ones?
-      CSD U3 Random Number Map_markdown_instruction: "# 随机数字\\r\n\\r\n# 使用随机数字\\r\n\\r\n`随机数字()`
-        模块可以在程序里用来生成随机数字。 \n它可以在单一数字里使用，这样每次你的程序都会运行有点不一样。 \\r\n\\r\n![](https://images.code.org/ef48e7f0312a567eca8641f349968c2a-image-1491521271912.27.09\nPM.png)\\r\n\\r\n<img
+      CSD U3 Random Number Map_markdown_instruction: "# 随机数字\\r\n\\r\n# 使用随机数字\\r\n\\r\n`randomNumber()`（随机数字）模块可以在程序里用来生成随机数字。
+        \n它可以在用单个数字的地方使用，这样每次你的程序都会运行有点不一样。 \\r\n\\r\n![](https://images.code.org/ef48e7f0312a567eca8641f349968c2a-image-1491521271912.27.09\nPM.png)\\r\n\\r\n<img
         src=\"https://images.code.org/246e7ac850015aa830d469b7eeb5f00e-image-1491523022253.50.04\nPM.png\"
         style=\"float:left;width:150px\">\\r\n\\r\n<img src=\"https://images.code.org/01b10dc034475fd5a90bd3c7bd0c51b8-image-1491523025607.50.17\nPM.png\"
         style=\"float:left;width:150px\">\\r\n\\r\n<img src=\"https://images.code.org/0f0c3cc4d42923dc4321809daf189053-image-1491523028093.50.49\nPM.png\"
-        style=\"float:left;width:150px\">\\r\n\\r\n`随机数字()` 有两参数，可供在最大和最小间选择。 如果你愿意的话，你也可以让这些数字变负数。
-        \\r\n\\r\n#绘画和随机数字\\r\n\\r\n在该程序下面，你可以看到3个可能输出的结果实例。请注意虽然它是同一个程序，每次产生的图片都不一样。
-        \\r\n\\r\n你可以在你的程序里多次使用`随机数字()`指令。每次它都使用一个新产生的随机数字。 \\r\n\\r\n![](https://images.code.org/2c562cef4ef69c163db2b183225ee954-image-1491522524705.48.33\nPM.png)"
+        style=\"float:left;width:150px\">\\r\n\\r\n`randomNumber()`（随机数字）有两个参数，用来选择最大值和最小值。如果需要的话，也可以让这些数字是负数。\\r\n\\r\n#
+        绘画和随机数字\\r\n\\r\n在该程序下面，你可以看到3个可能输出的结果示例。请注意虽然它是同一个程序，每次产生的图片都不一样。 \\r\n\\r\n你可以在你的程序里多次使用`randomNumber()`（随机数字）指令。每次它都使用一个新产生的随机数字。
+        \\r\n\\r\n![](https://images.code.org/2c562cef4ef69c163db2b183225ee954-image-1491522524705.48.33\nPM.png)"
       CSD U3 Random Taller Rectangle_markdown_instruction: |
         <img src="https://images.code.org/02871e5c5d041ea1724e4a02d3697941-image-1492721665345.54.10
         PM.png" style="float:right;height:150px; border: 1px solid #CCC">\r
         #
-        矩形大小\r
+        矩形尺寸\r
         \r
-        这些“矩形”模块有两个以上参数你可以用来控制大小。 请留意“`noStroke()` 模块会让形状的消失。\r
+        这些“矩形”模块有两个以上的参数你可以用来控制大小。 请留意`noStroke()`（不要描边） 模块会让形状的描边（边框）消失。\r
         \r
-        #请操作以下\r
+        #做这些\r
         \r
-        * 看看编码，试着找出”矩形“的两个输入量是如何工作的。 \r
+        * 看看编码，试着找出”矩形“后两个参数的作用。 \r
         * 改变第二个”矩形“的数字使得红色的矩形比蓝色的更长。\r
       CSD U3 Random Width Height_markdown_instruction: |-
         # Randomized Shapes\r
@@ -8046,25 +8466,73 @@
         \r
         _Notice that the `console.log()` block is now in
         the Variables drawer and the `randomNumber()` block is in the Math drawer._
-      CSD U3 Random background_markdown_instruction: '# 背景 \r \r 有时您需要用颜色填充整个屏幕。 为此,
-        您可以使用 "背景"。 它涵盖了屏幕上的所有内容和您选择的颜色. \r \r # 请操作以下\r\r*运行代码让 "背景"工作. \r*将背景从黄色更改为橙色.
-        \r\r*挑战: 有一个紫色的正方形, 它被背景覆盖。 您是否可以更改代码的顺序, 以便您可以看到紫色和蓝色正方形？'
-      CSD U3 Random background2_markdown_instruction: '<img src="https://images.code.org/a68cfd23a13b6bdeef91dc9fd584f657-image-1491332601738.03.04
-        PM.png" style="float:right;height:150px"> \r\r #背景 \r "背景 ()" 将绘制在绘图中的所有内容的顶部,
-        因此考虑代码的顺序很重要.\r\r#请操作以下\r\r* 请使用 "背景 ()" 来制作绿色圆圈后面的 "黑色" 背景。'
-      CSD U3 Random rainbow snake_markdown_instruction: '<img src="https://images.code.org/d1e4780e483ffa510a27e91b2b1f1963-image-1491341267537.26.14
-        PM.png" style="float:right;height:150px"> "彩虹蛇 \r\r" 这个程序画了一条非常稀有的彩虹蛇品种。为了使蛇画的不同,
-        每次你需要使用随机数. \r\r 请运行该程序\r\r*运行程序多次来查看初学者代码是如何工作的. \r*为您的彩虹蛇添加至少三新的不同颜色的圆圈.
-        \r*使用 "randomNumber ()" 来 使蛇身体的其余部分像前三一样上下移动. \r\r*挑战: 你也能把一些圆圈的大小随机化吗？'
-      CSD U3 Random random ellipse_markdown_instruction: '# 随机数 \r \r "randomNumber
-        ()" 选择一个介于最小值和最大数值之间的随机数字。您可以使用此代码, 而不是写入特定的数字。 如果你用随机数画图, 每次你运行程序，图每次会看起来有点不同
-        \r\r 请操作以下\r\r*多次运行程序, 看看它是如何工作的. \r* 更改 "randomNumber" 中的数字并再次运行代码, 查看有什么变化。'
-      CSD U3 Random random ellipse2_markdown_instruction: '<img src="https://images.code.org/ff3be801c7e634d49584aac103df292a-image-1491334428729.33.18
-        PM.png" style="float:right;height:150px"> \r\r# 随机数 \r \r 这是与上次相同的太阳。 现在只有
-        x 坐标是随机的, 但是你也可以使 y 坐标随机, \r \r #请操作以下\r\r* 对椭圆的 y 参数使用 "randomNumber ()",
-        这样就可以在随机的 y 位置绘制圆. \r*只要你的圆圈出现在随机的 x 和 y位置, 你可以继续'
+      CSD U3 Random background_markdown_instruction: |-
+        # 背景\r
+        \r
+        有时，你可能像给整个屏幕都填上同一种颜色。你可以用`background`（背景）来做到这样。它会用你选择的颜色来覆盖整个屏幕。\r
+        \r
+        #
+        做这些\r
+        \r
+        * 运行代码，看看`background`（背景）是如何起作用的。\r
+        * 将北京颜色从黄色改为橙色。\r
+        \r
+        *挑战：这里有一个紫色正方形被背景覆盖了。你能改变代码的顺序同时看见紫色和蓝色正方形吗？*
+      CSD U3 Random background2_markdown_instruction: |-
+        <img src="https://images.code.org/a68cfd23a13b6bdeef91dc9fd584f657-image-1491332601738.03.04
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # 背景\r
+        \r
+        `background`（背景）会在所有元素上画图像。因此，考虑代码的顺序是非常重要的。\r
+        \r
+        # 做这些\r
+        \r
+        * 使用`background`（背景）在绿色圆圈后画一个”black"（黑色）的背景。
+      CSD U3 Random rainbow snake_markdown_instruction: |-
+        <img src="https://images.code.org/d1e4780e483ffa510a27e91b2b1f1963-image-1491341267537.26.14
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # 彩虹蛇\r
+        \r
+        这个程序画了一条罕见的彩虹蛇。要让每次画出来蛇的颜色都不同，你需要用到随机数。\r
+        \r
+        # 做这些\r
+        \r
+        * 运行几次程序来看看初始的的代码是如何起作用的。\r
+        * 给你的彩虹蛇增加至少三个不同颜色的圆圈。\r
+        * 使用`randomNumber()`（随机数字）来让蛇的后半部分像前面3段一样上下移动。\r
+        \r
+        *挑战：你能让一些圆圈的大小也随机吗？*
+      CSD U3 Random random ellipse_markdown_instruction: |-
+        # 随机数\r
+        \r
+        `randomNumber()`（随机数字）会在最小值和最大值之间选一个随机数。你能用这个代替直接写出数字。如果你在图画中用了随机数字，它会在每次运行程序时，都有些不同。\r
+        \r
+        # 做这些\r
+        \r
+        * 运行几次程序来看看它是如何工作的。\r
+        * 改变`randomNumber`（随机数字）里面的数字，并且再运行几次代码，看看有什么不同。
+      CSD U3 Random random ellipse2_markdown_instruction: |-
+        <img src="https://images.code.org/ff3be801c7e634d49584aac103df292a-image-1491334428729.33.18
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # 随机数\r
+        \r
+        这是和上次一样的太阳。现在只有x轴坐标是随机的，但你可以把y轴坐标也改成随机的。\r
+        \r
+        # 做这些\r
+        \r
+        * 用`randomNumber()`（随机数字）来设置椭圆的Y参数，这样能让圆圈也画在随机的Y轴位置上。\r
+        * 当你的圆圈的x和y轴都随机变化了，就可以继续下一关了。
       CSD U3 Scene Example_markdown_instruction: |
-        # 精灵场景 \r\r 通过组合形状, 精灵, 和一个新的块称为 ' 文本 ', 你可以创建简单的场景, 故事, 或漫画。虽然这个例子相当简单, 您可以将尽可能多的子画面和形状组合在一起, 以创建复杂或详细的场景. \r\r#在继续之前, 请先画出一个你想在课程最后做的场景. 请考虑您过去使用过的简单形状、用精灵作为您的角色以及您在屏幕上想要的任何文本。一旦你勾画出一个想法, 你就会学习 "文本" 以及如何组成一个场景。
+        # 精灵场景\r
+        \r
+        通过将形状、精灵和一个新的，叫做`text`（文本）的模块组合在一起，你能创建一个简单的场景、故事或漫画。这个例子非常简单，但你可以组合更多的精灵、形状来创建自己想要的复杂、细致的场景。\r
+        \r
+        ## 画出轮廓\r
+        \r
+        在开始之前，先花点时间来给下课前要画完的场景画一个轮廓。思考一下以前用过的简单形状，角色精灵，以及想要显示在屏幕上的文本。一旦你勾勒出了创意，你可以学习`text`（文本），以及增氧组合出一个场景。\r
       CSD U3 Simple Drawing - Animation 2_markdown_instruction: |-
         # Rays of Sunshine\r
         \r
@@ -8146,13 +8614,30 @@
         * Use `randomNumber()` in the inputs of some of your shapes\r
         *
         Set the speed of your animation using the `World.frameRate` block\r
-      CSD U3 Sprite Movement Left_markdown_instruction: '<img src="https://images.code.org/9f9162cb94a02d9b3aba9b6067d0281a-image-1491862771496.gif"
-        style="float: right; margin-left: 20px"> \r\r# 移动到左侧 \r 如果添加到一个精灵的 x 坐标, 使它向右移动,
-        你怎么能使它向左移动？ \r\r请操作以下\r \r 使您的程序像右侧的图像一样具有动画效果。在绘制循环中更新 "飞". x ", 这样在每个框中,
-        苍蝇就会被画到左边.\r\r _提示: 您可以通过添加或减去较大的数字, 使您的精灵移动得更快一些。在我们的例子中, 苍蝇的移动速度是最后一级的两倍。'
+      CSD U3 Sprite Movement Left_markdown_instruction: |-
+        <img src="https://images.code.org/9f9162cb94a02d9b3aba9b6067d0281a-image-1491862771496.gif"
+        style="float: right; margin-left: 20px">\r
+        \r
+        # 向左移动\r
+        \r
+        如果给x坐标加上一个数，会让它往右移动。那么怎样让它向左移动呢？\r
+        \r
+        # 做这些\r
+        \r
+        像右边的图片一样，让你的程序有动画。更新画图循环里的`fly.x`，从而让绘制每一帧时x轴都会往右一点。\r
+        \r
+        _提示：你能通过加减大一点的数让精灵移动得更快一些。在我们例子中的苍蝇的速度大概是上一关中飞机速度的两倍。_
       CSD U3 Sprite Movement Right_markdown_instruction: |
         <img src="https://images.code.org/629bc615a879f0f3dc9f290bea2358c8-image-1491861334164.gif"
-        style="float: right; margin-left: 20px">\r\r# 精灵移动 \r \r, 您可以编写程序, 使精灵的动画流畅。在绘制循环中添加或删除精灵的 "x" 或 "y" 属性会使您的精灵在每次重绘时移动一点点. \r \r#请操作以下\r\r 使您的程序像右边的图像一样进行动画处理。我们已经在绘图循环中添加了一条更新 "plane.x" 的行, 请完成它。
+        style="float: right; margin-left: 20px">\r
+        \r
+        # 精灵移动\r
+        \r
+        通过计数器模式，你能写程序让精灵动画更流畅。增加或减少画图循环里精灵的`x`或`y`属性，能让每次重绘时，它都移动一点。\r
+        \r
+        # 做这些\r
+        \r
+        向右边的图片一样，在你的程序里实现动画。我们已经在绘画循环里加了一样来更新`plane.x`，但代码还需要完成。\r
       CSD U3 Sprites Template race_markdown_instruction: |
         # Putting it All Together\r
         \r
@@ -8211,28 +8696,68 @@
         use the counter pattern here? Look at the code for the redSprite if you need
         help.\r
         * Your animation should look like the example at the right.
-      CSD U3 Sprites anitab 1_markdown_instruction: '# 图像 \r \r 在 ** 动画选项卡 ** 上, 您将看到已为您加载的三图像。您可以通过单击显示区域上方的
-        ** 动画 ** 按钮来进入 "动画" 选项卡. \r \r <img src="https://images.code.org/f694a37bbadcf0533e7b19d8c0f5309b-image-1465580394090.35.11
-        PM.png" style="width:300px;float:right"> \r \r您已经创建了一个精灵, 您可以 ** 使用 "精灵. setAnimation
-        ()" 命令将您的精灵从矩形中的外观更改为图片. ** 在 "动画" 选项卡中加载的所有图像都显示在 "精灵. setAnimation ()" 下拉列表中。
-        外星人是为你设立的一个例子. \r \r #请操作以下\r 在 "动画" 选项卡中, 将 "精灵" 更改为您最喜爱的图像. \r\r* 已为您创建了一个已设置为图像的精灵.
-        \r*运行代码以查看其工作原理. 更改输入到 "setAnimation" 命令来更改精灵的外观. *尝试所有不同的图像。'
-      CSD U3 Sprites anitab 2_markdown_instruction: |-
-        上传你自己的风筝图像，有着透明背景的图片最好使用。\打开动画表\r\r点击<img src="https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05
-        PM.png" style="width:50px">，然后<img src="https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16
-        PM.png" style="width:50px"> 来上传一个图片。\r* 重新命名你的图片以方便记忆。 点击图片下的文本来重命名。\r
-        * 返回编程模式，使用`sprite.setAnimation()`来让你的”风筝“精灵展示新动画给你。 \r
+      CSD U3 Sprites anitab 1_markdown_instruction: |-
+        # 图像\r
         \r
-        不要担心如果你的风筝太大。 你将在下关学到如何修复它。
-      CSD U3 Sprites anitab 3_markdown_instruction: '#用比例调整大小\r\r 在工具箱的 _Sprites_
-        抽屉中，您将看到一个新的块名为 "精灵。比例"。它允许您在原大小的情况下更改精灵的大小。"精灵. 比例 = 1" 是正常大小。"精灵. 缩放 = 0.5"
-        使你的精灵一半大, 而 ''精灵. 缩放 = 2 "使其加倍大. \r \r #请操作以下\r\r该程序应该已经包括了新上传的图像, 但它可能不是
-        _完美_ 大小。\r\r _提示：你代码的顺序很重要! 你要在你创建精灵后，用”画精灵“来画精灵前添加”精灵。大小“，为了明确起见， 请尝试把所有的精灵代码都放在程序的顶部。'
-      CSD U3 Sprites anitab 4_markdown_instruction: '# 用比例调整大小\r\r在工具箱的 _精灵_ 抽屉中，您将看到一个新的块名为
-        "精灵. 缩放"。这个命令让你改变精灵相对于它原始大小的大小。"精灵. 比例 = 1" 是正常大小。"精灵. 比例 = 0.5" 将使你的精灵一半大,
-        而 '' 精灵. 缩放 = 2 "会使它加倍大. \r\r#请操作这些\r\r在这时候， 程序应该包括您新上传的图像, 但它可能不是 _完美_ 大小。添加
-        "精灵. 缩放" 块以更改 "风筝" 精灵的大小. _提示: 代码的顺序很重要! 你需要添加 '' 精灵.在你创建好精灵以后，但有又是在你用 "drawSprites
-        ()" 来绘制精灵之前。为了清晰起见, 请尝试将所有的精灵代码放在程序的顶部。'
+        通过**动画标签页**，你能看见这里已经为你加上了三个图片。你可以通过点击**动画**按钮来到达显示区域上的动画标签页。\r
+        \r
+        <img src="https://images.code.org/f694a37bbadcf0533e7b19d8c0f5309b-image-1465580394090.35.11
+        PM.png" style="width:300px;float:right">\r
+        \r
+        一旦你创建了一个精灵，你能**用`sprite.setAnimation()`（精灵.设置动画）命令来将精灵从一个矩形改变成一张图片。** 你已经加载的图片都在动画标签页里，显示在`sprite.setAnimation()`的下拉菜单里。这个外星人是个例子。\r
+        \r
+        # 做这些\r
+        从动画标签页里选择你喜欢的图片来改变精灵。\r
+        \r
+        * 这里已经为你创建了一个设置好图片的精灵了。\r
+        * 运行代码看看是如何工作的。\r
+        * 改变`setAnimation`（设置动画）命令的输入来改变精灵的外观。\r
+        * 试试所有不同的图片。
+      CSD U3 Sprites anitab 2_markdown_instruction: |-
+        # 上传你自己的图片。\r
+        \r
+        你可以用动画标签页来上传或绘制你自己的图片。\r
+        \r
+        #
+        做这些\r
+        接下来会做一个风筝。你可以在网络上搜索图片，或者自己画一个。\r
+        \r
+        *
+        下载你的风筝图片，最好是背景是透明的图片。\r
+        *
+        打开动画标签页。\r
+        * 点击<img src="https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05
+        PM.png" style="width:50px"> 然后用<img src="https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16
+        PM.png" style="width:50px"> 上传图片.\r
+        * 从电脑上选择图片文件。\r
+        * 将图片重命名为好记的名字。点击图片下的文本来重命名。\r
+        * 回到代码模式，用`sprite.setAnimation()`来让`kite`精灵展示新的动画。\r
+        \r
+        如果你的风筝图片太大了，别担心。我们会在下一关学会如何解决它。
+      CSD U3 Sprites anitab 3_markdown_instruction: |-
+        # 用缩放调整尺寸\r
+        \r
+        在工具箱的_精灵_画家里，你能找到一个叫做`sprite.scale`（精灵.缩放）的新模块。
+        它能让你改变图片的相对于原始大小的尺寸。
+        `sprite.scale = 1`表示原始尺寸。`sprite.scale = 0.5`会让图片变成原先的一半大。`sprite.scale = 2`会让它是两倍大。\r
+        \r
+        # 做这些\r
+        \r
+        程序已经包含了你新上传的图片，但很可能尺寸不是_完全正确_的。用`sprite.scale`来改变`kite`精灵的尺寸。\r
+        \r
+        _暗示：代码的顺序很重要！你需要在创建了精灵**以后**，但在用`drawSprites()`（画精灵）之前增加 `sprite.scale`。为了清楚，试着把所有的精灵代码都放到一起，放到程序的最顶部。_
+      CSD U3 Sprites anitab 4_markdown_instruction: |-
+        # 用缩放调整尺寸\r
+        \r
+        在工具箱的_精灵_画家里，你能找到一个叫做`sprite.scale`（精灵.缩放）的新模块。
+        它能让你改变图片的相对于原始大小的尺寸。
+        `sprite.scale = 1`表示原始尺寸。`sprite.scale = 0.5`会让图片变成原先的一半大。`sprite.scale = 2`会让它是两倍大。\r
+        \r
+        # 做这些\r
+        \r
+        现在，程序包含了你新上传的图片，但很可能尺寸不是_完全正确_的。用`sprite.scale`来改变`kite`精灵的尺寸。\r
+        \r
+        _暗示：代码的顺序很重要！你需要在创建了精灵**以后**，但在用`drawSprites()`（画精灵）之前增加 `sprite.scale`。为了清楚，试着把所有的精灵代码都放到一起，放到程序的最顶部。_
       CSD U3 Sprites createSprite params_markdown_instruction: |-
         # createSprite()
         with parameters\r
@@ -8385,10 +8910,13 @@
         Your animation should look like the example at the right.\r
         * Hint: Read
         the code carefully. Is there a logical error?
-      CSD U3 Sprites intro debug_markdown_instruction: "<img src=\"https://images.code.org/63207a624d751aacb376db18cdf09eec-image-1491255841823.png\"\nstyle=\"width:
-        150px; float: right; margin-left: 20px; border: 1px solid #f2f2f2;\">\\r\\r调制（找出错误）\\r\n\\r\n该程序应该创建出两个新的精灵，一个在屏幕的左边，一个在右边。
-        但实际上却只画出一个。** 你不需要添加任何代码**，你只要把所提供的代码重新编排来保证两个精灵和右边的图片里一样显示出来就可以了。 \n \nContext
-        | Request Context"
+      CSD U3 Sprites intro debug_markdown_instruction: |-
+        <img src="https://images.code.org/63207a624d751aacb376db18cdf09eec-image-1491255841823.png"
+        style="width: 150px; float: right; margin-left: 20px; border: 1px solid #f2f2f2;">\r
+        #
+        调试\r
+        \r
+        程序应该已经创建了两个新精灵，一个在屏幕左边，另一个在右边。但是它只画出了一个。**你不需要增加任何代码**，仅通过重新排列代码来让两个精灵都像右边的图片一样显示出来。
       CSD U3 Sprites intro sprites_markdown_instruction: |-
         # Sprites\r
         \r
@@ -8579,20 +9107,47 @@
         race predictable anymore?\r
         * Your animation should look similar to the example
         at the right.
-      CSD U3 Sprites scene challenge_markdown_instruction: "# 挑战: 扩展你的场景\\r\\r在开始这个挑战之前,
-        和你的老师核对一下。\\r\\r现在你已经完成了你的场景, 考虑加入它或者创建另一个。"
-      CSD U3 Sprites scene drawing_markdown_instruction: '# 创建您的场景-绘图 \r\r您将开始创建自己的场景。如果你还没有,
-        花一分钟的时间勾勒出你的场景的图片 (考虑使用图表纸)。一旦你对你的场景有了想法和计划，开始绘制背景. \r\r#请操作以下\r\r*请使用 "背景
-        ()" 命令，以颜色填充屏幕.\r* 添加任何必要的形状命令以绘制场景中的 非精灵元素。'
-      CSD U3 Sprites scene sprites_markdown_instruction: '#创建您的场景-精灵 \r \r 您的背景已经完成，是时候添加你的精灵了.
-        \r\r#请操作以下\r\r* 在 "动画" 选项卡中添加或创建所有的精灵图像. \r*在程序顶部为每个精灵创建一个变量, 并使用 "setAnimation
-        ()" 助理在 "动画" 选项卡中创建的图像. \r * 在程序结束时调用 "drawSprites ()". \r\r_提示: 您可能希望在程序的末尾调用
-        "drawSprites ()", 以使精灵在您背景顶部, 但对于某些设计, 您可能希望更早地调用 "drawSprites ()", 以便您的精灵处于某些形状的顶部,
-        但又低于其他图形。'
-      CSD U3 Sprites scene text_markdown_instruction: '# 创建您的场景-文本 \r \r 您的场景的最后一块是添加文本.
-        \r\r#请操作以下\r\r* 为每个单独的文本行添加 "文本 ()" 命令. \r*如有必要, 请使用 "填充 ()" 和 "textSize ()"
-        来更改文本的外观.\r\r _提示: 大多数场景都将文本放在其他所有内容之上, 这将要求您的 "文本 ()" 命令成为程序中的最后几行。但是, 如果希望文本与其他元素一起分层,
-        则可以考虑更改顺序。'
+      CSD U3 Sprites scene challenge_markdown_instruction: |-
+        # 挑战：扩展你的场景\r
+        \r
+        _在开始之前，先征询你的老师。_\r
+        \r
+        现在你已经完成了你的场景，考虑一下增加一些东西，或者创建一个新的。
+      CSD U3 Sprites scene drawing_markdown_instruction: |-
+        # 创建你的场景 - 画图\r
+        \r
+        你将要开始创建一个自己的场景。如果你没做过，花一分钟来构建一个场景的轮廓（考虑使用坐标纸）。一旦对你的场景有了主意和计划，就可以从画背景开始了。\r
+        \r
+        #
+        做这些\r
+        \r
+        * 用一个`background()`（背景）命令来给整个屏幕填满颜色。\r
+        *
+        用所需要的形状命令来绘制除了精灵外的场景。
+      CSD U3 Sprites scene sprites_markdown_instruction: |-
+        # 创建你的场景 - 精灵\r
+        \r
+        有了背景以后，就该添加你的精灵了。\r
+        # 做这些\r
+        \r
+        *
+        在动画标签页里添加或创建你的所有精灵图片。\r
+        * 在程序顶部为每个精灵创建一个变量，并用`setAnimation()`（设置动画）来分配你在动画标签页里创建的图片。\r
+        * 在你程序的结尾处调用一次`drawSprites()`（绘制精灵）。\r
+        \r
+        _提示：你可能会想在程序的最后面调用`drawSprites()`来让精灵出现在背景的上面。但有时，你需要早一些调用`drawSprites()`。让它们在某些形状的上面，而在另一些形状的下面。_
+      CSD U3 Sprites scene text_markdown_instruction: |-
+        # 创建你的场景 - 文本\r
+        \r
+        你的场景上最后一件事是添加文本。.\r
+        \r
+        # 做这些\r
+        \r
+        * 为每一行文本添加一个`"text"`（文本）命令。\r
+        * 如果需要，可以用`fill()`（填充）
+        和`textSize()`（文本大小）来改变文本外观。\r
+        \r
+        _提示：大部分场景的文本都在所有东西的最上面，这需要把`"text"`（文本）命令放到程序的最后一行。不过，如果你希望文本在其它元素下面，可以考虑改变代码的顺序。_
       CSD U3 Sprites setting properties_markdown_instruction: |-
         # Properties\r
         \r
@@ -8693,12 +9248,18 @@
         so that it entirely covers the green rectangle.\r
         * When your program works
         correctly, it should draw the image to the right.
-      CSD U3 Sprites text debug_markdown_instruction: '<img src="https://images.code.org/a313a455ef7033e840dfb21cb15cbb30-image-1491277088617.png"
-        style="float: right; width: 200px; margin-left: 20px;"> \r\r# 调试 \r \r 此场景具有所有正确的代码,
-        但它的顺序不正确。场景应该看起来像向右的图像。 您是否可以重新排列这些块, 使场景的每个部分都按正确的顺序绘制？'
-      CSD U3 Sprites text_markdown_instruction: '# 添加文本 \r \r 可以使用 "文本" 在屏幕上任意位置放置文本。更改所提供的代码中显示的文本,
-        然后在屏幕的不同部分中添加第二个 "text" 以写入.\r\r _Tip: 默认文本大小非常小, 但您可以使用 "textSize" 块来更改它。也可以使用
-        "填充" 来更改文本的颜色。'
+      CSD U3 Sprites text debug_markdown_instruction: |-
+        <img src="https://images.code.org/a313a455ef7033e840dfb21cb15cbb30-image-1491277088617.png"
+        style="float: right; width: 200px; margin-left: 20px;">\r
+        # 调试\r
+        \r
+        这个场景的代码都有了，但是顺序不对。这个场景应该和右边的图片一样。你能改变模块的顺序，让每场景的每部分都用正确的顺序画出来吗？
+      CSD U3 Sprites text_markdown_instruction: |-
+        # 添加文本\r
+        \r
+        你能用`text`（文本）将文本放到屏幕上的任何位置。改变已有代码里的文本，然后增加另一个`text`标签到屏幕的其它位置。\r
+        \r
+        _提示：默认文本的字体比较小，可以用`textSize`（文本尺寸）来改变它。也可以用`fill`（填充）来改变文本的颜色。_
       CSD U3 Sprites width and height_markdown_instruction: |-
         # Setting Properties\r
         \r
@@ -8862,12 +9423,34 @@
         How can you extend them?\r
         * [[Question that leads towards incrementation]]
       CSD U3 Variables Challenge_markdown_instruction: |
-        # 挑战: 更新变量\r \r _在开始挑战这关之前，请与您的老师先核对. \r\r目前为止, 我们只给变量赋过一次值, 但是您知道在程序中可以更新变量吗？ 通读我们提供的示例程序, 运行它几次以了解它是如何工作的, 然后尝试修改程序以绘制下列图像之一. r https://images.code.org/29f4d46d5aa041fb7d27aa2e3c77652e-图像-1493161823337. png "样式 =" width:150px;边框: 1px 实心灰色;margin:20px; ">> \r <img src="https://images.code.org/629819fe91016ee1b8275c81e41770b5-image-1493161823334.png" style="width:150px; border: 1px solid grey; margin:20px;"> \n img src = "https://images.code.org/acf7b8223b3a87594e20348306464de7-图像-1493161823305. png "样式 =" width:150px;边框: 1px 实心灰色;margin:20px; ">>
+        # 挑战：更新变量\r
+        \r
+        _开始这个挑战前，先问问你的老师。_\r
+        \r
+        目前为止，我们仅仅给一个变量赋了一次值，但你知道变量能在程序执行中更新吗？通读一下提供的程序，运行它几次来理解一下它是如何工作的，然后试着改变程序来画下面的某幅图。\r
+        \r
+        \r
+        <img src="https://images.code.org/29f4d46d5aa041fb7d27aa2e3c77652e-image-1493161823337.png"
+        style="width:150px; border: 1px solid grey; margin:20px;">\r
+        <img src="https://images.code.org/629819fe91016ee1b8275c81e41770b5-image-1493161823334.png"
+        style="width:150px; border: 1px solid grey; margin:20px;">\r
+        <img src="https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png"
+        style="width:150px; border: 1px solid grey; margin:20px;">\r
       CSD U3 Variables Draw Challenge_markdown_instruction: |
-        # 挑战: 先画一个图像\r\r在开始这个挑战级别之前, 请和你的老师核对. \r\r使用变量, 绘制一个图像, 其中许多项依赖于大小或放置的公共变量。例如, 用控制眼睛、耳朵和鼻孔的大小和/或位置的变量绘制一张脸。完成绘图后, 请尝试更改变量的值, 以确保整个图像一起更改。
-      CSD U3 Variables Draw Poppy_markdown_instruction: '# 使用一个变量多次 \r \r 此程序只有一个变量称为
-        "petalSize", 但它使用8不同的时间。这使您可以轻松快速地对图片的绘制方式进行大量更改. \r\r#请操作以下\r\r*请更改分配给 "petalSize"
-        的数字, 使红色的花瓣相互接触. \r*尝试找到最合理的尺寸。把你的答案和你周围的人比较。'
+        # 挑战：画一个图像\r
+        \r
+        _开始这个挑战前，先问问你的老师。_\r
+        \r
+        用变量来存放一个会在多个条目上使用的尺寸或位置。例如，画一张脸时，控制眼睛、耳朵、和鼻孔的尺寸和位置的变量。画完后，可以试着改变这些变量的值来让整个图片一起变化。\r
+      CSD U3 Variables Draw Poppy_markdown_instruction: |-
+        # 多次使用一个变量\r
+        \r
+        这个程序只有一个叫做`petalSize`（花瓣尺寸）的变量，但它被使用了8次。这回让画图时的很多变化都更容易。\r
+        \r
+        # 做这些\r
+        \r
+        * 改变赋给`petalSize`的值，让红色花瓣能够相互接触。\r
+        * 找到最合理的尺寸。和你周围的人比较一下。
       CSD U3 Variables Initialize_markdown_instruction: |-
         # Using a Variable's Value\r
         \r
@@ -8893,12 +9476,19 @@
         \r
         * Create a new variable
         with a **name of your choosing**, as shown in the starter code.
-      CSD U3 Variables Predict Where X Embed_markdown_instruction: "# 预测 \\r 在屏幕的哪个角落会画出圆圈？"
-      CSD U3 Variables Predict Where X_markdown_instruction: '#使用变量 \r \r 在这个程序中,
-        变量 "xPosition" 用于存储圆的 x 坐标. \r\r#请操作以下\r\*请运行该程序以查看它的工作原理. \r更改存储在变量中的数字 ([显示位置]
-        (#triggercallout = code_触发)) 并再次运行代码。'
-      CSD U3 Variables Predict Where XY Embed_markdown_instruction: '# 预测 \r\r 在屏幕的哪个角落将绘制圆？
-        \r \r _提示: 单击 "显示网格" 框可帮助您在屏幕上找到精确的坐标。'
+      CSD U3 Variables Predict Where X Embed_markdown_instruction: |-
+        # 预测\r
+        \r
+        屏幕的哪个角落会画圆圈？
+      CSD U3 Variables Predict Where X_markdown_instruction: "# 使用变量\\r\n\\r\n程序中的`xPosition`被用来存储圆圈的x坐标。\\r\n\\r\n#
+        做这个\\r\n* 运行程序看看它如何运行的。\\r\n* \n改动变量里的数字([显示在哪里](#triggercallout=code_triggered))
+        并再运行一下。"
+      CSD U3 Variables Predict Where XY Embed_markdown_instruction: |-
+        # 预测\r
+        \r
+        圆圈会被绘制到屏幕的哪个角落？\r
+        \r
+        _提示：点击"显示网格"按钮来帮助你找到屏幕上的精确位置。_
       CSD U3 Variables Random_markdown_instruction: |-
         # Variables random values\r
         \r
@@ -9019,10 +9609,17 @@
         program once to see how it works\r
         * **Change the value assigned to size
         in line 2** and rerun the program to see what changed.
-      CSD U3 Variables change circle size_markdown_instruction: '<img src="https://images.code.org/acc7f5763a9ca1c17647f7dd9711c9f5-image-1490977696189.28.01
-        AM.png" style="float:right; height:150px"> \r\r# 调试: 使用变量 \r \r 此程序使用变量 "circleSize"
-        来控制宽度和圆的高度。 如果你把圆圈做得足够大, 它就会填满整个屏幕, 就像右边的图片中的那样. \r \r#请操作以下\r\r * 请更改分配给
-        "circleSize" 的值, 使该圆圈占据整个屏幕。'
+      CSD U3 Variables change circle size_markdown_instruction: |-
+        <img src="https://images.code.org/acc7f5763a9ca1c17647f7dd9711c9f5-image-1490977696189.28.01
+        AM.png" style="float:right; height:150px">\r
+        \r
+        # 调试：使用变量\r
+        \r
+        这个程序使用了`circleSize`（圆圈尺寸）变量来控制一个园的宽和高。如果让圆圈足够大，它就会像右边的图片一样填满整个屏幕。\r
+        \r
+        # 做这些\r
+        \r
+        * 改变赋给`circleSize`的值，让圆圈覆盖整个屏幕。
       CSD U3 Variables create and assign_markdown_instruction: |
         # Create and Assign\r
         \r
@@ -9235,13 +9832,25 @@
         the rectangle drawn? How can you tell?\r
             * Can you explain what you're
         seeing?
-      CSD U3 Variables naming rules v2_markdown_instruction: '<img style="float: right"
-        src="https://images.code.org/f4b306422763c84bb924f4f7d3a6dca6-image-1492798058864.06.38
-        AM.png"> \r # 调试: 命名变量 \r \r 此程序有由错误的标签名称引起的多个错。 这些错误阻止程序在块模式下查看, 所以代码是在文本中.
-        \r\r#请执行此操作 \r\r* 查找每个变量标签所违反的规则. \r***请按照您在上一个级别中学习的规则选择新名称来更正错误. **\r* 如果您的程序工作正常，它应该在右侧绘制图像.
-        \r \r <summary> <em> 提示: 单击箭头以快速查看规则. </em><details> <ul> \r <li> 标签不能有空格.
-        </li>\r <li> 标签不能以数字开头. </li>\r <li> 大写和拼写必须完全相同. </li>\r </ul> </details>
-        </summary>'
+      CSD U3 Variables naming rules v2_markdown_instruction: |-
+        <img style="float:
+        right" src="https://images.code.org/f4b306422763c84bb924f4f7d3a6dca6-image-1492798058864.06.38
+        AM.png">\r
+        # 调试：命名变量\r
+        \r
+        程序因为错误的标签名字而有好几个错误。这些错误造成程序不能在模块模式下查看，因此代码在文本模式下。\r
+        \r
+        # 做这些\r
+        \r
+        * 找到每个变量标签违反的规则。\r
+        * **根据在上一关学到的规则来选择新的名称，从而纠正错误。**\r
+        * 如果程序修好了，它能画出右边的图像。\r
+        \r
+        <summary><em>提示：点击箭头来快速浏览规则。</em><details><ul>\r
+        <li>标签不能有空格。</li>\r
+        <li>标签不能以数字开始。</li>\r
+        <li>大小写和拼写必须完全一致。</li>\r
+        </ul></details></summary>
       CSD U3 Variables naming rules_markdown_instruction: |
         # Choosing Labels\r
         \r
@@ -9347,10 +9956,21 @@
         To practice using **variables with the draw loop** you
         will be building your own **randomized art project**. Check out the exemplar
         to see one possible outcome. Then move on to get started building your own.
-      CSD U3 Variables random with assignment_markdown_instruction: '<img src="https://images.code.org/ba9592e887f52c1a538a0517560cdacf-image-1493913633878.gif"
-        style="float:right;height:150px"> \r\r# 调试: 变量和随机数 \r \r 变量也可以被分配一个随机数。这允许您保存单个随机值,
-        以便您可以在程序中多次使用它. \r \r#请操作以下\r\r "eyeSize" 被分配了一个随机数。不幸的是, 目前只有一只眼睛正在使用它.\r\r***运行程序**
-        来看它如何运作\r***改变程序 * *让两只眼睛总是随机大小。提示: 您只需要对一行代码进行更改。'
+      CSD U3 Variables random with assignment_markdown_instruction: |-
+        <img src="https://images.code.org/ba9592e887f52c1a538a0517560cdacf-image-1493913633878.gif"
+        style="float:right;height:150px">\r
+        \r
+        # 调试：变量和随机数\r
+        \r
+        随机数也能赋给变量。这样，你能保存一个随机值，并在程序中多次使用。\r
+        \r
+        #
+        做这些\r
+        \r
+        `eyeSize`（眼睛尺寸）被分派了一个随机数。不幸的是，只有一只眼睛用了它。\r
+        \r
+        * **运行程序**来看看它是如何工作的。\r
+        * **改动程序**来让两只眼睛都是同样的随机尺寸。提示：你只需要改动一行代码即可。
       CSD U3 Variables use value rect_markdown_instruction: |-
         # Using a Variable's
         Value\r
@@ -9420,11 +10040,24 @@
         each expression inside of a `console.log` command to display their results\r
         *
         What other expressions can you make? Try writing 3 of your own.\r
-      CSD U3 Watcher Debug_markdown_instruction: '<img src="https://images.code.org/20cc981b4b4f99b2ff96415e19af7600-image-1492034149715.gif"
-        style="float: right; margin-left: 20px;"> \r\r 调试: 观察计数器模式 \r \r 让我们练习使用观察器来调试代码。这个程序应该把摩托车从左下到右上方,
-        像向右的图像。不幸的是, 摩托车在屏幕上移动得太快, 看不出有什么问题. \r\r使用所提供的观察器在 "循环. x" 和 "循环y "里, 找出哪一个移动方向错误并修复程序。'
+      CSD U3 Watcher Debug_markdown_instruction: |-
+        <img src="https://images.code.org/20cc981b4b4f99b2ff96415e19af7600-image-1492034149715.gif"
+        style="float: right; margin-left: 20px;">\r
+        \r
+        # 调试：观察计数器模式。\r
+        \r
+        让我们练习使用观察器来调试代码。程序应该像右边的图片一样，将摩托车从左下角挪到右上角。不幸的是，摩托车移动得太快，而看不出哪里有问题。\r
+        \r
+        使用提供的`cycle.x`和`cycle.y`的观察器，确认哪一个方向的移动错了，并修复程序。
       CSD U3 Watcher Predict response_markdown_instruction: |
-        # 观察计数器模式 \r r 监视器是一个非常有用的工具, 它用于调试使用计数器模式的程序. \r\r 阅读程序 **, 并预测程序将做什么. \r* * 运行程序* *来核对你的预测\r\r\r\r查看监视器**并向邻居解释你所看到的。
+        # 观察计数器模式\r
+        \r
+        观察器是一个使用计数器模式的，非常有用的工具来调试程序。\r
+        \r
+        * **读一读程序**并预测一下会做什么。\r
+        * **运行程序**来核对一下预测。\r
+        * **看一下观察器**向你的邻座解释一下你看到了什么。\r
+        \r
       CSD U3 abstraction accelerateX_markdown_instruction: |-
         # Velocity and the Counter
         Pattern\r
@@ -10470,10 +11103,18 @@
         move the fish to the left.\r
          * If the fish gets to the left-hand side of
         the screen, stop the fish.
-      CSD U3 abstraction velocityX if-statements predict_markdown_instruction: '#
-        改变速度与位置 \r \r 在条件中使用速度块的一个优势 ("if" 块) 是您的精灵保持移动, 即使在情况停止是真实的。 例如, 你只需按一个键一次就可以启动你的飞行机器人,
-        它一直在飞。 下面的代码使用 如果 语句使一个鱼精灵在不同的方向移动. 请查看 "如果" 语句, 检查精灵的位置并设置其速度. 与您的合作伙伴, 讨论您认为代码将执行的操作,
-        然后写下你的答案. 一旦你提交了答案, 就运行代码。'
+      CSD U3 abstraction velocityX if-statements predict_markdown_instruction: |-
+        #
+        用位置来改变速度\r
+        \r
+        将速度模块用到条件（`if`模块）中的一个好处是，即使在条件语句停止后，还能让精灵保持移动。例如，你只需要按一下键就能让飞行机器人飞起来，并且一直飞下去。下面的代码用“如果”语句来让鱼精灵向不同的方向移动。\r
+        \r
+        #
+        做这些\r
+        \r
+        * 看看`if`（如果）语句，检查一下精灵的位置，并设置它的速度。\r
+        * 和你的伙伴讨论一下你认为代码会做什么，并将答案写下来。\r
+        * 一旦你提交了答案，就运行一下代码。
       CSD U3 abstraction velocityX if-statements_markdown_instruction: |-
         # Changing
         Velocity with Position\r
@@ -10577,10 +11218,26 @@
         feather sprite go down the screen, and use it outside the draw loop.&nbsp;&nbsp;
         (  [Show me where](#triggercallout=code_triggered) )
       CSD U3 challenge face_markdown_instruction: |
-        <img src="https://images.code.org/aa5aedbcfec082c2886d88b565e5fc09-image-1495732712591.png" style="float: right; max-width: 200px; border: 1px solid grey"> \r # 挑战: 面 \r\r_ 在开始挑战之前，请与您的老师核对。\r\r编写一个程序, 使用 "矩形"、"椭圆" 和 "填充" 来创建右侧的面。使用的颜色是 "浅蓝"、"红色" 和 "浅绿". \r一旦您完成了, 添加您自己的个人想法到图像。
-      CSD U3 challenge new shape_markdown_instruction: '<img src="https://images.code.org/cc725698ade5282931002db3bf762cbc-image-1495733456927.png"
-        style="float: right; max-width: 200px; border: 1px solid grey"> \r\r# 挑战:
-        形状形状\r\r 在开始挑战之前请与您的老师核对。\r\r只使用 "矩形" 和 "椭圆" 命令, 你能画出一个新的形状吗, 比如这个用圆圈做的三角形？'
+        <img src="https://images.code.org/aa5aedbcfec082c2886d88b565e5fc09-image-1495732712591.png"
+        style="float: right; max-width: 200px; border: 1px solid grey">\r
+        # 挑战：脸\r
+        \r
+        _在开始任何挑战前，先问问你的老师。_\r
+        \r
+        写一个程序，用 `rect`（矩形），`ellipse`（椭圆），和`fill`（填充）来创建像右边一样的脸。使用的颜色有："lightblue"（淡蓝色），"red"（红色）和"lightgreen"（淡绿色）\r
+        完成后，可以添加自己的想法到图像里。\r
+        \r
+        \r
+      CSD U3 challenge new shape_markdown_instruction: |-
+        <img src="https://images.code.org/cc725698ade5282931002db3bf762cbc-image-1495733456927.png"
+        style="float: right; max-width: 200px; border: 1px solid grey">\r
+        \r
+        #
+        挑战：形状组成的形状\r
+        \r
+        _在开始任何挑战前，先问问你的老师。_\r
+        \r
+        你能只用`rect` （矩形）和`ellipse`（椭圆）命令创建一个新形状吗？例如，用圆圈组成的三角形？
       CSD U3 collisions bounce birds_markdown_instruction: |
         # bounce()\r
         \r
@@ -11611,45 +12268,66 @@
         \r
         [//]:
         # (https://images.code.org/87e4306e0371c7975b8fb2583657ee4a-image-1470343728942.png)
-      CSD U3 counter example_markdown_instruction: "#反模式\\r\\r在这个程序中，画循环是制作屏幕中移动的精灵的。\\r\\r#请操作以下\\r\\r*运行代码，并和你的伙伴讨论你觉得它应该如何运作的想法"
-      CSD U3 dancing alien_markdown_instruction: |-
-        在画循环里的精灵\r
+      CSD U3 counter example_markdown_instruction: |-
+        # 计数器模式\r
         \r
-        通过改变精灵在画循环里的属性，你可以让你的人物动画起来。 \r
-        \r
-        动漫已经慢下来。在程序的开始，“世界.帧速率”块已经被用于把帧速率设为10. 通常的数值是30. 请尽情尝试不同的帧速率带来的结果。 \r
+        在这个程序中，绘图循环用来让精灵穿过屏幕。\r
         \r
         #
-        请操作以下\r
-        * 运行代码看它是如何运作的。 \r
-        * 和你的伙伴讨论为什么一些代码在画循环的里面，有的要在外面。 \r
-        * 试着改变帧速率，并重新运行代码。
+        做这些\r
+        \r
+        * 运行代码，然后和你的伙伴讨论一下，你认为它是如何工作的。
+      CSD U3 dancing alien_markdown_instruction: |-
+        # 绘图循环里的精灵。\r
+        \r
+        改动绘图循环里精灵的属性，你能让你的角色动起来。
+        \r
+        \r
+        动画速度被减慢了。在程序开始处的`World.frameRate`（世界.帧率）模块将帧率设置为了10。通常的帧率是30。将帧率改成其它值。\r
+        \r
+        #
+        做这些\r
+        * 运行代码看看它是如何工作的。\r
+        * 和你的伙伴讨论一下，为什么有些代码在绘图循环里面，有些在外面。\r
+        * 试试改动帧率，然后再运行代码。
       CSD U3 debug_markdown_instruction: |-
         <img src="https://images.code.org/249f124a9bbd3da7d6327a7be8ab73c9-image-1493138569984.41.50
-        AM.png" style="float:right;width:150px;">\r\r# 调制\r
+        AM.png" style="float:right;width:150px;">\r
         \r
-        通常代码在初次运行时无法正常运转。 程序员得找出错误所在。 以下的代码应该是要在右边做图的，可是程序员搞混淆了代码的顺序，以及要如何在屏幕的正确位置放正方形。 \r
+        # 调试\r
         \r
-        #请操作以下\r
+        通常，代码在第一次运行时，都不能正常工作，需要程序员调试。下面的代码应该做出右边一样的图片，但程序员搞混了代码的顺序，以及怎样把正方形放到屏幕的正确位置上。\r
         \r
-        * 查看在工作区的代码\r
-        * 改变代码，让图片在右边。\r
-         * 你需要移动一行代码并改变和四方形的坐标.)
+        # 做这些\r
+        \r
+        * 看看工作区中的代码。\r
+        * 修改代码，让它能做出右边一样的图片。\r
+        * （你需要改动一行代码，并改变正方形的坐标。)
       CSD U3 ellipse_markdown_instruction: |
         <img src="https://images.code.org/2ef29be10261f6a2c5df8f214d524f4d-image-1493060602794.02.44
         PM.png" style="float:right;width:150px;">\r\r# 椭圆\r
         \r
-        你可以用“椭圆”来画圈.\r
+        你可以用`ellipse`（椭圆）来画圆圈。\r
         \r
-        # 请操作以下\r
+        # 做这些\r
         \r
-        * 核对制作椭圆的代码.\r
+        * 看看画椭圆的代码。\r
         * 添加一个不同颜色的新椭圆.\r
-      CSD U3 fill_markdown_instruction: "<img src=\"https://images.code.org/c91390d63e52a3349c48f7b6b0057258-image-1493060802897.05.19\nPM.png\"
-        style=\"float:right;width:200px;\">\\r#填充颜色\\r\n\\r\n你可以用“填充”工具给你的矩形上不同颜色。
-        在代码里，它会在其之后的每个形状都设定同一个颜色。 \\r\n\\r\n# 请操作以下\\r\n\\r\n*\n核对设置颜色的代码. (请告诉我在哪里](#triggercallout=fill)\n)\\r\n*
-        把蓝色改成黄色.\\r\n* 在“矩形”模块拉进填充命令下面的代码区添加一个新的四方形 ( [请告诉我在哪里](#triggercallout=rect_block)\n).
-        \ 这个新的四方形可以在你喜欢的屏幕的任何地方。 \\r\n \nContext | Request Context\n"
+      CSD U3 fill_markdown_instruction: |
+        <img src="https://images.code.org/c91390d63e52a3349c48f7b6b0057258-image-1493060802897.05.19
+        PM.png" style="float:right;width:200px;">\r
+        # 填充（颜色）\r
+        \r
+        你可以用`fill`（填充）让你的矩形有不同的颜色。它会将它之后的所有形状都设置成这个颜色。\r
+        \r
+        # 做这些\r
+        \r
+        *
+        看一看设置颜色的代码。( [显示](#triggercallout=fill)
+        )\r
+        * 将颜色从蓝色改为黄色。\r
+        * 通过将一个`rect`（矩形）模块拖拽到填充命令下面来增加一个正方形。 ( [显示](#triggercallout=rect_block)
+        )新的正方形可以放在屏幕的任何位置。\r
       CSD U3 finishing touches_markdown_instruction: |-
         # Finishing Touches\r
         \r
@@ -11810,25 +12488,40 @@
       CSD U3 keydown conditional_markdown_instruction: |-
         # 改变精灵\r
         \r
-        在上个关卡里，你看到了在你把键盘按下的时候，“键盘按下” 表示是“对的”。当你没有把键盘按下的时候，它就是“错的”。 "键盘按下“ 命令的输入就是你要在引述的键盘的名字。 有些举例如"x", "up" and "space".\r
+        你应该在上一关见过了，当你按住一个键时`keyDown`返回`true`，当键没有被按下时，返回`false`。`keyDown`命令的输入是你想要检查的键的名字。例如"x", "up"（上箭头) 和"space"（空格键）。\r
         \r
-        我们可以把”键盘按下“作为一个”如果“语句的输入来依照按压键盘来改变我们的动漫。 \r
+        我们将`keyDown`作为`if`如果语句的输入，在按下键时，改变动画。\r
         \r
-        #请操作以下\r
-        * 运行代码，并试着按压上和下箭头。 \r
-        *查看”如果“语句的内部内容看代码是如何运作的。 \r
-        *在第三个”如果“语句里添加一个模块，来把动漫改成其他不同的动物。 \r
+        #
+        做这些\r
+        * 运行代码，并试试按下上方向和下方向键。\r
+        * 看看`if`语句里，来理解代码时如何工作的。\r
+        * 在第三个`if`语句中增加模块来将动画改变为另一个动物。\r
         \r
-        *提示:
-        你可以用已经在动漫标签里的兔子，或添加新动漫。 *
-      CSD U3 my-rect_markdown_instruction: '# 矩形 (x, y) \r \r 欢迎来到游戏实验室, 在那里你可以创建互动的动画和游戏!  \r\r在课堂中,
-        您已经练习了在网格上放置形状的基础知识。 在游戏实验室中, 您将对左侧的显示区域进行同样的处理. \r\r #请操作以下\r\r请按以下说明操作工作区中的代码行
-        ([显示位置] (#triggercallout = block_trigger)) 并与您的合作伙伴讨论您认为该形状将在网格的哪里。 (此处插入图片块)
-        \r * 单击 <img src="https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20
-        PM.png" width=100> 运行程序, 看看会发生什么。([显示在何处] (#triggercallout = run_trigger))
-        \r * 更改两个不同开口中的数字, 然后再次尝试运行该程序。\r * 尝试将矩形置于屏幕右下角附近'
-      CSD U3 picture_markdown_instruction: "#挑战：画图\\r\\r在开始任何挑战前请和你的老师核对。 \\r\\r在之前的课程中，你和你的伙伴已经创建了一些有趣的图片。
-        看你是否可以用代码来重新创建它们。"
+        *提示：你可以用已经在动画标签页中的兔子，或者加上一个新的动画。
+      CSD U3 my-rect_markdown_instruction: |-
+        # rect(x,y)\r
+        \r
+        欢迎来到游戏实验室，你能在这里创建交互动画和游戏！\r
+        \r
+        在课程中，你已经练习了一些基础，如将形状添加到网格中。在游戏实验室里，你需要做出和左边显示区域一样的东西。\r
+        \r
+        # 做这些\r
+        \r
+        *
+        看看工作区里，这些说明下的这行代码( [显示在哪里](#triggercallout=block_trigger) )，然后和伙伴讨论一下你觉得这个形状会画在网格的什么位置。（插入模块的图片）
+        \r
+        * 点击<img src="https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20
+        PM.png" width=100>来运行程序，并看看会发生什么。( [显示在哪里](#triggercallout=run_trigger)
+        )\r
+        * 改变在两个不同的入口的代码，然后试着再运行一下程序。\r
+        * 试着将矩形放在屏幕的右下角。
+      CSD U3 picture_markdown_instruction: |-
+        # 挑战：画图\r
+        \r
+        _在开始任何挑战前，先问问自己的老师。_\r
+        \r
+        在前面的课程中，你和伙伴创建了一些有趣的图片。看看你能否用代码来创建它们。
       CSD U3 platform background1_markdown_instruction: |-
         # Background\r
         \r
@@ -12372,16 +13065,35 @@
         8](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/12/puzzle/8) to
         see a working scoreboard.  Scroll down in the code until you see the comment
         "draw score"_
-      CSD U3 rect_markdown_instruction: '# 探索游戏实验室 \r \r 欢迎来到游戏实验室, 在这里您可以创建交互式动画和游戏!  \r\n
-        您已经练习了在网格上放置形状的基础知识。 在游戏实验室中, 您将对左侧的显示区域进行同样的处理. \r \r * 请查看工作区下面这些说明中的代码行
-        ([显示位置] (#triggercallout = block_trigger)) 并与您的合作伙伴讨论您认为该形状将是 在网格哪里. 单击 <img
-        src="https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20
-        PM.png" width=100> 运行程序, 看看会发生什么。([显示在何处] (#triggercallout = run_trigger))
-        \r * 更改块中的数字, 然后尝试再次运行该程序. 尝试将矩形放在屏幕右下角附近。'
-      CSD U3 sequence_markdown_instruction: <img src="https://images.code.org/30d68fb30db5b61187f104f46292e052-image-1493060980724.08.05
-        PM.png" style="float:right"> \r#顺序很重要\r\r 在游戏实验室中,您的代码的顺序很重要。 新形状将绘制在前面的图形的顶部,
-        覆盖最先绘制的形状。 在代码中使用多种颜色时, 可以看到不同之处.\r\r# 请执行此操作,\r\r* 并查看绘制两个矩形的代码。 第一个是绘制红色,
-        第二个是绘制蓝色. *将红色矩形的颜色更改为绿色. *更改代码的顺序, 使绿色矩形显示在顶部。
+      CSD U3 rect_markdown_instruction: |-
+        # 探索游戏实验室\r
+        \r
+        欢迎来到游戏实验室，你能在这里创建交互动画和游戏！\r
+        \r
+        你已经练习了一些基础，如将形状添加到网格中。在游戏实验室里，你需要做出和左边显示区域一样的东西。\r
+        \r
+        # 做这些\r
+        \r
+        *
+        看看工作区里，这些说明下的这行代码( [显示在哪里](#triggercallout=block_trigger) )，然后和伙伴讨论一下你觉得这个形状会画在网格的什么位置。
+        \r
+        * 点击<img src="https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20
+        PM.png" width=100>来运行程序，并看看会发生什么。( [显示在哪里](#triggercallout=run_trigger)
+        )\r
+        * 改变模块中的数字，然后试着再运行一下程序。\r
+        * 试着将矩形放在屏幕的右下角。
+      CSD U3 sequence_markdown_instruction: |-
+        <img src="https://images.code.org/30d68fb30db5b61187f104f46292e052-image-1493060980724.08.05
+        PM.png" style="float:right">\r
+        # 顺序很重要\r
+        \r
+        在游戏实验室里，放置代码的顺序很重要。新的形状会绘制在之前形状之上，覆盖这些已经画好的形状。你可以看看，如果在代码中用一种以上的颜色时，有什么不同。\r
+        \r
+        # 做这些\r
+        \r
+        * 看看画两个举行的代码，第一个是红色，另一个是蓝色。\r
+        * 将红色的矩形改为绿色。\r
+        * 改变代码的顺序，让绿色矩形在最上面。
       CSD U4 - Design Mode Input Widgets_markdown_instruction: |
         # Input Elements\r
         \r
@@ -12458,76 +13170,227 @@
         \r
       CSD U5 Amazon Data Video_markdown_instruction: "观看此视频, 了解亚马逊如何解决这个问题, 。当你看的时候，考虑是什么数据被收集,
         它是从哪里来的。"
-      CSD U5 Pizza 2_markdown_instruction: '# 比萨派对 \r \r 当人们处理数据时, 他们知道要离开那些没有意义的答案,
-        而一些答案, 比如 "辣椒"、"pepppers" 和 "青椒", 其实也意味着同样的事情。计算机不知道如何做到这一点, 所以我们必须清理数据之前,
-        计算机能够使用它. \r \r 此版本的应用程序有第二列要清除的数据. \r\r#请执行此操作, \r*单击 "运行" 以查看要清除的新答案列表。\r*
-        点击每一个需要清理的答案, 并纠正它, 使计算机将其正确的图表。(您可能希望完全删除一些答案。\r\r 完成后, 单击 "显示图表" 以查看已清理的答案的新图表。'
-      CSD U5 Pizza_markdown_instruction: '# 比萨饼党 \r \r 比萨饼党的数据已被放入应用程序中, 并且已添加其他类的答案。
-        因为这是一个应用程序, 我们可以从给定的数据自动创建条形图. \r\r #请操作以下\r*请单击 "运行" 以查看类所给出的答案列表. \r*与合作伙伴讨论您认为此数据的图表将是什么样的.
-        \r * 单击 "显示图表 "为您自己看." "电子表格版本 \r \r" 如果您想使用它, 则比萨饼党的数据也已放入电子表格中。 要使用电子表格,
-        您需要制作自己的副本. 这个链接将使你自己的 "比萨浇头选择" 数据的副本: [比萨饼顶部选择] (https://文件, 谷歌. com/电子表格/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/复制)
-        \r * 您还可以下载[here] 文件的 CSV 版本 (https://文档. 谷歌. com/电子表格/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/导出？格式
-        = CSV)。'
+      CSD U5 Pizza 2_markdown_instruction: |-
+        # 比萨派对\r
+        \r
+        当人们进行数据工作时，他们明白要去掉那些无意义的答案，而有些答案，例如“胡椒粉”，“胡椒面”，“细胡椒粉”实际上是同一种东西。计算机不知道应该怎么左，因此我们需要在计算机使用前对数据进行清理。\r
+        \r
+        这个版本的应用有需要被清理的第二行数据。\r
+        \r
+        ## 做这些\r
+        *
+        点击“运行”来看看需要被清理的新的答案列表。\r
+        * 点击每个需要被清理的答案，并纠正它们。使得计算机能够正确的画出图。（你可能想要将某些答案直接删除）。\r
+        * 完成后，点击“显示图标”来看看清理答案后的新图标。
+      CSD U5 Pizza_markdown_instruction: |-
+        # 比萨派对\r
+        \r
+        比萨派对的数据已经被放到了一个应用里，来自另一个班级的答案页加上了。因为这是一个应用程序，我们能自动的从给出的数据来创建条形图。\r
+        \r
+        # 做这些\r
+        * 点击"运行"来看看领域给班级给的答案列表。\r
+        * 和伙伴讨论一下，你觉得数据图表会是什么样子。\r
+        * 点击"显示图表"看一看。\r
+        \r
+        # 电子表格版本\r
+        \r
+        如果你希望使用电子表格的话，比萨派对的数据也有这个格式。如果要使用电子表格，你需要自己复制它。\r
+        \r
+        *
+        这个链接会让你自己拷贝一份"最佳的比萨选择"数据：
+        [比萨最佳选择](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/copy)\r
+        *
+        你也可以下载CSV版本的文件。[这里](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ/export?format=csv).
       CSD U5 Waze Data Video_markdown_instruction: "观看此视频, 了解 Waze如何解决这个问题的。当你看的时候，思考是什么数据被收集,
         它是从哪里来的。"
-      CSD U5 binary 1_markdown_instruction: '# 5 位数 \r \r 当你只有四位时, 你能做的最高数字是十五。 现在,
-        您将有机会使用更多的位来制作更高的数字. \r\r在这个活动中, 点被替换为数字, 但是你仍然把显示的所有东西都加起来, 看看二进制代码代表什么数字。
-        最左边的位还没有数字所以你必须给它一个. \r \r #请操作以下* 单击这些位以打开和关闭它们, 然后查看您可以制作的不同数字. \\r与您的合作伙伴,
-        讨论数字中的模式。 \r决定你认为什么数字应该在最左边的框. 单击 "编辑" 以更改左侧最左边的值. 一旦你决定了这个值, 试着做下面的数字: 16,
-        27, 31'
-      CSD U5 binary 2_markdown_instruction: "# 6 位数 \\r \\r 此小部件可帮助您计算6位二进制数. \\r\\r#请操作以下\\r\\r*与您的合作伙伴一起执行此操作,
-        请回答以下问题: \\r 1。你能用这个小部件做的最大数字是多少？ \\r 2。狗和人在一分钟内跳过的记录是59。 如何将59编码成二进制？"
-      CSD U5 binary 3-new_markdown_instruction: "# 解码多个数字 \\r \\r 这是一个可以计算4、5或6位数的小部件。
-        您可以使用它来查找在下面的二进制字符串中编码的两个世界记录. \\r \\r 1。大多数的人在两分钟内举起并投掷。(4 位) \\r 1。大多数罐装饮料一分钟内就被一只鹦鹉打开。(6
-        位) \\r \\r#请操作以下\\r 从二进制字符串中解码两个数字。"
-      CSD U5 binary 3_markdown_instruction: "# 解码多个数字 \\r \\r 这里是一个小部件, 可以计算多达八位的数字。
-        您可以使用它来尝试查找在下面的二进制字符串中编码的三世界记录。 答案在字符串中是按顺序排列的. r \\r 1。大多数罐装饮料一分钟就开了一只鹦鹉.
-        2。大多数冰淇淋勺平衡在一个锥. 3。大多数的人在两分钟内举起并投掷。[] (https:////图像. 组织/51fe16afb224a2cc4819def434f6ec9d-图像-1502735454689.
-        png) \\r \\r # 尝试从二进制字符串中解码三数字 \\r * 与您的合作伙伴讨论您的答案. 是否有任何其他您需要的信息确定你的号码是正确的？"
-      CSD U5 binary 4-new_markdown_instruction: "# 解码多个数字 \\r \\r 这是一个可以计算4、5或6位数的小部件。
-        您可以使用它来查找在下面二进制字符串中编码的两个世界纪录。\\r\\r！[] (https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06
-        PM. png) \\r \\r 1。在两分钟内举起并投掷的大多数人的数量。(4 位) \\r 1。被一只鹦鹉在一分钟内就打开的大多数罐装饮料数量。(6
-        位) \\r \\r #请操作以下\\r*从二进制字符串中解码两个数字。"
-      CSD U5 binary 4_markdown_instruction: '# 位长度 \r \r 如果不知道每个数字有多少位, 就无法解码一串数字.
-        \r\r例如, 下面的二进制字符串可以被解码成许多不同的方法. \r\r https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-图像-1502735454689.
-        png "样式 =" 高度: 30px; ">> \r \r 如果您像这样拆分字符串, 字符串将读取71、28、28. \r \r <img src="https://images.code.org/03f40f140dbdbff92af0784911e66fa2-image-1502741759516.png"
-        style="height: 30px;"> &nbsp; &nbsp; img src = "https://images.code.org/b5b34c9ec4d051bd81404756269b1cf0-图像-1502741761216.
-        png "样式 =" 高度: 30px; ">> &nbsp; &nbsp; <img src="https://images.code.org/b5b34c9ec4d051bd81404756269b1cf0-image-1502741761216.png"
-        style="height: 30px;"> \r \r 如果您像这样拆分, 字符串将读取17、249、12. r. https://images.code.org/ec9a1533c32a23637f9d1021d318f496-图像-1502741540345.
-        png "样式 =" 高度: 30px; "> &nbsp; &nbsp; <img src="https://images.code.org/1239b8d5f24df95e6461165b92a41383-image-1502741542720.png"
-        style="height: 30px;"> &nbsp; &nbsp;\r\r\r为了解决这个问题, 人们对每个数字都有一个固定长度的一致意见。
-        下面的字符串使用相同的三数字, 但每个数字只占用八位. \r \r\r <img src="https://images.code.org/2c55ec3f4ff236cb4ffa8d9b1b46895f-image-1502742909603.png"
-        style="height: 30px;">\r\r# 请执行此操作。\r\r*二进制小部件解码使用八位数的字符串. \r*与合作伙伴核对你的答案,
-        看看你是否得到了同样的答案。'
-      CSD U5 binary 5-new_markdown_instruction: "# 解码多个数字 \\r \\r 这里是一个小部件, 可以计算多达八位的数字。(如果您有一个较短的数字,
-        您可以只留下多余的位在左边。您可以使用它来查找下面两个世界记录的值。\\r\\r[] (https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14
-        PM. png) \\r \\r 1。狗最长的尾巴 (英寸) (5 位) \\r 2。平衡在某人的脸上大多数勺子 (5 位) \\r \\r #请操作以下\\r*从二进制字符串中解码两个数字。"
-      CSD U5 binary 6-new_markdown_instruction: "# 解码多个数字 \\r \\r 这里是一个新的位串。 这一次,
-        你不知道这两个数字的位长。 尝试在不知道比特长度的情况下对数字进行解码。\\r\\r！[] (https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
-        PM. png) \\r \\r 1。最大的风铃, 英尺 (？位) \\r 2。用某人的脚量的最远射箭长度 (以英尺为单位) \\r \\r #请操作以下\\r*
-        尝试对二进制字符串中的两个数字进行解码. \\r*与您的合作伙伴讨论为什么您不能确定知道您的答案是否正确。"
-      CSD U5 binary 7-new_markdown_instruction: "# 位长度 \\r \\r 如果您不知道每个数字有多少位, 就无法解码一串数字.
-        \\r\\r例如, 下面的二进制字符串可以被解码多种不同的方法。\\r\\r！[] (https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
-        PM. png) \\r \\r 如果您像这样拆分字符串, 字符串将读取 12, 84。\\r\\r！[] (https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01
-        PM. png)![] (https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08
-        PM. png) \\r \\r 如果您像这样拆分它, 字符串将读取 42, 20。\\r\\r！[] (https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13
-        PM. png)![] (https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19
-        PM. png) \\r\\r 为了解决这个问题, 人们对每个数字固定的长度达成一致。 下面的字符串使用相同的两个数字, 但每个数字只占用八位, 不管它实际需要多少位。\\r\\r！[]
-        (https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26
-        PM. png) \\r\\r#请操作以下\\r\\r* 请使用二进制部件对使用八位数字的字符串进行解码. \\r*和你的合作伙伴核对答案, 看看你们是否得到了相同的答案."
-      CSD U5 black white images pixelation 2_markdown_instruction: "# 请操作以下 \\r \\r
-        使用像素小部件来画一个笑脸 \\r r![] (https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47
-        PM. png)"
-      CSD U5 black white images pixelation 3_markdown_instruction: "# 请操作以下\\r\\r
-        此图像的宽度和高度滑块设置不正确, 所以它看起来不像任何东西。请更改它们, 直到你找到图像。\\r\\r！[] (https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17
-        PM. png)"
-      CSD U5 black white images pixelation 4_markdown_instruction: '# 请操作以下\r\r在这笑脸添上眉毛。如果卡住了,
-        请记住使用 "可读格式"。\r\r！[] (https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37
-        PM. png)'
-      CSD U5 black white images pixelation 5_markdown_instruction: "#请操作以下\\r\\r现在就轮到你了。在像素小部件中绘制任何您想要的东西。如果您愿意,
-        可以随意更改图像的宽度和高度。"
-      CSD U5 black white images pixelation_markdown_instruction: '#请操作以下\r\r 通过键入0s
-        和1s 完成 "X" 形状。如果你想清理掉你的工作, 你可以随时点击 "可读格式"。'
+      CSD U5 binary 1_markdown_instruction: |-
+        # 5比特数字\r
+        \r
+        当你只有4个比特时，能够表达的最大的数字是15。现在你有机会使用更多比特来表达更大的数。\r
+        \r
+        在这个活动中，这些点都会被替换成数字，但你仍然需要将显示的内容都加起来，来看看二进制代码表示的什么数字。最左边的位还没有数字，因此你需要给它一个值。\r
+        \r
+        # 做这些\r
+        \r
+        * 点击这些比特来将它们打开或关闭，然后看看产生的不同数字。\r
+        * 和你的伙伴讨论一些数字的规律。决定你想在最左边的盒子里显示什么数字。\r
+        * 点击“编辑”来改变最左边位的值。\r
+        * 一旦你决定了值，试试产生这些数字：16，27，31
+      CSD U5 binary 2_markdown_instruction: |-
+        # 6比特数字\r
+        \r
+        这个小工具能够帮助你计算6比特的二进制数字。\r
+        \r
+        # 做这些\r
+        \r
+        * 和你的伙伴一起回答这些问题：\r
+        1. 你能通过工具产生的最大的数是多少？\r
+        2. 一个人和狗能够跳过的记录是59。你应该如何在二进制里编码59？
+      CSD U5 binary 3-new_markdown_instruction: |-
+        # 解码多个数字\r
+        \r
+        这有一个工具能够计算4，5，6比特的数字。你能用它来找到编码的两个世界纪录。\r
+        \r
+        1. 人类在两分钟内能够举起并扔出去的数量。(4比特)\r
+        1. 鹦鹉在一分钟内能够打开的罐装饮料数量。(6比特)\r
+        \r
+        # 做这些\r
+        * 从二进制字符串中解码这两个数字。
+      CSD U5 binary 3_markdown_instruction: |-
+        # 解码多个数字\r
+        \r
+        这里有个工具能够计算最多8比特的数字。你能用它来找到三个编码在二进制字符串中的世界记录。这些答案在字符串中是有序的。\r
+        \r
+        1. 一只鹦鹉在一分钟里打开的罐装饮料数量。\r
+        2. 在一个圆锥体上保持平衡的冰淇淋勺的数量。\r
+        3.
+        在两分钟内举起并扔出去的人的数量。\r
+        \r
+        ![](https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png)\r
+        \r
+        #
+        做这些\r
+        * 试着从二进制字符串中解码这三个数。\r
+        *
+        和你的伙伴讨论答案\r
+        * 这里有其它信息能够确定你的数字是否正确吗？
+      CSD U5 binary 4-new_markdown_instruction: |-
+        # 解码多个数字\r
+        \r
+        这有一个工具能够计算4，5，6比特的数字。你能用它来找到编码的两个世界纪录。\r
+        \r
+        ![](https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06
+        PM.png)\r
+        \r
+        1. 人类在两分钟内能够举起并扔出去的数量。(4比特)\r
+        1. 鹦鹉在一分钟内能够打开的罐装饮料数量。(6比特)\r
+        \r
+        # 做这些\r
+        * 从二进制字符串中解码这两个数字。
+      CSD U5 binary 4_markdown_instruction: |-
+        # 位长度\r
+        \r
+        如果你不知道每个数字有多少位，你没法解码一个数字字符串。\r
+        \r
+        例如，下面的二进制字符串有多种方法来解码。\r
+        \r
+        <img src="https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png"
+        style="height: 30px;">\r
+        \r
+        如果你将字符串这样分开，这个字符串读作：71, 28, 28.\r
+        \r
+        <img src="https://images.code.org/03f40f140dbdbff92af0784911e66fa2-image-1502741759516.png"
+        style="height: 30px;"> &nbsp;&nbsp; <img src="https://images.code.org/b5b34c9ec4d051bd81404756269b1cf0-image-1502741761216.png"
+        style="height: 30px;"> &nbsp;&nbsp; <img src="https://images.code.org/b5b34c9ec4d051bd81404756269b1cf0-image-1502741761216.png"
+        style="height: 30px;">\r
+        \r
+        如果这样分开，这个字符串读作：
+        17, 249, 12.\r
+        \r
+        <img src="https://images.code.org/ec9a1533c32a23637f9d1021d318f496-image-1502741540345.png"
+        style="height: 30px;"> &nbsp;&nbsp; <img src="https://images.code.org/1239b8d5f24df95e6461165b92a41383-image-1502741542720.png"
+        style="height: 30px;"> &nbsp;&nbsp; <img src="https://images.code.org/5e71958697e30b9874ed6f6028a02023-image-1502741545510.png"
+        style="height: 30px;">\r
+        \r
+        \r
+        为了解决这个问题，人们同意为每个数字都设置固定的长度。这个字符串用了同样的三个数字，但每个数字都是正好8比特。\r
+        \r
+        \r
+        <img src="https://images.code.org/2c55ec3f4ff236cb4ffa8d9b1b46895f-image-1502742909603.png"
+        style="height: 30px;">\r
+        \r
+        # 做这些\r
+        \r
+        * 用二进制小工具用8比特数字来解码字符串。\r
+        * 和你的伙伴检查答案，看看是否一致。
+      CSD U5 binary 5-new_markdown_instruction: |-
+        # 解码多个数字\r
+        \r
+        这里有个工具能够计算最多8比特的数字。（如果你的数字比这个短，只用把多余的比特设置为关闭即可）你能用它找到下面的两个世界记录。\r
+        \r
+        ![](https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14
+        PM.png)\r
+        \r
+        1. 最长的狗尾巴（英寸）（5比特）\r
+        2. 在某人脸上能够保持平衡的最多的勺子数量（5比特）\r
+        \r
+        # 做这些\r
+        * 从一个二进制字符串中解码这两个数字。
+      CSD U5 binary 6-new_markdown_instruction: |-
+        # 解码多个数字\r
+        \r
+        这里有一个新的二进制字符串。这次，你不知道两个数字的比特长度。试着在不知道比特长度的情况下解码这两个数字。\r
+        \r
+        ![](https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
+        PM.png)\r
+        \r
+        1. 最大的风铃的英寸尺寸（？比特）\r
+        2. 用某人的脚（英尺）丈量的弓箭射出的最远距离。(？比特）\r
+        \r
+        # 做这些\r
+        * 试一试从二进制字符串中解码这两个数字。\r
+        * 和你的伙伴讨论一下，为什么你不能确定自己的答案是否正确。
+      CSD U5 binary 7-new_markdown_instruction: |-
+        # 位长度\r
+        \r
+        如果你不知道每个数字有多少位，你没法解码一个数字字符串。\r
+        \r
+        例如，下面的二进制字符串有多种方法来解码。\r
+        \r
+        ![](https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
+        PM.png)\r
+        \r
+        如果你将字符串这样分开，这个字符串读作：10，84。\r
+        \r
+        ![](https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01
+        PM.png) ![](https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08
+        PM.png)\r
+        \r
+        \r
+        如果这样分开，这个字符串读作：42，20。\r
+        \r
+        ![](https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13
+        PM.png) ![](https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19
+        PM.png)\r
+        \r
+        为了解决这个问题，人们同意为每个数字都设置固定的长度。下面的字符串用了同样的两个数字，但无论实际上它有多少比特，每个数字都正好是8比特。\r
+        \r
+        ![](https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26
+        PM.png)\r
+        \r
+        # 做这些\r
+        \r
+        * 用二进制小工具用8比特数字来解码字符串。\r
+        * 和你的伙伴检查答案，看看是否一致。
+      CSD U5 black white images pixelation 2_markdown_instruction: |-
+        # 做这些\r
+        \r
+        用像素小工具来画一个笑脸。\r
+        \r
+        ![](https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47
+        PM.png)
+      CSD U5 black white images pixelation 3_markdown_instruction: |-
+        # 做这些\r
+        \r
+        这幅图的高度和宽度滑块没有设置正确，所以它看起来什么都不像。改变它们，直到你发现了图片。\r
+        \r
+        ![](https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17
+        PM.png)
+      CSD U5 black white images pixelation 4_markdown_instruction: |-
+        # 做这些\r
+        \r
+        在笑脸上添加眉毛。如果搞乱了，记得使用“可读格式”。\r
+        \r
+        ![](https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37
+        PM.png)
+      CSD U5 black white images pixelation 5_markdown_instruction: |-
+        # 做这些\r
+        \r
+        现在该你了。在像素小工具里画任何你想画的东西。如果需要的话，请随意改动图片的宽高。
+      CSD U5 black white images pixelation_markdown_instruction: |-
+        # 做这些\r
+        \r
+        通过点击0和1来创造"X"图形。你如果你想要清理工作的话，可以随时点击"可读格式"。
       CSD U5 collection UPS_markdown_instruction: |
         <img src="https://images.code.org/db7d21a8d28df27dee3449939038c7a9-image-1488501564775.jpg"
         style="float:right;height:250px">\r
@@ -12597,23 +13460,46 @@
         010 010`\r
         \r
         `001 001 001 001 010 010 010 010 010 010`
-      CSD U6 Catch the Mouse prediction_markdown_instruction: "# 抓住鼠标 \\r \\r 这是个点击游戏，与您在上一课中构建的内容类似.\\r\\r
-        请与您的合作伙伴一起查看代码, 并回答以下问题: \\r\\r* 在指示灯开始闪烁之前需要单击多少次鼠标？ \\r r在下面的方框中写出你的答案,
-        然后运行代码, 看看会发生什么。"
+      CSD U6 Catch the Mouse prediction_markdown_instruction: |-
+        # 抓住鼠标\r
+        \r
+        这是一个点击游戏，和上一课创建的类似。\r
+        \r
+        和你的伙伴一起看看代码，然后回答下面的问题：\r
+        \r
+        *
+        在LED灯开始闪烁前，你需要点击多少次鼠标？\r
+        \r
+        在下面的方框里写出答案，然后运行代码，看看发生了什么。
       CSD U6 Catch the Mouse_markdown_instruction: "嵌入式预测"
-      CSD U6 LED all_markdown_instruction: '# 多功能灯 \r \r 此应用程序应允许您选择三种类型的光源: 亮、闪烁和脉冲。
-        它也应该有一个按钮, 把灯完全关闭。 现在只有 "on" 按钮起作用, "off" 按钮完全丢失. \r \r # 请操作以下\r*添加代码以使 "闪烁"
-        和 "脉冲" 按钮正常工作.\r* 在设计模式下, 添加新的 "off" 按钮. \r* 添加代码以使 "关闭" 按钮正常工作。'
-      CSD U6 LED toggle_markdown_instruction: "# 灯开关 \\r \\r 还有三多个您尚未使用过的 LED &#039模块。如果它&#039无法在你的语言&quot;
-        拼图片&quot; 里作业，它也是可以接受的。 这翻译到模块中就是&quot; 孩子&#039;；建你还没有使用的模块&quot;“翻译=模块。其中一个可以使按钮像电灯开关一样工作,
-        当关闭时打开LED灯, 当它开着的时候关闭。\\r\\r#请操作以下\\r* 请尝试 \"闪烁\"、\"切换\" 和 \"脉冲\" 块, 以查看&#039是否在你的语言&quot;
-        拼图片&quot; 也可以接受. \n\n这应该翻译到模块中卫&quot; 孩子&#039;；建模块&quot;”翻译=模块> 模块来看他们是做什么的。
-        \\r*使用其中一个&#039; 建模块块，如果这个模块&#039; 在你的语言里&quot; 拼图片&quot; 也可以接受。 \n\n这应该翻译到模块里为&quot;
-        孩子&#039; 建模块&quot;“翻译=模块>模块来使得按钮和灯开关一样运作。 \\r\n*如果LED灯熄灭, 按钮应打开.\\r* 如果LED灯打开,
-        则按钮应将其关闭。"
-      CSD U6 LEDbutton predict embed_markdown_instruction: '# 使用事件 \r \r 此程序使用事件。
-        看看代码并与合作伙伴讨论你认为它们是做什么的。 一旦您有了答案, 请单击 "运行" 以检查您的答案.\r\r* 当程序 "运行" 时, 指示灯是否打开？
-        为什么？'
+      CSD U6 LED all_markdown_instruction: |-
+        # 多功能灯\r
+        \r
+        这个应用能够让你选择三种类型的灯：开，闪烁和跳动。它也应该有个按钮让灯完全关掉。现在只有“开”按钮起作用，而“关”按钮完全没有。\r
+        \r
+        #
+        做这些\r
+        * 添加代码让“闪烁”和“跳动”按钮起作用。\r
+        *
+        在设计模式，添加一个新的“关闭”按钮。\r
+        * 添加代码让“关闭”按钮起作用。
+      CSD U6 LED toggle_markdown_instruction: |-
+        # 灯开关\r
+        \r
+        这里多了三个你还没用过的LED模块。其中一个会让按钮像灯的开关一样工作，LED关闭时会点亮它，而打开时会关闭它。\r
+        \r
+        # 做这些\r
+        * 试试`blink`（闪动），`toggle`（切换）和`pulse`（脉动）默默快来看看它们能做什么。\r
+        * 用其中一个模块让按钮像灯开关一样工作。\r
+        * 如果LED是关着的，这个按钮能让它打开。\r
+
+        * 如果LED是开着的，这个按钮能让它关闭。
+      CSD U6 LEDbutton predict embed_markdown_instruction: |-
+        # 使用事件\r
+        \r
+        这个程序用了事件。和伙伴看看代码，然后讨论一下你认为它能做什么。一旦有了答案后，点击“运行”来检查一下自己的答案。\r
+        \r
+        * 当程序运行时，灯会不会亮？为什么呢？
       CSD U6 LEDs color_markdown_instruction: |-
         # 增加一些颜色\r
         \r
@@ -12622,58 +13508,179 @@
         # 做这个\r
         \r
         使用`.color()`命令把每个LED设置为不同颜色。
-      CSD U6 add LED button_markdown_instruction: '# 使用事件 \r \r 此程序有两个按钮。 "on" 按钮工作正常,
-        但 "关闭" 按钮仍然需要编程. \r\r#请执行此操作 \r* 添加代码, 以便第二个按钮关闭LED灯。'
-      CSD U6 analog challenge_markdown_instruction: "# 挑战 \\r \\r _在接受挑战之前，请与您的教师先核对。
-        \\r\\r您已经练习了各种模拟传感器的输入, 已经改变其规模以满足您的需要, 你能想出一个传感器数据有趣的使用？显示来自传感器的原始数据很容易，但更有趣的是以不同的方式呈现这些数据.
-        \\r\\r请考虑以下可能与传感器数据通信的方法: \\r\\r* 使用主板输出 \\r *更改 UI 元素的宽度、高度或位置\\r * 使用条件在传感器值基础上显示不同的图像"
-      CSD U6 analog data_markdown_instruction: '# 数据事件 \r \r 每个模拟传感器都会发出一个称为 "数据"
-        的特殊事件, 每次新数据传到传感器都会发生这种情况。使用此事件, 我们可以编写不断更新的程序. \r \r #请操作以下\r\r这是您在本课中所做的第一个程序,
-        让我们来看看是否可以使用 "数据" 事件不断更新声音读数. \r\r*将 "onBoardEvent" 块拖出 "\r*选择 "lightSensor"
-        作为监视和 "数据" 事件的输入\r* 将现有代码移动到事件处理程序中'
-      CSD U6 analog light_markdown_instruction: '# 光传感器更新 \r \r 这个应用程序与最后一个非常相似, 但是我们添加了一个
-        ID 为 "update_button" 的按钮。编写一个程序, 在每次单击 "更新" 按钮时可以显示光传感器的当前值. \r \r #请操作以下\r\r使用事件处理程序来使用
-        "lightSensor. value" 块更新 "light_value" 的文本。'
-      CSD U6 analog rbg 1_markdown_instruction: '# 显示有色的传感器读数 \r \r 在早期的预测关卡, 您看到了
-        "setScale ()" 方法如何将所有传感器读数 (0-1023) 转换为可用于 RGB 值 (0-255) 的范围。让我们建立在这个想法上,
-        制作一个应用程序, 让它可以用单一颜色和所有三模拟传感器的当前价值对话. \r \r#请操作以下\r\r 要启动, 我们只需要正确设置传感器的刻度,
-        不必担心实际设置背景颜色的问题。r \r <img src="https://images.code.org/39de88e19682e905a1e08d5f12398f35-image-1488995498849.png"
-        style="float: right; width: 300px; margin-left: 20px;"/> \r\r*使用 "传感器. setScale
-        ()" 块, 将每个三模拟传感器设置为RGB 颜色通道的正确比例. \r * 为每个三种颜色创建一个变量, 并为不同传感器的 ". value" 赋值.\r*
-        使用 "console.log ()" 来测试您的变量是否在正确的范围内. \r\r_暗示: 订货事宜。您需要设置传感器的刻度, 然后再检查它的 数值_'
-      CSD U6 analog rbg 2_markdown_instruction: '# 将颜色放在屏幕上 \r \r 现在您的传感器数据在一个适用于
-        RGB 的刻度中, 您可以开始设置屏幕颜色. \r\r#请执行此操作 \r\r* 添加一个 "setProperty ()" 块, 并将其设置为更改
-        "screen1" 的 "背景色" 属性. \r*添加一个 "RGB ()" 模块到 "setProperty ()" 的最后一个参数. \r *
-        使用您创建的三色变量作为 "rgb ()" 块的输入。'
-      CSD U6 analog rgb 3_markdown_instruction: '# 连续更新 \r \r 这个 sensor-to-color 的应用程序不是超级有用的,
-        如果它只在你启动应用程序的时候设置颜色。您可以使用传感器的 "数据" 事件, 使您的应用程序在每次值更改时不断更新背景颜色. \r\r将您的 "setScale
-        ()" 块移动到一个传感器的事件处理程序中, 以使应用程序不断更新。'
-      CSD U6 analog sound_markdown_instruction: '# 读取声音传感器 \r \r soundSensor "值" 块允许您获取当前的声音传感器读数
-        \r \r #请操作以下\r\r在此应用程序中, 我们已经添加了 id 为 "sound_value" 的文本标签。使用 "soundSensor.
-        value" 块, 显示声音传感器的值.\r\r _提示: 您可以将 "soundSensor. value" 块直接拖动到任何其他可以键入值的块中。\r\r！[]
-        (https://images.code.org/3bd9ac3f869e42f48aaf190944fe1c22-image-1511293198110.png)'
-      CSD U6 analog temp_markdown_instruction: '# 制作一个温度计应用程序 \r \r 当光和声音传感器具有 "value"
-        属性的原始值时, 温度传感器就更智能一些。除了 "tempSensor", 有两个属性 "tempSensor" 和 "tempSensor. C",
-        它们将原始输入值转换为华氏或摄氏. \r \r #请操作以下\r\r做一个简单的温度计应用程序, 从温度传感器中读取值。您的应用程序可以显示温度,
-        无论是华氏或摄氏 (或两者!\r\r* 使用设计模式, 创建一个用于更新的按钮和一个显示温度的标签 \r * 添加一个事件处理程序以响应被单击的更新按钮
-        \r * 将代码添加到事件处理程序以读取温度传感器并在屏幕上显示值'
+      CSD U6 add LED button_markdown_instruction: |-
+        # 使用事件\r
+        \r
+        这个程序有两个按钮。“on”（开）按钮能工作，但是“off”（关）按钮还需要编写程序。\r
+        \r
+        # 做这些\r
+        * 添加代码让第二个按钮能关闭LED灯。
+      CSD U6 airplane predict markdown_markdown_instruction: |-
+        Look at the code below.
+        What do you think it's going to do? Give it a guess, and run the code to
+        find out!
+      CSD U6 analog challenge_markdown_instruction: |-
+        # 挑战\r
+        \r
+        _在挑战前，请先问问老师。_\r
+        \r
+        现在，你已经练习了从各种模拟传感器中获取输入，并改变它们的范围。你能从传感器数据中找到有趣的用途吗？显示传感器的原始值是很容易的，但更有意思的是用不同的方法来表达数据。\r
+        \r
+        考虑下面的方法来使用传感器数据：\r
+        \r
+        * 使用主板的输出\r
+        * 改变宽、高或UI元素的位置。\r
+        * 使用条件来基于传感器数据显示不同的图片。
+      CSD U6 analog change_markdown_instruction: |-
+        # Change Event\r
+        \r
+        The data
+        even is fine if you don't mind your code running constantly, but sometimes
+        that's not the most efficient solution to your problem. The sensor "change"
+        event only fires if the sensor value has changed since the last reading, which
+        can make sure your program isn't running code when it's not necessary.\r
+        \r
+        #
+        Do This\r
+        \r
+        Using the provided event handler, write a program that buzzes
+        the buzzer and updates "temp_value" whenever the temperature sensor reading
+        changes. Place your thumb over the temperature sensor to get it to change
+        and see how your program responds.
+      CSD U6 analog data_markdown_instruction: |-
+        # 数据事件\r
+        \r
+        每个模拟传感器在有新数据时，都会发出一个特殊的事件叫做“数据”。通过这个事件，我们能写出持续更新的程序。\r
+        \r
+        # 做这些\r
+        \r
+        这是课程里，你写的第一个程序，让我们看看是否能用“数据”事件来持续更新声音。\r
+        \r
+        * 创建一个事件处理函数来响应光线传感器的“数据”事件。\r
+        * 将已有的代码移动到你的事件处理函数中。
+      CSD U6 analog light_markdown_instruction: |-
+        # 光线传感器的更新\r
+        \r
+        这个应用和上一个很像，但我们加了一个ID为”update_button"（更新按钮）的按钮。写一个程序在点击更新按钮时，显示光线传感器的值。\r
+        \r
+        # 做这些\r
+        \r
+        用事件处理函数，通过`lightSensor.value`模块来更新"light_value"的文本。
+      CSD U6 analog rbg 1_markdown_instruction: |-
+        # 用颜色显示传感器读数\r
+        \r
+        在早先的预测关卡中，你已经见过如何用`setScale()`（设置范围）方法来将传感器读数的整个范围（0-1024）转换到RGB值得范围（0-255）。让我们用这个办法来做一个应用，来用一个颜色来表达三个模拟传感器的值。\r
+        \r
+        # 做这些\r
+        \r
+        要开始，我们只需要将传感器范围设置正确 - 不用担心实际的背景颜色。\r
+        \r
+        * 使用`sensor.setScale()`模块来设置每个灯光和声音传感器的范围为一个RGB颜色通道的范围。\r
+        *
+        为这三个颜色的每一个创建一个变量，并分派给不同的传感器。\r
+        * 用`console.log()`来测试你的变量是否在正确的范围里。\r
+        \r
+        _提示：顺序很重要。你需要在读取值之前设置好传感器的范围。_\r
+        _提示：记住温度传感器可以读取摄氏和华氏温度 - 它可能已经给了你RGB范围内的值了。_
+      CSD U6 analog rbg 2_markdown_instruction: |-
+        # 将颜色放到屏幕上\r
+        \r
+        现在，你的传感器数据已经在RGB范围内了。你能开始设置屏幕颜色了。\r
+        \r
+        # 做这些\r
+        \r
+        * 添加一个`setProperty()`模块，并且设置它来改变屏幕的背景颜色。\r
+        * 添加一个`rgb()`模块到`setProperty()`的最后一个参数上。\r
+        * 将这三个颜色变量作为你创建的`rgb()`模块的输入。
+      CSD U6 analog rgb 3_markdown_instruction: |-
+        # 连续更新\r
+        \r
+        如果这个传感器到颜色的应用只能在启动应用时设置一次颜色，那它不会非常有用。你可以用传感器的“数据”事件来让你的应用能够在每次值改变时，持续的更新背景颜色。\r
+        \r
+        将你的`setProperty()`模块移动到其中一个传感器的事件处理函数中，从而让应用能够持续更新。
+      CSD U6 analog sound_markdown_instruction: |-
+        # 读取声音传感器\r
+        \r
+        `soundSensor.value`模块允许你获得当前声音传感器的读数。\r
+        \r
+        #
+        做这些\r
+        \r
+        在这个应用中，我们已经添加了一个ID为"sound_value"的文本标签。
+        用`soundSensor.value` 模块来显示声音传感器当前的值。\r
+        \r
+        _提示，你可以把`soundSensor.value`模块直接拖拽到能够直接输入值的地方。_\r
+        \r
+        ![](https://images.code.org/3bd9ac3f869e42f48aaf190944fe1c22-image-1511293198110.png)
+      CSD U6 analog temp_markdown_instruction: |-
+        # 制作一个温度应用程序\r
+        \r
+        光线和声音传感器只能输出一个原始的`value`属性值，而温度传感器更聪明一些。它有两个属性`tempSensor.F`和`tempSensor.C`，而不是一个`tempSensor.value`。这样，它能将原始输入转换为摄氏或者华氏温度。\r
+        \r
+        # 做这些\r
+        \r
+        做一个简单的温度应用来从温度传感器中读出值。
+        你的应用可以显示华氏或摄氏温度（或者都显示！）\r
+        \r
+        *
+        用设计模式，创建一个按钮来更新，并加上一个标签来显示温度\r
+        * 添加一个事件处理函数来响应点击更新按钮的事件\r
+        * 向事件处理函数中添加代码来读取温度传感器，并显示在屏幕上
+      CSD U6 analog threshold_markdown_instruction: |-
+        # Change Threshold\r
+        \r
+        By
+        default a sensor's "change" event fires every time the sensor value changes
+        at all, even by one. The light and sound sensors are constantly fluctuating,
+        so you probably want the "change" event to be a little less responsive.
+        The `threshold` property allows you to set how much a sensor should change
+        before considering it a "change" event - so setting `soundSensor.threshold
+        = 100` would cause the sound sensor's "change" even only to trigger if
+        its value increased or decreased by at least 100.\r
+        \r
+        # Do This\r
+        \r
+        This
+        app changes the background color of the screen whenever the sound sensor value
+        changes, but we want to only respond to big changes in volume (like a loud
+        noise). Use the `soundSensor.threshold` block to fix it.\r
+        \r
+        * Add a `soundSensor.threshold`
+        block before the event handler\r
+        * Test out which how different threshold
+        values impact the "change" event\r
+        * Choose a threshold value that makes
+        the screen background change only when a loud noise is sensed.\r
+        \r
+        _Tip:
+        Your threshold depends on how much ambient noise there is in the room, and
+        how much it changes. A threshold that works in a quiet room may not work in
+        a louder classroom._
       CSD U6 array piano_markdown_instruction: |-
         # 钢琴恐慌\r
         \r
-        你已经使用了矩阵里的元素。现在你将改变矩阵内部。\r
+        现在，你已经用了数组中的元素了。现在，你需要改变数组中的内容。\r
         \r
-        我们的好朋友钢琴回来了，现在它可以从两个矩阵里演奏音符：`notes`存放自然音符(C, D, E,
-        F, G, A, B)，而`sharpNotes`存放升调音符(C#, D#, F#, G#, A#)。\r
+        我们的好朋友钢琴回来了，除了它现在从两个数组来弹奏音符：`notes`（音符），会按住普通音符（C, D, E, F, G, A, B），并且`sharpNotes`会按下升音音符（C#, D#, F#, G#, A#）。\r
         \r
         #
-        做这个\r
+        做这些\r
         \r
-        `sharpNotes`矩阵里现在只有一个元素\r
+        `sharpNotes`数组现在只有一个元素。\r
         \r
-        * 修正矩阵从而使钢琴的升调键能够演奏正确的音符。
-      CSD U6 balloon clicker predict_markdown_instruction: '#让气球飞\r\r在这个游戏中，你必须点击正确的按钮使气球飞入天空.\r\r
-        请与您的合作伙伴一起查看代码, 并回答以下问题: \r\r* 在变量 "正确" 中存储的值何时更改？\r\r为什么程序需要这行: '' var 选择
-        = randomNumber (13); "？ \r \r 一旦你已经回答了问题, 运行代码, 看看会发生什么。'
+        * 修复数组，使得钢琴上的升音键能够正常弹奏音符。
+      CSD U6 balloon clicker predict_markdown_instruction: |-
+        # 让气球飞起来\r
+        \r
+        在这个游戏中，你必须点击正确的按钮让气球飞向天空。\r
+        \r
+        和你的伙伴看看代码，然后回答这些问题：\r
+        \r
+        * 什么时候存储在变量`correct`（正确）的值会改变？\r
+        *
+        为什么程序需要这一行： `var choice = randomNumber(1,3);`？\r
+        \r
+        一旦你回答了这些问题，运行代码看看会发生什么。
       CSD U6 board getters_markdown_instruction: '# 使用电路操场 \r \r 您也可以使用 电路操场的获取和设置
         。 对于这个关卡, 您需要插入您的主板. \r\r读完代码并预测程序会做什么, 然后点击 "运行" 来测试您的预测。'
       CSD U6 challenge motorcycle_markdown_instruction: "# 挑战 \\r \\r 使用此程序对获取和设置属性进行更多的实验。您可能尝试的一些想法包括:
@@ -12696,7 +13703,101 @@
         value from the slider and use it to make the LED blink at that new rate.\r
         *
         Run your program, moving the slider to see whether the LED speed changes automatically.
-      CSD U6 checkbox_markdown_instruction: "预测水平"
+      CSD U6 checkbox_markdown_instruction: "预测关卡"
+      CSD U6 circuit createLed_markdown_instruction: |-
+        # Creating Board Objects\r
+        \r
+        You
+        might have noticed that the new blocks we're using are in a different toolbox
+        drawer. The **Circuit** drawer contains all of the board objects that are
+        built into the Circuit Playground, but when you start wiring your own circuits
+        the Maker Toolkit no longer knows where everything is.\r
+        \r
+        The new **Maker**
+        drawer contains general purpose commands instead of ones that are customized
+        for the Circuit Playground. In addition to the `pinMode()` and `digitalWrite()`
+        commands you've seen, it includes commands to create new objects on the board
+        that can be programmed in the same way as the blocks in the **Circuit** drawer.
+        The `var myLed = createLed()` command, for example, creates a new LED object
+        that behaves just like the `led` blocks you've been using.\r
+        \r
+        # Do This\r
+        \r
+        Now
+        that you're creating new board objects that we don't have blocks for, you'll
+        need to work in text mode. You can still drag out blocks that you're familiar
+        with from the **Circuit** drawer, you'll just need to change the name of
+        the object.\r
+        \r
+        * Keep your LED wired just as it was before (connected
+        to pin 2)\r
+        * Make sure you're in text mode, not block mode.\r
+        * Drag out
+        an `led.blink()` block below the comment `// Blink myLed`.\r
+        * Replace the
+        text `led` with `myLed`.\\r
+        * Test your code.
+      CSD U6 circuit multi led_markdown_instruction: |-
+        # Creating Board Objects\r
+        \r
+        You
+        might have noticed that the new blocks we're using are in a different toolbox
+        drawer. The **Circuit** drawer contains all of the board objects that are
+        built into the Circuit Playground, but when you start wiring your own circuits
+        the Maker Toolkit no longer knows where everything is.\r
+        \r
+        The new **Maker**
+        drawer contains general purpose commands instead of ones that are customized
+        for the Circuit Playground. In addition to the `pinMode()` and `digitalWrite()`
+        commands you've seen, it includes commands to create new objects on the board
+        that can be programmed in the same way as the blocks in the **Circuit** drawer.
+        The `var myLed = createLed()` command, for example, creates a new LED object
+        that behaves just like the `led` blocks you've been using.\r
+        \r
+        # Do This\r
+        \r
+        Now
+        that you're creating new board objects that we don't have blocks for, you'll
+        need to work in text mode. You can still drag out blocks that you're familiar
+        with from the **Circuit** drawer, you'll just need to change the name of
+        the object.\r
+        \r
+        * Keep your LED wired just as it was before (connected
+        to pin 2)\r
+        * Make sure you're in text mode, not block mode.\r
+        * Drag out
+        an `led.blink()` block below the comment `// Blink myLed`.\r
+        * Replace the
+        text `led` with `myLed`.\\r
+        * Test your code.
+      CSD U6 circuit pinMode_markdown_instruction: |-
+        # Wire a Circuit\r
+        \r
+        You can
+        use any of the numbered pads to add additional circuits to your board. Let's
+        use pin 2 to add another LED.\r
+        \r
+        # Do This\r
+        \r
+        * Using a wire, connect
+        pin 2 to the positive (+) side of an LED\r
+        * Using another wire, connect
+        the negative (-) side of the LED to a ground (GND) pin (it doesn't matter
+        which run)\r
+        * Run this program to test your circuit. If it worked, your
+        LED should turn on.\r
+        \r
+        _Debugging Tip: LEDs only work if the electricity
+        is flowing from positive to negative. If your LED doesn't light up, make
+        sure that it's oriented the right way._
+      CSD U6 circuit predict multi_markdown_instruction: |-
+        # Make a Prediction\r
+        \r
+        All
+        of the devices that you've used so far are actually circuits connected to
+        numbered pins! Look for **#13** on your board to see which circuit is connected
+        to pin 13, then read through this code and predict what will happen when the
+        program is run.
       CSD U6 colorLED on_markdown_instruction: |-
         <img src="//curriculum.code.org/images/circuitplayground/colorLedonoff.gif"
         style="float: right; margin: 10px;">\r
@@ -12773,6 +13874,71 @@
       CSD U6 design motorcycle_markdown_instruction: '#添加您自己的元素 \r \r 现在是时候添加自己的一些元素了。摩托车现在应该能够上下移动,
         但是你怎么能控制它的速度呢？ \r \r #请操作以下\r\r* 在设计模式中添加滑块. \r*请确保在设计模式下设置滑块的最小和最大值. \r创建一个事件,
         将触发时滑块值更改. \r * 添加代码以获取滑块值, 并在触发事件时将其存储到 "速度" 变量中。'
+      CSD U6 direction theremin_markdown_instruction: |-
+        # Accelerated Music\r
+        \r
+        We're
+        going to make music with the board again, this time using the accelerometer.
+        \r
+        \r
+        Since `buzzer.frequency` takes a number as a parameter, we can use
+        the number that the accelerometer's pitch and roll properties return to change
+        the frequency.\r
+        \r
+        # Do This\r
+        * Make a variable to store either the accelerometer's
+        pitch or roll, name it accordingly.\r
+        * Use this variable with the buzzer,
+        and alter it in some way. You can add or subtract from it, multiply it by
+        another number, etc.\r
+        * Run the program and alter it again to see what sort
+        of sounds you get this time.
+      CSD U6 directional LEDs roll_markdown_instruction: |-
+        # Roll\r
+        \r
+        Now that
+        you've made the LEDs turn on when you tilt the board forward and back, see
+        if you can light LEDs 2 and 7 when you tilt the board left and right. You
+        can use `accelerometer.getOrientation('roll')` to detect side-to-side motion.\r
+        \r
+        _Remember_:
+        When roll is a positive number, the board is tilting to the right. When roll
+        is a negative number, the board is tilting to the left.\r
+        \r
+        # Do this\r
+        *
+        Create something similar to what you did in the last bubble, except now using
+        `accelerometer.getOrientation("roll")`\r
+        * Run your code to see if it works.
+        Make sure that you can both move the board back and forth, and side-to-side
+        to turn the LEDs on.\r
+        \r
+        _Challenge_: The lights instantly turn on if you
+        move the board in the slightest way. Can you make it so that you have to turn
+        the board a little more in order for the lights to turn on?
+      CSD U6 directional leds pitch_markdown_instruction: |-
+        # Pitch\r
+        \r
+        This program
+        lights the LEDs depending on if you tilt the board forward or back. If you
+        tilt the board forward, the LEDs in the front should light. If you tilt the
+        board back, the LEDs in the back should light.\r
+        \r
+        Right now, the only
+        LEDs that light up are the two near the USB port (LEDs 0 and 9) when you tilt
+        the board forward.\r
+        \r
+        \r
+        # Do This\r
+        \r
+        * Use the board's pitch to
+        make LEDs 4 and 5 light up when you tilt the board back.\r
+        * Run your code
+        and test it a few times.\r
+        \r
+        Remember: When pitch is a positive number,
+        it means the board is tilting backward. When pitch is a negative number, the
+        board is tilting forward.
       CSD U6 emoji race demo_markdown_instruction: "#表情比赛! \\r\\r这是一个你在本课结束前要制作的比赛例子.
         要和另一个学生配对来玩。在左边的学生将尽快点击电路操场的左按钮，而在右边的学生要点击右按钮。谁能把他们的表情弄到屏幕的底部就先赢.\\r\\r# 请做此操作
         \\r \\r找到一位同班同学, 并列出以下信息. \\r\\r*该程序使用的主板组件是什么？ \\r * 此程序响应的是什么事件？\\r*你可能会创建什么功能使这个程序的工作？"
@@ -13052,7 +14218,7 @@
         拖出 "setProperty" 块 \r *, 为第一个参数选择 "名称" (元素的 id) \r * 对于第二个参数, 选择 "文本" (要设置的属性)
         \r * 为第三个参数, 在引号中写上你的名字 (要设置的值) \r \r _备注: 我们已经删除了 "设计模式" 选项卡, 以便您可以练习使用 "setProperty",
         一旦您构建了自己的应用程序, 它后面会再回来的。'
-      CSD U6 getProperty board predict_markdown_instruction: "预测级别 (请参见降价的包含关卡)"
+      CSD U6 getProperty board predict_markdown_instruction: "预测级别 (请参见标记的包含关卡)"
       CSD U6 getProperty buzzer_markdown_instruction: "# 使用电路操场 \\r \\r 这里是你在最后一层看到的相同的代码,
         但这次有另一个下拉菜单来控制蜂鸣器。 您必须添加代码才能使其正常工作. \\r \\r #请操作以下\\r* 使用 LED 代码作为模型, 在 buttonL
         事件中添加新代码, 根据 buzzer_input下拉菜单的文本属性，将播放或长或短的嗡嗡声 \\r*添加新的代码，使得当按钮按下的时候，会关闭蜂鸣器。*
@@ -13094,7 +14260,36 @@
       CSD U6 interval predict_markdown_instruction: '# 间隔 \r \r 现在我们正在使用滑块来影响 LED
         的行为。  正如我们可以改变蜂鸣器的频率和持续时间的值, 我们可以更改指示灯的闪烁或脉冲间隔的值. \r \r # 请操作\r\r*读取代码并预测程序将执行的操作,
         然后按 "运行" 来测试您的预测。'
-      CSD U6 interval_markdown_instruction: "预测水平"
+      CSD U6 interval_markdown_instruction: "预测关卡"
+      CSD U6 iter create notes_markdown_instruction: |
+        # Music Player\r
+        \r
+        This
+        program lets you play music by waving a wand over the different notes, but
+        it's missing a function definition.\r
+        \r
+        # Do This\r
+        * Create a `checkNotes()`
+        function that will call `checkNote(note)` on everything in the "notes" array.\r
+      CSD U6 iter modify bugs_markdown_instruction: |-
+        # Bug Shaker\r
+        \r
+        This program
+        shakes bugs around when the board is shaken, but it's only working for one
+        bug.\r
+        \r
+        # Do This\r
+        * Change the `moveBugs()` function so that it calls
+        `moveBug(color)` on every bug color.\r
+          * (Hint: Look at the `detectHits()`
+        function for clues how to do this.)
+      CSD U6 iter predict bubbles contained_markdown_instruction: |-
+        # Fish Bubbles\r
+        \r
+        This
+        program uses the sound sensor in the same way as the clouds program.  How
+        many bubbles will move when you blow on the board?
+      CSD U6 iter predict bubbles_markdown_instruction: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       CSD U6 light pattern challenge_markdown_instruction: "# 挑战: 更多模式 \\r \\r 为您的应用程序添加更多模式.
         查找合作伙伴并将其模式添加为选项。确保将每个模式都放入其自身的函数中。"
       CSD U6 light pattern off_markdown_instruction: |-
@@ -13138,6 +14333,88 @@
         但是, 有时, 当用户选择新值时, 您就需要更改 LED 的间隔。  为此, 您需要 "onChange（改变）" 事件.\r\r#请操作\r\r请查看程序中的第一个事件块,
         并找到它所说的 "onChange". \r * 在事件块中, 从滑块中获取间隔值, 并使用它使 LED 在该新速率下闪烁. \r*运行你的程序,
         移动滑块以查看 LED 速度是否自动改变。'
+      CSD U6 params create colors_markdown_instruction: |-
+        # Color Picker\r
+        \r
+        In
+        this program, pressing the buttons at the bottom of the screen changes the
+        color of the images and the color LEDs.\r
+        \r
+        # Do This\r
+        * Create a function
+        `chooseColor(color)` that changes each of the images and the color LEDs to
+        the given color.\r
+        * Call your function in the event blocks so that all the
+        buttons work.
+      CSD U6 params predict contained_markdown_instruction: |-
+        # Bug Crawl\r
+        \r
+        Look
+        at the program below, paying special attention to the function `crawl(bug)`.  What
+        happens if you press the left or right button?
+      CSD U6 params starchaser 1_markdown_instruction: |-
+        # Make your `loopStar(color)`
+        function\r
+        \r
+        Right now only the red star works, so you'll need to change
+        this code.\r
+        \r
+        # Do This\r
+        * Use the code from the `loopRedStar()` function
+        to create a `loopStar(color)` function that will work with any star.\r
+        *
+        Test your function by calling `loopStar("red")` and `loopStar("blue")`
+        inside the `loopStars()` function.
+      CSD U6 params starchaser 2_markdown_instruction: |-
+        # Star Chaser\r
+        \r
+        Now
+        you'll need to make all the stars loop around the screen.\r
+        \r
+        # Do This\r
+        *
+        Use a `for` loop inside your `loopStars()` function to make every star in
+        "starArray" loop around the screen.
+      CSD U6 params starchaser 3_markdown_instruction: |
+        # Star Chaser\r
+        \r
+        All
+        the stars loop, but you can still only catch the red star.\r
+        \r
+        # Do This\r
+        *
+        Use code from the `moveRedStar()` function to make a `moveStar(color)` function
+        that can move any star.\r
+        * Use code from the `checkRedStar()` function to
+        make a `checkStar(color)` function that works for any star.\r
+        * Test your
+        code by calling `checkStar("red")` and `checkStar("blue")` inside your
+        event block.\r
+      CSD U6 params starchaser 4_markdown_instruction: |-
+        # Star Chaser\r
+        \r
+        Now
+        make it work for all the stars\r
+        \r
+        # Do This\r
+        * Create a `checkStars()`
+        functions that uses a `for` loop to check every star in the star array.\r
+        *
+        Test your code by calling the `checkStars()` function inside the event block.
+      CSD U6 params starchaser intro_markdown_instruction: |-
+        # Star Chaser\r
+        \r
+        In
+        this game, the user tries to catch the stars according to the color of the
+        LEDs.\r
+        \r
+        # Do This\r
+        * Play the game, and discuss the following with
+        a partner:\r
+         * What functions might this program need?\r
+         * What parameters
+        should these functions have?
+      CSD U6 params starchaser template_markdown_instruction: Template Level.
       CSD U6 predict LED button_markdown_instruction: "嵌入式预测"
       CSD U6 random array notes_markdown_instruction: |-
         # Random Song Generator\r
@@ -13185,6 +14462,14 @@
       CSD U6 slider intro_markdown_instruction: "#滑块\\r\\r上次, 您的用户只能在短时间和长期的嗡嗡声中进行选择。
         给用户控制蜂鸣器的确切持续时间, 您需要使用滑块. \\r\\r这个滑块允许用户在嗡嗡声的持续时间内选择一个介于100和1000之间的值, 但是它如何运作还有些不太正确。\\r\\r#请操作\\r\\r*
         查看代码并找到使持续时间无法正确设置的 bug. \\r\\r*(提示: 悬停在黄色三角形上, 以了解代码可能有什么问题。"
+      CSD U6 stillness game predict code_markdown_instruction: "# Change with the\nAccelerometer\\r\n\\r\nJust
+        like the sensors, the accelerometer has a change\nevent. "
+      CSD U6 stillness game predict_markdown_instruction: |
+        # Accelerometer Events\r
+        \r
+        Look
+        at the code below with a partner. What do you think it's going to do? Give
+        it a guess, then run the code to find out!\r
       CSD U6 test LED_markdown_instruction: |-
         # 控制 LED \r r 现在你知道你的画板还有作业，您可以试用不同的 led &#039; 块. 请按 "运行", 如果&#039; 模块无法在你的语言中运作，可以使用&quot; 拼图片&quot;。
 
@@ -18612,10 +19897,18 @@
       CSDU6 - sensor vu meter demo_markdown_instruction: "# 似曾相识的节拍 \\r \\r 许多立体声系统都有一排发光二极管,
         随着音乐的播放而亮起。这个显示屏被称为音量单元 (似曾相识), 它允许用户看到音乐在播放时有多大的音量.\\r\\r通过在赛道操场附近说话或制造噪音来测试这个似曾相识的仪表。随着环境噪声的变化,
         灯光和显示器的变化如何？"
-      CSDU6 - sensors challenge_markdown_instruction: "# 挑战 \\r \\r _在开始接受挑战之前，请与您的教师在进行核对。\\r\\r
-        您已经练习了从各种模拟传感器的输入, 以及改变其规模来满足您的需要, 你能想出一个有趣的使用传感器数据的地方吗？显示来自传感器的原始数据很容易，但更有趣的是,
-        以不同的方式呈现这些数据.\\r\\r 请考虑以下可能与传感器数据通信的方法: \\r\\r*使用主板输出 \\r* 更改 UI 元素 宽度、高度或位置\\r
-        * 使用条件，根据传感器值来显示不同的图像"
+      CSDU6 - sensors challenge_markdown_instruction: |-
+        # 挑战\r
+        \r
+        _在挑战前，请先问问老师。_\r
+        \r
+        现在，你已经练习了从各种模拟传感器中获取输入，并改变它们的范围。你能从传感器数据中找到有趣的用途吗？显示传感器的原始值是很容易的，但更有意思的是用不同的方法来表达数据。\r
+        \r
+        考虑下面的方法来使用传感器数据：\r
+        \r
+        * 使用主板的输出\r
+        * 改变宽、高或UI元素的位置。\r
+        * 使用条件来基于传感器数据显示不同的图片。
       CSDU6 - sensors experiment_markdown_instruction: '<iframe width="370" height="620"
         style="float:right; margin-left: 25px; border: 0px;" src="https://studio.code.org/projects/applab/kxyJyJI1Bg1fV_5NIl8MHQ/embed">
         </iframe> \r \r #传感器实验 \r \r 运行右边的程序，来实验你的主画板。尝试用多种不同的方式与您的主板进行互动, 找出每个传感器可能是什么。完成实验后,
@@ -18633,13 +19926,24 @@
         \r \r#请操作这个\r\r 为您的应用程序进行最后润色. 返回到您的规划指南, 确保该应用程序符合您的初始目标。'
       CSDU6 - sensors predict question_markdown_instruction: "# 做一个预测 \\r \\r 读取此程序中的代码,
         并在下面进行预测。您认为这个程序在运行时会做什么？用户打算如何与控制面板互动？您可能需要使用手电筒或其他明亮的光源来查看该应用程序的全部范围。"
-      CSDU6 - sensors rgb part 1_markdown_instruction: '# 显示有色的传感器读数 \r \r 在之前的预测关卡,
-        您看到了 "setScale ()" 方法如何将所有传感器读数 (0-1023) 转换为可用于 RGB 值 (0-255) 的范围。让我们建立在这个想法上,
-        制作一个应用程序, 让它可以用单一颜色和所有三模拟传感器的当前价值对话. \r \r#请操作以下\r\r 要启动, 我们只需要正确设置传感器的刻度,
-        不必担心实际设置背景颜色的问题。r \r <img src="https://images.code.org/39de88e19682e905a1e08d5f12398f35-image-1488995498849.png"
-        style="float: right; width: 300px; margin-left: 20px;"/> \r\r*使用 "传感器. setScale
-        ()" 块, 将每个三模拟传感器设置为RGB 颜色通道的正确比例. \r * 为每个三种颜色创建一个变量, 并为不同传感器的 ". value" 赋值.\r*
-        使用 "console.log ()" 来测试您的变量是否在正确的范围内. \r\r_暗示: 订货事宜。您需要设置传感器的刻度, 然后再检查它的数值_'
+      CSDU6 - sensors rgb part 1_markdown_instruction: |-
+        # 用颜色显示传感器读数\r
+        \r
+        在以前的预测关卡中，你已经见过如何用`setScale()`（设置范围）方法来将传感器读数的整个范围（0-1024）转换到RGB值得范围（0-255）。让我们用这个办法来做一个应用，来用一个颜色来表达三个模拟传感器的值。\r
+        \r
+        # 做这些\r
+        \r
+        要开始，我们只需要将传感器范围设置正确 - 不用担心实际的背景颜色。\r
+        \r
+        <img src="https://images.code.org/39de88e19682e905a1e08d5f12398f35-image-1488995498849.png"
+        style="float: right; width: 300px; margin-left: 20px;"/>\r
+        \r
+        * 使用`sensor.setScale()`模块来设置每个灯光和声音传感器的范围为一个RGB颜色通道的范围。\r
+        *
+        为这三个颜色的每一个创建一个变量，并分派给不同的传感器。\r
+        * 用`console.log()`来测试你的变量是否在正确的范围里。\r
+        \r
+        _提示：顺序很重要。你需要在读取值之前设置好传感器的范围。_
       CSDU6 - sensors rgb part 2_markdown_instruction: '# 将颜色放在屏幕上 \r \r 现在您的传感器数据在一个适用于
         RGB 的刻度中, 您可以开始设置屏幕颜色. \r\r#请执行此操作 \r\r* 添加一个 "setProperty ()" 块, 并将其设置为更改
         "screen1" 的 "背景色" 属性. \r*添加一个 "RGB ()" 模块到 "setProperty ()" 的最后一个参数. \r *
@@ -32301,12 +33605,22 @@
         move the turtle forward, as shown below. \r
         \r
         ![](https://images.code.org/4c31307ec14cc6dfd65589f2a813120e-image-1447884881189.gif)
-      PS copy - CSD U3 Variables Predict Where XY Embed_markdown_instruction: '# 预测
-        \r\r 在屏幕的哪个角落来绘制圆圈？ \r \r _提示: 单击 "显示网格" 框来帮助您在屏幕上找到精确的坐标. _ (显示我在哪里) (#triggercallout
-        = code_triggered))'
-      PS copy - CSD U3 Variables change circle size_markdown_instruction: '\r\r#调试:
-        使用变量 \r \r 此程序使用变量 "circleSize" 来控制圆的宽度和高度。 如果你把圆圈做得足够大, 它就会像右边的图片一样填满整个屏幕,.
-        \r \r#请操作以下\r\r * 请更改分配给 "circleSize" 的值, 让该圆圈占据整个屏幕。'
+      PS copy - CSD U3 Variables Predict Where XY Embed_markdown_instruction: |-
+        # 预测\r
+        \r
+        圆圈会被绘制到屏幕的哪个角落？\r
+        \r
+        _提示：点击"显示网格"按钮来帮助你找到屏幕上的精确位置。_[显示在哪里](#triggercallout=code_triggered)
+      PS copy - CSD U3 Variables change circle size_markdown_instruction: |-
+        \r
+        \r
+        # 调试：使用变量\r
+        \r
+        这个程序使用了`circleSize`（圆圈尺寸）变量来控制一个园的宽和高。如果让圆圈足够大，它就会像右边的图片一样填满整个屏幕。\r
+        \r
+        # 做这些\r
+        \r
+        * 改变赋给`circleSize`的值，让圆圈覆盖整个屏幕。
       PS copy 2-3 Bee Conditionals 5_markdown_instruction: |-
         These magic purple flowers
         change!\r
@@ -32355,6 +33669,11 @@
         \r
         * Leave this open on your screen so your peer
         reviewers can look at your work
+      Pixel Filterator_markdown_instruction: |-
+        # Free Play\r
+        \r
+        Do as you will,
+        make something awesome
       Pixelation - AllTheThings 4_markdown_instruction: '# 像素: AllTheThings 4 \r 此像素级别演示如何使用
         "hide_encoding_controls" 选项。 请注意, 该级别以十六进制显示图像数据, 而且不允许将其更改回二进制。            '
       Pixelation - AllTheThings 5_markdown_instruction: '# 像素: AllTheThings 5 \r 此像素级别演示如何使用
@@ -54379,6 +55698,260 @@
       U4LXX Free Response_markdown_instruction: |+
         Free response prompt here.
 
+      U5 AP Create Practice onEvent Doesnt Count_markdown_instruction: |-
+        # AP Practice
+        - Create PT - Choosing an Abstraction\r
+        \r
+        One component of the **AP Create
+        Performance Task** is creating and describing an abstraction in your program.
+        Here's the actual prompt.\r
+        \r
+        <div style="width: 80%; margin: auto; background-color:
+        #EEEEEE; padding: 10px; font-family: serif; font-size: 12pt">\r
+        \r
+        <b>2.
+        Written Responses</b>\r
+        <ul>\r
+        2d. Capture and paste a program code segment
+        that contains an abstraction you developed individually on your own (marked
+        with a <b>rectangle</b> in <b>section 3</b> below). This abstraction must
+        integrate mathematical and logical concepts.\r
+        Explain how your abstraction
+        helped manage the complexity of your program.\r
+        <i>(Must not exceed 200 words)</i>\r
+        </ul>\r
+        </div>\r
+        <br>\r
+        \r
+        Here's
+        one row of the scoring guide for this question\r
+        \r
+        <div style="magin:auto">\r
+        \t<img
+        src="https://images.code.org/7d5773ed70d947bf75e0c1b3f7e60911-image-1515454332418.32.05
+        PM.png">\r
+        </div>\r
+        \r
+        <br>\r
+        \r
+        # Grade the Response\r
+        \r
+        Below is
+        a segment of code from a "clicker" program with a rectangle drawn around
+        a portion of the code identifying an abstraction.\r
+        \r
+        ![](https://images.code.org/7ceaa61af4feb06707f593e4b4ec1947-image-1515454046037.26.18
+        PM.png)\r
+        \r
+        Each row is worth one point that either can or cannot be awarded.
+        **Explain why you would or would NOT award the point for Row 7 based on the
+        criteria given above.**
+      U5 AP Practice Create Abstraction Color Sleuth_markdown_instruction: |
+        # AP
+        Practice - Create PT - Abstraction\r
+        \r
+        One component of the **AP Create
+        Performance Task** is describing an abstraction within your program.\r
+        \r
+        <div
+        style="width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px;
+        font-family: serif; font-size: 12pt">\r
+        \r
+        <b>2. Written Responses</b>\r
+        <ul>\r
+        2d.
+        Capture and paste a program code segment that contains an abstraction you
+        developed individually on your own (marked with a <b>rectangle</b> in <b>section
+        3</b> below). This abstraction must integrate mathematical and logical concepts.
+        Explain how your abstraction helped manage the complexity of your program.\r
+        <i>(Must
+        not exceed 200 words)</i></ul>\r
+        </div>\r
+        <br>\r
+        \r
+        Here's one row of
+        the scoring guide for this question\r
+        \r
+        <div style="magin:auto">\r
+        \t<img
+        src="https://images.code.org/723a551269e14884f76f1d4330560d36-image-1515652835118.40.21
+        PM.png">\r
+        </div>\r
+        \r
+        # Write the Response\r
+        \r
+        ![](https://images.code.org/33f44fc55155b5e75afd37475640bc16-image-1515653209087.46.40
+        PM.png)\r
+        \r
+        <div style="clear:both"></div>\r
+        \r
+        <br>\r
+        \r
+        The selection
+        above is taken from the Color Sleuth activity you just completed. The selection
+        above **would earn credit** as an abstraction. What you need to do is write
+        response 2d describing the abstraction and how it manages complexity.\r
+        \r
+        **Write
+        response 2d describing the abstraction above. Use the writing prompt and scoring
+        guidelines as a guide.**\r
+        \r
+      U5 AP Practice Create Algorithm Color Sleuth_markdown_instruction: |-
+        # AP Practice
+        - Create PT - Algorithm\r
+        \r
+        One component of the **AP Create Performance
+        Task** is describing an algorithm within your program.\r
+        \r
+        <div style="width:
+        80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:
+        serif; font-size: 12pt">\r
+        \r
+        <b>2. Written Responses</b>\r
+        <ul>\r
+        2c.
+        Capture and paste a program code segment that implements an algorithm (marked
+        with an <b>oval</b> in <b>section 3</b> below) and that is fundamental for
+        your program to achieve its intended purpose. This code segment must be an
+        algorithm you developed individually on your own, must include two or more
+        algorithms, and must integrate mathematical and/or logical concepts. Describe
+        how each algorithm within your selected algorithm functions independently,
+        as well as in combination with others, to form a new algorithm that helps
+        to achieve the intended purpose of the program. <i>(Must not exceed 200 words)</i>\r
+        </ul>\r
+        </div>\r
+        <br>\r
+        \r
+        Here's
+        two rows of the scoring guide for this question\r
+        \r
+        <div style="magin:auto">\r
+        \t<img
+        src="https://images.code.org/febdb2c140b9a4f34f2d4a93370c8b53-image-1515518259767.17.31
+        AM.png">\r
+        </div>\r
+        \r
+        # Write the Response\r
+        \r
+        ![](https://images.code.org/f3de97fa2fd3d01d25809d06407a7cc4-image-1515524889060.34.33
+        AM.png)\r
+        \r
+        <div style="clear:both"></div>\r
+        \r
+        <br>\r
+        \r
+        The selection
+        above is taken from the Color Sleuth activity you just completed. The selection
+        above **would earn credit** as an algorithm. What you need to do is write
+        response 2c describing the algorithm, its sub-algorithms, and how it works.\r
+        \r
+        **Write
+        response 2c describing the algorithm above. Use the writing prompt and scoring
+        guidelines as a guide.**
+      U5 AP Practice Create Algorithm How vs What_markdown_instruction: |-
+        # AP Practice
+        - Create PT - Process\r
+        \r
+        One component of the **AP Create Performance
+        Task** is describing the development process used for your program.\r
+        \r
+        <div
+        style="width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px;
+        font-family: serif; font-size: 12pt">\r
+        \r
+        <b>2. Written Responses</b>\r
+        <ul>\r
+        2b.
+        Describe the incremental and iterative development process of your program,
+        focusing on two distinct points in that process. Describe the difficulties
+        and/or opportunities you encountered and how they were resolved or incorporated.
+        In your description clearly indicate whether the development described was
+        collaborative or independent. At least one of these points must refer to independent
+        program development. <i>(Must not exceed 200 words)</i>\r
+        </ul>\r
+        </div>\r
+        <br>\r
+        \r
+        Here's
+        two rows of the scoring guide for this question\r
+        \r
+        <div style="magin:auto">\r
+        \t<img
+        src="https://images.code.org/18480a117da79e3c5599edfe0b98836a-image-1515438403469.06.32
+        AM.png">\r
+        </div>\r
+        \r
+        # Grade the Response\r
+        \r
+        A student wrote the
+        following response.\r
+        \r
+        *"In developing my program I encountered two major
+        problems. The first one was early in programming when sometimes the apple
+        would disappear from the screen. By debugging my program I was able to recognize
+        that the ranges of my random X values went from 0-3200, not 0-320. I was easily
+        able to correct this issue in my code. A second issue occurred when I realized
+        that classmates using the game often didn't know how to start it. In order
+        to fix this problem I made the button significantly larger and a different
+        color than the background. Afterwards I no longer saw this problem."*\r
+        \r
+        \r
+        Each
+        row is worth one point that either can or cannot be awarded. **Explain why
+        you would or would not award the points for Row 2 and Row 3 based on the criteria
+        given above**
+      U5 AP Practice Create Process_markdown_instruction: |-
+        # AP Practice - Create
+        PT - Process\r
+        \r
+        One component of the **AP Create Performance Task** is
+        describing the development process used for your program.\r
+        \r
+        <div style="width:
+        80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:
+        serif; font-size: 12pt">\r
+        \r
+        <b>2. Written Responses</b>\r
+        <ul>\r
+        2b.
+        Describe the incremental and iterative development process of your program,
+        focusing on two distinct points in that process. Describe the difficulties
+        and/or opportunities you encountered and how they were resolved or incorporated.
+        In your description clearly indicate whether the development described was
+        collaborative or independent. At least one of these points must refer to independent
+        program development. <i>(Must not exceed 200 words)</i>\r
+        </ul>\r
+        </div>\r
+        <br>\r
+        \r
+        Here's
+        two rows of the scoring guide for this question\r
+        \r
+        <div style="magin:auto">\r
+        \t<img
+        src="https://images.code.org/18480a117da79e3c5599edfe0b98836a-image-1515438403469.06.32
+        AM.png">\r
+        </div>\r
+        \r
+        # Grade the Response\r
+        \r
+        A student wrote the
+        following response.\r
+        \r
+        *"In developing my program I encountered two major
+        problems. The first one was early in programming when sometimes the apple
+        would disappear from the screen. By debugging my program I was able to recognize
+        that the ranges of my random X values went from 0-3200, not 0-320. I was easily
+        able to correct this issue in my code. A second issue occurred when I realized
+        that classmates using the game often didn't know how to start it. In order
+        to fix this problem I made the button significantly larger and a different
+        color than the background. Afterwards I no longer saw this problem."*\r
+        \r
+        \r
+        Each
+        row is worth one point that either can or cannot be awarded. **Explain why
+        you would or would not award the points for Row 2 and Row 3 based on the criteria
+        given above**
       U5 Booleans_markdown_instruction: |-
         ### Points to pay attention to:\r
         \r
@@ -55868,6 +57441,96 @@
         2. Why is it called a "Boolean"?\r
         3.
         Is this a legal expression?  `10 > 25`?
+      U5-AP-Algorithm-Does-It-Count_markdown_instruction: |-
+        # AP Practice - Algorithm
+        - Grade the Response\r
+        \r
+        One component of the **AP Create Performance Task**
+        is selecting and describing an algorithm that you developed.\r
+        \r
+        <div style="width:
+        80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:
+        serif; font-size: 12pt">\r
+        \r
+        <b>2. Written Responses</b>\r
+        <ul>\r
+        2c.
+        Capture and paste a program code segment that implements an algorithm (marked
+        with an <b>oval</b> in <b>section 3</b> below) and that is fundamental for
+        your program to achieve its intended purpose. This code segment must be an
+        algorithm you developed individually on your own, must include two or more
+        algorithms, and must integrate mathematical and/or logical concepts. Describe
+        how each algorithm within your selected algorithm functions independently,
+        as well as in combination with others, to form a new algorithm that helps
+        to achieve the intended purpose of the program. (Must not exceed 200 words)\r
+        </ul>\r
+        </div>\r
+        <br>\r
+        \r
+        Here's
+        the scoring guide for this question\r
+        \r
+        <div style="magin:auto">\r
+        \t<img
+        src="https://images.code.org/73352bdcc7c3b46ee949f534a0de9dd4-image-1515191914293.38.22
+        PM.png">\r
+        </div>\r
+        \r
+        # Grade the Response\r
+        \r
+        **Written Response:**
+        *"My algorithm controls the log-in for the app. This piece of my program
+        is important because the data included in my app needs to be secure. The algorithm
+        makes sure only users with the correct password get in to the app to use it."*\r
+        \r
+        **Program
+        Code:** \r
+        \r
+        <img src="https://images.code.org/93246c79e25bce7f544382cce0a1df04-image-1515196646222.54.17
+        PM.png" style="height:300px">\r
+        \r
+        **Explain why you would or would not
+        award the point for Row 5 based on the criteria given above**
+      U5-AP-Practice-FR-manage-complexity_markdown_instruction: |-
+        # AP Practice -
+        Performance Task Response\r
+        \r
+        The AP Create Performance task asks you to
+        write about an abstraction that you developed and wrote into your code. Most
+        of the time that means identifying a function or procedure you wrote to help
+        "manage complexity" in your program.\r
+        \r
+        Here is the actual prompt from
+        the Create Performance Task:\r
+        \r
+        <div style="width: 70%; margin: auto;
+        background-color: #EEEEEE; padding: 10px; font-family: serif; font-size: 12pt">\r
+        \r
+        <b>2d.</b>
+        Capture and paste a program code segment that contains an abstraction you
+        developed individually on your own (marked with a <b>rectangle</b>). This
+        abstraction must integrate mathematical and logical concepts. Explain how
+        your abstraction helped manage the complexity of your program.\r
+        <br>\r
+        <i>(Must
+        not exceed 200 words)</i>\r
+        \r
+        </div>\r
+        \r
+        <br>\r
+        \r
+        Below is a segment
+        of code from an "under the sea" program with a rectangle drawn around a
+        portion of the code identifying an abstraction. Imagine that you wrote this
+        and are composing an AP response about how this abstraction manages complexity.  (Note:
+        ignore the requirement that the abstraction integrate "mathematical and logical
+        concepts" for this practice response.  Just write about managing complexity).\r
+        \r
+        ![](https://images.code.org/d98fa58fce78eff86fd734f32e2960e4-image-1507913593511.png)\r
+        \r
+        Explain
+        how the abstraction marked with the rectangle in the code above helps manage
+        complexity of this program.
       U6 - Final Project - Project Level_markdown_instruction: |-
         # Congratulations!\r
         \r
@@ -57323,9 +58986,14 @@
         Please sign in to test applab levels (By design, applab levels only work if
         signed in. Normally, we make people sign in, but this is only enforceable
         for a whole script and would be annoying to do for the allthethings script).
-      allthethings_ttscsd_markdown_instruction: <img src="https://images.code.org/a8ed6092389aedceceb38a83ac59fae1-image-1490832453029.07.10
-        PM.png" style="float:right;height:150px"> \r\r#请 这样做 \r\r 写代码, 让橙色椭圆在绿色之后.\r*
-        不要担心精确的大小, 只要绿色椭圆形是完全在橙色里面。
+      allthethings_ttscsd_markdown_instruction: |-
+        <img src="https://images.code.org/a8ed6092389aedceceb38a83ac59fae1-image-1490832453029.07.10
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # 做这些\r
+        \r
+        * 写代码在绿色椭圆后面画一个橙色的椭圆。\r
+        * 别担心确切的尺寸，只要整个绿色椭圆在橙色里就行。
       allthethings_ttscsp_markdown_instruction: |
         \r
         # Play with different event
@@ -58656,6 +60324,9 @@
       courseC_harvester_loops_challenge2_markdown_instruction: |-
         Collect all of the
         lettuce. Avoid the trees and fields!
+      courseC_harvester_loops_forVid_markdown_instruction: |-
+        Collect all of the corn
+        and all of the pumpkins.
       courseC_maze_debugging1_markdown_instruction: |-
         This code isn't quite right!  \r
         \r
@@ -66892,9 +68563,12 @@
         it’s available. \r
         \r
         <br><br>
-      name 'CSD U3 Keypress Boolean Predict'_markdown_instruction: '#做出预测: keyDown
-        () \r "keyDown ()" 块是一组新块的第一块, 它将让我们从用户那里得到回馈。这是我们在实际制作游戏时的第一步! 看看你是否能找出 "keyDown
-        ()" 块是如何工作的. 当\r\r你运行程序并按下 "向上" 箭头时, 你认为会发生什么？在下面写下你的预测, 然后运行程序, 看看你的预测是否准确。'
+      name 'CSD U3 Keypress Boolean Predict'_markdown_instruction: |-
+        # 做出预测：
+        keyDown()（按下键时）\r
+        `keyDown()`（按下键时）模块是我们的第一个能从用户得到输入的模块。这是我们做一个真正的游戏的第一步！看看你是否能明白`keyDown()`（按下键时）模块是如何工作的。\r
+        \r
+        你觉得当你运行程序并按下”上方向键”时会发生什么？将你的预测写下来，并运行程序来看看你的预测是否精确。
       playEventsK1_markdown_instruction: |-
         This game is called "Play Lab".\r
         \r

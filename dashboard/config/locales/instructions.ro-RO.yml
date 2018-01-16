@@ -1362,6 +1362,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -8125,6 +8154,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -9765,6 +9797,10 @@
       flappy_1_instruction: Atașează un bloc la blocul "când clic", apoi apasă "Rulează
         Programul". Fă clic sau atinge ușor cu degetul pe ecran ca să îl muți pe Flappy
         la țintă.
+      flappy_11_instruction: Creați-vă propriul joc Flappy. Puteţi schimba toate aspectele
+        vizuale şi toate regulile, chiar şi gravitația. Când aţi terminat, faceţi
+        clic pe Terminare pentru a permite prietenilor să încerce jocul pe telefoanele
+        lor.
       flappy_2_instruction: Acum am adăugat și ceva teren.  Ataşează un bloc la blocul
         "când ajunge la sol".  Codul tău trebuie să se încheie cu "Sfârşitul jocului"
         atunci când Flappy se prăbușește.
@@ -9786,10 +9822,6 @@
         jocul. Încearcă să setezi o scenă aleatorie când alte incidente se întâmplă.
       flappy_9_instruction: Pentru diversitate, în locul opririi jocului, încearcă
         setarea scorului la 0 atunci când lovești un obstacol.
-      flappy_11_instruction: Creați-vă propriul joc Flappy. Puteţi schimba toate aspectele
-        vizuale şi toate regulile, chiar şi gravitația. Când aţi terminat, faceţi
-        clic pe Terminare pentru a permite prietenilor să încerce jocul pe telefoanele
-        lor.
       frozen circle function in circle_instruction: Acum haideți să creăm 20 de cercuri
         suprapuse, rotind 18 grade după fiecare cerc.
       frozen circle function with parameter_instruction: Aici este un bloc "Creează

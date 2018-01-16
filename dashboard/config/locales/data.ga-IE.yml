@@ -802,11 +802,17 @@
         infinity_playlab_intro: Súgradh is Dáiríre - Réamhrá
         infinity_playlab_events: Súgradh is Dáiríre - Teagmhais
         infinity_playlab_repeat_forever: Súgradh is Dáiríre - Athdhéan go deo
+        csd_concept_how_computers_work: Introducing How Computers Work
         csd_concept_computer: Cad is Ríomhaire ann, i ndáiríre?
         csd_concept_binary_data: 'How Computers Work: Binary & Data'
+        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
+        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
+          & Output'
+        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
         csd_concept_search: Conas a Oibríonn Inneall Cuardaigh
         csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems
           To Change Our Lives
+        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
         csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
         csd_gamelab_animation_tab: An Cluaisín Beochana
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1

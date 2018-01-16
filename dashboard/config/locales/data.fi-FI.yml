@@ -740,11 +740,17 @@
         infinity_playlab_intro: Pelilabra - Johdanto
         infinity_playlab_events: Pelilabra - Tapahtumia
         infinity_playlab_repeat_forever: Pelilabra - Ikuinen Toisto
+        csd_concept_how_computers_work: Introducing How Computers Work
         csd_concept_computer: Mikä tekee tietokoneesta tietokoneen?
         csd_concept_binary_data: 'Miten tietokoneet toimivat: Binääri & Tieto'
+        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
+        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
+          & Output'
+        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
         csd_concept_search: Miten haku toimii
         csd_external_amazon_data: Kuinka Big Datan käyttö Amazonin suositusjärjestelmissä
           muuttaa elämäämme
+        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
         csd_external_waze_data: Miksi niin monet käyttäjät ovat kiinnostuneita Wazesta?
         csd_gamelab_animation_tab: Animaatio-välilehti
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1

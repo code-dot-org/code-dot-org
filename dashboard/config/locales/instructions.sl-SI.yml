@@ -1339,6 +1339,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -3255,19 +3284,14 @@
         fireballs hit the cat. You can increment the score by setting score = score
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
       Course 4 Play Lab Vars 6_instruction: |-
-        Use the right arrow to throw pie.\r
-        \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
-      Course 4 Play Lab Vars 7_instruction: |-
-        Nice, now let's make sure this game
-        isn't too easy to play. Any time Dog (actor 1) gets hit by a sandwich from
-        Cat (actor 2), you should lose a point. Start with 10 points so it's not
-        too hard. Let your score drop down from 10 to 0 to pass the level.
+        Uporabi gumb puščica desno, da vržeš pito.
+        Kako bomo v tej igri šteli točke?  Dodaj po eno točko vrednosti spremenljivke "points" vsakič, ko pes zadene mačko s kosom pite. Uporabi funkcijo "ko igralec 2 se dotakne česarkoli" tudi za večanje vrednosti spremenljivke "points".
+        Vrednost spremenljivke lahko večaš tako, da nastaviš "points = points + 1."
+        Zberi 10 točk (vsako posebej...) da končaš to nalogo.
+      Course 4 Play Lab Vars 7_instruction: Fino, zdaj pa igro naredimo bolj zapleteno.
+        Vsakič, ko psa (igralec 1) zadane sendvič, ki ga je vrgel maček (igralec 2),
+        igralec 1 točko izgubi. Začni z 10 točkami, da ne bo pretežko. Zmanjšaj tvoje
+        število točk iz 10 na nič, da končaš to nalogo.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: |-
         Alright, one last thing for
         this game - let's set it up so the player can win (or lose). Use a forever
@@ -3494,37 +3518,24 @@
         score. Rebuild the code that you saw in the last level to set the score\nto
         10. "
       CourseF_PlayLab_vars6_instruction: |-
-        Use the right arrow to throw pie.\r
-        \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
+        Uporabi gumb puščica desno, da vržeš pito.
+        Kako bomo v tej igri šteli točke?  Dodaj po eno točko vrednosti spremenljivke "points" vsakič, ko pes zadene mačko s kosom pite. Uporabi funkcijo "ko igralec 2 se dotakne česarkoli" tudi za večanje vrednosti spremenljivke "points".
+        Vrednost spremenljivke lahko večaš tako, da nastaviš "points = points + 1."
+        Zberi 10 točk (vsako posebej...) da končaš to nalogo.
       CourseF_PlayLab_vars7_instruction: |-
-        Use the right arrow to throw pie.\r
-        \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
+        Uporabi gumb puščica desno, da vržeš pito.
+        Kako bomo v tej igri šteli točke?  Dodaj po eno točko vrednosti spremenljivke "points" vsakič, ko pes zadene mačko s kosom pite. Uporabi funkcijo "ko igralec 2 se dotakne česarkoli" tudi za večanje vrednosti spremenljivke "points".
+        Vrednost spremenljivke lahko večaš tako, da nastaviš "points = points + 1."
+        Zberi 10 točk (vsako posebej...) da končaš to nalogo.
       CourseF_PlayLab_vars8_instruction: |-
-        Use the right arrow to throw pie.\r
-        \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
-      CourseF_PlayLab_vars9_instruction: |-
-        Nice, now let's make sure this game isn't
-        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
-        2), you should lose a point. Start with 10 points so it's not too hard. Let
-        your score drop down from 10 to 0 to pass the level.
+        Uporabi gumb puščica desno, da vržeš pito.
+        Kako bomo v tej igri šteli točke?  Dodaj po eno točko vrednosti spremenljivke "points" vsakič, ko pes zadene mačko s kosom pite. Uporabi funkcijo "ko igralec 2 se dotakne česarkoli" tudi za večanje vrednosti spremenljivke "points".
+        Vrednost spremenljivke lahko večaš tako, da nastaviš "points = points + 1."
+        Zberi 10 točk (vsako posebej...) da končaš to nalogo.
+      CourseF_PlayLab_vars9_instruction: Fino, zdaj pa igro naredimo bolj zapleteno.
+        Vsakič, ko psa (igralec 1) zadane sendvič, ki ga je vrgel maček (igralec 2),
+        igralec 1 točko izgubi. Začni z 10 točkami, da ne bo pretežko. Zmanjšaj tvoje
+        število točk iz 10 na nič, da končaš to nalogo.
       Crack Random Substitution_instruction: Navodila
       Crack a Caesar Cipher_instruction: Navodila
       ECSPD Binary Odometer_instruction: |-
@@ -8294,6 +8305,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -9936,6 +9950,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Dodaj blok pod `ko kliknjen` blok ter pritisni "Zaženi".
         Klikni ali tapni na zaslon, da premakneš Flappya do cilja.
+      flappy_11_instruction: Ustvarite svojo igrico o Plahutaču (Flappyju). Spremenite
+        lahko videz in pravila. Ko končate, kliknite Končano, da lahko prijatelji
+        preizkusijo igrico na svojih telefonih.
       flappy_2_instruction: Sedaj smo dodali tla. Dodaj nov blok k "ko zadene tla"
         bloku. Tvoja koda mora "končaj igro", ko Flappy strmoglavi.
       flappy_3_instruction: Blok "ob zagonu" ti omogoča, da izvedeš kodo ob začetku
@@ -9960,9 +9977,6 @@
       flappy_9_instruction: |-
         To mix things up, when hitting an obstacle, instead
         of ending the game try setting the score back to 0.
-      flappy_11_instruction: Ustvarite svojo igrico o Plahutaču (Flappyju). Spremenite
-        lahko videz in pravila. Ko končate, kliknite Končano, da lahko prijatelji
-        preizkusijo igrico na svojih telefonih.
       frozen circle function in circle_instruction: Sedaj ustvarimo 20 prekrivajočih
         se krogov, tako da se med vsakim krogom zasukamo za 18 stopinj.
       frozen circle function with parameter_instruction: "Tu je kocka \"Ustvari krog\",\ns
@@ -11150,14 +11164,10 @@
       grade4_playlab_freeplay_instruction: "It's free play time! Have fun with all\nthe
         blocks in your tool box. "
       grade4_playlab_test_instruction: |-
-        Use the right arrow to throw pie.\r
-        \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
+        Uporabi gumb puščica desno, da vržeš pito.
+        Kako bomo v tej igri šteli točke?  Dodaj po eno točko vrednosti spremenljivke "points" vsakič, ko pes zadene mačko s kosom pite. Uporabi funkcijo "ko igralec 2 se dotakne česarkoli" tudi za večanje vrednosti spremenljivke "points".
+        Vrednost spremenljivke lahko večaš tako, da nastaviš "points = points + 1."
+        Zberi 10 točk (vsako posebej...) da končaš to nalogo.
       grade4_playlab_test2_instruction: |-
         Here's a function called `jump` that causes
         your main character to jump up 100 pixels. Run the program and use the jump
@@ -11608,25 +11618,20 @@
         build a game! First we'll need a score. Try setting the 'points' variable
         to give yourself 10 free points!
       grade5_playlab_variables6_instruction: |-
-        Use the right arrow to throw pie.\r
-        \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
+        Uporabi gumb puščica desno, da vržeš pito.
+        Kako bomo v tej igri šteli točke?  Dodaj po eno točko vrednosti spremenljivke "points" vsakič, ko pes zadene mačko s kosom pite. Uporabi funkcijo "ko igralec 2 se dotakne česarkoli" tudi za večanje vrednosti spremenljivke "points".
+        Vrednost spremenljivke lahko večaš tako, da nastaviš "points = points + 1."
+        Zberi 10 točk (vsako posebej...) da končaš to nalogo.
       grade5_playlab_variables6ask_instruction: |-
         This time, you need 100 points to
         win!  Don't worry though, you can choose how many points you earn each time
         you score a hit!\r
         Try adding the `ask` block and changing the number 1 out
         for the variable `value`.
-      grade5_playlab_variables7_instruction: |-
-        Nice, now let's make sure this game
-        isn't too easy to play. Any time Dog (actor 1) gets hit by a sandwich from
-        Cat (actor 2), you should lose a point. Start with 10 points so it's not
-        too hard. Let your score drop down from 10 to 0 to pass the level.
+      grade5_playlab_variables7_instruction: Fino, zdaj pa igro naredimo bolj zapleteno.
+        Vsakič, ko psa (igralec 1) zadane sendvič, ki ga je vrgel maček (igralec 2),
+        igralec 1 točko izgubi. Začni z 10 točkami, da ne bo pretežko. Zmanjšaj tvoje
+        število točk iz 10 na nič, da končaš to nalogo.
       grade5_playlab_variables71_instruction: "Here's our game from an earlier stage,\nbut
         most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe
         function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe
