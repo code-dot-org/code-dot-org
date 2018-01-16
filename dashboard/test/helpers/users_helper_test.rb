@@ -295,4 +295,23 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal(101, level_with_best_progress([101, 102], level_progress))
     assert_equal(101, level_with_best_progress([102, 101], level_progress))
   end
+
+  def test_get_level_progress
+    Script.stubs(:should_cache?).returns true
+
+    script = Script.twenty_hour_script
+    users = 20.times.map do
+      user = create :user
+      create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, script: script, level: script.script_levels[1].level
+      create :user_level, user: user, best_result: 20, script: script, level: script.script_levels[3].level
+      user
+    end
+
+    # We used to do 3 db queries per student. This test ensures that we instead
+    # only do 3 db queries total
+    queries = capture_queries do
+      get_level_progress(users, script)
+    end
+    assert_equal(3, queries.length)
+  end
 end
