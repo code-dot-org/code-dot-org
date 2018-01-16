@@ -31,7 +31,7 @@ Computer Science Discoveries is appropriate for 6 - 10th grade students and can 
 
 Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever.
 
-**Applications for the [CS Discoveries Professional Learning Program](/educate/professional-learning/cs-discoveries) are now available!** 
+**Applications for the [CS Discoveries Professional Learning Program](/educate/professional-learning/cs-discoveries) are now available!**
 
 [col-50]
 
@@ -39,11 +39,11 @@ Our middle and high school programs offer year-round support. The program kicks 
 
 [/col-50]
 
-[col-50]
-
-[<button>Learn more and apply now!</button>](/educate/professional-learning/cs-discoveries)
-
-[/col-50]
+<div class="col-50" style="padding-top:14px">
+  <a href="/educate/professional-learning/cs-discoveries">
+    <button>Learn more and apply now!</button>
+  </a>
+</div>
 
 <div style="clear:both"></div>
 
@@ -110,7 +110,7 @@ Our middle and high school programs offer year-round support. The program kicks 
 
 <hr/>
 
-## <a name="content"></a>Curriculum Overview  
+## <a name="content"></a>Curriculum Overview
 
 <div class="col-50" style="padding-right: 20px">
 
@@ -162,7 +162,7 @@ Our middle and high school programs offer year-round support. The program kicks 
 
 <h4>Let us know how we're doing!</h4>
 
-We are always looking for ways to improve our courses. If something's not quite working, or you have ideas about features that you'd like to see, we'd love to hear from you! 
+We are always looking for ways to improve our courses. If something's not quite working, or you have ideas about features that you'd like to see, we'd love to hear from you!
 <br>
 
 <a href="mailto:support@code.org"><button>Give feedback</button></a>
@@ -188,7 +188,7 @@ Sign up for our monthly emails, which contain the latest news about tools, video
 We have forums for educators to discuss and trade ideas about CS Discoveries and talk about the curriculum.  Code.org forums are used for all of our courses K-12.
 <br><br>
 
-<a href="http://forum.code.org/c/csd"> <button>Visit the forum</button></a> 
+<a href="http://forum.code.org/c/csd"> <button>Visit the forum</button></a>
 
 </div>
 
@@ -200,8 +200,8 @@ We have forums for educators to discuss and trade ideas about CS Discoveries and
 
 ### Hand out these fliers around your school and consider sending home to parents.
 
-[![image](/images/fit-200/CSDiscoveries_1-pager.png)](/files/CSDiscoveries_1-pager.pdf) 
-[![image](/images/fit-200/csd-student-flyer.png)](/files/programs/csd-student-flyer.pdf) 
+[![image](/images/fit-200/CSDiscoveries_1-pager.png)](/files/CSDiscoveries_1-pager.pdf)
+[![image](/images/fit-200/csd-student-flyer.png)](/files/programs/csd-student-flyer.pdf)
 
 ### Hang these posters in your classroom and around your school:
 
@@ -246,12 +246,12 @@ Some schools may want to use parts of the CS Discoveries curriculum without runn
 
 ### <a name="supplies"></a>What materials and supplies are required for CS Discoveries?
 
-* Normal classroom supplies (pens, pencils, coloring, scissors, extra paper) 
-* Computers 
-* Worksheet Printing (There are worksheets with some lessons. Some teachers get around this by doing everything digitally.) 
-* Couple Decks of Cards 
-* Aluminum Foil 
-* Containers that can hold water 
+* Normal classroom supplies (pens, pencils, coloring, scissors, extra paper)
+* Computers
+* Worksheet Printing (There are worksheets with some lessons. Some teachers get around this by doing everything digitally.)
+* Couple Decks of Cards
+* Aluminum Foil
+* Containers that can hold water
 * [Adafruit's Circuit Playground Boards](/circuitplayground) and Micro USB cables. The curriculum is designed for a ratio of 2 students to 1 board & 1 usb cable.***
 
 \*** Participants in our 2018-19 Professional Learning Program who are implementing the full course and teaching in schools with 50%+ free and reduced meal rates will receive a subsidized Adafruit Circuit Playground classroom kit. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. To learn more about the classroom kit, software requirements, and the details of the subsidy visit [code.org/circuitplayground](/circuitplayground)  \***
@@ -273,7 +273,7 @@ We are now accepting applications for the 2017-18 Professional Learning Program 
 
 <a href="/educate/professional-learning/cs-discoveries-apply"><button>Apply now!</button></a>
 
-If you are interested in joining in 2018-19, sign up below. 
+If you are interested in joining in 2018-19, sign up below.
 
 [<button>Tell me when applications open!</button>](https://studio.code.org/pd/regional_partner_contact/new)
 
