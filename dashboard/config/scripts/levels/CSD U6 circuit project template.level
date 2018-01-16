@@ -125,10 +125,7 @@
     "makerlab_enabled": "true",
     "markdown_instructions": "# Prototyping Circuit Project Template",
     "text_mode_at_start": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
