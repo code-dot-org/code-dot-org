@@ -170,7 +170,6 @@ module Facilitator1819ApplicationConstants
     how_heard_code_org_staff: 'A Code.org staff member (please share name):'.freeze,
     how_heard_regional_partner: 'A Code.org Regional Partner (please share name):'.freeze,
     not_available_for_teachercon: "I'm not available for either TeacherCon. (Please Explain):".freeze,
-    not_available_for_fit_weekend: "I'm not available for either Facilitator-in-Training workshop. (Please Explain):".freeze,
-
+    not_available_for_fit_weekend: "I'm not available for either Facilitator-in-Training workshop. (Please Explain):".freeze
   }.freeze
 end
