@@ -313,5 +313,19 @@ class UsersHelperTest < ActionView::TestCase
       get_level_progress(users, script)
     end
     assert_equal(3, queries.length)
+
+    # validate progress when we query for just the first two students
+    progress = get_level_progress(users[0, 2], script)
+    expected = {
+      users[0].id => {
+        script.script_levels[1].level.id => {status: 'perfect', result: ActivityConstants::BEST_PASS_RESULT},
+        script.script_levels[3].level.id => {status: 'passed', result: 20},
+      },
+      users[1].id => {
+        script.script_levels[1].level.id => {status: 'perfect', result: ActivityConstants::BEST_PASS_RESULT},
+        script.script_levels[3].level.id => {status: 'passed', result: 20},
+      }
+    }
+    assert_equal(expected, progress)
   end
 end
