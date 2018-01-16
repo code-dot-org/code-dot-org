@@ -117,7 +117,9 @@ module UsersHelper
   # Get the level progress for the specified script and user
   # @param {User[]} users
   # @param {Script} script
-  # TODO: describe shape of return data
+  # @return A set of level progress objects, keyed first by userId and then by
+  #   levelId. The possible fields in each progress object are status, result,
+  #   submitted, readonly_answers, paired.
   def get_level_progress(users, script)
     level_progress = {}
 
