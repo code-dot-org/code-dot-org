@@ -4,10 +4,12 @@ module Api::V1::Pd
   class RegionalPartnerWorkshopsControllerTest < ::ActionController::TestCase
     include Pd::Application::RegionalPartnerTeacherconMapping
 
+    freeze_time Time.new(2018, 2, 1)
+
     self.use_transactional_test_case = true
     setup_all do
       Pd::Workshop.any_instance.stubs(:process_location)
-      first_session_time = Time.new(2017, 3, 15, 9)
+      first_session_time = Time.new(2018, 3, 15, 9)
 
       @partner_organizer = create :workshop_organizer, :as_regional_partner_program_manager
       @non_partner_organizer = create :workshop_organizer
@@ -175,11 +177,11 @@ module Api::V1::Pd
         group: @regional_partner.group,
         workshops: [{
           id: @partner_csd_workshop.id,
-          dates: 'March 15-19, 2017',
+          dates: 'March 15-19, 2018',
           location: 'Code.org, Seattle, WA'
         }, {
           id: @partner_csp_workshop.id,
-          dates: 'March 15-19, 2017',
+          dates: 'March 15-19, 2018',
           location: 'Code.org, Seattle, WA'
         }],
         teachercon: nil
@@ -193,7 +195,7 @@ module Api::V1::Pd
         group: @regional_partner.group,
         workshops: [{
           id: @partner_csd_workshop.id,
-          dates: 'March 15-19, 2017',
+          dates: 'March 15-19, 2018',
           location: 'Code.org, Seattle, WA'
         }],
         teachercon: nil

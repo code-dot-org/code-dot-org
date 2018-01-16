@@ -29,15 +29,29 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 <div style="clear: both;"></div>
 
-## <a name="what"></a>Professional Learning
+<hr/>
+
+## <a name="what"></a>Professional Learning - Applications now available!
 
 Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever.
 
-**General applications for the 2018-19 CS Principles Professional Learning Program will open in January, 2018.** 
+**Applications for the [CS Principles Professional Learning Program](/educate/professional-learning/cs-principles) are now available!** 
 
-If you are interested in joining in 2018-19, sign up below to be added to our contact list. 
+[col-50]
 
-[<button>Tell me when applications open!</button>](https://studio.code.org/pd/regional_partner_contact/new) [<button>Learn more</button>](/educate/professional-learning/cs-principles)
+<center><img src="/images/recruitment_banner.png" width="90%"></center>
+
+[/col-50]
+
+[col-50]
+
+[<button>Learn more and apply now!</button>](/educate/professional-learning/cs-principles)
+
+[/col-50]
+
+<div style="clear:both"></div>
+
+<hr/>
 
 ## Code.org's AP CS Principles Curriculum
 
@@ -299,7 +313,6 @@ Yes, please! Our desire is that the curriculum will be a living document and not
 #### How/Where can I get professional development for this course?
 We have an in-person professional learning program...
 [click here](/educate/professional-learning/cs-principles) to learn more! 
-<p> Already interested? [Join our contact list](https://docs.google.com/a/code.org/forms/d/e/1FAIpQLSd-fZMKFQNioPK98aGJ4dCt1tMWTEb6yvy_Qie4YTo-hp7q4w/viewform?c=0&w=1) and we'll be in touch when applications are open.
 
 <br />
 
@@ -313,3 +326,9 @@ We send out monthly updates! [Sign up for future emails](http://code.org/educate
 Please see this page about [CS Principles Inspirations](/educate/csp/inspirations) to read about the influential works in computer science education that form some of the course's philosophical underpinnings.
 
 AP® is a registered trademark of the College Board.
+
+<!--
+
+[<button>Tell me when applications open!</button>](https://studio.code.org/pd/regional_partner_contact/new)
+
+-->

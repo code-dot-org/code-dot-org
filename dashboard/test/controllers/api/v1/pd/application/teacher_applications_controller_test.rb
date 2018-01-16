@@ -46,7 +46,7 @@ module Api::V1::Pd::Application
           csp_which_grades: YES,
           csp_course_hours_per_year: YES,
           previous_yearlong_cdo_pd: YES,
-          csp_ap_exam: YES,
+          csp_how_offer: 2,
           taught_in_past: 2
         }, Pd::Application::Teacher1819Application.last.response_scores_hash
       )
@@ -69,6 +69,13 @@ module Api::V1::Pd::Application
         put :create, params: {form_data: @test_params}
       end
       assert_response :success
+    end
+
+    test 'updates user school info on successful create' do
+      Pd::Application::Teacher1819Application.any_instance.expects(:update_user_school_info!)
+
+      sign_in @applicant
+      put :create, params: @test_params
     end
   end
 end
