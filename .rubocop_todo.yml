@@ -350,11 +350,6 @@ Style/MutableConstant:
 Style/OrAssignment:
   Enabled: false
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/RandomWithOffset:
-  Enabled: false
-
 # Offense count: 47
 # Cop supports --auto-correct.
 Style/RedundantParentheses:
