@@ -8,7 +8,7 @@ experimental:
 version: 2
 jobs:
   build:
-    # parallelism: 4
+    parallelism: 2
     docker:
       - image: wjordan/code-dot-org:trusty
         environment:
