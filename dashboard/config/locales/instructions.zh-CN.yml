@@ -1146,6 +1146,35 @@
       CSD U5 black white images pixelation 4_instruction: "给笑脸添加眉毛(点击此处查看图像)"
       CSD U5 black white images pixelation 5_instruction: "绘制任何你喜欢的图案"
       CSD U5 black white images pixelation_instruction: "通过键入0和1来完成图形X"
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -6665,6 +6694,9 @@
       courseC_harvester_loops_challenge1_instruction: "收集所有的玉米。"
       courseC_harvester_loops_challenge1a_instruction: "收集所有的玉米。"
       courseC_harvester_loops_challenge2_instruction: "收集所有的生菜。避开树木和田野!"
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -7824,6 +7856,7 @@
         same!
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: 将一个模块附加到"单击时"模块上，然后按"运行"。单击或点击屏幕去移动Flappy到目标.
+      flappy_11_instruction: "创建你自己的Flappy游戏。你可以改变所有的有视效果，所有的规则，甚至重力。当你完成后，单击完成，让朋友在他们手机上试试你的手机游戏。"
       flappy_2_instruction: 现在我们已经添加了一些地面。将一个块附加到"撞到地面时"块。当Flappy 撞地时，您的代码需要 ' 结束游戏
         '。
       flappy_3_instruction: "“运行时”块允许你在游戏开始时运行你的代码. 尝试设置水平速度和扑向目标。"
@@ -7835,7 +7868,6 @@
       flappy_7_instruction: 接下来, 请尝试将另一个块附加到"运行时"块来更改场景.
       flappy_8_instruction: "不只是在游戏开始时，您可以随时设置的视觉效果。请尝试在其他事件发生时设置一个随机场景，例如，在通过障碍时。"
       flappy_9_instruction: "现在我们要把前面学的全部混在一起啦，当击中一个障碍物，请尝试把分数设置回0分，而不是将游戏结束。"
-      flappy_11_instruction: "创建你自己的Flappy游戏。你可以改变所有的有视效果，所有的规则，甚至重力。当你完成后，单击完成，让朋友在他们手机上试试你的手机游戏。"
       frozen circle function in circle_instruction: "现在让我们创建20个交叠的圆圈，在每个圆圈之间转18度。"
       frozen circle function with parameter_instruction: "这里有一个“创建圆圈”的模块，可以画不同大小的圆圈。你可以用它来创建一个5像素的小圆圈和10像素的大圆圈吗?"
       frozen circle function_instruction: 使用新的"创建一个圆"块来创建 10 个相互重叠的圆圈。画圈之间别忘了跳一下哦。

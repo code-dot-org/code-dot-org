@@ -1263,6 +1263,35 @@
       CSD U5 black white images pixelation 5_instruction: Namaluj cokoliv budeš chtít
       CSD U5 black white images pixelation_instruction: Dokonči tvar X vepsáním nul
         a jedniček
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -7902,6 +7931,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -9542,6 +9574,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Připoj blok k bloku "když klikneš" a potom stiskni "Spustit".
         Klikej nebo ťukej na obrazovku, abys dostal Flappyho do cíle.
+      flappy_11_instruction: Vytvoř si vlastní Flappy hru. Můžeš měnit všechen vzhled
+        a všechna pravidla, včetně gravitace. Až budeš hotov, klikni na tlačítko 'Sdílet'
+        a nech své přátele vyzkoušet tvojí hru na jejich mobilech.
       flappy_2_instruction: Teď jsme přidali terén. Připoj blok k bloku "když se dotkne
         země". Tvůj kód musí zajistit 'konec hry', když Flappy narazí.
       flappy_3_instruction: Blok "po spuštění" ti umožňuje spuštění kódu poté co hra
@@ -9561,9 +9596,6 @@
         když mine překážku.
       flappy_9_instruction: Zamíchat věci nahoru při nárazu na překážku a namísto
         ukončení hry zkuste nastavit skóre zpět na 0.
-      flappy_11_instruction: Vytvoř si vlastní Flappy hru. Můžeš měnit všechen vzhled
-        a všechna pravidla, včetně gravitace. Až budeš hotov, klikni na tlačítko 'Sdílet'
-        a nech své přátele vyzkoušet tvojí hru na jejich mobilech.
       frozen circle function in circle_instruction: Vytvořme 20 překrývajících se
         kružnic tak, že je otočíme o 18 stupňů mezi každou kružnicí.
       frozen circle function with parameter_instruction: "Tady máš blok \"vytvoř kružnici\",

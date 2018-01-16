@@ -1642,6 +1642,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -8750,6 +8779,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -10393,6 +10425,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Pievieno bloku pie "kad noklikšķināts" bloka, tad spied
         "Palaist". Klikšķini vai piesit ekrānam, lai virzītu Flappy uz mērķi.
+      flappy_11_instruction: Izveido pats savu Flappy spēli. Tu vari mainīt visus
+        vizuālos efektus un noteikumus, pat gravitāciju. Kad esi pabeidzis, spied
+        Pabeigt, lai ļautu draugiem izmēģināt tavu spēli savos telefonos.
       flappy_2_instruction: Tagad ir pievienota zeme. Pieliec bloku pie "kad atsitos
         pret zemi". Tavam kodam vajag "BEIGT SPĒLI", kad Flappy ietriecas zemē.
       flappy_3_instruction: '"Kad palaists" bloks vienmēr izpilda kodu, kad spēle
@@ -10412,9 +10447,6 @@
         no šķēršļa.
       flappy_9_instruction: Lai pamainītu lietas, tā vietā, lai beigtu spēli, kad
         atduries pret šķērsli, iestati punktu skaitu atpakaļ uz 0.
-      flappy_11_instruction: Izveido pats savu Flappy spēli. Tu vari mainīt visus
-        vizuālos efektus un noteikumus, pat gravitāciju. Kad esi pabeidzis, spied
-        Pabeigt, lai ļautu draugiem izmēģināt tavu spēli savos telefonos.
       frozen circle function in circle_instruction: |-
         Now let's create 20 overlapping
         circles, turning 18 degrees between each circle.

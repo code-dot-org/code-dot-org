@@ -1292,6 +1292,35 @@
       CSD U5 black white images pixelation 5_instruction: Rajzold bármit, amit szeretnél
       CSD U5 black white images pixelation_instruction: Egészítsd ki az X alakot nullák
         és egyesek begépelésével
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -8101,6 +8130,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -9743,6 +9775,9 @@
       flappy_1_instruction: Csatolj egy blokkot a "kattintáskor" blokkhoz, majd nyomd
         meg a "Futtatás"-t. Kattints vagy érintsd meg a képernyőt, hogy Flappy-t a
         célba segítsd.
+      flappy_11_instruction: Hozz létre egy saját Flappy játékot! Meg tudod változtatni
+        a kinézetet és az összes szabályt, sőt még a gravitációt is. Ha elkészültél,
+        kattints a Kész gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjaikon.
       flappy_2_instruction: Most már talaj is van. Csatolj egy blokkot a "ha becsapódik
         a talajba" blokkhoz. Kell, hogy legyen "JÁTÉK VÉGE", amikor Flappy ütközik.
       flappy_3_instruction: A "futtatáskor" blokk segítségével fut végig a programod,
@@ -9765,9 +9800,6 @@
       flappy_9_instruction: Változtassuk meg úgy a dolgokat, hogy amikor leüt egy
         akadályt, ahelyett hogy véget érne a játék, inkább állítsa vissza a pontokat
         0-ra.
-      flappy_11_instruction: Hozz létre egy saját Flappy játékot! Meg tudod változtatni
-        a kinézetet és az összes szabályt, sőt még a gravitációt is. Ha elkészültél,
-        kattints a Kész gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjaikon.
       frozen circle function in circle_instruction: Most rajzoljunk 20 egymást átfedő
         kört! 18 fokot kell fordulni minden kör rajzolása után.
       frozen circle function with parameter_instruction: Van itt egy olyan "készíts

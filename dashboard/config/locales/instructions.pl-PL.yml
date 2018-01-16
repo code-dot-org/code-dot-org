@@ -1330,9 +1330,8 @@
         using Design Mode. (Click for full instructions.)
       CSD U5 black white images pixelation 2_instruction: Narysuj uśmiechniętą buźkę
         (kliknij tutaj aby zobaczyć obrazek)
-      CSD U5 black white images pixelation 3_instruction: |-
-        Change the width and height
-        sliders to find the image (click here to see more)
+      CSD U5 black white images pixelation 3_instruction: Zmień szerokość i wysokość
+        suwaka aby znaleźć obraz (kliknij tutaj aby dowiedzieć się więcej)
       CSD U5 black white images pixelation 4_instruction: |-
         Dodaj brwi do uśmiechniętej
         buźki (kliknij tutaj, aby zobaczyć obraz)
@@ -1341,6 +1340,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Uzupełnij kształt X poprzez
         dopisywanie zer i jedynek
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -7462,9 +7490,8 @@
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
-      courseA_artist_loops7_forVideo_instruction: |-
-        Use the `repeat` loop to add waves
-        to the water.
+      courseA_artist_loops7_forVideo_instruction: Użyj pętli `repeat` aby dodać fale
+        na wodzie.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: 'Wyzwanie: Napraw schody.'
       courseA_artist_loops_challenge2_instruction: |-
@@ -7512,9 +7539,8 @@
         bugs? I know which way I want to go, but I'm not sure how many steps to take."*
       courseA_collector_loops_challenge2_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
-      courseA_collector_loops_challenge2kp_instruction: |-
-        Collect at least *3* pieces
-        of treasure to pass this level.
+      courseA_collector_loops_challenge2kp_instruction: Zbierz przynajmniej *3* części
+        skarbu aby przejść ten poziom.
       courseA_collector_preLoops1_instruction: |-
         This is Laurel the Adventurer! \r
         \r
@@ -7528,9 +7554,7 @@
       courseA_collector_preLoops3_instruction: |-
         Snap two `E -->` blocks and one `get
         treasure` block to the bottom of the program, then click "Run".
-      courseA_collector_preLoops4_instruction: |-
-        Can you figure out how to solve this
-        puzzle?
+      courseA_collector_preLoops4_instruction: Dasz radę rozwiązać tą zagadkę?
       courseA_collector_preLoops5_instruction: |-
         Get 1 of these 2 gems to solve this
         puzzle.
@@ -7540,9 +7564,8 @@
       courseA_collector_preLoops7_instruction: |-
         Get all three piles to pass this
         level.
-      courseA_forVideoTest_artist_instruction: |-
-        Use the `repeat` loop to add waves
-        to the water.
+      courseA_forVideoTest_artist_instruction: Użyj pętli `repeat` aby dodać fale
+        na wodzie.
       courseA_maze_seq1_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
@@ -8029,6 +8052,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -9655,6 +9681,9 @@
       flappy_1_instruction: Dołącz blok do bloku "po kliknięciu", a następnie naciśnij
         przycisk "Uruchom". Kliknij lub dotknij ekranu, aby przesunąć Flappy'ego do
         miejsca docelowego.
+      flappy_11_instruction: Stwórz swoją własną grę z Flappym. Możesz zmienić wszystkie
+        efekty wizualne i wszystkie zasady, nawet przyciąganie. Kiedy skończysz, kliknij
+        przycisk "Zakończ", aby twoi znajomi mogli ją wypróbować na swoich telefonach.
       flappy_2_instruction: Teraz dodaliśmy podłoże. Dołącz blok do bloku "kiedy spadnie
         na ziemię".  Twój kod powinien kończyć grę, kiedy Flappy rozbija się.
       flappy_3_instruction: Blok "po uruchomieniu" pozwala uruchomić kod po uruchomieniu
@@ -9675,9 +9704,6 @@
         coś innego, na przykład, kiedy Flappy mija przeszkodę.
       flappy_9_instruction: Po uderzeniu w przeszkodę, zamiast kończyć grę, spróbuj
         ustawić wynik z powrotem na 0.
-      flappy_11_instruction: Stwórz swoją własną grę z Flappym. Możesz zmienić wszystkie
-        efekty wizualne i wszystkie zasady, nawet przyciąganie. Kiedy skończysz, kliknij
-        przycisk "Zakończ", aby twoi znajomi mogli ją wypróbować na swoich telefonach.
       frozen circle function in circle_instruction: Teraz utwórzmy 20 nakładających
         się na siebie okręgów, skręcając o 18 stopni przy każdym okręgu.
       frozen circle function with parameter_instruction: Tutaj jest blok "utwórz okrąg",
