@@ -648,7 +648,8 @@ module Pd::Application
       scores = {
         regional_partner_name: regional_partner ? YES : NO,
         committed: responses[:committed] == YES ? YES : NO,
-        able_to_attend_single: yes_no_response_to_yes_no_score(responses[:able_to_attend_single])
+        able_to_attend_single: yes_no_response_to_yes_no_score(responses[:able_to_attend_single]),
+        able_to_attend_multiple: yes_no_response_to_yes_no_score(responses[:able_to_attend_multiple])
       }
 
       if responses[:principal_approval] == YES
