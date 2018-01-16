@@ -41,6 +41,7 @@ module Pd::Application
     include Teacher1819ApplicationConstants
     include RegionalPartnerTeacherconMapping
     include SerializedProperties
+    include SchoolInfoDeduplicator
 
     serialized_attrs %w(
       pd_workshop_id
@@ -86,6 +87,17 @@ module Pd::Application
         Pd::Application::Teacher1819ApplicationMailer.send(status, self).deliver_now
       end
       update!(decision_notification_email_sent_at: Time.zone.now)
+    end
+
+    # Updates the associated user's school info with the info from this teacher application
+    # based on these rules in order:
+    # 1. Application has a specific school? always overwrite the user's school info
+    # 2. User doesn't have a specific school? overwrite with the custom school info.
+    def update_user_school_info!
+      if school_id || user.school_info.try(&:school).nil?
+        school_info = get_duplicate_school_info(school_info_attr) || SchoolInfo.create!(school_info_attr)
+        user.update_column(:school_info_id, school_info.id)
+      end
     end
 
     def set_type_and_year
@@ -183,10 +195,11 @@ module Pd::Application
       OTHER_PLEASE_LIST
     ]
 
-    NOT_TEACHING_THIS_YEAR = "I'm not teaching this year (please explain):"
-    DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN = "I don't know if I will teach this course (please explain):"
-    UNABLE_TO_ATTEND = "No, I'm unable to attend (please explain):"
-    NO_EXPLAIN = "No (please explain):"
+    NOT_TEACHING_THIS_YEAR = "I'm not teaching this year (Please Explain):"
+    NOT_TEACHING_NEXT_YEAR = "I'm not teaching next year (Please Explain):"
+    DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN = "I don't know if I will teach this course (Please Explain):"
+    UNABLE_TO_ATTEND = "No, I'm unable to attend (Please Explain):"
+    NO_EXPLAIN = "No (Please Explain):"
     def self.options
       {
         country: [
@@ -216,9 +229,14 @@ module Pd::Application
         grades_at_school: GRADES,
         grades_teaching: [
           *GRADES,
-          NOT_TEACHING_THIS_YEAR
+          NOT_TEACHING_THIS_YEAR,
+          OTHER_PLEASE_EXPLAIN
         ],
-        grades_expect_to_teach: GRADES,
+        grades_expect_to_teach: [
+          *GRADES,
+          NOT_TEACHING_NEXT_YEAR,
+          OTHER_PLEASE_EXPLAIN
+        ],
 
         subjects_teaching: SUBJECTS_THIS_YEAR,
         subjects_expect_to_teach: SUBJECTS_THIS_YEAR,
@@ -657,7 +675,7 @@ module Pd::Application
         scores[:csp_which_grades] = responses[:csp_which_grades].any? ? YES : NO
         scores[:csp_course_hours_per_year] = responses[:csp_course_hours_per_year] == COMMON_OPTIONS[:course_hours_per_year].first ? YES : NO
         scores[:previous_yearlong_cdo_pd] = responses[:previous_yearlong_cdo_pd].exclude?('CS Principles') ? YES : NO
-        scores[:csp_ap_exam] = responses[:csp_ap_exam] != Pd::Application::Teacher1819Application.options[:csp_ap_exam].last ? YES : NO
+        scores[:csp_how_offer] = responses[:csp_how_offer] != Pd::Application::Teacher1819Application.options[:csp_how_offer].first ? 2 : 0
         scores[:taught_in_past] = responses[:taught_in_past].none? {|x| x.include? 'AP'} ? 2 : 0
       elsif course == 'csd'
         scores[:csd_which_grades] = (responses[:csd_which_grades].map(&:to_i) & (6..10).to_a).any? ? YES : NO
@@ -773,6 +791,9 @@ module Pd::Application
       [
         [:current_role, OTHER_PLEASE_LIST],
         [:grades_teaching, NOT_TEACHING_THIS_YEAR, :grades_teaching_not_teaching_explanation],
+        [:grades_teaching, OTHER_PLEASE_EXPLAIN, :grades_teaching_other],
+        [:grades_expect_to_teach, NOT_TEACHING_NEXT_YEAR, :grades_expect_to_teach_not_expecting_to_teach_explanation],
+        [:grades_expect_to_teach, OTHER_PLEASE_EXPLAIN, :grades_expect_to_teach_other],
         [:subjects_teaching, OTHER_PLEASE_LIST],
         [:subjects_expect_to_teach, OTHER_PLEASE_LIST],
         [:subjects_licensed_to_teach, OTHER_PLEASE_LIST],
@@ -791,6 +812,33 @@ module Pd::Application
     # Add account_email (based on the associated user's email) to the sanitized form data hash
     def sanitize_form_data_hash
       super.merge(account_email: user.email)
+    end
+
+    def school_id
+      raw_school_id = sanitize_form_data_hash[:school]
+
+      # -1 designates custom school info, in which case return nil
+      raw_school_id.to_i == -1 ? nil : raw_school_id
+    end
+
+    def school_info_attr
+      if school_id
+        {
+          school_id: school_id
+        }
+      else
+        hash = sanitize_form_data_hash
+        {
+          country: 'US',
+          # Take the first word in school type, downcased. E.g. "Public school" -> "public"
+          school_type: hash[:school_type].split(' ').first.downcase,
+          state: hash[:school_state],
+          zip: hash[:school_zip_code],
+          school_name: hash[:school_name],
+          full_address: hash[:school_address],
+          validation_type: SchoolInfo::VALIDATION_NONE
+        }
+      end
     end
 
     protected

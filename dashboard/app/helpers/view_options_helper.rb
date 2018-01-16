@@ -28,6 +28,7 @@ module ViewOptionsHelper
     :level_position,
     :public_caching,
     :is_13_plus,
+    :user_id,
     :has_contained_levels,
     :next_level_url,
     :responsive_content

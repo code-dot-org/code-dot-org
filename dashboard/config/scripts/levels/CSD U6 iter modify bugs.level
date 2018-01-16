@@ -187,10 +187,6 @@
       "lightSensor.start": null
     },
     "edit_code": true,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "# Bug Shaker\r\n\r\nThis program shakes bugs around when the board is shaken, but it's only working for one bug.\r\n\r\n# Do This\r\n* Change the `moveBugs()` function so that it calls `moveBug(color)` on every bug color.\r\n  * (Hint: Look at the `detectHits()` function for clues how to do this.)",
     "instructions_important": "false",
@@ -230,7 +226,8 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true"
+    "makerlab_enabled": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

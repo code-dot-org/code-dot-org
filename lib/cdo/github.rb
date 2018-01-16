@@ -63,9 +63,9 @@ module GitHub
   # @return [Array[String]] the resulting labels for the PR
   def self.label_pull_request(id, labels)
     configure_octokit
-    response = Octokit.update_issue(REPO, id, labels)
+    response = Octokit.update_issue(REPO, id, {labels: labels})
 
-    response['labels'].pluck(:name)
+    response['labels'].map {|label| label[:name]}
   end
 
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#merge_pull_request-instance_method

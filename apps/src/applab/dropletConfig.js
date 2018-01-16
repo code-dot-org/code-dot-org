@@ -189,6 +189,7 @@ export var blocks = [
   {func: 'setStyle', parent: api, category: 'Advanced', params: ['"id"', '"color:red;"'] },
   {func: 'getAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"'], type: 'value', noAutocomplete: true },
   {func: 'setAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"', "200"], noAutocomplete: true},
+  {func: 'setSelectionRange', parent: api, category: 'Advanced', paletteParams: ['id', 'start', 'end'], params: ['"id"', '0', '0'], paramButtons: { minArgs: 3, maxArgs: 4 }},
 
   {func: 'comment_Goals_1', block: '// Goal 1', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
   {func: 'comment_Goals_2', block: '// Goal 2', docFunc: 'comment',category: 'Goals', noAutocomplete: true },

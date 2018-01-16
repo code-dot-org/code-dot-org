@@ -196,7 +196,7 @@ module Teacher1819ApplicationConstants
     underrepresented_minority_percent: [5, 0],
     wont_replace_existing_course: [5, 0],
     taught_in_past: [2, 0],
-    csp_ap_exam: [2, 0]
+    csp_how_offer: [2, 0]
   }.freeze
 
   ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
@@ -207,6 +207,6 @@ module Teacher1819ApplicationConstants
   ).freeze
   CRITERIA_SCORE_QUESTIONS_CSD = (
     VALID_SCORES.select {|_, v| v == YES_NO}.keys -
-      [:csp_ap_exam, :csp_which_grades, :csp_course_hours_per_year]
+      [:csp_how_offer, :csp_which_grades, :csp_course_hours_per_year]
   ).freeze
 end

@@ -56,6 +56,13 @@ def create_in_up_pr
     "pegasus i18n sync"
   )
 
+  git_add_and_commit(
+    [
+      "i18n/locales/source/blockly-mooc",
+    ],
+    "apps i18n sync"
+  )
+
   `git push origin #{IN_UP_BRANCH}`
   in_up_pr = GitHub.create_pull_request(
     base: 'staging',
