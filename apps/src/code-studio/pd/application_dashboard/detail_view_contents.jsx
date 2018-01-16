@@ -135,7 +135,7 @@ export class DetailViewContents extends React.Component {
   };
 
   handleSaveClick = () => {
-    const stateValues = [
+    let stateValues = [
       'status',
       'locked',
       'notes',
@@ -143,7 +143,7 @@ export class DetailViewContents extends React.Component {
     ];
 
     if (this.props.applicationData.application_type === 'Teacher') {
-      stateValues.concat('pd_workshop_id');
+      stateValues.push('pd_workshop_id');
     }
 
     const data = {
