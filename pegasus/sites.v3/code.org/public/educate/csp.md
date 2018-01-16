@@ -11,7 +11,7 @@ style_min: true
 
 ## <a name="whatis"></a>What is CS Principles?
 
-Computer Science Principles introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. More than a traditional introduction to programming, it is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in. 
+Computer Science Principles introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. More than a traditional introduction to programming, it is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.
 <p>
 This year-long course can be taught as an AP or non-AP course - no prerequisites required for students or for teachers new to computer science! In addition, our curriculum is available at no cost for anyone, anywhere to teach. For more information about our goals and approach to our courses, please see our [curriculum values](/educate/curriculum/values) and our [professional learning values](/educate/professional-learning/values).
 
@@ -35,7 +35,7 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever.
 
-**Applications for the [CS Principles Professional Learning Program](/educate/professional-learning/cs-principles) are now available!** 
+**Applications for the [CS Principles Professional Learning Program](/educate/professional-learning/cs-principles) are now available!**
 
 [col-50]
 
@@ -43,11 +43,11 @@ Our middle and high school programs offer year-round support. The program kicks 
 
 [/col-50]
 
-[col-50]
-
-[<button>Learn more and apply now!</button>](/educate/professional-learning/cs-principles)
-
-[/col-50]
+<div class="col-50" style="padding-top:15px">
+  <a href="/educate/professional-learning/cs-principles">
+    <button>Learn more and apply now!</button>
+  <a>
+</div>
 
 <div style="clear:both"></div>
 
@@ -194,7 +194,7 @@ Our middle and high school programs offer year-round support. The program kicks 
 
 <h4>Let us know how we're doing</h4>
 
-We are always looking for ways to improve our courses. If something's not quite working, or you have ideas about features that you'd like to see, we'd love to hear from you! 
+We are always looking for ways to improve our courses. If something's not quite working, or you have ideas about features that you'd like to see, we'd love to hear from you!
 <br>
 
 <a href="mailto:support@code.org"><button>Give feedback</button></a>
@@ -219,7 +219,7 @@ Sign up for our monthly emails, which contain the latest news about tools, video
 We have forums for educators to discuss and trade ideas about CS Principles and talk about the curriculum. Code.org forums are used for all of our courses, K-12.
 <br><br>
 
-<a href="http://forum.code.org/c/csp"> <button>Visit the forum</button></a> 
+<a href="http://forum.code.org/c/csp"> <button>Visit the forum</button></a>
 
 </div>
 
@@ -272,35 +272,35 @@ We have forums for educators to discuss and trade ideas about CS Principles and 
 #### <a name="materials"></a>What materials do I need for this course?
 **Required Materials:**
 
-This course requires students have access to computers with a modern web browser. For more details, check out Code.org's technology requirements, [here](/educate/it). 
+This course requires students have access to computers with a modern web browser. For more details, check out Code.org's technology requirements, [here](/educate/it).
 
-Many lessons have handouts that are designed to guide students through activities. While these handouts are not required, we highly recommend their use. In addition to handouts, you will need the following: 
+Many lessons have handouts that are designed to guide students through activities. While these handouts are not required, we highly recommend their use. In addition to handouts, you will need the following:
 
-- Unit 1 Lesson 2 requires some craft materials for constructing physical devices. The lesson recommends items like cups, string/yarn, construction paper, flashlights, slinkies, noise makers, markers, and glue. 
+- Unit 1 Lesson 2 requires some craft materials for constructing physical devices. The lesson recommends items like cups, string/yarn, construction paper, flashlights, slinkies, noise makers, markers, and glue.
 
 **Optional Materials**
 
 The following items are called for in lessons, but alternatives are offered below:
 
 - (Unit 3, Lesson 1) A handful of legos per 2-3 students. Alternatives: post-it notes, construction paper
-- (Unit 3, Lesson 2 - 3) Playing cards (1 deck per 6 students). Alternatives: write numbers of post-it notes. 
-- (Unit 4, Lesson 8) Clear dixie cups with beans. Alternatives: Any clear container (ziplock bag, empty water bottle, etc) with any small item (beads, raisins, coffee beans, etc) 
+- (Unit 3, Lesson 2 - 3) Playing cards (1 deck per 6 students). Alternatives: write numbers of post-it notes.
+- (Unit 4, Lesson 8) Clear dixie cups with beans. Alternatives: Any clear container (ziplock bag, empty water bottle, etc) with any small item (beads, raisins, coffee beans, etc)
 
 The following supplies are completely optional but will be useful to have on hand for various lessons:
 
 - Graph paper
-- Chart paper 
+- Chart paper
 - Markers
 - Post-it notes
 
-#### How can I access answer keys? 
+#### How can I access answer keys?
 With an approved teacher account you can find answer keys in a blue "Teacher Only" panel that shows in the online lessons and activities.
 
 Teachers in our professional learning program will automatically be approved to view answer keys.  If you need an approved teacher account, any teacher can apply for Code Studio access to protected teacher-only materials (answer keys, etc) through <strong><a href = "https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform" target="_blank">this form</a></strong>.
 
 <br />
 
-#### How can I communicate with other teachers who are using the curriculum? 
+#### How can I communicate with other teachers who are using the curriculum?
 Check out our forum at <a href ="forum.code.org" target=_blank>http://forum.code.org</a>. There you'll find a space for general CS Principles discussion as well as unit- and lesson-specific threads.
 
 <br />
@@ -312,7 +312,7 @@ Yes, please! Our desire is that the curriculum will be a living document and not
 
 #### How/Where can I get professional development for this course?
 We have an in-person professional learning program...
-[click here](/educate/professional-learning/cs-principles) to learn more! 
+[click here](/educate/professional-learning/cs-principles) to learn more!
 
 <br />
 
