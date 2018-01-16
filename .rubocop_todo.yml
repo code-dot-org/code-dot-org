@@ -86,10 +86,6 @@ Lint/AmbiguousRegexpLiteral:
 Lint/DuplicateMethods:
   Enabled: false
 
-# Offense count: 2
-Lint/InterpolationCheck:
-  Enabled: false
-
 # Offense count: 4
 # Configuration parameters: MaximumRangeSize.
 Lint/MissingCopEnableDirective:
