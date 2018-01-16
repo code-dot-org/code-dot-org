@@ -1142,7 +1142,7 @@ Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
 
   if redirect_source == 'pushState'
     state = {"modified" => true}
-  elsif redirect_source == 'dashboard' || redirect_source == 'none'
+  elsif ['dashboard', 'none'].include? redirect_source
     state = nil
   end
   expect(@browser.execute_script("return window.history.state")).to eq(state)
