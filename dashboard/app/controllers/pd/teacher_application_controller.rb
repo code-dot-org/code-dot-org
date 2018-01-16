@@ -12,16 +12,19 @@ class Pd::TeacherApplicationController < ApplicationController
 
   # GET /pd/teacher_application
   def new
-    authorize! :create, Pd::TeacherApplication
+    redirect_to pd_application_teacher_path
 
-    @application_data = {
-      accountEmail: current_user.email,
-      hashedAccountEmail: current_user.hashed_email
-    }
-
-    if Pd::TeacherApplication.exists?(user: current_user)
-      render :submitted
-    end
+    # TODO: remove
+    # authorize! :create, Pd::TeacherApplication
+    #
+    # @application_data = {
+    #   accountEmail: current_user.email,
+    #   hashedAccountEmail: current_user.hashed_email
+    # }
+    #
+    # if Pd::TeacherApplication.exists?(user: current_user)
+    #   render :submitted
+    # end
   end
 
   # GET /pd/teacher_application/manage
