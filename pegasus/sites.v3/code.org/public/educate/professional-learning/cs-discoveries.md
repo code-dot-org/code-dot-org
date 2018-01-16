@@ -42,10 +42,10 @@ If you have questions, be sure to check out our <a href="https://docs.google.com
 
 Our CS Discoveries Professional Learning program offers year round support designed for educators teaching a semester or full-year course. You don't need any prior computer science experience to get started! 
 
-The program kicks off with 5-day summer workshop where you'll have the opportunity to work hands-on with the [CS Discoveries curriculum](/educate/csd). Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. For more information about our goals and approach to professional learning, check out our [professional learning values](educate/professional-learning/values).
+The program kicks off with 5-day summer workshop where you'll have the opportunity to work hands-on with the [CS Discoveries curriculum](/educate/csd). Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. For more information about our goals and approach to professional learning, check out our [professional learning values](educate/professional-learning/values). Print a [flyer](/files/PLProgramsOverview_1-Pager.pdf) to share with teachers or administrators at your school.
 
 <%= view :three_circles, circles: [
-{img: '/images/testimonials/fit-150/teachers-1.jpg', text: '"I do not have a computer science background. I would change nothing about the training. It was an incredible experience, and I felt valued and respected."'},
+{img: '/images/testimonials/fit-150/twoteachers.jpg', text: '"I do not have a computer science background. I would change nothing about the training. It was an incredible experience, and I felt valued and respected."'},
 {img: '/images/testimonials/fit-150/teacher-renee.jpg', text: '"I would absolutely recommend anything Code.org has to offer to any teacher. Period. The lesson plans are incredible."'},
 {img: '/images/testimonials/fit-150/teacher-juan.jpg', text: '"It was absolutely rich and the most meaningful training I have ever attended in 16 years of teaching."'}] %>
 
@@ -154,9 +154,8 @@ Meals and course materials will be provided to participants who attend the local
 
 [<button>Apply now!</button>](https://studio.code.org/pd/application/teacher)
 
-If you have questions, be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">Professional Learning Program FAQs</a> or write to us at teacher@code.org
-
-_The priority deadline for applications is March 30, 2018. Applications submitted after March 30 will only be reviewed at our Regional Partners' discretion._  
+The priority deadline for applications is **March 30, 2018**. Late applications will only be reviewed at our Regional Partners' discretion.
+If you have questions, be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a>
 
 <!--
 ## <a name="components"></a>How does it work?
