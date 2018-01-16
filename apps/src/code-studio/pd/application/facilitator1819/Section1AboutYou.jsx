@@ -2,7 +2,11 @@ import React, {PropTypes} from 'react';
 import {FormGroup} from "react-bootstrap";
 import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import UsPhoneNumberInput from "../../form_components/UsPhoneNumberInput";
-import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
+import {
+  PageLabels,
+  SectionHeaders,
+  TextFields
+} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 import {YES} from '../ApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 
@@ -74,7 +78,7 @@ export default class Section1AboutYou extends LabeledFormComponent {
         {this.checkBoxesFor("race")}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("institutionType", {
-          "Other:" : "other"
+          [TextFields.otherWithText] : "other"
         })}
 
         {this.inputFor("currentEmployer")}
@@ -89,7 +93,7 @@ export default class Section1AboutYou extends LabeledFormComponent {
         }
 
         {this.checkBoxesWithAdditionalTextFieldsFor("completedCsCoursesAndActivities", {
-          "Other:" : "other"
+          [TextFields.otherWithText] : "other"
         })}
 
         {this.radioButtonsFor("diversityTraining")}
@@ -98,10 +102,10 @@ export default class Section1AboutYou extends LabeledFormComponent {
         }
 
         {this.checkBoxesWithAdditionalTextFieldsFor("howHeard", {
-          "A Code.org facilitator (please share name):": "facilitator",
-          "A Code.org staff member (please share name):": "codeOrgStaff",
-          "A Code.org Regional Partner (please share name):": "regionalPartner",
-          "Other:": "other"
+          [TextFields.howHeardFacilitator] : "facilitator",
+          [TextFields.howHeardCodeOrgStaff] : "codeOrgStaff",
+          [TextFields.howHeardRegionalPartner] : "regionalPartner",
+          [TextFields.otherWithText] : "other"
         })}
       </FormGroup>
     );

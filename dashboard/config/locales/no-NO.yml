@@ -348,7 +348,7 @@
       already_registered: Allerede registrert?
       pair_programming: Par Programmering
       team: Team
-      driver: Sjåfør
+      driver: Logget inn som
       navigator: Kartleser
     popup:
       progress_for_user: "%{name}s fremgang"
@@ -526,16 +526,15 @@
       alle klassenivåer&mdash;og alt er gratis. :) Du behøver ikke noen erfaring for
       å begynne med å lære bort datateknologi i klasserommet ditt. <b>Finn det neste
       steget som passer for ditt klasserom.</b>
-    announcement_teacher_recruitment: Teachers like you are leading the computer science
-      education movement. You can participate in high-quality K-12th grade professional
-      learning programs <strong>at absolutely no cost to you or your school</strong>.
-      Take the lead on computer science in your school, and apply for professional
-      learning.
-    announcement_teacher_recruitment2: Teachers like you are leading the computer
-      science education movement. You can participate in high-quality K-12th grade
-      professional learning programs <strong>at absolutely no cost to you or your
-      school</strong>. Take the lead on computer science in your school, and apply
-      for professional learning. Middle and high school teachers, apply by March 17th.
+    announcement_teacher_recruitment: Lærere som deg leder den informasjonsvitenskapelige
+      utdannelsesbevegelsen. Du kan delta i profesjonelle læringsprogrammer av høy
+      kvalitet <strong> uten kostnad for deg eller din skole </strong>. Ta ledelsen
+      innen datavitenskap på din skolen, og søk om profesjonell opplæring.
+    announcement_teacher_recruitment2: Lærere som deg leder den informasjonsvitenskapelige
+      utdannelsesbevegelsen. Du kan delta i profesjonelle læringsprogrammer av høy
+      kvalitet <strong> uten kostnad for deg eller din skole </strong>. Ta ledelsen
+      innen datavitenskap på din skolen, og søk om profesjonell opplæring. Ungdomskule
+      og videregående lærere må søke innen 17 mars.
     announcement_csf_pilot: "<strong>Grunnskole lærere:</strong> Bli med og oppdater
       våre grunnleggende Informatikk kurs! VI ser etter lærere til å lede arbeidet
       med å oppgradere læreplanen i Grunnleggende Informatikk i løpet av vinteren
@@ -579,12 +578,11 @@
       be heard – remind them to complete the end-of-course survey! You'll be able
       to review your students' responses and we'll also share an aggregate national
       report with you."
-    announcement_navigation_redesign: "<b>Upcoming Site Navigation Changes</b><br/>Coming
-      soon this summer, we’re improving navigation across the Code.org site so that
-      you always have access to your top resources from anywhere on the site. As soon
-      as you log in to your teacher account, every page will have a new navigation
-      bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional
-      Learning."
+    announcement_navigation_redesign: "<b> Endringer i nettstednavigering </b> <br/>Kommer
+      i sommer, vi forbedrer navigasjonen på siden Code.org, slik at du alltid har
+      tilgang til de beste ressursene dine fra hvor som helst på nettstedet. Så snart
+      du logger på din lærerkonto, vil hver side ha en ny navigasjonslinje med lenker
+      til hjemmesiden din, kursene, prosjektgalleriet, seksjoner og profesjonell læring."
   move_students:
     new_section_dne: Beklager, men seksjon %{new_section_code} finnes ikke. Legg inn
       en annen seksjonskode.
@@ -761,6 +759,9 @@
         og spill med objekter og karakterer som samhandler med hverandre.
       audience: Minstealder 13 år
       cta: Lær hvordan
+    hoc-encryption:
+      title: Enkel kryptering
+      body: Studentene lærer teknikker for å lage og knekke krypterte meldinger.
     weblab:
       title: Web Lab (beta)
       body: Web Lab er et programmeringsmiljø hvor du kan gjøre lage web-sider med
@@ -781,6 +782,10 @@
     minecraft2016:
       title: Minecraft
       body: Programmer dyr og andre Minecraft-vesener i din egen versjon av Minecraft.
+    hero:
+      title: Minecraft
+      body: Minecraft er tilbake for Kodetimen med en helt ny aktivitet! Reis gjennom
+        Minecraft med kode.
     sports:
       title: Sport
       body: Velg mellom å lage et basketballspill eller miks og match på tvers av
@@ -863,6 +868,9 @@
     hide_survey_last_answer: Undersøkelsen er anonym. Besøk gjerne læreroversikten
       for samlede resultater. Merk at resultater kun er synlige dersom minst fem elever
       har besvart undersøkelsen.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Tusen takk
     wrong_body: Takk for dine svar.
@@ -1116,8 +1124,8 @@
     csd4_2: 'Kapittel 2: App Prototyping'
     csd5_1: 'Kapittel 1: Representerer informasjon'
     csd5_2: 'Kapittel 2: Problemløsing med data'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Kapittel 1: Maskinvare utganger'
+    csd6_2: 'Kapittel 2: Maskinvareinnganger'
     csp1_1: 'Kapittel 1: Representerer og formidle informasjon'
     csp1_2: 'Kapittel 2: Finne opp Internett'
     csp2_1: 'Kapittel 1: Kode og komprimere kompleks informasjon'
@@ -1272,4 +1280,4 @@
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
-  courses_category: Full Courses
+  courses_category: Alle kurs

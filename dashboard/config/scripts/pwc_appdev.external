@@ -1,0 +1,17 @@
+name 'pwc_appdev'
+display_name 'Introduction'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# App Development - Intro to App Lab
+
+This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial students are given time to either extend a project they started building into a "Choose Your Own Adventure", "Greeting Card", or "Personality Quiz" app. They can also continue on to build more projects featured on the code.org/applab page.
+
+**Important: This tutorial is designed for students 13 years or older only**
+
+* [Intro to App Lab Hour of Code Tutorial](https://studio.code.org/s/applab-intro/stage/1/puzzle/1)
+
+---
+## For the PwC Facilitator
+[Click here for the Facilitator Guide](https://curriculum.code.org/hoc/plugged/7/) for this lesson. The Facilitator Guide contains detailed activity and discussion guidance.
+MARKDOWN
