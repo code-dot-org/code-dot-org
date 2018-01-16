@@ -141,10 +141,6 @@ jobs:
             bundle exec rake circle:check_for_unexpected_apps_changes
 
       - run:
-          name: lint js
-          command: bundle exec rake lint:javascript
-
-      - run:
           name: unit tests
           command: bundle exec rake circle:run_tests --trace
           no_output_timeout: 40m
