@@ -1347,6 +1347,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -8454,6 +8483,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -10098,6 +10130,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: إرفاق كتلة إلى "عندما انقر" كتلة، ثم اضغط على "تشغيل".
         انقر أو اضغط على الشاشة لنقل الطائر إلى الهدف.
+      flappy_11_instruction: "أنشئ لعبة Flappy الخاصة بك . يمكنك تغيير جميع المرئيات
+        وجميع القواعد ، و حتى الجاذبية . عند الانتهاء من ذلك، انقر فوق مشاركة للسماح
+        للأصدقاء بتجريب اللعبة الخاصة بك على هواتفهم ."
       flappy_2_instruction: الآن لقد أضفنا بعض الأراضي . أرفق قطعة اللغز إلى قطعة
         "عندما ترتطم بالأرض".  تعليماتك البرمجية تحتاج إلى 'إنهاء اللعبة' عندما يصطدم
         فلابي .
@@ -10118,9 +10153,6 @@
         حاول إعداد مشهد عشوائي عندما تحدث أحداث أخرى، على سبيل المثال، عند تمرير عقبة."
       flappy_9_instruction: "لخلط الأمور، عندما الارتطام بعقبة، بدلاً من إنهاء اللعبة
         جرب إعادة تعيين النتيجة مرة أخرى إلى 0."
-      flappy_11_instruction: "أنشئ لعبة Flappy الخاصة بك . يمكنك تغيير جميع المرئيات
-        وجميع القواعد ، و حتى الجاذبية . عند الانتهاء من ذلك، انقر فوق مشاركة للسماح
-        للأصدقاء بتجريب اللعبة الخاصة بك على هواتفهم ."
       frozen circle function in circle_instruction: "الآن لنقم بإنشاء 20 دائرة متداخلة،
         استدر 18 درجة بين كل دائرة."
       frozen circle function with parameter_instruction: هذه هي قطعة "إنشاء دائرة"

@@ -15626,6 +15626,10 @@
         # Do This\r
         * Add code so that the second button
         turns the LED off.
+      CSD U6 airplane predict markdown_markdown_instruction: |-
+        Look at the code below.
+        What do you think it's going to do? Give it a guess, and run the code to
+        find out!
       CSD U6 analog challenge_markdown_instruction: |-
         # Challenge\r
         \r
@@ -15646,6 +15650,22 @@
         the width, height, or position of a UI element\r
         * Use conditionals to display
         different images based on sensor values
+      CSD U6 analog change_markdown_instruction: |-
+        # Change Event\r
+        \r
+        The data
+        even is fine if you don't mind your code running constantly, but sometimes
+        that's not the most efficient solution to your problem. The sensor "change"
+        event only fires if the sensor value has changed since the last reading, which
+        can make sure your program isn't running code when it's not necessary.\r
+        \r
+        #
+        Do This\r
+        \r
+        Using the provided event handler, write a program that buzzes
+        the buzzer and updates "temp_value" whenever the temperature sensor reading
+        changes. Place your thumb over the temperature sensor to get it to change
+        and see how your program responds.
       CSD U6 analog data_markdown_instruction: |-
         # Data Event\r
         \r
@@ -15771,6 +15791,36 @@
         clicked\r
         * Add code to your event handler to read the temperature sensor
         and display the value on screen
+      CSD U6 analog threshold_markdown_instruction: |-
+        # Change Threshold\r
+        \r
+        By
+        default a sensor's "change" event fires every time the sensor value changes
+        at all, even by one. The light and sound sensors are constantly fluctuating,
+        so you probably want the "change" event to be a little less responsive.
+        The `threshold` property allows you to set how much a sensor should change
+        before considering it a "change" event - so setting `soundSensor.threshold
+        = 100` would cause the sound sensor's "change" even only to trigger if
+        its value increased or decreased by at least 100.\r
+        \r
+        # Do This\r
+        \r
+        This
+        app changes the background color of the screen whenever the sound sensor value
+        changes, but we want to only respond to big changes in volume (like a loud
+        noise). Use the `soundSensor.threshold` block to fix it.\r
+        \r
+        * Add a `soundSensor.threshold`
+        block before the event handler\r
+        * Test out which how different threshold
+        values impact the "change" event\r
+        * Choose a threshold value that makes
+        the screen background change only when a loud noise is sensed.\r
+        \r
+        _Tip:
+        Your threshold depends on how much ambient noise there is in the room, and
+        how much it changes. A threshold that works in a quiet room may not work in
+        a louder classroom._
       CSD U6 array piano_markdown_instruction: |-
         # Piano Panic\r
         \r
@@ -15846,6 +15896,100 @@
         *
         Run your program, moving the slider to see whether the LED speed changes automatically.
       CSD U6 checkbox_markdown_instruction: Predict Level
+      CSD U6 circuit createLed_markdown_instruction: |-
+        # Creating Board Objects\r
+        \r
+        You
+        might have noticed that the new blocks we're using are in a different toolbox
+        drawer. The **Circuit** drawer contains all of the board objects that are
+        built into the Circuit Playground, but when you start wiring your own circuits
+        the Maker Toolkit no longer knows where everything is.\r
+        \r
+        The new **Maker**
+        drawer contains general purpose commands instead of ones that are customized
+        for the Circuit Playground. In addition to the `pinMode()` and `digitalWrite()`
+        commands you've seen, it includes commands to create new objects on the board
+        that can be programmed in the same way as the blocks in the **Circuit** drawer.
+        The `var myLed = createLed()` command, for example, creates a new LED object
+        that behaves just like the `led` blocks you've been using.\r
+        \r
+        # Do This\r
+        \r
+        Now
+        that you're creating new board objects that we don't have blocks for, you'll
+        need to work in text mode. You can still drag out blocks that you're familiar
+        with from the **Circuit** drawer, you'll just need to change the name of
+        the object.\r
+        \r
+        * Keep your LED wired just as it was before (connected
+        to pin 2)\r
+        * Make sure you're in text mode, not block mode.\r
+        * Drag out
+        an `led.blink()` block below the comment `// Blink myLed`.\r
+        * Replace the
+        text `led` with `myLed`.\\r
+        * Test your code.
+      CSD U6 circuit multi led_markdown_instruction: |-
+        # Creating Board Objects\r
+        \r
+        You
+        might have noticed that the new blocks we're using are in a different toolbox
+        drawer. The **Circuit** drawer contains all of the board objects that are
+        built into the Circuit Playground, but when you start wiring your own circuits
+        the Maker Toolkit no longer knows where everything is.\r
+        \r
+        The new **Maker**
+        drawer contains general purpose commands instead of ones that are customized
+        for the Circuit Playground. In addition to the `pinMode()` and `digitalWrite()`
+        commands you've seen, it includes commands to create new objects on the board
+        that can be programmed in the same way as the blocks in the **Circuit** drawer.
+        The `var myLed = createLed()` command, for example, creates a new LED object
+        that behaves just like the `led` blocks you've been using.\r
+        \r
+        # Do This\r
+        \r
+        Now
+        that you're creating new board objects that we don't have blocks for, you'll
+        need to work in text mode. You can still drag out blocks that you're familiar
+        with from the **Circuit** drawer, you'll just need to change the name of
+        the object.\r
+        \r
+        * Keep your LED wired just as it was before (connected
+        to pin 2)\r
+        * Make sure you're in text mode, not block mode.\r
+        * Drag out
+        an `led.blink()` block below the comment `// Blink myLed`.\r
+        * Replace the
+        text `led` with `myLed`.\\r
+        * Test your code.
+      CSD U6 circuit pinMode_markdown_instruction: |-
+        # Wire a Circuit\r
+        \r
+        You can
+        use any of the numbered pads to add additional circuits to your board. Let's
+        use pin 2 to add another LED.\r
+        \r
+        # Do This\r
+        \r
+        * Using a wire, connect
+        pin 2 to the positive (+) side of an LED\r
+        * Using another wire, connect
+        the negative (-) side of the LED to a ground (GND) pin (it doesn't matter
+        which run)\r
+        * Run this program to test your circuit. If it worked, your
+        LED should turn on.\r
+        \r
+        _Debugging Tip: LEDs only work if the electricity
+        is flowing from positive to negative. If your LED doesn't light up, make
+        sure that it's oriented the right way._
+      CSD U6 circuit predict multi_markdown_instruction: |-
+        # Make a Prediction\r
+        \r
+        All
+        of the devices that you've used so far are actually circuits connected to
+        numbered pins! Look for **#13** on your board to see which circuit is connected
+        to pin 13, then read through this code and predict what will happen when the
+        program is run.
       CSD U6 colorLED on_markdown_instruction: |-
         <img src="//curriculum.code.org/images/circuitplayground/colorLedonoff.gif"
         style="float: right; margin: 10px;">\r
@@ -15964,6 +16108,71 @@
         will trigger when the slider value is changed.\r
         * Add code to get the slider
         value and store it into the `speed` variable when the event is triggered.
+      CSD U6 direction theremin_markdown_instruction: |-
+        # Accelerated Music\r
+        \r
+        We're
+        going to make music with the board again, this time using the accelerometer.
+        \r
+        \r
+        Since `buzzer.frequency` takes a number as a parameter, we can use
+        the number that the accelerometer's pitch and roll properties return to change
+        the frequency.\r
+        \r
+        # Do This\r
+        * Make a variable to store either the accelerometer's
+        pitch or roll, name it accordingly.\r
+        * Use this variable with the buzzer,
+        and alter it in some way. You can add or subtract from it, multiply it by
+        another number, etc.\r
+        * Run the program and alter it again to see what sort
+        of sounds you get this time.
+      CSD U6 directional LEDs roll_markdown_instruction: |-
+        # Roll\r
+        \r
+        Now that
+        you've made the LEDs turn on when you tilt the board forward and back, see
+        if you can light LEDs 2 and 7 when you tilt the board left and right. You
+        can use `accelerometer.getOrientation('roll')` to detect side-to-side motion.\r
+        \r
+        _Remember_:
+        When roll is a positive number, the board is tilting to the right. When roll
+        is a negative number, the board is tilting to the left.\r
+        \r
+        # Do this\r
+        *
+        Create something similar to what you did in the last bubble, except now using
+        `accelerometer.getOrientation("roll")`\r
+        * Run your code to see if it works.
+        Make sure that you can both move the board back and forth, and side-to-side
+        to turn the LEDs on.\r
+        \r
+        _Challenge_: The lights instantly turn on if you
+        move the board in the slightest way. Can you make it so that you have to turn
+        the board a little more in order for the lights to turn on?
+      CSD U6 directional leds pitch_markdown_instruction: |-
+        # Pitch\r
+        \r
+        This program
+        lights the LEDs depending on if you tilt the board forward or back. If you
+        tilt the board forward, the LEDs in the front should light. If you tilt the
+        board back, the LEDs in the back should light.\r
+        \r
+        Right now, the only
+        LEDs that light up are the two near the USB port (LEDs 0 and 9) when you tilt
+        the board forward.\r
+        \r
+        \r
+        # Do This\r
+        \r
+        * Use the board's pitch to
+        make LEDs 4 and 5 light up when you tilt the board back.\r
+        * Run your code
+        and test it a few times.\r
+        \r
+        Remember: When pitch is a positive number,
+        it means the board is tilting backward. When pitch is a negative number, the
+        board is tilting forward.
       CSD U6 emoji race demo_markdown_instruction: |-
         # Emoji Race!\r
         \r
@@ -16590,6 +16799,35 @@
         Read the code and predict what the program will do, then hit "Run" to test
         your prediction.
       CSD U6 interval_markdown_instruction: Predict Level
+      CSD U6 iter create notes_markdown_instruction: |
+        # Music Player\r
+        \r
+        This
+        program lets you play music by waving a wand over the different notes, but
+        it's missing a function definition.\r
+        \r
+        # Do This\r
+        * Create a `checkNotes()`
+        function that will call `checkNote(note)` on everything in the "notes" array.\r
+      CSD U6 iter modify bugs_markdown_instruction: |-
+        # Bug Shaker\r
+        \r
+        This program
+        shakes bugs around when the board is shaken, but it's only working for one
+        bug.\r
+        \r
+        # Do This\r
+        * Change the `moveBugs()` function so that it calls
+        `moveBug(color)` on every bug color.\r
+          * (Hint: Look at the `detectHits()`
+        function for clues how to do this.)
+      CSD U6 iter predict bubbles contained_markdown_instruction: |-
+        # Fish Bubbles\r
+        \r
+        This
+        program uses the sound sensor in the same way as the clouds program.  How
+        many bubbles will move when you blow on the board?
+      CSD U6 iter predict bubbles_markdown_instruction: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       CSD U6 light pattern challenge_markdown_instruction: |-
         # Challenge: More Patterns\r
         \r
@@ -16675,6 +16913,88 @@
         at that new rate.\r
         * Run your program, moving the slider to see whether
         the LED speed changes automatically.
+      CSD U6 params create colors_markdown_instruction: |-
+        # Color Picker\r
+        \r
+        In
+        this program, pressing the buttons at the bottom of the screen changes the
+        color of the images and the color LEDs.\r
+        \r
+        # Do This\r
+        * Create a function
+        `chooseColor(color)` that changes each of the images and the color LEDs to
+        the given color.\r
+        * Call your function in the event blocks so that all the
+        buttons work.
+      CSD U6 params predict contained_markdown_instruction: |-
+        # Bug Crawl\r
+        \r
+        Look
+        at the program below, paying special attention to the function `crawl(bug)`.  What
+        happens if you press the left or right button?
+      CSD U6 params starchaser 1_markdown_instruction: |-
+        # Make your `loopStar(color)`
+        function\r
+        \r
+        Right now only the red star works, so you'll need to change
+        this code.\r
+        \r
+        # Do This\r
+        * Use the code from the `loopRedStar()` function
+        to create a `loopStar(color)` function that will work with any star.\r
+        *
+        Test your function by calling `loopStar("red")` and `loopStar("blue")`
+        inside the `loopStars()` function.
+      CSD U6 params starchaser 2_markdown_instruction: |-
+        # Star Chaser\r
+        \r
+        Now
+        you'll need to make all the stars loop around the screen.\r
+        \r
+        # Do This\r
+        *
+        Use a `for` loop inside your `loopStars()` function to make every star in
+        "starArray" loop around the screen.
+      CSD U6 params starchaser 3_markdown_instruction: |
+        # Star Chaser\r
+        \r
+        All
+        the stars loop, but you can still only catch the red star.\r
+        \r
+        # Do This\r
+        *
+        Use code from the `moveRedStar()` function to make a `moveStar(color)` function
+        that can move any star.\r
+        * Use code from the `checkRedStar()` function to
+        make a `checkStar(color)` function that works for any star.\r
+        * Test your
+        code by calling `checkStar("red")` and `checkStar("blue")` inside your
+        event block.\r
+      CSD U6 params starchaser 4_markdown_instruction: |-
+        # Star Chaser\r
+        \r
+        Now
+        make it work for all the stars\r
+        \r
+        # Do This\r
+        * Create a `checkStars()`
+        functions that uses a `for` loop to check every star in the star array.\r
+        *
+        Test your code by calling the `checkStars()` function inside the event block.
+      CSD U6 params starchaser intro_markdown_instruction: |-
+        # Star Chaser\r
+        \r
+        In
+        this game, the user tries to catch the stars according to the color of the
+        LEDs.\r
+        \r
+        # Do This\r
+        * Play the game, and discuss the following with
+        a partner:\r
+         * What functions might this program need?\r
+         * What parameters
+        should these functions have?
+      CSD U6 params starchaser template_markdown_instruction: Template Level.
       CSD U6 predict LED button_markdown_instruction: Embedded Prediction
       CSD U6 random array notes_markdown_instruction: |-
         # Random Song Generator\r
@@ -16836,6 +17156,14 @@
         that's keeping the duration from being set correctly.\r
         \t* (Hint: Hover
         over the yellow triangles for clues as to what might be wrong with the code.)
+      CSD U6 stillness game predict code_markdown_instruction: "# Change with the\nAccelerometer\\r\n\\r\nJust
+        like the sensors, the accelerometer has a change\nevent. "
+      CSD U6 stillness game predict_markdown_instruction: |
+        # Accelerometer Events\r
+        \r
+        Look
+        at the code below with a partner. What do you think it's going to do? Give
+        it a guess, then run the code to find out!\r
       CSD U6 test LED_markdown_instruction: |-
         # Control the LED\r
         \r
@@ -37808,6 +38136,11 @@
         \r
         * Leave this open on your screen so your peer
         reviewers can look at your work
+      Pixel Filterator_markdown_instruction: |-
+        # Free Play\r
+        \r
+        Do as you will,
+        make something awesome
       Pixelation - AllTheThings 4_markdown_instruction: "# Pixelation: AllTheThings\n4\\r\nThis
         pixelation level demonstrates the use of the `hide_encoding_controls`\noption.
         \ Notice that the level displays the image data in hexadecimal and\ndoes not
@@ -60026,6 +60359,260 @@
       U4LXX Free Response_markdown_instruction: |+
         Free response prompt here.
 
+      U5 AP Create Practice onEvent Doesnt Count_markdown_instruction: |-
+        # AP Practice
+        - Create PT - Choosing an Abstraction\r
+        \r
+        One component of the **AP Create
+        Performance Task** is creating and describing an abstraction in your program.
+        Here's the actual prompt.\r
+        \r
+        <div style="width: 80%; margin: auto; background-color:
+        #EEEEEE; padding: 10px; font-family: serif; font-size: 12pt">\r
+        \r
+        <b>2.
+        Written Responses</b>\r
+        <ul>\r
+        2d. Capture and paste a program code segment
+        that contains an abstraction you developed individually on your own (marked
+        with a <b>rectangle</b> in <b>section 3</b> below). This abstraction must
+        integrate mathematical and logical concepts.\r
+        Explain how your abstraction
+        helped manage the complexity of your program.\r
+        <i>(Must not exceed 200 words)</i>\r
+        </ul>\r
+        </div>\r
+        <br>\r
+        \r
+        Here's
+        one row of the scoring guide for this question\r
+        \r
+        <div style="magin:auto">\r
+        \t<img
+        src="https://images.code.org/7d5773ed70d947bf75e0c1b3f7e60911-image-1515454332418.32.05
+        PM.png">\r
+        </div>\r
+        \r
+        <br>\r
+        \r
+        # Grade the Response\r
+        \r
+        Below is
+        a segment of code from a "clicker" program with a rectangle drawn around
+        a portion of the code identifying an abstraction.\r
+        \r
+        ![](https://images.code.org/7ceaa61af4feb06707f593e4b4ec1947-image-1515454046037.26.18
+        PM.png)\r
+        \r
+        Each row is worth one point that either can or cannot be awarded.
+        **Explain why you would or would NOT award the point for Row 7 based on the
+        criteria given above.**
+      U5 AP Practice Create Abstraction Color Sleuth_markdown_instruction: |
+        # AP
+        Practice - Create PT - Abstraction\r
+        \r
+        One component of the **AP Create
+        Performance Task** is describing an abstraction within your program.\r
+        \r
+        <div
+        style="width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px;
+        font-family: serif; font-size: 12pt">\r
+        \r
+        <b>2. Written Responses</b>\r
+        <ul>\r
+        2d.
+        Capture and paste a program code segment that contains an abstraction you
+        developed individually on your own (marked with a <b>rectangle</b> in <b>section
+        3</b> below). This abstraction must integrate mathematical and logical concepts.
+        Explain how your abstraction helped manage the complexity of your program.\r
+        <i>(Must
+        not exceed 200 words)</i></ul>\r
+        </div>\r
+        <br>\r
+        \r
+        Here's one row of
+        the scoring guide for this question\r
+        \r
+        <div style="magin:auto">\r
+        \t<img
+        src="https://images.code.org/723a551269e14884f76f1d4330560d36-image-1515652835118.40.21
+        PM.png">\r
+        </div>\r
+        \r
+        # Write the Response\r
+        \r
+        ![](https://images.code.org/33f44fc55155b5e75afd37475640bc16-image-1515653209087.46.40
+        PM.png)\r
+        \r
+        <div style="clear:both"></div>\r
+        \r
+        <br>\r
+        \r
+        The selection
+        above is taken from the Color Sleuth activity you just completed. The selection
+        above **would earn credit** as an abstraction. What you need to do is write
+        response 2d describing the abstraction and how it manages complexity.\r
+        \r
+        **Write
+        response 2d describing the abstraction above. Use the writing prompt and scoring
+        guidelines as a guide.**\r
+        \r
+      U5 AP Practice Create Algorithm Color Sleuth_markdown_instruction: |-
+        # AP Practice
+        - Create PT - Algorithm\r
+        \r
+        One component of the **AP Create Performance
+        Task** is describing an algorithm within your program.\r
+        \r
+        <div style="width:
+        80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:
+        serif; font-size: 12pt">\r
+        \r
+        <b>2. Written Responses</b>\r
+        <ul>\r
+        2c.
+        Capture and paste a program code segment that implements an algorithm (marked
+        with an <b>oval</b> in <b>section 3</b> below) and that is fundamental for
+        your program to achieve its intended purpose. This code segment must be an
+        algorithm you developed individually on your own, must include two or more
+        algorithms, and must integrate mathematical and/or logical concepts. Describe
+        how each algorithm within your selected algorithm functions independently,
+        as well as in combination with others, to form a new algorithm that helps
+        to achieve the intended purpose of the program. <i>(Must not exceed 200 words)</i>\r
+        </ul>\r
+        </div>\r
+        <br>\r
+        \r
+        Here's
+        two rows of the scoring guide for this question\r
+        \r
+        <div style="magin:auto">\r
+        \t<img
+        src="https://images.code.org/febdb2c140b9a4f34f2d4a93370c8b53-image-1515518259767.17.31
+        AM.png">\r
+        </div>\r
+        \r
+        # Write the Response\r
+        \r
+        ![](https://images.code.org/f3de97fa2fd3d01d25809d06407a7cc4-image-1515524889060.34.33
+        AM.png)\r
+        \r
+        <div style="clear:both"></div>\r
+        \r
+        <br>\r
+        \r
+        The selection
+        above is taken from the Color Sleuth activity you just completed. The selection
+        above **would earn credit** as an algorithm. What you need to do is write
+        response 2c describing the algorithm, its sub-algorithms, and how it works.\r
+        \r
+        **Write
+        response 2c describing the algorithm above. Use the writing prompt and scoring
+        guidelines as a guide.**
+      U5 AP Practice Create Algorithm How vs What_markdown_instruction: |-
+        # AP Practice
+        - Create PT - Process\r
+        \r
+        One component of the **AP Create Performance
+        Task** is describing the development process used for your program.\r
+        \r
+        <div
+        style="width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px;
+        font-family: serif; font-size: 12pt">\r
+        \r
+        <b>2. Written Responses</b>\r
+        <ul>\r
+        2b.
+        Describe the incremental and iterative development process of your program,
+        focusing on two distinct points in that process. Describe the difficulties
+        and/or opportunities you encountered and how they were resolved or incorporated.
+        In your description clearly indicate whether the development described was
+        collaborative or independent. At least one of these points must refer to independent
+        program development. <i>(Must not exceed 200 words)</i>\r
+        </ul>\r
+        </div>\r
+        <br>\r
+        \r
+        Here's
+        two rows of the scoring guide for this question\r
+        \r
+        <div style="magin:auto">\r
+        \t<img
+        src="https://images.code.org/18480a117da79e3c5599edfe0b98836a-image-1515438403469.06.32
+        AM.png">\r
+        </div>\r
+        \r
+        # Grade the Response\r
+        \r
+        A student wrote the
+        following response.\r
+        \r
+        *"In developing my program I encountered two major
+        problems. The first one was early in programming when sometimes the apple
+        would disappear from the screen. By debugging my program I was able to recognize
+        that the ranges of my random X values went from 0-3200, not 0-320. I was easily
+        able to correct this issue in my code. A second issue occurred when I realized
+        that classmates using the game often didn't know how to start it. In order
+        to fix this problem I made the button significantly larger and a different
+        color than the background. Afterwards I no longer saw this problem."*\r
+        \r
+        \r
+        Each
+        row is worth one point that either can or cannot be awarded. **Explain why
+        you would or would not award the points for Row 2 and Row 3 based on the criteria
+        given above**
+      U5 AP Practice Create Process_markdown_instruction: |-
+        # AP Practice - Create
+        PT - Process\r
+        \r
+        One component of the **AP Create Performance Task** is
+        describing the development process used for your program.\r
+        \r
+        <div style="width:
+        80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:
+        serif; font-size: 12pt">\r
+        \r
+        <b>2. Written Responses</b>\r
+        <ul>\r
+        2b.
+        Describe the incremental and iterative development process of your program,
+        focusing on two distinct points in that process. Describe the difficulties
+        and/or opportunities you encountered and how they were resolved or incorporated.
+        In your description clearly indicate whether the development described was
+        collaborative or independent. At least one of these points must refer to independent
+        program development. <i>(Must not exceed 200 words)</i>\r
+        </ul>\r
+        </div>\r
+        <br>\r
+        \r
+        Here's
+        two rows of the scoring guide for this question\r
+        \r
+        <div style="magin:auto">\r
+        \t<img
+        src="https://images.code.org/18480a117da79e3c5599edfe0b98836a-image-1515438403469.06.32
+        AM.png">\r
+        </div>\r
+        \r
+        # Grade the Response\r
+        \r
+        A student wrote the
+        following response.\r
+        \r
+        *"In developing my program I encountered two major
+        problems. The first one was early in programming when sometimes the apple
+        would disappear from the screen. By debugging my program I was able to recognize
+        that the ranges of my random X values went from 0-3200, not 0-320. I was easily
+        able to correct this issue in my code. A second issue occurred when I realized
+        that classmates using the game often didn't know how to start it. In order
+        to fix this problem I made the button significantly larger and a different
+        color than the background. Afterwards I no longer saw this problem."*\r
+        \r
+        \r
+        Each
+        row is worth one point that either can or cannot be awarded. **Explain why
+        you would or would not award the points for Row 2 and Row 3 based on the criteria
+        given above**
       U5 Booleans_markdown_instruction: |-
         ### Points to pay attention to:\r
         \r
@@ -61515,6 +62102,96 @@
         2. Why is it called a "Boolean"?\r
         3.
         Is this a legal expression?  `10 > 25`?
+      U5-AP-Algorithm-Does-It-Count_markdown_instruction: |-
+        # AP Practice - Algorithm
+        - Grade the Response\r
+        \r
+        One component of the **AP Create Performance Task**
+        is selecting and describing an algorithm that you developed.\r
+        \r
+        <div style="width:
+        80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:
+        serif; font-size: 12pt">\r
+        \r
+        <b>2. Written Responses</b>\r
+        <ul>\r
+        2c.
+        Capture and paste a program code segment that implements an algorithm (marked
+        with an <b>oval</b> in <b>section 3</b> below) and that is fundamental for
+        your program to achieve its intended purpose. This code segment must be an
+        algorithm you developed individually on your own, must include two or more
+        algorithms, and must integrate mathematical and/or logical concepts. Describe
+        how each algorithm within your selected algorithm functions independently,
+        as well as in combination with others, to form a new algorithm that helps
+        to achieve the intended purpose of the program. (Must not exceed 200 words)\r
+        </ul>\r
+        </div>\r
+        <br>\r
+        \r
+        Here's
+        the scoring guide for this question\r
+        \r
+        <div style="magin:auto">\r
+        \t<img
+        src="https://images.code.org/73352bdcc7c3b46ee949f534a0de9dd4-image-1515191914293.38.22
+        PM.png">\r
+        </div>\r
+        \r
+        # Grade the Response\r
+        \r
+        **Written Response:**
+        *"My algorithm controls the log-in for the app. This piece of my program
+        is important because the data included in my app needs to be secure. The algorithm
+        makes sure only users with the correct password get in to the app to use it."*\r
+        \r
+        **Program
+        Code:** \r
+        \r
+        <img src="https://images.code.org/93246c79e25bce7f544382cce0a1df04-image-1515196646222.54.17
+        PM.png" style="height:300px">\r
+        \r
+        **Explain why you would or would not
+        award the point for Row 5 based on the criteria given above**
+      U5-AP-Practice-FR-manage-complexity_markdown_instruction: |-
+        # AP Practice -
+        Performance Task Response\r
+        \r
+        The AP Create Performance task asks you to
+        write about an abstraction that you developed and wrote into your code. Most
+        of the time that means identifying a function or procedure you wrote to help
+        "manage complexity" in your program.\r
+        \r
+        Here is the actual prompt from
+        the Create Performance Task:\r
+        \r
+        <div style="width: 70%; margin: auto;
+        background-color: #EEEEEE; padding: 10px; font-family: serif; font-size: 12pt">\r
+        \r
+        <b>2d.</b>
+        Capture and paste a program code segment that contains an abstraction you
+        developed individually on your own (marked with a <b>rectangle</b>). This
+        abstraction must integrate mathematical and logical concepts. Explain how
+        your abstraction helped manage the complexity of your program.\r
+        <br>\r
+        <i>(Must
+        not exceed 200 words)</i>\r
+        \r
+        </div>\r
+        \r
+        <br>\r
+        \r
+        Below is a segment
+        of code from an "under the sea" program with a rectangle drawn around a
+        portion of the code identifying an abstraction. Imagine that you wrote this
+        and are composing an AP response about how this abstraction manages complexity.  (Note:
+        ignore the requirement that the abstraction integrate "mathematical and logical
+        concepts" for this practice response.  Just write about managing complexity).\r
+        \r
+        ![](https://images.code.org/d98fa58fce78eff86fd734f32e2960e4-image-1507913593511.png)\r
+        \r
+        Explain
+        how the abstraction marked with the rectangle in the code above helps manage
+        complexity of this program.
       U6 - Final Project - Project Level_markdown_instruction: |-
         # Congratulations!\r
         \r
@@ -64332,6 +65009,9 @@
       courseC_harvester_loops_challenge2_markdown_instruction: |-
         Collect all of the
         lettuce. Avoid the trees and fields!
+      courseC_harvester_loops_forVid_markdown_instruction: |-
+        Collect all of the corn
+        and all of the pumpkins.
       courseC_maze_debugging1_markdown_instruction: |-
         This code isn't quite right!  \r
         \r

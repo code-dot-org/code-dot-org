@@ -1366,6 +1366,35 @@
       CSD U5 black white images pixelation 5_instruction: Teiknaðu hvað sem þú vilt
       CSD U5 black white images pixelation_instruction: Ljúktu við X-ið með því að
         nota 0 og 1
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -7545,6 +7574,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Safnaðu öllu kálinu.
         Forðastu tré og tún!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -8948,6 +8980,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Tengdu kubb við "þegar smellt" kubbinn og ýttu svo á "Keyra
         forrit". Smelltu eða sláðu á skjáinn til að færa Flappy að markinu.
+      flappy_11_instruction: Búðu til þinn eiginn Flappy leik. Þú getur breytt öllu
+        umhverfi og öllum reglum, jafnvel þyngdaraflinu. Smelltu svo á Ljúka til að
+        vinir þínir geti prófað leikinn í símunum sínum.
       flappy_2_instruction: Nú höfum við  bætt við jörð. Tengdu kubb við kubbinn "þegar
         rekst á jörð". Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy hrapar til
         jarðar.
@@ -8968,9 +9003,6 @@
         t.d. þegar farið er framhjá hindrun."
       flappy_9_instruction: Prófaðu að útfæra þetta þannig að í stað þess að enda
         leikinn við árekstur þá sé skorið núllstillt.
-      flappy_11_instruction: Búðu til þinn eiginn Flappy leik. Þú getur breytt öllu
-        umhverfi og öllum reglum, jafnvel þyngdaraflinu. Smelltu svo á Ljúka til að
-        vinir þínir geti prófað leikinn í símunum sínum.
       frozen circle function in circle_instruction: Gerum nú 20 hringi sem skarast
         og snúum um 18 gráður eftir hvern hring.
       frozen circle function with parameter_instruction: Hér er "búa til hring" kubbur

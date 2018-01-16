@@ -394,21 +394,21 @@ pl:
       Course 4 Artist For Loops 3_authored_hint:
         Course_4_Artist_For_Loops_3_a: To have the `for` loop drive your movement, make sure that you're using `counter` as your distance.
       Course 4 Artist For Loops 4_authored_hint:
-        Course_4_Artist_For_Loops_4_a: "**What is the smallest number you will need?  \nWhat is the largest number?  \nHow big is the increase each time?**\n\nThose are the questions you need to ask to fill in the blanks of the `for` loop."
+        Course_4_Artist_For_Loops_4_a: "**Jaka jest najmniejsza liczba, którą będziesz potrzebował?\nJak jest największa liczba?\nO jaką wielkość zmienia się ta liczba za każdym razem?**\n\nTe pytania musisz zadać aby wypełnić puste pola w pętli `for`."
       Course 4 Artist For Loops Challenge_authored_hint:
         Course_4_Artist_For_Loops_Challenge_a: The largest shape has 19 sides. The smallest has just two.
-        Course_4_Artist_For_Loops_Challenge_b: The `for` loop counts up by two each time through.
+        Course_4_Artist_For_Loops_Challenge_b: Pętla `for` zwiększa się o 2 za każdym razem.
       Course 4 Artist For Loops Challenge_a_authored_hint:
         Course_4_Artist_For_Loops_Challenge_a: The largest polygon has 19 sides.
-        Course_4_Artist_For_Loops_Challenge_b: Each polygon is incomplete, with one side fewer than it should have.
+        Course_4_Artist_For_Loops_Challenge_b: Każdy wielokąt jest niekompletny, ma jeden bok mniej niż powinien.
       Course 4 Artist For Loops inspire_authored_hint:
-        Course_4_Artist_For_Loops_inspire_a: The foundation of this code is the same as the solution to the previous challenge puzzle...with a couple of changes.
-        Course_4_Artist_For_Loops_inspire_b: Try a `for` loop that goes from 3 to 10 with an increment of 1.
+        Course_4_Artist_For_Loops_inspire_a: Założenie tego kodu jest takie samo jak rozwiązanie poprzedniej zagadki z puzzlami... z kilkoma zmianami.
+        Course_4_Artist_For_Loops_inspire_b: Spróbuj pętli `for` która liczy od 3 do 10 z krokiem równym 1.
         Course_4_Artist_For_Loops_inspire_c: There are two iterations of the same repeat loop inside the `for` loop, but the second repeat turns the opposite direction.
         Course_4_Artist_For_Loops_inspire_d: "**Solution:**  \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\" inline=\"true\" movable=\"false\">\n      <mutation counter=\"counter\"></mutation>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_arithmetic\" inline=\"true\">\n                <title name=\"OP\">MINUS</title>\n                <value name=\"A\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <value name=\"B\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">1</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_move\" inline=\"true\">\n                <title name=\"DIR\">moveForward</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">40</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">turnRight</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">360</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">MINUS</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">1</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">40</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">DIVIDE</title>\n                            <value name=\"A\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">360</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
       Course 4 Artist Functions Inspiration_authored_hint:
         Course_4_Artist_Functions_Inspiration_a: Start with the code from the last puzzle and add an extra `turn right` of three degrees inside the repeat loop.
-        Course_4_Artist_Functions_Inspiration_b: Try turning by more than 90 degrees outside of the `repeat loop`, but still inside the `for loop`.
+        Course_4_Artist_Functions_Inspiration_b: Spróbuj obrócić o więcej niż 90 stopni poza `repeat loop`, ale wciąż wewnątrz pętli `for loop`.
         Course_4_Artist_Functions_Inspiration_c: |-
           **Solution:**
           <xml>
@@ -475,13 +475,13 @@ pl:
           </block>
           </xml>
       Course 4 Artist Functions challenge_authored_hint:
-        Course_4_Artist_Functions_challenge_a: Part of understanding how to use functions is figuring out which ones you need, and which ones you don't.
+        Course_4_Artist_Functions_challenge_a: Aby zrozumieć jak wykorzystywać funkcje, należy sobie uświadomić, których potrzebujemy, a których nie.
         Course_4_Artist_Functions_challenge_b: Use a `for loop`, then use its counter variable inside of a nested `repeat` loop.
-        Course_4_Artist_Functions_challenge_c: Each iteration, you should draw a square then jump forward.
+        Course_4_Artist_Functions_challenge_c: Podczas każdej iteracji powinieneś narysować kwadrat a potem przejść dalej.
         Course_4_Artist_Functions_challenge_d: You will need to turn left by 90 degrees outside of your `repeat`, but still inside the `for loop`.
       Course 4 Artist Inspire_authored_hint:
-        Course_4_Artist_Inspire_a: After you complete one square, try jumping forward half of it's length before turning and making another.
-        Course_4_Artist_Inspire_b: Each square and jump is repeated four times (using a left turn inbetween) to make a full pinwheel-like unit.
+        Course_4_Artist_Inspire_a: Po skończeniu kwadratu, spróbuj przejść dalej o połowę jego długości zanim się obrócisz i zaczniesz tworzyć inny.
+        Course_4_Artist_Inspire_b: Każdy kwadrat i przejście jest powtarzane czterokrotnie (przy wykorzystaniu skrętu w lewo) aby stworzyć jednostkę podobną do pinwheel.
         Course_4_Artist_Inspire_c: Each pinwheel is also repeated four times, with a right turn of **360/sides**.
         Course_4_Artist_Inspire_d: |-
           **Solution:**
@@ -657,38 +657,38 @@ pl:
           </block>
           </xml>
       Course 4 Artist Vars 13_authored_hint:
-        Course_4_Artist_Vars_13_a: You need two repeat loops (one inside the other) both repeating `sides` times.
+        Course_4_Artist_Vars_13_a: Potrzebujesz dwóch powtórzeń pętli (jedna s środku drugiej) obie powtarzające się `sides` razy.
         Course_4_Artist_Vars_13_b: "The inner repeat loop draws an octagon (turning to the left).   \n\nAfterwards, you need to move forward and turn right only in the outer loop."
-        Course_4_Artist_Vars_13_c: To adjust the shape to stay the same size when the number of sides change, use the math block to divide the length in pixels by the number of sides.
+        Course_4_Artist_Vars_13_c: Aby dopasować kształt do stałego rozmiaru podczas zmiany ilości boków, użyj bloku matematycznego aby podzielić długość w pikselach przez liczbę boków.
       Course 4 Artist Vars 6_authored_hint:
-        Course_4_Artist_Vars_6_a: To draw a regular polygon, turn **360/sides** each time.
+        Course_4_Artist_Vars_6_a: Aby narysować zwykły wielokąt, obróć się o ***360/sides** za każdym razem.
       Course 4 Artist Vars 8_authored_hint:
-        Course_4_Artist_Vars_8_a: If you divide your starting length by the number of sides, the length of each side will get shorter as the number of sides gets higher.
+        Course_4_Artist_Vars_8_a: Jeśli podzielisz swoją startową długość przez liczbę boków, długość każdego boku się skróci gdy liczba boków będzie rosnąć.
       Course 4 Bee Params 7_authored_hint:
-        notice_pattern: 'Do you see a pattern in how the number of nectar changes? '
-        count_with_for: Notice that the nectar goes up in steps. What kind of block can you use to do the same thing many times while counting up?
+        notice_pattern: 'Czy widzisz wzór zmiany liczby nektaru? '
+        count_with_for: Zauważ, że ilość nektaru wzrasta wraz z krokami. Jakiego bloku możesz użyć aby zrobić to samo wiele razy podczas odliczania?
       Course 4 Bee Params 8_authored_hint:
-        Course_4_Bee_Params_8_a: It's okay to ask for a honey number and a nectar number each time.  If there's none of something, the number can be 0.
+        Course_4_Bee_Params_8_a: Za każdym razem można poprosić o ilość miodu i nektaru. Jeśli czegoś nie ma, liczba może wynosić 0.
       Course 4 Play Lab Params 2_authored_hint:
         Course_4_Play_Lab_Params_2_a: You will need to click "edit" on the jump function and update it so that it uses the `height` parameter.
       Course 4 Play Lab Vars 2_authored_hint:
-        Course_4_Play_Lab_Vars_2_a: Make sure to set the number for `dog_speed` to something larger than `cat_speed`.
+        Course_4_Play_Lab_Vars_2_a: Upewnij się, aby ustawić wartość `prędkość_psa` większą od `prędkość_kota`.
       Course 4 Play Labs For Loops 2_authored_hint:
-        Course_4_Play_Labs_For_Loops_2_a: What would you add to your `for` loop every time to skip the even numbers?
+        Course_4_Play_Labs_For_Loops_2_a: Co byś dodał do pętli `for`, aby za każdym razem pominąć liczby parzyste?
       Course 4 Playlab For Loop Freeplay_authored_hint: [ ]
       Course 4 Playlab For Loops 4b_authored_hint:
         Course_4_Playlab_For_Loops_4b_a: The flags are about 330 pixels away from the characters.
-        Course_4_Playlab_For_Loops_4b_b: How can you make each character reach 330 pixels in the same number of moves with different starting and stopping numbers?
+        Course_4_Playlab_For_Loops_4b_b: W jaki sposób można zrobić, aby każda postać osiągnęła 330 pikseli w takiej samej ilości kroków z innymi wartościami początkowymi i końcowymi?
         Course_4_Playlab_For_Loops_4b_c: Remember, it doesn't matter how much a character passes the flag by on its last step, as long as it takes each character the same number of steps to get to the flag.
       Course 4 Playlab For Loops 5b_authored_hint:
-        Course_4_Playlab_For_Loops_5b_a: The characters are about 175 pixels away from the center.
-        Course_4_Playlab_For_Loops_5b_b: Remember, a character's next step will be longer than their last, since the counter keeps getting larger.
+        Course_4_Playlab_For_Loops_5b_a: Postacie są około 175 pikseli od centrum.
+        Course_4_Playlab_For_Loops_5b_b: Pamiętaj, że następny krok postaci będzie większy niż poprzednim razem, ponieważ licznik cały czas się powiększa.
       Course 4 Playlab For Loops 6b_authored_hint: [ ]
       Course 4 SCF 1_authored_hint:
         Course_4_SCF_1_a: Każdy sześciokąt ma boki długości 40 pikseli.
         Course_4_SCF_1_b: There is a 120 pixel jump between each hexagon in each horizontal line.
         Course_4_SCF_1_c: "Before you draw the second row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 320 pixels."
-        Course_4_SCF_1_d: "Before you draw the third row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 440 pixels (120 pixels farther than your `shift down/forward` function. "
+        Course_4_SCF_1_d: "Zanim narysujesz trzeci rząd sześciokątów, musisz się obrócić w prawo o 60 stopni i przejść 40 pikseli do przodu. \n\nJak będziesz w prawidłowej pozycji w pionie, musisz zawrócić artystę i wrócić 440 pikseli (120 pikseli dalej niż Twoja `shift down/forward` funkcja). "
         Course_4_SCF_1_e: |-
           **Solution:**
           
@@ -877,7 +877,7 @@ pl:
       Course 4 SCF 1a_authored_hint:
         Course_4_SCF_1a_a: Pamiętaj swoje funkcje z etapu 16.
         Course_4_SCF_1a_b: "Look at this path as your main route:  \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
-        Course_4_SCF_1a_c: You should consider using a `for loop`. Not for the steps, but for the function parameter.
+        Course_4_SCF_1a_c: Rozważ wykorzystanie `for loop`. Nie dla kroków, ale dla parametru funkcji.
         Course_4_SCF_1a_d: |-
           **Solution:**
           
@@ -1103,7 +1103,7 @@ pl:
       Course 4 SCF 1b_authored_hint:
         Course_4_SCF_1b_a: "Notice that the shape of all honey points is similar.  \n\nGood place for a function!"
         Course_4_SCF_1b_b: "Look at this idea for how the bee might travel:  \n\n![](https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)"
-        Course_4_SCF_1b_c: You should consider using a `for loop` for the distance the bee travels.
+        Course_4_SCF_1b_c: Rozważ użycie `for loop` do odległości przemieszania się pszczoły.
         Course_4_SCF_1b_d: |-
           **Solution:**
           
@@ -1828,7 +1828,7 @@ pl:
       Course 4 SCFL 2_authored_hint:
         Course_4_SCFL_2_a: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
         Course_4_SCFL_2_b: Zauważ, że istnieją trzy czynności podczas każdego kroku pętli `for`, która przechodzisz, aby wykonać jakąś akcję dla konkretnego obiektu.
-        Course_4_SCFL_2_c: During each iteration of the `for` loop, the number for each object relates to the `counter` variable in some way.
+        Course_4_SCFL_2_c: Podczas każdej iteracji pętli `for`, liczba każdego elementu odpowiada w jakiś sposób zmiennej `counter`.
         Course_4_SCFL_2_d: |-
           **Rozwiązanie:**
           
@@ -1948,7 +1948,7 @@ pl:
           </block>
           </xml>
       Course 4 SCFL 3_authored_hint:
-        Course_4_SCFL_3_a: The `pen width` is 1. The first square has 50 pixel sides, and each square is 50 pixels wider than the last.
+        Course_4_SCFL_3_a: '`pen width` wynosi 1. Pierwszy kwadrat ma boki o szerokości 50 pikseli, kolejny kwadrat jest o 50 pikseli szerszy od poprzedniego.'
         Course_4_SCFL_3_b: The opacity on the brush is always `counter`/2.
         Course_4_SCFL_3_c: After you make each square, don't forget to jump backward, turn, jump again, then turn back!
         Course_4_SCFL_3_d: |-
@@ -2086,8 +2086,8 @@ pl:
           </xml>
       Course 4 SCFL 4_authored_hint:
         Course_4_SCFL_4_a: The color change happens using the `set color with red, green, blue` block.  Red is always the value of `counter`, green is always `255 - counter`, and blue remains constant at 255 exactly.
-        Course_4_SCFL_4_b: Each shape is a square with sides that are `counter` pixels long, starting with 5px, and increasing by 5px all the way up to 200px.
-        Course_4_SCFL_4_c: The artist turns 15 degrees between each square.
+        Course_4_SCFL_4_b: Każdy kształt jest kwadratem, którego długość boków wynosi `counter`, zaczynając od 5 pikseli, zwiększając każdorazowo o 5 pikseli aż do 200 pikseli.
+        Course_4_SCFL_4_c: Artysta obraca się o 15 stopni pomiędzy każdym kwadratem.
         Course_4_SCFL_4_d: |-
           **Solution:**
           
@@ -2193,9 +2193,9 @@ pl:
           </block>
           </xml>
       Course 4 SCFL 6_authored_hint:
-        Course_4_SCFL_6_a: The color change happens using the `set color with red, green, blue` block.  Red is set constant at 255, green is always the value of `counter`, and blue is always `255 - counter`.
-        Course_4_SCFL_6_b: The code for this is much more simple than you might think.  Just set the color inside the `for loop`, move forward, then turn.
-        Course_4_SCFL_6_c: 'The `for loop` goes from 5 to 250 by 2. '
+        Course_4_SCFL_6_a: Zmiana koloru odbywa się poprzez użycie bloku `ustaw kolor z kolorem czerwonym, zielonym, niebieskim`. Czerwony ma stałą wartość 255, zielony jest zawsze wartością `licznik`, a niebieski to `255-licznik`.
+        Course_4_SCFL_6_b: Kod jest dużo prostszy niż Ci się wydaje. Po prostu ustaw kolor wewnątrz `pętla_for`, rusz do przodu, później się obróć.
+        Course_4_SCFL_6_c: '`pętla for` zmienia się od 5 do 250 z krokiem równym 2. '
         Course_4_SCFL_6_d: |-
           **Solution:**
           
@@ -2287,9 +2287,9 @@ pl:
           </xml>
       Course 4 SCFL 7_authored_hint:
         Course_4_SCFL_7_a: The color change happens using the `set color with red, green, blue` block.  Red is set to `counter`. Green is  `255 - counter`, and blue is set constant at 255.
-        Course_4_SCFL_7_b: 'This drawing is made using two similar `for loops`.  One goes from 5 to 200 by 2, the other goes from 200 to 5 by 2. '
+        Course_4_SCFL_7_b: 'Rysunek jest tworzony z wykorzystaniem dwóch podobnych `pętli for`. Jedna iteruje od 5 do 200 z krokiem 2, kolejną od 200 do 5 z krokiem 2. '
         Course_4_SCFL_7_c: Inside each `for loop` you move forward 5 pixels before you turn by `360 / counter`. Don't forget to set your brush to width `counter` before you do!
-        Course_4_SCFL_7_d: You'll need to turn left by 225 degrees between the two `for loops`.
+        Course_4_SCFL_7_d: Będziesz musiał obrócić się o 225 stopni w lewo pomiędzy dwiema `for loops`.
         Course_4_SCFL_7_e: |-
           **Solution:**
           
@@ -2501,9 +2501,9 @@ pl:
           </block>
           </xml>
       Course 4 SCV 1_authored_hint:
-        Course_4_SCV_1_a: 'Variables are helpful because you can add to them each time through a loop. '
-        Course_4_SCV_1_b: This puzzle has one loop that creates the polygon, one loop that repeats the polygon `sides` times, then another loop that does it all again after adding 5 to `sides`.
-        Course_4_SCV_1_c: Using a variable for `sides` and one for `length` makes the code cleaner because you can loop the same code multiple times, instead of creating a new copy for each set of numbers.
+        Course_4_SCV_1_a: 'Zmienne są pomocne, ponieważ można do nich dodawać w każdym kroku pętli. '
+        Course_4_SCV_1_b: Łamigłówka ma jedną pętle, która tworzy wielokąt, jedną pętle, która powtarza wielokąt `boki` razy, następnie jeszcze jedną pętle, która powtarza to wszystko po dodaniu wartości 5 do `sides`.
+        Course_4_SCV_1_c: Użycie zmiennej dla `boki` oraz dla `długość` czyni kod czystszym, ponieważ możesz zapętlać ten sam kod wiele razy, zamiast tworzyć nowej kopi dla każdego zestawu liczb.
         Course_4_SCV_1_d: |-
           **Solution:**
           
@@ -2657,8 +2657,8 @@ pl:
       Course 4 SCV 2_authored_hint:
         Course_4_SCV_2_a: "The completed image is made up of 10 of these \"flowers\":  \n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)\n        \n...which are made up of 10 of these decagons:  \n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
         Course_4_SCV_2_b: 'This design uses nested loops (three deep). All loops run `sides` times. '
-        Course_4_SCV_2_c: The artist turns to the left when creating each decagon, but turns to the right in both of the other loops.
-        Course_4_SCV_2_d: To prevent all of your 10 petal "flowers" from getting drawn in the same place, make sure to jump forward by `length`/`sides` before you turn 360/`sides` degrees as part of your outermost loop.
+        Course_4_SCV_2_c: Artysta skręca w lewo kiedy tworzy każdy dziesięciobok, w obu pozostałych pętlach skręca w prawo.
+        Course_4_SCV_2_d: Aby zapobiec wyciągnięciu wszystkich 10 płatów "kwiatów" w tym samym miejscu. upewnij się, że przechodzisz dalej o `długość`/`boki` zanim obrócisz się o 360/`boki` stopni, w najbardziej zewnętrznej pętli.
         Course_4_SCV_2_e: |-
           **Solution:**
           
@@ -2832,7 +2832,7 @@ pl:
           </block>
           </xml>
       Course 4 SCV 3_authored_hint:
-        Course_4_SCV_3_a: 'Use your math block to add and subtract points to the `points` variable when sprites collide. '
+        Course_4_SCV_3_a: 'Użyj bloku matematycznego do dodawania i odejmowania punktów w zmiennej `punkty` kiedy postacie się zderzają. '
         Course_4_SCV_3_b: You can change the parameter for how far you move your sprite each time one of the arrow keys is pressed.
         Course_4_SCV_3_c: |-
           **Solution:**
@@ -2864,8 +2864,8 @@ pl:
           </block>
           </xml>
       Course 4 SCV 4_authored_hint:
-        Course_4_SCV_4_a: Three variables will help you out here.  One for units of nectar, one for units of honey, and one for how far the bee should move each iteration.
-        Course_4_SCV_4_b: 'It will be very helpful to use three loops inside of your main loop.  One for moving forward, one for collecting nectar and one for making honey. '
+        Course_4_SCV_4_a: Pomogą Ci w tym 3 zmienne. Jedna jako ilość nektaru, jedna dla ilości miodu, oraz jedna dla określenia, jak daleko powinna poruszać się pszczoła w każdej iteracji.
+        Course_4_SCV_4_b: 'Bardzo pomocne będzie użycie trzech pętli wewnątrz pętli głównej. Jedna dla poruszania się do przodu, jedna do zbierania ilości nektaru oraz jedna do robienia miodu. '
         Course_4_SCV_4_c: "Take a look at this option for movement:  \n\n![](https://images.code.org/78f8fb83da67c5b80126555a362b8b20-image-1469641782259.png)"
         Course_4_SCV_4_d: |-
           **Solution:**
@@ -3007,8 +3007,8 @@ pl:
           Take a look at this option for movement:
           
           ![](https://images.code.org/7f6f09c55cf9552a91fc1d33f44a7315-image-1469641639330.png)
-        Course_4_SCV_5_b: Each time through the loop, the flowers have two less nectar and the bee needs to make one more honey.
-        Course_4_SCV_5_c: Notice that at the beginning of the outside loop, the bee moves as many times as there is nectar in the next flower.
+        Course_4_SCV_5_b: Za każdym krokiem pętli, nektar w kwiatach spada o 2, oraz pszczoły muszą robić o jeden więcej miód.
+        Course_4_SCV_5_c: Zauważ, że na początku zewnętrznej pętli, pszczoła porusza się taką ilość razy ile jest nektaru w następnym kwiatku.
         Course_4_SCV_5_d: |-
           **Solution:**
           
@@ -3138,7 +3138,7 @@ pl:
           Take a look at what a single completed shape looks like
           
           ![](https://images.code.org/9e30d3a87186cefe730984feee195806-image-1469642178866.png)
-        Course_4_SCV_6_b: 'You will benefit from creating 8 variables: red1, green1, blue1, red2, green2, blue2, length, and sides.'
+        Course_4_SCV_6_b: 'Zyskasz korzyść z tworzenia 8 różnych zmiennych: czerwony1, zielony1, niebieski1, czerwony2, zielony2, niebieski2, długość oraz boki.'
         Course_4_SCV_6_c: Each of the shape's 5 sides is broken up into pieces of `length`/`sides` where the zig is teal (rgb = 0,175,200) and the zag is purple (rgb = 100, 50, 150).
         Course_4_SCV_6_d: 'To zig, turn left by `360`/`sides`.  To zag, turn right by `360`/`sides`. '
         Course_4_SCV_6_e: 'The rest of the program is very standard for making a full 360 degree rotation from a shape, except that we are overlapping the shapes by half, so we have to turn right by `180`/`sides`, which means that we need twice as many of them as usual (`sides`*`2` repetitions). '
@@ -3442,32 +3442,32 @@ pl:
           </block>
           </xml>
       CourseF_PlayLab_vars2_authored_hint:
-        Course_4_Play_Lab_Vars_2_a: Make sure to set the number for `dog_speed` to something larger than `cat_speed`.
+        Course_4_Play_Lab_Vars_2_a: Upewnij się, aby ustawić wartość `prędkość_psa` większą od `prędkość_kota`.
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
-          This is the first hint.
+          Pierwsza podpowiedź.
           
-          It has *some* **basic** `markup`
+          Ma *kilka* **podstawowy** `znacznik`
         second_hint: |-
           This is the second hint. It has an image.
           
           ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
-        last_hint: This is the third and final hint. It doesn't have anything special.
+        last_hint: To trzecia i ostatnia podpowiedź. Nie ma nic specjalnego.
       Farmer for TTS testing_authored_hint:
         first_hint: |-
-          This is the first hint.
+          Pierwsza podpowiedź.
           
-          It has *some* **basic** `markup`
+          Ma *kilka* **podstawowy** `znacznik`
         second_hint: |-
           This is the second hint. It has an image.
           
           ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
-        last_hint: This is the third and final hint. It doesn't have anything special.
+        last_hint: To trzecia i ostatnia podpowiedź. Nie ma nic specjalnego.
       Function intro Ryan_authored_hint:
-        Function_intro_Ryan_b: If you call the functions correctly, this is the path you will travel...
+        Function_intro_Ryan_b: Jeśli wywołasz funkcję poprawnie, to jest ścieżką którą będziesz się przemieszczać...
         Function_intro_Ryan_a: W swoim programie możesz wywołać jedną funkcję wielokrotnie!  Spróbuj wywołać ją dwukrotnie, aby rozwiązać tę łamigłówkę.
       Harvesting_authored_hint:
-        pointer_harvester_test: What kind of block can I use to check something and make a decision?
+        pointer_harvester_test: Jaki rodzaj bloku mogę użyć, aby coś sprawdzić i podjąć decyzję?
       Inspirational Artwork_authored_hint:
         brush_width: Ustawiamy szerokość pędzla do 1, a następnie kolor na niebieski, zanim zrobimy cokolwiek innego.
         double_loop: Spróbuj umieścić pętlę 'dla.... ' wewnątrz pętli 'powtórz'.
@@ -3595,17 +3595,17 @@ pl:
       MikeStarNested_authored_hint:
         hint1: Don't give up!
       NEW Course 4 Artist Functions 13_authored_hint:
-        NEW_Course_4_Artist_Functions_13_a: Try editing the `draw a line of squares` function so that you don't have to call it twice.
-        NEW_Course_4_Artist_Functions_13_c: What code would you need if you were going to try to make a star using regular lines instead of boxes?
+        NEW_Course_4_Artist_Functions_13_a: Zedytuj funkcję `draw a line of squares` aby nie wywoływać jej ponownie.
+        NEW_Course_4_Artist_Functions_13_c: Jakiego kody byś potrzebował jeśli miałbyś zrobić gwiazdę używając zwykłych linii zamiast paczek?
       NEW Course 4 Artist Functions 4_authored_hint:
-        NEW_Course_4_Artist_Functions_4_a: You will have to use a `turn right by 120 degrees` block after each square.
+        NEW_Course_4_Artist_Functions_4_a: Będziesz musiał użyć bloku `skręć w prawo o 120 stopni` po każdym kwadracie.
       NEW Course 4 Artist Functions 9_authored_hint:
-        NEW_Course_4_Artist_Functions_9_a: Try running the code before you add any blocks.   What makes the drawing look a little off?
+        NEW_Course_4_Artist_Functions_9_a: Spróbuj uruchomić kod zanim dodasz jakiś blok. Co sprawia, że rysunek wygląda na nieco inny?
         NEW_Course_4_Artist_Functions_9_b: If you can't quite put your finger on what's going wrong, try slowing down the artist's by moving the slider to the left.
       NEW Course 4 Artist Params 11_authored_hint:
-        NEW_Course_4_Artist_Params_11_a: There is more than one number that needs to be replaced by a variable inside the function.
+        NEW_Course_4_Artist_Params_11_a: Istnieje więcej niż jedna liczba, którą należałoby wymienić na zmienną wewnątrz funkcji.
       NEW Course 4 Artist Params 13_authored_hint:
-        NEW_Course_4_Artist_Params_13_a: 'You will need to divide the *perimeter* by the number of sides in order to keep the shapes the same size overall. '
+        NEW_Course_4_Artist_Params_13_a: 'Musisz podzielić *obwód* przez liczbę boków aby zachować kształty w takiej samej proporcji. '
       NEW Course 4 Artist Params 14_authored_hint:
         NEW_Course_4_Artist_Params_14_a: It's okay to run the program a few times to figure out how the function works with different parameters.
       NEW Course 4 Artist Params inspire_authored_hint:
@@ -3734,25 +3734,25 @@ pl:
           
           What do you have to do to the counter at each flower to equal the amount of nectar you need to collect?
       NEW Course 4 Bee For Loops 8_authored_hint:
-        NEW_Course_4_Bee_For_Loops_8_a: "If your loop is counting up, the increment is added to your counter variable each time through. \n\nWhat do you need to add to each number to get the number after it?"
+        NEW_Course_4_Bee_For_Loops_8_a: "Jeśli pętla jest w trakcie iteracji, za każdym razem do zmiennej licznika dodawany jest przyrost. \n\nCo musisz dodać do każdej wartości aby otrzymać kolejną wartość?"
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Spróbuj tak pokierować Agentem, aby wybudował kilka mostów. Dzięki temu Alex lub Steve będą mogli wyjść poza granice mapy.
       Overworld Avoid Monsters_authored_hint:
-        mc_8_a: There are a few paths you can take. Which is the shortest?
-        mc_8_b: Use `repeat` loops to simplify your code.
+        mc_8_a: Do wyboru jest kilka ścieżek. Która jest najkrótsza?
+        mc_8_b: Wykorzystaj pętlę `repeat` aby uprościć swój kod.
         mc_8_c: Your goal is to get into the doorway of the house at the top of the screen.
       Overworld Chop Tree_authored_hint:
         mc_2_a: |
-          You need to `move forward` twice to stand in front of the tree.
-        mc_2_b: The `destroy block` command cuts down the tree in front of you.
+          Aby stanąć przed drzewem musisz podwójnie `move forward`.
+        mc_2_b: Komenda `destroy block` ścina drzewo przed Tobą.
       Overworld Chop Trees_authored_hint:
         mc_4_a: |
           You can chop down trees in any order. What path takes the smallest number of blocks?
-        mc_4_b: The `destroy block` command cuts down the tree in front of you.
+        mc_4_b: Komenda `destroy block` ścina drzewo przed Tobą.
       Overworld House Frame Chosen_authored_hint:
         mc_6_a: Click the arrow on the `place` block to choose what you want to place.
-        mc_6_b: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
-        mc_6_c: You can put more than one block inside of a `repeat` loop.
+        mc_6_b: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
+        mc_6_c: Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok.
       Overworld Move to Sheep_authored_hint:
         mc_1_a: |
           The `move forward` block is at the top of the toolbox.
@@ -3760,54 +3760,54 @@ pl:
           Make sure both `move forward` blocks are snapped to the `when run` block.
       Overworld Place Wall_authored_hint:
         mc_5_a: Use the `place` block first, and then the `move` block.
-        mc_5_b: Make sure both blocks are inside of the `repeat` loop to run the code more than once.
-        mc_5_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
+        mc_5_b: Upewnij się, że oba bloki są wewnątrz pętli `repeat` aby wywołać kod więcej niż raz.
+        mc_5_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
       Overworld Plant Crops_authored_hint:
         mc_7_a: Use the `plant crop` block to plant a crop in the space where you are standing.
         mc_7_b: Both stripes of dark brown land by the water need to be filled with crops.
-        mc_7_c: You can put more than one block inside of a `repeat` loop.
+        mc_7_c: Wewnątrz pętli `repeat` możesz umieścić więcej niż jeden blok.
       Overworld Powered Minecart_authored_hint:
         mc_13_a: Use `place rail` to lay rail on the square you are standing in.
-        mc_13_b: Use `repeat` loops to make your code shorter.
+        mc_13_b: Aby skrócić swój kod użyj pętli `repeat`.
       Overworld Shear Sheep_authored_hint:
         mc_3_a: |
           The `shear` block gets the sheep in front of you. Are you facing the sheep?
         mc_3_b: |
-          If you need to change the way you are facing, use a `turn` block.
+          Jeśli chcesz zmienić kierunek w którym stoisz, użyj bloku `turn`.
         mc_3_c: |
-          Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
+          Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
       Pattern Bee 1_authored_hint:
         conditional_pointer: |-
           Start by thinking about this part: what's different each step of the way? What kind of block can you use to make a *decision* about whether you're at a flower or honeycomb?
           
           ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
-        turn_at_honeycomb_pointer: Other than making honey, do you see anything different that you have to do at each honeycomb?
+        turn_at_honeycomb_pointer: Poza wytwarzaniem miodu, czy zauważasz cokolwiek innego, co musisz zrobić z każdym plastrem miodu?
       Planning Farmer_authored_hint:
         conditional_pointer: |-
           Start by thinking about this part: what's different each step of the way? What kind of block can you use to make a *decision* about whether you're at a flower or honeycomb?
           
           ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
-        turn_at_honeycomb_pointer: Other than making honey, do you see anything different that you have to do at each honeycomb?
+        turn_at_honeycomb_pointer: Poza wytwarzaniem miodu, czy zauważasz cokolwiek innego, co musisz zrobić z każdym plastrem miodu?
       Quantum Bee - Ryan_authored_hint:
         test_hint: This is a test hint.
       Underground Avoiding Lava_authored_hint:
         mc_11_a: All of the code is in place to check for lava and deal with it. All you need to do is add a block to move.
-        mc_11_b: Should your `move forward` command go inside of the `if` statement or after?
+        mc_11_b: Czy twoja komenda `move forward` powinna się znajdować wewnątrz instrukcji `if` czy po niej?
       Underground If Statements_authored_hint:
-        mc_12_a: The spaces with red speckles are where you will find Redstone.
-        mc_12_b: Can you use a `repeat` loop to make your code shorter?
-        mc_12_c: 'Use an `if` statement to check spaces for lava, then place cobblestones. '
+        mc_12_a: Miejsca z czerwonymi plamkami, to miejsca gdzie znajdziesz Redstone.
+        mc_12_b: Czy możesz wykorzystać pętlę `powtórz` aby skrócić swój kod?
+        mc_12_c: 'Wykorzystaj instrukcję `if` aby sprawdzić przestrzeń dla lawy, następnie umieść kostkę brukową. '
       Underground Iron_authored_hint:
         mc_10_a: The iron blocks are the speckled spaces behind the torch! How are you going to get over there?
-        mc_10_b: When you are standing at the edge of the lava, use `place cobblestone ahead` to make a safe path. Then, you can walk over it!
-        mc_10_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
+        mc_10_b: Kiedy stoisz na krawędzi lawy, użyj `umieść kostkę brukową` aby stworzyć bezpieczną ścieżkę. Potem, będziesz mógł po tym przejść!
+        mc_10_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
       Underground Mining Coal_authored_hint:
-        mc_9_a: Are you facing the right way? The `destroy block` mines the block in front of you.
-        mc_9_b: The black specks in the wall are coal! Use `destroy block` on these to mine the coal.
-        mc_9_c: Use `place torch` to put a torch in the space where you are standing.
+        mc_9_a: Stoisz na właściwej drodze? `zniszcz blok`kopie blok przed Tobą.
+        mc_9_b: Czarne plami w ścianie to węgiel! Aby je wykopać użyj `destroy block`.
+        mc_9_c: Użyj `place torch` aby umieścić pochodnię, w miejscu w którym stoisz.
       aE1_authored_hint: [ ]
       aE2_authored_hint:
-        aE2_a: Notice that since the napkins are 20 pixels long, you'll need to jump 20 pixels before you start your next loop.
+        aE2_a: Zauważ, że skoro serwetki mają 20 pikseli długości, musisz skoczyć o 20 pikseli zanim zaczniesz kolejną pętlę.
       aE3_authored_hint:
         aE3_a: After you run your **nested loop** from the last stage, you need to jump back to the start of the line.
         aE3_b: "Don't forget to move the artist down before you start a new row of shapes! \n\nTo move the artist down and get him facing the right way again, make sure to:\n- Turn 90 degrees (to face down)\n- Jump 20 pixels (to get to new row)\n- Turn back 90 degrees (to face right again)"
@@ -3836,17 +3836,17 @@ pl:
           **180 ÷ 3 = ?**
       aE7_authored_hint:
         aE7_a: Draw the bottom half of a circle and then the top half of a circle to make one segment.
-        aE7_b: You will need 4 segments to complete this puzzle.
+        aE7_b: Potrzebujesz 4 części, aby ukończyć zagadkę.
       aE8_authored_hint:
         aE8_a: "To make a square from your line, you will need to: \n-  draw the line \n-  use the curvy corner\n\nRepeat these steps 4 times."
       allHallows2017_authored_hint:
-        allHallows2017_a: Careful!  GT might follow behind you on his bike and erase your line!
-        allHallows2017_g: 'Sarah says: "Are you cold? Come sit in the corner... It''s 90 degrees!"'
-        allHallows2017_c: 'Jordyn says: "You crayon''t stop now! Keep going!"'
+        allHallows2017_a: Ostrożnie! GT może śledzić Cię na swoim rowerze i wymazywać Twoją linię!
+        allHallows2017_g: 'Sara mówi: "Jest Ci zimno? Usiądź w kącie... Tam jest 90 stopni!"'
+        allHallows2017_c: 'Jordyn mówi: "Nie możesz teraz przestać! Tak trzymaj!"'
         allHallows2017_d: 'Josh says: "You will need to draw on your coding skills to complete this puzzle!"'
         allHallows2017_e: 'Dani says: "I''m not good at puns. Try using a repeat block!"'
         allHallows2017_b: 'Baker says: "The Chicago crayon only works on the *green line*."'
-        allHallows2017_f: 'Amy says: "You can do it! Just think outside the box"'
+        allHallows2017_f: 'Amy mówi: "Możesz to zrobić! Musisz myśleć nieszablonowo"'
       artistDebugVideo1_authored_hint:
         courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
       artistFunctionsVideo1_authored_hint: [ ]
@@ -3855,23 +3855,23 @@ pl:
       artistLoopsK2gradek_artist_loops3_authored_hint:
         artistLoopsK2_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
       artistLoopsK3_authored_hint:
-        artistLoopsK3_a: Try using what you've learned about repeat blocks to complete this puzzle!
+        artistLoopsK3_a: Spróbuj wykorzystać tego, czego nauczyłeś się o blokach powtarzających aby ukończyć tą zagadkę!
       artistLoopsK4_authored_hint:
-        artistLoopsK4_a: Stuck? Try running the code to see which block is incorrect.
+        artistLoopsK4_a: Utknąłeś? Spróbuj uruchomić kod i zobaczyć, który blok jest niepoprawny.
       artistLoopsK5_authored_hint:
-        artistLoopsK5_a: All 4 of the starting blocks should go inside of your repeat block to solve this puzzle.
+        artistLoopsK5_a: Wszystkie 4 z bloków uruchamiających powinny znajdować się w środku bloku powtarzającego aby rozwiązać tą zagadkę.
       artistLoopsK6_authored_hint:
-        artistLoopsK6_a: Try running the code to see where there is a bug.
+        artistLoopsK6_a: Spróbuj uruchomić kod, aby zobaczyć gdzie jest błąd.
       artistLoopsK7_authored_hint:
-        artistLoopsK7_a: All of the blocks you need for this puzzle are already in your workspace!
+        artistLoopsK7_a: Wszystkie bloki, które potrzebujesz do rozwiązania tej zagadki, znajdują się już w Twojej przestrzeni roboczej!
       artistLoopsK8_authored_hint:
-        artistLoopsK8_a: Try running the code to see where there is a bug.
+        artistLoopsK8_a: Spróbuj uruchomić kod, aby zobaczyć gdzie jest błąd.
       artistLoopsK9_authored_hint:
         artistLoopsK9_a: This challenge uses FOUR loops, one right after another!
       artistLoopsKA_authored_hint:
-        artistLoopsKA_a: Use the jump block to move forward without drawing a line.
+        artistLoopsKA_a: Aby pójść dalej i nie rysować linii użyj bloku skoku.
       artistLoopsKB_authored_hint:
-        artistLoopsKB_a: There should be 3 blocks inside of your loop to solve this puzzle.
+        artistLoopsKB_a: W pętli powinny znajdować się 3 bloki aby rozwiązać tą łamigłówkę.
       artistLoopsKFP_authored_hint: [ ]
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |+
@@ -3889,15 +3889,15 @@ pl:
         harvey_tictactoe: You can use `jump` blocks to move to other spaces.
       course1_artist_loops_challenge3_authored_hint:
         courseA_artist_loops_challenge2_a: 'Blocks like this: <xml>  <block type="simple_move_up_left"/></xml> will let your artist move at a slant!'
-        courseA_artist_loops_challenge2_b: When you finish one bird house, `jump` to the next!
-        courseA_artist_loops_challenge2_c: You will need a LOT of blocks inside the loop for this challenge.
+        courseA_artist_loops_challenge2_b: Kiedy skończysz jeden dom dla ptaków, `jump` do następnego!
+        courseA_artist_loops_challenge2_c: Będziesz potrzebował wielu bloków wewnątrz tej pętli dla tego wyzwania.
       course1_artist_loops_challenge4_authored_hint:
         courseB_artist_loops_challenge1_a: 'Blocks like this: <xml>  <block type="simple_move_up_right"/></xml> will let your artist move at a slant!'
         courseB_artist_loops_challenge1_b: When you finish one of the dice, `jump` to the next!
-        courseB_artist_loops_challenge1_c: 'You will need to `move` or `jump` over some of the same lines twice. '
+        courseB_artist_loops_challenge1_c: 'Będziesz musiał `move` lub `jump` dwukrotnie nad niektórymi liniami. '
       course1_collector_loops_challenge1_authored_hint:
-        courseA_collector_loops_challenge1_a: Try changing the numbers in each loop if something goes wrong.
-        courseA_collector_loops_challenge1_b: You don't need to use a loop if you are only doing something one time.
+        courseA_collector_loops_challenge1_a: Próbuj zmieniać wartości w każdej pętli, jeśli coś będzie szło źle.
+        courseA_collector_loops_challenge1_b: Nie musisz używać pętli jeśli robisz coś tylko jeden raz.
         courseA_collector_loops_challenge1_c: There are 6 gems on the right side of the cave, but you only need to move and collect 5 times. Do you know why?
       course1_collector_loops_challenge2_authored_hint:
         courseA_collector_loops_challenge2_b: |+
@@ -3979,7 +3979,7 @@ pl:
           </block>
           </xml>
       course1_collector_loops_challenge4_authored_hint:
-        courseB_collector_loops_challenge2_a: If something goes wrong, don't be afraid to start over. Don't give up!
+        courseB_collector_loops_challenge2_a: Jeśli coś pójdzie źle, nie bój się zacząć od nowa. Nie poddawaj się!
         courseB_collector_loops_challenge2_b: |-
           If you repeat this pattern, Laurel won't hit the wall at the bottom of the cave!
           
@@ -4000,7 +4000,7 @@ pl:
           </block>
           </next>
           </block></xml>
-        courseB_collector_loops_challenge2_c: Try using a `repeat` block to collect the final pile of treasure!
+        courseB_collector_loops_challenge2_c: Spróbuj użyć bloku `repeat` aby zebrać ostateczny skarb!
         courseB_collector_loops_challenge2_d: |-
           Try this solution:
           <xml>
@@ -4042,12 +4042,12 @@ pl:
       course1_maze_debugging_challenge1_authored_hint:
         courseA_maze_seq_challenge1_a: Some paths will lead to TNT, if you move too far.
       course1_maze_debugging_challenge2_authored_hint:
-        courseB_maze_seq_challenge2_a: You do not need to add or remove blocks to solve this puzzle.
-        courseB_maze_seq_challenge2_b: Rearrange the blocks and take the middle path.
+        courseB_maze_seq_challenge2_a: Nie musisz dodawać ani usuwać bloków, aby rozwiązać tą zagadkę.
+        courseB_maze_seq_challenge2_b: Zmień bloki i wybierz środkową ścieżkę.
       course1_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember not to count the space where you start!
       course1_maze_seq_challenge2_authored_hint:
-        courseB_maze_seq_challenge1_a: The shortest path might not work this time.
+        courseB_maze_seq_challenge1_a: Najkrótsza ścieżka może tym razem nie działać.
         courseB_maze_seq_challenge1_b: Try moving west to start.
       course1_playlab_events_challenge1_authored_hint:
         courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you click Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
@@ -4083,27 +4083,27 @@ pl:
           </next>
           </block></xml>
       course2_artist_nestedLoops_challenge1_authored_hint:
-        courseD_artist_nestedLoops_challenge1_a: Start by making a nested loop to create four octagons. Turn 45 degrees to make the octagon. Jump, then turn 90 degrees after each one.
-        courseD_artist_nestedLoops_challenge1_b: Add code to draw a triangle inside of your nested loop. Use 120 degree turns for your triangle.
+        courseD_artist_nestedLoops_challenge1_a: Zacznij od zrobienia zagnieżdżonej pętli aby stworzyć cztery ośmiokąty. Obróć się o 45 stopni aby zrobić ośmiokąt. Skocz, później po każdym z nich obróć się o 90 stopni.
+        courseD_artist_nestedLoops_challenge1_b: Dodaj kod aby narysować trójkąt wewnątrz zagnieżdżonej pętli. Dla trójkąta użyj 120 stopniowych obrotów.
         courseD_artist_nestedLoops_challenge1_c: |-
-          Use a nested loop:
-          - Repeat 8 times
-          - draw an octagon
-          - draw a triangle
-          - jump forward 50 pixels
-          - turn right by 90 degrees
+          Użyj zagnieżdżonej pętli:
+          - Powtórz 8 razy
+          - narysuj ośmiokąt
+          - narysuj trójkąt
+          - przejdź dalej o 50 pikseli
+          - obróć się w prawo o 90 stopni
       course2_artist_nestedLoops_challenge2_authored_hint:
         courseD_artist_nestedLoops_challenge2_a: To draw a regular octagon, the artist needs to turn 45 degrees 8 times.
         courseD_artist_nestedLoops_challenge2_b: To draw a square, the artist needs to turn 90 degrees 4 times.
       course2_artist_prog_challenge1_authored_hint:
-        courseC_artist_prog_challenge1_a: 'The rectangle is 200 pixels wide and 100 pixels tall. '
+        courseC_artist_prog_challenge1_a: 'Prostokąt ma 200 pikseli szerokości i 100 pikseli wysokości. '
       course2_artist_prog_challenge2_authored_hint:
         courseC_artist_prog_challenge2_a: "You can put commands inside `repeat` block to loop them over and over. Try it!\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
       course2_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: |-
-          Can you find a path that reaches every flower and honeycomb without hitting any trees? The best path is a spiral.
+          Czy możesz znaleźć ścieżkę aby dotrzeć do każdego kwiatka i plastra miodu bez uderzania w żadne drzewo? Najlepszą ścieżką jest spirala.
           
-          **You can solve this without ever turning left.**
+          **Możesz to rozwiązać nawet bez skręcania w lewo.**
         courseD_bee_conditionals_challenge1_b: In this puzzle, each space could have a flower, a honey comb, or nothing.  That means you can repeat your `if/else` conditional at each square.
       course2_bee_conditionals_challenge2_authored_hint:
         courseD_bee_conditionals_challenge1_b: |-
@@ -4120,12 +4120,12 @@ pl:
         courseC_maze_loops_challenge2_a: The original code would work great - if there was only one piece of treasure in each pile!
         courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect` blocks!
       course2_collector_prog_challenge1_authored_hint:
-        courseC_collector_prog_challenge1_a: You can use the `collect` command more often to collect the extra treasure.
+        courseC_collector_prog_challenge1_a: Używaj komendy `collect` częściej aby zebrać dodatkowy skarb.
       course2_collector_prog_challenge2_authored_hint:
-        courseC_collector_prog_challenge1_a: You can use the `collect` command more often to collect the extra treasure.
+        courseC_collector_prog_challenge1_a: Używaj komendy `collect` częściej aby zebrać dodatkowy skarb.
       course2_harvester_loops_challenge1_authored_hint:
-        courseC_harvester_loops_challenge1_a: Don't even think about try about trying this without loops!
-        courseC_harvester_loops_challenge1_b: You can repeat `move forward` and `pick corn` as many times as you need to, then `turn right` at each corner.
+        courseC_harvester_loops_challenge1_a: Nawet nie myśl aby spróbować to zrobić bez użycia pętel!
+        courseC_harvester_loops_challenge1_b: Możesz powtarzać `move forward` i `pick corn` tak wiele razy jak tylko zechcesz, następnie `turn right` w każdym narożniku.
         courseC_harvester_loops_challenge1_c: |-
           The best way to collect the first four corn uses a `repeat` block inside of another `repeat` block. You can use this pattern for the rest of the puzzle too!
           
@@ -4174,11 +4174,11 @@ pl:
       course2_maze_programming_challenge1_authored_hint: [ ]
       course2_maze_programming_challenge2_authored_hint:
         courseC_maze_programming_challenge2_a: "*If you send me backwards, be extra careful that I turn the correct way!*"
-        courseC_maze_programming_challenge2_b: The shortest solution use only 5 blocks, but it uses the `repeat` block!
+        courseC_maze_programming_challenge2_b: Najkrótszym rozwiązaniem jest użycie 5 bloków, ale wykorzystuje blok `repeat`!
       course2_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember not to count the space where you start!
       course2_maze_seq_challenge2_authored_hint:
-        courseB_maze_seq_challenge1_a: The shortest path might not work this time.
+        courseB_maze_seq_challenge1_a: Najkrótsza ścieżka może tym razem nie działać.
         courseB_maze_seq_challenge1_b: Try moving west to start.
       course3_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: 'Połowa sześciokąta ma **długość 30** i wymaga obrotu w prawo o **60 stopni**.  '
@@ -4372,7 +4372,7 @@ pl:
           </block>
           </xml>
       course3_farmer_condLoops_challenge1_authored_hint:
-        courseD_farmer_condLoops_challenge1_a: The `STEP` button could be very helpful in this challenge.
+        courseD_farmer_condLoops_challenge1_a: Przycisk `STEP` może być bardzo pomocny w tym wyzwaniu.
         courseD_farmer_condLoops_challenge1_b: Normally you would just `pick pumpkin` if you are at a pumpkin. What else do you need to do if you're at a pumpkin?
       course3_farmer_condLoops_challenge2_authored_hint:
         courseD_farmer_condLoops_challenge2_a: The amount of each vegetable in each space varies. Use `while` loops for these.
@@ -4382,10 +4382,10 @@ pl:
         courseC_maze_debugging_challenge1_b: Scrat's path is the shape of a rectangle! He needs to turn the same way each time!
         courseC_maze_debugging_challenge1_c: If you are getting stuck, you can always start over, or remove all the code and find your own way!
       course3_maze_debugging_challenge2_authored_hint:
-        courseC_maze_debugging_challenge2_a: One way to solve this is to add more steps forward in between the turns.
-        courseC_maze_debugging_challenge2_b: If you are getting stuck, you can always start over or remove all the code and find your own way!
+        courseC_maze_debugging_challenge2_a: Jednym ze sposobów rozwiązania tego problemu jest dodanie więcej kroków naprzód pomiędzy skrętami.
+        courseC_maze_debugging_challenge2_b: Jeśli utkniesz, zawsze możesz zacząć od nowa lub usunąć cały kod i znaleźć własną drogę!
         courseC_maze_debugging_challenge2_c: |-
-          There are two different paths you can follow just using `move forward`, and only four turns. If you find a way to use the `repeat` block, there may be even more!
+          Są dwie różne ścieżki, które możesz śledzić używając `move forward`, i tylko 4 zakręty. Jeśli znajdziesz sposób, aby wykorzystać blok `repeat`, może być nawet więcej!
           
           ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
       course3_maze_until_challenge1_authored_hint: [ ]
@@ -4610,9 +4610,9 @@ pl:
           </block>
           </xml>
       course4_artist_variables_challenge2_authored_hint:
-        courseF_artist_variables_challenge2_a: 'Variables are helpful because you can add to them each time through a loop. '
-        courseF_artist_variables_challenge2_b: This puzzle has one loop that creates the polygon, one loop that repeats the polygon `sides` times, then another loop that does it all again after adding 5 to `sides`.
-        courseF_artist_variables_challenge2_c: Using a variable for `sides` and one for `length` makes the code cleaner because you can loop the same code multiple times, instead of creating a new copy for each set of numbers.
+        courseF_artist_variables_challenge2_a: 'Zmienne są pomocne, ponieważ można do nich dodawać w każdym kroku pętli. '
+        courseF_artist_variables_challenge2_b: Łamigłówka ma jedną pętle, która tworzy wielokąt, jedną pętle, która powtarza wielokąt `boki` razy, następnie jeszcze jedną pętle, która powtarza to wszystko po dodaniu wartości 5 do `sides`.
+        courseF_artist_variables_challenge2_c: Użycie zmiennej dla `boki` oraz dla `długość` czyni kod czystszym, ponieważ możesz zapętlać ten sam kod wiele razy, zamiast tworzyć nowej kopi dla każdego zestawu liczb.
         courseF_artist_variables_challenge2_d: |-
           **Solution:**
           
@@ -4703,9 +4703,9 @@ pl:
           </next>
           </block></xml>
         courseF_bee_fwp_challenge1_b: |-
-          Look at how much corn is available to harvest in each space. Do you see the counter pattern? The `length` parameter should be used to set the maximum value in the `for loop`.
+          Zobacz ile gotowej do żniw kukurydzy w każdym z miejsc. Czy widzisz wzór liczenia? Parametr `Length` powinien być wykorzystany do ustawienia maksymalnej wartości w `for loop`.
           
-          Don't forget to have the farmer move back to the main path after harvesting!
+          Nie zapomnij aby po żniwach rolnik wrócił na główną ścieżkę!
         courseF_bee_fwp_challenge1_c: |-
           Place a `for loop` inside a function and set it to count from `1` to `length` by `1`.
           Inside this loop, you should move forward and pick all of the corn.
@@ -5096,17 +5096,17 @@ pl:
         courseA_artist_loops5_c: "Since you can only use one <xml><block type=\"simple_move_right\"/></xml> block, try putting it inside of the \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nloop."
       courseA_artist_loops6_authored_hint:
         courseA_artist_loops6_a: Can't figure out how to make the hill?  Try playing with the blocks a bit to see what each one draws.
-        courseA_artist_loops6_b: You will need 2 blocks in 2 directions to solve this puzzle.
+        courseA_artist_loops6_b: Będziesz potrzebował 2 bloków w 2 kierunkach aby rozwiązać tą zagadkę.
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
-        courseA_artist_loops7_b: Write the code for one wave first, then repeat that to draw the other two.
+        courseA_artist_loops7_b: Napisz kod tylko dla pierwszej fali, potem to powtórz aby narysować pozostałe dwie.
         courseA_artist_loops7_c: |-
           Remember you can put more than one block in a <xml><block type="controls_repeat">
           <title name="TIMES">???</title>
           </block></xml> loop.
       courseA_artist_loops7_forVideo_authored_hint:
         courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
-        courseA_artist_loops7_b: Write the code for one wave first, then repeat that to draw the other two.
+        courseA_artist_loops7_b: Napisz kod tylko dla pierwszej fali, potem to powtórz aby narysować pozostałe dwie.
         courseA_artist_loops7_c: |-
           Remember you can put more than one block in a <xml><block type="controls_repeat">
           <title name="TIMES">???</title>
@@ -5118,16 +5118,16 @@ pl:
       courseA_artist_loops9_authored_hint:
         courseA_artist_loops9_a: Add another block to the code you are given to draw the rest of the stairs.
         courseA_artist_loops9_b: "The block you add should go inside of the \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> loop."
-        courseA_artist_loops9_c: If you can't figure out where to put the loop, try writing your code step-by-step and look for patterns.
+        courseA_artist_loops9_c: Jeśli nie wiesz gdzie umieścić pętlę, spróbuj pisać swój kod krok po kroku oraz szukać wzorców.
       courseA_artist_loops_challenge1_authored_hint: [ ]
       courseA_artist_loops_challenge2_authored_hint:
         courseA_artist_loops_challenge2_a: Blocks like this <xml>  <block type="simple_move_up_left"/></xml> will let your artist move at a slant!
-        courseA_artist_loops_challenge2_b: When you finish one bird house, `jump` to the next!
-        courseA_artist_loops_challenge2_c: You will need a LOT of blocks inside the loop for this challenge.
+        courseA_artist_loops_challenge2_b: Kiedy skończysz jeden dom dla ptaków, `jump` do następnego!
+        courseA_artist_loops_challenge2_c: Będziesz potrzebował wielu bloków wewnątrz tej pętli dla tego wyzwania.
       courseA_artist_loops_challenge2a_authored_hint:
         courseA_artist_loops_challenge2_a: Blocks like this <xml>  <block type="simple_move_up_left"/></xml> will let your artist move at a slant!
-        courseA_artist_loops_challenge2_b: When you finish one tent, `jump` up twice to get to the next!
-        courseA_artist_loops_challenge2_c: All of your blocks will need to be inside of a loop to finish this puzzle.
+        courseA_artist_loops_challenge2_b: Jak skończysz jeden namiot, `jump` podwójnie aby przejść do następnego!
+        courseA_artist_loops_challenge2_c: Wszystkie Twoje bloki muszą być wewnątrz pętli aby ukończyć tą zagadkę.
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: You can use `jump` blocks to move to other spaces.
       courseA_collector_loops1_authored_hint:
@@ -5139,7 +5139,7 @@ pl:
       courseA_collector_loops11_authored_hint: [ ]
       courseA_collector_loops11_predict2_authored_hint: [ ]
       courseA_collector_loops2_authored_hint:
-        courseA_collector_loops2_a: You'll have to move before you can collect any treasure.
+        courseA_collector_loops2_a: Będziesz musiał się ruszyć zanim zbierzesz jakiś skarb.
         courseA_collector_loops2_b: |-
           After you have moved to a square with treasure, use this block to pick it up.
           <xml>  <block type="collector_collect"/></xml>
@@ -5151,24 +5151,24 @@ pl:
         courseA_collector_loops4_a: To change how far Laurel goes, change the number of times that the loop runs.
         courseA_collector_loops4_b: Don't forget that Laurel needs to walk down and collect the treasure after she finishes the <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loop!
       courseA_collector_loops5_authored_hint:
-        courseA_collector_loops5_a: If you can't figure out the answer right away, try using a piece of paper to figure out what arrows you will need and look for a pattern.
-        courseA_collector_loops5_b: Try splitting the problem into 2 parts, moving sideways and then down.
+        courseA_collector_loops5_a: Jeśli nie możesz zgadnąć odpowiedzi od razu, spróbuj użyć kartki papieru aby rozwiązać jakich strzałek będziesz potrzebował i poszukaj wzorca.
+        courseA_collector_loops5_b: Spróbuj rozdzielić problem na 2 części, poruszaj się bokiem i potem na dół.
         courseA_collector_loops5_c: You'll want to start with a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loop that moves Laurel west and collects treasure.
       courseA_collector_loops6_authored_hint:
-        courseA_collector_loops6_a: Can't figure out what's wrong? Try running the code a couple of times to see what happens.
+        courseA_collector_loops6_a: Nie możesz dowiedzieć się do jest źle? Spróbuj uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
         courseA_collector_loops6_b: The shortest solution has 2 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loops, one after the other.
       courseA_collector_loops7_authored_hint:
-        courseA_collector_loops7_a: If you can't figure out what comes next, try running the code to see where Laurel ends up.
+        courseA_collector_loops7_a: Jeśli nie wiesz co będzie dalej, uruchom kod aby zobaczyć gdzie Laurel skończy.
       courseA_collector_loops8_authored_hint:
         courseA_collector_loops8_a: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and looking for a pattern.
-        courseA_collector_loops8_b: Try breaking this puzzle into 3 separate problems, and writing loops for each.
-        courseA_collector_loops8_c: Remember you can write one piece of the code at a time, then press "Run" to figure out where you need to go from there.
+        courseA_collector_loops8_b: Spróbuj rozbić tą zagadkę na 3 oddzielne części, i napisać pętle dla każdej z nich.
+        courseA_collector_loops8_c: Pamiętaj, że możesz napisać jeden fragment kodu, nacisnąć "Idź" aby dowiedzieć się gdzie musisz iść.
       courseA_collector_loops9_authored_hint:
         courseA_collector_loops9_a: 'If you can''t spot the best places to use loops, try coding it out step-by-step and look for a pattern. '
         courseA_collector_loops9_b: Try putting 2 of your <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loops inside of another loop to make your code shorter!
       courseA_collector_loops_challenge1_authored_hint:
-        courseA_collector_loops_challenge1_a: Try changing the numbers in each loop if something seems wrong.
-        courseA_collector_loops_challenge1_b: You don't need to use a loop if you are only doing something one time.
+        courseA_collector_loops_challenge1_a: Spróbuj zmienić wartości w każdej pętli, jeśli coś wydaje się źle.
+        courseA_collector_loops_challenge1_b: Nie musisz używać pętli jeśli robisz coś tylko jeden raz.
         courseA_collector_loops_challenge1_c: There are 6 gems on the right side of the cave when you start, but you only need to move get treasure 5 times moving South. Do you know why?
         courseA_collector_loops_challenge1_d: |-
           The starting program doesn't collect the last 2 gems. Try adding this code at the very end:
@@ -5186,7 +5186,7 @@ pl:
           </next>
           </block></xml>
       courseA_collector_loops_challenge2_authored_hint:
-        courseA_collector_loops_challenge2_b: You only need to use 1 block to solve this.
+        courseA_collector_loops_challenge2_b: Potrzebujesz tylko 1 bloku, aby to rozwiązać.
         courseA_collector_loops_challenge2_a: You can move back over the path a second time before moving south.
       courseA_collector_loops_challenge2kp_authored_hint:
         courseA_collector_loops_challenge2kp_b: Try this path to get you to a solution.
@@ -5198,7 +5198,7 @@ pl:
         courseA_collector_preLoops4_a: |+
           To grab the treasure, snap two ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png) blocks and one ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) block to the bottom of the program and click "Run"!
       courseA_collector_preLoops5_authored_hint:
-        courseA_collector_preLoops5_a: You'll need to go two different directions to get even one gem!
+        courseA_collector_preLoops5_a: Będziesz musiał iść w dwóch różnych kierunkach aby dostać klejnot!
       courseA_collector_preLoops6_authored_hint:
         courseA_collector_preLoops6_a: You will need to use two ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) blocks to solve this puzzle.
       courseA_collector_preLoops7_authored_hint:
@@ -5222,29 +5222,29 @@ pl:
       courseA_maze_seq12_predict2_authored_hint: [ ]
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: If the path you need is unclear, use your finger to trace your way from the bird to the pig.
-        courseA_maze_seq13_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen.
+        courseA_maze_seq13_b: Nie bój się popełniać błędów! Spróbuj dodawać bloki i uruchom kod, aby zobaczyć co się stanie.
         courseA_maze_seq13_c: |-
           These <xml><block type="maze_moveNorth"/></xml>
           <xml><block type="maze_moveEast"/></xml> blocks will help you move closer to the pig.
       courseA_maze_seq2_authored_hint:
         courseA_maze_seq2_a: This program is missing 1 block. Can you figure out which one?
-        courseA_maze_seq2_b: Try running the code first to see where the bird ends up. Where do you need to go from there?
+        courseA_maze_seq2_b: Spróbuj najpierw uruchomić kod, aby zobaczyć gdzie ptak skończy. Dokąd musisz stąd iść?
       courseA_maze_seq2_predict1_authored_hint: [ ]
       courseA_maze_seq3_authored_hint:
         courseA_maze_seq3_a: 1 of the blocks is moving the bird in the wrong direction. Can you figure out which one and replace it with the correct block?
-        courseA_maze_seq3_b: Try using the step button to find where the program goes wrong. Is it the 1st step? The 2nd?
+        courseA_maze_seq3_b: Próbuj wykorzystać przycisk krok, aby dowiedzieć się gdzie program jest zły. Czy to jest 1 krok, czy drugi?
         courseA_maze_seq3_c: This <xml><block type="maze_moveNorth"/></xml> block doesn't seem to be moving the bird in the right direction. Can you replace it with a different block?
       courseA_maze_seq4_authored_hint:
         courseA_maze_seq4_a: If you are having trouble, try to figure out what the correct path is and then remove the block that doesn't fit.
-        courseA_maze_seq4_b: Try running the code as it is. Does something go wrong? Which block can you remove? How can you fix it?
+        courseA_maze_seq4_b: Spróbuj uruchomić kod w takim stanie jaki jest. Czy coś poszło nie tak? Który blok możesz usunąć? Jak możesz to naprawić?
       courseA_maze_seq4a_authored_hint:
-        courseA_maze_seq4_a: If you are having trouble, try using your finger to figure out the correct path by pointing it out on the map. What moves did your finger make?
+        courseA_maze_seq4_a: Jeśli będziesz miał problemy, spróbuj palcem wyznaczyć poprawną ścieżkę, przez wskazywanie punktów na mapie. Jakie ruchy wykonał Twój palec?
       courseA_maze_seq5_authored_hint:
         courseA_maze_seq5_a: Try writing down the steps on paper to find a solution!
-        courseA_maze_seq5_b: You will need 2 blocks, pointing in 2 directions.
+        courseA_maze_seq5_b: Będziesz potrzebował 2 bloków, wskazujących w 2 kierunkach.
       courseA_maze_seq6_authored_hint:
         courseA_maze_seq6_a: Your final code should have 3 movement blocks.
-        courseA_maze_seq6_b: If you get stuck, try solving the puzzle in 2 parts, one part before the corner and one part after the corner.
+        courseA_maze_seq6_b: Jeśli utkniesz, spróbuj rozwiązać zagadnę w 2 etapach, pierwsza część przed zakrętem, druga po zakręcie.
       courseA_maze_seq7_authored_hint:
         courseA_maze_seq7_a: There is 1 block that you need to add to move the bird to the pig.
         courseA_maze_seq7_b: If you can't figure out what to do, try drawing the puzzle on paper and use your finger to figure out which way to move.
@@ -5252,8 +5252,8 @@ pl:
         courseA_maze_seq8_a: If you're stuck, try drawing the image on paper to see how the bird should move.
       courseA_maze_seq9_authored_hint:
         courseA_maze_seq9_a: Stuck? Try tracing the bird's path with your finger.
-        courseA_maze_seq9_b: If you're not sure what to do, try pressing "Start over" and running the code to see what goes wrong.
-        courseA_maze_seq9_c: You will need to move in 3 directions to solve this puzzle.
+        courseA_maze_seq9_b: Jesli nie jesteś pewien co zrobić, naciśnij "Start over" i uruchom kod aby zobaczyć co idzie nie tak.
+        courseA_maze_seq9_c: Będziesz musiał poruszać się w 3 kierunkach aby rozwiązać tą łamigłówkę.
       courseA_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge1_a: There are two solutions to this puzzle.
       courseA_maze_seq_challenge2_authored_hint:
@@ -5407,11 +5407,11 @@ pl:
         courseB_artist_loops2_b: Try running the code first to see where the artist ends up.
       courseB_artist_loops3_authored_hint:
         courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
-        courseB_artist_loops3_b: The artist will want to move South to draw this line.
+        courseB_artist_loops3_b: Artysta będzie chciał przenieść się na południe aby rysować linię.
       courseB_artist_loops4_authored_hint:
         courseB_artist_loops4_a: The jump block lets you move forward without drawing a line.
         courseB_artist_loops4_b: You will need to add a block inside of the repeat loop to solve this puzzle.
-        courseB_artist_loops4_c: Don't forget to change the number of times the loop repeats.
+        courseB_artist_loops4_c: Nie zapomnij zmienić ilości powtórzeń pętli.
       courseB_artist_loops5_authored_hint:
         courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks inside of it. How many times do you need to repeat?
       courseB_artist_loops6_authored_hint:
@@ -5428,39 +5428,39 @@ pl:
         courseB_artist_loops8_b: Try running the code you're given to see what it does.
       courseB_artist_loops8_predict1_authored_hint: [ ]
       courseB_artist_loops9_authored_hint:
-        courseB_artist_loops9_a: Remember that jump blocks can be used to move without drawing a line.
-        courseB_artist_loops9_b: You will want to use the W block to solve this puzzle.
+        courseB_artist_loops9_a: Pamiętaj, że blok skoku możę być wykorzystany aby poruszać się bez rysowania linii.
+        courseB_artist_loops9_b: Będziesz musiał użyć bloku W, aby rozwiązać tą zagadkę.
         courseB_artist_loops9_c: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
       courseB_artist_loops_challenge1_authored_hint:
         courseB_artist_loops_challenge1_a: 'Blocks like this: <xml>  <block type="simple_move_up_right"/></xml> will let your artist move at a slant!'
         courseB_artist_loops_challenge1_b: When you finish one of the dice, `jump` to the next!
-        courseB_artist_loops_challenge1_c: 'You will need to `move` or `jump` over some of the same lines twice. '
+        courseB_artist_loops_challenge1_c: 'Będziesz musiał `move` lub `jump` dwukrotnie nad niektórymi liniami. '
       courseB_artist_loops_challenge2_authored_hint:
-        courseB_artist_loops_challenge2_a: The code to draw an X is already given to you. All you need to do is repeat the X and jump to the next spot.
+        courseB_artist_loops_challenge2_a: Kod aby narysować X jest już Ci dany. Wszystko co musisz zrobić, to powtórzyć X i skoczyć do następnego miejsca.
         courseB_artist_loops_challenge2_b: You can use `jump` blocks to move to other spaces.
       courseB_collector_loops1_authored_hint:
         courseB_collector_loops1_a: The <xml><block type="collector_collect_simplified"/></xml> block can be used to pick up treasure when you are standing on top of it.
       courseB_collector_loops10_authored_hint:
         courseB_collector_loops10_a: If you can't figure out where to put the `repeat` loops, write out the code step-by-step and look for a pattern.
-        courseB_collector_loops10_b: Try writing the moves down on a piece of paper and looking for a pattern.
+        courseB_collector_loops10_b: Spróbuj zapisać ruchy na kartce papieru i znaleźć wzór.
       courseB_collector_loops2_authored_hint:
-        courseB_collector_loops2_a: You'll have to move before you can collect any treasure.
+        courseB_collector_loops2_a: Będziesz musiał się ruszyć zanim zbierzesz jakiś skarb.
         courseB_collector_loops2_b: When you have reached a spot with treasure, use the <xml><block type="collector_collect"/></xml> block to pick it up.
       courseB_collector_loops3_authored_hint:
         courseB_collector_prog3_a: Try using a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block></xml> block to collect your treasure.
-        courseB_collector_prog3_b: Remember you can put more than one block inside a repeat loop.
+        courseB_collector_prog3_b: Pamiętaj, że możesz umieścić więcej niż jeden blok wewnątrz powtarzającej się pętli.
       courseB_collector_loops3_predict1_authored_hint:
         courseB_collector_prog3_a: Try using a `repeat` block to collect your gold.
       courseB_collector_loops4_authored_hint:
         courseB_collector_loops4_a: Try using the step button to figure out where things go wrong.
         courseB_collector_loops4_b: To change how far Laurel goes, change the number of times that the loop runs.
-        courseB_collector_loops4_c: Laurel needs to walk down and collect the treasure after she finishes the `repeat` loop!
+        courseB_collector_loops4_c: Laurel musi iść na dół i zebrać skarb po zakończeniu pętli `repeat`!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_a: Use more than one loop to get the job done.
-        courseB_collector_loops5_b: Try running the code a couple of times to see what happens.
+        courseB_collector_loops5_b: Spróbuj uruchomić kod kilka razy, aby zobaczyć, co się dzieje.
       courseB_collector_loops6_authored_hint:
         courseB_collector_loops6_a: Can't figure out where things start going wrong? Use the "Step" button to run through your program one block at a time.
-        courseB_collector_loops6_b: You can change the number of times the repeat loop runs by clicking on the "3" and choosing a different number.
+        courseB_collector_loops6_b: Możesz zmienić ilość powtarzania się pętli poprzez kliknięcie w "3" i wybranie innej wartości.
         courseB_collector_loops6_c: You will want to use 3 `repeat` loops to solve this puzzle.
         courseB_collector_loops6_d: If you're confused, try breaking this puzzle into 3 pieces.
       courseB_collector_loops7_authored_hint:
@@ -5543,7 +5543,7 @@ pl:
           </block>
           </xml>
       courseB_collector_loops_challenge2_authored_hint:
-        courseB_collector_loops_challenge2_a: If something goes wrong, don't be afraid to start over. Don't give up!
+        courseB_collector_loops_challenge2_a: Jeśli coś pójdzie źle, nie bój się zacząć od nowa. Nie poddawaj się!
         courseB_collector_loops_challenge2_b: |-
           If you repeat this pattern, Laurel won't hit the wall at the bottom of the cave!
           
@@ -5564,7 +5564,7 @@ pl:
           </block>
           </next>
           </block></xml>
-        courseB_collector_loops_challenge2_c: Try using a `repeat` block to collect the final pile of treasure!
+        courseB_collector_loops_challenge2_c: Spróbuj użyć bloku `repeat` aby zebrać ostateczny skarb!
         courseB_collector_loops_challenge2_d: |-
           Try this solution:
           <xml>
@@ -5605,7 +5605,7 @@ pl:
           </xml>
       courseB_collector_loops_challenge2a_authored_hint:
         courseB_collector_loops_challenge2a_a: If something goes wrong, try debugging it. Don't give up!
-        courseB_collector_loops_challenge2a_b: Look at this option for getting through the maze. Do you see a pattern that you can repeat?
+        courseB_collector_loops_challenge2a_b: Spójrz na te opcje, aby wydostać się z labiryntu. Czy zauważasz jakiś wzór, który możesz powtórzyć?
         courseB_collector_loops_challenge2a_c: To collect all of the treasure, you will either need to add two  <xml> <block type="collector_collect"/></xml> blocks inside your loop, or put the block inside of its own `repeat` block.
       courseB_collector_loops_challenge`_authored_hint:
         courseA_collector_loops_challenge2_b: |+
@@ -5640,7 +5640,7 @@ pl:
       courseB_maze_seq5_authored_hint:
         courseB_maze_seq5_a: If you get stuck, try drawing out the path on paper.
         courseB_maze_seq5_b: There are 2 ways to solve this puzzle!
-        courseB_maze_seq5_c: Not sure how to get to the pig?  Try this path.
+        courseB_maze_seq5_c: Nie jesteś pewny, jak dostać się do świnki? Spróbuj tej ścieżki.
       courseB_maze_seq6_authored_hint:
         courseB_maze_seq6_a: Your final code should have three movement blocks.
         courseB_maze_seq6_b: If you get stuck, try solving the puzzle in two parts, one sideways and one up-and-down.
@@ -5666,10 +5666,10 @@ pl:
       courseB_maze_seqOld_authored_hint:
         courseB_maze_seqOld_a: If you're having trouble, try writing down the steps on a piece of paper first.
       courseB_maze_seq_challenge1_authored_hint:
-        courseB_maze_seq_challenge1_a: The shortest path might not work this time.
+        courseB_maze_seq_challenge1_a: Najkrótsza ścieżka może tym razem nie działać.
         courseB_maze_seq_challenge1_b: Try using the <xml><block type="maze_moveWest"/></xml> block to start.
       courseB_maze_seq_challenge2_authored_hint:
-        courseB_maze_seq_challenge2_a: You do not need to add or remove blocks to solve this puzzle.
+        courseB_maze_seq_challenge2_a: Nie musisz dodawać ani usuwać bloków, aby rozwiązać tą zagadkę.
         courseB_maze_seq_challenge2_b: Rearrange the blocks and take the staircase pattern path.
       courseB_playlab_challenge1_Template_authored_hint: [ ]
       courseB_playlab_events2_authored_hint:
@@ -5892,7 +5892,7 @@ pl:
       courseB_starWars_prog5_authored_hint:
         courseB_starWars_prog5_a: Doesn't this pattern look a little like the last puzzle?
         courseB_starWars_prog5_b: BB-8 will grab the scrap metal as he rolls over it.
-        courseB_starWars_prog5_c: Trace this pattern with your finger. Count the pieces of metal as you move.
+        courseB_starWars_prog5_c: Śledź ten wzór swoim palcem. Licz kawałki metalu jak się poruszasz.
         courseB_starWars_prog5_da: |-
           Look what happens if you use the same solution as the stair-step puzzle:
           
@@ -5920,8 +5920,8 @@ pl:
           </block>
           </xml>
       courseB_starWars_prog9_authored_hint:
-        courseB_starWars_prog9_a: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
-        courseB_starWars_prog9_b: There are many ways to solve this puzzle.
+        courseB_starWars_prog9_a: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
+        courseB_starWars_prog9_b: Jest wiele sposobów na rozwiązanie tej zagadki.
         courseB_starWars_prog9_c: Could a `repeat` loop help out here?
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
@@ -5964,19 +5964,19 @@ pl:
         courseC_PlayLab_events5_a: You will need to click the dropdown menu in the `actor say` block to find the text "What's new?"
         courseC_PlayLab_events5_b: Click on Octavia when you run your program to check that it works!
       courseC_PlayLab_events6_authored_hint:
-        courseC_PlayLab_events6_a: Each green `when arrow` block should have one action below it.
+        courseC_PlayLab_events6_a: Każdy zielony blok `when arrow` powinien mieć jedną akcję poniżej.
         courseC_PlayLab_events6_b: Use the drop down menu on the `move actor 1` block to change which direction Waddles moves.
-        courseC_PlayLab_events6_c: When you're done, you should be able to move Waddles around using the arrow keys on your computer!
+        courseC_PlayLab_events6_c: Kiedy skończysz, powinieneś być w stanie poruszać się Waddles dookoła używając strzałek na klawiaturze!
       courseC_PlayLab_events7_authored_hint:
         courseC_PlayLab_events7_a: 'Use both the `move actor 2 up 400 pixels` block and the `move actor 2 down 400 pixels` block inside the `repeat forever` loop to solve this puzzle. '
-        courseC_PlayLab_events7_b: The `repeat forever` loop does not need to be connected to any other event blocks; it will run on its own.
+        courseC_PlayLab_events7_b: Pętla `repeat forever` nie musi być połączona z żadnym innym blokiem zdarzeń; będzie działać samodzielnie.
       courseC_PlayLab_events8_authored_hint:
         courseC_PlayLab_events8_a: You will need to connect blocks to the `when actor touches` block to make this happen correctly.
         courseC_PlayLab_events8_b: The `actor say` and `play sound` blocks in the toolbox should help you out!
       courseC_PlayLab_events9_authored_hint:
         courseC_PlayLab_events9_a: The `score point` block will help you to solve this puzzle.
         courseC_PlayLab_events9_b: Make sure that your new `when actor touches` block says actor **1** and actor **3**.
-        courseC_PlayLab_events9_c: You can have more than one `when actor touches` event in your workspace at the same time, so you don't have to delete the first one!
+        courseC_PlayLab_events9_c: Możesz mieć więcej niż jedno zdarzenie `when actor touches` w swojej przestrzeni roboczej w tym samym czasie, więc nie musisz usuwać tego pierwszego!
       courseC_PlayLab_eventsA_authored_hint:
         courseC_PlayLab_eventsA_a: Use the `set background` block and the `set actor to a ____ speed` block to solve this puzzle.
         courseC_PlayLab_eventsA_b: You will need to specifically drag a `when run` event block into the workspace to solve this puzzle.
@@ -6012,7 +6012,7 @@ pl:
           <title name="VALUE">Studio.SpriteSpeed.FAST</title>
           </block></xml>
       courseC_PlayLab_events_challenge1_xy_blocks_authored_hint:
-        courseC_PlayLab_events_challenge_a: The two values on this block allow you to move an actor to any pixel in the game area. You can choose any number from 0-400.
+        courseC_PlayLab_events_challenge_a: Te dwie wartości w tym bloku umożliwiają Ci poruszanie się Aktorem o dowolną ilość pikseli w tym obszarze. Możesz wybrać wartość od 0 do 400.
         courseC_PlayLab_events_challenge_b: |-
           You can decide which numbers to use, by thinking about how far over from the top left corner you'd like to move. The first number is the number of pixels from the left. The second number is the number of pixels from the top.
           <xml><block type="studio_setSpriteXY" inline="true">
@@ -6034,7 +6034,7 @@ pl:
           </block></xml>
           ![](https://images.code.org/b1559bf476ceb59f880c43271c5e10b2-image-1494111787192.59.49 PM.png)
       courseC_artist_loop1_authored_hint:
-        courseC_artist_loop1_a: You don't need to make any changes to the loop, just put one block above it.
+        courseC_artist_loop1_a: Nie musisz nic w tej pętli zmieniać, wystarczy, że umieścisz nad nią jeden blok.
         courseC_artist_loop1_b: |-
           This is the block you will need to set a pattern:
           
@@ -6065,7 +6065,7 @@ pl:
           </xml>
       courseC_artist_loops2a_authored_hint:
         courseC_artist_loops2a_a: Inside your loop, you will want to jump to 200 over 200 down, then draw the bird sticker, then turn 30 degrees.
-        courseC_artist_loops2a_b: Click on the number at the top of the `repeat` loop to change how many times it repeats.
+        courseC_artist_loops2a_b: Naciśnij na numer na górze pętli `repeat` aby zmienić ilość jej powtórzeń.
       courseC_artist_loops3a_authored_hint:
         courseC_artist_loops3a_a: You will want to add just one block inside of your loop, after the bird sticker.
         courseC_artist_loops3a_b: Use the drop down menu on the `draw sticker` block to find the bat sticker.
@@ -6102,7 +6102,7 @@ pl:
           <title name="VALUE">DEFAULT</title>
           </block>
           </xml>
-        courseC_artist_loops5b_b: To make a design like the one above, you will want to move backward the same amount that you move forward.
+        courseC_artist_loops5b_b: Aby zrobić wzór podobny do powyższego, musisz poruszać się do przodu i do tyłu o taką samą odległość.
       courseC_artist_loops6_authored_hint:
         courseC_artist_loops6_a: |
           Try a triangle flower:
@@ -6117,7 +6117,7 @@ pl:
           A circle has 360 degrees. Multiply the degrees in your turn times the number of times you repeat. Does it equal 360?
           Check the suggested rotations to see that this works!
       courseC_artist_loopsPre1a_authored_hint:
-        courseC_artist_loopsPre1a_a: Remember to put the `turn` block inside of the loop.
+        courseC_artist_loopsPre1a_a: Pamiętaj o umieszczeniu wewnątrz pętli bloku `turn`.
         courseC_artist_loopsPre1a_b: 'Your `repeat` loop should have 3 blocks inside of it: `jump to 200 over 200 down`, `move forward by 50 pixels`, and `turn right by 60 degrees`.'
       courseC_artist_loopsPrePre1a_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
@@ -6186,12 +6186,12 @@ pl:
       courseC_artist_prog_challenge2_authored_hint:
         courseC_artist_prog_challenge2_a: "You can put commands inside `repeat` block to loop them over and over. Try it!\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
       courseC_artist_prog_challenge2a_authored_hint:
-        courseC_artist_prog_challenge2_a: After you draw the first line, try turning left before you draw your second line.
-        courseC_artist_prog_challenge2_b: After you draw the second line, try turning right before you draw your third line.
+        courseC_artist_prog_challenge2_a: Po narysowaniu pierwszej linii, obróć się w lewo zanim narysujesz drugą linię.
+        courseC_artist_prog_challenge2_b: Po narysowaniu drugiej linii, obróć się w prawo zanim narysujesz 3 linię.
       courseC_collector_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect` blocks!
       courseC_collector_prog1_authored_hint:
-        courseC_collector_prog1_a: When you are standing on a space with treasure, use the <xml><block type="collector_collect"/></xml> block to pick it up.
+        courseC_collector_prog1_a: Kiedy stoisz w pewnej odległości od skarbu, użyj bloku <xml><block type="collector_collect"/></xml> aby go podnieść.
         courseC_collector_prog1_b: The most simple solution would be to move forward once, then collect treasure.
       courseC_collector_prog2_authored_hint:
         courseC_collector_prog2_a: You can use four <xml><block type="maze_move"><title name="DIR">moveForward</title></block></xml> blocks or use the <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> block to make your program shorter.
@@ -6221,26 +6221,26 @@ pl:
       courseC_collector_progA_authored_hint:
         courseC_collector_progA_a: Try using the "Step" button to go through your code line by line.
       courseC_collector_prog_challenge1_authored_hint:
-        courseC_collector_prog_challenge1_a: You can use the `collect` command more often to collect the extra treasure.
+        courseC_collector_prog_challenge1_a: Używaj komendy `collect` częściej aby zebrać dodatkowy skarb.
       courseC_collector_prog_challenge2_authored_hint:
         courseC_collector_prog_challenge1_a: You can use more than one `collect` block to collect more than one time at each piece of treasure.
-        courseC_collector_prog_challenge1_b: Lost your way?  Try this path to solve the puzzle!
+        courseC_collector_prog_challenge1_b: Zgubiłeś się? Spróbuj tej ścieżki aby rozwiązać zagadkę!
       courseC_external_events_authored_hint: [ ]
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events2_authored_hint:
-        courseC_flappy_events2_a: 'The block you need to add is called `set speed`. '
-        courseC_flappy_events2_b: Connect the `set speed` block to the `when run` block to solve this puzzle.
+        courseC_flappy_events2_a: 'Blok, który musisz dodać nazywa się `set speed`. '
+        courseC_flappy_events2_b: Połącz blok `set speed` z blokiem `when run`, aby rozwiązać zagadkę.
       courseC_flappy_events3_authored_hint:
-        courseC_flappy_events3_a: If something isn't working correctly, make sure your blocks are connected to the correct events in the workspace.
+        courseC_flappy_events3_a: Jeśli coś nie działa prawidłowo, upewnij się, że bloki połączone są z odpowiednimi zdarzeniami w przestrzeni roboczej.
       courseC_flappy_events4_authored_hint:
         courseC_flappy_events4_a: Connect the `end game` block to `when hit an obstacle` to solve this puzzle.
       courseC_flappy_events5_authored_hint:
-        courseC_flappy_events5_a: You will need to use the `score a point` block to pass this level.
+        courseC_flappy_events5_a: Musisz użyć bloku `score a point` aby przejść ten poziom.
       courseC_flappy_events6_authored_hint:
         courseC_flappy_events6_a: Try connecting the `flap a ____ amount` block to the `when click` event.
       courseC_flappy_events7_authored_hint:
-        courseC_flappy_events7_a: 'You can change the background using the `set scene` block. '
+        courseC_flappy_events7_a: 'Możesz zmienić tło używając bloku `set scene`. '
       courseC_flappy_events8_authored_hint:
         courseC_flappy_events8_a: Try connecting a second `set scene` block under the `when pass obstacle` event to pass this level.
       courseC_flappy_events9_authored_hint:
@@ -6254,15 +6254,15 @@ pl:
       courseC_harvester_loops2_authored_hint:
         courseC_harvester_loops2_a: If you get stuck, try writing the steps on paper and looking for repeating patterns.
         courseC_harvester_loops2_b: You will need one `repeat` loop after another.
-        courseC_harvester_loops2_c: One loop will repeat the `move forward` command, and the other will repeat the `pick pumpkin` command.
+        courseC_harvester_loops2_c: Jedna pętla będzie powtarzać komendę `move forward`, a inna `pick pumpkin`.
       courseC_harvester_loops3_authored_hint:
         courseC_harvester_loops3_a: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
         courseC_harvester_loops3_b: For the first pumpkins, you can use code very similar to the last puzzle. Which way do you need to turn afterwards?
-        courseC_harvester_loops3_c: If you want to simplify your code, you can actually put one loop inside of another! This is called a **nested loop**.
+        courseC_harvester_loops3_c: Jeśli chcesz uprościć swój kod, możesz umieścić jedną pętlę w drugiej! Nazywa się to **nested loop**.
       courseC_harvester_loops4_authored_hint:
-        courseC_harvester_loops4_a: Use the new `pick corn` block to collect the corn.
-        courseC_harvester_loops4_b: You can use multiple repeat loops in your code, some to pick corn and some to pick pumpkins.
-        courseC_harvester_loops4_c: If you want to simplify your code, you can actually put one loop inside of another! This is called a **nested loop**.
+        courseC_harvester_loops4_a: Użyj nowego bloku `pick corn` aby nazbierać kukurydzy.
+        courseC_harvester_loops4_b: Możesz użyć kilku pętli powtarzających się w swoim kodzie, kilka do zbierania kukurydzy a inne do zbierania dyni.
+        courseC_harvester_loops4_c: Jeśli chcesz uprościć swój kod, możesz umieścić jedną pętlę w drugiej! Nazywa się to **nested loop**.
       courseC_harvester_loops5_authored_hint:
         courseC_harvester_loops5_a: If you get stuck, try drawing the entire program and then looking for repeating patterns.
         courseC_harvester_loops5_b: Does this stair step look familiar from other puzzles? The movements should be similar, just remember to collect crops along the way.
@@ -6273,11 +6273,11 @@ pl:
         courseC_harvester_loops7_a: You can solve this puzzle two ways, either get the corn or the pumpkins first.
         courseC_harvester_loops7_b: You will need multiple `repeat` loops to solve this puzzle.
       courseC_harvester_loops8_authored_hint:
-        courseC_harvester_loops8_a: Does this stair step look familiar from the previous puzzle? The movements should be similar, just remember to collect crops along the way.
+        courseC_harvester_loops8_a: Czy ten stopień nie wygląda znajomo z poprzedniej zagadki? Ruchy powinny być podobne, pamiętaj tylko, aby zbierać plony po drodze.
         courseC_harvester_loops8_b: If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.
       courseC_harvester_loops9_authored_hint: [ ]
       courseC_harvester_loops_challenge1_authored_hint:
-        courseC_harvester_loops_challenge1_a: This is too hard without loops!
+        courseC_harvester_loops_challenge1_a: To jest zbyt trudne bez pętel!
         courseC_harvester_loops_challenge1_b: You can repeat `move forward` and `pick corn` as many times as you need, then turn right at each corner.
         courseC_harvester_loops_challenge1_c: |-
           The best way to collect the first four corn uses a `repeat` block inside of another `repeat` block. You can use this pattern for the rest of the puzzle too!
@@ -6307,7 +6307,7 @@ pl:
           </statement>
           </block></next></block></xml>
       courseC_harvester_loops_challenge1a_authored_hint:
-        courseC_harvester_loops_challenge1_a: This is too hard without loops!
+        courseC_harvester_loops_challenge1_a: To jest zbyt trudne bez pętel!
         courseC_harvester_loops_challenge1_b: You can repeat `move forward` and `pick corn` as many times as you need, then turn right at each corner.
         courseC_harvester_loops_challenge1_c: |-
           The best way to collect the first four corn uses a `repeat` block inside of another `repeat` block. You can use this pattern for the rest of the puzzle too!
@@ -6347,19 +6347,20 @@ pl:
           This spiral pattern can be coded with just 18 blocks!
           
           ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
+      courseC_harvester_loops_forVid_authored_hint: [ ]
       courseC_maze_debugging1_authored_hint:
         courseC_maze_debugging1_a: |-
           - Does everything work after the first step?
           - Does it still work after the second?
           - Where does it go wrong?
-        courseC_maze_debugging1_b: There is 1 block you need to add to complete this puzzle.
+        courseC_maze_debugging1_b: Jest jeden blok, który musisz dodać aby skończyć tą zagadkę.
       courseC_maze_debugging2_authored_hint:
         courseC_maze_debugging2_a: There is a lot of valuable code in the workspace.  Don't just delete it all and start over!
         courseC_maze_debugging2_b: |-
           - Does everything work after the first step?
           - Does it still work after the second?
           - Where does it go wrong?
-        courseC_maze_debugging2_c: Can't figure out what's wrong? Try running the code a couple of times to see what happens.
+        courseC_maze_debugging2_c: Nie możesz dowiedzieć się do jest źle? Spróbuj uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseC_maze_debugging3_authored_hint:
         courseC_maze_debugging3_a: |-
           To delete a block from the middle of your code, drag all of the blocks to another part of the workspace.
@@ -6369,7 +6370,7 @@ pl:
           Finally, put your other blocks back where they belong.
           
           ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
-        courseC_maze_debugging3_b: Can't figure out what's wrong? Try running the code a couple of times to see what happens.
+        courseC_maze_debugging3_b: Nie możesz dowiedzieć się do jest źle? Spróbuj uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseC_maze_debugging4_authored_hint:
         courseC_maze_debugging4_a: Use the "Step" button to run through the instructions one at a time.  Does that help you find the line where things go wrong?
         courseC_maze_debugging4_b: One of the turns is making Scrat go in the wrong direction. Can you figure out which one?
@@ -6498,7 +6499,7 @@ pl:
       courseC_maze_programming_challenge2_authored_hint:
         courseC_maze_programming_challenge2_a: '*"If you send me backwards, be extra careful that I turn the correct way!"*'
         courseC_maze_programming_challenge2_b: |-
-          The shortest solution uses only 5 blocks, but it uses this block:
+          Najkrótsze rozwiązanie wykorzystuje tylko 5 bloków, ale używa tego bloku:
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_playLab_embedded_authored_hint: [ ]
       courseC_puppy_loops10_authored_hint:
@@ -6516,30 +6517,30 @@ pl:
         courseC_puppy_loops9_1: If you repeat the first few actions, you can get me to the pig with just four more blocks!
       courseC_starWars_loops1_authored_hint:
         courseC_starWars_loops1_a: When BB-8 rolls over scrap metal he picks it up automatically.
-        courseC_starWars_loops1_b: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
+        courseC_starWars_loops1_b: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
         courseC_starWars_loops1_c: You will want to `move forward` five times to solve this puzzle.
       courseC_starWars_loops10_authored_hint:
         courseC_starWars_loops10_a: Doesn't this pattern look like a giant set of stair steps? See if you can use what you learned from previous puzzles to get all of the turns.
         courseC_starWars_loops10_b: "If you want to use less code, you can put one `repeat loop` inside of another!   \nThis is called a **nested loop**."
-        courseC_starWars_loops10_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
+        courseC_starWars_loops10_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
       courseC_starWars_loops10_predict2_authored_hint: [ ]
       courseC_starWars_loops11_authored_hint: [ ]
       courseC_starWars_loops2_authored_hint:
-        courseC_starWars_loops2_a: To repeat code, drag out a `repeat` loop, then put the block you want inside of it.
+        courseC_starWars_loops2_a: Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał.
       courseC_starWars_loops4_authored_hint:
         courseC_starWars_loops4_a: Use two `repeat` blocks.
-        courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command inside of it: `move forward`.'
+        courseC_starWars_loops4_b: 'Każda pętla `repeat` ma tylko jedną komendę w środku: `move forward`.'
         courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the turn block will let you change it to  "right".
       courseC_starWars_loops5_authored_hint:
-        courseC_starWars_loops5_b: To move down, you have to turn and then move forward.
+        courseC_starWars_loops5_b: Aby iść na dół, musisz się obrócić i dalej isś prosto.
         courseC_starWars_loops5_a: The best solution uses a turn, then a single `move forward`, another turn, then a loop.
       courseC_starWars_loops6_authored_hint:
         courseC_starWars_loops6_a: Try writing all of the moves down on a piece of paper and looking for a pattern.
         courseC_starWars_loops6_b: "If you want to use less code, you can put one `repeat loop` inside of another!   \nThis is called a **nested loop**."
       courseC_starWars_loops7_authored_hint:
         courseC_starWars_loops7_a: This pattern looks harder than it is! Start with a simple stair step. Does that cover all of the scrap metal?
-        courseC_starWars_loops7_b: If you are having trouble with this puzzle, try writing all of the moves on a piece of paper and looking for a pattern.
-        courseC_starWars_loops7_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
+        courseC_starWars_loops7_b: Jeśli masz problem z tą zagadką, spróbuj zapisać wszystkie ruchy na kartce papieru i poszukać wzorca.
+        courseC_starWars_loops7_c: Nie bój się popełniać błędów! Uruchom kod aby zobaczyć co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.
       courseC_starWars_loops8_authored_hint:
         course_starWars_loops8_a: Try thinking about this problem in small parts. Take your time. You don't need to solve it on the first try!
         course_starWars_loops8_b: Think of the first half of this problem as a stair step problem. How did you solve that before?
@@ -6555,7 +6556,7 @@ pl:
           ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseD_artist_binary1_authored_hint:
         courseD_artist_binary1_a: Replace the "???" in the text block with the binary image you want, in zeroes and ones.
-        courseD_artist_binary1_b: The artist will draw a white space for every 1 and a black space for every 0.
+        courseD_artist_binary1_b: Artysta narysuje białą spację dla każdej 1 i czarną spację dla każdego 0.
         courseD_artist_binary1_c: |-
           This is how you can input your binary code:
           
@@ -6563,7 +6564,7 @@ pl:
       courseD_artist_binary2_authored_hint:
         courseD_artist_binary2_a: Just click `Run` to see this program in action!
       courseD_artist_binary3_authored_hint:
-        courseD_artist_binary3_a: One of the four binary patterns in the toolbox will solve this puzzle!
+        courseD_artist_binary3_a: Jeden z czterech binarnych wzorów w przyborniku rozwiąże tą zagadkę!
         courseD_artist_binary3_b: Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you haven't solved the puzzle yet.
       courseD_artist_binary4_authored_hint:
         courseD_artist_binary4_a: Look at the first three squares on the top row. Could you repeat these three to get the whole pattern?
@@ -8264,7 +8265,7 @@ pl:
           </xml>
         courseF_artist_for3_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
       courseF_artist_for4_authored_hint:
-        courseF_artist_for4_a: "**What is the smallest number you will need?  \nWhat is the largest number?  \nHow big is the increase each time?**\n\nThose are the questions you need to ask to fill in the blanks of the `for` loop."
+        courseF_artist_for4_a: "**Jaka jest najmniejsza liczba, którą będziesz potrzebował?\nJak jest największa liczba?\nO jaką wielkość zmienia się ta liczba za każdym razem?**\n\nTe pytania musisz zadać aby wypełnić puste pola w pętli `for`."
         courseF_artist_for4_b: Your code will be very similar to what you wrote in the last puzzle, but remember to draw a square this time!
         courseF_artist_for4_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
       courseF_artist_for5_authored_hint:
@@ -8285,7 +8286,7 @@ pl:
       courseF_artist_for9_authored_hint:
         courseF_artist_for9_a: If you put the `set alpha` block inside of your `for` loop, and use the `counter` variable to change it, you can create a design like this.
       courseF_artist_for_challenge1_authored_hint:
-        courseF_artist_for_challenge1_a: The `pen width` is 1. The first square has 50 pixel sides, and each square is 50 pixels wider than the last.
+        courseF_artist_for_challenge1_a: '`pen width` wynosi 1. Pierwszy kwadrat ma boki o szerokości 50 pikseli, kolejny kwadrat jest o 50 pikseli szerszy od poprzedniego.'
         courseF_artist_for_challenge1_b: The opacity on the brush is always `counter`/2.
         courseF_artist_for_challenge1_c: After you make each square, don't forget to jump backward, turn, jump again, then turn back!
         courseF_artist_for_challenge1_d: |-
@@ -8422,8 +8423,8 @@ pl:
           </block>
           </xml>
       courseF_artist_for_challenge2_authored_hint:
-        courseF_artist_for_challenge2_c: 'The `for loop` goes from 5 to 250 by 2. '
-        courseF_artist_for_challenge2_a: The color change happens using the `set color with red, green, blue` block.  Red is set constant at 255, green is always the value of `counter`, and blue is always `255 - counter`.
+        courseF_artist_for_challenge2_c: '`pętla for` zmienia się od 5 do 250 z krokiem równym 2. '
+        courseF_artist_for_challenge2_a: Zmiana koloru odbywa się poprzez użycie bloku `ustaw kolor z kolorem czerwonym, zielonym, niebieskim`. Czerwony ma stałą wartość 255, zielony jest zawsze wartością `licznik`, a niebieski to `255-licznik`.
         courseF_artist_for_challenge2_b: The code for this is simpler than you might think.  Just set the color inside the for loop, move forward, then turn.
         courseF_artist_for_challenge2_d: |-
           **Solution:**
@@ -8800,16 +8801,16 @@ pl:
           </block>
           </xml>
       courseF_artist_variables_challenge1a_authored_hint:
-        courseF_artist_variables_challenge1_a: 'Variables are helpful because you can add to them each time through a loop. '
-        courseF_artist_variables_challenge1_b: This puzzle has one loop that creates the polygon, one loop that repeats the polygon `sides` times, then another loop that does it all again after adding 5 to `sides`.
-        courseF_artist_variables_challenge1_c: Using a variable for `sides` and one for `length` makes the code cleaner because you can loop the same code multiple times, instead of creating a new copy for each set of numbers.
+        courseF_artist_variables_challenge1_a: 'Zmienne są pomocne, ponieważ można do nich dodawać w każdym kroku pętli. '
+        courseF_artist_variables_challenge1_b: Łamigłówka ma jedną pętle, która tworzy wielokąt, jedną pętle, która powtarza wielokąt `boki` razy, następnie jeszcze jedną pętle, która powtarza to wszystko po dodaniu wartości 5 do `sides`.
+        courseF_artist_variables_challenge1_c: Użycie zmiennej dla `boki` oraz dla `długość` czyni kod czystszym, ponieważ możesz zapętlać ten sam kod wiele razy, zamiast tworzyć nowej kopi dla każdego zestawu liczb.
         courseF_artist_variables_challenge1_d: |-
           **Solution:**
           
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       courseF_artist_variables_challenge2_authored_hint:
-        courseF_artist_variables_challenge2_a: 'Variables are helpful because you can add to them each time through a loop. '
-        courseF_artist_variables_challenge2_c: Using a variable for `sides` and one for `length` makes the code cleaner because you can loop the same code multiple times, instead of creating a new copy for each set of numbers.
+        courseF_artist_variables_challenge2_a: 'Zmienne są pomocne, ponieważ można do nich dodawać w każdym kroku pętli. '
+        courseF_artist_variables_challenge2_c: Użycie zmiennej dla `boki` oraz dla `długość` czyni kod czystszym, ponieważ możesz zapętlać ten sam kod wiele razy, zamiast tworzyć nowej kopi dla każdego zestawu liczb.
         courseF_artist_variables_challenge2_d: |-
           **Solution:**
           
@@ -10335,7 +10336,7 @@ pl:
         Course_4_SCF_1_a: Każdy sześciokąt ma boki długości 40 pikseli.
         Course_4_SCF_1_b: There is a 120 pixel jump between each hexagon in each horizontal line.
         Course_4_SCF_1_c: "Before you draw the second row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 320 pixels."
-        Course_4_SCF_1_d: "Before you draw the third row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 440 pixels (120 pixels farther than your `shift down/forward` function. "
+        Course_4_SCF_1_d: "Zanim narysujesz trzeci rząd sześciokątów, musisz się obrócić w prawo o 60 stopni i przejść 40 pikseli do przodu. \n\nJak będziesz w prawidłowej pozycji w pionie, musisz zawrócić artystę i wrócić 440 pikseli (120 pikseli dalej niż Twoja `shift down/forward` funkcja). "
         Course_4_SCF_1_e: |-
           **Solution:**
           
@@ -10344,7 +10345,7 @@ pl:
         Course_4_SCF_1_a: Każdy sześciokąt ma boki długości 40 pikseli.
         Course_4_SCF_1_b: There is a 120 pixel jump between each hexagon in each horizontal line.
         Course_4_SCF_1_c: "Before you draw the second row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 320 pixels."
-        Course_4_SCF_1_d: "Before you draw the third row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 440 pixels (120 pixels farther than your `shift down/forward` function. "
+        Course_4_SCF_1_d: "Zanim narysujesz trzeci rząd sześciokątów, musisz się obrócić w prawo o 60 stopni i przejść 40 pikseli do przodu. \n\nJak będziesz w prawidłowej pozycji w pionie, musisz zawrócić artystę i wrócić 440 pikseli (120 pikseli dalej niż Twoja `shift down/forward` funkcja). "
         Course_4_SCF_1_e: |-
           **Solution:**
           
@@ -10477,7 +10478,7 @@ pl:
           ![](https://images.code.org/585d2e24f3021ac2561aec6e96dde430-image-1475906135993.54.11.png)
       grade5_artist_for_loops10_authored_hint:
         Course_4_Artist_For_Loops_Challenge_a: The largest polygon has 19 sides.
-        Course_4_Artist_For_Loops_Challenge_b: Each polygon is incomplete, with one side fewer than it should have.
+        Course_4_Artist_For_Loops_Challenge_b: Każdy wielokąt jest niekompletny, ma jeden bok mniej niż powinien.
       grade5_artist_for_loops1b_authored_hint:
         grade5_artist_for_loops1b_a: |-
           Can you draw something like this:
@@ -10494,7 +10495,7 @@ pl:
           
           ![](https://images.code.org/15e87fc7fe408cbf1b63e0e8e69b7ffe-image-1475908502078.31.26.png)
       grade5_artist_for_loops4_authored_hint:
-        Course_4_Artist_For_Loops_4_a: "**What is the smallest number you will need?  \nWhat is the largest number?  \nHow big is the increase each time?**\n\nThose are the questions you need to ask to fill in the blanks of the `for` loop."
+        Course_4_Artist_For_Loops_4_a: "**Jaka jest najmniejsza liczba, którą będziesz potrzebował?\nJak jest największa liczba?\nO jaką wielkość zmienia się ta liczba za każdym razem?**\n\nTe pytania musisz zadać aby wypełnić puste pola w pętli `for`."
       grade5_artist_for_loops5_authored_hint:
         grade5_artist_for_loops5_a: You don't need the traditional repeat loop when making this spiral!
       grade5_artist_for_loops7_authored_hint:
@@ -10508,8 +10509,8 @@ pl:
         Course_4_Artist_For_Loops_11a_a: '360 divided by the number of sides a shape has is the number of degrees you''ll need to turn. '
         Course_4_Artist_For_Loops_11a_b: 'Each time, you will need to move forward by 10 times the length of the current number of sides. '
       grade5_artist_for_loopsfreeplay11_authored_hint:
-        Course_4_Artist_For_Loops_inspire_a: The foundation of this code is the same as the solution to the previous challenge puzzle...with a couple of changes.
-        Course_4_Artist_For_Loops_inspire_b: Try a `for` loop that goes from 3 to 10 with an increment of 1.
+        Course_4_Artist_For_Loops_inspire_a: Założenie tego kodu jest takie samo jak rozwiązanie poprzedniej zagadki z puzzlami... z kilkoma zmianami.
+        Course_4_Artist_For_Loops_inspire_b: Spróbuj pętli `for` która liczy od 3 do 10 z krokiem równym 1.
         Course_4_Artist_For_Loops_inspire_c: There are two iterations of the same repeat loop inside the `for` loop, but the second repeat turns the opposite direction.
         Course_4_Artist_For_Loops_inspire_d: "**Solution:**  ![Solution](https://images.code.org/d619892fc17ff491c201d86bb917e523-image-1441005190828.12.30.png) "
       grade5_artist_for_loopsfreeplay12_authored_hint:
@@ -10557,20 +10558,20 @@ pl:
       grade5_artist_parameters_stars1_authored_hint:
         hint1: Don't give up!
       grade5_artist_variables_freeplay10_authored_hint:
-        Course_4_Artist_Vars_8_a: If you divide your starting length by the number of sides, the length of each side will get shorter as the number of sides gets higher.
+        Course_4_Artist_Vars_8_a: Jeśli podzielisz swoją startową długość przez liczbę boków, długość każdego boku się skróci gdy liczba boków będzie rosnąć.
       grade5_artist_variables_freeplay15_authored_hint:
-        Course_4_Artist_Inspire_a: After you complete one square, try jumping forward half of it's length before turning and making another.
-        Course_4_Artist_Inspire_b: Each square and jump is repeated four times (using a left turn inbetween) to make a full pinwheel-like unit.
+        Course_4_Artist_Inspire_a: Po skończeniu kwadratu, spróbuj przejść dalej o połowę jego długości zanim się obrócisz i zaczniesz tworzyć inny.
+        Course_4_Artist_Inspire_b: Każdy kwadrat i przejście jest powtarzane czterokrotnie (przy wykorzystaniu skrętu w lewo) aby stworzyć jednostkę podobną do pinwheel.
         Course_4_Artist_Inspire_c: Each pinwheel is also repeated four times, with a right turn of **360/sides**.
         Course_4_Artist_Inspire_d: |-
           **Solution:**
           ![Blocks for solution](https://images.code.org/1865aaf1b4a8ba84a5e8a7408401092d-image-1440060930335.43.39.png)
       grade5_artist_variables_octagons13_authored_hint:
-        Course_4_Artist_Vars_13_a: You need two repeat loops (one inside the other) both repeating `sides` times.
+        Course_4_Artist_Vars_13_a: Potrzebujesz dwóch powtórzeń pętli (jedna s środku drugiej) obie powtarzające się `sides` razy.
         Course_4_Artist_Vars_13_b: "The inner repeat loop draws an octagon (turning to the left).   \n\nAfterwards, you need to move forward and turn right only in the outer loop."
-        Course_4_Artist_Vars_13_c: To adjust the shape to stay the same size when the number of sides change, use the math block to divide the length in pixels by the number of sides.
+        Course_4_Artist_Vars_13_c: Aby dopasować kształt do stałego rozmiaru podczas zmiany ilości boków, użyj bloku matematycznego aby podzielić długość w pikselach przez liczbę boków.
       grade5_artist_variables_square7_authored_hint:
-        Course_4_Artist_Vars_6_a: To draw a regular polygon, turn **360/sides** each time.
+        Course_4_Artist_Vars_6_a: Aby narysować zwykły wielokąt, obróć się o ***360/sides** za każdym razem.
       grade5_artist_variables_triangles1_authored_hint:
         grade5_artist_variables_triangles1_a: To make an internal angle of 60 degrees in this triangle, remember to turn the artist 120 degrees.
         grade5_artist_variables_triangles1_b: Use the `repeat` loop to make your code shorter.
@@ -10621,18 +10622,18 @@ pl:
         grade5_bee_parameters_new9a_a: A `for` loop can help you with this stair step pattern, too!
         grade5_bee_parameters_new9a_b: For each stair, you'll need to call the function once, turn right, call the function again, then turn left.
       grade5_playlab_variables2_authored_hint:
-        Course_4_Play_Lab_Vars_2_a: Make sure to set the number for `dog_speed` to something larger than `cat_speed`.
+        Course_4_Play_Lab_Vars_2_a: Upewnij się, aby ustawić wartość `prędkość_psa` większą od `prędkość_kota`.
       gradeK_sequence_4_authored_hint:
         gradeK_sequence_4_a: Try writing down the steps on paper to find a solution!
       gradek_adventurer_loops3_authored_hint:
         gradek_adventurer_loops3_a: To change how far the adventurer goes, change the number of times that the loop runs.
         gradek_adventurer_loops3_b: Don't forget that the adventurer needs to walk down and collect gold after she finishes the `repeat` loop!
       gradek_adventurer_loops4_authored_hint:
-        gradek_adventurer_loops4_a: If you can't figure out the answer right away, try using a piece of paper to figure out what arrows you will need and look for a pattern.
+        gradek_adventurer_loops4_a: Jeśli nie możesz zgadnąć odpowiedzi od razu, spróbuj użyć kartki papieru aby rozwiązać jakich strzałek będziesz potrzebował i poszukaj wzorca.
       gradek_adventurer_loops4a_authored_hint:
         gradek_adventurer_loops4a_a: Can't figure out what's wrong? Try running the code to see what happens.
       gradek_adventurer_loops5_authored_hint:
-        gradek_adventurer_loops5_a: If you can't figure out what comes next, try running the code to see where Laurel ends up.
+        gradek_adventurer_loops5_a: Jeśli nie wiesz co będzie dalej, uruchom kod aby zobaczyć gdzie Laurel skończy.
       gradek_adventurer_loops6_authored_hint:
         gradek_adventurer_loops6_a: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and look for a pattern.
       gradek_adventurer_loops7_challenge_authored_hint:
@@ -10648,7 +10649,7 @@ pl:
       gradek_artist_loops3_authored_hint:
         artistLoopsK2_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
       gradek_artist_loops4_authored_hint:
-        artistLoopsK3_a: Try using what you've learned about repeat blocks to complete this puzzle!
+        artistLoopsK3_a: Spróbuj wykorzystać tego, czego nauczyłeś się o blokach powtarzających aby ukończyć tą zagadkę!
       gradek_artist_loops5_authored_hint:
         gradek_artist_loops5_a: Can't figure out how to make the hill?  Try playing with the blocks a bit to see what each one draws.
       gradek_artist_loops6_authored_hint:
@@ -10660,7 +10661,7 @@ pl:
       gradek_artist_loops8_authored_hint:
         gradek_artist_loops8_a: 'You don''t have to delete everything!  Some of the code is good. Use it to build the rest of the stairs. '
       gradek_artist_loops9_authored_hint:
-        artistLoopsKA_a: Use the jump block to move forward without drawing a line.
+        artistLoopsKA_a: Aby pójść dalej i nie rysować linii użyj bloku skoku.
       gradek_artist_loopsA_authored_hint:
         artistLoopsKB_a: There should be 2 blocks inside of your loop to solve this puzzle.
       gradek_artist_loopsFP_authored_hint: [ ]

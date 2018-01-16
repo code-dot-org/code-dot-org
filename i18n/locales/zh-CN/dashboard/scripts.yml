@@ -2186,7 +2186,7 @@ zh-CN:
               name: 练习表演任务 - 编码和经验
         csp3:
           title: CSP Unit 3 - Intro to Programming
-          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          description: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\\r\n\\r\nThis unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: 通过使用自上而下的设计方法，来学习JavaScript编程的基础知识，并画出经典的海龟图形。
           description_audience: ''
           stages:
@@ -2230,7 +2230,7 @@ zh-CN:
               name: 请完成 计算机科学原理中期课程调查!
         csp4:
           title: CSP Unit 4 - Big Data and Privacy
-          description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
+          description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Explore the data-rich world we live, and how data impacts public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
           stages:
@@ -3540,23 +3540,23 @@ zh-CN:
             Human vs Computer Processing:
               name: 人与计算机处理
             Input and Output:
-              name: Input and Output
+              name: 输入和输出
               description_student: 在课堂上，学生考虑了一些计算设备来确定他们使用的输入和输出的类型。小组分配到一个计算设备, 并根据教师提供的输入和输出定义, 列出其设备的输入和输出。总结课程, 课堂检查在计算设备上所做的常见活动, 并从图表中选择用于该活动的输入和输出。
               description_teacher: 在本课中, 学生将考虑一些计算设备来确定他们使用的输入和输出类型。小组分配到一个计算设备, 并根据教师提供的输入和输出定义, 列出其设备的输入和输出。在活动的早期, 学生被提示关注更明显的物理输入和输出 (例如, 键盘作为输入或屏幕作为输出), 但后来的讨论引导学生考虑不太明显的例子 (例如, 触摸屏既是输入, 又是输出, 或互联网可以作为输入和输出的事实）。在整个课程中, 教师将在教室前面的 T- Chart 图表上标识的输入和输出。总结课程, 学生检查在计算设备上所做的常见活动, 并从图表中选择用于该活动的输入和输出。
             Processing:
-              name: Processing
+              name: 正在处理中
               description_student: 这一课深入探讨了作为计算机定义一部分引入的处理概念。 结对一起工作, 把一副牌按顺序排列, 一个形式的处理信息。 最后, 课堂讨论了在解决信息问题的上下文中的处理方法。
               description_teacher: 学生完成两个离线的排列卡片的活动, 探讨处理的意义及其与解决问题的关系。第一个约束很少, 用于引入一个高级的处理定义。接下来的会引入更多的约束, 迫使学生开发一种算法, 能够一直成功地处理卡片。学生迭代开发、测试，并与同学分享他们的算法。总结性的讨论让学生反思他们在这些活动中所使用的不同类型的问题解决方法, 以及产生解决问题的算法的价值。
             Storage:
-              name: Storage
+              name: 存储
               description_student: 本课将重点介绍计算机定义的存储组件，在处理信息的内容中。该课堂花费了大部分的课程开发和共享算法来处理信息，重点是任何特定算法所需要的总存储量。本课最后总结讨论了处理信息时存储的重要性。
               description_teacher: 学生在计算机的输入-存储-处理-输出模型中探讨存储的重要性。热身活动要求学生反思过去曾见过的计算机存储的信息类型, 如文档、照片或视频。线下的主要活动让学生开发一种算法处理一小堆卡片，并在牌堆里查寻具体卡片。对学生如何移动卡片的限制迫使他们考虑存储的重要性, 即使他们正在处理的甲板。本课最后讨论了在本课中看到的两类存储学生, 以及在处理信息时存储的重要性。
             Apps and Problem Solving:
-              name: Apps and Problem Solving
+              name: 应用程序和问题解决
               description_student: 本课程涵盖了计算机在上下文中的输入和输出方面。这对学生来说是相关而又熟悉的：应用程序。课堂评估各种网络应用程序, 以分析它们设计要解决的特定问题、它们需要工作的输入以及它们为用户提供的输出。 课程总结了对这些应用程序的观察，以及老师主导的关于应用程序对社会影响的讨论。 
               description_teacher: 本课程涵盖了计算机在上下文中的输入和输出方面。这对学生来说是相关而又熟悉的：应用程序。学生结对评估各种网络应用程序, 以分析它们设计要解决的特定问题、它们需要工作的输入以及它们为用户提供的输出。 课程总结了对这些应用程序的观察，以及老师主导的关于应用程序对社会影响的讨论。 
             Project - Propose an App:
-              name: Project - Propose an App
+              name: 项目- 提议一个应用程序
               description_student: 为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 该课程提出了用于解决现实世界问题的应用程序。该项目需要多天来完成, 并在海报演示文稿突出显示每个应用程序的功能。该项目设计为结对完成，虽然也可以单独完成。
               description_teacher: 为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 学生将提出一个用于解决现实世界问题的应用程序。该项目将需要好几天来完成, 并会让学生创建一个海报突出显示他们的应用程序的功能，并将呈现同学。项目指南为学生提供循序渐进的指导，并帮助他们组织想法。该项目设计为结对完成, 虽然也可以单独完成。
             CS Discoveries Pre-survey:
@@ -3768,19 +3768,19 @@ zh-CN:
               description_student: 本课将继续介绍 CSS 样式属性, 此时将更多地关注非文本元素。该课堂从调查和修改在甜点世界页面上的新 CSS 样式开始。之后, 每个人都将这些新知识应用到他们的个人网站上。
               description_teacher: 本课将继续介绍 CSS 样式属性, 此时将更多地关注非文本元素。学生们从一个关于世界甜点的网站上开始这一课。他们在这个网站上调查和修改新的 CSS 样式, 在页面中添加他们自己的样式。在甜点页面上工作后, 学生们运用他们的新 CSS 属性的知识来对他们的个人网站做更多的造型。
             Exploring Websites:
-              name: Exploring Websites
+              name: 探索网站
               description_student: 本课程涵盖了网站可能为用户和创作者服务的目的。该课程探讨了一些在美国最常用的网站，并讨论了这些网站对用户的用处以及它如何也可能为其创建者服务。
               description_teacher: 每个网站都有目的，这是创造它，其它人用它的原因。在本课中, 学生将开始考虑网站可能为用户和创作者服务的目的。学生将探索在美国的一些最常用的网站, 并试图弄清楚这些网站对用户是如何有用的，以及他们如何也可能为他们的创造者服务。
             'Websites for Expression ':
-              name: 'Websites for Expression '
+              name: '网址表达式 '
               description_student: '本课介绍了网站作为个人表达的一种手段。 该课程首先讨论了人们表达和分享他们的兴趣和想法的不同方式, 然后看看以前课程中学生所做的一些范例网站。最后大家集思广益，分享包括话题和兴趣列表，以便在该单元的其余部分创建一个用于开发个人网站的资源。 '
               description_teacher: 在本课中, 学生将研究如何使用网站作为个人表达方式, 并开发出他们希望在个人网站上包含的主题和兴趣列表。开始上课时, 学生们集思广益讨论人们表达和分享他们的兴趣和想法的不同方式。学生然后看一些先前的计算机科学发现课程的学生所做的几个范例网站，以确定他们表达他们的想法的方式。最后, 学生集思广益和分享他们可能想要包括在个人网站上的主题和兴趣列表, 他们可以随着单元的进展来参考想法。
             Intro to HTML:
-              name: Intro to HTML
+              name: HTML介绍
               description_student: 本课将介绍 HTML 作为解决如何将网站的内容和结构与计算机进行通信问题的方法。本课从一个简短的线下活动开始, 演示了有效交流网页结构的挑战。该课堂在网络实验室中查看 HTML页面, 并讨论 HTML 标记如何帮助解决此问题, 然后使用 HTML 编写该单元的第一个网页。
               description_teacher: 在本课中, 引入 HTML 作为解决如何将网站的内容和结构与计算机进行通信问题的方法。本课从一个简短的线下活动开始, 演示了有效交流网页结构的挑战。学生然后在网络实验室中查看 HTML页面，并与他们的同学讨论 HTML 标记如何帮助解决此问题。学生然后写他们的第一个 HTML。总结讨论有助于巩固对在整个课程中开发的内容与结构的理解。
             Headers:
-              name: Headers
+              name: 标头
               description_student: 本课将继续介绍 HTML 标记, 这一次使用标题。 该课程练习使用标题标记来创建页面和节标题, 并了解在默认情况下如何显示不同的标题元素。 接下来, 该课程计划如何在将在整个单元中构建的个人 网页上组织其内容, 并开始该项目的第一页。
               description_teacher: 在本课中, 学生们继续使用HTML在网页上构建文本，这次使用标题。学生学习如何在默认情况下显示不同的标题元素, 并练习使用它们来创建页面和段落标题。 然后, 学生开始决定他们将如何在自己的个人网页上组织内容。 在最后一级, 学生将继续在整个单元工作的项目。
             Lists:
@@ -3788,19 +3788,19 @@ zh-CN:
               description_student: 本课介绍了有序和无序列表以及相关 &lt; ul &gt;、&lt; ol &gt; 和 &lt; li &gt; HTML 标签。 该课堂使用标记进行练习, 然后返回到个人网页项目, 以添加一个包含新标记的新 HTML 页面。
               description_teacher: 学生被引入到 HTML中有序和无序的列表中，并通过几个级别，其中他们使用 &lt; ul &gt;, &lt; ol &gt;, 和 &lt; li &gt; 标签。 然后, 他们返回到他们的项目, 在那里他们添加一个新的 HTML 页面。 在新页面中, 他们编写 HTML 来显示食谱、前十列表或使用他们所学的新标签的任何其他内容。
             Intellectual Property and Images:
-              name: Intellectual Property and Images
+              name: 知识产权和图像
               description_student: 本课将介绍如何使用媒体，如由他人创建的图像、视频或音乐作为网站, 同时尊重该媒体创建者的权利。在首次研究了创作共享许可之后, 该课程学习如何在网页中添加图像, 以及如何在这样做时给予正确的属性。
               description_teacher: "从讨论如何允许他人使用他们的作品的个人观点出发, 该课程探讨了创作内容的创造者和使用者的著作权的目的和作用。 然后, 他们继续进行一项探索各种创作共享许可证的活动,作为解决版权难题的一个办法。 \\r\n\\r\n最后, 通过对各种创作共享许可的限制的共同理解, 学生可以学习如何使用 &lt; img &gt; 标签将图像添加到他们的网页中。"
             Project - Multi-Page Websites:
-              name: Project - Multi-Page Websites
+              name: 项目- 多页面网站
               description_student: '本课包含超链接, 它允许网络开发人员将网页连接到一个网站上。 该课堂将所有以前的页面链接到一个项目中, 并在将整个站点发布到网络之前为每个页面创建导航栏。  '
               description_teacher: "在学习如何将网页链接到另一个网站后，学生们终于能够发布他们一直工作的网站了。在本课中,    他们将以前创建的所有页面链接到一个项目中，创建一个新页面，并在将整个站点发布到网络之前在页面之间添加导航。\\r             \n\\r\n"
             RGB Colors and Classes:
-              name: RGB Colors and Classes
+              name: RGB（红绿蓝） 颜色和分类
               description_student: 本课包括了类和自定义颜色。该课堂首先学习如何使用 RGB (红色、绿色、蓝色) 值指定自定义颜色, 然后将这些颜色应用于新的四季网页, 该网页使用 CSS 类。 使用类, 该课堂为四季的网页添加更多的样式, 然后使用它们来定制他们的个人网站。
               description_teacher: 在本课中, 学生首先学习如何使用 RGB (红色、绿色、蓝色) 值指定自定义颜色。 然后, 他们将这些颜色应用于一个新的四个季节网页, 它使用 CSS 类。 CSS 类允许网络开发人员处理他们想要的元素组与其他同类型的元素不同样式。使用类, 学生为四个季节的网页添加更多的样式，然后使用它们来定制他们的个人网站。
             Project - Personal Portfolio Website:
-              name: Project - Personal Portfolio Website
+              name: 项目- 个人文件集网站
               description_student: 在该单元的最后几天, 该课堂完成了他们的个人网站, 与同行们一起工作反馈, 评论专栏, 并在网站上进行收尾。为了完成这个单位, 每个人都分享他们的项目以及他们是如何开发的。
               description_teacher: "学生们花了大量的时间在整个单位的个人网站上工作。在最后的几天里, 学生们最终完成了他们的网站。 他们与同事们一起工作以获得反馈, 在网站上完成润色, 回顾专栏并反思自己的过程。为了结束该单位, 他们将分享他们的项目, 并概述他们为实现最终设计所采取的过程。\\r\n"
             Headings:
@@ -4100,7 +4100,7 @@ zh-CN:
             Conditionals & Loops in Maze:
               name: 迷宫里的条件和循环
             Conditionals & Loops in Farmer:
-              name: 农民的条件和循环
+              name: 收割机里的条件和循环
             Impacts of Computing:
               name: 计算的影响
             More Programming with CS4FN:
@@ -4218,9 +4218,9 @@ zh-CN:
             Ice Age Play Lab:
               name: 冰河世界游戏实验室
             Conditionals and Functions in Bee:
-              name: Conditionals and Functions in Bee
+              name: 蜜蜂里的条件和函数
             'Algorithms: Tangrams':
-              name: 'Algorithms: Tangrams'
+              name: 算法：七巧板
         classic-hoc-impact-study:
           title: Hour of Code with Survey
           description_audience: ''
@@ -4592,6 +4592,12 @@ zh-CN:
               name: 制作音乐
             Arrays and For Loops:
               name: 数组和计数循环
+            Circuits and Physical Prototypes:
+              name: Circuits and Physical Prototypes
+            Accelerometer:
+              name: Accelerometer
+            Functions with Parameters:
+              name: 有参数的函数
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -4645,9 +4651,9 @@ zh-CN:
             Project - Solve a Data Problem:
               name: 项目- 解决数据问题
             Representing Numbers:
-              name: Representing Numbers
+              name: 表示数字
             8-bit Numbers:
-              name: 8-bit Numbers
+              name: 8-比特数字
             Encryption:
               name: 加密
             Structuring Data:
@@ -4900,35 +4906,35 @@ zh-CN:
               description_teacher: 在本课程中，学生们将看到一个简单的关于计算机是如何被运用来决定数据问题解决过程的过程。学生们将被委任创建一个可以建议旅游场所的算法。 然后，学生们将创建一个电脑可以直接用来做决定的规则，或算法。学生们分享他们的规则，以及利用班级数据来决定要选择什么样的规则。接下来，他们把他们的规则运用到他们同学的数据，来测试是否他们的规则会坐车同样的决定。 本课程最后总结讨论使用实际上来自动化数据问题解决过程的好处和坏处。
             Problem Solving with Big Data:
               name: 用大数据解决问题
-              description_student: This lesson covers how data is collected and used by a organizations to solve problems in the real world. The class looks at three scenarios that could be solved using data and brainstorms the types of data they would want to solve them and how they could collect the data.  Each scenario also includes a video about a real-world service that has solved a similar problem with data.
-              description_teacher: In this lesson, students look at how data is collected and used by organizations to solve problems in the real world. The lesson begins with a quick review of the data problem solving process they  explored in the last lesson. Then students are presented three scenarios that could be solved using data and brainstorm the types of data they would want to solve them and how they could collect the data. Each problem is designed to reflect a real-world service that exists. After brainstorming, students watch a video about a real-world service and record notes about what data is collected by the real-world service and how it is used. At the end of the lesson, students record whether data was provided actively by a user, was recorded passively, or is collected by sensors.
+              description_student: 本课程涵盖了数据收集的方法，以及它是如何被组织在现实世界中使用来解决问题的。 同学们将面对三个可以被解决的设定情景，并进行脑筋激荡来讨论他们要用来解决这些问题的数据种类，以及如何去收集数据。每个场景设定也都包含了一个视频，它是关于在现实世界里用数据来解决类似问题的服务案例。
+              description_teacher: 在本课程中，学生们将了解数据收集的方法以及它们在现实中是如何被组织用来解决问题的。 本课程开始的时候先快速回顾在上节课里探索的数据解决问题流程。然后，学生们将被教授用数据解决的三个场景设定。并进行头脑风暴来讨论他们要用什么样的数据来解决这些问题，以及如何收集这些数据。 每个问题都设计反映了真实世界里存在的服务案例。在经过头脑风暴后，学生们将观看讲述真实世界服务的视频，并记录在真实世界服务里是如何收集数据并如何使用的笔记。本课程的最后，学生们会记录数据是由客户主动提供的， 被动记录的，还是通过传感器收集的。
             Project - Solve a Data Problem:
               name: 项目- 解决数据问题
-              description_student: To conclude this unit the class designs ways to use data to make a recommendations or predictions to help solve a problem.  In the first several steps the class brainstorms problems, performs simple research, and defines a problem of their choosing. They then decide what kind of data they want to collect, how it could be collected, and how it could be used, before exchanging feedback and giving a final presentation.
-              description_teacher: To conclude this unit, students design a recommendation engine based on data that they collect and analyze from their classmates. After looking at an example of a recommendation app, students follow a project guide to complete this multi-day activity. In the first several steps, students choose what choice they want to help the user to make, what data they need to give the recommendation, create a survey, and collect information about their classmates' choices. They then interpret the data and use what they have learned to create the recommendation algorithm.  Last, they use their algorithms to make recommendations to a few classmates. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
+              description_student: 要结束此课程，班级学生必须设计出使用数据建议或预测来帮助解决问题的途径。最开始的步骤是让班级同学对问题进行头脑风暴，做简单的调研，并定义他们所选的问题。 然后，他们要在交换各自回馈以及做最后演示之前，决定他们要收集的数据类型， 收集方法，以及使用方法。
+              description_teacher: 要结束此单元，学生们要在他们所收集的数据和班级分析结果的基础上设计一个推荐引擎。在看完一个推荐应用程序的示范后， 学生们要参照项目指南来完成多天的活动目标。开始的几个步骤是让学生们选择他们要帮助用户做什么样的选择，运用什么数据来做推荐，创建一份调查，并收集全班的选择结果。然后，他们要分析数据并用他们所学到的知识来创建推荐算法。最后，他们要利用这些算法来给一些同学做推荐。在把他们的成果演示给整个班级之前， 学生们要相互进行审核，并对他们的项目做必要的修改。
             Representing Numbers:
-              name: Representing Numbers
-              description_student: This lesson introduces the binary number system.  With a set of cards that represent the place values in a binary (base-2) number system, the class turns bits "on" or "off" by turning cards face up and face down, then observes the numbers that result from these different patterns.  Eventually, the pattern is extended to a generic 4-bit system.
-              description_teacher: In this lesson, students learn about the binary number system.  With a set of cards that represent the place values in a binary (base-2) number system by a collection of dots, students turn bits "on" or "off" by turning cards face up and face down, then observe the numbers that result from these different patterns.  Eventually, students extend the pattern to a generic 4-bit system.
+              name: 表示数字
+              description_student: 本课程介绍二进制数字体系。利用一组牌来代表变数值在二进制数字体系里的位置，班级同学通过翻牌的正反面来“打开”或“关闭”比特（二进位制信息单位），然后观察从这些不同模式里得出的数字。最后，再把这些模式扩展为一个常用的4 比特进位体系。
+              description_teacher: 在本课程中， 学生们学习二进制体系。通过一系列的点，利用一组牌来代表变数值在二进制数字体系里的位置。学生们通过翻牌的正/反面来“打开”或"关闭“比特（二进制信息单位），然后观察这些不同模式里得出的数字。最后，学生们把这模式扩展为一个常用的4-比特体系。
             8-bit Numbers:
-              name: 8-bit Numbers
-              description_student: Students review the concept of binary numbers, and discuss that they need to know the bit-length of each number in order to decode a series of bits.  They then made a flippy-do, a paper manipulative that will help them to encode and decode 8-bit numbers (0-255).  After practicing with the flippy-do, students discuss how they could extend that standardization to the other types of data.
-              description_teacher: Students review the concept of binary numbers, and discuss that they need to know the bit-length of each number in order to decode a series of bits.  They then made a flippy-do, a paper manipulative that will help them to encode and decode 8-bit numbers (0-255).  After practicing with the flippy-do, students discuss how they could extend that standardization to the other types of data.
+              name: 8-比特数字
+              description_student: 学生们回顾二进制数字的概念，讨论他们必需知道每个数字的比特-长度以便解码一系列的比特（二进制信息单位）。然后，他们要制作一个flippy-do，一种可以帮助学生们编码和解码8-比特数字（0-255）的操作纸牌。在进行操作纸牌练习后，学生们要讨论他们要如何把这标准扩展到其他类型的数据上。
+              description_teacher: 学生们回顾二进制数字的概念，讨论他们必需知道每个数字的比特-长度以便解码一系列的比特（二进制信息单位）。然后，他们要制作一个flippy-do，一种可以帮助学生们编码和解码8-比特数字（0-255）的操作纸牌。在进行操作纸牌练习后，学生们要讨论他们要如何把这标准扩展到其他类型的数据上。
             Encryption:
               name: 加密
-              description_student: Students have a discussion on the different levels of security they would like for personal data.  Once the class has developed an understanding of the importance of privacy, they learn about the process of encrypting information by enciphering a note for a partner and deciphering the partner's note.  The class concludes with a discussion about the importance of both physical and digital security.
-              description_teacher: Students have a discussion on the different levels of security they would like for personal data.  Once the class has developed an understanding of the importance of privacy, they learn about the process of encrypting information by enciphering a note for a partner and deciphering the partner's note.  The class concludes with a discussion about the importance of both physical and digital security.
+              description_student: 学生们将讨论他们各自想要的不同级别的数据安全性。一旦全班对隐私权的重要性有了一定的共识后，他们将通过对相互伙伴间的信息进行加密和解密来学习加密信息的过程。最后学生们要讨论实体和数字安全的重要性。
+              description_teacher: 学生们将讨论他们各自想要的不同级别的数据安全性。一旦全班对隐私权的重要性有了一定的共识后，他们将通过对相互伙伴间的信息进行加密和解密来学习加密信息的过程。最后学生们要讨论实体和数字安全的重要性。
             Structuring Data:
               name: 构造数据
-              description_student: This lesson goes further into the interpretation of data, including cleaning and visualizing raw data sets.  The class first looks at the how presenting data in different ways can help people to understand it better.  After seeing how cleaning and visualization can help people make better decisions, the class looks at what parts of this process can be automated, and what need a human.
-              description_teacher: In this lesson, students go further into the collection and interpretation of data, including cleaning and visualizing raw data sets.  Students first look at the how presenting data in different ways can help people to understand it better.  They then visualize their own raw data set, in the context of a pizza topping survey, deciding what to do with data that does not easily fit into the visualization scheme that they have chosen.  Last, students look at what parts of this process can be automated, and what need a human to make decisions.
+              description_student: 班级同学进一步来学习包含清除和可视化原始数据设置的数据解密。首先，让班级同学来看不同数据的表现方法是如何帮助人们来更好地了解它。在了解完清除和可视化是如何帮助人们做更好的决定以后，同学们将查看该流程的哪些部分是可以自动化，哪些需要人力来完成。
+              description_teacher: 在本课程中，学生们要进一步学习包含原始数据设定的清除和可视数据的收集和解译。首先，学生们将看数据的不同表现方法是如何帮助人们更好地理解它。然后，他们将通过对比萨饼配料的调查来可视化他们自己的原始数据设置， 接着决定要如何处理那些无法轻易满足他们选定的可视化方案的数据。 最后，学生们将检查在这流程中有哪些部分是可以自动化，哪些需要人来做决定。
             Keeping Data Secret:
-              name: Keeping Data Secret
+              name: 数据保密
         csd3-old:
-          title: CSD Unit 3 (DEPRECATED)
+          title: CSD单元3（已弃用）
           description_audience: ''
-          description_short: 2016/2017 Draft of CSD Unit 3
-          description: This is the original draft of CSD Unit 3, released in the fall of 2016. Unless you have students currently using this course, you should instead use the updated version of this unit at studio.code.org/s/csd3 - this original draft will remain available until July 1, 2017.
+          description_short: 2016/2017 CSD 单元 3 草稿
+          description: 这是2016 年秋天发布的CSD 单元 3 的原始草案。 除非你现在有学生在使用该课程，你应该使用该单元在studio.code.org/s/csd3 里的更新版本- 该原始版本草案将被保存到2017 年7 月1 日。
           stages:
             Drawing in Game Lab:
               name: 在游戏实验室绘图
@@ -4967,10 +4973,10 @@ zh-CN:
             'Project: Design a Game':
               name: '项目: 设计游戏'
         csd1-old:
-          title: CSD Unit 1 (DEPRECATED)
+          title: CSD 单元 1 （已弃用）
           description_audience: ''
-          description_short: 2016/2017 Draft of CSD Unit 1
-          description: This is the original draft of CSD Unit 1, originally published in the fall of 2016. This version has been replaced with an updated unit at studio.code.org/s/csd1 and will only remain available until July 1, 2017.
+          description_short: CSD 单元 1 的2016/2017 草稿
+          description: 这是CSD 单元 1 的原始草稿，最早在2016 年秋天发表的。该版本已被在studio.code.org/s/csd1 里的更新版取代，并将只保留到2017 年 7 月1 日。
           stages:
             Intro to Problem Solving:
               name: 解决问题入门
@@ -5003,21 +5009,21 @@ zh-CN:
             Images in HTML:
               name: HTML 中的图像
             Exploring Websites:
-              name: Exploring Websites
+              name: 探索网站
             'Websites for Expression ':
-              name: 'Websites for Expression '
+              name: '网址表达式 '
             Intro to HTML:
-              name: Intro to HTML
+              name: HTML介绍
             Headers and Lists:
               name: 标题和列表
             Intellectual Property:
               name: 知识产权
             Images:
-              name: Images
+              name: 图片
             Clean Code and Debugging:
               name: 规整代码和调试
             Project - Multi-Page Websites:
-              name: Project - Multi-Page Websites
+              name: 项目- 多页面网站
             Styling Text with CSS:
               name: 使用 CSS 设置文本样式
             Styling Elements with CSS:
@@ -5025,13 +5031,13 @@ zh-CN:
             Sources and Search Engines:
               name: 来源和搜索引擎
             RGB Colors and Classes:
-              name: RGB Colors and Classes
+              name: RGB（红绿蓝） 颜色和分类
             Project - Personal Portfolio Website:
-              name: Project - Personal Portfolio Website
+              name: 项目- 个人文件集网站
             Headers:
-              name: Headers
+              name: 标头
             Intellectual Property and Images:
-              name: Intellectual Property and Images
+              name: 知识产权和图像
             Lists:
               name: 列表
         csd1-draft:
@@ -5049,17 +5055,17 @@ zh-CN:
             What is a Computer?:
               name: 什么是电脑？
             Inputs and Outputs:
-              name: Inputs and Outputs
+              name: 输入和输出
             Processing:
-              name: Processing
+              name: 正在处理中
             Storage:
-              name: Storage
+              name: 存储
             Apps and Problem Solving:
-              name: Apps and Problem Solving
+              name: 应用程序和问题解决
             Project - Propose an App:
-              name: Project - Propose an App
+              name: 项目- 提议一个应用程序
             Input and Output:
-              name: Input and Output
+              name: 输入和输出
         csd3-chapters:
           title: ''
           description_audience: ''
@@ -5111,15 +5117,15 @@ zh-CN:
             'Project: Design a Game':
               name: '项目: 设计游戏'
             'Chapter 1: Images and Animation':
-              name: 'Chapter 1: Images and Animation'
+              name: 第 1 章︰图像和动画
             'null':
               name: '空'
             temp:
-              name: temp
+              name: 临时
         coursef-ramp:
           stages:
             'Algorithms: Tangrams':
-              name: 'Algorithms: Tangrams'
+              name: 算法：七巧板
             Introduction:
               name: 介绍
             Ice Age Play Lab:
@@ -5127,16 +5133,16 @@ zh-CN:
             Functions in Farmer:
               name: 农夫中的函数
             Conditionals and Functions in Bee:
-              name: Conditionals and Functions in Bee
+              name: 蜜蜂里的条件和函数
           title: ''
           description_audience: ''
           description_short: ''
           description: ''
         csppostsurvey-staging:
-          title: "[Deprecated] CSP post survey staging area"
+          title: "[Deprecated] CSP发布调查的暂存区"
           description_audience: ''
           description_short: ''
-          description: Moved to /s/csp-post-survey.  Destory after 05.05.17
+          description: 移到 /s/csp-post-survey。在05.05.17后毁坏
           stages:
             CSP Student Post Survey Staging:
               name: 计算机科学原理学生调查后阶段
@@ -5148,8 +5154,8 @@ zh-CN:
               name: 绘制形状
             Drawing in Game Lab:
               name: 在游戏实验室绘图
-          title: CSD - Drawing in Game Lab
-          description_audience: Falmouth Middle School (Mike Harvey)
+          title: CSD- 在游戏实验室里绘图
+          description_audience: Falmouth中学(Mike Harvey)
           description_short: ''
           description: ''
         csppostsurvey:
@@ -5159,8 +5165,8 @@ zh-CN:
             Participate in a longitudinal study!:
               name: 参与纵向研究!
           title: 计算机科学原理学生课程后调查
-          description_audience: CSP Students
-          description_short: CSP Student Post Course Survey
+          description_audience: 计算机科学原理学生
+          description_short: 计算机科学原理学生课后调查
           description: 'Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 10 minutes to complete.  Your responses are private and anonymous.  '
         csp-post-survey:
           stages:
@@ -5171,8 +5177,8 @@ zh-CN:
             CSP Post-Course Survey:
               name: CSP Post-Course Survey
           title: 计算机科学原理学生课程后调查
-          description_audience: CSP Students
-          description_short: CSP Student Post Course Survey
+          description_audience: 计算机科学原理学生
+          description_short: 计算机科学原理学生课后调查
           description: 'Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 10 minutes to complete.  Your responses are private and anonymous.  '
         public-key-cryptography:
           stages:
@@ -5430,7 +5436,7 @@ zh-CN:
               description_student: You can do some amazing things when you use conditionals and loops together!
               description_teacher: 'In this lesson, students will be pairing together two key concepts: loops and conditionals. This set of puzzles bridges the gaps in understanding that occur when working on puzzles that use multiple kinds of blocks. By bringing two ideas together, students will create more complex code that shows both impressive creativity and critical thinking!'
             Conditionals & Loops in Farmer:
-              name: 农民的条件和循环
+              name: 收割机里的条件和循环
               description_student: It's not always clear when to use each conditional.  This lesson will help you get practice deciding what to do.
               description_teacher: Students will practice `while` loops, `until` loops, and `if / else` statements. All of these blocks use conditionals. By practicing all three, students will learn to write complex and flexible code.
             Digital Citizenship:
@@ -5467,7 +5473,7 @@ zh-CN:
         coursee:
           stages:
             'Algorithms: Tangrams':
-              name: 'Algorithms: Tangrams'
+              name: 算法：七巧板
             Introduction:
               name: Introduction to Online Puzzles
               description_student: This fast-paced introduction will give you the chance to practice most of the skills that you will need to solve the puzzles in this course.
@@ -5491,7 +5497,7 @@ zh-CN:
             Songwriting with Parameters:
               name: 通过输入参数来作曲。
             Conditionals and Functions in Bee:
-              name: Conditionals and Functions in Bee
+              name: 蜜蜂里的条件和函数
             Functions with Parameters in Artist:
               name: 在艺术家里有参数的函数
             Functions with Parameters in Bee:
@@ -5594,7 +5600,7 @@ zh-CN:
         coursef:
           stages:
             'Algorithms: Tangrams':
-              name: 'Algorithms: Tangrams'
+              name: 算法：七巧板
               description_student: Here you will learn about algorithms using puzzles called tangrams!
               description_teacher: This lesson shows us something important about algorithms. As long as you keep an algorithm simple, there are lots of ways to use it. However, if you want to make sure everyone produces the same outcome, then your algorithm needs more detail. Students will learn the difference between a detailed and general algorithm while playing with tangrams.
             Introduction:
@@ -5638,7 +5644,7 @@ zh-CN:
               description_student: You just might release the next big hit single! In this lesson, you will be learning what parameters are and how they make some fantastic songs!
               description_teacher: One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice, and how they can use those structures even when chunks of code are slightly different.
             Conditionals and Functions in Bee:
-              name: Conditionals and Functions in Bee
+              name: 蜜蜂里的条件和函数
               description_student: The bee needs your help again! Here you will be using functions to get nectar and make honey!
               description_teacher: 'This lesson teaches students how to create simple functions using our sophisticated “modal” function editor, preparing the way for them to incorporate parameters in future lessons. '
             Functions with Parameters in Artist:
@@ -5964,7 +5970,7 @@ zh-CN:
             Conditionals in Minecraft:
               name: Conditionals in Minecraft
             Conditionals & Loops in Farmer:
-              name: 农民的条件和循环
+              name: 农夫的条件和循环
             Envelope Variables:
               name: 封装变量
             Variables in Artist:
@@ -6296,7 +6302,7 @@ zh-CN:
             Conditionals & Loops in Maze:
               name: 迷宫里的条件和循环
             Conditionals & Loops in Farmer:
-              name: 农民的条件和循环
+              name: 农夫的条件和循环
             Digital Citizenship:
               name: 数字公民
             Build a Play Lab Game:
@@ -6364,7 +6370,7 @@ zh-CN:
             Conditionals in Minecraft:
               name: Conditionals in Minecraft
             Conditionals & Loops in Farmer:
-              name: 农民的条件和循环
+              name: 农夫的条件和循环
             'Variables: Envelope Variables':
               name: 'Variables: Envelope Variables'
             Variables in Artist:
@@ -6500,7 +6506,7 @@ zh-CN:
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             'Algorithms: Tangrams':
-              name: 'Algorithms: Tangrams'
+              name: 算法：七巧板
             Course E Introduction:
               name: Course E Introduction
             The Power of Words:
@@ -6554,9 +6560,9 @@ zh-CN:
             Representing Images:
               name: 表示图像
             Representing Numbers:
-              name: Representing Numbers
+              name: 表示数字
             8-bit Numbers:
-              name: 8-bit Numbers
+              name: 8-比特数字
             Combining Representations:
               name: 组合表示
             Project - Create a Representation:
@@ -6717,7 +6723,7 @@ zh-CN:
               name: Programming - Hour of Code
             Simple Encryption:
               name: 简单加密
-          title: PwC Access Your Potential curriculum
+          title: PwC's Access Your Potential curriculum
           description_audience: ''
           description_short: ''
           description: At PwC, we believe that all students have the potential to be tomorrow’s leaders and tech-driven workforce. Access Your Potential is our commitment to help close the opportunity gap by equipping young people, especially those from disadvantaged communities, with the financial, technology and career-selection skills they need to change the trajectory of their lives. As part of our commitment, we’re excited to launch our Access Your Potential middle school technology and careers curriculum.
@@ -6806,7 +6812,7 @@ zh-CN:
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
-          description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
+          description: "These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
         csp-create:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -6820,7 +6826,7 @@ zh-CN:
           title: Create - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
-          description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
+          description: "These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\\r\n\\r\nThis unit was last updated December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
         csp3-reovery:
           stages:
             Under the sea recovery:

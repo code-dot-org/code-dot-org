@@ -5,6 +5,7 @@ import {
   ControlLabel
 } from 'react-bootstrap';
 
+import {TextFields} from '@cdo/apps/generated/pd/teachercon1819RegistrationConstants';
 import UsPhoneNumberInput from "../form_components/UsPhoneNumberInput";
 import {isZipCode} from '@cdo/apps/util/formatValidation';
 
@@ -98,7 +99,7 @@ export default class TravelPlans extends Teachercon1819FormComponent {
 
         <FormGroup>
           {this.radioButtonsWithAdditionalTextFieldsFor("dietaryNeeds", {
-            "Food Allergy": "food_allergy_details"
+            [TextFields.foodAllergy]: "food_allergy_details"
           })}
         </FormGroup>
 
@@ -130,7 +131,7 @@ export default class TravelPlans extends Teachercon1819FormComponent {
             this.props.data.needHotel &&
               this.props.data.needHotel === 'Yes' &&
               this.radioButtonsWithAdditionalTextFieldsFor("needAda", {
-                "Other (please explain):": "ada_details"
+                [TextFields.otherPleaseExplain] : "ada_details"
               })
           }
         </FormGroup>

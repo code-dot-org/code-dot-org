@@ -761,11 +761,17 @@
         infinity_playlab_intro: Play Lab - Inleiding
         infinity_playlab_events: Play Lab - Gebeurtenissen
         infinity_playlab_repeat_forever: Play Lab - Oneindig Herhalen
+        csd_concept_how_computers_work: Introducing How Computers Work
         csd_concept_computer: Wat maakt een Computer, een Computer?
         csd_concept_binary_data: 'Hoe Computers Werken: Binair & Data'
+        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
+        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
+          & Output'
+        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
         csd_concept_search: Hoe zoeken werkt
         csd_external_amazon_data: Hoe Big Data Gebruikt Wordt Door Amazon's Aanbevelingssysteem
           Om Onze Levens Te Veranderen
+        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
         csd_external_waze_data: Waarom Zijn Zoveel Gebruikers Geobsedeerd Door Waze?
         csd_gamelab_animation_tab: Het tabblad Animatie
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1

@@ -94,7 +94,7 @@
   "censusInvalidEmail": "Ingresa un correo electrónico válido",
   "censusOtherCourse": "This school teaches other computing classes that do not include at least 20 hours of coding/computer programming. (For example, learning to use applications, computer literacy, web design, HTML/CSS, or other)",
   "censusOtherDescribe": "Other (please describe below)",
-  "censusOtherDescribeHere": "Other (please describe):",
+  "censusOtherDescribeHere": "Otro (por favor describir):",
   "censusPhysicalComputing": "Physical computing / robotics",
   "censusPledge": "I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all.",
   "censusRequired": "You are missing one or more required fields.",

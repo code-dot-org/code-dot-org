@@ -1423,6 +1423,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -8533,6 +8562,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -10175,6 +10207,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Uneix un bloc al bloc "quan faci clic", i prem "Executa".
         Fes clic a o toca la pantalla per moure en Flappy fins la meta.
+      flappy_11_instruction: Crea el teu propi joc Flappy. Pots canviar tots els aspectes
+        visuals i les normes, fins i tot la gravetat. Quan hagis acabat, fes clic
+        a Finalitza per fer que els teus amics hi juguin amb els seus mòbils.
       flappy_2_instruction: Ara hem afegit el terra. Afegeix un bloc al bloc "quan
         toqui el terra". El teu codi necessita un "fi del joc" quan Flappy xoqui.
       flappy_3_instruction: El bloc "En executar" et permet executar codi quan comença
@@ -10195,9 +10230,6 @@
         quan tinguin lloc altres esdeveniments, per exemple, quan superi un obstacle.
       flappy_9_instruction: Per embolicar-ho, quan es xoqui amb un obstable, en lloc
         d'acabar el joc prova de posar el marcador a zero.
-      flappy_11_instruction: Crea el teu propi joc Flappy. Pots canviar tots els aspectes
-        visuals i les normes, fins i tot la gravetat. Quan hagis acabat, fes clic
-        a Finalitza per fer que els teus amics hi juguin amb els seus mòbils.
       frozen circle function in circle_instruction: Ara anem a crear 20 cercles que
         es superposin, girant 18 graus entre cada cercle.
       frozen circle function with parameter_instruction: Aquí tens un bloc "Crea un
