@@ -162,7 +162,7 @@ def get_url(year, state)
     return "#{ARCHIVED_BASE_URL}/#{year}/#{state}_Summary_#{year.to_s[2..3]}.xls"
   end
 
-  if year == 2009 || year == 2010
+  if [2009, 2010].include? year
     state.tr!(' ', '_')
     state.upcase!
     return "#{ARCHIVED_BASE_URL}/#{year}/#{state}_Summary_#{year.to_s[2..3]}.xls"
@@ -201,7 +201,7 @@ def get_url(year, state)
     return "http://media.collegeboard.com/digitalServices/misc/ap/#{state}-summary-#{year}.xlsx"
   end
 
-  if year == 2016 || year == 2017
+  if [2016, 2017].include? year
     state = 'District of Columbia' if state == 'DC'
     state.tr!(' ', '-')
     state.downcase!
