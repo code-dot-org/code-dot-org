@@ -68,8 +68,8 @@ export default class Joining extends Teachercon1819FormComponent {
           </ul>
           {this.radioButtonsFor("teacherAcceptSeat")}
           {(
-            this.props.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions.withdrawDate ||
-            this.props.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions.withdrawOther
+            this.props.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions.waitlistDate ||
+            this.props.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions.waitlistOther
           ) &&
             <FormGroup>
               <p>
