@@ -1736,6 +1736,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -8890,6 +8919,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -10534,6 +10566,10 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: '"basanda" blokuna bir blok əlavə edin və "İcra et" düyməsini
         sıxın. Ekrana basmaqla Qanadlını hədəfə çatdırın.'
+      flappy_11_instruction: "Öz Qanadlı oyununuzu düzəldin. Siz bütün görüntüləri
+        və qaydaları dəyişə bilərsiniz, hətta yerin cazibə qüvvəsini belə. Bitirdiyinizdə
+        Son düyməsini basın və oyunu paylaşın ki, dostlarınız da sizin oyununuzu sınaqdan
+        keçirsinlər."
       flappy_2_instruction: İndi biz yer səthi də əlavə etmişik. "yerə düşəndə" blokuna
         bir blok əlavə edin. Sizin kodunuz gərək Qanadlı düşəndə "oyunu bitir"sin.
       flappy_3_instruction: '"İcra etdikdə" bloku imkan verir ki, oyun başlayanda
@@ -10554,10 +10590,6 @@
         TƏSADÜFİ səhnə təyin etməyi yoxlayın.
       flappy_9_instruction: "İşləri qarışdırmaq üçün hansısa maneəyə deyəndə oyunu
         bitirmək yerinə xalı 0 təyin etməyi yoxlayın."
-      flappy_11_instruction: "Öz Qanadlı oyununuzu düzəldin. Siz bütün görüntüləri
-        və qaydaları dəyişə bilərsiniz, hətta yerin cazibə qüvvəsini belə. Bitirdiyinizdə
-        Son düyməsini basın və oyunu paylaşın ki, dostlarınız da sizin oyununuzu sınaqdan
-        keçirsinlər."
       frozen circle function in circle_instruction: |-
         Now let's create 20 overlapping
         circles, turning 18 degrees between each circle.

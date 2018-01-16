@@ -1319,6 +1319,35 @@
         için buraya tıklayın) kaşları Ekle
       CSD U5 black white images pixelation 5_instruction: "İstediğini çiz"
       CSD U5 black white images pixelation_instruction: 0 ve 1 yazarak X şeklini tamamla
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -7705,6 +7734,9 @@
       courseC_harvester_loops_challenge1a_instruction: Bütün mısırları topla.
       courseC_harvester_loops_challenge2_instruction: Tüm marulları topla. Ağaçlardan
         ve tarlalardan sakın!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: Scrat'in meşe palamuduna ulaşması için
         kodu düzelt.
       courseC_maze_debugging10_instruction: |-
@@ -9152,6 +9184,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: '"Tıklandığında" bloğuna bir blok ekleyin sonra "Çalıştır"
         a basın. Flappy'' yi hedefe hareket ettirmek için tıklayın ya da ekrana dokunun.'
+      flappy_11_instruction: Kendi Flappy oyununuzu oluşturun. Tüm görünümü ve kuralları
+        hatta yer çekimini değiştirebilirsiniz. Bitirdiğinizde, Bitir düğmesine tıklayıp,
+        arkadaşlarınızın oyununuzu telefonlarında denemelerine izin verin.
       flappy_2_instruction: Şimdi biraz zemin ekledik. "Zemine çarptığında" bloğuna
         bir blok ekleyin. Flappy çarptığında 'OYUNU BİTİR' komutunu ihtiyaç var.
       flappy_3_instruction: '"Çalışıtığı zaman" bloğu oyun başladığında kodlarınızın
@@ -9171,9 +9206,6 @@
         geçince.
       flappy_9_instruction: "İşleri karıştırmak için, bir engele çarptığında, oyunu
         bitirmek yerine skoru 0 yapmayı deneyin."
-      flappy_11_instruction: Kendi Flappy oyununuzu oluşturun. Tüm görünümü ve kuralları
-        hatta yer çekimini değiştirebilirsiniz. Bitirdiğinizde, Bitir düğmesine tıklayıp,
-        arkadaşlarınızın oyununuzu telefonlarında denemelerine izin verin.
       frozen circle function in circle_instruction: "Şimdi herbirini çizdikten sonra
         18 derece bırakacağınız 20 tane çember oluşturun."
       frozen circle function with parameter_instruction: '"Çember oluştur" "create

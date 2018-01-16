@@ -4300,6 +4300,7 @@
           重复运用这个曲折的模式两次就可以只用20 模块来完成这个关卡 ![] (https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM 复制. png)
         courseC_harvester_loops_challenge2_d: "这种螺旋模式只要18块编码! ![] (https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52
           PM. png)"
+      courseC_harvester_loops_forVid_authored_hint: []
       courseC_maze_debugging1_authored_hint:
         courseC_maze_debugging1_a: |-
           - Does everything work after the first step?

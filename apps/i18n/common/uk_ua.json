@@ -1,7 +1,7 @@
 {
-  "activity": "Activity",
+  "activity": "Активність",
   "actions": "Дії",
-  "addRemoveCleverClassrooms": "Visit https://clever.com/ and confirm your classroom is connected to Code.org.",
+  "addRemoveCleverClassrooms": "Перейдіть за посиланням https://clever.com/ та підтвердіть, що Ваш клас під'єднано до Code.org.",
   "addRemoveGoogleClassrooms": "Visit https://classroom.google.com/ to add and remove classrooms.",
   "addSectionName": "Enter a name for your section that will help you remember which classroom it is for. Your students will also be able to see this name.",
   "addSectionNameHint": "e.g., Intro to CS - Period 2",

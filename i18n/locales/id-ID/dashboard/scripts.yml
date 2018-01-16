@@ -48,7 +48,7 @@ id:
           title: Jalur 2
           description: Kursus 2 dirancang untuk siswa yang dapat membaca dan sebelumnya tidak memiliki pengalaman pemrograman. Dalam kursus ini siswa akan membuat program untuk memecahkan masalah dan mengembangkan permainan interaktif atau mereka dapat berbagi cerita. Direkomendasikan untuk kelas 2-5.
           description_short: Kursus 2 dirancang untuk siswa-siswa yang dapat membaca.
-          description_audience: Ages 6+ (reading required)
+          description_audience: Umur 6+ (membaca diperlukan)
           stages:
             'Artist: Debugging':
               name: 'Artis: Debugging'
@@ -90,7 +90,7 @@ id:
               name: Digital Footprint Kamu
         course3:
           title: Kursus 3
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          description: Kursus 3 dirancang untuk siswa yang telah mengambil kursus 2. Siswa akan menggali lebih dalam topik pemrograman yang diperkenalkan dalam kursus sebelumnya untuk membuat solusi yang fleksibel untuk beberapa masalah yang lebih kompleks. Pada akhir kursus ini, siswa mwmbuat cerita interaktif dan permainan mereka yang dapat di bagikan dengan siapa pun. Direkomendasikan untuk kelas 4-5.
           description_short: Kursus 3 merupakan tindak lanjut ke kursus 2.
           description_audience: Usia 8 + (setelah kursus 2)
           stages:
@@ -338,15 +338,15 @@ id:
             Next Steps:
               name: Langkah berikutnya
             'Programming Concept: Conditionals':
-              name: 'Programming Concept: Conditionals'
+              name: 'Konsep pemrograman: Bersyarat'
             'Programming Concept: Events':
-              name: 'Programming Concept: Events'
+              name: 'Konsep pemrograman: Peristiwa'
             'Programming Concept: Functions':
               name: 'Konsep pemrograman: fungsi'
             'Programming Concept: Loops':
-              name: 'Programming Concept: Loops'
+              name: 'Konsep pemrograman: Loop'
             Reflection:
-              name: Reflection
+              name: Bayangan
             Teacher Dashboard:
               name: Dashboard untuk Guru
             Unplugged lessons:
@@ -362,23 +362,23 @@ id:
             Automatic DNS node:
               name: Automatic DNS node
             Broadcasting messages:
-              name: Broadcasting messages
+              name: Pesan siaran
             Internet Simulator Freeplay:
-              name: Internet Simulator Freeplay
+              name: Simulator Internet Freeplay
             Manual DNS:
               name: Manual DNS
             Overview and Setup Instructions:
-              name: Overview and Setup Instructions
+              name: Peninjauan dan petunjuk pemasangan
             Packets and Reliability:
-              name: Packets and Reliability
+              name: Paket dan dapat dipercaya
             Peer to Peer - Sending Ascii:
               name: Peer to Peer - Sending Ascii
             Peer to Peer - Sending Bits on a Shared Wire:
               name: Peer to Peer - Sending Bits on a Shared Wire
             Peer to Peer - Sending Numbers:
-              name: Peer to Peer - Sending Numbers
+              name: Peer to Peer - Mengirim Nomor
             Routers and addresses:
-              name: Routers and addresses
+              name: Router dan alamat
         pixelation:
           title: Pixelation / pikselasi
           description: Create images with bits and bytes.
@@ -386,15 +386,15 @@ id:
           description_audience: ''
           stages:
             Black & White Pixelation Freeplay:
-              name: Black & White Pixelation Freeplay
+              name: Hitam & Putih Pixelation Freeplay
             Black & White Pixelation Tutorial:
-              name: Black & White Pixelation Tutorial
+              name: Tutorial Pixelation Hitam & Putih
             Color Pixelation Examples:
-              name: Color Pixelation Examples
+              name: Contoh-contoh warna Pixelation
             Color Pixelation Freeplay:
-              name: Color Pixelation Freeplay
+              name: Warna Pixelation Freeplay
             Color Pixelation Tutorial:
-              name: Color Pixelation Tutorial
+              name: Tutorial warna Pixelation
         20-hour:
           title: Pengenalan Kursus 20 jam
           description: Kursus selama 20 jam ini memperkenalkan ilmu komputer tingkat dasar dan konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan di ruang kelas untuk sekolah dasar dan menengah, tapi tetap menyenangkan dipelajari untuk semua usia.
@@ -527,9 +527,9 @@ id:
             Binary Numbers:
               name: Bilangan Biner
             Bytes and File Sizes:
-              name: Bytes and File Sizes
+              name: Byte dan ukuran file
             Encode a Complex Thing:
-              name: Encode an Experience
+              name: Menyandikan pengalaman
             Encoding B&W Images:
               name: Pengkodean gambar B&W
             Encoding Color Images:
@@ -539,23 +539,23 @@ id:
             Encoding and Sending Text:
               name: Encoding dan mengirimkan teks
             Lossy Compression and File Formats:
-              name: Lossy Compression and File Formats
+              name: Kompresi Lossy dan Format File
             Number Systems:
               name: Sistem nomor
             Personal Innovations:
-              name: Personal Innovations
+              name: Inovasi Pribadi
             Sending Binary Messages:
               name: Mengirim pesan biner
             Sending Binary Messages with the Internet Simulator:
-              name: Sending Binary Messages with the Internet Simulator
+              name: Mengirim Pesan Biner dengan Internet Simulator
             Sending Bits in the Real World:
               name: Mengirimkan bit di dunia nyata
             Sending Complex Messages:
-              name: Sending Complex Messages
+              name: Mengirim Pesan Kompleks
             Sending Formatted Text:
               name: Mengirimkan teks yang diformat
             Sending Numbers:
-              name: Sending Numbers
+              name: Mengirim Nomor
             Text Compression:
               name: kompresi Teks
           description_audience: ''
@@ -566,7 +566,7 @@ id:
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Peninjauan Kursus
             Evaluation Blocks:
               name: Blok Evaluasi
             Introduction to PD:
@@ -576,7 +576,7 @@ id:
             Teacher Dashboard:
               name: Dashboard untuk Guru
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: Mengapa Ilmu Komputer termasuk dalam Aljabar
         algPDmiami:
           title: Ilmu komputer dalam aljabar PD
           description: Mengajarkan aljabar melalui pemrograman fungsional
@@ -619,7 +619,7 @@ id:
           description_short: 'Phase 1: Online Introduction for CSP'
           stages:
             Exploring CSP Instructional Materials:
-              name: Exploring CSP Instructional Materials
+              name: Menjelajahi CSP Bahan Pengajaran
             Growth Mindset:
               name: pertumbuhan Pola pikir
             Impact of Computer Science:
@@ -631,7 +631,7 @@ id:
             Teaching Strategies:
               name: Strategi pengajaran
             What is CSP?:
-              name: What is CSP?
+              name: Apa itu CSP?
         CSPLessonSamples:
           title: sampel pelajaran CSP
           description: Lesson samples for CSP
@@ -666,29 +666,29 @@ id:
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
-              name: Agent Based Modeling of Complex Adaptive Systems
+              name: Agen Berasisi Pemodelan dari Sistem Adaptif Kompleks
             Computational Thinking And The Framework For K-12 Science Education:
-              name: Computational Thinking And The Framework For K-12 Science Education
+              name: Komputasi Pemikiran dan Kerangka Kerja Untuk k-12 Ilmu Pendidikan
             Dispositions and Classroom Culture:
-              name: Dispositions and Classroom Culture
+              name: Watak dan Budaya Kelas
             Introduction to Complex Adaptive Systems:
-              name: Introduction to Complex Adaptive Systems
+              name: Pengenalan untuk Sistem Adaptif Kompleks
             Introduction to Computational Science:
-              name: Introduction to Computational Science
+              name: Pengenalan untuk Ilmu Komputasi
             Introduction to PD:
               name: Pengantar PD
             Introduction to StarLogo Nova:
-              name: Introduction to StarLogo Nova
+              name: Pengenalan Untuk StarLogo Nova
             Post-Survey:
               name: Post-Survey
             The Tutorial:
-              name: The Tutorial
+              name: Tutorial
             Using Computer Models in Science:
-              name: Using Computer Models in Science
+              name: Menggunakan model komputer dalam sains
             Using Models in the Classroom:
-              name: Using Models in the Classroom
+              name: Menggunakan model di dalam kelas
             What to Expect:
-              name: What to Expect
+              name: Apa yang diharapkan
         rbo-reference:
           title: rbo-reference
           description: rbo-reference
@@ -703,7 +703,7 @@ id:
           description_short: Test Wednesay
           stages:
             PDK5 Intro:
-              name: PDK5 Intro
+              name: Introduksi PDK5
         cspunit3:
           title: "(old) CS Principles Unit 3 - Programming"
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -713,13 +713,13 @@ id:
             APIs and Function Parameters:
               name: APIs and Function Parameters
             Beyond Buttons Toward Apps:
-              name: Beyond Buttons Toward Apps
+              name: Di luar Tombo; Menuju Apps
             Canvas and Arrays in Apps:
-              name: Canvas and Arrays in Apps
+              name: Kanvas dan Array dalam Apps
             Compound Conditional Logic:
-              name: Compound Conditional Logic
+              name: Senyawa Logika Kondisional
             Controlling Memory with Variables:
-              name: Controlling Memory with Variables
+              name: Mengontrol Memori dengan Variabel
             Creating Functions:
               name: Fungsi membuat
             Creating functions with Parameters:
@@ -739,7 +739,7 @@ id:
             Introducing Design Mode:
               name: Introducing Design Mode
             Introduction to Arrays:
-              name: Introduction to Arrays
+              name: Pengenalan untuk array
             Introduction to Conditional Logic:
               name: Introduction to Conditional Logic
             Introduction to Digital Assistants:
@@ -765,7 +765,7 @@ id:
             Using Simple Commands:
               name: Using Simple Commands
             Using Variables in Apps:
-              name: Using Variables in Apps
+              name: Menggunakan variabel dalam aplikasi
             While Loops:
               name: Perulangan Selagi
         algebraPD3:
@@ -777,7 +777,7 @@ id:
             Computer Science Pedagogy:
               name: ilmu mendidik/pedagogi ilmu pengetahuan Komputer
             Course Overview:
-              name: Course Overview
+              name: Peninjauan Kursus
             Evaluation Blocks:
               name: Blok Evaluasi
             Next Steps:
@@ -787,7 +787,7 @@ id:
             Teacher Dashboard:
               name: Dashboard untuk Guru
             The Big Game:
-              name: The Big Game
+              name: Permainan Besar
             The Design Recipe:
               name: Resep desain
         ECSPD-NexTech:
@@ -834,7 +834,7 @@ id:
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Peninjauan Kursus
             Evaluation Blocks:
               name: Blok Evaluasi
             Introduction to PD:
@@ -844,7 +844,7 @@ id:
             Teacher Dashboard:
               name: Dashboard untuk Guru
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: Mengapa Ilmu Komputer termasuk dalam Aljabar
         algebraPD-iZone:
           title: Ilmu komputer dalam aljabar PD
           description: Mengajarkan pemrograman fungsional melalui aljabar
@@ -853,7 +853,7 @@ id:
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Peninjauan Kursus
             Evaluation Blocks:
               name: Blok Evaluasi
             Introduction to PD:
@@ -863,7 +863,7 @@ id:
             Teacher Dashboard:
               name: Dashboard untuk Guru
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: Mengapa Ilmu Komputer termasuk dalam Aljabar
         sciencePD-NexTech:
           title: Computer Science in Science PD
           description: Mengajarkan pemrograman fungsional melalui aljabar
@@ -872,29 +872,29 @@ id:
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
-              name: Agent Based Modeling of Complex Adaptive Systems
+              name: Agen Berasisi Pemodelan dari Sistem Adaptif Kompleks
             Computational Thinking And The Framework For K-12 Science Education:
-              name: Computational Thinking And The Framework For K-12 Science Education
+              name: Komputasi Pemikiran dan Kerangka Kerja Untuk k-12 Ilmu Pendidikan
             Dispositions and Classroom Culture:
-              name: Dispositions and Classroom Culture
+              name: Watak dan Budaya Kelas
             Introduction to Complex Adaptive Systems:
-              name: Introduction to Complex Adaptive Systems
+              name: Pengenalan untuk Sistem Adaptif Kompleks
             Introduction to Computational Science:
-              name: Introduction to Computational Science
+              name: Pengenalan untuk Ilmu Komputasi
             Introduction to PD:
               name: Pengantar PD
             Introduction to StarLogo Nova:
-              name: Introduction to StarLogo Nova
+              name: Pengenalan Untuk StarLogo Nova
             Post-Survey:
               name: Post-Survey
             The Tutorial:
-              name: The Tutorial
+              name: Tutorial
             Using Computer Models in Science:
-              name: Using Computer Models in Science
+              name: Menggunakan model komputer dalam sains
             Using Models in the Classroom:
-              name: Using Models in the Classroom
+              name: Menggunakan model di dalam kelas
             What to Expect:
-              name: What to Expect
+              name: Apa yang diharapkan
         sciencePD-iZone:
           title: Computer Science in Science PD
           description: Mengajarkan pemrograman fungsional melalui aljabar
@@ -903,29 +903,29 @@ id:
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
-              name: Agent Based Modeling of Complex Adaptive Systems
+              name: Agen Berasisi Pemodelan dari Sistem Adaptif Kompleks
             Computational Thinking And The Framework For K-12 Science Education:
-              name: Computational Thinking And The Framework For K-12 Science Education
+              name: Komputasi Pemikiran dan Kerangka Kerja Untuk k-12 Ilmu Pendidikan
             Dispositions and Classroom Culture:
-              name: Dispositions and Classroom Culture
+              name: Watak dan Budaya Kelas
             Introduction to Complex Adaptive Systems:
-              name: Introduction to Complex Adaptive Systems
+              name: Pengenalan untuk Sistem Adaptif Kompleks
             Introduction to Computational Science:
-              name: Introduction to Computational Science
+              name: Pengenalan untuk Ilmu Komputasi
             Introduction to PD:
               name: Pengantar PD
             Introduction to StarLogo Nova:
-              name: Introduction to StarLogo Nova
+              name: Pengenalan Untuk StarLogo Nova
             Post-Survey:
               name: Post-Survey
             The Tutorial:
-              name: The Tutorial
+              name: Tutorial
             Using Computer Models in Science:
-              name: Using Computer Models in Science
+              name: Menggunakan model komputer dalam sains
             Using Models in the Classroom:
-              name: Using Models in the Classroom
+              name: Menggunakan model di dalam kelas
             What to Expect:
-              name: What to Expect
+              name: Apa yang diharapkan
         sciencePD2:
           title: 'CS in Science: Part 2'
           description: Mengajarkan pemrograman fungsional melalui aljabar
@@ -936,11 +936,11 @@ id:
             Epidemic Model Extensions:
               name: Epidemic Model Extensions
             Review StarLogo Nova:
-              name: Review StarLogo Nova
+              name: Tinjauan StarLogo Nova
             Revisiting Agent Movement:
-              name: Revisiting Agent Movement
+              name: Meninjau kembali gerakan agen
             Thinking Ahead to Implementation:
-              name: Thinking Ahead to Implementation
+              name: Berfikir ke depan untuk pelaksaan
             Welcome!:
               name: Selamat Datang!
             Wrap-Up:
@@ -953,9 +953,9 @@ id:
             Decode and Share:
               name: Decode and Share
             Mystery Model:
-              name: Mystery Model
+              name: Misteri model
             Welcome Back!:
-              name: Welcome Back!
+              name: Selamat datang kembali!
         Testing:
           title: Testing
           description: Testing
@@ -971,7 +971,7 @@ id:
             Algorithms Detour - Hard Problems TSP:
               name: Hard Problems - The Traveling Salesperson Problem
             Algorithms Detour - How Routers Learn:
-              name: How Routers Learn
+              name: Bagaimana belajar router
             Algorithms Detour - Minimum Spanning Tree:
               name: Algorithms Detour - Minimum Spanning Tree
             Algorithms Detour - Shortest Path:
@@ -983,31 +983,31 @@ id:
             DNS in the Real World:
               name: DNS in the Real World
             Encryption Algorithms:
-              name: Keys and Passwords
+              name: Kunci dan password
             HTTP and Abstraction:
               name: HTTP and Abstraction on the Internet
             Invent an Addressing Protocol:
-              name: Invent an Addressing Protocol
+              name: Menciptakan sebuah protokol pengelamatan
             One Way Functions - Ice Cream Vans:
               name: One-Way Functions - The WiFi Hotspot Problem
             Packets and Making a Reliable Internet:
-              name: Packets and Making a Reliable Internet
+              name: Paket dan membuat internet yang dapat diandalkan
             Practice PT - Cybersecurity Innovations:
-              name: Practice PT - Cybersecurity Innovations
+              name: Praktek PT - Keamanan cyber inovasi
             Practice PT - The Internet and Society:
-              name: Practice PT - The Internet and Society
+              name: Praktek PT - Internet dan Masyarakat
             Public Key Crypto:
-              name: Public Key Cryptography
+              name: Kriptografi Kunci Umum
             Routers and Redundancy:
-              name: Routers and Redundancy
+              name: Router dan Kualitas
             Tell Me a Secret - Encrypting Text:
-              name: The Need for Encryption
+              name: Dibutuhkan untuk Enkripsi
             The Internet:
               name: Internet
             The Need for Addressing:
-              name: The Need for Addressing
+              name: Dibutuhkan untuk Pengalamatan
             The Need for DNS:
-              name: The Need for DNS
+              name: Dibutuhkan untuk DNS
           description_audience: ''
         algebraPD2a:
           title: Ilmu komputer dalam aljabar PD
@@ -1016,15 +1016,15 @@ id:
           description_audience: ''
           stages:
             Big Game - Animation:
-              name: Big Game - Animation
+              name: Permainan Besar - Animasi
             Big Game - Booleans:
-              name: Big Game - Booleans
+              name: Permainan Besar - Boolean
             Big Game - Collision Detection:
-              name: Big Game - Collision Detection
+              name: Permainan Besar - Pendeteksi Benturan
             Big Game - Player Movement:
-              name: Big Game - Player Movement
+              name: Permainan Besar - Gerakan Pemain
             Big Game - Variables:
-              name: Big Game - Variables
+              name: Permainan Besar - Variabel
             Booleans:
               name: Boolean
             Defining Variables:
@@ -1050,9 +1050,9 @@ id:
           description_audience: ''
           stages:
             Anonymous student survey:
-              name: Anonymous student survey
+              name: Survei siswa tanpa nama
             Anonymous student survey 2:
-              name: Anonymous student survey 2
+              name: Survei siswa tanpa nama 2
             AppLab:
               name: AppLab
             Artist:
@@ -1064,19 +1064,19 @@ id:
             CSinA:
               name: CSinA
             Farmer:
-              name: Farmer
+              name: Petani
             Flappy:
               name: Flappy
             Free Response:
-              name: Free Response
+              name: Respon Gratis
             Gamelab:
               name: Gamelab
             Jigsaw:
               name: Teka-teki
             Long assessment:
-              name: Long assessment
+              name: Penilaian panjang
             Markdown Details:
-              name: Markdown Details
+              name: Rincian Penurunan harga
             Match:
               name: Pertandingan
             Maze:
@@ -1098,13 +1098,13 @@ id:
             PlayLab:
               name: PlayLab
             Public Key Cryptography:
-              name: Public Key Cryptography
+              name: Kriptografi Kunci Umum
             Rich long assessment:
-              name: Rich long assessment
+              name: Kaya penilaian panjang
             Sample PLC Assessment:
-              name: Sample PLC Assessment
+              name: Penilaian Sampel PLC
             Star wars:
-              name: Star wars
+              name: Perang bintang
             Studio:
               name: Studio
             Swapped Levels:
@@ -1116,9 +1116,9 @@ id:
             Web Lab:
               name: Web lab
             Multi page assessment:
-              name: Multi page assessment
+              name: Multi halaman penilaian
             Single page assessment:
-              name: Single page assessment
+              name: Satu halaman penilaian
             Standalone video:
               name: Standalone video
             Curriculum Reference:
@@ -1130,11 +1130,11 @@ id:
           description_audience: ''
           stages:
             Best Practices for Teaching Computer Science:
-              name: Best Practices for Teaching Computer Science
+              name: Praktek-praktek Terbaik untuk Pengajaran Ilmu Komputer
             Booleans:
               name: Boolean
             Course Overview:
-              name: Course Overview
+              name: Peninjauan Kursus
             Defining Functions:
               name: Mendefinisikan fungsi
             Defining Variables:
@@ -1162,13 +1162,13 @@ id:
             App Lab:
               name: Laboratorium Aplikasi
             Broadcast Lesson:
-              name: Broadcast Lesson
+              name: Pelajaran siaran
             Internet Simulator:
               name: Simulator Internet
             Pixelation Widget:
               name: Pixelation Widget
             Text Compression Lesson:
-              name: Text Compression Lesson
+              name: Pelajaran Teks Kompresi
             Text Compression Widget:
               name: Text Compression Widget
             Welcome!:
@@ -1180,27 +1180,27 @@ id:
           description_audience: ''
           stages:
             Best Practices for Teaching Computer Science:
-              name: Best Practices for Teaching Computer Science
+              name: Praktek-praktek Terbaik untuk Pengajaran Ilmu Komputer
             Computer Science Fundamentals:
-              name: Computer Science Fundamentals
+              name: Dasar-dasar Ilmu Komputer
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Looking Ahead:
-              name: Looking Ahead
+              name: Melihat ke depan
             'Mastering the Basics: Conditionals':
-              name: 'Mastering the Basics: Conditionals'
+              name: 'Menguasai Dasar-dasar: Kondisional'
             'Mastering the Basics: Events':
-              name: 'Mastering the Basics: Events'
+              name: 'Menguasai Dasar-dasar: Peristiwa'
             'Mastering the Basics: Functions':
-              name: 'Mastering the Basics: Functions'
+              name: 'Menguasai Dasar-dasar: Fungsi'
             'Mastering the Basics: Loops':
-              name: 'Mastering the Basics: Loops'
+              name: 'Menguasai Dasar-dasar: Loop '
             'Mastering the Basics: Sequencing':
-              name: 'Mastering the Basics: Sequencing'
+              name: 'Menguasai Dasar-dasar: Pengurutan'
             Next Steps:
               name: Langkah berikutnya
             Planning:
-              name: Planning
+              name: Perencanaan
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: Mengajarkan pemrograman fungsional melalui aljabar
@@ -1208,25 +1208,23 @@ id:
           description_audience: ''
           stages:
             Unit 1, Day 10 Telling a Story with Data:
-              name: Unit 1, Day 10 Telling a Story with Data
+              name: Unit 1, Hari 10 menceritakan sebuah cerita dengan data
             Unit 1, Day 11-14 Data Modeling and Design:
-              name: Unit 1, Day 11-14 Data Modeling and Design
+              name: Unit 1, Hari 11-14 Pemodelan dan Desain Data
             Unit 1, Day 15-16 Computer Programs and Following Directions:
-              name: Unit 1, Day 15-16 Computer Programs and Following Directions
+              name: Unit 1, Hari 15-16 Program Komputer dan Mengikuti Petunjuk 
             Unit 1, Day 17-19 What Is Intelligence?:
-              name: Unit 1, Day 17-19 What Is Intelligence?
+              name: Unit 1, Hari 17-19 Apa itu Kecerdasan?
             0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Unit 1, Hari 1-2 Apa itu Komputer?
             1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Unit 1, Hari 1-2 Apa itu Komputer?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2:
               name: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
-              name: Unit 1, Days 8-9 Impact of Computers and Communication
+              name: Unit 1, Hari 8-9 dampak komputer dan komunikasi
             Welcome!:
               name: Selamat Datang!
             Wrap-up:
@@ -1239,7 +1237,7 @@ id:
             Equity PD:
               name: Equity PD
             Necessary Background:
-              name: Necessary Background
+              name: Latar belakang dibutuhkan
         algebraPD2:
           title: CS in Algebra Part 2
           description: Mengajarkan pemrograman fungsional melalui aljabar
@@ -1247,13 +1245,13 @@ id:
           description_audience: ''
           stages:
             Lesson Prep:
-              name: Lesson Prep
+              name: Persiapan pelajaran
             Teacher Dashboard:
               name: Dashboard untuk Guru
             Teaching with Puzzles:
-              name: Teaching with Puzzles
+              name: Mengajar dengan teka-teki
             Teaching with the Design Recipe:
-              name: Teaching with the Design Recipe
+              name: Mengajar dengan resep desain
             The Design Recipe:
               name: Resep desain
             Welcome!:
@@ -1265,15 +1263,15 @@ id:
           description_audience: ''
           stages:
             Advanced StarLogo Nova:
-              name: Advanced StarLogo Nova
+              name: Maju StarLogo Nova
             Remixing Phases 1 and 2:
-              name: Remixing Phases 1 and 2
+              name: Meremix tahap 1 dan 2
             Review StarLogo Nova:
-              name: Review StarLogo Nova
+              name: Tinjauan StarLogo Nova
             Reviewing the Modules:
-              name: Reviewing the Modules
+              name: Meninjau modul
             Thinking Ahead to Implementation:
-              name: Thinking Ahead to Implementation
+              name: Berfikir ke depan untuk pelaksaan
             Welcome!:
               name: Selamat Datang!
             Wrap-Up:
@@ -1287,7 +1285,7 @@ id:
             Code.org Equity PD:
               name: Code.org Equity PD
             Necessary Background:
-              name: Necessary Background
+              name: Latar belakang dibutuhkan
         science-PD2:
           title: Computer Science in Science PD Phase 2b
           description: Mengajarkan pemrograman fungsional melalui aljabar
@@ -1295,15 +1293,15 @@ id:
           description_audience: ''
           stages:
             Advanced StarLogo Nova:
-              name: Advanced StarLogo Nova
+              name: Maju StarLogo Nova
             Remixing Phases 1 and 2:
-              name: Remixing Phases 1 and 2
+              name: Meremix tahap 1 dan 2
             Review StarLogo Nova:
-              name: Review StarLogo Nova
+              name: Tinjauan StarLogo Nova
             Reviewing the Modules:
-              name: Reviewing the Modules
+              name: Meninjau modul
             Thinking Ahead to Implementation:
-              name: Thinking Ahead to Implementation
+              name: Berfikir ke depan untuk pelaksaan
             Welcome!:
               name: Selamat Datang!
             Wrap-Up:
@@ -1315,11 +1313,11 @@ id:
           description_audience: ''
           stages:
             Creating Equitable Learning Environments:
-              name: Creating Equitable Learning Environments
+              name: Menciptakan lingkungan belajar yang adil
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Introduction to Equity:
-              name: Introduction to Equity
+              name: Pengenalan untuk keadilan
             Next Steps:
               name: Langkah berikutnya
         sciencePD2b-iZone:
@@ -1329,15 +1327,15 @@ id:
           description_audience: ''
           stages:
             Advanced StarLogo Nova:
-              name: Advanced StarLogo Nova
+              name: Maju StarLogo Nova
             Remixing Phases 1 and 2:
-              name: Remixing Phases 1 and 2
+              name: Meremix tahap 1 dan 2
             Review StarLogo Nova:
-              name: Review StarLogo Nova
+              name: Tinjauan StarLogo Nova
             Reviewing the Modules:
-              name: Reviewing the Modules
+              name: Meninjau modul
             Thinking Ahead to Implementation:
-              name: Thinking Ahead to Implementation
+              name: Berfikir ke depan untuk pelaksaan
             Welcome!:
               name: Selamat Datang!
             Wrap-Up:
@@ -1348,25 +1346,23 @@ id:
           description_short: Mengajarkan pemrograman fungsional melalui aljabar
           stages:
             Unit 1, Day 10 Telling a Story with Data:
-              name: Unit 1, Day 10 Telling a Story with Data
+              name: Unit 1, Hari 10 menceritakan sebuah cerita dengan data
             Unit 1, Day 11-14 Data Modeling and Design:
-              name: Unit 1, Day 11-14 Data Modeling and Design
+              name: Unit 1, Hari 11-14 Pemodelan dan Desain Data
             Unit 1, Day 15-16 Computer Programs and Following Directions:
-              name: Unit 1, Day 15-16 Computer Programs and Following Directions
+              name: Unit 1, Hari 15-16 Program Komputer dan Mengikuti Petunjuk 
             Unit 1, Day 17-19 What Is Intelligence?:
-              name: Unit 1, Day 17-19 What Is Intelligence?
+              name: Unit 1, Hari 17-19 Apa itu Kecerdasan?
             0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Unit 1, Hari 1-2 Apa itu Komputer?
             1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Unit 1, Hari 1-2 Apa itu Komputer?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2:
               name: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
-              name: Unit 1, Days 8-9 Impact of Computers and Communication
+              name: Unit 1, Hari 8-9 dampak komputer dan komunikasi
             Welcome!:
               name: Selamat Datang!
             Wrap-up:
@@ -1377,25 +1373,23 @@ id:
           description_short: Mengajarkan pemrograman fungsional melalui aljabar
           stages:
             Unit 1, Day 10 Telling a Story with Data:
-              name: Unit 1, Day 10 Telling a Story with Data
+              name: Unit 1, Hari 10 menceritakan sebuah cerita dengan data
             Unit 1, Day 11-14 Data Modeling and Design:
-              name: Unit 1, Day 11-14 Data Modeling and Design
+              name: Unit 1, Hari 11-14 Pemodelan dan Desain Data
             Unit 1, Day 15-16 Computer Programs and Following Directions:
-              name: Unit 1, Day 15-16 Computer Programs and Following Directions
+              name: Unit 1, Hari 15-16 Program Komputer dan Mengikuti Petunjuk 
             Unit 1, Day 17-19 What Is Intelligence?:
-              name: Unit 1, Day 17-19 What Is Intelligence?
+              name: Unit 1, Hari 17-19 Apa itu Kecerdasan?
             0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Unit 1, Hari 1-2 Apa itu Komputer?
             1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Unit 1, Hari 1-2 Apa itu Komputer?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2:
               name: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
-              name: Unit 1, Days 8-9 Impact of Computers and Communication
+              name: Unit 1, Hari 8-9 dampak komputer dan komunikasi
             Welcome!:
               name: Selamat Datang!
             Wrap-up:
@@ -1406,21 +1400,21 @@ id:
           description_short: 'Blended Summer Study: 8 hour online'
           stages:
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Lesson Chunk 1- Sending Binary Messages:
-              name: Lesson Chunk 1- Sending Binary Messages
+              name: Pelajaran bagian 1 - Mengirim pesan biner
             Lesson Chunk 2- Encoding and Sending Numbers:
-              name: Lesson Chunk 2- Encoding and Sending Numbers
+              name: Pelajaran bagian 2 - Pengkodean dan mengirim nomor
             Lesson Chunk 3- Encoding and Sending Text:
-              name: Lesson Chunk 3- Encoding and Sending Text
+              name: Pelajaran bagian 3 - Pengkodean dan mengirim teks
             Lesson Chunk 4- Compressing and Storing Information:
-              name: Lesson Chunk 4- Compressing and Storing Information
+              name: Pelajaran bagian 4 - Kompresi dan menyimpan informasi
             Practice PT:
-              name: Practice PT
+              name: Praktek PT
             Welcome to the Course!:
-              name: Welcome to the Course!
+              name: Selamat datang di kursus!
             Wrap Up and Next Steps:
-              name: Wrap Up and Next Steps
+              name: Rangkum dan langkah selanjutnya
         odometer:
           title: Odometer Widget
           description: Use the Odometer widget to control odometers with various number bases. Binary, Decimal and Hexadecimal are the most common number systems to see in computer science.
@@ -1475,11 +1469,11 @@ id:
           description_audience: ''
           stages:
             Lesson Prep:
-              name: Lesson Prep
+              name: Persiapan pelajaran
             Updates - The Big Game and Projects:
-              name: Updates - The Big Game and Projects
+              name: Memperbarui - Permainan besar dan proyek
             Updates - The Design Recipe:
-              name: Updates - The Design Recipe
+              name: Memperbarui - Resep desain
             Updates - Tweaks and Polish:
               name: Updates - Tweaks and Polish
         sciencePD3_pre1:
@@ -1489,18 +1483,18 @@ id:
           description_audience: ''
           stages:
             Prep With Your Modules:
-              name: Prep With Your Modules
+              name: Persiapan dengan modul anda
             The TLO:
               name: The TLO
             Welcome Back!:
-              name: Welcome Back!
+              name: Selamat datang kembali!
         frequency_analysis:
           title: Frequency Analysis Widget
           description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
-          description_short: Use the Frequency Analysis Widget to analyze letter frequencies in a text compared to expected frequencies. Crack Shift and Substitution Ciphers.
+          description_short: Menggunakan widget analisis frekuaensi untuk menganalisis surat frekuensi dalam teks dibandingkan dengan frekuensi yang diharapkan. Crack shift dan pergantian ciphers.
           stages:
             Frequency Analysis:
-              name: Frequency Analysis
+              name: Analisis frekuensi
           description_audience: ''
         ECSPD3-Unit2:
           title: 'Exploring Computer Science: Unit 2'
@@ -1509,17 +1503,17 @@ id:
           description_audience: ''
           stages:
             Close & Next Steps:
-              name: Close & Next Steps
+              name: Keluar dan Langkah berikutnya
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Intro to Unit 2:
-              name: Intro to Unit 2
+              name: Intro untuk unit 2
             Lesson Overviews:
-              name: Lesson Overviews
+              name: Peninjauan pelajaran
             Teaching Strategies:
               name: Strategi pengajaran
             Unit 2 Challenge:
-              name: Unit 2 Challenge
+              name: Tantangan unit 2
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description: Academic Year Development
@@ -1527,17 +1521,17 @@ id:
           description_audience: ''
           stages:
             Close & Next Steps:
-              name: Close & Next Steps
+              name: Keluar dan Langkah berikutnya
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Intro to Unit 3:
-              name: Intro to Unit 3
+              name: Intro untuk unit 3
             Teaching Strategies:
               name: Strategi pengajaran
             Unit 3 Challenge:
-              name: Unit 3 Challenge
+              name: Tantangan unit 3
             Unit 3 Day-by-Day:
-              name: Unit 3 Day-by-Day
+              name: Unit 3 berhari-hari
         ECSPD3-Unit4:
           title: 'Exploring Computer Science: Unit 4'
           description: Academic Year Development
@@ -1545,17 +1539,17 @@ id:
           description_audience: ''
           stages:
             Close & Next Steps:
-              name: Close & Next Steps
+              name: Keluar dan Langkah berikutnya
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Intro to Unit 4:
-              name: Intro to Unit 4
+              name: Intro untuk unit 4
             Teaching Strategies:
               name: Strategi pengajaran
             Unit 4 Challenge:
-              name: Unit 4 Challenge
+              name: Tantangan unit 4
             Unit 4 Day-by-Day:
-              name: Unit 4 Day-by-Day
+              name: Unit 4 Berhari-hari
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1563,17 +1557,17 @@ id:
           description_audience: ''
           stages:
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Menyelesaikan Tantangan
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Introduction to the Unit 5 Challenge:
-              name: Introduction to the Unit 5 Challenge
+              name: Pengenalan untuk Tantangan Unit 5
             Share out and Submit:
-              name: Share out and Submit
+              name: Berbagi dan Kirim
             Unit 5 Overview:
-              name: Unit 5 Overview
+              name: Peninjauan Unit 5
             Unit 5 lessons:
-              name: Unit 5 lessons
+              name: Pelajaran Unit 5
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1581,17 +1575,17 @@ id:
           description_audience: ''
           stages:
             Alternative Ideas for Unit 6:
-              name: Alternative Ideas for Unit 6
+              name: Ide-ide Alternatif untuk Unit 6
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Share out and Submit:
-              name: Share out and Submit
+              name: Berbagi dan Kirim
             Unit 6 Challenge:
-              name: Unit 6 Challenge
+              name: Tantangan Unit 6
             Unit 6 Overview:
-              name: Unit 6 Overview
+              name: Peninjauan Unit 6
             Unit 6 lessons:
-              name: Unit 6 lessons
+              name: Pelajaran Unit 6
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description: "Collect, analyze, and extract knowledge from data by programming and\\r\nbuilding apps. Process data imported from other sources and also pull\\r\ndata from live data APIs."
@@ -1599,61 +1593,61 @@ id:
           description_audience: ''
           stages:
             Check Your Assumptions:
-              name: Check Your Assumptions
+              name: Periksa asumsi anda
             Cleaning Data:
-              name: Cleaning Data
+              name: Membersihkan Data
             Compiling Data:
-              name: Compiling Data
+              name: Mengumpulkan Data
             Creating Javascript Objects:
-              name: Creating Javascript Objects
+              name: Menciptakan Objek Javascript
             Creating Summary Tables:
-              name: Creating Summary Tables
+              name: Membuat Tabel Ringkasan
             Data, Security, and Privacy:
-              name: Data, Security, and Privacy
+              name: Data, Keamanan, dan Privasi
             Designing Data Collection:
-              name: Designing Data Collection
+              name: Merancang Pengumpulan Data
             Designing for Your User:
-              name: Designing for Your User
+              name: Merancang untuk pengguna anda
             Discover a Data Story:
-              name: Discover a Data Story
+              name: Temukan Cerita Data
             Finding Trends with Visualizations:
-              name: Finding Trends with Visualizations
+              name: Menemukan tren dengan visualisasi
             Good and Bad Data Visualizations:
-              name: Good and Bad Data Visualizations
+              name: Baik dan buruk visualisasi data
             How is Data Collected?:
-              name: How is Data Collected?
+              name: Bagaimana data dikumpulkan?
             Import, Export, and Visualize Data:
-              name: Import, Export, and Visualize Data
+              name: Impor, ekspor, dan Visualisasi Data
             Interpreting Data Visualizations:
-              name: Interpreting Data Visualizations
+              name: Menafsirkan visualisasi data
             Making Data Visualizations:
-              name: Making Data Visualizations
+              name: Membuat visualisasi data
             Permanent Data Storage:
-              name: Permanent Data Storage
+              name: Menyimpan data permanen
             Permanent Data Storage and Clicker Completion:
-              name: Permanent Data Storage and Clicker Completion
+              name: Menyimpan data permanen dan menyelesaikan Clicker
             'Practice Create PT: Data App':
-              name: 'Practice Create PT: Data App'
+              name: 'Praktek membuat PT: Data App'
             Privacy in a Digital World:
-              name: Privacy in a Digital World
+              name: Privasi dalam dunia digital
             Privacy vs Utility:
-              name: Privacy vs Utility
+              name: Privasi vs Utilitas
             Rapid Research - Data Innovations:
-              name: Rapid Research - Data Innovations
+              name: Penelitian cepat - Data inovasi
             Reading Records:
-              name: Reading Records
+              name: Membaca catatan
             Search Terms:
-              name: Search Terms
+              name: Ketentuan pencarian
             Unique IDs, Delete and Update Records:
-              name: Unique IDs, Delete and Update Records
+              name: ID unik, menghapus dan memperbarui catatan
             Using Data in the Real World:
-              name: Using Data in the Real World
+              name: Menggunakan catatan dalam dunia nyata
             Web Requests and APIs:
-              name: Web Requests and APIs
+              name: Permintaan web dan APIs
             What Data Can Tell Us:
-              name: What Data Can Tell Us
+              name: Data apa yang dapat memberitahu kami
             Why Make Apps?:
-              name: Why Make Apps?
+              name: Mengapa membuat aplikasi?
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3A Post Work
           description: Phase 3 Academic Year Development
@@ -1661,13 +1655,13 @@ id:
           description_audience: ''
           stages:
             Earth Science Challenges:
-              name: Earth Science Challenges
+              name: Tantangan ilmu bumi
             Life Science Challenges:
-              name: Life Science Challenges
+              name: Tantangan ilmu kehidupan
             Physical Science Challenges:
-              name: Physical Science Challenges
+              name: Tantangan ilmu fisik
             Thinking About Implementation:
-              name: Thinking About Implementation
+              name: Berfikir tentang pelaksanaan
             Welcome!:
               name: Selamat Datang!
             Wrap-Up:
@@ -1679,19 +1673,19 @@ id:
           description_audience: ''
           stages:
             Close and Next Steps:
-              name: Close and Next Steps
+              name: Keluar dan langkah berikutnya
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Teaching Support - Lessons 1-3:
-              name: Teaching Support - Lessons 1-3
+              name: Dukungan pengajaran - Pelajaran 1-3
             Teaching Support - Lessons 13-16:
-              name: Teaching Support - Lessons 13-16
+              name: Dukungan pengajaran - pelajaran 13-16
             Teaching Support - Lessons 17-20:
-              name: Teaching Support - Lessons 17-20
+              name: Dukungan Pengajaran - Pelajaran 17-20
             Teaching Support - Lessons 4-7:
-              name: Teaching Support - Lessons 4-7
+              name: Dukungan pengajaran - Pelajaran 4-7
             Teaching Support - Lessons 8-12:
-              name: Teaching Support - Lessons 8-12
+              name: Dukungan pengajaran - Pelajaran 8-12
         CSPPD3-Unit2:
           title: 'Computer Science Principles: Unit 2 PD'
           description: Online Exploration of CSP Unit 2
@@ -1699,27 +1693,27 @@ id:
           description_audience: ''
           stages:
             Challenge Overview:
-              name: Challenge Overview
+              name: Tinjauan tantangan
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Menyelesaikan Tantangan
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Share out and Submit:
-              name: Share out and Submit
+              name: Berbagi dan Kirim
             Unit 2 Overview:
-              name: Unit 2 Overview
+              name: Tinjauan unit 2
         duino:
           title: Experimenting with Arduino stuff
           description: Testing some tools for teaching with Arduinos
           stages:
             Basic Circuits:
-              name: Basic Circuits
+              name: Sircuit dasar
             Blinky Lights:
-              name: Blinky Lights
+              name: Lampu Blinky
             JunkBot:
               name: JunkBot
             Making Music:
-              name: Making Music
+              name: Membuat musik
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
@@ -1735,7 +1729,7 @@ id:
           description_audience: Usia 10 + (setelah Kursus 3)
           stages:
             Spring 2016:
-              name: Spring 2016
+              name: Musim semi 2016
             Halloween 2015:
               name: Halloween 2015
         iceage:
@@ -1752,25 +1746,25 @@ id:
           description_short: Online Exploration of CSP Unit 3
           stages:
             Challenge Overview:
-              name: Challenge Overview
+              name: Tinjauan tantangan
             Chunk 1 Overview:
-              name: Chunk 1 Overview
+              name: Peninjauan bagian 1
             Chunk 2 Overview:
-              name: Chunk 2 Overview
+              name: Peninjauan bagian 2
             Chunk 3 Overview:
-              name: Chunk 3 Overview
+              name: Peninjauan bagian 3
             Chunk 4 Overview:
-              name: Chunk 4 Overview
+              name: Peninjauan bagian 4
             Chunk 5 Overview:
-              name: Chunk 5 Overview
+              name: Peninjauan bagian 5
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Menyelesaikan Tantangan
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Practice Performance Task:
               name: Practice Performance Task
             Share out and Submit:
-              name: Share out and Submit
+              name: Berbagi dan Kirim
             Unit 3 Overview:
               name: Unit 3 Overview
         cspunit3temp:
@@ -1780,13 +1774,13 @@ id:
           description_audience: ''
           stages:
             Canvas and Arrays in Apps:
-              name: Canvas and Arrays in Apps
+              name: Kanvas dan Array dalam Apps
             Functions with Return Values:
               name: Functions with Return Values
             Image Scroller with Key Events:
               name: Image Scroller with Key Events
             Introduction to Arrays:
-              name: Introduction to Arrays
+              name: Pengenalan untuk array
             Loops and Simulations:
               name: Loops and Simulations
             'Practice PT: Create':
@@ -1801,15 +1795,15 @@ id:
           description_short: Online Exploration of CSP Unit 3
           stages:
             Chunk 1 Overview:
-              name: Chunk 1 Overview
+              name: Peninjauan bagian 1
             Chunk 2 Overview:
-              name: Chunk 2 Overview
+              name: Peninjauan bagian 2
             Chunk 3 Overview:
-              name: Chunk 3 Overview
+              name: Peninjauan bagian 3
             Chunk 4 Overview:
-              name: Chunk 4 Overview
+              name: Peninjauan bagian 4
             Chunk 5 Overview:
-              name: Chunk 5 Overview
+              name: Peninjauan bagian 5
             Practice Performance Task:
               name: Practice Performance Task
             Unit 3 Overview:
@@ -1851,11 +1845,11 @@ id:
           description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
           stages:
             Challenge Overview:
-              name: Challenge Overview
+              name: Tinjauan tantangan
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Menyelesaikan Tantangan
             Share out and Submit:
-              name: Share out and Submit
+              name: Berbagi dan Kirim
         ScienceP3OLPT3:
           title: Computer Science in Science PD Pre-Phase 3B
           description: Phase 3 Academic Year Development
@@ -1891,29 +1885,29 @@ id:
           description_audience: ''
           stages:
             Check Your Assumptions:
-              name: Check Your Assumptions
+              name: Periksa asumsi anda
             Cleaning Data:
-              name: Cleaning Data
+              name: Membersihkan Data
             Creating Summary Tables:
-              name: Creating Summary Tables
+              name: Membuat Tabel Ringkasan
             Discover a Data Story:
-              name: Discover a Data Story
+              name: Temukan Cerita Data
             Finding Trends with Visualizations:
-              name: Finding Trends with Visualizations
+              name: Menemukan tren dengan visualisasi
             Good and Bad Data Visualizations:
-              name: Good and Bad Data Visualizations
+              name: Baik dan buruk visualisasi data
             Identifying People with Data:
               name: Identifying People with Data
             Intro to Data:
               name: Introduction to Data
             Making Data Visualizations:
-              name: Making Data Visualizations
+              name: Membuat visualisasi data
             Practice PT - Propose an Innovation:
               name: Practice PT - Propose an Innovation
             Practice PT - Tell a Data Story:
               name: Practice PT - Tell a Data Story
             Rapid Research - Data Innovations:
-              name: Rapid Research - Data Innovations
+              name: Penelitian cepat - Data inovasi
             The Cost of Free:
               name: The Cost of Free
             What is Big Data?:
@@ -1924,19 +1918,19 @@ id:
           description_short: Support for CSP Unit 4
           stages:
             Challenge Overview:
-              name: Challenge Overview
+              name: Tinjauan tantangan
             Chapter 1 Overview:
               name: Chapter 1 Overview
             Chapter 2 Overview:
               name: Chapter 2 Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Menyelesaikan Tantangan
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Practice Performance Tasks:
               name: Practice Performance Tasks
             Share out and Submit:
-              name: Share out and Submit
+              name: Berbagi dan Kirim
             Unit 4 Overview:
               name: Unit 4 Overview
         cspunit6draft:
@@ -1945,7 +1939,7 @@ id:
           description_short: Data Apps
           stages:
             Creating Javascript Objects:
-              name: Creating Javascript Objects
+              name: Menciptakan Objek Javascript
             Deleting Records:
               name: Deleting Records
             Final Project:
@@ -1953,9 +1947,9 @@ id:
             Importing and Exporting Data:
               name: Importing and Exporting Data
             Permanent Data Storage:
-              name: Permanent Data Storage
+              name: Menyimpan data permanen
             Reading Records:
-              name: Reading Records
+              name: Membaca catatan
             Sample Apps:
               name: Sample Apps
             Updating Records:
@@ -1968,19 +1962,19 @@ id:
           description_short: Support for CSP Unit 5
           stages:
             Challenge Overview:
-              name: Challenge Overview
+              name: Tinjauan tantangan
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Menyelesaikan Tantangan
             Create PT Breakdown:
               name: Create PT Breakdown
             Explore PT Breakdown:
               name: Explore PT Breakdown
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Share out and Submit:
-              name: Share out and Submit
+              name: Berbagi dan Kirim
             Unit 5 Overview:
-              name: Unit 5 Overview
+              name: Peninjauan Unit 5
         cspunit6:
           title: CSP Post-AP Material - Databases and Using Data in Your Apps
           description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
@@ -1988,7 +1982,7 @@ id:
           description_audience: ''
           stages:
             Creating Javascript Objects:
-              name: Creating Javascript Objects
+              name: Menciptakan Objek Javascript
             Deleting Records:
               name: Deleting Records
             Final Project:
@@ -1996,9 +1990,9 @@ id:
             Importing and Exporting Data:
               name: Importing and Exporting Data
             Permanent Data Storage:
-              name: Permanent Data Storage
+              name: Menyimpan data permanen
             Reading Records:
-              name: Reading Records
+              name: Membaca catatan
             Sample Apps:
               name: Sample Apps
             Updating Records:
@@ -2073,7 +2067,7 @@ id:
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Peninjauan Kursus
             Evaluation Blocks:
               name: Blok Evaluasi
             Introduction to PD:
@@ -2083,7 +2077,7 @@ id:
             Teacher Dashboard:
               name: Dashboard untuk Guru
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: Mengapa Ilmu Komputer termasuk dalam Aljabar
         algebraPD3c:
           title: Ilmu komputer dalam aljabar PD
           description: CS in Algebra end of year reflection
@@ -2091,7 +2085,7 @@ id:
           description_audience: ''
           stages:
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Planning For the Future:
               name: Planning For the Future
             Sharing Student Work:
@@ -2113,25 +2107,25 @@ id:
             Number Systems:
               name: Sistem nomor
             Packets and Making a Reliable Internet:
-              name: Packets and Making a Reliable Internet
+              name: Paket dan membuat internet yang dapat diandalkan
             Personal Innovations:
-              name: Personal Innovations
+              name: Inovasi Pribadi
             Practice PT - The Internet and Society:
-              name: Practice PT - The Internet and Society
+              name: Praktek PT - Internet dan Masyarakat
             Routers and Redundancy:
-              name: Routers and Redundancy
+              name: Router dan Kualitas
             Sending Binary Messages:
               name: Mengirim pesan biner
             Sending Binary Messages with the Internet Simulator:
-              name: Sending Binary Messages with the Internet Simulator
+              name: Mengirim Pesan Biner dengan Internet Simulator
             Sending Numbers:
-              name: Sending Numbers
+              name: Mengirim Nomor
             The Internet:
               name: Internet
             The Need for Addressing:
-              name: The Need for Addressing
+              name: Dibutuhkan untuk Pengalamatan
             The Need for DNS:
-              name: The Need for DNS
+              name: Dibutuhkan untuk DNS
             Unit 1 Chapter 1 Assessment:
               name: Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 2 Assessment:
@@ -2149,39 +2143,39 @@ id:
           description_audience: ''
           stages:
             Bytes and File Sizes:
-              name: Bytes and File Sizes
+              name: Byte dan ukuran file
             Check Your Assumptions:
-              name: Check Your Assumptions
+              name: Periksa asumsi anda
             Cleaning Data:
-              name: Cleaning Data
+              name: Membersihkan Data
             Creating Summary Tables:
-              name: Creating Summary Tables
+              name: Membuat Tabel Ringkasan
             Discover a Data Story:
-              name: Discover a Data Story
+              name: Temukan Cerita Data
             Encode a Complex Thing:
-              name: Encode a Complex Thing
+              name: Mengkodekan hal yang kompleks
             Encoding B&W Images:
               name: Pengkodean gambar B&W
             Encoding Color Images:
               name: Pengkodean Gambar Berwarna
             Finding Trends with Visualizations:
-              name: Finding Trends with Visualizations
+              name: Menemukan tren dengan visualisasi
             Good and Bad Data Visualizations:
-              name: Good and Bad Data Visualizations
+              name: Baik dan buruk visualisasi data
             Intro to Data:
-              name: Intro to Data
+              name: Introduksi untuk data
             Lossy Compression and File Formats:
-              name: Lossy Compression and File Formats
+              name: Kompresi Lossy dan Format File
             Making Data Visualizations:
-              name: Making Data Visualizations
+              name: Membuat visualisasi data
             Practice PT - Tell a Data Story:
               name: Practice PT - Tell a Data Story
             Text Compression:
               name: kompresi Teks
             Unit 2 Chapter 1 Assessment:
-              name: Unit 2 Chapter 1 Assessment
+              name: Unit 1 penilaian bab 1
             Unit 2 Chapter 2 Assessment:
-              name: Unit 2 Chapter 2 Assessment
+              name: Unit 2 penilaian bab 2
             CSP Student Post Survey Staging:
               name: CSP Student Post Survey Staging
             Participate in a longitudinal study!:
@@ -2189,10 +2183,10 @@ id:
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
             Practice PT - Encode an Experience:
-              name: Practice PT - Encode an Experience
+              name: Praktek PT - Mengkodekan pengalaman
         csp3:
           title: CSP Unit 3 - Intro to Programming
-          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          description: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\\r\n\\r\nThis unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Pemrograman
           description_audience: ''
           stages:
@@ -2201,9 +2195,9 @@ id:
             Creating Functions:
               name: Fungsi membuat
             Creating functions with Parameters:
-              name: Creating functions with Parameters
+              name: Membuat fungsi dengan parameter
             Creativity in Algorithms:
-              name: Creativity in Algorithms
+              name: Kreativitas dalam algoritma
             Functions and Top-Down Design:
               name: Functions and Top-Down Design
             Looping and Random Numbers:
@@ -2213,11 +2207,11 @@ id:
             The Need For Programming Languages:
               name: The Need For Programming Languages
             The Need for Algorithms:
-              name: The Need for Algorithms
+              name: Dibutuhkan untuk algoritma
             Using Simple Commands:
               name: Using Simple Commands
             Unit 3 Chapter 1 Assessment:
-              name: Unit 3 Chapter 1 Assessment
+              name: Unit 3 Penilaian bab 3
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonymous student survey: Taking the AP exam'
             CSP Student Post Survey Staging:
@@ -2236,7 +2230,7 @@ id:
               name: Please complete the CSP Mid-course survey!
         csp4:
           title: CSP Unit 4 - Big Data and Privacy
-          description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
+          description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Explore the data-rich world we live, and how data impacts public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
           stages:
@@ -2249,13 +2243,13 @@ id:
             Identifying People with Data:
               name: Identifying People with Data
             Practice PT - Cybersecurity Innovations:
-              name: Practice PT - Cybersecurity Innovations
+              name: Praktek PT - Keamanan cyber inovasi
             Practice PT - Propose an Innovation:
               name: Practice PT - Propose an Innovation
             Public Key Crypto:
-              name: Public Key Crypto
+              name: Kunci umum Kripto
             Rapid Research - Data Innovations:
-              name: Rapid Research - Data Innovations
+              name: Penelitian cepat - Data inovasi
             Simple Encryption:
               name: Simple Encryption
             The Cost of Free:
@@ -2263,11 +2257,11 @@ id:
             What is Big Data?:
               name: What is Big Data?
             Rapid Research - Cybercrime:
-              name: Rapid Research - Cybercrime
+              name: Penelitian cepat - Keamanan cyber
             Practice PT - Big Data and Security Dilemmas:
-              name: Practice PT - Big Data and Security Dilemmas
+              name: Praktek PT - Data besar dan keamanan dilema
             Unit 4 Chapter 1 Assessment:
-              name: Unit 4 Chapter 1 Assessment
+              name: Unit 4 penilaian bab 1
             CSP Student Post Survey Staging:
               name: CSP Student Post Survey Staging
             Participate in a longitudinal study!:
@@ -2281,13 +2275,13 @@ id:
           description_audience: ''
           stages:
             Beyond Buttons Toward Apps:
-              name: Beyond Buttons Toward Apps
+              name: Di luar Tombo; Menuju Apps
             Canvas and Arrays in Apps:
-              name: Canvas and Arrays in Apps
+              name: Kanvas dan Array dalam Apps
             Compound Conditional Logic:
-              name: Compound Conditional Logic
+              name: Senyawa Logika Kondisional
             Controlling Memory with Variables:
-              name: Controlling Memory with Variables
+              name: Mengontrol Memori dengan Variabel
             Digital Assistant Project:
               name: Digital Assistant Project
             Event-Driven Programming and Debugging:
@@ -2301,7 +2295,7 @@ id:
             Introducing Design Mode:
               name: Introducing Design Mode
             Introduction to Arrays:
-              name: Introduction to Arrays
+              name: Pengenalan untuk array
             Introduction to Conditional Logic:
               name: Introduction to Conditional Logic
             Introduction to Digital Assistants:
@@ -2319,57 +2313,57 @@ id:
             User Input and Strings:
               name: User Input and Strings
             Using Variables in Apps:
-              name: Using Variables in Apps
+              name: Menggunakan variabel dalam aplikasi
             While Loops:
               name: Perulangan Selagi
             Edited lessons ABOVE this line:
               name: Edited lessons ABOVE this line
             Buttons and Events:
-              name: Buttons and Events
+              name: Tombol dan peristiwa
             Make Your Own Multi-Screen App:
-              name: Make Your Own Multi-Screen App
+              name: Membuat aplikasi multi-layar anda sendiri
             Unit 5 Assessment 1:
-              name: Unit 5 Assessment 1
+              name: Unit 5 penilaian 1
             Unit 5 Assessment 2:
-              name: Unit 5 Assessment 2
+              name: Unit 5 penilaian 2
             "'If' Statements Unplugged":
               name: "'If' Statements Unplugged"
             '"If" Statements Unplugged':
               name: '"If" Statements Unplugged'
             Getting started with If Statements:
-              name: Getting started with If Statements
+              name: Dapat dinilai dengan pernyataan jika
             Unit 3 Chapter 1 Assessment 3:
-              name: Unit 3 Chapter 1 Assessment 3
+              name: Unit 3 penilaian 3 bab 3
             If statements:
-              name: If statements
+              name: Pernyataan jika
             Unit 3 Assessment 3:
-              name: Unit 3 Assessment 3
+              name: Unit 3 penilaian 3
             Unit 3 Assessment 4:
-              name: Unit 3 Assessment 4
+              name: Unit 3 penillaian 4
             If-else-if and Conditional Logic:
               name: If-else-if and Conditional Logic
             'Building an App: Color Sleuth':
-              name: 'Building an App: Color Sleuth'
+              name: 'Membangun aplikasi: Warna detektif'
             Possibly use later:
-              name: Possibly use later
+              name: Mungkin menggunakan kemudian
             Unit 5 Assessment 3:
-              name: Unit 5 Assessment 3
+              name: Unit 5 penilaian 3
             Unit 5 Assessment 4:
-              name: Unit 5 Assessment 4
+              name: Unit 5 penilaian 4
             Boolean Expressions and "If" Statements:
               name: Boolean Expressions and "If" Statements
             '"if-else-if" and Conditional Logic':
               name: '"if-else-if" and Conditional Logic'
             'Building an App: Multi-Screen App':
-              name: 'Building an App: Multi-Screen App'
+              name: 'Membangun aplikasi: Multi-layar aplikasi'
             'Building an App: Clicker Game':
-              name: 'Building an App: Clicker Game'
+              name: 'Membangun aplikasi: Permainan Clicker'
             'Building an App: Image Scroller':
-              name: 'Building an App: Image Scroller'
+              name: 'Membangun aplikasi: Gambar Scroller'
             'Building an App: Canvas Painter':
-              name: 'Building an App: Canvas Painter'
+              name: 'Membangun aplikasi: Kanvas pelukis'
             Unit 5 Assessment 5 - Practice AP questions:
-              name: Unit 5 Assessment 5 - Practice AP questions
+              name: Unit 4 penilaian 5 - Pertanyaan latihan AP
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
             CSP Student Post Survey Staging:
@@ -2379,7 +2373,7 @@ id:
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
             Multi-Screen Apps:
-              name: Multi-Screen Apps
+              name: Multi-layar aplikasi
             '"if" Statements Unplugged':
               name: '"if" Statements Unplugged'
             Boolean Expressions and "if" Statements:
@@ -2399,17 +2393,17 @@ id:
             Explore PT Prep:
               name: Explore PT Prep
             Create PT Prep - Reviewing the Task:
-              name: Create PT Prep - Reviewing the Task
+              name: Membuat persiapan PT - Meninjau tugas
             Create PT Prep - Making a Plan:
-              name: Create PT Prep - Making a Plan
+              name: Membuat persiapan PT - Membuat rencana
             Create PT - Complete the Task:
-              name: Create PT - Complete the Task
+              name: Membuat PT - Menyelesaikan tugas
             Explore PT Prep - Reviewing the Task:
-              name: Explore PT Prep - Reviewing the Task
+              name: Jelajahi persiapan PT - Meninjau tugas
             Explore PT - Making a Plan:
-              name: Explore PT - Making a Plan
+              name: Jelajahi PT - Membuat rencana
             Explore PT - Complete the Task:
-              name: Explore PT - Complete the Task
+              name: Jelajahi PT - Menyelesaikan tugas
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech Setup - Your AP Digital Portfolio and Other Tools
             CSP Student Post Survey Staging:
@@ -2427,9 +2421,9 @@ id:
             Booleans and Conditionals:
               name: Booleans and Conditionals
             Collision Detection:
-              name: Collision Detection
+              name: Deteksi tumbukan
             Collisions:
-              name: Collisions
+              name: Tumbukan
             Complex Conditionals:
               name: Complex Conditionals
             Complex Sprite Movement:
@@ -2437,15 +2431,15 @@ id:
             Conditionals and Keyboard Input:
               name: Conditionals and Keyboard Input
             Draw Loop and Randomization:
-              name: Draw Loop and Randomization
+              name: Menarik loop dan pengacakan
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Menggambar dalam lab permaianan
             'Project: Interactive Card':
-              name: 'Project: Interactive Card'
+              name: 'Proyek: Kartu interaktif'
             Sprite Movement Methods:
-              name: Sprite Movement Methods
+              name: Metode gerakan Sprite
             Sprites and Images:
-              name: Sprites and Images
+              name: Sprite dan gambar
             Sprites and Properties:
               name: Sprites and Properties
             Variables Unplugged:
@@ -2473,29 +2467,29 @@ id:
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
-              name: Agent Based Modeling of Complex Adaptive Systems
+              name: Agen Berasisi Pemodelan dari Sistem Adaptif Kompleks
             Computational Thinking And The Framework For K-12 Science Education:
-              name: Computational Thinking And The Framework For K-12 Science Education
+              name: Komputasi Pemikiran dan Kerangka Kerja Untuk k-12 Ilmu Pendidikan
             Dispositions and Classroom Culture:
-              name: Dispositions and Classroom Culture
+              name: Watak dan Budaya Kelas
             Introduction to Complex Adaptive Systems:
-              name: Introduction to Complex Adaptive Systems
+              name: Pengenalan untuk Sistem Adaptif Kompleks
             Introduction to Computational Science:
-              name: Introduction to Computational Science
+              name: Pengenalan untuk Ilmu Komputasi
             Introduction to PD:
               name: Pengantar PD
             Introduction to StarLogo Nova:
-              name: Introduction to StarLogo Nova
+              name: Pengenalan Untuk StarLogo Nova
             Post-Survey:
               name: Post-Survey
             The Tutorial:
-              name: The Tutorial
+              name: Tutorial
             Using Computer Models in Science:
-              name: Using Computer Models in Science
+              name: Menggunakan model komputer dalam sains
             Using Models in the Classroom:
-              name: Using Models in the Classroom
+              name: Menggunakan model di dalam kelas
             What to Expect:
-              name: What to Expect
+              name: Apa yang diharapkan
         TEMP CSD Unit 3:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
           description: ''
@@ -2503,7 +2497,7 @@ id:
           description_audience: ''
           stages:
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Menggambar dalam lab permaianan
         CSF_Secret_Sample:
           title: Secret Sample
           description: Test of new educational philosophy
@@ -2545,7 +2539,7 @@ id:
             Teacher Dashboard:
               name: Dashboard untuk Guru
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: Mengapa Ilmu Komputer termasuk dalam Aljabar
         sciencePD1:
           title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
@@ -2553,29 +2547,29 @@ id:
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
-              name: Agent Based Modeling of Complex Adaptive Systems
+              name: Agen Berasisi Pemodelan dari Sistem Adaptif Kompleks
             Computational Thinking And The Framework For K-12 Science Education:
-              name: Computational Thinking And The Framework For K-12 Science Education
+              name: Komputasi Pemikiran dan Kerangka Kerja Untuk k-12 Ilmu Pendidikan
             Dispositions and Classroom Culture:
-              name: Dispositions and Classroom Culture
+              name: Watak dan Budaya Kelas
             Introduction to Complex Adaptive Systems:
-              name: Introduction to Complex Adaptive Systems
+              name: Pengenalan untuk Sistem Adaptif Kompleks
             Introduction to Computational Science:
-              name: Introduction to Computational Science
+              name: Pengenalan untuk Ilmu Komputasi
             Introduction to PD:
               name: Pengantar PD
             Introduction to StarLogo Nova:
-              name: Introduction to StarLogo Nova
+              name: Pengenalan Untuk StarLogo Nova
             Post-Survey:
               name: Post-Survey
             The Tutorial:
-              name: The Tutorial
+              name: Tutorial
             Using Computer Models in Science:
-              name: Using Computer Models in Science
+              name: Menggunakan model komputer dalam sains
             Using Models in the Classroom:
-              name: Using Models in the Classroom
+              name: Menggunakan model di dalam kelas
             What to Expect:
-              name: What to Expect
+              name: Apa yang diharapkan
         cspoptional:
           title: CS Principles Optional Lessons
           description: Optional lessons and content across all of the CS Principles units are listed here
@@ -2641,16 +2635,16 @@ id:
             test Unit 1 practice module Echo:
               name: test Unit 1 practice module Echo
             test Unit 1 practice module Foxtrot:
-              name: test Unit 1 practice module Foxtrot
+              name: menguji unit 1 latihan modul Foxtrot
             test Unit 1 required reading:
-              name: test Unit 1 required reading
+              name: menguji unit 1 Membaca wajib
         allthehiddenthings:
           title: All the Hidden Things!
           description: Unreleased level types for UI testing as admin
           description_short: Unreleased level types for UI testing as admin
           stages:
             Contained Levels:
-              name: Contained Levels
+              name: Tingkat yang terkandung
             Game Lab:
               name: Game Lab
         cspunit1-support-test:
@@ -2660,7 +2654,7 @@ id:
           description_short: ''
           stages:
             Unit 1 Overview:
-              name: Unit 1 Overview
+              name: Peninjauan unit 1
         cspunit1-tools:
           title: netsim task completion
           description: introduction to the internet simulator and a discussion of how we use it to teach the internet
@@ -2674,9 +2668,9 @@ id:
           description_audience: ''
           stages:
             Introduction to Events:
-              name: Introduction to Events
+              name: Pengenalan peristiwa
             Introduction to Text Compression:
-              name: Introduction to Text Compression
+              name: Pengenalan teks kompresi
             Turtle Programming:
               name: Turtle Programming
         cspassessment:
@@ -2696,9 +2690,9 @@ id:
             "[Deprecated - teacher cannot see results] CSP Culminating Assessment":
               name: "[Deprecated - teacher cannot see results] CSP Culminating Assessment"
             'NOTE: Deprecated - teacher cannot see results. CSP Culminating Assessment':
-              name: 'NOTE: Deprecated - teacher cannot see results. CSP Culminating Assessment'
+              name: 'CATATAN: Tidak berlaku lagi - guru tidak bisa melihat hasil. Penilaian memacu CSP'
             'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment':
-              name: 'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment'
+              name: 'CATATAN: Tidak berlaku lagi - Guru tidak bisa melihat hasil. Penilaian memacu CSP'
         cspexam1-mWU7ilDYM9:
           title: CS Principles Culminating Assessment - Part 1
           description: 'This 25 question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact.'
@@ -2706,7 +2700,7 @@ id:
           description_audience: ''
           stages:
             CS Principles Culminating Assessment Part 1:
-              name: CS Principles Culminating Assessment Part 1
+              name: Prinsip-prinsip CS memacu penilaian bagian 1
         cspexam2-AKwgAh1ac5:
           title: CS Principles Culminating Assessment - Part 2
           description: 'This 25 question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact.  It is part 2 of a two-part 50 question exam'
@@ -2714,7 +2708,7 @@ id:
           description_audience: ''
           stages:
             CS Principles Culminating Assessment Part 2:
-              name: CS Principles Culminating Assessment Part 2
+              name: Prinsip-prinsip CS memacu penilaian bagian 2
         CSDU4-Draft:
           title: " TEMP CSD Unit 4 - The Design Process"
           description: Temp place to work on U4 of Disco
@@ -2722,21 +2716,21 @@ id:
           description_audience: ''
           stages:
             Adding Functionality (optional):
-              name: Adding Functionality (optional)
+              name: Menambahkan fungsionalitas (opsional)
             Design Mode:
-              name: Design Mode
+              name: Mode desain
             Making it Interactive:
-              name: Making it Interactive
+              name: Membuatnya interaktif
             Analysis of Design:
-              name: Analysis of Design
+              name: Analisis desain
             Understanding Your User:
-              name: Understanding Your User
+              name: Memahami pengguna anda
             Discovering Users:
-              name: Discovering Users
+              name: Menemukan pengguna
             UCD Micro Activity:
-              name: UCD Micro Activity
+              name: Aktivitas mikro UCD
             Designing for Social Impact:
-              name: Designing for Social Impact
+              name: Merancang dampak sosial
             Conducting User-Centered Interviews:
               name: Conducting User-Centered Interviews
             Analyzing Interviews:
@@ -3077,25 +3071,23 @@ id:
           description_audience: ''
           stages:
             Unit 1, Day 10 Telling a Story with Data:
-              name: Unit 1, Day 10 Telling a Story with Data
+              name: Unit 1, Hari 10 menceritakan sebuah cerita dengan data
             Unit 1, Day 11-14 Data Modeling and Design:
-              name: Unit 1, Day 11-14 Data Modeling and Design
+              name: Unit 1, Hari 11-14 Pemodelan dan Desain Data
             Unit 1, Day 15-16 Computer Programs and Following Directions:
-              name: Unit 1, Day 15-16 Computer Programs and Following Directions
+              name: Unit 1, Hari 15-16 Program Komputer dan Mengikuti Petunjuk 
             Unit 1, Day 17-19 What Is Intelligence?:
-              name: Unit 1, Day 17-19 What Is Intelligence?
+              name: Unit 1, Hari 17-19 Apa itu Kecerdasan?
             0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Unit 1, Hari 1-2 Apa itu Komputer?
             1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Unit 1, Hari 1-2 Apa itu Komputer?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2:
               name: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
-              name: Unit 1, Days 8-9 Impact of Computers and Communication
+              name: Unit 1, Hari 8-9 dampak komputer dan komunikasi
             Welcome!:
               name: Selamat Datang!
             Wrap-up:
@@ -3107,17 +3099,17 @@ id:
           description_audience: ''
           stages:
             Close & Next Steps:
-              name: Close & Next Steps
+              name: Keluar dan Langkah berikutnya
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Intro to Unit 2:
-              name: Intro to Unit 2
+              name: Intro untuk unit 2
             Lesson Overviews:
-              name: Lesson Overviews
+              name: Peninjauan pelajaran
             Teaching Strategies:
               name: Strategi pengajaran
             Unit 2 Challenge:
-              name: Unit 2 Challenge
+              name: Tantangan unit 2
         ecs-unit3:
           title: ECS Unit 3
           description: 'Unit 3: Web Design'
@@ -3125,17 +3117,17 @@ id:
           description_audience: ''
           stages:
             Close & Next Steps:
-              name: Close & Next Steps
+              name: Keluar dan Langkah berikutnya
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Intro to Unit 3:
-              name: Intro to Unit 3
+              name: Intro untuk unit 3
             Teaching Strategies:
               name: Strategi pengajaran
             Unit 3 Challenge:
-              name: Unit 3 Challenge
+              name: Tantangan unit 3
             Unit 3 Day-by-Day:
-              name: Unit 3 Day-by-Day
+              name: Unit 3 berhari-hari
         ecs-unit4:
           title: ECS Unit 4
           description: 'Unit 4: Programming'
@@ -3143,17 +3135,17 @@ id:
           description_audience: ''
           stages:
             Close & Next Steps:
-              name: Close & Next Steps
+              name: Keluar dan Langkah berikutnya
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Intro to Unit 4:
-              name: Intro to Unit 4
+              name: Intro untuk unit 4
             Teaching Strategies:
               name: Strategi pengajaran
             Unit 4 Challenge:
-              name: Unit 4 Challenge
+              name: Tantangan unit 4
             Unit 4 Day-by-Day:
-              name: Unit 4 Day-by-Day
+              name: Unit 4 Berhari-hari
         ecs-unit5:
           title: ECS Unit 5
           description: 'Unit 5: Computer and Data Analysis'
@@ -3161,21 +3153,21 @@ id:
           description_audience: ''
           stages:
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Menyelesaikan Tantangan
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Introduction to the Unit 5 Challenge:
-              name: Introduction to the Unit 5 Challenge
+              name: Pengenalan untuk Tantangan Unit 5
             Share out and Submit:
-              name: Share out and Submit
+              name: Berbagi dan Kirim
             Unit 5 Overview:
-              name: Unit 5 Overview
+              name: Peninjauan Unit 5
             Unit 5 lessons:
-              name: Unit 5 lessons
+              name: Pelajaran Unit 5
             Unit 5 Challenge:
               name: Unit 5 Challenge
             Close & Next Steps:
-              name: Close & Next Steps
+              name: Keluar dan Langkah berikutnya
         ecs-unit6:
           title: ECS Unit 6
           description: 'Unit 6: Robotics'
@@ -3183,19 +3175,19 @@ id:
           description_audience: ''
           stages:
             Alternative Ideas for Unit 6:
-              name: Alternative Ideas for Unit 6
+              name: Ide-ide Alternatif untuk Unit 6
             Getting Started:
-              name: Getting Started
+              name: Dapat Dimulai
             Share out and Submit:
-              name: Share out and Submit
+              name: Berbagi dan Kirim
             Unit 6 Challenge:
-              name: Unit 6 Challenge
+              name: Tantangan Unit 6
             Unit 6 Overview:
-              name: Unit 6 Overview
+              name: Peninjauan Unit 6
             Unit 6 lessons:
-              name: Unit 6 lessons
+              name: Pelajaran Unit 6
             Close & Next Steps:
-              name: Close & Next Steps
+              name: Keluar dan Langkah berikutnya
         grade3:
           title: Grade 3
           description: Planning Script for CSF 2.0
@@ -3275,15 +3267,15 @@ id:
             Conditionals and Keyboard Input:
               name: Conditionals and Keyboard Input
             Draw Loop and Randomization:
-              name: Draw Loop and Randomization
+              name: Menarik loop dan pengacakan
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Menggambar dalam lab permaianan
               description_student: The class is introduced to Game Lab, the programming environment for this unit, and begins to use it to position shapes on the screen. Thee lesson covers the basics of sequencing and debugging, as well as a few simple commands. At the end of the lesson, the class creates an online version of the image they designed in the previous lesson.
               description_teacher: Students are introduced to Game Lab, the programming environment for this unit, and begin to use it to position shapes on the screen. They learn the basics of sequencing and debugging, as well as a few simple commands. At the end of the lesson, students will be able to program images like the ones they made with the drawing tool in the previous lesson.
             'Project: Interactive Card':
-              name: 'Project: Interactive Card'
+              name: 'Proyek: Kartu interaktif'
             Sprites and Images:
-              name: Sprites and Images
+              name: Sprite dan gambar
             Sprites and Properties:
               name: Sprites and Properties
             Variables Unplugged:
@@ -3295,7 +3287,7 @@ id:
               description_student: After a brief review of how the counter pattern is used to move sprites, the class is introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
               description_teacher: After a brief review of how they used the counter pattern to move sprites in previous lessons, students are introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
             Collision Detection:
-              name: Collision Detection
+              name: Deteksi tumbukan
               description_student: The class learns about collision detection on the computer.  Pairs explore how a computer could use sprite location and size properties and math to detect whether two sprites are touching.  The class then uses the isTouching() block to create different effects when sprites collide, including playing sounds.  Last, they use their new skills to improve the sidescroller game that they started in the last lesson.
               description_teacher: Students learn about collision detection on the computer.  Working in pairs, they explore how a computer could use sprite location and size properties and math to detect whether two sprites are touching.  They then use the `isTouching()` block to create different effects when sprites collide, including playing sounds.  Last, they use their new skills to improve the sidescroller game that they started in the last lesson.
             Complex Sprite Movement:
@@ -3303,7 +3295,7 @@ id:
               description_student: 'The class learns to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement, such as simulating gravity, making a sprite jump, and allowing a sprite to float left or right. In the final levels the class combine these movements to animate and control a single sprite and build a simple game in which a character flies around and collects coins. '
               description_teacher: Students learn to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement. In particular students will learn how to simulate gravity, make a sprite jump, and allow a sprite to float left or right. In the final levels of the Code Studio progression students combine these movements to animate and control a single sprite and build a simple game in which a character flies around and collects a coin. Students are encouraged to make their own additions to the game in the final level.
             Collisions:
-              name: Collisions
+              name: Tumbukan
               description_student: The class programs their sprites to interact in new ways.  After a brief review of how they used the isTouching block, the class brainstorms other ways that two sprites could interact.  They then use isTouching to make one sprite push another across the screen before practicing with the four collision blocks (collide, displace, bounce, and bounceOff).
               description_teacher: Students program their sprites to interact in new ways.  After a brief review of how they used the `isTouching` block, students brainstorm other ways that two sprites could interact.  They then use `isTouching` to make one sprite push another across the screen before practicing with the four collision blocks (`collide`, `displace`, `bounce`, and `bounceOff`).
             Functions:
@@ -3480,13 +3472,13 @@ id:
           description_audience: ''
           stages:
             Lesson Prep:
-              name: Lesson Prep
+              name: Persiapan pelajaran
             Teacher Dashboard:
               name: Dashboard untuk Guru
             Teaching with Puzzles:
-              name: Teaching with Puzzles
+              name: Mengajar dengan teka-teki
             Teaching with the Design Recipe:
-              name: Teaching with the Design Recipe
+              name: Mengajar dengan resep desain
             The Design Recipe:
               name: Resep desain
             Welcome!:
@@ -3504,9 +3496,9 @@ id:
             Unit 1 Chapter 1 Assessment:
               name: Unit 1 Chapter 1 Assessment
             Unit 3 Chapter 1 Assessment:
-              name: Unit 3 Chapter 1 Assessment
+              name: Unit 3 Penilaian bab 3
             Unit 4 Chapter 1 Assessment:
-              name: Unit 4 Chapter 1 Assessment
+              name: Unit 4 penilaian bab 1
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonymous student survey: Taking the AP exam'
         csd1:
@@ -3578,7 +3570,7 @@ id:
           description_audience: ''
           stages:
             Unit 1 Overview:
-              name: Unit 1 Overview
+              name: Peninjauan unit 1
             'Lessons 2-3: Binary Messages':
               name: 'Lessons 2-3: Binary Messages'
             Group Work and Peer Learning:
@@ -3626,7 +3618,7 @@ id:
             'Lessons 11 - 15: Communicating with Visualizations':
               name: 'Lessons 11 - 15: Communicating with Visualizations'
             Unit 2 Overview:
-              name: Unit 2 Overview
+              name: Tinjauan unit 2
             'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme':
               name: 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
             Unit 3 Overview:
@@ -3648,7 +3640,7 @@ id:
             Processing Arrays and Functions with Return Values:
               name: Processing Arrays and Functions with Return Values
             Unit 5 Overview:
-              name: Unit 5 Overview
+              name: Peninjauan Unit 5
         csp1-support:
           title: Unit 1 Online Professional Learning Course
           description_short: Teacher Professional Learning Course for CSP Unit 1
@@ -3656,7 +3648,7 @@ id:
           description_audience: ''
           stages:
             Unit 1 Overview:
-              name: Unit 1 Overview
+              name: Peninjauan unit 1
             'Lessons 2 - 3: Binary Messages':
               name: 'Lessons 2 - 3: Binary Messages'
             'Lessons 4 - 6: Encoding and Sending Numbers':
@@ -3690,7 +3682,7 @@ id:
         sample-csp5:
           stages:
             Controlling Memory with Variables:
-              name: Controlling Memory with Variables
+              name: Mengontrol Memori dengan Variabel
         hoc-encryption:
           title: 'Hour of Code: Simple Encryption'
           description_audience: ''
@@ -3822,7 +3814,7 @@ id:
           description: 'This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 2. '
           stages:
             Unit 2 Overview:
-              name: Unit 2 Overview
+              name: Tinjauan unit 2
             'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
               name: 'Lessons 1 - 2: Bytes, File Sizes, and Text Compression'
             'Lessons 3 - 4 : Encoding Images':
@@ -3850,21 +3842,21 @@ id:
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
           stages:
             Analysis of Design:
-              name: Analysis of Design
+              name: Analisis desain
               description_student: The class explores a variety of different teapot designs to consider how design choices or made and why. Using the teapots as an example, the class will explore the relationship between users, their needs, and the design of objects they use.
               description_teacher: To kick off a unit devoted to group problem solving and developing products for other users, students begin by investigating the design of various teapots. Students analyze each teapot, attempting to identify how specific user needs might have informed its design. By considering these design choices, and attempting to match each teapot with a potential user, students can begin to see how taking a user-centered approach to designing products (both physical and digital) can make those products more useful and usable. To conclude the activity, students are asked to propose some changes to one of the teapots that would make it more useful or usable.
             Understanding Your User:
-              name: Understanding Your User
+              name: Memahami pengguna anda
               description_student: Using user profiles, the class explores how different users might react to a variety of products. Role playing as a different person, each member of the class will get to experience designs through someone else's eyes.
               description_teacher: "Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\\r\n"
             Discovering Users:
-              name: Discovering Users
+              name: Menemukan pengguna
             User-Centered Design Micro Activity:
               name: User-Centered Design Micro Activity
               description_student: In small groups, the class uses the design process to come up with ideas for smart clothing. From brainstorming, to identifying users, to finally proposing a design, this is the first of several opportunities in this unit to practicing designing a solution for the needs of others.
               description_teacher: This lesson guides students through an abbreviated version of the design process they will be seeing throughout this unit. Students first brainstorm a list of potential users of smart clothing. As a class, they then group these ideas into broad categories and each group will choose one category of user. Groups repeat this process to brainstorm needs or concerns of their user, eventually categorizing these needs and choosing one to focus on. Finally, students design a piece of smart clothing, using the specific needs and concerns they brainstormed to guide their decision making. At the end of the class students quickly share their decision-making process and get feedback on how well their product addresses the user need they selected.
             Designing for Social Impact:
-              name: Designing for Social Impact
+              name: Merancang dampak sosial
             Conducting User-Centered Interviews:
               name: Conducting User-Centered Interviews
             Analyzing Interviews:
@@ -4270,15 +4262,15 @@ id:
             Welcome!:
               name: Selamat Datang!
             Review StarLogo Nova:
-              name: Review StarLogo Nova
+              name: Tinjauan StarLogo Nova
             Reviewing the Modules:
-              name: Reviewing the Modules
+              name: Meninjau modul
             Advanced StarLogo Nova:
-              name: Advanced StarLogo Nova
+              name: Maju StarLogo Nova
             Remixing Phases 1 and 2:
-              name: Remixing Phases 1 and 2
+              name: Meremix tahap 1 dan 2
             Thinking Ahead to Implementation:
-              name: Thinking Ahead to Implementation
+              name: Berfikir ke depan untuk pelaksaan
             Wrap-Up:
               name: Penutupan
         2016_sciencePD_phase2b:
@@ -4290,15 +4282,15 @@ id:
             Welcome!:
               name: Selamat Datang!
             Review StarLogo Nova:
-              name: Review StarLogo Nova
+              name: Tinjauan StarLogo Nova
             Reviewing the Modules:
-              name: Reviewing the Modules
+              name: Meninjau modul
             Advanced StarLogo Nova:
-              name: Advanced StarLogo Nova
+              name: Maju StarLogo Nova
             Remixing Phases 1 and 2:
-              name: Remixing Phases 1 and 2
+              name: Meremix tahap 1 dan 2
             Thinking Ahead to Implementation:
-              name: Thinking Ahead to Implementation
+              name: Berfikir ke depan untuk pelaksaan
             Wrap-Up:
               name: Penutupan
         sciencepd3-2016:
@@ -4308,11 +4300,11 @@ id:
           description: ''
           stages:
             Welcome Back!:
-              name: Welcome Back!
+              name: Selamat datang kembali!
             The TLO:
               name: The TLO
             Prep With Your Modules:
-              name: Prep With Your Modules
+              name: Persiapan dengan modul anda
         csp3-support:
           title: Unit 3 Online Professional Learning Course
           description_audience: ''
@@ -4388,7 +4380,7 @@ id:
             Revisiting Complex Adaptive Systems:
               name: Revisiting Complex Adaptive Systems
             Thinking About Implementation:
-              name: Thinking About Implementation
+              name: Berfikir tentang pelaksanaan
             Wrap-Up:
               name: Penutupan
         csp-ca-a:
@@ -4408,11 +4400,11 @@ id:
             Welcome!:
               name: Selamat Datang!
             Earth Science Challenges:
-              name: Earth Science Challenges
+              name: Tantangan ilmu bumi
             Life Science Challenges:
-              name: Life Science Challenges
+              name: Tantangan ilmu kehidupan
             Physical Science Challenges:
-              name: Physical Science Challenges
+              name: Tantangan ilmu fisik
             Wrap-Up:
               name: Penutupan
         csf2harvey:
@@ -4446,11 +4438,11 @@ id:
             Welcome!:
               name: Selamat Datang!
             Earth Science Challenges:
-              name: Earth Science Challenges
+              name: Tantangan ilmu bumi
             Life Science Challenges:
-              name: Life Science Challenges
+              name: Tantangan ilmu kehidupan
             Physical Science Challenges:
-              name: Physical Science Challenges
+              name: Tantangan ilmu fisik
             Wrap-Up:
               name: Penutupan
         csp5-support:
@@ -4460,7 +4452,7 @@ id:
           description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 5.
           stages:
             Unit 5 Overview:
-              name: Unit 5 Overview
+              name: Peninjauan Unit 5
             Event Driven Programming:
               name: Event Driven Programming
             Variables and Strings:
@@ -4493,11 +4485,11 @@ id:
           description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
           stages:
             Creating Javascript Objects:
-              name: Creating Javascript Objects
+              name: Menciptakan Objek Javascript
             Permanent Data Storage:
-              name: Permanent Data Storage
+              name: Menyimpan data permanen
             Reading Records:
-              name: Reading Records
+              name: Membaca catatan
             Deleting Records:
               name: Deleting Records
             Updating Records:
@@ -4597,9 +4589,15 @@ id:
             Arrays:
               name: Arrays
             Making Music:
-              name: Making Music
+              name: Membuat musik
             Arrays and For Loops:
               name: Arrays and For Loops
+            Circuits and Physical Prototypes:
+              name: Circuits and Physical Prototypes
+            Accelerometer:
+              name: Accelerometer
+            Functions with Parameters:
+              name: Fungsi dengan parameter
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -4613,7 +4611,7 @@ id:
             Input:
               name: Masukan
             'Project: Interactive Card':
-              name: 'Project: Interactive Card'
+              name: 'Proyek: Kartu interaktif'
         csd5-draft:
           title: Draft of CSD5
           description_audience: ''
@@ -4811,7 +4809,7 @@ id:
             Shapes and Randomness:
               name: Shapes and Randomness
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Menggambar dalam lab permaianan
             Variables:
               name: Variabel
             Programming for Entertainment:
@@ -4835,7 +4833,7 @@ id:
             Complex Conditionals:
               name: Complex Conditionals
             'Project: Interactive Card':
-              name: 'Project: Interactive Card'
+              name: 'Proyek: Kartu interaktif'
             Keyboard Input:
               name: Keyboard Input
             Other Forms of Input:
@@ -4843,11 +4841,11 @@ id:
             Velocity:
               name: Velocity
             Collision Detection:
-              name: Collision Detection
+              name: Deteksi tumbukan
             Complex Sprite Movement:
               name: Complex Sprite Movement
             Collisions:
-              name: Collisions
+              name: Tumbukan
             Functions:
               name: Fungsi
             The Game Design Process:
@@ -4939,9 +4937,9 @@ id:
           description: This is the original draft of CSD Unit 3, released in the fall of 2016. Unless you have students currently using this course, you should instead use the updated version of this unit at studio.code.org/s/csd3 - this original draft will remain available until July 1, 2017.
           stages:
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Menggambar dalam lab permaianan
             Draw Loop and Randomization:
-              name: Draw Loop and Randomization
+              name: Menarik loop dan pengacakan
             Variables Unplugged:
               name: Variables Unplugged
             Variables and Animation:
@@ -4949,7 +4947,7 @@ id:
             Sprites and Properties:
               name: Sprites and Properties
             Sprites and Images:
-              name: Sprites and Images
+              name: Sprite dan gambar
             Booleans and Conditionals:
               name: Booleans and Conditionals
             Conditionals and Keyboard Input:
@@ -4957,15 +4955,15 @@ id:
             Complex Conditionals:
               name: Complex Conditionals
             'Project: Interactive Card':
-              name: 'Project: Interactive Card'
+              name: 'Proyek: Kartu interaktif'
             Velocity:
               name: Velocity
             Collision Detection:
-              name: Collision Detection
+              name: Deteksi tumbukan
             Complex Sprite Movement:
               name: Complex Sprite Movement
             Collisions:
-              name: Collisions
+              name: Tumbukan
             Functions:
               name: Fungsi
             The Game Design Process:
@@ -5079,7 +5077,7 @@ id:
             Plotting Shapes:
               name: Plotting Shapes
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Menggambar dalam lab permaianan
             Shapes and Randomness:
               name: Shapes and Randomness
             Variables:
@@ -5101,15 +5099,15 @@ id:
             Other Forms of Input:
               name: Other Forms of Input
             'Project: Interactive Card':
-              name: 'Project: Interactive Card'
+              name: 'Proyek: Kartu interaktif'
             Velocity:
               name: Velocity
             Collision Detection:
-              name: Collision Detection
+              name: Deteksi tumbukan
             Complex Sprite Movement:
               name: Complex Sprite Movement
             Collisions:
-              name: Collisions
+              name: Tumbukan
             Functions:
               name: Fungsi
             The Game Design Process:
@@ -5155,7 +5153,7 @@ id:
             Plotting Shapes:
               name: Plotting Shapes
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Menggambar dalam lab permaianan
           title: CSD - Drawing in Game Lab
           description_audience: Falmouth Middle School (Mike Harvey)
           description_short: ''
@@ -5728,11 +5726,11 @@ id:
         csp-explore-task:
           stages:
             Explore PT Prep - Reviewing the Task:
-              name: Explore PT Prep - Reviewing the Task
+              name: Jelajahi persiapan PT - Meninjau tugas
             Explore PT - Making a Plan:
-              name: Explore PT - Making a Plan
+              name: Jelajahi PT - Membuat rencana
             Explore PT - Complete the Task:
-              name: Explore PT - Complete the Task
+              name: Jelajahi PT - Menyelesaikan tugas
           title: CSP Explore PT Prep
           description_audience: ''
           description_short: These lessons cover the preparation and completion of the CS Principles AP Explore Performance Task.
@@ -5740,11 +5738,11 @@ id:
         csp-create-task:
           stages:
             Create PT Prep - Reviewing the Task:
-              name: Create PT Prep - Reviewing the Task
+              name: Membuat persiapan PT - Meninjau tugas
             Create PT Prep - Making a Plan:
-              name: Create PT Prep - Making a Plan
+              name: Membuat persiapan PT - Membuat rencana
             Create PT - Complete the Task:
-              name: Create PT - Complete the Task
+              name: Membuat PT - Menyelesaikan tugas
           title: ''
           description_audience: ''
           description_short: These lessons cover the preparation and completion of the CS Principles AP Create Performance Task.
@@ -5762,17 +5760,17 @@ id:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech Setup - Your AP Digital Portfolio and Other Tools
             Create PT Prep - Reviewing the Task:
-              name: Create PT Prep - Reviewing the Task
+              name: Membuat persiapan PT - Meninjau tugas
             Create PT Prep - Making a Plan:
-              name: Create PT Prep - Making a Plan
+              name: Membuat persiapan PT - Membuat rencana
             Create PT - Complete the Task:
-              name: Create PT - Complete the Task
+              name: Membuat PT - Menyelesaikan tugas
             Explore PT Prep - Reviewing the Task:
-              name: Explore PT Prep - Reviewing the Task
+              name: Jelajahi persiapan PT - Meninjau tugas
             Explore PT - Making a Plan:
-              name: Explore PT - Making a Plan
+              name: Jelajahi PT - Membuat rencana
             Explore PT - Complete the Task:
-              name: Explore PT - Complete the Task
+              name: Jelajahi PT - Menyelesaikan tugas
             Participate in a longitudinal study!:
               name: Participate in a longitudinal study!
           title: CSP AP Exam and Performance Tasks
@@ -6108,9 +6106,9 @@ id:
             The Need For Programming Languages:
               name: The Need For Programming Languages
             The Need for Algorithms:
-              name: The Need for Algorithms
+              name: Dibutuhkan untuk algoritma
             Creativity in Algorithms:
-              name: Creativity in Algorithms
+              name: Kreativitas dalam algoritma
             Using Simple Commands:
               name: Using Simple Commands
             Creating Functions:
@@ -6120,13 +6118,13 @@ id:
             APIs and Function Parameters:
               name: APIs and Function Parameters
             Creating functions with Parameters:
-              name: Creating functions with Parameters
+              name: Membuat fungsi dengan parameter
             Looping and Random Numbers:
               name: Looping and Random Numbers
             Practice PT - Design a Digital Scene:
               name: Practice PT - Design a Digital Scene
             Unit 3 Chapter 1 Assessment:
-              name: Unit 3 Chapter 1 Assessment
+              name: Unit 3 Penilaian bab 3
             foo:
               name: foo
             CSP Mid-course survey:
@@ -6140,9 +6138,9 @@ id:
         csd4-draft:
           stages:
             Analysis of Design:
-              name: Analysis of Design
+              name: Analisis desain
             Understanding Your User:
-              name: Understanding Your User
+              name: Memahami pengguna anda
             User-Centered Design Micro Activity:
               name: User-Centered Design Micro Activity
             User Interface and Prototype Testing:
@@ -6640,9 +6638,9 @@ id:
         csd4-old:
           stages:
             Analysis of Design:
-              name: Analysis of Design
+              name: Analisis desain
             Understanding Your User:
-              name: Understanding Your User
+              name: Memahami pengguna anda
             User-Centered Design Micro Activity:
               name: User-Centered Design Micro Activity
             User Interface and Prototype Testing:
@@ -6682,9 +6680,9 @@ id:
             The Need For Programming Languages:
               name: The Need For Programming Languages
             The Need for Algorithms:
-              name: The Need for Algorithms
+              name: Dibutuhkan untuk algoritma
             Creativity in Algorithms:
-              name: Creativity in Algorithms
+              name: Kreativitas dalam algoritma
             Using Simple Commands:
               name: Using Simple Commands
             Creating Functions:
@@ -6694,13 +6692,13 @@ id:
             APIs and Function Parameters:
               name: APIs and Function Parameters
             Creating functions with Parameters:
-              name: Creating functions with Parameters
+              name: Membuat fungsi dengan parameter
             Looping and Random Numbers:
               name: Looping and Random Numbers
             Practice PT - Design a Digital Scene:
               name: Practice PT - Design a Digital Scene
             Unit 3 Chapter 1 Assessment:
-              name: Unit 3 Chapter 1 Assessment
+              name: Unit 3 Penilaian bab 3
           title: CSP 3 Proposed Changes Temporary Staging Ground
           description_audience: ''
           description_short: Temporary staging ground for Oct. changes to csp3
@@ -6716,7 +6714,7 @@ id:
             'Data Science: Problem Solving with Big Data':
               name: 'Data Science: Problem Solving with Big Data'
             Personal Innovations:
-              name: Personal Innovations
+              name: Inovasi Pribadi
             What is a Computer?:
               name: What is a Computer?
             Problem Solving with Big Data:
@@ -6725,7 +6723,7 @@ id:
               name: Programming - Hour of Code
             Simple Encryption:
               name: Simple Encryption
-          title: PwC Access Your Potential curriculum
+          title: PwC's Access Your Potential curriculum
           description_audience: ''
           description_short: ''
           description: At PwC, we believe that all students have the potential to be tomorrow’s leaders and tech-driven workforce. Access Your Potential is our commitment to help close the opportunity gap by equipping young people, especially those from disadvantaged communities, with the financial, technology and career-selection skills they need to change the trajectory of their lives. As part of our commitment, we’re excited to launch our Access Your Potential middle school technology and careers curriculum.
@@ -6802,11 +6800,11 @@ id:
             new stage:
               name: new stage
             Explore PT Prep - Reviewing the Task:
-              name: Explore PT Prep - Reviewing the Task
+              name: Jelajahi persiapan PT - Meninjau tugas
             Explore PT - Making a Plan:
-              name: Explore PT - Making a Plan
+              name: Jelajahi PT - Membuat rencana
             Explore PT - Complete the Task:
-              name: Explore PT - Complete the Task
+              name: Jelajahi PT - Menyelesaikan tugas
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech Setup - Your AP Digital Portfolio and Other Tools
             'Setup: Digital Portfolio and Other Tools':
@@ -6814,21 +6812,21 @@ id:
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
-          description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
+          description: "These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
         csp-create:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech Setup - Your AP Digital Portfolio and Other Tools
             Create PT Prep - Reviewing the Task:
-              name: Create PT Prep - Reviewing the Task
+              name: Membuat persiapan PT - Meninjau tugas
             Create PT Prep - Making a Plan:
-              name: Create PT Prep - Making a Plan
+              name: Membuat persiapan PT - Membuat rencana
             Create PT - Complete the Task:
-              name: Create PT - Complete the Task
+              name: Membuat PT - Menyelesaikan tugas
           title: Create - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
-          description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
+          description: "These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\\r\n\\r\nThis unit was last updated December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
         csp3-reovery:
           stages:
             Under the sea recovery:

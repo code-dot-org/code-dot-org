@@ -1530,6 +1530,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -8657,6 +8686,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -10301,6 +10333,9 @@
       flappy_1_instruction: Whakapiri i tētahi paraka ki te paraka "ina pāwhiri",
         kātahi ka pāwhiritia te "Whakahaerehia". Pāwhiritia, patupatu rānei i te mata
         ke te whakaneke i a Flappy ki te ūnga.
+      flappy_11_instruction: Waihangahia tō ake kēmu Flappy. E whakaae ana kia panonihia
+        ngā atanga katoa, ngā ture, ka mutu, te tō ā-papa. Kia mutu koe, pāwhiritia
+        te Mutu kia wātea kia whakamātauria e ō hoa ki ō rātou waea.
       flappy_2_instruction: Kua tāpiritia he papa. Whakapiri i tētahi paraka ki te
         paraka "ka tau ki te papa". Me whai tō waehere i te "WHAKAMUTU I TE KĒMU"
         i te wā ka pao a Flappy ki te papa.
@@ -10324,9 +10359,6 @@
         ina puta tētahi atu āhuatanga pēnei i te wā ka hipa i tētahi taunahua.
       flappy_9_instruction: Kia rerekē noa iho, ki te tuki ki tētahi taunahua me whakahoki
         i te tapeke piro ki te 0 kaua kē ia te whakamutu i te kēmu.
-      flappy_11_instruction: Waihangahia tō ake kēmu Flappy. E whakaae ana kia panonihia
-        ngā atanga katoa, ngā ture, ka mutu, te tō ā-papa. Kia mutu koe, pāwhiritia
-        te Mutu kia wātea kia whakamātauria e ō hoa ki ō rātou waea.
       frozen circle function in circle_instruction: |-
         Now let's create 20 overlapping
         circles, turning 18 degrees between each circle.

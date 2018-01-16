@@ -56,21 +56,21 @@ fil:
         one: "1 error ipinagbabawal ang %{resource} sa pagse-save:"
         other: "%{count} error na ipinagbabawal ang %{resource} na ma-save:"
     invitations:
-      send_instructions: 'An invitation email has been sent to %{email}.'
-      invitation_token_invalid: 'The invitation token provided is not valid!'
-      updated: 'Your password was set successfully. You are now signed in.'
-      no_invitations_remaining: "No invitations remaining"
-      invitation_removed: 'Your invitation was removed.'
+      send_instructions: 'May paanyayang email ang pinadala kay %{email}.'
+      invitation_token_invalid: 'Ang token ng imbistasyon na binigay ay hindi balido!'
+      updated: 'Ang iyong password ay matagumpay na natakda. Ikaw ay nakasign-in na ngayon.'
+      no_invitations_remaining: "Walang natirang mga paanyaya"
+      invitation_removed: 'Ang iyong imbitasyon ay tinanggal.'
       new:
-        header: "Send invitation"
-        submit_button: "Send an invitation"
+        header: "Magpadala ng Imbitasyon"
+        submit_button: "Magpadala ng Imbitasyon"
       edit:
-        header: "Set your password"
-        submit_button: "Set my password"
+        header: "Magtakda ng iyong password"
+        submit_button: "Magtakda ng aking password"
     mailer:
       invitation_instructions:
-        subject: 'Invitation instructions'
+        subject: 'Mga tagubilin sa imbitasyon'
         hello: 'Hello %{email}'
-        someone_invited_you: 'Someone has invited you to %{url}, you can accept it through the link below.'
-        accept: 'Accept invitation'
-        ignore: "If you don't want to accept the invitation, please ignore this email.<br />Your account won't be created until you access the link above and set your password."
+        someone_invited_you: 'May isang tao na nag-imbita sa iyo sa %{url}, maari mo itong tanggapin sa pamamagitan ng link sa baba.'
+        accept: 'Tanggapin ang imbitasyon'
+        ignore: "Kung hindi mo gustong tanggapin ang imbitasyon, huwag mo lang pansinin ang email na ito.<br/>Ang iyoung account ay hindi malikha hangga't hindi mo na bisita ang link sa taas at natakda ang iyong password."

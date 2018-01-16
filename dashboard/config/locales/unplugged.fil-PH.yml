@@ -234,7 +234,7 @@
         desc: We know that loops allow us to do things over and over again, but now
           we’re going to learn how to use loops with extra structure built right in.
       SongwritingWithParameters:
-        title: Songwriting With Parameters
+        title: Pagsulat ng Awit Gamit ang mga Parameter
         desc: 'One of the most magnificent structures in the computer science world
           is the function.  Functions (sometimes called procedures) are mini programs
           that you can use over and over inside of your bigger program. This lesson
@@ -365,7 +365,7 @@
           part of that, students will identify and write down the algorithm for a
           dice race game.
       courseE_unplugged_songwritingParameters:
-        title: Songwriting with Parameters
+        title: Pagsulat ng Awit na may mga Paremeters
         desc: Students use the concept of the chorus in a song to learn about defining
           and calling functions.
       courseE_unplugged_internet:
@@ -398,7 +398,7 @@
         desc: We know that loops allow us to do things over and over again, but now
           we’re going to learn how to use loops with extra structure built right in.
       courseF_unplugged_songwritingParameters:
-        title: Songwriting With Parameters
+        title: Pagsulat ng Awit Gamit ang mga Parameter
         desc: 'One of the most magnificent structures in the computer science world
           is the function.  Functions (sometimes called procedures) are mini programs
           that you can use over and over inside of your bigger program. This lesson

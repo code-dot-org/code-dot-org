@@ -1590,6 +1590,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -8711,6 +8740,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -10354,6 +10386,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Bloku "na klik" prikači odgovarajući blok pa klikni na
         "Pokreni". Klikni ili dodirni ekran da pomakneš Flappyja prema meti.
+      flappy_11_instruction: Napravi vlastitu Flappy igru. Možeš izmijeniti sve grafičke
+        elemente i sva pravila, čak i gravitaciju. Kad budeš gotov, klikni na Kraj
+        da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
       flappy_2_instruction: Sada smo dodali tlo. Prikači odgovarajući blok na blok
         "kada padne na tlo". Kad Flappy padne, tvoj kôd treba označiti 'KRAJ IGRE'.
       flappy_3_instruction: Blok "pri pokretanju" ti omogućuje da pokreneš svoj program
@@ -10373,9 +10408,6 @@
         neki drugi događaj, na primjer, kad prođe prepreku.
       flappy_9_instruction: 'Da izmijenimo pravila: napravi da se, kad udariš u prepreku,
         broj bodova vrati na 0 umjesto da igra završi.'
-      flappy_11_instruction: Napravi vlastitu Flappy igru. Možeš izmijeniti sve grafičke
-        elemente i sva pravila, čak i gravitaciju. Kad budeš gotov, klikni na Kraj
-        da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
       frozen circle function in circle_instruction: |-
         Now let's create 20 overlapping
         circles, turning 18 degrees between each circle.
