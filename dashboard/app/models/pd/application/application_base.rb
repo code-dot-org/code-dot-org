@@ -43,8 +43,6 @@ module Pd::Application
 
     OTHER = 'Other'.freeze
     OTHER_WITH_TEXT = 'Other:'.freeze
-    OTHER_PLEASE_EXPLAIN = 'Other (Please Explain):'.freeze
-    OTHER_PLEASE_LIST = 'Other (Please List):'
     YES = 'Yes'.freeze
     NO = 'No'.freeze
     NONE = 'None'.freeze
