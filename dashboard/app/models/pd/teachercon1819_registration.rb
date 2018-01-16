@@ -26,6 +26,15 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   YES_OR_NO = [YES, NO].freeze
   OTHER = 'Other'.freeze
 
+  after_create :update_application_status
+  def update_application_status
+    if waitlisted?
+      pd_application.update!(status: "waitlisted")
+    elsif declined?
+      pd_application.update!(status: "withdrawn")
+    end
+  end
+
   def self.options
     {
       dietaryNeeds: [
@@ -34,7 +43,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
         'Vegan',
         'Halal',
         'Gluten Free',
-        'Food Allergy',
+        TEXT_FIELDS[:food_allergy],
       ],
       liveFarAway: YES_OR_NO,
       addressState: get_all_states_with_dc.to_h.values,
@@ -46,11 +55,11 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
         'Public transit (e.g., city bus or light rail)',
       ],
       needHotel: YES_OR_NO,
-      needAda: [YES, NO, 'Other (please explain):'],
+      needAda: [YES, NO, TEXT_FIELDS[:other_please_explain]],
       teacherAcceptSeat: [
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept],
-        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:withdraw_date],
-        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:withdraw_other],
+        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_date],
+        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_other],
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline],
       ],
       photoRelease: [YES],
@@ -108,5 +117,22 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
     end
 
     return requireds
+  end
+
+  def accepted?
+    accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept]
+  end
+
+  def waitlisted?
+    accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_date] ||
+      accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_other]
+  end
+
+  def declined?
+    accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
+  end
+
+  def accept_status
+    sanitize_form_data_hash.try(:[], :teacher_accept_seat)
   end
 end

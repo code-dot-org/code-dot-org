@@ -41,4 +41,10 @@ module PrincipalApproval1819ApplicationConstants
     school_zip_code: 'Zip Code',
     school_type: 'My school is a',
   }.freeze
+
+  TEXT_FIELDS = {
+    other_with_text: 'Other:'.freeze,
+    other_please_explain: 'Other (Please Explain):'.freeze,
+    dont_know_explain: "I don't know (please explain):".freeze
+  }.freeze
 end

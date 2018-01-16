@@ -23,7 +23,7 @@ class Census::ApSchoolCode < ApplicationRecord
   # school_code is a 6-character string but in the input files we may have treated
   # them as integers and cut off leading zeros. Add them back if necessary.
   def self.normalize_school_code(raw_school_code)
-    format("%06d", raw_school_code)
+    format("%06d", raw_school_code.to_i)
   end
 
   def self.seed_from_csv(filename)
@@ -31,7 +31,8 @@ class Census::ApSchoolCode < ApplicationRecord
       CSV.foreach(filename, {headers: true}) do |row|
         normalized_school_code = normalize_school_code(row.to_hash['school_code'])
         begin
-          school = School.find(row.to_hash['school_id'])
+          school_id = School.normalize_school_id(row.to_hash['school_id'])
+          school = School.find(school_id)
           find_or_create_by!(school_code: normalized_school_code, school: school)
         rescue ActiveRecord::RecordNotFound
           # Skip the row if we don't have the school in the DB
@@ -45,18 +46,8 @@ class Census::ApSchoolCode < ApplicationRecord
   CSV_OBJECT_KEY = "ap_school_codes.csv".freeze
 
   def self.seed_from_s3
-    etag = AWS::S3.create_client.head_object({bucket: CENSUS_BUCKET_NAME, key: CSV_OBJECT_KEY}).etag
-    unless SeededS3Object.exists?(bucket: CENSUS_BUCKET_NAME, key: CSV_OBJECT_KEY, etag: etag)
-      AWS::S3.process_file(CENSUS_BUCKET_NAME, CSV_OBJECT_KEY) do |filename|
-        ActiveRecord::Base.transaction do
-          seed_from_csv(filename)
-          SeededS3Object.create!(
-            bucket: CENSUS_BUCKET_NAME,
-            key: CSV_OBJECT_KEY,
-            etag: etag,
-          )
-        end
-      end
+    AWS::S3.seed_from_file(CENSUS_BUCKET_NAME, CSV_OBJECT_KEY) do |filename|
+      seed_from_csv(filename)
     end
   end
 

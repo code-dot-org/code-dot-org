@@ -56,6 +56,14 @@ class School < ActiveRecord::Base
     stats.frl_eligible_total.to_f / stats.students_total.to_f > 0.5
   end
 
+  # Public school ids from NCES are always 12 digits, possibly with
+  # leading zeros. In the DB, those leading zeros have been stripped out.
+  # Other school types are less than 12 characters and in the DB they
+  # have not had their leading zeros removed.
+  def self.normalize_school_id(raw_school_id)
+    raw_school_id.length == 12 ? raw_school_id.to_i.to_s : raw_school_id
+  end
+
   # Use the zero byte as the quote character to allow importing double quotes
   #   via http://stackoverflow.com/questions/8073920/importing-csv-quoting-error-is-driving-me-nuts
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true, quote_char: "\x00"}.freeze
