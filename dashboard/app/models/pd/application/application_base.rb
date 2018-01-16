@@ -42,6 +42,7 @@ module Pd::Application
     include Pd::Form
 
     OTHER = 'Other'.freeze
+    OTHER_WITH_TEXT = 'Other:'.freeze
     YES = 'Yes'.freeze
     NO = 'No'.freeze
     NONE = 'None'.freeze
