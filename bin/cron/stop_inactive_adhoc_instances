@@ -17,8 +17,28 @@ def main
   ChatClient.message 'cron-daily', 'Beginning to stop inactive adhoc instances'
 
   cloudformation_client = Aws::CloudFormation::Client.new
-  cloudformation_client.describe_stacks.stacks.each do |stack|
-    puts stack.stack_name if stack.stack_name.starts_with?('adhoc-')
+  cloudwatch_client = Aws::CloudWatch::Client.new
+
+  cloudformation_client.describe_stacks.stacks.select {|stack| stack.stack_name.starts_with?('adhoc-')}.each do |stack|
+    dashboard_url = stack.outputs.select {|output| output.output_key == 'DashboardURL'}.first.try(:output_value)
+    puts "Name - #{stack.stack_name}, Status - #{stack.stack_status}, DashboardURL - #{dashboard_url}"
+
+    puts cloudwatch_client.list_metrics(
+      {
+        namespace: 'Unicorn',
+        metric_name: 'active',
+        dimensions: [
+          {
+            name: 'Environment',
+            value: 'adhoc',
+          },
+          {
+            name: 'Host',
+            value: "#{stack.stack_name}.cdn-code.org",
+          }
+        ]
+      }
+    ).metrics
   end
 end
 
