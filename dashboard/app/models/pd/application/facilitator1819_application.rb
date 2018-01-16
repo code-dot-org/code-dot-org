@@ -40,8 +40,6 @@ module Pd::Application
   class Facilitator1819Application < ApplicationBase
     include Facilitator1819ApplicationConstants
 
-    OTHER_WITH_TEXT = TEXT_FIELDS[:other_with_text]
-
     def send_decision_notification_email
       # Accepted, declined, and waitlisted are the only valid "final" states;
       # all other states shouldn't need emails, and we plan to send "Accepted"
@@ -84,10 +82,6 @@ module Pd::Application
       'Participants in a tech bootcamp or professional development program'
     ].freeze
 
-    HOW_HEARD_FACILITATOR = TEXT_FIELDS[:how_heard_facilitator]
-    HOW_HEARD_CODE_ORG_STAFF = TEXT_FIELDS[:how_heard_code_org_staff]
-    HOW_HEARD_REGIONAL_PARTNER = TEXT_FIELDS[:how_heard_regional_partner]
-
     PROGRAMS = {
       csf: 'CS Fundamentals (Pre-K - 5th grade)',
       csd: 'CS Discoveries (6 - 10th grade)',
@@ -109,7 +103,7 @@ module Pd::Application
           'Non-profit',
           'Institute of higher education',
           'Tech company',
-          OTHER_WITH_TEXT
+          TEXT_FIELDS[:other_with_text]
         ],
 
         worked_in_cs_job: [YES, NO],
@@ -123,7 +117,7 @@ module Pd::Application
           'Attended a CS professional development workshop',
           'I have a minor, major, certificate',
           NONE,
-          OTHER_WITH_TEXT
+          TEXT_FIELDS[:other_with_text]
         ],
 
         diversity_training: [YES, NO],
@@ -131,11 +125,11 @@ module Pd::Application
         how_heard: [
           'Code.org email',
           'Code.org social media post',
-          HOW_HEARD_FACILITATOR,
-          HOW_HEARD_CODE_ORG_STAFF,
-          HOW_HEARD_REGIONAL_PARTNER,
+          TEXT_FIELDS[:how_heard_facilitator],
+          TEXT_FIELDS[:how_heard_code_org_staff],
+          TEXT_FIELDS[:how_heard_regional_partner],
           'My employer',
-          OTHER_WITH_TEXT
+          TEXT_FIELDS[:other_with_text]
         ],
 
         program: PROGRAM_OPTIONS,
@@ -144,7 +138,7 @@ module Pd::Application
           YES,
           NO,
           "I don’t know yet",
-          OTHER_WITH_TEXT
+          TEXT_FIELDS[:other_with_text]
         ],
 
         ability_to_meet_requirements: [
@@ -175,19 +169,19 @@ module Pd::Application
           'Hour of Code',
           'After-school or lunchtime computer science clubs',
           'Computer science-focused summer camps',
-          OTHER_PLEASE_LIST
+          TEXT_FIELDS[:other_please_list]
         ],
 
         teaching_experience: [YES, NO],
 
         grades_taught: [
           *GRADES,
-          OTHER_WITH_TEXT
+          TEXT_FIELDS[:other_with_text]
         ],
 
         grades_currently_teaching: [
           *GRADES,
-          OTHER_WITH_TEXT,
+          TEXT_FIELDS[:other_with_text],
           'None - I don’t currently teach'
         ],
 
@@ -200,7 +194,7 @@ module Pd::Application
           'History',
           'Art',
           'Foreign Language',
-          OTHER_WITH_TEXT
+          TEXT_FIELDS[:other_with_text]
         ],
 
         years_experience: [
@@ -226,7 +220,7 @@ module Pd::Application
           'NMSI',
           'Project Lead the Way',
           'ScratchEd',
-          OTHER_WITH_TEXT,
+          TEXT_FIELDS[:other_with_text],
           "I don't have experience teaching any of these courses",
         ],
 
@@ -406,12 +400,12 @@ module Pd::Application
       [
         [:institution_type],
         [:completed_cs_courses_and_activities],
-        [:how_heard, HOW_HEARD_FACILITATOR, :how_heard_facilitator],
-        [:how_heard, HOW_HEARD_CODE_ORG_STAFF, :how_heard_code_org_staff],
-        [:how_heard, HOW_HEARD_REGIONAL_PARTNER, :how_heard_regional_partner],
+        [:how_heard, TEXT_FIELDS[:how_heard_facilitator], :how_heard_facilitator],
+        [:how_heard, TEXT_FIELDS[:how_heard_code_org_staff], :how_heard_code_org_staff],
+        [:how_heard, TEXT_FIELDS[:how_heard_regional_partner], :how_heard_regional_partner],
         [:how_heard],
         [:plan_on_teaching],
-        [:led_cs_extracurriculars, OTHER_PLEASE_LIST],
+        [:led_cs_extracurriculars, TEXT_FIELDS[:other_please_list]],
         [:grades_taught],
         [:grades_currently_teaching],
         [:subjects_taught],
