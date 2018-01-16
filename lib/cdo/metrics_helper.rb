@@ -3,6 +3,8 @@ require_relative './db'
 module Metrics
   if CDO.devinternal_db_writer
     DEVINTERNAL_DB = sequel_connect(CDO.devinternal_db_writer, CDO.devinternal_db_writer)
+  else
+    raise "devinternal_db_writer not defined"
   end
 
   # Values for DTT metrics.
