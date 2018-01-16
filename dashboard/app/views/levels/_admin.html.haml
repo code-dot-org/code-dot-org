@@ -1,4 +1,4 @@
-- if current_user && (current_user.permission?(UserPermission::LEVELBUILDER) || current_user.permission?(UserPermission::RESET_ABUSE) || current_user.permission?(UserPermission::PROJECT_VALIDATOR))
+- if current_user && (current_user.permission?(UserPermission::LEVELBUILDER) || current_user.permission?(UserPermission::PROJECT_VALIDATOR))
   = render layout: 'shared/extra_links' do
     %strong= @level.name
     - if current_user.permission?(UserPermission::LEVELBUILDER)
@@ -85,7 +85,7 @@
             %button{id: "feature", class: "btn btn-default btn-sm"}
               Feature in gallery
 
-    - if current_user.permission?(UserPermission::RESET_ABUSE)
+    - if current_user.permission?(UserPermission::PROJECT_VALIDATOR)
       %br
       %div.admin-abuse{ :style => "display: none" }
         Abuse score:
