@@ -5,7 +5,7 @@ import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import Button from '../Button';
 import {startEditingStudent, cancelEditingStudent} from './manageStudentsRedux';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
 const styles = {
   xIcon: {
@@ -17,7 +17,7 @@ class ManageStudentActionsCell extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
     isEditing: PropTypes.bool,
-    //Provided by redux
+    // Provided by redux
     startEditingStudent: PropTypes.func,
     cancelEditingStudent: PropTypes.func,
   };
