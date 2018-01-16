@@ -24,7 +24,6 @@ Parameters:
     Type: String
     NoEcho: true
 Resources:
-  VPC: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'VPC', Nonce: 0 %>
   Tableau:
     Type: AWS::Redshift::Cluster
     DeletionPolicy: Retain
@@ -32,7 +31,7 @@ Resources:
       AllowVersionUpgrade: true
       AutomatedSnapshotRetentionPeriod: 1
       ClusterParameterGroupName: default.redshift-1.0
-      ClusterSubnetGroupName: {'Fn::GetAtt': [VPC, RedshiftSubnetGroup]}
+      ClusterSubnetGroupName: !ImportValue VPC-RedshiftSubnetGroup
       ClusterType: single-node
       ClusterVersion: 1.0
       DBName: {Ref: RedshiftDatabase}
@@ -42,4 +41,4 @@ Resources:
       MasterUserPassword: {Ref: RedshiftPassword}
       NodeType: dc1.large
       PubliclyAccessible: true
-      VpcSecurityGroupIds: ['Fn::GetAtt': [VPC, RedshiftSecurityGroup]]
+      VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
