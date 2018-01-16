@@ -1344,6 +1344,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -8095,6 +8124,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -9736,6 +9768,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: "Присоедини блок к блоку «при нажатии», затем нажми «Выполнить».
         Нажимай кнопку или касайся экрана, чтобы перемещать Порхающую птичку к цели."
+      flappy_11_instruction: "Создай свою игру про Порхающую птичку. Ты можешь изменить
+        все визуальные эффекты и правила, даже силу притяжения. После завершения нажми
+        кнопку «Готово», чтобы друзья могли сыграть в твою игру на своих телефонах."
       flappy_2_instruction: "Теперь мы добавили немного земли.  Присоедини блок к
         блоку «когда коснется земли».  Твой код должен выполнять действие «ЗАКОНЧИТЬ
         ИГРУ», когда Порхающая птичка разобьется."
@@ -9758,9 +9793,6 @@
         происходят другие события, например, при прохождении препятствий."
       flappy_9_instruction: "А теперь сделай так, чтобы при ударении о препятствие
         обнулялись очки, а не заканчивалась игра."
-      flappy_11_instruction: "Создай свою игру про Порхающую птичку. Ты можешь изменить
-        все визуальные эффекты и правила, даже силу притяжения. После завершения нажми
-        кнопку «Готово», чтобы друзья могли сыграть в твою игру на своих телефонах."
       frozen circle function in circle_instruction: "Теперь создадим 20 пересекающихся
         кругов, поворачивая на 18 градусов после каждого круга."
       frozen circle function with parameter_instruction: "Это блок «Создать круг»,

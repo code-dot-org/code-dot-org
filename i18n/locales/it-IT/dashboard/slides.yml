@@ -1742,7 +1742,7 @@ it:
         text: "Nel prossimo esercizio puoi scegliere se controllare Steve o Alex. Premi i tasti di direzione sulla tastiera per muoverti in su, in giù, a sinistra e a destra. Ora puoi spostarti dove vuoi all’interno dello scenario di gioco. Per usare una creatura, avvicinati, girati verso di essa e premi la barra spaziatrice."
       2:
         image: 'notes/mc_2016_events_2.jpg'
-        text: "Se utilizzi un touchscreen, puoi muoverti scorrendo verso l’alto, il basso, a sinistra e a destra. Quindi tocca lo schermo per utilizzare l’oggetto che hai di fronte."
+        text: "Se utilizzi un schermo tattile (touchscreen), puoi muoverti scorrendo verso l’alto, il basso, a sinistra e a destra. Quindi tocca lo schermo per utilizzare l’oggetto che hai di fronte."
       3:
         image: 'notes/mc_2016_events_3.jpg'
         text: "Cosa succede quando usi una creatura? In Minecraft, le pecore producono lana quando le tosi, le mucche scappano se le colpisci e i Creeper esplodono quando ti avvicini. Queste reazioni sono rese possibili dai cosiddetti \"gestori di eventi\". I gestori di eventi sono blocchi che permettono al programma di attendere e riconoscere determinate circostanze, \"gli eventi\". Se gli eventi si verificano, i gestori di evento attivano delle azioni."

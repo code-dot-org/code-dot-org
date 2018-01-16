@@ -829,7 +829,7 @@
     orta okullarda matematik ve fen bilimlerinin öğretilmesinde bir araç olarak kullanılabilir.
     Bu amaçla düzenlenen ülkenizdeki profesyonel <a href="/educate/districts"> çalıştaylara
     </a> başvurabilirsiniz.
-  dashboard_high_courses: Yıllık Lise Dersleri
+  dashboard_high_courses: Yıl Boyu Süren Lise Kursları
   dashboard_high_courses_desc: Bizim lise programı okul bölgelerindeki mevcut öğretmenleri
     hazırlayacak tam yıl bilgisayar bilim dersleri sunuyor. Profesyonel gelişim atölyeleri
     için kayıt <a href="/educate/districts"> olun. </a> Code.org ile ortak uygulanır.
@@ -1018,15 +1018,15 @@
   dashboard_lesson_plans: Ders Planları
   dashboard_view_all_lesson_plans: Kurs 1-4 için tüm ders planlarını indir
   dashboard_course1: Kurs 1
-  dashboard_course2: 'Ders 2:'
-  dashboard_course3: 'Ders 3:'
-  dashboard_course4: 'Ders 4 (beta): '
-  dashboard_coursea: 'Ders A: '
-  dashboard_courseb: 'Ders B: '
-  dashboard_coursec: 'Ders C: '
-  dashboard_coursed: 'Ders D: '
-  dashboard_coursee: 'Ders E: '
-  dashboard_coursef: 'Ders F: '
+  dashboard_course2: 'Kurs 2:'
+  dashboard_course3: 'Kurs 3:'
+  dashboard_course4: 'Kurs 4 (beta): '
+  dashboard_coursea: 'Kurs A: '
+  dashboard_courseb: 'Kurs B: '
+  dashboard_coursec: 'Kurs C: '
+  dashboard_coursed: 'Kurs D: '
+  dashboard_coursee: 'Kurs E: '
+  dashboard_coursef: 'Kurs F: '
   dashboard_unplugged: Bilgisayarlarınız yok ise bu <a href='%{unplugged_url}'>bilgisayarsız
     dersleri sınıfınızda</a> kullanın.
   dashboard_curriculum: Müfredat
@@ -1229,18 +1229,18 @@
   course2_name: Ders 2
   course3_name: Ders 3
   course4_name: Ders 4
-  coursea-draft_name: Ders A
-  coursea_name: Ders A
-  courseb-draft_name: Ders B
-  courseb_name: Ders B
-  coursec-draft_name: Ders C
-  coursec_name: Ders C
-  coursed-draft_name: Ders D
-  coursed_name: Ders D
-  coursee-draft_name: Ders E
-  coursee_name: Ders E
-  coursef-draft_name: Ders F
-  coursef_name: Ders F
+  coursea-draft_name: Kurs A
+  coursea_name: Kurs A
+  courseb-draft_name: Kurs B
+  courseb_name: Kurs B
+  coursec-draft_name: Kurs C
+  coursec_name: Kurs C
+  coursed-draft_name: Kurs D
+  coursed_name: Kurs D
+  coursee-draft_name: Kurs E
+  coursee_name: Kurs E
+  coursef-draft_name: Kurs F
+  coursef_name: Kurs F
   accelerated_name: Hızlandırılmış Kurs
   express_name: Hızlı Kurs
   pre-express_name: Okuma Bilmeyenler için Hızlı Kurs
@@ -1485,8 +1485,8 @@
     sanat eserinizi oluşturun.
   texasinstruments_shortdescription: TI-84 kullanarak temel kodlama öğrenmek için
     T1-84 hesap makinesi.
-  teacherled_shortdescription: Kendi Kod Saati olayınızı tasarlamak için bu ders planlarından
-    ilham alın.
+  teacherled_shortdescription: Kendi Kod Saati etkinliğinizi düzenlemek için bu ders
+    planlarından ilham alın.
   course2_shortdescription_congrats: Temel okuma becerileri olan öğrenciler için.
     Bu kurs Kurs 1 üzerine koyarak devam eder. Öğrenciler program oluşturarak problem
     çözecek, etkileşimli oyunlar ya da hikaye geliştirecek ve bunları paylaşabilecektir.
@@ -1677,7 +1677,7 @@
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodlanabilir
-  scratchjr_beyond_name: "Ön okuyucular için ScratchJR"
+  scratchjr_beyond_name: Okul Öncesi için ScratchJR
   hopscotch_beyond_name: 'Seksek: iPad''te Programlama'
   pocketcode_beyond_name: Cep kodu
   groklearning_beyond_name: Python programlama öğren
@@ -2029,7 +2029,7 @@
   header_documentation: Belgeler
   csp_name: "' 16 - 17' Bilgisayar bilimleri ilkeleri"
   csd_name: CS Discoveries
-  full_course_category_name: Tüm Dersler
+  full_course_category_name: Tüm Kurslar
   user_header_label: Merhaba %{username}
   user_header_settings: Hesap Ayarları
   user_header_logout: "Çıkış Yap"

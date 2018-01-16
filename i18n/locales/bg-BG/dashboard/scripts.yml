@@ -2192,7 +2192,7 @@ bg:
               name: Practice PT - Encode an Experience
         csp3:
           title: CSP блок 3 - програмиране
-          description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
+          description: "Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти."
           description_short: Програмиране
           description_audience: ''
           stages:
@@ -2236,7 +2236,7 @@ bg:
               name: Please complete the CSP Mid-course survey!
         csp4:
           title: CSP Unit 4 - Big Data and Privacy
-          description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
+          description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Explore the data-rich world we live, and how data impacts public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
           stages:
@@ -4600,6 +4600,12 @@ bg:
               name: Making Music
             Arrays and For Loops:
               name: Arrays and For Loops
+            Circuits and Physical Prototypes:
+              name: Circuits and Physical Prototypes
+            Accelerometer:
+              name: Accelerometer
+            Functions with Parameters:
+              name: Функции с параметри
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -6725,7 +6731,7 @@ bg:
               name: Programming - Hour of Code
             Simple Encryption:
               name: Simple Encryption
-          title: PwC Access Your Potential curriculum
+          title: PwC's Access Your Potential curriculum
           description_audience: ''
           description_short: ''
           description: At PwC, we believe that all students have the potential to be tomorrow’s leaders and tech-driven workforce. Access Your Potential is our commitment to help close the opportunity gap by equipping young people, especially those from disadvantaged communities, with the financial, technology and career-selection skills they need to change the trajectory of their lives. As part of our commitment, we’re excited to launch our Access Your Potential middle school technology and careers curriculum.
@@ -6814,7 +6820,7 @@ bg:
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
-          description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
+          description: "These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
         csp-create:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -6828,7 +6834,7 @@ bg:
           title: Create - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
-          description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
+          description: "These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\\r\n\\r\nThis unit was last updated December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
         csp3-reovery:
           stages:
             Under the sea recovery:

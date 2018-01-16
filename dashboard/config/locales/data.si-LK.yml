@@ -739,11 +739,17 @@
         infinity_playlab_intro: "ක්‍රීඩා පරීක්ෂණාගාරය - හැඳින්වීම"
         infinity_playlab_events: "ක්‍රීඩා පරීක්ෂණාගාරය- සිදුවීම්"
         infinity_playlab_repeat_forever: "ක්‍රීඩා පරීක්ෂණාගාරය - සදාකාලික පුනරාවර්තනය"
+        csd_concept_how_computers_work: Introducing How Computers Work
         csd_concept_computer: What Makes a Computer, a Computer?
         csd_concept_binary_data: 'How Computers Work: Binary & Data'
+        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
+        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
+          & Output'
+        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
         csd_concept_search: How Search Works
         csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems
           To Change Our Lives
+        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
         csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
         csd_gamelab_animation_tab: The Animation Tab
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1

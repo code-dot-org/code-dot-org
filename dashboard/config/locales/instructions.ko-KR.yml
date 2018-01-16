@@ -1349,6 +1349,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -7849,6 +7878,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -9489,6 +9521,8 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: '"클릭되면"블럭을 붙인 후 "실행하기"를 누르세요. 플래피 버드가 목표 지점에 도착할 수 있도록
         화면을 클릭하거나 터치하면 됩니다.'
+      flappy_11_instruction: "자신만의 플래피 게임을 만들어보세요. 화면에 보이는 것들과 규칙들, 떨어지는 중력마저도 마음대로
+        만들어보세요. 친구들이 스마트폰에서 해볼 수 있도록 공유해 보세요."
       flappy_2_instruction: 바닥 땅을 만들었습니다. "땅에 떨어지면" 블럭에 다른 블럭을 붙여보세요. 플래피가 땅에 닿으면
         게임이 끝나도록 해야합니다.
       flappy_3_instruction: '"실행하면" 블럭은 프로그램을 실행시켰을 때 코드들이 동작하게 합니다. 목표 지점에 도착하기 위한
@@ -9502,8 +9536,6 @@
       flappy_8_instruction: "화면에 보이는 것들은 언제 든지 바꿀 수 있습니다. 물체를 피해 통과하는 것과 같은 이벤트들이
         발생했을 때 랜덤 배경으로 바뀌도록 해보세요."
       flappy_9_instruction: "사물들을 뒤섞으려면, 장애물에 부딪혔을 때 게임을 끝내는 대신 점수를 0으로 설정하세요."
-      flappy_11_instruction: "자신만의 플래피 게임을 만들어보세요. 화면에 보이는 것들과 규칙들, 떨어지는 중력마저도 마음대로
-        만들어보세요. 친구들이 스마트폰에서 해볼 수 있도록 공유해 보세요."
       frozen circle function in circle_instruction: "이제 20개의 원을 겹치고, 각각을 18도씩 회전시키세요."
       frozen circle function with parameter_instruction: 원하는 크기로 그릴 수 있는 "원 그리기" 블럭이
         있습니다. 이 블럭을 사용해 5 크기의 원과 10 크기의 원을 그릴 수 있겠어요?

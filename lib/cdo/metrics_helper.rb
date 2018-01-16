@@ -1,7 +1,8 @@
 require_relative './db'
 
 module Metrics
-  DEVINTERNAL_DB = sequel_connect(CDO.devinternal_db_writer, CDO.devinternal_db_writer)
+  DEVINTERNAL_DB = CDO.devinternal_db_writer ?
+    sequel_connect(CDO.devinternal_db_writer, CDO.devinternal_db_writer) : nil
 
   # Values for DTT metrics.
   AUTOMATIC = 0
@@ -13,7 +14,11 @@ module Metrics
   # @param value [Float] Numerical value relevant to the specific metric. See constants above for examples.
   # @param timestamp [Datetime] Only used if we want to explicitly set the created_at value for a particular metric.
   def self.write_metric(name, metadata, value, timestamp=nil)
-    dataset = DEVINTERNAL_DB[:metrics]
+    if DEVINTERNAL_DB
+      dataset = DEVINTERNAL_DB[:metrics]
+    else
+      raise "devinternal_db_writer not defined"
+    end
     data = {name: name, metadata: metadata, value: value}
     data[:created_at] = timestamp if timestamp
     dataset.insert(data)
