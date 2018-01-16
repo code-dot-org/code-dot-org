@@ -1,6 +1,6 @@
 class FeaturedProjectsController < ApplicationController
   def create
-    unless current_user.try(:permission?, UserPermission::LEVELBUILDER) || current_user.try(:permission?, UserPermission::RESET_ABUSE)
+    unless current_user.try(:permission?, UserPermission::PROJECT_VALIDATOR)
       _, channel_id = storage_decrypt_channel_id(featured_project_params[:project_id])
       @featured_project = FeaturedProject.create({storage_app_id: channel_id, who_featured_user_id: current_user.id})
       @featured_project.save!
@@ -8,7 +8,7 @@ class FeaturedProjectsController < ApplicationController
   end
 
   def destroy_by_project_id
-    unless current_user.try(:permission?, UserPermission::LEVELBUILDER) || current_user.try(:permission?, UserPermission::RESET_ABUSE)
+    unless current_user.try(:permission?, UserPermission::PROJECT_VALIDATOR)
       _, channel_id = storage_decrypt_channel_id(params[:project_id])
       @featured_project = FeaturedProject.find_by_storage_app_id(channel_id)
       @featured_project.destroy

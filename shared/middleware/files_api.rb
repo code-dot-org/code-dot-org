@@ -29,13 +29,13 @@ class FilesApi < Sinatra::Base
   end
 
   def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
-    return true if has_permission?('reset_abuse') || new_score.nil?
+    return true if has_permission?('project_validator') || new_score.nil?
 
     get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
   end
 
   def can_view_abusive_assets?(encrypted_channel_id)
-    return true if owns_channel?(encrypted_channel_id) || admin? || has_permission?('reset_abuse')
+    return true if owns_channel?(encrypted_channel_id) || admin? || has_permission?('project_validator')
 
     # teachers can see abusive assets of their students
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)

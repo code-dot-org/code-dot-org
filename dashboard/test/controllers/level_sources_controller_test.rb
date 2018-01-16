@@ -54,17 +54,17 @@ class LevelSourcesControllerTest < ActionController::TestCase
     end
   end
 
-  test "should get show if hidden and we have reset abuse permission" do
+  test "should get show if hidden and we have project validator permission" do
     user = create(:teacher)
-    user.permission = UserPermission::RESET_ABUSE
+    user.permission = UserPermission::PROJECT_VALIDATOR
     sign_in user
     get :show, params: {id: @hidden_level_source.id}
     assert_response :success
   end
 
-  test "should update if we have reset abuse permission" do
+  test "should update if we have project validator permission" do
     user = create(:teacher)
-    user.permission = UserPermission::RESET_ABUSE
+    user.permission = UserPermission::PROJECT_VALIDATOR
     sign_in user
     patch :update, params: {level_source: {hidden: true}, id: @level_source}
 

@@ -263,11 +263,11 @@ class ChannelsApi < Sinatra::Base
   #
   # DELETE /v3/channels/<channel-id>/abuse
   #
-  # Clear an abuse score. Requires reset_abuse permission
+  # Clear an abuse score. Requires project_validator permission
   #
   delete %r{/v3/channels/([^/]+)/abuse$} do |id|
-    # UserPermission::RESET_ABUSE
-    not_authorized unless has_permission?('reset_abuse')
+    # UserPermission::PROJECT_VALIDATOR
+    not_authorized unless has_permission?('project_validator')
 
     dont_cache
     content_type :json
