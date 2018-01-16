@@ -1863,7 +1863,7 @@ StudioApp.prototype.configureDom = function (config) {
     // Temporarily attach an event listener to log clicks
     // Logs the type of app and the ids of the puzzle
     var videoThumbnail = document.getElementsByClassName('video_thumbnail');
-    if (videoThumbnail[0]){
+    if (videoThumbnail[0] && (config.app === 'gamelab' || config.app === 'applab')){
       videoThumbnail[0].addEventListener('click', () => {
         firehoseClient.putRecord(
           'analysis-events',
@@ -2930,6 +2930,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
+    userId: config.userId,
     textToSpeechEnabled: config.textToSpeechEnabled,
     isK1: config.level.isK1,
     appType: config.app,

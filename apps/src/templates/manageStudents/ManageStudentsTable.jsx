@@ -11,18 +11,18 @@ import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
+import { connect } from 'react-redux';
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string,
   username: PropTypes.string,
-  userType: PropTypes.string,
   age: PropTypes.number,
   gender: PropTypes.string,
   secretWords: PropTypes.string,
-  secretPictureName: PropTypes.string,
   secretPicturePath: PropTypes.string,
   sectionId: PropTypes.number,
+  loginType: PropTypes.string,
 });
 
 /** @enum {number} */
@@ -101,6 +101,7 @@ const actionsFormatter = function (actions, {rowData}) {
 
 class ManageStudentsTable extends Component {
   static propTypes = {
+    //Provided by redux
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
   };
@@ -261,4 +262,9 @@ class ManageStudentsTable extends Component {
   }
 }
 
-export default ManageStudentsTable;
+export const UnconnectedManageStudentsTable = ManageStudentsTable;
+
+export default connect(state => ({
+  loginType: state.manageStudents.loginType,
+  studentData: state.manageStudents.studentData,
+}))(ManageStudentsTable);

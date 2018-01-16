@@ -1,4 +1,3 @@
-
 ---
 layout: none
 theme: none
@@ -147,6 +146,8 @@ content-type: text/ng-template
       %th{colspan: "4", style: "padding-top:5px;padding-bottom:5px"}
       %th.manage-th{style: "padding-top:5px;padding-bottom:5px; height:45px"}
         %button.btn.btn-primary{"ng-click" => "save(section.students)", "ng-show" => "editingAny(section.students)", style: "float:left", "ng-disabled" => "allForm.$invalid"}= I18n.t('dashboard_action_save_all')
+
+  #student-table-react{'ng-init' => '$emit("student-table-react-rendered");'}
 
   %div{"ng-if" => "section.login_type === 'picture' || section.login_type === 'word'"}
     %h3{"ng-show" => 'section.students.length > 0'}

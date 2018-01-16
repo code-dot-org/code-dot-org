@@ -2311,6 +2311,12 @@
               name: CSP Student Post-Course Survey
             Creating Functions with Parameters:
               name: "매개변수가 있는 함수 만들기"
+            CSP End-of-Semester Mid-course survey:
+              name: CSP End-of-Semester Mid-course survey
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions
@@ -5497,6 +5503,10 @@
               name: Designing Screens with Code
             Arrays:
               name: Arrays
+            Making Music:
+              name: Making Music
+            Arrays and For Loops:
+              name: Arrays and For Loops
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -6197,6 +6207,8 @@
                 deciding what to do with data that does not easily fit into the visualization
                 scheme that they have chosen.  Last, students look at what parts of
                 this process can be automated, and what need a human to make decisions.
+            Keeping Data Secret:
+              name: Keeping Data Secret
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -6535,6 +6547,8 @@
               name: "바운스"
             NewBounce:
               name: NewBounce
+            F PlayLab Variables:
+              name: F PlayLab Variables
           title: ''
           description_audience: ''
           description_short: ''
@@ -7844,6 +7858,10 @@
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey:
+              name: Please complete the CSP Mid-course survey
           title: ''
           description_audience: ''
           description_short: "프로그래밍"
@@ -8437,6 +8455,16 @@
               name: 'Technology Foundations: What is a Computer?'
             'Data Science: Problem Solving with Big Data':
               name: 'Data Science: Problem Solving with Big Data'
+            Personal Innovations:
+              name: Personal Innovations
+            What is a Computer?:
+              name: What is a Computer?
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Programming - Hour of Code:
+              name: Programming - Hour of Code
+            Simple Encryption:
+              name: "간단한 암호화"
           title: PwC Access Your Potential
           description_audience: ''
           description_short: ''
@@ -8503,6 +8531,8 @@
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
           title: Intro to App Lab Staging
           description_audience: ''
           description_short: ''
@@ -8519,6 +8549,8 @@
               name: Explore PT - Complete the Task
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Setup: Digital Portfolio and Other Tools'
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
@@ -8554,6 +8586,14 @@
             standalone template:
               name: standalone template
           title: 'CSP3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        aws-demo:
+          stages:
+            new stage:
+              name: new stage
+          title: AWS Demo
           description_audience: ''
           description_short: ''
           description: ''

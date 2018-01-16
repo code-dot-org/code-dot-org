@@ -226,20 +226,20 @@ it:
         'studio_c2_2': "Fai in modo che il cane dica qualcosa e poi il gatto gli risponda."
         'studio_c2_3': "Riesci a scrivere un programma che fa arrivare questo cane fino al gatto?"
         'studio_c2_4': "Fai arrivare il cane fino al gatto e fai in modo che il gatto dica \"Ciao\" quando il cane lo raggiunge."
-        'studio_c2_5': "Riesci a scrivere un programma per far dire \"Ciao\" al polpo quando viene cliccato?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
+        'studio_c2_5': "Riesci a scrivere un programma per far dire \"Ciao\" al polpo quando viene cliccato?"
         'studio_c2_6': "Riesci a scrivere un programma per spostare questo pinguino in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra / a destra in modo da fargli raggiungere tutte le bandierine?"
         'studio_c2_7': "Il blocco `ripeti per sempre`, aggiunto in fondo all'area di lavoro, permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il dinosauro (personaggio 2) in continuazione in su e in giù?"
         'studio_c2_8': "Riesci a far dire \"Ahi!\" al pinguino (personaggio 1) e a `riprodurre il suono di un colpo` se esso sbatte contro il dinosauro (personaggio 2), e poi a spostarlo con i tasti freccia per far sì che questo accada?"
         'studio_c2_9': "Aggiungi un blocco che segna un punto quando il pinguino (personaggio 1) sbatte contro il polpo (personaggio 3). Poi sposta il pinguino con i tasti freccia fino a che fai un punto."
         'studio_c2_10': "Aggiungi dei blocchi per cambiare lo sfondo e la velocità del pinguino (personaggio 1). Poi spostalo con i tasti freccia fino a che fai un punto."
         'studio_c2_11': "Crea una storia come vuoi tu. Quando hai fatto, clicca su \"Condividi\" per far provare la storia ai tuoi amici sui loro smartphone."
-        'studio_c3_story_1': "Riesci a far dire a questo cane \"Ciao a tutti\"?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
+        'studio_c3_story_1': "Riesci a far dire a questo cane \"Ciao a tutti\"?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-16#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
         'studio_c3_story_2': "Fai in modo che il cane dica qualcosa e poi il gatto gli risponda."
         'studio_c3_story_3': "Riesci a scrivere un programma che fa arrivare questo cane fino al gatto?"
         'studio_c3_story_4': "Fai arrivare il cane fino al gatto e fai in modo che il gatto dica \"Ciao\" quando il cane lo raggiunge."
         'studio_c3_story_5': "Riesci ad aggiungere un blocco per far sì che il polpo sia felice?"
         'studio_c3_story_6': "Crea una storia come vuoi tu. Quando hai fatto, clicca su \"Condividi\" per far provare la storia ai tuoi amici sui loro smartphone."
-        'studio_c3_game_1': "Riesci a scrivere un programma per far dire \"ciao\" al polpo quando viene cliccato?"
+        'studio_c3_game_1': "Riesci a scrivere un programma per far dire \"Ciao\" al polpo quando viene cliccato?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-17#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
         'studio_c3_game_2': "Riesci a scrivere un programma per spostare questo pinguino in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra / a destra in modo da fargli raggiungere tutte le bandierine?"
         'studio_c3_game_3': "Il blocco `ripeti per sempre`, aggiunto in fondo all'area di lavoro, permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il dinosauro (personaggio 2) in continuazione in su e in giù?"
         'studio_c3_game_4': "Riesci a far dire \"Ahi!\" al pinguino e a riprodurre il suono di \"un colpo\" se esso sbatte contro il dinosauro, e poi a spostarlo con i tasti freccia per far sì che questo accada?"
@@ -279,7 +279,7 @@ it:
         'studio_gumball_join_food_fight': "Unisciti alla battaglia del cibo! Usa l'istruzione \"il personaggio lancia l'oggetto a destra\" per far buttare a Banana Joe (il personaggio 1) del cibo verso Anton (il personaggio 2). Imposta l'umore di Anton ad arrabbiato quando viene colpito."
         'studio_gumball_free_play': "Crea un gioco o una storia per conto tuo. Quando hai fatto, clicca su \"Condividi\" per far provare il gioco ai tuoi amici sui loro smartphone, tablet o computer!"
         'studio_full_sandbox': "Crea un gioco per conto tuo. Quando hai fatto, clicca su \"Condividi\" per far provare il gioco ai tuoi amici sui loro smartphone."
-        'studio_k1_1': "Riesci a far dire a questo cane \"Ciao a tutti\"?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
+        'studio_k1_1': "Riesci a far dire a questo cane \"Ciao a tutti\"?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-16#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
         'studio_k1_2': "Fai in modo che il cane dica qualcosa e poi il gatto gli risponda."
         'studio_k1_3': "Riesci a scrivere un programma che fa arrivare questo cane fino al gatto?"
         'studio_k1_4': "Fai arrivare il cane fino al gatto e fai in modo che il gatto dica \"ciao\" quando il cane arriva là."
@@ -302,7 +302,7 @@ it:
     video:
       name:
         'maze_intro': "Introduzione a \"Il Labirinto\""
-        'artist_intro': "Introduzione a \"L'Artista\""
+        'artist_intro': "Artista - Introduzione"
         'farmer_intro': "Introduzione a \"La Contadina\""
         'flappy_intro': "Introduzione a \"Flappy\""
         'loop_times': "Blocco \"ripeti ... volte\""
@@ -334,7 +334,7 @@ it:
         'C1_maze_intro_sequencing': 'Labirinto - Corso 1: Introduzione'
         'C1_maze_debugging': 'Labirinto: Correzione di Errori'
         'C1_bee_level_intro': 'Ape: Introduzione'
-        'C1_artist_intro': 'Artista - Corso 1: Introduzione'
+        'C1_artist_intro': 'Artista - Introduzione'
         'C1_spelling_bee_intro': 'Ape Sapiente: Introduzione'
         'C1_zuck_repeat_loop': 'Labirinto: Cicli'
         'C1_bee_loops': 'Ape: Cicli'
@@ -344,7 +344,7 @@ it:
         'C1_building_foundation': 'Costruire le Fondamenta'
         'C1_going_places_safely': 'Visitare Luoghi in Modo Sicuro'
         'C2_maze_intro': 'Labirinto - Corso 2: Introduzione'
-        'C2_artist_intro': 'Artista - Corso 2: Introduzione'
+        'C2_artist_intro': 'Artista - Introduzione'
         'C2_zuck_repeat_loop': 'Labirinto: Cicli'
         'C2_artist_loops': 'Artista: Cicli'
         'C2_artist_debugging': 'Artista: Correzione di Errori'
@@ -360,7 +360,7 @@ it:
         'C2_digital_footprint': 'La tua Impronta Digitale'
         'C2_digital_footprint_v2': 'La tua Impronta Digitale'
         'C3_maze_level_4': 'Labirinto: Cicli'
-        'C3_artist_intro': 'Artista - Corso 3: Introduzione'
+        'C3_artist_intro': 'Artista - Introduzione'
         'C3_artist_functions': 'Artista: Funzioni'
         'C3_bee_functions': 'Ape: Funzioni'
         'C3_bee_conditionals': 'Ape: Istruzioni Condizionali'
@@ -396,10 +396,11 @@ it:
         'C4_unplugged_forloops': 'Cicli con Contatore'
         'C4_unplugged_parameters': 'Composizione di Canzoni - Parametri'
         'C4_unplugged_binary': 'Binario'
+        'CSF_a_b_artist_loops': 'Cicli in Artista'
         'CSF_artist_angles': 'Angoli in Artista'
-        'CSF_collector_k1_blocks': 'CS Fondamenti: Il collezionista'
+        'CSF_collector_k1_blocks': 'Fondamenti di Informatica: Il collezionista'
         'CSF_collector_repeat_loops': 'Collezionista: cicli di ripetizione'
-        'CSF_collector_text_blocks': 'CS Fondamenti: Il collezionista'
+        'CSF_collector_text_blocks': 'Fondamenti di Informatica: Il collezionista'
         'CSF_create_functions': 'Creazione di funzioni'
         'CSF_debugging_k1_blocks': 'Debugging'
         'CSF_debugging_text_blocks': 'Debugging'
@@ -530,7 +531,7 @@ it:
         'applab_hoc_welcome': 'L''ora del codice in Sviluppo App - Benvenuto'
         'applab_hoc_setproperty': 'L''ora del codice in Sviluppo App - setProperty'
         'applab_hoc_onevent': 'L''ora del codice in Sviluppo App - onEvent'
-        'applab_hoc_designmode': 'L''ora del codice in Sviluppo App - modalità di progetto'
+        'applab_hoc_designmode': 'L''Ora del Codice Sviluppo App - Modalità Interfaccia'
         'applab_hoc_share': 'L''ora del codice in Sviluppo App - condivisione'
         'mc_2017_agent_intro': 'L''Ora del Codice con Minecraft - L''Agente'
         'mc_2017_repeat': 'L''Ora del Codice con Minecraft - Cicli'
@@ -554,11 +555,11 @@ it:
         'hint_videos_d_11_9_last': 'Hint Videos: D.11.9 Last'
         'hint_videos_d_11_11_first': 'Hint Videos: D.11.11 First'
         'hint_videos_d_11_11_last': 'Hint Videos: D.11.11 Last'
-        'applab_intro_welcome': 'App Lab - Getting Started'
-        'applab_intro_events': 'App Lab - Make It Interactive'
-        'applab_intro_sounds': 'App Lab - Images and Sounds'
-        'applab_intro_designmode': 'App Lab - Design Mode'
-        'applab_intro_share': 'App Lab - Share Your App'
+        'applab_intro_welcome': 'Sviluppo App - Per cominciare'
+        'applab_intro_events': 'Sviluppo App - Rendila interattiva'
+        'applab_intro_sounds': 'Sviluppo App - Immagini e suoni'
+        'applab_intro_designmode': 'Sviluppo App - Modalità Interfaccia'
+        'applab_intro_share': 'Sviluppo App - Condividi la tua app'
     callout:
       text:
         drag_blocks: 'Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l''altro blocco qua sopra'

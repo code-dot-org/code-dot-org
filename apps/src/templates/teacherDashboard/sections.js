@@ -6,9 +6,16 @@ import teacherSections, {
   setOAuthProvider,
   asyncLoadSectionData
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import manageStudents, {
+  setLoginType,
+  setSectionId,
+  setStudents,
+  convertStudentServerData,
+} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 import SectionsSharingButton from '@cdo/apps/templates/teacherDashboard/SectionsSharingButton';
+import ManageStudentsTable from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
 
 /**
  * On the manage students tab of an oauth section, use React to render a button
@@ -67,6 +74,32 @@ export function renderLoginTypeAndSharingControls(sectionId) {
     </Provider>,
     shareSettingMountPoint()
   );
+}
+
+export function renderSectionTable(sectionId, loginType) {
+  registerReducers({manageStudents});
+  const store = getStore();
+
+  store.dispatch(setLoginType(loginType));
+  store.dispatch(setSectionId(sectionId));
+
+  const dataUrl = `/v2/sections/${sectionId}/students`;
+  const element = document.getElementById('student-table-react');
+
+  $.ajax({
+    method: 'GET',
+    url: dataUrl,
+    dataType: 'json'
+  }).done(studentData => {
+    store.dispatch(
+      setStudents(convertStudentServerData(studentData, loginType, sectionId))
+    );
+    ReactDOM.render(
+      <Provider store={store}>
+        <ManageStudentsTable />
+      </Provider>,
+      element);
+  });
 }
 
 export function unmountLoginTypeAndSharingControls() {

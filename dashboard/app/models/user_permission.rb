@@ -35,6 +35,8 @@ class UserPermission < ActiveRecord::Base
     # Grants access to reseting (to 0) the abuse score for projects,
     # and blocking and unblocking legacy shares.
     RESET_ABUSE = 'reset_abuse'.freeze,
+    # Grants ability to (un)feature projects in the the public project gallery.
+    PROJECT_VALIDATOR = 'project_validator'.freeze,
     # Grants access to PLC workshop dashboards.
     WORKSHOP_ADMIN = 'workshop_admin'.freeze,
     # Grants access to managing professional development workshops and

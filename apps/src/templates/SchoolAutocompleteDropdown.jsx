@@ -67,6 +67,7 @@ export default class SchoolAutocompleteDropdown extends Component {
         name={this.props.fieldName}
         async={true}
         loadOptions={this.getOptions}
+        cache={false}
         filterOption={() => true}
         value={this.props.value}
         onChange={this.props.onChange}

@@ -260,6 +260,12 @@
   studiobar_donate_body: "เด็กจะได้รับการศึกษาจากแต่ละดอลลาร์ที่คุณบริจาค"
   studiobar_shop_title: "ร้านค้า"
   studiobar_shop_body: "แตกประเภทออก ใส่โลโก้ของเราด้วยความภาคภูมิใจ"
+  homepage_stats_students: "of US students have accounts on Code.org"
+  homepage_stats_female: "of our students are female"
+  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
+  homepage_stats_policy: "states changed policy to support computer science"
+  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "\"ฉันท้าทายผู้หญิงทุกประเทศ ให้ลองเรียน Hour of Code\" มาลาลา, ผู้ชนะรางวัลโนเบลสันติภาพ"
   homepage_hero_text_susan: |-
     &ldquo; ถ้าคุณสามารถเปลี่ยนแปลงเทคโนโลยี,
@@ -497,6 +503,7 @@
   video_title_obama: "President Obama on computer science"
   video_title_hoc_is_here: "Hour of Code is Here - Anybody Can Learn"
   video_title_anybody_can_learn: "Anybody Can Learn"
+  video_title_steph_curry: "Hour of Code with Steph Curry"
   video_title_draymond_green: "Hour of Code with Draymond Green"
   video_title_russell_okung: "Hour of Code with Russell Okung"
   video_title_real_madrid: "Hour of Code with Real Madrid"

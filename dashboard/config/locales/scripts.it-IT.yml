@@ -331,10 +331,10 @@
               name: Tradizionale &ndash; Videogiochi e Piani Cartesiani
         infinity:
           title: Disney Infinity
-          description: Crea una storia o inventa un gioco con i personaggi di Disney
-            Infinity come protagonisti!
-          description_short: Crea una storia o inventa un gioco con i personaggi di
-            Disney Infinity come protagonisti!
+          description: Usa il Laboratorio per creare una storia o inventare un gioco
+            con i personaggi di Disney Infinity come protagonisti!
+          description_short: Usa il Laboratorio per creare una storia o inventare
+            un gioco con i personaggi di Disney Infinity come protagonisti!
           stages:
             Infinity:
               name: Infinito
@@ -1226,7 +1226,7 @@
             Text Compression Lesson:
               name: Lezione Compressione del Testo
             Text Compression Widget:
-              name: Compressione del Testo
+              name: Componente per la compressione del testo
             Welcome!:
               name: Benvenuto!
         K5-OnlinePD:
@@ -2366,6 +2366,12 @@
               name: CSP Student Post-Course Survey
             Creating Functions with Parameters:
               name: Creating Functions with Parameters
+            CSP End-of-Semester Mid-course survey:
+              name: CSP End-of-Semester Mid-course survey
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
           description: The data-rich world we live in introduces many complex questions
@@ -3191,7 +3197,7 @@
             Unspotted Bugs:
               name: Bug Non Individuati
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Correzione di errori (debugging): Bug non individuati'
             'Events Unplugged: The Big Event':
               name: Eventi in modalità tradizionale
         grade5:
@@ -3435,7 +3441,8 @@
             games, using the same programming concepts and the design process computer
             scientists use daily. In the final project, you’ll develop a personalized,
             interactive program."
-          description_short: Programmazione
+          description_short: Impara a programmare animazioni, arte interattiva e giochi
+            in Sviluppo Giochi.
           description_audience: ''
           stages:
             Booleans and Conditionals:
@@ -4246,7 +4253,8 @@
         csd2:
           title: 'CSD Unit 2 - The Internet: Web Development'
           description_audience: ''
-          description_short: "  Learn to build your own web site in Web Lab."
+          description_short: "  Imparare a costruire il tuo sito web con Sviluppo
+            Web."
           description: " In Unit 2, you’ll learn how to create and share the content
             on your own web pages. After deciding what content you want to share with
             the world, you’ll learn how to structure and style your pages using HTML
@@ -4905,23 +4913,23 @@
             'Debugging: Bugs in Codeville':
               name: 'Debugging: Bugs in Codeville'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistenza & frustrazione: Stevie e le biglie'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Impara come trascinare e rilasciare (drag and drop)
             'Programming: Happy Maps':
-              name: 'Programming: Happy Maps'
+              name: 'Programmazione: Mappe Felici'
             Programming in Maze:
-              name: Programming in Maze
+              name: Programmazione nel labirinto
             Being Safe Online:
               name: Being Safe Online
             'Loops: Happy Loops':
-              name: 'Loops: Happy Loops'
+              name: 'Cicli: Cicli felici'
             Loops in Collector:
-              name: Loops in Collector
+              name: Cicli nel labirinto Collector
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli in Artista
             'Events: The Big Event':
               name: Eventi
             Events in Play Lab:
@@ -4931,7 +4939,7 @@
             Going Places Safely:
               name: Visitare Luoghi in Modo Sicuro
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Correzione di errori (debugging): Bug non individuati'
         courseb-draft:
           title: 'CS Fundamentals: Course B'
           description_audience: ''
@@ -4943,25 +4951,25 @@
             they can share. Recommended for 1st grade.
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Correzione di errori (debugging): Bug non individuati'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistenza & frustrazione: Stevie e le biglie'
             Sequence & Algorithms:
               name: Sequence & Algorithms
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Impara come trascinare e rilasciare (drag and drop)
             Being Safe Online:
               name: Being Safe Online
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
-              name: Programming in Maze
+              name: Programmazione nel labirinto
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Collector:
-              name: Loops in Collector
+              name: Cicli nel labirinto Collector
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli in Artista
             'Events: The Big Event':
               name: Eventi
             Events in Play Lab:
@@ -4984,7 +4992,7 @@
             2nd grade.
           stages:
             Programming in Maze:
-              name: Programming in Maze
+              name: Programmazione nel labirinto
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmi della Vita Reale: Aeroplani di Carta'
             Programming in Collector:
@@ -5556,6 +5564,10 @@
               name: Designing Screens with Code
             Arrays:
               name: Arrays
+            Making Music:
+              name: Making Music
+            Arrays and For Loops:
+              name: Arrays and For Loops
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5683,7 +5695,7 @@
             to the breadth of App Lab and the Maker Toolkit.
           stages:
             App Lab Basics:
-              name: App Lab Basics
+              name: Le basi di Sviluppo App
             The Circuit Playground:
               name: The Circuit Playground
             Physical Input:
@@ -6256,6 +6268,8 @@
                 deciding what to do with data that does not easily fit into the visualization
                 scheme that they have chosen.  Last, students look at what parts of
                 this process can be automated, and what need a human to make decisions.
+            Keeping Data Secret:
+              name: Keeping Data Secret
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -6594,6 +6608,8 @@
               name: Ping-Pong
             NewBounce:
               name: NewBounce
+            F PlayLab Variables:
+              name: F PlayLab Variables
           title: ''
           description_audience: ''
           description_short: ''
@@ -6601,90 +6617,101 @@
         coursea:
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Correzione di errori (debugging): Bug non individuati'
               description_student: ''
-              description_teacher: 'This lesson will guide students through the steps
-                of debugging.  Students will learn the mantra: "What happened?  What
-                was supposed to happen? What does that tell you?"'
+              description_teacher: 'Questa lezione guiderà gli studenti attraverso
+                le fasi di ricerca degli errori (debug).  Gli studenti impareranno
+                il mantra: "Cos''è successo?  Che cosa sarebbe dovuto succedere? Cosa  ti
+                dice ciò?"'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
               description_student: ''
-              description_teacher: |-
-                When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\r
-                \r
-                This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
+              description_teacher: "Quando gli studenti si imbattono  in una difficoltà
+                mentre rispondono a una domanda o lavorano su un progetto, è molto
+                facile per loro di divenire frustrati e rinunciare.  Questa lezione
+                introduce agli studenti il concetto che la frustrazione può essere
+                una parte importante dell'apprendimento. Qui, la frustrazione è presentata
+                come una fase nel processo creativo, piuttosto che un segno di fallimento.
+                \nQuesta lezione può essere svolta in  una o due sessioni con la Classe
+                \ Se avete più tempo, non esitate a prolungare la durata della fase
+                di costruzione e revisione dell'attività Corsa delle Biglie."
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
               description_student: ''
               description_teacher: |
-                In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r
+                In questa lezione, gli studenti metteranno in relazione il concetto di algoritmo con le attività di ogni giorno, con le attività della vita reale, piantando un vero seme. L'obiettivo è quello di iniziare a costruire le capacità di tradurre situazioni del mondo reale in scenari online e vice versa.\r
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Sequenze con Drag and Drop
               description_student: ''
-              description_teacher: This lesson will give students an idea of what
-                to expect when they head to the computer lab. It begins with a brief
-                discussion introducing them to computer lab manners, then they will
-                progress into using a computer to complete online puzzles.
+              description_teacher: Questa lezione darà agli studenti un'idea di cosa
+                aspettarsi quando si dirigono verso il laboratorio di informatica.
+                Si comincia con una breve discussione introduttiva sui comportamenti
+                da tenere nel laboratorio di informatica, quindi gli studenti procederanno
+                utilizzando un computer per completare dei puzzle online.
             'Programming: Happy Maps':
-              name: 'Programming: Happy Maps'
+              name: 'Programmazione: Mappe Felici'
               description_student: ''
-              description_teacher: The bridge from algorithms to programming can be
-                a short one if students understand the difference between planning
-                out a sequence and encoding that sequence into the appropriate language.  This
-                activity will help students gain experience reading and writing in
-                shorthand code.
+              description_teacher: Il passaggio da algoritmo a programmazione può
+                essere più immediato se gli studenti capiscono la differenza tra pianificare  una
+                sequenza e codificare tale sequenza in un linguaggio opportuno. Questa
+                attività aiuterà gli studenti ad acquisire esperienza leggendo e scrivendo
+                brevi tratti di codice.
             Programming in Maze:
-              name: Programming in Maze
+              name: Programmazione nel labirinto
               description_student: ''
-              description_teacher: In this series of online puzzles, students will
-                build on the understanding of algorithms, debugging, and general computer
-                literacy. Featuring characters from the game Angry Birds, students
-                will develop sequential algorithms to get the bird to the pig without
-                crashing into walls or TNT. Debugging puzzles have also been mixed
-                into this stage for added practice with problem solving and critical
-                thinking.
+              description_teacher: In questa serie di puzzle online, gli studenti
+                potenzieranno la comprensione degli algoritmi, la correzione degli
+                errori (debugging) e i principi generali dell'informatica. Utilizzando
+                personaggi dal gioco Angry Birds, gli studenti svilupperanno algoritmi
+                sequenziali per far arrivare l'uccellino dal maialino senza collidere
+                nei muri o nella TNT. Alcuni esercizio di ricerca degli errori sono
+                stati mescolati in questa fase per far pratica nella risoluzione dei
+                problemi e nello sviluppo del pensiero critico.
             Going Places Safely:
-              name: Visitare Luoghi in Modo Sicuro
+              name: 'Cittadinanza digitale: Visitare Luoghi in modo sicuro'
               description_student: ''
-              description_teacher: In collaboration with [r common-sense-media], this
-                lesson helps students learn that many websites ask for information
-                that is private and discusses how to responsibly handle such requests.
-                Students also find out that they can go to exciting places online,
-                but they need to follow certain rules to remain safe.
+              description_teacher: In collaborazione con Common-Sense-Media, questa
+                lezione aiuta gli studenti a imparare che molti siti Web richiedono
+                informazioni private e spiega come gestire responsabilmente tali richieste.
+                Gli studenti scoprono anche che possono raggiungere luoghi interessanti
+                online, ma devono seguire alcune regole per essere al sicuro.
             'Loops: Happy Loops':
-              name: 'Loops: Happy Loops'
+              name: 'Cicli: Cicli felici'
               description_student: ''
-              description_teacher: Loops are a very helpful and powerful tool in programming.
-                To understand how helpful loops can be, students will need to be driven
-                to want an easier way to solve mundane problems.
+              description_teacher: I cicli sono uno strumento molto utile e potente
+                nella programmazione. Per capire quanto utili possono essere, gli
+                studenti dovranno essere condotti a desiderare un modo più semplice
+                per risolvere problemi banali.
             Loops in Collector:
-              name: Loops in Collector
+              name: Cicli nel labirinto Collector
               description_student: ''
-              description_teacher: Building on the concept of repeating instructions
-                from "Happy Loops," this stage will have students using loops to collect
-                treasure more efficiently on Code.org.
+              description_teacher: Basandosi sul concetto di istruzioni ripetute da
+                "Cicli Felici", in questa fase gli studenti utilizzeranno i cicli
+                per raccogliere il tesoro in modo più efficiente su Code.org.
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli in Artista
               description_student: ''
-              description_teacher: Returning to loops, students learn to draw images
-                by looping simple sequences of instructions. In the previous plugged
-                lesson, loops were used to traverse a maze and collect treasure. Here,
-                loops are creating patterns. At the end of this stage, students will
-                be given the opportunity to create their own images using loops.
+              description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
+                immagini ripetendo semplici sequenze di istruzioni. Nella precedente
+                lezione i cicli sono stati utilizzati per attraversare un labirinto
+                e raccogliere il tesoro. Qui, i cicli creando modelli. Alla fine di
+                questa fase, gli studenti avranno l'opportunità di creare le proprie
+                immagini utilizzando i cicli.
             'Events: The Big Event':
               name: Eventi
               description_student: ''
-              description_teacher: Events are a great way to add variety to a pre-written
-                algorithm. Sometimes you want your program to be able to respond to
-                the user exactly when the user wants it to. That is what events are
-                for.
+              description_teacher: Gli eventi sono un ottimo strumento per aggiungere
+                variazioni ad un algoritmo già scritto. A volte si desidera che il
+                proprio programma risponda all'utente esattamente quando l'utente
+                ne ha bisogno. Gli eventi servono proprio a questo.
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
               description_student: ''
-              description_teacher: In this online activity, students will have the
-                opportunity to learn how to use events in Play Lab and to apply all
-                of the coding skills they've learned to create an animated game. It's
-                time to get creative and make a story in the Play Lab!
+              description_teacher: In questa attività online, gli studenti avranno
+                l'opportunità di imparare a utilizzare gli eventi del Laboratorio
+                di Gioco e di applicare tutte le competenze di codifica che hanno
+                imparato per creare un gioco animato. È il momento di essere creativi
+                e costruire una storia nel Laboratorio di Gioco!
           title: Corso A
           description_audience: ''
           description_short: An introduction to computer science for early readers.
@@ -6698,25 +6725,25 @@
         courseb:
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Correzione di errori (debugging): Bug non individuati'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Sequenze con Drag and Drop
             Your Digital Footprint:
               name: La tua Impronta Digitale
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
-              name: Programming in Maze
+              name: Programmazione nel labirinto
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Collector:
-              name: Loops in Collector
+              name: Cicli nel labirinto Collector
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli in Artista
             'Events: The Big Event':
               name: Eventi
             Events in Play Lab:
@@ -6737,7 +6764,7 @@
             Building a Foundation:
               name: Costruire le Fondamenta
             Programming in Maze:
-              name: Programming in Maze
+              name: Programmazione nel labirinto
             Debugging in Maze:
               name: Debugging in Maze
             'Real-life Algorithms: Paper Planes':
@@ -6763,7 +6790,7 @@
             Binary Bracelets:
               name: Braccialetti Binari
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli in Artista
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
           title: Corso C
@@ -7167,7 +7194,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli in Artista
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
@@ -7407,7 +7434,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli in Artista
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
@@ -7720,7 +7747,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli in Artista
             Nested Loops Project in Artist:
               name: Nested Loops Project in Artist
             Internet:
@@ -7810,27 +7837,27 @@
         pre-express:
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Correzione di errori (debugging): Bug non individuati'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Sequenze con Drag and Drop
             'Online Safety: Your Digital Footprint':
               name: 'Online Safety: Your Digital Footprint'
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
-              name: Programming in Maze
+              name: Programmazione nel labirinto
             'Programming: Star Wars':
               name: 'Programming: Star Wars'
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Collector:
-              name: Loops in Collector
+              name: Cicli nel labirinto Collector
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli in Artista
             'Events: The Big Event':
               name: Eventi
             Events in Play Lab:
@@ -7903,6 +7930,10 @@
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey:
+              name: Please complete the CSP Mid-course survey
           title: ''
           description_audience: ''
           description_short: Programmazione
@@ -7960,9 +7991,9 @@
         applab-intro:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
-              name: Intro to AppLab - Choose Your Own Adventure
+              name: Introduzione a Sviluppo App - Scegli la Tua Avventura
             Intro to AppLab - Choose Your Own Adventure 2:
-              name: Intro to AppLab - Choose Your Own Adventure 2
+              name: Introduzione a Sviluppo App - Scegli la Tua Avventura 2
             Intro to AppLab - Your First App:
               name: Intro to AppLab - Your First App
             Intro to AppLab - Your First App 2:
@@ -7972,12 +8003,12 @@
             Intro to AppLab - Your First App 4:
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
-              name: Intro to AppLab - Getting Started
+              name: Introduzione a Sviluppo App - Per cominciare
             Intro to App Lab:
-              name: Intro to App Lab
+              name: Introduzione a Sviluppo App
             'Lesson 1: App Lab Intro':
               name: 'Lesson 1: App Lab Intro'
-          title: Intro to App Lab
+          title: Introduzione a Sviluppo App
           description_audience: ''
           description_short: ''
           description: These lessons introduce you to App Lab through a series of
@@ -7997,7 +8028,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli in Artista
             Nested Loops:
               name: Cicli Annidati
             Nested Loops with Frozen:
@@ -8087,7 +8118,7 @@
             Building a Foundation:
               name: Costruire le Fondamenta
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli in Artista
             Nested Loops in Bee:
               name: Nested Loops in Bee
           title: New Course D Script
@@ -8119,7 +8150,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli in Artista
             Nested Loops Project in Frozen:
               name: Nested Loops Project in Frozen
             'How it Works: The Internet':
@@ -8193,7 +8224,7 @@
         new-stages-sept-2017:
           stages:
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli in Artista
             Sequences with Scrat:
               name: Sequences with Scrat
             Testing Template:
@@ -8217,7 +8248,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli in Artista
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
@@ -8275,7 +8306,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli in Artista
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
@@ -8496,6 +8527,16 @@
               name: 'Technology Foundations: What is a Computer?'
             'Data Science: Problem Solving with Big Data':
               name: 'Data Science: Problem Solving with Big Data'
+            Personal Innovations:
+              name: Innovazione personale
+            What is a Computer?:
+              name: What is a Computer?
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Programming - Hour of Code:
+              name: Programming - Hour of Code
+            Simple Encryption:
+              name: Crittografia semplice
           title: PwC Access Your Potential
           description_audience: ''
           description_short: ''
@@ -8545,13 +8586,14 @@
           title: 'Minecraft: Il viaggio dell''eroe'
           description_audience: ''
           description_short: ''
-          description: ''
+          description: Minecraft è tornato per l'Ora del Codice con una nuovissima
+            attività! Viaggia attraverso Minecraft grazie al coding.
         applab-intro-staging:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
-              name: Intro to AppLab - Choose Your Own Adventure
+              name: Introduzione a Sviluppo App - Scegli la Tua Avventura
             Intro to AppLab - Choose Your Own Adventure 2:
-              name: Intro to AppLab - Choose Your Own Adventure 2
+              name: Introduzione a Sviluppo App - Scegli la Tua Avventura 2
             Intro to AppLab - Your First App:
               name: Intro to AppLab - Your First App
             Intro to AppLab - Your First App 2:
@@ -8561,7 +8603,9 @@
             Intro to AppLab - Your First App 4:
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
-              name: Intro to AppLab - Getting Started
+              name: Introduzione a Sviluppo App - Per cominciare
+            Intro to App Lab:
+              name: Introduzione a Sviluppo App
           title: Intro to App Lab Staging
           description_audience: ''
           description_short: ''
@@ -8578,6 +8622,8 @@
               name: Explore PT - Complete the Task
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Setup: Digital Portfolio and Other Tools'
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
@@ -8613,6 +8659,14 @@
             standalone template:
               name: standalone template
           title: 'CSP3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        aws-demo:
+          stages:
+            new stage:
+              name: new stage
+          title: AWS Demo
           description_audience: ''
           description_short: ''
           description: ''

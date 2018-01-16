@@ -638,7 +638,6 @@ FactoryGirl.define do
         first_name: 'Severus',
         preferred_first_name: 'Sevvy',
         last_name: 'Snape',
-        account_meail: 'severus@hogwarts.edu',
         alternate_email: 'ilovepotions@gmail.com',
         phone: '5558675309',
         address: '123 Fake Street',
@@ -689,6 +688,30 @@ FactoryGirl.define do
           hash['csd_terms_per_year'] = '1 quarter'
         end
       end.stringify_keys
+    end
+
+    trait :with_custom_school do
+      transient do
+        school_name 'Code.org'
+        school_address '1501 4th Ave'
+        school_city 'Seattle'
+        school_state 'Washington'
+        school_zip_code '98101'
+        school_type 'Public school'
+      end
+      after(:build) do |hash, evaluator|
+        hash.merge!(
+          {
+            school: -1,
+            school_name: evaluator.school_name,
+            school_address: evaluator.school_address,
+            school_city: evaluator.school_city,
+            school_state: evaluator.school_state,
+            school_zip_code: evaluator.school_zip_code,
+            school_type: evaluator.school_type
+          }.stringify_keys
+        )
+      end
     end
   end
 
@@ -762,20 +785,21 @@ FactoryGirl.define do
 
   factory :pd_teachercon1819_registration_hash, class: 'Hash' do
     transient do
-      accepted true
+      full_form_data true
     end
 
+    # default to accepted
     initialize_with do
       {
         email: "ssnape@hogwarts.edu",
         preferredFirstName: "Sevvy",
         lastName: "Snape",
         phone: "5558675309",
+        teacherAcceptSeat: "Yes, I accept my seat in the Professional Learning Program"
       }.tap do |hash|
-        if accepted
+        if full_form_data
           hash.merge!(
             {
-              teacherAcceptSeat: "Yes, I accept my seat in the Professional Learning Program",
               addressCity: "Albuquerque",
               addressState: "Alabama",
               addressStreet: "123 Street Ave",
@@ -794,22 +818,34 @@ FactoryGirl.define do
               photoRelease: "Yes",
             }
           )
-        else
-          hash.merge!(
-            {
-              teacherAcceptSeat: "No, I decline my seat in the Professional Learning Program.",
-            }
-          )
         end
       end.stringify_keys
+    end
+
+    trait :accepted do
+      # accepted is the default, trait included here just for completeness
+    end
+
+    trait :withdrawn do
+      full_form_data false
+      after :build do |hash|
+        hash['teacherAcceptSeat'] = "No, I decline my seat in the Professional Learning Program."
+      end
+    end
+
+    trait :waitlisted do
+      after :build do |hash|
+        hash['teacherAcceptSeat'] = "Yes, I want to participate, but I'm unable to attend my assigned summer workshop date. Please place me on your waitlist. I understand that I am not guaranteed a space in a different summer workshop."
+      end
     end
   end
 
   factory :pd_teachercon1819_registration, class: 'Pd::Teachercon1819Registration' do
-    association :pd_application, factory: :pd_teacher1819_application
     transient do
-      accepted false
+      hash_trait :accepted
     end
-    form_data {build(:pd_teachercon1819_registration_hash, accepted: accepted).to_json}
+
+    association :pd_application, factory: :pd_teacher1819_application
+    form_data {build(:pd_teachercon1819_registration_hash, hash_trait).to_json}
   end
 end
