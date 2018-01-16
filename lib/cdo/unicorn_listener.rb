@@ -100,4 +100,5 @@ module Cdo
       self.max_calling = calling if calling > max_calling
     end
   end
+  # rubocop:enable Style/StructInheritance
 end
