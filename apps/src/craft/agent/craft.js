@@ -739,7 +739,7 @@ export default class Craft {
         appCodeOrgAPI.moveDirection(studioApp().highlight.bind(studioApp(), blockID),
             dirStringToDirection[direction], targetEntity);
       },
-    }, {legacy: true});
+    });
 
     Craft.gameController.codeOrgAPI.startAttempt(success => {
       if (Craft.level.freePlay) {
