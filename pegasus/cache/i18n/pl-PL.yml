@@ -38,7 +38,7 @@
     pojęć informatycznych i dotyczących programowania w tym kursie, który następuje.
   og_title: 'Code.org: Każdy może się uczyć'
   og_title_soon: Zbliża się Godzina Kodowania
-  og_title_here: The Hour of Code is here!
+  og_title_here: Oto Godzina Kodowania!
   og_description: Każdy uczeń w każdej szkole zasługuje, by mieć szansę uczyć się
     informatyki.
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
@@ -46,10 +46,10 @@
   csedweek_og_title: Zbliża się Godzina Kodowania
   csedweek_og_description: 4-10 grudnia 2017. Informatyka jest podstawą w nauce każdego
     ucznia.
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
-    science is foundational for every student to learn.
-  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
-    for every student to learn.
+  csedweek_og_description_soon: Godzina Kodowania zaczyna się 4 grudnia 2017 i trwa
+    do 10 grudnia 2017. Informatyka jest podstawą w nauce każdego ucznia.
+  csedweek_og_description_here: Oto Godzina Kodowania. Informatyka jest podstawą w
+    nauce każdego ucznia.
   hoc2014_heading: Dołącz do <a href="http://hourofcode.com"> Godziny Kodowania (Hour
     of Code)</a> <br/> 8-14 grudnia 2014 r. <br/>
   hoc2014_students: Uczniowie
@@ -358,6 +358,12 @@
   studiobar_donate_body: Jedno dziecko się uczy za każdego dolara, który podarujesz
   studiobar_shop_title: Sklep
   studiobar_shop_body: "Łam stereotypy. Noś nasze logo z dumą."
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "&ldquo;Wzywam dziewczęta z wszystkich krajów do nauki
     podczas Godziny Kodowania.&rdquo; \nMalala, laureat Pokojowej Nagrody Nobla"
   homepage_hero_text_susan: |-
@@ -640,6 +646,7 @@
   video_title_obama: Prezydent Obama o informatyce
   video_title_hoc_is_here: Godzina Kodowania jest tutaj - każdy może się uczyć
   video_title_anybody_can_learn: Każdy może się uczyć
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: Godzina Kodowania z Draymond Green
   video_title_russell_okung: Godzina Kodowania z Russell Okung
   video_title_real_madrid: Godzina Kodowania z Realem Madryt
@@ -2160,10 +2167,3 @@
     się używając konta Google&rdquo;:'
   hero_name: 'Minecraft: Podróż Bohatera'
   applab-intro_name: App Lab Intro
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
-  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
-  video_title_steph_curry: Hour of Code with Steph Curry
