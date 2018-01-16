@@ -3,7 +3,7 @@ import {UnconnectedManageStudentsTable} from './ManageStudentsTable';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {combineReducers, createStore} from 'redux';
 import manageStudents from './manageStudentsRedux';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 
 const initialState = {
   loginType: '',

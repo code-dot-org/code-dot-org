@@ -36,19 +36,27 @@ export default function manageStudents(state=initialState, action) {
     };
   }
   if (action.type === START_EDITING_STUDENT) {
-    let updatedStudentData = state.studentData;
-    updatedStudentData[action.studentId].isEditing = true;
     return {
       ...state,
-      studentData: updatedStudentData,
+      studentData: {
+        ...state.studentData,
+        [action.studentId]: {
+          ...state.studentData[action.studentId],
+          isEditing: true
+        }
+      }
     };
   }
   if (action.type === CANCEL_EDITING_STUDENT) {
-    let updatedStudentData = state.studentData;
-    updatedStudentData[action.studentId].isEditing = false;
     return {
       ...state,
-      studentData: updatedStudentData,
+      studentData: {
+        ...state.studentData,
+        [action.studentId]: {
+          ...state.studentData[action.studentId],
+          isEditing: false
+        }
+      }
     };
   }
 
@@ -79,11 +87,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
 
 // Converts key/value id/student pairs to an array of student objects for the
 // component to display
-// TODO: memoize this - sections could be a few thousand students
+// TODO(caleybrock): memoize this - sections could be a few thousand students
 export const convertStudentDataToArray = (studentData) => {
-  let studentDataArray = [];
-  for (var id in studentData) {
-    studentDataArray.push(studentData[id]);
-  }
-  return studentDataArray;
+  return Object.values(studentData);
 };

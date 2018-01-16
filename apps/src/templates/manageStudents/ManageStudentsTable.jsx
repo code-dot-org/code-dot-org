@@ -111,7 +111,7 @@ const actionsFormatter = function (actions, {rowData}) {
 
 class ManageStudentsTable extends Component {
   static propTypes = {
-    //Provided by redux
+    // Provided by redux
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
   };
