@@ -27,6 +27,7 @@ Resources:
   VPC: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'VPC', Nonce: 0 %>
   Tableau:
     Type: AWS::Redshift::Cluster
+    DeletionPolicy: Retain
     Properties:
       AllowVersionUpgrade: true
       AutomatedSnapshotRetentionPeriod: 1
