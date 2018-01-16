@@ -13,8 +13,6 @@ const DB_STORAGE_TYPE = process.env.DB_STORAGE_TYPE;
 const DB_ENGINE = process.env.DB_ENGINE;
 const DB_LICENSE_MODEL = process.env.DB_LICENSE_MODEL;
 
-//var statusMessage = '';
-
 exports.handler = (event, context, callback) => {
     console.log(JSON.stringify(event));
     var rds = new AWS.RDS();
