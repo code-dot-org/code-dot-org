@@ -260,6 +260,12 @@
   studiobar_donate_body: "ყოველი შემოწირული დოლარი უზრუნველჰყოფს ერთი ბავშვის განათლებას"
   studiobar_shop_title: "მაღაზია"
   studiobar_shop_body: "დაამსხვრიე სტერეოტიპები. ატარე ჩვენი ლოგო სიამაყით."
+  homepage_stats_students: "of US students have accounts on Code.org"
+  homepage_stats_female: "of our students are female"
+  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
+  homepage_stats_policy: "states changed policy to support computer science"
+  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "&ldquo; ყველა ქვეყნის გოგონებს მოვუწოდებ - გაიარეთ კოდის ერთი საათი&rdquo; მალალა, ნობელის პრემიის მფლობელი მშვიდობის დარგში"
   homepage_hero_text_susan: |-
     &ldquo;თუ შეგიძლიათ ტექნოლოგიის შეცვლა, ყველფარის შეცვლა შეგიძლია&rdquo; სუსანი, YOUTUBE-ის დირექტორი
@@ -479,6 +485,7 @@
   video_title_obama: "პრეზიდენტი ობამა კომპიუტერული მეცნიერებების შესახებ"
   video_title_hoc_is_here: "კოდის ერთი საათი დაიწყო - სწავლა შეუძლია ყველას"
   video_title_anybody_can_learn: "სწავლა შეუძლია ყველას"
+  video_title_steph_curry: "Hour of Code with Steph Curry"
   video_title_draymond_green: "კოდის ერთი საათი დრეიმონდ გრინთან ერთად"
   video_title_russell_okung: "კოდის ერთი საათი რასელ ოკუნგთან ერთად"
   video_title_real_madrid: "კოდის ერთი საათი რეალ მადრიდთან ერთად"

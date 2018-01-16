@@ -669,7 +669,7 @@
         C3_bee_conditionals: Bie Betingelser
         C3_maze_conditionals: Labyrint Betingelser
         C3_artist_nested_loops: Løkker i løkker
-        C3_farmer_while: Mens Løkker
+        C3_farmer_while: Gjenta-løkker
         C3_bee_nested_loops: Løkker i løkker
         C3_bee_debugging: Bie feilsøking
         C3_bounce: sprett
@@ -699,6 +699,7 @@
         C4_unplugged_forloops: For-løkker
         C4_unplugged_parameters: Låtskriving med parametere
         C4_unplugged_binary: Binær
+        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Engler i Kunstner
         CSF_collector_k1_blocks: 'Grunnleggende: Samleren'
         CSF_collector_repeat_loops: Samler gjenta-løkker
@@ -725,13 +726,19 @@
         infinity_playlab_intro: Spill-Lab – introduksjon
         infinity_playlab_events: Spill-Lab – hendelser
         infinity_playlab_repeat_forever: Spill-Lab Gjenta for alltid
+        csd_concept_how_computers_work: Introducing How Computers Work
         csd_concept_computer: 'Hvordan datamaskiner fungerer: Hva gjør en datamaskin
           til en datamaskin?'
         csd_concept_binary_data: 'Hvordan datamaskiner fungerer: Binær og data'
+        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
+        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
+          & Output'
+        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
         csd_concept_search: Hvordan søk fungerer
         csd_external_amazon_data: Hvordan Stordata brukes i Amazon Anbefalings systemer
           kan endre livene våre
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
+        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
+        csd_external_waze_data: Hvorfor er så mange brukere opptatt av «Waze»?
         csd_gamelab_animation_tab: Animasjons-lab
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
@@ -846,25 +853,25 @@
         mc_2017_puzzle_3: Minecraft Kodetimen - Løkker
         mc_2017_puzzle_8: Minecraft Kodetimen - Funksjoner
         mc_2017_puzzle_12: Minecraft Kodetimen - Fritt spill
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
-        applab_intro_welcome: App Lab - Getting Started
-        applab_intro_events: App Lab - Make It Interactive
-        applab_intro_sounds: App Lab - Images and Sounds
-        applab_intro_designmode: App Lab - Design Mode
-        applab_intro_share: App Lab - Share Your App
+        hint_videos_d_11_3_first: 'Hint-videoer: D.11.3 Først'
+        hint_videos_d_11_3_last: 'Hint-videoer: D.11.3 Sist'
+        hint_videos_d_11_4_first: 'Hint-videoer: D.11.4 Først'
+        hint_videos_d_11_4_last: 'Hint-videoer: D.11.4 Sist'
+        hint_videos_d_11_5_first: 'Hint-videoer: D.11.5 Først'
+        hint_videos_d_11_5_last: 'Hint-videoer: D.11.5 Sist'
+        hint_videos_d_11_6_first: 'Hint-videoer: D.11.6 Først'
+        hint_videos_d_11_6_last: 'Hint-videoer: D.11.6 Sist'
+        hint_videos_d_11_7_first: 'Hint-videoer: D.11.7 Først'
+        hint_videos_d_11_7_last: 'Hint-videoer: D.11.7 Sist'
+        hint_videos_d_11_9_first: 'Hint-videoer: D.11.9 Først'
+        hint_videos_d_11_9_last: 'Hint-videoer: D.11.9 Sist'
+        hint_videos_d_11_11_first: 'Hint-videoer: D.11.11 Først'
+        hint_videos_d_11_11_last: 'Hint-videoer: D.11.11 Sist'
+        applab_intro_welcome: App Lab - kom i gang
+        applab_intro_events: App Lab - Gjøre det interaktivt
+        applab_intro_sounds: App Lab - Bilder og lyder
+        applab_intro_designmode: 'App Lab: Design modus'
+        applab_intro_share: App Lab - del Appen din
     callout:
       text:
         drag_blocks: Dra en "flytt" blokk og fest den under den andre blokken

@@ -654,6 +654,7 @@ pt-BR:
     correct_title: "Obrigado"
     correct_body: "Obrigado por enviar respostas."
     hide_survey_last_answer: "Esta pesquisa é anônima. Acesse o painel do professor para ver os resultados gerais. Observe que os resultados só poderão ser vistos se, no mínimo, cinco alunos enviarem suas respostas."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Obrigado"
     wrong_body: "Obrigado por enviar respostas."

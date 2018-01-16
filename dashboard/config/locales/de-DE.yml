@@ -895,6 +895,9 @@
     hide_survey_last_answer: Diese Umfrage ist anonym.  Bitte öffnen Sie das Lehrer-Dashboard,
       um die Ergebnisse anzusehen. Beachten Sie, dass Ergebnisse nur angezeigt werden,
       sofern mindesten fünf Teilnehmer an der Umfrage teilgenommen haben.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Vielen Dank
     wrong_body: Vielen Dank für das Einsenden Ihrer Fragen.

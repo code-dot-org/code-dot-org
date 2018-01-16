@@ -36,6 +36,11 @@ class RegionalPartner < ActiveRecord::Base
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', through: :regional_partner_program_managers
   has_many :mappings, -> {order :state, :zip_code}, class_name: Pd::RegionalPartnerMapping, dependent: :destroy
 
+  # Upcoming and not ended
+  def future_pd_workshops_organized
+    pd_workshops_organized.future
+  end
+
   # Make sure the phone number contains at least 10 digits.
   # Allow any format and additional text, such as extensions.
   PHONE_NUMBER_VALIDATION_REGEX = /(\d.*){10}/

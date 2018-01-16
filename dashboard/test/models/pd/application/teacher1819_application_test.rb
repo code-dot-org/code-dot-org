@@ -508,5 +508,71 @@ module Pd::Application
 
       assert_not_equal first_enrollment.id, application.auto_assigned_enrollment_id
     end
+
+    test 'school_info_attr for specific school' do
+      school = create :school
+      form_data_hash = build :pd_teacher1819_application_hash, school: school
+      application = create :pd_teacher1819_application, form_data_hash: form_data_hash
+      assert_equal({school_id: school.id}, application.school_info_attr)
+    end
+
+    test 'school_info_attr for custom school' do
+      application = create :pd_teacher1819_application, form_data_hash: (
+      build :pd_teacher1819_application_hash,
+        :with_custom_school,
+        school_name: 'Code.org',
+        school_address: '1501 4th Ave',
+        school_city: 'Seattle',
+        school_state: 'Washington',
+        school_zip_code: '98101',
+        school_type: 'Public school'
+      )
+      assert_equal(
+        {
+          country: 'US',
+          school_type: 'public',
+          state: 'Washington',
+          zip: '98101',
+          school_name: 'Code.org',
+          full_address: '1501 4th Ave',
+          validation_type: SchoolInfo::VALIDATION_NONE
+        },
+        application.school_info_attr
+      )
+    end
+
+    test 'update_user_school_info with specific school overwrites user school info' do
+      user = create :teacher, school_info: create(:school_info)
+      application_school_info = create :school_info
+      application = create :pd_teacher1819_application, user: user, form_data_hash: (
+        build :pd_teacher1819_application_hash, school: application_school_info.school
+      )
+
+      application.update_user_school_info!
+      assert_equal application_school_info, user.school_info
+    end
+
+    test 'update_user_school_info with custom school does nothing when the user already a specific school' do
+      original_school_info = create :school_info
+      user = create :teacher, school_info: original_school_info
+      application = create :pd_teacher1819_application, user: user, form_data_hash: (
+        build :pd_teacher1819_application_hash, :with_custom_school
+      )
+
+      application.update_user_school_info!
+      assert_equal original_school_info, user.school_info
+    end
+
+    test 'update_user_school_info with custom school updates user info when user does not have a specific school' do
+      original_school_info = create :school_info_us_other
+      user = create :teacher, school_info: original_school_info
+      application = create :pd_teacher1819_application, user: user, form_data_hash: (
+        build :pd_teacher1819_application_hash, :with_custom_school
+      )
+
+      application.update_user_school_info!
+      refute_equal original_school_info.id, user.school_info_id
+      assert_not_nil user.school_info_id
+    end
   end
 end

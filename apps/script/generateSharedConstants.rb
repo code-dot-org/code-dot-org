@@ -82,7 +82,7 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS LABEL_OVERRIDES NUMBERED_QUESTIONS),
+      %w(SECTION_HEADERS PAGE_LABELS LABEL_OVERRIDES NUMBERED_QUESTIONS TEXT_FIELDS),
       source_module: Facilitator1819ApplicationConstants,
       transform_keys: true
     ),
@@ -91,7 +91,7 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES),
+      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS),
       source_module: Teacher1819ApplicationConstants,
       transform_keys: true
     ),
@@ -100,7 +100,7 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(PAGE_LABELS),
+      %w(PAGE_LABELS TEXT_FIELDS),
       source_module: PrincipalApproval1819ApplicationConstants,
       transform_keys: true
     ),
@@ -108,7 +108,7 @@ def main
   )
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(TEACHER_SEAT_ACCEPTANCE_OPTIONS),
+      %w(TEACHER_SEAT_ACCEPTANCE_OPTIONS TEXT_FIELDS),
       source_module: Teachercon1819RegistrationConstants,
       transform_keys: true
     ),

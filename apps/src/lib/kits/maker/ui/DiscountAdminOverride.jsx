@@ -152,6 +152,7 @@ export default class DiscountAdminOverride extends Component {
             />
             <Unit6ValidationStep
               key={this.state.teacherID}
+              showRadioButtons={false}
               previousStepsSucceeded={true}
               stepStatus={this.state.statusYear}
               initialChoice={this.state.unit6Intention}

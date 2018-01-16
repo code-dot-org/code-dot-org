@@ -27,13 +27,13 @@
   twentyhours_text: "Hai terminato la tua prima Ora del Codice? Impara un altro po' di concetti di informatica e di programmazione in quest'altro corso."
   og_title: Ogni bambino merita un'opportunità
   og_title_soon: "L'Ora del Codice è in arrivo"
-  og_title_here: "The Hour of Code is here!"
+  og_title_here: "L'Ora del Codice è qui!"
   og_description: "Ogni studente di ogni scuola merita l'opportunità di studiare informatica."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Ora di CodiceOra di Codice"
   csedweek_og_description: "Dal 4 al 10 December 2017. È fondamentale che ogni studente impari l'informatica."
   csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
-  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
+  csedweek_og_description_here: "L'Ora del Codice è qui. Imparare l'informatica è fondamentale per ogni studente."
   hoc2014_heading: "Iscriviti alla <a href=\"http://hourofcode.com/it\">Ora del Codice</a> <br/>8-14 dicembre 2014 <br/>"
   hoc2014_students: "Studenti"
   hoc2014_try: "Prova"
@@ -91,12 +91,12 @@
   congrats_guest_speaker_desc: "Ora che i tuoi studenti hanno finito un corso di informatica, considera l'idea di festeggiare e di fare collegamenti con cose che possono creare nel mondo reale invitando un ospite d'onore per la tua classe. Puoi usare la nostra mappa di volontari per contattare volontari in zona per visitare la tua classe, oppure cerca in qualsiasi citta' per trovare studenti di informatica o professionisti pronti ad ispirare i tuoi studenti da remoto, tramite video chat."
   congrats_guest_speaker_cta: "Find a guest speaker"
   congrats_third_party_title: "Usa la tua nuova abilità con queste app e siti"
-  third_party_gradelevel_kto8: "Classi K-8"
-  third_party_gradelevel_kto2: "Classi K-2"
+  third_party_gradelevel_kto8: "Da 5 a 13 anni"
+  third_party_gradelevel_kto2: "Da 5 a 7 anni"
   third_party_gradelevel_2to8: "Da 7 a 13 anni"
-  third_party_gradelevel_4to12: "Classi 4-12"
-  third_party_gradelevel_5to12: "Classi 5-12"
-  third_party_gradelevel_6plus: "Classi 6+"
+  third_party_gradelevel_4to12: "Da 9 a 17 anni"
+  third_party_gradelevel_5to12: "Da 10 a 17 anni"
+  third_party_gradelevel_6plus: "Da 11 anni in su"
   third_party_gradelevel_8plus: "Classi 8+"
   third_party_platform_all: 'Piattaforma: Web, iPad e Android'
   third_party_platform_mobile: 'Piattaforma: iPad e Android'
@@ -140,17 +140,17 @@
   third_party_cost_free_399: "Prova gratuita, $399/classe"
   third_party_cost_free_2: "Prova gratuita, $2/studente"
   third_party_cost_free_10: "Prova gratuita, $9.99/ mese"
-  third_party_desc_5_4to8: "Approssimativamente 5 lezioni, orientate verso studenti tra quarta elementare e terza media"
-  third_party_desc_10to12_kto3: "Circa 10-12 lezioni, per gli studenti di asilo fino alla terza elementare"
-  third_party_desc_11_kto5: "Circa 11 lezioni, per ragazzi di 10-11 anni"
-  third_party_desc_10to12_kto5: "Circa10-12 lezioni, per ragazzi di 10-11 anni"
-  third_party_desc_40_4to8: "Più di 40 lezioni, per ragazzi dai 9 ai 14 anni"
-  third_party_desc_dozens_kto8: "Decine di lezioni per tutte le classi K-8"
-  third_party_desc_10to15_3to12: "Tra le 10 e le 15 lezioni, per ragazzi dagli 8 ai 18 anni"
-  third_party_desc_25to40_3to12: "Dalle 25 alle 40 lezioni, per ragazzi dagli 8 ai 18 anni"
-  third_party_desc_20_2to8: "Circa 20 lezioni, per ragazzi dai 7 ai 14 anni"
-  third_party_desc_7to22_5to12: "Tra le 7 e le 22 lezioni, per ragazzi dai 10 ai 18 anni"
-  third_party_desc_20_4to12: "Più di 20 lezioni, per ragazzi dai 9 ai 18 anni"
+  third_party_desc_5_4to8: "Approssimativamente 5 lezioni, pensate per studenti da 9 a 13 anni"
+  third_party_desc_10to12_kto3: "Approssimativamente 10-12 lezioni, pensate per studenti da 5 a 8 anni"
+  third_party_desc_11_kto5: "Approssimativamente 11 lezioni, pensate per studenti da 5 a 10 anni"
+  third_party_desc_10to12_kto5: "Approssimativamente 10-12 lezioni, pensate per studenti da 5 a 10 anni"
+  third_party_desc_40_4to8: "Più di 40 lezioni, pensate per studenti da 9 a 13 anni"
+  third_party_desc_dozens_kto8: "Decine di lezioni, pensate per studenti da 5 a 13 anni"
+  third_party_desc_10to15_3to12: "Da 10 a 15 lezioni, pensate per studenti da 8 a 17 anni"
+  third_party_desc_25to40_3to12: "Da 25 a 40 lezioni, pensate per studenti da 8 a 17 anni"
+  third_party_desc_20_2to8: "Approssimativamente 20 lezioni, pensate per studenti da 7 a 13 anni"
+  third_party_desc_7to22_5to12: "Tra 7 e 22 lezioni, pensate per studenti da 10 a 17 anni"
+  third_party_desc_20_4to12: "Più di 20 lezioni, pensate per studenti da 9 a 17 anni"
   enter_valid_age: "Si prega di indicare una età valida"
   enter_valid_email: "Per favore inserisci un indirizzo valido di posta elettronica"
   get_a_certificate_message: "Ti manderemo un attestato e le informazioni su come <a href='/learn/beyond'>continuare ad imparare dopo la prima Ora del Codice</a>"
@@ -260,6 +260,12 @@
   studiobar_donate_body: "Per ogni dollaro che dai un bambino ha la possibilità di imparare"
   studiobar_shop_title: "Negozio"
   studiobar_shop_body: "Rompete gli stereotipi. Indossate con orgoglio il nostro logo."
+  homepage_stats_students: "di studenti americani hanno un account su Code.org"
+  homepage_stats_female: "dei nostri studenti sono ragazze"
+  homepage_stats_teachers: "insegnanti usano Code.org"
+  homepage_stats_hourofcodde: "degli studenti di tutto il mondo hanno partecipato all'Ora del Codice"
+  homepage_stats_policy: "stati ha cambiato le loro politiche di insegnamento a sostegno dell'informatica"
+  homepage_stats_title: "Stiamo facendo la differenza"
   homepage_hero_text_malala: "&ldquo;Invito le ragazze di ogni singola nazione ad imparare una Ora di Codice\n&rdquo; \nMalala, Premio Nobel per la pace"
   homepage_hero_text_susan: |-
     &ldquo;Se si può cambiare la tecnologia,
@@ -305,7 +311,7 @@
   homepage_hero_text_stat_students: "#student_count account di studenti in Code Studio"
   homepage_hero_text_stat_served: 'L''Ora del Codice: ne hanno già fatte #served'
   homepage_hero_hoc_is_coming: "L'Ora del Codice è in arrivo"
-  homepage_hero_hoc_is_here: "The Hour of Code is here"
+  homepage_hero_hoc_is_here: "L'ora del codice è qui"
   homepage_slot_text_hoc: "L'Ora del Codice"
   homepage_slot_text_frozen: "Frozen con Anna ed Elsa"
   homepage_slot_text_teacher: "Cruscotto dell'Insegnante"
@@ -360,7 +366,7 @@
   homepage_slot_text_link_elementary: "Scuola primaria"
   homepage_slot_text_link_middle: "Scuola media"
   homepage_slot_text_link_high: "Scuola superiore"
-  homepage_slot_text_link_k5: "Corsi per studenti della scuola elementare"
+  homepage_slot_text_link_k5: "Corsi pensati per studenti da 5 a 10 anni"
   homepage_slot_text_link_fullcurriculum: "Guarda il nostro curriculum completo"
   homepage_slot_text_link_pd: "Professional Development"
   homepage_slot_text_title_advocates: "Sostenitori"
@@ -436,7 +442,7 @@
   minecraft_designer: "Programma il tuo Minecraft"
   minecraft_adventurer: "Un'avventura con Minecraft"
   minecraft_tutorials: "I corsi di Minecraft per l'Ora del Codice"
-  minecraft_specs: "Molte lingue | Browser e tablet moderni | Da 9 anni in su"
+  minecraft_specs: "Molte lingue | Browser e tablet moderni | Da 7 anni in su"
   minecraft_agent_description: "Minecraft è tornato per l'Ora del Codice con una nuovissima attività! Viaggia attraverso Minecraft grazie al coding."
   minecraft_agent_button: "Inizia"
   minecraft_designer_description: "Programma il comportamento degli animali e delle altre creature di Minecraft nella tua versione di questo gioco."
@@ -495,6 +501,7 @@
   video_title_obama: "Il Presidente Obama a proposito dell'informatica"
   video_title_hoc_is_here: "L'Ora del Codice è Qui - Chiunque Può Imparare"
   video_title_anybody_can_learn: "Chiunque Può Imparare"
+  video_title_steph_curry: "L'Ora del Codice con Steph Curry"
   video_title_draymond_green: "Ora del Codice con Draymond Green"
   video_title_russell_okung: "Ora del Codice con Russell Okung"
   video_title_real_madrid: "Ora del Codice con il Real Madrid"
@@ -921,7 +928,7 @@
   projguts_name: "Sasso, Carta, Forbici"
   hourofcode_name: "Labirinto Classico"
   playlab_name: "Laboratorio"
-  infinity_name: "Disney Infinity"
+  infinity_name: "Laboratorio con Disney Infinity"
   artist_name: "Artista"
   monstercoding_name: "Missione del Coding dell' Isola Misteriosa"
   allcancode_name: "Corri Marco!"
@@ -976,7 +983,7 @@
   csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Prova parte 1-25 domande
   cspexam2-AKwgAh1ac5_name: Prova parte 2-25 domande
-  cspunit3_gradelevel: "Classi 9-12"
+  cspunit3_gradelevel: "Da 14 a 17 anni"
   cspunit3_shortdescription_congrats: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools."
   20-hour_name: Corso rapido
   algebra_name: "L'informatica in algebra"
@@ -1156,7 +1163,7 @@
   frozen_shortdescription: "Usa la programmazione per unirti ad Anna ed Elsa mentre esplorano la magia e la bellezza del ghiaccio."
   starwars_shortdescription: "Impara a programmare i droidi e crea la tua versione di Guerre Stellari, in una galassia lontana lontana..."
   playlab_shortdescription: "Crea una storia o inventa un gioco col Laboratorio!"
-  infinity_shortdescription: "Crea una storia o inventa un gioco con i personaggi di Disney Infinity come protagonisti!"
+  infinity_shortdescription: "Usa il Laboratorio per creare una storia o inventare un gioco con i personaggi di Disney Infinity come protagonisti!"
   artist_shortdescription: "Disegna fantastiche immagini e decorazioni con l'artista!"
   monsterocding_shortdescription: "Una colorata avventura dir programmazione autoguidata  per i bambini."
   allcancode_shortdescription: "Un gioco coinvolgente per guidare Marco tramite un linguaggio di programmazione visuale."
@@ -1465,7 +1472,7 @@
   view_section: "Mostra Classe"
   view_named_section: "Mostra %{section_name}"
   privacy_doc_explanation: "Clicca qui per il nostro documento sulla privacy (in inglese) che puoi stampare e distribuire ai tuoi studenti."
-  signing_in: "Signing In"
+  signing_in: "Accesso in corso"
   sign_in_overview: 'Gli studenti possono accedere ai loro account Code.org con la seguente procedura:'
   sign_in_instruct_website: "Andare alla pagina %{code_org_url}."
   sign_in_instruct_code: 'Scrivere il codice di 6 lettere della classe: %{section_code}.'
@@ -1489,4 +1496,4 @@
   syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
   hero_name: 'Minecraft: Il viaggio dell''eroe'
-  applab-intro_name: App Lab Intro
+  applab-intro_name: Introduzione a Sviluppo App

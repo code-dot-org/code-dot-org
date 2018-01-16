@@ -38,7 +38,7 @@ it:
       AppLab Intro 7 - Change Screen Color_callout:
         applab_hoc_finish: Did the screen turn green? If so, hit 'Finish'. If not, hit 'Reset', change your code, and hit 'Run' again.
       AppLab Intro 7 - thisOrThatAddButton_callout:
-        AppLabHoCFinal11: You're now in Design Mode.
+        AppLabHoCFinal11: Ora sei in Modalità Interfaccia.
       AppLab_test02_callout: [ ]
       Applab test_callout: [ ]
       Big Game Animation 1 (copy 1)_callout: [ ]
@@ -273,6 +273,11 @@ it:
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Ecco il codice
         CSD_U3_rect_c2: Trascina questo blocco all'interno dell'area del codice.
+      CSD U6 colorLeds intensity_callout:
+        CSDU6L10_rainbow: Add your code here
+      CSD U6 colorLeds predict_callout: [ ]
+      CSD U6 getProperty input_callout:
+        CSD_U6L06P03: Add your block here.
       CSD U6 light show predict_callout:
         CSDUDL03P09: What does this line do?
       CSD U6 light show_callout:
@@ -373,7 +378,7 @@ it:
       Course 4 Maze 4_callout:
         repeat: Inserisci i blocchi all'interno del ciclo per ripetere le istruzioni
       Course 4 Play Lab Params 2_callout:
-        Course_4 _Play_Lab_Params_2_1: Clicca su "modifica" per completare questa funzione in modo che possa usare il parametro height.
+        Course_4 _Play_Lab_Params_2_1: Clicca su "modifica" per completare questa funzione in modo che possa usare il parametro 'height'.
       Course 4 Play Lab Params 3_callout:
         edit_function: Clicca qui per modificare la tua funzione.
       Course 4 Play Lab Params 5_callout: [ ]
@@ -394,6 +399,13 @@ it:
       Course 4 Playlab For Loops 6b_callout: [ ]
       Course 4 SCV 6_callout:
         Course_4_SCV_6: Questo blocco ti permette di personalizzare il colore come preferisci! Osserva cosa accade modificando i numeri...
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Usa le frecce per muovere il personaggio
+      CourseF_PlayLab_vars10_callout:
+        Course_4_Play_Lab_Vars_9_1: I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
+      CourseF_PlayLab_vars6_callout: [ ]
+      CourseF_PlayLab_vars7_callout: [ ]
+      CourseF_PlayLab_vars8_callout: [ ]
       Eval Booleans 2_callout:
         Eval Booleans 2 1: Select a number that will make this expression evaluate to true
       Eval Cond 1_callout:
@@ -443,6 +455,8 @@ it:
         Infinity_move_right_runbutton: Aggiungi qui il blocco "sposta il personaggio"
       Infinity_repeat_callout:
         Infinity_repeat_callout: Aggiungi i blocchi "sposta" all'interno di questo blocco di ripetizione
+      InspirationalArtwork_callout:
+        InspirationalArtwork_1: Prova ad usare il nuovo blocco `comment` sotto questa etichetta, per inserire dei commenti all'interno del tuo programma!
       Luigi's Pizza 1 (copy 1)_callout:
         luigi's pizza 1: Try ordering a pepperoni pizza
       Luigi's Pizza 1_callout:
@@ -546,6 +560,8 @@ it:
       PDAlg Big Game History_callout: [ ]
       PDAlg Big Game Remix_callout: [ ]
       PDAlg Design Recipe Delete_callout: [ ]
+      PS clone CSD U3 Variables Predict Where XY_callout:
+        grid: Clicca qui per mostrare la griglia.
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
         grid: Clicca qui per mostrare la griglia.
       PS copy 2-3 Bee Conditionals 5_callout:
@@ -566,7 +582,7 @@ it:
       Quantum Bee - Ryan_callout:
         feeling_stuck_callout_test: "Ti sei bloccato?<br>\nClicca sulla lampadina per avere un suggerimento!"
       Robot Doodle_callout:
-        4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
+        4-5_Artist_Patterns_Free_Play_2: Prova ad usare il nuovo blocco `comment` sotto questa etichetta, per inserire dei commenti all'interno del tuo programma!
       Robot Drawing_callout:
         4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
       Robot_callout:
@@ -691,6 +707,8 @@ it:
         courseA_artist_loops4_1: Questo numero dice quanti di questi blocchi puoi usare in questo puzzle.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: Questo numero significa che solo uno di questo tipo di blocchi può essere usato nella risposta finale.
+      courseA_artist_loops7_forVideo_callout:
+        courseA_artist_loops7_1: Questo numero significa che solo uno di questo tipo di blocchi può essere usato nella risposta finale.
       courseA_artist_loops8_callout:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
       courseA_collector_loops1_callout:
@@ -814,12 +832,15 @@ it:
         courseD_bee_conditionals_challenge3_1: Prova a ripetere il blocco "vai avanti" usando questo ciclo.
       courseD_bee_debugging_challenge1_callout:
         courseD_bee_debugging_challenge1_callout1: Usa questo comando per muovere l'ape indietro.
+      courseD_bee_debugging_challenge1a_callout:
+        courseD_bee_debugging_challenge1_callout1: Usa questo comando per muovere l'ape indietro.
       courseD_bee_debugging_challenge2_callout:
         courseD_bee_debugging_challenge1_callout1: Usa questo comando per muovere l'ape indietro.
       courseD_bee_nested_loops_challenge1_callout: [ ]
       courseD_bee_nested_loops_challenge2_callout: [ ]
       courseD_collector_debugging_challenge2_callout: [ ]
       courseD_collector_nested_loops_challenge2_callout: [ ]
+      courseD_collector_nested_loops_challenge2a_callout: [ ]
       courseD_collector_ramp10_callout: [ ]
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Usa questo blocco per raccogliere un singolo pezzo di tesoro.  '
