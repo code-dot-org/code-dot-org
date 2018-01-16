@@ -46,9 +46,9 @@
     "markdown_instructions": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Can you get it all?\"_\r\n\r\nLoops even work with more than one block inside!  Can you loop this sequence?",
     "disable_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/7c7f4cda9fafc59aedd07102657cd43a=levelbuilder/34326.png",
-    "contained_level_names": null,
     "top_level_procedure_autopopulate": "false",
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

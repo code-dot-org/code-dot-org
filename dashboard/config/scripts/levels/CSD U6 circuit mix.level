@@ -126,10 +126,7 @@
     "makerlab_enabled": "true",
     "markdown_instructions": "# Mix and Match Circuits\r\n\r\nUsing the 8 numbered pins around the edge of the board, you can combine as many buttons and LEDs as you can fit, using a separate numbered pin for each circuit and a shared ground pin for all them.\r\n\r\n# Do This\r\n\r\nDisconnect any circuits currently attached to your board.\r\n\r\n* Create a button circuit connected to pin 0.\r\n* Create an LED circuit connected to pin 2.\r\n* Create a new button object for your button circuit with `createButton()`.\r\n* Create a new LED object for your LED circuit with `createLed()`\r\n* Add event handlers to turn on your new LED when your button is pressed down, and turn it back off when the button is released.\r\n\r\n_Tip: When sharing the ground pin with multiple circuits it can be useful to connect a larger conductive object (like a bare wire) to the pin and then connect all of your circuits to that larger object._",
     "text_mode_at_start": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
