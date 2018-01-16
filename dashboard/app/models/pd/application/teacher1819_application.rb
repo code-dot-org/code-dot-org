@@ -390,7 +390,7 @@ module Pd::Application
 
         committed: [
           YES,
-          'No (please explain):'
+          'No (Please Explain):'
         ],
 
         willing_to_travel: [
