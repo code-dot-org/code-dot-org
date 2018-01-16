@@ -6,7 +6,6 @@ import SetupChecker from '../util/SetupChecker';
 import {
   isWindows,
   isChrome,
-  getChromeVersion,
   isChromeOS,
   isCodeOrgBrowser,
 } from '../util/browserChecks';
@@ -199,7 +198,6 @@ export default class SetupChecklist extends Component {
           stepName="Using a supported browser"
           stepStatus={Status.FAILED}
         >
-          {isChrome() && `It looks like your Chrome version is ${getChromeVersion()}.`}
           Your current browser is not supported at this time.
           Please install the latest version of <a href="https://www.google.com/chrome/browser/">Google Chrome</a>.
         </ValidationStep>
