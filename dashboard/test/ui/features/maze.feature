@@ -19,7 +19,7 @@ Scenario: Submit an invalid solution
   # Skipping due to failing on test.studio.code.org environment
   #   TODO (espertus/bjordan): fix or change level this applies to
   # And element ".congrats" has text "You need an \"if\" block inside a \"repeat\" block. If you're having trouble, try the previous level again to see how it worked."
-  # todo (brent): could also try the back button, and validate that clicking outside of the dialog closes it
+  # could also try the back button, and validate that clicking outside of the dialog closes it
   And I press "resetButton"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
@@ -39,7 +39,6 @@ Scenario: Submit a valid solution
   Then I wait until element ".congrats" is visible
   And element ".congrats" has text "Congratulations! You completed Puzzle 15."
 
-  # todo (brent) : could test show code
   And I press "continue-button"
   Then I wait until I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/16"
   Then check that level 16 on this stage is done

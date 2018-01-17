@@ -353,6 +353,26 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       Pd::Workshop.scheduled_start_on_or_after(pivot_date).scheduled_start_on_or_before(pivot_date).pluck(:id)
   end
 
+  test 'future scope' do
+    future_workshops = [
+      # Today
+      create(:pd_workshop, num_sessions: 1, sessions_from: Date.today),
+
+      # Next week
+      create(:pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.week)
+    ]
+
+    # Excluded (not future) workshops:
+    # Last week
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today - 1.week
+    # Today, but ended
+    create :pd_ended_workshop, num_sessions: 1, sessions_from: Date.today
+    # Next week, but ended
+    create :pd_ended_workshop, num_sessions: 1, sessions_from: Date.today + 1.week
+
+    assert_equal future_workshops, Pd::Workshop.future
+  end
+
   test 'end date filters' do
     pivot_date = Date.today
     workshop_before = create :pd_workshop, ended_at: pivot_date - 1.week

@@ -256,6 +256,9 @@ class Pd::Workshop < ActiveRecord::Base
     joins(:sessions).group_by_id.having('(DATE(MIN(start)) >= ?)', date)
   end
 
+  # Filters to workshops that are scheduled on or after today and have not yet ended
+  scope :future, -> {scheduled_start_on_or_after(Time.zone.today).where(ended_at: nil)}
+
   # Orders by the scheduled start date (date of the first session),
   # @param :desc [Boolean] optional - when true, sort descending
   def self.order_by_scheduled_start(desc: false)

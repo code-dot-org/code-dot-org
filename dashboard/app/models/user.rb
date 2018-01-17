@@ -811,7 +811,7 @@ class User < ActiveRecord::Base
     # some of our user_levels may be for levels within level_groups, or for levels
     # that are no longer in this script. we want to ignore those, and only look
     # user_levels that have matching script_levels
-    # TODO(brent): Worth noting in the case that we have the same level appear in
+    # Worth noting in the case that we have the same level appear in
     # the script in multiple places (i.e. via level swapping) there's some potential
     # for strange behavior.
     sl_level_ids = script.script_levels.map(&:level_ids).flatten
@@ -1612,9 +1612,12 @@ class User < ActiveRecord::Base
   end
 
   def show_census_teacher_banner?
+    # Note: Jan 2018, there is concern that the census banner will distract from the
+    # announcement about facilitator applications. For the time being we will stop showing it
+    return false
     # Must have an NCES school to show the banner
-    users_school = try(:school_info).try(:school)
-    teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
+    #    users_school = try(:school_info).try(:school)
+    #    teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
   end
 
   def show_race_interstitial?(ip = nil)
