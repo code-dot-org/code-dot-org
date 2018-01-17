@@ -36,21 +36,11 @@
 require 'cdo/shared_constants/pd/teacher1819_application_constants'
 
 module Pd::Application
-  class Teacher1819Application < ApplicationBase
+  class Teacher1819Application < WorkshopAutoenrolledApplication
     include Rails.application.routes.url_helpers
     include Teacher1819ApplicationConstants
     include RegionalPartnerTeacherconMapping
-    include SerializedProperties
     include SchoolInfoDeduplicator
-
-    serialized_attrs %w(
-      pd_workshop_id
-      auto_assigned_enrollment_id
-    )
-
-    def workshop
-      Pd::Workshop.find(pd_workshop_id) if pd_workshop_id
-    end
 
     def send_decision_notification_email
       # We only want to email unmatched and G3-matched teachers. All teachers
@@ -126,46 +116,6 @@ module Pd::Application
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil?}
     def save_partner
       self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
-    end
-
-    before_save :destroy_autoenrollment, if: -> {status_changed? && status != "accepted"}
-    def destroy_autoenrollment
-      return unless auto_assigned_enrollment_id
-
-      Pd::Enrollment.find_by(id: auto_assigned_enrollment_id).try(:destroy)
-      self.auto_assigned_enrollment_id = nil
-    end
-
-    # override
-    def lock!
-      return if locked?
-      super
-      enroll_user if status == "accepted"
-    end
-
-    def enroll_user
-      return unless pd_workshop_id
-
-      enrollment = Pd::Enrollment.where(
-        pd_workshop_id: pd_workshop_id,
-        email: user.email
-      ).first_or_initialize
-
-      # If this is a new enrollment, we want to:
-      #   - save it with all required data
-      #   - save a reference to it in properties
-      #   - delete the previous auto-created enrollment if it exists
-      if enrollment.new_record?
-        enrollment.update(
-          user: user,
-          school_info: user.school_info,
-          full_name: user.name
-        )
-        enrollment.save!
-
-        destroy_autoenrollment
-        self.auto_assigned_enrollment_id = enrollment.id
-      end
     end
 
     PROGRAMS = {
