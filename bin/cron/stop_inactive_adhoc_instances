@@ -21,12 +21,10 @@ def main
 
   cloudformation_client.describe_stacks.stacks.select {|stack| stack.stack_name.starts_with?('adhoc-')}.each do |stack|
     dashboard_url = stack.outputs.select {|output| output.output_key == 'DashboardURL'}.first.try(:output_value)
-    puts "Name - #{stack.stack_name}, Status - #{stack.stack_status}, DashboardURL - #{dashboard_url}"
 
-    puts cloudwatch_client.list_metrics(
+    metric = Aws::CloudWatch::Metric.new(namespace: 'Unicorn', name: 'active', client: cloudwatch_client)
+    unicorn_metric = metric.get_statistics(
       {
-        namespace: 'Unicorn',
-        metric_name: 'active',
         dimensions: [
           {
             name: 'Environment',
@@ -36,9 +34,18 @@ def main
             name: 'Host',
             value: "#{stack.stack_name}.cdn-code.org",
           }
-        ]
+        ],
+        start_time: Time.now - (10 * 24 * 60 * 60), # 10 days ago
+        end_time: Time.now,
+        period: 30000,
+        statistics: ['Sum'],
+        unit: 'Count'
       }
-    ).metrics
+    )
+    # each datapoint in the metric statistics array contains an attribute called 'sum'
+    total_http_requests = unicorn_metric.datapoints.sum(&:sum) unless unicorn_metric.nil?
+
+    puts "Name - #{stack.stack_name}, Status - #{stack.stack_status}, DashboardURL - #{dashboard_url}, HTTP Requests - #{total_http_requests}"
   end
 end
 
