@@ -1,5 +1,5 @@
 <%
-require_relative '../dms/generate_dms_tasks'
+require 'cdo/aws/dms'
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -87,7 +87,7 @@ Resources:
     Type: AWS::Logs::LogStream
     Properties:
       LogGroupName: !Ref TableauSyncLogGroup
-<% Cdo::DMS.tasks.each do |task_name, table_mappings| -%>
+<% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings| -%>
   DMS<%=task_name.underscore.camelize%>:
     Type: AWS::DMS::ReplicationTask
     Properties:
