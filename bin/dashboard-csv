@@ -24,10 +24,10 @@ def main
   header_line = true
   DB.connection.select_all(q).each do |i|
     if header_line
-      printf CSV.generate_line(i.keys, :col_sep => delimiter)
+      puts CSV.generate_line(i.keys, col_sep: delimiter)
       header_line = false
     end
-    printf CSV.generate_line(i.values, :col_sep => delimiter)
+    puts CSV.generate_line(i.values, col_sep: delimiter)
   end
 end
 
