@@ -654,6 +654,7 @@ uk:
     correct_title: "Дякую"
     correct_body: "Дякуємо за надсилання відповіді."
     hide_survey_last_answer: "Це опитування є анонімним.  Будь ласка, відвідайте панель вчителя для перегляду узагальнених результатів.  Зверніть увагу, що результати можна побачити, лише якщо принаймні п'ять студентів пройшли опитування."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Дякую"
     wrong_body: "Дякуємо за надсилання відповіді."

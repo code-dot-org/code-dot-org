@@ -26,14 +26,14 @@
   twentyhours_heading: "Bilgisayar Bilimlerine Giriş kursumuzu deneyin"
   twentyhours_text: "İlk Kod Saati'ni bitirdin mi? Bir sonraki kursta daha fazla bilgisayar bilimleri ve programlama kavramlarını öğrenebilirsin."
   og_title: 'Code.org: Herkes öğrenebilir'
-  og_title_soon: "The Hour of Code is coming"
-  og_title_here: "The Hour of Code is here!"
+  og_title_soon: "Kodlama Saati geliyor"
+  og_title_here: "Kodlama saati buradadır!"
   og_description: "Her okulda her öğrenci bilgisayar bilimi öğrenme fırsatını hakkediyor. "
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Kodlama Saati geliyor"
   csedweek_og_description: "ARALIK 4-10, 2017. Bilgisayar bilimleri her öğrencinin öğrenmesi gereken bir temeldir."
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
-  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "Kodlama saati 04-10 Aralık 2017 tariheri arasında geliyor. Bilgisayar bilimi bütün öğrencilerin öğrenmesi için başlangıç düzeyindedir."
+  csedweek_og_description_here: "Kodlama saati 04-10 Aralık 2017 tarihleri arasında geliyor. Bilgisayar bilimi bütün öğrencilerin öğrenmesi için başlangıç düzeyindedir."
   hoc2014_heading: "<a href=\"http://hourofcode.com\">Kod Saatine </a><br/> katılın  8 - 14 Aralık, 2014<br/>"
   hoc2014_students: "Öğrenciler"
   hoc2014_try: "Deneyin"
@@ -260,6 +260,12 @@
   studiobar_donate_body: "Bağış yapacağın her dolar ile bir çocuk daha öğrenecek"
   studiobar_shop_title: "Mağaza"
   studiobar_shop_body: "Kalıplarını kır. Logomuzu gururla taşı."
+  homepage_stats_students: "of US students have accounts on Code.org"
+  homepage_stats_female: "of our students are female"
+  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
+  homepage_stats_policy: "states changed policy to support computer science"
+  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "&ldquo;Her bir ülkedeki kızları, bir saat boyunca kod öğrenmek için kendini zorlamaya davet ediyorum.&rdquo; Malala, Nobel Barış Ödüllü aktivist\n"
   homepage_hero_text_susan: |-
     &ldquo;Eğer teknolojiyi değiştirebilirseniz, dünyayı değiştirebilirsiniz.&rdquo; Susan, YouTube CEO
@@ -295,7 +301,7 @@
   homepage_hero_text_stat_loc: "öğrenciler tarafından #loc satır kod yazılmıştır"
   homepage_hero_text_stat_students: "Code Stüdyoda #student_count tane öğrenci hesabı"
   homepage_hero_text_stat_served: 'Code Stüdyo''da #student_count tane öğrenci hesabı'
-  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
+  homepage_hero_hoc_is_coming: "Kodlama Saati geliyor"
   homepage_hero_hoc_is_here: "Kod Saati burada"
   homepage_slot_text_hoc: "Kod Saati"
   homepage_slot_text_frozen: "Frozen: Anna ve Elsa "
@@ -486,6 +492,7 @@
   video_title_obama: "Başkan Obama'nın bilgisayar bilimi hakkında konuşması"
   video_title_hoc_is_here: "Kod Saati Burada - Herkes Öğrenebilir"
   video_title_anybody_can_learn: "Herkes Öğrenebilir"
+  video_title_steph_curry: "Hour of Code with Steph Curry"
   video_title_draymond_green: "Draymond Green ile Hour of Code"
   video_title_russell_okung: "Russel Okung ile Hour of Code"
   video_title_real_madrid: "Real Madrıd ile Hour of Code"
@@ -602,7 +609,7 @@
   dashboard_k5_courses_desc: "Bu kurslar kolay ve hiçbir bilgisayar gerektirmeyen kodlamayı kendi kendine öğreten derslerden oluşmaktadır. Her ders tek başına uygulanabilir veya tüm dersler ardı ardına bir dönem boyunca uygulanabilir.Her bir eğitim yaklaşık 20 dersten oluşmaktadır. Dersler, anaokulu öğrencilerinin dahi kolayca anlayabileceği şekilde oluşturulmuştur. Eğitim vermeye başlamak için Amerika içinde bedava eğitim kurslarımıza katılmak için tıklayın:  <a href=\"/professional-development-workshops\"> Yakınınızdaki kursu bulun!</a>"
   dashboard_middle_courses: "20 saat Orta okul kursları"
   dashboard_middle_courses_desc: "Bilgisayar Bilimi ve Programlama eğitim programı orta okullarda matematik ve fen bilimlerinin öğretilmesinde bir araç olarak kullanılabilir. Bu amaçla düzenlenen ülkenizdeki profesyonel <a href=\"/educate/districts\"> çalıştaylara </a> başvurabilirsiniz."
-  dashboard_high_courses: "Yıllık Lise Dersleri"
+  dashboard_high_courses: "Yıl Boyu Süren Lise Kursları"
   dashboard_high_courses_desc: "Bizim lise programı okul bölgelerindeki mevcut öğretmenleri hazırlayacak tam yıl bilgisayar bilim dersleri sunuyor. Profesyonel gelişim atölyeleri için kayıt <a href=\"/educate/districts\"> olun. </a> Code.org ile ortak uygulanır."
   dashboard_course_csina: "Cebirde Bilgisayar Bilimi"
   dashboard_course_csina_desc: "Code.org Bootstrap işbirliği ile bilgisayar programlama ile cebirsel ve geometrik kavramları öğreten müfredat geliştirmiştir."
@@ -743,15 +750,15 @@
   dashboard_lesson_plans: "Ders Planları"
   dashboard_view_all_lesson_plans: "Kurs 1-4 için tüm ders planlarını indir"
   dashboard_course1: 'Kurs 1'
-  dashboard_course2: 'Ders 2:'
-  dashboard_course3: 'Ders 3:'
-  dashboard_course4: 'Ders 4 (beta): '
-  dashboard_coursea: 'Ders A: '
-  dashboard_courseb: 'Ders B: '
-  dashboard_coursec: 'Ders C: '
-  dashboard_coursed: 'Ders D: '
-  dashboard_coursee: 'Ders E: '
-  dashboard_coursef: 'Ders F: '
+  dashboard_course2: 'Kurs 2:'
+  dashboard_course3: 'Kurs 3:'
+  dashboard_course4: 'Kurs 4 (beta): '
+  dashboard_coursea: 'Kurs A: '
+  dashboard_courseb: 'Kurs B: '
+  dashboard_coursec: 'Kurs C: '
+  dashboard_coursed: 'Kurs D: '
+  dashboard_coursee: 'Kurs E: '
+  dashboard_coursef: 'Kurs F: '
   dashboard_unplugged: "Bilgisayarlarınız yok ise bu <a href='%{unplugged_url}'>bilgisayarsız dersleri sınıfınızda</a> kullanın."
   dashboard_curriculum: "Müfredat"
   dashboard_curriculum_overview: "K-5 Müfredatı Ana Hatları"
@@ -925,18 +932,18 @@
   course2_name: "Ders 2"
   course3_name: "Ders 3"
   course4_name: "Ders 4"
-  coursea-draft_name: Ders A
-  coursea_name: "Ders A"
-  courseb-draft_name: Ders B
-  courseb_name: "Ders B"
-  coursec-draft_name: Ders C
-  coursec_name: "Ders C"
-  coursed-draft_name: Ders D
-  coursed_name: "Ders D"
-  coursee-draft_name: Ders E
-  coursee_name: "Ders E"
-  coursef-draft_name: Ders F
-  coursef_name: "Ders F"
+  coursea-draft_name: Kurs A
+  coursea_name: "Kurs A"
+  courseb-draft_name: Kurs B
+  courseb_name: "Kurs B"
+  coursec-draft_name: Kurs C
+  coursec_name: "Kurs C"
+  coursed-draft_name: Kurs D
+  coursed_name: "Kurs D"
+  coursee-draft_name: Kurs E
+  coursee_name: "Kurs E"
+  coursef-draft_name: Kurs F
+  coursef_name: "Kurs F"
   accelerated_name: "Hızlandırılmış Kurs"
   express_name: "Hızlı Kurs"
   pre-express_name: Okuma Bilmeyenler için Hızlı Kurs
@@ -1155,7 +1162,7 @@
   boxisland_shortdescription: "Cesur Hiro ile kutu adasında kodlama yolculuğuna çık."
   codesters_shortdescription: "Python kullanarak, kendi oyununuzu, animasyonunuzu ve sanat eserinizi oluşturun."
   texasinstruments_shortdescription: "TI-84 kullanarak temel kodlama öğrenmek için T1-84 hesap makinesi."
-  teacherled_shortdescription: "Kendi Kod Saati olayınızı tasarlamak için bu ders planlarından ilham alın."
+  teacherled_shortdescription: "Kendi Kod Saati etkinliğinizi düzenlemek için bu ders planlarından ilham alın."
   course2_shortdescription_congrats: "Temel okuma becerileri olan öğrenciler için. Bu kurs Kurs 1 üzerine koyarak devam eder. Öğrenciler program oluşturarak problem çözecek, etkileşimli oyunlar ya da hikaye geliştirecek ve bunları paylaşabilecektir. 2-5 sınıflar için önerilir."
   course3_shortdescription_congrats: "Bir sonraki seviyeye hazırmısın? Öğrenciler, daha karmaşık sorunlar için bulunan esnek çözümleri uygulamak için önceki derste öğrendikleri programlama konularını daha çok inceleyecekler. Dersin sonunda, öğrenciler, herhangi birisiyle paylaşabilecekleri interaktif hikaye ve oyun oluşturabilecekler. 4 ve 5. sınıflar için önerilir."
   course4_shortdescription_congrats: "Bir sonraki seviyeye hazır mısın? Öğrenciler, daha karmaşık sorunlar için bulunan esnek çözümleri uygulamak için önceki derste öğrendikleri programlama konularını daha çok inceleyecekler. Dersin sonunda, öğrenciler, herhangi birisiyle paylaşabilecekleri interaktif hikaye ve oyun oluşturabilecekler. 4 ve 5. sınıflar için önerilir."
@@ -1220,7 +1227,7 @@
   lightbot_beyond_name: "LightBot"
   codecademy_beyond_name: "Codecademy"
   kodable_beyond_name: "Kodlanabilir"
-  scratchjr_beyond_name: "Ön okuyucular için ScratchJR"
+  scratchjr_beyond_name: "Okul Öncesi için ScratchJR"
   hopscotch_beyond_name: 'Seksek: iPad''te Programlama'
   pocketcode_beyond_name: "Cep kodu"
   groklearning_beyond_name: "Python programlama öğren"
@@ -1447,7 +1454,7 @@
   header_documentation: "Belgeler"
   csp_name: "' 16 - 17' Bilgisayar bilimleri ilkeleri"
   csd_name: "CS Discoveries"
-  full_course_category_name: "Tüm Dersler"
+  full_course_category_name: "Tüm Kurslar"
   user_header_label: "Merhaba %{username}"
   user_header_settings: "Hesap Ayarları"
   user_header_logout: "Çıkış Yap"

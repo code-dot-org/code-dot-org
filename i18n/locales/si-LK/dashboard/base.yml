@@ -654,6 +654,7 @@ si:
     correct_title: "ස්තුතියි ඔබට"
     correct_body: "පිලිතුරු සැපයුවාට ස්තූතියි."
     hide_survey_last_answer: "මෙය අඥාත සමීක්ශණයකි. අවසන් ප්‍රතිඵල සඳහා ඩෑශ්බෝඩය වෙත යන්න. ප්‍රතිඵල දක්වනු ලබන්නේ අවම සිසුන් 5ක් මේ සඳහා සහභාගී වී ඇතිනම් පමණි."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "ස්තුතියි ඔබට"
     wrong_body: "පිලිතුරු සැපයුවාට ස්තූතියි."

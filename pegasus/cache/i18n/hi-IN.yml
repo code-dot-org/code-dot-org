@@ -43,11 +43,19 @@
   og_title: |-
     हर बच्चे का अवसर मिलना चाहिए
     har baache avaskar dhe hakadhaar ne
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
   og_description: "हर स्कूल में हर छात्र को कंप्यूटर विज्ञान का अध्ययन करने का अवसर
     मिलना चाहिए। यह सब कुछ बदल रहा है।"
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: "कंप्यूटर विज्ञान शिक्षा सप्ताह"
   csedweek_og_description: The Hour of Code is a global movement reaching tens of
     millions of students of all ages in 180+ countries and over 45 languages.
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
   hoc2014_heading: <a href="http://hourofcode.com"> ऑवर ऑफ़ कोड</a> में शामिल <br/>
     8-14 दिसंबर, 2014 <br/>
   hoc2014_students: Students
@@ -368,6 +376,12 @@
   studiobar_donate_body: One child learns for each dollar you donate
   studiobar_shop_title: "दुकान"
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
     learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
   homepage_hero_text_susan: |
@@ -657,6 +671,7 @@
   video_title_obama: President Obama on computer science
   video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
   video_title_anybody_can_learn: Anybody Can Learn
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: Hour of Code with Draymond Green
   video_title_russell_okung: Hour of Code with Russell Okung
   video_title_real_madrid: Hour of Code with Real Madrid
@@ -1272,6 +1287,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Full Test - 50 questions
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
@@ -2098,22 +2115,5 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
-  og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
-  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
-    or your class!
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
-    science is foundational for every student to learn.
-  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
-    for every student to learn.
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
-  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
-  video_title_steph_curry: Hour of Code with Steph Curry
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro

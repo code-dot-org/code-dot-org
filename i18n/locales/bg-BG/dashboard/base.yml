@@ -652,6 +652,7 @@ bg:
     correct_title: "Благодаря"
     correct_body: "Благодаря Ви, че подадохте отговор"
     hide_survey_last_answer: "Това анкета е анонимна.  Моля, посетете учителското таблото за обобщени резултати.  Имайте предвид, че резултатите ще се виждат само ако най-малко пет ученици са направили анкетата."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Благодаря"
     wrong_body: "Благодаря Ви, че подадохте отговор"

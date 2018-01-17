@@ -3,7 +3,6 @@ require 'test_helper'
 require 'time'
 
 class HomeControllerTest < ActionController::TestCase
-  # rubocop:disable Lint/UnreachableCode
   include Devise::Test::ControllerHelpers
 
   setup do
@@ -80,7 +79,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "language is determined from cdo.locale" do
-    return  # TODO: get :home, and look for a div that still exists
+    skip 'TODO: get :home, and look for a div that still exists'
 
     @request.env['cdo.locale'] = "es-ES"
 
@@ -127,7 +126,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "should get index with edmodo header" do
-    return  # TODO: get :home
+    skip 'TODO: get :home'
 
     @request.headers["Accept"] = "image/*"
     @request.headers["User-Agent"] = "Edmodo/14 CFNetwork/672.0.2 Darwin/14.0.0"
@@ -136,7 +135,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "should get index with weebly header" do
-    return  # TODO: get :home
+    skip 'TODO: get :home'
 
     @request.headers["Accept"] = "image/*"
     @request.headers["User-Agent"] = "weebly-agent"
@@ -185,7 +184,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "do show admin links when admin" do
-    return  # TODO: get :home
+    skip 'TODO: get :home'
 
     sign_in create(:admin)
     get :index
@@ -193,7 +192,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'do not show levelbuilder links when not levelbuilder' do
-    return  # TODO: look into bringing levelbuilder links to /home
+    skip 'TODO: look into bringing levelbuilder links to /home'
 
     sign_in create(:user)
 
@@ -202,7 +201,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'do show levelbuilder links when levelbuilder' do
-    return  # TODO: look into bringing levelbuilder links to /home
+    skip 'TODO: look into bringing levelbuilder links to /home'
 
     user = create(:user)
     UserPermission.create(user_id: user.id, permission: 'levelbuilder')
@@ -213,7 +212,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'user without age gets age prompt' do
-    return  # TODO: get :home
+    skip 'TODO: get :home'
 
     user = create(:user)
     user.update_attribute(:birthday, nil) # bypasses validations
