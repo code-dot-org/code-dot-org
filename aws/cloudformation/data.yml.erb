@@ -1,0 +1,44 @@
+---
+AWSTemplateFormatVersion: 2010-09-09
+Description: Data layer for Tableau including RedShift cluster configuration and synchronization with RDS instance.
+# Parameters can be provided via CDO.underscored_parameter, e.g. via locals.yml:
+# redshift_password: abcdef
+# Parameters are only required for initial stack creation, and reused if not provided on stack update.
+Parameters:
+  RDSIdentifier:
+    Type: String
+  # MySQL user must have granted REPLICATION CLIENT and REPLICATION SLAVE permissions.
+  # Ref: http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.Security
+  RDSUsername:
+    Type: String
+  RDSPassword:
+    Type: String
+    NoEcho: true
+  RedshiftDatabase:
+    Type: String
+    Default: dashboard
+  RedshiftUsername:
+    Type: String
+    Default: dev
+  RedshiftPassword:
+    Type: String
+    NoEcho: true
+Resources:
+  Tableau:
+    Type: AWS::Redshift::Cluster
+    DeletionPolicy: Retain
+    Properties:
+      AllowVersionUpgrade: true
+      AutomatedSnapshotRetentionPeriod: 1
+      ClusterParameterGroupName: default.redshift-1.0
+      ClusterSubnetGroupName: !ImportValue VPC-RedshiftSubnetGroup
+      ClusterType: single-node
+      ClusterVersion: 1.0
+      DBName: {Ref: RedshiftDatabase}
+      Encrypted: true
+      KmsKeyId: alias/aws/redshift
+      MasterUsername: {Ref: RedshiftUsername}
+      MasterUserPassword: {Ref: RedshiftPassword}
+      NodeType: dc1.large
+      PubliclyAccessible: true
+      VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
