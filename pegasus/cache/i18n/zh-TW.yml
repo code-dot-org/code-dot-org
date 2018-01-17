@@ -295,6 +295,12 @@
   studiobar_donate_body: "你捐的每一分錢都能幫助一個孩子學習"
   studiobar_shop_title: "商店"
   studiobar_shop_body: "打破刻板印象，驕傲地穿戴我們的徽標。"
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "「我鼓勵世界各地的女孩都來參與一小時玩程式活動。」馬萊拉，諾貝爾和平獎得主。"
   homepage_hero_text_susan: "「如果你能改變科技，你也可以改變世界。」蘇珊，YouTube 執行長"
   homepage_hero_text_fistbump: "「不要只是在手機上玩遊戲，來寫程式吧。」歐巴馬，美國總統"
@@ -529,6 +535,7 @@
   video_title_obama: "美國總統 Obama 談計算機科學"
   video_title_hoc_is_here: "任何人都可以學得會的一小時玩程式（Hour of Code）來了"
   video_title_anybody_can_learn: "任何人都可以學習"
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: "和 Draymond Green 玩一小時程式"
   video_title_russell_okung: "和 Russell Okung 玩一小時程式"
   video_title_real_madrid: "和 Real Madrid 玩一小時程式"
@@ -1628,10 +1635,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
-  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
-  video_title_steph_curry: Hour of Code with Steph Curry

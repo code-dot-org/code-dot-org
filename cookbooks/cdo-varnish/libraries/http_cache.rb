@@ -96,7 +96,6 @@ class HttpCache
               /manage-professional-development-workshops*
               /professional-development-workshop-surveys*
               /pd-program-registration*
-              /ops-dashboard*
               /poste*
             ),
             headers: LANGUAGE_HEADER,

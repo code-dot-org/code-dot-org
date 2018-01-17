@@ -68,18 +68,24 @@ const styles = {
   },
 };
 
-const ProjectCard = React.createClass({
-  propTypes: {
+export default class ProjectCard extends React.Component {
+  static propTypes = {
     projectData: PropTypes.object.isRequired,
     currentGallery: PropTypes.oneOf(['personal', 'public']).isRequired,
-  },
+  };
 
-  getLastModifiedTimestamp: function (timestamp) {
+  getLastModifiedTimestamp(timestamp) {
     if (timestamp.toLocaleString) {
       return timestamp.toLocaleString();
     }
     return timestamp.toString();
-  },
+  }
+
+  componentDidMount() {
+    if ($('.versionTimestamp').timeago) {
+      $('.versionTimestamp').timeago();
+    }
+  }
 
   render() {
     const { projectData, currentGallery } = this.props;
@@ -151,13 +157,5 @@ const ProjectCard = React.createClass({
         </div>
       </div>
     );
-  },
-
-  componentDidMount: function () {
-    if ($('.versionTimestamp').timeago) {
-      $('.versionTimestamp').timeago();
-    }
   }
-});
-
-export default ProjectCard;
+}

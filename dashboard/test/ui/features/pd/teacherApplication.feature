@@ -1,4 +1,5 @@
 @dashboard_db_access
+@eyes
 
 Feature: Teacher Application
 
@@ -20,6 +21,7 @@ Scenario: Basic teacher application submission
    And I press keys "98101" for element "input#zipCode"
    And I press the first "input[name='genderIdentity'][value='Male']" element
    And I press the first "input[name='race'][value='Other']" element
+  Then I see no difference for "Section 1: About You"
    And I press the first "button#next" element
 
   # Section 2
@@ -56,6 +58,7 @@ Scenario: Basic teacher application submission
    And I press the first "input[name='previousYearlongCdoPd']" element
    And I press the first "input[name='csOfferedAtSchool']" element
    And I press the first "input[name='csOpportunitiesAtSchool']" element
+  Then I see no difference for "Section 2: Your School"
    And I press the first "button#next" element
 
   # Section 3, first fill out for CSD

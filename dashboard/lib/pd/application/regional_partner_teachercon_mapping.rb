@@ -9,8 +9,8 @@ module Pd::Application
     # Map regional partner name to TeacherCon
     REGIONAL_PARTNER_TC_MAPPING = {
       'Allegheny Intermediate Unit 3' => TC_PHOENIX,
-      'America Campaign - Big Sky Code Academy' => TC_PHOENIX,
-      "Explora - Science Center and Children's Museum" => TC_ATLANTA,
+      'America Campaign/TIE Partnership (ND, SD, WY)' => TC_PHOENIX,
+      'Fresno County Superintendent of Schools' => TC_ATLANTA,
       'Institute for School Partnership  Washington University in St. Louis' => TC_ATLANTA,
       'Mississippi State University' => TC_ATLANTA,
       'Sacramento County Office of Education' => TC_PHOENIX,

@@ -13,7 +13,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
-    "start_blocks": "// Wire the positive (+) side of an LED to pin 2\r\n// and the negative (-) side to ground (GND)\r\n\r\n// Tell the board to use pin 2 for output\r\npinMode(2, \"output\");\r\n\r\n// Turn pin 2 on\r\ndigitalWrite(13, 1);",
+    "start_blocks": "// Wire the positive (+) side of an LED to pin 2\r\n// and the negative (-) side to ground (GND)\r\n\r\n// Tell the board to use pin 2 for output\r\npinMode(2, \"output\");\r\n\r\n// Turn pin 2 on\r\ndigitalWrite(2, 1);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -54,7 +54,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-05 20:35:24 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:51:32 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_view_data_button\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:53:36 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-05 20:35:24 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:51:32 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_view_data_button\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:53:36 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-12 19:58:56 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

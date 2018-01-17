@@ -20,7 +20,7 @@
   "blockActionFill": "isi dari",
   "blockActionFlashEntity": "kedipkan",
   "blockActionGetItemCount": "dapatkan hitungan item",
-  "blockActionGetItemCountInSlotNumber": "get item count in slot number",
+  "blockActionGetItemCountInSlotNumber": "mendapatkan jumlah item dalam slot nomor",
   "blockActionGetItemDetail": "dapatkan detail item",
   "blockActionGetItemDetailInSlotNumber": "get item detail in slot number",
   "blockActionGetItemSpace": "get item space",

@@ -10,6 +10,8 @@ const styles = {
 
 export default class HelpTabContents extends Component {
   static propTypes = {
+    scriptId: PropTypes.number,
+    serverLevelId: PropTypes.number,
     logText: PropTypes.string,
     videoData: videoDataShape,
   };
@@ -19,6 +21,8 @@ export default class HelpTabContents extends Component {
       <div style={styles.referenceArea}>
         {this.props.videoData &&
           <VideoThumbnail
+            scriptId={this.props.scriptId}
+            serverLevelId={this.props.serverLevelId}
             logText={this.props.logText}
             video={this.props.videoData}
           />

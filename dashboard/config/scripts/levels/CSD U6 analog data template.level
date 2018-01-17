@@ -54,7 +54,10 @@
       "functionParams_none": null,
       "callMyFunction": null,
       "comment": null,
-      "led.pulse": null
+      "led.pulse": null,
+      "tempSensor.threshold": null,
+      "soundSensor.threshold": null,
+      "lightSensor.threshold": null
     },
     "edit_code": true,
     "embed": "false",
@@ -99,7 +102,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-20 22:54:43 +0000\",\"changed\":[\"code_functions\",\"free_play\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-27 20:20:28 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-20 22:54:43 +0000\",\"changed\":[\"code_functions\",\"free_play\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-27 20:20:28 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-09 20:52:27 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

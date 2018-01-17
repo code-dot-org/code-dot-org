@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import ReadOnlyBlockSpace from '../ReadOnlyBlockSpace';
 import ChatBubble from './ChatBubble';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import { connect } from 'react-redux';
 import { convertXmlToBlockly } from './utils';
 import VideoThumbnail from '../VideoThumbnail';
@@ -18,13 +19,25 @@ const InlineHint = React.createClass({
     video: videoDataShape,
     ttsUrl: PropTypes.string,
     ttsMessage: PropTypes.string,
-    isBlockly: PropTypes.bool
+    isBlockly: PropTypes.bool,
   },
 
   componentDidMount() {
     if (this.props.isBlockly) {
       convertXmlToBlockly(ReactDOM.findDOMNode(this));
     }
+  },
+
+  onVideoClick() {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'hint-videos',
+        event: 'click',
+        data_string: this.props.video.key,
+      },
+      { includeUserId: true }
+    );
   },
 
   render() {
@@ -34,7 +47,12 @@ const InlineHint = React.createClass({
           dangerouslySetInnerHTML={{ __html: this.props.content }}
         />
         {this.props.block && <ReadOnlyBlockSpace block={this.props.block} />}
-        {this.props.video && <VideoThumbnail video={this.props.video} />}
+        {this.props.video &&
+          <VideoThumbnail
+            onClick={this.onVideoClick}
+            video={this.props.video}
+          />
+        }
       </ChatBubble>
     );
   }
@@ -43,5 +61,5 @@ const InlineHint = React.createClass({
 
 export const StatelessInlineHint = Radium(InlineHint);
 export default connect(state => ({
-  isBlockly: state.pageConstants.isBlockly
+  isBlockly: state.pageConstants.isBlockly,
 }))(Radium(InlineHint));

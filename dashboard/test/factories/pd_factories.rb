@@ -638,7 +638,6 @@ FactoryGirl.define do
         first_name: 'Severus',
         preferred_first_name: 'Sevvy',
         last_name: 'Snape',
-        account_meail: 'severus@hogwarts.edu',
         alternate_email: 'ilovepotions@gmail.com',
         phone: '5558675309',
         address: '123 Fake Street',
@@ -664,7 +663,7 @@ FactoryGirl.define do
         subjects_teaching: ['Computer Science'],
         subjects_expect_to_teach: ['Computer Science'],
         subjects_licensed_to_teach: ['Computer Science'],
-        taught_in_past: ['Hour of Code'],
+        taught_in_past: ['CS Fundamentals'],
         previous_yearlong_cdo_pd: ['CS in Science'],
         cs_offered_at_school: ['AP CS A'],
         cs_opportunities_at_school: ['Courses for credit'],
@@ -689,6 +688,30 @@ FactoryGirl.define do
           hash['csd_terms_per_year'] = '1 quarter'
         end
       end.stringify_keys
+    end
+
+    trait :with_custom_school do
+      transient do
+        school_name 'Code.org'
+        school_address '1501 4th Ave'
+        school_city 'Seattle'
+        school_state 'Washington'
+        school_zip_code '98101'
+        school_type 'Public school'
+      end
+      after(:build) do |hash, evaluator|
+        hash.merge!(
+          {
+            school: -1,
+            school_name: evaluator.school_name,
+            school_address: evaluator.school_address,
+            school_city: evaluator.school_city,
+            school_state: evaluator.school_state,
+            school_zip_code: evaluator.school_zip_code,
+            school_type: evaluator.school_type
+          }.stringify_keys
+        )
+      end
     end
   end
 
@@ -734,7 +757,7 @@ FactoryGirl.define do
               replace_course: replace_course,
               committed_to_diversity: 'Yes',
               understand_fee: 'Yes',
-              pay_fee: 'Yes, my school or my teacher will be able to pay the full summer workshop program fee'
+              pay_fee: 'Yes, my school or my teacher will be able to pay the full summer workshop program fee.'
             }
           )
 
@@ -758,5 +781,71 @@ FactoryGirl.define do
     end
     course 'csp'
     form_data {build(:pd_principal_approval1819_application_hash, course: course, approved: approved, replace_course: replace_course).to_json}
+  end
+
+  factory :pd_teachercon1819_registration_hash, class: 'Hash' do
+    transient do
+      full_form_data true
+    end
+
+    # default to accepted
+    initialize_with do
+      {
+        email: "ssnape@hogwarts.edu",
+        preferredFirstName: "Sevvy",
+        lastName: "Snape",
+        phone: "5558675309",
+        teacherAcceptSeat: "Yes, I accept my seat in the Professional Learning Program"
+      }.tap do |hash|
+        if full_form_data
+          hash.merge!(
+            {
+              addressCity: "Albuquerque",
+              addressState: "Alabama",
+              addressStreet: "123 Street Ave",
+              addressZip: "12345",
+              agreeShareContact: true,
+              contactFirstName: "Dumble",
+              contactLastName: "Dore",
+              contactPhone: "1597534862",
+              contactRelationship: "it's complicated",
+              dietaryNeeds: "Food Allergy",
+              dietaryNeeds_food_allergy_details: "memories",
+              howTraveling: "Amtrak or regional train service",
+              liabilityWaiver: "Yes",
+              liveFarAway: "Yes",
+              needHotel: "No",
+              photoRelease: "Yes",
+            }
+          )
+        end
+      end.stringify_keys
+    end
+
+    trait :accepted do
+      # accepted is the default, trait included here just for completeness
+    end
+
+    trait :withdrawn do
+      full_form_data false
+      after :build do |hash|
+        hash['teacherAcceptSeat'] = "No, I decline my seat in the Professional Learning Program."
+      end
+    end
+
+    trait :waitlisted do
+      after :build do |hash|
+        hash['teacherAcceptSeat'] = "Yes, I want to participate, but I'm unable to attend my assigned summer workshop date. Please place me on your waitlist. I understand that I am not guaranteed a space in a different summer workshop."
+      end
+    end
+  end
+
+  factory :pd_teachercon1819_registration, class: 'Pd::Teachercon1819Registration' do
+    transient do
+      hash_trait :accepted
+    end
+
+    association :pd_application, factory: :pd_teacher1819_application
+    form_data {build(:pd_teachercon1819_registration_hash, hash_trait).to_json}
   end
 end

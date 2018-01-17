@@ -654,6 +654,7 @@ pl:
     correct_title: "Dziękujemy"
     correct_body: "Dziękujemy za przesłanie odpowiedzi."
     hide_survey_last_answer: "Ankieta jest anonimowa.  Odwiedź panel nauczyciela, by zobaczyć tabelę wyników.  Zauważ, że wyniki są widoczne tylko, jeśli co najmniej pięciu uczniów wypełniło ankiety."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Dziękujemy"
     wrong_body: "Dziękujemy za przesłanie odpowiedzi."

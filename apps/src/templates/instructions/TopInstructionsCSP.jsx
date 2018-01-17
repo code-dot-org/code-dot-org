@@ -119,6 +119,8 @@ var TopInstructions = React.createClass({
     scriptName: PropTypes.string,
     stagePosition: PropTypes.number,
     levelPosition: PropTypes.number,
+    scriptId: PropTypes.number,
+    serverLevelId: PropTypes.number,
   },
 
   state:{
@@ -221,10 +223,12 @@ var TopInstructions = React.createClass({
     firehoseClient.putRecord(
       'analysis-events',
       {
-        study: 'instructions-resources-tab-wip-v1',
+        study: 'instructions-resources-tab-wip-v2',
         study_group: 'resources-tab',
         event: 'resources-tab-click',
-        data_json: JSON.stringify([this.props.app, this.props.scriptName, this.props.stagePosition, this.props.levelPosition]),
+        script_id: this.props.scriptId,
+        level_id: this.props.serverLevelId,
+        data_json: JSON.stringify({'AppType': this.props.app, 'ScriptName': this.props.scriptName, 'StagePosition': this.props.stagePosition, 'LevelPosition': this.props.levelPosition}),
       }
     );
   },
@@ -240,6 +244,7 @@ var TopInstructions = React.createClass({
     ];
     const ttsUrl = this.props.ttsMarkdownInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
+    const logText = JSON.stringify({'AppType': this.props.app, 'ScriptName': this.props.scriptName, 'StagePosition': this.props.stagePosition, 'LevelPosition': this.props.levelPosition});
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
@@ -304,7 +309,9 @@ var TopInstructions = React.createClass({
                 }
                 {this.state.helpTabSelected &&
                   <HelpTabContents
-                    logText={JSON.stringify([this.props.app, this.props.scriptName, this.props.stagePosition, this.props.levelPosition])}
+                    scriptId={this.props.scriptId}
+                    serverLevelId={this.props.serverLevelId}
+                    logText={logText}
                     videoData={videoData}
                   />
                 }
@@ -342,6 +349,8 @@ module.exports = connect(function propsFromStore(state) {
     scriptName: state.instructions.scriptName,
     stagePosition: state.instructions.stagePosition,
     levelPosition: state.instructions.levelPosition,
+    scriptId: state.instructions.scriptId,
+    serverLevelId: state.instructions.serverLevelId,
   };
 }, function propsFromDispatch(dispatch) {
   return {
