@@ -40,6 +40,11 @@ module Pd::Application
   class Facilitator1819Application < WorkshopAutoenrolledApplication
     include Facilitator1819ApplicationConstants
 
+    serialized_attrs %w(
+      fit_workshop_id
+      auto_assigned_fit_enrollment_id
+    )
+
     def send_decision_notification_email
       # Accepted, declined, and waitlisted are the only valid "final" states;
       # all other states shouldn't need emails, and we plan to send "Accepted"
@@ -461,6 +466,67 @@ module Pd::Application
     # @override
     def check_idempotency
       Pd::Application::Facilitator1819Application.find_by(user: user)
+    end
+
+    before_save :destroy_fit_autoenrollment, if: -> {status_changed? && status != "accepted"}
+    def destroy_fit_autoenrollment
+      return unless auto_assigned_fit_enrollment_id
+
+      Pd::Enrollment.find_by(id: auto_assigned_fit_enrollment_id).try(:destroy)
+      self.auto_assigned_fit_enrollment_id = nil
+    end
+
+    def fit_workshop
+      Pd::Workshop.find(fit_workshop_id) if fit_workshop_id
+    end
+
+    # override
+    def enroll_user
+      super
+      return unless fit_workshop_id
+
+      enrollment = Pd::Enrollment.where(
+        pd_workshop_id: fit_workshop_id,
+        email: user.email
+      ).first_or_initialize
+
+      # If this is a new enrollment, we want to:
+      #   - save it with all required data
+      #   - save a reference to it in properties
+      #   - delete the previous auto-created enrollment if it exists
+      if enrollment.new_record?
+        enrollment.update(
+          user: user,
+          school_info: user.school_info,
+          full_name: user.name
+        )
+        enrollment.save!
+
+        destroy_fit_autoenrollment
+        self.auto_assigned_fit_enrollment_id = enrollment.id
+      end
+    end
+
+    # G1 facilitators are always associated with Phoenix
+    # G2 facilitators are always associated with Atlanta
+    # G3 facilitators are assigned based on their partner mapping, arbitrarily
+    #   defaulting to Phoenix
+    def find_default_fit_teachercon
+      return unless regional_partner
+
+      return TC_PHOENIX if regional_partner.group == 1
+      return TC_ATLANTA if regional_partner.group == 2
+
+      return get_matching_teachercon(regional_partner) || TC_PHOENIX
+    end
+
+    def find_default_fit_workshop
+      return unless regional_partner
+
+      find_fit_workshop(
+        course: workshop_course,
+        city: find_default_fit_teachercon[:city]
+      )
     end
   end
 end
