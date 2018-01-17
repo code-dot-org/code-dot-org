@@ -9,6 +9,7 @@ import msg from '../locale';
 export function loadStarWarsEvents(skin) {
   skin.preloadAssets = true;
   skin.sortDrawOrder = true;
+  skin.onlyOneActor = true;
 
   skin.hideIconInClearPuzzle = true;
 

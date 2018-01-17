@@ -206,10 +206,17 @@ exports.install = function (blockly, blockInstallOptions) {
         block.appendDummyInput();
       }
     } else {
-      block
-        .appendValueInput('SPRITE')
+      const input = block
+        .appendValueInput('SPRITE');
+
+      input
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendTitle(msg.ifSpriteN({spriteIndex: ''}));
+
+      if (skin.onlyOneActor) {
+        input.setVisible(false);
+        block.appendDummyInput().appendTitle(msg.droid());
+      }
     }
   }
 
