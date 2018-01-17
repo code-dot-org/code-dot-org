@@ -380,12 +380,11 @@ module.exports = {
     snapRadius: 30,
     goal: {
       successCondition: function () {
-        return validateSimplePuzzle(['jigsaw_repeat', 'jigsaw_purple',
+        return validateSimplePuzzle(['jigsaw_purple',
           'jigsaw_blue', 'jigsaw_green'], {});
       }
     },
-    startBlocks: undeletableJigsawBlock('jigsaw_repeat', 20, 20,
-      undeletableJigsawBlock('jigsaw_purple', 0, 0, undeletableJigsawBlock('jigsaw_blue')), 'statement'),
+    startBlocks: undeletableJigsawBlock('jigsaw_purple', 0, 0, undeletableJigsawBlock('jigsaw_blue')),
     toolbox: createToolbox(
       jigsawBlock('jigsaw_green')
     )
@@ -411,11 +410,11 @@ module.exports = {
     snapRadius: 30,
     goal: {
       successCondition: function () {
-        return validateSimplePuzzle(['jigsaw_repeat', 'jigsaw_purple',
+        return validateSimplePuzzle(['jigsaw_purple',
           'jigsaw_blue', 'jigsaw_green'], {});
       }
     },
-    startBlocks: undeletableJigsawBlock('jigsaw_repeat', 20, 20),
+    startBlocks: "",
     toolbox: createToolbox(
       jigsawBlock('jigsaw_green') +
       jigsawBlock('jigsaw_purple') +
