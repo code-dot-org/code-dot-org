@@ -62,6 +62,30 @@ describe('isRunning reducer', function () {
       isDebuggerPaused: true
     });
   });
+
+  it ('sets isDebuggingSprites to false when running is set to false', function () {
+    var previousState = {
+      isRunning: true,
+      isDebuggingSprites: true
+    };
+    var state = reducer(previousState, runState.setIsRunning(false));
+    assert.deepEqual(state, {
+      isRunning: false,
+      isDebuggingSprites: false
+    });
+  });
+
+  it ('doesnt change isDebuggingSprites when set to true', function () {
+    var previousState = {
+      isRunning: true,
+      isDebuggingSprites: true
+    };
+    var state = reducer(previousState, runState.setIsRunning(true));
+    assert.deepEqual(state, {
+      isRunning: true,
+      isDebuggingSprites: true
+    });
+  });
 });
 
 describe('isDebuggerPaused reducer', function () {
@@ -136,6 +160,45 @@ describe('isDebuggerPaused reducer', function () {
     });
   });
 
+});
+
+describe('isDebuggingSprites reducer', function () {
+  var reducer = runState.default;
+
+  it('starts out false', function () {
+    var state = reducer(null, {});
+    assert.strictEqual(state.isDebuggingSprites, false);
+  });
+
+  it('can be set to true when false', function () {
+    var previousState = {
+      isRunning: true,
+      isDebuggingSprites: false,
+    };
+    var state = reducer(previousState, runState.setIsDebuggingSprites(true));
+    assert.strictEqual(state.isDebuggingSprites, true);
+  });
+
+  it('can be set to false when true', function () {
+    var previousState = {
+      isRunning: true,
+      isDebuggingSprites: true,
+    };
+    var state = reducer(previousState, runState.setIsDebuggingSprites(false));
+    assert.strictEqual(state.isDebuggingSprites, false);
+  });
+
+  it ('doesnt change to true when isRunning is set to false', function () {
+    var previousState = {
+      isRunning: false,
+      isDebuggingSprites: false,
+    };
+    var state = reducer(previousState, runState.setIsDebuggingSprites(true));
+    assert.deepEqual(state, {
+      isRunning: false,
+      isDebuggingSprites: false,
+    });
+  });
 });
 
 });
