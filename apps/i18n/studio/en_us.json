@@ -75,6 +75,7 @@
   "dog": "dog",
   "dontAllowActorsToLeaveThePlayspace": "Don't allow actors to leave the playspace",
   "dragon": "dragon",
+  "droid": "droid",
   "dropletBlock_addCharacter_description": "Add a character to the scene.",
   "dropletBlock_addCharacter_param0": "type",
   "dropletBlock_addCharacter_param0_description": "The type of the character to be added ('random', 'Stormtrooper', 'RebelPilot', 'PufferPig', 'Mynock', 'MouseDroid', 'Tauntaun', or 'Probot').",
