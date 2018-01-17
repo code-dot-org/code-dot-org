@@ -149,10 +149,9 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   });
 
-  generateBlankBlock(blockly, skin, 'jigsaw_repeat', [322, 0.90, 0.95], 100, true);
-  generateBlankBlock(blockly, skin, 'jigsaw_green', [140, 1.00, 0.74], 80);
-  generateBlankBlock(blockly, skin, 'jigsaw_blue', [184, 1.00, 0.74], 80);
-  generateBlankBlock(blockly, skin, 'jigsaw_purple', [312, 0.32, 0.62], 80);
+  generateBlankBlock(blockly, skin, 'jigsaw_green', [140, 1.00, 0.74], 36, "3");
+  generateBlankBlock(blockly, skin, 'jigsaw_blue', [184, 1.00, 0.74], 36, "2");
+  generateBlankBlock(blockly, skin, 'jigsaw_purple', [312, 0.32, 0.62], 36, "1");
 
   // Go through all added blocks, and add empty generators for those that
   // weren't already given generators
@@ -172,17 +171,16 @@ exports.install = function (blockly, blockInstallOptions) {
   delete blockly.Blocks.procedures_ifreturn;
 };
 
-function generateBlankBlock(blockly, skin, name, hsv, width, hasAppend) {
+function generateBlankBlock(blockly, skin, name, hsv, width, label) {
   blockly.Blocks[name] = {
     helpUrl: '',
     init: function () {
       this.setHSV.apply(this, hsv);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldImage(skin.blank, width, 54));
+        .appendTitle(new blockly.FieldImage(skin.blank, width, 54))
+        .appendTitle(new blockly.FieldLabel(label,
+            {fixedSize: {width: width, height: 64}, fontSize: 32}));
       this.setPreviousStatement(true);
-      if (hasAppend) {
-        this.appendStatementInput('child');
-      }
       this.setNextStatement(true);
     }
   };
