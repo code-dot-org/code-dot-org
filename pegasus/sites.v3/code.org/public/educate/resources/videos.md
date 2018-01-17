@@ -10,6 +10,62 @@ style_min: true
 
 We are building a growing library of educational videos available for re-use by educators worldwide, online or in classrooms. Our goal is to enable our efforts to be amplified beyond our own curriculum's reach. **Note:** see below for the licensing restrictions on use of these videos.
 
+## How Computers Work
+
+<div class="col-50" style="float: left; padding: 10px;">
+
+<% facebook = {:u=>'https://youtu.be/OAx_6-wdslM'} %>
+<% twitter = {:url=>'https://youtu.be/OAx_6-wdslM', :related=>'codeorg', :text=>'Introducing How Computers Work @codeorg'} %>
+<%=view :display_video_thumbnail, id: "how_computers_work", video_code: "OAx_6-wdslM", caption: "Introducing How Computers Work", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/cs-discoveries/concept/01_HowComputersWork_sm.mp4" %>
+
+</div>
+
+<div class="col-50" style="float: left; padding: 10px;">
+
+<% facebook = {:u=>'https://youtu.be/mCq8-xTH7jA'} %>
+<% twitter = {:url=>'https://youtu.be/mCq8-xTH7jA', :related=>'codeorg', :text=>'What Makes a Computer, a Computer? @codeorg'} %>
+<%=view :display_video_thumbnail, id: "makes_a_computer", video_code: "mCq8-xTH7jA", caption: "What Makes a Computer, a Computer?", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/cs-discoveries/concept/02_WhatMakesAComputer_sm.mp4" %>
+
+</div>
+
+<div style="clear: both;"></div>
+
+<div class="col-50" style="float: left; padding: 10px;">
+
+<% facebook = {:u=>'https://youtu.be/USCBCmwMCDA'} %>
+<% twitter = {:url=>'https://youtu.be/USCBCmwMCDA', :related=>'codeorg', :text=>'Binary and Data @codeorg'} %>
+<%=view :display_video_thumbnail, id: "binary_data", video_code: "USCBCmwMCDA", caption: "Binary and Data", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/cs-discoveries/concept/03_BinaryData_sm.mp4" %>
+
+</div>
+
+<div class="col-50" style="float: left; padding: 10px;">
+
+<% facebook = {:u=>'https://youtu.be/ZoqMiFKspAA'} %>
+<% twitter = {:url=>'https://youtu.be/ZoqMiFKspAA', :related=>'codeorg', :text=>'Circuits Logic @codeorg'} %>
+<%=view :display_video_thumbnail, id: "circuits_logic", video_code: "ZoqMiFKspAA", caption: "Circuits Logic", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/cs-discoveries/concept/04_CircuitsLogic_sm.mp4" %>
+
+</div>
+
+<div style="clear: both;"></div>
+
+<div class="col-50" style="float: left; padding: 10px;">
+
+<% facebook = {:u=>'https://youtu.be/DKGZlaPlVLY'} %>
+<% twitter = {:url=>'https://youtu.be/DKGZlaPlVLY', :related=>'codeorg', :text=>'CPU, Memory, Input, and Output @codeorg'} %>
+<%=view :display_video_thumbnail, id: "cpu_memory_io", video_code: "DKGZlaPlVLY", caption: "CPU, Memory, Input, and Output", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/cs-discoveries/concept/05_CPUMemoryIO_sm.mp4" %>
+
+</div>
+
+<div class="col-50" style="float: left; padding: 10px;">
+
+<% facebook = {:u=>'https://youtu.be/xnyFYiK2rSY'} %>
+<% twitter = {:url=>'https://youtu.be/xnyFYiK2rSY', :related=>'codeorg', :text=>'Hardware and Software @codeorg'} %>
+<%=view :display_video_thumbnail, id: "hardware_software", video_code: "xnyFYiK2rSY", caption: "Hardware and Software", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/cs-discoveries/concept/06_HardwareSoftware_sm.mp4" %>
+
+</div>
+
+<div style="clear: both;"></div>
+
 ## Computer Science Principles
 
 <div class="col-50" style="float: left; padding: 10px;">
