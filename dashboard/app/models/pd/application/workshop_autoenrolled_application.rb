@@ -59,5 +59,34 @@ module Pd::Application
       return Pd::Workshop::COURSE_CSD if course == 'csd'
       return Pd::Workshop::COURSE_CSP if course == 'csp'
     end
+
+    def find_default_workshop
+      return unless regional_partner
+
+      # If this application is associated with a G3 partner who in turn is
+      # associated with a specific teachercon, return the workshop for that
+      # teachercon
+      if regional_partner.group == 3
+        teachercon = get_matching_teachercon(regional_partner)
+        if teachercon
+          return find_teachercon_workshop(course: workshop_course, city: teachercon[:city], year: 2018)
+        end
+      end
+
+      # Default to just assigning whichever of the partner's eligible workshops
+      # is scheduled to start first. We expect to hit this case for G1 and G2
+      # partners, and for any G3 partners without an associated teachercon
+      regional_partner.
+        pd_workshops_organized.
+        where(
+          course: workshop_course,
+          subject: [
+            Pd::Workshop::SUBJECT_TEACHER_CON,
+            Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+          ]
+        ).
+        order_by_scheduled_start.
+        first
+    end
   end
 end
