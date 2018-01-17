@@ -49,12 +49,15 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "markdown_instructions": "# Wire a Circuit\r\n\r\nYou can use any of the numbered pads to add additional circuits to your board. Let's use pin 2 to add another LED.\r\n\r\n# Do This\r\n\r\n* Using a wire, connect pin 2 to the positive (+) side of an LED\r\n* Using another wire, connect the negative (-) side of the LED to a ground (GND) pin (it doesn't matter which run)\r\n* Run this program to test your circuit. If it worked, your LED should turn on.\r\n\r\n_Debugging Tip: LEDs only work if the electricity is flowing from positive to negative. If your LED doesn't light up, make sure that it's oriented the right way._",
-    "contained_level_names": null
+    "markdown_instructions": "# Wire a Circuit\r\n\r\nYou can use any of the numbered pads to add additional circuits to your board. Let's use pin 2 to add another LED.\r\n\r\n# Do This\r\n\r\n* Using a wire, connect pin 2 to the positive (+) side of an LED\r\n* Using another wire, connect the negative (-) side of the LED to a ground (GND) pin (it doesn't matter which one)\r\n* Run this program to test your circuit. If it worked, your LED should turn on.\r\n\r\n_Debugging Tip: LEDs only work if the electricity is flowing from positive to negative. If your LED doesn't light up, make sure that it's oriented the right way._",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-05 20:35:24 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:51:32 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_view_data_button\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:53:36 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-12 19:58:56 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-05 20:35:24 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:51:32 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_view_data_button\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:53:36 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-12 19:58:56 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-17 21:23:55 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
