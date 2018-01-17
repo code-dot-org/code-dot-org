@@ -21,7 +21,7 @@ By asobuno (Own work) [<a href="https://creativecommons.org/licenses/by-sa/3.0">
 
 **Physical Tasks in Daily Life**
 
-Daily life is filled with tasks. For example, most mornings you'll need to get dressed, pack your things, and then travel from one place to another. Your day at work or school will be filled with tasks to complete. Even keeping up with friends, relaxing, or going to bed probably includes some tasks if you look closely.
+Daily life is filled with tasks. For example, most mornings you'll need to get dressed, pack your things, and then travel from one place to another. Your day at work or school will be filled with tasks to complete. Even keeping up with friends, relaxing, or going to bed includes some tasks if you look closely.
 
 <div style="clear: both"> </div>
 
@@ -29,9 +29,7 @@ Daily life is filled with tasks. For example, most mornings you'll need to get d
 
 **Automating Tasks**
 
-Most tasks we want taken care of quickly, easily, and reliably. Sometimes we practice the steps of a task, like tying our shoes, so that we can quickly complete it and move on to other things. In other cases we've made tools to help us complete tasks like shovels to dig holes or ropes to help pull and lift things.
-
-Automation combines these two ideas. If completing a task requires the same predictable set of steps, perhaps we could build a tool that does all those steps for us. As a result humans built amazing machines that could weave cloth, plant and harvest food, or assemble products with little to no human input. This led to enormous shifts in everyday life!
+We want to complete most tasks quickly, easily, and reliably. Tasks that are repetitive or have a well-defined set of steps to complete them are good candidates for automation. If completing a task requires the same predictable set of steps, perhaps we could build a tool that does all those steps for us. As a result humans built amazing machines that could weave cloth, plant and harvest food, or assemble products with little to no human input. This led to enormous shifts in everyday life!
 
 <div style="clear: both"></div>
 
@@ -43,7 +41,7 @@ By Clem Rutter, Rochester, Kent. (self) [<a href="http://www.gnu.org/copyleft/fd
 
 **Automation Requires Algorithms**
 
-To automate a task you of course need the materials to design and build your machine, but just as important you need to know the precise steps the machine should be built to complete. A machine to weave cloth needs to know precisely how to make each stitch, and a machine to plant crops needs to know how close to plant each seed. In other words, in order to automate processes you need the precise sequence of steps, or algorithm, your machine will be designed to implement!
+ If we can define A machine to weave cloth needs to know precisely how to make each stitch, and a machine to plant crops needs to know how close to plant each seed. In other words, in order to automate processes you need the precise sequence of steps, or algorithm, your machine will be designed to implement!
 
 <div style="clear: both"> </div>
 
@@ -55,17 +53,20 @@ Many tasks don't require physical work, but they do require thinking. For exampl
 
 **Automating Information Tasks**
 
-Many information tasks can be completed using step-by-step algorithms. For example when you learn the steps to add or multiply two numbers, you're really just practicing an algorithm. Tools like a mechanical cash register are built to implement those algorithms and help automate a task.
+Many information tasks can be completed using step-by-step algorithms. For example when you learn the steps to add or multiply two numbers, you're really just using an algorithm for multiplication. Tools like a mechanical cash register help automate information tasks that can be expressed as an algorithms.
 
 ## Algorithms, Programming, and Computer Science
 
 **The Everything Machine**
 
-Through history machines to automate thinking tasks usually did only one thing. A machine could track stars in the sky, or add numbers, but couldn't do both. By comparison, a single modern computer can add numbers, show video, communicate over the Internet, and play music. This is clearly a very different type of machine!
+Through history machines to automate information tasks usually did only one thing. A machine could track stars in the sky, or add numbers, but couldn't do both. By comparison, a single modern computer can add numbers, show video, communicate over the Internet, and play music. This is clearly a very different type of machine!
 
-In order to achieve this, computers were designed to complete a set of simple commands that are likely to come up in many information problems. For example a computer is able to add and subtract numbers, move information from one place to another, and compare numbers. This is because at a low level you'll actually find that most information tasks require this same set of commands.
+Many important ideas led to the design of the modern computer. First was the realization that many information tasks can be represented as simple manipulations of numbers. In fact, you learned in Units 1 and 2 that text, images, and sound information on a computer have ways of being represented as binary numbers.
 
-Rather than being designed to do one task, a computer lets a human being write out the steps in which it uses the different commands it's designed to understand. Depending on the task the human wants the computer to complete they'll write a different sequence of commands. Said another way, a computer is a machine that's designed for a human to write algorithms for it to run!
+
+In order to achieve this, computers were designed to perform a set of very simple commands that come up in many information problems. For example a computer is able to add and subtract numbers, move information from one place to another, and compare numbers. This is because at a low level you'll actually find that most information tasks require this same set of commands.
+
+Rather than being designed to do one task, a computer lets a human being write out the steps to complete an information task using the commands the computer understands. Depending on the task the human wants the computer to complete they'll write a different sequence of commands. Said another way, a computer is a machine that's designed for a human to write algorithms for it to run!
 
 ## Algorithms and Creativity
 
