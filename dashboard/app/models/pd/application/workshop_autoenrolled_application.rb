@@ -54,5 +54,10 @@ module Pd::Application
         self.auto_assigned_enrollment_id = enrollment.id
       end
     end
+
+    def workshop_course
+      return Pd::Workshop::COURSE_CSD if course == 'csd'
+      return Pd::Workshop::COURSE_CSP if course == 'csp'
+    end
   end
 end
