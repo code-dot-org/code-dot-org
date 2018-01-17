@@ -1,3 +1,6 @@
+<%
+require_relative '../dms/generate_dms_tasks'
+-%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: Data layer for Tableau including RedShift cluster configuration and synchronization with RDS instance.
@@ -76,3 +79,23 @@ Resources:
       Username: !Ref RedshiftUsername
       Password: !Ref RedshiftPassword
       DatabaseName: !Ref RedshiftDatabase
+  TableauSyncLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      RetentionInDays: 30
+  TableauSyncLogStream:
+    Type: AWS::Logs::LogStream
+    Properties:
+      LogGroupName: !Ref TableauSyncLogGroup
+<% Cdo::DMS.tasks.each do |task_name, table_mappings| -%>
+  DMS<%=task_name.underscore.camelize%>:
+    Type: AWS::DMS::ReplicationTask
+    Properties:
+      MigrationType: full-load-and-cdc
+      ReplicationInstanceArn: !Ref TableauSync
+      ReplicationTaskIdentifier: <%= task_name %>
+      SourceEndpointArn: !Ref RDSEndpoint
+      TargetEndpointArn: !Ref RedshiftEndpoint
+      ReplicationTaskSettings: <%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>
+      TableMappings: <%= table_mappings.to_json %>
+<% end -%>
