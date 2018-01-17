@@ -32,6 +32,9 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 - **Education Team**
 	- [Facilitator Development Specialist](#facilitator)
 	- [Program Associate](#associate)
+- **Engineering**
+	- [Software Engineer](#softwareengineer)
+	- [Technical Lead](#techlead)
 - **Internships**
 	- [Data Intern (Seattle, WA)](#dataintern)
 	- [Education Team intern (Chicago, IL or Seattle, WA)](#edintern)
@@ -157,6 +160,66 @@ You will be successful in this role if you have:
 - Ability and willingness to travel up to 15% time
 
 To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="softwareengineer"href="#softwareengineer">Software Engineer (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
+
+As Software Engineer at Code.org, you’ll be delivering features in Code Studio, used by tens of millions of students and teachers in K-12 classrooms around the world. You’ll be part of an agile, fast-moving team where you get to deliver features to customers quickly and frequently. You’ll get to work on hard computer science problems and use some of the latest web technologies.
+
+**Experience and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Passion for our mission of increasing access to computer science education
+- Bachelor’s degree with a major in Computer Science
+- 3+ years as a software engineer
+- Expertise in some of these technologies preferred: 
+	- JavaScript
+	- React
+	- Ruby on Rails
+	- SQL/Databases/MySQL
+
+In addition, candidates:
+
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
+To apply, please email resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="techlead"href="#techlead">Technical Lead (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
+
+As Technical Lead at Code.org, you’ll be both a technical leader and a key coding contributor on the team. As a technical leader, you’ll be helping drive technology decisions and investments, architecture, tools and process. You’ll be mentoring (and, depending on experience and desire, managing) other team members.
+
+As a direct contributor, you’ll be delivering features in Code Studio, used by tens of millions of students and teachers in K-12 classrooms around the world. You’ll be part of an agile, fast-moving team where you get to deliver features to customers quickly and frequently. You’ll get to work on hard computer science problems and use some of the latest web technologies.
+
+**Experience and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Passion for our mission of increasing access to computer science education
+- Bachelor’s degree with a major in Computer Science
+- 7+ years as a software engineer
+- Top-notch technical ability
+- Proven ability to lead and energize others
+- Expertise in some of these technologies preferred:
+	- JavaScript
+	- React
+	- Ruby on Rails
+	- SQL/Databases/MySQL
+	
+In addition, candidates:
+
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
+To apply, please email resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="dataintern"href="#dataintern">Data Intern (Seattle, WA)</a>
 

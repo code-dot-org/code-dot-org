@@ -877,6 +877,9 @@
     hide_survey_last_answer: Esta encuesta es anónima. Por favor visita el panel del
       profesor para ver los resultados acumulados. Toma en cuenta que los resultados
       son visibles sólo si al menos 5 estudiantes presentaron la encuesta.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Gracias
     wrong_body: Gracias por enviar respuestas.

@@ -184,10 +184,6 @@
       "onBoardEvent": null
     },
     "edit_code": true,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "# Make your `loopStar(color)` function\r\n\r\nRight now only the red star works, so you'll need to change this code.\r\n\r\n# Do This\r\n* Use the code from the `loopRedStar()` function to create a `loopStar(color)` function that will work with any star.\r\n* Test your function by calling `loopStar(\"red\")` and `loopStar(\"blue\")` inside the `loopStars()` function.",
     "instructions_important": "false",
@@ -226,7 +222,8 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

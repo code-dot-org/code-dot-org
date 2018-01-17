@@ -15,8 +15,9 @@ import {
   renderSyncOauthSectionControl,
   unmountSyncOauthSectionControl,
   renderLoginTypeAndSharingControls,
-  unmountLoginTypeAndSharingControls
-} from './sections';
+  unmountLoginTypeAndSharingControls,
+  renderSectionTable,
+} from '@cdo/apps/templates/teacherDashboard/sections';
 import logToCloud from '@cdo/apps/logToCloud';
 
 const script = document.querySelector('script[data-teacherdashboard]');
@@ -28,6 +29,7 @@ main(scriptData);
 // disableExperiments url params will cause a persistent setting to be stored
 // from any page in teacher dashboard.
 const showProjectThumbnails = experiments.isEnabled('showProjectThumbnails');
+const showManageStudentsReact = experiments.isEnabled(experiments.MANAGE_STUDENTS);
 
 function renderSectionProjects(sectionId) {
   const dataUrl = `/dashboardapi/v1/projects/section/${sectionId}`;
@@ -394,6 +396,12 @@ function main() {
       $scope.$on('login-type-react-rendered', () => {
         $scope.section.$promise.then(section => renderLoginTypeAndSharingControls(section.id));
       });
+
+      if (showManageStudentsReact) {
+        $scope.$on('student-table-react-rendered', () => {
+          $scope.section.$promise.then(section => renderSectionTable(section.id, section.login_type));
+        });
+      }
 
       $scope.$on('$destroy', () => {
         unmountSyncOauthSectionControl();

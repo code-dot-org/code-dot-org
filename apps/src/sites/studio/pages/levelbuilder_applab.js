@@ -12,6 +12,7 @@ $(document).ready(function () {
     "off": null,
     "toggle": null,
     "blink": null,
+    "pulse": null,
     "stop": null,
     "color": null,
     "intensity": null,

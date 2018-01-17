@@ -1216,6 +1216,35 @@
         face (click here to see the image)
       CSD U5 black white images pixelation 5_instruction: "畫你喜歡的任何東西"
       CSD U5 black white images pixelation_instruction: "利用 0 和 1 來完成這個 X 圖形。"
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -1324,6 +1353,18 @@
       CSDU6 arrays random_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select icons_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select rainbow_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_instruction: |-
+        Write a program that displays a
+        randomly chosen color from the array. (Click to see full instructions)
       CSDU6 arrays variable_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
@@ -2998,6 +3039,45 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
+        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars10_instruction: |-
+        Free Play time! Here are all of the variables
+        we've played with so far in this stage, as well as a few more in case you
+        want them. \r
+        \r
+        Notice that there are now so many blocks in our toolbox
+        that they need to be organized!  Here, we've put each piece into an appropriate
+        category.  Take some time to explore everything that is available. When you're
+        done browsing, make a game or story using repeats, variables, and events.  \r
+        \r
+        Hint:
+        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars2_instruction: |-
+        The race in that last puzzle wasn't very
+        fair! Change the `dog_speed` variable to make sure you can collect more flags
+        than Cat. The first to collect 10 flags wins!
+      CourseF_PlayLab_vars3_instruction: "使用向左鍵和向右鍵移動、向上鍵是跳，看看你能不能收集到所有的旗子。"
+      CourseF_PlayLab_vars4_instruction: "現在，我們使用了一個叫作 height（高度）的變數來控制小狗能跳躍的高度。更新
+        height 變數來讓小狗能夠跳得夠高以碰到所有旗子。"
+      CourseF_PlayLab_vars5_instruction: "讓我們來創造一個遊戲吧！首先我們需要計分，我們將分數設為 10 分。 "
+      CourseF_PlayLab_vars6_instruction: |-
+        使用向右鍵扔出派。\r
+        \r
+        在我們的遊戲中，要怎樣才能獲得分數呢？在每次小狗用派擊中小貓時，加 1 到你的 points 變數上。使用「當角色2碰到任何東西」事件來觸發分數更新。你可以利用「points = points +1」的方式增加變數值，分數到達 10 分（每次加 1 分）就過關。
+      CourseF_PlayLab_vars7_instruction: |-
+        使用向右鍵扔出派。\r
+        \r
+        在我們的遊戲中，要怎樣才能獲得分數呢？在每次小狗用派擊中小貓時，加 1 到你的 points 變數上。使用「當角色2碰到任何東西」事件來觸發分數更新。你可以利用「points = points +1」的方式增加變數值，分數到達 10 分（每次加 1 分）就過關。
+      CourseF_PlayLab_vars8_instruction: |-
+        使用向右鍵扔出派。\r
+        \r
+        在我們的遊戲中，要怎樣才能獲得分數呢？在每次小狗用派擊中小貓時，加 1 到你的 points 變數上。使用「當角色2碰到任何東西」事件來觸發分數更新。你可以利用「points = points +1」的方式增加變數值，分數到達 10 分（每次加 1 分）就過關。
+      CourseF_PlayLab_vars9_instruction: |-
+        Nice, now let's make sure this game isn't
+        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
+        2), you should lose a point. Start with 10 points so it's not too hard. Let
+        your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution_instruction: "說明"
       Crack a Caesar Cipher_instruction: "說明"
       ECSPD Binary Odometer_instruction: |-
@@ -6715,9 +6795,13 @@
         become our horizon.
       courseA_artist_loops6_instruction: Let's put a nice hill in the back.
       courseA_artist_loops7_instruction: "使用「重複」迴圈為水添加波紋。"
+      courseA_artist_loops7_forVideo_instruction: "使用`重複`迴圈為水添加波紋。"
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: "挑戰：修復這些階梯。"
       courseA_artist_loops_challenge2_instruction: "啾啾！你能幫我做兩個鳥屋嗎？"
+      courseA_artist_loops_challenge2a_instruction: |-
+        *"Help me get these three tents
+        set up!"*
       courseA_artist_loops_challenge3_instruction: "我們來玩個遊戲！盡可能畫多一些的 X！你有辦法每一排畫出 3
         個嗎？"
       courseA_collector_loops1_instruction: "幫助 Laurel 移動，盡可能讓他找到所有的寶藏！"
@@ -6860,6 +6944,9 @@
       courseB_collector_loops_challenge2_instruction: |-
         Let's get the treasure! Help
         me across each row then come back to start the next row. Can you find a pattern?
+      courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: "這次你只可以用一個移動積木，試著收集到寶藏吧！ "
       courseB_collector_prog1_instruction: "這位是冒險家 Laurel！你能幫助她移動以取得黃金嗎？"
       courseB_collector_prog2_instruction: Four piles of gold!  Collect all four.
@@ -7078,9 +7165,12 @@
       courseC_artist_prog_challenge2_instruction: |-
         *Help me paint the yellow lines
         on this road!*
+      courseC_artist_prog_challenge2a_instruction: |-
+        *Help me paint the yellow lines
+        on this road!*
       courseC_collector_loops_challenge2_instruction: |-
-        Let's hunt for treasure -
-        using loops! Help the collector by debugging this code. Get all of the treasure!
+        Get at least **5** pieces
+        of treasure!
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
         you can help Laurel collect some treasure.
@@ -7110,8 +7200,8 @@
         Look carefully! Can you collect
         all *10* pieces of treasure?
       courseC_collector_prog_challenge2_instruction: |-
-        There are 20 pieces of treasure
-        to be found. Collect at least half to finish this challenge!
+        Collect at least **10** pieces
+        of treasure to finish this challenge!
       courseC_flappy_embed_events_instruction: |-
         Here's an example of a game that
         you're about to create yourself! Play through it one or two times to get
@@ -7176,9 +7266,13 @@
         Collect all of the corn and all of the
         pumpkins.
       courseC_harvester_loops_challenge1_instruction: "收集所有的玉米。"
+      courseC_harvester_loops_challenge1a_instruction: "收集所有的玉米。"
       courseC_harvester_loops_challenge2_instruction: |-
         收集所有的生菜。
         注意避開樹木和田地！
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -7235,6 +7329,8 @@
         puzzles to complete this level.
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
       courseC_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops\nto
+        find his acorn! "
+      courseC_maze_loops_challenge1a_instruction: "Now Scrat wants to try using loops\nto
         find his acorn! "
       courseC_maze_loops_challenge2_instruction: |-
         Let's hunt for treasure - using
@@ -7343,6 +7439,8 @@
         \r
         See what happens when we start to
         get creative with the bits!
+      courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
+        binary! "
       courseD_artist_binary_challenge0_instruction: |-
         Try using nested loops to complete
         this drawing.
@@ -7433,8 +7531,8 @@
         Can you figure out how
         to make a picture like this?
       courseD_artist_nestedLoops_challenge2_instruction: |-
-        Can you figure out how
-        to make a picture like this?
+        Fix the code to make this
+        picture!
       courseD_artist_project1_instruction: "Draw a small shape, between **20 and\n50**
         pixels wide.  It can be any shape that you like.  "
       courseD_artist_project1a_instruction: |-
@@ -7533,6 +7631,10 @@
         Help the bee fix the code to get all the
         nectar.
       courseD_bee_debugging_challenge1_instruction: |-
+        Watch how the bees gets the
+        nectar. Can you use the same kind of pattern to help the bee make all of the
+        honey?
+      courseD_bee_debugging_challenge1a_instruction: |-
         Watch how the bees gets the
         nectar. Can you use the same kind of pattern to help the bee make all of the
         honey?
@@ -7688,6 +7790,10 @@
         Are you an expert of nested
         loops? Use what you have learned so far to collect all of the treasure!
       courseD_collector_nested_loops_challenge2_instruction: |-
+        Help the collector
+        reach at least two piles of treasure using only the blocks in your toolbox.
+        It is possible to collect all 4.
+      courseD_collector_nested_loops_challenge2a_instruction: |-
         Help the collector
         reach at least two piles of treasure using only the blocks in your toolbox.
         It is possible to collect all 4.
@@ -7909,8 +8015,9 @@
         down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
         **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: |-
-        If the pirate is in the safe zone, wait
-        one second, then deduct a point as long as he stays beneath the octopus line.
+        If the pirate (actor 1) is in the safe
+        zone, wait one second, then deduct a point as long as he stays beneath the
+        octopus line.
       courseD_playLab_cond6cloneForTest_instruction: Testing
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
@@ -8687,6 +8794,7 @@
         same!
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: "添加一個積木到「當點擊時」積木下，然後點擊「運行」。點擊或輕觸螢幕，讓像素鳥移動至目標。"
+      flappy_11_instruction: "創造你自己的像素鳥遊戲。你可以改變所有看的到的東西和所有規則，甚至是重力。當你完成時，點擊完成，讓你的朋友可以在他們手機上體驗你做的遊戲。"
       flappy_2_instruction: "現在我們已經添加了一些地面。附加一個積木到「當碰到地面時」積木，當像素鳥撞上時你要程式來將「遊戲結束」。"
       flappy_3_instruction: "當你的遊戲開始時，「當運行時」積木能讓你運行程式。試著設定速度等級並飛到目的地。"
       flappy_4_instruction: "像素鳥會穿過障礙物，除非你寫程式讓它停下來。添加一個積木到「當碰到障礙物時」積木裡，你必須在像素鳥在第一次撞到水管時「結束遊戲」。"
@@ -8695,7 +8803,6 @@
       flappy_7_instruction: "接下來，試著附加另一個積木到「當運行時」積木的下方，讓場景改變。"
       flappy_8_instruction: "你可以隨時設置視覺效果，不是只有遊戲開始時才可以。試著在其他事件發生時將場景設為隨機，比方說，當通過障礙物時。"
       flappy_9_instruction: "要把東西混在一起囉！當撞到一個障礙物時，不要結束遊戲，改成把遊戲分數歸零。"
-      flappy_11_instruction: "創造你自己的像素鳥遊戲。你可以改變所有看的到的東西和所有規則，甚至是重力。當你完成時，點擊完成，讓你的朋友可以在他們手機上體驗你做的遊戲。"
       frozen circle function in circle_instruction: "現在我們來建立 20 個互有重疊的圓，在每個圓之後轉向 18
         度。"
       frozen circle function with parameter_instruction: "這裡有一個「建立一個圓形」的程式積木，可以畫出不同大小的圓。您可以用這個來建立一個大小為

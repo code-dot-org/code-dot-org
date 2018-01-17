@@ -4,19 +4,22 @@ theme: responsive
 ---
 # CS Discoveries Professional Learning Program
 
+Our CS Discoveries Professional Learning program offers year round support designed for educators teaching a semester or full-year course. You don't need any prior computer science experience to get started! 
+
+For more information about our goals and approach to professional learning, check out our [professional learning values](educate/professional-learning/values).
+<br>
+
+<hr/>
+
 [col-50]
 
-### Applications for the 2018-19 CS Discoveries Professional Learning Program are now available!
+The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops.
 
-- Step 1: Read the [Code.org Professional Learning Program Overview](/files/PLProgramsOverview_1-Pager.pdf) and the <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">Program FAQs</a>.
-- Step 2: Check out the course page for [CS Discoveries](/educate/csd).
-- Step 3: Set aside 15 - 20 minutes to complete the application.
+This program prepares educators to provide high quality instruction based on the [CS Discoveries curriculum](/educate/csd). 
 
-**Ready to get started?**
+**Applications for the 2018-19 [CS Discoveries Professional Learning Program](/files/PLProgramsOverview_1-Pager.pdf) will open in January, 2018.** If you are interested in joining in 2018-19, sign up below. 
 
-[<button>Apply now!</button>](https://studio.code.org/pd/application/teacher)
-
-_The priority deadline for applications is March 30, 2018. Applications submitted after March 30 will only be reviewed at our Regional Partners' discretion._ 
+[<button>Tell me when applications open!</button>](https://studio.code.org/pd/regional_partner_contact/new)
 
 [/col-50]
 
@@ -31,12 +34,6 @@ _The priority deadline for applications is March 30, 2018. Applications submitte
 [/col-50]
 
 <div style="clear: both;"></div>
-
-<hr/>
-
-Our CS Discoveries Professional Learning program offers year round support designed for educators teaching a semester or full-year course. You don't need any prior computer science experience to get started! 
-
-The program kicks off with 5-day summer workshop where you'll have the opportunity to work hands-on wiht the [CS Discoveries curriculum](/educate/csd). Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. For more information about our goals and approach to professional learning, check out our [professional learning values](educate/professional-learning/values).
 
 <%= view :three_circles, circles: [
 {img: '/images/testimonials/fit-150/teachers-1.png', text: '90% of workshop attendees ranked it the best professional development ever.'},
@@ -96,15 +93,9 @@ We currently offer the CS Discoveries Professional Learning Program in locations
 
 ## <a name="apply"></a>How to apply?
 
-- Step 1: Read the [Code.org Professional Learning Program Overview](/files/PLProgramsOverview_1-Pager.pdf) and the <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">Program FAQs</a>.
-- Step 2: Check out the course page for [CS Discoveries](/educate/csd).
-- Step 3: Set aside 15 - 20 minutes to complete the application.
+**Applications for the 2018-19 CS Discoveries Professional Learning Program will open in January, 2018.** If you are interested in joining in 2018-19, sign up below. 
 
-**Ready to get started?**
-
-[<button>Apply now!</button>](https://studio.code.org/pd/application/teacher)
-
-_The priority deadline for applications is March 30, 2018. Applications submitted after March 30 will only be reviewed at our Regional Partners' discretion._ 
+[<button>Tell me when applications open!</button>](https://studio.code.org/pd/regional_partner_contact/new)
 
 ## <a name="facilitate"></a>Become a CS Discoveries Facilitator
 

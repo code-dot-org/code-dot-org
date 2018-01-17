@@ -622,12 +622,6 @@ def run_feature(browser, feature, options)
   test_run_string = test_run_identifier(browser, feature)
   log_prefix = "[#{feature.gsub(/.*features\//, '').gsub('.feature', '')}] "
 
-  if options.pegasus_domain =~ /test/ && rack_env?(:development) && RakeUtils.git_updates_available?
-    message = "Killing <b>dashboard</b> UI tests (changes detected)"
-    ChatClient.log message, color: 'yellow'
-    raise Parallel::Kill
-  end
-
   if options.browser && browser['browser'] && options.browser.casecmp(browser['browser']) != 0
     return
   end

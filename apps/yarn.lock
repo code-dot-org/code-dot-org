@@ -50,9 +50,9 @@
   version "0.1.1"
   resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/ea9da01f6512bcd2c8ea562d6a4ff4d2c0549e4f"
 
-"@code-dot-org/johnny-five@0.11.1-cdo.1":
-  version "0.11.1-cdo.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-0.11.1-cdo.1.tgz#c1093e5f9d1b4a6b18bdf94dab565f3b0b8cc216"
+"@code-dot-org/johnny-five@0.11.1-cdo.2":
+  version "0.11.1-cdo.2"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-0.11.1-cdo.2.tgz#a7f0afbb0ee06ba683564c66d6161dc92436caea"
   dependencies:
     chalk latest
     color-convert "~1.2.2"

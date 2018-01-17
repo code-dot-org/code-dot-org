@@ -2,16 +2,15 @@
 title: Code.org Advocacy Coalition
 theme: responsive
 ---
-<link href="/css/interactive_map.css", rel="stylesheet"></link>
 
 # Code.org Advocacy Coalition
 The Code.org Advocacy Coalition is a non-partisan group that believes computer science should be part of the core curriculum in education, and that we must increase participation and access for female students and underrepresented minority students. Download a description of the coalition [here](http://code.org/files/CoalitionOnePager.pdf).
 
+## Current Legislation
 
-<%= view :interactive_map, use_url: false %>
+<%= view :advocacy_map %>
 
 <div style="clear:both"></div>
-
 
 ## Our Agenda
 Despite demand for computer science professionals, the country’s K-12 education system continues to marginalize computer science education. While decisions about what is taught in elementary, middle and high schools are vested in state and local authority, policy at all levels of government must support putting students on a path to fill high-demand, high-skilled, high-paying computing jobs across all sectors of our economy.

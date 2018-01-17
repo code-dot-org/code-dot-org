@@ -769,6 +769,9 @@
         and games with objects and characters that interact with each other.
       audience: "Возраст 13+"
       cta: "Узнать подробности"
+    hoc-encryption:
+      title: "Простое шифрование"
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -789,6 +792,10 @@
     minecraft2016:
       title: Minecraft
       body: "Запрограммируй поведение животных и существ своего мира Minecraft."
+    hero:
+      title: Minecraft
+      body: "Майнкрафт возвращается с новыми заданиями для Часа Кода! Путешествуй
+        и программируй с Майнкрафт."
     sports:
       title: Sports
       body: Make a basketball game or mix and match across sports.
@@ -870,6 +877,9 @@
     hide_survey_last_answer: "Это анонимный опрос. Пожалуйста, посетите информационную
       страницу учителей для сбора результатов. Обратите внимание, что результаты будут
       видны, только если в опросе участвовало хотя бы пять студентов."
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: "Спасибо"
     wrong_body: "Спасибо за ответ"
@@ -1000,11 +1010,11 @@
     rename: "Переименовать"
     save: "Сохранить"
     delete: "Удалить"
-    import: "Импорт"
+    import: "Импортировать"
     share_link_import_bad_link_header: "Ссылка общего доступа не распознана"
     share_link_import_bad_link_body: "Не удалось импортировать ссылку общего доступа.
-      Убедитесь, что вы используете ссылку из задачи Minecraft: Agent и что вы скопировали
-      ссылку целиком."
+      Убедитесь, что вы используете ссылку из задачи Minecraft: Исполнитель и что
+      вы скопировали ссылку целиком."
     share_link_import_error_header: "Что-то пошло не так."
     share_link_import_error_body: "При импорте ссылки общего доступа возникла проблема.
       Попробуйте еще раз."

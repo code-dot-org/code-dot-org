@@ -4,8 +4,7 @@ import sinon from 'sinon';
 import {assert, expect} from '../../../util/configuredChai';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
-import Notification from '@cdo/apps/templates/Notification';
-import { announcement, courses, topCourse } from './homepagesTestData';
+import { courses, topCourse } from './homepagesTestData';
 
 describe('TeacherHomepage', () => {
   let server;
@@ -29,6 +28,7 @@ describe('TeacherHomepage', () => {
         courses={[]}
         topCourse={topCourse}
         joinedSections={[]}
+        isEnglish={true}
         showCensusBanner={false}
       />
     );
@@ -46,33 +46,11 @@ describe('TeacherHomepage', () => {
         courses={[]}
         topCourse={topCourse}
         joinedSections={[]}
+        isEnglish={true}
         showCensusBanner={false}
       />
     );
     expect(wrapper.find('ProtectedStatefulDiv')).to.have.length(2);
-  });
-
-  it('shows an announcement', () => {
-    const wrapper = shallow(
-      <TeacherHomepage
-        announcements={[announcement]}
-        courses={[]}
-        topCourse={topCourse}
-        joinedSections={[]}
-        showCensusBanner={false}
-      />
-    );
-    const announcementContainer = wrapper.find(Notification);
-    assert.deepEqual(announcementContainer.props(), {
-      type: "bullhorn",
-      notice: announcement.heading,
-      details: announcement.description,
-      dismissible: false,
-      buttonText: announcement.buttonText,
-      buttonLink: announcement.link,
-      newWindow: true,
-      analyticId: announcement.id,
-    });
   });
 
   it('renders a TeacherSections component', () => {
@@ -82,6 +60,7 @@ describe('TeacherHomepage', () => {
         courses={[]}
         topCourse={topCourse}
         joinedSections={[]}
+        isEnglish={true}
         showCensusBanner={false}
       />
     );
@@ -97,6 +76,7 @@ describe('TeacherHomepage', () => {
         courses={[]}
         topCourse={topCourse}
         joinedSections={[]}
+        isEnglish={true}
         showCensusBanner={false}
       />
     );
@@ -110,6 +90,7 @@ describe('TeacherHomepage', () => {
         topCourse={topCourse}
         courses={courses}
         joinedSections={[]}
+        isEnglish={true}
         showCensusBanner={false}
       />
     );
@@ -130,6 +111,7 @@ describe('TeacherHomepage', () => {
         topCourse={topCourse}
         codeOrgUrlPrefix="http://localhost:3000/"
         joinedSections={[]}
+        isEnglish={true}
         showCensusBanner={false}
       />
     );

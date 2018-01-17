@@ -32,7 +32,7 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
   attributes :id, :organizer, :location_name, :location_address, :course,
     :subject, :capacity, :notes, :state, :facilitators,
     :enrolled_teacher_count, :sessions, :account_required_for_attendance?,
-    :enrollment_code, :on_map, :funded, :ready_to_close?
+    :enrollment_code, :on_map, :funded, :ready_to_close?, :short_name
 
   def sessions
     object.sessions.map do |session|
@@ -56,5 +56,11 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
 
   def enrollment_code
     @scope.try(:[], :enrollment_code)
+  end
+
+  def short_name
+    return '' unless object.sessions.any? && object.processed_location
+
+    "#{object.friendly_date_range}, #{object.location_city} #{object.location_state}#{object.teachercon? ? ' TeacherCon' : ''}"
   end
 end

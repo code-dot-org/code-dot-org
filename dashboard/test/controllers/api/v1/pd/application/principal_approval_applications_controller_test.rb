@@ -58,7 +58,7 @@ module Api::V1::Pd::Application
           csp_which_grades: YES,
           csp_course_hours_per_year: YES,
           previous_yearlong_cdo_pd: YES,
-          csp_ap_exam: YES,
+          csp_how_offer: 2,
           taught_in_past: 2,
           schedule_confirmed: YES,
           diversity_recruitment: YES,
