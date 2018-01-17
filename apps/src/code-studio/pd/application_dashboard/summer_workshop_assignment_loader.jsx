@@ -38,7 +38,7 @@ export default class SummerWorkshopAssignmentLoader extends React.Component {
         workshops: data.workshops.map(workshop => {
           return {
             value: workshop.id,
-            label: workshop.short_name
+            label: workshop.date_and_location_name
           };
         })
       });
