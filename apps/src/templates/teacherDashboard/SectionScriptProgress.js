@@ -27,7 +27,8 @@ export default class SectionScriptProgress extends Component {
     scriptData: PropTypes.shape({
       stages: PropTypes.arrayOf(PropTypes.shape({
         levels: PropTypes.arrayOf(PropTypes.object).isRequired
-      }))
+      })),
+      id: PropTypes.number.isRequired,
     }).isRequired,
     // For each student id, has a mapping from level id to the student's result
     // on that level
@@ -39,8 +40,8 @@ export default class SectionScriptProgress extends Component {
   /**
    * progressRedux has a helper (levelsByLesson) that looks as the state of the
    * redux store and returns a set of level objects, where the level object includes
-   * the student's status. We take advantage of that by creating a fake store with
-   * the relevant data. This is likely not the right long term solution.
+   * the student's status. We take advantage of that by creating an equivalent
+   * object with the relevant data. This is likely not the right long term solution.
    * @param {string} studentId
    * @returns {object} Level object that includes static data about the level,
    *   and also the student's result
@@ -49,8 +50,9 @@ export default class SectionScriptProgress extends Component {
     const { scriptData, studentLevelProgress } = this.props;
 
     const fakeState = {
-      ...scriptData,
-      levelProgress: studentLevelProgress[studentId]
+      stages: scriptData.stages,
+      levelProgress: studentLevelProgress[studentId],
+      currentLevelId: null
     };
     return levelsByLesson(fakeState);
   }

@@ -1,7 +1,11 @@
 import React from 'react';
 import {FormGroup} from "react-bootstrap";
 import LabeledFormComponent from "../../form_components/LabeledFormComponent";
-import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
+import {
+  PageLabels,
+  SectionHeaders,
+  TextFields
+} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 import {YES, NONE} from '../ApplicationConstants';
 
 export default class Section3LeadingStudents extends LabeledFormComponent {
@@ -23,21 +27,21 @@ export default class Section3LeadingStudents extends LabeledFormComponent {
         {this.radioButtonsFor("teachingExperience")}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("ledCsExtracurriculars", {
-          "Other (Please List):" : "other"
+          [TextFields.otherPleaseList] : "other"
         })}
 
         {this.props.data.teachingExperience === YES &&
           <div>
             {this.checkBoxesWithAdditionalTextFieldsFor("gradesTaught", {
-              "Other:" : "other"
+              [TextFields.otherWithText] : "other"
             })}
 
             {this.checkBoxesWithAdditionalTextFieldsFor("gradesCurrentlyTeaching", {
-              "Other:" : "other"
+              [TextFields.otherWithText] : "other"
             })}
 
             {this.checkBoxesWithAdditionalTextFieldsFor("subjectsTaught", {
-              "Other:" : "other"
+              [TextFields.otherWithText] : "other"
             })}
 
             {this.radioButtonsFor("yearsExperience")}
@@ -45,7 +49,7 @@ export default class Section3LeadingStudents extends LabeledFormComponent {
             {this.props.data.yearsExperience && this.props.data.yearsExperience !== NONE &&
               <div>
                 {this.checkBoxesWithAdditionalTextFieldsFor("experienceLeading", {
-                  "Other:" : "other"
+                  [TextFields.otherWithText] : "other"
                 })}
 
                 {this.checkBoxesFor("completedPd")}

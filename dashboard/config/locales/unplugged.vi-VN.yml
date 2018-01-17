@@ -59,15 +59,15 @@
           về toàn bộ lớp học, bất kể loại chuỗi hay hạt nào. Để có hiệu quả, các bạn
           sẽ cần phải tóm tắt ra chi tiết những tài liệu cụ thể của họ và tạo ra những
           thuật ngữ mơ hồ cho nguồn cung cấp của một cá nhân. Sử dụng những điểm chung
-          này là một sự giới thiệu biến tuyệt vời.
+          này là một sự giới thiệu biến số tuyệt vời.
         pdfs:
         - unplug5
         video: Unplug5
       Unplug6:
         title: "Điều kiện"
-        desc: "Đây là trò chơi theo nhóm. Sau khi giới thiệu ý tưởng, mẫu if, và vòng
-          lặp, cả lớp có thể luyện tập cùng nhau sử dụng một chương trình viết trước,
-          một cỗ bài, và vẽ vận may."
+        desc: "Đây là trò chơi trong lớp. Sau khi giới thiệu ý tưởng về các điều kiện,
+          câu lệnh if, và vòng lặp, cả lớp có thể luyện tập cùng nhau sử dụng một
+          chương trình viết trước, một cỗ bài, và vẽ vận may."
         pdfs:
         - unplug6
         video: Unplug6

@@ -566,7 +566,7 @@ zh-CN:
       cta: "了解操作方法"
     hoc-encryption:
       title: "简单加密"
-      body: "Students will learn techniques to create and crack encrypted messages."
+      body: "学生将学习技术来创建和破解加密的信息。"
     weblab:
       title: "网站实验室 （测试版）"
       body: "网站实验室是一个你能够通过html和css制作简单网页的编程环境。在几秒钟内，你就能设计并分享自己的网页。"
@@ -651,6 +651,7 @@ zh-CN:
     correct_title: "谢谢你"
     correct_body: "感谢您提交答案。"
     hide_survey_last_answer: "这个调查是匿名的。请访问教导面板以查询结果汇总。\n注意，只有至少五个学生提交了调查报告结果才会可见。"
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "谢谢你"
     wrong_body: "感谢您提交答案。"

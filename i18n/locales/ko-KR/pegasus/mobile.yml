@@ -260,6 +260,12 @@
   studiobar_donate_body: "여러분이 기부할 때 마다 더 많은 학생들이 배울 수 있습니다."
   studiobar_shop_title: "상점"
   studiobar_shop_body: "고정관념을 깨고, 우리의 로고와 긍지를 입어보세요."
+  homepage_stats_students: "of US students have accounts on Code.org"
+  homepage_stats_female: "of our students are female"
+  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
+  homepage_stats_policy: "states changed policy to support computer science"
+  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "&ldquo;나는 모든 국가의 소녀들이 한 시간의 코드를 배우길 바란다.&rdquo; 마랄라, 노벨 평화상 수상자"
   homepage_hero_text_susan: |-
     &ldquo;당신이 기술을 변경할 수 있다면, 당신은 세계도 변경시킬 수 있습니다.&rdquo; 수잔, YouTube CEO
@@ -480,6 +486,7 @@
   video_title_obama: "컴퓨터공학(정보과학)을 지지하는 오바마"
   video_title_hoc_is_here: "Hour of Code 가 여기 있습니다 - 누구나 배울 수 있습니다"
   video_title_anybody_can_learn: "누구나 배울 수 있습니다"
+  video_title_steph_curry: "Hour of Code with Steph Curry"
   video_title_draymond_green: "Draymond Green과 함께하는 Hour of Code"
   video_title_russell_okung: "Russell Okung과 함께하는 Hour of Code"
   video_title_real_madrid: "Real Madrid와 함께하는 Hour of Code"
