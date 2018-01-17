@@ -106,6 +106,8 @@ class JsDebugger extends React.Component {
     debugWatch: PropTypes.bool.isRequired,
     debugSlider: PropTypes.bool.isRequired,
     isDebuggerPaused: PropTypes.bool.isRequired,
+    isDebuggingSprites: PropTypes.bool.isRequired,
+    isRunning: PropTypes.bool.isRequired,
     stepSpeed: PropTypes.number.isRequired,
     isOpen: PropTypes.bool.isRequired,
     isAttached: PropTypes.bool.isRequired,
@@ -116,6 +118,7 @@ class JsDebugger extends React.Component {
     close: PropTypes.func.isRequired,
 
     // passed from above
+    onToggleDebugSprites: PropTypes.func,
     onSlideShut: PropTypes.func,
     onSlideOpen: PropTypes.func,
     style: PropTypes.object,
@@ -406,7 +409,7 @@ class JsDebugger extends React.Component {
   onClearDebugOutput = () => this.props.clearLog();
 
   render() {
-    const {isAttached, canRunNext} = this.props;
+    const {isAttached, canRunNext, isRunning, onToggleDebugSprites} = this.props;
     const hasFocus = this.props.isDebuggerPaused;
 
     const sliderStyle = {
@@ -519,6 +522,16 @@ class JsDebugger extends React.Component {
             isRtl={false}
             onClick={this.onClearDebugOutput}
           />
+          {isRunning && !!onToggleDebugSprites && (
+              <PaneButton
+                iconClass="fa fa-bug"
+                label="Debug Sprites: Off"
+                headerHasFocus={hasFocus}
+                isRtl={false}
+                isPressed={this.props.isDebuggingSprites}
+                pressedLabel="Debug Sprites: On"
+                onClick={onToggleDebugSprites}
+              />)}
           {this.props.debugSlider && <SpeedSlider style={sliderStyle} hasFocus={hasFocus} value={this.props.stepSpeed} lineWidth={130} onChange={this.props.setStepSpeed}/>}
         </PaneHeader>
         {this.props.debugButtons &&
@@ -556,7 +569,9 @@ export default connect(
     debugConsole: !!state.pageConstants.showDebugConsole,
     debugWatch: !!state.pageConstants.showDebugWatch,
     debugSlider: !!state.pageConstants.showDebugSlider,
+    isRunning: state.runState.isRunning,
     isDebuggerPaused: state.runState.isDebuggerPaused,
+    isDebuggingSprites: state.runState.isDebuggingSprites,
     stepSpeed: state.runState.stepSpeed,
     isOpen: isOpen(state),
     isAttached: isAttached(state),

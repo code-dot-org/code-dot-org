@@ -42,6 +42,7 @@ var CodeWorkspace = React.createClass({
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     isMinecraft: PropTypes.bool.isRequired,
     runModeIndicators: PropTypes.bool.isRequired,
+    onToggleDebugSprites: PropTypes.func,
     withSettingsCog: PropTypes.bool,
     showMakerToggle: PropTypes.bool,
   },
@@ -214,6 +215,7 @@ var CodeWorkspace = React.createClass({
           <JsDebugger
             onSlideShut={this.onDebuggerSlide}
             onSlideOpen={this.onDebuggerSlide}
+            onToggleDebugSprites={props.onToggleDebugSprites}
           />
         )}
       </span>
