@@ -1,10 +1,10 @@
-require_relative '../../deployment'
+require_relative '../../../deployment'
 
 module Cdo
   class DMS
     # Generates a set of DMS task definition hashes from a source YAML configuration file.
-    def self.tasks
-      tasks = YAML.load_file(File.join(__dir__, './tasks.yml'))
+    def self.tasks(file)
+      tasks = YAML.load_file(file)
       tasks.map do |task_name, task|
         rules = []
         remove_rules = []
