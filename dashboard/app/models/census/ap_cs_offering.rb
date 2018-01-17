@@ -64,18 +64,8 @@ class Census::ApCsOffering < ApplicationRecord
       ['CSP', 'CSA'].each do |course|
         object_key = "ap_cs_offerings/#{course}-#{school_year}-#{school_year + 1}.csv"
         begin
-          etag = AWS::S3.create_client.head_object({bucket: CENSUS_BUCKET_NAME, key: object_key}).etag
-          unless SeededS3Object.exists?(bucket: CENSUS_BUCKET_NAME, key: object_key, etag: etag)
-            AWS::S3.process_file(CENSUS_BUCKET_NAME, object_key) do |filename|
-              ActiveRecord::Base.transaction do
-                seed_from_csv(course, school_year, filename)
-                SeededS3Object.create!(
-                  bucket: CENSUS_BUCKET_NAME,
-                  key: object_key,
-                  etag: etag,
-                )
-              end
-            end
+          AWS::S3.seed_from_file(CENSUS_BUCKET_NAME, object_key) do |filename|
+            seed_from_csv(course, school_year, filename)
           end
         rescue Aws::S3::Errors::NotFound
           # We don't expect every school year to be there so skip anything that isn't found.

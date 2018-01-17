@@ -8,12 +8,13 @@ class Pd::TeacherApplicationControllerTest < ::ActionController::TestCase
     @teacher = create :teacher
   end
 
-  # Both teachers and students can see the teacher application form.
-  # Note student accounts will be converted to teacher on create
-  # (see Pd::TeacherApplication.ensure_user_is_a_teacher).
-  test_user_gets_response_for :new, user: :teacher
-  test_user_gets_response_for :new, user: :student
   test_redirect_to_sign_in_for :new
+  test 'redirects to new teacher application' do
+    sign_in @teacher
+    get :new
+    assert_response :redirect
+    assert_redirected_to '/pd/application/teacher'
+  end
 
   def self.test_workshop_admin_only(method, action, success_response, params = nil)
     test_user_gets_response_for action, user: -> {@teacher}, method: method, params: params, response: :forbidden

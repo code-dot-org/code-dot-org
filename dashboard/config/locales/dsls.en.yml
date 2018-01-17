@@ -3054,12 +3054,21 @@ en:
       pre-assessment survey heading1: {}
       pre-assessment survey heading2: {}
       pre-assessment survey heading3: {}
+      pwc_appdev:
+        description here: description here
+        title: title
+      pwc_appdevunplugged:
+        description here: description here
+        title: title
       pwc_cybersecurity:
         description here: description here
         title: title
       pwc_data:
         Data Science & Analytics - Solving Problems with Big Data: Data Science & Analytics - Solving Problems with Big Data
         description here: description here
+      pwc_internetofthings:
+        description here: description here
+        title: title
       pwc_problemsolving:
         Problem Solving - Personal Innovations: Problem Solving - Personal Innovations
         description here: description here
@@ -3069,6 +3078,9 @@ en:
       pwc_technologyfoundations:
         Technology Foundations - What is a Computer?: Technology Foundations - What is a Computer?
         description here: description here
+      pwc_webdevelopment:
+        description here: description here
+        title: title
       rbo-test1: {}
       sample external 1:
         sample external 1: sample external 1

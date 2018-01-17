@@ -577,7 +577,6 @@ designMode.onDepthChange = function (element, depthDirection) {
 
   var removed;
 
-  // TODO (brent) - use an enum?
   switch (depthDirection) {
     case 'forward':
       var twoAhead = outerElement.nextSibling.nextSibling;
