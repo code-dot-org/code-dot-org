@@ -5,6 +5,7 @@ require 'cdo/chat_client'
 require 'cdo/test_run_utils'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
+require 'parallel'
 
 namespace :test do
   desc 'Runs apps tests.'
@@ -29,6 +30,7 @@ namespace :test do
         message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
         ChatClient.log message, color: 'red'
         ChatClient.message 'server operations', message, color: 'red', notify: 1
+        raise "UI tests failed"
       end
     end
   end
@@ -37,7 +39,7 @@ namespace :test do
     Dir.chdir(dashboard_dir('test/ui')) do
       ChatClient.log 'Running <b>dashboard</b> UI visual tests...'
       eyes_features = `find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
-      failed_browser_count = RakeUtils.system_with_chat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', CDO.site_host('studio.code.org'), '-p', CDO.site_host('code.org'), '--eyes', '--retry_count', '1', '--with-status-page', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
+      failed_browser_count = RakeUtils.system_with_chat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', CDO.site_host('studio.code.org'), '-p', CDO.site_host('code.org'), '--eyes', '--magic_retry', '--with-status-page', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
       if failed_browser_count == 0
         message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
         ChatClient.log message
@@ -46,12 +48,18 @@ namespace :test do
         message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
         ChatClient.log message, color: 'red'
         ChatClient.message 'server operations', message, color: 'red', notify: 1
+        raise "Eyes tests failed"
       end
     end
   end
 
-  # do the eyes and sauce labs ui tests in parallel
-  multitask ui_all: [:eyes_ui, :regular_ui]
+  # Run the eyes tests and ui test suites in parallel. If one of these suites
+  # raises, allow the other suite to complete, then make sure this task raises.
+  task :ui_all do
+    Parallel.each([:eyes_ui, :regular_ui], in_threads: 2) do |target|
+      Rake::Task["test:#{target}"].invoke
+    end
+  end
 
   task :ui_test_flakiness do
     Dir.chdir(deploy_dir) do

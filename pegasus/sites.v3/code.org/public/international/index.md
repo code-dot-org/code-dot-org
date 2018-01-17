@@ -29,34 +29,23 @@ Want to have direct impact on students in your country? Make Code.org content av
 Increase awareness about computer science education abroad. Explore our resources available to anyone and everyone to learn how you can get started right away. 
 <br>
 <br>
-<br>
 <div class="col-50" style="padding-right: 40px; padding-bottom: 20px;">
 
-<a href="https://code.org/teach">Are you a teacher?</a><br>
+<a href="/teach">Are you a teacher?</a><br>
 Did you know that most of our teachers are new to teaching computer science? You can do it, too! Our courses make it fun for students from pre-readers to high school to learn computer science. Explore our engaging, rigorous curriculum and complete lesson plans that you can start using right away. All of our courses are available at no cost.
 
-</div>
+[<button>Start teaching</button>](/teach)
 
+</div>
 <div class="col-50">
 
-<a href="https://code.org/international/apply">Are you an organization working to promote computer science in your country?</a><br>
-Host events, make presentations, post to social media, and build a community of local computer science champions -- all without reinventing the wheel! Whether you want to host your first Hour of Code event or you have already hosted hundreds of computer science education events, there are resources you can begin using right away. Are you interested in joining a community of global leaders working to expand computer science education? Learn about the Code.org International Partner Program! 
+<a href="/international/apply">Are you an organization working to promote computer science in your country?</a><br>
+
+Host events, make presentations, post to social media, and build a community of local computer science champions -- all without reinventing the wheel! Whether you want to host your first Hour of Code event or you have already hosted hundreds of computer science education events, there are resources you can begin using right away. Are you interested in joining a community of global leaders working to expand computer science education? Learn about the Code.org International Partner Program!
+
+[<button>Apply now</button>](/international/apply)
 
 </div>
 
 <div style="clear: both;"></div>
 <br>
-<div class="col-50" style="padding-right: 40px; padding-bottom: 20px;">
-
-<a href="">Are you a Ministry of Education or other government official?</a> <br>
-Share exciting developments in your own country, and learn what other countries in the world are doing for computer science education. 
-</div>
-
-<div class="col-50">
-
-<a href="">Are you a professional in the tech industry?</a><br>
-Inspire students in your country to learn computer science (and get your colleagues on board, too)! Stories of industry professionals help students to see how computer science is applicable in real life. Motivate students by showing them that learning computer science matters no matter what industry. 
-
-</div>
-
-<div style="clear: both;"></div>

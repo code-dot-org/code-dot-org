@@ -72,9 +72,12 @@ table {width: 100%;}
 
 | **January** ||
 |-----------------|--------------------------------------------------|
+| Jan 9, 2018 | Teacher Application Process Webinar - Option 1 (**All Partners**) |
+| Jan 10, 2018 | Teacher Application Process Webinar - Option 2 (**All Partners**) |
 | Jan 12, 2018 | Final day for CS Fundamentals Facilitator Interviews (**All Partners**) |
 | Jan 15, 2018 | Post-interviews, partners finalize stack ranking and submit recommendations for acceptance to Code.org for CS Fundamentals facilitators (**All Partners**)|
 | Week of Jan 15, 2018 | Code.org sends acceptances and contracts to accepted CS Fundamentals facilitators (**All Partners**)|
+| Week of Jan 16, 2018 | Code.org Teacher Applications Open|
 |Jan 19, 2018 | Final Day for CS Discoveries and CS Principles Facilitator Interviews (**Group 1 and 2 partners only**)|
 | June 22, 2018 | Post-interviews, partners finalize stack ranking and submit recommendations for acceptance to Code.org for CS Discoveries and CS Principles facilitators (**Group 1 and 2 partners only**)|
 | Ongoing through January | Code.org reviews recommendations, conducts follow-up interviews if there are any red flags, and makes acceptance decisions in collaboration with partners for CS Fundamentals Facilitators |
@@ -118,3 +121,58 @@ table {width: 100%;}
 | March 5 - 8, 2018| Regional Partner Spring Summit in conjunction with the March 3-5 training for current and new CS Fundamentals facilitators.|
 | March 16, 2018| Signed contracts due from accepted CSD and CSP facilitators (**Group 3 partners only**)|
 | March 30, 2018 - April 6| CSD and CSP facilitators register for assigned TeacherCon and Facilitator-in-Training weekend (**Group 3 partners only**)|
+
+## April Areas of Focus
+
+- Teacher and District Recruitment<br/>
+- Facilitator Training<br/>
+- Teacher Applications Review <br/>
+- Host CS Fair (Group 1 only) <br/>
+- Host Spring Administrator & Counselor Workshops if Desired <br/>
+- Roadmap Focus Area: Teacher Implementation / Community Building and Reputation <br/>
+
+
+
+| **April** ||
+|-----------------|--------------------------------------------------|
+| March 30 - April 6, 2018| CSD and CSP facilitators register for assigned TeacherCon and Facilitator-in-Training weekend (**Group 3 partners only**)|
+| April 6, 2018| Priority deadline for all Group 3 teacher applications (**Group 3 partners only**)|
+| April 6, 2018 - July| Application link will remain open for Group 1 and 2 partners, and as needed for Group 3 partners|
+| April 23, 2018| Deadline for accepting teachers for TeacherCon 1 (**Group 3 partners only**)|
+
+## May Areas of Focus
+
+- Set dates with facilitators for academic year workshops <br/>
+- Finalize logistics for local summer workshops<br/>
+- Finalize teacher cohorts<br/>
+- Host CS Fair (Group 1 only)<br/>
+- Host Spring Administrator & Counselor Workshops if Desired<br/>
+- Roadmap Focus Area: Teacher Implementation<br/>
+
+
+| **May** ||
+|-----------------|--------------------------------------------------|
+| May 12-14, 2018| Facilitators will attend and participate in one 3-day workshop with other facilitators to prepare for the academic year facilitation in Chicago (Rosemont), IL.|
+| May 21, 2018| Deadline for accepting teachers for TeacherCon 2 (**Group 3 partners only**)|
+
+## June Areas of Focus
+
+- Host Local Summer Workshops (Group 1 & 2)<br/>
+- Code.org TeacherCon<br/>
+- Roadmap Focus Area: Teacher Implementation & Facilitator Quality<br/>
+
+
+| **June** ||
+|-----------------|--------------------------------------------------|
+| June 17 - 22, 2018| TeacherCon 1 in Atlanta, GA|
+
+## July Areas of Focus
+
+- Host Local Summer Workshops (Group 1 & 2)<br/>
+- Code.org TeacherCon<br/>
+- Roadmap Focus Area: Teacher Implementation & Facilitator Quality<br/>
+
+
+| **July** ||
+|-----------------|--------------------------------------------------|
+| July 22-27, 2018| TeacherCon 2 in Phoenix, AZ|

@@ -5,6 +5,11 @@ module.exports.injectJSInterpreter = function (jsi) {
   jsInterpreter = jsi;
 };
 
+var createWithDebug;
+module.exports.setCreateWithDebug = function (debug) {
+  createWithDebug = debug;
+};
+
 /** @type {GameLabLevel} */
 var level;
 /**
@@ -24,6 +29,9 @@ module.exports.createSprite = function (x, y, width, height) {
    * through the bound constructor, which prepends the first arg.
    */
   const s = new this.Sprite(x, y, width, height);
+  if (createWithDebug) {
+    s.debug = true;
+  }
   addPropertyAliases(s);
   addMethodAliases(s);
 

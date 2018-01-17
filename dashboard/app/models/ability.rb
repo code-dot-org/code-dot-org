@@ -134,7 +134,7 @@ class Ability
         if user.regional_partners.any?
           # regional partners by default have read, quick_view, and update
           # permissions
-          can [:read, :quick_view, :update], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
+          can [:read, :quick_view, :cohort_view, :update], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
 
           # G3 regional partners should have full management permission
           group_3_partner_ids = user.regional_partners.where(group: 3).pluck(:id)

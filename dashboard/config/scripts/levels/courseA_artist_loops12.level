@@ -41,7 +41,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-21 17:20:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-21 17:20:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-12-04 16:52:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "repeat_loops": 1
@@ -66,12 +66,6 @@
         <block type="simple_jump_left"/>
         <block type="simple_jump_right"/>
         <block type="simple_jump_down"/>
-        <block type="draw_line_style_pattern">
-          <title name="VALUE">DEFAULT</title>
-        </block>
-        <block type="draw_colour_simple">
-          <title name="COLOUR">#ff0000</title>
-        </block>
         <block type="simple_move_up_right"/>
         <block type="simple_move_up_left"/>
         <block type="simple_move_down_right"/>

@@ -12,7 +12,6 @@ export default storybook => {
         story: () => (
             <Congrats
               completedTutorialType="applab"
-              isRtl={false}
               userType="signedOut"
               isEnglish={true}
             />
@@ -24,7 +23,6 @@ export default storybook => {
         story: () => (
             <Congrats
               completedTutorialType="applab"
-              isRtl={false}
               userType="student"
               isEnglish={true}
             />
@@ -36,7 +34,6 @@ export default storybook => {
         story: () => (
             <Congrats
               completedTutorialType="pre2017Minecraft"
-              isRtl={false}
               userType="signedOut"
               isEnglish={true}
             />
@@ -48,7 +45,6 @@ export default storybook => {
         story: () => (
             <Congrats
               completedTutorialType="pre2017Minecraft"
-              isRtl={false}
               userType="student"
               isEnglish={true}
             />
@@ -60,7 +56,6 @@ export default storybook => {
         story: () => (
             <Congrats
               completedTutorialType="2017Minecraft"
-              isRtl={false}
               userType="signedOut"
               isEnglish={true}
             />
@@ -72,7 +67,6 @@ export default storybook => {
         story: () => (
             <Congrats
               completedTutorialType="2017Minecraft"
-              isRtl={false}
               userType="student"
               isEnglish={true}
             />
@@ -84,7 +78,6 @@ export default storybook => {
         story: () => (
             <Congrats
               completedTutorialType="other"
-              isRtl={false}
               userType="signedOut"
               isEnglish={true}
             />
@@ -96,7 +89,6 @@ export default storybook => {
         story: () => (
             <Congrats
               completedTutorialType="other"
-              isRtl={false}
               userType="student"
               isEnglish={true}
             />
@@ -108,7 +100,6 @@ export default storybook => {
         story: () => (
             <Congrats
               completedTutorialType="other"
-              isRtl={false}
               userType="teacher"
               isEnglish={true}
             />

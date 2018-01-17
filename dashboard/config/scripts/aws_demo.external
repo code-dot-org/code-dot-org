@@ -1,0 +1,25 @@
+name 'AWS Demo'
+title 'Demo for Amazon Curriculum'
+description 'description here'
+markdown <<MARKDOWN
+# Title: Storage
+
+There is no shortage of challenges and issues that can arise on the job.  Having the necessary knowledge and skills to identify solutions to complex problems is one of the top skills employers look for in employees especially in cloud roles.  This course project simulates real-world tasks encountered by cloud professionals and challenges students to apply their AWS knowledge and technical skills to evaluate and recommend a secure, durable, highly-scalable cloud storage solution.
+
+## Purpose:
+
+To simulate real-world practice by providing a complex, authentic task designed to challenge students to apply their AWS and technical knowledge, critical thinking and problem solving skills in a real-world context.
+
+### Objectives:
+The objective(s) of the course project are:
+* Identify the most secure, durable solution to address the storage challenge;
+* Compare and contrast alternative AWS solutions;
+* Determine and apply the appropriate storage configuration to create a secure, stable, durable storage option; and
+* Summarize in writing the strengths and challenges of proposed solution(s).
+
+![](https://images.code.org/cdc9ffee426e4cbbba6a0aa706a35986-image-1513278570663.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Watch out for this misconception
+MARKDOWN

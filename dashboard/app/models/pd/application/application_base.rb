@@ -18,6 +18,8 @@
 #  response_scores                     :text(65535)
 #  application_guid                    :string(255)
 #  decision_notification_email_sent_at :datetime
+#  accepted_at                         :datetime
+#  properties                          :text(65535)
 #
 # Indexes
 #
@@ -96,12 +98,17 @@ module Pd::Application
     before_create -> {self.status = :unreviewed}
     after_initialize :set_type_and_year
     before_validation :set_type_and_year
+    before_save :update_accepted_date, if: :status_changed?
 
     def set_type_and_year
       # Override in derived classes and set to valid values.
       # Setting them to nil here fails those validations and prevents this base class from being saved.
       self.application_year = nil
       self.application_type = nil
+    end
+
+    def update_accepted_date
+      self.accepted_at = status == 'accepted' ? Time.now : nil
     end
 
     self.table_name = 'pd_applications'
@@ -121,6 +128,12 @@ module Pd::Application
       csd
       csp
     ).index_by(&:to_sym).freeze
+
+    COURSE_NAME_MAP = {
+      csp: Pd::Workshop::COURSE_CSP,
+      csd: Pd::Workshop::COURSE_CSD,
+      csf: Pd::Workshop::COURSE_CSF
+    }
 
     belongs_to :user
     belongs_to :regional_partner
@@ -173,6 +186,13 @@ module Pd::Application
       raise 'Abstract method must be overridden by inheriting class'
     end
 
+    # Override in derived class to provide csv data for cohort view
+    # @return [String] csv text row of values for cohort view ending in newline
+    #         The order of fields must be consistent between this and #self.cohort_csv_header
+    def to_cohort_csv_row
+      raise 'Abstract method must be overridden by inheriting class'
+    end
+
     # Get the answers from form_data with additional text appended
     # @param [Hash] hash - sanitized form data hash (see #sanitize_form_data_hash)
     # @param [Symbol] field_name - name of the multi-choice option
@@ -192,13 +212,17 @@ module Pd::Application
       end
     end
 
+    def self.filtered_labels(course)
+      raise 'Abstract method must be overridden in base class'
+    end
+
     # Include additional text for all the multi-select fields that have the option
     def full_answers
       sanitize_form_data_hash.tap do |hash|
         additional_text_fields.each do |additional_text_field|
           answer_with_additional_text hash, *additional_text_field
         end
-      end
+      end.slice(*self.class.filtered_labels(course).keys)
     end
 
     # Camelized (js-standard) format of the full_answers. The keys here will match the raw keys in form_data
@@ -225,19 +249,31 @@ module Pd::Application
     end
 
     def school_name
-      user.school_info.try(:effective_school_name).try(:titleize)
+      user.try(:school_info).try(:effective_school_name).try(:titleize)
     end
 
     def district_name
-      user.school_info.try(:effective_school_district_name).try(:titleize)
+      user.try(:school_info).try(:effective_school_district_name).try(:titleize)
     end
 
     def applicant_name
       "#{sanitize_form_data_hash[:first_name]} #{sanitize_form_data_hash[:last_name]}"
     end
 
+    # Convert responses cores to a hash of underscore_cased symbols
     def response_scores_hash
       JSON.parse(response_scores || '{}').transform_keys {|key| key.underscore.to_sym}
+    end
+
+    def total_score
+      numeric_scores = response_scores_hash.values.select do |score|
+        score.is_a?(Numeric) || score =~ /^\d+$/
+      end
+      numeric_scores.map(&:to_i).reduce(:+)
+    end
+
+    def course_name
+      COURSE_NAME_MAP[course.to_sym]
     end
 
     protected

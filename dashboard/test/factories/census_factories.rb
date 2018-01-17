@@ -126,4 +126,120 @@ FactoryGirl.define do
   factory :census_teacher_banner_v1, parent: :census_submission, class: Census::CensusTeacherBannerV1 do
     submitter_role "TEACHER"
   end
+
+  factory :ap_school_code, class: 'Census::ApSchoolCode' do
+    school_code "123456"
+    school {create :school}
+
+    trait :without_school_code do
+      school_code nil
+    end
+
+    trait :without_school do
+      school nil
+    end
+
+    trait :with_too_long_school_code do
+      school_code "12345678"
+    end
+
+    trait :with_invalid_school_code do
+      school_code "ABCDEF"
+    end
+  end
+
+  factory :ap_cs_offering, class: 'Census::ApCsOffering' do
+    ap_school_code {build :ap_school_code}
+    course "CSP"
+    school_year 2017
+
+    trait :without_course do
+      course nil
+    end
+
+    trait :with_invalid_course do
+      course "ABC"
+    end
+
+    trait :without_school_code do
+      ap_school_code nil
+    end
+
+    trait :without_school_year do
+      school_year nil
+    end
+
+    trait :with_invalid_school_year do
+      school_year 1900
+    end
+  end
+
+  factory :state_cs_offering, class: 'Census::StateCsOffering' do
+    school {build :school}
+    course "Some Random CS Course"
+    school_year 2017
+
+    trait :without_course do
+      course nil
+    end
+
+    trait :without_school do
+      school nil
+    end
+
+    trait :without_school_year do
+      school_year nil
+    end
+
+    trait :with_invalid_school_year do
+      school_year 1900
+    end
+  end
+
+  factory :ib_school_code, class: 'Census::IbSchoolCode' do
+    school_code "123456"
+    school {create :school}
+
+    trait :without_school_code do
+      school_code nil
+    end
+
+    trait :with_too_long_school_code do
+      school_code "12345678"
+    end
+
+    trait :without_school do
+      school nil
+    end
+
+    trait :with_invalid_school_code do
+      school_code "ABCDEF"
+    end
+  end
+
+  factory :ib_cs_offering, class: 'Census::IbCsOffering' do
+    ib_school_code {build :ib_school_code}
+    level "HL"
+    school_year 2017
+
+    trait :without_level do
+      level nil
+    end
+
+    trait :with_invalid_level do
+      level "ABC"
+    end
+
+    trait :without_school_code do
+      ib_school_code nil
+    end
+
+    trait :without_school_year do
+      school_year nil
+    end
+
+    trait :with_invalid_school_year do
+      school_year 1900
+    end
+  end
 end

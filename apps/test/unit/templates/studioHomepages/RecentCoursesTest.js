@@ -18,14 +18,12 @@ describe('RecentCourses', () => {
         courses={[]}
         topCourse={null}
         isTeacher
-        isRtl={false}
       />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
         <ContentContainer
           heading="My Courses"
-          isRtl={false}
         >
           <SetUpCourses
             isTeacher
@@ -44,14 +42,12 @@ describe('RecentCourses', () => {
         courses={[]}
         topCourse={topCourse}
         isTeacher
-        isRtl={false}
       />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
         <ContentContainer
           heading="My Courses"
-          isRtl={false}
         >
           <TopCourse
             assignableName={topCourse.assignableName}
@@ -83,14 +79,12 @@ describe('RecentCourses', () => {
         courses={courses}
         topCourse={topCourse}
         isTeacher
-        isRtl={false}
       />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
         <ContentContainer
           heading="My Courses"
-          isRtl={false}
         >
           <TopCourse
             assignableName={topCourse.assignableName}
@@ -135,14 +129,12 @@ describe('RecentCourses', () => {
         courses={moreCourses}
         topCourse={topCourse}
         isTeacher
-        isRtl={false}
       />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
         <ContentContainer
           heading="My Courses"
-          isRtl={false}
         >
           <TopCourse
             assignableName={topCourse.assignableName}
@@ -182,7 +174,6 @@ describe('RecentCourses', () => {
           </div>
           <SeeMoreCourses
             courses={moreCourses.slice(4)}
-            isRtl={false}
           />
           <div>
             <Notification

@@ -35,6 +35,10 @@ const styles = {
   error: {
     color: 'red',
     marginTop: 20,
+  },
+  bold: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    display: 'inline',
   }
 };
 
@@ -70,7 +74,7 @@ export default class EligibilityConfirmDialog extends Component {
        signature: this.state.signature
      }
    }).done(data => {
-     this.props.onSuccess(data.code);
+     this.props.onSuccess(data.code, data.expiration);
    }).fail((jqXHR, textStatus) => {
      this.setState({
        error: "We're sorry, but something went wrong. Try refreshing the page " +
@@ -129,7 +133,7 @@ export default class EligibilityConfirmDialog extends Component {
           <label>
             <div>{i18n.verifySignature()}</div>
             <div style={styles.signature}>
-              <b>Electronic Signature</b> {i18n.typeName()}
+              <strong style={styles.bold}>Electronic Signature</strong> {i18n.typeName()}
             </div>
             <input
               value={this.state.signature}

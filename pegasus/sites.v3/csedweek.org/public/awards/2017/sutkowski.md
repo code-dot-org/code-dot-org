@@ -1,6 +1,6 @@
 ---
 title: Heather Sutkowski
-nav: educate_nav
+nav: about_nav
 theme: responsive
 ---
 
@@ -8,12 +8,26 @@ theme: responsive
 
 # Heather Sutkowski
 
-<br/>
-<br/>
-As a teacher, Heather Sutkowski has advocated to not only provide CS education to all students in her own school (grades K-6), but she has worked to be the voice for CS education at the Elementary level by working closely with the CT State Department of Education and other members of the CT-CSTA to continue advocacy work across the state for grades K-12, and higher ed.
+### Champion for Computer Science - Advocacy Award (Teacher Category)
 
-At the CREC Montessori Magnet in Hartford, CT, Computer Science is now a weekly class for all students in grades K-6. The demographics include over 250 full-day students, 50% female, 57% students of color, and 56% receiving free/reduced lunch.
+## CREC Montessori Magnet School (Hartford, CT)
 
-In the past year she has presented at PTA meetings, volunteered time to promote the Hour of Code at local conferences (statewide and international), trained K-5 teachers in Connecticut as a Code.org CSF Facilitator, met with district superintendents to advocate for CS, and supported local CS events. She has also volunteered as part of the CT State Department of Education's Computer Science Advisory Group to research and advise on certification and standards requirements related to CS, and have also presented to directors at the CT State Department of Education with other CT-CSTA colleagues.
+Heather Sutkowski is passionate about advocating for computer science and promoting it starting in elementary school. She has been a teacher for 13 years and currently teaches K-6 Computer Science at the CREC Montessori Magnet School in Hartford, CT.
 
-The school has committed to teaching computer science on a weekly basis to every child, and continuing to participate in a schoolwide Hour of Code. This has been a large step forward, because in the previous four years, only a small number of students were given CS instruction in specific classrooms, during pull-out group time or in the summer school program, and they were able to slowly increase to now reach every student in the 2017-2018 school year.
+<figure style="margin:10px">
+  <img src="/images/awards/heather_sutkowski_students.jpg" style="display:block;margin:0 auto" width=450 alt="Students at CREC Montessori Magnet School" />
+  <figcaption style="text-align:center;font-style:italic;font-size:12px">
+    Students at CREC Montessori Magnet School
+  </figcaption>
+</figure>
+
+Through presentations to her school's PTA, district colleagues, superintendents, and curriculum leaders, Heather encouraged them to include CS education in the elementary school curriculum. The 2017-18 school year is the first year that this new curriculum took effect; she now teaches computer science on a weekly basis to every student in grades K-6 at her school, a population that is 50% female, 68% students of color, and 54% free/reduced lunch.
+
+But it doesn’t stop there. She volunteers at local conferences to promote the Hour of Code, presents professional learning sessions, and also facilitates Code.org CS Fundamentals workshops. She's an active member of the Connecticut Computer Science Teachers Association and most recently has been working with its members to launch the "S4CT Summit" in spring 2018. As part of her advocacy work, she volunteers on the Connecticut State Department of Education's Computer Science Advisory Group and is part of a workgroup that advises on computer science standards adoption, certification, and training opportunities.
+
+<figure style="margin:10px">
+  <img src="/images/awards/heather_sutkowski.png" style="display:block;margin:0 auto" width=250 alt="Heather Sutkowski" />
+  <figcaption style="text-align:center;font-style:italic;font-size:12px">Heather Sutkowski</figcaption>
+</figure>
+
+Heather has been proud to volunteer and dedicate her time to the computer science education effort, working to spread the word of how impactful, valuable and fulfilling this subject area can be for all students.

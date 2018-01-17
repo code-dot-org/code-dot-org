@@ -6,19 +6,19 @@ import Radium from 'radium';
 import React, {PropTypes} from 'react';
 import * as dataStyles from './dataStyles';
 
-const EditTableListRow = React.createClass({
-  propTypes: {
+class EditTableListRow extends React.Component {
+  static propTypes = {
     onViewChange: PropTypes.func.isRequired,
     tableName: PropTypes.string.isRequired
-  },
+  };
 
-  handleEdit() {
+  handleEdit = () => {
     this.props.onViewChange(DataView.TABLE, this.props.tableName);
-  },
+  };
 
-  handleDelete() {
+  handleDelete = () => {
     FirebaseStorage.deleteTable(this.props.tableName);
-  },
+  };
 
   render() {
     return (
@@ -38,6 +38,6 @@ const EditTableListRow = React.createClass({
       </tr>
     );
   }
-});
+}
 
 export default Radium(EditTableListRow);

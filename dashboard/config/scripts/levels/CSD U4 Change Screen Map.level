@@ -8,7 +8,7 @@
     "instructions_important": "false",
     "display_name": "Changing Screens",
     "teacher_markdown": "#### Limited Programming Required\r\n\r\nThe goal of this unit is to get students thinking about the role design plays in developing a product and to help them build empathy for end users. This is not a programming focused unit, and the extent to which students will be expected to program is represented in its entirety here. Students will get a chance to delve deeper into App Lab, and to learn more about how `onEvent` works, in unit 6.",
-    "reference": "/csd/changing-screens/index.html"
+    "reference": "/docs/csd/changing-screens/index.html"
   },
   "published": true,
   "notes": "",

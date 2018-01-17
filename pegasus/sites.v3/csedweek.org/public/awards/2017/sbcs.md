@@ -1,15 +1,31 @@
 ---
 title: South Bend Code School
-nav: educate_nav
+nav: about_nav
 theme: responsive
 ---
 
 <a id="top"></a>
 
-# South Bend Code School
+# South Bend Code School (South Bend, IN)
 
-<br/>
-<br/>
-Through our formal programs, we introduced over 200 students in Indiana and Michigan to coding in two years and exposed 700 students to coding through community outreach. We started a scholarship fund for our students and our classes are 47% female, 56% under-represented, minority, and 50% split in socioeconomic diversity. 	
+### Champion for Computer Science - Broadening Participation Award (Organization Category)
 
-In our first program, 19 students (with 0 prior coding knowledge) coded 23 websites in 5-weeks. Four of their websites were civic applications, promoting non-violence in the city of South Bend. Those students went on to present their applications to the Mayor of South Bend, Pete Buttigieg, in a community-wide presentation. Afterwards, they traveled to Google offices in Chicago to present their applications to Google team members and spend the day learning from industry experts. Thus, South Bend Code School was born and our tradition for introducing youth to the power of coding (youth learning coding through community apps, hosting community presentations, and visiting local tech companies). Two years later, we have had the privilege of coding with over 200 youth in our formal program and 700 through our community outreach efforts. We have worked with students in the Juvenile Justice System or other less than ideal life situations. However, through coding, we have given those students more hope and created coding alumni programs for students to continue learning and offer students opportunities such as job and internship placement, college and scholarship application assistance, and tutoring in core academic areas. In the past year, we have helped 12 students earn internships with local tech companies and 14 students to attend college to pursue undergraduate degrees in both STEM and design. With the help of code.org, we have partnered with local schools to help ensure that students receive computer science as a part of their normal school days. 
+Alexandra Liggins taught herself how to code so she could teach others. Shortly after graduating from the University of Notre Dame, she co-founded South Bend Code School to make coding more accessible to all. In two years’ time, SBCS worked with over 200 students in formal programs as well as over 700 students in greater community outreach.
+
+<figure style="margin:10px">
+  <img src="/images/awards/sbcs_students.jpg" style="display:block;margin:0 auto" width="600" alt="Students at South Bend Code School" />
+  <figcaption style="text-align:center;font-style:italic;font-size:12px">
+    Students at South Bend Code School
+  </figcaption>
+</figure>
+
+In South Bend Code School’s first program, 19 students (with no prior coding knowledge) coded 23 websites in five weeks. Four of their websites were civic applications, promoting non-violence in the city of South Bend. Two years later, over 200 youth were coding in the formal program. Working with students in the Juvenile Justice System, over 700 students have been given hope through coding. South Bend Code School has also created coding alumni programs for students to continue learning, and offer students opportunities such as job and internship placement, college and scholarship application assistance, and tutoring in core academic areas.
+
+By starting a scholarship fund, South Bend Code School works to provide coding for all by maintaining diverse classrooms of 47% female, 56% underrepresented minorities, and 50% split in socioeconomic diversity. They hope to only add to those numbers of diversity.
+
+<figure style="margin:10px">
+  <img src="/images/awards/sbcs_rep_alex_liggins.jpg" style="display:block;margin:0 auto" width=300 alt="Alexandra Liggins" />
+  <figcaption style="text-align:center;font-style:italic;font-size:12px">Alexandra Liggins</figcaption>
+</figure>
+
+Alexandra Liggins accepted the award on behalf of South Bend Code School.

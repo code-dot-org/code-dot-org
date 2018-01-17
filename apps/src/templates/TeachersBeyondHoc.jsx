@@ -1,9 +1,10 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import Responsive from '../responsive';
 import VerticalImageResourceCard from './VerticalImageResourceCard';
 import ResourceCardResponsiveContainer from './studioHomepages/ResourceCardResponsiveContainer';
+import { ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
 
 const styles = {
   heading: {
@@ -21,15 +22,14 @@ const styles = {
   },
 };
 
-export default class TeachersBeyondHoc extends Component {
+class TeachersBeyondHoc extends Component {
   static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired,
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   };
 
   render() {
-    const { isRtl, responsive } = this.props;
-    const desktop = (responsive.isResponsiveCategoryActive('lg') || responsive.isResponsiveCategoryActive('md'));
+    const { responsiveSize } = this.props;
+    const desktop = (responsiveSize === ResponsiveSize.lg) || (responsiveSize === ResponsiveSize.md);
 
     const codeorgTeacherImage = desktop ? "codeorg-teacher" : "course-catalog";
 
@@ -61,7 +61,7 @@ export default class TeachersBeyondHoc extends Component {
         <h1 style={headingStyle}>
           {i18n.congratsTeacherHeading()}
         </h1>
-        <ResourceCardResponsiveContainer responsive={responsive}>
+        <ResourceCardResponsiveContainer>
           {cards.map(
             (card, cardIndex) => (
               <VerticalImageResourceCard
@@ -70,7 +70,6 @@ export default class TeachersBeyondHoc extends Component {
                 description={card.description}
                 buttonText={card.buttonText}
                 link={card.link}
-                isRtl={isRtl}
                 jumbo={desktop}
                 image={card.image}
               />
@@ -85,3 +84,7 @@ export default class TeachersBeyondHoc extends Component {
     );
   }
 }
+
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+}))(TeachersBeyondHoc);

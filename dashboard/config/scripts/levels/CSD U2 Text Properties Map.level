@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "CSS Text Properties",
-    "reference": "/csd/text_properties/index.html",
+    "reference": "/docs/csd/text_properties/index.html",
     "teacher_markdown": "# Differences in Browsers and Operating Systems\r\n\r\nAs mentioned in this map, you may find that different combinations of computers and browsers render fonts differently. While there is a common specification for how HTML and CSS should be read and displayed on the screen, each browser does so in a slightly different way, which can lead to the same page looking different on different computers. If your students encounter this, you can reassure them that it's a common challenge that web developers face.\r\n\r\nIn the case of `font-family: fantasy`, you can actually specify a list of fonts, from most to least specific. That way, if a user's computer has the exact font you specified, that's what they'll see, but if not the browser will try the next font on your list. To try and ensure that users see the font in the example image, you could write the css as `font-family: Papyrus, fantasy`. That way, even if a user's browser has a different default font for \"fantasy\", it will try to load the specific font \"Papyrus\" first."
   },
   "published": true,

@@ -3,7 +3,50 @@ title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Unit 6: Lesson 2 - Create PT Prep - Reviewing the Task
+# Unit 6: Lesson 1 - Create PT Prep - Reviewing the Task
+
+## Overview
+
+This lesson contains a series of activities you can use to help students familiarize themselves with Create Performance Task, how it is scored, and some example tasks provided by the College Board.
+
+## Resources
+
+**College Board Documents**
+
+* [AP CSP Performance Task Directions for Students](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf?course=ap-computer-science-principles) - College Board Student Handout
+* [Create Performance Task - Scoring Guidelines 2018](https://apcentral.collegeboard.org/pdf/2018-create-performance-tasks-sg.pdf)
+
+**College Board Create PT Samples**
+
+* [Create - Video: Sample C](https://apcentral.collegeboard.org/courses/ap-computer-science-principles/exam?course=ap-computer-science-principles)
+* [Create - Written Responses: Sample C](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-c.pdf)
+
+**Annotated Create PT Samples**
+
+* [CB Create PT - Sample C (7/8)](https://docs.google.com/document/d/1uqVKf-lCqptOzBfv1rPT5qR-h0ZMUV4h6nA_5c0uGxk/export?format=pdf) (copy as [MS Word](https://docs.google.com/document/d/1uqVKf-lCqptOzBfv1rPT5qR-h0ZMUV4h6nA_5c0uGxk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1uqVKf-lCqptOzBfv1rPT5qR-h0ZMUV4h6nA_5c0uGxk/copy))
+* [CB Create PT - Sample D (7/8)](https://docs.google.com/document/d/1CwtVZdY1KMAalMeUxuUkZwOc_W1dh4d58BQVb8KXCmk/export?format=pdf) (copy as [MS Word](https://docs.google.com/document/d/1CwtVZdY1KMAalMeUxuUkZwOc_W1dh4d58BQVb8KXCmk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1CwtVZdY1KMAalMeUxuUkZwOc_W1dh4d58BQVb8KXCmk/copy))
+* [CB Create PT - Sample I (2/8)](https://docs.google.com/document/d/1Y0Oh5tW95pSrobPqCFtURV2OtjP2JwSGDAL1YshBhRY/export?format=pdf) (copy as [MS Word](https://docs.google.com/document/d/1Y0Oh5tW95pSrobPqCFtURV2OtjP2JwSGDAL1YshBhRY/export?format=doc), [Google Doc](https://docs.google.com/document/d/1Y0Oh5tW95pSrobPqCFtURV2OtjP2JwSGDAL1YshBhRY/copy))
+* [CB Create PT - Sample J (4/8)](https://docs.google.com/document/d/19j-pQEwgcIwz03JMgWn0OUKDVskqDhX5dQx1gjF8BXs/export?format=pdf) (copy as [MS Word](https://docs.google.com/document/d/19j-pQEwgcIwz03JMgWn0OUKDVskqDhX5dQx1gjF8BXs/export?format=doc), [Google Doc](https://docs.google.com/document/d/19j-pQEwgcIwz03JMgWn0OUKDVskqDhX5dQx1gjF8BXs/copy))
+
+**(optional) Digital Portfolio Setup**
+* [AP Digital Portfolio Student Guide](https://secure-media.collegeboard.org/digitalServices/pdf/ap/computer-science-principles-digital-portfolio-student-guide.pdf) - College Board Handout
+* [AP Digital Portfolio Access](https://digitalportfolio.collegeboard.org/) - College Board Site
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Students can find all the links they need on this page.  (If you are viewing this from within the lesson plan click **Student Overview** to see the student view of the page).
+
+**Warning**: We **have included links** on this student page to the the scoring commentary for the sample tasks. If you you want students to try applying the scoring guidelines to tasks *without knowing ahead of time* you'll have to invoke some kind of honor system or strategy to have them hold off looking.
+
+
+---
+
+**Deprecated - old content from this page**
+
+On Dec. 13, 2017 we updated this page with new resources and links.  If you're looking for the old stuff, it is copied below, but should be considered out of date.
 
 ## Background
 
@@ -22,22 +65,17 @@ Review the Create performance task, scoring guidelines, and sample tasks.
 * [Create Performance Task](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=11) - Task Description
 * [Scoring Guidelines](https://apcentral.collegeboard.org/pdf/2018-create-performance-tasks-sg.pdf) - Create Performance Task
 * **Create PT Samples:**
-	* Sample C ([video](https://youtu.be/uKVGOZv4H1g) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-c.pdf))  
-	* Sample J ([video](https://youtu.be/N_R3T1_deAo) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-j.pdf))
-	* Sample D ([video](https://youtu.be/zT1XNAS4oGE) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-d.pdf))
+    
+* Sample C ([video](https://youtu.be/uKVGOZv4H1g) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-c.pdf))  
+    
+* Sample J ([video](https://youtu.be/N_R3T1_deAo) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-j.pdf))
+    
+* Sample D ([video](https://youtu.be/zT1XNAS4oGE) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-d.pdf))
 * **Scoring Commentary**
-	* For all samples - [Sample Create PTs Scoring Commentary](https://apcentral.collegeboard.org/pdf/ap-csp-create-commentary-sg18.pdf)
+    
+* For all samples - [Sample Create PTs Scoring Commentary](https://apcentral.collegeboard.org/pdf/ap-csp-create-commentary-sg18.pdf)
 
 **Other Resources**
 
 * Create Performance Task - Guidelines Before Starting ([PDF](https://docs.google.com/document/d/1kX-UHBgWxDqMl2LK2u7em3-mw-yZHNyW3gjZyFgUNtU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1kX-UHBgWxDqMl2LK2u7em3-mw-yZHNyW3gjZyFgUNtU/export?format=doc))
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-Students can find all the links they need on this page.  (If you are viewing this from within the lesson plan click **Student Overview** to see the student view of the page).
-
-**Warning**: We **have included links** on this student page to the the scoring commentary for the sample tasks. If you you want students to try applying the scoring guidelines to tasks *without knowing ahead of time* you'll have to invoke some kind of honor system or strategy to have them hold off looking.
-
 MARKDOWN

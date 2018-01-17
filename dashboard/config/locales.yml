@@ -291,6 +291,13 @@
   native: "Malti"
   debug: true
 
+"my": "my-MM"
+"my-MM":
+  english: "Burmese"
+  native: "ဗမာစာ"
+  debug: true
+  webfonts: false
+
 "ne": "ne-NP"
 "ne-NP":
   english: "Nepali"

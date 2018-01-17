@@ -7,13 +7,15 @@ import { connect } from 'react-redux';
 import SummaryTable from './summary_table';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import Spinner from '../components/spinner';
-import { AllPartnersFilter } from './constants';
+import {
+  UnmatchedFilter,
+  RegionalPartnerDropdownOptions as dropdownOptions
+} from './constants';
 import $ from 'jquery';
 
 export class Summary extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string.isRequired,
-    regionalPartners: PropTypes.array,
     isWorkshopAdmin: PropTypes.bool
   }
 
@@ -29,12 +31,24 @@ export class Summary extends React.Component {
   };
 
   componentWillMount() {
+    this.load();
+  }
+
+  load(selected = null) {
+    let url = '/api/v1/pd/applications';
+    if (this.props.isWorkshopAdmin) {
+      const regionalPartnerFilter = selected ? selected.value : null;
+      const regionalPartnerName = selected ? selected.label : this.props.regionalPartnerName;
+      this.setState({ regionalPartnerName, regionalPartnerFilter });
+
+      url += `?regional_partner_filter=${regionalPartnerFilter ? regionalPartnerFilter : UnmatchedFilter}`;
+    }
+
     $.ajax({
       method: 'GET',
-      url: '/api/v1/pd/applications',
+      url,
       dataType: 'json'
-    })
-    .done(data => {
+    }).done((data) => {
       this.setState({
         loading: false,
         applications: data
@@ -43,19 +57,7 @@ export class Summary extends React.Component {
   }
 
   handleRegionalPartnerChange = (selected) => {
-    const regionalPartnerFilter = selected ? selected.value : null;
-    const regionalPartnerName = selected ? selected.label : this.props.regionalPartnerName;
-    this.setState({ regionalPartnerName, regionalPartnerFilter });
-    $.ajax({
-      method: 'GET',
-      url: `/api/v1/pd/applications?regional_partner_filter=${regionalPartnerFilter ? regionalPartnerFilter : AllPartnersFilter}`,
-      dataType: 'json'
-    }).done((data) => {
-      this.setState({
-        loading: false,
-        applications: data
-      });
-    });
+    this.load(selected);
   };
 
   render() {
@@ -68,6 +70,7 @@ export class Summary extends React.Component {
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
             regionalPartnerFilter={this.state.regionalPartnerFilter}
+            additionalOptions={dropdownOptions}
           />
         }
         <h1>{this.state.regionalPartnerName}</h1>
@@ -86,6 +89,16 @@ export class Summary extends React.Component {
             caption="CS Principles Facilitators"
             data={this.state.applications["csp_facilitators"]}
             path="csp_facilitators"
+          />
+          <SummaryTable
+            caption="CS Discoveries Teachers"
+            data={this.state.applications["csd_teachers"]}
+            path="csd_teachers"
+          />
+          <SummaryTable
+            caption="CS Principles Teachers"
+            data={this.state.applications["csp_teachers"]}
+            path="csp_teachers"
           />
         </div>
       </div>

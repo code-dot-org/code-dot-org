@@ -33,8 +33,10 @@ end
 require 'honeybadger'
 
 require src_dir 'database'
+require src_dir 'social_metadata'
 require src_dir 'forms'
 require src_dir 'curriculum_router'
+require src_dir 'homepage'
 
 def http_vary_add_type(vary, type)
   types = vary.to_s.split(',').map(&:strip)
@@ -184,9 +186,9 @@ class Documents < Sinatra::Base
     css
   end
 
-  # rubocop:disable Lint/Eval
+  # rubocop:disable Security/Eval
   Dir.glob(pegasus_dir('routes/*.rb')).sort.each {|path| eval(IO.read(path), nil, path, 1)}
-  # rubocop:enable Lint/Eval
+  # rubocop:enable Security/Eval
 
   # Manipulated images
   get '/images/*' do |path|
@@ -481,6 +483,9 @@ class Documents < Sinatra::Base
           metadata[key] = value
         end
       end
+
+      # A few pages have specific metadata defined here.
+      metadata.merge! get_social_metadata_for_page(request)
 
       if request.site != 'csedweek.org'
         unless metadata['og:image']

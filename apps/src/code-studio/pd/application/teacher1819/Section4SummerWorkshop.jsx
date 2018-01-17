@@ -1,6 +1,6 @@
 import React from 'react';
 import $ from "jquery";
-import ApplicationFormComponent from "../ApplicationFormComponent";
+import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import {FormGroup} from 'react-bootstrap';
 import {styles, PROGRAM_CSD, PROGRAM_CSP} from "./TeacherApplicationConstants";
@@ -11,20 +11,21 @@ const NO_PAY_FEE = "No, my school or I will not be able to pay the summer worksh
 
 const WORKSHOP_FEES_URL = "https://docs.google.com/spreadsheets/d/1YFrTFp-Uz0jWk9-UR9JVuXfoDcCL6J0hxK5CYldv_Eo";
 
-export default class Section4SummerWorkshop extends ApplicationFormComponent {
+export default class Section4SummerWorkshop extends LabeledFormComponent {
   static labels = PageLabels.section4SummerWorkshop;
 
   static associatedFields = [
     ...Object.keys(PageLabels.section4SummerWorkshop),
     "regionalPartnerId",
     "regionalPartnerGroup",
-    "regionalPartnerWorkshopCount"
+    "regionalPartnerWorkshopIds",
+    "teachercon"
   ];
 
   state = {
     loadingPartner: true,
     partner: null,
-    loadingAlternateWorkshops: true,
+    loadingAlternateWorkshops: false,
     alternateWorkshops: null
   };
 
@@ -64,22 +65,24 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
     }).done(data => {
       this.loadPartnerRequest = null;
 
-      // Persist in the form data
       this.handleChange({
         regionalPartnerId: data.id,
         regionalPartnerGroup: data.group,
-        regionalPartnerWorkshopCount: data.workshops ? data.workshops.length : 0
+        regionalPartnerWorkshopIds: (data.workshops || []).map(workshop => workshop.id),
+        teachercon: data.teachercon
       });
 
       // Update state with all the partner workshop data to display
       this.setState({
         loadingPartner: false,
-        partnerWorkshops: data.workshops
+        partnerWorkshops: data.workshops,
+        regionalPartnerName: data.name
       });
     });
   }
 
   loadAlternateWorkshops() {
+    this.setState({loadingAlternateWorkshops: true});
     const url = `/api/v1/pd/regional_partner_workshops?${$.param(this.getWorkshopParams())}`;
     this.loadAlternateWorkshopsRequest = $.ajax({
       method: 'GET',
@@ -87,10 +90,14 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
       dataType: 'json'
     }).done(data => {
       this.loadAlternateWorkshopsRequest = null;
+
       const alternateWorkshops = data.reduce((workshops, partner) => (
-        partner.id !== this.props.data.regionalPartnerId
-          ? workshops.concat(partner.workshops)
-          : workshops
+        partner.id === this.props.data.regionalPartnerId
+          ? workshops
+          : workshops.concat(
+            // Add partner name to each alternate workshop
+            partner.workshops.map(w => ({...w, partnerName: partner.name}))
+          )
       ), []);
 
       this.setState({
@@ -154,17 +161,20 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
     if (!this.props.data.regionalPartnerId) {
       return (
         <div>
-          There currently is no Regional Partner in your area.
-          If a seat opens in the program, we will invite you to a TeacherCon and provide you with more details.
+          <p>
+            <strong>There currently is no Regional Partner in your area. </strong>
+            If a seat opens in the program, we will invite you to a TeacherCon and provide you with more details.
+          </p>
         </div>
       );
-    } else if (this.props.data.regionalPartnerGroup === 3 && this.props.data.regionalPartnerWorkshopCount === 0) {
-      // TODO (Andrew): find TC based on G3 partner match
-      const teacherCon = "TeacherCon Phoenix, July 22-27, 2018";
+    } else if (this.props.data.teachercon) {
+      const teacherconSummary =
+        `TeacherCon ${this.props.data.teachercon.city}, ${this.props.data.teachercon.dates}`;
+
       return (
         <div>
           <h5>
-            You have been assigned to {teacherCon}.
+            You have been assigned to {teacherconSummary}.
             More details will be provided if you are accepted into the program.
           </h5>
 
@@ -179,40 +189,57 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
             More details will be provided if you are accepted into the program.
           </h5>
         );
-      } else if (this.state.partnerWorkshops.length === 1) {
-        return (
-          <div>
-            <h5>
-              Your region’s assigned summer workshop will be
-              {' ' + this.state.partnerWorkshops[0].dates + ' '} in
-              {' ' + this.state.partnerWorkshops[0].location}.
-            </h5>
-
-            {this.renderAbleToAttendSingle()}
-          </div>
-        );
-      } else { // multiple workshops
-        const options = this.state.partnerWorkshops.map(workshop =>
-          `${workshop.dates} in ${workshop.location}`
-        );
-        options.push(NO_EXPLAIN);
-        const textFieldMap = {[NO_EXPLAIN]: 'explain'};
-        return this.dynamicCheckBoxesWithAdditionalTextFieldsFor(
-          "ableToAttendMultiple",
-          options,
-          textFieldMap
-        );
+      } else {
+        return this.renderPartnerWorkshops();
       }
     }
   }
 
+  renderPartnerWorkshops() {
+    let contents;
+    if (this.state.partnerWorkshops.length === 1) {
+      contents = (
+        <div>
+          <h5>
+            Your region’s assigned summer workshop will be
+            {` ${this.state.partnerWorkshops[0].dates} in`}
+            {` ${this.state.partnerWorkshops[0].location} `}
+            hosted by {` ${this.state.regionalPartnerName}.`}
+          </h5>
+
+          {this.renderAbleToAttendSingle()}
+        </div>
+      );
+    } else { // multiple workshops
+      const options = this.state.partnerWorkshops.map(workshop =>
+        `${workshop.dates} in ${workshop.location} hosted by ${this.state.regionalPartnerName}`
+      );
+      options.push(NO_EXPLAIN);
+      const textFieldMap = {[NO_EXPLAIN]: 'explain'};
+      contents = this.dynamicCheckBoxesWithAdditionalTextFieldsFor(
+        "ableToAttendMultiple",
+        options,
+        textFieldMap
+      );
+    }
+
+    return (
+      <div>
+        <h4>
+          Your regional partner is {this.state.regionalPartnerName}
+        </h4>
+        {contents}
+      </div>
+    );
+  }
+
   renderAlternateWorkshopList() {
-    if (this.state.loadingAlternateWorkshops) {
+    if (this.state.loadingAlternateWorkshops || this.state.alternateWorkshops === null) {
       return null;
     }
 
     const options = this.state.alternateWorkshops.map(workshop =>
-      `${workshop.dates} in ${workshop.location}`
+      `${workshop.dates} in ${workshop.location} hosted by ${workshop.partnerName}`
     );
 
     return this.dynamicCheckBoxesFor("alternateWorkshops", options, {required: false});
@@ -235,8 +262,8 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
           {this.renderAssignedWorkshopList()}
         </div>
 
-        {this.isUnableToAttendAssignedWorkshop() && [1,2].includes(this.props.data.regionalPartnerGroup) &&
-          <div style={styles.indented} id="alternateWorkshops">
+        {this.isUnableToAttendAssignedWorkshop() && !this.props.data.teachercon &&
+          <div style={styles.indented}>
             <p style={styles.formText}>
               <strong>
                 We strongly encourage participants to attend their assigned summer workshop (based on the region
@@ -279,7 +306,7 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
                 One five-day, in-person summer workshop in 2018
               </li>
               <li>
-                Four one-day, in-person local workshops during the 2018 - 19 school year (typically held on Saturdays)
+                Up to four one-day, in-person local workshops during the 2018 - 19 school year (typically held on Saturdays)
               </li>
             </ul>
           </strong>
@@ -301,12 +328,11 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
   static getDynamicallyRequiredFields(data) {
     const requiredFields = [];
 
-    if (data.regionalPartnerGroup === 3 && data.regionalPartnerWorkshopCount === 0) {
-      // Teachercon
+    if (data.teachercon) {
       requiredFields.push("ableToAttendSingle");
-    } else if (data.regionalPartnerWorkshopCount === 1) {
+    } else if (data.regionalPartnerWorkshopIds && data.regionalPartnerWorkshopIds.length === 1) {
       requiredFields.push("ableToAttendSingle");
-    } else if (data.regionalPartnerWorkshopCount > 1) {
+    } else if (data.regionalPartnerWorkshopIds && data.regionalPartnerWorkshopIds.length > 1) {
       requiredFields.push("ableToAttendMultiple");
     }
 
@@ -329,10 +355,9 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
     if (!data.regionalPartnerId) {
       changes.ableToAttendSingle = undefined;
       changes.ableToAttendMultiple = undefined;
-    } else if (data.regionalPartnerGroup === 3 && data.regionalPartnerWorkshopCount === 0) {
-      // Teachercon
+    } else if (data.teachercon) {
       changes.ableToAttendMultiple = undefined;
-    } else if (data.regionalPartnerWorkshopCount === 1) {
+    } else if (data.regionalPartnerWorkshopIds.length === 1) {
       changes.ableToAttendMultiple = undefined;
     } else {
       changes.ableToAttendSingle = undefined;

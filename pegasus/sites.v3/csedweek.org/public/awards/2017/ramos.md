@@ -1,6 +1,6 @@
 ---
 title: Lawrence Ramos
-nav: educate_nav
+nav: about_nav
 theme: responsive
 ---
 
@@ -8,8 +8,24 @@ theme: responsive
 
 # Lawrence Ramos
 
-<br/>
-<br/>
-Lawrence Ramos started a coding class at Emerson as a teacher initiative, that is very much part of their affiliated charter status. When he started in 2015, he had a very limited knowledge of coding, with his experience limited to what he saw his elementary students doing. He immediately went to get training for Code.org and implemented the Accelerated course. In his second year, he expanded to Scratch and acquired Arduino kits through DonorsChoose. This year, even without the formal training, he implemented the CS Discoveries and so far is doing well in as far as implementation is concerned.
+### Champion for Computer Science - Innovation Award (Teacher Category)
 
-He was reluctant at first when he got an offer to teach at a middle school. He is a special education teacher and all he knew was his purpose is to give as many opportunities for students of all demographics and abilities. When he found out about the Homeroom program where he can teach something that interests him and the similar idea with students picking a Homeroom course of their liking, he thought technology would be the best way to reach many students and make it a great investment and use of their time. He made an effort to study and do his own research on teaching coding, even without formal training and education. He was able to get training through DonorsChoose on two PDs on Bootstrap and the Beauty and Joy of Computing, aside from the 2-day basic Code.org training. He used DonorsChoose to acquire Arduino kits so students can apply their coding skills and make it come to life. When he started, he only had a little over 10 students, and mostly boys. It grew to almost 35 this year, with mostly all demographics represented,e.g., Hispanic, African-American, Asian, boys, and girls. Their coding class is one of the most sought-after Homeroom course at Emerson and prides itself with students that have gone beyond the courses they learn by enrolling in after-school and summer coding courses. We have a great group of students that take this course very seriously and sparked an interest in pursuing coding further when they grow up. I realized how taking the risk of venturing into the unknown, as long as you have a clear purpose in mind could allow you to accomplish a goal that students benefit a lot from and makes a huge difference in them. They do not only get interested in coding, but they come to school with a lot of excitement, having identified a purpose and a goal that could give them a lifetime of benefits.
+## Emerson Community Charter Middle School (Los Angeles, CA)
+
+When Lawrence started a coding class at Emerson, he only had a little over ten students, and they were mostly boys. It grew to 35 this year and includes both male and female students, as well as students from most demographics represented including Black, Latinx, and Asian students. The coding class is one of the most sought-after Homeroom courses at Emerson and prides itself on students that have gone beyond the courses they learn and frequently enroll in afterschool and summer coding courses. They do not only get interested in coding, but they come to school with a lot of excitement, having identified a purpose and a goal that could give them a lifetime of benefits.
+
+<figure style="margin:10px">
+  <img src="/images/awards/lawrence_ramos_students.jpg" style="display:block;margin:0 auto" width=300 alt="Students at Emerson Community Charter Middle School" />
+  <figcaption style="text-align:center;font-style:italic;font-size:12px">
+    Students at Emerson Community Charter Middle School
+  </figcaption>
+</figure>
+
+This year, all his class coding projects will focus on creating awareness of environmental issues and in challenging his students to propose solutions through websites, games, and apps. As a special education teacher, he aims to create opportunities for students with special needs and give them access to all curricular requirements by developing their self-advocacy, socio-emotional, and executive functioning skills.
+
+<figure style="margin:10px">
+  <img src="/images/awards/lawrence_ramos.jpg" style="display:block;margin:0 auto" width=250 alt="Lawrence Ramos" />
+  <figcaption style="text-align:center;font-style:italic;font-size:12px">Lawrence Ramos</figcaption>
+</figure>
+
+Lawrence is a special education teacher and he started as an exchange teacher from the Philippines. He has taught in elementary special education programs for students with autism and other learning disabilities, teaching in both LA’s inner city and beach city schools. He continues to teach STEM as a coding teacher at Emerson and tries to bring coding to all demographics to make coders out of students of all abilities, instilling in them the knowledge and the consequent passion.

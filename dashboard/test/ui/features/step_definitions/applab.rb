@@ -1,3 +1,7 @@
+# Which stage of allthethings.script contains the App Lab levels; this way we
+# only have to update in one place if this changes.
+APPLAB_ALLTHETHINGS_STAGE = 18
+
 When /^I add code for a canvas and a button$/ do
   code =
     "createCanvas('my_canvas', 320, 480);\\n" \
@@ -33,6 +37,14 @@ Given /^I start a new Applab project/ do
     And element "#codeModeButton" is visible
     And element "#designModeButton" is visible
     And element "#dataModeButton" is visible
+  STEPS
+end
+
+Given /^I am on the (\d+)(?:st|nd|rd|th)? App ?Lab test level$/ do |level_index|
+  steps <<-STEPS
+    And I am on "http://studio.code.org/s/allthethings/stage/#{APPLAB_ALLTHETHINGS_STAGE}/puzzle/#{level_index}"
+    And I rotate to landscape
+    And I wait for the page to fully load
   STEPS
 end
 
@@ -353,4 +365,12 @@ end
 
 And /^I open the debug console$/ do
   steps 'And I click selector "#debug-area-header .fa-chevron-circle-up" if it exists'
+end
+
+Then(/^the share link includes "([^"]*)"$/) do |expected_text|
+  share_link_input = nil
+  wait_short_until do
+    share_link_input = @browser.find_element(:css, '#sharing-input')
+  end
+  expect(share_link_input.attribute('value')).to include(expected_text)
 end

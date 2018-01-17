@@ -1,8 +1,5 @@
 import React from 'react';
 import CourseBlocksTools from './CourseBlocksTools';
-import Responsive from '../../responsive';
-
-const responsive = new Responsive();
 
 export default storybook => {
   return storybook
@@ -15,8 +12,6 @@ export default storybook => {
         story: () => (
             <CourseBlocksTools
               isEnglish={true}
-              isRtl={false}
-              responsive={responsive}
             />
         )
       },

@@ -23,7 +23,7 @@ describe("Summary", () => {
     expect(summary.find('Spinner')).to.have.length(1);
   });
 
-  it("Generates 3 tables after hearing from server", () => {
+  it("Generates 5 tables after hearing from server", () => {
     let server = sinon.fakeServer.create();
 
     server.respondWith("GET", '/api/v1/pd/applications',
@@ -73,7 +73,7 @@ describe("Summary", () => {
     let summary = createSummary();
 
     server.respond();
-    expect(summary.find('.row').children()).to.have.length(3);
+    expect(summary.find('.row').children()).to.have.length(5);
     expect(summary.find('Spinner')).to.have.length(0);
   });
 });

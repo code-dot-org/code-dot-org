@@ -199,7 +199,7 @@ module RakeUtils
   end
 
   def self.git_updates_available?
-    `git remote show origin 2>&1 | grep \"local out of date\" | grep \"#{git_branch}\" | wc -l`.strip.to_i > 0
+    `git remote show origin 2>&1 | grep \"local out of date\" | grep --extended-regexp \"#{git_branch} +pushes to #{git_branch}\" | wc -l`.strip.to_i > 0
   end
 
   def self.git_staged_changes?(path="")

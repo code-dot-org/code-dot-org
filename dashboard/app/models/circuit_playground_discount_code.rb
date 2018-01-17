@@ -13,6 +13,10 @@
 #
 
 class CircuitPlaygroundDiscountCode < ApplicationRecord
+  # We'll notify honeybadger when we request a full/partial discount and there
+  # are fewer than this many available (so that we can add more).
+  WARN_COUNT = 50
+
   # Claims the next available code of the given discount amount (full/partial)
   # and returns the code.
   def self.claim(full_discount)
@@ -24,11 +28,11 @@ class CircuitPlaygroundDiscountCode < ApplicationRecord
         where(claimed_at: nil).
         where(voided_at: nil).
         where(expiration_field.gt(Time.now)).
-        limit(20)
+        limit(WARN_COUNT)
 
-      if codes.count < 20
+      if codes.count < WARN_COUNT
         Honeybadger.notify(
-          error_message: "Fewer than 20 remaining circuit playground discount codes",
+          error_message: "Fewer than #{WARN_COUNT} remaining circuit playground discount codes",
           error_class: "CircuitPlaygroundDiscountCode.limited_codes_left",
           context: {
             full_discount: full_discount,

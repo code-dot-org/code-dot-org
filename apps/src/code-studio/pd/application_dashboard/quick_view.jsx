@@ -15,7 +15,10 @@ import RegionalPartnerDropdown from './regional_partner_dropdown';
 import QuickViewTable from './quick_view_table';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
-import { ApplicationStatuses } from './constants';
+import {
+  ApplicationStatuses,
+  RegionalPartnerDropdownOptions as dropdownOptions
+} from './constants';
 import {
   Button,
   FormGroup,
@@ -103,6 +106,7 @@ export class QuickView extends React.Component {
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
             regionalPartnerFilter={this.state.regionalPartnerFilter}
+            additionalOptions={dropdownOptions}
           />
         }
         <Row>
@@ -135,6 +139,8 @@ export class QuickView extends React.Component {
           data={this.state.applications}
           statusFilter={this.state.filter}
           regionalPartnerFilter={this.state.regionalPartnerFilter}
+          regionalPartnerName={this.props.regionalPartnerName}
+          viewType={this.props.route.viewType}
         />
       </div>
     );

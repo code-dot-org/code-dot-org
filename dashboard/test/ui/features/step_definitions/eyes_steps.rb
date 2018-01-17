@@ -3,6 +3,8 @@ require 'eyes_selenium'
 require 'cdo/git_utils'
 require 'open-uri'
 require 'json'
+require 'rinku'
+require_relative '../../utils/selenium_constants'
 
 # Override default match timeout (2 seconds) to help prevent laggy UI from breaking eyes tests.
 # See http://support.applitools.com/customer/en/portal/articles/2099488-match-timeout
@@ -44,7 +46,11 @@ And(/^I close my eyes$/) do
 
   @browser = @original_browser
   fail_on_mismatch = !CDO.ignore_eyes_mismatches
-  @eyes.close(fail_on_mismatch)
+  begin
+    @eyes.close(fail_on_mismatch)
+  rescue Applitools::TestFailedError => e
+    puts "<span style=\"color: red;\">#{EYES_ERROR_PREFIX} #{Rinku.auto_link(e.to_s)}</span>"
+  end
 end
 
 And(/^I see no difference for "([^"]*)"$/) do |identifier|

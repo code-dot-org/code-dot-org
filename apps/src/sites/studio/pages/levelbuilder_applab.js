@@ -12,6 +12,7 @@ $(document).ready(function () {
     "off": null,
     "toggle": null,
     "blink": null,
+    "pulse": null,
     "stop": null,
     "color": null,
     "intensity": null,
@@ -24,20 +25,20 @@ $(document).ready(function () {
     "buzzer.note": null,
     "buzzer.off": null,
     "buzzer.stop": null,
-    "buzzer.play": null,
+    "buzzer.playNotes": null,
+    "buzzer.playSong": null,
     "accelerometer.getOrientation": null,
-    "accelerometer.start": null,
     "accelerometer.getAcceleration": null,
     "isPressed": null,
     "holdtime": null,
-    "soundSensor.start": null,
     "soundSensor.value": null,
     "soundSensor.getAveragedValue": null,
     "soundSensor.setScale": null,
-    "lightSensor.start": null,
+    "soundSensor.threshold": null,
     "lightSensor.value": null,
     "lightSensor.getAveragedValue": null,
     "lightSensor.setScale": null,
+    "lightSensor.threshold": null,
     "tempSensor.F": null,
     "tempSensor.C": null,
     "toggleSwitch.isOpen": null,
@@ -52,4 +53,3 @@ $(document).ready(function () {
     }
   });
 });
-

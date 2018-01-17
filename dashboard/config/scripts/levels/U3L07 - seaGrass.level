@@ -9,7 +9,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Add a parameter to drawSeagrass that controls the number of waves in the grass. (Click to see full instructions)",
-    "markdown_instructions": "# Controlling Loops with Parameters\r\n<img src=\"https://images.code.org/37d6dbcab707f67485ab3b0cc2a1cae9-image-1443114033511.png\" style=\"width: 200px; float: right\">\r\nThis time you will modify one of the lower-level functions - `drawSeagrass`. Notice that the current version of `drawSeagrass` actually uses a loop. We want to modify this function so that we control the number of times it loops with **a parameter**.\r\n\r\n# Do This:\r\n\r\n* **Look at** the `drawSeagrass` function to see how it currently works.\r\n\r\n* **Add a parameter ** that will be used to indicate how many waves the seagrass makes.\r\n\r\n<img src=\"https://images.code.org/1f2f0c5e1fc17e541760c4f0fd24b13b-image-1447887194713.7.10 drawSeagrass add param.gif\" style=\"width:350px;padding-left:22px;\">\r\n\r\n* **Modify the `'for` loop** so that it uses that **parameter** as the number of times to repeat.\r\n\r\n ![](https://images.code.org/23e8e43ec4853c0bdbbbd50b9651300a-image-1443113032135.gif)\r\n \r\n* Finally, **modify `drawAllSeagrass`** to call this new two-param version of `drawSeagrass` supplying a reasonable random value for the second parameter as well.\r\n\r\n<img src=\"https://images.code.org/4f15021cd9cebb62562665d3ddc82c51-image-1447885963677.PNG\" style=\"width:400px;padding-left:22px;\">\r\n",
+    "markdown_instructions": "# Controlling Loops with Parameters\r\n<img src=\"https://images.code.org/37d6dbcab707f67485ab3b0cc2a1cae9-image-1443114033511.png\" style=\"width: 200px; float: right\">\r\nThis time you will modify one of the lower-level functions - `drawSeagrass`. Notice that the current version of `drawSeagrass` actually uses a loop. We want to modify this function so that we control the number of times it loops with **a parameter**.\r\n\r\n# Do This:\r\n\r\n* **Look at** the `drawSeagrass` function to see how it currently works.\r\n\r\n* **Add a parameter ** that will be used to indicate how many waves the seagrass makes.\r\n\r\n<img src=\"https://images.code.org/1f2f0c5e1fc17e541760c4f0fd24b13b-image-1447887194713.7.10 drawSeagrass add param.gif\" style=\"width:350px;padding-left:22px;\">\r\n\r\n* **Modify the `'for` loop** so that it uses that **parameter** as the number of times to repeat.\r\n\r\n ![](https://images.code.org/23e8e43ec4853c0bdbbbd50b9651300a-image-1443113032135.gif)\r\n \r\n* Finally, **modify `drawAllSeagrass`** to call this new two-param version of `drawSeagrass` supplying a reasonable random value for the second parameter as well.\r\n\r\n<img src=\"https://images.code.org/4f15021cd9cebb62562665d3ddc82c51-image-1447885963677.PNG\" style=\"width:400px;padding-left:22px;\">",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -128,10 +128,16 @@
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
     "teacher_markdown": "Validation note -- We check to verify that the student:\r\n\r\n* made a call to a 2-param version of `drawSeagrass(radius, numWaves)`.  The order of the parameters does not matter for our check - only that a 2-param version was *called*.\r\n* That none of conditions from previous levels have been violated (number of bubbles, etc.).",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "This level should be replaced to demonstrate adding params with function param expando - which didn't exist when this level was written.",
+  "audit_log": "[{\"changed_at\":\"2017-11-29 22:48:16 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-11-29 22:48:41 +0000\",\"changed\":[\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

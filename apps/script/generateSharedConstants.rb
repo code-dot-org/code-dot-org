@@ -12,6 +12,7 @@ require_relative '../../lib/cdo/shared_constants'
 require_relative '../../lib/cdo/shared_constants/pd/facilitator1819_application_constants'
 require_relative '../../lib/cdo/shared_constants/pd/teacher1819_application_constants'
 require_relative '../../lib/cdo/shared_constants/pd/principal_approval1819_application_constants'
+require_relative '../../lib/cdo/shared_constants/pd/teachercon1819_registration_constants'
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
 
@@ -104,6 +105,14 @@ def main
       transform_keys: true
     ),
     "#{REPO_DIR}/apps/src/generated/pd/principalApproval1819ApplicationConstants.js"
+  )
+  generate_shared_js_file(
+    generate_multiple_constants(
+      %w(TEACHER_SEAT_ACCEPTANCE_OPTIONS),
+      source_module: Teachercon1819RegistrationConstants,
+      transform_keys: true
+    ),
+    "#{REPO_DIR}/apps/src/generated/pd/teachercon1819RegistrationConstants.js"
   )
 end
 

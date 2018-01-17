@@ -9,7 +9,6 @@ import OwnedSections from "@cdo/apps/templates/teacherDashboard/OwnedSections";
 
 describe('TeacherSections', () => {
   const defaultProps = {
-    isRtl: false,
     asyncLoadSectionData: () => {},
   };
 
@@ -18,7 +17,6 @@ describe('TeacherSections', () => {
     expect(wrapper).to.containMatchingElement(
       <ContentContainer
         heading="Classroom Sections"
-        isRtl={defaultProps.isRtl}
       >
         <OwnedSections/>
       </ContentContainer>

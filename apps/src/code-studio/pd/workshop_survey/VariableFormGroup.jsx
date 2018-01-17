@@ -33,16 +33,16 @@ const styles = {
   },
 };
 
-const ColumnVariableQuestion = React.createClass({
-  propTypes: {
+class ColumnVariableQuestion extends React.Component {
+  static propTypes = {
     selectedValues: PropTypes.arrayOf(PropTypes.string).isRequired,
     question: questionPropType,
     onChange: PropTypes.func,
     data: PropTypes.object,
     errors: PropTypes.arrayOf(PropTypes.string),
-  },
+  };
 
-  buildColumn(selectedValue) {
+  buildColumn = (selectedValue) => {
     const key = `${this.props.question.name}[${selectedValue}]`;
 
     // Support referring to checkboxes as either "single_select" or "check", and
@@ -83,7 +83,7 @@ const ColumnVariableQuestion = React.createClass({
         </FormGroup>
       </td>
     );
-  },
+  }
 
   render() {
     return (
@@ -98,18 +98,18 @@ const ColumnVariableQuestion = React.createClass({
       </tr>
     );
   }
-});
+}
 
-const RowVariableQuestion = React.createClass({
-  propTypes: {
+class RowVariableQuestion extends React.Component {
+  static propTypes = {
     selectedValues: PropTypes.arrayOf(PropTypes.string).isRequired,
     question: questionPropType,
     onChange: PropTypes.func,
     data: PropTypes.object,
     errors: PropTypes.arrayOf(PropTypes.string),
-  },
+  };
 
-  buildRow(selectedValue) {
+  buildRow = (selectedValue) => {
     const label = this.props.question.label.replace("{value}", selectedValue);
     const key = `${this.props.question.name}[${selectedValue}]`;
 
@@ -132,7 +132,7 @@ const RowVariableQuestion = React.createClass({
         onChange={this.props.onChange}
       />
     );
-  },
+  };
 
   render() {
     return (
@@ -141,10 +141,10 @@ const RowVariableQuestion = React.createClass({
       </div>
     );
   }
-});
+}
 
-const VariableFormGroup = React.createClass({
-  propTypes: {
+export default class VariableFormGroup extends React.Component {
+  static propTypes = {
     sourceLabel: PropTypes.string.isRequired,
     sourceName: PropTypes.string.isRequired,
     sourceValues: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -153,29 +153,29 @@ const VariableFormGroup = React.createClass({
     onChange: PropTypes.func,
     data: PropTypes.object,
     errors: PropTypes.arrayOf(PropTypes.string),
-  },
+  };
 
-  getDefaultProps() {
-    return {
-      columnVariableQuestions: [],
-      rowVariableQuestions: []
-    };
-  },
+  static defaultProps = {
+    columnVariableQuestions: [],
+    rowVariableQuestions: []
+  };
 
-  getInitialState() {
+  constructor(props) {
+    super(props);
+
     let selected = [];
 
     if (this.hasSingleSourceValue()) {
       // If we have only a single sourceValue, select it by default
-      selected = [this.props.sourceValues[0]];
-    } else if (this.props.data && this.props.data[this.props.sourceName]) {
+      selected = [props.sourceValues[0]];
+    } else if (props.data && props.data[props.sourceName]) {
       // otherwise, if we're a controlled component, set our initial state from
       // the data
-      selected = this.props.data[this.props.sourceName];
+      selected = props.data[props.sourceName];
     }
 
-    return {selected};
-  },
+    this.state = { selected };
+  }
 
   componentWillMount() {
     if (this.hasSingleSourceValue() && this.props.onChange) {
@@ -186,17 +186,17 @@ const VariableFormGroup = React.createClass({
         [this.props.sourceName]: this.state.selected
       });
     }
-  },
+  }
 
   hasNoSourceValues() {
     return this.props.sourceValues.length === 0;
-  },
+  }
 
   hasSingleSourceValue() {
     return this.props.sourceValues.length === 1;
-  },
+  }
 
-  setSelected(values) {
+  setSelected = (values) => {
     if (this.props.onChange) {
       this.props.onChange(values);
     }
@@ -204,7 +204,7 @@ const VariableFormGroup = React.createClass({
     this.setState({
       selected: values[this.props.sourceName]
     });
-  },
+  }
 
   render() {
     if (this.hasNoSourceValues()) {
@@ -294,6 +294,4 @@ const VariableFormGroup = React.createClass({
       </FormGroup>
     );
   }
-});
-
-export default VariableFormGroup;
+}

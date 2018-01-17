@@ -16,7 +16,10 @@ const styles = {
     width: '33.3%',
     paddingBottom: '30px'
   },
-  statusCell: StatusColors
+  statusCell: StatusColors,
+  viewApplicationsButton: {
+    marginRight: '10px'
+  }
 };
 
 const ApplicationDataPropType = PropTypes.shape({
@@ -67,6 +70,11 @@ export class SummaryTable extends React.Component {
     this.context.router.push(`/${this.props.path}`);
   };
 
+  handleViewCohortClick = (event) => {
+    event.preventDefault();
+    this.context.router.push(`/${this.props.path}_cohort`);
+  };
+
   render() {
     return (
       <div className="col-xs-4" style={styles.tableWrapper}>
@@ -87,9 +95,20 @@ export class SummaryTable extends React.Component {
         <Button
           href={this.context.router.createHref(`/${this.props.path}`)}
           onClick={this.handleViewClick}
+          style={styles.viewApplicationsButton}
         >
           View all applications
         </Button>
+        {
+          this.props.data.accepted.locked + this.props.data.accepted.unlocked > 0 && (
+            <Button
+              href={this.context.router.createHref(`/${this.props.path}_cohort`)}
+              onClick={this.handleViewCohortClick}
+            >
+              View accepted cohort
+            </Button>
+          )
+        }
       </div>
     );
   }

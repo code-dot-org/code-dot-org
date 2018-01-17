@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '~> 2.2'
 
 # Force HTTPS for github-source gems.
 # This is a temporary workaround - remove when bundler version is >=2.0
@@ -90,6 +91,7 @@ group :development, :test do
   gem 'minitest-around'
   gem 'minitest-reporters'
   gem 'net-http-persistent'
+  gem 'rinku'
   gem 'rspec'
   gem 'selenium-webdriver', '~> 3.0.3'
   gem 'spring'
@@ -205,7 +207,7 @@ gem 'aws-sdk', '~> 2'
 # Lint tools
 group :development, :staging do
   gem 'haml_lint', require: false
-  gem 'rubocop', '0.46.0', require: false
+  gem 'rubocop', '~> 0.52', require: false
   gem 'scss_lint', require: false
 end
 

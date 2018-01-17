@@ -28,6 +28,7 @@ import DialogButtons from './templates/DialogButtons';
 import DialogInstructions from './templates/instructions/DialogInstructions';
 import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
 import FeedbackUtils from './feedback';
+import FinishDialog from './templates/FinishDialog';
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
 import SmallFooter from './code-studio/components/SmallFooter';
 import Sounds from './Sounds';
@@ -53,6 +54,11 @@ import {resetAniGif} from '@cdo/apps/utils';
 import {setIsRunning} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
+import {
+  setBlockLimit,
+  setFeedbackData,
+  showFeedback,
+} from './redux/feedback';
 import experiments from '@cdo/apps/util/experiments';
 import {
   determineInstructionsConstants,
@@ -61,6 +67,7 @@ import {
 } from './redux/instructions';
 import { addCallouts } from '@cdo/apps/code-studio/callouts';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 var copyrightStrings;
 
@@ -262,13 +269,47 @@ StudioApp.prototype.init = function (config) {
 
   this.configureDom(config);
 
+  //Only log a page load when there are videos present
+  if (config.level.levelVideos && config.level.levelVideos.length > 0 && (config.app === 'applab' || config.app === 'gamelab')){
+    if (experiments.isEnabled('resourcesTab')){
+      firehoseClient.putRecord(
+        'analysis-events',
+        {
+          study: 'instructions-resources-tab-wip-v2',
+          study_group: 'resources-tab',
+          event: 'resources-tab-load',
+          script_id: config.scriptId,
+          level_id: config.serverLevelId,
+          data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
+        }
+      );
+    } else {
+      firehoseClient.putRecord(
+        'analysis-events',
+        {
+          study: 'instructions-resources-tab-wip-v2',
+          study_group: 'under-app',
+          event: 'under-app-load',
+          script_id: config.scriptId,
+          level_id: config.serverLevelId,
+          data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
+        }
+      );
+    }
+  }
+
   ReactDOM.render(
     <Provider store={getStore()}>
-      <InstructionsDialogWrapper
-        showInstructionsDialog={(autoClose) => {
-            this.showInstructionsDialog_(config.level, autoClose);
-          }}
-      />
+      <div>
+        <InstructionsDialogWrapper
+          showInstructionsDialog={(autoClose) => {
+              this.showInstructionsDialog_(config.level, autoClose);
+            }}
+        />
+        <FinishDialog
+          handleClose={() => this.onContinue()}
+        />
+      </div>
     </Provider>,
     document.body.appendChild(document.createElement('div'))
   );
@@ -1397,6 +1438,40 @@ StudioApp.prototype.clearHighlighting = function () {
 * @param {FeedbackOptions} options
 */
 StudioApp.prototype.displayFeedback = function (options) {
+  if (experiments.isEnabled('bubbleDialog')) {
+    // eslint-disable-next-line no-unused-vars
+    const { level, response, preventDialog, feedbackType, ...otherOptions } = options;
+    if (Object.keys(otherOptions).length === 0) {
+      const store = getStore();
+      store.dispatch(setFeedbackData({
+        isPerfect: feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT,
+        blocksUsed: this.feedback_.getNumBlocksUsed(),
+        achievements: [
+          {
+            isAchieved: true,
+            message: 'Placeholder achievement!',
+          },
+          {
+            isAchieved: true,
+            message: 'Another achievement!',
+          },
+          {
+            isAchieved: false,
+            message: 'Some lame achievement :(',
+          },
+        ],
+        displayFunometer: response && response.puzzle_ratings_enabled,
+        studentCode: this.feedback_.getGeneratedCodeProperties(this.config.appStrings),
+        canShare: !this.disableSocialShare && !options.disableSocialShare,
+      }));
+      if (!preventDialog) {
+        store.dispatch(showFeedback());
+      }
+
+      this.onFeedback(options);
+      return;
+    }
+  }
   options.onContinue = this.onContinue;
   options.backToPreviousLevel = this.backToPreviousLevel;
   options.sendToPhone = this.sendToPhone;
@@ -1516,12 +1591,14 @@ StudioApp.prototype.report = function (options) {
 
   this.lastTestResult = options.testResult;
 
+  const readOnly = getStore().getState().pageConstants.isReadOnlyWorkspace;
+
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
   // or call the onComplete() callback expected. The app will just sit
   // there with the Reset button as the only option.
   var self = this;
-  if (!(this.hideSource && this.share)) {
+  if (!(this.hideSource && this.share) && !readOnly) {
     var onAttemptCallback = (function () {
       return function (builderDetails) {
         for (var option in builderDetails) {
@@ -1672,11 +1749,15 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
   this.appMsg = config.appMsg;
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
+  getStore().dispatch(setBlockLimit(this.IDEAL_BLOCK_NUM));
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];
 
-  if (config.ignoreLastAttempt) {
+  // Always use the source code from the level definition for contained levels,
+  // so that changes made in levelbuilder will show up for users who have
+  // already run the level.
+  if (config.ignoreLastAttempt || config.hasContainedLevels) {
     config.level.lastAttempt = '';
   }
 
@@ -1778,6 +1859,25 @@ StudioApp.prototype.configureDom = function (config) {
   const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && experiments.isEnabled('resourcesTab');
   if (!referenceAreaInTopInstructions && referenceArea) {
     belowViz.appendChild(referenceArea);
+    // TODO (epeach) - remove after resources tab A/B testing
+    // Temporarily attach an event listener to log clicks
+    // Logs the type of app and the ids of the puzzle
+    var videoThumbnail = document.getElementsByClassName('video_thumbnail');
+    if (videoThumbnail[0]){
+      videoThumbnail[0].addEventListener('click', () => {
+        firehoseClient.putRecord(
+          'analysis-events',
+          {
+            study: 'instructions-resources-tab-wip-v2',
+            study_group: 'under-app',
+            event: 'under-app-video-click',
+            script_id: config.scriptId,
+            level_id: config.serverLevelId,
+            data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
+          }
+        );
+      });
+    }
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
@@ -2830,6 +2930,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
+    userId: config.userId,
     textToSpeechEnabled: config.textToSpeechEnabled,
     isK1: config.level.isK1,
     appType: config.app,

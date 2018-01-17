@@ -39,18 +39,20 @@ class ChatClient
     )
   end
 
-  def self.wrap(name)
+  def self.snippet(message)
+    Slack.snippet(CDO.slack_log_room, message)
+  end
+
+  def self.wrap(name, backtrace: false)
     start_time = Time.now
     ChatClient.log "Running #{name}..."
     yield if block_given?
     ChatClient.log "#{name} succeeded in #{RakeUtils.format_duration(Time.now - start_time)}"
-  rescue => e
+  rescue
     message = "<b>#{name}</b> failed in "\
       "#{RakeUtils.format_duration(Time.now - start_time)}"
     ChatClient.log message, color: 'red', notify: 1
     ChatClient.message 'server operations', message, color: 'red', notify: 1
-
-    ChatClient.log "/quote #{e}\n#{CDO.backtrace e}", message_format: 'text'
     raise
   end
 end

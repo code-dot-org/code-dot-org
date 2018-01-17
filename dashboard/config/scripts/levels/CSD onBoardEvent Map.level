@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Responding to Board Events",
-    "reference": "/csd/maker_event/index.html"
+    "reference": "/docs/csd/maker_event/index.html"
   },
   "published": true,
   "notes": ""

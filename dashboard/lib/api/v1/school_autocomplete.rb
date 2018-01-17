@@ -34,7 +34,7 @@ class Api::V1::SchoolAutocomplete < AutocompleteHelper
 
   # JSON serializer used by get_matches.
   class Serializer < ActiveModel::Serializer
-    attributes :nces_id, :name, :city, :state, :zip
+    attributes :nces_id, :name, :city, :state, :zip, :school_type
 
     def nces_id
       object.id.to_s

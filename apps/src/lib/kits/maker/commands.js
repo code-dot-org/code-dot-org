@@ -106,3 +106,13 @@ export function createLed(opts) {
   apiValidateType(opts, 'createLed', 'pin', opts.pin, 'pinid');
   return board.createLed(opts.pin);
 }
+
+/**
+ * Create a Button component on the current maker board attached to the
+ * specified pin.
+ * @param {number} opts.pin
+ */
+export function createButton(opts) {
+  apiValidateType(opts, 'createButton', 'pin', opts.pin, 'pinid');
+  return board.createButton(opts.pin);
+}

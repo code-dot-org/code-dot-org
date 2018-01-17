@@ -18,7 +18,7 @@ style_min: true
 
 # School District Partners
 
-Code.org has over 100 partnerships with school districts around the USA. [See the full list here](/educate/partner-districts).
+Code.org has over 100 historical partnerships with school districts around the USA. [See the full list here](/educate/partner-districts).
 
 <HR>
 

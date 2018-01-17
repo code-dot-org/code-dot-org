@@ -83,7 +83,8 @@
       "comment_GameLab": null,
       "comment_Math": null,
       "comment_Sprites": null,
-      "console.log": null
+      "console.log": null,
+      "ifBlock": null
     },
     "show_debug_watch": "true",
     "hide_share_and_remix": "false",
@@ -92,11 +93,12 @@
     "watchers_prepopulated": "[\"apple.scale\"]",
     "encrypted_examples": "RbHUch7BxbgkpSrOJH5P3HUPGx5t/YPfRzfVUJlbcCKeJzXs2VoXx+bWYsZu\ncnZLm5YlNHzhukTsXsV+rTKOBA==\n",
     "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-26 16:45:41 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-31 21:56:59 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-26 16:45:41 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-31 21:56:59 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-30 22:02:53 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

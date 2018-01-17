@@ -56,6 +56,18 @@ module GitHub
     response['number']
   end
 
+  # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Issues.html#update_issue-instance_method
+  # @param base [String | Integer] the numeric id of the PR to be updated
+  # @param lables [Array[String]] array of strings to be set as new labels for the PR
+  # @raise [Exception] From calling Octokit.create_pull_request.
+  # @return [Array[String]] the resulting labels for the PR
+  def self.label_pull_request(id, labels)
+    configure_octokit
+    response = Octokit.update_issue(REPO, id, labels)
+
+    response['labels'].pluck(:name)
+  end
+
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#merge_pull_request-instance_method
   # @param pr_number [Integer] The PR number to be merged.
   # @param commit_message [String] The message to add to the commit

@@ -1,24 +1,31 @@
 ---
-title: Efrain Lopez
-nav: educate_nav
+title: Efraín López
+nav: about_nav
 theme: responsive
 ---
 
 <a id="top"></a>
 
-# Efrain Lopez
+# Efraín López
 
-<br/>
-<br/>
-Mr. Lopez initiated the AP Computer Science program at Laredo ISD and is the only CS teacher out of the four high schools. Enrollment increased from 9 students in 2015-2016 to 40 students in 2016-2017 (100% Hispanic), including a significant number of at-risk and English language learners.
+### Champion for Computer Science - Community Impact Award (Teacher Category)
 
-Mr. Lopez introduced a CS Principles pilot to Nixon High School (99% minority enrollment), the first time computer science had been offered at Laredo ISD in over 10 years. Despite starting with only 9 students in 2015-2016, he recruited and brought on board 40 students to AP CS Principles in 2016-2017. Out of the 40, 25% of the students were labeled “at-risk” and 20% “limited English proficient.”
+## J. W. Nixon High School (Laredo, TX)
 
-His students achieved a 75% passing rate for AP CS Principles, significantly outperforming the school average of about 20% AP passing rate overall. Some that passed had never taken a Pre-AP, Honors, or AP course of any kind.
-In addition, despite not offering AP CS A, Mr. Lopez started an after-school Programming Club where students studied Java, which resulted in three students challenging AP CS A exam (100% passing rate). This prompted administration to approve both AP CS Principles and AP CS A as official courses, the only two computer science courses offered in the whole district.
+Efraín López is on a mission to help close the computer science achievement gap that faces underrepresented minorities.
 
-In addition, the Computer Science Club he coached placed 2nd at the District Competition (Rio Grande Valley) and 3rd Place at the Region Competition (Mid and South Texas), an incredible feat for first-timers.
+<figure style="margin:10px">
+  <img src="/images/awards/efrain_lopez_students.jpg" style="display:block;margin:0 auto" width=450 alt="Students at J. W. Nixon High School" />
+  <figcaption style="text-align:center;font-style:italic;font-size:12px">
+    Students at J. W. Nixon High School
+  </figcaption>
+</figure>
 
-Bringing computer science prompted several of the students that graduated in May to pursue computer science when entering college, and some current students are planning to pursue it post-graduation.
+Two years ago, he established the computer science program at J. W. Nixon High School (99% Hispanic enrollment) and currently serves as the only computer science teacher at Laredo ISD. After starting with just nine students his pilot year, enrollment increased to 40 last year, and 64 in 2017. 75% of his AP CS Principles students passed the course despite many students carrying the "at-risk" and "English language learner" label. After school he offered students unofficial AP CS A lessons, resulting in three students passing the AP exam. He now officially teaches AP CS Principles and AP CS A and has plans to expand the pathway next year to include an advanced data structures course. The Computer Programming Team he coached placed 2nd at the District Competition (Rio Grande Valley) and 3rd Place at the Region Competition (Mid and South Texas), an incredible feat for novices facing veteran teams.
 
-This year, enrollment for AP CS Principles and AP CS A is now at 63 students, a number unthinkable just 2 years ago.
+<figure style="margin:10px">
+  <img src="/images/awards/efrain_lopez.jpg" style="display:block;margin:0 auto" width=250 alt="Efraín López" />
+  <figcaption style="text-align:center;font-style:italic;font-size:12px">Efraín López</figcaption>
+</figure>
+
+Efraín’s passion and tireless efforts have inspired numerous students to pursue computer science, engineering, and information systems majors. Efraín also serves as a trainer for the College Board-endorsed Beauty and Joy of Computing curriculum.

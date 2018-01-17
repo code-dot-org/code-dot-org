@@ -2,6 +2,9 @@ require 'test_helper'
 
 module Api::V1::Pd
   class ApplicationsControllerTest < ::ActionController::TestCase
+    include Teacher1819ApplicationConstants
+    include Facilitator1819ApplicationConstants
+
     setup_all do
       csf_facilitator_application_hash = build :pd_facilitator1819_application_hash,
         program: Pd::Application::Facilitator1819Application::PROGRAMS[:csf]
@@ -27,6 +30,21 @@ module Api::V1::Pd
       @test_quick_view_params = {
         role: 'csf_facilitators'
       }
+
+      @csd_teacher_application = create :pd_teacher1819_application, course: 'csd'
+      @csp_teacher_application = create :pd_teacher1819_application, course: 'csp'
+      @csp_facilitator_application = create :pd_facilitator1819_application, course: 'csp'
+
+      @serializing_teacher = create(:teacher,
+        email: 'minerva@hogwarts.edu',
+        school_info: create(
+          :school_info,
+          school: create(
+            :school,
+            name: 'Hogwarts'
+          )
+        )
+      )
     end
 
     test_redirect_to_sign_in_for :index
@@ -165,6 +183,185 @@ module Api::V1::Pd
       assert_response :success
       data = JSON.parse(response.body)
       refute data['locked']
+    end
+
+    test 'notes field will strip pandas' do
+      sign_in @workshop_organizer
+      put :update, params: {id: @csf_facilitator_application_with_partner, application: {notes: panda_panda}}
+      assert_response :success
+      data = JSON.parse(response.body)
+      assert_equal data['notes'], "Panda"
+    end
+
+    test 'csv download for csd teacher returns expected columns' do
+      sign_in @workshop_admin
+
+      get :quick_view, format: 'csv', params: {role: 'csd_teachers'}
+      assert_response :success
+      response_csv = CSV.parse @response.body
+
+      assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+        :csd_which_grades, :csd_course_hours_per_week, :csd_course_hours_per_year, :csd_terms_per_year
+      ).values.all? {|x| response_csv.first.include?(x)}
+
+      assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+        :csp_which_grades, :csp_course_hours_per_week, :csp_course_hours_per_year, :csp_how_offer, :csp_ap_exam
+      ).values.any? {|x| response_csv.first.exclude?(x)}
+    end
+
+    test 'csv download for csp teacher returns expected columns' do
+      sign_in @workshop_admin
+
+      get :quick_view, format: 'csv', params: {role: 'csp_teachers'}
+      assert_response :success
+      response_csv = CSV.parse @response.body
+
+      assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+        :csp_which_grades, :csp_course_hours_per_week, :csp_course_hours_per_year, :csp_terms_per_year, :csp_how_offer, :csp_ap_exam
+      ).values.all? {|x| response_csv.first.include?(x)}
+
+      assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+        :csd_which_grades, :csd_course_hours_per_week, :csd_course_hours_per_year
+      ).values.any? {|x| response_csv.first.exclude?(x)}
+    end
+
+    test 'csv download for csf facilitator returns expected columns' do
+      sign_in @workshop_admin
+
+      get :quick_view, format: 'csv', params: {role: 'csf_facilitators'}
+      assert_response :success
+      response_csv = CSV.parse @response.body
+
+      assert Facilitator1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+        :csf_availability
+      ).values.all? {|x| response_csv.first.include?(x)}
+
+      assert Facilitator1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+        :csd_csp_teachercon_availability, :csd_csp_fit_availability
+      ).values.any? {|x| response_csv.first.exclude?(x)}
+    end
+
+    test 'csv download for csp facilitator returns expected columns' do
+      sign_in @workshop_admin
+
+      get :quick_view, format: 'csv', params: {role: 'csp_facilitators'}
+      assert_response :success
+      response_csv = CSV.parse @response.body
+
+      assert Facilitator1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+        :csd_csp_teachercon_availability, :csd_csp_fit_availability
+      ).values.all? {|x| response_csv.first.include?(x)}
+
+      assert Facilitator1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+        :csf_availability
+      ).values.any? {|x| response_csv.first.exclude?(x)}
+    end
+
+    test 'cohort view returns expected columns for a teacher' do
+      time = Date.new(2017, 3, 15)
+
+      Timecop.freeze(time) do
+        workshop = create :pd_workshop, processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+        create :pd_enrollment, workshop: workshop, user: @serializing_teacher
+
+        application = create(
+          :pd_teacher1819_application,
+          course: 'csp',
+          regional_partner: @regional_partner,
+          user: @serializing_teacher,
+          pd_workshop_id: workshop.id
+        )
+
+        application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save
+        application.update(status: 'accepted')
+        application.lock!
+
+        sign_in @workshop_organizer
+        get :cohort_view, params: {role: 'csp_teachers'}
+        assert :success
+
+        assert_equal(
+          {
+            id: application.id,
+            date_accepted: 'Mar 15',
+            applicant_name: 'Minerva McGonagall',
+            district_name: 'A School District',
+            school_name: 'A Seattle Public School',
+            email: 'minerva@hogwarts.edu',
+            assigned_workshop: 'Orchard Park',
+            registered_workshop: 'Yes'
+          }.stringify_keys, JSON.parse(@response.body).first
+        )
+      end
+    end
+
+    test 'cohort view returns expected columns for a teacher without a workshop' do
+      time = Date.new(2017, 3, 15)
+
+      Timecop.freeze(time) do
+        application = create(
+          :pd_teacher1819_application,
+          course: 'csp',
+          regional_partner: @regional_partner,
+          user: @serializing_teacher,
+        )
+
+        application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save
+        application.update(status: 'accepted')
+        application.lock!
+
+        sign_in @workshop_organizer
+        get :cohort_view, params: {role: 'csp_teachers'}
+        assert :success
+
+        assert_equal(
+          {
+            id: application.id,
+            date_accepted: 'Mar 15',
+            applicant_name: 'Minerva McGonagall',
+            district_name: 'A School District',
+            school_name: 'A Seattle Public School',
+            email: 'minerva@hogwarts.edu',
+            assigned_workshop: '',
+            registered_workshop: ''
+          }.stringify_keys, JSON.parse(@response.body).first
+        )
+      end
+    end
+
+    test 'cohort view returns expected columns for a facilitator' do
+      time = Date.new(2017, 3, 15)
+
+      Timecop.freeze(time) do
+        application = create(
+          :pd_facilitator1819_application,
+          course: 'csp',
+          regional_partner: @regional_partner,
+          user: @serializing_teacher
+        )
+
+        application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save
+        application.update(status: 'accepted')
+        application.lock!
+
+        sign_in @workshop_organizer
+        get :cohort_view, params: {role: 'csp_facilitators'}
+        assert :success
+
+        assert_equal(
+          {
+            id: application.id,
+            date_accepted: 'Mar 15',
+            applicant_name: 'Minerva McGonagall',
+            district_name: 'A School District',
+            school_name: 'Hogwarts',
+            email: 'minerva@hogwarts.edu',
+          }.stringify_keys, JSON.parse(@response.body).first
+        )
+      end
     end
   end
 end

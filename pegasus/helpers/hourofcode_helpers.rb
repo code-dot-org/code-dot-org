@@ -42,21 +42,21 @@ def hoc_canonicalized_i18n_path(uri, query_string)
     if HOC_I18N[possible_language]
       @user_language = possible_language
     else
-      path = File.join([possible_language, path].select {|i| !i.nil_or_empty?})
+      path = File.join([possible_language, path].reject(&:nil_or_empty?))
     end
   else
     @country = hoc_detect_country
-    path = File.join([possible_country_or_company, possible_language, path].select {|i| !i.nil_or_empty?})
+    path = File.join([possible_country_or_company, possible_language, path].reject(&:nil_or_empty?))
   end
 
   country_language = HOC_COUNTRIES[@country]['default_language']
   @language = @user_language || country_language || hoc_detect_language
 
-  canonical_urls = [File.join(["/#{(@company || @country)}/#{@language}", path].select {|i| !i.nil_or_empty?})]
-  canonical_urls << File.join(["/#{(@company || @country)}", path].select {|i| !i.nil_or_empty?}) if @language == country_language
+  canonical_urls = [File.join(["/#{(@company || @country)}/#{@language}", path].reject(&:nil_or_empty?))]
+  canonical_urls << File.join(["/#{(@company || @country)}", path].reject(&:nil_or_empty?)) if @language == country_language
   unless canonical_urls.include?(uri)
     dont_cache
-    redirect canonical_urls.last + (!query_string.empty? ? "?#{query_string}" : "")
+    redirect canonical_urls.last + (query_string.empty? ? '' : "?#{query_string}")
   end
 
   # We no longer want the country to be part of the path we use to search:
@@ -91,7 +91,7 @@ def hoc_get_locale_code
 end
 
 def hoc_uri(uri)
-  File.join(['/', (@company || @country), @user_language, uri].select {|i| !i.nil_or_empty?})
+  File.join(['/', (@company || @country), @user_language, uri].reject(&:nil_or_empty?))
 end
 
 def codeorg_url
@@ -111,7 +111,7 @@ def resolve_url(url)
     partner_page = HOC_COUNTRIES[@country]['partner_page']
     return url.gsub('code.org', partner_page)
   else
-    File.join(['/', (@company || @country), @user_language, url].select {|i| !i.nil_or_empty?})
+    File.join(['/', (@company || @country), @user_language, url].reject(&:nil_or_empty?))
   end
 end
 

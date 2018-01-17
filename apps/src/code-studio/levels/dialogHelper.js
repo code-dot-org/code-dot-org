@@ -6,6 +6,8 @@ import ReactDOM from 'react-dom';
 import { getResult } from './codeStudioLevels';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import Sounds from '../../Sounds';
+import { ErrorDialog, SuccessDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
+import i18n from '@cdo/locale';
 
 /*
  * This file contains general logic for displaying modal dialogs
@@ -14,28 +16,23 @@ import Sounds from '../../Sounds';
 var adjustedScroll = false;
 
 /**
- * @param {string|Component} typeOrComponent - Either a string identifying the DOM
- *   to use in this dialog, or a ReactComponent representing the contents. Of the
- *   two, the latter is preferable.
+ * @param {ReactComponent} component - a ReactComponent representing the contents
  * @param {function} callback - Method to call when OK is clicked
  * @param {function} onHidden - Method called when dialog is hidden/closed
  */
-export function showDialog(typeOrComponent, callback, onHidden) {
-  let content;
-  if (typeof(typeOrComponent) === 'string') {
-    // Use our prefabricated dialog content.
-    content = document.querySelector("#" + typeOrComponent + "-dialogcontent").cloneNode(true);
-  } else {
-    const div = document.createElement('div');
-    ReactDOM.render(typeOrComponent, div);
-    content = div.childNodes[0];
-  }
+export function showDialog(component, callback, onHidden) {
+  const div = document.createElement('div');
+  ReactDOM.render(component, div);
+  const content = div.childNodes[0];
   const dialog = new LegacyDialog({
     // Content is a div with a specific expected structure. See LegacyDialog.
     body: content,
     onHidden,
     autoResizeScrollableElement: '.scrollable-element'
   });
+
+  // Note: This approach of rendering a React component to the dom and then
+  // adding click handlers via jquery is very much not ideal.
 
   // Clicking the okay button in the dialog box dismisses it, and calls the callback.
   $(content).find("#ok-button").click(function () {
@@ -52,15 +49,6 @@ export function showDialog(typeOrComponent, callback, onHidden) {
 
   dialog.show();
   return dialog;
-}
-
-export function showStartOverDialog(callback) {
-  showDialog('startover', callback);
-}
-
-export function showInstructionsDialog() {
-  showDialog('instructions', null);
-  $('details').details();
 }
 
 function adjustScroll() {
@@ -117,7 +105,7 @@ export function processResults(onComplete, beforeHook) {
         // In this case, errorDialog should be an instance of a React class.
         showDialog(errorDialog);
       } else {
-        showDialog('error', null, adjustScroll);
+        showDialog(<ErrorDialog/>, null, adjustScroll);
       }
 
       if (!appOptions.dialog.skipSound) {
@@ -167,7 +155,7 @@ export function processResults(onComplete, beforeHook) {
           dialog.show();
         } else if (lastServerResponse.nextRedirect) {
           if (appOptions.dialog.shouldShowDialog) {
-            showDialog("success", null, () => {
+            showDialog(getSuccessDialog(appOptions), null, () => {
               var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
               if (lastServerResponse.nextRedirect) {
                 window.location.href = lastServerResponse.nextRedirect;
@@ -180,4 +168,41 @@ export function processResults(onComplete, beforeHook) {
       }
     });
   }
+}
+
+/**
+ * Figures out the right title/body for our success dialog. This depends on our
+ * app type, and potentially a few other appOptions. Note this is only used by
+ * our non-coding levels (i.e. things like match, multi)
+ * LevelGroups should not get here, as they have skip_dialog: true
+ * @param appOptions
+ * @returns {ReactComponent}
+ */
+export function getSuccessDialog(appOptions) {
+  let title, body;
+  const data = appOptions.level;
+  const options = data.options || {};
+  const app = appOptions.dialog.app;
+
+  if (options.success_title) {
+    title = options.success_title;
+  } else if ((app === 'text_match' && !data.answers) || data.submittable) {
+    title = i18n.thankyou();
+  } else {
+    title = i18n.correct();
+  }
+
+  if (options.success_body) {
+    body = options.success_body;
+  } else if (app === 'text_match' && !data.answers) {
+    body = i18n.thanksForYourResponse();
+  } else if (data.submittable && app === 'multi') {
+    body = i18n.thankyouForAnswer();
+  } else {
+    body = i18n.correctAnswer();
+  }
+
+  return (
+    <SuccessDialog title={title} body={body}/>
+  );
 }

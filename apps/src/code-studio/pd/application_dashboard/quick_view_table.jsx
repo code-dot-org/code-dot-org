@@ -6,7 +6,8 @@ import {Button} from 'react-bootstrap';
 import _ from 'lodash';
 import {
   StatusColors,
-  RegionalPartnerDropdownOptions
+  UnmatchedFilter,
+  AllPartnersFilter
 } from './constants';
 
 const styles = {
@@ -37,7 +38,10 @@ export class QuickViewTable extends React.Component {
     regionalPartnerFilter: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number
-    ])
+    ]),
+    regionalPartnerName: PropTypes.string,
+    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
+    isWorkshopAdmin: PropTypes.bool
   };
 
   static contextTypes = {
@@ -104,6 +108,25 @@ export class QuickViewTable extends React.Component {
       });
     }
 
+    if (this.props.viewType === 'teacher') {
+      columns.push({
+        property: 'principal_approval',
+        header: {
+          label: 'Principal Approval'
+        }
+      }, {
+        property: 'meets_criteria',
+        header: {
+          label: 'Meets Criteria'
+        }
+      }, {
+        property: 'total_score',
+        header: {
+          label: 'Total Score'
+        }
+      });
+    }
+
     columns.push({
       property: 'notes',
       header: {
@@ -126,6 +149,7 @@ export class QuickViewTable extends React.Component {
         format: this.formatViewButton
       }
     });
+
     return columns;
   }
 
@@ -172,10 +196,10 @@ export class QuickViewTable extends React.Component {
 
   constructRows() {
     let rows = this.props.data;
-    if (this.props.regionalPartnerFilter) {
-      if (this.props.regionalPartnerFilter === RegionalPartnerDropdownOptions.unmatched.value) {
+    if (this.props.isWorkshopAdmin && this.props.regionalPartnerFilter !== AllPartnersFilter) {
+      if (this.props.regionalPartnerFilter === UnmatchedFilter || this.props.regionalPartnerFilter === null) {
         rows = rows.filter(row => row.regional_partner_id === null);
-      } else if (this.props.regionalPartnerFilter !== RegionalPartnerDropdownOptions.all.value) {
+      } else {
         rows = rows.filter(row => row.regional_partner_id === this.props.regionalPartnerFilter);
       }
     }
@@ -202,4 +226,5 @@ export class QuickViewTable extends React.Component {
 
 export default connect(state => ({
   showLocked: state.permissions.lockApplication,
+  isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(QuickViewTable);

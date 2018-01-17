@@ -2,6 +2,7 @@ hidden false
 stage_extras_available true
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
+script_announcements [{"notice"=>"", "details"=>"", "link"=>"", "type"=>"information"}]
 
 stage 'Programming: My Robotic Friends', flex_category: 'csf_e_1'
 level 'courseB_unplugged_MRF'
@@ -45,7 +46,7 @@ level 'courseC_artist_prog7', challenge: true
 level 'courseC_artist_prog8'
 assessment 'courseC_artist_prog6_predict1'
 bonus 'courseC_artist_prog_challenge1'
-bonus 'courseC_artist_prog_challenge2'
+bonus 'courseC_artist_prog_challenge2a'
 
 stage 'Loops: My Loopy Robotic Friends', flex_category: 'csf_e_1'
 level 'courseB_unplugged_loopyMRF'

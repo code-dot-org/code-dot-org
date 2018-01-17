@@ -45,8 +45,8 @@ const styles = {
   }
 };
 
-const TutorialExplorer = React.createClass({
-  propTypes: {
+export default class TutorialExplorer extends React.Component {
+  static propTypes = {
     tutorials: PropTypes.array.isRequired,
     filterGroups: PropTypes.array.isRequired,
     initialFilters: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
@@ -57,28 +57,30 @@ const TutorialExplorer = React.createClass({
     showSortDropdown: PropTypes.bool.isRequired,
     disabledTutorials: PropTypes.arrayOf(PropTypes.string).isRequired,
     defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortByOptions)).isRequired
-  },
+  };
 
-  shouldScrollToTop: false,
+  constructor(props) {
+    super(props);
 
-  getInitialState() {
+    this.shouldScrollToTop = false;
+
     let filters = {};
-    for (const filterGroupName in this.props.filterGroups) {
-      const filterGroup = this.props.filterGroups[filterGroupName];
+    for (const filterGroupName in props.filterGroups) {
+      const filterGroup = props.filterGroups[filterGroupName];
       filters[filterGroup.name] = [];
-      const initialFiltersForGroup = this.props.initialFilters[filterGroup.name];
+      const initialFiltersForGroup = props.initialFilters[filterGroup.name];
       if (initialFiltersForGroup) {
         filters[filterGroup.name] = initialFiltersForGroup;
       }
     }
 
-    const sortBy = this.props.defaultSortBy;
+    const sortBy = props.defaultSortBy;
     const orgName = TutorialsOrgName.all;
     const filteredTutorials = this.filterTutorialSet(filters, sortBy, orgName);
     const filteredTutorialsForLocale = this.filterTutorialSetForLocale();
     const showingAllTutorials = this.isLocaleEnglish();
 
-    return {
+    this.state = {
       filters: filters,
       filteredTutorials: filteredTutorials,
       filteredTutorialsCount: filteredTutorials.length,
@@ -91,7 +93,7 @@ const TutorialExplorer = React.createClass({
       orgName: orgName,
       showingAllTutorials: showingAllTutorials
     };
-  },
+  }
 
   /**
    * Called when a filter in a filter group has its checkbox
@@ -101,7 +103,7 @@ const TutorialExplorer = React.createClass({
    * @param {string} filterEntry - The name of the filter entry.
    * @param {bool} value - Whether the entry was checked or not.
    */
-  handleUserInputFilter(filterGroup, filterEntry, value) {
+  handleUserInputFilter = (filterGroup, filterEntry, value) => {
     const state = Immutable.fromJS(this.state);
 
     let newState = {};
@@ -129,14 +131,14 @@ const TutorialExplorer = React.createClass({
       filteredTutorials,
       filteredTutorialsCount: filteredTutorials.length
     });
-  },
+  };
 
   /**
    * Called when the sort order is changed via dropdown.
    *
    * @param {SortBy} value - The new sort order.
    */
-  handleUserInputSortBy(value) {
+  handleUserInputSortBy = (value) => {
     const filteredTutorials = this.filterTutorialSet(this.state.filters, value, this.state.orgName);
     this.setState({
       filteredTutorials,
@@ -145,12 +147,12 @@ const TutorialExplorer = React.createClass({
     });
 
     this.scrollToTop();
-  },
+  };
 
   /**
    * Called when the org name is changed via dropdown.
    */
-  handleUserInputOrgName(value) {
+  handleUserInputOrgName = (value) => {
     const filteredTutorials = this.filterTutorialSet(this.state.filters, this.state.sortBy, value);
     this.setState({
       filteredTutorials,
@@ -159,7 +161,7 @@ const TutorialExplorer = React.createClass({
     });
 
     this.scrollToTop();
-  },
+  };
 
   /*
    * Now that we've re-rendered changes, check to see if there's a pending
@@ -172,7 +174,7 @@ const TutorialExplorer = React.createClass({
       $('html, body').animate({scrollTop: $(this.allTutorials).offset().top});
       this.shouldScrollToTop = false;
     }
-  },
+  }
 
   /**
    * Set up a smooth scroll to the top of all tutorials once we've re-rendered the
@@ -187,7 +189,7 @@ const TutorialExplorer = React.createClass({
     if (window.location.search.indexOf("scrolltotop") !== -1) {
       this.shouldScrollToTop = true;
     }
-  },
+  }
 
   /**
    * Given a sort by choice (popularityrank or displayweight) and a grade range,
@@ -221,7 +223,7 @@ const TutorialExplorer = React.createClass({
     }
 
     return sortByFieldName;
-  },
+  }
 
   /*
    * The main tutorial set is returned with the given filters and sort order.
@@ -241,7 +243,7 @@ const TutorialExplorer = React.createClass({
 
 
     return TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
-  },
+  }
 
   /*
    * The extra set of tutorials for a specific locale, shown at top for non-en user
@@ -263,69 +265,69 @@ const TutorialExplorer = React.createClass({
     filterProps.specificLocale = true;
     filterProps.locale = this.props.locale;
     return TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
-  },
+  }
 
   getUniqueOrgNames() {
     return TutorialExplorer.getUniqueOrgNamesFromTutorials(this.props.tutorials, this.isRobotics());
-  },
+  }
 
   componentDidMount() {
     window.addEventListener('resize', _.debounce(this.onResize, 100));
-  },
+  }
 
-  showModalFilters() {
+  showModalFilters = () => {
     this.setState({showingModalFilters: true});
 
     if (this.state.mobileLayout) {
       this.scrollToTop();
     }
-  },
+  };
 
-  hideModalFilters() {
+  hideModalFilters = () => {
     this.setState({showingModalFilters: false});
 
     if (this.state.mobileLayout) {
       this.scrollToTop();
     }
-  },
+  };
 
-  showAllTutorials() {
+  showAllTutorials = () => {
     this.setState({showingAllTutorials: true});
-  },
+  };
 
-  hideAllTutorials() {
+  hideAllTutorials = () => {
     this.setState({showingAllTutorials: false});
-  },
+  };
 
   shouldShowFilters() {
     return !this.state.mobileLayout || this.state.showingModalFilters;
-  },
+  }
 
   shouldShowTutorials() {
     return !this.state.mobileLayout || !this.state.showingModalFilters;
-  },
+  }
 
   shouldShowTutorialsForLocale() {
     return !this.isLocaleEnglish();
-  },
+  }
 
   shouldShowAllTutorialsToggleButton() {
     return !this.isLocaleEnglish();
-  },
+  }
 
   isLocaleEnglish() {
     return this.props.locale.substring(0,2) === "en";
-  },
+  }
 
   isRobotics() {
     return !this.props.roboticsButtonUrl;
-  },
+  }
 
   /**
    * Called when the window resizes. Look to see if width/height changed, then
    * call adjustTopPaneHeight as our maxHeight may need adjusting.
    */
-  onResize() {
+  onResize = () => {
     const windowWidth = $(window).width();
     const windowHeight = $(window).height();
 
@@ -343,159 +345,157 @@ const TutorialExplorer = React.createClass({
     });
 
     this.setState({mobileLayout: isResponsiveCategoryInactive('md')});
-  },
+  };
 
-  statics: {
-    /**
-     * Filters a given array of tutorials by the given filter props.
-     *
-     * It goes through all active filter categories.  If no filters are set for
-     * a filter group, then that item will default to showing, so long as no other
-     * filter group prevents it from showing.
-     * hideFilters is an explicit list of filters that we actually hide if matched.
-     * But if we do have a filter set for a filter group, and the tutorial is tagged
-     * for that filter group, then at least one of the active filters must match a tag.
-     * e.g. If the user chooses two platforms, then at least one of the platforms
-     * must match a platform tag on the tutorial.
-     * A similar check for language is done first.
-     * In the case that filterProps.specificLocale is true, we do something slightly
-     * different.  We don't show tutorials that don't have any language tags, and we
-     * reject tutorials that don't have the current locale explicitly listed.  This
-     * allows us to return a set of tutorials that have explicit support for the
-     * current locale.
-     *
-     * @param {Array} tutorials - Array of tutorials.  Each contains a variety of
-     *   strings, each of which is a list of tags separated by commas, no spaces.
-     * @param {object} filterProps - Object containing filter properties.
-     * @param {string} filterProps.locale - The current locale.
-     * @param {bool} filterProps.specificLocale - Whether we filter to only allow
-     *   through tutorials matching the current locale.
-     * @param {object} filterProps.filters - Contains arrays of strings identifying
-     *   the currently active filters.  Each array is named for its filter group.
-     */
-    filterTutorials(tutorials, filterProps) {
-      const { locale, specificLocale, orgName, filters, hideFilters, sortByFieldName } = filterProps;
+  /**
+   * Filters a given array of tutorials by the given filter props.
+   *
+   * It goes through all active filter categories.  If no filters are set for
+   * a filter group, then that item will default to showing, so long as no other
+   * filter group prevents it from showing.
+   * hideFilters is an explicit list of filters that we actually hide if matched.
+   * But if we do have a filter set for a filter group, and the tutorial is tagged
+   * for that filter group, then at least one of the active filters must match a tag.
+   * e.g. If the user chooses two platforms, then at least one of the platforms
+   * must match a platform tag on the tutorial.
+   * A similar check for language is done first.
+   * In the case that filterProps.specificLocale is true, we do something slightly
+   * different.  We don't show tutorials that don't have any language tags, and we
+   * reject tutorials that don't have the current locale explicitly listed.  This
+   * allows us to return a set of tutorials that have explicit support for the
+   * current locale.
+   *
+   * @param {Array} tutorials - Array of tutorials.  Each contains a variety of
+   *   strings, each of which is a list of tags separated by commas, no spaces.
+   * @param {object} filterProps - Object containing filter properties.
+   * @param {string} filterProps.locale - The current locale.
+   * @param {bool} filterProps.specificLocale - Whether we filter to only allow
+   *   through tutorials matching the current locale.
+   * @param {object} filterProps.filters - Contains arrays of strings identifying
+   *   the currently active filters.  Each array is named for its filter group.
+   */
+  static filterTutorials(tutorials, filterProps) {
+    const { locale, specificLocale, orgName, filters, hideFilters, sortByFieldName } = filterProps;
 
-      const filteredTutorials = tutorials.filter(tutorial => {
-        // Check that the tutorial isn't marked as DoNotShow.  If it does,
-        // it's hidden.
-        if (tutorial.tags.split(',').indexOf(DoNotShow) !== -1) {
+    const filteredTutorials = tutorials.filter(tutorial => {
+      // Check that the tutorial isn't marked as DoNotShow.  If it does,
+      // it's hidden.
+      if (tutorial.tags.split(',').indexOf(DoNotShow) !== -1) {
+        return false;
+      }
+
+      // First check that the tutorial language doesn't exclude it immediately.
+      // If the tags contain some languages, and we don't have a match, then
+      // hide the tutorial.
+      if (locale && tutorial.languages_supported) {
+        const languageTags = tutorial.languages_supported.split(',');
+        if (languageTags.length > 0 &&
+          languageTags.indexOf(locale) === -1 &&
+          languageTags.indexOf(locale.substring(0,2)) === -1) {
           return false;
         }
+      } else if (specificLocale) {
+        // If the tutorial doesn't have language tags, but we're only looking
+        // for specific matches to our current locale, then don't show this
+        // tutorial.  i.e. don't let non-locale-specific tutorials through.
+        return false;
+      }
 
-        // First check that the tutorial language doesn't exclude it immediately.
-        // If the tags contain some languages, and we don't have a match, then
-        // hide the tutorial.
-        if (locale && tutorial.languages_supported) {
-          const languageTags = tutorial.languages_supported.split(',');
-          if (languageTags.length > 0 &&
-            languageTags.indexOf(locale) === -1 &&
-            languageTags.indexOf(locale.substring(0,2)) === -1) {
-            return false;
-          }
-        } else if (specificLocale) {
-          // If the tutorial doesn't have language tags, but we're only looking
-          // for specific matches to our current locale, then don't show this
-          // tutorial.  i.e. don't let non-locale-specific tutorials through.
+      // If we are showing an explicit orgname, then filter if it doesn't
+      // match.  Make an exception for Minecraft so that it shows when
+      // Code.org is selected.
+      if (orgName &&
+        orgName !== TutorialsOrgName.all &&
+        tutorial.orgname !== orgName &&
+        !(orgName === orgNameCodeOrg && tutorial.orgname === orgNameMinecraft)) {
+        return false;
+      }
+
+      // If we are explicitly hiding a matching filter, then don't show the
+      // tutorial.
+      for (const filterGroupName in hideFilters) {
+        const tutorialTags = tutorial["tags_" + filterGroupName];
+        const filterGroup = hideFilters[filterGroupName];
+
+        if (filterGroup.length !== 0 &&
+            tutorialTags &&
+            tutorialTags.length > 0 &&
+            TutorialExplorer.findMatchingTag(filterGroup, tutorialTags)) {
           return false;
         }
+      }
 
-        // If we are showing an explicit orgname, then filter if it doesn't
-        // match.  Make an exception for Minecraft so that it shows when
-        // Code.org is selected.
-        if (orgName &&
-          orgName !== TutorialsOrgName.all &&
-          tutorial.orgname !== orgName &&
-          !(orgName === orgNameCodeOrg && tutorial.orgname === orgNameMinecraft)) {
-          return false;
+      // If we miss any active filter group, then we don't show the tutorial.
+      let filterGroupsSatisfied = true;
+
+      for (const filterGroupName in filters) {
+        const tutorialTags = tutorial["tags_" + filterGroupName];
+        const filterGroup = filters[filterGroupName];
+
+        if (filterGroup.length !== 0 &&
+            tutorialTags &&
+            tutorialTags.length > 0 &&
+            !TutorialExplorer.findMatchingTag(filterGroup, tutorialTags)) {
+          filterGroupsSatisfied = false;
         }
+      }
 
-        // If we are explicitly hiding a matching filter, then don't show the
-        // tutorial.
-        for (const filterGroupName in hideFilters) {
-          const tutorialTags = tutorial["tags_" + filterGroupName];
-          const filterGroup = hideFilters[filterGroupName];
+      return filterGroupsSatisfied;
+    }).sort((tutorial1, tutorial2) => {
+      if (isTutorialSortByFieldNamePopularity(sortByFieldName)) {
+        return tutorial1[sortByFieldName] - tutorial2[sortByFieldName];
+      } else {
+        return tutorial2[sortByFieldName] - tutorial1[sortByFieldName];
+      }
+    });
 
-          if (filterGroup.length !== 0 &&
-              tutorialTags &&
-              tutorialTags.length > 0 &&
-              TutorialExplorer.findMatchingTag(filterGroup, tutorialTags)) {
-            return false;
-          }
-        }
+    return filteredTutorials;
+  }
 
-        // If we miss any active filter group, then we don't show the tutorial.
-        let filterGroupsSatisfied = true;
+  /* Given a filter group, and the tutorial's relevant tags for that filter group,
+   * see if there's at least a single match.
+   * @param {Array} filterGroup - Array of strings, each of which is a selected filter
+   *   for the group.  e.g. ["beginner", "experienced"].
+   * @param {string} tutorialTags - Comma-separated tags for a tutorial.
+   *   e.g. "beginner,experienced".
+   * @return {bool} - true if the tutorial had at least one tag matching at least
+   *   one of the filterGroup's values.
+   */
+  static findMatchingTag(filterGroup, tutorialTags) {
+    return filterGroup.some(filterName => tutorialTags.split(',').indexOf(filterName) !== -1);
+  }
 
-        for (const filterGroupName in filters) {
-          const tutorialTags = tutorial["tags_" + filterGroupName];
-          const filterGroup = filters[filterGroupName];
+  /* Returns an array of unique organization names from the set of tutorials,
+   * sorted alphabetically.
+   *
+   * @param {Array} tutorials - Array of tutorials.
+   * @param {bool} robotics - Whether the page is for robotics.
+   * @return {Array} - Array of strings.
+   */
+  static getUniqueOrgNamesFromTutorials(tutorials, robotics) {
+    // Filter out tutorials with DoNotShow as either tag or organization name.
+    let availableTutorials = tutorials.filter(t => {
+      return t.tags.split(',').indexOf(DoNotShow) === -1 && t.orgname !== DoNotShow;
+    });
 
-          if (filterGroup.length !== 0 &&
-              tutorialTags &&
-              tutorialTags.length > 0 &&
-              !TutorialExplorer.findMatchingTag(filterGroup, tutorialTags)) {
-            filterGroupsSatisfied = false;
-          }
-        }
+    // Ensure robotics tag is either present or absent, depending whether we
+    // are on robotics variant of the page or not.
+    availableTutorials = availableTutorials.filter(t => {
+      if (robotics) {
+        return t.tags_activity_type.split(',').indexOf("robotics") !== -1;
+      } else {
+        return t.tags_activity_type.split(',').indexOf("robotics") === -1;
+      }
+    });
 
-        return filterGroupsSatisfied;
-      }).sort((tutorial1, tutorial2) => {
-        if (isTutorialSortByFieldNamePopularity(sortByFieldName)) {
-          return tutorial1[sortByFieldName] - tutorial2[sortByFieldName];
-        } else {
-          return tutorial2[sortByFieldName] - tutorial1[sortByFieldName];
-        }
-      });
+    // Construct array of unique org names from the tutorials.
+    let uniqueOrgNames = _.uniq(availableTutorials.map(t => t.orgname));
 
-      return filteredTutorials;
-    },
+    // Sort the unique org names alphabetically, case-insensitive.
+    uniqueOrgNames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
-    /* Given a filter group, and the tutorial's relevant tags for that filter group,
-     * see if there's at least a single match.
-     * @param {Array} filterGroup - Array of strings, each of which is a selected filter
-     *   for the group.  e.g. ["beginner", "experienced"].
-     * @param {string} tutorialTags - Comma-separated tags for a tutorial.
-     *   e.g. "beginner,experienced".
-     * @return {bool} - true if the tutorial had at least one tag matching at least
-     *   one of the filterGroup's values.
-     */
-    findMatchingTag(filterGroup, tutorialTags) {
-      return filterGroup.some(filterName => tutorialTags.split(',').indexOf(filterName) !== -1);
-    },
-
-    /* Returns an array of unique organization names from the set of tutorials,
-     * sorted alphabetically.
-     *
-     * @param {Array} tutorials - Array of tutorials.
-     * @param {bool} robotics - Whether the page is for robotics.
-     * @return {Array} - Array of strings.
-     */
-    getUniqueOrgNamesFromTutorials(tutorials, robotics) {
-      // Filter out tutorials with DoNotShow as either tag or organization name.
-      let availableTutorials = tutorials.filter(t => {
-        return t.tags.split(',').indexOf(DoNotShow) === -1 && t.orgname !== DoNotShow;
-      });
-
-      // Ensure robotics tag is either present or absent, depending whether we
-      // are on robotics variant of the page or not.
-      availableTutorials = availableTutorials.filter(t => {
-        if (robotics) {
-          return t.tags_activity_type.split(',').indexOf("robotics") !== -1;
-        } else {
-          return t.tags_activity_type.split(',').indexOf("robotics") === -1;
-        }
-      });
-
-      // Construct array of unique org names from the tutorials.
-      let uniqueOrgNames = _.uniq(availableTutorials.map(t => t.orgname));
-
-      // Sort the unique org names alphabetically, case-insensitive.
-      uniqueOrgNames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
-
-      return uniqueOrgNames;
-    }
-  },
+    return uniqueOrgNames;
+  }
 
   render() {
     const bottomLinksContainerStyle = {
@@ -604,7 +604,7 @@ const TutorialExplorer = React.createClass({
       </StickyContainer>
     );
   }
-});
+}
 
 function getFilters({robotics, mobile}) {
   const filters = [
@@ -779,5 +779,3 @@ window.TutorialExplorerManager = function (options) {
     );
   };
 };
-
-export default TutorialExplorer;
