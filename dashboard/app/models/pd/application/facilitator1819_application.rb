@@ -37,7 +37,7 @@ require 'state_abbr'
 require 'cdo/shared_constants/pd/facilitator1819_application_constants'
 
 module Pd::Application
-  class Facilitator1819Application < ApplicationBase
+  class Facilitator1819Application < WorkshopAutoenrolledApplication
     include Facilitator1819ApplicationConstants
 
     def send_decision_notification_email
