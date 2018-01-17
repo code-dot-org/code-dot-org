@@ -1,10 +1,10 @@
 import React from 'react';
 import {FormGroup} from "react-bootstrap";
-import ApplicationFormComponent from "../ApplicationFormComponent";
+import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 import {YES, NONE} from '../ApplicationConstants';
 
-export default class Section3LeadingStudents extends ApplicationFormComponent {
+export default class Section3LeadingStudents extends LabeledFormComponent {
   static labels = PageLabels.section3LeadingStudents;
 
   static associatedFields = [

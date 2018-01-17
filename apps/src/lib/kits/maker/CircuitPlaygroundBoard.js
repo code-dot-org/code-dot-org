@@ -13,8 +13,9 @@ import {
 import {
   SONG_CHARGE,
   CP_COMMAND,
-  J5_CONSTANTS
+  J5_CONSTANTS,
 } from './PlaygroundConstants';
+import Button from './Button';
 import Led from './Led';
 import {isNodeSerialAvailable} from './portScanning';
 
@@ -125,6 +126,8 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       // For now, these are _always_ Leds.  Complain if they're not.
       if (component instanceof Led) {
         component.stop();
+      } else if (component instanceof five.Button) {
+        // No special cleanup required for five.Button
       } else {
         throw new Error('Added an unsupported component to dynamic components');
       }
@@ -241,6 +244,12 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     const newLed = new Led({board: this.fiveBoard_, pin});
     this.dynamicComponents_.push(newLed);
     return newLed;
+  }
+
+  createButton(pin) {
+    const newButton = new Button({board: this.fiveBoard_, pin});
+    this.dynamicComponents_.push(newButton);
+    return newButton;
   }
 
   /**

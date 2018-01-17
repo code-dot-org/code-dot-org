@@ -64,10 +64,7 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.9375); display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-size: 320px 450px; background-image: url(&quot;https://studio.code.org/blockly/media/1x1.gif&quot;);\" data-canonical-image-url=\"\"><button id=\"bigButton\" style=\"padding: 0px; margin: 0px; font-size: 30px; color: white; position: absolute; left: 10px; top: 340px; width: 300px; height: 100px; background-color: yellowgreen;\">Green-ify!</button></div></div>",
     "start_blocks": "setProperty(\"screen1\", \"background-color\", \"blue\");\r\nonEvent(\"bigButton\", \"click\", function() {\r\n\r\n});",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

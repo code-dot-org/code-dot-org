@@ -4,12 +4,13 @@ import NewProjectButtons from './NewProjectButtons';
 export default storybook => {
   storybook
     .storiesOf('NewProjectButtons', module)
+    .withReduxStore()
     .addStoryTable([
       {
         name: 'Default project buttons',
         description: 'Buttons to make a new App Lab, Game Lab, Play Lab and Artist project',
         story: () => (
-          <NewProjectButtons isRtl={false}/>
+          <NewProjectButtons/>
         )
       },
       {
@@ -18,7 +19,6 @@ export default storybook => {
         story: () => (
           <NewProjectButtons
             projectTypes={['weblab', 'applab', 'calc', 'eval']}
-            isRtl={false}
           />
         )
       },
@@ -28,7 +28,6 @@ export default storybook => {
         story: () => (
           <NewProjectButtons
             projectTypes={['frozen', 'starwars', 'minecraft_adventurer', 'minecraft_designer']}
-            isRtl={false}
           />
         )
       },
@@ -38,7 +37,6 @@ export default storybook => {
         story: () => (
           <NewProjectButtons
             projectTypes={['starwarsblocks', 'flappy', 'sports', 'basketball']}
-            isRtl={false}
           />
         )
       },
@@ -48,7 +46,6 @@ export default storybook => {
         story: () => (
           <NewProjectButtons
             projectTypes={['bounce', 'infinity', 'iceage', 'gumball']}
-            isRtl={false}
           />
         )
       }

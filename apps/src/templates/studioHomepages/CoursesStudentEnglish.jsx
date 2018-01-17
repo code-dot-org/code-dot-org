@@ -1,9 +1,8 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import ContentContainer from '../ContentContainer';
 import {LocalClassActionBlock} from './TwoColumnActionBlock';
 import {CourseBlocksHoc} from './CourseBlocks';
 import CourseBlocksStudentGradeBands from './CourseBlocksStudentGradeBands';
-import Responsive from '../../responsive';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -12,19 +11,10 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
  * as well as the default for a signed-out user using English.
  */
 class CoursesStudentEnglish extends Component {
-  static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
-  };
-
   render() {
-    const { isRtl, responsive } = this.props;
-
     return (
       <div>
         <CourseBlocksStudentGradeBands
-          isRtl={isRtl}
-          responsive={responsive}
           showContainer={true}
           hideBottomMargin={false}
         />
@@ -32,10 +22,8 @@ class CoursesStudentEnglish extends Component {
         <ContentContainer
           heading={i18n.teacherCourseHoc()}
           description={i18n.teacherCourseHocDescription()}
-          isRtl={isRtl}
           linkText={i18n.teacherCourseHocLinkText()}
           link={pegasus('/hourofcode/overview')}
-          responsive={responsive}
         >
           <CourseBlocksHoc rowCount={1}/>
         </ContentContainer>

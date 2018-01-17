@@ -5,6 +5,8 @@ theme: responsive
 # CS Discoveries Professional Learning Program
 
 Our CS Discoveries Professional Learning program offers year round support designed for educators teaching a semester or full-year course. You don't need any prior computer science experience to get started! 
+
+For more information about our goals and approach to professional learning, check out our [professional learning values](educate/professional-learning/values).
 <br>
 
 <hr/>
@@ -25,7 +27,7 @@ This program prepares educators to provide high quality instruction based on the
 
 <div style="margin-left: 20px;">
 
-<%=view :display_video_thumbnail, id: "intro_csp", video_code: "2-QpgNHknds", play_button: 'center' %>
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "uQim0hBHco0", play_button: 'center' %>
 
 </div>
 
@@ -68,7 +70,7 @@ Continuing Professional Development: (September - June of the following academic
 
 ## <a name="locations"></a>Where is the program offered?
 
-The CS Discoveries Professional Learning Program is available in regions served by Code.org's Regional Partners. Please check our map to learn more about where our Regional Partners are located and when they will be hosting summer workshops.
+The CS Discoveries Professional Learning Program is available in regions served by Code.org's Regional Partners. Please check our map to learn more about where our Regional Partners are located and when they will be hosting summer workshops (dates and locations subject to change).
 <br>
 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dKLjL6y3AKo45c7weK__JI3sxijfbmzq" width="640" height="480"></iframe>
@@ -80,14 +82,14 @@ The CS Discoveries Professional Learning Program is open to teachers who are int
 * Commit to participating in the full, year-long professional development program
 * Work with their school administration to ensure that this course will be offered on the school's master schedule
 * Support the recruitment and enrollment of a diverse group of students in the course, representative of the school's student population
-* Teach the course in a school served by one of Code.org's Regional Partners. To find out if your area is served by one of our Regional Partners, please visit our [Regional Partner Map](https://code.org/educate/regional-partner/partners).
+* Teach the course in a school served by one of Code.org's Regional Partners. To find out if your area is served by one of our Regional Partners, please visit our [Regional Partner Map](#locations).
 
 Not sure if this is the right Code.org program for you? [Check out our program recommendations](/files/PL-Program-for-Me.pdf) to determine the best fit for your teaching situation.
 
 
 ## <a name="locations"></a>Where is the program offered?
 
-We currently offer the CS Discoveries Professional Learning Program in locations where we have Regional Partners. Please check our [Regional Partner Map](https://code.org/educate/professional-learning-partner/partners) to see if there is a partner in your area.
+We currently offer the CS Discoveries Professional Learning Program in locations where we have Regional Partners. Please check our [Regional Partner Map](#locations) to see if there is a partner in your area.
 
 ## <a name="apply"></a>How to apply?
 
@@ -97,7 +99,7 @@ We currently offer the CS Discoveries Professional Learning Program in locations
 
 ## <a name="facilitate"></a>Become a CS Discoveries Facilitator
 
-Code.org's [Facilitator Development Program](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on the CS Discoveries curriculum. 
+Code.org's [Facilitator Development Program](/educate/professional-learning/facilitator) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on the CS Discoveries curriculum. 
 
 Help bring professional learning opportunities to your community by becoming a Code.org Facilitator!
 

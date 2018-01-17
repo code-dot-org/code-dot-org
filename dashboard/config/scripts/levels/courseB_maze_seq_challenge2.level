@@ -27,17 +27,18 @@
     "never_autoplay_video": "true",
     "examples_required": "false",
     "markdown_instructions": "Debug this level. These are the right blocks, but they're in the wrong order!",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You do not need to add or remove blocks to solve this puzzle.\",\"hint_id\":\"courseB_maze_seq_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1153096de8e96460f21059d209aebe30/courseB_maze_seq_challenge2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Rearrange the blocks and take the staircase pattern path.\",\"hint_id\":\"courseB_maze_seq_challenge2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/efac3f5b00d1b079bd18b70e08653c9a/courseB_maze_seq_challenge2.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You do not need to add or remove blocks to solve this puzzle.\",\"hint_id\":\"courseB_maze_seq_challenge2_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1153096de8e96460f21059d209aebe30/courseB_maze_seq_challenge2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Rearrange the blocks and take the staircase pattern path.\",\"hint_id\":\"courseB_maze_seq_challenge2_b\",\"hint_type\":\"general\",\"hint_path\":\"[[1,6],[1,5],[2,5],[2,4],[3,4],[3,3],[4,3],[4,2],[5,2],[5,1],[6,1]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/efac3f5b00d1b079bd18b70e08653c9a/courseB_maze_seq_challenge2.mp3\"}]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-02 15:26:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-02 15:27:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-02 15:26:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-02 15:27:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-11-28 23:00:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-28 23:04:19 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-28 23:05:22 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-28 23:06:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-28 23:09:46 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -65,32 +66,15 @@
             </block>
           </next>
         </block>
-        <block type="maze_moveEast" deletable="false">
-          <next>
-            <block type="maze_moveEast" deletable="false">
-              <next>
-                <block type="maze_moveEast" deletable="false">
-                  <next>
-                    <block type="maze_moveEast" deletable="false">
-                      <next>
-                        <block type="maze_moveEast" deletable="false"/>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
+        <block type="maze_moveEast" deletable="false" x="200" y="50"/>
+        <block type="maze_moveEast" deletable="false" x="150" y="120"/>
+        <block type="maze_moveEast" deletable="false" x="200" y="190"/>
+        <block type="maze_moveEast" deletable="false" x="150" y="260"/>
+        <block type="maze_moveEast" deletable="false" x="200" y="330"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml>
-        <block type="maze_moveNorth" limit="5"/>
-        <block type="maze_moveSouth" limit="5"/>
-        <block type="maze_moveEast" limit="5"/>
-        <block type="maze_moveWest" limit="5"/>
-      </xml>
+      <xml/>
     </toolbox_blocks>
     <solution_blocks>
       <xml>

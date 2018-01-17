@@ -25,66 +25,31 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"One way to solve this is to add more steps forward in between the turns.\",\"hint_id\":\"courseC_maze_debugging_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/617940ce622aa12bb10b388f27399387/courseC_maze_debugging_challenge2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you are getting stuck, you can always start over or remove all the code and find your own way!\",\"hint_id\":\"courseC_maze_debugging_challenge2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fbbbc016e15965e3a79872befbe21526/courseC_maze_debugging_challenge2.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"There are two different paths you can follow just moving forward, and turning four times. If you find a way to use a loop, there may be even more!\\n\\n![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)\",\"hint_id\":\"courseC_maze_debugging_challenge2_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3703d787bb791dfd9bc6cfd98b59026b/courseC_maze_debugging_challenge2.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you are getting stuck, try debugging the code.  Where does it go wrong?\",\"hint_id\":\"courseC_maze_debugging_challenge2_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a6b0afa269ccb1152a5b89ed3669b242/courseC_maze_debugging_challenge2.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"There are two different paths you can follow just moving forward, and turning four times. If you find a way to use a loop, there may be even more!\\n\\n![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)\",\"hint_id\":\"courseC_maze_debugging_challenge2_c\",\"hint_type\":\"general\",\"hint_path\":\"[[6,6],[5,6],[5,4],[3,4],[3,1],[1,1]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3703d787bb791dfd9bc6cfd98b59026b/courseC_maze_debugging_challenge2.mp3\"}]",
     "markdown_instructions": "*\"If I turn too often, I might get dizzy! Help me reach the acorn with only four `turn` commands.\"*",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-02 16:31:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-23 15:31:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-23 15:31:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-02 16:31:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-23 15:31:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-23 15:31:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-12-01 03:22:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 04:01:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-01 04:02:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="maze_turn">
-              <title name="DIR">turnRight</title>
-              <next>
-                <block type="maze_moveForward">
-                  <next>
-                    <block type="maze_turn">
-                      <title name="DIR">turnLeft</title>
-                      <next>
-                        <block type="maze_moveForward">
-                          <next>
-                            <block type="maze_turn">
-                              <title name="DIR">turnRight</title>
-                              <next>
-                                <block type="maze_moveForward">
-                                  <next>
-                                    <block type="maze_turn">
-                                      <title name="DIR">turnLeft</title>
-                                      <next>
-                                        <block type="maze_moveForward"/>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-      </xml>
+
+</xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward" limit="10"/>
+        <block type="maze_moveForward"/>
         <block type="maze_turn" limit="4">
           <title name="DIR">turnLeft</title>
         </block>

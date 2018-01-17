@@ -34,6 +34,7 @@
 @import "color";
 @import "font";
 @import "mixins";
+@import "style-constants";
 
 $baseFontFamily: $gotham-regular;
 $headingsFontWeight: normal;
@@ -2014,6 +2015,10 @@ a.download-video {
   }
 }
 
+.container {
+  width: $content-width;
+}
+
 .container,
 .external,
 .text-match,
@@ -3128,4 +3133,9 @@ code {
     font-size: 20px;
     font-family: "Gotham 4r", sans-serif;
   }
+}
+
+#survey-submission-thankyou {
+  color: $purple;
+  font-size: 18px;
 }

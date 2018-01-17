@@ -93,14 +93,17 @@
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "show_debug_watch": "true",
-    "encrypted_examples": "+PokzI51sg2Zst8Jb3Tp/iGsV5uuSaQHSv8a4LgxhNr58H9kqRQqJGa7HSDG\nUQzP\n",
+    "encrypted_examples": "t1L2TbOSHDsBQoX1bjbkUZBJxDBhavv8fXvU6sa5M8K1nlxyvez8jJ5fVn0X\nwq8Uc5K+jDl8ux/twgujMeyr8g==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-12-07 17:03:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -30,7 +30,8 @@
       "comment_Sprites": null,
       "addOperator": null,
       "subtractOperator": null,
-      "comment_Math": null
+      "comment_Math": null,
+      "assign_x": null
     },
     "show_d_pad": "true",
     "edit_code": true,
@@ -67,14 +68,17 @@
     "all_animations_single_frame": "true",
     "instructions_important": "false",
     "show_debug_watch": "true",
-    "encrypted_examples": "YusAQ4o56rRch4pT3oF25ca5BavKypm29fTelYZYfrP2+LUAI4oVTdgIB53w\nuq4A+lg/Z/1MJFnIdNX7f09DLQ==\n",
+    "encrypted_examples": "c3EVGqQUMrNdG5/1A8sYUBg50wSL8YDy6xCFmY9bv/ULaD/Z12M2YL/+HyJ3\nyo3yjWVV8QpvVUJz79HM+yU1qg==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-12-11 17:51:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-11 17:58:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

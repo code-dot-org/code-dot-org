@@ -12,7 +12,7 @@ Students read and use App Lab's API documentation to learn about new turtle comm
 
 * **API** - a collection of commands made available to a programmer
 * **Documentation** - a description of the behavior of a command, function, library, API, etc.
-* **Hexadeximal** - A base-16 number system that uses sixteen distinct symbols 0-9 and A-F to represent numbers from 0 to 15.
+* **Hexadecimal** - A base-16 number system that uses sixteen distinct symbols 0-9 and A-F to represent numbers from 0 to 15.
 * **Library** - a collection of commands / functions, typically with a shared purpose
 * **Parameter** - An extra piece of information that you pass to the function to customize it for a specific need.
 

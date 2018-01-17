@@ -21,6 +21,7 @@ import {createHistory} from 'history';
 import Summary from './summary';
 import QuickView from './quick_view';
 import DetailView from './detail_view';
+import CohortView from './cohort_view';
 import _ from 'lodash';
 
 const ROOT_PATH = '/pd/application_dashboard';
@@ -37,17 +38,20 @@ const ApplicationDashboardHeader = (props) => (
 );
 
 const paths = {
-  'csf_facilitators': {type: 'facilitator', name: 'CS Fundamentals Facilitator Applications'},
-  'csd_facilitators': {type: 'facilitator', name: 'CS Discoveries Facilitator Applications'},
-  'csp_facilitators': {type: 'facilitator', name: 'CS Principles Facilitator Applications'},
-  'csd_teachers': {type: 'teacher', name: 'CS Discoveries Teacher Applications'},
-  'csp_teachers': {type: 'teacher', name: 'CS Principles Teacher Applications'}
+  'csf_facilitators': {type: 'facilitator', name: 'CS Fundamentals Facilitator Applications', course: 'csf'},
+  'csd_facilitators': {type: 'facilitator', name: 'CS Discoveries Facilitator Applications', course: 'csd'},
+  'csp_facilitators': {type: 'facilitator', name: 'CS Principles Facilitator Applications', course: 'csp'},
+  'csd_teachers': {type: 'teacher', name: 'CS Discoveries Teacher Applications', course: 'csd'},
+  'csp_teachers': {type: 'teacher', name: 'CS Principles Teacher Applications', course: 'csp'}
 };
 
 export default class ApplicationDashboard extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string,
-    regionalPartners: PropTypes.array,
+    regionalPartners: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string
+    })),
     isWorkshopAdmin: PropTypes.bool,
     canLockApplications: PropTypes.bool,
   };
@@ -83,6 +87,7 @@ export default class ApplicationDashboard extends React.Component {
             />
             {
               _.flatten(Object.keys(paths).map((path, i) => {
+                const cohort_path_name = paths[path].name.replace('Applications', 'Cohort');
                 return [
                   (
                     <Route
@@ -94,6 +99,7 @@ export default class ApplicationDashboard extends React.Component {
                       ]}
                       component={DetailView}
                       viewType={paths[path].type}
+                      course={paths[path].course}
                     />
                   ),
                   (
@@ -103,6 +109,16 @@ export default class ApplicationDashboard extends React.Component {
                       breadcrumbs={paths[path].name}
                       component={QuickView}
                       applicationType={paths[path].name}
+                      viewType={paths[path].type}
+                    />
+                  ),
+                  (
+                    <Route
+                      key={`cohort_view_${i}`}
+                      path={`${path}_cohort`}
+                      breadcrumbs={cohort_path_name}
+                      component={CohortView}
+                      applicationType={cohort_path_name}
                       viewType={paths[path].type}
                     />
                   )

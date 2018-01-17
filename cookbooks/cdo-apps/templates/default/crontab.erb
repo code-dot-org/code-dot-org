@@ -54,7 +54,7 @@
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'fetch_external_resources'), notify:'dev+crontab@code.org'
-      cronjob at:'30 17 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
+      cronjob at:'30 16,17 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
       cronjob at:'0 * * * *', do:deploy_dir('tools', 'scripts', 'brokenLinkChecker', 'brokenLinkChecker.js'), notify:'dev+crontab@code.org'
       cronjob at:'0 14 * * *', do:deploy_dir('bin', 'cron', 'github_dms_tasks')
       cronjob at:'0 20 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')

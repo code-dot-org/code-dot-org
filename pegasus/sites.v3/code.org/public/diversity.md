@@ -35,7 +35,7 @@ The charts below show participation in the AP Computer Science exam among female
 ## Diversity of students in Code.org courses across grades K-12
 <center><img src="/images/infographics/fit-800/diversity-courses-updated-05-23.png" style="max-width: 100%"/></center>
 
-Addressing diversity issues is foundational to Code.org’s work, and is woven throughout our programs - from curriculum to teacher professional learning to advocacy to marketing. We focus not only on gender and socioeconomic diversity, but also on increasing participation among underrepresented minorities: African Americans, Hispanic/Latino students, Native American/Alaskans, and Native Hawaiian/Pacific Islanders. We increase diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Of course, when our teachers integrate computer science into classrooms that *all* students attend, we have an immediate impact on diversity. 
+Addressing diversity issues is foundational to Code.org’s work, and is woven throughout our programs - from curriculum to teacher professional learning to advocacy to marketing. We focus not only on gender and socioeconomic diversity, but also on increasing participation among underrepresented minorities: African Americans, Hispanic/Latino students, Native American/Alaskans, and Native Hawaiian/Pacific Islanders. We increase diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Of course, when our teachers integrate computer science into classrooms that *all* students attend, we have an immediate impact on diversity. (Details on how we measure student diversity in our courses are [here](https://docs.google.com/document/u/2/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub))
 
 ### The underrepresentation of minorities in computer science isn't about lack of interest
 Though black, Latinx, American Indian, and Native Pacific Islander students are dramatically underrepresented in university computer science departments (making up just 17% of CS majors) and in AP Computer Science exams, it may seem that they're less interested in studying computer science than their white or Asian peers. But their participation in Code.org courses suggests the opposite. We ran an analysis on our high school CS Principles classrooms, and, it turns out that underrepresented minorities do choose to sign up for our CS classes at much higher rates than national AP data would suggest.
@@ -109,9 +109,10 @@ We’ve also distributed [recruitment posters, videos, and other marketing mater
 
 | Our own team gender diversity |  |
 |------|---|
-| Code.org full time staff |  53% female |
-| Our leadership team | 50% female |
-| Our technical staff (software engineers, technical product managers, computer science educators) | 26% female |
+| Code.org full time staff |  58% female |
+| Our leadership team | 60% female |
+| Our engineering team (software engineers only) | 30% female |
+| Our technical staff (software engineers, technical product managers, computer science educators) | 43% female |
 | Our extended team of expert facilitators|  66% female |
 | The teachers attending our professional development |  86% female |
 

@@ -71,7 +71,7 @@
     "show_d_pad": "false",
     "pause_animations_by_default": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_U3_L11_S17_C1\",\r\n  \"callout_text\": \"Look at this if statement\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered1\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"  if (mushroom.x < -30) {\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 160,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n ]",
-    "markdown_instructions": "# Looping\r\n\r\nThe game will be more fun if the frog can jump more than once.  You can make the mushroom \"loop\" by checking whether it's moved past the left edge and moving it back to the right edge when it has.\r\n\r\n# Do this\r\n* Find the `if` statement that checks whether the mushroom has passed the left edge. ( [Show me where](#triggercallout=code_triggered1) )\r\n* Use the `sprite.x` block to set the mushroom's position back to the right edge if it has.\r\n\r\n",
+    "markdown_instructions": "# Looping\r\n\r\nThe game will be more fun if the frog can jump more than once.  You can make the mushroom \"loop\" by checking whether it's moved past the left edge and moving it back to the right edge when it has.\r\n\r\n# Do this\r\n* Find the `if` statement that checks whether the mushroom has passed the left edge. ( [Show me where](#triggercallout=code_triggered1) )\r\n* Use the `sprite.x` block to set the mushroom's position back to the right edge if it has.",
     "project_template_level_name": "CSD U3 abstraction sidescroll template",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
@@ -81,11 +81,13 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-05 23:43:19 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-05 23:43:19 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-21 22:43:09 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-21 22:43:35 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -666,10 +666,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       OpenStruct.new(
         latitude: 47.6101003,
         longitude: -122.33746,
+        city: 'Seattle',
+        state: 'WA',
         formatted_address: '1501 4th Ave, Seattle, WA 98101, USA'
       )
     ]
-    expected_processed_location = '{"latitude":47.6101003,"longitude":-122.33746,"formatted_address":"1501 4th Ave, Seattle, WA 98101, USA"}'
+    expected_processed_location = '{"latitude":47.6101003,"longitude":-122.33746,"city":"Seattle","state":"WA","formatted_address":"1501 4th Ave, Seattle, WA 98101, USA"}'
     Honeybadger.expects(:notify).never
 
     # Normal lookup

@@ -11,12 +11,23 @@ module Pd::Application
       )
     end
 
-    def accepted(teacher_application)
+    def teachercon_accepted(teacher_application)
       @application = teacher_application
+      @workshop = Pd::Workshop.find(teacher_application.pd_workshop_id)
 
       mail(
         to: @application.user.email,
         subject: "You've been accepted to Code.org's Professional Learning Program!"
+      )
+    end
+
+    def local_summer_accepted(teacher_application)
+      @application = teacher_application
+      @workshop = Pd::Workshop.find(teacher_application.pd_workshop_id)
+
+      mail(
+        to: @application.user.email,
+        subject: "Congratulations from #{@application.regional_partner.name} and Code.org!"
       )
     end
 

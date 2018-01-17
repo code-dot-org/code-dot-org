@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
 import styleConstants from '../../styleConstants';
 import color from "../../util/color";
@@ -202,4 +203,6 @@ class NewProjectButtons extends React.Component {
   }
 }
 
-export default Radium(NewProjectButtons);
+export default connect(state => ({
+  isRtl: state.isRtl,
+}))(Radium(NewProjectButtons));

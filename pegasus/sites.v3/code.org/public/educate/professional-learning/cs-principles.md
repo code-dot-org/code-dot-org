@@ -15,7 +15,7 @@ theme: responsive
 
 Our CS Principles Professional Learning program offers year round support designed for educators teaching a semester or full-year course. You don't need any prior computer science experience to get started!
 
-The program kicks off with a 5-day summer workshop where you'll have the opportunity to work hands-on with the [CS Principles curriculum](/educate/csp) Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. 
+The program kicks off with a 5-day summer workshop where you'll have the opportunity to work hands-on with the [CS Principles curriculum](/educate/csp). Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. 
 
 **Applications for the 2018-19 [CS Principles Professional Learning Program](/files/PLProgramsOverview_1-Pager.pdf) will open in January, 2018.** If you are interested in joining in 2018-19, sign up below. 
 
@@ -59,7 +59,7 @@ Continuing Professional Development: (September - June of the following academic
 
 ## <a name="locations"></a>Where is the program offered?
 
-The CS Principles Professional Learning Program is available in regions served by Code.org's Regional Partners. Please check our map to learn more about where our Regional Partners are located and when they will be hosting summer workshops.
+The CS Principles Professional Learning Program is available in regions served by Code.org's Regional Partners. Please check our map to learn more about where our Regional Partners are located and when they will be hosting summer workshops (dates and locations subject to change).
 <br>
 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dKLjL6y3AKo45c7weK__JI3sxijfbmzq" width="640" height="480"></iframe>
@@ -83,7 +83,7 @@ Not sure if this is the right Code.org program for you? [Check out our program r
 
 ## <a name="facilitate"></a>Become a CS Principles Facilitator
 
-Code.org's [Facilitator Development Program](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on the CS Principles curriculum. 
+Code.org's [Facilitator Development Program](/educate/professional-learning/facilitator) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on the CS Principles curriculum. 
 
 Help bring professional learning opportunities to your community by becoming a Code.org Facilitator!
 

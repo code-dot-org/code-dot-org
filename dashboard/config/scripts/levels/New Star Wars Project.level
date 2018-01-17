@@ -167,10 +167,14 @@
       "upButton"
     ],
     "start_blocks": "setBackground(\"Endor\");\r\nsetMap(\"circle\");\r\nsetDroid(\"R2-D2\");\r\nsetDroidSpeed(\"normal\");\r\nplaySound(\"R2-D2random\");\r\nfunction whenUp() {\r\n  goUp();\r\n}\r\nfunction whenDown() {\r\n  goDown();\r\n}\r\nfunction whenLeft() {\r\n  goLeft();\r\n}\r\nfunction whenRight() {\r\n  goRight();\r\n}",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "remove_items_when_actor_collides": "true",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-12-15 21:42:59 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

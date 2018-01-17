@@ -29,7 +29,7 @@
     "instructions": "Look carefully! Can you collect all *10* pieces of treasure?",
     "markdown_instructions": "Look carefully! Can you collect all **10** pieces of treasure?",
     "callout_json": "[]",
-    "ideal": "17",
+    "ideal": "20",
     "instructions_important": "false",
     "min_collected": "10",
     "hide_share_and_remix": "false",
@@ -37,18 +37,41 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use the `collect` command more often to collect the extra treasure.\",\"hint_id\":\"courseC_collector_prog_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ee9d19f65e35bb065dafe602bb3e346f/courseC_collector_prog_challenge1.mp3\"}]",
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-28 17:33:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-02 16:35:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"min_collected\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-02 16:36:18 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-02 16:36:47 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-02 16:38:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 17:33:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-02 16:35:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"min_collected\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-02 16:36:18 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-02 16:36:47 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-02 16:38:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-11-27 22:42:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-27 22:43:45 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-27 22:45:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_move">
+              <title name="DIR">moveForward</title>
+              <next>
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="collector_collect">
+                      <next>
+                        <block type="collector_collect">
+                          <next>
+                            <block type="collector_collect"/>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -78,44 +101,55 @@
                 <block type="maze_move">
                   <title name="DIR">moveForward</title>
                   <next>
-                    <block type="controls_repeat_dropdown">
-                      <title name="TIMES" config="2-10">3</title>
-                      <statement name="DO">
-                        <block type="collector_collect"/>
-                      </statement>
+                    <block type="collector_collect">
                       <next>
-                        <block type="maze_move">
-                          <title name="DIR">moveForward</title>
+                        <block type="collector_collect">
                           <next>
-                            <block type="maze_move">
-                              <title name="DIR">moveForward</title>
+                            <block type="collector_collect">
                               <next>
-                                <block type="collector_collect">
+                                <block type="maze_move">
+                                  <title name="DIR">moveForward</title>
                                   <next>
-                                    <block type="collector_collect">
+                                    <block type="maze_move">
+                                      <title name="DIR">moveForward</title>
                                       <next>
-                                        <block type="maze_move">
-                                          <title name="DIR">moveForward</title>
+                                        <block type="collector_collect">
                                           <next>
-                                            <block type="maze_move">
-                                              <title name="DIR">moveForward</title>
+                                            <block type="collector_collect">
                                               <next>
-                                                <block type="collector_collect">
+                                                <block type="maze_move">
+                                                  <title name="DIR">moveForward</title>
                                                   <next>
                                                     <block type="maze_move">
                                                       <title name="DIR">moveForward</title>
                                                       <next>
-                                                        <block type="maze_turn">
-                                                          <title name="DIR">turnRight</title>
+                                                        <block type="collector_collect">
                                                           <next>
                                                             <block type="maze_move">
                                                             <title name="DIR">moveForward</title>
                                                             <next>
-                                                            <block type="controls_repeat_dropdown">
-                                                            <title name="TIMES" config="2-10">4</title>
-                                                            <statement name="DO">
+                                                            <block type="maze_turn">
+                                                            <title name="DIR">turnRight</title>
+                                                            <next>
+                                                            <block type="maze_move">
+                                                            <title name="DIR">moveForward</title>
+                                                            <next>
+                                                            <block type="collector_collect">
+                                                            <next>
+                                                            <block type="collector_collect">
+                                                            <next>
+                                                            <block type="collector_collect">
+                                                            <next>
                                                             <block type="collector_collect"/>
-                                                            </statement>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
                                                             </block>
                                                             </next>
                                                             </block>

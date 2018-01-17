@@ -5,10 +5,10 @@ exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit5"], ["teacherForum", "https://forum.code.org/c/csp5"], ["vocabulary", "https://curriculum.code.org/csp/unit5/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp/unit5/code/"], ["standardMappings", "https://curriculum.code.org/csp/unit5/standards/"], ["professionalLearning", "https://studio.code.org/s/csp5-support"]]
 has_verified_resources true
+script_announcements [{"notice"=>"Encourage Your Students to Take the AP CSP Exam!", "details"=>"We have the chance to make history—again. Encourage your students to sign up for the AP exam! Check in with your AP Coordinator to find out the signup deadline for your school. Click \"Learn more\" for details.", "link"=>"http://teacherblog.code.org/post/169508999644/break-records-for-a-second-year-with-the-ap-cs", "type"=>"bullhorn"}]
 
 stage 'Buttons and Events', flex_category: 'csp5_1'
 level 'Unit 5 Lesson 1 Introduction', progression: 'Lesson Vocabulary & Resources'
-
 level 'Introduction to Design Mode', progression: 'Intro to Design Mode in App Lab'
 level 'CSPU5_FirstTimeDesignMode', progression: 'Introduction to Design Mode'
 level 'CSPU5_U3 - Design Mode 1', progression: 'Introduction to Design Mode'
@@ -208,7 +208,6 @@ assessment 'CSP Unit 5 Cumulative Assessment 2 MC'
 
 stage 'While Loops', flex_category: 'csp5_2'
 level 'Unit 5 Lesson 11 Introduction', progression: 'Lesson Vocabulary & Resources'
-
 level 'CSPU5_U3 - Loops - 1', progression: 'Loops'
 level 'CSPU5_U3 - Loops - 2', progression: 'Loops'
 level 'CSPU5_U3 - Loops - 3', progression: 'Loops'

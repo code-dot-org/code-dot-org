@@ -1,33 +1,9 @@
 ---
-<%
-  mode = DCDO.get('hoc_mode', false)
-
-  title = hoc_s(:meta_tag_og_title)
-  title = I18n.t(:og_title_soon) if mode == 'soon-hoc'
-  title = I18n.t(:og_title_here) if mode == 'actual-hoc'
-%>
 layout: wide_index
 title: "<%= hoc_s(:front_title).gsub(/%{campaign_date}/, campaign_date('full-year')) %>"
 social:
-  "og:title": "<%= title %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "<%= 'https://' + request.host + '/images/social-media/hourofcode-2015-video-thumbnail.jpg' %>"
-  "og:image:width": '1440'
-  "og:image:height": '900'
-  "og:video:url": "<%= 'http://youtube.com/v/KsOIlDT145A' %>"
-  "og:video:secure_url": "<%= 'https://youtube.com/v/KsOIlDT145A' %>"
-  "og:video:type": "video/mp4"
-  "og:video:width": "640"
-  "og:video:height": "360"
-  "twitter:card": "player"
   "twitter:site": "@codeorg"
   "twitter:url": "https://hourofcode.com"
-  "twitter:title": "<%= title %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "<%= 'https://' + request.host + '/images/social-media/hourofcode-2015-video-thumbnail.jpg' %>"
-  "twitter:player": "<%= 'https://youtube.com/embed/KsOIlDT145A' %>"
-  "twitter:player:width": "640"
-  "twitter:player:height": "360"
 ---
 %link{href: "/css/highlights-homepage.css", rel: "stylesheet", id: "highlight-styles"}
 

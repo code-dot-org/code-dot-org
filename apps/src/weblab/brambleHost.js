@@ -373,6 +373,13 @@ function refreshPreview() {
   brambleProxy_.refreshPreview();
 }
 
+function enableFullscreenPreview(callback) {
+  brambleProxy_.enableFullscreenPreview(callback);
+}
+
+function disableFullscreenPreview(callback) {
+  brambleProxy_.disableFullscreenPreview(callback);
+}
 function onProjectChanged(callback) {
   onProjectChangedCallback_ = callback;
 }
@@ -451,20 +458,22 @@ if (parent.getWebLab) {
 // expose object for parent window to talk to us through
 const brambleHost = {
   // return file data from the Bramble editor
-  addFileHTML: addFileHTML,
-  addFileCSS: addFileCSS,
-  undo: undo,
-  redo: redo,
-  hideTutorial: hideTutorial,
-  showTutorial: showTutorial,
-  enableInspector: enableInspector,
-  disableInspector: disableInspector,
-  refreshPreview: refreshPreview,
-  onProjectChanged: onProjectChanged,
-  onBrambleReady: onBrambleReady,
-  onInspectorChanged: onInspectorChanged,
-  startInitialFileSync: startInitialFileSync,
-  syncFiles: syncFiles,
+  addFileHTML,
+  addFileCSS,
+  undo,
+  redo,
+  hideTutorial,
+  showTutorial,
+  enableInspector,
+  disableInspector,
+  refreshPreview,
+  enableFullscreenPreview,
+  disableFullscreenPreview,
+  onProjectChanged,
+  onBrambleReady,
+  onInspectorChanged,
+  startInitialFileSync,
+  syncFiles,
 };
 
 // Give our interface to our parent
@@ -475,7 +484,7 @@ function load(Bramble) {
   bramble_ = Bramble;
 
   Bramble.load("#bramble", {
-    url: "//downloads.computinginthecore.org/bramble_0.1.22/index.html?disableExtensions=bramble-move-file",
+    url: "//downloads.computinginthecore.org/bramble_0.1.25/index.html?disableExtensions=bramble-move-file",
     // DEVMODE: INSECURE (local) url: "../blockly/js/bramble/index.html?disableExtensions=bramble-move-file",
     // DEVMODE: INSECURE url: "http://127.0.0.1:8000/src/index.html?disableExtensions=bramble-move-file",
     useLocationSearch: true,

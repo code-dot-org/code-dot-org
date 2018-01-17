@@ -83,6 +83,22 @@ describe Cdo::GoogleCredentials do
       c.credentials.session_token.must_equal credentials[:session_token]
     end
 
+    it 'refreshes expired Google auth token credentials' do
+      m = mock
+      m.stubs(:refresh!)
+      m.stubs(:id_token).
+        returns(JWT.encode({email: 'email', exp: Time.now.to_i - 1}, '')).
+        then.returns(JWT.encode({email: 'email'}, '')).twice
+      Google::Auth.stubs(:get_application_default).returns(m)
+
+      system.times(4)
+
+      c = Aws::STS::Client.new.config.credentials
+      c.credentials.access_key_id.must_equal credentials[:access_key_id]
+      c.credentials.secret_access_key.must_equal credentials[:secret_access_key]
+      c.credentials.session_token.must_equal credentials[:session_token]
+    end
+
     it 'refreshes expired credentials' do
       config[:client].stub_responses(
         :assume_role_with_web_identity,

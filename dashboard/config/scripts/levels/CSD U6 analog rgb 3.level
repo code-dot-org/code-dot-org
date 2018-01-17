@@ -174,7 +174,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Continuous Updates\r\n\r\nThis sensor-to-color app isn't super useful if it only sets the color once when you start the app. You can use the sensors' \"data\" event to make your app continually update the background color every time the value changes.\r\n\r\nMove your `setScale()` blocks into a an event handler for one of the sensors to make the app update continually.",
+    "markdown_instructions": "# Continuous Updates\r\n\r\nThis sensor-to-color app isn't super useful if it only sets the color once when you start the app. You can use the sensors' \"data\" event to make your app continually update the background color every time the value changes.\r\n\r\nMove your `setProperty()` block into a an event handler for one of the sensors to make the app update continually.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -212,11 +212,12 @@
     "makerlab_enabled": "true",
     "project_template_level_name": "CSD U6 analog data template",
     "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-20 23:01:06 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-21 00:10:46 +0000\",\"changed\":[\"code_functions\",\"submittable\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-20 23:01:06 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-21 00:10:46 +0000\",\"changed\":[\"code_functions\",\"submittable\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-27 20:18:02 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

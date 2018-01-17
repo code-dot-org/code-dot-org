@@ -7,25 +7,19 @@ theme: responsive
 
 [col-50]
 
-<img src="/images/fit-450/facilitators.jpg">
+<img src="/images/fit-450/facilitators.png">
 
 [/col-50]
 
 [col-50]
 
-### Applications for the 2018-19 Facilitator Development Program are now available!
+## Change the face of computer science education - become a Code.org facilitator.
 
-**Step 1:** Check out the <a href="https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing", target="_blank">2018-19 Code.org Facilitator Development Program Overview</a>.
+Code.org recognizes the need for highly-qualified, flexible, and knowledgeable facilitators who can develop and support the next generation of computer science (CS) educators. 
 
-**Step 2:** Visit our [courses page](https://studio.code.org/courses?view=teacher) for additional information on our curricula.
+Applications for the 2018-19 cohort have closed. **If you are interested in joining the program in 2019-2020, please sign up below.**
 
-**Step 3:** Set aside 30-45 minutes to complete the application.
-
-Ready to get started?
-
-[<button>Apply now!</button>](https://studio.code.org/pd/application/facilitator)
-
-_The application period will close on December 1, 2017. Applications submitted after Dec. 1st, will only be reviewed at our Regional Partners' discretion._ 
+[<button>Tell me when applications open!</button>](https://goo.gl/forms/IPyERiuLCRG6jF0G3)
 
 [/col-50]
 

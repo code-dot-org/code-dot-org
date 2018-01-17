@@ -5,8 +5,9 @@ import {Provider} from 'react-redux';
 import YourSchool from '@cdo/apps/templates/census2017/YourSchool';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import responsive from '@cdo/apps/code-studio/responsiveRedux';
 
-registerReducers({isRtl});
+registerReducers({isRtl, responsive});
 
 $(document).ready(showYourSchool);
 

@@ -29,11 +29,11 @@ require 'cdo/github'
 require 'cdo/git_utils'
 require 'cdo/honeybadger'
 require 'cdo/infra_production_topic'
+require 'cdo/infra_test_topic'
 require 'cdo/rake_utils'
 require 'cdo/only_one'
 
 STARTED = 'build-started'.freeze
-CHAT_LOG_TAIL_LENGTH = 40
 S3_LOGS_BUCKET = 'cdo-build-logs'.freeze
 S3_LOGS_PREFIX = CDO.name.freeze
 
@@ -134,7 +134,7 @@ def main
 
       if rack_env == :test
         ChatClient.log "<@#{DevelopersTopic.dotd}> DTT finished", color: 'purple'
-        DevelopersTopic.set_dtt 'no (robo-DTT built)'
+        mark_dtt_green
       end
 
       if rack_env == :levelbuilder
@@ -149,13 +149,7 @@ def main
       end
     else
       message = "<b>#{projects}</b> failed to build!" + time_message + log_link
-      truncated_log = <<-LOG
-Showing last #{CHAT_LOG_TAIL_LENGTH} lines of build log:
-#{log.lines.last(CHAT_LOG_TAIL_LENGTH).join('\n')}
-      LOG
       ChatClient.log message, color: 'red'
-      ChatClient.log "/quote #{truncated_log}", color: 'gray', message_format: 'text' unless log.empty?
-      ChatClient.log "/quote #{status}", color: 'gray', message_format: 'text' unless status.is_a?(String) && status.empty?
       ChatClient.log '<!here> build failure', color: 'red'
 
       ChatClient.message 'server operations', message, color: 'red', notify: 1
@@ -172,6 +166,21 @@ Showing last #{CHAT_LOG_TAIL_LENGTH} lines of build log:
   # Return the same output and status code that BUILD returned.
   puts log
   status
+end
+
+def mark_dtt_green
+  # Look at the HEAD revision on the test machine, rather than the one in
+  # GitHub. Otherwise, if someone pushes more changes to the test branch while
+  # the DTT is running, we might accidentally, automatically mark those
+  # untested changes green.
+  test_branch_sha = GitUtils.git_revision_short
+
+  msg = "Automatically marking commit #{test_branch_sha} green"
+  ChatClient.log msg
+  ChatClient.message 'deploy-status', msg
+
+  DevelopersTopic.set_dtt 'yes'
+  InfraTestTopic.set_green_commit test_branch_sha
 end
 
 def emit_deploy_metric(deployment_stage, successful)

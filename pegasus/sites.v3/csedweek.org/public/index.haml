@@ -1,36 +1,9 @@
 ---
-<%
-  mode = DCDO.get('hoc_mode', false)
-
-  description = I18n.t(:csedweek_og_description)
-  description = I18n.t(:csedweek_og_description_soon) if mode == 'soon-hoc'
-  description = I18n.t(:csedweek_og_description_here) if mode == 'actual-hoc'
-
-  title = I18n.t(:csedweek_og_title)
-  title = I18n.t(:og_title_here) if mode == 'actual-hoc'
-%>
 theme: responsive
 banner: null
 social:
-  "og:title": "<%= title %>"
-  "og:description": "<%= description %>"
-  "og:image": "https://<%=request.host%>/images/cs-is-everything-thumbnail.png"
-  "og:image:width": "1200"
-  "og:image:height": "627"
-  "og:video:url": "http://youtube.com/v/QvyTEx1wyOY"
-  "og:video:secure_url": "https://youtube.com/v/QvyTEx1wyOY"
-  "og:video:type": "video/mp4"
-  "og:video:width": "640"
-  "og:video:height": "360"
-  "twitter:card": "player"
   "twitter:site": "@codeorg"
   "twitter:url": "https://csedweek.org/"
-  "twitter:title": "<%= title %>"
-  "twitter:description": "<%= description %>"
-  "twitter:image:src": "https://<%=request.host%>/images/cs-is-everything-thumbnail.png"
-  "twitter:player": "https://youtube.com/embed/QvyTEx1wyOY"
-  "twitter:player:width": "640"
-  "twitter:player:height": "360"
 video_player: true
 ---
 

@@ -3,7 +3,62 @@ title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Unit 6: Lesson 04 - Create PT - Complete the Task
+# Unit 6: Lesson 03 - Create PT - Complete the Task
+
+## Overview
+
+The lesson includes some final reminders and guidelines for completing the Create PT before officially starting. For a total of 12 class hours, you will work on your project with only types of teacher support allowed (essentially: Advise on process, not ideas).  You may also work with a collaborative partner in *in development of you program* - written responses must be done on your own.
+
+## Lesson
+
+* Review Guidelines for completing the task and your plan
+* Complete the Create Performance Task.
+* Submit your video, program code and written responses to the AP Digital Portfolio
+
+
+## Resources
+
+**AP CSP Performance Task Directions for Students - quick links**
+
+* Page 2 - [Policy on Plagiarism](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=4)
+* Page 3 - [Preparing for the Through-Course Performance Tasks](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=5)
+* Page 12 - [Preparing for the Create Performance Task](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=14)
+* Pages 12-13 - [Guidelines for Completing the Create Performance Task](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=14)
+
+
+**College Board Documents**
+
+* [AP CSP Performance Task Directions for Students](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf?course=ap-computer-science-principles) - College Board Student Handout
+* [Create Performance Task - Scoring Guidelines 2018](https://apcentral.collegeboard.org/pdf/2018-create-performance-tasks-sg.pdf)
+
+**Digital Portfolio**
+
+* [AP Digital Portfolio Website](https://digitalportfolio.collegeboard.org/)
+* [Student Guide - AP Digital Portfolio](https://secure-media.collegeboard.org/digitalServices/pdf/ap/computer-science-principles-digital-portfolio-student-guide.pdf)
+
+**Review and Planning Documents**
+
+* [Create PT Survival Guide](https://docs.google.com/document/d/14hzkBeqpBEPHamqvLslGjnh9Js4ZCF61f1wHo8U9Puw/export?format=pdf) (copy as [MS Word](https://docs.google.com/document/d/14hzkBeqpBEPHamqvLslGjnh9Js4ZCF61f1wHo8U9Puw/export?format=doc), [Google Doc](https://docs.google.com/document/d/14hzkBeqpBEPHamqvLslGjnh9Js4ZCF61f1wHo8U9Puw/copy))
+
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+For the Teacher: [AP Digital Portfolio: Teacher User Guide for AP Computer Science Principles](https://apcentral.collegeboard.org/pdf/computer-science-principles-digital-portfolio-teacher-guide.pdf)
+
+Students can find all the links they need on this page. (If you are viewing this from within the lesson plan click Student Overview to see the student view of the page).
+
+Almost all of the links here are for **student reference, to use while completing the task**.
+
+The only new document here is the "Guidelines for completing the task" which are mostly reminders about the requirements and how students are allowed to interact with each other and the teacher.
+
+---
+
+**Deprecated - old content from this page**
+
+On Dec. 13, 2017 we updated this page with new resources and links.  If you're looking for the old stuff, it is copied below, but should be considered out of date.
 
 ## Background
 
@@ -24,7 +79,8 @@ Best of luck!
 * Create PT - Guidelines for completing the task ([PDF](https://docs.google.com/document/d/1j32978IXCaJAE4L_rjwUBo5VZLVmM_BK3TeVi4SbGhU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1j32978IXCaJAE4L_rjwUBo5VZLVmM_BK3TeVi4SbGhU/export?format=doc))
 
 * Where to write the code - 
-	* **Remix an existing project**: *If you are planning to use a previous project as a starting point,* make sure to click the “Remix” button from the original program. This will create a new copy of the program that can be accessed from your project list at [https://studio.code.org/projects](https://studio.code.org/projects)
+    
+* **Remix an existing project**: *If you are planning to use a previous project as a starting point,* make sure to click the \"Remix\" button from the original program. This will create a new copy of the program that can be accessed from your project list at [https://studio.code.org/projects](https://studio.code.org/projects)
     * **Make a new project**: *If you are creating an entirely new program,* create a new App Lab project by visiting [https://studio.code.org/projects/applab/new](https://studio.code.org/projects/applab/new)
 
 **College Board Documents**
@@ -33,11 +89,15 @@ Best of luck!
 * [Create Performance Task](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=11) - Task Description
 * [Scoring Guidelines](https://apcentral.collegeboard.org/pdf/2018-create-performance-tasks-sg.pdf) - Create Performance Task
 * **Digital Portfolio**
-	* [AP Digital Portfolio Website](https://digitalportfolio.collegeboard.org/)
-	* [Student Guide - AP Digital Portfolio](https://secure-media.collegeboard.org/digitalServices/pdf/ap/computer-science-principles-digital-portfolio-student-guide.pdf)
+    
+* [AP Digital Portfolio Website](https://digitalportfolio.collegeboard.org/)
+    
+* [Student Guide - AP Digital Portfolio](https://secure-media.collegeboard.org/digitalServices/pdf/ap/computer-science-principles-digital-portfolio-student-guide.pdf)
 * **Student Samples**
-	* Create PT Samples -  Sample A ([video](https://youtu.be/suZL5PnpD8Y) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-a.pdf)) | Sample B ([video](https://youtu.be/Mh6Zp3kttEA) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-b.pdf)) |  Sample C ([video](https://youtu.be/uKVGOZv4H1g) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-c.pdf)) | Sample D ([video](https://youtu.be/zT1XNAS4oGE) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-d.pdf)) | Sample E ([video](https://youtu.be/fjwPSa-8bdA) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-e.pdf)) | Sample F ([video](https://youtu.be/ntgPW8mQBR4) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-f.pdf)) | Sample G ([video](https://youtu.be/xj9p8XCXpZc) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-g.pdf)) | Sample H ([video](https://youtu.be/yE1xSV8LNhE) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-h.pdf)) | Sample I ([video](https://youtu.be/_hNSzslOCAA) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-i.pdf)) | Sample J ([video](https://youtu.be/N_R3T1_deAo) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-j.pdf))
-	* Create Scoring Commentary: For all samples - [Sample Create PTs Scoring Commentary](https://apcentral.collegeboard.org/pdf/ap-csp-create-commentary-sg18.pdf)
+    
+* Create PT Samples -  Sample A ([video](https://youtu.be/suZL5PnpD8Y) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-a.pdf)) | Sample B ([video](https://youtu.be/Mh6Zp3kttEA) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-b.pdf)) |  Sample C ([video](https://youtu.be/uKVGOZv4H1g) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-c.pdf)) | Sample D ([video](https://youtu.be/zT1XNAS4oGE) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-d.pdf)) | Sample E ([video](https://youtu.be/fjwPSa-8bdA) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-e.pdf)) | Sample F ([video](https://youtu.be/ntgPW8mQBR4) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-f.pdf)) | Sample G ([video](https://youtu.be/xj9p8XCXpZc) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-g.pdf)) | Sample H ([video](https://youtu.be/yE1xSV8LNhE) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-h.pdf)) | Sample I ([video](https://youtu.be/_hNSzslOCAA) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-i.pdf)) | Sample J ([video](https://youtu.be/N_R3T1_deAo) | [written responses](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-create-sample-j.pdf))
+    
+* Create Scoring Commentary: For all samples - [Sample Create PTs Scoring Commentary](https://apcentral.collegeboard.org/pdf/ap-csp-create-commentary-sg18.pdf)
 
 **Review and Planning Documents**
 
@@ -45,18 +105,6 @@ Best of luck!
 * Create PT - Sample Timeline ([PDF](https://docs.google.com/document/d/1PYINL-5DgAFJiZuGJ0mZ2prXDN2zANbl8CH5xFpz8lg/export?format=pdf) |  [DOCX](https://docs.google.com/document/d/1PYINL-5DgAFJiZuGJ0mZ2prXDN2zANbl8CH5xFpz8lg/export?format=doc))
 * (Optional) Create PT - Template for written responses ([PDF](https://docs.google.com/document/d/1p_fwDMYW0b95Nc9-0M-Cb34eMGOd-Io1OhcOkyk6qOI/export?format=pdf) |  [DOCX](https://docs.google.com/document/d/1p_fwDMYW0b95Nc9-0M-Cb34eMGOd-Io1OhcOkyk6qOI/export?format=doc))
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-For the Teacher: [AP Digital Portfolio: Teacher User Guide for AP Computer Science Principles](https://apcentral.collegeboard.org/pdf/computer-science-principles-digital-portfolio-teacher-guide.pdf)
-
-
-Students can find all the links they need on this page. (If you are viewing this from within the lesson plan click Student Overview to see the student view of the page).
-
-Almost all of the links here are for **student reference, to use while completing the task**.
-
-The only new document here is the "Guidelines for completing the task" which are mostly reminders about the requirements and how students are allowed to interact with each other and the teacher.
 
 
 MARKDOWN

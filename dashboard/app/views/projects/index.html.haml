@@ -12,13 +12,12 @@
 %script{src: minifiable_asset_path('js/projects/index.js')}
 
 .projects-page
-  .row
-    #projects-header
+  #projects-header
 
-    #new-project-buttons
+  #new-project-buttons
 
-    #angular-my-projects-wrapper{'style' => ('display: none;' if is_public)}
-      %div{'ng-app' => 'projectsApp', 'ng-view' => ''}
-    #public-gallery-wrapper{'style' => ('display: none;' unless is_public)}
-      #public-gallery
-    #publish-confirm
+  #angular-my-projects-wrapper{'style' => ('display: none;' if is_public)}
+    %div{'ng-app' => 'projectsApp', 'ng-view' => ''}
+  #public-gallery-wrapper{'style' => ('display: none;' unless is_public)}
+    #public-gallery
+  #publish-confirm

@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  UnconnectedSetUpSections as SetUpSections,
-} from './SetUpSections';
+import SetUpSections from './SetUpSections';
 
 export default storybook => storybook
   .storiesOf('SetUpSections', module)

@@ -27,7 +27,7 @@ Our Computer Science Fundamentals courses have about 15 lessons that may be impl
 
 If you like teaching CS Fundamentals, invite other teachers by [sharing this handout](/files/csf-one-pager.pdf).
 
-Our curriculum [aligns to the newly revised 2017 CSTA standards](https://curriculum.code.org/csf/standards/) and is available at [no cost](/commitment) for anyone, anywhere to teach. Read more about our [curriculum values](/educate/curriculum/values).
+Our curriculum [aligns to the newly revised 2017 CSTA standards](https://curriculum.code.org/csf/standards/) and is available at [no cost](/commitment) for anyone, anywhere to teach. For more information about our goals and approach to our courses, please see our [curriculum values](/educate/curriculum/values) and our [professional learning values](/educate/professional-learning/values).
 
 [/col-60]
 

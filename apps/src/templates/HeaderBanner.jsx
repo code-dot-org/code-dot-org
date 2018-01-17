@@ -97,7 +97,7 @@ const HeaderBanner = React.createClass({
     description: PropTypes.string,
     children: PropTypes.node,
     short: PropTypes.bool,
-    responsiveSize: React.PropTypes.oneOf(['xs', 'md', 'lg', 'xl']).isRequired,
+    responsiveSize: React.PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   },
 
   render() {

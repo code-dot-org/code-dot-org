@@ -259,8 +259,8 @@ As lessons are completed we will also be publishing them on the website we invit
 
 #### How/Where can I get professional development for this course?
 
-We are now accepting applications for the 2017-18 Professional Learning Program for CS Discoveries!
+We are now accepting applications for the 2018-19 Professional Learning Program for CS Discoveries!
 
-<a href="/educate/professional-learning/cs-discoveries-apply"><button>Apply now!</button></a>
+<a href="/educate/professional-learning/cs-discoveries"><button>Apply now!</button></a>
 
 -->

@@ -63,6 +63,7 @@ exports.TestResults = {
   LOCAL_FUNCTION_FAIL: -6,            // The program contains an unexpected JavaScript local function
   GENERIC_LINT_FAIL: -7,              // The program contains a lint error
   LOG_CONDITION_FAIL: -8,             // The program execution log did not pass a required condition
+  BLOCK_LIMIT_FAIL: -9,               // Puzzle was solved using more than the toolbox limit of a block
 
   // Codes for unvalidated levels.
   UNSUBMITTED_ATTEMPT: -50,           // Progress was saved without submitting for review, or was unsubmitted.

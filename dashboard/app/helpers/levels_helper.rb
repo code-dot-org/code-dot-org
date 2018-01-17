@@ -132,6 +132,8 @@ module LevelsHelper
     # Always pass user age limit
     view_options(is_13_plus: current_user && !current_user.under_13?)
 
+    view_options(user_id: current_user.id) if current_user
+
     view_options(server_level_id: @level.id)
     if @script_level
       view_options(
@@ -289,6 +291,7 @@ module LevelsHelper
     app_options[:level] ||= {}
     app_options[:level].merge! @level.properties.camelize_keys
     app_options.merge! view_options.camelize_keys
+    set_puzzle_position_options(app_options[:level])
     app_options
   end
 
@@ -306,10 +309,10 @@ module LevelsHelper
   end
 
   def set_tts_options(level_options, app_options)
-    # Text to speech
+    # Text to speech - set url to empty string if the instructions are empty
     if @script && @script.text_to_speech_enabled?
-      level_options['ttsInstructionsUrl'] = @level.tts_url(@level.tts_instructions_text)
-      level_options['ttsMarkdownInstructionsUrl'] = @level.tts_url(@level.tts_markdown_instructions_text)
+      level_options['ttsInstructionsUrl'] = @level.tts_instructions_text.empty? ? "" : @level.tts_url(@level.tts_instructions_text)
+      level_options['ttsMarkdownInstructionsUrl'] = @level.tts_markdown_instructions_text.empty? ? "" : @level.tts_url(@level.tts_markdown_instructions_text)
     end
 
     app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
@@ -319,6 +322,12 @@ module LevelsHelper
     if @script && @script.hint_prompt_enabled?
       level_options[:hintPromptAttemptsThreshold] = @script_level.hint_prompt_attempts_threshold
     end
+  end
+
+  def set_puzzle_position_options(level_options)
+    script_level = @script_level
+    level_options['puzzle_number'] = script_level ? script_level.position : 1
+    level_options['stage_total'] = script_level ? script_level.stage_total : 1
   end
 
   # Options hash for Weblab
@@ -332,10 +341,7 @@ module LevelsHelper
     level_options = l.weblab_level_options.dup
     app_options[:level] = level_options
 
-    # ScriptLevel-dependent option
-    script_level = @script_level
-    level_options['puzzle_number'] = script_level ? script_level.position : 1
-    level_options['stage_total'] = script_level ? script_level.stage_total : 1
+    set_puzzle_position_options(level_options)
 
     # Ensure project_template_level allows start_sources to be overridden
     level_options['startSources'] = @level.try(:project_template_level).try(:start_sources) || @level.start_sources
@@ -542,7 +548,6 @@ module LevelsHelper
       app_options[:firebaseAuthToken] = firebase_auth_token
       app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
     end
-    app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::RESET_ABUSE)
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?

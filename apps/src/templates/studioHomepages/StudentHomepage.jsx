@@ -14,7 +14,6 @@ export default class StudentHomepage extends Component {
     courses: shapes.courses,
     topCourse: shapes.topCourse,
     sections: shapes.sections,
-    isRtl: PropTypes.bool.isRequired,
     canLeave: PropTypes.bool.isRequired,
     canViewAdvancedTools: PropTypes.bool,
   };
@@ -25,7 +24,7 @@ export default class StudentHomepage extends Component {
   }
 
   render() {
-    const { courses, sections, isRtl, canLeave, topCourse } = this.props;
+    const { courses, sections, canLeave, topCourse } = this.props;
     const { canViewAdvancedTools } = this.props;
 
     return (
@@ -41,16 +40,13 @@ export default class StudentHomepage extends Component {
           courses={courses}
           topCourse={topCourse}
           isTeacher={false}
-          isRtl={false}
         />
         <ProjectWidgetWithData
-          isRtl={isRtl}
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
         />
         <StudentSections
           initialSections={sections}
-          isRtl={isRtl}
           canLeave={canLeave}
         />
       </div>

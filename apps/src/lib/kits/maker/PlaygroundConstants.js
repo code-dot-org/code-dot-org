@@ -21,7 +21,7 @@ export const COMPONENT_EVENTS = {
   buttonL: BUTTON_EVENTS,
   buttonR: BUTTON_EVENTS,
   toggleSwitch: ['open', 'close', 'change'],
-  accelerometer: ['change', 'data', 'singleTap', 'doubleTap']
+  accelerometer: ['change', 'data', 'shake']
 };
 SENSOR_VARS.forEach(s => COMPONENT_EVENTS[s] = SENSOR_EVENTS);
 if (experiments.isEnabled('maker-captouch')) {
@@ -30,7 +30,8 @@ if (experiments.isEnabled('maker-captouch')) {
 
 export const BOARD_EVENT_ALIASES = {
   // codeStudioName: 'playground-io-name'
-  singleTap: 'tap:single',
+  shake: 'tap:single',
+  singleTap:'tap:single',
   doubleTap: 'tap:double'
 };
 
@@ -39,6 +40,8 @@ export const SONG_CHARGE = [
   ['G3', 1/4], ['C4', 1/4], ['E4', 1/4], ['G4', 1/8],
   [null, 3/8], ['E4', 3/16], ['G4', 1]
 ];
+
+export const SONG_1D = ["B4", null, "B4", null, "G#4", "F#4", "E4", null, "E4"];
 
 // Circuit playground command codes for certain needed overrides
 // See playground-io/lib/index.js

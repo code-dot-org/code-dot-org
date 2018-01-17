@@ -212,6 +212,18 @@ WebLab.prototype.init = function (config) {
     });
   }
 
+  function onStartFullScreenPreview() {
+    this.brambleHost.enableFullscreenPreview(() => {
+      getStore().dispatch(actions.changeFullScreenPreviewOn(true));
+    });
+  }
+
+  function onEndFullScreenPreview() {
+    this.brambleHost.disableFullscreenPreview(() => {
+      getStore().dispatch(actions.changeFullScreenPreviewOn(false));
+    });
+  }
+
   function onToggleInspector() {
     if (getStore().getState().inspectorOn) {
       this.brambleHost.disableInspector();
@@ -229,6 +241,8 @@ WebLab.prototype.init = function (config) {
         onUndo={onUndo.bind(this)}
         onRedo={onRedo.bind(this)}
         onRefreshPreview={onRefreshPreview.bind(this)}
+        onStartFullScreenPreview={onStartFullScreenPreview.bind(this)}
+        onEndFullScreenPreview={onEndFullScreenPreview.bind(this)}
         onToggleInspector={onToggleInspector.bind(this)}
         onMount={onMount}
       />
@@ -409,7 +423,7 @@ WebLab.prototype.onIsRunningChange = function () {
  * Load the file entry list and store it as this.fileEntries
  */
 WebLab.prototype.loadFileEntries = function () {
-  filesApi.getFiles(this.getCurrentFilesVersionId(), result => {
+  filesApi.getFiles(result => {
     assetListStore.reset(result.files);
     this.fileEntries = assetListStore.list().map(fileEntry => ({
       name: fileEntry.filename,
@@ -431,7 +445,8 @@ WebLab.prototype.loadFileEntries = function () {
   }, xhr => {
     console.error('files API failed, status: ' +  xhr.status);
     this.fileEntries = null;
-  });
+  },
+  this.getCurrentFilesVersionId());
 };
 
 /**

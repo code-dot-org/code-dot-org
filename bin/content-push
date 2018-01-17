@@ -43,8 +43,12 @@ def disallow_state_pdf
   end
 end
 
+def has_changes?
+  !`git status --porcelain --untracked-files=all #{CONTENT_PATHS}`.empty?
+end
+
 def check_changes
-  if `git status --porcelain --untracked-files=all #{CONTENT_PATHS}`.empty?
+  unless has_changes?
     puts "There are no unstaged or untracked files to commit."
     return false
   end
@@ -65,6 +69,8 @@ def check_changes
 end
 
 def commit_changes(name)
+  exit 0 unless has_changes?
+
   branchname = GitUtils.current_branch
   exit 1 unless system("git add -A #{CONTENT_PATHS}")
   exit 1 unless system("git commit #{CONTENT_PATHS} -m '#{branchname} content changes (-#{name})'")

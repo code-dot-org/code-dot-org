@@ -18,6 +18,8 @@
 #  response_scores                     :text(65535)
 #  application_guid                    :string(255)
 #  decision_notification_email_sent_at :datetime
+#  accepted_at                         :datetime
+#  properties                          :text(65535)
 #
 # Indexes
 #
@@ -415,6 +417,7 @@ module Pd::Application
       ]
     end
 
+    # @override
     # Filter out extraneous answers, based on selected program (course)
     def self.filtered_labels(course)
       labels_to_remove = (course == 'csf' ?
@@ -427,17 +430,11 @@ module Pd::Application
     end
 
     # @override
-    # Filter out extraneous answers, based on selected program (course)
-    def full_answers
-      super.slice(*self.class.filtered_labels(course).keys)
-    end
-
-    # @override
     def self.csv_header(course)
       # strip all markdown formatting out of the labels
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
-        columns = filtered_labels(course).values.map {|l| markdown.render(l)}
+        columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
         columns.push 'Status', 'Locked', 'Notes', 'Regional Partner'
         csv << columns
       end
@@ -451,6 +448,12 @@ module Pd::Application
         row.push status, locked?, notes, regional_partner_name
         csv << row
       end
+    end
+
+    # @override
+    # Add account_email (based on the associated user's email) to the sanitized form data hash
+    def sanitize_form_data_hash
+      super.merge(account_email: user.email)
     end
 
     # Formats hour as 0-12(am|pm)

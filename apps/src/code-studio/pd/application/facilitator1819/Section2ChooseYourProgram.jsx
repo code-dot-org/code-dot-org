@@ -1,12 +1,12 @@
 import React from 'react';
 import {FormGroup} from "react-bootstrap";
-import ApplicationFormComponent from "../ApplicationFormComponent";
+import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 
 const PROGRAM_CSF = "CS Fundamentals (Pre-K - 5th grade)";
 const CSF_AVAILABILITY_ONLY_WEEKEND = "I will only be able to attend Saturday and Sunday of the training";
 
-export default class Section2ChooseYourProgram extends ApplicationFormComponent {
+export default class Section2ChooseYourProgram extends LabeledFormComponent {
   static labels = PageLabels.section2ChooseYourProgram;
 
   static associatedFields = [

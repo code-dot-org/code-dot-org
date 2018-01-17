@@ -104,8 +104,8 @@ const styles = {
   }
 };
 
-const TutorialDetail = React.createClass({
-  propTypes: {
+export default class TutorialDetail extends React.Component {
+  static propTypes = {
     showing: PropTypes.bool.isRequired,
     item: shapes.tutorial,
     closeClicked: PropTypes.func.isRequired,
@@ -113,17 +113,17 @@ const TutorialDetail = React.createClass({
     localeEnglish: PropTypes.bool.isRequired,
     disabledTutorial: PropTypes.bool.isRequired,
     grade: PropTypes.string.isRequired
-  },
+  };
 
   componentDidMount() {
     document.addEventListener('keydown', this.onKeyDown);
-  },
+  }
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.onKeyDown);
-  },
+  }
 
-  onKeyDown({keyCode}) {
+  onKeyDown = ({keyCode}) => {
     if (!this.props.showing) {
       return;
     }
@@ -135,12 +135,13 @@ const TutorialDetail = React.createClass({
     } else if (keyCode === 39) {
       this.props.changeTutorial(1);
     }
-  },
+  };
 
-  startTutorialClicked(shortCode) {
+  startTutorialClicked = () => {
+    const shortCode = this.props.item.short_code;
     ga('send', 'event', 'learn', 'start', shortCode);
     ga('send', 'event', 'learn', `start-${this.props.grade}`, shortCode);
-  },
+  };
 
   render() {
     if (!this.props.showing) {
@@ -166,7 +167,7 @@ const TutorialDetail = React.createClass({
 
     const imageSrc = this.props.item.image.replace("/images/", "/images/fill-480x360/").replace(".png", ".jpg");
 
-    var imageComponent = (
+    const imageComponent = (
       <div style={styles.tutorialDetailImageOuterContainer} className="col-xs-12 col-sm-6">
         <div style={styles.tutorialDetailImageContainer}>
           <div style={styles.tutorialDetailImageBackground}/>
@@ -220,7 +221,7 @@ const TutorialDetail = React.createClass({
                   <a
                     href={this.props.item.url}
                     target="_blank"
-                    onClick={this.startTutorialClicked.bind(this, this.props.item.short_code)}
+                    onClick={this.startTutorialClicked}
                   >
                     {imageComponent}
                   </a>
@@ -254,7 +255,7 @@ const TutorialDetail = React.createClass({
                     <a
                       href={this.props.item.url}
                       target="_blank"
-                      onClick={this.startTutorialClicked.bind(this, this.props.item.short_code)}
+                      onClick={this.startTutorialClicked}
                     >
                       <button style={{marginTop: 20}}>{i18n.startButton()}</button>
                     </a>
@@ -270,7 +271,7 @@ const TutorialDetail = React.createClass({
                         </td>
                         <td style={styles.tutorialDetailsTableBody}>
                           <a href={this.props.item.teachers_notes} target="_blank">
-                            <i className="fa fa-external-link" aria-hidden={true}></i>
+                            <i className="fa fa-external-link" aria-hidden={true}/>
                             &nbsp;
                             {i18n.tutorialDetailsTeacherNotes()}
                           </a>
@@ -319,7 +320,4 @@ const TutorialDetail = React.createClass({
       </div>
     );
   }
-});
-
-export default TutorialDetail;
-
+}

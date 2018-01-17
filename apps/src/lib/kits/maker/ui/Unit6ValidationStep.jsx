@@ -9,7 +9,8 @@ const styles = {
   },
   question: {
     marginBottom: 5,
-    fontWeight: 'bold',
+    // bolder
+    fontFamily: '"Gotham 7r", sans-serif',
   },
   radio: {
     margin: '0px 10px'
@@ -19,7 +20,7 @@ const styles = {
   },
   errorText: {
     color: 'red',
-  }
+  },
 };
 
 export default class Unit6ValidationStep extends Component {
@@ -81,9 +82,9 @@ export default class Unit6ValidationStep extends Component {
           <div>
             {i18n.eligibilityReqYearFail()}
             <form style={styles.unit6Form}>
-              <div style={styles.question}>
+              <strong style={styles.question}>
                 {i18n.eligibilityReqYearConfirmInstructions()}
-              </div>
+              </strong>
               {[
                 ['no', i18n.eligibilityYearNo()],
                 ['yes1718', i18n.eligibilityYearYes1718()],

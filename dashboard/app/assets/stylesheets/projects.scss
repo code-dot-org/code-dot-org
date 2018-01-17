@@ -1,11 +1,6 @@
 @import "color";
 
 .projects-page {
-  // Make the projects page 970px wide, accounting for the -20px margin which
-  // application.scss puts on .row elements, and various other rules which
-  // terribly depend on that negative margin.
-  width: 950px;
-
   h1 {
     text-align: center;
   }

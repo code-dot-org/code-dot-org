@@ -166,6 +166,14 @@ namespace :seed do
     School.seed_all
   end
 
+  task ap_school_codes: :environment do
+    Census::ApSchoolCode.seed
+  end
+
+  task ap_cs_offerings: :environment do
+    Census::ApCsOffering.seed
+  end
+
   # Seeds the data in regional_partners
   task regional_partners: :environment do
     RegionalPartner.transaction do

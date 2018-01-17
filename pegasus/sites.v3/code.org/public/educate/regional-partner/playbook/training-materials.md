@@ -169,19 +169,24 @@ ________________
 
   December 2017  
 
-  - Dec 12 TEALS & the CS Principles Classroom (Video Coming Soon)
+  - Dec 12 TEALS & the CS Principles Classroom ([Video](https://code.zoom.us/recording/play/7YH4DmJAL5OutCqgRsE5-YORNg0RUP5Uu-c_KtcX0P-LS-ohu9wUfXJS-K_URZz6))
 
   November 2017
 
-  - Nov 6 (Group 1) Group 1 Partner Sustainability Planning & CS Fundamentals Program [Video](http://videos.code.org/plp/group1-partner-sustainability.mp4)
-  - Nov 7 (Group 2 & 3) CS Fundamentals Program Meeting [Video](http://videos.code.org/plp/cs-fundamentals-program.mp4)
-  - Nov 29 (Group 3) Facilitator Interview Process Virtual Meeting [Video](http://videos.code.org/plp/facilitator-applications-group3.mp4)
-  - Nov 30 (Group 1 & 2) Facilitator Interview Process Virtual Meeting [Video] (http://videos.code.org/plp/facilitator-applications-group1&2.mp4)
+  - Nov 1 (Group 3)  Facilitator Application Process Meeting ([Video] (https://code.zoom.us/recording/play/YZM2cTTmiqmj7j9Hbl4F01UOzb1SacQPAMeS6lT4dp8wRGkNmsDyTojAIPtuYtHg)
+  - Nov 2 (Group 1 & 2)  Facilitator Application Process Meeting ([Video](https://code.zoom.us/recording/play/QmCDGnLI7rzNAfgh_S4UQAAEouzONxsxBr6bZG8GyAc9z5dXLA-rWbIm5rhZO3Jx))
+  - Nov 6 (Group 1) Group 1 Partner Sustainability Planning & CS Fundamentals Program [Video](https://code.zoom.us/recording/play/GQyAdC4l3EvCTxJ0Vqmm8Ut3KzwdYw2H8pjbAU7DQRpUVatwh50iUciZJtJxfIQj?autoplay=true)
+  - Nov 7 (Group 2 & 3) CS Fundamentals Program Meeting [Video](https://code.zoom.us/recording/play/1Wv_0js9OWADSq-Si10Ap5xxAHIRGsSiRAcZd-LpHYz1xgTIM7JjNX8_e1cDbfgL)
+  - Nov 29 (Group 3) Facilitator Interview Process Virtual Meeting [Video](https://code.zoom.us/recording/play/1FfVGNpYtTgCJp6k7OoPwsNWThfsFJY0tKs1j6Dmkv0PJg3Uv7FeHk42C3Lr33bY)
+  - Nov 30 (Group 1 & 2) Facilitator Interview Process Virtual Meeting [Video] (https://code.zoom.us/recording/play/526dKZPrGxY2Qt53dnzjwQ5ZZsymMl-E_FY9uA5Fee5_9omgEuADdaI0IY4hxDBd)
+
+  October 2017
+
+  - October 19, 2017 Hour of Code Meeting ([Video](https://code.zoom.us/recording/play/wivm29HGNRKwHjj9lbija7G0Oo6HX_J4AvWh0kYMOt5MRlgct7P-_Nwp0ZC-fPkl))
 
   September 2017
 
   - Sept 14 (Group 3) Welcome Webinar [Video](http://videos.code.org/plp/new-partner.mp4)
-  - Sept 25 Special K-12 Post-Announcement Webinar for Regional Partners [Video](http://videos.code.org/plp/special-k12-post-announcement.mp4)
 
   May 2017:
 
