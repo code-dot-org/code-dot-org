@@ -33,8 +33,12 @@
 #  index_pd_applications_on_user_id              (user_id)
 #
 
+require 'cdo/shared_constants/pd/principal_approval1819_application_constants'
+
 module Pd::Application
   class PrincipalApproval1819Application < ApplicationBase
+    include PrincipalApproval1819ApplicationConstants
+
     def set_type_and_year
       self.application_year = YEAR_18_19
       self.application_type = PRINCIPAL_APPROVAL_APPLICATION
@@ -44,20 +48,19 @@ module Pd::Application
     belongs_to :teacher_application, class_name: 'Pd::Application::Teacher1819Application',
       primary_key: :application_guid, foreign_key: :application_guid
 
-    DONT_KNOW_EXPLAIN = "I don't know (please explain):"
     def self.options
       {
         title: COMMON_OPTIONS[:title],
         school_state: COMMON_OPTIONS[:state],
         school_type: COMMON_OPTIONS[:school_type],
-        do_you_approve: [YES, NO, OTHER_WITH_TEXT],
-        committed_to_master_schedule: [YES, NO, OTHER_WITH_TEXT],
+        do_you_approve: [YES, NO, TEXT_FIELDS[:other_with_text]],
+        committed_to_master_schedule: [YES, NO, TEXT_FIELDS[:other_with_text]],
         hours_per_year: COMMON_OPTIONS[:course_hours_per_year],
         terms_per_year: COMMON_OPTIONS[:terms_per_year],
         replace_course: [
           YES,
           "No, this course will be added to the schedule, but it won't replace an existing computer science course",
-          DONT_KNOW_EXPLAIN
+          TEXT_FIELDS[:dont_know_explain]
         ],
         replace_which_course_csp: [
           'Beauty and Joy of Computing',
@@ -72,7 +75,7 @@ module Pd::Application
           'UTeach CSP',
           'Web Development',
           'We’ve created our own course',
-          OTHER_PLEASE_EXPLAIN
+          TEXT_FIELDS[:other_please_explain]
         ],
         replace_which_course_csd: [
           'CodeHS',
@@ -87,12 +90,13 @@ module Pd::Application
           'ScratchEd',
           'Typing',
           'We’ve created our own course',
-          OTHER_PLEASE_EXPLAIN
+          TEXT_FIELDS[:other_please_explain]
         ],
-        committed_to_diversity: [YES, NO, OTHER_PLEASE_EXPLAIN],
+        committed_to_diversity: [YES, NO, TEXT_FIELDS[:other_please_explain]],
         pay_fee: [
-          'Yes, my school or my teacher will be able to pay the full summer workshop program fee',
-          'No, my school or my teacher will not be able to pay the summer workshop program fee.'
+          'Yes, my school or my teacher will be able to pay the full summer workshop program fee.',
+          'No, my school or my teacher will not be able to pay the summer workshop program fee.',
+          'Not applicable: there is no fee for the summer workshop for teachers in my region.'
         ]
       }
     end
@@ -143,10 +147,10 @@ module Pd::Application
     def additional_text_fields
       [
         [:committed_to_master_schedule],
-        [:replace_course, DONT_KNOW_EXPLAIN, :replace_course_other],
-        [:committed_to_diversity, OTHER_PLEASE_EXPLAIN, :committed_to_diversity_other],
-        [:replace_which_course_csd, OTHER_PLEASE_EXPLAIN, :replace_which_course_csd_other],
-        [:replace_which_course_csp, OTHER_PLEASE_EXPLAIN, :replace_which_course_csp_other],
+        [:replace_course, TEXT_FIELDS[:dont_know_explain], :replace_course_other],
+        [:committed_to_diversity, TEXT_FIELDS[:other_please_explain], :committed_to_diversity_other],
+        [:replace_which_course_csd, TEXT_FIELDS[:other_please_explain], :replace_which_course_csd_other],
+        [:replace_which_course_csp, TEXT_FIELDS[:other_please_explain], :replace_which_course_csp_other],
         [:do_you_approve]
       ]
     end

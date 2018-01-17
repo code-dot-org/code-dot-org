@@ -1,9 +1,9 @@
 import React from 'react';
-import ApplicationFormComponent from "../ApplicationFormComponent";
+import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import {FormGroup} from 'react-bootstrap';
 
-export default class Section5Submission extends ApplicationFormComponent {
+export default class Section5Submission extends LabeledFormComponent {
   static labels = PageLabels.section5Submission;
 
   static associatedFields = [

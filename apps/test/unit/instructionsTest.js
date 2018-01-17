@@ -266,7 +266,9 @@ describe('determineInstructionsConstants', () => {
           app: undefined,
           scriptName: undefined,
           stagePosition: undefined,
-          levelPosition: undefined
+          levelPosition: undefined,
+          serverLevelId: undefined,
+          scriptId: undefined
         });
       });
     });
@@ -298,7 +300,9 @@ describe('determineInstructionsConstants', () => {
         app: undefined,
         scriptName: undefined,
         stagePosition: undefined,
-        levelPosition: undefined
+        levelPosition: undefined,
+        serverLevelId: undefined,
+        scriptId: undefined
       });
     });
 
@@ -330,7 +334,9 @@ describe('determineInstructionsConstants', () => {
         app: undefined,
         scriptName: undefined,
         stagePosition: undefined,
-        levelPosition: undefined
+        levelPosition: undefined,
+        serverLevelId: undefined,
+        scriptId: undefined
       });
     });
 
@@ -419,7 +425,9 @@ describe('determineInstructionsConstants', () => {
         app: undefined,
         scriptName: undefined,
         stagePosition: undefined,
-        levelPosition: undefined
+        levelPosition: undefined,
+        serverLevelId: undefined,
+        scriptId: undefined
       });
     });
   });

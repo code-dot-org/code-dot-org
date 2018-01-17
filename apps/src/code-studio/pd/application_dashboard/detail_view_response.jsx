@@ -1,12 +1,21 @@
 import React, {PropTypes} from 'react';
 import _ from 'lodash';
-import {FormControl, Panel} from 'react-bootstrap';
+import {
+  Row,
+  Col,
+  FormControl,
+  Panel
+} from 'react-bootstrap';
 import MarkdownSpan from '../components/markdownSpan';
 
 const styles = {
   lineItem: {
     fontFamily: '"Gotham 7r"',
     marginRight: '10px'
+  },
+  panel: {
+    width: '66%',
+    minWidth: 500
   }
 };
 
@@ -33,7 +42,7 @@ export default class DetailViewResponse extends React.Component {
     possibleScores: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
     editing: PropTypes.bool,
     handleScoreChange: PropTypes.func
-  }
+  };
 
   renderScoreOptions() {
     return this.props.possibleScores.map((score, i) => (
@@ -76,36 +85,36 @@ export default class DetailViewResponse extends React.Component {
         );
       } else {
         const heading = (
-          <div className="row">
-            <div className={scoredQuestion ? 'col-md-9' : 'col-md-12'}>
+          <Row>
+            <Col xs={scoredQuestion ? 9 : 12}>
               <Question text={this.props.question}/>
-            </div>
+            </Col>
             {
               scoredQuestion && (
-                <div className="col-md-3">
+                <Col xs={3}>
                   {
                     _.isEqual(this.props.possibleScores, ['Yes', 'No']) ? 'Meets requirements' : 'Score'
                   }
-                </div>
+                </Col>
               )
             }
-          </div>
+          </Row>
         );
 
         return (
-          <Panel header={heading} style={{width: '66%'}}>
-            <div className="row">
-              <div className={scoredQuestion ? 'col-md-9' : 'col-md-12'}>
+          <Panel header={heading} style={styles.panel}>
+            <Row>
+              <Col xs={scoredQuestion ? 9 : 12}>
                 {renderedValue}
-              </div>
+              </Col>
               {
                 scoredQuestion && (
-                  <div className="col-md-3">
+                  <Col xs={3}>
                     {this.renderScore()}
-                  </div>
+                  </Col>
                 )
               }
-            </div>
+            </Row>
           </Panel>
         );
       }

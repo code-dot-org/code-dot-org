@@ -45,10 +45,13 @@
       "isPressed": null,
       "tempSensor.C": null,
       "tempSensor.F": null,
+      "tempSensor.threshold": null,
       "soundSensor.value": null,
       "soundSensor.setScale": null,
+      "soundSensor.threshold": null,
       "lightSensor.value": null,
-      "lightSensor.setScale": null
+      "lightSensor.setScale": null,
+      "lightSensor.threshold": null
     },
     "edit_code": true,
     "embed": "false",
@@ -88,15 +91,16 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "disable_procedure_autopopulate": "false",
-    "markdown_instructions": "# Change Event\r\n\r\nThe data even is fine if you don't mind your code running constantly, but sometimes that's not the most efficient solution to your problem. The sensor \"change\" event only fires if the sensor value has changed since the last reading, which can make sure your program isn't running code when it's not necessary.\r\n\r\n# Do This\r\n\r\nUsing the provided event handler, write a program that buzzes the buzzer and updates \"temp_value\" whenever the temperature sensor reading changes. Place your thumb over the temperature sensor to get it to change and see how your program responds.",
-    "start_blocks": "// Set the text of \"temp_value\" and buzz\r\n// whenever the temperature reading changes.\r\n\r\nonEvent(tempSensor, \"change\", function() {\r\n  \r\n});",
-    "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px; transform: scale(0.9375);\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 33px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 71px; position: absolute; left: 2.22045e-16px; top: 20px; text-align: center;\" id=\"temp_label\">Temp Sensor Reading</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 100px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 105px; position: absolute; left: 0px; top: 190px; text-align: center;\" id=\"temp_value\">value</label></div></div>",
+    "markdown_instructions": "# Change Threshold\r\n\r\nBy default a sensor's \"change\" event fires every time the sensor value changes at all, even by one. The light and sound sensors are constantly fluctuating, so you probably want the \"change\" event to be a little less responsive. The `threshold` property allows you to set how much a sensor should change before considering it a \"change\" event - so setting `soundSensor.threshold = 100` would cause the sound sensor's \"change\" even only to trigger if its value increased or decreased by at least 100.\r\n\r\n# Do This\r\n\r\nThis app changes the background color of the screen whenever the sound sensor value changes, but we want to only respond to big changes in volume (like a loud noise). Use the `soundSensor.threshold` block to fix it.\r\n\r\n* Add a `soundSensor.threshold` block before the event handler\r\n* Test out which how different threshold values impact the \"change\" event\r\n* Choose a threshold value that makes the screen background change only when a loud noise is sensed.\r\n\r\n_Tip: Your threshold depends on how much ambient noise there is in the room, and how much it changes. A threshold that works in a quiet room may not work in a louder classroom._",
+    "start_blocks": "// Change the threshold of the sound sensor\r\n// so the background color only changes\r\n// when you make a loud noise\r\n\r\nonBoardEvent(soundSensor, \"change\", function() {\r\n  setProperty(\"screen1\", \"background-color\", rgb(randomNumber(0, 255), randomNumber(0, 255), randomNumber(0, 255)));\r\n});",
     "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-20 22:54:43 +0000\",\"changed\":[\"code_functions\",\"free_play\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-21 00:04:31 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-27 18:53:17 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-09 19:43:24 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"start_blocks\",\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-10-20 22:54:43 +0000\",\"changed\":[\"code_functions\",\"free_play\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-21 00:04:31 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-27 18:53:17 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-09 19:43:24 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"start_blocks\",\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-09 20:48:35 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-09 20:49:16 +0000\",\"changed\":[\"code_functions\",\"start_html\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

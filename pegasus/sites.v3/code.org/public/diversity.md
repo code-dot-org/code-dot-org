@@ -109,9 +109,10 @@ We’ve also distributed [recruitment posters, videos, and other marketing mater
 
 | Our own team gender diversity |  |
 |------|---|
-| Code.org full time staff |  53% female |
-| Our leadership team | 50% female |
-| Our technical staff (software engineers, technical product managers, computer science educators) | 26% female |
+| Code.org full time staff |  58% female |
+| Our leadership team | 60% female |
+| Our engineering team (software engineers only) | 30% female |
+| Our technical staff (software engineers, technical product managers, computer science educators) | 43% female |
 | Our extended team of expert facilitators|  66% female |
 | The teachers attending our professional development |  86% female |
 

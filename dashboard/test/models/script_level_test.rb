@@ -414,6 +414,19 @@ class ScriptLevelTest < ActiveSupport::TestCase
     refute script_level.should_hide_survey(teacher, nil)
   end
 
+  test 'anonymous can view last attempt for anonymous levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.properties['anonymous'] = 'true'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    refute script_level.should_hide_survey(nil, nil)
+  end
+
   test 'can not view other user last attempt for anonymous levelgroup' do
     script = create :script
 

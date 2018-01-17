@@ -18,25 +18,20 @@ style_min: true
 - if ["student", "teacher"].include?(user_type)
   - redirect CDO.studio_url('/home', CDO.default_scheme)
 
--# The homepage gsheet may specify "en" or "not en" for many row types.
-- languageFilter = request.language == "en" ? "en" : "not en"
-
 #homepage.supreme-container
-  = view :homepage_hero, languageFilter: languageFilter
+  = view :homepage_hero
 
   - if request.language == "en"
     = view :stats_homepage
   - else
     #petitionexpand{style: "display: block"}
-      - if DB[:cdo_homepage].where(type_s: "petition")
-        = view :petition_expand
+      = view :petition_expand
 
   #user_hero
     .container_responsive
       #user_hero
 
-  = view :homepage_sections, languageFilter: languageFilter
-
+  = view :homepage_sections
   = view :homepage_gallery
   = view :donor_slider
 

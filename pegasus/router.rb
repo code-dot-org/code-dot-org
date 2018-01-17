@@ -36,6 +36,7 @@ require src_dir 'database'
 require src_dir 'social_metadata'
 require src_dir 'forms'
 require src_dir 'curriculum_router'
+require src_dir 'homepage'
 
 def http_vary_add_type(vary, type)
   types = vary.to_s.split(',').map(&:strip)
@@ -179,8 +180,8 @@ class Documents < Sinatra::Base
 
   get '/style.css' do
     content_type :css
-    css, css_last_modified = combine_css 'styles', 'styles_min'
-    last_modified(css_last_modified) if css_last_modified > Time.at(0)
+    css, digest = combine_css 'styles', 'styles_min'
+    etag digest
     cache :static
     css
   end

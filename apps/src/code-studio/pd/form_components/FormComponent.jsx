@@ -1,8 +1,8 @@
-import React, {PropTypes} from 'react';
-import {ButtonList} from '../form_components/button_list.jsx';
+import React, { PropTypes } from 'react';
+import { ButtonList } from '../form_components/button_list.jsx';
 import FieldGroup from '../form_components/FieldGroup';
-import UsPhoneNumberInput from "../form_components/UsPhoneNumberInput";
-import SingleCheckbox from "../form_components/SingleCheckbox";
+import UsPhoneNumberInput from '../form_components/UsPhoneNumberInput';
+import SingleCheckbox from '../form_components/SingleCheckbox';
 
 /**
  * Helper class for dashboard forms. Provides helper methods for easily
@@ -14,6 +14,43 @@ import SingleCheckbox from "../form_components/SingleCheckbox";
  * @see the pageComponents of FacilitatorProgramRegistration for example usage.
  */
 export default class FormComponent extends React.Component {
+  static propTypes = {
+    options: PropTypes.object.isRequired,
+    errors: PropTypes.arrayOf(PropTypes.string).isRequired,
+    errorMessages: PropTypes.object.isRequired,
+    data: PropTypes.object.isRequired,
+    onChange: PropTypes.func.isRequired,
+  };
+
+  /**
+   * Override in derived classes
+   * @param {Object} data - form data
+   * @returns {String[]} - list of dynamic required fields based on other responses in this page
+   */
+  static getDynamicallyRequiredFields(data) {
+    return [];
+  }
+
+  /**
+   * Override in derived classes
+   * @param {Object} data - form data for this page
+   * @returns {Object} - custom error messages per field
+   */
+  static getErrorMessages(data) {
+    return {};
+  }
+
+  /**
+   * Override in derived classes
+   * Process and transform this page's form data before validation,
+   * for example to remove answers to questions that are no longer relevant based on other selections.
+   * @param {Object} data - form data for this page, as entered
+   * @returns {Object} - fields to update with new values, or undefined to clear
+   */
+  static processPageData(data) {
+    return {};
+  }
+
   constructor(props) {
     super(props);
 
@@ -57,9 +94,9 @@ export default class FormComponent extends React.Component {
    *
    * @returns {FieldGroup}
    */
-  buildSelectFieldGroupFromOptions({name, label, placeholder, required, ...props}) {
+  buildSelectFieldGroupFromOptions({ name, label, placeholder, required, ...props }) {
     const options = this.props.options[name];
-    return this.buildSelectFieldGroup({name, label, placeholder, required, options, ...props});
+    return this.buildSelectFieldGroup({ name, label, placeholder, required, options, ...props });
   }
 
   /**
@@ -76,7 +113,7 @@ export default class FormComponent extends React.Component {
    *
    * @returns {FieldGroup}
    */
-  buildSelectFieldGroup({name, label, placeholder, required, options, ...props}) {
+  buildSelectFieldGroup({ name, label, placeholder, required, options, ...props }) {
     let renderedOptions;
     if (Array.isArray(options)) {
       renderedOptions = options.map(value => (
@@ -117,7 +154,7 @@ export default class FormComponent extends React.Component {
    *
    * @returns {FieldGroup}
    */
-  buildFieldGroup({name, label, type, required, ...props}) {
+  buildFieldGroup({ name, label, type, required, ...props }) {
     return (
       <FieldGroup
         key={name}
@@ -143,7 +180,7 @@ export default class FormComponent extends React.Component {
    *
    * @returns {UsPhoneNumberInput}
    */
-   buildUsPhoneNumberInput({name, label, required, ...props}) {
+  buildUsPhoneNumberInput({ name, label, required, ...props }) {
     return (
       <UsPhoneNumberInput
         name={name}
@@ -170,13 +207,13 @@ export default class FormComponent extends React.Component {
    *
    * @returns {ButtonList}
    */
-  buildButtonsFromOptions({name, label, type, required, ...props}) {
+  buildButtonsFromOptions({ name, label, type, required, ...props }) {
     if (!this.props.options[name] || this.props.options[name].length === 0) {
       throw `Cannot create buttons for ${name} without options`;
     }
 
     const answers = this.props.options[name];
-    return this.buildButtons({name, label, type, required, answers, ...props});
+    return this.buildButtons({ name, label, type, required, answers, ...props });
   }
 
   /**
@@ -196,13 +233,13 @@ export default class FormComponent extends React.Component {
    *
    * @returns {ButtonList}
    */
-  buildButtonsWithAdditionalTextFieldsFromOptions({name, label, type, required, textFieldMap, ...props}) {
+  buildButtonsWithAdditionalTextFieldsFromOptions({ name, label, type, required, textFieldMap, ...props }) {
     if (!this.props.options[name] || this.props.options[name].length === 0) {
       throw `Cannot create buttons for ${name} without options`;
     }
 
     const options = this.props.options[name];
-    return this.buildButtonsWithAdditionalTextFields({name, label, type, required, options, textFieldMap, ...props});
+    return this.buildButtonsWithAdditionalTextFields({ name, label, type, required, options, textFieldMap, ...props });
   }
 
   /**
@@ -223,7 +260,7 @@ export default class FormComponent extends React.Component {
    *
    * @returns {ButtonList}
    */
-  buildButtonsWithAdditionalTextFields({name, label, type, required, options, textFieldMap, ...props}) {
+  buildButtonsWithAdditionalTextFields({ name, label, type, required, options, textFieldMap, ...props }) {
     const answers = options.map(answer => {
       if (!(answer in textFieldMap)) {
         return answer;
@@ -233,11 +270,11 @@ export default class FormComponent extends React.Component {
       return {
         answerText: answer,
         inputValue: this.props.data[textFieldName],
-        onInputChange: newValue => this.handleChange({[textFieldName]: newValue})
+        onInputChange: newValue => this.handleChange({ [textFieldName]: newValue })
       };
     });
 
-    return this.buildButtons({name, label, type, required, answers, ...props});
+    return this.buildButtons({ name, label, type, required, answers, ...props });
   }
 
   /**
@@ -254,7 +291,7 @@ export default class FormComponent extends React.Component {
    *
    * @returns {ButtonList}
    */
-  buildButtons({name, label, type, required, answers, ...props}) {
+  buildButtons({ name, label, type, required, answers, ...props }) {
     if (required === undefined) {
       required = true;
     }
@@ -285,7 +322,7 @@ export default class FormComponent extends React.Component {
    *
    * @returns {SingleCheckbox}
    */
-  buildSingleCheckbox({name, label, required, ...props}) {
+  buildSingleCheckbox({ name, label, required, ...props }) {
     if (required === undefined) {
       required = true;
     }
@@ -302,41 +339,4 @@ export default class FormComponent extends React.Component {
       />
     );
   }
-
-  /**
-   * Override in derived classes
-   * @param {Object} data - form data
-   * @returns {String[]} - list of dynamic required fields based on other responses in this page
-   */
-  static getDynamicallyRequiredFields(data) {
-    return [];
-  }
-
-  /**
-   * Override in derived classes
-   * @param {Object} data - form data for this page
-   * @returns {Object} - custom error messages per field
-   */
-  static getErrorMessages(data) {
-    return {};
-  }
-
-  /**
-   * Override in derived classes
-   * Process and transform this page's form data before validation,
-   * for example to remove answers to questions that are no longer relevant based on other selections.
-   * @param {Object} data - form data for this page, as entered
-   * @returns {Object} - fields to update with new values, or undefined to clear
-   */
-  static processPageData(data) {
-    return {};
-  }
 }
-
-FormComponent.propTypes = {
-  options: PropTypes.object.isRequired,
-  errors: PropTypes.arrayOf(PropTypes.string).isRequired,
-  errorMessages: PropTypes.object.isRequired,
-  data: PropTypes.object.isRequired,
-  onChange: PropTypes.func.isRequired
-};

@@ -82,7 +82,7 @@ module Pd::WorkshopFilters
       workshops = workshops.scheduled_start_on_or_after(ensure_date(params[:start])) if params[:start]
       workshops = workshops.scheduled_start_on_or_before(ensure_date(params[:end])) if params[:end]
       workshops = workshops.where(course: params[:course]) if params[:course]
-      workshops = workshops.where(subject: params[:subject]) if params[:subject]
+      workshops = workshops.where(subject: params[:subject].split(',')) if params[:subject]
       workshops = workshops.where(organizer_id: params[:organizer_id]) if params[:organizer_id]
 
       if current_user.permission?(UserPermission::WORKSHOP_ADMIN) && params[:teacher_email]

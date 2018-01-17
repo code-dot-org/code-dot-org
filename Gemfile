@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '~> 2.2'
 
 # Force HTTPS for github-source gems.
 # This is a temporary workaround - remove when bundler version is >=2.0

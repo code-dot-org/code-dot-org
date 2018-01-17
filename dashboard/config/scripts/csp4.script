@@ -5,7 +5,7 @@ exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit4/"], ["teacherForum", "https://forum.code.org/c/csp4"], ["vocabulary", "https://curriculum.code.org/csp/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csp/unit4/standards/"], ["professionalLearning", "https://studio.code.org/s/csp4-support"]]
 has_verified_resources true
-script_announcements [{"notice"=>"Unit 4 has been updated!", "details"=>"In response to changes the College Board made to the AP Performance Task Scoring Guidelines for the ‘17-’18 school year. Unit 4 got some targeted changes to rapid research activities and scoring rubrics as well as some AP practice responses (new) to improve connections to the AP Explore PT.  To learn more about the updates and changes click the Learn More button.", "link"=>"http://forum.code.org/t/curriculum-updates-2017-18/10762/52", "type"=>"bullhorn"}]
+script_announcements [{"notice"=>"Encourage Your Students to Take the AP CSP Exam!", "details"=>"We have the chance to make history—again. Encourage your students to sign up for the AP exam! Check in with your AP Coordinator to find out the signup deadline for your school. Click \"Learn more\" for details.", "link"=>"http://teacherblog.code.org/post/169508999644/break-records-for-a-second-year-with-the-ap-cs", "type"=>"bullhorn"}]
 
 stage 'What is Big Data?', flex_category: 'csp4_1'
 level 'Unit 4 Lesson 1 Introduction', progression: 'Lesson Vocabulary & Resources'

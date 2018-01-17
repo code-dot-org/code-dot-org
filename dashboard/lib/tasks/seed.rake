@@ -166,6 +166,22 @@ namespace :seed do
     School.seed_all
   end
 
+  task ap_school_codes: :environment do
+    Census::ApSchoolCode.seed
+  end
+
+  task ap_cs_offerings: :environment do
+    Census::ApCsOffering.seed
+  end
+
+  task ib_school_codes: :environment do
+    Census::IbSchoolCode.seed
+  end
+
+  task ib_cs_offerings: :environment do
+    Census::IbCsOffering.seed
+  end
+
   # Seeds the data in regional_partners
   task regional_partners: :environment do
     RegionalPartner.transaction do
@@ -272,10 +288,10 @@ namespace :seed do
   end
 
   desc "seed all dashboard data"
-  task all: [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses]
+  task all: [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses, :ib_school_codes, :ib_cs_offerings]
   task ui_test: [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures]
   desc "seed all dashboard data that has changed since last seed"
-  task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses]
+  task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses, :ib_school_codes, :ib_cs_offerings]
 
   desc "seed only dashboard data required for tests"
   task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :regional_partners, :regional_partners_school_districts]
