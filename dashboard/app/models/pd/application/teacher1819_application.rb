@@ -511,13 +511,6 @@ module Pd::Application
     def find_default_workshop
       return unless regional_partner
 
-      workshop_course =
-        if course == 'csd'
-          Pd::Workshop::COURSE_CSD
-        elsif course == 'csp'
-          Pd::Workshop::COURSE_CSP
-        end
-
       # If this application is associated with a G3 partner who in turn is
       # associated with a specific teachercon, return the workshop for that
       # teachercon
