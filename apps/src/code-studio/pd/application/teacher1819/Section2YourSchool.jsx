@@ -1,6 +1,10 @@
 import React from 'react';
 import LabeledFormComponent from "../../form_components/LabeledFormComponent";
-import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
+import {
+  PageLabels,
+  SectionHeaders,
+  TextFields
+} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {
@@ -101,27 +105,27 @@ export default class Section2YourSchool extends LabeledFormComponent {
         {this.usPhoneNumberInputFor("principalPhoneNumber")}
 
         {this.radioButtonsWithAdditionalTextFieldsFor("currentRole", {
-          "Other (Please List):" : "other"
+          [TextFields.otherPleaseList] : "other"
         })}
 
         {this.checkBoxesFor("gradesAtSchool")}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("gradesTeaching", {
-          "I'm not teaching this year (Please Explain):" : "notTeachingExplanation",
-          "Other (Please Explain):" : "other"
+          [TextFields.notTeachingThisYear] : "notTeachingExplanation",
+          [TextFields.otherPleaseExplain] : "other"
         })}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("gradesExpectToTeach", {
-          "I'm not teaching next year (Please Explain):" : "notExpectingToTeachExplanation",
-          "Other (Please Explain):" : "other"
+          [TextFields.notTeachingNextYear] : "notExpectingToTeachExplanation",
+          [TextFields.otherPleaseExplain] : "other"
         })}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("subjectsTeaching", {
-          "Other (Please List):" : "other"
+          [TextFields.otherPleaseList] : "other"
         })}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("subjectsExpectToTeach", {
-          "Other (Please List):" : "other"
+          [TextFields.otherPleaseList] : "other"
         })}
 
         <p style={styles.formText}>
@@ -145,21 +149,21 @@ export default class Section2YourSchool extends LabeledFormComponent {
         {this.radioButtonsFor("haveCsLicense")}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("subjectsLicensedToTeach", {
-          "Other (Please List):" : "other"
+          [TextFields.otherPleaseList] : "other"
         })}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("taughtInPast", {
-          "Other (Please List):" : "other"
+          [TextFields.otherPleaseList] : "other"
         })}
 
         {this.checkBoxesFor("previousYearlongCdoPd")}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("csOfferedAtSchool", {
-          "Other (Please List):" : "other"
+          [TextFields.otherPleaseList] : "other"
         })}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("csOpportunitiesAtSchool", {
-          "Other:" : "other"
+          [TextFields.otherWithText] : "other"
         })}
 
       </FormGroup>

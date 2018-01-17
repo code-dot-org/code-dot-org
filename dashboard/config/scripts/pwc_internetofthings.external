@@ -1,0 +1,13 @@
+name 'pwc_internetofthings'
+display_name 'Introduction'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Internet of Things - Smart Clothing Design
+
+This lesson guides students through a rapid design process. Students first brainstorm a list of potential users of smart clothing. As a class, they then group these ideas into broad categories and each group will choose one category of user. Groups repeat this process to brainstorm needs or concerns of their user, eventually categorizing these needs and choosing one to focus on. Finally, students design a piece of smart clothing, using the specific needs and concerns they brainstormed to guide their decision making. At the end of the class students quickly share their decision-making process and get feedback on how well their product addresses the user need they selected.
+
+---
+## For the PwC Facilitator
+[Click here for the Facilitator Guide](https://curriculum.code.org/pwc/ayp/8/) for this lesson. The Facilitator Guide contains detailed activity and discussion guidance.
+MARKDOWN
