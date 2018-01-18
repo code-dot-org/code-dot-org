@@ -297,7 +297,8 @@ class LevelsController < ApplicationController
       params[:level][param].delete_if(&:empty?) if params[:level][param].is_a? Array
     end
 
-    params[:level][:reference_links].delete_if {|link| link == ""}
+    # Removes empty reference links which are autosaved as "" by the form
+    params[:level][:reference_links].delete_if {|link| link == ""} if params[:level][:reference_links]
 
     permitted_params.concat(Level.permitted_params)
     params[:level].permit(permitted_params)
