@@ -119,6 +119,8 @@ class ManageStudentActionsCell extends Component {
   }
 }
 
+export const UnconnectedManageStudentActionsCell = ManageStudentActionsCell;
+
 export default connect(state => ({}), dispatch => ({
   startEditingStudent(id) {
     dispatch(startEditingStudent(id));
