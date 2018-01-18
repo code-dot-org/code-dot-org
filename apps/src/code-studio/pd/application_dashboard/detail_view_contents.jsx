@@ -319,7 +319,7 @@ export class DetailViewContents extends React.Component {
   };
 
   renderTopSection = () => {
-    const fit_workshop_link = (
+    const fitWorkshopLink = (
       <a href={this.props.applicationData.fit_workshop_url} target="_blank">see workshop</a>
     );
     return (
@@ -343,7 +343,7 @@ export class DetailViewContents extends React.Component {
           <DetailViewResponse
             question="FIT Workshop"
             answer={<span>
-              {this.props.applicationData.fit_workshop_name} ({fit_workshop_link})
+              {this.props.applicationData.fit_workshop_name} ({fitWorkshopLink})
             </span>}
             layout="lineItem"
           />
