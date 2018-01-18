@@ -20,5 +20,5 @@ Feature: Using the teacher homepage sections feature
     And check that the URL contains "/home"
     And I create a new section with course "Computer Science Principles" and unit "Unit 3: Intro Programming (version A)"
     Then the section table should have 1 row
-    And the section table row at index 0 has script href "/s/csp3-a"
+    And the section table row at index 0 has script path "/s/csp3-a"
 
