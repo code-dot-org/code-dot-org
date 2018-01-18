@@ -261,4 +261,10 @@ class ProjectsControllerTest < ActionController::TestCase
     get :featured
     assert_redirected_to '/projects/public'
   end
+
+  test '/featured get redirected to sign in if signed out' do
+    sign_out :user
+    get :featured
+    assert_redirected_to '/users/sign_in'
+  end
 end
