@@ -248,4 +248,17 @@ class ProjectsControllerTest < ActionController::TestCase
     get :load, params: {key: 'gamelab'}
     assert_redirected_to_sign_in
   end
+
+  test 'project validators can go to /featured' do
+    @project_validator = create :teacher
+    @project_validator.permission = UserPermission::PROJECT_VALIDATOR
+    sign_in @project_validator
+    get :featured
+    assert_response :success
+  end
+
+  test '/featured gets redirected to /public if not project validator' do
+    get :featured
+    assert_redirected_to '/projects/public'
+  end
 end
