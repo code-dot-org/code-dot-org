@@ -2,11 +2,17 @@ import React from 'react';
 import yaml from 'js-yaml';
 import SetupChecklist from "./SetupChecklist";
 import SetupChecker from '../util/SetupChecker';
-import {isCodeOrgBrowser, isChromeOS, isOSX, isWindows} from '../util/browserChecks';
+import {isCodeOrgBrowser, isChromeOS, isOSX, isWindows, isLinux} from '../util/browserChecks';
 import SurveySupportSection from "./SurveySupportSection";
 import Button, {ButtonColor, ButtonSize} from '../../../../templates/Button';
+import ToggleGroup from '../../../../templates/ToggleGroup';
+import FontAwesome from "../../../../templates/FontAwesome";
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/makertoolkit/';
+const WINDOWS = 'windows';
+const MAC = 'mac';
+const LINUX = 'linux';
+const CHROMEBOOK = 'chromebook';
 
 export default class SetupGuide extends React.Component {
   constructor(props) {
@@ -17,18 +23,59 @@ export default class SetupGuide extends React.Component {
   render() {
     if (isCodeOrgBrowser() || isChromeOS()) {
       return <SetupChecklist setupChecker={this.setupChecker}/>;
-    } else if (isOSX() || isWindows()) {
-      return <SetupDownloads/>;
     }
-    return <SetupUnsupportedBrowser/>;
+    return <Downloads/>;
   }
 }
 
-class SetupDownloads extends React.Component {
+class Downloads extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      platform: isWindows() ? WINDOWS :
+        isOSX() ? MAC :
+          isLinux() ? LINUX :
+            WINDOWS
+    };
+  }
+
+  onPlatformChange = (platform) => {
+    this.setState({platform});
+  };
+
   render() {
+    const {platform} = this.state;
     return (
       <div>
-        {isWindows() ? <SetupWindowsDownloads/> : <SetupMacDownloads/>}
+        <ToggleGroup
+          selected={platform}
+          onChange={this.onPlatformChange}
+        >
+          <button value={WINDOWS}>
+            <FontAwesome icon="windows"/>
+            {' '}
+            Windows
+          </button>
+          <button value={MAC}>
+            <FontAwesome icon="apple"/>
+            {' '}
+            Mac
+          </button>
+          <button value={LINUX}>
+            <FontAwesome icon="linux"/>
+            {' '}
+            Linux
+          </button>
+          <button value={CHROMEBOOK}>
+            <FontAwesome icon="chrome"/>
+            {' '}
+            Chromebook
+          </button>
+        </ToggleGroup>
+        {WINDOWS === platform && <WindowsDownloads/>}
+        {MAC === platform && <MacDownloads/>}
+        {LINUX === platform && <LinuxDownloads/>}
+        {CHROMEBOOK === platform && <ChromebookInstructions/>}
         <SurveySupportSection/>
       </div>
     );
@@ -40,7 +87,7 @@ const downloadButtonStyle = {
   textAlign: 'center'
 };
 
-class SetupWindowsDownloads extends React.Component {
+class WindowsDownloads extends React.Component {
   state = {installer: null};
 
   componentDidMount() {
@@ -86,7 +133,7 @@ class SetupWindowsDownloads extends React.Component {
   }
 }
 
-class SetupMacDownloads extends React.Component {
+class MacDownloads extends React.Component {
   state = {installer: null};
 
   componentDidMount() {
@@ -123,25 +170,17 @@ class SetupMacDownloads extends React.Component {
   }
 }
 
-class SetupUnsupportedBrowser extends React.Component {
+class LinuxDownloads extends React.Component {
   render() {
-    return (
-      <div>
-        <h2>Use a different computer</h2>
-        Maker Toolkit is not supported on your current operating system. To set
-        up Maker Toolkit, please open this page on a device running one of the
-        following operating systems:
-        <ul>
-          <li>Windows</li>
-          <li>OSX</li>
-          <li>Chrome OS</li>
-        </ul>
-        <SurveySupportSection/>
-      </div>
-    );
+    return <div/>;
   }
 }
 
+class ChromebookInstructions extends React.Component {
+  render() {
+    return <div/>;
+  }
+}
 
 /** @returns {Promise<string>} Resolves to Windows installer info. */
 function latestWindowsInstaller() {
