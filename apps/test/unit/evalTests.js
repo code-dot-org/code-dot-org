@@ -5,11 +5,24 @@ var EvalText = require('@cdo/apps/eval/evalText');
 var EvalMulti = require('@cdo/apps/eval/evalMulti');
 var EvalTriangle = require('@cdo/apps/eval/evalTriangle');
 
+function withSvgInDom() {
+  let svg;
+
+  beforeEach(() => {
+    assert.isNull(document.getElementById('svg'));
+    svg = document.createElement('svg');
+    svg.id = 'svg';
+    document.body.appendChild(svg);
+  });
+
+  afterEach(() => {
+    document.body.removeChild(svg);
+    assert.isNull(document.getElementById('svg'));
+  });
+}
 
 describe('getTextStringsFromObject_', function () {
-  before(function () {
-    document.body.innerHTML = '<svg id="svg"></svg>';
-  });
+  withSvgInDom();
 
   it('from simple text object', function () {
     var evalObject = new EvalText('mytext', 14, 'red');
@@ -45,9 +58,7 @@ describe('getTextStringsFromObject_', function () {
 });
 
 describe('haveCaseMismatch_', function () {
-  before(function () {
-    document.body.innerHTML = '<svg id="svg"></svg>';
-  });
+  withSvgInDom();
 
   it('reports false for different text', function () {
     var text1 = new EvalText('one', 12, 'red');
@@ -91,9 +102,7 @@ describe('haveCaseMismatch_', function () {
 });
 
 describe('haveBooleanMismatch_', function () {
-  before(function () {
-    document.body.innerHTML = '<svg id="svg"></svg>';
-  });
+  withSvgInDom();
 
   it('reports false if both bools are true', function () {
     var text1 = new EvalText('true', 12, 'red');
