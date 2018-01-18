@@ -173,8 +173,64 @@ class MacDownloads extends React.Component {
 }
 
 class LinuxDownloads extends React.Component {
+  state = {installer: null};
+
+  componentDidMount() {
+    latestLinuxInstaller().then(installer => this.setState({installer}));
+  }
+
+  debFile() {
+    if (!this.state.installer) {
+      return null;
+    }
+    return this.state.installer.filename.replace(/x86_64\.AppImage/, 'linux.deb');
+  }
+
   render() {
-    return <div/>;
+    const {installer} = this.state;
+    const debFile = this.debFile();
+    return (
+      <div>
+        <h2>Maker Toolkit App for Linux</h2>
+        {installer &&
+          <Button
+            text={`Download Maker Toolkit AppImage for Linux (${installer.version})`}
+            icon="download"
+            color={ButtonColor.orange}
+            size={ButtonSize.large}
+            style={downloadButtonStyle}
+            href={DOWNLOAD_PREFIX + installer.filename}
+          />
+        }
+        <div>
+          <h4>Instructions:</h4>
+          <ol>
+            <li>Download and install the Maker Toolkit app using the download
+              button above.
+            </li>
+            <li>Open up the Maker Toolkit app and sign in to Code.org.</li>
+            <li>Plug in your board to start using it with App Lab!</li>
+          </ol>
+          <h4>Alternative Installers</h4>
+          <ul>
+            {debFile &&
+              <li>
+                <a href={DOWNLOAD_PREFIX + debFile}>
+                  {debFile}
+                </a>
+              </li>
+            }
+            <li>
+              <a href="https://github.com/code-dot-org/browser">
+                Install from source
+                {' '}
+                <FontAwesome icon="external-link"/>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    );
   }
 }
 
@@ -192,6 +248,10 @@ function latestWindowsInstaller() {
 /** @returns {Promise<string>} Resolves to Mac installer info. */
 function latestMacInstaller() {
   return latestInstaller(DOWNLOAD_PREFIX + 'latest-mac.yml');
+}
+
+function latestLinuxInstaller() {
+  return latestInstaller(DOWNLOAD_PREFIX + 'latest-linux.yml');
 }
 
 /**
