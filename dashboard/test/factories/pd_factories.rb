@@ -669,7 +669,7 @@ FactoryGirl.define do
         cs_opportunities_at_school: ['Courses for credit'],
         plan_to_teach: 'Yes, I plan to teach this course',
         able_to_attend_single: 'Yes',
-        able_to_attend_multiple: 'Yes',
+        able_to_attend_multiple: 'December 11-15, 2017 in Indiana, USA',
         committed: 'Yes',
         willing_to_travel: 'Up to 50 miles',
         agree: 'Yes'
