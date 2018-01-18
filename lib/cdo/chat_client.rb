@@ -2,6 +2,7 @@ require 'fileutils'
 require 'net/http'
 require 'net/http/responses'
 require 'uri'
+require 'cdo/circle_utils'
 require 'cdo/slack'
 
 # This class is intended to be a thin wrapper around our chat client
@@ -11,7 +12,11 @@ class ChatClient
   @@logger = nil
 
   def self.log(message, options={})
-    message(CDO.slack_log_room, message, options)
+    if CircleUtils.circle?
+      CDO.log.info("[#{CDO.slack_log_room}] #{message}")
+    else
+      message(CDO.slack_log_room, message, options)
+    end
   end
 
   # @param room [String] The room to post to which message should be posted.
@@ -48,13 +53,11 @@ class ChatClient
     ChatClient.log "Running #{name}..."
     yield if block_given?
     ChatClient.log "#{name} succeeded in #{RakeUtils.format_duration(Time.now - start_time)}"
-  rescue => e
+  rescue
     message = "<b>#{name}</b> failed in "\
       "#{RakeUtils.format_duration(Time.now - start_time)}"
     ChatClient.log message, color: 'red', notify: 1
     ChatClient.message 'server operations', message, color: 'red', notify: 1
-
-    ChatClient.snippet "#{e}\n#{CDO.backtrace e}" if backtrace
     raise
   end
 end

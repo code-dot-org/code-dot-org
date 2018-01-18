@@ -43,8 +43,6 @@ module Pd::Application
 
     OTHER = 'Other'.freeze
     OTHER_WITH_TEXT = 'Other:'.freeze
-    OTHER_PLEASE_EXPLAIN = 'Other (Please Explain):'.freeze
-    OTHER_PLEASE_LIST = 'Other (Please List):'
     YES = 'Yes'.freeze
     NO = 'No'.freeze
     NONE = 'None'.freeze
@@ -128,6 +126,12 @@ module Pd::Application
       csd
       csp
     ).index_by(&:to_sym).freeze
+
+    COURSE_NAME_MAP = {
+      csp: Pd::Workshop::COURSE_CSP,
+      csd: Pd::Workshop::COURSE_CSD,
+      csf: Pd::Workshop::COURSE_CSF
+    }
 
     belongs_to :user
     belongs_to :regional_partner
@@ -264,6 +268,10 @@ module Pd::Application
         score.is_a?(Numeric) || score =~ /^\d+$/
       end
       numeric_scores.map(&:to_i).reduce(:+)
+    end
+
+    def course_name
+      COURSE_NAME_MAP[course.to_sym]
     end
 
     protected

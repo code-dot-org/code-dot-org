@@ -6,6 +6,7 @@ import {UnconnectedCensusForm as CensusForm} from './CensusForm';
 import YourSchoolResources from './YourSchoolResources';
 import Notification, { NotificationType } from '../Notification';
 import MobileNotification from '../MobileNotification';
+import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnActionBlock';
 import i18n from "@cdo/locale";
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import { ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
@@ -51,6 +52,7 @@ class YourSchool extends Component {
 
     return (
       <div>
+        <SpecialAnnouncementActionBlock/>
         {this.props.alertHeading && this.props.alertText && this.props.alertUrl && desktop && (
           <Notification
             type={NotificationType.bullhorn}

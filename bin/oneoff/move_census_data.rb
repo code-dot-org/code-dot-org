@@ -8,9 +8,9 @@ require 'optparse'
 @verbose = false
 
 def to_bool(s)
-  if s == '1' || s == 'on' || s == 'true' || s == true
+  if ['1', 'on', 'true', true].include? s
     true
-  elsif s == '0' || s == '' || s == 'false' || s == false || s.nil?
+  elsif ['0', '', 'false', false, nil].include? s
     false
   else
     raise "Invalid boolean #{s}"

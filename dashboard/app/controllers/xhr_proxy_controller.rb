@@ -57,6 +57,8 @@ class XhrProxyController < ApplicationController
     nuevaschool2.ngrok.io
     nuevaschool3.ngrok.io
     rhcloud.com
+    sheets.googleapis.com
+    spreadsheets.google.com
     swapi.co
     transitchicago.com
     translate.yandex.net

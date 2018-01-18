@@ -41,6 +41,7 @@ module Pd::Application
     include Teacher1819ApplicationConstants
     include RegionalPartnerTeacherconMapping
     include SerializedProperties
+    include SchoolInfoDeduplicator
 
     serialized_attrs %w(
       pd_workshop_id
@@ -86,6 +87,17 @@ module Pd::Application
         Pd::Application::Teacher1819ApplicationMailer.send(status, self).deliver_now
       end
       update!(decision_notification_email_sent_at: Time.zone.now)
+    end
+
+    # Updates the associated user's school info with the info from this teacher application
+    # based on these rules in order:
+    # 1. Application has a specific school? always overwrite the user's school info
+    # 2. User doesn't have a specific school? overwrite with the custom school info.
+    def update_user_school_info!
+      if school_id || user.school_info.try(&:school).nil?
+        school_info = get_duplicate_school_info(school_info_attr) || SchoolInfo.create!(school_info_attr)
+        user.update_column(:school_info_id, school_info.id)
+      end
     end
 
     def set_type_and_year
@@ -180,13 +192,9 @@ module Pd::Application
       'Art',
       'Multimedia',
       'Foreign Language',
-      OTHER_PLEASE_LIST
+      TEXT_FIELDS[:other_please_list]
     ]
 
-    NOT_TEACHING_THIS_YEAR = "I'm not teaching this year (please explain):"
-    DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN = "I don't know if I will teach this course (please explain):"
-    UNABLE_TO_ATTEND = "No, I'm unable to attend (please explain):"
-    NO_EXPLAIN = "No (please explain):"
     def self.options
       {
         country: [
@@ -210,15 +218,20 @@ module Pd::Application
           'Librarian',
           'School administrator',
           'District administrator',
-          OTHER_PLEASE_LIST
+          TEXT_FIELDS[:other_please_list]
         ],
 
         grades_at_school: GRADES,
         grades_teaching: [
           *GRADES,
-          NOT_TEACHING_THIS_YEAR
+          TEXT_FIELDS[:not_teaching_this_year],
+          TEXT_FIELDS[:other_please_explain]
         ],
-        grades_expect_to_teach: GRADES,
+        grades_expect_to_teach: [
+          *GRADES,
+          TEXT_FIELDS[:not_teaching_next_year],
+          TEXT_FIELDS[:other_please_explain]
+        ],
 
         subjects_teaching: SUBJECTS_THIS_YEAR,
         subjects_expect_to_teach: SUBJECTS_THIS_YEAR,
@@ -252,7 +265,7 @@ module Pd::Application
           'Special Education',
           'Physical Education',
           'I am not currently licensed',
-          OTHER_PLEASE_LIST
+          TEXT_FIELDS[:other_please_list]
         ],
 
         taught_in_past: [
@@ -271,7 +284,7 @@ module Pd::Application
           'Project Lead the Way',
           'Robotics',
           'ScratchEd',
-          OTHER_PLEASE_LIST,
+          TEXT_FIELDS[:other_please_list],
           "I don't have experience teaching any of these courses"
         ],
 
@@ -310,7 +323,7 @@ module Pd::Application
           'Tynker',
           'UC Davis C-Stem',
           'UTeach',
-          OTHER_PLEASE_LIST,
+          TEXT_FIELDS[:other_please_list],
           'No computer science courses are offered at my school'
         ],
 
@@ -320,7 +333,7 @@ module Pd::Application
           'Lunch clubs',
           'Hour of Code',
           'No computer science opportunities are currently available at my school',
-          OTHER_WITH_TEXT
+          TEXT_FIELDS[:other_with_text]
         ],
 
         program: PROGRAM_OPTIONS,
@@ -332,7 +345,7 @@ module Pd::Application
           '4 to less than 5 course hours per week',
           '3 to less than 4 course hours per week',
           'Less than 3 course hours per week',
-          OTHER_PLEASE_LIST
+          TEXT_FIELDS[:other_please_list]
         ],
 
         csd_course_hours_per_year: COMMON_OPTIONS[:course_hours_per_year],
@@ -366,18 +379,18 @@ module Pd::Application
         plan_to_teach: [
           'Yes, I plan to teach this course',
           'No, someone else from my school will teach this course',
-          DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN
+          TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
         ],
 
         pay_fee: [
           'Yes, my school or I will be able to pay the full summer workshop program fee.',
-          'No, my school or I will not be able to pay the summer workshop program fee.',
+          TEXT_FIELDS[:no_pay_fee],
           'Not applicable: there is no fee for the summer workshop for teachers in my region.'
         ],
 
         committed: [
           YES,
-          'No (please explain):'
+          'No (Please Explain):'
         ],
 
         willing_to_travel: [
@@ -657,7 +670,7 @@ module Pd::Application
         scores[:csp_which_grades] = responses[:csp_which_grades].any? ? YES : NO
         scores[:csp_course_hours_per_year] = responses[:csp_course_hours_per_year] == COMMON_OPTIONS[:course_hours_per_year].first ? YES : NO
         scores[:previous_yearlong_cdo_pd] = responses[:previous_yearlong_cdo_pd].exclude?('CS Principles') ? YES : NO
-        scores[:csp_ap_exam] = responses[:csp_ap_exam] != Pd::Application::Teacher1819Application.options[:csp_ap_exam].last ? YES : NO
+        scores[:csp_how_offer] = responses[:csp_how_offer] != Pd::Application::Teacher1819Application.options[:csp_how_offer].first ? 2 : 0
         scores[:taught_in_past] = responses[:taught_in_past].none? {|x| x.include? 'AP'} ? 2 : 0
       elsif course == 'csd'
         scores[:csd_which_grades] = (responses[:csd_which_grades].map(&:to_i) & (6..10).to_a).any? ? YES : NO
@@ -771,19 +784,22 @@ module Pd::Application
     # Include additional text for all the multi-select fields that have the option
     def additional_text_fields
       [
-        [:current_role, OTHER_PLEASE_LIST],
-        [:grades_teaching, NOT_TEACHING_THIS_YEAR, :grades_teaching_not_teaching_explanation],
-        [:subjects_teaching, OTHER_PLEASE_LIST],
-        [:subjects_expect_to_teach, OTHER_PLEASE_LIST],
-        [:subjects_licensed_to_teach, OTHER_PLEASE_LIST],
-        [:taught_in_past, OTHER_PLEASE_LIST],
-        [:cs_offered_at_school, OTHER_PLEASE_LIST],
-        [:cs_opportunities_at_school, OTHER_PLEASE_LIST],
-        [:csd_course_hours_per_week, OTHER_PLEASE_LIST],
-        [:plan_to_teach, DONT_KNOW_IF_I_WILL_TEACH_EXPLAIN, :plan_to_teach_dont_know_explain],
-        [:able_to_attend_single, UNABLE_TO_ATTEND, :able_to_attend_single_explain],
-        [:able_to_attend_multiple, NO_EXPLAIN, :able_to_attend_multiple_explain],
-        [:committed, NO_EXPLAIN, :committed_explain]
+        [:current_role, TEXT_FIELDS[:other_please_list]],
+        [:grades_teaching, TEXT_FIELDS[:not_teaching_this_year], :grades_teaching_not_teaching_explanation],
+        [:grades_teaching, TEXT_FIELDS[:other_please_explain], :grades_teaching_other],
+        [:grades_expect_to_teach, TEXT_FIELDS[:not_teaching_next_year], :grades_expect_to_teach_not_expecting_to_teach_explanation],
+        [:grades_expect_to_teach, TEXT_FIELDS[:other_please_explain], :grades_expect_to_teach_other],
+        [:subjects_teaching, TEXT_FIELDS[:other_please_list]],
+        [:subjects_expect_to_teach, TEXT_FIELDS[:other_please_list]],
+        [:subjects_licensed_to_teach, TEXT_FIELDS[:other_please_list]],
+        [:taught_in_past, TEXT_FIELDS[:other_please_list]],
+        [:cs_offered_at_school, TEXT_FIELDS[:other_please_list]],
+        [:cs_opportunities_at_school, TEXT_FIELDS[:other_please_list]],
+        [:csd_course_hours_per_week, TEXT_FIELDS[:other_please_list]],
+        [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain], :plan_to_teach_dont_know_explain],
+        [:able_to_attend_single, TEXT_FIELDS[:unable_to_attend], :able_to_attend_single_explain],
+        [:able_to_attend_multiple, TEXT_FIELDS[:no_explain], :able_to_attend_multiple_explain],
+        [:committed, TEXT_FIELDS[:no_explain], :committed_explain]
       ]
     end
 
@@ -791,6 +807,33 @@ module Pd::Application
     # Add account_email (based on the associated user's email) to the sanitized form data hash
     def sanitize_form_data_hash
       super.merge(account_email: user.email)
+    end
+
+    def school_id
+      raw_school_id = sanitize_form_data_hash[:school]
+
+      # -1 designates custom school info, in which case return nil
+      raw_school_id.to_i == -1 ? nil : raw_school_id
+    end
+
+    def school_info_attr
+      if school_id
+        {
+          school_id: school_id
+        }
+      else
+        hash = sanitize_form_data_hash
+        {
+          country: 'US',
+          # Take the first word in school type, downcased. E.g. "Public school" -> "public"
+          school_type: hash[:school_type].split(' ').first.downcase,
+          state: hash[:school_state],
+          zip: hash[:school_zip_code],
+          school_name: hash[:school_name],
+          full_address: hash[:school_address],
+          validation_type: SchoolInfo::VALIDATION_NONE
+        }
+      end
     end
 
     protected

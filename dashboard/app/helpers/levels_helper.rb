@@ -132,6 +132,8 @@ module LevelsHelper
     # Always pass user age limit
     view_options(is_13_plus: current_user && !current_user.under_13?)
 
+    view_options(user_id: current_user.id) if current_user
+
     view_options(server_level_id: @level.id)
     if @script_level
       view_options(
@@ -546,7 +548,7 @@ module LevelsHelper
       app_options[:firebaseAuthToken] = firebase_auth_token
       app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
     end
-    app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::RESET_ABUSE)
+    app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::PROJECT_VALIDATOR)
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
@@ -585,7 +587,7 @@ module LevelsHelper
   end
 
   def build_copyright_strings
-    # TODO(brent): These would ideally also go in _javascript_strings.html right now, but it can't
+    # These would ideally also go in _javascript_strings.html right now, but it can't
     # deal with params.
     {
       thank_you: URI.escape(I18n.t('footer.thank_you')),

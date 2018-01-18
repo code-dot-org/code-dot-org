@@ -32,7 +32,7 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
   attributes :id, :organizer, :location_name, :location_address, :course,
     :subject, :capacity, :notes, :state, :facilitators,
     :enrolled_teacher_count, :sessions, :account_required_for_attendance?,
-    :enrollment_code, :on_map, :funded, :ready_to_close?
+    :enrollment_code, :on_map, :funded, :ready_to_close?, :date_and_location_name
 
   def sessions
     object.sessions.map do |session|

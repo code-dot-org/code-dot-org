@@ -32,9 +32,10 @@ class UserPermission < ActiveRecord::Base
     # Also grants access to viewing extra links related to editing these.
     # Also makes the account satisfy authorized_teacher?.
     LEVELBUILDER = 'levelbuilder'.freeze,
-    # Grants access to reseting (to 0) the abuse score for projects,
-    # and blocking and unblocking legacy shares.
-    RESET_ABUSE = 'reset_abuse'.freeze,
+    # Grants ability to (un)feature projects in the the public project gallery.
+    # Also, grants access to resetting (to 0) the abuse score for projects,
+    # and blocking and unblocking legacy shares (formerly RESET_ABUSE).
+    PROJECT_VALIDATOR = 'project_validator'.freeze,
     # Grants access to PLC workshop dashboards.
     WORKSHOP_ADMIN = 'workshop_admin'.freeze,
     # Grants access to managing professional development workshops and

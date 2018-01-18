@@ -5,38 +5,17 @@ theme: responsive
 <link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
 
 # Professional Learning #
-<img src="/images/k5pdcropped.jpg" width="20%"/>
+<img src="/images/k5pdcropped.jpg" width="100%"/>
 
 ## New to computer science? No worries.
 
 Code.org offers hands-on workshops and online support at no charge. Over 60,000 teachers have been through the workshops and thousands more attend every month. Whether you're brand new to computer science or an experienced tech teacher looking for the best way to use the Code.org curriculum, our professional learning program is a great way to get started.
 
-## The majority of our workshop attendees rank it the best professional development ever
 
 <%= view :three_circles, circles: [
+{img: '/images/testimonials/fit-150/teachers-1.jpg', text: 'The majority of our workshop attendees rank it the best professional development ever.'},
 {img: '/images/testimonials/fit-150/teacher-renee.jpg', text: '"I do not have a computer science background. I would change nothing about the training. It was an incredible experience, and I felt valued and respected as a teacher and facilitator. I would absolutely recommend anything Code.org has to offer to any teacher. Period. The lesson plans are incredible."'},
 {img: '/images/testimonials/fit-150/teacher-juan.jpg', text: '"It was absolutely rich and the most meaningful training I have ever attended in 16 years of teaching."'}] %>
-
-## Professional Learning Program Offerings
-<details>
- <summary>**Elementary School Professional Learning**</summary>
-  <p>
-
-  Code.org offers 1-day workshops to prepare educators and content-area teachers (librarians, tech-ed specialists, etc.) to introduce computer science basics in a format that's fun and accessible to the youngest learners (grades K-5). The workshops will cover content for [our elementary school curriculum](/educate/curriculum/elementary-school), and you will receive the supplies you need to teach the courses - at no cost. 
-  
-  <br>
-
-
-<div class="col-50" style="margin-bottom: 20px;">
-
-<%= view :course_wide_block, cta_link: CDO.code_org_url('/professional-development-workshops'), cta_text: 'Find a local K-5 workshop', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Computer Science Fundamentals', description: "You don't need any previous experience teaching computer science to join us. Not only is this an opportunity to increase your knowledge and confidence in facilitating an engaged computer science classroom, it's also a chance to connect with other educators in your area who are working to bring computer science to their schools. These workshops are facilitated by experienced computer science educators across the United States."%>
-
-</div>
-
-<div style="clear:both"></div>
-</p>
-
-</details>
 
 
 ## Workshops for Elementary School Educators, free of charge

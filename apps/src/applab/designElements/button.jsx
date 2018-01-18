@@ -115,12 +115,6 @@ class ButtonProperties extends React.Component {
           onDepthChange={this.props.onDepthChange}
         />
       </div>);
-
-    // TODO (brent):
-    // bold/italics/underline (p2)
-    // shape (p2)
-    // textAlignment (p2)
-    // enabled (p2)
   }
 }
 

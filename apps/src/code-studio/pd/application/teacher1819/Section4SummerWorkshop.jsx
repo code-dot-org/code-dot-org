@@ -1,13 +1,13 @@
 import React from 'react';
 import $ from "jquery";
 import LabeledFormComponent from "../../form_components/LabeledFormComponent";
-import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
+import {
+  PageLabels,
+  SectionHeaders,
+  TextFields
+} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import {FormGroup} from 'react-bootstrap';
 import {styles, PROGRAM_CSD, PROGRAM_CSP} from "./TeacherApplicationConstants";
-
-const UNABLE_TO_ATTEND = "No, I'm unable to attend (please explain):";
-const NO_EXPLAIN = "No (please explain):";
-const NO_PAY_FEE = "No, my school or I will not be able to pay the summer workshop program fee.";
 
 const WORKSHOP_FEES_URL = "https://docs.google.com/spreadsheets/d/1YFrTFp-Uz0jWk9-UR9JVuXfoDcCL6J0hxK5CYldv_Eo";
 
@@ -120,11 +120,11 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
   }
 
   isUnableToAttendAssignedWorkshop = (data = this.props.data) => data.regionalPartnerId && (
-      data.ableToAttendSingle === UNABLE_TO_ATTEND ||
+      data.ableToAttendSingle === TextFields.unableToAttend ||
       (
         data.ableToAttendMultiple &&
         data.ableToAttendMultiple.length === 1 &&
-        data.ableToAttendMultiple[0] === NO_EXPLAIN
+        data.ableToAttendMultiple[0] === TextFields.noExplain
       )
     );
 
@@ -143,9 +143,9 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
   renderAbleToAttendSingle() {
     const options = [
       "Yes, I'm able to attend",
-      UNABLE_TO_ATTEND
+      TextFields.unableToAttend
     ];
-    const textFieldMap = {[UNABLE_TO_ATTEND]: 'explain'};
+    const textFieldMap = {[TextFields.unableToAttend]: 'explain'};
     return this.dynamicRadioButtonsWithAdditionalTextFieldsFor(
       "ableToAttendSingle",
       options,
@@ -161,8 +161,10 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
     if (!this.props.data.regionalPartnerId) {
       return (
         <div>
-          There currently is no Regional Partner in your area.
-          If a seat opens in the program, we will invite you to a TeacherCon and provide you with more details.
+          <p>
+            <strong>There currently is no Regional Partner in your area. </strong>
+            If a seat opens in the program, we will invite you to a TeacherCon and provide you with more details.
+          </p>
         </div>
       );
     } else if (this.props.data.teachercon) {
@@ -212,8 +214,8 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
       const options = this.state.partnerWorkshops.map(workshop =>
         `${workshop.dates} in ${workshop.location} hosted by ${this.state.regionalPartnerName}`
       );
-      options.push(NO_EXPLAIN);
-      const textFieldMap = {[NO_EXPLAIN]: 'explain'};
+      options.push(TextFields.noExplain);
+      const textFieldMap = {[TextFields.noExplain]: 'explain'};
       contents = this.dynamicCheckBoxesWithAdditionalTextFieldsFor(
         "ableToAttendMultiple",
         options,
@@ -286,7 +288,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
             {this.singleCheckboxFor("understandFee")}
             {this.radioButtonsFor("payFee")}
 
-            {this.props.data.payFee === NO_PAY_FEE &&
+            {this.props.data.payFee === TextFields.noPayFee &&
               this.singleCheckboxFor("considerForFunding", {
                 required: false,
                 style: styles.checkBoxAfterButtonList
@@ -311,7 +313,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
         </div>
 
         {this.radioButtonsWithAdditionalTextFieldsFor("committed", {
-          [NO_EXPLAIN] : 'explain'
+          [TextFields.noExplain] : 'explain'
         })}
 
         {this.radioButtonsFor("willingToTravel")}
@@ -366,7 +368,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
       changes.payFee = undefined;
     }
 
-    if (data.payFee !== NO_PAY_FEE) {
+    if (data.payFee !== TextFields.noPayFee) {
       changes.considerForFunding = undefined;
     }
 

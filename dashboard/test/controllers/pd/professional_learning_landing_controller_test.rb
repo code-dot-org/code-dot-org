@@ -43,7 +43,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     sign_in new_teacher
 
     get :index
-    assert_redirected_to "https://#{CDO.pegasus_hostname}/educate/professional-learning"
+    assert_redirected_to CDO.code_org_url('educate/professional-learning', CDO.default_scheme)
   end
 
   test 'courses are sorted as expected' do
