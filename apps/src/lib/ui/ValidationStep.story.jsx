@@ -48,16 +48,6 @@ export default storybook => {
         )
       },
       {
-        name: 'Hidden Step',
-        description: 'Step in hidden state',
-        story: () => (
-          <ValidationStep
-            stepName="This step is hidden"
-            stepStatus={Status.HIDDEN}
-          />
-        )
-      },
-      {
         name: 'Waiting Step',
         description: 'Step in waiting state',
         story: () => (

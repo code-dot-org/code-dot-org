@@ -3,7 +3,6 @@ import color from '../../util/color';
 import FontAwesome from '../../templates/FontAwesome';
 
 export const Status = {
-  HIDDEN: 'HIDDEN',
   WAITING: 'WAITING',
   ATTEMPTING: 'ATTEMPTING',
   SUCCEEDED: 'SUCCEEDED',
@@ -52,9 +51,6 @@ export default class ValidationStep extends Component {
     // is set, show them regardless
     let showChildren = alwaysShowChildren || stepStatus === Status.FAILED;
 
-    if (stepStatus === Status.HIDDEN) {
-      return null;
-    }
     return (
       <div style={style.root}>
         <div style={{...style.header, ...styleFor(stepStatus)}}>
@@ -83,8 +79,6 @@ function styleFor(stepStatus) {
     case Status.SUCCEEDED:
     case Status.CELEBRATING:
       return {color: color.realgreen};
-    case Status.HIDDEN:
-      return {display: 'none'};
     case Status.UNKNOWN:
       return {color: color.light_gray};
     default:
@@ -117,6 +111,6 @@ function iconFor(stepStatus) {
     case Status.UNKNOWN:
       return <FontAwesome icon="question-circle" className="fa-fw" style={iconStyle}/>;
     default:
-      throw new Error('Unknown step status.');
+      throw new Error(`Unknown step status ${stepStatus}.`);
   }
 }

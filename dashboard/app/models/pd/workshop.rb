@@ -345,6 +345,13 @@ class Pd::Workshop < ActiveRecord::Base
       "#{sessions.first.start.strftime('%B %-d')} - #{sessions.last.start.strftime('%B %-d, %Y')}"
   end
 
+  def date_and_location_name
+    date_string = sessions.any? ? friendly_date_range : 'Dates TBA'
+    location_string = processed_location ? "#{location_city} #{location_state}" : 'Location TBA'
+
+    "#{date_string}, #{location_string}#{teachercon? ? ' TeacherCon' : ''}"
+  end
+
   # Puts workshop in 'In Progress' state
   def start!
     raise 'Workshop must have at least one session to start.' if sessions.empty?
