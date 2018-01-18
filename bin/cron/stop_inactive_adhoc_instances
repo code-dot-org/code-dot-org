@@ -17,11 +17,12 @@ def main
   ChatClient.message 'cron-daily', 'Beginning to stop inactive adhoc instances'
 
   cloudformation_client = Aws::CloudFormation::Client.new
+  cloudformation_resource = Aws::CloudFormation::Resource.new(client: cloudformation_client)
   cloudwatch_client = Aws::CloudWatch::Client.new
 
   # get list of CloudFormation stacks that start with the name "adhoc-"
-  cloudformation_client.describe_stacks.stacks.select {|stack_struct| stack_struct.stack_name.starts_with?('adhoc-')}.each do |stack_struct|
-    stack = Aws::CloudFormation::Stack.new(name: stack_struct.stack_name)
+  cloudformation_resource.stacks.select {|stack| stack.name.starts_with?('adhoc-')}.each do |stack|
+    # stack = Aws::CloudFormation::Stack.new(name: stack_struct.stack_name)
     dashboard_url = stack.outputs.select {|output| output.output_key == 'DashboardURL'}.first.try(:output_value)
 
     # get Unicorn active HTTP request count CloudWatch metric for the current adhoc stack
@@ -53,7 +54,7 @@ def main
 
     if total_http_requests.between?(1, 1000)
       puts "Terminating EC2 instance for Stack - #{stack.name} due to inactivity"
-      puts stack.resource('WebServer').to_json
+      puts stack.resource('WebServer').physical_resource_id
     end
   end
 end
