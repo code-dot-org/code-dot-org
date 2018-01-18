@@ -72,7 +72,7 @@ class ManageStudentActionsCell extends Component {
             <PopUpMenu.Item
               onClick={this.onEdit}
             >
-              Edit
+              {i18n.edit()}
             </PopUpMenu.Item>
             <MenuBreak/>
             <PopUpMenu.Item
@@ -80,7 +80,7 @@ class ManageStudentActionsCell extends Component {
               color={color.red}
             >
               <FontAwesome icon="times-circle" style={styles.xIcon}/>
-              Remove student
+              {i18n.removeStudent()}
             </PopUpMenu.Item>
           </QuickActionsCell>
         }
@@ -96,20 +96,18 @@ class ManageStudentActionsCell extends Component {
           isOpen={this.state.deleting}
           style={{paddingLeft: 20, paddingRight: 20, paddingBottom: 20}}
         >
-          <h2 style={styles.heading}>Remove student</h2>
-          <div>Are you sure you want to remove this student?</div>
+          <h2 style={styles.heading}>{i18n.removeStudent()}</h2>
+          <div>{i18n.removeStudentConfirm()}</div>
           <DialogFooter>
             <Button
-              class="ui-test-cancel-delete"
               text={i18n.dialogCancel()}
               onClick={this.onCancelDelete}
-              color="gray"
+              color={Button.ButtonColor.gray}
             />
             <Button
-              class="ui-test-confirm-delete"
-              text="Remove student"
+              text={i18n.removeStudent()}
               onClick={this.onConfirmDelete}
-              color="red"
+              color={Button.ButtonColor.red}
               disabled={this.state.requestInProgress}
             />
           </DialogFooter>
