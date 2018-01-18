@@ -18,6 +18,11 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
 
     if Pd::Teachercon1819Registration.exists?(pd_application_id: @application.id)
       @registration = Pd::Teachercon1819Registration.find_by(pd_application_id: @application)
+      @email = {
+        'Teacher' => 'teacher@code.org',
+        'Facilitator' => 'facilitators@code.org',
+        'Partner' => 'partner@code.org'
+      }[@application.application_type]
       render :submitted
       return
     end
