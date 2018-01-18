@@ -274,7 +274,7 @@ class LevelsController < ApplicationController
       {contained_level_names: []},
       {examples: []},
       {reference_links: []},
-      {map_levels: []},
+      :map_reference,
 
       # Minecraft-specific
       {available_blocks: []},
@@ -296,6 +296,8 @@ class LevelsController < ApplicationController
     multiselect_params.each do |param|
       params[:level][param].delete_if(&:empty?) if params[:level][param].is_a? Array
     end
+
+    params[:level][:reference_links].delete_if {|link| link == ""}
 
     permitted_params.concat(Level.permitted_params)
     params[:level].permit(permitted_params)

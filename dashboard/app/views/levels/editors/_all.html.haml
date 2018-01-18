@@ -59,19 +59,15 @@
   .video-preview{style: 'display: block'}
 
 .field
-  = f.label :map_levels, 'Map Level'
-  %p If there is a key map level you want to reference in the instructions, add the link here. It will show up under the 'Help & Tips' tab.
+  = f.label :map_reference, 'Map Reference'
+  %p If there is a key resource you want to reference in the instructions, add the link here. It will show up under the 'Help & Tips' tab.
   %p This should be a string representing the URL on docs.code.org you want to embed, i.e. '/cs/maker_leds/index.html'
-  - @level.map_levels = [''] unless @level.map_levels.try(:present?)
-  - @level.map_levels.each do |map_level|
-    = text_field_tag 'level[map_levels][]', map_level, placeholder: 'Map Level'
-  #plusAnswerMap
-    %i.fa.fa-plus-circle
+  = f.text_field :map_reference, placeholder: 'Map Reference'
 
 
 .field
   = f.label :reference_link, 'Reference Links'
-  %p Add links to pages on Curriculum Builder below. They will show up in the 'Help & Tips' tab below any videos and map levels.
+  %p Add links to pages on Curriculum Builder below. They will show up in the 'Help & Tips' tab below any videos and the map reference.
   %p These should be strings representing the URL on docs.code.org you want to embed, i.e. '/cs/maker_leds/index.html'
   %p Click the + sign if you want to add multiple links
   - @level.reference_links = [''] unless @level.reference_links.try(:present?)
