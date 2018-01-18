@@ -83,7 +83,7 @@ describe("DetailViewContents", () => {
     it(`Renders full contents for ${applicationData.type} initially`, () => {
       const detailView = mountDetailView(applicationData.type);
 
-      expect(detailView.find('#TopSection DetailViewResponse')).to.have.length(3);
+      expect(detailView.find('#TopSection DetailViewResponse')).to.have.length(4);
       expect(detailView.find('DetailViewApplicationSpecificQuestions')).to.have.length(1);
       expect(detailView.find('DetailViewApplicationSpecificQuestions h3')).to.have.length(
         applicationData.applicationSpecificQuestions
