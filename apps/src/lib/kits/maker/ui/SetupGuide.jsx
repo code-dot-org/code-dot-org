@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import yaml from 'js-yaml';
 import SetupChecklist from "./SetupChecklist";
@@ -193,11 +194,13 @@ function latestMacInstaller() {
 }
 
 /**
+ * Retrieve installer metadata from a yaml file on the server.
+ * Memoized so any particular file is requested only once per page load.
  * @param {string} latestYamlUrl - fully-qualified URL to YAML metadata file
  *   specifying the latest available version.
  * @returns {Promise<string>} Resolves to application installer info.
  */
-function latestInstaller(latestYamlUrl) {
+const latestInstaller = _.memoize((latestYamlUrl) => {
   return fetch(latestYamlUrl, {mode: 'cors'})
     .then(response => response.text())
     .then(text => yaml.safeLoad(text))
@@ -205,4 +208,4 @@ function latestInstaller(latestYamlUrl) {
       filename: datum.url,
       version: datum.version
     }));
-}
+});
