@@ -296,6 +296,7 @@ export class UnconnectedFinishDialog extends Component {
                       style.color
                     ),
                   }}
+                  key={index}
                 >
                   <img href={achievement.iconUrl} style={styles.achievementIcon} />
                   {achievement.message}
