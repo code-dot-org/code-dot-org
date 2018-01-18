@@ -120,7 +120,7 @@ const typeFormatter = function (type) {
 
 // Table of user's projects
 // TODO(caleybrock): add an actions component to allow users to modify projects
-const PersonalProjectsTable = React.createClass({
+const FeaturedProjectsTable = React.createClass({
   propTypes: {
     projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired
   },
@@ -282,4 +282,4 @@ const PersonalProjectsTable = React.createClass({
   }
 });
 
-export default PersonalProjectsTable;
+export default FeaturedProjectsTable;
