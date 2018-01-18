@@ -55,7 +55,8 @@ export class DetailViewContents extends React.Component {
       response_scores: PropTypes.object,
       meets_criteria: PropTypes.string,
       bonus_points: PropTypes.number,
-      pd_workshop_id: PropTypes.number
+      pd_workshop_id: PropTypes.number,
+      fit_workshop_name: PropTypes.string
     }),
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     course: PropTypes.oneOf(['csf', 'csd', 'csp']),
@@ -334,6 +335,13 @@ export class DetailViewContents extends React.Component {
           answer={this.props.applicationData.district_name}
           layout="lineItem"
         />
+        {this.props.applicationData.application_type === 'Facilitator' &&
+          <DetailViewResponse
+            question="FIT Workshop"
+            answer={this.props.applicationData.fit_workshop_name}
+            layout="lineItem"
+          />
+        }
         {this.props.isWorkshopAdmin && this.renderRegionalPartnerPanel()}
       </div>
     );
