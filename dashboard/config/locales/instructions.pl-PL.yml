@@ -1330,9 +1330,8 @@
         using Design Mode. (Click for full instructions.)
       CSD U5 black white images pixelation 2_instruction: Narysuj uśmiechniętą buźkę
         (kliknij tutaj aby zobaczyć obrazek)
-      CSD U5 black white images pixelation 3_instruction: |-
-        Change the width and height
-        sliders to find the image (click here to see more)
+      CSD U5 black white images pixelation 3_instruction: Zmień szerokość i wysokość
+        suwaka aby znaleźć obraz (kliknij tutaj aby dowiedzieć się więcej)
       CSD U5 black white images pixelation 4_instruction: |-
         Dodaj brwi do uśmiechniętej
         buźki (kliknij tutaj, aby zobaczyć obraz)
@@ -1341,6 +1340,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Uzupełnij kształt X poprzez
         dopisywanie zer i jedynek
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -1459,6 +1487,18 @@
       CSDU6 arrays random_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select icons_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select rainbow_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_instruction: |-
+        Write a program that displays a
+        randomly chosen color from the array. (Click to see full instructions)
       CSDU6 arrays variable_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
@@ -3290,6 +3330,56 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
+        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars10_instruction: |-
+        Free Play time! Here are all of the variables
+        we've played with so far in this stage, as well as a few more in case you
+        want them. \r
+        \r
+        Notice that there are now so many blocks in our toolbox
+        that they need to be organized!  Here, we've put each piece into an appropriate
+        category.  Take some time to explore everything that is available. When you're
+        done browsing, make a game or story using repeats, variables, and events.  \r
+        \r
+        Hint:
+        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars2_instruction: |-
+        The race in that last puzzle wasn't very
+        fair! Change the `dog_speed` variable to make sure you can collect more flags
+        than Cat. The first to collect 10 flags wins!
+      CourseF_PlayLab_vars3_instruction: Używaj strzałek w lewo i w prawo, aby się
+        przesunąć, i strzałki do góry, aby skoczyć. Spróbuj, czy potrafisz zebrać
+        wszystkie flagi.
+      CourseF_PlayLab_vars4_instruction: 'Używamy teraz zmiennej "height" (wysokość)
+        do ustalenia, jak wysoko pies może podskoczyć. Zaktualizuj wartość zmiennej
+        "height" (wysokość) tak, że pies podskakuje wystarczająco wysoko, aby dosięgnąć
+        wszystkich flag. Wskazówka: nowe flagi są na wysokości 200 pikseli.'
+      CourseF_PlayLab_vars5_instruction: 'Zbudujmy grę! Najpierw potrzebujemy wyniku.
+        Zmodyfikuj kod z poprzedniej łamigłówki, aby ustawić wynik na 10. '
+      CourseF_PlayLab_vars6_instruction: "Użyj strzałki w prawo, aby strzelać sercami.
+        \\r \\r \nJak powinniśmy zdobywać punkty w naszej grze? Dodaj 1 do zmiennej
+        \"points\" za każdym razem, gdy Pies trafi Kota sercem. Użyj zdarzenia \"kiedy
+        postać 2 dotyka czegoś\", by uaktualnić wynik, Możesz zwiększyć wartość wyniku
+        (points) przypisując \"points = points + 1\". Aby ukończyć tę grę, otrzymaj
+        wynik równy 10 (powiększając go co jeden!)."
+      CourseF_PlayLab_vars7_instruction: "Użyj strzałki w prawo, aby strzelać sercami.
+        \\r \\r \nJak powinniśmy zdobywać punkty w naszej grze? Dodaj 1 do zmiennej
+        \"points\" za każdym razem, gdy Pies trafi Kota sercem. Użyj zdarzenia \"kiedy
+        postać 2 dotyka czegoś\", by uaktualnić wynik, Możesz zwiększyć wartość wyniku
+        (points) przypisując \"points = points + 1\". Aby ukończyć tę grę, otrzymaj
+        wynik równy 10 (powiększając go co jeden!)."
+      CourseF_PlayLab_vars8_instruction: "Użyj strzałki w prawo, aby strzelać sercami.
+        \\r \\r \nJak powinniśmy zdobywać punkty w naszej grze? Dodaj 1 do zmiennej
+        \"points\" za każdym razem, gdy Pies trafi Kota sercem. Użyj zdarzenia \"kiedy
+        postać 2 dotyka czegoś\", by uaktualnić wynik, Możesz zwiększyć wartość wyniku
+        (points) przypisując \"points = points + 1\". Aby ukończyć tę grę, otrzymaj
+        wynik równy 10 (powiększając go co jeden!)."
+      CourseF_PlayLab_vars9_instruction: |-
+        Nice, now let's make sure this game isn't
+        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
+        2), you should lose a point. Start with 10 points so it's not too hard. Let
+        your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution_instruction: Instrukcje
       Crack a Caesar Cipher_instruction: Instrukcje
       ECSPD Binary Odometer_instruction: |-
@@ -3571,7 +3661,7 @@
       FoodFight_instruction: Jest to przykład gry, jaką można stworzyć w play lab.
       Frequency Analysis_instruction: Test
       Function intro Ryan_instruction: Aby przerzucić pomost i dostać się do pochodni,
-        dwukrotnie użyj funkcji "zbuduj most".
+        dwukrotnie użyj funkcji "build bridge".
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -3966,38 +4056,31 @@
         kwadrat wewnątrz domku.
       MC_HOC_2017_01_Cole_instruction: |-
         Musisz zbierać narzędzia podczas podróży.
-        Poruszaj się używając **klawiszy strzałek** i dostań się do skrzyni wewnątrz domu, aby wygrać.
+        Poruszaj się używając klawiszy strzałek i dostań się do skrzyni wewnątrz domu, aby wygrać
       MC_HOC_2017_01_Kiki_instruction: Kliknij "Uruchom", aby przenieść gracza na
         pomarańczowy kwadrat wewnątrz domku.
       MC_HOC_2017_01_RETRY_instruction: 'Pokieruj Agentem tak, by dotarł do płyty
-        naciskowej, a następnie naciśnij przycisk "Wykonaj". Użyj klawiszy strzałek,
+        naciskowej, a następnie naciśnij przycisk "Uruchom". Użyj klawiszy strzałek,
         aby wyjść postacią gracza z domu i zabrać skrzynię. '
-      MC_HOC_2017_02_instruction: Pokieruj Agentem tak, aby dostał się do płyty naciskowej.
-      MC_HOC_2017_02_Cole_instruction: 'Pokieruj Agentem tak, aby dostał się na płytę
-        naciskową. Wtedy {currentPlayerName} zyska możliwość dotarcia do mapy. '
-      MC_HOC_2017_02_Kiki_instruction: Pokieruj Agentem tak, aby dotarł na płytę naciskową,
-        a następnie przedostań się postacią gracza na pomarańczowe pole.
-      MC_HOC_2017_02_Will_instruction: Pokieruj Agentem tak, aby dostał się do płyty
-        naciskowej.
+      MC_HOC_2017_02_instruction: Doprowadź Agenta do płytki naciskowej.
+      MC_HOC_2017_02_Cole_instruction: 'Pokieruj Agentem na płytę naciskową, aby {currentPlayerName}
+        mógł dotrzeć do mapy. '
+      MC_HOC_2017_02_Kiki_instruction: Pokieruj Agentem na płytę naciskową, a następnie
+        umieść gracza na pomarańczowym polu.
+      MC_HOC_2017_02_Will_instruction: Doprowadź Agenta do płytki naciskowej.
       MC_HOC_2017_03_Cole_instruction: 'Zakoduj Agenta tak, aby otworzył bramę. '
-      MC_HOC_2017_03_Kiki_instruction: Pokieruj Agentem tak, aby dostał się do płyty
-        naciskowej.
+      MC_HOC_2017_03_Kiki_instruction: Doprowadź Agenta do płytki naciskowej.
       MC_HOC_2017_04_instruction: Zmień pętlę z poprzedniej łamigłówki, aby pomóc
         Agentowi przerzucić pomost nad szerszą częścią tej rzeki.
-      MC_HOC_2017_04POINT5_Cole_instruction: Pokieruj Agentem tak, aby dostał się
-        do płyty naciskowej.
-      MC_HOC_2017_04POINT5_RYAN_instruction: Pokieruj Agentem tak, aby dostał się
-        do płyty naciskowej.
-      MC_HOC_2017_04_Cole_instruction: Pokieruj Agentem tak, aby dostał się do płyty
-        naciskowej.
-      MC_HOC_2017_04_Kiki_instruction: Pokieruj Agentem tak, aby dostał się do płyty
-        naciskowej.
+      MC_HOC_2017_04POINT5_Cole_instruction: Doprowadź Agenta do płytki naciskowej.
+      MC_HOC_2017_04POINT5_RYAN_instruction: Doprowadź Agenta do płytki naciskowej.
+      MC_HOC_2017_04_Cole_instruction: Doprowadź Agenta do płytki naciskowej.
+      MC_HOC_2017_04_Kiki_instruction: Doprowadź Agenta do płytki naciskowej.
       MC_HOC_2017_05_instruction: Użyj funkcji, aby pomóc Agentowi dotrzeć do płyty
         naciskowej.
-      MC_HOC_2017_05_Cole_instruction: Dotrzyj postacią gracza do łopaty.
-      MC_HOC_2017_05_Josh_instruction: Dotrzyj postacią gracza do łopaty.
-      MC_HOC_2017_05_Kiki_instruction: Dostań się postacią gracza na pomarańczowe
-        pole.
+      MC_HOC_2017_05_Cole_instruction: Doprowadź gracza do łopaty.
+      MC_HOC_2017_05_Josh_instruction: Doprowadź gracza do łopaty.
+      MC_HOC_2017_05_Kiki_instruction: Doprowadź gracza do pomarańczowego kwadratu.
       MC_HOC_2017_06_Cole_instruction: Napraw ten kod, aby Agent mógł przerzucić przez
         rzekę most.
       MC_HOC_2017_06_Josh_instruction: Napraw ten kod, aby pomóc Agentowi przerzucić
@@ -4005,12 +4088,11 @@
       MC_HOC_2017_06_Kiki_instruction: Napraw ten kod, aby pomóc Agentowi przerzucić
         przez rzekę most.
       MC_HOC_2017_07_Cole_instruction: Zniszcz lód. Dzięki temu {currentPlayerName}
-        dotrze do wagonika.
+        dotrze Minecart.
       MC_HOC_2017_07_Kiki_instruction: Użyj funkcji, aby oczyścić drogę do pomarańczowego
-        pola.
+        kwadratu.
       MC_HOC_2017_07a_Kiki_instruction: Oczyść drogę do pomarańczowego pola.
-      MC_HOC_2017_08_Cole_instruction: Zmień otrzymaną funkcję, aby działała w tym
-        biomie.
+      MC_HOC_2017_08_Cole_instruction: Zmień podaną funkcję, aby działała w tym biomie.
       MC_HOC_2017_08_Kiki_instruction: Zmień tę funkcję, aby działała w tej łamigłówce.
       MC_HOC_2017_08_RY_instruction: Użyj funkcji, aby przedostać się przez lawę.
       MC_HOC_2017_08_Will_instruction: Użyj funkcji, aby przedostać się przez lawę.
@@ -4018,27 +4100,25 @@
         graczowi.
       MC_HOC_2017_09_Kiki_instruction: Zaprogramuj Agenta tak, aby oczyścił drogę
         graczowi i dotarł do płyty naciskowej.
-      MC_HOC_2017_10_Cole_instruction: Stwórz funkcję, która pozwoli Ci ukończyć ten
-        wagonik.
-      MC_HOC_2017_10_Cole_old_instruction: Stwórz funkcję, która pozwoli Ci ukończyć
-        ten wagonik.
-      MC_HOC_2017_10_Kiki_instruction: Stwórz funkcję, która pozwoli Ci ukończyć ten
-        wagonik.
-      MC_HOC_2017_10_RETRY_instruction: Stwórz funkcję, która pozwoli Ci ukończyć
-        ten wagonik.
-      MC_HOC_2017_10_RYAN_instruction: Stwórz funkcję, która pozwoli Ci ukończyć ten
-        wagonik.
-      MC_HOC_2017_10_RYAN2_instruction: Stwórz funkcję, która pozwoli Ci ukończyć
-        ten wagonik.
-      MC_HOC_2017_13_Cole_instruction: "**Piaskownica:**  Czas na samodzielną eksplorację!"
-      MC_HOC_2017_4.5v2_instruction: Pokieruj Agentem tak, aby dostał się do płyty
-        naciskowej.
+      MC_HOC_2017_10_Cole_instruction: Utwórz funkcję, która pozwoli Ci ukończyć ten
+        Minecart.
+      MC_HOC_2017_10_Cole_old_instruction: Utwórz funkcję, która pozwoli Ci ukończyć
+        ten minecart.
+      MC_HOC_2017_10_Kiki_instruction: Utwórz funkcję, która pozwoli Ci ukończyć ten
+        Minecart.
+      MC_HOC_2017_10_RETRY_instruction: Użyj funkcji, aby ukończyć ten minecart.
+      MC_HOC_2017_10_RYAN_instruction: Utwórz funkcję, która pozwoli Ci ukończyć ten
+        Minecart.
+      MC_HOC_2017_10_RYAN2_instruction: Utwórz funkcję, która pozwoli Ci ukończyć
+        ten Minecart.
+      MC_HOC_2017_13_Cole_instruction: 'Zabaw się:  Czas na samodzielną eksplorację!'
+      MC_HOC_2017_4.5v2_instruction: Doprowadź Agenta do płytki naciskowej.
       MC_HOC_2017_Ali_instruction: Użyj funkcji, aby przedostać się przez lawę.
-      MC_HOC_2017_FP10x10_instruction: "**Piaskownica:** Czy podejmiesz wyzwanie i
-        znajdziesz wszystkie diamenty znajdujące się na tym poziomie? "
-      MC_HOC_2017_FP10x10_RE_instruction: "**Piaskownica:** Czy podejmiesz wyzwanie
-        i znajdziesz wszystkie diamenty znajdujące się na tym poziomie? "
-      MC_HOC_2017_FP20x20_instruction: "**Piaskownica:**  Czas na samodzielną eksplorację!"
+      MC_HOC_2017_FP10x10_instruction: 'Czas na zabawę: Czy podejmiesz wyzwanie, by
+        zebrać wszystkie diamenty znajdujące się na tym poziomie? '
+      MC_HOC_2017_FP10x10_RE_instruction: 'Czas na zabawę: Czy podejmiesz wyzwanie,
+        by zebrać wszystkie diamenty znajdujące się na tym poziomie? '
+      MC_HOC_2017_FP20x20_instruction: 'Zabaw się:  Czas na samodzielną eksplorację!'
       MC_HOC_2017_Ryan_03_instruction: A teraz użyj pętli i pomóż Agentowi przerzucić
         przez rzekę most, umieszczając bloki w wodzie.
       MC_HOC_2017_Ryan_05_instruction: Zniszcz kaktusy, aby gracz mógł dostać się
@@ -7410,11 +7490,16 @@
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_forVideo_instruction: Użyj pętli `repeat` aby dodać fale
+        na wodzie.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: 'Wyzwanie: Napraw schody.'
       courseA_artist_loops_challenge2_instruction: |-
         "Can you help me make two bird
         houses?"
+      courseA_artist_loops_challenge2a_instruction: |-
+        *"Help me get these three tents
+        set up!"*
       courseA_artist_loops_challenge3_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
@@ -7454,9 +7539,8 @@
         bugs? I know which way I want to go, but I'm not sure how many steps to take."*
       courseA_collector_loops_challenge2_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
-      courseA_collector_loops_challenge2kp_instruction: |-
-        Collect at least *3* pieces
-        of treasure to pass this level.
+      courseA_collector_loops_challenge2kp_instruction: Zbierz przynajmniej *3* części
+        skarbu aby przejść ten poziom.
       courseA_collector_preLoops1_instruction: |-
         This is Laurel the Adventurer! \r
         \r
@@ -7470,9 +7554,7 @@
       courseA_collector_preLoops3_instruction: |-
         Snap two `E -->` blocks and one `get
         treasure` block to the bottom of the program, then click "Run".
-      courseA_collector_preLoops4_instruction: |-
-        Can you figure out how to solve this
-        puzzle?
+      courseA_collector_preLoops4_instruction: Dasz radę rozwiązać tą zagadkę?
       courseA_collector_preLoops5_instruction: |-
         Get 1 of these 2 gems to solve this
         puzzle.
@@ -7482,9 +7564,8 @@
       courseA_collector_preLoops7_instruction: |-
         Get all three piles to pass this
         level.
-      courseA_forVideoTest_artist_instruction: |-
-        Use the `repeat` loop to add waves
-        to the water.
+      courseA_forVideoTest_artist_instruction: Użyj pętli `repeat` aby dodać fale
+        na wodzie.
       courseA_maze_seq1_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
@@ -7623,6 +7704,9 @@
       courseB_collector_loops_challenge2_instruction: |-
         Let's get the treasure! Help
         me across each row then come back to start the next row. Can you find a pattern?
+      courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
       courseB_collector_prog1_instruction: |-
@@ -7866,9 +7950,12 @@
       courseC_artist_prog_challenge2_instruction: |-
         *Help me paint the yellow lines
         on this road!*
+      courseC_artist_prog_challenge2a_instruction: |-
+        *Help me paint the yellow lines
+        on this road!*
       courseC_collector_loops_challenge2_instruction: |-
-        Let's hunt for treasure -
-        using loops! Help the collector by debugging this code. Get all of the treasure!
+        Get at least **5** pieces
+        of treasure!
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
         you can help Laurel collect some treasure.
@@ -7902,8 +7989,8 @@
         Look carefully! Can you collect
         all *10* pieces of treasure?
       courseC_collector_prog_challenge2_instruction: |-
-        There are 20 pieces of treasure
-        to be found. Collect at least half to finish this challenge!
+        Collect at least **10** pieces
+        of treasure to finish this challenge!
       courseC_flappy_embed_events_instruction: |-
         Here's an example of a game that
         you're about to create yourself! Play through it one or two times to get
@@ -7961,9 +8048,13 @@
         Collect all of the corn and all of the
         pumpkins.
       courseC_harvester_loops_challenge1_instruction: Collect all of the corn.
+      courseC_harvester_loops_challenge1a_instruction: Collect all of the corn.
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -8022,6 +8113,8 @@
         puzzles to complete this level.
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
       courseC_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops\nto
+        find his acorn! "
+      courseC_maze_loops_challenge1a_instruction: "Now Scrat wants to try using loops\nto
         find his acorn! "
       courseC_maze_loops_challenge2_instruction: |-
         Let's hunt for treasure - using
@@ -8142,6 +8235,8 @@
         \r
         See what happens when we start to
         get creative with the bits!
+      courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
+        binary! "
       courseD_artist_binary_challenge0_instruction: |-
         Try using nested loops to complete
         this drawing.
@@ -8236,8 +8331,8 @@
         Can you figure out how
         to make a picture like this?
       courseD_artist_nestedLoops_challenge2_instruction: |-
-        Can you figure out how
-        to make a picture like this?
+        Fix the code to make this
+        picture!
       courseD_artist_project1_instruction: "Draw a small shape, between **20 and\n50**
         pixels wide.  It can be any shape that you like.  "
       courseD_artist_project1a_instruction: |-
@@ -8339,6 +8434,9 @@
         nectar.
       courseD_bee_debugging_challenge1_instruction: Zobacz, jak pszczółka zbiera nektar.
         Czy dasz radę użyć tego samego wzorca, żeby pomóc pszczółce zrobić cały miód?
+      courseD_bee_debugging_challenge1a_instruction: Zobacz, jak pszczółka zbiera
+        nektar. Czy dasz radę użyć tego samego wzorca, żeby pomóc pszczółce zrobić
+        cały miód?
       courseD_bee_debugging_challenge2_instruction: Zobacz, jak pszczółka zbiera nektar.
         Czy dasz radę użyć tego samego wzorca, żeby pomóc pszczółce zrobić cały miód?
       courseD_bee_nestedLoops1_instruction: Help the bee collect all of the nectar.
@@ -8490,6 +8588,10 @@
         Are you an expert of nested
         loops? Use what you have learned so far to collect all of the treasure!
       courseD_collector_nested_loops_challenge2_instruction: |-
+        Help the collector
+        reach at least two piles of treasure using only the blocks in your toolbox.
+        It is possible to collect all 4.
+      courseD_collector_nested_loops_challenge2a_instruction: |-
         Help the collector
         reach at least two piles of treasure using only the blocks in your toolbox.
         It is possible to collect all 4.
@@ -8730,8 +8832,9 @@
         down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
         **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: |-
-        If the pirate is in the safe zone, wait
-        one second, then deduct a point as long as he stays beneath the octopus line.
+        If the pirate (actor 1) is in the safe
+        zone, wait one second, then deduct a point as long as he stays beneath the
+        octopus line.
       courseD_playLab_cond6cloneForTest_instruction: Testing
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
@@ -9403,23 +9506,23 @@
         Use everything you have learned
         to complete this puzzle!
       courseF_bee_functions_challenge2_recursion_instruction: |-
-        Collect all the nectar
-        or make all of the honey!
+        Zbierz cały nektar
+        lub zrób cały miód!
       courseF_bee_fwp2_instruction: |-
-        Pull this code into a function, then call the
-        function to check this row for nectar.
+        Wciągnij ten kod do funkcji, potem wywołaj
+        funkcję, by poszukać nektaru w tym rzędzie.
       courseF_bee_fwp3_instruction: |-
-        Let's see if the function makes collecting
-        these three rows of nectar any easier.
+        Zobaczmy, czy funkcja ułatwia zbieranie
+        nektaru w tych trzech rzędach.
       courseF_bee_fwp4_instruction: |-
-        Add a `length` parameter to the function so
-        that it will still work when the row is a different length.
-      courseF_bee_fwp5_instruction: Use this function to collect the nectar.
-      courseF_bee_fwp6_instruction: Build a short and sweet solution to this puzzle.
+        Dodaj parametr `długość` do funkcji tak, by
+        nadal działała, gdy rząd ma inną długość.
+      courseF_bee_fwp5_instruction: Użyj tej funkcji do zbierania nektaru.
+      courseF_bee_fwp6_instruction: Zbuduj krótkie i słodkie rozwiązanie tego zadania.
       courseF_bee_fwp7_instruction: |-
-        **Challenge:** Modify your function to make
-        honey as well.
-      courseF_bee_fwp8_instruction: Use your new function to solve this spiral.
+        **Wyzwanie:** Zmień swoją funkcję,
+        aby robiła również miód.
+      courseF_bee_fwp8_instruction: Użyj swej nowej funkcji do rozwiązania spirali.
       courseF_bee_fwp9_instruction: Użyj swojej nowej funkcji, by rozwiązać tę zagadkę.
       courseF_bee_fwp9_predict1_instruction: |-
         Use your new function to solve this
@@ -9440,11 +9543,11 @@
         This code includes a new block. What do
         you think would happen if you press the "Run" block?
       courseF_maze_ramp13_instruction: |-
-        Time for another Angry Birds puzzle to pull
-        it all together!
+        Czas na inną łamigłówkę Angry Birds,
+        by zebrać to wszystko razem!
       courseF_maze_ramp15_instruction: |-
-        Use what you've learned to get the bird
-        to the pig!
+        Wykorzystaj swoją wiedzę, by przenieść
+        ptaszka do świni!
       courseF_maze_ramp4_instruction: Avoid TNT or feathers will fly!
       courseF_maze_ramp5_instruction: Avoid the TNT.
       courseF_maze_ramp6_instruction: |-
@@ -9520,14 +9623,14 @@
         Create some questions and weave the
         answers together into your very own story.
       courseF_playlab_variables7c_instruction: |-
-        Make the game do something by asking
-        the user to guess a color.
+        Spraw, by gra coś zrobiła, prosząc
+        użytkownika o zgadnięcie koloru.
       courseF_playlab_variables8b_instruction: |-
         Use what you've learned to create
         an improv scene between the actors.
       courseF_playlab_variables8c_instruction: |-
-        Use the variables to make the game
-        more personal.
+        Użyj zmiennych,
+        żeby spersonalizować grę.
       courseF_playlab_variables_challenge1_instruction: |-
         Use these blocks to make
         the actors share a knock-knock joke. Change the setup and punchline to tell
@@ -9578,6 +9681,9 @@
       flappy_1_instruction: Dołącz blok do bloku "po kliknięciu", a następnie naciśnij
         przycisk "Uruchom". Kliknij lub dotknij ekranu, aby przesunąć Flappy'ego do
         miejsca docelowego.
+      flappy_11_instruction: Stwórz swoją własną grę z Flappym. Możesz zmienić wszystkie
+        efekty wizualne i wszystkie zasady, nawet przyciąganie. Kiedy skończysz, kliknij
+        przycisk "Zakończ", aby twoi znajomi mogli ją wypróbować na swoich telefonach.
       flappy_2_instruction: Teraz dodaliśmy podłoże. Dołącz blok do bloku "kiedy spadnie
         na ziemię".  Twój kod powinien kończyć grę, kiedy Flappy rozbija się.
       flappy_3_instruction: Blok "po uruchomieniu" pozwala uruchomić kod po uruchomieniu
@@ -9598,9 +9704,6 @@
         coś innego, na przykład, kiedy Flappy mija przeszkodę.
       flappy_9_instruction: Po uderzeniu w przeszkodę, zamiast kończyć grę, spróbuj
         ustawić wynik z powrotem na 0.
-      flappy_11_instruction: Stwórz swoją własną grę z Flappym. Możesz zmienić wszystkie
-        efekty wizualne i wszystkie zasady, nawet przyciąganie. Kiedy skończysz, kliknij
-        przycisk "Zakończ", aby twoi znajomi mogli ją wypróbować na swoich telefonach.
       frozen circle function in circle_instruction: Teraz utwórzmy 20 nakładających
         się na siebie okręgów, skręcając o 18 stopni przy każdym okręgu.
       frozen circle function with parameter_instruction: Tutaj jest blok "utwórz okrąg",
@@ -11408,16 +11511,18 @@
       harvey_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.
-      harvey_snowflake_artist1_instruction: Get your snowflake ready for 3d printing!
-      harvey_snowflake_artist2_instruction: Get your snowflake ready for 3d printing!
+      harvey_snowflake_artist1_instruction: Przygotuj swój płatek śniegu do drukowania
+        3D!
+      harvey_snowflake_artist2_instruction: Przygotuj swój płatek śniegu do drukowania
+        3D!
       harvey_tictactoe_instruction: |-
-        Let's play a game! Draw as many X's as you
-        can! Can you get 3 in a row?
+        Zagrajmy! Narysuj tak wiele X-ów jak potrafisz!
+        Dasz radę zrobić 3 z rzędu?
       iceage_click_hello_instruction: "Can you help Sid call for his friends when\nyou
         click on him? "
       iceage_free_play_instruction: 'Time to create your own game or story! '
-      iceage_free_playcourseF_IceAge_11_instruction: "Time to create your own game\nor
-        story! "
+      iceage_free_playcourseF_IceAge_11_instruction: "Czas stworzyć swoją własną grę\nlub
+        historyjkę! "
       iceage_hello1_instruction: |-
         Help Sid say "Hello!" by dragging the `say` block
         out and connecting it to the bottom of the `when run` event.
@@ -11443,8 +11548,8 @@
         Sid (actor 1) throw hearts at Granny (actor 2) and set Granny's mood to happy
         when she gets hit with them.
       iceage_warn_ice_age_instruction: |-
-        Change the scene to an icy background and
-        set Sid’s (actor 1) speed to fast.
+        Zamień scenerię na oblodzone tło i
+        ustaw prędkość Sida (aktor 1) na "szybko".
       jessie-test_instruction: Lots of instructions
       k-1 maze 1_instruction: Czy mógłbyś przenieść mnie na zachód (W - West), aby
         dotrzeć do świnki?
@@ -11569,24 +11674,25 @@
         Jorge the Dog wants to say "Hi there."  Can
         you help him?
       ramp_artist_loops1_instruction: |-
-        Move forward by 60 pixels to complete this
-        puzzle.
+        Przesuń się do przodu o 60 pikseli,
+        aby ukończyć to zadanie.
       ramp_artist_loops2_instruction: |-
-        Move forward five times and make this colored
-        line.
-      ramp_artist_loops3_instruction: Use a `repeat` loop to draw five colored dashes.
+        Przesuń się do przodu pięć razy i utwórz tę
+        kolorową linię.
+      ramp_artist_loops3_instruction: Użyj pętli `powtarzaj` do narysowania 5 kolorowych
+        kresek.
       ramp_artist_loops4_instruction: |-
         What happens when you add a 72 degree right
         turn after everything else inside your loop?
-      ramp_artist_loops5_instruction: Use loops to draw this staircase.
-      ramp_artist_loops6_instruction: Edit your loop to draw this staircase.
+      ramp_artist_loops5_instruction: Użyj pętli do narysowania tych schodów.
+      ramp_artist_loops6_instruction: Edytuj swoją pętlę, by narysować schody.
       ramp_artist_loops7_instruction: |-
         Look for a pattern and make this code shorter
         using loops!
       ramp_artist_loops8_instruction: |-
         Look for a pattern and make this code shorter
         using loops.
-      ramp_artist_loops9_instruction: Solve this puzzle by drawing a square.
+      ramp_artist_loops9_instruction: Rozwiąż to zadanie rysując kwadrat.
       sample1_instruction: |-
         Our adventurer wants to collect coins.  But she can only
         use 4 blocks to get them.\r

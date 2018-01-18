@@ -52,7 +52,7 @@ named_level 'CSD-U5-SFLP Problem Solving and Data'
 
 stage 'Problem Solving with Big Data', flex_category: 'csd5_2'
 named_level 'CSD-U5-SFLP Problem Solving with Big Data'
-level 'CSD U5 video2', progression: 'Problem Solving'
+level 'CSD U5 Netflix Data Video', progression: 'Problem Solving'
 level 'CSD U5 Waze Data Video', progression: 'Problem Solving'
 level 'CSD U5 Amazon Data Video', progression: 'Problem Solving'
 

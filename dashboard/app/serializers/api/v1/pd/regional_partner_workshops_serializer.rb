@@ -5,7 +5,7 @@ class Api::V1::Pd::RegionalPartnerWorkshopsSerializer < ActiveModel::Serializer
 
   def workshops
     object.try do |partner|
-      workshops = partner.pd_workshops_organized
+      workshops = partner.future_pd_workshops_organized
       workshops = workshops.where(course: @scope[:course]) if @scope.try(:[], :course)
       workshops = workshops.where(subject: @scope[:subject]) if @scope.try(:[], :course)
       workshops.map do |workshop|

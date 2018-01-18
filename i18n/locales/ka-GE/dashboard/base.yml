@@ -654,6 +654,7 @@ ka:
     correct_title: "მადლობა"
     correct_body: "მადლობა პასუხისთვის"
     hide_survey_last_answer: "გამოკითხვა ანონიმურია. გთხოვთ, დაგროვილი შედეგებისთვის ეწვიოთ თქვენი მასწავლებლის მართვის პანელს. ყურადღება მიაქციეთ, რომ შედეგები გამოჩნდება მხოლოდ იმ შემთხვევაში, თუ ხუთმა მოსწავლემ მაინც უპასუხა გამოკითხვას."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "მადლობა"
     wrong_body: "მადლობა პასუხისთვის"

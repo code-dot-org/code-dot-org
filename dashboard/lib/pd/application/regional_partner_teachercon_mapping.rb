@@ -10,7 +10,7 @@ module Pd::Application
     REGIONAL_PARTNER_TC_MAPPING = {
       'Allegheny Intermediate Unit 3' => TC_PHOENIX,
       'America Campaign/TIE Partnership (ND, SD, WY)' => TC_PHOENIX,
-      "Explora - Science Center and Children's Museum" => TC_ATLANTA,
+      'Fresno County Superintendent of Schools' => TC_ATLANTA,
       'Institute for School Partnership  Washington University in St. Louis' => TC_ATLANTA,
       'Mississippi State University' => TC_ATLANTA,
       'Sacramento County Office of Education' => TC_PHOENIX,

@@ -135,14 +135,19 @@ export class DetailViewContents extends React.Component {
   };
 
   handleSaveClick = () => {
+    let stateValues = [
+      'status',
+      'locked',
+      'notes',
+      'regional_partner_filter',
+    ];
+
+    if (this.props.applicationData.application_type === 'Teacher') {
+      stateValues.push('pd_workshop_id');
+    }
+
     const data = {
-      ...(_.pick(this.state, [
-        'status',
-        'locked',
-        'notes',
-        'regional_partner_filter',
-        'pd_workshop_id'
-      ])),
+      ...(_.pick(this.state, stateValues)),
       response_scores: JSON.stringify(this.state.response_scores)
     };
     $.ajax({

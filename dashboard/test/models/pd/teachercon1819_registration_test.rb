@@ -36,10 +36,26 @@ class Pd::Teachercon1819RegistrationTest < ActiveSupport::TestCase
   end
 
   test 'declined application requires fewer fields' do
-    registration = create(:pd_teachercon1819_registration, accepted: false)
+    registration = create(:pd_teachercon1819_registration, hash_trait: :withdrawn)
 
     assert registration.valid?
     refute registration.sanitize_form_data_hash.key?(:contact_first_name)
     refute registration.sanitize_form_data_hash.key?(:dietary_needs)
+  end
+
+  test 'waitlisting or withdrawing in the registration will also update the application' do
+    %w(
+      accepted
+      waitlisted
+      withdrawn
+    ).each do |status|
+      application = create(:pd_teacher1819_application)
+      application.status = "accepted"
+      application.lock!
+
+      create(:pd_teachercon1819_registration, pd_application: application, hash_trait: status.to_sym)
+
+      assert_equal application.reload.status, status
+    end
   end
 end

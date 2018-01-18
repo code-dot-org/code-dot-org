@@ -66,9 +66,9 @@ See all past [news and announcements](/about/news).
 | Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(fetch_hoc_metrics['started']) %> served. 49% female)                                                                                                                                                                      |
 | Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org).                                                                                                                                                                                                                    |
 | Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled.                                                                    |
-| Prep new CS teachers | We've prepared 68,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate).                                                                                                                                                                                    |
+| Prep new CS teachers | We've prepared 72,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate).                                                                                                                                                                                    |
 | Change school district curriculum | We've partnered with [180 of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a regional partner](/educate/districts).|
-| Set up policies to support CS | Policies changed in over 40 U.S. states to establish CS education standards, make CS courses count towards high school graduation, etc (see [details](https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit))                        |
+| Set up policies to support CS | Policies changed in over 40 U.S. states to establish CS education standards, make CS courses count towards high school graduation, etc (see [details](https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit))                                                                      |
 | Go global | Our courses are available in over 50 languages, used in 180+ countries.                                                                                                                                                                                                                                           |
 <center><font size="1">Source: Code Studio Activity and <a href="https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub">surveys of participating educators</a></font></center>
 
@@ -121,11 +121,7 @@ Code.org IRS form 990 for [2014](/files/irs-form.pdf), [2015](/files/irs-form-20
 
 
 ## Follow us
-Sign up to receive status updates about progress in the K-12 computer science movement and about the work of Code.org. This won't be a weekly newsletter, more like 4 to 6 emails per year.  
-
-<iframe src="http://go.pardot.com/l/153401/2018-01-08/k4krw5" width="100%" height="250" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
-
-Or follow Code.org on social media:
+[Sign up to receive status updates](http://go.pardot.com/l/153401/2018-01-12/k555vp) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

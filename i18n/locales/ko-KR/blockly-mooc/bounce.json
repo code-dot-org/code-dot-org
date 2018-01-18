@@ -122,7 +122,7 @@
   "setTeam": "팀을 {team} 로 설정",
   "setTeamRandom": "팀을 랜덤으로 설정",
   "shareBounceTwitter": "@codeorg 에서 만든 나의 게임을 살펴보세요.",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
+  "shareBounceTwitterDonor": "제가 만든 Bounce game을 한번 확인해 보세요. (@codeorg 를 서포트 해주셔서 감사합니다 {donor} 님)",
   "shareGame": "게임 공유하기:",
   "turnLeft": "왼쪽으로 회전",
   "turnRight": "오른쪽으로 회전",

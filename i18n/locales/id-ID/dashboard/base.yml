@@ -201,8 +201,8 @@ id:
       picture: 'Picture Password'
       word: 'Secret Words'
       email: 'email'
-      google_classroom: 'Google Classroom'
-      clever: 'Clever'
+      google_classroom: 'google classroom'
+      clever: 'Pandai'
   follower:
     invite_sent: 'Undangan telah dikirim'
     added_teacher: '%{name} telah dicantumkan sebagai nama guru Anda'
@@ -254,7 +254,7 @@ id:
         gamelab: 'Buat sebuah proyek Lab Permainan'
         weblab: 'Make a Web Lab (beta) project'
       home: "Beranda"
-      my_dashboard: "My Dashboard"
+      my_dashboard: "Dasbor saya"
       courses: "Kursus"
       course_catalog: "Course Catalog"
       project_gallery: "Proyek"
@@ -262,7 +262,7 @@ id:
       help_support: "Bantuan dan dukungan"
       report_bug: "Laporkan bug"
       teacher_community: "Komunitas guru"
-      professional_learning: "Professional Learning"
+      professional_learning: "Belajar profesional"
       documentation: "Dokumentasi"
       tutorials: "Tutorial"
       educate_overview: "Ikhtisar Pendidik"
@@ -652,6 +652,7 @@ id:
     correct_title: "Terima kasih"
     correct_body: "Terima kasih telah memberikan jawaban"
     hide_survey_last_answer: "This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Terima kasih"
     wrong_body: "Terima kasih telah memberikan jawaban"
