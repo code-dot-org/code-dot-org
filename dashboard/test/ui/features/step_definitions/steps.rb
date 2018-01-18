@@ -1129,6 +1129,11 @@ Then /^I get redirected away from "([^"]*)"$/ do |old_path|
   wait_short_until {!/#{old_path}/.match(@browser.execute_script("return location.pathname"))}
 end
 
+Then /^I get redirected away from the current page$/ do
+  old_path = @browser.execute_script("return location.pathname")
+  wait_short_until {!/#{old_path}/.match(@browser.execute_script("return location.pathname"))}
+end
+
 Then /^my query params match "(.*)"$/ do |matcher|
   wait_short_until {/#{matcher}/.match(@browser.execute_script("return location.search;"))}
 end
@@ -1149,16 +1154,25 @@ Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
 end
 
 last_shared_url = nil
-Then /^I navigate to the share URL$/ do
+Then /^I save the share URL$/ do
   wait_short_until {@button = @browser.find_element(id: 'sharing-input')}
   last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
-  @browser.navigate.to last_shared_url
-  wait_for_jquery
+end
+
+Then /^I navigate to the share URL$/ do
+  steps <<-STEPS
+    Then I save the share URL
+    And I navigate to the last shared URL
+  STEPS
 end
 
 Then /^I navigate to the last shared URL$/ do
   @browser.navigate.to last_shared_url
   wait_for_jquery
+end
+
+Then /^I enter the last shared URL into input "(.*)"$/ do |selector|
+  @browser.execute_script("document.querySelector('#{selector}').value = \"#{last_shared_url}\"")
 end
 
 Then /^I copy the embed code into a new document$/ do
