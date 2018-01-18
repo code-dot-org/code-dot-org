@@ -379,6 +379,12 @@
   studiobar_donate_body: Un enfant apprend pour chaque dollar que vous donnez.
   studiobar_shop_title: Boutique
   studiobar_shop_body: Casse les stéréotypes. Porte fièrement notre logo.
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "« Je mets au défi toutes les filles de tous les pays
     d'apprendre une Heure de Code » Malala, lauréat du prix Nobel de la Paix"
   homepage_hero_text_susan: "«&#160;Si vous pouvez changer la technologie, vous pouvez
@@ -663,6 +669,7 @@
   video_title_obama: Le président Obama à propos de l'informatique
   video_title_hoc_is_here: L'Heure du Code est là - Tout le monde peut apprendre
   video_title_anybody_can_learn: Tout le monde peut apprendre
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: Heure du Code avec Draymond Green
   video_title_russell_okung: Heure de Code avec Russell Okung
   video_title_real_madrid: Heure de Code avec le Real Madrid
@@ -1148,7 +1155,7 @@
   code_hoc_coming: L'Heure de Code est là — du 8 au 14 décembre&#160;!
   code_sign_up: Enregistrez-vous pour participer à la Semaine de l'enseignement de
     l'informatique.
-  host_an_hour: Héberger une heure
+  host_an_hour: Accueillez une Heure
   learn_banner_title: Rejoins-nous pour l'Heure de Code
   learn_banner_desc: L’Heure du Code est un mouvement mondial qui atteint de plus
     100 millions d’étudiants dans plus de 180 pays. N’importe qui, n’importe où peut
@@ -2241,10 +2248,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
-  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
-  video_title_steph_curry: Hour of Code with Steph Curry
