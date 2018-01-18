@@ -234,9 +234,36 @@ class LinuxDownloads extends React.Component {
   }
 }
 
+const CHROME_APP_WEBSTORE_URL = "https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg";
+const MAKER_SETUP_PAGE_URL = document.location.origin + '/maker/setup';
+
 class ChromebookInstructions extends React.Component {
   render() {
-    return <div/>;
+    return (
+      <div>
+        <h2>Maker Toolkit for Chromebook</h2>
+        <p>
+          Maker Toolkit on Chromebook does not use the Maker Toolkit App.
+          Instead, it depends on the
+          {' '}
+          <a href={CHROME_APP_WEBSTORE_URL}>
+            Code.org Serial Connector
+          </a>
+          {' '}
+          Chrome App.
+        </p>
+        <h4>Instructions</h4>
+        <ol>
+          <li>
+            Open this page (
+            <a href={MAKER_SETUP_PAGE_URL}>{MAKER_SETUP_PAGE_URL}</a>
+            ) on your Chromebook.
+          </li>
+          <li>Follow the instructions given by the interactive setup checklist.</li>
+          <li>Plug in your board to start using it with App Lab!</li>
+        </ol>
+      </div>
+    );
   }
 }
 
