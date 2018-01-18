@@ -1,6 +1,7 @@
 import { Motion, StaggeredMotion, spring } from 'react-motion';
 import { connect } from 'react-redux';
 import { hideFeedback } from '../redux/feedback';
+import { interpolateColors } from '../utils';
 import BaseDialog from './BaseDialog';
 import Odometer from './Odometer';
 import PuzzleRatingButtons from  './PuzzleRatingButtons';
@@ -263,21 +264,47 @@ export class UnconnectedFinishDialog extends Component {
       return null;
     }
 
+    const defaultStyles = this.props.achievements.map(() => ({ color: 0 }));
+    const stylesGenerator = prevIterpolatedStyles => prevIterpolatedStyles.map((_, i) => {
+      const highlighted = this.props.achievements[i].isAchieved &&
+        this.state.blockCountDescriptionShown;
+      let target;
+      if (i === 0) {
+        target = 1;
+      } else {
+        target = prevIterpolatedStyles[i - 1].color;
+      }
+      return { color: spring(highlighted ? target : 0) };
+    });
+
     return (
-      <div style={styles.achievements}>
-        {this.props.achievements.map((achievement, index) => (
-          <div
-            key={index}
-            style={{
-              ...styles.achievementRow,
-              ...(achievement.isAchieved ? {} : {color: color.lighter_gray}),
-            }}
-          >
-            <img href={achievement.iconUrl} style={styles.achievementIcon} />
-            {achievement.message}
+      <StaggeredMotion
+        defaultStyles={defaultStyles}
+        styles={stylesGenerator}
+      >
+        {interpolatingStyles =>
+          <div style={styles.achievements}>
+            {interpolatingStyles.map((style, index) => {
+              const achievement = this.props.achievements[index];
+              return (
+                <div
+                  style={{
+                    ...styles.achievementRow,
+                    color: interpolateColors(
+                      color.lighter_gray,
+                      color.dark_charcoal,
+                      style.color
+                    ),
+                  }}
+                >
+                  <img href={achievement.iconUrl} style={styles.achievementIcon} />
+                  {achievement.message}
+                </div>
+              );
+            })}
           </div>
-        ))}
-      </div>
+        }
+      </StaggeredMotion>
     );
   }
 
