@@ -115,6 +115,9 @@ The CS Principles Professional Learning Program is available in regions served b
 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dKLjL6y3AKo45c7weK__JI3sxijfbmzq" width="640" height="480"></iframe>
 
+<br>
+Some of our Partners serve their entire state and will be hosting summer workshops in multiple locations. Even if your city is not listed on this map, we encourage you to apply! 
+
 ## <a name="participate"></a>Who can participate?
 
 The CS Principles Professional Learning Program is open to educators who are interested in teaching the Code.org CS Principles course - no prior experience required! We prioritize educators who plan to teach the course in grades 9, 10, 11 and/or 12. In order to participate in this program, we ask that applicants:

@@ -804,6 +804,39 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 'March 30 - April 3, 2017', workshop.friendly_date_range
   end
 
+  test 'date_and_location_name with processed location and sessions' do
+    workshop = create :pd_workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
+      processed_location: {city: 'Seattle', state: 'WA'}.to_json
+
+    assert_equal 'March 30 - April 3, 2017, Seattle WA', workshop.date_and_location_name
+  end
+
+  test 'date_and_location_name with processed location but no sessions' do
+    workshop = create :pd_workshop, processed_location: {city: 'Seattle', state: 'WA'}.to_json
+
+    assert_equal 'Dates TBA, Seattle WA', workshop.date_and_location_name
+  end
+
+  test 'date_and_location_name with no location but with sessions' do
+    workshop = create :pd_workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
+      processed_location: nil
+
+    assert_equal 'March 30 - April 3, 2017, Location TBA', workshop.date_and_location_name
+  end
+
+  test 'date_and_location_name with no location nor sessions' do
+    workshop = create :pd_workshop, processed_location: nil
+
+    assert_equal 'Dates TBA, Location TBA', workshop.date_and_location_name
+  end
+
+  test 'date_and_location_name for teachercon' do
+    workshop = create :pd_workshop, :teachercon, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
+      processed_location: {city: 'Seattle', state: 'WA'}.to_json
+
+    assert_equal 'March 30 - April 3, 2017, Seattle WA TeacherCon', workshop.date_and_location_name
+  end
+
   private
 
   def session_on_day(day_offset)

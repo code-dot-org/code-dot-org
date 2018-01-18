@@ -76,6 +76,8 @@ will be subsidizing the cost of a single classroom kit for each teacher.
 
 Eligible teachers in our Professional Learning Program will be sent details in Winter 2017 on how to receive a coupon code that can be applied directly on the Adafruit website. 
 
+Additionally, participants in our 2018-19 Professional Learning Program who are teaching in schools with 50%+ free and reduced meal rates are eligibe to receive a subsidized Adafruit Circuit Playground classroom kit if they are implementing the full course. More details to come!
+
 ### For teachers independently using the CS Discoveries curriculum
 
 While teachers not in the 2017-18 CS Discoveries Professional Learning Program are not eligible for the subsidized cost of the kit, the classroom kit can still be purchased directly on [Adafruit's website](https://www.adafruit.com/product/3399). 

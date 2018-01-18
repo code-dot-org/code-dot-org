@@ -1434,6 +1434,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -8527,6 +8556,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -10172,6 +10204,9 @@
       flappy_1_instruction: Tempatkan satu blok pada blok "Ketika klik", kemudian
         tekan "Jalankan Program". Klik atau sentuh layar untuk mengerakkan Flappy
         menuju target.
+      flappy_11_instruction: Butalah game Flappy anda. Anda dapat merubah semua visualisasi
+        dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda
+        agar ia mencoba pada ponselnya.
       flappy_2_instruction: Sekarang kita telah menambahkan beberapa permukaan.  Tempelkan
         blok ke blok "ketika mencapai permukaan".  Kode Anda memerlukan 'PERMAINAN
         BERAKHIR' ketika Flappy menghantam permukaan.
@@ -10195,9 +10230,6 @@
         ketika event berganti, misalnya ketika melewati penghalang.
       flappy_9_instruction: Untuk mencampurkan berbagai hal, ketika mengenai sebuah
         rintangan, daripada mengakhiri permainan cobalah atur nilai kembali ke 0.
-      flappy_11_instruction: Butalah game Flappy anda. Anda dapat merubah semua visualisasi
-        dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda
-        agar ia mencoba pada ponselnya.
       frozen circle function in circle_instruction: Sekarang, mari kita membuat 20
         lingkaran yang tumpang tindih, berbelok 18 derajat antara setiap lingkaran.
       frozen circle function with parameter_instruction: Ini adalah blok "Buatlah

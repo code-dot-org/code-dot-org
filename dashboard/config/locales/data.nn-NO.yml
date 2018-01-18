@@ -730,12 +730,18 @@
         infinity_playlab_intro: Spele-Lab – Introduksjon
         infinity_playlab_events: Spele-Lab - Hendingar
         infinity_playlab_repeat_forever: Spele-Lab - Gjenta for alltid
+        csd_concept_how_computers_work: Introducing How Computers Work
         csd_concept_computer: 'Korleis datamaskinar fungerer: Kva gjer ein datamaskin
           til ein datamaskin?'
         csd_concept_binary_data: 'Korleis datamaskinar fungerer: Binær og data'
+        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
+        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
+          & Output'
+        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
         csd_concept_search: Korleis søk fungerer
         csd_external_amazon_data: Korleis Big Data brukes i Amazons anbefalingssystemer
           kan endre liva våre
+        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
         csd_external_waze_data: Kvifor er så mange brukarar besatt av Waze?
         csd_gamelab_animation_tab: Animasjonsfanen
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1

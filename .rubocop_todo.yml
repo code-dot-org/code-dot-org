@@ -86,11 +86,6 @@ Lint/AmbiguousRegexpLiteral:
 Lint/DuplicateMethods:
   Enabled: false
 
-# Offense count: 4
-# Configuration parameters: MaximumRangeSize.
-Lint/MissingCopEnableDirective:
-  Enabled: false
-
 # Offense count: 28
 Lint/ParenthesesAsGroupedExpression:
   Enabled: false
@@ -330,10 +325,6 @@ Style/MixinUsage:
 
 # Offense count: 28
 Style/MultilineTernaryOperator:
-  Enabled: false
-
-# Offense count: 4
-Style/MultipleComparison:
   Enabled: false
 
 # Offense count: 205

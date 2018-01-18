@@ -1445,6 +1445,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -8403,6 +8432,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -10018,6 +10050,10 @@
       flappy_1_instruction: |-
         Attacca un blocco al blocco `quando si clicca` e premi "Esegui". Clicca o tocca lo schermo per spostare Flappy verso il bersaglio.<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-16#VIDEO" target="_blank">Video doppiato in italiano</a>
+      flappy_11_instruction: Crea la tua versione del gioco Flappy. È possibile modificare
+        tutte le immagini e tutte le regole, anche la gravità e lo spazio tra gli
+        ostacoli. Quando hai finito, clicca su Condividi per far provare agli amici
+        il gioco sui loro smartphone.
       flappy_2_instruction: Ora nello scenario c'è anche il terreno.  Attacca un blocco
         di azione al blocco di evento `quando precipita a terra`.  Inoltre, il tuo
         codice ha bisogno del blocco `fine del gioco` quando Flappy precipita a terra.
@@ -10041,10 +10077,6 @@
         Puoi anche impostare il tipo di giocatore.
       flappy_9_instruction: Per rendere lo sviluppo più interessante, prova a riportare
         il punteggio a 0 quando si colpisce un ostacolo invece di finire il gioco.
-      flappy_11_instruction: Crea la tua versione del gioco Flappy. È possibile modificare
-        tutte le immagini e tutte le regole, anche la gravità e lo spazio tra gli
-        ostacoli. Quando hai finito, clicca su Condividi per far provare agli amici
-        il gioco sui loro smartphone.
       frozen circle function in circle_instruction: Ora disegniamo 20 cerchi sovrapposti,
         girando di 18 gradi tra un cerchio e l'altro. Di quanto devi saltare in avanti?
       frozen circle function with parameter_instruction: In questo esercizio il blocco

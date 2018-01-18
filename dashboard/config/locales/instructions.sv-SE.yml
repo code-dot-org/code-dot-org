@@ -1278,6 +1278,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -7966,6 +7995,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -9606,6 +9638,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Lägg till ett block på "när klicka" blocket och tryck
         på "Kör". Klicka eller tappa på skärmen för att flytta Flappy till målet.
+      flappy_11_instruction: Skapa ditt eget Flappy spel. Du kan ändra all grafik
+        och alla regler, även gravitationen. När du är klar, klicka på Slutför för
+        att låta vänner prova ditt spel på sina telefoner.
       flappy_2_instruction: Nu har vi lagt till lite mark. Lägg till block till  "när
         slog i marken" blocket.  Koden måste säga "Avsluta spelet" när Flappy kraschar.
       flappy_3_instruction: '"När kör" blocket gör så att kod körs när spelet startar.  Prova
@@ -9627,9 +9662,6 @@
       flappy_9_instruction: För att blanda ihop saker,  i stället för att spelet slutar
         när du slår i ett hinder så prova att sätta tillbaks poänginställningen  till
         0.
-      flappy_11_instruction: Skapa ditt eget Flappy spel. Du kan ändra all grafik
-        och alla regler, även gravitationen. När du är klar, klicka på Slutför för
-        att låta vänner prova ditt spel på sina telefoner.
       frozen circle function in circle_instruction: Låt oss nu skapa 20 överlappande
         cirklar. Vrid 18 grader mellan varje cirkel.
       frozen circle function with parameter_instruction: Här är ett "Skapa cirkel"-block
