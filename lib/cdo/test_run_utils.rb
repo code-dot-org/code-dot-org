@@ -6,7 +6,7 @@ module TestRunUtils
   def self.run_apps_tests
     Dir.chdir(apps_dir) do
       ChatClient.wrap('apps tests') do
-        RakeUtils.system 'npm run test-low-memory'
+        RakeUtils.system_stream_output 'npm run test-low-memory'
       end
     end
   end
@@ -64,7 +64,9 @@ module TestRunUtils
 
   def self.run_lib_tests
     Dir.chdir(lib_dir) do
-      RakeUtils.rake_stream_output 'test'
+      ChatClient.wrap('lib tests') do
+        RakeUtils.rake_stream_output 'test'
+      end
     end
   end
 end

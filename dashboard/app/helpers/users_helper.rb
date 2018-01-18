@@ -47,7 +47,7 @@ module UsersHelper
   # }
   def summarize_user_progress(script, user = current_user, exclude_level_progress = false)
     user_data = user_summary(user)
-    merge_script_progress(user_data, user, script, exclude_level_progress)
+    user_data.merge!(get_script_progress(user, script, exclude_level_progress))
 
     if script.has_peer_reviews?
       user_data[:peerReviewsPerformed] = PeerReview.get_peer_review_summaries(user, script).try(:map) do |summary|
@@ -75,26 +75,6 @@ module UsersHelper
     return ids[0]
   end
 
-  # Summarize a user and his or her progress across all scripts.
-  # Example return value:
-  # {
-  #     "lines": 34, "linesOfCodeText": "Total lines of code: 34", "disableSocialShare": true,
-  #     "scripts": {
-  #         "course2": {
-  #             "levels": {"135": {"status": "perfect", "result": 100}}},
-  #         "artist": {
-  #             "levels": {
-  #                "1138": {"status": "attempted", "result": 5, submitted: false},
-  #                "1139": {"status": "attempted", "result": 5, submitted: true},
-  #                "1142": {"status": "attempted", "result": 5, pages_completed: [true, false, false], submitted: false},
-  #                "1147": {"status": "perfect", "result": 30, submitted: false}}}}}
-  def summarize_user_progress_for_all_scripts(user)
-    user_data = user_summary(user)
-    user_data[:scripts] = {}
-    merge_scripts_progress(user_data[:scripts], user)
-    user_data
-  end
-
   # Some summary user data we include in user_progress requests
   def user_summary(user)
     user_data = {}
@@ -111,19 +91,13 @@ module UsersHelper
     user_data
   end
 
-  # Merge the progress for all scripts into the specified result hash.
-  private def merge_scripts_progress(user_data, user)
-    UserLevel.where(user_id: user.id).each do |ul|
-      script_id = ul.script_id
-      script = Script.get_from_cache(script_id)
-      script_progress = (user_data[script.name] ||= {})
-      merge_script_progress(script_progress, user, script)
-    end
-    user_data
-  end
-
-  # Merge the progress for the specified script and user into the user_data result hash.
-  private def merge_script_progress(user_data, user, script, exclude_level_progress = false)
+  # Get the progress for the specified script and user
+  # @param {User} user
+  # @param {Script} script
+  # @param {boolean} exclude_level_progress if true, script progress will not include
+  #   level progress (just some summary info)
+  private def get_script_progress(user, script, exclude_level_progress = false)
+    user_data = {}
     return user_data unless user
 
     if script.professional_learning_course?
@@ -136,11 +110,46 @@ module UsersHelper
     end
 
     unless exclude_level_progress
-      uls = user.user_levels_by_level(script)
-      paired_user_level_ids = PairedUserLevel.pairs(uls.values.map(&:id))
-      script_levels = script.script_levels
       user_data[:completed] = user.completed?(script)
-      user_data[:levels] = {}
+      progress = get_level_progress([user], script)
+      user_data[:levels] = progress[user.id]
+    end
+
+    user_data
+  end
+
+  # Get the level progress for the specified script and user
+  # @param {User[]} users
+  # @param {Script} script
+  # @return A set of level progress objects, keyed first by userId and then by
+  #   levelId. The possible fields in each progress object are status, result,
+  #   submitted, readonly_answers, paired.
+  def get_level_progress(users, script)
+    level_progress = {}
+
+    # We need to get users_levels (and paired user_levels) for each student. Get
+    # them all in advance, so that we can have 3 total db queries, instead of
+    # having 3 per user
+    if users.length == 1
+      # If we have a single user, do this so that the result is cached on the user
+      # instance
+      all_user_levels = users.first.user_levels.where(script_id: script.id)
+      user_levels_by_user = {users.first.id => all_user_levels}
+    else
+      all_user_levels = UserLevel.where(user_id: users.map(&:id), script_id: script.id)
+      user_levels_by_user = all_user_levels.group_by(&:user_id)
+    end
+
+    all_paired_user_levels = PairedUserLevel.pairs(all_user_levels.map(&:id))
+    paired_user_levels_by_user = all_paired_user_levels.group_by(&:user_id)
+
+    users.each do |user|
+      level_progress[user.id] = {}
+      user_level_progress = level_progress[user.id]
+      uls = (user_levels_by_user[user.id] || []).index_by(&:level_id)
+      paired_user_level_ids = paired_user_levels_by_user[user.id] || []
+      script_levels = script.script_levels
+
       script_levels.each do |sl|
         sl.level_ids.each do |level_id|
           # if we have a contained level, use that to represent progress
@@ -155,11 +164,11 @@ module UsersHelper
 
           # for now, we don't allow authorized teachers to be "locked"
           if locked && !user.authorized_teacher?
-            user_data[:levels][level_id] = {
+            user_level_progress[level_id] = {
               status: LEVEL_STATUS.locked
             }
           elsif completion_status != LEVEL_STATUS.not_tried
-            user_data[:levels][level_id] = {
+            user_level_progress[level_id] = {
               status: completion_status,
               result: ul.try(:best_result) || 0,
               submitted: submitted ? true : nil,
@@ -171,9 +180,9 @@ module UsersHelper
             # array of booleans indicating which pages have been completed.
             pages_completed = get_pages_completed(user, sl)
             if pages_completed
-              user_data[:levels][level_id][:pages_completed] = pages_completed
+              user_level_progress[level_id][:pages_completed] = pages_completed
               pages_completed.each_with_index do |result, index|
-                user_data[:levels]["#{level_id}_#{index}"] = {
+                user_level_progress["#{level_id}_#{index}"] = {
                   result: result,
                   submitted: submitted ? true : nil,
                   readonly_answers: readonly_answers ? true : nil
@@ -184,8 +193,7 @@ module UsersHelper
         end
       end
     end
-
-    user_data
+    level_progress
   end
 
   # Given a user and a script-level, returns a nil if there is only one page, or an array of
