@@ -91,7 +91,7 @@ class CourseScript extends Component {
           <div style={styles.description}>{description}</div>
           <Button
             text={i18n.goToUnit()}
-            href={`/s/${name}`}
+            href={`/s/${name}${location.search}`}
             color={Button.ButtonColor.gray}
           />
         </div>
