@@ -47,7 +47,7 @@ export default class MiniViewTopRow extends React.Component {
       <div style={styles.main}>
         <Button
           text={i18n.viewUnitOverview()}
-          href={`/s/${scriptName}`}
+          href={`/s/${scriptName}${location.search}`}
           color={Button.ButtonColor.gray}
         />
         <span style={styles.linesOfCodeText}>
