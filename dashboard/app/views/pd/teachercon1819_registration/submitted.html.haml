@@ -1,13 +1,9 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/pd', media: 'all'
 
-- email = "teacher@code.org" if @application.application_type == "Teacher"
-- email = "facilitators@code.org" if @application.application_type == "Facilitator"
-- email = "partner@code.org" if @application.application_type == "Partner"
-
 %p
   Hello! It looks like we've already received a TeacherCon registration from
   your Code.org account. If you haven't submitted a registration, or you would
   like to change your registration, please email
-  %a{ href: "mailto:#{email}" }
-    = email
+  %a{ href: "mailto:#{@email}" }
+    = @email
