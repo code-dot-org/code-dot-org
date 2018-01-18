@@ -99,7 +99,7 @@ Computer Science Discoveries is a full-year introductory computer science survey
 
 <div class="col-33" style="padding-right: 20px; padding-bottom: 20px;">
 
-Teachers say our five elementary courses are “totally awesome sauce” and fun for all students, even pre-readers.
+Teachers say our elementary courses are “totally awesome sauce” and fun for all students, even pre-readers.
 
 </div>
 
