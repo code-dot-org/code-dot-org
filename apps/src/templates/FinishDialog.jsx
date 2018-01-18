@@ -1,3 +1,4 @@
+import { Motion, StaggeredMotion, spring } from 'react-motion';
 import { connect } from 'react-redux';
 import { hideFeedback } from '../redux/feedback';
 import BaseDialog from './BaseDialog';
@@ -72,7 +73,7 @@ const styles = {
   blockCount: {
     fontSize: 30,
     fontFamily: '"Gotham 7r", sans-serif',
-    margin: 10,
+    margin: 7,
     verticalAlign: 'middle',
   },
   blockCountPerfect: {
@@ -82,10 +83,11 @@ const styles = {
     color: color.light_teal,
   },
   blockCountDescriptor: {
+    borderRadius: 5,
     borderWidth: 1,
     borderStyle: 'solid',
+    display: 'inline-block',
     fontFamily: '"Gotham 5r", sans-serif',
-    borderRadius: 5,
     padding: 5,
     verticalAlign: 'middle',
   },
@@ -191,15 +193,41 @@ export class UnconnectedFinishDialog extends Component {
   }
 
   getBlockCountDescription() {
+    let description;
     if (this.props.blocksUsed < this.props.blockLimit) {
-      return msg.betterThanPerfectDescription();
+      description = msg.betterThanPerfectDescription();
+    } else if (this.props.blocksUsed === this.props.blockLimit) {
+      description = msg.perfectDescription();
+    } else {
+      description = msg.tooManyBlocksDescription();
     }
-    if (this.props.blocksUsed === this.props.blockLimit) {
-      return msg.perfectDescription();
+
+    if (this.state.blocksCounted) {
+    } else {
     }
-    if (this.props.blocksUsed > this.props.blockLimit) {
-      return msg.tooManyBlocksDescription();
-    }
+
+    return (
+      <Motion
+        defaultStyle={{scale: 0}}
+        style={{scale: spring(this.state.blocksCounted ? 1 : 0, {stiffness: 250, damping: 18})}}
+        onRest={() => this.setState({blockCountDescriptionShown: true})}
+      >
+        {interpolatingStyle => {
+          const { scale } = interpolatingStyle;
+          const transform = `translateY(${50 * (1 - scale)}%) scaleY(${scale})`;
+          return (
+            <span
+              style={{
+                ...styles.blockCountDescriptor,
+                transform,
+              }}
+            >
+              {description}
+            </span>
+          );
+        }}
+      </Motion>
+    );
   }
 
   getBlockCounter() {
@@ -224,9 +252,7 @@ export class UnconnectedFinishDialog extends Component {
             />
             {this.props.blockLimit && ('/' + this.props.blockLimit.toString())}
           </span>
-          <span style={styles.blockCountDescriptor}>
-            {this.getBlockCountDescription()}
-          </span>
+          {this.getBlockCountDescription()}
         </span>
       </div>
     );
