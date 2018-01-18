@@ -3,14 +3,6 @@ import $ from 'jquery';
 
 $(document).ready(initPage);
 
-$("#plusAnswerMap").on("click", () => {
-  $("#plusAnswerMap").prev().clone().insertBefore("#plusAnswerMap");
-});
-
-$("#plusAnswerReference").on("click", () => {
-  $("#plusAnswerReference").prev().clone().insertBefore("#plusAnswerReference");
-});
-
 function initPage() {
   const script = document.querySelector('script[data-editorall]');
   const config = JSON.parse(script.dataset.editorall);
@@ -52,6 +44,11 @@ function initPage() {
 
   $('.select_all').click(make_selection_handler(true));
   $('.select_none').click(make_selection_handler(false));
+
+  // This click handler enables adding multiple text inputs for reference links.
+  $("#plusAnswerReference").on("click", () => {
+    $("#plusAnswerReference").prev().clone().insertBefore("#plusAnswerReference");
+  });
 
   var videoInfos = config.video_infos;
 

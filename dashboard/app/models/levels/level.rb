@@ -58,7 +58,7 @@ class Level < ActiveRecord::Base
     authored_hints
     instructions_important
     display_name
-    map_levels
+    map_reference
     reference_links
   )
 
