@@ -97,7 +97,7 @@ export default class Joining extends Teachercon1819FormComponent {
         </FormGroup>
       }
 
-      {(this.isFacilitatorApplication || this.isPartnerApplication()) &&
+      {(this.isFacilitatorApplication() || this.isPartnerApplication()) &&
         <FormGroup>
           {this.radioButtonsFor("ableToAttend")}
           {this.props.data.ableToAttend === "No" &&
