@@ -64,7 +64,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
   return (
     <div>
       <a
-        href={rowData.assignmentPaths[0]}
+        href={`${rowData.assignmentPaths[0]}?section_id=${rowData.id}`}
         style={tableLayoutStyles.link}
       >
         {rowData.assignmentNames[0]}
@@ -73,7 +73,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
         <div style={styles.currentUnit}>
           <div>{i18n.currentUnit()}</div>
           <a
-            href={assignmentPaths[1]}
+            href={`${rowData.assignmentPaths[1]}?section_id=${rowData.id}`}
             style={tableLayoutStyles.link}
           >
             {assignmentNames[1]}
