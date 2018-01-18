@@ -14,7 +14,7 @@ Scenario: Completing Minecraft HoC should go to certificate page and generate a 
   And I wait until current URL contains "/congrats"
   And my query params match "\?i\=.*\&s\=bWM\="
   And I wait to see element with ID "congrats-container"
-  And I wait to see element with ID "certificate"
+  And I wait to see element with ID "uitest-certificate"
   And I type "Robo Coder" into "#name"
   And I press "button:contains(Submit)" using jQuery
-  And I wait to see element with ID "thanks"
+  And I wait to see element with ID "uitest-thanks"
