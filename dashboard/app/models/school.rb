@@ -256,7 +256,7 @@ class School < ActiveRecord::Base
   # @param options [Hash] The CSV file parsing options.
   # @return [String] The CSV file name.
   def self.write_to_csv(filename, options = CSV_IMPORT_OPTIONS)
-    cols = %w(id name address_line1 address_line2 address_line3 city state zip latitude longitude school_type school_district_id)
+    cols = %w(id name address_line1 address_line2 address_line3 city state zip latitude longitude school_type school_district_id state_school_id)
     CSV.open(filename, 'w', options) do |csv|
       csv << cols
       rows = block_given? ? yield : order(:id)
