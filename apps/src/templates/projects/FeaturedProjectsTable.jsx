@@ -1,5 +1,4 @@
 import React, {PropTypes} from 'react';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import {ImageWithStatus} from '../ImageWithStatus';
@@ -20,8 +19,8 @@ export const COLUMNS = {
   THUMBNAIL: 0,
   PROJECT_NAME: 1,
   APP_TYPE: 2,
-  LAST_EDITED: 3,
-  PUBLIC_GALLERY: 4,
+  LAST_PUBLISHED: 3,
+  LAST_FEATURED: 4,
   ACTIONS: 5,
 };
 
@@ -56,9 +55,6 @@ export const styles = {
   cellType: {
     width: 120
   },
-  cellIsPublished: {
-    textAlign: 'center'
-  },
   thumbnailWrapper: {
     height: THUMBNAIL_SIZE,
     display: 'flex',
@@ -80,10 +76,6 @@ const thumbnailFormatter = function (thumbnailUrl) {
 const nameFormatter = (name, {rowData}) => {
   const url = '/projects/${rowData.type}/${rowData.channel}/';
   return <a style={tableLayoutStyles.link} href={url} target="_blank">{name}</a>;
-};
-
-const isPublishedFormatter = (isPublished) => {
-  return isPublished ? (<FontAwesome icon="circle"/>) : '';
 };
 
 const actionsFormatter = (actions, {rowData}) => {
@@ -120,7 +112,8 @@ const typeFormatter = (type) => {
 
 class FeaturedProjectsTable extends React.Component {
   static propTypes = {
-    projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired
+    projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired,
+    tableVersion: PropTypes.oneOf(['currentFeatured', 'archiveFeatured']).isRequired
   };
 
   state = {
@@ -151,7 +144,8 @@ class FeaturedProjectsTable extends React.Component {
   };
 
   getColumns = (sortable) => {
-    return [
+    const tableVersion = this.props.tableVersion;
+    const dataColumns = [
       {
         property: 'thumbnailUrl',
         header: {
@@ -204,9 +198,9 @@ class FeaturedProjectsTable extends React.Component {
         }
       },
       {
-        property: 'updatedAt',
+        property: 'publishedAt',
         header: {
-          label: i18n.lastEdited(),
+          label: i18n.published(),
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
@@ -216,22 +210,29 @@ class FeaturedProjectsTable extends React.Component {
         }
       },
       {
-        property: 'isPublished',
+        property: 'featuredAt',
         header: {
-          label: i18n.publicGallery(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader,
-            }
-          },
+          label: i18n.featured(),
+          props: {style: tableLayoutStyles.headerCell},
+          transforms: [sortable],
         },
         cell: {
-          format: isPublishedFormatter,
-          props: {style: {
-            ...tableLayoutStyles.cell,
-            ...styles.cellIsPublished
-          }}
+          format: dateFormatter,
+          props: {style: tableLayoutStyles.cell}
+        }
+      },
+    ];
+    const archiveColumns = [
+      {
+        property: 'unfeaturedAt',
+        header: {
+          label: i18n.unfeatured(),
+          props: {style: tableLayoutStyles.headerCell},
+          transforms: [sortable],
+        },
+        cell: {
+          format: dateFormatter,
+          props: {style: tableLayoutStyles.cell}
         }
       },
       {
@@ -251,6 +252,30 @@ class FeaturedProjectsTable extends React.Component {
         }
       }
     ];
+    const currentColumns = [
+      {
+        property: 'actions',
+        header: {
+          label: i18n.quickActions(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...tableLayoutStyles.unsortableHeader,
+            }
+          },
+        },
+        cell: {
+          format: actionsFormatter,
+          props: {style: tableLayoutStyles.cell}
+        }
+      }
+    ];
+
+    if (tableVersion === "currentFeatured") {
+      return dataColumns.concat(currentColumns);
+    } else {
+      return dataColumns.concat(archiveColumns);
+    }
   };
 
   render() {
