@@ -274,7 +274,11 @@ function latestWindowsInstaller() {
 
 /** @returns {Promise<string>} Resolves to Mac installer info. */
 function latestMacInstaller() {
-  return latestInstaller(DOWNLOAD_PREFIX + 'latest-mac.yml');
+  return latestInstaller(DOWNLOAD_PREFIX + 'latest-mac.yml')
+    .then(metadata => ({
+      ...metadata,
+      filename: metadata.filename.replace('zip', 'dmg')
+    }));
 }
 
 function latestLinuxInstaller() {
