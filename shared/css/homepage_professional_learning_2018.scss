@@ -1,0 +1,105 @@
+@keyframes slideInFromLeft {
+  0% {
+      transform: translateX(-50px);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.animateSlideInFromLeft {
+  animation: 5s ease-out 0s 1 slideInFromLeft;
+}
+
+.homepage-professional-learning-2018-banner {
+  background-color: #59b9dc;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  a {
+    font-family: 'Gotham 4r', sans-serif;
+    text-decoration: none;
+  }
+
+  .nonphone {
+    padding: 5px;
+    background-color: #59b9dc;
+    height: 97px;
+    margin: 0 auto;
+    float: none;
+
+    .left {
+      float: left;
+      height: 87px;
+      position: relative;
+
+      .banner {
+        text-align: center;
+        width: 600px;
+        margin: 0 auto;
+        position: relative;
+
+        img {
+          width: 600px;
+        }
+
+        .text {
+          color: white;
+          font-size: 18px;
+          padding: 15px;
+          text-align: center;
+          line-height: 1.5;
+          position: absolute;
+          top: 0px;
+          left: 30px;
+          animation: fadein 5s;
+        }
+      }
+    }
+
+    .right {
+      float: left;
+      padding-top: 26px;
+      height: 87px;
+      text-align: center;
+
+      button {
+        font-size: 18px;
+        min-width: 140px;
+        margin-top: 0px;
+        background-color: transparent;
+        border-color: white;
+        border-width: 2px;
+      }
+    }
+  }
+
+  .phone {
+    text-align: center;
+
+    .text {
+      color: white;
+      font-size: 18px;
+      padding: 15px;
+      text-align: center;
+      line-height: 1.5;
+      top: 0px;
+      left: 30px;
+      animation: fadein 5s;
+    }
+
+    button {
+      font-size: 18px;
+      min-width: 140px;
+      margin-top: 0px;
+      margin-bottom: 15px;
+      background-color: transparent;
+      border-color: white;
+      border-width: 2px;
+    }
+  }
+
+  .clear {
+    clear: both;
+  }
+}
