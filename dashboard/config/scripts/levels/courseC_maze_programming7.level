@@ -36,9 +36,8 @@
     "tts_markdown_instructions_override": "It's time to get angry!\r\nChallenge: This code has a lot of bugs. You'll need to remove some blocks and add others.",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
     "top_level_procedure_autopopulate": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
