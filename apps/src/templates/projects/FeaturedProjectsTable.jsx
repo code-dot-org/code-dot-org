@@ -77,16 +77,16 @@ const thumbnailFormatter = function (thumbnailUrl) {
           />);
 };
 
-const nameFormatter = function (name, {rowData}) {
+const nameFormatter = (name, {rowData}) => {
   const url = '/projects/${rowData.type}/${rowData.channel}/';
   return <a style={tableLayoutStyles.link} href={url} target="_blank">{name}</a>;
 };
 
-const isPublishedFormatter = function (isPublished) {
+const isPublishedFormatter = (isPublished) => {
   return isPublished ? (<FontAwesome icon="circle"/>) : '';
 };
 
-const actionsFormatter = function (actions, {rowData}) {
+const actionsFormatter = (actions, {rowData}) => {
   return (
     <QuickActionsCell>
       <PopUpMenu.Item
@@ -109,38 +109,33 @@ const actionsFormatter = function (actions, {rowData}) {
   );
 };
 
-const dateFormatter = function (time) {
+const dateFormatter = (time) => {
   const date = new Date(time);
   return date.toLocaleDateString();
 };
 
-const typeFormatter = function (type) {
+const typeFormatter = (type) => {
   return PROJECT_TYPE_MAP[type];
 };
 
-// Table of user's projects
-// TODO(caleybrock): add an actions component to allow users to modify projects
-const PersonalProjectsTable = React.createClass({
-  propTypes: {
+class FeaturedProjectsTable extends React.Component {
+  static propTypes = {
     projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired
-  },
+  };
 
-  getInitialState() {
-    const sortingColumns = {
-      [COLUMNS.LAST_EDITED]: {
-        direction: 'desc',
-        position: 0
-      }
-    };
-    return {sortingColumns};
-  },
+  state = {
+    [COLUMNS.PROJECT_NAME]: {
+      direction: 'desc',
+      position: 0
+    }
+  };
 
-  getSortingColumns() {
+  getSortingColumns = () => {
     return this.state.sortingColumns || {};
-  },
+  };
 
   // The user requested a new sorting column. Adjust the state accordingly.
-  onSort(selectedColumn) {
+  onSort = (selectedColumn) => {
     this.setState({
       sortingColumns: sort.byColumn({
         sortingColumns: this.state.sortingColumns,
@@ -153,9 +148,9 @@ const PersonalProjectsTable = React.createClass({
         selectedColumn
       })
     });
-  },
+  };
 
-  getColumns(sortable) {
+  getColumns = (sortable) => {
     return [
       {
         property: 'thumbnailUrl',
@@ -177,7 +172,7 @@ const PersonalProjectsTable = React.createClass({
         }
       },
       {
-        property: 'name',
+        property: 'project_name',
         header: {
           label: i18n.projectName(),
           props: {style: {
@@ -256,7 +251,7 @@ const PersonalProjectsTable = React.createClass({
         }
       }
     ];
-  },
+  };
 
   render() {
     // Define a sorting transform that can be applied to each column
@@ -280,6 +275,6 @@ const PersonalProjectsTable = React.createClass({
       </Table.Provider>
     );
   }
-});
+}
 
-export default PersonalProjectsTable;
+export default FeaturedProjectsTable;
