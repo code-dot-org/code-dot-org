@@ -53,7 +53,7 @@ For more information, please contact advocacy@code.org.
 * <a href="http://www.aauw.org/">American Association for University Women</a>
 * <a href="http://anitaborg.org/">Anita Borg Institute</a>
 * <a href="https://www.aztechcouncil.org/">Arizona Technology Council</a>
-* <a href="https://www.ncwit.org/">Association for Computing Machinery</a>
+* <a href="https://www.acm.org/">Association for Computing Machinery</a>
 * <a href="https://www.battelle.org/">Battelle</a>
 * <a href="https://www.childrennow.org/issue-areas/stem-network/">California STEM Network</a>
 * <a href="http://ceasom.org/">CEASOM Regional Partnership</a>
