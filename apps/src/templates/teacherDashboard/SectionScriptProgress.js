@@ -57,8 +57,21 @@ export default class SectionScriptProgress extends Component {
     return levelsByLesson(fakeState);
   }
 
+  // TODO: temporary logging to help debugging
+  componentDidMount() {
+    const now = new Date();
+    console.log('cDM', now - this.renderTime);
+  }
+
+  componentDidUpdate() {
+    const now = new Date();
+    console.log('cDU', now - this.renderTime);
+  }
+
   render() {
     const { section, scriptData } = this.props;
+    console.log('render');
+    this.renderTime = new Date();
 
     return (
       <div>

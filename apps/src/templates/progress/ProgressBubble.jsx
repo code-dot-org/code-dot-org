@@ -16,6 +16,7 @@ import {
 } from './progressStyles';
 import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
 import TooltipWithIcon from './TooltipWithIcon';
+import Tooltip from '@cdo/apps/lib/ui/Tooltip';
 
 /**
  * A ProgressBubble represents progress for a specific level. It can be a circle
@@ -75,6 +76,13 @@ const styles = {
     // undo the rotation from the parent
     transform: 'rotate(-45deg)'
   },
+  arrow: {
+    position: 'absolute',
+    width: 0,
+    height: 0,
+    borderColor: 'transparent',
+    borderStyle: 'solid',
+  }
 };
 
 class ProgressBubble extends React.Component {
@@ -121,6 +129,7 @@ class ProgressBubble extends React.Component {
         text={tooltipText}
       />
     );
+    // const tooltip = undefined;
 
     if (level.isUnplugged && !smallBubble) {
       return (
@@ -128,7 +137,7 @@ class ProgressBubble extends React.Component {
           levels={[level]}
           text={i18n.unpluggedActivity()}
           fontSize={16}
-          tooltip={tooltip}
+          tooltip={undefined}
         />
       );
     }
@@ -136,38 +145,41 @@ class ProgressBubble extends React.Component {
     // Outer div here is used to make sure our bubbles all take up equivalent
     // amounts of space, whether they're diamonds or circles
     let bubble = (
-      <div
-        style={{
-          // two pixles on each side for border, 2 pixels on each side for margin
-          width: (smallBubble ? SMALL_DOT_SIZE : DOT_SIZE) + 8,
-          display: 'flex',
-          justifyContent: 'center'
-        }}
+      <Tooltip
+        overlay={tooltip}
+        id={tooltipId}
       >
         <div
-          style={style}
-          data-tip data-for={tooltipId}
           aria-describedby={tooltipId}
+          style={{
+            // two pixles on each side for border, 2 pixels on each side for margin
+            width: (smallBubble ? SMALL_DOT_SIZE : DOT_SIZE) + 8,
+            display: 'flex',
+            justifyContent: 'center'
+          }}
         >
           <div
-            style={{
-              ...styles.contents,
-              ...(level.isConceptLevel && styles.diamondContents)
-            }}
+            style={style}
           >
-            {levelIcon === 'lock' && <FontAwesome icon="lock"/>}
-            {levelIcon !== 'lock' && (
-              <span>
-                {/*Text will not show up for smallBubble, but it's presence
-                  causes bubble to be properly aligned vertically
-                  */}
-                {smallBubble ? '' : number}
-              </span>
-            )}
-            {tooltip}
+            <div
+              style={{
+                ...styles.contents,
+                ...(level.isConceptLevel && styles.diamondContents)
+              }}
+            >
+              {levelIcon === 'lock' && <FontAwesome icon="lock"/>}
+              {levelIcon !== 'lock' && (
+                <span>
+                  {/*Text will not show up for smallBubble, but it's presence
+                    causes bubble to be properly aligned vertically
+                    */}
+                  {smallBubble ? '' : number}
+                </span>
+              )}
+            </div>
           </div>
         </div>
-      </div>
+      </Tooltip>
     );
 
     // If we have an href, wrap in an achor tag
