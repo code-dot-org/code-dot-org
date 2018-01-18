@@ -20,10 +20,6 @@
       "assign_x": null
     },
     "edit_code": true,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -60,7 +56,8 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true"
+    "makerlab_enabled": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
