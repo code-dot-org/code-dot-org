@@ -1,6 +1,7 @@
 import React from 'react';
 import FeaturedProjectsTable from './FeaturedProjectsTable';
 
+// TODO [ErinB] update to use projectList data that highlights the differences of the tables. Currently a work in progress.
 export default storybook => {
   storybook
     .storiesOf('FeaturedProjectsTable', module)
