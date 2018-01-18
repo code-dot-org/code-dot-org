@@ -149,6 +149,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get 'projects/featured', to: 'projects#featured'
+
   get '/projects/public', to: 'projects#public'
   resources :projects, path: '/projects/', only: [:index] do
     collection do
