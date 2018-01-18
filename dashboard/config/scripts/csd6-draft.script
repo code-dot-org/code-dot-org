@@ -194,6 +194,7 @@ level 'CSD U6 direction theremin', progression: 'Orientation'
 named_level 'Using Accelerometer Events'
 level 'CSD U6 goalie', progression: 'Accelerometer Events'
 level 'CSD U6 Driver pt1', progression: 'Accelerometer Events'
+level 'CSD U6 Driver pt 2', progression: 'Accelerometer Events'
 level 'CSD U6 stillness game predict code', progression: 'Accelerometer Events'
 
 stage 'Functions with Parameters', flex_category: 'csd6_2'
