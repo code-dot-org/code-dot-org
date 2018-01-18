@@ -111,6 +111,7 @@ class WindowsDownloads extends React.Component {
             href={DOWNLOAD_PREFIX + installer.filename}
           />
         }
+        <br/>
         <Button
           text="Install Adafruit Windows Drivers"
           color={ButtonColor.blue}
