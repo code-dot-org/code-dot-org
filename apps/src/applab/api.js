@@ -285,6 +285,24 @@ export function setAttribute(elementId, attribute, value) {
                             value: value});
 }
 
+export function setSelectionRange(
+  elementId,
+  selectionStart,
+  selectionEnd,
+  selectionDirection
+) {
+  return Applab.executeCmd(
+    null,
+    'setSelectionRange',
+    {
+      elementId,
+      selectionStart,
+      selectionEnd,
+      selectionDirection
+    }
+  );
+}
+
 export function getText(elementId) {
   return Applab.executeCmd(null,
                           'getText',

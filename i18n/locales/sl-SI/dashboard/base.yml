@@ -9,14 +9,14 @@ sl:
     errors:
       messages:
         blank: "se zahtevan(o)"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "so potrebni"
+        invalid_plural: "so nepravilni"
     attributes:
       user:
         name: 'Prikazno ime'
         name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'Elektronska pošta'
-        parent_email: 'Parent/guardian email'
+        parent_email: 'Elektronska pošta staršev/skrbnikov'
         personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
         username: 'Uporabniško ime'
         password: 'Geslo'
@@ -30,7 +30,7 @@ sl:
           future: ne more biti v prihodnosti
   hello: "Pozdravljen svet"
   welcome_back: "Dobrodošel/a nazaj, %{name}"
-  your_professional_learning_plan: "Your Professional Learning Plan"
+  your_professional_learning_plan: "Tvoj osebni načrt učenja"
   see_your_learning_plan: "Poglej učni načrt"
   submit: Pošlji
   unsubmit: Unsubmit
@@ -59,7 +59,7 @@ sl:
   courses: 'Predavanja'
   courses_page:
     title_student: "Learn on Code Studio"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Poučuj s studio Code"
   unplugged_activity: 'Dejavnost brez prijave'
   of: "od"
   more: "VEČ"
@@ -84,11 +84,11 @@ sl:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft račun'
-    clever: 'Clever Account'
+    clever: 'Pameten račun'
     forgot_password: 'Si pozabil/a svoje geslo?'
     need_confirmation: "Nisi prejel/a navodil za potrditev?"
     need_unlock: "Nisi prejel/a navodil za odklepanje?"
-    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
+    not_linked: "Žal, tvoj Code.org račun ni povezan s tvojim %{provider}. Žal se morate prijaviti z vnosom gesla spodaj."
     use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: '%{count} študentov se je že prijavilo.'
@@ -654,6 +654,7 @@ sl:
     correct_title: "Hvala"
     correct_body: "Thank you for submitting answers."
     hide_survey_last_answer: "This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Hvala"
     wrong_body: "Thank you for submitting answers."

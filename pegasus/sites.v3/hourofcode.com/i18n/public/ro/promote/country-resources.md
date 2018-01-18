@@ -98,7 +98,7 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 ## 1) Încercaţi Tutorialele:
 
-O sa gazduim varietati de distractie, tutoriale lungi, create de o varietate de parteneri. Noi tutoriale vin pentru a da startul Orei Codulyi inante<%= data_campaniei('plin')%>.
+O sa gazduim varietati de distractie, tutoriale lungi, create de o varietate de parteneri. Noi tutoriale vin pentru a da startul Orei Codulyi inante <%= campaign_date('full') %>.
 
 **Toate tutorialele Hour of Code:**
 

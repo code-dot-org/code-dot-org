@@ -90,7 +90,7 @@ def clean_crowdin_markdown_errors
   # fix social media buttons in promote/index
   Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/promote/index.md").each do |file|
     puts file
-    string_replacement = '#{request.host}'
+    string_replacement = '#{request.host}'  # rubocop:disable Lint/InterpolationCheck
     social_media_buttons = "<%
     facebook = {:u=>\"http://#{string_replacement}/us\"}\n
     twitter = {:url=>\"http://hourofcode.com\", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
@@ -101,7 +101,7 @@ def clean_crowdin_markdown_errors
   # fix social media buttons in public/thanks
   Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each do |file|
     puts file
-    string_replacement = '#{request.host}'
+    string_replacement = '#{request.host}'  # rubocop:disable Lint/InterpolationCheck
     social_media_buttons = "<%
     facebook = {:u=>\"http://#{string_replacement}/us\"}\n
     twitter = {:url=>\"http://hourofcode.com\", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}

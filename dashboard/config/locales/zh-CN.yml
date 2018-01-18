@@ -583,8 +583,8 @@
       title: "经典迷宫"
       body: "请尝试计算机科学的基本知识。数百万人尝试了它。"
     flappy:
-      title: "飞扬的代码"
-      body: "想要在 10 分钟内写你自己的游戏吗？请尝试我们飞扬的代码教程 ！"
+      title: "像素鸟编程"
+      body: "想要在 10 分钟内写你自己的游戏吗？请尝试我们像素鸟编程教程 ！"
     20-hour:
       title: "加速课程"
       body: "这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。"
@@ -600,6 +600,9 @@
       body: "游戏实验室是一个编程环境，它能让你做一些物体和角色的简单互动动画和游戏。"
       audience: 13岁以上
       cta: "了解操作方法"
+    hoc-encryption:
+      title: "简单加密"
+      body: "学生将学习技术来创建和破解加密的信息。"
     weblab:
       title: "网站实验室 （测试版）"
       body: "网站实验室是一个你能够通过html和css制作简单网页的编程环境。在几秒钟内，你就能设计并分享自己的网页。"
@@ -618,6 +621,10 @@
     minecraft2016:
       title: "我的世界"
       body: "在你自己的《我的世界》中编写各种动物和其他生物。"
+    hero:
+      title: "我的世界"
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: "运动"
       body: "创造一个篮球游戏或跨越各种运动的混合比赛。"
@@ -683,6 +690,9 @@
     hide_survey_last_answer: |-
       这个调查是匿名的。请访问教导面板以查询结果汇总。
       注意，只有至少五个学生提交了调查报告结果才会可见。
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: "谢谢你"
     wrong_body: "感谢您提交答案。"

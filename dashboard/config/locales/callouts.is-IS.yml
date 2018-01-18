@@ -290,6 +290,15 @@
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Hér er kóðinn
         CSD_U3_rect_c2: Dragðu þennan kubb yfir á kóðasvæðið.
+      CSD U6 colorLeds intensity_callout:
+        CSDU6L10_rainbow: Add your code here
+      CSD U6 colorLeds predict_callout: []
+      CSD U6 getProperty input_callout:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 light show predict_callout:
+        CSDUDL03P09: What does this line do?
+      CSD U6 light show_callout:
+        CSDUDL03P09: What does this line do?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Skilgreindu startGame hér
       CSD U6 tugowar variables 2_callout:
@@ -446,6 +455,14 @@
       Course 4 SCV 6_callout:
         Course_4_SCV_6: Með þessum kubbi getur þú búið til næstum hvaða lit sem er!
           Leiktu þér með tölurnar til að sjá hvaða áhrif það hefur!
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Notaðu örvarlyklana til að færa persónuna
+      CourseF_PlayLab_vars10_callout:
+        Course_4_Play_Lab_Vars_9_1: "Öllum kubbunum hefur nú verið raða í flokka!
+          Smelltu á heiti flokks til að sjá kubbana í honum."
+      CourseF_PlayLab_vars6_callout: []
+      CourseF_PlayLab_vars7_callout: []
+      CourseF_PlayLab_vars8_callout: []
       Eval Booleans 2_callout:
         Eval Booleans 2 1: Select a number that will make this expression evaluate
           to true
@@ -503,6 +520,9 @@
         Infinity_move_right_runbutton: Bæta "færa" kubbi við hér
       Infinity_repeat_callout:
         Infinity_repeat_callout: Setja "færa" kubba hér innan í
+      InspirationalArtwork_callout:
+        InspirationalArtwork_1: Try using the new `comment` block under this label
+          to leave yourself notes inside your program!
       Luigi's Pizza 1 (copy 1)_callout:
         luigi's pizza 1: Try ordering a pepperoni pizza
       Luigi's Pizza 1_callout:
@@ -629,6 +649,8 @@
       PDAlg Big Game History_callout: []
       PDAlg Big Game Remix_callout: []
       PDAlg Design Recipe Delete_callout: []
+      PS clone CSD U3 Variables Predict Where XY_callout:
+        grid: Smelltu hér til að sýna grindina.
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
         grid: Smelltu hér til að sýna grindina.
       PS copy 2-3 Bee Conditionals 5_callout:
@@ -659,8 +681,8 @@
         feeling_stuck_callout_test: " Kemstu ekkert áfram?<br />Smelltu á peruna til
           að fá vísbendingu!"
       Robot Doodle_callout:
-        4-5_Artist_Patterns_Free_Play_1: "Öllum uppáhaldskubbunum þínum hefur nú verið
-          raðað í flokka. Smelltu á þessi orð til að sjá hvert allt fór!"
+        4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this
+          label to leave yourself notes inside your program!
       Robot Drawing_callout:
         4-5_Artist_Patterns_Free_Play_1: "Öllum uppáhaldskubbunum þínum hefur nú verið
           raðað í flokka. Smelltu á þessi orð til að sjá hvert allt fór!"
@@ -816,6 +838,9 @@
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: "Þessi tala táknar að það má bara nota einn svona
           kubb í lokasvarinu."
+      courseA_artist_loops7_forVideo_callout:
+        courseA_artist_loops7_1: "Þessi tala táknar að það má bara nota einn svona
+          kubb í lokasvarinu."
       courseA_artist_loops8_callout:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
           you need to?
@@ -966,6 +991,7 @@
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Mundu að athuga með HVERT ský hvort það hafi BLÓM.
           Þú þarft ekkert að athuga með hunang.
+        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Mundu að athuga með HVERT ský hvort það hafi BLÓM.
           Þú þarft ekkert að athuga með hunang.
@@ -980,6 +1006,9 @@
       courseD_bee_debugging_challenge1_callout:
         courseD_bee_debugging_challenge1_callout1: Notaðu þessa skipun til að færa
           býfluguna aftur á bak.
+      courseD_bee_debugging_challenge1a_callout:
+        courseD_bee_debugging_challenge1_callout1: Notaðu þessa skipun til að færa
+          býfluguna aftur á bak.
       courseD_bee_debugging_challenge2_callout:
         courseD_bee_debugging_challenge1_callout1: Notaðu þessa skipun til að færa
           býfluguna aftur á bak.
@@ -987,6 +1016,7 @@
       courseD_bee_nested_loops_challenge2_callout: []
       courseD_collector_debugging_challenge2_callout: []
       courseD_collector_nested_loops_challenge2_callout: []
+      courseD_collector_nested_loops_challenge2a_callout: []
       courseD_collector_ramp10_callout: []
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Notaðu þennan kubb til að safna einum fjársjóði.  '
