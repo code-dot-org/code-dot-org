@@ -37,7 +37,7 @@
 
       - if @script.banner_image
         %p
-          = link_to image_tag(@script.banner_image), script_next_path(@script, 'next')
+          = link_to image_tag(@script.banner_image), script_next_path(@script)
 
       - if @script.beta?
         %p.lightgreytext
