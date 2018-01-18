@@ -2097,7 +2097,7 @@ en:
         text: "Every sound is basically a series of vibrations in the air. Vibrations can be represented graphically as a waveform. Any point on this waveform can be represented by a number. And this way, any sound can be broken down into a series of numbers. If you want higher quality sound, you will pick 32-bit audio or an 8-bit audio. More bits means a higher range of numbers."
       13:
         image: 'notes/csd_concept_binary_data_13.png'
-        text: "When you use a computer to write code or make your own app, you're not dealing directly with these ones and zeros. But you will be dealing with images or sound or video. So if you want to understand how computers work on the inside, it all comes down these simple ones and zeros and the electrical signals in the circuits behind them "
+        text: "When you use a computer to write code or make your own app, you're not dealing directly with these ones and zeros. But you will be dealing with images or sound or video. So if you want to understand how computers work on the inside, it all comes down these simple ones and zeros and the electrical signals in the circuits behind them."
     csd_concept_circuits_logic:
       1:
         image: 'notes/csd_concept_circuits_logic_1.png'
@@ -2220,4 +2220,4 @@ en:
         text: "The software is a series of commands made of simple binary code, and that binary code is just electrical signals flowing through billions of tiny circuits."
       17:
         image: 'notes/csd_concept_hardware_software_17.png'
-        text: "Computers have the potential to do all kinds of amazing things. But the only thing that makes the computer smart, or useful, is you. When you learn to code you get to define the problem you want to solve, and write the software that turns those ideas into reality. "
+        text: "Computers have the potential to do all kinds of amazing things. But the only thing that makes the computer smart, or useful, is you. When you learn to code you get to define the problem you want to solve, and write the software that turns those ideas into reality."
