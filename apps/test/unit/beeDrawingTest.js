@@ -1,14 +1,23 @@
 import {assert} from '../util/configuredChai';
-import {sandboxDocumentBody} from "../util/testUtils";
 
 function setGlobals() {
-  document.body.innerHTML = '<div id="svgMaze"><div class="pegman-location"></div></div>';
+  assert.isNull(document.getElementById('svgMaze'));
+
+  const svgMaze = document.createElement('div');
+  svgMaze.id = 'svgMaze';
+  svgMaze.innerHTML = '<div class="pegman-location"></div>';
+  document.body.appendChild(svgMaze);
 
   assert(document, 'have a document');
   assert(document.getElementById('svgMaze'), 'document has an svgMaze');
   assert(document.getElementsByClassName('pegman-location').length, 1);
 
   svg = document.getElementById('svgMaze');
+}
+
+function cleanupGlobals() {
+  document.body.removeChild(document.getElementById('svgMaze'));
+  assert.isNull(document.getElementById('svgMaze'));
 }
 
 var Bee = require('@cdo/apps/maze/bee');
@@ -107,11 +116,10 @@ function validateImages(setup, defaultFlower) {
 }
 
 describe("beeItemDrawer", function () {
-  sandboxDocumentBody();
+  beforeEach(setGlobals);
+  afterEach(cleanupGlobals);
 
   it ("red flower default", function () {
-    setGlobals();
-
     // map, dirtMap, initialDirtmap, running, expected index, expected image
     var setup = [
       // everything but the last 3 rows is the same whether or not we're running
@@ -155,8 +163,6 @@ describe("beeItemDrawer", function () {
   });
 
   it ("purple flower default", function () {
-    setGlobals();
-
     // map, dirtMap, initialDirtmap, expected index, expected image
     var setup = [
       // everything but the last 3 rows is the same whether or not we're running
