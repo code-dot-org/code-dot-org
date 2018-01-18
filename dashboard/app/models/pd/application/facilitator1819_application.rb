@@ -39,6 +39,7 @@ require 'cdo/shared_constants/pd/facilitator1819_application_constants'
 module Pd::Application
   class Facilitator1819Application < WorkshopAutoenrolledApplication
     include Facilitator1819ApplicationConstants
+    include RegionalPartnerTeacherconMapping
 
     serialized_attrs %w(
       fit_workshop_id
