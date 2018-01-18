@@ -649,7 +649,7 @@ module Pd::Application
         regional_partner_name: regional_partner ? YES : NO,
         committed: responses[:committed] == YES ? YES : NO,
         able_to_attend_single: yes_no_response_to_yes_no_score(responses[:able_to_attend_single]),
-        able_to_attend_multiple: yes_no_response_to_yes_no_score(responses[:able_to_attend_multiple])
+        able_to_attend_multiple: able_attend_multiple_to_yes_no_score(responses[:able_to_attend_multiple])
       }
 
       if responses[:principal_approval] == YES
@@ -844,6 +844,16 @@ module Pd::Application
         YES
       elsif response == NO
         NO
+      else
+        nil
+      end
+    end
+
+    def able_attend_multiple_to_yes_no_score(response)
+      if response.start_with?(TEXT_FIELDS[:no_explain])
+        NO
+      elsif response && !response.include?(TEXT_FIELDS[:no_explain])
+        YES
       else
         nil
       end

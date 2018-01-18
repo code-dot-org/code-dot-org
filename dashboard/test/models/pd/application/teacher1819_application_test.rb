@@ -95,6 +95,7 @@ module Pd::Application
           regional_partner_name: YES,
           committed: YES,
           able_to_attend_single: YES,
+          able_to_attend_multiple: YES,
           csp_which_grades: YES,
           csp_course_hours_per_year: YES,
           previous_yearlong_cdo_pd: YES,
@@ -122,6 +123,7 @@ module Pd::Application
           regional_partner_name: NO,
           committed: YES,
           able_to_attend_single: YES,
+          able_to_attend_multiple: YES,
           principal_approval: YES,
           schedule_confirmed: YES,
           diversity_recruitment: YES,
@@ -166,6 +168,7 @@ module Pd::Application
           regional_partner_name: YES,
           committed: YES,
           able_to_attend_single: YES,
+          able_to_attend_multiple: YES,
           principal_approval: YES,
           schedule_confirmed: YES,
           diversity_recruitment: YES,
@@ -187,6 +190,7 @@ module Pd::Application
         {
           committed: Pd::Application::Teacher1819Application.options[:committed].last,
           able_to_attend_single: NO,
+          able_to_attend_multiple: Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain],
           principal_approval: YES,
           schedule_confirmed: NO,
           diversity_recruitment: NO,
@@ -209,6 +213,7 @@ module Pd::Application
           regional_partner_name: NO,
           committed: NO,
           able_to_attend_single: NO,
+          able_to_attend_multiple: NO,
           principal_approval: YES, # Keep this as yes to test additional fields
           schedule_confirmed: NO,
           diversity_recruitment: NO,
@@ -252,6 +257,7 @@ module Pd::Application
           regional_partner_name: YES,
           committed: YES,
           able_to_attend_single: YES,
+          able_to_attend_multiple: YES,
           principal_approval: YES,
           schedule_confirmed: YES,
           diversity_recruitment: YES,
@@ -272,6 +278,7 @@ module Pd::Application
         {
           committed: Pd::Application::Teacher1819Application.options[:committed].last,
           able_to_attend_single: NO,
+          able_to_attend_multiple: Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain],
           principal_approval: YES,
           schedule_confirmed: NO,
           diversity_recruitment: NO,
@@ -293,6 +300,49 @@ module Pd::Application
           regional_partner_name: NO,
           committed: NO,
           able_to_attend_single: NO,
+          able_to_attend_multiple: NO,
+          principal_approval: YES, # Keep this as yes to test additional fields
+          schedule_confirmed: NO,
+          diversity_recruitment: NO,
+          free_lunch_percent: 0,
+          underrepresented_minority_percent: 0,
+          wont_replace_existing_course: nil,
+          csd_which_grades: NO,
+          csd_course_hours_per_year: NO,
+          previous_yearlong_cdo_pd: NO,
+          taught_in_past: 0
+        }, application.response_scores_hash
+      )
+    end
+
+    test 'autoscore for ambiguous responses to able_to_attend_multiple' do
+      application_hash = build :pd_teacher1819_application_hash, program: Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.first
+      application_hash.merge!(
+        {
+          committed: Pd::Application::Teacher1819Application.options[:committed].last,
+          able_to_attend_multiple: "December 11-15, 2017 in Indiana, USA, #{Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]}",
+          principal_approval: YES,
+          schedule_confirmed: NO,
+          diversity_recruitment: NO,
+          free_lunch_percent: '49.9%',
+          underrepresented_minority_percent: '49.9%',
+          wont_replace_existing_course: YES,
+          csd_which_grades: ['12'],
+          csd_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].last,
+          previous_yearlong_cdo_pd: ['Exploring Computer Science'],
+          taught_in_past: ['Exploring Computer Science']
+        }
+      )
+
+      application = create :pd_teacher1819_application, course: 'csd', form_data: application_hash.to_json, regional_partner: nil
+      application.auto_score!
+
+      assert_equal(
+        {
+          regional_partner_name: NO,
+          committed: NO,
+          able_to_attend_single: YES,
+          able_to_attend_multiple: nil,
           principal_approval: YES, # Keep this as yes to test additional fields
           schedule_confirmed: NO,
           diversity_recruitment: NO,
