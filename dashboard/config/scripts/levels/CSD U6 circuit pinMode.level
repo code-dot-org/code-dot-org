@@ -50,10 +50,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "markdown_instructions": "# Wire a Circuit\r\n\r\nYou can use any of the numbered pads to add additional circuits to your board. Let's use pin 2 to add another LED.\r\n\r\n# Do This\r\n\r\n* Using a wire, connect pin 2 to the positive (+) side of an LED\r\n* Using another wire, connect the negative (-) side of the LED to a ground (GND) pin (it doesn't matter which one)\r\n* Run this program to test your circuit. If it worked, your LED should turn on.\r\n\r\n_Debugging Tip: LEDs only work if the electricity is flowing from positive to negative. If your LED doesn't light up, make sure that it's oriented the right way._",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
