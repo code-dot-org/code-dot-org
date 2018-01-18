@@ -37,8 +37,8 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The first block you will need is:\\n\\n![](https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png)\",\"hint_id\":\"courseC_artist_loopsPrePre1a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f9148f504b870cb0e9ad1985f811ab9e/courseC_artist_loopsPrePre1a.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To move forward 50 pixels, use this block:\\n\\n![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)\",\"hint_id\":\"courseC_artist_loopsPrePre1a_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/967d6dc0b0f3ae2b7706aa6aa30f6fa5/courseC_artist_loopsPrePre1a.mp3\"}]",
     "disable_procedure_autopopulate": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_artist_loopsPrePre1a_1\",\r\n  \"callout_text\": \"Start by using this block to get the artist to the center of the screen.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left top\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "contained_level_names": null,
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
