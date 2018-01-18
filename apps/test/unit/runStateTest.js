@@ -194,10 +194,7 @@ describe('isDebuggingSprites reducer', function () {
       isDebuggingSprites: false,
     };
     var state = reducer(previousState, runState.setIsDebuggingSprites(true));
-    assert.deepEqual(state, {
-      isRunning: false,
-      isDebuggingSprites: false,
-    });
+    assert.strictEqual(state.isDebuggingSprites, false);
   });
 });
 
