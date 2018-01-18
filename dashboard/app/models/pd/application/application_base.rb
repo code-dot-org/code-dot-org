@@ -202,10 +202,10 @@ module Pd::Application
       additional_text_field_name ||= "#{field_name}_other".to_sym
       answer = hash[field_name]
       if answer.is_a? String
-        answer = [option, hash[additional_text_field_name.to_sym]].flatten.join(' ') if answer == option
+        answer = [option, hash[additional_text_field_name]].flatten.join(' ') if answer == option
       elsif answer.is_a? Array
         index = answer.index(option)
-        answer[index] = [option, hash[additional_text_field_name.to_sym]].flatten.join(' ') if index
+        answer[index] = [option, hash[additional_text_field_name]].flatten.join(' ') if index
       end
 
       answer
