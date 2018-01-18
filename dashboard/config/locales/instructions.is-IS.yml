@@ -1366,6 +1366,35 @@
       CSD U5 black white images pixelation 5_instruction: Teiknaðu hvað sem þú vilt
       CSD U5 black white images pixelation_instruction: Ljúktu við X-ið með því að
         nota 0 og 1
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -1482,6 +1511,18 @@
       CSDU6 arrays random_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select icons_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select rainbow_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_instruction: |-
+        Write a program that displays a
+        randomly chosen color from the array. (Click to see full instructions)
       CSDU6 arrays variable_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
@@ -3194,6 +3235,48 @@
       Course1MazeAssessment2_instruction: |-
         Þetta er próf!\r
         Færðu mig í eina átt, svo í aðra, til að ég nái svíninu.
+      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
+        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars10_instruction: |-
+        Free Play time! Here are all of the variables
+        we've played with so far in this stage, as well as a few more in case you
+        want them. \r
+        \r
+        Notice that there are now so many blocks in our toolbox
+        that they need to be organized!  Here, we've put each piece into an appropriate
+        category.  Take some time to explore everything that is available. When you're
+        done browsing, make a game or story using repeats, variables, and events.  \r
+        \r
+        Hint:
+        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars2_instruction: |-
+        The race in that last puzzle wasn't very
+        fair! Change the `dog_speed` variable to make sure you can collect more flags
+        than Cat. The first to collect 10 flags wins!
+      CourseF_PlayLab_vars3_instruction: Notaðu vinstri og hægri örvarnar til að hreyfa
+        og upp örina til að stökkva. Reyndu að safna öllum flöggunum.
+      CourseF_PlayLab_vars4_instruction: Nú notum við breytuna "hæð" til að stjórna
+        hve hátt hundurinn getur stokkið. Uppfærðu breytuna "hæð" svo að hundurinn
+        geti stokkið nógu hátt til að ná öllum flöggunum.
+      CourseF_PlayLab_vars5_instruction: 'Búum til leik! Fyrst þurfum við stigaskor.
+        Endurgerðu kóðann sem þú sást í síðasta borði til að setja skorið á 10. '
+      CourseF_PlayLab_vars6_instruction: |-
+        Notaðu hægri örina til að kasta böku.\r
+        \r
+        Hvernig ættum við að skora stig í þessum leik? Bættu 1 við breytuna "stig" í hvert skipti sem hundurinn hæfir köttinn með böku. Notaðu atvikið "þegar leikmaður 2 snertir eitthvað" til að kveikja uppfærslu á skorinu. Þú getur uppfært breytuna með "stig = stig + 1". Komdu skorinu upp í 10 (um 1 í einu!) til að klára borðið.
+      CourseF_PlayLab_vars7_instruction: |-
+        Notaðu hægri örina til að kasta böku.\r
+        \r
+        Hvernig ættum við að skora stig í þessum leik? Bættu 1 við breytuna "stig" í hvert skipti sem hundurinn hæfir köttinn með böku. Notaðu atvikið "þegar leikmaður 2 snertir eitthvað" til að kveikja uppfærslu á skorinu. Þú getur uppfært breytuna með "stig = stig + 1". Komdu skorinu upp í 10 (um 1 í einu!) til að klára borðið.
+      CourseF_PlayLab_vars8_instruction: |-
+        Notaðu hægri örina til að kasta böku.\r
+        \r
+        Hvernig ættum við að skora stig í þessum leik? Bættu 1 við breytuna "stig" í hvert skipti sem hundurinn hæfir köttinn með böku. Notaðu atvikið "þegar leikmaður 2 snertir eitthvað" til að kveikja uppfærslu á skorinu. Þú getur uppfært breytuna með "stig = stig + 1". Komdu skorinu upp í 10 (um 1 í einu!) til að klára borðið.
+      CourseF_PlayLab_vars9_instruction: |-
+        Nice, now let's make sure this game isn't
+        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
+        2), you should lose a point. Start with 10 points so it's not too hard. Let
+        your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution_instruction: Leiðbeiningar
       Crack a Caesar Cipher_instruction: Leiðbeiningar
       ECSPD Binary Odometer_instruction: |-
@@ -7018,10 +7101,15 @@
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_forVideo_instruction: Notaðu "endurtaka" lykkjuna til
+        að bæta öldum á vatnið.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: "Áskorun: Lagaðu tröppurnar."
       courseA_artist_loops_challenge2_instruction: '"Getur þú hjálpað mér að búa til
         tvö fuglahús?"'
+      courseA_artist_loops_challenge2a_instruction: |-
+        *"Help me get these three tents
+        set up!"*
       courseA_artist_loops_challenge3_instruction: Komum í leik! Teiknaðu eins mörg
         X og þú getur! Nærðu að hafa 3 í röð?
       courseA_collector_loops1_instruction: Láttu Laurel hreyfast og safna eins miklum
@@ -7180,6 +7268,9 @@
       courseB_collector_loops_challenge2_instruction: Náum þessum fjársjóði! Hjálpaðu
         mér að færast eftir hverri röð og koma svo til baka til að byrja þá næstu.
         Getur þú séð mynstur?
+      courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: "Í þetta sinn mátt þú að eins
         nota einn af hverjum örvarkubbi. Náðu öllum fjársjóðnum! "
       courseB_collector_prog1_instruction: "Þetta er Laurel ævintýrahetja! Getur þú
@@ -7387,6 +7478,8 @@
         Það eru margar lausnir á þessari þraut svo þú getur haft gaman af. Stysta mögulega lausnin hefur 6 kubba, en notaðu eins marga og þér sýnist!
       courseC_artist_prog_challenge2_instruction: "*Hjálpaðu mér að teikna gulu línurnar
         á þessum vegi!*"
+      courseC_artist_prog_challenge2a_instruction: "*Hjálpaðu mér að teikna gulu línurnar
+        á þessum vegi!*"
       courseC_collector_loops_challenge2_instruction: Náðu öllum fjársjóðnum!
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
@@ -7477,9 +7570,13 @@
         Collect all of the corn and all of the
         pumpkins.
       courseC_harvester_loops_challenge1_instruction: Safnaðu öllu korninu.
+      courseC_harvester_loops_challenge1a_instruction: Safnaðu öllu korninu.
       courseC_harvester_loops_challenge2_instruction: |-
         Safnaðu öllu kálinu.
         Forðastu tré og tún!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -7535,6 +7632,8 @@
         puzzles to complete this level.
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
       courseC_maze_loops_challenge1_instruction: 'Nú vill Scrat prófa að nota lykkjur
+        til að finna akarnið! '
+      courseC_maze_loops_challenge1a_instruction: 'Nú vill Scrat prófa að nota lykkjur
         til að finna akarnið! '
       courseC_maze_loops_challenge2_instruction: Leitum að fjársjóði - með lykkjum!
         Hjálpaðu safnaranum með því að fjarlægja villur úr þessum kóða. Náðu öllum
@@ -7640,6 +7739,8 @@
         \r
         See what happens when we start to
         get creative with the bits!
+      courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
+        binary! "
       courseD_artist_binary_challenge0_instruction: Prófaðu að nota faldaðar lykkjur
         til að ljúka þessari teikningu.
       courseD_artist_binary_challenge1_instruction: "Þú mátt aðeins nota hvert tvíundargildi
@@ -7820,6 +7921,9 @@
       courseD_bee_debugging_challenge1_instruction: Taktu eftir hvernig býflugan nær
         í blómasafann. Getur þú notað eins reglu til að hjálpa henni að búa til allt
         hunangið?
+      courseD_bee_debugging_challenge1a_instruction: Taktu eftir hvernig býflugan
+        nær í blómasafann. Getur þú notað eins reglu til að hjálpa henni að búa til
+        allt hunangið?
       courseD_bee_debugging_challenge2_instruction: Taktu eftir hvernig býflugan nær
         í blómasafann. Getur þú notað eins reglu til að hjálpa henni að búa til allt
         hunangið?
@@ -7936,6 +8040,9 @@
       courseD_collector_nested_loops_challenge2_instruction: Hjálpaðu safnaranum að
         ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er
         mögulegt að ná öllum 4.
+      courseD_collector_nested_loops_challenge2a_instruction: Hjálpaðu safnaranum
+        að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það
+        er mögulegt að ná öllum 4.
       courseD_collector_ramp10_instruction: Help Laurel collect all of the treasure.
       courseD_collector_ramp8_instruction: Help Laurel collect all of the treasure.
       courseD_collector_ramp9_instruction: Help Laurel collect all of the treasure.
@@ -8873,6 +8980,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Tengdu kubb við "þegar smellt" kubbinn og ýttu svo á "Keyra
         forrit". Smelltu eða sláðu á skjáinn til að færa Flappy að markinu.
+      flappy_11_instruction: Búðu til þinn eiginn Flappy leik. Þú getur breytt öllu
+        umhverfi og öllum reglum, jafnvel þyngdaraflinu. Smelltu svo á Ljúka til að
+        vinir þínir geti prófað leikinn í símunum sínum.
       flappy_2_instruction: Nú höfum við  bætt við jörð. Tengdu kubb við kubbinn "þegar
         rekst á jörð". Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy hrapar til
         jarðar.
@@ -8893,9 +9003,6 @@
         t.d. þegar farið er framhjá hindrun."
       flappy_9_instruction: Prófaðu að útfæra þetta þannig að í stað þess að enda
         leikinn við árekstur þá sé skorið núllstillt.
-      flappy_11_instruction: Búðu til þinn eiginn Flappy leik. Þú getur breytt öllu
-        umhverfi og öllum reglum, jafnvel þyngdaraflinu. Smelltu svo á Ljúka til að
-        vinir þínir geti prófað leikinn í símunum sínum.
       frozen circle function in circle_instruction: Gerum nú 20 hringi sem skarast
         og snúum um 18 gráður eftir hvern hring.
       frozen circle function with parameter_instruction: Hér er "búa til hring" kubbur

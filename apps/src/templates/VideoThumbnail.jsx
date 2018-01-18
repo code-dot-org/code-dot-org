@@ -1,5 +1,5 @@
 import {showVideoDialog} from "@cdo/apps/code-studio/videos";
-import React, {PropTypes, Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {videoDataShape} from './types';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
@@ -27,6 +27,7 @@ export default class VideoThumbnail extends Component {
     scriptId: PropTypes.number,
     serverLevelId: PropTypes.number,
     video: videoDataShape,
+    onClick: PropTypes.func,
   };
 
   render() {
@@ -35,6 +36,7 @@ export default class VideoThumbnail extends Component {
       <a
         style={styles.videoLink}
         onClick={() => {
+          this.props.onClick && this.props.onClick();
           showVideoDialog({
             src: video.src,
             name: video.name,

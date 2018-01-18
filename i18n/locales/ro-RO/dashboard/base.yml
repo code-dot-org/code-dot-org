@@ -654,6 +654,7 @@ ro:
     correct_title: "Mulţumesc"
     correct_body: "Îți mulțumim pentru trimiterea răspunsului tău."
     hide_survey_last_answer: "Acest studiu este anonim.  Vă rugăm să vizitaţi tabloul de profesor pentru rezultatele agregate.  Reţineţi că rezultatele sunt vizibile în cazul în care cel puțin cinci studenţi transmit chestionarul."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Mulţumesc"
     wrong_body: "Îți mulțumim pentru trimiterea răspunsului tău."

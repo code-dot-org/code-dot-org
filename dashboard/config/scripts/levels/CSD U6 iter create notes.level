@@ -187,10 +187,6 @@
       "lightSensor.start": null
     },
     "edit_code": true,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "# Music Player\r\n\r\nThis program lets you play music by waving a wand over the different notes, but it's missing a function definition.\r\n\r\n# Do This\r\n* Create a `checkNotes()` function that will call `checkNote(note)` on everything in the \"notes\" array.\r\n",
     "instructions_important": "false",
@@ -230,7 +226,8 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true"
+    "makerlab_enabled": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

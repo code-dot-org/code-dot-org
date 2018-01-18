@@ -1,6 +1,10 @@
 import React  from 'react';
 import LabeledFormComponent from "../../form_components/LabeledFormComponent";
-import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
+import {
+  PageLabels,
+  SectionHeaders,
+  TextFields
+} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import {FormGroup} from 'react-bootstrap';
 import {PROGRAM_CSD, PROGRAM_CSP} from "./TeacherApplicationConstants";
 
@@ -25,7 +29,7 @@ export default class Section3ChooseYourProgram extends LabeledFormComponent {
             {this.checkBoxesFor("csdWhichGrades")}
 
             {this.radioButtonsWithAdditionalTextFieldsFor("csdCourseHoursPerWeek", {
-              "Other (Please List):" : "other"
+              [TextFields.otherPleaseList] : "other"
             })}
 
             {this.radioButtonsFor("csdCourseHoursPerYear")}
@@ -45,7 +49,7 @@ export default class Section3ChooseYourProgram extends LabeledFormComponent {
         }
 
         {this.radioButtonsWithAdditionalTextFieldsFor("planToTeach", {
-          "I don't know if I will teach this course (please explain):" : "dontKnowExplain"
+          [TextFields.dontKnowIfIWillTeachExplain] : "dontKnowExplain"
         })}
       </FormGroup>
     );

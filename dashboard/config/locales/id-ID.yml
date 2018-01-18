@@ -235,8 +235,8 @@
       picture: Picture Password
       word: Secret Words
       email: email
-      google_classroom: Google Classroom
-      clever: Clever
+      google_classroom: google classroom
+      clever: Pandai
   follower:
     invite_sent: Undangan telah dikirim
     added_teacher: "%{name} telah dicantumkan sebagai nama guru Anda"
@@ -296,7 +296,7 @@
         gamelab: Buat sebuah proyek Lab Permainan
         weblab: Make a Web Lab (beta) project
       home: Beranda
-      my_dashboard: My Dashboard
+      my_dashboard: Dasbor saya
       courses: Kursus
       course_catalog: Course Catalog
       project_gallery: Proyek
@@ -304,7 +304,7 @@
       help_support: Bantuan dan dukungan
       report_bug: Laporkan bug
       teacher_community: Komunitas guru
-      professional_learning: Professional Learning
+      professional_learning: Belajar profesional
       documentation: Dokumentasi
       tutorials: Tutorial
       educate_overview: Ikhtisar Pendidik
@@ -764,6 +764,9 @@
         and games with objects and characters that interact with each other.
       audience: Usia 13+
       cta: Pelajari caranya
+    hoc-encryption:
+      title: Simple Encryption
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -784,6 +787,10 @@
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    hero:
+      title: Minecraft
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: Sports
       body: Make a basketball game or mix and match across sports.
@@ -865,6 +872,9 @@
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
       students submitted the survey.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Terima kasih
     wrong_body: Terima kasih telah memberikan jawaban

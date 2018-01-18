@@ -357,6 +357,12 @@
   studiobar_donate_body: Një fëmijë mëson për çdo dollar që ti dhuron
   studiobar_shop_title: Dyqani
   studiobar_shop_body: Anashkalo stereotipet. Vishni logon tonë me krenari.
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "&ldquo; Sfidoj vajzat në mbarëbotën të mësojnë të kodojnë
     për një orë &rdquo; \nMalala, Fituese e Çmimit Nobel për Paqen"
   homepage_hero_text_susan: |-
@@ -644,6 +650,7 @@
   video_title_obama: President Obama on computer science
   video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
   video_title_anybody_can_learn: Anybody Can Learn
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: Ora e Kodit me Draymond Green
   video_title_russell_okung: Ora e Kodit me Rusell Okung
   video_title_real_madrid: Ora e Kodit me Real Madritin
@@ -2131,10 +2138,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
-  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
-  video_title_steph_curry: Hour of Code with Steph Curry

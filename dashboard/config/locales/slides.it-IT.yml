@@ -3485,9 +3485,9 @@
           spaziatrice.
       2:
         image: notes/mc_2016_events_2.jpg
-        text: Se utilizzi un touchscreen, puoi muoverti scorrendo verso l’alto, il
-          basso, a sinistra e a destra. Quindi tocca lo schermo per utilizzare l’oggetto
-          che hai di fronte.
+        text: Se utilizzi un schermo tattile (touchscreen), puoi muoverti scorrendo
+          verso l’alto, il basso, a sinistra e a destra. Quindi tocca lo schermo per
+          utilizzare l’oggetto che hai di fronte.
       3:
         image: notes/mc_2016_events_3.jpg
         text: Cosa succede quando usi una creatura? In Minecraft, le pecore producono
@@ -3528,3 +3528,414 @@
         text: Quando hai completato il tuo gioco, clicca su "Termina" per ottenere
           un link per condividerlo con gli amici o provare il tuo gioco su smartphone.
           Buon divertimento! Non vedo l’ora di giocare la tua versione di Minecraft.
+    applab_intro_welcome:
+      1:
+        image: notes/applab_intro_welcome_1.png
+        text: |
+          Mi chiamo Mei'lani, studio informatica e sono una stagista in Code.org. Mi piace l'informatica perché è davvero creativa. Devo risolvere problemi. Devo far funzionare tutto come voglio. Ma devo anche essere la progettista e l'artista e fare tutte le scelte dal punto di vista creativo.
+      2:
+        image: notes/applab_intro_welcome_2.png
+        text: Costruire la tua app è facile con Sviluppo App! Sia che tu sia un principiante,
+          sia che tu abbia già programmato, Sviluppo App è un ottimo strumento per
+          costruire nuove App e condividerle con i tuoi amici.
+      3:
+        image: notes/applab_intro_welcome_3.png
+        text: Questo è Sviluppo App. Sul lato sinistro c'è la tua app. Sulla destra
+          c'è il codice che la fa funzionare. Tu costruisci il tuo programma trascinando
+          blocchi dalla cassetta degli attrezzi. Per iniziare hai un unico blocco
+          chiamato `setProperty`.
+      4:
+        image: notes/applab_intro_welcome_4.png
+        text: Il blocco `setProperty` cambia le caratteristiche degli elementi sul
+          tuo schermo. Come i bottoni, le etichette o l'intero schermo. Prima devi
+          definire quale elemento vuoi cambiare. Se passi sopra ad un elemento della
+          tua app, puoi vedere il suo nome o ID. Quindi seleziona questo ID dal primo
+          elenco a discesa.
+      5:
+        image: notes/applab_intro_welcome_5.png
+        text: Gli elementi hanno molte proprietà da gestire come il colore di sfondo,
+          quello del testo o la sua dimensione. Puoi vedere la lista completa e scegliere
+          quale proprietà cambiare nel secondo elenco a discesa.
+      6:
+        image: notes/applab_intro_welcome_6.png
+        text: Nell'ultimo elenco scrivi il valore da utilizzare. Il blocco ti dà un
+          suggerimento. Ma tu puoi sempre modificare le sue proposte.
+      7:
+        image: notes/applab_intro_welcome_7.png
+        text: 'Quando hai terminato, il blocco si può leggere un po ''come una frase:
+          "Imposta il colore di sfondo di button1 a verde." Premi "Esegui" per vedere
+          i cambiamenti che stai programmando. Se premi "Ricomincia", puoi trascinare
+          altri blocchi per cambiare altre caratteristiche della tua app. Come il
+          testo!'
+      8:
+        image: notes/applab_intro_welcome_8.png
+        text: In questa esercitazione lavoreremo con i blocchi, ma Sviluppo App supporta
+          anche la programmazione testuale.
+      9:
+        image: notes/applab_intro_welcome_9.png
+        text: Sappi che stai programmando in JavaScript, il linguaggio del web. Ogni
+          esercizio ha un obiettivo, le istruzioni ed un'immagine di ciò che stai
+          cercando di creare.
+      10:
+        image: notes/applab_intro_welcome_10.png
+        text: Se ti blocchi, fai clic su questa immagine e vedrai esattamente come
+          devi completare l'esercizio. Ma prima, provaci da solo.
+      11:
+        image: notes/applab_intro_welcome_11.png
+        text: Quando hai raggiunto l'obiettivo di questo esercizio clicca su "Termina"
+          per proseguire. Questo è tutto ciò che c'è da fare! Premi il pulsante arancione
+          "Prosegui" per iniziare la tua avventura con Sviluppo App!
+    applab_intro_events:
+      1:
+        image: notes/applab_intro_events_1.png
+        text: Le App sono forti perché è un po' come avviare una nuova attività nel
+          senso che devi progettare tutto da zero, devi gestire tutto e sei il creatore
+          di questo capolavoro che stai realizzando con il codice.
+      2:
+        image: notes/applab_intro_events_2.png
+        text: Ora che puoi cambiare il look della tua app, rendila interattiva facendola
+          reagire agli eventi. Gli eventi sono azioni dell'utente come cliccare un
+          pulsante, far scorrere un menù o passare sopra un'immagine. Le app interattive
+          devono saper come rispondere agli eventi. Come riprodurre un suono quando
+          premo un pulsante. Per fare questo su Sviluppo App devi usare un nuovo blocco
+          chiamato `onEvent`.
+      3:
+        image: notes/applab_intro_events_3.png
+        text: Questo programma rende lo schermo blu. Voglio che lo schermo torni verde
+          quando premo questo pulsante. Prima devo trascinare il blocco `onEvent`.
+          Passando sul pulsante scopro che l'ID è "bigButton" così lo selezionerò
+          nel primo elenco a discesa.
+      4:
+        image: notes/applab_intro_events_4.png
+        text: Poi scelgo il tipo di evento. Ci sono molte alternative ma per ora scegliamo
+          il caro vecchio "click".
+      5:
+        image: notes/applab_intro_events_5.png
+        text: 'Alla fine aggiungo all''interno del blocco `onEvent` il codice per
+          cambiare il colore di sfondo dello schermo. Puoi leggere questo blocco come
+          una frase: "Quando il pulsante viene premuto esegui questo codice."'
+      6:
+        image: notes/applab_intro_events_6.png
+        text: Proviamoci. I blocchi al di fuori di `onEvent` continuano a lavorare,
+          quindi all'inizio lo schermo è blu.
+      7:
+        image: notes/applab_intro_events_7.png
+        text: E quando clicco il pulsante "bigButton" viene eseguito il codice all'interno
+          di `onEvent` e lo schermo diventa verde.
+      8:
+        image: notes/applab_intro_events_8.png
+        text: Se vuoi cambiare altre cose dopo l'evento, come il testo sullo schermo
+          aggiungi semplicemente altro codice in `onEvent`.
+      9:
+        image: notes/applab_intro_events_9.png
+        text: Per far rispondere il tuo programma a più eventi, aggiungi altri blocchi
+          `onEvent`. Fai solo attenzione a non posizionarli uno dentro l'altro. Ora
+          è il tuo momento. Divertiti!
+    applab_intro_sounds:
+      1:
+        image: notes/applab_intro_sounds_1.png
+        text: Adesso imparerai come aggiungere immagini e suoni alla tua app. Iniziamo
+          verificando le opzioni audio.
+      2:
+        image: notes/applab_intro_sounds_2.png
+        text: Nella cassetta degli attrezzi trovi un nuovo blocco chiamato `playSound`.
+          Trascinalo nell'area di lavoro. Puoi scegliere un suono da riprodurre cliccando
+          "Scegli" nell'elenco a discesa.
+      3:
+        image: notes/applab_intro_sounds_3.png
+        text: Da qui puoi sia caricare un file audio dal tuo computer, sia cercare
+          all'interno di una libreria di suoni. La libreria è suddivisa in molte categorie
+          come strumenti, musiche di sottofondo o animali.
+      4:
+        image: notes/applab_intro_sounds_4.png
+        text: Quando hai individuato il suono che interessa, clicca "Choose". Quando
+          questo blocco viene eseguito, riproduce il suono scelto.
+      5:
+        image: notes/applab_intro_sounds_5.png
+        text: Per associare immagini ai tuoi elementi puoi usare il blocco `setProperty`.
+          Seleziona la proprietà "image" nel secondo elenco a discesa.
+      6:
+        image: notes/applab_intro_sounds_6.png
+        text: Quindi clicca "Scegli" nel terzo elenco a discesa.
+      7:
+        image: notes/applab_intro_sounds_7.png
+        text: Qui puoi caricare un'immagine dal tuo computer o cercare tra un'ampia
+          scelta nella libreria di icone.
+      8:
+        image: notes/applab_intro_sounds_8.png
+        text: Tornando alla modalità di programmazione, puoi usare il blocco `setProperty`
+          per cambiare il colore della tua icona. Una volta scelta l'immagine, fai
+          clic su "Esegui" per vedere come appare.
+      9:
+        image: notes/applab_intro_sounds_9.png
+        text: Questo è tutto! Ora puoi iniziare ad aggiungere immagini e suoni per
+          rendere la tua app ancora più divertente e dinamica.
+    applab_intro_designmode:
+      1:
+        image: notes/applab_intro_designmode_1.png
+        text: Per costruire le tue app dovrai progettare da zero le tue schermate
+          con i vari elementi. È facile farlo con la modalità "Interfaccia" di Sviluppo
+          App.
+      2:
+        image: notes/applab_intro_designmode_2.png
+        text: Usa l'interruttore in alto a sinistra per passare alla modalità "Interfaccia".
+      3:
+        image: notes/applab_intro_designmode_3.png
+        text: Puoi aggiungere nuovi elementi trascinandoli sullo schermo. Puoi muoverli
+          in diverse posizioni e cambiarne le dimensioni trascinando l'angolo in basso
+          a destra.
+      4:
+        image: notes/applab_intro_designmode_4.png
+        text: Per cambiare le proprietà di un elemento usa il pannello di controllo
+          sulla destra. Per esempio, è davvero semplice cambiare il testo di questo
+          pulsante, il colore e la dimensione del testo.
+      5:
+        image: notes/applab_intro_designmode_5.png
+        text: Quando aggiungi un nuovo elemento alla tua schermata ottieni un ID generico
+          come button1. Sarebbe un'ottima cosa cambiare questo ID generico con qualcosa
+          di più significativo come "rightButton" ("pulsanteDestro"). In modo da riconoscerlo
+          facilmente nel programma.
+      6:
+        image: notes/applab_intro_designmode_6.png
+        text: Se aggiungi un elemento per sbaglio, basta trascinarlo via o premere
+          "Delete".
+      7:
+        image: notes/applab_intro_designmode_7.png
+        text: Puoi aggiungere nuove schermate alla tua app trascinando un elemento
+          "Screen".
+      8:
+        image: notes/applab_intro_designmode_8.png
+        text: Dall'elenco a discesa in alto puoi velocemente muoverti tra le schermate
+          che hai creato.
+      9:
+        image: notes/applab_intro_designmode_9.png
+        text: Nella tua app, hai bisogno di un modo per commutare tra tutte queste
+          schermate per questo è stato aggiunto il blocco `setScreen` nella cassetta
+          degli attrezzi. Usa `setScreen` dentro al blocco `onEvent` per cambiare
+          schermata alla pressione di un pulsante.
+      10:
+        image: notes/applab_intro_designmode_10.png
+        text: Nei prossimi esercizi lavorerai su un singolo progetto. Prima aggiungerai
+          un pulsante, poi una schermata ed infine scriverai del codice per fare in
+          modo che il pulsante faccia passare alla nuova schermata.
+    applab_intro_share:
+      1:
+        image: notes/applab_intro_share_1.png
+        text: Ora che hai imparato le basi di Sviluppo App come aggiungere pulsanti,
+          suoni, immagini, testo e nuove schermate puoi creare ogni genere di app.
+      2:
+        image: notes/applab_intro_share_2.png
+        text: Nel prossimo esercizio troverai l'app che hai appena costruito. Con
+          un po' di creatività, puoi trasformarla in quiz sulla personalità per i
+          tuoi amici, in una cartolina di auguri da condividere con la tua famiglia
+          oppure in un gioco di ruolo ("choose-your-own-adventure"). Tutte queste
+          app sono semplicemente una combinazione delle funzionalità che hai già imparato
+          e scommetto che puoi inventarne ancora altre.
+      3:
+        image: notes/applab_intro_share_3.png
+        text: Quando hai terminato con la tua app puoi spedirla al tuo telefono per
+          vedere come appare. Clicca su "Condividi" ed inserisci il numero di telefono.
+      4:
+        image: notes/applab_intro_share_4.png
+        text: "(Ma questo funziona solo negli Stati Uniti.)"
+      5:
+        image: notes/applab_intro_share_5.png
+        text: Puoi anche condividere un link alla tua app sui Social Network o pubblicarla
+          nella galleria pubblica di Code.org così anche altre persone potranno usarla
+          e condividerla.
+      6:
+        image: notes/applab_intro_share_6.png
+        text: Hai solo visto la punta dell'iceberg di ciò che puoi fare con Sviluppo
+          App. Sviluppo App con funzionalità complete, interazioni più evolute con
+          l'utente, nuovi elementi per lo schermo e anche un database incorporato,
+          ti permetteranno di costruire app ricche di funzionalità. Su "code.org/applab"
+          trovi lo strumento completo e tante idee per proseguire.
+      7:
+        image: notes/applab_intro_share_7.png
+        text: Grazie per averci seguito fin qui. Ora vai a costruire e condividere
+          la tua prima app. E continua a creare app con Sviluppo App.
+    mc_2017_agent_intro:
+      1:
+        image: notes/mc_2017_agent_intro_1.png
+        text: 'Stacy: Stampy, Lizzy, Preston grazie per essere venuti con me. Vorrei
+          solo mostrarvi questo altopiano della mesa. Penso proprio che vi piacerà!'
+      2:
+        image: notes/mc_2017_agent_intro_2.png
+        text: Un attimo - c'è un'interruzione nelle rotaie! (urla)
+      3:
+        image: notes/mc_2017_agent_intro_3.png
+        text: 'Tutti OK? Stampy - Ah, Ecco il problema. Guardate: c''è un''interruzione
+          nella rotaia. Stacy: Davvero, Stampy? Lizzy: Potremmo raccogliere dei blocchi
+          per aggiustarla. Preston: Facciamo una gara. Il primo che ritorna in cima
+          vince. Stacy: OK, pronti, attenti, VIA! OK, raccoglierò un po'' di questa
+          terracotta. Aspetta. ragazzi, non riesco a scavare! Preston: Uguale. Lizzy:
+          Neanch''io. Stacy: OK, è proprio strano. Stampy, tu riesci a scavare? Stampy:
+          no, non riesco! Stacy: OK, stiamo calmi. Stampy: Il gioco si è rotto? Stacy:
+          Se è così, come possiamo aggiustarlo? Lizzy: Non so. Stampy: Qualcuno sa
+          programmare in Minecraft?'
+      4:
+        image: notes/mc_2017_agent_intro_4.png
+        text: "(puff) Preston: Cos'è? Stampy: Non ho mai visto nulla del genere. Lizzy:
+          È adorabile! Stacy: Si può... addomesticare? Preston: OK, cosa sta succedendo?
+          Qualcuno dovrebbe tornare nel mondo reale e sistemare tutto. Tutti: Io no!
+          Stacy: Io... (ooh) OK, vado."
+      5:
+        image: notes/mc_2017_agent_intro_5.png
+        text: Ehi! Oh, OK, così ora sono nel mondo reale. Ora andrò a cercare gli
+          uffici di Minecraft.
+      6:
+        image: notes/mc_2017_agent_intro_6.png
+        text: Ma, ho bisogno del tuo aiuto. Inizia a fare l'esercitazione, inizia
+          ad imparare a programmare e ci vediamo più tardi tra qualche livello, OK?
+          Auguratemi buona fortuna! Penso sia da questa parte. Ahi! Cactus! Tutto
+          OK!
+      7:
+        image: notes/mc_2017_agent_intro_7.png
+        text: Per completare questa sfida dell'Ora del Codice, dovrai scrivere del
+          codice per programmare l'Agente. Lavorerai insieme all'Agente per eliminare
+          ogni ostacolo sul tuo passaggio, così potrai raccogliere tutti gli oggetti
+          di cui avrai bisogno nel tuo viaggio. Solo l'Agente può posizionare e rompere
+          i blocchi e solo tu puoi collezionare oggetti. Lo schermo è diviso in tre
+          pari. Sulla sinistra Minecraft.
+      8:
+        image: notes/mc_2017_agent_intro_8.png
+        text: La zona centrale è la cassetta degli attrezzi con i comandi che conosce
+          l'Agente.
+      9:
+        image: notes/mc_2017_agent_intro_9.png
+        text: Sulla destra l'area di lavoro. Qui è dove concateni i comandi per creare
+          il tuo programma per controllare l'Agente.
+      10:
+        image: notes/mc_2017_agent_intro_10.png
+        text: L'Agente può camminare, girarsi e attivare le pedane a pressione. Può
+          anche distruggere e posizionare blocchi. Quando posa blocchi come queste
+          rotaie, le posiziona sotto di sé.
+      11:
+        image: notes/mc_2017_agent_intro_11.png
+        text: Se non ricordi cosa fare, le istruzioni per ogni esercizio sono mostrate
+          in alto.
+      12:
+        image: notes/mc_2017_agent_intro_12.png
+        text: Se vuoi provare di nuovo, puoi premere il pulsante blu "Ricomincia"
+          per riportare tutto come all'inizio dell'esercizio. E se hai bisogno di
+          cancellare un blocco di codice, trascinalo nella cassetta degli attrezzi.
+          Ricorda di premere "Esegui" per avviare l'Agente. OK, vai avanti e prova
+          i primi livelli. Buona fortuna!
+    mc_2017_repeat:
+      1:
+        image: notes/mc_2017_repeat_1.png
+        text: 'Stampy: Mi chiedo cosa stia facendo Stacy...'
+      2:
+        image: notes/mc_2017_repeat_2.png
+        text: 'Stacy: Wow, credo di essere nel posto giusto. È incredibile!'
+      3:
+        image: notes/mc_2017_repeat_3.png
+        text: Mi sembra di essere di nuovo in Minecraft! Ciao. Come stai? Ciao?
+      4:
+        image: notes/mc_2017_repeat_4.png
+        text: 'Oh dev''essere un Creeper. Non fai niente, vero? Katie: Stacy? Stacy:
+          Ciao, Katie? Katie: Si! Benvenuta in Minecraft!'
+      5:
+        image: notes/mc_2017_repeat_5.png
+        text: 'Stacy: È incredibile! Così tu lavori qui ogni giorno come sviluppatrice,
+          giusto? Katie: Certo, è davvero fantastico. Sono una sviluppatrice del gruppo
+          Minecraft marketplace. Stacy: Quanti linguaggi di programmazione conosci?
+          Katie: Probabilmente nella mia carriera ho lavorato con più di una dozzina.
+          Satcy: Una dozzina? Katie: Oh si! Stacy: Dunque, ne sai qualcosa di questo
+          piccolo golem che si fa chiamate "Agente"? Katie: Usiamo l''Agente per svolgere
+          azioni che Steve o Alex non possono fare, come attraversare la lava. Stacy:
+          Bene, voglio imparare come programmare e loro vogliono imparare a programmare,
+          quindi, qual''è una delle prime cose da imparare?'
+      6:
+        image: notes/mc_2017_repeat_6.png
+        text: 'Katie: Bene, hai bisogno di imparare i "cicli". Gli sviluppatori usano
+          i cicli per fare in modo che i computer ripetano delle istruzioni più e
+          più volte di seguito. Stacy: Capisco, penso che ce ne siano nei prossimi
+          esercizi, allora andiamo avanti e facciamo qualche prova con i cicli.'
+      7:
+        image: notes/mc_2017_repeat_7.png
+        text: Nel prossimo esercizio, puoi usare un ciclo per muovere l'Agente lungo
+          il percorso. Trascina il blocco "ripeti...volte" nell'area di lavoro e posiziona
+          il blocco "vai avanti" dentro al blocco "ripeti...volte". Questo dice al
+          computer di fare alcune cose molte volte di seguito, senza dover trascinare
+          un mucchio di blocchi nell'area di lavoro. Puoi scegliere quante volte ripetere,
+          scrivendo un numero nel blocco "ripeti...volte".
+      8:
+        image: notes/mc_2017_repeat_8.png
+        text: Puoi anche mettere molti comandi diversi all'interno del blocco "ripeti...volte",
+          ma per ora prova ad usarlo per far avanzare l'Agente di pochi passi. Ricorda,
+          se ti blocchi su un esercizio, puoi sempre premere il pulsante blu "ricomincia"
+          e provare di nuovo.
+      9:
+        image: notes/mc_2017_repeat_9.png
+        text: 'Stacy: Se stai pensando che ti piacerebbe fare un lavoro come quello
+          di Katie, vai avanti e clicca sul pulsante "mostra il codice" alla fine
+          di ogni esercizio. Potrai vedere il codice JavaScript che qualcuno come
+          Katie usa quando programma veramente Minecraft. Perfetto, grazie mille!
+          Katie: Prego, buona fortuna a tutti!'
+    mc_2017_functions:
+      1:
+        image: notes/mc_2017_functions_1.png
+        text: 'Preston: Non per vantarmi, ma sono abbastanza bravo in Parkour. Lizzy:
+          Dormi, che quando sarà giorno tornerà Stacy.'
+      2:
+        image: notes/mc_2017_functions_2.png
+        text: 'Stacy: OK ragazzi, eccomi di nuovo qui dagli uffici di Minecraft e
+          penso di sapere come risolvere il problema che avevamo nel gioco. Penso
+          di poter usare una funzione. Fammi solo aprire questo.'
+      3:
+        image: notes/mc_2017_functions_3.png
+        text: Allora, una funzione è uno specifico insieme di istruzioni per lo svolgimento
+          di una certa attività, come una specie di ricetta. Nei prossimi esercizi,
+          potrai usare le funzioni per portare a termine le tue missioni.
+      4:
+        image: notes/mc_2017_functions_4.png
+        text: Guarda il codice dentro alle funzioni, quando le trovi nell'area di
+          lavoro, per capire cosa fanno.
+      5:
+        image: notes/mc_2017_functions_5.png
+        text: Quindi, cerca il blocco con quel nome nella cassetta degli attrezzi
+          trascinalo nell'area di lavoro e aggancialo al blocco "Quando si clicca
+          si "Esegui".
+      6:
+        image: notes/mc_2017_functions_6.png
+        text: Ricorda, puoi usare la stessa funzione ogni volta che hai bisogno di
+          eseguire lo stesso insieme di istruzioni per fare qualcosa, come costruire
+          un ponte. Buona fortuna, so che ce la puoi fare!
+    mc_2017_congratulations:
+      1:
+        image: notes/mc_2017_congratulations_1.png
+        text: 'Preston: Congratulazioni!'
+      2:
+        image: notes/mc_2017_congratulations_2.png
+        text: 'Lizzy: Congratulazioni!'
+      3:
+        image: notes/mc_2017_congratulations_3.png
+        text: 'Stampy: Congratulazioni, ce l''avete fatta!'
+      4:
+        image: notes/mc_2017_congratulations_4.png
+        text: 'Stacy: Congratulazioni ragazzi, ce l''avete fatta alla grande! Ed ora
+          che avete completato l''Ora del Codice, potete iniziare a programmare in
+          Minecraft. Avete imparato: cicli, funzioni e cosa può fare un Agente.'
+      5:
+        image: notes/mc_2017_congratulations_5.png
+        text: Adesso è il momento dell'esercizio libero, dove tu sei il programmatore.
+          Usa tutto il tempo che ti resta per scrivere le tue funzioni per esplorare,
+          scavare e costruire.
+      6:
+        image: notes/mc_2017_congratulations_6.png
+        text: 'Puoi portare il codice che scrivi in questo esercizio nel tuo mondo
+          Minecraft su Minecraft: Education Edition e continuare a programmare con
+          l''Agente. Clicca su "Termina" e segui le istruzioni per ottenere il link.
+          Buon divertimento e buon lavoro!'
+      7:
+        image: notes/mc_2017_congratulations_7.png
+        text: 'Stacy: Ed eccomi di nuovo qui! OK, questo è l''Agente! Vi faccio vedere
+          cosa può fare. Guardate, lo sta facendo! Gli avevo detto di costruire una
+          scala, ora possiamo usarla per uscire da questi blocchi di terra cotta.
+          E voi ragazzi? Non si tratta solo di scale. Posso dire all''Agente di fare
+          quello che voglio, e lui lo farà per me.'
+      8:
+        image: notes/mc_2017_congratulations_8.png
+        text: 'Stampy: Come hai fatto? Stacy: È facile, in realtà. Ho semplicemente
+          programmato!'

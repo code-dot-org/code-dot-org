@@ -654,6 +654,7 @@ zh-TW:
     correct_title: "謝謝"
     correct_body: "感謝你提交這份答案。"
     hide_survey_last_answer: "這個調查是匿名的。請造訪教師控制台以匯整調查結果。注意，只有在至少五個學生提交了調查後，報告結果才會可見。"
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "謝謝"
     wrong_body: "感謝你提交這份答案。"

@@ -19,7 +19,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Roll\r\n\r\nNow that you've made the LEDs turn on when you tilt the board forward and back, see if you can light up the 3rd and 7th LEDs when you tilt the board left and right. To do this, you're going to have to use `accelerometer.getOrientation('roll');` to detect side-to-side motion.\r\n\r\n_Remember_: When roll is a positive number, the board is tilting to the right. When roll is a negative number, the board is tilting to the left.\r\n\r\n# Do this\r\n* Create something similar to what you did in the last bubble, except now using `accelerometer.getOrientation(\"roll\")`\r\n* Run your code to see if it works. Make sure that you can both move the board back and forth, and side-to-side to turn the LEDs on.\r\n\r\n_Challenge_: The lights instantly turn on if you move the board in the slightest way. Can you make it so that you have to turn the board a little more in order for the lights to turn on?",
+    "markdown_instructions": "# Roll\r\n\r\nNow that you've made the LEDs turn on when you tilt the board forward and back, see if you can light LEDs 2 and 7 when you tilt the board left and right. You can use `accelerometer.getOrientation('roll')` to detect side-to-side motion.\r\n\r\n_Remember_: When roll is a positive number, the board is tilting to the right. When roll is a negative number, the board is tilting to the left.\r\n\r\n# Do this\r\n* Create something similar to what you did in the last bubble, except now using `accelerometer.getOrientation(\"roll\")`\r\n* Run your code to see if it works. Make sure that you can both move the board back and forth, and side-to-side to turn the LEDs on.\r\n\r\n_Challenge_: The lights instantly turn on if you move the board in the slightest way. Can you make it so that you have to turn the board a little more in order for the lights to turn on?",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -61,7 +61,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-10 19:28:01 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-10 19:55:04 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-10 19:28:01 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-10 19:55:04 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-12 17:58:58 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

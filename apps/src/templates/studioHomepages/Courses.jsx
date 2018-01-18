@@ -6,6 +6,7 @@ import { CourseBlocksAll } from './CourseBlocks';
 import CoursesTeacherEnglish from './CoursesTeacherEnglish';
 import CoursesStudentEnglish from './CoursesStudentEnglish';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
 import Button from '@cdo/apps/templates/Button';
 import i18n from "@cdo/locale";
 import styleConstants from '@cdo/apps/styleConstants';
@@ -66,11 +67,14 @@ class Courses extends Component {
 
         {/* English, teacher.  (Also can be shown when signed out.) */}
         {(isEnglish && isTeacher) && (
-          <CoursesTeacherEnglish
-            isSignedOut={isSignedOut}
-            showInitialTips={showInitialTips}
-            userId={userId}
-          />
+          <div>
+            <SpecialAnnouncementActionBlock/>
+            <CoursesTeacherEnglish
+              isSignedOut={isSignedOut}
+              showInitialTips={showInitialTips}
+              userId={userId}
+            />
+          </div>
         )}
 
         {/* English, student.  (Also the default to be shown when signed out.) */}

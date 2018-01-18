@@ -230,9 +230,9 @@ GameLab.prototype.init = function (config) {
   // able to turn them on.
   config.noInstructionsWhenCollapsed = true;
 
-  // TODO (caleybrock): re-enable based on !config.level.debuggerDisabled when debug
-  // features are fixed.
-  var breakpointsEnabled = false;
+  // NOTE: We will go back to using !config.level.debuggerDisabled soon,
+  // but are testing with project levels only for now
+  var breakpointsEnabled = config.level.isProjectLevel;
   config.enableShowCode = true;
   config.enableShowLinesCount = false;
 
@@ -278,9 +278,9 @@ GameLab.prototype.init = function (config) {
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
 
-  // TODO(caleybrock): re-enable based on (!config.hideSource && !config.level.debuggerDisabled)
-  // when debug features are fixed.
-  var showDebugButtons = false;
+  // NOTE: We will go back to using !config.level.debuggerDisabled soon,
+  // but are testing with project levels only for now
+  var showDebugButtons = (!config.hideSource && config.level.isProjectLevel);
   var showDebugConsole = !config.hideSource;
 
   if (showDebugButtons || showDebugConsole) {
@@ -1043,6 +1043,7 @@ GameLab.prototype.completeSetupIfSetupComplete = function () {
       !this.JSInterpreter.startedHandlingEvents) {
     // Global code should run during the setup phase, but global code hasn't
     // completed.
+    this.gameLabP5.afterSetupStarted();
     return;
   }
 

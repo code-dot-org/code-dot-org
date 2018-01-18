@@ -249,7 +249,7 @@ it:
       finished_hoc: "Ho finito la mia Ora del Codice"
       sign_in_to_save: 'Accedi per salvare i progressi fatti'
       free_play:
-        playlab: 'Costruisci un Gioco'
+        playlab: 'Costruisci un Gioco nel Laboratorio'
         artist: 'Disegna qualcosa'
         calculate: 'Calculate something'
         applab: 'Costruisci una App in Sviluppo App'
@@ -415,7 +415,7 @@ it:
     print_certificate: "Stampa l'attestato"
     announcement_title: "Avvisi"
     announcement_message_fall2016_features: "Abbiamo passato l'estate a trasformare le vostre segnalazioni in nuove funzionalità. Ora, potete <a href=\"%{pp_url}\" target=\"_blank\">monitorare i vari progressi degli studenti</a> anche se stanno programmando in coppia su un unico dispositivo. Potete utilizzare <a href=\"%{csp_widgets_url}\" target=\"_blank\">i migliori strumenti interattivi</a> dal nostro corso CS prinicipale in <i>qualsiasi</i> aula. E i vostri studenti possono <a href=\"%{unused_code_url}\" target=\"_blank\">tenere i codici inutilizzati</a> nella loro area di lavoro per incoraggiare la sperimentazione! Scoprite tutte le nostre nuove funzionalità e fateci sapere che ne pensate."
-    announcement_csp_widgets_message: "Stai cercando dei modi divertenti per insegnare alla tua classe come funziona Internet, come fa la crittografia a garantire la sicurezza dei dati, e altri concetti simili? Abbiamo preso i migliori strumenti interattivi dal nostro corso \"Principi dell'Informatica\" e li abbiamo resi disponibili come strumenti autonomi che puoi usare in qualunque momento!"
+    announcement_csp_widgets_message: "Stai cercando dei modi divertenti per insegnare alla tua classe come funziona Internet, come fa la crittografia a garantire la sicurezza dei dati, e altri concetti simili? Abbiamo preso i migliori strumenti interattivi dal nostro corso \"Principi dell'Informatica\" e li abbiamo resi disponibili come componenti autonomi che puoi usare in qualunque momento!"
     announcement_learn_more_button: "Ulteriori informazioni"
     announcement_try_now_button: "Prova adesso"
     announcement_host_an_hour_button: "Ospita un'ora"
@@ -580,8 +580,8 @@ it:
     starwars:
       title: "Guerre Stellari"
     infinity:
-      title: "Disney Infinity"
-      body: "Crea una storia o inventa un gioco con i personaggi di Disney Infinity come protagonisti!"
+      title: "Laboratorio con Disney Infinity"
+      body: "Usa il Laboratorio per creare una storia o inventare un gioco con i personaggi di Disney Infinity come protagonisti!"
     minecraft:
       title: "Minecraft"
       body: "Esplora il mondo di Minecraft attraverso il codice."
@@ -606,9 +606,9 @@ it:
       title: "Istruzioni condizionali"
       body: "Quest'attività tradizionale ti introduce algoritmi ed istruzioni condizionali usando un mazzo di carte."
     widgets:
-      title: "Widget"
+      title: "Componenti"
       body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
-      audience: "Dai 14 anni"
+      audience: "Dai 14 anni in su"
       cta: "Scopri come"
   gallery:
     students_drew_these_with_code: "Gli studenti li hanno disegnati con dei programmi!"
@@ -654,6 +654,7 @@ it:
     correct_title: "Grazie!"
     correct_body: "Grazie per aver inviato delle risposte."
     hide_survey_last_answer: "Questo sondaggio è anonimo. Puoi consultare i risultati aggregati sul cruscotto di controllo dell’ insegnante. I risultati vengono visualizzati solo se almeno cinque studenti hanno risposto."
+    survey_submission_thankyou: "Grazie per aver presentato questo sondaggio! Abbiamo fatto in modo che le risposte rimangano anonime. Tieni conto che il tuo insegnante sarà ancora in grado di vedere le risposte di tutta la classe, ma senza i nomi associati alle risposte."
   level_group-submittable:
     wrong_title: "Grazie!"
     wrong_body: "Grazie per aver inviato delle risposte."
@@ -782,7 +783,7 @@ it:
     name: "Nome"
     updated: "Aggiornato"
     project_type: "Tipo di progetto"
-    help_text: "Clicca qui sotto su <strong>Costruisci una App</strong> o <strong>Costruisci un Gioco</strong> o <strong>Disegna qualcosa</strong> per creare un nuovo progetto negli ambienti \"AppLab\" o del Laboratorio o dell'Artista! <br/> Puoi salvare i progetti e riprenderli in qualsiasi momento."
+    help_text: "Clicca qui sotto su <strong>Costruisci una App</strong> o <strong>Costruisci un Gioco</strong> o <strong>Disegna qualcosa</strong> per creare un nuovo progetto negli ambienti \"Sviluppo App\" o del Laboratorio o dell'Artista! <br/> Puoi salvare i progetti e riprenderli in qualsiasi momento."
     need_help: "Hai bisogno di aiuto per iniziare?"
     thumbnail_help: "Non trovi l'anteprima del tuo progetto? Esegui la tua App per generare una nuova anteprima. Considera che ci vogliono un paio d'ore affinché le anteprime si aggiornino ovunque."
     really_delete: 'Elimina?'
@@ -949,7 +950,7 @@ it:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'I contenuti di questa fase non sono visibili perché questa fase è al momento bloccata. Il/La tuo/a insegnante può sbloccare questa fase quando è il momento di lavorarci su o revisionare le tue risposte.'
   hidden_stage: "Il/La tuo/a insegnante non ti aspettava qui. Per favore chiedi al/alla tuo/a insegnante su quale lezione dovresti essere."
-  hidden_script: "Il tuo insegnante non si aspettava che tu sia qui. Per favore, chiedigli in quale lezione dovresti essere."
+  hidden_script: "Il tuo insegnante non si aspettava che tu arrivassi qui. Per favore, chiedigli in quale lezione dovresti essere."
   return_unit_overview: 'Vai alla panoramica della lezione'
   return_course_overview: 'Vai alla visualizzazione delle unità'
   view_all_units: 'Visualizza tutte le lezioni'

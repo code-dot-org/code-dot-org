@@ -35,7 +35,7 @@
     ja ohjelmoinnin käsitteistä tällä jatkokurssilla.
   og_title: Jokainen lapsi ansaitsee mahdollisuuden
   og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
+  og_title_here: Koodaustunti on täällä!
   og_description: Jokainen oppilas jokaisessa koulussa ansaitsee mahdollisuuden opiskella
     tietotekniikkaa. Se muuttaa kaiken.
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
@@ -345,6 +345,12 @@
   studiobar_donate_body: Jokaista lahjoittamaasi dollaria kohden yksi lapsi saa oppia
   studiobar_shop_title: Kauppa
   studiobar_shop_body: Murra kaavamaisia käsityksiä. Käytä meidän logoa ylpeänä.
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "&ldquo;Haastan tytöt kaikista maista oppimaan yhden
     koodaustunnin&rdquo;  Malala, Nobelin rauhanpalkinnon saaja"
   homepage_hero_text_susan: |-
@@ -538,8 +544,8 @@
   minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
     new activity! Journey through Minecraft with code.
   minecraft_agent_button: Aloita
-  minecraft_designer_description: Program animals and enemies in your own version
-    of Minecraft.
+  minecraft_designer_description: Koodaa eläimiä ja muita Minecraft otuksia omalla
+    Minecraft versiollasi.
   minecraft_designer_button: Aloita
   minecraft_adventurer_description: Koodin avulla voit viedä Alexin tai Steven seikkailuun.
   minecraft_adventurer_button: Aloita
@@ -629,6 +635,7 @@
   video_title_obama: President Obama on computer science
   video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
   video_title_anybody_can_learn: Kuka vain voi oppia
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: Kooditunti Draymond Greenin kanssa
   video_title_russell_okung: Hour of Code with Russell Okung
   video_title_real_madrid: Hour of Code with Real Madrid
@@ -1279,7 +1286,7 @@
   csp17_category_name: "'16-'17 CS Principles"
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
-  applab_name: Sovelluksien laboratorio
+  applab_name: Sovelluslabra
   basketball_name: Tee koripallopeli
   sports_name: Code your own sports game
   applab_gradelevel: Ikäryhmille 13+
@@ -1330,12 +1337,12 @@
   infinity_gradelevel: 4-104-vuotiaille
   artist_gradelevel: Ikä 8+
   monstercoding_gradelevel: 5-13-vuotiaille
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: 5-10-vuotiaille
+  csfirst_gradelevel: 9-14-vuotiaille
   boxisland_gradelevel: Ala-aste
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: 12-14-vuotiaille
+  texasinstruments_gradelevel: 13-16-vuotiaille
+  teacherled_gradelevel: 5+ -vuotiaille
   course1_gradelevel: 4+ -vuotiaille (lukutaidottomat)
   course2_gradelevel: 6+ -vuotiaille (lukutaitoisille)
   course3_gradelevel: 8+ -vuotiaille (kurssin 2 jälkeen)
@@ -1988,11 +1995,11 @@
   playlab_shortcode: pelaa
   artist_shortcode: art
   header_home: Etusivu
-  header_my_dashboard: My Dashboard
+  header_my_dashboard: Kojelauta
   header_courses: Kurssit
-  header_course_catalog: Course Catalog
+  header_course_catalog: Kurssiluettelo
   header_project_gallery: Projektit
-  header_sections: Sections
+  header_sections: Osiot
   header_professional_learning: Professional Learning
   header_educate_overview: Kouluttajan yleiskatsaus
   header_educate_elementary: Peruskoulu
@@ -2086,10 +2093,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
-  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
-  video_title_steph_curry: Hour of Code with Steph Curry

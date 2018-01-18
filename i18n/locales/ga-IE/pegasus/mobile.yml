@@ -260,6 +260,12 @@
   studiobar_donate_body: "Le gach dollar a bhronnann tú, foghlaimíonn dalta amháin"
   studiobar_shop_title: "Siopa"
   studiobar_shop_body: "Bris steiréitíopaí. Caith ár suaitheantas go bródúil."
+  homepage_stats_students: "of US students have accounts on Code.org"
+  homepage_stats_female: "of our students are female"
+  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
+  homepage_stats_policy: "states changed policy to support computer science"
+  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto learn one Hour of Code&rdquo; \nMalala, buaiteoir Dhuais Nobel na Síochána"
   homepage_hero_text_susan: |-
     &ldquo;If you can change technology,
@@ -498,6 +504,7 @@
   video_title_obama: "An tUachtarán Obama ar an ríomheolaíocht"
   video_title_hoc_is_here: "Tá an Uair Chódála anseo - Is féidir le héinne foghlaim"
   video_title_anybody_can_learn: "Is féidir le héinne foghlaim"
+  video_title_steph_curry: "Hour of Code with Steph Curry"
   video_title_draymond_green: "An Uair Chódála le Draymond Green"
   video_title_russell_okung: "An Uair Chódála le Russell Okung"
   video_title_real_madrid: "An Uair Chódála le Real Madrid"
