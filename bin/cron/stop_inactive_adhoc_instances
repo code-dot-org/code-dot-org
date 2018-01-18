@@ -19,9 +19,12 @@ def main
   cloudformation_client = Aws::CloudFormation::Client.new
   cloudwatch_client = Aws::CloudWatch::Client.new
 
-  cloudformation_client.describe_stacks.stacks.select {|stack| stack.stack_name.starts_with?('adhoc-')}.each do |stack|
+  # get list of CloudFormation stacks that start with the name "adhoc-"
+  cloudformation_client.describe_stacks.stacks.select {|stack_struct| stack_struct.stack_name.starts_with?('adhoc-')}.each do |stack_struct|
+    stack = Aws::CloudFormation::Stack.new(name: stack_struct.stack_name)
     dashboard_url = stack.outputs.select {|output| output.output_key == 'DashboardURL'}.first.try(:output_value)
 
+    # get Unicorn active HTTP request count CloudWatch metric for the current adhoc stack
     metric = Aws::CloudWatch::Metric.new(namespace: 'Unicorn', name: 'active', client: cloudwatch_client)
     unicorn_metric = metric.get_statistics(
       {
@@ -32,20 +35,26 @@ def main
           },
           {
             name: 'Host',
-            value: "#{stack.stack_name}.cdn-code.org",
+            value: "#{stack.name}.cdn-code.org",
           }
         ],
         start_time: Time.now - (10 * 24 * 60 * 60), # 10 days ago
         end_time: Time.now,
-        period: 30000,
+        period: 10 * 24 * 60 * 60,
         statistics: ['Sum'],
         unit: 'Count'
       }
     )
-    # each datapoint in the metric statistics array contains an attribute called 'sum'
-    total_http_requests = unicorn_metric.datapoints.sum(&:sum) unless unicorn_metric.nil?
 
-    puts "Name - #{stack.stack_name}, Status - #{stack.stack_status}, DashboardURL - #{dashboard_url}, HTTP Requests - #{total_http_requests}"
+    # each datapoint in the metric statistics array contains an attribute called 'sum'
+    total_http_requests = unicorn_metric.try(:datapoints).sum(&:sum) unless unicorn_metric.nil?
+
+    puts "Name - #{stack.name}, Status - #{stack.stack_status}, DashboardURL - #{dashboard_url}, HTTP Requests - #{total_http_requests}"
+
+    if total_http_requests.between?(1, 1000)
+      puts "Terminating EC2 instance for Stack - #{stack.name} due to inactivity"
+      puts stack.resource('WebServer').to_json
+    end
   end
 end
 
