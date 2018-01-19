@@ -45,9 +45,12 @@ Feature: Using the teacher homepage sections feature
     And the href of selector ".uitest-ProgressBubble:first" contains the section id
     And the href of selector "a:contains(View all units)" contains the section id
 
+    # navigate to a script level
     When I click selector ".uitest-ProgressBubble:first" to load a new page
     Then the url contains the section id
+    And the href of selector ".progress_container .uitest-ProgressBubble:first" contains the section id
 
+    # open the More menu in the progress bar
     When I click selector ".header_popup_link"
     And I wait until element "a:contains(View Unit Overview)" is visible
     And the href of selector "a:contains(View Unit Overview)" contains the section id

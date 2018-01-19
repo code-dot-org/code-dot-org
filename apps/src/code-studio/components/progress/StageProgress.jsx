@@ -38,10 +38,11 @@ const StageProgress = React.createClass({
     levels: PropTypes.arrayOf(levelType).isRequired,
     stageExtrasUrl: PropTypes.string,
     onStageExtras: PropTypes.bool,
+    selectedSectionId: PropTypes.string,
   },
 
   render() {
-    const { levels, stageExtrasUrl, onStageExtras } = this.props;
+    const { levels, stageExtrasUrl, onStageExtras, selectedSectionId } = this.props;
 
     return (
       <div className="react_stage" style={styles.headerContainer}>
@@ -56,6 +57,7 @@ const StageProgress = React.createClass({
               level={level}
               disabled={false}
               smallBubble={!level.isCurrentLevel}
+              selectedSectionId={selectedSectionId}
             />
           </div>
         )}
@@ -75,5 +77,6 @@ export const UnconnectedStageProgress = StageProgress;
 export default connect(state => ({
   levels: levelsForLessonId(state.progress, state.progress.currentStageId),
   stageExtrasUrl: stageExtrasUrl(state.progress, state.progress.currentStageId),
-  onStageExtras: state.progress.currentLevelId === 'stage_extras'
+  onStageExtras: state.progress.currentLevelId === 'stage_extras',
+  selectedSectionId: state.teacherSections.selectedSectionId,
 }))(StageProgress);
