@@ -21,8 +21,10 @@ const styles = {
   statusSelect: {
     marginRight: '5px'
   },
-  detailViewHeader: {
+  editMenu: {
     display: 'flex',
+  },
+  detailViewHeader: {
     marginLeft: 'auto'
   },
   headerWrapper: {
@@ -31,6 +33,11 @@ const styles = {
   },
   saveButton: {
     marginRight: '5px'
+  },
+  statusSelectGroup: {
+    maxWidth: 200,
+    marginRight: 5,
+    marginLeft: 5,
   }
 };
 
@@ -242,7 +249,7 @@ export class DetailViewContents extends React.Component {
     if (this.props.canLock) {
       // Render the select with the lock button in a fancy InputGroup
       return (
-        <InputGroup style={{maxWidth: 200, marginRight: 5}}>
+        <InputGroup style={styles.statusSelectGroup}>
           <InputGroup.Button>
             {this.renderLockButton()}
           </InputGroup.Button>
@@ -255,6 +262,15 @@ export class DetailViewContents extends React.Component {
       return selectControl;
     }
   };
+
+  renderEditMenu = () => {
+    return (
+      <div style={styles.editMenu}>
+        {this.renderStatusSelect()}
+        {this.renderEditButtons()}
+      </div>
+    );
+  }
 
   renderHeader = () => {
     return (
@@ -286,8 +302,7 @@ export class DetailViewContents extends React.Component {
         </div>
 
         <div id="DetailViewHeader" style={styles.detailViewHeader}>
-          {this.renderStatusSelect()}
-          {this.renderEditButtons()}
+          {this.renderEditMenu()}
         </div>
       </div>
     );
@@ -386,8 +401,7 @@ export class DetailViewContents extends React.Component {
             />
           </div>
         </div>
-        <br/>
-        {this.renderEditButtons()}
+        <br />
       </div>
     );
   };
@@ -400,6 +414,7 @@ export class DetailViewContents extends React.Component {
         {this.renderTopSection()}
         {this.renderQuestions()}
         {this.renderNotes()}
+        {this.renderEditMenu()}
       </div>
     );
   }
