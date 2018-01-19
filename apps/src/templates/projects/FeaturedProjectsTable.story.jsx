@@ -3,7 +3,7 @@ import FeaturedProjectsTable from './FeaturedProjectsTable';
 
 // TODO [ErinB] update to use projectList data that highlights the differences of the tables. Currently a work in progress.
 export default storybook => {
-  storybook
+  return storybook
     .storiesOf('FeaturedProjectsTable', module)
     .addStoryTable([
       {
@@ -12,6 +12,7 @@ export default storybook => {
         story: () => (
           <FeaturedProjectsTable
             projectList={[]}
+            tableVersion="currentFeatured"
           />
         )
       },
@@ -21,6 +22,7 @@ export default storybook => {
         story: () => (
           <FeaturedProjectsTable
             projectList={[]}
+            tableVersion="archiveFeatured"
           />
         )
       },
