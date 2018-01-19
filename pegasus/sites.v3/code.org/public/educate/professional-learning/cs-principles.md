@@ -48,7 +48,7 @@ The program kicks off with a 5-day summer workshop where you'll have the opportu
 ## <a name="features"></a>Program Features
 
 <details>
-<summary>**Accessible to all educators**</summary>
+<summary>**Cost should not be a barrier**</summary>
 <p>
 <br>
 We are a nonprofit dedicated to helping schools teach computer science. In most states, our professional learning is offered at *no cost to you or your school*.
@@ -114,6 +114,9 @@ The CS Principles Professional Learning Program is available in regions served b
 <br>
 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dKLjL6y3AKo45c7weK__JI3sxijfbmzq" width="640" height="480"></iframe>
+
+<br>
+Some of our Partners serve their entire state and will be hosting summer workshops in multiple locations. Even if your city is not listed on this map, we encourage you to apply! 
 
 ## <a name="participate"></a>Who can participate?
 

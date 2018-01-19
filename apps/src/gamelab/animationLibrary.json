@@ -6431,8 +6431,8 @@
         "y": 200
       }
     },
-    "category_food/purple_onoin": {
-      "name": "purple_onoin",
+    "category_food/radish": {
+      "name": "radish",
       "frameCount": 1,
       "frameSize": {
         "x": 464,
@@ -6440,10 +6440,10 @@
       },
       "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2017-04-18 06:01:26 UTC",
-      "pngLastModified": "2017-04-18 06:01:27 UTC",
-      "version": "YtMuz.QhLFSIAK.YKJ48iq26yHRinvRz",
-      "sourceUrl": "/api/v1/animation-library/YtMuz.QhLFSIAK.YKJ48iq26yHRinvRz/category_food/purple_onoin.png",
+      "jsonLastModified": "2018-01-18 18:00:18 UTC",
+      "pngLastModified": "2018-01-18 18:00:19 UTC",
+      "version": "HYO0LezYHECv5.ncrkKJtQN9w3ZD2fra",
+      "sourceUrl": "/api/v1/animation-library/HYO0LezYHECv5.ncrkKJtQN9w3ZD2fra/category_food/radish.png",
       "sourceSize": {
         "x": 464,
         "y": 800
@@ -16562,7 +16562,8 @@
       "category_animals/bee"
     ],
     "beet": [
-      "category_food/beet"
+      "category_food/beet",
+      "category_food/radish"
     ],
     "bell": [
       "category_generic_items/bell"
@@ -17724,7 +17725,7 @@
       "category_food/pear",
       "category_food/pepper",
       "category_food/pizza_slice",
-      "category_food/purple_onoin",
+      "category_food/radish",
       "category_food/red_apple",
       "category_food/sliced_watermelon",
       "category_food/soda",
@@ -21421,7 +21422,8 @@
       "category_characters/kid_at_desk"
     ],
     "onion": [
-      "category_food/onion"
+      "category_food/onion",
+      "category_food/radish"
     ],
     "open_book": [
       "category_generic_items/open_book"
@@ -22187,9 +22189,6 @@
     "purple_monster": [
       "category_characters/purple_monster"
     ],
-    "purple_onoin": [
-      "category_food/purple_onoin"
-    ],
     "purse": [
       "category_generic_items/purse"
     ],
@@ -22249,6 +22248,9 @@
       "category_vehicles/playerShip3_orange",
       "category_vehicles/playerShip3_red"
     ],
+    "radish": [
+      "category_food/radish"
+    ],
     "recorder": [
       "category_music/recorder"
     ],
@@ -22260,6 +22262,9 @@
     ],
     "red_apple": [
       "category_food/red_apple"
+    ],
+    "red_onion": [
+      "category_food/radish"
     ],
     "redsand": [
       "category_environment/redsand"

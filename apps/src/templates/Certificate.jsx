@@ -120,7 +120,7 @@ class Certificate extends Component {
             linkText={i18n.backToActivity()}
           />
         )}
-        <div style={certificateStyle}>
+        <div id="uitest-certificate" style={certificateStyle}>
           <a href={certificateLink}>
             <img src={imgSrc} />
           </a>
@@ -130,6 +130,7 @@ class Certificate extends Component {
             <div>
               <h2>{i18n.congratsCertificatePersonalize()}</h2>
               <input
+                id="name"
                 type="text"
                 style={styles.nameInput}
                 placeholder={i18n.yourName()}
@@ -145,7 +146,7 @@ class Certificate extends Component {
           )}
           {tutorial && this.state.personalized && (
             <div>
-              <h2>{i18n.congratsCertificateThanks()}</h2>
+              <h2 id="uitest-thanks">{i18n.congratsCertificateThanks()}</h2>
               <p>{i18n.congratsCertificateContinue()}</p>
             </div>
           )}

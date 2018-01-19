@@ -23,16 +23,6 @@ class UsersHelperTest < ActionView::TestCase
       summarize_user_progress(script, user)
     )
 
-    assert_equal(
-      {
-        linesOfCode: 42,
-        linesOfCodeText: 'Total lines of code: 42',
-        lockableAuthorized: false,
-        scripts: {},
-      },
-      summarize_user_progress_for_all_scripts(user)
-    )
-
     # Verify results for two completed levels for one script.
     ul1 = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, script: script, level: script.script_levels[1].level
     ul3 = create :user_level, user: user, best_result: 20, script: script, level: script.script_levels[3].level
@@ -63,53 +53,7 @@ class UsersHelperTest < ActionView::TestCase
       summarize_user_progress(script, user, exclude_level_progress)
     )
 
-    assert_equal(
-      {
-        linesOfCode: 42,
-        linesOfCodeText: 'Total lines of code: 42',
-        lockableAuthorized: false,
-        scripts: {
-          script.name => {
-            completed: false,
-            levels: {
-              ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
-              ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
-            }
-          }
-        }
-      },
-      summarize_user_progress_for_all_scripts(user)
-    )
-
     assert_in_delta 1.83, percent_complete_total(script, user)
-
-    # Verify summarize_user_progress_for_all_scripts for multiple completed levels across multiple scripts.
-    course1 = Script.course1_script
-    ul1b = create :user_level, user: user, best_result: 10, script: course1, level: course1.script_levels[1].level
-
-    assert_equal(
-      {
-        linesOfCode: 42,
-        linesOfCodeText: 'Total lines of code: 42',
-        lockableAuthorized: false,
-        scripts: {
-          script.name => {
-            completed: false,
-            levels: {
-              ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
-              ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
-            }
-          },
-          course1.name => {
-            completed: false,
-            levels: {
-              ul1b.level_id => {status: LEVEL_STATUS.attempted, result: 10},
-            }
-          }
-        }
-      },
-      summarize_user_progress_for_all_scripts(user)
-    )
   end
 
   def test_summarize_user_progress_with_pages
@@ -350,5 +294,38 @@ class UsersHelperTest < ActionView::TestCase
 
     assert_equal(101, level_with_best_progress([101, 102], level_progress))
     assert_equal(101, level_with_best_progress([102, 101], level_progress))
+  end
+
+  def test_get_level_progress
+    Script.stubs(:should_cache?).returns true
+
+    script = Script.twenty_hour_script
+    users = 20.times.map do
+      user = create :user
+      create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, script: script, level: script.script_levels[1].level
+      create :user_level, user: user, best_result: 20, script: script, level: script.script_levels[3].level
+      user
+    end
+
+    # We used to do 3 db queries per student. This test ensures that we instead
+    # only do 3 db queries total
+    queries = capture_queries do
+      get_level_progress(users, script)
+    end
+    assert_equal(3, queries.length)
+
+    # validate progress when we query for just the first two students
+    progress = get_level_progress(users[0, 2], script)
+    expected = {
+      users[0].id => {
+        script.script_levels[1].level.id => {status: 'perfect', result: ActivityConstants::BEST_PASS_RESULT},
+        script.script_levels[3].level.id => {status: 'passed', result: 20},
+      },
+      users[1].id => {
+        script.script_levels[1].level.id => {status: 'perfect', result: ActivityConstants::BEST_PASS_RESULT},
+        script.script_levels[3].level.id => {status: 'passed', result: 20},
+      }
+    }
+    assert_equal(expected, progress)
   end
 end

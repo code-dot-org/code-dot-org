@@ -195,8 +195,8 @@
     "unminified-webpack-plugin": "^1.1.0",
     "url-loader": "^0.5.7",
     "video.js": "4.5.2",
-    "webpack": "2.7.0",
-    "webpack-dev-server": "^1.14.1",
+    "webpack": "3.10.0",
+    "webpack-dev-server": "^2.11.0",
     "webpack-hot-middleware": "^2.10.0",
     "webpack-livereload-plugin": "^0.8.1",
     "webpack-notifier": "^1.4.1"
