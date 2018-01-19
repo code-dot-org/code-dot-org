@@ -21,12 +21,11 @@ const styles = {
   statusSelect: {
     marginRight: '5px'
   },
-  detailViewHeader: {
+  editMenu: {
     display: 'flex',
-    marginLeft: 'auto'
   },
-  detailViewFooter: {
-    display: 'flex',
+  detailViewHeader: {
+    marginLeft: 'auto'
   },
   headerWrapper: {
     display: 'flex',
@@ -257,6 +256,15 @@ export class DetailViewContents extends React.Component {
     }
   };
 
+  renderEditMenu = () => {
+    return (
+      <div style={styles.editMenu}>
+        {this.renderStatusSelect()}
+        {this.renderEditButtons()}
+      </div>
+    );
+  }
+
   renderHeader = () => {
     return (
       <div style={styles.headerWrapper}>
@@ -287,8 +295,7 @@ export class DetailViewContents extends React.Component {
         </div>
 
         <div id="DetailViewHeader" style={styles.detailViewHeader}>
-          {this.renderStatusSelect()}
-          {this.renderEditButtons()}
+          {this.renderEditMenu()}
         </div>
       </div>
     );
@@ -380,15 +387,6 @@ export class DetailViewContents extends React.Component {
     );
   };
 
-  renderFooter = () => {
-    return (
-      <div style={styles.detailViewFooter}>
-        {this.renderEditButtons()}
-        {this.renderStatusSelect()}
-      </div>
-    );
-  }
-
   render() {
     return (
       <div>
@@ -397,7 +395,7 @@ export class DetailViewContents extends React.Component {
         {this.renderTopSection()}
         {this.renderQuestions()}
         {this.renderNotes()}
-        {this.renderFooter()}
+        {this.renderEditMenu()}
       </div>
     );
   }
