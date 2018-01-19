@@ -565,6 +565,48 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal expected_workshops.map(&:id).sort, response.map {|x| x['id']}.sort
   end
 
+  test 'Teachercon workshops are public' do
+    tc = create(
+      :pd_workshop,
+      course: Pd::Workshop::COURSE_CSD,
+      num_sessions: 1,
+      organizer: @organizer,
+      subject: Pd::Workshop::SUBJECT_TEACHER_CON,
+    )
+
+    get :upcoming_teachercon
+    assert_response :success
+    assert_equal 1, JSON.parse(@response.body).length
+    assert_equal tc.id, JSON.parse(@response.body).first['id']
+  end
+
+  test 'Teachercon workshops can be filtered by course' do
+    csd = create(
+      :pd_workshop,
+      course: Pd::Workshop::COURSE_CSD,
+      num_sessions: 1,
+      organizer: @organizer,
+      subject: Pd::Workshop::SUBJECT_TEACHER_CON,
+    )
+    csp = create(
+      :pd_workshop,
+      course: Pd::Workshop::COURSE_CSP,
+      num_sessions: 1,
+      organizer: @organizer,
+      subject: Pd::Workshop::SUBJECT_TEACHER_CON,
+    )
+
+    get :upcoming_teachercon, params: {course: Pd::Workshop::COURSE_CSD}
+    assert_response :success
+    assert_equal 1, JSON.parse(@response.body).length
+    assert_equal csd.id, JSON.parse(@response.body).first['id']
+
+    get :upcoming_teachercon, params: {course: Pd::Workshop::COURSE_CSP}
+    assert_response :success
+    assert_equal 1, JSON.parse(@response.body).length
+    assert_equal csp.id, JSON.parse(@response.body).first['id']
+  end
+
   private
 
   def tomorrow_at(hour, minute = nil)
