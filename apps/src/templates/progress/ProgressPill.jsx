@@ -47,13 +47,17 @@ class ProgressPill extends React.Component {
     fontSize: PropTypes.number,
     tooltip: PropTypes.element,
     disabled: PropTypes.bool,
+    selectedSectionId: PropTypes.string,
   };
 
   render() {
-    const { levels, icon, text, fontSize, tooltip, disabled } = this.props;
+    const { levels, icon, text, fontSize, tooltip, disabled, selectedSectionId } = this.props;
 
     const multiLevelStep = levels.length > 1;
-    const url = (multiLevelStep || disabled) ? undefined : levels[0].url + location.search;
+    let url = (multiLevelStep || disabled) ? undefined : levels[0].url;
+    if (url && selectedSectionId) {
+      url += `?section_id=${selectedSectionId}`;
+    }
 
     let style = {
       ...styles.levelPill,
