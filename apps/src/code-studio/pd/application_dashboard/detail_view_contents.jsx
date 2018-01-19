@@ -25,6 +25,9 @@ const styles = {
     display: 'flex',
     marginLeft: 'auto'
   },
+  detailViewFooter: {
+    display: 'flex',
+  },
   headerWrapper: {
     display: 'flex',
     alignItems: 'baseline'
@@ -240,7 +243,7 @@ export class DetailViewContents extends React.Component {
     if (this.props.canLock) {
       // Render the select with the lock button in a fancy InputGroup
       return (
-        <InputGroup style={{maxWidth: 200, marginRight: 5}}>
+        <InputGroup style={{maxWidth: 200, marginRight: 5, marginLeft: 5}}>
           <InputGroup.Button>
             {this.renderLockButton()}
           </InputGroup.Button>
@@ -372,11 +375,19 @@ export class DetailViewContents extends React.Component {
             />
           </div>
         </div>
-        <br/>
-        {this.renderEditButtons()}
+        <br />
       </div>
     );
   };
+
+  renderFooter = () => {
+    return (
+      <div style={styles.detailViewFooter}>
+        {this.renderEditButtons()}
+        {this.renderStatusSelect()}
+      </div>
+    );
+  }
 
   render() {
     return (
@@ -386,6 +397,7 @@ export class DetailViewContents extends React.Component {
         {this.renderTopSection()}
         {this.renderQuestions()}
         {this.renderNotes()}
+        {this.renderFooter()}
       </div>
     );
   }
