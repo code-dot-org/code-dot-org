@@ -50,7 +50,8 @@ Feature: Using the teacher homepage sections feature
     Then the url contains the section id
 
     # open the More menu in the progress bar
-    When I click selector ".header_popup_link"
+    When I wait for jquery to load
+    And I click selector ".header_popup_link"
     And I wait until element "a:contains(View Unit Overview)" is visible
     And the href of selector "a:contains(View Unit Overview)" contains the section id
     And I wait until element ".header_popup_body .uitest-ProgressBubble:first" is visible
