@@ -24,11 +24,11 @@
       "rule-type": "transformation",
       "rule-id": "3",
       "rule-name": "3",
+      "rule-action": "rename",
       "rule-target": "schema",
       "object-locator": {
         "schema-name": "dashboard_production"
       },
-      "rule-action": "rename",
       "value": "dashboard_production_pii"
     }
   ]

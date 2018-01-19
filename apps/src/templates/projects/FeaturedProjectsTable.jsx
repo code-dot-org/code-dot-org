@@ -1,5 +1,4 @@
 import React, {PropTypes} from 'react';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import {ImageWithStatus} from '../ImageWithStatus';
@@ -20,8 +19,8 @@ export const COLUMNS = {
   THUMBNAIL: 0,
   PROJECT_NAME: 1,
   APP_TYPE: 2,
-  LAST_EDITED: 3,
-  PUBLIC_GALLERY: 4,
+  LAST_PUBLISHED: 3,
+  LAST_FEATURED: 4,
   ACTIONS: 5,
 };
 
@@ -56,9 +55,6 @@ export const styles = {
   cellType: {
     width: 120
   },
-  cellIsPublished: {
-    textAlign: 'center'
-  },
   thumbnailWrapper: {
     height: THUMBNAIL_SIZE,
     display: 'flex',
@@ -77,16 +73,12 @@ const thumbnailFormatter = function (thumbnailUrl) {
           />);
 };
 
-const nameFormatter = function (name, {rowData}) {
+const nameFormatter = (name, {rowData}) => {
   const url = '/projects/${rowData.type}/${rowData.channel}/';
   return <a style={tableLayoutStyles.link} href={url} target="_blank">{name}</a>;
 };
 
-const isPublishedFormatter = function (isPublished) {
-  return isPublished ? (<FontAwesome icon="circle"/>) : '';
-};
-
-const actionsFormatter = function (actions, {rowData}) {
+const actionsFormatter = (actions, {rowData}) => {
   return (
     <QuickActionsCell>
       <PopUpMenu.Item
@@ -109,38 +101,34 @@ const actionsFormatter = function (actions, {rowData}) {
   );
 };
 
-const dateFormatter = function (time) {
+const dateFormatter = (time) => {
   const date = new Date(time);
   return date.toLocaleDateString();
 };
 
-const typeFormatter = function (type) {
+const typeFormatter = (type) => {
   return PROJECT_TYPE_MAP[type];
 };
 
-// Table of user's projects
-// TODO(caleybrock): add an actions component to allow users to modify projects
-const PersonalProjectsTable = React.createClass({
-  propTypes: {
-    projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired
-  },
+class FeaturedProjectsTable extends React.Component {
+  static propTypes = {
+    projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired,
+    tableVersion: PropTypes.oneOf(['currentFeatured', 'archiveFeatured']).isRequired
+  };
 
-  getInitialState() {
-    const sortingColumns = {
-      [COLUMNS.LAST_EDITED]: {
-        direction: 'desc',
-        position: 0
-      }
-    };
-    return {sortingColumns};
-  },
+  state = {
+    [COLUMNS.PROJECT_NAME]: {
+      direction: 'desc',
+      position: 0
+    }
+  };
 
-  getSortingColumns() {
+  getSortingColumns = () => {
     return this.state.sortingColumns || {};
-  },
+  };
 
   // The user requested a new sorting column. Adjust the state accordingly.
-  onSort(selectedColumn) {
+  onSort = (selectedColumn) => {
     this.setState({
       sortingColumns: sort.byColumn({
         sortingColumns: this.state.sortingColumns,
@@ -153,10 +141,11 @@ const PersonalProjectsTable = React.createClass({
         selectedColumn
       })
     });
-  },
+  };
 
-  getColumns(sortable) {
-    return [
+  getColumns = (sortable) => {
+    const tableVersion = this.props.tableVersion;
+    const dataColumns = [
       {
         property: 'thumbnailUrl',
         header: {
@@ -177,7 +166,7 @@ const PersonalProjectsTable = React.createClass({
         }
       },
       {
-        property: 'name',
+        property: 'project_name',
         header: {
           label: i18n.projectName(),
           props: {style: {
@@ -209,9 +198,9 @@ const PersonalProjectsTable = React.createClass({
         }
       },
       {
-        property: 'updatedAt',
+        property: 'publishedAt',
         header: {
-          label: i18n.lastEdited(),
+          label: i18n.published(),
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
@@ -221,22 +210,29 @@ const PersonalProjectsTable = React.createClass({
         }
       },
       {
-        property: 'isPublished',
+        property: 'featuredAt',
         header: {
-          label: i18n.publicGallery(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader,
-            }
-          },
+          label: i18n.featured(),
+          props: {style: tableLayoutStyles.headerCell},
+          transforms: [sortable],
         },
         cell: {
-          format: isPublishedFormatter,
-          props: {style: {
-            ...tableLayoutStyles.cell,
-            ...styles.cellIsPublished
-          }}
+          format: dateFormatter,
+          props: {style: tableLayoutStyles.cell}
+        }
+      },
+    ];
+    const archiveColumns = [
+      {
+        property: 'unfeaturedAt',
+        header: {
+          label: i18n.unfeatured(),
+          props: {style: tableLayoutStyles.headerCell},
+          transforms: [sortable],
+        },
+        cell: {
+          format: dateFormatter,
+          props: {style: tableLayoutStyles.cell}
         }
       },
       {
@@ -256,7 +252,31 @@ const PersonalProjectsTable = React.createClass({
         }
       }
     ];
-  },
+    const currentColumns = [
+      {
+        property: 'actions',
+        header: {
+          label: i18n.quickActions(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...tableLayoutStyles.unsortableHeader,
+            }
+          },
+        },
+        cell: {
+          format: actionsFormatter,
+          props: {style: tableLayoutStyles.cell}
+        }
+      }
+    ];
+
+    if (tableVersion === "currentFeatured") {
+      return dataColumns.concat(currentColumns);
+    } else {
+      return dataColumns.concat(archiveColumns);
+    }
+  };
 
   render() {
     // Define a sorting transform that can be applied to each column
@@ -280,6 +300,6 @@ const PersonalProjectsTable = React.createClass({
       </Table.Provider>
     );
   }
-});
+}
 
-export default PersonalProjectsTable;
+export default FeaturedProjectsTable;
