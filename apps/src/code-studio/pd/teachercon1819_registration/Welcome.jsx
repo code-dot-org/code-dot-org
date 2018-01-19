@@ -3,7 +3,7 @@ import {FormGroup} from 'react-bootstrap';
 import Teachercon1819FormComponent from './Teachercon1819FormComponent';
 
 export default class Welcome extends Teachercon1819FormComponent {
-  static associatedFields = []
+  static associatedFields = [];
 
   render() {
     return (
