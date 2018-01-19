@@ -104,6 +104,7 @@ const actionsFormatter = function (actions, {rowData}) {
   return (
     <ManageStudentsActionsCell
       id={rowData.id}
+      sectionId={rowData.sectionId}
       isEditing={rowData.isEditing}
     />
   );

@@ -11,25 +11,50 @@ nav: regional_partner_playbook_nav
 #### Facilitators are key to building a sustainable computer science community in your region. They are the bridge between your organization and the teachers you serve and impact the quality of the professional learning programs. The following resources will help you sustain and grow a strong corps of local facilitators.
 
 ## Table of Contents
+- [Booking Facilitators for Local Summer Workshops](#booking)
 - [Example Facilitator One Pager](#page)
 - [Example Contract](#contract)
 - [Facilitator Recruitment Resources](#recruitment)
 - [Facilitator Support Documents](#support)
-- [2016 CS Principles Resources](#csp)
 - [Facilitator Payments](#pay)
 
+________________
+<a id="booking"></a>
+## Booking Facilitators for Local Summer Workshops
+For those who need to book extra facilitators beyond your current capacity for local summer workshops.
 
+If you:
+
+- Don’t have enough trained facilitators locally to run your local summer workshop, and 
+- Have talked with your Regional Manager about approval for booking facilitators (if not, please do so as soon as possible). 
+
+Then:
+
+- Check [this list](http://bit.ly/facilitator-summer-availability) for trained facilitators’ summer workshop availability. 
+- Reach out directly to schedule them for your workshops as needed.  
+- Start by emailing 1-2 facilitators close to you. Then, if they are not available, expand your search and reach out to 1-2 more. **Do not** email all available facilitators at once, as they will be overwhelmed by many partner requests. 
+- Update [the list](http://bit.ly/facilitator-summer-availability) in the “Booked/Confirmed by” column when you’ve booked someone. 
+- Update your workshop dashboard with the name of your booked facilitator. 
+
+Remember, the sooner you start this the easier it will be to find an available facilitator!
+
+**Important**: Book facilitators only for workshops that have been confirmed with Code.org/Regional Manager. Do not book facilitators for additional cohorts that you may be adding later based on teacher recruitment numbers. 
+
+
+[**Back to the top**](#top)
 ________________
 <a id="page"></a>
 ## Example Facilitator One Pager
 The facilitator one pager should be sent to facilitators at least 10 days prior to the workshop. It provides facilitators all of the logistical information needed to run their workshop.
 
-Use <a href="/files/ExampleFacilitatorOnePager.pdf" target=_blank>this one pager</a> as an example of how to format the information that facilitators will need to run a successful workshop.
+Use <a href="https://docs.google.com/document/d/1FobsNOHi91ioe5ZoCeiWNgDslQkTPF4w31j2ii8q4Bk/edit" target=_blank>this one pager</a> as an example of how to format the information that facilitators will need to run a successful workshop.
 
+
+[**Back to the top**](#top)
 ________________
 <a id="contract"></a>
 ## Example contract
-[This is an example](/files/example-csp-facilitator-contract.pdf) of an agreement that facilitators sign when facilitating for Code.org. You should develop your own agreement for use with facilitators that meets your organization's particular needs, and which ensures that the terms of the Regional Partner agreement you have signed with Code.org, particularly Section 3 (Indemnification), Section 6.1 (Description of Duties) and Section 7 (Confidential Information), are met.
+[This is an example](/files/example-facilitation-agreement.pdf) of an agreement that facilitators sign when facilitating for Code.org. You should develop your own agreement for use with facilitators that meets your organization's particular needs, and which ensures that the terms of the Regional Partner agreement you have signed with Code.org, particularly Section 3 (Indemnification), Section 6.1 (Description of Duties) and Section 7 (Confidential Information), are met.
 
 *DISCLAIMER: By providing this example, Code.org is not offering you legal advice. You should consult a lawyer if you need advice about contracts, the language therein, or any other legal matter.*
 
@@ -38,7 +63,7 @@ ________________
 <a id="recruitment"></a>
 ## Facilitator Recruitment Resources
 
-- [2017-2018 (CURRENT) Facilitator Application Process Doc] (https://docs.google.com/document/d/11-I1qsTrvODrZgKDNP2frGLrMjmUb-C9ChOt7nbqV2Y/edit#)
+- [2018-2019 (CURRENT) Facilitator Application Process Doc] (https://docs.google.com/document/d/11-I1qsTrvODrZgKDNP2frGLrMjmUb-C9ChOt7nbqV2Y/edit#)
 - [Facilitator Program Page](https://code.org/facilitator) - General webpage to share with potential facilitators
 - [Facilitator Development Program Overview](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit#heading=h.psnytlkvnqcd)
 - [K-12 Facilitator Qualifications and Rubric](https://docs.google.com/document/d/14yKszp5_eYiTgZ4t8KpDTi2cBB4wd5SGxCV-a_eE6c8/edit) - Guide for recruitment
@@ -49,41 +74,21 @@ ________________
 <a id="support"></a>
 ## Facilitator Support Documents
 
-- [Facilitator Playbook](https://docs.google.com/document/d/1d3wFP0K-Hd6CGTYgg17pI5TxzpmMUb_UlGiiC3JsvKg/edit) - Toolkit for facilitators of all programs
-- [CS Principles 2017 Facilitator Prep Checklist for G1 Partners](https://docs.google.com/document/d/1WMTzTs7jKdvreLudVjHFUWwLRTdvsRHxn9riPDdJDvk/edit) - Checklist Group 1 Regional Partners should go through with their local CS Principles facilitators.
-- [Guidelines to ECS Phase 2 Workshops](https://docs.google.com/document/d/1mFq3eC1tKpaC7fjd90Gy4NrGlrvGPRhqKfat-BSdLyc/edit) - Instructions for ECS facilitators on how to run Phase 2 Workshop
-- [CS Principles 2016 Facilitation Summit Notes](https://docs.google.com/document/d/1QawlAmavjg1FU3xtjqQGBLaC3i5_iIxLYGS5bl5ubZA/view)
-- [CS in Algebra Phase 3 Agenda](https://docs.google.com/document/d/1S-nexox0U80Pp8rRyfW-PkBCNkJ-vwckJVTqRmLo-Fc/edit#)
-- [CS in Algebra Phase 3 Template Slide Deck](https://docs.google.com/presentation/d/1Jbf0VuTAJnzFgDRODVH9PyUy099w7Bl2l5oG8bzGb28/edit#slide=id.g13d52b2d7c_0_54)
-
-[**Back to the top**](#top)
-________________
-<a id="csp"></a>
-
-## 2016 CS Principles Resources
-
-Refer to the slide decks listed below as a resource for details about the CS Principles curriculum and tools.
-
-- [Welcome to CS Principles Facilitator Program - Slides](https://drive.google.com/open?id=1h5HcI4BKHLwWGYV1mcsV3HUWsb8YMwCcTIbqwI5yps8)
-- [Navigating Code Studio and the Teacher Experience - Slides](https://drive.google.com/open?id=1QTo_BqHR1yXTqlwHHDXipnfDKEifdCGMFPHBcwa437k)<br/>
-- [Deep Dive into CS Principles Curriculum Tools - Slides](https://drive.google.com/open?id=1941E16ptXwvgyHzJOW4_r6f4wnPAlUN9rk25dkHkJ38)<br/>
-- [CS Principles and the College Board - Slides](https://drive.google.com/open?id=1z8G-J0aDZnAJSR2jA3JJrHJASUjPRdX8ItouG5OpwZE)<br/>
+- [Facilitator Playbook](https://docs.google.com/document/d/1xTZkAfmjsOttqNB7uFT-Sp5yH0fVDGbQ0PPhhcU70Zk/edit) - Toolkit for facilitators of all programs
+- [Facilitation Guide](https://docs.google.com/document/d/1xvBjf74VL0YfVswqLwoCdau5NN3D-QRyqQHGYl20034/edit)
+- [Important Resources for CS Principles Facilitators](https://curriculum.code.org/plcsp/) - See full list of resources and agendas for CS Principles Facilitators 
+- [Important Resources for CS Discoveries Facilitators](https://curriculum.code.org/plcsd/) - See full list of resources and agendas for CS Discoveries Facilitators
 
 
 [**Back to the top**](#top)
+
 ________________
 <a id="pay"></a>
 ## Facilitator Payments
 
-**ECS, CS in Science, and CS in Algebra Facilitator Payments**
+**CS Principles & CS Discoveries Facilitator Payments**
 
-- All facilitators (veteran and facilitators in training) are paid $500 per workshop day. There is no urban multiplier applied to this amount as it is considered a pass through expense.
-- This summer, Code.org will directly pay any non-local veteran faciiltators as they are only working at your site this summer.
-- Starting with the first Academic Year Workshop, each Regional Partner is responsible for contracting with and paying all facilitators. We will include the funding for you to pay them in our checks to your organization.
-
-**CS Principles Facilitator Payments**
-
-- All facilitators are paid $500 per workshop day. There is no urban multiplier applied to this amount as it is considered a pass through expense.
+- All facilitators are paid $500 per workshop day.
 - Each Regional Partner is responsible for contracting with and paying any facilitators who run local workshops. *(Note: this includes any out of region facilitators)*
 - Code.org will directly pay facilitators for any work they do at TeacherCon.
 - Code.org will directly pay facilitators for any artifacts they produce as part of their Deeper Learning Plan.

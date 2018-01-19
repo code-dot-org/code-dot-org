@@ -1,6 +1,18 @@
 ---
 title: Professional Learning
 theme: responsive
+social:
+  "og:title": "Awesome CS workshops for teachers"
+  "og:description": "Code.org's Professional Learning Program is for any teacher -- whether you're new or experienced with teaching computer science (CS)."
+  "og:image" : "https://code.org/images/social-media/professional-learning-2018.png"
+  "og:image:width": '1029'
+  "og:image:height": '515'
+  "twitter:card": "photo"
+  "twitter:site": "@codeorg"
+  "twitter:url": "https://code.org/educate/professional-learning-2018"
+  "twitter:title": "Awesome CS workshops for teachers"
+  "twitter:description": "Code.org's Professional Learning Program is for any teacher -- whether you're new or experienced with teaching computer science (CS)."
+  "twitter:image:src" : "https://code.org/images/social-media/professional-learning-2018.png"
 ---
 <link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
 
