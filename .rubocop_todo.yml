@@ -124,11 +124,6 @@ Lint/UnusedMethodArgument:
 Lint/UriEscapeUnescape:
   Enabled: false
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Lint/UriRegexp:
-  Enabled: false
-
 # Offense count: 7
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: lowercase, uppercase
