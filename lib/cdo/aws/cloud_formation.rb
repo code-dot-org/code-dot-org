@@ -16,6 +16,7 @@ module AWS
   class CloudFormation
     # Hard-coded values for our CloudFormation template.
     TEMPLATE = ENV['TEMPLATE'] || 'cloud_formation_adhoc_standalone.yml.erb'
+    TEMPLATE_POLICY = TEMPLATE.split('.').tap {|s| s.first << '-policy'}.join('.')
     TEMP_BUCKET = ENV['TEMP_S3_BUCKET'] || 'cf-templates-p9nfb0gyyrpf-us-east-1'
 
     DOMAIN = ENV['DOMAIN'] || 'cdn-code.org'
@@ -185,6 +186,11 @@ module AWS
         CDO.log.info "#{action} stack: #{stack_name}..."
         start_time = Time.now
         options = stack_options(template)
+        if File.file?(aws_dir('cloudformation', TEMPLATE_POLICY))
+          stack_policy = JSON.pretty_generate(YAML.load(render_template(template: TEMPLATE_POLICY)))
+          options[:stack_policy_body] = stack_policy
+          options[:stack_policy_during_update_body] = stack_policy if action == :update
+        end
         if action == :create
           options[:on_failure] = 'DO_NOTHING'
           if daemon
@@ -335,8 +341,8 @@ module AWS
         CDO.log.info "Don't forget to clean up AWS resources by running `rake adhoc:stop` after you're done testing your instance!" if action == :create
       end
 
-      def render_template(dry_run: false)
-        filename = aws_dir('cloudformation', TEMPLATE)
+      def render_template(template: TEMPLATE, dry_run: false)
+        filename = aws_dir('cloudformation', template)
         template_string = File.read(filename)
         azs = AVAILABILITY_ZONES.map {|zone| zone[-1].upcase}
         @@local_variables = OpenStruct.new(
