@@ -64,6 +64,7 @@ describe("setSelectionRange", () => {
   });
 
   it('sets the selection direction on the found element', () => {
+    testInput.selectionDirection = 'forward';
     expect(testInput.selectionDirection).to.equal('forward');
     setSelectionRange({
       elementId: testInputId,
