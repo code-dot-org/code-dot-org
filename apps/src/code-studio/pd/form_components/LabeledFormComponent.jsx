@@ -125,6 +125,14 @@ export default class LabeledFormComponent extends FormComponent {
     });
   }
 
+  numberInputFor(name, props = {}) {
+    return this.buildFieldGroup({
+      ...this.defaultOptions(name),
+      type: "number",
+      ...props
+    });
+  }
+
   largeInputFor(name, props = {}) {
     return this.inputFor(name, {
       componentClass: "textarea",
