@@ -309,21 +309,6 @@ module Pd::Application
 
     test 'autoscore for able_to_attend_multiple' do
       application_hash = build :pd_teacher1819_application_hash, :with_multiple_workshops, program: Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.first
-      application_hash.merge!(
-        {
-          committed: Pd::Application::Teacher1819Application.options[:committed].last,
-          principal_approval: YES,
-          schedule_confirmed: NO,
-          diversity_recruitment: NO,
-          free_lunch_percent: '49.9%',
-          underrepresented_minority_percent: '49.9%',
-          wont_replace_existing_course: YES,
-          csd_which_grades: ['12'],
-          csd_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].last,
-          previous_yearlong_cdo_pd: ['Exploring Computer Science'],
-          taught_in_past: ['Exploring Computer Science']
-        }.stringify_keys
-      )
       application = create :pd_teacher1819_application, course: 'csd', form_data: application_hash.to_json, regional_partner: nil
 
       application.auto_score!
@@ -332,23 +317,10 @@ module Pd::Application
     end
 
     test 'autoscore for ambiguous responses to able_to_attend_multiple' do
-      application_hash = build :pd_teacher1819_application_hash, :with_multiple_workshops, program: Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.first
-      application_hash.merge!(
-        {
-          committed: Pd::Application::Teacher1819Application.options[:committed].last,
-          able_to_attend_multiple: ["December 11-15, 2017 in Indiana, USA", Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]],
-          principal_approval: YES,
-          schedule_confirmed: NO,
-          diversity_recruitment: NO,
-          free_lunch_percent: '49.9%',
-          underrepresented_minority_percent: '49.9%',
-          wont_replace_existing_course: YES,
-          csd_which_grades: ['12'],
-          csd_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].last,
-          previous_yearlong_cdo_pd: ['Exploring Computer Science'],
-          taught_in_past: ['Exploring Computer Science']
-        }.stringify_keys
-      )
+      application_hash = build :pd_teacher1819_application_hash, :with_multiple_workshops, {
+        program: Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.first,
+        able_to_attend_multiple: ["December 11-15, 2017 in Indiana, USA", Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]]
+      }
 
       application = create :pd_teacher1819_application, course: 'csd', form_data: application_hash.to_json, regional_partner: nil
       application.auto_score!
@@ -357,23 +329,10 @@ module Pd::Application
     end
 
     test 'autoscore for not able_to_attend_multiple' do
-      application_hash = build :pd_teacher1819_application_hash, :with_multiple_workshops, program: Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.first
-      application_hash.merge!(
-        {
-          committed: Pd::Application::Teacher1819Application.options[:committed].last,
-          able_to_attend_multiple: [Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]],
-          principal_approval: YES,
-          schedule_confirmed: NO,
-          diversity_recruitment: NO,
-          free_lunch_percent: '49.9%',
-          underrepresented_minority_percent: '49.9%',
-          wont_replace_existing_course: YES,
-          csd_which_grades: ['12'],
-          csd_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].last,
-          previous_yearlong_cdo_pd: ['Exploring Computer Science'],
-          taught_in_past: ['Exploring Computer Science']
-        }.stringify_keys
-      )
+      application_hash = build :pd_teacher1819_application_hash, :with_multiple_workshops, {
+        program: Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.first,
+        able_to_attend_multiple: [Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]]
+      }
 
       application = create :pd_teacher1819_application, course: 'csd', form_data: application_hash.to_json, regional_partner: nil
       application.auto_score!
