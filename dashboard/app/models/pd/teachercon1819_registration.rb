@@ -55,6 +55,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       ],
       needHotel: YES_OR_NO,
       needAda: [YES, NO, TEXT_FIELDS[:other_please_explain]],
+      ableToAttend: YES_OR_NO,
       teacherAcceptSeat: [
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept],
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_date],
@@ -129,6 +130,11 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       return
     end
 
+    if hash.try(:[], :able_to_attend) == NO
+      # then we don't care about the rest of the fields
+      return
+    end
+
     super
   end
 
@@ -155,6 +161,10 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
           :how_many_terms,
         ]
       end
+    else
+      requireds.concat [
+        :able_to_attend
+      ]
     end
 
     # some fields are required based on the values of other fields

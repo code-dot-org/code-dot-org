@@ -108,6 +108,7 @@ export default class Teachercon1819Registration extends FormController {
    */
   shouldShowSubmit() {
     return super.shouldShowSubmit() ||
-        this.state.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions.decline;
+        this.state.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions.decline ||
+        this.state.data.ableToAttend === "No";
   }
 }
