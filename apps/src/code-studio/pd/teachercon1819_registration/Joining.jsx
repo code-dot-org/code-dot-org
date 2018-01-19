@@ -97,6 +97,19 @@ export default class Joining extends Teachercon1819FormComponent {
         </FormGroup>
       }
 
+      {(this.isFacilitatorApplication() || this.isPartnerApplication()) &&
+        <FormGroup>
+          {this.radioButtonsFor("ableToAttend")}
+          {this.props.data.ableToAttend === "No" &&
+            <p>
+              If you're unable to attend your assigned TeacherCon, please
+              contact <a href="mailto:facilitators@code.org">facilitators@code.org</a> as
+              soon as possible so we can assist you.
+            </p>
+          }
+        </FormGroup>
+      }
+
       </FormGroup>
     );
   }
