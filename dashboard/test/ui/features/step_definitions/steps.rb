@@ -1357,7 +1357,9 @@ end
 Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
   href = @browser.execute_script("return $(\"#{selector}\").attr('href');")
   expect(@section_id).to be > 0
-  expect(href).to include("?section_id=#{@section_id}")
+
+  # make sure the query params do not come after the # symbol
+  expect(href.split('#')[0]).to include("?section_id=#{@section_id}")
 end
 
 # @return [Number] the section id for the corresponding row in the sections table
