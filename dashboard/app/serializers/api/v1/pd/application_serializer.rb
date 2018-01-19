@@ -1,7 +1,9 @@
 class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
+  include Rails.application.routes.url_helpers
+
   attributes :regional_partner_name, :regional_partner_id, :locked, :notes, :form_data, :status,
     :school_name, :district_name, :email, :application_type, :response_scores, :course_name,
-    :meets_criteria, :bonus_points, :pd_workshop_id
+    :meets_criteria, :bonus_points, :pd_workshop_id, :fit_workshop_name, :fit_workshop_url
 
   def email
     object.user.email
@@ -30,5 +32,14 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
   def pd_workshop_id
     object.try(:pd_workshop_id)
+  end
+
+  def fit_workshop_name
+    object.try(:fit_workshop).try(:date_and_location_name)
+  end
+
+  def fit_workshop_url
+    workshop = object.try(:fit_workshop)
+    url_for(controller: 'pd/workshop_dashboard', path: workshop.id) if workshop
   end
 end
