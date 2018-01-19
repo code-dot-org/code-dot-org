@@ -33,19 +33,19 @@ class ManageStudentActionsCell extends Component {
   };
 
   onConfirmDelete = () => {
-      const {removeStudent, id, sectionId} = this.props;
-      this.setState({requestInProgress: true});
-      $.ajax({
-          url: `/v2/sections/${sectionId}/students/${id}`,
-          method: 'DELETE',
-      }).done(() => {
-          removeStudent(id);
-      }).fail((jqXhr, status) => {
-          // We may want to handle this more cleanly in the future, but for now this
-          // matches the experience we got in angular
-          alert(i18n.unexpectedError());
-          console.error(status);
-      });
+    const {removeStudent, id, sectionId} = this.props;
+    this.setState({requestInProgress: true});
+    $.ajax({
+        url: `/v2/sections/${sectionId}/students/${id}`,
+        method: 'DELETE',
+    }).done(() => {
+        removeStudent(id);
+    }).fail((jqXhr, status) => {
+        // We may want to handle this more cleanly in the future, but for now this
+        // matches the experience we got in angular
+        alert(i18n.unexpectedError());
+        console.error(status);
+    });
   };
 
   onRequestDelete = () => {
@@ -86,8 +86,8 @@ class ManageStudentActionsCell extends Component {
         }
         {this.props.isEditing &&
           <div>
-            <Button onClick={() => {}} color={Button.ButtonColor.white} text="Save" />
-            <Button onClick={this.onCancel} color={Button.ButtonColor.blue} text="Cancel" />
+            <Button onClick={() => {}} color={Button.ButtonColor.white} text={i18n.save()} />
+            <Button onClick={this.onCancel} color={Button.ButtonColor.blue} text={i18n.cancel()} />
           </div>
         }
         <BaseDialog
