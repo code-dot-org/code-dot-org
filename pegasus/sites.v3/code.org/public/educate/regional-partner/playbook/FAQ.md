@@ -18,8 +18,7 @@ Still have questions? See below for answers to commonly asked questions or email
 
 **Questions about in-person workshops:**<br/>
 
-- [Does my organization need to provide facilitators for CS Principles?](#facilitators)
-- [Can I recruit teachers from local districts to become a part of the 2016-17 CS Principles professional learning program?](#recruit)
+- [Does my organization need to provide facilitators for CS Principles and CS Discoveries?](#facilitators)
 - [What is counselor/administrator professional development?](#ca)
 - [What are the technology requirements for Code.org tutorials?](#it)
 
@@ -36,7 +35,8 @@ ________________
 
 ### **Do you have an example job description for the Regional Partner Program Manager?**
 
-See <a href="https://docs.google.com/document/d/1T31f3oA0Adns7ts4T_FdUHT8wCZMKHohNzBRcCl8Bck/edit" target=_blank>this document</a> for an example Regional Partner program manager job description. This position will require <a href="https://docs.google.com/spreadsheets/d/1GuyAGGwFrtGB6l2hHLFc-N6thuMs6BcQzTp_XjaU454/edit#gid=1420208407" target=_blank>0.15 of a FTE</a> in the first year. Please note this time requirement will increase if your organization chooses to run more than one program in the first year.
+See <a href="https://docs.google.com/document/d/1vQ2wN6TnE7gllni-hW1zNzQ_WiKPDUGb2ycSi4_-rVg/edit" target=_blank>this document</a> for an example Regional Partner program manager job description. This position will require **0.5** of a FTE in the first year.
+
 
 [**Back to the top**](#top)
 <br/>
@@ -55,25 +55,15 @@ ________________
 <a id="facilitators"></a>
 <br/>
 <br/>
-### **Does my organization need to provide facilitators for CS Principles?**
+### **Does my organization need to provide facilitators for CS Principles and CS Discoveries?**
 
-Your organization does not need to have its own facilitators. Code.org Regional Partners can  opt to contract with local Code.org approved facilitators instead.
+Your organization does not need to have its own facilitators. Code.org Regional Partners contracts with facilitators and alumni from Code.org's [facilitator development program](https://code.org/facilitator). 
 <br/>
 
 
 [**Back to the top**](#top)
 <br/>
-______________________________
-<a id="recruit"></a>
-<br/>
-<br/>
 
-### **Can I recruit teachers from local districts to become a part of the 2016-17 CS Principles professional learning program?**
-
-Our general rule: a teacher must be from a district that Code.org has a district partnership with to apply for the CS Principles professional learning program. However, you are welcome to encourage local teachers who have a spot on their master schedule to teach AP Computer Science Principles in the Fall to join our program's wait list. 
-
-[**Back to the top**](#top)
-<br/>
 ______________________________
 <a id="ca"></a>
 <br/>

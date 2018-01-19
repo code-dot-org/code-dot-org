@@ -21,8 +21,6 @@ Code.org pays Regional Partners for program expenses related to hosting workshop
 
 Code.org’s payment cycles are the 1st-15th and 16th-last day of each month. In the two weeks following, Code.org prepares a report and sends it with payment for all workshops closed in that prior period. For example: if a workshop was held July 11-12th, the cycle would close July 15th, and Code.org would mail a check to the Regional Partner by the end of July.
 
-See [this document](https://docs.google.com/document/d/1FkHeRX8ZJ_GoPcRYIk4WraphYV4bMsWYv4fFq55FU8Q/edit) for an image of the payment report and frequently asked questions.
-
 ________________
 <a id="facilitators"></a>
 <br/>
