@@ -6,6 +6,7 @@ import manageStudents, {
   convertStudentDataToArray,
   startEditingStudent,
   cancelEditingStudent,
+  removeStudent,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const studentEmailData = {
@@ -106,6 +107,18 @@ describe('manageStudentsRedux', () => {
       const cancelEditingStudentAction = cancelEditingStudent(1);
       const finalState = manageStudents(stateAfterEditing, cancelEditingStudentAction);
       assert.deepEqual(finalState.studentData[1].isEditing, false);
+    });
+  });
+
+  describe('removeStudent', () => {
+    it('deletes a student with a given id', () => {
+      const setStudentsAction = setStudents(studentEmailData);
+      const nextState = manageStudents(initialState, setStudentsAction);
+      const removeStudentAction = removeStudent(1);
+      const stateAfterDeleting = manageStudents(nextState, removeStudentAction);
+      assert.equal(stateAfterDeleting.studentData[1], undefined);
+      assert.deepEqual(stateAfterDeleting.studentData[2], studentEmailData[2]);
+      assert.deepEqual(stateAfterDeleting.studentData[3], studentEmailData[3]);
     });
   });
 });
