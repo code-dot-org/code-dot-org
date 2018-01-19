@@ -203,10 +203,6 @@ export class UnconnectedFinishDialog extends Component {
       description = msg.tooManyBlocksDescription();
     }
 
-    if (this.state.blocksCounted) {
-    } else {
-    }
-
     return (
       <Motion
         defaultStyle={{scale: 0}}
