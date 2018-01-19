@@ -71,7 +71,7 @@ class ProgressPill extends React.Component {
     }
 
     return (
-      <a href={url} style={{textDecoration: 'none'}}>
+      <a href={url} style={{textDecoration: 'none'}} className="uitest-ProgressPill">
         <div
           {...tooltipProps}
           style={style}

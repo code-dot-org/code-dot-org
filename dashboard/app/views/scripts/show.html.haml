@@ -39,7 +39,7 @@
         %p
           - path = script_next_path(@script)
           - path += "?section_id=#{params[:section_id]}" if params[:section_id]
-          = link_to image_tag(@script.banner_image), path
+          = link_to image_tag(@script.banner_image), path, class: 'uitest-script-next-banner'
 
       - if @script.beta?
         %p.lightgreytext
