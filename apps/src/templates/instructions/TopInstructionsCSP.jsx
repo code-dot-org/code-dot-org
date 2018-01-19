@@ -10,6 +10,7 @@ import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 import InlineAudio from './InlineAudio';
 import ContainedLevel from '../ContainedLevel';
 import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
+import experiments from '@cdo/apps/util/experiments';
 import InstructionsTab from './InstructionsTab';
 import HelpTabContents from './HelpTabContents';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -120,7 +121,6 @@ var TopInstructions = React.createClass({
     levelPosition: PropTypes.number,
     scriptId: PropTypes.number,
     serverLevelId: PropTypes.number,
-    resourcesTabVisible: PropTypes.bool
   },
 
   state:{
@@ -260,7 +260,7 @@ var TopInstructions = React.createClass({
                 headerHasFocus={false}
                 onClick={this.handleDocumentationClick}
               />}
-            {this.props.resourcesTabVisible &&
+            {experiments.isEnabled('resources_tab') &&
               <div style={styles.helpTabs}>
                 <InstructionsTab
                   className="uitest-instructionsTab"
@@ -283,7 +283,7 @@ var TopInstructions = React.createClass({
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}
               />}
-            {!this.props.resourcesTabVisible &&
+            {!experiments.isEnabled('resources_tab') &&
               <div style={styles.title}>
                 {msg.puzzleTitle({
                   stage_total: this.props.stageTotal,
@@ -311,7 +311,6 @@ var TopInstructions = React.createClass({
                   <HelpTabContents
                     scriptId={this.props.scriptId}
                     serverLevelId={this.props.serverLevelId}
-                    resourcesTabVisible={this.props.resourcesTabVisible}
                     logText={logText}
                     videoData={videoData}
                   />
@@ -352,7 +351,6 @@ module.exports = connect(function propsFromStore(state) {
     levelPosition: state.instructions.levelPosition,
     scriptId: state.instructions.scriptId,
     serverLevelId: state.instructions.serverLevelId,
-    resourcesTabVisible: state.instructions.resourcesTabVisible,
   };
 }, function propsFromDispatch(dispatch) {
   return {
