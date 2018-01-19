@@ -22,3 +22,22 @@ Feature: Using the teacher homepage sections feature
     Then the section table should have 1 row
     And the section table row at index 0 has script path "/s/csp3-a"
 
+  Scenario: Navigate to course and unit pages
+    When I see the section set up box
+    And I create a new section with course "Computer Science Principles" and unit "Unit 1: The Internet"
+    And I create a new section
+    Then the section table should have 2 rows
+
+    # save the older section id, from the last row of the table
+    And I save the section id from row 1 of the section table
+
+    When I click selector ".uitest-owned-sections a:contains('Computer Science Principles')" to load a new page
+    Then the url contains the section id
+
+    When I click selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" to load a new page
+    Then the url contains the section id
+
+    And the href of selector ".uitest-script-next-banner" contains the section id
+    And the href of selector ".uitest-ProgressPill:first" contains the section id
+    And the href of selector ".uitest-ProgressBubble:first" contains the section id
+    And the href of selector "a:contains(View all units)" contains the section id

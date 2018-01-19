@@ -173,7 +173,7 @@ class ProgressBubble extends React.Component {
     // If we have an href, wrap in an achor tag
     if (href) {
       bubble = (
-        <a href={href} style={{textDecoration: 'none'}}>
+        <a href={href} style={{textDecoration: 'none'}} className="uitest-ProgressBubble">
           {bubble}
         </a>
       );
