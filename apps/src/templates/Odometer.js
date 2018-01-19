@@ -16,9 +16,6 @@ const styles = {
 };
 
 export default class Odometer extends Component {
-  constructor() {
-    super();
-  }
   static propTypes = {
     value: PropTypes.number.isRequired,
     onRest: PropTypes.func,
