@@ -48,8 +48,6 @@ ControlTablesSettings:
   historyTimeslotInMinutes: 5
 Logging:
   EnableLogging: true
-  CloudWatchLogStream: {Ref: TableauSyncLogStream}
-  CloudWatchLogGroup: {Ref: TableauSyncLogGroup}
   LogComponents:
   - {Id: SOURCE_UNLOAD,  Severity: LOGGER_SEVERITY_WARNING}
   - {Id: SOURCE_CAPTURE, Severity: LOGGER_SEVERITY_WARNING}
