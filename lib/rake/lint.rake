@@ -21,6 +21,12 @@ namespace :lint do
   desc 'Lints JavaScript code.'
   task :javascript do
     Dir.chdir(apps_dir) do
+      # The linter depends on eslint and its plugins, which are installed
+      # as apps dependencies by yarn.  Ensure they are up-to-date before
+      # linting.
+      ChatClient.log 'Installing <b>apps</b> dependencies...'
+      RakeUtils.npm_install
+
       ChatClient.log 'Linting <b>apps</b> JavaScript...'
       RakeUtils.system 'npm run lint'
     end
