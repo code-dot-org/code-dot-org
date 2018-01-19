@@ -773,6 +773,8 @@
   "remix": "Remix",
   "removeFromClassGallery": "Remove from Class Gallery",
   "removeFromPublicGallery": "Remove from Public Gallery",
+  "removeStudent": "Remove student",
+  "removeStudentConfirm": "Are you sure you want to remove this student?",
   "rename": "Rename",
   "repeat": "repeat",
   "replayButton": "Replay",
