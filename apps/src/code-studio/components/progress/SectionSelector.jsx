@@ -30,7 +30,7 @@ class SectionSelector extends React.Component {
     ).isRequired,
     selectedSectionId: PropTypes.string,
     selectSection: PropTypes.func.isRequired,
-  }
+  };
 
   handleSelectChange = (event) => {
     const newSectionId = event.target.value;
