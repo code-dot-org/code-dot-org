@@ -70,14 +70,13 @@ module Pd::Application
       application_hash = build :pd_facilitator1819_application_hash
       application_hash[:institution_type] = ['School district', 'Other:']
       application_hash[:institution_type_other] = 'School of Witchcraft and Wizardry'
-      application = build :pd_facilitator1819_application, form_data_hash: application_hash
 
       assert_equal(
         [
           'School district',
           'Other: School of Witchcraft and Wizardry'
         ],
-        application.answer_with_additional_text(application_hash, :institution_type)
+        Facilitator1819Application.answer_with_additional_text(application_hash, :institution_type)
       )
     end
 
@@ -86,13 +85,12 @@ module Pd::Application
       application_hash = build :pd_facilitator1819_application_hash
       application_hash[:how_heard] = [OPTION]
       application_hash[:how_heard_regional_partner] = 'Hogwarts Coding Wizards'
-      application = build :pd_facilitator1819_application, form_data_hash: application_hash
 
       assert_equal(
         [
           "#{OPTION} Hogwarts Coding Wizards"
         ],
-        application.answer_with_additional_text(application_hash, :how_heard, OPTION, :how_heard_regional_partner)
+        Facilitator1819Application.answer_with_additional_text(application_hash, :how_heard, OPTION, :how_heard_regional_partner)
       )
     end
 
