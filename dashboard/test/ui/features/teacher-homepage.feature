@@ -31,6 +31,9 @@ Feature: Using the teacher homepage sections feature
     # save the older section id, from the last row of the table
     And I save the section id from row 1 of the section table
 
+    And the href of selector ".uitest-owned-sections a:contains('Computer Science Principles')" contains the section id
+    And the href of selector ".uitest-owned-sections a:contains('Unit 1')" contains the section id
+
     When I click selector ".uitest-owned-sections a:contains('Computer Science Principles')" to load a new page
     Then the url contains the section id
 
@@ -41,3 +44,10 @@ Feature: Using the teacher homepage sections feature
     And the href of selector ".uitest-ProgressPill:first" contains the section id
     And the href of selector ".uitest-ProgressBubble:first" contains the section id
     And the href of selector "a:contains(View all units)" contains the section id
+
+    When I click selector ".uitest-ProgressBubble:first" to load a new page
+    Then the url contains the section id
+
+    When I click selector ".header_popup_link"
+    And I wait until element "a:contains(View Unit Overview)" is visible
+    And the href of selector "a:contains(View Unit Overview)" contains the section id
