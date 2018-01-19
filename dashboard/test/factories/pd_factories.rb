@@ -614,7 +614,7 @@ FactoryGirl.define do
   end
 
   factory :pd_facilitator1819_application, class: 'Pd::Application::Facilitator1819Application' do
-    association :user, factory: :teacher, strategy: :create
+    association :user, factory: [:teacher, :with_school_info], strategy: :create
     course 'csp'
     transient do
       form_data_hash {build :pd_facilitator1819_application_hash, program: Pd::Application::Facilitator1819Application::PROGRAMS[course.to_sym]}
@@ -785,20 +785,21 @@ FactoryGirl.define do
 
   factory :pd_teachercon1819_registration_hash, class: 'Hash' do
     transient do
-      accepted true
+      full_form_data true
     end
 
+    # default to accepted
     initialize_with do
       {
         email: "ssnape@hogwarts.edu",
         preferredFirstName: "Sevvy",
         lastName: "Snape",
         phone: "5558675309",
+        teacherAcceptSeat: "Yes, I accept my seat in the Professional Learning Program"
       }.tap do |hash|
-        if accepted
+        if full_form_data
           hash.merge!(
             {
-              teacherAcceptSeat: "Yes, I accept my seat in the Professional Learning Program",
               addressCity: "Albuquerque",
               addressState: "Alabama",
               addressStreet: "123 Street Ave",
@@ -815,24 +816,40 @@ FactoryGirl.define do
               liveFarAway: "Yes",
               needHotel: "No",
               photoRelease: "Yes",
-            }
-          )
-        else
-          hash.merge!(
-            {
-              teacherAcceptSeat: "No, I decline my seat in the Professional Learning Program.",
+              howOfferCsp: "As an AP course",
+              haveTaughtAp: "Yes",
+              haveTaughtWrittenProjectCourse: "Yes",
+              gradingSystem: 'Numerical and/or letter grades (e.g., 0 - 100% or F- A)',
             }
           )
         end
       end.stringify_keys
     end
+
+    trait :accepted do
+      # accepted is the default, trait included here just for completeness
+    end
+
+    trait :withdrawn do
+      full_form_data false
+      after :build do |hash|
+        hash['teacherAcceptSeat'] = "No, I decline my seat in the Professional Learning Program."
+      end
+    end
+
+    trait :waitlisted do
+      after :build do |hash|
+        hash['teacherAcceptSeat'] = "Yes, I want to participate, but I'm unable to attend my assigned summer workshop date. Please place me on your waitlist. I understand that I am not guaranteed a space in a different summer workshop."
+      end
+    end
   end
 
   factory :pd_teachercon1819_registration, class: 'Pd::Teachercon1819Registration' do
-    association :pd_application, factory: :pd_teacher1819_application
     transient do
-      accepted false
+      hash_trait :accepted
     end
-    form_data {build(:pd_teachercon1819_registration_hash, accepted: accepted).to_json}
+
+    association :pd_application, factory: :pd_teacher1819_application
+    form_data {build(:pd_teachercon1819_registration_hash, hash_trait).to_json}
   end
 end

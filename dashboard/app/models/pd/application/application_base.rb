@@ -43,8 +43,6 @@ module Pd::Application
 
     OTHER = 'Other'.freeze
     OTHER_WITH_TEXT = 'Other:'.freeze
-    OTHER_PLEASE_EXPLAIN = 'Other (Please Explain):'.freeze
-    OTHER_PLEASE_LIST = 'Other (Please List):'
     YES = 'Yes'.freeze
     NO = 'No'.freeze
     NONE = 'None'.freeze
@@ -199,17 +197,18 @@ module Pd::Application
     # @param [String] option (optional, defaults to "Other:") value for the option that is associated with additional text
     # @param [Symbol] additional_text_field_name (optional, defaults to field_name + "_other")
     #                 Field name for the additional text field associated with this option.
-    # @returns [Array] - adjusted array of user responses with additional text appended in place
-    def answer_with_additional_text(hash, field_name, option = OTHER_WITH_TEXT, additional_text_field_name = nil)
+    # @returns [String, Array] - adjusted string or array of user response(s) with additional text appended in place
+    def self.answer_with_additional_text(hash, field_name, option = OTHER_WITH_TEXT, additional_text_field_name = nil)
       additional_text_field_name ||= "#{field_name}_other".to_sym
-      hash[field_name].tap do |answer|
-        if answer
-          index = answer.index(option)
-          if index
-            answer[index] = [option, hash[additional_text_field_name.to_sym]].flatten.join(' ')
-          end
-        end
+      answer = hash[field_name]
+      if answer.is_a? String
+        answer = [option, hash[additional_text_field_name]].flatten.join(' ') if answer == option
+      elsif answer.is_a? Array
+        index = answer.index(option)
+        answer[index] = [option, hash[additional_text_field_name]].flatten.join(' ') if index
       end
+
+      answer
     end
 
     def self.filtered_labels(course)
@@ -219,8 +218,13 @@ module Pd::Application
     # Include additional text for all the multi-select fields that have the option
     def full_answers
       sanitize_form_data_hash.tap do |hash|
-        additional_text_fields.each do |additional_text_field|
-          answer_with_additional_text hash, *additional_text_field
+        additional_text_fields.each do |field_name, option, additional_text_field_name|
+          next unless hash.key? field_name
+
+          option ||= OTHER_WITH_TEXT
+          additional_text_field_name ||= "#{field_name}_other".to_sym
+          hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
+          hash.delete additional_text_field_name
         end
       end.slice(*self.class.filtered_labels(course).keys)
     end
@@ -274,12 +278,6 @@ module Pd::Application
 
     def course_name
       COURSE_NAME_MAP[course.to_sym]
-    end
-
-    protected
-
-    def include_additional_text(hash, field_name, *options)
-      hash[field_name] = answer_with_additional_text hash, field_name, *options
     end
   end
 end

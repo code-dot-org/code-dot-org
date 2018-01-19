@@ -308,7 +308,9 @@ StudioApp.prototype.init = function (config) {
               this.showInstructionsDialog_(config.level, autoClose);
             }}
         />
-        <FinishDialog onContinue={() => this.onContinue()}/>
+        <FinishDialog
+          onContinue={() => this.onContinue()}
+        />
       </div>
     </Provider>,
     document.body.appendChild(document.createElement('div'))

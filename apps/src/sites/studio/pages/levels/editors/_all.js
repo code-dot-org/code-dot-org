@@ -45,6 +45,11 @@ function initPage() {
   $('.select_all').click(make_selection_handler(true));
   $('.select_none').click(make_selection_handler(false));
 
+  // This click handler enables adding multiple text inputs for reference links.
+  $("#plusAnswerReference").on("click", () => {
+    $("#plusAnswerReference").prev().clone().insertBefore("#plusAnswerReference");
+  });
+
   var videoInfos = config.video_infos;
 
   function updateVideoPreview() {

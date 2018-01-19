@@ -8,7 +8,7 @@ experimental:
 version: 2
 jobs:
   build:
-    # parallelism: 4
+    parallelism: 2
     docker:
       - image: wjordan/code-dot-org:trusty
         environment:
@@ -141,10 +141,6 @@ jobs:
             bundle exec rake circle:check_for_unexpected_apps_changes
 
       - run:
-          name: lint js
-          command: bundle exec rake lint:javascript
-
-      - run:
           name: unit tests
           command: bundle exec rake circle:run_tests --trace
           no_output_timeout: 40m
@@ -198,6 +194,10 @@ jobs:
       - store_artifacts:
           path: /home/circleci/project/apps/coverage
           destination: coverage
+
+      - store_artifacts:
+          path: /home/circleci/project/apps/log
+          destination: apps-test-logs
 
       - store_artifacts:
           path: /home/circleci/project/apps/yarn-error.log

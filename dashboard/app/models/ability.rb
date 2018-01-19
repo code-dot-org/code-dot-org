@@ -215,7 +215,7 @@ class Ability
       end
     end
 
-    if user.persisted? && user.permission?(UserPermission::RESET_ABUSE)
+    if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
       # let them change the hidden state
       can :manage, LevelSource
     end

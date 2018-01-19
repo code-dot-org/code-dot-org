@@ -245,6 +245,10 @@ class User < ActiveRecord::Base
     permission? UserPermission::WORKSHOP_ADMIN
   end
 
+  def project_validator?
+    permission? UserPermission::PROJECT_VALIDATOR
+  end
+
   # assign a course to a facilitator that is qualified to teach it
   def course_as_facilitator=(course)
     courses_as_facilitator << courses_as_facilitator.find_or_create_by(facilitator_id: id, course: course)
