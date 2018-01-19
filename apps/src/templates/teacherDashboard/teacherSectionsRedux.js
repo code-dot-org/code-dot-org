@@ -594,12 +594,8 @@ export default function teacherSections(state=initialState, action) {
 
     // Selecting Course 1-4 or A-F should auto-enable Stage Extras.
     if (action.props.scriptId) {
-      const script = state.validAssignments[`null_${action.props.scriptId}`];
-      if (script && /course[1-4a-f]/.test(script.script_name)) {
-        stageExtraSettings.stageExtras = true;
-      } else {
-        stageExtraSettings.stageExtras = false;
-      }
+      const script = state.validAssignments[assignmentId(null, action.props.scriptId)];
+      stageExtraSettings.stageExtras = !!(script && /course[1-4a-f]/.test(script.script_name));
     }
 
     return {
