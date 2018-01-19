@@ -73,14 +73,21 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
       <div>
         {this.renderSchoolSection()}
         {this.inputFor('totalStudentEnrollment')}
-        {this.inputFor('freeLunchPercent')}
+        {this.numberInputFor('freeLunchPercent', {
+          min: 0,
+          max: 100
+        })}
         Percentage of student enrollment by race
         {
-          RACE_LIST.map(
-            (race) => {
-              return this.inputFor(race, {inlineControl: true, labelWidth: {md: 3}, controlWidth: {md: 1}});
-            }
-          )
+          RACE_LIST.map(race => {
+            return this.numberInputFor(race, {
+              inlineControl: true,
+              labelWidth: { md: 3 },
+              controlWidth: { md: 2 },
+              min: 0,
+              max: 100,
+            });
+          })
         }
         {
           this.radioButtonsWithAdditionalTextFieldsFor('committedToMasterSchedule', {
