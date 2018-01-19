@@ -20,9 +20,8 @@ def main
   cloudformation_resource = Aws::CloudFormation::Resource.new(client: cloudformation_client)
   cloudwatch_client = Aws::CloudWatch::Client.new
 
-  # get list of CloudFormation stacks that start with the name "adhoc-"
+  # get CloudFormation stacks that start with the name "adhoc-"
   cloudformation_resource.stacks.select {|stack| stack.name.starts_with?('adhoc-')}.each do |stack|
-    # stack = Aws::CloudFormation::Stack.new(name: stack_struct.stack_name)
     dashboard_url = stack.outputs.select {|output| output.output_key == 'DashboardURL'}.first.try(:output_value)
 
     # get Unicorn active HTTP request count CloudWatch metric for the current adhoc stack
@@ -48,14 +47,21 @@ def main
     )
 
     # each datapoint in the metric statistics array contains an attribute called 'sum'
-    total_http_requests = unicorn_metric.try(:datapoints).sum(&:sum) unless unicorn_metric.nil?
+    total_http_requests = unicorn_metric.datapoints.sum(&:sum) unless unicorn_metric.nil?
+    instance = Aws::EC2::Instance.new(id: stack.resource('WebServer').physical_resource_id)
 
     puts "Name - #{stack.name}, Status - #{stack.stack_status}, DashboardURL - #{dashboard_url}, HTTP Requests - #{total_http_requests}"
 
-    if total_http_requests.between?(1, 1000)
-      puts "Terminating EC2 instance for Stack - #{stack.name} due to inactivity"
-      puts stack.resource('WebServer').physical_resource_id
-    end
+    # stop running (code == 16) instances with activity below threshold
+    next unless total_http_requests.between?(1, 1000) && instance.state.code == 16
+
+    puts "Stopping EC2 instance - #{instance.id} - for Stack - #{stack.name} - due to inactivity"
+    instance.stop(
+      {
+        dry_run: true,
+        force: false,
+      }
+    )
   end
 end
 
