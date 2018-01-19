@@ -309,6 +309,7 @@ const StageLockDialog = React.createClass({
   }
 });
 
+export const UnconnectedStageLockDialog = StageLockDialog;
 export default connect(state => ({
   initialLockStatus: state.stageLock.lockStatus,
   isOpen: !!state.stageLock.lockDialogStageId,
