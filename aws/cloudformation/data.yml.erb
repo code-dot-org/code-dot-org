@@ -54,7 +54,7 @@ Resources:
       EngineVersion: 2.4.0
       MultiAZ: true
       PubliclyAccessible: false
-      ReplicationInstanceClass: dms.c4.xlarge
+      ReplicationInstanceClass: dms.c4.4xlarge
       ReplicationInstanceIdentifier: !Ref AWS::StackName
       ReplicationSubnetGroupIdentifier: !ImportValue VPC-DMSSubnetGroup
       VpcSecurityGroupIds: [!ImportValue VPC-DMSSecurityGroup]
@@ -79,14 +79,7 @@ Resources:
       Username: !Ref RedshiftUsername
       Password: !Ref RedshiftPassword
       DatabaseName: !Ref RedshiftDatabase
-  TableauSyncLogGroup:
-    Type: AWS::Logs::LogGroup
-    Properties:
-      RetentionInDays: 30
-  TableauSyncLogStream:
-    Type: AWS::Logs::LogStream
-    Properties:
-      LogGroupName: !Ref TableauSyncLogGroup
+      ExtraConnectionAttributes: maxFileSize=1048576;fileTransferUploadStreams=20
 <% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings| -%>
   DMS<%=task_name.underscore.camelize%>:
     Type: AWS::DMS::ReplicationTask
@@ -96,6 +89,8 @@ Resources:
       ReplicationTaskIdentifier: <%= task_name %>
       SourceEndpointArn: !Ref RDSEndpoint
       TargetEndpointArn: !Ref RedshiftEndpoint
-      ReplicationTaskSettings: <%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>
-      TableMappings: <%= table_mappings.to_json %>
+      ReplicationTaskSettings: !Sub |
+        <%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>
+      TableMappings: !Sub |
+        <%= table_mappings.to_json %>
 <% end -%>
