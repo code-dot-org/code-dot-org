@@ -305,7 +305,7 @@ class StageLockDialog extends React.Component {
   }
 }
 
-export const UnconnectedStageLockDialog = StageLockDialog;
+export const UnconnectedStageLockDialog = Radium(StageLockDialog);
 export default connect(state => ({
   initialLockStatus: state.stageLock.lockStatus,
   isOpen: !!state.stageLock.lockDialogStageId,
@@ -315,4 +315,4 @@ export default connect(state => ({
   saveDialog(sectionId, lockStatus) {
     dispatch(saveLockDialog(sectionId, lockStatus));
   }
-}))(Radium(StageLockDialog));
+}))(UnconnectedStageLockDialog);
