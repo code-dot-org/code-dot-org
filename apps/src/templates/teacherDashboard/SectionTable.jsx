@@ -11,6 +11,7 @@ import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import {pegasus} from "../../lib/util/urlHelpers";
 import SectionActionDropdown from "./SectionActionDropdown";
 import Button from '@cdo/apps/templates/Button';
+import { stringifyQueryParams } from '../../utils';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -64,7 +65,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
   return (
     <div>
       <a
-        href={`${rowData.assignmentPaths[0]}?section_id=${rowData.id}`}
+        href={`${rowData.assignmentPaths[0]}${stringifyQueryParams({section_id: rowData.id})}`}
         style={tableLayoutStyles.link}
       >
         {rowData.assignmentNames[0]}
@@ -73,7 +74,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
         <div style={styles.currentUnit}>
           <div>{i18n.currentUnit()}</div>
           <a
-            href={`${rowData.assignmentPaths[1]}?section_id=${rowData.id}`}
+            href={`${rowData.assignmentPaths[1]}${stringifyQueryParams({section_id: rowData.id})}`}
             style={tableLayoutStyles.link}
           >
             {assignmentNames[1]}

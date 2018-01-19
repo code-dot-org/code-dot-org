@@ -4,6 +4,7 @@ import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
 import { levelType } from './progressTypes';
 import { levelProgressStyle, hoverStyle } from './progressStyles';
+import { stringifyQueryParams } from '../../utils';
 
 const styles = {
   levelPill: {
@@ -56,7 +57,7 @@ class ProgressPill extends React.Component {
     const multiLevelStep = levels.length > 1;
     let url = (multiLevelStep || disabled) ? undefined : levels[0].url;
     if (url && selectedSectionId) {
-      url += `?section_id=${selectedSectionId}`;
+      url += stringifyQueryParams({section_id: selectedSectionId});
     }
 
     let style = {

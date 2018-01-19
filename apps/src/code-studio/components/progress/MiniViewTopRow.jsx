@@ -3,6 +3,7 @@ import color from "@cdo/apps/util/color";
 import i18n from "@cdo/locale";
 import ProgressDetailToggle from "@cdo/apps/templates/progress/ProgressDetailToggle";
 import Button from '@cdo/apps/templates/Button';
+import { stringifyQueryParams } from '@cdo/apps/utils';
 
 const styles = {
   main: {
@@ -44,7 +45,8 @@ export default class MiniViewTopRow extends React.Component {
 
   render() {
     const { scriptName, linesOfCodeText, selectedSectionId } = this.props;
-      const queryParams = selectedSectionId ? `?section_id=${selectedSectionId}` : '';
+      const queryParams = selectedSectionId ?
+          stringifyQueryParams({section_id: selectedSectionId}) : '';
       return (
       <div style={styles.main}>
         <Button
