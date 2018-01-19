@@ -60,21 +60,21 @@ const styles = {
   },
 };
 
-function typeFormatter(type) {
+const typeFormatter = (type) => {
   return PROJECT_TYPE_MAP[type];
-}
+};
 
 /**
  * Takes a date formatted as YYYY-MM-DD and returns it as MM/DD/YYYY.
  * @param {string} dateString
  * @returns {string}
  */
-function dateFormatter(dateString) {
+const dateFormatter = (dateString) => {
   const date = new Date(dateString);
   return date.toLocaleDateString();
-}
+};
 
-function thumbnailFormatter(thumbnailUrl) {
+const thumbnailFormatter = (thumbnailUrl) => {
   return thumbnailUrl ?
     <ImageWithStatus
       src={thumbnailUrl}
@@ -82,35 +82,46 @@ function thumbnailFormatter(thumbnailUrl) {
       wrapperStyle={styles.thumbnailWrapper}
     /> :
     '';
-}
+};
 
-const ProjectsList = React.createClass({
-  propTypes: {
+class ProjectsList extends React.Component {
+  static propTypes = {
     projectsData: PropTypes.array.isRequired,
     // The prefix for the code studio url in the current environment,
     // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
     studioUrlPrefix: PropTypes.string.isRequired,
     showProjectThumbnails: PropTypes.bool.isRequired,
-  },
+  };
 
-  getInitialState() {
-    const sortingColumn = this.props.showProjectThumbnails ?
-      COLUMNS.LAST_EDITED : COLUMNS_WITHOUT_THUMBNAILS.LAST_EDITED;
-    const sortingColumns = {
+  const sortingColumn = this.props.showProjectThumbnails ?
+    COLUMNS.LAST_EDITED : COLUMNS_WITHOUT_THUMBNAILS.LAST_EDITED;
+
+  state = {
+    sortingColumns: {
       [sortingColumn]: {
         direction: 'desc',
         position: 0
       }
-    };
-    return {sortingColumns};
-  },
+    }
+  };
+  // getInitialState() {
+  //   const sortingColumn = this.props.showProjectThumbnails ?
+  //     COLUMNS.LAST_EDITED : COLUMNS_WITHOUT_THUMBNAILS.LAST_EDITED;
+  //   const sortingColumns = {
+  //     [sortingColumn]: {
+  //       direction: 'desc',
+  //       position: 0
+  //     }
+  //   };
+  //   return {sortingColumns};
+  // },
 
-  getSortingColumns() {
+  getSortingColumns = () => {
     return this.state.sortingColumns || {};
-  },
+  };
 
   // The user requested a new sorting column. Adjust the state accordingly.
-  onSort(selectedColumn) {
+  onSort = (selectedColumn) => {
     this.setState({
       sortingColumns: sort.byColumn({
         sortingColumns: this.state.sortingColumns,
@@ -123,7 +134,7 @@ const ProjectsList = React.createClass({
         selectedColumn
       })
     });
-  },
+  };
 
   /**
    * Looks up the channel id and the project type in the row data, to generate
@@ -134,16 +145,16 @@ const ProjectsList = React.createClass({
    * @param {string} rowData.channel Encrypted, base64-encoded channel id.
    * @returns {React} A named link to the specified project.
    */
-  nameFormatter(name, {rowData}) {
+  const nameFormatter = (name, {rowData}) => {
     // Avoid generating malicious URLs in case the user somehow manipulates these inputs.
     const type = encodeURIComponent(rowData.type);
     const channel = encodeURIComponent(rowData.channel);
 
     const url = `${this.props.studioUrlPrefix}/projects/${type}/${channel}/view`;
     return <a href={url} target="_blank">{name}</a>;
-  },
+  };
 
-  getColumns(sortable) {
+  getColumns = (sortable) => {
     const thumbnailColumn = {
       property: 'thumbnailUrl',
       header: {
@@ -206,7 +217,7 @@ const ProjectsList = React.createClass({
 
     return this.props.showProjectThumbnails ?
       [thumbnailColumn].concat(standardColumns) : standardColumns;
-  },
+  };
 
   render() {
     const sortableOptions = {
@@ -232,10 +243,10 @@ const ProjectsList = React.createClass({
         style={styles.table}
       >
         <Table.Header />
-
         <Table.Body rows={sortedRows} rowKey="channel" />
       </Table.Provider>
     );
   }
-});
+}
+
 export default ProjectsList;
