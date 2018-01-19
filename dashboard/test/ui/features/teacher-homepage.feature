@@ -54,3 +54,5 @@ Feature: Using the teacher homepage sections feature
     When I click selector ".header_popup_link"
     And I wait until element "a:contains(View Unit Overview)" is visible
     And the href of selector "a:contains(View Unit Overview)" contains the section id
+    And I wait until element ".header_popup_body .uitest-ProgressBubble:first" is visible
+    And the href of selector ".header_popup_body .uitest-ProgressBubble:first" contains the section id
