@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Pd::Teachercon1819RegistrationTest < ActiveSupport::TestCase
   test 'required field validations' do
-    registration = Pd::Teachercon1819Registration.new
+    registration = build(:pd_teachercon1819_registration, form_data: nil)
     refute registration.valid?
     assert_equal [
       "Form data is required",
@@ -27,9 +27,13 @@ class Pd::Teachercon1819RegistrationTest < ActiveSupport::TestCase
       "Form data photoRelease",
       "Form data liabilityWaiver",
       "Form data agreeShareContact",
+      "Form data teacherAcceptSeat",
+      "Form data howOfferCsp",
+      "Form data haveTaughtAp",
+      "Form data haveTaughtWrittenProjectCourse",
+      "Form data gradingSystem"
     ], registration.errors.full_messages
 
-    registration.pd_application = create(:pd_teacher1819_application)
     registration.form_data = build(:pd_teachercon1819_registration_hash).to_json
 
     assert registration.valid?
