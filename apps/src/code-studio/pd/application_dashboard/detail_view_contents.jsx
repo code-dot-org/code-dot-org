@@ -33,6 +33,11 @@ const styles = {
   },
   saveButton: {
     marginRight: '5px'
+  },
+  statusSelectGroup: {
+    maxWidth: 200,
+    marginRight: 5,
+    marginLeft: 5,
   }
 };
 
@@ -242,7 +247,7 @@ export class DetailViewContents extends React.Component {
     if (this.props.canLock) {
       // Render the select with the lock button in a fancy InputGroup
       return (
-        <InputGroup style={{maxWidth: 200, marginRight: 5, marginLeft: 5}}>
+        <InputGroup style={styles.statusSelectGroup}>
           <InputGroup.Button>
             {this.renderLockButton()}
           </InputGroup.Button>
