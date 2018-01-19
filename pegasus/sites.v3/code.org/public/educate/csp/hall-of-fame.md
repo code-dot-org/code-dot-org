@@ -402,7 +402,7 @@ title: CS Principles Hall of Fame
 * VENTURE ACADEMY, MARRIOTT-SLATERVILLE CITY - Bontia
 
 ## Virginia
-* ALBEMARLE HIGH, CHARLOTTESVILLE - bholley@k12albemarle.org
+* ALBEMARLE HIGH, CHARLOTTESVILLE - Buffie Holley
 * BETHEL HIGH, HAMPTON - Steven Shultz
 * CHANTILLY HIGH, CHANTILLY - Linda Trochim
 * COSBY HIGH, MIDLOTHIAN - Timothy Ellis
