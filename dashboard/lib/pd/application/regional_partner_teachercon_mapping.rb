@@ -9,7 +9,11 @@ module Pd::Application
     # Map regional partner name to TeacherCon
     REGIONAL_PARTNER_TC_MAPPING = {
       'Allegheny Intermediate Unit 3' => TC_PHOENIX,
+
+      # TODO(Andrew): Remove the following line after updating the partner name to the next one
       'America Campaign/TIE Partnership (ND, SD, WY)' => TC_PHOENIX,
+      'Teachers Teaching Tech (ND, SD, WY)' => TC_PHOENIX,
+
       'Fresno County Superintendent of Schools' => TC_ATLANTA,
       'Institute for School Partnership  Washington University in St. Louis' => TC_ATLANTA,
       'Mississippi State University' => TC_ATLANTA,
