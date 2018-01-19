@@ -104,6 +104,7 @@ const actionsFormatter = function (actions, {rowData}) {
   return (
     <ManageStudentsActionsCell
       id={rowData.id}
+      sectionId={rowData.sectionId}
       isEditing={rowData.isEditing}
     />
   );
@@ -154,6 +155,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
+            width: 300
           }},
           transforms: [sortable],
         },
@@ -162,6 +164,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
+            width: 300
           }}
         }
       },
@@ -172,6 +175,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
+            width: 100,
           }},
           transforms: [sortable],
         },
@@ -180,6 +184,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
+            width: 100,
           }}
         }
       },
@@ -190,6 +195,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
+            width: 150,
           }},
           transforms: [sortable],
         },
@@ -198,6 +204,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
+            width: 150,
           }}
         }
       },
@@ -211,6 +218,7 @@ class ManageStudentsTable extends Component {
             style: {
             ...tableLayoutStyles.headerCell,
             ...tableLayoutStyles.unsortableHeader,
+            width: 200,
           }},
         },
         cell: {
@@ -218,6 +226,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
+            width: 200,
           }}
         }
       },
@@ -229,6 +238,7 @@ class ManageStudentsTable extends Component {
             style: {
             ...tableLayoutStyles.headerCell,
             ...tableLayoutStyles.unsortableHeader,
+            width: 200,
           }},
         },
         cell: {
@@ -236,6 +246,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
+            width: 200,
           }}
         }
       },

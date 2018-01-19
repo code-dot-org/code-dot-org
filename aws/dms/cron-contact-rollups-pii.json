@@ -14,11 +14,11 @@
       "rule-type": "transformation",
       "rule-id": "2",
       "rule-name": "2",
+      "rule-action": "rename",
       "rule-target": "schema",
       "object-locator": {
         "schema-name": "pegasus"
       },
-      "rule-action": "rename",
       "value": "pegasus_pii"
     }
   ]

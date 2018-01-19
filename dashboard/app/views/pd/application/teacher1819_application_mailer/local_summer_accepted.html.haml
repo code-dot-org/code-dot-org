@@ -52,7 +52,9 @@
     of receiving this message, please let us know if you are accepting your seat
     in this program
     %li
-      If you want to accept your seat, enroll here.
+      If you want to accept your seat,
+      %a{ href: url_for(controller: 'pd/workshop_enrollment', action: 'new', workshop_id: @workshop.id) }
+        enroll here.
     %li
       If you want to decline your seat, email your Regional Partner using the
       contact information above.
