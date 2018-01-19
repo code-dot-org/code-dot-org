@@ -60,6 +60,17 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     render json: {error: e.message}, status: :bad_request
   end
 
+  # GET /api/v1/pd/workshops/upcoming_teachercon
+  def upcoming_teachercon
+    workshops = Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).where(
+      subject: Pd::Workshop::SUBJECT_TEACHER_CON
+    )
+    workshops = workshops.where(course: params[:course]) if params[:course]
+    render json: workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
+  rescue ArgumentError => e
+    render json: {error: e.message}, status: :bad_request
+  end
+
   # Upcoming (not started) public CSF workshops.
   def k5_public_map_index
     @workshops = Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).where(
