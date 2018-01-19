@@ -9,6 +9,7 @@ nav: regional_partner_playbook_nav
 ## Table of contents
 
 - [Weekly Newsletter Archive](#archive)
+- [Regional Partner Advisory Committee Meeting Notes](#adcom)
 - [Communication to teachers from Code.org](#code.org)
 - [Workshop communications](#workshop)
 - [Tips for writing an awesome email](#tips)
@@ -23,6 +24,17 @@ ________________
 Each week we send out an email with important action items, new collateral, CS Education news, etc. View the [Group 1 weekly emails](https://docs.google.com/document/d/1suhDTctEfeGnXY4shwWqBmb8dIXZ603RkVfqPuVPbnU/edit?usp=sharing), [Group 2 weekly emails](https://docs.google.com/document/d/1Z1gXtCTU5Veih9gAxLw4VsAHeSC4HA_A70O1VWH_ZZI/edit?usp=sharing) and the [Group 3 weekly emails](https://docs.google.com/document/d/1DThTQqcD6Rvvl0KTeH3sRIt-sKkDGlPRzixbe55q4gc/edit).
 
 <br/>
+________________
+<a id="adcom"></a>
+<br/>
+<br/>
+
+## Regional Partner Advisory Committee Meeting Notes
+See an archive of meeting notes by the advisory committee [here](https://docs.google.com/document/d/1shHp3dzUXZoN_tmqfjhLhbHjK2t4NgF3qtIWJyWldyQ/edit?usp=sharing).
+
+<br/>
+<br/>
+[**Back to the top**](#top)
 ________________
 <a id="code.org"></a>
 <br/>
