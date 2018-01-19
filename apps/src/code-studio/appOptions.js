@@ -60,6 +60,7 @@
  * @property {string} teacherMarkdown
  * @property {DialogOptions} dialog
  * @property {string} locale
+ * @property {boolean} resourcesTabVisible
  */
 
 /**
