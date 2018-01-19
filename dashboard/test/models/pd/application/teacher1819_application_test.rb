@@ -84,7 +84,7 @@ module Pd::Application
           previous_yearlong_cdo_pd: ['CS Discoveries'],
           csp_how_offer: Pd::Application::Teacher1819Application.options[:csp_how_offer].last,
           taught_in_past: ['CS in Algebra']
-        }
+        }.stringify_keys
       )
 
       application = create(:pd_teacher1819_application, course: 'csp', form_data: application_hash.to_json, regional_partner: (create :regional_partner))
@@ -95,7 +95,6 @@ module Pd::Application
           regional_partner_name: YES,
           committed: YES,
           able_to_attend_single: YES,
-          able_to_attend_multiple: YES,
           csp_which_grades: YES,
           csp_course_hours_per_year: YES,
           previous_yearlong_cdo_pd: YES,
@@ -123,7 +122,6 @@ module Pd::Application
           regional_partner_name: NO,
           committed: YES,
           able_to_attend_single: YES,
-          able_to_attend_multiple: YES,
           principal_approval: YES,
           schedule_confirmed: YES,
           diversity_recruitment: YES,
@@ -156,7 +154,7 @@ module Pd::Application
           previous_yearlong_cdo_pd: ['CS Discoveries'],
           csp_how_offer: Pd::Application::Teacher1819Application.options[:csp_how_offer].last,
           taught_in_past: ['CS in Algebra']
-        }
+        }.stringify_keys
       )
 
       application = create :pd_teacher1819_application, course: 'csp', form_data: application_hash.to_json
@@ -168,7 +166,6 @@ module Pd::Application
           regional_partner_name: YES,
           committed: YES,
           able_to_attend_single: YES,
-          able_to_attend_multiple: YES,
           principal_approval: YES,
           schedule_confirmed: YES,
           diversity_recruitment: YES,
@@ -190,7 +187,6 @@ module Pd::Application
         {
           committed: Pd::Application::Teacher1819Application.options[:committed].last,
           able_to_attend_single: NO,
-          able_to_attend_multiple: Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain],
           principal_approval: YES,
           schedule_confirmed: NO,
           diversity_recruitment: NO,
@@ -202,7 +198,7 @@ module Pd::Application
           previous_yearlong_cdo_pd: ['CS Principles'],
           csp_how_offer: Pd::Application::Teacher1819Application.options[:csp_how_offer].first,
           taught_in_past: ['AP CS A']
-        }
+        }.stringify_keys
       )
 
       application = create :pd_teacher1819_application, course: 'csp', form_data: application_hash.to_json, regional_partner: nil
@@ -213,7 +209,6 @@ module Pd::Application
           regional_partner_name: NO,
           committed: NO,
           able_to_attend_single: NO,
-          able_to_attend_multiple: NO,
           principal_approval: YES, # Keep this as yes to test additional fields
           schedule_confirmed: NO,
           diversity_recruitment: NO,
@@ -245,7 +240,7 @@ module Pd::Application
           csd_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].first,
           previous_yearlong_cdo_pd: ['CS in Science'],
           taught_in_past: Pd::Application::Teacher1819Application.options[:taught_in_past].last
-        }
+        }.stringify_keys
       )
 
       application = create :pd_teacher1819_application, course: 'csd', form_data: application_hash.to_json
@@ -257,7 +252,6 @@ module Pd::Application
           regional_partner_name: YES,
           committed: YES,
           able_to_attend_single: YES,
-          able_to_attend_multiple: YES,
           principal_approval: YES,
           schedule_confirmed: YES,
           diversity_recruitment: YES,
@@ -278,7 +272,6 @@ module Pd::Application
         {
           committed: Pd::Application::Teacher1819Application.options[:committed].last,
           able_to_attend_single: NO,
-          able_to_attend_multiple: Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain],
           principal_approval: YES,
           schedule_confirmed: NO,
           diversity_recruitment: NO,
@@ -289,7 +282,7 @@ module Pd::Application
           csd_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].last,
           previous_yearlong_cdo_pd: ['Exploring Computer Science'],
           taught_in_past: ['Exploring Computer Science']
-        }
+        }.stringify_keys
       )
 
       application = create :pd_teacher1819_application, course: 'csd', form_data: application_hash.to_json, regional_partner: nil
@@ -300,7 +293,6 @@ module Pd::Application
           regional_partner_name: NO,
           committed: NO,
           able_to_attend_single: NO,
-          able_to_attend_multiple: NO,
           principal_approval: YES, # Keep this as yes to test additional fields
           schedule_confirmed: NO,
           diversity_recruitment: NO,
@@ -315,12 +307,11 @@ module Pd::Application
       )
     end
 
-    test 'autoscore for ambiguous responses to able_to_attend_multiple' do
-      application_hash = build :pd_teacher1819_application_hash, program: Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.first
+    test 'autoscore for able_to_attend_multiple' do
+      application_hash = build :pd_teacher1819_application_hash, :with_multiple_workshops, program: Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.first
       application_hash.merge!(
         {
           committed: Pd::Application::Teacher1819Application.options[:committed].last,
-          able_to_attend_multiple: "December 11-15, 2017 in Indiana, USA, #{Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]}",
           principal_approval: YES,
           schedule_confirmed: NO,
           diversity_recruitment: NO,
@@ -331,30 +322,63 @@ module Pd::Application
           csd_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].last,
           previous_yearlong_cdo_pd: ['Exploring Computer Science'],
           taught_in_past: ['Exploring Computer Science']
-        }
+        }.stringify_keys
+      )
+      application = create :pd_teacher1819_application, course: 'csd', form_data: application_hash.to_json, regional_partner: nil
+
+      application.auto_score!
+
+      assert_equal(YES, application.response_scores_hash[:able_to_attend_multiple])
+    end
+
+    test 'autoscore for ambiguous responses to able_to_attend_multiple' do
+      application_hash = build :pd_teacher1819_application_hash, :with_multiple_workshops, program: Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.first
+      application_hash.merge!(
+        {
+          committed: Pd::Application::Teacher1819Application.options[:committed].last,
+          able_to_attend_multiple: ["December 11-15, 2017 in Indiana, USA", Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]],
+          principal_approval: YES,
+          schedule_confirmed: NO,
+          diversity_recruitment: NO,
+          free_lunch_percent: '49.9%',
+          underrepresented_minority_percent: '49.9%',
+          wont_replace_existing_course: YES,
+          csd_which_grades: ['12'],
+          csd_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].last,
+          previous_yearlong_cdo_pd: ['Exploring Computer Science'],
+          taught_in_past: ['Exploring Computer Science']
+        }.stringify_keys
       )
 
       application = create :pd_teacher1819_application, course: 'csd', form_data: application_hash.to_json, regional_partner: nil
       application.auto_score!
 
-      assert_equal(
+      assert_nil application.response_scores_hash[:able_to_attend_multiple]
+    end
+
+    test 'autoscore for not able_to_attend_multiple' do
+      application_hash = build :pd_teacher1819_application_hash, :with_multiple_workshops, program: Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.first
+      application_hash.merge!(
         {
-          regional_partner_name: NO,
-          committed: NO,
-          able_to_attend_single: YES,
-          able_to_attend_multiple: nil,
-          principal_approval: YES, # Keep this as yes to test additional fields
+          committed: Pd::Application::Teacher1819Application.options[:committed].last,
+          able_to_attend_multiple: [Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]],
+          principal_approval: YES,
           schedule_confirmed: NO,
           diversity_recruitment: NO,
-          free_lunch_percent: 0,
-          underrepresented_minority_percent: 0,
-          wont_replace_existing_course: nil,
-          csd_which_grades: NO,
-          csd_course_hours_per_year: NO,
-          previous_yearlong_cdo_pd: NO,
-          taught_in_past: 0
-        }, application.response_scores_hash
+          free_lunch_percent: '49.9%',
+          underrepresented_minority_percent: '49.9%',
+          wont_replace_existing_course: YES,
+          csd_which_grades: ['12'],
+          csd_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].last,
+          previous_yearlong_cdo_pd: ['Exploring Computer Science'],
+          taught_in_past: ['Exploring Computer Science']
+        }.stringify_keys
       )
+
+      application = create :pd_teacher1819_application, course: 'csd', form_data: application_hash.to_json, regional_partner: nil
+      application.auto_score!
+
+      assert_equal(NO, application.response_scores_hash[:able_to_attend_multiple])
     end
 
     test 'send_decision_notification_email only sends to G3 and unmatched' do
