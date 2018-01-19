@@ -18,13 +18,17 @@ function getChromeVersion() {
 }
 
 export function isWindows() {
-  return navigator.platform.indexOf('Win') > -1;
+  return /^Win/.test(navigator.platform);
 }
 
 export function isOSX() {
-  return navigator.platform.indexOf('Mac') > -1;
+  return /^Mac/.test(navigator.platform);
 }
 
 export function isChromeOS() {
   return /\bCrOS\b/.test(navigator.userAgent);
+}
+
+export function isLinux() {
+  return /^Linux/.test(navigator.platform) && !isChromeOS();
 }
