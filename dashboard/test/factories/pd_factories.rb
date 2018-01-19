@@ -816,6 +816,10 @@ FactoryGirl.define do
               liveFarAway: "Yes",
               needHotel: "No",
               photoRelease: "Yes",
+              howOfferCsp: "As an AP course",
+              haveTaughtAp: "Yes",
+              haveTaughtWrittenProjectCourse: "Yes",
+              gradingSystem: 'Numerical and/or letter grades (e.g., 0 - 100% or F- A)',
             }
           )
         end
