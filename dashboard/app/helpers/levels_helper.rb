@@ -256,9 +256,6 @@ module LevelsHelper
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end
 
-    # TODO: epeach - remove this temporary appOption to indicate the condition in resources tab experiment
-    @app_options[:resourcesTabVisible] = Experiment.enabled?(user: current_user, experiment_name: "instructions-resources-tab")
-
     @app_options
   end
 

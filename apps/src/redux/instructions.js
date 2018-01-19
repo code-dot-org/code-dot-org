@@ -60,7 +60,6 @@ const instructionsInitialState = {
   stagePosition: 0,
   levelPosition: 0,
   serverLevelId: undefined,
-  resourcesTabVisible: false
 };
 
 export default function reducer(state = {...instructionsInitialState}, action) {
@@ -83,8 +82,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       stagePosition,
       levelPosition,
       scriptId,
-      serverLevelId,
-      resourcesTabVisible
+      serverLevelId
     } = action;
     let collapsed = state.collapsed;
     if (!longInstructions && !hasContainedLevels) {
@@ -107,8 +105,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       stagePosition,
       levelPosition,
       scriptId,
-      serverLevelId,
-      resourcesTabVisible
+      serverLevelId
     });
   }
 
@@ -165,7 +162,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
 export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
     shortInstructions, shortInstructions2, longInstructions,
     hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown, levelVideos,
-    app, scriptName, stagePosition, levelPosition, serverLevelId, scriptId, resourcesTabVisible }) => ({
+    app, scriptName, stagePosition, levelPosition, serverLevelId, scriptId}) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
   hasInlineImages,
@@ -181,8 +178,7 @@ export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
   stagePosition,
   levelPosition,
   scriptId,
-  serverLevelId,
-  resourcesTabVisible
+  serverLevelId
 });
 
 export const setInstructionsRenderedHeight = height => ({
@@ -291,8 +287,7 @@ export const determineInstructionsConstants = config => {
     stagePosition,
     levelPosition,
     serverLevelId,
-    scriptId,
-    resourcesTabVisible  } = config;
+    scriptId } = config;
   const {
     instructions,
     instructions2,
@@ -378,6 +373,5 @@ export const determineInstructionsConstants = config => {
     levelPosition,
     serverLevelId,
     scriptId,
-    resourcesTabVisible
   };
 };

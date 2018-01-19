@@ -271,7 +271,7 @@ StudioApp.prototype.init = function (config) {
 
   //Only log a page load when there are videos present
   if (config.level.levelVideos && config.level.levelVideos.length > 0 && (config.app === 'applab' || config.app === 'gamelab')){
-    if (config.resourcesTabVisible){
+    if (experiments.isEnabled('resources_tab')){
       firehoseClient.putRecord(
         'analysis-events',
         {
@@ -1856,7 +1856,7 @@ StudioApp.prototype.configureDom = function (config) {
   var referenceArea = document.getElementById('reference_area');
   // noInstructionsWhenCollapsed is used in TopInstructions to determine when to use CSPTopInstructions (in which case
   // display videos in the top instructions) or CSFTopInstructions (in which case the videos are appended here).
-  const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && config.resourcesTabVisible;
+  const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && experiments.isEnabled('resources_tab');
   if (!referenceAreaInTopInstructions && referenceArea) {
     belowViz.appendChild(referenceArea);
     // TODO (epeach) - remove after resources tab A/B testing
@@ -2938,7 +2938,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     showProjectTemplateWorkspaceIcon: !!config.level.projectTemplateLevelName &&
       !config.level.isK1 &&
       !config.readonlyWorkspace,
-    resourcesTabVisible: config.resourcesTabVisible,
   }, appSpecificConstants);
 
   getStore().dispatch(setPageConstants(combined));

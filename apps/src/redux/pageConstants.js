@@ -60,7 +60,6 @@ var ALLOWED_KEYS = new Set([
   'appType',
   'nextLevelUrl',
   'showProjectTemplateWorkspaceIcon',
-  'resourcesTabVisible'
 ]);
 
 const initialState = {

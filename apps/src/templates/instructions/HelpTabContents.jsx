@@ -12,7 +12,6 @@ export default class HelpTabContents extends Component {
   static propTypes = {
     scriptId: PropTypes.number,
     serverLevelId: PropTypes.number,
-    resourcesTabVisible: PropTypes.bool,
     logText: PropTypes.string,
     videoData: videoDataShape,
   };
@@ -24,7 +23,6 @@ export default class HelpTabContents extends Component {
           <VideoThumbnail
             scriptId={this.props.scriptId}
             serverLevelId={this.props.serverLevelId}
-            resourcesTabVisible={this.props.resourcesTabVisible}
             logText={this.props.logText}
             video={this.props.videoData}
           />
