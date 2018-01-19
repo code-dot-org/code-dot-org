@@ -28,18 +28,18 @@ class CohortView extends React.Component{
       applicationType: PropTypes.string.isRequired,
       viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
     })
-  }
+  };
 
   static contextTypes = {
     router: PropTypes.object.isRequired
-  }
+  };
 
   state = {
     loading: true,
     applications: null,
     regionalPartnerName: this.props.regionalPartnerName,
     regionalPartnerFilter: UnmatchedFilter
-  }
+  };
 
   componentWillMount() {
     this.load();
@@ -81,11 +81,11 @@ class CohortView extends React.Component{
     }
 
     return url;
-  }
+  };
 
   handleDownloadCsvClick = () => {
     window.open(this.getCsvUrl());
-  }
+  };
 
   render() {
     if (this.state.loading) {

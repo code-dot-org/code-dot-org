@@ -6,6 +6,7 @@ module.exports = {
   "plugins": [
     "react",
     "mocha",
+    "babel",
   ],
   "extends": [
     "eslint:recommended",
@@ -18,6 +19,7 @@ module.exports = {
   },
   "rules": {
     "array-bracket-spacing": ["error", "never"],
+    "babel/semi": "error", // autofixable
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "comma-dangle": "off",
     "curly": "error",
@@ -48,7 +50,7 @@ module.exports = {
     "react/no-render-return-value": "off", // TODO: turn this on
     "react/self-closing-comp": "error",
     "react/wrap-multilines": "error", // autofixable
-    "semi": "error",
+    "semi": "off", // enforced by babel/semi
     "space-before-function-paren": ["error", {
       "anonymous": "always",
       "named": "never"
