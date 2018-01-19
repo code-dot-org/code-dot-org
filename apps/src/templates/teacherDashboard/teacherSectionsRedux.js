@@ -379,7 +379,7 @@ function newSectionData(id, courseId, scriptId, loginType) {
     loginType: loginType,
     grade: '',
     providerManaged: false,
-    stageExtras: false,
+    stageExtras: true,
     pairingAllowed: true,
     sharingDisabled: false,
     studentCount: 0,
@@ -579,6 +579,8 @@ export default function teacherSections(state=initialState, action) {
   }
 
   if (action.type === EDIT_SECTION_PROPERTIES) {
+    const stageExtraSettings = {};
+
     if (!state.sectionBeingEdited) {
       throw new Error('Cannot edit section properties; no section is'
         + ' currently being edited.');
@@ -589,10 +591,22 @@ export default function teacherSections(state=initialState, action) {
         throw new Error(`Cannot edit property ${key}; it's not allowed.`);
       }
     }
+
+    // Selecting Course 1-4 or A-F should auto-enable Stage Extras.
+    if (action.props.scriptId) {
+      const script = state.validAssignments[`null_${action.props.scriptId}`];
+      if (script && /course[1-4a-f]/.test(script.script_name)) {
+        stageExtraSettings.stageExtras = true;
+      } else {
+        stageExtraSettings.stageExtras = false;
+      }
+    }
+
     return {
       ...state,
       sectionBeingEdited: {
         ...state.sectionBeingEdited,
+        ...stageExtraSettings,
         ...action.props,
       }
     };
