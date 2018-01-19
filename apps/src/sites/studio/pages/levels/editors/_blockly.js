@@ -74,10 +74,9 @@ Object.keys(fieldConfig).forEach(key => {
   }
 });
 
-$("#plusanswer").on("click", () => {
-  $("#plusanswer").prev().clone().insertBefore("#plusanswer");
+$("#plusAnswerContainedLevel").on("click", () => {
+  $("#plusAnswerContainedLevel").prev().clone().insertBefore("#plusAnswerContainedLevel");
 });
-
 
 if (data.original_palette && !fieldConfig.codeFunctions.hideWhen) {
   ReactDOM.render(

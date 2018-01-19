@@ -6,17 +6,17 @@
   "user_id": 156,
   "properties": {
     "skin": "craft",
-    "ground_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
-    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
-    "action_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
-    "player_start_position": "[0, 0]",
-    "grid_width": "10",
-    "grid_height": "10",
-    "player_start_direction": "1",
+    "ground_plane": "[\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"farmlandWet\",\"water\",\"farmlandWet\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"stone\",\"stone\",\"stone\",\"stone\",\"planksSpruce\",\"wool_magenta\",\"wool_magenta\",\"wool_magenta\",\"planksSpruce\",\"farmlandWet\",\"water\",\"farmlandWet\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"stone\",\"stone\",\"stone\",\"stone\",\"planksSpruce\",\"wool_magenta\",\"wool_magenta\",\"wool_magenta\",\"planksSpruce\",\"farmlandWet\",\"water\",\"farmlandWet\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"stone\",\"stone\",\"stone\",\"planksSpruce\",\"wool_magenta\",\"wool_magenta\",\"wool_magenta\",\"planksSpruce\",\"gravel\",\"gravel\",\"gravel\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"stone\",\"stone\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"planksSpruce\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"stone\",\"grass\",\"grass\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"cobblestone\",\"cobblestone\",\"cobblestone\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"sand\",\"sand\",\"sand\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"sand\",\"sand\",\"sand\",\"water\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"sand\",\"sand\",\"water\",\"water\",\"water\",\"water\",\"dirt\",\"dirtCoarse\",\"dirt\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirtCoarse\",\"dirt\",\"planksSpruce\",\"planksSpruce\",\"dirt\",\"dirtCoarse\",\"dirt\",\"sand\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"water\",\"planksOak\",\"planksOak\",\"planksOak\",\"planksOak\",\"water\",\"water\",\"water\",\"water\",\"water\",\"sand\",\"sand\",\"sand\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"planksOak\",\"planksOak\",\"planksOak\",\"planksOak\",\"water\",\"water\",\"water\",\"water\",\"sand\",\"sand\",\"sand\",\"sand\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"planksOak\",\"planksOak\",\"planksOak\",\"planksOak\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"sand\",\"sand\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"dirt\",\"dirt\",\"planksSpruce\",\"planksSpruce\",\"dirt\",\"dirt\",\"sand\",\"sand\",\"sand\",\"water\",\"water\",\"water\",\"water\",\"dirt\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"sand\",\"sand\",\"water\",\"water\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"sand\",\"sand\",\"sand\",\"sand\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"flowerDandelion\",\"\",\"flowerDandelion\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"flowerOxeeye\",\"\",\"flowerOxeeye\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"flowerRose\",\"\",\"flowerRose\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "action_plane": "[\"planksSpruce\",\"planksSpruce\",\"glass\",\"planksSpruce\",\"planksSpruce\",\"\",\"\",\"\",\"bricks\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"planksSpruce\",\"\",\"\",\"bedHead\",\"glass\",\"\",\"\",\"\",\"bricks\",\"\",\"\",\"treeSpruce\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"glass\",\"\",\"\",\"bedFoot\",\"planksSpruce\",\"\",\"\",\"\",\"bricks\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"planksSpruce\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"bricks\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeSpruce\",\"\",\"\",\"\",\"\",\"planksSpruce\",\"planksSpruce\",\"door\",\"planksSpruce\",\"planksSpruce\",\"bricks\",\"bricks\",\"bricks\",\"bricks\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"torch\",\"\",\"torch\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"planksSpruce\",\"\",\"\",\"planksSpruce\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"planksOak\",\"\",\"\",\"planksOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"planksOak\",\"\",\"\",\"planksOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"planksOak\",\"\",\"\",\"planksOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"planksSpruce\",\"\",\"\",\"planksSpruce\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeSpruce\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeSpruce\"]",
+    "player_start_position": "[9, 19 ]",
+    "grid_width": "20",
+    "grid_height": "20",
+    "player_start_direction": "0",
     "is_daytime": "true",
     "is_event_level": "false",
     "use_player": "true",
-    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isPlayerNextTo(\"logOak\");\r\n}",
+    "verification_function": "function (verificationAPI) {\r\n}",
     "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
     "failure_check_function": "function (verificationAPI) {\r\n  // Fail instantly\r\n  return false;\r\n}",
     "embed": "false",
@@ -26,7 +26,7 @@
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
-    "disable_procedure_autopopulate": "true",
+    "disable_procedure_autopopulate": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "contract_highlight": "false",
@@ -39,15 +39,44 @@
     "disable_examples": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "agent_start_position": "[4, 4]",
-    "agent_start_direction": "0",
+    "free_play": "true",
     "use_score": "false",
-    "is_agent_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "free_play": "true",
+    "display_name": "Freeplay",
+    "agent_start_direction": "0",
+    "is_agent_level": "true",
+    "agent_start_position": "[10,19]",
+    "place_block_options": [
+      "bricks",
+      "cactus",
+      "cobblestone",
+      "dirt",
+      "farmlandWet",
+      "grass",
+      "gravel",
+      "ice",
+      "rails",
+      "sand",
+      "sandstone",
+      "snow",
+      "stone",
+      "wool",
+      "logAcacia",
+      "logBirch",
+      "logOak",
+      "logSpruce",
+      "planksAcacia",
+      "planksBirch",
+      "planksOak",
+      "planksSpruce"
+    ],
     "level_verification_timeout": "0",
-    "place_block_options": "[\"redstoneWire\", \"rails\", \"railsRedstoneTorch\"]",
+    "markdown_instructions": "**Freeplay:** Now it's up to you! Use the Agent's code to help you explore this world.",
+    "special_level_type": "freeplay",
+    "instructions": "**Freeplay:**  Time to explore on your own!",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try having the Agent build some minecart tracks so you can explore the world!\",\"hint_id\":\"MC_HOC_2017_13_Cole_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/648eff05e8f153fb2ad23824320070b4/MC Agent Freeplay.mp3\"}]",
+    "top_level_procedure_autopopulate": "true",
     "contained_level_names": null
   },
   "published": true,
@@ -57,67 +86,47 @@
   }
 }]]></config>
   <blocks>
+    <initialization_blocks>
+      <xml/>
+    </initialization_blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false" id="when_run"/>
+        <block type="procedures_defnoreturn" deletable="false" usercreated="true">
+          <mutation/>
+          <title name="NAME">function 1</title>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" usercreated="true">
+          <mutation/>
+          <title name="NAME">function 2</title>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
-        <category name="Actions">
-          <block type="craft_moveForward"/>
-          <block type="craft_moveBackward"/>
-          <block type="craft_turn">
-            <title name="DIR">left</title>
-          </block>
-          <block type="craft_turn">
-            <title name="DIR">right</title>
-          </block>
-          <block type="craft_destroyBlock"/>
-          <block type="craft_placeBlock">
-            <title name="TYPE">cobblestone</title>
-          </block>
-        </category>
-        <category name="Logic">
-          <block type="craft_ifBlockAhead">
-            <title name="TYPE">cobblestone</title>
-          </block>
-        </category>
-        <category name="Loops">
-          <block type="craft_whileBlockAhead">
-            <title name="TYPE">cobblestone</title>
-          </block>
-          <block type="controls_repeat">
-            <title name="TIMES">5</title>
-          </block>
-          <block type="controls_for" inline="true">
-            <title name="VAR">i</title>
-            <value name="FROM">
-              <block type="math_number">
-                <title name="NUM">1</title>
-              </block>
-            </value>
-            <value name="TO">
-              <block type="math_number">
-                <title name="NUM">10</title>
-              </block>
-            </value>
-            <value name="BY">
-              <block type="math_number">
-                <title name="NUM">1</title>
-              </block>
-            </value>
-          </block>
-          <block type="controls_repeat_ext" inline="true">
-            <value name="TIMES">
-              <block type="variables_get">
-                <title name="VAR">i</title>
-              </block>
-            </value>
-          </block>
-        </category>
-        <category name="Variables" custom="VARIABLE"/>
-        <category name="Functions" custom="PROCEDURE">
-          <block type="procedures_defnoreturn">
-            <mutation/>
-            <title name="NAME">do something</title>
-          </block>
-        </category>
+        <block type="craft_moveForward"/>
+        <block type="craft_moveBackward"/>
+        <block type="craft_turn">
+          <title name="DIR">left</title>
+        </block>
+        <block type="craft_turn">
+          <title name="DIR">right</title>
+        </block>
+        <block type="craft_destroyBlock"/>
+        <block type="craft_placeBlock">
+          <title name="TYPE">rails</title>
+        </block>
+        <block type="craft_placeBlockDirection">
+          <title name="TYPE">grass</title>
+          <title name="DIR">0</title>
+        </block>
+        <block type="craft_placeBlockDirection">
+          <title name="TYPE">grass</title>
+          <title name="DIR">2</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">2</title>
+        </block>
       </xml>
     </toolbox_blocks>
   </blocks>

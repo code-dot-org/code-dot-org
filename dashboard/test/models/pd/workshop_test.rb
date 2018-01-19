@@ -706,11 +706,13 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.process_location
     assert_nil @workshop.processed_location
 
-    # Don't bother looking up blank addresses
-    Geocoder.expects(:search).never
-    @workshop.location_address = ''
-    @workshop.process_location
-    assert_nil @workshop.processed_location
+    # Don't bother looking up blank addresses or TBA/TBDs
+    ['', 'tba', 'TBA', 'tbd', 'N/A'].each do |address|
+      Geocoder.expects(:search).never
+      @workshop.location_address = address
+      @workshop.process_location
+      assert_nil @workshop.processed_location
+    end
 
     # Retry on errors
     Geocoder.expects(:search).with('1501 4th Ave, Seattle WA').raises(SocketError).then.returns(mock_geocoder_result).twice

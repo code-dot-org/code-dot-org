@@ -94,15 +94,21 @@ export default class Section2YourSchool extends LabeledFormComponent {
           </div>
         }
 
-        {this.inputFor("principalFirstName")}
-        {this.inputFor("principalLastName")}
+        {
+          // Disable auto complete for principal fields, so they are not filled with the teacher's details.
+          // Using a custom unmatched string "never" instead of "off" for wider browser compatibility.
+          // See https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#Disabling_autocompletion
+        }
+        {this.inputFor("principalFirstName", {autoComplete: "never"})}
+        {this.inputFor("principalLastName", {autoComplete: "never"})}
         {this.selectFor("principalTitle", {
           placeholder: "Select a title",
-          required: false
+          required: false,
+          autoComplete: "never"
         })}
-        {this.inputFor("principalEmail")}
-        {this.inputFor("principalConfirmEmail")}
-        {this.usPhoneNumberInputFor("principalPhoneNumber")}
+        {this.inputFor("principalEmail", {autoComplete: "never"})}
+        {this.inputFor("principalConfirmEmail", {autoComplete: "never"})}
+        {this.usPhoneNumberInputFor("principalPhoneNumber", {autoComplete: "never"})}
 
         {this.radioButtonsWithAdditionalTextFieldsFor("currentRole", {
           [TextFields.otherPleaseList] : "other"

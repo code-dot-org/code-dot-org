@@ -7,6 +7,7 @@ module Teachercon1819RegistrationConstants
   }.freeze
 
   TEXT_FIELDS = {
+    other_please_list: 'Other (Please List):'.freeze,
     other_please_explain: 'Other (Please Explain):'.freeze,
     food_allergy: 'Food Allergy'.freeze
   }.freeze
