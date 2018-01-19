@@ -31,7 +31,7 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "markdown_instructions": "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! \r\n\r\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb. Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.",
+    "markdown_instructions": "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! \r\n\r\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb. Remember: there will only ever **bee** *one* honeycomb or *one* flower behind each cloud.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"**Remember:** This puzzle changes each time it's run.  \\n\\nYou'll want to use a conditional block (`if/else`) to solve the challenge.\",\"hint_id\":\"courseD_bee_conditionals7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a0c1a3be070bd8bd64d3a9315141edce/courseD_bee_conditionals7.mp3\"}]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
@@ -40,11 +40,12 @@
       "courseD_multi_bee_conditionals7_predict2"
     ],
     "disable_procedure_autopopulate": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "top_level_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-30 20:13:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-30 20:13:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-07-28 22:25:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-30 20:13:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-30 20:13:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-07-28 22:25:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-01-18 00:15:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-18 00:17:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "debugging": 1,

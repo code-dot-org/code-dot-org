@@ -484,7 +484,7 @@ module Pd::Application
       assert_not_equal first_enrollment.id, application.auto_assigned_enrollment_id
     end
 
-    test 'upading the application to unaccepted will also delete the autoenrollment' do
+    test 'updating the application to unaccepted will also delete the autoenrollment' do
       application = create :pd_teacher1819_application
       workshop = create :pd_workshop
 

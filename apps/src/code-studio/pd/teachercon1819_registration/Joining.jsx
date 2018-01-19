@@ -68,8 +68,8 @@ export default class Joining extends Teachercon1819FormComponent {
           </ul>
           {this.radioButtonsFor("teacherAcceptSeat")}
           {(
-            this.props.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions.withdrawDate ||
-            this.props.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions.withdrawOther
+            this.props.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions.waitlistDate ||
+            this.props.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions.waitlistOther
           ) &&
             <FormGroup>
               <p>
@@ -93,6 +93,19 @@ export default class Joining extends Teachercon1819FormComponent {
               </p>
               {this.inputFor("teacherDeclineExplain", { required: false })}
             </FormGroup>
+          }
+        </FormGroup>
+      }
+
+      {(this.isFacilitatorApplication() || this.isPartnerApplication()) &&
+        <FormGroup>
+          {this.radioButtonsFor("ableToAttend")}
+          {this.props.data.ableToAttend === "No" &&
+            <p>
+              If you're unable to attend your assigned TeacherCon, please
+              contact <a href="mailto:facilitators@code.org">facilitators@code.org</a> as
+              soon as possible so we can assist you.
+            </p>
           }
         </FormGroup>
       }

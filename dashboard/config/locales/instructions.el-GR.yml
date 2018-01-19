@@ -1383,6 +1383,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -8269,6 +8298,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -9914,6 +9946,10 @@
       flappy_1_instruction: Προσάρμοσε ένα μπλοκ στο "Όταν πατήσεις με το ποντίκι"
         μπλοκ και πάτα "Εκτέλεση". Πάτα με το ποντίκι ή πίεσε στην οθόνη αφής για
         να μετακινήσεις τον "Φτερογούλη"  στον στόχο.
+      flappy_11_instruction: Δημιούργησε το δικό σου παιχνίδι του "Φτερογούλη". Μπορείς
+        να αλλάξεις όλα τα γραφικά και τους κανόνες, ακόμη και την βαρύτητα. Όταν
+        τα κάνεις, πάτα "Τέλος" και άσε τους φίλους σου να δοκιμάσουν το παιχνίδι
+        στα κινητά τους.
       flappy_2_instruction: Τώρα έχουμε προσθέσει "κάποιο" έδαφος. Προσάρμοσε ένα
         μπλοκ στο "'όταν χτυπήσεις το έδαφος" μπλοκ. Ο κώδικάς σου χρειάζεται το 'ΤΕΛΟΣ
         ΠΑΙΧΝΙΔΙΟΥ' όταν ο "Φτερογούλης" στουκάρει.
@@ -9937,10 +9973,6 @@
         για παράδειγμα, όταν προσπερνά ένα εμπόδιο."
       flappy_9_instruction: "Για να τα μπερδέψετε, όταν χτυπάτε ένα εμπόδιο, αντί
         να τελειώνετε το παιχνίδι προσπαθήστε να επαναφέρετε το σκορ στο 0."
-      flappy_11_instruction: Δημιούργησε το δικό σου παιχνίδι του "Φτερογούλη". Μπορείς
-        να αλλάξεις όλα τα γραφικά και τους κανόνες, ακόμη και την βαρύτητα. Όταν
-        τα κάνεις, πάτα "Τέλος" και άσε τους φίλους σου να δοκιμάσουν το παιχνίδι
-        στα κινητά τους.
       frozen circle function in circle_instruction: "Τώρα ας δημιουργήσουμε 20 κύκλους
         που επικαλύπτονται, στρίβοντας 18 μοίρες  μεταξύ κάθε κύκλου."
       frozen circle function with parameter_instruction: Εδώ είναι ένα μπλοκ "Δημιουργία

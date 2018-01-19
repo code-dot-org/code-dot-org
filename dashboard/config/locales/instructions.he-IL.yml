@@ -1448,6 +1448,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -8567,6 +8596,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -10212,6 +10244,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: הוסיפו בלוק לבלוק "בזמן קליק" ולאחר מכן לחץ על "הרץ".
         לחץ או הקש על המסך כדי להעביר את פלאפי אל המטרה.
+      flappy_11_instruction: צרו משחק "פלאפי" משלכם. אתם יכולים לשנות את הדמויות ואת
+        כל החוקים, אפילו את כוח המשיכה. כשתסיימו, הקליקו על "סיים" כדי לאפשר לחברים
+        שלכם לנסות את המשחק שבניתם על המכשירים הניידים שלהם.
       flappy_2_instruction: כעת הוספנו את הקרקע. צרפו בלוק לבלוק ה-"כאשר פוגע באדמה".
         התוכנית שבניתם זקוקה לבלוק "סיים המשחק" כאשר פלאפי מתרסק.
       flappy_3_instruction: הבלוק "התחל ריצה" מאפשר להריץ קוד בתחילת המשחק. נסה להגדיר
@@ -10230,9 +10265,6 @@
         נסה להגדיר רקע אקראי כאשר קורים אירועים אחרים, לדוגמה, כאשר עוברים מכשול."
       flappy_9_instruction: "כדי לסבך דברים, כאשר פוגעים במכשול, במקום לסיים את המשחק
         נסה לשנות את התוצאה חזרה ל-0."
-      flappy_11_instruction: צרו משחק "פלאפי" משלכם. אתם יכולים לשנות את הדמויות ואת
-        כל החוקים, אפילו את כוח המשיכה. כשתסיימו, הקליקו על "סיים" כדי לאפשר לחברים
-        שלכם לנסות את המשחק שבניתם על המכשירים הניידים שלהם.
       frozen circle function in circle_instruction: "עכשיו בואו ניצור 20 עיגולים חופפים,
         עם זווית של 18 מעלות בין כל עיגול."
       frozen circle function with parameter_instruction: הנה בלוק "צור עיגול" שיכול

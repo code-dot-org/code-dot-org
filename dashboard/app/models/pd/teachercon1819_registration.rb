@@ -24,7 +24,15 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   YES = 'Yes'.freeze
   NO = 'No'.freeze
   YES_OR_NO = [YES, NO].freeze
-  OTHER = 'Other'.freeze
+
+  after_create :update_application_status
+  def update_application_status
+    if waitlisted?
+      pd_application.update!(status: "waitlisted")
+    elsif declined?
+      pd_application.update!(status: "withdrawn")
+    end
+  end
 
   def self.options
     {
@@ -34,7 +42,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
         'Vegan',
         'Halal',
         'Gluten Free',
-        'Food Allergy',
+        TEXT_FIELDS[:food_allergy],
       ],
       liveFarAway: YES_OR_NO,
       addressState: get_all_states_with_dc.to_h.values,
@@ -46,12 +54,47 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
         'Public transit (e.g., city bus or light rail)',
       ],
       needHotel: YES_OR_NO,
-      needAda: [YES, NO, 'Other (please explain):'],
+      needAda: [YES, NO, TEXT_FIELDS[:other_please_explain]],
+      ableToAttend: YES_OR_NO,
       teacherAcceptSeat: [
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept],
-        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:withdraw_date],
-        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:withdraw_other],
+        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_date],
+        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_other],
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline],
+      ],
+      howOfferCsp: [
+        "As an AP course",
+        "As a non-AP course",
+        "Both: I will teach multiple sections, some as AP and some as non-AP",
+        "I'm not sure",
+      ],
+      haveTaughtAp: [
+        YES, NO,
+        "I'm not sure",
+      ],
+      haveTaughtWrittenProjectCourse: [
+        YES, NO,
+        "I'm not sure",
+      ],
+      gradingSystem: [
+        'Numerical and/or letter grades (e.g., 0 - 100% or F- A)',
+        'Rank-based grading (distribute grades based on student rank)',
+        'Standards-based grading (grades assigned based on exceeding, meeting, or falling below the standard)',
+        TEXT_FIELDS[:other_please_list]
+      ],
+      howManyHours: [
+        "At least 100 course hours",
+        "50 to 99 course hours",
+        "Less than 50 course hours",
+        "I'm not sure",
+      ],
+      howManyTerms: [
+        "1 quarter",
+        "1 trimester",
+        "1 semester",
+        "2 trimesters",
+        "Full year",
+        "I'm not sure",
       ],
       photoRelease: [YES],
       liabilityWaiver: [YES],
@@ -87,11 +130,45 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       return
     end
 
+    if hash.try(:[], :able_to_attend) == NO
+      # then we don't care about the rest of the fields
+      return
+    end
+
     super
   end
 
   def dynamic_required_fields(hash)
     requireds = []
+
+    # some fields are required based on the type of the associated application
+
+    if pd_application.application_type === "Teacher"
+      requireds.concat [
+        :teacher_accept_seat
+      ]
+
+      if pd_application.course === "csp"
+        requireds.concat [
+          :how_offer_csp,
+          :have_taught_ap,
+          :have_taught_written_project_course,
+          :grading_system,
+        ]
+      elsif pd_application.course === "csd"
+        requireds.concat [
+          :how_many_hours,
+          :how_many_terms,
+        ]
+      end
+    else
+      requireds.concat [
+        :able_to_attend
+      ]
+    end
+
+    # some fields are required based on the values of other fields
+
     if hash[:live_far_away] == YES
       requireds.concat [
         :address_street,
@@ -108,5 +185,22 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
     end
 
     return requireds
+  end
+
+  def accepted?
+    accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept]
+  end
+
+  def waitlisted?
+    accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_date] ||
+      accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_other]
+  end
+
+  def declined?
+    accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
+  end
+
+  def accept_status
+    sanitize_form_data_hash.try(:[], :teacher_accept_seat)
   end
 end

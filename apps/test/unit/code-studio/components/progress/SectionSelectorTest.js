@@ -1,8 +1,12 @@
 import React from 'react';
-import { assert } from 'chai';
+import { assert, expect } from 'chai';
+import sinon from 'sinon';
 import { UnconnectedSectionSelector as SectionSelector } from
   '@cdo/apps/code-studio/components/progress/SectionSelector';
 import { mount } from 'enzyme';
+import * as utils from '@cdo/apps/utils';
+import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
+import { NO_SECTION } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const fakeSection = {
   name: 'My Section',
@@ -59,5 +63,81 @@ describe('SectionSelector', () => {
     assert(component.html() !== null);
   });
 
+  describe('handleSelectChange', () => {
+    beforeEach(() => {
+      sinon.stub(utils, 'reload');
+      sinon.stub(codeStudioUtils, 'updateQueryParam');
+    });
 
+    afterEach(() => {
+      codeStudioUtils.updateQueryParam.restore();
+      utils.reload.restore();
+    });
+
+    it('updates the query param if a section is selected', () => {
+      const wrapper = mount(
+        <SectionSelector
+          alwaysShow={true}
+          sections={[fakeSection]}
+          scriptHasLockableStages={false}
+          scriptAllowsHiddenStages={false}
+          selectSection={() => {}}
+        />
+      );
+      wrapper.find('select').simulate('change', {target:{value:'testSectionId'}});
+      expect(codeStudioUtils.updateQueryParam)
+        .to.have.been.calledOnce
+        .and.calledWith('section_id', 'testSectionId');
+    });
+
+    it('removes the query param if a section is unselected', () => {
+      const wrapper = mount(
+        <SectionSelector
+          alwaysShow={true}
+          sections={[fakeSection]}
+          scriptHasLockableStages={false}
+          scriptAllowsHiddenStages={false}
+          selectSection={() => {}}
+        />
+      );
+      wrapper.find('select').simulate('change', {target:{value: NO_SECTION}});
+      expect(codeStudioUtils.updateQueryParam)
+        .to.have.been.calledOnce
+        .and.calledWith('section_id', undefined);
+    });
+
+    it('reloads on change if prop reloadOnChange is set', () => {
+      const selectSection = sinon.spy();
+      const wrapper = mount(
+        <SectionSelector
+          alwaysShow={true}
+          sections={[fakeSection]}
+          scriptHasLockableStages={false}
+          scriptAllowsHiddenStages={false}
+          selectSection={selectSection}
+          reloadOnChange={true}
+        />
+      );
+      wrapper.find('select').simulate('change', {target:{value: 'testSectionId'}});
+      expect(utils.reload).to.have.been.calledOnce;
+      expect(selectSection).not.to.have.been.called;
+    });
+
+    it('calls selectSection on change if prop reloadOnChange is not set', () => {
+      const selectSection = sinon.spy();
+      const wrapper = mount(
+        <SectionSelector
+          alwaysShow={true}
+          sections={[fakeSection]}
+          scriptHasLockableStages={false}
+          scriptAllowsHiddenStages={false}
+          selectSection={selectSection}
+          reloadOnChange={false}
+        />
+      );
+      wrapper.find('select').simulate('change', {target:{value: 'testSectionId'}});
+      expect(selectSection).to.have.been.calledOnce.and.calledWith('testSectionId');
+      expect(utils.reload).not.to.have.been.called;
+    });
+  });
 });

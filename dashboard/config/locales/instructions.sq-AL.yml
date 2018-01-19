@@ -1499,6 +1499,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -8338,6 +8367,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -9983,6 +10015,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Bashkangjit një bllok tek blloku "kur klikon" dhe më pas
         shtyp "Ekzekuto". Kliko ose shtyp ekranin për të lëvizur Flappyn tek objektivi.
+      flappy_11_instruction: Krijo lojën tënde Flappy. Ti mund të ndryshosh të githa
+        pamjet dhe rregullat, edhe gravitetin madje. Kur të përfundosh, kliko Përfundo,
+        që të lejosh shokët të provojnë lojën tënde në telefonat e tyre.
       flappy_2_instruction: Tani kemi shtuar pjesë toke. Bashko një bllok me bllokun
         "when hit the gorund". Kodi jot duhet të 'PËRFUNDOJË LOJA" kur Flappy përplaset.
       flappy_3_instruction: Blloku "when run" të lejon ty ta ekzekutosh kodin kur
@@ -10005,9 +10040,6 @@
         për shembull, kur je duke kaluar një pengesë.
       flappy_9_instruction: Për ti përzierë gjërat, kur je duke gjuajtur një pengesë,
         në vend të mbaroni lojën provoni të vendosni pikët përsëri 0.
-      flappy_11_instruction: Krijo lojën tënde Flappy. Ti mund të ndryshosh të githa
-        pamjet dhe rregullat, edhe gravitetin madje. Kur të përfundosh, kliko Përfundo,
-        që të lejosh shokët të provojnë lojën tënde në telefonat e tyre.
       frozen circle function in circle_instruction: Tani le të krijojmë 20 rrathë
         të mbivendosur, duke kthyer 18 gradë ndërmjet çdo rrethi.
       frozen circle function with parameter_instruction: "Këtu kemi një bllok \"Krijo

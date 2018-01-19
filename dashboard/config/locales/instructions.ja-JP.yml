@@ -1010,6 +1010,35 @@
       CSD U5 black white images pixelation 4_instruction: "スマイリーフェイスに眉毛を追加(画像を表示するにはここをクリック)"
       CSD U5 black white images pixelation 5_instruction: "好きなものをかく"
       CSD U5 black white images pixelation_instruction: 0 と 1 を入力して X の形を完成させる
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -7398,6 +7427,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -9018,6 +9050,7 @@
         same!
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: "「クリックしたとき」ブロックに、「パタパタ」ブロックをくっつけて、「実行」ボタンをおしてください。クリック（またはがめんをタップ）すると、フラッピーはパタパタして、もくひょうにむかって行きます。"
+      flappy_11_instruction: "じぶんのFlappyゲームを作ってみましょう。みためやルール、じゅうりょくもすきなようにかえられます。作りおわったら、「完了」ボタンをクリックしてともだちにおしえましょう。ともだちはけいたいでんわをつかって、あなたのゲームであそぶことができます。"
       flappy_2_instruction: "いくつかの面を追加します。「面にヒットしたとき」ブロックに接続します。Flappyがクラッシュしたとき「ゲームオーバー」のコードが必要です"
       flappy_3_instruction: "「実行時」ブロック同士をくっつけておくと、ゲームがはじまったときにそのブロックのとおりにうごきます。スピードとはねのうごきのレベルをセットしてみてください"
       flappy_4_instruction: "もしクラッシュさせるコードを書かない場合、Flappyは障害物を通り抜けて飛びます。「障害物にヒットしたとき」ブロックにブロックを接続します。フラッピーが最初に設置されたパイプにクラッシュするときに「ゲーム終了」のコードが必要になります。"
@@ -9027,7 +9060,6 @@
       flappy_8_instruction: |
         ゲームが開始した以外にもいつでもビジュアルを設定できます。例えば、障害物を過ぎたとき、などの状況が起こるランダムな状況を設定するようにしてください
       flappy_9_instruction: "色々な組み合わせを試してみましょう。障害物や地面にヒットした時に、ゲーム終了のかわりにスコアが0にもどるように設定して下さい。"
-      flappy_11_instruction: "じぶんのFlappyゲームを作ってみましょう。みためやルール、じゅうりょくもすきなようにかえられます。作りおわったら、「完了」ボタンをクリックしてともだちにおしえましょう。ともだちはけいたいでんわをつかって、あなたのゲームであそぶことができます。"
       frozen circle function in circle_instruction: "では、20このかさなったまるをかいてみましょう。それぞれのまるをかくたびに18ど、かいてんさせてみようね。"
       frozen circle function with parameter_instruction: "さまざまなおおきさのえんをかくことができる、「えんをかく」ブロックがあるわ。このブロックをつかって、サイズ5のちいさいえんとサイズ10のおおきいえんをつくることができるかしら？"
       frozen circle function_instruction: "「えんをつくる」ブロックをつかって、10このかさなったえんをかきましょう。えんとえんのあいだをまえにジャンプすることをわすれないでね。"
