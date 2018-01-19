@@ -59,6 +59,7 @@ select.ng-invalid-required + span.required {
     position: fixed;
     bottom: 0;
     opacity: 0.8;
+    z-index: 1040;
   }
   .modal {
     position: fixed;
