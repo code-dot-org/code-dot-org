@@ -28,11 +28,11 @@ end
 # Checks that CDO.github_access_token and CDO.slack_token are defined. If not,
 # exits the program.
 def check_for_cdo_keys
-  return if CDO.github_access_token && CDO.slack_token && CDO.honeybadger_api_token
+  return if CDO.github_access_token && CDO.slack_token && CDO.honeybadger_api_token && CDO.devinternal_db_writer
 
   puts <<-EOS.unindent
 
-    This script requires CDO.github_access_token, CDO.slack_token, and CDO.honeybadger_api_token.
+    This script requires CDO.github_access_token, CDO.slack_token, and CDO.honeybadger_api_token AND CDO.devinternal_db_writer.
 
     Create your API tokens from these pages:
 
@@ -41,6 +41,10 @@ def check_for_cdo_keys
       https://app.honeybadger.io/users/edit#authentication
 
     Please add them to your locals.yml and rerun the script.
+
+    ********
+    NEW (Jan. 2018): You need to have devinternal_db_writer set in your locals.yml so that your DOTD actions will log to the metrics table. If you don't have it yet, check with Erin Bond.
+    ********
 
   EOS
   exit
