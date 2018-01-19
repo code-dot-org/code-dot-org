@@ -36,8 +36,8 @@
     "disable_if_else_editing": "false",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Collect can be our Harvest, but we also need a Plant block as well as an if statement checking to see if there is already a crop planted in the location (right now I am using Fill and If there is a hole to represent the needed blocks)\r\nWe will need to make a drop down menu on the crop blocks to specify which crop (wheat, potatoes, or carrots)\r\nWe will also need the crops to be able to grow to ripeness and only show a 1 when they are ripe\r\n",

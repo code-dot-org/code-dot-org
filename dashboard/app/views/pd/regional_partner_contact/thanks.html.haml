@@ -3,7 +3,9 @@
 
   Your local Code.org Regional Partner is
   = "#{@regional_partner.name}."
-  If you are a teacher interested in our professional learning program, we'll contact you as soon as applications open in early 2018. If you are an administrator, a representative from
+  If you are a teacher interested in our professional learning program, please visit our
+  = link_to 'Professional Learning page', CDO.code_org_url('/educate/professional-learning-2018')
+  to learn about the opportunities that exist in your region. If you are an administrator, a representative from
   = @regional_partner.name
   will reach out to contact you about options for your school or district.
 
@@ -12,9 +14,11 @@
   available for no cost to all schools.
 - else
   %p
-    Thank you! If you are a teacher interested in our professional learning program, we will contact you as soon as applications open in early 2018.
+    Thank you! If you are a teacher, please visit our
+    = link_to 'Professional Learning page', CDO.code_org_url('/educate/professional-learning-2018')
+    to learn about the opportunities that exist in your region.
   %p
-    If you are a school or district administrator, we don't currently have a local contact for you. We are in the process of onboarding 18 new partners serving 20 new states, and we will be able to get you in touch with these partners in early 2018. We'll let you know as soon we are able to send your message to our new partners. If the new states still don't cover your area, we will keep your interest form and forward it to a Regional Partner in your community if and when they become available.
+    If you are a school or district administrator, we don't currently have a local contact for you. We are continuing to expand into more regions every year and will forward your message to a Regional Partner in your community if and when they become available.
 
   In the meantime, take a look
   = link_to 'here for the K-12 Code.org curriculum options', courses_path
