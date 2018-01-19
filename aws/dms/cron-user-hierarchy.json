@@ -382,8 +382,8 @@
       "rule-target": "column",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "user_geos",
-        "column-name": "ip_address"
+        "table-name": "users",
+        "column-name": "parent_email"
       }
     },
     {
@@ -395,7 +395,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "user_geos",
-        "column-name": "latitude"
+        "column-name": "ip_address"
       }
     },
     {
@@ -407,7 +407,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "user_geos",
-        "column-name": "longitude"
+        "column-name": "latitude"
       }
     },
     {
@@ -418,8 +418,8 @@
       "rule-target": "column",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "studio_people",
-        "column-name": "emails"
+        "table-name": "user_geos",
+        "column-name": "longitude"
       }
     },
     {
@@ -430,8 +430,8 @@
       "rule-target": "column",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "users",
-        "column-name": "parent_email"
+        "table-name": "studio_people",
+        "column-name": "emails"
       }
     }
   ]

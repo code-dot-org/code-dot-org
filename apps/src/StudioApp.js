@@ -307,7 +307,7 @@ StudioApp.prototype.init = function (config) {
             }}
         />
         <FinishDialog
-          handleClose={() => this.onContinue()}
+          onContinue={() => this.onContinue()}
         />
       </div>
     </Provider>,
@@ -1445,7 +1445,7 @@ StudioApp.prototype.displayFeedback = function (options) {
       const store = getStore();
       store.dispatch(setFeedbackData({
         isPerfect: feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT,
-        blocksUsed: this.feedback_.getNumBlocksUsed(),
+        blocksUsed: this.feedback_.getNumCountableBlocks(),
         achievements: [
           {
             isAchieved: true,
