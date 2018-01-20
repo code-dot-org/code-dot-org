@@ -250,11 +250,19 @@ class ApiController < ApplicationController
     section = load_section
     script = load_script(section)
 
+    data = {}
+    # TODO: This could likely be constructed more efficiently. At the very least,
+    # instead of asking for a summary, and then using only one portion of it (levels)
+    # we could probably expose a way to get just levels and have it be in the same
+    # form as user_progress. However, we might be able to do even better and query
+    # all the data that we need in a single db request
     # TODO: We'll want to support some form of pagination for this API. One option
     # would be to imitate the approach used by the section_progress API, however
     # that has some limitations and was largely meant as a quick and dirty fix for
     # pagination when it was implemented
-    data = get_level_progress(section.students, script)
+    section.students.each do |student|
+      data[student.id] = summarize_user_progress(script, student)[:levels]
+    end
     render json: data
   end
 
