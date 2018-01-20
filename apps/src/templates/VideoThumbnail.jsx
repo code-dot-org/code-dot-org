@@ -1,8 +1,8 @@
 import {showVideoDialog} from "@cdo/apps/code-studio/videos";
 import React, {Component, PropTypes} from 'react';
 import {videoDataShape} from './types';
-import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   videoLink: {
@@ -46,7 +46,7 @@ export default class VideoThumbnail extends Component {
             enable_fallback: video.enable_fallback,
             autoplay: video.autoplay,
           }, true);
-          if (experiments.isEnabled('resources_tab') && this.props.logText){
+          if ((experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab')) && this.props.logText){
             firehoseClient.putRecord(
               'analysis-events',
               {
