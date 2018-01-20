@@ -5,7 +5,7 @@ class ReplacePlaceholderCspWorkshopSubjects < ActiveRecord::Migration[5.0]
     {from: 'Workshop 2', to: 'Units 2 and 3: Processing data, Algorithms, and Programming'},
     {from: 'Workshop 3', to: 'Units 4 and 5: Big Data, Privacy, and Building Apps'},
     {from: 'Workshop 4', to: 'Units 5 and 6: Building Apps and AP Assessment Prep'},
-  ]
+  ].freeze
 
   def up
     SUBJECT_NAMES.each do |subject_name|
