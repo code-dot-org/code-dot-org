@@ -203,7 +203,7 @@ export class QuickViewTable extends React.Component {
         rows = rows.filter(row => row.regional_partner_id === this.props.regionalPartnerFilter);
       }
     }
-    rows = this.props.statusFilter ? rows.filter(row => row.status === this.props.statusFilter) : rows;
+    rows = !!this.props.statusFilter ? rows.filter(row => row.status === this.props.statusFilter) : rows;
     return rows;
   }
 

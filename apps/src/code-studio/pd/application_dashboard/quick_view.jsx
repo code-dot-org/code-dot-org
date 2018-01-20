@@ -54,7 +54,7 @@ export class QuickView extends React.Component {
   state = {
     loading: true,
     applications: null,
-    filter: null,
+    filter: '',
     regionalPartnerName: this.props.regionalPartnerName,
     regionalPartnerFilter: null
   };
@@ -74,7 +74,7 @@ export class QuickView extends React.Component {
 
     const statusList = ApplicationStatuses[this.props.route.viewType];
     this.statuses = statusList.map(v => ({value: v.toLowerCase(), label: v}));
-    this.statuses.unshift({value: null, label: "\u00A0"});
+    this.statuses.unshift({value: '', label: "All Statuses"});
   }
 
   getApiUrl = (format = '') => `/api/v1/pd/applications/quick_view${format}?role=${this.props.route.path}`;
@@ -129,6 +129,7 @@ export class QuickView extends React.Component {
                 placeholder={null}
                 options={this.statuses}
                 style={styles.select}
+                clearable={false}
                 {...SelectStyleProps}
               />
             </FormGroup>
