@@ -260,7 +260,7 @@ var TopInstructions = React.createClass({
                 headerHasFocus={false}
                 onClick={this.handleDocumentationClick}
               />}
-            {experiments.isEnabled('resources_tab') &&
+            {(experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab')) &&
               <div style={styles.helpTabs}>
                 <InstructionsTab
                   className="uitest-instructionsTab"
@@ -283,7 +283,7 @@ var TopInstructions = React.createClass({
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}
               />}
-            {!experiments.isEnabled('resources_tab') &&
+            {(!experiments.isEnabled('resources_tab') || !experiments.isEnabled('resourcesTab')) &&
               <div style={styles.title}>
                 {msg.puzzleTitle({
                   stage_total: this.props.stageTotal,

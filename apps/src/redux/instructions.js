@@ -162,7 +162,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
 export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
     shortInstructions, shortInstructions2, longInstructions,
     hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown, levelVideos,
-    app, scriptName, stagePosition, levelPosition, serverLevelId, scriptId}) => ({
+    app, scriptName, stagePosition, levelPosition, serverLevelId, scriptId }) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
   hasInlineImages,
@@ -287,7 +287,7 @@ export const determineInstructionsConstants = config => {
     stagePosition,
     levelPosition,
     serverLevelId,
-    scriptId } = config;
+    scriptId  } = config;
   const {
     instructions,
     instructions2,
