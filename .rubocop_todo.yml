@@ -228,11 +228,6 @@ Rails/Presence:
 Rails/Present:
   Enabled: false
 
-# Offense count: 11
-# Cop supports --auto-correct.
-Rails/RedundantReceiverInWithOptions:
-  Enabled: false
-
 # Offense count: 90
 # Configuration parameters: Blacklist.
 # Blacklist: decrement!, decrement_counter, increment!, increment_counter, toggle!, touch, update_all, update_attribute, update_column, update_columns, update_counters
