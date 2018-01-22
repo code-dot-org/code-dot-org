@@ -37,7 +37,7 @@ export default class TeacherHomepage extends Component {
 
   bindCensusBanner = (banner) => {
     this.censusBanner = banner;
-  }
+  };
 
   handleCensusBannerTeachesChange(event) {
     this.setState({censusBannerTeachesSelection: (event.target.id==="teachesYes")});
@@ -63,13 +63,13 @@ export default class TeacherHomepage extends Component {
   handleCensusSubmitSuccess = () => {
     this.setState({censusSubmittedSuccessfully: true});
     this.dismissCensusBanner(null, this.logDismissCensusBannerError);
-  }
+  };
 
   handleCensusSubmitError = () => {
     this.setState({
       showCensusUnknownError: true,
     });
-  }
+  };
 
   dismissCensusBanner(onSuccess, onFailure) {
     $.ajax({
@@ -80,13 +80,13 @@ export default class TeacherHomepage extends Component {
 
   logDismissCensusBannerError = (xhr) => {
     console.error(`Failed to dismiss future census banner! ${xhr.responseText}`);
-  }
+  };
 
   hideCensusBanner= () =>  {
     this.setState({
       showCensusBanner: false,
     });
-  }
+  };
 
   dismissAndHideCensusBanner() {
     this.dismissCensusBanner(this.hideCensusBanner, this.handleDismissAndHideCensusBannerError);
@@ -95,7 +95,7 @@ export default class TeacherHomepage extends Component {
   handleDismissAndHideCensusBannerError = (xhr) => {
     this.logDismissCensusBannerError(xhr);
     this.hideCensusBanner();
-  }
+  };
 
   postponeCensusBanner() {
     $.ajax({
@@ -107,7 +107,7 @@ export default class TeacherHomepage extends Component {
   handlePostponeCensusBannerError = (xhr) => {
     console.error(`Failed to postpone census banner! ${xhr.responseText}`);
     this.hideCensusBanner();
-  }
+  };
 
   componentDidMount() {
     // The component used here is implemented in legacy HAML/CSS rather than React.

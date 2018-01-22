@@ -1,3 +1,6 @@
+<%
+require 'cdo/aws/dms'
+-%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: Data layer for Tableau including RedShift cluster configuration and synchronization with RDS instance.
@@ -14,6 +17,8 @@ Parameters:
   RDSPassword:
     Type: String
     NoEcho: true
+  RDSHost:
+    Type: String
   RedshiftDatabase:
     Type: String
     Default: dashboard
@@ -42,3 +47,50 @@ Resources:
       NodeType: dc1.large
       PubliclyAccessible: true
       VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
+  TableauSync:
+    Type: AWS::DMS::ReplicationInstance
+    Properties:
+      AllocatedStorage: 250
+      EngineVersion: 2.4.0
+      MultiAZ: true
+      PubliclyAccessible: false
+      ReplicationInstanceClass: dms.c4.4xlarge
+      ReplicationInstanceIdentifier: !Ref AWS::StackName
+      ReplicationSubnetGroupIdentifier: !ImportValue VPC-DMSSubnetGroup
+      VpcSecurityGroupIds: [!ImportValue VPC-DMSSecurityGroup]
+  RDSEndpoint:
+    Type: AWS::DMS::Endpoint
+    Properties:
+      EndpointIdentifier: !Sub "RDS-${AWS::StackName}"
+      EndpointType: source
+      EngineName: mysql
+      ServerName: !Ref RDSHost
+      Port: 3306
+      Username: !Ref RDSUsername
+      Password: !Ref RDSPassword
+  RedshiftEndpoint:
+    Type: AWS::DMS::Endpoint
+    Properties:
+      EndpointIdentifier: !Sub "Redshift-${AWS::StackName}"
+      EndpointType: target
+      EngineName: redshift
+      ServerName: !GetAtt Tableau.Endpoint.Address
+      Port: !GetAtt Tableau.Endpoint.Port
+      Username: !Ref RedshiftUsername
+      Password: !Ref RedshiftPassword
+      DatabaseName: !Ref RedshiftDatabase
+      ExtraConnectionAttributes: maxFileSize=1048576;fileTransferUploadStreams=20
+<% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings| -%>
+  DMS<%=task_name.underscore.camelize%>:
+    Type: AWS::DMS::ReplicationTask
+    Properties:
+      MigrationType: full-load-and-cdc
+      ReplicationInstanceArn: !Ref TableauSync
+      ReplicationTaskIdentifier: <%= task_name %>
+      SourceEndpointArn: !Ref RDSEndpoint
+      TargetEndpointArn: !Ref RedshiftEndpoint
+      ReplicationTaskSettings: !Sub |
+        <%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>
+      TableMappings: !Sub |
+        <%= table_mappings.to_json %>
+<% end -%>

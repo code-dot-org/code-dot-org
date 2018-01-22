@@ -83,7 +83,6 @@ describe('feedback redux module', () => {
       expect(newState).to.deep.equal({
         isPerfect: true,
         blocksUsed: 19,
-        achievements: undefined,
         displayFunometer: false,
         studentCode: 'console.log("hello world!");',
         canShare: true,
