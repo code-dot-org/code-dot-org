@@ -9,7 +9,7 @@ module Cdo
         rules = []
         remove_rules = []
 
-        schemas = task.map do |schema|
+        task.each do |schema|
           properties = nil
           schema, properties = schema.first if schema.is_a?(Hash)
           schema, table = schema.split '.'
@@ -40,25 +40,23 @@ module Cdo
               }
             end
           end
-
-          schema
         end
+
+        rules.concat remove_rules
 
         # Migrate `-pii` tasks to alternative schema using transformation rule.
         if task_name.end_with? '-pii'
-          schemas.uniq.each do |schema|
-            rules << {
-              'rule-type': 'transformation',
-              'rule-action': 'rename',
-              'rule-target': 'schema',
-              'object-locator': {'schema-name': schema},
-              'value': "#{schema}_pii"
-            }
-          end
+          rules << {
+            'rule-type': 'transformation',
+            'rule-action': 'add-suffix',
+            'rule-target': 'schema',
+            'object-locator': {'schema-name': '%'},
+            'value': '_pii'
+          }
         end
 
         # Add auto-increment rule-name and rule-id keys in specific order.
-        rules = rules.concat(remove_rules).map.with_index do |rule, index|
+        rules = rules.map.with_index do |rule, index|
           rule.to_a.
             insert(1, ['rule-name', (index + 1).to_s]).
             insert(1, ['rule-id', (index + 1).to_s]).
