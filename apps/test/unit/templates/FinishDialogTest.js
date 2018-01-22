@@ -13,7 +13,7 @@ describe('FinishDialog', () => {
         showFunometer
       />
     );
-    expect(result.find('div.uitest-bubble').props().style.backgroundColor).to.equal(color.level_perfect);
+    expect(result.find('div.uitest-bubble').props().style.backgroundColor).to.equal(color.white);
     expect(result.find('PuzzleRatingButtons')).to.have.length(1);
   });
 });

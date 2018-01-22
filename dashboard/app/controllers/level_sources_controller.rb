@@ -80,7 +80,7 @@ class LevelSourcesController < ApplicationController
   protected
 
   def set_level_source
-    reset_abuse_user = current_user && current_user.permission?(UserPermission::RESET_ABUSE)
+    reset_abuse_user = current_user && current_user.permission?(UserPermission::PROJECT_VALIDATOR)
     # Depending on the url route, one of params[:level_source_id_and_user_id] (for /r/ links) or
     # params[:id] (for /c/ links) is set. For the former, deobfuscate the level_source_id.
     level_source_id =

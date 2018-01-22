@@ -29,7 +29,7 @@ export default class CompletableLevelThumbnail extends React.Component {
     children: PropTypes.element.isRequired,
     size: PropTypes.number,
     completed: PropTypes.bool,
-  }
+  };
 
   render() {
     const scale = (this.props.size || 400) / 400;

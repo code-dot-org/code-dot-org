@@ -45,7 +45,7 @@ export default class DetailView extends React.Component {
         loading: false
       });
     });
-  }
+  };
 
   updateData = (newProps) => {
     this.setState({

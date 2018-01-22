@@ -17,7 +17,7 @@ export class Summary extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string.isRequired,
     isWorkshopAdmin: PropTypes.bool
-  }
+  };
 
   static contextTypes = {
     router: PropTypes.object.isRequired

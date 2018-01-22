@@ -1491,6 +1491,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -8509,6 +8538,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -10153,6 +10185,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Liga un bloque ao bloque "cando premer" e, despois, preme
         en "Executar". Para moveres o paxariño até ao obxetivo, preme na pantalla.
+      flappy_11_instruction: Cree seu propio xogo Flappy Bird. Pode mudar o visual
+        e todas as regras, até mesmo a gravidade. Cando terminar, clic en Concluír
+        para que seus amigos xoguen seu xogo nos seus teléfonos móbeis.
       flappy_2_instruction: Agora pasamos a ter chan. Liga un bloque ao bloque "cando
         bater no chan". O teu código ten que TERMINAR O XOGO' cando o paxariño caer
         ao chan.
@@ -10176,9 +10211,6 @@
         por exemplo, ao pasar un obstáculo.
       flappy_9_instruction: Para mesturar as cousas, ao contrario de terminar o xogo
         cando bater nun obstáculo, tente facer a puntuación volver a 0.
-      flappy_11_instruction: Cree seu propio xogo Flappy Bird. Pode mudar o visual
-        e todas as regras, até mesmo a gravidade. Cando terminar, clic en Concluír
-        para que seus amigos xoguen seu xogo nos seus teléfonos móbeis.
       frozen circle function in circle_instruction: |-
         Agora imos crear 20 círculos
         sobrepostos, virando 18 graos entre cada círculo.

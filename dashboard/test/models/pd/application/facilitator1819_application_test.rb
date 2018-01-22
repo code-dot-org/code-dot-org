@@ -70,14 +70,13 @@ module Pd::Application
       application_hash = build :pd_facilitator1819_application_hash
       application_hash[:institution_type] = ['School district', 'Other:']
       application_hash[:institution_type_other] = 'School of Witchcraft and Wizardry'
-      application = build :pd_facilitator1819_application, form_data_hash: application_hash
 
       assert_equal(
         [
           'School district',
           'Other: School of Witchcraft and Wizardry'
         ],
-        application.answer_with_additional_text(application_hash, :institution_type)
+        Facilitator1819Application.answer_with_additional_text(application_hash, :institution_type)
       )
     end
 
@@ -86,13 +85,12 @@ module Pd::Application
       application_hash = build :pd_facilitator1819_application_hash
       application_hash[:how_heard] = [OPTION]
       application_hash[:how_heard_regional_partner] = 'Hogwarts Coding Wizards'
-      application = build :pd_facilitator1819_application, form_data_hash: application_hash
 
       assert_equal(
         [
           "#{OPTION} Hogwarts Coding Wizards"
         ],
-        application.answer_with_additional_text(application_hash, :how_heard, OPTION, :how_heard_regional_partner)
+        Facilitator1819Application.answer_with_additional_text(application_hash, :how_heard, OPTION, :how_heard_regional_partner)
       )
     end
 
@@ -154,6 +152,64 @@ module Pd::Application
         application.update(status: status)
         application.send_decision_notification_email
       end
+    end
+
+    test 'locking an application with fit_workshop_id automatically enrolls user' do
+      application = create :pd_facilitator1819_application
+      workshop = create :pd_workshop
+
+      application.fit_workshop_id = workshop.id
+      application.status = "accepted"
+
+      assert_creates(Pd::Enrollment) do
+        application.lock!
+      end
+      assert_equal Pd::Enrollment.last.workshop, workshop
+      assert_equal Pd::Enrollment.last.id, application.auto_assigned_fit_enrollment_id
+    end
+
+    test 'updating and re-locking an application with an auto-assigned FIT enrollment will delete old enrollment' do
+      application = create :pd_facilitator1819_application
+      first_workshop = create :pd_workshop
+      second_workshop = create :pd_workshop
+
+      application.fit_workshop_id = first_workshop.id
+      application.status = "accepted"
+      application.lock!
+
+      first_enrollment = Pd::Enrollment.find(application.auto_assigned_fit_enrollment_id)
+
+      application.unlock!
+      application.fit_workshop_id = second_workshop.id
+      application.lock!
+
+      assert first_enrollment.reload.deleted?
+      assert_not_equal first_enrollment.id, application.auto_assigned_fit_enrollment_id
+    end
+
+    test 'upading the application to unaccepted will also delete the autoenrollment' do
+      application = create :pd_facilitator1819_application
+      workshop = create :pd_workshop
+
+      application.fit_workshop_id = workshop.id
+      application.status = "accepted"
+      application.lock!
+      first_enrollment = Pd::Enrollment.find(application.auto_assigned_fit_enrollment_id)
+
+      application.unlock!
+      application.status = "waitlisted"
+      application.lock!
+
+      assert first_enrollment.reload.deleted?
+
+      application.unlock!
+      application.status = "accepted"
+
+      assert_creates(Pd::Enrollment) do
+        application.lock!
+      end
+
+      assert_not_equal first_enrollment.id, application.auto_assigned_fit_enrollment_id
     end
   end
 end

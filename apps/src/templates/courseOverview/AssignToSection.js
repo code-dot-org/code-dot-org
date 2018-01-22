@@ -33,18 +33,18 @@ class AssignToSection extends Component {
   state = {
     sectionIndexToAssign: null,
     errorString: null
-  }
+  };
 
   onClickCourse = event => {
     const sectionIndex = event.target.getAttribute('data-section-index');
     this.setState({
       sectionIndexToAssign: sectionIndex
     });
-  }
+  };
 
   onCloseDialog = event => {
     this.setState({sectionIndexToAssign: null});
-  }
+  };
 
   updateCourse = () => {
     const section = this.props.sectionsInfo[this.state.sectionIndexToAssign];
@@ -67,11 +67,11 @@ class AssignToSection extends Component {
         errorString: i18n.unexpectedError()
       });
     });
-  }
+  };
 
   acknowledgeError = () => {
     this.setState({errorString: null});
-  }
+  };
 
   render() {
     const { courseId, scriptId, assignmentName, sectionsInfo } = this.props;

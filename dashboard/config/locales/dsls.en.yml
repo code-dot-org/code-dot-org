@@ -758,6 +758,7 @@ en:
       CSD U6 LED create intro:
         Make an App Using the LED: Make an App Using the LED
         description here: description here
+      CSD U6 circuit smart bike blinker build: {}
       CSD U6 game project stop: {}
       CSD U6 tugowar stop: {}
       CSD U6L03 Overview: {}
@@ -10246,8 +10247,8 @@ en:
         Laurel will collect 4 pieces of treasure using this code.: Laurel will collect 4 pieces of treasure using this code.
         Laurel will collect all of the treasure.: Laurel will collect all of the treasure.
         Laurel will only be able to collect 2 pieces of treasure using this code.: Laurel will only be able to collect 2 pieces of treasure using this code.
-        ? Look closely at the code below.  If the code were to run all the way to the end, how many pieces of treasure would Laurel collect?
-        : Look closely at the code below.  If the code were to run all the way to the end, how many pieces of treasure would Laurel collect?
+        ? Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?
+        : Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?
       image code from circle:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         "(rectangle (+ 8 2) (- 7 5) solid red)": "(rectangle (+ 8 2) (- 7 5) solid red)"

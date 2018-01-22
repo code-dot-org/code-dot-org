@@ -9,15 +9,20 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
   end
 
   def new
-    # TODO: elijah create the Facilitator and Partner versions of this form and
-    # remove this requirement
-    if @application.application_type != "Teacher"
+    # TODO: elijah create the Partner version of this form and remove this
+    # requirement
+    unless @application.application_type == "Teacher" || @application.application_type == "Facilitator"
       render :invalid
       return
     end
 
     if Pd::Teachercon1819Registration.exists?(pd_application_id: @application.id)
       @registration = Pd::Teachercon1819Registration.find_by(pd_application_id: @application)
+      @email = {
+        'Teacher' => 'teacher@code.org',
+        'Facilitator' => 'facilitators@code.org',
+        'Partner' => 'partner@code.org'
+      }[@application.application_type]
       render :submitted
       return
     end

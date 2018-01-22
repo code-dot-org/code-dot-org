@@ -30,7 +30,7 @@ describe('getContainedLevelResultInfo', () => {
   let gameButtons;
   let attemptedRunButtonClickListener;
 
-  before(() => {
+  beforeEach(() => {
     sinon.stub(codeStudioLevels, 'getContainedLevelResult')
         .returns(containedLevelResult);
     sinon.stub(codeStudioLevels, 'hasValidContainedLevelResult');
@@ -48,9 +48,7 @@ describe('getContainedLevelResultInfo', () => {
       store: getStore(),
     }), gameButtons);
     document.body.appendChild(gameButtons);
-  });
 
-  beforeEach(() => {
     sinon.stub(codeStudioLevels, 'lockContainedLevelAnswers');
     sinon.stub(codeStudioLevels, 'registerAnswerChangedFn');
     sinon.stub(callouts, 'addCallouts');
@@ -63,9 +61,7 @@ describe('getContainedLevelResultInfo', () => {
     codeStudioLevels.registerAnswerChangedFn.restore();
     callouts.addCallouts.restore();
     $(window).off('attemptedRunButtonClick', attemptedRunButtonClickListener);
-  });
 
-  after(() => {
     codeStudioLevels.getContainedLevelResult.restore();
     codeStudioLevels.hasValidContainedLevelResult.restore();
     restoreRedux();

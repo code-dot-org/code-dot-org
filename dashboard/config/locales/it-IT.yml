@@ -896,9 +896,10 @@
     hide_survey_last_answer: Questo sondaggio è anonimo. Puoi consultare i risultati
       aggregati sul cruscotto di controllo dell’ insegnante. I risultati vengono visualizzati
       solo se almeno cinque studenti hanno risposto.
-    survey_submission_thankyou: Thank you for submitting this survey! The survey has
-      been cleared so that your responses stay anonymous. Note that your teacher will
-      still be able to see responses for the whole class, but without names attached.
+    survey_submission_thankyou: Grazie per aver presentato questo sondaggio! Abbiamo
+      fatto in modo che le risposte rimangano anonime. Tieni conto che il tuo insegnante
+      sarà ancora in grado di vedere le risposte di tutta la classe, ma senza i nomi
+      associati alle risposte.
   level_group-submittable:
     wrong_title: Grazie!
     wrong_body: Grazie per aver inviato delle risposte.

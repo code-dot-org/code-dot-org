@@ -1294,6 +1294,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -7955,6 +7984,9 @@
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -9595,6 +9627,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Додай блок до блоку "коли клацнули", а тоді запусти програму.
         Клацай чи торкайся екрану для того, щоб Пурх дістався до цілі.
+      flappy_11_instruction: "Створи свою власну гру в Пурха (Flappy). Можна змінити
+        всі візуальні ефекти і правила гри, навіть силу тяжіння! По завершенню, натисни
+        кнопку Кінець, щоб дозволити друзям спробувати вашу гру на своїх телефонах."
       flappy_2_instruction: Тож ми додали землю. Додайте блок до блоку "коли впав
         на землю". Ваш код має завершувати гру, коли Пурх розбивається.
       flappy_3_instruction: Блок "коли гра починається" дозволяє запускати певний
@@ -9614,9 +9649,6 @@
         інші події, наприклад, при проходженні перешкоди."
       flappy_9_instruction: "Щоб ускладнити, замість завершення гри при ударі в перешкоду,
         змінимо набрані бали на нуль."
-      flappy_11_instruction: "Створи свою власну гру в Пурха (Flappy). Можна змінити
-        всі візуальні ефекти і правила гри, навіть силу тяжіння! По завершенню, натисни
-        кнопку Кінець, щоб дозволити друзям спробувати вашу гру на своїх телефонах."
       frozen circle function in circle_instruction: "А тепер створимо 20 кіл, котрі
         накладаються, повертаючи на 18 градусів між колами."
       frozen circle function with parameter_instruction: Ось блок "Створити коло",

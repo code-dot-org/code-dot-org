@@ -185,6 +185,8 @@ module Teacher1819ApplicationConstants
     regional_partner_name: YES_NO,
     previous_yearlong_cdo_pd: YES_NO,
     committed: YES_NO,
+    able_to_attend_single: YES_NO,
+    able_to_attend_multiple: YES_NO,
     csp_which_grades: YES_NO,
     csp_course_hours_per_year: YES_NO,
     csd_which_grades: YES_NO,
@@ -209,4 +211,16 @@ module Teacher1819ApplicationConstants
     VALID_SCORES.select {|_, v| v == YES_NO}.keys -
       [:csp_how_offer, :csp_which_grades, :csp_course_hours_per_year]
   ).freeze
+
+  TEXT_FIELDS = {
+    other_with_text: 'Other:'.freeze,
+    other_please_list: 'Other (Please List):'.freeze,
+    other_please_explain: 'Other (Please Explain):'.freeze,
+    not_teaching_this_year: "I'm not teaching this year (Please Explain):".freeze,
+    not_teaching_next_year: "I'm not teaching next year (Please Explain):".freeze,
+    dont_know_if_i_will_teach_explain: "I don't know if I will teach this course (Please Explain):".freeze,
+    unable_to_attend: "No, I'm unable to attend (please explain):".freeze,
+    no_explain: "No (Please Explain):".freeze,
+    no_pay_fee: "No, my school or I will not be able to pay the summer workshop program fee.".freeze
+  }.freeze
 end

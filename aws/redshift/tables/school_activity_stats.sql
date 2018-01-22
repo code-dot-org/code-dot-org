@@ -4,7 +4,7 @@ drop table if exists analysis.school_activity_stats;
 CREATE table analysis.school_activity_stats AS
   SELECT ss.school_id,
          rpsd.regional_partner_id,
-         rp.name regional_partner,
+         case when rp.name = 'mindSpark Learning' then 'mindSpark Learning and Colorado Education Initiative' else rp.name end as regional_partner,
          ss.school_name,
          ss.city,
          ss.state,

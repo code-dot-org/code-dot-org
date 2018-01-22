@@ -234,19 +234,18 @@ module RakeUtils
   end
 
   def self.npm_install(*args)
-    sudo = CDO.npm_use_sudo ? 'sudo' : ''
+    frozen_lockfile = ENV['CI'] ? '--frozen-lockfile' : ''
     commands = []
     commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
-    commands += "#{sudo} yarn".split
+    commands += " yarn #{frozen_lockfile}".split
     commands += args
     RakeUtils.system(*commands)
   end
 
   def self.npm_rebuild(*args)
-    sudo = CDO.npm_use_sudo ? 'sudo' : ''
     commands = []
     commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
-    commands += "#{sudo} npm rebuild".split
+    commands += " npm rebuild".split
     commands += args
     RakeUtils.system(*commands)
   end
