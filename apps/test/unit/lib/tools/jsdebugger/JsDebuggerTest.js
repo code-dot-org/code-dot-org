@@ -8,10 +8,12 @@ import {actions, reducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
+import {sandboxDocumentBody} from "../../../../util/testUtils";
 
 describe('The JSDebugger component', () => {
   let root, jsDebugger, addEventSpy, removeEventSpy, codeApp;
   const getBodyEventSpies = spyOnBodyEventMethods();
+  sandboxDocumentBody();
 
   beforeEach(() => {
     stubRedux();
@@ -55,8 +57,8 @@ describe('The JSDebugger component', () => {
   });
 
   afterEach(() => {
+    root.unmount();
     restoreRedux();
-    document.body.removeChild(codeApp);
   });
 
   const debugAreaEl = () => root.find('#debug-area').get(0);
