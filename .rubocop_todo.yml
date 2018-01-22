@@ -124,11 +124,6 @@ Lint/UnusedMethodArgument:
 Lint/UriEscapeUnescape:
   Enabled: false
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Lint/UriRegexp:
-  Enabled: false
-
 # Offense count: 7
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: lowercase, uppercase
@@ -139,12 +134,6 @@ Naming/HeredocDelimiterCase:
 # Configuration parameters: Blacklist.
 # Blacklist: END, (?-mix:EO[A-Z]{1})
 Naming/HeredocDelimiterNaming:
-  Enabled: false
-
-# Offense count: 2
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: snake_case, camelCase
-Naming/VariableName:
   Enabled: false
 
 # Offense count: 173
