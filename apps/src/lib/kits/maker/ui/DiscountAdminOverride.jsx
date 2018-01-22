@@ -61,7 +61,7 @@ export default class DiscountAdminOverride extends Component {
         submitting: false
       });
     });
-  }
+  };
 
   /**
    * Updates our local state based on data received from the server, either from
@@ -108,13 +108,13 @@ export default class DiscountAdminOverride extends Component {
         submitting: false
       });
     });
-  }
+  };
 
   handleOverrideChange = event => {
     this.setState({
       overrideValue: event.target.value
     });
-  }
+  };
 
   render() {
     return (
