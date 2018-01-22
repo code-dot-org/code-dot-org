@@ -85,17 +85,17 @@ export default class EligibilityChecklist extends Component {
     this.setState({
       discountAmount: fullDiscount ? "$0" : "$97.50"
     });
-  }
+  };
 
   handleUnit6Submitted = eligible => {
     this.setState({
       statusYear: eligible ? Status.SUCCEEDED : Status.FAILED,
     });
-  }
+  };
 
-  confirmEligibility = () => this.setState({confirming: true})
+  confirmEligibility = () => this.setState({confirming: true});
 
-  handleCancelDialog = () => this.setState({confirming: false})
+  handleCancelDialog = () => this.setState({confirming: false});
 
   handleSuccessDialog = (discountCode, expiration) => {
     this.setState({discountCode, expiration});

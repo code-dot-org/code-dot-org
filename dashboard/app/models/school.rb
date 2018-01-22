@@ -74,6 +74,10 @@ class School < ActiveRecord::Base
     stub_school_data ? 'test/fixtures/schools.tsv' : 'config/schools.tsv'
   end
 
+  def self.construct_state_school_id(state_code, district_id, school_id)
+    "#{state_code}-#{district_id}-#{school_id}"
+  end
+
   # Seeds all the data from the source file.
   # @param options [Hash] Optional map of options.
   def self.seed_all(options = {})
@@ -93,6 +97,139 @@ class School < ActiveRecord::Base
       CDO.log.debug "seeding schools (#{expected_count} rows)"
       School.transaction do
         merge_from_csv(schools_tsv)
+      end
+    end
+  end
+
+  def self.seed_from_s3
+    # NCES school data has been built up in the DB over time by pulling in different
+    # data files. This seeding recreates the order in which they we incorporated.
+    # NOTE: we are intentionally not populating the state_school_id based on the
+    # 2014-2015 preliminary or 2013-2014 public/charter data sets. Those files
+    # containt duplicate entries where some schools appear to be listed more than
+    # once but with different NCES ids. Since state_school_id needs to be unique
+    # the seeding would fail if we tried to set the state ids from those files.
+    # The 2014-2015 public/charter data does not have this issue so we do load the
+    # state_school_ids from there.
+    School.transaction do
+      CDO.log.info "Seeding 2014-2015 PRELIMINARY public and charter school data."
+      # Originally from https://nces.ed.gov/ccd/Data/zip/Sch14pre_txt.zip
+      AWS::S3.seed_from_file('cdo-nces', "2014-2015/ccd/Sch14pre.txt") do |filename|
+        merge_from_csv(filename, {col_sep: "\t", headers: true, quote_char: "\x00", encoding: 'ISO-8859-1:UTF-8'}) do |row|
+          {
+            id:                 row['NCESSCH'].to_i.to_s,
+            name:               row['SCHNAM'].upcase,
+            address_line1:      row['LSTREE'].to_s.upcase.presence,
+            address_line2:      nil,
+            address_line3:      nil,
+            city:               row['LCITY'].to_s.upcase.presence,
+            state:              row['LSTATE'].to_s.upcase.presence,
+            zip:                row['LZIP'],
+            latitude:           nil,
+            longitude:          nil,
+            school_type:        row['CHARTR'] == '1' ? 'charter' : 'public',
+            school_district_id: row['LEAID'].to_i,
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2013-2014 public and charter school data."
+      # Originally from https://nces.ed.gov/ccd/Data/zip/sc132a_txt.zip
+      AWS::S3.seed_from_file('cdo-nces', "2013-2014/ccd/sc132a.txt") do |filename|
+        merge_from_csv(filename) do |row|
+          {
+            id:                 row['NCESSCH'].to_i.to_s,
+            name:               row['SCHNAM'].upcase,
+            address_line1:      row['LSTREE'].to_s.upcase.presence,
+            address_line2:      nil,
+            address_line3:      nil,
+            city:               row['LCITY'].to_s.upcase.presence,
+            state:              row['LSTATE'].to_s.upcase.presence,
+            zip:                row['LZIP'],
+            latitude:           nil,
+            longitude:          nil,
+            school_type:        row['CHARTR'] == '1' ? 'charter' : 'public',
+            school_district_id: row['LEAID'].to_i,
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2013-2014 private school data."
+      # Originally from https://nces.ed.gov/surveys/pss/zip/pss1314_pu_csv.zip
+      AWS::S3.seed_from_file('cdo-nces', "2013-2014/pss/pss1314_pu.csv") do |filename|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}) do |row|
+          {
+            id:                 row['PPIN'],
+            name:               row['PINST'].upcase,
+            address_line1:      row[row['PL_ADD'].nil? ? 'PADDRS' : 'PL_ADD'].to_s.upcase.presence,
+            address_line2:      nil,
+            address_line3:      nil,
+            city:               row[row['PL_CIT'].nil? ? 'PCITY' : 'PL_CIT'].to_s.upcase.presence,
+            state:              row[row['PL_STABB'].nil? ? 'PSTABB' : 'PL_STABB'].to_s.upcase.presence,
+            zip:                row[row['PL_ZIP'].nil? ? 'PZIP' : 'PL_ZIP'],
+            latitude:           row['LATITUDE14'].to_f,
+            longitude:          row['LONGITUDE14'].to_f,
+            school_type:        'private',
+            school_district_id: nil,
+            state_school_id:    nil,
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2014-2015 public and charter school data."
+      # Originally from https://nces.ed.gov/ccd/Data/zip/ccd_sch_029_1415_w_0216601a_txt.zip
+      AWS::S3.seed_from_file('cdo-nces', "2014-2015/ccd/ccd_sch_029_1415_w_0216601a.txt") do |filename|
+        merge_from_csv(filename) do |row|
+          {
+            id:                 row['NCESSCH'].to_i.to_s,
+            name:               row['SCH_NAME'].upcase,
+            address_line1:      row['LSTREET1'].to_s.upcase.presence,
+            address_line2:      row['LSTREET2'].to_s.upcase.presence,
+            address_line3:      row['LSTREET3'].to_s.upcase.presence,
+            city:               row['LCITY'].to_s.upcase.presence,
+            state:              row['LSTATE'].to_s.upcase.presence,
+            zip:                row['LZIP'],
+            latitude:           nil,
+            longitude:          nil,
+            school_type:        row['CHARTER_TEXT'][0, 1] == 'Y' ? 'charter' : 'public',
+            school_district_id: row['LEAID'].to_i,
+            state_school_id:    construct_state_school_id(row['LSTATE'].to_s.upcase, row['ST_LEAID'], row['ST_SCHID']),
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2014-2015 public school geographic data."
+      # Originally from https://nces.ed.gov/ccd/Data/zip/EDGE_GEOIDS_201415_PUBLIC_SCHOOL_csv.zip
+      AWS::S3.seed_from_file('cdo-nces', "2014-2015/ccd/EDGE_GEOIDS_201415_PUBLIC_SCHOOL.csv") do |filename|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}) do |row|
+          {
+            id:                 row['NCESSCH'].to_i.to_s,
+            latitude:           row['LATCODE'].to_f,
+            longitude:          row['LONGCODE'].to_f
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2015-2016 private school data."
+      # Originally from https://nces.ed.gov/surveys/pss/zip/pss1516_pu_csv.zip
+      AWS::S3.seed_from_file('cdo-nces', "2015-2016/pss/pss1516_pu.csv") do |filename|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}) do |row|
+          {
+            id:                 row['ppin'],
+            name:               row['pinst'].upcase,
+            address_line1:      row[row['pl_add'].nil? ? 'paddrs' : 'pl_add'].to_s.upcase.presence,
+            address_line2:      nil,
+            address_line3:      nil,
+            city:               row[row['pl_cit'].nil? ? 'pcity' : 'pl_cit'].to_s.upcase.presence,
+            state:              row[row['pl_stabb'].nil? ? 'pstabb' : 'pl_stabb'].to_s.upcase.presence,
+            zip:                row[row['pl_zip'].nil? ? 'pzip' : 'pl_zip'],
+            latitude:           row['latitude16'].to_f,
+            longitude:          row['longitude16'].to_f,
+            school_type:        'private',
+            school_district_id: nil,
+            state_school_id:    nil,
+          }
+        end
       end
     end
   end

@@ -17,7 +17,7 @@ export default class CoursePlans extends Teachercon1819FormComponent {
     howManyTerms: "How many terms will this course span in one school year?"
   };
 
-  static associatedFields = Object.keys(CoursePlans.labels)
+  static associatedFields = Object.keys(CoursePlans.labels);
 
   render() {
     return (

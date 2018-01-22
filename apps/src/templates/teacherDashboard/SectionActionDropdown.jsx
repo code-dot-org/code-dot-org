@@ -87,7 +87,7 @@ class SectionActionDropdown extends Component {
 
   onCancelDelete = () => {
     this.setState({deleting: false});
-  }
+  };
 
   render() {
     const {sectionData} = this.props;

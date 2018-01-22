@@ -28,7 +28,7 @@ export default class SummerWorkshopAssignment extends React.Component {
     regionalPartnerGroup: PropTypes.number,
     canYouAttendQuestion: PropTypes.string,
     canYouAttendAnswer: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)])
-  }
+  };
 
   render() {
     return (
