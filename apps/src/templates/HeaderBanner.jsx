@@ -90,15 +90,15 @@ const styles = {
   }
 };
 
-const HeaderBanner = React.createClass({
-  propTypes: {
+class HeaderBanner extends React.Component {
+  static propTypes =  {
     headingText: PropTypes.string,
     subHeadingText: PropTypes.string,
     description: PropTypes.string,
     children: PropTypes.node,
     short: PropTypes.bool,
     responsiveSize: React.PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
-  },
+  };
 
   render() {
     const {short, headingText, subHeadingText, description, responsiveSize} = this.props;
@@ -133,7 +133,7 @@ const HeaderBanner = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize,

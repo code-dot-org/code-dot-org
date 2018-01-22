@@ -34,13 +34,13 @@
       "rule-type": "transformation",
       "rule-id": "4",
       "rule-name": "4",
+      "rule-action": "remove-column",
       "rule-target": "column",
       "object-locator": {
         "schema-name": "pegasus",
         "table-name": "storage_apps",
         "column-name": "value"
-      },
-      "rule-action": "remove-column"
+      }
     }
   ]
 }

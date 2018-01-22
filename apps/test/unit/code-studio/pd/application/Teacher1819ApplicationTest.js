@@ -9,7 +9,7 @@ import sinon from 'sinon';
 const options = {
   committed: [
     'Yes',
-    'No (please explain):'
+    'No (Please Explain):'
   ],
   willingToTravel: [
     'Less than 10 miles',

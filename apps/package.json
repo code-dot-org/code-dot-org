@@ -88,6 +88,7 @@
     "enzyme": "2.8.0",
     "es6-promise": "3.0.2",
     "eslint": "^3.19.0",
+    "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-mocha": "^4.9.0",
     "eslint-plugin-react": "^5.2.2",
     "fast-memoize": "2.0.2",
