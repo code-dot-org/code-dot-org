@@ -411,7 +411,7 @@ class JsDebugger extends React.Component {
 
   onToggleDebugSprites = () => {
     this.props.setIsDebuggingSprites(!this.props.isDebuggingSprites);
-  }
+  };
 
   render() {
     const {appType, isAttached, canRunNext, isRunning} = this.props;
