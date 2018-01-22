@@ -26,5 +26,6 @@ describe('unit tests', function () {
   throwOnConsoleErrorsEverywhere();
   throwOnConsoleWarningsEverywhere();
   clearTimeoutsBetweenTests();
+  // enforceDocumentBodyCleanup({checkEveryTest: true});
   runnable.forEach(testsContext);
 });
