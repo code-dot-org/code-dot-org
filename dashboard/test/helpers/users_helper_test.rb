@@ -295,37 +295,4 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal(101, level_with_best_progress([101, 102], level_progress))
     assert_equal(101, level_with_best_progress([102, 101], level_progress))
   end
-
-  def test_get_level_progress
-    Script.stubs(:should_cache?).returns true
-
-    script = Script.twenty_hour_script
-    users = 20.times.map do
-      user = create :user
-      create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, script: script, level: script.script_levels[1].level
-      create :user_level, user: user, best_result: 20, script: script, level: script.script_levels[3].level
-      user
-    end
-
-    # We used to do 3 db queries per student. This test ensures that we instead
-    # only do 3 db queries total
-    queries = capture_queries do
-      get_level_progress(users, script)
-    end
-    assert_equal(3, queries.length)
-
-    # validate progress when we query for just the first two students
-    progress = get_level_progress(users[0, 2], script)
-    expected = {
-      users[0].id => {
-        script.script_levels[1].level.id => {status: 'perfect', result: ActivityConstants::BEST_PASS_RESULT},
-        script.script_levels[3].level.id => {status: 'passed', result: 20},
-      },
-      users[1].id => {
-        script.script_levels[1].level.id => {status: 'perfect', result: ActivityConstants::BEST_PASS_RESULT},
-        script.script_levels[3].level.id => {status: 'passed', result: 20},
-      }
-    }
-    assert_equal(expected, progress)
-  end
 end

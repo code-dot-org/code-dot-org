@@ -62,7 +62,7 @@ class DropdownButton extends Component {
 
   state = {
     dropdownOpen: false,
-  }
+  };
 
   onComponentDidUnmount() {
     document.removeEventListener('click', this.onClickDocument, false);
@@ -71,12 +71,12 @@ class DropdownButton extends Component {
   expandDropdown = () => {
     document.addEventListener('click', this.onClickDocument, false);
     this.setState({dropdownOpen: true});
-  }
+  };
 
   collapseDropdown = () => {
     document.removeEventListener('click', this.onClickDocument, false);
     this.setState({dropdownOpen: false});
-  }
+  };
 
   onClickDocument = event => {
     // We're only concerned with clicks outside of ourselves
@@ -86,7 +86,7 @@ class DropdownButton extends Component {
     if (this.state.dropdownOpen) {
       this.collapseDropdown();
     }
-  }
+  };
 
   toggleDropdown = () => {
     if (this.state.dropdownOpen) {
@@ -94,14 +94,14 @@ class DropdownButton extends Component {
     } else {
       this.expandDropdown();
     }
-  }
+  };
 
   onClickChild = (event, childProps) => {
     this.collapseDropdown();
     if (childProps.onClick) {
       childProps.onClick(event);
     }
-  }
+  };
 
   render() {
     const { text, color } = this.props;

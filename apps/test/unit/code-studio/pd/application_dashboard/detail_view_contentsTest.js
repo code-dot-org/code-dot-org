@@ -80,10 +80,12 @@ describe("DetailViewContents", () => {
   ];
 
   for (const applicationData of expectedTestData) {
+    const responseCount = applicationData.type === "Teacher" ? 3 : 4;
+
     it(`Renders full contents for ${applicationData.type} initially`, () => {
       const detailView = mountDetailView(applicationData.type);
 
-      expect(detailView.find('#TopSection DetailViewResponse')).to.have.length(3);
+      expect(detailView.find('#TopSection DetailViewResponse')).to.have.length(responseCount);
       expect(detailView.find('DetailViewApplicationSpecificQuestions')).to.have.length(1);
       expect(detailView.find('DetailViewApplicationSpecificQuestions h3')).to.have.length(
         applicationData.applicationSpecificQuestions
@@ -106,13 +108,13 @@ describe("DetailViewContents", () => {
 
       it("Does not render for regional partners", () => {
         const regionalPartnerDetailView = mountDetailView(applicationData.type, {isWorkshopAdmin: false});
-        expect(regionalPartnerDetailView.find('#TopSection DetailViewResponse')).to.have.length(3);
+        expect(regionalPartnerDetailView.find('#TopSection DetailViewResponse')).to.have.length(responseCount);
         expect(regionalPartnerDetailView).to.not.containMatchingElement(regionalPartnerPanel);
       });
 
       it("Does render for admins", () => {
         const workshopAdminDetailView = mountDetailView(applicationData.type, {isWorkshopAdmin: true});
-        expect(workshopAdminDetailView.find('#TopSection DetailViewResponse')).to.have.length(4);
+        expect(workshopAdminDetailView.find('#TopSection DetailViewResponse')).to.have.length(responseCount + 1);
         expect(workshopAdminDetailView).to.containMatchingElement(regionalPartnerPanel);
       });
     });

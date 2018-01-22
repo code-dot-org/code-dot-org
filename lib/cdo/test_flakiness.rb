@@ -34,13 +34,13 @@ class TestFlakiness
   end
 
   # Summarizes the job results from SauceLabs.
-  # @param numRequests [Integer] The number of API calls.
-  # @param perRequest [Integer] The number of results per call.
+  # @param num_requests [Integer] The number of API calls.
+  # @param per_request [Integer] The number of results per call.
   # @return [Array] Of summary including name, and total and failed counts.
-  def self.summarize_by_job(numRequests = NUM_REQUESTS, perRequest = PER_REQUEST)
+  def self.summarize_by_job(num_requests = NUM_REQUESTS, per_request = PER_REQUEST)
     jobs = []
-    numRequests.times do
-      jobs += get_jobs(limit: perRequest, skip: jobs.count)
+    num_requests.times do
+      jobs += get_jobs(limit: per_request, skip: jobs.count)
     end
     jobs.group_by {|job| job['name']}.map do |name, samples|
       {
