@@ -476,7 +476,7 @@ class Pd::Workshop < ActiveRecord::Base
   def process_location
     result = nil
 
-    unless location_address.blank?
+    unless location_address.blank? || %w(tba tbd n/a).include?(location_address.downcase)
       begin
         Geocoder.with_errors do
           # Geocoder can raise a number of errors including SocketError, with a common base of StandardError

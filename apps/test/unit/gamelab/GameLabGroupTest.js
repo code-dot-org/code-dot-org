@@ -2,9 +2,14 @@
 import {spy} from 'sinon';
 import {expect} from '../../util/configuredChai';
 import {createStatefulGameLabP5} from '../../util/gamelab/TestableGameLabP5';
+import {sandboxDocumentBody} from "../../util/testUtils";
 
 describe('GameLabGroup', function () {
   let gameLabP5, createSprite, createGroup;
+
+  // Using the aggressive sandbox here because the P5 library generates
+  // a default canvas when it's not attached to an existing one.
+  sandboxDocumentBody();
 
   beforeEach(function () {
     gameLabP5 = createStatefulGameLabP5();

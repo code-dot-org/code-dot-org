@@ -23,7 +23,7 @@ export default class Releases extends Teachercon1819FormComponent {
   render() {
     return (
       <FormGroup>
-        <h4>Section 3: Releases</h4>
+        <h4>Section 4: Releases</h4>
         <FormGroup>
           <ControlLabel>
             Please read this <a target="_blank" href="https://docs.google.com/document/d/12NVUcqccNRbVukoGMCserwSpg4vfG0vNlEqTxr6oit0/edit">photo release.</a>

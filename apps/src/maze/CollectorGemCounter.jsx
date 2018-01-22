@@ -55,11 +55,11 @@ export class CollectorGemCounter extends React.Component {
   static propTypes = {
     currentCollected: PropTypes.number.isRequired,
     minRequired: PropTypes.number,
-  }
+  };
 
   static defaultProps = {
     minRequired: 1,
-  }
+  };
 
   render() {
     const showCheckmark = this.props.currentCollected >= this.props.minRequired;

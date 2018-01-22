@@ -16,6 +16,7 @@ class ChatClientTest < Minitest::Test
   end
 
   def test_log_calls_slack
+    CircleUtils.expects(:circle?).returns(false)
     Slack.expects(:message).with do |_text, params|
       params[:channel] == CDO.slack_log_room
     end.returns(false)

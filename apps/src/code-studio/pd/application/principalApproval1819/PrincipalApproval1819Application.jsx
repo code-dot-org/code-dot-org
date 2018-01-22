@@ -14,7 +14,7 @@ export default class PrincipalApproval1819Application extends FormController {
       principal_title: PropTypes.string,
       principal_email: PropTypes.string.isRequired
     }).isRequired
-  }
+  };
   /**
    * @override
    */

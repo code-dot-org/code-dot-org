@@ -52,7 +52,7 @@ The program kicks off with 5-day summer workshop where you'll have the opportuni
 ## <a name="features"></a>Program Features
 
 <details>
-<summary>**Accessible to all educators**</summary>
+<summary>**Cost should not be a barrier**</summary>
 <p>
 <br>
 We are a nonprofit dedicated to helping schools teach computer science. In most states, our professional learning is offered at *no cost to you or your school*.
