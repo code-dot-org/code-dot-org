@@ -1,6 +1,7 @@
 class Api::V1::Pd::WorkshopsController < ::ApplicationController
   include Pd::WorkshopFilters
   include Api::CsvDownload
+  include Pd::Application::RegionalPartnerTeacherconMapping
 
   load_and_authorize_resource class: 'Pd::Workshop', only: [:show, :update, :create, :destroy, :start, :end, :summary]
   before_action :load_collection, only: [:index, :filter]
@@ -61,11 +62,37 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   end
 
   # GET /api/v1/pd/workshops/upcoming_teachercon
+  # returns all upcoming teachercons for admins, associated teachercons for
+  # regional partners, and an empty set for everyone else.
   def upcoming_teachercon
-    workshops = Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).where(
-      subject: Pd::Workshop::SUBJECT_TEACHER_CON
-    )
-    workshops = workshops.where(course: params[:course]) if params[:course]
+    workshops = Pd::Workshop.
+      scheduled_start_on_or_after(Date.today.beginning_of_day).
+      where(subject: Pd::Workshop::SUBJECT_TEACHER_CON)
+
+    if params[:course]
+      workshops = workshops.where(course: params[:course])
+    end
+
+    if current_user.admin? || current_user.workshop_admin?
+      # admins get to see everything
+    elsif current_user.regional_partners.any?
+      # regional partners get to see workshops associated with their matching
+      # teachercon
+      cities = current_user.
+        regional_partners.
+        map {|partner| get_matching_teachercon(partner)}.
+        compact.
+        to_set.
+        pluck(:city).
+        map {|city| "%#{city}%"}
+
+      query = Array.new(cities.length, "location_address like ?").join(" OR ")
+      workshops = workshops.where(query, *cities)
+    else
+      # everyone else gets to see nothing
+      workshops = Pd::Workshop.none
+    end
+
     render json: workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
   rescue ArgumentError => e
     render json: {error: e.message}, status: :bad_request
