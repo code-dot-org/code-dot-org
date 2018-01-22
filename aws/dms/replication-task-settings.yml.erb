@@ -1,0 +1,75 @@
+---
+ErrorBehavior:
+  FullLoadIgnoreConflicts: true
+  RecoverableErrorCount: -1
+  RecoverableErrorInterval: 5
+  RecoverableErrorThrottling: true
+  RecoverableErrorThrottlingMax: 1800
+  TableErrorEscalationCount: 50
+  TableErrorEscalationPolicy: STOP_TASK
+  TableErrorPolicy: SUSPEND_TABLE
+  DataErrorEscalationCount: 50
+  DataErrorEscalationPolicy: SUSPEND_TABLE
+  DataErrorPolicy: LOG_ERROR
+  DataTruncationErrorPolicy: LOG_ERROR
+  ApplyErrorDeletePolicy: IGNORE_RECORD
+  ApplyErrorInsertPolicy: LOG_ERROR
+  ApplyErrorUpdatePolicy: LOG_ERROR
+  ApplyErrorEscalationPolicy: LOG_ERROR
+  ApplyErrorEscalationCount: 0
+  ApplyErrorFailOnTruncationDdl: false
+  FailOnTransactionConsistencyBreached: false
+  FailOnNoTablesCaptured: false
+ChangeProcessingDdlHandlingPolicy:
+  HandleSourceTableAltered: true
+  HandleSourceTableTruncated: true
+  HandleSourceTableDropped: true
+ChangeProcessingTuning:
+  BatchApplyPreserveTransaction: true
+  BatchApplyTimeoutMin: 1
+  BatchApplyTimeoutMax: 30
+  BatchApplyMemoryLimit: 500
+  BatchSplitSize: 0
+  MinTransactionSize: 1000
+  CommitTimeout: 1
+  MemoryLimitTotal: 1024
+  MemoryKeepTime: 60
+  StatementCacheSize: 50
+StreamBufferSettings:
+  CtrlStreamBufferSizeInMB: 5
+  StreamBufferSizeInMB: 8
+  StreamBufferCount: 3
+ControlTablesSettings:
+  StatusTableEnabled: true
+  SuspendedTablesTableEnabled: true
+  HistoryTableEnabled: true
+  HistoryTimeslotInMinutes: 5
+  ControlSchema: ""
+  historyTimeslotInMinutes: 5
+Logging:
+  EnableLogging: true
+  LogComponents:
+  - {Id: SOURCE_UNLOAD,  Severity: LOGGER_SEVERITY_WARNING}
+  - {Id: SOURCE_CAPTURE, Severity: LOGGER_SEVERITY_WARNING}
+  - {Id: TARGET_LOAD,    Severity: LOGGER_SEVERITY_WARNING}
+  - {Id: TARGET_APPLY,   Severity: LOGGER_SEVERITY_WARNING}
+  - {Id: TASK_MANAGER,   Severity: LOGGER_SEVERITY_WARNING}
+FullLoadSettings:
+  TargetTablePrepMode: DROP_AND_CREATE
+  CreatePkAfterFullLoad: false
+  StopTaskCachedChangesApplied: false
+  StopTaskCachedChangesNotApplied: false
+  MaxFullLoadSubTasks: 20
+  TransactionConsistencyTimeout: 600
+  CommitRate: 10000
+TargetMetadata:
+  BatchApplyEnabled: true
+  LoadMaxFileSize: 0
+  LobMaxSize: 32
+  LimitedSizeLobMode: true
+  LobChunkSize: 0
+  FullLobMode: false
+  SupportLobs: true
+  TargetSchema: ""
+  ParallelLoadThreads: 0
+  ParallelLoadBufferSize: 0
