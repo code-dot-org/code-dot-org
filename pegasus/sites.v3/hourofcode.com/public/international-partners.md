@@ -13,7 +13,7 @@ layout: wide
 
 # Contact International Partners
 
-Are you organizing an Hour of Code event outside of the United States? Code.org is headquartered in the US, but it works with many organizations around the world to make the Hour of Code a *global* celebration. 
+Are you organizing an Hour of Code event outside of the United States? Code.org works with many organizations around the world to make the Hour of Code a *global* celebration. Did you know that in 2017, 60% of all Hour of Code vents occurred outside of the U.S.? Find out how you can get more people in your country involved! 
 
 If you're in one of the countries below, reach out to the partner listed and get connected with your local Hour of Code!
 
@@ -39,9 +39,9 @@ If you're in one of the countries below, reach out to the partner listed and get
 | Denmark     | Coding Pirates                             | Martin Exner                 | martin.exner1@gmail.com                |                                                                                                             
 | France      | Microsoft                                  | Béatrice Matlega             | [http://www.aka.ms/code2016](http://www.aka.ms/code2016) <br>email: hourofcode@outlook.fr                
 | Ghana       | Ghana Code Club                            | Ernestina Appiah             | [http://www.ghanacodeclub.org](http://www.ghanacodeclub.org) <br>email: tinasupport@gmail.com      
-| India       | Mozilla Indore                           | Mrinal Jain             | [http://mstcindore.org/](http://mstcindore.org/) <br>email:  jain.mrinal140@gmail.com                              
+| India       | Mozilla Indore                             | Mrinal Jain                  | [http://mstcindore.org/](http://mstcindore.org/) <br>email:  jain.mrinal140@gmail.com                              
 | Ireland     | Cybersmarties                              | Diarmuid Hudner              | diarmuid@cybersmarties.com             |    
-| Ireland     | EXCITED Digital Learning Movement                              |              | info@excited.ie            |                                                                                                             
+| Ireland     | EXCITED Digital Learning Movement          | info@excited.ie            |                                                                                                             
 | Italy       | CINI and Univ. Roma "Tor Vergata"          | Enrico Nardelli              | [http://programmailfuturo.it](http://programmailfuturo.it) <br>email: nardelli@mat.uniroma2.it            |
 | Japan|	湘南ゼミナール (Shonan Seminar) | 	Team Hour of Code |	[https://www.shozemi.com/](https://www.shozemi.com/)  |                                                                              
 | Japan       | 一般社団法人みんなのコード (Code for Everyone)          | 利根川 裕太 (Yuta Tonegawa)       | [http://caravan2016.hourofcode.jp/](http://caravan2016.hourofcode.jp/) <br> email: info@code.or.jp                     |

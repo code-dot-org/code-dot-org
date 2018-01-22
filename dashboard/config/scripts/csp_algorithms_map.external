@@ -1,5 +1,6 @@
 name 'CSP Algorithms Map'
 css 'unplugged'
+display_name 'Algorithms in Programming'
 markdown <<MARKDOWN
 # Algorithms - Solving Problems
 
