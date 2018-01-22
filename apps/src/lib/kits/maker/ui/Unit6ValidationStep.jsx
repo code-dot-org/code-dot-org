@@ -42,7 +42,7 @@ export default class Unit6ValidationStep extends Component {
 
   handleChangeIntention = event => {
     this.setState({choice: event.target.value});
-  }
+  };
 
   handleSubmit = () => {
     this.setState({submitting: true});
@@ -67,7 +67,7 @@ export default class Unit6ValidationStep extends Component {
         "and submitting again.  If this does not work, please contact support@code.org."
       });
    });
-  }
+  };
 
   render() {
     const { showRadioButtons, stepStatus } = this.props;
