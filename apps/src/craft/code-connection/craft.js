@@ -381,7 +381,7 @@ export default class Craft {
       popupDialog.hide();
     });
     popupDialog.show();
-  }
+  };
 
   static showErrorMessagePopup = function (title, message) {
     const popupDiv = document.createElement('div');
@@ -401,5 +401,5 @@ export default class Craft {
     });
 
     popupDialog.show();
-  }
+  };
 }

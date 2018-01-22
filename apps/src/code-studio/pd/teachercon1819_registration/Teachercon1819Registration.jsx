@@ -4,6 +4,7 @@ import FormController from '../form_components/FormController';
 import Welcome from './Welcome';
 import Joining from './Joining';
 import TravelPlans from './TravelPlans';
+import CoursePlans from './CoursePlans';
 import Releases from './Releases';
 import Confirmation from './Confirmation';
 
@@ -46,8 +47,11 @@ export default class Teachercon1819Registration extends FormController {
       Welcome,
       Joining,
       TravelPlans,
-      Releases,
     ];
+
+    if (this.props.applicationType === "Teacher") {
+      pageComponents.push(CoursePlans);
+    }
 
     // We want to include the confirmation page by default, but remove it if the
     // teacher has responded to the "accept seat" question with something other
@@ -58,6 +62,8 @@ export default class Teachercon1819Registration extends FormController {
     if (!(this.state.data.teacherAcceptSeat && this.state.data.teacherAcceptSeat !== TeacherSeatAcceptanceOptions.accept)) {
       pageComponents.push(Confirmation);
     }
+
+    pageComponents.push(Releases);
 
     return pageComponents;
   }
@@ -102,6 +108,7 @@ export default class Teachercon1819Registration extends FormController {
    */
   shouldShowSubmit() {
     return super.shouldShowSubmit() ||
-        this.state.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions.decline;
+        this.state.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions.decline ||
+        this.state.data.ableToAttend === "No";
   }
 }

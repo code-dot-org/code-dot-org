@@ -12,7 +12,7 @@ Encourage your local school to start teaching computer science. To make it easie
 [<button>Sample letter</button>](/promote/letter)&nbsp;&nbsp; [<button>Resources for schools</button>](/yourschool)
 
 ## Help us spread the word
-Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twitter.com/codeorg) and re-share our posts.  Or stay in touch with our [quarterly email updates](http://eepurl.com/wL0XL).
+Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twitter.com/codeorg) and re-share our posts.  Or stay in touch with our [quarterly email updates](http://go.pardot.com/l/153401/2018-01-12/k555vp).
 
 Petition your state to allow computer science to count towards math or science high school graduation credits. And promote computer science in your area with these [stats, quotes and videos](/promote).
 

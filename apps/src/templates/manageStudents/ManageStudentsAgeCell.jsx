@@ -14,7 +14,7 @@ class ManageStudentAgeCell extends Component {
 
   onChangeAge = (e) => {
     this.setState({ageValue: e.target.value});
-  }
+  };
 
   render() {
     const {age} = this.props;

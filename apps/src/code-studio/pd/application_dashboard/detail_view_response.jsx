@@ -65,7 +65,7 @@ export default class DetailViewResponse extends React.Component {
         {this.renderScoreOptions()}
       </FormControl>
     );
-  }
+  };
 
   render() {
     if (this.props.answer && !(typeof this.props.answer === 'boolean')) {

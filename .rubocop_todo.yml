@@ -86,11 +86,6 @@ Lint/AmbiguousRegexpLiteral:
 Lint/DuplicateMethods:
   Enabled: false
 
-# Offense count: 4
-# Configuration parameters: MaximumRangeSize.
-Lint/MissingCopEnableDirective:
-  Enabled: false
-
 # Offense count: 28
 Lint/ParenthesesAsGroupedExpression:
   Enabled: false
@@ -114,11 +109,6 @@ Lint/ShadowedArgument:
 Lint/UnneededDisable:
   Enabled: false
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Lint/UnneededRequireStatement:
-  Enabled: false
-
 # Offense count: 70
 # Cop supports --auto-correct.
 # Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods.
@@ -127,11 +117,6 @@ Lint/UnusedMethodArgument:
 
 # Offense count: 39
 Lint/UriEscapeUnescape:
-  Enabled: false
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Lint/UriRegexp:
   Enabled: false
 
 # Offense count: 7
@@ -144,12 +129,6 @@ Naming/HeredocDelimiterCase:
 # Configuration parameters: Blacklist.
 # Blacklist: END, (?-mix:EO[A-Z]{1})
 Naming/HeredocDelimiterNaming:
-  Enabled: false
-
-# Offense count: 2
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: snake_case, camelCase
-Naming/VariableName:
   Enabled: false
 
 # Offense count: 173
@@ -330,10 +309,6 @@ Style/MixinUsage:
 
 # Offense count: 28
 Style/MultilineTernaryOperator:
-  Enabled: false
-
-# Offense count: 4
-Style/MultipleComparison:
   Enabled: false
 
 # Offense count: 205

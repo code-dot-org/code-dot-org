@@ -89,7 +89,7 @@ export default class SchoolNotFound extends Component {
 
   handleChange = (field, event) => {
     this.props.onChange(field, event);
-  }
+  };
 
   isNotBlank(value) {
     return value && (value !== '');

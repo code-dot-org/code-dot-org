@@ -68,14 +68,14 @@ export default class ResourcesEditor extends Component {
     }
 
     this.setState({resources: newResources, errorString});
-  }
+  };
 
   handleChangeLink = (event, index) => {
     const newResources = _.cloneDeep(this.state.resources);
     const link = event.target.value;
     newResources[index].link = link;
     this.setState({resources: newResources});
-  }
+  };
 
   render() {
     const { resources, errorString } = this.state;

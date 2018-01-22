@@ -37,8 +37,14 @@ require 'state_abbr'
 require 'cdo/shared_constants/pd/facilitator1819_application_constants'
 
 module Pd::Application
-  class Facilitator1819Application < ApplicationBase
+  class Facilitator1819Application < WorkshopAutoenrolledApplication
     include Facilitator1819ApplicationConstants
+    include RegionalPartnerTeacherconMapping
+
+    serialized_attrs %w(
+      fit_workshop_id
+      auto_assigned_fit_enrollment_id
+    )
 
     def send_decision_notification_email
       # Accepted, declined, and waitlisted are the only valid "final" states;
@@ -82,10 +88,6 @@ module Pd::Application
       'Participants in a tech bootcamp or professional development program'
     ].freeze
 
-    HOW_HEARD_FACILITATOR = 'A Code.org facilitator (please share name):'
-    HOW_HEARD_CODE_ORG_STAFF = 'A Code.org staff member (please share name):'
-    HOW_HEARD_REGIONAL_PARTNER = 'A Code.org Regional Partner (please share name):'
-
     PROGRAMS = {
       csf: 'CS Fundamentals (Pre-K - 5th grade)',
       csd: 'CS Discoveries (6 - 10th grade)',
@@ -107,7 +109,7 @@ module Pd::Application
           'Non-profit',
           'Institute of higher education',
           'Tech company',
-          OTHER_WITH_TEXT
+          TEXT_FIELDS[:other_with_text]
         ],
 
         worked_in_cs_job: [YES, NO],
@@ -121,7 +123,7 @@ module Pd::Application
           'Attended a CS professional development workshop',
           'I have a minor, major, certificate',
           NONE,
-          OTHER_WITH_TEXT
+          TEXT_FIELDS[:other_with_text]
         ],
 
         diversity_training: [YES, NO],
@@ -129,11 +131,11 @@ module Pd::Application
         how_heard: [
           'Code.org email',
           'Code.org social media post',
-          HOW_HEARD_FACILITATOR,
-          HOW_HEARD_CODE_ORG_STAFF,
-          HOW_HEARD_REGIONAL_PARTNER,
+          TEXT_FIELDS[:how_heard_facilitator],
+          TEXT_FIELDS[:how_heard_code_org_staff],
+          TEXT_FIELDS[:how_heard_regional_partner],
           'My employer',
-          OTHER_WITH_TEXT
+          TEXT_FIELDS[:other_with_text]
         ],
 
         program: PROGRAM_OPTIONS,
@@ -142,7 +144,7 @@ module Pd::Application
           YES,
           NO,
           "I don’t know yet",
-          OTHER_WITH_TEXT
+          TEXT_FIELDS[:other_with_text]
         ],
 
         ability_to_meet_requirements: [
@@ -160,32 +162,32 @@ module Pd::Application
         csd_csp_teachercon_availability: [
           'TeacherCon 1: June 17 - 22, 2018',
           'TeacherCon 2: July 22 - 27, 2018',
-          "I'm not available for either TeacherCon. (Please Explain):"
+          TEXT_FIELDS[:not_available_for_teachercon]
         ],
 
         csd_csp_fit_availability: [
           'June 23 - 24, 2018 (immediately following TeacherCon 1)',
           'July 28 - 29, 2018 (immediately following TeacherCon 2)',
-          "I'm not available for either Facilitator-in-Training workshop. (Please Explain):"
+          TEXT_FIELDS[:not_available_for_fit_weekend]
         ],
 
         led_cs_extracurriculars: [
           'Hour of Code',
           'After-school or lunchtime computer science clubs',
           'Computer science-focused summer camps',
-          OTHER_PLEASE_LIST
+          TEXT_FIELDS[:other_please_list]
         ],
 
         teaching_experience: [YES, NO],
 
         grades_taught: [
           *GRADES,
-          OTHER_WITH_TEXT
+          TEXT_FIELDS[:other_with_text]
         ],
 
         grades_currently_teaching: [
           *GRADES,
-          OTHER_WITH_TEXT,
+          TEXT_FIELDS[:other_with_text],
           'None - I don’t currently teach'
         ],
 
@@ -198,7 +200,7 @@ module Pd::Application
           'History',
           'Art',
           'Foreign Language',
-          OTHER_WITH_TEXT
+          TEXT_FIELDS[:other_with_text]
         ],
 
         years_experience: [
@@ -224,7 +226,7 @@ module Pd::Application
           'NMSI',
           'Project Lead the Way',
           'ScratchEd',
-          OTHER_WITH_TEXT,
+          TEXT_FIELDS[:other_with_text],
           "I don't have experience teaching any of these courses",
         ],
 
@@ -404,12 +406,12 @@ module Pd::Application
       [
         [:institution_type],
         [:completed_cs_courses_and_activities],
-        [:how_heard, HOW_HEARD_FACILITATOR, :how_heard_facilitator],
-        [:how_heard, HOW_HEARD_CODE_ORG_STAFF, :how_heard_code_org_staff],
-        [:how_heard, HOW_HEARD_REGIONAL_PARTNER, :how_heard_regional_partner],
+        [:how_heard, TEXT_FIELDS[:how_heard_facilitator], :how_heard_facilitator],
+        [:how_heard, TEXT_FIELDS[:how_heard_code_org_staff], :how_heard_code_org_staff],
+        [:how_heard, TEXT_FIELDS[:how_heard_regional_partner], :how_heard_regional_partner],
         [:how_heard],
         [:plan_on_teaching],
-        [:led_cs_extracurriculars, OTHER_PLEASE_LIST],
+        [:led_cs_extracurriculars, TEXT_FIELDS[:other_please_list]],
         [:grades_taught],
         [:grades_currently_teaching],
         [:subjects_taught],
@@ -465,6 +467,67 @@ module Pd::Application
     # @override
     def check_idempotency
       Pd::Application::Facilitator1819Application.find_by(user: user)
+    end
+
+    before_save :destroy_fit_autoenrollment, if: -> {status_changed? && status != "accepted"}
+    def destroy_fit_autoenrollment
+      return unless auto_assigned_fit_enrollment_id
+
+      Pd::Enrollment.find_by(id: auto_assigned_fit_enrollment_id).try(:destroy)
+      self.auto_assigned_fit_enrollment_id = nil
+    end
+
+    def fit_workshop
+      Pd::Workshop.find(fit_workshop_id) if fit_workshop_id
+    end
+
+    # override
+    def enroll_user
+      super
+      return unless fit_workshop_id
+
+      enrollment = Pd::Enrollment.where(
+        pd_workshop_id: fit_workshop_id,
+        email: user.email
+      ).first_or_initialize
+
+      # If this is a new enrollment, we want to:
+      #   - save it with all required data
+      #   - save a reference to it in properties
+      #   - delete the previous auto-created enrollment if it exists
+      if enrollment.new_record?
+        enrollment.update(
+          user: user,
+          school_info: user.school_info,
+          full_name: user.name
+        )
+        enrollment.save!
+
+        destroy_fit_autoenrollment
+        self.auto_assigned_fit_enrollment_id = enrollment.id
+      end
+    end
+
+    # G1 facilitators are always associated with Phoenix
+    # G2 facilitators are always associated with Atlanta
+    # G3 facilitators are assigned based on their partner mapping, arbitrarily
+    #   defaulting to Phoenix
+    def find_default_fit_teachercon
+      return unless regional_partner
+
+      return TC_PHOENIX if regional_partner.group == 1
+      return TC_ATLANTA if regional_partner.group == 2
+
+      return get_matching_teachercon(regional_partner) || TC_PHOENIX
+    end
+
+    def find_default_fit_workshop
+      return unless regional_partner
+
+      find_fit_workshop(
+        course: workshop_course,
+        city: find_default_fit_teachercon[:city]
+      )
     end
   end
 end

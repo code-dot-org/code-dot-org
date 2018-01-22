@@ -122,10 +122,8 @@ def complete_tutorial(tutorial={})
       )
     end
 
-    site = "http://#{row[:referer]}"
-    if DCDO.get('new_congrats', false) && tutorial[:orgname].try(:include?, 'Code.org')
-      site = CDO.studio_url('', CDO.default_scheme)
-    end
+    site = tutorial[:orgname].try(:include?, 'Code.org') ?
+      CDO.studio_url('', CDO.default_scheme) : "http://#{row[:referer]}"
 
     destination = "#{site}/congrats?i=#{row[:session]}"
     destination += "&co=#{row[:company]}" unless row[:company].blank?
