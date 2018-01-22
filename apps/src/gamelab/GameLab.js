@@ -49,7 +49,6 @@ import {
 } from '../containedLevels';
 import { hasValidContainedLevelResult } from '../code-studio/levels/codeStudioLevels';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
-import {setIsDebuggingSprites} from '../redux/runState';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
@@ -276,14 +275,6 @@ GameLab.prototype.init = function (config) {
     this.setCrosshairCursorForPlaySpace();
   };
 
-  const onToggleDebugSprites = () => {
-    const debugSprites = !getStore().getState().runState.isDebuggingSprites;
-
-    this.gameLabP5.debugSprites(debugSprites);
-
-    getStore().dispatch(setIsDebuggingSprites(debugSprites));
-  };
-
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
 
@@ -334,7 +325,6 @@ GameLab.prototype.init = function (config) {
       <GameLabView
         showFinishButton={finishButtonFirstLine && showFinishButton}
         onMount={onMount}
-        onToggleDebugSprites={onToggleDebugSprites}
       />
     </Provider>
   ), document.getElementById(config.containerId));
@@ -362,11 +352,19 @@ GameLab.prototype.setupReduxSubscribers = function (store) {
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
       this.onIsRunningChange(state.runState.isRunning);
     }
+
+    if (!lastState.runState || state.runState.isDebuggingSprites !== lastState.runState.isDebuggingSprites) {
+      this.onIsDebuggingSpritesChange(state.runState.isDebuggingSprites);
+    }
   });
 };
 
 GameLab.prototype.onIsRunningChange = function () {
   this.setCrosshairCursorForPlaySpace();
+};
+
+GameLab.prototype.onIsDebuggingSpritesChange = function (isDebuggingSprites) {
+  this.gameLabP5.debugSprites(isDebuggingSprites);
 };
 
 /**
