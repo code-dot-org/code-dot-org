@@ -56,10 +56,11 @@ export default function reducer(state, action) {
     }
   }
 
-  if (action.type === SET_IS_DEBUGGING_SPRITES) {
-    return _.assign({}, state, {
-      isDebuggingSprites: state.isRunning ? action.isDebuggingSprites : state.isDebuggingSprites,
-    });
+  if (action.type === SET_IS_DEBUGGING_SPRITES && state.isRunning) {
+    return {
+      ...state,
+      isDebuggingSprites: action.isDebuggingSprites
+    };
   }
 
   return state;

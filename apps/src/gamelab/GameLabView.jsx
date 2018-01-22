@@ -26,7 +26,6 @@ class GameLabView extends React.Component {
     // Provided manually
     showFinishButton: PropTypes.bool.isRequired,
     onMount: PropTypes.func.isRequired,
-    onToggleDebugSprites: PropTypes.func.isRequired,
     // Provided by Redux
     interfaceMode: PropTypes.oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION]).isRequired,
     isResponsive: PropTypes.bool.isRequired,
@@ -51,7 +50,7 @@ class GameLabView extends React.Component {
 
   renderCodeMode() {
     const {interfaceMode, isResponsive, hideSource, pinWorkspaceToBottom,
-           showFinishButton, onToggleDebugSprites} = this.props;
+           showFinishButton} = this.props;
 
     // Code mode contains protected (non-React) content.  We have to always
     // render it, so when we're not in code mode use CSS to hide it.
@@ -88,10 +87,7 @@ class GameLabView extends React.Component {
          />}
         <VisualizationResizeBar/>
         <InstructionsWithWorkspace>
-          <CodeWorkspace
-            withSettingsCog
-            onToggleDebugSprites={onToggleDebugSprites}
-          />
+          <CodeWorkspace withSettingsCog/>
         </InstructionsWithWorkspace>
       </div>
     );
