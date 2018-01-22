@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
+  include Pd::Application::RegionalPartnerTeacherconMapping
   freeze_time
 
   self.use_transactional_test_case = true
@@ -23,7 +24,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   setup do
     # Don't actually call the geocoder.
-    Geocoder.stubs(:search).with('Seattle, WA')
+    Geocoder.stubs(:search)
   end
 
   # Action: Index
@@ -565,19 +566,62 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal expected_workshops.map(&:id).sort, response.map {|x| x['id']}.sort
   end
 
-  test 'Teachercon workshops are public' do
-    tc = create(
+  test 'Admins can view all Teachercon workshops' do
+    phoenix = create(
       :pd_workshop,
       course: Pd::Workshop::COURSE_CSD,
       num_sessions: 1,
       organizer: @organizer,
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
+      location_address: "Phoenix"
     )
+    atlanta = create(
+      :pd_workshop,
+      course: Pd::Workshop::COURSE_CSD,
+      num_sessions: 1,
+      organizer: @organizer,
+      subject: Pd::Workshop::SUBJECT_TEACHER_CON,
+      location_address: "Atlanta"
+    )
+
+    sign_in @admin
+
+    get :upcoming_teachercon
+    assert_response :success
+    assert_equal 2, JSON.parse(@response.body).length
+    assert_equal phoenix.id, JSON.parse(@response.body).first['id']
+    assert_equal atlanta.id, JSON.parse(@response.body).last['id']
+  end
+
+  test 'Regional Partners can view associated Teachercon workshops' do
+    partner_name = REGIONAL_PARTNER_TC_MAPPING.keys.sample
+    partner = create(:regional_partner, name: partner_name)
+    user = create(:teacher)
+    create(:regional_partner_program_manager, regional_partner: partner, program_manager: user)
+    phoenix = create(
+      :pd_workshop,
+      course: Pd::Workshop::COURSE_CSD,
+      num_sessions: 1,
+      organizer: @organizer,
+      subject: Pd::Workshop::SUBJECT_TEACHER_CON,
+      location_address: "Phoenix"
+    )
+    atlanta = create(
+      :pd_workshop,
+      course: Pd::Workshop::COURSE_CSD,
+      num_sessions: 1,
+      organizer: @organizer,
+      subject: Pd::Workshop::SUBJECT_TEACHER_CON,
+      location_address: "Atlanta"
+    )
+    associated_workshop = get_matching_teachercon(partner) == TC_PHOENIX ? phoenix : atlanta
+
+    sign_in user
 
     get :upcoming_teachercon
     assert_response :success
     assert_equal 1, JSON.parse(@response.body).length
-    assert_equal tc.id, JSON.parse(@response.body).first['id']
+    assert_equal associated_workshop.id, JSON.parse(@response.body).first['id']
   end
 
   test 'Teachercon workshops can be filtered by course' do
@@ -595,6 +639,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       organizer: @organizer,
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
     )
+
+    sign_in @admin
 
     get :upcoming_teachercon, params: {course: Pd::Workshop::COURSE_CSD}
     assert_response :success
