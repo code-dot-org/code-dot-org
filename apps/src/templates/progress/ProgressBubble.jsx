@@ -16,6 +16,7 @@ import {
 } from './progressStyles';
 import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
 import TooltipWithIcon from './TooltipWithIcon';
+import { stringifyQueryParams } from '../../utils';
 
 /**
  * A ProgressBubble represents progress for a specific level. It can be a circle
@@ -82,10 +83,11 @@ class ProgressBubble extends React.Component {
     level: levelType.isRequired,
     disabled: PropTypes.bool.isRequired,
     smallBubble: PropTypes.bool,
+    selectedSectionId: PropTypes.string,
   };
 
   render() {
-    const { level, smallBubble } = this.props;
+    const { level, smallBubble, selectedSectionId } = this.props;
 
     const number = level.levelNumber;
     const url = level.url;
@@ -104,7 +106,10 @@ class ProgressBubble extends React.Component {
 
     let href = '';
     if (!disabled && url) {
-      href = url + location.search;
+      href = url;
+      if (selectedSectionId) {
+        href += stringifyQueryParams({section_id: selectedSectionId});
+      }
     }
 
     const tooltipId = _.uniqueId();
@@ -173,7 +178,7 @@ class ProgressBubble extends React.Component {
     // If we have an href, wrap in an achor tag
     if (href) {
       bubble = (
-        <a href={href} style={{textDecoration: 'none'}}>
+        <a href={href} style={{textDecoration: 'none'}} className="uitest-ProgressBubble">
           {bubble}
         </a>
       );
