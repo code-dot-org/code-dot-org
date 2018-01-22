@@ -14,9 +14,10 @@
 - if @current_user.try(:script_hidden?, @script)
   = render partial: 'hidden_script'
 - else
-  - if @script.course_link
+  - course_link = @script.course_link(params[:section_id])
+  - if course_link
     #script-breadcrumb
-      %a{href: @script.course_link}
+      %a{href: course_link}
         %i.fa.fa-chevron-left
         %span
           = I18n.t('view_all_units')
@@ -36,7 +37,9 @@
 
       - if @script.banner_image
         %p
-          = link_to image_tag(@script.banner_image), script_next_path(@script, 'next')
+          - path = script_next_path(@script)
+          - path += "?section_id=#{params[:section_id]}" if params[:section_id]
+          = link_to image_tag(@script.banner_image), path, class: 'uitest-script-next-banner'
 
       - if @script.beta?
         %p.lightgreytext
