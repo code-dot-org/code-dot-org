@@ -47,11 +47,8 @@
     "markdown_instructions": "# Decoding multiple numbers\r\n\r\nHere's a widget that can calculate numbers up to to eight bits. You can use it to find the values of the two world records below.\r\n\r\nDon't forget to make sure that the \"1\" bit is always the right most bit.  If you have extra bits on the left side of the widget, just keep them turned off.\r\n\r\n![](https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14 PM.png)\r\n\r\n1. Longest tail on a dog (in inches) (5 bits)\r\n2. Most spoons balanced on someone's face (5 bits)\r\n\r\n# Do This\r\n* Decode the two numbers from a the binary string.",
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: block;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><img src=\"https://images.code.org/3d248054eaeaf133a4cbbc167d7eb361-image-1502901324840.26.51 AM.png\" data-canonical-image-url=\"https://images.code.org/3d248054eaeaf133a4cbbc167d7eb361-image-1502901324840.26.51 AM.png\" id=\"startImage\" style=\"height: 75px; width: 285px; position: absolute; left: 20px; top: 155px; margin: 0px;\"></div></div>",
     "teacher_markdown": "Answers for this level can be found in the exemplar linked on [Level 1](1).",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
