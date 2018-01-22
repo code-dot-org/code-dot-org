@@ -1,0 +1,113 @@
+cron-census-pii:
+- dashboard.census_submissions
+- dashboard.census_submissions_school_infos
+cron-contact-rollups-pii:
+- pegasus.contact_rollups
+cron-contacts-hierarchy-pii:
+- pegasus.contacts
+cron-experiments-hierarchy:
+- dashboard.experiments
+cron-forms-hierarchy-pii:
+- pegasus.forms
+- pegasus.form_geos
+cron-hint-hierarchy:
+- dashboard.authored_hint_view_requests
+- dashboard.hint_view_requests
+- dashboard.puzzle_ratings
+cron-metrics-hierarchy:
+- dashboard.metrics
+cron-multi-hierarchy:
+- dashboard.contained_level_answers
+- dashboard.contained_levels
+- dashboard.level_sources_multi_types
+cron-paired-user-levels:
+- dashboard.paired_user_levels
+cron-pd-hierarchy-pii:
+- dashboard.regional_partners
+- dashboard.regional_partners_school_districts
+- dashboard.pd_%
+cron-plc-hierarchy:
+- dashboard.plc_course_units
+- dashboard.plc_courses
+- dashboard.plc_enrollment_module_assignments
+- dashboard.plc_enrollment_unit_assignments
+- dashboard.plc_learning_modules
+- dashboard.plc_learning_module_tasks
+- dashboard.plc_tasks
+- dashboard.plc_user_course_enrollments
+cron-project-hierarchy:
+- pegasus.storage_apps:
+    remove_column: [value]
+- pegasus.user_storage_ids
+- dashboard.channel_tokens
+cron-schools-hierarchy:
+- dashboard.schools
+- dashboard.school_infos
+- dashboard.school_districts
+- dashboard.school_stats_by_years
+cron-script-hierarchy:
+- dashboard.scripts
+- dashboard.stages
+- dashboard.levels
+- dashboard.script_levels
+- dashboard.levels_script_levels
+- dashboard.courses
+- dashboard.course_scripts
+cron-survey-hierarchy:
+- dashboard.survey_results
+cron-teaching-hierarchy:
+- dashboard.sections
+- dashboard.followers
+- dashboard.section_hidden_stages
+cron-user-hierarchy:
+- dashboard.users:
+    remove_column:
+    - email
+    - encrypted_password
+    - reset_password_token
+    - reset_password_sent_at
+    - remember_created_at
+    - current_sign_in_ip
+    - last_sign_in_ip
+    - username
+    - uid
+    - name
+    - school
+    - full_address
+    - confirmation_token
+    - confirmed_at
+    - confirmation_sent_at
+    - unconfirmed_email
+    - secret_picture_id
+    - hashed_email
+    - secret_words
+    - properties
+    - invitation_token
+    - invitation_created_at
+    - invitation_sent_at
+    - invitation_accepted_at
+    - invitation_limit
+    - invitation_by_id
+    - invitations_count
+    - parent_email
+- dashboard.user_geos:
+    remove_column:
+    - ip_address
+    - latitude
+    - longitude
+- dashboard.teacher_profiles
+- dashboard.studio_people:
+    remove_column: [emails]
+- dashboard.sign_ins
+cron-user-hierarchy-pii:
+- dashboard.studio_people
+- dashboard.teacher_profiles
+- dashboard.users
+- dashboard.user_geos
+cron-user-levels:
+- dashboard.user_levels
+cron-user-proficiency-hierarchy:
+- dashboard.user_proficiencies
+- dashboard.level_concept_difficulties
+cron-user-scripts:
+- dashboard.user_scripts
