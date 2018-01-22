@@ -7,7 +7,7 @@ import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv
 export default class CraftVisualizationColumn extends React.Component {
   static propTypes = {
     showScore: PropTypes.bool.isRequired
-  }
+  };
 
   render() {
     return (

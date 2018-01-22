@@ -45,7 +45,7 @@ describe("Quick View", () => {
       "status":"unreviewed"
     }]);
 
-    server.respondWith("GET", '/api/v1/pd/applications/quick_view?role=csf_facilitators',
+    server.respondWith("GET", '/api/v1/pd/applications/quick_view?role=csf_facilitators&regional_partner_filter=',
       [
         200,
         {"Content-Type": "application/json"},

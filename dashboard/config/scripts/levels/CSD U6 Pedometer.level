@@ -29,10 +29,6 @@
       "onBoardEvent": null
     },
     "edit_code": true,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -72,7 +68,8 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "start_blocks": "var steps = 0;",
-    "markdown_instructions": "# Pedometer Jog\r\n\r\n# Do This\r\n Use the `shake` event to move the jogger every time the board is shaken. The jogger should be moving by 5 steps every time."
+    "markdown_instructions": "# Pedometer Jog\r\n\r\n# Do This\r\n Use the `shake` event to move the jogger every time the board is shaken. The jogger should be moving by 5 steps every time.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

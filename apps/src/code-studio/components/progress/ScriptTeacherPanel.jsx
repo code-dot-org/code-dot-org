@@ -24,15 +24,15 @@ const styles = {
   }
 };
 
-const ScriptTeacherPanel = React.createClass({
-  propTypes: {
+class ScriptTeacherPanel extends React.Component {
+  static propTypes = {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     hasSections: PropTypes.bool.isRequired,
     sectionsAreLoaded: PropTypes.bool.isRequired,
     scriptHasLockableStages: PropTypes.bool.isRequired,
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
     unlockedStageNames: PropTypes.arrayOf(PropTypes.string).isRequired
-  },
+  };
 
   render() {
     const {
@@ -80,8 +80,9 @@ const ScriptTeacherPanel = React.createClass({
       </TeacherPanel>
     );
   }
-});
+}
 
+export const UnconnectedScriptTeacherPanel = ScriptTeacherPanel;
 export default connect((state, ownProps) => {
   const { stagesBySectionId, lockableAuthorized } = state.stageLock;
   const { selectedSectionId, sectionsAreLoaded, sectionIds } = state.teacherSections;
