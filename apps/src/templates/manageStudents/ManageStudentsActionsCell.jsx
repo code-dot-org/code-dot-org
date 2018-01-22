@@ -54,7 +54,7 @@ class ManageStudentActionsCell extends Component {
 
   onCancelDelete = () => {
     this.setState({deleting: false});
-  }
+  };
 
   onEdit = () => {
     this.props.startEditingStudent(this.props.id);

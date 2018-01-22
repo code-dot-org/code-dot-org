@@ -6,7 +6,7 @@ const LAUNCH_CLASS = 'launch';
 export default class SkipButton extends React.Component {
   static propTypes = {
     nextLevelUrl: PropTypes.string.isRequired,
-  }
+  };
 
   render() {
     return (
