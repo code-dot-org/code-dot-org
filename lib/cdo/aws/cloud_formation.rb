@@ -379,6 +379,13 @@ module AWS
         {'Fn::Sub': erb_eval(str, filename, vars)}.to_json
       end
 
+      def erb_file(filename, vars={})
+        file = File.expand_path filename
+        str = File.read(file)
+        vars = @@local_variables.dup.to_h.merge(vars)
+        erb_eval(str, file, vars)
+      end
+
       # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-zipfile
       LAMBDA_ZIPFILE_MAX = 4096
 
