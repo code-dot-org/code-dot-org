@@ -17,6 +17,7 @@ module Api::V1::Pd::Application
 
       response = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ")
       replaced_courses = principal_response.values_at(:replace_which_course_csp, :replace_which_course_csd).compact.join(', ')
+      # Sub out :: for : because "I don't know:" has a colon on the end
       replace_course_string = "#{response}#{replaced_courses.present? ? ': ' + replaced_courses : ''}".gsub('::', ':')
 
       teacher_application.update_form_data_hash(
