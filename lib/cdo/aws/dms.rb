@@ -25,7 +25,8 @@ module Cdo
           }
 
           # Remove specified columns using transformation rule.
-          if properties && (columns = properties['remove_column'])
+          properties &&
+            (columns = properties['remove_column']) &&
             columns.each do |column|
               remove_rules << {
                 'rule-type': 'transformation',
@@ -38,7 +39,6 @@ module Cdo
                 }
               }
             end
-          end
         end
 
         rules.concat remove_rules
