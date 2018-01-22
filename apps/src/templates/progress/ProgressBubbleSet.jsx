@@ -59,10 +59,11 @@ class ProgressBubbleSet extends React.Component {
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
     style: PropTypes.object,
+    selectedSectionId: PropTypes.string,
   };
 
   render() {
-    const { levels, disabled, style } = this.props;
+    const { levels, disabled, style, selectedSectionId } = this.props;
 
     return (
       <div style={{...styles.main, ...style}}>
@@ -91,6 +92,7 @@ class ProgressBubbleSet extends React.Component {
                 level={level}
                 disabled={disabled}
                 smallBubble={false}
+                selectedSectionId={selectedSectionId}
               />
             </div>
           </div>
