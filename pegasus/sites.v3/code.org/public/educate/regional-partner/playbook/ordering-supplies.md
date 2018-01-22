@@ -28,13 +28,15 @@ These workshop kits are designed to provide you with enough supplies to last the
 
 *Note: The only course with swag is Administrator & Counselor PD.*
 
-CS Principles and CS Discoveries have printed material for Quarter Three workshops only. These can be ordered in the [Mimeo Marketplace](https://marketplace.mimeo.com/codeorgworkshop).
+CS Principles and CS Discoveries have printed material for Quarter Three and Four workshops. These can be ordered in the [Mimeo Marketplace](https://marketplace.mimeo.com/codeorgworkshop). Please order at least four weeks before your scheduled workshop.
 
 You can also print these materials directly yourself:
 
 **CS Discoveries Quarter 3 Printed Materials** Printed materials needed can be found  [here](https://curriculum.code.org/plcsd/q3/). (Scroll down to “Printing” in the “Before the Workshop section.”). If you are using the Semester Implementation Agenda, you will need one less printed item. Please view the list of materials needed [here](https://curriculum.code.org/plcsd/q3-semester/).
 
 **CS Principles Quarter 3 Printed Materials:** Printed materials needed can be found [here](https://apcentral.collegeboard.org/pdf/2018-explore-performance-tasks-sg.pdf?course=ap-computer-science-principles).
+
+**CS Principles Quarter 4 Printed Materials:** Printed materials needed can be found [here](https://curriculum.code.org/plcsp/q4/). (Scroll down to "Supplies" section.)
 
 [**Back to the top**](#top)
 

@@ -7,14 +7,120 @@ nav: regional_partner_playbook_nav
 # Training Materials
 
 ## Table of Contents
+- [Virtual Trainings](#virtual)
 - [Regional Partner Summit - Sept 2017](#sept17)
 - [Regional Partner Summit - Feb 2017] (#feb17)
 - [TeacherCon - Summer 2016](#teachercon16)
 - [Facilitation Summit - May 2016](#fac16)
 - [Regional Partner Summit - Sept 2016](#sept16)
-- [Virtual Trainings](#virtual)
 
 
+
+________________
+<a id="virtual"></a>
+<br/>
+## Virtual Trainings
+
+
+  January 2018
+
+- Jan 19 Teacher Application Tools ([Video](https://code.zoom.us/recording/play/YTF54MqiBk6352GrU7mClLIeZ8eZ91P-tsrXw7yp1g2mafp4x1GEOIvPFBMbslmg), [Slides](https://drive.google.com/drive/folders/1KZBZvHP9OwDm_4VqOp6v-i7ICvivnGzo))
+- Jan 11 Teacher Application Process ([Video](https://code.zoom.us/recording/play/aEKJINsQA4uXqKqUx_gmk3V6neP24RusyC_0Rd9W1pwlDnDy5KSz5g0v_vIfG5eM), [Slides](https://drive.google.com/drive/folders/1KZBZvHP9OwDm_4VqOp6v-i7ICvivnGzo))
+<br/>
+
+ <details>
+    <summary>**2017 Virtual Trainings**</summary>
+    <p>
+
+December 2017  
+
+  - Dec 12 TEALS & the CS Principles Classroom ([Video](https://code.zoom.us/recording/play/7YH4DmJAL5OutCqgRsE5-YORNg0RUP5Uu-c_KtcX0P-LS-ohu9wUfXJS-K_URZz6))
+
+November 2017
+
+  - Nov 1 (Group 3)  Facilitator Application Process Meeting ([Video] (https://code.zoom.us/recording/play/YZM2cTTmiqmj7j9Hbl4F01UOzb1SacQPAMeS6lT4dp8wRGkNmsDyTojAIPtuYtHg)
+  - Nov 2 (Group 1 & 2)  Facilitator Application Process Meeting ([Video](https://code.zoom.us/recording/play/QmCDGnLI7rzNAfgh_S4UQAAEouzONxsxBr6bZG8GyAc9z5dXLA-rWbIm5rhZO3Jx))
+  - Nov 6 (Group 1) Group 1 Partner Sustainability Planning & CS Fundamentals Program [Video](https://code.zoom.us/recording/play/GQyAdC4l3EvCTxJ0Vqmm8Ut3KzwdYw2H8pjbAU7DQRpUVatwh50iUciZJtJxfIQj?autoplay=true)
+  - Nov 7 (Group 2 & 3) CS Fundamentals Program Meeting [Video](https://code.zoom.us/recording/play/1Wv_0js9OWADSq-Si10Ap5xxAHIRGsSiRAcZd-LpHYz1xgTIM7JjNX8_e1cDbfgL)
+  - Nov 29 (Group 3) Facilitator Interview Process Virtual Meeting [Video](https://code.zoom.us/recording/play/1FfVGNpYtTgCJp6k7OoPwsNWThfsFJY0tKs1j6Dmkv0PJg3Uv7FeHk42C3Lr33bY)
+  - Nov 30 (Group 1 & 2) Facilitator Interview Process Virtual Meeting [Video] (https://code.zoom.us/recording/play/526dKZPrGxY2Qt53dnzjwQ5ZZsymMl-E_FY9uA5Fee5_9omgEuADdaI0IY4hxDBd)
+
+October 2017
+
+  - October 19, 2017 Hour of Code Meeting ([Video](https://code.zoom.us/recording/play/wivm29HGNRKwHjj9lbija7G0Oo6HX_J4AvWh0kYMOt5MRlgct7P-_Nwp0ZC-fPkl))
+
+September 2017
+
+  - Sept 14 (Group 3) Welcome Webinar [Video](http://videos.code.org/plp/new-partner.mp4)
+
+May 2017:
+
+  - Annual Report Q&A [Video](http://videos.code.org/Annual_Report_Template_QandA.mp4)
+
+April 2017:
+
+  - Reviewing the CSP Local Leads Training [Video](http://videos.code.org/plp/Reviewing_the_CSP_Local_Leads_Training.mp4), [Slides](https://docs.google.com/presentation/d/1KlRbs_u-tZ3s0_vp61pvqPOi3HyxbNTBSmfJ4syqvaY/view#)
+
+March 2017:
+
+  - Guest Speaker Series: NCWIT [Video](http://videos.code.org/plp/NCWIT_March17.mp4), [Slides](https://docs.google.com/presentation/d/1nxC--kbLdFF41laOZqKFmKjMZmfsFUMAwf2VZkF59q4/edit)
+  - CS Principles Webinar for Teachers [Video](http://videos.code.org/plp/3-28-2017_CSPrinciples_Webinar.mp4)
+
+January 2017:                                            
+
+  - How to Review Teacher Applications [Video](https://videos.code.org/teacher/Teacher+Application+Review+Process.mp4), [Slides](https://docs.google.com/presentation/d/11bDnl_ekOspmJ4cVhShvoRQ3k0GVq0DeSWpRPx56CJg/edit?usp=sharing)
+  - CSP Teacher Application Process for Local Workshops [Video](http://videos.code.org/cs-principles/CSP-teacher-application-process-for-local-workshops.mp4), [Slides](https://docs.google.com/presentation/d/1SHF7pfrJmFt53Cp6GRpvw6VIo93x4euT-InYWYfe8Q4/edit?usp=sharing)
+  - Guest Speaker Series: TEALS [Video](http://videos.code.org/plp/Guest+Speaker_TEALS.mp4), [Slides](https://docs.google.com/presentation/d/1IgAynJuCVKy1EW5vZBpNvVn4xOIADDISNfg-LKLli5M/edit?usp=sharing)
+<br/>
+</p>
+</details>
+
+  <details>
+    <summary>**2016 Virtual Trainings**</summary>
+    <p>
+
+  December 2016:
+
+  - Teacher Application Process Overview [Video](https://videos.code.org/teacher/Teacher+Application+Process.mp4)
+  - Teacher Application Process Overview [Slides](https://docs.google.com/presentation/d/1DC5Unjuy7p5K50MIJai5s-jnhexYFlIUZKkAGNqLLp4/edit?usp=sharing)
+
+  November 2016:
+
+  - Facilitator Selection Process [Video](http://videos.code.org/plp/facilitator-application-process.mp4)
+  - Facilitator Selection Process [Slides](https://docs.google.com/presentation/d/12ZZ3hyVzjmhv3ymjrOKstbVptteAneMFOJkOog6jMD8/edit#slide=id.g18aec17c00_6_25)
+  - How to Run a Virtual Administrator and Counselor PD [Video](http://videos.code.org/plp/admin-counselor-virtual-PD.mp4)
+  - How to Run a Virtual Administrator and Counselor PD [Slides](https://www.dropbox.com/s/jo8r385x38bx8j6/Running%20a%20Virtual%20Training.pptx?dl=0)
+  - K-12 CS Framework [Video](http://videos.code.org/plp/k12-cs-framework.mp4)
+
+  October 2016:
+
+  - Supplies for Counselor and Administrator PD - [Video](http://videos.code.org/plp/counselor_administrator_supplies.mp4)
+  - Supplies for Counselor and Administrator PD - [Slides](https://docs.google.com/presentation/d/1RQeBL7rTcWnqzM48xNv8f1J3da5OVboekLJyw3_WeSk/edit#slide=id.gb846b8ce1_0_5)
+  - Hour of Code - [Slides](https://docs.google.com/presentation/d/12NF2r50USaxA7gReTFvBTv-6ggJ0wQHmj8HMPHQ0lNA/edit#slide=id.g1817931dd1_0_0)
+  - How to Use Slack - [Video](http://videos.code.org/plp/how-to-use-slack.mp4)
+  - How to Use Slack - [Slides](https://docs.google.com/presentation/d/1Rjm0-xrzJUWZHXqwjUkk166P-PeuFKpe9EEQK3RmNJY/edit#slide=id.gb846b8ce1_0_5)
+  - Overview of CS Discoveries - [Video](http://videos.code.org/plp/cs-discoveries-program-overview.mp4)
+  - Overview of CS Discoveries - [Slides](https://docs.google.com/presentation/d/1MNqdPQK6hIHxIHav5BHgp8_SVCfWmAZwQXhi1Kl-laI/edit#slide=id.g13d52b2d7c_0_159)
+
+  August 18, 2016:
+
+  - August Office Hours - [Video](http://videos.code.org/plp/august-2016-office-hours.mp4)
+  - August Office Hours - [Slides](https://docs.google.com/presentation/d/1CeK0psIdGuN_IePSXIcZLO4jCgIt60Qc07pA5scp9vs/edit#slide=id.g164738a879_0_0)
+
+  July 7, 2016:
+
+  - White House Fundraising Event - [Video](http://videos.code.org/plp/september-event-guidelines.mp4)<br/>
+  - White House Fundraising Event - [Slides](https://docs.google.com/presentation/d/10gksywQToajBiQNLDE7Kx7TNBiP6Co4UhQhQDc39jJs/edit?usp=sharing)
+
+  June 2016:
+
+- June Office Hours - [Video](http://videos.code.org/plp/june-2016-monthly-call.mp4)
+<br/>
+</p>
+</details>
+
+[**Back to the top**](#top)
+<br/>
 ________________
 <a id="sep17"></a>
 <br/>
@@ -161,95 +267,4 @@ ________________
 [**Back to the top**](#top)
 <br/>
 
-________________
-<a id="virtual"></a>
-<br/>
-## Virtual Trainings
 
-
-  December 2017  
-
-  - Dec 12 TEALS & the CS Principles Classroom ([Video](https://code.zoom.us/recording/play/7YH4DmJAL5OutCqgRsE5-YORNg0RUP5Uu-c_KtcX0P-LS-ohu9wUfXJS-K_URZz6))
-
-  November 2017
-
-  - Nov 1 (Group 3)  Facilitator Application Process Meeting ([Video] (https://code.zoom.us/recording/play/YZM2cTTmiqmj7j9Hbl4F01UOzb1SacQPAMeS6lT4dp8wRGkNmsDyTojAIPtuYtHg)
-  - Nov 2 (Group 1 & 2)  Facilitator Application Process Meeting ([Video](https://code.zoom.us/recording/play/QmCDGnLI7rzNAfgh_S4UQAAEouzONxsxBr6bZG8GyAc9z5dXLA-rWbIm5rhZO3Jx))
-  - Nov 6 (Group 1) Group 1 Partner Sustainability Planning & CS Fundamentals Program [Video](https://code.zoom.us/recording/play/GQyAdC4l3EvCTxJ0Vqmm8Ut3KzwdYw2H8pjbAU7DQRpUVatwh50iUciZJtJxfIQj?autoplay=true)
-  - Nov 7 (Group 2 & 3) CS Fundamentals Program Meeting [Video](https://code.zoom.us/recording/play/1Wv_0js9OWADSq-Si10Ap5xxAHIRGsSiRAcZd-LpHYz1xgTIM7JjNX8_e1cDbfgL)
-  - Nov 29 (Group 3) Facilitator Interview Process Virtual Meeting [Video](https://code.zoom.us/recording/play/1FfVGNpYtTgCJp6k7OoPwsNWThfsFJY0tKs1j6Dmkv0PJg3Uv7FeHk42C3Lr33bY)
-  - Nov 30 (Group 1 & 2) Facilitator Interview Process Virtual Meeting [Video] (https://code.zoom.us/recording/play/526dKZPrGxY2Qt53dnzjwQ5ZZsymMl-E_FY9uA5Fee5_9omgEuADdaI0IY4hxDBd)
-
-  October 2017
-
-  - October 19, 2017 Hour of Code Meeting ([Video](https://code.zoom.us/recording/play/wivm29HGNRKwHjj9lbija7G0Oo6HX_J4AvWh0kYMOt5MRlgct7P-_Nwp0ZC-fPkl))
-
-  September 2017
-
-  - Sept 14 (Group 3) Welcome Webinar [Video](http://videos.code.org/plp/new-partner.mp4)
-
-  May 2017:
-
-  - Annual Report Q&A [Video](http://videos.code.org/Annual_Report_Template_QandA.mp4)
-
-  April 2017:
-
-  - Reviewing the CSP Local Leads Training [Video](http://videos.code.org/plp/Reviewing_the_CSP_Local_Leads_Training.mp4), [Slides](https://docs.google.com/presentation/d/1KlRbs_u-tZ3s0_vp61pvqPOi3HyxbNTBSmfJ4syqvaY/view#)
-
-  March 2017:
-
-  - Guest Speaker Series: NCWIT [Video](http://videos.code.org/plp/NCWIT_March17.mp4), [Slides](https://docs.google.com/presentation/d/1nxC--kbLdFF41laOZqKFmKjMZmfsFUMAwf2VZkF59q4/edit)
-  - CS Principles Webinar for Teachers [Video](http://videos.code.org/plp/3-28-2017_CSPrinciples_Webinar.mp4)
-
-  January 2017:                                            
-
-  - How to Review Teacher Applications [Video](https://videos.code.org/teacher/Teacher+Application+Review+Process.mp4), [Slides](https://docs.google.com/presentation/d/11bDnl_ekOspmJ4cVhShvoRQ3k0GVq0DeSWpRPx56CJg/edit?usp=sharing)
-  - CSP Teacher Application Process for Local Workshops [Video](http://videos.code.org/cs-principles/CSP-teacher-application-process-for-local-workshops.mp4), [Slides](https://docs.google.com/presentation/d/1SHF7pfrJmFt53Cp6GRpvw6VIo93x4euT-InYWYfe8Q4/edit?usp=sharing)
-  - Guest Speaker Series: TEALS [Video](http://videos.code.org/plp/Guest+Speaker_TEALS.mp4), [Slides](https://docs.google.com/presentation/d/1IgAynJuCVKy1EW5vZBpNvVn4xOIADDISNfg-LKLli5M/edit?usp=sharing)
-
-  <details>
-    <summary>**2016 Virtual Trainings**</summary>
-    <p>
-
-  December 2016:
-
-  - Teacher Application Process Overview [Video](https://videos.code.org/teacher/Teacher+Application+Process.mp4)
-  - Teacher Application Process Overview [Slides](https://docs.google.com/presentation/d/1DC5Unjuy7p5K50MIJai5s-jnhexYFlIUZKkAGNqLLp4/edit?usp=sharing)
-
-  November 2016:
-
-  - Facilitator Selection Process [Video](http://videos.code.org/plp/facilitator-application-process.mp4)
-  - Facilitator Selection Process [Slides](https://docs.google.com/presentation/d/12ZZ3hyVzjmhv3ymjrOKstbVptteAneMFOJkOog6jMD8/edit#slide=id.g18aec17c00_6_25)
-  - How to Run a Virtual Administrator and Counselor PD [Video](http://videos.code.org/plp/admin-counselor-virtual-PD.mp4)
-  - How to Run a Virtual Administrator and Counselor PD [Slides](https://www.dropbox.com/s/jo8r385x38bx8j6/Running%20a%20Virtual%20Training.pptx?dl=0)
-  - K-12 CS Framework [Video](http://videos.code.org/plp/k12-cs-framework.mp4)
-
-  October 2016:
-
-  - Supplies for Counselor and Administrator PD - [Video](http://videos.code.org/plp/counselor_administrator_supplies.mp4)
-  - Supplies for Counselor and Administrator PD - [Slides](https://docs.google.com/presentation/d/1RQeBL7rTcWnqzM48xNv8f1J3da5OVboekLJyw3_WeSk/edit#slide=id.gb846b8ce1_0_5)
-  - Hour of Code - [Slides](https://docs.google.com/presentation/d/12NF2r50USaxA7gReTFvBTv-6ggJ0wQHmj8HMPHQ0lNA/edit#slide=id.g1817931dd1_0_0)
-  - How to Use Slack - [Video](http://videos.code.org/plp/how-to-use-slack.mp4)
-  - How to Use Slack - [Slides](https://docs.google.com/presentation/d/1Rjm0-xrzJUWZHXqwjUkk166P-PeuFKpe9EEQK3RmNJY/edit#slide=id.gb846b8ce1_0_5)
-  - Overview of CS Discoveries - [Video](http://videos.code.org/plp/cs-discoveries-program-overview.mp4)
-  - Overview of CS Discoveries - [Slides](https://docs.google.com/presentation/d/1MNqdPQK6hIHxIHav5BHgp8_SVCfWmAZwQXhi1Kl-laI/edit#slide=id.g13d52b2d7c_0_159)
-
-  August 18, 2016:
-
-  - August Office Hours - [Video](http://videos.code.org/plp/august-2016-office-hours.mp4)
-  - August Office Hours - [Slides](https://docs.google.com/presentation/d/1CeK0psIdGuN_IePSXIcZLO4jCgIt60Qc07pA5scp9vs/edit#slide=id.g164738a879_0_0)
-
-  July 7, 2016:
-
-  - White House Fundraising Event - [Video](http://videos.code.org/plp/september-event-guidelines.mp4)<br/>
-  - White House Fundraising Event - [Slides](https://docs.google.com/presentation/d/10gksywQToajBiQNLDE7Kx7TNBiP6Co4UhQhQDc39jJs/edit?usp=sharing)
-
-  June 2016:
-
-- June Office Hours - [Video](http://videos.code.org/plp/june-2016-monthly-call.mp4)
-<br/>
-</p>
-</details>
-
-[**Back to the top**](#top)
-<br/>
