@@ -25,7 +25,6 @@ module Cdo
           }
 
           # Remove specified columns using transformation rule.
-          # rubocop:disable Style/Next
           if properties && (columns = properties['remove_column'])
             columns.each do |column|
               remove_rules << {
