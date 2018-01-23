@@ -83,7 +83,7 @@ class ColumnVariableQuestion extends React.Component {
         </FormGroup>
       </td>
     );
-  }
+  };
 
   render() {
     return (
@@ -204,7 +204,7 @@ export default class VariableFormGroup extends React.Component {
     this.setState({
       selected: values[this.props.sourceName]
     });
-  }
+  };
 
   render() {
     if (this.hasNoSourceValues()) {

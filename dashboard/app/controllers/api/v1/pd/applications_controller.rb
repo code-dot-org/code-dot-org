@@ -45,6 +45,10 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     role = params[:role].to_sym
     applications = get_applications_by_role(role)
 
+    unless params[:regional_partner_filter].blank? || params[:regional_partner_filter] == 'all'
+      applications = applications.where(regional_partner_id: params[:regional_partner_filter] == 'none' ? nil : params[:regional_partner_filter])
+    end
+
     respond_to do |format|
       format.json do
         render json: applications, each_serializer: Api::V1::Pd::ApplicationQuickViewSerializer

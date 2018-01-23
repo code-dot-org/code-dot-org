@@ -270,7 +270,7 @@ export class DetailViewContents extends React.Component {
         {this.renderEditButtons()}
       </div>
     );
-  }
+  };
 
   renderHeader = () => {
     return (
