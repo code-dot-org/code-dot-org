@@ -93,28 +93,19 @@ class ProjectsList extends React.Component {
     showProjectThumbnails: PropTypes.bool.isRequired,
   };
 
-  const sortingColumn = this.props.showProjectThumbnails ?
-    COLUMNS.LAST_EDITED : COLUMNS_WITHOUT_THUMBNAILS.LAST_EDITED;
-
-  state = {
-    sortingColumns: {
-      [sortingColumn]: {
-        direction: 'desc',
-        position: 0
+  constructor(props) {
+    super(props);
+    const sortingColumn = this.props.showProjectThumbnails ?
+      COLUMNS.LAST_EDITED : COLUMNS_WITHOUT_THUMBNAILS.LAST_EDITED;
+    this.state = {
+      sortingColumns: {
+        [sortingColumn]: {
+          direction: 'desc',
+          position: 0
+        }
       }
-    }
-  };
-  // getInitialState() {
-  //   const sortingColumn = this.props.showProjectThumbnails ?
-  //     COLUMNS.LAST_EDITED : COLUMNS_WITHOUT_THUMBNAILS.LAST_EDITED;
-  //   const sortingColumns = {
-  //     [sortingColumn]: {
-  //       direction: 'desc',
-  //       position: 0
-  //     }
-  //   };
-  //   return {sortingColumns};
-  // },
+    };
+  }
 
   getSortingColumns = () => {
     return this.state.sortingColumns || {};
@@ -145,7 +136,7 @@ class ProjectsList extends React.Component {
    * @param {string} rowData.channel Encrypted, base64-encoded channel id.
    * @returns {React} A named link to the specified project.
    */
-  const nameFormatter = (name, {rowData}) => {
+  nameFormatter = (name, {rowData}) => {
     // Avoid generating malicious URLs in case the user somehow manipulates these inputs.
     const type = encodeURIComponent(rowData.type);
     const channel = encodeURIComponent(rowData.channel);
