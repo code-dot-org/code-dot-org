@@ -273,11 +273,11 @@ StudioApp.prototype.init = function (config) {
 
   //Only log a page load when there are videos present
   if (config.level.levelVideos && config.level.levelVideos.length > 0 && (config.app === 'applab' || config.app === 'gamelab')){
-    if (experiments.isEnabled('resourcesTab')){
+    if (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab')){
       firehoseClient.putRecord(
         'analysis-events',
         {
-          study: 'instructions-resources-tab-wip-v2',
+          study: 'instructions-resources-tab',
           study_group: 'resources-tab',
           event: 'resources-tab-load',
           script_id: config.scriptId,
@@ -289,7 +289,7 @@ StudioApp.prototype.init = function (config) {
       firehoseClient.putRecord(
         'analysis-events',
         {
-          study: 'instructions-resources-tab-wip-v2',
+          study: 'instructions-resources-tab',
           study_group: 'under-app',
           event: 'under-app-load',
           script_id: config.scriptId,
@@ -1845,7 +1845,7 @@ StudioApp.prototype.configureDom = function (config) {
   var referenceArea = document.getElementById('reference_area');
   // noInstructionsWhenCollapsed is used in TopInstructions to determine when to use CSPTopInstructions (in which case
   // display videos in the top instructions) or CSFTopInstructions (in which case the videos are appended here).
-  const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && experiments.isEnabled('resourcesTab');
+  const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab'));
   if (!referenceAreaInTopInstructions && referenceArea) {
     belowViz.appendChild(referenceArea);
     // TODO (epeach) - remove after resources tab A/B testing
@@ -1857,7 +1857,7 @@ StudioApp.prototype.configureDom = function (config) {
         firehoseClient.putRecord(
           'analysis-events',
           {
-            study: 'instructions-resources-tab-wip-v2',
+            study: 'instructions-resources-tab',
             study_group: 'under-app',
             event: 'under-app-video-click',
             script_id: config.scriptId,
