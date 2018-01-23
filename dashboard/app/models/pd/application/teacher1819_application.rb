@@ -541,7 +541,7 @@ module Pd::Application
     end
 
     def assigned_workshop
-      pd_workshop_id ? Pd::Workshop.find(pd_workshop_id).location_city : ''
+      pd_workshop_id ? Pd::Workshop.find(pd_workshop_id).date_and_location_name : ''
     end
 
     def registered_workshop
