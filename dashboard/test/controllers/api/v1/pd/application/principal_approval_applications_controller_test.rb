@@ -71,6 +71,27 @@ module Api::V1::Pd::Application
       assert_equal expected_principal_fields, actual_principal_fields
     end
 
+    test 'application update contains replaced courses' do
+      teacher_application = create :pd_teacher1819_application, application_guid: SecureRandom.uuid
+
+      test_params = {
+        application_guid: teacher_application.application_guid,
+        form_data: build(:pd_principal_approval1819_application_hash).merge(
+          {
+            replace_course: "Yes",
+            replace_which_course_csp: ['CodeHS', 'CS50']
+          }.stringify_keys
+        )
+      }
+
+      assert_creates(Pd::Application::PrincipalApproval1819Application) do
+        put :create, params: test_params
+        assert_response :success
+      end
+
+      assert_equal 'Yes: CodeHS, CS50', teacher_application.reload.sanitize_form_data_hash[:wont_replace_existing_course]
+    end
+
     test 'application update includes Other fields' do
       teacher_application = create :pd_teacher1819_application, application_guid: SecureRandom.uuid
 
