@@ -52,17 +52,17 @@ class Census::CensusYourSchool2017v4 < Census::CensusYourSchool2017v3
 
   # These questions are shown conditionally based on other answers.
   # Only validate under those conditions.
-  with_options if: :show_followup? do |submission|
-    submission.validates :topic_blocks, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :topic_text, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :topic_robots, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :topic_internet, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :topic_security, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :topic_data, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :topic_web_design, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :topic_game_design, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :topic_other, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :topic_do_not_know, exclusion: {in: [nil], message: "cannot be nil"}
-    submission.validates :class_frequency, presence: true
+  with_options if: :show_followup? do
+    validates :topic_blocks, exclusion: {in: [nil], message: "cannot be nil"}
+    validates :topic_text, exclusion: {in: [nil], message: "cannot be nil"}
+    validates :topic_robots, exclusion: {in: [nil], message: "cannot be nil"}
+    validates :topic_internet, exclusion: {in: [nil], message: "cannot be nil"}
+    validates :topic_security, exclusion: {in: [nil], message: "cannot be nil"}
+    validates :topic_data, exclusion: {in: [nil], message: "cannot be nil"}
+    validates :topic_web_design, exclusion: {in: [nil], message: "cannot be nil"}
+    validates :topic_game_design, exclusion: {in: [nil], message: "cannot be nil"}
+    validates :topic_other, exclusion: {in: [nil], message: "cannot be nil"}
+    validates :topic_do_not_know, exclusion: {in: [nil], message: "cannot be nil"}
+    validates :class_frequency, presence: true
   end
 end
