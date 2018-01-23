@@ -22,7 +22,7 @@ export default class LegendSelector extends Component {
 
   handleChange = () => {
     this.setState({checked: !this.state.checked});
-  }
+  };
 
   render() {
     const { inputStyle } = this.props;

@@ -85,14 +85,16 @@ class CourseScript extends Component {
           ...styles.main,
           ...(isHidden && styles.hidden)
         }}
+        className="uitest-CourseScript"
       >
         <div style={styles.content}>
           <div style={styles.title}>{title}</div>
           <div style={styles.description}>{description}</div>
           <Button
             text={i18n.goToUnit()}
-            href={`/s/${name}`}
+            href={`/s/${name}${location.search}`}
             color={Button.ButtonColor.gray}
+            className="uitest-go-to-unit-button"
           />
         </div>
         {viewAs === ViewType.Teacher && !hasNoSections &&

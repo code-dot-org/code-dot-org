@@ -228,10 +228,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
-    "encrypted_examples": [
-
-    ]
+    "makerlab_enabled": "true"
   },
   "published": true,
   "notes": "Markdown in contained level.",

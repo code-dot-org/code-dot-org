@@ -65,8 +65,8 @@ const styles = {
   }
 };
 
-const StageLockDialog = React.createClass({
-  propTypes: {
+class StageLockDialog extends React.Component {
+  static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleClose: PropTypes.func.isRequired,
     initialLockStatus: PropTypes.arrayOf(
@@ -78,13 +78,15 @@ const StageLockDialog = React.createClass({
     selectedSectionId: PropTypes.string.isRequired,
     saving: PropTypes.bool.isRequired,
     saveDialog: PropTypes.func.isRequired
-  },
+  };
 
-  getInitialState() {
-    return {
-      lockStatus: this.props.initialLockStatus
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      lockStatus: props.initialLockStatus
     };
-  },
+  }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.saving) {
@@ -93,7 +95,7 @@ const StageLockDialog = React.createClass({
     this.setState({
       lockStatus: nextProps.initialLockStatus
     });
-  },
+  }
 
   setAllLockStatus(lockStatus) {
     this.setState({
@@ -101,25 +103,19 @@ const StageLockDialog = React.createClass({
         lockStatus
       }))
     });
-  },
+  }
 
-  allowEditing() {
-    this.setAllLockStatus(LockStatus.Editable);
-  },
+  allowEditing = () => this.setAllLockStatus(LockStatus.Editable);
 
-  lockStage() {
-    this.setAllLockStatus(LockStatus.Locked);
-  },
+  lockStage = () => this.setAllLockStatus(LockStatus.Locked);
 
-  showAnswers() {
-    this.setAllLockStatus(LockStatus.ReadonlyAnswers);
-  },
+  showAnswers = () => this.setAllLockStatus(LockStatus.ReadonlyAnswers);
 
-  viewSection() {
+  viewSection = () => {
     window.open(`${window.dashboard.CODE_ORG_URL}/teacher-dashboard#/sections/${this.props.selectedSectionId}/assessments`, '_blank');
-  },
+  };
 
-  handleRadioChange(event) {
+  handleRadioChange = (event) => {
     const modifiedIndex = parseInt(event.target.name, 10);
     const value = event.target.value;
 
@@ -137,11 +133,11 @@ const StageLockDialog = React.createClass({
         })
       });
     }, 0);
-  },
+  };
 
-  handleSave() {
+  handleSave = () => {
     this.props.saveDialog(this.props.selectedSectionId, this.state.lockStatus);
-  },
+  };
 
   render() {
     const responsiveHeight = {
@@ -307,8 +303,9 @@ const StageLockDialog = React.createClass({
       </BaseDialog>
     );
   }
-});
+}
 
+export const UnconnectedStageLockDialog = Radium(StageLockDialog);
 export default connect(state => ({
   initialLockStatus: state.stageLock.lockStatus,
   isOpen: !!state.stageLock.lockDialogStageId,
@@ -318,4 +315,4 @@ export default connect(state => ({
   saveDialog(sectionId, lockStatus) {
     dispatch(saveLockDialog(sectionId, lockStatus));
   }
-}))(Radium(StageLockDialog));
+}))(UnconnectedStageLockDialog);

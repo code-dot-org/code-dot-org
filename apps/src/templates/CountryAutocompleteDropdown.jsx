@@ -38,7 +38,7 @@ export default class CountryAutocompleteDropdown extends Component {
 
   handleChange = (event) => {
     this.props.onChange("country", event);
-  }
+  };
 
   render() {
     const {showRequiredIndicator, showErrorMsg, value, singleLineLayout} = this.props;

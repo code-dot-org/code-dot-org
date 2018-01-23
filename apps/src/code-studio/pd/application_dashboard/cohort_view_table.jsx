@@ -13,11 +13,11 @@ export default class CohortViewTable extends React.Component {
     data: PropTypes.array.isRequired,
     path: PropTypes.string.isRequired,
     viewType: PropTypes.oneOf(['facilitator', 'teacher']).isRequired
-  }
+  };
 
   static contextTypes = {
     router: PropTypes.object
-  }
+  };
 
   constructColumns() {
     let columns = [
