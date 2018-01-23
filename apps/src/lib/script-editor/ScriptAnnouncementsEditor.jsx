@@ -93,7 +93,7 @@ export default class ScriptAnnouncementsEditor extends Component {
         type: NotificationType.information
       })
     });
-  }
+  };
 
   remove = (index) => {
     const newAnnouncements = [...this.state.announcements];
@@ -101,7 +101,7 @@ export default class ScriptAnnouncementsEditor extends Component {
     this.setState({
       announcements: newAnnouncements
     });
-  }
+  };
 
   change = (index, field, newValue) => {
     const newAnnouncements = [...this.state.announcements];
@@ -109,7 +109,7 @@ export default class ScriptAnnouncementsEditor extends Component {
     this.setState({
       announcements: newAnnouncements
     });
-  }
+  };
 
   render() {
     const { inputStyle } = this.props;
