@@ -985,8 +985,11 @@ class Script < ActiveRecord::Base
 
   # @return {String|nil} path to the course overview page for this script if there
   #   is one.
-  def course_link
-    course_path(course) if course
+  def course_link(section_id = nil)
+    return nil unless course
+    path = course_path(course)
+    path += "?section_id=#{section_id}" if section_id
+    path
   end
 
   # If there is an alternate version of this script which the user should be on

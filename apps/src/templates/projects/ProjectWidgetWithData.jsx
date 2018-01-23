@@ -2,20 +2,18 @@ import React, {PropTypes} from 'react';
 import ProjectWidget from '@cdo/apps/templates/projects/ProjectWidget';
 import $ from 'jquery';
 
-const ProjectWidgetWithData = React.createClass({
-  propTypes: {
+class ProjectWidgetWithData extends React.Component {
+  static propTypes = {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     projectList: PropTypes.array,
     canViewFullList: PropTypes.bool,
     canViewAdvancedTools: PropTypes.bool, // Default: true
-  },
+  };
 
-  getInitialState() {
-    return {
-      isLoading: true,
-      projectList: this.props.projectList || []
-    };
-  },
+  state = {
+    isLoading: true,
+    projectList: this.props.projectList || []
+  };
 
   componentWillMount() {
     if (this.state.projectList.length === 0) {
@@ -29,7 +27,7 @@ const ProjectWidgetWithData = React.createClass({
     } else {
       this.setState({isLoading: false});
     }
-  },
+  }
 
   render() {
     const { canViewAdvancedTools, canViewFullList } = this.props;
@@ -44,6 +42,6 @@ const ProjectWidgetWithData = React.createClass({
       />
     );
   }
-});
+}
 
 export default ProjectWidgetWithData;

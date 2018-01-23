@@ -5,7 +5,7 @@ exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit5"], ["teacherForum", "https://forum.code.org/c/csp5"], ["vocabulary", "https://curriculum.code.org/csp/unit5/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp/unit5/code/"], ["standardMappings", "https://curriculum.code.org/csp/unit5/standards/"], ["professionalLearning", "https://studio.code.org/s/csp5-support"]]
 has_verified_resources true
-script_announcements [{"notice"=>"Encourage Your Students to Take the AP CSP Exam!", "details"=>"We have the chance to make history—again. Encourage your students to sign up for the AP exam! Check in with your AP Coordinator to find out the signup deadline for your school. Click \"Learn more\" for details.", "link"=>"http://teacherblog.code.org/post/169508999644/break-records-for-a-second-year-with-the-ap-cs", "type"=>"bullhorn"}]
+script_announcements [{"notice"=>"Encourage Your Students to Take the AP CSP Exam!", "details"=>"We have the chance to make history---again. Encourage your students to sign up for the AP exam! Check in with your AP Coordinator to find out the signup deadline for your school. Click \"Learn more\" for details.", "link"=>"http://teacherblog.code.org/post/169508999644/break-records-for-a-second-year-with-the-ap-cs", "type"=>"bullhorn"}, {"notice"=>"Updates Made January 2018", "details"=>"We've spruced up the Color Sleuth activity in Lesson 10, improved instruction on algorithms, and added a number of questions in the style of the Create PT. Click to learn more.", "link"=>"http://forum.code.org/t/curriculum-updates-2017-18/10762/69", "type"=>"bullhorn"}]
 
 stage 'Buttons and Events', flex_category: 'csp5_1'
 level 'Unit 5 Lesson 1 Introduction', progression: 'Lesson Vocabulary & Resources'
@@ -54,6 +54,7 @@ level 'Unit 5 Lesson 3 Introduction', progression: 'Lesson Vocabulary & Resource
 level 'Event Driven Programming Recap', progression: 'Event Driven Programming Recap'
 level 'Tips For Working on Your Own', progression: 'Tips For Working on Your Own'
 level 'Project - Your Own Multi Screen App', progression: 'Project - Your Own Multi-Screen App'
+assessment 'U5 AP Practice Create Process', progression: '(new) AP Practice Response - Describe Your Process'
 
 stage 'Controlling Memory with Variables', flex_category: 'csp5_1'
 level 'Unit 5 Lesson 4 Introduction', progression: 'Lesson Vocabulary & Resources'
@@ -106,6 +107,7 @@ level 'CSPU5_U3L15 - Debugging Simple If-statements =v==', progression: 'Simple 
 level 'CSPU5_U3L15 - Debug forget to update var on reset in UpDown app', progression: 'Simple Decisions with if-statements'
 level 'CSPU5_U3L15 - Debug if never triggers in UpDown app', progression: 'Simple Decisions with if-statements'
 level 'CSPU5_U3L15 full clicker app', progression: 'Project: Clicker App'
+assessment 'U5 AP Create Practice onEvent Doesnt Count', progression: '(new) AP Practice Response - Choosing an Abstraction'
 
 stage 'Unit 5 Assessment 1', lockable: true, flex_category: 'csp5_1'
 variants
@@ -135,6 +137,7 @@ stage '"If" Statements Unplugged', flex_category: 'csp5_1'
 level 'Unit 5 Lesson 7 Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Big Picture: If-statements', progression: 'Big Picture: if-statements'
 level 'Worked Example: If-statements and Robot', progression: 'Worked Example: if-statements and Robot'
+level 'CSP Algorithms Map', progression: '(new) Algorithms in Programming'
 
 stage 'Boolean Expressions and "If" Statements', flex_category: 'csp5_1'
 level 'Unit 5 Lesson 8 Introduction', progression: 'Lesson Vocabulary & Resources'
@@ -172,6 +175,7 @@ level 'How Compound Boolean Expressions Work', progression: 'How Compound Boolea
 level 'CSPU5_U3 - Conditionals - Combine AND OR Simple', progression: 'How Compound Boolean Expressions Work'
 level 'U5 compound boolean museum example', progression: 'How Compound Boolean Expressions Work'
 level 'CSPU5_U3 - Conditionals - Combine AND OR and NOT', progression: 'How Compound Boolean Expressions Work'
+assessment 'U5-AP-Algorithm-Does-It-Count', progression: '(new) AP Practice Response - Score the Response'
 
 stage 'Building an App: Color Sleuth', flex_category: 'csp5_1'
 named_level 'Unit 5 Lesson 10 Introduction', progression: 'Lesson Vocabulary & Resources'
@@ -198,6 +202,9 @@ level 'U5 ColorSleuth scoring pt3 update UI for scoring', progression: 'Updating
 named_level 'Color Sleuth - How does it end?', progression: 'Color Sleuth - How Does It End?'
 named_level 'Project: Finish Color Sleuth', progression: 'Project: Color Sleuth'
 named_level 'Color Sleuth - Epilogue', progression: 'Color Sleuth - Epilogue'
+assessment 'U5 AP Practice Create Abstraction Color Sleuth', progression: '(new) AP Practice Responses - Algorithms and Abstraction'
+assessment 'CSP U5 AP Practice Choose the Algorithm', progression: '(new) AP Practice Responses - Algorithms and Abstraction'
+assessment 'U5 AP Practice Create Algorithm Color Sleuth', progression: '(new) AP Practice Responses - Algorithms and Abstraction'
 
 stage 'Unit 5 Assessment 2', lockable: true, flex_category: 'csp5_1'
 variants

@@ -32,6 +32,7 @@ module Api::V1::Pd
       }
 
       @csd_teacher_application = create :pd_teacher1819_application, course: 'csd'
+      @csd_teacher_application_with_partner = create :pd_teacher1819_application, course: 'csd', regional_partner: @regional_partner
       @csp_teacher_application = create :pd_teacher1819_application, course: 'csp'
       @csp_facilitator_application = create :pd_facilitator1819_application, course: 'csp'
 
@@ -45,6 +46,8 @@ module Api::V1::Pd
           )
         )
       )
+
+      @workshop_admin = create :workshop_admin
     end
 
     test_redirect_to_sign_in_for :index
@@ -84,6 +87,27 @@ module Api::V1::Pd
       get :quick_view, params: @test_quick_view_params
       assert_response :success
       assert_equal Pd::Application::Facilitator1819Application.csf.count, JSON.parse(@response.body).length
+    end
+
+    test "quick view returns applications with appropriate regional partner filter" do
+      sign_in @workshop_admin
+      get :quick_view, params: {role: 'csd_teachers', regional_partner_filter: @regional_partner.id}
+      assert_response :success
+      assert_equal [@csd_teacher_application_with_partner.id], JSON.parse(@response.body).map {|r| r['id']}
+    end
+
+    test "quick view returns applications with regional partner filter unset" do
+      sign_in @workshop_admin
+      get :quick_view, params: {role: 'csd_teachers'}
+      assert_response :success
+      assert_equal [@csd_teacher_application.id, @csd_teacher_application_with_partner.id], JSON.parse(@response.body).map {|r| r['id']}
+    end
+
+    test "quick view returns applciations with regional partner filter set to no partner" do
+      sign_in @workshop_admin
+      get :quick_view, params: {role: 'csd_teachers', regional_partner_filter: 'none'}
+      assert_response :success
+      assert_equal [@csd_teacher_application.id], JSON.parse(@response.body).map {|r| r['id']}
     end
 
     test 'regional partners can only see their applications in index' do

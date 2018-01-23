@@ -37,8 +37,8 @@
     "tts_markdown_instructions_override": "Now, put the code that you already have inside of a `repeat` loop, and spin it around 6 times.\r\nYou will need to turn 60 degrees at the end of each loop to get the image on the screen.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Remember to put the `turn` block inside of the loop.\",\"hint_id\":\"courseC_artist_loopsPre1a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8737ee98b4cdd9739e2f28467b9976ce/courseC_artist_loopsPre1a.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Your `repeat` loop should have 3 blocks inside of it: `jump to 200 over 200 down`, `move forward by 50 pixels`, and `turn right by 60 degrees`.\",\"hint_id\":\"courseC_artist_loopsPre1a_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/37148e14a6938a611765dbf2c430387f/courseC_artist_loopsPre1a.mp3\"}]",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

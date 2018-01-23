@@ -1,6 +1,9 @@
+import { Motion, StaggeredMotion, spring } from 'react-motion';
 import { connect } from 'react-redux';
 import { hideFeedback } from '../redux/feedback';
+import { interpolateColors } from '../utils';
 import BaseDialog from './BaseDialog';
+import Odometer from './Odometer';
 import PuzzleRatingButtons from  './PuzzleRatingButtons';
 import React, { Component, PropTypes } from 'react';
 import color from '../util/color';
@@ -46,12 +49,12 @@ const styles = {
     padding: 8,
   },
   bubble: {
-    borderColor: color.level_perfect,
     borderWidth: 7,
     borderStyle: 'solid',
     width: 60,
     height: 60,
     borderRadius: '50%',
+    transition: 'background-color 250ms linear, border-color 250ms linear',
   },
   buttonContainer: {
     height: 38,
@@ -71,7 +74,7 @@ const styles = {
   blockCount: {
     fontSize: 30,
     fontFamily: '"Gotham 7r", sans-serif',
-    margin: 10,
+    margin: 7,
     verticalAlign: 'middle',
   },
   blockCountPerfect: {
@@ -81,10 +84,11 @@ const styles = {
     color: color.light_teal,
   },
   blockCountDescriptor: {
+    borderRadius: 5,
     borderWidth: 1,
     borderStyle: 'solid',
+    display: 'inline-block',
     fontFamily: '"Gotham 5r", sans-serif',
-    borderRadius: 5,
     padding: 5,
     verticalAlign: 'middle',
   },
@@ -126,7 +130,18 @@ const styles = {
   },
 };
 
+const DEFAULT_STATE = {
+  blocksCounted: false,
+  blockCountDescriptionShown: false,
+  achievementsHighlighted: 0,
+};
+
 export class UnconnectedFinishDialog extends Component {
+  constructor() {
+    super();
+    this.state = DEFAULT_STATE;
+  }
+
   static propTypes = {
     isOpen: PropTypes.bool,
     hideBackdrop: PropTypes.bool,
@@ -139,22 +154,40 @@ export class UnconnectedFinishDialog extends Component {
     blockLimit: PropTypes.number,
     achievements: PropTypes.arrayOf(PropTypes.shape({
       isAchieved: PropTypes.bool,
-      iconUrl: PropTypes.string,
+      successIconUrl: PropTypes.string,
+      failureIconUrl: PropTypes.string,
       message: PropTypes.string,
     })),
     showFunometer: PropTypes.bool,
     canShare: PropTypes.bool,
   };
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.isOpen && !nextProps.isOpen) {
+      // Reset state when closing the dialog
+      this.setState(DEFAULT_STATE);
+    }
+  }
+
   getBubble() {
+    let backgroundColor = color.white;
+    let borderColor = color.light_gray;
+    if (this.state.blocksCounted) {
+      borderColor = color.level_perfect;
+      if (this.props.isPerfect) {
+        backgroundColor = color.level_perfect;
+      } else {
+        backgroundColor = color.level_passed;
+      }
+    }
     return (
       <div style={styles.bubbleContainer}>
         <div
           className="uitest-bubble"
           style={{
             ...styles.bubble,
-            backgroundColor:
-              this.props.isPerfect ? color.level_perfect : color.level_passed,
+            backgroundColor,
+            borderColor,
           }}
         />
       </div>
@@ -162,19 +195,42 @@ export class UnconnectedFinishDialog extends Component {
   }
 
   getBlockCountDescription() {
+    let description;
     if (this.props.blocksUsed < this.props.blockLimit) {
-      return msg.betterThanPerfectDescription();
+      description = msg.betterThanPerfectDescription();
+    } else if (this.props.blocksUsed === this.props.blockLimit) {
+      description = msg.perfectDescription();
+    } else {
+      description = msg.tooManyBlocksDescription();
     }
-    if (this.props.blocksUsed === this.props.blockLimit) {
-      return msg.perfectDescription();
-    }
-    if (this.props.blocksUsed > this.props.blockLimit) {
-      return msg.tooManyBlocksDescription();
-    }
+
+    return (
+      <Motion
+        defaultStyle={{scale: 0}}
+        style={{scale: spring(this.state.blocksCounted ? 1 : 0, {stiffness: 250, damping: 18})}}
+        onRest={() => this.setState({blockCountDescriptionShown: true})}
+      >
+        {interpolatingStyle => {
+          const { scale } = interpolatingStyle;
+          const transform = `translateY(${50 * (1 - scale)}%) scaleY(${scale})`;
+          return (
+            <span
+              style={{
+                ...styles.blockCountDescriptor,
+                transform,
+              }}
+            >
+              {description}
+            </span>
+          );
+        }}
+      </Motion>
+    );
   }
 
   getBlockCounter() {
-    if (this.props.blockLimit === undefined) {
+    if (this.props.blockLimit === undefined ||
+      this.props.blockLimit === Infinity) {
       return null;
     }
 
@@ -189,12 +245,13 @@ export class UnconnectedFinishDialog extends Component {
             styles.blockCountPass : styles.blockCountPerfect}
         >
           <span style={styles.blockCount}>
-            {(this.props.blocksUsed || 0).toString()}
+            <Odometer
+              value={this.props.blocksUsed}
+              onRest={() => this.setState({blocksCounted: true})}
+            />
             {this.props.blockLimit && ('/' + this.props.blockLimit.toString())}
           </span>
-          <span style={styles.blockCountDescriptor}>
-            {this.getBlockCountDescription()}
-          </span>
+          {this.getBlockCountDescription()}
         </span>
       </div>
     );
@@ -205,21 +262,53 @@ export class UnconnectedFinishDialog extends Component {
       return null;
     }
 
+    const defaultStyles = this.props.achievements.map(() => ({ color: 0 }));
+    const stylesGenerator = prevIterpolatedStyles => prevIterpolatedStyles.map((_, i) => {
+      const highlighted = this.props.achievements[i].isAchieved &&
+        this.state.blockCountDescriptionShown;
+      let target;
+      if (i === 0) {
+        target = 1;
+      } else {
+        target = prevIterpolatedStyles[i - 1].color;
+      }
+      return { color: spring(highlighted ? target : 0) };
+    });
+
     return (
-      <div style={styles.achievements}>
-        {this.props.achievements.map((achievement, index) => (
-          <div
-            key={index}
-            style={{
-              ...styles.achievementRow,
-              ...(achievement.isAchieved ? {} : {color: color.lighter_gray}),
-            }}
-          >
-            <img href={achievement.iconUrl} style={styles.achievementIcon} />
-            {achievement.message}
+      <StaggeredMotion
+        defaultStyles={defaultStyles}
+        styles={stylesGenerator}
+      >
+        {interpolatingStyles =>
+          <div style={styles.achievements}>
+            {interpolatingStyles.map((style, index) => {
+              const achievement = this.props.achievements[index];
+              return (
+                <div
+                  style={{
+                    ...styles.achievementRow,
+                    color: interpolateColors(
+                      color.lighter_gray,
+                      color.dark_charcoal,
+                      style.color
+                    ),
+                  }}
+                  key={index}
+                >
+                  <img
+                    src={style.color > 0 ?
+                      achievement.successIconUrl :
+                      achievement.failureIconUrl}
+                    style={styles.achievementIcon}
+                  />
+                  {achievement.message}
+                </div>
+              );
+            })}
           </div>
-        ))}
-      </div>
+        }
+      </StaggeredMotion>
     );
   }
 
@@ -246,7 +335,7 @@ export class UnconnectedFinishDialog extends Component {
         Replay
       </button>,
       <button
-        key="contnue"
+        key="continue"
         style={{...styles.button, ...styles.continueButton}}
         onClick={this.props.onContinue}
       >

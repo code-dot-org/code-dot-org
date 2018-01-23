@@ -112,5 +112,96 @@ module Pd::Application
       }.to_json
       assert_equal 3, application.total_score
     end
+
+    test 'answer_with_additional_text for a string answer' do
+      answer_hash = {
+        string_question: 'Other:',
+        string_question_other: 'my explanation'
+      }
+
+      full_answer = ApplicationBase.answer_with_additional_text answer_hash, :string_question
+      assert_equal 'Other: my explanation', full_answer
+    end
+
+    test 'answer_with_additional_text for a string answer and custom other text' do
+      answer_hash = {
+        string_question: 'A custom answer:',
+        string_question_explanation: 'my custom explanation'
+      }
+
+      full_answer = ApplicationBase.answer_with_additional_text answer_hash,
+        :string_question, 'A custom answer:', :string_question_explanation
+      assert_equal 'A custom answer: my custom explanation', full_answer
+    end
+
+    test 'answer_with_additional_text for an array answer' do
+      answer_hash = {
+        array_question: [
+          'An answer',
+          'Other:'
+        ],
+        array_question_other: 'my explanation'
+      }
+
+      full_answer = ApplicationBase.answer_with_additional_text answer_hash, :array_question
+      assert_equal(
+        [
+          'An answer',
+          'Other: my explanation',
+        ],
+        full_answer
+      )
+    end
+
+    test 'answer_with_additional_text for an array answer and custom other text' do
+      answer_hash = {
+        array_question: [
+          'A supplied answer',
+          'A custom answer:'
+        ],
+        array_question_other: 'my custom explanation'
+      }
+
+      full_answer = ApplicationBase.answer_with_additional_text answer_hash,
+        :array_question, 'A custom answer:', :array_question_other
+      assert_equal(
+        [
+          'A supplied answer',
+          'A custom answer: my custom explanation',
+        ],
+        full_answer
+      )
+    end
+
+    test 'full answers' do
+      application = ApplicationBase.new
+      application.stubs(additional_text_fields:
+        [
+          [:string_question_with_extra],
+          [:array_question_with_extra]
+        ]
+      )
+      form_data = {
+        regular_string_question: 'regular string answer',
+        regular_array_question: ['regular array answer'],
+        string_question_with_extra: 'Other:',
+        string_question_with_extra_other: 'my other string answer',
+        array_question_with_extra: ['Other:'],
+        array_question_with_extra_other: 'my other array answer',
+        filtered_question: 'to be removed'
+      }
+
+      application.stubs(sanitize_form_data_hash: form_data)
+      ApplicationBase.stubs(filtered_labels: form_data.except(:filtered_question))
+
+      expected_full_answers = {
+        regular_string_question: 'regular string answer',
+        regular_array_question: ['regular array answer'],
+        string_question_with_extra: 'Other: my other string answer',
+        array_question_with_extra: ['Other: my other array answer'],
+      }
+
+      assert_equal expected_full_answers, application.full_answers
+    end
   end
 end
