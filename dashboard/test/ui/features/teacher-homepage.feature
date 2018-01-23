@@ -1,6 +1,7 @@
 @dashboard_db_access
 @pegasus_db_access
 @as_teacher
+@no_mobile
 Feature: Using the teacher homepage sections feature
 
   Scenario: Loading the teacher homepage with new sections
