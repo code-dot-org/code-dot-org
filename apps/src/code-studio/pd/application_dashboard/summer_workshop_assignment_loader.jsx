@@ -12,11 +12,11 @@ export default class SummerWorkshopAssignmentLoader extends React.Component {
     regionalPartnerGroup: PropTypes.number,
     canYouAttendQuestion: PropTypes.string.isRequired,
     canYouAttendAnswer: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)])
-  }
+  };
 
   state = {
     loading: true
-  }
+  };
 
   componentWillMount() {
     this.load();
@@ -43,7 +43,7 @@ export default class SummerWorkshopAssignmentLoader extends React.Component {
         })
       });
     });
-  }
+  };
 
 
   render() {

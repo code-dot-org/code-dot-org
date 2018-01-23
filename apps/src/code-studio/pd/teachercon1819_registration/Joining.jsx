@@ -17,9 +17,9 @@ export default class Joining extends Teachercon1819FormComponent {
     teacherAcceptSeat: "Do you want to accept your seat in the Professional Learning Program? (Select one)",
     teacherWaitlistExplain: "Optional: Please explain more why you cannot accept your seat in the Professional Learning Program.",
     teacherDeclineExplain: "Optional: Please explain more why you cannot accept your seat in the Professional Learning Program.",
-  }
+  };
 
-  static associatedFields = Object.keys(Joining.labels)
+  static associatedFields = Object.keys(Joining.labels);
 
   /**
    * @override
