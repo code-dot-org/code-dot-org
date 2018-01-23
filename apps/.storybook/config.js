@@ -13,6 +13,7 @@ import '../style/netsim/style.scss';
 import '../style/applab/style.scss';
 import '../src/templates/GameButtons.story.scss';
 
+// Workaround for missing required prop in addon-info components.
 Props.propTypes = {
   ...Props.propTypes,
   maxPropsIntoLine: PropTypes.number,
