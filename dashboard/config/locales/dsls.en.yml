@@ -10242,13 +10242,10 @@ en:
       grade2_multi_collector_A_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
-        Incorrect.  Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.: Incorrect.  Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.
         Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.: Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.
-        Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.: Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.
         Laurel tries to collect treasure where there is none and it causes an error.: Laurel tries to collect treasure where there is none and it causes an error.
         Laurel will collect 4 pieces of treasure using this code.: Laurel will collect 4 pieces of treasure using this code.
         Laurel will collect all of the treasure.: Laurel will collect all of the treasure.
-        Laurel will only be able to collect 2 pieces of treasure using this code.: Laurel will only be able to collect 2 pieces of treasure using this code.
         Laurel will try to collect treasure where there is not any and it causes an error.: Laurel will try to collect treasure where there is not any and it causes an error.
         ? Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?
         : Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?
