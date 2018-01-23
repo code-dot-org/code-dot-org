@@ -41,7 +41,7 @@ describe('ScriptOverviewTopRow', () => {
       <div>
         <div>
           <Button
-            href="/s/test-script/next.next"
+            href="/s/test-script/next"
             text={i18n.tryNow()}
             size={Button.ButtonSize.large}
           />
@@ -71,7 +71,7 @@ describe('ScriptOverviewTopRow', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <Button
-        href="/s/test-script/next.next"
+        href="/s/test-script/next"
         text={i18n.continue()}
         size={Button.ButtonSize.large}
       />
@@ -88,7 +88,7 @@ describe('ScriptOverviewTopRow', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <Button
-        href="/s/test-script/next.next"
+        href="/s/test-script/next"
         text={i18n.printCertificate()}
         size={Button.ButtonSize.large}
       />

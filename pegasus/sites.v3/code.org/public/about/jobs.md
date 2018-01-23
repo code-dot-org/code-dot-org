@@ -27,8 +27,6 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 **We are currently hiring for:**
 
-- **Administration & Finance**
-	- [Director of Accounting & Finance](#accounting)
 - **Education Team**
 	- [Facilitator Development Specialist](#facilitator)
 	- [Program Associate](#associate)
@@ -46,48 +44,7 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="accounting"href="#accounting">Director of Accounting & Finance (Seattle, WA)</a>
 
-**Job Summary:**
-
-Code.org is looking for an experienced Director of Accounting & Finance to oversee all finance and accounting workflows, including regulatory and financial reporting, budget and forecast preparation, contract administration, and the development of internal control policies and procedures.
-
-Responsibilities of the position include:
-
-- Management of a small accounting and finance team 
-- Monitoring all aspects of the company’s accounting and financial operations, ensuring quality control over financial transactions and reporting.
-- Supervising the month and year-end close procedures, including review of journal entries, account reconciliations, and analysis of results
-- Overseeing the preparation and distribution of timely internal financial statements
-- Supervising the external audit of the company’s financial statements and preparation of annual tax return 
-- Collaborate with Controller on annual budgeting and monthly re-forecasting
-- Reviewing all payables and receivables 
-- Cash flow planning and cash management
-- Contract administration: prepare and/or negotiate standard contracts (partnerships, licensing, grants, contractors, vendors)
-- Providing data modeling and analysis, as needed
-- Supporting the Fundraising team through the development of grant budgets, including government grants
-- Developing and documenting finance and accounting processes and policies to maintain and strengthen internal controls
-
-**Experience and Qualifications:**
-
-The ideal candidate has at least a Bachelor’s degree in Accounting, Finance, or related field and possesses the following skills:
-
-- 3+ years experience in an accounting management role, plus additional experience in an accountant role
-- 2+ years experience in contract administration  
-- Strong knowledge of GAAP and financial reporting requirements as well as financial audits
-- Experience with Quickbooks Online
-- Advanced or expert user of spreadsheets
-- Experience and aptitude for managing complex projects and reports 
-- Advanced analytical, organizational and problem solving skills
-- Be highly comfortable working in a fast-paced, ambiguous, informal work environment
-- Fund accounting experience a plus
-- Experience with government grant programs preferred
-- CPA preferred
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
-
-Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure. Proficiency in working with Microsoft Office and Google Docs a must.
-
-To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="facilitator"href="#facilitator">Facilitator Development Specialist (Seattle, WA)</a>
 
@@ -133,7 +90,7 @@ To apply, please email resume and cover letter to <a href="mailto:jobs@code.org"
 
 Code.org is looking for a detail and customer-service oriented Program Associate to join Code.org’s Education team. The Education team is responsible for the creation of Code.org’s K-12 computer science courses and the success of Code.org professional development across the U.S. The Education team supports a network of roughly 400 computer science facilitators in their delivery of these professional development workshops, which have reached over 50,000 teachers in the past 3 years.
 
-Under the direction of the Education Program Manager for the middle and high school programs, the Program Associate provides operational and administrative assistance. This role will work collaboratively with the other team members supporting teachers and facilitators. This is a full-time, exemtp position. 
+Under the direction of the Education Program Manager for the middle and high school programs, the Program Associate provides operational and administrative assistance. This role will work collaboratively with the other team members supporting teachers and facilitators. This is a full-time, exempt position. 
 
 In this role you will: 
 

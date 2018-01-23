@@ -64,7 +64,7 @@ export class QuickView extends React.Component {
 
     const statusList = ApplicationStatuses[this.props.route.viewType];
     this.statuses = statusList.map(v => ({value: v.toLowerCase(), label: v}));
-    this.statuses.unshift({value: null, label: "\u00A0"});
+    this.statuses.unshift({value: null, label: "All statuses"});
   }
 
   load(regionalPartnerFilter) {
@@ -137,6 +137,7 @@ export class QuickView extends React.Component {
                 placeholder={null}
                 options={this.statuses}
                 style={styles.select}
+                clearable={false}
                 {...SelectStyleProps}
               />
             </FormGroup>

@@ -285,7 +285,7 @@ module Api::V1::Pd
       time = Date.new(2017, 3, 15)
 
       Timecop.freeze(time) do
-        workshop = create :pd_workshop, processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+        workshop = create :pd_workshop, num_sessions: 3, sessions_from: Date.new(2017, 1, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
         application = create(
@@ -313,7 +313,7 @@ module Api::V1::Pd
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: 'Orchard Park',
+            assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes'
           }.stringify_keys, JSON.parse(@response.body).first
         )
