@@ -669,7 +669,6 @@ FactoryGirl.define do
         cs_opportunities_at_school: ['Courses for credit'],
         plan_to_teach: 'Yes, I plan to teach this course',
         able_to_attend_single: 'Yes',
-        able_to_attend_multiple: 'Yes',
         committed: 'Yes',
         willing_to_travel: 'Up to 50 miles',
         agree: 'Yes'
@@ -711,6 +710,19 @@ FactoryGirl.define do
             school_type: evaluator.school_type
           }.stringify_keys
         )
+      end
+    end
+
+    trait :with_multiple_workshops do
+      transient do
+        able_to_attend_multiple ['December 11-15, 2017 in Indiana, USA']
+      end
+      after(:build) do |hash, evaluator|
+        hash.merge!(
+          {
+            able_to_attend_multiple: evaluator.able_to_attend_multiple
+          }.stringify_keys
+        ).except!("able_to_attend_single")
       end
     end
   end

@@ -75,7 +75,8 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
         {this.inputFor('totalStudentEnrollment')}
         {this.numberInputFor('freeLunchPercent', {
           min: 0,
-          max: 100
+          max: 100,
+          step: 1
         })}
         Percentage of student enrollment by race
         {
@@ -86,6 +87,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
               controlWidth: { md: 2 },
               min: 0,
               max: 100,
+              step: 1
             });
           })
         }

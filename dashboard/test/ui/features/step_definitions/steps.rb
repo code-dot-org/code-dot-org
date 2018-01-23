@@ -1336,11 +1336,41 @@ Then /^the section table should have (\d+) rows?$/ do |expected_row_count|
   expect(row_count.to_i).to eq(expected_row_count.to_i)
 end
 
-Then /^the section table row at index (\d+) has script href "([^"]+)"$/ do |row_index, expected_href|
-  actual_href = @browser.execute_script(
+Then /^the section table row at index (\d+) has script path "([^"]+)"$/ do |row_index, expected_path|
+  href = @browser.execute_script(
     "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(1)').attr('href');"
   )
-  expect(actual_href).to eq(expected_href)
+  # ignore query params
+  actual_path = href.split('?')[0]
+  expect(actual_path).to eq(expected_path)
+end
+
+Then /^I save the section id from row (\d+) of the section table$/ do |row_index|
+  @section_id = get_section_id_from_table(row_index)
+end
+
+Then /^the url contains the section id$/ do
+  expect(@section_id).to be > 0
+  expect(@browser.current_url).to include("?section_id=#{@section_id}")
+end
+
+Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
+  href = @browser.execute_script("return $(\"#{selector}\").attr('href');")
+  expect(@section_id).to be > 0
+
+  # make sure the query params do not come after the # symbol
+  expect(href.split('#')[0]).to include("?section_id=#{@section_id}")
+end
+
+# @return [Number] the section id for the corresponding row in the sections table
+def get_section_id_from_table(row_index)
+  # e.g. https://code.org/teacher-dashboard#/sections/54
+  href = @browser.execute_script(
+    "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(1) a').attr('href')"
+  )
+  section_id = href.split('/').last.to_i
+  expect(section_id).to be > 0
+  section_id
 end
 
 Then /^I scroll the save button into view$/ do

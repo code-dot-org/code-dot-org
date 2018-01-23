@@ -29,10 +29,6 @@
       "onBoardEvent": null
     },
     "edit_code": true,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -71,12 +67,16 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "start_blocks": "var steps = 0;",
-    "markdown_instructions": "# Pedometer Jog\r\n\r\n# Do This\r\n Use the `shake` event to move the jogger every time the board is shaken. The jogger should be moving by 5 steps every time."
+    "start_blocks": "var steps = 0;\r\nonBoardEvent(__, __, function(event) {\r\n  setProperty(\"stepsTaken\", \"text\", steps);\r\n  if (steps >= getProperty(\"finishLine\", \"x\") - 50) {\r\n   setScreen(\"congrats_screen\");\r\n  }\r\n});\r\n",
+    "markdown_instructions": "# Pedometer Jog\r\n\r\nThe `change` event is useful, but it's also really sensitive to movement. `shake` is like `change`, and is triggered when the board is shaken, but it has a higher threshold for changes in movement before triggering the event. \r\n\r\nYou're going to use this event to make a pedometer.\r\n\r\n# Do This\r\n\r\n* Use the counter pattern to move the jogger every time the board is shaken.\r\n* Make sure the jogger moves by 5 steps every time.",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-18 17:11:00 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-18 17:28:07 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"makerlab_enabled\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-18 17:35:50 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-18 17:11:00 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-18 17:28:07 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"makerlab_enabled\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-18 17:35:50 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-19 23:40:47 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

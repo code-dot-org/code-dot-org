@@ -8,7 +8,7 @@ export default storybook => {
     .addDecorator(reactBootstrapStoryDecorator)
     .addStoryTable([
       {
-        name: 'Detail View Response for line item question',
+        name: 'Detail View Response for line item question 1',
         story: () => (
           <DetailViewResponse
             question="What is your name?"
@@ -18,7 +18,7 @@ export default storybook => {
         )
       },
       {
-        name: 'Detail View Response for line item question',
+        name: 'Detail View Response for line item question 2',
         story: () => (
           <DetailViewResponse
             question="What is your quest?"
@@ -28,7 +28,7 @@ export default storybook => {
         )
       },
       {
-        name: 'Detail View Response for line item question',
+        name: 'Detail View Response for line item question 3',
         story: () => (
           <DetailViewResponse
             question="What is your favorite color?"
@@ -38,7 +38,7 @@ export default storybook => {
         )
       },
       {
-        name: 'Detail View Response for line item question',
+        name: 'Detail View Response for line item question 4',
         story: () => (
           <DetailViewResponse
             question="What is your favorite color?"
@@ -48,7 +48,7 @@ export default storybook => {
         )
       },
       {
-        name: 'Detail View Response for line item question',
+        name: 'Detail View Response for line item question 5',
         story: () => (
           <DetailViewResponse
             question="This should not render"

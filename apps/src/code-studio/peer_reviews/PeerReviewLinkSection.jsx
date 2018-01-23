@@ -6,7 +6,7 @@ class PeerReviewLinkSection extends React.Component {
   static propTypes = {
     reviews: PropTypes.arrayOf(PropTypes.array).isRequired,
     escalatedReviewId: PropTypes.number
-  }
+  };
 
   getIconForStatus(status) {
     switch (status) {
