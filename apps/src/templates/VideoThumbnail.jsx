@@ -50,7 +50,7 @@ export default class VideoThumbnail extends Component {
             firehoseClient.putRecord(
               'analysis-events',
               {
-                study: 'instructions-resources-tab-wip-v2',
+                study: 'instructions-resources-tab',
                 study_group: 'resources-tab',
                 event: 'tab-video-click',
                 script_id: this.props.scriptId,

@@ -275,7 +275,7 @@ StudioApp.prototype.init = function (config) {
       firehoseClient.putRecord(
         'analysis-events',
         {
-          study: 'instructions-resources-tab-wip-v2',
+          study: 'instructions-resources-tab',
           study_group: 'resources-tab',
           event: 'resources-tab-load',
           script_id: config.scriptId,
@@ -287,7 +287,7 @@ StudioApp.prototype.init = function (config) {
       firehoseClient.putRecord(
         'analysis-events',
         {
-          study: 'instructions-resources-tab-wip-v2',
+          study: 'instructions-resources-tab',
           study_group: 'under-app',
           event: 'under-app-load',
           script_id: config.scriptId,
@@ -1868,7 +1868,7 @@ StudioApp.prototype.configureDom = function (config) {
         firehoseClient.putRecord(
           'analysis-events',
           {
-            study: 'instructions-resources-tab-wip-v2',
+            study: 'instructions-resources-tab',
             study_group: 'under-app',
             event: 'under-app-video-click',
             script_id: config.scriptId,
