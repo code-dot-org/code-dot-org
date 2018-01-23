@@ -85,10 +85,10 @@ export class QuickView extends React.Component {
 
   getApiUrl = (format = '', regionalPartnerFilter = 'none') => `/api/v1/pd/applications/quick_view${format}?role=${this.props.route.path}&regional_partner_filter=${regionalPartnerFilter}`;
   getJsonUrl = (regionalPartnerFilter) => this.getApiUrl('', regionalPartnerFilter);
-  getCsvUrl = () => this.getApiUrl('.csv');
+  getCsvUrl = (regionalPartnerFilter) => this.getApiUrl('.csv', regionalPartnerFilter);
 
   handleDownloadCsvClick = event => {
-    window.open(this.getCsvUrl());
+    window.open(this.getCsvUrl(this.state.regionalPartnerFilter));
   };
 
   handleStateChange = (selected) => {
