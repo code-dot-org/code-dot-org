@@ -19,6 +19,7 @@ var GameLabP5 = function () {
     'keyPressed', 'keyReleased', 'keyTyped'
   ];
   this.p5specialFunctions = ['preload', 'draw', 'setup'].concat(this.p5eventNames);
+  this.stepSpeed = 1;
 };
 
 module.exports = GameLabP5;
@@ -451,6 +452,32 @@ GameLabP5.prototype.registerP5EventHandler = function (eventName, handler) {
   this.p5[eventName] = handler;
 };
 
+GameLabP5.prototype.setP5FrameRate = function () {
+  if (!this.p5) {
+    return;
+  }
+  if (this.stepSpeed < 1) {
+    // TODO: properly handle overriding frameRate
+    this.prevFrameRate = this.p5.frameRate();
+    this.p5.frameRate(1);
+  } else {
+    this.p5.frameRate(this.prevFrameRate || 30);
+  }
+};
+
+GameLabP5.prototype.changeStepSpeed = function (stepSpeed) {
+  this.stepSpeed = stepSpeed;
+  this.setP5FrameRate();
+};
+
+GameLabP5.prototype.drawDebugSpriteColliders = function () {
+  if (this.p5) {
+    this.p5.allSprites.forEach(sprite => {
+      sprite.display(true);
+    });
+  }
+};
+
 /**
  * Instantiate a new p5 and start execution
  */
@@ -458,6 +485,7 @@ GameLabP5.prototype.startExecution = function () {
   new window.p5(function (p5obj) {
       this.p5 = p5obj;
       this.p5.useQuadTree(false);
+      this.setP5FrameRate();
       this.gameLabWorld = new GameLabWorld(p5obj);
 
       p5obj.registerPreloadMethod('gamelabPreload', window.p5.prototype);
