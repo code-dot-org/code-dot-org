@@ -31,7 +31,8 @@ Scenario: Importing an Agent level from a share link
   And element "#runButton" is visible
 
   # We expect this to load the "Minecraft not connected" dialog, so close it
-  Then I click selector "#close-popup"
+  Then I wait until element "#close-popup" is visible
+  And I click selector "#close-popup"
   # Open the import dialog
   And I click selector ".project_import"
   And I wait until element "#share-link" is visible
@@ -76,7 +77,8 @@ Scenario: Importing an Agent level from a project link
   And element "#runButton" is visible
 
   # We expect this to load the "Minecraft not connected" dialog, so close it
-  Then I click selector "#close-popup"
+  Then I wait until element "#close-popup" is visible
+  And I click selector "#close-popup"
   # Open the import dialog
   And I click selector ".project_import"
   And I wait until element "#share-link" is visible

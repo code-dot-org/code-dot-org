@@ -4,6 +4,7 @@ import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
 import { levelType } from './progressTypes';
 import { levelProgressStyle, hoverStyle } from './progressStyles';
+import { stringifyQueryParams } from '../../utils';
 
 const styles = {
   levelPill: {
@@ -47,13 +48,17 @@ class ProgressPill extends React.Component {
     fontSize: PropTypes.number,
     tooltip: PropTypes.element,
     disabled: PropTypes.bool,
+    selectedSectionId: PropTypes.string,
   };
 
   render() {
-    const { levels, icon, text, fontSize, tooltip, disabled } = this.props;
+    const { levels, icon, text, fontSize, tooltip, disabled, selectedSectionId } = this.props;
 
     const multiLevelStep = levels.length > 1;
-    const url = (multiLevelStep || disabled) ? undefined : levels[0].url;
+    let url = (multiLevelStep || disabled) ? undefined : levels[0].url;
+    if (url && selectedSectionId) {
+      url += stringifyQueryParams({section_id: selectedSectionId});
+    }
 
     let style = {
       ...styles.levelPill,
@@ -71,7 +76,7 @@ class ProgressPill extends React.Component {
     }
 
     return (
-      <a href={url} style={{textDecoration: 'none'}}>
+      <a href={url} style={{textDecoration: 'none'}} className="uitest-ProgressPill">
         <div
           {...tooltipProps}
           style={style}
