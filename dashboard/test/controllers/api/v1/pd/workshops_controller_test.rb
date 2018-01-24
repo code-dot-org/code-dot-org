@@ -586,7 +586,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
     sign_in @admin
 
-    get :upcoming_teachercon
+    get :upcoming_teachercons
     assert_response :success
     assert_equal 2, JSON.parse(@response.body).length
     assert_equal phoenix.id, JSON.parse(@response.body).first['id']
@@ -618,7 +618,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
     sign_in user
 
-    get :upcoming_teachercon
+    get :upcoming_teachercons
     assert_response :success
     assert_equal 1, JSON.parse(@response.body).length
     assert_equal associated_workshop.id, JSON.parse(@response.body).first['id']
@@ -642,12 +642,12 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
     sign_in @admin
 
-    get :upcoming_teachercon, params: {course: Pd::Workshop::COURSE_CSD}
+    get :upcoming_teachercons, params: {course: Pd::Workshop::COURSE_CSD}
     assert_response :success
     assert_equal 1, JSON.parse(@response.body).length
     assert_equal csd.id, JSON.parse(@response.body).first['id']
 
-    get :upcoming_teachercon, params: {course: Pd::Workshop::COURSE_CSP}
+    get :upcoming_teachercons, params: {course: Pd::Workshop::COURSE_CSP}
     assert_response :success
     assert_equal 1, JSON.parse(@response.body).length
     assert_equal csp.id, JSON.parse(@response.body).first['id']

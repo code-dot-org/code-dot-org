@@ -61,10 +61,10 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     render json: {error: e.message}, status: :bad_request
   end
 
-  # GET /api/v1/pd/workshops/upcoming_teachercon
+  # GET /api/v1/pd/workshops/upcoming_teachercons
   # returns all upcoming teachercons for admins, associated teachercons for
   # regional partners, and an empty set for everyone else.
-  def upcoming_teachercon
+  def upcoming_teachercons
     workshops = Pd::Workshop.
       scheduled_start_on_or_after(Date.today.beginning_of_day).
       where(subject: Pd::Workshop::SUBJECT_TEACHER_CON)
