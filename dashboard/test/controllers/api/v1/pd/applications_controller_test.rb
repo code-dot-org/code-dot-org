@@ -185,23 +185,15 @@ module Api::V1::Pd
       assert_equal({regional_partner_name: 'Yes'}, application.response_scores_hash)
     end
 
-    test 'workshop admins and G3 partners can lock and unlock applications' do
+    test 'workshop admins can and unlock applications' do
       sign_in @workshop_admin
       put :update, params: {id: @csf_facilitator_application_no_partner, application: {status: 'accepted', locked: 'true'}}
       assert_response :success
       data = JSON.parse(response.body)
       assert data['locked']
-
-      g3_organizer = create :workshop_organizer
-      create :regional_partner, program_managers: [g3_organizer], group: 3
-      sign_in g3_organizer
-      put :update, params: {id: @csf_facilitator_application_with_partner, application: {status: 'accepted', locked: 'true'}}
-      assert_response :success
-      data = JSON.parse(response.body)
-      assert data['locked']
     end
 
-    test 'ONLY workdshop admins and G3 partners can lock and unlock applications' do
+    test 'Regional partners cannot lock and unlock applications' do
       sign_in @workshop_organizer
       put :update, params: {id: @csf_facilitator_application_with_partner, application: {status: 'accepted', locked: 'true'}}
       assert_response :success
