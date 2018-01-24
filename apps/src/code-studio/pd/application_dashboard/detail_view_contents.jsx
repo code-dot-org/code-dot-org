@@ -65,6 +65,7 @@ export class DetailViewContents extends React.Component {
       pd_workshop_id: PropTypes.number,
       fit_workshop_name: PropTypes.string,
       fit_workshop_url: PropTypes.string,
+      application_guid: PropTypes.string
     }),
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     course: PropTypes.oneOf(['csf', 'csd', 'csp']),
@@ -379,6 +380,7 @@ export class DetailViewContents extends React.Component {
         courseName={this.props.applicationData.course_name}
         assignedWorkshopId={this.state.pd_workshop_id}
         handleSelectedWorkshopChange={this.handleSelectedWorkshopChange}
+        applicationGuid={this.props.applicationData.application_guid}
       />
     );
   };
