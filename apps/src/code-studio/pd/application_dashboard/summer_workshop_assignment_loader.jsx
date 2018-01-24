@@ -35,7 +35,7 @@ export default class SummerWorkshopAssignmentLoader extends React.Component {
   }
 
   getTeacherconWorkshops() {
-    let url = `/api/v1/pd/workshops/upcoming_teachercon?course=${this.props.courseName}`;
+    let url = `/api/v1/pd/workshops/upcoming_teachercons?course=${this.props.courseName}`;
 
     return $.ajax({
       method: 'GET',
