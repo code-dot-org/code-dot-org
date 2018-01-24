@@ -105,7 +105,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     @application.update!(application_data)
 
     # only allow those with full management permission to lock or unlock
-    if application_params.key?(:locked) && can?(:manage, @application)
+    if application_params.key?(:locked) && current_user.workshop_admin?
       application_params[:locked] ? @application.lock! : @application.unlock!
     end
 
