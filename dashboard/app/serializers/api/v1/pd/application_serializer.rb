@@ -3,8 +3,9 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
   attributes :regional_partner_name, :regional_partner_id, :locked, :notes, :form_data, :status,
     :school_name, :district_name, :email, :application_type, :response_scores, :course_name,
+    :meets_criteria, :bonus_points, :pd_workshop_id, :fit_workshop_name, :fit_workshop_url,
     :meets_criteria, :bonus_points, :pd_workshop_id, :pd_workshop_name, :pd_workshop_url,
-    :fit_workshop_name, :fit_workshop_url
+    :fit_workshop_name, :fit_workshop_url, :application_guid
 
   def email
     object.user.email
