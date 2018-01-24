@@ -103,7 +103,7 @@ end
 # @param [String] dotd_name The name of the DOTD running this script.
 def do_dtp(dotd_name)
   test_green_commit = InfraTestTopic.green_commit
-  print_old_commit test_green_commit
+  warn_if_old_commit test_green_commit
 
   DevelopersTopic.set_dtp "in progress (@#{dotd_name})"
 
@@ -418,7 +418,7 @@ def print_database_changes(pull_request_number)
 end
 
 # if the commit is more than 24 hours old, warn
-def print_old_commit(commit_sha)
+def warn_if_old_commit(commit_sha)
   date = GitHub.get_date_for_commit(commit_sha)
   days_ago = (Date.today - date.to_date).to_i
   return if days_ago < 1
