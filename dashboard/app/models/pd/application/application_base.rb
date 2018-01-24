@@ -97,6 +97,7 @@ module Pd::Application
     after_initialize :set_type_and_year
     before_validation :set_type_and_year
     before_save :update_accepted_date, if: :status_changed?
+    before_create :generate_application_guid, if: -> {application_guid.blank?}
 
     def set_type_and_year
       # Override in derived classes and set to valid values.
@@ -232,6 +233,10 @@ module Pd::Application
     # Camelized (js-standard) format of the full_answers. The keys here will match the raw keys in form_data
     def full_answers_camelized
       full_answers.transform_keys {|k| k.to_s.camelize(:lower)}
+    end
+
+    def generate_application_guid
+      self.application_guid = SecureRandom.uuid
     end
 
     def locked?
