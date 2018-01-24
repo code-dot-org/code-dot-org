@@ -64,7 +64,7 @@ export class QuickView extends React.Component {
 
     const statusList = ApplicationStatuses[this.props.route.viewType];
     this.statuses = statusList.map(v => ({value: v.toLowerCase(), label: v}));
-    this.statuses.unshift({value: null, label: "\u00A0"});
+    this.statuses.unshift({value: null, label: "All statuses"});
   }
 
   load(regionalPartnerFilter) {
@@ -85,10 +85,10 @@ export class QuickView extends React.Component {
 
   getApiUrl = (format = '', regionalPartnerFilter = 'none') => `/api/v1/pd/applications/quick_view${format}?role=${this.props.route.path}&regional_partner_filter=${regionalPartnerFilter}`;
   getJsonUrl = (regionalPartnerFilter) => this.getApiUrl('', regionalPartnerFilter);
-  getCsvUrl = () => this.getApiUrl('.csv');
+  getCsvUrl = (regionalPartnerFilter) => this.getApiUrl('.csv', regionalPartnerFilter);
 
   handleDownloadCsvClick = event => {
-    window.open(this.getCsvUrl());
+    window.open(this.getCsvUrl(this.state.regionalPartnerFilter || ''));
   };
 
   handleStateChange = (selected) => {
@@ -137,6 +137,7 @@ export class QuickView extends React.Component {
                 placeholder={null}
                 options={this.statuses}
                 style={styles.select}
+                clearable={false}
                 {...SelectStyleProps}
               />
             </FormGroup>
