@@ -255,10 +255,18 @@ describe('ProgressBubble', () => {
   });
 
   describe('href', () => {
+    let fakeLocation;
+
+    beforeEach(() => {
+      fakeLocation = document.createElement('a');
+    });
+
     it('links to the level url', () => {
+      fakeLocation.href = "http://studio.code.org/s/csd3/stage/3/puzzle/7";
       const wrapper = shallow(
         <ProgressBubble
           {...defaultProps}
+          currentLocation={fakeLocation}
           level={{
             ...defaultProps.level,
             url: '/my/test/url'
@@ -269,9 +277,11 @@ describe('ProgressBubble', () => {
     });
 
     it('includes the section_id in the queryparams if selectedSectionId is present', () => {
+      fakeLocation.href = "http://studio.code.org/s/csd3/stage/3/puzzle/7";
       const wrapper = shallow(
         <ProgressBubble
           {...defaultProps}
+          currentLocation={fakeLocation}
           selectedSectionId="12345"
         />
       );
@@ -279,7 +289,6 @@ describe('ProgressBubble', () => {
     });
 
     it('preserves the queryparams of the current location', () => {
-      const fakeLocation = document.createElement('a');
       fakeLocation.href = "http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559";
       const wrapper = shallow(
         <ProgressBubble
@@ -292,8 +301,7 @@ describe('ProgressBubble', () => {
       assert.include(href, 'user_id=559');
     });
 
-    it('if current location and selectedSectionId are present, selectedSectionId wins', () => {
-      const fakeLocation = document.createElement('a');
+    it('if queryParam section_id and selectedSectionId are present, selectedSectionId wins', () => {
       fakeLocation.href = "http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559";
       const wrapper = shallow(
         <ProgressBubble
