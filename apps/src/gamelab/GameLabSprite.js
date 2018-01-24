@@ -358,8 +358,8 @@ var _collideWith = function (p5Inst, type, target, callback) {
  * @return {boolean} true if a collision occurred
  */
 function _collideWithOne(p5Inst, type, other, callback) {
-  // Never collide with self
-  if (other === this) {
+  // Never collide with self or removed sprites.
+  if (other === this || other.removed) {
     return false;
   }
 
