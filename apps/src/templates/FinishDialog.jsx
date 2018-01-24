@@ -167,6 +167,13 @@ export class UnconnectedFinishDialog extends Component {
       // Reset state when closing the dialog
       this.setState(DEFAULT_STATE);
     }
+    if (this.props.blockLimit === undefined ||
+        this.props.blockLimit === Infinity) {
+      this.setState({
+        blocksCounted: true,
+        blockCountDescriptionShown: true,
+      });
+    }
   }
 
   getBubble() {
@@ -230,7 +237,7 @@ export class UnconnectedFinishDialog extends Component {
 
   getBlockCounter() {
     if (this.props.blockLimit === undefined ||
-      this.props.blockLimit === Infinity) {
+        this.props.blockLimit === Infinity) {
       return null;
     }
 
