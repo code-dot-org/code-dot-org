@@ -66,12 +66,15 @@ class ProjectAppTypeArea extends React.Component {
     setHasOlderProjects: PropTypes.func.isRequired,
   };
 
-  state = {
-    maxNumProjects: this.props.projectList ? this.props.projectList.length : 0,
-    numProjects: this.props.numProjectsToShow,
-    // Disables the View More button when a network request is pending.
-    disableViewMore: false,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      maxNumProjects: this.props.projectList ? this.props.projectList.length : 0,
+      numProjects: this.props.numProjectsToShow,
+      // Disables the View More button when a network request is pending.
+      disableViewMore: false,
+    };
+  }
 
   componentWillReceiveProps(nextProps) {
     this.setState({
