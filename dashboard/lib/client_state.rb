@@ -136,4 +136,4 @@ class ClientState
       session[:lines] = nil
     end
   end
-end  # class ClientState
+end
