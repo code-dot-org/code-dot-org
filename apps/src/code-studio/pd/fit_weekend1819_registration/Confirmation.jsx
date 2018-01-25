@@ -7,8 +7,6 @@ import {
 import LabeledFormComponent from '../form_components/LabeledFormComponent';
 
 export default class Confirmation extends LabeledFormComponent {
-  static associatedFields = [];
-
   render() {
     return (
       <FormGroup>
