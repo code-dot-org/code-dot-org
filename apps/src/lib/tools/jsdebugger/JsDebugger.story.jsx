@@ -23,13 +23,19 @@ export default storybook => {
 
   storyTable.push({
     name: 'empty',
-    story: () => (
-      <Provider store={createApplabStore()}>
-        <JsDebugger
-          style={storybookStyle}
-        />
-      </Provider>
-    )
+    story: () => {
+      const withDebugConsoleStore = createApplabStore();
+      withDebugConsoleStore.dispatch(setPageConstants({
+        appType: "gamelab"
+      }));
+      return (
+        <Provider store={withDebugConsoleStore}>
+          <JsDebugger
+            style={storybookStyle}
+          />
+        </Provider>
+      );
+    }
   });
 
   storyTable.push({
