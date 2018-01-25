@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import _ from 'lodash';
+import queryString from 'query-string';
 import i18n from '@cdo/locale';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '../FontAwesome';
@@ -16,7 +17,6 @@ import {
 } from './progressStyles';
 import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
 import TooltipWithIcon from './TooltipWithIcon';
-import { stringifyQueryParams } from '../../utils';
 
 /**
  * A ProgressBubble represents progress for a specific level. It can be a circle
@@ -84,10 +84,17 @@ class ProgressBubble extends React.Component {
     disabled: PropTypes.bool.isRequired,
     smallBubble: PropTypes.bool,
     selectedSectionId: PropTypes.string,
+    // This prop is provided as a testing hook, in normal use it will just be
+    // set to window.location; see defaultProps.
+    currentLocation: PropTypes.object.isRequired,
+  };
+
+  static defaultProps = {
+    currentLocation: window.location,
   };
 
   render() {
-    const { level, smallBubble, selectedSectionId } = this.props;
+    const { level, smallBubble, selectedSectionId, currentLocation } = this.props;
 
     const number = level.levelNumber;
     const url = level.url;
@@ -106,9 +113,14 @@ class ProgressBubble extends React.Component {
 
     let href = '';
     if (!disabled && url) {
-      href = url;
+      const queryParams = queryString.parse(currentLocation.search);
       if (selectedSectionId) {
-        href += stringifyQueryParams({section_id: selectedSectionId});
+        queryParams.section_id = selectedSectionId;
+      }
+      const paramString = queryString.stringify(queryParams);
+      href = url;
+      if (paramString.length > 0) {
+        href += '?' + paramString;
       }
     }
 
