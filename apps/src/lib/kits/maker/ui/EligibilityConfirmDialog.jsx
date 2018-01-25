@@ -62,7 +62,7 @@ export default class EligibilityConfirmDialog extends Component {
         && this.check3.checked
         && /\S/.test(this.state.signature)
     });
-  }
+  };
 
   handleSubmit = () => {
     this.setState({submitting: true});
@@ -81,11 +81,11 @@ export default class EligibilityConfirmDialog extends Component {
         "and submitting again.  If this does not work, please contact support@code.org."
       });
    });
-  }
+  };
 
   setSignature = (event) => {
     this.setState({signature: event.target.value}, this.verifyResponse);
-  }
+  };
 
   render() {
     return (

@@ -51,7 +51,7 @@ def main
 rescue Exception => e
   ChatClient.message(
     'staging',
-    "EXCEPTION: #{e.message}",
+    "<!here> EXCEPTION: #{e.message}",
     color: 'red'
   )
   DevelopersTopic.set_dts 'no (robo-DTS failed (Levelbuilder > Staging))'

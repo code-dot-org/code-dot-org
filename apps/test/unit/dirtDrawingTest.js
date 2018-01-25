@@ -1,15 +1,22 @@
 import {assert} from '../util/configuredChai';
+import DirtDrawer from '@cdo/apps/maze/dirtDrawer';
+import MazeMap from '@cdo/apps/maze/mazeMap';
+import Cell from '@cdo/apps/maze/cell';
+
+let svg;
 
 function setGlobals() {
-  document.body.innerHTML = '<div id="svgMaze"><div class="pegman-location"></div></div>';
-  svg = document.getElementById('svgMaze');
+  assert.isNull(document.getElementById('svgMaze'));
+  svg = document.createElement('div');
+  svg.id = 'svgMaze';
+  svg.innerHTML = '<div class="pegman-location"></div>';
+  document.body.appendChild(svg);
 }
 
-var DirtDrawer = require('@cdo/apps/maze/dirtDrawer');
-var MazeMap = require('@cdo/apps/maze/mazeMap');
-var Cell = require('@cdo/apps/maze/cell');
-
-var svg;
+function cleanupGlobals() {
+  document.body.removeChild(svg);
+  assert.isNull(document.getElementById('svgMaze'));
+}
 
 function createFakeSkin() {
   return {
@@ -18,6 +25,9 @@ function createFakeSkin() {
 }
 
 describe("DirtDrawer", function () {
+  beforeEach(setGlobals);
+  afterEach(cleanupGlobals);
+
   // The actual values of these are ignored by most of these tests
   var dirtMap = MazeMap.parseFromOldValues([
     [1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -58,7 +68,6 @@ describe("DirtDrawer", function () {
   });
 
   it("createImage", function () {
-    setGlobals();
     var drawer = new DirtDrawer(dirtMap, skin.dirt, svg);
 
     var row = 2;
@@ -99,7 +108,6 @@ describe("DirtDrawer", function () {
     var dirtId = DirtDrawer.cellId('', row, col);
 
     beforeEach(function () {
-      setGlobals();
       drawer = new DirtDrawer(dirtMap, skin.dirt, svg);
     });
 

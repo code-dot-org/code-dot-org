@@ -149,6 +149,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get 'projects/featured', to: 'projects#featured'
+
   get '/projects/public', to: 'projects#public'
   resources :projects, path: '/projects/', only: [:index] do
     collection do
@@ -365,6 +367,7 @@ Dashboard::Application.routes.draw do
       resources :workshops do
         collection do
           get :filter
+          get :upcoming_teachercons
         end
         member do # See http://guides.rubyonrails.org/routing.html#adding-more-restful-actions
           post :start

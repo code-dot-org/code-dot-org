@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import * as storybook from '@storybook/react';
 import infoAddon from '@storybook/addon-info';
 import Node from '@storybook/addon-info/dist/components/Node';
+import Props from '@storybook/addon-info/dist/components/Props';
 import {Pre} from '@storybook/addon-info/dist/components/markdown/code';
 import addStoriesGroup from 'react-storybook-addon-add-stories-group';
 import experiments from '@cdo/apps/util/experiments';
@@ -11,6 +12,23 @@ import '../style/common.scss';
 import '../style/netsim/style.scss';
 import '../style/applab/style.scss';
 import '../src/templates/GameButtons.story.scss';
+
+// Workaround for missing required prop in addon-info components.
+Props.propTypes = {
+  ...Props.propTypes,
+  maxPropsIntoLine: PropTypes.number,
+  maxPropObjectKeys: PropTypes.number,
+  maxPropArrayLength: PropTypes.number,
+  maxPropStringLength: PropTypes.number,
+};
+
+Node.propTypes = {
+  ...Node.propTypes,
+  maxPropsIntoLine: PropTypes.number,
+  maxPropObjectKeys: PropTypes.number,
+  maxPropArrayLength: PropTypes.number,
+  maxPropStringLength: PropTypes.number,
+};
 
 const styles = {
   centeredStory: {
