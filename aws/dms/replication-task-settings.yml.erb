@@ -97,10 +97,10 @@ ChangeProcessingTuning:
   BatchApplyPreserveTransaction: true
   # Sets the minimum amount of time in seconds that AWS DMS waits between each application of batch changes.
   # The default value is 1.
-  BatchApplyTimeoutMin: 1
+  BatchApplyTimeoutMin: <%= 1.hour.to_i %>
   # Sets the maximum amount of time in seconds that AWS DMS waits between each application of batch changes before timing out.
   # The default value is 30.
-  BatchApplyTimeoutMax: 30
+  BatchApplyTimeoutMax: <%= 1.hour.to_i %>
   # Sets the maximum amount of memory in (MB) to use for pre-processing in Batch optimized apply mode.
   # The default value is 500.
   BatchApplyMemoryLimit: 500
@@ -120,7 +120,7 @@ ChangeProcessingTuning:
   # Sets the maximum time in seconds that each transaction can stay in memory before being written to disk.
   # The duration is calculated from the time that AWS DMS started capturing the transaction.
   # The default value is 60.
-  MemoryKeepTime: 60
+  MemoryKeepTime: <%= 10.minutes.to_i %>
   # Sets the maximum number of prepared statements to store on the server for later execution when applying changes to the target.
   # The default value is 50. The maximum value is 200.
   StatementCacheSize: 50
