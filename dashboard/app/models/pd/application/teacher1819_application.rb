@@ -108,11 +108,6 @@ module Pd::Application
       self.course = PROGRAMS.key(program)
     end
 
-    before_create :generate_application_guid, if: -> {application_guid.blank?}
-    def generate_application_guid
-      self.application_guid = SecureRandom.uuid
-    end
-
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil?}
     def save_partner
       self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
