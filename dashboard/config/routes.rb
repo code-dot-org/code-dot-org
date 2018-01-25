@@ -367,6 +367,7 @@ Dashboard::Application.routes.draw do
       resources :workshops do
         collection do
           get :filter
+          get :upcoming_teachercons
         end
         member do # See http://guides.rubyonrails.org/routing.html#adding-more-restful-actions
           post :start
