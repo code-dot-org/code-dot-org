@@ -451,6 +451,7 @@ Dashboard::Application.routes.draw do
     end
 
     # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
+    get 'teachercon_registration/partner', to: 'teachercon1819_registration#partner'
     get 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#new'
     get 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#new'
 

@@ -1,5 +1,9 @@
 class Pd::Teachercon1819RegistrationController < ApplicationController
-  load_and_authorize_resource :application, class: 'Pd::Application::ApplicationBase', find_by: :application_guid, id_param: :application_guid
+  include Pd::Application::RegionalPartnerTeacherconMapping
+
+  load_and_authorize_resource :application,
+    class: 'Pd::Application::ApplicationBase', find_by: :application_guid,
+    id_param: :application_guid, except: :partner
 
   # here we handle the CanCan error manually so that we can present
   # non-authorized users with a custom page explaining that they must be logged
@@ -9,8 +13,6 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
   end
 
   def new
-    # TODO: elijah create the Partner version of this form and remove this
-    # requirement
     unless @application.application_type == "Teacher" || @application.application_type == "Facilitator"
       render :invalid
       return
@@ -21,7 +23,6 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
       @email = {
         'Teacher' => 'teacher@code.org',
         'Facilitator' => 'facilitators@code.org',
-        'Partner' => 'partner@code.org'
       }[@application.application_type]
       render :submitted
       return
@@ -43,5 +44,40 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
         phone: @application.sanitize_form_data_hash[:phone]
       }.to_json
     }
+  end
+
+  def partner
+    unless current_user.regional_partners.count
+      render :unauthorized
+      return
+    end
+
+    regional_partner = current_user.regional_partners.first
+    teachercon = get_matching_teachercon(regional_partner)
+    unless teachercon
+      render :invalid
+      return
+    end
+
+    if Pd::Teachercon1819Registration.exists?(regional_partner_id: regional_partner.id)
+      @email = 'partner@code.org'
+      render :submitted
+      return
+    end
+
+    @script_data = {
+      props: {
+        options: Pd::Teachercon1819Registration.options.camelize_keys,
+        requiredFields: Pd::Teachercon1819Registration.camelize_required_fields,
+        apiEndpoint: "/api/v1/pd/teachercon_registrations",
+        regionalPartnerId: regional_partner.id,
+        applicationType: "Partner",
+        city: teachercon[:city],
+        date: teachercon[:dates],
+        email: current_user.email,
+      }.to_json
+    }
+
+    render :new
   end
 end
