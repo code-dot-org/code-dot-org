@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Use a `repeat` loops inside of a `for` loop to create this stack of triangles that goes from 50 pixel to 100 pixel sides.",
+    "markdown_instructions": "Use a `repeat` loop inside of a `for` loop to create this stack of triangles that goes from 50 pixel to 100 pixel sides.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -39,11 +39,12 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-15 20:31:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-09 17:34:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-25 15:51:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 20:31:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-09 17:34:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-25 15:51:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-01-18 00:50:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 2,

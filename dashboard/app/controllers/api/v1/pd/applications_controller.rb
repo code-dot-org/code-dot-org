@@ -45,6 +45,10 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     role = params[:role].to_sym
     applications = get_applications_by_role(role)
 
+    unless params[:regional_partner_filter].blank? || params[:regional_partner_filter] == 'all'
+      applications = applications.where(regional_partner_id: params[:regional_partner_filter] == 'none' ? nil : params[:regional_partner_filter])
+    end
+
     respond_to do |format|
       format.json do
         render json: applications, each_serializer: Api::V1::Pd::ApplicationQuickViewSerializer
@@ -101,7 +105,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     @application.update!(application_data)
 
     # only allow those with full management permission to lock or unlock
-    if application_params.key?(:locked) && can?(:manage, @application)
+    if application_params.key?(:locked) && current_user.workshop_admin?
       application_params[:locked] ? @application.lock! : @application.unlock!
     end
 

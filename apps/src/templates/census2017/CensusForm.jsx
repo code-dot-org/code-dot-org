@@ -50,7 +50,7 @@ class CensusForm extends Component {
         [field]: event.target.value
       }
     }, this.checkShowFollowUp);
-  }
+  };
 
   handleDropdownChange = (field, event) => {
     this.setState({
@@ -59,7 +59,7 @@ class CensusForm extends Component {
         [field]: event ? event.value : ''
       }
     });
-  }
+  };
 
   checkShowFollowUp() {
     const twentyHours = this.state.submission.twentyHours;

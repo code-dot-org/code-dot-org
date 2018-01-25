@@ -21,8 +21,10 @@ const styles = {
   statusSelect: {
     marginRight: '5px'
   },
-  detailViewHeader: {
+  editMenu: {
     display: 'flex',
+  },
+  detailViewHeader: {
     marginLeft: 'auto'
   },
   headerWrapper: {
@@ -31,6 +33,11 @@ const styles = {
   },
   saveButton: {
     marginRight: '5px'
+  },
+  statusSelectGroup: {
+    maxWidth: 200,
+    marginRight: 5,
+    marginLeft: 5,
   }
 };
 
@@ -55,7 +62,12 @@ export class DetailViewContents extends React.Component {
       response_scores: PropTypes.object,
       meets_criteria: PropTypes.string,
       bonus_points: PropTypes.number,
-      pd_workshop_id: PropTypes.number
+      pd_workshop_id: PropTypes.number,
+      pd_workshop_name: PropTypes.string,
+      pd_workshop_url: PropTypes.string,
+      fit_workshop_name: PropTypes.string,
+      fit_workshop_url: PropTypes.string,
+      application_guid: PropTypes.string
     }),
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     course: PropTypes.oneOf(['csf', 'csd', 'csp']),
@@ -240,7 +252,7 @@ export class DetailViewContents extends React.Component {
     if (this.props.canLock) {
       // Render the select with the lock button in a fancy InputGroup
       return (
-        <InputGroup style={{maxWidth: 200, marginRight: 5}}>
+        <InputGroup style={styles.statusSelectGroup}>
           <InputGroup.Button>
             {this.renderLockButton()}
           </InputGroup.Button>
@@ -252,6 +264,15 @@ export class DetailViewContents extends React.Component {
       // InputGroup makes it look funky
       return selectControl;
     }
+  };
+
+  renderEditMenu = () => {
+    return (
+      <div style={styles.editMenu}>
+        {this.renderStatusSelect()}
+        {this.renderEditButtons()}
+      </div>
+    );
   };
 
   renderHeader = () => {
@@ -284,8 +305,7 @@ export class DetailViewContents extends React.Component {
         </div>
 
         <div id="DetailViewHeader" style={styles.detailViewHeader}>
-          {this.renderStatusSelect()}
-          {this.renderEditButtons()}
+          {this.renderEditMenu()}
         </div>
       </div>
     );
@@ -317,6 +337,12 @@ export class DetailViewContents extends React.Component {
   };
 
   renderTopSection = () => {
+    const fitWorkshopLink = (
+      <a href={this.props.applicationData.fit_workshop_url} target="_blank">see workshop</a>
+    );
+    const pdWorkshopLink = (
+      <a href={this.props.applicationData.pd_workshop_url} target="_blank">see workshop</a>
+    );
     return (
       <div id="TopSection">
         <DetailViewResponse
@@ -334,6 +360,24 @@ export class DetailViewContents extends React.Component {
           answer={this.props.applicationData.district_name}
           layout="lineItem"
         />
+        {this.props.applicationData.pd_workshop_name &&
+          <DetailViewResponse
+            question="Summer Workshop"
+            answer={<span>
+              {this.props.applicationData.pd_workshop_name} ({pdWorkshopLink})
+            </span>}
+            layout="lineItem"
+          />
+        }
+        {this.props.applicationData.application_type === 'Facilitator' &&
+          <DetailViewResponse
+            question="FIT Workshop"
+            answer={<span>
+              {this.props.applicationData.fit_workshop_name} ({fitWorkshopLink})
+            </span>}
+            layout="lineItem"
+          />
+        }
         {this.props.isWorkshopAdmin && this.renderRegionalPartnerPanel()}
       </div>
     );
@@ -350,6 +394,7 @@ export class DetailViewContents extends React.Component {
         courseName={this.props.applicationData.course_name}
         assignedWorkshopId={this.state.pd_workshop_id}
         handleSelectedWorkshopChange={this.handleSelectedWorkshopChange}
+        applicationGuid={this.props.applicationData.application_guid}
       />
     );
   };
@@ -372,8 +417,7 @@ export class DetailViewContents extends React.Component {
             />
           </div>
         </div>
-        <br/>
-        {this.renderEditButtons()}
+        <br />
       </div>
     );
   };
@@ -386,6 +430,7 @@ export class DetailViewContents extends React.Component {
         {this.renderTopSection()}
         {this.renderQuestions()}
         {this.renderNotes()}
+        {this.renderEditMenu()}
       </div>
     );
   }

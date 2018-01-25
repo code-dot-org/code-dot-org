@@ -133,6 +133,16 @@ class ProjectsController < ApplicationController
     end
   end
 
+  # GET /projects/featured
+  # Access is restricted to those with project_validator permission
+  def featured
+    if current_user && current_user.project_validator?
+      render template: 'projects/featured'
+    else
+      redirect_to '/projects/public', flash: {alert: 'Only project validators can feature projects.'}
+    end
+  end
+
   # Renders a <script> tag with JS to redirect /p/:key#:channel_id/:action to /projects/:key/:channel_id/:action.
   def redirect_legacy
     render layout: nil

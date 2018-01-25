@@ -52,7 +52,7 @@ The program kicks off with 5-day summer workshop where you'll have the opportuni
 ## <a name="features"></a>Program Features
 
 <details>
-<summary>**Accessible to all educators**</summary>
+<summary>**Cost should not be a barrier**</summary>
 <p>
 <br>
 We are a nonprofit dedicated to helping schools teach computer science. In most states, our professional learning is offered at *no cost to you or your school*.
@@ -116,10 +116,13 @@ If accepted into the Code.org CS Discoveries Professional Learning Program, you 
 
 ## <a name="locations"></a>Where is the program offered?
 
-The CS Discoveries Professional Learning Program is available in regions served by Code.org's Regional Partners. Please check our map to learn more about where our Regional Partners are located and when they will be hosting summer workshops (dates and locations subject to change).
+The CS Discoveries Professional Learning Program is available in regions served by Code.org's Regional Partners. Please check our map to learn more about where our Regional Partners are located and when they will be hosting summer workshops (dates and locations subject to change). 
 <br>
 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dKLjL6y3AKo45c7weK__JI3sxijfbmzq" width="640" height="480"></iframe>
+
+<br>
+Some of our Partners serve their entire state and will be hosting summer workshops in multiple locations. Even if your city is not listed on this map, we encourage you to apply!  
 
 ## <a name="participate"></a>Who can participate?
 

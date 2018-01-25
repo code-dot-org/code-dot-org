@@ -12,7 +12,7 @@ export default class CellEditor extends React.Component {
     row: PropTypes.number.isRequired,
     col: PropTypes.number.isRequired,
     onUpdate: PropTypes.func.isRequired,
-  }
+  };
 
   constructor(props) {
     super(props);

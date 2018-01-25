@@ -36,21 +36,11 @@
 require 'cdo/shared_constants/pd/teacher1819_application_constants'
 
 module Pd::Application
-  class Teacher1819Application < ApplicationBase
+  class Teacher1819Application < WorkshopAutoenrolledApplication
     include Rails.application.routes.url_helpers
     include Teacher1819ApplicationConstants
     include RegionalPartnerTeacherconMapping
-    include SerializedProperties
     include SchoolInfoDeduplicator
-
-    serialized_attrs %w(
-      pd_workshop_id
-      auto_assigned_enrollment_id
-    )
-
-    def workshop
-      Pd::Workshop.find(pd_workshop_id) if pd_workshop_id
-    end
 
     def send_decision_notification_email
       # We only want to email unmatched and G3-matched teachers. All teachers
@@ -118,54 +108,9 @@ module Pd::Application
       self.course = PROGRAMS.key(program)
     end
 
-    before_create :generate_application_guid, if: -> {application_guid.blank?}
-    def generate_application_guid
-      self.application_guid = SecureRandom.uuid
-    end
-
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil?}
     def save_partner
       self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
-    end
-
-    before_save :destroy_autoenrollment, if: -> {status_changed? && status != "accepted"}
-    def destroy_autoenrollment
-      return unless auto_assigned_enrollment_id
-
-      Pd::Enrollment.find_by(id: auto_assigned_enrollment_id).try(:destroy)
-      self.auto_assigned_enrollment_id = nil
-    end
-
-    # override
-    def lock!
-      return if locked?
-      super
-      enroll_user if status == "accepted"
-    end
-
-    def enroll_user
-      return unless pd_workshop_id
-
-      enrollment = Pd::Enrollment.where(
-        pd_workshop_id: pd_workshop_id,
-        email: user.email
-      ).first_or_initialize
-
-      # If this is a new enrollment, we want to:
-      #   - save it with all required data
-      #   - save a reference to it in properties
-      #   - delete the previous auto-created enrollment if it exists
-      if enrollment.new_record?
-        enrollment.update(
-          user: user,
-          school_info: user.school_info,
-          full_name: user.name
-        )
-        enrollment.save!
-
-        destroy_autoenrollment
-        self.auto_assigned_enrollment_id = enrollment.id
-      end
     end
 
     PROGRAMS = {
@@ -558,42 +503,6 @@ module Pd::Application
       Pd::Application::Teacher1819Application.find_by(user: user)
     end
 
-    def find_default_workshop
-      return unless regional_partner
-
-      workshop_course =
-        if course == 'csd'
-          Pd::Workshop::COURSE_CSD
-        elsif course == 'csp'
-          Pd::Workshop::COURSE_CSP
-        end
-
-      # If this application is associated with a G3 partner who in turn is
-      # associated with a specific teachercon, return the workshop for that
-      # teachercon
-      if regional_partner.group == 3
-        teachercon = get_matching_teachercon(regional_partner)
-        if teachercon
-          return find_teachercon_workshop(course: workshop_course, city: teachercon[:city], year: 2018)
-        end
-      end
-
-      # Default to just assigning whichever of the partner's eligible workshops
-      # is scheduled to start first. We expect to hit this case for G1 and G2
-      # partners, and for any G3 partners without an associated teachercon
-      regional_partner.
-        pd_workshops_organized.
-        where(
-          course: workshop_course,
-          subject: [
-            Pd::Workshop::SUBJECT_TEACHER_CON,
-            Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
-          ]
-        ).
-        order_by_scheduled_start.
-        first
-    end
-
     def meets_criteria
       response_scores = response_scores_hash
       scored_questions =
@@ -627,7 +536,7 @@ module Pd::Application
     end
 
     def assigned_workshop
-      pd_workshop_id ? Pd::Workshop.find(pd_workshop_id).location_city : ''
+      pd_workshop_id ? Pd::Workshop.find(pd_workshop_id).date_and_location_name : ''
     end
 
     def registered_workshop
@@ -647,9 +556,14 @@ module Pd::Application
 
       scores = {
         regional_partner_name: regional_partner ? YES : NO,
-        committed: responses[:committed] == YES ? YES : NO,
-        able_to_attend_single: yes_no_response_to_yes_no_score(responses[:able_to_attend_single])
+        committed: responses[:committed] == YES ? YES : NO
       }
+
+      if responses[:able_to_attend_single]
+        scores[:able_to_attend_single] = yes_no_response_to_yes_no_score(responses[:able_to_attend_single])
+      elsif responses[:able_to_attend_multiple]
+        scores[:able_to_attend_multiple] = able_attend_multiple_to_yes_no_score(responses[:able_to_attend_multiple])
+      end
 
       if responses[:principal_approval] == YES
         scores.merge!(
@@ -843,6 +757,17 @@ module Pd::Application
         YES
       elsif response == NO
         NO
+      else
+        nil
+      end
+    end
+
+    def able_attend_multiple_to_yes_no_score(response)
+      response = response.join
+      if response.start_with?(TEXT_FIELDS[:no_explain])
+        NO
+      elsif response && !response.include?(TEXT_FIELDS[:no_explain])
+        YES
       else
         nil
       end

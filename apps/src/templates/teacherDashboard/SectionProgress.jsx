@@ -38,7 +38,7 @@ export default class SectionProgress extends Component {
     scriptId: "112",
     scriptData: null,
     studentLevelProgress: null,
-  }
+  };
 
   componentDidMount() {
     this.loadScript(this.state.scriptId);
@@ -51,7 +51,7 @@ export default class SectionProgress extends Component {
       studentLevelProgress: null,
     });
     this.loadScript(scriptId);
-  }
+  };
 
   /**
    * Query the server for script data (info about the levels in the script) and
