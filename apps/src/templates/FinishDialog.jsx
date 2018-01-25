@@ -167,8 +167,9 @@ export class UnconnectedFinishDialog extends Component {
       // Reset state when closing the dialog
       this.setState(DEFAULT_STATE);
     }
-    if (this.props.blockLimit === undefined ||
-        this.props.blockLimit === Infinity) {
+    if ((this.props.blockLimit === undefined ||
+        this.props.blockLimit === Infinity) &&
+       (!this.state.blocksCounted || !this.state.blockCountDescriptionShown)) {
       this.setState({
         blocksCounted: true,
         blockCountDescriptionShown: true,
