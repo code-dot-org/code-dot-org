@@ -63,8 +63,11 @@ export class DetailViewContents extends React.Component {
       meets_criteria: PropTypes.string,
       bonus_points: PropTypes.number,
       pd_workshop_id: PropTypes.number,
+      pd_workshop_name: PropTypes.string,
+      pd_workshop_url: PropTypes.string,
       fit_workshop_name: PropTypes.string,
       fit_workshop_url: PropTypes.string,
+      application_guid: PropTypes.string
     }),
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     course: PropTypes.oneOf(['csf', 'csd', 'csp']),
@@ -337,6 +340,9 @@ export class DetailViewContents extends React.Component {
     const fitWorkshopLink = (
       <a href={this.props.applicationData.fit_workshop_url} target="_blank">see workshop</a>
     );
+    const pdWorkshopLink = (
+      <a href={this.props.applicationData.pd_workshop_url} target="_blank">see workshop</a>
+    );
     return (
       <div id="TopSection">
         <DetailViewResponse
@@ -354,6 +360,15 @@ export class DetailViewContents extends React.Component {
           answer={this.props.applicationData.district_name}
           layout="lineItem"
         />
+        {this.props.applicationData.pd_workshop_name &&
+          <DetailViewResponse
+            question="Summer Workshop"
+            answer={<span>
+              {this.props.applicationData.pd_workshop_name} ({pdWorkshopLink})
+            </span>}
+            layout="lineItem"
+          />
+        }
         {this.props.applicationData.application_type === 'Facilitator' &&
           <DetailViewResponse
             question="FIT Workshop"
@@ -379,6 +394,7 @@ export class DetailViewContents extends React.Component {
         courseName={this.props.applicationData.course_name}
         assignedWorkshopId={this.state.pd_workshop_id}
         handleSelectedWorkshopChange={this.handleSelectedWorkshopChange}
+        applicationGuid={this.props.applicationData.application_guid}
       />
     );
   };
