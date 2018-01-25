@@ -19,7 +19,7 @@ export class ImageWithStatus extends Component {
     width: PropTypes.number.isRequired,
     height: PropTypes.number,
     wrapperStyle: PropTypes.object,
-  }
+  };
 
   constructor(props) {
     super(props);
