@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import _ from 'lodash';
+import queryString from 'query-string';
 import i18n from '@cdo/locale';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '../FontAwesome';
@@ -82,10 +83,18 @@ class ProgressBubble extends React.Component {
     level: levelType.isRequired,
     disabled: PropTypes.bool.isRequired,
     smallBubble: PropTypes.bool,
+    selectedSectionId: PropTypes.string,
+    // This prop is provided as a testing hook, in normal use it will just be
+    // set to window.location; see defaultProps.
+    currentLocation: PropTypes.object.isRequired,
+  };
+
+  static defaultProps = {
+    currentLocation: window.location,
   };
 
   render() {
-    const { level, smallBubble } = this.props;
+    const { level, smallBubble, selectedSectionId, currentLocation } = this.props;
 
     const number = level.levelNumber;
     const url = level.url;
@@ -104,7 +113,15 @@ class ProgressBubble extends React.Component {
 
     let href = '';
     if (!disabled && url) {
-      href = url + location.search;
+      const queryParams = queryString.parse(currentLocation.search);
+      if (selectedSectionId) {
+        queryParams.section_id = selectedSectionId;
+      }
+      const paramString = queryString.stringify(queryParams);
+      href = url;
+      if (paramString.length > 0) {
+        href += '?' + paramString;
+      }
     }
 
     const tooltipId = _.uniqueId();
@@ -173,7 +190,7 @@ class ProgressBubble extends React.Component {
     // If we have an href, wrap in an achor tag
     if (href) {
       bubble = (
-        <a href={href} style={{textDecoration: 'none'}}>
+        <a href={href} style={{textDecoration: 'none'}} className="uitest-ProgressBubble">
           {bubble}
         </a>
       );

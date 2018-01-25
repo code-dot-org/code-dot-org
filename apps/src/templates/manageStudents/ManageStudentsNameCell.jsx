@@ -19,7 +19,7 @@ class ManageStudentNameCell extends Component {
 
   onChangeName = (e) => {
     this.setState({nameValue: e.target.value});
-  }
+  };
 
   render() {
     const {id, sectionId, name, loginType, username} = this.props;

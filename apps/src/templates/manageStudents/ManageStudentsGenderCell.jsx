@@ -19,7 +19,7 @@ class ManageStudentGenderCell extends Component {
 
   onChangeGender = (e) => {
     this.setState({genderValue: e.target.value});
-  }
+  };
 
   render() {
     return (

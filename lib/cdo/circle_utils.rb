@@ -27,6 +27,10 @@ module CircleUtils
     CIRCLE_NODE_TOTAL == 1 || CIRCLE_NODE_INDEX == 1
   end
 
+  def self.circle?
+    ENV['CIRCLECI']
+  end
+
   # @return [Set<Set<String>>] set of build tags in this build's commit message
   private_class_method def self.build_tags
     # Only parse the commit message once

@@ -44,12 +44,12 @@
       "rule-type": "transformation",
       "rule-id": "5",
       "rule-name": "5",
-      "rule-action": "rename",
+      "rule-action": "add-suffix",
       "rule-target": "schema",
       "object-locator": {
-        "schema-name": "dashboard_production"
+        "schema-name": "%"
       },
-      "value": "dashboard_production_pii"
+      "value": "_pii"
     }
   ]
 }

@@ -40,11 +40,11 @@ export class SummaryTable extends React.Component {
       waitlisted: ApplicationDataPropType,
     }),
     path: PropTypes.string.isRequired
-  }
+  };
 
   static contextTypes = {
     router: PropTypes.object.isRequired
-  }
+  };
 
   tableBody() {
     return Object.keys(StatusColors).map((status, i) => {

@@ -22,7 +22,10 @@ export default class ServerSortWorkshopTable extends React.Component {
     moreUrl: PropTypes.string
   };
 
-  state = {orderBy: undefined};
+  constructor(props) {
+    super(props);
+    this.state = {orderBy: "date desc"};
+  }
 
   handleWorkshopsReceived = (workshops) => {
     this.workshops = workshops;
