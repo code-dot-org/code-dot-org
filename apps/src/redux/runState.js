@@ -7,12 +7,14 @@ const SET_IS_RUNNING = 'runState/SET_IS_RUNNING';
 const SET_IS_DEBUGGER_PAUSED = 'runState/SET_IS_DEBUGGER_PAUSED';
 const SET_STEP_SPEED = 'runState/SET_STEP_SPEED';
 const SET_AWAITING_CONTAINED_RESPONSE = 'runState/SET_AWAITING_CONTAINED_RESPONSE';
+const SET_IS_DEBUGGING_SPRITES = 'runState/SET_IS_DEBUGGING_SPRITES';
 
 const initialState = {
   isRunning: false,
   isDebuggerPaused: false,
   nextStep: null,
   stepSpeed: 1,
+  isDebuggingSprites: false,
   // true when waiting for user to provide an answer to a contained level
   awaitingContainedResponse: false
 };
@@ -26,7 +28,8 @@ export default function reducer(state, action) {
   if (action.type === SET_IS_RUNNING) {
     return _.assign({}, state, {
       isRunning: action.isRunning,
-      isDebuggerPaused: action.isRunning === false ? false : state.isDebuggerPaused
+      isDebuggerPaused: action.isRunning === false ? false : state.isDebuggerPaused,
+      isDebuggingSprites: action.isRunning === false ? false : state.isDebuggingSprites
     });
   }
 
@@ -51,6 +54,13 @@ export default function reducer(state, action) {
         awaitingContainedResponse: action.awaitingContainedResponse
       };
     }
+  }
+
+  if (action.type === SET_IS_DEBUGGING_SPRITES && state.isRunning) {
+    return {
+      ...state,
+      isDebuggingSprites: action.isDebuggingSprites
+    };
   }
 
   return state;
@@ -87,4 +97,13 @@ export const setStepSpeed = stepSpeed => ({
 export const setAwaitingContainedResponse = awaitingContainedResponse => ({
   type: SET_AWAITING_CONTAINED_RESPONSE,
   awaitingContainedResponse
+});
+
+/**
+ * @param {boolean} isDebuggingSprites - Whether the app is currently debugging
+ *        sprites or not.
+ */
+export const setIsDebuggingSprites = isDebuggingSprites => ({
+  type: SET_IS_DEBUGGING_SPRITES,
+  isDebuggingSprites: isDebuggingSprites
 });
