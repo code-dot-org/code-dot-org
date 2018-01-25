@@ -3,8 +3,6 @@ import {FormGroup} from 'react-bootstrap';
 import LabeledFormComponent from '../form_components/LabeledFormComponent';
 
 export default class Welcome extends LabeledFormComponent {
-  static associatedFields = [];
-
   render() {
     return (
       <FormGroup>

@@ -11,22 +11,6 @@ import {isZipCode} from '@cdo/apps/util/formatValidation';
 import LabeledFormComponent from '../form_components/LabeledFormComponent';
 
 export default class TravelPlans extends LabeledFormComponent {
-  static associatedFields = [
-    'contactFirstName',
-    'contactLastName',
-    'contactRelationship',
-    'contactPhone',
-    'dietaryNeeds',
-    'liveFarAway',
-    'addressStreet',
-    'addressCity',
-    'addressState',
-    'addressZip',
-    'howTraveling',
-    'needHotel',
-    'needAda',
-  ];
-
   static labels = {
     contactFirstName: "First name:",
     contactLastName: "Last name:",
@@ -41,6 +25,10 @@ export default class TravelPlans extends LabeledFormComponent {
     needHotel: "Code.org provides a hotel room for every FiT Weekend attendee. Attendees will not be required to share a room. Would you like a hotel room at the FiT Weekend?",
     needAda: "Do you require an ADA accessible hotel room?",
   };
+
+  static associatedFields = Object.keys(TravelPlans.labels).concat([
+    'liveFarAway',
+  ]);
 
   /**
    * @override
