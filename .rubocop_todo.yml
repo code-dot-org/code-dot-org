@@ -253,10 +253,6 @@ Style/ClassVars:
 Style/CollectionMethods:
   Enabled: false
 
-# Offense count: 4
-Style/CommentedKeyword:
-  Enabled: false
-
 # Offense count: 149
 Style/DateTime:
   Enabled: false
