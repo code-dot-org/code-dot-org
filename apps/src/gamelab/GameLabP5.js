@@ -807,12 +807,13 @@ GameLabP5.prototype.getFrameRate = function () {
 
 /**
  * Mark all current and future sprites as debug=true.
+ * @param {boolean} debugSprites - Enable or disable debug flag on all sprites
  */
-GameLabP5.prototype.debugSprites = function () {
+GameLabP5.prototype.debugSprites = function (debugSprites) {
   if (this.p5) {
-    gameLabSprite.setCreateWithDebug(true);
+    gameLabSprite.setCreateWithDebug(debugSprites);
     this.p5.allSprites.forEach(sprite => {
-      sprite.debug = true;
+      sprite.debug = debugSprites;
     });
   }
 };

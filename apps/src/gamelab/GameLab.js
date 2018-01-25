@@ -236,7 +236,7 @@ GameLab.prototype.init = function (config) {
   config.enableShowCode = true;
   config.enableShowLinesCount = false;
 
-  var onMount = function () {
+  const onMount = () => {
     this.setupReduxSubscribers(getStore());
     if (config.level.watchersPrepopulated) {
       try {
@@ -273,7 +273,7 @@ GameLab.prototype.init = function (config) {
     });
 
     this.setCrosshairCursorForPlaySpace();
-  }.bind(this);
+  };
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
@@ -352,11 +352,19 @@ GameLab.prototype.setupReduxSubscribers = function (store) {
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
       this.onIsRunningChange(state.runState.isRunning);
     }
+
+    if (!lastState.runState || state.runState.isDebuggingSprites !== lastState.runState.isDebuggingSprites) {
+      this.onIsDebuggingSpritesChange(state.runState.isDebuggingSprites);
+    }
   });
 };
 
 GameLab.prototype.onIsRunningChange = function () {
   this.setCrosshairCursorForPlaySpace();
+};
+
+GameLab.prototype.onIsDebuggingSpritesChange = function (isDebuggingSprites) {
+  this.gameLabP5.debugSprites(isDebuggingSprites);
 };
 
 /**
