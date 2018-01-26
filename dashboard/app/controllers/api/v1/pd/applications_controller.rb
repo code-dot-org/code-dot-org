@@ -14,9 +14,10 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     application_data = empty_application_data
 
     ROLES.each do |role|
+      # count(locked_at) counts the non-null values in the locked_at column
       apps = get_applications_by_role(role).
-        select(:status, "IF(locked_at IS NULL, FALSE, TRUE) AS locked", "count(id) AS total").
-          group(:status, :locked)
+        select(:status, "count(locked_at) AS locked, count(id) AS total").
+          group(:status)
 
       if regional_partner_filter == REGIONAL_PARTNERS_NONE
         apps = apps.where(regional_partner_id: nil)
