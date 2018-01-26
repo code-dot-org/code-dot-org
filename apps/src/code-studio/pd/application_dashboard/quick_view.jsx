@@ -92,7 +92,6 @@ export class QuickView extends React.Component {
   };
 
   handleStateChange = (selected) => {
-    console.log(selected);
     const filter = selected ? selected.value : null;
     this.setState({ filter });
   };
