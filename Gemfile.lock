@@ -147,6 +147,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     Ascii85 (1.0.2)
+    StreetAddress (1.0.6)
     acme-client (0.3.7)
       faraday (~> 0.9, >= 0.9.1)
       json-jwt (~> 1.2, >= 1.2.3)
@@ -764,6 +765,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  StreetAddress
   acmesmith
   active_model_serializers!
   active_record_query_trace
