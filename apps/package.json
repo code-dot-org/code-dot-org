@@ -43,7 +43,7 @@
   "devDependencies": {
     "@cdo/apps": "file:src",
     "@code-dot-org/blockly": "1.7.0",
-    "@code-dot-org/bramble": "0.1.25",
+    "@code-dot-org/bramble": "0.1.26",
     "@code-dot-org/craft": "github:code-dot-org/craft#ea9da01f6512bcd2c8ea562d6a4ff4d2c0549e4f",
     "@code-dot-org/johnny-five": "0.11.1-cdo.2",
     "@code-dot-org/js-interpreter-tyrant": "0.2.2",
