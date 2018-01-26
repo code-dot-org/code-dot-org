@@ -421,6 +421,7 @@ Dashboard::Application.routes.draw do
         collection do
           get :quick_view
           get :cohort_view
+          get :search
         end
       end
     end
@@ -449,7 +450,7 @@ Dashboard::Application.routes.draw do
       get 'principal_approval/:application_guid', to: 'principal_approval_application#new', as: 'principal_approval'
     end
 
-      # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
+    # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
     get 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#new'
     get 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#new'
 
