@@ -26,14 +26,14 @@
   twentyhours_heading: "Prøv vår introduksjon til koding"
   twentyhours_text: "Fullført din første kodetime? Lær mer grunnleggende koding og programmering i dette oppfølgingskurset."
   og_title: Alle kan lære
-  og_title_soon: "The Hour of Code is coming"
-  og_title_here: "The Hour of Code is here!"
+  og_title_soon: "Kodetimen kommer"
+  og_title_here: "Kodetimen er kommet!"
   og_description: "Alle elever i alle skoler fortjener mulighet til å lære seg å programmere."
-  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
+  og_description_celeb: "Prøv de nye opplæringsprogrammene, vinne en kjendis videochat for deg selv eller klassen!"
   csedweek_og_title: "Kodetimen kommer"
   csedweek_og_description: "4.-10. desember 2017. Informatikk er grunnleggende for alle elever."
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
-  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "Kodetimen er 4.-10. desember 2017. Programmering er en grunnleggende ferdighet for alle elever."
+  csedweek_og_description_here: "Kodetimen er kommet. Programmering er en grunnleggende ferdighet for alle elever."
   hoc2014_heading: "Bli med i <a href=\"http://hourofcode.com\">Kodetimen</a><br/> 8. – 14. desember 2014<br/>"
   hoc2014_students: "Elever"
   hoc2014_try: "Prøv"
@@ -260,6 +260,12 @@
   studiobar_donate_body: "Et barn vil få mulighet til å lære for hver 10 du bidrar med"
   studiobar_shop_title: "Butikk"
   studiobar_shop_body: "Bryt stereotyper. Bruk vår logo med stolthet."
+  homepage_stats_students: "of US students have accounts on Code.org"
+  homepage_stats_female: "of our students are female"
+  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
+  homepage_stats_policy: "states changed policy to support computer science"
+  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "\"Jeg utfordrer jenter i alle land til å lære en kodetime\" Malala, fredsprisvinner"
   homepage_hero_text_susan: |-
     "Hvis du kan endre teknologi, kan du endre verden." Susan, administrerende direktør i YouTube
@@ -296,8 +302,8 @@
   homepage_hero_text_stat_loc: "8,5 millioner jenter er registrert på Code.org"
   homepage_hero_text_stat_students: "#student_count elevkontoer på Code.org"
   homepage_hero_text_stat_served: 'Kodetimen: #served har prøvd'
-  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
-  homepage_hero_hoc_is_here: "The Hour of Code is here"
+  homepage_hero_hoc_is_coming: "Kodetimen kommer"
+  homepage_hero_hoc_is_here: "Kodetimen er kommet"
   homepage_slot_text_hoc: "Kodetimen"
   homepage_slot_text_frozen: "Frost med Anna og Elsa"
   homepage_slot_text_teacher: "Lærersider"
@@ -317,7 +323,7 @@
   homepage_action_text_girlvideo: "Inspirere en jente"
   homepage_action_text_learn: "Begynne å lære"
   homepage_action_text_signpetition: "Signér oppropet"
-  homepage_action_text_wincelebritychat: "Win a celebrity chat"
+  homepage_action_text_wincelebritychat: "Vinne en kjendis-chat"
   homepage_signpetition_dropdown: "Signér vår underskriftskampanje ▾"
   homepage_diversity_pledge: "Slå et slag for mangfoldet"
   homepage_banner_text_prizes: 'Kodetimen kommer igjen, 7.-13. desember. '
@@ -439,18 +445,18 @@
   minecraft_download_adventurer: "Last ned Minecraft-eventyrer for bruk uten internett."
   minecraft_subtitle: "Kodetimen med Minecraft"
   minecraft_store_camps: "Gratis Minecraft Kodetime-leir på Microsoft Store"
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'> Registrer deg</a> for gratis Minecraft time koden arbeidsoppgavene på Microsoft Stores i Australia, Canada, Puerto Rico eller USA. Lær hvordan koding for alle og kombinerer kreativitet, problemløsning og masse moro."
   minecraft_host_event: "Hold en Minecraft Kodetime-arrangement"
-  minecraft_teach_resources: "Teacher resources and lesson plan."
-  minecraft_leader_guide: "Download resources to help you plan and lead an event."
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
-  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}', target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
-  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}', target='_blank'>Sign up today</a>."
-  minecraft_future: "Help all youth become future ready"
-  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}', target='_blank'>access the resources</a> they found most valuable."
+  minecraft_teach_resources: "Lærerressurser og oppgaveplan."
+  minecraft_leader_guide: "Last ned ressurser for å få hjelp deg til å planlegge og lede en Kodetime."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'> Last ned</a> tilrettelagt hurtigstartveiledning og PowerPoint-presentasjoner for yngre og eldre studenter nå."
+  minecraft_join_online_training: "Klar til å ha din eigen Kodetime med Minecraft, men ikke sikker på hvor du skal starte? Sjekk ut våre <a href='%{minecraft_webinar_url}'>etterspurde webinar</a>. Du vil lære de beste fremgangsmåtene, få tilgang til tilretteleggingsmateriale og få en gjennomgang av rettleiinga til den nye reisa til helten frå Minecraft-teamet. Få et forsprang på ved å gå gjennom kva du treng for å ha Kodetimen for unge under Kodetimen-veka (4.-10. desember) og etterpå."
+  minecraft_continue_learning: 'Informatikk for alle: etter Kodetimen på Microsoft Store'
+  minecraft_continue_learning_description: "Ingen programmeringserfaring trengs! Hjelp til å sikre at alle unge kan lære verdifulle ferdigheiter ein når gjennom ei utdanning i informatikk. Bli med oss på Microsoft Store for å vere med på ein gratis serie på tre seminar på ein time kor du opplev koding i eit morosamt og stressfritt miljø, bli kjent med nøkkelomgrep i datavitskap og gjer deg klar til å halde ein Kodetime i klasserommet eller i lokalsamfunnet. Du får til dette! <a href='%{minecraft_continue_learning_url}'>Registrer deg i dag</a>."
+  minecraft_future: "Hjelp alle unge med å bli klare for fremtiden"
+  minecraft_future_description: "Finn ut hvordan andre skuler og ideelle organisasjoner lærer bort digitale ferdigheter, fra digital kompetanse til informatikkutdanning, til lokalsamfunna sine. Vurder ulike modeller, få tips og triks, og <a href='%{minecraft_future_url}'>få tilgang til ressursene</a> de fant mest verdifulle."
   minecraft_og_designer: "Minecraft er tilbake med en ny aktivitet for Kodetimen. Programmer dyr og andre Minecraft-skapninger i din egen versjon av Minecraft."
-  minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
+  minecraft_og_agent: "Minecraft er tilbake til Kodetimen - og du er helten! Skriv koden for å reise gjennom Minecraft-universet."
   sports_page_title: "Kodetimen med sport"
   sports_og_title: "Press deg selv. Alle kan lære."
   sports_og_description: "Velg mellom kodeoppgaver i basketball eller andre idretter."
@@ -487,6 +493,7 @@
   video_title_obama: "President Obama om informatikk"
   video_title_hoc_is_here: "Kodetimen er her - alle kan lære"
   video_title_anybody_can_learn: "Alle kan lære"
+  video_title_steph_curry: "Hour of Code with Steph Curry"
   video_title_draymond_green: "Kodetimen med Draymond Green"
   video_title_russell_okung: "Kodetimen med Russell Okung"
   video_title_real_madrid: "Kodetimen med Real Madrid"
@@ -566,7 +573,7 @@
   volunteer_engineer_submission_type_task_remote: "Jeg ønsker at du skal besøke mitt klasserom via Skype og si noen inspirerende ord til barna"
   volunteer_engineer_submission_type_task_mentor: "Jeg ser etter en veileder som kan hjelpe meg med forberedelsene til Kodetimen"
   petition_age: "Alder"
-  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_hoc_scaling_progress: "Uff! Vi opplever høg Kodetime-trafikk. Vi kan ikke lagre framgangen denne uken, men framgangen fra før denne uken er framleis trygg og lagret."
   dashboard_announce_learn_more_button: "Lær mer"
   dashboard_landing_title: "Hjemmeside for lærere"
   dashboard_landing_welcome: "Velkommen til det nye og forbedrede lærerdashboardet."
@@ -854,7 +861,7 @@
   carousel_heading_ide: "Plattformer som er populære blant lærere"
   carousel_heading_desktop: "Lære å kode på en datamaskin"
   carousel_heading_mobtabelem: "For telefoner og nettbrett"
-  carousel_heading_prereader: "For pre-readers"
+  carousel_heading_prereader: "For de som ikke kan lese enda"
   carousel_heading_beyondblocks: "Gå videre fra blokkene - lær et programmeringsspråk"
   carousel_heading_nointernet: "Tregt internett? Installer disse programmene på datamaskinen"
   educator_notes: "Lærernotater"
@@ -863,7 +870,7 @@
   how_to_teach_hoc: "Hvordan lære bort en Kodetime"
   more_resources_educators: "Flere lærerressurser"
   beyond_submission: "Ønsker du sende inn en oppskrift til Kodetimen? Se vilkår og innlevering skjemaet."
-  third_party_submission: "Want to submit a tutorial to be listed here? <a href=\"%{submission_url}\">See the criteria and submission form.</a>"
+  third_party_submission: "Vil du registrere ett opplæringsprogram for visning her? <a href=\"%{submission_url}\">Se kriterier og registrerings skjema.</a>"
   participants: "deltakere"
   teachers_notes: "Lærernotater"
   teachers_notes_hoc: 'Lærere: Les viktig opplæringsnotater her'
@@ -940,7 +947,7 @@
   coursef_name: "Kurs F"
   accelerated_name: "Framskyndet kurs"
   express_name: "Express Course"
-  pre-express_name: Pre-reader Express Course
+  pre-express_name: Hurtigprogram for de som ikke leser
   cspunit1_name: '(gammel) Enhet 1: Digital informasjon'
   cspunit2_name: '(gammel) Enhet 2: Internett'
   cspunit3_name: '(gammel) Enhet 3: Programmering'
@@ -951,13 +958,13 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
-  csd6_name: 'Unit 6: Physical Computing'
+  csd5_name: 'Enhet 5: Data og samfunn'
+  csd6_name: 'Enhet 6: Praktisk programmering'
   csp1_name: 'Enhet 1: Internett'
   csp2_name: 'Enhet 2: Digital informasjon'
   csp3_name: 'Unit 3: Algorithms and Programming'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
+  csp3-a_name: 'Enhet 3: Introduksjon til programmering(Versjon A)'
+  csp3-research-mxghyt_name: 'Enhet 3: Introduksjon til programmering (Del mål)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -986,7 +993,7 @@
   math_category_name: "Matematikk"
   hoc_category_name: "Kodetimen"
   csf_category_name: "Grunnleggende informatikk"
-  csf_international_category_name: "CS Fundamentals International"
+  csf_international_category_name: "Grunnleggende informatikk internasjonalt"
   csf2_draft_category_name: 'Under utvikling: Kurs A - F'
   csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 Prinsipper i informatikk"
@@ -1448,7 +1455,7 @@
   header_documentation: "Dokumentasjon"
   csp_name: "'16-'17 Prinsipper i informatikk"
   csd_name: "CS Discoveries"
-  full_course_category_name: "Full Courses"
+  full_course_category_name: "Alle kurs"
   user_header_label: "Hei %{username}"
   user_header_settings: "Min konto"
   user_header_logout: "Logg ut"
@@ -1460,7 +1467,7 @@
   signing_in: "Logger på"
   sign_in_overview: 'Elevene kan logge på kontoene sine på Code.org på følgende måte:'
   sign_in_instruct_website: "Gå til %{code_org_url}."
-  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
+  sign_in_instruct_code: 'Skriv inn seksjonskoden: %{section_code}.'
   sign_in_instruct_name: "Velg visningsnavn."
   sign_in_instruct_secret: "Velg hemmelighet %{secret}."
   sign_in_instruct_button: "Klikk på \"Logg på\" knappen."

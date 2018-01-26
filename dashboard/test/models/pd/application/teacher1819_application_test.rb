@@ -84,7 +84,7 @@ module Pd::Application
           previous_yearlong_cdo_pd: ['CS Discoveries'],
           csp_how_offer: Pd::Application::Teacher1819Application.options[:csp_how_offer].last,
           taught_in_past: ['CS in Algebra']
-        }
+        }.stringify_keys
       )
 
       application = create(:pd_teacher1819_application, course: 'csp', form_data: application_hash.to_json, regional_partner: (create :regional_partner))
@@ -154,7 +154,7 @@ module Pd::Application
           previous_yearlong_cdo_pd: ['CS Discoveries'],
           csp_how_offer: Pd::Application::Teacher1819Application.options[:csp_how_offer].last,
           taught_in_past: ['CS in Algebra']
-        }
+        }.stringify_keys
       )
 
       application = create :pd_teacher1819_application, course: 'csp', form_data: application_hash.to_json
@@ -198,7 +198,7 @@ module Pd::Application
           previous_yearlong_cdo_pd: ['CS Principles'],
           csp_how_offer: Pd::Application::Teacher1819Application.options[:csp_how_offer].first,
           taught_in_past: ['AP CS A']
-        }
+        }.stringify_keys
       )
 
       application = create :pd_teacher1819_application, course: 'csp', form_data: application_hash.to_json, regional_partner: nil
@@ -240,7 +240,7 @@ module Pd::Application
           csd_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].first,
           previous_yearlong_cdo_pd: ['CS in Science'],
           taught_in_past: Pd::Application::Teacher1819Application.options[:taught_in_past].last
-        }
+        }.stringify_keys
       )
 
       application = create :pd_teacher1819_application, course: 'csd', form_data: application_hash.to_json
@@ -282,7 +282,7 @@ module Pd::Application
           csd_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].last,
           previous_yearlong_cdo_pd: ['Exploring Computer Science'],
           taught_in_past: ['Exploring Computer Science']
-        }
+        }.stringify_keys
       )
 
       application = create :pd_teacher1819_application, course: 'csd', form_data: application_hash.to_json, regional_partner: nil
@@ -305,6 +305,39 @@ module Pd::Application
           taught_in_past: 0
         }, application.response_scores_hash
       )
+    end
+
+    test 'autoscore for able_to_attend_multiple' do
+      application_hash = build :pd_teacher1819_application_hash, :with_multiple_workshops, program: Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.first
+      application = create :pd_teacher1819_application, course: 'csd', form_data: application_hash.to_json, regional_partner: nil
+
+      application.auto_score!
+
+      assert_equal(YES, application.response_scores_hash[:able_to_attend_multiple])
+    end
+
+    test 'autoscore for ambiguous responses to able_to_attend_multiple' do
+      application_hash = build :pd_teacher1819_application_hash, :with_multiple_workshops, {
+        program: Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.first,
+        able_to_attend_multiple: ["December 11-15, 2017 in Indiana, USA", Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]]
+      }
+
+      application = create :pd_teacher1819_application, course: 'csd', form_data: application_hash.to_json, regional_partner: nil
+      application.auto_score!
+
+      assert_nil application.response_scores_hash[:able_to_attend_multiple]
+    end
+
+    test 'autoscore for not able_to_attend_multiple' do
+      application_hash = build :pd_teacher1819_application_hash, :with_multiple_workshops, {
+        program: Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.first,
+        able_to_attend_multiple: [Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]]
+      }
+
+      application = create :pd_teacher1819_application, course: 'csd', form_data: application_hash.to_json, regional_partner: nil
+      application.auto_score!
+
+      assert_equal(NO, application.response_scores_hash[:able_to_attend_multiple])
     end
 
     test 'send_decision_notification_email only sends to G3 and unmatched' do
@@ -484,7 +517,7 @@ module Pd::Application
       assert_not_equal first_enrollment.id, application.auto_assigned_enrollment_id
     end
 
-    test 'upading the application to unaccepted will also delete the autoenrollment' do
+    test 'updating the application to unaccepted will also delete the autoenrollment' do
       application = create :pd_teacher1819_application
       workshop = create :pd_workshop
 
@@ -507,6 +540,72 @@ module Pd::Application
       end
 
       assert_not_equal first_enrollment.id, application.auto_assigned_enrollment_id
+    end
+
+    test 'school_info_attr for specific school' do
+      school = create :school
+      form_data_hash = build :pd_teacher1819_application_hash, school: school
+      application = create :pd_teacher1819_application, form_data_hash: form_data_hash
+      assert_equal({school_id: school.id}, application.school_info_attr)
+    end
+
+    test 'school_info_attr for custom school' do
+      application = create :pd_teacher1819_application, form_data_hash: (
+      build :pd_teacher1819_application_hash,
+        :with_custom_school,
+        school_name: 'Code.org',
+        school_address: '1501 4th Ave',
+        school_city: 'Seattle',
+        school_state: 'Washington',
+        school_zip_code: '98101',
+        school_type: 'Public school'
+      )
+      assert_equal(
+        {
+          country: 'US',
+          school_type: 'public',
+          state: 'Washington',
+          zip: '98101',
+          school_name: 'Code.org',
+          full_address: '1501 4th Ave',
+          validation_type: SchoolInfo::VALIDATION_NONE
+        },
+        application.school_info_attr
+      )
+    end
+
+    test 'update_user_school_info with specific school overwrites user school info' do
+      user = create :teacher, school_info: create(:school_info)
+      application_school_info = create :school_info
+      application = create :pd_teacher1819_application, user: user, form_data_hash: (
+        build :pd_teacher1819_application_hash, school: application_school_info.school
+      )
+
+      application.update_user_school_info!
+      assert_equal application_school_info, user.school_info
+    end
+
+    test 'update_user_school_info with custom school does nothing when the user already a specific school' do
+      original_school_info = create :school_info
+      user = create :teacher, school_info: original_school_info
+      application = create :pd_teacher1819_application, user: user, form_data_hash: (
+        build :pd_teacher1819_application_hash, :with_custom_school
+      )
+
+      application.update_user_school_info!
+      assert_equal original_school_info, user.school_info
+    end
+
+    test 'update_user_school_info with custom school updates user info when user does not have a specific school' do
+      original_school_info = create :school_info_us_other
+      user = create :teacher, school_info: original_school_info
+      application = create :pd_teacher1819_application, user: user, form_data_hash: (
+        build :pd_teacher1819_application_hash, :with_custom_school
+      )
+
+      application.update_user_school_info!
+      refute_equal original_school_info.id, user.school_info_id
+      assert_not_nil user.school_info_id
     end
   end
 end

@@ -216,7 +216,7 @@ class Homepage
               },
               {
                 text: "homepage_slot_text_link_administrators",
-                url: "/administrators"
+                url: "/yourschool"
               },
               {
                 text: "homepage_slot_text_link_shop",
@@ -279,15 +279,10 @@ class Homepage
   end
 
   def self.get_census(request)
-    census_announcement = DCDO.get('census_announcement', nil)
-
-    # Whether we show non-rotating background image and center options on desktop.
-    show_census_layout = request.language == "en"
-
-    # Whether we have a special announcement to also show.
-    show_census_announcement = census_announcement && census_announcement['homepage_text'] && census_announcement['homepage_subtext'] && request.language == "en"
-
-    return show_census_layout, show_census_announcement, census_announcement
+    # While showing the professional-learning-2018 banner in "en", use the
+    # census layout (no cycling through hero images) but don't show the census
+    # announcement itself.
+    return request.language == "en", false, nil
   end
 
   def self.get_heroes_arranged(request)

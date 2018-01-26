@@ -45,10 +45,8 @@ describe('isRunning reducer', function () {
       isDebuggerPaused: true
     };
     var state = reducer(previousState, runState.setIsRunning(false));
-    assert.deepEqual(state, {
-      isRunning: false,
-      isDebuggerPaused: false
-    });
+    assert.strictEqual(state.isRunning, false);
+    assert.strictEqual(state.isDebuggerPaused, false);
   });
 
   it ('doesnt change isDebuggerPaused when set to true', function () {
@@ -57,10 +55,28 @@ describe('isRunning reducer', function () {
       isDebuggerPaused: true
     };
     var state = reducer(previousState, runState.setIsRunning(true));
-    assert.deepEqual(state, {
+    assert.strictEqual(state.isRunning, true);
+    assert.strictEqual(state.isDebuggerPaused, true);
+  });
+
+  it ('sets isDebuggingSprites to false when running is set to false', function () {
+    var previousState = {
       isRunning: true,
-      isDebuggerPaused: true
-    });
+      isDebuggingSprites: true
+    };
+    var state = reducer(previousState, runState.setIsRunning(false));
+    assert.strictEqual(state.isRunning, false);
+    assert.strictEqual(state.isDebuggingSprites, false);
+  });
+
+  it ('doesnt change isDebuggingSprites when set to true', function () {
+    var previousState = {
+      isRunning: true,
+      isDebuggingSprites: true
+    };
+    var state = reducer(previousState, runState.setIsRunning(true));
+    assert.strictEqual(state.isRunning, true);
+    assert.strictEqual(state.isDebuggingSprites, true);
   });
 });
 
@@ -136,6 +152,42 @@ describe('isDebuggerPaused reducer', function () {
     });
   });
 
+});
+
+describe('isDebuggingSprites reducer', function () {
+  var reducer = runState.default;
+
+  it('starts out false', function () {
+    var state = reducer(null, {});
+    assert.strictEqual(state.isDebuggingSprites, false);
+  });
+
+  it('can be set to true when false', function () {
+    var previousState = {
+      isRunning: true,
+      isDebuggingSprites: false,
+    };
+    var state = reducer(previousState, runState.setIsDebuggingSprites(true));
+    assert.strictEqual(state.isDebuggingSprites, true);
+  });
+
+  it('can be set to false when true', function () {
+    var previousState = {
+      isRunning: true,
+      isDebuggingSprites: true,
+    };
+    var state = reducer(previousState, runState.setIsDebuggingSprites(false));
+    assert.strictEqual(state.isDebuggingSprites, false);
+  });
+
+  it ('doesnt change to true when isRunning is set to false', function () {
+    var previousState = {
+      isRunning: false,
+      isDebuggingSprites: false,
+    };
+    var state = reducer(previousState, runState.setIsDebuggingSprites(true));
+    assert.strictEqual(state.isDebuggingSprites, false);
+  });
 });
 
 });

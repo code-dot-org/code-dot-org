@@ -12,11 +12,23 @@ export function isCodeOrgBrowser() {
   return !!window.MakerBridge;
 }
 
-export function getChromeVersion() {
+function getChromeVersion() {
   const raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
   return raw ? parseInt(raw[2], 10) : false;
 }
 
 export function isWindows() {
-  return navigator.platform.indexOf('Win') > -1;
+  return /^Win/.test(navigator.platform);
+}
+
+export function isOSX() {
+  return /^Mac/.test(navigator.platform);
+}
+
+export function isChromeOS() {
+  return /\bCrOS\b/.test(navigator.userAgent);
+}
+
+export function isLinux() {
+  return /^Linux/.test(navigator.platform) && !isChromeOS();
 }

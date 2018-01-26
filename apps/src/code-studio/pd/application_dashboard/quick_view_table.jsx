@@ -4,11 +4,7 @@ import ReactTooltip from 'react-tooltip';
 import {Table} from 'reactabular';
 import {Button} from 'react-bootstrap';
 import _ from 'lodash';
-import {
-  StatusColors,
-  UnmatchedFilter,
-  AllPartnersFilter
-} from './constants';
+import { StatusColors } from './constants';
 
 const styles = {
   table: {
@@ -35,10 +31,6 @@ export class QuickViewTable extends React.Component {
     path: PropTypes.string.isRequired,
     data: PropTypes.array.isRequired,
     statusFilter: PropTypes.string,
-    regionalPartnerFilter: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
     regionalPartnerName: PropTypes.string,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     isWorkshopAdmin: PropTypes.bool
@@ -194,21 +186,8 @@ export class QuickViewTable extends React.Component {
     this.context.router.push(`/${this.props.path}/${id}`);
   };
 
-  constructRows() {
-    let rows = this.props.data;
-    if (this.props.isWorkshopAdmin && this.props.regionalPartnerFilter !== AllPartnersFilter) {
-      if (this.props.regionalPartnerFilter === UnmatchedFilter || this.props.regionalPartnerFilter === null) {
-        rows = rows.filter(row => row.regional_partner_id === null);
-      } else {
-        rows = rows.filter(row => row.regional_partner_id === this.props.regionalPartnerFilter);
-      }
-    }
-    rows = this.props.statusFilter ? rows.filter(row => row.status === this.props.statusFilter) : rows;
-    return rows;
-  }
-
   render() {
-    const rows = this.constructRows();
+    const rows = this.props.data;
     const columns = this.constructColumns();
 
     return (

@@ -73,7 +73,7 @@ class OwnedSections extends React.Component {
     this.setState({
       viewHidden: !this.state.viewHidden
     });
-  }
+  };
 
   render() {
     const {

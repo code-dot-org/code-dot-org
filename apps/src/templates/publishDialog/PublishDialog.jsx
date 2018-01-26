@@ -25,7 +25,7 @@ class PublishDialog extends Component {
     // specify additional behavior after successful call to onConfirmPublish,
     // if not overridden by onConfirmPublishOverride.
     afterPublish: PropTypes.func,
-  }
+  };
 
   confirm = () => {
     if (this.props.onConfirmPublishOverride) {

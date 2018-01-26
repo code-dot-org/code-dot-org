@@ -836,6 +836,28 @@ applabCommands.setAttribute = function (opts) {
   return false;
 };
 
+applabCommands.setSelectionRange = function (opts) {
+  const {
+    elementId,
+    selectionStart,
+    selectionEnd,
+    selectionDirection
+  } = opts;
+
+  apiValidateDomIdExistence(opts, 'setSelectionRange', 'elementId', elementId, true);
+  apiValidateType(opts, 'setSelectionRange', 'start', selectionStart, 'number');
+  apiValidateType(opts, 'setSelectionRange', 'end', selectionEnd, 'number');
+  apiValidateType(opts, 'setSelectionRange', 'direction', selectionDirection, 'string', OPTIONAL);
+
+  const divApplab = document.getElementById('divApplab');
+  const element = document.getElementById(elementId);
+  if (divApplab.contains(element)) {
+    element.setSelectionRange(selectionStart, selectionEnd, selectionDirection);
+    return true;
+  }
+  return false;
+};
+
 applabCommands.getText = function (opts) {
   var divApplab = document.getElementById('divApplab');
   apiValidateDomIdExistence(opts, 'getText', 'id', opts.elementId, true);

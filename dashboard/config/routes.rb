@@ -149,6 +149,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get 'projects/featured', to: 'projects#featured'
+
   get '/projects/public', to: 'projects#public'
   resources :projects, path: '/projects/', only: [:index] do
     collection do
@@ -365,6 +367,7 @@ Dashboard::Application.routes.draw do
       resources :workshops do
         collection do
           get :filter
+          get :upcoming_teachercons
         end
         member do # See http://guides.rubyonrails.org/routing.html#adding-more-restful-actions
           post :start
@@ -394,8 +397,9 @@ Dashboard::Application.routes.draw do
       get :teacher_applications, to: 'teacher_applications#index'
       post :teacher_applications, to: 'teacher_applications#create'
 
-      # persistent namespace for teachercon registrations, can be updated/replaced each year
+      # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
       post 'teachercon_registrations', to: 'teachercon1819_registrations#create'
+      post 'fit_weekend_registrations', to: 'fit_weekend1819_registrations#create'
 
       post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
       post :regional_partner_program_registrations, to: 'regional_partner_program_registrations#create'
@@ -417,6 +421,7 @@ Dashboard::Application.routes.draw do
         collection do
           get :quick_view
           get :cohort_view
+          get :search
         end
       end
     end
@@ -445,8 +450,9 @@ Dashboard::Application.routes.draw do
       get 'principal_approval/:application_guid', to: 'principal_approval_application#new', as: 'principal_approval'
     end
 
-    # persistent namespace for teachercon registrations, can be updated/replaced each year
+    # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
     get 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#new'
+    get 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#new'
 
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
     get 'regional_partner_program_registration', to: 'regional_partner_program_registration#new'
@@ -523,7 +529,6 @@ Dashboard::Application.routes.draw do
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
   get '/api/user_progress/:script/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
   get '/api/user_progress/:script/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
-  get '/api/user_progress', to: 'api#user_progress_for_all_scripts', as: 'user_progress_for_all_scripts'
   namespace :api do
     api_methods.each do |action|
       get action, action: action

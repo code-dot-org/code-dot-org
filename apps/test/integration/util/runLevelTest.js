@@ -114,6 +114,7 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
     'Define onExecutionError() in your level test case to handle this.';
 
   loadApp({
+    app,
     skinId: skinId,
     level: level,
     baseUrl: '/base/build/package/',

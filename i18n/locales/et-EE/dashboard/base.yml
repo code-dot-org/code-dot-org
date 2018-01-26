@@ -648,6 +648,7 @@ et:
     correct_title: "Aitäh"
     correct_body: "Aitäh, et vastasid."
     hide_survey_last_answer: "See küsitlus on anonüümne. Palun mine õpetaja pealehele, et tulemusi koondada. Pane tähele, et tulemusi on võimalik näha vaid siis kui vähemalt viis õpilast küsitlusele vastasid."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Aitäh"
     wrong_body: "Aitäh, et vastasid."

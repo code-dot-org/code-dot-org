@@ -606,9 +606,12 @@ export function loadStarWarsEvents(skin) {
     [msg.itemRandom(), RANDOM_VALUE]];
 
   skin.msgOverrides = {
+    ifSprite: msg.ifDroid,
     ifSpriteN: msg.ifDroidN,
+    moveSprite: msg.moveDroid,
     moveSpriteN: msg.moveDroidN,
     setSpriteN: msg.setDroidN,
+    stopSprite: msg.stopDroid,
     stopSpriteN: msg.stopDroidN,
     whenSpriteClicked: msg.whenDroidClicked,
     whenSpriteClickedN: msg.whenDroidClickedN,

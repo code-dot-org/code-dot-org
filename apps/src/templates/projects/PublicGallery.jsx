@@ -23,7 +23,7 @@ class PublicGallery extends Component {
       artist: PropTypes.arrayOf(publishedProjectPropType),
       minecraft: PropTypes.arrayOf(publishedProjectPropType),
     }),
-  }
+  };
 
   /**
    * Transform the projectLists data from the format expected by the

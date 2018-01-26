@@ -27,9 +27,9 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 **We are currently hiring for:**
 
-- **Administration & Finance**
-	- [Director of Accounting & Finance](#accounting)
-- **Education Team**
+- **Advocacy**
+	- [Director of State Government Affairs](#govaffairs)
+- **Education**
 	- [Facilitator Development Specialist](#facilitator)
 	- [Program Associate](#associate)
 - **Engineering**
@@ -46,48 +46,49 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="accounting"href="#accounting">Director of Accounting & Finance (Seattle, WA)</a>
+## <a name="govaffairs"href="#govaffairs">Director of State Government Affairs (location flexible)</a>
 
 **Job Summary:**
 
-Code.org is looking for an experienced Director of Accounting & Finance to oversee all finance and accounting workflows, including regulatory and financial reporting, budget and forecast preparation, contract administration, and the development of internal control policies and procedures.
+Code.org is a leading voice in the national dialogue on expanding access to K-12 computer science education. We are looking for an experienced professional with a background in state government affairs and/or policy development to lead the transformation of the K-12 US education policy landscape as it relates to computer science. 
 
-Responsibilities of the position include:
+Our team is working with policymakers and education leaders to advance policy reforms that reduce barriers or boost access to K-12 computer science courses. We’ve helped build a movement for K-12 computer scinece that has changed policies across dozens of states. This is a unique opportunity to harness unprecedented bipartisan support for this important issue to shape education policy at the state and local levels. You will have a chance to bring computer science policies to a state for the first time, rather than just incrementally changing existing education policy.
 
-- Management of a small accounting and finance team 
-- Monitoring all aspects of the company’s accounting and financial operations, ensuring quality control over financial transactions and reporting.
-- Supervising the month and year-end close procedures, including review of journal entries, account reconciliations, and analysis of results
-- Overseeing the preparation and distribution of timely internal financial statements
-- Supervising the external audit of the company’s financial statements and preparation of annual tax return 
-- Collaborate with Controller on annual budgeting and monthly re-forecasting
-- Reviewing all payables and receivables 
-- Cash flow planning and cash management
-- Contract administration: prepare and/or negotiate standard contracts (partnerships, licensing, grants, contractors, vendors)
-- Providing data modeling and analysis, as needed
-- Supporting the Fundraising team through the development of grant budgets, including government grants
-- Developing and documenting finance and accounting processes and policies to maintain and strengthen internal controls
+The primary role for this position is managing existing and developing new relationships with state leaders (state departments of education, state boards of education, legislators and governors) across multiple states. You will develop overall strategy for engagement in your states while leading and carrying out the tactics associated with the strategy. 
+
+In this role, you will be responsible for: 
+
+- Developing and managing campaigns and state-based coalitions in states that you are responsible for
+- Developing and updating policy positions
+- Public speaking at events, including testimony before state authorities and interviews with the media
+- Communicating policy agenda to various audiences (stakeholder groups, legislators, Governors and staff, educators, media, etc.) and tailoring messaging for each
+- Developing relationships with institutions of higher education that are building a K-12 computer science teacher pipeline
+- Creating, organizing and managing policy-related events with policy makers and/or partner organizations
+- Developing and managing relationships with the computer science community including educators, leaders, corporate partners, and non-profits with shared goals
+- Creating and managing grassroots support for policy-related efforts
+- Coordinating state and federal policy efforts internally and with partners
 
 **Experience and Qualifications:**
 
-The ideal candidate has at least a Bachelor’s degree in Accounting, Finance, or related field and possesses the following skills:
+We are a small, tight-knit, fast-moving dynamic team that leverages each person’s unique backgrounds to support one another in our work with states. We are seeking a team member with expertise and experience that will enable them to contribute ideas and support in areas such as higher education policy development experience, marketing and PR, and coalition and partnership development.
 
-- 3+ years experience in an accounting management role, plus additional experience in an accountant role
-- 2+ years experience in contract administration  
-- Strong knowledge of GAAP and financial reporting requirements as well as financial audits
-- Experience with Quickbooks Online
-- Advanced or expert user of spreadsheets
-- Experience and aptitude for managing complex projects and reports 
-- Advanced analytical, organizational and problem solving skills
-- Be highly comfortable working in a fast-paced, ambiguous, informal work environment
-- Fund accounting experience a plus
-- Experience with government grant programs preferred
-- CPA preferred
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
+To be successful in this role, your main experience should be in working directly with legislators and governors’ education advisors and/or with state boards of education and state departments of education. You should have experience with and working knowledge of the legislative process or policy development process within 
+state education authorities. 
 
-Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure. Proficiency in working with Microsoft Office and Google Docs a must.
+We are a non-partisan organization, and the position requires working with representatives from all political parties at the state, local (and possibly federal) level. You should have a demonstrated ability to work across political parties and ideologies.
+
+You must be extremely detail-oriented, possess exceptional writing and interpersonal communication ability in English, and be tech-savvy (computer science background/experience a plus, but not required). You should be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Google Docs is required.
+
+As our ideal candidate, you have:
+
+- Passion for our mission
+- At least a Bachelor’s degree; Master’s degree desired
+- 5-8+ years of experience in government relations/advocacy/policy development in education, preferably at the state level
+- Ability and willingness to travel. You will be managing multiple states and should expect to travel up to 30% time.
+- Experience in developing K-12 computer science education policy (nice to have, but not required) 
 
 To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
 
 ## <a name="facilitator"href="#facilitator">Facilitator Development Specialist (Seattle, WA)</a>
 
@@ -133,7 +134,7 @@ To apply, please email resume and cover letter to <a href="mailto:jobs@code.org"
 
 Code.org is looking for a detail and customer-service oriented Program Associate to join Code.org’s Education team. The Education team is responsible for the creation of Code.org’s K-12 computer science courses and the success of Code.org professional development across the U.S. The Education team supports a network of roughly 400 computer science facilitators in their delivery of these professional development workshops, which have reached over 50,000 teachers in the past 3 years.
 
-Under the direction of the Education Program Manager for the middle and high school programs, the Program Associate provides operational and administrative assistance. This role will work collaboratively with the other team members supporting teachers and facilitators. This is a full-time, exemtp position. 
+Under the direction of the Education Program Manager for the middle and high school programs, the Program Associate provides operational and administrative assistance. This role will work collaboratively with the other team members supporting teachers and facilitators. This is a full-time, exempt position. 
 
 In this role you will: 
 

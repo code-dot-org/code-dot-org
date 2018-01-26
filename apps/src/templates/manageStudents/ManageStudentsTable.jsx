@@ -11,6 +11,8 @@ import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
+import {convertStudentDataToArray} from './manageStudentsRedux';
+import { connect } from 'react-redux';
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -42,7 +44,7 @@ const nameFormatter = (name, {rowData}) => {
       name={name}
       loginType={rowData.loginType}
       username={rowData.username}
-      isEditing={false}
+      isEditing={rowData.isEditing}
     />
   );
 };
@@ -52,7 +54,7 @@ const ageFormatter = (age, {rowData}) => {
     <ManageStudentsAgeCell
       age={age}
       id={rowData.id}
-      isEditing={false}
+      isEditing={rowData.isEditing}
     />
   );
 };
@@ -62,7 +64,7 @@ const genderFormatter = (gender, {rowData}) => {
     <ManageStudentsGenderCell
       gender={gender}
       id={rowData.id}
-      isEditing={false}
+      isEditing={rowData.isEditing}
     />
   );
 };
@@ -70,20 +72,29 @@ const genderFormatter = (gender, {rowData}) => {
 const passwordFormatter = (loginType, {rowData}) => {
   return (
     <div>
-      {rowData.loginType === SectionLoginType.email &&
-        <PasswordReset
-          resetAction={()=>{}}
-          initialIsResetting={false}
-        />
+      {!rowData.isEditing &&
+        <div>
+          {rowData.loginType === SectionLoginType.email &&
+            <PasswordReset
+              resetAction={()=>{}}
+              initialIsResetting={false}
+            />
+          }
+          {(rowData.loginType === SectionLoginType.word || rowData.loginType === SectionLoginType.picture) &&
+            <ShowSecret
+              resetSecret={()=>{}}
+              initialIsShowing={false}
+              secretWord={rowData.secretWords}
+              secretPicture={rowData.secretPicturePath}
+              loginType={rowData.loginType}
+            />
+          }
+        </div>
       }
-      {(rowData.loginType === SectionLoginType.word || rowData.loginType === SectionLoginType.picture) &&
-        <ShowSecret
-          resetSecret={()=>{}}
-          initialIsShowing={false}
-          secretWord={rowData.secretWords}
-          secretPicture={rowData.secretPicturePath}
-          loginType={rowData.loginType}
-        />
+      {rowData.isEditing &&
+        <div>
+          Auto-generated
+        </div>
       }
     </div>
   );
@@ -93,13 +104,15 @@ const actionsFormatter = function (actions, {rowData}) {
   return (
     <ManageStudentsActionsCell
       id={rowData.id}
-      isEditing={false}
+      sectionId={rowData.sectionId}
+      isEditing={rowData.isEditing}
     />
   );
 };
 
 class ManageStudentsTable extends Component {
   static propTypes = {
+    // Provided by redux
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
   };
@@ -142,6 +155,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
+            width: 300
           }},
           transforms: [sortable],
         },
@@ -150,6 +164,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
+            width: 300
           }}
         }
       },
@@ -160,6 +175,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
+            width: 100,
           }},
           transforms: [sortable],
         },
@@ -168,6 +184,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
+            width: 100,
           }}
         }
       },
@@ -178,6 +195,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
+            width: 150,
           }},
           transforms: [sortable],
         },
@@ -186,6 +204,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
+            width: 150,
           }}
         }
       },
@@ -199,6 +218,7 @@ class ManageStudentsTable extends Component {
             style: {
             ...tableLayoutStyles.headerCell,
             ...tableLayoutStyles.unsortableHeader,
+            width: 200,
           }},
         },
         cell: {
@@ -206,6 +226,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
+            width: 200,
           }}
         }
       },
@@ -217,6 +238,7 @@ class ManageStudentsTable extends Component {
             style: {
             ...tableLayoutStyles.headerCell,
             ...tableLayoutStyles.unsortableHeader,
+            width: 200,
           }},
         },
         cell: {
@@ -224,6 +246,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
+            width: 200,
           }}
         }
       },
@@ -260,4 +283,9 @@ class ManageStudentsTable extends Component {
   }
 }
 
-export default ManageStudentsTable;
+export const UnconnectedManageStudentsTable = ManageStudentsTable;
+
+export default connect(state => ({
+  loginType: state.manageStudents.loginType,
+  studentData: convertStudentDataToArray(state.manageStudents.studentData),
+}))(ManageStudentsTable);

@@ -14,6 +14,9 @@ class TestFlakiness
   MIN_SAMPLES = 10
   TEST_ACCOUNT_USERNAME = 'testcodeorg'.freeze
 
+  # Each feature should be retried until the chance of flaky failure is less than this amount.
+  MAX_FAILURE_RATE = 0.005 # 0.5%
+
   # Queries the SauceLabs API for jobs
   # @param options [Hash] Optional, options overrides.
   # @return [JSON] The JSON parsed response.
@@ -34,13 +37,13 @@ class TestFlakiness
   end
 
   # Summarizes the job results from SauceLabs.
-  # @param numRequests [Integer] The number of API calls.
-  # @param perRequest [Integer] The number of results per call.
+  # @param num_requests [Integer] The number of API calls.
+  # @param per_request [Integer] The number of results per call.
   # @return [Array] Of summary including name, and total and failed counts.
-  def self.summarize_by_job(numRequests = NUM_REQUESTS, perRequest = PER_REQUEST)
+  def self.summarize_by_job(num_requests = NUM_REQUESTS, per_request = PER_REQUEST)
     jobs = []
-    numRequests.times do
-      jobs += get_jobs(limit: perRequest, skip: jobs.count)
+    num_requests.times do
+      jobs += get_jobs(limit: per_request, skip: jobs.count)
     end
     jobs.group_by {|job| job['name']}.map do |name, samples|
       {
@@ -67,7 +70,7 @@ class TestFlakiness
   # @param flakiness [Float] The flakiness score.
   # @return [Array] The recommended number of re-runs and confidence factor.
   def self.recommend_reruns(flakiness)
-    recommended_reruns = (1 / Math.log(flakiness, 0.05)).ceil
+    recommended_reruns = (1 / Math.log(flakiness, MAX_FAILURE_RATE)).ceil
     max_reruns = [1, [recommended_reruns, 5].min].max
     confidence = (1.0 - flakiness**(max_reruns + 1)).round(3)
     return [max_reruns, confidence]

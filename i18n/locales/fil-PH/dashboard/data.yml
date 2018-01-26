@@ -29,12 +29,12 @@ fil:
         'Jigsaw': 'Jigsaw'
         'MazeStep': 'Maze Step Mode'
         'Wordsearch': 'Wordsearch'
-        'Webapp': 'App Lab'
+        'Webapp': 'App na Lab'
         'ArtistEC': 'The Artist'
-        'TextMatch': 'Text Match'
+        'TextMatch': 'Tugma na Teksto'
         'StudioEC': 'Play Lab'
-        'Applab': 'App Lab'
-        'NetSim': 'Internet Simulator'
+        'Applab': 'App na Lab'
+        'NetSim': 'Simulator ng Internet'
         'Custom': 'Artist'
         'CustomStudio': 'Play Lab'
         'Gamelab': 'Game Lab'
@@ -56,252 +56,252 @@ fil:
         'parameters': 'Mga function na meron mga parameter'
     level:
       instructions:
-        'maze_2_2': "Can you help me to catch the naughty pig? Stack a couple of \"move forward\" blocks together and press \"Run\" to help me get there. "
-        'maze_2_1': "This pig is ruffling my feathers. Help me to find him!"
-        'maze_2_2_5': "Trace the path and lead me to the silly pig. Avoid TNT or the feathers will fly!"
-        'maze_2_3': "Guide me to the green evilness! (Watch out for TNT)"
-        'maze_2_4': "Keep calm and help me to find the bad pig. Otherwise I might get angry!"
+        'maze_2_2': "Maari mo ba akong tulungang hulihin ang malikot na baboy? Magsalansan ng iilang \"move forward\" na mga bloke at pinduting ang \"Run\" para matulungan akong makapunta doon. "
+        'maze_2_1': "Ang baboy na ito dumadampi sa aking mga balahibo. Tulungan mo akong mahanap siya!"
+        'maze_2_2_5': "Sundan ang landas at akayin mo ako sa pasaway na baboy. Iwasan ang mga TNT para hindi lilipad ang mga balahibo!"
+        'maze_2_3': "Gabayan mo ako sa berdeng kademonyohan! (Mag-ingat sa mga TNT)"
+        'maze_2_4': "Maging kalmado at tulungan akong hanapin ang masamang baboy. Kung hindi maaari akong magalit!"
         'maze_2_5': "May paraan makapunta sa baboy gamit ng dalawang blocks. Kaya mo ba?"
-        'maze_2_6': "Try to get me to the green intruder using only three blocks."
-        'maze_2_7': "Help me banish this bad piggy using the fewest number of blocks. Try using more than one \"repeat times\" block."
-        'maze_2_8': "When a block is grey, that means you can't delete it. Solve this puzzle using the \"repeat\" block that repeats 3 times. Try putting these 3 blocks inside the grey \"repeat\" block: move, move, turn."
-        'maze_2_9': "Ok, try the new \"repeat until\" block - it will repeat until I reach the annoying pig."
-        'maze_2_10': "Ok, one last time for practice - can you solve this one using only 4 blocks?"
-        'maze_2_11': "Dear person.  Me zombie. Me hungry. Must... get... to sunflower... Can you get me there with only 5 blocks?"
-        'maze_2_12': "Ok, this is similar, but slightly different. Can you do it in only 5 blocks?"
-        'maze_2_13': "Use the new \"if\" block to let me decide when to turn. Hint: you only need one more block, but learn how we set it up so you can do it on your own next time."
-        'maze_2_14': "Ok, this is just like the last puzzle, but you need to remember how you used the \"if\" block and the \"repeat\" block together."
-        'maze_2_15': "Me want sunflower! Use an \"if\" block to get me there with the fewest number of blocks."
-        'maze_2_16': "Ok, let's do that again for practice - this isn't very different, but watch out for the chompers!"
-        'maze_2_17': "The \"If-else\" blocks checks a condition, and then does one thing OR another. To get me to the sunflower try to use this new block."
-        'maze_2_18': "One more practice of the \"if-else\" block, can you get it right on your first try?"
-        'maze_2_19': "Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length."
+        'maze_2_6': "Subukan mo akong dalhin sa berdeng mapanghimasok gamit ang tatlong bloke lang."
+        'maze_2_7': "Tulungan akong palayasin ang masamang baboy gamit ang pinakamaliit na bilang ng mga bloke. Subukang gumamit ng higit sa isang \"repeat times\" na bloke."
+        'maze_2_8': "Kapag ang bloke ay kulay abo, ibig sabihin nito ay hindi mo ito maaaring burahin. Lutasin ang palaisipan gamit ang \"repeat\" na bloke na umuulit ng 3 beses. Subukang ilagay ang 3 bloke na ito sa loob ng abo na \"repeat\" na bloke: kilos, kilos, ikot."
+        'maze_2_9': "Sige, subukan ang bagong \"repeat until\" na bloke - uulitin ito hanggang sa marating ko ang nakakainis na baboy."
+        'maze_2_10': "Sige, huling pagkakataon para sa pagsasanay - maaari mo bang malutas ito gamit ang 4 lang na bloke?"
+        'maze_2_11': "Mahal kong tao. Ako ay zombie. Ako ay nagugutom. Dapat... marating... sa mirasol... Maari mo ba akong dalhin doon gamit ang 5 mga bloke lang?"
+        'maze_2_12': "Sige, pareho lang ito, ngunit medyo kakaiba. Maari mo bang magawa ito gamit ang 5 bloke lang?"
+        'maze_2_13': "Gamitin ang bagong \"if\" na bloke para hayaan akong magpasiya kung kailan ako liliko. Hint: kailangan mo lang ng isa pang bloke, ngunit alamin mo kung paano namin ito sinet-up para magawa mo ito ng ikaw lang sa susunod na pagkakataon."
+        'maze_2_14': "Sige, katulad lang ito ng nakaraang palaisipan, ngunit kailangan mong tandaan kung paano mo ginamit ang \"if\" na bloke at ang \"repeat\" na bloke nang sabay-sabay."
+        'maze_2_15': "Gusto ko ng mirasol! Gumamit ng \"if\" na bloke para makarating ako doon gamit ang pinakamaliit na bilang ng mga bloke."
+        'maze_2_16': "Sige, gawin natin ito muli isip pagsasanay - hindi ito lubhang kakaiba, ngunit mag-ingat sa mga ngipin!"
+        'maze_2_17': "Ang \"if-else\" na mga bloke ay nagsururi sa kondisyon, at pagkatapos ay gagawin niya ang isang bagay o yung isa. Para madala mo ako sa mirasol, subukang gamitin ang bagong bloke na ito."
+        'maze_2_18': "Isa pang pagsasanay sa \"if-else\" na bloke, makakukuha mo ba ito nang tama sa unang pagsubok lang?"
+        'maze_2_19': "Maaari ka bang magdagdag ng 3 bloke lang para matulungan akong lutasin ang mas kumplikadong pasikut-sikot? Kung magawa mo ito ng tama, makakalakad ako sa kahit anong baluktot na landas anuman ang haba."
         'turtle_1_1': "Kumusta, Ako ay isang artist. Ikaw ay puwedeng magsulat rin ng code upang ako ay makapag-guhit ng kahit na ano. Gamitin ang konting mga block upang ako ay makapag-guhit sa taas ng linga na grey sa larawan."
-        'turtle_1_2': "Now, draw a square. NOTE: use your favorite color by picking it in the new \"set color\" block."
+        'turtle_1_2': "Ngayon, gumuhit ng isang parisukat. PAALALA: gamitin ang iyong paboritong kulay sa pamamagitan ng pagpili nito sa bagong \"set color\" na bloke."
         'turtle_1_3': "Gumawa ng parisukat gamit lamang ang 3 mga block."
-        'turtle_1_4': "Draw a triangle whose sides are all in different colors, using the \"random color\" option that picks a different color each time. Hint: you'll have to figure out how far to turn by clicking on the number in the turn block."
-        'turtle_1_5': "Now, for practice, draw a triangle and then a square to draw an envelope."
-        'turtle_1_6': "Can you figure out how draw this triangle and square? Hint: Do the triangle first, then figure out how much to turn before drawing the square."
-        'turtle_1_7': "Ok, let's make it a bit harder - see if you can draw these green glasses. The squares are 100 pixels on each side, and they're 50 pixels apart. Don't forget to draw in green!"
-        'turtle_1_8': "Ok, try to figure out what happens if you run this code (or press \"Run\" to try it). Then, repeat it enough times to complete the drawing. The colors will be different every time."
-        'turtle_1_9': "Can you figure out what number to replace the question marks with to draw a circle?"
-        'turtle_1_10': "You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new \"set width\" block. Have fun!"
-        'turtle_4_1': "Can you draw a triangle (with edges of 100 pixels) with only 3 blocks? Hint: use a \"repeat\" block."
-        'turtle_4_2': "Add a \"turn right by 90 degrees\" block somewhere in the middle of the program already out on the workspace to draw these triangles."
-        'turtle_4_3': "Ok, here's the code you wrote to draw a single triangle. Can you add a \"repeat\" and \"turn\" block to make a pretty flower?"
-        'turtle_4_4': "Here's the same code from the previous puzzle, but turning only 36 degrees after drawing each triangle. How many times does this need to repeat? (Hint: after 360 degrees of turning the drawing will come full circle)"
-        'turtle_4_5': "Here's the same code from the previous puzzle, but repeating the turns 36 times. How many degrees should the turns be? (Hint: after 360 degrees of turning the drawing will come full circle)"
-        'turtle_4_6': "Using only 3 blocks, can you draw a square with edges of 20 pixels?"
-        'turtle_4_7': "Here's the code for drawing the square from last puzzle. Can you repeat it to draw 10 adjacent squares like a ladder? Hint: you only need 2 more blocks."
-        'turtle_4_8': "Here's the solution to the previous puzzle. Can you add just 2 more blocks to complete the drawing?"
-        'turtle_4_9': "Here's the solution to the previous puzzle. How many degrees should you turn to complete the drawing? (You probably need to guess a few times)"
-        'turtle_4_10': "Here's the solution to the previous puzzle. How many times should you repeat to complete the drawing?"
-        'turtle_4_11': "Try changing the numbers in the \"turn\" and \"repeat\" blocks to make different patterns. Or, experiment changing the rest of the code to draw anything you want."
-        'maze_karel_1_1': "Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting. Move me to the pile of dirt and use the \"remove\" block to remove it."
-        'maze_karel_1_2': "Next, move me to the hole and fill it with TWO shovelfuls of dirt, using the \"fill\" block."
-        'maze_karel_1_3': "Move me to the pile of dirt and tell me how many shovelfuls to remove using as few blocks as possible."
-        'maze_karel_1_4': "Can you help me remove all four piles of dirt? Hint: use a repeat block if you can."
-        'maze_karel_1_5': "Help me fill in all these holes with 5 shovelfuls of dirt. Hint: you can put a \"repeat\" block inside the \"while\" block."
-        'maze_karel_1_6': "Remove all the piles of dirt, using as few blocks as possible. The new options in the dropdown menu on the \"while\" block tell me if I'm standing on a pile or a hole."
-        'maze_karel_1_7': "Wow, I found a really deep hole! I don't know how many shovelfuls of dirt it needs. Can you write a program that fills it until the ground is even?"
-        'maze_karel_1_8': "Help me fill in the hole at the end of the field, using as few blocks as possible."
-        'maze_karel_1_9': "Make me remove all these piles of dirt. Try to use as few blocks as possible. Hint: try using a \"while\" block."
-        'maze_karel_1_10': "I'm working late, so it's dark out, and I can't tell how large the piles are. Now I don't have all the options I used to have on the while block. Move me along the field, and if there is a pile, remove it."
-        'maze_karel_1_11': "It's still dark outside. Move me along the field. If there is a pile, remove it, and if there is a hole, fill it in. Hint: use the dropdown menu of options on the \"if\" block."
-        'turtle_2_1': "Hello. Me zombie artist. Me love drawing! Help me draw a square in a special color. Important note: you have all the same blocks but they've now been arranged in categories."
-        'turtle_2_2': "Welcome to using functions, which let you define new blocks! Try the new \"draw a square\" block, found in the \"Functions\" category, to draw a small 50x50 green square."
-        'turtle_2_3': "Use the \"repeat\" block (in the \"Loops\" category) to draw 3 squares of size 100, each 120 degrees apart. And do it in 3 different, random colors."
-        'turtle_2_4': "Now we're going to get fancy. Change the code to draw 36 squares, 100 pixels wide, and each 10 degrees apart. Hint: you may want to use the slider to make me go faster."
-        'turtle_2_5': "Draw squares with sides of 50, 60, 70, 80, and 90 pixels.  You'll need to use the \"draw a square\" function five times."
-        'turtle_2_6': "Ok, this program will use a counter, to draw the same squares as last time. You want the square to be the same size as the counter, so use the \"counter\" block. Hint: It's in the Variables category."
-        'turtle_2_7': "Here's a program to draw a spiral, but the blocks are disabled so they won't run. Make a new program using a \"for\" block (in the Loops category) and \"counter\" block (in the Variables category) to draw the same spiral."
-        'turtle_2_7_5': "There's a new \"draw a snowman\" function (in the Functions category). Draw two snowmen, of height 250 and 100."
-        'turtle_2_8': "This one's a bit tricky. Use the \"draw a snowman\" function and the new \"jump forward\" block (in the Actions category). Draw 3 snowmen in different colors, 100 pixels apart."
-        'turtle_2_9': "Use a \"for\" loop to draw a family of snowmen with heights of 110, 100, 90, 80, and 70. The snowmen should all be 60 pixels apart."
-        'turtle_2_10': "Here's some code to try experimenting with different spirals.  What happens if you change the turn amount? Or set a random color in the loop?  Draw anything you like."
-        'maze_karel_2_1': "Try using the blocks to help me remove all the piles and fill in all the holes on the ground. Try to use loops instead of using too many blocks. Hint: you can put a loop inside another loop."
-        'maze_karel_2_2': "We've defined our own block called \"fill 5\", which is now in the Functions category. Use it to help me fill in this hole."
-        'maze_karel_2_3': "Use the new \"fill 5\" function block to make me fill in all the holes. You'll have to drag out the \"fill 5\" block out from the Functions category."
-        'maze_karel_2_4': "Define a new function that removes 7 shovelfuls. Then use it to write a program that helps me remove all the piles."
-        'maze_karel_2_5': "Create a new function that removes 6 shovelfuls from a pile, and use it to help me level out all the piles."
-        'maze_karel_2_6': "Use two new functions, \"fill 8\" and \"remove 8\", to help me level out the pile and fill in the hole."
-        'maze_karel_2_7': "There's a cow in my field! Write a new function that helps me avoid the cow and remove the pile. Put all your blocks inside the new function."
-        'maze_karel_2_8': "Use this new function, \"avoid the cow and remove 1\", to help me remove all the piles."
-        'maze_karel_2_9': "Ok, here's a function that removes 4 different piles of dirt in a vertical column. Try putting this function inside a loop, so that you remove all the piles of dirt using only a few new blocks."
-        'maze_karel_2_10': "Move me across the field, and use these two functions to help me remove all the piles and fill all the holes."
-        'turtle_3_1': "This puzzle shows you how the \"draw a square\" and \"draw a circle\" functions are defined.  Defining a function doesn't run its blocks.  You have to pull out the \"draw a square\" block to actually draw a square."
-        'turtle_3_2': "Using the \"draw a square\" function as an example, create a \"draw a triangle\" function and use it."
-        'turtle_3_3': "Draw triangular fences around the cats and a square fence around the cow.  Tip: test the program as you go along."
-        'turtle_3_4': "See if you can figure out how to use \"draw a square\" and \"draw a triangle\" (and some other blocks) to draw a house around the lion."
-        'turtle_3_5': "Now create a new \"draw a house\" function and use it to house two cats. Hint: create a new function using the \"do something\" block, and type your own text to name the block."
-        'turtle_3_6': "Using \"draw a square\" as an example, add an input named \"length\" to \"draw a triangle\". Then, draw triangles in different sizes. (Hint: click the star to add an input to a function)"
-        'turtle_3_7': "Add an input named \"length\" to \"draw a house\" and build a big house for the elephant (with edges 150 pixels long)"
-        'turtle_3_8': "Modify \"draw a house\" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses."
-        'turtle_3_9': "Can you re-create the \"draw a house\" function without help? Try it, and then draw a row of houses."
-        'turtle_3_10': "You've learned a lot! Now use it to draw whatever you want. Try to draw a star, or a spiral, or a fancy snowflake."
-        'maze_karel_debug_seq_1': "Welcome to debugging! My code doesn't work right. Can you spot the problem and fix it so that I can get my field flat and ready for planting?"
-        'maze_karel_debug_seq_2': "What's wrong with this program? How should you fix it so I can remove that pile?"
-        'maze_karel_debug_repeat': "De-bug this program for me so my field will be nice and flat."
-        'maze_karel_debug_while': "How should you change this program to help me fill the hole?"
-        'maze_karel_debug_if': "Help! Fix the program so my field will be completely flat."
-        'maze_karel_debug_if_else': "De-bug this program so I can fill in the holes and remove all the piles."
-        'maze_karel_debug_function_1': "What should you change about this program to help me remove all the piles?"
-        'maze_karel_debug_function_2': "Can you de-bug this program for me so I can make my field flat?"
-        'maze_karel_debug_function_3': "Edit this program so I'll remove all the piles on my field. "
-        'turtle_5_1': "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
-        'turtle_5_2': "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
-        'turtle_5_3': "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
-        'turtle_5_4': "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
-        'turtle_5_5': "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
-        'turtle_5_6': "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
-        'maze_3_1': "I need to get to that pig! Type in a couple of calls to move(); so I can get my eggs back."
-        'maze_3_2': "Write me a program, so I can make it all the way to the pig."
-        'maze_3_3': "How should I get to the pig? Make sure I don't run into the box of TNT!"
-        'maze_3_4': "Argh! Write me a program that gets me around the TNT and to the pig."
-        'bounce_1_basketball': "Attach a block to the \"when left arrow\" block and press \"Run\". Move the hand using the left arrow to reach the finish target."
-        'bounce_2_basketball': "Attach a block to the \"when right arrow\" and \"when left arrow\" blocks. Move the hand to reach both finish targets."
-        'bounce_5_basketball': "We're going to send a ball flying down towards the hand. Attach a block to the \"when ball hits hand\" block to ensure the ball reaches the flag."
-        'bounce_6_basketball': "Now the flag is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle."
-        'bounce_7_basketball': "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the flag."
-        'bounce_10_basketball': "Now there is a goal at the top! Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses hand\" blocks to make a game. See how many points you can score before your opponent scores twice."
-        'bounce_11_basketball': "You can now attach blocks to the \"when run\" block. You have to attach the new \"throw new ball\" block in more than one place. Also, try changing the scene or the speed of the hand and the ball and see how many points you can score before your opponent scores twice!"
-        'bounce_12_basketball': "Create your own Basketball game. You can change all the rules. When you're done, click Finish to let friends try your game on their phones."
-        'bounce_1_sports': "Get to the flag! Attach a block to the \"when left arrow\" block and press \"Run\" to move the player to the flag."
-        'bounce_2_sports': "There are two flags now! Attach a block to the \"when left arrow\" and \"when right arrow\" blocks to make your player move in two directions."
-        'bounce_5_sports': "The hockey puck is going to fly down toward the player! Attach a block to the \"when ball hits player\" block to hit the flag."
-        'bounce_6_sports': "Now the flag is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle."
-        'bounce_7_sports': "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the flag."
-        'bounce_10_sports': "Now there is a goal at the top! Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses hand\" blocks to make a game. See how many points you can score before your opponent scores twice!"
-        'bounce_11_sports': "You can now attach blocks to the \"when run\" block. You have to attach the new \"throw new ball\" block in more than one place. Also, try changing the scene or the speed of the hand and the ball and see how many points you can score before your opponent scores twice!"
-        'bounce_12_sports': "Create your own game! You're in charge here: you can change all the rules, mix and match sports, get creative! When you're done, click Finish to let friends try your game on their phones."
-        'bounce_1': "Attach a block to the \"when left arrow\" block and press \"Run\". Move the paddle using the left arrow to reach the finish target."
-        'bounce_2': "Attach a block to the \"when right arrow\" and \"when left arrow\" blocks. Move the paddle to reach both finish targets."
-        'bounce_3': "Now try something similar with the \"when up arrow\" block. Move the paddle to the finish target at the top."
-        'bounce_4': "This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle."
-        'bounce_5': "We're going to send a ball flying down towards the paddle. Attach a block to the \"when ball hits paddle\" block to ensure the ball reaches the finish target."
-        'bounce_6': "Now the finish target is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle."
-        'bounce_7': "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the finish target."
-        'bounce_10': "There is now a goal at the top. Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses paddle\" blocks to make a game. See how many points you can score before your opponent scores twice."
-        'bounce_11': "You can now attach blocks to the \"when run\" block. You have to attach the new \"launch new ball\" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice."
-        'bounce_12': "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
-        'Custom_builder': "Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press \"Run\" when you are ready."
-        'flappy_1': "Attach a block to the \"when click\" block, then press \"Run\". Click or tap the screen to move Flappy to the target."
-        'flappy_2': "Now we've added some ground.  Attach a block to the \"when hit the ground\" block.  Your code needs to 'END GAME' when Flappy crashes."
-        'flappy_3': "The \"when run\" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target."
-        'flappy_4': "Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the \"when hit an obstacle\" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes."
-        'flappy_5': "Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the \"when pass an obstacle\" block, and then score a point by flying Flappy through the first set of pipes."
-        'flappy_6': "See if you can still score a point after making Flappy flap either a smaller or larger amount."
-        'flappy_7': "Next, try changing the scene by attaching another block to the \"when run\" block."
-        'flappy_8': "You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle."
-        'flappy_9': "To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0."
-        'flappy_11': "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
-        'flappy_k1_1': "Play Flappy"
-        'flappy_k1_2': "Attach a block to the \"when click\" block, then press \"Run\". Click or tap the screen to move Flappy to the target."
-        'flappy_k1_3': "Now we've added some ground.  Attach a block to the \"when hit the ground\" block.  Your code needs to 'END GAME' when Flappy crashes."
-        'flappy_k1_4': "The \"when run\" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target."
-        'flappy_k1_5': "Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the \"when hit an obstacle\" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes."
-        'flappy_k1_6': "Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the \"when pass an obstacle\" block, and then score a point by flying Flappy through the first set of pipes."
-        'flappy_k1_7': "See if you can score multiple points for making it past an obstacle"
-        'flappy_k1_8': "Next, try changing the scene by attaching another block to the \"when run\" block."
-        'flappy_k1_9': "Try changing the player by attaching a \"set player\" block to the \"when run\" block."
-        'jigsaw_1': "Click the block"
-        'jigsaw_2': "Drag the block to the target"
-        'jigsaw_3': "Arrange the blocks to form the image"
-        'jigsaw_4': "Arrange the blocks to form the image"
-        'jigsaw_5': "Arrange the blocks to form the image"
-        'jigsaw_6': "Arrange the blocks to form the image"
-        'jigsaw_7': "Arrange the blocks to form the image"
-        'jigsaw_8': "Arrange the blocks to form the image"
-        'jigsaw_9': "Arrange the blocks to form the image"
-        'jigsaw_10': "Arrange the blocks to form the image"
-        'jigsaw_11': "Arrange the blocks to form the image"
-        'jigsaw_12': "Arrange the blocks to form the image"
-        'jigsaw_13': "Fix the puzzle!"
-        'mazestep_1': "Maze step description here"
-        'mazestep_2': "Maze step description here"
-        'mazestep_3': "Maze step description here"
-        'mazestep_4': "Maze step description here"
-        'mazestep_5': "Maze step description here"
-        'studio_c2_1': "Can you make this dog say \"hello world\"?"
-        'studio_c2_2': "Can you make the dog say something and then have the cat say something afterwards?"
-        'studio_c2_3': "Can you write a program to make this dog move to the cat?"
-        'studio_c2_4': "Can you write a program that makes the dog move to the cat, and have the cat say \"hello\" when the dog reaches him?"
-        'studio_c2_5': "Can you write a program to make the octopus say \"hello\" when it is clicked?"
-        'studio_c2_6': "Can you write a program to make Waddles move around using the up / down / left /right keys to hit all of the targets?"
-        'studio_c2_7': "The \"repeat forever\" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?"
-        'studio_c2_8': "Can you have Waddles say \"Ouch!\" and play a \"hit\" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?"
-        'studio_c2_9': "Can you add a block to score a point when Waddles runs into the octopus, and then move him with the arrows until you score?"
-        'studio_c2_10': "Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?"
-        'studio_c2_11': "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        'studio_c3_story_1': "Can you make this dog say \"hello world\"?"
-        'studio_c3_story_2': "Can you make the dog say something and then have the cat say something afterwards?"
-        'studio_c3_story_3': "Can you write a program to make this dog move to the cat?"
-        'studio_c3_story_4': "Can you write a program that makes the dog move to the cat, and have the cat say \"hello\" when the dog reaches him?"
-        'studio_c3_story_5': "Can you add a block to make the octopus happy?"
-        'studio_c3_story_6': "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        'studio_c3_game_1': "Can you write a program to make the octopus say \"hello\" when it is clicked?"
-        'studio_c3_game_2': "Can you write a program to make Waddles move around using the up / down / left /right keys to hit all of the targets?"
-        'studio_c3_game_3': "The \"repeat forever\" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?"
-        'studio_c3_game_4': "Can you have Waddles say \"Ouch!\" and play a \"hit\" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?"
-        'studio_c3_game_5': "Can you add a block to score a point when Waddles runs into the octopus, and then move him with the arrows until you score?"
-        'studio_c3_game_6': "Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?"
-        'studio_c3_game_7': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        'studio_playlab_1': "Waddles wants to say \"hello\" - can you help him?"
-        'studio_playlab_2': "Cave Boy (actor 1) and Jasmine (actor 2) would like to say \"hello\" to each other. Can you help them by using the \"say\" block twice?"
-        'studio_playlab_3': "Can you help Tennis Girl get to the flag?"
-        'studio_playlab_4': "Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?"
-        'studio_playlab_5': "Can you help the Spacebot say \"greetings earthlings\" when it is clicked? Don’t forget to click it after you click Run"
-        'studio_playlab_6': "Can you help the Witch move around using the up/down/right/left arrow keys to get to all the magical fireballs?"
-        'studio_playlab_7': "The \"repeat forever\" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?"
-        'studio_playlab_8': "Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?"
-        'studio_playlab_9': "Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else"
-        'studio_playlab_10': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        'studio_iceage_hello1': "Sid wants to gather everyone for a new adventure. Can you help him say \"hello\" by dragging the \"say\" block out into the work area and typing the word \"hello\" inside?"
-        'studio_iceage_hello2': "Manny (actor 1) found Sid (actor 2) and wants to invite him on the adventure. Help them greet each other by using the the \"actor say\" block twice."
-        'studio_iceage_move_to_flag': "Scrat is looking for his acorn!  Help him go the last 200 pixels using the \"move\" block."
-        'studio_iceage_move_to_actor': "Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the \"move actor\" block. Next, connect a block to the \"when actor touches\" event to play a sound when they find each other."
-        'studio_iceage_repeat': "The \"repeat forever\" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?"
-        'studio_iceage_click_hello': "Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run."
-        'studio_iceage_move_events': "Scrat is still looking for acorns! Help him scamper around by attaching the \"move\" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns."
-        'studio_iceage_sound_and_points': "We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the \"when actor touches\" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game."
-        'studio_iceage_warn_ice_age': "Everyone needs to move faster because an ice age is coming! Change the background to an icy background and set Sid’s speed to fast, then press Run and move him to Diego to warn him."
-        'studio_iceage_throw_hearts': "Sid wants to let his grandmother, Granny, know that he loves her. Use the \"actor throw\" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts."
-        'studio_iceage_free_play': "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
-        'studio_gumball_hello1': "Anais wants to make some new friends. Can you help her say \"hello\" by dragging the \"say\" block out into the work area and typing the word \"hello\" inside?"
-        'studio_gumball_hello2': "Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the \"actor say\" block twice."
-        'studio_gumball_move_to_flag': "Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the \"move\" block."
-        'studio_gumball_move_to_actor': "Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball move 200 pixels down to Darwin using the \"move actor\" block.  Next, connect a block to the \"when actor touches\" event to play a sound when they find each other."
-        'studio_gumball_repeat': "The \"repeat forever\" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?"
-        'studio_gumball_click_hello': "Can you help Anton announce the start of a race by saying \"Ready, set, go!\"? To test your program, don’t forget to click Anton after you click Run!"
-        'studio_gumball_move_events': "Darwin is in the flag gathering contest! Help him run around by attaching the \"move\" block to each of the events. When you’re done, click Run and try to collect all of the flags."
-        'studio_gumball_sound_and_points': "We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the \"when actor touches\" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game."
-        'studio_gumball_warn_food_fight': "Darwin just escaped a food fight! Change the background to \"characters\" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her."
-        'studio_gumball_join_food_fight': "Join the food fight! Use the \"actor throw item right\" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit."
-        'studio_gumball_free_play': "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
-        'studio_full_sandbox': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        'studio_k1_1': "Can you make this dog say \"hello world\"?"
-        'studio_k1_2': "Can you make the dog say something and then have the cat say something afterwards?"
-        'studio_k1_3': "Can you write a program to make this dog move to the cat?"
-        'studio_k1_4': "Make the dog move to the cat and the cat say \"hello\" when he gets there."
-        'studio_k1_5': "Can you add a block to make the octopus happy?"
-        'studio_k1_6': "Create your own story! Move around the cat and dog, and make them say things."
-        'maze_wordsearch_k_1': "Move me to spell the word EAST"
-        'maze_wordsearch_k_2': "Move me to spell the word SOUTH"
-        'maze_wordsearch_k_3': "Move me to spell the word WEST"
-        'maze_wordsearch_k_4': "Move me to spell the word NORTH"
-        'maze_wordsearch_k_6': "Move me East and then South to spell the word JUMP"
-        'maze_wordsearch_k_9': "Move me one way, then another to spell the word CODE"
-        'maze_wordsearch_k_13': "Move me one way, then another to spell the word DEBUG"
-        'maze_wordsearch_k_15': "Move me one way, then another to spell the word ABOVE"
-        'maze_wordsearch_k_16': "Move me one way, then another to spell the word BELOW"
-        'maze_wordsearch_k_20': "This is a test! Move me one way, then another to spell the word STORY"
-        'applab_ec_simple': "Create your app by using the blocks in the toolbox."
-        'turtle_ec_1_2': "Now, draw a square. NOTE: use your favorite color by picking it in the new \"penColor\" block."
-        'turtle_ec_1_10': "You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new \"penWidth\" block. Have fun!"
-        'studio_ec_sandbox': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
+        'turtle_1_4': "Gumuhit ng tatsulok kung saan ang bawat panig ay puro iba-iba ang kulay, gumamit ng \"random color\" na opsyon na pipili ng iba-ibang kulay sa bawat pagkakataon. Hint: dapat malaman mo kung gaano kalayo ka dapat liliko sa pamamagitan ng pagpindot sa numero na na sa pag-ikot na bloke."
+        'turtle_1_5': "Ngayon, para sa pagsasanay, gumuhit ng isang tatsulok at pagkatapos ay isang parasukat para makaguhit ng isang sobre."
+        'turtle_1_6': "Maari mo bang tuklasin kung paano iguhit ang tatsulok at parisukat na ito? Hint: Gawin muna ang tatsulok, at pagkatapos ay alamin kung gaano kalayo ang iikutan bago guhitin ang parisukat."
+        'turtle_1_7': "Sige, gawin natin itong mahirap ng kaunti - tingnan kung maiguhit mo ba ang mga berdeng salamin na ito. Ang mga parisukat ay 100 pixels sa bawat panig, at 50 pixels ang layo. Huwag kalimutang magguhit gamit ang kulay na berde!"
+        'turtle_1_8': "Sige, subukang alamin kung ano ang mangyayari kung papatakbuhin mo ang code (o pinduting ang \"Run\" para subukan ito). Pagkatapos, ulitin ito ng ilang beses para makompleto ang pagguhit. Ang mga kulay ay magkaiba sa bawat oras."
+        'turtle_1_9': "Maari mo bang malaman kung ano ang numero na ipapalit sa mga tandang pananong kung saan natin iguguhit ang bilog?"
+        'turtle_1_10': "Natapos mo din! Ngayon, iguhit ang kahing anumang gusto mo. Mga ilang masayang idea: isang pigurang patpat, snowflake, o spiral. Maari mo ding subukan ang bagong \"set width\" na bloke! Magsaya!"
+        'turtle_4_1': "Maari mo bang iguhit ang isang tatsulok (na may gilid na 100 pixels) gamit ang 3 bloke lang? Hint: gumamit ng \"repeat\" na bloke."
+        'turtle_4_2': "Magdagdag ng \"turn right by 90 degress\" na bloke sa gitna ng program na pinalabas sa workspace para maguhit ang mga tatsulok na ito."
+        'turtle_4_3': "Sige, ito na ang code na isinulat mo para iguhit ang isang tatsulok. Maari mo bang madagdag ang \"repeat\" at \"turn\" na bloke para makagawa ng isang magandang bulaklak?"
+        'turtle_4_4': "Eto na rin ang kaparehong code mula sa nakaraang palaisipan, pero inikot lang ito ng 36 degrees pagkatapos iguhit ang bawat tatsulok. Ilang beses ba ito kailangang ulitin? (Hint: pagkatapos ikutin sa 360 degrees ang drowing ay maging buong bilog)"
+        'turtle_4_5': "Eto na rin ang kaparehong code mula sa nakaraang palaisipan, pero inulit ang pag-ikot ng 36 na beses. Ilang degrees ba dapat ang bawat pag-ikot? (Hint: pagkatapos ng 360 degrees na pag-ikot, ang drowing ay maging buong bilog)"
+        'turtle_4_6': "Gamit ang 3 bloke lang, maaari mo bang iguhit ang isang parisukat na may gilid na haba ng 20 pixels?"
+        'turtle_4_7': "Eto na ang code para sa pagguhit ng parisukat mula sa huling palaisipan. Maari mo bang ulitin ito para makaguhit ng 10 kalapit na mga parisukat na parang hagdanan? Hint: Kailangan mo lang ng 2 pang mga bloke."
+        'turtle_4_8': "Eto na ang solusyon sa nakaraang palaisipian. Maari ka bang magdagdag ng 2 pang mga bloke para makumpleto ang drowing?"
+        'turtle_4_9': "Eto na ang solusyon sa nakaraang palaisipan. Ilang degrees ba dapat ang pag-ikot para makumpleto ang drowing? (Siguro kailangan mong hulaan ito nang ilang beses)"
+        'turtle_4_10': "Eto na ang solusyon sa nakaraang palaisipan. Ilang beses mo ba dapat ulitin para makumpleto ang drowing?"
+        'turtle_4_11': "Subukang baguhin ang mga numero sa loob ng \"turn\" at \"repeat\" na mga bloke para makagawa ng iba-ibang mga pattern. O, mag-eksperimento sa pagbago-bago ng code para maguhit mo ang kahit anung gusto mo."
+        'maze_karel_1_1': "Hi, ako ay isang magsasaka. Kailangan ko ang tulong mo para mapatag ko ang lupain sa aking kabukiran para ihanda na sa pagtatanim. Ilipat ang tumpok ng dumi at gamitin ang \"remove\" na bloke para tanggalin ito."
+        'maze_karel_1_2': "Susunod, ilipat ako sa butas at lagyan ito ng dalawang pala ng lupa, gamit ang \"fill\" na bloke."
+        'maze_karel_1_3': "Ilipat ako sa tumpok ng dumi at sabihan mo ako kung ilang pala ang tatanggalin gamit ang maliit na bilang ng mga bloke hangga't maaari."
+        'maze_karel_1_4': "Maari mo ba akong tulungan para tanggalin ang lahat ng apat na tambak ng dumi? Hint: gumamit na repeat na bloke kung maari."
+        'maze_karel_1_5': "Tulungan akong punan ang lahat ng mga butas na ito gamit ang 5 pala ng lupa, Hint: maari kang maglagay ng \"repeat\" na bloke sa loob ng \"while\" na bloke."
+        'maze_karel_1_6': "Tanggalin ang lahat ng tambak ng dumi, gamit ang maliit na bilang ng bloke hangga't maaari. Ang mga bagong opsyon sa dropdown na menu sa \"while\" na bloke ay nagsasabi sa akin kung ako ay nakatayo sa isang tambak o isang butas."
+        'maze_karel_1_7': "Grabe, nakatagpo ako ng lubhang malalim na butas! Hindi ko alam kung ilang pala ng lupa ang kailangan nito. Maari ka bang magsulat ng programa na magpupuno dito hanggang sa mapantay ang lupa?"
+        'maze_karel_1_8': "Tulungan akong punan ang butas sa huling dulo ng lupain, gamit ang iilang bloke lang hangga't maaari."
+        'maze_karel_1_9': "Ipagawa sa akin ang pagtanggal sa lahat ng nakatambak na lupa. Subukang gumamit ng iilang bloke lang hangga't maaari. Hint: subukang gumamit ng \"while\" na bloke."
+        'maze_karel_1_10': "Ginabi ako sa pagtatrabaho, kaya madilim na sa labas, at hindi ko malaman kung gaano kalaki ang nakatambak na mga lupa. Ngayon, wala na ang lahat ng opsyon na dati ay meron sa while na bloke. Ipasada ako sa kahabaan ng lupain, at kung may nakatambak, tanggalin ito."
+        'maze_karel_1_11': "Madilim pa rin sa labas. Ipasada ako sa lupain. Kung may nakatambak, tanggalin ito, at kung may butas, punan ito. Hint: gumamit ng dropdown menu ng mga opsyon na nasa \"if\" na bloke."
+        'turtle_2_1': "Hello. Ako artistang zombie. Ako gusto pagguhit! Tulungan ako sa pagguhit ng parisukat na may espesyal na kulay. Mahalagang paalala: mayroon ka nang lahat ng parehong mga bloke ngunit nakaayos na sila ayon sa mga kategorya."
+        'turtle_2_2': "Maligayang pagdating sa paggamit ng mga function, na magbigay sa iyo ng kakayahang gumawa ng mga bagong bloke! Subukan ang bagong \"draw a square\" na bloke na makikita sa kategoryang \"Functions\", para makaguhit ng maliit na 50x50 na berdeng parisukat."
+        'turtle_2_3': "Gamitin ang \"repeat\" na bloke (sa kategoryang \"Loops\") para makaguhit ng 3 parisukat na 100 ang laki, 120 degrees ang layo. At gawin ito sa 3 iba't iba at random na mga kulay."
+        'turtle_2_4': "Ngayon, papagandahin pa natin ito. Palitan ang code para makaguhit ng 36 na parisukat, 100 pixels and lapad, at 10 degrees ang bawat pagitan. Hint: maaring gusto mong gumamit ng slider para mapadali ito."
+        'turtle_2_5': "Magguhit ng mga parisukat na may gilid na 50, 60, 70, 80, at 90 pixels. Kailangan mong gumamit ng \"draw a square\" na function sa limang beses."
+        'turtle_2_6': "Sige, ang programang ito ay gumagamit ng tagabilang, para makaguhit ng parehong parisukat gaya ng dati. Gusto mo na ang parisukat ay pareho ang laki gaya ng tagabilang, kaya gumamit ng \"counter\" na bloke. Hint: Ito ay nasa kategoryang \"Variables\"."
+        'turtle_2_7': "Narito ang isang programa na gumuguhit ng isang spiral, ngunit ang mga bloke ay hindi pinagana kaya hindi maaring patakbuhin ito. Gumawa ng bagong programa gamit ang \"for\" na bloke (nasa kategoryang \"Loops\") at \"counter\" na bloke (nasa kategoryang \"Variables\") para makaguhit ng kaparehong spiral."
+        'turtle_2_7_5': "Mayroong bagong \"draw a snowman\" na function (sa Functions na kategorya). Gumuhit ng dalawang taong niyebe, na may taas na 250 at 100."
+        'turtle_2_8': "Ito ay medyo mapandaya. Gamitin ang \"draw a snowman\" na function at ang bagong \"jump forward\" na bloke (sa kategorya ng mga Aksyon). Gumuhit ng 3 taong niyebe na may iba-ibang kulay, 100 pixels ang pagitan."
+        'turtle_2_9': "Gumamit ng isa \"for\" na loop para maguhit ang isang pamilya ng mga taong niyebe na may taas na 110, 100, 90, 80, at 70. Ang mga taong niyebe ay dapat 60 pixels ang pagitan."
+        'turtle_2_10': "Narito ang ilang code para masubukan mo ang iba-ibang mga spiral. Ano ang mangyayari kung papalitan mo ang pag-ikot na halaga? O mag-set ng random na kulay sa loob ng loop? Gumuhit ng kahit anong gusto mo."
+        'maze_karel_2_1': "Subukang gumamit ng mga bloke para matulungan akong tanggalin ang lahat ng mga bunton at punan ang mga butas na nasa lupa. Subukang gumamit ng mga loops sa halip ng gumamit ng napakaraming mga bloke. Hint: maari kang maglagay ng isang loop sa loob ng isa pang loop."
+        'maze_karel_2_2': "Binigyang-katuturan natin ang ating sariling mga bloke na tinatawag na \"fill 5\", na ngayon ay nasa kategorya ng mga Functions na. Gamitin ito para matulungan akong punan ang mga butas."
+        'maze_karel_2_3': "Gamitin ang bagong \"fill 5\" na function na bloke para mapunan ko ang lahat ng mga butas. Kailangan mong i-drag palabas ang \"fill 5\" na bloke mula sa kategorya ng mga Function."
+        'maze_karel_2_4': "Bigyang-kahulugan ang bagong function na magtatanggal ng 7 na pala ng mga lupa. Gamitin ito para makasulat ng programa na makakatulong sa akin sa pagtanggal ng lahat ng mga bunton."
+        'maze_karel_2_5': "Gumawa ng bagong function na magtatanggal ng 6 na pala mula sa bunton, at gamitin ito para makatulong sa akin sa pagpatag ng mga bunton."
+        'maze_karel_2_6': "Gamitin ang dalawang bagong functions, \"fill 8\" at \"remove 8\", para matulungan akong patagin ang mga tumpok at punan ang mga butas."
+        'maze_karel_2_7': "Mayroong isang baka sa aking lupain. Sumulat ng bagong function na makakatulong sa akin na iwasan ang baka at alisin ang bunton. Ilagay ang lahat ng iyong mga bloke sa loob ng bagong function."
+        'maze_karel_2_8': "Gamitin ang bagong function, \"avoid the cow and remove 1\", para matulungan akong tanggalin ang lahat ng mga bunton."
+        'maze_karel_2_9': "Sige, ito na ang function na magtatanggal ng 4 na iba-ibang bunton ng lupa sa isang patinding na hanay. Subukang ilagay ang function na ito sa loob ng loop, para matanggal mo ang lahat ng bunton ng lupa gamit lang ang iilang bagong mga bloke."
+        'maze_karel_2_10': "Ilipat ako sa iba't ibang panig ng lupain, at gamitin ang dalawang function na ito para matulungan akong tanggalin ang lahat ng mga bunton at punan ang lahat ng mga butas."
+        'turtle_3_1': "Ang palaisipang ito ay nagpapakita kung paano ang \"draw a square\" at \"draw a circle\" na function ay binigyang kahulugan. Ang pagbigay-kahulugan sa isang function ay hindi nagpapatakbo ng mga bloke nito. Kailangan mo pang hilahin palabas ang \"draw a square\" na bloke para makaguhit ng parisukat."
+        'turtle_3_2': "Gamit ang \"draw a square\" function bilang halimbawa, gumawa ng \"draw a triangle\" na function at gamitin ito."
+        'turtle_3_3': "Gumihit ng tatsulok na mga bakod sa paligid ng mga pusa at isang parisukat na bakod sa paligid ng baka. Tip: subukan ang programa habang nararanasan mo ang mga ito."
+        'turtle_3_4': "Tingan kong malaman mo ba kung paano gamitin ang \"gumuhit ng parisukay\" at \"gumuhit ng tatsulok\" (at iba pang mga bloke) para makaguhit ng bahay sa paligid ng liyon."
+        'turtle_3_5': "Ngayon, gumawa ng bagong \"gumuhit ng bahay\" na function at gamitin ito para sa dalawang pusa. Hint: gumawa ng bagong function gamit ang \"gawin ang isang bagay\" na bloke, at i-type ang iyong sariling teksto para mabigyan ng pangalan ang bloke."
+        'turtle_3_6': "Gumamit ng \"gumuhit ng parisukat\" bilang halimbawa, magdagdag ng input na pinangalanang \"haba\" para \"makaguhit ng tatsulok\". Pagkatapos, gumawa ng mga tatsulong na may iba't ibang sukat. (Hint: Pindutin ang bituin para makadagdag ng input sa isang function)"
+        'turtle_3_7': "Magdagdag ng input na pinangalanang \"haba\" para \"makaguhit ng bahay\" at gumawa ng malaking bahay para sa mga elepante (na may gilid na 150 pixels ang haba)"
+        'turtle_3_8': "Baguhin ang \"gumuhit ng bahay\" para makarating ako sa kanang sulok sa baba pagkatapos gumuhit ng bagong bahay. Gamitin ang binagong function para makaguhit ng tatlong bahay."
+        'turtle_3_9': "Maari mo bang gumawa ulit ng \"gumuhit ng bahay\" na function nang walang tulong? Subukan ito, at pagkatapos ay gumuhit ng isang hanay ng mga bahay."
+        'turtle_3_10': "Marami ka nang natutunan! Ngayon gamitin ito para makaguhit ng kahit na anumang gusto mo. Subukang gumuhit ng bituin, o isang spiral, o isang magarbong espesyal na niyebe."
+        'maze_karel_debug_seq_1': "Maligaying pagdating sa debugging! Ang aking code ay hindi gumagana ng tama. Matutukoy mo ba kung saan ang problema at maayos ito para mapatag ko ang aking lupain at mahanda para sa pagtatanim?"
+        'maze_karel_debug_seq_2': "Ano ang problema sa programang ito? Paano mo dapat ito ayusin para matanggal ko ang tumpok na iyan?"
+        'maze_karel_debug_repeat': "I-debug ang programang ito para sa akin para maging maganda at patag ang aking lupain."
+        'maze_karel_debug_while': "Paano mo babaguhin ang programang ito para matulungan akong punan ang butas?"
+        'maze_karel_debug_if': "Tulong! Ayusin ang aking programa para maging ganap na patag ang aking lupain."
+        'maze_karel_debug_if_else': "I-debug ang programang ito para mapunan ko ang mga butas at matanggal ang lahat ng mga tumpok."
+        'maze_karel_debug_function_1': "Ano ang dapat baguhin sa programang ito para matulungan mo akong tanggalin ang lahat ng mga tumpok?"
+        'maze_karel_debug_function_2': "Maari mo bang i-debug ang programang ito para maging patag ang lupain ko?"
+        'maze_karel_debug_function_3': "Baguhin ang programang ito para matanggal ko ang lahat ng mga tambak na nasa lupain ko. "
+        'turtle_5_1': "Subukang patakbuhin ang programang ito, at gumawa ng mga pagbabago para matingnan mo ang mangyari. Maari mo bang malaman kung paano ito gumana? (O burahin ito at palitan mo ng isang bagay na talagang kakaiba)"
+        'turtle_5_2': "Subukang patakbuhin ang programang ito, at gumawa ng mga pagbabago para matingnan mo ang mangyari. Maari mo bang malaman kung paano ito gumana? (O burahin ito at palitan mo ng isang bagay na talagang kakaiba)"
+        'turtle_5_3': "Subukang patakbuhin ang programang ito, at gumawa ng mga pagbabago para matingnan mo ang mangyari. Maari mo bang malaman kung paano ito gumana? (O burahin ito at palitan mo ng isang bagay na talagang kakaiba)"
+        'turtle_5_4': "Subukang patakbuhin ang programang ito, at gumawa ng mga pagbabago para matingnan mo ang mangyari. Maari mo bang malaman kung paano ito gumana? (O burahin ito at palitan mo ng isang bagay na talagang kakaiba)"
+        'turtle_5_5': "Subukang patakbuhin ang programang ito, at gumawa ng mga pagbabago para matingnan mo ang mangyari. Maari mo bang malaman kung paano ito gumana? (O burahin ito at palitan mo ng isang bagay na talagang kakaiba)"
+        'turtle_5_6': "Subukang patakbuhin ang programang ito, at gumawa ng mga pagbabago para matingnan mo ang mangyari. Maari mo bang malaman kung paano ito gumana? (O burahin ito at palitan mo ng isang bagay na talagang kakaiba)"
+        'maze_3_1': "Kailangan kong mapuntahan ang baboy na yan! Mag-type ng ilang mga tawag para sa move(); upang makuha ko na ulit ang aking mga itlog."
+        'maze_3_2': "Sulatan mo ako ng isang programa, para makarating ako hanggang sa dako kung saan ang baboy."
+        'maze_3_3': "Paano ako makakarating sa baboy? Siguraduhing hindi ako makabangga ng kahon ng TNT!"
+        'maze_3_4': "Argh! Sulatan mo ako ng programa na makakapag-ikot sa akin sa paligid ng TNT at papunta sa baboy."
+        'bounce_1_basketball': "Maglakip ng isang bloke sa \"kung kaliwang pana\" na bloke at pindutin ang \"Run\". Galawin ang kamay gamit ang kaliwang pana para makaabot sa huling layunin."
+        'bounce_2_basketball': "Maglakip ng bloke sa \"kung kanang arrow\" at \"kung kaliwang arrow\" na mga bloke. Galawin ang kamay para makarating sa parehong huling mga layunin."
+        'bounce_5_basketball': "Magpapadala tayo ng bola na lumilipad pababa patungo sa kamay. Maglakip ng bloke sa \"kung ang bola ay tatama sa kamay\" na bloke para masiguro na ang bola ay makakarating sa bandila."
+        'bounce_6_basketball': "Ngayon ang bandila ay nasa taas. Kailangan mong maglakip ng mga bloke sa kapwa \"kung ang bola ay tumama\" na mga bloke para malutas ang palaisipan na ito."
+        'bounce_7_basketball': "Maglakip ng mga bloke sa bawat \"kailan\" na mga bloke. Patalbugin ang bola hanggang matatamaan nito ang bandila."
+        'bounce_10_basketball': "Ngayon ay may mithiin tayo sa itaas! Ilakip ang \"score point\" at \"score opponent point\" na mga bloke sa \"when ball in goal\" at \"when ball misses hand\" na mga bloke para makagawa ng laro. Tingnan kung ilang puntos ang makukuha mo bago makapuntos ang kalaban mo nang makalawa."
+        'bounce_11_basketball': "Maaari mo nang ilakip ang mga bloke sa \"when run\" na bloke. Kailangan mong ilakip ang bagong \"throw new ball\" na bloke sa higit sa isang lugar. Gayundin, subakang baguhin ang eskena o ang bilis ng kamay at ng bola at tingnan kung ilang puntos ang makuha mo bago makapuntos ng makalawa ang kalaban mo!"
+        'bounce_12_basketball': "Lumikha ng iyong sariling Basketbol na laro. Maari mong palitan ang mga patakaran. Kapag tapos ka na, pindutin ang Finish para hayaang masubukan ng iyong mga kaibigan ang laro sa kanilang mga telepono."
+        'bounce_1_sports': "Puntahan ang bandila! Maglakip ng mga bloke sa \"when left arrow\" na bloke at pindutin ang \"Run\" para ilipat ang manlalaro palapit sa bandila."
+        'bounce_2_sports': "May dalawang bandila na ngayon! Maglakip ng bloke sa \"when left arrow\" at \"when right arrow\" na mga bloke para makagalaw ang iyong manlalaro sa dalawang direksyon."
+        'bounce_5_sports': "Ang hockey puck ay lilipad pababa patungo sa manlalaro! Maglakip ng bloke sa \"when ball hits player\" na bloke para matamaan ang bandila."
+        'bounce_6_sports': "Ngayon ang bandila ay nasa taas. Kailangan mong maglakip ng mga bloke sa kapwa \"kung ang bola ay tumama\" na mga bloke para malutas ang palaisipan na ito."
+        'bounce_7_sports': "Maglakip ng mga bloke sa bawat \"kailan\" na mga bloke. Patalbugin ang bola hanggang matatamaan nito ang bandila."
+        'bounce_10_sports': "Ngayon ay may mithiin tayo sa itaas! Ilakip ang \"score point\" at \"score opponent point\" na mga bloke sa \"when ball in goal\" at \"when ball misses hand\" na mga bloke para makagawa ng laro. Tingnan kung ilang puntos ang makukuha mo bago makapuntos ng makalawa ang iyong kalaban!"
+        'bounce_11_sports': "Maaari mo nang ilakip ang mga bloke sa \"when run\" na bloke. Kailangan mong ilakip ang bagong \"throw new ball\" na bloke sa higit sa isang lugar. Gayundin, subakang baguhin ang eskena o ang bilis ng kamay at ng bola at tingnan kung ilang puntos ang makuha mo bago makapuntos ng makalawa ang kalaban mo!"
+        'bounce_12_sports': "Lumikha ng sarili mong laro! Ikaw ang tagapangasiwa dito: maari mong baguhin ang mga patakaran, mix at match na palakasan, maging malikhain! Kapag tapos ka na, pindutin ang Finish para masubukan ng iyong mga kaibigan ang laro sa kanilang mga telepono."
+        'bounce_1': "Maglakip ng bloke sa \"when left arrow\" na bloke at pindutin ang \"Run\". Galawin ang sagwan gamit ang left arrow para makaabot sa huling layunin."
+        'bounce_2': "Maglakip ng bloke sa \"when right arrow\" at \"when left arrow\" na mga bloke. Galawin ang sagwan para makaabot sa parehong huling mga layunin."
+        'bounce_3': "Ngayon subukan mo ang isang bagay na katulad ng \"when up arrow\" na bloke. Galawin ang sagwan para tapusin ang layunin sa itaas."
+        'bounce_4': "Sa pagkakataong ito kakailanganin mong magdagdag ng apat na mga bloke. Galawin ang sagwan sa lahat ng apat na mga layunin para makompleto ang palaisipang ito."
+        'bounce_5': "Magpapadala tayo ng bola patungo sa sagwan. Maglakip ng bloke sa \"when ball hits paddle\" na bloke para masiguro na ang bola ay makakarating sa huling layunin."
+        'bounce_6': "Ngayon ang huling layunin ay nasa taas. Kailangan mong maglakip ng mga bloke sa dalawang \"when ball hits\" na mga bloke para malutas ang mga palaisipan."
+        'bounce_7': "Maglakip ng mga bloke sa bawat \"when\" na mga bloke. Patalbugin ang bola hanggang matamaan nito ang huling layunin."
+        'bounce_10': "Mayroon na tayong mithiin sa itaas. Maglakip ng \"score point\" at \"score opponent point\" na mga bloke sa \"when ball in goal\" at \"when ball misses paddle\" na mga bloke para makagawa ng laro. Tingnan kung ilang puntos ang makukuha mo bago makapuntos ng makalawa ang kalaban mo."
+        'bounce_11': "Maaari mo nang ilakip ang mga bloke sa \"when run\" na bloke. Dapat mong ilakip ang bagong \"launch new ball\" na bloke sa higit sa isang lugar. Gayundin, subukang palitan ang eksena o ang bilis ng pampalo at ng bola at tingnan kung ilang puntos ang makukuha mo bago makapuntos ng makalawa ang kalaban mo."
+        'bounce_12': "Lumikha ng sarili mong Bounce na laro. Maaring mong palitan ang lahat ng mga visuals at ang mga patakaran. Kapag tapos ka na, pindutin ang Finish para masubukan ng mga kaibigan mo ang laro sa kanilang mga telepono."
+        'Custom_builder': "I-drag ang mga bloke mula sa toolbox papunta sa workspace para maguhit ang antas na gusto mong ilikha. Pindutin ang \"Run\" kung handa ka na."
+        'flappy_1': "Maglakip ng bloke sa \"when click\" na bloke, at pindutin ang \"Run\". I-click o i-tap ang screen para mapagalaw si Flappy papunta sa target."
+        'flappy_2': "Ngayon na nadagdag na natin ang lupa. Maglakip ng bloke sa \"when hit the ground\" na bloke. Kailangan ng code mo na \"TAPUSIN ANG LARO\" kung bumagsak na si Flappy."
+        'flappy_3': "Ang \"when run\" na bloke ay magbibigay sa iyo ng paraan na mapatakbo ang code habang nagsisimula na ang laro. Subukang mag-set ng bilis ng antas at ang pagpagaspas papunta sa target."
+        'flappy_4': "Si Flappy ay lilipad sa gitna ng mga balakid maliban nalang kung magsulat tayo ng code para babagsak siya. Maglakip ng bloke sa \"when hit an obstacle\" na bloke. Ang code mo ay kailangang matapos kung babagsak si Flappy sa unang set ng mga tubo."
+        'flappy_5': "Magdagdag tayo ng palapuntusan, at bilangin natin ang puntos habang nakalampas si Flappy sa mga balakid. Magdagdag ng \"when pass an obstacle\" na block, at pagkatapos ay magkakapuntos sa pamamagitan ng pagpapalipad kay Flappy sa unang set ng mga tubo."
+        'flappy_6': "Tingnan kung makakapuntos ka pa rin kung gawin mong maliit o malaki ang pag-flap ni Flappy."
+        'flappy_7': "Kasunod nito, subukan mong baguhin ang eskena sa pamamagitan ng paglakip ng isa pang bloke sa \"when run\" na bloke."
+        'flappy_8': "Maari mong i-set ang mga visual kahit anumang oras, hindi lang kapag nagsisimula na ang laro. Subukang itakda ang iba-ibang eskena habang nangyayari ang ibang mga pangyayari, halimbawa, kapag madadaan ang isang balakid."
+        'flappy_9': "Para mahalo ang mga bagay-bagay, kapag natamaan ang isang balakid, sa halip na tapusin ang laro, subukang ibalik ang puntos sa 0."
+        'flappy_11': "Lumikha ng sarili mong Flappy na laro. Maari mong palitan ang lahat ng mga visuals at ang mga patakaran, kahit na ang grabidad. Kapag tapos ka na, pindutin ang Finish para masubukan ng mga kaibigan mo ang laro sa kanilang mga telepono."
+        'flappy_k1_1': "Maglaro ng Flappy"
+        'flappy_k1_2': "Maglakip ng bloke sa \"when click\" na bloke, at pindutin ang \"Run\". I-click o i-tap ang screen para mapagalaw si Flappy papunta sa target."
+        'flappy_k1_3': "Ngayon na nadagdag na natin ang lupa. Maglakip ng bloke sa \"when hit the ground\" na bloke. Kailangan ng code mo na \"TAPUSIN ANG LARO\" kung bumagsak na si Flappy."
+        'flappy_k1_4': "Ang \"when run\" na bloke ay magbibigay sa iyo ng paraan na mapatakbo ang code habang nagsisimula na ang laro. Subukang mag-set ng bilis ng antas at ang pagpagaspas papunta sa target."
+        'flappy_k1_5': "Si Flappy ay lilipad sa gitna ng mga balakid maliban nalang kung magsulat tayo ng code para babagsak siya. Maglakip ng bloke sa \"when hit an obstacle\" na bloke. Ang code mo ay kailangang matapos kung babagsak si Flappy sa unang set ng mga tubo."
+        'flappy_k1_6': "Magdagdag tayo ng palapuntusan, at bilangin natin ang puntos habang nakalampas si Flappy sa mga balakid. Magdagdag ng \"when pass an obstacle\" na block, at pagkatapos ay magkakapuntos sa pamamagitan ng pagpapalipad kay Flappy sa unang set ng mga tubo."
+        'flappy_k1_7': "Tingnan kung mamakuha ka ng maraming puntos sa paglampas sa mga balakid"
+        'flappy_k1_8': "Kasunod nito, subukan mong baguhin ang eskena sa pamamagitan ng paglakip ng isa pang bloke sa \"when run\" na bloke."
+        'flappy_k1_9': "Subakang palitan ang manlalaro sa pamamagitan ng paglakip ng \"set player\" na bloke sa \"when run\" na bloke."
+        'jigsaw_1': "Pindutin ang bloke"
+        'jigsaw_2': "I-drag ang bloke sa target"
+        'jigsaw_3': "Ayusin ang bloke para mabuo ang larawan"
+        'jigsaw_4': "Ayusin ang bloke para mabuo ang larawan"
+        'jigsaw_5': "Ayusin ang bloke para mabuo ang larawan"
+        'jigsaw_6': "Ayusin ang bloke para mabuo ang larawan"
+        'jigsaw_7': "Ayusin ang bloke para mabuo ang larawan"
+        'jigsaw_8': "Ayusin ang bloke para mabuo ang larawan"
+        'jigsaw_9': "Ayusin ang bloke para mabuo ang larawan"
+        'jigsaw_10': "Ayusin ang bloke para mabuo ang larawan"
+        'jigsaw_11': "Ayusin ang bloke para mabuo ang larawan"
+        'jigsaw_12': "Ayusin ang bloke para mabuo ang larawan"
+        'jigsaw_13': "Ayusing ang palaisipan!"
+        'mazestep_1': "Paglalarawan sa hakbang ng maze dito"
+        'mazestep_2': "Paglalarawan sa hakbang ng maze dito"
+        'mazestep_3': "Paglalarawan sa hakbang ng maze dito"
+        'mazestep_4': "Paglalarawan sa hakbang ng maze dito"
+        'mazestep_5': "Paglalarawan sa hakbang ng maze dito"
+        'studio_c2_1': "Maari mo bang pasabihin ang asong ito nang \"hello world\"?"
+        'studio_c2_2': "Maaari mo bang pasalitain ang aso ng kahit na ano at pagkatapos ay sasagot ang pusa?"
+        'studio_c2_3': "Marunong ka bang magsulat ng isang programa na maglipat sa asong ito papunta sa pusa?"
+        'studio_c2_4': "Marunong ka bang magsulat ng isang programa na maglipat sa aso papunta sa pusa, at kapag nakarating na ang aso ay sasabihan siya ng pusa na \"hello\"?"
+        'studio_c2_5': "Marunong ka bang magsulat ng isang programa para magsabi ang pugitang ito ng \"hello\" kapag ito ay pinindot?"
+        'studio_c2_6': "Maari ka bang magsulat ng isang programa para mapagalaw si Waddles sa paligid gamit ang taas / baba / kaliwa / kanan na mga keys para matamaan ang lahat ng mga target?"
+        'studio_c2_7': "Ang \"repeat forever\" na bloke ay nagbibigay-daan sa iyo para mapatakbo mo ang iyong code ng paulit-ulit. Maaari mo bang ilakip ang mga bloke para mapagalaw ang dinosaur pataas at pababa nang paulit-ulit?"
+        'studio_c2_8': "Magagawa mo bang turuan si Waddles na magsasabi ng \"Aray!\" at magpatugtog ng \"hit\" na tunog kapag nabangga niya ang dinosaur, at pagkatapos pagalawin siya gamit ang mga arrows para mangyari iyon?"
+        'studio_c2_9': "Maari ka bang magdagdag ng bloke para makakuha ng puntos kapag nakatagpo si Waddles ng pugita, at pagkatapos ay ilipat siya gamit ang mga arrow na keys hanggang sa makapuntos ka?"
+        'studio_c2_10': "Maari ka bang magdagdag ng mga bloke para baguhin ang background at ang bilis ni Waddles, at pagkatapos ilipat siya gamit ang mga arrow na keys hanggang sa makapuntos ka?"
+        'studio_c2_11': "Lumikha ng sarili mong kuwento. Kapag tapos ka na, pindutin ang \"Finish\" para masubukan ng iyong mga kaibigan ang iyong kuwento sa kanilang mga telepono."
+        'studio_c3_story_1': "Maari mo bang pasabihin ang asong ito nang \"hello world\"?"
+        'studio_c3_story_2': "Maaari mo bang pasalitain ang aso ng kahit na ano at pagkatapos ay sasagot ang pusa?"
+        'studio_c3_story_3': "Marunong ka bang magsulat ng isang programa na maglipat sa asong ito papunta sa pusa?"
+        'studio_c3_story_4': "Marunong ka bang magsulat ng isang programa na maglipat sa aso papunta sa pusa, at kapag nakarating na ang aso ay sasabihan siya ng pusa na \"hello\"?"
+        'studio_c3_story_5': "Maaari mo bang idagdag ang bloke para maging masaya ang pugita?"
+        'studio_c3_story_6': "Lumikha ng sarili mong kuwento. Kapag tapos ka na, pindutin ang \"Finish\" para masubukan ng iyong mga kaibigan ang iyong kuwento sa kanilang mga telepono."
+        'studio_c3_game_1': "Marunong ka bang magsulat ng isang programa para magsabi ang pugitang ito ng \"hello\" kapag ito ay pinindot?"
+        'studio_c3_game_2': "Maari ka bang magsulat ng isang programa para mapagalaw si Waddles sa paligid gamit ang taas / baba / kaliwa / kanan na mga keys para matamaan ang lahat ng mga target?"
+        'studio_c3_game_3': "Ang \"repeat forever\" na bloke ay nagbibigay-daan sa iyo para mapatakbo mo ang iyong code ng paulit-ulit. Maaari mo bang ilakip ang mga bloke para mapagalaw ang dinosaur pataas at pababa nang paulit-ulit?"
+        'studio_c3_game_4': "Magagawa mo bang turuan si Waddles na magsasabi ng \"Aray!\" at magpatugtog ng \"hit\" na tunog kapag nabangga niya ang dinosaur, at pagkatapos pagalawin siya gamit ang mga arrows para mangyari iyon?"
+        'studio_c3_game_5': "Maari ka bang magdagdag ng bloke para makakuha ng puntos kapag nakatagpo si Waddles ng pugita, at pagkatapos ay ilipat siya gamit ang mga arrow na keys hanggang sa makapuntos ka?"
+        'studio_c3_game_6': "Maari ka bang magdagdag ng mga bloke para baguhin ang background at ang bilis ni Waddles, at pagkatapos ilipat siya gamit ang mga arrow na keys hanggang sa makapuntos ka?"
+        'studio_c3_game_7': "Lumikha ng sarili mong laro. Kapag tapos ka na, pindutin ang \"Finish\" para masubukan ng iyong mga kaibigan ang laro sa kanilang mga telepono."
+        'studio_playlab_1': "Gusto ni Waddles na magsabi nang \"hello\" - matutulungan mo ba siya?"
+        'studio_playlab_2': "Bata sa kuweba (aktor 1) at Jasmine (aktor 2) ay nais magsabi ng \"hello\" sa isa't isa. Matutulungan mo ba sila sa pamamagitan ng paggamit ng \"say\" na bloke nang dalawang beses?"
+        'studio_playlab_3': "Maari mo bang matulungan si Tennis Girl na makapunta sa bandila?"
+        'studio_playlab_4': "Maari mo bang tulungan si Tennis Boy (aktor 1) na makapunta kay Tennis Girl (aktor 2) at magpatugtog pag dating niya doon?"
+        'studio_playlab_5': "Maaari mo bang tulungan si Spacebot na magsabi ng \"Maligayang bati mga taong lupa\" kapag ito ay pinindot? Huwag kalimutang pindutin ito pagkatapos mong pinduting ang \"Run\""
+        'studio_playlab_6': "Maaari mo bang tulungan ang Witch na maglibot gamit ang taas/baba/kanan/kaliwang mga arrow key para makuha lahat ng mga mahikong bolang apoy?"
+        'studio_playlab_7': "Ang \"repeat forever\" na bloke at nagbibigay-daan para mapatakbo mo ang iyong code ng paulit-ulit. Maaari mo bang ilakip ang mga bloke dito para matulungan ang salamangkero na gumalaw pakanan o pakaliwa ng paulit-ulit?"
+        'studio_playlab_8': "Maaari ka bang magdagdag ng bloke para makakuha ng putos at isang bloke na magpapatunog kapag ang unicorn ay nakakatagpo sa salamangkero, at pagkatapos pagalawin siya gamit ang mga arrow na keys hanggang sa makapuntos ka?"
+        'studio_playlab_9': "Magtakda ng background para sa pagsalakay ng mga dayuhan at tulungan si Spacebot na makarating sa mga dayuhan ng mabilisan sa pamamagitan ng pagbago sa bilis nito. Pagkatapos ay galawin ito gamit ang mga arrow keys para makarating sa Spacebot at makapag-alerto sa lahat ng tao"
+        'studio_playlab_10': "Lumikha ng sarili mong laro. Kapag tapos ka na, pindutin ang \"Finish\" para masubukan ng iyong mga kaibigan ang laro sa kanilang mga telepono."
+        'studio_iceage_hello1': "Gusto ni Sid na pagtipunin ang lahat para sa isang bagong pakikipagsapalaran. Maaari mo ba siyang matulungan na magsabi ng \"hello\" sa pamamagitan ng pag-drag sa \"say\" na bloke sa labas ng work area at pag-type ng salitang \"hello\" sa loob?"
+        'studio_iceage_hello2': "Natagpuan ni Manny (aktor 1) si Sid (aktor 2) at gusto niyang imbitahan ito sa isang pakikipagsapalaran. Tulungan silang batiin ang bawat isa sa pamamagitan ng paggamit ng \"actor say\" na bloke nang dalawang beses."
+        'studio_iceage_move_to_flag': "Si Scrat ay naghahanap sa kanyang binhi! Tulungan siyang makapunta sa huling 200 pixels gamit ang \"move\" na bloke."
+        'studio_iceage_move_to_actor': "Si Diego (aktor 1) ay naghahanap kay Manny (aktor 2). Tulungan si Diego na gumalaw ng 200 pixels pababa kay Manny gamit ang \"move actor\" na bloke. Kasunod nito, ikonekta ang isang bloke sa \"when actor touches\" na event para makapagpatunog kung natagpuan na nila ang isa't isa."
+        'studio_iceage_repeat': "Ang \"repeat-forever\" na bloke ay nagbibigay-daan para mapatakbo mo ang iyong code ng paulit-ulit. Maari mo bang ilakip ang mga bloke dito para matulungan si Granny na makapag-ehersisyo sa pamamagitan ng pagpagalaw nito sa kanan at kaliwa ng paulit-ulit?"
+        'studio_iceage_click_hello': "Matutulungan mo ba si Sid na makagawa ng huling panawagan sa kanyang mga kaibigan kapag napindot ito? Huwag kalimutang mag-click pagkatapos mapindot ang Run."
+        'studio_iceage_move_events': "Si Scrat ay naghahanap pa rin sa kanyang binhi! Tulungan siyang gumala sa paligid sa pamamagitan ng paglakip ng \"move\" na bloke sa bawat pangyayari at pagbabago ng direksyon sa bawat isa sa mga arrow key. Kapag tapos ka na, i-click ang Run at subukang kolektahin ang lahat ng mga binhi."
+        'studio_iceage_sound_and_points': "Naibigay na nami ang karamihan sa mga code na nagpapanatili kay Granny na gumalaw pakaliwa at pakanan, pati na ang code para mapagala si Sid sa buong screen. Maaari mo bang matapos ang code at magdagdag ng mga bloke sa \"when actor touches\" na pangyayari para makapatugtog at makapuntos tayo kung nagkabanggaan sina Sid at Granny? Pindutin ang Run para makapaglaro."
+        'studio_iceage_warn_ice_age': "Kailangan ng lahat na kumilos ng mabilis dahil paparating na ang panahon ng yelo! Palitan ang background sa isang mayelong background at itakda ang bilis ni Sid sa mabilis, pagkatapos pindutin ang Run at pagalawin siya papunta kay Diyego para mababalaan siya."
+        'studio_iceage_throw_hearts': "Gusto ni Sid na malaman ng lola niyang si Granny na mahal niya ito. Gamitin ang \"actor throw\" na utos para maghagis si Sid (aktor 1) ng mga puso kay Granny (aktor 2)! Itakda ang mood ni Granny sa masaya kapag natatamaan siya ng mga puso."
+        'studio_iceage_free_play': "Oras na para maglikha na sarili nating laro o istorya! Kapag tapos ka na, pindutin ang Finish para masubukan ng iyong mga kaibigan ang laro sa kanilang mga telepono, tablets, o kompyuter!"
+        'studio_gumball_hello1': "Gusto ni Anais na magkaroon ng mga bagong kaibigan. Matutulungan mo ba siyang magsabi ng \"hello\" sa pamamagitan ng pag-drag ng \"say\" na bloke palabas sa work area at pag-type ng salitang \"hello\" sa loob?"
+        'studio_gumball_hello2': "Papunta sa paaralan sina Darwin (aktor 1) at ang kapatid niyang si Gumball (aktor 2). Tulungan silang batiin ang bawat isa sa pamamagitan ng paggamit sa \"actor say\" na bloke nang dalawang beses."
+        'studio_gumball_move_to_flag': "Malapit nang mapanalo ni Banana Joe ang karera sa araw ng lupain. Tulungan  siyang makaabot sa huling 200 pixels gamit ang \"move\" na bloke."
+        'studio_gumball_move_to_actor': "Sina Gumball (aktor 1) at Darwin (aktor 2) ay huli na sa kanilang field day! Tulungan si Gumball na gumalaw ng 200 pixels pababa kay Darwin gamit ang \"move actor\" na bloke. Kasunod nito, ikonekta ang bloke sa \"when actor touches\" na pangyayari para makapagpatunog kung nagkatagpo na sila."
+        'studio_gumball_repeat': "Ang \"repeat forever\" na bloke ay nagbibigay-daan para mapatakbo ang code ng sunod-sunod. Maari mo bang ilakip ang mga bloke dito para matulungan si Gumball na magpapainit para sa kanyang karera sa pamamagitan ng pagpagalaw sa kanan at kaliwa nang paulit-ulit?"
+        'studio_gumball_click_hello': "Maari mo bang matulungan si Anton na mag-anunsiyo sa simula ng karera sa pamamagitan ng pagsabi nang \"Ready, set, go!\"? Para masubukan ang iyong programa, huwag kalimutang i-click si Anton pagkatapos mung pindutin ang Run!"
+        'studio_gumball_move_events': "Si Darwin ay nasa isang labanan sa pagtitipon ng mga bandila! Tulungan siyang makagala sa paligid sa pamamagitan ng paglakip ng \"move\" na bloke sa bawat pangyayari. Kapag tapos ka na, pindutin ang Run at subukang kolektahin ang lahat ng mga bandila."
+        'studio_gumball_sound_and_points': "Naibigay na namin ang karamihan sa mga code na nagpapanatili kay Anton (aktor 2) na gumalaw pakaliwa at pakanan, pati na rin ang code para pagalain si Banana Joe (aktor1) sa paligid ng screen. Matatapos mo ba ang code at maidagdag ang mga bloke sa \"when actor touches\" na pangyayari para magawa ang pagpapatugtog ng tunog at makakuha ng puntos kung magkakabanggaan sina Banana Joe at Anton? Pindutin ang Run para makapaglaro."
+        'studio_gumball_warn_food_fight': "Nakatakas si Darwin sa labanan ng pagkain! Palitan ang background, gawing \"characters\" at itakda ang bilis ni Darwin sa mabilis, pagkatapos pindutin ang Run at ilipat siya malapit kay Penny para mabigyan din siya ng babala."
+        'studio_gumball_join_food_fight': "Sumali sa labanan ng pagkain! Gamitin ang \"actor throw item right\" na command para magtapon si Banana Joe (aktor 1) ng pagkain kay Anton (aktor 2)! Itakda ang mood ni Anton sa nagagalit kapag natamaan siya."
+        'studio_gumball_free_play': "Maglikha ng sarili mong laro o istorya. Kapag tapos ka na, pindutin ang Finish para masubukan ng iyong mga kaibigan ang laro sa kanilang mga telepono, mga tablets, o mga kompyuter!"
+        'studio_full_sandbox': "Lumikha ng sarili mong laro. Kapag tapos ka na, pindutin ang \"Finish\" para masubukan ng iyong mga kaibigan ang laro sa kanilang mga telepono."
+        'studio_k1_1': "Maari mo bang pasabihin ang asong ito nang \"hello world\"?"
+        'studio_k1_2': "Maaari mo bang pasalitain ang aso ng kahit na ano at pagkatapos ay sasagot ang pusa?"
+        'studio_k1_3': "Marunong ka bang magsulat ng isang programa na maglipat sa asong ito papunta sa pusa?"
+        'studio_k1_4': "Papuntahin ang aso sa pusa at ang pusa ay magsasabi ng \"hello\" kapag nakarating na siya doon."
+        'studio_k1_5': "Maaari mo bang idagdag ang bloke para maging masaya ang pugita?"
+        'studio_k1_6': "Lumikha ng sarili mong istorya! Pagalain sa paligid ang pusa at aso, at pagsalitain sila ng kahit na ano."
+        'maze_wordsearch_k_1': "Galawin ako para mabaybay ang salitang SILANGAN"
+        'maze_wordsearch_k_2': "Galawin ako para mabaybay angs salitang TIMOG"
+        'maze_wordsearch_k_3': "Galawin ako para mabaybay ang salitang KANLURAN"
+        'maze_wordsearch_k_4': "Galawin ako para mabaybay ang salitang HILAGA"
+        'maze_wordsearch_k_6': "Ilipat ako sa Silangan at pagkatapos sa Timog para mabaybay ang salitang JUMP"
+        'maze_wordsearch_k_9': "Ilipat ako sa isang daan, at pagkatapos sa iba naman para mabaybay ang salitang CODE"
+        'maze_wordsearch_k_13': "Ilipat ako sa isang daan, at pagkatapos sa iba naman para mabaybay ang salitang DEBUG"
+        'maze_wordsearch_k_15': "Ilipat ako sa isang daan, at pagkatapos sa iba naman para mabaybay ang salitang ABOVE"
+        'maze_wordsearch_k_16': "Ilipat ako sa isang daan, at pagkatapos sa iba naman para mabaybay ang salitang BELOW"
+        'maze_wordsearch_k_20': "Ito ay isang pagsusulit! Ilipat ako sa isang daan, at pagkatapos sa iba naman para mabaybay ang salitang STORY"
+        'applab_ec_simple': "Likhain ang iyong app sa pamamagitan ng paggamit ng mga bloke sa loob ng toolbox."
+        'turtle_ec_1_2': "Ngayon, gumuhit ng isang parisukat. PAALALA: gamitin ang iyong paboritong kulay sa pamamagitan ng pagpili nito sa bagong \"penColor\" na bloke."
+        'turtle_ec_1_10': "Natapos mo din! Ngayon, iguhit ang kahit anumang gusto mo! Mga ilang masayang ideya: isang pigurang patpat, snowflake, o spiral. Maaari mo ding subukan ang bagong \"penWidth\" na bloke! Magsaya!"
+        'studio_ec_sandbox': "Lumikha ng sarili mong laro. Kapag tapos ka na, pindutin ang \"Finish\" para masubukan ng iyong mga kaibigan ang laro sa kanilang mga telepono."
     video:
       name:
-        'maze_intro': "Maze Intro"
+        'maze_intro': "Intro ng Maze"
         'artist_intro': "Artist Intro"
         'farmer_intro': "Farmer Intro"
         'flappy_intro': "Flappy Intro"
@@ -315,7 +315,7 @@ fil:
         'loop_for': "Counter Block"
         'parameters': "Mga function na meron mga parameter"
         'hoc_wrapup': "Ang Pagtatapos ng Hour of Code"
-        'Unplug1': 'What is CS?'
+        'Unplug1': 'Ano ang CS?'
         'Unplug2': 'Computational Thinking'
         'Unplug3': 'Graph Paper Programming'
         'Unplug4': 'Mga algorithm'
@@ -323,15 +323,15 @@ fil:
         'Unplug6': 'Mga conditional'
         'Unplug7': 'Songwriting'
         'Unplug8': 'Abstraction'
-        'Unplug9': 'Relay programming'
+        'Unplug9': 'Relay na programming'
         'Unplug10': 'Internet'
         'Unplug11': 'Wrap-up'
         'C1_happy_maps_unplugged': 'Happy Maps'
-        'C1_moveitmoveit_unplugged': 'Move It, Move It'
+        'C1_moveitmoveit_unplugged': 'Galawin ito, Galawin ito'
         'C1_bigevent_unplugged': 'The Big Event'
         'C1_getting_loopy': 'Getting Loopy'
-        'C1_pair_programming': 'Pair Programming'
-        'C1_maze_intro_sequencing': 'Maze Sequencing Intro'
+        'C1_pair_programming': 'Pair programming'
+        'C1_maze_intro_sequencing': 'Intro ng Maze Sequencing'
         'C1_maze_debugging': 'Maze Debugging'
         'C1_bee_level_intro': 'Bee Level - Intro'
         'C1_artist_intro': 'Artist Intro'
@@ -339,19 +339,19 @@ fil:
         'C1_zuck_repeat_loop': 'Maze Loops'
         'C1_bee_loops': 'Bee Loops'
         'C1_maze_loops': 'Maze Loops'
-        'C1_playlab_storytelling': 'Play Lab - Create a Story'
-        'C1_planting_seed': 'Planting a Seed'
+        'C1_playlab_storytelling': 'Plat Lab - Lumikha ng istorya'
+        'C1_planting_seed': 'Pagtanim ng Binhi'
         'C1_building_foundation': 'Gumawa ng Foundation'
         'C1_going_places_safely': 'Matiwasay na pagpunta sa mga lugar'
-        'C2_maze_intro': 'Maze Intro'
+        'C2_maze_intro': 'Intro ng Maze'
         'C2_artist_intro': 'Artist Intro'
         'C2_zuck_repeat_loop': 'Maze Loops'
-        'C2_artist_loops': 'Artist Loops'
-        'C2_artist_debugging': 'Artist Debugging'
+        'C2_artist_loops': 'Mga Loop ng mga Artista'
+        'C2_artist_debugging': 'Artist Debuggings'
         'C2_bee_loops': 'Bee Loops'
         'C2_bee_debugging': 'Bee Debugging'
         'C2_bee_conditionals': 'Bee Conditionals'
-        'C2_playlab_createstory': 'Play Lab - Create a Story'
+        'C2_playlab_createstory': 'Plat Lab - Lumikha ng istorya'
         'C2_graph_paper': 'Graph Paper Programming'
         'C2_conditionals_with_cards': 'Mga conditional'
         'C2_binary_bracelets': 'Binary Bracelets'
@@ -361,42 +361,43 @@ fil:
         'C2_digital_footprint_v2': 'Your Digital Footprint'
         'C3_maze_level_4': 'Maze Loops'
         'C3_artist_intro': 'Artist Intro'
-        'C3_artist_functions': 'Artist Functions'
-        'C3_bee_functions': 'Bee Functions'
+        'C3_artist_functions': 'Functions ng mga Artista'
+        'C3_bee_functions': 'Mga Functions ng Bee'
         'C3_bee_conditionals': 'Bee Conditionals'
-        'C3_maze_conditionals': 'Maze Conditionals'
-        'C3_artist_nested_loops': 'Nested Loops'
+        'C3_maze_conditionals': 'Mga Conditionals ng Maze'
+        'C3_artist_nested_loops': 'Mga Loops na naka-nest'
         'C3_farmer_while': 'While Loops'
-        'C3_bee_nested_loops': 'Nested Loops'
+        'C3_bee_nested_loops': 'Mga Loops na naka-nest'
         'C3_bee_debugging': 'Bee Debugging'
         'C3_bounce': 'Bounce'
-        'C3_playlab_create_game': 'Play Lab - Create a Game'
+        'C3_playlab_create_game': 'Play Lab - Maglikha ng laro'
         'C3_computational_thinking': 'Computational Thinking'
-        'C3_dice_race': 'Dice Race'
+        'C3_dice_race': 'Habulan ng Dice'
         'C3_internet': 'Internet'
         'C3_crowdsourcing': 'Crowdsourcing'
         'C3_functional_suncatchers': 'Functional Suncatchers'
-        'C3_songwriting_with_parameters': 'Songwriting With Parameters'
+        'C3_songwriting_with_parameters': 'Pagsulat ng Awit Gamit ang mga Parameter'
         'C4_intro': 'Panimula'
         'C4_loops_zombie': 'Mga loop'
         'C4_bee_conditional': 'Bee Conditionals'
-        'C4_variables_artist': 'Variables - Artist'
-        'C4_variables_playlab': 'Variables - Play Lab'
+        'C4_variables_artist': 'Mga Variable - Artista'
+        'C4_variables_playlab': 'Mga Variable - Play Lab'
         'C4_for_loops': 'For Loops'
         'C4_for_loops_bee': 'For Loops'
         'C4_for_loops_no_bee': 'For Loops'
-        'C4_math_artist': 'Programming the Artist with Math'
-        'C4_function_edit': 'Editing Functions'
-        'C4_function_create': 'Creating Functions'
+        'C4_math_artist': 'Pagprogram ng Artista gamit ang Matematika'
+        'C4_function_edit': 'Pag-edit ng mga Functions'
+        'C4_function_create': 'Paglikha ng mga Functions'
         'C4_function_parameters': 'Mga function na meron mga parameter'
         'C4_conditionals': 'Mga conditional'
-        'C4_unplugged_algorithms': 'Algorithms with Tangrams'
+        'C4_unplugged_algorithms': 'Mga Algoritmo gamit ang Tangrams'
         'C4_unplugged_madlibs': 'Mad Libs'
-        'C4_unplugged_variables': 'Variables in Envelopes'
+        'C4_unplugged_variables': 'Mga Variables na nasa Sobre'
         'C4_unplugged_forloops': 'For Loops'
-        'C4_unplugged_parameters': 'Songwriting with Parameters'
+        'C4_unplugged_parameters': 'Pagsulat ng Awit na may mga Paremeters'
         'C4_unplugged_binary': 'Binary'
-        'CSF_artist_angles': 'Angles in Artist'
+        'CSF_a_b_artist_loops': 'Loops in Artist'
+        'CSF_artist_angles': 'Anggulo sa Artista'
         'CSF_collector_k1_blocks': 'CS Fundamentals: The Collector'
         'CSF_collector_repeat_loops': 'Collector Repeat Loops'
         'CSF_collector_text_blocks': 'CS Fundamentals: The Collector'
@@ -422,10 +423,15 @@ fil:
         'infinity_playlab_intro': 'Play Lab - Introduction'
         'infinity_playlab_events': 'Play Lab - Events'
         'infinity_playlab_repeat_forever': 'Play Lab - Repeat Forever'
+        'csd_concept_how_computers_work': 'Introducing How Computers Work'
         'csd_concept_computer': 'How Computers Work: What Makes a Computer, a Computer?'
         'csd_concept_binary_data': 'How Computers Work: Binary & Data'
+        'csd_concept_circuits_logic': 'How Computers Work: Circuits & Logic'
+        'csd_concept_memory_cpu_input_output': 'How Computers Work: Memory, CPU, Input, & Output'
+        'csd_concept_hardware_software': 'How Computers Work: Hardware & Software'
         'csd_concept_search': 'How Search Works'
         'csd_external_amazon_data': 'How Big Data Is Used In Amazon Recommendation Systems To Change Our Lives'
+        'csd_external_netflix_data': 'How Does Netflix Make TV Show and Movie Suggestions?'
         'csd_external_waze_data': 'Why Are So Many Users Obsessed With Waze?'
         'csd_gamelab_animation_tab': 'The Animation Tab'
         'csd_gamelab_conditionals_1': 'Introduction to Conditionals - Part 1'
@@ -517,62 +523,62 @@ fil:
         'mc_congrats_share': 'Minecraft - Congratulations'
         'mc_congrats_no_share': 'Minecraft - Congratulations'
         'gumball_intro': 'Gumball Hour of Code - Introduction'
-        'gumball_events': 'Gumball Hour of Code - Events'
-        'gumball_repeat': 'Gumball Hour of Code - Repeat statements'
-        'iceage_intro': 'Ice Age Hour of Code - Introduction'
-        'iceage_events': 'Ice Age Hour of Code - Events'
-        'iceage_repeat': 'Ice Age Hour of Code - Repeat statements'
-        'mc_2016_intro': 'Minecraft Hour of Code - Introduction'
-        'mc_2016_loops': 'Minecraft Hour of Code - Loops'
-        'mc_2016_events': 'Minecraft Hour of Code - Events'
+        'gumball_events': 'Gumball Hour of Code - Mga Pangyayari'
+        'gumball_repeat': 'Gumball Hour of Code - Repeat na mga statements'
+        'iceage_intro': 'Ice Age Hour of Code - Introduksyon'
+        'iceage_events': 'Ice Age Hour of Code - Mga Pangyayari'
+        'iceage_repeat': 'Ice Age Hour of Code - Mga repeat na mga statements'
+        'mc_2016_intro': 'Minecraft Hour of Code - Introduksyon'
+        'mc_2016_loops': 'Minecraft Hour of Code - Mga Loops'
+        'mc_2016_events': 'Minecraft Hour of Code - Mga Pangyayari'
         'mc_2016_spawn': 'Minecraft Hour of Code - Spawn'
-        'mc_2016_congrats': 'Minecraft Hour of Code - Congratulations'
-        'applab_hoc_welcome': 'App Lab Hour of Code - Welcome'
+        'mc_2016_congrats': 'Minecraft Hour of Code - Maligayang bati'
+        'applab_hoc_welcome': 'App Lab Hour of Code - Maligayang Pagdating'
         'applab_hoc_setproperty': 'App Lab Hour of Code - setProperty'
         'applab_hoc_onevent': 'App Lab Hour of Code - onEvent'
         'applab_hoc_designmode': 'AppLab Hour of Code - Design Mode'
-        'applab_hoc_share': 'AppLab Hour of Code - Share'
-        'mc_2017_agent_intro': 'Minecraft Hour of Code - The Agent'
-        'mc_2017_repeat': 'Minecraft Hour of Code - Repeat Loops'
-        'mc_2017_functions': 'Minecraft Hour of Code - Functions'
-        'mc_2017_congratulations': 'Minecraft Hour of Code - Congratulations'
-        'mc_2017_puzzle_1': 'Minecraft Hour of Code - The Agent'
-        'mc_2017_puzzle_3': 'Minecraft Hour of Code - Repeat Loops'
-        'mc_2017_puzzle_8': 'Minecraft Hour of Code - Functions'
-        'mc_2017_puzzle_12': 'Minecraft Hour of Code - Freeplay'
-        'hint_videos_d_11_3_first': 'Hint Videos: D.11.3 First'
-        'hint_videos_d_11_3_last': 'Hint Videos: D.11.3 Last'
-        'hint_videos_d_11_4_first': 'Hint Videos: D.11.4 First'
-        'hint_videos_d_11_4_last': 'Hint Videos: D.11.4 Last'
-        'hint_videos_d_11_5_first': 'Hint Videos: D.11.5 First'
-        'hint_videos_d_11_5_last': 'Hint Videos: D.11.5 Last'
-        'hint_videos_d_11_6_first': 'Hint Videos: D.11.6 First'
-        'hint_videos_d_11_6_last': 'Hint Videos: D.11.6 Last'
-        'hint_videos_d_11_7_first': 'Hint Videos: D.11.7 First'
-        'hint_videos_d_11_7_last': 'Hint Videos: D.11.7 Last'
-        'hint_videos_d_11_9_first': 'Hint Videos: D.11.9 First'
-        'hint_videos_d_11_9_last': 'Hint Videos: D.11.9 Last'
-        'hint_videos_d_11_11_first': 'Hint Videos: D.11.11 First'
-        'hint_videos_d_11_11_last': 'Hint Videos: D.11.11 Last'
-        'applab_intro_welcome': 'App Lab - Getting Started'
-        'applab_intro_events': 'App Lab - Make It Interactive'
-        'applab_intro_sounds': 'App Lab - Images and Sounds'
-        'applab_intro_designmode': 'App Lab - Design Mode'
-        'applab_intro_share': 'App Lab - Share Your App'
+        'applab_hoc_share': 'AppLab Hour of Code - Pagbahagi'
+        'mc_2017_agent_intro': 'Minecraft Hour of Code - Ang Ahente'
+        'mc_2017_repeat': 'Minecraft Hour of Code - ang Repeat na mga Loops'
+        'mc_2017_functions': 'Minecraft Hour of Code - Mga Function'
+        'mc_2017_congratulations': 'Minecraft Hour of Code - Maligayang bati'
+        'mc_2017_puzzle_1': 'Minecraft Hour of Code - Ang Ahente'
+        'mc_2017_puzzle_3': 'Minecraft Hour of Code - ang Repeat na mga Loops'
+        'mc_2017_puzzle_8': 'Minecraft Hour of Code - Mga Function'
+        'mc_2017_puzzle_12': 'Minecraft Hour of Code - Libreng paglaro'
+        'hint_videos_d_11_3_first': 'Pag-udyuk na mga Video: D.11.1 Una'
+        'hint_videos_d_11_3_last': 'Pag-udyuk na mga Video: D.11.3 Huli'
+        'hint_videos_d_11_4_first': 'Pag-udyuk na mga Video: D.11.4 Una'
+        'hint_videos_d_11_4_last': 'Pag-udyuk na mga Video: D.11.4 Huli'
+        'hint_videos_d_11_5_first': 'Pag-udyuk na mga Video: D.11.5 Una'
+        'hint_videos_d_11_5_last': 'Pag-udyuk na mga Video: D.11.5 Huli'
+        'hint_videos_d_11_6_first': 'Pag-udyuk na mga Video: D.11.6 Una'
+        'hint_videos_d_11_6_last': 'Pag-udyuk na mga Video: D.11.1 Huli'
+        'hint_videos_d_11_7_first': 'Pag-udyuk na mga Video: D.11.7 Una'
+        'hint_videos_d_11_7_last': 'Pag-udyuk na mga Video: D.11.7 Huli'
+        'hint_videos_d_11_9_first': 'Pag-udyuk na mga Video: D.11.9 Una'
+        'hint_videos_d_11_9_last': 'Pag-udyuk na mga Video: D.11.9 Huli'
+        'hint_videos_d_11_11_first': 'Pag-udyuk na mga Video: D.11.11 Una'
+        'hint_videos_d_11_11_last': 'Pag-udyuk na mga Video: D.11.11 Huli'
+        'applab_intro_welcome': 'App Lab - Pagsisimula'
+        'applab_intro_events': 'App Lab - Gawin ito na may interaksyon'
+        'applab_intro_sounds': 'App Lab - Mga Larawan at Mga Tunog'
+        'applab_intro_designmode': 'App Lab - Pag-design na Mode'
+        'applab_intro_share': 'App Lab - Ibahagi ang Iyong App'
     callout:
       text:
-        drag_blocks: 'Drag a "move" block and snap it below the other block'
+        drag_blocks: 'Mag-drag ng "move" na bloke at daklutin ito sa baba ng ibang bloke'
         run: 'Pindutin ang "Takbo" upang masubukan ang iyong program'
-        watch_again: 'Click here to watch the video again'
-        gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
-        show_code_explanation: "Click here to see the code for the program you're making"
-        instructions_repeat_explanation: 'The instructions for each puzzle are repeated here'
-        category_explanation: "You have all the same blocks but they've now been arranged in categories"
-        set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
-        studio_say_text: "Type what you want your actor to say within these quotes"
-        jigsaw_click: 'Click this block!'
-        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
-        turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
+        watch_again: 'Mag-click dito para mapanood ulit ang video'
+        gray_block_explanation: "Ang mga bloke na kulay abo ay hindi maaaring burahin. Maaari mo pa rin bang malutas ang palaisipan?"
+        show_code_explanation: "Mag-click dito para makita ang code para sa programa na ginagawa mo"
+        instructions_repeat_explanation: 'Inuulit dito ang mga tagubilin para sa bawat palaisipian'
+        category_explanation: "Mayroon ka sa lahat ng parehong mga bloke ngunit ngayon ay nakaayos na sila ayon sa kategorya"
+        set_sprite_image: 'Maglakip ng "set actor to image" na bloke sa "when story starts" na bloke para mapagana ang mga artista para sa istoryang ito'
+        studio_say_text: "Mag-type kung ano ang gusto mong sabihin ng iyong artisa sa loob ng panlaping ito"
+        jigsaw_click: 'I-click ang blokeng ito!'
+        move_elsa_forward: 'Mag-drag ng "Move Forward" na bloke at daklutin ito sa baba ng "When Run" na bloke para mapasulong si Elsa'
+        turn_elsa: 'Gamitin ang "Turn" na bloke para makaikot si Elsa. Ang bilang na nasa drop-down ang magtutukoy kung ilang ulit iikot si Elsa'
         replace_questions: 'Use the drop-down to replace "???" with a number'
         replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
         repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
@@ -618,22 +624,22 @@ fil:
         add_and_drag_parameter: "Write in the name of your parameter here, click add, and then drag it into your function definition"
         fill_in_actor: "Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)"
         repeat: "Put blocks inside the loop to repeat commands"
-        if_bee_nectar: "Use the \"if\" block to decide if the bee should get nectar"
-        if_else_bee: "Use the \"if/else\" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower"
-        repeat_full_circle: "Enter in the number of times the zombie has to move to make a full circle"
-        place_length_variable: "Drag the length variable here to replace the question marks"
-        arrows_move_actor: "Use the arrows to move the actor"
-        right_arrow_fireball: "Use the right arrow to shoot fireballs"
-        name_function: "Write the name of your function here"
-        Infinity_move_right_runbutton: "Add move block here"
-        Infinity_move_directions_callout: "Which block will make Baymax move up when the up arrow is pressed?"
-        Infinity_move_directions_callout_arrow: "Use these arrows to steer"
-        Infinity_move_collide_callout: "Play a sound when this event occurs."
-        Infinity_repeat_callout: "Place Move blocks inside here"
+        if_bee_nectar: "Gamitin ang \"if\" na bloke para makapagpasya kung kukuha ba ng nektar ang bubuyog"
+        if_else_bee: "Gumamit ng \"if/else\" ba bloke para makakuha si Bee ng nektar mula sa bulaklak, at gawing pulot-pukyutan kung hindi ito bulaklak"
+        repeat_full_circle: "Maglagay ng bilang kung ilang beses ba dapat gumalaw ang zombie para makagawa ng buong bilog"
+        place_length_variable: "I-drag ang haba na variable dito para mapalitan ang mga marka ng tanong"
+        arrows_move_actor: "Gamitin ang mga arrows para pagalawin ang aktor"
+        right_arrow_fireball: "Gamitin ang kanang arrow para makapagbaril ng apoy na mga bola"
+        name_function: "Isulat ang pangalan ng iyong function dito"
+        Infinity_move_right_runbutton: "Magdagdag ng paggalaw na bloke dito"
+        Infinity_move_directions_callout: "Aling bloke ang makapagawa kay Baymax na gumalaw pataas kapag napindot ang up arrow?"
+        Infinity_move_directions_callout_arrow: "Gamitin ang mga arrow na ito para makapaniobra"
+        Infinity_move_collide_callout: "Magpatutog ng isang tunog kapang nangyari na ang kaganapang ito."
+        Infinity_repeat_callout: "Maglagay ng mga Move na bloke sa loob nito"
         craft_run_button_callout: 'Pindutin ang "Takbo" upang masubukan ang iyong program'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: "Repeat actions by placing blocks in here"
-        craft_callout_preplaced_house: "This code will start building your house. Can you finish it?"
-        craft_what_is_iron: "Mine this iron!"
-        craft_callout_moveforward: "This code will check for lava, can you add a command to move forward?"
+        craft_drag_block_callout: 'Mag-drag ng "moveForward();" na bloke at daklutin ito sa ibaba ng ibang bloke'
+        craft_callout_preplaced: "Naglagay tayo ng ilang mga bloke dito para makapagsimula ka"
+        craft_inside_repeat: "Ulitin ang mga aksyon sa pamamagitan ng paglagay ng mga bloke dito"
+        craft_callout_preplaced_house: "Ang code na ito ay magsisimula sa paggawa ng iyong bahay. Matatapos mo ba ito?"
+        craft_what_is_iron: "Minahin ang bakal na ito!"
+        craft_callout_moveforward: "Ang code na ito ay magusuri sa laba, maaari ka bang makadagdag ng utos para makasulong?"

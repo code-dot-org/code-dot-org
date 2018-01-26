@@ -1,5 +1,6 @@
 name 'CSP Algorithms Map'
 css 'unplugged'
+display_name 'Algorithms in Programming'
 markdown <<MARKDOWN
 # Algorithms - Solving Problems
 
@@ -11,77 +12,79 @@ An algorithm is a precise sequence of instructions for a process that completes 
 
 <div style="clear: both"> </div>
 
-<div style="float:right;width:200px">
+<div style="float:right;width:200px;margin-left:20px">
 <img src="https://images.code.org/3f6dc46078eb19ba8885fb6d02fe0203-image-1515092634132.jpg">
 
 By asobuno (Own work) [<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>], <a href="https://commons.wikimedia.org/wiki/File%3ATying_one&#039;s_shoe.jpg">via Wikimedia Commons</a>
+
+<img src="https://images.code.org/a2835a98c80954695d1db19f0d66cf6b-image-1515092970066.jpg" style="float:right;width:200px;margin-bottom:20px;margin-top:20px">
+
+<img src="https://images.code.org/28011d19f50522a3b3b5c563e9a79c37-image-1515091698632.JPG">
+
+By Clem Rutter, Rochester, Kent. (self) [<a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> or <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>], <a href="https://commons.wikimedia.org/wiki/File%3AQSMM_John_Pilling_%26_Son_Loom_2707.JPG">via Wikimedia Commons</a>
 </div>
 
 ## Automating Physical Tasks
 
 **Physical Tasks in Daily Life**
 
-One way to look at your typical day is as a series of tasks you need to complete. For example you'll need to get dressed, pack your things, travel from one place to another, complete work, keep up with friends and family, prepare and eat meals, clean and organize your things, and relax and have fun.
-
-<div style="clear: both"> </div>
-
-<img src="https://images.code.org/a2835a98c80954695d1db19f0d66cf6b-image-1515092970066.jpg" style="float:right;width:200px">
+Daily life is filled with tasks. Most mornings, for example, you'll need to get dressed, pack your things, and then travel from one place to another. Your day at work or school will be filled with tasks to complete. Even keeping up with friends, relaxing, or going to bed includes some tasks if you look closely.
 
 **Automating Tasks**
 
-Over history one of the most significant shifts in how we complete tasks is through automation. Historically humans have invented tools to solve problems. Shovels have helped us dig holes, trucks help us move heavy loads, and writing tools make it much easier to keep track of important information.
+We want to complete most tasks quickly, easily, and reliably. One important way we do this is by identifying step-by-step processes that we know work well. The steps to tie your shoes or the steps of a recipe are examples of processes we use to help us effectively take care of everyday tasks.
 
-With automation instead of just making tools to help us complete tasks, we created tools that essentially did the entire task for us. We invented machines to weave cloth, harvest food, and assemble tools that could complete these tasks with almost no human input at all!
-
-<div style="clear: both"> </div>
-
-<div style="float:right;width:200px">
-<img src="https://images.code.org/28011d19f50522a3b3b5c563e9a79c37-image-1515091698632.JPG">
-
-By Clem Rutter, Rochester, Kent. (self) [<a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> or <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>], <a href="https://commons.wikimedia.org/wiki/File%3AQSMM_John_Pilling_%26_Son_Loom_2707.JPG">via Wikimedia Commons</a>
-</div>
+Processes to complete tasks are powerful because not only can humans use them, so can machines. Automation is the use of machines to complete some task with little to no human intervention, and from agriculture to manufacturing to transportation, it has transformed our society, economy, and daily lives.
 
 **Automation Requires Algorithms**
 
-Automation typically results in tasks that are completed more quickly, easily, and reliably. In order to build a machine to automate a task, however, you need to be able to describe precisely how the task should be completed. For example, you need to know all the steps to make each stitch in a piece of cloth, or exactly how close to one another and at what depth each seed should be planted. These precise steps that automate a task are algorithms!
+At the heart of automation is a well-defined step-by-step process that the machine is completing. A machine to weave cloth, for example, is built to make stitches in a precise way in a precise number of rows using a precise number of threads. In other words, automating a tasks means first identifying the process or **algorithm** your machine will complete. Often a human could use that same algorithm to complete a task, but the machine will typically do so more quickly, easily, and reliably.
 
 <div style="clear: both"> </div>
 
-## Algorithms and Computer Science
+## Algorithms and Information Tasks
 
-<div style="float: right; width: 250px; margin-left: 10px; background-color: #ffffff; color: #0094ca">
-  <img src="https://images.code.org/922f0ea03649c735ae4e27531bb12508-image-1513368088093.00.43 PM.png" style="width: 90%">    
-  <br><br>
-  <em>drawRectangle()</em> and <em>right()</em> are examples of abstraction because they capture the code for more complex behavior and simplify the representation of that behavior by giving it a single name.
-</div>
+**Information Tasks and Tools**
 
-**Tools for Thinking Tasks**
+Many tasks don't require physical work, but they do require thinking. For example, you might need to keep track of money, remember birthdays, or schedule activities. At their core these problems have to do with how we organize and make sense of information. Tools like calendars, clocks, and financial records help us complete these information tasks.
 
-Many of our daily tasks don't involve physical work and instead just require thinking. For example keeping track of money, remembering birthdays, or scheduling activities. Just like physical tasks, thinking tasks can be monotonous or challenging, and so we've made tools to help us complete them. For example calendars, clocks, financial records, and books help us with different thinking tasks. 
+**Automating Information Tasks**
 
-**Programming - Communicating algorithms to a computer**
+Just like physical tasks, many information tasks can be completed using algorithms. For example when you learn the steps to add or multiply two numbers, you're really just using an algorithm for addition or multiplication. The recognition that information tasks could be described algorithmically led to the desire to automate these tasks as well, and eventually, to the creation of the computer.
 
-Thinking tasks deal with information. In order to automate thinking tasks humans needed to design
+## Algorithms, Programming, and Computer Science
 
-Just like with physical tasks, humans want tools to automate their thinking tasks. This is essentially what computers are, information processing tools for automating thinking tasks.
+**The Everything Machine**
 
-Computers 
+Through history machines to automate information tasks usually did only one thing. A machine could track stars in the sky, or add numbers, but couldn't do both. By comparison, a single modern computer can add numbers, show video, communicate over the Internet, and play music. This is clearly a very different type of machine!
 
-A program is a set of instructions to complete some task using the tools made available to you in a programming language. In other words, a program is an algorithm for completing a task. The difference between a computer and human algorithm is the extreme precision of a programming language. Computers require instructions that can only have a single, unambiguous meaning. Computer languages only contain a relatively small set of single individual commands that the computer is capable of running. In order to design an algorithm, you need to combine these commands together.
+**Everything is Numbers**
+
+Many important ideas led to the design of the modern computer. First was the realization that most information can be represented as numbers. In fact, you learned in Units 1 and 2 that text, images, sound and many other pieces of information you can dream up can be represented in some way as binary numbers. This means information problems can be represented in a standardized way.
+
+**Simple Commands**
+
+The next important realization is that information processes can be broken down into a common set of very simple commands. For example those steps might be adding or subtracting two numbers, moving information from one place to the next, or comparing two numbers. Even complex information processes like sorting a list of 1,000,000 names or determining if a picture has a cat in it can be represented on some level as a sequence of these simple commands.
+
+**People Write Algorithms for Computers**
+
+Together these two ideas allow information tasks to be standardized to a degree that a single machine (a computer) could be designed to complete many of them. In order for this to work a computer is first designed to do this small set of low level commands. Next, and most importantly, the computer is designed to let a human being write out their own sequence of commands to control the machine to complete the task at hand. Said another way, a computer is a machine that's designed for a human to write algorithms for it to run!
+
+## Algorithms and Creativity
 
 **Sequence, Selection, Iteration**
 
-Algorithms are created by combining the types of instructions that a computer can complete in three ways. In fact, using these three you can describe ANY algorithm completed by a computer.
+Any programming language only provides so many commands. Algorithms are created by combining these instructions in three ways. In fact, using these three you can describe ANY algorithm completed by a computer. Those three ways are:
 
 * **Sequence:** This is placing commands in an order. When you write a program that runs line by line you are defining the order in which a computer should run the fundamental commands that it understands.
 
 * **Selection:** This is when a computer chooses to run one of two or more sections of code. When you use an if-statement you are making use of selection.
 
-* **Iteration:** Repeating a section of code. In programming this means using a loop.
+* **Iteration:** This is when a computer repeats a section of code. For example you can do this by using a loop.
 
-**Algorithms and Creativity**
+**Algorithms, Programming, and Creativity**
 
-There are many (conceivably infinite) ways to write a program to complete a task. Some may be more efficient or easier to understand than others, but there is typically no single "right" algorithm to complete a task. There also typically isn't an "algorithm for writing algorithms". You need to investigate and understand the problem you are trying to solve, and then get creative with how you'll combine the tools the programming language provides you.
+Even with the limited commands a computer understands and the limited ways you can combine them, there are actually many, conceivably infinite, ways to write a program to complete a task. Some may be more efficient or easier to understand than others, but there is typically no single "right" algorithm to complete a task. There also isn't an "algorithm for writing algorithms". You need to investigate and understand the problem you are trying to solve, and then get creative with how you'll combine the tools the programming language provides you. Computer science is a creative discipline because computers literally require human creativity to do anything at all!
 
 <div style="clear: both"> </div>
 
