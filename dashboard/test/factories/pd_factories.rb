@@ -735,10 +735,9 @@ FactoryGirl.define do
     regional_partner nil
 
     trait :locked do
-      locked_at Time.now
-
       after(:create) do |application|
         application.update!(status: 'accepted')
+        application.lock!
       end
     end
   end
