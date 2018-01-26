@@ -55,7 +55,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
     "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"pirate\",\r\n        \"treasure\",\r\n        \"wall\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"pirate\": {\r\n            \"name\": \"pirate\",\r\n            \"sourceUrl\": \"https://images.code.org/8f7ec18621c97ce98d22337a1e21ddab-image-1470944619234.png\",\r\n            \"frameSize\": {\r\n                \"x\": 62,\r\n                \"y\": 100\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"treasure\": {\r\n            \"name\": \"treasure\",\r\n            \"sourceUrl\": \"https://images.code.org/6b749a05857ea1e88fa46f7e2740c77c-image-1470944619235.png\",\r\n            \"frameSize\": {\r\n                \"x\": 75,\r\n                \"y\": 71\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"wall\": {\r\n            \"name\": \"wall\",\r\n            \"sourceUrl\": \"https://images.code.org/04a7b28f7228570602238fed87420aab-image-1470944619236.png\",\r\n            \"frameSize\": {\r\n                \"x\": 400,\r\n                \"y\": 83\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",

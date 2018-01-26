@@ -74,7 +74,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "show_d_pad": "false",
     "markdown_instructions": "<img src=\"https://images.code.org/eac110e64ccad62482c82d4ef66f237b-image-1465518920408.gif\" style=\"width:300px; float:right\">\r\n# Rotation Direction\r\n\r\nWhen you use the counter pattern for the `rotation` property with addition, the object will always rotate clockwise. Sometimes however you will want your sprite to rotate the other direction. To do this you can just use subtraction!\r\n\r\n# Do This\r\n\r\nThere are three gears set up for you. You need to make the gears all look like they are rotating in sync with each other. \r\n\r\n* Make the gears rotate so they look like they are working as one system.\r\n* **Hint: They won't all rotate the same direction**.",
     "start_blocks": "var blueGear = createSprite(100, 220);\r\nblueGear.setAnimation(\"blue_gear\");\r\n\r\nvar greenGear = createSprite(183, 298);\r\ngreenGear.setAnimation(\"green_gear\");\r\n\r\nvar redGear = createSprite(185, 145);\r\nredGear.setAnimation(\"red_gear\");\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n}",
