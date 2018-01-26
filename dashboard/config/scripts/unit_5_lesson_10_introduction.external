@@ -8,10 +8,16 @@ markdown <<MARKDOWN
 
 ## Background
 
+<div style="float:right; width: 400px">
+
+
 <a href="https://images.code.org/4eb59e2e07f3bb5d86c7d031274ca836-image-1480703334204.png" target="_blank"><img src="https://images.code.org/4eb59e2e07f3bb5d86c7d031274ca836-image-1480703334204.png" style="width: 400px; float: right"></a>
 
-Follow two imaginary characters, Alexis and Michael, as they walk through building an app from scratch - The *Color Sleuth App*.  As you follow the story Alexis and Michael will solve problems and make decisions about how to write the code, but you will do all of the actual code writing.
+<br>(click image above to enlarge)
 
+</div>
+
+Follow two imaginary characters, Alexis and Michael, as they walk through building an app from scratch - The *Color Sleuth App*.  As you follow the story Alexis and Michael will solve problems and make decisions about how to write the code, but you will do all of the actual code writing.
 
 ## Vocabulary
 
@@ -28,10 +34,20 @@ This vocab should be review but it comes up in this lesson
 * Activity: Building an app: *Color Sleuth* walk-through
 * Wrap-up: Gallery Walk and Review the Epilogue
 
+## Introduced Code
+
+* [setProperty()](//docs.code.org/applab/setProperty/)
+* [rgb()](//docs.code.org/gamelab/rgb/)
+
 ## Resources
 
-* Full *Color Sleuth* mock-up diagram (click image above to enlarge).
-* Rubric (TBD)
+* [Color Sleuth Project Rubric](https://docs.google.com/document/d/18aE8jpjd_gHpdrzWUgwtKAeymvtzMnEdDNk6tuJXb_0/export?format=pdf) (copy as [MS Word](https://docs.google.com/document/d/18aE8jpjd_gHpdrzWUgwtKAeymvtzMnEdDNk6tuJXb_0/export?format=doc), [Google Doc](https://docs.google.com/document/d/18aE8jpjd_gHpdrzWUgwtKAeymvtzMnEdDNk6tuJXb_0/copy))
+
+* Explanation of how the final color sleuth project meets the requirements of the AP Create Performance Task
+  
+    * [Color Sleuth and the AP Create PT](https://docs.google.com/document/d/1V3fS8FKixvspuDg2WRrBCGIwWlgJQ3XVdsjremCNxTU/export?format=pdf) - AP Explanation (copy as [MS Word](https://docs.google.com/document/d/1V3fS8FKixvspuDg2WRrBCGIwWlgJQ3XVdsjremCNxTU/export?format=doc), [Google Doc](https://docs.google.com/document/d/1V3fS8FKixvspuDg2WRrBCGIwWlgJQ3XVdsjremCNxTU/copy))
+
+
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

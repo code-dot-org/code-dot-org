@@ -248,31 +248,33 @@ function importProject() {
       return;
     }
 
-    let shareUrl;
+    let sharePath;
     try {
-      shareUrl = new URL(shareLink);
+      const anchor = document.createElement('a');
+      anchor.href = shareLink;
+      sharePath = anchor.pathname;
     } catch (e) {
       // a shareLink that does not represent a valid URL will throw a TypeError
       Craft.showErrorMessagePopup(dashboard.i18n.t('project.share_link_import_bad_link_header'), dashboard.i18n.t('project.share_link_import_bad_link_body'));
       return;
     }
 
-    const legacyShareRegex = /^\/c\/([^\/]*)/;
-    const obfuscatedShareRegex = /^\/r\/([^\/]*)/;
-    const projectShareRegex = /^\/projects\/minecraft_hero\/([^\/]*)/;
+    const legacyShareRegex = /^\/?c\/([^\/]*)/;
+    const obfuscatedShareRegex = /^\/?r\/([^\/]*)/;
+    const projectShareRegex = /^\/?projects\/minecraft_hero\/([^\/]*)/;
 
     let levelSourcePath, channelId;
 
     // Try a couple different kinds of share links, resolving to either a level
     // source or channel
-    if (shareUrl.pathname.match(legacyShareRegex)) {
-      const levelSourceId = shareUrl.pathname.match(legacyShareRegex)[1];
+    if (sharePath.match(legacyShareRegex)) {
+      const levelSourceId = sharePath.match(legacyShareRegex)[1];
       levelSourcePath = `/c/${levelSourceId}.json`;
-    } else if (shareUrl.pathname.match(obfuscatedShareRegex)) {
-      const levelSourceId = shareUrl.pathname.match(obfuscatedShareRegex)[1];
+    } else if (sharePath.match(obfuscatedShareRegex)) {
+      const levelSourceId = sharePath.match(obfuscatedShareRegex)[1];
       levelSourcePath = `/r/${levelSourceId}.json`;
-    } else if (shareUrl.pathname.match(projectShareRegex)) {
-      channelId = shareUrl.pathname.match(projectShareRegex)[1];
+    } else if (sharePath.match(projectShareRegex)) {
+      channelId = sharePath.match(projectShareRegex)[1];
     }
 
     const onFinish = function (source) {

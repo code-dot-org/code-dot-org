@@ -32,6 +32,7 @@ require 'cdo/infra_production_topic'
 require 'cdo/infra_test_topic'
 require 'cdo/rake_utils'
 require 'cdo/only_one'
+require 'cdo/metrics_helper'
 
 STARTED = 'build-started'.freeze
 S3_LOGS_BUCKET = 'cdo-build-logs'.freeze
@@ -181,6 +182,7 @@ def mark_dtt_green
 
   DevelopersTopic.set_dtt 'yes'
   InfraTestTopic.set_green_commit test_branch_sha
+  Metrics.write_metric('dtt_green', test_branch_sha, Metrics::AUTOMATIC)
 end
 
 def emit_deploy_metric(deployment_stage, successful)

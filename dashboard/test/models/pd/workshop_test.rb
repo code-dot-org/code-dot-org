@@ -353,6 +353,26 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       Pd::Workshop.scheduled_start_on_or_after(pivot_date).scheduled_start_on_or_before(pivot_date).pluck(:id)
   end
 
+  test 'future scope' do
+    future_workshops = [
+      # Today
+      create(:pd_workshop, num_sessions: 1, sessions_from: Date.today),
+
+      # Next week
+      create(:pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.week)
+    ]
+
+    # Excluded (not future) workshops:
+    # Last week
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today - 1.week
+    # Today, but ended
+    create :pd_ended_workshop, num_sessions: 1, sessions_from: Date.today
+    # Next week, but ended
+    create :pd_ended_workshop, num_sessions: 1, sessions_from: Date.today + 1.week
+
+    assert_equal future_workshops, Pd::Workshop.future
+  end
+
   test 'end date filters' do
     pivot_date = Date.today
     workshop_before = create :pd_workshop, ended_at: pivot_date - 1.week
@@ -686,11 +706,13 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.process_location
     assert_nil @workshop.processed_location
 
-    # Don't bother looking up blank addresses
-    Geocoder.expects(:search).never
-    @workshop.location_address = ''
-    @workshop.process_location
-    assert_nil @workshop.processed_location
+    # Don't bother looking up blank addresses or TBA/TBDs
+    ['', 'tba', 'TBA', 'tbd', 'N/A'].each do |address|
+      Geocoder.expects(:search).never
+      @workshop.location_address = address
+      @workshop.process_location
+      assert_nil @workshop.processed_location
+    end
 
     # Retry on errors
     Geocoder.expects(:search).with('1501 4th Ave, Seattle WA').raises(SocketError).then.returns(mock_geocoder_result).twice
@@ -782,6 +804,39 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'friendly date range different months' do
     workshop = create :pd_workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30)
     assert_equal 'March 30 - April 3, 2017', workshop.friendly_date_range
+  end
+
+  test 'date_and_location_name with processed location and sessions' do
+    workshop = create :pd_workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
+      processed_location: {city: 'Seattle', state: 'WA'}.to_json
+
+    assert_equal 'March 30 - April 3, 2017, Seattle WA', workshop.date_and_location_name
+  end
+
+  test 'date_and_location_name with processed location but no sessions' do
+    workshop = create :pd_workshop, processed_location: {city: 'Seattle', state: 'WA'}.to_json
+
+    assert_equal 'Dates TBA, Seattle WA', workshop.date_and_location_name
+  end
+
+  test 'date_and_location_name with no location but with sessions' do
+    workshop = create :pd_workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
+      processed_location: nil
+
+    assert_equal 'March 30 - April 3, 2017, Location TBA', workshop.date_and_location_name
+  end
+
+  test 'date_and_location_name with no location nor sessions' do
+    workshop = create :pd_workshop, processed_location: nil
+
+    assert_equal 'Dates TBA, Location TBA', workshop.date_and_location_name
+  end
+
+  test 'date_and_location_name for teachercon' do
+    workshop = create :pd_workshop, :teachercon, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
+      processed_location: {city: 'Seattle', state: 'WA'}.to_json
+
+    assert_equal 'March 30 - April 3, 2017, Seattle WA TeacherCon', workshop.date_and_location_name
   end
 
   private

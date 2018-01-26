@@ -2,13 +2,14 @@ import React from 'react';
 import {expect} from 'chai';
 import Section4SummerWorkshop from '@cdo/apps/code-studio/pd/application/teacher1819/Section4SummerWorkshop';
 import {PROGRAM_CSD, PROGRAM_CSP} from '@cdo/apps/code-studio/pd/application/teacher1819/TeacherApplicationConstants';
+import {TextFields} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
 
 const options = {
   committed: [
     'Yes',
-    'No (please explain):'
+    'No (Please Explain):'
   ],
   willingToTravel: [
     'Less than 10 miles',
@@ -24,8 +25,6 @@ const options = {
 };
 
 const ABLE_TO_ATTEND_SINGLE = "Yes, I'm able to attend";
-const UNABLE_TO_ATTEND_SINGLE = "No, I'm unable to attend (please explain):";
-const UNABLE_TO_ATTEND_MULTIPLE = "No (please explain):";
 
 const assignedWorkshops = [
   {id: 101, dates: 'January 15-19, 2018', location: 'Seattle, WA'},
@@ -186,7 +185,7 @@ describe("Section4SummerWorkshop", () => {
 
       it("Initially loads alternate workshops when unable to attend", () => {
         const section4 = mountSection4WithAssignedWorkshop({
-          ableToAttendSingle: UNABLE_TO_ATTEND_SINGLE
+          ableToAttendSingle: TextFields.unableToAttend
         });
 
         expect(section4.state().loadingAlternateWorkshops).to.be.true;
@@ -227,7 +226,7 @@ describe("Section4SummerWorkshop", () => {
         });
 
         it("Loads alternate workshops when no is selected", () => {
-          section4.instance().handleChange({ableToAttendSingle: UNABLE_TO_ATTEND_SINGLE});
+          section4.instance().handleChange({ableToAttendSingle: TextFields.unableToAttend});
           expect(section4.state().loadingAlternateWorkshops).to.be.true;
           expect(server.requests).to.have.length(1);
           setServerResponse(
@@ -270,7 +269,7 @@ describe("Section4SummerWorkshop", () => {
 
       it("Initially loads alternate workshops when unable to attend", () => {
         const section4 = mountSection4WithAssignedWorkshops({
-          ableToAttendMultiple: [UNABLE_TO_ATTEND_MULTIPLE]
+          ableToAttendMultiple: [TextFields.noExplain]
         });
 
         expect(section4.state().loadingAlternateWorkshops).to.be.true;
@@ -311,7 +310,7 @@ describe("Section4SummerWorkshop", () => {
         });
 
         it("Loads alternate workshops when no is selected", () => {
-          section4.instance().handleChange({ableToAttendMultiple: [UNABLE_TO_ATTEND_MULTIPLE]});
+          section4.instance().handleChange({ableToAttendMultiple: [TextFields.noExplain]});
           expect(section4.state().loadingAlternateWorkshops).to.be.true;
           expect(server.requests).to.have.length(1);
           setServerResponse(
@@ -459,7 +458,7 @@ describe("Section4SummerWorkshop", () => {
           regionalPartnerId: 123,
           regionalPartnerGroup: 1,
           regionalPartnerWorkshopIds: [101],
-          ableToAttendSingle: UNABLE_TO_ATTEND_SINGLE
+          ableToAttendSingle: TextFields.unableToAttend
         },
         state: {
           partnerWorkshops: [assignedWorkshops[0]],

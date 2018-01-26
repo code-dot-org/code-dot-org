@@ -123,7 +123,7 @@ class DropletCodeToggle extends Component {
       this.forceUpdate();
       this.props.onToggle(studioApp().currentlyUsingBlocks());
     }
-  }
+  };
 
   onClick = () => {
     this.toggle();
@@ -134,7 +134,7 @@ class DropletCodeToggle extends Component {
         level_id: studioApp().config.level.id,
       }
     );
-  }
+  };
 
   render() {
     return (
@@ -161,7 +161,7 @@ class BlocklyShowCodeButton extends Component {
   onClick = () => {
     studioApp().showGeneratedCode();
     this.props.onToggle(true);
-  }
+  };
 
   render() {
     return (

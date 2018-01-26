@@ -88,6 +88,7 @@ class Visualization extends React.Component {
         <div
           id="designModeViz"
           className="appModern"
+          tabIndex="1"
           style={commonStyles.hidden}
         />
         <VisualizationOverlay width={appWidth} height={appHeight}>

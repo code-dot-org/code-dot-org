@@ -74,7 +74,8 @@ class ProgressLesson extends React.Component {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     showLockIcon: PropTypes.bool.isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
-    lessonLockedForSection: PropTypes.func.isRequired
+    lessonLockedForSection: PropTypes.func.isRequired,
+    selectedSectionId: PropTypes.string,
   };
 
   constructor(props) {
@@ -108,7 +109,8 @@ class ProgressLesson extends React.Component {
       viewAs,
       showLockIcon,
       lessonIsVisible,
-      lessonLockedForSection
+      lessonLockedForSection,
+      selectedSectionId,
     } = this.props;
 
     if (!lessonIsVisible(lesson, viewAs)) {
@@ -190,6 +192,7 @@ class ProgressLesson extends React.Component {
               description={description}
               levels={levels}
               disabled={locked && viewAs !== ViewType.Teacher}
+              selectedSectionId={selectedSectionId}
             />
           }
         </div>
@@ -210,5 +213,6 @@ export default connect(state => ({
   viewAs: state.viewAs,
   showLockIcon: !!state.teacherSections.selectedSectionId || state.viewAs === ViewType.Student,
   lessonLockedForSection: lessonId => lessonIsLockedForAllStudents(lessonId, state),
-  lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
+  lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
+  selectedSectionId: state.teacherSections.selectedSectionId,
 }))(ProgressLesson);

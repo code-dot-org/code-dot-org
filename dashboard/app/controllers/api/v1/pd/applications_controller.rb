@@ -1,8 +1,9 @@
 class Api::V1::Pd::ApplicationsController < ::ApplicationController
   load_and_authorize_resource class: 'Pd::Application::ApplicationBase'
 
-  # This must be included after load_and_authorize_resource so the auth callback runs first
+  # Api::CsvDownload must be included after load_and_authorize_resource so the auth callback runs first
   include Api::CsvDownload
+  include Pd::Application::ApplicationConstants
 
   REGIONAL_PARTNERS_ALL = "all"
   REGIONAL_PARTNERS_NONE = "none"
@@ -44,6 +45,10 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
   def quick_view
     role = params[:role].to_sym
     applications = get_applications_by_role(role)
+
+    unless params[:regional_partner_filter].blank? || params[:regional_partner_filter] == 'all'
+      applications = applications.where(regional_partner_id: params[:regional_partner_filter] == 'none' ? nil : params[:regional_partner_filter])
+    end
 
     respond_to do |format|
       format.json do
@@ -101,11 +106,24 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     @application.update!(application_data)
 
     # only allow those with full management permission to lock or unlock
-    if application_params.key?(:locked) && can?(:manage, @application)
+    if application_params.key?(:locked) && current_user.workshop_admin?
       application_params[:locked] ? @application.lock! : @application.unlock!
     end
 
     render json: @application, serializer: Api::V1::Pd::ApplicationSerializer
+  end
+
+  # GET /api/v1/pd/applications/search
+  def search
+    email = params[:email]
+    user = User.find_by_email email
+    filtered_applications = @applications.where(
+      application_year: YEAR_18_19,
+      application_type: [TEACHER_APPLICATION, FACILITATOR_APPLICATION],
+      user: user
+    )
+
+    render json: filtered_applications, each_serializer: Api::V1::Pd::ApplicationSearchSerializer
   end
 
   private

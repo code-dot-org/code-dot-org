@@ -11,6 +11,12 @@ module Api::V1::Pd::Application
     protected
 
     def on_successful_create
+      workshop = @application.find_default_workshop
+      @application.pd_workshop_id = workshop.id if workshop
+
+      fit_workshop = @application.find_default_fit_workshop
+      @application.fit_workshop_id = fit_workshop.id if fit_workshop
+
       ::Pd::Application::Facilitator1819ApplicationMailer.confirmation(@application).deliver_now
     end
   end

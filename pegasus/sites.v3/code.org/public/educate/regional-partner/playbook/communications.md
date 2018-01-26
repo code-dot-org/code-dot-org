@@ -9,6 +9,7 @@ nav: regional_partner_playbook_nav
 ## Table of contents
 
 - [Weekly Newsletter Archive](#archive)
+- [Regional Partner Advisory Committee Meeting Notes](#adcom)
 - [Communication to teachers from Code.org](#code.org)
 - [Workshop communications](#workshop)
 - [Tips for writing an awesome email](#tips)
@@ -23,6 +24,17 @@ ________________
 Each week we send out an email with important action items, new collateral, CS Education news, etc. View the [Group 1 weekly emails](https://docs.google.com/document/d/1suhDTctEfeGnXY4shwWqBmb8dIXZ603RkVfqPuVPbnU/edit?usp=sharing), [Group 2 weekly emails](https://docs.google.com/document/d/1Z1gXtCTU5Veih9gAxLw4VsAHeSC4HA_A70O1VWH_ZZI/edit?usp=sharing) and the [Group 3 weekly emails](https://docs.google.com/document/d/1DThTQqcD6Rvvl0KTeH3sRIt-sKkDGlPRzixbe55q4gc/edit).
 
 <br/>
+________________
+<a id="adcom"></a>
+<br/>
+<br/>
+
+## Regional Partner Advisory Committee Meeting Notes
+See an archive of meeting notes by the advisory committee [here](https://docs.google.com/document/d/1shHp3dzUXZoN_tmqfjhLhbHjK2t4NgF3qtIWJyWldyQ/edit?usp=sharing).
+
+<br/>
+<br/>
+[**Back to the top**](#top)
 ________________
 <a id="code.org"></a>
 <br/>
@@ -60,7 +72,7 @@ There are two types of emails regarding logistical information for locally hoste
 	- Workshop Sign Up Confirmations will be automatically sent to a teacher that signs up for a workshop.
 	- Workshop Reminder Emails will be automatically sent to every teacher that is signed up for a workshop 10 and 3 calendar days before it begins. These include details from the workshop dashboard about the location, dates, parking information and what to bring to the workshop.
 
-In addition to workshop communications, partners may also be responsible for various communications in the teacher and facilitator applications process. Up to date information can be found in the 2018 Teacher Application Process Document (*Link to be added on Dec 13, 2017*) and the [2018 Facilitator Application Process Document](https://docs.google.com/document/d/11-I1qsTrvODrZgKDNP2frGLrMjmUb-C9ChOt7nbqV2Y/edit#).
+In addition to workshop communications, partners may also be responsible for various communications in the teacher and facilitator applications process. Up to date information can be found in the [2018 Teacher Application Process Document](https://docs.google.com/document/d/10fGyKGqX9ybLn8zaSDFcYZWdIsGELFflLsNyi1llbtM/edit) and the [2018 Facilitator Application Process Document](https://docs.google.com/document/d/11-I1qsTrvODrZgKDNP2frGLrMjmUb-C9ChOt7nbqV2Y/edit#).
 
 <br/>
 [**Back to the top**](#top)

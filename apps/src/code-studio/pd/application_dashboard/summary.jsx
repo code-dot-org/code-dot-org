@@ -6,6 +6,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import SummaryTable from './summary_table';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
+import ApplicantSearch from './applicant_search';
 import Spinner from '../components/spinner';
 import {
   UnmatchedFilter,
@@ -17,10 +18,6 @@ export class Summary extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string.isRequired,
     isWorkshopAdmin: PropTypes.bool
-  }
-
-  static contextTypes = {
-    router: PropTypes.object.isRequired
   };
 
   state = {
@@ -66,6 +63,7 @@ export class Summary extends React.Component {
     }
     return (
       <div>
+        <ApplicantSearch/>
         {this.props.isWorkshopAdmin &&
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}

@@ -256,6 +256,9 @@ class Pd::Workshop < ActiveRecord::Base
     joins(:sessions).group_by_id.having('(DATE(MIN(start)) >= ?)', date)
   end
 
+  # Filters to workshops that are scheduled on or after today and have not yet ended
+  scope :future, -> {scheduled_start_on_or_after(Time.zone.today).where(ended_at: nil)}
+
   # Orders by the scheduled start date (date of the first session),
   # @param :desc [Boolean] optional - when true, sort descending
   def self.order_by_scheduled_start(desc: false)
@@ -340,6 +343,13 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.first.start.month == sessions.last.start.month ?
       "#{sessions.first.start.strftime('%B %-d')}-#{sessions.last.start.strftime('%-d, %Y')}" :
       "#{sessions.first.start.strftime('%B %-d')} - #{sessions.last.start.strftime('%B %-d, %Y')}"
+  end
+
+  def date_and_location_name
+    date_string = sessions.any? ? friendly_date_range : 'Dates TBA'
+    location_string = processed_location ? "#{location_city} #{location_state}" : 'Location TBA'
+
+    "#{date_string}, #{location_string}#{teachercon? ? ' TeacherCon' : ''}"
   end
 
   # Puts workshop in 'In Progress' state
@@ -466,7 +476,7 @@ class Pd::Workshop < ActiveRecord::Base
   def process_location
     result = nil
 
-    unless location_address.blank?
+    unless location_address.blank? || %w(tba tbd n/a).include?(location_address.downcase)
       begin
         Geocoder.with_errors do
           # Geocoder can raise a number of errors including SocketError, with a common base of StandardError

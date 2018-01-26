@@ -2,7 +2,8 @@ import $ from 'jquery';
 import React, {PropTypes} from 'react';
 import trackEvent from '../../util/trackEvent';
 
-// TODO (brent) - could we also use this instead of what we have in sharing.html.ejs?
+// Similar UI exists in sharing.html.ejs. At some point int he future, it may
+// make sense to see if we can get rid of the stuff in the .ejs file
 
 const SendState = {
   invalidVal: 'invalidVal',

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180110233855) do
+ActiveRecord::Schema.define(version: 20180123201751) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -583,6 +583,14 @@ ActiveRecord::Schema.define(version: 20180110233855) do
     t.index ["user_id"], name: "index_pd_facilitator_teachercon_attendances_on_user_id", using: :btree
   end
 
+  create_table "pd_fit_weekend1819_registrations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "pd_application_id"
+    t.text     "form_data",         limit: 65535
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.index ["pd_application_id"], name: "index_pd_fit_weekend1819_registrations_on_pd_application_id", using: :btree
+  end
+
   create_table "pd_payment_terms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "regional_partner_id",               null: false
     t.date     "start_date",                        null: false
@@ -987,7 +995,7 @@ ActiveRecord::Schema.define(version: 20180110233855) do
     t.string   "address_line3",      limit: 30,                                      comment: "Location address, street 3"
     t.decimal  "latitude",                      precision: 8, scale: 6,              comment: "Location latitude"
     t.decimal  "longitude",                     precision: 9, scale: 6,              comment: "Location longitude"
-    t.string   "state_school_id",    limit: 11
+    t.string   "state_school_id"
     t.index ["id"], name: "index_schools_on_id", unique: true, using: :btree
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id", using: :btree
@@ -1117,11 +1125,11 @@ ActiveRecord::Schema.define(version: 20180110233855) do
   end
 
   create_table "state_cs_offerings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "state_school_id", limit: 11, null: false
-    t.string   "course",                     null: false
-    t.integer  "school_year",     limit: 2,  null: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.string   "state_school_id",           null: false
+    t.string   "course",                    null: false
+    t.integer  "school_year",     limit: 2, null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.index ["state_school_id", "school_year", "course"], name: "index_state_cs_offerings_on_id_and_year_and_course", unique: true, using: :btree
   end
 
