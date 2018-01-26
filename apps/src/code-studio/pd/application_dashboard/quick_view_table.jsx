@@ -145,6 +145,12 @@ export class QuickViewTable extends React.Component {
     return columns;
   }
 
+  constructRows() {
+    let rows = this.props.data;
+    rows = this.props.statusFilter ? rows.filter(row => row.status === this.props.statusFilter) : rows;
+    return rows;
+  }
+
   formatNotesTooltip = (notes) => {
     let tooltipId = _.uniqueId();
     return (
@@ -187,7 +193,7 @@ export class QuickViewTable extends React.Component {
   };
 
   render() {
-    const rows = this.props.data;
+    const rows = this.constructRows();
     const columns = this.constructColumns();
 
     return (
