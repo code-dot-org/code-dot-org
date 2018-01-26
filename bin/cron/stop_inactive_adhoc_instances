@@ -7,6 +7,7 @@ require 'cdo/chat_client'
 StackStatus = Struct.new(
   :name,
   :cloudformation_status,
+  :creation_time,
   :activity,
   :current_instance_status,
   :previous_instance_status,
@@ -16,6 +17,16 @@ StackStatus = Struct.new(
 # set to :warn to notify that an adhoc environment should be stopped due to inactivity
 # set to :stop_instance to stop inactive instances
 EXECUTION_MODE = :warn
+
+# number of http requests received by environment within activity period
+# below which environment is considered to be inactive
+ACTIVITY_THRESHOLD = 1000
+
+# window of time within activity is measured
+ACTIVITY_PERIOD_DAYS = 7
+
+# no activity is required within the last few days to protect new instances from being terminated
+GRACE_PERIOD_DAYS = 3
 
 # This script stops AWS EC2 instances being used to run adhoc environments if they have not been used recently:
 #
@@ -37,7 +48,7 @@ def main
   # get CloudFormation stacks that start with the name "adhoc-"
   cloudformation_resource.stacks.select {|stack| stack.name.starts_with?('adhoc-')}.each do |stack|
     begin
-      status = StackStatus.new(stack.name, stack.stack_status)
+      status = StackStatus.new(stack.name, stack.stack_status, stack.creation_time)
 
       # get Unicorn active HTTP request count CloudWatch metric for the current adhoc stack
       metric = Aws::CloudWatch::Metric.new(namespace: 'Unicorn', name: 'active', client: cloudwatch_client)
@@ -53,9 +64,9 @@ def main
               value: "#{stack.name}.cdn-code.org",
             }
           ],
-          start_time: Time.now - (10 * 24 * 60 * 60), # 10 days ago
-          end_time: Time.now,
-          period: 10 * 24 * 60 * 60,
+          start_time: Time.now - (ACTIVITY_PERIOD_DAYS + GRACE_PERIOD_DAYS).days,
+          end_time: Time.now - GRACE_PERIOD_DAYS.days,
+          period: ACTIVITY_PERIOD_DAYS.days,
           statistics: ['Sum'],
           unit: 'Count'
         }
@@ -68,7 +79,7 @@ def main
       status[:previous_instance_status] = instance.state.name
 
       # stop instances with activity below threshold if they are running (state code == 16)
-      if total_http_requests.between?(1, 1000) && instance.state.code == 16
+      if total_http_requests.between?(1, ACTIVITY_THRESHOLD) && instance.state.code == 16
         puts "Stopping EC2 instance - #{instance.id} - for Stack - #{stack.name} - due to inactivity"
         stop_result = instance.stop(
           {
@@ -85,13 +96,13 @@ def main
 
     rescue StandardError => error
       puts error
-      # status[:current_instance_status] = instance.reload.state.name
+      status[:current_instance_status] = instance.try(:reload).state.name
       status[:instance_status_change_reason] = error.to_s
     ensure
       job_status.push(status)
     end
   end
-  puts job_status.to_json
+  puts job_status.sort! {|a, b|  a.creation_time <=> b.creation_time}.to_json
   ChatClient.message 'cron-daily', 'Publish job results / status herrr.'
 end
 
