@@ -16,13 +16,10 @@ const styles = {
   },
   commonThumbnail: {
     borderRadius: 5,
-    height: 40,
-    width: 'auto',
-    paddingLeft: 27,
-    paddingRight: 27,
+    paddingLeft: 26,
+    paddingRight: 26,
     paddingTop: 16,
     paddingBottom: 9,
-    marginLeft: 5
   },
   commonIcon: {
     fontSize: 22,
@@ -33,6 +30,9 @@ const styles = {
   resourceIcon: {
     color: color.teal
   },
+  resourceStyle: {
+    margin: 8
+  }
 };
 
 class ResourceLink extends React.Component {
@@ -49,7 +49,7 @@ class ResourceLink extends React.Component {
 
     return (
       <a>
-        <div>
+        <div style={styles.resourceStyle}>
           <span style={thumbnailStyle}>
               <i style={iconStyle} className={map ? "fa fa-map" : "fa fa-book"}/>
           </span>
