@@ -864,4 +864,56 @@ FactoryGirl.define do
     association :pd_application, factory: :pd_teacher1819_application
     form_data {build(:pd_teachercon1819_registration_hash, hash_trait).to_json}
   end
+
+  factory :pd_fit_weekend1819_registration_hash, class: 'Hash' do
+    # default to declined
+    initialize_with do
+      {
+        email: "ssnape@hogwarts.edu",
+        preferredFirstName: "Sevvy",
+        lastName: "Snape",
+        phone: "5558675309",
+        ableToAttend: "No"
+      }.stringify_keys
+    end
+
+    trait :declined do
+      # declined is the default, trait included here just for completeness
+    end
+
+    trait :accepted do
+      after :build do |hash|
+        hash.merge!(
+          {
+            ableToAttend: "Yes",
+            addressCity: "Albuquerque",
+            addressState: "Alabama",
+            addressStreet: "123 Street Ave",
+            addressZip: "12345",
+            agreeShareContact: true,
+            contactFirstName: "Dumble",
+            contactLastName: "Dore",
+            contactPhone: "1597534862",
+            contactRelationship: "it's complicated",
+            dietaryNeeds: "Food Allergy",
+            dietaryNeeds_food_allergy_details: "memories",
+            howTraveling: "Amtrak or regional train service",
+            liabilityWaiver: "Yes",
+            liveFarAway: "Yes",
+            needHotel: "No",
+            photoRelease: "Yes",
+          }.stringify_keys
+        )
+      end
+    end
+  end
+
+  factory :pd_fit_weekend1819_registration, class: 'Pd::FitWeekend1819Registration' do
+    transient do
+      status :accepted
+    end
+
+    association :pd_application, factory: :pd_facilitator1819_application
+    form_data {build(:pd_fit_weekend1819_registration_hash, status).to_json}
+  end
 end

@@ -24,6 +24,12 @@ export default class FormComponent extends React.Component {
 
   /**
    * Override in derived classes
+   * Used by FormController to map field errors to their appropriate page
+   */
+  static associatedFields = [];
+
+  /**
+   * Override in derived classes
    * @param {Object} data - form data
    * @returns {String[]} - list of dynamic required fields based on other responses in this page
    */
