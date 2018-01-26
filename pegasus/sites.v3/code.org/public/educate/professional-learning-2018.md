@@ -66,6 +66,8 @@ The program supports teachers with diverse teaching backgrounds as they prepare 
 <p>
 <br>
 We are a nonprofit dedicated to helping schools teach computer science. In most states, our professional learning is offered at *no cost to you or your school*.
+
+In New York and North Carolina, there is a fee to cover the costs of the workshop. But, we have worked with many school districts in these regions and they have allocated funds to cover the costs for you and your school. If your principal or administration has any questions around the costs to support this, please encourage them to reach out to our partners in <a href="mailto:programs@codeinteractive.org">New York</a> and <a href="mailto:srmorri3@ncsu.edu">North Carolina</a> so we can help you.
 </p>
 </details>
 

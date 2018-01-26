@@ -733,6 +733,13 @@ FactoryGirl.define do
     form_data {build(:pd_teacher1819_application_hash, program: Pd::Application::Teacher1819Application::PROGRAMS[course.to_sym]).to_json}
     application_guid nil
     regional_partner nil
+
+    trait :locked do
+      after(:create) do |application|
+        application.update!(status: 'accepted')
+        application.lock!
+      end
+    end
   end
 
   factory :pd_principal_approval1819_application_hash, class: 'Hash' do
