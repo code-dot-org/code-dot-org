@@ -645,10 +645,14 @@ export default class JSInterpreter {
         return;
       }
     }
-    if (reachedBreak && atMaxSpeed) {
-      // If we were running atMaxSpeed and just reached a breakpoint, the
-      // code may not be selected in the editor, so do it now:
-      this.selectCurrentCode();
+    if (atMaxSpeed) {
+      if (reachedBreak) {
+        // If we were running atMaxSpeed and just reached a breakpoint, the
+        // code may not be selected in the editor, so do it now:
+        this.selectCurrentCode();
+      } else {
+        codegen.clearDropletAceHighlighting(this.studioApp.editor);
+      }
     }
     this.isExecuting = false;
   }
