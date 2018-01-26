@@ -39,7 +39,7 @@ CSV.open('ap-school-code-map-deduped.csv', 'w') do |csv|
 
   ap_code_matches.each do |school_code, match_set|
     if match_set.matches.length > 1
-      puts "Which of these best matches \"#{match.ap_name}\"?"
+      puts "Which of these best matches \"#{match_set.ap_name}\"?"
       match_set.matches.each_with_index do |match, index|
         puts "#{index}: \"#{match[:school_name]}\""
       end
