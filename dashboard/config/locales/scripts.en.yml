@@ -6892,6 +6892,8 @@ en:
           stages:
             special valentine:
               name: special valentine
+            Valentine Puzzles:
+              name: Valentine Puzzles
           title: Valentine Special
           description_audience: ''
           description_short: Have fun creating valentines
