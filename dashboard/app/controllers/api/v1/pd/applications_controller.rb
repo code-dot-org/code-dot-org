@@ -1,8 +1,9 @@
 class Api::V1::Pd::ApplicationsController < ::ApplicationController
   load_and_authorize_resource class: 'Pd::Application::ApplicationBase'
 
-  # This must be included after load_and_authorize_resource so the auth callback runs first
+  # Api::CsvDownload must be included after load_and_authorize_resource so the auth callback runs first
   include Api::CsvDownload
+  include Pd::Application::ApplicationConstants
 
   REGIONAL_PARTNERS_ALL = "all"
   REGIONAL_PARTNERS_NONE = "none"
@@ -110,6 +111,19 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     end
 
     render json: @application, serializer: Api::V1::Pd::ApplicationSerializer
+  end
+
+  # GET /api/v1/pd/applications/search
+  def search
+    email = params[:email]
+    user = User.find_by_email email
+    filtered_applications = @applications.where(
+      application_year: YEAR_18_19,
+      application_type: [TEACHER_APPLICATION, FACILITATOR_APPLICATION],
+      user: user
+    )
+
+    render json: filtered_applications, each_serializer: Api::V1::Pd::ApplicationSearchSerializer
   end
 
   private
