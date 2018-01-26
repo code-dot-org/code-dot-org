@@ -1,6 +1,6 @@
 require 'cdo/env'
 require 'cdo/properties'
-
+x
 # The controller for reports of internal admin-only data.
 class AdminReportsController < ApplicationController
   before_action :authenticate_user!
