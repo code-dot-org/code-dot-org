@@ -31,7 +31,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "start_animations": "{\n    \"orderedKeys\": [\n        \"balloon\",\n        \"pop\"\n    ],\n    \"propsByKey\": {\n        \"balloon\": {\n            \"name\": \"balloon\",\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/balloon.png\",\n            \"sourceSize\": {\n                \"x\": 444,\n                \"y\": 598\n            },\n            \"frameSize\": {\n                \"x\": 444,\n                \"y\": 598\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        },\n        \"pop\": {\n            \"name\": \"pop\",\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/pop.png\",\n            \"sourceSize\": {\n                \"x\": 600,\n                \"y\": 465\n            },\n            \"frameSize\": {\n                \"x\": 600,\n                \"y\": 465\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        }\n    }\n}",
     "show_debug_watch": "true",
     "contained_level_names": null

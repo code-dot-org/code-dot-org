@@ -40,7 +40,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "instructions": "Do This",
     "markdown_instructions": "# Sprites\r\n\r\nYou are going to start creating animations with **sprites**. A sprite is like a character in your animations. Your program will control how your sprite moves and appears on the screen.\r\n\r\n**Creating Sprites:** The first step to using a sprite is creating the sprite. In order to do that you'll need to give it a label, just like a variable. This block will create a new sprite for you and let you choose its label.\r\n\r\n![](https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png)\r\n\r\n**Drawing Sprites:** The next step to using a sprite is to draw it on the screen. Whenever you call the ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) command all the sprites in your animation will be drawn on the screen.\r\n\r\n# Do This\r\n\r\nThis program creates a sprite but it doesn't draw it on the screen\r\n\r\n* **Add a ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) command** after you've created a sprite so it will actually draw\r\n* **Run the code** to draw your first sprite on the screen. Right now sprites just look like gray rectangles but soon they'll do a lot more.",
     "show_d_pad": "false",
