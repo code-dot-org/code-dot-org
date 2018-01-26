@@ -421,6 +421,7 @@ Dashboard::Application.routes.draw do
         collection do
           get :quick_view
           get :cohort_view
+          get :search
         end
       end
     end
