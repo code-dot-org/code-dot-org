@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import { convertXmlToBlockly } from './utils';
 import { openDialog } from '@cdo/apps/redux/instructionsDialog';
 
-var styles = {
+const styles = {
   standard: {
     marginBottom: 35,
     paddingTop: 19
@@ -27,8 +27,8 @@ var styles = {
   }
 };
 
-const MarkdownInstructions = React.createClass({
-  propTypes: {
+class MarkdownInstructions extends React.Component {
+  static propTypes = {
     renderedMarkdown: PropTypes.string.isRequired,
     noInstructionsWhenCollapsed: PropTypes.bool,
     hasInlineImages: PropTypes.bool,
@@ -36,11 +36,28 @@ const MarkdownInstructions = React.createClass({
     inTopPane: PropTypes.bool,
     isBlockly: PropTypes.bool,
     showImageDialog: PropTypes.func,
-  },
+  };
 
-  defaultProps: {
+  static defaultProps = {
     noInstructionsWhenCollapsed: false,
-  },
+  };
+
+  componentDidMount() {
+    this.configureMarkdown_();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.renderedMarkdown !== this.props.renderedMarkdown) {
+      this.configureMarkdown_();
+    }
+  }
+
+  componentWillUnmount() {
+    const detailsDOM = $(ReactDOM.findDOMNode(this)).find('details');
+    if (detailsDOM.details) {
+      detailsDOM.off('toggle.details.TopInstructions');
+    }
+  }
 
   /**
    * Attach any necessary jQuery to our markdown
@@ -87,24 +104,7 @@ const MarkdownInstructions = React.createClass({
           showInstructionsDialog={() => this.props.showImageDialog(expandableImg.dataset.url)}
         />, expandableImg);
     }
-  },
-
-  componentDidMount() {
-    this.configureMarkdown_();
-  },
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.renderedMarkdown !== this.props.renderedMarkdown) {
-      this.configureMarkdown_();
-    }
-  },
-
-  componentWillUnmount() {
-    const detailsDOM = $(ReactDOM.findDOMNode(this)).find('details');
-    if (detailsDOM.details) {
-      detailsDOM.off('toggle.details.TopInstructions');
-    }
-  },
+  }
 
   render() {
     const {
@@ -131,7 +131,7 @@ const MarkdownInstructions = React.createClass({
       />
     );
   }
-});
+}
 
 export const StatelessMarkdownInstructions = Radium(MarkdownInstructions);
 export default connect(state => ({
