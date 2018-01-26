@@ -70,7 +70,7 @@ def build
     log = `git log --pretty=format:"%h %s (%an)" -n #{count}`
     IO.write(deploy_dir('rebuild'), log)
 
-    git_revision = `git rev-parse HEAD`
+    git_revision = RakeUtils.git_revision
     ChatClient.log "https://github.com/code-dot-org/code-dot-org/commit/#{git_revision}", message_format: 'text', color: 'purple'
     Honeybadger.notify_new_release(rack_env, git_revision)
 
@@ -78,7 +78,13 @@ def build
     RakeUtils.bundle_install
 
     status = begin
-      RakeUtils.rake_stream_output 'ci'
+      result = RakeUtils.rake_stream_output 'ci'
+
+      unless git_revision == RakeUtils.git_revision
+        raise "git revision unexpectedly changed from #{git_revision} to #{RakeUtils.git_revision} during build"
+      end
+
+      result
     rescue => e
       CDO.backtrace e
     end
