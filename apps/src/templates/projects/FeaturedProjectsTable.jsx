@@ -8,7 +8,7 @@ import orderBy from 'lodash/orderBy';
 import {PROJECT_TYPE_MAP, personalProjectDataPropType} from './projectConstants';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
-import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
+import PopUpMenu from "@cdo/apps/lib/ui/PopUpMenu";
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -45,7 +45,7 @@ export const styles = {
     borderWidth: '1px 1px 1px 0px',
     borderColor: color.border_light_gray,
     padding: 15,
-    width: 270
+    width: 250
   },
   headerCellName: {
     borderWidth: '0px 1px 1px 0px',
@@ -73,34 +73,34 @@ const thumbnailFormatter = function (thumbnailUrl) {
           />);
 };
 
-const nameFormatter = (name, {rowData}) => {
+const nameFormatter = (projectName, {rowData}) => {
   const url = '/projects/${rowData.type}/${rowData.channel}/';
-  return <a style={tableLayoutStyles.link} href={url} target="_blank">{name}</a>;
+  return <a style={tableLayoutStyles.link} href={url} target="_blank">{projectName}</a>;
 };
 
-const actionsFormatter = (actions, {rowData}) => {
+const actionsFormatterFeatured = (actions, {rowData}) => {
   return (
     <QuickActionsCell>
       <PopUpMenu.Item
         onClick={() => {}}
       >
-        {i18n.rename()}
-      </PopUpMenu.Item>
-      <PopUpMenu.Item
-        onClick={() => {}}
-      >
-        {i18n.remix()}
-      </PopUpMenu.Item>
-      <MenuBreak/>
-      <PopUpMenu.Item
-        onClick={() => {}}
-      >
-        {i18n.deleteProject()}
+        {i18n.stopFeaturing()}
       </PopUpMenu.Item>
     </QuickActionsCell>
   );
 };
 
+const actionsFormatterUnfeatured = (actions, {rowData}) => {
+  return (
+    <QuickActionsCell>
+      <PopUpMenu.Item
+        onClick={() => {}}
+      >
+        {i18n.featureAgain()}
+      </PopUpMenu.Item>
+    </QuickActionsCell>
+  );
+};
 const dateFormatter = (time) => {
   const date = new Date(time);
   return date.toLocaleDateString();
@@ -166,7 +166,7 @@ class FeaturedProjectsTable extends React.Component {
         }
       },
       {
-        property: 'project_name',
+        property: 'projectName',
         header: {
           label: i18n.projectName(),
           props: {style: {
@@ -247,7 +247,7 @@ class FeaturedProjectsTable extends React.Component {
           },
         },
         cell: {
-          format: actionsFormatter,
+          format: actionsFormatterUnfeatured,
           props: {style: tableLayoutStyles.cell}
         }
       }
@@ -265,7 +265,7 @@ class FeaturedProjectsTable extends React.Component {
           },
         },
         cell: {
-          format: actionsFormatter,
+          format: actionsFormatterFeatured,
           props: {style: tableLayoutStyles.cell}
         }
       }
