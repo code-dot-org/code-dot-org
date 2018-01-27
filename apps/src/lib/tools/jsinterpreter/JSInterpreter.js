@@ -650,7 +650,7 @@ export default class JSInterpreter {
         // If we were running atMaxSpeed and just reached a breakpoint, the
         // code may not be selected in the editor, so do it now:
         this.selectCurrentCode();
-      } else {
+      } else if (this.studioApp.editor) {
         codegen.clearDropletAceHighlighting(this.studioApp.editor);
       }
     }
