@@ -1,0 +1,9 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%p
+  Hello! It looks like we've already received a FiT Weekend registration from
+  your Code.org account. If you haven't submitted a registration, or you would
+  like to change your registration, please email
+  %a{ href: "mailto:facilitators@code.org" }
+    facilitators@code.org
