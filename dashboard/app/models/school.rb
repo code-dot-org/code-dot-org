@@ -82,22 +82,15 @@ class School < ActiveRecord::Base
   # @param options [Hash] Optional map of options.
   def self.seed_all(options = {})
     options[:stub_school_data] ||= CDO.stub_school_data
-    options[:force] ||= false
 
-    # use a much smaller dataset in environments that reseed data frequently.
-    schools_tsv = get_seed_filename(options[:stub_school_data])
-    expected_count = `wc -l #{schools_tsv}`.to_i - 1
-    raise "#{schools_tsv} contains no data" unless expected_count > 0
-
-    # It takes approximately 4 minutes to seed config/schools.tsv.
-    # Skip seeding if the data is already present. Note that this logic will
-    # not re-seed data if the number of records in the DB is greater than or
-    # equal to that in the TSV file, even if the data is different.
-    if options[:force] || School.count < expected_count
-      CDO.log.debug "seeding schools (#{expected_count} rows)"
+    if options[:stub_school_data]
+      # use a much smaller dataset in environments that reseed data frequently.
+      schools_tsv = get_seed_filename(true)
       School.transaction do
         merge_from_csv(schools_tsv)
       end
+    else
+      School.seed_from_s3
     end
   end
 
@@ -256,7 +249,7 @@ class School < ActiveRecord::Base
   # @param options [Hash] The CSV file parsing options.
   # @return [String] The CSV file name.
   def self.write_to_csv(filename, options = CSV_IMPORT_OPTIONS)
-    cols = %w(id name address_line1 address_line2 address_line3 city state zip latitude longitude school_type school_district_id)
+    cols = %w(id name address_line1 address_line2 address_line3 city state zip latitude longitude school_type school_district_id state_school_id)
     CSV.open(filename, 'w', options) do |csv|
       csv << cols
       rows = block_given? ? yield : order(:id)
