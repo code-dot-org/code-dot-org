@@ -484,6 +484,7 @@
   "hiddenScriptTooltip": "Please select a section before trying to toggle whether or not the unit is visible to your students.",
   "hide": "Hide",
   "hideFullList": "Hide full list",
+  "hideGeneratedCode": "Hide Code",
   "hideHiddenSections": "Hide hidden sections",
   "hideSection": "Hide Section",
   "hideSecret": "Hide secret",

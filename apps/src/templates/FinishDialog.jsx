@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { hideFeedback } from '../redux/feedback';
 import { interpolateColors } from '../utils';
 import BaseDialog from './BaseDialog';
+import GeneratedCode from './feedback/GeneratedCode';
 import Odometer from './Odometer';
 import PuzzleRatingButtons from  './PuzzleRatingButtons';
 import React, { Component, PropTypes } from 'react';
@@ -10,15 +11,16 @@ import color from '../util/color';
 import msg from '@cdo/locale';
 
 const styles = {
-  wrapper: {
+  pageWrapper: {
     position: 'fixed',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     top: 0,
     bottom: 0,
     left: 0,
     right: 0,
     margin: 'auto',
-    width: 375,
-    height: 280,
     zIndex: 1050,
   },
   modal: {
@@ -110,6 +112,11 @@ const styles = {
   achievementRow: {
     margin: 4,
   },
+  generatedCodeWrapper: {
+    padding: '30px 25px 15px 25px',
+  },
+  generatedCode: {
+  },
   funometer: {
     marginTop: 5,
     display: 'flex',
@@ -125,6 +132,9 @@ const styles = {
   replayButton: {
     backgroundColor: color.green,
   },
+  showCodeButton: {
+    backgroundColor: color.teal,
+  },
   continueButton: {
     backgroundColor: color.orange,
   },
@@ -133,7 +143,15 @@ const styles = {
 const DEFAULT_STATE = {
   blocksCounted: false,
   blockCountDescriptionShown: false,
-  achievementsHighlighted: 0,
+  achievementsHighlighted: false,
+  showingCode: false,
+};
+
+const ANIMATED_STATE = {
+  blocksCounted: true,
+  blockCountDescriptionShown: true,
+  achievementsHighlighted: true,
+  showingCode: false,
 };
 
 export class UnconnectedFinishDialog extends Component {
@@ -160,6 +178,10 @@ export class UnconnectedFinishDialog extends Component {
     })),
     showFunometer: PropTypes.bool,
     canShare: PropTypes.bool,
+    studentCode: PropTypes.shape({
+      message: PropTypes.string,
+      code: PropTypes.string,
+    }),
   };
 
   componentWillReceiveProps(nextProps) {
@@ -206,7 +228,7 @@ export class UnconnectedFinishDialog extends Component {
 
     return (
       <Motion
-        defaultStyle={{scale: 0}}
+        defaultStyle={{scale: this.state.blockCountDescriptionShown ? 1 : 0}}
         style={{scale: spring(this.state.blocksCounted ? 1 : 0, {stiffness: 250, damping: 18})}}
         onRest={() => this.setState({blockCountDescriptionShown: true})}
       >
@@ -246,6 +268,7 @@ export class UnconnectedFinishDialog extends Component {
         >
           <span style={styles.blockCount}>
             <Odometer
+              defaultValue={this.state.blocksCounted ? this.props.blocksUsed : 0}
               value={this.props.blocksUsed}
               onRest={() => this.setState({blocksCounted: true})}
             />
@@ -262,17 +285,23 @@ export class UnconnectedFinishDialog extends Component {
       return null;
     }
 
-    const defaultStyles = this.props.achievements.map(() => ({ color: 0 }));
+    const defaultStyles = this.props.achievements.map(() => ({
+      color: this.state.achievementsHightlighted ? 1 : 0,
+    }));
     const stylesGenerator = prevIterpolatedStyles => prevIterpolatedStyles.map((_, i) => {
       const highlighted = this.props.achievements[i].isAchieved &&
         this.state.blockCountDescriptionShown;
       let target;
-      if (i === 0) {
+      if (!highlighted) {
+        target = 0;
+      } else if (i === 0) {
         target = 1;
       } else {
         target = prevIterpolatedStyles[i - 1].color;
       }
-      return { color: spring(highlighted ? target : 0) };
+      return {
+        color: this.state.achievementsHighlighted ? target: spring(target),
+      };
     });
 
     return (
@@ -326,6 +355,28 @@ export class UnconnectedFinishDialog extends Component {
   }
 
   getButtons() {
+    const showCode = !this.state.showingCode ?
+      <button
+        key="showcode"
+        style={{...styles.button, ...styles.showCodeButton}}
+        onClick={() => this.setState({
+          ...ANIMATED_STATE,
+          showingCode: true,
+        })}
+      >
+        {msg.showGeneratedCode()}
+      </button> :
+      <button
+        key="hidecode"
+        style={{...styles.button, ...styles.showCodeButton}}
+        onClick={() => this.setState({
+          ...ANIMATED_STATE,
+          showingCode: false,
+        })}
+      >
+        {msg.hideGeneratedCode()}
+      </button>;
+
     return [
       <button
         key="replay"
@@ -334,6 +385,7 @@ export class UnconnectedFinishDialog extends Component {
       >
         Replay
       </button>,
+      showCode,
       <button
         key="continue"
         style={{...styles.button, ...styles.continueButton}}
@@ -357,21 +409,31 @@ export class UnconnectedFinishDialog extends Component {
         hideCloseButton
         noModalStyles
       >
-        <div style={this.props.hideBackdrop ? {} : styles.wrapper}>
-          <div
-            style={styles.modal}
-          >
-            <div style={styles.header}>
-              {this.getBubble()}
+        <div style={this.props.hideBackdrop ? {} : styles.pageWrapper}>
+          <div style={styles.modalWrapper}>
+            <div
+              style={styles.modal}
+            >
+              <div style={styles.header}>
+                {this.getBubble()}
+              </div>
+              {this.state.showingCode ?
+                <div style={styles.generatedCodeWrapper}>
+                  <GeneratedCode
+                    message={this.props.studentCode.message}
+                    code={this.props.studentCode.code}
+                    style={styles.generatedCode}
+                  />
+                </div> :
+                <div style={styles.content}>
+                  {this.getBlockCounter()}
+                  {this.getAchievements()}
+                  {this.getFunometer()}
+                </div>}
             </div>
-            <div style={styles.content}>
-              {this.getBlockCounter()}
-              {this.getAchievements()}
-              {this.getFunometer()}
+            <div style={styles.buttonContainer}>
+              {this.getButtons()}
             </div>
-          </div>
-          <div style={styles.buttonContainer}>
-            {this.getButtons()}
           </div>
         </div>
       </BaseDialog>
@@ -387,6 +449,7 @@ export default connect(state => ({
   achievements: state.feedback.achievements,
   showFunometer: state.feedback.displayFunometer,
   canShare: state.feedback.canShare,
+  studentCode: state.feedback.studentCode,
 }), dispatch => ({
   onReplay: () => dispatch(hideFeedback()),
 }))(UnconnectedFinishDialog);

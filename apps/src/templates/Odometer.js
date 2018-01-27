@@ -17,6 +17,7 @@ const styles = {
 
 export default class Odometer extends Component {
   static propTypes = {
+    defaultValue: PropTypes.number,
     value: PropTypes.number.isRequired,
     onRest: PropTypes.func,
   };
@@ -25,9 +26,10 @@ export default class Odometer extends Component {
     const digits = [];
     for (let i = 1; i === 1 || i <= this.props.value; i *= 10) {
       const placeValue = Math.floor(this.props.value / i);
+      const defaultPlaceValue = Math.floor(this.props.defaultValue / i);
       digits.push(
         <Motion
-          defaultStyle={{value: 0}}
+          defaultStyle={{value: defaultPlaceValue || 0}}
           style={{value: spring(placeValue, {stiffness: 150, damping: 25})}}
           onRest={i === 1 ? this.props.onRest : undefined}
           key={i}
