@@ -6,6 +6,8 @@
 #  storage_app_id       :integer
 #  who_featured_user_id :integer
 #  featured_at          :datetime
+#  unfeatured_at        :datetime
+#  is_featured          :boolean
 #
 # Indexes
 #
