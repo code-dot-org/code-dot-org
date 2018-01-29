@@ -35,8 +35,8 @@
     "images": "[\r\n  {\"filename\": \"https://images.code.org/aef5c26926ac651764c9c685b1040f9f-image-1516919780358.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
     "instructions": "Help the artist finish his llama heart. ",
     "markdown_instructions": "Help the artist finish his llama heart. See if you can make hearts out of other animals too!",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Do you see a pattern that tells you how many times to repeat and how much to turn?\",\"hint_id\":\"Valentine_artist_01_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/81e01dd2bd5d544e37a080321e8bc524/Valentine_artist_01.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Do you see a pattern that tells you how many times to repeat and how much to turn?\",\"hint_id\":\"Valentine_artist_01_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/81e01dd2bd5d544e37a080321e8bc524/Valentine_artist_01.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
