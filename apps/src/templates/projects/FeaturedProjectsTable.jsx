@@ -5,7 +5,7 @@ import {ImageWithStatus} from '../ImageWithStatus';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
-import {PROJECT_TYPE_MAP, personalProjectDataPropType} from './projectConstants';
+import {PROJECT_TYPE_MAP, featuredProjectDataPropType} from './projectConstants';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import PopUpMenu from "@cdo/apps/lib/ui/PopUpMenu";
@@ -112,7 +112,7 @@ const typeFormatter = (type) => {
 
 class FeaturedProjectsTable extends React.Component {
   static propTypes = {
-    projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired,
+    projectList: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
     tableVersion: PropTypes.oneOf(['currentFeatured', 'archiveFeatured']).isRequired
   };
 
