@@ -69,7 +69,7 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
       props: {
         options: Pd::Teachercon1819Registration.options.camelize_keys,
         requiredFields: Pd::Teachercon1819Registration.camelize_required_fields,
-        apiEndpoint: "/api/v1/pd/teachercon_registrations",
+        apiEndpoint: "/api/v1/pd/teachercon_partner_registrations",
         regionalPartnerId: regional_partner.id,
         applicationType: "Partner",
         city: teachercon[:city],
