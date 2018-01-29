@@ -145,6 +145,12 @@ export class QuickViewTable extends React.Component {
     return columns;
   }
 
+  constructRows() {
+    let rows = this.props.data;
+    rows = this.props.statusFilter ? rows.filter(row => row.status === this.props.statusFilter) : rows;
+    return rows;
+  }
+
   formatNotesTooltip = (notes) => {
     let tooltipId = _.uniqueId();
     return (
@@ -173,21 +179,16 @@ export class QuickViewTable extends React.Component {
     return (
       <Button
         bsSize="xsmall"
+        target="_blank"
         href={this.context.router.createHref(`/${this.props.path}/${id}`)}
-        onClick={this.handleViewClick.bind(this, id)}
       >
         View Application
       </Button>
     );
   };
 
-  handleViewClick = (id, event) => {
-    event.preventDefault();
-    this.context.router.push(`/${this.props.path}/${id}`);
-  };
-
   render() {
-    const rows = this.props.data;
+    const rows = this.constructRows();
     const columns = this.constructColumns();
 
     return (

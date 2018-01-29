@@ -1,5 +1,7 @@
 <%
 require 'cdo/aws/dms'
+require 'active_support/core_ext/numeric/bytes'
+require 'active_support/core_ext/numeric/time'
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -79,7 +81,18 @@ Resources:
       Username: !Ref RedshiftUsername
       Password: !Ref RedshiftPassword
       DatabaseName: !Ref RedshiftDatabase
-      ExtraConnectionAttributes: maxFileSize=1048576;fileTransferUploadStreams=20
+      # Extra Connection Attributes:
+      # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html#CHAP_Introduction.ConnectionAttributes.Redshift
+      #
+      # maxFileSize - Specifies the maximum size (in KB) of any CSV file used to transfer data to Amazon Redshift.
+      # Default value: 32768 KB (32 MB)
+      # Valid values: 1 - 1048576
+      # NOTE: documentation is incorrect; this attribute is specified in _bytes_.
+      #
+      # fileTransferUploadStreams - Specifies the number of threads used to upload a single file.
+      # Default value: 10
+      # Valid values: 1 - 64
+      ExtraConnectionAttributes: maxFileSize=<%=100.megabytes%>;fileTransferUploadStreams=20
 <% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings| -%>
   DMS<%=task_name.underscore.camelize%>:
     Type: AWS::DMS::ReplicationTask
