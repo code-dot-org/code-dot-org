@@ -1,6 +1,6 @@
 import React from 'react';
 import FeaturedProjectsTable from './FeaturedProjectsTable';
-import {stubFakeFeaturedProjectData} from './generateFakeProjects';
+import {stubFakeFeaturedProjectData, stubFakeUnfeaturedProjectData} from './generateFakeProjects';
 
 export default storybook => {
   return storybook
@@ -21,7 +21,7 @@ export default storybook => {
         description: 'Table of projects that have previously been featured',
         story: () => (
           <FeaturedProjectsTable
-            projectList={stubFakeFeaturedProjectData}
+            projectList={stubFakeUnfeaturedProjectData}
             tableVersion="archiveFeatured"
           />
         )
