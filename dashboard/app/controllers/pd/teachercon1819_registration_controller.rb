@@ -47,7 +47,7 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
   end
 
   def partner
-    unless current_user.regional_partners.count
+    unless current_user.regional_partners.count > 0
       render :unauthorized
       return
     end

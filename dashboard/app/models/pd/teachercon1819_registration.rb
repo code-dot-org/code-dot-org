@@ -22,6 +22,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   include Teachercon1819RegistrationConstants
 
   belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
+  belongs_to :regional_partner, class_name: 'RegionalPartner'
 
   YES = 'Yes'.freeze
   NO = 'No'.freeze
@@ -118,7 +119,6 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       :last_name,
       :email,
       :phone,
-      :teacher_accept_seat,
       :contact_first_name,
       :contact_last_name,
       :contact_relationship,
