@@ -399,6 +399,7 @@ Dashboard::Application.routes.draw do
 
       # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
       post 'teachercon_registrations', to: 'teachercon1819_registrations#create'
+      post 'teachercon_partner_registrations', to: 'teachercon1819_registrations#create_partner'
       post 'fit_weekend_registrations', to: 'fit_weekend1819_registrations#create'
 
       post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
