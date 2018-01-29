@@ -783,7 +783,7 @@
       cta: Zobacz instrukcję
     hoc-encryption:
       title: Proste szyfrowanie
-      body: Students will learn techniques to create and crack encrypted messages.
+      body: Studenci nauczą się technik tworzenia i łamania zaszyfrowanych wiadomości.
     weblab:
       title: Laboratorium Sieci (beta)
       body: Web Lab to środowisko programowania, w którym można tworzyć proste strony
@@ -828,7 +828,7 @@
         te lekcje bez komputerów.
     unplugged_conditionals:
       title: Warunkowe
-      body: Poznawaj algorytmy i wyrażenia warunkowe w tej aktywności "bez prądu",
+      body: Poznawaj algorytmy i wyrażenia warunkowe w tej aktywności bez komputera,
         przy użyciu talii kart.
     widgets:
       title: Widżety
@@ -891,9 +891,10 @@
     hide_survey_last_answer: Ankieta jest anonimowa.  Odwiedź panel nauczyciela, by
       zobaczyć tabelę wyników.  Zauważ, że wyniki są widoczne tylko, jeśli co najmniej
       pięciu uczniów wypełniło ankiety.
-    survey_submission_thankyou: Thank you for submitting this survey! The survey has
-      been cleared so that your responses stay anonymous. Note that your teacher will
-      still be able to see responses for the whole class, but without names attached.
+    survey_submission_thankyou: Dziękujemy za przesłanie ankiety! Ankieta została
+      wyczyszczona, dzięki czemu Twoje odpowiedzi pozostają anonimowe. Pamiętaj, że
+      Twój nauczyciel nadal będzie widzieć odpowiedzi całej klasy, ale bez załączonych
+      imion.
   level_group-submittable:
     wrong_title: Dziękujemy
     wrong_body: Dziękujemy za przesłanie odpowiedzi.

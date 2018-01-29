@@ -3845,6 +3845,9 @@
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make
           sure blocks are connected under `when run`.
+      MC Agent Freeplay_authored_hint:
+        MC_HOC_2017_13_Cole_a: Try having the Agent build some minecart tracks so
+          you can explore the world!
       MC_HOC_2017_01_Cole_authored_hint:
         MC_HOC_2017_01_Cole_a: Use your arrow keys to direct the player into the house.
           End up on the orange square to win.
@@ -4214,6 +4217,7 @@
         mc_9_b: The black specks in the wall are coal! Use `destroy block` on these
           to mine the coal.
         mc_9_c: Use `place torch` to put a torch in the space where you are standing.
+      Valentine_artist_01_authored_hint: []
       aE1_authored_hint: []
       aE2_authored_hint:
         aE2_a: Notice that since the napkins are 20 pixels long, you'll need to jump
@@ -7569,7 +7573,7 @@
           stair steps? See if you can use what you learned from previous puzzles to
           get all of the turns.
         courseC_starWars_loops10_b: "If you want to use less code, you can put one
-          `repeat loop` inside of another!   \nThis is called a **nested loop**."
+          `repeat` loop inside of another!   \nThis is called a **nested loop**."
         courseC_starWars_loops10_c: Don't be afraid to make a mistake! Run the code
           to see what happens, even if you haven't solved the puzzle yet.
       courseC_starWars_loops10_predict2_authored_hint: []
@@ -7578,11 +7582,11 @@
         courseC_starWars_loops2_a: To repeat code, drag out a `repeat` loop, then
           put the block you want inside of it.
       courseC_starWars_loops4_authored_hint:
+        courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the
+          turn block will let you change it to  "right".
         courseC_starWars_loops4_a: Use two `repeat` blocks.
         courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command
           inside of it: `move forward`.'
-        courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the
-          turn block will let you change it to  "right".
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: To move down, you have to turn and then move forward.
         courseC_starWars_loops5_a: The best solution uses a turn, then a single `move
@@ -7591,7 +7595,7 @@
         courseC_starWars_loops6_a: Try writing all of the moves down on a piece of
           paper and looking for a pattern.
         courseC_starWars_loops6_b: "If you want to use less code, you can put one
-          `repeat loop` inside of another!   \nThis is called a **nested loop**."
+          `repeat` loop inside of another!   \nThis is called a **nested loop**."
       courseC_starWars_loops7_authored_hint:
         courseC_starWars_loops7_a: This pattern looks harder than it is! Start with
           a simple stair step. Does that cover all of the scrap metal?
@@ -7988,7 +7992,8 @@
         courseD_bee_conditionals5_a: Think of every side of the rectangular path as
           a path by itself. Set up a nested loop with a `repeat` block on the outside
           and a `while there is a path ahead` loop on the inside. How many paths does
-          the bee need to buzz down if the bee needs to buzz every side with a flower?
+          the bee need to buzz down if the bee needs to buzz down every side with
+          a flower?
         courseD_bee_conditionals5_c: There are 3 sides of the rectangle with flowers,
           so the code needs to `repeat 3 times`. In every repeat, the bee will need
           to continue along the path, `while there is a path ahead`. To continue down
@@ -8005,7 +8010,7 @@
           video!
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for
           honeycomb beneath each cloud.
-        courseD_bee_conditionals6_b: In this case, you do not need to check for nectar
+        courseD_bee_conditionals6_b: In this case, you do not need to check for flowers
           under the clouds.
         courseD_bee_conditionals6_c: Is there a loop you can use to make your code
           simpler?
@@ -9030,8 +9035,6 @@
           loop.  One will choose a random emotion for the dragon (actor 2) and the
           other will wait 1 second before going through the loop again.
       courseD_playLab_cond3a_authored_hint:
-        courseD_playLab_cond3_b: What do you think `set every masked ninja to chase
-          actor` does?
         courseD_playLab_cond3_c: "- `If` the dragon is happy \n   - `score point`\n
           \  - `score point`  \n   \n   \n \n- `Else` `score point`"
       courseD_playLab_cond3b_authored_hint:
@@ -10854,8 +10857,6 @@
           of each loop iteration if you want to solve the puzzle.
         courseF_bee_for9_b: "**Remember:** If your loop is counting up, the increment
           is added to your `counter` variable each time through."
-        courseF_bee_for9_d: This is very similar to the other stair step puzzle earlier
-          in the stage, but this time you’re counting down!
       courseF_bee_for_challenge1_authored_hint: []
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: "Take a look at this option for movement:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
