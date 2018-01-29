@@ -31,14 +31,15 @@
   petition_join_others: 'Tham gia cùng # những người khác'
   name: Tên
   email: Thư điện tử
-  zipcode: Mã bưu điện
-  submit: Chấp nhận
-  twentyhours_heading: Hãy thử xem bản giới thiệu của khóa học khoa học máy tính
-  twentyhours_text: Bạn đã học xong khóa học MỘT TIẾNG LẬP TRÌNH? Hãy học tiếp các
-    khóa học về khoa học máy tính và lập trình tiếp theo của chúng tôi.
-  og_title: Mỗi đứa trẻ xứng đáng có được cơ hội
+  zipcode: Mã bưu chính
+  submit: Gửi
+  twentyhours_heading: Hãy thử xem Giới thiệu khóa học Khoa học Máy tính của chúng
+    tôi
+  twentyhours_text: Bạn đã học xong khóa học Giờ Lập Trình? Hãy học tiếp các khóa
+    học về khoa học máy tính và lập trình tiếp theo của chúng tôi.
+  og_title: 'Code.org: Mọi người có thể Học'
   og_title_soon: Giờ Lập Trình đã đến
-  og_title_here: The Hour of Code is here!
+  og_title_here: Giờ Lập Trình đây nè!
   og_description: Tất cả học sinh ở mọi trường xứng đáng có cơ hội học ngành khoa
     học máy tính. Khoa học máy tính có thể thay đổi mọi thứ.
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
@@ -758,7 +759,7 @@
     chia sẻ)'
   volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
     18 years old.
-  volunteer_engineer_submission_submit: Chấp nhận
+  volunteer_engineer_submission_submit: Gửi
   volunteer_engineer_submission_thankyou: Cảm ơn bạn đã đăng ký tham gia cho công
     việc tình nguyện này. Giáo viên sẽ sử dụng <a href="%{url}"> bản đồ này</a> để
     tìm kiếm và liên hệ với những tình nguyện viên như bạn.
@@ -2045,25 +2046,25 @@
   header_courses: Các khóa học
   header_course_catalog: Danh mục khóa học
   header_project_gallery: chương trình
-  header_sections: Sections
+  header_sections: Mục
   header_professional_learning: Học tập nâng cao chuyên môn
-  header_educate_overview: Educator Overview
+  header_educate_overview: Tổng quát về Giáo dục
   header_educate_elementary: Tiểu học
   header_educate_middle: Trung học
   header_educate_high: Cao học
   header_educate_hoc: Giờ của mã
   header_educate_partner: "Đối tác của chúng tôi"
   header_educate_beyond: "Đằng sau Code.org"
-  header_educate_inspire: Inspire a Student
+  header_educate_inspire: Truyền cảm hứng cho Hssv
   header_educate_community: Cộng đồng trực tuyến
   header_educate_tools: Các công cụ và video
   header_about_us: Thông tin
-  header_about_leadership: Leadership
-  header_about_donors: Donors
+  header_about_leadership: Khả năng lãnh đạo
+  header_about_donors: Người tặng
   header_about_partners: "Đối tác"
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
+  header_about_team: "Đủ Thành viên"
+  header_about_news: Phòng tin tức
+  header_about_evaluation: "Đánh giá"
   header_about_jobs: Công việc
   header_about_contact: Liên hệ
   header_about_faqs: Hỏi đáp
