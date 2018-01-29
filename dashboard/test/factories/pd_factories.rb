@@ -540,18 +540,8 @@ FactoryGirl.define do
   end
 
   # default to csf
-  factory :pd_facilitator1819_application_hash, parent: :pd_facilitator1819_application_hash_csf
-
-  factory :pd_facilitator1819_application_hash_csf, parent: :pd_facilitator1819_application_hash_common do
+  factory :pd_facilitator1819_application_hash, parent: :pd_facilitator1819_application_hash_common do
     csf
-  end
-
-  factory :pd_facilitator1819_application_hash_csd, parent: :pd_facilitator1819_application_hash_common do
-    csd
-  end
-
-  factory :pd_facilitator1819_application_hash_csp, parent: :pd_facilitator1819_application_hash_common do
-    csp
   end
 
   factory :pd_facilitator1819_application_hash_common, parent: :form_data_hash do
@@ -636,14 +626,8 @@ FactoryGirl.define do
   end
 
   # default to csp
-  factory :pd_teacher1819_application_hash, parent: :pd_teacher1819_application_hash_csp
-
-  factory :pd_teacher1819_application_hash_csp, parent: :pd_teacher1819_application_hash_common do
+  factory :pd_teacher1819_application_hash, parent: :pd_teacher1819_application_hash_common do
     csp
-  end
-
-  factory :pd_teacher1819_application_hash_csd, parent: :pd_teacher1819_application_hash_common do
-    csd
   end
 
   factory :pd_teacher1819_application_hash_common, class: 'Hash' do
