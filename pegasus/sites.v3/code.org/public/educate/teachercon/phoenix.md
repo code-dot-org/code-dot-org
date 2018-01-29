@@ -190,7 +190,7 @@ More information coming soon!
 </details>
 
 ## **Contact Us**
-Check out our [FAQ's!](https://docs.google.com/document/d/1kyf-LMuqZx3Jne-q-Ce8MOaWJQm67VekO_kYKr9EFPQ/edit#heading=h.2d1bb1jtgzkw)
+Check out our <a href="https://docs.google.com/document/d/1kyf-LMuqZx3Jne-q-Ce8MOaWJQm67VekO_kYKr9EFPQ/edit#, target="_blank">FAQ's!</a>
 
 Still can't find what you're looking for? Email us at: [teacher@code.org](mailto:teacher@code.org). 
 
