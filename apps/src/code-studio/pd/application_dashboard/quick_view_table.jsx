@@ -179,17 +179,12 @@ export class QuickViewTable extends React.Component {
     return (
       <Button
         bsSize="xsmall"
+        target="_blank"
         href={this.context.router.createHref(`/${this.props.path}/${id}`)}
-        onClick={this.handleViewClick.bind(this, id)}
       >
         View Application
       </Button>
     );
-  };
-
-  handleViewClick = (id, event) => {
-    event.preventDefault();
-    this.context.router.push(`/${this.props.path}/${id}`);
   };
 
   render() {
