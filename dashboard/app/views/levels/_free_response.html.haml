@@ -44,5 +44,5 @@
   %textarea.response{id: "level_#{level.id}", placeholder: level.placeholder || 'Enter your answer here', style: "height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
 
   -# Don't render the dialog partial if we're inside a LevelGroup.
-  = render partial: 'levels/dialog', locals: {app: 'free_response', data: level.properties} unless in_level_group
+  = render partial: 'levels/dialog', locals: {app: 'free_response'} unless in_level_group
   = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}}

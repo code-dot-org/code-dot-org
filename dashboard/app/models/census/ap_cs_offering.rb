@@ -26,5 +26,60 @@ class Census::ApCsOffering < ApplicationRecord
   validates_presence_of :course
   enum course: COURSES
 
-  validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2017, less_than_or_equal_to: 2030}
+  validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2016, less_than_or_equal_to: 2030}
+
+  def self.seed_from_csv(course, school_year, filename)
+    ActiveRecord::Base.transaction do
+      CSV.foreach(filename, {headers: true}) do |row|
+        raw_school_code = row.to_hash['School Code']
+        next unless raw_school_code
+        normalized_school_code = Census::ApSchoolCode.normalize_school_code(raw_school_code)
+        unless normalized_school_code == '000000'
+          begin
+            ap_school_code = Census::ApSchoolCode.find(normalized_school_code)
+            Census::ApCsOffering.find_or_create_by!(
+              ap_school_code: ap_school_code,
+              course: course,
+              school_year: school_year
+            )
+          rescue ActiveRecord::RecordNotFound
+            # We don't have mapping for every school code so skip over any that
+            # can't be found in the database.
+            puts "AP CS Offering seeding: skipping unknown school code #{normalized_school_code}"
+          end
+        end
+      end
+    end
+  end
+
+  CENSUS_BUCKET_NAME = "cdo-census".freeze
+
+  def self.seed_from_s3
+    # AP CS Offering data files in S3 are named
+    # "ap_cs_offerings/<COURSE>-<SCHOOL_YEAR_START>-<SCHOOL_YEAR_END>.csv"
+    # where COURSE is either 'CSP' or 'CSA'
+    # The first school year where we have data is 2016-2017
+    current_year = Date.today.year
+    (2016..current_year).each do |school_year|
+      ['CSP', 'CSA'].each do |course|
+        object_key = "ap_cs_offerings/#{course}-#{school_year}-#{school_year + 1}.csv"
+        begin
+          AWS::S3.seed_from_file(CENSUS_BUCKET_NAME, object_key) do |filename|
+            seed_from_csv(course, school_year, filename)
+          end
+        rescue Aws::S3::Errors::NotFound
+          # We don't expect every school year to be there so skip anything that isn't found.
+          puts "AP CS Offering seeding: object #{object_key} not found in S3 - skipping."
+        end
+      end
+    end
+  end
+
+  def self.seed
+    if CDO.stub_school_data
+      seed_from_csv("CSP", 2017, "test/fixtures/census/ap_cs_offerings.csv")
+    else
+      seed_from_s3
+    end
+  end
 end

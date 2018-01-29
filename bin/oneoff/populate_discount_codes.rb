@@ -76,7 +76,7 @@ end
 # Because this is modifying the cohort, it should not be run on prod (or if it is,
 # you need to be sure to clean up after yourself).
 def set_user_pd_eligible(teacher)
-  teacher.cohorts << Cohort.find_or_create_by('CSD-TeacherConHouston')
+  teacher.cohorts << Cohort.find_or_create_by(name: 'CSD-TeacherConHouston')
 end
 
 # This method is not used directly in this script, but can be used to create a
@@ -109,4 +109,32 @@ def create_discount_eligible_section(teacher, section_name = 'Discount Eligible 
     end
   end
   section
+end
+
+# This will generate a report on the status of all of our discount applications.
+# It will print out a bunch of rows, one per line. You can then copy paste this
+# into google sheets. After pasting, click on the little icon that shows up and
+# select "Split text into columns"
+def discount_code_reporting
+  rows = []
+  rows << [
+    'User Id', 'User Name', 'Unit6Intention', 'AdminOverrode',
+    'User signature', 'Sign Date', 'Full Discount', 'Discount Code', 'Last updated',
+    'School Id'
+  ].join(',')
+  CircuitPlaygroundDiscountApplication.all.each do |app|
+    rows << [
+      app.user_id,
+      app.user.name,
+      app.unit_6_intention,
+      app.admin_set_status,
+      app.signature,
+      app.signed_at,
+      app.full_discount,
+      app.circuit_playground_discount_code.try(:code),
+      app.updated_at,
+      app.school_id,
+    ].join(',')
+  end
+  puts rows
 end

@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Event Types",
-    "reference": "/csd/maker_buttons/index.html"
+    "reference": "/docs/csd/maker_buttons/index.html"
   },
   "published": true,
   "notes": "",

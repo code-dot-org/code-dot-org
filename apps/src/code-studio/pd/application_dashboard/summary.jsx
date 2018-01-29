@@ -6,9 +6,10 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import SummaryTable from './summary_table';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
+import ApplicantSearch from './applicant_search';
 import Spinner from '../components/spinner';
 import {
-  AllPartnersFilter,
+  UnmatchedFilter,
   RegionalPartnerDropdownOptions as dropdownOptions
 } from './constants';
 import $ from 'jquery';
@@ -17,10 +18,6 @@ export class Summary extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string.isRequired,
     isWorkshopAdmin: PropTypes.bool
-  }
-
-  static contextTypes = {
-    router: PropTypes.object.isRequired
   };
 
   state = {
@@ -31,12 +28,24 @@ export class Summary extends React.Component {
   };
 
   componentWillMount() {
+    this.load();
+  }
+
+  load(selected = null) {
+    let url = '/api/v1/pd/applications';
+    if (this.props.isWorkshopAdmin) {
+      const regionalPartnerFilter = selected ? selected.value : null;
+      const regionalPartnerName = selected ? selected.label : this.props.regionalPartnerName;
+      this.setState({ regionalPartnerName, regionalPartnerFilter });
+
+      url += `?regional_partner_filter=${regionalPartnerFilter ? regionalPartnerFilter : UnmatchedFilter}`;
+    }
+
     $.ajax({
       method: 'GET',
-      url: '/api/v1/pd/applications',
+      url,
       dataType: 'json'
-    })
-    .done(data => {
+    }).done((data) => {
       this.setState({
         loading: false,
         applications: data
@@ -45,19 +54,7 @@ export class Summary extends React.Component {
   }
 
   handleRegionalPartnerChange = (selected) => {
-    const regionalPartnerFilter = selected ? selected.value : null;
-    const regionalPartnerName = selected ? selected.label : this.props.regionalPartnerName;
-    this.setState({ regionalPartnerName, regionalPartnerFilter });
-    $.ajax({
-      method: 'GET',
-      url: `/api/v1/pd/applications?regional_partner_filter=${regionalPartnerFilter ? regionalPartnerFilter : AllPartnersFilter}`,
-      dataType: 'json'
-    }).done((data) => {
-      this.setState({
-        loading: false,
-        applications: data
-      });
-    });
+    this.load(selected);
   };
 
   render() {
@@ -66,6 +63,7 @@ export class Summary extends React.Component {
     }
     return (
       <div>
+        <ApplicantSearch/>
         {this.props.isWorkshopAdmin &&
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}

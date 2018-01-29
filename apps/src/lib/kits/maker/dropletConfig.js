@@ -68,6 +68,7 @@ export const additionalPredefValues = Object.keys(COMPONENT_EVENTS);
 
 // Block properties we'll reuse in multiple entries
 const createLedProps = {parent: api, category: MAKER_CATEGORY, paletteParams: ['pin'], params: ["0"]};
+const createButtonProps = {parent: api, category: MAKER_CATEGORY, paletteParams: ['pin'], params: ["0"]};
 
 export const blocks = [
   /**
@@ -84,10 +85,13 @@ export const blocks = [
   {func: 'createLed', ...createLedProps, type: 'either' },
   {func: 'var myLed = createLed', ...createLedProps, noAutocomplete: true, docFunc: 'createLed' },
 
+  {func: 'createButton', ...createButtonProps, type: 'either' },
+  {func: 'var myButton = createButton', ...createButtonProps, noAutocomplete: true, docFunc: 'createButton' },
+
   /**
    * Circuit-Playground-specific blocks
    */
-  {func: 'onBoardEvent', parent: api, category: CIRCUIT_CATEGORY, paletteParams: ['component', 'event', 'callback'], params: ['buttonL', '"press"', "function(event) {\n  \n}"], allowFunctionDrop: { 2: true }, dropdown: { 0: Object.keys(COMPONENT_EVENTS), 1: boardEventDropdownGenerator }},
+  {func: 'onBoardEvent', parent: api, category: CIRCUIT_CATEGORY, paletteParams: ['component', 'event', 'callback'], params: ['buttonL', '"down"', "function(event) {\n  \n}"], allowFunctionDrop: { 2: true }, dropdown: { 0: Object.keys(COMPONENT_EVENTS), 1: boardEventDropdownGenerator }},
 
   {func: 'led', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
   {func: 'led.on', category: CIRCUIT_CATEGORY},
@@ -104,6 +108,7 @@ export const blocks = [
   {func: 'blink', blockPrefix: colorLedBlockPrefix, category: CIRCUIT_CATEGORY, paletteParams: ['interval'], params: ['100'], tipPrefix: pixelType, modeOptionName: "*.blink", objectDropdown: { options: colorPixelVariables }  },
   {func: 'intensity', blockPrefix: colorLedBlockPrefix, category: CIRCUIT_CATEGORY, params: ['25'], tipPrefix: pixelType, modeOptionName: "*.intensity", objectDropdown: { options: colorPixelVariables }  },
   {func: 'color', blockPrefix: colorLedBlockPrefix, category: CIRCUIT_CATEGORY, paletteParams: ['color'], params: ['"#FF00FF"'], paramButtons: { minArgs: 1, maxArgs: 3}, tipPrefix: pixelType, modeOptionName: "*.color", objectDropdown: { options: colorPixelVariables }  },
+  {func: 'pulse', blockPrefix: colorLedBlockPrefix, category: CIRCUIT_CATEGORY, paletteParams: ['interval'], params: ['300'], tipPrefix: pixelType, modeOptionName: "*.pulse", objectDropdown: { options: colorPixelVariables }  },
 
   {func: 'buzzer', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
   {func: 'buzzer.frequency', category: CIRCUIT_CATEGORY, paletteParams: ['frequency', 'duration'], params: ['500', '100'], paramButtons: { minArgs: 1, maxArgs: 2}},

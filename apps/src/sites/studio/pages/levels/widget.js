@@ -3,13 +3,33 @@
  */
 /* global appOptions */
 import $ from 'jquery';
+import React from 'react';
 import {
-  showInstructionsDialog,
-  showStartOverDialog,
+  showDialog,
   processResults
 } from '@cdo/apps/code-studio/levels/dialogHelper';
 import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
+import { setupApp } from '@cdo/apps/code-studio/initApp/loadApp';
+import { StartOverDialog, InstructionsDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
+import marked from 'marked';
+import i18n from '@cdo/locale';
+
+export function showInstructionsDialog() {
+  let content;
+  if (appOptions.level.markdownInstructions) {
+    content = marked(appOptions.level.markdownInstructions);
+  }
+  showDialog(
+    <InstructionsDialog
+      title={i18n.puzzleTitle({
+        stage_total: appOptions.level.stage_total,
+        puzzle_number: appOptions.level.puzzle_number,
+      })}
+      markdownContent={content}
+    />
+  );
+  $('details').details();
+}
 
 function setupWidgetLevel() {
   window.script_path = location.pathname;
@@ -26,8 +46,8 @@ window.dashboard = window.dashboard || {};
 window.dashboard.widget = {
   setupWidgetLevel: setupWidgetLevel,
   // used by pixelation widget
-  showStartOverDialog: showStartOverDialog,
-  // used eby frequency, vigenere, and pixelation widgets
+  showStartOverDialog: callback => showDialog(<StartOverDialog/>, callback),
+  // used by frequency, vigenere, and pixelation widgets
   processResults: processResults
 };
 

@@ -1,6 +1,10 @@
 import React from 'react';
-import ApplicationFormComponent from "../ApplicationFormComponent";
-import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
+import LabeledFormComponent from "../../form_components/LabeledFormComponent";
+import {
+  PageLabels,
+  SectionHeaders,
+  TextFields
+} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {
@@ -11,13 +15,16 @@ import {
 } from 'react-bootstrap';
 import {styles} from './TeacherApplicationConstants';
 
-export default class Section2YourSchool extends ApplicationFormComponent {
+export default class Section2YourSchool extends LabeledFormComponent {
   static labels = PageLabels.section2YourSchool;
 
   static associatedFields = [
     ...Object.keys(PageLabels.section2YourSchool),
     "currentRole_other",
     "gradesTeaching_notTeachingExplanation",
+    "gradesTeaching_other",
+    "gradesExpectToTeach_notExpectingToTeachExplanation",
+    "gradesExpectToTeach_other",
     "subjectsTeaching_other",
     "subjectsExpectToTeach_other",
     "subjectsLicensedToTeach_other",
@@ -87,34 +94,44 @@ export default class Section2YourSchool extends ApplicationFormComponent {
           </div>
         }
 
-        {this.inputFor("principalFirstName")}
-        {this.inputFor("principalLastName")}
+        {
+          // Disable auto complete for principal fields, so they are not filled with the teacher's details.
+          // Using a custom unmatched string "never" instead of "off" for wider browser compatibility.
+          // See https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#Disabling_autocompletion
+        }
+        {this.inputFor("principalFirstName", {autoComplete: "never"})}
+        {this.inputFor("principalLastName", {autoComplete: "never"})}
         {this.selectFor("principalTitle", {
           placeholder: "Select a title",
-          required: false
+          required: false,
+          autoComplete: "never"
         })}
-        {this.inputFor("principalEmail")}
-        {this.inputFor("principalConfirmEmail")}
-        {this.usPhoneNumberInputFor("principalPhoneNumber")}
+        {this.inputFor("principalEmail", {autoComplete: "never"})}
+        {this.inputFor("principalConfirmEmail", {autoComplete: "never"})}
+        {this.usPhoneNumberInputFor("principalPhoneNumber", {autoComplete: "never"})}
 
         {this.radioButtonsWithAdditionalTextFieldsFor("currentRole", {
-          "Other (Please List):" : "other"
+          [TextFields.otherPleaseList] : "other"
         })}
 
         {this.checkBoxesFor("gradesAtSchool")}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("gradesTeaching", {
-          "I'm not teaching this year (please explain):" : "notTeachingExplanation"
+          [TextFields.notTeachingThisYear] : "notTeachingExplanation",
+          [TextFields.otherPleaseExplain] : "other"
         })}
 
-        {this.checkBoxesFor("gradesExpectToTeach")}
+        {this.checkBoxesWithAdditionalTextFieldsFor("gradesExpectToTeach", {
+          [TextFields.notTeachingNextYear] : "notExpectingToTeachExplanation",
+          [TextFields.otherPleaseExplain] : "other"
+        })}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("subjectsTeaching", {
-          "Other (Please List):" : "other"
+          [TextFields.otherPleaseList] : "other"
         })}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("subjectsExpectToTeach", {
-          "Other (Please List):" : "other"
+          [TextFields.otherPleaseList] : "other"
         })}
 
         <p style={styles.formText}>
@@ -124,29 +141,35 @@ export default class Section2YourSchool extends ApplicationFormComponent {
           course in the coming school year.
         </p>
         <p style={styles.formText}>
-          Note: Code.org does not require specific licences to teach these courses, but to participate in this
+          Note: Code.org does not require specific licenses to teach these courses, but to participate in this
           program, you must be able to teach this course during the 2018-19 school year.
         </p>
 
         {this.radioButtonsFor("doesSchoolRequireCsLicense")}
+        {this.props.data.doesSchoolRequireCsLicense && this.props.data.doesSchoolRequireCsLicense === 'Yes' &&
+          <div style={styles.indented}>
+            {this.inputFor("whatLicenseRequired")}
+          </div>
+        }
+
         {this.radioButtonsFor("haveCsLicense")}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("subjectsLicensedToTeach", {
-          "Other (Please List):" : "other"
+          [TextFields.otherPleaseList] : "other"
         })}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("taughtInPast", {
-          "Other (Please List):" : "other"
+          [TextFields.otherPleaseList] : "other"
         })}
 
         {this.checkBoxesFor("previousYearlongCdoPd")}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("csOfferedAtSchool", {
-          "Other (Please List):" : "other"
+          [TextFields.otherPleaseList] : "other"
         })}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("csOpportunitiesAtSchool", {
-          "Other:" : "other"
+          [TextFields.otherWithText] : "other"
         })}
 
       </FormGroup>
@@ -158,6 +181,12 @@ export default class Section2YourSchool extends ApplicationFormComponent {
    */
   static getDynamicallyRequiredFields(data) {
     const requiredFields = [];
+
+    if (data.doesSchoolRequireCsLicense === 'Yes') {
+      requiredFields.push(
+        "whatLicenseRequired"
+      );
+    }
 
     if (data.school && data.school === '-1') {
       requiredFields.push(
@@ -208,6 +237,10 @@ export default class Section2YourSchool extends ApplicationFormComponent {
       changes.schoolState = undefined;
       changes.schoolZipCode = undefined;
       changes.schoolType = undefined;
+    }
+
+    if (data.doesSchoolRequireCsLicense !== 'Yes') {
+      changes.whatLicenseRequired = undefined;
     }
 
     return changes;

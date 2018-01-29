@@ -4,7 +4,7 @@ drop table if exists analysis.school_activity_stats;
 CREATE table analysis.school_activity_stats AS
   SELECT ss.school_id,
          rpsd.regional_partner_id,
-         rp.name regional_partner,
+         case when rp.name = 'mindSpark Learning' then 'mindSpark Learning and Colorado Education Initiative' else rp.name end as regional_partner,
          ss.school_name,
          ss.city,
          ss.state,
@@ -14,6 +14,8 @@ CREATE table analysis.school_activity_stats AS
          ss.stage_el AS elementary,
          ss.stage_mi AS middle,
          ss.stage_hi AS high,
+         sc.latitude,
+         sc.longitude,
          COUNT(DISTINCT u.id) teachers,
          COUNT(DISTINCT CASE WHEN se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN se.user_id ELSE NULL END) teachers_csf,
          COUNT(DISTINCT CASE WHEN se.script_id IN (122,123,124,125,126,127) THEN se.user_id ELSE NULL END) teachers_csp,
@@ -26,6 +28,7 @@ CREATE table analysis.school_activity_stats AS
          COUNT(DISTINCT CASE WHEN csf_pd.user_id IS NOT NULL THEN u.id ELSE NULL END) teachers_csf_pd,
          COUNT(DISTINCT CASE WHEN scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball') THEN f.student_user_id ELSE NULL END) students_hoc
   FROM analysis.school_stats ss
+    LEFT JOIN dashboard_production.schools sc on sc.id = ss.school_id
     LEFT JOIN dashboard_production.school_infos si 
       ON ss.school_id = si.school_id
     LEFT JOIN dashboard_production_pii.users u
@@ -58,7 +61,7 @@ CREATE table analysis.school_activity_stats AS
                    ON pdw.id = pde.pd_workshop_id
                WHERE course = 'CS Fundamentals') csf_pd 
            ON csf_pd.user_id = u.id
-  GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12;
+  GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14;
 
 GRANT ALL PRIVILEGES ON analysis.school_activity_stats TO GROUP admin;
 GRANT SELECT ON analysis.school_activity_stats TO GROUP reader, GROUP reader_pii;

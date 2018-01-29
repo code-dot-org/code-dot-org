@@ -4,11 +4,7 @@ import ReactTooltip from 'react-tooltip';
 import {Table} from 'reactabular';
 import {Button} from 'react-bootstrap';
 import _ from 'lodash';
-import {
-  StatusColors,
-  UnmatchedFilter,
-  AllPartnersFilter
-} from './constants';
+import { StatusColors } from './constants';
 
 const styles = {
   table: {
@@ -35,11 +31,9 @@ export class QuickViewTable extends React.Component {
     path: PropTypes.string.isRequired,
     data: PropTypes.array.isRequired,
     statusFilter: PropTypes.string,
-    regionalPartnerFilter: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
-    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
+    regionalPartnerName: PropTypes.string,
+    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
+    isWorkshopAdmin: PropTypes.bool
   };
 
   static contextTypes = {
@@ -151,6 +145,12 @@ export class QuickViewTable extends React.Component {
     return columns;
   }
 
+  constructRows() {
+    let rows = this.props.data;
+    rows = this.props.statusFilter ? rows.filter(row => row.status === this.props.statusFilter) : rows;
+    return rows;
+  }
+
   formatNotesTooltip = (notes) => {
     let tooltipId = _.uniqueId();
     return (
@@ -179,31 +179,13 @@ export class QuickViewTable extends React.Component {
     return (
       <Button
         bsSize="xsmall"
+        target="_blank"
         href={this.context.router.createHref(`/${this.props.path}/${id}`)}
-        onClick={this.handleViewClick.bind(this, id)}
       >
         View Application
       </Button>
     );
   };
-
-  handleViewClick = (id, event) => {
-    event.preventDefault();
-    this.context.router.push(`/${this.props.path}/${id}`);
-  };
-
-  constructRows() {
-    let rows = this.props.data;
-    if (this.props.regionalPartnerFilter) {
-      if (this.props.regionalPartnerFilter === UnmatchedFilter) {
-        rows = rows.filter(row => row.regional_partner_id === null);
-      } else if (this.props.regionalPartnerFilter !== AllPartnersFilter) {
-        rows = rows.filter(row => row.regional_partner_id === this.props.regionalPartnerFilter);
-      }
-    }
-    rows = this.props.statusFilter ? rows.filter(row => row.status === this.props.statusFilter) : rows;
-    return rows;
-  }
 
   render() {
     const rows = this.constructRows();
@@ -224,4 +206,5 @@ export class QuickViewTable extends React.Component {
 
 export default connect(state => ({
   showLocked: state.permissions.lockApplication,
+  isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(QuickViewTable);

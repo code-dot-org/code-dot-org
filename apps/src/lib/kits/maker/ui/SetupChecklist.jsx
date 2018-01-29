@@ -6,10 +6,11 @@ import SetupChecker from '../util/SetupChecker';
 import {
   isWindows,
   isChrome,
-  getChromeVersion,
+  isChromeOS,
   isCodeOrgBrowser,
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
+import SurveySupportSection from './SurveySupportSection';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
@@ -36,10 +37,6 @@ export default class SetupChecklist extends Component {
     setupChecker: PropTypes.instanceOf(SetupChecker).isRequired,
     stepDelay: PropTypes.number,
   };
-
-  hide(selector) {
-    this.setState({[selector]: Status.HIDDEN});
-  }
 
   fail(selector) {
     this.setState({[selector]: Status.FAILED});
@@ -69,10 +66,6 @@ export default class SetupChecklist extends Component {
     const {setupChecker} = this.props;
     this.setState({...initialState, isDetecting: true});
 
-    if (!isWindows()) {
-      this.hide(STATUS_WINDOWS_DRIVERS);
-    }
-
     Promise.resolve()
 
         // Are we using a compatible browser?
@@ -80,7 +73,7 @@ export default class SetupChecklist extends Component {
             () => setupChecker.detectSupportedBrowser()))
 
         // Is Chrome App Installed?
-        .then(() => isChrome() && this.detectStep(STATUS_APP_INSTALLED,
+        .then(() => (isChromeOS() || isChrome()) && this.detectStep(STATUS_APP_INSTALLED,
             () => setupChecker.detectChromeAppInstalled()))
 
         // Is board plugged in?
@@ -90,6 +83,9 @@ export default class SetupChecklist extends Component {
         // Can we talk to the firmware?
         .then(() => this.detectStep(STATUS_BOARD_CONNECT,
             () => setupChecker.detectCorrectFirmware()))
+
+        // If we got this far, the drivers must be good.
+        .then(() => this.succeed(STATUS_WINDOWS_DRIVERS))
 
         // Can we initialize components successfully?
         .then(() => this.detectStep(STATUS_BOARD_COMPONENTS,
@@ -104,7 +100,15 @@ export default class SetupChecklist extends Component {
         // If anything goes wrong along the way, we'll end up in this
         // catch clause - make sure to report the error out.
         .catch(error => {
-          this.setState({caughtError: error});
+          const extraErrorInfo = {};
+          // If board connection failed, also mark the drivers step failed
+          // so we display additional help information (it will only be
+          // visible on Windows either way).
+          if (this.state[STATUS_BOARD_PLUG] === Status.FAILED ||
+            this.state[STATUS_BOARD_CONNECT] === Status.FAILED) {
+            extraErrorInfo[STATUS_WINDOWS_DRIVERS] = Status.FAILED;
+          }
+          this.setState({caughtError: error, ...extraErrorInfo});
           trackEvent('MakerSetup', 'ConnectionError');
           if (console && typeof console.error === 'function') {
             console.error(error);
@@ -141,7 +145,7 @@ export default class SetupChecklist extends Component {
   redetect() {
     if (
       this.state[STATUS_SUPPORTED_BROWSER] !== Status.SUCCEEDED
-      || (isChrome() && this.state[STATUS_APP_INSTALLED] !== Status.SUCCEEDED)
+      || ((isChromeOS() || isChrome()) && this.state[STATUS_APP_INSTALLED] !== Status.SUCCEEDED)
     ) {
       // If the Chrome app was not installed last time we checked, but has been
       // installed since, we'll probably need a full page reload to pick it up.
@@ -156,12 +160,60 @@ export default class SetupChecklist extends Component {
     this.detect();
   }
 
-  render() {
-    const surveyLink = (
+  renderPlatformSpecificSteps() {
+    if (isCodeOrgBrowser()) {
+      // Maker Toolkit Standalone App
+      return (
+        <ValidationStep
+          stepName="Code.org Browser"
+          stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
+        />
+      );
+    } else if (isChromeOS() || isChrome()) {
+      // Chromebooks - Chrome App
+      return (
+        <ValidationStep
+          stepName={'Chrome App installed' + (isChromeOS() ? '' : ' (Legacy)')}
+          stepStatus={this.state[STATUS_APP_INSTALLED]}
+        >
+          Please install the
+          {' '}
+          <a
+            href="https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg"
+            target="_blank"
+          >
+            Code.org Serial Connector Chrome App
+          </a>.
+          <br/>Once it is installed, come back to this page and click the
+          "re-detect" button, above.
+          <br/>If a prompt asking for permission for Code Studio to connect
+          to the Chrome App pops up, click Accept.
+          {this.surveyLink()}
+        </ValidationStep>
+      );
+    } else {
+      // Unsupported Browser
+      return (
+        <ValidationStep
+          stepName="Using a supported browser"
+          stepStatus={Status.FAILED}
+        >
+          Your current browser is not supported at this time.
+          Please install the latest version of <a href="https://www.google.com/chrome/browser/">Google Chrome</a>.
+        </ValidationStep>
+      );
+    }
+  }
+
+  surveyLink() {
+    return (
       <span>
         <br/>Still having trouble?  Please <a href={this.getSurveyURL()}>submit our quick survey</a> about your setup issues.
       </span>
     );
+  }
+
+  render() {
     return (
         <div>
           <h2>
@@ -176,60 +228,23 @@ export default class SetupChecklist extends Component {
             />
           </h2>
           <div className="setup-status">
-            {this.state[STATUS_SUPPORTED_BROWSER] !== Status.SUCCEEDED &&
+            {this.renderPlatformSpecificSteps()}
+            {isWindows() &&
               <ValidationStep
-                stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
-                stepName="Using a supported browser"
+                stepStatus={this.state[STATUS_WINDOWS_DRIVERS]}
+                stepName="Adafruit drivers installed"
               >
-                {isChrome() && `It looks like your Chrome version is ${getChromeVersion()}.`}
-                Your current browser is not supported at this time.
-                Please install the latest version of <a href="https://www.google.com/chrome/browser/">Google Chrome</a>.
-                <br/><em>Note: We plan to support other browsers including Internet Explorer in Fall 2017.</em>
+                We can't actually check this, but you should double-check that
+                you have the <a href="https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only">Adafruit Windows Driver</a> installed.
               </ValidationStep>
             }
-            {this.state[STATUS_SUPPORTED_BROWSER] === Status.SUCCEEDED && isCodeOrgBrowser() &&
-              <ValidationStep
-                stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
-                stepName="Code.org Browser"
-              />
-            }
-            {this.state[STATUS_SUPPORTED_BROWSER] === Status.SUCCEEDED && isChrome() &&
-              <div>
-                <ValidationStep
-                  stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
-                  stepName="Chrome version 33+"
-                />
-                <ValidationStep
-                  stepStatus={this.state[STATUS_APP_INSTALLED]}
-                  stepName="Chrome App installed"
-                >
-                  Please install the
-                  {' '}
-                  <a
-                    href="https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg"
-                    target="_blank"
-                  >
-                    Code.org Serial Connector Chrome App extension
-                  </a>.
-                  <br/>Once it is installed, come back to this page and click the
-                  "re-detect" button, above.
-                  <br/>If a prompt asking for permission for Code Studio to connect
-                  to the Chrome App pops up, click Accept.
-                  {surveyLink}
-                </ValidationStep>
-              </div>
-            }
-            <ValidationStep
-              stepStatus={this.state[STATUS_WINDOWS_DRIVERS]}
-              stepName="Windows drivers installed? (cannot auto-check)"
-            />
             <ValidationStep
               stepStatus={this.state[STATUS_BOARD_PLUG]}
               stepName="Board plugged in"
             >
               We couldn't detect a Circuit Playground board.
               Make sure your board is plugged in, and click <a href="#" onClick={this.redetect.bind(this)}>re-detect</a>.
-              {surveyLink}
+              {this.surveyLink()}
             </ValidationStep>
             <ValidationStep
               stepStatus={this.state[STATUS_BOARD_CONNECT]}
@@ -238,7 +253,7 @@ export default class SetupChecklist extends Component {
               We found a board but it didn't respond properly when we tried to connect to it.
               <br/>You should make sure it has the right firmware sketch installed.
               You can <a href="https://learn.adafruit.com/circuit-playground-firmata/overview">install the Circuit Playground Firmata sketch with these instructions</a>.
-              {surveyLink}
+              {this.surveyLink()}
             </ValidationStep>
             <ValidationStep
               stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
@@ -247,22 +262,10 @@ export default class SetupChecklist extends Component {
               Oh no! Something unexpected went wrong while verifying the board components.
               <br/>You should make sure your board has the right firmware sketch installed.
               You can <a href="https://learn.adafruit.com/circuit-playground-firmata/overview">install the Circuit Playground Firmata sketch with these instructions</a>.
-              {surveyLink}
+              {this.surveyLink()}
             </ValidationStep>
           </div>
-          <h2>Survey / Support</h2>
-          <div>
-            <p>Did it work? Having trouble?</p>
-
-            <a
-              href={this.getSurveyURL()}
-              style={{'fontSize': '20px', marginBottom: 14, marginTop: 12, display: 'block'}}
-            >
-              Submit our quick survey&nbsp;
-              <i className="fa fa-arrow-circle-o-right" />
-            </a>
-            <p>Results of setup status detection and browser/platform information will be pre-filled in the survey through the link above.</p>
-          </div>
+          <SurveySupportSection surveyUrl={this.getSurveyURL()}/>
         </div>
     );
   }

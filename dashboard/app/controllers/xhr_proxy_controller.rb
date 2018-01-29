@@ -28,6 +28,7 @@ class XhrProxyController < ApplicationController
     accuweather.com
     apex.oracle.com
     api.data.gov
+    api.football-data.org
     api.nasa.gov
     api.open-notify.org
     api.openweathermap.org
@@ -57,6 +58,8 @@ class XhrProxyController < ApplicationController
     nuevaschool2.ngrok.io
     nuevaschool3.ngrok.io
     rhcloud.com
+    sheets.googleapis.com
+    spreadsheets.google.com
     swapi.co
     transitchicago.com
     translate.yandex.net

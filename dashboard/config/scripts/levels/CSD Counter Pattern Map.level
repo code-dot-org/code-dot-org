@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "The Counter Pattern",
-    "reference": "/csd/counter_pattern/index.html"
+    "reference": "/docs/csd/counter_pattern/index.html"
   },
   "published": true,
   "notes": ""

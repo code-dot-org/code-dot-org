@@ -5,12 +5,13 @@ import {
   analogRead,
   analogWrite,
   boardConnected,
+  createButton,
+  createLed,
   digitalRead,
   digitalWrite,
   injectBoardController,
   onBoardEvent,
   pinMode,
-  createLed,
 } from '@cdo/apps/lib/kits/maker/commands';
 import FakeBoard from '@cdo/apps/lib/kits/maker/FakeBoard';
 
@@ -104,6 +105,13 @@ describe('maker/commands.js', () => {
     it('delegates to makerBoard.createLed', () => {
       createLed({pin: 0});
       expect(stubBoardController.createLed).to.have.been.calledWith(0);
+    });
+  });
+
+  describe('createButton(pin)', () => {
+    it('delegates to makerBoard.createButton', () => {
+      createButton({pin: 4});
+      expect(stubBoardController.createButton).to.have.been.calledWith(4);
     });
   });
 

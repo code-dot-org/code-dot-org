@@ -7,7 +7,7 @@
   "properties": {
     "markdown_instructions": "Today you’re going to learn how to use and create **functions**.\r\n\r\nCreating a function lets you make your own blocks! There are two parts to a function: \r\n\r\nMaking a newly named block that has all of the code you want to run inside of it. \r\n-xml of function definition- \r\n\r\nThe single green block itself that you use, or call, to run the function you created.\r\n-xml of function call-\r\n\r\nPrepare to get familiar with functions, learn how to edit them, and create your own!",
     "instructions_important": "false",
-    "reference": "/csd/csd-arrays/",
+    "reference": "/docs/csd/csd-arrays/",
     "display_name": "Modifying and Creating Arrays"
   },
   "published": true,

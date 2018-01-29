@@ -1,5 +1,5 @@
 import React from 'react';
-import * as storybook from '@kadira/storybook';
+import * as storybook from '@storybook/react';
 import color from '../src/util/color';
 
 const styles = {

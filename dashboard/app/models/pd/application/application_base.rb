@@ -18,6 +18,8 @@
 #  response_scores                     :text(65535)
 #  application_guid                    :string(255)
 #  decision_notification_email_sent_at :datetime
+#  accepted_at                         :datetime
+#  properties                          :text(65535)
 #
 # Indexes
 #
@@ -41,8 +43,6 @@ module Pd::Application
 
     OTHER = 'Other'.freeze
     OTHER_WITH_TEXT = 'Other:'.freeze
-    OTHER_PLEASE_EXPLAIN = 'Other (Please Explain):'.freeze
-    OTHER_PLEASE_LIST = 'Other (Please List):'
     YES = 'Yes'.freeze
     NO = 'No'.freeze
     NONE = 'None'.freeze
@@ -96,12 +96,18 @@ module Pd::Application
     before_create -> {self.status = :unreviewed}
     after_initialize :set_type_and_year
     before_validation :set_type_and_year
+    before_save :update_accepted_date, if: :status_changed?
+    before_create :generate_application_guid, if: -> {application_guid.blank?}
 
     def set_type_and_year
       # Override in derived classes and set to valid values.
       # Setting them to nil here fails those validations and prevents this base class from being saved.
       self.application_year = nil
       self.application_type = nil
+    end
+
+    def update_accepted_date
+      self.accepted_at = status == 'accepted' ? Time.now : nil
     end
 
     self.table_name = 'pd_applications'
@@ -121,6 +127,12 @@ module Pd::Application
       csd
       csp
     ).index_by(&:to_sym).freeze
+
+    COURSE_NAME_MAP = {
+      csp: Pd::Workshop::COURSE_CSP,
+      csd: Pd::Workshop::COURSE_CSD,
+      csf: Pd::Workshop::COURSE_CSF
+    }
 
     belongs_to :user
     belongs_to :regional_partner
@@ -173,23 +185,31 @@ module Pd::Application
       raise 'Abstract method must be overridden by inheriting class'
     end
 
+    # Override in derived class to provide csv data for cohort view
+    # @return [String] csv text row of values for cohort view ending in newline
+    #         The order of fields must be consistent between this and #self.cohort_csv_header
+    def to_cohort_csv_row
+      raise 'Abstract method must be overridden by inheriting class'
+    end
+
     # Get the answers from form_data with additional text appended
     # @param [Hash] hash - sanitized form data hash (see #sanitize_form_data_hash)
     # @param [Symbol] field_name - name of the multi-choice option
     # @param [String] option (optional, defaults to "Other:") value for the option that is associated with additional text
     # @param [Symbol] additional_text_field_name (optional, defaults to field_name + "_other")
     #                 Field name for the additional text field associated with this option.
-    # @returns [Array] - adjusted array of user responses with additional text appended in place
-    def answer_with_additional_text(hash, field_name, option = OTHER_WITH_TEXT, additional_text_field_name = nil)
+    # @returns [String, Array] - adjusted string or array of user response(s) with additional text appended in place
+    def self.answer_with_additional_text(hash, field_name, option = OTHER_WITH_TEXT, additional_text_field_name = nil)
       additional_text_field_name ||= "#{field_name}_other".to_sym
-      hash[field_name].tap do |answer|
-        if answer
-          index = answer.index(option)
-          if index
-            answer[index] = [option, hash[additional_text_field_name.to_sym]].flatten.join(' ')
-          end
-        end
+      answer = hash[field_name]
+      if answer.is_a? String
+        answer = [option, hash[additional_text_field_name]].flatten.join(' ') if answer == option
+      elsif answer.is_a? Array
+        index = answer.index(option)
+        answer[index] = [option, hash[additional_text_field_name]].flatten.join(' ') if index
       end
+
+      answer
     end
 
     def self.filtered_labels(course)
@@ -199,8 +219,13 @@ module Pd::Application
     # Include additional text for all the multi-select fields that have the option
     def full_answers
       sanitize_form_data_hash.tap do |hash|
-        additional_text_fields.each do |additional_text_field|
-          answer_with_additional_text hash, *additional_text_field
+        additional_text_fields.each do |field_name, option, additional_text_field_name|
+          next unless hash.key? field_name
+
+          option ||= OTHER_WITH_TEXT
+          additional_text_field_name ||= "#{field_name}_other".to_sym
+          hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
+          hash.delete additional_text_field_name
         end
       end.slice(*self.class.filtered_labels(course).keys)
     end
@@ -208,6 +233,10 @@ module Pd::Application
     # Camelized (js-standard) format of the full_answers. The keys here will match the raw keys in form_data
     def full_answers_camelized
       full_answers.transform_keys {|k| k.to_s.camelize(:lower)}
+    end
+
+    def generate_application_guid
+      self.application_guid = SecureRandom.uuid
     end
 
     def locked?
@@ -246,13 +275,14 @@ module Pd::Application
     end
 
     def total_score
-      response_scores_hash.values.map {|x| x.try(:to_i)}.compact.reduce(:+)
+      numeric_scores = response_scores_hash.values.select do |score|
+        score.is_a?(Numeric) || score =~ /^\d+$/
+      end
+      numeric_scores.map(&:to_i).reduce(:+)
     end
 
-    protected
-
-    def include_additional_text(hash, field_name, *options)
-      hash[field_name] = answer_with_additional_text hash, field_name, *options
+    def course_name
+      COURSE_NAME_MAP[course.to_sym]
     end
   end
 end

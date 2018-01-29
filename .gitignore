@@ -20,6 +20,7 @@ npm-debug.log
 /apps/build-times.log
 /apps/build-times-to-upload.log
 /apps/coverage
+/apps/log
 /apps/newrelic_agent.log
 /apps/node_modules/
 /apps/npm-debug.log

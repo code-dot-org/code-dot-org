@@ -57,7 +57,7 @@
           %li.answer.answerlist{style: "height: #{height}px", originalIndex: answer['index']}!= match_t(answer['text'])
 
     .clear
-  = render partial: 'levels/dialog', locals: {app: app, data: data}
+  = render partial: 'levels/dialog', locals: {app: app}
   = render partial: 'levels/match_answer', locals: {data: data, height: height}
   = render partial: 'levels/teacher_markdown', locals: {data: data}
 

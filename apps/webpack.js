@@ -18,10 +18,12 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'craft'),
 ];
 
+const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
+
 // Our base config, on which other configs are derived
 var baseConfig = {
   resolve: {
-    extensions: ["", ".js", ".jsx"],
+    extensions: [".js", ".jsx"],
     alias: {
       '@cdo/locale': path.resolve(__dirname, 'src', 'util', 'locale-do-not-import.js'),
       '@cdo/netsim/locale': path.resolve(__dirname, 'src', 'netsim', 'locale-do-not-import.js'),
@@ -32,22 +34,14 @@ var baseConfig = {
       '@cdo/apps': path.resolve(__dirname, 'src'),
       '@cdo/static': path.resolve(__dirname, 'static'),
       repl: path.resolve(__dirname, 'src/noop'),
-      // `scratch-storage` depends on `got`, which depends on a specific feature
-      // of the `http` module. Webpack 1 and 2 provide different implementations
-      // of `http` via `node-libs-browser`. While we're still on Webpack 1,
-      // override resolving of `http` to point to the newer implementation.
-      http: 'stream-http',
     }
   },
-  sassLoader: {
-    includePaths: [path.resolve(__dirname, '..', 'shared', 'css')]
-  },
   module: {
-    loaders: [
-      {test: /\.json$/, loader: 'json'},
-      {test: /\.ejs$/, loader: 'ejs-compiled'},
+    rules: [
+      {test: /\.json$/, loader: 'json-loader'},
+      {test: /\.ejs$/, loader: 'ejs-compiled-loader'},
       {test: /\.css$/, loader: 'style-loader!css-loader'},
-      {test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'},
+      {test: /\.scss$/, loader: `style-loader!css-loader!sass-loader?includePaths=${scssIncludePath}`},
       {
         test:/\.(png|jpg|jpeg|gif|svg)$/,
         include: [
@@ -63,10 +57,9 @@ var baseConfig = {
         // be able to find the file without the hash. :( :(
         loader: "url-loader?limit=1024&name=[name]wp[hash].[ext]",
       },
-    ],
-    preLoaders: [
       {
         test: /\.jsx?$/,
+        enforce: 'pre',
         include: [
           path.resolve(__dirname, 'src'),
           path.resolve(__dirname, 'test'),
@@ -74,7 +67,7 @@ var baseConfig = {
         exclude: [
           path.resolve(__dirname, 'src', 'lodash.js'),
         ],
-        loader: "babel",
+        loader: "babel-loader",
         query: {
           cacheDirectory: path.resolve(__dirname, '.babel-cache'),
           compact: false,
@@ -90,31 +83,29 @@ var baseConfig = {
 if (envConstants.HOT) {
   baseConfig.module.loaders.push({
     test: /\.jsx?$/,
-    loader: 'react-hot',
+    loader: 'react-hot-loader',
     include: [path.resolve(__dirname, 'src')]
   });
 }
 
-if (process.env.CI) {
-  baseConfig.progress = false;
-}
-
 // modify baseConfig's preLoaders if looking for code coverage info
 if (envConstants.COVERAGE) {
-  baseConfig.module.preLoaders = [
+  baseConfig.module.rules.splice(-1, 1,
     {
       test: /\.jsx?$/,
+      enforce: 'pre',
       include: [
         path.resolve(__dirname, 'test'),
       ].concat(toTranspileWithinNodeModules),
-      loader: "babel",
+      loader: "babel-loader",
       query: {
         cacheDirectory: true,
         compact: false,
       }
     }, {
       test: /\.jsx?$/,
-      loader: 'babel-istanbul',
+      enforce: 'pre',
+      loader: 'babel-istanbul-loader',
       include: path.resolve(__dirname, 'src'),
       exclude: [
         path.resolve(__dirname, 'src', 'lodash.js'),
@@ -128,8 +119,8 @@ if (envConstants.COVERAGE) {
         cacheDirectory: true,
         compact: false,
       }
-    },
-  ];
+    }
+  );
 }
 
 var devtool = process.env.CHEAP ?

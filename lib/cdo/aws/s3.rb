@@ -37,7 +37,7 @@ module AWS
     end
 
     # An exception class used to wrap the underlying Amazon NoSuchKey exception.
-    class NoSuchKey < Exception
+    class NoSuchKey < RuntimeError
       def initialize(message = nil)
         super(message)
       end
@@ -157,6 +157,30 @@ module AWS
       ensure
         temp_file.close
         temp_file.unlink
+      end
+    end
+
+    # Processes an S3 file, requires a block to be executed after the data has
+    # been downloaded to the temporary file (passed as argument to the block).
+    # The block will not be called if the exact version of the S3 object has
+    # been processed before. After processing, the bucket, key, and etag of the
+    # object are written to the database to prevent processing again.
+    # The entire execution is wrapped in a transaction.
+    # @param bucket [String] The S3 bucket name.
+    # @param key [String] The S3 key.
+    def self.seed_from_file(bucket, key)
+      etag = create_client.head_object({bucket: bucket, key: key}).etag
+      unless SeededS3Object.exists?(bucket: bucket, key: key, etag: etag)
+        AWS::S3.process_file(bucket, key) do |filename|
+          ActiveRecord::Base.transaction do
+            yield filename
+            SeededS3Object.create!(
+              bucket: bucket,
+              key: key,
+              etag: etag,
+            )
+          end
+        end
       end
     end
 

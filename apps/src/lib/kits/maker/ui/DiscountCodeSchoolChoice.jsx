@@ -42,7 +42,7 @@ export default class DiscountCodeSchoolChoice extends Component {
         schoolName: event.label,
       });
     }
-  }
+  };
 
   handleClickConfirmSchool = () => {
     this.setState({
@@ -72,7 +72,7 @@ export default class DiscountCodeSchoolChoice extends Component {
         "and submitting again.  If this does not work, please contact support@code.org."
      });
    });
-  }
+  };
 
   render() {
     const { schoolId, schoolName, confirming, confirmed } = this.state;

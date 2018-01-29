@@ -230,13 +230,13 @@ GameLab.prototype.init = function (config) {
   // able to turn them on.
   config.noInstructionsWhenCollapsed = true;
 
-  // TODO (caleybrock): re-enable based on !config.level.debuggerDisabled when debug
-  // features are fixed.
-  var breakpointsEnabled = false;
+  // NOTE: We will go back to using !config.level.debuggerDisabled soon,
+  // but are testing with project levels only for now
+  var breakpointsEnabled = config.level.isProjectLevel;
   config.enableShowCode = true;
   config.enableShowLinesCount = false;
 
-  var onMount = function () {
+  const onMount = () => {
     this.setupReduxSubscribers(getStore());
     if (config.level.watchersPrepopulated) {
       try {
@@ -273,14 +273,14 @@ GameLab.prototype.init = function (config) {
     });
 
     this.setCrosshairCursorForPlaySpace();
-  }.bind(this);
+  };
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
 
-  // TODO(caleybrock): re-enable based on (!config.hideSource && !config.level.debuggerDisabled)
-  // when debug features are fixed.
-  var showDebugButtons = false;
+  // NOTE: We will go back to using !config.level.debuggerDisabled soon,
+  // but are testing with project levels only for now
+  var showDebugButtons = (!config.hideSource && config.level.isProjectLevel);
   var showDebugConsole = !config.hideSource;
 
   if (showDebugButtons || showDebugConsole) {
@@ -313,9 +313,11 @@ GameLab.prototype.init = function (config) {
   }
 
   // Push project-sourced animation metadata into store. Always use the
-  // animations specified by the level definition for embed levels.
-  const initialAnimationList = (config.initialAnimationList && !config.embed) ?
-      config.initialAnimationList : this.startAnimations;
+  // animations specified by the level definition for embed and contained
+  // levels.
+  const initialAnimationList =
+    (config.initialAnimationList && !config.embed && !config.hasContainedLevels) ?
+    config.initialAnimationList : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
   ReactDOM.render((
@@ -350,11 +352,19 @@ GameLab.prototype.setupReduxSubscribers = function (store) {
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
       this.onIsRunningChange(state.runState.isRunning);
     }
+
+    if (!lastState.runState || state.runState.isDebuggingSprites !== lastState.runState.isDebuggingSprites) {
+      this.onIsDebuggingSpritesChange(state.runState.isDebuggingSprites);
+    }
   });
 };
 
 GameLab.prototype.onIsRunningChange = function () {
   this.setCrosshairCursorForPlaySpace();
+};
+
+GameLab.prototype.onIsDebuggingSpritesChange = function (isDebuggingSprites) {
+  this.gameLabP5.debugSprites(isDebuggingSprites);
 };
 
 /**
@@ -1041,6 +1051,7 @@ GameLab.prototype.completeSetupIfSetupComplete = function () {
       !this.JSInterpreter.startedHandlingEvents) {
     // Global code should run during the setup phase, but global code hasn't
     // completed.
+    this.gameLabP5.afterSetupStarted();
     return;
   }
 

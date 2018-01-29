@@ -32,8 +32,8 @@ class OpsMailer < ActionMailer::Base
     @workshop = workshop
     @recipient = recipient
 
-    subject = "Important: Your #{@workshop.phase_long_name} workshop is coming up in
-       #{(@workshop.segments.first.start.to_date - Date.today).to_i} days"
+    subject = "Important: Your #{@workshop.phase_long_name} workshop is coming up in " \
+      "#{(@workshop.segments.first.start.to_date - Date.today).to_i} days".squish
     if @workshop.prerequisite_phase
       subject += ". Complete #{@workshop.prerequisite_phase[:long_name]}"
     end

@@ -29,6 +29,12 @@ class CurriculumReference < Level
     teacher_markdown
   )
 
+  validates :reference, format: {
+    with: /\A\/(docs|curriculum)\//,
+    message: "Must begin with /docs or /curriculum",
+    allow_blank: true
+  }
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
@@ -39,11 +45,11 @@ class CurriculumReference < Level
     )
   end
 
-  # Get the URL of the studio.code.org/docs routes (that serves as a proxy to
-  # our docs.code.org route)
+  # Get the URL of the studio.code.org/(docs|curriculum) routes (that serves as
+  # a proxy to our (docs|curriculum).code.org route)
   def href
     return nil unless properties['reference']
-    "/docs#{properties['reference']}"
+    properties['reference']
   end
 
   def concept_level?

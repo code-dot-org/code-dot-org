@@ -1,0 +1,95 @@
+%p
+  Hello
+  = @application.first_name + "!"
+
+%p
+  Congratulations! We are excited to offer you a seat in
+  = @application.regional_partner.name + "'s"
+  2018-19 Professional Learning Program for
+  = @application.course + ","
+  in partnership with Code.org! Please read below for details, and then make
+  sure to enroll using the link below
+  %strong
+    within two weeks
+  of receiving this message.
+
+%p
+  As a reminder, all participants in the Professional Learning Program are expected to:
+  %ul
+    %li
+      Attend their assigned summer workshop
+    %li
+      Attend their assigned academic year workshops
+    %li
+      Teach this curriculum in the 2018-19 school year
+
+%strong
+  Your Professional Learning Program contacts moving forward
+
+%p
+  If you decide to accept your space in the program, you will be joining a
+  year-long professional learning experience that is managed by
+  = @application.regional_partner.name + ","
+  Code.org's Regional Partner in your area. Moving forward, your Regional
+  Partner will be your main point of contact for this program, including all
+  communication regarding your summer and school-year workshops.
+
+%p
+  Please direct all questions or concerns to:
+  %br/
+  = @application.regional_partner.contact.name + ","
+  = @application.regional_partner.name
+  %br/
+  = @application.regional_partner.contact.email
+
+%p
+  Here are your important next steps:
+
+%ul
+  %li
+    %strong
+      Within two weeks
+    of receiving this message, please let us know if you are accepting your seat
+    in this program
+    %li
+      If you want to accept your seat,
+      %a{ href: url_for(controller: 'pd/workshop_enrollment', action: 'new', workshop_id: @workshop.id) }
+        enroll here.
+    %li
+      If you want to decline your seat, email your Regional Partner using the
+      contact information above.
+  %li
+    %strong
+      Mark your calendar for your summer workshop!
+    Your workshop is in
+    = "#{@workshop.location_city}, #{@workshop.friendly_date_range}."
+    Code.org will cover the cost of transportation, lodging, and most meals
+    during your summer workshop. You will receive more details about travel,
+    lodging, and meals approximately six weeks prior to your summer workshop.
+    %strong
+      Please do not book your travel until you receive those instructions.
+  %li
+    Share the good news with your school! Start talking with your
+    administration, colleagues, students, and parents now about the course you
+    will be teaching next year, and encourage a diverse group of students to
+    enroll. Once you accept your space in the program, you will receive a
+    welcome kit complete with recruitment tips and tools. In the meantime,
+    please checkout these
+    = link_to('recruitment resources', 'https://code.org/educate/resources/recruit') + '.'
+
+%p
+  Congratulations again! We look forward to receiving your registration within
+  two weeks.
+
+%p
+  Thank you,
+%p
+  Sarah Fairweather
+  %br/
+  Education Team Program Manager
+  %br/
+  Code.org
+%p
+  = @application.regional_partner.contact.name
+  %br/
+  = @application.regional_partner.name

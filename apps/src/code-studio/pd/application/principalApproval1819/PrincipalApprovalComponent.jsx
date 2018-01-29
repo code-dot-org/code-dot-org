@@ -1,7 +1,10 @@
 import React from 'react';
 import {FormGroup, Row, Col, ControlLabel} from "react-bootstrap";
-import {PageLabels} from '@cdo/apps/generated/pd/principalApproval1819ApplicationConstants';
-import ApplicationFormComponent from '../ApplicationFormComponent';
+import {
+  PageLabels,
+  TextFields
+} from '@cdo/apps/generated/pd/principalApproval1819ApplicationConstants';
+import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {isInt, isPercent} from '@cdo/apps/util/formatValidation';
 import {styles} from '../teacher1819/TeacherApplicationConstants';
@@ -15,7 +18,7 @@ const REQUIRED_SCHOOL_INFO_FIELDS = ['school', 'totalStudentEnrollment',
 ];
 const REPLACE_COURSE_FIELDS = ['replaceWhichCourseCsp', 'replaceWhichCourseCsd'];
 
-export default class PrincipalApprovalComponent extends ApplicationFormComponent {
+export default class PrincipalApprovalComponent extends LabeledFormComponent {
   static labels = PageLabels;
 
   static associatedFields = Object.keys(PageLabels);
@@ -70,18 +73,27 @@ export default class PrincipalApprovalComponent extends ApplicationFormComponent
       <div>
         {this.renderSchoolSection()}
         {this.inputFor('totalStudentEnrollment')}
-        {this.inputFor('freeLunchPercent')}
+        {this.numberInputFor('freeLunchPercent', {
+          min: 0,
+          max: 100,
+          step: 1
+        })}
         Percentage of student enrollment by race
         {
-          RACE_LIST.map(
-            (race) => {
-              return this.inputFor(race, {inlineControl: true, labelWidth: {md: 3}, controlWidth: {md: 1}});
-            }
-          )
+          RACE_LIST.map(race => {
+            return this.numberInputFor(race, {
+              inlineControl: true,
+              labelWidth: { md: 3 },
+              controlWidth: { md: 2 },
+              min: 0,
+              max: 100,
+              step: 1
+            });
+          })
         }
         {
           this.radioButtonsWithAdditionalTextFieldsFor('committedToMasterSchedule', {
-            "Other:": "other"
+            [TextFields.otherWithText]: "other"
           }, {
             label: `Are you committed to including ${this.props.teacherApplication.course}
                     on the master schedule in 2018-19 if accepted into the program? Note:
@@ -92,13 +104,13 @@ export default class PrincipalApprovalComponent extends ApplicationFormComponent
         {this.radioButtonsFor('hoursPerYear')}
         {this.radioButtonsFor('termsPerYear')}
         {this.radioButtonsWithAdditionalTextFieldsFor('replaceCourse', {
-          "I don't know (please explain):": "other"
+          [TextFields.dontKnowExplain] : "other"
         })}
         {
           this.props.data.replaceCourse === 'Yes' && this.renderCourseReplacementSection()
         }
         {this.radioButtonsWithAdditionalTextFieldsFor('committedToDiversity', {
-          "Other (Please Explain):": "other"
+          [TextFields.otherPleaseExplain] : "other"
         })}
         <p>
           There may be a fee associated with your teacher’s summer workshop. Please
@@ -106,23 +118,21 @@ export default class PrincipalApprovalComponent extends ApplicationFormComponent
           look here</a> to find more information about the workshop.
         </p>
         <div>
-          By checking this box, you indicate that you understand there may be a program
-          fee for the summer workshop your teacher attends.
           {this.singleCheckboxFor('understandFee')}
           {this.radioButtonsFor('payFee')}
           {
-            this.props.data.payFee && this.props.data.payFee.startsWith('No') && (
+            this.props.data.payFee && this.props.data.payFee.startsWith('No,') && (
               <div>
                 Would you like to be considered for funding support? Note that funding
                 support is not guaranteed.
-                {this.singleCheckboxFor('wantFunding')}
+                {this.singleCheckboxFor('wantFunding', {required: false})}
               </div>
             )
           }
         </div>
         <p>
           Code.org works closely with local Regional Partners to organize and deliver the
-          Professional Learning Program.  By enrolling in this workshop, teachers are
+          Professional Learning Program.  By submitting this form, teachers are
           agreeing to allow Code.org to share information on how they use Code.org and the
           Professional Learning resources with their Regional Partner and school district.
           In order to organize the workshops and support teachers, our partners need to
@@ -142,11 +152,11 @@ export default class PrincipalApprovalComponent extends ApplicationFormComponent
   renderCourseReplacementSection() {
     if (this.props.teacherApplication.course === 'Computer Science Discoveries') {
       return this.checkBoxesWithAdditionalTextFieldsFor('replaceWhichCourseCsd', {
-        "Other (Please Explain):" : "other"
+        [TextFields.otherPleaseExplain] : "other"
       });
     } else if (this.props.teacherApplication.course === 'Computer Science Principles') {
       return this.checkBoxesWithAdditionalTextFieldsFor('replaceWhichCourseCsp',{
-        "Other (Please Explain):" : "other"
+        [TextFields.otherPleaseExplain] : "other"
       });
     }
   }
@@ -173,7 +183,7 @@ export default class PrincipalApprovalComponent extends ApplicationFormComponent
         {this.inputFor('email')}
         {
           this.radioButtonsWithAdditionalTextFieldsFor('doYouApprove', {
-            "Other:": "other"
+            [TextFields.otherWithText]: "other"
           }, {
             label: `Do you approve of ${this.props.teacherApplication.name} participating
                     in Code.org's 2018 - 19 Professional Learning Program?`,

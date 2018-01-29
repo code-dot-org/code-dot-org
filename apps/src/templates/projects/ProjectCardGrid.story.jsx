@@ -20,7 +20,6 @@ const defaultProject = {
     type: 'applab',
     publishedAt: '2016-10-31T23:59:59.999-08:00',
     publishedToPublic: true,
-    publishedToClass: true
   },
   currentGallery: "public"
 };
@@ -84,23 +83,6 @@ function generateFakePersonalProjects() {
   return personalProjects;
 }
 
-function generateFakeClassProjects() {
-  const classProjects = {};
-  classProjects.applab = [];
-  classProjects.applab.push(generateFakeProject());
-  classProjects.applab.push(generateFakeProject({
-    name: "Mouse Maze",
-    studentName: "Maisy",
-    studentAgeRange: '8+',
-  }));
-  classProjects.applab.push(generateFakeProject({
-    name: "Furry Frenzy",
-    studentName: "Felix",
-    studentAgeRange: '8+',
-  }));
-  return classProjects;
-}
-
 const createProjectsStore = function () {
   return createStore(combineReducers({projects}));
 };
@@ -137,22 +119,6 @@ export default storybook => {
               <ProjectCardGrid
                 projectLists = {generateFakePublicProjectsWithoutStudentInfo()}
                 galleryType = "public"
-              />
-            </Provider>
-          );
-        }
-      },
-      {
-        name: 'Class Gallery',
-        description: 'Class gallery, showing full names',
-        story: () => {
-          const store = createProjectsStore();
-          store.dispatch(selectGallery(Galleries.PUBlIC));
-          return (
-            <Provider store={store}>
-              <ProjectCardGrid
-                projectLists = {generateFakeClassProjects()}
-                galleryType = "class"
               />
             </Provider>
           );

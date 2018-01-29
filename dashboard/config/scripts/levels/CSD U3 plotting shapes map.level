@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Plotting Shapes in Game Lab",
-    "reference": "/csd/drawing_shapes_map/",
+    "reference": "/docs/csd/drawing_shapes_map/",
     "teacher_markdown": "# Simplified Shapes\r\n\r\nThe `rect` and `ellipse` commands that students were introduced to in this lessons are simplified versions of the full commands that they will see later. This allows the class to focus solely on the placement of shapes on the coordinate plane before also worrying about the width and height of those shapes."
   },
   "published": true,

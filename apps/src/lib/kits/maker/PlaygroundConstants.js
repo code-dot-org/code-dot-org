@@ -21,7 +21,7 @@ export const COMPONENT_EVENTS = {
   buttonL: BUTTON_EVENTS,
   buttonR: BUTTON_EVENTS,
   toggleSwitch: ['open', 'close', 'change'],
-  accelerometer: ['change', 'data', 'singleTap', 'doubleTap']
+  accelerometer: ['change', 'data', 'shake']
 };
 SENSOR_VARS.forEach(s => COMPONENT_EVENTS[s] = SENSOR_EVENTS);
 if (experiments.isEnabled('maker-captouch')) {
@@ -30,7 +30,8 @@ if (experiments.isEnabled('maker-captouch')) {
 
 export const BOARD_EVENT_ALIASES = {
   // codeStudioName: 'playground-io-name'
-  singleTap: 'tap:single',
+  shake: 'tap:single',
+  singleTap:'tap:single',
   doubleTap: 'tap:double'
 };
 

@@ -408,7 +408,7 @@ en:
         Students usually work in small groups: Students usually work in small groups
         Students usually work independently: Students usually work independently
       U5 evaluation q1:
-        Are you new to even-drive programming?: Are you new to even-drive programming?
+        Are you new to event-driven programming?: Are you new to event-driven programming?
         'No': 'No'
         'Yes': 'Yes'
       U5 evaluation q2:
@@ -722,8 +722,8 @@ en:
         description here: description here
         title: title
       CSD U5 Encryption 2:
+        Decoding Binary Strings: Decoding Binary Strings
         description here: description here
-        title: title
       CSD U5 L13 SFLP Interpreting Data:
         description here: description here
         title: title
@@ -758,6 +758,7 @@ en:
       CSD U6 LED create intro:
         Make an App Using the LED: Make an App Using the LED
         description here: description here
+      CSD U6 circuit smart bike blinker build: {}
       CSD U6 game project stop: {}
       CSD U6 tugowar stop: {}
       CSD U6L03 Overview: {}
@@ -3054,12 +3055,21 @@ en:
       pre-assessment survey heading1: {}
       pre-assessment survey heading2: {}
       pre-assessment survey heading3: {}
+      pwc_appdev:
+        description here: description here
+        title: title
+      pwc_appdevunplugged:
+        description here: description here
+        title: title
       pwc_cybersecurity:
         description here: description here
         title: title
       pwc_data:
         Data Science & Analytics - Solving Problems with Big Data: Data Science & Analytics - Solving Problems with Big Data
         description here: description here
+      pwc_internetofthings:
+        description here: description here
+        title: title
       pwc_problemsolving:
         Problem Solving - Personal Innovations: Problem Solving - Personal Innovations
         description here: description here
@@ -3069,6 +3079,9 @@ en:
       pwc_technologyfoundations:
         Technology Foundations - What is a Computer?: Technology Foundations - What is a Computer?
         description here: description here
+      pwc_webdevelopment:
+        description here: description here
+        title: title
       rbo-test1: {}
       sample external 1:
         sample external 1: sample external 1
@@ -10229,13 +10242,13 @@ en:
       grade2_multi_collector_A_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
-        Incorrect.  Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.: Incorrect.  Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.
-        Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.: Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.
+        Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.: Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.
+        Laurel tries to collect treasure where there is none and it causes an error.: Laurel tries to collect treasure where there is none and it causes an error.
         Laurel will collect 4 pieces of treasure using this code.: Laurel will collect 4 pieces of treasure using this code.
         Laurel will collect all of the treasure.: Laurel will collect all of the treasure.
-        Laurel will only be able to collect 2 pieces of treasure using this code.: Laurel will only be able to collect 2 pieces of treasure using this code.
-        ? Look closely at the code below.  If the code were to run all the way to the end, how many pieces of treasure would Laurel collect?
-        : Look closely at the code below.  If the code were to run all the way to the end, how many pieces of treasure would Laurel collect?
+        Laurel will try to collect treasure where there is not any and it causes an error.: Laurel will try to collect treasure where there is not any and it causes an error.
+        ? Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?
+        : Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?
       image code from circle:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         "(rectangle (+ 8 2) (- 7 5) solid red)": "(rectangle (+ 8 2) (- 7 5) solid red)"

@@ -47,11 +47,18 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "markdown_instructions": "# Piano Panic\r\n\r\nSo far you’ve just been using the elements of an array. Now, you're going to change what's inside the array.\r\n\r\nOur good friend the piano is back, except now it plays notes from two arrays: `notes`, which holds natural notes (C, D, E, F, G, A, B), and `sharpNotes`, which holds sharp notes (C#, D#, F#, G#, A#).\r\n\r\n# Do this\r\n\r\nThe `sharpNotes` array only has one item inside of it right now.\r\n\r\n* Fix the array so that the sharp keys on the piano can actually play the right note.",
+    "code_functions": {
+      "buzzer.note": null,
+      "accessListItem": null,
+      "onBoardEvent": null,
+      "setProperty": null,
+      "buzzer.frequency": null
+    },
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-12-14 22:47:46 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-14 23:14:51 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-14 23:19:47 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-14 23:22:35 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-14 23:23:30 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-14 23:25:19 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-14 23:31:10 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-12-14 22:47:46 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-14 23:14:51 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-14 23:19:47 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-14 23:22:35 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-14 23:23:30 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-14 23:25:19 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-14 23:31:10 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-02 18:32:21 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-02 18:33:17 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
