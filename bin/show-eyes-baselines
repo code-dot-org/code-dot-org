@@ -5,7 +5,7 @@ require 'net/http/responses'
 require 'date'
 require 'json'
 
-EYES_GET_BRANCHES_URL = "https://eyes.applitools.com/api/baselines?accesskey=#{CDO.applitools_eyes_api_key}".freeze
+EYES_GET_BRANCHES_URL = "https://eyes.applitools.com/api/baselines?accesskey=#{CDO.applitools_eyes_api_key_view}".freeze
 DATETIME_FORMAT = "%m/%d/%Y %H:%M:%S".freeze
 SUFFIX_NEWER = " (NEWER)".freeze
 SUFFIX_OLDER = " (OLDER)".freeze
