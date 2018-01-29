@@ -41,7 +41,7 @@ export default storybook => {
         )
       },
       {
-        name: 'More options',
+        name: 'Even more options',
         description: 'Buttons for Bounce, Infinity, Ice Age, Gumball',
         story: () => (
           <NewProjectButtons

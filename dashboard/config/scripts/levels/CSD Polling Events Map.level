@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Polling Events",
-    "reference": "/csd/polling_events/index.html"
+    "reference": "/docs/csd/polling_events/index.html"
   },
   "published": true,
   "notes": "",

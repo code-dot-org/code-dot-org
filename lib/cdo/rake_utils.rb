@@ -199,7 +199,7 @@ module RakeUtils
   end
 
   def self.git_updates_available?
-    `git remote show origin 2>&1 | grep \"local out of date\" | grep \"#{git_branch}\" | wc -l`.strip.to_i > 0
+    `git remote show origin 2>&1 | grep \"local out of date\" | grep --extended-regexp \"#{git_branch} +pushes to #{git_branch}\" | wc -l`.strip.to_i > 0
   end
 
   def self.git_staged_changes?(path="")
@@ -234,19 +234,18 @@ module RakeUtils
   end
 
   def self.npm_install(*args)
-    sudo = CDO.npm_use_sudo ? 'sudo' : ''
+    frozen_lockfile = ENV['CI'] ? '--frozen-lockfile' : ''
     commands = []
     commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
-    commands += "#{sudo} yarn".split
+    commands += " yarn #{frozen_lockfile}".split
     commands += args
     RakeUtils.system(*commands)
   end
 
   def self.npm_rebuild(*args)
-    sudo = CDO.npm_use_sudo ? 'sudo' : ''
     commands = []
     commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
-    commands += "#{sudo} npm rebuild".split
+    commands += " npm rebuild".split
     commands += args
     RakeUtils.system(*commands)
   end

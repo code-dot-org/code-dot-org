@@ -28,13 +28,13 @@ zh-CN:
         appLabIntro2_textColor: 试试下面可以改变的一些不同属性
       AppLab Intro 2 - add Button_callout:
         designToolboxCallOut: 将按钮拖到屏幕上。
-        changeButtonID: 为您的按钮选择一个清晰的 "id"。例如 "callFriendButton" 或 "goOutsideButton"
-        screenSelectorCallout3: 转到你的 "startScreen"
+        changeButtonID: 为您的按钮选择一个清晰的 "标识"。例如 "呼叫朋友按钮" 或 "出门按钮"
+        screenSelectorCallout3: 转到你的 "开始屏幕"
       AppLab Intro 2 - add more buttons 2_callout: [ ]
       AppLab Intro 2 - add more buttons_callout: [ ]
       AppLab Intro 2 - add onEvent_callout:
-        onEventFirstTime: 单击并将 "onEvent" 块拖到工作区的右侧
-        setScreenFirstTime: 单击并拖动到 "onEvent" 块中的空间
+        onEventFirstTime: 单击并将"onEvent"（当事件发生时）模块拖到工作区的右侧
+        setScreenFirstTime: 单击并拖动到"onEvent"（当事件发生时）模块中。
       AppLab Intro 7 - Change Screen Color_callout:
         applab_hoc_finish: 屏幕变绿了吗？如果是这样, 请按 "完成"。如果不是, 请点击 "重置", 更改您的代码, 然后再次点击 "运行"。
       AppLab Intro 7 - thisOrThatAddButton_callout:
@@ -273,14 +273,19 @@ zh-CN:
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: 这是代码
         CSD_U3_rect_c2: 拖动此模块放到代码区域。
+      CSD U6 colorLeds intensity_callout:
+        CSDU6L10_rainbow: Add your code here
+      CSD U6 colorLeds predict_callout: [ ]
+      CSD U6 getProperty input_callout:
+        CSD_U6L06P03: Add your block here.
       CSD U6 light show predict_callout:
         CSDUDL03P09: What does this line do?
       CSD U6 light show_callout:
         CSDUDL03P09: What does this line do?
       CSD U6 tugowar variables 1_callout:
-        CSD_U6_startGame: 在此处定义 StartGame
+        CSD_U6_startGame: 在此处定义 开始游戏
       CSD U6 tugowar variables 2_callout:
-        CSD_U6_movePlayer: 在这里定义 movePlayer ()
+        CSD_U6_movePlayer: 在这里定义 移动玩家 ()
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: 检查玩家是否赢了
       CSDU4 - Design Mode - 3_callout: [ ]
@@ -394,6 +399,13 @@ zh-CN:
       Course 4 Playlab For Loops 6b_callout: [ ]
       Course 4 SCV 6_callout:
         Course_4_SCV_6: 这个模块可以让你设置几乎任何你想看到的颜色！尝试调整参数，看看会发生什么！
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: 使用箭头移动演员
+      CourseF_PlayLab_vars10_callout:
+        Course_4_Play_Lab_Vars_9_1: 现在，你所有的模块都被分别归类在目录里。点击目录标签可查看同一类别的所有模块。
+      CourseF_PlayLab_vars6_callout: [ ]
+      CourseF_PlayLab_vars7_callout: [ ]
+      CourseF_PlayLab_vars8_callout: [ ]
       Eval Booleans 2_callout:
         Eval Booleans 2 1: Select a number that will make this expression evaluate to true
       Eval Cond 1_callout:
@@ -443,6 +455,8 @@ zh-CN:
         Infinity_move_right_runbutton: 在这里添加移动模块
       Infinity_repeat_callout:
         Infinity_repeat_callout: 放置移动模块到这里面
+      InspirationalArtwork_callout:
+        InspirationalArtwork_1: Try using the new `comment` block under this label to leave yourself notes inside your program!
       Luigi's Pizza 1 (copy 1)_callout:
         luigi's pizza 1: Try ordering a pepperoni pizza
       Luigi's Pizza 1_callout:
@@ -546,6 +560,8 @@ zh-CN:
       PDAlg Big Game History_callout: [ ]
       PDAlg Big Game Remix_callout: [ ]
       PDAlg Design Recipe Delete_callout: [ ]
+      PS clone CSD U3 Variables Predict Where XY_callout:
+        grid: 点击这里显示网格。
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
         grid: 点击这里显示网格。
       PS copy 2-3 Bee Conditionals 5_callout:
@@ -555,18 +571,18 @@ zh-CN:
       Pizza on a Plate_callout:
         4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       Play Lab Rocket 2_callout:
-        pass_function: 这个启动（函数）块允许您将您的函数（不是您的函数返回的值与一些输入）传递到火箭动画库中。您·在屏幕上看到的动画实际上是用您的函数来移动火箭！
+        pass_function: 这个启动（函数）模块允许您将函数（不是您的函数返回的值与一些输入）传递到火箭动画库中。您在屏幕上看到的动画实际上是用您的函数来移动火箭！
         play lab rocket 2: 在此定义火箭高度函数
       Play Lab Rocket 2B_callout:
-        pass_function: 这个黑块可以让您传递您的函数 (而不是您的函数返回的值与一些输入) 到火箭动画库中。您在屏幕上看到的动画实际上是使用您的函数来移动火箭!
+        pass_function: 这个黑模块可以让您传递您的函数 (而不是您的函数返回的值与一些输入) 到火箭动画库中。您在屏幕上看到的动画实际上是使用您的函数来移动火箭!
       Play Lab Rocket 3_callout:
-        Play Lab Rocket 3 1: 在移动到示例和定义之前更新目的语句。
+        Play Lab Rocket 3 1: 在移动到示例和定义之前更新目的声明。
       Play Lab Rocket Free Play_callout: [ ]
       Poorva copy U3L2 Using Simple Commands_callout: [ ]
       Quantum Bee - Ryan_callout:
         feeling_stuck_callout_test: " 感觉卡住了？ <br/> 单击灯泡以得到提示!"
       Robot Doodle_callout:
-        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
+        4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this label to leave yourself notes inside your program!
       Robot Drawing_callout:
         4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       Robot_callout:
@@ -576,7 +592,7 @@ zh-CN:
         New Play Lab Project_callout2: 点击“运行”来保存并运行程序
         sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       Rocket Height Course A_callout:
-        pass_function: 这个启动（函数）块允许您将您的函数（不是您的函数返回的值与一些输入）传递到火箭动画库中。您·在屏幕上看到的动画实际上是用您的函数来移动火箭！
+        pass_function: 这个启动（函数）模块允许您将函数（不是您的函数返回的值与一些输入）传递到火箭动画库中。您在屏幕上看到的动画实际上是用您的函数来移动火箭！
       Ryan - 4-5 Bee Conditionals 2_callout:
         4_5_Bee_Conditionals_2_1: 请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。
       Ryan - Bee Conditionals_callout:
@@ -588,7 +604,7 @@ zh-CN:
       SG U3L2 Using Simple Commands_callout: [ ]
       SG U3L2_Add-subgoals_callout: [ ]
       SG U3L2_Turtle3by3Grid_callout:
-        pen_functions: penUp 和 penDown 现在在这里, 如果你想使用它们。
+        pen_functions: 如果你想使用penUp 和 penDown，它们现在在这里。
         goals_tab: 从这里拖出目标
       SG U3L2_TurtleSquare_right_callout: [ ]
       SGU3L2A Introducing Subgoals_callout:
@@ -639,15 +655,15 @@ zh-CN:
       aE2_callout:
         aE2_1: 仍然只有两个和两个转弯
       aE3_callout:
-        aE3_1: 只有少数这些可用
+        aE3_1: 只有这几个可用
       aE3alternate_callout:
-        aE3_1: 只有少数这些可用
+        aE3_1: 只有这几个可用
       aE3alternateB_callout:
-        aE3_1: 只有少数这些可用
+        aE3_1: 只有这几个可用
       aE4_callout:
-        aE3_1: 只有少数这些可用
+        aE3_1: 只有这几个可用
       aE5_callout:
-        aE3_1: 只有少数这些可用
+        aE3_1: 只有这几个可用
       aE6_callout:
         aE6_1: 只有1个前进和1个转弯块
       aEfreeplay_callout:
@@ -664,10 +680,10 @@ zh-CN:
       course2_collector_prog_challenge1_callout: [ ]
       course2_collector_prog_challenge2_callout: [ ]
       course3_artist_functions_challenge1_callout:
-        courseE_artist_functions_challenge1_callout1: 通过在底部添加更多代码来保持这个程序的持续。
+        courseE_artist_functions_challenge1_callout1: 通过在底部添加更多代码来保持这个程序运行。
         courseE_artist_functions_challenge1_callout2: 如果你不喜欢这个设计, 把它变成你想要的任何东西!
       course3_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: 通过在底部添加更多代码来保持这个程序的持续。
+        courseE_artist_functions_challenge2_callout1: 通过在底部添加更多代码来保持这个程序运行。
         courseE_artist_functions_challenge2_callout2: 如果你不喜欢这个设计, 把它变成你想要的任何东西!
       course3_bee_debugging_challenge1_callout:
         courseD_bee_debugging_challenge1_callout1: 使用此命令可将蜜蜂向后移动。
@@ -678,10 +694,10 @@ zh-CN:
       course3_collector_debugging_challenge2_callout: [ ]
       course3_farmer_until_challenge2_callout: [ ]
       course3_playLab_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: 这个块允许你把演员移动到游戏空间的不同部分。
+        courseC_PlayLab_events_challenge1_1: 这个模块允许你把演员移动到游戏空间的不同部分。
       course4_artist_concept_challenge2_callout: [ ]
       course4_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: 通过在底部添加更多代码来保持这个程序的持续。
+        courseE_artist_functions_challenge2_callout1: 通过在底部添加更多代码来保持这个程序运行。
         courseE_artist_functions_challenge2_callout2: 如果你不喜欢这个设计, 把它变成你想要的任何东西!
       course4_bee_for_challenge1_callout: [ ]
       course4_bee_fwp_challenge2_callout:
@@ -690,26 +706,28 @@ zh-CN:
       courseA_artist_loops4_callout:
         courseA_artist_loops4_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
       courseA_artist_loops7_callout:
-        courseA_artist_loops7_1: 这个数字意味着只有一个这样的块可以在最后的答案中使用。
+        courseA_artist_loops7_1: 这个数字意味着只有一个这样的模块可以在最终的答案中使用。
+      courseA_artist_loops7_forVideo_callout:
+        courseA_artist_loops7_1: 这个数字意味着只有一个这样的模块可以在最终的答案中使用。
       courseA_artist_loops8_callout:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
       courseA_collector_loops1_callout:
-        courseA_collector_loops1_1: 你在工具箱中看到一些新的块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
+        courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
       courseA_collector_loops3_predict1_callout: [ ]
       courseA_collector_preLoops1_callout:
         courseA_collector_preLoops1_1: 点击这里来观看代码运行!
       courseA_collector_preLoops2_callout:
-        courseA_collector_loops1_1: 你在工具箱中看到一些新的块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
+        courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_collector_preLoops3_callout:
-        courseA_collector_loops1_1: 你在工具箱中看到一些新的块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
+        courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_collector_preLoops4_callout:
-        courseA_collector_loops1_1: 你在工具箱中看到一些新的块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
+        courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_collector_preLoops5_callout:
-        courseA_collector_loops1_1: 你在工具箱中看到一些新的块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
+        courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_collector_preLoops6_callout:
-        courseA_collector_loops1_1: 你在工具箱中看到一些新的块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
+        courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_forVideoTest_artist_callout: [ ]
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: 当您需要提示时点击灯泡!
@@ -732,7 +750,7 @@ zh-CN:
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: 这个数字意味着工具箱中不再有这个块了。
       courseB_collector_loops1_callout:
-        courseB_collector_loops1_1: 你在工具箱中看到一些新的块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
+        courseB_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseB_maze_seq1_callout:
         courseB_maze_seq1: 当您需要提示时点击灯泡!
       courseB_maze_seq2_callout:
@@ -743,14 +761,14 @@ zh-CN:
       courseB_playlab_events6_callout:
         courseB_playlab_events6_a: 使用绿色下拉箭头可更改方向。
       courseC_PlayLab_events_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: 这个块允许你把演员移动到游戏空间的不同部分。
+        courseC_PlayLab_events_challenge1_1: 这个模块允许你把演员移动到游戏空间的不同部分。
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: 开始使用这个块, 让艺术家到屏幕的中心。
       courseC_artist_prog1_callout: [ ]
       courseC_artist_prog2_callout: [ ]
       courseC_collector_loops_challenge2_callout: [ ]
       courseC_collector_prog1_callout:
-        courseC_collector_prog1_1: 你在工具箱中看到一些新的块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
+        courseC_collector_prog1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
       courseC_collector_prog8_callout: [ ]
@@ -796,10 +814,10 @@ zh-CN:
       courseD_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
       courseD_artist_nestedLoops1a_callout:
-        courseD_artist_nestedLoops1a_1: 您不必使用颜色来得到这个谜题的权利。如果您想, 这个‘随机颜色’块使它容易!
+        courseD_artist_nestedLoops1a_1: 您不必使用颜色来做对这个谜题。如果您愿意的话, ‘随机颜色’模块会容易!
       courseD_artist_nestedLoops_challenge2_callout: [ ]
       courseD_artist_ramp11_callout:
-        courseD_artist_ramp11_1: 您可以更改此号码。
+        courseD_artist_ramp11_1: 您可以更改此数字。
         courseD_artist_ramp11_2: 单击此处键入重复代码的次数。
       courseD_artist_ramp12_callout: [ ]
       courseD_bee_conditionals2_callout:
@@ -814,12 +832,15 @@ zh-CN:
         courseD_bee_conditionals_challenge3_1: 尝试使用这个循环重复向前移动块。
       courseD_bee_debugging_challenge1_callout:
         courseD_bee_debugging_challenge1_callout1: 使用此命令可将蜜蜂向后移动。
+      courseD_bee_debugging_challenge1a_callout:
+        courseD_bee_debugging_challenge1_callout1: 使用此命令可将蜜蜂向后移动。
       courseD_bee_debugging_challenge2_callout:
         courseD_bee_debugging_challenge1_callout1: 使用此命令可将蜜蜂向后移动。
       courseD_bee_nested_loops_challenge1_callout: [ ]
       courseD_bee_nested_loops_challenge2_callout: [ ]
       courseD_collector_debugging_challenge2_callout: [ ]
       courseD_collector_nested_loops_challenge2_callout: [ ]
+      courseD_collector_nested_loops_challenge2a_callout: [ ]
       courseD_collector_ramp10_callout: [ ]
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: '使用此块收集一块宝藏。  '
@@ -874,26 +895,26 @@ zh-CN:
       courseE_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
       courseE_artist_functions_challenge_callout:
-        courseE_artist_functions_challenge_callout1: 通过在底部添加更多代码来保持这个程序的持续。
+        courseE_artist_functions_challenge_callout1: 通过在底部添加更多代码来保持这个程序运行。
         courseE_artist_functions_challenge_callout2: 如果你不喜欢这个设计, 把它变成你想要的任何东西!
       courseE_artist_functions_challenge1_callout:
-        courseE_artist_functions_challenge1_callout1: 通过在底部添加更多代码来保持这个程序的持续。
+        courseE_artist_functions_challenge1_callout1: 通过在底部添加更多代码来保持这个程序运行。
         courseE_artist_functions_challenge1_callout2: 如果你不喜欢这个设计, 把它变成你想要的任何东西!
       courseE_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: 通过在底部添加更多代码来保持这个程序的持续。
+        courseE_artist_functions_challenge2_callout1: 通过在底部添加更多代码来保持这个程序运行。
         courseE_artist_functions_challenge2_callout2: 如果你不喜欢这个设计, 把它变成你想要的任何东西!
       courseE_artist_functions_predict1_callout: [ ]
       courseE_artist_predict1_callout: [ ]
       courseE_artist_ramp10_callout: [ ]
       courseE_artist_ramp11_callout:
-        courseD_artist_ramp11_1: 您可以更改此号码。
+        courseD_artist_ramp11_1: 您可以更改此数字。
         courseD_artist_ramp11_2: 单击此处键入重复代码的次数。
       courseE_artist_ramp12_callout: [ ]
       courseE_artist_ramp8_callout:
-        courseE_artist_ramp8_1: 您可以更改此号码。
+        courseE_artist_ramp8_1: 您可以更改此数字。
         courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
       courseE_artist_ramp8_2_callout:
-        courseE_artist_ramp8_1: 您可以更改此号码。
+        courseE_artist_ramp8_1: 您可以更改此数字。
         courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
       courseE_artist_ramp9_callout: [ ]
       courseE_artist_ramp9_2_callout: [ ]
@@ -944,11 +965,11 @@ zh-CN:
       courseE_maze_ramp_predict1_callout: [ ]
       courseE_multi_maze_ramp5_callout: [ ]
       courseE_playLab_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: 这个块允许你把演员移动到游戏空间的不同部分。
+        courseC_PlayLab_events_challenge1_1: 这个模块允许你把演员移动到游戏空间的不同部分。
       courseE_playLab_scaffold3_callout:
         courseE_playLab_scaffold3_1: 让演员到这个标志移动到下一层。
       courseF_IceAge_1_callout:
-        playlab_drag_say_a: 在这里拖动 "演员1说 ' 块, 并键入“您好!”
+        playlab_drag_say_a: 在这里拖动 "演员1说 ' 模块, 并键入“您好!”
       courseF_IceAge_10_callout: [ ]
       courseF_IceAge_11_callout: [ ]
       courseF_IceAge_2_callout:
@@ -980,7 +1001,7 @@ zh-CN:
       courseF_artist_predict1_callout: [ ]
       courseF_artist_ramp10_callout: [ ]
       courseF_artist_ramp8_callout:
-        courseE_artist_ramp8_1: 您可以更改此号码。
+        courseE_artist_ramp8_1: 您可以更改此数字。
         courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
       courseF_artist_ramp9_callout: [ ]
       courseF_artist_variables1_callout:
@@ -1017,22 +1038,22 @@ zh-CN:
       courseF_artist_variables_template_callout: [ ]
       courseF_artistembed_variables9_callout: [ ]
       courseF_bee_conditionals2_callout:
-        courseF_bee_conditionals2_2: 工具箱现在处于类别模式。 所有您需要的区块都在这些标签下面!
+        courseF_bee_conditionals2_2: 工具箱现在处于分类模式。 所有您需要的区块都在这些标签下面!
       courseF_bee_conditionals5_callout:
-        courseF_bee_conditionals5_1: 当路径的长度改变时（在矩形的两侧）使用这个块。
+        courseF_bee_conditionals5_1: 当路径的长度改变时（在矩形的两侧！）使用这个块。
       courseF_bee_for3_callout:
         courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox into category mode to save space.  You will find the new `for` loop in here!
       courseF_bee_for3_predict1_callout: [ ]
       courseF_bee_for4_callout:
-        courseF_bee_for4_1: 你会在这里发现 ' for ' 循环!
+        courseF_bee_for4_1: 你会在这里发现 ' 计数循环 '!
       courseF_bee_for6_callout: [ ]
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
       courseF_bee_for_challenge1_callout: [ ]
       courseF_bee_functions2_callout:
-        courseF_bee_functions2_1: 此块调用函数。点击这个“编辑”按钮看看里面是什么！
+        courseF_bee_functions2_1: 此模块调用函数。点击这个“编辑”按钮看看里面是什么！
       courseF_bee_functions6_callout:
-        courseF_bee_functions6_1: 不要忘了在这里寻找更多的块，可能有助于使这个更容易！
+        courseF_bee_functions6_1: 不要忘了在这里寻找更多的模块，可能有助于使这个更容易！
       courseF_bee_functions_challenge1_callout:
         courseF_bee_functions_challenge1_1: 在这个函数中您应该放什么代码？
         courseF_bee_functions_challenge1_2: '"检查花蜜或蜂蜜" 函数可以在这里使用, 如果编辑它, 可以多次制作蜂蜜。'
@@ -1040,7 +1061,7 @@ zh-CN:
       courseF_bee_fwp1_callout:
         courseF_bee_fwp1_1: You can find `if` statements in here.
       courseF_bee_fwp2_callout:
-        courseF_bee_fwp2_a: 调用函数的块就住在这里。
+        courseF_bee_fwp2_a: 调用函数的模块就住在这里。
       courseF_bee_fwp3_callout:
         courseF_bee_fwp3_1: This same function can be used when checking for empty spaces as well as clouds.
       courseF_bee_fwp4_callout:
@@ -1076,16 +1097,16 @@ zh-CN:
       courseF_playlab_variables4_callout: [ ]
       courseF_playlab_variables5_callout: [ ]
       courseF_playlab_variables5c RYAN Copy_callout:
-        courseF_playlab_variables5c_1: 你会发现你的变量块在这里。
+        courseF_playlab_variables5c_1: 你会发现你的变量模块在这里。
       courseF_playlab_variables5c_callout:
-        courseF_playlab_variables5c_1: 你会发现你的变量块在这里。
+        courseF_playlab_variables5c_1: 你会发现你的变量模块在这里。
       courseF_playlab_variables6c_callout:
-        courseF_playlab_variables5c_1: 你会发现你的变量块在这里。
+        courseF_playlab_variables5c_1: 你会发现你的变量模块在这里。
       courseF_playlab_variables7c_callout:
-        courseF_playlab_variables7c_1: 在这里找到 "ask" 块!
+        courseF_playlab_variables7c_1: 在这里找到 "问" 模块!
       courseF_playlab_variables8c_callout: [ ]
       courseF_playlab_variablesTemplate_callout:
-        courseF_playlab_variables5c_1: 你会发现你的变量块在这里。
+        courseF_playlab_variables5c_1: 你会发现你的变量模块在这里。
       course_playlab_variables2_callout:
         course_playlab_variables2_1: 这就是如何设置变量的值。更改连接到此块的文本以更改在变量中保存的内容。
       course_playlab_variables3_callout:

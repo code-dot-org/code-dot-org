@@ -1,5 +1,7 @@
 import {expect} from '../../util/configuredChai';
-import {rgb} from '@cdo/apps/applab/commands';
+import sinon from 'sinon';
+import {rgb, setSelectionRange} from '@cdo/apps/applab/commands';
+import {injectErrorHandler} from "@cdo/apps/lib/util/javascriptMode";
 
 describe("rgb command", () => {
   it('returns an rgba string with no alpha', function () {
@@ -20,5 +22,106 @@ describe("rgb command", () => {
   it('handles decimal values', function () {
     const alphaOpts = {r: 0, g: 200.5, b: 75, a: 0.5};
     expect(rgb(alphaOpts)).to.equal("rgba(0, 201, 75, 0.5)");
+  });
+});
+
+describe("setSelectionRange", () => {
+  let errorHandler, testDivApplab, testInput, testInputId;
+
+  beforeEach(() => {
+    errorHandler = {
+      outputWarning: sinon.spy(),
+    };
+    injectErrorHandler(errorHandler);
+
+    testDivApplab = document.createElement('div');
+    testDivApplab.setAttribute('id', 'divApplab');
+    document.body.appendChild(testDivApplab);
+
+    testInputId = 'test-input';
+    testInput = document.createElement('input');
+    testInput.setAttribute('id', testInputId);
+    testInput.setAttribute('type', 'text');
+    testInput.setAttribute('value', 'example content');
+    testDivApplab.appendChild(testInput);
+  });
+
+  afterEach(() => {
+    document.body.removeChild(testDivApplab);
+    injectErrorHandler(null);
+  });
+
+  it('sets the selection range on the found element', () => {
+    expect(testInput.selectionStart).to.equal(0);
+    expect(testInput.selectionEnd).to.equal(0);
+    setSelectionRange({
+      elementId: testInputId,
+      selectionStart: 3,
+      selectionEnd: 6,
+    });
+    expect(testInput.selectionStart).to.equal(3);
+    expect(testInput.selectionEnd).to.equal(6);
+  });
+
+  it('sets the selection direction on the found element', () => {
+    testInput.selectionDirection = 'forward';
+    expect(testInput.selectionDirection).to.equal('forward');
+    setSelectionRange({
+      elementId: testInputId,
+      selectionStart: 3,
+      selectionEnd: 6,
+      selectionDirection: 'backward',
+    });
+    expect(testInput.selectionDirection).to.equal('backward');
+  });
+
+  it('warns if element is not found', () => {
+    setSelectionRange({
+      elementId: 'fakeElementId',
+      selectionStart: 0,
+      selectionEnd: 0,
+    });
+    expect(errorHandler.outputWarning)
+      .to.have.been.calledOnce
+      .and.calledWith(
+        'setSelectionRange() elementId parameter refers to ' +
+        'an id ("fakeElementId") which does not exist.');
+  });
+
+  it('warns if start is not a number', () => {
+    setSelectionRange({
+      elementId: testInputId,
+      selectionStart: 'string',
+      selectionEnd: 0,
+    });
+    expect(errorHandler.outputWarning)
+      .to.have.been.calledOnce
+      .and.calledWith(
+        'setSelectionRange() start parameter value (string) is not a number.');
+  });
+
+  it('warns if end is not a number', () => {
+    setSelectionRange({
+      elementId: testInputId,
+      selectionStart: 0,
+      selectionEnd: 'string',
+    });
+    expect(errorHandler.outputWarning)
+      .to.have.been.calledOnce
+      .and.calledWith(
+        'setSelectionRange() end parameter value (string) is not a number.');
+  });
+
+  it('warns if direction is not a string', () => {
+    setSelectionRange({
+      elementId: testInputId,
+      selectionStart: 0,
+      selectionEnd: 0,
+      selectionDirection: () => {}
+    });
+    expect(errorHandler.outputWarning)
+      .to.have.been.calledOnce
+      .and.calledWith(
+        'setSelectionRange() direction parameter value (function) is not a string.');
   });
 });

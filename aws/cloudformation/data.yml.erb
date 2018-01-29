@@ -1,0 +1,109 @@
+<%
+require 'cdo/aws/dms'
+require 'active_support/core_ext/numeric/bytes'
+require 'active_support/core_ext/numeric/time'
+-%>
+---
+AWSTemplateFormatVersion: 2010-09-09
+Description: Data layer for Tableau including RedShift cluster configuration and synchronization with RDS instance.
+# Parameters can be provided via CDO.underscored_parameter, e.g. via locals.yml:
+# redshift_password: abcdef
+# Parameters are only required for initial stack creation, and reused if not provided on stack update.
+Parameters:
+  RDSIdentifier:
+    Type: String
+  # MySQL user must have granted REPLICATION CLIENT and REPLICATION SLAVE permissions.
+  # Ref: http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.Security
+  RDSUsername:
+    Type: String
+  RDSPassword:
+    Type: String
+    NoEcho: true
+  RDSHost:
+    Type: String
+  RedshiftDatabase:
+    Type: String
+    Default: dashboard
+  RedshiftUsername:
+    Type: String
+    Default: dev
+  RedshiftPassword:
+    Type: String
+    NoEcho: true
+Resources:
+  Tableau:
+    Type: AWS::Redshift::Cluster
+    DeletionPolicy: Retain
+    Properties:
+      AllowVersionUpgrade: true
+      AutomatedSnapshotRetentionPeriod: 1
+      ClusterParameterGroupName: default.redshift-1.0
+      ClusterSubnetGroupName: !ImportValue VPC-RedshiftSubnetGroup
+      ClusterType: single-node
+      ClusterVersion: 1.0
+      DBName: {Ref: RedshiftDatabase}
+      Encrypted: true
+      KmsKeyId: alias/aws/redshift
+      MasterUsername: {Ref: RedshiftUsername}
+      MasterUserPassword: {Ref: RedshiftPassword}
+      NodeType: dc1.large
+      PubliclyAccessible: true
+      VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
+  TableauSync:
+    Type: AWS::DMS::ReplicationInstance
+    Properties:
+      AllocatedStorage: 250
+      EngineVersion: 2.4.0
+      MultiAZ: true
+      PubliclyAccessible: false
+      ReplicationInstanceClass: dms.c4.4xlarge
+      ReplicationInstanceIdentifier: !Ref AWS::StackName
+      ReplicationSubnetGroupIdentifier: !ImportValue VPC-DMSSubnetGroup
+      VpcSecurityGroupIds: [!ImportValue VPC-DMSSecurityGroup]
+  RDSEndpoint:
+    Type: AWS::DMS::Endpoint
+    Properties:
+      EndpointIdentifier: !Sub "RDS-${AWS::StackName}"
+      EndpointType: source
+      EngineName: mysql
+      ServerName: !Ref RDSHost
+      Port: 3306
+      Username: !Ref RDSUsername
+      Password: !Ref RDSPassword
+  RedshiftEndpoint:
+    Type: AWS::DMS::Endpoint
+    Properties:
+      EndpointIdentifier: !Sub "Redshift-${AWS::StackName}"
+      EndpointType: target
+      EngineName: redshift
+      ServerName: !GetAtt Tableau.Endpoint.Address
+      Port: !GetAtt Tableau.Endpoint.Port
+      Username: !Ref RedshiftUsername
+      Password: !Ref RedshiftPassword
+      DatabaseName: !Ref RedshiftDatabase
+      # Extra Connection Attributes:
+      # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html#CHAP_Introduction.ConnectionAttributes.Redshift
+      #
+      # maxFileSize - Specifies the maximum size (in KB) of any CSV file used to transfer data to Amazon Redshift.
+      # Default value: 32768 KB (32 MB)
+      # Valid values: 1 - 1048576
+      # NOTE: documentation is incorrect; this attribute is specified in _bytes_.
+      #
+      # fileTransferUploadStreams - Specifies the number of threads used to upload a single file.
+      # Default value: 10
+      # Valid values: 1 - 64
+      ExtraConnectionAttributes: maxFileSize=<%=100.megabytes%>;fileTransferUploadStreams=20
+<% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings| -%>
+  DMS<%=task_name.underscore.camelize%>:
+    Type: AWS::DMS::ReplicationTask
+    Properties:
+      MigrationType: full-load-and-cdc
+      ReplicationInstanceArn: !Ref TableauSync
+      ReplicationTaskIdentifier: <%= task_name %>
+      SourceEndpointArn: !Ref RDSEndpoint
+      TargetEndpointArn: !Ref RedshiftEndpoint
+      ReplicationTaskSettings: !Sub |
+        <%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>
+      TableMappings: !Sub |
+        <%= table_mappings.to_json %>
+<% end -%>

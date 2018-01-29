@@ -260,6 +260,12 @@
   studiobar_donate_body: "Üks laps õpib iga dollari eest, mille te kingite"
   studiobar_shop_title: "Pood"
   studiobar_shop_body: "Murra stereotüüpe. Kanna uhkusega meie logo."
+  homepage_stats_students: "of US students have accounts on Code.org"
+  homepage_stats_female: "of our students are female"
+  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
+  homepage_stats_policy: "states changed policy to support computer science"
+  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "&ldquo;Ma esitan väljakutse kõikide riikide tüdrukutele, et õppida ühte Kooditund õpetust&rdquo; - Malala, Noobeli auhinna võitja"
   homepage_hero_text_susan: |-
     &ldquo;Kui sa suudad muuta tehnoloogiat, siis sa suudad muuta maailma..&rdquo; - Susan, YouTube Tegevdirektor
@@ -480,6 +486,7 @@
   video_title_obama: "President Obama on computer science"
   video_title_hoc_is_here: "Hour of Code is Here - Anybody Can Learn"
   video_title_anybody_can_learn: "Anybody Can Learn"
+  video_title_steph_curry: "Hour of Code with Steph Curry"
   video_title_draymond_green: "KoodiTund koos Draymond Green"
   video_title_russell_okung: "KoodiTund koos Russell Okung"
   video_title_real_madrid: "KoodiTund koos Real Madridiga"

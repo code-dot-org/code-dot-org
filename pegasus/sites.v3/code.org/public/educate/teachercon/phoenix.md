@@ -10,13 +10,28 @@ TeacherCon Phoenix
 
 [/solid-block-header]
 ## July 22-27, 2018
-<p align="left"><img src="/images/PhoenixSkyline.jpg" width="100%"></p> 
+
+[col-50]
+
+<p align="left"><img src="/images/PhoenixSkyline.jpg" width="95%"></p> 
+
+[/col-50]
+
+[col-50]
 
 ## **What is TeacherCon?**
 
-TeacherCon is an intensive, hands-on, in-person workshop providing foundational experiences with computer science and the Code.org suite of tools. The five-day workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are also using this curriculum.
+TeacherCon is an intensive, hands-on, in-person workshop providing foundational experiences with computer science and the Code.org suite of tools. The five-day workshop is the primary capacity building experience for educators gearing up to teach their first year of CS Discoveries or CS Principles. 
 
-## **Travel & Hotel Information**
+Over the course of the week, you will join with hundreds of teachers from across the country to explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community with teachers who are also implementing Code.org courses.
+
+[/col-50]
+
+<div style="clear: both;"></div>
+
+<hr/>
+
+## **Travel, Hotel, and Conference Expense Information**
 
 <details>
   <summary>**Hotel Information**</summary>
@@ -35,7 +50,9 @@ TeacherCon accomodations as well as all conference sessions will take place at:
 <summary>**Should I book my own travel to TeacherCon?**</summary>
   <p>
   <br>
-  **Please DO NOT make travel or lodging arrangements before we send you travel booking details.** You will receive an email from us approximately seven weeks ahead of your scheduled TeacherCon with detailed information about how to book your flight through our travel system, Egencia. We also have a room set aside for you at our conference hotel, so you don’t need to make a reservation.
+  **Please DO NOT make travel or lodging arrangements before we send you travel booking details.** You will receive an email from us approximately seven weeks ahead of your scheduled TeacherCon with detailed information about how to book your flight through our travel system, Egencia. 
+  
+We also have a room set aside for you at our conference hotel, so you don’t need to make a reservation.
 
 </p>
 </details>
@@ -57,18 +74,11 @@ You will not need to rent a vehicle while at TeacherCon since all conference ses
 </details>
 
 <details>
-<summary>**Want to share a ride from the airport to the hotel with fellow TeacherCon attendees?**</summary>
+<summary>**Can I share a ride from the airport to the hotel with fellow TeacherCon attendees?**</summary>
 <p>
 <br>
-For privacy reasons, Code.org is not able to share attendee contact information, but you're welcome to meet up with each other at the airport and ride together to the hotel. If you'd like to share a ride, our suggestion is to join a group meeting every 30 minutes between 10 am and 4:30 pm inside the airport (see suggested meeting locations below), and then find a taxi, Uber, or Lyft together. **Please note that Code.org staff will not be at the meeting location.** When you get to the meeting location, make sure to ask others nearby if they are part of TeacherCon.
+For privacy reasons, Code.org is not able to share attendee contact information, but you're welcome to meet up with each other at the airport and ride together to the hotel. If you'd like to share a ride, our suggestion is to join a group meeting every 30 minutes between 10 am and 4:30 pm at any of the [designated rideshare pickup locations at PHX Sky Harbor](https://www.skyharbor.com/ParkingTransportation/ride-share). Then order a taxi, Uber, or Lyft together. **Please note that Code.org staff will not be at the meeting location.** When you get to the pickup location, make sure to ask others nearby if they are part of TeacherCon.
 </p> 
-
-**Suggested meeting locations at PHX Sky Harbor:**
-
-- Terminal 2: Meet at door 7
-- Terminal 3: Meet at door 4
-- Terminal 4: Meet at door 1
-
 </details>
 
 <details>
@@ -89,10 +99,10 @@ All participants will receive a $300 gift card upon their arrival to cover any a
 
 ## **What to Bring**
 <details>
-  <summary>**What should I pack?**</summary>
+  <summary>**What kinds of clothing should I pack?**</summary>
   <p>
   <br>
-We encourage **business casual** attire during TeacherCon. All our conference sessions are indoors, and air conditioning is usually cool in hotels. We recommend that you bring a light sweater if you get cold easily in air conditioned rooms. You can expect temperatures to be quite warm during the day, so pack a water bottle! If you plan to venture outdoors during your free time, be sure to check the local forecast and plan accordingly!
+We encourage **business casual** attire during TeacherCon. All our conference sessions are indoors, and air conditioning is usually cool in hotels. We recommend that you bring layers if you get cold easily in air conditioned rooms. You can expect outside temperatures to be quite warm during the day. If you plan to venture outdoors during your free time, be sure to check the local forecast and plan accordingly!
 </p>
 </details>
 
@@ -100,9 +110,12 @@ We encourage **business casual** attire during TeacherCon. All our conference se
 <summary>**What devices will I need to bring?**</summary>
   <p>
   <br>
-Please bring your laptop/Chromebook and charger, as well as any adapters. If you’re bringing a school or district owned laptop/Chromebook, please make sure you have administrator permissions.
+**Don't forget to bring your own laptop/Chromebook and charger, as well as any adapters.** If you’re bringing a school or district owned laptop/Chromebook, please make sure you have administrator permissions.
 
-**Note**: *Our CS Discoveries and Principles courses are not optimized for tablets, so we do not recommend bringing a tablet as your primary device to this event.*
+_At this time, our CS Discoveries and Principles courses are not optimized for tablets, so **we do not recommend bringing a tablet as your primary device** to this event._
+
+Please note that Code.org will not have extra devices on hand for participants to borow.
+
 </p>
 </details>
 
@@ -111,6 +124,7 @@ Please bring your laptop/Chromebook and charger, as well as any adapters. If you
   <summary>**Schedule for the Week**</summary>
   <p>
 <p align="left"><img src="/images/teachercon-schedule.png" width="80%"></p>
+
 </p>
 </details>
 
@@ -131,66 +145,52 @@ We expect you to attend for the full conference. Make plans to be with us from R
 </p>
 </details>
 
+<a id="previous"></a>
+## **Previous Email Updates**
+This section will be updated as emails are sent for this event.
+
+<a id="prework"></a>
+## **Prework**
+<details>
+<summary>**CS Discoveries**</summary>
+ <p>
+ <br>
+More information coming soon!
+</details>
+
+<details>
+<summary>**CS Principles**</summary>
+ <p>
+ <br>
+More information coming soon!
+</details>
+
 <a id="who"></a>
 ## **Who's Who at TeacherCon?**
 <details>
 <summary>**Code.org Staff**</summary>
  <p>
  <br>
-<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconstaff_phoenix') %></p>
+More information coming soon!
 </details>
 
 <details>
 <summary>**Session Lead Facilitators**</summary>
  <p>
  <br>
-<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconfacilitators_phoenix') %></p>
+More information coming soon!
 </details>
 
 <details>
 <summary>**Regional Partners**</summary>
  <p>
  <br>
-<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconrp_phoenix') %></p>
+More information coming soon!
 </p>
 </details>
-
-<a id="previous"></a>
-## **Previous Email Updates**
-This section will be updated as emails are sent for this event.
-
-<details>
-<summary>**It's time to book your travel to TeacherCon. Complete by June 12th!**</summary>
- <p>
- <br>
-[Click here](http://go.pardot.com/webmail/153401/191426343/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update for teachers.
-</p>
-</details>
-
-<details>
-<summary>**Pre-work and important info about your upcoming TeacherCon!**</summary>
- <p>
- <br>
-**CS Principles Teachers:** [Click here](http://go.pardot.com/webmail/153401/210813081/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email.
-</p>
- <p>
-**CS Discoveries Teachers:** [Click here](http://go.pardot.com/webmail/153401/210813485/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email.
-</p>
-</details>
-
-<details>
-<summary>**We're one week away from TeacherCon!**</summary>
- <p>
- <br>
-**CS Principles Teachers:** [Click here](http://go.pardot.com/webmail/153401/218257869/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email.</p>
-<p>
-**CS Discoveries Teachers:** [Click here](http://go.pardot.com/webmail/153401/218257875/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email.
-</p>
-</details>
-
 
 ## **Contact Us**
-Check out our [FAQ's!](https://goo.gl/udZKLR)
+Check out our [FAQ's!](https://docs.google.com/document/d/1kyf-LMuqZx3Jne-q-Ce8MOaWJQm67VekO_kYKr9EFPQ/edit#heading=h.2d1bb1jtgzkw)
 
 Still can't find what you're looking for? Email us at: [teacher@code.org](mailto:teacher@code.org). 
 

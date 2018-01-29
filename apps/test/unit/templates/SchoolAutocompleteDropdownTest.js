@@ -3,11 +3,23 @@ import {shallow} from 'enzyme';
 import {expect} from '../../util/configuredChai';
 import sinon from 'sinon';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
+import _ from 'lodash';
 
 describe('SchoolAutocompleteDropdown', () => {
   let schoolAutocompleteDropdown;
   let handleChange;
   let select;
+  let debounceStub;
+
+  before(() => {
+    // stub out debounce to return the original function, so it's called immediately
+    debounceStub = sinon.stub(_, 'debounce').callsFake(f => f);
+  });
+
+  after(() => {
+    debounceStub.restore();
+  });
+
   beforeEach(() => {
     handleChange = sinon.spy();
     schoolAutocompleteDropdown = shallow(
@@ -26,6 +38,10 @@ describe('SchoolAutocompleteDropdown', () => {
 
   it('Passes supplied value to the select control', () => {
     expect(select).to.have.prop('value', '12345');
+  });
+
+  it('Disables cache on the select control', () => {
+    expect(select).to.have.prop('cache', false);
   });
 
   it("Calls props.onChange when the selection changes", () => {

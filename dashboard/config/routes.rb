@@ -6,6 +6,9 @@ module OPS
 end
 
 Dashboard::Application.routes.draw do
+  resources :featured_projects, only: [:create]
+  delete '/featured_projects/:project_id', controller: 'featured_projects', action: 'destroy_by_project_id'
+
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 
   resource :pairing, only: [:show, :update]
@@ -60,7 +63,8 @@ Dashboard::Application.routes.draw do
 
   get 'redirected_url', to: 'redirect_proxy#get', format: false
 
-  get 'docs/*docs_route', to: 'docs_proxy#get'
+  get 'docs/*path', to: 'curriculum_proxy#get_doc'
+  get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
   # User-facing section routes
   resources :sections, only: [:show, :update] do
@@ -144,6 +148,8 @@ Dashboard::Application.routes.draw do
       get '/', to: redirect('/projects')
     end
   end
+
+  get 'projects/featured', to: 'projects#featured'
 
   get '/projects/public', to: 'projects#public'
   resources :projects, path: '/projects/', only: [:index] do
@@ -361,6 +367,7 @@ Dashboard::Application.routes.draw do
       resources :workshops do
         collection do
           get :filter
+          get :upcoming_teachercons
         end
         member do # See http://guides.rubyonrails.org/routing.html#adding-more-restful-actions
           post :start
@@ -390,6 +397,10 @@ Dashboard::Application.routes.draw do
       get :teacher_applications, to: 'teacher_applications#index'
       post :teacher_applications, to: 'teacher_applications#create'
 
+      # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
+      post 'teachercon_registrations', to: 'teachercon1819_registrations#create'
+      post 'fit_weekend_registrations', to: 'fit_weekend1819_registrations#create'
+
       post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
       post :regional_partner_program_registrations, to: 'regional_partner_program_registrations#create'
 
@@ -410,6 +421,7 @@ Dashboard::Application.routes.draw do
         collection do
           get :quick_view
           get :cohort_view
+          get :search
         end
       end
     end
@@ -437,6 +449,10 @@ Dashboard::Application.routes.draw do
       get 'teacher', to: 'teacher_application#new'
       get 'principal_approval/:application_guid', to: 'principal_approval_application#new', as: 'principal_approval'
     end
+
+    # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
+    get 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#new'
+    get 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#new'
 
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
     get 'regional_partner_program_registration', to: 'regional_partner_program_registration#new'
@@ -505,13 +521,14 @@ Dashboard::Application.routes.draw do
 
   post '/api/lock_status', to: 'api#update_lockable_state'
   get '/api/lock_status', to: 'api#lockable_state'
+  get '/dashboardapi/script_structure/:script', to: 'api#script_structure'
   get '/api/script_structure/:script', to: 'api#script_structure'
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
+  get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
   get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
   get '/api/user_progress/:script/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
   get '/api/user_progress/:script/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
-  get '/api/user_progress', to: 'api#user_progress_for_all_scripts', as: 'user_progress_for_all_scripts'
   namespace :api do
     api_methods.each do |action|
       get action, action: action

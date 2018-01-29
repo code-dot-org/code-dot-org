@@ -366,6 +366,12 @@
     учиться"
   studiobar_shop_title: "Магазин"
   studiobar_shop_body: "Ломайте стереотипы. Носите наш логотип с гордостью."
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "«Я призываю всех девочек мира пройти один час программирования»,
     — Малала, лауреат Нобелевской премии мира"
   homepage_hero_text_susan: "«Если вы сможете изменить технологии, вы сможете изменить
@@ -646,6 +652,7 @@
   video_title_obama: "Президент Обама в компьютерной науке"
   video_title_hoc_is_here: "Час Кода здесь - Каждый может научиться"
   video_title_anybody_can_learn: "Каждый может научиться"
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: "Час кода с Дреймонд Грин"
   video_title_russell_okung: "Час кода с Расселом Оукунг"
   video_title_real_madrid: "Час кода с Реал Мадрид"
@@ -2177,10 +2184,3 @@
     Account” option:'
   hero_name: "Майнкрафт: Путешествие Героя"
   applab-intro_name: App Lab Intro
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
-  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
-  video_title_steph_curry: Hour of Code with Steph Curry

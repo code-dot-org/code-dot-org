@@ -654,6 +654,7 @@ mi:
     correct_title: "Tēnā koe"
     correct_body: "Tēnā koe i tāpae i ō whakautu."
     hide_survey_last_answer: "He ingoamuna tēnei rangahau. Tēnā toro atu ki te paemana pouako ka kitea ai te huinga hua. Kia mōhio ai koe, ka kitea noa iho ngā hua mēnā i oti i te tokorima ākonga te rangahau te tāpae."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Tēnā koe"
     wrong_body: "Tēnā koe i tāpae i ō whakautu."

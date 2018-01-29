@@ -836,6 +836,28 @@ applabCommands.setAttribute = function (opts) {
   return false;
 };
 
+applabCommands.setSelectionRange = function (opts) {
+  const {
+    elementId,
+    selectionStart,
+    selectionEnd,
+    selectionDirection
+  } = opts;
+
+  apiValidateDomIdExistence(opts, 'setSelectionRange', 'elementId', elementId, true);
+  apiValidateType(opts, 'setSelectionRange', 'start', selectionStart, 'number');
+  apiValidateType(opts, 'setSelectionRange', 'end', selectionEnd, 'number');
+  apiValidateType(opts, 'setSelectionRange', 'direction', selectionDirection, 'string', OPTIONAL);
+
+  const divApplab = document.getElementById('divApplab');
+  const element = document.getElementById(elementId);
+  if (divApplab.contains(element)) {
+    element.setSelectionRange(selectionStart, selectionEnd, selectionDirection);
+    return true;
+  }
+  return false;
+};
+
 applabCommands.getText = function (opts) {
   var divApplab = document.getElementById('divApplab');
   apiValidateDomIdExistence(opts, 'getText', 'id', opts.elementId, true);
@@ -1001,27 +1023,19 @@ applabCommands.deleteElement = function (opts) {
 };
 
 applabCommands.showElement = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(opts, 'showElement', 'id', opts.elementId, true);
-
-  var div = document.getElementById(opts.elementId);
-  if (divApplab.contains(div)) {
-    div.style.visibility = 'visible';
-    return true;
-  }
-  return false;
+  return applabCommands.setProperty({
+    elementId: opts.elementId,
+    property: 'hidden',
+    value: false,
+  });
 };
 
 applabCommands.hideElement = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(opts, 'hideElement', 'id', opts.elementId, true);
-
-  var div = document.getElementById(opts.elementId);
-  if (divApplab.contains(div)) {
-    div.style.visibility = 'hidden';
-    return true;
-  }
-  return false;
+  return applabCommands.setProperty({
+    elementId: opts.elementId,
+    property: 'hidden',
+    value: true,
+  });
 };
 
 applabCommands.setStyle = function (opts) {

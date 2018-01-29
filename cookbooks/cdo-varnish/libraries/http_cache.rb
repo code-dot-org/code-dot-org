@@ -13,7 +13,7 @@ class HttpCache
     'language_',
     # Page mode, for A/B experiments and feature-flag rollouts.
     'pm'
-  ]
+  ].freeze
 
   # A map from script name to script level URL pattern.
   CACHED_SCRIPTS_MAP = %w(
@@ -50,7 +50,7 @@ class HttpCache
 
     # Signed-in user type (student/teacher), or signed-out if cookie is not present.
     user_type = "_user_type#{env_suffix}"
-    default_cookies = DEFAULT_COOKIES.concat([user_type])
+    default_cookies = DEFAULT_COOKIES + [user_type]
 
     # These cookies are whitelisted on all session-specific (not cached) pages.
     whitelisted_cookies = [
@@ -96,7 +96,6 @@ class HttpCache
               /manage-professional-development-workshops*
               /professional-development-workshop-surveys*
               /pd-program-registration*
-              /ops-dashboard*
               /poste*
             ),
             headers: LANGUAGE_HEADER,

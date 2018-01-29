@@ -2,16 +2,17 @@
 title: Code.org Advocacy Coalition
 theme: responsive
 ---
-<link href="/css/interactive_map.css", rel="stylesheet"></link>
 
 # Code.org Advocacy Coalition
 The Code.org Advocacy Coalition is a non-partisan group that believes computer science should be part of the core curriculum in education, and that we must increase participation and access for female students and underrepresented minority students. Download a description of the coalition [here](http://code.org/files/CoalitionOnePager.pdf).
 
+Looking for Code.org state fact sheets? Click [here](http://code.org/promote). 
 
-<%= view :interactive_map, use_url: false %>
+## Current Legislation
+
+<%= view :advocacy_map %>
 
 <div style="clear:both"></div>
-
 
 ## Our Agenda
 Despite demand for computer science professionals, the country’s K-12 education system continues to marginalize computer science education. While decisions about what is taught in elementary, middle and high schools are vested in state and local authority, policy at all levels of government must support putting students on a path to fill high-demand, high-skilled, high-paying computing jobs across all sectors of our economy.
@@ -54,7 +55,7 @@ For more information, please contact advocacy@code.org.
 * <a href="http://www.aauw.org/">American Association for University Women</a>
 * <a href="http://anitaborg.org/">Anita Borg Institute</a>
 * <a href="https://www.aztechcouncil.org/">Arizona Technology Council</a>
-* <a href="https://www.ncwit.org/">Association for Computing Machinery</a>
+* <a href="https://www.acm.org/">Association for Computing Machinery</a>
 * <a href="https://www.battelle.org/">Battelle</a>
 * <a href="https://www.childrennow.org/issue-areas/stem-network/">California STEM Network</a>
 * <a href="http://ceasom.org/">CEASOM Regional Partnership</a>
@@ -75,6 +76,8 @@ For more information, please contact advocacy@code.org.
 * <a href="https://sites.google.com/a/csta-hq.org/new-mexico/">CSTA-New Mexico</a>
 * <a href="https://cyberinnovationcenter.org/">Cyber Innovation Center</a>
 * <a href="https://eisca.org/">Elementary Institute of Science</a>
+* <a href="https://www.esd105.org/domain/175">Educational Service District 105</a>
+* <a href="https://excelined.org">ExcelinEd</a>
 * <a href="http://expandingcomputing.cs.umass.edu/">Expanding Computing Education Pathways (ECEP)</a>
 * <a href="https://www.facebook.com/facebookdiversity">Facebook</a>
 * <a href="https://www.google.com/edu/">Google</a>

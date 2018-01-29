@@ -248,31 +248,33 @@ function importProject() {
       return;
     }
 
-    let shareUrl;
+    let sharePath;
     try {
-      shareUrl = new URL(shareLink);
+      const anchor = document.createElement('a');
+      anchor.href = shareLink;
+      sharePath = anchor.pathname;
     } catch (e) {
       // a shareLink that does not represent a valid URL will throw a TypeError
       Craft.showErrorMessagePopup(dashboard.i18n.t('project.share_link_import_bad_link_header'), dashboard.i18n.t('project.share_link_import_bad_link_body'));
       return;
     }
 
-    const legacyShareRegex = /^\/c\/([^\/]*)/;
-    const obfuscatedShareRegex = /^\/r\/([^\/]*)/;
-    const projectShareRegex = /^\/projects\/minecraft_hero\/([^\/]*)/;
+    const legacyShareRegex = /^\/?c\/([^\/]*)/;
+    const obfuscatedShareRegex = /^\/?r\/([^\/]*)/;
+    const projectShareRegex = /^\/?projects\/minecraft_hero\/([^\/]*)/;
 
     let levelSourcePath, channelId;
 
     // Try a couple different kinds of share links, resolving to either a level
     // source or channel
-    if (shareUrl.pathname.match(legacyShareRegex)) {
-      const levelSourceId = shareUrl.pathname.match(legacyShareRegex)[1];
+    if (sharePath.match(legacyShareRegex)) {
+      const levelSourceId = sharePath.match(legacyShareRegex)[1];
       levelSourcePath = `/c/${levelSourceId}.json`;
-    } else if (shareUrl.pathname.match(obfuscatedShareRegex)) {
-      const levelSourceId = shareUrl.pathname.match(obfuscatedShareRegex)[1];
+    } else if (sharePath.match(obfuscatedShareRegex)) {
+      const levelSourceId = sharePath.match(obfuscatedShareRegex)[1];
       levelSourcePath = `/r/${levelSourceId}.json`;
-    } else if (shareUrl.pathname.match(projectShareRegex)) {
-      channelId = shareUrl.pathname.match(projectShareRegex)[1];
+    } else if (sharePath.match(projectShareRegex)) {
+      channelId = sharePath.match(projectShareRegex)[1];
     }
 
     const onFinish = function (source) {
@@ -349,15 +351,22 @@ header.showMinimalProjectHeader = function () {
 // Project header for script levels that are backed by a project. Shows a
 // Share and Remix button, and places a last_modified time below the stage
 // name
-header.showHeaderForProjectBacked = function () {
-  if ($('.project_info .project_share').length !== 0) {
+/**
+ * @param {object} options{{
+ *   showShareAndRemix: boolean
+ * }}
+ */
+header.showHeaderForProjectBacked = function (options) {
+  if ($('.project_updated_at').length !== 0) {
     return;
   }
-  $('.project_info')
-      .append($('<div class="project_share header_button header_button_light">').text(dashboard.i18n.t('project.share')))
-      .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')));
-  $('.project_share').click(shareProject);
-  $('.project_remix').click(remixProject);
+  if (options.showShareAndRemix) {
+    $('.project_info')
+        .append($('<div class="project_share header_button header_button_light">').text(dashboard.i18n.t('project.share')))
+        .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')));
+    $('.project_share').click(shareProject);
+    $('.project_remix').click(remixProject);
+  }
 
   // Add updated_at below the level name. Do this by creating a new div, moving
   // the level text into it, applying some styling, and placing that div where

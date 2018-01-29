@@ -14,7 +14,7 @@ nav: regional_partner_playbook_nav
 
 ________________
 <a id="teachapp"></a>
-## Teacher Application
+## Teacher Applications and Recruitment
 
 ### What does the application process look like and how is my organization involved?
 Review the [2018 Teacher Application Process Document](https://docs.google.com/document/d/10fGyKGqX9ybLn8zaSDFcYZWdIsGELFflLsNyi1llbtM/edit#heading=h.9egyv1wsx26t) for everything you need to know about the Code.org teacher application process including a timeline, how to use the tools, and copies of the communications applicants will receive.
@@ -34,6 +34,10 @@ Review the [2018 Teacher Application Process Document](https://docs.google.com/d
 - Computer Science Discoveries - Coming Soon
 - Computer Science Principles - Coming Soon
 
+### Where can I find some resources to help with recruitment?
+- Visit the [Curriculum Tile](https://code.org/educate/regional-partner/playbook/curriculum) for one-pagers on each program as well as a overview of the professional learning program that you can share with administrators and potential applications.  
+- Teachers and administrators can visit https://code.org/educate/professional-learning to start learning about CS Discoveries, CS Principles and the program requirements.
+- Encourage teachers to check out our [program recommendations](https://code.org/files/PL-Program-for-Me.pdf) to determine the best fit for their teaching situation.
 
 ________________
 <a id="teachout"></a>

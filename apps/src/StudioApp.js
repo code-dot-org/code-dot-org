@@ -36,6 +36,7 @@ import VersionHistory from './templates/VersionHistory';
 import WireframeButtons from './templates/WireframeButtons';
 import annotationList from './acemode/annotationList';
 import color from "./util/color";
+import getAchievements from './achievements';
 import i18n from './code-studio/i18n';
 import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
@@ -55,6 +56,7 @@ import {setIsRunning} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
 import {
+  setAchievements,
   setBlockLimit,
   setFeedbackData,
   showFeedback,
@@ -67,6 +69,7 @@ import {
 } from './redux/instructions';
 import { addCallouts } from '@cdo/apps/code-studio/callouts';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 var copyrightStrings;
 
@@ -268,6 +271,35 @@ StudioApp.prototype.init = function (config) {
 
   this.configureDom(config);
 
+  //Only log a page load when there are videos present
+  if (config.level.levelVideos && config.level.levelVideos.length > 0 && (config.app === 'applab' || config.app === 'gamelab')){
+    if (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab')){
+      firehoseClient.putRecord(
+        'analysis-events',
+        {
+          study: 'instructions-resources-tab',
+          study_group: 'resources-tab',
+          event: 'resources-tab-load',
+          script_id: config.scriptId,
+          level_id: config.serverLevelId,
+          data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
+        }
+      );
+    } else {
+      firehoseClient.putRecord(
+        'analysis-events',
+        {
+          study: 'instructions-resources-tab',
+          study_group: 'under-app',
+          event: 'under-app-load',
+          script_id: config.scriptId,
+          level_id: config.serverLevelId,
+          data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
+        }
+      );
+    }
+  }
+
   ReactDOM.render(
     <Provider store={getStore()}>
       <div>
@@ -277,7 +309,7 @@ StudioApp.prototype.init = function (config) {
             }}
         />
         <FinishDialog
-          handleClose={() => this.onContinue()}
+          onContinue={() => this.onContinue()}
         />
       </div>
     </Provider>,
@@ -1415,25 +1447,12 @@ StudioApp.prototype.displayFeedback = function (options) {
       const store = getStore();
       store.dispatch(setFeedbackData({
         isPerfect: feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT,
-        blocksUsed: this.feedback_.getNumBlocksUsed(),
-        achievements: [
-          {
-            isAchieved: true,
-            message: 'Placeholder achievement!',
-          },
-          {
-            isAchieved: true,
-            message: 'Another achievement!',
-          },
-          {
-            isAchieved: false,
-            message: 'Some lame achievement :(',
-          },
-        ],
+        blocksUsed: this.feedback_.getNumCountableBlocks(),
         displayFunometer: response && response.puzzle_ratings_enabled,
         studentCode: this.feedback_.getGeneratedCodeProperties(this.config.appStrings),
         canShare: !this.disableSocialShare && !options.disableSocialShare,
       }));
+      store.dispatch(setAchievements(getAchievements(store.getState())));
       if (!preventDialog) {
         store.dispatch(showFeedback());
       }
@@ -1561,12 +1580,14 @@ StudioApp.prototype.report = function (options) {
 
   this.lastTestResult = options.testResult;
 
+  const readOnly = getStore().getState().pageConstants.isReadOnlyWorkspace;
+
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
   // or call the onComplete() callback expected. The app will just sit
   // there with the Reset button as the only option.
   var self = this;
-  if (!(this.hideSource && this.share)) {
+  if (!(this.hideSource && this.share) && !readOnly) {
     var onAttemptCallback = (function () {
       return function (builderDetails) {
         for (var option in builderDetails) {
@@ -1722,7 +1743,10 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.requiredBlocks_ = config.level.requiredBlocks || [];
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];
 
-  if (config.ignoreLastAttempt) {
+  // Always use the source code from the level definition for contained levels,
+  // so that changes made in levelbuilder will show up for users who have
+  // already run the level.
+  if (config.ignoreLastAttempt || config.hasContainedLevels) {
     config.level.lastAttempt = '';
   }
 
@@ -1821,9 +1845,28 @@ StudioApp.prototype.configureDom = function (config) {
   var referenceArea = document.getElementById('reference_area');
   // noInstructionsWhenCollapsed is used in TopInstructions to determine when to use CSPTopInstructions (in which case
   // display videos in the top instructions) or CSFTopInstructions (in which case the videos are appended here).
-  const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && experiments.isEnabled('resourcesTab');
+  const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab'));
   if (!referenceAreaInTopInstructions && referenceArea) {
     belowViz.appendChild(referenceArea);
+    // TODO (epeach) - remove after resources tab A/B testing
+    // Temporarily attach an event listener to log clicks
+    // Logs the type of app and the ids of the puzzle
+    var videoThumbnail = document.getElementsByClassName('video_thumbnail');
+    if (videoThumbnail[0] && (config.app === 'gamelab' || config.app === 'applab')){
+      videoThumbnail[0].addEventListener('click', () => {
+        firehoseClient.putRecord(
+          'analysis-events',
+          {
+            study: 'instructions-resources-tab',
+            study_group: 'under-app',
+            event: 'under-app-video-click',
+            script_id: config.scriptId,
+            level_id: config.serverLevelId,
+            data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
+          }
+        );
+      });
+    }
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
@@ -2876,6 +2919,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
+    userId: config.userId,
     textToSpeechEnabled: config.textToSpeechEnabled,
     isK1: config.level.isK1,
     appType: config.app,
@@ -2883,6 +2927,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     showProjectTemplateWorkspaceIcon: !!config.level.projectTemplateLevelName &&
       !config.level.isK1 &&
       !config.readonlyWorkspace,
+    serverLevelId: config.serverLevelId,
   }, appSpecificConstants);
 
   getStore().dispatch(setPageConstants(combined));

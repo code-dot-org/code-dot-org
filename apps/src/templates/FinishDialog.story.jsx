@@ -37,8 +37,8 @@ export default storybook =>
           <ExampleDialogButton closeCallbacks={['onContinue', 'onReplay']} >
             <FinishDialog
               isPerfect={true}
-              blockLimit={98}
-              blocksUsed={98}
+              blockLimit={10}
+              blocksUsed={10}
               achievements={achievements}
             />
           </ExampleDialogButton>

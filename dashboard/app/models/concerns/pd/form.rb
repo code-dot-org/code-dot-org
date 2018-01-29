@@ -67,13 +67,7 @@ module Pd::Form
     # its owner has been deleted.
     return if owner_deleted?
 
-    hash = sanitize_form_data_hash
-
-    # empty fields may come about when the user selects then unselects an
-    # option. They should be treated as if they do not exist
-    hash.delete_if do |_, value|
-      value.blank?
-    end
+    hash = sanitize_and_trim_form_data_hash
 
     self.class.required_fields.each do |key|
       add_key_error(key) unless hash.key?(key)
@@ -94,7 +88,7 @@ module Pd::Form
   end
 
   def validate_with(options)
-    hash = sanitize_form_data_hash
+    hash = sanitize_and_trim_form_data_hash
 
     hash_with_options = hash.select do |key, _|
       options.key? key
@@ -129,6 +123,16 @@ module Pd::Form
 
   def sanitize_form_data_hash
     form_data_hash.transform_keys {|key| key.underscore.to_sym}
+  end
+
+  def sanitize_and_trim_form_data_hash
+    hash = sanitize_form_data_hash
+
+    # empty fields may come about when the user selects then unselects an
+    # option. They should be treated as if they do not exist
+    hash.delete_if do |_, value|
+      value.blank?
+    end
   end
 
   def public_sanitized_form_data_hash

@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Booleans and Comparison Operators",
-    "reference": "/csd/booleans/index.html"
+    "reference": "/docs/csd/booleans/index.html"
   },
   "published": true,
   "notes": ""

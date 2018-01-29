@@ -2,6 +2,7 @@
 
 const SHOW_FEEDBACK = 'feedback/show_feedback';
 const HIDE_FEEDBACK = 'feedback/hide_feedback';
+const SET_ACHIEVEMENTS = 'feedback/set_achievemnts';
 const SET_BLOCK_LIMIT = 'feedback/set_block_limit';
 const SET_FEEDBACK_DATA = 'feedback/set_data';
 
@@ -46,7 +47,6 @@ export default function reducer(state = initialState, action) {
     const {
       isPerfect,
       blocksUsed,
-      achievements,
       displayFunometer,
       studentCode,
       canShare,
@@ -55,10 +55,16 @@ export default function reducer(state = initialState, action) {
       ...state,
       isPerfect,
       blocksUsed,
-      achievements,
       displayFunometer,
       studentCode,
       canShare,
+    };
+  }
+  if (action.type === SET_ACHIEVEMENTS) {
+    const { achievements } = action;
+    return {
+      ...state,
+      achievements,
     };
   }
   return state;
@@ -78,9 +84,12 @@ export const setBlockLimit = (blockLimit) => ({
   blockLimit,
 });
 
-export const setFeedbackData = (props) => {
-  return {
-    type: SET_FEEDBACK_DATA,
-    ...props,
-  };
-};
+export const setFeedbackData = (props) => ({
+  type: SET_FEEDBACK_DATA,
+  ...props,
+});
+
+export const setAchievements = (achievements) => ({
+  type: SET_ACHIEVEMENTS,
+  achievements,
+});

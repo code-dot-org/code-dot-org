@@ -23,6 +23,7 @@ import reducer, {
   setCurrentStageId,
   stageExtrasUrl,
   setStageExtrasEnabled,
+  getLevelResult,
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
 
@@ -1123,6 +1124,41 @@ describe('progressReduxTest', () => {
         },
       };
       assert.isTrue(isPerfect(state, levelId));
+    });
+  });
+
+  describe('getLevelResult', () => {
+    it('returns the provided result for standard levels', () => {
+      const result = getLevelResult({
+        status: LevelStatus.perfect,
+        result: TestResults.ALL_PASS
+      });
+      assert.strictEqual(result, TestResults.ALL_PASS);
+    });
+
+    it('returns LOCKED_RESULT for locked levels', () => {
+      const result = getLevelResult({
+        status: LevelStatus.locked,
+        // No result provided by server in this case
+      });
+      assert.strictEqual(result, TestResults.LOCKED_RESULT);
+    });
+
+    it('returns SUBMITTED_RESULT for a submitted level', () => {
+      const result = getLevelResult({
+        status: LevelStatus.submitted,
+        result: TestResults.ALL_PASS,
+        submitted: true,
+        readonly_answers: true,
+        pages_completed: [
+          -50,
+          null,
+          null,
+          null,
+          null
+        ]
+      });
+      assert.strictEqual(result, TestResults.SUBMITTED_RESULT);
     });
   });
 });

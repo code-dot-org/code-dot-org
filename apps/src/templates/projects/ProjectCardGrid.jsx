@@ -38,7 +38,7 @@ class ProjectCardGrid extends Component {
       events: PropTypes.arrayOf(projectPropType),
       k1: PropTypes.arrayOf(projectPropType),
     }).isRequired,
-    galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
+    galleryType: PropTypes.oneOf(['personal', 'public']).isRequired,
     selectedGallery: PropTypes.string.isRequired
   };
 

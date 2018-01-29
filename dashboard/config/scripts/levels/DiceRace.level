@@ -6,6 +6,9 @@
   "properties": {
     "video_key": "C3_dice_race"
   },
-  "published": true
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2018-01-18 00:34:08 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Unplugged>

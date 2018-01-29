@@ -1,0 +1,22 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+- if @application.application_type == "Teacher"
+  %p
+    This Code.org account is not linked to a current teacher. If you are a teacher
+    who has been accepted to TeacherCon, please confirm that you're using the same
+    Code.org account you used to submit your teacher application. Please
+    email <a href="mailto:teacher@code.org">teacher@code.org</a> for support.
+
+- if @application.application_type == "Facilitator"
+  %p
+    This Code.org account is not linked to a current facilitator. If you are a facilitator
+    who has been accepted to TeacherCon, please confirm that you're using the same
+    Code.org account you used to submit your facilitator application. Please
+    email <a href="mailto:facilitators@code.org">facilitators@code.org</a> for support.
+
+- if @application.application_type == "Partner"
+  %p
+    This Code.org account is not linked to a current Regional Partner. Please
+    confirm that you're using the same Code.org account you use as a Regional
+    Partner. Please email <a href="mailto:partner@code.org">partner@code.org</a> for support.

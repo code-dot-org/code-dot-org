@@ -35,6 +35,10 @@ const styles = {
   error: {
     color: 'red',
     marginTop: 20,
+  },
+  bold: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    display: 'inline',
   }
 };
 
@@ -58,7 +62,7 @@ export default class EligibilityConfirmDialog extends Component {
         && this.check3.checked
         && /\S/.test(this.state.signature)
     });
-  }
+  };
 
   handleSubmit = () => {
     this.setState({submitting: true});
@@ -70,18 +74,18 @@ export default class EligibilityConfirmDialog extends Component {
        signature: this.state.signature
      }
    }).done(data => {
-     this.props.onSuccess(data.code);
+     this.props.onSuccess(data.code, data.expiration);
    }).fail((jqXHR, textStatus) => {
      this.setState({
        error: "We're sorry, but something went wrong. Try refreshing the page " +
         "and submitting again.  If this does not work, please contact support@code.org."
       });
    });
-  }
+  };
 
   setSignature = (event) => {
     this.setState({signature: event.target.value}, this.verifyResponse);
-  }
+  };
 
   render() {
     return (
@@ -129,7 +133,7 @@ export default class EligibilityConfirmDialog extends Component {
           <label>
             <div>{i18n.verifySignature()}</div>
             <div style={styles.signature}>
-              <b>Electronic Signature</b> {i18n.typeName()}
+              <strong style={styles.bold}>Electronic Signature</strong> {i18n.typeName()}
             </div>
             <input
               value={this.state.signature}

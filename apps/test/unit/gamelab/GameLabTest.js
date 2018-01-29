@@ -7,8 +7,8 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import reducers from '@cdo/apps/gamelab/reducers';
 import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {setExternalGlobals} from '../../util/testUtils';
-import "script!@code-dot-org/p5.play/examples/lib/p5";
-import "script!@code-dot-org/p5.play/lib/p5.play";
+import "script-loader!@code-dot-org/p5.play/examples/lib/p5";
+import "script-loader!@code-dot-org/p5.play/lib/p5.play";
 
 describe("GameLab", () => {
   setExternalGlobals();

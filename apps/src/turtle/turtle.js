@@ -176,7 +176,7 @@ const REMIX_PROPS_BY_SKIN = {
   elsa: FROZEN_REMIX_PROPS,
 };
 
-const PUBLISHABLE_SKINS = ['artist', 'anna', 'elsa'];
+const PUBLISHABLE_SKINS = ['artist', 'artist_zombie', 'anna', 'elsa'];
 
 /**
  * An instantiable Artist class
@@ -1335,21 +1335,11 @@ Artist.prototype.step = function (command, values, options) {
       tupleDone = result.tupleDone;
       this.turnByDegrees_(result.distance);
       break;
-    case 'DP':  // Draw Print
-      this.ctxScratch.save();
-      this.ctxScratch.translate(this.x, this.y);
-      this.ctxScratch.rotate(utils.degreesToRadians(this.heading - 90));
-      this.ctxScratch.fillText(values[0], 0, 0);
-      this.ctxScratch.restore();
-      break;
     case 'GA':  // Global Alpha
       var alpha = values[0];
       alpha = Math.max(0, alpha);
       alpha = Math.min(100, alpha);
       this.ctxScratch.globalAlpha = alpha / 100;
-      break;
-    case 'DF':  // Draw Font
-      this.ctxScratch.font = values[2] + ' ' + values[1] + 'pt ' + values[0];
       break;
     case 'PU':  // Pen Up
       this.penDownValue = false;
@@ -1482,11 +1472,6 @@ Artist.prototype.jumpTo_ = function (pos) {
 Artist.prototype.jumpForward_ = function (distance) {
   this.x += distance * Math.sin(utils.degreesToRadians(this.heading));
   this.y -= distance * Math.cos(utils.degreesToRadians(this.heading));
-};
-
-Artist.prototype.moveByRelativePosition_ = function (x, y) {
-  this.x += x;
-  this.y += y;
 };
 
 Artist.prototype.dotAt_ = function (x, y) {
@@ -1884,7 +1869,7 @@ Artist.prototype.report = function (enableOnComplete = true) {
     result: this.levelComplete,
     testResult: this.testResults,
     program: encodeURIComponent(this.getUserCode()),
-    save_to_gallery: this.level.impressive
+    save_to_gallery: !!this.level.impressive
   };
 
   if (enableOnComplete) {

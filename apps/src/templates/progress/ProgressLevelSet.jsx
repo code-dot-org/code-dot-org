@@ -63,10 +63,11 @@ class ProgressLevelSet extends React.Component {
     name: PropTypes.string,
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
+    selectedSectionId: PropTypes.string,
   };
 
   render() {
-    const { name, levels, disabled } = this.props;
+    const { name, levels, disabled, selectedSectionId } = this.props;
 
     const multiLevelStep = levels.length > 1;
     const url = multiLevelStep ? undefined : levels[0].url;
@@ -92,6 +93,7 @@ class ProgressLevelSet extends React.Component {
                 icon={getIconForLevel(levels[0])}
                 text={pillText}
                 disabled={disabled}
+                selectedSectionId={selectedSectionId}
               />
             </td>
             <td style={styles.col2}>
@@ -115,6 +117,7 @@ class ProgressLevelSet extends React.Component {
                 <ProgressBubbleSet
                   levels={levels}
                   disabled={disabled}
+                  selectedSectionId={selectedSectionId}
                 />
               </td>
             </tr>

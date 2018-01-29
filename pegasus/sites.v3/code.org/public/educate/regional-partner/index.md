@@ -1,5 +1,5 @@
 ---
-title: Code.org Regional Parter Program
+title: Code.org Regional Partner Program
 nav: plc_regional_partner_nav
 video_player: true
 ---

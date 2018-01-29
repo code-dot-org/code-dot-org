@@ -16,6 +16,10 @@ const styles = {
   discountMessage: {
     marginTop: 10,
     marginBottom: 10
+  },
+  bold: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    display: 'inline',
   }
 };
 
@@ -29,6 +33,7 @@ export default class EligibilityChecklist extends Component {
     hasConfirmedSchool: PropTypes.bool,
     getsFullDiscount: PropTypes.bool,
     initialDiscountCode: PropTypes.string,
+    initialExpiration: PropTypes.string,
     adminSetStatus: PropTypes.bool.isRequired,
   };
 
@@ -72,6 +77,7 @@ export default class EligibilityChecklist extends Component {
     this.state = {
       ...this.state,
       discountCode: props.initialDiscountCode,
+      expiration: props.initialExpiration,
     };
   }
 
@@ -79,26 +85,29 @@ export default class EligibilityChecklist extends Component {
     this.setState({
       discountAmount: fullDiscount ? "$0" : "$97.50"
     });
-  }
+  };
 
   handleUnit6Submitted = eligible => {
     this.setState({
       statusYear: eligible ? Status.SUCCEEDED : Status.FAILED,
     });
-  }
+  };
 
-  confirmEligibility = () => this.setState({confirming: true})
+  confirmEligibility = () => this.setState({confirming: true});
 
-  handleCancelDialog = () => this.setState({confirming: false})
+  handleCancelDialog = () => this.setState({confirming: false});
 
-  handleSuccessDialog = discountCode => this.setState({discountCode})
+  handleSuccessDialog = (discountCode, expiration) => {
+    this.setState({discountCode, expiration});
+  };
 
   render() {
     if (this.state.discountCode) {
       return (
         <DiscountCodeInstructions
           discountCode={this.state.discountCode}
-          fullDiscount={true}
+          fullDiscount={this.props.getsFullDiscount}
+          expiration={this.state.expiration}
         />
       );
     }
@@ -138,17 +147,16 @@ export default class EligibilityChecklist extends Component {
             onSchoolConfirmed={this.handleSchoolConfirmed}
           />
         }
-        {this.state.discountAmount && !this.state.getsFullDiscount &&
-            !this.props.adminSetStatus &&
+        {this.state.discountAmount === "$97.50" && !this.props.adminSetStatus &&
           <div style={styles.discountMessage}>
             According to our data, your school has fewer than 50% of students that are
             eligible for free/reduced-price lunches. This means that we can bring down
             the cost of the $325 kit to just $97.50.{" "}
-            <b>
+            <strong style={styles.bold}>
               If this data seems inaccurate and you believe there are over 50% of students
               that are eligible for free/reduced-price lunch at your school, please contact
-              support@code.org.
-            </b>
+              teacher@code.org.
+            </strong>
             {" "}
             Otherwise, click "Get Code" below.
           </div>

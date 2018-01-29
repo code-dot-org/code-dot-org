@@ -6,7 +6,6 @@ AllCops:
   Exclude:
     - "vendor/**/*"
     - "db/schema.rb"
-  UseCache: false
 Style/CollectionMethods:
   Description: Preferred collection methods.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#map-find-select-reduce-size
@@ -17,7 +16,7 @@ Style/CollectionMethods:
     find: detect
     find_all: select
     reduce: inject
-Style/DotPosition:
+Layout/DotPosition:
   Description: Checks the position of the dot in multi-line method calls.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#consistent-multi-line-chains
   Enabled: true
@@ -25,7 +24,7 @@ Style/DotPosition:
   SupportedStyles:
   - leading
   - trailing
-Style/FileName:
+Naming/FileName:
   Description: Use snake_case for source file names.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#snake-case-files
   Enabled: false
@@ -39,7 +38,6 @@ Style/IfUnlessModifier:
   Description: Favor modifier if/unless usage when you have a single-line body.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#if-as-a-modifier
   Enabled: false
-  MaxLineLength: 80
 Style/OptionHash:
   Description: Don't use option hashes when you can use keyword arguments.
   Enabled: false
@@ -57,7 +55,7 @@ Style/PercentLiteralDelimiters:
     "%w": "()"
     "%W": "()"
     "%x": "()"
-Style/PredicateName:
+Naming/PredicateName:
   Description: Check the names of predicate methods.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#bool-methods-qmark
   Enabled: true
@@ -123,19 +121,11 @@ Style/TrailingCommaInArguments:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas'
   Enabled: false
   EnforcedStyleForMultiline: no_comma
-  SupportedStyles:
-  - comma
-  - consistent_comma
-  - no_comma
 Style/TrailingCommaInLiteral:
   Description: 'Checks for trailing comma in array and hash literals.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas'
   Enabled: false
   EnforcedStyleForMultiline: no_comma
-  SupportedStyles:
-  - comma
-  - consistent_comma
-  - no_comma
 Metrics/AbcSize:
   Description: A calculated magnitude based on number of assignments, branches, and
     conditions.
@@ -181,7 +171,7 @@ Lint/AssignmentInCondition:
 Style/InlineComment:
   Description: Avoid inline comments.
   Enabled: false
-Style/AccessorMethodName:
+Naming/AccessorMethodName:
   Description: Check the naming of accessor methods for get_/set_.
   Enabled: false
 Style/Alias:
@@ -239,7 +229,7 @@ Lint/HandleExceptions:
   Description: Don't suppress exception.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#dont-hide-exceptions
   Enabled: false
-Lint/LiteralInCondition:
+Lint/LiteralAsCondition:
   Description: Checks of literals used in conditions.
   Enabled: false
 Lint/LiteralInInterpolation:

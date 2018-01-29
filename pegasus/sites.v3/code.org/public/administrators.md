@@ -85,7 +85,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 <h3 style="font-family: 'Gotham 5r', sans-serif">Identify a computer science course pathway for your existing teachers</h3>
 
 - The [Code.org curriculum](https://studio.code.org/courses?view=teacher) is the most popular in K-12 computer science, with courses for every grade band. It's free of charge, and is also the highest-rated by teachers. Your students will love it!
-- Teachers from other subject areas should attend a professional learning workshop before they begin teaching. For Code.org courses in grades K-5, [contact a workshop facilitator](/educate/district/partners), and for grades 6-12, [contact a regional partner](<%= CDO.studio_url('/pd/regional_partner_contact/new') %>).
+- Teachers from other subject areas should attend a professional learning workshop before they begin teaching. For Code.org courses in grades K-5, [contact a workshop facilitator](https://code.org/professional-development-workshops), and for grades 6-12, [contact a regional partner](<%= CDO.studio_url('/pd/regional_partner_contact/new') %>).
 - If you want to consider alternatives to the Code.org courses, see our recommendations of [3rd party computer science curriculum](/educate/curriculum/3rd-party), and particularly our recommendations for [AP Computer Science A](/educate/curriculum/apcsa).
 - You can also supplement the Code.org curriculum by offering computer science integrated [into math](/educate/algebra) and [into science](/curriculum/science).
 - Once you've decided on your course offerings, make sure to set up district-level course codes for your new computer science courses. Work with your principals to recruit teachers to attend workshops and to implement changes in master schedules.
@@ -158,9 +158,9 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 <h3 style="font-family: 'Gotham 5r', sans-serif">Allocate funding</h3>
 
 - Thanks to the generous support of our funders, all curricular resources from Code.org are free for anyone to use.  However, there are still costs to consider when starting a computer science program.  You should begin thinking about how you’ll support:
-  - **Professional development costs** - Code.org's courses aare designed to be taught by teachers new to computer science. This means you do not have to increase your full-time employee budget or hire additional teachers to support computer science. In many cases, Code.org and our partners will cover a significant portion of the costs for professional development free of charge, or work together with you to identify funding options.
-  - **Computers and internet access** - In order to teach our 6-12 courses students will need to be in a 1:1 computing environment every class period. For our K-5 courses, students can be on a computer, tablet, or do our unplugged activities which require no technology at all. If you don't have enough devices, we highly recommend [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). [Check here](/educate/it) to see if your school meets all the technical requirements for teaching Code.org.
-  - **Classroom supplies** -  Code.org's courses are hands on, and standard classroom materials.  We estimate these costs to be less than $100 per 30 students.
+  - **Professional development costs** - Code.org's courses are designed to be taught by teachers new to computer science. This means you do not have to increase your full-time employee budget or hire additional teachers to support computer science. In many cases, Code.org and our partners will cover a significant portion of the costs for professional development free of charge, or work together with you to identify funding options.
+  - **Computers and internet access** - In order to teach our 6-12 courses, students will need to be in a 1:1 computing environment every class period. For our K-5 courses, students can be on a computer, tablet, or do our unplugged activities which require no technology at all. If you don't have enough devices, we highly recommend [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). [Check here](/educate/it) to see if your school meets all the technical requirements for teaching Code.org.
+  - **Classroom supplies** -  Code.org's courses include hands on excercises that use standard classroom materials.  We estimate these costs to be less than $100 per 30 students.
   - **Administrative support** - As your computer science program grows, there will need to be additional administrative support. We recommend dedicating at least 0.15 full-time employee to this initiative to start, and growing up to 1 full-time employee per 30 teachers offering computer science in the district.
 
 [/col-80]
@@ -181,7 +181,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 ## Curriculum Options
 
 ### Code.org Programs
-The Code.org curriculum is the most popular in K-12 computer science, with courses for every grade band. It's free of charge, and is also the highest-rated by teachers. Your students will love it!
+The Code.org curriculum is the most popular in K-12 computer science, with courses for every grade band. All the curriculum is offered at no cost to your school. 
 
 <%= view :course_explorer_table, responsive: true %>
 
@@ -189,7 +189,9 @@ The Code.org curriculum is the most popular in K-12 computer science, with cours
 
 <br>
 ### AP Computer Science A Resources
-There are two AP computer science offerings, and students can take either course in any order. The AP Computer Science A course and exam focuses on computing skills related to programming in Java. The new AP Computer Science Principles course complements AP Computer Science A as it aims to broaden participation in the study of computer science.
+There are two AP computer science offerings, and students can take either course in any order. If your school does not yet offer AP Computer Science, we recommend starting with the new AP Computer Science Principles course. This course aims to broaden participation in computer science by introducing students to the foundational concepts and challenging them to explore how computing and technology can impact the world. 
+
+The AP Computer Sience A course and exam complement AP Computer Science Principles with a focus on computing skills related to programming in Java.
 
 While Code.org does not have an AP Computer Science A curriculum, we have recommendations for a number of great curricula and programs available to teachers and students.
 

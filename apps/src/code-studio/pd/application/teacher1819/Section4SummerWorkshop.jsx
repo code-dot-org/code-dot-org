@@ -1,32 +1,32 @@
 import React from 'react';
 import $ from "jquery";
-import ApplicationFormComponent from "../ApplicationFormComponent";
-import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
+import LabeledFormComponent from "../../form_components/LabeledFormComponent";
+import {
+  PageLabels,
+  SectionHeaders,
+  TextFields
+} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import {FormGroup} from 'react-bootstrap';
 import {styles, PROGRAM_CSD, PROGRAM_CSP} from "./TeacherApplicationConstants";
 
-const UNABLE_TO_ATTEND = "No, I'm unable to attend (please explain):";
-const NO_EXPLAIN = "No (please explain):";
-const NO_PAY_FEE = "No, my school or I will not be able to pay the summer workshop program fee.";
-
 const WORKSHOP_FEES_URL = "https://docs.google.com/spreadsheets/d/1YFrTFp-Uz0jWk9-UR9JVuXfoDcCL6J0hxK5CYldv_Eo";
 
-export default class Section4SummerWorkshop extends ApplicationFormComponent {
+export default class Section4SummerWorkshop extends LabeledFormComponent {
   static labels = PageLabels.section4SummerWorkshop;
 
   static associatedFields = [
     ...Object.keys(PageLabels.section4SummerWorkshop),
     "regionalPartnerId",
     "regionalPartnerGroup",
-    "regionalPartnerWorkshopIds"
+    "regionalPartnerWorkshopIds",
+    "teachercon"
   ];
 
   state = {
     loadingPartner: true,
     partner: null,
     loadingAlternateWorkshops: false,
-    alternateWorkshops: null,
-    teachercon: null
+    alternateWorkshops: null
   };
 
   componentDidMount() {
@@ -75,7 +75,8 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
       // Update state with all the partner workshop data to display
       this.setState({
         loadingPartner: false,
-        partnerWorkshops: data.workshops
+        partnerWorkshops: data.workshops,
+        regionalPartnerName: data.name
       });
     });
   }
@@ -89,10 +90,14 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
       dataType: 'json'
     }).done(data => {
       this.loadAlternateWorkshopsRequest = null;
+
       const alternateWorkshops = data.reduce((workshops, partner) => (
-        partner.id !== this.props.data.regionalPartnerId
-          ? workshops.concat(partner.workshops)
-          : workshops
+        partner.id === this.props.data.regionalPartnerId
+          ? workshops
+          : workshops.concat(
+            // Add partner name to each alternate workshop
+            partner.workshops.map(w => ({...w, partnerName: partner.name}))
+          )
       ), []);
 
       this.setState({
@@ -115,11 +120,11 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
   }
 
   isUnableToAttendAssignedWorkshop = (data = this.props.data) => data.regionalPartnerId && (
-      data.ableToAttendSingle === UNABLE_TO_ATTEND ||
+      data.ableToAttendSingle === TextFields.unableToAttend ||
       (
         data.ableToAttendMultiple &&
         data.ableToAttendMultiple.length === 1 &&
-        data.ableToAttendMultiple[0] === NO_EXPLAIN
+        data.ableToAttendMultiple[0] === TextFields.noExplain
       )
     );
 
@@ -138,9 +143,9 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
   renderAbleToAttendSingle() {
     const options = [
       "Yes, I'm able to attend",
-      UNABLE_TO_ATTEND
+      TextFields.unableToAttend
     ];
-    const textFieldMap = {[UNABLE_TO_ATTEND]: 'explain'};
+    const textFieldMap = {[TextFields.unableToAttend]: 'explain'};
     return this.dynamicRadioButtonsWithAdditionalTextFieldsFor(
       "ableToAttendSingle",
       options,
@@ -156,8 +161,10 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
     if (!this.props.data.regionalPartnerId) {
       return (
         <div>
-          There currently is no Regional Partner in your area.
-          If a seat opens in the program, we will invite you to a TeacherCon and provide you with more details.
+          <p>
+            <strong>There currently is no Regional Partner in your area. </strong>
+            If a seat opens in the program, we will invite you to a TeacherCon and provide you with more details.
+          </p>
         </div>
       );
     } else if (this.props.data.teachercon) {
@@ -182,31 +189,48 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
             More details will be provided if you are accepted into the program.
           </h5>
         );
-      } else if (this.state.partnerWorkshops.length === 1) {
-        return (
-          <div>
-            <h5>
-              Your region’s assigned summer workshop will be
-              {` ${this.state.partnerWorkshops[0].dates} in`}
-              {` ${this.state.partnerWorkshops[0].location}.`}
-            </h5>
-
-            {this.renderAbleToAttendSingle()}
-          </div>
-        );
-      } else { // multiple workshops
-        const options = this.state.partnerWorkshops.map(workshop =>
-          `${workshop.dates} in ${workshop.location}`
-        );
-        options.push(NO_EXPLAIN);
-        const textFieldMap = {[NO_EXPLAIN]: 'explain'};
-        return this.dynamicCheckBoxesWithAdditionalTextFieldsFor(
-          "ableToAttendMultiple",
-          options,
-          textFieldMap
-        );
+      } else {
+        return this.renderPartnerWorkshops();
       }
     }
+  }
+
+  renderPartnerWorkshops() {
+    let contents;
+    if (this.state.partnerWorkshops.length === 1) {
+      contents = (
+        <div>
+          <h5>
+            Your region’s assigned summer workshop will be
+            {` ${this.state.partnerWorkshops[0].dates} in`}
+            {` ${this.state.partnerWorkshops[0].location} `}
+            hosted by {` ${this.state.regionalPartnerName}.`}
+          </h5>
+
+          {this.renderAbleToAttendSingle()}
+        </div>
+      );
+    } else { // multiple workshops
+      const options = this.state.partnerWorkshops.map(workshop =>
+        `${workshop.dates} in ${workshop.location} hosted by ${this.state.regionalPartnerName}`
+      );
+      options.push(TextFields.noExplain);
+      const textFieldMap = {[TextFields.noExplain]: 'explain'};
+      contents = this.dynamicCheckBoxesWithAdditionalTextFieldsFor(
+        "ableToAttendMultiple",
+        options,
+        textFieldMap
+      );
+    }
+
+    return (
+      <div>
+        <h4>
+          Your regional partner is {this.state.regionalPartnerName}
+        </h4>
+        {contents}
+      </div>
+    );
   }
 
   renderAlternateWorkshopList() {
@@ -215,7 +239,7 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
     }
 
     const options = this.state.alternateWorkshops.map(workshop =>
-      `${workshop.dates} in ${workshop.location}`
+      `${workshop.dates} in ${workshop.location} hosted by ${workshop.partnerName}`
     );
 
     return this.dynamicCheckBoxesFor("alternateWorkshops", options, {required: false});
@@ -264,7 +288,7 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
             {this.singleCheckboxFor("understandFee")}
             {this.radioButtonsFor("payFee")}
 
-            {this.props.data.payFee === NO_PAY_FEE &&
+            {this.props.data.payFee === TextFields.noPayFee &&
               this.singleCheckboxFor("considerForFunding", {
                 required: false,
                 style: styles.checkBoxAfterButtonList
@@ -282,14 +306,14 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
                 One five-day, in-person summer workshop in 2018
               </li>
               <li>
-                Four one-day, in-person local workshops during the 2018 - 19 school year (typically held on Saturdays)
+                Up to four one-day, in-person local workshops during the 2018 - 19 school year (typically held on Saturdays)
               </li>
             </ul>
           </strong>
         </div>
 
         {this.radioButtonsWithAdditionalTextFieldsFor("committed", {
-          [NO_EXPLAIN] : 'explain'
+          [TextFields.noExplain] : 'explain'
         })}
 
         {this.radioButtonsFor("willingToTravel")}
@@ -344,7 +368,7 @@ export default class Section4SummerWorkshop extends ApplicationFormComponent {
       changes.payFee = undefined;
     }
 
-    if (data.payFee !== NO_PAY_FEE) {
+    if (data.payFee !== TextFields.noPayFee) {
       changes.considerForFunding = undefined;
     }
 

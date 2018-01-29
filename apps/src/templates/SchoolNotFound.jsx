@@ -59,6 +59,8 @@ export default class SchoolNotFound extends Component {
     schoolState: PropTypes.string,
     schoolZip: PropTypes.string,
     schoolType: PropTypes.string,
+    schoolLocation: PropTypes.string,
+    controlSchoolLocation: PropTypes.bool,
     fieldNames: PropTypes.object,
     showErrorMsg: PropTypes.bool,
     singleLineLayout: PropTypes.bool,
@@ -71,6 +73,7 @@ export default class SchoolNotFound extends Component {
 
   static defaultProps = {
     showRequiredIndicators: true,
+    controlSchoolLocation: false,
     schoolNameLabel: i18n.schoolName(),
     fieldNames: {
       schoolName: "school_name_s",
@@ -86,7 +89,7 @@ export default class SchoolNotFound extends Component {
 
   handleChange = (field, event) => {
     this.props.onChange(field, event);
-  }
+  };
 
   isNotBlank(value) {
     return value && (value !== '');
@@ -106,7 +109,13 @@ export default class SchoolNotFound extends Component {
     }
 
     if (this.props.useGoogleLocationSearch) {
-      return this.isFieldValid($("#registration-school-location").val());
+      let locationValue;
+      if (this.props.controlSchoolLocation) {
+        locationValue = this.props.schoolLocation;
+      } else {
+        locationValue = $("#registration-school-location").val();
+      }
+      return this.isFieldValid(locationValue);
     } else {
       return (
         this.isFieldValid(this.props.schoolCity) &&
@@ -249,13 +258,26 @@ export default class SchoolNotFound extends Component {
           <div style={fieldStyle}>
             <label style={labelStyle}>
               {this.renderLabel(i18n.schoolCityTown())}
-              <input
-                id="registration-school-location"
-                type="text"
-                name={this.props.fieldNames.googleLocation}
-                placeholder={i18n.schoolLocationSearchPlaceholder()}
-                style={inputStyle}
-              />
+              {this.props.controlSchoolLocation && (
+                 <input
+                   id="registration-school-location"
+                   type="text"
+                   name={this.props.fieldNames.googleLocation}
+                   value={this.props.schoolLocation}
+                   placeholder={i18n.schoolLocationSearchPlaceholder()}
+                   onChange={this.handleChange.bind(this, "schoolLocation")}
+                   style={inputStyle}
+                 />
+              )}
+              {!this.props.controlSchoolLocation && (
+                 <input
+                   id="registration-school-location"
+                   type="text"
+                   name={this.props.fieldNames.googleLocation}
+                   placeholder={i18n.schoolLocationSearchPlaceholder()}
+                   style={inputStyle}
+                 />
+              )}
             </label>
           </div>
         }

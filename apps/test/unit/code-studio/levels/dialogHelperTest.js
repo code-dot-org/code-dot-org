@@ -3,7 +3,7 @@ import React from 'react';
 import 'jquery-ui/ui/effects/effect-drop';
 import $ from 'jquery';
 import sinon from 'sinon';
-import { showDialog } from '@cdo/apps/code-studio/levels/dialogHelper';
+import { showDialog, getSuccessDialog } from '@cdo/apps/code-studio/levels/dialogHelper';
 
 describe('dialogHelper', () => {
   let stashedWindowJquery;
@@ -32,6 +32,7 @@ describe('dialogHelper', () => {
       while (parent.hasChildNodes()) {
         parent.removeChild(parent.lastChild);
       }
+      document.body.removeChild(parent);
     });
 
     const MyComponent = () => (
@@ -44,25 +45,6 @@ describe('dialogHelper', () => {
         </div>
       </div>
     );
-
-    // Note: Though it can do this, we'd like to get away from this usage
-    it('can take a string type including DOM contents', () => {
-      const child = `
-        <div id="my-type-dialogcontent">
-          <div class="modal-content no-modal-icon">
-            <p class="dialog-title">Title</p>
-            <p class="dialog-body">Body</p>
-            <button id="cancel-button">Cancel</button>
-            <button id="ok-button">Okay</button>
-          </div>
-        </div>
-      `;
-      // const child = document.createElement('div');
-      // child.setAttribute('id', 'my-type-dialogcontent');
-      $(parent).append(child);
-      const dialog = showDialog('my-type');
-      dialog.hide();
-    });
 
     it('can take a React component to generate DOM contents', () => {
       const dialog = showDialog(<MyComponent/>);
@@ -88,6 +70,76 @@ describe('dialogHelper', () => {
       showDialog(<MyComponent/>, null, onHidden);
       $('#cancel-button').click();
       assert(onHidden.calledOnce);
+    });
+  });
+
+  describe('getSuccessDialog', () => {
+    const fakeAppOptions = (app, levelOptions) => ({
+      level: {
+        submittable: false,
+        answers: [
+          {
+            "text": "I feel like I could teach this right now",
+            "correct": true
+          },
+          {
+            "text": "I feel like I need to do SOME review of lessons, content, etc before I teach this",
+            "correct": true
+          },
+          {
+            "text": "I feel like I need to do A LOT of review of lessons, content, etc before I teach this",
+            "correct": true
+          }
+        ],
+        ...levelOptions,
+      },
+      dialog: {
+        app
+      }
+    });
+
+    it('has the right title/body when using success_title/success_body', () => {
+      const appOptions = fakeAppOptions('multi', {
+        options: {
+          success_title: 'Customized success title',
+          success_body: 'Customized success body'
+        }
+      });
+      const dialog = getSuccessDialog(appOptions);
+      assert.equal(dialog.props.title, 'Customized success title');
+      assert.equal(dialog.props.body, 'Customized success body');
+    });
+
+    it('has the right title/body for a standard multi', () => {
+      const appOptions = fakeAppOptions('multi');
+      const dialog = getSuccessDialog(appOptions);
+      assert.equal(dialog.props.title, 'Correct');
+      assert.equal(dialog.props.body, 'That is the correct answer.');
+    });
+
+    it('has the right title/body for a submittable multi', () => {
+      // I can only find on submittable multi, and it's in allthethings, so this
+      // probably could be cut if we wanted to simplify.
+      // Also, this tests accurately reflects the fact that submittable is the
+      // string "true" rather than boolean true here.
+      const appOptions = fakeAppOptions('multi', {
+        submittable: "true",
+        answers: undefined,
+      });
+      const dialog = getSuccessDialog(appOptions);
+      assert.equal(dialog.props.title, 'Thank you');
+      assert.equal(dialog.props.body, 'Thank you for submitting an answer.');
+    });
+
+    it('has the right title/body for a text_match without answers', () => {
+      // Worth noting that I only see 3 levels that meet this criteria and dont
+      // have skip_dialog: true
+      const appOptions = fakeAppOptions('text_match', {
+        answers: undefined,
+      });
+      const dialog = getSuccessDialog(appOptions);
+      assert.equal(dialog.props.title, 'Thank you');
+      assert.equal(dialog.props.body, 'Thanks for your response!');
     });
   });
 });
