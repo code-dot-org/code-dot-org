@@ -5,7 +5,7 @@
 #  id                   :integer          not null, primary key
 #  storage_app_id       :integer
 #  who_featured_user_id :integer
-#  created_at           :datetime
+#  featured_at          :datetime
 #
 # Indexes
 #
