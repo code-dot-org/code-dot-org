@@ -1,6 +1,6 @@
 import React from 'react';
 import FeaturedProjectsTable from './FeaturedProjectsTable';
-import {stubFakeFeaturedProjectData} from './generateFakeFeaturedProjects';
+import {stubFakeFeaturedProjectData} from './generateFakeProjects';
 
 export default storybook => {
   return storybook
