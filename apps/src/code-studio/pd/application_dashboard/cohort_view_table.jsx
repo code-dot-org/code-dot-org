@@ -1,6 +1,9 @@
 import React, {PropTypes} from 'react';
-import {Table} from 'reactabular';
+import {Table, sort} from 'reactabular';
+import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
+import {orderBy} from 'lodash';
+import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 
 const styles = {
   table: {
@@ -19,32 +22,64 @@ export default class CohortViewTable extends React.Component {
     router: PropTypes.object
   };
 
+  constructor(props) {
+    super(props);
+    this.constructColumns();
+
+    // default
+    let sortColumnIndex = 0;
+    let direction = 'desc';
+
+    this.state = {
+      sortingColumns: {
+        [sortColumnIndex]: {
+          direction,
+          position: 0
+        }
+      }
+    };
+  }
+
   constructColumns() {
+    const sortable = wrappedSortable(
+      this.getSortingColumns,
+      this.onSort,
+      {
+        container: {whiteSpace: 'nowrap'},
+        default: {color: color.light_gray}
+      }
+    );
+
     let columns = [
       {
         property: 'date_accepted',
         header: {
-          label: 'Date Accepted'
+          label: 'Date Accepted',
+          transforms: [sortable]
         }
       }, {
         property: 'applicant_name',
         header: {
-          label: 'Name'
+          label: 'Name',
+          transforms: [sortable]
         }
       }, {
         property: 'district_name',
         header: {
-          label: 'School District'
+          label: 'School District',
+          transforms: [sortable]
         }
       }, {
         property: 'school_name',
         header: {
-          label: 'School Name'
+          label: 'School Name',
+          transforms: [sortable]
         }
       }, {
         property: 'email',
         header: {
-          label: 'Email'
+          label: 'Email',
+          transforms: [sortable]
         }
       }
     ];
@@ -53,12 +88,14 @@ export default class CohortViewTable extends React.Component {
       columns.push({
           property: 'assigned_fit',
           header: {
-            label: 'Assigned FIT'
+            label: 'Assigned FIT',
+            transforms: [sortable]
           }
         }, {
           property: 'registered_fit',
           header: {
-            label: 'Registered FIT'
+            label: 'Registered FIT',
+            transforms: [sortable]
           }
         }
       );
@@ -67,12 +104,14 @@ export default class CohortViewTable extends React.Component {
         {
           property: 'assigned_workshop',
           header: {
-            label: 'Assigned Workshop'
+            label: 'Assigned Workshop',
+            transforms: [sortable]
           }
         }, {
           property: 'registered_workshop',
           header: {
-            label: 'Registered Workshop'
+            label: 'Registered Workshop',
+            transforms: [sortable]
           }
         }
       );
@@ -88,8 +127,25 @@ export default class CohortViewTable extends React.Component {
       }
     });
 
-    return columns;
+    this.columns = columns;
   }
+
+  getSortingColumns = () => this.state.sortingColumns || {};
+
+  onSort = (selectedColumn) => {
+    const sortingColumns = sort.byColumn({
+      sortingColumns: this.state.sortingColumns,
+      // Custom sortingOrder removes 'no-sort' from the cycle
+      sortingOrder: {
+        FIRST: 'asc',
+        asc: 'desc',
+        desc: 'asc'
+      },
+      selectedColumn
+    });
+
+    this.setState({sortingColumns});
+  };
 
   formatViewButton = (id) => {
     return (
@@ -110,14 +166,23 @@ export default class CohortViewTable extends React.Component {
   };
 
   render() {
+    const rows = this.props.data;
+
+    const {sortingColumns} = this.state;
+    const sortedRows = sort.sorter({
+      columns: this.columns,
+      sortingColumns,
+      sort: orderBy
+    })(rows);
+
     return (
       <Table.Provider
         className="pure-table table-striped"
-        columns={this.constructColumns()}
+        columns={this.columns}
         style={styles.table}
       >
         <Table.Header />
-        <Table.Body rows={this.props.data} rowKey="id"/>
+        <Table.Body rows={sortedRows} rowKey="id"/>
       </Table.Provider>
     );
   }
