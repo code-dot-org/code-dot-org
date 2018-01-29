@@ -33,10 +33,10 @@
     "disable_sharing": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/6cbe2fa25c780b13f160cfbfa02dde4f=levelbuilder/34776.png",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/92d93b3d905a2d9443afff97b57184ef-image-1517005695404.png\", \"position\": [0,0]}\r\n]\r\n",
-    "contained_level_names": null,
     "markdown_instructions": "Program the artist to draw some grass and a sun for the Love Bug.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\" Each side of the grass is 30 pixels long. Try using the stair step pattern.\",\"hint_id\":\"Valentine_artist2_01_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9fb4e96b7626f09b921c1c85ea88eda2/Valentine_artist2_01.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"How many degrees are in a circle? Use that number for the second `repeat` loop. \",\"hint_id\":\"Valentine_artist2_01_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3e5fd687167df7e5abfd006cb43a4ace/Valentine_artist2_01.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"There are 360 degrees in a circle.\",\"hint_id\":\"Valentine_artist2_01_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/856d9d9a6ef52074ff9852dc54a279db/Valentine_artist2_01.mp3\"}]",
-    "instructions": "Program the artist to draw some grass and a sun for the Love Bug."
+    "instructions": "Program the artist to draw some grass and a sun for the Love Bug.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
