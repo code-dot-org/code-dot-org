@@ -115,7 +115,7 @@ class QueueProcessorManager
         old_metrics_json = metrics_map.to_json
       end
       sleep update_interval
-    end # loop
+    end
   end
 end
 
