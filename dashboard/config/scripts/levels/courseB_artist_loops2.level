@@ -38,9 +38,9 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
     "tts_instructions_override": "The Artist is trying to draw a line 6 times, but can't get it right.  Can you help?",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

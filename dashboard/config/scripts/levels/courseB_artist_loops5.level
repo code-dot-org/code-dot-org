@@ -39,9 +39,9 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
     "tts_instructions_override": "Time to fix the stairs!  Repeat this pattern 5 times so the artist can reach the top of the bushes.",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
