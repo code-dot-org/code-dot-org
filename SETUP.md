@@ -6,7 +6,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ## Overview
 
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [OSX](#os-x-mavericks--yosemite--el-capitan--sierra), [Ubuntu](#ubuntu-1704-download-iso-note-virtual-machine-users-should-check-the-windows-note-below-before-starting), [Windows](#windows-note-use-an-ubuntu-vm)
+   - See the appropriate section below: [OSX](#os-x-mavericks--yosemite--el-capitan--sierra), [Ubuntu](#ubuntu-1604-download-iso-note-virtual-machine-users-should-check-the-windows-note-below-before-starting), [Windows](#windows-note-use-an-ubuntu-vm)
    - When done, check for correct versions of these dependencies:
 
      ```
@@ -71,7 +71,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. install the Xcode Command Line Tools:
     1. `xcode-select --install`
 
-### Ubuntu 17.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the Windows Note below before starting
+### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the Windows Note below before starting
 
 1. `sudo apt-get update`
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server rbenv ruby-build npm ruby2.3-dev`
@@ -99,7 +99,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 Many Windows developers have found that setting up an Ubuntu virtual machine is less painful than getting Ruby and other prerequisites running on Windows.
 
-* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 17.04 iso image][ubuntu-iso-url]
+* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 16.04 iso image][ubuntu-iso-url]
   1. Maximum Disk Size should be set to 30.0 GB (the default is 20 GB and it is too small)
   2. Memory Settings for the VM should be 2 GB or higher (Right click the machine -> Settings -> "Memory for this virtual machine"  )
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
@@ -152,4 +152,4 @@ If you continue to have issues with rmagick, after changing your imagemagick ver
 - `gem uninstall rmagick`
 - `gem install rmagick -v 2.15.4`
 
-[ubuntu-iso-url]: http://releases.ubuntu.com/17.04/ubuntu-17.04-desktop-amd64.iso
+[ubuntu-iso-url]: http://releases.ubuntu.com/16.04/ubuntu-16.04.3-desktop-amd64.iso
