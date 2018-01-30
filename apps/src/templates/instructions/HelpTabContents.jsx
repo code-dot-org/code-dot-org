@@ -1,6 +1,8 @@
 import React, {PropTypes, Component} from 'react';
 import VideoThumbnail from '../VideoThumbnail';
 import {videoDataShape} from '../types';
+import ResourceLink from './ResourceLink';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   referenceArea: {
@@ -14,6 +16,8 @@ export default class HelpTabContents extends Component {
     serverLevelId: PropTypes.number,
     logText: PropTypes.string,
     videoData: videoDataShape,
+    mapReference: PropTypes.string,
+    referenceLinks: PropTypes.array
   };
 
   render() {
@@ -25,6 +29,13 @@ export default class HelpTabContents extends Component {
             serverLevelId={this.props.serverLevelId}
             logText={this.props.logText}
             video={this.props.videoData}
+          />
+        }
+        {experiments.isEnabled('additionalResources') &&
+          <ResourceLink
+            map={true}
+            text={this.props.mapReference}
+            reference={this.props.mapReference}
           />
         }
       </div>

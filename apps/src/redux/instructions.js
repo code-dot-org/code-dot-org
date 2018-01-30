@@ -52,6 +52,8 @@ const instructionsInitialState = {
   hasAuthoredHints: false,
   overlayVisible: false,
   levelVideos: [],
+  mapReference: undefined,
+  referenceLinks: [],
   // TODO (epeach) - remove after resources tab A/B test
   // Used to provide access to level data for the logging
   app: undefined,
@@ -77,6 +79,8 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       overlayVisible,
       teacherMarkdown,
       levelVideos,
+      mapReference,
+      referenceLinks,
       app,
       scriptName,
       stagePosition,
@@ -100,6 +104,8 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       overlayVisible,
       collapsed,
       levelVideos,
+      mapReference,
+      referenceLinks,
       app,
       scriptName,
       stagePosition,
@@ -162,7 +168,8 @@ export default function reducer(state = {...instructionsInitialState}, action) {
 export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
     shortInstructions, shortInstructions2, longInstructions,
     hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown, levelVideos,
-    app, scriptName, stagePosition, levelPosition, serverLevelId, scriptId }) => ({
+    mapReference, referenceLinks, app, scriptName, stagePosition, levelPosition,
+    serverLevelId, scriptId }) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
   hasInlineImages,
@@ -173,6 +180,8 @@ export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
   overlayVisible,
   teacherMarkdown,
   levelVideos,
+  mapReference,
+  referenceLinks,
   app,
   scriptName,
   stagePosition,
@@ -268,6 +277,8 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * @param {string} config.level.markdownInstructions
  * @param {array} config.level.inputOutputTable
  * @param {array} config.level.levelVideos
+ * @param {stirng} config.level.mapReference,
+ * @param {array} config.level.referenceLinks,
  * @param {string} config.locale
  * @param {boolean} config.noInstructionsWhenCollapsed
  * @param {boolean} config.hasContainedLevels
@@ -293,7 +304,9 @@ export const determineInstructionsConstants = config => {
     instructions2,
     markdownInstructions,
     inputOutputTable,
-    levelVideos
+    levelVideos,
+    mapReference,
+    referenceLinks,
   } = level;
 
   let longInstructions, shortInstructions, shortInstructions2;
@@ -367,6 +380,8 @@ export const determineInstructionsConstants = config => {
     teacherMarkdown,
     hasContainedLevels,
     levelVideos,
+    mapReference,
+    referenceLinks,
     app,
     scriptName,
     stagePosition,

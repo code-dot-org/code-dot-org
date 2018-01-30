@@ -113,6 +113,8 @@ var TopInstructions = React.createClass({
     documentationUrl: PropTypes.string,
     ttsMarkdownInstructionsUrl:  PropTypes.string,
     levelVideos: PropTypes.array,
+    mapReference: PropTypes.string,
+    referenceLinks: PropTypes.array,
     // TODO (epeach) - remove after resources tab A/B testing
     // provides access to script id for level data
     app: PropTypes.string,
@@ -313,6 +315,8 @@ var TopInstructions = React.createClass({
                     serverLevelId={this.props.serverLevelId}
                     logText={logText}
                     videoData={videoData}
+                    mapReference={this.props.mapReference}
+                    referenceLinks={this.props.referenceLinks}
                   />
                 }
                 <TeacherOnlyMarkdown/>
@@ -345,6 +349,8 @@ module.exports = connect(function propsFromStore(state) {
     documentationUrl: state.pageConstants.documentationUrl,
     ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
     levelVideos: state.instructions.levelVideos,
+    mapReference: state.instructions.mapReference,
+    referenceLinks: state.instructions.referenceLinks,
     app: state.instructions.app,
     scriptName: state.instructions.scriptName,
     stagePosition: state.instructions.stagePosition,
