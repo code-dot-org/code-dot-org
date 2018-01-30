@@ -15,7 +15,7 @@ nav: regional_partner_playbook_nav
 - [Example Facilitator One Pager](#page)
 - [Example Contract](#contract)
 - [Facilitator Recruitment Resources](#recruitment)
-- [Facilitator Support Documents](#support)
+- [Facilitator Support Documents](#docs)
 - [Facilitator Payments](#pay)
 
 ________________
@@ -76,7 +76,7 @@ ________________
 
 [**Back to the top**](#top)
 ________________
-<a id="support"></a>
+<a id="docs"></a>
 ## Facilitator Support Documents
 
 - [Facilitator Playbook](https://docs.google.com/document/d/1xTZkAfmjsOttqNB7uFT-Sp5yH0fVDGbQ0PPhhcU70Zk/edit) - Toolkit for facilitators of all programs

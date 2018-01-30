@@ -31,7 +31,7 @@
     "hide_animation_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"76bca46f-40e6-4ab2-9dd1-719631602575\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"76bca46f-40e6-4ab2-9dd1-719631602575\": {\r\n      \"name\": \"flyer\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/fbVVJ87HfqNVLZl16J52ZQ/76bca46f-40e6-4ab2-9dd1-719631602575.png?version=ws6i9U9L4Nad8JLTdtTE3dBj.3bgtTgR\",\r\n      \"frameSize\": {\r\n        \"x\": 40,\r\n        \"y\": 46\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"ws6i9U9L4Nad8JLTdtTE3dBj.3bgtTgR\"\r\n    }\r\n  }\r\n}",
     "start_blocks": "var flyer = createSprite(200, 200);\r\nflyer.setAnimation(\"flyer\");\r\n\r\nfunction draw() {\r\n  background(\"blue\");\r\n  \r\n  // Simulating Gravity\r\n  flyer.velocityY = flyer.velocityY + 0.1;\r\n  \r\n  // update sprites\r\n  \r\n  drawSprites();\r\n}\r\n",
     "markdown_instructions": "# Make It Your Own\r\n\r\nYou now have the basic mechanics of your game in place, so it's time to make it your own. What do you want to happen? Should the character get points every time it collects a coin? Can you add a scoreboard like you learned in the last lesson? Do you want to make another coin? What about a \"bad coin\" that takes away points?\r\n\r\n# Do This\r\n\r\nMake at least one improvement to the game that makes it your own. Be prepared to share your changes and improvements with your classmate.",

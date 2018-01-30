@@ -17,7 +17,6 @@ import PaneHeader, {PaneSection, PaneButton} from '../../../templates/PaneHeader
 import SpeedSlider from '../../../templates/SpeedSlider';
 import FontAwesome from '../../../templates/FontAwesome';
 import {setStepSpeed, setIsDebuggingSprites} from '../../../redux/runState';
-import ProtectedStatefulDiv from '../../../templates/ProtectedStatefulDiv';
 import * as utils from '../../../utils';
 import {
   add as addWatchExpression,
@@ -221,6 +220,37 @@ class JsDebugger extends React.Component {
 
       watchersReferences = {};
     });
+  }
+
+  componentWillUnmount() {
+    this.onMouseUpWatchersResizeBar();
+    this.onMouseUpDebugResizeBar();
+
+    const mouseUpTouchEventName = dom.getTouchEventName('mouseup');
+
+    document.body.removeEventListener(
+      'mouseup',
+      this.onMouseUpWatchersResizeBar
+    );
+    if (mouseUpTouchEventName) {
+      document.body.removeEventListener(
+        mouseUpTouchEventName,
+        this.onMouseUpWatchersResizeBar
+      );
+    }
+
+    document.body.removeEventListener(
+      'mouseup',
+      this.onMouseUpDebugResizeBar
+    );
+    if (mouseUpTouchEventName) {
+      document.body.removeEventListener(
+        mouseUpTouchEventName,
+        this.onMouseUpDebugResizeBar
+      );
+    }
+
+    window.removeEventListener('resize', this.handleResizeConsole);
   }
 
   onMouseUpDebugResizeBar = () => {
@@ -551,13 +581,11 @@ class JsDebugger extends React.Component {
              ref={debugConsole => this._debugConsole = debugConsole}
            />)}
         <div style={{display: showWatchPane ? 'initial' : 'none'}}>
-          <ProtectedStatefulDiv>
-            <div
-              id="watchersResizeBar"
-              ref={watchersResizeBar => this._watchersResizeBar = watchersResizeBar}
-              onMouseDown={this.onMouseDownWatchersResizeBar}
-            />
-          </ProtectedStatefulDiv>
+          <div
+            id="watchersResizeBar"
+            ref={watchersResizeBar => this._watchersResizeBar = watchersResizeBar}
+            onMouseDown={this.onMouseDownWatchersResizeBar}
+          />
         </div>
         {showWatchPane &&
          <Watchers

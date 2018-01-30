@@ -54,7 +54,7 @@ export class QuickView extends React.Component {
   state = {
     loading: true,
     applications: null,
-    filter: null,
+    filter: '',
     regionalPartnerName: this.props.regionalPartnerName,
     regionalPartnerFilter: null
   };
@@ -64,7 +64,7 @@ export class QuickView extends React.Component {
 
     const statusList = ApplicationStatuses[this.props.route.viewType];
     this.statuses = statusList.map(v => ({value: v.toLowerCase(), label: v}));
-    this.statuses.unshift({value: null, label: "All statuses"});
+    this.statuses.unshift({value: '', label: "All statuses"});
   }
 
   load(regionalPartnerFilter) {

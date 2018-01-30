@@ -132,7 +132,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "show_debug_watch": "true",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
