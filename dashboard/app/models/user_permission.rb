@@ -48,6 +48,11 @@ class UserPermission < ActiveRecord::Base
     AUTHORIZED_TEACHER = 'authorized_teacher'.freeze
   ].freeze
 
+  # Do not log the granting/removing of these permissions to slack
+  SILENCED_PERMISSIONS = [
+    AUTHORIZED_TEACHER,
+  ].freeze
+
   validates_inclusion_of :permission, in: VALID_PERMISSIONS
 
   after_save :log_permission_save
@@ -56,6 +61,7 @@ class UserPermission < ActiveRecord::Base
   def log_permission_save
     # In particular, we do not log for adhoc or test environments.
     return unless [:staging, :levelbuilder, :production].include? rack_env
+    return if SILENCED_PERMISSIONS.include? permission
 
     ChatClient.message 'infra-security',
       'Updating UserPermission: '\
@@ -69,6 +75,7 @@ class UserPermission < ActiveRecord::Base
   def log_permission_delete
     # In particular, we do not log for adhoc or test environments.
     return unless [:staging, :levelbuilder, :production].include? rack_env
+    return if SILENCED_PERMISSIONS.include? permission
 
     ChatClient.message 'infra-security',
       'Deleting UserPermission: '\
