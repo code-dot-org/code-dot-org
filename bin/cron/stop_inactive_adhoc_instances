@@ -25,7 +25,7 @@ ACTIVITY_THRESHOLD = 1000
 # window of time within which activity is measured
 ACTIVITY_PERIOD_DAYS = 7
 
-# no activity is required within the last few days to protect new instances from being terminated
+# protect new instances from being terminated
 GRACE_PERIOD_DAYS = 3
 
 # This script stops AWS EC2 instances being used to run adhoc environments if they have not been used recently:
@@ -60,8 +60,8 @@ def main
               value: "#{stack.name}.cdn-code.org",
             }
           ],
-          start_time: Time.now - (ACTIVITY_PERIOD_DAYS + GRACE_PERIOD_DAYS).days,
-          end_time: Time.now - GRACE_PERIOD_DAYS.days,
+          start_time: Time.now - ACTIVITY_PERIOD_DAYS.days,
+          end_time: Time.now,
           period: ACTIVITY_PERIOD_DAYS.days,
           statistics: ['Sum'],
           unit: 'Count'
@@ -75,7 +75,9 @@ def main
       status[:previous_instance_status] = instance.state.name
 
       # stop instances with activity below threshold if they are running (state code == 16)
-      if total_http_requests.between?(1, ACTIVITY_THRESHOLD) && instance.state.code == 16
+      if total_http_requests.between?(1, ACTIVITY_THRESHOLD) &&
+          instance.state.code == 16 &&
+          stack.creation_time < Time.now - GRACE_PERIOD_DAYS.days
         puts "Stopping EC2 instance - #{instance.id} - for Stack - #{stack.name} - due to inactivity"
         stop_result = instance.stop(
           {
