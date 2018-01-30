@@ -32,11 +32,22 @@ export default class HelpTabContents extends Component {
           />
         }
         {experiments.isEnabled('additionalResources') &&
+          this.props.mapReference &&
           <ResourceLink
             map={true}
             text={this.props.mapReference}
             reference={this.props.mapReference}
           />
+        }
+        {experiments.isEnabled('additionalResources') &&
+          this.props.referenceLinks.map((link) => (
+            <ResourceLink
+              key={link}
+              map={false}
+              text={link}
+              reference={link}
+            />
+          ))
         }
       </div>
     );
