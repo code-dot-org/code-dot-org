@@ -64,7 +64,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "markdown_instructions": "# Random Shape Color\r\n\r\n** Video on Properties**\r\n\r\nThe built in variables for sprites are called properties. Properties can be updated with in the draw loop to create animations just like variables.\r\n\r\nOne thing you need to be careful of as you write programs with sprites is that you keep `drawSprites` as the last line inside the draw loop. You don't want to draw the sprties until after all the updates in the loop have happened.\r\n\r\n# Do This\r\nCreate a sprite that is set to a new random color every loop of the draw loop.\r\n\r\n* Create a new sprite and make sure it draws on the game area\r\n* Set the `shapeColor` of the sprite to a random color inside the draw loop\r\n* Run the program and test that it works",
     "show_d_pad": "false",
     "start_blocks": "function draw(){\r\n \r\n}",

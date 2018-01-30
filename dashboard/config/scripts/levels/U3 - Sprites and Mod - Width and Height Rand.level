@@ -66,7 +66,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "show_d_pad": "false",
     "markdown_instructions": "# Width and Height\r\n\r\nSprites have other properties. There are properties for width and height of the sprite. The property names are `width` and `height`. So to access the width of a sprite named `cat` you would say `cat.width`.\r\n\r\n# Do This\r\n\r\nThe provided code draws a sprite that changes colors. Can you change the initial size of the sprite?\r\n\r\n* Set the width and height of the sprite before the draw loop using properties",
     "start_blocks": "var square = createSprite(200,200);\r\n\r\nfunction draw() {\r\n  \tsquare.shapeColor = color(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255));\r\n\tdrawSprites();\r\n}",

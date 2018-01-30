@@ -102,7 +102,7 @@ module SQS
             rescue => exception
               @logger.warn exception
             end
-          end # while
+          end
         end
         @worker_threads << worker_thread
       end
