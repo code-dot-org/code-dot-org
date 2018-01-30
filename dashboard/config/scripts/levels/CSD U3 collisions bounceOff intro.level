@@ -49,7 +49,7 @@
     "hide_animation_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "pause_animations_by_default": "false",
     "start_animations": "{\n    \"orderedKeys\": [\n        \"basketball\",\n        \"floor\"\n    ],\n    \"propsByKey\": {\n        \"basketball\": {\n            \"name\": \"basketball\",\n            \"sourceUrl\": \"https://images.code.org/24355fc6377cfafdce3ce2b3568a33c3-image-1470343728940.png\",\n            \"frameSize\": {\n                \"x\": 100,\n                \"y\": 100\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        },\n        \"floor\": {\n            \"name\": \"floor\",\n            \"sourceUrl\": \"https://images.code.org/87e4306e0371c7975b8fb2583657ee4a-image-1470343728942.png\",\n            \"frameSize\": {\n                \"x\": 400,\n                \"y\": 50\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        }\n    }\n}",
     "start_blocks": "var basketball = createSprite(200, 0);\r\nbasketball.setAnimation(\"basketball\");\r\nbasketball.velocityY = 5;\r\n\r\nvar wood = createSprite(200, 375);\r\nwood.setAnimation(\"floor\");\r\n\r\n\r\nfunction draw() {\r\n  basketball.bounce(wood);\r\n  \r\n  background(\"skyblue\");\r\n  drawSprites();\r\n}\r\n",

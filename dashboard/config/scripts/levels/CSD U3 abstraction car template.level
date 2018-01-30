@@ -30,7 +30,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "start_animations": "{\n    \"orderedKeys\": [\n        \"red_car\"\n    ],\n    \"propsByKey\": {\n        \"red_car\": {\n            \"name\": \"red_car\",\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/red_car.png\",\n            \"frameSize\": {\n                \"x\": 170,\n                \"y\": 76\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        }\n    }\n}",
     "start_blocks": "var car = createSprite(70,300);\r\ncar.setAnimation(\"red_car\");\r\n\r\nfunction draw() {\r\n  background(\"green\");\r\n  stroke(\"gray\");\r\n  strokeWeight(70);\r\n  line(0, 335, 400, 185);\r\n  stroke(\"black\");\r\n  strokeWeight(5);\r\n  line(0, 370, 400, 220);\r\n  line(0, 300, 400, 150);\r\n  line(0, 335, 80, 305);\r\n  line(160, 275, 240, 245);\r\n  line(320, 215, 400, 185);\r\n  drawSprites();\r\n}\r\n",
