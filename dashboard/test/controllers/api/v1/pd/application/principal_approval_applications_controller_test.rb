@@ -7,7 +7,7 @@ module Api::V1::Pd::Application
     setup_all do
       @teacher_application = create :pd_teacher1819_application, application_guid: SecureRandom.uuid
       @test_params = {
-        form_data: build(:pd_principal_approval1819_application_hash),
+        form_data: build(:pd_principal_approval1819_application_hash, :approved_yes),
         application_guid: @teacher_application.application_guid
       }
     end
@@ -97,17 +97,15 @@ module Api::V1::Pd::Application
 
       test_params = {
         application_guid: teacher_application.application_guid,
-        form_data: build(:pd_principal_approval1819_application_hash).merge(
-          {
-            do_you_approve: "Other:",
-            do_you_approve_other: "this is the other for do you approve",
-            committed_to_master_schedule: "Other:",
-            committed_to_master_schedule_other: "this is the other for master schedule",
-            committed_to_diversity: "Other (Please Explain):",
-            committed_to_diversity_other: "this is the other for diversity",
-            replace_course: "I don't know (please explain):",
-            replace_course_other: "this is the other for replace course",
-          }.stringify_keys
+        form_data: build(:pd_principal_approval1819_application_hash,
+          do_you_approve: "Other:",
+          do_you_approve_other: "this is the other for do you approve",
+          committed_to_master_schedule: "Other:",
+          committed_to_master_schedule_other: "this is the other for master schedule",
+          committed_to_diversity: "Other (Please Explain):",
+          committed_to_diversity_other: "this is the other for diversity",
+          replace_course: "I don't know (please explain):",
+          replace_course_other: "this is the other for replace course"
         )
       }
 
