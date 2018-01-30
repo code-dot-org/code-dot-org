@@ -120,10 +120,24 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
     },
     this);
 
-  if (dropdownList && !editor.completer.activated) {
-    // The cursor is positioned where a parameter with a dropdown should appear
-    // and autocomplete is not already active, so let's pop up a special dropdown
-    // autocomplete
+  if (dropdownList) {
+    // The cursor is positioned where a parameter with a dropdown should appear,
+    // so let's pop up a special dropdown autocomplete
+
+    if (editor.completer.activated) {
+      if (!editor.completer.overrideCompleter) {
+        // autocomplete was active, but not with an override completer, so we must
+        // have entered this autocomplete parameter state while still showing a
+        // different type of autocomplete dropdown (e.g. a function). Let's
+        // dismiss the function dropdown so we can present the parameter one...
+        editor.completer.detach();
+      } else {
+        // A completer with an overrideCompleter is already active, which likely
+        // means that the autocomplete parameter dropdown for this parameter is
+        // already present - no need to show it again...
+        return;
+      }
+    }
 
     // First, install our hooks to modify the normal ace AutoComplete (these are
     // safe to leave in place, and we can call this multiple times):
