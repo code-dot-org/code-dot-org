@@ -50,7 +50,7 @@
     "text_mode_at_start": "false",
     "hide_animation_mode": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "pause_animations_by_default": "false",
     "start_blocks": "var pan = createSprite(230, 350);\r\npan.setAnimation(\"pan\");\r\n\r\nvar egg = createSprite(200, -50);\r\negg.setAnimation(\"egg\");\r\negg.velocityY = 5;\r\n\r\nvar friedEgg = createSprite(185, 355);\r\nfriedEgg.setAnimation(\"fried_egg\");\r\nfriedEgg.visible = false;\r\n\r\nfunction draw() {\r\n  if (__) {\r\n    friedEgg.visible = true;\r\n  }\r\n\r\n\r\n  background(\"skyblue\");\r\n  strokeWeight(0);\r\n  fill(\"sienna\");\r\n  rect(0, 340, 400, 60);\r\n  \r\n  drawSprites();\r\n}\r\n",
     "palette_category_at_start": "sprites",

@@ -200,7 +200,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
     "start_animations": "{\n    \"orderedKeys\": [\n        \"mouse\",\n        \"left_wall\",\n        \"right_wall\"\n    ],\n    \"propsByKey\": {\n        \"mouse\": {\n            \"name\": \"mouse\",\n            \"sourceUrl\": \"https://images.code.org/c3f6298b05a9eb51772c8c03a06abe54-image-1470414415864.png\",\n            \"frameSize\": {\n                \"x\": 100,\n                \"y\": 40\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        },\n        \"left_wall\": {\n            \"name\": \"left_wall\",\n            \"sourceUrl\": \"https://images.code.org/fcd40235d2a4285723eecec1df041edc-image-1470413965009.png\",\n            \"frameSize\": {\n                \"x\": 100,\n                \"y\": 400\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        },\n        \"right_wall\": {\n            \"name\": \"right_wall\",\n            \"sourceUrl\": \"https://images.code.org/e89b80c63658eb3607478fe91aceda47-image-1470414741858.png\",\n            \"frameSize\": {\n                \"x\": 100,\n                \"y\": 400\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        }\n    }\n}",
