@@ -57,7 +57,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "start_animations": "{\n    \"orderedKeys\": [\n        \"dragonfly\"\n    ],\n    \"propsByKey\": {\n        \"dragonfly\": {\n            \"name\": \"dragonfly\",\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/dragonfly.png\",\n            \"frameSize\": {\n                \"x\": 150,\n                \"y\": 91\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        }\n    }\n}",
     "markdown_instructions": "# Moving Faster\r\n\r\nJust as you can change `velocityX` inside the draw loop, you can change `velocityY` to make your sprite move faster up or down.  Can you add code into the draw loop to make the dragonfly go faster?\r\n\r\n# Do This\r\n\r\nUse the `velocityY` property to make the dragonfly fly faster and faster up the screen.    [Show me where](#triggercallout=code_triggered)",

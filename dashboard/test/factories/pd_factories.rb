@@ -534,82 +534,85 @@ FactoryGirl.define do
     state 'WA'
   end
 
-  factory :pd_facilitator1819_application_hash, class: 'Hash' do
-    transient do
-      program Pd::Application::Facilitator1819Application::PROGRAM_OPTIONS.first
-      state 'Washington'
-      add_attribute :zip_code, '98101'
+  ruby_to_js_style_keys = ->(k) {k.to_s.camelize(:lower)}
+  factory :form_data_hash, class: 'Hash' do
+    initialize_with {attributes.transform_keys(&ruby_to_js_style_keys)}
+  end
+
+  # default to csf
+  factory :pd_facilitator1819_application_hash, parent: :pd_facilitator1819_application_hash_common do
+    csf
+  end
+
+  factory :pd_facilitator1819_application_hash_common, parent: :form_data_hash do
+    first_name 'Rubeus'
+    last_name 'Hagrid'
+    phone '555-555-5555'
+    address '101 Hogwarts Ave'
+    city 'Seattle'
+    state 'Washington'
+    add_attribute :zip_code, '98101'
+    gender_identity 'Male'
+    race ['Other']
+    institution_type ['Institute of higher education']
+    current_employer 'Gryffindor House'
+    job_title 'Keeper of Keys and Grounds of Hogwarts'
+    resume_link 'linkedin.com/rubeus_hagrid'
+    worked_in_cs_job 'No'
+    completed_cs_courses_and_activities ['Advanced CS in high school or college']
+    diversity_training 'No'
+    how_heard ['Code.org email']
+    plan_on_teaching ['Yes']
+    ability_to_meet_requirements '4'
+    led_cs_extracurriculars ['Hour of Code']
+    teaching_experience 'No'
+    grades_taught ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7']
+    grades_currently_teaching ['Grade 7']
+    subjects_taught ['Computer Science']
+    years_experience 'None'
+    experience_leading ['AP CS A', 'Hour of Code']
+    completed_pd ['CS Fundamentals (1 day workshop)']
+    code_org_facilitator 'No'
+    have_led_pd 'Yes'
+    groups_led_pd ['None']
+    describe_prior_pd 'PD description'
+    who_should_have_opportunity 'all students'
+    how_support_equity 'support equity'
+    expected_teacher_needs 'teacher needs'
+    describe_adapting_lesson_plan 'adapt lesson plan'
+    describe_strategies 'strategies'
+    example_how_used_feedback 'used feedback'
+    example_how_provided_feedback 'provided feedback'
+    hope_to_learn 'many things'
+    available_during_week 'Yes'
+    weekly_availability ['10am ET / 7am PT']
+    travel_distance 'Within my city'
+    additional_info 'none'
+    agree true
+
+    trait :csf do
+      program Pd::Application::Facilitator1819Application::PROGRAMS[:csf]
+      csf_availability 'Yes'
     end
 
-    initialize_with do
-      {
-        firstName: 'Rubeus',
-        lastName: 'Hagrid',
-        phone: '555-555-5555',
-        address: '101 Hogwarts Ave',
-        city: 'Seattle',
-        state: state,
-        zipCode: zip_code,
-        genderIdentity: 'Male',
-        race: ['Other'],
-        institutionType: ['Institute of higher education'],
-        currentEmployer: 'Gryffindor House',
-        jobTitle: 'Keeper of Keys and Grounds of Hogwarts',
-        resumeLink: 'linkedin.com/rubeus_hagrid',
-        workedInCsJob: 'No',
-        completedCsCoursesAndActivities: ['Advanced CS in high school or college'],
-        diversityTraining: 'No',
-        howHeard: ['Code.org email'],
-        program: program,
-        planOnTeaching: ['Yes'],
-        abilityToMeetRequirements: '4',
-        ledCsExtracurriculars: ['Hour of Code'],
-        teachingExperience: 'No',
-        gradesTaught: ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7'],
-        gradesCurrentlyTeaching: ['Grade 7'],
-        subjects_taught: ['Computer Science'],
-        yearsExperience: 'None',
-        experienceLeading: ['AP CS A', 'Hour of Code'],
-        completedPd: ['CS Fundamentals (1 day workshop)'],
-        codeOrgFacilitator: 'No',
-        haveLedPd: 'Yes',
-        groupsLedPd: ['None'],
-        describePriorPd: 'PD description',
-        whoShouldHaveOpportunity: 'all students',
-        howSupportEquity: 'support equity',
-        expectedTeacherNeeds: 'teacher needs',
-        describeAdaptingLessonPlan: 'adapt lesson plan',
-        describeStrategies: 'strategies',
-        exampleHowUsedFeedback: 'used feedback',
-        exampleHowProvidedFeedback: 'provided feedback',
-        hopeToLearn: 'many things',
-        availableDuringWeek: 'Yes',
-        weeklyAvailability: ['10am ET / 7am PT'],
-        travelDistance: 'Within my city',
-        additionalInfo: 'none',
-        agree: true
-      }.tap do |hash|
-        if program == Pd::Application::Facilitator1819Application::PROGRAMS[:csf]
-          hash[:csfAvailability] = 'Yes'
-        else
-          hash[:csdCspTeacherconAvailability] = 'TeacherCon 1: June 17 - 22, 2018'
-          hash[:csdCspFitAvailability] = 'June 23 - 24, 2018 (immediately following TeacherCon 1)'
-        end
-      end.stringify_keys
+    trait :csd do
+      program Pd::Application::Facilitator1819Application::PROGRAMS[:csd]
+      with_csd_csp_specific_fields
+    end
+
+    trait :csp do
+      program Pd::Application::Facilitator1819Application::PROGRAMS[:csp]
+      with_csd_csp_specific_fields
     end
 
     trait :with_csf_specific_fields do
-      after :build do |hash|
-        hash['csfAvailability'] = Pd::Application::Facilitator1819Application::ONLY_WEEKEND
-        hash['csfPartialAttendanceReason'] = 'reasons'
-      end
+      csf_availability Pd::Application::Facilitator1819Application::ONLY_WEEKEND
+      csf_partial_attendance_reason 'reasons'
     end
 
     trait :with_csd_csp_specific_fields do
-      after :build do |hash|
-        hash['csdCspFitAvailability'] = Pd::Application::Facilitator1819Application.options[:csd_csp_fit_availability].first
-        hash['csdCspTeacherconAvailability'] = Pd::Application::Facilitator1819Application.options[:csd_csp_teachercon_availability].first
-      end
+      csd_csp_fit_availability Pd::Application::Facilitator1819Application.options[:csd_csp_fit_availability].first
+      csd_csp_teachercon_availability Pd::Application::Facilitator1819Application.options[:csd_csp_teachercon_availability].first
     end
   end
 
@@ -617,112 +620,97 @@ FactoryGirl.define do
     association :user, factory: [:teacher, :with_school_info], strategy: :create
     course 'csp'
     transient do
-      form_data_hash {build :pd_facilitator1819_application_hash, program: Pd::Application::Facilitator1819Application::PROGRAMS[course.to_sym]}
+      form_data_hash {build :pd_facilitator1819_application_hash, course.to_sym}
     end
     form_data {form_data_hash.to_json}
   end
 
-  factory :pd_teacher1819_application_hash, class: 'Hash' do
-    transient do
-      program Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.last
-      state 'Washington'
-      add_attribute :zip_code, '98101'
-      association :school
-      principal_title 'Dr.'
-    end
+  # default to csp
+  factory :pd_teacher1819_application_hash, parent: :pd_teacher1819_application_hash_common do
+    csp
+  end
+
+  factory :pd_teacher1819_application_hash_common, class: 'Hash' do
+    country 'United States'
+    title 'Mr.'
+    first_name 'Severus'
+    preferred_first_name 'Sevvy'
+    last_name 'Snape'
+    alternate_email 'ilovepotions@gmail.com'
+    phone '5558675309'
+    address '123 Fake Street'
+    city 'Buffalo'
+    state 'Washington'
+    add_attribute :zip_code, '98101'
+    gender_identity 'Male'
+    race ['Other']
+    association :school
+    principal_first_name 'Albus'
+    principal_last_name 'Dumbledore'
+    principal_title 'Dr.'
+    principal_email 'socks@hogwarts.edu'
+    principal_confirm_email 'socks@hogwarts.edu'
+    principal_phone_number '5555882300'
+    current_role 'Teacher'
+    grades_at_school ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7']
+    grades_teaching ['Grade 7']
+    grades_expect_to_teach ['Grade 6', 'Grade 7']
+    does_school_require_cs_license 'Yes'
+    have_cs_license 'Yes'
+    subjects_teaching ['Computer Science']
+    subjects_expect_to_teach ['Computer Science']
+    subjects_licensed_to_teach ['Computer Science']
+    taught_in_past ['CS Fundamentals']
+    previous_yearlong_cdo_pd ['CS in Science']
+    cs_offered_at_school ['AP CS A']
+    cs_opportunities_at_school ['Courses for credit']
+    plan_to_teach 'Yes, I plan to teach this course'
+    able_to_attend_single 'Yes'
+    committed 'Yes'
+    willing_to_travel 'Up to 50 miles'
+    agree 'Yes'
 
     initialize_with do
-      {
-        country: 'United States',
-        title: 'Mr.',
-        first_name: 'Severus',
-        preferred_first_name: 'Sevvy',
-        last_name: 'Snape',
-        alternate_email: 'ilovepotions@gmail.com',
-        phone: '5558675309',
-        address: '123 Fake Street',
-        city: 'Buffalo',
-        state: state,
-        zip_code: zip_code,
-        gender_identity: 'Male',
-        race: ['Other'],
-        school: school.id,
-        principal_first_name: 'Albus',
-        principal_last_name: 'Dumbledore',
-        principal_title: principal_title,
-        principal_email: 'socks@hogwarts.edu',
-        principal_confirm_email: 'socks@hogwarts.edu',
-        principal_phone_number: '5555882300',
-        current_role: 'Teacher',
-        program: program,
-        grades_at_school: ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7'],
-        grades_teaching: ['Grade 7'],
-        grades_expect_to_teach: ['Grade 6', 'Grade 7'],
-        does_school_require_cs_license: 'Yes',
-        have_cs_license: 'Yes',
-        subjects_teaching: ['Computer Science'],
-        subjects_expect_to_teach: ['Computer Science'],
-        subjects_licensed_to_teach: ['Computer Science'],
-        taught_in_past: ['CS Fundamentals'],
-        previous_yearlong_cdo_pd: ['CS in Science'],
-        cs_offered_at_school: ['AP CS A'],
-        cs_opportunities_at_school: ['Courses for credit'],
-        plan_to_teach: 'Yes, I plan to teach this course',
-        able_to_attend_single: 'Yes',
-        committed: 'Yes',
-        willing_to_travel: 'Up to 50 miles',
-        agree: 'Yes'
-      }.tap do |hash|
-        if program == 'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)'
-          hash['csp_which_grades'] = ['11', '12']
-          hash['csp_course_hours_per_week'] = 'More than 5 course hours per week'
-          hash['csp_course_hours_per_year'] = 'At least 100 course hours'
-          hash['csp_terms_per_year'] = '1 quarter'
-          hash['csp_how_offer'] = 'As an AP course'
-          hash['csp_ap_exam'] = 'Yes, all students will be expected to take the AP CS Principles exam'
-        else
-          hash['csd_which_grades'] = ['6', '7']
-          hash['csd_course_hours_per_week'] = '5 or more course hours per week'
-          hash['csd_course_hours_per_year'] = 'At least 100 course hours'
-          hash['csd_terms_per_year'] = '1 quarter'
-        end
-      end.stringify_keys
+      attributes.dup.tap do |hash|
+        # School in the form data is meant to be an id, but in the factory it can be provided as a School object
+        # In that case, replace it with the id from the associated model
+        hash[:school] = hash[:school].id if hash[:school].is_a? School
+      end.transform_keys(&ruby_to_js_style_keys)
+    end
+
+    trait :csp do
+      program Pd::Application::Teacher1819Application::PROGRAMS[:csp]
+      csp_which_grades ['11', '12']
+      csp_course_hours_per_week 'More than 5 course hours per week'
+      csp_course_hours_per_year 'At least 100 course hours'
+      csp_terms_per_year '1 quarter'
+      csp_how_offer 'As an AP course'
+      csp_ap_exam 'Yes, all students will be expected to take the AP CS Principles exam'
+    end
+
+    trait :csd do
+      program Pd::Application::Teacher1819Application::PROGRAMS[:csd]
+      csd_which_grades ['6', '7']
+      csd_course_hours_per_week '5 or more course hours per week'
+      csd_course_hours_per_year 'At least 100 course hours'
+      csd_terms_per_year '1 quarter'
     end
 
     trait :with_custom_school do
-      transient do
-        school_name 'Code.org'
-        school_address '1501 4th Ave'
-        school_city 'Seattle'
-        school_state 'Washington'
-        school_zip_code '98101'
-        school_type 'Public school'
-      end
-      after(:build) do |hash, evaluator|
-        hash.merge!(
-          {
-            school: -1,
-            school_name: evaluator.school_name,
-            school_address: evaluator.school_address,
-            school_city: evaluator.school_city,
-            school_state: evaluator.school_state,
-            school_zip_code: evaluator.school_zip_code,
-            school_type: evaluator.school_type
-          }.stringify_keys
-        )
-      end
+      school(-1)
+      school_name 'Code.org'
+      school_address '1501 4th Ave'
+      school_city 'Seattle'
+      school_state 'Washington'
+      school_zip_code '98101'
+      school_type 'Public school'
     end
 
     trait :with_multiple_workshops do
-      transient do
-        able_to_attend_multiple ['December 11-15, 2017 in Indiana, USA']
-      end
-      after(:build) do |hash, evaluator|
-        hash.merge!(
-          {
-            able_to_attend_multiple: evaluator.able_to_attend_multiple
-          }.stringify_keys
-        ).except!("able_to_attend_single")
+      able_to_attend_multiple ['December 11-15, 2017 in Indiana, USA']
+
+      after(:build) do |hash|
+        hash.delete 'ableToAttendSingle'
       end
     end
   end
@@ -730,9 +718,10 @@ FactoryGirl.define do
   factory :pd_teacher1819_application, class: 'Pd::Application::Teacher1819Application' do
     association :user, factory: [:teacher, :with_school_info], strategy: :create
     course 'csp'
-    form_data {build(:pd_teacher1819_application_hash, program: Pd::Application::Teacher1819Application::PROGRAMS[course.to_sym]).to_json}
-    application_guid nil
-    regional_partner nil
+    transient do
+      form_data_hash {build :pd_teacher1819_application_hash_common, course.to_sym}
+    end
+    form_data {form_data_hash.to_json}
 
     trait :locked do
       after(:create) do |application|
@@ -742,176 +731,170 @@ FactoryGirl.define do
     end
   end
 
-  factory :pd_principal_approval1819_application_hash, class: 'Hash' do
-    transient do
-      approved 'Yes'
-      replace_course Pd::Application::PrincipalApproval1819Application.options[:replace_course][1]
-      course 'csp'
-    end
-    initialize_with do
-      {
-        first_name: 'Albus',
-        last_name: 'Dumbledore',
-        title: 'Dr.',
-        email: 'albus@hogwarts.edu',
-        do_you_approve: approved,
-        confirm_principal: true
-      }.tap do |hash|
-        unless approved == Pd::Application::ApplicationBase::NO
-          hash.merge! (
-            {
-              school: 'Hogwarts Academy of Witchcraft and Wizardry',
-              total_student_enrollment: 200,
-              free_lunch_percent: '50%',
-              white: '16%',
-              black: '15%',
-              hispanic: '14%',
-              asian: '13%',
-              pacific_islander: '12%',
-              american_indian: '11%',
-              other: '10%',
-              committed_to_master_schedule: 'Yes',
-              hours_per_year: 'At least 100 course hours',
-              terms_per_year: '1 quarter',
-              replace_course: replace_course,
-              committed_to_diversity: 'Yes',
-              understand_fee: 'Yes',
-              pay_fee: 'Yes, my school or my teacher will be able to pay the full summer workshop program fee.'
-            }
-          )
+  # default to do_you_approve: other
+  factory :pd_principal_approval1819_application_hash, parent: :pd_principal_approval1819_application_hash_common do
+    approved_other
+  end
 
-          if replace_course == Pd::Application::ApplicationBase::YES
-            if course == 'csp'
-              hash[:replace_which_course_csp] = ['Beauty and Joy of Computing']
-            elsif course == 'csd'
-              hash[:replace_which_course_csd] = ['CodeHS']
-            end
-          end
-        end
-      end.stringify_keys
+  factory :pd_principal_approval1819_application_hash_common, parent: :form_data_hash do
+    first_name 'Albus'
+    last_name 'Dumbledore'
+    title 'Dr.'
+    email 'albus@hogwarts.edu'
+    confirm_principal true
+
+    trait :approved_no do
+      do_you_approve 'No'
+    end
+
+    trait :approved_yes do
+      do_you_approve 'Yes'
+      with_approval_fields
+    end
+
+    trait :approved_other do
+      do_you_approve 'Other:'
+      with_approval_fields
+    end
+
+    trait :with_approval_fields do
+      school 'Hogwarts Academy of Witchcraft and Wizardry'
+      total_student_enrollment 200
+      free_lunch_percent '50%'
+      white '16%'
+      black '15%'
+      hispanic '14%'
+      asian '13%'
+      pacific_islander '12%'
+      american_indian '11%'
+      other '10%'
+      committed_to_master_schedule 'Yes'
+      hours_per_year 'At least 100 course hours'
+      terms_per_year '1 quarter'
+      replace_course Pd::Application::PrincipalApproval1819Application::REPLACE_COURSE_NO
+      committed_to_diversity 'Yes'
+      understand_fee 'Yes'
+      pay_fee 'Yes, my school or my teacher will be able to pay the full summer workshop program fee.'
+    end
+
+    trait :replace_course_yes_csp do
+      replace_course 'Yes'
+      replace_which_course_csp ['Beauty and Joy of Computing']
+    end
+
+    trait :replace_course_yes_csd do
+      replace_course 'Yes'
+      replace_which_course_csd ['CodeHS']
     end
   end
 
   factory :pd_principal_approval1819_application, class: 'Pd::Application::PrincipalApproval1819Application' do
     association :teacher_application, factory: :pd_teacher1819_application
+    course 'csp'
     transient do
       approved 'Yes'
       replace_course Pd::Application::PrincipalApproval1819Application.options[:replace_course][1]
+      form_data_hash do
+        build(
+          :pd_principal_approval1819_application_hash_common,
+          "approved_#{approved.downcase}".to_sym,
+          course: course,
+          replace_course: replace_course
+        )
+      end
     end
-    course 'csp'
-    form_data {build(:pd_principal_approval1819_application_hash, course: course, approved: approved, replace_course: replace_course).to_json}
+    form_data {form_data_hash.to_json}
   end
 
-  factory :pd_teachercon1819_registration_hash, class: 'Hash' do
-    transient do
-      full_form_data true
-    end
+  # default to accepted
+  factory :pd_teachercon1819_registration_hash, parent: :pd_teachercon1819_registration_hash_common do
+    accepted
+  end
 
-    # default to accepted
-    initialize_with do
-      {
-        email: "ssnape@hogwarts.edu",
-        preferredFirstName: "Sevvy",
-        lastName: "Snape",
-        phone: "5558675309",
-        teacherAcceptSeat: "Yes, I accept my seat in the Professional Learning Program"
-      }.tap do |hash|
-        if full_form_data
-          hash.merge!(
-            {
-              addressCity: "Albuquerque",
-              addressState: "Alabama",
-              addressStreet: "123 Street Ave",
-              addressZip: "12345",
-              agreeShareContact: true,
-              contactFirstName: "Dumble",
-              contactLastName: "Dore",
-              contactPhone: "1597534862",
-              contactRelationship: "it's complicated",
-              dietaryNeeds: "Food Allergy",
-              dietaryNeeds_food_allergy_details: "memories",
-              howTraveling: "Amtrak or regional train service",
-              liabilityWaiver: "Yes",
-              liveFarAway: "Yes",
-              needHotel: "No",
-              photoRelease: "Yes",
-              howOfferCsp: "As an AP course",
-              haveTaughtAp: "Yes",
-              haveTaughtWrittenProjectCourse: "Yes",
-              gradingSystem: 'Numerical and/or letter grades (e.g., 0 - 100% or F- A)',
-            }
-          )
-        end
-      end.stringify_keys
+  factory :pd_teachercon1819_registration_hash_common, parent: :form_data_hash do
+    email "ssnape@hogwarts.edu"
+    preferred_first_name "Sevvy"
+    last_name "Snape"
+    phone "5558675309"
+
+    trait :with_full_form_data do
+      address_city "Albuquerque"
+      address_state "Alabama"
+      address_street "123 Street Ave"
+      address_zip "12345"
+      agree_share_contact true
+      contact_first_name "Dumble"
+      contact_last_name "Dore"
+      contact_phone "1597534862"
+      contact_relationship "it's complicated"
+      dietary_needs "Food Allergy"
+      dietary_needs_food_allergy_details "memories"
+      how_traveling "Amtrak or regional train service"
+      liability_waiver "Yes"
+      live_far_away "Yes"
+      need_hotel "No"
+      photo_release "Yes"
+      how_offer_csp "As an AP course"
+      have_taught_ap "Yes"
+      have_taught_written_project_course "Yes"
+      grading_system 'Numerical and/or letter grades (e.g., 0 - 100% or F- A)'
     end
 
     trait :accepted do
-      # accepted is the default, trait included here just for completeness
+      teacher_accept_seat Pd::Teachercon1819Registration::TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept]
+      with_full_form_data
     end
 
     trait :withdrawn do
-      full_form_data false
-      after :build do |hash|
-        hash['teacherAcceptSeat'] = "No, I decline my seat in the Professional Learning Program."
-      end
+      teacher_accept_seat Pd::Teachercon1819Registration::TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
     end
 
     trait :waitlisted do
-      after :build do |hash|
-        hash['teacherAcceptSeat'] = "Yes, I want to participate, but I'm unable to attend my assigned summer workshop date. Please place me on your waitlist. I understand that I am not guaranteed a space in a different summer workshop."
-      end
+      teacher_accept_seat Pd::Teachercon1819Registration::TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_date]
+      with_full_form_data
     end
   end
 
   factory :pd_teachercon1819_registration, class: 'Pd::Teachercon1819Registration' do
     transient do
       hash_trait :accepted
+      form_data_hash {build(:pd_teachercon1819_registration_hash_common, hash_trait)}
     end
 
     association :pd_application, factory: :pd_teacher1819_application
-    form_data {build(:pd_teachercon1819_registration_hash, hash_trait).to_json}
+    form_data {form_data_hash.to_json}
   end
 
-  factory :pd_fit_weekend1819_registration_hash, class: 'Hash' do
-    # default to declined
-    initialize_with do
-      {
-        email: "ssnape@hogwarts.edu",
-        preferredFirstName: "Sevvy",
-        lastName: "Snape",
-        phone: "5558675309",
-        ableToAttend: "No"
-      }.stringify_keys
-    end
+  factory :pd_fit_weekend1819_registration_hash, parent: :form_data_hash do
+    email "ssnape@hogwarts.edu"
+    preferred_first_name "Sevvy"
+    last_name "Snape"
+    phone "5558675309"
 
+    # default to declined
+    able_to_attend "No"
     trait :declined do
       # declined is the default, trait included here just for completeness
     end
 
     trait :accepted do
-      after :build do |hash|
-        hash.merge!(
-          {
-            ableToAttend: "Yes",
-            addressCity: "Albuquerque",
-            addressState: "Alabama",
-            addressStreet: "123 Street Ave",
-            addressZip: "12345",
-            agreeShareContact: true,
-            contactFirstName: "Dumble",
-            contactLastName: "Dore",
-            contactPhone: "1597534862",
-            contactRelationship: "it's complicated",
-            dietaryNeeds: "Food Allergy",
-            dietaryNeeds_food_allergy_details: "memories",
-            howTraveling: "Amtrak or regional train service",
-            liabilityWaiver: "Yes",
-            liveFarAway: "Yes",
-            needHotel: "No",
-            photoRelease: "Yes",
-          }.stringify_keys
-        )
-      end
+      able_to_attend "Yes"
+      address_city "Albuquerque"
+      address_state "Alabama"
+      address_street "123 Street Ave"
+      address_zip "12345"
+      agree_share_contact true
+      contact_first_name "Dumble"
+      contact_last_name "Dore"
+      contact_phone "1597534862"
+      contact_relationship "it's complicated"
+      dietary_needs "Food Allergy"
+      dietary_needs_food_allergy_details "memories"
+      how_traveling "Amtrak or regional train service"
+      liability_waiver "Yes"
+      live_far_away "Yes"
+      need_hotel "No"
+      photo_release "Yes"
     end
   end
 
