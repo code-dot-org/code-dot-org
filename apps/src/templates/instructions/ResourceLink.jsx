@@ -40,8 +40,8 @@ class ResourceLink extends React.Component {
   static propTypes = {
     map: PropTypes.bool.isRequired,
     text: PropTypes.string,
+    reference: PropTypes.string,
   };
-
 
   state = {
     dialogSelected: false,
@@ -67,16 +67,18 @@ class ResourceLink extends React.Component {
           <span style={thumbnailStyle}>
               <i style={iconStyle} className={map ? "fa fa-map" : "fa fa-book"}/>
           </span>
-          {text && (
-            <div style={styles.textLink}>
-              {text}
-            </div>
-          )}
+          <a style={styles.textLink}>
+            {text}
+          </a>
         </div>
         <BaseDialog
           isOpen={this.state.dialogSelected}
           handleClose={this.closeResource}
-        />
+        >
+          <div>
+            {this.props.reference}
+          </div>
+        </BaseDialog>
       </div>
     );
   }
