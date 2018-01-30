@@ -29,7 +29,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "markdown_instructions": "<img src=\"https://images.code.org/63207a624d751aacb376db18cdf09eec-image-1491255841823.png\" style=\"width: 150px; float: right; margin-left: 20px; border: 1px solid #f2f2f2;\">\r\n# Debug\r\n\r\nThis program should create two new sprites, one on the left of the screen and one on the right, but it's only drawing one. **You don't need to add any code**, just rearrange the code already present to make sure that both sprites show up like the picture on the right.",
     "show_d_pad": "false",
     "callout_json": "[]",

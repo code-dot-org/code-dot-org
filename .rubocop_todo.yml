@@ -253,10 +253,6 @@ Style/ClassVars:
 Style/CollectionMethods:
   Enabled: false
 
-# Offense count: 4
-Style/CommentedKeyword:
-  Enabled: false
-
 # Offense count: 149
 Style/DateTime:
   Enabled: false
@@ -309,11 +305,6 @@ Style/MultilineTernaryOperator:
 # Offense count: 205
 # Cop supports --auto-correct.
 Style/MutableConstant:
-  Enabled: false
-
-# Offense count: 3
-# Cop supports --auto-correct.
-Style/OrAssignment:
   Enabled: false
 
 # Offense count: 47
