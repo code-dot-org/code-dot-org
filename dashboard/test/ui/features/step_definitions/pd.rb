@@ -1,6 +1,6 @@
 Given(/^I am a workshop administrator with some applications of each type and state$/) do
   require_rails_env
-  random_name = "TestWorkshopAdmin" + SecureRandom.hex[0..9]
+  random_name = "TestWorkshopAdmin" + SecureRandom.hex(10)
   steps %Q{
     And I create a teacher named "#{random_name}"
     And I make the teacher named "#{random_name}" a workshop admin
@@ -161,14 +161,6 @@ def create_facilitator(course)
   Pd::CourseFacilitator.create(facilitator_id: facilitator.id, course: course)
 
   facilitator
-end
-
-def create_applications_in_states(application_count, state_hash)
-  include FactoryGirl::Syntax::Methods
-  application_count.times do
-    teacher = create :teacher, email: "teacher_application_teacher_#{SecureRandom.hex}@code.org"
-    create :pd_teacher1819_application, user: teacher
-  end
 end
 
 And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) (people|facilitators)(.*)$/) do |course, role, name, number, number_type, post_create_actions|
