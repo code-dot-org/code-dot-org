@@ -10,8 +10,8 @@ class Api::V1::Pd::Teachercon1819RegistrationsController < Api::V1::Pd::FormsCon
   def create_partner
     regional_partner_id = params.try(:[], :regionalPartnerId)
     regional_partner = RegionalPartner.find(regional_partner_id)
-    unless regional_partner && current_user.regional_partners.include?(regional_partner)
-      return head :unauthorized
+    unless regional_partner && current_user && current_user.regional_partners.include?(regional_partner)
+      return head :forbidden
     end
 
     form_data_hash = params.try(:[], :form_data) || {}
