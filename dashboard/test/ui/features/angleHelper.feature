@@ -11,8 +11,8 @@ Scenario: Angle Helper Eyes Tests
   When I open my eyes to test "angle helper"
   Then I begin to edit the angle of turn block "2"
   And I see no difference for "free text angle helper"
-  And I click block "3"
-  And I begin to edit the angle of turn block "3"
+#  And I click block "3"
+#  And I begin to edit the angle of turn block "3"
   And I see no difference for "dropdown angle helper"
   And I close my eyes
 
