@@ -199,9 +199,6 @@ var Artist = function () {
   // PID of animation task currently executing.
   this.pid = 0;
 
-  // Should the turtle be drawn?
-  this.visible = true;
-
   // The avatar image
   this.avatarImage = new Image();
   this.numberAvatarHeadings = undefined;
@@ -570,7 +567,7 @@ Artist.prototype.placeImage = function (filename, position, scale) {
         this.visualization.ctxImages.drawImage(img, position[0], position[1]);
       }
     }
-    this.display();
+    this.visualization.display();
   }, this);
 
   if (this.isFrozenSkin()) {
@@ -632,105 +629,6 @@ Artist.prototype.loadDecorationAnimation = function () {
   }
 };
 
-var turtleFrame = 0;
-
-
-/**
- * Draw the turtle image based on this.visualization.x, this.visualization.y, and this.visualization.heading.
- */
-Artist.prototype.drawTurtle = function () {
-  if (!this.visible) {
-    return;
-  }
-  this.drawDecorationAnimation("before");
-
-  var sourceY;
-  // Computes the index of the image in the sprite.
-  var index = Math.floor(this.visualization.heading * this.numberAvatarHeadings / 360);
-  if (this.isFrozenSkin()) {
-    // the rotations in the sprite sheet go in the opposite direction.
-    index = this.numberAvatarHeadings - index;
-
-    // and they are 180 degrees out of phase.
-    index = (index + this.numberAvatarHeadings/2) % this.numberAvatarHeadings;
-  }
-  var sourceX = this.avatarImage.spriteWidth * index;
-  if (this.isFrozenSkin()) {
-    sourceY = this.avatarImage.spriteHeight * turtleFrame;
-    turtleFrame = (turtleFrame + 1) % this.skin.turtleNumFrames;
-  } else {
-    sourceY = 0;
-  }
-  var sourceWidth = this.avatarImage.spriteWidth;
-  var sourceHeight = this.avatarImage.spriteHeight;
-  var destWidth = this.avatarImage.spriteWidth;
-  var destHeight = this.avatarImage.spriteHeight;
-  var destX = this.visualization.x - destWidth / 2;
-  var destY = this.visualization.y - destHeight + 7;
-
-  if (this.avatarImage.width === 0 || this.avatarImage.height === 0) {
-    return;
-  }
-
-  if (sourceX < 0 ||
-      sourceY < 0 ||
-      sourceX + sourceWidth  -0 > this.avatarImage.width ||
-      sourceY + sourceHeight > this.avatarImage.height) {
-    return;
-  }
-
-  if (this.avatarImage.width !== 0) {
-    this.visualization.ctxDisplay.drawImage(
-      this.avatarImage,
-      Math.round(sourceX), Math.round(sourceY),
-      sourceWidth - 0, sourceHeight,
-      Math.round(destX), Math.round(destY),
-      destWidth - 0, destHeight);
-  }
-
-  this.drawDecorationAnimation("after");
-};
-
-/**
-  * This is called twice, once with "before" and once with "after", referring to before or after
-  * the sprite is drawn.  For some angles it should be drawn before, and for some after.
-  */
-
-Artist.prototype.drawDecorationAnimation = function (when) {
-  if (this.skin.id === "elsa") {
-    var frameIndex = (turtleFrame + 10) % this.skin.decorationAnimationNumFrames;
-
-    var angleIndex = Math.floor(this.visualization.heading * this.numberAvatarHeadings / 360);
-
-    // the rotations in the Anna & Elsa sprite sheets go in the opposite direction.
-    angleIndex = this.numberAvatarHeadings - angleIndex;
-
-    // and they are 180 degrees out of phase.
-    angleIndex = (angleIndex + this.numberAvatarHeadings/2) % this.numberAvatarHeadings;
-
-    if (ELSA_DECORATION_DETAILS[angleIndex].when === when) {
-      var sourceX = this.decorationAnimationImage.width * frameIndex;
-      var sourceY = 0;
-      var sourceWidth = this.decorationAnimationImage.width;
-      var sourceHeight = this.decorationAnimationImage.height;
-      var destWidth = sourceWidth;
-      var destHeight = sourceHeight;
-      var destX = this.visualization.x - destWidth / 2 - 15 - 15 + ELSA_DECORATION_DETAILS[angleIndex].x;
-      var destY = this.visualization.y - destHeight / 2 - 100;
-
-      if (this.decorationAnimationImage.width !== 0) {
-        this.visualization.ctxDisplay.drawImage(
-          this.decorationAnimationImage,
-          Math.round(sourceX), Math.round(sourceY),
-          sourceWidth, sourceHeight,
-          Math.round(destX), Math.round(destY),
-          destWidth, destHeight);
-      }
-    }
-  }
-};
-
-
 /**
  * Reset the turtle to the start position, clear the display, and kill any
  * pending tasks.
@@ -744,7 +642,7 @@ Artist.prototype.reset = function (ignore) {
   this.visualization.heading = this.level.startDirection !== undefined ?
       this.level.startDirection : DEFAULT_DIRECTION;
   this.visualization.penDownValue = true;
-  this.visible = true;
+  this.visualization.turtleVisible = true;
 
   // For special cases, use a different initial location.
   if (this.level.initialX !== undefined) {
@@ -767,8 +665,7 @@ Artist.prototype.reset = function (ignore) {
   }
 
   this.visualization.ctxScratch.lineCap = 'round';
-  this.visualization.ctxScratch.font = 'normal 18pt Arial';
-  this.display();
+  this.visualization.display();
 
   // Clear the feedback.
   this.visualization.ctxFeedback.clearRect(
@@ -796,49 +693,6 @@ Artist.prototype.reset = function (ignore) {
   this.studioApp_.stopLoopingAudio('start');
 
   this.resetStepInfo_();
-};
-
-
-/**
- * Copy the scratch canvas to the display canvas. Add a turtle marker.
- */
-Artist.prototype.display = function () {
-  // FF on linux retains drawing of previous location of artist unless we clear
-  // the canvas first.
-  var style = this.visualization.ctxDisplay.fillStyle;
-  this.visualization.ctxDisplay.fillStyle = color.white;
-  this.visualization.ctxDisplay.clearRect(0, 0, this.visualization.ctxDisplay.canvas.width,
-    this.visualization.ctxDisplay.canvas.width);
-  this.visualization.ctxDisplay.fillStyle = style;
-
-  this.visualization.ctxDisplay.globalCompositeOperation = 'copy';
-  // Draw the images layer.
-  this.visualization.ctxDisplay.globalCompositeOperation = 'source-over';
-  this.visualization.ctxDisplay.drawImage(this.visualization.ctxImages.canvas, 0, 0);
-
-  // Draw the predraw layer.
-  this.visualization.ctxDisplay.globalCompositeOperation = 'source-over';
-  this.visualization.ctxDisplay.drawImage(this.visualization.ctxPredraw.canvas, 0, 0);
-
-  // Draw the answer layer.
-  if (this.isFrozenSkin()) {
-    this.visualization.ctxDisplay.globalAlpha = 0.4;
-  } else {
-    this.visualization.ctxDisplay.globalAlpha = 0.3;
-  }
-  this.visualization.ctxDisplay.drawImage(this.visualization.ctxAnswer.canvas, 0, 0);
-  this.visualization.ctxDisplay.globalAlpha = 1;
-
-  // Draw the pattern layer.
-  this.visualization.ctxDisplay.globalCompositeOperation = 'source-over';
-  this.visualization.ctxDisplay.drawImage(this.visualization.ctxPattern.canvas, 0, 0);
-
-  // Draw the user layer.
-  this.visualization.ctxDisplay.globalCompositeOperation = 'source-over';
-  this.visualization.ctxDisplay.drawImage(this.visualization.ctxScratch.canvas, 0, 0);
-
-  // Draw the turtle.
-  this.drawTurtle();
 };
 
 /**
@@ -1034,7 +888,7 @@ Artist.prototype.executeTuple_ = function () {
 
     // We only smooth animate for Anna & Elsa, and only if there is not another tuple to be done.
     var tupleDone = this.step(command, tuple.slice(1), {smoothAnimate: this.skin.smoothAnimate && !executeSecondTuple});
-    this.display();
+    this.visualization.display();
 
     if (tupleDone) {
       this.api.log.shift();
@@ -1248,10 +1102,10 @@ Artist.prototype.step = function (command, values, options) {
       }
       break;
     case 'HT':  // Hide Turtle
-      this.visible = false;
+      this.visualization.turtleVisible = false;
       break;
     case 'ST':  // Show Turtle
-      this.visible = true;
+      this.visualization.turtleVisible = true;
       break;
     case 'sticker':
       if (this.shouldDrawNormalized_) {

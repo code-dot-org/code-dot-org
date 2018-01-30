@@ -146,6 +146,48 @@ module.exports = class Visualization {
     }
   };
 
+  /**
+   * Copy the scratch canvas to the display canvas. Add a turtle marker.
+   */
+  display() {
+    // FF on linux retains drawing of previous location of artist unless we clear
+    // the canvas first.
+    var style = this.ctxDisplay.fillStyle;
+    this.ctxDisplay.fillStyle = '#fff';
+    this.ctxDisplay.clearRect(0, 0, this.ctxDisplay.canvas.width,
+      this.ctxDisplay.canvas.width);
+    this.ctxDisplay.fillStyle = style;
+
+    this.ctxDisplay.globalCompositeOperation = 'copy';
+    // Draw the images layer.
+    this.ctxDisplay.globalCompositeOperation = 'source-over';
+    this.ctxDisplay.drawImage(this.ctxImages.canvas, 0, 0);
+
+    // Draw the predraw layer.
+    this.ctxDisplay.globalCompositeOperation = 'source-over';
+    this.ctxDisplay.drawImage(this.ctxPredraw.canvas, 0, 0);
+
+    // Draw the answer layer.
+    if (this.isFrozenSkin()) {
+      this.ctxDisplay.globalAlpha = 0.4;
+    } else {
+      this.ctxDisplay.globalAlpha = 0.3;
+    }
+    this.ctxDisplay.drawImage(this.ctxAnswer.canvas, 0, 0);
+    this.ctxDisplay.globalAlpha = 1;
+
+    // Draw the pattern layer.
+    this.ctxDisplay.globalCompositeOperation = 'source-over';
+    this.ctxDisplay.drawImage(this.ctxPattern.canvas, 0, 0);
+
+    // Draw the user layer.
+    this.ctxDisplay.globalCompositeOperation = 'source-over';
+    this.ctxDisplay.drawImage(this.ctxScratch.canvas, 0, 0);
+
+    // Draw the turtle.
+    this.drawTurtle();
+  };
+
   setPattern(pattern) {
     if (this.shouldDrawNormalized_) {
       pattern = null;
@@ -368,4 +410,8 @@ module.exports = class Visualization {
     this.circleAt_(this.x, this.y, JOINT_RADIUS);
     this.ctxScratch.stroke();
   };
+
+  degreesToRadians_(degrees) {
+    return degrees * (Math.PI / 180);
+  }
 };

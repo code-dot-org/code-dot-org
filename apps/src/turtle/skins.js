@@ -114,7 +114,7 @@ exports.load = function (assetUrl, id) {
   // to populate the image dropdown in the Set Pattern block.
 
   // All skins have the default line style (solid coloured line)
-  var lineStylePatternOptions =  [[skin.patternDefault, 'DEFAULT']];
+  var lineStylePatternOptions =  [[skin.linePatterns.patternDefault, 'DEFAULT']];
 
   // If the skin provided line patterns, add them to the pattern set
   if (config && config.lineStylePatternOptions) {
