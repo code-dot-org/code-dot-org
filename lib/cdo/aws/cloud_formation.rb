@@ -15,7 +15,7 @@ require 'digest'
 module AWS
   class CloudFormation
     # Hard-coded values for our CloudFormation template.
-    TEMPLATE = ENV['TEMPLATE'] || 'cloud_formation_adhoc_standalone.yml.erb'
+    TEMPLATE = ENV['TEMPLATE'] || raise('Stack template not provided in environment (TEMPLATE=[stack].yml.erb)')
     TEMPLATE_POLICY = TEMPLATE.split('.').tap {|s| s.first << '-policy'}.join('.')
     TEMP_BUCKET = ENV['TEMP_S3_BUCKET'] || 'cf-templates-p9nfb0gyyrpf-us-east-1'
 
@@ -55,7 +55,9 @@ module AWS
       end
 
       def stack_name
-        (ENV['STACK_NAME'] || CDO.stack_name || "#{rack_env}#{rack_env != branch && "-#{branch}"}").gsub(STACK_NAME_INVALID_REGEX, '-')
+        name = ENV['STACK_NAME'] || CDO.stack_name
+        name += "-#{branch}" if name == 'adhoc'
+        name.gsub(STACK_NAME_INVALID_REGEX, '-')
       end
 
       # CNAME prefix to use for this stack.
