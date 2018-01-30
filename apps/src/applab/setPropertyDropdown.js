@@ -180,7 +180,8 @@ PROPERTIES[ElementType.CANVAS] = {
     'canvasWidth',
     'canvasHeight',
     'x',
-    'y'
+    'y',
+    'hidden',
   ]
 };
 PROPERTIES[ElementType.SCREEN] = {
