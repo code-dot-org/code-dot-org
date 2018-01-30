@@ -443,3 +443,58 @@ export function clearTimeoutsBetweenTests() {
     );
   });
 }
+
+/**
+ * This helper checks that changes to document.body are undone before the tests
+ * are finished.  In particular, it enforces two rules:
+ *
+ * - document.body.innerHTML is the same after the tests as it was before them.
+ * - document.body.removeEventListener is called the same number of times as
+ *   document.body.addEventListener.
+ *
+ * This doesn't 100% ensure cleanup, but it catches a lot of cases.  Feel free
+ * to extend this function with more rules if you think of them.
+ *
+ * It's recommended to include this helper in the top-level describe of a test
+ * suite.
+ *
+ * @param {boolean} [checkEveryTest=false] If set, the cleanup assertions will
+ *   be run after _every_ test, instead of just once at the end of the whole
+ *   suite.  This should normally be 'false' to avoid unneeded impact on the
+ *   runtime of the suite, but setting it 'true' is very useful for isolating
+ *   the test that's causing related failures.
+ */
+export function enforceDocumentBodyCleanup({checkEveryTest = false}) {
+  let initialInnerHTML;
+  const beforeFn = checkEveryTest ? beforeEach : before;
+  const afterFn = checkEveryTest ? afterEach : after;
+
+  beforeFn(() => {
+    if (!initialInnerHTML) {
+      initialInnerHTML = document.body.innerHTML;
+    }
+    sinon.spy(document.body, 'addEventListener');
+    sinon.spy(document.body, 'removeEventListener');
+  });
+
+  afterFn(() => {
+    if (initialInnerHTML !== document.body.innerHTML) {
+      throw new Error(
+        'Test modified document.body.innerHTML:' +
+        '\n\nInitial:\n' +
+        initialInnerHTML +
+        '\n\nAfter:\n' +
+        document.body.innerHTML
+      );
+    }
+
+    if (document.body.addEventListener.callCount !== document.body.removeEventListener.callCount) {
+      throw new Error(
+        'Added ' + document.body.addEventListener.callCount + ' event listener(s)' +
+        ' to document.body, but only removed ' + document.body.removeEventListener.callCount + ' listeners'
+      );
+    }
+    document.body.addEventListener.restore();
+    document.body.removeEventListener.restore();
+  });
+}
