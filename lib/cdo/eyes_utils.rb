@@ -1,6 +1,7 @@
 require 'open-uri'
 require 'json'
 require 'fileutils'
+require 'rest-client'
 
 module EyesUtils
   EYES_ACCESS_KEY_ENV_NAME = 'EYES_ACCESS_KEY'.freeze
@@ -51,5 +52,23 @@ module EyesUtils
   def self.merge_delete_eyes_branch(branch, base)
     ensure_merge_util
     Kernel.system("#{BASE_MERGE_UTIL_CALL} -n Code.org -s #{branch} -t #{base} -d true")
+  end
+end
+
+module EyesRestUtils
+  def self.copy_eyes_baselines(source_branch, target_branch)
+    raise 'missing CDO.applitools_eyes_api_key_update' unless CDO.applitools_eyes_api_key_update
+    url = "https://eyes.applitools.com/api/baselines/copybranch?accesskey=#{CDO.applitools_eyes_api_key_update}"
+    payload = {
+      AppName: "Code.org",
+      SourceBranch: source_branch,
+      TargetBranch: target_branch
+    }.to_json
+    headers = {content_type: :json}
+    puts "url: #{url.inspect}"
+    puts "payload: #{payload.inspect}"
+    response = RestClient.post(url, payload, headers)
+    puts "response: #{response.inspect}"
+    response
   end
 end
