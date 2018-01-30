@@ -80,8 +80,9 @@ def build
     status = begin
       result = RakeUtils.rake_stream_output 'ci'
 
-      unless git_revision == RakeUtils.git_revision
-        raise "git revision unexpectedly changed from #{git_revision} to #{RakeUtils.git_revision} during build"
+      if rack_env == :test && git_revision != RakeUtils.git_revision
+        ChatClient.log "git revision unexpectedly changed from #{git_revision} to #{RakeUtils.git_revision} during DTT", color: 'red'
+        raise
       end
 
       result
