@@ -50,9 +50,9 @@ class CanvasProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
         <BooleanPropertyRow
-            desc={'hidden'}
-            initialValue={$(element).hasClass('design-mode-hidden')}
-            handleChange={this.props.handleChange.bind(this, 'hidden')}
+          desc={'hidden'}
+          initialValue={$(element).hasClass('design-mode-hidden')}
+          handleChange={this.props.handleChange.bind(this, 'hidden')}
         />
         <ZOrderRow
           element={this.props.element}
