@@ -59,7 +59,7 @@
     "text_mode_at_start": "false",
     "hide_animation_mode": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "pause_animations_by_default": "false",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"33abeb33-4d74-48ad-958a-8fe0ca059aef\",\r\n    \"c680e284-3529-4a3f-9a0d-7b65bf9dff17\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"33abeb33-4d74-48ad-958a-8fe0ca059aef\": {\r\n      \"name\": \"blender\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/aLECcHtDU77o8Q8CNfnEOw/33abeb33-4d74-48ad-958a-8fe0ca059aef.png?version=FODKOHI0aS0tXVyo3zthX_L5c9_EMyaW\",\r\n      \"frameSize\": {\r\n        \"x\": 88,\r\n        \"y\": 134\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"FODKOHI0aS0tXVyo3zthX_L5c9_EMyaW\"\r\n    },\r\n    \"c680e284-3529-4a3f-9a0d-7b65bf9dff17\": {\r\n      \"name\": \"apple\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/aLECcHtDU77o8Q8CNfnEOw/c680e284-3529-4a3f-9a0d-7b65bf9dff17.png?version=n.q3G0EyEE2.swNed33C7sjvWZ42AHWE\",\r\n      \"frameSize\": {\r\n        \"x\": 40,\r\n        \"y\": 44\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"n.q3G0EyEE2.swNed33C7sjvWZ42AHWE\"\r\n    }\r\n  }\r\n}",
     "start_blocks": "var apple = createSprite(200, -50);\r\napple.setAnimation(\"apple\");\r\napple.velocityY = 5;\r\n\r\nvar blender = createSprite(200, 300);\r\nblender.setAnimation(\"blender\");\r\n\r\n\r\nfunction draw() {\r\n  if (__) {\r\n    blender.x = 200 + randomNumber(-5,5);\r\n  }\r\n\r\n\r\n  background(\"skyblue\");\r\n  strokeWeight(0);\r\n  fill(\"sienna\");\r\n  rect(0, 340, 400, 60);\r\n  \r\n  drawSprites();\r\n}\r\n",
@@ -69,15 +69,17 @@
     "instructions_important": "false",
     "show_debug_watch": "true",
     "start_in_animation_tab": "false",
-    "encrypted_examples": "5nmDd/bDGrN4ZDWNjjtlm69CAMrFvi7K4pfRvOB8eRg4njLOjS37CNJRtRca\nwVaT\n",
+    "encrypted_examples": "avaVwLh2Yvp61yUTj+v27oRw3aVMIfzzs68UJvu+NYvbUED/H6Ica4JTyIFl\nY6rW\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-26 17:25:18 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-05-26 17:25:38 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-05-26 17:26:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-05-26 17:27:57 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-26 17:25:18 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-05-26 17:25:38 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-05-26 17:26:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-05-26 17:27:57 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-01-29 20:19:54 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

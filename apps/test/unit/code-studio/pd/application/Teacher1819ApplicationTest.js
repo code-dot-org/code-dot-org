@@ -25,6 +25,11 @@ const options = {
 };
 
 const ABLE_TO_ATTEND_SINGLE = "Yes, I'm able to attend";
+const DEFAULT_DATA = {
+  program: PROGRAM_CSD,
+  school: '12345'
+};
+
 
 const assignedWorkshops = [
   {id: 101, dates: 'January 15-19, 2018', location: 'Seattle, WA'},
@@ -68,7 +73,7 @@ describe("Section4SummerWorkshop", () => {
       );
     });
 
-    mountSection4SummerWorkshopWithData = (data) => mount(
+    mountSection4SummerWorkshopWithData = (data = DEFAULT_DATA) => mount(
       <Section4SummerWorkshop
         options={options}
         errors={[]}
@@ -104,11 +109,33 @@ describe("Section4SummerWorkshop", () => {
       );
     });
 
+    it("Displays a spinner while loading partner workshops", () => {
+      const section4 = mountSection4SummerWorkshopWithData();
+      expect(section4.find('Spinner')).to.have.length(1);
+    });
+
+    it("Displays an error when loading partner workshops fails", () => {
+      const section4 = mountSection4SummerWorkshopWithData();
+      server.respondWith(
+        "GET",
+        "/api/v1/pd/regional_partner_workshops/find?course=CS+Discoveries&subject=5-day+Summer&school=12345",
+        [
+          500,
+          { "Content-Type": "application/json" },
+          ""
+        ]
+      );
+      server.respond();
+
+      const errorDiv = section4.find('#partner-workshops-error');
+      expect(errorDiv).to.have.length(1);
+      expect(errorDiv).to.contain.text(
+        "An error has prevented us from loading your regional partner and workshop information."
+      );
+    });
+
     it("Sets partner workshop data and state based on API response", () => {
-      const section4 = mountSection4SummerWorkshopWithData({
-        program: PROGRAM_CSD,
-        school: '12345'
-      });
+      const section4 = mountSection4SummerWorkshopWithData();
 
       expect(section4.state().loadingPartner).to.be.true;
       expect(server.requests).to.have.length(1);

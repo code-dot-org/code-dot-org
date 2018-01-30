@@ -231,7 +231,6 @@
 "km-KH":
   english: "Khmer"
   native: "ភាសាខ្មែរ"
-  debug: true
   webfonts: false
 
 "ku": "ku-IQ"
@@ -295,7 +294,6 @@
 "my-MM":
   english: "Burmese"
   native: "ဗမာစာ"
-  debug: true
   webfonts: false
 
 "ne": "ne-NP"

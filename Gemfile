@@ -269,3 +269,5 @@ gem 'auto_strip_attributes', '~> 2.1'
 gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
 
 gem 'StreetAddress', require: "street_address"
+
+gem 'recaptcha', require: 'recaptcha/rails'
