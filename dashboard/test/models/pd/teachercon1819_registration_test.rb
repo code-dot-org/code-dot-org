@@ -58,7 +58,6 @@ class Pd::Teachercon1819RegistrationTest < ActiveSupport::TestCase
       application.lock!
 
       create(:pd_teachercon1819_registration, pd_application: application, hash_trait: status.to_sym)
-
       assert_equal application.reload.status, status
     end
   end

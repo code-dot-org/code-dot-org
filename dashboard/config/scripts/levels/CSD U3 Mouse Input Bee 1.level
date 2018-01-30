@@ -92,7 +92,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "show_d_pad": "true",
     "markdown_instructions": "<img src=\"https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif\" style=\"float:right\">\r\n\r\n# Mouse X and Y\r\n\r\nOne of the simplest ways to take input is to just make a sprite follow the user's mouse position. **You can get the x and y location of the mouse using `World.mouseX` and `World.mouseY`.**  This follows the pattern you learned with sprite properties. `World` is the name of the object. `mouseX` and `mouseY` are the names of the properties.\r\n\r\n# Do This\r\n\r\nYou are going to make a bee sprite follow the mouse around the game area.\r\n\r\n* The bee image is already loaded in the animation tab for you.\r\n* Create a bee sprite that draws in the center of the window.\r\n* Inside the draw loop update the position of the sprite to the position of the mouse:\r\n\t* Set the x position of the sprite to the value of `World.mouseX`.\r\n    * Set the y position of the sprite to the value of `World.mouseY`.\r\n* Run the program to test that it works.\r\n",
     "start_blocks": "function draw() {\r\n  \r\n}",

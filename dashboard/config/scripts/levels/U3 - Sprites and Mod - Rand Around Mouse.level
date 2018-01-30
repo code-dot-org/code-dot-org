@@ -76,7 +76,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "instructions": "Do this",
     "show_d_pad": "false",
     "markdown_instructions": "# Random Around Point\r\n\r\n<img src=\"https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif\" style=\"float:right\">\r\n\r\nNow that you can make the bee follow the mouse lets make a bunch of bees fly near the mouse like shown in the visual on the right.  In order to do this you will need to **add a random amount between -50 and 50 to the `mouseX` or `mouseY`.**  \r\n\r\n# Do This\r\nYou already have one bee sprite that follows the mouse.\r\n\r\n* **Add 3 more bees** that follow the mouse\r\n* Update the x and y location to be randomly close to the mouse\r\n\t* Add a random number between -50 and 50 to the `mouseX` and `mouseY` \r\n* Use the `frameRate` block to find the best frame rate\r\n",

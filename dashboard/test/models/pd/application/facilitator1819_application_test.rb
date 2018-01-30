@@ -10,10 +10,9 @@ module Pd::Application
 
     test 'course is filled in from the form program before validation' do
       [:csf, :csd, :csp].each do |program|
-        program_name = Facilitator1819Application::PROGRAMS[program]
-        application_hash = build :pd_facilitator1819_application_hash, program: program_name
+        application_hash = build :pd_facilitator1819_application_hash_common, program
         application = build :pd_facilitator1819_application, form_data_hash: application_hash
-        assert application.valid?
+        assert application.valid?, "Errors in #{program} application: #{application.errors.full_messages}"
         assert_equal program.to_s, application.course
       end
     end
