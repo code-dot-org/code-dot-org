@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require_relative '../../dashboard/config/environment'
+require_relative '../../lib/cdo/only_one'
 require 'cdo/aws/s3'
 require 'csv'
 
@@ -16,4 +17,4 @@ def main
   AWS::S3.upload_to_bucket('cdo-data-sharing-internal', 'pd_applications.tsv', output, no_random: true)
 end
 
-main
+main if only_one_running?(__FILE__)
