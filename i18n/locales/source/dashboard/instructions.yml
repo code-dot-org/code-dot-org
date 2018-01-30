@@ -3303,6 +3303,7 @@ en:
         for a topping we don't carry."
       Luigi's Pizza 4_instruction: "Free Play: What can you do to make Luigi's cost
         function even more useful?"
+      MC Agent Freeplay_instruction: "**Freeplay:**  Time to explore on your own!"
       MC HOC 2016 Level 10_instruction: "It's time to make your own Minecraft! Spawn
         creatures and then make them do whatever you want. Have fun!"
       MC HOC 2016 Level 2-2_instruction: "The chicken is frozen. Place `move` and
@@ -5563,6 +5564,10 @@ en:
         2 coal."
       Unicorn Tag_instruction: "Take a look at this project.  Do you see how it was
         made?"
+      Valentine_artist_01_instruction: "Help the artist finish his llama heart. "
+      Valentine_playlab_01_instruction: "Program Kiki (Actor 1) to move left and
+        right when the left and right arrows are pressed. When Kiki is clicked, she
+        should throw hearts towards her friends. "
       Vigenere_instruction: "Test"
       WhileAdventure_instruction: "Our adventurer wants to collect coins. Can you
         help her grab as many as she can using only one remove 1 block?"
@@ -5658,32 +5663,77 @@ en:
       beeDebugVideo1_instruction: "Use a `repeat` loop to collect all of the nectar."
       birdsDebugVideo1_instruction: "Trace the path and lead me to the silly pig.
         Avoid TNT or feathers will fly!"
-      bounce_1_instruction: "Attach a block to the \"when left arrow\" block and press \"Run\". Move the paddle using the left arrow to reach the finish target."
-      bounce_10_instruction: "There is now a goal at the top. Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses paddle\" blocks to make a game. See how many points you can score before your opponent scores twice."
-      bounce_10_basketball_instruction: "Now there is a goal at the top! Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses hand\" blocks to make a game. See how many points you can score before your opponent scores twice."
-      bounce_10_sports_instruction: "Now there is a goal at the top! Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses hand\" blocks to make a game. See how many points you can score before your opponent scores twice!"
-      bounce_11_instruction: "You can now attach blocks to the \"when run\" block. You have to attach the new \"launch new ball\" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice."
-      bounce_11_basketball_instruction: "You can now attach blocks to the \"when run\" block. You have to attach the new \"throw new ball\" block in more than one place. Also, try changing the scene or the speed of the hand and the ball and see how many points you can score before your opponent scores twice!"
-      bounce_11_sports_instruction: "You can now attach blocks to the \"when run\" block. You have to attach the new \"throw new ball\" block in more than one place. Also, try changing the scene or the speed of the hand and the ball and see how many points you can score before your opponent scores twice!"
-      bounce_12_instruction: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
-      bounce_12_basketball_instruction: "Create your own Basketball game. You can change all the rules. When you're done, click Finish to let friends try your game on their phones."
-      bounce_12_sports_instruction: "Create your own game! You're in charge here: you can change all the rules, mix and match sports, get creative! When you're done, click Finish to let friends try your game on their phones."
-      bounce_1_basketball_instruction: "Attach a block to the \"when left arrow\" block and press \"Run\". Move the hand using the left arrow to reach the finish target."
-      bounce_1_sports_instruction: "Get to the flag! Attach a block to the \"when left arrow\" block and press \"Run\" to move the player to the flag."
-      bounce_2_instruction: "Attach a block to the \"when right arrow\" and \"when left arrow\" blocks. Move the paddle to reach both finish targets."
-      bounce_2_basketball_instruction: "Attach a block to the \"when right arrow\" and \"when left arrow\" blocks. Move the hand to reach both finish targets."
-      bounce_2_sports_instruction: "There are two flags now! Attach a block to the \"when left arrow\" and \"when right arrow\" blocks to make your player move in two directions."
-      bounce_3_instruction: "Now try something similar with the \"when up arrow\" block. Move the paddle to the finish target at the top."
-      bounce_4_instruction: "This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle."
-      bounce_5_instruction: "We're going to send a ball flying down towards the paddle. Attach a block to the \"when ball hits paddle\" block to ensure the ball reaches the finish target."
-      bounce_5_basketball_instruction: "We're going to send a ball flying down towards the hand. Attach a block to the \"when ball hits hand\" block to ensure the ball reaches the flag."
-      bounce_5_sports_instruction: "The hockey puck is going to fly down toward the player! Attach a block to the \"when ball hits player\" block to hit the flag."
-      bounce_6_instruction: "Now the finish target is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle."
-      bounce_6_basketball_instruction: "Now the flag is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle."
-      bounce_6_sports_instruction: "Now the flag is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle."
-      bounce_7_instruction: "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the finish target."
-      bounce_7_basketball_instruction: "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the flag."
-      bounce_7_sports_instruction: "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the flag."
+      bounce_1_instruction: "Attach a block to the \"when left arrow\" block and
+        press \"Run\". Move the paddle using the left arrow to reach the finish target."
+      bounce_10_instruction: "There is now a goal at the top. Attach the \"score
+        point\" and \"score opponent point\" blocks to the \"when ball in goal\" and
+        \"when ball misses paddle\" blocks to make a game. See how many points you
+        can score before your opponent scores twice."
+      bounce_10_basketball_instruction: "Now there is a goal at the top! Attach the
+        \"score point\" and \"score opponent point\" blocks to the \"when ball in
+        goal\" and \"when ball misses hand\" blocks to make a game. See how many points
+        you can score before your opponent scores twice."
+      bounce_10_sports_instruction: "Now there is a goal at the top! Attach the \"score
+        point\" and \"score opponent point\" blocks to the \"when ball in goal\" and
+        \"when ball misses hand\" blocks to make a game. See how many points you can
+        score before your opponent scores twice!"
+      bounce_11_instruction: "You can now attach blocks to the \"when run\" block.
+        You have to attach the new \"launch new ball\" block in more than one place.
+        Also, try changing the scene or the speed of the paddle and the ball and see
+        how many points you can score before your opponent scores twice."
+      bounce_11_basketball_instruction: "You can now attach blocks to the \"when
+        run\" block. You have to attach the new \"throw new ball\" block in more than
+        one place. Also, try changing the scene or the speed of the hand and the ball
+        and see how many points you can score before your opponent scores twice!"
+      bounce_11_sports_instruction: "You can now attach blocks to the \"when run\"
+        block. You have to attach the new \"throw new ball\" block in more than one
+        place. Also, try changing the scene or the speed of the hand and the ball
+        and see how many points you can score before your opponent scores twice!"
+      bounce_12_instruction: "Create your own Bounce game. You can change all the
+        visuals and the rules. When you're done, click Finish to let friends try
+        your game on their phones."
+      bounce_12_basketball_instruction: "Create your own Basketball game. You can
+        change all the rules. When you're done, click Finish to let friends try your
+        game on their phones."
+      bounce_12_sports_instruction: "Create your own game! You're in charge here:
+        you can change all the rules, mix and match sports, get creative! When you're
+        done, click Finish to let friends try your game on their phones."
+      bounce_1_basketball_instruction: "Attach a block to the \"when left arrow\"
+        block and press \"Run\". Move the hand using the left arrow to reach the finish
+        target."
+      bounce_1_sports_instruction: "Get to the flag! Attach a block to the \"when
+        left arrow\" block and press \"Run\" to move the player to the flag."
+      bounce_2_instruction: "Attach a block to the \"when right arrow\" and \"when
+        left arrow\" blocks. Move the paddle to reach both finish targets."
+      bounce_2_basketball_instruction: "Attach a block to the \"when right arrow\"
+        and \"when left arrow\" blocks. Move the hand to reach both finish targets."
+      bounce_2_sports_instruction: "There are two flags now! Attach a block to the
+        \"when left arrow\" and \"when right arrow\" blocks to make your player move
+        in two directions."
+      bounce_3_instruction: "Now try something similar with the \"when up arrow\"
+        block. Move the paddle to the finish target at the top."
+      bounce_4_instruction: "This time you need to add four blocks. Move the paddle
+        to all four finish targets to complete this puzzle."
+      bounce_5_instruction: "We're going to send a ball flying down towards the
+        paddle. Attach a block to the \"when ball hits paddle\" block to ensure the
+        ball reaches the finish target."
+      bounce_5_basketball_instruction: "We're going to send a ball flying down towards
+        the hand. Attach a block to the \"when ball hits hand\" block to ensure the
+        ball reaches the flag."
+      bounce_5_sports_instruction: "The hockey puck is going to fly down toward the
+        player! Attach a block to the \"when ball hits player\" block to hit the flag."
+      bounce_6_instruction: "Now the finish target is on the top. You need to attach
+        blocks to both of the \"when ball hits\" blocks to solve this puzzle."
+      bounce_6_basketball_instruction: "Now the flag is on the top. You need to attach
+        blocks to both of the \"when ball hits\" blocks to solve this puzzle."
+      bounce_6_sports_instruction: "Now the flag is on the top. You need to attach
+        blocks to both of the \"when ball hits\" blocks to solve this puzzle."
+      bounce_7_instruction: "Attach blocks to each of the \"when\" blocks. Bounce
+        the ball until it hits the finish target."
+      bounce_7_basketball_instruction: "Attach blocks to each of the \"when\" blocks.
+        Bounce the ball until it hits the flag."
+      bounce_7_sports_instruction: "Attach blocks to each of the \"when\" blocks.
+        Bounce the ball until it hits the flag."
       brendan hackathon level_instruction: "these are the instructions for my level.  you
         should do this level and have a good time."
       collector example_instruction: "Put these blocks in order to collect all of
@@ -6306,8 +6356,8 @@ en:
       courseC_harvester_loops_challenge1a_instruction: "Collect all of the corn."
       courseC_harvester_loops_challenge2_instruction: "Collect all of the lettuce.
         Avoid the trees and fields!"
-      courseC_harvester_loops_forVid_instruction: "Collect all of the corn and all
-        of the pumpkins."
+      courseC_harvester_loops_forVid_instruction: "Collect all of the corn, all of
+        the lettuce, and all of the pumpkins."
       courseC_maze_debugging1_instruction: "Fix the code to help get Scrat get to
         the acorn."
       courseC_maze_debugging10_instruction: "Debug this level by rearranging and
@@ -7462,16 +7512,31 @@ en:
       drawings!_instruction: "Draw the equilateral triangle - all the sides are the
         same!"
       eventsIntro_instruction: "Need a better playlab/events combo"
-      flappy_1_instruction: "Attach a block to the \"when click\" block, then press \"Run\". Click or tap the screen to move Flappy to the target."
-      flappy_2_instruction: "Now we've added some ground.  Attach a block to the \"when hit the ground\" block.  Your code needs to 'END GAME' when Flappy crashes."
-      flappy_3_instruction: "The \"when run\" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target."
-      flappy_4_instruction: "Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the \"when hit an obstacle\" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes."
-      flappy_5_instruction: "Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the \"when pass an obstacle\" block, and then score a point by flying Flappy through the first set of pipes."
-      flappy_6_instruction: "See if you can still score a point after making Flappy flap either a smaller or larger amount."
-      flappy_7_instruction: "Next, try changing the scene by attaching another block to the \"when run\" block."
-      flappy_8_instruction: "You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle."
-      flappy_9_instruction: "To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0."
-      flappy_11_instruction: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
+      flappy_1_instruction: "Attach a block to the \"when click\" block, then press
+        \"Run\". Click or tap the screen to move Flappy to the target."
+      flappy_11_instruction: "Create your own Flappy game. You can change all the
+        visuals and all the rules, even the gravity. When you're done, click Finish
+        to let friends try your game on their phones."
+      flappy_2_instruction: "Now we've added some ground.  Attach a block to the
+        \"when hit the ground\" block.  Your code needs to 'END GAME' when Flappy
+        crashes."
+      flappy_3_instruction: "The \"when run\" block allows you to run code when your
+        game starts.  Try setting the level speed and flapping to the target."
+      flappy_4_instruction: "Flappy will fly through obstacles unless you write code
+        to make him crash. Attach a block to the \"when hit an obstacle\" block. Your
+        code needs to 'END GAME' when Flappy crashes into the first set of pipes."
+      flappy_5_instruction: "Let's add a scoreboard, and count points when Flappy
+        makes it past obstacles. Add to the \"when pass an obstacle\" block, and then
+        score a point by flying Flappy through the first set of pipes."
+      flappy_6_instruction: "See if you can still score a point after making Flappy
+        flap either a smaller or larger amount."
+      flappy_7_instruction: "Next, try changing the scene by attaching another block
+        to the \"when run\" block."
+      flappy_8_instruction: "You can set visuals anytime, not just when the game
+        starts. Try setting a RANDOM scene when other events happen, for example,
+        when passing an obstacle."
+      flappy_9_instruction: "To mix things up, when hitting an obstacle, instead
+        of ending the game try setting the score back to 0."
       frozen circle function in circle_instruction: "Now let's create 20 overlapping
         circles, turning 18 degrees between each circle."
       frozen circle function with parameter_instruction: "Here's a ”Create circle”

@@ -495,7 +495,8 @@ export function generateAceApiCompleter(functionFilter, dropletConfig) {
 
   return {
     getCompletions(editor, session, pos, prefix, callback) {
-      if (prefix.length === 0) {
+      const token = editor.session.getTokenAt(pos.row, pos.column);
+      if (prefix.length === 0 || token.type === 'comment') {
         callback(null, []);
         return;
       }

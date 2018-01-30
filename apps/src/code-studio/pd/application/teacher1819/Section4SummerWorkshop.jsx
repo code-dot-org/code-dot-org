@@ -7,9 +7,18 @@ import {
   TextFields
 } from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import {FormGroup} from 'react-bootstrap';
-import {styles, PROGRAM_CSD, PROGRAM_CSP} from "./TeacherApplicationConstants";
+import {styles as defaultStyles, PROGRAM_CSD, PROGRAM_CSP} from "./TeacherApplicationConstants";
+import Spinner from '../../components/spinner';
+import color from '@cdo/apps/util/color';
 
 const WORKSHOP_FEES_URL = "https://docs.google.com/spreadsheets/d/1YFrTFp-Uz0jWk9-UR9JVuXfoDcCL6J0hxK5CYldv_Eo";
+
+const styles = {
+  ...defaultStyles,
+  error: {
+    color: color.red
+  }
+};
 
 export default class Section4SummerWorkshop extends LabeledFormComponent {
   static labels = PageLabels.section4SummerWorkshop;
@@ -26,7 +35,8 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
     loadingPartner: true,
     partner: null,
     loadingAlternateWorkshops: false,
-    alternateWorkshops: null
+    alternateWorkshops: null,
+    loadError: false
   };
 
   componentDidMount() {
@@ -77,6 +87,11 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
         loadingPartner: false,
         partnerWorkshops: data.workshops,
         regionalPartnerName: data.name
+      });
+    }).error(() => {
+      this.setState({
+        loadingPartner: false,
+        loadError: true
       });
     });
   }
@@ -154,10 +169,6 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
   }
 
   renderAssignedWorkshopList() {
-    if (this.state.loadingPartner) {
-      return null;
-    }
-
     if (!this.props.data.regionalPartnerId) {
       return (
         <div>
@@ -258,6 +269,32 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
           (and in some cases travel costs) will be provided for summer workshops hosted by Regional Partners.
         </p>
 
+        {this.renderContents()}
+      </FormGroup>
+    );
+  }
+
+  renderContents() {
+    if (this.state.loadingPartner) {
+      return <Spinner />;
+    } else if (this.state.loadError) {
+      return (
+        <div style={styles.error} id="partner-workshops-error">
+          <p>
+            An error has prevented us from loading your regional partner and workshop information.
+          </p>
+          <p>
+            Refresh the page to try again. If this persists, please contact&nbsp;
+            <a href="https://support.code.org/hc/en-us/requests/new">
+              support
+            </a>.
+          </p>
+        </div>
+      );
+    }
+
+    return (
+      <div>
         <div id="assignedWorkshops">
           {this.renderAssignedWorkshopList()}
         </div>
@@ -317,8 +354,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
         })}
 
         {this.radioButtonsFor("willingToTravel")}
-
-      </FormGroup>
+      </div>
     );
   }
 

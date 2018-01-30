@@ -56,7 +56,6 @@
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'fetch_external_resources'), notify:'dev+crontab@code.org'
       cronjob at:'30 16,17 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
       cronjob at:'0 * * * *', do:deploy_dir('tools', 'scripts', 'brokenLinkChecker', 'brokenLinkChecker.js'), notify:'dev+crontab@code.org'
-      cronjob at:'0 14 * * *', do:deploy_dir('bin', 'cron', 'github_dms_tasks')
       cronjob at:'0 20 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dts')
     end
@@ -94,7 +93,6 @@
       cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
       cronjob at:'5 16 * * *', do:deploy_dir('bin', 'cron', 'calculate_workshop_survey_results')
-      cronjob at:'20 1 * * 6', do:deploy_dir('bin', 'cron', 'dms_tasks')
       cronjob at:'10 5 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups')
       cronjob at:'00 17 * * *', do:deploy_dir('bin', 'cron', 'stop_inactive_adhoc_instances')
 

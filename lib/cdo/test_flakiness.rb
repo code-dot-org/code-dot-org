@@ -70,7 +70,7 @@ class TestFlakiness
   # @param flakiness [Float] The flakiness score.
   # @return [Array] The recommended number of re-runs and confidence factor.
   def self.recommend_reruns(flakiness)
-    recommended_reruns = (1 / Math.log(flakiness, MAX_FAILURE_RATE)).ceil
+    recommended_reruns = Math.log(MAX_FAILURE_RATE, flakiness).ceil
     max_reruns = [1, [recommended_reruns, 5].min].max
     confidence = (1.0 - flakiness**(max_reruns + 1)).round(3)
     return [max_reruns, confidence]

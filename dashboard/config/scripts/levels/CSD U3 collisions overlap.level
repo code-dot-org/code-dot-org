@@ -65,7 +65,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
     "start_animations": "{\n    \"orderedKeys\": [\n        \"rainbow\",\n        \"horse\",\n        \"unicorn\"\n    ],\n    \"propsByKey\": {\n        \"rainbow\": {\n            \"name\": \"rainbow\",\n            \"sourceUrl\": \"https://images.code.org/1d41d2e5b3b55037911b8f73bdc2ff48-image-1470257277875.png\",\n            \"frameSize\": {\n                \"x\": 66,\n                \"y\": 100\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        },\n        \"horse\": {\n            \"name\": \"horse\",\n            \"sourceUrl\": \"https://images.code.org/4d1d0e36e574117140ecc377d406c1de-image-1470256869920.png\",\n            \"frameSize\": {\n                \"x\": 100,\n                \"y\": 72\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        },\n        \"unicorn\": {\n            \"name\": \"unicorn\",\n            \"sourceUrl\": \"https://images.code.org/558b42903bf40cc26410e651a85de922-image-1470256869923.png\",\n            \"frameSize\": {\n                \"x\": 100,\n                \"y\": 72\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        }\n    }\n}",
