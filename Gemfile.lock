@@ -591,6 +591,8 @@ GEM
       ffi (>= 0.5.0)
     rdoc (4.2.2)
       json (~> 1.4)
+    recaptcha (4.6.3)
+      json
     redcarpet (3.3.4)
     redis (3.3.3)
     ref (2.0.0)
@@ -861,6 +863,7 @@ DEPENDENCIES
   rails (~> 5.0.1)
   rails-controller-testing
   rambling-trie
+  recaptcha
   redcarpet (~> 3.3.4)
   redis (~> 3.3.3)
   redis-slave-read!
