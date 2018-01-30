@@ -30,7 +30,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "markdown_instructions": "# Make an animation of your own\r\n\r\nUsing the counter pattern and sprite properties, make an animation all your own. You might consider building on the static images you've made in the past, or come up with a new image to create or story to tell.\r\n\r\n# Do This\r\n\r\nTo start, let's just get a static scene set up.\r\n\r\n* Add images in the Animation Tab.\r\n* Create sprites and assign images.\r\n* Set up the draw loop to draw a background and your sprites.",
     "instructions_important": "false",
     "hide_share_and_remix": "false",

@@ -43,7 +43,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "markdown_instructions": "# Randomized Colors\r\n\r\nCould you use `randomNumber()` to pick random colors as well? Back in Unit 2 you learned that colors can be composed of Red, Green, and Blue channel values - each of which is represented by a number value. What's the maximum and minimum that those channels can be set to?\r\n\r\n# Do This\r\n\r\nUsing the `color()` function, set the `fill` or `stroke` of your shape to a random color.\r\n\r\n# Challenge\r\n\r\nCan you generate random colors that are limited to a narrow range of colors, such as a random shade or purple, or a random shade of teal?",
     "instructions": "Could you use randomNumber() to pick random colors as well? Try setting one or more of the channels in the rgb block with a random number. What should the maximum value be?",
     "instructions_important": "false",

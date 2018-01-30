@@ -71,7 +71,7 @@
     "free_play": "false",
     "text_mode_at_start": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
     "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"green_car\",\r\n        \"red_car\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"green_car\": {\r\n            \"name\": \"green_car\",\r\n            \"sourceUrl\": \"https://images.code.org/0b9f5ca88dc99fc08d472fdba87d6e32-image-1470417254115.png\",\r\n            \"frameSize\": {\r\n                \"x\": 60,\r\n                \"y\": 30\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"red_car\": {\r\n            \"name\": \"red_car\",\r\n            \"sourceUrl\": \"https://images.code.org/2085e5de29f7170465b0c7bd5e6b56e9-image-1470417254116.png\",\r\n            \"frameSize\": {\r\n                \"x\": 60,\r\n                \"y\": 30\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",
