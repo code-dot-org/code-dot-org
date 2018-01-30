@@ -30,7 +30,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "start_blocks": "function draw(){\r\n  \r\n}",
     "start_animations": "{\n    \"orderedKeys\": [\n        \"clicker\",\n        \"wheel\"\n    ],\n    \"propsByKey\": {\n        \"clicker\": {\n            \"name\": \"clicker\",\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/clicker.png\",\n            \"sourceSize\": {\n                \"x\": 50,\n                \"y\": 44\n            },\n            \"frameSize\": {\n                \"x\": 50,\n                \"y\": 44\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        },\n        \"wheel\": {\n            \"name\": \"wheel\",\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/wheel.png\",\n            \"sourceSize\": {\n                \"x\": 350,\n                \"y\": 350\n            },\n            \"frameSize\": {\n                \"x\": 350,\n                \"y\": 350\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        }\n    }\n}",
     "show_debug_watch": "true",

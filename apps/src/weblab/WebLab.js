@@ -214,6 +214,11 @@ WebLab.prototype.init = function (config) {
 
   function onStartFullScreenPreview() {
     this.brambleHost.enableFullscreenPreview(() => {
+      // We always want to disable the inspector as we enter fullscreen preview,
+      // as it interferes with the preview display...
+      if (getStore().getState().inspectorOn) {
+        this.brambleHost.disableInspector();
+      }
       getStore().dispatch(actions.changeFullScreenPreviewOn(true));
     });
   }

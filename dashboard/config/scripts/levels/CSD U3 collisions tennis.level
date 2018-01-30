@@ -64,7 +64,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
     "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"racket\",\r\n        \"ball\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"racket\": {\r\n            \"name\": \"racket\",\r\n            \"sourceUrl\": \"https://images.code.org/8d8cf039f50114c07a21e73bbc1c8dfe-image-1470418244037.png\",\r\n            \"frameSize\": {\r\n                \"x\": 17,\r\n                \"y\": 75\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"ball\": {\r\n            \"name\": \"ball\",\r\n            \"sourceUrl\": \"https://images.code.org/d05be653ae7e4717353dffd08af9c656-image-1470418244039.png\",\r\n            \"frameSize\": {\r\n                \"x\": 30,\r\n                \"y\": 30\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",

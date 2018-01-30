@@ -40,7 +40,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "show_d_pad": "false",
     "markdown_instructions": "# Moving Animation\r\n\r\nYou are going to practice using the x and y properties of a sprite. Don't forget that they designate the center of the rectangle. This may seems strange right now while sprites are just rectangles but in the future sprites will be able to be any image you want.  When you use an image with weird edges its a little less clear where the upper left corner is. In addition, for things such as rotation its much easier to have the x and y at the center because thats the point around which is rotates.\r\n\r\n# Do This\r\n\r\nCreate two sprites. One that moves from left to right and one that moves from top to bottom. \r\n\r\n* Create a sprite that draw on the screen\r\n* Increment the x property of one to get movement from left to right\r\n* Increment the y property of the other to get the movement from top to bottom",
     "start_blocks": "function draw(){\r\n  \r\n}",
