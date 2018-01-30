@@ -20,9 +20,9 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
 
   @eyes.branch_name = GitUtils.current_branch
 
-  pr_base = GitUtils.circle_pr_branch_base_no_origin
+  pr_base = 'eyes-b'
   if pr_base
-    puts "Branch is #{pr_base}"
+    puts "eyes parent branch is #{pr_base}, eyes current branch is #{@eyes.branch_name}"
     @eyes.parent_branch_name = pr_base
   else
     fallback_branch = GitUtils.current_branch_base_no_origin
