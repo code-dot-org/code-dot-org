@@ -33,6 +33,10 @@ const styles = {
   },
   resourceStyle: {
     margin: 8
+  },
+  linkFrame: {
+    width: '98%',
+    height: '94%'
   }
 };
 
@@ -74,10 +78,10 @@ class ResourceLink extends React.Component {
         <BaseDialog
           isOpen={this.state.dialogSelected}
           handleClose={this.closeResource}
+          fullWidth={true}
+          fullHeight={true}
         >
-          <div>
-            {this.props.reference}
-          </div>
+          <iframe style={styles.linkFrame} src={this.props.reference}/>
         </BaseDialog>
       </div>
     );
