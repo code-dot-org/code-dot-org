@@ -57,7 +57,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
     "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"turtle\",\r\n        \"tree\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"turtle\": {\r\n            \"name\": \"turtle\",\r\n            \"sourceUrl\": \"https://images.code.org/d2eb9684743d45ef1e10ff4602936107-image-1470188590517.png\",\r\n            \"frameSize\": {\r\n                \"x\": 100,\r\n                \"y\": 64\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"tree\": {\r\n            \"name\": \"tree\",\r\n            \"sourceUrl\": \"https://images.code.org/56da2ef5cef40080e0d677c86aec3901-image-1470947222108.png\",\r\n            \"frameSize\": {\r\n                \"x\": 150,\r\n                \"y\": 111\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",
