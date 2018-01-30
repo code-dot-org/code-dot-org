@@ -53,7 +53,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "start_animations": "{\n    \"orderedKeys\": [\n        \"red_car\"\n    ],\n    \"propsByKey\": {\n        \"red_car\": {\n            \"name\": \"red_car\",\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/red_car.png\",\n            \"frameSize\": {\n                \"x\": 170,\n                \"y\": 76\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        }\n    }\n}",
     "markdown_instructions": "# rotateToDirection\r\n\r\nHere's the car you just made move.  It stayed on the road, but it was not pointing in the right direction.  You can tell the sprite to always point in the direction that it's moving by adding `car.rotateToDirection = true` outside the draw loop, right after you create your sprite.\r\n\r\n# Do This\r\n\r\nUse the `rotateToDirection` property to make your car face the direction it's moving.",
