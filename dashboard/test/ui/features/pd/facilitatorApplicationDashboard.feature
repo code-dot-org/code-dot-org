@@ -5,7 +5,7 @@ Feature: Facilitator Application Dashboard view
 
   Scenario: Application dashboard, list view, detail view, cohort view
     Given I am a workshop administrator with some applications of each type and status
-    And I am on "http://localhost-studio.code.org:3000/pd/application_dashboard/summary"
+    And I am on "http://studio.code.org:3000/pd/application_dashboard/summary"
     Then I wait until element ".fa-pulse" is not visible
     And I open my eyes to test "Facilitator Application Dashboard"
     And I see no difference for "Application Dashboard"
