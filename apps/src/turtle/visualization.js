@@ -22,8 +22,6 @@
  * @author fraser@google.com (Neil Fraser)
  */
 
-var utils = require('../utils');
-
 const JOINT_RADIUS = 4;
 
 /**
@@ -32,13 +30,27 @@ const JOINT_RADIUS = 4;
 const JOINT_SEGMENT_LENGTH = 50;
 
 module.exports = class Visualization {
-  constructor(options) {
+  constructor(options = {}) {
+    this.x = 200;
+    this.y = 200;
     this.heading = 0;
     this.penDownValue = true;
     this.isPredrawing = false;
     this.isDrawingWithPattern = false;
+    this.turtleFrame = 0;
+    this.numberAvatarHeadings = 180;
     this.isFrozenSkin = options.isFrozenSkin;
     this.isK1 = options.isK1;
+
+    // Should the turtle be drawn?
+    this.turtleVisible = true;
+
+    this.avatarImage = {
+      img: new Image(),
+      spriteWidth: 70,
+      spriteHeight: 51,
+      turtleNumFrames: 1,
+    };
 
     // Create hidden canvases.
     this.ctxAnswer = this.createCanvas('answer', 400, 400).getContext('2d');
@@ -67,6 +79,7 @@ module.exports = class Visualization {
 
   preload() {
     return Promise.all([
+      this.preloadAvatar(),
       this.preloadAllStickerImages(),
       this.preloadAllPatternImages(),
     ]);
@@ -78,6 +91,18 @@ module.exports = class Visualization {
     el.width = width;
     el.height = height;
     return el;
+  }
+
+  preloadAvatar() {
+    return new Promise(resolve => {
+      const img = new Image();
+
+      img.onload = () => resolve();
+      img.onerror = () => resolve();
+
+      img.src = 'assets/avatar.png';
+      this.avatarImage.img = img;
+    });
   }
 
   /**
@@ -147,12 +172,106 @@ module.exports = class Visualization {
   };
 
   /**
+   * Draw the turtle image based on this.x, this.y, and this.heading.
+   */
+  drawTurtle() {
+    if (!this.turtleVisible) {
+      return;
+    }
+    //this.drawDecorationAnimation("before");
+
+    var sourceY;
+    // Computes the index of the image in the sprite.
+    var index = Math.floor(this.heading * this.numberAvatarHeadings / 360);
+    if (this.isFrozenSkin) {
+      // the rotations in the sprite sheet go in the opposite direction.
+      index = this.numberAvatarHeadings - index;
+
+      // and they are 180 degrees out of phase.
+      index = (index + this.numberAvatarHeadings / 2) % this.numberAvatarHeadings;
+    }
+    var sourceX = this.avatarImage.spriteWidth * index;
+    if (this.isFrozenSkin) {
+      sourceY = this.avatarImage.spriteHeight * this.turtleFrame;
+      this.turtleFrame = (this.turtleFrame + 1) % this.avatarImage.turtleNumFrames;
+    } else {
+      sourceY = 0;
+    }
+    var sourceWidth = this.avatarImage.spriteWidth;
+    var sourceHeight = this.avatarImage.spriteHeight;
+    var destWidth = this.avatarImage.spriteWidth;
+    var destHeight = this.avatarImage.spriteHeight;
+    var destX = this.x - destWidth / 2;
+    var destY = this.y - destHeight + 7;
+
+    if (this.avatarImage.width === 0 || this.avatarImage.height === 0) {
+      return;
+    }
+
+    if (sourceX < 0 ||
+      sourceY < 0 ||
+      sourceX + sourceWidth  -0 > this.avatarImage.width ||
+      sourceY + sourceHeight > this.avatarImage.height) {
+      return;
+    }
+
+    if (this.avatarImage.width !== 0) {
+      this.ctxDisplay.drawImage(
+        this.avatarImage.img,
+        Math.round(sourceX), Math.round(sourceY),
+        sourceWidth - 0, sourceHeight,
+        Math.round(destX), Math.round(destY),
+        destWidth - 0, destHeight);
+    }
+
+    //this.drawDecorationAnimation("after");
+  }
+
+  /**
+   * This is called twice, once with "before" and once with "after", referring to before or after
+   * the sprite is drawn.  For some angles it should be drawn before, and for some after.
+   */
+  drawDecorationAnimation(when) {
+    if (this.skin.id === "elsa") {
+      var frameIndex = (this.turtleFrame + 10) % this.skin.decorationAnimationNumFrames;
+
+      var angleIndex = Math.floor(this.heading * this.numberAvatarHeadings / 360);
+
+      // the rotations in the Anna & Elsa sprite sheets go in the opposite direction.
+      angleIndex = this.numberAvatarHeadings - angleIndex;
+
+      // and they are 180 degrees out of phase.
+      angleIndex = (angleIndex + this.numberAvatarHeadings/2) % this.numberAvatarHeadings;
+
+      if (ELSA_DECORATION_DETAILS[angleIndex].when === when) {
+        var sourceX = this.decorationAnimationImage.width * frameIndex;
+        var sourceY = 0;
+        var sourceWidth = this.decorationAnimationImage.width;
+        var sourceHeight = this.decorationAnimationImage.height;
+        var destWidth = sourceWidth;
+        var destHeight = sourceHeight;
+        var destX = this.x - destWidth / 2 - 15 - 15 + ELSA_DECORATION_DETAILS[angleIndex].x;
+        var destY = this.y - destHeight / 2 - 100;
+
+        if (this.decorationAnimationImage.width !== 0) {
+          this.ctxDisplay.drawImage(
+            this.decorationAnimationImage,
+            Math.round(sourceX), Math.round(sourceY),
+            sourceWidth, sourceHeight,
+            Math.round(destX), Math.round(destY),
+            destWidth, destHeight);
+        }
+      }
+    }
+  }
+
+  /**
    * Copy the scratch canvas to the display canvas. Add a turtle marker.
    */
   display() {
     // FF on linux retains drawing of previous location of artist unless we clear
     // the canvas first.
-    var style = this.ctxDisplay.fillStyle;
+    const style = this.ctxDisplay.fillStyle;
     this.ctxDisplay.fillStyle = '#fff';
     this.ctxDisplay.clearRect(0, 0, this.ctxDisplay.canvas.width,
       this.ctxDisplay.canvas.width);
@@ -168,7 +287,7 @@ module.exports = class Visualization {
     this.ctxDisplay.drawImage(this.ctxPredraw.canvas, 0, 0);
 
     // Draw the answer layer.
-    if (this.isFrozenSkin()) {
+    if (this.isFrozenSkin) {
       this.ctxDisplay.globalAlpha = 0.4;
     } else {
       this.ctxDisplay.globalAlpha = 0.3;
@@ -209,8 +328,8 @@ module.exports = class Visualization {
   };
 
   jumpForward(distance) {
-    this.x += distance * Math.sin(utils.degreesToRadians(this.heading));
-    this.y -= distance * Math.cos(utils.degreesToRadians(this.heading));
+    this.x += distance * Math.sin(this.degreesToRadians_(this.heading));
+    this.y -= distance * Math.cos(this.degreesToRadians_(this.heading));
   };
 
   dotAt_(x, y) {
@@ -240,6 +359,10 @@ module.exports = class Visualization {
     heading = this.constrainDegrees_(heading);
     this.heading = heading;
   };
+
+  degreesToRadians_(degrees) {
+    return degrees * (Math.PI / 180);
+  }
 
   constrainDegrees_(degrees) {
     degrees %= 360;
@@ -339,7 +462,7 @@ module.exports = class Visualization {
       this.ctxPattern.translate(startX, startY);
       // increment the angle and rotate the image.
       // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-      this.ctxPattern.rotate(utils.degreesToRadians(this.heading - 90));
+      this.ctxPattern.rotate(this.degreesToRadians_(this.heading - 90));
 
       var clipSize;
       if (lineDistance % this.smoothAnimateStepSize === 0) {
@@ -377,7 +500,7 @@ module.exports = class Visualization {
       this.ctxScratch.translate(startX, startY);
       // increment the angle and rotate the image.
       // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-      this.ctxScratch.rotate(utils.degreesToRadians(this.heading - 90));
+      this.ctxScratch.rotate(this.degreesToRadians_(this.heading - 90));
 
       if (img.width !== 0) {
         this.ctxScratch.drawImage(img,
@@ -398,14 +521,10 @@ module.exports = class Visualization {
     return this.isK1 && !this.isPredrawing;
   };
 
-  drawJointAtTurtle_ = function () {
+  drawJointAtTurtle_() {
     this.ctxScratch.beginPath();
     this.ctxScratch.moveTo(this.x, this.y);
     this.circleAt_(this.x, this.y, JOINT_RADIUS);
     this.ctxScratch.stroke();
   };
-
-  degreesToRadians_(degrees) {
-    return degrees * (Math.PI / 180);
-  }
 };
