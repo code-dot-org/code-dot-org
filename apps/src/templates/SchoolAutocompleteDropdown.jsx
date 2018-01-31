@@ -28,15 +28,17 @@ export default class SchoolAutocompleteDropdown extends Component {
     label: i18n.schoolNotFound()
   });
 
-  debouncedSearch = _.debounce((q) => {
+  debouncedSearch = _.debounce((q, callback) => {
     const searchUrl = `/dashboardapi/v1/schoolsearch/${encodeURIComponent(q)}/40`;
-    return fetch(searchUrl)
+    fetch(searchUrl)
       .then(response => response.ok ? response.json() : [])
       .then(json => {
         const schools = json.map(school => this.constructSchoolOption(school));
         schools.unshift(this.constructSchoolNotFoundOption());
         return { options: schools };
-    });
+      })
+      .then(result => callback(null, result))
+      .catch(err => callback(err, null));
   }, 200);
 
   getOptions = (q) => {
@@ -57,7 +59,15 @@ export default class SchoolAutocompleteDropdown extends Component {
       return Promise.resolve();
     }
 
-    return this.debouncedSearch(q);
+    return new Promise((resolve, reject) => {
+      this.debouncedSearch(q, (err, result) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(result);
+        }
+      });
+    });
   };
 
   render() {
