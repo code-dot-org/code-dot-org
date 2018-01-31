@@ -30,7 +30,10 @@ const styles = {
 
 class QuickActionsCell extends Component {
   static propTypes = {
-    children: PropTypes.node.isRequired,
+    children: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.array
+    ]).isRequired
   };
 
   state = {
