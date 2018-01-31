@@ -19,3 +19,4 @@ Feature: Teacher Application Dashboard view
     Then I press the first "#application-container .col-xs-4:nth-child(4) .btn:nth-child(3)" element
     Then I wait until element ".fa-pulse" is not visible
     And I see no difference for "Teacher Cohort View"
+    And I close my eyes
