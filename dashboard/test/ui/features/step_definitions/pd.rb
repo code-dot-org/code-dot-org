@@ -1,4 +1,4 @@
-Given(/^I am a workshop administrator with some applications of each type and state$/) do
+Given(/^I am a workshop administrator with some applications of each type and status$/) do
   require_rails_env
   random_name = "TestWorkshopAdmin" + SecureRandom.hex(10)
   steps %Q{
