@@ -7,7 +7,7 @@ Feature: Facilitator Application Dashboard view
     Given I am a workshop administrator with some applications of each type and state
     And I am on "http://localhost-studio.code.org:3000/pd/application_dashboard/summary"
     Then I wait until element ".fa-pulse" is not visible
-    And I open my eyes to test "Application Dashboard"
+    And I open my eyes to test "Facilitator Application Dashboard"
     And I see no difference for "Application Dashboard"
     Then I press the first ".btn" element
     Then I wait until element ".fa-pulse" is not visible
@@ -20,5 +20,3 @@ Feature: Facilitator Application Dashboard view
     Then I press the first "#application-container .btn:nth-child(3)" element
     Then I wait until element ".fa-pulse" is not visible
     And I see no difference for "Facilitator Cohort View"
-    Then I press the first "#application-container a" element
-    Then I wait until element ".fa-pulse" is not visible
