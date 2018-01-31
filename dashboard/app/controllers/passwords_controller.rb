@@ -1,3 +1,4 @@
+# require 'cdo/shared_constants'
 class PasswordsController < Devise::PasswordsController
   skip_before_action :require_no_authentication
   prepend_before_action :require_no_or_admin_authentication
@@ -13,6 +14,11 @@ class PasswordsController < Devise::PasswordsController
         redirect_to "#{new_user_registration_path}?already_hoc_registered=true"
         return
       end
+    end
+    unless verify_recaptcha
+      flash[:alert] = I18n.t('password.reset_errors.captcha_required')
+      redirect_to new_user_password_path
+      return
     end
     super
   end

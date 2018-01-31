@@ -62,7 +62,7 @@
     "hide_view_data_button": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "pause_animations_by_default": "false",
     "callout_json": "[ \r\n {\r\n  \"localization_key\": \"CSD_U3_rect_c1\",\r\n  \"callout_text\": \"Here is the code\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"fill\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"fill\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": 50,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"CSD_U3_rect_c2\",\r\n  \"callout_text\": \"Drag this block into the code area.\",\r\n  \"element_id\": \"#droplet_palette_block_rect\",\r\n  \"on\": \"rect_block\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "markdown_instructions": "<img src=\"https://images.code.org/2ef29be10261f6a2c5df8f214d524f4d-image-1493060602794.02.44 PM.png\" style=\"float:right;width:150px;\">\r\n\r\n# ellipse\r\n\r\nYou can use `ellipse` to make a circle.\r\n\r\n# Do This\r\n\r\n* Look at the code that makes the ellipse.\r\n* Add a new ellipse of a different color.\r\n",

@@ -11,7 +11,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[{\"tileType\":0},{\"tileType\":16,\"speed\":3,\"size\":0.5,\"emotion\":0,\"sprite\":15},{\"tileType\":16,\"size\":0.5,\"emotion\":0,\"sprite\":9},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":1},{\"tileType\":16,\"size\":0.5,\"emotion\":0,\"sprite\":7},{\"tileType\":16,\"size\":0.5,\"emotion\":0,\"sprite\":2},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.5,\"sprite\":10},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":5}]]",
     "embed": "false",
-    "instructions": "It's time for the Great Animal Race! Make the animals move down when you press ▼. Who will run the fastest?",
+    "instructions": "Make the animals move down when you press ▼. ",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -41,7 +41,7 @@
     "protaganist_sprite_index": "1",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Make the other animals move down when you press `▼`. \\n<xml>\\n  <block type=\\\"studio_whenArrow\\\" movable=\\\"false\\\">\\n    <title name=\\\"VALUE\\\">down</title>\\n  </block>\\n</xml>\",\"hint_id\":\"courseB_playlab_events_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a56d3d5b5a316a50307a25c21dcad9b0/courseB_playlab_events_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Change the speed of the animals by using this block:\\n<xml>\\n  <block type=\\\"studio_setSpriteSpeed\\\">\\n    <title name=\\\"SPRITE\\\">0</title>\\n    <title name=\\\"VALUE\\\">Studio.SpriteSpeed.NORMAL</title>\\n  </block></xml>\\n\",\"hint_id\":\"courseB_playlab_events_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/61e1b1cb402ce75b55f9cef58929b563/courseB_playlab_events_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"What will the everyone say when the race is over? Make them talk with this event:\\n<xml>\\n  <block type=\\\"studio_whenSpriteClicked\\\">\\n    <title name=\\\"SPRITE\\\">2</title>\\n    <next>\\n      <block type=\\\"studio_saySpriteChoices\\\">\\n        <title name=\\\"SPRITE\\\">2</title>\\n        <title name=\\\"VALUE\\\">Woo hoo!</title>\\n      </block>\\n    </next>\\n  </block>\\n</xml>\",\"hint_id\":\"courseB_playlab_events_challenge1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/72e0660561eb619f62e58f92d5e4f47b/courseB_playlab_events_challenge1.mp3\"}]",
     "project_template_level_name": "courseB_playlab_challenge1_Template",
-    "markdown_instructions": "It's time for the Great Animal Race! Make the animals move down when you press `▼`. \r\n\r\nWho will run the fastest?\r\n",
+    "markdown_instructions": "It's time for the Great Animal Race! Make the animals move down when you press `▼`. \r\n\r\nWho will run the fastest?",
     "soft_buttons": [
       "leftButton",
       "rightButton",
@@ -51,14 +51,17 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "tts_instructions_override": "It's time for the Great Animal Race! Make the animals move down when you press the down arrow. Who will run the fastest.",
-    "tts_markdown_instructions_override": "It's time for the Great Animal Race! Make the animals move down when you press the down arrow. Who will run the fastest.",
+    "tts_instructions_override": "Make the animals move down when you press the down arrow. ",
+    "tts_markdown_instructions_override": "It's time for the Great Animal Race! Make the animals move down when you press the down arrow. Who will run the fastest?",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/a6beb8afec3fcba6d78466c1458af33f=levelbuilder/27785.png",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "remove_items_when_actor_collides": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-24 19:40:30 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-08-24 19:40:31 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-24 19:40:30 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-08-24 19:40:31 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-01-31 19:29:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"instructions\",\"markdown_instructions\",\"tts_instructions_override\",\"tts_markdown_instructions_override\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

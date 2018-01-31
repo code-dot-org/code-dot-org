@@ -61,7 +61,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
     "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"balloon\",\r\n        \"tack\",\r\n        \"popped\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"balloon\": {\r\n            \"name\": \"balloon\",\r\n            \"sourceUrl\": \"https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png\",\r\n            \"frameSize\": {\r\n                \"x\": 100,\r\n                \"y\": 135\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"tack\": {\r\n            \"name\": \"tack\",\r\n            \"sourceUrl\": \"https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png\",\r\n            \"frameSize\": {\r\n                \"x\": 50,\r\n                \"y\": 66\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"popped\": {\r\n            \"name\": \"popped\",\r\n            \"sourceUrl\": \"https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png\",\r\n            \"frameSize\": {\r\n                \"x\": 173,\r\n                \"y\": 135\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",

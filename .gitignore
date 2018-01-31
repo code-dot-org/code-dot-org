@@ -39,6 +39,8 @@ npm-debug.log
 /aws/.code-studio-commit-built
 /aws/.shared-built
 /aws/.shared-commit-built
+/aws/offsite/lambda/*/node_modules/
+/aws/offsite/lambda/*.zip
 /bin/cron/.dts
 /bin/cron/log
 /build-started

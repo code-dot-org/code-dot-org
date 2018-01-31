@@ -59,7 +59,7 @@ GRAPH
     seven_zip (>= 0.0.0)
     windows (>= 0.0.0)
   build-essential (2.1.3)
-  cdo-apps (0.2.268)
+  cdo-apps (0.2.269)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     cdo-cloudwatch-extra-metrics (>= 0.0.0)
