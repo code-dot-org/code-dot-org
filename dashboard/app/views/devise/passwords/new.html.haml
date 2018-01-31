@@ -7,8 +7,9 @@
     = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
       = devise_error_messages!
       = f.email_field :email, :autofocus => true, style: "width: 400px", placeholder: t('password.reset_form.email')
+      = recaptcha_tags
+      = show_flashes.html_safe
       %br/
       %button#forgotpassword-button.primary= t('password.reset_form.submit')
-
 :javascript
   $("#user_email").placeholder();

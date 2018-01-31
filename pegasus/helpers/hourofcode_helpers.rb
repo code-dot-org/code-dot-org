@@ -127,7 +127,7 @@ def localized_image(path)
 end
 
 def campaign_date(format)
-  @country = hoc_detect_country unless @country
+  @country ||= hoc_detect_country
 
   case format
   when "start-short"

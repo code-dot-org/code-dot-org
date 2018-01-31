@@ -66,7 +66,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "show_d_pad": "false",
     "markdown_instructions": "# Debug\r\n\r\nThis program is supposed to create a sprite that changes to a random color, width and height. It's not working. Can you figure out why its not working?\r\n\r\n# Do This\r\n\r\n* Run the program to see what is happening\r\n* Debug the program. Hint: You do not need to add any new commands to make this work.",
     "start_blocks": "var sprite = createSprite(randomNumber(0, 400), randomNumber(0, 400));\r\nframeRate(5);\r\n\r\nfunction draw() {\r\n  Sprite.width = randomNumber(0,400);\r\n  thing.height = randomNumber(0,400);\r\n  sprite.shapeColor = color(randomNumber(0,255), randomNumber(0,255),randomNumber(0,255));\r\n  background('white');\r\n  drawSprites();\r\n}",
