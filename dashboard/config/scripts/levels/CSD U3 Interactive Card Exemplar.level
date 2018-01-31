@@ -199,7 +199,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
     "start_animations": "{\r\n  \"orderedKeys\": [\"present\", \"bike\", \"puppy\"],\r\n  \"propsByKey\": {\r\n    \"present\": {\r\n      \"name\": \"present\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/present.png\",\r\n      \"frameSize\": {\"x\":128, \"y\": 128},\r\n      \"frameCount\": 1,\r\n      \"frameDelay\": 2,\r\n      \"looping\": false\r\n    },\r\n    \"bike\": {\r\n      \"name\": \"bike\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/bike.png\",\r\n      \"frameSize\": {\"x\":128, \"y\": 128},\r\n      \"frameCount\": 1,\r\n      \"frameDelay\": 2,\r\n      \"looping\": false\r\n    },\r\n    \"puppy\": {\r\n      \"name\": \"puppy\",\r\n      \"sourceUrl\": \"https://curriculum.code.org/images/sprites/puppy.png\",\r\n      \"frameSize\": {\"x\":128, \"y\": 128},\r\n      \"frameCount\": 1,\r\n      \"frameDelay\": 2,\r\n      \"looping\": false\r\n    }\r\n  }\r\n}",

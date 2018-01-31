@@ -102,7 +102,7 @@
     "free_play": "true",
     "text_mode_at_start": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "start_blocks": "function draw() {\r\n  \r\n}",
     "instructions_important": "false",
     "hide_share_and_remix": "false",

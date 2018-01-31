@@ -57,7 +57,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "instructions": "Use randomNumber() on the x position and width of your cloud ellipses to introduce a bit of animation.",
     "markdown_instructions": "# Rays of Sunshine\r\n\r\nLet's add a little bit more animation to the scene. The `line()` block takes in two pairs of x,y coordinates and draws a line between them.\r\n\r\nDraw 5 yellow lines that all start from the center of the sun and move out to a random point around the top half.\r\n\r\n# Do This\r\n\r\n* Create 5 lines, each of which should start at the center of the sun and go out to a random point. You can pick your own random ranges, but you might try:\r\n  * `randomNumber(115,135), randomNumber(10,20)`\r\n  * `randomNumber(145,165), randomNumber(20,30)`\r\n  * `randomNumber(85, 105), randomNumber(20,30)`\r\n  * `randomNumber(165,185), randomNumber(40,50)`\r\n  * `randomNumber(65, 85 ), randomNumber(40,50)`\r\n* Don't forget to set the `strokeColor()` before you draw your lines and to reset to `noStroke()` afterwards.",
     "start_blocks": "// Background\r\n\r\n// Grass\r\n\r\n// Road\r\n\r\n",
