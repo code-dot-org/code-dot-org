@@ -100,7 +100,7 @@ And(/^I make the teacher named "([^"]*)" a workshop admin$/) do |name|
   user.permission = UserPermission::WORKSHOP_ADMIN
 end
 
-And(/^I create some fake applications of each type and state$/) do
+And(/^I create some fake applications of each type and status$/) do
   require_rails_env
   time_start = Time.now
 
