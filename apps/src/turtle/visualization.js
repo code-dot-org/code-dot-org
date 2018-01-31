@@ -202,14 +202,8 @@ module.exports = class Visualization {
     }
   };
 
-  jumpTo_(pos) {
-    let x, y;
-    if (Array.isArray(pos)) {
-      [x, y] = pos;
-    } else {
-      x = utils.xFromPosition(pos, CANVAS_WIDTH);
-      y = utils.yFromPosition(pos, CANVAS_HEIGHT);
-    }
+  jumpTo(pos) {
+    let [x, y] = pos;
     this.x = Number(x);
     this.y = Number(y);
   };

@@ -1048,7 +1048,14 @@ Artist.prototype.step = function (command, values, options) {
       this.visualization.moveForward(result.distance);
       break;
     case 'JT':  // Jump To Location
-      this.jumpTo_(values[0]);
+      if (Array.isArray(values[0])) {
+        this.visualization.jumpTo(values[0]);
+      } else {
+        this.visualization.jumpTo([
+          utils.xFromPosition(pos, CANVAS_WIDTH),
+          utils.yFromPosition(pos, CANVAS_HEIGHT),
+        ]);
+      }
       break;
     case 'MD':  // Move diagonally (use longer steps if showing joints)
       distance = values[0];
@@ -1191,18 +1198,6 @@ Artist.prototype.setPattern = function (pattern) {
     this.currentPathPattern = new Image();
     this.visualization.isDrawingWithPattern = false;
   }
-};
-
-Artist.prototype.jumpTo_ = function (pos) {
-  let x, y;
-  if (Array.isArray(pos)) {
-    [x, y] = pos;
-  } else {
-    x = utils.xFromPosition(pos, CANVAS_WIDTH);
-    y = utils.yFromPosition(pos, CANVAS_HEIGHT);
-  }
-  this.visualization.x = Number(x);
-  this.visualization.y = Number(y);
 };
 
 Artist.prototype.dotAt_ = function (x, y) {
