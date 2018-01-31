@@ -8,12 +8,17 @@ GRUNT_CMD="node --max_old_space_size=4096 `npm bin`/grunt"
 
 if [ -n "$CIRCLECI" ]; then
   mkdir -p log
-  echo "See apps-test-log under the artifacts tab on circle for test output"
 
   curl -s https://codecov.io/bash > /tmp/codecov.sh
   chmod +x /tmp/codecov.sh
 
   $GRUNT_CMD preconcat concat
+
+  echo "###################################################################"
+  echo "#                                                                 #"
+  echo "#   See 'apps-test-log' under the artifacts tab for test output   #"
+  echo "#                                                                 #"
+  echo "###################################################################"
 
   SHELL=/bin/bash parallel -j 4 --joblog - ::: "npm run lint" \
   "(PORT=9876 $GRUNT_CMD unitTest && /tmp/codecov.sh -cF unit) > log/unitTest.log" \

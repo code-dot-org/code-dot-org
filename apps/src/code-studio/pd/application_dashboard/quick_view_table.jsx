@@ -1,10 +1,12 @@
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import ReactTooltip from 'react-tooltip';
-import {Table} from 'reactabular';
+import {Table, sort} from 'reactabular';
+import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
-import _ from 'lodash';
+import _, {orderBy} from 'lodash';
 import { StatusColors } from './constants';
+import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 
 const styles = {
   table: {
@@ -40,16 +42,44 @@ export class QuickViewTable extends React.Component {
     router: PropTypes.object.isRequired
   };
 
+  constructor(props) {
+    super(props);
+    this.constructColumns();
+
+    // default
+    let sortColumnIndex = 0;
+    let direction = 'desc';
+
+    this.state = {
+      sortingColumns: {
+        [sortColumnIndex]: {
+          direction,
+          position: 0
+        }
+      }
+    };
+  }
+
   formatBoolean(bool) {
     return bool ? "Yes" : "No";
   }
 
   constructColumns() {
+    const sortable = wrappedSortable(
+      this.getSortingColumns,
+      this.onSort,
+      {
+        container: {whiteSpace: 'nowrap'},
+        default: {color: color.light_gray}
+      }
+    );
+
     let columns = [];
     columns.push({
       property: 'created_at',
       header: {
         label: 'Submitted',
+        transforms: [sortable]
       },
       cell: {
         format: (created_at) => {
@@ -60,21 +90,25 @@ export class QuickViewTable extends React.Component {
       property: 'applicant_name',
       header: {
         label: 'Name',
+        transforms: [sortable]
       },
     },{
       property: 'district_name',
       header: {
         label: 'School District',
+        transforms: [sortable]
       },
     },{
       property: 'school_name',
       header: {
         label: 'School Name',
+        transforms: [sortable]
       },
     },{
       property: 'status',
       header: {
         label: 'Status',
+        transforms: [sortable]
       },
       cell: {
         format: (status) => {
@@ -96,6 +130,7 @@ export class QuickViewTable extends React.Component {
         },
         header: {
           label: 'Locked?',
+          transforms: [sortable]
         }
       });
     }
@@ -104,17 +139,20 @@ export class QuickViewTable extends React.Component {
       columns.push({
         property: 'principal_approval',
         header: {
-          label: 'Principal Approval'
+          label: 'Principal Approval',
+          transforms: [sortable]
         }
       }, {
         property: 'meets_criteria',
         header: {
-          label: 'Meets Criteria'
+          label: 'Meets Criteria',
+          transforms: [sortable]
         }
       }, {
         property: 'total_score',
         header: {
-          label: 'Total Score'
+          label: 'Total Score',
+          transforms: [sortable]
         }
       });
     }
@@ -142,8 +180,25 @@ export class QuickViewTable extends React.Component {
       }
     });
 
-    return columns;
+    this.columns = columns;
   }
+
+  getSortingColumns = () => this.state.sortingColumns || {};
+
+  onSort = (selectedColumn) => {
+    const sortingColumns = sort.byColumn({
+      sortingColumns: this.state.sortingColumns,
+      // Custom sortingOrder removes 'no-sort' from the cycle
+      sortingOrder: {
+        FIRST: 'asc',
+        asc: 'desc',
+        desc: 'asc'
+      },
+      selectedColumn
+    });
+
+    this.setState({sortingColumns});
+  };
 
   constructRows() {
     let rows = this.props.data;
@@ -189,16 +244,22 @@ export class QuickViewTable extends React.Component {
 
   render() {
     const rows = this.constructRows();
-    const columns = this.constructColumns();
+
+    const {sortingColumns} = this.state;
+    const sortedRows = sort.sorter({
+      columns: this.columns,
+      sortingColumns,
+      sort: orderBy
+    })(rows);
 
     return (
       <Table.Provider
         className="pure-table table-striped"
-        columns={columns}
+        columns={this.columns}
         style={styles.table}
       >
         <Table.Header />
-        <Table.Body rows={rows} rowKey="id" />
+        <Table.Body rows={sortedRows} rowKey="id" />
       </Table.Provider>
     );
   }

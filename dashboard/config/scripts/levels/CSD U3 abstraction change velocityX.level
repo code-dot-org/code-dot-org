@@ -55,7 +55,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "markdown_instructions": "# Moving Faster\r\n\r\nRemember when you used the counter pattern `sprite.x = sprite.x + 1` to change your sprite's position inside the draw loop?  Now you can use the same type of counter pattern with `sprite.velocityX` to change your sprite's speed as your program runs. Can you add a line of code in the draw loop to make the sprite swim faster and faster?\r\n\r\n# Do This\r\n\r\nMake the fish get faster by adding `fish.velocityX = fish.velocityX + 1` inside the draw loop.  [Show me where](#triggercallout=code_triggered)",
     "palette_category_at_start": "sprites",

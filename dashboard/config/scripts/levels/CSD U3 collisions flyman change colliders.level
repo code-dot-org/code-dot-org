@@ -67,7 +67,7 @@
     "hide_animation_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"76bca46f-40e6-4ab2-9dd1-719631602575\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"76bca46f-40e6-4ab2-9dd1-719631602575\": {\r\n      \"name\": \"flyer\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/fbVVJ87HfqNVLZl16J52ZQ/76bca46f-40e6-4ab2-9dd1-719631602575.png?version=ws6i9U9L4Nad8JLTdtTE3dBj.3bgtTgR\",\r\n      \"frameSize\": {\r\n        \"x\": 40,\r\n        \"y\": 46\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"ws6i9U9L4Nad8JLTdtTE3dBj.3bgtTgR\"\r\n    }\r\n  }\r\n}",
     "start_blocks": "var flyer = createSprite(200, 200);\r\nflyer.setAnimation(\"flyer\");\r\n\r\nfunction draw() {\r\n  background(\"blue\");\r\n  \r\n  // Simulating Gravity\r\n  flyer.velocityY = flyer.velocityY + 0.1;\r\n  \r\n  // update sprites\r\n  \r\n  drawSprites();\r\n}\r\n",
     "markdown_instructions": "# Flyer Game - Change Colliders\r\n\r\nRight now your colliders are all rectangular. Switch them over to circles to get more interesting and realistic bounces and collisions.\r\n\r\n# Do This\r\n\r\n* Use the `sprite.setCollider()` block to change the colliders of your sprites to circles.\r\n* Set your sprites' debug properties to `true` to make sure your game is working the way you want.\r\n* Play your game to make sure it's working the way you want.",

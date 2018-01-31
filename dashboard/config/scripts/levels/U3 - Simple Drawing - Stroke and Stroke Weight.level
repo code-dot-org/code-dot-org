@@ -42,7 +42,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "project_template_level_name": "U3 - Simple Drawing - Rings Template",
     "instructions": "Do this",
     "markdown_instructions": "# Stroke\r\n\r\nLet's start adding color to the rainbow. You may have noticed that all the shapes have a middle color and an outline color. The middle is gray and the outline is black by default. **For the rainbow, you are going to change the OUTLINE color. This will allow you to get the arch shape without the middle fill.** \r\n\r\nYou can change the look of the outline using `stroke()` which sets the color of the outline.  Stroke takes names of colors ('red', 'orange', etc) just like fill. However, you will want to be more specific about the colors of the rainbow.\r\n\r\n# Color\r\nYou can set colors using RGB values just like you did in HTML and CSS. We do this by using the `rgb()` block in place of the color name. For example `stroke(rgb(255,0,0))`. Like fill, you need to set stroke before drawing the object you want to have that stroke.\r\n\r\n# Do This\r\n<img src=\"https://images.code.org/023bd330cc9ccced5c665330c5e997b4-image-1485287796998.56.13 PM.png\" style=\"width: 250px; float: right\">\r\n\r\n* Use `stroke()` to make each ring of the rainbow the appropriate color. \r\n* The final picture should look like the one shown to the right. You will continue to improve it on the next level.\r\n\r\n| Color | RGB Values |\r\n|---|---|\r\n| red | (255,0,0)|\r\n| orange | (255,127,0) |\r\n| yellow | (255, 255, 0) |\r\n| green | (0,255,0) |\r\n| blue | (0, 0, 255) |\r\n| indigo | (75, 0, 130) |\r\n| violet | (139, 0, 255) | ",
