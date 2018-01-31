@@ -1,7 +1,9 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import Button from '../Button';
 import i18n from "@cdo/locale";
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {setSecretImage} from './manageStudentsRedux';
 
 const styles = {
   reset: {
@@ -17,9 +19,10 @@ class ShowSecret extends Component {
     initialIsShowing: PropTypes.bool,
     secretWord: PropTypes.string,
     secretPicture: PropTypes.string,
-    resetSecret: PropTypes.func.isRequired,
     loginType: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
+    // Provided in redux
+    setSecretImage: PropTypes.func.isRequired,
   };
 
   state = {
@@ -45,16 +48,13 @@ class ShowSecret extends Component {
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify({secrets: "reset"}),
     }).done((data) => {
-      console.log(data);
+      this.props.setSecretImage(this.props.id, data.secret_picture_path);
     }).fail((jqXhr, status) => {
       // We may want to handle this more cleanly in the future, but for now this
       // matches the experience we got in angular
       alert(i18n.unexpectedError());
       console.error(status);
     });
-    /*this.setState({
-      isShowing: false
-    });*/
   };
 
   render() {
@@ -80,4 +80,10 @@ class ShowSecret extends Component {
   }
 }
 
-export default ShowSecret;
+export const UnconnectedShowSecret = ShowSecret;
+
+export default connect(state => ({}), dispatch => ({
+  setSecretImage(id, image) {
+    dispatch(setSecretImage(id, image));
+  },
+}))(ShowSecret);
