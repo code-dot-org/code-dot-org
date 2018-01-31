@@ -4,7 +4,7 @@ Given(/^I am a workshop administrator with some applications of each type and st
   steps %Q{
     And I create a teacher named "#{random_name}"
     And I make the teacher named "#{random_name}" a workshop admin
-    And I create some fake applications of each type and state
+    And I create some fake applications of each type and status
   }
 end
 
@@ -100,7 +100,7 @@ And(/^I make the teacher named "([^"]*)" a workshop admin$/) do |name|
   user.permission = UserPermission::WORKSHOP_ADMIN
 end
 
-And(/^I create some fake applications of each type and status$/) do
+And(/^I create some fake applications of each type and staus$/) do
   require_rails_env
   time_start = Time.now
 
