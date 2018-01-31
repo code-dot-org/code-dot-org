@@ -37,7 +37,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "show_d_pad": "false",
     "markdown_instructions": "# Debug\r\n\r\nThis program is supposed to create a sprite that changes to a random color and moves randomly around the screen. It's not working. Can you figure out why its not working?\r\n\r\nHint: There are two bugs in this program.  Sometimes when you fix one problem it may look like you made the initial problem worse. Don't worry. Remember the things you have learned so far. How would you write the code for this level?\r\n\r\n# Do This\r\n\r\n* Run the program to see what is happening\r\n* Debug the program. ",
     "start_blocks": "var sprite = createSprite(randomNumber(0, 400), randomNumber(0, 400));\r\nframeRate(5);\r\n\r\nfunction draw() {\r\n  sprite.x = randomNumber(0,400);\r\n  drawSprites();\r\n  sprite.y = randomNumber(0,400);\r\n  sprite.shapeColor = color(randomNumber(0,255), randomNumber(0,255),randomNumber(0,255));\r\n}",
