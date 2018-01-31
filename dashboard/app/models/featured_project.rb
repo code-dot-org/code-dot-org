@@ -2,12 +2,10 @@
 #
 # Table name: featured_projects
 #
-#  id                   :integer          not null, primary key
-#  storage_app_id       :integer
-#  who_featured_user_id :integer
-#  featured_at          :datetime
-#  unfeatured_at        :datetime
-#  is_featured          :boolean
+#  id             :integer          not null, primary key
+#  storage_app_id :integer
+#  created_at     :datetime
+#  unfeatured_at  :datetime
 #
 # Indexes
 #
@@ -15,4 +13,5 @@
 #
 
 class FeaturedProject < ApplicationRecord
+  alias_attribute :featured_at, :created_at
 end
