@@ -4,8 +4,8 @@
 #
 #  id             :integer          not null, primary key
 #  storage_app_id :integer
-#  created_at     :datetime
 #  unfeatured_at  :datetime
+#  featured_at    :datetime
 #
 # Indexes
 #
@@ -13,5 +13,4 @@
 #
 
 class FeaturedProject < ApplicationRecord
-  alias_attribute :featured_at, :created_at
 end
