@@ -17,6 +17,7 @@ import Spinner from '../components/spinner';
 import $ from 'jquery';
 import {
   ApplicationStatuses,
+  UnmatchedFilter,
   RegionalPartnerDropdownOptions as dropdownOptions
 } from './constants';
 import {
@@ -59,7 +60,7 @@ export class QuickView extends React.Component {
       applications: null,
       filter: '',
       regionalPartnerName: props.regionalPartnerName,
-      regionalPartnerFilter: props.isWorkshopAdmin ? 'none' : ''
+      regionalPartnerFilter: props.isWorkshopAdmin ? UnmatchedFilter : ''
     };
     this.loadRequest = null;
   }
