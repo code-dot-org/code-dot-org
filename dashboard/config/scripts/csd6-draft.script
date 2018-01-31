@@ -234,6 +234,7 @@ level 'CSD U6 circuit smart bike final', progression: 'Finish the Prototype'
 
 stage 'Project: Prototype an Innovation', flex_category: 'csd6_2'
 named_level 'CSD U6L16 TFMD'
+named_level 'CSD U6 final intro'
 level 'CSDU6 - final project 1', progression: 'Project Work'
 level 'CSDU6 - final project 2', progression: 'Project Work'
 level 'CSDU6 - final project 3', progression: 'Project Work'
