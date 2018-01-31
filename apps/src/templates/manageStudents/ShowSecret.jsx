@@ -19,6 +19,7 @@ class ShowSecret extends Component {
     secretPicture: PropTypes.string,
     resetSecret: PropTypes.func.isRequired,
     loginType: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
   };
 
   state = {
@@ -38,10 +39,22 @@ class ShowSecret extends Component {
   };
 
   reset = () => {
-    this.props.resetSecret();
-    this.setState({
-      isShowing: false
+    $.ajax({
+      url: `/v2/students/${this.props.id}/update`,
+      method: 'POST',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({secrets: "reset"}),
+    }).done((data) => {
+      console.log(data);
+    }).fail((jqXhr, status) => {
+      // We may want to handle this more cleanly in the future, but for now this
+      // matches the experience we got in angular
+      alert(i18n.unexpectedError());
+      console.error(status);
     });
+    /*this.setState({
+      isShowing: false
+    });*/
   };
 
   render() {

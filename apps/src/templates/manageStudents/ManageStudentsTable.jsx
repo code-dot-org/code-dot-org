@@ -87,6 +87,7 @@ const passwordFormatter = (loginType, {rowData}) => {
               secretWord={rowData.secretWords}
               secretPicture={rowData.secretPicturePath}
               loginType={rowData.loginType}
+              id={rowData.id}
             />
           }
         </div>
