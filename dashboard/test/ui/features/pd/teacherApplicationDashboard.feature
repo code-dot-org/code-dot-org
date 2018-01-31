@@ -4,7 +4,7 @@
 Feature: Teacher Application Dashboard view
 
   Scenario: Application dashboard, list view, detail view, cohort view
-    Given I am a workshop administrator with some applications of each type and state
+    Given I am a workshop administrator with some applications of each type and status
     And I am on "http://localhost-studio.code.org:3000/pd/application_dashboard/summary"
     Then I wait until element ".fa-pulse" is not visible
     Then I press the first "#application-container .col-xs-4:nth-child(4) .btn" element
