@@ -22,6 +22,16 @@ export const personalProjectDataPropType = PropTypes.shape({
   isPublished: PropTypes.bool
 });
 
+export const featuredProjectDataPropType = PropTypes.shape({
+  projectName: PropTypes.string.isRequired,
+  channel: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  publishedAt: PropTypes.string.isRequired,
+  featuredAt: PropTypes.string.isRequired,
+  unfeaturedAt: PropTypes.string,
+  isFeatured: PropTypes.bool.isRequired
+});
+
 export const projectPropType = PropTypes.shape({
   projectData: projectDataPropType.isRequired,
   currentGallery: PropTypes.string.isRequired,
