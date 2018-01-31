@@ -193,6 +193,7 @@ en:
       email: 'Email address'
       submit: 'Submit'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Change your password'
