@@ -140,12 +140,9 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "disable_procedure_autopopulate": "false",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

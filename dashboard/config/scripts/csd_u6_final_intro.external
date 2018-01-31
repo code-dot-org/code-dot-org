@@ -1,0 +1,14 @@
+name 'CSD U6 final intro'
+title 'Create Your Own Game'
+display_name 'Design Your Game'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Prototype your own innovation
+
+Now that you have all the skills you need, it's time to make your own game!
+
+With a partner or team, brainstorm some different physical devices you could prototype. You can build on the programs that you've already made in previous lessons, innovative devices that you've seen in the real world, or any wild ideas you can come up with.
+
+Once you have settled on an idea with your team, fill out the Project Guide with the sketches of the physical components of your device, inputs and outputs that you'll need, and plans for what information you'll need to process.
+MARKDOWN

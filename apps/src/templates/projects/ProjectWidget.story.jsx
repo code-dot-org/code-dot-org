@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectWidget from './ProjectWidget';
-import {generateFakePersonalProjects} from './generateFakePersonalProjects';
+import {generateFakePersonalProjects} from './generateFakeProjects';
 
 export default storybook => {
   return storybook
