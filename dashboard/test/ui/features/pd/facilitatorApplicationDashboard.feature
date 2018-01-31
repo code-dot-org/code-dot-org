@@ -20,3 +20,4 @@ Feature: Facilitator Application Dashboard view
     Then I press the first "#application-container .btn:nth-child(3)" element
     Then I wait until element ".fa-pulse" is not visible
     And I see no difference for "Facilitator Cohort View"
+    And I close my eyes
