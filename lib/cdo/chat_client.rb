@@ -4,6 +4,7 @@ require 'net/http/responses'
 require 'uri'
 require 'cdo/circle_utils'
 require 'cdo/slack'
+require 'cdo/rake_utils'
 
 # This class is intended to be a thin wrapper around our chat client
 # implementation (namely Slack as of February 2017).

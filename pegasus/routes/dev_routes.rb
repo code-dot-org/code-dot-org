@@ -1,6 +1,8 @@
 require 'cdo/developers_topic'
 require 'cdo/github'
 require 'cdo/infra_test_topic'
+require 'cdo/eyes_utils'
+require 'cdo/chat_client'
 
 BUILD_STARTED_PATH = deploy_dir('build-started')
 CHECK_DTS_ACTIONS = [
@@ -9,6 +11,7 @@ CHECK_DTS_ACTIONS = [
   'edited',
   'synchronize',
 ]
+MERGE_EYES = '[merge eyes]'.freeze
 
 # Used to restart builds on staging/test via Slack slash commands.
 post '/api/dev/start-build' do
@@ -84,6 +87,26 @@ post '/api/dev/check-dtsn' do
     GitHub.set_dtsn_check_pass(data['pull_request'])
   else
     GitHub.set_dtsn_check_fail(data['pull_request'])
+  end
+  'success'
+end
+
+post '/api/dev/merge-eyes-baselines' do
+  forbidden! unless [:staging, :development].include?(rack_env)
+  forbidden! unless verify_signature(CDO.github_webhook_secret)
+
+  payload = JSON.parse(params['payload'])
+  pr = payload['pull_request']
+
+  # for now, PR authors must opt in to eyes baseline merging
+  next unless pr['title'].include?(MERGE_EYES)
+
+  branch = pr['head']['ref']
+  if request.env['HTTP_X_GITHUB_EVENT'] == 'pull_request' &&
+      payload['action'] == 'closed' && pr['merged']
+    ChatClient.wrap "merging eyes baselines for PR \##{pr['number']} branch #{branch}" do
+      EyesRestUtils.copy_eyes_baselines(branch, 'staging')
+    end
   end
   'success'
 end
