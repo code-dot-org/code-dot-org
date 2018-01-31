@@ -469,6 +469,7 @@
   "genderMale": "Male",
   "genderFemale": "Female",
   "generatedCodeInfo": "Even top universities teach block-based coding (e.g., {berkeleyLink}, {harvardLink}). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:",
+  "shortGeneratedCodeInfo": "Even top universities teach block-based coding (e.g., {berkeleyLink}, {harvardLink}). The blocks you use can also be shown in JavaScript, the most widely used coding language:",
   "getDiscountCode": "Get discount code",
   "getCode": "Get Code",
   "getCodePrice": "Get Code for {price} kit",
