@@ -9,6 +9,7 @@ Feature: Teacher Application Dashboard view
     Then I wait until element ".fa-pulse" is not visible
     Then I press the first "#application-container .col-xs-4:nth-child(4) .btn" element
     Then I wait until element ".fa-pulse" is not visible
+    And I open my eyes to test "Teacher Application Dashboard"
     And I see no difference for "Teacher List View"
     Then I press the first "table .btn" element
     Then I wait until element ".fa-pulse" is not visible
