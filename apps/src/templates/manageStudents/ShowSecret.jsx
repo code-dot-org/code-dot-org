@@ -1,7 +1,9 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import Button from '../Button';
 import i18n from "@cdo/locale";
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {setSecretImage, setSecretWords} from './manageStudentsRedux';
 
 const styles = {
   reset: {
@@ -17,8 +19,11 @@ class ShowSecret extends Component {
     initialIsShowing: PropTypes.bool,
     secretWord: PropTypes.string,
     secretPicture: PropTypes.string,
-    resetSecret: PropTypes.func.isRequired,
     loginType: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    // Provided in redux
+    setSecretImage: PropTypes.func.isRequired,
+    setSecretWords: PropTypes.func.isRequired,
   };
 
   state = {
@@ -38,9 +43,22 @@ class ShowSecret extends Component {
   };
 
   reset = () => {
-    this.props.resetSecret();
-    this.setState({
-      isShowing: false
+    $.ajax({
+      url: `/v2/students/${this.props.id}/update`,
+      method: 'POST',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({secrets: "reset"}),
+    }).done((data) => {
+      if (this.props.loginType === SectionLoginType.picture) {
+        this.props.setSecretImage(this.props.id, data.secret_picture_path);
+      } else if (this.props.loginType === SectionLoginType.word) {
+        this.props.setSecretWords(this.props.id, data.secret_words);
+      }
+    }).fail((jqXhr, status) => {
+      // We may want to handle this more cleanly in the future, but for now this
+      // matches the experience we got in angular
+      alert(i18n.unexpectedError());
+      console.error(status);
     });
   };
 
@@ -67,4 +85,13 @@ class ShowSecret extends Component {
   }
 }
 
-export default ShowSecret;
+export const UnconnectedShowSecret = ShowSecret;
+
+export default connect(state => ({}), dispatch => ({
+  setSecretImage(id, image) {
+    dispatch(setSecretImage(id, image));
+  },
+  setSecretWords(id, words) {
+    dispatch(setSecretWords(id, words));
+  },
+}))(ShowSecret);

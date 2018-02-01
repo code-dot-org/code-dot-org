@@ -6,6 +6,8 @@ const SET_SECTION_ID = 'manageStudents/SET_SECTION_ID';
 const START_EDITING_STUDENT = 'manageStudents/START_EDITING_STUDENT';
 const CANCEL_EDITING_STUDENT = 'manageStudents/CANCEL_EDITING_STUDENT';
 const REMOVE_STUDENT = 'manageStudents/REMOVE_STUDENT';
+const SET_SECRET_IMAGE = 'manageStudents/SET_SECRET_IMAGE';
+const SET_SECRET_WORDS = 'manageStudents/SET_SECRET_WORDS';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
@@ -13,6 +15,8 @@ export const setStudents = studentData => ({ type: SET_STUDENTS, studentData });
 export const startEditingStudent = (studentId) => ({ type: START_EDITING_STUDENT, studentId });
 export const cancelEditingStudent = (studentId) => ({ type: CANCEL_EDITING_STUDENT, studentId });
 export const removeStudent = (studentId) => ({ type: REMOVE_STUDENT, studentId });
+export const setSecretImage = (studentId, image) => ({ type: SET_SECRET_IMAGE, studentId, image});
+export const setSecretWords = (studentId, words) => ({ type: SET_SECRET_WORDS, studentId, words});
 
 const initialState = {
   loginType: '',
@@ -59,6 +63,30 @@ export default function manageStudents(state=initialState, action) {
         [action.studentId]: {
           ...state.studentData[action.studentId],
           isEditing: false
+        }
+      }
+    };
+  }
+  if (action.type === SET_SECRET_IMAGE) {
+    return {
+      ...state,
+      studentData: {
+        ...state.studentData,
+        [action.studentId]: {
+          ...state.studentData[action.studentId],
+          secretPicturePath: action.image,
+        }
+      }
+    };
+  }
+  if (action.type === SET_SECRET_WORDS) {
+    return {
+      ...state,
+      studentData: {
+        ...state.studentData,
+        [action.studentId]: {
+          ...state.studentData[action.studentId],
+          secretWords: action.words,
         }
       }
     };
