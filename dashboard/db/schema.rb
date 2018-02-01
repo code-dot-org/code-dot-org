@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180130234737) do
+ActiveRecord::Schema.define(version: 20180131193225) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -313,8 +313,8 @@ ActiveRecord::Schema.define(version: 20180130234737) do
 
   create_table "featured_projects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "storage_app_id"
-    t.integer  "who_featured_user_id"
-    t.datetime "created_at"
+    t.datetime "featured_at"
+    t.datetime "unfeatured_at"
     t.index ["storage_app_id"], name: "index_featured_projects_on_storage_app_id", using: :btree
   end
 
