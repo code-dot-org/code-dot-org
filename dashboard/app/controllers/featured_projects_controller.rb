@@ -4,7 +4,6 @@ class FeaturedProjectsController < ApplicationController
     if current_user.try(:permission?, UserPermission::PROJECT_VALIDATOR)
       _, channel_id = storage_decrypt_channel_id(featured_project_params[:project_id])
       @featured_project = FeaturedProject.create({storage_app_id: channel_id, featured_at: DateTime.now, unfeatured_at: nil})
-      puts "featured project in create #{@featured_project}"
       @featured_project.save!
     end
   end
@@ -12,7 +11,6 @@ class FeaturedProjectsController < ApplicationController
   def unfeature
     if current_user.try(:permission?, UserPermission::PROJECT_VALIDATOR)
       _, channel_id = storage_decrypt_channel_id(featured_project_params[:project_id])
-      puts "channel_id > #{channel_id}"
       @featured_project = FeaturedProject.find_by storage_app_id: channel_id
       @featured_project.update_attribute(:unfeatured_at, DateTime.now)
     end
