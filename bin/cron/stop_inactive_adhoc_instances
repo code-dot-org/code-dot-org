@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative '../../dashboard/config/environment'
+require_relative '../../lib/cdo/only_one'
 require 'aws-sdk'
 require 'cdo/chat_client'
 
@@ -78,7 +79,6 @@ def main
       if total_http_requests.between?(1, ACTIVITY_THRESHOLD) &&
           instance.state.code == 16 &&
           stack.creation_time < Time.now - GRACE_PERIOD_DAYS.days
-        puts "Stopping EC2 instance - #{instance.id} - for Stack - #{stack.name} - due to inactivity"
         stop_result = instance.stop(
           {
             dry_run: !(EXECUTION_MODE == :stop_instance),
@@ -93,7 +93,6 @@ def main
       end
 
     rescue StandardError => error
-      puts error
       status[:current_instance_status] = instance.try(:reload).state.name
       status[:instance_status_change_reason] = error.to_s
     ensure
@@ -101,19 +100,10 @@ def main
     end
   end
   job_status_csv = CSV.generate do |csv|
-    csv << %w(
-      name
-      cloudformation_status
-      creation_time
-      activity
-      current_instance_status
-      previous_instance_status
-      instance_status_change_reason
-    )
+    csv << StackStatus.members
     job_status.sort! {|a, b|  a.creation_time <=> b.creation_time}.each {|status| csv << status}
   end
-  puts job_status_csv.gsub(/\n/, '\\n')
   ChatClient.message 'cron-daily', 'Adhoc Environments Status: \\n\\n' + job_status_csv.gsub(/\n/, '\\n')
 end
 
-main
+main if only_one_running?(__FILE__)
