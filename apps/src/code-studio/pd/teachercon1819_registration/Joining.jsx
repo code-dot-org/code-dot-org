@@ -44,7 +44,7 @@ export default class Joining extends Teachercon1819FormComponent {
           this year, and contact <a href="mailto:teacher@code.org">teacher@code.org</a>
           &nbsp;with any questions.
         </p>
-      )
+      );
     } else if (this.isFacilitatorApplication()) {
       return (
         <p>
@@ -54,7 +54,7 @@ export default class Joining extends Teachercon1819FormComponent {
           contact <a href="mailto:facilitators@code.org">facilitators@code.org</a>
           with any questions.
         </p>
-      )
+      );
     } else if (this.isPartnerApplication()) {
       return (
         <p>
@@ -63,7 +63,7 @@ export default class Joining extends Teachercon1819FormComponent {
           weeks</strong>, and contact your Outreach Regional Manager with any
           questions.
         </p>
-      )
+      );
     }
   }
 
