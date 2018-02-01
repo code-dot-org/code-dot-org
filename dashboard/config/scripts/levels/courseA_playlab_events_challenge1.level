@@ -52,9 +52,9 @@
     "instructions": "Can you write code to show the rest of my friends? The hints will help you do this project step-by-step.",
     "disable_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/23d3f55633fe288afd62908745ec0c5b=levelbuilder/24912.png",
-    "contained_level_names": null,
     "top_level_procedure_autopopulate": "false",
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

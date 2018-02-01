@@ -36,9 +36,9 @@
     "markdown_instructions": "You can use a loop to draw many lines in a row.\r\n\r\nCan you draw a house? Make it look just the way you like it!  Try looking for patterns that repeat!\r\n\r\nHere are some ideas:\r\n\r\n![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)",
     "disable_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/733b12abb9852daa5b8c2ebb850960a6=levelbuilder/27781.png",
-    "contained_level_names": null,
     "instructions": "Can you draw a house? Make it look just the way you like it!",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

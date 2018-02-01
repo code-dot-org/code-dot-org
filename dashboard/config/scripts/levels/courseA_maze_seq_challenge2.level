@@ -32,9 +32,8 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try counting the spaces with your finger. Remember not to count the space where you start!\",\"hint_id\":\"courseA_maze_seq_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/19f2fad04613d5272c11142d8178e36c/courseA_maze_seq_challenge2.mp3\"}]",
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
-    "contained_level_names": null,
     "top_level_procedure_autopopulate": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

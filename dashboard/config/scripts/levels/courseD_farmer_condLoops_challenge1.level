@@ -36,8 +36,8 @@
     "disable_if_else_editing": "false",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "I'm using a solution that matches the given solutions for other puzzles in this stage. However, another solution uses fewer blocks and doesn't require If/Else blocks.\r\n",
