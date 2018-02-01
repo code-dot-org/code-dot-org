@@ -29,7 +29,7 @@ export default class CoursePlans extends Teachercon1819FormComponent {
         'haveTaughtWrittenProjectCourse',
         'gradingSystem',
         'howManyTerms'
-      )
+      );
     } else if (data['course'] === 'CS Discoveries') {
       requiredFields.push(
         'howManyHours',
