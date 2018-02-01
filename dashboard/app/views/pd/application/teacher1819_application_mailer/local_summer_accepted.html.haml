@@ -37,10 +37,10 @@
 %p
   Please direct all questions or concerns to:
   %br/
-  = @application.regional_partner.contact.name + ","
+  = @application.regional_partner.program_managers.first.name + ","
   = @application.regional_partner.name
   %br/
-  = @application.regional_partner.contact.email
+  = @application.regional_partner.program_managers.first.email
 
 %p
   Here are your important next steps:
@@ -90,6 +90,6 @@
   %br/
   Code.org
 %p
-  = @application.regional_partner.contact.name
+  = @application.regional_partner.program_managers.first.name
   %br/
   = @application.regional_partner.name
