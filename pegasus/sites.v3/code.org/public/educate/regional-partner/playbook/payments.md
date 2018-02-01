@@ -3,6 +3,7 @@ title: Payment Information
 nav: regional_partner_playbook_nav
 ---
 
+#Payment Information
 <a id="top"></a>
 ________________
 
