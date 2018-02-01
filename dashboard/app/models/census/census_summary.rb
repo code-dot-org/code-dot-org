@@ -29,7 +29,7 @@ class Census::CensusSummary < ApplicationRecord
 
   validates_presence_of :audit_data
 
-  def self.submission_teaches_cs(submission, is_high_school)
+  def self.submission_teaches_cs?(submission, is_high_school)
     if is_high_school
       (submission.how_many_20_hours_some? || submission.how_many_20_hours_all?)
     else
@@ -46,7 +46,7 @@ class Census::CensusSummary < ApplicationRecord
     latest_survey_year = Census::CensusSubmission.maximum(:school_year)
     latest_ap_data_year = Census::ApCsOffering.maximum(:school_year)
     latest_ib_data_year = Census::IbCsOffering.maximum(:school_year)
-    latest_state_data_years = {}
+    latest_data_year_by_state = {}
     state_years_with_data = {}
     Census::StateCsOffering::SUPPORTED_STATES.each do |state|
       state_years_with_data[state] = Census::StateCsOffering.
@@ -55,16 +55,17 @@ class Census::CensusSummary < ApplicationRecord
                                        select(:school_year).
                                        group(:school_year).
                                        map(&:school_year)
-      latest_state_data_years[state] = state_years_with_data[state].max
+      latest_data_year_by_state[state] = state_years_with_data[state].max
     end
+    latest_state_data_year = latest_data_year_by_state.values.max
 
-    max_year = [
+    latest_year = [
       latest_survey_year,
       latest_ap_data_year,
       latest_ib_data_year,
-      latest_state_data_years.map {|_, v| v}.max
+      latest_state_data_year,
     ].max
-    school_years = (2016..max_year)
+    school_years = (2016..latest_year)
 
     ActiveRecord::Base.transaction do
       School.eager_load(school_info: :census_submissions).
@@ -86,7 +87,7 @@ class Census::CensusSummary < ApplicationRecord
           yes_count = 0
           no_count = 0
 
-          # If the schools doesn't have stats then treat it as not high school.
+          # If the school doesn't have stats then treat it as not high school.
           # The lack of stats will show up in the audit data as a null value for high_school.
           stats = school.school_stats_by_year.try(:sort).try(:last)
           high_school = stats.try(:has_high_school_grades?)
@@ -108,7 +109,7 @@ class Census::CensusSummary < ApplicationRecord
               next
             end
 
-            teaches = submission_teaches_cs(submission, high_school)
+            teaches = submission_teaches_cs?(submission, high_school)
 
             audit[:census_submissions].push(
               {
