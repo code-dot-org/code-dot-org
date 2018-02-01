@@ -18,4 +18,13 @@ class Pd::Teachercon1819RegistrationMailer < ActionMailer::Base
       subject: "We've received your TeacherCon registration form"
     )
   end
+
+  def regional_partner(registration)
+    @registration = registration
+
+    mail(
+      to: registration.pd_application.user.email,
+      subject: "We've received your TeacherCon registration form"
+    )
+  end
 end
