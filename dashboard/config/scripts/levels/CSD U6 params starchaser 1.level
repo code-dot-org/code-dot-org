@@ -76,7 +76,15 @@
       "onBoardEvent": null,
       "buzzer.off": null,
       "soundSensor.start": null,
-      "lightSensor.start": null
+      "lightSensor.start": null,
+      "pinMode": null,
+      "digitalWrite": null,
+      "digitalRead": null,
+      "analogWrite": null,
+      "analogRead": null,
+      "pulse": null,
+      "soundSensor.threshold": null,
+      "lightSensor.threshold": null
     },
     "edit_code": true,
     "embed": "false",
@@ -117,7 +125,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false",
+    "makerlab_enabled": "true",
     "contained_level_names": null,
     "encrypted_examples": [
 
@@ -125,7 +133,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-11 19:15:37 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-01 17:53:13 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-11 19:15:37 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-01 17:53:13 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-01 22:21:31 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

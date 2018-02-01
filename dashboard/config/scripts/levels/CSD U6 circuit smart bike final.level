@@ -188,7 +188,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Smart Bike - Final Touches\r\n\r\nAt this point your smart bike should have all of it's basic functionality in place. Now is your chance to add any finishing touches.\r\n\r\n# Do This\r\n\r\nYou may want to divide and conquer at this point, allowing some members of your group to focus on the physical aspects of the prototype while others work on improving the code. As this is a prototype, don't worry about making everything perfect, but do try to ensure that the prototype communicates your design well enough to test and get feedback.",
+    "markdown_instructions": "# Smart Bike - Final Touches\r\n\r\nAt this point your smart bike should have all of its basic functionality in place. Now is your chance to add any finishing touches.\r\n\r\n# Do This\r\n\r\nYou may want to divide and conquer at this point, allowing some members of your group to focus on the physical aspects of the prototype while others work on improving the code. As this is a prototype, don't worry about making everything perfect, but do try to ensure that the prototype communicates your design well enough to test and get feedback.",
     "instructions_important": "false",
     "submittable": "true",
     "is_k1": "false",
@@ -226,11 +226,14 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-15 22:53:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 19:06:39 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 19:10:52 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 19:15:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"submittable\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-15 22:53:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 19:06:39 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 19:10:52 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 19:15:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"submittable\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-02-01 20:10:44 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
