@@ -40,8 +40,8 @@
     "markdown_instructions": "Draw as many X's as you can. Can you get 3 in a row?",
     "disable_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/3643edc84d3f9c594e503fe5ae785979=levelbuilder/27783.png",
-    "contained_level_names": null,
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

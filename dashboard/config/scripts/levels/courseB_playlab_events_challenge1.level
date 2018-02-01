@@ -54,10 +54,10 @@
     "tts_instructions_override": "Make the animals move down when you press the down arrow. ",
     "tts_markdown_instructions_override": "It's time for the Great Animal Race! Make the animals move down when you press the down arrow. Who will run the fastest?",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/a6beb8afec3fcba6d78466c1458af33f=levelbuilder/27785.png",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
