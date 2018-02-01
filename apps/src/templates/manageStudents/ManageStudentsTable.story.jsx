@@ -6,9 +6,11 @@ import manageStudents from './manageStudentsRedux';
 import {Provider} from 'react-redux';
 
 const initialState = {
-  loginType: '',
-  studentData: {},
-  sectionId: null,
+  manageStudents: {
+    loginType: '',
+    studentData: {},
+    sectionId: null,
+  },
 };
 
 // Student names out of alphabetical order to demonstrate
