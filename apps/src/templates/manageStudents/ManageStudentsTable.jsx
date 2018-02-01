@@ -76,13 +76,12 @@ const passwordFormatter = (loginType, {rowData}) => {
         <div>
           {rowData.loginType === SectionLoginType.email &&
             <PasswordReset
-              resetAction={()=>{}}
               initialIsResetting={false}
+              id={rowData.id}
             />
           }
           {(rowData.loginType === SectionLoginType.word || rowData.loginType === SectionLoginType.picture) &&
             <ShowSecret
-              resetSecret={()=>{}}
               initialIsShowing={false}
               secretWord={rowData.secretWords}
               secretPicture={rowData.secretPicturePath}
