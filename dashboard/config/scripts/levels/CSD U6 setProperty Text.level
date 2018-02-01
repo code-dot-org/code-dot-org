@@ -11,7 +11,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Changing the Text\r\n\r\nThe `setProperty` block can be used to changed lots of things about your design elements, including the text they contain.\r\n\r\n# Do This\r\n\r\n* Drag out a `setProperty` block\r\n* For the first parameter, select \"name\" (the element's id)\r\n* For the second parameter, select \"text\" (the property you want to set)\r\n* For the third parameter, write your name in quotes (the value to set)\r\n\r\n_Note: We've removed the Design Mode tab for now so you can practice working with `setProperty`, but it'll come back later once you're building apps of your own._",
+    "markdown_instructions": "# Changing the Text\r\n\r\nThe `setProperty` block can be used to change lots of things about your design elements, including the text they contain.\r\n\r\n# Do This\r\n\r\n* Drag out a `setProperty` block\r\n* For the first parameter, select \"name\" (the element's id)\r\n* For the second parameter, select \"text\" (the property you want to set)\r\n* For the third parameter, write your name in quotes (the value to set)\r\n\r\n_Note: We've removed the Design Mode tab for now so you can practice working with `setProperty`, but it'll come back later once you're building apps of your own._",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "// Change the label \"name\" to display your name",
@@ -49,11 +49,15 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "top_level_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-06 19:30:34 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-06 19:31:43 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"start_html\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-06 19:30:34 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-06 19:31:43 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"start_html\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-02-01 00:10:12 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
