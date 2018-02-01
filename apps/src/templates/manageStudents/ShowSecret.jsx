@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import Button from '../Button';
 import i18n from "@cdo/locale";
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import {setSecretImage} from './manageStudentsRedux';
+import {setSecretImage, setSecretWords} from './manageStudentsRedux';
 
 const styles = {
   reset: {
@@ -23,6 +23,7 @@ class ShowSecret extends Component {
     id: PropTypes.number.isRequired,
     // Provided in redux
     setSecretImage: PropTypes.func.isRequired,
+    setSecretWords: PropTypes.func.isRequired,
   };
 
   state = {
@@ -48,7 +49,11 @@ class ShowSecret extends Component {
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify({secrets: "reset"}),
     }).done((data) => {
-      this.props.setSecretImage(this.props.id, data.secret_picture_path);
+      if (this.props.loginType === SectionLoginType.picture) {
+        this.props.setSecretImage(this.props.id, data.secret_picture_path);
+      } else if (this.props.loginType === SectionLoginType.word) {
+        this.props.setSecretWords(this.props.id, data.secret_words);
+      }
     }).fail((jqXhr, status) => {
       // We may want to handle this more cleanly in the future, but for now this
       // matches the experience we got in angular
@@ -85,5 +90,8 @@ export const UnconnectedShowSecret = ShowSecret;
 export default connect(state => ({}), dispatch => ({
   setSecretImage(id, image) {
     dispatch(setSecretImage(id, image));
+  },
+  setSecretWords(id, words) {
+    dispatch(setSecretWords(id, words));
   },
 }))(ShowSecret);
