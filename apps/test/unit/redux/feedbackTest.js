@@ -14,7 +14,10 @@ describe('feedback redux module', () => {
       blockLimit: undefined,
       achievements: [],
       displayFunometer: true,
-      studentCode: '',
+      studentCode: {
+        message: '',
+        code: '',
+      },
       canShare: false,
     });
   });
