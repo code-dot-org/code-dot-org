@@ -41,10 +41,10 @@
     "disable_if_else_editing": "false",
     "callout_json": "[]",
     "min_collected": "0",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
