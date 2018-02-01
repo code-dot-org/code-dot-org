@@ -24,15 +24,21 @@ export default () => {
   }
 
   if ($('#feature_project').length && dashboard.project.isProjectLevel()) {
-    var deleteUrl = `/featured_projects/${dashboard.project.getCurrentId()}`;
+    var unfeatureUrl = `/featured_projects/${dashboard.project.getCurrentId()}/unfeature`;
     $('#unfeature_project').click(function () {
       $.ajax({
-        url: deleteUrl,
-        type:'DELETE',
+        url: unfeatureUrl,
+        type:'PUT',
         dataType:'json',
+        data: {
+          featured_project: {
+            project_id: dashboard.project.getCurrentId(),
+          }
+        },
         success:function (data){
           $('#unfeature_project').hide();
-          $('#feature_project').show();
+          $('#feature_project').hide();
+          $('#refeature_project').show();
         },
         error:function (data){
           alert("Shucks. Something went wrong - this project is still featured.");
@@ -53,6 +59,29 @@ export default () => {
         success:function (data){
           $('#unfeature_project').show();
           $('#feature_project').hide();
+          $('#refeature_project').hide();
+        },
+        error:function (data){
+          alert("Shucks. Something went wrong - this project wasn't featured.");
+        }
+      });
+    });
+
+    $('#refeature_project').click(function () {
+      var refeatureUrl = `/featured_projects/${dashboard.project.getCurrentId()}/refeature`;
+      $.ajax({
+        url: refeatureUrl,
+        type:'PUT',
+        dataType:'json',
+        data: {
+          featured_project: {
+            project_id: dashboard.project.getCurrentId(),
+          }
+        },
+        success:function (data){
+          $('#unfeature_project').show();
+          $('#feature_project').hide();
+          $('#refeature_project').hide();
         },
         error:function (data){
           alert("Shucks. Something went wrong - this project wasn't featured.");
