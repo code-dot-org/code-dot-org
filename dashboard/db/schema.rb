@@ -699,10 +699,12 @@ ActiveRecord::Schema.define(version: 20180131193225) do
 
   create_table "pd_teachercon1819_registrations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "pd_application_id"
-    t.text     "form_data",         limit: 65535
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.text     "form_data",           limit: 65535
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.integer  "regional_partner_id"
     t.index ["pd_application_id"], name: "index_pd_teachercon1819_registrations_on_pd_application_id", using: :btree
+    t.index ["regional_partner_id"], name: "index_pd_teachercon1819_registrations_on_regional_partner_id", using: :btree
   end
 
   create_table "pd_teachercon_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1412,6 +1414,7 @@ ActiveRecord::Schema.define(version: 20180131193225) do
   add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "pd_payment_terms", "regional_partners"
   add_foreign_key "pd_regional_partner_cohorts", "pd_workshops", column: "summer_workshop_id"
+  add_foreign_key "pd_teachercon1819_registrations", "regional_partners"
   add_foreign_key "pd_workshops", "regional_partners"
   add_foreign_key "peer_reviews", "level_sources"
   add_foreign_key "peer_reviews", "levels"
