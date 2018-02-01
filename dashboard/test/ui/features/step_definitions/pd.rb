@@ -1,13 +1,3 @@
-Given(/^I am a workshop administrator with some applications of each type and status$/) do
-  require_rails_env
-  random_name = "TestWorkshopAdmin" + SecureRandom.hex(10)
-  steps %Q{
-    And I create a teacher named "#{random_name}"
-    And I make the teacher named "#{random_name}" a workshop admin
-    And I create some fake applications of each type and status
-  }
-end
-
 Given(/^I am a facilitator with started and completed courses$/) do
   random_name = "TestFacilitator" + SecureRandom.hex[0..9]
   steps %Q{
@@ -91,46 +81,6 @@ And(/^I make the teacher named "([^"]*)" a workshop organizer$/) do |name|
 
   user = User.find_by(name: name)
   user.permission = UserPermission::WORKSHOP_ORGANIZER
-end
-
-And(/^I make the teacher named "([^"]*)" a workshop admin$/) do |name|
-  require_rails_env
-
-  user = User.find_by(name: name)
-  user.permission = UserPermission::WORKSHOP_ADMIN
-end
-
-And(/^I create some fake applications of each type and status$/) do
-  require_rails_env
-  time_start = Time.now
-
-  # There's no need to create more applications if a lot already exist in the system
-  if Pd::Application::Facilitator1819Application.count < 100
-    %w(csf csd csp).each do |course|
-      Pd::Application::ApplicationBase.statuses.values.each do |status|
-        10.times do
-          teacher = FactoryGirl.create(:teacher, school_info: SchoolInfo.first, email: "teacher_#{SecureRandom.hex}@code.org")
-          application = FactoryGirl.create(:pd_facilitator1819_application, course: course, user: teacher)
-          application.update(status: status)
-        end
-      end
-    end
-  end
-
-  if Pd::Application::Teacher1819Application.count < 100
-    %w(csd csp).each do |course|
-      (Pd::Application::ApplicationBase.statuses.values - ['interview']).each do |status|
-        10.times do
-          teacher = FactoryGirl.create(:teacher, school_info: SchoolInfo.first, email: "teacher_#{SecureRandom.hex}@code.org")
-          application_hash = FactoryGirl.build(:pd_teacher1819_application_hash, course.to_sym, school: School.first)
-          application = FactoryGirl.create(:pd_teacher1819_application, form_data_hash: application_hash, course: course, user: teacher)
-          application.update(status: status)
-        end
-      end
-    end
-  end
-  time_end = Time.now
-  puts "Creating applications took #{time_end - time_start} seconds"
 end
 
 def create_enrollment(workshop, name=nil)
