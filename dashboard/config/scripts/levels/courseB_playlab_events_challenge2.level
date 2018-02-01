@@ -52,10 +52,10 @@
     "project_template_level_name": "courseB_playlab_events_challenge2_template",
     "markdown_instructions": "Let's make the animals disappear when you click on them.\r\nTry playing with the dog now, then help the other animals join in the fun. You can also add sounds and score points to create a game of Animal Tag!\r\n\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/14f72042b069d6dd66c5fe4651d785c4=levelbuilder/24821.png",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "This level validates by checking for a score > 9. If a student builds the envisioned game, they will score 10 points quickly. It is of course possible to exploit this check and have your game counted as successful without building it correctly.\r\n\r\n\"courseB_playlab_events_challenge2_embed\" is a clone of this level but marked as free play without any success conditions. This will let the student play their game as long as they like, unlike the normal puzzle levels that cut them off mid-game to end the level as a win.",

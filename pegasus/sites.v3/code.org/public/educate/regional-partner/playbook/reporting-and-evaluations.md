@@ -11,10 +11,10 @@ nav: regional_partner_playbook_nav
 
 ### Table of Contents
 
-[Annual Report Requirements](#requirements)<br/>
-[Post Workshop Feedback Form](#form)<br/>
-[2016-2017 Data Collection Information](#data)
-[Regional Partner Roadmap](#roadmap)<br/>
+- [Annual Report Requirements](#requirements)<br/>
+- [Post Workshop Feedback Form](#form)<br/>
+- [2016-2017 Data Collection Information](#data)
+- [Regional Partner Roadmap](#roadmap)<br/>
 
 ________________
 <a id="requirements"></a>
