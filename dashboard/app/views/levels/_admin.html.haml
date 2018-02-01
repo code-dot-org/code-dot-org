@@ -77,13 +77,26 @@
         %br/
         - if params[:channel_id]
           - _, channel_id = storage_decrypt_channel_id(params[:channel_id])
-          - featured = FeaturedProject.exists?(:storage_app_id => channel_id)
-          #unfeature_project{'style' => ('display: none;' unless featured)}
-            %button{id: "feature", class: "btn btn-default btn-sm"}
-              Stop featuring in gallery
-          #feature_project{'style' => ('display: none;' if featured)}
+          - exists = FeaturedProject.exists?(:storage_app_id => channel_id)
+          - if exists
+            - project = FeaturedProject.find_by storage_app_id: channel_id
+            - currently_featured = project.unfeatured_at == nil
+            - currently_unfeatured = project.unfeatured_at != nil
+
+          //never featured
+          #feature_project{'style' => ('display: none;' if exists)}
             %button{id: "feature", class: "btn btn-default btn-sm"}
               Feature in gallery
+
+          //currently featured
+          #unfeature_project{'style' => ('display: none;' unless currently_featured)}
+            %button{id: "feature", class: "btn btn-default btn-sm"}
+              Stop featuring in gallery
+
+          //unfeatured, previously featured
+          #refeature_project{'style' => ('display: none;' unless currently_unfeatured)}
+            %button{id: "feature", class: "btn btn-default"}
+              Feature again
 
     - if current_user.permission?(UserPermission::PROJECT_VALIDATOR)
       %br

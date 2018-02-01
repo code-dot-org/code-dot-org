@@ -7,7 +7,8 @@ end
 
 Dashboard::Application.routes.draw do
   resources :featured_projects, only: [:create]
-  delete '/featured_projects/:project_id', controller: 'featured_projects', action: 'destroy_by_project_id'
+  put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
+  put '/featured_projects/:project_id/refeature', to: 'featured_projects#refeature'
 
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 
