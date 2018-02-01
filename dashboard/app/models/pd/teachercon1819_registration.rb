@@ -40,6 +40,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
         'None',
         'Vegetarian',
         'Vegan',
+        'Kosher',
         'Halal',
         'Gluten Free',
         TEXT_FIELDS[:food_allergy],
@@ -154,6 +155,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
           :have_taught_ap,
           :have_taught_written_project_course,
           :grading_system,
+          :how_many_terms
         ]
       elsif pd_application.course === "csd"
         requireds.concat [
