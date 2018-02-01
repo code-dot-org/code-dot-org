@@ -24,7 +24,7 @@ export default () => {
   }
 
   if ($('#feature_project').length && dashboard.project.isProjectLevel()) {
-    var unfeatureUrl = `/featured_projects/${dashboard.project.getCurrentId()}/unfeature`;
+    var unfeatureUrl = `/featured_projects/unfeature`;
     $('#unfeature_project').click(function () {
       $.ajax({
         url: unfeatureUrl,
@@ -68,7 +68,7 @@ export default () => {
     });
 
     $('#refeature_project').click(function () {
-      var refeatureUrl = `/featured_projects/${dashboard.project.getCurrentId()}/refeature`;
+      var refeatureUrl = `/featured_projects/refeature`;
       $.ajax({
         url: refeatureUrl,
         type:'PUT',
