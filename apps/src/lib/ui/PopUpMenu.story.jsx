@@ -3,7 +3,7 @@ import PopUpMenu from './PopUpMenu';
 
 export default storybook => {
   storybook
-      .storiesOf('PopUpMenu')
+      .storiesOf('PopUpMenu', module)
       .addWithInfo('overview', '', () => <Overview/>);
 };
 

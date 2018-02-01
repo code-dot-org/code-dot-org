@@ -28,7 +28,7 @@ const achievements = [
 
 export default storybook =>
   storybook
-    .storiesOf('FinishDialog')
+    .storiesOf('FinishDialog', module)
     .addStoryTable([
       {
         name: 'Dialog with overlay',

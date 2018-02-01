@@ -16,7 +16,7 @@ export default storybook => {
   };
 
   storybook
-    .storiesOf('MakerStatusOverlay')
+    .storiesOf('MakerStatusOverlay', module)
     .addStoryTable([
       {
         name: 'WaitingToConnect',
