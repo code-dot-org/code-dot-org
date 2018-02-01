@@ -99,10 +99,12 @@ export class QuickView extends React.Component {
     });
   }
 
-  getApiUrl = (format) => `/api/v1/pd/applications/quick_view${format}?${$.param(this.getApiParams())}`;
-  getApiParams = () => ({
+  getApiUrl = (format, regionalPartnerFilter) => (
+    `/api/v1/pd/applications/quick_view${format}?${$.param(this.getApiParams(regionalPartnerFilter))}`
+  );
+  getApiParams = (regionalPartnerFilter) => ({
     role: this.props.route.path,
-    regional_partner_filter: this.state.regionalPartnerFilter
+    regional_partner_filter: regionalPartnerFilter
   });
   getJsonUrl = (regionalPartnerFilter) => this.getApiUrl('', regionalPartnerFilter);
   getCsvUrl = (regionalPartnerFilter) => this.getApiUrl('.csv', regionalPartnerFilter);
