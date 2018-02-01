@@ -17,7 +17,7 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 <div class="col-50" style="padding-right: 20px;">
 
-<%=view :display_video_thumbnail, id: "intro_csp", video_code: "jQm0z894CG0", play_button: 'center', letterbox: 'false' %>
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "jQm0z894CG0", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/cs-principles/what-is-cs-principles.mp4" %>
 
 </div>
 
