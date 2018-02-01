@@ -58,11 +58,11 @@ class RegionalPartner < ActiveRecord::Base
   end
 
   def contact
-    User.find(read_attribute(contact_id)) || program_managers.first
+    User.find_by(id: contact_id) || program_managers.first
   end
 
   def contact=(user)
-    write_attribute(:contact_id, user.id)
+    self.contact_id = user.try(:id)
   end
 
   # find a Regional Partner that services a particular region
