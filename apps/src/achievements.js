@@ -4,7 +4,15 @@ import authoredHintUtils from './authoredHintUtils';
 export default function getAchievements(state) {
   return POSSIBLE_ACHIEVEMENTS.map(
     possibleAchievement => possibleAchievement(state)
-  ).filter(achievement => achievement);
+  ).filter(achievement => achievement).sort((achievementA, achievementB) => {
+    if (achievementA.isAchieved && !achievementB.isAchieved) {
+      return -1;
+    } else if (!achievementA.isAchieved && achievementB.isAchieved) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
 }
 
 const POSSIBLE_ACHIEVEMENTS = [

@@ -48,15 +48,17 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "instructions": "\"Let's have a party! Give my friends something to do when you click or tap them.\"",
-    "markdown_instructions": "*\"Let's have a party! Give my friends something to do when you click or tap them.\"*\r\n\r\nWhat will the animals say? What else will happen?\r\n\r\n\r\n\r\nIn this puzzle, make sure to click for hints! The hints will give you fun things to try!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)",
+    "instructions": "Give everyone something to do when you click on them.",
+    "markdown_instructions": "Give everyone something to do when you click on them. What will the animals say? What else will happen?\r\n\r\nIn this puzzle, make sure to click for hints. The hints will give you fun things to try!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)",
     "disable_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/10354ace865b921dae1eaad2e6dd0465=levelbuilder/24830.png",
+    "top_level_procedure_autopopulate": "false",
+    "remove_items_when_actor_collides": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-28 16:06:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-24 19:37:15 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 16:06:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-24 19:37:15 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-01-31 19:21:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
