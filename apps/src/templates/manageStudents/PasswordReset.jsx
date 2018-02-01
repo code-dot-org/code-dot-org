@@ -45,7 +45,6 @@ class PasswordReset extends Component {
         editing_password: true,
       }),
     }).done((data) => {
-      console.log(data);
       this.setState({
         isResetting: false,
         input: ''
