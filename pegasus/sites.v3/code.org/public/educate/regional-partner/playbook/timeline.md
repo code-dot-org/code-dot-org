@@ -10,7 +10,8 @@ table {width: 100%;}
 
 # Implementation Timeline
 
-Need a different format? See updated short list and calendar view [here](https://docs.google.com/document/d/1cubSRIAG5llj-pftmVdZkjKaDHVTE85HO8enUy_mdXo/edit#).
+<br/>
+Need a different format? See more frequently updated short list and calendar view [here](https://docs.google.com/document/d/1cubSRIAG5llj-pftmVdZkjKaDHVTE85HO8enUy_mdXo/edit#).
 
 ## Legend
 
@@ -74,8 +75,9 @@ Need a different format? See updated short list and calendar view [here](https:/
 <br/>
 </p>
 </details>
-
-
+<details>
+  <summary>January</summary>
+  <p>
 
 ## January Areas of Focus
 
@@ -99,7 +101,9 @@ Need a different format? See updated short list and calendar view [here](https:/
 | Ongoing through January | Code.org reviews recommendations, conducts follow-up interviews if there are any red flags, and makes acceptance decisions in collaboration with partners for CS Fundamentals Facilitators |
 | Jan 8, 2018 - Feb 15, 2018| Code.org-trained interviewer and partner co-lead interviews and debriefs begin. Partner stack ranks applicants after all interviews are complete for CS Discoveries and CS Principles facilitators (**Group 3 partners only**) |
 | Jan 23, 2018 - Feb 8, 2018| Code.org reviews recommendations, conducts follow-up interviews if there are any red flags, and makes acceptance decisions in collaboration with partners for CSD and CSP Facilitators (**Group 1 and 2 partners only**)|
-
+<br/>
+</p>
+</details>
 
 ## February Areas of Focus
 

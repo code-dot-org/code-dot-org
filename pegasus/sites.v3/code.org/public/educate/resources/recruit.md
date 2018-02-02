@@ -31,7 +31,7 @@ Hear from current students as they talk about the topics covered in each course 
 <%=view :display_video_thumbnail, id: "intro_csp", video_code: "jQm0z894CG0", play_button: 'center' %>
 
 [**YouTube**](http://www.youtube.com/watch?v=jQm0z894CG0) | 
-[**Download**](https://www.dropbox.com/s/4olrpah7c2jo3gf/CSP_Students_v4.mp4?dl=0)
+[**Download**](https://videos.code.org/cs-principles/what-is-cs-principles.mp4)
 
 [/col-50]
 
@@ -40,9 +40,10 @@ Hear from current students as they talk about the topics covered in each course 
 
 ### **Sign up for CS Discoveries**
 
-<%=view :display_video_thumbnail, id: "signup", video_code: "xgOYvG1WAbM", play_button: 'center' %>
+<%=view :display_video_thumbnail, id: "signup", video_code: "g4qfsH8bc8s", play_button: 'center' %>
 
-[**YouTube**](http://www.youtube.com/watch?v=xgOYvG1WAbM) | [**Download**](https://www.dropbox.com/s/pkj38135cqegu29/CS-high-school-pitch-GENERAL.mp4?dl=0) (new video coming soon)
+[**YouTube**](http://www.youtube.com/watch?v=g4qfsH8bc8s) |
+[**Download**](https://videos.code.org/cs-discoveries/what-is-cs-discoveries.mp4)
 
 [/col-50]
 
@@ -56,7 +57,7 @@ Hear from current students as they talk about the topics covered in each course 
 
 <%=view :display_video_thumbnail, id: "signup", video_code: "xgOYvG1WAbM", play_button: 'center' %>
 
-[**YouTube**](http://www.youtube.com/watch?v=xgOYvG1WAbM) | [**Download**](https://www.dropbox.com/s/pkj38135cqegu29/CS-high-school-pitch-GENERAL.mp4?dl=0) 
+[**YouTube**](http://www.youtube.com/watch?v=xgOYvG1WAbM)
 
 [/col-50]
 
@@ -67,7 +68,8 @@ Hear from current students as they talk about the topics covered in each course 
 
 <%=view :display_video_thumbnail, id: "cs_changing_everything", video_code: "QvyTEx1wyOY", play_button: 'center' %>
 
-[**YouTube**](https://www.youtube.com/watch?time_continue=1&v=QvyTEx1wyOY) 
+[**YouTube**](https://www.youtube.com/watch?time_continue=1&v=QvyTEx1wyOY) |
+[**Download**](https://videos.code.org/social/cs-is-everything.mp4)
 
 [/col-50]
 
