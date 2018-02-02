@@ -757,7 +757,7 @@ module Pd::Application
     def get_first_selected_workshop
       hash = sanitize_form_data_hash
       workshop_ids = hash[:regional_partner_workshop_ids]
-      return nil unless workshop_ids && !workshop_ids.empty?
+      return nil unless workshop_ids.try(:any?)
 
       return Pd::Workshop.find(workshop_ids.first) if workshop_ids.length == 1
 
