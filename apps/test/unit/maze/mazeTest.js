@@ -1,14 +1,14 @@
-import {assert} from '../util/configuredChai';
-var Maze = require('@cdo/apps/maze/maze');
-var MazeMap = require('@cdo/apps/maze/mazeMap');
-var DirtDrawer = require('@cdo/apps/maze/dirtDrawer');
-var Cell = require('@cdo/apps/maze/cell');
-var Farmer = require('@cdo/apps/maze/farmer');
+import { expect } from '../../util/configuredChai';
+import Cell from '@cdo/apps/maze/cell';
+import DirtDrawer from '@cdo/apps/maze/dirtDrawer';
+import Farmer from '@cdo/apps/maze/farmer';
+import Maze from '@cdo/apps/maze/maze';
+import MazeMap from '@cdo/apps/maze/mazeMap';
 
 describe("Maze", function () {
   var dirtMap = [
     [{
-      "tileType": 1
+      "tileType": 2
     }, {
       "tileType": 1,
       "value": 1
@@ -37,27 +37,32 @@ describe("Maze", function () {
       var dirtId = DirtDrawer.cellId('', Maze.pegmanX, Maze.pegmanY);
       var image;
 
-      assert.equal(document.getElementById(dirtId), null, 'image starts out nonexistent');
+      // image starts out nonexistant
+      expect(document.getElementById(dirtId)).to.be.null;
 
       Maze.scheduleFill();
       image = document.getElementById(dirtId);
-      assert.notEqual(image, null, 'image now exists');
-      assert.equal(image.getAttribute('x'), -550, 'image is dirt');
+      // image now exists and is dirt
+      expect(image).not.to.be.null;
+      expect(image.getAttribute('x')).to.equal("-550");
 
       Maze.scheduleDig();
       image = document.getElementById(dirtId);
-      assert.notEqual(image, null, 'image now exists');
-      assert.equal(image.getAttribute('visibility'), 'hidden', 'tile is flat, image is therefore hidden');
+      // tile is flat, image is therefore hidden
+      expect(image).not.to.be.null;
+      expect(image.getAttribute('visibility')).to.equal('hidden');
 
       Maze.scheduleDig();
       image = document.getElementById(dirtId);
-      assert.notEqual(image, null, 'image now exists');
-      assert.equal(image.getAttribute('x'), -500, 'image is a hole');
+      // image is a holde
+      expect(image).not.to.be.null;
+      expect(image.getAttribute('x')).to.equal("-500");
 
       Maze.scheduleFill();
       image = document.getElementById(dirtId);
-      assert.notEqual(image, null, 'image now exists');
-      assert.equal(image.getAttribute('visibility'), 'hidden', 'tile is flat, image is therefore hidden');
+      // tile is flat, image is therefore hidden
+      expect(image).not.to.be.null;
+      expect(image.getAttribute('visibility')).to.equal('hidden');
     });
   });
 });

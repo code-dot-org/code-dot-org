@@ -1,14 +1,14 @@
-import {assert} from '../util/configuredChai';
-var BeeCell = require('@cdo/apps/maze/beeCell');
+import { expect } from '../../util/configuredChai';
+import BeeCell from '@cdo/apps/maze/beeCell';
 
 describe("BeeCell", function () {
   var cellEquals = function (left, right) {
-    assert.equal(left.tileType_, right.tileType_);
-    assert.equal(left.featureType_, right.featureType_);
-    assert.equal(left.originalValue_, right.originalValue_);
-    assert.equal(left.cloudType_, right.cloudType_);
-    assert.equal(left.flowerColor_, right.flowerColor_);
-    assert.equal(left.range_, right.range_);
+    expect(left.tileType_).to.equal(right.tileType_);
+    expect(left.featureType_).to.equal(right.featureType_);
+    expect(left.originalValue_).to.equal(right.originalValue_);
+    expect(left.cloudType_).to.equal(right.cloudType_);
+    expect(left.flowerColor_).to.equal(right.flowerColor_);
+    expect(left.range_).to.equal(right.range_);
   };
 
   it("can parse all formerly-valid map values", function () {
@@ -31,7 +31,7 @@ describe("BeeCell", function () {
   it("generates all possible grid assets", function () {
     var validate = function (original, expected) {
       var assets = original.getPossibleGridAssets();
-      assert.equal(assets.length, expected.length);
+      expect(assets.length).to.equal(expected.length);
       assets.forEach(function (asset, i) {
         cellEquals(asset, expected[i]);
       });
