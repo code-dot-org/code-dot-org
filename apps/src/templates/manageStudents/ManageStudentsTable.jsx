@@ -106,6 +106,7 @@ const actionsFormatter = function (actions, {rowData}) {
       id={rowData.id}
       sectionId={rowData.sectionId}
       isEditing={rowData.isEditing}
+      isSaving={rowData.isSaving}
     />
   );
 };

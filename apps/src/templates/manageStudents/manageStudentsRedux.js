@@ -19,7 +19,6 @@ export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
 export const setStudents = studentData => ({ type: SET_STUDENTS, studentData });
 export const startEditingStudent = (studentId) => ({ type: START_EDITING_STUDENT, studentId });
 export const cancelEditingStudent = (studentId) => ({ type: CANCEL_EDITING_STUDENT, studentId });
-export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
 export const removeStudent = (studentId) => ({ type: REMOVE_STUDENT, studentId });
 export const setSecretImage = (studentId, image) => ({ type: SET_SECRET_IMAGE, studentId, image });
 export const setSecretWords = (studentId, words) => ({ type: SET_SECRET_WORDS, studentId, words });
@@ -27,12 +26,12 @@ export const editName = (studentId, name) => ({ type: EDIT_NAME, studentId, name
 export const editAge = (studentId, age) => ({ type: EDIT_AGE, studentId, age });
 export const editGender = (studentId, gender) => ({ type: EDIT_GENDER, studentId, gender });
 
-export const startSavingStudent = (studentId) => {
+export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
     dispatch({ type: START_SAVING_STUDENT, studentId });
     updateStudentOnServer(state.editingData[studentId], () => {
-      dispatch(saveStudentSuccess(studentId));
+      dispatch({ type: SAVE_STUDENT_SUCCESS, studentId });
     });
   };
 };
@@ -114,7 +113,8 @@ export default function manageStudents(state=initialState, action) {
         [action.studentId]: {
           ...state.studentData[action.studentId],
           ...state.editingData[action.studentId],
-          isEditing: false
+          isEditing: false,
+          isSaving: false,
         }
       },
       editingData: _.omit(state.editingData, action.studentId),
