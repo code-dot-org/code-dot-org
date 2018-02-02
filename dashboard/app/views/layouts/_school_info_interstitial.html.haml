@@ -1,12 +1,8 @@
-#school-info-modal.modal{'data-backdrop' => 'static', 'data-keyboard' => 'false'}
-  .modal-dialog
-    .modal-content.no-modal-icon
-      %h2.custom-h2= t('school_info_interstitial.title')
-
-      %h3= t('school_info_interstitial.message')
-      .left.full-width
-        = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
-          #schooldropdown-block.itemblock{style: "margin-left: -10px; background-color: #ffffff;  border-style: none;"}
-            = render partial: 'shared/school_info_interstitial', locals: {form_name: "user[school_info_attributes]", existing_school_info: nil, suppress_scrolling: true}
-          = f.submit t('school_info_interstitial.save'), id: 'school-info-submit', class: 'btn primary-button'
-          = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)
+-# Rendering this partial causes the school info interstitial to be shown to the
+-# user.  Rendering this partial into a cached view may not work properly.
+- content_for(:head) do
+  - script_data = {}
+  - script_data['formUrl'] = registration_url('user')
+  - script_data['authTokenName'] = request_forgery_protection_token.to_s
+  - script_data['authTokenValue'] = form_authenticity_token
+  %script{ src: minifiable_asset_path('js/schoolInfoInterstitial.js'), data: {schoolinfointerstitial: script_data.to_json}}

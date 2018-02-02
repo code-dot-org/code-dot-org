@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
+import $ from 'jquery';
 import i18n from '@cdo/locale';
 import color from '../../util/color';
 import BaseDialog from '../../templates/BaseDialog';
@@ -34,47 +35,90 @@ const styles = {
 
 export default class SchoolInfoInterstitial extends React.Component {
   static propTypes = {
+    formUrl: PropTypes.string.isRequired,
+    authTokenName: PropTypes.string.isRequired,
+    authTokenValue: PropTypes.string.isRequired,
+    afterClose: PropTypes.func.isRequired,
+  };
 
+  static defaultProps = {
+    afterClose: function () {},
   };
 
   state = {
     country: '',
     schoolType: '',
-    ncesSchoolId: '',
     schoolName: '',
-    schoolCity: '',
     schoolState: '',
     schoolZip: '',
+    schoolLocation: '',
+    ncesSchoolId: '',
   };
 
-  onCountryChange(_, event) {
+  handleSchoolInfoSubmit = () => {
+    if (this.schoolInfoInputs.isValid()) {
+      let schoolData;
+      if (this.state.ncesSchoolId === '-1') {
+        schoolData = {
+          "user[school_info_attributes][country]": this.state.country,
+          "user[school_info_attributes][school_type]": this.state.schoolType,
+          "user[school_info_attributes][school_name]": this.state.schoolName,
+          "user[school_info_attributes][school_state]": this.state.schoolState,
+          "user[school_info_attributes][school_zip]": this.state.schoolZip,
+          "user[school_info_attributes][full_address]": this.state.schoolLocation,
+        };
+      } else {
+        schoolData = {
+          "user[school_info_attributes][school_id]": this.state.ncesSchoolId,
+        };
+      }
+      $.post({
+        url: this.props.formUrl,
+        dataType: "json",
+        data: {
+          [this.props.authTokenName]: this.props.authTokenValue,
+          ...schoolData,
+        },
+      }).done(this.hideSchoolInfoForm).fail(this.updateSchoolInfoError);
+    } else {
+      this.setState({
+        showSchoolInfoErrors: true,
+      });
+    }
+  };
+
+  close = () => {
+    this.props.afterClose();
+  };
+
+  onCountryChange = (_, event) => {
     const newCountry = event ? event.value : '';
     this.setState({country: newCountry});
-  }
+  };
 
-  onSchoolTypeChange(event) {
+  onSchoolTypeChange = (event) => {
     const newType = event ? event.target.value : '';
     this.setState({schoolType: newType});
-  }
+  };
 
-  onSchoolChange(_, event) {
+  onSchoolChange = (_, event) => {
     const newSchool = event ? event.value : '';
     this.setState({ncesSchoolId: newSchool});
-  }
+  };
 
-  onSchoolNotFoundChange(field, event) {
+  onSchoolNotFoundChange = (field, event) => {
     let newValue = event ? event.target.value : '';
     this.setState({
       [field]: newValue
     });
-  }
+  };
 
   render() {
     return (
       <BaseDialog
         useUpdatedStyles
         isOpen={true}
-        handleClose={() => {}}
+        handleClose={this.close}
         uncloseable
       >
         <div style={styles.container}>
@@ -86,25 +130,26 @@ export default class SchoolInfoInterstitial extends React.Component {
               Please enter your school information below.
             </p>
             <SchoolInfoInputs
-              useGoogleLocationSearch={false}
-              onCountryChange={this.onCountryChange.bind(this)}
-              onSchoolTypeChange={this.onSchoolTypeChange.bind(this)}
-              onSchoolChange={this.onSchoolChange.bind(this)}
-              onSchoolNotFoundChange={this.onSchoolNotFoundChange.bind(this)}
+              ref={ref => this.schoolInfoInputs = ref}
+              onCountryChange={this.onCountryChange}
+              onSchoolTypeChange={this.onSchoolTypeChange}
+              onSchoolChange={this.onSchoolChange}
+              onSchoolNotFoundChange={this.onSchoolNotFoundChange}
               country={this.state.country}
               schoolType={this.state.schoolType}
               ncesSchoolId={this.state.ncesSchoolId}
               schoolName={this.state.schoolName}
-              schoolCity={this.state.schoolCity}
               schoolState={this.state.schoolState}
               schoolZip={this.state.schoolZip}
+              schoolLocation={this.state.schoolLocation}
+              useGoogleLocationSearch={false}
               showErrors={false}
               showRequiredIndicator={false}
             />
           </div>
           <div style={styles.bottom}>
             <Button
-              href={`/users/sign_up?user_return_to=${location.pathname}`}
+              onClick={this.handleSchoolInfoSubmit}
               text={i18n.save()}
               color={Button.ButtonColor.orange}
             />
