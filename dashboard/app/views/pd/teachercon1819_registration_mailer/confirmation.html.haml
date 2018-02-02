@@ -14,7 +14,7 @@
     - info_link = "code.org/educate/teachercon/#{@registration.pd_application.workshop.location_city.downcase}"
     = link_to(info_link, "https://#{info_link}")
     to learn more about your upcoming TeacherCon experience, and check out
-    - info_link = "https://code.org/files/2018-#{@registration.pd_application.course.upcase}Teacher-WelcomeKit.pdf"
+    - welcome_kit_link = "https://code.org/files/2018-#{@registration.pd_application.course.upcase}Teacher-WelcomeKit.pdf"
     = link_to("your Welcome Kit", welcome_kit_link)
     for information about the Professional Learning Program and resources to
     help you recruit students for your course.

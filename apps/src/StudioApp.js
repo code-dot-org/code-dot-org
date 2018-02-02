@@ -1200,7 +1200,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
 */
 StudioApp.prototype.onResize = function () {
   const codeWorkspace = document.getElementById('codeWorkspace');
-  if (codeWorkspace) {
+  if (codeWorkspace && $(codeWorkspace).is(':visible')) {
     var workspaceWidth = codeWorkspace.clientWidth;
 
     // Keep blocks static relative to the right edge in RTL mode
