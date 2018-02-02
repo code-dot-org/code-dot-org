@@ -38,9 +38,12 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
   after_create :send_teachercon_confirmation_email
   def send_teachercon_confirmation_email
-    return unless pd_application.workshop && pd_application.workshop.teachercon?
-
-    Pd::Teachercon1819RegistrationMailer.send(pd_application.application_type.downcase, self).deliver_now
+    if regional_partner_id?
+      Pd::Teachercon1819RegistrationMailer.regional_partner(self).deliver_now
+    else
+      return unless pd_application.workshop && pd_application.workshop.teachercon?
+      Pd::Teachercon1819RegistrationMailer.send(pd_application.application_type.downcase, self).deliver_now
+    end
   end
 
   def self.options
