@@ -159,10 +159,6 @@ GameLab.prototype.init = function (config) {
     throw new Error("GameLab requires a StudioApp");
   }
 
-  if (!config.level.editCode) {
-    throw 'Game Lab requires Droplet';
-  }
-
   this.skin = config.skin;
   this.skin.smallStaticAvatar = null;
   this.skin.staticAvatar = null;
@@ -510,7 +506,7 @@ GameLab.prototype.reset = function (ignore) {
   }
 };
 
-GameLab.prototype.onPuzzleComplete = function (submit ) {
+GameLab.prototype.onPuzzleComplete = function (submit) {
   if (this.executionError) {
     this.result = ResultType.ERROR;
   } else {
@@ -540,7 +536,7 @@ GameLab.prototype.onPuzzleComplete = function (submit ) {
     // shows Continue (the proper results will be reported to the service)
     this.testResults = TestResults.ALL_PASS;
     this.message = containedLevelResultsInfo.feedback;
-  } else {
+  } else if (this.level.editCode) {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
@@ -549,6 +545,10 @@ GameLab.prototype.onPuzzleComplete = function (submit ) {
 
     program = encodeURIComponent(this.studioApp_.getCode());
     this.message = null;
+  } else {
+    // We're using blockly, report the program as xml
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = encodeURIComponent(Blockly.Xml.domToText(xml));
   }
 
   if (this.testResults >= TestResults.FREE_PLAY) {
@@ -774,7 +774,7 @@ GameLab.prototype.execute = function () {
       (this.studioApp_.hasUnwantedExtraTopBlocks() ||
         this.studioApp_.hasDuplicateVariablesInForLoops())) {
     // immediately check answer, which will fail and report top level blocks
-    this.onPuzzleComplete();
+    this.onPuzzleComplete(false);
     return;
   }
 

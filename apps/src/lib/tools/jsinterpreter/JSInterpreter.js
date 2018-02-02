@@ -135,7 +135,7 @@ export default class JSInterpreter {
   parse(options) {
     this.calculateCodeInfo(options.code);
 
-    if (!this.studioApp.hideSource) {
+    if (!this.studioApp.hideSource && this.studioApp.editor) {
       const session = this.studioApp.editor.aceEditor.getSession();
       this.isBreakpointRow = (row) => codegen.isAceBreakpointRow(session, row);
     } else {
