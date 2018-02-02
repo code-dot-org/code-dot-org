@@ -119,7 +119,7 @@ module.exports = {
   levelId: "ec_simple",
   tests: [
     {
-      description: "button image name with spaces and parens",
+      description: "button image",
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
@@ -131,8 +131,8 @@ module.exports = {
         assertPropertyRowValue(4, 'x position (px)', 10, assert);
 
         // take advantage of the fact that we expose the filesystem via
-        var assetUrl = '/base/test/integration/assets/applab-channel-id/flappy (1).png';
-        var encodedAssetUrl = '/base/test/integration/assets/applab-channel-id/flappy%20%281%29.png';
+        var assetUrl = '/base/test/integration/assets/applab-channel-id/flappy promo.png';
+        var encodedAssetUrl = '/base/test/integration/assets/applab-channel-id/flappy%20promo.png';
         var imageInput = $("#propertyRowContainer input").last()[0];
 
         var buttonElement = $("#design_button1")[0];
