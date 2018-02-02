@@ -15,6 +15,7 @@ class Pd::Teachercon1819RegistrationMailer < ActionMailer::Base
 
     mail(
       to: registration.pd_application.user.email,
+      from: 'Sarah Fairweather <facilitators@code.org>',
       subject: "We've received your TeacherCon registration form"
     )
   end
