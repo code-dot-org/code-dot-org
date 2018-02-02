@@ -1,11 +1,15 @@
 import React, {Component, PropTypes} from 'react';
 import {ages} from '../AgeDropdown';
+import {connect} from 'react-redux';
+import {editAge} from './manageStudentsRedux';
 
 class ManageStudentAgeCell extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
     age: PropTypes.number,
     isEditing: PropTypes.bool,
+    // Provided by redux
+    editAge: PropTypes.func.isRequired,
   };
 
   state = {
@@ -13,7 +17,9 @@ class ManageStudentAgeCell extends Component {
   };
 
   onChangeAge = (e) => {
-    this.setState({ageValue: e.target.value});
+    const newAge = e.target.value;
+    this.setState({ageValue: newAge});
+    this.props.editAge(this.props.id, newAge);
   };
 
   render() {
@@ -39,4 +45,8 @@ class ManageStudentAgeCell extends Component {
   }
 }
 
-export default ManageStudentAgeCell;
+export default connect(state => ({}), dispatch => ({
+  editAge(id, age) {
+    dispatch(editAge(id, age));
+  },
+}))(ManageStudentAgeCell);
