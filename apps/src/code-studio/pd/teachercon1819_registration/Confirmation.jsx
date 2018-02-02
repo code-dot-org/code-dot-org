@@ -41,6 +41,10 @@ export default class Confirmation extends Teachercon1819FormComponent {
             look forward to meeting you this summer!
           </p>
         }
+
+        <h3>
+          Please click Submit to complete your registration.
+        </h3>
       </FormGroup>
     );
   }
