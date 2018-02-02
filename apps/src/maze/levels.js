@@ -1,10 +1,10 @@
-var Direction = require('./tiles').Direction;
-var karelLevels = require('./karelLevels');
-var wordsearchLevels = require('./wordsearchLevels');
-var reqBlocks = require('./requiredBlocks');
-var blockUtils = require('../block_utils');
-var utils = require('../utils');
-var mazeMsg = require('./locale');
+import {Direction} from './tiles';
+import karelLevels from './karelLevels';
+import wordsearchLevels from './wordsearchLevels';
+import reqBlocks from './requiredBlocks';
+import blockUtils from '../block_utils';
+import utils from '../utils';
+import mazeMsg from './locale';
 
 //TODO: Fix hacky level-number-dependent toolbox.
 var toolbox = function (page, level) {
@@ -25,7 +25,7 @@ var startBlocks = function (page, level) {
 /*
  * Configuration for all levels.
  */
-module.exports = {
+export default {
 
   // Formerly Page 2
 

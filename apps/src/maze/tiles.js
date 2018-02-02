@@ -1,4 +1,4 @@
-var utils = require('../utils');
+import utils from '../utils';
 
 var Tiles = module.exports;
 

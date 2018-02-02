@@ -2,8 +2,9 @@
  * Blocks specific to Bee
  */
 
-var msg = require('./locale');
-var blockUtils = require('../block_utils');
+import msg from './locale';
+
+import { generateSimpleBlock } from '../block_utils';
 
 var OPERATORS = [
   ['=', '=='],
@@ -18,7 +19,7 @@ var TOOLTIPS = {
 };
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function (blockly, blockInstallOptions) {
+export function install(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
 
@@ -49,7 +50,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [[msg.nectarRemaining(), 'nectarRemaining'],
      [msg.honeyAvailable(), 'honeyAvailable']]);
 
-  blockUtils.generateSimpleBlock(blockly, generator, {
+  generateSimpleBlock(blockly, generator, {
     name: 'maze_nectar',
     helpUrl: '',
     title: isK1 ? msg.get() : msg.nectar(),
@@ -58,7 +59,7 @@ exports.install = function (blockly, blockInstallOptions) {
     functionName: 'Maze.getNectar'
   });
 
-  blockUtils.generateSimpleBlock(blockly, generator, {
+  generateSimpleBlock(blockly, generator, {
     name: 'maze_honey',
     helpUrl: '',
     title: isK1 ? msg.make() : msg.honey(),
@@ -66,7 +67,7 @@ exports.install = function (blockly, blockInstallOptions) {
     tooltip: msg.honeyTooltip(),
     functionName: 'Maze.makeHoney'
   });
-};
+}
 
 /**
  * Are we at a flower

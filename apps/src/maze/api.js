@@ -1,9 +1,11 @@
-var tiles = require('./tiles');
-var Direction = tiles.Direction;
-var MoveDirection = tiles.MoveDirection;
-var TurnDirection = tiles.TurnDirection;
-var SquareType = tiles.SquareType;
-var utils = require('../utils');
+import {
+  Direction,
+  MoveDirection,
+  TurnDirection,
+  SquareType,
+  constrainDirection4,
+} from './tiles';
+import utils from '../utils';
 
 /**
  * Only call API functions if we haven't yet terminated execution
@@ -26,7 +28,7 @@ var isPath = function (direction, id) {
   var effectiveDirection = Maze.pegmanD + direction;
   var square;
   var command;
-  switch (tiles.constrainDirection4(effectiveDirection)) {
+  switch (constrainDirection4(effectiveDirection)) {
     case Direction.NORTH:
       square = Maze.map.getTile(Maze.pegmanY - 1, Maze.pegmanX);
       command = 'look_north';
@@ -68,7 +70,7 @@ var move = function (direction, id) {
   // If moving backward, flip the effective direction.
   var effectiveDirection = Maze.pegmanD + direction;
   var command;
-  switch (tiles.constrainDirection4(effectiveDirection)) {
+  switch (constrainDirection4(effectiveDirection)) {
     case Direction.NORTH:
       Maze.pegmanY--;
       command = 'north';
@@ -110,7 +112,7 @@ var turn = function (direction, id) {
     Maze.pegmanD += TurnDirection.LEFT;
     Maze.executionInfo.queueAction('left', id);
   }
-  Maze.pegmanD = tiles.constrainDirection4(Maze.pegmanD);
+  Maze.pegmanD = constrainDirection4(Maze.pegmanD);
 };
 
 /**
@@ -134,11 +136,11 @@ var turnTo = function (newDirection, id) {
 };
 
 function isLeftTurn(direction, newDirection) {
-  return newDirection === tiles.constrainDirection4(direction + TurnDirection.LEFT);
+  return newDirection === constrainDirection4(direction + TurnDirection.LEFT);
 }
 
 function isRightTurn(direction, newDirection) {
-  return newDirection === tiles.constrainDirection4(direction + TurnDirection.RIGHT);
+  return newDirection === constrainDirection4(direction + TurnDirection.RIGHT);
 }
 
 /**
@@ -158,143 +160,142 @@ function moveAbsoluteDirection(direction, id) {
   Maze.executionInfo.stopCollecting();
 }
 
-exports.moveForward = API_FUNCTION(function (id) {
+export var moveForward = API_FUNCTION(function (id) {
   move(MoveDirection.FORWARD, id);
 });
 
-exports.moveBackward = API_FUNCTION(function (id) {
+export var moveBackward = API_FUNCTION(function (id) {
   move(MoveDirection.BACKWARD, id);
 });
 
-exports.moveNorth = API_FUNCTION(function (id) {
+export var moveNorth = API_FUNCTION(function (id) {
   moveAbsoluteDirection(Direction.NORTH, id);
 });
 
-exports.moveSouth = API_FUNCTION(function (id) {
+export var moveSouth = API_FUNCTION(function (id) {
   moveAbsoluteDirection(Direction.SOUTH, id);
 });
 
-exports.moveEast = API_FUNCTION(function (id) {
+export var moveEast = API_FUNCTION(function (id) {
   moveAbsoluteDirection(Direction.EAST, id);
 });
 
-exports.moveWest = API_FUNCTION(function (id) {
+export var moveWest = API_FUNCTION(function (id) {
   moveAbsoluteDirection(Direction.WEST, id);
 });
 
-exports.turnLeft = API_FUNCTION(function (id) {
+export var turnLeft = API_FUNCTION(function (id) {
   turn(TurnDirection.LEFT, id);
 });
 
-exports.turnRight = API_FUNCTION(function (id) {
+export var turnRight = API_FUNCTION(function (id) {
   turn(TurnDirection.RIGHT, id);
 });
 
-exports.isPathForward = API_FUNCTION(function (id) {
+export var isPathForward = API_FUNCTION(function (id) {
   return isPath(MoveDirection.FORWARD, id);
 });
-exports.noPathForward = API_FUNCTION(function (id) {
+
+export var noPathForward = API_FUNCTION(function (id) {
   return !isPath(MoveDirection.FORWARD, id);
 });
 
-exports.isPathRight = API_FUNCTION(function (id) {
+export var isPathRight = API_FUNCTION(function (id) {
   return isPath(MoveDirection.RIGHT, id);
 });
 
-exports.isPathBackward = API_FUNCTION(function (id) {
+export var isPathBackward = API_FUNCTION(function (id) {
   return isPath(MoveDirection.BACKWARD, id);
 });
 
-exports.isPathLeft = API_FUNCTION(function (id) {
+export var isPathLeft = API_FUNCTION(function (id) {
   return isPath(MoveDirection.LEFT, id);
 });
 
-exports.pilePresent = API_FUNCTION(function (id) {
+export var pilePresent = API_FUNCTION(function (id) {
   var x = Maze.pegmanX;
   var y = Maze.pegmanY;
   return Maze.map.isDirt(y, x) && Maze.map.getValue(y, x) > 0;
 });
 
-exports.holePresent = API_FUNCTION(function (id) {
+export var holePresent = API_FUNCTION(function (id) {
   var x = Maze.pegmanX;
   var y = Maze.pegmanY;
   return Maze.map.isDirt(y, x) && Maze.map.getValue(y, x) < 0;
 });
 
-exports.currentPositionNotClear = API_FUNCTION(function (id) {
+export var currentPositionNotClear = API_FUNCTION(function (id) {
   var x = Maze.pegmanX;
   var y = Maze.pegmanY;
   return Maze.map.isDirt(y, x) && Maze.map.getValue(y, x) !== 0;
 });
 
-exports.fill = API_FUNCTION(function (id) {
+export var fill = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction('putdown', id);
   var x = Maze.pegmanX;
   var y = Maze.pegmanY;
   Maze.map.setValue(y, x, Maze.map.getValue(y, x) + 1);
 });
 
-exports.dig = API_FUNCTION(function (id) {
+export var dig = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction('pickup', id);
   var x = Maze.pegmanX;
   var y = Maze.pegmanY;
   Maze.map.setValue(y, x, Maze.map.getValue(y, x) - 1);
 });
 
-exports.notFinished = API_FUNCTION(function () {
+export var notFinished = API_FUNCTION(function () {
   return !Maze.checkSuccess();
 });
 
 // The code for this API should get stripped when showing code
-exports.loopHighlight = API_FUNCTION(function (id) {
+export var loopHighlight = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction('null', id);
 });
-
-
 
 /**
  * Bee related API functions. If better modularized, we could potentially
  * separate these out, but as things stand right now they will be loaded
  * whether or not we're a Bee level
  */
-exports.getNectar = API_FUNCTION(function (id) {
+export var getNectar = API_FUNCTION(function (id) {
   Maze.subtype.getNectar(id);
 });
 
-exports.makeHoney = API_FUNCTION(function (id) {
+export var makeHoney = API_FUNCTION(function (id) {
   Maze.subtype.makeHoney(id);
 });
 
-exports.atFlower = API_FUNCTION(function (id) {
+export var atFlower = API_FUNCTION(function (id) {
   var col = Maze.pegmanX;
   var row = Maze.pegmanY;
   Maze.executionInfo.queueAction("at_flower", id);
   return Maze.subtype.isFlower(row, col, true);
 });
 
-exports.atHoneycomb = API_FUNCTION(function (id) {
+export var atHoneycomb = API_FUNCTION(function (id) {
   var col = Maze.pegmanX;
   var row = Maze.pegmanY;
   Maze.executionInfo.queueAction("at_honeycomb", id);
   return Maze.subtype.isHive(row, col, true);
 });
 
-exports.nectarRemaining = API_FUNCTION(function (id) {
+export var nectarRemaining = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction("nectar_remaining", id);
   return Maze.subtype.nectarRemaining(true);
 });
 
-exports.honeyAvailable = API_FUNCTION(function (id) {
+export var honeyAvailable = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction("honey_available", id);
   return Maze.subtype.honeyAvailable();
 });
 
-exports.nectarCollected = API_FUNCTION(function (id) {
+export var nectarCollected = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction("nectar_collected", id);
   return Maze.subtype.nectars_.length;
 });
 
-exports.honeyCreated = API_FUNCTION(function (id) {
+export var honeyCreated = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction("honey_created", id);
   return Maze.subtype.honey_;
 });
@@ -303,39 +304,39 @@ exports.honeyCreated = API_FUNCTION(function (id) {
  * Harvester
  */
 
-exports.getCorn = API_FUNCTION(function (id) {
+export var getCorn = API_FUNCTION(function (id) {
   Maze.subtype.getCorn(id);
 });
 
-exports.getPumpkin = API_FUNCTION(function (id) {
+export var getPumpkin = API_FUNCTION(function (id) {
   Maze.subtype.getPumpkin(id);
 });
 
-exports.getLettuce = API_FUNCTION(function (id) {
+export var getLettuce = API_FUNCTION(function (id) {
   Maze.subtype.getLettuce(id);
 });
 
-exports.atCorn = API_FUNCTION(function (id) {
+export var atCorn = API_FUNCTION(function (id) {
   return Maze.subtype.atCorn(id);
 });
 
-exports.atPumpkin = API_FUNCTION(function (id) {
+export var atPumpkin = API_FUNCTION(function (id) {
   return Maze.subtype.atPumpkin(id);
 });
 
-exports.atLettuce = API_FUNCTION(function (id) {
+export var atLettuce = API_FUNCTION(function (id) {
   return Maze.subtype.atLettuce(id);
 });
 
-exports.hasCorn = API_FUNCTION(function (id) {
+export var hasCorn = API_FUNCTION(function (id) {
   return Maze.subtype.hasCorn(id);
 });
 
-exports.hasPumpkin = API_FUNCTION(function (id) {
+export var hasPumpkin = API_FUNCTION(function (id) {
   return Maze.subtype.hasPumpkin(id);
 });
 
-exports.hasLettuce = API_FUNCTION(function (id) {
+export var hasLettuce = API_FUNCTION(function (id) {
   return Maze.subtype.hasLettuce(id);
 });
 
@@ -343,15 +344,15 @@ exports.hasLettuce = API_FUNCTION(function (id) {
  * Planter
  */
 
-exports.plant = API_FUNCTION(function (id) {
+export var plant = API_FUNCTION(function (id) {
   Maze.subtype.plant(id);
 });
 
-exports.atSoil = API_FUNCTION(function (id) {
+export var atSoil = API_FUNCTION(function (id) {
   return Maze.subtype.atSoil(id);
 });
 
-exports.atSprout = API_FUNCTION(function (id) {
+export var atSprout = API_FUNCTION(function (id) {
   return Maze.subtype.atSprout(id);
 });
 
@@ -359,7 +360,7 @@ exports.atSprout = API_FUNCTION(function (id) {
  * Collector
  */
 
-exports.collect = API_FUNCTION(function (id) {
+export var collect = API_FUNCTION(function (id) {
   var col = Maze.pegmanX;
   var row = Maze.pegmanY;
   Maze.subtype.collect(id, row, col);
