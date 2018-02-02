@@ -154,6 +154,8 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
           :how_offer_csp,
           :have_taught_ap,
           :have_taught_written_project_course,
+          :how_many_hours,
+          :how_many_terms,
           :grading_system
         ]
       elsif pd_application.course === "csd"
