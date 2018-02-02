@@ -39,6 +39,7 @@
 
 module Pd::Application
   class WorkshopAutoenrolledApplication < ApplicationBase
+    include RegionalPartnerTeacherconMapping
     include SerializedProperties
 
     serialized_attrs %w(
@@ -93,6 +94,12 @@ module Pd::Application
     def workshop_course
       return Pd::Workshop::COURSE_CSD if course == 'csd'
       return Pd::Workshop::COURSE_CSP if course == 'csp'
+    end
+
+    # Assigns the default workshop, if one is not yet assigned
+    def assign_default_workshop!
+      return if pd_workshop_id
+      update! pd_workshop_id: find_default_workshop.try(:id)
     end
 
     def find_default_workshop

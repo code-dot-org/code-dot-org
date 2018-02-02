@@ -11,6 +11,7 @@ nav: regional_partner_playbook_nav
 - [Teacher Outreach](#teachout)
 - [District Outreach](#district)
 
+Compiled document of all Teacher Recruitment Resources and Strategies **[here](https://docs.google.com/document/d/1pNyPvt54ACH7sfA0f13_-CZGQ4m-VhcH4NorEIhdx24/edit?ts=5a6baf6c#heading=h.a8j457kayvro)**.
 
 ________________
 <a id="teachapp"></a>

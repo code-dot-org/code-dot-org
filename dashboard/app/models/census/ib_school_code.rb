@@ -17,6 +17,7 @@ class Census::IbSchoolCode < ApplicationRecord
   self.primary_key = :school_code
 
   belongs_to :school, required: true
+  has_many :ib_cs_offering, foreign_key: :school_code, primary_key: :school_code
 
   validates :school_code, presence: true, length: {is: 6}, format: {with: /\A[0-9]+\z/, message: "only allows numbers"}
 
