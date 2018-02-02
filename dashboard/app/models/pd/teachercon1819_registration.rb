@@ -45,7 +45,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
   def self.options
     {
-      dietaryNeeds: [
+      dietary_needs: [
         'None',
         'Vegetarian',
         'Vegan',
@@ -54,51 +54,51 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
         'Gluten Free',
         TEXT_FIELDS[:food_allergy],
       ],
-      liveFarAway: YES_OR_NO,
-      addressState: get_all_states_with_dc.to_h.values,
-      howTraveling: [
+      live_far_away: YES_OR_NO,
+      address_state: get_all_states_with_dc.to_h.values,
+      how_traveling: [
         'I will drive by myself',
         'I will carpool with another TeacherCon attendee',
         'Flying',
         'Amtrak or regional train service',
         'Public transit (e.g., city bus or light rail)',
       ],
-      needHotel: YES_OR_NO,
-      needAda: [YES, NO, TEXT_FIELDS[:other_please_explain]],
-      ableToAttend: YES_OR_NO,
-      teacherAcceptSeat: [
+      need_hotel: YES_OR_NO,
+      need_ada: [YES, NO, TEXT_FIELDS[:other_please_explain]],
+      able_to_attend: YES_OR_NO,
+      teacher_accept_seat: [
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept],
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_date],
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_other],
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline],
       ],
-      howOfferCsp: [
+      how_offer_csp: [
         "As an AP course",
         "As a non-AP course",
         "Both: I will teach multiple sections, some as AP and some as non-AP",
         "I'm not sure",
       ],
-      haveTaughtAp: [
+      have_taught_ap: [
         YES, NO,
         "I'm not sure",
       ],
-      haveTaughtWrittenProjectCourse: [
+      have_taught_written_project_course: [
         YES, NO,
         "I'm not sure",
       ],
-      gradingSystem: [
+      grading_system: [
         'Numerical and/or letter grades (e.g., 0 - 100% or F- A)',
         'Rank-based grading (distribute grades based on student rank)',
         'Standards-based grading (grades assigned based on exceeding, meeting, or falling below the standard)',
         TEXT_FIELDS[:other_please_list]
       ],
-      howManyHours: [
+      how_many_hours: [
         "At least 100 course hours",
         "50 to 99 course hours",
         "Less than 50 course hours",
         "I'm not sure",
       ],
-      howManyTerms: [
+      how_many_terms: [
         "1 quarter",
         "1 trimester",
         "1 semester",
@@ -106,8 +106,8 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
         "Full year",
         "I'm not sure",
       ],
-      photoRelease: [YES],
-      liabilityWaiver: [YES],
+      photo_release: [YES],
+      liability_waiver: [YES],
     }.freeze
   end
 
