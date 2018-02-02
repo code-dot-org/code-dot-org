@@ -1,5 +1,6 @@
 import React from 'react';
 import {ImportProjectDialog} from './ImportProjectDialog';
+import {action} from '@storybook/addon-actions';
 
 export default storybook => {
     storybook
@@ -10,7 +11,7 @@ export default storybook => {
           story: () => (
             <ImportProjectDialog
               hideBackdrop
-              onImport={storybook.action("onImport")}
+              onImport={action("onImport")}
             />
           )
         }, {
@@ -19,7 +20,7 @@ export default storybook => {
             <ImportProjectDialog
               hideBackdrop
               isFetching
-              onImport={storybook.action("onImport")}
+              onImport={action("onImport")}
             />
           )
         }, {
@@ -28,7 +29,7 @@ export default storybook => {
             <ImportProjectDialog
               hideBackdrop
               error
-              onImport={storybook.action("onImport")}
+              onImport={action("onImport")}
             />
           )
         },
