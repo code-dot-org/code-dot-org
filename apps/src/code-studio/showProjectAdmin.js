@@ -25,15 +25,11 @@ export default () => {
 
   if ($('#feature_project').length && dashboard.project.isProjectLevel()) {
     $('#feature_project').click(function () {
+      var url = `/featured_projects/${dashboard.project.getCurrentId()}/feature`;
       $.ajax({
-        url:'/featured_projects/feature',
-        type:'POST',
+        url: url,
+        type:'PUT',
         dataType:'json',
-        data: {
-          featured_project: {
-            project_id: dashboard.project.getCurrentId(),
-          }
-        },
         success:function (data){
           $('#unfeature_project').show();
           $('#feature_project').hide();
@@ -45,15 +41,11 @@ export default () => {
     });
 
     $('#unfeature_project').click(function () {
+      var url = `/featured_projects/${dashboard.project.getCurrentId()}/unfeature`;
       $.ajax({
-        url: '/featured_projects/unfeature',
+        url: url,
         type:'PUT',
         dataType:'json',
-        data: {
-          featured_project: {
-            project_id: dashboard.project.getCurrentId(),
-          }
-        },
         success:function (data){
           $('#unfeature_project').hide();
           $('#feature_project').show();
