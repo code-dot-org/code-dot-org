@@ -13,7 +13,7 @@ function setGlobals() {
   document.body.appendChild(svgMaze);
 
   expect(document).not.to.be.undefined;
-  expect(document.getElementById('svgMaze')).not.to.be.undefined;
+  expect(document.getElementById('svgMaze'), 'document has an svgMaze').not.to.be.undefined;
   expect(document.getElementsByClassName('pegman-location').length).to.equal(1);
 
   svg = document.getElementById('svgMaze');

@@ -29,7 +29,7 @@ describe("drawCorners", function () {
         const id = `tileCorner${corner}ClipPath${name}`;
         const corner_exists = svg.getElementById(id) !== null;
         const expect_corner_to_exist = expected.indexOf(corner) !== -1;
-        expect(corner_exists).to.equal(expect_corner_to_exist);
+        expect(corner_exists, `${name}: expected ${corner} to be ${expect_corner_to_exist}; it is ${corner_exists}`).to.equal(expect_corner_to_exist);
       });
 
       svg.innerHTML = '';

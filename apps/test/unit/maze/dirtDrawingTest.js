@@ -76,19 +76,19 @@ describe("DirtDrawer", function () {
     var image = document.getElementById(DirtDrawer.cellId('dirt', row, col));
     var clip = document.getElementById(DirtDrawer.cellId('dirtClip', row, col));
 
-    expect(image).to.be.null;
-    expect(clip).to.be.null;
+    expect(image, 'image doesnt exist to start').to.be.null;
+    expect(clip, 'clipPath doesnt exist to start').to.be.null;
 
     drawer.getOrCreateImage_('dirt', row, col);
 
     image = document.getElementById(DirtDrawer.cellId('dirt', row, col));
     clip = document.getElementById(DirtDrawer.cellId('dirtClip', row, col));
 
-    expect(image).not.to.be.undefined;
-    expect(clip).not.to.be.undefined;
-    expect(clip.childNodes).not.to.be.undefined;
+    expect(image, 'image got created').not.to.be.undefined;
+    expect(clip, 'clipPath got created').not.to.be.undefined;
+    expect(clip.childNodes, 'clipPath has children').not.to.be.undefined;
     var rect = clip.childNodes[0];
-    expect(rect).not.to.be.undefined;
+    expect(rect, 'clipPath has a child').not.to.be.undefined;
 
     expect(parseInt(rect.getAttribute('x'))).to.equal(150);
     expect(parseInt(rect.getAttribute('y'))).to.equal(100);
@@ -112,17 +112,17 @@ describe("DirtDrawer", function () {
     });
 
     it("update from nonExistent to hidden", function () {
-      expect(document.getElementById(dirtId)).to.be.null;
+      expect(document.getElementById(dirtId), 'image starts out nonexistent').to.be.null;
       drawer.map_.setValue(row, col, 0);
       drawer.updateItemImage(row, col);
-      expect(document.getElementById(dirtId)).to.be.null;
+      expect(document.getElementById(dirtId), 'image still doesnt exist').to.be.null;
     });
 
     it("update from nonExistent to visible", function () {
-      expect(document.getElementById(dirtId)).to.be.null;
+      expect(document.getElementById(dirtId), 'image starts out nonexistent').to.be.null;
       drawer.map_.setValue(row, col, -11);
       drawer.updateItemImage(row, col);
-      expect(document.getElementById(dirtId)).not.to.be.null;
+      expect(document.getElementById(dirtId), 'image now exists').not.to.be.null;
     });
 
     it("update from visible to hidden", function () {
@@ -130,13 +130,13 @@ describe("DirtDrawer", function () {
       drawer.map_.setValue(row, col, -11);
       drawer.updateItemImage(row, col);
       var image = document.getElementById(dirtId);
-      expect(image).not.to.be.null;
+      expect(image, 'image exists').not.to.be.null;
       expect(image.getAttribute('visibility')).to.equal('visible');
 
       drawer.map_.setValue(row, col, 0);
       drawer.updateItemImage(row, col);
       image = document.getElementById(dirtId);
-      expect(image).not.to.be.null;
+      expect(image, 'image still exists').not.to.be.null;
       expect(image.getAttribute('visibility')).to.equal('hidden');
     });
 
@@ -145,7 +145,7 @@ describe("DirtDrawer", function () {
       drawer.map_.setValue(row, col, -11);
       drawer.updateItemImage(row, col);
       var image = document.getElementById(dirtId);
-      expect(image).not.to.be.null;
+      expect(image, 'image exists').not.to.be.null;
       expect(image.getAttribute('visibility')).to.equal('visible');
       expect(parseInt(image.getAttribute('x'))).to.equal(50 * col);
       expect(parseInt(image.getAttribute('y'))).to.equal(50 * row);
@@ -153,7 +153,7 @@ describe("DirtDrawer", function () {
       drawer.map_.setValue(row, col, -9);
       drawer.updateItemImage(row, col);
       image = document.getElementById(dirtId);
-      expect(image).not.to.be.null;
+      expect(image, 'image still exists').not.to.be.null;
       expect(image.getAttribute('visibility')).to.equal('visible');
       // make sure we updated x/y
       expect(parseInt(image.getAttribute('x'))).to.equal(50 * (col - 2));
@@ -169,13 +169,13 @@ describe("DirtDrawer", function () {
       drawer.updateItemImage(row, col);
 
       var image = document.getElementById(dirtId);
-      expect(image).not.to.be.null;
-      expect(image.getAttribute('visibility')).to.equal('hidden');
+      expect(image, 'image exists').not.to.be.null;
+      expect(image.getAttribute('visibility'), 'image is hidden').to.equal('hidden');
 
       drawer.map_.setValue(row, col, -9);
       drawer.updateItemImage(row, col);
       image = document.getElementById(dirtId);
-      expect(image).not.to.be.null;
+      expect(image, 'image still exists').not.to.be.null;
       expect(image.getAttribute('visibility')).to.equal('visible');
       // make sure we updated x/y
       expect(parseInt(image.getAttribute('x'))).to.equal(50 * (col - 2));
@@ -191,13 +191,13 @@ describe("DirtDrawer", function () {
       drawer.updateItemImage(row, col);
 
       var image = document.getElementById(dirtId);
-      expect(image).not.to.be.null;
-      expect(image.getAttribute('visibility')).to.equal('hidden');
+      expect(image, 'image exists').not.to.be.null;
+      expect(image.getAttribute('visibility'), 'image is hidden').to.equal('hidden');
 
       drawer.map_.setValue(row, col, 0);
       drawer.updateItemImage(row, col);
       image = document.getElementById(dirtId);
-      expect(image).not.to.be.null;
+      expect(image, 'image still exists').not.to.be.null;
       expect(image.getAttribute('visibility')).to.equal('hidden');
     });
   });
