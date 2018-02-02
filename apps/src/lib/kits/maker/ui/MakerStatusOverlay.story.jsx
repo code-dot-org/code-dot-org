@@ -1,6 +1,7 @@
 import React from 'react';
 import {APP_WIDTH, APP_HEIGHT} from '../../../../applab/constants';
 import {UnconnectedMakerStatusOverlay} from "./MakerStatusOverlay";
+import {action} from '@storybook/addon-actions';
 
 export default storybook => {
   const commonProps = {
@@ -9,10 +10,10 @@ export default storybook => {
     isConnecting: false,
     isWrongBrowser: false,
     hasConnectionError: false,
-    handleTryAgain: storybook.action('Try Again'),
-    useFakeBoardOnNextRun: storybook.action('Use fake board on next run'),
-    handleDisableMaker: storybook.action('Disable Maker Toolkit'),
-    handleOpenSetupPage: storybook.action('Open setup page'),
+    handleTryAgain: action('Try Again'),
+    useFakeBoardOnNextRun: action('Use fake board on next run'),
+    handleDisableMaker: action('Disable Maker Toolkit'),
+    handleOpenSetupPage: action('Open setup page'),
   };
 
   storybook
