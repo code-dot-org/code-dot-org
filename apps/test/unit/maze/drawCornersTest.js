@@ -1,4 +1,4 @@
-import { assert } from '../../util/configuredChai';
+import { expect } from '../../util/configuredChai';
 import { SVG_NS } from '@cdo/apps/constants';
 import Collector from '@cdo/apps/maze/collector';
 import Cell from '@cdo/apps/maze/cell';
@@ -29,7 +29,7 @@ describe("drawCorners", function () {
         const id = `tileCorner${corner}ClipPath${name}`;
         const corner_exists = svg.getElementById(id) !== null;
         const expect_corner_to_exist = expected.indexOf(corner) !== -1;
-        assert.equal(corner_exists, expect_corner_to_exist, `${name}: expected ${corner} to be ${expect_corner_to_exist}; it is ${corner_exists}`);
+        expect(corner_exists).to.equal(expect_corner_to_exist);
       });
 
       svg.innerHTML = '';
