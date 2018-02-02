@@ -6,9 +6,8 @@ module OPS
 end
 
 Dashboard::Application.routes.draw do
-  resources :featured_projects, only: [:create]
   put '/featured_projects/unfeature', to: 'featured_projects#unfeature'
-  put '/featured_projects/refeature', to: 'featured_projects#refeature'
+  post '/featured_projects/feature', to: 'featured_projects#feature'
 
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 

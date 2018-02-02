@@ -1,9 +1,10 @@
 class FeaturedProjectsController < ApplicationController
-  # The first time a project is featured.
-  def create
+  def feature
     if current_user.try(:permission?, UserPermission::PROJECT_VALIDATOR)
       _, channel_id = storage_decrypt_channel_id(featured_project_params[:project_id])
-      @featured_project = FeaturedProject.create({storage_app_id: channel_id, featured_at: DateTime.now, unfeatured_at: nil})
+      @featured_project = FeaturedProject.find_or_create_by(storage_app_id: channel_id)
+      @featured_project.update_attribute(:unfeatured_at, nil)
+      @featured_project.update_attribute(:featured_at, DateTime.now)
       @featured_project.save!
     end
   end
@@ -13,15 +14,6 @@ class FeaturedProjectsController < ApplicationController
       _, channel_id = storage_decrypt_channel_id(featured_project_params[:project_id])
       @featured_project = FeaturedProject.find_by storage_app_id: channel_id
       @featured_project.update_attribute(:unfeatured_at, DateTime.now)
-    end
-  end
-
-  def refeature
-    if current_user.try(:permission?, UserPermission::PROJECT_VALIDATOR)
-      _, channel_id = storage_decrypt_channel_id(featured_project_params[:project_id])
-      @featured_project = FeaturedProject.find_by storage_app_id: channel_id
-      @featured_project.update_attribute(:unfeatured_at, nil)
-      @featured_project.update_attribute(:featured_at, DateTime.now)
     end
   end
 

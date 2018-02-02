@@ -81,22 +81,14 @@
           - if exists
             - project = FeaturedProject.find_by storage_app_id: channel_id
             - currently_featured = project.unfeatured_at == nil
-            - currently_unfeatured = project.unfeatured_at != nil
 
-          //never featured
-          #feature_project{'style' => ('display: none;' if exists)}
+          #feature_project{'style' => ('display: none;' if !exists || currently_featured)}
             %button{id: "feature", class: "btn btn-default btn-sm"}
               Feature in gallery
 
-          //currently featured
-          #unfeature_project{'style' => ('display: none;' unless currently_featured)}
+          #unfeature_project{'style' => ('display: none;' if exists && !currently_featured)}
             %button{id: "feature", class: "btn btn-default btn-sm"}
               Stop featuring in gallery
-
-          //unfeatured, previously featured
-          #refeature_project{'style' => ('display: none;' unless currently_unfeatured)}
-            %button{id: "feature", class: "btn btn-default"}
-              Feature again
 
     - if current_user.permission?(UserPermission::PROJECT_VALIDATOR)
       %br

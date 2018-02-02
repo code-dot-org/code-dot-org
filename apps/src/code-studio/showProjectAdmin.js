@@ -24,31 +24,9 @@ export default () => {
   }
 
   if ($('#feature_project').length && dashboard.project.isProjectLevel()) {
-    var unfeatureUrl = `/featured_projects/unfeature`;
-    $('#unfeature_project').click(function () {
-      $.ajax({
-        url: unfeatureUrl,
-        type:'PUT',
-        dataType:'json',
-        data: {
-          featured_project: {
-            project_id: dashboard.project.getCurrentId(),
-          }
-        },
-        success:function (data){
-          $('#unfeature_project').hide();
-          $('#feature_project').hide();
-          $('#refeature_project').show();
-        },
-        error:function (data){
-          alert("Shucks. Something went wrong - this project is still featured.");
-        }
-      });
-    });
-
     $('#feature_project').click(function () {
       $.ajax({
-        url:'/featured_projects',
+        url:'/featured_projects/feature',
         type:'POST',
         dataType:'json',
         data: {
@@ -59,7 +37,6 @@ export default () => {
         success:function (data){
           $('#unfeature_project').show();
           $('#feature_project').hide();
-          $('#refeature_project').hide();
         },
         error:function (data){
           alert("Shucks. Something went wrong - this project wasn't featured.");
@@ -67,10 +44,9 @@ export default () => {
       });
     });
 
-    $('#refeature_project').click(function () {
-      var refeatureUrl = `/featured_projects/refeature`;
+    $('#unfeature_project').click(function () {
       $.ajax({
-        url: refeatureUrl,
+        url: '/featured_projects/unfeature',
         type:'PUT',
         dataType:'json',
         data: {
@@ -79,12 +55,11 @@ export default () => {
           }
         },
         success:function (data){
-          $('#unfeature_project').show();
-          $('#feature_project').hide();
-          $('#refeature_project').hide();
+          $('#unfeature_project').hide();
+          $('#feature_project').show();
         },
         error:function (data){
-          alert("Shucks. Something went wrong - this project wasn't featured.");
+          alert("Shucks. Something went wrong - this project is still featured.");
         }
       });
     });
