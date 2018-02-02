@@ -4,7 +4,7 @@ import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import Button from '../Button';
-import {startEditingStudent, cancelEditingStudent, removeStudent} from './manageStudentsRedux';
+import {startEditingStudent, cancelEditingStudent, removeStudent, startSavingStudent} from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
@@ -25,6 +25,7 @@ class ManageStudentActionsCell extends Component {
     startEditingStudent: PropTypes.func,
     cancelEditingStudent: PropTypes.func,
     removeStudent: PropTypes.func,
+    startSavingStudent: PropTypes.func,
   };
 
   state = {
@@ -64,6 +65,10 @@ class ManageStudentActionsCell extends Component {
     this.props.cancelEditingStudent(this.props.id);
   };
 
+  onSave = () => {
+    this.props.startSavingStudent(this.props.id);
+  };
+
   render() {
     return (
       <div>
@@ -86,7 +91,7 @@ class ManageStudentActionsCell extends Component {
         }
         {this.props.isEditing &&
           <div>
-            <Button onClick={() => {}} color={Button.ButtonColor.white} text={i18n.save()} />
+            <Button onClick={this.onSave} color={Button.ButtonColor.white} text={i18n.save()} />
             <Button onClick={this.onCancel} color={Button.ButtonColor.blue} text={i18n.cancel()} />
           </div>
         }
@@ -128,5 +133,8 @@ export default connect(state => ({}), dispatch => ({
   },
   removeStudent(id) {
     dispatch(removeStudent(id));
+  },
+  startSavingStudent(id) {
+    dispatch(startSavingStudent(id));
   },
 }))(ManageStudentActionsCell);

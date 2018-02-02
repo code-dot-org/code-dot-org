@@ -11,12 +11,14 @@ const SET_SECRET_WORDS = 'manageStudents/SET_SECRET_WORDS';
 const EDIT_NAME = 'manageStudents/EDIT_NAME';
 const EDIT_AGE = 'manageStudents/EDIT_AGE';
 const EDIT_GENDER = 'manageStudents/EDIT_GENDER';
+const START_SAVING_STUDENT = 'manageStudents/START_SAVING_STUDENT';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
 export const setStudents = studentData => ({ type: SET_STUDENTS, studentData });
 export const startEditingStudent = (studentId) => ({ type: START_EDITING_STUDENT, studentId });
 export const cancelEditingStudent = (studentId) => ({ type: CANCEL_EDITING_STUDENT, studentId });
+export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
 export const removeStudent = (studentId) => ({ type: REMOVE_STUDENT, studentId });
 export const setSecretImage = (studentId, image) => ({ type: SET_SECRET_IMAGE, studentId, image });
 export const setSecretWords = (studentId, words) => ({ type: SET_SECRET_WORDS, studentId, words });
@@ -75,6 +77,21 @@ export default function manageStudents(state=initialState, action) {
         ...state.studentData,
         [action.studentId]: {
           ...state.studentData[action.studentId],
+          isEditing: false
+        }
+      },
+      editingData: _.omit(state.editingData, action.studentId),
+    };
+  }
+  if (action.type === START_SAVING_STUDENT) {
+    updateStudentOnServer(state.editingData[action.studentId]);
+    return {
+      ...state,
+      studentData: {
+        ...state.studentData,
+        [action.studentId]: {
+          ...state.studentData[action.studentId],
+          ...state.editingData[action.studentId],
           isEditing: false
         }
       },
@@ -183,4 +200,22 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
 // TODO(caleybrock): memoize this - sections could be a few thousand students
 export const convertStudentDataToArray = (studentData) => {
   return Object.values(studentData);
+};
+
+// Make a post request to edit a student.
+const updateStudentOnServer = (updatedStudentInfo) => {
+  $.ajax({
+    url: `/v2/students/${updatedStudentInfo.id}/update`,
+    method: 'POST',
+    contentType: 'application/json;charset=UTF-8',
+    data: JSON.stringify(updatedStudentInfo),
+  }).done((data) => {
+    console.log("successfully updated student data");
+    console.log(data);
+  }).fail((jqXhr, status) => {
+    // We may want to handle this more cleanly in the future, but for now this
+    // matches the experience we got in angular
+    alert("Unable to save student");
+    console.error(status);
+  });
 };
