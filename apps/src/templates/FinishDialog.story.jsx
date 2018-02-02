@@ -26,9 +26,25 @@ const achievements = [
   },
 ];
 
+const code = `// Generated code
+function isPrime(x) {
+  for(let f = x - 1; f > 1; f--) {
+    if (x % f === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+`;
+const message = `Even top universities teach block-based coding (e.g., <a href='#'>Berkeley</a>, <a href='#'>Harvard</a>). The blocks you use can also be shown in JavaScript, the most widely used coding language:`;
+const studentCode = {
+  code,
+  message,
+};
+
 export default storybook =>
   storybook
-    .storiesOf('FinishDialog')
+    .storiesOf('FinishDialog', module)
     .addStoryTable([
       {
         name: 'Dialog with overlay',
@@ -37,9 +53,10 @@ export default storybook =>
           <ExampleDialogButton closeCallbacks={['onContinue', 'onReplay']} >
             <FinishDialog
               isPerfect={true}
-              blockLimit={10}
-              blocksUsed={10}
+              blockLimit={98}
+              blocksUsed={98}
               achievements={achievements}
+              studentCode={studentCode}
             />
           </ExampleDialogButton>
         ),
@@ -56,6 +73,7 @@ export default storybook =>
               blockLimit={98}
               blocksUsed={98}
               achievements={achievements}
+              studentCode={studentCode}
             />
           </div>
         ),
@@ -71,6 +89,7 @@ export default storybook =>
               blockLimit={98}
               blocksUsed={99}
               achievements={achievements}
+              studentCode={studentCode}
             />
           </div>
         ),
@@ -87,6 +106,7 @@ export default storybook =>
               blockLimit={98}
               blocksUsed={98}
               achievements={achievements}
+              studentCode={studentCode}
               showFunometer
               canShare
             />
@@ -105,6 +125,7 @@ export default storybook =>
               blockLimit={98}
               blocksUsed={98}
               achievements={[]}
+              studentCode={studentCode}
             />
           </div>
         ),
@@ -120,6 +141,7 @@ export default storybook =>
               isPerfect
               blocksUsed={98}
               achievements={achievements}
+              studentCode={studentCode}
             />
           </div>
         ),
@@ -135,6 +157,7 @@ export default storybook =>
               isPerfect
               blocksUsed={98}
               achievements={[]}
+              studentCode={studentCode}
             />
           </div>
         ),

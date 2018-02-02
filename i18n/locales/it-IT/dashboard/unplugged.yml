@@ -90,7 +90,7 @@ it:
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".
       BigEvent:
         title: Gli Eventi
-        desc: "Gli studenti vengono introdotti al concetto di \"eventi\" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.<br>\nIn questa lezione l'insegnante \"cliccherà\" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato."
+        desc: "Gli studenti vengono introdotti al concetto di \"eventi\" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.\\r\nIn questa lezione l'insegnante \"cliccherà\" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato."
       GoingPlacesSafely:
         title: Visitare Luoghi in Modo Sicuro
         desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.
@@ -116,7 +116,7 @@ it:
         title: Composizione di Canzoni - Parametri
         desc: Gli studenti usano il concetto del ritornello di una canzone per imparare come passare dei parametri ad una funzione. Questo permette di personalizzare una funzione senza doverla riscrivere interamente.
       DiceRace:
-        title: 'Algoritmi della Vita Reale: Gara con i Dadi'
+        title: "https://studio.code.org/s/course3/stage/10/puzzle/1\n\nAlgoritmi della Vita Reale: Gara con i Dadi"
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana. In questo contesto, gli studenti devono identificare e scrivere l'algoritmo per un gioco con i dadi.
       Internet:
         title: Internet
@@ -138,7 +138,7 @@ it:
         desc: L'astrazione è una delle abilità più importanti che un informatico deve possedere.  In questa attività i tuoi studenti analizzano storie per capirne le differenze, così che possano astrarre gli elementi comuni. Gli schemi di storia così ottenuti diventano dei modelli per divertirsi ad inventare nuove storie.
       ForLoopFun:
         title: Divertiti usando i Cicli con Contatore
-        desc: Sappiamo che che i cicli permettono di svolgere azioni più e più volte, ma ora impariamo come usare i cicli con strutture aggiuntive.
+        desc: Sappiamo che i cicli permettono di svolgere azioni più e più volte, ma ora impariamo come usare i cicli con strutture aggiuntive.
       SongwritingWithParameters:
         title: Composizione di Canzoni - Parametri
         desc: 'Una delle strutture più belle nell''informatica è la funzione.  Le funzioni (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare più e più volte all''interno di un programma più grande. Questa lezione aiuta gli studenti a comprendere intuitivamente perché raggruppare blocchi di codice all''interno di funzioni è un''utile pratica.'
@@ -167,7 +167,7 @@ it:
         title: ""
         desc: ""
       courseA_unplugged_loops:
-        title: Loops Unplugged
+        title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
       courseB_unplugged_MRF:
         title: Attività Tradizionale
@@ -201,7 +201,7 @@ it:
         desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.
       courseABC_unplugged_bigEvent:
         title: Gli Eventi
-        desc: "Gli studenti vengono introdotti al concetto di \"eventi\" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.<br>\nIn questa lezione l'insegnante \"cliccherà\" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato."
+        desc: "Gli studenti vengono introdotti al concetto di \"eventi\" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.\\r\nIn questa lezione l'insegnante \"cliccherà\" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato."
       courseB_unplugged_digitalFootprint:
         title: La tua Impronta Digitale
         desc: L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili.
@@ -252,7 +252,7 @@ it:
         desc: Le variabili consentono molta libertà nell'informatica.  Questa lezione aiuta a spiegare quali sono le variabili e come possiamo utilizzarle in diversi modi. Svolgi questa attività prima di (o in concomitanza con) la lezione sull'astrazione per comprendere a fondo come usare le variabili.
       courseF_unplugged_forLoopFun:
         title: Divertiti usando i Cicli con Contatore
-        desc: Sappiamo che che i cicli permettono di svolgere azioni più e più volte, ma ora impariamo come usare i cicli con strutture aggiuntive.
+        desc: Sappiamo che i cicli permettono di svolgere azioni più e più volte, ma ora impariamo come usare i cicli con strutture aggiuntive.
       courseF_unplugged_songwritingParameters:
         title: Composizione di Canzoni - Parametri
         desc: 'Una delle strutture più belle nell''informatica è la funzione.  Le funzioni (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare più e più volte all''interno di un programma più grande. Questa lezione aiuta gli studenti a comprendere intuitivamente perché raggruppare blocchi di codice all''interno di funzioni è un''utile pratica.'

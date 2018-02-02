@@ -39,7 +39,7 @@
   welcome_back: Chào mừng trở lại, %{name}
   your_professional_learning_plan: Kế hoạch học tập chuyên nghiệp của bạn
   see_your_learning_plan: Xem kế hoạch học tập của bạn
-  submit: Chấp nhận
+  submit: Gửi
   unsubmit: Ngưng gửi
   previous_page: Trang trước
   next_page: Trang tiếp theo
@@ -207,7 +207,7 @@
       instructions: Nhập địa chỉ email của bạn dưới đây và chúng tôi sẽ gửi cho bạn
         hướng dẫn đặt lại mật khẩu.
       email: "Địa chỉ Email"
-      submit: Chấp nhận
+      submit: Gửi
     reset_errors:
       invalid_email: Có vẻ như bạn đã đăng nhập với một địa chỉ email không hợp lệ.
         Vui lòng gửi email tới support@code.org để nhận được link đặt lại mật khẩu.
@@ -272,7 +272,7 @@
     edit: Chỉnh sửa
     edit_model: Chỉnh sửa %{model}
     update: Cập nhật
-    submit: Chấp nhận
+    submit: Gửi
     destroy: Xóa
     back: Quay lại
     confirm: Bạn chắc chứ?
@@ -305,30 +305,30 @@
       courses: Các khóa học
       course_catalog: Danh mục khóa học
       project_gallery: chương trình
-      sections: Sections
+      sections: Mục
       help_support: Giúp đỡ và hỗ trợ
       report_bug: Báo lỗi
       teacher_community: Cộng đồng giáo viên
       professional_learning: Học tập nâng cao chuyên môn
       documentation: Tài liệu
       tutorials: Hướng dẫn
-      educate_overview: Educator Overview
+      educate_overview: Tổng quát về Giáo dục
       educate_elementary: Tiểu học
       educate_middle: Trung học
       educate_high: Cao học
       educate_hoc: Giờ của mã
       educate_partner: "Đối tác của chúng tôi"
       educate_beyond: "Đằng sau Code.org"
-      educate_inspire: Inspire a Student
+      educate_inspire: Truyền cảm hứng cho Hssv
       educate_community: Cộng đồng trực tuyến
       educate_tools: Các công cụ và video
       about_us: Thông tin
-      about_leadership: Leadership
-      about_donors: Donors
+      about_leadership: Khả năng lãnh đạo
+      about_donors: Người tặng
       about_partners: "Đối tác"
-      about_team: Full Team
-      about_news: Newsroom
-      about_evaluation: Evaluation
+      about_team: "Đủ Thành viên"
+      about_news: Phòng tin tức
+      about_evaluation: "Đánh giá"
       about_jobs: Công việc
       about_contact: Liên hệ
       about_faqs: Hỏi đáp
@@ -402,11 +402,11 @@
       học viên của bạn.'
     delete_confirm: Bạn có chắc rằng bạn muốn xóa tài khoản của bạn không?
     deleted_user: người dùng đã bị xóa
-    no_password_because_oauth: No password because you sign in with a third-party
-      provider.
+    no_password_because_oauth: Không có mật khẩu vì bạn đăng nhập với một nhà cũng
+      cấp bên thứ ba.
     no_password_because_sponsored: Hãy gặp giáo viên của bạn để quản lý mật khẩu của
       bạn.
-    create_personal_login: Create a personal login
+    create_personal_login: Tạo đăng nhập cá nhân
     create_personal_login_under_13_info: Nếu bạn muốn tiếp tục sử dụng tài khoản Code.org
       của bạn sau khi kết thúc năm học, hãy nhờ bố mẹ/ người giám hộ giúp đỡ bạn tạo
       ra đăng nhập của riêng bạn dưới đây.
@@ -414,16 +414,16 @@
       bạn!)
     create_personal_login_under_13_parent_email: "Địa chỉ email của bố mẹ / người
       giám hộ"
-    create_personal_login_info: If you want to keep using your Code.org account even
-      after the end of the school year, you can create your own login below.
-    create_personal_login_terms: By creating a personal login, I agree to be bound
-      by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of
-      service</a>. If I am under 13 years of age, I confirm that I have my parent
-      or legal guardian's permission to use the Code.org services even without a teacher.
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form
-      that allows us to contact students. Students will never receive emails from
-      Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
-      target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_info: Nếu bạn muốn tiếp tục sử dụng tài khoản Code.org của
+      bạn sau khi kết thúc năm học, bạn có thể tạo đăng nhập của mình bên dưới.
+    create_personal_login_terms: Bằng cách tạo đăng nhập cá nhân, Tôi đồng ý với <a
+      href='%{terms_of_service_url}', target='_blank'>điều khoản dịch vụ</a> của Code.org.
+      Nếu tôi dưới 13 tuổi, tôi chấp nhận rằng tôi có ba mẹ hoặc người giám hộ hợp
+      pháp để sử dụng dịch vụ Code.org mặc dù không có giáo viên.
+    create_personal_login_email_note: 'Chú ý: Địa chỉ email không được lưu trữ dưới
+      mọi hình thức mà cho phép chúng tôi liên hệ với hssv. Hssv sẽ không bao giờ
+      nhận email từ Code.org ngoại trừ email khôi phục mật khẩu. Xem <a href=''%{privacy_policy_url}'',
+      target=''_blank''>chính sách riêng tư</a> để biết thêm thì tin.'
     enter_new_login_info: Nhập thông tin đăng nhập mới của bạn
     confirm_secret_words: Xác minh đó là bạn bằng cách nhập những từ ngữ bí mật của
       mình
@@ -995,7 +995,7 @@
     - american_indian: American Indian/Alaska Native
     - other: Khác
     - opt_out: Prefer not to say
-    submit: Chấp nhận
+    submit: Gửi
     decline: "Đóng"
   zendesk_too_young_message: Rất tiếc, người dùng trẻ em không thể đăng nhập vào trang
     web hỗ trợ của chúng tôi, ban có thể duyệt<a href="http://support.code.org">support.code.org</a>

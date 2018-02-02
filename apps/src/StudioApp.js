@@ -1445,11 +1445,17 @@ StudioApp.prototype.displayFeedback = function (options) {
     const { level, response, preventDialog, feedbackType, ...otherOptions } = options;
     if (Object.keys(otherOptions).length === 0) {
       const store = getStore();
+      const generatedCodeProperties =
+        this.feedback_.getGeneratedCodeProperties(this.config.appStrings);
+      const studentCode = {
+        message: generatedCodeProperties.shortMessage,
+        code: generatedCodeProperties.code,
+      };
       store.dispatch(setFeedbackData({
         isPerfect: feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT,
         blocksUsed: this.feedback_.getNumCountableBlocks(),
         displayFunometer: response && response.puzzle_ratings_enabled,
-        studentCode: this.feedback_.getGeneratedCodeProperties(this.config.appStrings),
+        studentCode,
         canShare: !this.disableSocialShare && !options.disableSocialShare,
       }));
       store.dispatch(setAchievements(getAchievements(store.getState())));

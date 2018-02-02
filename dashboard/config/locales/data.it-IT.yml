@@ -784,21 +784,21 @@
         C4_unplugged_forloops: Cicli con Contatore
         C4_unplugged_parameters: Composizione di Canzoni - Parametri
         C4_unplugged_binary: Binario
-        CSF_a_b_artist_loops: Cicli in Artista
+        CSF_a_b_artist_loops: Cicli con l'Artista
         CSF_artist_angles: Angoli in Artista
         CSF_collector_k1_blocks: 'Fondamenti di Informatica: Il collezionista'
-        CSF_collector_repeat_loops: 'Collezionista: cicli di ripetizione'
+        CSF_collector_repeat_loops: 'Collezionista: Cicli di Ripetizione'
         CSF_collector_text_blocks: 'Fondamenti di Informatica: Il collezionista'
         CSF_create_functions: Creazione di funzioni
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
+        CSF_debugging_k1_blocks: Correzione di errori (Debugging)
+        CSF_debugging_text_blocks: Correzione di errori (Debugging)
         CSF_EF_cs_matters: L'informatica conta
         CSF_maze_intro_k1_blocks: Introduzione a Code Studio
         CSF_maze_intro_text_blocks: Introduzione a Code Studio
         CSF_my_robotic_friends: I miei amici robotici
         CSF_Power_of_Words: Potere delle Parole
         CSF_Super_Digital_Citizen: Cittadino Super Digitale
-        CSF_stevie_big_project: Stevie e il grande progetto
+        CSF_stevie_big_project: Stevie e il Grande Progetto
         CSF_unspotted_bugs: Bug Non Individuati
         CSF_zuck_loops_short: I cicli Repeat
         frozen_intro: Introduzione all'Ora del Codice
