@@ -21,39 +21,43 @@
  * @fileoverview JavaScript for Blockly's Maze application.
  * @author fraser@google.com (Neil Fraser)
  */
-import React from 'react';
 
+import React from 'react';
 import ReactDOM from 'react-dom';
-import {singleton as studioApp} from '../StudioApp';
-import tiles from './tiles';
-import codegen from '../lib/tools/jsinterpreter/codegen';
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import * as api from './api';
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
+
+import * as timeoutList from '../lib/util/timeoutList';
 import AppView from '../templates/AppView';
-import MazeVisualizationColumn from './MazeVisualizationColumn';
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import codegen from '../lib/tools/jsinterpreter/codegen';
 import dom from '../dom';
 import * as utils from '../utils';
-import {generateCodeAliases} from '../dropletUtils';
-import {getSubtypeForSkin} from './mazeUtils';
-import dropletConfig from './dropletConfig';
-import MazeMap from './mazeMap';
-import drawMap, {displayPegman, getPegmanYForRow} from './drawMap';
-
+import { TestResults, ResultType, SVG_NS } from '../constants';
+import { generateCodeAliases } from '../dropletUtils';
+import { getStore } from '../redux';
+import { singleton as studioApp } from '../StudioApp';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
-  runAfterPostContainedLevel
+  runAfterPostContainedLevel,
 } from '../containedLevels';
-import {getStore} from '../redux';
-import mazeReducer from './redux';
 
 import ExecutionInfo from './executionInfo';
-
-var Direction = tiles.Direction;
-var SquareType = tiles.SquareType;
-var TurnDirection = tiles.TurnDirection;
-import { TestResults, ResultType, SVG_NS } from '../constants';
+import MazeMap from './mazeMap';
+import MazeVisualizationColumn from './MazeVisualizationColumn';
+import * as api from './api';
+import drawMap, { displayPegman, getPegmanYForRow } from './drawMap';
+import dropletConfig from './dropletConfig';
+import mazeReducer from './redux';
+import { getSubtypeForSkin } from './mazeUtils';
+import {
+  Direction,
+  SquareType,
+  TurnDirection,
+  constrainDirection4,
+  directionToDxDy,
+  directionToFrame,
+} from './tiles';
 
 /**
  * Create a namespace for the application.
@@ -118,11 +122,6 @@ var loadLevel = function () {
   Maze.MAZE_HEIGHT = Maze.SQUARE_SIZE * Maze.map.ROWS;
   Maze.PATH_WIDTH = Maze.SQUARE_SIZE / 3;
 };
-
-/**
- * PIDs of animation tasks currently executing.
- */
-import * as timeoutList from '../lib/util/timeoutList';
 
 function createAnimations(svg) {
   // Add idle pegman.
@@ -540,7 +539,7 @@ Maze.reset = function (first) {
       Maze.scheduleTurn(Maze.startDirection);
     }, danceTime + 150);
   } else {
-    Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, tiles.directionToFrame(Maze.pegmanD));
+    Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, directionToFrame(Maze.pegmanD));
 
     const finishIcon = document.getElementById('finish');
     if (finishIcon) {
@@ -1100,12 +1099,12 @@ function animateAction(action, spotlightBlocks, timePerStep) {
     case 'left':
       var newDirection = Maze.pegmanD + TurnDirection.LEFT;
       Maze.scheduleTurn(newDirection);
-      Maze.pegmanD = tiles.constrainDirection4(newDirection);
+      Maze.pegmanD = constrainDirection4(newDirection);
       break;
     case 'right':
       newDirection = Maze.pegmanD + TurnDirection.RIGHT;
       Maze.scheduleTurn(newDirection);
-      Maze.pegmanD = tiles.constrainDirection4(newDirection);
+      Maze.pegmanD = constrainDirection4(newDirection);
       break;
     case 'finish':
       // Only schedule victory animation for certain conditions:
@@ -1148,7 +1147,7 @@ function animateAction(action, spotlightBlocks, timePerStep) {
 }
 
 function animatedMove(direction, timeForMove) {
-  var positionChange = tiles.directionToDxDy(direction);
+  var positionChange = directionToDxDy(direction);
   var newX = Maze.pegmanX + positionChange.dx;
   var newY = Maze.pegmanY + positionChange.dy;
   scheduleMove(newX, newY, timeForMove);
@@ -1214,7 +1213,7 @@ function scheduleMove(endX, endY, timeForAnimation) {
     timeoutList.setTimeout(function () {
       movePegmanIcon.setAttribute('visibility', 'hidden');
       pegmanIcon.setAttribute('visibility', 'visible');
-      Maze.displayPegman(endX, endY, tiles.directionToFrame(direction));
+      Maze.displayPegman(endX, endY, directionToFrame(direction));
       if (Maze.subtype.isWordSearch()) {
         Maze.subtype.markTileVisited(endY, endX, true);
       }
@@ -1228,7 +1227,7 @@ function scheduleMove(endX, endY, timeForAnimation) {
         Maze.displayPegman(
           startX + deltaX * frame / numFrames,
           startY + deltaY * frame / numFrames,
-          tiles.directionToFrame(direction));
+          directionToFrame(direction));
       }, timePerFrame * frame);
     });
   }
@@ -1264,7 +1263,7 @@ Maze.scheduleTurn = function (endDirection) {
       Maze.displayPegman(
         Maze.pegmanX,
         Maze.pegmanY,
-        tiles.directionToFrame(startDirection + deltaDirection * frame / numFrames));
+        directionToFrame(startDirection + deltaDirection * frame / numFrames));
     }, stepSpeed * (frame - 1));
   });
 };
@@ -1300,7 +1299,7 @@ Maze.updateSurroundingTiles = function (obstacleY, obstacleX, callback) {
  * @param {boolean} forward True if forward, false if backward.
  */
 Maze.scheduleFail = function (forward) {
-  var dxDy = tiles.directionToDxDy(Maze.pegmanD);
+  var dxDy = directionToDxDy(Maze.pegmanD);
   var deltaX = dxDy.dx;
   var deltaY = dxDy.dy;
 
@@ -1311,7 +1310,7 @@ Maze.scheduleFail = function (forward) {
 
   var targetX = Maze.pegmanX + deltaX;
   var targetY = Maze.pegmanY + deltaY;
-  var frame = tiles.directionToFrame(Maze.pegmanD);
+  var frame = directionToFrame(Maze.pegmanD);
   Maze.displayPegman(Maze.pegmanX + deltaX / 4,
                      Maze.pegmanY + deltaY / 4,
                      frame);
@@ -1500,7 +1499,7 @@ function scheduleDance(victoryDance, timeAlloted) {
     finishButton.removeAttribute('disabled');
   }
 
-  var originalFrame = tiles.directionToFrame(Maze.pegmanD);
+  var originalFrame = directionToFrame(Maze.pegmanD);
   Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, 16);
 
   // If victoryDance === true, play the goal animation, else reset it
