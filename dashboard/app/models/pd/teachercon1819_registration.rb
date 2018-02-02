@@ -40,7 +40,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   def send_teachercon_confirmation_email
     return unless pd_application.workshop && pd_application.workshop.teachercon?
 
-    Pd::Teachercon1819RegistrationMailer.confirmation(self).deliver_now
+    Pd::Teachercon1819RegistrationMailer.send(pd_application.application_type.downcase, self).deliver_now
   end
 
   def self.options
