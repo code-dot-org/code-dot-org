@@ -22,10 +22,15 @@ ________________
 ## Virtual Trainings
 
 
-  January 2018
+February 2018
+
+- Feb 1 Teacher Recruitment Strategies ([Video](https://code.zoom.us/recording/play/1zNBEQIEdZz1mNF1ZB1dfMc712T8QZytT8S3-9HKcinn7aL8SHdwLLaE9Ufd2j0Q), [Slides](https://drive.google.com/drive/folders/1KZBZvHP9OwDm_4VqOp6v-i7ICvivnGzo))
+
+January 2018
 
 - Jan 19 Teacher Application Tools ([Video](https://code.zoom.us/recording/play/YTF54MqiBk6352GrU7mClLIeZ8eZ91P-tsrXw7yp1g2mafp4x1GEOIvPFBMbslmg), [Slides](https://drive.google.com/drive/folders/1KZBZvHP9OwDm_4VqOp6v-i7ICvivnGzo))
 - Jan 11 Teacher Application Process ([Video](https://code.zoom.us/recording/play/aEKJINsQA4uXqKqUx_gmk3V6neP24RusyC_0Rd9W1pwlDnDy5KSz5g0v_vIfG5eM), [Slides](https://drive.google.com/drive/folders/1KZBZvHP9OwDm_4VqOp6v-i7ICvivnGzo))
+<br/>
 <br/>
 
  <details>

@@ -119,11 +119,8 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "palette_category_at_start": "functions"
+    "palette_category_at_start": "functions",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
