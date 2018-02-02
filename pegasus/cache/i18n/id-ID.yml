@@ -101,12 +101,12 @@
   congratulations_on_completing_course2: Selamat atas penyelesaian Kursus 2
   congratulations_on_completing_course3: Selamat atas penyelesaian Kursus 3
   congratulations_on_completing_course4: Selamat atas penyelesaian Kursus 4
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
+  congratulations_on_completing_coursea: Selamat menyelesaikan Kursus A
+  congratulations_on_completing_courseb: Selamat menyelesaikan Kursus B
+  congratulations_on_completing_coursec: Selamat menyelesaikan Kursus C
+  congratulations_on_completing_coursed: Selamat menyelesaikan Kursus D
+  congratulations_on_completing_coursee: Selamat menyelesaikan Kursus E
+  congratulations_on_completing_coursef: Selamat menyelesaikan Kursus F
   congratulations_on_completing_accelerated: Selamat atas menyelesaikan Kursus Akselerasi
   congrats_next_tutorials_title: Lulus ke tingkat berikutnya
   congrats_next_tutorials_desc: Cobalah yang lebih pendek, tutorial 1 jam ini atau
@@ -179,11 +179,12 @@
     dibuat orang lain dan saling belajar satu sama lain!
   third_party_khan_btn_learn: Belajar CS bersama Khan Academy
   third_party_khan_btn_forum: Forum CS Khan Academy
-  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
-    allows everyone, even novices, to start programming and build fully functional
-    apps for Android devices. Newcomers to App Inventor can have their first app up
-    and running in an hour or less, and can program more complex apps in significantly
-    less time than with more traditional, text-based languages.
+  third_party_appinv_desc: Aplikasi MIT Inventor adalah sebuah tool pemrograman berbasis-blok
+    yang memungkinkan semua orang, bahkan pemula, untuk memulai pemrograman dan membangun
+    berfungsi penuh dengan perangkat aplikasi untuk Android. Pendatang baru ke Aplikasi
+    Inventor dapat menjalankan aplikasi pertama mereka dan berjalan dalam waktu kurang
+    lebih satu jam, dan dapat memprogram aplikasi yang lebih lengkap dalam waktu yang
+    jauh lebih singkat dari pada teks berbasis bahasa-bahasa yang tradisional.
   third_party_appinv_btn_curriculum: Unduh Kurikulum App Inventor 2
   third_party_appinv_btn_forum: Forum App Inventor 2
   third_party_appinv_btn_site: Kunjungi App Inventor 2
@@ -193,10 +194,10 @@
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
   third_party_codehs_btn_try: Introduksi CS Pelajari Lebih Lanjut untuk Sekolah
-  third_party_codecademy_desc: We are rethinking education from the bottom up. The
-    web has rethought nearly everything - commerce, social networking, healthcare,
-    and more. We are building the education the world needs - the first truly net
-    native education.
+  third_party_codecademy_desc: Kami telah memikirkan kembali pendidikan dari dasar
+    ke atas. Layanan telah memikirkan kembali hampir semua hal - perdagangan, jejaring
+    sosial, perawatan kesehatan, dan lainnya. Kami sedang membangun pendidikan kebutuhan
+    dunia - pertama pendidikan pribumi yang benar-benar bersih.
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
   third_party_codecademy_btn_site: Kunjungi Codecademy
   third_party_organization: Organisasi
@@ -208,7 +209,7 @@
   third_party_cost_free_399: Gratis untuk mencoba, $399/kelas
   third_party_cost_free_2: Gratis untuk mencoba, $2/mahasiswa
   third_party_cost_free_10: Gratis untuk mencoba, $9,99/bulan
-  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
+  third_party_desc_5_4to8: Sekitar 5 pelajaran, diarahkan ke kelas 4 sampai 8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5

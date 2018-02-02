@@ -807,44 +807,46 @@
         C4_unplugged_binary: Binary
         CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Anggulo sa Artista
-        CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
+        CSF_collector_k1_blocks: 'CS Fundamentals: Ang Kolektor'
         CSF_collector_repeat_loops: Collector Repeat Loops
-        CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
-        CSF_create_functions: Create Functions
+        CSF_collector_text_blocks: 'CS Fundamentals: Ang Kolektor'
+        CSF_create_functions: Paglikha ng mga Functions
         CSF_debugging_k1_blocks: Debugging
         CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: Computer Science Matters
-        CSF_maze_intro_k1_blocks: Intro to Code Studio
-        CSF_maze_intro_text_blocks: Intro to Code Studio
+        CSF_maze_intro_k1_blocks: Intro sa Code Studio
+        CSF_maze_intro_text_blocks: Intro sa Code Studio
         CSF_my_robotic_friends: Ang Robot Kong Mga Kaibigan
-        CSF_Power_of_Words: Power of Words
-        CSF_Super_Digital_Citizen: Super Digital Citizen
-        CSF_stevie_big_project: Stevie and the Big Project
-        CSF_unspotted_bugs: Unspotted Bugs
+        CSF_Power_of_Words: Kapangyarihan ng mga Salita
+        CSF_Super_Digital_Citizen: Super Digital na Mamamayan
+        CSF_stevie_big_project: Stevie at ang Big Project
+        CSF_unspotted_bugs: Hindi Namalayang mga Bugs
         CSF_zuck_loops_short: Repeat Loops
         frozen_intro: Panimula ng Hour of Code
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
+        frozen_loops: Introduksyon sa mga Loops
+        frozen_functions: Introduksiyon sa mga Functions
+        playlab_intro: Introduksiyon sa Play Lab
+        playlab_events: Mga Kaganapan sa Play Lab
         playlab_repeat_forever: Play Lab Repeat Forever
         tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        infinity_playlab_intro: Play Lab - Introduction
-        infinity_playlab_events: Play Lab - Events
+        infinity_playlab_intro: Play Lab - Introduksyon
+        infinity_playlab_events: Play Lab - Mga Pangyayari
         infinity_playlab_repeat_forever: Play Lab - Repeat Forever
-        csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: What Makes a Computer, a Computer?
-        csd_concept_binary_data: 'How Computers Work: Binary & Data'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
-          & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
-        csd_concept_search: How Search Works
-        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems
-          To Change Our Lives
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
-        csd_gamelab_animation_tab: The Animation Tab
+        csd_concept_how_computers_work: Pagpapakila kung Paano Gumagana ang Kompyuter
+        csd_concept_computer: 'Paano Gumagana ang Kompyuter: Bakit naging Kompyuter,
+          ang isang Kompyuter?'
+        csd_concept_binary_data: 'Paano Gumagana ang Kompyuter: Binary & Datos'
+        csd_concept_circuits_logic: 'Paano Gumagana ang Kompyuter: Circuits & Logic'
+        csd_concept_memory_cpu_input_output: 'Paano Gumagana ang Kompyuter: Memory,
+          CPU, Input, & Output'
+        csd_concept_hardware_software: 'Paano Gumagana ang Kompyuter: Hardware & Software'
+        csd_concept_search: Paano Gumagana ang Paghahanap
+        csd_external_amazon_data: Paano Ginagamit ang mga Malalaking Datos sa Amazon
+          Recommendation Systems para Mapabago ang Ating mga Buhay
+        csd_external_netflix_data: Paano Ginawa ng Netflix ang TV Show at mga Movie
+          Suggestions?
+        csd_external_waze_data: Bakit Maraming Mga Gumagamit Ang Nahuhumaling sa Waze?
+        csd_gamelab_animation_tab: Ang Animation na Tab
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
@@ -854,12 +856,12 @@
         csd_gamelab_sprites_2: Animating Sprites
         csd_gamelab_variables_1: Introduction to Variables - Part 1
         csd_gamelab_variables_2: Introduction to Variables - Part 2
-        csd_gamelab_velocity: Velocity
-        csd_weblab_intro_1: Intro to Web Lab - Part 1
-        csd_weblab_intro_2: Intro to Web Lab - Part 2
-        csd_weblab_css_1: Intro to CSS - Part 1
-        csd_weblab_css_2: Intro to CSS - Part 2
-        csd_weblab_intro_3: Intro to Web Lab - Part 3
+        csd_gamelab_velocity: Belosidad
+        csd_weblab_intro_1: Intro sa Web Lab - Yugto 1
+        csd_weblab_intro_2: Intro sa Web Lab - Yugto 2
+        csd_weblab_css_1: Intro sa CSS - Yugto 1
+        csd_weblab_css_2: Intro sa CSS - Yugto 2
+        csd_weblab_intro_3: Intro sa Web Lab - Yugto 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -877,7 +879,7 @@
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
-        csp_applab_functions: Introduction to Functions
+        csp_applab_functions: Introduksiyon sa mga Functions
         csp_applab_functions_parameters: Mga function na meron mga parameter
         csp_applab_loops: Mga loop
         csp_applab_turtle: Turtle Programming
@@ -922,19 +924,23 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
-        starwars_typing: 'Star Wars: Building a Galaxy with Code - JavaScript'
-        starwars_events: 'Star Wars: Building a Galaxy with Code - Events'
-        starwars_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
-        starwars_blocks_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
-        starwars_blocks_events: 'Star Wars: Building a Galaxy with Code - Events'
-        starwars_blocks_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
-        mc_intro: Minecraft - Introduction
+        starwars_intro: 'Star Wars: Paglikha ng Galaksiya gamit ang Code - Introduksyon'
+        starwars_typing: 'Star Wars: Paglikha ng Galaksiya Gamit ang Code - JavaScript'
+        starwars_events: 'Star Wars: Paglikha ng Galaksiya gamit ang Code - Mga Pangyayari'
+        starwars_congrats: 'Star Wars: Paglikha ng Galaksiya gamit ang Code - Maligayang
+          Bati'
+        starwars_blocks_intro: 'Star Wars: Paglikha ng Galaksiya gamit ang Code -
+          Introduksyon'
+        starwars_blocks_events: 'Star Wars: Paglikha ng Galaksiya gamit ang Code -
+          Mga Pangyayari'
+        starwars_blocks_congrats: 'Star Wars: Paglikha ng Galaksiya gamit ang Code
+          - Maligayang Bati'
+        mc_intro: Minecraft - Introduksyon
         mc_repeat: Minecraft - Repeat
-        mc_if_statements: Minecraft - If statements
-        mc_congrats_share: Minecraft - Congratulations
-        mc_congrats_no_share: Minecraft - Congratulations
-        gumball_intro: Gumball Hour of Code - Introduction
+        mc_if_statements: Minecraft - If na mga Statements
+        mc_congrats_share: Minecraft - Maligayang Bati
+        mc_congrats_no_share: Minecraft - Maligayang Bati
+        gumball_intro: Gumball Hour of Code - Introduksyon
         gumball_events: Gumball Hour of Code - Mga Pangyayari
         gumball_repeat: Gumball Hour of Code - Repeat na mga statements
         iceage_intro: Ice Age Hour of Code - Introduksyon
@@ -1000,71 +1006,85 @@
           baba ng "When Run" na bloke para mapasulong si Elsa
         turn_elsa: Gamitin ang "Turn" na bloke para makaikot si Elsa. Ang bilang na
           nasa drop-down ang magtutukoy kung ilang ulit iikot si Elsa
-        replace_questions: Use the drop-down to replace "???" with a number
-        replace_questions_degree: Use the drop-down to replace "???" with the correct
-          degree to turn
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
-        repeat_blocks_1: "(1) Use this block and put it around the grey blocks in
-          the workspace"
-        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
-          inside
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
-        degrees_per_side: Divide 360 by the number of sides to get the size of each
-          angle in degrees.
-        set_sides: Use this block to set "sides" to the number needed to complete
-          the puzzle.
-        set_length: Use this block to set "length" to the correct value.
-        which_equation: Which equation makes each side shorter for shapes with more
-          sides?
-        get_nectar: Use the new "get nectar" block.
-        actions_category: The tool box got a new look! The "Actions" blocks are in
-          here now.
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Click here to edit your function.
-        create_function: Click here to open the "Functions" flyout, then click the
-          "Create a Function" button.
-        house_hint: It's ok if the picture doesn't look like a house yet. We will
-          fix it in the next puzzle.
-        edit_draw_square: Use this button to edit the function and add the loop.
-        edit_get_nectar: Use this button to edit the function and change the direction
-          the Bee will turn to get the nectar.
-        logic_category: Open the "Logic" flyout to find the "if/else" block.
-        length_parameter: Can you update this function so it uses the "length" parameter?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: Drag the "say" block here and type "hello"
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: Use the "move right" block to move Tennis Girl
-        playlab_play_sound: Add "play sound" block here
-        playlab_arrow_keys: Remember to use these to move the witch after clicking
-          on Run
-        playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect
-          here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: This is your function definition. These blocks
-          run everytime you use the "draw a square" block
-        change_here: Make your change here
-        write_draw_square_function: Drag blocks from the toolbox into here that draw
-          a square
-        write_draw_triangle_function: Drag blocks from the toolbox into here that
-          draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add,
-          and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
-          (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
+        replace_questions: Gamitin ang drop-down para mapalitan ang "???" na isang
+          numero
+        replace_questions_degree: Gamitin ang drop-down para mapalitan ang "???" nang
+          tamang antas ng pag-ikot
+        repeat_blocks: Gamitin ang "Repeat" na bloke at ilibot ito sa paligid ng mga
+          bloke sa loob ng workspace
+        repeat_blocks_1: "(1) Gamitin ang blokeng ito at ilagay sa paligid ng mga
+          abong bloke sa loob ng workspace"
+        repeat_blocks_2: (2) Ilipat ang "Repeat" na bloke dito, at ilagay ang mga
+          abong bloke sa loob
+        snowflake_dropdown: Gamitin ang drop-down na ito para makalikha na iba't ibang
+          mga snowflakes!
+        degrees_per_side: Hatiin ang 360 sa bilang ng mga panig para makuha ang laki
+          sa degrees ng bawat anggulo.
+        set_sides: Gamitin ang blokeng ito para maitakda ang "gilid" sa bilang na
+          kailangan para makumpleto ang palaisipan.
+        set_length: Gamitin ang blokeng ito para maitakda ang "haba" sa tamang halaga.
+        which_equation: Aling ekwasyon ang nagpapababa sa gilid ng mga hugis na may
+          maraming panig?
+        get_nectar: Gamitin ang bagong "get nectar" na bloke.
+        actions_category: Ang tool box ay nagkaroon ng bagong itsura. Ang "Aksyon"
+          na mga bloke ay nandito na ngayon.
+        draw_square_hint: 'Pahiwatig: Gamitin ang mga parisukat na loop na kagagawa
+          mo lang sa nakaraang palaisipan.'
+        edit_function: Mag-click dito para ma-edit ang iyong function.
+        create_function: Mag-click dito para mabuksan ang "Functions" na flyout, pagkatapos
+          ay i-click ang "Create a Function" na button.
+        house_hint: Okay lang kung ang larawan ay hindi pa parang isang bahay. Aayusin
+          natin ito sa susunod na palaisipan.
+        edit_draw_square: Gamitin ang button na ito para ma-edit ang function at makadagdag
+          ng loop.
+        edit_get_nectar: Gamitin ang button na ito para ma-edit ang function at mabago
+          ang direksyon ni Bee para makakuha ng nektar.
+        logic_category: Buksan ang "Logic" na flyout para mahanap ang "if/else" na
+          bloke.
+        length_parameter: Maari mo bang baguhin ang function para magagamit nito ang
+          "length" na parameter?
+        frozen_diamond_repeat: Gamitin ang repeat na bloke para malikha ang hugis
+          na ito.
+        frozen_circle_function_in_circle_turn: Huwag kalimutan na umikot pagkatapos
+          maglikha ng bawat bilog.
+        frozen_circle_function_with_parameter_circle: Gamitin ang "create a circle"
+          na bloke at baguhin ang laki.
+        frozen_snowflake_branch: Gamitin ang "create a snowflake brach" na bloke
+        frozen_create_square: Maglakip ng marami pang mga bloke dito para makalikha
+          ng isang parisukat
+        playlab_drag_say: I-drag ang "say" na bloke dito at itype ang "hello"
+        playlab_use_twice: Gamitin ang blokeng ito nang dalawang beses at tandaang
+          baguhin ang bilang ng aktor
+        playlab_move_girl: Gamitin ang "move right" na bloke para mapagalaw si Tennis
+          Girl
+        playlab_play_sound: Magdagdag ng "play sound" na bloke dito
+        playlab_arrow_keys: Tandaan na gamitin ang mga ito para mailipat ang mangkukulam
+          pagkatapos ma-click ang Run
+        playlab_add_move: Magdagdag ng "move" na mga bloke sa loob ng repeat na bloke
+        playlab_add_score: Magdagdag ng mga pangpuntos na mga bloke dito
+        playlab_add_blocks: Idagdag ang iyong mga bloke dito
+        set_variable: Mag-drag ng numero na bloke dito at itakda ang iyong variable
+        place_variable: I-drag ang iyong variable sa loob ng blokeng ito
+        bee_for_loop: I-drag ang pinakamalaking bilang ng nektar kung saan gusto mo
+          na mangolekta ang bubuyog dito
+        place_counter_variable: I-drag ang tagabilang na variable sa loob ng blokeng
+          ito
+        function_editor_draw_square: Ito ang iyong pagbibigay-kahulugan sa function.
+          Ang mga blokeng ito ay maaaring mapatakbo bawat oras na gamitin mo ang "draw
+          a square" na bloke
+        change_here: Gawin ang mga pagbabago dito
+        write_draw_square_function: I-drag ang mga bloke mula sa toolbox papunta dito
+          na magguguhit ng parisukat
+        write_draw_triangle_function: I-drag ang mga bloke mula sa toolbox papunta
+          dito na magguguhit ng tatsulok
+        edit_add_parameter: I-click ang edit para makadagdag ng parameter sa iyong
+          function
+        add_and_drag_parameter: Isulat ang pangalan ng iyong parameter dito, i-click
+          ang add, at pagkatapos i-drag ito sa iyong pagbibigay ng kahulugan sa iyong
+          function
+        fill_in_actor: Punan ang mga ??? ng mga numero na tumugon sa bawat aktor (1,
+          2, at 3)
+        repeat: Maglagay ng mga bloke sa loob ng loop para maulit ang mga commands
         if_bee_nectar: Gamitin ang "if" na bloke para makapagpasya kung kukuha ba
           ng nektar ang bubuyog
         if_else_bee: Gumamit ng "if/else" ba bloke para makakuha si Bee ng nektar

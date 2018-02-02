@@ -3902,6 +3902,7 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      MC Agent Freeplay_instruction: "**무료플레이:** 스스로 직접 탐험해보세요!"
       MC HOC 2016 Level 10_instruction: "이제 자신만의 Minecraft를 만들 수 있습니다! 마음껏 생물들을 생성하고
         원하는 일을 지시해보세요. 즐거운 시간 되세요!"
       MC HOC 2016 Level 2-2_instruction: "닭이 움직이지 않는 상태입니다. '이동'과 '회전' 블록을 '생성 시'
@@ -6833,6 +6834,10 @@
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
+      Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
+      Valentine_playlab_01_instruction: "Program Kiki (Actor 1) to move left and\nright
+        when the left and right arrows are pressed. When Kiki is clicked, she\nshould
+        throw hearts towards her friends. "
       Vigenere_instruction: Test
       WhileAdventure_instruction: |-
         Our adventurer wants to collect coins. Can you
@@ -7879,8 +7884,8 @@
         Collect all of the lettuce.
         Avoid the trees and fields!
       courseC_harvester_loops_forVid_instruction: |-
-        Collect all of the corn and all
-        of the pumpkins.
+        Collect all of the corn, all of
+        the lettuce, and all of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.

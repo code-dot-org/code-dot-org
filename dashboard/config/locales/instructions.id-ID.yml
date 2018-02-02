@@ -835,7 +835,8 @@
       4-5 Maze 3_instruction: Harus... segera... ke bunga matahari.
       4-5 Maze 4 (copy 1)_instruction: Coba gunakan balok "ulangi" untuk mengurangi
         jumlah balok...
-      4-5 Maze 4_instruction: Try the "repeat" block to use fewer blocks...
+      4-5 Maze 4_instruction: Gunakan blok " ulangi " untuk memecahkan teka - teki
+        dengan cepat...
       4-5 Maze 5 (copy 1)_instruction: |-
         Bisakah kamu memecahkan teka-teki ini dengan
         menggunakan sesedikit balok mungkin?
@@ -857,9 +858,8 @@
         Balok itu akan membantu kita untuk mengiterasi perintah hingga si zombie mendapatkan bunga matahari \r
         \r
         Gunakan balok baru ini untuk memecahkan teka-teki dengan perintah seminimal mungkin.
-      4-5 Maze Assessment 1_instruction: |-
-        Assessment: Get to the sunflower using
-        as few blocks as possible.
+      4-5 Maze Assessment 1_instruction: 'Penilaian: Dapatkan bunga matahari mungkin
+        dengan menggunakan beberapa blok.'
       4-5 Maze Conditionals 1_instruction: Gunakan blok 'repeat until' untuk membuat
         zombie ke Bunga matahari.
       4-5 Maze Conditionals 10_instruction: Bisakah kamu menambah 3 blok saja untuk
@@ -911,12 +911,10 @@
         Draw the last row of stars on this flag by
         looping the provided blocks. The stars are 50 pixels apart, but remember that
         the stars themselves are 30 pixels wide.
-      4-5 Nested Loops 11_instruction: |-
-        Can you draw these 10 squares of this sidewalk
-        using a nested loop? Each square is 30 pixels.
-      4-5 Nested Loops 12_instruction: |-
-        Can you draw these 36 triangles using a nested
-        loop?
+      4-5 Nested Loops 11_instruction: Bisakah Anda menarik10 kotak trotoar ini menggunakan
+        sebuah lingkaran bersarang? Setiap kotak ada 30 piksel.
+      4-5 Nested Loops 12_instruction: Anda dapat menarik 36 segitiga ini menggunakan
+        sebuah lingkaran bersarang?
       4-5 Nested Loops 2_instruction: "Now nest this loop inside another loop to\ndraw
         10 triangles.  This is called a \"nested\" loop.  "
       4-5 Nested Loops 3_instruction: |-
@@ -925,18 +923,15 @@
         \r
         To get this cool design with a hollow center, you'll
         need to jump forward by the length of the triangle before turning.
-      4-5 Nested Loops 5_instruction: Loop the given code to create a windmill.
-      4-5 Nested Loops 6_instruction: |-
-        Can you draw a hexagon by looping the triangle
-        code?
-      4-5 Nested Loops 7_instruction: |-
-        Loop this design 10 times. \r
-        \r
-        How much
-        do you have to turn each time you loop?
+      4-5 Nested Loops 5_instruction: Lingkaran yang diberikan kode untuk membuat
+        sebuah kincir angin.
+      4-5 Nested Loops 6_instruction: Dapatkah Anda menggambar sebuah segi enam dengan
+        perulangan kode segitiga?
+      4-5 Nested Loops 7_instruction: "Loop desain ini 10 kali. \\ r \n\\ r \nBerapa
+        banyak\n yang Anda harus mengubah setiap kali lingkaran anda?"
       4-5 Nested Loops 8_instruction: "Loop this shape 6 times. \\r\n\\r\nHow much\ndo
         you have to turn each time you loop? "
-      4-5 Nested Loops 9_instruction: Draw the teeth in the alligator's mouth!
+      4-5 Nested Loops 9_instruction: Gambarkan gigi di mulut buaya!
       4-5 Nested Loops Assessment 1_instruction: |-
         Assessment: Use a nested loop to
         complete the design.
@@ -4394,6 +4389,7 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      MC Agent Freeplay_instruction: "**Main bebas:**  Waktunya menjelajah sendiri!"
       MC HOC 2016 Level 10_instruction: |-
         It's time to make your own Minecraft! Spawn
         creatures and then make them do whatever you want. Have fun!
@@ -7435,6 +7431,10 @@
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
+      Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
+      Valentine_playlab_01_instruction: "Program Kiki (Actor 1) to move left and\nright
+        when the left and right arrows are pressed. When Kiki is clicked, she\nshould
+        throw hearts towards her friends. "
       Vigenere_instruction: Test
       WhileAdventure_instruction: |-
         Our adventurer wants to collect coins. Can you
@@ -8557,8 +8557,8 @@
         Collect all of the lettuce.
         Avoid the trees and fields!
       courseC_harvester_loops_forVid_instruction: |-
-        Collect all of the corn and all
-        of the pumpkins.
+        Collect all of the corn, all of
+        the lettuce, and all of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.

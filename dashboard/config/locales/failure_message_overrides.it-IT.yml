@@ -1,52 +1,50 @@
 "it":
   data:
     failure_message_overrides:
-      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: "Bel tentativo!
-        \nRiprova per farlo bene."
-      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: "Bel tentativo!
-        \nRiprova per farlo bene."
-      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: "Bel tentativo!
-        \nRiprova per farlo bene."
-      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: "Bel tentativo!
-        \nRiprova per farlo bene."
-      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: "Bel tentativo!
-        \nRiprova per farlo bene."
-      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: "Bel tentativo!
-        \nRiprova per farlo bene."
-      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: "Bel tentativo!
-        \nRiprova per farlo bene."
-      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: "Bel tentativo!
-        \nRiprova per farlo bene."
-      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: "Bel tentativo!
-        \nRiprova per farlo bene."
-      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: "Bel tentativo!
-        \nRiprova per farlo bene."
-      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: "Bel tentativo!
-        \nRiprova per farlo bene."
-      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: "Bel tentativo!
-        \nRiprova per farlo bene."
-      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: "Bel tentativo!
-        \nRiprova per farlo bene."
-      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: "Bel tentativo!
-        \nRiprova per farlo bene."
-      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: "Bel tentativo!
-        \nRiprova per farlo bene."
-      Code Studio Puzzle Challenge Var - Artist_failure_message_override: "Bel tentativo!
-        \nRiprova per farlo bene."
-      Course 4 Artist Vars 10_failure_message_override: |-
-        Make sure you use the sides
-        variable!
-      Course 4 Playlab For Loops 4b_failure_message_override: |-
-        Remember, both characters
-        should get to their flags in the same number of moves!
-      Course 4 Playlab For Loops 5b_failure_message_override: |-
-        Remember, both characters
-        need to stop in the same place.
+      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: Bel tentativo!
+        Riprova per trovare la soluzione corretta.
+      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: Bel tentativo!
+        Riprova per trovare la soluzione corretta.
+      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: Bel tentativo!
+        Riprova per trovare la soluzione corretta.
+      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: Bel tentativo!
+        Riprova per trovare la soluzione corretta.
+      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: Bel tentativo!
+        Riprova per trovare la soluzione corretta.
+      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: Bel tentativo!
+        Riprova per trovare la soluzione corretta.
+      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: Bel tentativo!
+        Riprova per trovare la soluzione corretta.
+      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: Bel tentativo!
+        Riprova per trovare la soluzione corretta.
+      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: Bel tentativo!
+        Riprova per trovare la soluzione corretta.
+      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: Bel tentativo!
+        Riprova per trovare la soluzione corretta.
+      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: Bel tentativo!
+        Riprova per trovare la soluzione corretta.
+      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: Bel tentativo!
+        Riprova per trovare la soluzione corretta.
+      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: Bel tentativo!
+        Riprova per trovare la soluzione corretta.
+      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: Bel tentativo!
+        Riprova per trovare la soluzione corretta.
+      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: Bel tentativo!
+        Riprova per trovare la soluzione corretta.
+      Code Studio Puzzle Challenge Var - Artist_failure_message_override: Bel tentativo!
+        Riprova per trovare la soluzione corretta.
+      Course 4 Artist Vars 10_failure_message_override: Assicurati di utilizzare la
+        variabile `sides` (<i>lati</i>)!
+      Course 4 Playlab For Loops 4b_failure_message_override: Ricorda, entrambi i
+        personaggi devono arrivare alla propria bandierina nello stesso numero di
+        mosse!
+      Course 4 Playlab For Loops 5b_failure_message_override: Ricorda, entrambi i
+        personaggi devono fermarsi nello stesso punto.
       Eval Strings Images .2_failure_message_override: |-
         Make sure you append the
         string "Universe" to make the code create "Hello, Universe"
-      Kiki_StarWars_Test_5_failure_message_override: Game over!
-      Kiki_StarWars_Test_5_Example_failure_message_override: Game over!
+      Kiki_StarWars_Test_5_failure_message_override: Fine del gioco!
+      Kiki_StarWars_Test_5_Example_failure_message_override: Fine del gioco!
       MC HOC 2016 Level 2-2_failure_message_override: Usa i blocchi `vai avanti` e
         `gira`per far muovere il tuo pollo.
       MC HOC 2016 Level 3_failure_message_override: Usa i blocchi `per sempre`, `vai
@@ -75,7 +73,7 @@
         Golem, prova a cambiare le regole, aggiungendo 2 punti per ogni Golem preso.
       MC HOC 2016 Village Test_failure_message_override: Per vincere, devi dare la
         caccia al Golem di Ferro e attaccare gli zombie.
-      WhileAdventure_failure_message_override: Congratulazioni! Hai guadagnato X monete!
+      WhileAdventure_failure_message_override: Congratulazioni! Hai raccolto X monete!
       courseE_playLab_scaffold3_failure_message_override: |-
         You must add two or more
         new actors to your game and program them to move.

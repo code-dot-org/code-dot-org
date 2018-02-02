@@ -8,7 +8,7 @@
   "blockActionAttack": "attack",
   "blockActionClone": "clone blocks",
   "blockActionCloneFiltered": "clone only",
-  "blockActionCollect": "collect",
+  "blockActionCollect": "pokupi",
   "blockActionCollectAll": "collect all",
   "blockActionDestroyEntity": "nestani",
   "blockActionDetect": "detect",

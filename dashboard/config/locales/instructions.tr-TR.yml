@@ -872,17 +872,15 @@
       AllTheThings Applab - Turtle move with button_instruction: |-
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
-      'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_instruction': |-
-        Make
-        a 3x5 letter 'A'. The widget is setup with the incorrect dimensions. Your
-        first task is to set the second byte to the 8-bit binary code for 5: 0000
-        0101. Then start entering pixel data.
-      'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4_instruction': |-
-        We
-        start you out with the 4x4 image Maddie created in the video. Your task is
-        to fill a 4x4 grid with colors using 12-bits per pixel. Here are the requirements:
-        Row 1 - fill with shades of red. Row 2 - shades of green. Row 3 - shades of
-        blue. Row 4 - shades of gray.
+      'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_instruction': '3x5
+        bir ''A2 harfi yapın. Widget yanlış boyutlarla ayarlandı. İlk göreviniz 5:
+        0000 0101 için ikinci byte''ı 8-bit ikilik kod olarak ayarlamak. Sonra piksel
+        verilerini girmeye başlayın.'
+      'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4_instruction': 'Sizi
+        bu videoda oluşturulmuş 4x4''lük Maddie resmiyle başlattık. İlk görevin 4x4''lük
+        ızgarayı her piksel için 12-bit kullanarak renklerle doldurmak. İşte bunlar
+        gereksinimler: Sıra 1 - kırmızı tonları. Sıra 2 - yeşil tonları. Sıra 3 -
+        mavi tonları. Sıra 4 - gri tonları.'
       'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_instruction': |-
         * Seni oluşturulmuş 4x2 Maddie resmi ile başlatıyoruz ancak son iki kareyi bıraktık.
         * Resmi, hangi iki rengin eksik olduğunu bularak ve onları kodlayarak bitirmelisin.
@@ -1320,34 +1318,26 @@
       CSD U5 black white images pixelation 5_instruction: "İstediğini çiz"
       CSD U5 black white images pixelation_instruction: 0 ve 1 yazarak X şeklini tamamla
       CSD U6 params modify clouds_instruction: |-
-        # Clouds\r
+        #Bulutlar\r
         \r
-        This program makes
-        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        Ses sensörüne vurduğunuzda bu program bulutları hareket ettiriyor, ama henüz bitmedi.\r
         \r
         #
-        Do This\r
-        * Create a new function `moveCloud(name)` that will move any cloud.\r
-          *
-        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        Bunu yap\r
+        *Herhangi bir bulutu hareket ettirecek yeni bir fonksiyon oluşturun 'bulutu HareketEttir(isim)'.\r
+         *
+        (İpucu: 'bulutuHareketEttir0' fonksiyonuyla neredeyse aynı kodu kullanacaksınız)\r
         *
-        Call your new `moveCloud(name)` function inside the event block, once for
-        each cloud name.\r
-         * (Hint: this is similar to how the `loopCloud(name)`
-        function is called many times.
+        Olay karesinin içindeki yeni 'bulutuHareketEttir(isim)' fonksiyonunuzu her bir bulut ismi için birer kez çağırın.\r
+         *(İpucu: bu birçok kere çağırdığınız 'bulutDögüsü(isim) fonksiyonuyla benzer.
       CSD U6 params modify planes_instruction: |-
-        # Multi-plane Controller\r
+        # Çoklu-uçak Kumandası\r
         \r
-        This
-        program moves the three planes using the board accelerometer and the on-screen
-        check boxes.  Right now, only the red plane works.\r
+        Bu program tahta izme ölçer ve ekrandaki kutucuklarla üç uçağı hareket ettirir. Şu anda, sadece kırmızı uçak çalışıyor.\r
         \r
-        # Do This\r
-        * Create
-        a new `movePlane(name)` function that can move any plane.\r
-        * Call the `movePlane(name)`
-        function inside the event block, such that it only moves when its checkbox
-        is checked.
+        # Bunu Yap\r
+        * Her uçağı hareket ettirebilen yeni bir 'uçağıHareketEttir(isim) fonksiyonu oluşturun.\r
+        * Olay karesi içinden 'uçağıHareketEttir(isim)' fonksiyonunu çağırın, öyle ki sadece kutucuğu işaretli olan uçak hareket eder.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -1459,27 +1449,21 @@
       CSDU6 - for loop - why for_instruction: |-
         Write the contents of the array to
         the screen in numerical order. (Click to see full instructions)
-      CSDU6 arrays rainbow_instruction: |-
-        Write the contents of the array to the screen
-        in numerical order. (Click to see full instructions)
-      CSDU6 arrays random_instruction: |-
-        Write a program that displays a randomly
-        chosen color from the array. (Click to see full instructions)
-      CSDU6 arrays select icons_instruction: |-
-        Write a program that displays a randomly
-        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays rainbow_instruction: Dizinin içeriğini sayısal düzende ekrana yazın.
+        (Tam talimatları görmek için tıklayın)
+      CSDU6 arrays random_instruction: Diziden rastgele seçilen rengi gösteren bir
+        program yazın. (Tam talimatları görmek için tıklayın)
+      CSDU6 arrays select icons_instruction: Diziden rastgele seçilen rengi gösteren
+        bir program yazın. (Tam talimatları görmek için tıklayın)
       CSDU6 arrays select rainbow_instruction: |-
         Write the contents of the array to
         the screen in numerical order. (Click to see full instructions)
-      CSDU6 arrays select random_instruction: |-
-        Write a program that displays a randomly
-        chosen color from the array. (Click to see full instructions)
-      CSDU6 arrays select variable_instruction: |-
-        Write a program that displays a
-        randomly chosen color from the array. (Click to see full instructions)
-      CSDU6 arrays variable_instruction: |-
-        Write a program that displays a randomly
-        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: Diziden rastgele seçilen rengi gösteren
+        bir program yazın. (Tam talimatları görmek için tıklayın)
+      CSDU6 arrays select variable_instruction: Diziden rastgele seçilen bir rengi
+        gösteren bir program yazın. (Tam talimatları görmek için tıklayın)
+      CSDU6 arrays variable_instruction: Diziden rastgele seçilen rengi gösteren bir
+        program yazın. (Tam talimatları görmek için tıklayın)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -3220,24 +3204,17 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
-      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
-        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars1_instruction: 'Bu oyunu oynamak için, hiç kod yazmana gerek
+        yok, sadece ''çalıştır''a bas! '
       CourseF_PlayLab_vars10_instruction: |-
-        Free Play time! Here are all of the variables
-        we've played with so far in this stage, as well as a few more in case you
-        want them. \r
+        Serbest Oyun Zamanı! İşte burada bu bölümde oynadığımız bütün değişkenlerle birlikte birkaç fazlalık var ihtiyacın olursa diye.\r
         \r
-        Notice that there are now so many blocks in our toolbox
-        that they need to be organized!  Here, we've put each piece into an appropriate
-        category.  Take some time to explore everything that is available. When you're
-        done browsing, make a game or story using repeats, variables, and events.  \r
+        Şu anda alet çantamızda düzenlenmesi gereken çok kare var olduğunun farkına varın! İşte, biz her parçayı uygun kategoriye koyduk. Mevcut olan her şeyi keşfetmeye biraz zaman ayırın. Göz atmayı bitirdiğinde, tekrarları, değişkenleri, ve olayları kullanarak bir oyun veya hikaye yapın.\r
         \r
-        Hint:
-        scroll down to see all the commands in the workspace.
-      CourseF_PlayLab_vars2_instruction: |-
-        The race in that last puzzle wasn't very
-        fair! Change the `dog_speed` variable to make sure you can collect more flags
-        than Cat. The first to collect 10 flags wins!
+        Çalışma alanındaki bütün komutları görmek için aşağı kaydırın.
+      CourseF_PlayLab_vars2_instruction: Son bulmacadaki yarış pek adil değildi. Kediden
+        daha fazla bayrak topladığından emin olmak için 'köpel_hızı' değişkenini değiştirin.
+        10 bayrağı ilk toplayan kazanır!
       CourseF_PlayLab_vars3_instruction: Sol ve sağ ok tuşlarıyla hareket ettirin.
         Yukarı ok tuşu ile zıplayın. Bütün bayrakları toplaya bilir misin?
       CourseF_PlayLab_vars4_instruction: Height yükseklik değişkeni köpeğin ne kadar
@@ -3260,11 +3237,10 @@
         değişkenine 1 ekliyoruz. "Oyuncu dokunduğu zaman" olayını kullan ve puanı
         güncelle. Değişkeninizi points=points+1 diye artıra bilirsiniz. Puanınızı
         10 yapın (birer birer arttırarak) ve seviyeyi geçin.
-      CourseF_PlayLab_vars9_instruction: |-
-        Nice, now let's make sure this game isn't
-        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
-        2), you should lose a point. Start with 10 points so it's not too hard. Let
-        your score drop down from 10 to 0 to pass the level.
+      CourseF_PlayLab_vars9_instruction: Güzel, şimdi bu oyunun oynanmasının çok kolay
+        olmadığından emin olun. Ne zaman Köpek (oyuncu 1) Kediden (oyuncu 2) sandviçle
+        darbe alırsa, bir puan kaybetmelisin. 10 puanla başlayın bu sayede çok zor
+        olmaz. Bölümü geçmek için puanınızın 10'dan 0'a düşmesine izin verin.
       Crack Random Substitution_instruction: Talimatlar
       Crack a Caesar Cipher_instruction: Talimatlar
       ECSPD Binary Odometer_instruction: |-
@@ -3880,6 +3856,7 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      MC Agent Freeplay_instruction: "**Serbest Oyun:**  Kendi başına keşfetme zamanı!"
       MC HOC 2016 Level 10_instruction: Kendi Minecraft oyununu yapmanın zamanı geldi!
         Yaratıklarını oluştur ve onlara istediğini yaptır. İyi eğlenceler!
       MC HOC 2016 Level 2-2_instruction: Tavuk donakaldı. Onu hareket ettirmek için
@@ -3912,15 +3889,12 @@
         5 puana ulaş!
       MC HOC 2016 Village Test_instruction: Olamaz! Zombiler seni içerde tuzağa düşürdü.
         Zombileri kovalayıp onlara saldırması için Demir Golem'i kodla!
-      MC_2017_Ryan_02_instruction: |-
-        Help the player get out by using loops to get
-        the Agent to the pressure plate.
-      MC_HOC_2017 Agent Test_instruction: |-
-        Click "Run" to move the player to the
-        orange square inside of the house.
-      MC_HOC_2017_01_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
+      MC_2017_Ryan_02_instruction: Ajanı basınç plakasına ulaştırmak için oyuncuya
+        döngüleri kullanarak yardım edin.
+      MC_HOC_2017 Agent Test_instruction: Oyuncuyu evin içindeki turuncu dörtgene
+        hareket ettirmek için 'Çalıştır'a tıklayın.
+      MC_HOC_2017_01_instruction: Oyuncuyu evin içindeki turuncu dörtgene hareket
+        ettirmek için 'Çalıştır'a tıklayın.
       MC_HOC_2017_01_Cole_instruction: Bu yolculukta tüm aletleri toplaman gerekiyor.
         **Ok tuşlarını** kullanarak etrafta dolaş ve kazanmak için yol üzerindeki
         sandığa ulaş
@@ -4128,9 +4102,8 @@
       NEW Course 4 Artist Params 15_instruction: 'Serbest Zaman: Yazdığınız fonksiyonlar
         ve ektra birkaç tanesi burada. Harika bir şeyler çiz! Kalem ucu ile oyna be
         çizimin ne kadar farklı olabildiğini gör!'
-      NEW Course 4 Artist Params 2_instruction: |-
-        Create a `draw triangle` function
-        from scratch that makes a triangle with  50 pixel sides.
+      NEW Course 4 Artist Params 2_instruction: 50 piksel kenarlı bir üçgen yapan
+        çiziklerden bir 'üçgen çiz' fonksiyonu oluşturun.
       NEW Course 4 Artist Params 3_instruction: |
         Fonksiyonu kullanarak 5 üçgen çizelim. İpucu: her üçgen birbirinden 30 piksel uzaklıkta
       NEW Course 4 Artist Params 4_instruction: Bu fonksiyon bloklarında farklılık
@@ -4502,10 +4475,10 @@
       Pixelation - AllTheThings 4_instruction: Bu mozaik düzeyde 'hide_encoding_controls'
         seçeneği kullanımı gösterilmiştir.   düzey onaltılık olarak görüntü verilerini
         görüntüler ve geri ikiliye değiştirmenize izin vermez.
-      Pixelation - AllTheThings 5_instruction: |-
-        This pixelation level demonstrates
-        the use of the "Hide sliders" option.  Notice that the width and height
-        sliders are not available, and the width and height fields are not editable.
+      Pixelation - AllTheThings 5_instruction: Bu pikselleşme seviyesi 'Kaydırıcıyı
+        sakla' seçeneğinin kullanımını gösteriyor. Kaydırıcıların genişlik ve uzunluğunun
+        mevcut olmadığının, ve genişlik ve uzunluk alanlarının düzenlenemez olduğunun
+        farkına varın.
       Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |-
         Something happened
         to the bits in this image! Find the error and fix it! Hint: a few extra bits
@@ -4620,13 +4593,11 @@
       Practice Create Performance Task_instruction: |-
         Design and implement your practice
         Create Performance Task. (Click to see full instructions)
-      Project - Final Image Scroller_instruction: |-
-        Update the image scroller to respond
-        to buttons and key presses. (Click to see full instructions)
-      Project - Finish your canvas app_instruction: |-
-        Extend the functionality of
-        one of the effects, or create an entirely new one of your own. (Click to see
-        full instructions)
+      Project - Final Image Scroller_instruction: Butonlara ve tuşlara yanıt vermesi
+        için resim kaydırıcısını güncelleyin. (Tam talimatları görmek için tıklayın)
+      Project - Finish your canvas app_instruction: Etkilerden birinin fonksiyonelliğini
+        arttırın, veya kendiniz tamamen yeni bir tane yapın. (Tam talimatları görmek
+        için tıklayın)
       Project - Make Your Own Clicker Game_instruction: Tıkırtı oyununu tamamla! (Tüm
         talimatlar için tıklayınız)
       Project - Your Own Multi Screen App_instruction: |-
@@ -4674,13 +4645,12 @@
         only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
         \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to
         move to the next puzzle. "
-      RyanTest3_instruction: |-
-        This level has shape-shifting turned on! Refresh to
-        see different variants.
-      SG Add Subgoals practice_instruction: |-
-        Draw a 3x3 grid to the front and right
-        of the turtle as efficiently as possible. The turtle should end at its original
-        location, facing its original direction. (Click to see full instructions)
+      RyanTest3_instruction: Bu seviyede şekil-değiştirme açık! Farklı değişkenleri
+        görmek için yenileyin.
+      SG Add Subgoals practice_instruction: Kaplumbağanın önüne ve sağına olabildiğince
+        etkili şekilde 3x3'lük bir ızgara çizin. Kaplumbağa başlangıç noktasında,
+        başlangıç yönüne yüzü dönük şekilde bitirmeli. (Tam talimatları görmek için
+        tıklayın)
       SG U3L03 - draw rect function_instruction: |-
         Write a function called drawRectangle().\r
         (Click
@@ -4691,95 +4661,78 @@
       SG U3L03 Define and use turnAround_instruction: |-
         Define a function called turnAround.
         Call the function and then move the turtle forward. (Click to see full instructions)
-      SG U3L03 Draw a T using turnAround_instruction: |-
-        Draw a plus sign using the
-        provided version of turnAround().  (Click to see full instructions)
-      SG U3L03 Three Steps_instruction: |-
-        Define a function called drawSide() which
-        draws three steps and moves the turtle to prepare for the next side (Click
-        to see full instructions)
+      SG U3L03 Draw a T using turnAround_instruction: etrafındaDön()'ün verilen versiyonunu
+        kullanarak bir artı işareti çizin. (Tam talimatları görmek için tıklayın)
+      SG U3L03 Three Steps_instruction: Kaplumbağanın sonraki kenarı hazırlaması için
+        üç adım ve hareketleri çizen kenarÇiz() adında bir fonksiyon tanımlayın (Tam
+        talimatları görmek için tıklayın)
       SG U3L03 define turnRight and draw a rectangle_instruction: |-
         Define a function
         called right() that turns the turtle to the right. Then use this function
         to draw a rectangle, as shown below. (Click to see full instructions)
-      SG U3L03 draw diamond_instruction: |-
-        Create a function called drawDiamond()
-        that makes use of your previous work to draw the complete diamond. (Click
-        to see full instructions)
+      SG U3L03 draw diamond_instruction: Elması tamamlamak için önceki işinden yaralanan
+        elmasÇiz() adında bir fonksiyon oluşturun. (Tam talimatları görmek için tıklayın)
       SG U3L04 - 3 by 3 with functions_instruction: |-
         Make the 3x3 square as efficiently
         as you can. (Click to see full instructions)
       SG U3L04 - snowflake_instruction: |-
         Create the design by breaking it down into
         layers of functions. (Click to see full instructions)
-      SG U3L06 - moveForwardwithParams_instruction: |-
-        Use a single command to move
-        the turtle to the edge of the screen. (Click to see full instructions)
-      SG U3L06 Challenge 1 triangle_instruction: |-
-        Use the parameterized versions
-        of the turtle commands to create a triangle with sides 100 pixels long. (Click
-        to see full instructions)
-      SG U3L06 Challenge 2 purple square_instruction: |-
-        Read the documentation for
-        penColor() and penWidth() before using them to draw the blue square.
+      SG U3L06 - moveForwardwithParams_instruction: Kaplumbağayı ekranın kenarına
+        hareket ettirmek için tek bir komut kullan. (Tam talimatları görmek için tıklayın)
+      SG U3L06 Challenge 1 triangle_instruction: 100 piksel uzunluğunda kenarları
+        olan bir üçgen oluşturmak için kaplumbağa komutlarının parametrelerle ifade
+        edilmiş versiyonlarını kullanın. (Tam talimatları görmek için tıklayın)
+      SG U3L06 Challenge 2 purple square_instruction: Mavi dörtgeni çizmek için kullanmadan
+        önce kalemRengi() ve kalemKalınlığı() için hazırlanmış belgeyi okuyun.
       SG U3L06 Challenge 3 fill pink_instruction: En sevdiğiniz renk ile ekranın arka
         planını doldurun. (Tüm talimatları için tıklayınız)
       SG U3L06 Challenge 4 bullseye_instruction: |-
         Create the bullseye using hexadecimal
         colors and dot(). (Click to see full instructions)
-      SG U3L06 Challenge 5 overlapping circles_instruction: |-
-        This image is created
-        just using dot() and penColor() but, how are we going to get those circles
-        to be transparent?  If you haven't gotten the hint yet: check out the documentation!
+      SG U3L06 Challenge 5 overlapping circles_instruction: 'Bu resim sadece nokta()
+        ve kalemRengi() kullanılarak oluşturuldu ama, o daireleri nasıl saydam hale
+        getireceğiz? İpucuna ulaşamadıysan: belgeyi kontrol et!'
       SG U3L06 Challenge 6 squiggles_instruction: |
-        Read the documentation for the
-        "arcLeft" and "arcRight" commands and then draw the squiggles as shown.
+        "solaYayÇiz" ve "sağaYayÇiz" komutları için hazırlanan belgeyi okuyun ve sonra gösterildiği gibi kısa ve eğri çizgi çizin.
       SG U3L06 Challenge 7 smiley face_instruction: TurnTo() ve moveTo() bir gülen
         yüz çizmek için kullanın. (Tüm talimatları için tıklayınız)
       SG U3L06 Challenge 8 make your own_instruction: |-
         Create a drawing of your own.
         (Click to see full instructions)
-      SG U3L07 - Free Play Loops and Random_instruction: |-
-        Free Play! Use what you
-        learned from loops and random to make your own little scene. Have fun.
-      SG U3L07 - allSeaGrass_instruction: |-
-        Add 50 pieces of seagrass to the image
-        by writing drawAllSeagrass with a loop. (Click to see full instructions)
+      SG U3L07 - Free Play Loops and Random_instruction: Serbest Oynama! Döngülerden
+        öğrendiklerinizi kullanın ve kendi küçük sahnenizi yapın. İyi eğlenceler.
+      SG U3L07 - allSeaGrass_instruction: Bir döngüyle birlikte tümYosunlarıÇiz yazarak
+        resme 50 parça yosun ekleyin. (Tamtalimatları görmek için tıklayın)
       SG U3L07 - bubbles_instruction: |-
         Add 200 bubbles to the image by writing drawAllBubbles
         with a loop. (Click to see full instructions)
-      SG U3L07 - createTriangleParam_instruction: |-
-        Define a function that accepts
-        a parameter to match the function calls and complete the image. (Click to
-        see full instructions)
+      SG U3L07 - createTriangleParam_instruction: Fonksiyon çağırılarını eşleştirerek
+        resmi tamamlamak için bir parametre kabul eden bir fonksiyon tanımlayın. (Tam
+        talimatları görmek için tıklayın)
       SG U3L07 - fish_instruction: |-
         Add 15 fish to the image by writing drawAllFish
         with a loop. (Click to see full instructions)
-      SG U3L07 - introSquare_instruction: |-
-        Use a loop to draw a square. Then add
-        another loop to draw many squares each one rotated some amount. (Click to
-        see full instructions)
-      SG U3L07 - loopsWithRandom_instruction: |-
-        Increase the number of iterations
-        to fill the screen with white. (Click to see full instructions)
+      SG U3L07 - introSquare_instruction: Bir dörtgen çizmek için bir döngü kullanın.
+        Sonra her biri belli bir miktarda döndürülmüş bir çok kare çizmek için başka
+        döngü ekleyin. (Tam talimatları görmek için tıklayın)
+      SG U3L07 - loopsWithRandom_instruction: Ekranı beyazla doldurmak için yinelemeleri
+        arttırın. (Tam talimatları görmek için tıklayın)
       SG U3L07 - randomDots1_instruction: |-
         Increase the number of iterations to fully
         fill the screen with random dots. (Click to see full instructions)
-      SG U3L07 - randomSquare_instruction: |-
-        Draw the figure using a loop. (Click
-        to see full instructions)
+      SG U3L07 - randomSquare_instruction: Bir döngü kullanarak şekli çizin. (Tam
+        talimatları görmek için tıklayın)
       SG U3L07 - seaGrass_instruction: |-
         Add a parameter to drawSeagrass that controls
         the number of waves in the grass. (Click to see full instructions)
       SG U3L07 - seaStar_instruction: |-
         Add 5 sea stars to the image by writing drawAllSeaStars
         with a loop. (Click to see full instructions)
-      SG U3L07 - sunBeams_instruction: |-
-        Add 100 sunbeams to the image by writing
-        drawAllSunbeams with a loop. (Click to see full instructions)
-      SG U3L07 - topDownDesign_instruction: |-
-        Get comfortable with the structure of
-        this program, then move on to the next exercise. (Click to see full instructions)
+      SG U3L07 - sunBeams_instruction: Bir döngüyle tümGüneşIşıklarınıÇiz yazarak
+        resme 100 güneş ışını ekleyin. (Tam talimatları görmek için tıklayın)
+      SG U3L07 - topDownDesign_instruction: Bu programın yapısıyla rahat edin, sonra
+        sıradaki alıştırmaya geçin. (Tam talimatları görmek için tıklayın)
       SG U3L07 More Subgoals_instruction: |-
         Read the documentation for penColor()
         and penWidth() before using them to draw the blue square.
@@ -4793,12 +4746,10 @@
       SG U3L08 - drawSquareWithParam_instruction: |-
         Use drawSquare() to recreate the
         image of both squares, this time using parameters. (Click to see full instructions)
-      SG U3L08 - fish_instruction: |-
-        Add a parameter to drawFish that changes the
-        size of the fish drawn. (Click to see full instructions)
-      SG U3L08 - freePlay_instruction: |-
-        Keep adding to your image by making more
-        calls to your new functions with parameters. (Click to see full instructions)
+      SG U3L08 - fish_instruction: "Çizilmiş balığın boyutunu değiştiren balıkÇiz
+        için bir parametre ekleyin. (Tam talimatları görmek için tıklayın)"
+      SG U3L08 - freePlay_instruction: Parametreli fonksiyonlarınıza daha fazla çağrı
+        yaparak resminize eklemeye devam edin. (Tam talimatları görmek için tıklayın)
       SG U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
@@ -4806,10 +4757,9 @@
         Add an extra fish, starfish,
         and piece of seagrass to the image. Look at, but don't change, the functions
         that create them. (Click to see full instructions)
-      SG U3L08 - introUnderTheSea_instruction: |-
-        Add an extra fish, starfish, and
-        piece of seagrass to the image. Look at, but don't change, the functions
-        that create them. (Click to see full instructions)
+      SG U3L08 - introUnderTheSea_instruction: Resme ekstra bir balık, deniz yıldızı,
+        ve yosun parçası ekleyin. Onları oluşturan fonksiyonlara bakın, ama değiştirmeyin.
+        (Tam talimatları görmek için tıklayın)
       SG U3L08 - multiParamFish_instruction: |-
         Add three parameters to your drawFish
         function to accept red, green and blue values to make your fish different
@@ -4838,13 +4788,12 @@
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original
         location, facing its original direction. (Click to see full instructions)
-      SG U3L2_Turtle3by3Grid_instruction: |-
-        Draw a 3x3 grid to the front and right
-        of the turtle as efficiently as possible. The turtle should end at its original
-        location, facing its original direction. (Click to see full instructions)
-      SG U3L2_TurtleSquare_right_instruction: |-
-        Draw a square to the front and to
-        the right of the starting location. (Click to show full instructions)
+      SG U3L2_Turtle3by3Grid_instruction: Kaplumbağanın önüne ve sağına olabildiğince
+        etkili şekilde 3x3'lük bir ızgara çizin. Kaplumbağa başlangıç noktasında,
+        başlangıç yönüne yüzü dönük şekilde bitirmeli. (Tam talimatları görmek için
+        tıklayın)
+      SG U3L2_TurtleSquare_right_instruction: Başlangıç noktasının önüne ve sağına
+        bir dörtgen çizin. (Tam talimatları görmek için tıklayın)
       SGU3L07 - randomDots1_instruction: |-
         Increase the number of iterations to fully
         fill the screen with random dots. (Click to see full instructions)
@@ -6819,6 +6768,10 @@
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
+      Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
+      Valentine_playlab_01_instruction: "Program Kiki (Actor 1) to move left and\nright
+        when the left and right arrows are pressed. When Kiki is clicked, she\nshould
+        throw hearts towards her friends. "
       Vigenere_instruction: Test
       WhileAdventure_instruction: |-
         Our adventurer wants to collect coins. Can you
@@ -7735,8 +7688,8 @@
       courseC_harvester_loops_challenge2_instruction: Tüm marulları topla. Ağaçlardan
         ve tarlalardan sakın!
       courseC_harvester_loops_forVid_instruction: |-
-        Collect all of the corn and all
-        of the pumpkins.
+        Collect all of the corn, all of
+        the lettuce, and all of the pumpkins.
       courseC_maze_debugging1_instruction: Scrat'in meşe palamuduna ulaşması için
         kodu düzelt.
       courseC_maze_debugging10_instruction: |-
