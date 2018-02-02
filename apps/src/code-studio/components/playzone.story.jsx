@@ -1,24 +1,23 @@
 import React from 'react';
 import PlayZone from './playzone';
 import CreateSomething from './stageExtras/CreateSomething';
+import { withInfo } from '@storybook/addon-info';
 
 export default storybook => {
   storybook
     .storiesOf('PlayZone', module)
-    .addWithInfo(
+    .add(
       'default',
-      'This is the PlayZone component.',
-      () => (
+      withInfo('This is the PlayZone component.')(() =>
         <PlayZone
           stageName="Test Stage"
           onContinue={() => {}}
         />
       )
     )
-    .addWithInfo(
+    .add(
       'create something',
-      'This is the CreateSomething component.',
-      () => (
+      withInfo('This is the CreateSomething component.')(() =>
         <CreateSomething />
       )
     );
