@@ -162,6 +162,10 @@ class Ability
         can :manage, Pd::Application::Teacher1819Application
       end
 
+      if user.permission?(UserPermission::PROJECT_VALIDATOR)
+        can :manage, FeaturedProject
+      end
+
       if user.permission?(UserPermission::PLC_REVIEWER)
         can :manage, PeerReview
         can :index, :peer_review_submissions

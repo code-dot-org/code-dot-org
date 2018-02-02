@@ -76,6 +76,12 @@ FactoryGirl.define do
           levelbuilder.save
         end
       end
+      factory :project_validator do
+        after(:create) do |project_validator|
+          project_validator.permission = UserPermission::PROJECT_VALIDATOR
+          project_validator.save
+        end
+      end
       factory :facilitator do
         sequence(:name) {|n| "Facilitator Person #{n}"}
         sequence(:email) {|n| "testfacilitator#{n}@example.com.xx"}
