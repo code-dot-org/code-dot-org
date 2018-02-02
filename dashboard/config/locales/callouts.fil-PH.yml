@@ -355,49 +355,51 @@
         repeat_full_circle: Maglagay ng bilang kung ilang beses ba dapat gumalaw ang
           zombie para makagawa ng buong bilog
       Course 4 Artist 7_callout:
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
+        repeat_blocks: Gamitin ang "Repeat" na bloke at ilibot ito sa paligid ng mga
+          bloke sa loob ng workspace
       Course 4 Artist For Loops 4_callout:
-        place_counter_variable: Drag your counter variable inside this block
+        place_counter_variable: I-drag ang tagabilang na variable sa loob ng blokeng
+          ito
       Course 4 Artist Functions 4_callout:
-        create_function: Click here to open the "Functions" flyout, then click the
-          "Create a Function" button.
+        create_function: Mag-click dito para mabuksan ang "Functions" na flyout, pagkatapos
+          ay i-click ang "Create a Function" na button.
       Course 4 Artist Functions 5 OLD_callout:
-        house_hint: It's ok if the picture doesn't look like a house yet. We will
-          fix it in the next puzzle.
+        house_hint: Okay lang kung ang larawan ay hindi pa parang isang bahay. Aayusin
+          natin ito sa susunod na palaisipan.
       Course 4 Artist Functions 8_callout:
-        edit_function: Click here to edit your function.
+        edit_function: Mag-click dito para ma-edit ang iyong function.
       Course 4 Artist Functions challenge_callout:
         Course_4_Artist_Functions_challenge_1: Notice that we've sorted all of blocks
           and put them behind categories to keep things tidy.  Click here to find
           all of the blocks that you need.
       Course 4 Artist Params 2_callout:
-        length_parameter: Can you update this function so it uses the "length" parameter?
+        length_parameter: Maari mo bang baguhin ang function para magagamit nito ang
+          "length" na parameter?
       Course 4 Artist Params 4_callout:
-        create_function: Click here to open the "Functions" flyout, then click the
-          "Create a Function" button.
+        create_function: Mag-click dito para mabuksan ang "Functions" na flyout, pagkatapos
+          ay i-click ang "Create a Function" na button.
       Course 4 Artist Vars 1_callout:
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
+        repeat_blocks: Gamitin ang "Repeat" na bloke at ilibot ito sa paligid ng mga
+          bloke sa loob ng workspace
       Course 4 Artist Vars 10_callout:
-        set_sides: Use this block to set "sides" to the number needed to complete
-          the puzzle.
+        set_sides: Gamitin ang blokeng ito para maitakda ang "gilid" sa bilang na
+          kailangan para makumpleto ang palaisipan.
       Course 4 Artist Vars 12_callout:
-        set_length: Use this block to set "length" to the correct value.
+        set_length: Gamitin ang blokeng ito para maitakda ang "haba" sa tamang halaga.
       Course 4 Artist Vars 13_callout: []
       Course 4 Artist Vars 2_callout:
-        set_length: Use this block to set "length" to the correct value.
+        set_length: Gamitin ang blokeng ito para maitakda ang "haba" sa tamang halaga.
       Course 4 Artist Vars 3_callout:
-        place_variable: Drag your variable inside this block
+        place_variable: I-drag ang iyong variable sa loob ng blokeng ito
       Course 4 Artist Vars 6_callout:
-        degrees_per_side: Divide 360 by the number of sides to get the size of each
-          angle in degrees.
+        degrees_per_side: Hatiin ang 360 sa bilang ng mga panig para makuha ang laki
+          sa degrees ng bawat anggulo.
       Course 4 Artist Vars 8_callout:
         Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the
           coding area wider.
       Course 4 Artist Vars 9_callout:
-        set_sides: Use this block to set "sides" to the number needed to complete
-          the puzzle.
+        set_sides: Gamitin ang blokeng ito para maitakda ang "gilid" sa bilang na
+          kailangan para makumpleto ang palaisipan.
       Course 4 Bee 1_callout:
         if_bee_nectar: Use the "if" block to decide if the bee should get nectar or
           make honey
@@ -405,13 +407,13 @@
         if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower
           and makes honey if it's not a flower
       Course 4 Bee For Loops 1_callout:
-        get_nectar: Use the new "get nectar" block.
+        get_nectar: Gamitin ang bagong "get nectar" na bloke.
       Course 4 Bee For Loops 6_callout:
-        actions_category: The tool box got a new look! The "Actions" blocks are in
-          here now.
+        actions_category: Ang tool box ay nagkaroon ng bagong itsura. Ang "Aksyon"
+          na mga bloke ay nandito na ngayon.
       Course 4 Bee Params 2_callout:
-        edit_get_nectar: Use this button to edit the function and change the direction
-          the Bee will turn to get the nectar.
+        edit_get_nectar: Gamitin ang button na ito para ma-edit ang function at mabago
+          ang direksyon ni Bee para makakuha ng nektar.
       Course 4 Bee Params 3_callout: []
       Course 4 Bee Params 4 - Two WhenRun_callout:
         Course_4_Bee_Params_4: Setting these variables to either "0" or "1" is called
@@ -423,15 +425,16 @@
         Course 4 Maze 1_callout2: Drag the "move" block and snap it below the other
           blocks in the workspace
       Course 4 Maze 4_callout:
-        repeat: Put blocks inside the loop to repeat commands
+        repeat: Maglagay ng mga bloke sa loob ng loop para maulit ang mga commands
       Course 4 Play Lab Params 2_callout:
         Course_4 _Play_Lab_Params_2_1: Click "edit" to update this function so that
           it uses the height parameter.
       Course 4 Play Lab Params 3_callout:
-        edit_function: Click here to edit your function.
+        edit_function: Mag-click dito para ma-edit ang iyong function.
       Course 4 Play Lab Params 5_callout: []
       Course 4 Play Lab Params 6_callout:
-        edit_add_parameter: Click edit to add a parameter in your function
+        edit_add_parameter: I-click ang edit para makadagdag ng parameter sa iyong
+          function
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: Gamitin ang mga arrows para pagalawin ang aktor
       Course 4 Play Lab Vars 6_callout: []
@@ -479,7 +482,7 @@
         Eval Define Funcs 3: Make our function use the radius parameter instead of
           always having a radius of 50.
       Eval Design Recipe .1_callout:
-        edit_function: Click here to edit your function.
+        edit_function: Mag-click dito para ma-edit ang iyong function.
       Eval Design Recipe 3_callout:
         eval_design_recipe_3: This is your function definition. This code runs every
           time you use the 'wide-rect' function
@@ -496,9 +499,11 @@
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: []
       Frozen Project Test Toolbox_callout:
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        snowflake_dropdown: Gamitin ang drop-down na ito para makalikha na iba't ibang
+          mga snowflakes!
       Frozen Project Toolbox (Old)_callout:
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        snowflake_dropdown: Gamitin ang drop-down na ito para makalikha na iba't ibang
+          mga snowflakes!
       Function intro Ryan_callout:
         Function_intro_Ryan_1: This little instruction tells the computer to run the
           BIG chunk of code with the same name in the workspace.
@@ -584,24 +589,27 @@
         NEW_Course_4_Artist_Functions_3_1: Click here to edit the new function so
           that it creates a square.
       NEW Course 4 Artist Functions 5_callout:
-        edit_function: Click here to edit your function.
-        function_editor_draw_square: This is your function definition. These blocks
-          run everytime you use the "draw a square" block
+        edit_function: Mag-click dito para ma-edit ang iyong function.
+        function_editor_draw_square: Ito ang iyong pagbibigay-kahulugan sa function.
+          Ang mga blokeng ito ay maaaring mapatakbo bawat oras na gamitin mo ang "draw
+          a square" na bloke
       NEW Course 4 Artist Functions 7_callout:
-        edit_function: Click here to edit your function.
+        edit_function: Mag-click dito para ma-edit ang iyong function.
       NEW Course 4 Artist Functions 8_callout:
-        edit_function: Click here to edit your function.
+        edit_function: Mag-click dito para ma-edit ang iyong function.
       NEW Course 4 Artist Params 10_callout:
-        create_function: Click here to open the "Functions" flyout, then click the
-          "Create a Function" button.
+        create_function: Mag-click dito para mabuksan ang "Functions" na flyout, pagkatapos
+          ay i-click ang "Create a Function" na button.
       NEW Course 4 Artist Params 2_callout:
         create_function: ''
         name_function: ''
         write_draw_triangle_function: ''
       NEW Course 4 Artist Params 9_callout:
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add,
-          and then drag it into your function definition
+        edit_add_parameter: I-click ang edit para makadagdag ng parameter sa iyong
+          function
+        add_and_drag_parameter: Isulat ang pangalan ng iyong parameter dito, i-click
+          ang add, at pagkatapos i-drag ito sa iyong pagbibigay ng kahulugan sa iyong
+          function
       NEW Course 4 Artist Vars 6_callout:
         place_length_variable: I-drag ang haba na variable dito para mapalitan ang
           mga marka ng tanong
@@ -609,8 +617,8 @@
         bee_for_loop: Enter the largest number of nectar you want the bee to collect
           here
       NEW Course 4 Bee For Loops 5_callout:
-        actions_category: The tool box got a new look! The "Actions" blocks are in
-          here now.
+        actions_category: Ang tool box ay nagkaroon ng bagong itsura. Ang "Aksyon"
+          na mga bloke ay nandito na ngayon.
       New App Lab Project_callout: []
       New Artist Project_callout:
         New Artist Project_callout1: Click the categories to see the blocks in your
@@ -619,7 +627,8 @@
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       New Frozen Project_callout:
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        snowflake_dropdown: Gamitin ang drop-down na ito para makalikha na iba't ibang
+          mga snowflakes!
       New Maker Lab Project_callout: []
       New Play Lab Project_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
@@ -1358,21 +1367,25 @@
           them away.
       drawings!_callout: []
       frozen circle function with parameter_callout:
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
+        frozen_circle_function_with_parameter_circle: Gamitin ang "create a circle"
+          na bloke at baguhin ang laki.
       frozen cross rotate_callout:
-        replace_questions_degree: Use the drop-down to replace "???" with a number
+        replace_questions_degree: Gamitin ang drop-down para mapalitan ang "???" na
+          isang numero
       frozen cross_callout:
-        repeat_blocks_1: "(1) Use this block and put it around the grey blocks in
-          the workspace"
-        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
-          inside
+        repeat_blocks_1: "(1) Gamitin ang blokeng ito at ilagay sa paligid ng mga
+          abong bloke sa loob ng workspace"
+        repeat_blocks_2: (2) Ilipat ang "Repeat" na bloke dito, at ilagay ang mga
+          abong bloke sa loob
       frozen diamond snowflake_callout:
-        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_diamond_repeat: Gamitin ang repeat na bloke para malikha ang hugis
+          na ito.
       frozen diamond_callout:
-        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_diamond_repeat: Gamitin ang repeat na bloke para malikha ang hugis
+          na ito.
       frozen freeplay_callout:
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        snowflake_dropdown: Gamitin ang drop-down na ito para makalikha na iba't ibang
+          mga snowflakes!
       frozen line_callout:
         run: Hit "Run" to try your program!
         move_elsa_forward: Mag-drag ng "Move Forward" na bloke at daklutin ito sa
@@ -1381,15 +1394,19 @@
         turn_elsa: Gamitin ang "Turn" na bloke para makaikot si Elsa. Ang bilang na
           nasa drop-down ang magtutukoy kung ilang ulit iikot si Elsa
       frozen snowflake branch_callout:
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
+        frozen_snowflake_branch: Gamitin ang "create a snowflake brach" na bloke
       frozen square iterative_callout:
-        frozen_create_square: Attach more blocks here to create a square
+        frozen_create_square: Maglakip ng marami pang mga bloke dito para makalikha
+          ng isang parisukat
       frozen square loop 3x_callout:
-        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions: Gamitin ang drop-down para mapalitan ang "???" na isang
+          numero
       frozen square loop_callout:
-        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions: Gamitin ang drop-down para mapalitan ang "???" na isang
+          numero
       frozen square snowflake_callout:
-        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions: Gamitin ang drop-down para mapalitan ang "???" na isang
+          numero
       grade1_artist_loops2_callout:
         grade1_artist_loops2_1: There is only one of these blocks in the toolbox.  How
           will you use it?
@@ -1483,31 +1500,41 @@
         grade4_artist_functions_stars3_1: Drag this block into your program. Every
           time you use this block, all of the commands in the function will be executed!
       grade4_artist_parameters_squares1_callout:
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add,
-          and then drag it into your function definition
+        edit_add_parameter: I-click ang edit para makadagdag ng parameter sa iyong
+          function
+        add_and_drag_parameter: Isulat ang pangalan ng iyong parameter dito, i-click
+          ang add, at pagkatapos i-drag ito sa iyong pagbibigay ng kahulugan sa iyong
+          function
       grade4_bee_conditionals_quantum2_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
           You don't have to check for honeycombs at all.
       grade4_frozen_freeplay_callout:
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        snowflake_dropdown: Gamitin ang drop-down na ito para makalikha na iba't ibang
+          mga snowflakes!
       grade4_frozen_functions3_callout:
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
+        frozen_circle_function_with_parameter_circle: Gamitin ang "create a circle"
+          na bloke at baguhin ang laki.
       grade4_frozen_nested_loop_diamonds1_callout:
-        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_diamond_repeat: Gamitin ang repeat na bloke para malikha ang hugis
+          na ito.
       grade4_frozen_nested_loop_diamonds3_callout:
-        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_diamond_repeat: Gamitin ang repeat na bloke para malikha ang hugis
+          na ito.
       grade4_frozen_nested_loop_rectangle1_callout:
-        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_diamond_repeat: Gamitin ang repeat na bloke para malikha ang hugis
+          na ito.
       grade4_frozen_square_callout:
-        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions: Gamitin ang drop-down para mapalitan ang "???" na isang
+          numero
       grade4_frozen_square_loop1_callout:
-        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions: Gamitin ang drop-down para mapalitan ang "???" na isang
+          numero
       grade4_frozen_square_loop2_callout:
-        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions: Gamitin ang drop-down para mapalitan ang "???" na isang
+          numero
       grade4_frozen_square_loop3_callout:
-        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions: Gamitin ang drop-down para mapalitan ang "???" na isang
+          numero
       grade4_playLab_proj_example1_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
@@ -1534,9 +1561,11 @@
         grade5_artist_functionparameters_6_1: To complete your polygon, make sure
           you are always turning by 360 ÷ `sides` degrees.
       grade5_artist_parameters_squares1_callout:
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add,
-          and then drag it into your function definition
+        edit_add_parameter: I-click ang edit para makadagdag ng parameter sa iyong
+          function
+        add_and_drag_parameter: Isulat ang pangalan ng iyong parameter dito, i-click
+          ang add, at pagkatapos i-drag ito sa iyong pagbibigay ng kahulugan sa iyong
+          function
       grade5_artist_parameters_squares1a_callout:
         grade5_artist_parameters_triangles1_1: Click the "edit" button to change the
           code inside the function.
@@ -1547,9 +1576,11 @@
         grade5_artist_parameters_triangles1_1: Click the "edit" button to change the
           code inside the function.
       grade5_artist_parameters_triangles1aa_callout:
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add,
-          and then drag it into your function definition
+        edit_add_parameter: I-click ang edit para makadagdag ng parameter sa iyong
+          function
+        add_and_drag_parameter: Isulat ang pangalan ng iyong parameter dito, i-click
+          ang add, at pagkatapos i-drag ito sa iyong pagbibigay ng kahulugan sa iyong
+          function
       grade5_artist_variables_freeplay10_callout:
         Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the
           coding area wider.
@@ -1558,15 +1589,15 @@
         place_length_variable: I-drag ang haba na variable dito para mapalitan ang
           mga marka ng tanong
       grade5_artist_variables_pentagons12_callout:
-        set_length: Use this block to set "length" to the correct value.
+        set_length: Gamitin ang blokeng ito para maitakda ang "haba" sa tamang halaga.
       grade5_artist_variables_square7_callout:
-        degrees_per_side: Divide 360 by the number of sides to get the size of each
-          angle in degrees.
+        degrees_per_side: Hatiin ang 360 sa bilang ng mga panig para makuha ang laki
+          sa degrees ng bawat anggulo.
       grade5_artist_variables_triangles1_callout:
         grade5_artist_variables_triangles1_1: Notice that blocks now have a new way
           to enter numbers. These `math` blocks can be pulled out and moved around!
       grade5_artist_variables_triangles2_callout:
-        set_length: Use this block to set "length" to the correct value.
+        set_length: Gamitin ang blokeng ito para maitakda ang "haba" sa tamang halaga.
       grade5_bee_for_loops3_callout:
         grade5_bee_for_loops3_1: The `for` loop is so large, that the toolbox has
           to change into category mode.  You will find the new `for` loop in here!
@@ -1584,7 +1615,8 @@
         arrows_move_actor: Gamitin ang mga arrows para pagalawin ang aktor
       grade5_playlab_variables10_callout: []
       grade5_playlab_variables11_callout:
-        edit_add_parameter: Click edit to add a parameter in your function
+        edit_add_parameter: I-click ang edit para makadagdag ng parameter sa iyong
+          function
       grade5_playlab_variables1ask_callout:
         arrows_move_actor: Gamitin ang mga arrows para pagalawin ang aktor
       grade5_playlab_variables6_callout: []

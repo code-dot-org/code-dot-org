@@ -153,7 +153,16 @@ module Pd::Application
     end
 
     def self.send_all_decision_notification_emails
-      should_send_decision_notification_emails.each(&:send_decision_notification_email)
+      # Collect errors, but do not stop batch. Rethrow all errors below.
+      errors = []
+      should_send_decision_notification_emails.each do |application|
+        begin
+          application.send_decision_notification_email
+        rescue => e
+          errors << "failed to send notification for application #{application.id} - #{e.message}"
+        end
+      end
+      raise "Failed to send decision notifications: #{errors.join(', ')}" unless errors.empty?
     end
 
     # Override in derived class, if relevant, to specify which multiple choice answers

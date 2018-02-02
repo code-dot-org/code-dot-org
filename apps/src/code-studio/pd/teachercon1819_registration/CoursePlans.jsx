@@ -19,6 +19,27 @@ export default class CoursePlans extends Teachercon1819FormComponent {
 
   static associatedFields = Object.keys(CoursePlans.labels);
 
+  static getDynamicallyRequiredFields(data) {
+    const requiredFields = [];
+
+    if (data['course'] === 'CS Principles') {
+      requiredFields.push(
+        'howOfferCsp',
+        'haveTaughtAp',
+        'haveTaughtWrittenProjectCourse',
+        'gradingSystem',
+        'howManyTerms'
+      );
+    } else if (data['course'] === 'CS Discoveries') {
+      requiredFields.push(
+        'howManyHours',
+        'howManyTerms'
+      );
+    }
+
+    return requiredFields;
+  }
+
   render() {
     return (
       <FormGroup>
@@ -29,10 +50,10 @@ export default class CoursePlans extends Teachercon1819FormComponent {
             {this.radioButtonsFor("howOfferCsp")}
             {this.radioButtonsFor("haveTaughtAp")}
             {this.radioButtonsFor("haveTaughtWrittenProjectCourse")}
-            {this.radioButtonsFor("gradingSystem")}
             {this.radioButtonsWithAdditionalTextFieldsFor("gradingSystem", {
-              [TextFields.other_please_list]: "grading_system_other"
+              [TextFields.otherPleaseList]: "grading_system_other"
             })}
+            {this.radioButtonsFor("howManyTerms")}
           </FormGroup>
         }
 

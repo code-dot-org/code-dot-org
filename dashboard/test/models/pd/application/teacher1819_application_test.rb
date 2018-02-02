@@ -594,5 +594,70 @@ module Pd::Application
       refute_equal original_school_info.id, user.school_info_id
       assert_not_nil user.school_info_id
     end
+
+    test 'get_first_selected_workshop single local workshop' do
+      workshop = create :pd_workshop
+      application = create :pd_teacher1819_application, form_data_hash: (
+        build :pd_teacher1819_application_hash, regional_partner_workshop_ids: [workshop.id]
+      )
+
+      assert_equal workshop, application.get_first_selected_workshop
+    end
+
+    test 'get_first_selected_workshop multiple local workshops' do
+      workshops = (1..3).map {|i| create :pd_workshop, num_sessions: 2, sessions_from: Date.today + i}
+
+      application = create :pd_teacher1819_application, form_data_hash: (
+        build(:pd_teacher1819_application_hash, :with_multiple_workshops,
+          regional_partner_workshop_ids: workshops.map(&:id),
+          able_to_attend_multiple: (
+            # Select all but the first. Expect the first selected to be returned below
+            workshops[1..-1].map do |workshop|
+              "#{workshop.friendly_date_range} in #{workshop.location_address} hosted by Code.org"
+            end
+          )
+        )
+      )
+      assert_equal workshops[1], application.get_first_selected_workshop
+    end
+
+    test 'get_first_selected_workshop multiple local workshops no selection returns first' do
+      workshops = (1..2).map {|i| create :pd_workshop, num_sessions: 2, sessions_from: Date.today + i}
+
+      application = create :pd_teacher1819_application, form_data_hash: (
+        build(:pd_teacher1819_application_hash, :with_multiple_workshops,
+          regional_partner_workshop_ids: workshops.map(&:id),
+          able_to_attend_multiple: []
+        )
+      )
+      assert_equal workshops.first, application.get_first_selected_workshop
+    end
+
+    test 'get_first_selected_workshop with no workshops returns nil' do
+      application = create :pd_teacher1819_application, form_data_hash: (
+      build(:pd_teacher1819_application_hash, :with_multiple_workshops,
+        regional_partner_workshop_ids: []
+        )
+      )
+      assert_nil application.get_first_selected_workshop
+    end
+
+    test 'assign_default_workshop! saves the default workshop' do
+      application = create :pd_teacher1819_application
+      workshop = create :pd_workshop
+      application.expects(:find_default_workshop).returns(workshop)
+
+      application.assign_default_workshop!
+      assert_equal workshop.id, application.reload.pd_workshop_id
+    end
+
+    test 'assign_default_workshop! does nothing when a workshop is already assigned' do
+      workshop = create :pd_workshop
+      application = create :pd_teacher1819_application, pd_workshop_id: workshop.id
+      application.expects(:find_default_workshop).never
+
+      application.assign_default_workshop!
+      assert_equal workshop.id, application.reload.pd_workshop_id
+    end
   end
 end

@@ -32,7 +32,7 @@ ky:
   welcome_back: "Welcome back, %{name}"
   your_professional_learning_plan: "Your Professional Learning Plan"
   see_your_learning_plan: "See your learning plan"
-  submit: Submit
+  submit: Кошуу
   unsubmit: Unsubmit
   previous_page: Previous page
   next_page: Next page
@@ -169,7 +169,7 @@ ky:
       title: 'Forgot your password?'
       instructions: "Enter your email address associated with your account below and we'll send you password reset instructions."
       email: 'Email address'
-      submit: 'Submit'
+      submit: 'Кошуу'
     reset_errors:
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
@@ -230,7 +230,7 @@ ky:
     edit: 'Edit'
     edit_model: 'Edit %{model}'
     update: 'Update'
-    submit: 'Submit'
+    submit: 'Кошуу'
     destroy: 'Destroy'
     back: 'Back'
     confirm: 'Are you sure?'
@@ -737,7 +737,7 @@ ky:
         other: Other
       - 
         opt_out: Prefer not to say
-    submit: "Submit"
+    submit: "Кошуу"
     decline: "Close"
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
@@ -780,7 +780,7 @@ ky:
     no_projects: "You currently have no projects. Click on one of the buttons above to start a project."
     close: "Close"
     more: "More"
-    name: "Name"
+    name: "Аты"
     updated: "Updated"
     project_type: "Project Type"
     help_text: "Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to start a new project!<br/>You can come back and work on your projects at any time."

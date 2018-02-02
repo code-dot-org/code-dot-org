@@ -264,7 +264,7 @@ fil:
       help_support: "Tulong at Suporta"
       report_bug: "I-report ang bug"
       teacher_community: "Komunidad ng mga Guro"
-      professional_learning: "Professional Learning"
+      professional_learning: "Propesyonal na Pag-aaral"
       documentation: "Dokumentasyon"
       tutorials: "Mga Tutorial"
       educate_overview: "Overview ng Nagtuturo"
@@ -288,7 +288,7 @@ fil:
       about_contact: "Kontakin Kami"
       about_faqs: "FAQs"
       learn: "Matuto"
-      stats: "Stats"
+      stats: "Mga Stats"
       help_us: "Tulungan Kami"
       teach: "Magturo"
       about: "Tungkol"
@@ -331,7 +331,7 @@ fil:
     user_not_found: 'Ang guro ay hindi mahanap.'
     student_teacher_disassociated: 'Iniwan mo ang seksyon %{section_code} ni %{teacher_name}.'
     panel:
-      answer_viewer: 'Teacher Panel'
+      answer_viewer: 'Panig ng Guro'
       student: 'Estudyante'
       viewing_solution: 'Tagatingin ng Solusyon'
       try_it_yourself: 'Subukan sa sarili mo'
@@ -568,7 +568,7 @@ fil:
       audience: "Edad 13+"
       cta: "Pag-aralang kung paano"
     hoc-encryption:
-      title: "Simple Encryption"
+      title: "Simpleng Pag-encrypt"
       body: "Matutunan ng mga estudyante ang mga pamamaraan sa paglikha at pag-crack sa mga naka-encrypt na mga mensahe."
     weblab:
       title: "Web Lab (beta)"
@@ -842,7 +842,7 @@ fil:
     review_submitted: 'Your peer review was submitted'
     review_new_submission: 'Review a new submission'
   flex_category:
-    required: 'Overview'
+    required: 'Buod'
     content: 'Content'
     practice: 'Teaching Practices'
     peer_review: 'Peer Review'
@@ -983,4 +983,4 @@ fil:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
-  courses_category: 'Full Courses'
+  courses_category: 'Buong mga Kurso'

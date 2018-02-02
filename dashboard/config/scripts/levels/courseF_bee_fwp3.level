@@ -17,7 +17,7 @@
     "ideal": "18",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",
-    "use_modal_function_editor": "false",
+    "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
@@ -39,11 +39,14 @@
     "instructions": "Let's see if the function makes collecting these three rows of nectar any easier.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "shape_shift": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-14 00:56:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-14 00:56:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-02-02 01:01:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "functions": 2

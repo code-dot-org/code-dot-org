@@ -2,15 +2,17 @@
 #
 # Table name: pd_teachercon1819_registrations
 #
-#  id                :integer          not null, primary key
-#  pd_application_id :integer
-#  form_data         :text(65535)
-#  created_at        :datetime         not null
-#  updated_at        :datetime         not null
+#  id                  :integer          not null, primary key
+#  pd_application_id   :integer
+#  form_data           :text(65535)
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  regional_partner_id :integer
 #
 # Indexes
 #
-#  index_pd_teachercon1819_registrations_on_pd_application_id  (pd_application_id)
+#  index_pd_teachercon1819_registrations_on_pd_application_id    (pd_application_id)
+#  index_pd_teachercon1819_registrations_on_regional_partner_id  (regional_partner_id)
 #
 
 require 'cdo/shared_constants/pd/teachercon1819_registration_constants'
@@ -34,12 +36,20 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
     end
   end
 
+  after_create :send_teachercon_confirmation_email
+  def send_teachercon_confirmation_email
+    return unless pd_application.workshop && pd_application.workshop.teachercon?
+
+    Pd::Teachercon1819RegistrationMailer.confirmation(self).deliver_now
+  end
+
   def self.options
     {
       dietaryNeeds: [
         'None',
         'Vegetarian',
         'Vegan',
+        'Kosher',
         'Halal',
         'Gluten Free',
         TEXT_FIELDS[:food_allergy],
@@ -154,6 +164,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
           :have_taught_ap,
           :have_taught_written_project_course,
           :grading_system,
+          :how_many_terms
         ]
       elsif pd_application.course === "csd"
         requireds.concat [
