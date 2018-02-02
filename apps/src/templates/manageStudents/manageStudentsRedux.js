@@ -26,7 +26,10 @@ export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
     dispatch({ type: START_SAVING_STUDENT, studentId });
-    updateStudentOnServer(state.editingData[studentId], () => {
+    updateStudentOnServer(state.editingData[studentId], (error, data) => {
+      if (error) {
+        console.error(error);
+      }
       dispatch({ type: SAVE_STUDENT_SUCCESS, studentId });
     });
   };
@@ -204,11 +207,8 @@ const updateStudentOnServer = (updatedStudentInfo, onComplete) => {
     contentType: 'application/json;charset=UTF-8',
     data: JSON.stringify(updatedStudentInfo),
   }).done((data) => {
-    onComplete(data);
+    onComplete(null, data);
   }).fail((jqXhr, status) => {
-    // We may want to handle this more cleanly in the future, but for now this
-    // matches the experience we got in angular
-    alert("Unable to save student");
-    console.error(status);
+    onComplete(status, null);
   });
 };
