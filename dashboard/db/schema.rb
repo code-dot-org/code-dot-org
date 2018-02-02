@@ -562,6 +562,7 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.index ["code"], name: "index_pd_enrollments_on_code", unique: true, using: :btree
     t.index ["email"], name: "index_pd_enrollments_on_email", using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
+    t.index ["user_id"], name: "index_pd_enrollments_on_user_id", using: :btree
   end
 
   create_table "pd_facilitator_program_registrations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -932,7 +933,6 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.string   "zip",        null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name", "city"], name: "index_school_districts_on_name_and_city", type: :fulltext
     t.index ["state"], name: "index_school_districts_on_state", using: :btree
   end
 
@@ -1009,7 +1009,6 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.decimal  "longitude",                     precision: 9, scale: 6,              comment: "Location longitude"
     t.string   "state_school_id"
     t.index ["id"], name: "index_schools_on_id", unique: true, using: :btree
-    t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id", using: :btree
     t.index ["state_school_id"], name: "index_schools_on_state_school_id", unique: true, using: :btree
     t.index ["zip"], name: "index_schools_on_zip", using: :btree

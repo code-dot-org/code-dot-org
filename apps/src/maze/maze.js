@@ -21,41 +21,40 @@
  * @fileoverview JavaScript for Blockly's Maze application.
  * @author fraser@google.com (Neil Fraser)
  */
-var React = require('react');
-var ReactDOM = require('react-dom');
-var studioApp = require('../StudioApp').singleton;
-var tiles = require('./tiles');
-var codegen = require('../lib/tools/jsinterpreter/codegen');
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var api = require('./api');
-var Provider = require('react-redux').Provider;
-var AppView = require('../templates/AppView');
-var MazeVisualizationColumn = require('./MazeVisualizationColumn');
-var dom = require('../dom');
-var utils = require('../utils');
-import {generateCodeAliases} from '../dropletUtils';
-var getSubtypeForSkin = require('./mazeUtils').getSubtypeForSkin;
-var dropletConfig = require('./dropletConfig');
 
-var MazeMap = require('./mazeMap');
-import drawMap, {displayPegman, getPegmanYForRow} from './drawMap';
+const React = require('react');
+const ReactDOM = require('react-dom');
+const Provider = require('react-redux').Provider;
 
-import {
-  getContainedLevelResultInfo,
-  postContainedLevelAttempt,
-  runAfterPostContainedLevel
-} from '../containedLevels';
-import {getStore} from '../redux';
-import mazeReducer from './redux';
+const timeoutList = require('../lib/util/timeoutList');
+const AppView = require('../templates/AppView');
+const CustomMarshalingInterpreter = require('../lib/tools/jsinterpreter/CustomMarshalingInterpreter');
+const codegen = require('../lib/tools/jsinterpreter/codegen');
+const dom = require('../dom');
+const utils = require('../utils');
+const constants = require('../constants');
+const TestResults = constants.TestResults;
+const ResultType = constants.ResultType;
+const SVG_NS = constants.SVG_NS;
+const generateCodeAliases = require('../dropletUtils').generateCodeAliases;
+const getStore = require('../redux').getStore;
+const studioApp = require('../StudioApp').singleton;
+const containedLevels = require('../containedLevels');
+const getContainedLevelResultInfo = containedLevels.getContainedLevelResultInfo;
+const postContainedLevelAttempt = containedLevels.postContainedLevelAttempt;
+const runAfterPostContainedLevel = containedLevels.runAfterPostContainedLevel;
 
-var ExecutionInfo = require('./executionInfo');
-
-var Direction = tiles.Direction;
-var SquareType = tiles.SquareType;
-var TurnDirection = tiles.TurnDirection;
-import {TestResults, ResultType} from '../constants';
-
-var SVG_NS = require('../constants').SVG_NS;
+const ExecutionInfo = require('./executionInfo');
+const MazeMap = require('./mazeMap');
+const MazeVisualizationColumn = require('./MazeVisualizationColumn');
+const api = require('./api');
+const drawMap = require('./drawMap');
+const displayPegman = drawMap.displayPegman;
+const getPegmanYForRow = drawMap.getPegmanYForRow;
+const dropletConfig = require('./dropletConfig');
+const mazeReducer = require('./redux');
+const getSubtypeForSkin = require('./mazeUtils').getSubtypeForSkin;
+const tiles = require('./tiles');
 
 /**
  * Create a namespace for the application.
@@ -121,11 +120,6 @@ var loadLevel = function () {
   Maze.PATH_WIDTH = Maze.SQUARE_SIZE / 3;
 };
 
-/**
- * PIDs of animation tasks currently executing.
- */
-import * as timeoutList from '../lib/util/timeoutList';
-
 function createAnimations(svg) {
   // Add idle pegman.
   if (skin.idlePegmanAnimation) {
@@ -169,7 +163,7 @@ function createAnimations(svg) {
       pegmanImage: skin.celebrateAnimation,
       row: Maze.subtype.start.y,
       col: Maze.subtype.start.x,
-      direction: Direction.NORTH,
+      direction: tiles.Direction.NORTH,
       numColPegman: skin.celebratePegmanCol,
       numRowPegman: skin.celebratePegmanRow
     });
@@ -331,7 +325,7 @@ Maze.init = function (config) {
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = Maze.MAZE_WIDTH + 'px';
 
-    drawMap(svg, skin, Maze.subtype, Maze.map, Maze.SQUARE_SIZE);
+    drawMap.default(svg, skin, Maze.subtype, Maze.map, Maze.SQUARE_SIZE);
     createAnimations(svg);
 
     var stepButton = document.getElementById('stepButton');
@@ -1070,28 +1064,28 @@ function animateAction(action, spotlightBlocks, timePerStep) {
 
   switch (action.command) {
     case 'north':
-      animatedMove(Direction.NORTH, timePerStep);
+      animatedMove(tiles.Direction.NORTH, timePerStep);
       break;
     case 'east':
-      animatedMove(Direction.EAST, timePerStep);
+      animatedMove(tiles.Direction.EAST, timePerStep);
       break;
     case 'south':
-      animatedMove(Direction.SOUTH, timePerStep);
+      animatedMove(tiles.Direction.SOUTH, timePerStep);
       break;
     case 'west':
-      animatedMove(Direction.WEST, timePerStep);
+      animatedMove(tiles.Direction.WEST, timePerStep);
       break;
     case 'look_north':
-      Maze.scheduleLook(Direction.NORTH);
+      Maze.scheduleLook(tiles.Direction.NORTH);
       break;
     case 'look_east':
-      Maze.scheduleLook(Direction.EAST);
+      Maze.scheduleLook(tiles.Direction.EAST);
       break;
     case 'look_south':
-      Maze.scheduleLook(Direction.SOUTH);
+      Maze.scheduleLook(tiles.Direction.SOUTH);
       break;
     case 'look_west':
-      Maze.scheduleLook(Direction.WEST);
+      Maze.scheduleLook(tiles.Direction.WEST);
       break;
     case 'fail_forward':
       Maze.scheduleFail(true);
@@ -1100,12 +1094,12 @@ function animateAction(action, spotlightBlocks, timePerStep) {
       Maze.scheduleFail(false);
       break;
     case 'left':
-      var newDirection = Maze.pegmanD + TurnDirection.LEFT;
+      var newDirection = Maze.pegmanD + tiles.TurnDirection.LEFT;
       Maze.scheduleTurn(newDirection);
       Maze.pegmanD = tiles.constrainDirection4(newDirection);
       break;
     case 'right':
-      newDirection = Maze.pegmanD + TurnDirection.RIGHT;
+      newDirection = Maze.pegmanD + tiles.TurnDirection.RIGHT;
       Maze.scheduleTurn(newDirection);
       Maze.pegmanD = tiles.constrainDirection4(newDirection);
       break;
@@ -1319,8 +1313,8 @@ Maze.scheduleFail = function (forward) {
                      frame);
   // Play sound and animation for hitting wall or obstacle
   var squareType = Maze.map.getTile(targetY, targetX);
-  if (squareType === SquareType.WALL || squareType === undefined ||
-    (Maze.subtype.isScrat() && squareType === SquareType.OBSTACLE)) {
+  if (squareType === tiles.SquareType.WALL || squareType === undefined ||
+    (Maze.subtype.isScrat() && squareType === tiles.SquareType.OBSTACLE)) {
     // Play the sound
     studioApp().playAudio('wall');
     if (squareType !== undefined) {
@@ -1328,15 +1322,15 @@ Maze.scheduleFail = function (forward) {
       studioApp().playAudio('wall' + Maze.subtype.wallMap[targetY][targetX]);
     }
 
-    if (Maze.subtype.isScrat() && squareType === SquareType.OBSTACLE) {
+    if (Maze.subtype.isScrat() && squareType === tiles.SquareType.OBSTACLE) {
       // Remove cracked ice, replace surrounding ice with cracked ice.
       Maze.updateSurroundingTiles(targetY, targetX, (tileElement, cell) => {
-        if (cell.getTile() === SquareType.OPEN) {
+        if (cell.getTile() === tiles.SquareType.OPEN) {
           tileElement.setAttributeNS(
             'http://www.w3.org/1999/xlink', 'xlink:href',
             skin.largerObstacleAnimationTiles
           );
-        } else if (cell.getTile() === SquareType.OBSTACLE) {
+        } else if (cell.getTile() === tiles.SquareType.OBSTACLE) {
           tileElement.setAttribute('opacity', 0);
         }
       });
@@ -1365,7 +1359,7 @@ Maze.scheduleFail = function (forward) {
             x: deltaX,
             y: deltaY
           }, numFrames, timePerFrame, 'wall',
-          Direction.NORTH, true);
+          tiles.Direction.NORTH, true);
         setTimeout(function () {
           document.getElementById('wallPegman').setAttribute('visibility', 'hidden');
         }, numFrames * timePerFrame);
@@ -1409,7 +1403,7 @@ Maze.scheduleFail = function (forward) {
         });
       }, stepSpeed * 4);
     }
-  } else if (squareType === SquareType.OBSTACLE) {
+  } else if (squareType === tiles.SquareType.OBSTACLE) {
     // Play the sound
     studioApp().playAudio('obstacle');
 
@@ -1599,18 +1593,18 @@ Maze.scheduleLook = function (d) {
   var x = Maze.pegmanX;
   var y = Maze.pegmanY;
   switch (d) {
-    case Direction.NORTH:
+    case tiles.Direction.NORTH:
       x += 0.5;
       break;
-    case Direction.EAST:
+    case tiles.Direction.EAST:
       x += 1;
       y += 0.5;
       break;
-    case Direction.SOUTH:
+    case tiles.Direction.SOUTH:
       x += 0.5;
       y += 1;
       break;
-    case Direction.WEST:
+    case tiles.Direction.WEST:
       y += 0.5;
       break;
   }
