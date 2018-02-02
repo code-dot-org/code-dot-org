@@ -560,7 +560,7 @@ module.exports = {
     },
 
     {
-      description: "add a background with spaces",
+      description: "add a background image name with spaces and parens",
       editCode: true,
       xml: "",
       runBeforeClick: function (assert) {
@@ -569,8 +569,8 @@ module.exports = {
         validatePropertyRow(0, 'id', 'screen1', assert);
 
         // take advantage of the fact that we expose the filesystem via
-        var assetUrl = '/base/static/flappy promo.png';
-        var encodedAssetUrl = '/base/static/flappy%20promo.png';
+        var assetUrl = '/base/static/flappy (1).png';
+        var encodedAssetUrl = '/base/static/flappy%20%281%29.png';
         var imageInput = $("#design-properties input").eq(2)[0];
 
         ReactTestUtils.Simulate.change(imageInput, {
