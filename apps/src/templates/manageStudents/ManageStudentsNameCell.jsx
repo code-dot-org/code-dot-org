@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {tableLayoutStyles} from "../tables/tableConstants";
 import i18n from "@cdo/locale";
-import {editName} from './manageStudentsRedux';
+import {editStudent} from './manageStudentsRedux';
 
 class ManageStudentNameCell extends Component {
   static propTypes = {
@@ -14,7 +14,7 @@ class ManageStudentNameCell extends Component {
     username: PropTypes.string,
     isEditing: PropTypes.bool,
     //Provided by redux
-    editName: PropTypes.func.isRequired,
+    editStudent: PropTypes.func.isRequired,
   };
 
   state = {
@@ -24,7 +24,7 @@ class ManageStudentNameCell extends Component {
   onChangeName = (e) => {
     const newName = e.target.value;
     this.setState({nameValue: newName});
-    this.props.editName(this.props.id, newName);
+    this.props.editStudent(this.props.id, {name: newName});
   };
 
   render() {
@@ -54,7 +54,7 @@ class ManageStudentNameCell extends Component {
 }
 
 export default connect(state => ({}), dispatch => ({
-  editName(id, name) {
-    dispatch(editName(id, name));
+  editStudent(id, studentInfo) {
+    dispatch(editStudent(id, studentInfo));
   },
 }))(ManageStudentNameCell);

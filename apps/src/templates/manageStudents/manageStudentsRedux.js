@@ -8,9 +8,7 @@ const CANCEL_EDITING_STUDENT = 'manageStudents/CANCEL_EDITING_STUDENT';
 const REMOVE_STUDENT = 'manageStudents/REMOVE_STUDENT';
 const SET_SECRET_IMAGE = 'manageStudents/SET_SECRET_IMAGE';
 const SET_SECRET_WORDS = 'manageStudents/SET_SECRET_WORDS';
-const EDIT_NAME = 'manageStudents/EDIT_NAME';
-const EDIT_AGE = 'manageStudents/EDIT_AGE';
-const EDIT_GENDER = 'manageStudents/EDIT_GENDER';
+const EDIT_STUDENT = 'manageStudents/EDIT_STUDENT';
 const START_SAVING_STUDENT = 'manageStudents/START_SAVING_STUDENT';
 const SAVE_STUDENT_SUCCESS = 'manageStudents/SAVE_STUDENT_SUCCESS';
 
@@ -22,9 +20,7 @@ export const cancelEditingStudent = (studentId) => ({ type: CANCEL_EDITING_STUDE
 export const removeStudent = (studentId) => ({ type: REMOVE_STUDENT, studentId });
 export const setSecretImage = (studentId, image) => ({ type: SET_SECRET_IMAGE, studentId, image });
 export const setSecretWords = (studentId, words) => ({ type: SET_SECRET_WORDS, studentId, words });
-export const editName = (studentId, name) => ({ type: EDIT_NAME, studentId, name });
-export const editAge = (studentId, age) => ({ type: EDIT_AGE, studentId, age });
-export const editGender = (studentId, gender) => ({ type: EDIT_GENDER, studentId, gender });
+export const editStudent = (studentId, studentData) => ({ type: EDIT_STUDENT, studentId, studentData });
 
 export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
@@ -120,38 +116,14 @@ export default function manageStudents(state=initialState, action) {
       editingData: _.omit(state.editingData, action.studentId),
     };
   }
-  if (action.type === EDIT_NAME) {
+  if (action.type === EDIT_STUDENT) {
     return {
       ...state,
       editingData: {
         ...state.editingData,
         [action.studentId]: {
           ...state.editingData[action.studentId],
-          name: action.name,
-        }
-      }
-    };
-  }
-  if (action.type === EDIT_AGE) {
-    return {
-      ...state,
-      editingData: {
-        ...state.editingData,
-        [action.studentId]: {
-          ...state.editingData[action.studentId],
-          age: action.age,
-        }
-      }
-    };
-  }
-  if (action.type === EDIT_GENDER) {
-    return {
-      ...state,
-      editingData: {
-        ...state.editingData,
-        [action.studentId]: {
-          ...state.editingData[action.studentId],
-          gender: action.gender,
+          ...action.studentData,
         }
       }
     };
