@@ -73,9 +73,10 @@ export default class SchoolInfoInterstitial extends React.Component {
         };
       }
       $.post({
-        url: this.props.formUrl,
+        url: this.props.formUrl + '.json',
         dataType: "json",
         data: {
+          '_method': 'patch',
           [this.props.authTokenName]: this.props.authTokenValue,
           ...schoolData,
         },
