@@ -31,8 +31,9 @@ class Pd::Teachercon1819RegistrationTest < ActiveSupport::TestCase
       "Form data howOfferCsp",
       "Form data haveTaughtAp",
       "Form data haveTaughtWrittenProjectCourse",
-      "Form data gradingSystem",
-      "Form data howManyTerms"
+      "Form data howManyHours",
+      "Form data howManyTerms",
+      "Form data gradingSystem"
     ], registration.errors.full_messages
 
     registration.form_data = build(:pd_teachercon1819_registration_hash).to_json

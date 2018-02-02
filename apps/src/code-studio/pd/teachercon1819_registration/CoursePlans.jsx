@@ -27,6 +27,8 @@ export default class CoursePlans extends Teachercon1819FormComponent {
         'howOfferCsp',
         'haveTaughtAp',
         'haveTaughtWrittenProjectCourse',
+        'howManyHours',
+        'howManyTerms',
         'gradingSystem'
       );
     } else if (data['course'] === 'CS Discoveries') {
@@ -50,6 +52,8 @@ export default class CoursePlans extends Teachercon1819FormComponent {
             {this.radioButtonsFor("howOfferCsp")}
             {this.radioButtonsFor("haveTaughtAp")}
             {this.radioButtonsFor("haveTaughtWrittenProjectCourse")}
+            {this.radioButtonsFor("howManyHours")}
+            {this.radioButtonsFor("howManyTerms")}
             {this.radioButtonsWithAdditionalTextFieldsFor("gradingSystem", {
               [TextFields.otherPleaseList]: "grading_system_other"
             })}
