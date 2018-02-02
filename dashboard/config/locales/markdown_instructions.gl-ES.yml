@@ -52,7 +52,7 @@
         There are many
         different ways to solve this puzzle.
       2-3 Artist 9 NEW_markdown_instruction: Termina este papaventos
-      2-3 Artist 9 REPLACEMENT_markdown_instruction: Finish drawing these stairs!
+      2-3 Artist 9 REPLACEMENT_markdown_instruction: Termina de debuxar esta escaleira!
       2-3 Artist 9_markdown_instruction: Termina este papaventos
       2-3 Artist Assessment 1_markdown_instruction: |-
         **Assessment:** Finish drawing
@@ -9723,13 +9723,13 @@
         learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
         PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png) to send it to your Projects Gallery.
-      CSD U3 L9 Freeplay_markdown_instruction: |
+      CSD U3 L9 Freeplay_markdown_instruction: |-
         # Free Play\r
         \r
         Use what you've
         learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
         PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.\r
+        PM.png) to send it to your Projects Gallery.
       CSD U3 Mouse Input Bee 1_markdown_instruction: |
         <img src="https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif"
         style="float:right">\r
@@ -12203,7 +12203,7 @@
         the opposite direction\r
         \r
         [//]: #(https://images.code.org/63b04e63fc4bc21700b64ef3d6c6b8b7-image-1471475653020.png)
-      CSD U3 abstraction decelerateX_markdown_instruction: |
+      CSD U3 abstraction decelerateX_markdown_instruction: |-
         # Slowing Things Down\r
         \r
         Now
@@ -12222,7 +12222,7 @@
         do you think will happen when the car finally stops?\r
         \r
         *Challenge: Add
-        code that makes the car slow down only if his velocityX is greater than 0.*\r
+        code that makes the car slow down only if his velocityX is greater than 0.*
       CSD U3 abstraction decelerateY_markdown_instruction: |-
         # Simulating Gravity\r
         \r
@@ -15159,6 +15159,10 @@
         Watch this video to learn how
         this problem is solved by Amazon. As you watch think about what data is being
         collected and where it's coming from.
+      CSD U5 Netflix Data Video_markdown_instruction: |-
+        Watch this video to learn
+        how this problem is solved by Netflix. As you watch think about what data
+        is being collected and where it's coming from.
       CSD U5 Pizza 2_markdown_instruction: |-
         # Pizza Party\r
         \r
@@ -15350,9 +15354,12 @@
         # Decoding multiple numbers\r
         \r
         Here's
-        a widget that can calculate numbers up to to eight bits. (If you have a shorter
-        number, you can just leave the extra bits at the left off.) You can use it
-        to find the values of the two world records below.\r
+        a widget that can calculate numbers up to to eight bits. You can use it to
+        find the values of the two world records below.\r
+        \r
+        Don't forget to make
+        sure that the "1" bit is always the right most bit.  If you have extra bits
+        on the left side of the widget, just keep them turned off.\r
         \r
         ![](https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14
         PM.png)\r
@@ -15544,6 +15551,42 @@
         Write
         your answer in the box below, then run the code and see what happens.
       CSD U6 Catch the Mouse_markdown_instruction: Embedded Prediction
+      CSD U6 Driver pt 2_markdown_instruction: |-
+        # Limiting Turn\r
+        \r
+        You might
+        have noticed that it was really hard to steer the car unless your hands were
+        moving slowly and carefully. This is because the number that `roll` returns
+        can be a really big number depending on how much the accelerometer is being
+        turned. Remember, `roll` has a range from -90 to 90.\r
+        \r
+        # Do This\r
+        \r
+        Find
+        a way to make `roll` a smaller number while still using it to steer the car.
+        You have all of the math operators available to you for this.\r
+        \r
+        _Challenge_:
+        Can you keep the car from going off the side of the screen?
+      CSD U6 Driver pt1_markdown_instruction: |-
+        # Steering Wheel\r
+        \r
+        This game
+        is similar to the goalie game that you just played, except a little different.
+        Use your board as a steering wheel for the car (moving side to side). You
+        have to get to the checkered flag at while avoiding the red flags along the
+        way!\r
+        \r
+        \r
+        # Do This\r
+        \r
+        * Make the car move down the screen while
+        the program runs.\r
+        * Give the car the ability to steer side to side.\r
+        \r
+        Think
+        back to the programs you've made up until this point, how can you update
+        these values?
       CSD U6 LED all_markdown_instruction: |-
         # Multi-function Light\r
         \r
@@ -15600,6 +15643,23 @@
         \r
         Use the `.color()` command to set each of
         the color LEDs to a different color.
+      CSD U6 Pedometer_markdown_instruction: |-
+        # Pedometer Jog\r
+        \r
+        The `change`
+        event is useful, but it's also really sensitive to movement. `shake` is like
+        `change`, and is triggered when the board is shaken, but it has a higher threshold
+        for changes in movement before triggering the event. \r
+        \r
+        You're going
+        to use this event to make a pedometer.\r
+        \r
+        # Do This\r
+        \r
+        * Use the counter
+        pattern to move the jogger every time the board is shaken.\r
+        * Make sure
+        the jogger moves by 5 steps every time.
       CSD U6 add LED button_markdown_instruction: |-
         # Using Events\r
         \r
@@ -15638,7 +15698,7 @@
         # Change Event\r
         \r
         The data
-        even is fine if you don't mind your code running constantly, but sometimes
+        event is fine if you don't mind your code running constantly, but sometimes
         that's not the most efficient solution to your problem. The sensor "change"
         event only fires if the sensor value has changed since the last reading, which
         can make sure your program isn't running code when it's not necessary.\r
@@ -15665,7 +15725,7 @@
         the sound reading using the "data" event.\r
         \r
         * Create an event handler
-        to respond to light sensor's "data" event\r
+        to respond to sound sensor's "data" event\r
         * Move the existing code into
         your event handler
       CSD U6 analog light_markdown_instruction: |-
@@ -15880,6 +15940,71 @@
         *
         Run your program, moving the slider to see whether the LED speed changes automatically.
       CSD U6 checkbox_markdown_instruction: Predict Level
+      CSD U6 circuit createButton scratch_markdown_instruction: |-
+        <div style="float:
+        right" markdown="1">\r
+        \r
+        ![expandable](https://images.code.org/14e51a17975b1eb03a852621f9cd8cac-image-1516048913406.png)\r
+        \r
+        </div>\r
+        \r
+        #
+        Using createButton\r
+        \r
+        Just like `createLed()` lets us create LED objects
+        that can be used like the built-in `led`, you can use `createButton()` to
+        create button objects that can be used just like the built-in `buttonL` and
+        `buttonR` objects.\r
+        \r
+        # Do This\r
+        \r
+        * Connect your button circuit to
+        a new pin, or add a new button circuit.\r
+        * Using the `createButton()` block,
+        create a new button object on your chosen pin.\r
+        * Add a `onBoardEvent()`
+        block, and set it to respond to your new button's "down" event.\r
+        * Program
+        your event handler so that when your button is pressed, the color LEDs turn
+        on.\r
+        \r
+        _Hint: The button object that you create won't be in the `onBoardEvent()`
+        dropdown, so you'll need to type the name you've chosen in. Make sure not
+        to use quotation marks!_
+      CSD U6 circuit createButton_markdown_instruction: |-
+        <div style="float: right"
+        markdown="1">\r
+        \r
+        ![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/button_alligator.png)\r
+        \r
+        </div>\r
+        \r
+        #
+        Make Your Own Buttons\r
+        \r
+        Similar to LEDs, buttons are a really simple
+        circuit that you can add to your board pretty easily. Like LEDs, buttons should
+        be wired from a numbered pin to a ground pin, but unlike LEDs, a button circuit
+        should be disconnected in the middle. When you connect the circuit, it will
+        produce a button press event.\r
+        \r
+        # Do This\r
+        \r
+        * Grab two wires.\r
+        *
+        Connect one wire to an open numbered pin.\r
+        * Connect the second wire to
+        a ground pin.\r
+        * Update line 2 so that it's referencing the pin you chose.\r
+        *
+        Run the provided code.\r
+        * With the program running, touch the unconnected
+        ends of both wires together to "press" the button.\r
+        \r
+        _Tip: A button
+        circuit can be made with many different kinds of materials, as long as they
+        are electrically conductive. Try making buttons with foil, silverware, or
+        paper clips._
       CSD U6 circuit createLed_markdown_instruction: |-
         # Creating Board Objects\r
         \r
@@ -15911,41 +16036,62 @@
         * Drag out
         an `led.blink()` block below the comment `// Blink myLed`.\r
         * Replace the
-        text `led` with `myLed`.\\r
+        text `led` with `myLed`.\r
         * Test your code.
-      CSD U6 circuit multi led_markdown_instruction: |-
-        # Creating Board Objects\r
+      CSD U6 circuit mix_markdown_instruction: |-
+        # Mix and Match Circuits\r
         \r
-        You
-        might have noticed that the new blocks we're using are in a different toolbox
-        drawer. The **Circuit** drawer contains all of the board objects that are
-        built into the Circuit Playground, but when you start wiring your own circuits
-        the Maker Toolkit no longer knows where everything is.\r
-        \r
-        The new **Maker**
-        drawer contains general purpose commands instead of ones that are customized
-        for the Circuit Playground. In addition to the `pinMode()` and `digitalWrite()`
-        commands you've seen, it includes commands to create new objects on the board
-        that can be programmed in the same way as the blocks in the **Circuit** drawer.
-        The `var myLed = createLed()` command, for example, creates a new LED object
-        that behaves just like the `led` blocks you've been using.\r
+        Using
+        the 8 numbered pins around the edge of the board, you can combine as many
+        buttons and LEDs as you can fit, using a separate numbered pin for each circuit
+        and a shared ground pin for all them.\r
         \r
         # Do This\r
         \r
-        Now
-        that you're creating new board objects that we don't have blocks for, you'll
-        need to work in text mode. You can still drag out blocks that you're familiar
-        with from the **Circuit** drawer, you'll just need to change the name of
-        the object.\r
+        Disconnect any
+        circuits currently attached to your board.\r
         \r
-        * Keep your LED wired just as it was before (connected
-        to pin 2)\r
-        * Make sure you're in text mode, not block mode.\r
-        * Drag out
-        an `led.blink()` block below the comment `// Blink myLed`.\r
-        * Replace the
-        text `led` with `myLed`.\\r
-        * Test your code.
+        * Create a button circuit
+        connected to pin 0.\r
+        * Create an LED circuit connected to pin 2.\r
+        * Create
+        a new button object for your button circuit with `createButton()`.\r
+        * Create
+        a new LED object for your LED circuit with `createLed()`\r
+        * Add event handlers
+        to turn on your new LED when your button is pressed down, and turn it back
+        off when the button is released.\r
+        \r
+        _Tip: When sharing the ground pin
+        with multiple circuits it can be useful to connect a larger conductive object
+        (like a bare wire) to the pin and then connect all of your circuits to that
+        larger object._
+      CSD U6 circuit multi led_markdown_instruction: |-
+        # Wiring Multiple LEDs\r
+        \r
+        Using
+        the `createLed()` block you can connect and control as many LEDs as your board
+        has room for. Each LED needs to be connected to a separate numbered pin, but
+        they can all share the same ground pin.\r
+        \r
+        # Do This\r
+        \r
+        Leave the
+        current LED connected to pin 2, but add another one to a numbered pin of your
+        choice. For your new LED:\r
+        \r
+        * Add a `var myLed = createLed()` block.\r
+        *
+        Replace the variable label `myLed` with a unique label.\r
+        * Make sure you're
+        in text mode, not block mode.\r
+        * Add an `led.blink()` command.\r
+        * Replace
+        the text `led` with your new LED variable.\r
+        * Test your code.\r
+        \r
+        _Challenge:
+        Try adding a third LED and make all three LED blink at different intervals._
       CSD U6 circuit pinMode_markdown_instruction: |-
         # Wire a Circuit\r
         \r
@@ -15959,7 +16105,7 @@
         pin 2 to the positive (+) side of an LED\r
         * Using another wire, connect
         the negative (-) side of the LED to a ground (GND) pin (it doesn't matter
-        which run)\r
+        which one)\r
         * Run this program to test your circuit. If it worked, your
         LED should turn on.\r
         \r
@@ -15974,6 +16120,106 @@
         numbered pins! Look for **#13** on your board to see which circuit is connected
         to pin 13, then read through this code and predict what will happen when the
         program is run.
+      CSD U6 circuit project program_markdown_instruction: |-
+        # Program Your Prototype\r
+        \r
+        Using
+        your planning guide, program your prototype to simulate basic functionality.\r
+        \r
+        #
+        Do This\r
+        \r
+        Your physical prototype should by now include one of the buttons
+        wired to pin 0, and one of your location indicator LEDs connected to pin 2.
+        That's enough to model how the prototype should work, you just need program
+        the button to turn on and off the LED.\r
+        \r
+        * Create your LED and button
+        objects using the appropriate `create` commands.\r
+        * Program event handlers
+        to respond to your button going down and up, which turn on and off the LED.
+      CSD U6 circuit project template_markdown_instruction: |-
+        # Prototyping Circuit
+        Project Template
+      CSD U6 circuit smart bike blinker buttons_markdown_instruction: |-
+        # Smart Bike
+        - Blinker Controls\r
+        \r
+        With your turn signal LEDs hooked up, you just need
+        to program some buttons to control them. You may want to place buttons elsewhere
+        on the bike to make controlling your turn signals easier, but for now we'll
+        just use the built in left and right buttons.\r
+        \r
+        # Do This\r
+        \r
+        * Add
+        event handlers to blink the left turn signal when the left button is pressed.\r
+        *
+        Add event handlers to blink the right turn signal when the right button is
+        pressed.\r
+        * Test your code!
+      CSD U6 circuit smart bike blinkers_markdown_instruction: "# Smart Bike - Blinkers\\r\n\\r\nUsing\nyour
+        planning guide, wire up the two LEDs that will serve as the blinkers.\\r\n\\r\n#\nDo
+        This\\r\n\\r\nUsing alligator clips, wire, or other conductive material,\nconnect
+        two LEDs to your board, one for each turn signal blinker.\\r\n\\r\n*\nHook
+        up each LED to a different numbered pin on the board.\\r\n* Use the `createLed()`\nblock
+        to create an LED object for each blinker.\\r\n\\r\n_Tip: Make your wiring\neasier
+        by considering how your blinkers will be mounted when selecting a pin\nto
+        use._ "
+      CSD U6 circuit smart bike buzzer_markdown_instruction: |-
+        # Smart Bike - Buzzer\r
+        \r
+        Now
+        that we know how to add more buttons, you can add a button to control the
+        smart bike's horn.\r
+        \r
+        # Do This\r
+        \r
+        Using the button that you've
+        already wired the the board, find a good spot to place your horn button. Then:\r
+        \r
+        *
+        Create a button object for your horn button\r
+        * Add an event handler to buzz
+        when button is pressed\r
+        \r
+        _Tip: If you want your horn to play a song,
+        you'll need to make sure that it only plays when the button is first pressed,
+        not continually._
+      CSD U6 circuit smart bike final_markdown_instruction: |-
+        # Smart Bike - Final
+        Touches\r
+        \r
+        At this point your smart bike should have all of it's basic
+        functionality in place. Now is your chance to add any finishing touches.\r
+        \r
+        #
+        Do This\r
+        \r
+        You may want to divide and conquer at this point, allowing
+        some members of your group to focus on the physical aspects of the prototype
+        while others work on improving the code. As this is a prototype, don't worry
+        about making everything perfect, but do try to ensure that the prototype communicates
+        your design well enough to test and get feedback.
+      CSD U6 circuit smart bike light_markdown_instruction: |-
+        # Smart Bike - Headlight\r
+        \r
+        The
+        last part of the smart bike plan that we need to figure out is the automatic
+        headlight.\r
+        \r
+        # Do This\r
+        \r
+        First you'll need to decide what to use
+        for your headlight. You could add another LED circuit, or perhaps you can
+        find a way to mount the board that allows for using the color LEDs as a headlight.
+        Once you've figured out the physical layout of your lights, add code to your
+        program that turns on and off the headlight based on how light or dark it
+        is.\r
+        \r
+        _Hint: If you're using the build in color LEDs, you might need
+        to protect the light sensor to make sure that it's responding to the ambient
+        light level and not the light from the LEDs._
       CSD U6 colorLED on_markdown_instruction: |-
         <img src="//curriculum.code.org/images/circuitplayground/colorLedonoff.gif"
         style="float: right; margin: 10px;">\r
@@ -16138,25 +16384,14 @@
         # Pitch\r
         \r
         This program
-        lights the LEDs depending on if you tilt the board forward or back. If you
-        tilt the board forward, the LEDs in the front should light. If you tilt the
-        board back, the LEDs in the back should light.\r
+        lights the top LEDs (0 and 9) when you tilt the board forward. If you tilt
+        the board back, the LEDs at the bottom (4 and 5) should light.\r
         \r
-        Right now, the only
-        LEDs that light up are the two near the USB port (LEDs 0 and 9) when you tilt
-        the board forward.\r
-        \r
-        \r
-        # Do This\r
-        \r
-        * Use the board's pitch to
-        make LEDs 4 and 5 light up when you tilt the board back.\r
-        * Run your code
-        and test it a few times.\r
-        \r
-        Remember: When pitch is a positive number,
-        it means the board is tilting backward. When pitch is a negative number, the
-        board is tilting forward.
+        # Do
+        This\r
+        * Use the board's pitch to make LEDs 4 and 5 light up when you tilt
+        the board back.\r
+        * Run your code and test it a few times.
       CSD U6 emoji race demo_markdown_instruction: |-
         # Emoji Race!\r
         \r
@@ -16769,6 +17004,22 @@
         * Read the program to understand how it is supposed to work.\r
         *
         Find and correct the bugs so that the program works properly.
+      CSD U6 goalie_markdown_instruction: |-
+        # Updating Values with Data\r
+        \r
+        In
+        this program the goalie trying to block the soccer ball. If he blocks the
+        ball, he gets a point. If he misses, he loses a point. This game almost works,
+        but neither the ball nor the goalie can move right now. You're going to fix
+        this.\r
+        \r
+        \r
+        # Do This\r
+        \r
+        * Use the counter pattern to update the
+        ball's `x` value.\r
+        * Update the goalie's `y` position by the pitch of
+        the board.
       CSD U6 interval predict_markdown_instruction: |-
         # Interval\r
         \r
@@ -16979,6 +17230,23 @@
          * What parameters
         should these functions have?
       CSD U6 params starchaser template_markdown_instruction: Template Level.
+      CSD U6 plane shake_markdown_instruction: |-
+        # Shaking Things Up\r
+        \r
+        Like the
+        `change` event, the `shake` event updates every time the board moves. However,
+        `shake` is a lot less sensitive than `change`. In order to actually trigger
+        it, the board has to be shaken, not just slightly moved.\r
+        \r
+        # Do This\r
+        \r
+        The
+        airplane needs to be shaken in order to take off.\r
+        \r
+        * Use the `shake`
+        event move the airplane\r
+        * Update the airplane's x and y coordinates in
+        order to move it.
       CSD U6 predict LED button_markdown_instruction: Embedded Prediction
       CSD U6 random array notes_markdown_instruction: |-
         # Random Song Generator\r
@@ -17140,8 +17408,28 @@
         that's keeping the duration from being set correctly.\r
         \t* (Hint: Hover
         over the yellow triangles for clues as to what might be wrong with the code.)
-      CSD U6 stillness game predict code_markdown_instruction: "# Change with the\nAccelerometer\\r\n\\r\nJust
-        like the sensors, the accelerometer has a change\nevent. "
+      CSD U6 stillness game predict code_markdown_instruction: |-
+        # Change with the
+        Accelerometer\r
+        \r
+        This program uses the change event to create the ultimate
+        steadiness test. Every time the board detects a change in movement, the movement
+        meter increased by 1. When the movement meter reaches 100, the alarm will
+        sound. Your goal is to pass your board to another person without setting off
+        the alarm.\r
+        \r
+        \r
+        # Do This\r
+        This program has some bugs in it. To fix
+        these, add code that will:\r
+        \r
+        * Increase the `movement` variable each
+        time the `change` event is triggered.\r
+        * Display the current value of `movement`
+        under the movement meter text.\r
+        \r
+        Get a partner and test your game to
+        make sure it works!
       CSD U6 stillness game predict_markdown_instruction: |
         # Accelerometer Events\r
         \r
@@ -24404,6 +24692,51 @@
         numbers**.\r
         * **Run the program** and confirm all values in your object
         appear as you expected.
+      CSP U5 AP Practice Choose the Algorithm_markdown_instruction: |
+        # AP Practice
+        - Identify the Algorithm\r
+        \r
+        One component of the **AP Create Performance
+        Task** is selecting an algorithm that you developed.\r
+        \r
+        <div style="width:
+        80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:
+        serif; font-size: 12pt">\r
+        \r
+        <b>3. Program Code</b>\r
+        <ul>\r
+        <li>Mark
+        with an <b>oval</b> the segment of program code that implements the algorithm
+        you created for your program that integrates other algorithms and integrates
+        mathematical and/or logical concepts.</li>\r
+        </ul>\r
+        </div>\r
+        <br>\r
+        Here's
+        the scoring guide for this question\r
+        <div style="magin:auto">\r
+        \t<img
+        src="https://images.code.org/3240bf9a7f457b8590cf28c4dd4d5418-image-1516294760622.58.32
+        AM.png">\r
+            <img src="https://images.code.org/4edd1b265ad8932a7d6b9294e5622106-image-1516294762983.58.44
+        AM.png">\r
+        </div>\r
+        \r
+        \r
+        # Choose the Student-Developed Algorithm\r
+        \r
+        The
+        program code below is taken from the Color Sleuth activity you just completed.\r
+        \r
+        ![](https://images.code.org/4708875d71e4dc7cd06e2c1e472d8fdc-image-1516311447828.png)\r
+        \r
+        **Write
+        which of the ovals (A, B, C, or D) is placed around code that best meets the
+        criteria as a student-developed algorithm.**\r
+        \r
+        **Explain your answer
+        using the criteria in the scoring guide.**\r
+        \r
       CSPPD PD goals_markdown_instruction: |
         ***Now that you've learned more about
         the CSP Professional Development, let's consider your goals***
@@ -32421,7 +32754,7 @@
 
         After you figure out the answer, if your prediction was off, try to understand
         why.  Where was your misunderstanding?\r
-      CSPU5_U3L19 - write var and string with same name v2_markdown_instruction: |
+      CSPU5_U3L19 - write var and string with same name v2_markdown_instruction: |-
         #
         Debugging Variables\r
         <img src="https://images.code.org/1363b1799cd0f70e383664b4c6359ef4-image-1445479475849.png"
@@ -32451,7 +32784,7 @@
         and fix the problems**\r
         \r
         **GOAL:** Make the app display what's shown
-        at right by only adding or removing quotation marks from the code given.\r
+        at right by only adding or removing quotation marks from the code given.
       CSPU5_U3L23 Chatbot Conditionals 1_markdown_instruction: |
         # Adding Intelligence
         Using Conditionals\r
@@ -32914,7 +33247,7 @@
           * click\r
           * mousemove\r
           *
-        movedown\r
+        mousedown\r
           * mouseup\r
           * mouseover\r
         \r
@@ -32928,7 +33261,6 @@
         \r
         Once you've have played a little bit, click Finish
         to move on.\r
-        \r
       CSPU5_predict_applab_onEventWithWrongID_markdown_instruction: |
         # Debugging
         Event-Driven Programs: IDs\r
@@ -36814,6 +37146,9 @@
         toppings)\r
         - Create a function that allows you to add a coupon code for
         a 30% discount
+      MC Agent Freeplay_markdown_instruction: |-
+        **Freeplay:** Now it's up to you!
+        Use the Agent's code to help you explore this world.
       MC_2017_Ryan_02_markdown_instruction: |-
         Code like this can be made even shorter
         using loops!  \r
@@ -38571,6 +38906,24 @@
         \r
         How many times
         will the for loop below run?
+      Revisiting the Counter Pattern_markdown_instruction: |-
+        Today you’re going to
+        learn how to use and create **functions**.\r
+        \r
+        Creating a function lets
+        you make your own blocks! There are two parts to a function: \r
+        \r
+        Making
+        a newly named block that has all of the code you want to run inside of it.
+        \r
+        -xml of function definition- \r
+        \r
+        The single green block itself that
+        you use, or call, to run the function you created.\r
+        -xml of function call-\r
+        \r
+        Prepare
+        to get familiar with functions, learn how to edit them, and create your own!
       Robot Doodle_markdown_instruction: |-
         **Project Idea:** Create a picture of something
         familiar from the real world. This requires persistence and planning!
@@ -41276,6 +41629,24 @@
         is inserted into the text in place of the pattern.\r
         \r
         <img src="http://code.org/api/hour/begin_text_compression.png">
+      The Accelerometer_markdown_instruction: |-
+        Today you’re going to learn how to
+        use and create **functions**.\r
+        \r
+        Creating a function lets you make your
+        own blocks! There are two parts to a function: \r
+        \r
+        Making a newly named
+        block that has all of the code you want to run inside of it. \r
+        -xml of function
+        definition- \r
+        \r
+        The single green block itself that you use, or call, to
+        run the function you created.\r
+        -xml of function call-\r
+        \r
+        Prepare to
+        get familiar with functions, learn how to edit them, and create your own!
       'The Internet: IP Addresses & DNS_markdown_instruction': |-
         [Video guide and
         questions](https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing)
@@ -59815,35 +60186,36 @@
         ---\r
         \r
         **Response
-        A:** *Facial recognition technology stores data mapping a user's face. A
-        privacy concern for this technology is that it could be used by businesses
-        and governments to identify people as they walk around in their daily lives.*\r
+        A:** *Facial recognition technology stores data mapping a user's face, for
+        example to unlock a phone. A privacy concern for this technology is that governments
+        could force technology companies to turn over this data allowing them to passively
+        and continuously monitor the movements of its citizens without their knowledge
+        or consent.*\r
         \r
-        **Response
-        B:** *Software that tracks soccer player movements on the field can be used
-        to generate new statistics that help value contributions of individual players.
-        A data concern is that this information may be used to justify getting rid
-        of less productive players.*\r
+        **Response B:** *Software that tracks soccer player movements
+        on the field can be used to generate new statistics that help value contributions
+        of individual players. A data concern is that this information may be used
+        to justify getting rid of less productive players.*\r
         \r
-        **Response C:** *Social networks allow
-        users to share vast amounts of private information about their lives. A security
-        concern of this technology is that this publicly available data may enable
-        stalkers or other criminals to identify potential targets.*\r
+        **Response C:**
+        *Social networks allow users to share vast amounts of private information
+        about their lives. A security concern of this technology is that this publicly
+        available data may enable stalkers or other criminals to identify potential
+        targets.*\r
         \r
-        **Response
-        D:** *Self-driving vehicles store vast amounts of information about their
-        location and the world around them. A data concern for the trucking industry
-        is that all of this information could be coordinated to make trucks more efficient
-        causing many people who drive trucks for a living to lose their jobs.*\r
+        **Response D:** *Self-driving vehicles store vast amounts
+        of information about their location and the world around them. A data concern
+        for the trucking industry is that all of this information could be coordinated
+        to make trucks more efficient causing many people who drive trucks for a living
+        to lose their jobs.*\r
         \r
         ---\r
         \r
-        Here's
-        the scoring guide for this part of the question\r
+        Here's the scoring guide for this
+        part of the question\r
         \r
         <div style="magin:auto">\r
-        \t<img
-        src="https://images.code.org/6ff69107762c5afb27661625600d2bfb-image-1510609916491.51.42
+        \t<img src="https://images.code.org/6ff69107762c5afb27661625600d2bfb-image-1510609916491.51.42
         PM.png">\r
         </div>\r
         \r
@@ -60390,7 +60762,7 @@
         Each row is worth one point that either can or cannot be awarded.
         **Explain why you would or would NOT award the point for Row 7 based on the
         criteria given above.**
-      U5 AP Practice Create Abstraction Color Sleuth_markdown_instruction: |
+      U5 AP Practice Create Abstraction Color Sleuth_markdown_instruction: |-
         # AP
         Practice - Create PT - Abstraction\r
         \r
@@ -60418,7 +60790,7 @@
         \r
         <div style="magin:auto">\r
         \t<img
-        src="https://images.code.org/723a551269e14884f76f1d4330560d36-image-1515652835118.40.21
+        src="https://images.code.org/d994f69c99550a352de5565ee4d74f54-image-1516226857132.04.40
         PM.png">\r
         </div>\r
         \r
@@ -60431,15 +60803,14 @@
         \r
         <br>\r
         \r
-        The selection
-        above is taken from the Color Sleuth activity you just completed. The selection
-        above **would earn credit** as an abstraction. What you need to do is write
-        response 2d describing the abstraction and how it manages complexity.\r
+        The code
+        selection above is taken from the Color Sleuth activity you just completed.
+        This selection **would count as an abstraction** on the Create PT, but to
+        earn Row 8 **you will need to describe how this abstraction manages complexity**.
         \r
-        **Write
-        response 2d describing the abstraction above. Use the writing prompt and scoring
-        guidelines as a guide.**\r
         \r
+        **Write response 2d describing the abstraction above. Use the writing
+        prompt and scoring guidelines as a guide.**
       U5 AP Practice Create Algorithm Color Sleuth_markdown_instruction: |-
         # AP Practice
         - Create PT - Algorithm\r
@@ -60477,21 +60848,23 @@
         \r
         # Write the Response\r
         \r
-        ![](https://images.code.org/f3de97fa2fd3d01d25809d06407a7cc4-image-1515524889060.34.33
-        AM.png)\r
+        <img src="https://images.code.org/e841e427e8020f075c8718631bf0cfb3-image-1516228295228.31.22
+        PM.png" style="float:right">\r
         \r
-        <div style="clear:both"></div>\r
+        This code selection is taken from the
+        Color Sleuth activity you just completed and **would count as an algorithm**
+        on the Create PT.\r
         \r
-        <br>\r
+        **Write response 2c describing the algorithm above.
+        Use the writing prompt and scoring guidelines as a guide.** Here are the main
+        points to make sure you include.\r
         \r
-        The selection
-        above is taken from the Color Sleuth activity you just completed. The selection
-        above **would earn credit** as an algorithm. What you need to do is write
-        response 2c describing the algorithm, its sub-algorithms, and how it works.\r
-        \r
-        **Write
-        response 2c describing the algorithm above. Use the writing prompt and scoring
-        guidelines as a guide.**
+        * Name your main algorithm and each
+        of the two sub-algorithms\r
+        * Explain *what* each sub-algorithm does and
+        *how* the code of each actually works\r
+        * Explain how the main algorithm
+        works and how it helps achieve the purpose of the program
       U5 AP Practice Create Algorithm How vs What_markdown_instruction: |-
         # AP Practice
         - Create PT - Process\r
@@ -60594,8 +60967,11 @@
         \r
         Each
         row is worth one point that either can or cannot be awarded. **Explain why
-        you would or would not award the points for Row 2 and Row 3 based on the criteria
-        given above**
+        you would or would not award the points for Row 2 and Row 3**.\r
+        \r
+        Hint:
+        Pay particular attention to the last column of the scoring guidelines and
+        the checklists entitled "Do NOT award a point if..."
       U5 Booleans_markdown_instruction: |-
         ### Points to pay attention to:\r
         \r
@@ -62087,7 +62463,7 @@
         Is this a legal expression?  `10 > 25`?
       U5-AP-Algorithm-Does-It-Count_markdown_instruction: |-
         # AP Practice - Algorithm
-        - Grade the Response\r
+        - Score the Response\r
         \r
         One component of the **AP Create Performance Task**
         is selecting and describing an algorithm that you developed.\r
@@ -62120,7 +62496,7 @@
         PM.png">\r
         </div>\r
         \r
-        # Grade the Response\r
+        # Score the Response\r
         \r
         **Written Response:**
         *"My algorithm controls the log-in for the app. This piece of my program
@@ -62135,6 +62511,47 @@
         \r
         **Explain why you would or would not
         award the point for Row 5 based on the criteria given above**
+      U5-AP-Practice-Choose-The-Algorithm_markdown_instruction: |-
+        # AP Practice -
+        Identify the Abstraction\r
+        \r
+        One component of the **AP Create Performance
+        Task** is selecting an abstraction that you developed.\r
+        \r
+        <div style="width:
+        80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:
+        serif; font-size: 12pt">\r
+        \r
+        <b>3. Program Code</b>\r
+        <ul>\r
+        <li>Mark
+        with a <b>rectangle</b> the segment of program code that represents an abstraction
+        you developed.</li>\r
+        </ul>\r
+        </div>\r
+        <br>\r
+        \r
+        Here's the scoring
+        guide for this question\r
+        \r
+        <div style="magin:auto">\r
+        \t<img src="https://images.code.org/341764b27f16965cf27680e20c893a23-image-1508190677805.50.59
+        PM.png">\r
+        </div>\r
+        \r
+        # Choose the Student-Created Abstraction\r
+        \r
+        The
+        program code below is from a program a student developed. \r
+        \r
+        ![](https://images.code.org/86d48cfc2c9c81551aa059281e9c62f3-image-1508189804595.34.48
+        PM.png)\r
+        \r
+        **Write which of the rectangles (A, B, C, or D) is placed around
+        a student-developed abstraction.**\r
+        \r
+        **Then explain your answer using
+        the criteria in the scoring guide.**
       U5-AP-Practice-FR-manage-complexity_markdown_instruction: |-
         # AP Practice -
         Performance Task Response\r
@@ -62934,6 +63351,33 @@
         \r
         \r
         \r
+      Using Accelerometer Events_markdown_instruction: |-
+        Today you’re going to learn
+        how to use and create **functions**.\r
+        \r
+        Creating a function lets you make
+        your own blocks! There are two parts to a function: \r
+        \r
+        Making a newly
+        named block that has all of the code you want to run inside of it. \r
+        -xml
+        of function definition- \r
+        \r
+        The single green block itself that you use,
+        or call, to run the function you created.\r
+        -xml of function call-\r
+        \r
+        Prepare
+        to get familiar with functions, learn how to edit them, and create your own!
+      Valentine_artist_01_markdown_instruction: |-
+        Help the artist finish his llama
+        heart. See if you can make hearts out of other animals too!
+      Valentine_playlab_01_markdown_instruction: |-
+        Kiki the Soccer Girl wants to make
+        sure her friends are loved on Valentine's Day! Program Kiki (Actor 1) to
+        move left and right when the left and right arrows are pressed. When Kiki
+        is clicked, she should throw hearts towards her friends. How many friends
+        does she have to send love to to win the game?
       Validator_markdown_instruction: |-
         # Software Accessibility: Validator\r
         \r
@@ -64733,11 +65177,15 @@
         Now, put this code into  a
         `repeat` block and loop it **6** times.\r
         - Notice that we have added a 60
-        degree turn at the end of each loop to get a full rotation.
+        degree turn at the end of the looped code to get a full rotation.
       courseC_artist_loopsPrePre1a_markdown_instruction: |-
-        Use the `jump to 200 over
-        200 down` block to get the artist to the center of the play area, then draw
-        a line 50 pixels long with the `move forward 50 pixels` block.
+        Use the <xml><block type="jump_to_xy"
+        id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml>
+        block to get the artist to the center of the play area.  \r
+        Then draw a line
+        50 pixels long with the <xml><block type="draw_move_by_constant"><title
+        name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>
+        block.
       courseC_artist_loopsTemplateA_markdown_instruction: "Use the `jump to 200 over\n200
         down` to get the artist to the center of the play area, then use the `draw\na
         sticker` block to make a bird appear. "
@@ -64998,7 +65446,7 @@
         This code isn't quite right!  \r
         \r
         Fix
-        the code to help get Scrat get to the acorn.
+        the code to help Scrat get to the acorn.
       courseC_maze_debugging3_markdown_instruction: |-
         Something is not quite right.
         \r
@@ -65583,7 +66031,7 @@
         \r
         Use the `if/else`
         block to collect nectar at flowers and make honey at honeycomb. Remember:
-        there will only ever bee *one* honeycomb or *one* flower behind each cloud.
+        there will only ever **bee** *one* honeycomb or *one* flower behind each cloud.
       courseD_bee_conditionals8_markdown_instruction: |-
         **Challenge:** There will
         be either a flower or a honeycomb under each of those clouds!\r
@@ -65921,7 +66369,7 @@
         lettuce**!  \r
         \r
         Help the farmer harvest the items that are ready for picking.  Each
-        plant will have either **one** corn or one lettuce.
+        plant will have either **one** corn or **one** lettuce.
       courseD_farmer_condLoops3_markdown_instruction: |-
         *"Corn, lettuce, AND pumpkins!
         Help me harvest them all."*\r
@@ -65935,9 +66383,9 @@
         The farmer wants to pick everything from
         her lettuce garden. Each plant will now have more than one head of lettuce
         on it, so the farmer will need to keep picking while there is still lettuce
-        growing.\r
+        growing.  \r
         \r
-        ######(Remember: This garden only has lettuce!)
+        ##### (Remember: This garden only has lettuce!)
       courseD_farmer_condLoops4a_markdown_instruction: |-
         *"Gosh! Now the crops are
         growing in clusters!"*  \r
@@ -66933,7 +67381,7 @@
         \r
         ![](https://images.code.org/5a4eec10a53aa78ad6b12fb5e48680f8-image-1497991505852.png)
       courseF_artist_for2_markdown_instruction: |-
-        Use a `repeat` loops inside of a
+        Use a `repeat` loop inside of a
         `for` loop to create this stack of triangles that goes from 50 pixel to 100
         pixel sides.
       courseF_artist_for3_markdown_instruction: |-
@@ -67021,10 +67469,10 @@
         The triangle has 21 pixel sides,
         and the sides in each following shape are 7 pixels longer than the last.   \r
         Use
-        the `multiplication`block to make this all happen with just one function call.\r
+        the `multiplication` block to make this all happen with just one function
+        call.\r
         ___\r
-        The
-        `multipication` block looks like this <xml><block type="math_arithmetic"
+        The `multipication` block looks like this <xml><block type="math_arithmetic"
         inline="true">\r
               <title name="OP">MULTIPLY</title>\r
             </block></xml>

@@ -13,32 +13,32 @@ tr:
       4-5 Bee Conditionals 2_callout:
         4_5_Bee_Conditionals_2_1: Unutma, her bulutun arkasında bir çiçek olup olmadığını görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor.
       AppLab Intro 2 - Edit place1 2_callout:
-        dragTextAreaIn: Click and drag a "Text Area" onto the screen
-        screenSelectorCallout3: Pick the screen you made
+        dragTextAreaIn: '"Yazı Alanı"na tıklayın ve ekranın üzerine sürükleyin'
+        screenSelectorCallout3: Yaptığınız ekranı seçin
       AppLab Intro 2 - Edit place1_callout:
-        screenSelectorCallout2: This is the screen selector
+        screenSelectorCallout2: Bu ekran seçicisidir
         changePlace1ID: Buradan ekran adınızı değiştirin.
       AppLab Intro 2 - Edit startScreen_callout:
         applabIntro2_1: Uygulamanızın başlığını tıklayın
         appLabIntro2_designMenu: Uygulamanızın metnini değiştirmek için bu menüleri kullanın
-        appLabIntro2_textColor: Scroll down to change the "text color"
+        appLabIntro2_textColor: '"yazı rengi"ni değiştirmek için sayfayı aşağı kaydırın'
       AppLab Intro 2 - Edit startScreen2_callout:
-        applabIntro2storyText: Click the story text on this screen
-        appLabIntro2_editStoryText: Drag out the bottom right hand corner of this text box for more space. Then fill in your story text
-        appLabIntro2_textColor: Try out some of the different properties you can change below
+        applabIntro2storyText: Bu ekrandaki hikaye yazısına tıklayın
+        appLabIntro2_editStoryText: Daha fazla alan açmak için bu yazı kutusunun alt sağ köşesini sürükleyin. Sonra hikaye yazınızı tamamlayın
+        appLabIntro2_textColor: Aşağıdaki değiştirebileceğiniz farlı eşyalardan bazılarını deneyin
       AppLab Intro 2 - add Button_callout:
-        designToolboxCallOut: Drag a button onto your screen.
-        changeButtonID: Choose a clear "id" for your button. For example "callFriendButton" or "goOutsideButton"
-        screenSelectorCallout3: Go to your "startScreen"
+        designToolboxCallOut: Ekranınızın üstüne bir buton sürükleyin.
+        changeButtonID: Butonunuz için bir "kimlik"i temizle seçin. Örneğin "ArkadaşAraButonu" veya "DışarıÇıkButonu"
+        screenSelectorCallout3: '"BaşlangıçEkranı"nıza gidin'
       AppLab Intro 2 - add more buttons 2_callout: [ ]
       AppLab Intro 2 - add more buttons_callout: [ ]
       AppLab Intro 2 - add onEvent_callout:
-        onEventFirstTime: Click and drag an "onEvent" block into the workspace to the right
-        setScreenFirstTime: Click and drag into the space in your "onEvent" block
+        onEventFirstTime: Sağdaki çalışma alanına bir "OlayGünü" karesine tıklayarak sürükleyin
+        setScreenFirstTime: '"OlayGünü" karenizdeki boşluğa tıklayın ve sürükleyin'
       AppLab Intro 7 - Change Screen Color_callout:
-        applab_hoc_finish: Did the screen turn green? If so, hit 'Finish'. If not, hit 'Reset', change your code, and hit 'Run' again.
+        applab_hoc_finish: Ekran yeşile döndü mü? Öyleyse, 'Bitir'e basın. Değilse, 'Sıfırla'ya basın, kodunuzu değiştirin, ve yeniden 'Çalıştır'a basın.
       AppLab Intro 7 - thisOrThatAddButton_callout:
-        AppLabHoCFinal11: You're now in Design Mode.
+        AppLabHoCFinal11: Şu anda Tasarım Modundasınız.
       AppLab_test02_callout: [ ]
       Applab test_callout: [ ]
       Big Game Animation 1 (copy 1)_callout: [ ]
@@ -274,20 +274,20 @@ tr:
         CSD_U3_rect_c1: İşte kod
         CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
       CSD U6 colorLeds intensity_callout:
-        CSDU6L10_rainbow: Add your code here
+        CSDU6L10_rainbow: Kodunuzu buraya ekleyin
       CSD U6 colorLeds predict_callout: [ ]
       CSD U6 getProperty input_callout:
         CSD_U6L06P03: Kodunu buraya ekle.
       CSD U6 light show predict_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Bu satır ne yapıyor?
       CSD U6 light show_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Bu satır ne yapıyor?
       CSD U6 tugowar variables 1_callout:
-        CSD_U6_startGame: Define startGame here
+        CSD_U6_startGame: Burada oyunaBaşla'yı tanımlayın
       CSD U6 tugowar variables 2_callout:
-        CSD_U6_movePlayer: Define movePlayer() here
+        CSD_U6_movePlayer: Burada oyuncuyuHareketEttir()'i tanımla
       CSD U6 tugowar variables 3_callout:
-        CSD_U6_checkWin: Check if the player has won
+        CSD_U6_checkWin: Oyuncu kazandı mı kontrol edin
       CSDU4 - Design Mode - 3_callout: [ ]
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
@@ -456,7 +456,7 @@ tr:
       Infinity_repeat_callout:
         Infinity_repeat_callout: '"İlerle" bloklarının buraya yerleştir'
       InspirationalArtwork_callout:
-        InspirationalArtwork_1: Try using the new `comment` block under this label to leave yourself notes inside your program!
+        InspirationalArtwork_1: Programın içinde kendinize not bırakmak için bu etiketin altında yeni 'yorum' karesi kullanın!
       Luigi's Pizza 1 (copy 1)_callout:
         luigi's pizza 1: Try ordering a pepperoni pizza
       Luigi's Pizza 1_callout:
@@ -582,7 +582,7 @@ tr:
       Quantum Bee - Ryan_callout:
         feeling_stuck_callout_test: " Takıldınız mı? < br / > bir ipucu için ampüle tıklayın!"
       Robot Doodle_callout:
-        4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this label to leave yourself notes inside your program!
+        4-5_Artist_Patterns_Free_Play_2: Programın içinde kendinize not bırakmak için bu etiketin altında yeni 'yorum' karesi kullanın!
       Robot Drawing_callout:
         4-5_Artist_Patterns_Free_Play_1: Favori blokların hepsi kategoriler altında organize edilmiştir. Bu kelimelere tıklayarak blokların hangi kategorilere gittiğini görebilirsin!
       Robot_callout:
@@ -599,17 +599,17 @@ tr:
         4_5_Bee_Conditionals_2_1: Unutma, her bulutun arkasında bir çiçek olup olmadığını görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor.
       SG Add Subgoals practice_callout: [ ]
       SG U3L08 how to add comments_callout:
-        comment_highlight: Drag a comment block from here into your code
+        comment_highlight: Buradan kodunuza bir yorum karesi sürükleyin
       SG U3L2 Using Simple Commands part 1_callout: [ ]
       SG U3L2 Using Simple Commands_callout: [ ]
       SG U3L2_Add-subgoals_callout: [ ]
       SG U3L2_Turtle3by3Grid_callout:
-        pen_functions: penUp and penDown are here now if you want to use them.
-        goals_tab: drag goals out from here
+        pen_functions: Kullanmak isterseniz kalemYukarı ve kalemAşağı şimdi buradalar.
+        goals_tab: hedefleri buradan sürükleyerek taşıyın
       SG U3L2_TurtleSquare_right_callout: [ ]
       SGU3L2A Introducing Subgoals_callout:
-        goals_palette_show: Here is a list of subgoals
-        goals_workspace: Example of code with subgoals in it
+        goals_palette_show: İşte alt hedeflerin listesi
+        goals_workspace: İçinde alt hedef bulunduran kod örneği
       Sam the Butterfly 3_callout:
         Sam the Butterfly 3 1: Fonksiyonu güncelle ve Samin sağa gitmesini engelle
       Sam the Butterfly 5_callout: [ ]
@@ -636,7 +636,7 @@ tr:
       U3L05_3x3GridEfficiencyChallenge_callout: [ ]
       U3L05_draw3x3GridEfficiently_callout: [ ]
       U3L08 how to add comments_callout:
-        comment_highlight: Drag a comment block from here into your code
+        comment_highlight: Buradan kodunuza bir yorum karesi sürükleyin
       U3L2 Using Simple Commands (no tooltips)_callout: [ ]
       U3L2 Using Simple Commands_callout: [ ]
       U3L2_Turtle3by3Grid_callout: [ ]
@@ -717,7 +717,7 @@ tr:
         gradek_adventurer_loops2_1: Bu sayı her bloktan kaç tane kullanabileceğini söylüyor.
       courseA_collector_loops3_predict1_callout: [ ]
       courseA_collector_preLoops1_callout:
-        courseA_collector_preLoops1_1: Click here to watch the code run!
+        courseA_collector_preLoops1_1: Kodun çalışmasını izlemek için buraya tıklayın!
       courseA_collector_preLoops2_callout:
         courseA_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki aşamalarda bunları nasıl kullanacağını göstereceğiz.
       courseA_collector_preLoops3_callout:
@@ -734,7 +734,7 @@ tr:
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Programda adım adım gitmek için adım düğmesini kullanın. Bu hatayı bulmanıza yardımcı olacaktır!
       courseA_maze_seq4_callout:
-        made_of_stone: These blocks are made of stone.  You can move them, but you can't delete them!
+        made_of_stone: Bu kareler taştan yapılmış. Onları hareket ettirebilirsiniz ama silemezsiniz!
       courseA_maze_seq4a_callout: [ ]
       courseA_playLab_events2_callout: [ ]
       courseA_playLab_events3_callout: [ ]
@@ -763,7 +763,7 @@ tr:
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Bu blok aktörleri oyun alanının başka bölümlerine taşımanı sağlar.
       courseC_artist_loopsPrePre1a_callout:
-        courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist to the center of the screen.
+        courseC_artist_loopsPrePre1a_1: Sanatçıyı ekranın ortasına ulaştırmak için bu kareyi kullanarak başlayın.
       courseC_artist_prog1_callout: [ ]
       courseC_artist_prog2_callout: [ ]
       courseC_collector_loops_challenge2_callout: [ ]
@@ -791,7 +791,7 @@ tr:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
-        courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
+        courseC_maze_programming3_3: Bu kareler taştan ve atılamaz.
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseC_maze_programming5_callout: [ ]
@@ -822,10 +822,10 @@ tr:
       courseD_artist_ramp12_callout: [ ]
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Unutma, her bulutun arkasında bir çiçek olup olmadığını görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor.
-        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
+        4_5_Bee_Conditionals_2_2: Yardıma mı ihtiyacınız var? Bir VIDEO ipucu için buraya tıklayın!
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Unutma, her bulutun arkasında bir çiçek olup olmadığını görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor.
-        4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO HINTS!
+        4_5_Bee_Conditionals_2_2: Yardıma mı ihtiyacınız var? Yeni VIDEO ipuçlarımızı görmek için buraya tıklayın!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Bu döngüyü tüm nektarları (veya bal) bir çiçekten (veya petekten) toplamak için kullanın.
       courseD_bee_conditionals_challenge3_callout:
@@ -855,7 +855,7 @@ tr:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseD_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
-        stone_block_2: Grey blocks are made of stone and cannot be thrown away.
+        stone_block_2: Gri kareler taştan yapılmış ve atılamazlar.
       courseD_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseD_maze_ramp5_callout: [ ]
@@ -1045,7 +1045,7 @@ tr:
         courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox into category mode to save space.  You will find the new `for` loop in here!
       courseF_bee_for3_predict1_callout: [ ]
       courseF_bee_for4_callout:
-        courseF_bee_for4_1: You will find the `for` loop in here!
+        courseF_bee_for4_1: Burada 'için' döngüsünü bulacaksınız!
       courseF_bee_for6_callout: [ ]
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
@@ -1061,7 +1061,7 @@ tr:
       courseF_bee_fwp1_callout:
         courseF_bee_fwp1_1: You can find `if` statements in here.
       courseF_bee_fwp2_callout:
-        courseF_bee_fwp2_a: The block that calls your function lives in here.
+        courseF_bee_fwp2_a: Fonsiyonunuzu çağıran kare burada yaşıyor.
       courseF_bee_fwp3_callout:
         courseF_bee_fwp3_1: This same function can be used when checking for empty spaces as well as clouds.
       courseF_bee_fwp4_callout:
@@ -1103,7 +1103,7 @@ tr:
       courseF_playlab_variables6c_callout:
         courseF_playlab_variables5c_1: Değişken bloğunuzu burada bulabilirsiniz.
       courseF_playlab_variables7c_callout:
-        courseF_playlab_variables7c_1: Find the `ask` block here!
+        courseF_playlab_variables7c_1: Burada 'sor' karesini bulun!
       courseF_playlab_variables8c_callout: [ ]
       courseF_playlab_variablesTemplate_callout:
         courseF_playlab_variables5c_1: Değişken bloğunuzu burada bulabilirsiniz.
@@ -1354,10 +1354,10 @@ tr:
       subgoal U3 L4 introducing subgoal labels_callout: [ ]
       subgoal U3L2 Using Simple Commands_callout: [ ]
       subgoal-test-clone_callout:
-        move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the workspace.
+        move_subgoal: Bu "kaplumbağayı hareket ettir" alt hedef etiketi. Onu çalışma alanına sürükleyin.
       subgoal-test_callout:
-        move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the workspace.
-        orient_subgoal: This means you want to turn the turtle
+        move_subgoal: Bu "kaplumbağayı hareket ettir" alt hedef etiketi. Onu çalışma alanına sürükleyin.
+        orient_subgoal: Bu kaplumbağayı döndürmek istediğiniz anlamına geliyor
       subgoalU3L2_TurtleSquare_right_callout: [ ]
       testing code callout_callout:
         testing_code_callout: Bu hareketli nesnenin(sprite) ilerlemesini sağlar!

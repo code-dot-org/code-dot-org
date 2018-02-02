@@ -33,20 +33,17 @@
         Coba lagi untuk mendapatkan yang benar.
       Code Studio Puzzle Challenge Var - Artist_failure_message_override: Upaya yang
         bagus! Coba lagi untuk mendapatkan yang benar.
-      Course 4 Artist Vars 10_failure_message_override: |-
-        Make sure you use the sides
-        variable!
-      Course 4 Playlab For Loops 4b_failure_message_override: |-
-        Remember, both characters
-        should get to their flags in the same number of moves!
-      Course 4 Playlab For Loops 5b_failure_message_override: |-
-        Remember, both characters
-        need to stop in the same place.
+      Course 4 Artist Vars 10_failure_message_override: Pastikan Anda menggunakan
+        variabel sisi!
+      Course 4 Playlab For Loops 4b_failure_message_override: "Ingat, kedua karakter
+        \nharus sampai ke bendera mereka dalam jumlah pergerakan yang sama!"
+      Course 4 Playlab For Loops 5b_failure_message_override: "Ingat, kedua karakter
+        \nharus berhenti di tempat yang sama."
       Eval Strings Images .2_failure_message_override: |-
         Make sure you append the
         string "Universe" to make the code create "Hello, Universe"
-      Kiki_StarWars_Test_5_failure_message_override: Game over!
-      Kiki_StarWars_Test_5_Example_failure_message_override: Game over!
+      Kiki_StarWars_Test_5_failure_message_override: Permainan telah berakhir!
+      Kiki_StarWars_Test_5_Example_failure_message_override: Permainan telah berakhir!
       MC HOC 2016 Level 2-2_failure_message_override: |-
         Use `move forward` and `turn`
         commands to get your chicken moving.
@@ -87,16 +84,14 @@
       WhileAdventure_failure_message_override: |-
         Congratulations!  You gathered X
         coins!
-      courseE_playLab_scaffold3_failure_message_override: |-
-        You must add two or more
-        new actors to your game and program them to move.
-      grade4_scaffolded_project3_failure_message_override: |-
-        You must add two or more
-        new actors that move to your game.
-      kikiTesta_failure_message_override: Congratulations!  You gathered X coins!
-      sample1_failure_message_override: Congratulations!  You gathered X coins!
-      sample4_failure_message_override: Congratulations!  You gathered X coins!
+      courseE_playLab_scaffold3_failure_message_override: Anda harus menambahkan dua
+        atau lebih aktor baru ke dalam permainan Anda dan memprogramnya untuk bergerak.
+      grade4_scaffolded_project3_failure_message_override: Anda harus menambahkan
+        dua atau lebih aktor baru yang beralih ke permainan Anda.
+      kikiTesta_failure_message_override: Selamat! Anda mengumpulkan koin X!
+      sample1_failure_message_override: Selamat! Anda mengumpulkan koin X!
+      sample4_failure_message_override: Selamat! Anda mengumpulkan koin X!
       sample6_failure_message_override: |-
         Not quite.  Keep trying!  [Move to Play
         Zone]
-      sample8_failure_message_override: Congratulations!  You gathered X coins!
+      sample8_failure_message_override: Selamat! Anda mengumpulkan koin X!

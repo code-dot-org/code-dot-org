@@ -32,21 +32,24 @@
         video: Unplug2
       Unplug3:
         title: Graph Paper Programming
-        desc: By programming one another to draw pictures, students will begin to
-          understand what programming is really about. The class will begin by students
-          instructing each other to color squares in on graph paper in an effort to
-          reproduce an existing picture.  If there's time, the lesson can conclude
-          with images that the students create themselves.
+        desc: Sa pamamagitan ng pag-program sa bawat isa na magguhit ng mga larawan,
+          ang mga estudyante ay magsimulang maintindihan kung ano talaga ang pag-program.
+          Ang klase ay magsisimula sa pagbigay ng instruksiyon ng mga estudyante sa
+          isa't isa na kulayan ang mga parisukat sa graph na papel sa pagsisikap na
+          makopya ang kasalukuyang larawan. Kung may oras pa, ang aralin ay magtatapos
+          sa mga larawan na nalikha ng mga estudyante para sa sarili nila.
         pdfs:
         - unplug3
         video: Unplug3
       Unplug4:
         title: Mga algorithm
-        desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
-          the first exercise will show how important it is to make each instruction
-          as clear and unambiguous as possible.  Afterward, the class will explore
-          how many ways you can fold paper into a rectangle, noting how some methods
-          can take more or fewer folds than others.
+        desc: Ang araling ito ay naglalakip sa mga algoritmo. Gamit ang mga tangram
+          na hugis at ang graph na papel, ang unang pagsasanay ay magpapakita kung
+          gaano ka importante ang paggawa sa mga instruksiyon na malinaw at hindi
+          malabo hangga't maaari. Pagkatapos, ang klase ay tutuklas kung ilang paraan
+          mo maaring matupi papel para makagawa ng parihaba, bigyan diin na ang ilang
+          pamamaraan ay nangangailangan ng mas marami o mas kaunti na tupi kaysa sa
+          iba.
         pdfs:
         - unplug4
         video: Unplug4

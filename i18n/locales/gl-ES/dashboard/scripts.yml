@@ -27,7 +27,7 @@ gl:
             Happy Maps:
               name: Mapas Felices
             'Jigsaw: Learn to drag and drop':
-              name: 'Jigsaw: Learn to drag and drop'
+              name: 'Crebacabezas: aprende a arrastrar e soltar'
             'Maze: Debugging':
               name: 'Labirinto: Depuración (Debug)'
             'Maze: Loops':
@@ -48,7 +48,7 @@ gl:
           title: Curso 2
           description: O Curso 2 está deseñado para estudantes que poden ler e non teñen experiencia previa en programación. Neste curso os estudantes crearán programas para resolver problemas e desenvolver xogos interactivos ou historias que poden compartir. Recoméndase para os cursos 2 a 5 de primaria.
           description_short: O Curso 2 está deseñado para estudantes que poden ler.
-          description_audience: Ages 6+ (reading required)
+          description_audience: A partir de 6 anos (cómpre saber ler)
           stages:
             'Artist: Debugging':
               name: 'Artista: Depuración (Debug)'
@@ -90,7 +90,7 @@ gl:
               name: A túa pegada dixital
         course3:
           title: Curso 3
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          description: O Curso 3 está deseñado para estudantes que fixeron o Curso 2. Profundarase en temas de programación xa presentados nos cursos anteriores, e que dan solucións flexíbeis a problemas máis complexos. Ao remate do curso, os estudantes son quen de crear historias e xogos interactivos que poden compartir con calquera. Recomendado para os cursos 4º a 5º de Primaria.
           description_short: O Curso 3 é unha continuación do Curso 2.
           description_audience: Idades de 8 a 18 anos
           stages:
@@ -167,7 +167,7 @@ gl:
               name: Artista
         course4:
           title: Curso 4
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description: O Curso 4 está deseñado para estudantes que fixeron os cursos 2 e 3. O alumnado aprenderá a resolver problemas de maior complexidade segundo vaian aprendendo a combinar varios conceptos para cada desafío. Ao remate do curso, os estudantes serán quen de crear programas que amosen habilidades múltiples, incluídos bucles e funcións con parámetros. Recomendado dende 4º de Primaria a 2º de ESO.
           description_short: Os alumnos que fan o curso 4 deben ter feitos xa os cursos 2 e 3.
           description_audience: Idades de 10 a 18 anos
           stages:
@@ -2941,7 +2941,7 @@ gl:
             Fuzz Fiesta:
               name: Fuzz Fiesta
             'Jigsaw: Learn to drag and drop':
-              name: 'Jigsaw: Learn to drag and drop'
+              name: 'Crebacabezas: aprende a arrastrar e soltar'
             Loops:
               name: Bucles
             Loops Intro:
@@ -3009,7 +3009,7 @@ gl:
             Events Unplugged:
               name: Events Unplugged
             'Jigsaw: Learn to drag and drop':
-              name: 'Jigsaw: Learn to drag and drop'
+              name: 'Crebacabezas: aprende a arrastrar e soltar'
             Loops:
               name: Bucles
             Loops Intro:
@@ -4739,7 +4739,7 @@ gl:
             Conditionals:
               name: Condicionais
             'Real Life Algorithms: Dice Race':
-              name: 'Real Life Algorithms: Dice Race'
+              name: 'Algoritmos da vía real: xogo de dados'
         csd6:
           title: CSD Unit 6 - Physical Computing
           description_audience: ''
@@ -6731,6 +6731,22 @@ gl:
               name: Programming - Hour of Code
             Simple Encryption:
               name: Simple Encryption
+            Web Development - Creating Webpages:
+              name: Web Development - Creating Webpages
+            App Development Unplugged - User Interfaces:
+              name: App Development Unplugged - User Interfaces
+            App Development - Intro to App Lab:
+              name: App Development - Intro to App Lab
+            Creating Webpages:
+              name: Creating Webpages
+            User Interfaces:
+              name: User Interfaces
+            Intro to App Lab:
+              name: Intro to App Lab
+            Smart Clothing Design:
+              name: Smart Clothing Design
+            Intro to App Lab (13+):
+              name: Intro to App Lab (13+)
           title: PwC's Access Your Potential curriculum
           description_audience: ''
           description_short: ''
@@ -6860,4 +6876,20 @@ gl:
           title: AWS Demo
           description_audience: ''
           description_short: ''
+          description: ''
+        halloween:
+          stages:
+            Halloween Artist:
+              name: Halloween Artist
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        valentine:
+          stages:
+            special valentine:
+              name: special valentine
+          title: Valentine Special
+          description_audience: ''
+          description_short: Have fun creating valentines
           description: ''

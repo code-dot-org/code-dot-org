@@ -3,7 +3,7 @@ it:
     callouts:
       2-3 Artist 1 new_callout: [ ]
       2-3 Artist Debugging 1_callout:
-        2-3_Artist_Debugging_1_a: Negli esercizi dell'Artista non c'è il bottone "Fai un passo", ma puoi spostare questo cursore per scegliere la velocità di esecuzione del programma.
+        2-3_Artist_Debugging_1_a: Negli esercizi dell'Artista non c'è il pulsante "Fai un passo", ma puoi spostare questo cursore per scegliere la velocità di esecuzione del programma.
       2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: I fiori viola possono avere 1 o 0 dosi di nettare... ma non puoi saperlo fino a quando non esegui il codice!
       4-5 Artist Patterns Free Play_callout:
@@ -670,9 +670,9 @@ it:
         aEfreeplay_1: Nota che iniziare l'artista nel centro puù essere problemativco. Stiamo cercando di aggiungere azioni che possono muovere l'artista su posizioni assolute.
       allthethings_U3 - Simple Drawing - Rectangle Width and Height_callout: [ ]
       artistLoopsK2_callout:
-        artistLoopsK2_1: Questo numero dice quanti di questi blocchi puoi usare in questo puzzle.
+        artistLoopsK2_1: Questo numero ti dice quanti di questi blocchi puoi usare in questo esercizio.
       artistLoopsK2gradek_artist_loops3_callout:
-        artistLoopsK2_1: Questo numero dice quanti di questi blocchi puoi usare in questo puzzle.
+        artistLoopsK2_1: Questo numero ti dice quanti di questi blocchi puoi usare in questo esercizio.
       course2_artist_nestedLoops_challenge2_callout: [ ]
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto il nettare (o miele) da un fiore (o nido d'ape).
@@ -704,7 +704,7 @@ it:
         courseF_bee_fwp_challenge2_callout1: Questa funzione farà un buon lavoro col mais, ma le altre verdure?
       course4_collector_nested_loops_challenge2_callout: [ ]
       courseA_artist_loops4_callout:
-        courseA_artist_loops4_1: Questo numero dice quanti di questi blocchi puoi usare in questo puzzle.
+        courseA_artist_loops4_1: Questo numero ti dice quanti di questi blocchi puoi usare in questo esercizio.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: Questo numero significa che solo uno di questo tipo di blocchi può essere usato nella risposta finale.
       courseA_artist_loops7_forVideo_callout:
@@ -712,22 +712,22 @@ it:
       courseA_artist_loops8_callout:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
       courseA_collector_loops1_callout:
-        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella sezione degli strumenti? Non preoccuparti, ti mostreremo come usarli successivamente.
+        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa lezione.
       courseA_collector_loops3_callout:
-        gradek_adventurer_loops2_1: Questo numero dice quanti di questi blocchi puoi usare in questo puzzle.
+        gradek_adventurer_loops2_1: Questo numero ti dice quanti di questi blocchi puoi usare in questo esercizio.
       courseA_collector_loops3_predict1_callout: [ ]
       courseA_collector_preLoops1_callout:
         courseA_collector_preLoops1_1: Click here to watch the code run!
       courseA_collector_preLoops2_callout:
-        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella sezione degli strumenti? Non preoccuparti, ti mostreremo come usarli successivamente.
+        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa lezione.
       courseA_collector_preLoops3_callout:
-        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella sezione degli strumenti? Non preoccuparti, ti mostreremo come usarli successivamente.
+        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa lezione.
       courseA_collector_preLoops4_callout:
-        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella sezione degli strumenti? Non preoccuparti, ti mostreremo come usarli successivamente.
+        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa lezione.
       courseA_collector_preLoops5_callout:
-        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella sezione degli strumenti? Non preoccuparti, ti mostreremo come usarli successivamente.
+        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa lezione.
       courseA_collector_preLoops6_callout:
-        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella sezione degli strumenti? Non preoccuparti, ti mostreremo come usarli successivamente.
+        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa lezione.
       courseA_forVideoTest_artist_callout: [ ]
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
@@ -750,7 +750,7 @@ it:
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: Questo numero significa che non c'è nessun blocco come questo rimasto nella sezione degli strumenti.
       courseB_collector_loops1_callout:
-        courseB_collector_loops1_1: Vedi qualche nuovo blocco nella sezione degli strumenti? Non preoccuparti, ti mostreremo come usarli successivamente.
+        courseB_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa lezione.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
       courseB_maze_seq2_callout:
@@ -768,7 +768,7 @@ it:
       courseC_artist_prog2_callout: [ ]
       courseC_collector_loops_challenge2_callout: [ ]
       courseC_collector_prog1_callout:
-        courseC_collector_prog1_1: Vedi qualche nuovo blocco nella sezione degli strumenti? Non preoccuparti, ti mostreremo come usarli successivamente.
+        courseC_collector_prog1_1: Vedi qualche nuovo blocco nella cassetta degli attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa lezione.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
       courseC_collector_prog8_callout: [ ]
@@ -1295,9 +1295,9 @@ it:
       grade5_playlab_variables_jump1_callout:
         Course_4_Play_Lab_Vars_9_1: I blocchi della cassetta degli attrezzi ora sono stati organizzati in categorie. Clicca su queste parole per scoprire dove sono finiti!
       gradek_adventurer_loops2_callout:
-        gradek_adventurer_loops2_1: Questo numero dice quanti di questi blocchi puoi usare in questo puzzle.
+        gradek_adventurer_loops2_1: Questo numero ti dice quanti di questi blocchi puoi usare in questo esercizio.
       gradek_artist_loops3_callout:
-        artistLoopsK2_1: Questo numero dice quanti di questi blocchi puoi usare in questo puzzle.
+        artistLoopsK2_1: Questo numero ti dice quanti di questi blocchi puoi usare in questo esercizio.
       gradek_artist_loops7_callout:
         gradek_artist_loops7_1: Did you know that you can draw back over a line whenever you need to?
       gradek_playlab_events1c_callout: [ ]

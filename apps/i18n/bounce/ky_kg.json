@@ -122,7 +122,7 @@
   "setTeam": "{team} команда орнотуу",
   "setTeamRandom": "Команданы кокустан тандоо",
   "shareBounceTwitter": "Мен жасаган Bounce оюнун көргүлө. Мен аны @codeorg менен өзүм жаздым",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
+  "shareBounceTwitterDonor": "Мен жасаган Bounce оюнун көргүлө. (@codeorg колдогону үчүн {donor} ыраазычылык билдиребиз)",
   "shareGame": "Share your game:",
   "turnLeft": "turn left",
   "turnRight": "turn right",
