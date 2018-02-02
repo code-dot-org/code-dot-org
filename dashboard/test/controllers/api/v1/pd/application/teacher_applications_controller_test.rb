@@ -71,6 +71,20 @@ module Api::V1::Pd::Application
       assert_response :success
     end
 
+    test 'auto-scores on successful create' do
+      Pd::Application::Teacher1819Application.any_instance.expects(:auto_score!)
+
+      sign_in @applicant
+      put :create, params: @test_params
+    end
+
+    test 'assigns default workshop on successful create' do
+      Pd::Application::Teacher1819Application.any_instance.expects(:assign_default_workshop!)
+
+      sign_in @applicant
+      put :create, params: @test_params
+    end
+
     test 'updates user school info on successful create' do
       Pd::Application::Teacher1819Application.any_instance.expects(:update_user_school_info!)
 
