@@ -33,11 +33,11 @@ describe("wordsearch: randomLetter", function () {
     var allChars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
       "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     var letter = WordSearch.randomLetter(allChars.slice(0, -1));
-    expect(letter).to.equal('Z');
+    expect(letter, 'all other chars were restricted').to.equal('Z');
 
     for (var i = 0; i < 200; i++) {
       letter = WordSearch.randomLetter(['A']);
-      expect(letter).to.match(/^[B-Z]$/);
+      expect(letter, "failed on : " + letter).to.match(/^[B-Z]$/);
     }
   });
 });
