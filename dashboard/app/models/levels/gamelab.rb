@@ -74,8 +74,49 @@ class Gamelab < Blockly
     )
   end
 
-  def xml_blocks
-    %w()
+  def common_blocks(type)
+    <<-XML.chomp
+<category name="Start">
+  <block type="when_run" />
+</category>
+<category name="Variables" custom="VARIABLE" />
+<category name="Sprites">
+  <block type="gamelab_makeNewSprite" />
+</category>
+<category name="Math">
+  <block type="math_number" />
+  <block type="math_change">
+    <value name="DELTA">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="math_random_int">
+    <value name="FROM">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+    <value name="TO">
+      <block type="math_number">
+        <title name="NUM">100</title>
+      </block>
+    </value>
+  </block>
+  <block type="math_arithmetic" />
+</category>
+    XML
+  end
+
+  def toolbox(type)
+    return common_blocks(type) unless type == 'toolbox_blocks'
+    <<-XML.chomp
+<category name="Category">
+  <block type="category"></block>
+</category>
+#{common_blocks(type)}
+    XML
   end
 
   def update_palette
