@@ -1,7 +1,9 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {tableLayoutStyles} from "../tables/tableConstants";
 import i18n from "@cdo/locale";
+import {editName} from './manageStudentsRedux';
 
 class ManageStudentNameCell extends Component {
   static propTypes = {
@@ -11,6 +13,8 @@ class ManageStudentNameCell extends Component {
     loginType: PropTypes.string.isRequired,
     username: PropTypes.string,
     isEditing: PropTypes.bool,
+    //Provided by redux
+    editName: PropTypes.func.isRequired,
   };
 
   state = {
@@ -18,7 +22,9 @@ class ManageStudentNameCell extends Component {
   };
 
   onChangeName = (e) => {
-    this.setState({nameValue: e.target.value});
+    const newName = e.target.value;
+    this.setState({nameValue: newName});
+    this.props.editName(this.props.id, newName);
   };
 
   render() {
@@ -47,4 +53,8 @@ class ManageStudentNameCell extends Component {
   }
 }
 
-export default ManageStudentNameCell;
+export default connect(state => ({}), dispatch => ({
+  editName(id, name) {
+    dispatch(editName(id, name));
+  },
+}))(ManageStudentNameCell);
