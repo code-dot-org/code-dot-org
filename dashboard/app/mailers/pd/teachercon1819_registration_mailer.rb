@@ -23,7 +23,7 @@ class Pd::Teachercon1819RegistrationMailer < ActionMailer::Base
     @registration = registration
 
     mail(
-      to: registration.pd_application.user.email,
+      to: registration.user.email,
       subject: "We've received your TeacherCon registration form"
     )
   end
