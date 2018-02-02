@@ -1,6 +1,6 @@
 %p
   Hi
-  = @registration.pd_application.first_name + ','
+  = @registration.sanitize_form_data_hash[:full_name] + ','
 
 %p
   Thank you for submitting your TeacherCon registration form! You will receive more
