@@ -67,7 +67,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
         'Public transit (e.g., city bus or light rail)',
       ],
       need_hotel: YES_OR_NO,
-      need_ada: [YES, NO, TEXT_FIELDS[:other_please_explain]],
+      need_ada: YES_OR_NO,
       able_to_attend: YES_OR_NO,
       teacher_accept_seat: [
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept],
