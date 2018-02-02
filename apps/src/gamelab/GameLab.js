@@ -52,6 +52,7 @@ import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
+import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -339,10 +340,12 @@ GameLab.prototype.setupReduxSubscribers = function (store) {
     const awaitingContainedLevel = this.studioApp_.hasContainedLevels &&
       !hasValidContainedLevelResult();
 
-    if (state.interfaceMode !== lastState.interfaceMode &&
-        state.interfaceMode === GameLabInterfaceMode.ANIMATION &&
+    if (state.interfaceMode !== lastState.interfaceMode) {
+      if (state.interfaceMode === GameLabInterfaceMode.ANIMATION &&
         !awaitingContainedLevel) {
-      this.studioApp_.resetButtonClick();
+          this.studioApp_.resetButtonClick();
+      }
+      requestAnimationFrame(() => showHideWorkspaceCallouts());
     }
 
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
