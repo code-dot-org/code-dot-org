@@ -15,6 +15,7 @@ import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
 import {throwIfSerializedAnimationListIsInvalid} from './shapes';
 import {projectChanged} from '../code-studio/initApp/project';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // TODO: Overwrite version ID within session
 // TODO: Load exact version ID on project load
@@ -565,6 +566,18 @@ function loadAnimationFromSource(key, callback) {
         console.log('Failed to load animation ' + key, err);
         // Brute-force recovery step: Remove the animation from our redux state;
         // it looks like it's already gone from the server.
+
+        // Log data about when this scenario occurs
+        firehoseClient.putRecord(
+         'analysis-events',
+            {
+              study: 'animation_no_load',
+              study_group: 'animation_no_load',
+              event: 'animation_not_loaded',
+              data_json: JSON.stringify({'sourceUrl': sourceUrl, 'version': state.propsByKey[key].version,
+                'animationName': state.propsByKey[key].name, 'error': err.message})
+            }
+        );
         dispatch({
           type: DELETE_ANIMATION,
           key
