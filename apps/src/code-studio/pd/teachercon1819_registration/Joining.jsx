@@ -34,9 +34,43 @@ export default class Joining extends Teachercon1819FormComponent {
     return formatErrors;
   }
 
+  renderCongratulations() {
+    if (this.isTeacherApplication()) {
+      return (
+        <p>
+          Congratulations on your acceptance to Code.org's Professional Learning Program
+          for {this.props.course}! Please complete this form
+          <strong> within two weeks</strong> to let us know if you will be joining us
+          this year, and contact <a href="mailto:teacher@code.org">teacher@code.org</a>
+          &nbsp;with any questions.
+        </p>
+      );
+    } else if (this.isFacilitatorApplication()) {
+      return (
+        <p>
+          Congratulations on your acceptance to Code.org’s Facilitator Development
+          Program for {this.props.course}! Please complete this registration
+          form <strong>within two weeks</strong>, and
+          contact <a href="mailto:facilitators@code.org">facilitators@code.org</a>
+          with any questions.
+        </p>
+      );
+    } else if (this.isPartnerApplication()) {
+      return (
+        <p>
+          We're looking forward to seeing you at TeacherCon this summer!
+          Please complete this registration form <strong>within two
+          weeks</strong>, and contact your Outreach Regional Manager with any
+          questions.
+        </p>
+      );
+    }
+  }
+
   render() {
     return (
       <FormGroup>
+        {this.renderCongratulations()}
         <h4>Section 1: Are you joining us?</h4>
 
         <FormGroup>

@@ -5,7 +5,6 @@ const FACILITATOR = "Facilitator";
 const PARTNER = "Partner";
 
 export default class Teachercon1819FormComponent extends LabeledFormComponent {
-
   isTeacherApplication() {
     return this.props.applicationType === TEACHER;
   }
@@ -17,5 +16,4 @@ export default class Teachercon1819FormComponent extends LabeledFormComponent {
   isPartnerApplication() {
     return this.props.applicationType === PARTNER;
   }
-
 }
