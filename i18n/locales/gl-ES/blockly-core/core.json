@@ -23,7 +23,7 @@
     "COLOUR_RGB_GREEN": "verde",
     "COLOUR_RGB_HELPURL": "http://www.december.com/html/spec/colorper.html",
     "COLOUR_RGB_RED": "vermello",
-    "COLOUR_RGB_TITLE": "Pintar con",
+    "COLOUR_RGB_TITLE": "colorear con",
     "COLOUR_RGB_TOOLTIP": "Crear unha cor coa cantidade especificada de vermello, verde e azul. Todos os valores deben estar entre 0 e 100.",
     "CONFIRM_CREATE_VARIABLE": "Crear",
     "CONFIRM_DELETE_FUNCTION_MESSAGE": "Aviso! Estás seguro que desexas eliminar %1?",

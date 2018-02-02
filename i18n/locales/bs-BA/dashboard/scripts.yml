@@ -555,7 +555,7 @@ bs:
             Sending Formatted Text:
               name: Sending Formatted Text
             Sending Numbers:
-              name: Sending Numbers
+              name: Slanje brojeva
             Text Compression:
               name: Text Compression
           description_audience: ''
@@ -629,9 +629,9 @@ bs:
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Strategije predavanja
             What is CSP?:
-              name: What is CSP?
+              name: Šta je CSP?
         CSPLessonSamples:
           title: Studio Kodiranja Primjeri za Lekciju
           description: Lesson samples for CSP
@@ -656,7 +656,7 @@ bs:
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Strategije predavanja
             What is ECS?:
               name: What is ECS?
         sciencePD:
@@ -805,7 +805,7 @@ bs:
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Strategije predavanja
             What is ECS?:
               name: What is ECS?
         ECSPD-iZone:
@@ -823,7 +823,7 @@ bs:
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Strategije predavanja
             What is ECS?:
               name: What is ECS?
         algebraPD-NexTech:
@@ -1200,7 +1200,7 @@ bs:
             Next Steps:
               name: Slijedeći Koraci
             Planning:
-              name: Planning
+              name: Planiranje
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: Predaji Funkcionalno Programiranje kroz Algebru
@@ -1517,7 +1517,7 @@ bs:
             Lesson Overviews:
               name: Lesson Overviews
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Strategije predavanja
             Unit 2 Challenge:
               name: Unit 2 Challenge
         ECSPD3-Unit3:
@@ -1533,7 +1533,7 @@ bs:
             Intro to Unit 3:
               name: Intro to Unit 3
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Strategije predavanja
             Unit 3 Challenge:
               name: Unit 3 Challenge
             Unit 3 Day-by-Day:
@@ -1551,7 +1551,7 @@ bs:
             Intro to Unit 4:
               name: Intro to Unit 4
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Strategije predavanja
             Unit 4 Challenge:
               name: Unit 4 Challenge
             Unit 4 Day-by-Day:
@@ -1601,11 +1601,11 @@ bs:
             Check Your Assumptions:
               name: Check Your Assumptions
             Cleaning Data:
-              name: Cleaning Data
+              name: Čišćenje podataka
             Compiling Data:
-              name: Compiling Data
+              name: Kompiliranje podataka
             Creating Javascript Objects:
-              name: Creating Javascript Objects
+              name: Kreiranje JavaScript objekata
             Creating Summary Tables:
               name: Creating Summary Tables
             Data, Security, and Privacy:
@@ -1653,7 +1653,7 @@ bs:
             What Data Can Tell Us:
               name: What Data Can Tell Us
             Why Make Apps?:
-              name: Why Make Apps?
+              name: Zašto praviti aplikacije?
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3A Post Work
           description: Phase 3 Academic Year Development
@@ -1713,13 +1713,13 @@ bs:
           description: Testing some tools for teaching with Arduinos
           stages:
             Basic Circuits:
-              name: Basic Circuits
+              name: Osnovni krugovi
             Blinky Lights:
               name: Blinky Lights
             JunkBot:
               name: JunkBot
             Making Music:
-              name: Making Music
+              name: Pravljenje muzike
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
@@ -1727,7 +1727,7 @@ bs:
           description: ''
           stages:
             Halloween 2015:
-              name: Halloween 2015
+              name: Noć vještica 2015
         SpecialSeries:
           title: Special Levels
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
@@ -1735,9 +1735,9 @@ bs:
           description_audience: Dob 10+ (nakon Kursa 3)
           stages:
             Spring 2016:
-              name: Spring 2016
+              name: Proljeće 2016
             Halloween 2015:
-              name: Halloween 2015
+              name: Noć vještica 2015
         iceage:
           title: Ledeno doba Play Lab
           description: Napisati priču ili napraviti igru s Ice Age Play Lab!
@@ -1893,7 +1893,7 @@ bs:
             Check Your Assumptions:
               name: Check Your Assumptions
             Cleaning Data:
-              name: Cleaning Data
+              name: Čišćenje podataka
             Creating Summary Tables:
               name: Creating Summary Tables
             Discover a Data Story:
@@ -1945,7 +1945,7 @@ bs:
           description_short: Data Apps
           stages:
             Creating Javascript Objects:
-              name: Creating Javascript Objects
+              name: Kreiranje JavaScript objekata
             Deleting Records:
               name: Deleting Records
             Final Project:
@@ -1988,7 +1988,7 @@ bs:
           description_audience: ''
           stages:
             Creating Javascript Objects:
-              name: Creating Javascript Objects
+              name: Kreiranje JavaScript objekata
             Deleting Records:
               name: Deleting Records
             Final Project:
@@ -2125,7 +2125,7 @@ bs:
             Sending Binary Messages with the Internet Simulator:
               name: Sending Binary Messages with the Internet Simulator
             Sending Numbers:
-              name: Sending Numbers
+              name: Slanje brojeva
             The Internet:
               name: Internet
             The Need for Addressing:
@@ -2153,7 +2153,7 @@ bs:
             Check Your Assumptions:
               name: Check Your Assumptions
             Cleaning Data:
-              name: Cleaning Data
+              name: Čišćenje podataka
             Creating Summary Tables:
               name: Creating Summary Tables
             Discover a Data Story:
@@ -2461,7 +2461,7 @@ bs:
             'Project: Build a Game':
               name: 'Project: Build a Game'
             Velocity:
-              name: Velocity
+              name: Brzina
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -3115,7 +3115,7 @@ bs:
             Lesson Overviews:
               name: Lesson Overviews
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Strategije predavanja
             Unit 2 Challenge:
               name: Unit 2 Challenge
         ecs-unit3:
@@ -3131,7 +3131,7 @@ bs:
             Intro to Unit 3:
               name: Intro to Unit 3
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Strategije predavanja
             Unit 3 Challenge:
               name: Unit 3 Challenge
             Unit 3 Day-by-Day:
@@ -3149,7 +3149,7 @@ bs:
             Intro to Unit 4:
               name: Intro to Unit 4
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Strategije predavanja
             Unit 4 Challenge:
               name: Unit 4 Challenge
             Unit 4 Day-by-Day:
@@ -3291,7 +3291,7 @@ bs:
             Variables and Animation:
               name: Variables and Animation
             Velocity:
-              name: Velocity
+              name: Brzina
               description_student: After a brief review of how the counter pattern is used to move sprites, the class is introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
               description_teacher: After a brief review of how they used the counter pattern to move sprites in previous lessons, students are introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
             Collision Detection:
@@ -3560,7 +3560,7 @@ bs:
               description_student: This lesson focuses on the storage component of the definition of a computer, within the content of processing information. The class spends the majority of the lesson developing and sharing algorithms to process information, with an emphasis on how much storage is needed for any particular algorithm. The lesson concludes with a discussion of the importance of storage while processing information.
               description_teacher: Students explore the importance of storage within the Input-Storage-Processing-Output model of a computer. The warm-up activity asks students to reflect on the types of information they have seen computers store in the past, like documents, photographs, or videos. The unplugged main activity has students develop an algorithm to process a small pile of cards in search of specific cards within the deck. Constraints on how students can move the cards force them to consider the importance of storage even while they are processing the deck. The lesson concludes with a discussion of the two types of storage students saw in this lesson and the importance of storage while processing information.
             Apps and Problem Solving:
-              name: Apps and Problem Solving
+              name: Aplikacije i riješavanje problema
               description_student: 'This lesson covers the input and output aspects of computers in a context that is relevant and familiar to students: apps. The class evaluates various web applications to analyze the specific problems that they were designed to solve, the inputs that they need to work, and the outputs they provide to users. The class concludes with observations of these apps as well as a teacher led discussion about the impact of apps on society. '
               description_teacher: 'This lesson covers the input and output aspects of computers in a context that is relevant and familiar to students: apps. In pairs, students evaluate various web applications to analyze the specific problems that they were designed to solve, the inputs that they need to work, and the outputs they provide to users. The class concludes with observations of these apps as well as a teacher led discussion about the impact of apps on society. '
             Project - Propose an App:
@@ -4493,7 +4493,7 @@ bs:
           description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
           stages:
             Creating Javascript Objects:
-              name: Creating Javascript Objects
+              name: Kreiranje JavaScript objekata
             Permanent Data Storage:
               name: Permanent Data Storage
             Reading Records:
@@ -4597,7 +4597,7 @@ bs:
             Arrays:
               name: Arrays
             Making Music:
-              name: Making Music
+              name: Pravljenje muzike
             Arrays and For Loops:
               name: Arrays and For Loops
             Circuits and Physical Prototypes:
@@ -4847,7 +4847,7 @@ bs:
             Other Forms of Input:
               name: Other Forms of Input
             Velocity:
-              name: Velocity
+              name: Brzina
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -4865,7 +4865,7 @@ bs:
         csd5:
           title: CSD Unit 5 - Data and Society
           description_audience: ''
-          description_short: Learn how people use computers to solve data problems.
+          description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
           description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of the your choosing.
           stages:
             Representation Matters:
@@ -4965,7 +4965,7 @@ bs:
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Brzina
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -5069,7 +5069,7 @@ bs:
             Storage:
               name: Storage
             Apps and Problem Solving:
-              name: Apps and Problem Solving
+              name: Aplikacije i riješavanje problema
             Project - Propose an App:
               name: Project - Propose an App
             Input and Output:
@@ -5109,7 +5109,7 @@ bs:
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Brzina
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -5289,11 +5289,11 @@ bs:
             Learn to Drag and Drop:
               name: Sequencing with Drag and Drop
               description_student: ''
-              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
             'Programming: Happy Maps':
               name: 'Programming: Happy Maps'
               description_student: ''
-              description_teacher: The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.
+              description_teacher: Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.
             Programming in Maze:
               name: Programming in Maze
               description_student: ''
@@ -5322,10 +5322,10 @@ bs:
               name: Events in Play Lab
               description_student: ''
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
-          title: Course A
+          title: Kurs A
           description_audience: 'Ages: 4-7'
           description_short: An introduction to computer science for pre-readers.
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         courseb:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5359,7 +5359,7 @@ bs:
           title: Course B
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         coursec:
           stages:
             Building a Foundation:
@@ -5402,15 +5402,15 @@ bs:
           stages:
             Introduction:
               name: Introduction to Online Puzzles
-              description_student: This lesson will give you practice in the skills you will need for this course.
+              description_student: Ova lekcija će ti dati praksu u vještinama koje će ti trebati za ovaj kurs.
               description_teacher: 'In this set of puzzles, students will begin with an introduction (or review depending on the experience of your class) of Code.org''s online workspace. There will be videos pointing out the basic functionality of the workspace including the `Run`, `Reset`, and `Step` buttons. Also discussed in these videos: dragging Blockly blocks, deleting Blockly blocks, and connecting Blockly blocks. Next, students will practice their _sequencing_ and _debugging_ skills in maze. From there, students will see new types of puzzles like Collector, Artist, and Harvester when they learn the very basics of _loops_.'
             'Algorithms: Graph Paper Programming':
               name: 'Programming: Graph Paper Programming'
-              description_student: In this lesson, you will program your friend to draw pictures!
+              description_student: U ovoj lekciji, ti ćeš programirati svog prijatelja da crta slike!
               description_teacher: By "programming" one another to draw pictures, students will begin to understand what coding is really about. The class will begin by having students instruct each other to color squares on graph paper in an effort to reproduce an existing picture. If there’s time, the lesson can conclude with images that the students create themselves.
             Events in Bounce:
               name: Events in Bounce
-              description_student: Ever wish you could play video games in school? In this lesson, you will get to make your own!
+              description_student: Jeste li ikad željeli da možete igrati video igrice u školi? U ovoj lekciji, Vi ćete trebati napraviti vlastitu igru!
               description_teacher: In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.
             Nested Loops:
               name: Ugniježdene Petlje
@@ -5422,7 +5422,7 @@ bs:
               description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
             'Algorithms: Relay Programming':
               name: 'Debugging: Relay Programming'
-              description_student: Remember at the beginning of the course when you made drawings with code? In this lesson, you will be working with a team to do something very similar!
+              description_student: Sjetite se na početku kursa kada ste pravili crteže sa kodom? U ovoj lekciji, Vi ćete raditi sa timom na nečem što je veoma slično!
               description_teacher: This activity will begin with a short review of "Graph Paper Programming," then will quickly move to a race against the clock, as students break into teams and work together to write a program one instruction at a time.
             Debugging in Bee:
               name: Debugging in Bee
@@ -6038,7 +6038,7 @@ bs:
           title: Express Course
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         pre-express:
           stages:
             'Debugging: Unspotted Bugs':
@@ -6072,7 +6072,7 @@ bs:
           title: Pre-reader Express
           description_audience: 'Ages: 4-8'
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
         subgoal-labels-opt-in:
           stages:
             Subgoal Labels Study Opt-In:
@@ -6589,7 +6589,7 @@ bs:
               name: Project - Solve a Data Problem
           title: CSD Unit 5 - Data and Society
           description_audience: ''
-          description_short: Learn how people use computers to solve data problems.
+          description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
           description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of the your choosing.
         subgoals-assessment-staging:
           stages:
@@ -6731,6 +6731,22 @@ bs:
               name: Programming - Hour of Code
             Simple Encryption:
               name: Simple Encryption
+            Web Development - Creating Webpages:
+              name: Web Development - Creating Webpages
+            App Development Unplugged - User Interfaces:
+              name: App Development Unplugged - User Interfaces
+            App Development - Intro to App Lab:
+              name: App Development - Intro to App Lab
+            Creating Webpages:
+              name: Creating Webpages
+            User Interfaces:
+              name: User Interfaces
+            Intro to App Lab:
+              name: Intro to App Lab
+            Smart Clothing Design:
+              name: Smart Clothing Design
+            Intro to App Lab (13+):
+              name: Intro to App Lab (13+)
           title: PwC's Access Your Potential curriculum
           description_audience: ''
           description_short: ''
@@ -6860,4 +6876,20 @@ bs:
           title: AWS Demo
           description_audience: ''
           description_short: ''
+          description: ''
+        halloween:
+          stages:
+            Halloween Artist:
+              name: Halloween Artist
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        valentine:
+          stages:
+            special valentine:
+              name: special valentine
+          title: Valentine Special
+          description_audience: ''
+          description_short: Have fun creating valentines
           description: ''

@@ -98,7 +98,7 @@ export default class TravelPlans extends Teachercon1819FormComponent {
         </FormGroup>
 
         <FormGroup>
-          {this.radioButtonsWithAdditionalTextFieldsFor("dietaryNeeds", {
+          {this.checkBoxesWithAdditionalTextFieldsFor("dietaryNeeds", {
             [TextFields.foodAllergy]: "food_allergy_details"
           })}
         </FormGroup>
