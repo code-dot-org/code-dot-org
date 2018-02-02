@@ -10,6 +10,7 @@ const SET_SECRET_IMAGE = 'manageStudents/SET_SECRET_IMAGE';
 const SET_SECRET_WORDS = 'manageStudents/SET_SECRET_WORDS';
 const EDIT_NAME = 'manageStudents/EDIT_NAME';
 const EDIT_AGE = 'manageStudents/EDIT_AGE';
+const EDIT_GENDER = 'manageStudents/EDIT_GENDER';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
@@ -21,6 +22,7 @@ export const setSecretImage = (studentId, image) => ({ type: SET_SECRET_IMAGE, s
 export const setSecretWords = (studentId, words) => ({ type: SET_SECRET_WORDS, studentId, words });
 export const editName = (studentId, name) => ({ type: EDIT_NAME, studentId, name });
 export const editAge = (studentId, age) => ({ type: EDIT_AGE, studentId, age });
+export const editGender = (studentId, gender) => ({ type: EDIT_GENDER, studentId, gender });
 
 const initialState = {
   loginType: '',
@@ -98,7 +100,19 @@ export default function manageStudents(state=initialState, action) {
         ...state.editingData,
         [action.studentId]: {
           ...state.editingData[action.studentId],
-          name: action.age,
+          age: action.age,
+        }
+      }
+    };
+  }
+  if (action.type === EDIT_GENDER) {
+    return {
+      ...state,
+      editingData: {
+        ...state.editingData,
+        [action.studentId]: {
+          ...state.editingData[action.studentId],
+          gender: action.gender,
         }
       }
     };
