@@ -1,5 +1,6 @@
 import React from 'react';
 import { UnconnectedPublishDialog as PublishDialog } from './PublishDialog';
+import { action } from '@storybook/addon-actions';
 
 const PROJECT_ID = 'MY_PROJECT_ID';
 const PROJECT_TYPE = 'MY_PROJECT_TYPE';
@@ -17,8 +18,8 @@ export default storybook => {
             isPublishPending={false}
             projectId={PROJECT_ID}
             projectType={PROJECT_TYPE}
-            onConfirmPublish={storybook.action('publish')}
-            onClose={storybook.action('close')}
+            onConfirmPublish={action('publish')}
+            onClose={action('close')}
           />
         )
       },
@@ -31,8 +32,8 @@ export default storybook => {
             isPublishPending={true}
             projectId={PROJECT_ID}
             projectType={PROJECT_TYPE}
-            onConfirmPublish={storybook.action('publish')}
-            onClose={storybook.action('close')}
+            onConfirmPublish={action('publish')}
+            onClose={action('close')}
           />
         )
       }
