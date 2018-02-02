@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionsTable from './SectionsTable';
+import {action} from '@storybook/addon-actions';
 
 const sections = [
   {
@@ -72,8 +73,8 @@ export default storybook => {
             sections={sections}
             isTeacher={true}
             canLeave={false}
-            updateSections={storybook.action('updateSections')}
-            updateSectionsResult={storybook.action('updateSectionsResult')}
+            updateSections={action('updateSections')}
+            updateSectionsResult={action('updateSectionsResult')}
           />
         )
       },
@@ -85,8 +86,8 @@ export default storybook => {
             sections={sections}
             isTeacher={false}
             canLeave={false}
-            updateSections={storybook.action('updateSections')}
-            updateSectionsResult={storybook.action('updateSectionsResult')}
+            updateSections={action('updateSections')}
+            updateSectionsResult={action('updateSectionsResult')}
           />
         )
       },
@@ -98,8 +99,8 @@ export default storybook => {
             sections={sections}
             isTeacher={false}
             canLeave={true}
-            updateSections={storybook.action('updateSections')}
-            updateSectionsResult={storybook.action('updateSectionsResult')}
+            updateSections={action('updateSections')}
+            updateSectionsResult={action('updateSectionsResult')}
           />
         )
       },
