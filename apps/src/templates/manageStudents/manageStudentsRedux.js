@@ -12,19 +12,30 @@ const EDIT_NAME = 'manageStudents/EDIT_NAME';
 const EDIT_AGE = 'manageStudents/EDIT_AGE';
 const EDIT_GENDER = 'manageStudents/EDIT_GENDER';
 const START_SAVING_STUDENT = 'manageStudents/START_SAVING_STUDENT';
+const SAVE_STUDENT_SUCCESS = 'manageStudents/SAVE_STUDENT_SUCCESS';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
 export const setStudents = studentData => ({ type: SET_STUDENTS, studentData });
 export const startEditingStudent = (studentId) => ({ type: START_EDITING_STUDENT, studentId });
 export const cancelEditingStudent = (studentId) => ({ type: CANCEL_EDITING_STUDENT, studentId });
-export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
+export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
 export const removeStudent = (studentId) => ({ type: REMOVE_STUDENT, studentId });
 export const setSecretImage = (studentId, image) => ({ type: SET_SECRET_IMAGE, studentId, image });
 export const setSecretWords = (studentId, words) => ({ type: SET_SECRET_WORDS, studentId, words });
 export const editName = (studentId, name) => ({ type: EDIT_NAME, studentId, name });
 export const editAge = (studentId, age) => ({ type: EDIT_AGE, studentId, age });
 export const editGender = (studentId, gender) => ({ type: EDIT_GENDER, studentId, gender });
+
+export const startSavingStudent = (studentId) => {
+  return (dispatch, getState) => {
+    const state = getState().manageStudents;
+    dispatch({ type: START_SAVING_STUDENT, studentId });
+    updateStudentOnServer(state.editingData[studentId], () => {
+      dispatch(saveStudentSuccess(studentId));
+    });
+  };
+};
 
 const initialState = {
   loginType: '',
@@ -84,7 +95,18 @@ export default function manageStudents(state=initialState, action) {
     };
   }
   if (action.type === START_SAVING_STUDENT) {
-    updateStudentOnServer(state.editingData[action.studentId]);
+    return {
+      ...state,
+      studentData: {
+        ...state.studentData,
+        [action.studentId]: {
+          ...state.studentData[action.studentId],
+          isSaving: true
+        }
+      },
+    };
+  }
+  if (action.type === SAVE_STUDENT_SUCCESS) {
     return {
       ...state,
       studentData: {
@@ -203,15 +225,14 @@ export const convertStudentDataToArray = (studentData) => {
 };
 
 // Make a post request to edit a student.
-const updateStudentOnServer = (updatedStudentInfo) => {
+const updateStudentOnServer = (updatedStudentInfo, onComplete) => {
   $.ajax({
     url: `/v2/students/${updatedStudentInfo.id}/update`,
     method: 'POST',
     contentType: 'application/json;charset=UTF-8',
     data: JSON.stringify(updatedStudentInfo),
   }).done((data) => {
-    console.log("successfully updated student data");
-    console.log(data);
+    onComplete(data);
   }).fail((jqXhr, status) => {
     // We may want to handle this more cleanly in the future, but for now this
     // matches the experience we got in angular

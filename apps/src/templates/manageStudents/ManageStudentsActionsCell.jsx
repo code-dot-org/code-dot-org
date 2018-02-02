@@ -21,6 +21,7 @@ class ManageStudentActionsCell extends Component {
     id: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
     isEditing: PropTypes.bool,
+    isSaving: PropTypes.bool,
     // Provided by redux
     startEditingStudent: PropTypes.func,
     cancelEditingStudent: PropTypes.func,
@@ -91,7 +92,7 @@ class ManageStudentActionsCell extends Component {
         }
         {this.props.isEditing &&
           <div>
-            <Button onClick={this.onSave} color={Button.ButtonColor.white} text={i18n.save()} />
+            <Button onClick={this.onSave} color={Button.ButtonColor.white} text={i18n.save()} disabled={this.props.isSaving} />
             <Button onClick={this.onCancel} color={Button.ButtonColor.blue} text={i18n.cancel()} />
           </div>
         }
