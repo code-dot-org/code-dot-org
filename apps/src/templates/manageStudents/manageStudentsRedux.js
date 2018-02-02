@@ -21,6 +21,7 @@ export const setSecretWords = (studentId, words) => ({ type: SET_SECRET_WORDS, s
 const initialState = {
   loginType: '',
   studentData: {},
+  editingData: {},
   sectionId: null,
 };
 
@@ -52,6 +53,12 @@ export default function manageStudents(state=initialState, action) {
           ...state.studentData[action.studentId],
           isEditing: true
         }
+      },
+      editingData: {
+        ...state.editingData,
+        [action.studentId]: {
+          id: action.studentId
+        }
       }
     };
   }
@@ -64,7 +71,8 @@ export default function manageStudents(state=initialState, action) {
           ...state.studentData[action.studentId],
           isEditing: false
         }
-      }
+      },
+      editingData: _.omit(state.editingData, action.studentId),
     };
   }
   if (action.type === SET_SECRET_IMAGE) {
