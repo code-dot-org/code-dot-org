@@ -824,7 +824,7 @@
     şekilde oluşturulmuştur. Eğitim vermeye başlamak için Amerika içinde bedava eğitim
     kurslarımıza katılmak için tıklayın:  <a href="/professional-development-workshops">
     Yakınınızdaki kursu bulun!</a>'
-  dashboard_middle_courses: 20 saat Orta okul kursları
+  dashboard_middle_courses: 20 saatlik Orta Okul Kursları
   dashboard_middle_courses_desc: Bilgisayar Bilimi ve Programlama eğitim programı
     orta okullarda matematik ve fen bilimlerinin öğretilmesinde bir araç olarak kullanılabilir.
     Bu amaçla düzenlenen ülkenizdeki profesyonel <a href="/educate/districts"> çalıştaylara
@@ -836,9 +836,9 @@
   dashboard_course_csina: Cebirde Bilgisayar Bilimi
   dashboard_course_csina_desc: Code.org Bootstrap işbirliği ile bilgisayar programlama
     ile cebirsel ve geometrik kavramları öğreten müfredat geliştirmiştir.
-  dashboard_course_csins: Bilimde Bilgisayar Bilimleri
+  dashboard_course_csins: Fen Bilimlerinde Bilgisayar Bilimleri
   dashboard_course_csins_desc: Code.org GUTS Projesi işbirliği ile modelleme ve simülasyon
-    yöntemleri kullanarak bilgisayar bilimine giriş kavramlarını geliştirmeye başlamıştır.
+    yöntemleri kullanarak bilgisayar bilimine giriş kavramlarını öğreten içerik hazırlamaktadır.
   dashboard_course_ecs: Bilgisayar Bilimlerini Keşfedin
   dashboard_course_ecs_desc: 'Bilgisayar bilimlerinde ki 6 önemli iş sahası şunlardır:
     İnsan-bilgisayar etkileşimi, proglem çözme, web tasarım, programlama, robotik,
@@ -913,7 +913,7 @@
   dashboard_sections_table_grade: Sınıf
   dashboard_sections_table_course: Kurs
   dashboard_sections_table_pairing_allowed: Eşli Programlama
-  dashboard_sections_table_stage_extras: Ektralar
+  dashboard_sections_table_stage_extras: Ekstralar
   dashboard_sections_table_students: "Öğrenciler"
   dashboard_sections_table_code: Bölge Kodu
   dashboard_sections_name: Bölüm İsmi
