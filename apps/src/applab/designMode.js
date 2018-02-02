@@ -263,6 +263,7 @@ designMode.updateProperty = function (element, name, value) {
       }
       break;
     }
+    // Set an image on a button.
     case 'image':
       var originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
@@ -286,7 +287,7 @@ designMode.updateProperty = function (element, name, value) {
       }
 
       var backgroundImage = new Image();
-      backgroundImage.src = assetPrefix.fixPath(value);
+      backgroundImage.src = assetPrefix.fixPath(escape(value));
       element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
 
       // do not resize if only the asset path has changed (e.g. on remix).
@@ -294,6 +295,7 @@ designMode.updateProperty = function (element, name, value) {
         backgroundImage.onload = fitImage;
       }
       break;
+    // Set an image on a screen.
     case 'screen-image': {
       element.setAttribute('data-canonical-image-url', value);
 
@@ -307,13 +309,14 @@ designMode.updateProperty = function (element, name, value) {
         url = assetPrefix.renderIconToString(value, element);
       } else {
         const screenImage = new Image();
-        screenImage.src = assetPrefix.fixPath(value);
+        screenImage.src = assetPrefix.fixPath(escape(value));
         url = screenImage.src;
       }
       element.style.backgroundImage = 'url(' + url + ')';
 
       break;
     }
+    // Set an image on an image element.
     case 'picture':
       originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
