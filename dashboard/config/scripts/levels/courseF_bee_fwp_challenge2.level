@@ -37,9 +37,9 @@
     "instructions": "Use one `for loop` in a function with a `length` parameter to collect all of the vegetables in each row. ",
     "markdown_instructions": "*\"**Lettuce** see if you can handle this one final test! Give it everything you've got!\"*\r\n\r\nUse one `for loop` in a function to collect all of the vegetables in the row. Make the `for loop` count to different maximum values by using the `length` parameter. Make your program as short as possible by using a second `for loop` outside the function.\r\n\r\nGood luck!",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseF_bee_fwp_challenge2_callout1\",\r\n  \"callout_text\": \"This function will do a good job with corn, but what about the other vegetables?\",\r\n  \"element_id\": \"#corn\",\r\n  \"on\": \"function_editor_opened\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom center\",\r\n    \"at\": \"right top\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

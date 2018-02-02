@@ -121,10 +121,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "markdown_instructions": "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)",
-    "encrypted_examples": [
-
-    ]
+    "markdown_instructions": "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
   },
   "published": true,
   "notes": "",
