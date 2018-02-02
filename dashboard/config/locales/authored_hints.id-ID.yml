@@ -401,15 +401,11 @@
 
           **360 / 6 = ?**
       4-5 Nested Loops 7_authored_hint:
-        4-5_Nested_Loops_7_a: |-
-          This design will loop 10 times over 360 degrees.
-
-          **360 / 10 = ?**
+        4-5_Nested_Loops_7_a: Desain ini akan berputar 10 kali lebih dari 360 derajat.
+          ** 360/10 =? **
       4-5 Nested Loops 8_authored_hint:
-        4-5_Nested_Loops_8_a: |-
-          You will be looping this shape 6 times over 360 degrees.
-
-          **360 / 6 = ?**
+        4-5_Nested_Loops_8_a: Anda akan melingkar bentuk ini 6 kali lebih dari 360
+          derajat. ** 360/6 =? **
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Each item will need its own `while` loop.
       AppLab Intro 3 - Change Screen Color_authored_hint: []
@@ -443,11 +439,11 @@
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Each repeated shape is the combination of **half of
           a hexagon**, followed by **2/3 of a triangle**. '
-        Course_4_Artist_12_b: 'The unit shape is almost the same as in the last puzzle,
-          except the half-hexagon is a bit bigger. '
-        Course_4_Artist_12_c: "1) The first three lines are 60 pixels long and you
-          need to turn 60 degrees.  \n 2) The next two lines are 80 pixels long and
-          you need to turn 120 degrees "
+        Course_4_Artist_12_b: 'Bentuk unitnya hampir sama seperti pada teka-teki terakhir,
+          kecuali setengah segi sedikit lebih besar. '
+        Course_4_Artist_12_c: '1) Tiga baris pertama panjangnya 60 piksel dan Anda
+          perlu memutar 60 derajat. 2) Dua baris berikutnya panjangnya 80 piksel dan
+          Anda perlu memutar 120 derajat '
         Course_4_Artist_12_d: |-
           **Solution:**
 
@@ -698,9 +694,9 @@
         Course_4_Artist_Vars_6_a: To draw a regular polygon, turn **360/sides** each
           time.
       Course 4 Artist Vars 8_authored_hint:
-        Course_4_Artist_Vars_8_a: If you divide your starting length by the number
-          of sides, the length of each side will get shorter as the number of sides
-          gets higher.
+        Course_4_Artist_Vars_8_a: Jika Anda membagi panjang awal dengan jumlah sisi,
+          panjang masing-masing sisi akan menjadi lebih pendek karena jumlah sisi
+          semakin tinggi.
       Course 4 Bee Params 7_authored_hint:
         notice_pattern: 'Do you see a pattern in how the number of nectar changes? '
         count_with_for: Notice that the nectar goes up in steps. What kind of block
@@ -3650,6 +3646,9 @@
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make
           sure blocks are connected under `when run`.
+      MC Agent Freeplay_authored_hint:
+        MC_HOC_2017_13_Cole_a: Coba buat Agent membangun beberapa jembatan sehingga
+          Alex atau Steve bisa berjalan-jalan di sekitar tepi peta.
       MC_HOC_2017_01_Cole_authored_hint:
         MC_HOC_2017_01_Cole_a: Gunakan tombol panah untuk mengarahkan pemain ke dalam
           rumah. Masuk ke kotak oranye untuk menang.
@@ -4015,6 +4014,7 @@
         mc_9_b: The black specks in the wall are coal! Use `destroy block` on these
           to mine the coal.
         mc_9_c: Use `place torch` to put a torch in the space where you are standing.
+      Valentine_artist_01_authored_hint: []
       aE1_authored_hint: []
       aE2_authored_hint:
         aE2_a: Notice that since the napkins are 20 pixels long, you'll need to jump
@@ -7364,11 +7364,11 @@
         courseC_starWars_loops2_a: You can solve this puzzle with just three blocks,
           including `when run`.
       courseC_starWars_loops4_authored_hint:
+        courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the
+          turn block will let you change it to  "right".
         courseC_starWars_loops4_a: Use two `repeat` blocks set to different numbers.
         courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command
           inside of it: `move forward`.'
-        courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the
-          turn block will let you change it to  "right".
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: To move down, you have to turn and then move forward.
         courseC_starWars_loops5_a: The best solution uses one move down and one loop
@@ -8829,8 +8829,6 @@
           loop.  One will choose a random emotion for the dragon (actor 2) and the
           other will wait 1 second before going through the loop again.
       courseD_playLab_cond3a_authored_hint:
-        courseD_playLab_cond3_b: 'You will need to use an `if / else` block for this
-          challenge. '
         courseD_playLab_cond3_c: "- `If` the dragon is happy \n   - `score point`\n
           \  - `score point`  \n   \n   \n \n- `Else` `score point`"
       courseD_playLab_cond3b_authored_hint:
@@ -10644,8 +10642,6 @@
           of each loop iteration if you want to solve the puzzle.
         courseF_bee_for9_b: "**Remember:** If your loop is counting up, the increment
           is added to your `counter` variable each time through."
-        courseF_bee_for9_d: This is very similar to the other stair step puzzle earlier
-          in the stage, but this time you’re counting down!
       courseF_bee_for_challenge1_authored_hint: []
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: "Take a look at this option for movement:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
@@ -12334,15 +12330,11 @@
         grade3_robotFarmer_ConditionalsIntro_9_c: Notice that you need to repeat the
           `while path ahead`, `while there is a hole` code six times.
       grade4_arist_nested_loop_polygons1_authored_hint:
-        4-5_Nested_Loops_7_a: |-
-          This design will loop 10 times over 360 degrees.
-
-          **360 / 10 = ?**
+        4-5_Nested_Loops_7_a: Desain ini akan berputar 10 kali lebih dari 360 derajat.
+          ** 360/10 =? **
       grade4_arist_nested_loop_polygons2_authored_hint:
-        4-5_Nested_Loops_8_a: |-
-          You will be looping this shape 6 times over 360 degrees.
-
-          **360 / 6 = ?**
+        4-5_Nested_Loops_8_a: Anda akan melingkar bentuk ini 6 kali lebih dari 360
+          derajat. ** 360/6 =? **
       grade4_arist_nested_loop_triangles2_authored_hint: []
       grade4_arist_nested_loop_triangles3_authored_hint:
         4-5_Nested_Loops_6_a: |-
@@ -12449,15 +12441,11 @@
         Course_4_Artist_11_b: 'The 2/3 triangle has a **length of 80** and turns right
           by **120 degrees**. '
       grade4_artist_nested_loop_polygons1_authored_hint:
-        4-5_Nested_Loops_7_a: |-
-          This design will loop 10 times over 360 degrees.
-
-          **360 / 10 = ?**
+        4-5_Nested_Loops_7_a: Desain ini akan berputar 10 kali lebih dari 360 derajat.
+          ** 360/10 =? **
       grade4_artist_nested_loop_polygons2_authored_hint:
-        4-5_Nested_Loops_8_a: |-
-          You will be looping this shape 6 times over 360 degrees.
-
-          **360 / 6 = ?**
+        4-5_Nested_Loops_8_a: Anda akan melingkar bentuk ini 6 kali lebih dari 360
+          derajat. ** 360/6 =? **
       grade4_artist_nested_loop_triangles2_authored_hint: []
       grade4_artist_nested_loop_triangles3_authored_hint:
         4-5_Nested_Loops_6_a: |-
@@ -12712,9 +12700,9 @@
       grade5_artist_parameters_stars1_authored_hint:
         hint1: Don't give up!
       grade5_artist_variables_freeplay10_authored_hint:
-        Course_4_Artist_Vars_8_a: If you divide your starting length by the number
-          of sides, the length of each side will get shorter as the number of sides
-          gets higher.
+        Course_4_Artist_Vars_8_a: Jika Anda membagi panjang awal dengan jumlah sisi,
+          panjang masing-masing sisi akan menjadi lebih pendek karena jumlah sisi
+          semakin tinggi.
       grade5_artist_variables_freeplay15_authored_hint:
         Course_4_Artist_Inspire_a: Setelah anda menyelesaikan satu persegi, cobalah
           melompat baju setengah panjangnya sebelum berbalik dan membuat lain.

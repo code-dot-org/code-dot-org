@@ -250,7 +250,7 @@ it:
       Artist Inspiration_authored_hint:
         brush_width: Come prima cosa, assegna lo spessore del pennello a 1 ed il suo colore a blu.
         double_loop: Prova ad inserire un <i>ciclo con contatore</i> all'interno di un altro ciclo.
-        specifics: "In ogni petalo, il poligono più piccolo ha 3 lati ed il più grande ne ha 17.<br>\n<br>\nIl blocco `imposta l'opacità` usa un blocco divisione per rendere il colore sempre più trasparente man mano che il numero dei lati del poligono aumenta (minore è il valore dell'opacità più trasparente è il colore)."
+        specifics: "In ogni petalo, il poligono più piccolo ha 3 lati ed il più grande ne ha 17.<br>\n<br>\nNel blocco `imposta l'opacità`, usa un blocco divisione per rendere il colore sempre più trasparente man mano che il numero dei lati del poligono aumenta (minore è il valore dell'opacità più trasparente è il colore)."
         after: Quando hai finito un petalo, assicurati di spostarti in avanti di 20 pixel prima di ruotare di 60 gradi per iniziare il petalo successivo.
         solution: |-
           Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/238594589" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
@@ -292,7 +292,7 @@ it:
         Course_4_Artist_For_Loops_4_a: "Ecco le domande cui rispondere per trovare i valori da inserire al posto dei `???`:<br>\nQual è il valore più piccolo che serve? <br>\nQual è il più grande?<br>\nQual è l'incremento necessario ad ogni ripetizione?<br>\n<b>Nota</b>: ora ci sono così tanti blocchi nella cassetta degli attrezzi che li abbiamo organizzati in diverse categorie. Prenditi un po' di tempo per esplorarle."
       Course 4 Artist For Loops Challenge_authored_hint:
         Course_4_Artist_For_Loops_Challenge_a: Il poligono più grande ha 19 lati.
-        Course_4_Artist_For_Loops_Challenge_b: Tutti i poligoni sono incompleti, ossia ogni poligono viene disegnato con un lato di meno rispetto a quelli che dovrebbe avere (`<i>counter</i> - 1`).
+        Course_4_Artist_For_Loops_Challenge_b: Tutti i poligoni sono incompleti, ossia ogni poligono viene disegnato con un lato di meno rispetto a quelli che dovrebbe avere (`counter - 1`).
       Course 4 Artist For Loops Challenge_a_authored_hint:
         Course_4_Artist_For_Loops_Challenge_a: Il poligono più grande ha 19 lati.
         Course_4_Artist_For_Loops_Challenge_b: Ogni poligono è incompleto, con un lato in meno di quanti ne dovrebbe avere.
@@ -308,7 +308,7 @@ it:
           <b>Soluzione:</b> Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/227383614" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
       Course 4 Artist Functions challenge_authored_hint:
         Course_4_Artist_Functions_challenge_a: Un parte importante nel realizzare le funzioni è capire quali blocchi ti servono e quali no.
-        Course_4_Artist_Functions_challenge_b: Usa un ciclo `ripeti ... volte` all'esterno e al suo interno un ciclo `ripeti con counter` che riutilizza la variabile `counter` (<i>contatore</i>).
+        Course_4_Artist_Functions_challenge_b: Usa un ciclo `ripeti con counter` e al suo interno usa un ciclo `ripeti ... volte` per un numero di volte pari alla variabile `counter` (<i>contatore</i>) del ciclo esterno.
         Course_4_Artist_Functions_challenge_c: "Ad ogni ripetizione, disegna un quadratino e fai un salto in avanti.<br>\n<br>\nDevi girare di 90 gradi dopo ogni ciclo `ripeti ... volte`, ma sempre all'interno del ciclo `ripeti con counter`.\n"
         Course_4_Artist_Functions_challenge_d: Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/113000010" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
       Course 4 Artist Inspire_authored_hint:
@@ -339,8 +339,8 @@ it:
       Course 4 Playlab For Loop Freeplay_authored_hint: [ ]
       Course 4 Playlab For Loops 4b_authored_hint:
         Course_4_Playlab_For_Loops_4b_a: I personaggi sono distanti 330 pixel dalle bandierine.
-        Course_4_Playlab_For_Loops_4b_b: Come puoi far sì che alla fine del <i>ciclo con contatore</i> ogni personaggio abbia percorso la stessa distanza totale, nonostante i valori iniziali e finali del ciclo siano diversi?
-        Course_4_Playlab_For_Loops_4b_c: Ricorda che non importa di quanto un personaggio supera la bandierina nell'ultima ripetizione, ciò che conta è il numero di ripetizioni.
+        Course_4_Playlab_For_Loops_4b_b: Come puoi far sì che, prima della fine del proprio <i>ciclo con contatore</i>, ogni personaggio raggiunga la propria bandierina, nonostante i valori iniziali e finali del ciclo siano diversi?
+        Course_4_Playlab_For_Loops_4b_c: Ricorda che non importa di quanto un personaggio supera la bandierina nell'ultima ripetizione del proprio ciclo, l'importante è superare la bandierina.
       Course 4 Playlab For Loops 5b_authored_hint:
         Course_4_Playlab_For_Loops_5b_a: I personaggi sono distanti 350 pixel l'uno dall'altro.
         Course_4_Playlab_For_Loops_5b_b: Ricorda che ad ogni ripetizione del <i>ciclo con contatore</i> un personaggio si muove di una quantità maggiore, perché il contatore viene incrementato ad ogni ripetizione.
@@ -504,7 +504,7 @@ it:
       Inspirational Artwork_authored_hint:
         brush_width: Come prima cosa, assegna lo spessore del pennello a 1 ed il suo colore a blu.
         double_loop: Prova ad inserire un <i>ciclo con contatore</i> all'interno di un altro ciclo.
-        specifics: "In ogni petalo, il poligono più piccolo ha 3 lati ed il più grande ne ha 17.<br>\n<br>\nIl blocco `imposta l'opacità` usa un blocco divisione per rendere il colore sempre più trasparente man mano che il numero dei lati del poligono aumenta (minore è il valore dell'opacità più trasparente è il colore)."
+        specifics: "In ogni petalo, il poligono più piccolo ha 3 lati ed il più grande ne ha 17.<br>\n<br>\nNel blocco `imposta l'opacità`, usa un blocco divisione per rendere il colore sempre più trasparente man mano che il numero dei lati del poligono aumenta (minore è il valore dell'opacità più trasparente è il colore)."
         after: Quando hai finito un petalo, assicurati di spostarti in avanti di 20 pixel prima di ruotare di 60 gradi per iniziare il petalo successivo.
         solution: |-
           Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/238594589" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
@@ -538,6 +538,8 @@ it:
         K2.0_sequence_FP_a: If the path you need is unclear, use your finger to trace your way from the bird to the pig.
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make sure blocks are connected under `when run`.
+      MC Agent Freeplay_authored_hint:
+        MC_HOC_2017_13_Cole_a: Prova a far costruire delle rotaie all'Agente, in modo da poter esplorare il mondo!
       MC_HOC_2017_01_Cole_authored_hint:
         MC_HOC_2017_01_Cole_a: Usa le frecce per condurre il giocatore nella casa. Fermati sulla casella arancione per vincere.
       MC_HOC_2017_01_RETRY_authored_hint:
@@ -641,7 +643,7 @@ it:
       NEW Course 4 Artist Params inspire_authored_hint:
         brush_width: Come prima cosa, assegna lo spessore del pennello a 1 ed il suo colore a blu.
         double_loop: Prova ad inserire un <i>ciclo con contatore</i> all'interno di un altro ciclo.
-        specifics: "In ogni petalo, il poligono più piccolo ha 3 lati ed il più grande ne ha 17.<br>\n<br>\nIl blocco `imposta l'opacità` usa un blocco divisione per rendere il colore sempre più trasparente man mano che il numero dei lati del poligono aumenta (minore è il valore dell'opacità più trasparente è il colore)."
+        specifics: "In ogni petalo, il poligono più piccolo ha 3 lati ed il più grande ne ha 17.<br>\n<br>\nNel blocco `imposta l'opacità`, usa un blocco divisione per rendere il colore sempre più trasparente man mano che il numero dei lati del poligono aumenta (minore è il valore dell'opacità più trasparente è il colore)."
         after: Quando hai finito un petalo, assicurati di spostarti in avanti di 20 pixel prima di ruotare di 60 gradi per iniziare il petalo successivo.
         solution: |-
           Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/238594589" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
@@ -723,6 +725,7 @@ it:
         mc_9_a: Sei girato dalla parte giusta? Il blocco `distruggi` scava nel blocco davanti a te.
         mc_9_b: I granelli neri nel muro sono carbone! Usa il blocco `distruggi` su di essi per estrarre il carbone.
         mc_9_c: Usa il blocco `metti una torcia` per posizionare una torcia nel punto in cui ti trovi.
+      Valentine_artist_01_authored_hint: [ ]
       aE1_authored_hint: [ ]
       aE2_authored_hint:
         aE2_a: Notice that since the napkins are 20 pixels long, you'll need to jump 20 pixels before you start your next loop.
@@ -773,7 +776,7 @@ it:
       artistLoopsK2gradek_artist_loops3_authored_hint:
         artistLoopsK2_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
       artistLoopsK3_authored_hint:
-        artistLoopsK3_a: Prova a utilizzare quello che hai imparato sui blocchi di ripetizione per completare questo puzzle!
+        artistLoopsK3_a: Prova a utilizzare quello che hai imparato sui blocchi di ripetizione per completare questo esercizio!
       artistLoopsK4_authored_hint:
         artistLoopsK4_a: Stuck? Try running the code to see which block is incorrect.
       artistLoopsK5_authored_hint:
@@ -1994,40 +1997,42 @@ it:
       courseA_artist_loops12_authored_hint: [ ]
       courseA_artist_loops2_authored_hint:
         courseA_artist_loops2_a: Can't figure out how to draw a line?  Start attaching blocks to the <xml><block type="when_run"/></xml> block to see what happens.
-        courseA_artist_loops2_b: Utilizza questo blocco <xml><block type="simple_move_right"/></xml> per risolvere questo puzzle.
+        courseA_artist_loops2_b: Utilizza questo blocco <xml><block type="simple_move_right"/></xml> per risolvere questo esercizio.
       courseA_artist_loops3_authored_hint:
         courseA_artist_loops3_a: Trace slowly through the program with your finger to see where it goes wrong.
         courseA_artist_loops3_b: |-
-          Devi utilizzare un blocco come questo per risolvere il puzzle. ! [] (https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
+          Devi usare un blocco come questo per risolvere l'esercizio.
+          
+          ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
       courseA_artist_loops4_authored_hint:
         courseA_artist_loops4_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
         courseA_artist_loops4_b: |-
-          Dato che puoi utilizzare solo un blocco <xml><block type="simple_move_right"/></xml>, prova a metterlo all'interno del ciclo <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block>.
+          Dato che puoi usare solo un blocco <xml><block type="simple_move_right"/></xml>, prova a metterlo all'interno del ciclo<block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block>
       courseA_artist_loops5_authored_hint:
         courseA_artist_loops5_a: Try using what you've learned about <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> blocks to complete this puzzle!
         courseA_artist_loops5_b: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
-        courseA_artist_loops5_c: "Dato che puoi utilizzare solo un blocco <xml><block type=\"simple_move_right\"/></xml>, prova a metterlo all'interno del ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"> <title name=\"TIMES\" config=\"3-10\">?</title></block></xml>."
+        courseA_artist_loops5_c: "Dato che puoi utilizzare solo un blocco <xml><block type=\"simple_move_right\"/></xml>, prova a metterlo all'interno del ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
       courseA_artist_loops6_authored_hint:
         courseA_artist_loops6_a: Can't figure out how to make the hill?  Try playing with the blocks a bit to see what each one draws.
-        courseA_artist_loops6_b: Avrai bisogno di due blocchi in 2 direzioni per risolvere questo puzzle.
+        courseA_artist_loops6_b: Avrai bisogno di 2 blocchi in 2 direzioni per risolvere questo esercizio.
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
-        courseA_artist_loops7_b: Prima scrivi il codice per un'onda, poi ripetilo che per disegnare le altre due.
+        courseA_artist_loops7_b: Scrivi il codice per disegnare un'onda, poi ripetilo per disegnare le altre due.
         courseA_artist_loops7_c: |-
-          Ricorda: puoi mettere piu' di un blocco dentro un ciclo <xml><block type="controls_repeat"> <title name="TIMES">???</title> </block></xml>.
+          Ricorda: puoi mettere più di un blocco dentro all'interno di un ciclo <xml><block type="controls_repeat"> <title name="TIMES">???</title></block></xml>
       courseA_artist_loops7_forVideo_authored_hint:
         courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
-        courseA_artist_loops7_b: Prima scrivi il codice per un'onda, poi ripetilo che per disegnare le altre due.
+        courseA_artist_loops7_b: Scrivi il codice per disegnare un'onda, poi ripetilo per disegnare le altre due.
         courseA_artist_loops7_c: |-
-          Ricorda: puoi mettere piu' di un blocco dentro un ciclo <xml><block type="controls_repeat"> <title name="TIMES">???</title> </block></xml>.
+          Ricorda: puoi mettere più di un blocco dentro all'interno di un ciclo <xml><block type="controls_repeat"> <title name="TIMES">???</title></block></xml>
       courseA_artist_loops8_authored_hint:
         courseA_artist_loops8_a: Try running the code to see what has been written for you.
         courseA_artist_loops8_b: How would you loop the code that has been given to you?
         courseA_artist_loops8_c: "What does the code do?  \nWhat is it supposed to do?  \nWhat does that tell you?"
       courseA_artist_loops9_authored_hint:
         courseA_artist_loops9_a: Add another block to the code you are given to draw the rest of the stairs.
-        courseA_artist_loops9_b: "Il blocco che aggiungerai deve essere inserito nel ciclo \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block> </xml>."
-        courseA_artist_loops9_c: Se non riesci a capire dove mettere il ciclo, prova a scrivere il codice passo passo e cercare i percorsi.
+        courseA_artist_loops9_b: "Il blocco che aggiungi deve essere inserito nel ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block> </xml>"
+        courseA_artist_loops9_c: Se non riesci a capire dove mettere il ciclo, prova a scrivere il codice con tutti i blocchi azzurri e cerca poi di riconoscere la sequenza che si ripete.
       courseA_artist_loops_challenge1_authored_hint: [ ]
       courseA_artist_loops_challenge2_authored_hint:
         courseA_artist_loops_challenge2_a: Blocks like this <xml>  <block type="simple_move_up_left"/></xml> will let your artist move at a slant!
@@ -2041,38 +2046,38 @@ it:
         harvey_tictactoe: You can use `jump` blocks to move to other spaces.
       courseA_collector_loops1_authored_hint:
         courseA_collector_loops1_a: |-
-          Dopo esserti spostato in un quadrato con il tesoro, usa questo blocco per raccoglierlo. <xml><block type="collector_collect"/></xml>
-        courseA_collector_loops1_b: Una soluzione semplice sarebbe spostarsi a Est 2 volte, quindi prendere il tesoro.
+          Dopo aver raggiunto una casella con il tesoro, usa questo blocco per raccoglierlo: <xml><block type="collector_collect"/></xml>
+        courseA_collector_loops1_b: Una soluzione semplice sarebbe spostarsi a Est (`E -->`) 2 volte, quindi prendere il tesoro.
       courseA_collector_loops10_authored_hint: [ ]
       courseA_collector_loops11_authored_hint: [ ]
       courseA_collector_loops11_predict2_authored_hint: [ ]
       courseA_collector_loops2_authored_hint:
         courseA_collector_loops2_a: Devi muoverti prima di raccogliere qualsiasi tesoro.
         courseA_collector_loops2_b: |-
-          Dopo esserti spostato in un quadrato con il tesoro, usa questo blocco per raccoglierlo. <xml><block type="collector_collect"/></xml>
+          Dopo aver raggiunto una casella con il tesoro, usa questo blocco per raccoglierlo: <xml><block type="collector_collect"/></xml>
       courseA_collector_loops3_authored_hint:
-        courseA_collector_loops3_a: "Prova ad utilizzare un ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
-        courseA_collector_loops3_b: 'Ricorda: puoi mettere piu'' di un blocco dentro un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>.'
+        courseA_collector_loops3_a: "Prova ad utilizzare un ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        courseA_collector_loops3_b: 'Ricorda: puoi mettere più di un blocco dentro un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>'
       courseA_collector_loops3_predict1_authored_hint: [ ]
       courseA_collector_loops4_authored_hint:
         courseA_collector_loops4_a: To change how far Laurel goes, change the number of times that the loop runs.
         courseA_collector_loops4_b: Don't forget that Laurel needs to walk down and collect the treasure after she finishes the <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loop!
       courseA_collector_loops5_authored_hint:
-        courseA_collector_loops5_a: Se non riesci subito a capire la risposta, provare a utilizzare un foglio di carta per capire di quali frecce hai bisogno e definire un percorso.
+        courseA_collector_loops5_a: Se non riesci subito a capire la risposta, provare ad utilizzare un foglio di carta per capire di quali frecce hai bisogno e cerca di definire un percorso.
         courseA_collector_loops5_b: Prova a dividere il problema in due parti, muovendoti lateralmente e poi verso il basso.
-        courseA_collector_loops5_c: Ti consigliamo di iniziare con un ciclo di <xml><block type="controls_repeat_simplified_dropdown"> <title name="TIMES" config="3-10">?</title></block></xml> che muove Laurel verso Ovest e raccoglie il tesoro.
+        courseA_collector_loops5_c: Potresti iniziare con un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> che muove Laurel verso Ovest (`O <--`) e raccoglie il tesoro.
       courseA_collector_loops6_authored_hint:
         courseA_collector_loops6_a: Non riesci a capire cosa non va? Provare a eseguire il codice un paio di volte per vedere cosa succede.
-        courseA_collector_loops6_b: La soluzione più breve ha 2 <xml><block type="controls_repeat_simplified_dropdown"> <title name="TIMES" config="3-10">?</title></block></xml> cicli, uno dopo l'altro.
+        courseA_collector_loops6_b: La soluzione più breve ha 2 cicli <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>, uno dopo l'altro.
       courseA_collector_loops7_authored_hint:
-        courseA_collector_loops7_a: Se non riesci a capire che cosa accade dopo, provare a eseguire il codice per vedere dove finisce Laurel.
+        courseA_collector_loops7_a: Se non riesci a capire che cosa accade dopo, provare ad eseguire il codice per vedere dove va a finire Laurel.
       courseA_collector_loops8_authored_hint:
-        courseA_collector_loops8_a: Se hai difficoltà nella risoluzione di questo puzzle, prova a scrivere le mosse su un foglio di carta e individua un disegno.
-        courseA_collector_loops8_b: Prova a dividere questo puzzle in tre problemi separati, e scrivi cicli per ciascuno di essi.
-        courseA_collector_loops8_c: Ricorda che puoi scrivere un pezzo di codice alla volta, e poi premere "Esegui" per visualizzare dove devi andare dal punto in cui ti trovi.
+        courseA_collector_loops8_a: Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere le mosse su un foglio di carta e cerca di trovare uno schema.
+        courseA_collector_loops8_b: Prova a dividere questo esercizio in tre problemi separati e scrivi un ciclo per ciascuno di essi.
+        courseA_collector_loops8_c: Ricorda che puoi scrivere un pezzo di codice alla volta, e poi premere "Esegui" per capire come devi procedere dal punto in cui sei arrivato.
       courseA_collector_loops9_authored_hint:
         courseA_collector_loops9_a: 'If you can''t spot the best places to use loops, try coding it out step-by-step and look for a pattern. '
-        courseA_collector_loops9_b: Prova a mettere due cicli dentro un altro ciclo per rendere il tuo programma piu' breve!
+        courseA_collector_loops9_b: Prova a mettere due cicli <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> dentro un altro ciclo per rendere il tuo programma più breve!
       courseA_collector_loops_challenge1_authored_hint:
         courseA_collector_loops_challenge1_a: Try changing the numbers in each loop if something seems wrong.
         courseA_collector_loops_challenge1_b: You don't need to use a loop if you are only doing something one time.
@@ -2110,7 +2115,7 @@ it:
         courseA_collector_preLoops6_a: You will need to use two ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) blocks to solve this puzzle.
       courseA_collector_preLoops7_authored_hint:
         courseA_collector_loops2_b: |-
-          Dopo esserti spostato in un quadrato con il tesoro, usa questo blocco per raccoglierlo. <xml><block type="collector_collect"/></xml>
+          Dopo aver raggiunto una casella con il tesoro, usa questo blocco per raccoglierlo: <xml><block type="collector_collect"/></xml>
       courseA_forVideoTest_artist_authored_hint: [ ]
       courseA_maze_seq1_authored_hint:
         courseA_maze_seq1_a: |-
@@ -2128,17 +2133,17 @@ it:
       courseA_maze_seq12_predict2_authored_hint: [ ]
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: If the path you need is unclear, use your finger to trace your way from the bird to the pig.
-        courseA_maze_seq13_b: Non aver paura di commettere errori! Prova ad aggiungere blocchi e a fai eseguire il programma per vedere cosa succede.
+        courseA_maze_seq13_b: Non aver paura di commettere errori! Prova ad aggiungere blocchi e fai eseguire il programma per vedere cosa succede.
         courseA_maze_seq13_c: |-
-          Questi blocchi ti aiuteranno ad avvicinarti al maialino.
+          Questi blocchi <xml><block type="maze_moveNorth"/></xml> <xml><block type="maze_moveEast"/></xml> ti aiuteranno ad avvicinarti al maialino.
       courseA_maze_seq2_authored_hint:
         courseA_maze_seq2_a: This program is missing 1 block. Can you figure out which one?
-        courseA_maze_seq2_b: Try running the code first to see where the bird ends up. Where do you need to go from there?
+        courseA_maze_seq2_b: Prova ad eseguire il programma per capire dove va a finire l'uccellino. Come devi proseguire?
       courseA_maze_seq2_predict1_authored_hint: [ ]
       courseA_maze_seq3_authored_hint:
         courseA_maze_seq3_a: 1 of the blocks is moving the bird in the wrong direction. Can you figure out which one and replace it with the correct block?
         courseA_maze_seq3_b: Try using the step button to find where the program goes wrong. Is it the 1st step? The 2nd?
-        courseA_maze_seq3_c: This <xml><block type="maze_moveNorth"/></xml> block doesn't seem to be moving the bird in the right direction. Can you replace it with a different block?
+        courseA_maze_seq3_c: Questo blocco <xml><block type="maze_moveNorth"/></xml> non sembra muovere l'uccellino nella direzione corretta. Puoi sostituirlo con un altro blocco?
       courseA_maze_seq4_authored_hint:
         courseA_maze_seq4_a: If you are having trouble, try to figure out what the correct path is and then remove the block that doesn't fit.
         courseA_maze_seq4_b: Try running the code as it is. Does something go wrong? Which block can you remove? How can you fix it?
@@ -2146,10 +2151,10 @@ it:
         courseA_maze_seq4_a: If you are having trouble, try using your finger to figure out the correct path by pointing it out on the map. What moves did your finger make?
       courseA_maze_seq5_authored_hint:
         courseA_maze_seq5_a: Try writing down the steps on paper to find a solution!
-        courseA_maze_seq5_b: You will need 2 blocks, pointing in 2 directions.
+        courseA_maze_seq5_b: Avrai bisogno di 2 blocchi, che puntano in 2 direzioni diverse.
       courseA_maze_seq6_authored_hint:
         courseA_maze_seq6_a: Your final code should have 3 movement blocks.
-        courseA_maze_seq6_b: If you get stuck, try solving the puzzle in 2 parts, one part before the corner and one part after the corner.
+        courseA_maze_seq6_b: Se ti blocchi, prova a risolvere l'esercizio in due parti, una parte prima della curva ed l'altra dopo la curva.
       courseA_maze_seq7_authored_hint:
         courseA_maze_seq7_a: There is 1 block that you need to add to move the bird to the pig.
         courseA_maze_seq7_b: If you can't figure out what to do, try drawing the puzzle on paper and use your finger to figure out which way to move.
@@ -2157,8 +2162,8 @@ it:
         courseA_maze_seq8_a: If you're stuck, try drawing the image on paper to see how the bird should move.
       courseA_maze_seq9_authored_hint:
         courseA_maze_seq9_a: Stuck? Try tracing the bird's path with your finger.
-        courseA_maze_seq9_b: Se non sai cosa fare, prova a premere "Esegui" e fai partire il programma per vedere cosa non funziona.
-        courseA_maze_seq9_c: Dovrai muoverti in 3 direzioni per risolvere questo puzzle.
+        courseA_maze_seq9_b: Se non sai cosa fare, prova a premere "Ripristina" e fai partire il programma per vedere cosa non funziona.
+        courseA_maze_seq9_c: Dovrai muoverti in 3 direzioni per risolvere questo esercizio.
       courseA_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge1_a: There are two solutions to this puzzle.
       courseA_maze_seq_challenge2_authored_hint:
@@ -2166,7 +2171,7 @@ it:
       courseA_playLab_events2_authored_hint:
         courseA_playLab_events2_a: Look for a block that that makes the dog say something.
         courseA_playLab_events2_b: |2
-          Questo e' il codice che ti serve per completare questo puzzle:
+          Questo è il codice che ti serve per completare questo esercizio:
           
           <xml> 
           <block type="when_run" movable="false" deletable="false"> 
@@ -2185,7 +2190,7 @@ it:
           </block></xml> out and snap it to the bottom of <xml><block type="studio_whenArrow">
           <title name="VALUE">left</title>
           </block></xml>
-        courseA_playLab_events3_b: Ricorda di utilizzare la freccia a sinistra per muovere Jorge fino alla bandiera una volta che avrai scritto il programma. Quando la bandiera diventa verde, hai finito!
+        courseA_playLab_events3_b: Dopo che hai scritto il programma, ricorda di utilizzare la freccia a sinistra per muovere Jorge fino alla bandierina. Quando la bandierina diventa verde, hai finito!
       courseA_playLab_events4_authored_hint:
         courseA_playLab_events4_a: |-
           Here is the event block that you will need to get Jorge to move right:
@@ -2207,7 +2212,9 @@ it:
       courseA_playLab_events5_authored_hint:
         courseA_playLab_events5_a: "Here are the event blocks that you will need to use to move Jorge up and down:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\nand \n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
         courseA_playLab_events5_b: |-
-          Sapevi che puoi cambiare il "tasto freccia" cliccando sul disegno nei blocchi e scegliendone uno nuovo
+          Sapevi che puoi cambiare il verso della freccia nel blocco evento, cliccando sul disegno e scegliendone uno nuovo?
+          
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
       courseA_playLab_events6_authored_hint:
         courseA_playLab_events6_a: |-
           Here is the event block that you would use to have Jorge do something when clicked:
@@ -2229,7 +2236,12 @@ it:
           </block></xml>
       courseA_playLab_events7_authored_hint:
         courseA_playLab_events7_a: |-
-          Usa questo blocco per controllare cosa succede quando i personaggi si scontrano. <xml><block type="studio_whenSpriteCollided"> <title name="SPRITE1">1</title> <title name="SPRITE2">0</title> </block></xml>
+          Usa questo blocco per definire cosa deve succedere quando i personaggi si scontrano.
+          
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseA_playlab_challengeTemplate_authored_hint: [ ]
       courseA_playlab_events_challenge1_authored_hint:
         courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you click Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
@@ -2529,7 +2541,7 @@ it:
         courseB_maze_seq2_b: Try running the code you are given to see what the bird needs to do next.
       courseB_maze_seq3_authored_hint:
         courseB_maze_seq3_a: One of the blocks is moving the bird in the wrong direction. Can you figure out which one and replace it with the correct block?
-        courseB_maze_seq3_b: Try using the step button to find where the program goes wrong. Is it the first step? The second?
+        courseB_maze_seq3_b: Prova ad usare il pulsante "Fai un passo" per capire dov'è l'errore. È al primo passo? Al secondo?
         courseB_maze_seq3_c: The <xml><block type="maze_moveWest"/></xml> block doesn't seem to be moving the bird in the right direction.
       courseB_maze_seq4_authored_hint:
         courseB_maze_seq4_a: Try adding one instruction at a time until you get to the pig.
@@ -3418,22 +3430,22 @@ it:
         courseC_starWars_loops1_c: You will want to `move forward` five times to solve this puzzle.
       courseC_starWars_loops10_authored_hint:
         courseC_starWars_loops10_a: Doesn't this pattern look like a giant set of stair steps? See if you can use what you learned from previous puzzles to get all of the turns.
-        courseC_starWars_loops10_b: "If you want to use less code, you can put one `repeat loop` inside of another!   \nThis is called a **nested loop**."
+        courseC_starWars_loops10_b: "If you want to use less code, you can put one `repeat` loop inside of another!   \nThis is called a **nested loop**."
         courseC_starWars_loops10_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseC_starWars_loops10_predict2_authored_hint: [ ]
       courseC_starWars_loops11_authored_hint: [ ]
       courseC_starWars_loops2_authored_hint:
         courseC_starWars_loops2_a: To repeat code, drag out a `repeat` loop, then put the block you want inside of it.
       courseC_starWars_loops4_authored_hint:
+        courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the turn block will let you change it to  "right".
         courseC_starWars_loops4_a: Use two `repeat` blocks.
         courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command inside of it: `move forward`.'
-        courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the turn block will let you change it to  "right".
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: To move down, you have to turn and then move forward.
         courseC_starWars_loops5_a: The best solution uses a turn, then a single `move forward`, another turn, then a loop.
       courseC_starWars_loops6_authored_hint:
         courseC_starWars_loops6_a: Try writing all of the moves down on a piece of paper and looking for a pattern.
-        courseC_starWars_loops6_b: "If you want to use less code, you can put one `repeat loop` inside of another!   \nThis is called a **nested loop**."
+        courseC_starWars_loops6_b: "If you want to use less code, you can put one `repeat` loop inside of another!   \nThis is called a **nested loop**."
       courseC_starWars_loops7_authored_hint:
         courseC_starWars_loops7_a: This pattern looks harder than it is! Start with a simple stair step. Does that cover all of the scrap metal?
         courseC_starWars_loops7_b: If you are having trouble with this puzzle, try writing all of the moves on a piece of paper and looking for a pattern.
@@ -3709,14 +3721,14 @@ it:
         courseD_bee_conditionals4_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals5_authored_hint:
         courseD_bee_conditionals5_hintVid1: Need help getting started?  Watch the video!
-        courseD_bee_conditionals5_a: Think of every side of the rectangular path as a path by itself. Set up a nested loop with a `repeat` block on the outside and a `while there is a path ahead` loop on the inside. How many paths does the bee need to buzz down if the bee needs to buzz every side with a flower?
+        courseD_bee_conditionals5_a: Think of every side of the rectangular path as a path by itself. Set up a nested loop with a `repeat` block on the outside and a `while there is a path ahead` loop on the inside. How many paths does the bee need to buzz down if the bee needs to buzz down every side with a flower?
         courseD_bee_conditionals5_c: There are 3 sides of the rectangle with flowers, so the code needs to `repeat 3 times`. In every repeat, the bee will need to continue along the path, `while there is a path ahead`. To continue down the path, the bee will need to `move forward`. While on the path, the bee needs to check for a flower. `if there is a flower`, the bee should `get nectar`.
         courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block you will need to move forward and check for a flower. How do you check if there is a flower? What do you do if there is a flower?
         courseD_bee_conditionals5_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals6_authored_hint:
         courseD_bee_conditionals6_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for honeycomb beneath each cloud.
-        courseD_bee_conditionals6_b: In this case, you do not need to check for nectar under the clouds.
+        courseD_bee_conditionals6_b: In this case, you do not need to check for flowers under the clouds.
         courseD_bee_conditionals6_c: Is there a loop you can use to make your code simpler?
         courseD_bee_conditionals6_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals7_authored_hint:
@@ -4451,7 +4463,6 @@ it:
       courseD_playLab_cond3_authored_hint:
         courseD_playLab_cond3_a: You will need to add two blocks to your `repeat forever` loop.  One will choose a random emotion for the dragon (actor 2) and the other will wait 1 second before going through the loop again.
       courseD_playLab_cond3a_authored_hint:
-        courseD_playLab_cond3_b: What do you think `set every masked ninja to chase actor` does?
         courseD_playLab_cond3_c: "- `If` the dragon is happy \n   - `score point`\n   - `score point`  \n   \n   \n \n- `Else` `score point`"
       courseD_playLab_cond3b_authored_hint:
         courseD_playLab_cond3b_a: You will need to add blocks to your `repeat forever` loop to make the dragon continue to move up and down
@@ -5646,7 +5657,6 @@ it:
           Prova ad usare nel <i>ciclo con contatore</i> un valore della variabile `counter` che viene modificato con un blocco matematico man mano che ti sposti e raccogli il nettare.
         courseF_bee_for9_c: It looks like you will need to turn the bee at the beginning of each loop iteration if you want to solve the puzzle.
         courseF_bee_for9_b: "**Remember:** If your loop is counting up, the increment is added to your `counter` variable each time through."
-        courseF_bee_for9_d: This is very similar to the other stair step puzzle earlier in the stage, but this time you’re counting down!
       courseF_bee_for_challenge1_authored_hint: [ ]
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: "L'ape dovrebbe seguire un percorso in cui raccoglie prima tutto il nettare (andando a zig-zag verso destra e verso l'alto) e poi tutto il miele (andando a zig-zag verso il basso e verso sinistra):<br>\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
@@ -7013,7 +7023,7 @@ it:
       grade5_artist_functionparameters10_authored_hint:
         brush_width: Come prima cosa, assegna lo spessore del pennello a 1 ed il suo colore a blu.
         double_loop: Prova ad inserire un <i>ciclo con contatore</i> all'interno di un altro ciclo.
-        specifics: "In ogni petalo, il poligono più piccolo ha 3 lati ed il più grande ne ha 17.<br>\n<br>\nIl blocco `imposta l'opacità` usa un blocco divisione per rendere il colore sempre più trasparente man mano che il numero dei lati del poligono aumenta (minore è il valore dell'opacità più trasparente è il colore)."
+        specifics: "In ogni petalo, il poligono più piccolo ha 3 lati ed il più grande ne ha 17.<br>\n<br>\nNel blocco `imposta l'opacità`, usa un blocco divisione per rendere il colore sempre più trasparente man mano che il numero dei lati del poligono aumenta (minore è il valore dell'opacità più trasparente è il colore)."
         after: Quando hai finito un petalo, assicurati di spostarti in avanti di 20 pixel prima di ruotare di 60 gradi per iniziare il petalo successivo.
         solution: |-
           **Solution**
@@ -7115,17 +7125,17 @@ it:
         gradeK_sequence_4_a: Try writing down the steps on paper to find a solution!
       gradek_adventurer_loops3_authored_hint:
         gradek_adventurer_loops3_a: Per modificare quanto va lontana l'Avventuriera, cambia il numero di volte che il ciclo viene eseguito.
-        gradek_adventurer_loops3_b: Non dimenticare che l'Avventuriera deve scendere e raccogliere l'ultima perla dopo che ha completato il ciclo di ripetizioni!
+        gradek_adventurer_loops3_b: Non dimenticare che l'Avventuriera deve scendere e raccogliere l'ultima gemma dopo che ha completato il ciclo `ripeti`!
       gradek_adventurer_loops4_authored_hint:
-        gradek_adventurer_loops4_a: Se non riesci subito a capire la risposta, provare a utilizzare un foglio di carta per capire di quali frecce hai bisogno e definire un percorso.
+        gradek_adventurer_loops4_a: Se non riesci subito a capire la risposta, provare ad utilizzare un foglio di carta per capire di quali frecce hai bisogno e cerca di definire un percorso.
       gradek_adventurer_loops4a_authored_hint:
         gradek_adventurer_loops4a_a: Can't figure out what's wrong? Try running the code to see what happens.
       gradek_adventurer_loops5_authored_hint:
-        gradek_adventurer_loops5_a: Se non riesci a capire che cosa accade dopo, provare a eseguire il codice per vedere dove finisce Laurel.
+        gradek_adventurer_loops5_a: Se non riesci a capire che cosa accade dopo, provare ad eseguire il codice per vedere dove va a finire Laurel.
       gradek_adventurer_loops6_authored_hint:
         gradek_adventurer_loops6_a: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and look for a pattern.
       gradek_adventurer_loops7_challenge_authored_hint:
-        gradek_adventurer_loops7_challenge_a: Il programma ti sembra troppo lungo? Prova a mettere due cicli dentro un altro ciclo per renderlo molto piu' breve!
+        gradek_adventurer_loops7_challenge_a: Il programma ti sembra troppo lungo? Prova a mettere due cicli `ripeti` dentro un altro ciclo per renderlo molto più breve!
       gradek_adventurer_loops8_authored_hint:
         gradek_adventurer_loops8_a: If you can't figure out where to put the loops, try writing the code out step-by-step and look for a pattern.
       gradek_adventurer_loops9_authored_hint:
@@ -7137,7 +7147,7 @@ it:
       gradek_artist_loops3_authored_hint:
         artistLoopsK2_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
       gradek_artist_loops4_authored_hint:
-        artistLoopsK3_a: Prova a utilizzare quello che hai imparato sui blocchi di ripetizione per completare questo puzzle!
+        artistLoopsK3_a: Prova a utilizzare quello che hai imparato sui blocchi di ripetizione per completare questo esercizio!
       gradek_artist_loops5_authored_hint:
         gradek_artist_loops5_a: Can't figure out how to make the hill?  Try playing with the blocks a bit to see what each one draws.
       gradek_artist_loops6_authored_hint:

@@ -1,4 +1,4 @@
-"no":
+no:
   devise:
     confirmations:
       confirmed: "E-postadressen din har blitt bekreftet."

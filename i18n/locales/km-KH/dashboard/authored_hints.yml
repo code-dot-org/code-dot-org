@@ -3434,6 +3434,8 @@ km:
           </next>
           </block>
           </xml>
+      CourseF_PlayLab_vars2_authored_hint:
+        Course_4_Play_Lab_Vars_2_a: Make sure to set the number for `dog_speed` to something larger than `cat_speed`.
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           This is the first hint.
@@ -3497,6 +3499,8 @@ km:
         K2.0_sequence_FP_a: If the path you need is unclear, use your finger to trace your way from the bird to the pig.
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make sure blocks are connected under `when run`.
+      MC Agent Freeplay_authored_hint:
+        MC_HOC_2017_13_Cole_a: ព្យាយាមឲជំនួយការសាងសង់ផ្លូវដែកមួយចំនួនដូច្នេះអ្នកអាចស្វែងយល់ពីពិភពលោក!
       MC_HOC_2017_01_Cole_authored_hint:
         MC_HOC_2017_01_Cole_a: ប្រើគ្រាប់ចុចដែលមានសញ្ញាព្រួញដើម្បីអោយតួអង្គទៅកាន់ផ្ទះ។ ទៅឲដល់ការ៉េពណ៌ទឹកក្រូចដើម្បីឈ្នះ។
       MC_HOC_2017_01_RETRY_authored_hint:
@@ -3802,6 +3806,7 @@ km:
         mc_9_a: Are you facing the right way? The `destroy block` mines the block in front of you.
         mc_9_b: The black specks in the wall are coal! Use `destroy block` on these to mine the coal.
         mc_9_c: Use `place torch` to put a torch in the space where you are standing.
+      Valentine_artist_01_authored_hint: [ ]
       aE1_authored_hint: [ ]
       aE2_authored_hint:
         aE2_a: Notice that since the napkins are 20 pixels long, you'll need to jump 20 pixels before you start your next loop.
@@ -5101,6 +5106,13 @@ km:
           Remember you can put more than one block in a <xml><block type="controls_repeat">
           <title name="TIMES">???</title>
           </block></xml> loop.
+      courseA_artist_loops7_forVideo_authored_hint:
+        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
+        courseA_artist_loops7_b: Write the code for one wave first, then repeat that to draw the other two.
+        courseA_artist_loops7_c: |-
+          Remember you can put more than one block in a <xml><block type="controls_repeat">
+          <title name="TIMES">???</title>
+          </block></xml> loop.
       courseA_artist_loops8_authored_hint:
         courseA_artist_loops8_a: Try running the code to see what has been written for you.
         courseA_artist_loops8_b: How would you loop the code that has been given to you?
@@ -5114,6 +5126,10 @@ km:
         courseA_artist_loops_challenge2_a: Blocks like this <xml>  <block type="simple_move_up_left"/></xml> will let your artist move at a slant!
         courseA_artist_loops_challenge2_b: When you finish one bird house, `jump` to the next!
         courseA_artist_loops_challenge2_c: You will need a LOT of blocks inside the loop for this challenge.
+      courseA_artist_loops_challenge2a_authored_hint:
+        courseA_artist_loops_challenge2_a: Blocks like this <xml>  <block type="simple_move_up_left"/></xml> will let your artist move at a slant!
+        courseA_artist_loops_challenge2_b: When you finish one tent, `jump` up twice to get to the next!
+        courseA_artist_loops_challenge2_c: All of your blocks will need to be inside of a loop to finish this puzzle.
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: You can use `jump` blocks to move to other spaces.
       courseA_collector_loops1_authored_hint:
@@ -5589,6 +5605,10 @@ km:
           </next>
           </block>
           </xml>
+      courseB_collector_loops_challenge2a_authored_hint:
+        courseB_collector_loops_challenge2a_a: If something goes wrong, try debugging it. Don't give up!
+        courseB_collector_loops_challenge2a_b: Look at this option for getting through the maze. Do you see a pattern that you can repeat?
+        courseB_collector_loops_challenge2a_c: To collect all of the treasure, you will either need to add two  <xml> <block type="collector_collect"/></xml> blocks inside your loop, or put the block inside of its own `repeat` block.
       courseB_collector_loops_challenge`_authored_hint:
         courseA_collector_loops_challenge2_b: |+
           You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.
@@ -6167,8 +6187,10 @@ km:
         courseC_artist_prog_challenge1_a: You can draw this as a rectangle with a line in the middle or two different squares!
       courseC_artist_prog_challenge2_authored_hint:
         courseC_artist_prog_challenge2_a: "You can put commands inside `repeat` block to loop them over and over. Try it!\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
+      courseC_artist_prog_challenge2a_authored_hint:
+        courseC_artist_prog_challenge2_a: After you draw the first line, try turning left before you draw your second line.
+        courseC_artist_prog_challenge2_b: After you draw the second line, try turning right before you draw your third line.
       courseC_collector_loops_challenge2_authored_hint:
-        courseC_maze_loops_challenge2_a: The original code would work great - if there was only one piece of treasure in each pile!
         courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect` blocks!
       courseC_collector_prog1_authored_hint:
         courseC_collector_prog1_a: When you are standing on a space with treasure, use the <xml><block type="collector_collect"/></xml> block to pick it up.
@@ -6203,7 +6225,8 @@ km:
       courseC_collector_prog_challenge1_authored_hint:
         courseC_collector_prog_challenge1_a: You can use the `collect` command more often to collect the extra treasure.
       courseC_collector_prog_challenge2_authored_hint:
-        courseC_collector_prog_challenge1_a: You can use the `collect` command more often to collect the extra treasure.
+        courseC_collector_prog_challenge1_a: You can use more than one `collect` block to collect more than one time at each piece of treasure.
+        courseC_collector_prog_challenge1_b: Lost your way?  Try this path to solve the puzzle!
       courseC_external_events_authored_hint: [ ]
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
@@ -6285,6 +6308,36 @@ km:
           </block>
           </statement>
           </block></next></block></xml>
+      courseC_harvester_loops_challenge1a_authored_hint:
+        courseC_harvester_loops_challenge1_a: This is too hard without loops!
+        courseC_harvester_loops_challenge1_b: You can repeat `move forward` and `pick corn` as many times as you need, then turn right at each corner.
+        courseC_harvester_loops_challenge1_c: |-
+          The best way to collect the first four corn uses a `repeat` block inside of another `repeat` block. You can use this pattern for the rest of the puzzle too!
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></next></block></xml>
       courseC_harvester_loops_challenge2_authored_hint:
         courseC_harvester_loops_challenge2_a: One way to solve this looks like a zig-zag. Another way looks like a spiral! There are lots of different solutions to a puzzle like this. Be persistent!
         courseC_harvester_loops_challenge2_b: You can repeat `move forward` and `pick lettuce` as many times as you need to, then turn at each corner.
@@ -6296,6 +6349,7 @@ km:
           This spiral pattern can be coded with just 18 blocks!
           
           ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
+      courseC_harvester_loops_forVid_authored_hint: [ ]
       courseC_maze_debugging1_authored_hint:
         courseC_maze_debugging1_a: |-
           - Does everything work after the first step?
@@ -6356,8 +6410,7 @@ km:
         courseC_maze_debugging_challenge1_b: Scrat's path is the shape of a rectangle! He needs to turn the same way each time!
         courseC_maze_debugging_challenge1_c: If you are getting stuck, you can always start over, or remove all the code and find your own way!
       courseC_maze_debugging_challenge2_authored_hint:
-        courseC_maze_debugging_challenge2_a: One way to solve this is to add more steps forward in between the turns.
-        courseC_maze_debugging_challenge2_b: If you are getting stuck, you can always start over or remove all the code and find your own way!
+        courseC_maze_debugging_challenge2_b: If you are getting stuck, try debugging the code.  Where does it go wrong?
         courseC_maze_debugging_challenge2_c: |-
           There are two different paths you can follow just moving forward, and turning four times. If you find a way to use a loop, there may be even more!
           
@@ -6396,6 +6449,9 @@ km:
       courseC_maze_loops_challenge1_authored_hint:
         courseC_maze_loops_challenge1_a: Think about this path as being three different pieces. Each one has a pattern you can repeat.
         courseC_maze_loops_challenge1_b: In between each `repeat` block, you will need to `turn left` or `turn right` to get ready Scrat for the next pattern.
+      courseC_maze_loops_challenge1a_authored_hint:
+        courseC_maze_loops_challenge1_a: Think about this path as being two different pieces. Each one has a pattern you can repeat.
+        courseC_maze_loops_challenge1_b: Can you remember how to use loops to repeat a staircase pattern?
       courseC_maze_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_a: The original code would work great - if there was only one piece of treasure in each pile!
         courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect` blocks!
@@ -6467,22 +6523,22 @@ km:
         courseC_starWars_loops1_c: You will want to `move forward` five times to solve this puzzle.
       courseC_starWars_loops10_authored_hint:
         courseC_starWars_loops10_a: Doesn't this pattern look like a giant set of stair steps? See if you can use what you learned from previous puzzles to get all of the turns.
-        courseC_starWars_loops10_b: "If you want to use less code, you can put one `repeat loop` inside of another!   \nThis is called a **nested loop**."
+        courseC_starWars_loops10_b: "If you want to use less code, you can put one `repeat` loop inside of another!   \nThis is called a **nested loop**."
         courseC_starWars_loops10_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
       courseC_starWars_loops10_predict2_authored_hint: [ ]
       courseC_starWars_loops11_authored_hint: [ ]
       courseC_starWars_loops2_authored_hint:
         courseC_starWars_loops2_a: To repeat code, drag out a `repeat` loop, then put the block you want inside of it.
       courseC_starWars_loops4_authored_hint:
+        courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the turn block will let you change it to  "right".
         courseC_starWars_loops4_a: Use two `repeat` blocks.
         courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command inside of it: `move forward`.'
-        courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the turn block will let you change it to  "right".
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: To move down, you have to turn and then move forward.
         courseC_starWars_loops5_a: The best solution uses a turn, then a single `move forward`, another turn, then a loop.
       courseC_starWars_loops6_authored_hint:
         courseC_starWars_loops6_a: Try writing all of the moves down on a piece of paper and looking for a pattern.
-        courseC_starWars_loops6_b: "If you want to use less code, you can put one `repeat loop` inside of another!   \nThis is called a **nested loop**."
+        courseC_starWars_loops6_b: "If you want to use less code, you can put one `repeat` loop inside of another!   \nThis is called a **nested loop**."
       courseC_starWars_loops7_authored_hint:
         courseC_starWars_loops7_a: This pattern looks harder than it is! Start with a simple stair step. Does that cover all of the scrap metal?
         courseC_starWars_loops7_b: If you are having trouble with this puzzle, try writing all of the moves on a piece of paper and looking for a pattern.
@@ -6529,8 +6585,8 @@ km:
         courseD_artist_binary8_a: The spiral can be confusing sometimes. Isolate each horizontal line in your mind as you create this design.
         courseD_artist_binary8_b: Try running the code first to see what you have to work with.
         courseD_artist_binary8_c: Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you haven't solved the puzzle yet.
-      courseD_artist_binaryFP_authored_hint:
-        courseD_artist_binaryFP_a: Run this code to see what happens!
+      courseD_artist_binaryFP_authored_hint: [ ]
+      courseD_artist_binaryFP8_authored_hint: [ ]
       courseD_artist_binary_challenge2_authored_hint:
         courseD_artist_binary_challenge2_a: There are only few lines wrong in the original program.
       courseD_artist_binary_challenge3_authored_hint:
@@ -6663,15 +6719,10 @@ km:
           This image was made using a single nested loop that repeats a pentagon (with 50px sides) 15 times using a 48 degree turn.
       courseD_artist_nestedLoopsPre1_authored_hint: [ ]
       courseD_artist_nestedLoops_challenge1_authored_hint:
-        courseD_artist_nestedLoops_challenge1_a: Start by making a nested loop to create four octagons. Turn 45 degrees to make the octagon. Jump, then turn 90 degrees after each one.
-        courseD_artist_nestedLoops_challenge1_b: Add code to draw a triangle inside of your nested loop. Use 120 degree turns for your triangle.
-        courseD_artist_nestedLoops_challenge1_c: |-
-          Use a nested loop:
-          - Repeat 4 times
-          - draw an octagon
-          - draw a triangle
-          - jump forward 50 pixels
-          - turn right by 90 degrees
+        courseD_artist_nestedLoops_challenge1_a: Start by changing the color to blue, then create an octagon with 50 pixel sides and 45 degree left turns.
+        courseD_artist_nestedLoops_challenge1_b: Add the code to change the color to green, and make a triangle with 50 pixel sides and 120 degree left turns.
+        courseD_artist_nestedLoops_challenge1_c: After you've drawn both shapes, you will need to jump forward by 50 pixels before you turn right by 90 degrees.
+        courseD_artist_nestedLoops_challenge1_d: Put all of your code inside of a `repeat 4 times` loop to finish it off.
       courseD_artist_nestedLoops_challenge2_authored_hint:
         courseD_artist_nestedLoops_challenge2_a: To draw a regular octagon, the artist needs to turn 45 degrees 8 times.
         courseD_artist_nestedLoops_challenge2_b: To draw a square, the artist needs to turn 90 degrees 4 times.
@@ -6763,14 +6814,14 @@ km:
         courseD_bee_conditionals4_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals5_authored_hint:
         courseD_bee_conditionals5_hintVid1: Need help getting started?  Watch the video!
-        courseD_bee_conditionals5_a: Think of every side of the rectangular path as a path by itself. Set up a nested loop with a `repeat` block on the outside and a `while there is a path ahead` loop on the inside. How many paths does the bee need to buzz down if the bee needs to buzz every side with a flower?
+        courseD_bee_conditionals5_a: Think of every side of the rectangular path as a path by itself. Set up a nested loop with a `repeat` block on the outside and a `while there is a path ahead` loop on the inside. How many paths does the bee need to buzz down if the bee needs to buzz down every side with a flower?
         courseD_bee_conditionals5_c: There are 3 sides of the rectangle with flowers, so the code needs to `repeat 3 times`. In every repeat, the bee will need to continue along the path, `while there is a path ahead`. To continue down the path, the bee will need to `move forward`. While on the path, the bee needs to check for a flower. `if there is a flower`, the bee should `get nectar`.
         courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block you will need to move forward and check for a flower. How do you check if there is a flower? What do you do if there is a flower?
         courseD_bee_conditionals5_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals6_authored_hint:
         courseD_bee_conditionals6_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for honeycomb beneath each cloud.
-        courseD_bee_conditionals6_b: In this case, you do not need to check for nectar under the clouds.
+        courseD_bee_conditionals6_b: In this case, you do not need to check for flowers under the clouds.
         courseD_bee_conditionals6_c: Is there a loop you can use to make your code simpler?
         courseD_bee_conditionals6_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals7_authored_hint:
@@ -6883,6 +6934,16 @@ km:
           * Repeat 2 times:
           * Move forward
           * Make 3 honey
+          * Move backward
+      courseD_bee_debugging_challenge1a_authored_hint:
+        courseD_bee_debugging_challenge1_a: Why does the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?
+        courseD_bee_debugging_challenge1_b: 'To solve this puzzle, have the bee follow the same pattern to make honey that he does when collecting nectar. '
+        courseD_bee_debugging_challenge1_c: |-
+          After the bee makes it to the bottom row, have it repeat these commands:
+          
+          * Repeat 2 times:
+          * Move forward
+          * Make honey
           * Move backward
       courseD_bee_debugging_challenge2_authored_hint:
         courseD_bee_debugging_challenge1_a: Why the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?
@@ -7195,6 +7256,9 @@ km:
           </next>
           </block>
           </xml>
+      courseD_collector_nested_loops_challenge2a_authored_hint:
+        courseD_collector_nested_loops_challenge2a_a: Don't forget that you can `repeat` a single command or a longer pattern. You can even `repeat` a `repeat` block!
+        courseD_collector_nested_loops_challenge2a_b: Can you figure out how to get all four gems without using any more blocks than it takes to get two?
       courseD_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
           Instead of using four `move forward` blocks for each side, try putting one `move forward` block inside of a `repeat` loop, like this:
@@ -7374,7 +7438,9 @@ km:
       courseD_harvester_nested_loops_challenge1-broken_authored_hint:
         courseD_harvester_nested_loops_challenge1_a: You have probably already used a loop to create a zig-zag pattern. If you remember that algorithm, you can make a few additions to it here.
       courseD_harvester_nested_loops_challenge1_authored_hint:
-        courseD_harvester_nested_loops_challenge1_a: You have probably already used a loop to create a zig-zag pattern. If you remember that algorithm, you can make a few additions to it here.
+        courseD_harvester_nested_loops_challenge1_a: 'Try following this path to reach all of the corn! '
+        courseD_harvester_nested_loops_challenge1_b: To collect more than one piece of corn, you need to use `pick corn` more than one time.
+        courseD_harvester_nested_loops_challenge1_c: You will need to put a small loop inside of your main loop to solve this puzzle!
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: Don't forget that you can `repeat` a single command or a longer pattern. You can even `repeat` a `repeat` block!
         courseD_bee_nested_loops_challenge1_b: To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the *entire* cave!
@@ -7490,7 +7556,6 @@ km:
       courseD_playLab_cond3_authored_hint:
         courseD_playLab_cond3_a: You will need to add two blocks to your `repeat forever` loop.  One will choose a random emotion for the dragon (actor 2) and the other will wait 1 second before going through the loop again.
       courseD_playLab_cond3a_authored_hint:
-        courseD_playLab_cond3_b: What do you think `set every masked ninja to chase actor` does?
         courseD_playLab_cond3_c: "- `If` the dragon is happy \n   - `score point`\n   - `score point`  \n   \n   \n \n- `Else` `score point`"
       courseD_playLab_cond3b_authored_hint:
         courseD_playLab_cond3b_a: You will need to add blocks to your `repeat forever` loop to make the dragon continue to move up and down
@@ -8824,7 +8889,6 @@ km:
           What do you have to do to the counter at each flower to equal the amount of nectar you need to collect?
         courseF_bee_for9_c: It looks like you will need to turn the bee at the beginning of each loop iteration if you want to solve the puzzle.
         courseF_bee_for9_b: "**Remember:** If your loop is counting up, the increment is added to your `counter` variable each time through."
-        courseF_bee_for9_d: This is very similar to the other stair step puzzle earlier in the stage, but this time you’re counting down!
       courseF_bee_for_challenge1_authored_hint: [ ]
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: "Take a look at this option for movement:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
