@@ -211,10 +211,7 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "edit_code": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
@@ -225,15 +222,30 @@
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="when_run"/>
-        <block type="variables_set" inline="false">
-          <title name="VAR">i</title>
-          <value name="VALUE">
-            <block type="gamelab_makeNewSprite" inline="true">
-              <title name="ANIMATION">dog</title>
-            </block>
-          </value>
-        </block>
+        <category name="Start">
+          <block type="when_run"/>
+        </category>
+        <category name="Sprites">
+          <block type="variables_set" inline="false">
+            <title name="VAR">sprite</title>
+            <value name="VALUE">
+              <block type="gamelab_makeNewSprite" inline="true">
+                <title name="ANIMATION">dog</title>
+                <value name="X">
+                  <block type="math_number">
+                    <title name="NUM">25</title>
+                  </block>
+                </value>
+                <value name="Y">
+                  <block type="math_number">
+                    <title name="NUM">25</title>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Variables" custom="VARIABLE"/>
       </xml>
     </toolbox_blocks>
   </blocks>
