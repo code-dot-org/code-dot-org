@@ -3,7 +3,7 @@ import karelLevels from './karelLevels';
 import wordsearchLevels from './wordsearchLevels';
 import reqBlocks from './requiredBlocks';
 import blockUtils from '../block_utils';
-import utils from '../utils';
+import * as utils from '../utils';
 import mazeMsg from './locale';
 
 //TODO: Fix hacky level-number-dependent toolbox.
