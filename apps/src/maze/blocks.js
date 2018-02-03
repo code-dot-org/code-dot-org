@@ -26,7 +26,7 @@ import msg from './locale';
 import commonMsg from '@cdo/locale';
 import codegen from '../lib/tools/jsinterpreter/codegen';
 import blockUtils from '../block_utils';
-import mazeUtils from './mazeUtils';
+import * as mazeUtils from './mazeUtils';
 
 // Install extensions to Blockly's language and JavaScript generator.
 export function install(blockly, blockInstallOptions) {

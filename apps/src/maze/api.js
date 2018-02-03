@@ -5,7 +5,7 @@ import {
   SquareType,
   constrainDirection4,
 } from './tiles';
-import utils from '../utils';
+import * as utils from '../utils';
 
 /**
  * Only call API functions if we haven't yet terminated execution

@@ -1,4 +1,4 @@
-import requiredBlockUtils from '../required_block_utils';
+import * as requiredBlockUtils from '../required_block_utils';
 
 var MOVE_FORWARD = {'test': 'moveForward', 'type': 'maze_moveForward'};
 var TURN_LEFT = {'test': 'turnLeft', 'type': 'maze_turn', 'titles': {'DIR': 'turnLeft'}};
