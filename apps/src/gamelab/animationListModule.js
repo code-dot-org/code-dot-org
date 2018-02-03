@@ -565,10 +565,7 @@ function loadAnimationFromSource(key, callback) {
         console.log('Failed to load animation ' + key, err);
         // Brute-force recovery step: Remove the animation from our redux state;
         // it looks like it's already gone from the server.
-        dispatch({
-          type: DELETE_ANIMATION,
-          key
-        });
+        dispatch(reportError(`Sorry, we couldn't load animation "${state.propsByKey[key].name}".`, "anim_load", key));
         return;
       }
 
