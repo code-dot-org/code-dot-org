@@ -108,9 +108,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
         "2 trimesters",
         "Full year",
         "I'm not sure",
-      ],
-      photo_release: [YES],
-      liability_waiver: [YES],
+      ]
     }.freeze
   end
 
