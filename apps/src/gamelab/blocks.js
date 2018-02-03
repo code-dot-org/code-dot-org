@@ -7,16 +7,21 @@ const CATEGORIES = {
   },
 };
 
+
 const SPRITES = [
-  ['a dog', 'dog']
+  ['a dog', '"dog"']
 ];
 
 export default {
   install(blockly, blockInstallOptions) {
+    const {
+      ORDER_COMMA,
+      ORDER_FUNCTION_CALL,
+    } = Blockly.JavaScript;
     const generator = blockly.Generator.get('JavaScript');
 
-    const createJsWrapperBlock = (category, functionName, blockText, args, returnType) => {
-      const blockName = `gamelab_${functionName}`;
+    const createJsWrapperBlock = (category, func, blockText, args, returnType) => {
+      const blockName = `gamelab_${func}`;
       blockly.Blocks[blockName] = {
         helpUrl: '',
         init: function () {
@@ -41,13 +46,17 @@ export default {
       };
 
       generator[blockName] = function () {
-        const values = args.map(arg => this.getTitleValue(arg.name));
+        const values = args.map(arg => {
+          if (arg.options) {
+            return this.getTitleValue(arg.name);
+          } else {
+            return Blockly.JavaScript.valueToCode(this, arg.name, ORDER_COMMA);
+          }
+        });
         if (returnType !== undefined) {
-          // TODO(ram): find a blockly constant to use in place of '0',
-          // I'm pretty sure it's called "ATOMIC" or something
-          return [`${functionName}(${values.join(', ')});`, 0];
+          return [`${func}(${values.join(', ')});`, ORDER_FUNCTION_CALL];
         } else {
-          return `${functionName}(${values.join(', ')});`;
+          return `${func}(${values.join(', ')});`;
         }
       };
     };
@@ -55,6 +64,7 @@ export default {
     createJsWrapperBlock(
       SPRITE_CATEGORY,
       'makeNewSprite',
+       // TODO(ram): should be "Make a new {ANIMATION} sprite", coordinates TBD
       'Make a new sprite',
       [
         { name: 'ANIMATION', type: 'string', options: SPRITES},
