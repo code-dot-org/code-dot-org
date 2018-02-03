@@ -228,8 +228,8 @@ module.exports = class Maze {
    */
   init(config) {
     // replace studioApp() methods with our own
-    studioApp().runButtonClick = this.runButtonClick.bind(this);
-    studioApp().reset = this.reset.bind(this);
+    studioApp().runButtonClick = this.runButtonClick;
+    studioApp().reset = this.reset;
 
     this.skin = config.skin;
     this.level = config.level;
@@ -319,16 +319,16 @@ module.exports = class Maze {
       this.createAnimations(svg);
 
       var stepButton = document.getElementById('stepButton');
-      dom.addClickTouchEvent(stepButton, this.stepButtonClick.bind(this));
+      dom.addClickTouchEvent(stepButton, this.stepButtonClick);
 
       // base's studioApp().resetButtonClick will be called first
       var resetButton = document.getElementById('resetButton');
-      dom.addClickTouchEvent(resetButton, this.resetButtonClick.bind(this));
+      dom.addClickTouchEvent(resetButton, this.resetButtonClick);
 
       var finishButton = document.getElementById('finishButton');
       if (finishButton) {
         finishButton.setAttribute('disabled', 'disabled');
-        dom.addClickTouchEvent(finishButton, this.finishButtonClick.bind(this));
+        dom.addClickTouchEvent(finishButton, this.finishButtonClick);
       }
 
       // Listen for hint events that draw a path in the game.
@@ -394,20 +394,20 @@ module.exports = class Maze {
    */
   // XXX This is the only method used by the templates!
   // TODO confirm that the above XXX comment is accurate
-  runButtonClick() {
+  runButtonClick = () => {
     var stepButton = document.getElementById('stepButton');
     if (stepButton) {
       stepButton.setAttribute('disabled', '');
     }
     this.execute(false);
-  }
+  };
 
   /**
    * Handle a click on the step button.  If we're already animating, we should
    * perform a single step.  Otherwise, we call beginAttempt which will do
    * some initial setup, and then perform the first step.
    */
-  stepButtonClick() {
+  stepButtonClick = () => {
     var stepButton = document.getElementById('stepButton');
     stepButton.setAttribute('disabled', '');
 
@@ -416,18 +416,18 @@ module.exports = class Maze {
     } else {
       this.execute(true);
     }
-  }
+  };
 
   /**
    * App specific reset button click logic.  studioApp().resetButtonClick will be
    * called first.
    */
-  resetButtonClick() {
+  resetButtonClick = () => {
     var stepButton = document.getElementById('stepButton');
     stepButton.removeAttribute('disabled');
 
     this.reenableCachedBlockStates();
-  }
+  };
 
   /**
    * Handle a click on the finish button; stop animating if we are, and display
@@ -436,11 +436,11 @@ module.exports = class Maze {
    * Currently only used by Collector levels to allow users to continue iterating
    * on a pass-but-not-perfect solution, but still finish whenever they want.
    */
-  finishButtonClick() {
+  finishButtonClick = () => {
     timeoutList.clearTimeouts();
     this.animating_ = false;
     this.displayFeedback(true);
-  }
+  };
 
   /**
    * Calculate the Y offset within the sheet
@@ -525,7 +525,7 @@ module.exports = class Maze {
    * Reset the maze to the start position and kill any pending animation tasks.
    * @param {boolean} first True if an opening animation is to be played.
    */
-  reset(first) {
+  reset = (first) => {
     this.subtype.reset();
 
     var i;
@@ -618,7 +618,7 @@ module.exports = class Maze {
     } else {
       this.resetTiles();
     }
-  }
+  };
 
   resetTiles() {
     // Reset the tiles
@@ -694,12 +694,12 @@ module.exports = class Maze {
    * Function to be called when the service report call is complete
    * @param {MilestoneResponse} response - JSON response (if available)
    */
-  onReportComplete(response) {
+  onReportComplete = (response) => {
     this.response = response;
     this.waitingForReport = false;
     studioApp().onReportComplete(response);
     this.displayFeedback();
-  }
+  };
 
   /**
    * Perform some basic initialization/resetting operations before
