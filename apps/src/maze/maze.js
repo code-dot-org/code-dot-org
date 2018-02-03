@@ -75,6 +75,16 @@ export default class Maze {
     };
   }
 
+  /**
+   * Used by appMain to register reducers
+   * TODO elijah should this be a static method?
+   */
+  getAppReducers() {
+    return {
+      maze: mazeReducer
+    };
+  }
+
   loadLevel() {
     // Load maps.
     //
@@ -710,11 +720,38 @@ export default class Maze {
     this.response = null;
   }
 
+  static isPreAnimationFailure(testResult) {
+    return testResult === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD ||
+      testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
+      testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL ||
+      testResult === TestResults.EXAMPLE_FAILED ||
+      testResult === TestResults.EMPTY_BLOCK_FAIL ||
+      testResult === TestResults.EMPTY_FUNCTION_NAME;
+  }
+
+  /**
+   * TODO elijah should this be an instance method?
+   */
+  static beginAttempt() {
+    var runButton = document.getElementById('runButton');
+    var resetButton = document.getElementById('resetButton');
+    // Ensure that Reset button is at least as wide as Run button.
+    if (!resetButton.style.minWidth) {
+      resetButton.style.minWidth = runButton.offsetWidth + 'px';
+    }
+    studioApp().toggleRunReset('reset');
+    if (studioApp().isUsingBlockly()) {
+      Blockly.mainBlockSpace.traceOn(true);
+    }
+    studioApp().reset(false);
+    studioApp().attempts++;
+  }
+
   /**
    * Execute the user's code.  Heaven help us...
    */
   execute(stepMode) {
-    beginAttempt();
+    Maze.beginAttempt();
     this.prepareForExecution();
 
     var code = '';
@@ -1426,6 +1463,21 @@ export default class Maze {
   }
 
   /**
+   * TODO elijah should this be an instance methods?
+   */
+  static setPegmanTransparent() {
+    var pegmanFadeoutAnimation = document.getElementById('pegmanFadeoutAnimation');
+    var pegmanIcon = document.getElementById('pegman');
+    if (pegmanIcon) {
+      pegmanIcon.setAttribute('opacity', 0);
+    }
+    if (pegmanFadeoutAnimation && pegmanFadeoutAnimation.beginElement) {
+      // IE doesn't support beginElement, so check for it.
+      pegmanFadeoutAnimation.beginElement();
+    }
+  }
+
+  /**
    * Schedule the animations and sound for a dance.
    * @param {boolean} victoryDance This is a victory dance after completing the
    *   puzzle (vs. dancing on load).
@@ -1481,7 +1533,7 @@ export default class Maze {
       }
 
       if (this.subtype.isWordSearch()) {
-        setPegmanTransparent();
+        Maze.setPegmanTransparent();
       }
     }, danceSpeed * 5);
   }
@@ -1623,48 +1675,5 @@ export default class Maze {
     }
 
     this.subtype.onExecutionFinish();
-  }
-}
-
-Maze.getAppReducers = function () {
-  return {
-    maze: mazeReducer
-  };
-};
-
-function beginAttempt() {
-  var runButton = document.getElementById('runButton');
-  var resetButton = document.getElementById('resetButton');
-  // Ensure that Reset button is at least as wide as Run button.
-  if (!resetButton.style.minWidth) {
-    resetButton.style.minWidth = runButton.offsetWidth + 'px';
-  }
-  studioApp().toggleRunReset('reset');
-  if (studioApp().isUsingBlockly()) {
-    Blockly.mainBlockSpace.traceOn(true);
-  }
-  studioApp().reset(false);
-  studioApp().attempts++;
-}
-
-Maze.isPreAnimationFailure = function (testResult) {
-  return testResult === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD ||
-    testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
-    testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL ||
-    testResult === TestResults.EXAMPLE_FAILED ||
-    testResult === TestResults.EMPTY_BLOCK_FAIL ||
-    testResult === TestResults.EMPTY_FUNCTION_NAME;
-};
-
-
-function setPegmanTransparent() {
-  var pegmanFadeoutAnimation = document.getElementById('pegmanFadeoutAnimation');
-  var pegmanIcon = document.getElementById('pegman');
-  if (pegmanIcon) {
-    pegmanIcon.setAttribute('opacity', 0);
-  }
-  if (pegmanFadeoutAnimation && pegmanFadeoutAnimation.beginElement) {
-    // IE doesn't support beginElement, so check for it.
-    pegmanFadeoutAnimation.beginElement();
   }
 }
