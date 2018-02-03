@@ -173,7 +173,7 @@ module Pd::Application
       )
     end
 
-    test 'full answers' do
+    test 'full answers adds additional text fields' do
       application = ApplicationBase.new
       application.stubs(additional_text_fields:
         [
@@ -188,12 +188,9 @@ module Pd::Application
         string_question_with_extra_other: 'my other string answer',
         array_question_with_extra: ['Other:'],
         array_question_with_extra_other: 'my other array answer',
-        filtered_question: 'to be removed'
       }
 
       application.stubs(sanitize_form_data_hash: form_data)
-      ApplicationBase.stubs(filtered_labels: form_data.except(:filtered_question))
-
       expected_full_answers = {
         regular_string_question: 'regular string answer',
         regular_array_question: ['regular array answer'],
@@ -202,6 +199,34 @@ module Pd::Application
       }
 
       assert_equal expected_full_answers, application.full_answers
+    end
+
+    test 'full answers with no filter returns all answers' do
+      application = ApplicationBase.new
+      form_data = {
+        question1: 'answer1',
+        question2: 'answer2'
+      }
+      application.stubs(sanitize_form_data_hash: form_data)
+      assert_equal form_data, application.full_answers
+    end
+
+    test 'full answers removes filtered questions' do
+      application = ApplicationBase.new
+      form_data = {
+        question1: 'answer1',
+        filtered_question: 'to be removed',
+        question2: 'answer2'
+      }
+      application.stubs(sanitize_form_data_hash: form_data)
+      ApplicationBase.stubs(:filtered_labels).returns([:question1, :question2])
+      assert_equal(
+        {
+          question1: 'answer1',
+          question2: 'answer2'
+        },
+        application.full_answers
+      )
     end
   end
 end

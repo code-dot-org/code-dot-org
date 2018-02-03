@@ -221,22 +221,28 @@ module Pd::Application
       answer
     end
 
+    # Override in derived classes to filter which answers show up in #full_answers based on course
+    # @returns [nil,Array]
+    #  - nil: don't filter (default)
+    #  - array: label keys (keys in sanitize_form_data_hash) to keep
     def self.filtered_labels(course)
-      raise 'Abstract method must be overridden in base class'
+      nil
     end
 
     # Include additional text for all the multi-select fields that have the option
     def full_answers
-      sanitize_form_data_hash.tap do |hash|
-        additional_text_fields.each do |field_name, option, additional_text_field_name|
-          next unless hash.key? field_name
+      hash = sanitize_form_data_hash
+      additional_text_fields.each do |field_name, option, additional_text_field_name|
+        next unless hash.key? field_name
 
-          option ||= OTHER_WITH_TEXT
-          additional_text_field_name ||= "#{field_name}_other".to_sym
-          hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
-          hash.delete additional_text_field_name
-        end
-      end.slice(*self.class.filtered_labels(course).keys)
+        option ||= OTHER_WITH_TEXT
+        additional_text_field_name ||= "#{field_name}_other".to_sym
+        hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
+        hash.delete additional_text_field_name
+      end
+
+      filtered_labels = self.class.filtered_labels(course)
+      filtered_labels ? hash.slice(*filtered_labels) : hash
     end
 
     # Camelized (js-standard) format of the full_answers. The keys here will match the raw keys in form_data
