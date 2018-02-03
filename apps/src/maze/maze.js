@@ -128,8 +128,11 @@ export default class Maze {
       this.map = MazeMap.parseFromOldValues(this.level.map, this.level.initialDirt, this.subtype.getCellClass());
     }
 
+    // this could possibly be eliminated in favor of just always referencing
+    // this.level.startDirection
     this.startDirection = this.level.startDirection;
 
+    // this could probably be moved to the constructor
     this.animating_ = false;
 
     // Override scalars.
@@ -165,7 +168,6 @@ export default class Maze {
         numColPegman: this.skin.idlePegmanCol,
         numRowPegman: this.skin.idlePegmanRow
       });
-
 
       if (this.skin.idlePegmanCol > 1 || this.skin.idlePegmanRow > 1) {
         // our idle is a sprite sheet instead of a gif. schedule cycling through
