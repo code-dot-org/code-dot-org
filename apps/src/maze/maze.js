@@ -982,8 +982,6 @@ module.exports = class Maze {
    * Perform our animations, either all of them or those of a single step
    */
   scheduleAnimations(singleStep) {
-    var stepButton = document.getElementById('stepButton');
-
     timeoutList.clearTimeouts();
 
     var timePerAction = this.stepSpeed * this.scale.stepSpeed *
@@ -991,58 +989,63 @@ module.exports = class Maze {
     // get a flat list of actions we want to schedule
     var actions = this.executionInfo.getActions(singleStep);
 
-    scheduleSingleAnimation(0);
+    this.scheduleSingleAnimation(0, actions, singleStep, timePerAction);
+  }
 
-    // schedule animations in sequence
-    // The reason we do this recursively instead of iteratively is that we want to
-    // ensure that we finish scheduling action1 before starting to schedule
-    // action2. Otherwise we get into trouble when stepSpeed is 0.
-    const scheduleSingleAnimation = (index) => {
-      if (index >= actions.length) {
-        finishAnimations();
-        return;
-      }
+  /**
+   * schedule animations in sequence
+   * The reason we do this recursively instead of iteratively is that we want to
+   * ensure that we finish scheduling action1 before starting to schedule
+   * action2. Otherwise we get into trouble when stepSpeed is 0.
+   */
+  scheduleSingleAnimation(index, actions, singleStep, timePerAction) {
+    if (index >= actions.length) {
+      this.finishAnimations(singleStep);
+      return;
+    }
 
-      this.animateAction(actions[index], singleStep, timePerAction);
+    this.animateAction(actions[index], singleStep, timePerAction);
 
-      var command = actions[index] && actions[index].command;
-      var timeModifier = (this.skin.actionSpeedScale && this.skin.actionSpeedScale[command]) || 1;
-      var timeForThisAction = Math.round(timePerAction * timeModifier);
+    var command = actions[index] && actions[index].command;
+    var timeModifier = (this.skin.actionSpeedScale && this.skin.actionSpeedScale[command]) || 1;
+    var timeForThisAction = Math.round(timePerAction * timeModifier);
 
-      timeoutList.setTimeout(function () {
-        scheduleSingleAnimation(index + 1);
-      }, timeForThisAction);
-    };
+    timeoutList.setTimeout(() => {
+      this.scheduleSingleAnimation(index + 1, actions, singleStep, timePerAction);
+    }, timeForThisAction);
+  }
 
-    // Once animations are complete, we want to reenable the step button if we
-    // have steps left, otherwise we're done with this execution.
-    const finishAnimations = () => {
-      var stepsRemaining = this.executionInfo.stepsRemaining();
+  /**
+   * Once animations are complete, we want to reenable the step button if we
+   * have steps left, otherwise we're done with this execution.
+   */
+  finishAnimations(singleStep) {
+    var stepsRemaining = this.executionInfo.stepsRemaining();
+    var stepButton = document.getElementById('stepButton');
 
-      // allow time for  additional pause if we're completely done
-      var waitTime = (stepsRemaining ? 0 : 1000);
+    // allow time for  additional pause if we're completely done
+    var waitTime = (stepsRemaining ? 0 : 1000);
 
-      // run after all animations
-      timeoutList.setTimeout(() => {
-        if (stepsRemaining) {
-          stepButton.removeAttribute('disabled');
-        } else {
-          this.animating_ = false;
-          if (studioApp().isUsingBlockly()) {
-            // reenable toolbox
-            Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-          }
-          // If stepping and we failed, we want to retain highlighting until
-          // clicking reset.  Otherwise we can clear highlighting/disabled
-          // blocks now
-          if (!singleStep || this.result === ResultType.SUCCESS) {
-            this.reenableCachedBlockStates();
-            studioApp().clearHighlighting();
-          }
-          this.displayFeedback();
+    // run after all animations
+    timeoutList.setTimeout(() => {
+      if (stepsRemaining) {
+        stepButton.removeAttribute('disabled');
+      } else {
+        this.animating_ = false;
+        if (studioApp().isUsingBlockly()) {
+          // reenable toolbox
+          Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
         }
-      }, waitTime);
-    };
+        // If stepping and we failed, we want to retain highlighting until
+        // clicking reset.  Otherwise we can clear highlighting/disabled
+        // blocks now
+        if (!singleStep || this.result === ResultType.SUCCESS) {
+          this.reenableCachedBlockStates();
+          studioApp().clearHighlighting();
+        }
+        this.displayFeedback();
+      }
+    }, waitTime);
   }
 
   /**
