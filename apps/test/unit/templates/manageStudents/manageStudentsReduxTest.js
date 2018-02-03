@@ -7,6 +7,8 @@ import manageStudents, {
   startEditingStudent,
   cancelEditingStudent,
   removeStudent,
+  setSecretImage,
+  setSecretWords,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const studentEmailData = {
@@ -44,6 +46,48 @@ const studentEmailData = {
       age: 9,
       gender: 'm',
       loginType: 'email',
+      secretWords: 'wizard',
+      secretPictureName: 'wizard',
+      secretPicturePath: '/wizard.jpg',
+      sectionId: 53,
+    },
+};
+
+const studentPictureData = {
+  1: {
+      id: 1,
+      name: 'StudentNameA',
+      username: 'student1',
+      userType: 'student',
+      age: 17,
+      gender: 'f',
+      loginType: 'picture',
+      secretWords: 'wizard',
+      secretPictureName: 'wizard',
+      secretPicturePath: '/wizard.jpg',
+      sectionId: 53,
+    },
+  2: {
+      id: 2,
+      name: 'StudentNameC',
+      username: 'student2',
+      userType: 'student',
+      age: 14,
+      gender: 'm',
+      loginType: 'picture',
+      secretWords: 'wizard',
+      secretPictureName: 'wizard',
+      secretPicturePath: '/wizard.jpg',
+      sectionId: 53,
+    },
+  3: {
+      id: 3,
+      name: 'StudentNameD',
+      username: 'student3',
+      userType: 'student',
+      age: 9,
+      gender: 'm',
+      loginType: 'picture',
       secretWords: 'wizard',
       secretPictureName: 'wizard',
       secretPicturePath: '/wizard.jpg',
@@ -119,6 +163,30 @@ describe('manageStudentsRedux', () => {
       assert.equal(stateAfterDeleting.studentData[1], undefined);
       assert.deepEqual(stateAfterDeleting.studentData[2], studentEmailData[2]);
       assert.deepEqual(stateAfterDeleting.studentData[3], studentEmailData[3]);
+    });
+  });
+
+  describe('setSecretImage', () => {
+    it('sets an image for a student given id', () => {
+      const setStudentsAction = setStudents(studentPictureData);
+      const nextState = manageStudents(initialState, setStudentsAction);
+      const setSecretImageAction = setSecretImage(1, '/cat.jpg');
+      const stateAfterUpdating = manageStudents(nextState, setSecretImageAction);
+      assert.equal(stateAfterUpdating.studentData[1].secretPicturePath, '/cat.jpg');
+      assert.deepEqual(stateAfterUpdating.studentData[2].secretPicturePath, studentEmailData[2].secretPicturePath);
+      assert.deepEqual(stateAfterUpdating.studentData[3].secretPicturePath, studentEmailData[3].secretPicturePath);
+    });
+  });
+
+  describe('setSecretWords', () => {
+    it('sets words for a student given id', () => {
+      const setStudentsAction = setStudents(studentPictureData);
+      const nextState = manageStudents(initialState, setStudentsAction);
+      const setSecretWordsAction = setSecretWords(1, 'cats');
+      const stateAfterUpdating = manageStudents(nextState, setSecretWordsAction);
+      assert.equal(stateAfterUpdating.studentData[1].secretWords, 'cats');
+      assert.deepEqual(stateAfterUpdating.studentData[2].secretWords, studentEmailData[2].secretWords);
+      assert.deepEqual(stateAfterUpdating.studentData[3].secretWords, studentEmailData[3].secretWords);
     });
   });
 });

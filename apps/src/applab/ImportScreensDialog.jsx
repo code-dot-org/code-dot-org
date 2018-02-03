@@ -92,10 +92,11 @@ const styles = {
 class AssetListItemUnwrapped extends React.Component {
   static propTypes = {
     asset: importableAssetShape,
+    projectId: PropTypes.string,
   };
 
   render() {
-    const {asset} = this.props;
+    const {asset, projectId} = this.props;
     return (
       <div style={styles.assetListItem}>
         <AssetThumbnail
@@ -103,6 +104,7 @@ class AssetListItemUnwrapped extends React.Component {
           name={asset.filename}
           iconStyle={styles.assetThumbnailIcon}
           style={styles.assetThumbnail}
+          projectId={projectId}
         />
         <div style={[styles.assetListItemText, styles.subtext]}>
           {asset.filename}
@@ -235,7 +237,9 @@ export class ImportScreensDialog extends React.Component {
              itemPropName="asset"
              disabled={this.props.isImporting}
            >
-             <AssetListItem/>
+             <AssetListItem
+               projectId={this.props.project.id}
+             />
            </MultiCheckboxSelector>}
           {nonImportableScreens.length > 0 &&
            <div style={styles.section}>

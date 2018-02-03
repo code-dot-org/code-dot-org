@@ -27,9 +27,8 @@ const sampleMapB = [
 export default storybook => {
   storybook
     .storiesOf('CompletableLevelThumbnail', module)
-    .addWithInfo(
+    .add(
       'Overview',
-      'This is the CompletableLevelThumbnail component.',
       () => (
         <div>
           <CompletableLevelThumbnail size={200} completed={true}>
