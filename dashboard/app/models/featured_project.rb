@@ -13,4 +13,7 @@
 #
 
 class FeaturedProject < ApplicationRecord
+  def featured?
+    !featured_at.nil? && unfeatured_at.nil?
+  end
 end
