@@ -273,8 +273,9 @@ GameLab.prototype.init = function (config) {
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
 
-  var showDebugButtons = (!config.hideSource && !config.level.debuggerDisabled);
-  var showDebugConsole = !config.hideSource;
+  var showDebugButtons = config.editCode &&
+    (!config.hideSource && !config.level.debuggerDisabled);
+  var showDebugConsole = config.editCode && !config.hideSource;
 
   if (showDebugButtons || showDebugConsole) {
     getStore().dispatch(jsDebugger.initialize({
