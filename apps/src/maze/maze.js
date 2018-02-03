@@ -125,8 +125,11 @@ module.exports = class Maze {
       this.map = MazeMap.parseFromOldValues(this.level.map, this.level.initialDirt, this.subtype.getCellClass());
     }
 
+    // this could possibly be eliminated in favor of just always referencing
+    // this.level.startDirection
     this.startDirection = this.level.startDirection;
 
+    // this could probably be moved to the constructor
     this.animating_ = false;
 
     // Override scalars.
