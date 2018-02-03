@@ -58,18 +58,44 @@ const tiles = require('./tiles');
 
 module.exports = class Maze {
   constructor() {
-    this.level;
-    this.skin;
-    this.stepSpeed = 100;
-
-    //TODO: Make configurable.
-    studioApp().setCheckForEmptyBlocks(true);
-
-    // Default Scalings
     this.scale = {
       snapRadius: 1,
       stepSpeed: 5
     };
+
+    this.stepSpeed = 100;
+
+    this.cachedBlockStates = [];
+
+    this.level;
+    this.skin;
+    this.startDirection;
+
+    this.map;
+    this.subtype;
+    this.executionInfo;
+
+    this.animating_;
+    this.response;
+    this.result;
+    this.testResults;
+    this.waitingForReport;
+
+    this.pegmanD;
+    this.pegmanX;
+    this.pegmanY;
+
+    this.MAZE_HEIGHT;
+    this.MAZE_WIDTH;
+    this.PATH_WIDTH;
+    this.PEGMAN_HEIGHT;
+    this.PEGMAN_WIDTH;
+    this.PEGMAN_X_OFFSET;
+    this.PEGMAN_Y_OFFSET;
+    this.SQUARE_SIZE;
+
+    //TODO: Make configurable.
+    studioApp().setCheckForEmptyBlocks(true);
   }
 
   /**
@@ -252,8 +278,6 @@ module.exports = class Maze {
     }
 
     this._loadLevel();
-
-    this.cachedBlockStates = [];
 
     config.loadAudio = () => {
       studioApp().loadAudio(this.skin.winSound, 'win');
