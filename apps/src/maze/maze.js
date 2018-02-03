@@ -49,7 +49,7 @@ import * as api from './api';
 import drawMap, { displayPegman, getPegmanYForRow } from './drawMap';
 import dropletConfig from './dropletConfig';
 import mazeReducer from './redux';
-import { getSubtypeForSkin } from './mazeUtils';
+import { getSubtypeForSkin, rotate } from './mazeUtils';
 import {
   Direction,
   SquareType,
@@ -1624,14 +1624,6 @@ export default class Maze {
 
     this.subtype.onExecutionFinish();
   }
-}
-
-/**
- * Rotate the given 2d array.
- * @param data
- */
-function rotate(data) {
-  return data[0].map((x, i) => data.map(x => x[data.length - i - 1]));
 }
 
 Maze.getAppReducers = function () {
