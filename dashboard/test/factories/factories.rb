@@ -406,8 +406,8 @@ FactoryGirl.define do
     sequence(:name) {|n| "bogus-script-#{n}"}
   end
 
-  factory :featured_project do |featured_project|
-    featured_project.storage_app_id {456}
+  factory :featured_project do
+    storage_app_id {456}
   end
 
   factory :script_level do
