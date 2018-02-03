@@ -404,7 +404,7 @@ describe('dropletUtils', () => {
           'buttonL',
           'buttonR',
         ],
-        autocompleteFunctionsWithParens: true,
+        autocompleteFunctionsWithSemicolon: true,
       };
     });
 
