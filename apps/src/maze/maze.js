@@ -226,7 +226,7 @@ module.exports = class Maze {
 
     if (this.level.map && this.level.shapeShift) {
       for (let i = 1, max = Math.random() * 4; i < max; i++) {
-        this.level.map = rotate(this.level.map);
+        this.level.map = utils.rotate(this.level.map);
         this.level.startDirection = (this.level.startDirection + 3) % 4;
       }
     }
@@ -1621,14 +1621,6 @@ module.exports = class Maze {
 
     this.subtype.onExecutionFinish();
   }
-}
-
-/**
- * Rotate the given 2d array.
- * @param data
- */
-function rotate(data) {
-  return data[0].map((x, i) => data.map(x => x[data.length - i - 1]));
 }
 
 Maze.getAppReducers = function () {
