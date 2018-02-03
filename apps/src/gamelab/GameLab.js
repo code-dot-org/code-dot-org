@@ -53,6 +53,7 @@ import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
+import GameLabJrLib from './GameLabJr.interpreted';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -823,8 +824,13 @@ GameLab.prototype.initInterpreter = function () {
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
   getStore().dispatch(jsDebugger.attach(this.JSInterpreter));
+  let code = this.studioApp_.getCode();
+  if (this.level.useHelperLib) {
+    const lib = this.level.customHelperLib || GameLabJrLib;
+    code = lib + code;
+  }
   this.JSInterpreter.parse({
-    code: this.studioApp_.getCode(),
+    code,
     blocks: dropletConfig.blocks,
     blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
     enableEvents: true,

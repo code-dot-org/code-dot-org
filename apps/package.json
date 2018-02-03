@@ -150,6 +150,7 @@
     "pusher-js": "4.1.0",
     "qtip2": "2.2.0",
     "radium": "0.18.1",
+    "raw-loader": "^0.5.1",
     "react": "~15.4.0",
     "react-addons-test-utils": "~15.4.0",
     "react-bootstrap": "0.30.1",
