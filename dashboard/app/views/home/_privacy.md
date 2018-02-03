@@ -183,7 +183,7 @@ Code.org’s officers, directors, employees, agents and contractors must have a 
 
 We do not rent or sell Personal Information, Persistent Identifiers, or any other information that we collect from Users, or exploit it for financial gain in any other way. Code.org will never share or grant rights to Personal Information with other third-party organizations to use without your consent, except as part of a specific program or feature for which you will have the explicit ability and choice to opt-in.
 
-Whenever we share student personal data, we hold our partners to privacy and security practices no less stringent than our own.
+Whenever we share Student personal data, we hold our partners to privacy and security practices no less stringent than our own.
 
 In particular, we do not share any Personal Information you provide with our donors or sponsors (other than the "Public Reporting" of de-identified reports as described below).
 
