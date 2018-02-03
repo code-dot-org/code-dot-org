@@ -149,7 +149,7 @@ export default class Maze {
         var timePerFrame = 600; // timeForAnimation / numFrames;
         var idleAnimationFrame = 0;
 
-        setInterval(function () {
+        setInterval(() => {
           if (idlePegmanIcon.getAttribute('visibility') === 'visible') {
             this.updatePegmanAnimation({
               idStr: 'idle',
@@ -221,7 +221,7 @@ export default class Maze {
    * @param {boolean} running Whether or not user program is currently running
    */
   resetDirtImages(running) {
-    this.map.forEachCell(function (cell, row, col) {
+    this.map.forEachCell((cell, row, col) => {
       this.subtype.drawer.updateItemImage(row, col, running);
     });
   }
@@ -259,7 +259,7 @@ export default class Maze {
 
     this.cachedBlockStates = [];
 
-    config.loadAudio = function () {
+    config.loadAudio = () => {
       studioApp().loadAudio(this.skin.winSound, 'win');
       studioApp().loadAudio(this.skin.startSound, 'start');
       studioApp().loadAudio(this.skin.failureSound, 'failure');
@@ -288,7 +288,7 @@ export default class Maze {
       this.subtype.loadAudio(this.skin);
     };
 
-    config.afterInject = function () {
+    config.afterInject = () => {
       if (studioApp().isUsingBlockly()) {
         /**
          * The richness of block colours, regardless of the hue.
@@ -548,7 +548,7 @@ export default class Maze {
       if (this.skin.danceOnLoad) {
         this.scheduleDance(false, danceTime);
       }
-      timeoutList.setTimeout(function () {
+      timeoutList.setTimeout(() => {
         this.stepSpeed = 100;
         this.scheduleTurn(this.startDirection);
       }, danceTime + 150);
@@ -795,7 +795,7 @@ export default class Maze {
           var successes = [];
           var failures = [];
 
-          this.map.staticGrids.forEach(function (grid, i) {
+          this.map.staticGrids.forEach((grid, i) => {
             this.map.useGridWithId(i);
             this.subtype.reset();
 
@@ -951,7 +951,7 @@ export default class Maze {
           throw new Error('Unexpected cachedBlockStates');
         }
         // Disable all blocks, caching their state first
-        Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
+        Blockly.mainBlockSpace.getAllBlocks().forEach((block) => {
           this.cachedBlockStates.push({
             block: block,
             movable: block.isMovable(),
@@ -976,7 +976,7 @@ export default class Maze {
     // Speeding up specific levels
     var scaledStepSpeed = this.stepSpeed * this.scale.stepSpeed *
     this.skin.movePegmanAnimationSpeedScale;
-    timeoutList.setTimeout(function () {
+    timeoutList.setTimeout(() => {
       this.scheduleAnimations(stepMode);
     }, scaledStepSpeed);
   }
@@ -1000,7 +1000,7 @@ export default class Maze {
     // The reason we do this recursively instead of iteratively is that we want to
     // ensure that we finish scheduling action1 before starting to schedule
     // action2. Otherwise we get into trouble when stepSpeed is 0.
-    function scheduleSingleAnimation(index) {
+    const scheduleSingleAnimation = (index) => {
       if (index >= actions.length) {
         finishAnimations();
         return;
@@ -1015,18 +1015,18 @@ export default class Maze {
       timeoutList.setTimeout(function () {
         scheduleSingleAnimation(index + 1);
       }, timeForThisAction);
-    }
+    };
 
     // Once animations are complete, we want to reenable the step button if we
     // have steps left, otherwise we're done with this execution.
-    function finishAnimations() {
+    const finishAnimations = () => {
       var stepsRemaining = this.executionInfo.stepsRemaining();
 
       // allow time for  additional pause if we're completely done
       var waitTime = (stepsRemaining ? 0 : 1000);
 
       // run after all animations
-      timeoutList.setTimeout(function () {
+      timeoutList.setTimeout(() => {
         if (stepsRemaining) {
           stepButton.removeAttribute('disabled');
         } else {
@@ -1045,7 +1045,7 @@ export default class Maze {
           this.displayFeedback();
         }
       }, waitTime);
-    }
+    };
   }
 
   /**
@@ -1154,8 +1154,8 @@ export default class Maze {
    */
   scheduleSheetedMovement(start, delta, numFrames, timePerFrame, idStr, direction, hidePegman) {
     var pegmanIcon = document.getElementById('pegman');
-    utils.range(0, numFrames - 1).forEach(function (frame) {
-      timeoutList.setTimeout(function () {
+    utils.range(0, numFrames - 1).forEach((frame) => {
+      timeoutList.setTimeout(() => {
         if (hidePegman) {
           pegmanIcon.setAttribute('visibility', 'hidden');
         }
@@ -1203,7 +1203,7 @@ export default class Maze {
         numFrames, timePerFrame, 'move', direction, true);
 
       // Hide movePegman and set pegman to the end position.
-      timeoutList.setTimeout(function () {
+      timeoutList.setTimeout(() => {
         movePegmanIcon.setAttribute('visibility', 'hidden');
         pegmanIcon.setAttribute('visibility', 'visible');
         this.displayPegman(endX, endY, directionToFrame(direction));
@@ -1215,8 +1215,8 @@ export default class Maze {
       // we don't have an animation, so just move the x/y pos
       numFrames = 4;
       timePerFrame = timeForAnimation / numFrames;
-      utils.range(1, numFrames).forEach(function (frame) {
-        timeoutList.setTimeout(function () {
+      utils.range(1, numFrames).forEach((frame) => {
+        timeoutList.setTimeout(() => {
           this.displayPegman(
             startX + deltaX * frame / numFrames,
             startY + deltaY * frame / numFrames,
@@ -1250,8 +1250,8 @@ export default class Maze {
     var numFrames = 4;
     var startDirection = this.pegmanD;
     var deltaDirection = endDirection - startDirection;
-    utils.range(1, numFrames).forEach(function (frame) {
-      timeoutList.setTimeout(function () {
+    utils.range(1, numFrames).forEach((frame) => {
+      timeoutList.setTimeout(() => {
         this.displayPegman(
           this.pegmanX,
           this.pegmanY,
@@ -1360,7 +1360,7 @@ export default class Maze {
           }, numFrames * timePerFrame);
         } else {
           // active our gif
-          timeoutList.setTimeout(function () {
+          timeoutList.setTimeout(() => {
             wallAnimationIcon.setAttribute('x',
               this.SQUARE_SIZE * (this.pegmanX + 0.5 + deltaX * 0.5) -
               wallAnimationIcon.getAttribute('width') / 2);
@@ -1374,20 +1374,20 @@ export default class Maze {
           }, this.stepSpeed / 2);
         }
       }
-      timeoutList.setTimeout(function () {
+      timeoutList.setTimeout(() => {
         this.displayPegman(this.pegmanX, this.pegmanY, frame);
       }, this.stepSpeed);
-      timeoutList.setTimeout(function () {
+      timeoutList.setTimeout(() => {
         this.displayPegman(this.pegmanX + deltaX / 4, this.pegmanY + deltaY / 4,
           frame);
         studioApp().playAudioOnFailure();
       }, this.stepSpeed * 2);
-      timeoutList.setTimeout(function () {
+      timeoutList.setTimeout(() => {
         this.displayPegman(this.pegmanX, this.pegmanY, frame);
       }, this.stepSpeed * 3);
 
       if (this.skin.wallPegmanAnimation) {
-        timeoutList.setTimeout(function () {
+        timeoutList.setTimeout(() => {
           var pegmanIcon = document.getElementById('pegman');
           pegmanIcon.setAttribute('visibility', 'hidden');
           this.updatePegmanAnimation({
@@ -1408,7 +1408,7 @@ export default class Maze {
       obsIcon.setAttributeNS(
           'http://www.w3.org/1999/xlink', 'xlink:href',
           this.skin.obstacleAnimation);
-      timeoutList.setTimeout(function () {
+      timeoutList.setTimeout(() => {
         this.displayPegman(this.pegmanX + deltaX / 2,
                           this.pegmanY + deltaY / 2,
                           frame);
@@ -1416,7 +1416,7 @@ export default class Maze {
 
       // Replace the objects around obstacles with broken objects
       if (this.skin.largerObstacleAnimationTiles) {
-        timeoutList.setTimeout(function () {
+        timeoutList.setTimeout(() => {
           this.updateSurroundingTiles(targetY, targetX, tileElement => (
             tileElement.setAttributeNS(
               'http://www.w3.org/1999/xlink', 'xlink:href',
@@ -1510,20 +1510,20 @@ export default class Maze {
     }
 
     var danceSpeed = timeAlloted / 5;
-    timeoutList.setTimeout(function () {
+    timeoutList.setTimeout(() => {
       this.displayPegman(this.pegmanX, this.pegmanY, 18);
     }, danceSpeed);
-    timeoutList.setTimeout(function () {
+    timeoutList.setTimeout(() => {
       this.displayPegman(this.pegmanX, this.pegmanY, 20);
     }, danceSpeed * 2);
-    timeoutList.setTimeout(function () {
+    timeoutList.setTimeout(() => {
       this.displayPegman(this.pegmanX, this.pegmanY, 18);
     }, danceSpeed * 3);
-    timeoutList.setTimeout(function () {
+    timeoutList.setTimeout(() => {
       this.displayPegman(this.pegmanX, this.pegmanY, 20);
     }, danceSpeed * 4);
 
-    timeoutList.setTimeout(function () {
+    timeoutList.setTimeout(() => {
       if (!victoryDance || this.skin.turnAfterVictory) {
         this.displayPegman(this.pegmanX, this.pegmanY, originalFrame);
       }
@@ -1628,7 +1628,7 @@ export default class Maze {
    * @param {number} delay Milliseconds to wait before making wave appear.
    */
   scheduleLookStep(path, delay) {
-    timeoutList.setTimeout(function () {
+    timeoutList.setTimeout(() => {
       path.style.display = 'inline';
       window.setTimeout(function () {
         path.style.display = 'none';
