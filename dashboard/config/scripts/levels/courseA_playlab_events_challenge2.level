@@ -52,9 +52,9 @@
     "markdown_instructions": "Give everyone something to do when you click on them. What will the animals say? What else will happen?\r\n\r\nIn this puzzle, make sure to click for hints. The hints will give you fun things to try!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)",
     "disable_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/10354ace865b921dae1eaad2e6dd0465=levelbuilder/24830.png",
-    "contained_level_names": null,
     "top_level_procedure_autopopulate": "false",
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

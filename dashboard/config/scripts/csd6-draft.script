@@ -1,4 +1,3 @@
-hidden false
 login_required true
 hideable_stages true
 student_detail_progress_view true
@@ -188,9 +187,9 @@ stage 'Accelerometer', flex_category: 'csd6_2'
 named_level 'CSD U6L13 TFMD'
 named_level 'The Accelerometer'
 level 'CSD U6 Airplane predict', progression: 'Orientation'
+level 'CSD U6 investigate orientation', progression: 'Orientation'
 level 'CSD U6 directional leds pitch', progression: 'Orientation'
 level 'CSD U6 directional LEDs roll', progression: 'Orientation'
-level 'CSD U6 direction theremin', progression: 'Orientation'
 named_level 'Using Accelerometer Events'
 level 'CSD U6 stillness game predict code', progression: 'Accelerometer Events'
 level 'CSD U6 Pedometer', progression: 'Accelerometer Events'

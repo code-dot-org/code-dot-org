@@ -11,7 +11,7 @@ module Pd
         permission_list = []
         permission_list << :workshop_organizer if current_user.workshop_organizer?
         permission_list << :facilitator if current_user.facilitator?
-        permission_list << :partner if RegionalPartner.where(contact: current_user).exists?
+        permission_list << :partner if RegionalPartner.where(contact_id: current_user.id).exists?
         @permission = permission_list unless permission_list.empty?
       end
 

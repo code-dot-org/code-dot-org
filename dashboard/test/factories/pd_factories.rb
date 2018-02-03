@@ -838,6 +838,8 @@ FactoryGirl.define do
       have_taught_ap "Yes"
       have_taught_written_project_course "Yes"
       grading_system 'Numerical and/or letter grades (e.g., 0 - 100% or F- A)'
+      how_many_terms 'Full year'
+      how_many_hours 'At least 100 course hours'
     end
 
     trait :accepted do
