@@ -85,7 +85,7 @@ export default class Maze {
     };
   }
 
-  loadLevel() {
+  _loadLevel() {
     // Load maps.
     //
     // "serializedMaze" is the new way of storing maps; it's a JSON array
@@ -127,10 +127,10 @@ export default class Maze {
     this.PATH_WIDTH = this.SQUARE_SIZE / 3;
   }
 
-  createAnimations(svg) {
+  _createAnimations(svg) {
     // Add idle pegman.
     if (this.skin.idlePegmanAnimation) {
-      this.createPegmanAnimation(svg, {
+      this._createPegmanAnimation(svg, {
         idStr: 'idle',
         pegmanImage: this.skin.idlePegmanAnimation,
         row: this.subtype.start.y,
@@ -151,7 +151,7 @@ export default class Maze {
 
         setInterval(() => {
           if (idlePegmanIcon.getAttribute('visibility') === 'visible') {
-            this.updatePegmanAnimation({
+            this._updatePegmanAnimation({
               idStr: 'idle',
               row: this.subtype.start.y,
               col: this.subtype.start.x,
@@ -165,7 +165,7 @@ export default class Maze {
     }
 
     if (this.skin.celebrateAnimation) {
-      this.createPegmanAnimation(svg, {
+      this._createPegmanAnimation(svg, {
         idStr: 'celebrate',
         pegmanImage: this.skin.celebrateAnimation,
         row: this.subtype.start.y,
@@ -178,7 +178,7 @@ export default class Maze {
 
     // Add the hidden dazed pegman when hitting the wall.
     if (this.skin.wallPegmanAnimation) {
-      this.createPegmanAnimation(svg, {
+      this._createPegmanAnimation(svg, {
         idStr: 'wall',
         pegmanImage: this.skin.wallPegmanAnimation
       });
@@ -186,7 +186,7 @@ export default class Maze {
 
     // create element for our hitting wall spritesheet
     if (this.skin.hittingWallAnimation && this.skin.hittingWallAnimationFrameNumber) {
-      this.createPegmanAnimation(svg, {
+      this._createPegmanAnimation(svg, {
         idStr: 'wall',
         pegmanImage: this.skin.hittingWallAnimation,
         numColPegman: this.skin.hittingWallPegmanCol,
@@ -197,7 +197,7 @@ export default class Maze {
 
     // Add the hidden moving pegman animation.
     if (this.skin.movePegmanAnimation) {
-      this.createPegmanAnimation(svg, {
+      this._createPegmanAnimation(svg, {
         idStr: 'move',
         pegmanImage: this.skin.movePegmanAnimation,
         numColPegman: 4,
@@ -220,7 +220,7 @@ export default class Maze {
    * Redraw all dirt images
    * @param {boolean} running Whether or not user program is currently running
    */
-  resetDirtImages(running) {
+  _resetDirtImages(running) {
     this.map.forEachCell((cell, row, col) => {
       this.subtype.drawer.updateItemImage(row, col, running);
     });
@@ -231,8 +231,8 @@ export default class Maze {
    */
   init(config) {
     // replace studioApp() methods with our own
-    studioApp().runButtonClick = this.runButtonClick;
-    studioApp().reset = this.reset;
+    studioApp().runButtonClick = this._runButtonClick;
+    studioApp().reset = this._reset;
 
     this.skin = config.skin;
     this.level = config.level;
@@ -255,7 +255,7 @@ export default class Maze {
       this.scale.stepSpeed = this.subtype.overrideStepSpeed;
     }
 
-    this.loadLevel();
+    this._loadLevel();
 
     this.cachedBlockStates = [];
 
@@ -319,24 +319,24 @@ export default class Maze {
       visualizationColumn.style.width = this.MAZE_WIDTH + 'px';
 
       drawMap(svg, this.skin, this.subtype, this.map, this.SQUARE_SIZE);
-      this.createAnimations(svg);
+      this._createAnimations(svg);
 
       var stepButton = document.getElementById('stepButton');
-      dom.addClickTouchEvent(stepButton, this.stepButtonClick);
+      dom.addClickTouchEvent(stepButton, this._stepButtonClick);
 
       // base's studioApp().resetButtonClick will be called first
       var resetButton = document.getElementById('resetButton');
-      dom.addClickTouchEvent(resetButton, this.resetButtonClick);
+      dom.addClickTouchEvent(resetButton, this._resetButtonClick);
 
       var finishButton = document.getElementById('finishButton');
       if (finishButton) {
         finishButton.setAttribute('disabled', 'disabled');
-        dom.addClickTouchEvent(finishButton, this.finishButtonClick);
+        dom.addClickTouchEvent(finishButton, this._finishButtonClick);
       }
 
       // Listen for hint events that draw a path in the game.
       window.addEventListener('displayHintPath', e => {
-        this.drawHintPath(svg, e.detail);
+        this._drawHintPath(svg, e.detail);
       });
     };
 
@@ -377,7 +377,7 @@ export default class Maze {
     );
   }
 
-  gridNumberToPosition(n) {
+  _gridNumberToPosition(n) {
     return (n + 0.5) * this.SQUARE_SIZE;
   }
 
@@ -385,10 +385,10 @@ export default class Maze {
    * @param svg
    * @param {Array<Array>} coordinates An array of x and y grid coordinates.
    */
-  drawHintPath(svg, coordinates) {
+  _drawHintPath(svg, coordinates) {
     const path = svg.getElementById('hintPath');
     path.setAttribute('d', 'M' + coordinates.map(([x, y]) => {
-      return `${this.gridNumberToPosition(x)},${this.gridNumberToPosition(y)}`;
+      return `${this._gridNumberToPosition(x)},${this._gridNumberToPosition(y)}`;
     }).join(' '));
   }
 
@@ -397,12 +397,12 @@ export default class Maze {
    */
   // XXX This is the only method used by the templates!
   // TODO confirm that the above XXX comment is accurate
-  runButtonClick = () => {
+  _runButtonClick = () => {
     var stepButton = document.getElementById('stepButton');
     if (stepButton) {
       stepButton.setAttribute('disabled', '');
     }
-    this.execute(false);
+    this._execute(false);
   };
 
   /**
@@ -410,14 +410,14 @@ export default class Maze {
    * perform a single step.  Otherwise, we call beginAttempt which will do
    * some initial setup, and then perform the first step.
    */
-  stepButtonClick = () => {
+  _stepButtonClick = () => {
     var stepButton = document.getElementById('stepButton');
     stepButton.setAttribute('disabled', '');
 
     if (this.animating_) {
-      this.scheduleAnimations(true);
+      this._scheduleAnimations(true);
     } else {
-      this.execute(true);
+      this._execute(true);
     }
   };
 
@@ -425,11 +425,11 @@ export default class Maze {
    * App specific reset button click logic.  studioApp().resetButtonClick will be
    * called first.
    */
-  resetButtonClick = () => {
+  _resetButtonClick = () => {
     var stepButton = document.getElementById('stepButton');
     stepButton.removeAttribute('disabled');
 
-    this.reenableCachedBlockStates();
+    this._reenableCachedBlockStates();
   };
 
   /**
@@ -439,16 +439,16 @@ export default class Maze {
    * Currently only used by Collector levels to allow users to continue iterating
    * on a pass-but-not-perfect solution, but still finish whenever they want.
    */
-  finishButtonClick = () => {
+  _finishButtonClick = () => {
     timeoutList.clearTimeouts();
     this.animating_ = false;
-    this.displayFeedback(true);
+    this._displayFeedback(true);
   };
 
   /**
    * Calculate the Y offset within the sheet
    */
-  getPegmanFrameOffsetY(animationRow) {
+  _getPegmanFrameOffsetY(animationRow) {
     animationRow = animationRow || 0;
     return animationRow * this.PEGMAN_HEIGHT;
   }
@@ -465,7 +465,7 @@ export default class Maze {
    * numColPegman number of the pegman in each row, default is 4.
    * numRowPegman number of the pegman in each column, default is 1.
    */
-  createPegmanAnimation(svg, options) {
+  _createPegmanAnimation(svg, options) {
     // Create clip path.
     var clip = document.createElementNS(SVG_NS, 'clipPath');
     clip.setAttribute('id', options.idStr + 'PegmanClip');
@@ -511,7 +511,7 @@ export default class Maze {
     * direction required which direction the pegman is facing at.
     * animationRow which row of the sprite sheet the pegman animation needs
     */
-  updatePegmanAnimation(options) {
+  _updatePegmanAnimation(options) {
     var rect = document.getElementById(options.idStr + 'PegmanClipRect');
     rect.setAttribute('x', options.col * this.SQUARE_SIZE + 1 + this.PEGMAN_X_OFFSET);
     rect.setAttribute('y', getPegmanYForRow(this.skin, options.row));
@@ -519,7 +519,7 @@ export default class Maze {
     var x = this.SQUARE_SIZE * options.col -
         options.direction * this.PEGMAN_WIDTH + 1 + this.PEGMAN_X_OFFSET;
     img.setAttribute('x', x);
-    var y = getPegmanYForRow(this.skin, options.row) - this.getPegmanFrameOffsetY(options.animationRow);
+    var y = getPegmanYForRow(this.skin, options.row) - this._getPegmanFrameOffsetY(options.animationRow);
     img.setAttribute('y', y);
     img.setAttribute('visibility', 'visible');
   }
@@ -528,7 +528,7 @@ export default class Maze {
    * Reset the maze to the start position and kill any pending animation tasks.
    * @param {boolean} first True if an opening animation is to be played.
    */
-  reset = (first) => {
+  _reset = (first) => {
     this.subtype.reset();
 
     var i;
@@ -546,14 +546,14 @@ export default class Maze {
       // Dance consists of 5 animations, each of which get 150ms
       var danceTime = 150 * 5;
       if (this.skin.danceOnLoad) {
-        this.scheduleDance(false, danceTime);
+        this._scheduleDance(false, danceTime);
       }
       timeoutList.setTimeout(() => {
         this.stepSpeed = 100;
-        this.scheduleTurn(this.startDirection);
+        this._scheduleTurn(this.startDirection);
       }, danceTime + 150);
     } else {
-      this.displayPegman(this.pegmanX, this.pegmanY, directionToFrame(this.pegmanD));
+      this._displayPegman(this.pegmanX, this.pegmanY, directionToFrame(this.pegmanD));
 
       const finishIcon = document.getElementById('finish');
       if (finishIcon) {
@@ -600,7 +600,7 @@ export default class Maze {
 
     // Move the init dirt marker icons into position.
     this.map.resetDirt();
-    this.resetDirtImages(false);
+    this._resetDirtImages(false);
 
     // Reset the obstacle image.
     var obsId = 0;
@@ -619,11 +619,11 @@ export default class Maze {
     if (this.subtype.resetTiles) {
       this.subtype.resetTiles();
     } else {
-      this.resetTiles();
+      this._resetTiles();
     }
   };
 
-  resetTiles() {
+  _resetTiles() {
     // Reset the tiles
     var tileId = 0;
     for (var y = 0; y < this.map.ROWS; y++) {
@@ -641,7 +641,7 @@ export default class Maze {
     }
   }
 
-  reenableCachedBlockStates() {
+  _reenableCachedBlockStates() {
     if (this.cachedBlockStates) {
       // restore moveable/deletable/editable state from before we started stepping
       this.cachedBlockStates.forEach(function (cached) {
@@ -657,7 +657,7 @@ export default class Maze {
    * App specific displayFeedback function that calls into
    * studioApp().displayFeedback when appropriate
    */
-  displayFeedback(finalFeedback = false) {
+  _displayFeedback(finalFeedback = false) {
     if (this.waitingForReport || this.animating_) {
       return;
     }
@@ -697,11 +697,11 @@ export default class Maze {
    * Function to be called when the service report call is complete
    * @param {MilestoneResponse} response - JSON response (if available)
    */
-  onReportComplete = (response) => {
+  _onReportComplete = (response) => {
     this.response = response;
     this.waitingForReport = false;
     studioApp().onReportComplete(response);
-    this.displayFeedback();
+    this._displayFeedback();
   };
 
   /**
@@ -709,7 +709,7 @@ export default class Maze {
    * execution. This function should be idempotent, as it can be called
    * during execution when running multiple trials.
    */
-  prepareForExecution() {
+  _prepareForExecution() {
     this.executionInfo = new ExecutionInfo({
       ticks: 100
     });
@@ -750,9 +750,9 @@ export default class Maze {
   /**
    * Execute the user's code.  Heaven help us...
    */
-  execute(stepMode) {
+  _execute(stepMode) {
     Maze.beginAttempt();
-    this.prepareForExecution();
+    this._prepareForExecution();
 
     var code = '';
     if (studioApp().isUsingBlockly()) {
@@ -806,7 +806,7 @@ export default class Maze {
             });
 
             // Sort static grids based on trial result
-            this.onExecutionFinish();
+            this._onExecutionFinish();
             if (this.executionInfo.terminationValue() === true) {
               successes.push(i);
             } else {
@@ -815,7 +815,7 @@ export default class Maze {
 
             // Reset for next trial
             this.subtype.drawer.reset();
-            this.prepareForExecution();
+            this._prepareForExecution();
             studioApp().reset(false);
           });
 
@@ -838,7 +838,7 @@ export default class Maze {
         });
       }
 
-      this.onExecutionFinish();
+      this._onExecutionFinish();
 
       switch (this.executionInfo.terminationValue()) {
         case null:
@@ -915,7 +915,7 @@ export default class Maze {
       // Contained levels post progress in a special way, and always pass
       postContainedLevelAttempt(studioApp());
       this.testResults = TestResults.ALL_PASS;
-      runAfterPostContainedLevel(this.onReportComplete);
+      runAfterPostContainedLevel(this._onReportComplete);
     } else {
       // Report result to server.
       studioApp().report({
@@ -924,19 +924,19 @@ export default class Maze {
         result: this.result === ResultType.SUCCESS,
         testResult: this.testResults,
         program: encodeURIComponent(program),
-        onComplete: this.onReportComplete
+        onComplete: this._onReportComplete
       });
     }
 
     // Maze. now contains a transcript of all the user's actions.
     // Reset the maze and animate the transcript.
     studioApp().reset(false);
-    this.resetDirtImages(true);
+    this._resetDirtImages(true);
 
     // if we have extra top blocks, don't even bother animating
     if (this.testResults === TestResults.EXTRA_TOP_BLOCKS_FAIL) {
       this.result = ResultType.ERROR;
-      this.displayFeedback();
+      this._displayFeedback();
       return;
     }
 
@@ -977,14 +977,14 @@ export default class Maze {
     var scaledStepSpeed = this.stepSpeed * this.scale.stepSpeed *
     this.skin.movePegmanAnimationSpeedScale;
     timeoutList.setTimeout(() => {
-      this.scheduleAnimations(stepMode);
+      this._scheduleAnimations(stepMode);
     }, scaledStepSpeed);
   }
 
   /**
    * Perform our animations, either all of them or those of a single step
    */
-  scheduleAnimations(singleStep) {
+  _scheduleAnimations(singleStep) {
     timeoutList.clearTimeouts();
 
     var timePerAction = this.stepSpeed * this.scale.stepSpeed *
@@ -992,7 +992,7 @@ export default class Maze {
     // get a flat list of actions we want to schedule
     var actions = this.executionInfo.getActions(singleStep);
 
-    this.scheduleSingleAnimation(0, actions, singleStep, timePerAction);
+    this._scheduleSingleAnimation(0, actions, singleStep, timePerAction);
   }
 
   /**
@@ -1001,20 +1001,20 @@ export default class Maze {
    * ensure that we finish scheduling action1 before starting to schedule
    * action2. Otherwise we get into trouble when stepSpeed is 0.
    */
-  scheduleSingleAnimation(index, actions, singleStep, timePerAction) {
+  _scheduleSingleAnimation(index, actions, singleStep, timePerAction) {
     if (index >= actions.length) {
-      this.finishAnimations(singleStep);
+      this._finishAnimations(singleStep);
       return;
     }
 
-    this.animateAction(actions[index], singleStep, timePerAction);
+    this._animateAction(actions[index], singleStep, timePerAction);
 
     var command = actions[index] && actions[index].command;
     var timeModifier = (this.skin.actionSpeedScale && this.skin.actionSpeedScale[command]) || 1;
     var timeForThisAction = Math.round(timePerAction * timeModifier);
 
     timeoutList.setTimeout(() => {
-      this.scheduleSingleAnimation(index + 1, actions, singleStep, timePerAction);
+      this._scheduleSingleAnimation(index + 1, actions, singleStep, timePerAction);
     }, timeForThisAction);
   }
 
@@ -1022,7 +1022,7 @@ export default class Maze {
    * Once animations are complete, we want to reenable the step button if we
    * have steps left, otherwise we're done with this execution.
    */
-  finishAnimations(singleStep) {
+  _finishAnimations(singleStep) {
     var stepsRemaining = this.executionInfo.stepsRemaining();
     var stepButton = document.getElementById('stepButton');
 
@@ -1043,10 +1043,10 @@ export default class Maze {
         // clicking reset.  Otherwise we can clear highlighting/disabled
         // blocks now
         if (!singleStep || this.result === ResultType.SUCCESS) {
-          this.reenableCachedBlockStates();
+          this._reenableCachedBlockStates();
           studioApp().clearHighlighting();
         }
-        this.displayFeedback();
+        this._displayFeedback();
       }
     }, waitTime);
   }
@@ -1057,56 +1057,56 @@ export default class Maze {
    * @param {boolean} spotlightBlocks Whether or not we should highlight entire blocks
    * @param {integer} timePerStep How much time we have allocated before the next step
    */
-  animateAction(action, spotlightBlocks, timePerStep) {
+  _animateAction(action, spotlightBlocks, timePerStep) {
     if (action.blockId) {
       studioApp().highlight(String(action.blockId), spotlightBlocks);
     }
 
     switch (action.command) {
       case 'north':
-        this.animatedMove(Direction.NORTH, timePerStep);
+        this._animatedMove(Direction.NORTH, timePerStep);
         break;
       case 'east':
-        this.animatedMove(Direction.EAST, timePerStep);
+        this._animatedMove(Direction.EAST, timePerStep);
         break;
       case 'south':
-        this.animatedMove(Direction.SOUTH, timePerStep);
+        this._animatedMove(Direction.SOUTH, timePerStep);
         break;
       case 'west':
-        this.animatedMove(Direction.WEST, timePerStep);
+        this._animatedMove(Direction.WEST, timePerStep);
         break;
       case 'look_north':
-        this.scheduleLook(Direction.NORTH);
+        this._scheduleLook(Direction.NORTH);
         break;
       case 'look_east':
-        this.scheduleLook(Direction.EAST);
+        this._scheduleLook(Direction.EAST);
         break;
       case 'look_south':
-        this.scheduleLook(Direction.SOUTH);
+        this._scheduleLook(Direction.SOUTH);
         break;
       case 'look_west':
-        this.scheduleLook(Direction.WEST);
+        this._scheduleLook(Direction.WEST);
         break;
       case 'fail_forward':
-        this.scheduleFail(true);
+        this._scheduleFail(true);
         break;
       case 'fail_backward':
-        this.scheduleFail(false);
+        this._scheduleFail(false);
         break;
       case 'left':
         var newDirection = this.pegmanD + TurnDirection.LEFT;
-        this.scheduleTurn(newDirection);
+        this._scheduleTurn(newDirection);
         this.pegmanD = constrainDirection4(newDirection);
         break;
       case 'right':
         newDirection = this.pegmanD + TurnDirection.RIGHT;
-        this.scheduleTurn(newDirection);
+        this._scheduleTurn(newDirection);
         this.pegmanD = constrainDirection4(newDirection);
         break;
       case 'finish':
         // Only schedule victory animation for certain conditions:
         if (this.testResults >= TestResults.MINIMUM_PASS_RESULT) {
-          this.scheduleDance(true, timePerStep);
+          this._scheduleDance(true, timePerStep);
         } else {
           timeoutList.setTimeout(function () {
             studioApp().playAudioOnFailure();
@@ -1114,10 +1114,10 @@ export default class Maze {
         }
         break;
       case 'putdown':
-        this.scheduleFill();
+        this._scheduleFill();
         break;
       case 'pickup':
-        this.scheduleDig();
+        this._scheduleDig();
         break;
       case 'nectar':
         this.subtype.animateGetNectar();
@@ -1143,11 +1143,11 @@ export default class Maze {
     }
   }
 
-  animatedMove(direction, timeForMove) {
+  _animatedMove(direction, timeForMove) {
     var positionChange = directionToDxDy(direction);
     var newX = this.pegmanX + positionChange.dx;
     var newY = this.pegmanY + positionChange.dy;
-    this.scheduleMove(newX, newY, timeForMove);
+    this._scheduleMove(newX, newY, timeForMove);
     this.pegmanX = newX;
     this.pegmanY = newY;
   }
@@ -1155,14 +1155,14 @@ export default class Maze {
   /**
    * Schedule a movement animating using a spritesheet.
    */
-  scheduleSheetedMovement(start, delta, numFrames, timePerFrame, idStr, direction, hidePegman) {
+  _scheduleSheetedMovement(start, delta, numFrames, timePerFrame, idStr, direction, hidePegman) {
     var pegmanIcon = document.getElementById('pegman');
     utils.range(0, numFrames - 1).forEach((frame) => {
       timeoutList.setTimeout(() => {
         if (hidePegman) {
           pegmanIcon.setAttribute('visibility', 'hidden');
         }
-        this.updatePegmanAnimation({
+        this._updatePegmanAnimation({
           idStr: idStr,
           col: start.x + delta.x * frame / numFrames,
           row: start.y + delta.y * frame / numFrames,
@@ -1178,7 +1178,7 @@ export default class Maze {
    * @param {number} endX X coordinate of the target position
    * @param {number} endY Y coordinate of the target position
    */
-  scheduleMove(endX, endY, timeForAnimation) {
+  _scheduleMove(endX, endY, timeForAnimation) {
     var startX = this.pegmanX;
     var startY = this.pegmanY;
     var direction = this.pegmanD;
@@ -1196,7 +1196,7 @@ export default class Maze {
       var movePegmanIcon = document.getElementById('movePegman');
       timePerFrame = timeForAnimation / numFrames;
 
-      this.scheduleSheetedMovement({
+      this._scheduleSheetedMovement({
           x: startX,
           y: startY
         }, {
@@ -1209,7 +1209,7 @@ export default class Maze {
       timeoutList.setTimeout(() => {
         movePegmanIcon.setAttribute('visibility', 'hidden');
         pegmanIcon.setAttribute('visibility', 'visible');
-        this.displayPegman(endX, endY, directionToFrame(direction));
+        this._displayPegman(endX, endY, directionToFrame(direction));
         if (this.subtype.isWordSearch()) {
           this.subtype.markTileVisited(endY, endX, true);
         }
@@ -1220,7 +1220,7 @@ export default class Maze {
       timePerFrame = timeForAnimation / numFrames;
       utils.range(1, numFrames).forEach((frame) => {
         timeoutList.setTimeout(() => {
-          this.displayPegman(
+          this._displayPegman(
             startX + deltaX * frame / numFrames,
             startY + deltaY * frame / numFrames,
             directionToFrame(direction));
@@ -1249,13 +1249,13 @@ export default class Maze {
    * Schedule the animations for a turn from the current direction
    * @param {number} endDirection The direction we're turning to
    */
-  scheduleTurn(endDirection) {
+  _scheduleTurn(endDirection) {
     var numFrames = 4;
     var startDirection = this.pegmanD;
     var deltaDirection = endDirection - startDirection;
     utils.range(1, numFrames).forEach((frame) => {
       timeoutList.setTimeout(() => {
-        this.displayPegman(
+        this._displayPegman(
           this.pegmanX,
           this.pegmanY,
           directionToFrame(startDirection + deltaDirection * frame / numFrames));
@@ -1266,7 +1266,7 @@ export default class Maze {
   /**
    * Replace the tiles surrounding the obstacle with broken tiles.
    */
-  updateSurroundingTiles(obstacleY, obstacleX, callback) {
+  _updateSurroundingTiles(obstacleY, obstacleX, callback) {
     var tileCoords = [
       [obstacleY - 1, obstacleX - 1],
       [obstacleY - 1, obstacleX],
@@ -1293,7 +1293,7 @@ export default class Maze {
    * Schedule the animations and sounds for a failed move.
    * @param {boolean} forward True if forward, false if backward.
    */
-  scheduleFail(forward) {
+  _scheduleFail(forward) {
     var dxDy = directionToDxDy(this.pegmanD);
     var deltaX = dxDy.dx;
     var deltaY = dxDy.dy;
@@ -1306,7 +1306,7 @@ export default class Maze {
     var targetX = this.pegmanX + deltaX;
     var targetY = this.pegmanY + deltaY;
     var frame = directionToFrame(this.pegmanD);
-    this.displayPegman(this.pegmanX + deltaX / 4,
+    this._displayPegman(this.pegmanX + deltaX / 4,
                       this.pegmanY + deltaY / 4,
                       frame);
     // Play sound and animation for hitting wall or obstacle
@@ -1322,7 +1322,7 @@ export default class Maze {
 
       if (this.subtype.isScrat() && squareType === SquareType.OBSTACLE) {
         // Remove cracked ice, replace surrounding ice with cracked ice.
-        this.updateSurroundingTiles(targetY, targetX, (tileElement, cell) => {
+        this._updateSurroundingTiles(targetY, targetX, (tileElement, cell) => {
           if (cell.getTile() === SquareType.OPEN) {
             tileElement.setAttributeNS(
               'http://www.w3.org/1999/xlink', 'xlink:href',
@@ -1350,7 +1350,7 @@ export default class Maze {
           }
           // animate our sprite sheet
           var timePerFrame = 100;
-          this.scheduleSheetedMovement({
+          this._scheduleSheetedMovement({
               x: this.pegmanX,
               y: this.pegmanY
             }, {
@@ -1378,22 +1378,22 @@ export default class Maze {
         }
       }
       timeoutList.setTimeout(() => {
-        this.displayPegman(this.pegmanX, this.pegmanY, frame);
+        this._displayPegman(this.pegmanX, this.pegmanY, frame);
       }, this.stepSpeed);
       timeoutList.setTimeout(() => {
-        this.displayPegman(this.pegmanX + deltaX / 4, this.pegmanY + deltaY / 4,
+        this._displayPegman(this.pegmanX + deltaX / 4, this.pegmanY + deltaY / 4,
           frame);
         studioApp().playAudioOnFailure();
       }, this.stepSpeed * 2);
       timeoutList.setTimeout(() => {
-        this.displayPegman(this.pegmanX, this.pegmanY, frame);
+        this._displayPegman(this.pegmanX, this.pegmanY, frame);
       }, this.stepSpeed * 3);
 
       if (this.skin.wallPegmanAnimation) {
         timeoutList.setTimeout(() => {
           var pegmanIcon = document.getElementById('pegman');
           pegmanIcon.setAttribute('visibility', 'hidden');
-          this.updatePegmanAnimation({
+          this._updatePegmanAnimation({
             idStr: 'wall',
             row: this.pegmanY,
             col: this.pegmanX,
@@ -1412,7 +1412,7 @@ export default class Maze {
           'http://www.w3.org/1999/xlink', 'xlink:href',
           this.skin.obstacleAnimation);
       timeoutList.setTimeout(() => {
-        this.displayPegman(this.pegmanX + deltaX / 2,
+        this._displayPegman(this.pegmanX + deltaX / 2,
                           this.pegmanY + deltaY / 2,
                           frame);
       }, this.stepSpeed);
@@ -1420,7 +1420,7 @@ export default class Maze {
       // Replace the objects around obstacles with broken objects
       if (this.skin.largerObstacleAnimationTiles) {
         timeoutList.setTimeout(() => {
-          this.updateSurroundingTiles(targetY, targetX, tileElement => (
+          this._updateSurroundingTiles(targetY, targetX, tileElement => (
             tileElement.setAttributeNS(
               'http://www.w3.org/1999/xlink', 'xlink:href',
               this.skin.largerObstacleAnimationTiles
@@ -1446,7 +1446,7 @@ export default class Maze {
   /**
    * Set the tiles to be transparent gradually.
    */
-  setTileTransparent() {
+  _setTileTransparent() {
     var tileId = 0;
     for (var y = 0; y < this.map.ROWS; y++) {
       for (var x = 0; x < this.map.COLS; x++) {
@@ -1486,7 +1486,7 @@ export default class Maze {
    *   puzzle (vs. dancing on load).
    * @param {integer} timeAlloted How much time we have for our animations
    */
-  scheduleDance(victoryDance, timeAlloted) {
+  _scheduleDance(victoryDance, timeAlloted) {
     if (this.subtype.scheduleDance) {
       this.subtype.scheduleDance(victoryDance, timeAlloted, this.skin);
       return;
@@ -1498,7 +1498,7 @@ export default class Maze {
     }
 
     var originalFrame = directionToFrame(this.pegmanD);
-    this.displayPegman(this.pegmanX, this.pegmanY, 16);
+    this._displayPegman(this.pegmanX, this.pegmanY, 16);
 
     // If victoryDance === true, play the goal animation, else reset it
     var finishIcon = document.getElementById('finish');
@@ -1514,25 +1514,25 @@ export default class Maze {
 
     var danceSpeed = timeAlloted / 5;
     timeoutList.setTimeout(() => {
-      this.displayPegman(this.pegmanX, this.pegmanY, 18);
+      this._displayPegman(this.pegmanX, this.pegmanY, 18);
     }, danceSpeed);
     timeoutList.setTimeout(() => {
-      this.displayPegman(this.pegmanX, this.pegmanY, 20);
+      this._displayPegman(this.pegmanX, this.pegmanY, 20);
     }, danceSpeed * 2);
     timeoutList.setTimeout(() => {
-      this.displayPegman(this.pegmanX, this.pegmanY, 18);
+      this._displayPegman(this.pegmanX, this.pegmanY, 18);
     }, danceSpeed * 3);
     timeoutList.setTimeout(() => {
-      this.displayPegman(this.pegmanX, this.pegmanY, 20);
+      this._displayPegman(this.pegmanX, this.pegmanY, 20);
     }, danceSpeed * 4);
 
     timeoutList.setTimeout(() => {
       if (!victoryDance || this.skin.turnAfterVictory) {
-        this.displayPegman(this.pegmanX, this.pegmanY, originalFrame);
+        this._displayPegman(this.pegmanX, this.pegmanY, originalFrame);
       }
 
       if (victoryDance && this.skin.transparentTileEnding) {
-        this.setTileTransparent();
+        this._setTileTransparent();
       }
 
       if (this.subtype.isWordSearch()) {
@@ -1547,13 +1547,13 @@ export default class Maze {
    * @param {number} y Vertical grid (or fraction thereof).
    * @param {number} frame Direction (0 - 15) or dance (16 - 17).
    */
-  displayPegman(x, y, frame) {
+  _displayPegman(x, y, frame) {
     var pegmanIcon = document.getElementById('pegman');
     var clipRect = document.getElementById('clipRect');
     displayPegman(this.skin, pegmanIcon, clipRect, x, y, frame);
   }
 
-  scheduleDirtChange(options) {
+  _scheduleDirtChange(options) {
     var col = this.pegmanX;
     var row = this.pegmanY;
 
@@ -1568,8 +1568,8 @@ export default class Maze {
   /**
    * Schedule to add dirt at pegman's current position.
    */
-  scheduleFill() {
-    this.scheduleDirtChange({
+  _scheduleFill() {
+    this._scheduleDirtChange({
       amount: 1,
       sound: 'fill'
     });
@@ -1578,8 +1578,8 @@ export default class Maze {
   /**
    * Schedule to remove dirt at pegman's current location.
    */
-  scheduleDig() {
-    this.scheduleDirtChange({
+  _scheduleDig() {
+    this._scheduleDirtChange({
       amount: -1,
       sound: 'dig'
     });
@@ -1590,7 +1590,7 @@ export default class Maze {
    * in the specified direction.
    * @param {!Direction} d Direction (0 - 3).
    */
-  scheduleLook(d) {
+  _scheduleLook(d) {
     var x = this.pegmanX;
     var y = this.pegmanY;
     switch (d) {
@@ -1621,7 +1621,7 @@ export default class Maze {
     lookIcon.style.display = 'inline';
     for (var i = 0; i < paths.length; i++) {
       var path = paths[i];
-      this.scheduleLookStep(path, this.stepSpeed * i);
+      this._scheduleLookStep(path, this.stepSpeed * i);
     }
   }
 
@@ -1630,7 +1630,7 @@ export default class Maze {
    * @param {!Element} path Element to make appear.
    * @param {number} delay Milliseconds to wait before making wave appear.
    */
-  scheduleLookStep(path, delay) {
+  _scheduleLookStep(path, delay) {
     timeoutList.setTimeout(() => {
       path.style.display = 'inline';
       window.setTimeout(function () {
@@ -1671,7 +1671,7 @@ export default class Maze {
    * chance to check if we've accomplished our goals. This is required in part
    * because elsewhere we only check for success after movement.
    */
-  onExecutionFinish() {
+  _onExecutionFinish() {
     // If we haven't terminated, make one last check for success
     if (!this.executionInfo.isTerminated()) {
       this.checkSuccess();
