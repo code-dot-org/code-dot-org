@@ -24,6 +24,11 @@
 #
 
 class GamelabJr < Gamelab
+  serialized_attrs %w(
+    use_helper_lib
+    custom_helper_lib
+  )
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
@@ -34,7 +39,8 @@ class GamelabJr < Gamelab
           code_functions: JSON.parse(palette),
           show_d_pad: true,
           edit_code: "false",
-          show_debug_watch: true
+          show_debug_watch: true,
+          use_helper_lib: true,
         }
       )
     )

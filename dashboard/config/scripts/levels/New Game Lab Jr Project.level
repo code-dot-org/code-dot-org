@@ -211,7 +211,11 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "edit_code": "false",
-    "contained_level_names": null
+    "use_helper_lib": true,
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
