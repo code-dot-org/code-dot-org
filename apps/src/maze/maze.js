@@ -21,23 +21,23 @@
  * @fileoverview JavaScript for Blockly's Maze application.
  * @author fraser@google.com (Neil Fraser)
  */
-var React = require('react');
-var ReactDOM = require('react-dom');
-var studioApp = require('../StudioApp').singleton;
-var tiles = require('./tiles');
-var codegen = require('../lib/tools/jsinterpreter/codegen');
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var api = require('./api');
-var Provider = require('react-redux').Provider;
-var AppView = require('../templates/AppView');
-var MazeVisualizationColumn = require('./MazeVisualizationColumn');
-var dom = require('../dom');
-var utils = require('../utils');
-import {generateCodeAliases} from '../dropletUtils';
-var getSubtypeForSkin = require('./mazeUtils').getSubtypeForSkin;
-var dropletConfig = require('./dropletConfig');
+import React from 'react';
 
-var MazeMap = require('./mazeMap');
+import ReactDOM from 'react-dom';
+import {singleton as studioApp} from '../StudioApp';
+import tiles from './tiles';
+import codegen from '../lib/tools/jsinterpreter/codegen';
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import * as api from './api';
+import {Provider} from 'react-redux';
+import AppView from '../templates/AppView';
+import MazeVisualizationColumn from './MazeVisualizationColumn';
+import dom from '../dom';
+import * as utils from '../utils';
+import {generateCodeAliases} from '../dropletUtils';
+import {getSubtypeForSkin} from './mazeUtils';
+import dropletConfig from './dropletConfig';
+import MazeMap from './mazeMap';
 import drawMap, {displayPegman, getPegmanYForRow} from './drawMap';
 
 import {
@@ -48,14 +48,12 @@ import {
 import {getStore} from '../redux';
 import mazeReducer from './redux';
 
-var ExecutionInfo = require('./executionInfo');
+import ExecutionInfo from './executionInfo';
 
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
 var TurnDirection = tiles.TurnDirection;
-import {TestResults, ResultType} from '../constants';
-
-var SVG_NS = require('../constants').SVG_NS;
+import { TestResults, ResultType, SVG_NS } from '../constants';
 
 /**
  * Create a namespace for the application.

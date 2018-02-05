@@ -1,8 +1,8 @@
-var msg = require('./locale');
-var codegen = require('../lib/tools/jsinterpreter/codegen');
-var blockUtils = require('../block_utils');
+import msg from './locale';
+import codegen from '../lib/tools/jsinterpreter/codegen';
+import blockUtils from '../block_utils';
 
-exports.install = function (blockly, blockInstallOptions) {
+export function install(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
 
@@ -75,4 +75,4 @@ exports.install = function (blockly, blockInstallOptions) {
     branch = codegen.loopTrap() + branch;
     return `while (${argument}) {\n${branch}}\n`;
   };
-};
+}

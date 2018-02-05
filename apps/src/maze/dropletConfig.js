@@ -1,10 +1,10 @@
-module.exports.blocks = [
+export var blocks = [
   {'func': 'moveForward', 'category': 'Movement' },
   {'func': 'turnLeft', 'category': 'Movement' },
   {'func': 'turnRight', 'category': 'Movement' },
 ];
 
-module.exports.categories = {
+export var categories = {
   'Movement': {
     'color': 'red',
     'blocks': []

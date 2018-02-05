@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
-import skins from "@cdo/apps/maze/skins";
+import * as skins from "@cdo/apps/maze/skins";
 import {getSubtypeForSkin} from '@cdo/apps/maze/mazeUtils';
 import MazeMap from '@cdo/apps/maze/mazeMap';
 import drawMap from '@cdo/apps/maze/drawMap';

@@ -1,2 +1,2 @@
 // locale for maze
-module.exports = window.blockly.maze_locale;
+export default window.blockly.maze_locale;

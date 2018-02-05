@@ -1,14 +1,17 @@
-var Direction = require('./tiles').Direction;
-var karelLevels = require('./karelLevels');
-var wordsearchLevels = require('./wordsearchLevels');
-var reqBlocks = require('./requiredBlocks');
-var blockUtils = require('../block_utils');
-var utils = require('../utils');
-var mazeMsg = require('./locale');
+import {Direction} from './tiles';
+import karelLevels from './karelLevels';
+import wordsearchLevels from './wordsearchLevels';
+import reqBlocks from './requiredBlocks';
+import blockUtils from '../block_utils';
+import * as utils from '../utils';
+import mazeMsg from './locale';
+
+import toolboxesEJS from './toolboxes/maze.xml.ejs';
+import startBlocksEJS from './startBlocks.xml.ejs';
 
 //TODO: Fix hacky level-number-dependent toolbox.
 var toolbox = function (page, level) {
-  return require('./toolboxes/maze.xml.ejs')({
+  return toolboxesEJS({
     page: page,
     level: level
   });
@@ -16,7 +19,7 @@ var toolbox = function (page, level) {
 
 //TODO: Fix hacky level-number-dependent startBlocks.
 var startBlocks = function (page, level) {
-  return require('./startBlocks.xml.ejs')({
+  return startBlocksEJS({
     page: page,
     level: level
   });
@@ -25,7 +28,7 @@ var startBlocks = function (page, level) {
 /*
  * Configuration for all levels.
  */
-module.exports = {
+const levels = {
 
   // Formerly Page 2
 
@@ -608,21 +611,21 @@ module.exports = {
 
 // Merge in Karel levels.
 for (var levelId in karelLevels) {
-  module.exports['karel_' + levelId] = karelLevels[levelId];
+  levels['karel_' + levelId] = karelLevels[levelId];
 }
 
 // Merge in Wordsearch levels.
 for (levelId in wordsearchLevels) {
-  module.exports['wordsearch_' + levelId] = wordsearchLevels[levelId];
+  levels['wordsearch_' + levelId] = wordsearchLevels[levelId];
 }
 
 // Add some step levels
 function cloneWithStep(level, step, stepOnly) {
-  var obj = utils.extend({}, module.exports[level]);
+  var obj = utils.extend({}, levels[level]);
 
   obj.step = step;
   obj.stepOnly = stepOnly;
-  module.exports[level + '_step'] = obj;
+  levels[level + '_step'] = obj;
 }
 
 cloneWithStep('2_1', true, true);
@@ -630,3 +633,5 @@ cloneWithStep('2_2', true, false);
 cloneWithStep('2_17', true, false);
 cloneWithStep('karel_1_9', true, false);
 cloneWithStep('karel_2_9', true, false);
+
+export default levels;
