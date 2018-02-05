@@ -326,6 +326,7 @@ myCallback("this message is coming from inside the interpreter");
           editor: {
             aceEditor: aceEditor,
           },
+          editCode: true,
         },
       });
       onPauseObserver = sinon.spy();
