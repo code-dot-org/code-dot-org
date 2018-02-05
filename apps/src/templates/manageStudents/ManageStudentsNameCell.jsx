@@ -13,22 +13,17 @@ class ManageStudentNameCell extends Component {
     loginType: PropTypes.string.isRequired,
     username: PropTypes.string,
     isEditing: PropTypes.bool,
+    editedValue: PropTypes.string,
     //Provided by redux
     editStudent: PropTypes.func.isRequired,
   };
 
-  state = {
-    nameValue: this.props.name
-  };
-
   onChangeName = (e) => {
-    const newName = e.target.value;
-    this.setState({nameValue: newName});
-    this.props.editStudent(this.props.id, {name: newName});
+    this.props.editStudent(this.props.id, {name: e.target.value});
   };
 
   render() {
-    const {id, sectionId, name, loginType, username} = this.props;
+    const {id, sectionId, name, loginType, username, editedValue} = this.props;
     return (
       <div>
         {!this.props.isEditing &&
@@ -46,7 +41,7 @@ class ManageStudentNameCell extends Component {
           </div>
         }
         {this.props.isEditing &&
-          <input value={this.state.nameValue} onChange={this.onChangeName}/>
+          <input value={editedValue} onChange={this.onChangeName}/>
         }
       </div>
       );
