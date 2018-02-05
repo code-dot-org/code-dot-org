@@ -11,6 +11,7 @@ Feature: Teacher Application Dashboard view
     Then I wait until element "table" is visible
     And I open my eyes to test "Teacher Application Dashboard"
     And I see no difference for "Teacher List View"
+    # Do this so the detail view does not open in a new tab
     Then execute JavaScript expression "window.location = $('table a:first-child').first().prop('href')"
     Then I wait until element "h1" is visible
     And I see no difference for "Teacher Detail View"

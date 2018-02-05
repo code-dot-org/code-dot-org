@@ -12,6 +12,7 @@ Feature: Facilitator Application Dashboard view
     Then I press the first ".row .btn" element
     Then I wait until element "table" is visible
     And I see no difference for "Facilitator List View"
+    # Do this so the detail view does not open in a new tab
     Then execute JavaScript expression "window.location = $('table a:first-child').first().prop('href')"
     Then I wait until element "h1" is visible
     And I see no difference for "Facilitator Detail View"
