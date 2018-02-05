@@ -218,6 +218,7 @@ var Artist = function () {
   this.currentPathPattern = new Image();
   this.loadedPathPatterns = [];
   this.isDrawingWithPattern = false;
+  this.linePatterns = [];
 
   // these get set by init based on skin.
   this.avatarWidth = 0;
@@ -305,13 +306,13 @@ Artist.prototype.preloadAllPatternImages = function () {
   const loadPattern = patternOption => new Promise(resolve => {
     const pattern = patternOption[1];
 
-    if (this.skin[pattern]) {
+    if (this.linePatterns[pattern]) {
       const img = new Image();
 
       img.onload = () => resolve();
       img.onerror = () => resolve();
 
-      img.src = this.skin[pattern];
+      img.src = this.linePatterns[pattern];
       this.loadedPathPatterns[pattern] = img;
     } else {
       resolve();
@@ -349,6 +350,8 @@ Artist.prototype.init = function (config) {
     this.level.images[0].position = [0, 0];
     this.level.images[0].scale = 1;
   }
+
+  this.linePatterns = config.skin.linePatterns;
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
