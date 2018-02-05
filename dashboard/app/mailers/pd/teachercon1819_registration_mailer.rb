@@ -24,7 +24,7 @@ class Pd::Teachercon1819RegistrationMailer < ActionMailer::Base
     @registration = registration
 
     mail(
-      to: registration.user.email,
+      to: registration.sanitize_form_data_hash[:email],
       subject: "We've received your TeacherCon registration form"
     )
   end
