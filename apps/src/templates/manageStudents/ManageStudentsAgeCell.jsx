@@ -8,22 +8,17 @@ class ManageStudentAgeCell extends Component {
     id: PropTypes.number.isRequired,
     age: PropTypes.number,
     isEditing: PropTypes.bool,
+    editedValue: PropTypes.number,
     // Provided by redux
     editStudent: PropTypes.func.isRequired,
   };
 
-  state = {
-    ageValue: this.props.age
-  };
-
   onChangeAge = (e) => {
-    const newAge = e.target.value;
-    this.setState({ageValue: newAge});
-    this.props.editStudent(this.props.id, {age: newAge});
+    this.props.editStudent(this.props.id, {age: e.target.value});
   };
 
   render() {
-    const {age} = this.props;
+    const {age, editedValue} = this.props;
     return (
       <div>
         {!this.props.isEditing &&
@@ -34,7 +29,7 @@ class ManageStudentAgeCell extends Component {
         {this.props.isEditing &&
           <select
             name="age"
-            value={this.state.ageValue}
+            value={editedValue}
             onChange={this.onChangeAge}
           >
            {ages.map(age => <option key={age} value={age}>{age}</option>)}

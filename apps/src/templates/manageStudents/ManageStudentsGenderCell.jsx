@@ -13,6 +13,7 @@ class ManageStudentGenderCell extends Component {
     id: PropTypes.number.isRequired,
     gender: PropTypes.string,
     isEditing: PropTypes.bool,
+    editedValue: PropTypes.string,
     // Provided by redux
     editStudent: PropTypes.func.isRequired,
   };
@@ -22,9 +23,7 @@ class ManageStudentGenderCell extends Component {
   };
 
   onChangeGender = (e) => {
-    const newGender = e.target.value;
-    this.setState({genderValue: newGender});
-    this.props.editStudent(this.props.id, {gender: newGender});
+    this.props.editStudent(this.props.id, {gender: e.target.value});
   };
 
   render() {
@@ -39,7 +38,7 @@ class ManageStudentGenderCell extends Component {
           <select
             ref={element => this.root = element}
             name="age"
-            value={this.state.genderValue}
+            value={this.props.editedValue}
             onChange={this.onChangeGender}
           >
            {Object.keys(GENDERS).map(gender => <option key={gender} value={gender}>{GENDERS[gender]}</option>)}

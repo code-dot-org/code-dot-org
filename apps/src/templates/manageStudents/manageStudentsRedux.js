@@ -74,7 +74,8 @@ export default function manageStudents(state=initialState, action) {
       editingData: {
         ...state.editingData,
         [action.studentId]: {
-          id: action.studentId
+          ...state.studentData[action.studentId],
+          id: action.studentData,
         }
       }
     };
@@ -125,8 +126,8 @@ export default function manageStudents(state=initialState, action) {
       editingData: {
         ...state.editingData,
         [action.studentId]: {
-          ...state.editingData[action.studentId],
           ...action.studentData,
+          id: action.studentId,
         }
       }
     };
@@ -201,11 +202,17 @@ export const convertStudentDataToArray = (studentData) => {
 
 // Make a post request to edit a student.
 const updateStudentOnServer = (updatedStudentInfo, onComplete) => {
+  const dataToUpdate = {
+    id: updatedStudentInfo.id,
+    name: updatedStudentInfo.name,
+    age: updatedStudentInfo.age,
+    gender: updatedStudentInfo.gender,
+  };
   $.ajax({
-    url: `/v2/students/${updatedStudentInfo.id}/update`,
+    url: `/v2/students/${dataToUpdate.id}/update`,
     method: 'POST',
     contentType: 'application/json;charset=UTF-8',
-    data: JSON.stringify(updatedStudentInfo),
+    data: JSON.stringify(dataToUpdate),
   }).done((data) => {
     onComplete(null, data);
   }).fail((jqXhr, status) => {
