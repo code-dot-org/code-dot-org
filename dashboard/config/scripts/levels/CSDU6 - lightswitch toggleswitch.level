@@ -63,8 +63,8 @@
     "disable_procedure_autopopulate": "false",
     "start_blocks": "// When the switch is flipped to open, the LED will turn on.\r\nonBoardEvent(toggleSwitch, \"open\", function event(){\r\nled.on()\r\n});\r\n//When the switch is flipped to close, the LED will turn off.",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "encrypted_examples": "uVts4Yt/PzNwL3u/WL5q2DE2Si81WYEZOoHk38wzZscqtdd4flk9XuD6E+k9\nUFdsNwjycnzPwP0rebexSv/GtQ==\n"
+    "encrypted_examples": "uVts4Yt/PzNwL3u/WL5q2DE2Si81WYEZOoHk38wzZscqtdd4flk9XuD6E+k9\nUFdsNwjycnzPwP0rebexSv/GtQ==\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

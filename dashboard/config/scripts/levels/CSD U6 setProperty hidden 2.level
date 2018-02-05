@@ -52,9 +52,9 @@
     "disable_procedure_autopopulate": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "contained_level_names": null,
     "encrypted_examples": "N3oV1z3QWfudzqrrSQPO3CjzneirQJKLrCUS51+H1I0SR60KArWx3xqxTBZj\n+nVg2gnx/Gh0CBzRFBXUE4C02A==\n",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
