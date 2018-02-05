@@ -1,29 +1,28 @@
-import {assert} from '../util/configuredChai';
+import { expect } from '../../util/configuredChai';
+import Bee from '@cdo/apps/maze/bee';
+import BeeCell from '@cdo/apps/maze/beeCell';
+import MazeMap from '@cdo/apps/maze/mazeMap';
+import BeeItemDrawer from '@cdo/apps/maze/beeItemDrawer';
 
 function setGlobals() {
-  assert.isNull(document.getElementById('svgMaze'));
+  expect(document.getElementById('svgMaze')).to.be.null;
 
   const svgMaze = document.createElement('div');
   svgMaze.id = 'svgMaze';
   svgMaze.innerHTML = '<div class="pegman-location"></div>';
   document.body.appendChild(svgMaze);
 
-  assert(document, 'have a document');
-  assert(document.getElementById('svgMaze'), 'document has an svgMaze');
-  assert(document.getElementsByClassName('pegman-location').length, 1);
+  expect(document).not.to.be.undefined;
+  expect(document.getElementById('svgMaze'), 'document has an svgMaze').not.to.be.undefined;
+  expect(document.getElementsByClassName('pegman-location').length).to.equal(1);
 
   svg = document.getElementById('svgMaze');
 }
 
 function cleanupGlobals() {
   document.body.removeChild(document.getElementById('svgMaze'));
-  assert.isNull(document.getElementById('svgMaze'));
+  expect(document.getElementById('svgMaze')).to.be.null;
 }
-
-var Bee = require('@cdo/apps/maze/bee');
-var BeeCell = require('@cdo/apps/maze/beeCell');
-var MazeMap = require('@cdo/apps/maze/mazeMap');
-var BeeItemDrawer = require('@cdo/apps/maze/beeItemDrawer');
 
 var svg;
 
@@ -86,27 +85,28 @@ function validateImages(setup, defaultFlower) {
     var cloud = document.getElementById(BeeItemDrawer.cellId('cloud', 0, col));
 
     try {
-      assert.equal(img === null, imgType === null);
+      expect(img === null).to.equal(imgType === null);
 
       if (img) {
-        assert.equal(img.getAttribute('xlink:href'), skin[imgType]);
-        assert.equal(img.getAttribute('visibility'), 'visible');
-        assert.equal(img.getAttribute('x'), 50 * col);
-        assert.equal(img.getAttribute('width'), 50);
+        expect(img.getAttribute('xlink:href')).to.equal(skin[imgType]);
+        expect(img.getAttribute('visibility')).to.equal('visible');
+        expect(parseInt(img.getAttribute('x'))).to.equal(50 * col);
+        expect(parseInt(img.getAttribute('width'))).to.equal(50);
       }
 
       if (counter) {
         var actualText = counter.firstChild.nodeValue;
-        assert.equal(actualText, expectedText);
+        expect(actualText).to.equal(expectedText);
       }
 
       var actualCloud =
           !!(cloud && (cloud.getAttribute('visibility') === 'visible'));
-      assert.equal(actualCloud, expectedCloud);
+      expect(actualCloud).to.equal(expectedCloud);
 
     } catch (exc) {
       // output which item is failing
       if (exc.message) {
+        // eslint-disable-next-line no-console
         console.log(exc.message + ' for index #' + col);
       }
       throw exc;
