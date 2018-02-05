@@ -14,4 +14,8 @@
 
 class FeaturedProject < ApplicationRecord
   validates_uniqueness_of :storage_app_id
+
+  def featured?
+    !featured_at.nil? && unfeatured_at.nil?
+  end
 end
