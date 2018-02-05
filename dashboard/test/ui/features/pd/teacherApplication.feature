@@ -99,4 +99,10 @@ Scenario: Basic teacher application submission
   # Confirmation page
   Then I wait until element "h1" contains text "Thank you for submitting your application to join Code.org’s Professional Learning Program!"
   Then I see no difference for "Confirmation"
-   And I close my eyes
+  Then I see no difference for "Thank you page"
+
+  # Principal approval
+  Then I sign out
+  Then I navigate to the principal approval page for "Severus"
+  Then I wait until element "h1" contains text "2018-2019 Code.org Principal Approval Form"
+  Then I see no difference for "Principal approval form"
