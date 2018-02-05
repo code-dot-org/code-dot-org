@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
       formUrl={scriptData.formUrl}
       authTokenName={scriptData.authTokenName}
       authTokenValue={scriptData.authTokenValue}
+      existingSchoolInfo={scriptData.existingSchoolInfo}
       afterClose={unmount}
     />,
     mountPoint

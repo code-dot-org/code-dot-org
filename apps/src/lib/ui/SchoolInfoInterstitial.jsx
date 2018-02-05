@@ -39,21 +39,27 @@ export default class SchoolInfoInterstitial extends React.Component {
     authTokenName: PropTypes.string.isRequired,
     authTokenValue: PropTypes.string.isRequired,
     afterClose: PropTypes.func.isRequired,
+    existingSchoolInfo: PropTypes.object.isRequired,
   };
 
   static defaultProps = {
     afterClose: function () {},
   };
 
-  state = {
-    country: '',
-    schoolType: '',
-    schoolName: '',
-    schoolState: '',
-    schoolZip: '',
-    schoolLocation: '',
-    ncesSchoolId: '',
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      country: this.props.existingSchoolInfo.country || '',
+      schoolType: '',
+      schoolName: '',
+      schoolState: '',
+      schoolZip: '',
+      schoolLocation: '',
+      ncesSchoolId: '',
+    };
+  }
+
 
   handleSchoolInfoSubmit = () => {
     if (this.schoolInfoInputs.isValid()) {
