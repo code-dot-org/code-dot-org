@@ -39,7 +39,6 @@ module Pd::Application
   class Teacher1819Application < WorkshopAutoenrolledApplication
     include Rails.application.routes.url_helpers
     include Teacher1819ApplicationConstants
-    include RegionalPartnerTeacherconMapping
     include SchoolInfoDeduplicator
 
     def send_decision_notification_email
@@ -106,11 +105,6 @@ module Pd::Application
     before_validation :set_course_from_program
     def set_course_from_program
       self.course = PROGRAMS.key(program)
-    end
-
-    before_create :generate_application_guid, if: -> {application_guid.blank?}
-    def generate_application_guid
-      self.application_guid = SecureRandom.uuid
     end
 
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil?}
@@ -541,7 +535,7 @@ module Pd::Application
     end
 
     def assigned_workshop
-      pd_workshop_id ? Pd::Workshop.find(pd_workshop_id).location_city : ''
+      pd_workshop_id ? Pd::Workshop.find(pd_workshop_id).date_and_location_name : ''
     end
 
     def registered_workshop
@@ -753,6 +747,31 @@ module Pd::Application
           validation_type: SchoolInfo::VALIDATION_NONE
         }
       end
+    end
+
+    # @override
+    def find_default_workshop
+      get_first_selected_workshop || super
+    end
+
+    def get_first_selected_workshop
+      hash = sanitize_form_data_hash
+      workshop_ids = hash[:regional_partner_workshop_ids]
+      return nil unless workshop_ids.try(:any?)
+
+      return Pd::Workshop.find(workshop_ids.first) if workshop_ids.length == 1
+
+      # able_to_attend_multiple responses are in the format:
+      # "${friendly_date_range} in ${location} hosted by ${regionalPartnerName}"
+      # Map back to actual workshops by reconstructing the friendly_date_range
+      workshops = Pd::Workshop.find(workshop_ids)
+      hash[:able_to_attend_multiple].each do |response|
+        selected_workshop = workshops.find {|w| response.start_with?(w.friendly_date_range)}
+        return selected_workshop if selected_workshop
+      end
+
+      # No match? Return the first workshop
+      workshops.first
     end
 
     protected

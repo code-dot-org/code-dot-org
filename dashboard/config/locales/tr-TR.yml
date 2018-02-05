@@ -855,9 +855,9 @@
     hide_survey_last_answer: Bu anket anonimdir.  Öğretmen Pano yu  sonuçları görmek
       için ziyaret edin.  Not sonuçlar yalnızca en az beş öğrenci Anketi gönderdiyseniz
       görülebilir.
-    survey_submission_thankyou: Thank you for submitting this survey! The survey has
-      been cleared so that your responses stay anonymous. Note that your teacher will
-      still be able to see responses for the whole class, but without names attached.
+    survey_submission_thankyou: Anketi doldurduğunuz için teşekkürler! Anket kişisel
+      bilgilerden arındırıldığından kimliğiniz anonim kalır. Fakat unutmayın ki öğretmeniniz
+      tüm sınıfa verdiğiniz yanıtları isimsiz biçimde görebilmektedir.
   level_group-submittable:
     wrong_title: Teşekkür ederiz
     wrong_body: Cevaplarınızı gönderdiğiniz için teşekkürler.

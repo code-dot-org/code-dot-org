@@ -42,8 +42,8 @@ const styles = {
 
 const NUM_PROJECTS_TO_ADD = 12;
 
-const ProjectAppTypeArea = React.createClass({
-  propTypes: {
+class ProjectAppTypeArea extends React.Component {
+  static propTypes = {
     labKey: PropTypes.string.isRequired,
     labName: PropTypes.string.isRequired,
     labViewMoreString: PropTypes.string.isRequired,
@@ -64,29 +64,29 @@ const ProjectAppTypeArea = React.createClass({
     // from redux dispatch
     appendProjects: PropTypes.func.isRequired,
     setHasOlderProjects: PropTypes.func.isRequired,
-  },
+  };
 
-  getInitialState() {
-    return {
+  constructor(props) {
+    super(props);
+    this.state = {
       maxNumProjects: this.props.projectList ? this.props.projectList.length : 0,
       numProjects: this.props.numProjectsToShow,
-
       // Disables the View More button when a network request is pending.
       disableViewMore: false,
     };
-  },
+  }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps = (nextProps) => {
     this.setState({
       maxNumProjects: nextProps.projectList ? nextProps.projectList.length : 0
     });
-  },
+  };
 
-  viewMore() {
+  viewMore = () => {
     this.props.navigateFunction(this.props.labKey);
-  },
+  };
 
-  renderProjectCardList(projectList, max) {
+  renderProjectCardList = (projectList, max) => {
     let filteredList;
     if (projectList) {
       filteredList = this.props.hideWithoutThumbnails ?
@@ -107,9 +107,9 @@ const ProjectAppTypeArea = React.createClass({
         }
       </div>
     );
-  },
+  };
 
-  loadMore() {
+  loadMore = () => {
     if (this.state.disableViewMore) {
       return;
     }
@@ -125,7 +125,7 @@ const ProjectAppTypeArea = React.createClass({
         this.setState({disableViewMore: false});
       });
     }
-  },
+  };
 
   /**
    * Fetch additional projects of the specified type which were published
@@ -133,7 +133,7 @@ const ProjectAppTypeArea = React.createClass({
    * @returns {$.Deferred} Deferred object after the network request has
    *   completed and the done handler has been run (if successful).
    */
-  fetchOlderProjects() {
+  fetchOlderProjects = () => {
     const {projectList, labKey: projectType} = this.props;
     const oldestProject = projectList[projectList.length - 1];
     const oldestPublishedAt = oldestProject && oldestProject.projectData.publishedAt;
@@ -157,9 +157,9 @@ const ProjectAppTypeArea = React.createClass({
       // ordering of the project list.
       this.props.appendProjects(olderProjects, projectType);
     });
-  },
+  };
 
-  renderViewMoreButtons() {
+  renderViewMoreButtons = () => {
     // Show the View More button if there are more projects to show on the
     // client or if there are more we could fetch from the server.
     const {hasOlderProjects} = this.props;
@@ -186,7 +186,7 @@ const ProjectAppTypeArea = React.createClass({
         />
       </div>
     );
-  },
+  };
 
   render() {
     return (
@@ -203,7 +203,7 @@ const ProjectAppTypeArea = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default connect((state, ownProps) => ({
   hasOlderProjects: state.projects.hasOlderProjects[ownProps.labKey]

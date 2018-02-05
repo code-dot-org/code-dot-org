@@ -1,5 +1,6 @@
 import React from 'react';
 import {UnconnectedEditSectionForm as EditSectionForm} from "./EditSectionForm";
+import {action} from '@storybook/addon-actions';
 
 const testSection = {
   id: 11,
@@ -48,9 +49,9 @@ export default storybook => storybook
     return (
       <EditSectionForm
         title="Edit section details"
-        handleSave={storybook.action('handleSave')}
-        handleClose={storybook.action('handleClose')}
-        editSectionProperties={storybook.action('editSectionProperties')}
+        handleSave={action('handleSave')}
+        handleClose={action('handleClose')}
+        editSectionProperties={action('editSectionProperties')}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
         primaryAssignmentIds={[]}
@@ -64,9 +65,9 @@ export default storybook => storybook
     return (
       <EditSectionForm
         title="Edit section details"
-        handleSave={storybook.action('handleSave')}
-        handleClose={storybook.action('handleClose')}
-        editSectionProperties={storybook.action('editSectionProperties')}
+        handleSave={action('handleSave')}
+        handleClose={action('handleClose')}
+        editSectionProperties={action('editSectionProperties')}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
         primaryAssignmentIds={[]}

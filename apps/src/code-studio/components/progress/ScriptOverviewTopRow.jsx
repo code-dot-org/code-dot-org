@@ -88,7 +88,7 @@ export default class ScriptOverviewTopRow extends React.Component {
         {!professionalLearningCourse && viewAs === ViewType.Student && (
           <div>
             <Button
-              href={`/s/${scriptName}/next.next`}
+              href={`/s/${scriptName}/next`}
               text={NEXT_BUTTON_TEXT[scriptProgress]}
               size={Button.ButtonSize.large}
             />

@@ -39,8 +39,13 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     today = Date.today
     year = today.year
     # Find the next scheduled date that is at least 2 weeks away
-    scheduled_display_dates = [1, 3, 5, 11].map {|month| Date.new(year, month, 15)}
-    scheduled_display_dates.push Date.new(year + 1, 1, 15)
+    scheduled_display_dates = [
+      Date.new(year, 2, 8),
+      Date.new(year, 3, 15),
+      Date.new(year, 5, 15),
+      Date.new(year, 11, 15),
+      Date.new(year + 1, 2, 8),
+    ]
     next_date = scheduled_display_dates.select {|d| d > today && d > today + 2.weeks} [0]
 
     @user.next_census_display = next_date

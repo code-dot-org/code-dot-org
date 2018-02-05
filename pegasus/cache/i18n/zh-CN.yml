@@ -30,7 +30,7 @@
   twentyhours_text: "完成您的第一个编程一小时了吗？在此后续课程中更深入的了解计算机科学和编程的概念。"
   og_title: 'Code.org: 任何人都可以学习'
   og_title_soon: "编程一小时活动即将开始"
-  og_title_here: The Hour of Code is here!
+  og_title_here: "《编程一小时》在这里！"
   og_description: "每个学校的每个学生都应该有学习计算机科学的机会。计算机科学正在改变所有的东西。"
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
@@ -282,7 +282,7 @@
   homepage_stats_teachers: teachers use Code.org
   homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
   homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
+  homepage_stats_title: "我们正在有所作为"
   homepage_hero_text_malala: "&ldquo;我向每个国家的女孩子都发起学习《一小时编程》的挑战&rdquo;诺贝尔和平奖得主马拉拉说"
   homepage_hero_text_susan: "&ldquo;如果你能改变技术，你可以改变世界。&rdquo;苏珊，YouTube 首席执行官"
   homepage_hero_text_fistbump: "&ldquo;别总是玩电话，写上面的程序吧。&rdquo;奥巴马总统"
@@ -302,7 +302,7 @@
   homepage_hero_text_stat_students: 'Code.org有 #student_count 个学生帐户'
   homepage_hero_text_stat_served: "编程一小时：已有 #served 次参与"
   homepage_hero_hoc_is_coming: "编程一小时活动即将开始"
-  homepage_hero_hoc_is_here: The Hour of Code is here
+  homepage_hero_hoc_is_here: "《编程一小时》在这里"
   homepage_slot_text_hoc: "编程一小时"
   homepage_slot_text_frozen: "与安娜与埃尔莎一起来玩冰雪奇缘"
   homepage_slot_text_teacher: "教师的仪表板"
@@ -322,7 +322,7 @@
   homepage_action_text_girlvideo: "鼓励女生参与"
   homepage_action_text_learn: "开始学习"
   homepage_action_text_signpetition: "在请愿书上签名"
-  homepage_action_text_wincelebritychat: Win a celebrity chat
+  homepage_action_text_wincelebritychat: "赢得与名人聊天的机会"
   homepage_signpetition_dropdown: "我同意 &#x25BE;"
   homepage_diversity_pledge: "承诺多样性"
   homepage_banner_text_prizes: '12月7号到13号，编程一小时即将再次到来 '
@@ -501,7 +501,7 @@
   video_title_obama: "奥巴马总统和计算机科学"
   video_title_hoc_is_here: "编程一小时来了——任何人都可以学会"
   video_title_anybody_can_learn: "任何人都可以学习"
-  video_title_steph_curry: Hour of Code with Steph Curry
+  video_title_steph_curry: "编程一小时和Steph Curry"
   video_title_draymond_green: "编程一小时和Draymond Green"
   video_title_russell_okung: "编程一小时和Russell Okung"
   video_title_real_madrid: "编程一小时和Real Madrid"
@@ -749,7 +749,7 @@
   dashboard_students_password: "密码"
   dashboard_students_username: "用户名： %{student_username}"
   dashboard_students_email: "电子邮件: %{student_email}"
-  dashboard_students_completed_levels: "已完成的等级"
+  dashboard_students_completed_levels: "已完成的关卡"
   dashboard_students_total_lines: "代码行数"
   dashboard_students_show_secret: "显示密钥"
   dashboard_students_auto_generated: "自动生成"
@@ -1005,8 +1005,8 @@
   csp-ap_name: AP 性能任务
   csppostap_name: 'Post AP: App中的数据库'
   cspassessment_name: "完整测试 - 共50题"
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
+  csp-explore_name: AP：探索表演任务的准备工作
+  csp-create_name: AP：创建表演任务
   cspexam1-mWU7ilDYM9_name: "测试部分 1 - 25 个问题"
   cspexam2-AKwgAh1ac5_name: "测试部分 2 - 25 个问题"
   cspunit3_gradelevel: 9-12年级
@@ -1574,4 +1574,10 @@
     标签 上的"从 google 教室同步学生信息" 按钮:'
   google_sign_in_instruct: '从那里, 他们应该选择 "使用谷歌帐户登录" 选项:'
   hero_name: 'Minecraft: Hero''s Journey'
-  applab-intro_name: App Lab Intro
+  applab-intro_name: "应用程序实验室简介"
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
+  dashboard_tools: 'Tools: '
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
+  gamelab_name: Game Lab

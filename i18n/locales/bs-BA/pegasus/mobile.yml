@@ -368,7 +368,7 @@
   homepage_slot_text_link_buy: "Uključi se"
   homepage_slot_text_link_donate: "Doniraj"
   homepage_slot_text_link_shop: "T-shirts, hats, & more"
-  homepage_slot_text_link_administrators: "Bring to your school or district"
+  homepage_slot_text_link_administrators: "Bring CS to your school"
   homepage_header_codestudio: "Učeničke kreacije pomoću Studija Kodiranja"
   homepage_header_donors: "Code.org zahvaljuje svojim pristalicama"
   homepage_donors_seall: "Pogledaj sve"
@@ -669,7 +669,7 @@
   dashboard_progress_completed_too_many_blocks: "dovršeno, previše blokova"
   dashboard_progress_completed_perfect: "dovršeno, savršeno"
   dashboard_progress_furthest_level_attempted: "pokušaj posljednjeg nivoa"
-  dashboard_progress_submitted: "submitted"
+  dashboard_progress_submitted: "predano"
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: "Progress information for %{student_name} in %{script_name}"
   dashboard_progress_pair_programming: "pair programming"
@@ -928,14 +928,14 @@
   csfirst_name: "CS First"
   boxisland_name: "Box Island"
   codesters_name: "Codesters"
-  texasinstruments_name: "10 Minutes of Code"
+  texasinstruments_name: "1o minuta koda"
   teacherled_name: "Nastavno vođeni Nastavni program Sata Kodiranja"
   course1_name: "Kurs 1"
   course2_name: "Kurs 2"
   course3_name: "Kurs 3"
   course4_name: "Kurs 4"
-  coursea-draft_name: Course A
-  coursea_name: "Course A"
+  coursea-draft_name: Kurs A
+  coursea_name: "Kurs A"
   courseb-draft_name: Course B
   courseb_name: "Course B"
   coursec-draft_name: Course C
@@ -961,7 +961,7 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
-  csp1_name: 'Unit 1: The Internet'
+  csp1_name: 'Jedinica 1: internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp3-a_name: 'Unit 3: Intro Programming (version A)'
@@ -1407,7 +1407,7 @@
   processing_beyond_longdescription: "Processing je programski jezik, razvojno okruženje i online zajednica. Od 2001., Processing  je promovirao softversku pismenost u vizualnim umjetnostima i vizualnu pismenost u tehnologiji. Početno zamišljen da služi kao softverska bilježnica i za poučavanje osnova računalnog programiranja u vizualnom kontekstu, Processing je evoluirao u razvojni alat za profesionalce. Danas deseci hiljada učenika, umjetnika, dizajnera, istraživača i hobista koriste Processing za učenje, izradu prototipa i proizvodnju."
   alice_beyond_longdescription: "Korištenjem inovativnog programskog okruženja koje podržava stvaranje 3D animacija, Alice Project nudi alate i materijale za podučavanje i učenje kompjuterskog razmišljanja, rješavanja problema i programiranja kompjutera za širok spektar uzrasta i nivoa znanja."
   sphero_beyond_longdescription: "Bilo da ste učitelj ili roditelj, SPRK lekcije daju djeci zabavan brzinski kurs programiranja robota dok usput poboljšavaju matematičke i naučne vještine."
-  compatibility_hide_this_warning: "Hide this warning"
+  compatibility_hide_this_warning: "Sakrij ovo upozorenje"
   compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   starwars_shortcode: "star"
   mc_shortcode: "mc"
@@ -1429,14 +1429,14 @@
   header_educate_middle: "Middle School"
   header_educate_high: "High School"
   header_educate_hoc: "Sat Kodiranja"
-  header_educate_partner: "Partner with Us"
+  header_educate_partner: "Partner sa nama"
   header_educate_beyond: "Beyond Code.org"
-  header_educate_inspire: "Inspire a Student"
+  header_educate_inspire: "Inspiriraj učenika"
   header_educate_community: "Online Community"
   header_educate_tools: "Tools and Videos"
   header_about_us: "About Us"
   header_about_leadership: "Leadership"
-  header_about_donors: "Donors"
+  header_about_donors: "Donatori"
   header_about_partners: "Partners"
   header_about_team: "Full Team"
   header_about_news: "Newsroom"
@@ -1445,12 +1445,12 @@
   header_about_contact: "Contact Us"
   header_about_faqs: "FAQs"
   header_learn: "Learn"
-  header_teach: "Teach"
+  header_teach: "Podučavaj"
   header_stats: "Stats"
-  header_help_us: "Help Us"
+  header_help_us: "Pomogni nam"
   header_about: "About"
   header_teacher_community: "Teacher community"
-  header_help_support: 'Help and support '
+  header_help_support: 'Pomoć i podrška '
   header_report_bug: "Report bug"
   header_tutorials: "Tutorials"
   header_documentation: "Documentation"

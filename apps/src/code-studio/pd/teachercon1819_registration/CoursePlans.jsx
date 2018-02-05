@@ -19,29 +19,42 @@ export default class CoursePlans extends Teachercon1819FormComponent {
 
   static associatedFields = Object.keys(CoursePlans.labels);
 
+  static getDynamicallyRequiredFields(data) {
+    const requiredFields = [
+      'howManyHours',
+      'howManyTerms',
+      'gradingSystem'
+    ];
+
+    if (data['course'] === 'CS Principles') {
+      requiredFields.push(
+        'howOfferCsp',
+        'haveTaughtAp',
+        'haveTaughtWrittenProjectCourse'
+      );
+    }
+
+    return requiredFields;
+  }
+
   render() {
     return (
       <FormGroup>
         <h4>Section 3: Course Plans</h4>
 
         {this.props.course === "CS Principles" &&
-          <FormGroup>
+          <div>
             {this.radioButtonsFor("howOfferCsp")}
             {this.radioButtonsFor("haveTaughtAp")}
             {this.radioButtonsFor("haveTaughtWrittenProjectCourse")}
-            {this.radioButtonsFor("gradingSystem")}
-            {this.radioButtonsWithAdditionalTextFieldsFor("gradingSystem", {
-              [TextFields.other_please_list]: "grading_system_other"
-            })}
-          </FormGroup>
+          </div>
         }
 
-        {this.props.course === "CS Discoveries" &&
-          <FormGroup>
-            {this.radioButtonsFor("howManyHours")}
-            {this.radioButtonsFor("howManyTerms")}
-          </FormGroup>
-        }
+        {this.radioButtonsFor("howManyHours")}
+        {this.radioButtonsFor("howManyTerms")}
+        {this.radioButtonsWithAdditionalTextFieldsFor("gradingSystem", {
+          [TextFields.otherPleaseList]: "grading_system_other"
+        })}
 
       </FormGroup>
     );

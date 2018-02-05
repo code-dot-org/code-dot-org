@@ -36,7 +36,7 @@
          o rectángulo en 2 cadrados de mesmo tamaño. O rectángulo ten 200 pixels de longo
         e 100 pixels de altura.
       2-3 Artist 9 NEW_instruction: Termina este papaventos
-      2-3 Artist 9 REPLACEMENT_instruction: Finish drawing these stairs!
+      2-3 Artist 9 REPLACEMENT_instruction: Termina de debuxar esta escaleira!
       2-3 Artist 9_instruction: Termina este papaventos
       2-3 Artist Assessment 1_instruction: 'Avaliación: termina de debuxar o último
         dente, 25 pixels de longo e 25 pixels de altura.'
@@ -409,10 +409,9 @@
       2-3 Maze 12 (old)_instruction: |-
         Lévame até o porco, agora co bloque "repita
         veces"!
-      2-3 Maze 12 - One Move Block_instruction: |-
-        Get to the pig! But this time, you
-        can only use one `move forward` block. Do you see any other blocks that could
-        help you?
+      2-3 Maze 12 - One Move Block_instruction: Chega ata o porco! Pero desta vez
+        só podes usar un bloque de "avanzar". Ves outros bloques que poidan ser de
+        utilidade?
       2-3 Maze 12_instruction: |-
         Podes substituír estes cinco bloques por só dous bloques?
         (Pista: crea un bucle usando un bloque "repita veces")
@@ -933,11 +932,9 @@
         Usa o bloque "repita até" para levar o
         zumbi até o xirasol.
       4-5 Maze Conditionals 10_instruction: |-
-        Can you add just 3 blocks to help the
-        zombie solve a more complex maze? \r
+        Podes engadir só 3 bloques para axudar ao zombie a completar un labirinto máis complexo? \r
         \r
-        If you do it right, he can walk
-        any curvy path no matter the length!
+        Se o fas ben, poderá andar por calquera camiño curvo independentemente da súa lonxitude!
       4-5 Maze Conditionals 2_instruction: |-
         Usa o bloque "repita até" para levar o
         zumbi até o xirasol.
@@ -4357,6 +4354,7 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      MC Agent Freeplay_instruction: "**Freeplay:**  Time to explore on your own!"
       MC HOC 2016 Level 10_instruction: |-
         It's time to make your own Minecraft! Spawn
         creatures and then make them do whatever you want. Have fun!
@@ -7418,6 +7416,10 @@
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
+      Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
+      Valentine_playlab_01_instruction: "Program Kiki (Actor 1) to move left and\nright
+        when the left and right arrows are pressed. When Kiki is clicked, she\nshould
+        throw hearts towards her friends. "
       Vigenere_instruction: Test
       WhileAdventure_instruction: |-
         Our adventurer wants to collect coins. Can you
@@ -8539,8 +8541,8 @@
         Collect all of the lettuce.
         Avoid the trees and fields!
       courseC_harvester_loops_forVid_instruction: |-
-        Collect all of the corn and all
-        of the pumpkins.
+        Collect all of the corn, all of
+        the lettuce, and all of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.

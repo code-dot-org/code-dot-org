@@ -1,5 +1,6 @@
 import React from 'react';
 import ConfirmDeleteButton from './ConfirmDeleteButton';
+import {action} from '@storybook/addon-actions';
 
 export default storybook => {
   return storybook
@@ -13,7 +14,7 @@ export default storybook => {
             title="Delete table?"
             body="Are you sure you want to delete the table?"
             buttonText="Delete table"
-            onConfirmDelete={storybook.action("delete table")}
+            onConfirmDelete={action("delete table")}
           />
         )
       }]);

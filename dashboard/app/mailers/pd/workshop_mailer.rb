@@ -175,8 +175,6 @@ class Pd::WorkshopMailer < ActionMailer::Base
     # Don't send if there's no associated survey
     return unless @survey_url
 
-    @dash_code = CDO.pd_workshop_exit_survey_dash_code
-
     content_type = 'text/html'
     if @workshop.course == Pd::Workshop::COURSE_CSF
       attachments['certificate.jpg'] = generate_csf_certificate

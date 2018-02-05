@@ -335,7 +335,7 @@
     "TEXT_CHARAT_TAIL": "",
     "TEXT_CHARAT_TOOLTIP": "指定された位置に文字を返します。",
     "TEXT_CREATE_JOIN_ITEM_TOOLTIP": "テキストに項目を追加します。",
-    "TEXT_CREATE_JOIN_TITLE_JOIN": "結合",
+    "TEXT_CREATE_JOIN_TITLE_JOIN": "文字をつなげる",
     "TEXT_CREATE_JOIN_TOOLTIP": "追加、削除、またはセクションを順序変更して、ブロックを再構成します。",
     "TEXT_GET_SUBSTRING_END_FROM_END": "文字列の＃ 終わりからの＃ ",
     "TEXT_GET_SUBSTRING_END_FROM_START": "# の文字",

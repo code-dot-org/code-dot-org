@@ -31,7 +31,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"finish_line\",\r\n    \"6adbac7a-0e3f-4640-ae37-54a94a97d542\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"finish_line\": {\r\n      \"name\": \"finish_line\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/ZmPw5xh7H5t1cAqt3rnDPA/finish_line.png?version=EF4Q6UwymbxNBc81zzKZEPhh1ql4gwvO\",\r\n      \"frameSize\": {\r\n        \"x\": 81,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"EF4Q6UwymbxNBc81zzKZEPhh1ql4gwvO\"\r\n    },\r\n    \"6adbac7a-0e3f-4640-ae37-54a94a97d542\": {\r\n      \"name\": \"race_car\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2FZmPw5xh7H5t1cAqt3rnDPA%2F6adbac7a-0e3f-4640-ae37-54a94a97d542.png%3Fversion%3D_QE8AAH3dC365E.Ytt7Jk9Ce6MFxp47q\",\r\n      \"frameSize\": {\r\n        \"x\": 131,\r\n        \"y\": 71\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"_QE8AAH3dC365E.Ytt7Jk9Ce6MFxp47q\"\r\n    }\r\n  }\r\n}",
     "instructions_important": "false",
     "hide_animation_mode": "false",
