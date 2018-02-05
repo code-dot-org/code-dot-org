@@ -5,7 +5,7 @@ if (typeof global !== 'undefined') {
   global.Maze = window.Maze;
 }
 import * as blocks from "@cdo/apps/maze/blocks";
-import * as levels from "@cdo/apps/maze/levels";
+import levels from "@cdo/apps/maze/levels";
 import * as skins from "@cdo/apps/maze/skins";
 
 export default function loadMaze(options) {

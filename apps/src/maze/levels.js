@@ -28,7 +28,7 @@ var startBlocks = function (page, level) {
 /*
  * Configuration for all levels.
  */
-export default {
+const levels = {
 
   // Formerly Page 2
 
@@ -611,21 +611,21 @@ export default {
 
 // Merge in Karel levels.
 for (var levelId in karelLevels) {
-  module.exports['karel_' + levelId] = karelLevels[levelId];
+  levels['karel_' + levelId] = karelLevels[levelId];
 }
 
 // Merge in Wordsearch levels.
 for (levelId in wordsearchLevels) {
-  module.exports['wordsearch_' + levelId] = wordsearchLevels[levelId];
+  levels['wordsearch_' + levelId] = wordsearchLevels[levelId];
 }
 
 // Add some step levels
 function cloneWithStep(level, step, stepOnly) {
-  var obj = utils.extend({}, module.exports[level]);
+  var obj = utils.extend({}, levels[level]);
 
   obj.step = step;
   obj.stepOnly = stepOnly;
-  module.exports[level + '_step'] = obj;
+  levels[level + '_step'] = obj;
 }
 
 cloneWithStep('2_1', true, true);
@@ -633,3 +633,5 @@ cloneWithStep('2_2', true, false);
 cloneWithStep('2_17', true, false);
 cloneWithStep('karel_1_9', true, false);
 cloneWithStep('karel_2_9', true, false);
+
+export default levels;
