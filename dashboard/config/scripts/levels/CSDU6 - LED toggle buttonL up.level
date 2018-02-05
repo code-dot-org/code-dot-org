@@ -66,8 +66,8 @@
     "disable_procedure_autopopulate": "false",
     "start_blocks": "// When the button is down, the LED will turn on.\r\nonBoardEvent(buttonL, \"down\", function(event) {\r\n  led.on();\r\n});",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "encrypted_examples": "XNokrHz3B+r1LhvOawzAGGFieEUjlagx9eZ11o5wtVrIqJu+raJuiQcdNMmL\nmOMWab8ir50QkGISRXD16nbiXw==\n"
+    "encrypted_examples": "XNokrHz3B+r1LhvOawzAGGFieEUjlagx9eZ11o5wtVrIqJu+raJuiQcdNMmL\nmOMWab8ir50QkGISRXD16nbiXw==\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

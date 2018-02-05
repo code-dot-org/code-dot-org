@@ -51,9 +51,9 @@
     "makerlab_enabled": "false",
     "project_template_level_name": "CSD U6 setProperty clicker template",
     "palette_category_at_start": "math",
-    "contained_level_names": null,
     "encrypted_examples": "SQodDSF1ufs2dBQUIgF+z2luMX8POYWp5vsi3EOg1qKGlZb+/5rO32/sqOzp\nwtaCeJc774K886Cc59d1yFhOjA==\n",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
