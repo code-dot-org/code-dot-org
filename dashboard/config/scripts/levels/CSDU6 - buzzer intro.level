@@ -64,8 +64,8 @@
     "start_blocks": "//Drag out your buzzer block here",
     "project_template_level_name": "CSDU6 - buzzer duration template",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "encrypted_examples": "AdDVWc0qeXyoqKNO3euPpjoW5pAjGHOrL0rnGr0lo+ZLZyciq3brh6mks0sg\n/gRgRf/cIrAlIsK5+4Gbq4gVYQ==\n"
+    "encrypted_examples": "AdDVWc0qeXyoqKNO3euPpjoW5pAjGHOrL0rnGr0lo+ZLZyciq3brh6mks0sg\n/gRgRf/cIrAlIsK5+4Gbq4gVYQ==\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

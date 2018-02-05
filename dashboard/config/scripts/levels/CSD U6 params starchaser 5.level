@@ -1,9 +1,9 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-11-06T19:30:35.000Z",
+  "created_at": "2018-02-05T18:50:02.000Z",
   "level_num": "custom",
-  "user_id": 1,
+  "user_id": 324,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -132,6 +132,7 @@
       "toUpperCase": null,
       "toLowerCase": null,
       "declareAssign_list_abd": null,
+      "accessListItem": null,
       "listLength": null,
       "insertItem": null,
       "appendItem": null,
@@ -164,7 +165,8 @@
       "buzzer.frequency": null,
       "buzzer.note": null,
       "buzzer.stop": null,
-      "buzzer.play": null,
+      "buzzer.playNotes": null,
+      "buzzer.playSong": null,
       "accelerometer.getOrientation": null,
       "accelerometer.start": null,
       "accelerometer.getAcceleration": null,
@@ -183,15 +185,16 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Add Another Emotion\r\n\r\nIn the example app you saw earlier, you could set the emotion to happy, sad, or meh. Your app only has happy and sad, can you add a third emotion?\r\n\r\n# Do This\r\n\r\nUsing all of the same techniques you used for the happy and sad buttons, create a third emotion button. You could stick with meh, or you could pick an emotion of your own.\r\n\r\nWhen you're all done, feel free to add more emotions or features before submitting your final version.",
+    "markdown_instructions": "# Star Chaser\r\n\r\nNow you can add extra stars, and your functions will work with them, too.\r\n\r\n# Do This\r\n* In design mode, copy one of the stars, and change its name and color to \"yellow\".\r\n* Add a new element, \"yellow\", to your star array.\r\n* Test the game with your new star.",
     "instructions_important": "false",
-    "submittable": "true",
+    "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "contract_highlight": "false",
@@ -202,7 +205,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "project_template_level_name": "CSD U6 emotion machine template",
+    "project_template_level_name": "CSD U6 params starchaser template",
     "hide_share_and_remix": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -214,19 +217,20 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "hide_view_data_button": "true",
-    "show_debug_watch": "true",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "encrypted_examples": "cdWe/UeRJXIAsAzFddwu2N00I2eWrhIMXsFgzfHnrUqGcTXCMXy+4IEIiSjr\nP6/O9jDeX6PuJOVwHkO7bKmUDQ==\n",
-    "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-11-03 19:04:49 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-03 19:58:52 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-03 21:29:48 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-06 19:27:43 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-06 19:29:39 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-06 19:39:18 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"submittable\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-02-02 17:23:35 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-11 19:15:37 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-01-11 19:17:32 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-01-11 19:18:58 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-01-11 19:22:02 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-01-11 19:24:13 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-05 18:51:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -56,8 +56,8 @@
     "makerlab_enabled": "false",
     "top_level_procedure_autopopulate": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_U6L06P03\",\r\n  \"callout_text\": \"Add your block here.\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"friend's name from\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom center\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": 200,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "contained_level_names": null,
-    "encrypted_examples": "RdB+Gw8wuTdYE5+G2obMuu8iIUj414HlE6aIK38nX7ozMASdZe7vIkQEYQ1w\nsgaIYfAx32YPtZMpTnJp2prLBw==\n"
+    "encrypted_examples": "RdB+Gw8wuTdYE5+G2obMuu8iIUj414HlE6aIK38nX7ozMASdZe7vIkQEYQ1w\nsgaIYfAx32YPtZMpTnJp2prLBw==\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -73,10 +73,11 @@ def main
       total_http_requests = unicorn_metric.datapoints.sum(&:sum) unless unicorn_metric.nil?
       status[:activity] = total_http_requests
       instance = Aws::EC2::Instance.new(id: stack.resource('WebServer').physical_resource_id)
-      status[:previous_instance_status] = instance.state.name
+      status[:previous_instance_status] = instance.state.name unless instance.nil?
 
       # stop instances with activity below threshold if they are running (state code == 16)
       if total_http_requests.between?(1, ACTIVITY_THRESHOLD) &&
+          instance &&
           instance.state.code == 16 &&
           stack.creation_time < Time.now - GRACE_PERIOD_DAYS.days
         stop_result = instance.stop(
@@ -88,12 +89,12 @@ def main
         status[:current_instance_status] = stop_result.state.name
         status[:instance_status_change_reason] = 'Instance activity is below threshold'
       else
-        status[:current_instance_status] = instance.reload.state.name
+        status[:current_instance_status] = instance.reload.state.name unless instance.nil?
         status[:instance_status_change_reason] = 'Instance is already stopped or activity is above threshold'
       end
 
     rescue StandardError => error
-      status[:current_instance_status] = instance.try(:reload).state.name
+      status[:current_instance_status] = instance.reload.state.name unless instance.nil?
       status[:instance_status_change_reason] = error.to_s
     ensure
       job_status.push(status)
