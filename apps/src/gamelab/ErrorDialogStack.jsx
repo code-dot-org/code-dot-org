@@ -8,6 +8,7 @@ import gamelabMsg from '@cdo/gamelab/locale';
 import msg from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import * as animationActions from './animationListModule';
 
 
 /**
@@ -22,28 +23,40 @@ class ErrorDialogStack extends React.Component {
     animationList: PropTypes.object
   };
 
+  handleDeleteChoice(key){
+    this.props.deleteAnimation(key);
+    this.props.dismissError();
+  }
+
   render() {
     if (this.props.errors.length === 0) {
       return null;
     }
 
+    const error = this.props.errors[0];
+    const animationName =  (this.props.animationList.propsByKey[error.error_cause]) ?
+      this.props.animationList.propsByKey[error.error_cause].name : "";
+
     return (
       <BaseDialog
         isOpen
-        hideCloseButton
-        useDeprecatedGlobalStyles={this.props.errors[0].error_type !== "anim_load"}
+        uncloseable={error.error_type==='anim_load'}
+        hideCloseButton={error.error_type==='anim_load'}
+        useDeprecatedGlobalStyles={error.error_type!=='anim_load'}
         handleClose={this.props.dismissError}
       >
-        <h1>{this.props.errors[0].message}</h1>
-        {this.props.errors[0].error_type === 'anim_load' &&
+        <h1>{error.message}</h1>
+        {/* If this is the result of animation load failure, display additional
+            information and choice to reload the page or delete the animation */}
+        {error.error_type === 'anim_load' &&
           <div>
-            <p>{gamelabMsg.errorLoadingAnimation({ animationName: this.props.animationList.propsByKey[this.props.errors[0].error_cause].name })}</p>
+            <p>{gamelabMsg.errorLoadingAnimation({ animationName: animationName })}</p>
             <p>{msg.contactWithoutEmail()} <a href={pegasus('/contact')}>https://code.org/contact</a>.</p>
             <DialogFooter>
-              {this.props.errors[0].error_cause &&
+              {error.error_cause &&
                 <Button
-                  text={msg.delete() +  " \"" + this.props.animationList.propsByKey[this.props.errors[0].error_cause].name + "\""}
-                  onClick={() => this.props.deleteAnimation(this.props.errors[0].error_cause)}
+                  text={msg.delete() +  " \"" + animationName + "\""}
+                  onClick={() => this.handleDeleteChoice(error.error_cause)}
                   color="red"
                 />
               }
@@ -69,6 +82,9 @@ export default connect(
     return {
       dismissError: function () {
         dispatch(actions.dismissError());
+      },
+      deleteAnimation: function (key) {
+        dispatch(animationActions.deleteAnimation(key));
       }
     };
   }
