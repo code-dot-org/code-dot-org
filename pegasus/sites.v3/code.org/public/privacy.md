@@ -24,7 +24,7 @@ Our Privacy Policy is fueled by our commitment to the following Privacy Principl
 5. Any student academic data provided by us or by our school district partners to third party evaluators for the purpose of evaluating our courses in meeting our mission will be de-identified (per standard industry practice).
 6. We strive to provide you with access to and control over the information you give us (as detailed below), and we take the protection of your information very seriously.
 7. When student Personal Information is provided to Code.org by a school or school district, Code.org agrees to retain such information as directed by the school or school district.
-
+8. We hold our partners to privacy and security practices no less stringent than our own.
 
 
 ## Privacy Policy
@@ -122,7 +122,7 @@ To track information about use of our Sites, we use various technological tools.
 A pixel tag (also known as a “clear GIF” or “web beacon”) is a tiny image – typically just one pixel – that can be placed on a Web page or in an email to you to tell us when you have displayed that page or opened that email.
 
 <a id="thirdparties"></a>
-## Third Parties
+## Third Party Service Providers
 Code.org may use a variety of third-party service providers, such as email services to send email, analytics companies to understand our Website usage, and social networking platforms to host our videos. We may allow third-party service providers to place and read their own cookies, web beacons, and similar technologies to collect information through the Website. This technical information is collected directly and automatically by these third parties.
 
 We use third party services to implement our Website and all of its associated services and features, including Amazon Web Services, Pardot, VoterVoice, and MailChimp (for sending email), and Twilio (for sending User code-creations to phones). Personal Information or Persistent Identifiers will be used and stored by these third parties solely in context as an implementation services provider to Code.org, but these third parties will not receive any ownership or have any other rights to access or use this Personal Information or Persistent Identifiers. In particular, when we use Twilio to send text messages to deliver User code-creations to phones, Code.org does NOT store the phone number, and further instructs Twilio to delete the phone number after delivering the text message, but it is possible that underlying phone-service providers may retain this information.
@@ -189,6 +189,8 @@ Code.org’s officers, directors, employees, agents and contractors must have a 
 ## How We Share or Transfer Data
 
 We do not rent or sell Personal Information, Persistent Identifiers, or any other information that we collect from Users, or exploit it for financial gain in any other way. Code.org will never share or grant rights to Personal Information with other third-party organizations to use without your consent, except as part of a specific program or feature for which you will have the explicit ability and choice to opt-in.
+
+Whenever we share Student personal data, we hold our partners to privacy and security practices no less stringent than our own.
 
 In particular, we do not share any Personal Information you provide with our donors or sponsors (other than the "Public Reporting" of de-identified reports as described below).
 

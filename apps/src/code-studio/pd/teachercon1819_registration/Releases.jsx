@@ -15,8 +15,8 @@ export default class Releases extends Teachercon1819FormComponent {
   ];
 
   static labels = {
-    photoRelease: "Do you agree to the conditions in the photo release?",
-    liabilityWaiver: "Do you agree to the conditions in the liability waiver?",
+    photoRelease: "I agree to the conditions in the photo release.",
+    liabilityWaiver: "I agree to the conditions in the liability waiver.",
     agreeShareContact: "By submitting this application, I agree to share my contact information and registration with Code.org's Regional Partners.",
   };
 
@@ -28,11 +28,11 @@ export default class Releases extends Teachercon1819FormComponent {
           <ControlLabel>
             Please read this <a target="_blank" href="https://docs.google.com/document/d/12NVUcqccNRbVukoGMCserwSpg4vfG0vNlEqTxr6oit0/edit">photo release.</a>
           </ControlLabel>
-          {this.selectFor("photoRelease", { placeholder: "--" })}
+          {this.singleCheckboxFor("photoRelease")}
           <ControlLabel>
             Please read this <a target="_blank" href="https://docs.google.com/document/d/15N5N1m-BPCU7obQDf7FLLhEt3IComFGB1u3N6kEQR6k/edit">liability waiver.</a>
           </ControlLabel>
-          {this.selectFor("liabilityWaiver", { placeholder: "--" })}
+          {this.singleCheckboxFor("liabilityWaiver")}
         </FormGroup>
 
         {(

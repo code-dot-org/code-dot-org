@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import FieldGroup from './FieldGroup';
+import {action} from '@storybook/addon-actions';
 
 class TestWrapper extends React.Component {
   constructor(props) {
@@ -50,7 +51,7 @@ export default storybook => {
           id="basic"
           type="text"
           label="this is a basic fieldgroup"
-          onChange={storybook.action('onChange')}
+          onChange={action('onChange')}
         />
       )
     }, {
@@ -60,7 +61,7 @@ export default storybook => {
           id="dropdown"
           componentClass="select"
           label="a dropdown with children"
-          onChange={storybook.action('onChange')}
+          onChange={action('onChange')}
         >
           <option>Please Select One:</option>
           <option value="first">One</option>
@@ -71,7 +72,7 @@ export default storybook => {
     }, {
       name: 'full-featured example',
       story: () => (
-        <TestWrapper onChange={storybook.action('onChange')} />
+        <TestWrapper onChange={action('onChange')} />
       )
     }]);
 };

@@ -32,7 +32,7 @@ module AWS
     # TODO(asherkach): This is not a constant as it is mutated later. Fix the naming STYLE.
     CONFIG = {
       pegasus: {
-        aliases: [CDO.pegasus_hostname] + (['i18n'] + CDO.partners).map {|x| CDO.canonical_hostname("#{x}.code.org")},
+        aliases: [CDO.pegasus_hostname] + CDO.partners.map {|x| CDO.canonical_hostname("#{x}.code.org")},
         origin: "#{ENV['RACK_ENV']}-pegasus.code.org",
         # ACM domain name
         ssl_cert: 'code.org',
