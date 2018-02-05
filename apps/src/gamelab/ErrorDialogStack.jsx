@@ -34,7 +34,7 @@ class ErrorDialogStack extends React.Component {
     }
 
     const error = this.props.errors[0];
-    const animationName =  (this.props.animationList.propsByKey[error.error_cause]) ?
+    const animationName =  (this.props.animationList && this.props.animationList.propsByKey[error.error_cause]) ?
       this.props.animationList.propsByKey[error.error_cause].name : "";
 
     return (
@@ -89,3 +89,5 @@ export default connect(
     };
   }
 )(ErrorDialogStack);
+
+export const UnconnectedErrorDialogStack = ErrorDialogStack;
