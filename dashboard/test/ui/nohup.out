@@ -1,3 +1,0 @@
-[otherSites] Starting UI tests for ChromeLatestWin7_otherSites_eyes
-[otherSites] cucumber features/otherSites.feature  -S -t ~@skip -t @eyes -t ~@eyes_mobile -t ~@local_only -t ~@only_mobile -t ~@chrome_before_62 --format html --out log/ChromeLatestWin7_otherSites_eyes_output.html -f pretty
-[otherSites] UI tests for ChromeLatestWin7_otherSites_eyes [0;32;49msucceeded[0m (6:15 minutes, 7 passed)

@@ -1,31 +1,31 @@
-import {assert} from '../util/configuredChai';
+import { expect } from '../../util/configuredChai';
 
-var WordSearch = require('@cdo/apps/maze/wordsearch');
+import WordSearch from '@cdo/apps/maze/wordsearch';
 
 function setGlobals() {
   document.body.innerHTML = '<svg id="svgMaze"></svg>';
 }
 
 describe("wordsearch: letterValue", function () {
-  assert(WordSearch.START_CHAR !== undefined);
+  expect(WordSearch.START_CHAR).not.to.be.undefined;
 
   it("letterValue", function () {
-    assert.equal(WordSearch.letterValue('A', true), 'A');
-    assert.equal(WordSearch.letterValue('B', true), 'B');
-    assert.equal(WordSearch.letterValue('Z', true), 'Z');
+    expect(WordSearch.letterValue('A', true)).to.equal('A');
+    expect(WordSearch.letterValue('B', true)).to.equal('B');
+    expect(WordSearch.letterValue('Z', true)).to.equal('Z');
 
-    assert.equal(WordSearch.letterValue('Ax', true), 'A');
-    assert.equal(WordSearch.letterValue('Bx', true), 'B');
-    assert.equal(WordSearch.letterValue('Zx', true), 'Z');
+    expect(WordSearch.letterValue('Ax', true)).to.equal('A');
+    expect(WordSearch.letterValue('Bx', true)).to.equal('B');
+    expect(WordSearch.letterValue('Zx', true)).to.equal('Z');
 
-    assert.equal(WordSearch.letterValue(2, true), WordSearch.START_CHAR);
+    expect(WordSearch.letterValue(2, true)).to.equal(WordSearch.START_CHAR);
   });
 });
 
 describe("wordsearch: randomLetter", function () {
   it ("randomLetter without restrictions", function () {
     for (var i = 0; i < 100; i++) {
-      assert((/^[A-Z]$/).test(WordSearch.randomLetter()));
+      expect(WordSearch.randomLetter()).to.match(/^[A-Z]$/);
     }
   });
 
@@ -33,11 +33,11 @@ describe("wordsearch: randomLetter", function () {
     var allChars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
       "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     var letter = WordSearch.randomLetter(allChars.slice(0, -1));
-    assert.equal(letter, 'Z', 'all other chars were restricted');
+    expect(letter, 'all other chars were restricted').to.equal('Z');
 
     for (var i = 0; i < 200; i++) {
       letter = WordSearch.randomLetter(['A']);
-      assert((/^[B-Z]$/).test(letter), "failed on : " + letter);
+      expect(letter, "failed on : " + letter).to.match(/^[B-Z]$/);
     }
   });
 });

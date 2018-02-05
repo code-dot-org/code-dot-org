@@ -5,7 +5,6 @@ import Joining from './Joining';
 import TravelPlans from './TravelPlans';
 import CoursePlans from './CoursePlans';
 import Releases from './Releases';
-import Confirmation from './Confirmation';
 
 import { TeacherSeatAcceptanceOptions } from '@cdo/apps/generated/pd/teachercon1819RegistrationConstants';
 
@@ -53,16 +52,6 @@ export default class Teachercon1819Registration extends FormController {
     }
 
     pageComponents.push(Releases);
-
-    // We want to include the confirmation page by default, but remove it if the
-    // teacher has responded to the "accept seat" question with something other
-    // than yes. It would of course be easier to just add the confirmation page
-    // once they respond yes, but if we do that then the user-visible page count
-    // will _grow_ as they progress through the form, which is a much weirder
-    // user experience than it shrinking.
-    if (!(this.state.data.teacherAcceptSeat && this.state.data.teacherAcceptSeat !== TeacherSeatAcceptanceOptions.accept)) {
-      pageComponents.push(Confirmation);
-    }
 
     return pageComponents;
   }

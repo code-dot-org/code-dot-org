@@ -59,6 +59,27 @@ describe('ProjectAppTypeArea', () => {
       expect(stubAjax).not.to.have.been.called;
     });
 
+    it('renders a working link to view more projects of a specific type', () => {
+      var viewMoreLink = "more App Lab projects";
+      const wrapper = mount(
+        <ProjectAppTypeArea
+          labKey="applab"
+          labName="App Lab"
+          labViewMoreString={viewMoreLink}
+          projectList={generateFakeProjects(30, 'applab')}
+          numProjectsToShow={12}
+          galleryType="public"
+          navigateFunction={stubNavigate}
+          isDetailView={true}
+          store={getStore()}
+        />
+      );
+      expect(wrapper.find('.viewMoreLink')).to.have.length(1);
+      expect(wrapper.find('.viewMoreLink').text()).to.equal(viewMoreLink);
+      wrapper.find('.viewMoreLink').simulate('click');
+      expect(stubNavigate).to.have.been.called;
+    });
+
     it('displays more projects when View More is pressed', () => {
       // some of the most useful selectors like [text="View more"] don't work
       // with mount(). see: https://github.com/airbnb/enzyme/issues/534

@@ -13,23 +13,48 @@ Workshops are the core of Code.org's Teacher [Professional Learning Program](htt
 
 <img style="float: right; margin-left: 10px; width: 400px" src="/images/pd-2014-15.png"/>
 
-<br/>
+- **[Announcements](#announce)**
+- **[Workshop Dashboard](#dashboard)**
+- Professional Learning Program [One-Pager](https://code.org/files/PLProgramsOverview_1-Pager.pdf)
+- 2016 'Planning Code.org Summer Workshops' webinar [slides](https://docs.google.com/presentation/d/1zFiNhlHqk6Gldzpbyc_MbgA0ovTswa4cns0AfT8jdAc/edit#slide=id.gdebb9aea3_0_101)
+
 ### Workshop Requirements and Preparation:
 
 - **[CS Fundamentals](#csf)**<br/>
 - **[CS Discoveries & CS Principles](#csp)**<br/>
 
-Click on the following for more information about:
 
-- The **[Workshop Dashboard](#dashboard)**
-- Professional Learning Program [One-Pager](https://code.org/files/PLProgramsOverview_1-Pager.pdf)
 
 
 <br/>
 
 
 
-[Click here](https://docs.google.com/presentation/d/1zFiNhlHqk6Gldzpbyc_MbgA0ovTswa4cns0AfT8jdAc/edit#slide=id.gdebb9aea3_0_101) to review the slides from the 2016 'Planning Code.org Summer Workshops' webinar.
+________________
+<a id="announce"></a>
+
+## Announcements
+
+
+#### Academic Year PD Options
+
+Be sure to review the [Recommendations for Supporting Academic Year Workshop Challenges](https://docs.google.com/document/d/1gSCtI19On4slBun5EsiYcRXs6_P7K0dkk25_mMqvVmg/edit#). Solutions you’d like to implement must be declared to your Regional Manager by February 28, 2018.
+
+<br>
+
+#### Quarter 3 & 4 Options for AP/non-AP Teachers CS Principles Teachers:
+
+
+Content about the Advancement Placement (AP) exam is the focus of the second half of the Quarter 3 and Quarter 4 CS Principles workshop. Many of you have cohorts that are mixed, ie. AP teachers and non-AP teachers. It can be challenging for facilitators to address the needs of both groups of teachers at the same time. <br>
+
+Based on your particular cohort and workshop training environment, here are a few options for you to consider if you have a mixed cohort. We suggest checking with your facilitators before making changes.
+
+- Option 1: “Do Nothing” - this means that some of the afternoon content will be less relevant and engaging for some teachers.
+-  Option 2: “Two Rooms” - if you have the option logistically, you can split the workshop into two rooms for the afternoon, with one facilitator in each room. If you choose this option your facilitators need to be willing to spend extra time preparing for a sessions outside the normal workshop agenda. Please check that they are willing to make that extra time commitment before choosing this option.
+-  Option 3: “Go Home After Lunch” - if the majority of your cohort is AP, you could give the non-AP group the option to go home after lunch. This won’t affect your workshop attendance minimums for payment. If you use this option, we would recommend talking to your facilitators to see if they would be willing to host dedicated office hours for the non-AP group. 
+
+[**Back to the top**](#top)
+<br/>
 
 ________________
 <a id="csf"></a>
