@@ -1,8 +1,22 @@
 -# Rendering this partial causes the school info interstitial to be shown to the
 -# user.  Rendering this partial into a cached view may not work properly.
+
+- require 'country_codes'
+- require 'state_abbr'
+- require 'geocoder'
+
+- location = Geocoder.search(request.ip).try(:first)
+-# geocoder sometimes shows localhost's country as RD/Reserved
+- us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
+
+- existing_school_info ||= {}
+- existing_school_info[:country] ||= 'United States' if us_ip
+
+- script_data = {}
+- script_data['formUrl'] = registration_url('user')
+- script_data['authTokenName'] = request_forgery_protection_token.to_s
+- script_data['authTokenValue'] = form_authenticity_token
+- script_data['existingSchoolInfo'] = existing_school_info
+
 - content_for(:head) do
-  - script_data = {}
-  - script_data['formUrl'] = registration_url('user')
-  - script_data['authTokenName'] = request_forgery_protection_token.to_s
-  - script_data['authTokenValue'] = form_authenticity_token
   %script{ src: minifiable_asset_path('js/schoolInfoInterstitial.js'), data: {schoolinfointerstitial: script_data.to_json}}
