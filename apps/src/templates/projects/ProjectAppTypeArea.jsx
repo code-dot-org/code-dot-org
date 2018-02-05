@@ -76,17 +76,17 @@ class ProjectAppTypeArea extends React.Component {
     };
   }
 
-  componentWillReceiveProps = (nextProps) => {
+  componentWillReceiveProps(nextProps) {
     this.setState({
       maxNumProjects: nextProps.projectList ? nextProps.projectList.length : 0
     });
-  };
+  }
 
   viewMore = () => {
     this.props.navigateFunction(this.props.labKey);
   };
 
-  renderProjectCardList = (projectList, max) => {
+  renderProjectCardList(projectList, max) {
     let filteredList;
     if (projectList) {
       filteredList = this.props.hideWithoutThumbnails ?
@@ -107,7 +107,7 @@ class ProjectAppTypeArea extends React.Component {
         }
       </div>
     );
-  };
+  }
 
   loadMore = () => {
     if (this.state.disableViewMore) {
@@ -133,7 +133,7 @@ class ProjectAppTypeArea extends React.Component {
    * @returns {$.Deferred} Deferred object after the network request has
    *   completed and the done handler has been run (if successful).
    */
-  fetchOlderProjects = () => {
+  fetchOlderProjects() {
     const {projectList, labKey: projectType} = this.props;
     const oldestProject = projectList[projectList.length - 1];
     const oldestPublishedAt = oldestProject && oldestProject.projectData.publishedAt;
@@ -157,7 +157,7 @@ class ProjectAppTypeArea extends React.Component {
       // ordering of the project list.
       this.props.appendProjects(olderProjects, projectType);
     });
-  };
+  }
 
   renderViewMoreButtons = () => {
     // Show the View More button if there are more projects to show on the
@@ -192,7 +192,11 @@ class ProjectAppTypeArea extends React.Component {
     return (
       <div style={styles.grid}>
         <h2 style={styles.labHeading}> {this.props.labName} </h2>
-        <span style={styles.viewMore} onClick={this.viewMore}>
+        <span
+          className="viewMoreLink"
+          style={styles.viewMore}
+          onClick={this.viewMore}
+        >
           {this.props.isDetailView && <i className="fa fa-angle-left" style={{paddingRight: 6}} ></i>}
           {this.props.labViewMoreString}
           {!this.props.isDetailView && <i className="fa fa-angle-right" style={{paddingLeft: 6}} ></i>}
