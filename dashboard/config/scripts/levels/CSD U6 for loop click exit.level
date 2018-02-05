@@ -110,10 +110,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "markdown_instructions": "# Knowing When to Stop\r\n\r\nIf you clicked the button too many times in the last level, you got an error. Whenever you're writing code that repeats, you should think about when to _stop_ repeating.\r\n\r\n# Do This\r\n\r\nThis program is similar to the previous one, but there is a conditional inside the event handler. You'll need to complete the conditional so that we don't try to toggle an LED that doesn't exist.\r\n\r\n_Would your code work without changes for a board with more or fewer LEDs? If not, could you modify it so it would?_",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
