@@ -1,8 +1,7 @@
-import {assert} from '../util/configuredChai';
-
-var Bee = require('@cdo/apps/maze/bee');
-var BeeCell = require('@cdo/apps/maze/beeCell');
-var MazeMap = require('@cdo/apps/maze/mazeMap');
+import { expect } from '../../util/configuredChai';
+import Bee from '@cdo/apps/maze/bee';
+import BeeCell from '@cdo/apps/maze/beeCell';
+import MazeMap from '@cdo/apps/maze/mazeMap';
 
 var baseLevel = {
   honeyGoal: 1,
@@ -23,9 +22,9 @@ describe("Bee", function () {
       level: baseLevel
     };
     delete config.level.flowerType;
-    assert.throws(function () {
+    expect(() => {
       new Bee(maze, null, config);
-    }, Error, /bad flowerType for Bee/);
+    }).to.throw(/bad flowerType for Bee/);
   });
 
 
@@ -36,9 +35,9 @@ describe("Bee", function () {
         flowerType: 'invalid'
       })
     };
-    assert.throws(function () {
+    expect(() => {
       new Bee(maze, null, config);
-    }, Error, /bad flowerType for Bee/);
+    }).to.throw(/bad flowerType for Bee/);
   });
 
   describe("isRedFlower", function () {
@@ -60,7 +59,7 @@ describe("Bee", function () {
         map: MazeMap.parseFromOldValues(config.level.map, config.level.initialDirt, BeeCell)
       };
       var bee = new Bee(maze, null, config);
-      assert.equal(bee.isRedFlower(0, 0), expected, msg);
+      expect(bee.isRedFlower(0, 0), msg).to.equal(expected);
     }
 
     it("red default", function () {
