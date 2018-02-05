@@ -19,7 +19,7 @@ FactoryGirl.define do
     transient do
       num_sessions 0
       num_facilitators 0
-      sessions_from Date.today + 9.hours # Start time of the first session, then one per day after that.
+      sessions_from {Date.today + 9.hours} # Start time of the first session, then one per day after that.
       each_session_hours 6
       num_enrollments 0
       enrolled_and_attending_users 0
@@ -462,8 +462,8 @@ FactoryGirl.define do
 
   factory :pd_facilitator_teachercon_attendance, class: 'Pd::FacilitatorTeacherconAttendance' do
     association :user, factory: :facilitator, strategy: :create
-    tc1_arrive Date.new(2017, 8, 23)
-    tc1_depart Date.new(2017, 8, 29)
+    tc1_arrive {Date.new(2017, 8, 23)}
+    tc1_depart {Date.new(2017, 8, 29)}
   end
 
   factory :pd_enrollment, class: 'Pd::Enrollment' do
