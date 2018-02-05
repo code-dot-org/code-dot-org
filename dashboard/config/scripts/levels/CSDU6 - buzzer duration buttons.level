@@ -62,8 +62,8 @@
     "disable_procedure_autopopulate": "false",
     "start_blocks": "//Plays a long buzz\r\nonBoardEvent(buttonL, \"down\", function event(){\r\n \r\n});\r\n//Plays a short buzz\r\nonBoardEvent(buttonR, \"down\", function event(){\r\n \r\n});",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "encrypted_examples": "xm1oB6zz42Hd5B6wcWeiGBLIR0B4y/xu/g6oIsQMN0hNajsGyumWExKPqJXh\nsMiP/5h63hxv/OfnodViegYJ2w==\n"
+    "encrypted_examples": "xm1oB6zz42Hd5B6wcWeiGBLIR0B4y/xu/g6oIsQMN0hNajsGyumWExKPqJXh\nsMiP/5h63hxv/OfnodViegYJ2w==\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
