@@ -35,7 +35,6 @@ const utils = require('../utils');
 const constants = require('../constants');
 const TestResults = constants.TestResults;
 const ResultType = constants.ResultType;
-const SVG_NS = constants.SVG_NS;
 const generateCodeAliases = require('../dropletUtils').generateCodeAliases;
 const getStore = require('../redux').getStore;
 const studioApp = require('../StudioApp').singleton;
@@ -44,13 +43,12 @@ const getContainedLevelResultInfo = containedLevels.getContainedLevelResultInfo;
 const postContainedLevelAttempt = containedLevels.postContainedLevelAttempt;
 const runAfterPostContainedLevel = containedLevels.runAfterPostContainedLevel;
 
+const AnimationsController = require('./animationsController');
 const ExecutionInfo = require('./executionInfo');
 const MazeMap = require('./mazeMap');
 const MazeVisualizationColumn = require('./MazeVisualizationColumn');
 const api = require('./api');
 const drawMap = require('./drawMap');
-const displayPegman = drawMap.displayPegman;
-const getPegmanYForRow = drawMap.getPegmanYForRow;
 const dropletConfig = require('./dropletConfig');
 const mazeReducer = require('./redux');
 const getSubtypeForSkin = require('./mazeUtils').getSubtypeForSkin;
@@ -74,6 +72,7 @@ module.exports = class Maze {
     this.map;
     this.subtype;
     this.executionInfo;
+    this.animationsController;
 
     this.animating_;
     this.response;
@@ -151,94 +150,6 @@ module.exports = class Maze {
     this.MAZE_WIDTH = this.SQUARE_SIZE * this.map.COLS;
     this.MAZE_HEIGHT = this.SQUARE_SIZE * this.map.ROWS;
     this.PATH_WIDTH = this.SQUARE_SIZE / 3;
-  }
-
-  createAnimations_(svg) {
-    // Add idle pegman.
-    if (this.skin.idlePegmanAnimation) {
-      this.createPegmanAnimation_(svg, {
-        idStr: 'idle',
-        pegmanImage: this.skin.idlePegmanAnimation,
-        row: this.subtype.start.y,
-        col: this.subtype.start.x,
-        direction: this.startDirection,
-        numColPegman: this.skin.idlePegmanCol,
-        numRowPegman: this.skin.idlePegmanRow
-      });
-
-      if (this.skin.idlePegmanCol > 1 || this.skin.idlePegmanRow > 1) {
-        // our idle is a sprite sheet instead of a gif. schedule cycling through
-        // the frames
-        var numFrames = this.skin.idlePegmanRow;
-        var idlePegmanIcon = document.getElementById('idlePegman');
-        var timePerFrame = 600; // timeForAnimation / numFrames;
-        var idleAnimationFrame = 0;
-
-        setInterval(() => {
-          if (idlePegmanIcon.getAttribute('visibility') === 'visible') {
-            this.updatePegmanAnimation_({
-              idStr: 'idle',
-              row: this.subtype.start.y,
-              col: this.subtype.start.x,
-              direction: this.startDirection,
-              animationRow: idleAnimationFrame
-            });
-            idleAnimationFrame = (idleAnimationFrame + 1) % numFrames;
-          }
-        }, timePerFrame);
-      }
-    }
-
-    if (this.skin.celebrateAnimation) {
-      this.createPegmanAnimation_(svg, {
-        idStr: 'celebrate',
-        pegmanImage: this.skin.celebrateAnimation,
-        row: this.subtype.start.y,
-        col: this.subtype.start.x,
-        direction: tiles.Direction.NORTH,
-        numColPegman: this.skin.celebratePegmanCol,
-        numRowPegman: this.skin.celebratePegmanRow
-      });
-    }
-
-    // Add the hidden dazed pegman when hitting the wall.
-    if (this.skin.wallPegmanAnimation) {
-      this.createPegmanAnimation_(svg, {
-        idStr: 'wall',
-        pegmanImage: this.skin.wallPegmanAnimation
-      });
-    }
-
-    // create element for our hitting wall spritesheet
-    if (this.skin.hittingWallAnimation && this.skin.hittingWallAnimationFrameNumber) {
-      this.createPegmanAnimation_(svg, {
-        idStr: 'wall',
-        pegmanImage: this.skin.hittingWallAnimation,
-        numColPegman: this.skin.hittingWallPegmanCol,
-        numRowPegman: this.skin.hittingWallPegmanRow
-      });
-      document.getElementById('wallPegman').setAttribute('visibility', 'hidden');
-    }
-
-    // Add the hidden moving pegman animation.
-    if (this.skin.movePegmanAnimation) {
-      this.createPegmanAnimation_(svg, {
-        idStr: 'move',
-        pegmanImage: this.skin.movePegmanAnimation,
-        numColPegman: 4,
-        numRowPegman: (this.skin.movePegmanAnimationFrameNumber || 9)
-      });
-    }
-
-    // Add wall hitting animation
-    if (this.skin.hittingWallAnimation) {
-      var wallAnimationIcon = document.createElementNS(SVG_NS, 'image');
-      wallAnimationIcon.setAttribute('id', 'wallAnimation');
-      wallAnimationIcon.setAttribute('height', this.SQUARE_SIZE);
-      wallAnimationIcon.setAttribute('width', this.SQUARE_SIZE);
-      wallAnimationIcon.setAttribute('visibility', 'hidden');
-      svg.appendChild(wallAnimationIcon);
-    }
   }
 
   /**
@@ -342,7 +253,7 @@ module.exports = class Maze {
       visualizationColumn.style.width = this.MAZE_WIDTH + 'px';
 
       drawMap.default(svg, this.skin, this.subtype, this.map, this.SQUARE_SIZE);
-      this.createAnimations_(svg);
+      this.animationsController = new AnimationsController(this, svg);
 
       var stepButton = document.getElementById('stepButton');
       dom.addClickTouchEvent(stepButton, this.stepButtonClick_);
@@ -444,6 +355,24 @@ module.exports = class Maze {
     }
   };
 
+  scheduleAnimations_(singleStep) {
+    this.animationsController.scheduleAnimations(singleStep, () => {
+      this.animating_ = false;
+      if (studioApp().isUsingBlockly()) {
+        // reenable toolbox
+        Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+      }
+      // If stepping and we failed, we want to retain highlighting until
+      // clicking reset.  Otherwise we can clear highlighting/disabled
+      // blocks now
+      if (!singleStep || this.result === ResultType.SUCCESS) {
+        this.reenableCachedBlockStates_();
+        studioApp().clearHighlighting();
+      }
+      this.displayFeedback_();
+    });
+  }
+
   /**
    * App specific reset button click logic.  studioApp().resetButtonClick will be
    * called first.
@@ -469,92 +398,12 @@ module.exports = class Maze {
   };
 
   /**
-   * Calculate the Y offset within the sheet
-   */
-  getPegmanFrameOffsetY_(animationRow) {
-    animationRow = animationRow || 0;
-    return animationRow * this.PEGMAN_HEIGHT;
-  }
-
-  /**
-   * Create sprite assets for pegman.
-   * @param svg
-   * @param options Specify different features of the pegman animation.
-   * idStr required identifier for the pegman.
-   * pegmanImage required which image to use for the animation.
-   * col which column the pegman is at.
-   * row which row the pegman is at.
-   * direction which direction the pegman is facing at.
-   * numColPegman number of the pegman in each row, default is 4.
-   * numRowPegman number of the pegman in each column, default is 1.
-   */
-  createPegmanAnimation_(svg, options) {
-    // Create clip path.
-    var clip = document.createElementNS(SVG_NS, 'clipPath');
-    clip.setAttribute('id', options.idStr + 'PegmanClip');
-    var rect = document.createElementNS(SVG_NS, 'rect');
-    rect.setAttribute('id', options.idStr + 'PegmanClipRect');
-    if (options.col !== undefined) {
-      rect.setAttribute('x', options.col * this.SQUARE_SIZE + 1 + this.PEGMAN_X_OFFSET);
-    }
-    if (options.row !== undefined) {
-      rect.setAttribute('y', getPegmanYForRow(this.skin, options.row));
-    }
-    rect.setAttribute('width', this.PEGMAN_WIDTH);
-    rect.setAttribute('height', this.PEGMAN_HEIGHT);
-    clip.appendChild(rect);
-    svg.appendChild(clip);
-    // Create image.
-    var imgSrc = options.pegmanImage;
-    var img = document.createElementNS(SVG_NS, 'image');
-    img.setAttributeNS(
-        'http://www.w3.org/1999/xlink', 'xlink:href', imgSrc);
-    img.setAttribute('height', this.PEGMAN_HEIGHT * (options.numRowPegman || 1));
-    img.setAttribute('width', this.PEGMAN_WIDTH * (options.numColPegman || 4));
-    img.setAttribute('clip-path', 'url(#' + options.idStr + 'PegmanClip)');
-    img.setAttribute('id', options.idStr + 'Pegman');
-    svg.appendChild(img);
-    // Update pegman icon & clip path.
-    if (options.col !== undefined && options.direction !== undefined) {
-      var x = this.SQUARE_SIZE * options.col -
-        options.direction * this.PEGMAN_WIDTH + 1 + this.PEGMAN_X_OFFSET;
-      img.setAttribute('x', x);
-    }
-    if (options.row !== undefined) {
-      img.setAttribute('y', getPegmanYForRow(this.skin, options.row));
-    }
-  }
-
-  /**
-    * Update sprite assets for pegman.
-    * @param options Specify different features of the pegman animation.
-    * idStr required identifier for the pegman.
-    * col required which column the pegman is at.
-    * row required which row the pegman is at.
-    * direction required which direction the pegman is facing at.
-    * animationRow which row of the sprite sheet the pegman animation needs
-    */
-  updatePegmanAnimation_(options) {
-    var rect = document.getElementById(options.idStr + 'PegmanClipRect');
-    rect.setAttribute('x', options.col * this.SQUARE_SIZE + 1 + this.PEGMAN_X_OFFSET);
-    rect.setAttribute('y', getPegmanYForRow(this.skin, options.row));
-    var img = document.getElementById(options.idStr + 'Pegman');
-    var x = this.SQUARE_SIZE * options.col -
-        options.direction * this.PEGMAN_WIDTH + 1 + this.PEGMAN_X_OFFSET;
-    img.setAttribute('x', x);
-    var y = getPegmanYForRow(this.skin, options.row) - this.getPegmanFrameOffsetY_(options.animationRow);
-    img.setAttribute('y', y);
-    img.setAttribute('visibility', 'visible');
-  }
-
-  /**
    * Reset the maze to the start position and kill any pending animation tasks.
    * @param {boolean} first True if an opening animation is to be played.
    */
   reset_ = (first) => {
     this.subtype.reset();
 
-    var i;
     // Kill all tasks.
     timeoutList.clearTimeouts();
 
@@ -565,61 +414,7 @@ module.exports = class Maze {
     this.pegmanY = this.subtype.start.y;
 
     this.pegmanD = this.startDirection;
-    if (first) {
-      // Dance consists of 5 animations, each of which get 150ms
-      var danceTime = 150 * 5;
-      if (this.skin.danceOnLoad) {
-        this.scheduleDance_(false, danceTime);
-      }
-      timeoutList.setTimeout(() => {
-        this.stepSpeed = 100;
-        this.scheduleTurn_(this.startDirection);
-      }, danceTime + 150);
-    } else {
-      this.displayPegman_(this.pegmanX, this.pegmanY, tiles.directionToFrame(this.pegmanD));
-
-      const finishIcon = document.getElementById('finish');
-      if (finishIcon) {
-        finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', this.skin.goalIdle);
-      }
-    }
-
-    // Make 'look' icon invisible and promote to top.
-    var lookIcon = document.getElementById('look');
-    lookIcon.style.display = 'none';
-    lookIcon.parentNode.appendChild(lookIcon);
-    var paths = lookIcon.getElementsByTagName('path');
-    for (i = 0; i < paths.length; i++) {
-      var path = paths[i];
-      path.setAttribute('stroke', this.skin.look);
-    }
-
-    // Reset pegman's visibility.
-    var pegmanIcon = document.getElementById('pegman');
-    pegmanIcon.setAttribute('opacity', 1);
-
-    if (this.skin.idlePegmanAnimation) {
-      pegmanIcon.setAttribute('visibility', 'hidden');
-      var idlePegmanIcon = document.getElementById('idlePegman');
-      idlePegmanIcon.setAttribute('visibility', 'visible');
-    } else {
-      pegmanIcon.setAttribute('visibility', 'visible');
-    }
-
-    if (this.skin.wallPegmanAnimation) {
-      var wallPegmanIcon = document.getElementById('wallPegman');
-      wallPegmanIcon.setAttribute('visibility', 'hidden');
-    }
-
-    if (this.skin.movePegmanAnimation) {
-      var movePegmanIcon = document.getElementById('movePegman');
-      movePegmanIcon.setAttribute('visibility', 'hidden');
-    }
-
-    if (this.skin.celebrateAnimation) {
-      var celebrateAnimation = document.getElementById('celebratePegman');
-      celebrateAnimation.setAttribute('visibility', 'hidden');
-    }
+    this.animationsController.reset(first);
 
     // Move the init dirt marker icons into position.
     this.map.resetDirt();
@@ -988,13 +783,7 @@ module.exports = class Maze {
       }
     }
 
-    // Removing the idle animation and replace with pegman sprite
-    if (this.skin.idlePegmanAnimation) {
-      var pegmanIcon = document.getElementById('pegman');
-      var idlePegmanIcon = document.getElementById('idlePegman');
-      idlePegmanIcon.setAttribute('visibility', 'hidden');
-      pegmanIcon.setAttribute('visibility', 'visible');
-    }
+    this.animationsController.stopIdling();
 
     // Speeding up specific levels
     var scaledStepSpeed = this.stepSpeed * this.scale.stepSpeed *
@@ -1002,76 +791,6 @@ module.exports = class Maze {
     timeoutList.setTimeout(() => {
       this.scheduleAnimations_(stepMode);
     }, scaledStepSpeed);
-  }
-
-  /**
-   * Perform our animations, either all of them or those of a single step
-   */
-  scheduleAnimations_(singleStep) {
-    timeoutList.clearTimeouts();
-
-    var timePerAction = this.stepSpeed * this.scale.stepSpeed *
-      this.skin.movePegmanAnimationSpeedScale;
-    // get a flat list of actions we want to schedule
-    var actions = this.executionInfo.getActions(singleStep);
-
-    this.scheduleSingleAnimation_(0, actions, singleStep, timePerAction);
-  }
-
-  /**
-   * schedule animations in sequence
-   * The reason we do this recursively instead of iteratively is that we want to
-   * ensure that we finish scheduling action1 before starting to schedule
-   * action2. Otherwise we get into trouble when stepSpeed is 0.
-   */
-  scheduleSingleAnimation_(index, actions, singleStep, timePerAction) {
-    if (index >= actions.length) {
-      this.finishAnimations_(singleStep);
-      return;
-    }
-
-    this.animateAction_(actions[index], singleStep, timePerAction);
-
-    var command = actions[index] && actions[index].command;
-    var timeModifier = (this.skin.actionSpeedScale && this.skin.actionSpeedScale[command]) || 1;
-    var timeForThisAction = Math.round(timePerAction * timeModifier);
-
-    timeoutList.setTimeout(() => {
-      this.scheduleSingleAnimation_(index + 1, actions, singleStep, timePerAction);
-    }, timeForThisAction);
-  }
-
-  /**
-   * Once animations are complete, we want to reenable the step button if we
-   * have steps left, otherwise we're done with this execution.
-   */
-  finishAnimations_(singleStep) {
-    var stepsRemaining = this.executionInfo.stepsRemaining();
-    var stepButton = document.getElementById('stepButton');
-
-    // allow time for  additional pause if we're completely done
-    var waitTime = (stepsRemaining ? 0 : 1000);
-
-    // run after all animations
-    timeoutList.setTimeout(() => {
-      if (stepsRemaining) {
-        stepButton.removeAttribute('disabled');
-      } else {
-        this.animating_ = false;
-        if (studioApp().isUsingBlockly()) {
-          // reenable toolbox
-          Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-        }
-        // If stepping and we failed, we want to retain highlighting until
-        // clicking reset.  Otherwise we can clear highlighting/disabled
-        // blocks now
-        if (!singleStep || this.result === ResultType.SUCCESS) {
-          this.reenableCachedBlockStates_();
-          studioApp().clearHighlighting();
-        }
-        this.displayFeedback_();
-      }
-    }, waitTime);
   }
 
   /**
@@ -1099,42 +818,31 @@ module.exports = class Maze {
         this.animatedMove_(tiles.Direction.WEST, timePerStep);
         break;
       case 'look_north':
-        this.scheduleLook_(tiles.Direction.NORTH);
+        this.animatedLook_(tiles.Direction.NORTH);
         break;
       case 'look_east':
-        this.scheduleLook_(tiles.Direction.EAST);
+        this.animatedLook_(tiles.Direction.EAST);
         break;
       case 'look_south':
-        this.scheduleLook_(tiles.Direction.SOUTH);
+        this.animatedLook_(tiles.Direction.SOUTH);
         break;
       case 'look_west':
-        this.scheduleLook_(tiles.Direction.WEST);
+        this.animatedLook_(tiles.Direction.WEST);
         break;
       case 'fail_forward':
-        this.scheduleFail_(true);
+        this.animatedFail_(true);
         break;
       case 'fail_backward':
-        this.scheduleFail_(false);
+        this.animatedFail_(false);
         break;
       case 'left':
-        var newDirection = this.pegmanD + tiles.TurnDirection.LEFT;
-        this.scheduleTurn_(newDirection);
-        this.pegmanD = tiles.constrainDirection4(newDirection);
+        this.animatedTurn_(tiles.TurnDirection.LEFT);
         break;
       case 'right':
-        newDirection = this.pegmanD + tiles.TurnDirection.RIGHT;
-        this.scheduleTurn_(newDirection);
-        this.pegmanD = tiles.constrainDirection4(newDirection);
+        this.animatedTurn_(tiles.TurnDirection.RIGHT);
         break;
       case 'finish':
-        // Only schedule victory animation for certain conditions:
-        if (this.testResults >= TestResults.MINIMUM_PASS_RESULT) {
-          this.scheduleDance_(true, timePerStep);
-        } else {
-          timeoutList.setTimeout(function () {
-            studioApp().playAudioOnFailure();
-          }, this.stepSpeed);
-        }
+        this.animatedFinish_(timePerStep);
         break;
       case 'putdown':
         this.scheduleFill_();
@@ -1166,157 +874,44 @@ module.exports = class Maze {
     }
   }
 
+  animatedFinish_(timePerStep) {
+    // Only schedule victory animation for certain conditions:
+    if (this.testResults >= TestResults.MINIMUM_PASS_RESULT) {
+
+      var finishButton = document.getElementById('finishButton');
+      if (finishButton) {
+        finishButton.removeAttribute('disabled');
+      }
+      var finishIcon = document.getElementById('finish');
+      if (finishIcon) {
+        studioApp().playAudio('winGoal');
+      }
+      studioApp().playAudioOnWin();
+      this.animationsController.scheduleDance(true, timePerStep);
+    } else {
+      timeoutList.setTimeout(function () {
+        studioApp().playAudioOnFailure();
+      }, this.stepSpeed);
+    }
+  }
+
   animatedMove_(direction, timeForMove) {
     var positionChange = tiles.directionToDxDy(direction);
     var newX = this.pegmanX + positionChange.dx;
     var newY = this.pegmanY + positionChange.dy;
-    this.scheduleMove_(newX, newY, timeForMove);
+    this.animationsController.scheduleMove(newX, newY, timeForMove);
+    studioApp().playAudio('walk');
     this.pegmanX = newX;
     this.pegmanY = newY;
   }
 
-  /**
-   * Schedule a movement animating using a spritesheet.
-   */
-  scheduleSheetedMovement_(start, delta, numFrames, timePerFrame, idStr, direction, hidePegman) {
-    var pegmanIcon = document.getElementById('pegman');
-    utils.range(0, numFrames - 1).forEach((frame) => {
-      timeoutList.setTimeout(() => {
-        if (hidePegman) {
-          pegmanIcon.setAttribute('visibility', 'hidden');
-        }
-        this.updatePegmanAnimation_({
-          idStr: idStr,
-          col: start.x + delta.x * frame / numFrames,
-          row: start.y + delta.y * frame / numFrames,
-          direction: direction,
-          animationRow: frame
-        });
-      }, timePerFrame * frame);
-    });
+  animatedTurn_(direction) {
+    var newDirection = this.pegmanD + direction;
+    this.animationsController.scheduleTurn(newDirection);
+    this.pegmanD = tiles.constrainDirection4(newDirection);
   }
 
-  /**
-   * Schedule the animations for a move from the current position
-   * @param {number} endX X coordinate of the target position
-   * @param {number} endY Y coordinate of the target position
-   */
-  scheduleMove_(endX, endY, timeForAnimation) {
-    var startX = this.pegmanX;
-    var startY = this.pegmanY;
-    var direction = this.pegmanD;
-
-    var deltaX = (endX - startX);
-    var deltaY = (endY - startY);
-    var numFrames;
-    var timePerFrame;
-
-    if (this.skin.movePegmanAnimation) {
-      numFrames = this.skin.movePegmanAnimationFrameNumber;
-      // If move animation of pegman is set, and this is not a turn.
-      // Show the animation.
-      var pegmanIcon = document.getElementById('pegman');
-      var movePegmanIcon = document.getElementById('movePegman');
-      timePerFrame = timeForAnimation / numFrames;
-
-      this.scheduleSheetedMovement_({
-          x: startX,
-          y: startY
-        }, {
-          x: deltaX,
-          y: deltaY
-        },
-        numFrames, timePerFrame, 'move', direction, true);
-
-      // Hide movePegman and set pegman to the end position.
-      timeoutList.setTimeout(() => {
-        movePegmanIcon.setAttribute('visibility', 'hidden');
-        pegmanIcon.setAttribute('visibility', 'visible');
-        this.displayPegman_(endX, endY, tiles.directionToFrame(direction));
-        if (this.subtype.isWordSearch()) {
-          this.subtype.markTileVisited(endY, endX, true);
-        }
-      }, timePerFrame * numFrames);
-    } else {
-      // we don't have an animation, so just move the x/y pos
-      numFrames = 4;
-      timePerFrame = timeForAnimation / numFrames;
-      utils.range(1, numFrames).forEach((frame) => {
-        timeoutList.setTimeout(() => {
-          this.displayPegman_(
-            startX + deltaX * frame / numFrames,
-            startY + deltaY * frame / numFrames,
-            tiles.directionToFrame(direction));
-        }, timePerFrame * frame);
-      });
-    }
-
-    if (this.skin.approachingGoalAnimation) {
-      var finishIcon = document.getElementById('finish');
-      // If pegman is close to the goal
-      // Replace the goal file with approachingGoalAnimation
-      if (this.subtype.finish && Math.abs(endX - this.subtype.finish.x) <= 1 &&
-          Math.abs(endY - this.subtype.finish.y) <= 1) {
-        finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-          this.skin.approachingGoalAnimation);
-      } else {
-        finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-          this.skin.goalIdle);
-      }
-    }
-
-    studioApp().playAudio('walk');
-  }
-
-  /**
-   * Schedule the animations for a turn from the current direction
-   * @param {number} endDirection The direction we're turning to
-   */
-  scheduleTurn_(endDirection) {
-    var numFrames = 4;
-    var startDirection = this.pegmanD;
-    var deltaDirection = endDirection - startDirection;
-    utils.range(1, numFrames).forEach((frame) => {
-      timeoutList.setTimeout(() => {
-        this.displayPegman_(
-          this.pegmanX,
-          this.pegmanY,
-          tiles.directionToFrame(startDirection + deltaDirection * frame / numFrames));
-      }, this.stepSpeed * (frame - 1));
-    });
-  }
-
-  /**
-   * Replace the tiles surrounding the obstacle with broken tiles.
-   */
-  updateSurroundingTiles_(obstacleY, obstacleX, callback) {
-    var tileCoords = [
-      [obstacleY - 1, obstacleX - 1],
-      [obstacleY - 1, obstacleX],
-      [obstacleY - 1, obstacleX + 1],
-      [obstacleY, obstacleX - 1],
-      [obstacleY, obstacleX],
-      [obstacleY, obstacleX + 1],
-      [obstacleY + 1, obstacleX - 1],
-      [obstacleY + 1, obstacleX],
-      [obstacleY + 1, obstacleX + 1]
-    ];
-    for (let idx = 0; idx < tileCoords.length; ++idx) {
-      const row = tileCoords[idx][1];
-      const col = tileCoords[idx][0];
-      const tileIdx = row + this.map.COLS * col;
-      const tileElement = document.getElementById('tileElement' + tileIdx);
-      if (tileElement) {
-        callback(tileElement, this.map.getCell(col, row));
-      }
-    }
-  }
-
-  /**
-   * Schedule the animations and sounds for a failed move.
-   * @param {boolean} forward True if forward, false if backward.
-   */
-  scheduleFail_(forward) {
+  animatedFail_(forward) {
     var dxDy = tiles.directionToDxDy(this.pegmanD);
     var deltaX = dxDy.dx;
     var deltaY = dxDy.dy;
@@ -1329,9 +924,11 @@ module.exports = class Maze {
     var targetX = this.pegmanX + deltaX;
     var targetY = this.pegmanY + deltaY;
     var frame = tiles.directionToFrame(this.pegmanD);
-    this.displayPegman_(this.pegmanX + deltaX / 4,
-                      this.pegmanY + deltaY / 4,
-                      frame);
+    this.animationsController.displayPegman(
+      this.pegmanX + deltaX / 4,
+      this.pegmanY + deltaY / 4,
+      frame,
+    );
     // Play sound and animation for hitting wall or obstacle
     var squareType = this.map.getTile(targetY, targetX);
     if (squareType === tiles.SquareType.WALL || squareType === undefined ||
@@ -1344,122 +941,17 @@ module.exports = class Maze {
       }
 
       if (this.subtype.isScrat() && squareType === tiles.SquareType.OBSTACLE) {
-        // Remove cracked ice, replace surrounding ice with cracked ice.
-        this.updateSurroundingTiles_(targetY, targetX, (tileElement, cell) => {
-          if (cell.getTile() === tiles.SquareType.OPEN) {
-            tileElement.setAttributeNS(
-              'http://www.w3.org/1999/xlink', 'xlink:href',
-              this.skin.largerObstacleAnimationTiles
-            );
-          } else if (cell.getTile() === tiles.SquareType.OBSTACLE) {
-            tileElement.setAttribute('opacity', 0);
-          }
-        });
+        this.animationsController.crackSurroundingIce(targetX, targetY);
       }
 
-      // Play the animation of hitting the wall
-      if (this.skin.hittingWallAnimation) {
-        var wallAnimationIcon = document.getElementById('wallAnimation');
-        var numFrames = this.skin.hittingWallAnimationFrameNumber || 0;
-
-        if (numFrames > 1) {
-
-          // The Scrat "wall" animation has him falling backwards into the water.
-          // This looks great when he falls into the water above him, but looks a
-          // little off when falling to the side/forward. Tune that by bumping the
-          // deltaY by one. Hacky, but looks much better
-          if (deltaY >= 0) {
-            deltaY += 1;
-          }
-          // animate our sprite sheet
-          var timePerFrame = 100;
-          this.scheduleSheetedMovement_({
-              x: this.pegmanX,
-              y: this.pegmanY
-            }, {
-              x: deltaX,
-              y: deltaY
-            }, numFrames, timePerFrame, 'wall',
-            tiles.Direction.NORTH, true);
-          setTimeout(function () {
-            document.getElementById('wallPegman').setAttribute('visibility', 'hidden');
-          }, numFrames * timePerFrame);
-        } else {
-          // active our gif
-          timeoutList.setTimeout(() => {
-            wallAnimationIcon.setAttribute('x',
-              this.SQUARE_SIZE * (this.pegmanX + 0.5 + deltaX * 0.5) -
-              wallAnimationIcon.getAttribute('width') / 2);
-            wallAnimationIcon.setAttribute('y',
-              this.SQUARE_SIZE * (this.pegmanY + 1 + deltaY * 0.5) -
-              wallAnimationIcon.getAttribute('height'));
-            wallAnimationIcon.setAttribute('visibility', 'visible');
-            wallAnimationIcon.setAttributeNS(
-              'http://www.w3.org/1999/xlink', 'xlink:href',
-              this.skin.hittingWallAnimation);
-          }, this.stepSpeed / 2);
-        }
-      }
+      this.animationsController.scheduleWallHit(targetX, targetY, deltaX, deltaY, frame);
       timeoutList.setTimeout(() => {
-        this.displayPegman_(this.pegmanX, this.pegmanY, frame);
-      }, this.stepSpeed);
-      timeoutList.setTimeout(() => {
-        this.displayPegman_(this.pegmanX + deltaX / 4, this.pegmanY + deltaY / 4,
-          frame);
         studioApp().playAudioOnFailure();
       }, this.stepSpeed * 2);
-      timeoutList.setTimeout(() => {
-        this.displayPegman_(this.pegmanX, this.pegmanY, frame);
-      }, this.stepSpeed * 3);
-
-      if (this.skin.wallPegmanAnimation) {
-        timeoutList.setTimeout(() => {
-          var pegmanIcon = document.getElementById('pegman');
-          pegmanIcon.setAttribute('visibility', 'hidden');
-          this.updatePegmanAnimation_({
-            idStr: 'wall',
-            row: this.pegmanY,
-            col: this.pegmanX,
-            direction: this.pegmanD
-          });
-        }, this.stepSpeed * 4);
-      }
     } else if (squareType === tiles.SquareType.OBSTACLE) {
       // Play the sound
       studioApp().playAudio('obstacle');
-
-      // Play the animation
-      var obsId = targetX + this.map.COLS * targetY;
-      var obsIcon = document.getElementById('obstacle' + obsId);
-      obsIcon.setAttributeNS(
-          'http://www.w3.org/1999/xlink', 'xlink:href',
-          this.skin.obstacleAnimation);
-      timeoutList.setTimeout(() => {
-        this.displayPegman_(this.pegmanX + deltaX / 2,
-                          this.pegmanY + deltaY / 2,
-                          frame);
-      }, this.stepSpeed);
-
-      // Replace the objects around obstacles with broken objects
-      if (this.skin.largerObstacleAnimationTiles) {
-        timeoutList.setTimeout(() => {
-          this.updateSurroundingTiles_(targetY, targetX, tileElement => (
-            tileElement.setAttributeNS(
-              'http://www.w3.org/1999/xlink', 'xlink:href',
-              this.skin.largerObstacleAnimationTiles
-            )
-          ));
-        }, this.stepSpeed);
-      }
-
-      // Remove pegman
-      if (!this.skin.nonDisappearingPegmanHittingObstacle) {
-        var pegmanIcon = document.getElementById('pegman');
-
-        timeoutList.setTimeout(function () {
-          pegmanIcon.setAttribute('visibility', 'hidden');
-        }, this.stepSpeed * 2);
-      }
+      this.animationsController.scheduleObstacleHit(targetX, targetY, deltaX, deltaY, frame);
       timeoutList.setTimeout(function () {
         studioApp().playAudioOnFailure();
       }, this.stepSpeed);
@@ -1467,113 +959,34 @@ module.exports = class Maze {
   }
 
   /**
-   * Set the tiles to be transparent gradually.
+   * Display the look icon at Pegman's current location,
+   * in the specified direction.
+   * @param {!Direction} direction Direction (0 - 3).
    */
-  setTileTransparent_() {
-    var tileId = 0;
-    for (var y = 0; y < this.map.ROWS; y++) {
-      for (var x = 0; x < this.map.COLS; x++) {
-        // Tile sprite.
-        var tileElement = document.getElementById('tileElement' + tileId);
-        var tileAnimation = document.getElementById('tileAnimation' + tileId);
-        if (tileElement) {
-          tileElement.setAttribute('opacity', 0);
-        }
-        if (tileAnimation && tileAnimation.beginElement) {
-          // IE doesn't support beginElement, so check for it.
-          tileAnimation.beginElement();
-        }
-        tileId++;
-      }
+  animatedLook_(direction) {
+    var x = this.pegmanX;
+    var y = this.pegmanY;
+    switch (direction) {
+      case tiles.Direction.NORTH:
+        x += 0.5;
+        break;
+      case tiles.Direction.EAST:
+        x += 1;
+        y += 0.5;
+        break;
+      case tiles.Direction.SOUTH:
+        x += 0.5;
+        y += 1;
+        break;
+      case tiles.Direction.WEST:
+        y += 0.5;
+        break;
     }
-  }
+    x *= this.SQUARE_SIZE;
+    y *= this.SQUARE_SIZE;
+    var d = direction * 90 - 45;
 
-  /**
-   * TODO elijah should this be an instance methods?
-   */
-  static setPegmanTransparent() {
-    var pegmanFadeoutAnimation = document.getElementById('pegmanFadeoutAnimation');
-    var pegmanIcon = document.getElementById('pegman');
-    if (pegmanIcon) {
-      pegmanIcon.setAttribute('opacity', 0);
-    }
-    if (pegmanFadeoutAnimation && pegmanFadeoutAnimation.beginElement) {
-      // IE doesn't support beginElement, so check for it.
-      pegmanFadeoutAnimation.beginElement();
-    }
-  }
-
-  /**
-   * Schedule the animations and sound for a dance.
-   * @param {boolean} victoryDance This is a victory dance after completing the
-   *   puzzle (vs. dancing on load).
-   * @param {integer} timeAlloted How much time we have for our animations
-   */
-  scheduleDance_(victoryDance, timeAlloted) {
-    if (this.subtype.scheduleDance) {
-      this.subtype.scheduleDance(victoryDance, timeAlloted, this.skin);
-      return;
-    }
-
-    var finishButton = document.getElementById('finishButton');
-    if (victoryDance && finishButton) {
-      finishButton.removeAttribute('disabled');
-    }
-
-    var originalFrame = tiles.directionToFrame(this.pegmanD);
-    this.displayPegman_(this.pegmanX, this.pegmanY, 16);
-
-    // If victoryDance === true, play the goal animation, else reset it
-    var finishIcon = document.getElementById('finish');
-    if (victoryDance && finishIcon) {
-      studioApp().playAudio('winGoal');
-      finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-        this.skin.goalAnimation);
-    }
-
-    if (victoryDance) {
-      studioApp().playAudioOnWin();
-    }
-
-    var danceSpeed = timeAlloted / 5;
-    timeoutList.setTimeout(() => {
-      this.displayPegman_(this.pegmanX, this.pegmanY, 18);
-    }, danceSpeed);
-    timeoutList.setTimeout(() => {
-      this.displayPegman_(this.pegmanX, this.pegmanY, 20);
-    }, danceSpeed * 2);
-    timeoutList.setTimeout(() => {
-      this.displayPegman_(this.pegmanX, this.pegmanY, 18);
-    }, danceSpeed * 3);
-    timeoutList.setTimeout(() => {
-      this.displayPegman_(this.pegmanX, this.pegmanY, 20);
-    }, danceSpeed * 4);
-
-    timeoutList.setTimeout(() => {
-      if (!victoryDance || this.skin.turnAfterVictory) {
-        this.displayPegman_(this.pegmanX, this.pegmanY, originalFrame);
-      }
-
-      if (victoryDance && this.skin.transparentTileEnding) {
-        this.setTileTransparent_();
-      }
-
-      if (this.subtype.isWordSearch()) {
-        Maze.setPegmanTransparent();
-      }
-    }, danceSpeed * 5);
-  }
-
-  /**
-   * Display Pegman at the specified location, facing the specified direction.
-   * @param {number} x Horizontal grid (or fraction thereof).
-   * @param {number} y Vertical grid (or fraction thereof).
-   * @param {number} frame Direction (0 - 15) or dance (16 - 17).
-   */
-  displayPegman_(x, y, frame) {
-    var pegmanIcon = document.getElementById('pegman');
-    var clipRect = document.getElementById('clipRect');
-    displayPegman(this.skin, pegmanIcon, clipRect, x, y, frame);
+    this.animationsController.scheduleLook(x, y, d);
   }
 
   scheduleDirtChange_(options) {
@@ -1606,60 +1019,6 @@ module.exports = class Maze {
       amount: -1,
       sound: 'dig'
     });
-  }
-
-  /**
-   * Display the look icon at Pegman's current location,
-   * in the specified direction.
-   * @param {!Direction} d Direction (0 - 3).
-   */
-  scheduleLook_(d) {
-    var x = this.pegmanX;
-    var y = this.pegmanY;
-    switch (d) {
-      case tiles.Direction.NORTH:
-        x += 0.5;
-        break;
-      case tiles.Direction.EAST:
-        x += 1;
-        y += 0.5;
-        break;
-      case tiles.Direction.SOUTH:
-        x += 0.5;
-        y += 1;
-        break;
-      case tiles.Direction.WEST:
-        y += 0.5;
-        break;
-    }
-    x *= this.SQUARE_SIZE;
-    y *= this.SQUARE_SIZE;
-    d = d * 90 - 45;
-
-    var lookIcon = document.getElementById('look');
-    lookIcon.setAttribute('transform',
-        'translate(' + x + ', ' + y + ') ' +
-        'rotate(' + d + ' 0 0) scale(.4)');
-    var paths = lookIcon.getElementsByTagName('path');
-    lookIcon.style.display = 'inline';
-    for (var i = 0; i < paths.length; i++) {
-      var path = paths[i];
-      this.scheduleLookStep_(path, this.stepSpeed * i);
-    }
-  }
-
-  /**
-   * Schedule one of the 'look' icon's waves to appear, then disappear.
-   * @param {!Element} path Element to make appear.
-   * @param {number} delay Milliseconds to wait before making wave appear.
-   */
-  scheduleLookStep_(path, delay) {
-    timeoutList.setTimeout(() => {
-      path.style.display = 'inline';
-      window.setTimeout(function () {
-        path.style.display = 'none';
-      }, this.stepSpeed * 2);
-    }, delay);
   }
 
   /**
