@@ -966,6 +966,10 @@ And(/^I create a student named "([^"]*)"$/) do |name|
   }
 end
 
+And(/^I create a teacher with email "([^"]*)"$/ do |email|
+
+end
+
 And(/^I create a teacher named "([^"]*)"$/) do |name|
   email, password = generate_user(name)
 

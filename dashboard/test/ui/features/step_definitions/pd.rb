@@ -60,6 +60,15 @@ Given(/^I am a teacher who has just followed a workshop certificate link$/) do
   }
 end
 
+Given(/^I navigate to the principal approval page for "([^"]*)"$/) do |name|
+  user = User.find_by_email @users[name][:email]
+  application = Pd::Application.find_by(user: user)
+
+  steps %Q{
+    And I am on "http://studio.code.org/pd/application/principal_approval/#{application.application_guid}"
+  }
+end
+
 Given(/^I am a facilitator with completed courses$/) do
   random_name = "TestFacilitator" + SecureRandom.hex[0..9]
   steps %Q{
