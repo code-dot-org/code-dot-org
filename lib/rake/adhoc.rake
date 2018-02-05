@@ -17,6 +17,11 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
     AWS::CloudFormation.create_or_update
   end
 
+  desc 'Start an inactive adhoc server'
+  task start_inactive_instance: :environment do
+    AWS::CloudFormation.start_inactive_instance
+  end
+
   desc 'Stop an adhoc server. Clean up all consumed AWS resources'
   task stop: :environment do
     AWS::CloudFormation.delete

@@ -18,6 +18,8 @@ module AWS
     TEMPLATE = ENV['TEMPLATE'] || 'cloud_formation_adhoc_standalone.yml.erb'
     TEMPLATE_POLICY = TEMPLATE.split('.').tap {|s| s.first << '-policy'}.join('.')
     TEMP_BUCKET = ENV['TEMP_S3_BUCKET'] || 'cf-templates-p9nfb0gyyrpf-us-east-1'
+    # number of seconds to configure as Time To Live for DNS record
+    DNS_TTL = 60
 
     DOMAIN = ENV['DOMAIN'] || 'cdn-code.org'
 
@@ -214,6 +216,86 @@ module AWS
             CDO.log.info "#{output.output_key}: #{output.output_value}"
           end
         end
+      end
+
+      def start_inactive_instance
+        cloudformation_resource = Aws::CloudFormation::Resource.new
+        stack = cloudformation_resource.stack(stack_name)
+        instance = Aws::EC2::Instance.new(id: stack.resource('WebServer').physical_resource_id)
+        if instance.state.code != 80
+          CDO.log.info "Instance #{instance.id} in Stack #{stack_name} can't be started because it is not" \
+          " currently stopped.  Current state - #{instance.state.code}:#{instance.state.name}"
+        else
+          CDO.log.info "Starting Instance #{instance.id} ..."
+          instance.start
+          instance.wait_until_running
+          CDO.log.info "Instance #{instance.id} is started."
+
+          public_ip_address = instance.reload.public_ip_address
+          dashboard_url = stack.outputs.select {|output| output.output_key == 'DashboardURL'}.first.output_value
+          pegasus_url = stack.outputs.select {|output| output.output_key == 'PegasusURL'}.first.output_value
+
+          # suffix period to construct fully qualified domain name
+          pegasus_domain_name = URI.parse(pegasus_url).host + '.'
+          dashboard_domain_name = URI.parse(dashboard_url).host + '.'
+
+          route53_client = Aws::Route53::Client.new
+
+          # this lookup may stop working if/when there are more than 100 zones
+          # prefix zone name with a period to prevent partial match (don't let zone "code.org." match "foo.cdn-code.org.")
+          hosted_zone_id = route53_client.
+            list_hosted_zones.
+            hosted_zones.
+            select {|zone| pegasus_domain_name.end_with?('.' + zone.name)}.
+            first.
+            id
+
+          change_resource_response = route53_client.change_resource_record_sets(
+            {
+              change_batch: {
+                changes: [
+                  {
+                    action: "UPSERT",
+                    resource_record_set: {
+                      name: pegasus_domain_name,
+                      resource_records: [
+                        {
+                          value: public_ip_address,
+                        },
+                      ],
+                      ttl: DNS_TTL,
+                      type: "A",
+                    },
+                  },
+                  {
+                    action: "UPSERT",
+                    resource_record_set: {
+                      name: dashboard_domain_name,
+                      resource_records: [
+                        {
+                          value: public_ip_address,
+                        },
+                      ],
+                      ttl: DNS_TTL,
+                      type: "A",
+                    }
+                  }
+                ],
+                comment: "Web server for adhoc environment #{pegasus_domain_name}",
+              },
+              hosted_zone_id: hosted_zone_id
+            }
+          )
+        end
+
+        change_status = change_resource_response.change_info.status
+        change_id = change_resource_response.change_info.id
+        CDO.log.info "DNS update status - #{change_status}"
+        CDO.log.info "Waiting 60 seconds for AWS Route53 to apply updated DNS records to all of its servers."
+        sleep 60 # wait 60 seconds
+        change_status = route53_client.get_change({id: change_id}).change_info.status
+        CDO.log.info "DNS update status - #{change_status}"
+        CDO.log.info "Wait up to the configured Time To Live (#{DNS_TTL} seconds) to lookup new IP address."
       end
 
       def delete
