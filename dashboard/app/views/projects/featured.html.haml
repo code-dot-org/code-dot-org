@@ -1,4 +1,5 @@
 #featured-projects-container
+-featured_projects_data = {test: "Is this working?"}
 
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/projects/featured.js')}
+  %script{src: minifiable_asset_path('js/projects/featured.js'), data: {featuredProjects: featured_projects_data.to_json}}
