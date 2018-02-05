@@ -1,7 +1,7 @@
-var levelBase = require('../level_base');
-var Direction = require('./tiles').Direction;
-var msg = require('./locale');
-var blockUtils = require('../block_utils');
+import levelBase from '../level_base';
+import {Direction} from './tiles';
+import msg from './locale';
+import blockUtils from '../block_utils';
 
 //TODO: Fix hacky level-number-dependent toolbox.
 var toolbox = function (page, level) {
@@ -181,7 +181,7 @@ var FILL_HOLES = {
   'titles': {'NAME': msg.fillStack({shovelfuls: 2})}
 };
 
-module.exports = {
+export default {
 
   // Formerly page 1
   '1_1': {

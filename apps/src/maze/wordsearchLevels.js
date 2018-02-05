@@ -1,6 +1,6 @@
-var Direction = require('./tiles').Direction;
-var reqBlocks = require('./requiredBlocks');
-var blockUtils = require('../block_utils');
+import {Direction} from './tiles';
+import reqBlocks from './requiredBlocks';
+import blockUtils from '../block_utils';
 
 var wordSearchToolbox = function () {
   return blockUtils.createToolbox(
@@ -14,7 +14,7 @@ var wordSearchToolbox = function () {
 /*
  * Configuration for all levels.
  */
-module.exports = {
+export default {
   'k_1': {
     'isK1': true,
     'instructionsImportant': true,
