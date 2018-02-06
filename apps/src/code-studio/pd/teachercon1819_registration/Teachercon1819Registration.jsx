@@ -11,9 +11,10 @@ import { TeacherSeatAcceptanceOptions } from '@cdo/apps/generated/pd/teachercon1
 export default class Teachercon1819Registration extends FormController {
   static propTypes = {
     ...FormController.propTypes,
-    applicationId: PropTypes.number.isRequired,
+    applicationId: PropTypes.number,
+    regionalPartnerId: PropTypes.number,
     applicationType: PropTypes.string.isRequired,
-    course: PropTypes.string.isRequired,
+    course: PropTypes.string,
     city: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
@@ -59,6 +60,21 @@ export default class Teachercon1819Registration extends FormController {
   /**
    * @override
    */
+  getRequiredFields() {
+    const requiredFields = super.getRequiredFields();
+
+    if (this.props.applicationType === "Teacher") {
+      requiredFields.push("teacherAcceptSeat");
+    } else {
+      requiredFields.push("ableToAttend");
+    }
+
+    return requiredFields;
+  }
+
+  /**
+   * @override
+   */
   getPageProps() {
     return {
       ...super.getPageProps(),
@@ -79,7 +95,8 @@ export default class Teachercon1819Registration extends FormController {
   serializeFormData() {
     return {
       ...super.serializeFormData(),
-      applicationId: this.props.applicationId
+      applicationId: this.props.applicationId,
+      regionalPartnerId: this.props.regionalPartnerId,
     };
   }
 

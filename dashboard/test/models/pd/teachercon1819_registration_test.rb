@@ -15,7 +15,6 @@ class Pd::Teachercon1819RegistrationTest < ActiveSupport::TestCase
       "Form data lastName",
       "Form data email",
       "Form data phone",
-      "Form data teacherAcceptSeat",
       "Form data contactFirstName",
       "Form data contactLastName",
       "Form data contactRelationship",
