@@ -99,10 +99,44 @@ Scenario: Basic teacher application submission
   # Confirmation page
   Then I wait until element "h1" contains text "Thank you for submitting your application to join Code.org’s Professional Learning Program!"
   Then I see no difference for "Confirmation"
-  Then I see no difference for "Thank you page"
 
   # Principal approval
   Then I sign out
   Then I navigate to the principal approval page for "Severus"
   Then I wait until element "h1" contains text "2018-2019 Code.org Principal Approval Form"
+  Then I press the first "input[name='doYouApprove'][value='Yes']" element
+
+  Then I press keys "Williamsville North High School" for element "#school input"
+  Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
+  Then I press keys ":arrow_down"
+  Then I press enter key
+
+  Then I press keys "1000" for element "#totalStudentEnrollment"
+  Then I press keys "10" for element "#freeLunchPercent"
+  Then I press keys "10" for element "#white"
+  Then I press keys "10" for element "#black"
+  Then I press keys "10" for element "#hispanic"
+  Then I press keys "10" for element "#asian"
+  Then I press keys "10" for element "#pacificIslander"
+  Then I press keys "10" for element "#americanIndian"
+  Then I press keys "10" for element "#other"
+
+  Then I press the first "input[name='committedToMasterSchedule']" element
+  Then I press the first "input[name='hoursPerYear']" element
+  Then I press the first "input[name='termsPerYear']" element
+  Then I press the first "input[name='replaceCourse']" element
+  Then I press the first "input[name='replaceWhichCourseCsp']" element
+
+  Then I press the first "input[name='committedToDiversity']" element
+  Then I press the first "#understandFee" element
+  Then I press the first "input[name='payFee']" element
+  Then I press the first "#confirmPrincipal" element
+
   Then I see no difference for "Principal approval form"
+
+  And I submit
+  Then I wait until element "h1" contains text "Thank you for submitting this form!"
+  Then I see no difference for "Principal approval confirmation form"
+  Then I close my eyes
+
+
