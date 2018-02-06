@@ -18,6 +18,16 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
       return
     end
 
+    unless @application.pd_workshop_id && Pd::Workshop.find(@application.pd_workshop_id).teachercon?
+      render :invalid
+      return
+    end
+
+    unless @application.locked? && @application.status == 'accepted'
+      render :invalid
+      return
+    end
+
     if Pd::Teachercon1819Registration.exists?(pd_application_id: @application.id)
       @registration = Pd::Teachercon1819Registration.find_by(pd_application_id: @application)
       @email = {
