@@ -731,6 +731,10 @@ GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
     'httpGet',
     'httpPost',
     'httpDo',
+    'loadJSON',
+    'loadStrings',
+    'loadTable',
+    'loadXML',
   ];
 };
 
@@ -769,20 +773,34 @@ GameLabP5.prototype.getCustomMarshalObjectList = function () {
   ];
 };
 
-GameLabP5.prototype.getGlobalPropertyList = function () {
+/**
+ * Names every property on the p5 instance except for those on custom marshal
+ * lists or blacklisted properties.
+ * @returns {Array.<string>}
+ */
+GameLabP5.prototype.getMarshallableP5Properties = function () {
+  const blockedProps = this.getCustomMarshalBlockedProperties();
+  const globalCustomMarshalProps = this.getCustomMarshalGlobalProperties();
 
-  var propList = {};
-  var blockedProps = this.getCustomMarshalBlockedProperties();
-  var globalCustomMarshalProps = this.getCustomMarshalGlobalProperties();
-
-  // Include every property on the p5 instance in the global property list
-  // except those on the custom marshal lists:
-  for (var prop in this.p5) {
+  const propNames = [];
+  for (const prop in this.p5) {
     if (-1 === blockedProps.indexOf(prop) &&
         -1 === this.p5specialFunctions.indexOf(prop) &&
         !globalCustomMarshalProps[prop]) {
-      propList[prop] = [this.p5[prop], this.p5];
+      propNames.push(prop);
     }
+  }
+  return propNames;
+};
+
+GameLabP5.prototype.getGlobalPropertyList = function () {
+  const propList = {};
+
+  // Include every property on the p5 instance in the global property list
+  // except those on the custom marshal lists:
+  const p5PropertyNames = this.getMarshallableP5Properties();
+  for (const prop of p5PropertyNames) {
+    propList[prop] = [this.p5[prop], this.p5];
   }
 
   // Create a 'p5' object in the global namespace:
