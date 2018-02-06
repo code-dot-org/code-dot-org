@@ -47,7 +47,7 @@ describe('The ShowCodeToggle component', () => {
         this.session.currentlyUsingBlocks = !this.session.currentlyUsingBlocks;
       },
       aceEditor: {
-        focus(){},
+        focus() {},
       },
     };
     sinon.stub(studioApp(), 'handleEditCode_').callsFake(function () {
