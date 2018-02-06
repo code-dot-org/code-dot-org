@@ -223,11 +223,8 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "display_name": "Starchaser - Add Lives"
+    "display_name": "Starchaser - Add Lives",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
