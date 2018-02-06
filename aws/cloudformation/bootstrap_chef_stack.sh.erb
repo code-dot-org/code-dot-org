@@ -87,10 +87,6 @@ cat <<JSON > $FIRST_BOOT
     "sync": true
   },
   "cdo-secrets": {
-<% if local_mode -%>
-    "build_apps": true,
-    "use_my_apps": true,
-<% end -%>
 <% if @frontends -%>
     "memcached_endpoint": "${Memcached.ConfigurationEndpoint.Address}:${Memcached.ConfigurationEndpoint.Port}",
     "redis_primary": "${GeocoderGroup.PrimaryEndPoint.Address}:${GeocoderGroup.PrimaryEndPoint.Port}",
