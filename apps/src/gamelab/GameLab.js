@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
@@ -15,7 +16,6 @@ import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarsha
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var utils = require('../utils');
-var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
 import * as apiTimeoutList from '../lib/util/timeoutList';
@@ -1020,7 +1020,11 @@ GameLab.prototype.completePreloadIfPreloadComplete = function () {
 GameLab.prototype.onP5Setup = function () {
   if (this.JSInterpreter) {
     // Re-marshal restored preload methods for the interpreter:
-    for (var method in this.gameLabP5.p5._preloadMethods) {
+    const preloadMethods = _.intersection(
+      this.gameLabP5.p5._preloadMethods,
+      this.gameLabP5.getMarshallableP5Properties()
+    );
+    for (const method in preloadMethods) {
       this.JSInterpreter.createGlobalProperty(
           method,
           this.gameLabP5.p5[method],
