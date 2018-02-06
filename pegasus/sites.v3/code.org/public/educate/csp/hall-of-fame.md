@@ -4,6 +4,8 @@ title: CS Principles Hall of Fame
 
 # CS Principles Hall of Fame
 
+<img src="/images/csp-hof.png" width="100%"/>
+
 ## Alabama
 * ATHENS HIGH SCHOOL, ATHENS - Kristin Black
 * BEULAH HIGH SCHOOL, VALLEY - Rebecca Griffin
