@@ -1676,4 +1676,4 @@ module.exports = class Maze {
 
     this.subtype.onExecutionFinish();
   }
-}
+};
