@@ -21,6 +21,7 @@
 # Indexes
 #
 #  index_schools_on_id                  (id) UNIQUE
+#  index_schools_on_name_and_city       (name,city)
 #  index_schools_on_school_district_id  (school_district_id)
 #  index_schools_on_state_school_id     (state_school_id) UNIQUE
 #  index_schools_on_zip                 (zip)
