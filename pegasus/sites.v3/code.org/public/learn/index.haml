@@ -112,6 +112,9 @@ style_min: false
   - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
   - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
 
+- sort_by_popularity = request.site == 'code.org'
+- sort_by_popularity &&= [false, "pre-hoc"].include?(DCDO.get("hoc_mode", false))
+
 #tutorials
 
 :javascript
@@ -122,7 +125,8 @@ style_min: false
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
       roboticsButtonUrl: "/learn/robotics",
-      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
+      disabledTutorials: #{sort_by_popularity},
+      defaultSortByPopularity: #{sort_by_popularity}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 
