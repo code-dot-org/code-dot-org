@@ -554,7 +554,7 @@ NetSimSendPanel.prototype.setBitRate = function (newBitRate) {
  */
 NetSimSendPanel.prototype.packetSizeChangeCallback_ = function (newPacketSize) {
   this.maxPacketSize_ = newPacketSize;
-  this.packets_.forEach(function (packetEditor){
+  this.packets_.forEach(function (packetEditor) {
     packetEditor.setMaxPacketSize(newPacketSize);
   });
 };

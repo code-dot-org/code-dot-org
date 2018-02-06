@@ -1,5 +1,8 @@
 var errorDialogStackModule = require('@cdo/apps/gamelab/errorDialogStackModule');
 import {expect} from '../../util/configuredChai';
+import {UnconnectedErrorDialogStack as ErrorDialogStack} from '@cdo/apps/gamelab/ErrorDialogStack';
+import {mount} from 'enzyme';
+import React from 'react';
 
 describe('ErrorDialogStack', function () {
   describe('reducer', function () {
@@ -22,18 +25,54 @@ describe('ErrorDialogStack', function () {
         var newState = reducer([], reportError('a mistake'));
         expect(newState).not.to.equal(state);
         expect(newState).to.deep.equal([
-          { message: 'a mistake' }
+          { message: 'a mistake', error_type: undefined, error_cause: undefined }
         ]);
       });
 
       it('puts the new error object at the beginning of the stack', function () {
-        var state = [{ message: 'original' }];
+        var state = [{ message: 'original', error_type: undefined, error_cause: undefined }];
         var newState = reducer(state, reportError('new'));
         expect(newState).not.to.equal(state);
         expect(newState).to.deep.equal([
-          { message: 'new' },
-          { message: 'original' }
+          { message: 'new', error_type: undefined, error_cause: undefined },
+          { message: 'original', error_type: undefined, error_cause: undefined}
         ]);
+      });
+
+      it('pushes an animation load error object onto the stack', function () {
+        var state = [];
+        var newState = reducer([], reportError('a mistake', 'anim_load', '1234'));
+        expect(newState).not.to.equal(state);
+        expect(newState).to.deep.equal([
+          { message: 'a mistake', error_type: 'anim_load', error_cause: '1234'}
+        ]);
+      });
+
+      it('displays additional message and buttons for an animation load error', function () {
+        var newState = reducer([], reportError('a mistake', 'anim_load', '1234'));
+        var dialog = mount(
+          <ErrorDialogStack
+            errors={newState}
+            dismissError={() => {}}
+            deleteAnimation={() => {}}
+            animationList={undefined}
+          />);
+        expect(dialog.text()).to.contain("It looks like we are having trouble loading your animation");
+        expect(dialog.text()).to.contain("https://code.org/contact");
+        expect(dialog.find('Button')).to.have.length(2);
+      });
+
+      it('does not display additional message and buttons for a generic error', function () {
+        var newState = reducer([], reportError('a mistake'));
+        var dialog = mount(
+          <ErrorDialogStack
+            errors={newState}
+            dismissError={() => {}}
+            deleteAnimation={() => {}}
+            animationList={undefined}
+          />);
+        expect(dialog.text()).to.not.contain("It looks like we are having trouble loading your animation");
+        expect(dialog.find('Button')).to.have.length(0);
       });
     });
 

@@ -30,11 +30,11 @@ export default () => {
         url: url,
         type:'PUT',
         dataType:'json',
-        success:function (data){
+        success:function (data) {
           $('#unfeature_project').show();
           $('#feature_project').hide();
         },
-        error:function (data){
+        error:function (data) {
           alert("Shucks. Something went wrong - this project wasn't featured.");
         }
       });
@@ -46,11 +46,11 @@ export default () => {
         url: url,
         type:'PUT',
         dataType:'json',
-        success:function (data){
+        success:function (data) {
           $('#unfeature_project').hide();
           $('#feature_project').show();
         },
-        error:function (data){
+        error:function (data) {
           alert("Shucks. Something went wrong - this project is still featured.");
         }
       });

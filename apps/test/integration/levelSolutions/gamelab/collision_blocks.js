@@ -16,11 +16,11 @@ module.exports = {
         }
         console.log("done");
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output').textContent;
         return debugOutput.includes('done');
       },
-      function validateResult(assert){
+      function validateResult(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'collided');
       },
@@ -35,11 +35,11 @@ module.exports = {
         }
         console.log("done");
       `,
-      function isProgramDone(){
+      function isProgramDone() {
           var debugOutput = document.getElementById('debug-output');
           return debugOutput.textContent.includes('done');
       },
-      function validateResult(assert){
+      function validateResult(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'collided');
       },
@@ -54,11 +54,11 @@ module.exports = {
         }
         console.log("done");
       `,
-      function isProgramDone(){
+      function isProgramDone() {
           var debugOutput = document.getElementById('debug-output');
           return debugOutput.textContent.includes('done');
       },
-      function validateResult(assert){
+      function validateResult(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'bounced');
       },
@@ -73,11 +73,11 @@ module.exports = {
         }
         console.log("done");
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
-      function validateResult(assert){
+      function validateResult(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'bounced');
       },
@@ -92,11 +92,11 @@ module.exports = {
         }
         console.log("done");
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
-      function validateResult(assert){
+      function validateResult(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'bounced off');
       },
@@ -111,11 +111,11 @@ module.exports = {
         }
         console.log("done");
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
-      function validateResults(assert){
+      function validateResults(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'bounced off');
       },
@@ -130,11 +130,11 @@ module.exports = {
         }
         console.log("done");
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
-      function validateResults(assert){
+      function validateResults(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'displaced');
       },
@@ -149,11 +149,11 @@ module.exports = {
         }
         console.log("done");
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
-      function validateResults(assert){
+      function validateResults(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'displaced');
       },
@@ -168,11 +168,11 @@ module.exports = {
         }
         console.log("done");
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
-      function validateResults(assert){
+      function validateResults(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'overlapped');
       },
@@ -187,11 +187,11 @@ module.exports = {
         }
         console.log("done");
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
-      function validateResults(assert){
+      function validateResults(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'overlapped');
       },
@@ -206,11 +206,11 @@ module.exports = {
         }
         console.log("done");
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
-      function validateResults(assert){
+      function validateResults(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'touched');
       },
@@ -225,11 +225,11 @@ module.exports = {
         }
         console.log("done");
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
-      function validateResults(assert){
+      function validateResults(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'touched');
       },
@@ -246,11 +246,11 @@ module.exports = {
 
         console.log('done');
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
-      function validateResults(assert){
+      function validateResults(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'collided');
       },
@@ -267,11 +267,11 @@ module.exports = {
 
         console.log('done');
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
-      function validateResults(assert){
+      function validateResults(assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.notInclude(debugOutput.textContent, 'collided');
       },
