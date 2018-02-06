@@ -85,6 +85,7 @@ class ProjectsController < ApplicationController
     },
     gamelab_jr: {
       name: 'New Game Lab Jr Project',
+      levelbuilder_required: true,
     },
     makerlab: {
       name: 'New Maker Lab Project',
