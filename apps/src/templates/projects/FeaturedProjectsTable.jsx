@@ -101,6 +101,7 @@ const actionsFormatterUnfeatured = (actions, {rowData}) => {
     </QuickActionsCell>
   );
 };
+
 const dateFormatter = (time) => {
   const date = new Date(time);
   return date.toLocaleDateString();
@@ -296,7 +297,7 @@ class FeaturedProjectsTable extends React.Component {
         style={tableLayoutStyles.table}
       >
         <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="channel" />
+        <Table.Body rows={sortedRows} rowKey="projectName" />
       </Table.Provider>
     );
   }
