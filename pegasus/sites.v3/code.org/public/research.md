@@ -38,7 +38,7 @@ Other reports
 ## Research Partnerships
 
 
-* Dr. Briana Morrison - University of Nebraska at Omaha [Subgoal Labels Study in CSP Unit 3](/research/subgoal-labels-study)
+* Dr. Briana Morrison - University of Nebraska at Omaha - [Subgoal Labels Study in CSP Unit 3](/research/subgoal-labels-study)
 * Dr. Rene Kizilcec - Stanford University - Social Belonging in Computer Science Classrooms
 * Dr. Maya Israel - University of Illinois
 * Dr. Justin Reich & Kevin Robinson - MIT Teaching Systems Lab - Unconscious Bias in Computer Science classrooms

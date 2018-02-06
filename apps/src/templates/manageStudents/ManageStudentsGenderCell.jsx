@@ -1,5 +1,7 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
+import {editStudent} from './manageStudentsRedux';
 
 const GENDERS = {
   m: i18n.genderMale(),
@@ -11,6 +13,9 @@ class ManageStudentGenderCell extends Component {
     id: PropTypes.number.isRequired,
     gender: PropTypes.string,
     isEditing: PropTypes.bool,
+    editedValue: PropTypes.string,
+    // Provided by redux
+    editStudent: PropTypes.func.isRequired,
   };
 
   state = {
@@ -18,7 +23,7 @@ class ManageStudentGenderCell extends Component {
   };
 
   onChangeGender = (e) => {
-    this.setState({genderValue: e.target.value});
+    this.props.editStudent(this.props.id, {gender: e.target.value});
   };
 
   render() {
@@ -33,7 +38,7 @@ class ManageStudentGenderCell extends Component {
           <select
             ref={element => this.root = element}
             name="age"
-            value={this.state.genderValue}
+            value={this.props.editedValue}
             onChange={this.onChangeGender}
           >
            {Object.keys(GENDERS).map(gender => <option key={gender} value={gender}>{GENDERS[gender]}</option>)}
@@ -44,4 +49,8 @@ class ManageStudentGenderCell extends Component {
   }
 }
 
-export default ManageStudentGenderCell;
+export default connect(state => ({}), dispatch => ({
+  editStudent(id, studentInfo) {
+    dispatch(editStudent(id, studentInfo));
+  },
+}))(ManageStudentGenderCell);

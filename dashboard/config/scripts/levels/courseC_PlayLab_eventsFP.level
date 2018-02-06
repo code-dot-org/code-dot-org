@@ -30,7 +30,7 @@
     "free_play": "true",
     "disable_sharing": "false",
     "edge_collisions": "false",
-    "projectile_collisions": "false",
+    "projectile_collisions": "true",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
@@ -47,10 +47,14 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "remove_items_when_actor_collides": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-02-06 19:29:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"projectile_collisions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "repeat_until_while": 1,
