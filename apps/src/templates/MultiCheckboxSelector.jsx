@@ -48,7 +48,7 @@ const MultiCheckboxSelector = Radium(React.createClass({
       itemPropName: 'item',
       selected: [],
       items: [],
-      onChange: function (){},
+      onChange: function () {},
       disabled: false,
     };
   },
