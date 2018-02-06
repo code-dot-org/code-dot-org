@@ -33,7 +33,7 @@ class GamelabJr < Gamelab
     create!(
       level_params.merge(
         user: params[:user],
-        game: Game.gamelab_jr,
+        game: Game.gamelab,
         level_num: 'custom',
         properties: {
           code_functions: JSON.parse(palette),
