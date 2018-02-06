@@ -855,6 +855,13 @@ FactoryGirl.define do
       teacher_accept_seat Pd::Teachercon1819Registration::TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_date]
       with_full_form_data
     end
+
+    trait :partner_registration do
+      after :build do |hash|
+        hash['ableToAttend'] = "Yes"
+        hash.delete('teacherAcceptSeat')
+      end
+    end
   end
 
   factory :pd_teachercon1819_registration, class: 'Pd::Teachercon1819Registration' do
