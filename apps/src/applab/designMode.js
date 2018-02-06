@@ -287,7 +287,7 @@ designMode.updateProperty = function (element, name, value) {
       }
 
       var backgroundImage = new Image();
-      backgroundImage.src = assetPrefix.fixPath(escape(value));
+      backgroundImage.src = assetPrefix.fixPath(value);
       element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
 
       // do not resize if only the asset path has changed (e.g. on remix).
@@ -309,7 +309,7 @@ designMode.updateProperty = function (element, name, value) {
         url = assetPrefix.renderIconToString(value, element);
       } else {
         const screenImage = new Image();
-        screenImage.src = assetPrefix.fixPath(escape(value));
+        screenImage.src = assetPrefix.fixPath(value);
         url = screenImage.src;
       }
       element.style.backgroundImage = 'url(' + url + ')';
