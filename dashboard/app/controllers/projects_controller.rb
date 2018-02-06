@@ -147,12 +147,12 @@ class ProjectsController < ApplicationController
     matched_projects_and_featured_projects.each do |featured_project, project|
       project_details = JSON.parse(project[:id][:value])
       featured_project_row = {
-        project_name: project_details['name'],
-        category: project_details['projectType'],
-        published_at: project_details['publishedAt'],
-        thumbnail_url: project_details['thumbnailUrl'],
-        featured_at: featured_project.featured_at,
-        unfeatured_at: featured_project.unfeatured_at,
+        projectName: project_details['name'],
+        type: project_details['projectType'],
+        publishedAt: project_details['publishedAt'],
+        thumbnailUrl: project_details['thumbnailUrl'],
+        featuredAt: featured_project.featured_at,
+        unfeaturedAt: featured_project.unfeatured_at,
         featured: featured_project.featured?
       }
       @featured_project_table_rows << featured_project_row
