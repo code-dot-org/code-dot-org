@@ -100,6 +100,7 @@ cat <<JSON > $FIRST_BOOT
     "cdn_enabled": false,
 <% end -%>
 <% if rack_env?(:adhoc) -%>
+    "image_optim": false,
     "override_dashboard": "<%=studio_subdomain%>",
     "override_pegasus": "<%=subdomain%>",
 <% end -%>
