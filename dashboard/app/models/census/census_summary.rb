@@ -82,8 +82,8 @@ class Census::CensusSummary < ApplicationRecord
       no_data: 0.8,
     },
     given_does_not_teach: {
-      data_present: 0.0001, # There is a chance that the school code mappings are wrong
-      no_data: 0.9999,
+      data_present: 0.00001, # There is a chance that the school code mappings are wrong
+      no_data: 0.99999,
     },
   }.freeze
 
@@ -93,8 +93,8 @@ class Census::CensusSummary < ApplicationRecord
       no_data: 0.99,
     },
     given_does_not_teach: {
-      data_present: 0.0001, # There is a chance that the school code mappings are wrong
-      no_data: 0.9999,
+      data_present: 0.00001, # There is a chance that the school code mappings are wrong
+      no_data: 0.99999,
     },
   }.freeze
 
@@ -119,6 +119,178 @@ class Census::CensusSummary < ApplicationRecord
     else
       "M"
     end
+  end
+
+  def self.summarize_school_data(school, school_years, years_with_ap_data, years_with_ib_data, state_years_with_data)
+    previous_years_belief = nil
+    summaries = []
+
+    school_years.each do |school_year|
+      audit = {
+        version: 0.2,
+        stats: [],
+        census_submissions: [],
+        ap_cs_offerings: [],
+        ib_cs_offerings: [],
+        state_cs_offerings: [],
+      }
+
+      likelihoods = {
+        teaches: [],
+        not_teaches: [],
+      }
+
+      def likelihoods.push_likelihoods_for(category, data)
+        # P(data | School actually teaches)
+        self[:teaches].push category[:given_teaches][data]
+        # P(data | School does not actually teach)
+        self[:not_teaches].push category[:given_does_not_teach][data]
+      end
+
+      # If the school doesn't have stats then treat it as not high school.
+      # The lack of stats will show up in the audit data as a null value for high_school.
+      stats = school.school_stats_by_year.try(:sort).try(:last)
+      high_school = stats.try(:has_high_school_grades?)
+      audit[:stats].push({high_school: high_school})
+
+      # Census Submissions
+      submissions = school.school_info.map(&:census_submissions).flatten
+      # Lack of a submission for a school isn't considered evidence
+      # so we only look at actual submissions.
+      submissions.select {|s| s.school_year == school_year}.each do |submission|
+        # Treat an "I don't know" response the same as not having any response
+        if high_school ? submission.how_many_20_hours_dont_know? : submission.how_many_10_hours_dont_know?
+          audit[:census_submissions].push(
+            {
+              id: submission.id,
+              skipped: true,
+            }
+          )
+          next
+        end
+
+        teaches = submission_teaches_cs?(submission, high_school)
+
+        audit[:census_submissions].push(
+          {
+            id: submission.id,
+            teaches: teaches
+          }
+        )
+
+        data =
+          if teaches
+            :survey_yes
+          else
+            :survey_no
+          end
+
+        likelihoods.push_likelihoods_for(SUBMISSION_LIKELIHOODS, data)
+      end
+
+      # AP data
+
+      ap_offerings = school.ap_school_code.try(:ap_cs_offering) || []
+      ap_offerings_this_year = ap_offerings.select {|o| o.school_year == school_year}
+      ap_offerings_this_year.each do |offering|
+        audit[:ap_cs_offerings].push(offering.id)
+        likelihoods.push_likelihoods_for(AP_LIKELIHOODS, :data_present)
+      end
+
+      # Since AP is only for high school grades, the lack of AP data for a non high school
+      # doesn't give us any information.
+      if years_with_ap_data.include?(school_year) && high_school && ap_offerings_this_year.empty?
+        audit[:ap_cs_offerings].push(nil)
+        likelihoods.push_likelihoods_for(AP_LIKELIHOODS, :no_data)
+      end
+
+      # IB data
+
+      ib_offerings = school.ib_school_code.try(:ib_cs_offering) || []
+      ib_offerings_this_year = ib_offerings.select {|o| o.school_year == school_year}
+      ib_offerings_this_year.each do |offering|
+        audit[:ib_cs_offerings].push(offering.id)
+        likelihoods.push_likelihoods_for(IB_LIKELIHOODS, :data_present)
+      end
+
+      # Since IB CS is only for high school grades, the lack of IB data for a non high school
+      # doesn't give us any information.
+      if years_with_ib_data.include?(school_year) && high_school && ib_offerings_this_year.empty?
+        audit[:ib_cs_offerings].push(nil)
+        likelihoods.push_likelihoods_for(IB_LIKELIHOODS, :no_data)
+      end
+
+      # State data
+
+      # Schools without state school ids cannot have state data.
+      # Ignore those schools so that we won't count the lack of
+      # state data as a NO.
+      if school.state_school_id
+        state_offerings = school.state_cs_offering || []
+        state_offerings = state_offerings.select {|o| o.school_year == school_year}
+        # If we have any state data for this year then a high school
+        # without a row is counted as a NO
+        if high_school &&
+           state_offerings.empty? &&
+           Census::StateCsOffering::SUPPORTED_STATES.include?(school.state) &&
+           state_years_with_data[school.state].include?(school_year)
+          audit[:state_cs_offerings].push(nil)
+          likelihoods.push_likelihoods_for(STATE_LIKELIHOODS, :no_data)
+        else
+          state_offerings.each do |offering|
+            audit[:state_cs_offerings].push(offering.id)
+            likelihoods.push_likelihoods_for(STATE_LIKELIHOODS, :data_present)
+          end
+        end
+      end
+
+      summary = Census::CensusSummary.find_or_initialize_by(
+        school: school,
+        school_year: school_year,
+      )
+
+      # Assuming some chance that the school will stop teaching we degrade the
+      # old belief.
+      # Use an uninformed prior (0.5) if we don't have a previous year's belief.
+      prior = previous_years_belief ? (previous_years_belief * 0.9) : 0.5
+      audit[:previous_years_belief] = previous_years_belief
+      audit[:prior] = prior
+
+      # If we have no information about a school then it will be reported as
+      # a null classification rather than as a maybe. This lets us see the
+      # difference between a computed maybe and one that is the result of
+      # no data.
+      posterior = nil
+
+      if likelihoods[:teaches].presence
+        # P(teaches | data) = P(teaches) * P(data_1 | teaches) * P(data_2 | teaches) * ... / P(data)
+        # P(not teaches | data) = P(not teaches) * P(data_1 | not teaches) * P(data_2 | not teaches) * ... / P(data)
+        #
+        # P(teaches) is the prior, P(not teaches) is 1 - prior
+        # P(data_n | teaches) and P(data_n | not teaches) are the likelihoods for data_n
+        # P(data) can be computed as the sum of the numerators of P(teaches | data) and P(not teaches | data)
+        #         since those two fractions need to sum to 1.0 (since there are only two possibilities.)
+        prior_times_likelihoods = {
+          teaches: prior * likelihoods[:teaches].reduce(1, :*),
+          not_teaches: (1 - prior) * likelihoods[:not_teaches].reduce(1, :*)
+        }
+        posterior = prior_times_likelihoods[:teaches] /
+                    (prior_times_likelihoods[:teaches] + prior_times_likelihoods[:not_teaches])
+      elsif previous_years_belief
+        # No data, so no updating (beyond the degrading of the previous belief done above.)
+        posterior = prior
+      end
+
+      audit[:posterior] = posterior
+      previous_years_belief = posterior
+
+      summary.teaches_cs = decide_teaches(posterior)
+      summary.audit_data = JSON.generate(audit)
+
+      summaries.push summary
+    end
+
+    return summaries
   end
 
   def self.summarize_census_data
@@ -156,171 +328,13 @@ class Census::CensusSummary < ApplicationRecord
         eager_load(:school_stats_by_year).
         find_each do |school|
 
-        previous_years_belief = nil
-        school_years.each do |school_year|
-          audit = {
-            version: 0.2,
-            stats: [],
-            census_submissions: [],
-            ap_cs_offerings: [],
-            ib_cs_offerings: [],
-            state_cs_offerings: [],
-          }
-
-          likelihoods = {
-            teaches: [],
-            not_teaches: [],
-          }
-
-          def likelihoods.push_likelihoods_for(category, data)
-            # P(data | School actually teaches)
-            self[:teaches].push category[:given_teaches][data]
-            # P(data | School does not actually teach)
-            self[:not_teaches].push category[:given_does_not_teach][data]
-          end
-
-          # If the school doesn't have stats then treat it as not high school.
-          # The lack of stats will show up in the audit data as a null value for high_school.
-          stats = school.school_stats_by_year.try(:sort).try(:last)
-          high_school = stats.try(:has_high_school_grades?)
-          audit[:stats].push({high_school: high_school})
-
-          # Census Submissions
-          submissions = school.school_info.map(&:census_submissions).flatten
-          # Lack of a submission for a school isn't considered evidence
-          # so we only look at actual submissions.
-          submissions.select {|s| s.school_year == school_year}.each do |submission|
-            # Treat an "I don't know" response the same as not having any response
-            if high_school ? submission.how_many_20_hours_dont_know? : submission.how_many_10_hours_dont_know?
-              audit[:census_submissions].push(
-                {
-                  id: submission.id,
-                  skipped: true,
-                }
-              )
-              next
-            end
-
-            teaches = submission_teaches_cs?(submission, high_school)
-
-            audit[:census_submissions].push(
-              {
-                id: submission.id,
-                teaches: teaches
-              }
-            )
-
-            data =
-              if teaches
-                :survey_yes
-              else
-                :survey_no
-              end
-
-            likelihoods.push_likelihoods_for(SUBMISSION_LIKELIHOODS, data)
-          end
-
-          # AP data
-
-          ap_offerings = school.ap_school_code.try(:ap_cs_offering) || []
-          ap_offerings_this_year = ap_offerings.select {|o| o.school_year == school_year}
-          ap_offerings_this_year.each do |offering|
-            audit[:ap_cs_offerings].push(offering.id)
-            likelihoods.push_likelihoods_for(AP_LIKELIHOODS, :data_present)
-          end
-
-          # Since AP is only for high school grades, the lack of AP data for a non high school
-          # doesn't give us any information.
-          if years_with_ap_data.include?(school_year) && high_school && ap_offerings_this_year.empty?
-            audit[:ap_cs_offerings].push(nil)
-            likelihoods.push_likelihoods_for(AP_LIKELIHOODS, :no_data)
-          end
-
-          # IB data
-
-          ib_offerings = school.ib_school_code.try(:ib_cs_offering) || []
-          ib_offerings_this_year = ib_offerings.select {|o| o.school_year == school_year}
-          ib_offerings_this_year.each do |offering|
-            audit[:ib_cs_offerings].push(offering.id)
-            likelihoods.push_likelihoods_for(IB_LIKELIHOODS, :data_present)
-          end
-
-          # Since IB CS is only for high school grades, the lack of IB data for a non high school
-          # doesn't give us any information.
-          if years_with_ib_data.include?(school_year) && high_school && ib_offerings_this_year.empty?
-            audit[:ib_cs_offerings].push(nil)
-            likelihoods.push_likelihoods_for(IB_LIKELIHOODS, :no_data)
-          end
-
-          # State data
-
-          # Schools without state school ids cannot have state data.
-          # Ignore those schools so that we won't count the lack of
-          # state data as a NO.
-          if school.state_school_id
-            state_offerings = school.state_cs_offering || []
-            state_offerings = state_offerings.select {|o| o.school_year == school_year}
-            # If we have any state data for this year then a high school
-            # without a row is counted as a NO
-            if high_school &&
-               state_offerings.empty? &&
-               Census::StateCsOffering::SUPPORTED_STATES.include?(school.state) &&
-               state_years_with_data[school.state].include?(school_year)
-              audit[:state_cs_offerings].push(nil)
-              likelihoods.push_likelihoods_for(STATE_LIKELIHOODS, :no_data)
-            else
-              state_offerings.each do |offering|
-                audit[:state_cs_offerings].push(offering.id)
-                likelihoods.push_likelihoods_for(STATE_LIKELIHOODS, :data_present)
-              end
-            end
-          end
-
-          summary = Census::CensusSummary.find_or_initialize_by(
-            school: school,
-            school_year: school_year,
-          )
-
-          # Assuming some chance that the school will stop teaching we degrade the
-          # old belief.
-          # Use an uninformed prior (0.5) if we don't have a previous year's belief.
-          prior = previous_years_belief ? (previous_years_belief * 0.9) : 0.5
-          audit[:previous_years_belief] = previous_years_belief
-          audit[:prior] = prior
-
-          # If we have no information about a school then it will be reported as
-          # a null classification rather than as a maybe. This lets us see the
-          # difference between a computed maybe and one that is the result of
-          # no data.
-          posterior = nil
-
-          if likelihoods[:teaches].presence
-            # P(teaches | data) = P(teaches) * P(data_1 | teaches) * P(data_2 | teaches) * ... / P(data)
-            # P(not teaches | data) = P(not teaches) * P(data_1 | not teaches) * P(data_2 | not teaches) * ... / P(data)
-            #
-            # P(teaches) is the prior, P(not teaches) is 1 - prior
-            # P(data_n | teaches) and P(data_n | not teaches) are the likelihoods for data_n
-            # P(data) can be computed as the sum of the numerators of P(teaches | data) and P(not teaches | data)
-            #         since those two fractions need to sum to 1.0 (since there are only two possibilities.)
-            prior_times_likelihoods = {
-              teaches: prior * likelihoods[:teaches].reduce(1, :*),
-              not_teaches: (1 - prior) * likelihoods[:not_teaches].reduce(1, :*)
-            }
-            posterior = prior_times_likelihoods[:teaches] /
-                        (prior_times_likelihoods[:teaches] + prior_times_likelihoods[:not_teaches])
-          elsif previous_years_belief
-            # No data, so no updating (beyond the degrading of the previous belief done above.)
-            posterior = prior
-          end
-
-          audit[:posterior] = posterior
-          previous_years_belief = posterior
-
-          summary.teaches_cs = decide_teaches(posterior)
-          summary.audit_data = JSON.generate(audit)
-
-          summary.save!
-        end
+        summarize_school_data(
+          school,
+          school_years,
+          years_with_ap_data,
+          years_with_ib_data,
+          state_years_with_data
+        ).each(&:save!)
       end
     end
   end
