@@ -6,9 +6,6 @@ module OPS
 end
 
 Dashboard::Application.routes.draw do
-  put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
-  put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
-
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 
   resource :pairing, only: [:show, :update]
@@ -150,6 +147,9 @@ Dashboard::Application.routes.draw do
   end
 
   get 'projects/featured', to: 'projects#featured'
+
+  put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
+  put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
 
   get '/projects/public', to: 'projects#public'
   resources :projects, path: '/projects/', only: [:index] do
