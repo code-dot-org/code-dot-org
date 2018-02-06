@@ -16,40 +16,40 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
  */
 class ErrorDialogStack extends React.Component {
   static propTypes = {
-    //From redux
+    // From redux
     errors: PropTypes.arrayOf(PropTypes.object).isRequired,
     dismissError: PropTypes.func.isRequired,
     deleteAnimation: PropTypes.func,
     animationList: PropTypes.object
   };
 
-  handleDeleteChoice(key){
+  handleDeleteChoice(key) {
     // Log data about when this scenario occurs
     firehoseClient.putRecord(
-     'analysis-events',
-        {
-          study: 'animation_no_load',
-          study_group: 'animation_no_load_with_buttons',
-          event: 'delete_selected',
-          data_json: JSON.stringify({'version': this.props.animationList.propsByKey[key].version,
-            'animationName': this.props.animationList.propsByKey[key].name})
-        }
+      'analysis-events',
+      {
+        study: 'animation_no_load',
+        study_group: 'animation_no_load_with_buttons',
+        event: 'delete_selected',
+        data_json: JSON.stringify({'version': this.props.animationList.propsByKey[key].version,
+          'animationName': this.props.animationList.propsByKey[key].name})
+      }
     );
     this.props.deleteAnimation(key);
     this.props.dismissError();
   }
 
-  handleReloadChoice(key){
+  handleReloadChoice(key) {
     // Log data about when this scenario occurs
     firehoseClient.putRecord(
-     'analysis-events',
-        {
-          study: 'animation_no_load',
-          study_group: 'animation_no_load_with_buttons',
-          event: 'reload_selected',
-          data_json: JSON.stringify({'version': this.props.animationList.propsByKey[key].version,
-            'animationName': this.props.animationList.propsByKey[key].name})
-        }
+      'analysis-events',
+      {
+        study: 'animation_no_load',
+        study_group: 'animation_no_load_with_buttons',
+        event: 'reload_selected',
+        data_json: JSON.stringify({'version': this.props.animationList.propsByKey[key].version,
+          'animationName': this.props.animationList.propsByKey[key].name})
+      }
     );
     location.reload();
   }
@@ -60,7 +60,7 @@ class ErrorDialogStack extends React.Component {
     }
 
     const error = this.props.errors[0];
-    const animationName =  (this.props.animationList && this.props.animationList.propsByKey[error.error_cause]) ?
+    const animationName = (this.props.animationList && this.props.animationList.propsByKey[error.error_cause]) ?
       this.props.animationList.propsByKey[error.error_cause].name : "";
 
     return (
@@ -77,7 +77,7 @@ class ErrorDialogStack extends React.Component {
         {error.error_type === 'anim_load' &&
           <div>
             <p>{gamelabMsg.errorLoadingAnimation({ animationName: animationName })}</p>
-            <p>{msg.contactWithoutEmail()} <a href={pegasus('/contact')}>https://code.org/contact</a>.</p>
+            <p>{msg.contactWithoutEmail()} <a href={pegasus('/contact')} target="_blank">https://code.org/contact</a>.</p>
             <DialogFooter>
               {error.error_cause &&
                 <Button
