@@ -68,17 +68,6 @@ const passwordFormatter = (loginType, {rowData}) => {
   );
 };
 
-const actionsFormatter = function (actions, {rowData}) {
-  return (
-    <ManageStudentsActionsCell
-      id={rowData.id}
-      sectionId={rowData.sectionId}
-      isEditing={rowData.isEditing}
-      isSaving={rowData.isSaving}
-    />
-  );
-};
-
 class ManageStudentsTable extends Component {
   static propTypes = {
     // Provided by redux
@@ -129,6 +118,19 @@ class ManageStudentsTable extends Component {
         username={rowData.username}
         isEditing={rowData.isEditing}
         editedValue={editedValue}
+      />
+    );
+  };
+
+  actionsFormatter = (actions, {rowData}) => {
+    let disableSaving = rowData.isEditing ? (this.props.editingData[rowData.id].name.length === 0) : false;
+    return (
+      <ManageStudentsActionsCell
+        id={rowData.id}
+        sectionId={rowData.sectionId}
+        isEditing={rowData.isEditing}
+        isSaving={rowData.isSaving}
+        disableSaving={disableSaving}
       />
     );
   };
@@ -251,7 +253,7 @@ class ManageStudentsTable extends Component {
           }},
         },
         cell: {
-          format: actionsFormatter,
+          format: this.actionsFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
