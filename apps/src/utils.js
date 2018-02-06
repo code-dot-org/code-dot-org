@@ -680,6 +680,18 @@ export function bisect(array, conditional) {
 }
 
 /**
+ * Recursively flatten the given array
+ * from https://stackoverflow.com/a/15030117/1810460
+ */
+export function flatten(array) {
+  return array.reduce(
+    (flat, toFlatten) =>
+      flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten),
+    [],
+  );
+}
+
+/**
  * Helper function that wraps window.location.reload, which we cannot stub
  * in unit tests if we're running them in Chrome.
  */
