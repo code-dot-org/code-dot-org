@@ -172,6 +172,13 @@ class Census::CensusSummary < ApplicationRecord
             not_teaches: [],
           }
 
+          def likelihoods.push_likelihoods_for(category, data)
+            # P(data | School actually teaches)
+            self[:teaches].push category[:given_teaches][data]
+            # P(data | School does not actually teach)
+            self[:not_teaches].push category[:given_does_not_teach][data]
+          end
+
           # If the school doesn't have stats then treat it as not high school.
           # The lack of stats will show up in the audit data as a null value for high_school.
           stats = school.school_stats_by_year.try(:sort).try(:last)
@@ -203,17 +210,14 @@ class Census::CensusSummary < ApplicationRecord
               }
             )
 
-            if teaches
-              # P(Survey says teaches=true | School actually teaches)
-              likelihoods[:teaches].push SUBMISSION_LIKELIHOODS[:given_teaches][:survey_yes]
-              # P(Survey says teaches=true | School does not actually teach)
-              likelihoods[:not_teaches].push SUBMISSION_LIKELIHOODS[:given_does_not_teach][:survey_yes]
-            else
-              # P(Survey says teaches=false | School actually teaches)
-              likelihoods[:teaches].push SUBMISSION_LIKELIHOODS[:given_teaches][:survey_no]
-              # P(Survey says teaches=false | School does not actually teach)
-              likelihoods[:not_teaches].push SUBMISSION_LIKELIHOODS[:given_does_not_teach][:survey_no]
-            end
+            data =
+              if teaches
+                :survey_yes
+              else
+                :survey_no
+              end
+
+            likelihoods.push_likelihoods_for(SUBMISSION_LIKELIHOODS, data)
           end
 
           # AP data
@@ -222,20 +226,14 @@ class Census::CensusSummary < ApplicationRecord
           ap_offerings_this_year = ap_offerings.select {|o| o.school_year == school_year}
           ap_offerings_this_year.each do |offering|
             audit[:ap_cs_offerings].push(offering.id)
-            # P(AP data lists this school | School actually teaches)
-            likelihoods[:teaches].push AP_LIKELIHOODS[:given_teaches][:data_present]
-            # P(AP data lists this school | School does not actually teach)
-            likelihoods[:not_teaches].push AP_LIKELIHOODS[:given_does_not_teach][:data_present]
+            likelihoods.push_likelihoods_for(AP_LIKELIHOODS, :data_present)
           end
 
           # Since AP is only for high school grades, the lack of AP data for a non high school
           # doesn't give us any information.
           if years_with_ap_data.include?(school_year) && high_school && ap_offerings_this_year.empty?
             audit[:ap_cs_offerings].push(nil)
-            # P(AP data does not list this school | School actually teaches)
-            likelihoods[:teaches].push AP_LIKELIHOODS[:given_teaches][:no_data]
-            # P(AP data does not list this school | School does not actually teach)
-            likelihoods[:not_teaches].push AP_LIKELIHOODS[:given_does_not_teach][:no_data]
+            likelihoods.push_likelihoods_for(AP_LIKELIHOODS, :no_data)
           end
 
           # IB data
@@ -244,20 +242,14 @@ class Census::CensusSummary < ApplicationRecord
           ib_offerings_this_year = ib_offerings.select {|o| o.school_year == school_year}
           ib_offerings_this_year.each do |offering|
             audit[:ib_cs_offerings].push(offering.id)
-            # P(IB data lists this school | School actually teaches)
-            likelihoods[:teaches].push IB_LIKELIHOODS[:given_teaches][:data_present]
-            # P(IB data lists this school | School does not actually teach)
-            likelihoods[:not_teaches].push IB_LIKELIHOODS[:given_does_not_teach][:data_present]
+            likelihoods.push_likelihoods_for(IB_LIKELIHOODS, :data_present)
           end
 
           # Since IB CS is only for high school grades, the lack of IB data for a non high school
           # doesn't give us any information.
           if years_with_ib_data.include?(school_year) && high_school && ib_offerings_this_year.empty?
             audit[:ib_cs_offerings].push(nil)
-            # P(IB data does not list this school | School actually teaches)
-            likelihoods[:teaches].push IB_LIKELIHOODS[:given_teaches][:no_data]
-            # P(IB data does not list this school | School does not actually teach)
-            likelihoods[:not_teaches].push IB_LIKELIHOODS[:given_does_not_teach][:no_data]
+            likelihoods.push_likelihoods_for(IB_LIKELIHOODS, :no_data)
           end
 
           # State data
@@ -275,17 +267,11 @@ class Census::CensusSummary < ApplicationRecord
                Census::StateCsOffering::SUPPORTED_STATES.include?(school.state) &&
                state_years_with_data[school.state].include?(school_year)
               audit[:state_cs_offerings].push(nil)
-              # P(School is not in school data | School actually teaches)
-              likelihoods[:teaches].push STATE_LIKELIHOODS[:given_teaches][:no_data]
-              # P(School is not in school data | School does not actually teach)
-              likelihoods[:not_teaches].push STATE_LIKELIHOODS[:given_does_not_teach][:no_data]
+              likelihoods.push_likelihoods_for(STATE_LIKELIHOODS, :no_data)
             else
               state_offerings.each do |offering|
                 audit[:state_cs_offerings].push(offering.id)
-                # P(School is in school data | School actually teaches)
-                likelihoods[:teaches].push STATE_LIKELIHOODS[:given_teaches][:data_present]
-                # P(School is in school data | School does not actually teach)
-                likelihoods[:not_teaches].push STATE_LIKELIHOODS[:given_does_not_teach][:data_present]
+                likelihoods.push_likelihoods_for(STATE_LIKELIHOODS, :data_present)
               end
             end
           end
@@ -316,12 +302,12 @@ class Census::CensusSummary < ApplicationRecord
             # P(data_n | teaches) and P(data_n | not teaches) are the likelihoods for data_n
             # P(data) can be computed as the sum of the numerators of P(teaches | data) and P(not teaches | data)
             #         since those two fractions need to sum to 1.0 (since there are only two possibilities.)
-            prior_x_likelihood = {
+            prior_times_likelihoods = {
               teaches: prior * likelihoods[:teaches].reduce(1, :*),
               not_teaches: (1 - prior) * likelihoods[:not_teaches].reduce(1, :*)
             }
-            posterior = prior_x_likelihood[:teaches] /
-                        (prior_x_likelihood[:teaches] + prior_x_likelihood[:not_teaches])
+            posterior = prior_times_likelihoods[:teaches] /
+                        (prior_times_likelihoods[:teaches] + prior_times_likelihoods[:not_teaches])
           elsif previous_years_belief
             # No data, so no updating (beyond the degrading of the previous belief done above.)
             posterior = prior
