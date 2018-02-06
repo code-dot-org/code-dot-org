@@ -313,7 +313,7 @@ class Census::CensusSummary < ApplicationRecord
             # P(not teaches | data) = P(not teaches) * P(data_1 | not teaches) * P(data_2 | not teaches) * ... / P(data)
             #
             # P(teaches) is the prior, P(not teaches) is 1 - prior
-            # P(data_n | teaches) and P(data_n | no0t teaches) are the likelihoods for data_n
+            # P(data_n | teaches) and P(data_n | not teaches) are the likelihoods for data_n
             # P(data) can be computed as the sum of the numerators of P(teaches | data) and P(not teaches | data)
             #         since those two fractions need to sum to 1.0 (since there are only two possibilities.)
             prior_x_likelihood = {
