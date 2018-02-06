@@ -41,7 +41,10 @@ class ManageStudentNameCell extends Component {
           </div>
         }
         {this.props.isEditing &&
-          <input value={editedValue} onChange={this.onChangeName}/>
+          <div style={{paddingTop: 10}}>
+            <input value={editedValue} onChange={this.onChangeName}/>
+            <div style={{color: 'red', fontSize: 9, height: 10}}>{this.props.editedValue.length === 0 ? 'required' : ''}</div>
+          </div>
         }
       </div>
       );
