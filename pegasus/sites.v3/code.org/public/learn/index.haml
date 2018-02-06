@@ -125,7 +125,7 @@ style_min: false
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
       roboticsButtonUrl: "/learn/robotics",
-      disabledTutorials: #{sort_by_popularity},
+      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])},
       defaultSortByPopularity: #{sort_by_popularity}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
