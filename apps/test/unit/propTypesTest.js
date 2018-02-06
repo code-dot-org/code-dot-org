@@ -4,9 +4,9 @@ var propTypes = require('@cdo/apps/propTypes');
 
 describe('propTypes module', () => {
 
-  function Foo(){}
-  function Bar(){}
-  function Baz(){}
+  function Foo() {}
+  function Bar() {}
+  function Baz() {}
 
   describe('whenNoChildOfType prop type', () => {
     var check;
