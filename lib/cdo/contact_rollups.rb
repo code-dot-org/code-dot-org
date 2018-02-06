@@ -97,13 +97,13 @@ class ContactRollups
 
   # Information about presence of which forms submitted by a user get recorded in which
   # rollup field with which value
-  FORM_INFOS = []
-  FORM_INFOS << {kind: "'CSEdWeekEvent2013'", dest_field: "hoc_organizer_years", dest_value: "'2013'"}
+  form_infos = []
+  form_infos << {kind: "'CSEdWeekEvent2013'", dest_field: "hoc_organizer_years", dest_value: "'2013'"}
   (2014..hoc_year).each do |year|
-    FORM_INFOS << {kind: "'HocSignup#{year}'", dest_field: "hoc_organizer_years", dest_value: "'#{year}'"}
+    form_infos << {kind: "'HocSignup#{year}'", dest_field: "hoc_organizer_years", dest_value: "'#{year}'"}
   end
-  FORM_INFOS << {kind: "'Petition'", dest_field: "roles", dest_value: "'Petition Signer'"}
-  FORM_INFOS.freeze
+  form_infos << {kind: "'Petition'", dest_field: "roles", dest_value: "'Petition Signer'"}
+  FORM_INFOS = form_infos.freeze
 
   ROLE_TEACHER = "Teacher".freeze
   ROLE_FORM_SUBMITTER = "Form Submitter".freeze
