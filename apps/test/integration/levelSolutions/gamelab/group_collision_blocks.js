@@ -22,7 +22,7 @@ module.exports = {
         }
         console.log("done");
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
@@ -47,7 +47,7 @@ module.exports = {
         }
         console.log("done");
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
@@ -72,7 +72,7 @@ module.exports = {
         }
         console.log("done");
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
@@ -97,7 +97,7 @@ module.exports = {
         }
         console.log("done");
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
@@ -116,7 +116,7 @@ module.exports = {
         }
         console.log('done');
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
@@ -135,7 +135,7 @@ module.exports = {
         }
         console.log('done');
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
@@ -154,7 +154,7 @@ module.exports = {
         }
         console.log('done');
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
@@ -173,7 +173,7 @@ module.exports = {
         }
         console.log('done');
       `,
-      function isProgramDone(){
+      function isProgramDone() {
         var debugOutput = document.getElementById('debug-output');
         return debugOutput.textContent.includes('done');
       },
