@@ -50,11 +50,8 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "markdown_instructions": "# Wire a Circuit\r\n\r\nYou can use any of the numbered pads to add additional circuits to your board. Let's use pin 2 to add another LED.\r\n\r\n# Do This\r\n\r\n* Using a wire, connect pin 2 to the positive (+) side of an LED\r\n* Using another wire, connect the negative (-) side of the LED to a ground (GND) pin (it doesn't matter which one)\r\n* Run this program to test your circuit. If it worked, your LED should turn on.\r\n\r\n_Debugging Tip: LEDs only work if the electricity is flowing from positive to negative. If your LED doesn't light up, make sure that it's oriented the right way._",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "teacher_markdown": "### Why Are We Talking Pins?\r\n\r\nYou may notice that in the early levels of this lesson students are programming in a much different way than they have before, directly manipulating pins. The `digitalWrite()` and `pinMode()` commands are useful to get our wiring set up quickly, but are not the core concerns of this lesson. As soon as students are comfortable wiring LED circuits we will introduce techniques to control those LEDs with the higher level commands that have been used up to this point (like `led.on()` and `led.off()`)."
+    "teacher_markdown": "### Why Are We Talking Pins?\r\n\r\nYou may notice that in the early levels of this lesson students are programming in a much different way than they have before, directly manipulating pins. The `digitalWrite()` and `pinMode()` commands are useful to get our wiring set up quickly, but are not the core concerns of this lesson. As soon as students are comfortable wiring LED circuits we will introduce techniques to control those LEDs with the higher level commands that have been used up to this point (like `led.on()` and `led.off()`).",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

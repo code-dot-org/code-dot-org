@@ -1,4 +1,3 @@
-hidden false
 login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
