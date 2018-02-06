@@ -23,7 +23,6 @@
 #  index_pd_enrollments_on_code            (code) UNIQUE
 #  index_pd_enrollments_on_email           (email)
 #  index_pd_enrollments_on_pd_workshop_id  (pd_workshop_id)
-#  index_pd_enrollments_on_user_id         (user_id)
 #
 
 require 'cdo/code_generation'

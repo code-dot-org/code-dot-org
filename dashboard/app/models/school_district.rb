@@ -12,7 +12,8 @@
 #
 # Indexes
 #
-#  index_school_districts_on_state  (state)
+#  index_school_districts_on_name_and_city  (name,city)
+#  index_school_districts_on_state          (state)
 #
 
 class SchoolDistrict < ActiveRecord::Base
