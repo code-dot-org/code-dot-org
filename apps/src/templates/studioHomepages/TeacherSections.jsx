@@ -13,7 +13,7 @@ class TeacherSections extends Component {
     asyncLoadSectionData: PropTypes.func.isRequired,
   };
 
-  componentDidMount(){
+  componentDidMount() {
     this.props.asyncLoadSectionData();
   }
 
