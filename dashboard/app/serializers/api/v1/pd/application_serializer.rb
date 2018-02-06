@@ -42,7 +42,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
   def pd_workshop_url
     workshop = object.try(:workshop)
-    url_for(controller: 'pd/workshop_dashboard', path: workshop.id) if workshop
+    url_for(controller: 'pd/workshop_dashboard', path: "workshops/#{workshop.id}") if workshop
   end
 
   def fit_workshop_name
@@ -51,6 +51,6 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
   def fit_workshop_url
     workshop = object.try(:fit_workshop)
-    url_for(controller: 'pd/workshop_dashboard', path: workshop.id) if workshop
+    url_for(controller: 'pd/workshop_dashboard', path: "workshops/#{workshop.id}") if workshop
   end
 end

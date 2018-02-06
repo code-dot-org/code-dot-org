@@ -35,6 +35,11 @@ class School < ActiveRecord::Base
   belongs_to :school_district
 
   has_many :school_stats_by_year
+  has_many :school_info
+  has_many :state_cs_offering, class_name: 'Census::StateCsOffering', foreign_key: :state_school_id, primary_key: :state_school_id
+
+  has_one :ap_school_code, class_name: 'Census::ApSchoolCode'
+  has_one :ib_school_code, class_name: 'Census::IbSchoolCode'
 
   validates :state_school_id, allow_blank: true, format: {with: /\A[A-Z]{2}-.+-.+\z/, message: "must be {State Code}-{State District Id}-{State School Id}"}
 

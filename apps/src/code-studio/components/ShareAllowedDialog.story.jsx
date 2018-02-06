@@ -1,5 +1,6 @@
 import React from 'react';
 import { UnconnectedShareAllowedDialog as ShareAllowedDialog } from './ShareAllowedDialog';
+import { action } from '@storybook/addon-actions';
 import publishDialog from '@cdo/apps/templates/publishDialog/publishDialogRedux';
 
 const fakei18n = {
@@ -32,9 +33,9 @@ export default storybook => {
                 canPublish={false}
                 isPublished={false}
                 isUnpublishPending={false}
-                onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
-                onUnpublish={storybook.action('unpublish')}
+                onClose={action('close')}
+                onShowPublishDialog={action('show publish dialog')}
+                onUnpublish={action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
                 shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -42,7 +43,7 @@ export default storybook => {
                 channelId="some-id"
                 appType="gamelab"
                 canShareSocial={true}
-                onClickPopup={storybook.action('onClickPopup')}
+                onClickPopup={action('onClickPopup')}
               />
           );
         }
@@ -55,9 +56,9 @@ export default storybook => {
               canPublish={false}
               isPublished={false}
               isUnpublishPending={false}
-              onClose={storybook.action('close')}
-              onShowPublishDialog={storybook.action('show publish dialog')}
-              onUnpublish={storybook.action('unpublish')}
+              onClose={action('close')}
+              onShowPublishDialog={action('show publish dialog')}
+              onUnpublish={action('unpublish')}
               hideBackdrop={true}
               i18n={fakei18n}
               shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -66,7 +67,7 @@ export default storybook => {
               channelId="some-id"
               appType="gamelab"
               canShareSocial={true}
-              onClickPopup={storybook.action('onClickPopup')}
+              onClickPopup={action('onClickPopup')}
             />
         );
       }
@@ -80,9 +81,9 @@ export default storybook => {
                 canPublish={false}
                 isPublished={false}
                 isUnpublishPending={false}
-                onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
-                onUnpublish={storybook.action('unpublish')}
+                onClose={action('close')}
+                onShowPublishDialog={action('show publish dialog')}
+                onUnpublish={action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
                 shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -90,7 +91,7 @@ export default storybook => {
                 channelId="some-id"
                 appType="applab"
                 canShareSocial={true}
-                onClickPopup={storybook.action('onClickPopup')}
+                onClickPopup={action('onClickPopup')}
               />
           );
         }
@@ -104,9 +105,9 @@ export default storybook => {
                 canPublish={false}
                 isPublished={false}
                 isUnpublishPending={false}
-                onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
-                onUnpublish={storybook.action('unpublish')}
+                onClose={action('close')}
+                onShowPublishDialog={action('show publish dialog')}
+                onUnpublish={action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
                 shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -114,8 +115,8 @@ export default storybook => {
                 channelId="some-id"
                 appType="applab"
                 canShareSocial={true}
-                onClickPopup={storybook.action('onClickPopup')}
-                onClickExport={storybook.action('onClickExport')}
+                onClickPopup={action('onClickPopup')}
+                onClickExport={action('onClickExport')}
               />
           );
         }
@@ -129,9 +130,9 @@ export default storybook => {
                 canPublish={false}
                 isPublished={false}
                 isUnpublishPending={false}
-                onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
-                onUnpublish={storybook.action('unpublish')}
+                onClose={action('close')}
+                onShowPublishDialog={action('show publish dialog')}
+                onUnpublish={action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
                 shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -139,7 +140,7 @@ export default storybook => {
                 channelId="some-id"
                 canShareSocial={false}
                 appType="gamelab"
-                onClickPopup={storybook.action('onClickPopup')}
+                onClickPopup={action('onClickPopup')}
               />
           );
         }
@@ -153,9 +154,9 @@ export default storybook => {
                 canPublish={false}
                 isPublished={false}
                 isUnpublishPending={false}
-                onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
-                onUnpublish={storybook.action('unpublish')}
+                onClose={action('close')}
+                onShowPublishDialog={action('show publish dialog')}
+                onUnpublish={action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
                 shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -163,7 +164,7 @@ export default storybook => {
                 channelId="some-id"
                 canShareSocial={true}
                 appType="gamelab"
-                onClickPopup={storybook.action('onClickPopup')}
+                onClickPopup={action('onClickPopup')}
               />
           );
         }
@@ -177,9 +178,9 @@ export default storybook => {
                 canPublish={false}
                 isPublished={false}
                 isUnpublishPending={false}
-                onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
-                onUnpublish={storybook.action('unpublish')}
+                onClose={action('close')}
+                onShowPublishDialog={action('show publish dialog')}
+                onUnpublish={action('unpublish')}
                 hideBackdrop={true}
                 icon="https://studio.code.org/blockly/media/skins/pvz/static_avatar.png"
                 i18n={fakei18n}
@@ -188,7 +189,7 @@ export default storybook => {
                 channelId="some-id"
                 canShareSocial={true}
                 appType="gamelab"
-                onClickPopup={storybook.action('onClickPopup')}
+                onClickPopup={action('onClickPopup')}
               />
           );
         }
@@ -201,9 +202,9 @@ export default storybook => {
                 canPublish={true}
                 isPublished={false}
                 isUnpublishPending={false}
-                onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
-                onUnpublish={storybook.action('unpublish')}
+                onClose={action('close')}
+                onShowPublishDialog={action('show publish dialog')}
+                onUnpublish={action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
                 shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -212,7 +213,7 @@ export default storybook => {
                 channelId="some-id"
                 appType="gamelab"
                 canShareSocial={true}
-                onClickPopup={storybook.action('onClickPopup')}
+                onClickPopup={action('onClickPopup')}
               />
           );
         }
@@ -225,9 +226,9 @@ export default storybook => {
                 canPublish={true}
                 isPublished={false}
                 isUnpublishPending={false}
-                onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
-                onUnpublish={storybook.action('unpublish')}
+                onClose={action('close')}
+                onShowPublishDialog={action('show publish dialog')}
+                onUnpublish={action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
                 shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -235,7 +236,7 @@ export default storybook => {
                 channelId="some-id"
                 appType="gamelab"
                 canShareSocial={true}
-                onClickPopup={storybook.action('onClickPopup')}
+                onClickPopup={action('onClickPopup')}
               />
           );
         }
@@ -248,9 +249,9 @@ export default storybook => {
                 canPublish={true}
                 isPublished={true}
                 isUnpublishPending={false}
-                onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
-                onUnpublish={storybook.action('unpublish')}
+                onClose={action('close')}
+                onShowPublishDialog={action('show publish dialog')}
+                onUnpublish={action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
                 shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -258,7 +259,7 @@ export default storybook => {
                 channelId="some-id"
                 appType="gamelab"
                 canShareSocial={true}
-                onClickPopup={storybook.action('onClickPopup')}
+                onClickPopup={action('onClickPopup')}
               />
           );
         }
@@ -271,9 +272,9 @@ export default storybook => {
                 canPublish={true}
                 isPublished={true}
                 isUnpublishPending={true}
-                onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
-                onUnpublish={storybook.action('unpublish')}
+                onClose={action('close')}
+                onShowPublishDialog={action('show publish dialog')}
+                onUnpublish={action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
                 shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -281,7 +282,7 @@ export default storybook => {
                 channelId="some-id"
                 appType="gamelab"
                 canShareSocial={true}
-                onClickPopup={storybook.action('onClickPopup')}
+                onClickPopup={action('onClickPopup')}
               />
           );
         }
@@ -294,9 +295,9 @@ export default storybook => {
                 canPublish={true}
                 isPublished={true}
                 isUnpublishPending={true}
-                onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
-                onUnpublish={storybook.action('unpublish')}
+                onClose={action('close')}
+                onShowPublishDialog={action('show publish dialog')}
+                onUnpublish={action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
                 shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -304,7 +305,7 @@ export default storybook => {
                 channelId="some-id"
                 appType="gamelab"
                 canShareSocial={true}
-                onClickPopup={storybook.action('onClickPopup')}
+                onClickPopup={action('onClickPopup')}
                 userSharingDisabled={true}
               />
           );

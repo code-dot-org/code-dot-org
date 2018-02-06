@@ -1,5 +1,6 @@
 import React from 'react';
 import {UnconnectedLoginTypePicker as LoginTypePicker} from './LoginTypePicker';
+import {action} from '@storybook/addon-actions';
 
 export default storybook => storybook
   .storiesOf('LoginTypePicker', module)
@@ -7,9 +8,9 @@ export default storybook => storybook
     return (
       <LoginTypePicker
         title="New section"
-        handleImportOpen={storybook.action('handleImportOpen')}
-        setLoginType={storybook.action('setLoginType')}
-        handleCancel={storybook.action('handleCancel')}
+        handleImportOpen={action('handleImportOpen')}
+        setLoginType={action('setLoginType')}
+        handleCancel={action('handleCancel')}
       />
     );
   })
@@ -18,9 +19,9 @@ export default storybook => storybook
       <LoginTypePicker
         title="New section"
         provider="google_classroom"
-        handleImportOpen={storybook.action('handleImportOpen')}
-        setLoginType={storybook.action('setLoginType')}
-        handleCancel={storybook.action('handleCancel')}
+        handleImportOpen={action('handleImportOpen')}
+        setLoginType={action('setLoginType')}
+        handleCancel={action('handleCancel')}
       />
     );
   })
@@ -29,9 +30,9 @@ export default storybook => storybook
       <LoginTypePicker
         title="New section"
         provider="clever"
-        handleImportOpen={storybook.action('handleImportOpen')}
-        setLoginType={storybook.action('setLoginType')}
-        handleCancel={storybook.action('handleCancel')}
+        handleImportOpen={action('handleImportOpen')}
+        setLoginType={action('setLoginType')}
+        handleCancel={action('handleCancel')}
       />
     );
   })
@@ -40,9 +41,9 @@ export default storybook => storybook
       <LoginTypePicker
         title="New section"
         provider="microsoft_classroom"
-        handleImportOpen={storybook.action('handleImportOpen')}
-        setLoginType={storybook.action('setLoginType')}
-        handleCancel={storybook.action('handleCancel')}
+        handleImportOpen={action('handleImportOpen')}
+        setLoginType={action('setLoginType')}
+        handleCancel={action('handleCancel')}
       />
     );
   });

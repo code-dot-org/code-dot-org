@@ -37,8 +37,8 @@
     "shape_shift": "false",
     "markdown_instructions": "*\"Can you help me spot some bugs? I know which way I want to go, but I'm not sure how many steps to take.\"*",
     "min_collected": "17",
-    "contained_level_names": null,
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
