@@ -484,7 +484,7 @@ GameLabP5.prototype.startExecution = function () {
             time_since_last >= target_time_between_frames - epsilon) {
 
           //mandatory update values(matrixs and stack) for 3d
-          if (this._renderer.isP3D){
+          if (this._renderer.isP3D) {
             this._renderer._update();
           }
 

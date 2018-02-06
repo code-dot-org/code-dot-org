@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 568,
   "properties": {
-    "markdown_instructions": "# More on the Toggle Switch\r\n\r\nThe toggle switch has different properties that let it be used outside of toggle switch related events. Look at the code below, what do you think is going to happen when you run this program?\r\n* Note that all of the code is contained inside an event, why do you think that is?\r\n\r\nType your response and click \"Run\" to see what happens. ",
+    "markdown_instructions": "# More on the Toggle Switch\r\n\r\nYou can also see check whether the toggle switch is in the `open` or `close` position anywhere in your program. \r\n\r\nWhat different things does the button do when the toggle switch is `open` or `close`?",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",
@@ -15,7 +15,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-11-06 16:50:31 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-17 00:08:07 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-11-06 16:50:31 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-17 00:08:07 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-02-06 19:31:34 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

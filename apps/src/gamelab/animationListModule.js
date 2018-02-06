@@ -572,16 +572,14 @@ function loadAnimationFromSource(key, callback) {
          'analysis-events',
             {
               study: 'animation_no_load',
-              study_group: 'animation_no_load',
+              study_group: 'animation_no_load_with_buttons',
               event: 'animation_not_loaded',
               data_json: JSON.stringify({'sourceUrl': sourceUrl, 'version': state.propsByKey[key].version,
                 'animationName': state.propsByKey[key].name, 'error': err.message})
             }
         );
-        dispatch({
-          type: DELETE_ANIMATION,
-          key
-        });
+
+        dispatch(reportError(`Sorry, we couldn't load animation "${state.propsByKey[key].name}".`, "anim_load", key));
         return;
       }
 

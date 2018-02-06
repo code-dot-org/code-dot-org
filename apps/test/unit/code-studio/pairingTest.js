@@ -47,7 +47,7 @@ describe('Pairing component', function () {
     server.restore();
   }
 
-  describe('for student in multiple sections', function (){
+  describe('for student in multiple sections', function () {
     var ajaxUrl = '/pairings';
     var ajaxState = {
       sections: [{
@@ -98,7 +98,7 @@ describe('Pairing component', function () {
     });
   });
 
-  describe('before ajax response is received', function (){
+  describe('before ajax response is received', function () {
     beforeEach(function () {
       div = document.createElement("div");
       component = ReactDOM.render(React.createElement(Pairing, {}), div);
@@ -116,7 +116,7 @@ describe('Pairing component', function () {
     });
   });
 
-  describe('for student in one section', function (){
+  describe('for student in one section', function () {
     var ajaxUrl = '/pairings';
     var ajaxState = {
       sections: [{id: 1, name: "A section", students: [{id: 11, name: "First student"}, {id: 12, name: "Second Student"}]}],
@@ -201,7 +201,7 @@ describe('Pairing component', function () {
     });
   });
 
-  describe('for student who is currently pairing', function (){
+  describe('for student who is currently pairing', function () {
     var ajaxUrl = '/pairings';
     var ajaxState = {
       sections: [{
