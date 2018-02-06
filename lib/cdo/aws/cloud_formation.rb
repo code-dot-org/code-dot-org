@@ -21,14 +21,6 @@ module AWS
 
     DOMAIN = ENV['DOMAIN'] || 'cdn-code.org'
 
-    # Lookup ACM certificate for ELB and CloudFront SSL.
-    ACM_REGION = 'us-east-1'.freeze
-    CERTIFICATE_ARN = Aws::ACM::Client.new(region: ACM_REGION).
-      list_certificates(certificate_statuses: ['ISSUED']).
-      certificate_summary_list.
-      find {|cert| cert.domain_name == "*.#{DOMAIN}" || cert.domain_name == DOMAIN}.
-      certificate_arn
-
     # A stack name can contain only alphanumeric characters (case sensitive) and hyphens.
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-console-create-stack-parameters.html
     STACK_NAME_INVALID_REGEX = /[^[:alnum:]-]/
@@ -82,6 +74,16 @@ module AWS
           stacks.first.outputs.
           find {|o| o.output_key == 'AMI'}.
           output_value
+      end
+
+      # Lookup ACM certificate for ELB and CloudFront SSL.
+      ACM_REGION = 'us-east-1'.freeze
+      def certificate_arn
+        Aws::ACM::Client.new(region: ACM_REGION).
+        list_certificates(certificate_statuses: ['ISSUED']).
+          certificate_summary_list.
+          find {|cert| cert.domain_name == "*.#{DOMAIN}" || cert.domain_name == DOMAIN}.
+          certificate_arn
       end
 
       # Validates that the template is valid CloudFormation syntax.
@@ -355,7 +357,6 @@ module AWS
           region: CDO.aws_region,
           environment: rack_env,
           ssh_ip: SSH_IP,
-          certificate_arn: CERTIFICATE_ARN,
           cdn_enabled: !!ENV['CDN_ENABLED'],
           domain: DOMAIN,
           cname: cname,
