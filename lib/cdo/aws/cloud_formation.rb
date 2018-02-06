@@ -298,6 +298,34 @@ module AWS
         CDO.log.info "Wait up to the configured Time To Live (#{DNS_TTL} seconds) to lookup new IP address."
       end
 
+      def stop
+        if stack_exists?
+          CDO.log.info "Finding EC2 Instance for CloudFormation Stack #{stack_name} ..."
+          cloudformation_resource = Aws::CloudFormation::Resource.new
+          stack = cloudformation_resource.stack(stack_name)
+          instance_id = stack.resource('WebServer').physical_resource_id
+          instance = Aws::EC2::Instance.new(id: instance_id)
+          if instance.nil?
+            CDO.log.info "Instance #{instance_id} does not exist or has been terminated."\
+              "Delete this unrecoverable CloudFormation stack: rake adhoc:delete STACK_NAME=#{stack_name}"
+          elsif instance.state.code == 80 # already Stopped
+            CDO.log.info "Instance #{instance.id} is already Stopped."
+          elsif instance.state.code == 16 # Running
+            CDO.log.info "Stopping Instance #{instance.id} ..."
+            stop_result = instance.stop
+            CDO.log.info "Instance Status - #{stop_result.stopping_instances[0].current_state.name}"
+            CDO.log.info "Waiting until Stopped ..."
+            instance.wait_until_stopped
+            CDO.log.info "Instance Status - #{instance.reload.state.name}"
+            CDO.log.info "To start instance: rake adhoc:start_inactive_instance STACK_NAME=#{stack_name}"
+          else
+            CDO.log.info "Cannot stop Instance because its state is #{instance.state.name}"
+          end
+        else
+          CDO.log.warn "Stack #{stack_name} does not exist."
+        end
+      end
+
       def delete
         if stack_exists?
           CDO.log.info "Shutting down #{stack_name}..."
