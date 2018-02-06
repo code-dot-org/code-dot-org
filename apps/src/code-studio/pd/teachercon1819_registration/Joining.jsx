@@ -17,6 +17,7 @@ export default class Joining extends Teachercon1819FormComponent {
     teacherAcceptSeat: "Do you want to accept your seat in the Professional Learning Program? (Select one)",
     teacherWaitlistExplain: "Optional: Please explain more why you cannot accept your seat in the Professional Learning Program.",
     teacherDeclineExplain: "Optional: Please explain more why you cannot accept your seat in the Professional Learning Program.",
+    ableToAttend: "Are you able to attend your assigned TeacherCon?",
   };
 
   static associatedFields = Object.keys(Joining.labels);
@@ -136,9 +137,10 @@ export default class Joining extends Teachercon1819FormComponent {
           {this.radioButtonsFor("ableToAttend")}
           {this.props.data.ableToAttend === "No" &&
             <p>
-              If you're unable to attend your assigned TeacherCon, please
-              contact <a href="mailto:facilitators@code.org">facilitators@code.org</a> as
-              soon as possible so we can assist you.
+              If you're unable to attend your assigned TeacherCon, please contact{' '}
+              {this.isFacilitatorApplication() && <a href="mailto:facilitators@code.org">facilitators@code.org</a>}
+              {this.isPartnerApplication() && "your Outreach Regional Manager"}
+              {' '}as soon as possible so we can assist you.
             </p>
           }
         </FormGroup>
