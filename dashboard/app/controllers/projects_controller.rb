@@ -133,10 +133,52 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def sort_projects(featured_project_table_rows)
+    @featured = []
+    @unfeatured = []
+    featured_project_table_rows.each do |row|
+      row[:featured?] ? @featured << row : @unfeatured << row
+    end
+  end
+
+  # Takes in an array of currently featured Featured Projects and an array of the associated Projects, returns an array of data combined from the related Project and Featured Project that can be used for the currently featured projects table.
+  def combine_projects_and_featured_projects_data(matched_projects_and_featured_projects)
+    @featured_project_table_rows = []
+    matched_projects_and_featured_projects.each do |featured_project, project|
+      project_details = JSON.parse(project[:id][:value])
+      featured_project_row = {
+        project_name: project_details['name'],
+        category: project_details['projectType'],
+        published_at: project_details['publishedAt'],
+        thumbnail_url: project_details['thumbnailUrl'],
+        featured_at: featured_project.featured_at,
+        unfeatured_at: featured_project.unfeatured_at,
+        featured: featured_project.featured?
+      }
+      @featured_project_table_rows << featured_project_row
+    end
+    sort_projects(@featured_project_table_rows)
+  end
+
+  # Matches featured_projects with projects
+  def fetch_projects(featured_projects)
+    @matched_projects_and_featured_projects = {}
+    featured_projects.each do |featured_project|
+      @matched_projects_and_featured_projects[featured_project] = PEGASUS_DB[:storage_apps].where(id: featured_project.storage_app_id)
+    end
+    combine_projects_and_featured_projects_data(@matched_projects_and_featured_projects)
+  end
+
+  def fetch_featured_projects
+    @featured_projects = FeaturedProject.all
+    fetch_projects(@featured_projects)
+  end
+
   # GET /projects/featured
   # Access is restricted to those with project_validator permission
   def featured
     if current_user && current_user.project_validator?
+      fetch_featured_projects
       render template: 'projects/featured'
     else
       redirect_to '/projects/public', flash: {alert: 'Only project validators can feature projects.'}
