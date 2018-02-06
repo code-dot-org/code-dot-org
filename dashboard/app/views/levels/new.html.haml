@@ -13,7 +13,6 @@
   %li= link_to 'Build a Playlab Droplet Level', new_level_path(type: 'StudioEC')
   %li= link_to 'Build a Minecraft Level', new_level_path(type: 'Craft')
   %li= link_to 'Build a Star Wars Grid Level', new_level_path(type: 'StarWarsGrid')
-  %li= link_to 'Build a Gamelab Jr Level', new_level_path(type: 'GamelabJr')
 
 %h2 Content
 %ul
@@ -66,3 +65,12 @@
 %ul
   %li
     = link_to 'All levels', levels_path
+
+%h2 Nothing to see here
+%ul
+  %li
+    =link_to 'Build a Game Lab Jr Level', new_level_path(type: 'GamelabJr')
+    %ul
+      %li
+        Game Lab Jr is still pre-alpha and subject to change. Anything you
+        build could break or be deleted without notice.
