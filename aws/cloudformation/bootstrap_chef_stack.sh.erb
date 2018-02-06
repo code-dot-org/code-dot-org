@@ -55,11 +55,15 @@ aws logs put-retention-policy \
 <% unless @load_balancer -%>
 # Fetch acmesmith-provisioned SSL certificate and key from S3
 aws configure set s3.signature_version s3v4
+SUBDOMAIN=<%=subdomain%>
 S3_PATH=s3://$S3_BUCKET/ssl/certs/$SUBDOMAIN
 CURRENT=$S3_PATH/$(aws s3 cp $S3_PATH/current -)
-CERT=$(aws s3 cp $CURRENT/cert.pem -)
-CHAIN=$(aws s3 cp $CURRENT/chain.pem -)
-KEY=$(aws s3 cp $CURRENT/key.pem -)
+function replace_newline() {
+  sed 's/$/\\n/' | tr -d '\n'
+}
+CERT=$(aws s3 cp $CURRENT/cert.pem - | replace_newline)
+CHAIN=$(aws s3 cp $CURRENT/chain.pem - | replace_newline)
+KEY=$(aws s3 cp $CURRENT/key.pem - | replace_newline)
 <% end -%>
 # Customize Chef configuration.
 FIRST_BOOT=/etc/chef/first-boot.json
