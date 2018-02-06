@@ -106,7 +106,7 @@ Scenario: Basic teacher application submission
   Then I wait until element "h1" contains text "2018-2019 Code.org Principal Approval Form"
   Then I press the first "input[name='doYouApprove'][value='Yes']" element
 
-  Then I press keys "Williamsville North High School" for element "#school input"
+  Then I press keys "Albertville High School" for element "#school input"
   Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
   Then I press keys ":arrow_down"
   Then I press enter key
