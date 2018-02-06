@@ -204,7 +204,7 @@ function snapCalloutsToTargets() {
   $('.cdo-qtips').qtip('reposition', triggerEvent, animate);
 }
 
-var showHideWorkspaceCallouts = showOrHideCalloutsByTargetVisibility('#codeWorkspace');
+export var showHideWorkspaceCallouts = showOrHideCalloutsByTargetVisibility('#codeWorkspace');
 var showHidePaletteCallouts =
     showOrHideCalloutsByTargetVisibility('.droplet-palette-scroller');
 var showHideDropletGutterCallouts = showOrHideCalloutsByTargetVisibility('.droplet-gutter');
@@ -225,6 +225,7 @@ function showOrHideCalloutsByTargetVisibility(containerSelector) {
    * @type {Object.<string, boolean>}
    */
   var calloutsHiddenByScrolling = {};
+  var calloutsHiddenByContainerVisibility = {};
   return function () {
     var container = $(containerSelector);
     $('.cdo-qtips').each(function () {
@@ -239,6 +240,16 @@ function showOrHideCalloutsByTargetVisibility(containerSelector) {
       var isTargetInContainer = container.has(target).length > 0;
       if (!isTargetInContainer) {
         return;
+      }
+
+      if (container.is(':visible')) {
+        if (calloutsHiddenByContainerVisibility[api.id]) {
+          api.show();
+          delete calloutsHiddenByContainerVisibility[api.id];
+        }
+      } else {
+        api.hide();
+        calloutsHiddenByContainerVisibility[api.id] = true;
       }
 
       if (target && target.overlaps(container).length > 0) {

@@ -432,16 +432,15 @@
         infinity_playlab_intro: "游戏实验室 -- 简介"
         infinity_playlab_events: "游戏实验室 - 事件"
         infinity_playlab_repeat_forever: "游戏实验室 - 一直重复"
-        csd_concept_how_computers_work: Introducing How Computers Work
+        csd_concept_how_computers_work: "介绍计算机是如何工作的"
         csd_concept_computer: "计算机是如何工作的：什么制造了计算机？"
         csd_concept_binary_data: "计算机是如何工作的：二进制和数据"
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
-          & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
+        csd_concept_circuits_logic: "计算机如何工作：电路和逻辑"
+        csd_concept_memory_cpu_input_output: "计算机如何工作：存储，CPU，输入和输出"
+        csd_concept_hardware_software: "计算机如何工作：硬件和软件"
         csd_concept_search: "搜索是怎样完成的"
         csd_external_amazon_data: "亚马逊推荐系统中的大数据是如何改变我们生活的。"
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
+        csd_external_netflix_data: Netflix（网飞）是如何生成电视和电影建议的？
         csd_external_waze_data: "为什么如此多的用户都着迷于Waze？"
         csd_gamelab_animation_tab: "动画标签页"
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1

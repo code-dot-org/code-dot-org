@@ -31,16 +31,19 @@
     "impressive": "false",
     "discard_background": "false",
     "disable_sharing": "false",
-    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/6cbe2fa25c780b13f160cfbfa02dde4f=levelbuilder/34776.png",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/0d3551af0291c77eee7af0271af32986=levelbuilder/34935.png",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/92d93b3d905a2d9443afff97b57184ef-image-1517005695404.png\", \"position\": [0,0]}\r\n]\r\n",
     "markdown_instructions": "Program the artist to draw some grass and a sun for the Love Bug.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\" Each side of the grass is 30 pixels long. Try using the stair step pattern.\",\"hint_id\":\"Valentine_artist2_01_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9fb4e96b7626f09b921c1c85ea88eda2/Valentine_artist2_01.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"How many degrees are in a circle? Use that number for the second `repeat` loop. \",\"hint_id\":\"Valentine_artist2_01_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3e5fd687167df7e5abfd006cb43a4ace/Valentine_artist2_01.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"There are 360 degrees in a circle.\",\"hint_id\":\"Valentine_artist2_01_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/856d9d9a6ef52074ff9852dc54a279db/Valentine_artist2_01.mp3\"}]",
     "instructions": "Program the artist to draw some grass and a sun for the Love Bug.",
+    "start_direction": "45",
+    "x": "30",
+    "y": "335",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-26 18:34:43 +0000\",\"changed\":[\"notes\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 19:56:52 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 19:57:08 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:20:17 +0000\",\"changed\":[\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:21:42 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:23:07 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:23:20 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:23:35 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:23:45 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:23:53 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:24:00 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:24:05 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:24:10 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:25:19 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:25:35 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:25:57 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:29:43 +0000\",\"changed\":[\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:33:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:35:38 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:44:18 +0000\",\"changed\":[\"never_autoplay_video\",\"solution_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:50:46 +0000\",\"changed\":[\"solution_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"authored_hints\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:52:12 +0000\",\"changed\":[\"solution_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"authored_hints\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 22:28:29 +0000\",\"changed\":[\"solution_blocks\",\"images\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-26 18:34:43 +0000\",\"changed\":[\"notes\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 19:56:52 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 19:57:08 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:20:17 +0000\",\"changed\":[\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:21:42 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:23:07 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:23:20 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:23:35 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:23:45 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:23:53 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:24:00 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:24:05 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:24:10 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:25:19 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:25:35 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:25:57 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:29:43 +0000\",\"changed\":[\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:33:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:35:38 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:44:18 +0000\",\"changed\":[\"never_autoplay_video\",\"solution_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:50:46 +0000\",\"changed\":[\"solution_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"authored_hints\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 20:52:12 +0000\",\"changed\":[\"solution_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"authored_hints\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-26 22:28:29 +0000\",\"changed\":[\"solution_blocks\",\"images\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-05 19:48:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-05 19:49:52 +0000\",\"changed\":[\"predraw_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-05 19:50:14 +0000\",\"changed\":[\"predraw_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-05 19:50:42 +0000\",\"changed\":[\"predraw_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-05 19:52:38 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-05 19:52:47 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-05 19:53:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-05 19:54:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\",\"x\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-05 19:55:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -49,59 +52,15 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="jump_to_xy">
-              <title name="XPOS">0</title>
-              <title name="YPOS">335</title>
+            <block type="draw_colour" inline="true" id="draw-color">
+              <value name="COLOUR">
+                <block type="colour_picker">
+                  <title name="COLOUR">#228b22</title>
+                </block>
+              </value>
               <next>
-                <block type="draw_colour" inline="true" id="draw-color">
-                  <value name="COLOUR">
-                    <block type="colour_picker">
-                      <title name="COLOUR">#228b22</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE">45</title>
-                      <next>
-                        <block type="controls_repeat">
-                          <title name="TIMES">10</title>
-                          <next>
-                            <block type="jump_to_xy">
-                              <title name="XPOS">20</title>
-                              <title name="YPOS">20</title>
-                              <next>
-                                <block type="draw_colour" inline="true" id="draw-color">
-                                  <value name="COLOUR">
-                                    <block type="colour_picker">
-                                      <title name="COLOUR">#ffff00</title>
-                                    </block>
-                                  </value>
-                                  <next>
-                                    <block type="controls_repeat">
-                                      <title name="TIMES">???</title>
-                                      <statement name="DO">
-                                        <block type="draw_move_by_constant">
-                                          <title name="DIR">moveForward</title>
-                                          <title name="VALUE">0.8</title>
-                                          <next>
-                                            <block type="draw_turn_by_constant">
-                                              <title name="DIR">turnRight</title>
-                                              <title name="VALUE">1</title>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </statement>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
+                <block type="controls_repeat">
+                  <title name="TIMES">8</title>
                 </block>
               </next>
             </block>
@@ -153,77 +112,86 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="jump_to_xy">
-              <title name="XPOS">0</title>
-              <title name="YPOS">335</title>
+            <block type="draw_colour" inline="true" id="draw-color">
+              <value name="COLOUR">
+                <block type="colour_picker">
+                  <title name="COLOUR">#228b22</title>
+                </block>
+              </value>
               <next>
-                <block type="draw_colour" inline="true" id="draw-color">
-                  <value name="COLOUR">
-                    <block type="colour_picker">
-                      <title name="COLOUR">#228b22</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE">45</title>
+                <block type="controls_repeat">
+                  <title name="TIMES">8</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">30</title>
                       <next>
-                        <block type="controls_repeat">
-                          <title name="TIMES">10</title>
-                          <statement name="DO">
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">90</title>
+                          <next>
                             <block type="draw_move_by_constant">
                               <title name="DIR">moveForward</title>
                               <title name="VALUE">30</title>
                               <next>
                                 <block type="draw_turn_by_constant">
-                                  <title name="DIR">turnRight</title>
+                                  <title name="DIR">turnLeft</title>
                                   <title name="VALUE">90</title>
-                                  <next>
-                                    <block type="draw_move_by_constant">
-                                      <title name="DIR">moveForward</title>
-                                      <title name="VALUE">30</title>
-                                      <next>
-                                        <block type="draw_turn_by_constant">
-                                          <title name="DIR">turnLeft</title>
-                                          <title name="VALUE">90</title>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
                                 </block>
                               </next>
                             </block>
-                          </statement>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+    <predraw_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_width" inline="false">
+              <value name="WIDTH">
+                <block type="math_number">
+                  <title name="NUM">20</title>
+                </block>
+              </value>
+              <next>
+                <block type="draw_turn_by_constant_dropdown">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE" config="45,60,90,120,180">45</title>
+                  <next>
+                    <block type="jump_to_xy">
+                      <title name="XPOS">20</title>
+                      <title name="YPOS">20</title>
+                      <next>
+                        <block type="draw_colour" inline="true" id="draw-color">
+                          <value name="COLOUR">
+                            <block type="colour_picker">
+                              <title name="COLOUR">#ffff00</title>
+                            </block>
+                          </value>
                           <next>
-                            <block type="jump_to_xy">
-                              <title name="XPOS">20</title>
-                              <title name="YPOS">20</title>
-                              <next>
-                                <block type="draw_colour" inline="true" id="draw-color">
-                                  <value name="COLOUR">
-                                    <block type="colour_picker">
-                                      <title name="COLOUR">#ffff00</title>
-                                    </block>
-                                  </value>
+                            <block type="controls_repeat">
+                              <title name="TIMES">360</title>
+                              <statement name="DO">
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveForward</title>
+                                  <title name="VALUE">0.8</title>
                                   <next>
-                                    <block type="controls_repeat">
-                                      <title name="TIMES">360</title>
-                                      <statement name="DO">
-                                        <block type="draw_move_by_constant">
-                                          <title name="DIR">moveForward</title>
-                                          <title name="VALUE">0.8</title>
-                                          <next>
-                                            <block type="draw_turn_by_constant">
-                                              <title name="DIR">turnRight</title>
-                                              <title name="VALUE">1</title>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </statement>
+                                    <block type="draw_turn_by_constant">
+                                      <title name="DIR">turnRight</title>
+                                      <title name="VALUE">1</title>
                                     </block>
                                   </next>
                                 </block>
-                              </next>
+                              </statement>
                             </block>
                           </next>
                         </block>
@@ -236,6 +204,6 @@
           </next>
         </block>
       </xml>
-    </solution_blocks>
+    </predraw_blocks>
   </blocks>
 </Artist>

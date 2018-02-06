@@ -9,7 +9,7 @@ import msg from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import * as animationActions from './animationListModule';
-
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
  * Renders error dialogs in sequence, given a stack of errors.
@@ -24,8 +24,34 @@ class ErrorDialogStack extends React.Component {
   };
 
   handleDeleteChoice(key){
+    // Log data about when this scenario occurs
+    firehoseClient.putRecord(
+     'analysis-events',
+        {
+          study: 'animation_no_load',
+          study_group: 'animation_no_load_with_buttons',
+          event: 'delete_selected',
+          data_json: JSON.stringify({'version': this.props.animationList.propsByKey[key].version,
+            'animationName': this.props.animationList.propsByKey[key].name})
+        }
+    );
     this.props.deleteAnimation(key);
     this.props.dismissError();
+  }
+
+  handleReloadChoice(key){
+    // Log data about when this scenario occurs
+    firehoseClient.putRecord(
+     'analysis-events',
+        {
+          study: 'animation_no_load',
+          study_group: 'animation_no_load_with_buttons',
+          event: 'reload_selected',
+          data_json: JSON.stringify({'version': this.props.animationList.propsByKey[key].version,
+            'animationName': this.props.animationList.propsByKey[key].name})
+        }
+    );
+    location.reload();
   }
 
   render() {
@@ -62,7 +88,7 @@ class ErrorDialogStack extends React.Component {
               }
               <Button
                 text={msg.reloadPage()}
-                onClick={() => location.reload()}
+                onClick={() => this.handleReloadChoice(error.error_cause)}
               />
             </DialogFooter>
           </div>

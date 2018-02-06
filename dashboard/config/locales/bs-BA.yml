@@ -17,7 +17,7 @@
       messages:
         blank: je neophodno
         blank_plural: are required
-        invalid_plural: are invalid
+        invalid_plural: nisu valjani
     attributes:
       user:
         name: Ime za Prikaz
@@ -37,13 +37,13 @@
           future: ne može biti u budućnosti
   hello: Pozdrav svijete
   welcome_back: Dobrodošao/la natrag, %{name}
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: Vaš profesionalni plan učenja
+  see_your_learning_plan: Vidi svoj plan učenja
   submit: Potvrdi
   unsubmit: Poništi objavu
   previous_page: Prethodna stranica
   next_page: Sljedeća stranica
-  next_resource: Next resource
+  next_resource: Sljedeći resurs
   done_with_module: Done with this Learning Module
   cancel: Poništi
   okay: U redu
@@ -93,12 +93,12 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft Račun
-    clever: Clever Account
+    clever: Pametni račun
     forgot_password: Zaboravio/la si šifru?
     need_confirmation: Nisi primio/la upute za potvrdu?
     need_unlock: Nisi primio/la upute za otključavanje?
-    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
-      have to sign in by typing your password below.
+    not_linked: Nažalost, vaš Code.org račun nije povezan sa Vašim %{provider}. Morate
+      se prijaviti tako što ćete ispod unijeti svoju lozinku.
     use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
       sign in through your Clever Portal instead.
   signup_form:
@@ -154,12 +154,12 @@
     accept_terms: Morate pristati da bi napravili račun
     error: An error occurred.
   school_info:
-    title: School Information (optional)
+    title: Informacije o školi (nije obavezno)
     school_country: School Country
     select_school_type: School Type
     charter: Charter
     private: Private
-    public: Public
+    public: Javno
     homeschool: Homeschool
     after_school: After School
     other: Ostalo
@@ -167,12 +167,12 @@
     district: District
     other_district_not_listed: Other district not listed above
     district_name: District Name
-    school: School
-    other_school_not_listed: Other school not listed above
+    school: "Škola"
+    other_school_not_listed: Druga škola nije navedena iznad
     school_name: School Name
     school_zip: School Zip Code
-    school_address: School Address
-    school_organization_name: School/Organization Name
+    school_address: Adresa škole
+    school_organization_name: Naziv Škole/Organizacije
     school_organization_zip: School/Organization Zip Code
   signin_form:
     title: Već imate račun? Prijavite se
@@ -220,7 +220,7 @@
   parent_mailer:
     student_associated_subject: Login information for Code.org
   teacher_mailer:
-    new_teacher_subject: Welcome to Code.org!
+    new_teacher_subject: Dobrodošli na Code.org!
   section:
     your_section:
       one: 'Your section:'
@@ -233,7 +233,7 @@
       picture: Picture Password
       word: Secret Words
       email: Email
-      google_classroom: Google Classroom
+      google_classroom: Google učionica
       clever: Clever
   follower:
     invite_sent: Pozivnica poslana
@@ -308,14 +308,14 @@
       educate_middle: Middle School
       educate_high: High School
       educate_hoc: Sat Kodiranja
-      educate_partner: Partner with Us
+      educate_partner: Partner sa nama
       educate_beyond: Beyond Code.org
-      educate_inspire: Inspire a Student
+      educate_inspire: Inspiriraj učenika
       educate_community: Online Community
       educate_tools: Tools and Videos
       about_us: About Us
       about_leadership: Leadership
-      about_donors: Donors
+      about_donors: Donatori
       about_partners: Partners
       about_team: Full Team
       about_news: Newsroom
@@ -325,8 +325,8 @@
       about_faqs: FAQs
       learn: Learn
       stats: Stats
-      help_us: Help Us
-      teach: Teach
+      help_us: Pomogni nam
+      teach: Podučavaj
       about: About
     user:
       classroom: Početna Stranica za Učitelje
@@ -396,12 +396,12 @@
       provider.
     no_password_because_sponsored: Javite se učitelju za upravljanje vašom lozinkom.
     create_personal_login: Create a personal login
-    create_personal_login_under_13_info: If you want to keep using your Code.org account
-      even after the end of the school year, ask your parent/guardian to help you
-      create your own personal login below.
-    create_personal_login_under_13_username: Username (don't use your real name!)
-    create_personal_login_under_13_parent_email: Parent/guardian email address (to
-      recover your password)
+    create_personal_login_under_13_info: Ako želiš nastaviti koristiti svoj Code.org
+      račun čak i nakon završetka školske godine, pitaj svog roditelja/staratelja
+      da ti pomogne da kreiraš svoju ličnu prijavu ispod.
+    create_personal_login_under_13_username: Korisničko ime (nemojte koristiti svoje
+      pravo ime!)
+    create_personal_login_under_13_parent_email: Email adresa roditelja/staratelja
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -412,10 +412,10 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
-    enter_new_login_info: Enter your new login information
+    enter_new_login_info: Unesite svoje nove podatke za prijavu
     confirm_secret_words: Confirm that it is you by entering your current secret words
-    enter_parent_email: Enter your parent or guardian's email address (for password
-      recovery)
+    enter_parent_email: Unesi email adresu od svog roditelja ili staratelja (za obnovu
+      lozinke)
   user_level:
     completed: Kompletirano
     tried: Pokušano
@@ -654,8 +654,8 @@
     notes_coming_soon: Bilješke za ovaj video stižu uskoro.
     autoplay_option: Automatska reprodukcija videozapisa
     download: Preuzimanje Videa
-    show_notes: Show Notes
-    show_video: Show Video
+    show_notes: Pokaži bilješke
+    show_video: Pokaži video
   compatibility:
     upgrade:
       unsupported_message: Your browser is not supported. Please upgrade your browser
@@ -717,7 +717,7 @@
       body_short: Design an app, code with blocks or JavaScript to make it work, then
         share your app in seconds.
       audience: Ages 13+
-      cta: Learn how
+      cta: Nauči kako
     hoc:
       title: Sat Kodiranja
       body: Isprobajte osnove informatike. Milijuni su im dali šansu.
@@ -743,7 +743,7 @@
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Ages 13+
-      cta: Learn how
+      cta: Nauči kako
     hoc-encryption:
       title: Simple Encryption
       body: Students will learn techniques to create and crack encrypted messages.
@@ -752,11 +752,11 @@
       body: Web Lab is a programming environment where you can make simple web pages
         using HTML and CSS. Design your web pages and share your site in seconds.
       audience: Ages 13+
-      cta: Learn how
+      cta: Nauči kako
     frozen:
       title: Sniježno kraljevstvo
     starwars:
-      title: Star Wars
+      title: Zvijezdani ratovi
     infinity:
       title: Infinity Play Lab (Beskonačni Laboratorij Igranja)
       body: Upotrijebi Laboratorij Igranja da bi napravio/la priču ili igru u kojoj
@@ -797,7 +797,7 @@
         hands-on using these digital tools. Use the widgets on their own, or create
         a single-concept lesson for your class.
       audience: Ages 14+
-      cta: Learn how
+      cta: Nauči kako
   gallery:
     students_drew_these_with_code: Učenici su nacrtali ovo kodiranjem!
     students_made_these_with_code: Učenici su nacrtali ovo kodiranjem!
@@ -839,9 +839,9 @@
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Hvala ti
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: Hvala Vam što ste poslali odgovor.
     correct_title: Hvala ti
-    correct_body: Thank you for submitting an answer.
+    correct_body: Hvala Vam što ste poslali odgovor.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
@@ -863,10 +863,10 @@
     unsubmit-title: Unsubmit your assessment
     unsubmit-body: Unsubmitting your assessment will reset the submitted time and
       date.  Are you sure?
-    submit-incomplete-title: Submit your assessment
-    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
-      assessment after submitting it.  Are you sure?
-    submit-complete-title: Submit your assessment
+    submit-incomplete-title: Predajte svoje procjene
+    submit-incomplete-body: Ostavili ste nekoliko neodgovoreni pitanja. Ne možete
+      urediti svoju procjenu nakon što ste je predali. Jeste li sigurni?
+    submit-complete-title: Predajte svoje procjene
     submit-complete-body: You cannot edit your assessment after submitting it.  Are
       you sure?
   match:
@@ -935,13 +935,13 @@
       Please read these carefully before accepting them. Note that our tools teaching
       JavaScript may be unavailable to your students before explicitly accepting the
       updated terms.
-    review_terms: Review updated terms
+    review_terms: Pregledajte ažurirane uslove
   school_info_interstitial:
-    title: We want to bring Computer Science to every student - help us track our
-      progress!
-    message: Please enter your school information below.
-    message_with_suggestion: Please verify that the following information is correct,
-      or update as necessary.
+    title: "Želimo da donesemo računarstvo do svakog učenika - pomozite nam da pratimo
+      naš napredak!"
+    message: Molimo ispod unesite informacije o svojoj školi.
+    message_with_suggestion: Molimo da potvrdite da je sljedeća informacija tačna,
+      ili ažurirajte ako je potrebno.
     save: Snimi
   race_interstitial:
     title: 'Optional: Help us track our progress toward improving diversity in computer
@@ -969,7 +969,7 @@
     completed_perfect: dovršeno, savršeno
     furthest_level_attempted: pokušaj posljednjeg nivoa
     assessment: procjena
-    submitted: submitted
+    submitted: predano
   studio:
     courses_working_on: Kursevi na kojima radite
     completed_courses: Kompletirani kursevi
@@ -987,7 +987,7 @@
     share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
       you are using a link from a Minecraft: Agent puzzle, and that you have copied
       the full link.'
-    share_link_import_error_header: Something went wrong.
+    share_link_import_error_header: Nešto je pošlo naopako.
     share_link_import_error_body: There was a problem importing that share link. Please
       try again.
     exit: Povratak na Kurs
@@ -1003,9 +1003,9 @@
     share_u13_warning: Ask your teacher before sharing. Only share with others in
       your school.
     embed: Embed
-    advanced_share: Show advanced options
-    no_projects: You currently have no projects. Click on one of the buttons above
-      to start a project.
+    advanced_share: Pokažite napredne opcije
+    no_projects: Trenutno nemate projekata. Kliknite na jednu od tipki iznad da započnete
+      projekat.
     close: Zatvori
     more: Više
     name: Ime
@@ -1137,7 +1137,7 @@
       objectionable, or if the linked site is no longer available.
   hoc_download:
     title: Hour of Code downloads
-    capsule_title: Do you have Internet?
+    capsule_title: Imate li internet?
     capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
     instructions_headline: No Internet?
     instructions: 'Instructions for teachers: if you have poor Internet service, these
@@ -1151,8 +1151,8 @@
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
     download_message: Download %{app_name} for offline use (136MB)
-    download_in_Albanian: 'Download in Albanian:'
-    download_in_Arabic: 'Download in Arabic:'
+    download_in_Albanian: 'Skinite na albanskom:'
+    download_in_Arabic: 'Skinite na arapskom:'
     download_in_Azerbaijani: 'Download in Azerbaijani:'
     download_in_Basque: 'Download in Basque:'
     download_in_Bosnian: 'Download in Bosnian:'
@@ -1217,7 +1217,7 @@
     which unit you should be on.
   return_unit_overview: Go to unit overview
   return_course_overview: Go to unit overview
-  view_all_units: View all units
+  view_all_units: Vidi sve jedinice
   pd:
     survey:
       number_teachers: Number of attending teachers

@@ -177,8 +177,8 @@
           description: Let's use code to join Anna and Elsa as they explore the magic
             and beauty of ice. You will create snowflakes and patterns as you ice-skate
             and make a winter wonderland that you can then share with your friends!
-          description_short: Let's use code to join Anna and Elsa as they explore
-            the magic and beauty of ice.
+          description_short: Gamitin natin ang code para samahan sina Anna at Elsa
+            sa kanilang pagtuklas sa mahika at kagandahan ng yelo.
           stages:
             Artist:
               name: Artist
@@ -374,7 +374,7 @@
             Reflection:
               name: Reflection
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: Dashboard ng Guro
             Unplugged lessons:
               name: Unplugged lessons
             Writing computer programs:
@@ -609,7 +609,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: Dashboard ng Guro
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         algPDmiami:
@@ -820,7 +820,7 @@
             Strings and Images:
               name: Strings and Images
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: Dashboard ng Guro
             The Big Game:
               name: The Big Game
             The Design Recipe:
@@ -877,7 +877,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: Dashboard ng Guro
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         algebraPD-iZone:
@@ -896,7 +896,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: Dashboard ng Guro
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         sciencePD-NexTech:
@@ -1188,7 +1188,7 @@
             Strings and Images:
               name: Strings and Images
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: Dashboard ng Guro
             Writing Contracts:
               name: Writing Contracts
         cspfacilitator:
@@ -1289,7 +1289,7 @@
             Lesson Prep:
               name: Lesson Prep
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: Dashboard ng Guro
             Teaching with Puzzles:
               name: Teaching with Puzzles
             Teaching with the Design Recipe:
@@ -1912,9 +1912,9 @@
             Hour of Code 2015:
               name: Hour of Code 2015
         mc:
-          title: Minecraft Hour of Code
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world.
+          title: Minecraft na Hour of Code
+          description: Gamitin ang mga bloke ng code para madala sina Steve o Alex
+            sa isang pakikipagsapalaran sa mundo ng Minecraft na ito.
           description_short: Tuklasin ang mundo ng Minecraft sa pamamagitan ng code
           stages:
             Hour of Code 2015:
@@ -2170,7 +2170,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: Dashboard ng Guro
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         algebraPD3c:
@@ -2364,7 +2364,7 @@
             Rapid Research - Data Innovations:
               name: Rapid Research - Data Innovations
             Simple Encryption:
-              name: Simple Encryption
+              name: Simpleng Pag-encrypt
             The Cost of Free:
               name: The Cost of Free
             What is Big Data?:
@@ -2573,7 +2573,7 @@
             'Project: Build a Game':
               name: 'Project: Build a Game'
             Velocity:
-              name: Velocity
+              name: Belosidad
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -2656,7 +2656,7 @@
             Introduction to PD:
               name: Introduction to PD
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: Dashboard ng Guro
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         sciencePD1:
@@ -3160,7 +3160,7 @@
             Sequences & Algorithms:
               name: Sequences & Algorithms
             Unspotted Bugs:
-              name: Unspotted Bugs
+              name: Hindi Namalayang mga Bugs
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Events Unplugged: The Big Event':
@@ -3443,7 +3443,7 @@
             Variables and Animation:
               name: Variables and Animation
             Velocity:
-              name: Velocity
+              name: Belosidad
               description_student: After a brief review of how the counter pattern
                 is used to move sprites, the class is introduced to the properties
                 that set velocity and rotation speed directly.   As they use these
@@ -3863,7 +3863,7 @@
             Lesson Prep:
               name: Lesson Prep
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: Dashboard ng Guro
             Teaching with Puzzles:
               name: Teaching with Puzzles
             Teaching with the Design Recipe:
@@ -4198,7 +4198,7 @@
             and simple techniques for breaking (or cracking) secret messages.
           stages:
             Simple Encryption:
-              name: Simple Encryption
+              name: Simpleng Pag-encrypt
         fesbinary:
           title: Binary
           description_audience: ''
@@ -5886,7 +5886,7 @@
             Other Forms of Input:
               name: Other Forms of Input
             Velocity:
-              name: Velocity
+              name: Belosidad
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6268,7 +6268,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Belosidad
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6415,7 +6415,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Belosidad
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6669,7 +6669,7 @@
                 opportunity to learn how to use events in Play Lab and to apply all
                 of the coding skills they've learned to create an animated game. It's
                 time to get creative and make a story in the Play Lab!
-          title: 'CS Fundamentals: Course A'
+          title: Kursong A
           description_audience: ''
           description_short: An introduction to computer science for early readers.
           description: Course A offers computer science curriculum for beginning readers
@@ -6709,7 +6709,7 @@
               name: More Programming in Maze
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
-          title: 'CS Fundamentals: Course B'
+          title: Kursong B
           description_audience: ''
           description_short: An introduction to computer science for early readers.
           description: |-
@@ -6750,7 +6750,7 @@
               name: Loops in Artist
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
-          title: 'CS Fundamentals: Course C'
+          title: Kursong C
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -6927,7 +6927,7 @@
                 debugging in the "collector" environment. Students will get to practice
                 reading and editing code to fix puzzles with simple algorithms, loops
                 and nested loops.
-          title: 'CS Fundamentals: Course D'
+          title: Kursong D
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7158,7 +7158,7 @@
               name: Nested Loops with Frozen
             Nested Loops:
               name: Mga Loops na naka-nest
-          title: 'CS Fundamentals: Course E'
+          title: Kursong E
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7396,7 +7396,7 @@
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
-          title: 'CS Fundamentals: Course F'
+          title: Kursong F
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -8493,7 +8493,23 @@
             Programming - Hour of Code:
               name: Programming - Hour of Code
             Simple Encryption:
-              name: Simple Encryption
+              name: Simpleng Pag-encrypt
+            Web Development - Creating Webpages:
+              name: Web Development - Creating Webpages
+            App Development Unplugged - User Interfaces:
+              name: App Development Unplugged - User Interfaces
+            App Development - Intro to App Lab:
+              name: App Development - Intro to App Lab
+            Creating Webpages:
+              name: Creating Webpages
+            User Interfaces:
+              name: User Interfaces
+            Intro to App Lab:
+              name: Intro to App Lab
+            Smart Clothing Design:
+              name: Smart Clothing Design
+            Intro to App Lab (13+):
+              name: Intro to App Lab (13+)
           title: PwC Access Your Potential
           description_audience: ''
           description_short: ''
@@ -8539,7 +8555,7 @@
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft\: Hero''s Journey Hour of Code'
             Minecraft Hour of Code:
-              name: Minecraft Hour of Code
+              name: Minecraft na Hour of Code
           title: 'Minecraft: Hero''s Journey'
           description_audience: ''
           description_short: ''
@@ -8631,4 +8647,20 @@
           title: AWS Demo
           description_audience: ''
           description_short: ''
+          description: ''
+        halloween:
+          stages:
+            Halloween Artist:
+              name: Halloween Artist
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        valentine:
+          stages:
+            special valentine:
+              name: special valentine
+          title: Valentine Special
+          description_audience: ''
+          description_short: Have fun creating valentines
           description: ''

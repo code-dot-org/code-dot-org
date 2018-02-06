@@ -2015,3 +2015,204 @@ ko:
       8:
         image: 'notes/mc_2017_congratulations_8.png'
         text: 'Stampy: How did you do that? Stacy: It was easy, actually. I just used code!'
+    csd_concept_how_computers_work:
+      1:
+        image: 'notes/csd_concept_how_computers_work_1.png'
+        text: 'Everywhere you look, computers are changing the world. Whether they''re on our desktops, in our homes, our pockets, or just about anywhere else. But while most of us use this revolutionary technology daily, we don''t often ask: "How do computers work?" In this series, you''re going to learn how computers really work, starting with what makes a computer a computer. Then, you''ll look at how information is represented inside the computer using tiny electrical signals going on and off at mind-boggling speeds.'
+      2:
+        image: 'notes/csd_concept_how_computers_work_2.png'
+        text: "After that, you'll learn how computers use circuits to do everything from simple math to simulating entire virtual worlds. Next, you'll zoom out and look at the different parts of a computer that actually input, output, and store all that information. Finally, you'll take a look at what code actually is and how software controls hardware. So whether you're just curious about the devices you use every day or you want to design the innovations of the future, the first step is learning how computers work."
+    csd_concept_computer:
+      1:
+        image: 'notes/csd_concept_computer_1.png'
+        text: "My name is May-Li Khoe and I'm a designer and an inventor. So some of the things I've designed have been at Apple, and now I design products for kids to use so that they can have an easier time in school. My other jobs include DJ-ing and dancing."
+      2:
+        image: 'notes/csd_concept_computer_2.png'
+        text: "Computers are everywhere! They're in people's pockets, they're in people's cars, people have them on their wrists. They might be in your backpack right now. But what makes a computer a computer? What does make a computer a computer anyway? And how does it even work?"
+      3:
+        image: 'notes/csd_concept_computer_3.png'
+        text: "Hi I'm Nat! I was one of the original designers of the Xbox. I've been working with computers since I was maybe seven years old and now I work on virtual reality. As humans, we've always built tools to help us solve problems. Tools like a wheelbarrow, a hammer, or a printing press, or a tractor-trailer."
+      4:
+        image: 'notes/csd_concept_computer_4.png'
+        text: "All of these inventions helped us with manual work. Over time, people began to wonder if a machine could be designed and built to help us with the thinking work we do, like solving equations or tracking the stars in the sky. Rather than moving or manipulating physical things like dirt and stone, these machines would need to be designed to manipulate information. As the pioneers of computer science explored how to design a thinking machine, they realized that it had to perform four different tasks."
+      5:
+        image: 'notes/csd_concept_computer_5.png'
+        text: "It would need to take input, store information process it and then output the results. Now this might sound simple, but these four things are common to all computers. That's what makes a computer a computer."
+      6:
+        image: 'notes/csd_concept_computer_6.png'
+        text: "Computers started out as basic calculators, which was already really awesome at the time, and they were only manipulating numbers back then. But now we can use them to talk to each other, we can use them to play games, control robots, and do any crazy thing that you could probably imagine. Modern computers look nothing like those clunky old machines but they still do these same four things."
+      7:
+        image: 'notes/csd_concept_computer_7.png'
+        text: "First, we're going to talk about input. You can tell computers what to do with the keyboard, you can tell them what to do with the mouse, the microphone, the camera. All these different inputs give a computer information, which is then stored in memory."
+      8:
+        image: 'notes/csd_concept_computer_8.png'
+        text: "A computer's processor takes information from memory. It manipulates it or changes it using an algorithm, which is just a series of commands. And then it sends the processed information back to be stored in memory again. This continues until the processed information is ready to be output."
+      9:
+        image: 'notes/csd_concept_computer_9.png'
+        text: "How a computer outputs information depends on what the computer is designed to do. A computer display can show text, photos, videos, or interactive games -- even virtual reality! The output of a computer may even include signals to control a robot."
+      10:
+        image: 'notes/csd_concept_computer_10.png'
+        text: "And who knows what the computers of tomorrow will be like? My hope is that you get to help decide what you want the computers of tomorrow to look like. But across all computers, regardless of the different types of technology they use, they're always doing those same four things. They take in information, they store it as data, they process it, and then they output the results."
+    csd_concept_binary_data:
+      1:
+        image: 'notes/csd_concept_binary_data_1.png'
+        text: "Hi! My name is Limor Fried, and I'm an engineer here at Adafruit Industries. And this is where I do engineering and design, and I design circuits for fashion and music and technology."
+      2:
+        image: 'notes/csd_concept_binary_data_2.png'
+        text: "My name is Federico Gomez Suarez, and I'm a software developer with Microsoft Hack for Good. And I look into using technology to help us solve some of the big social problems of our times."
+      3:
+        image: 'notes/csd_concept_binary_data_3.png'
+        text: "You may have heard that computers work on ones and zeros. But almost nobody today actually deals directly with these ones and zeros. But ones and zeroes do play a big role in how computers work on the inside."
+      4:
+        image: 'notes/csd_concept_binary_data_4.png'
+        text: "Inside a computer are electric wires and circuits that carry all the information in a computer. How do you store or represent information using electricity?"
+      5:
+        image: 'notes/csd_concept_binary_data_5.png'
+        text: "Well, if you have a single wire with electricity flowing through it, the signal could either be on or off. That's not a lot of choices, but it's a really important start. With one wire, we can represent a yes or no, true or false, a one or zero, or anything else with only two options. This on/off state of a single wire is called a bit, and it's the smallest piece of information a computer can store."
+      6:
+        image: 'notes/csd_concept_binary_data_6.png'
+        text: 'If you use more wires you get more bits: more ones and zeros. With more bits you can represent more complex information. But to understand that, we need to learn about something called the binary number system.'
+      7:
+        image: 'notes/csd_concept_binary_data_7.png'
+        text: 'In the decimal number system, we have ten digits from zero to nine, and that''s how we''ve all learned to count. In the binary number system, we only have two digits: zero and one. With these two digits, we can count up to any number.'
+      8:
+        image: 'notes/csd_concept_binary_data_8.png'
+        text: "Here's how this works. In a decimal number system we're all used to, each position in a number has a different value. There's a 1 position, the 10 position, the 100 position, and so on. For example, a 9 in the 100 position is a 900. In binary, each position also carries a value. But instead of multiplying by 10 each time, we multiply by 2. So there's the 1 position, the 2 position, the 4 position, the 8 position, and so on. For example, the number 9 in binary is 1001. To calculate the value, we add 1 times 8, plus 0 times 4, plus 0 times 2, plus 1 times 1. Almost nobody does this math because computers do it for us. What's important is that any number can be represented with only ones and zeros, or by a bunch of wires that are on or off. The more wires you use, the larger the numbers you can store. With 8 wires, you can store numbers between 0 and 255. That's 8 ones. With just 32 wires, you can store all the way from 0 to over 4 billion. Using the binary number system, you can represent any number you like."
+      9:
+        image: 'notes/csd_concept_binary_data_9.png'
+        text: "But what about other types of information? Like text, images, or sound? It turns out that all these things can also be represented with numbers. Think of all the letters in the alphabet. You could assign a number to each letter. A could be 1, B could be 2, and so on. You can then represent any word or paragraph as a sequence of numbers. And as we saw, these numbers can be stored as on or off electrical signals. Every word you see on every webpage or your phone is represented using a system like this."
+      10:
+        image: 'notes/csd_concept_binary_data_10.png'
+        text: "Now, let's consider photos, videos, and all the graphics you see on a screen."
+      11:
+        image: 'notes/csd_concept_binary_data_11.png'
+        text: "All of these images are made out of teeny dots called pixels, and each pixel has a color. Each of the colors can be represented with numbers. When you consider the typical image has millions of these pixels, and the typical video shows 30 images per second now we're talking about a lot of data here."
+      12:
+        image: 'notes/csd_concept_binary_data_12.png'
+        text: "Every sound is basically a series of vibrations in the air. Vibrations can be represented graphically as a waveform. Any point on this waveform can be represented by a number. And this way, any sound can be broken down into a series of numbers. If you want higher quality sound, you will pick 32-bit audio or an 8-bit audio. More bits means a higher range of numbers."
+      13:
+        image: 'notes/csd_concept_binary_data_13.png'
+        text: "When you use a computer to write code or make your own app, you're not dealing directly with these ones and zeros. But you will be dealing with images or sound or video. So if you want to understand how computers work on the inside, it all comes down these simple ones and zeros and the electrical signals in the circuits behind them."
+    csd_concept_circuits_logic:
+      1:
+        image: 'notes/csd_concept_circuits_logic_1.png'
+        text: "One of the coolest things I've discovered about circuits is circuitry can be an art form like if I have a creative idea, I can get that creative idea out using circuits. So if you have ideas, you can use technology to make those ideas come to life."
+      2:
+        image: 'notes/csd_concept_circuits_logic_2.png'
+        text: "Every input or output of a computer is effectively a type of information, which can be represented by on or off electrical signals or ones and zeros."
+      3:
+        image: 'notes/csd_concept_circuits_logic_3.png'
+        text: "In order to process the information that comes in as input, and to make the information that is output, a computer needs to modify and combine the input signals. To do this, a computer uses millions of teeny electronic components, which come together to form circuits."
+      4:
+        image: 'notes/csd_concept_circuits_logic_4.png'
+        text: "Let's take a closer look at how circuits can modify and process information that's represented in ones and zeros. This is an incredibly simple circuit. It takes an electrical signal, on or off, and it flips it. So if the signal you give it is a 1, the circuit gives you a 0, and if you give the circuit a 0, it gives you a 1. The signal that goes in is not the same as the signal that comes out, and so we call this circuit NOT."
+      5:
+        image: 'notes/csd_concept_circuits_logic_5.png'
+        text: "More complicated circuits can take multiple signals and combine them, and give you a different result. In this example, a circuit will take two electrical signals, now each one might be a 1 or a 0. If either of the signals coming in is a 0, then the result is also a 0. This circuit will only give you a 1, if the first signal and the second signal are both a 1, and so we call the circuit AND."
+      6:
+        image: 'notes/csd_concept_circuits_logic_6.png'
+        text: "There are many small circuits like this that perform simple logical calculations. By connecting these circuits together, we can make more complex circuits that perform more complex calculations."
+      7:
+        image: 'notes/csd_concept_circuits_logic_7.png'
+        text: "For example, you can make a circuit that adds 2 bits together called an adder. This circuit takes in 2 individual bits, each one a 1 or a 0, and adds them together to calculate the sum. The sum can be 0 plus 0 equals 0, 0 plus 1 equals 1, or 1 plus 1 equals 2. You need two wires coming out because it can take up to two binary digits to represent the sum. Once you have a single adder for adding two bits of information, you can put together multiples of these adder circuits side-by-side to add together much larger numbers."
+      8:
+        image: 'notes/csd_concept_circuits_logic_8.png'
+        text: "For example, here's how an 8-bit adder adds the numbers 25 and 50. Each number is represented using 8 bits, resulting in 16 different electrical signals that go into the circuit. The circuit for an 8-bit adder has lots of little adders inside of it, which together, calculate the sum."
+      9:
+        image: 'notes/csd_concept_circuits_logic_9.png'
+        text: "Different electrical circuits can perform other simple calculations like subtraction or multiplication. In fact, all the information processing your computer does is just lots and lots of small simple operations put together. Each individual operation done by a computer is so, so simple it could be done by a human, but these circuits inside computers are way way faster."
+      10:
+        image: 'notes/csd_concept_circuits_logic_10.png'
+        text: "Back in the day, these circuits were big and clunky, and an 8-bit adder could be as big as a fridge, and it would take minutes for them to perform a simple calculation. Today, computer circuits are microscopic in size, and way way faster. Why are smaller computers also faster? Well, because the smaller the circuit is, the less distance the electrical signal has to go. Electricity moves at just about the speed of light, which is why modern circuits can perform billions of calculations per second."
+      11:
+        image: 'notes/csd_concept_circuits_logic_11.png'
+        text: "So whether you're playing a game, recording a video, or exploring the cosmos, everything you could possibly do with technology requires lots of information to be processed extremely quickly. Underneath all this complexity is just lots of teeny little circuits that turn binary signals into websites, videos, music, and games. These circuits can even help us decode DNA to diagnose and cure disease. So what would you like to do with all these circuits?"
+    csd_concept_memory_cpu_input_output:
+      1:
+        image: 'notes/csd_concept_memory_cpu_input_output_1.png'
+        text: "Hi, my name is Madison Maxey. I have a company called Loomia, and we focus on making smart fabrics for smart clothing and smart soft good products. The sky's the limit when it comes to textiles."
+      2:
+        image: 'notes/csd_concept_memory_cpu_input_output_2.png'
+        text: "My name is Danielle Applestone, and I'm CEO of Othermachine Company. We build a desktop milling machine. A milling machine takes a rotating cutting tool and moves it through material to create a 3D object."
+      3:
+        image: 'notes/csd_concept_memory_cpu_input_output_3.png'
+        text: "Under the hood, all computers do the same four basic things. They input information, store and process the information, and then, output information. Each of these things is done by a different part of the computer."
+      4:
+        image: 'notes/csd_concept_memory_cpu_input_output_4.png'
+        text: "There are input devices that take input from the outside world and convert it into binary information. There is memory to store this information. There's a central processing unit or CPU, where all the calculations are done. And, finally, there are output devices that take information and convert it into a physical output."
+      5:
+        image: 'notes/csd_concept_memory_cpu_input_output_5.png'
+        text: "Let's talk about input first. Computers can take many different types of input, like the keyboard of a computer, the touchpad of a phone, a camera, a microphone, or a GPS. But even the sensors on a car, a thermostat, or a drone are also different input devices."
+      6:
+        image: 'notes/csd_concept_memory_cpu_input_output_6.png'
+        text: "Now, let's look at a simple example of how input travels through a computer and becomes output. When you press a key on your keyboard - let's say the letter \"B\". The keyboard converts the letter to a number. That number is sent as binary, ones and zeros, into the computer."
+      7:
+        image: 'notes/csd_concept_memory_cpu_input_output_7.png'
+        text: "Starting from this number, the CPU calculates how to display the letter \"B\" pixel by pixel. The CPU requests step-by-step instructions from memory, which tell it how to draw the letter \"B\". The CPU runs these instructions and stores the results as pixels in memory."
+      8:
+        image: 'notes/csd_concept_memory_cpu_input_output_8.png'
+        text: "Finally, this pixel information is sent in binary to the screen. The screen is an output device, which converts the binary signals into the tiny lights and colors that make up what you see."
+      9:
+        image: 'notes/csd_concept_memory_cpu_input_output_9.png'
+        text: "This all happens so quickly it feels instantaneous, but to display each letter a computer runs thousands of instructions, starting from the moment your finger presses the key point."
+      10:
+        image: 'notes/csd_concept_memory_cpu_input_output_10.png'
+        text: "In that example, the output device was the screen, but there are many different types of output which take a binary signal from the computer and do something in the physical world. For example, a speaker will play sound, and a 3D printer will print an object. Output devices can also control physical motion like a robotic arm, the motor of a car, or the cutting tool of the milling machine that my company makes. New types of inputs and outputs let computers interact with the world in entirely new ways. This has been helped out by improvements to the speed and size of the memory and CPU."
+      11:
+        image: 'notes/csd_concept_memory_cpu_input_output_11.png'
+        text: "The more complicated a task is and the more information that is input or output, the more processing power and memory a computer needs. Typing letters on a screen may be easy but to do complicated 3d graphics or record a high-definition movie, modern computers often have multiple CPUs to process all that information and many gigabytes of memory to store it."
+      12:
+        image: 'notes/csd_concept_memory_cpu_input_output_12.png'
+        text: 'No matter what it is you want to do with the computer, every single action is about: inputting information from the physical world, storing and processing that information, and getting some output back into the physical world.'
+    csd_concept_hardware_software:
+      1:
+        image: 'notes/csd_concept_hardware_software_1.png'
+        text: "Hi, my name is Erica Gomez and I'm an engineering manager at Amazon.com. One of the best things about working in tech, and at Amazon in particular, is that I get to bring my dog with me to work every day. My job is to help make sure software gets out the door and her job is to nap under my desk and snore very loudly."
+      2:
+        image: 'notes/csd_concept_hardware_software_2.png'
+        text: 'My name is Jerome Holman, and I''m a Program Manager on Team Xbox and I have a really fun job: Basically bringing the hardware and the software together to give you all the games that you love on your Xbox.'
+      3:
+        image: 'notes/csd_concept_hardware_software_3.png'
+        text: "When you look inside a computing device you see a bunch of circuits, chips, wires, speakers, plugs, and all sorts of other stuff. This is the hardware."
+      4:
+        image: 'notes/csd_concept_hardware_software_4.png'
+        text: "But what you don't see is the software. Software is all of the computer programs, or code, running on this machine. Software can be anything from apps and games to webpages and the data science software that me and my teams use at Amazon to understand how customers behave."
+      5:
+        image: 'notes/csd_concept_hardware_software_5.png'
+        text: "But how do the hardware and the software interact with one another? Let's start at looking at a computer's central processing unit, or CPU."
+      6:
+        image: 'notes/csd_concept_hardware_software_6.png'
+        text: "The CPU is the master chip that controls all the other parts of the computer. A CPU needs to do different things so inside it has smaller, simpler parts that handle specific tasks. It has circuits to do simple math and logic. It has other circuits to send and receive information to and from different parts of the computer."
+      7:
+        image: 'notes/csd_concept_hardware_software_7.png'
+        text: "The real magic of the CPU is how it knows which circuits to use and when to use them. The CPU receives simple commands that tell it which circuit to use to do a specific job. For example, an \"add\" command tells the CPU to use its outer circuit to calculate a new number. And then the \"store\" command tells the CPU to use a different circuit to save that result into memory."
+      8:
+        image: 'notes/csd_concept_hardware_software_8.png'
+        text: "Just like numbers, all of these simple commands can be represented in binary ones and zeros or on and off electrical signals. The binary commands are stored in memory and the CPU fetches and executes them in sequence one after the other. This sequence of commands is, in fact, a very simple computer program."
+      9:
+        image: 'notes/csd_concept_hardware_software_9.png'
+        text: "Binary code is the most basic form of software and it controls all the hardware of a computer. These days, nobody writes software in binary. It would take forever!"
+      10:
+        image: 'notes/csd_concept_hardware_software_10.png'
+        text: "Today, the software we write looks more like this (Python), or this (Ruby), or even this (Blockly). Programming languages like these let you type in commands in something that looks a lot like English."
+      11:
+        image: 'notes/csd_concept_hardware_software_11.png'
+        text: "To draw a rectangle on the screen, you just need a single command. This high-level command is converted into hundreds, or thousands, of simpler binary commands that the CPU understands. Software tells the CPU what to do, but when you're listening to music, and browsing the web, and chatting with a friend, your computer is running multiple pieces of software all at once."
+      12:
+        image: 'notes/csd_concept_hardware_software_12.png'
+        text: "So, how do all of these programs get on the computer in the first place, and how can the CPU run them all at once? To find out we'll have to take a look at the operating system."
+      13:
+        image: 'notes/csd_concept_hardware_software_13.png'
+        text: "The operating system of the computer is the master program that manages how software gets to use the hardware of the computer. For example, I helped create the Windows operating system that runs on most personal computers."
+      14:
+        image: 'notes/csd_concept_hardware_software_14.png'
+        text: "The operating system is a program with special abilities that let it control the other software on the computer. It lets you install new programs by loading them into your computer's memory. It decides when a program is run by the central processing unit, and whether that program can access the computer's input and output devices. And when you think your computer is running many programs at once, in reality, it's the operating system that's quickly switching between programs sharing that CPU for fractions of a second."
+      15:
+        image: 'notes/csd_concept_hardware_software_15.png'
+        text: "Inside every computer is an operating system managing software that controls the computer's hardware."
+      16:
+        image: 'notes/csd_concept_hardware_software_16.png'
+        text: "The software is a series of commands made of simple binary code, and that binary code is just electrical signals flowing through billions of tiny circuits."
+      17:
+        image: 'notes/csd_concept_hardware_software_17.png'
+        text: "Computers have the potential to do all kinds of amazing things. But the only thing that makes the computer smart, or useful, is you. When you learn to code you get to define the problem you want to solve, and write the software that turns those ideas into reality."

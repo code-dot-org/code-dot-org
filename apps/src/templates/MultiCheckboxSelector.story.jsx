@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import MultiCheckboxSelector from './MultiCheckboxSelector';
+import {action} from '@storybook/addon-actions';
 
 const ItemComponent = function ({item}) {
   return <strong>{item}</strong>;
@@ -32,7 +33,7 @@ export default storybook => {
             header="Some Items"
             items={["one", "two", "three"]}
             selected={["two"]}
-            onChange={storybook.action("onChange")}
+            onChange={action("onChange")}
           >
             <ItemComponent />
           </MultiCheckboxSelector>
@@ -44,7 +45,7 @@ export default storybook => {
             header="Some Items"
             items={["one", "two", "three"]}
             selected={["two", "one", "three"]}
-            onChange={storybook.action("onChange")}
+            onChange={action("onChange")}
           >
             <ItemComponent />
           </MultiCheckboxSelector>
@@ -60,7 +61,7 @@ export default storybook => {
             ]}
             itemPropName="screen"
             selected={[]}
-            onChange={storybook.action("onChange")}
+            onChange={action("onChange")}
           >
             <ComplexItemComponent style={{border: '1px solid black', padding: 10}} />
           </MultiCheckboxSelector>
@@ -72,7 +73,7 @@ export default storybook => {
             header="Some Items"
             items={["one", "two", "three"]}
             selected={["two"]}
-            onChange={storybook.action("onChange")}
+            onChange={action("onChange")}
             disabled={true}
           >
             <ItemComponent />

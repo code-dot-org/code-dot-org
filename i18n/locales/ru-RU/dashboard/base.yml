@@ -46,7 +46,7 @@ ru:
       label: 'Добавить учителя:'
       placeholder: "Код раздела (ABCDEF)"
       instructions: "Введите код, выданный учителем. Это 6-буквенный код вида «ABCDEF»."
-      instructions_short: "Enter your 6 letter section code"
+      instructions_short: "Введите ваши 6 букв кода класса"
     submit: 'Добавить учителя'
   add_hint_form:
     placeholder: 'Введите подсказку здесь'
@@ -59,7 +59,7 @@ ru:
   courses: 'курсы'
   courses_page:
     title_student: "Учиться в студии кода"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Учись со Студией Кода"
   unplugged_activity: 'Урок без компьютера'
   of: "из"
   more: "ЕЩЁ"
@@ -122,7 +122,7 @@ ru:
     user_type_student: "Ученик"
     field_is_required: "требуется"
     accept_terms: "Вы должны принять условия перед созданием учетной записи"
-    error: "An error occurred."
+    error: "Произошла ошибка."
   school_info:
     title: 'Школьная информация (по желанию)'
     school_country: 'Страна твоей школы'
@@ -190,7 +190,7 @@ ru:
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
   teacher_mailer:
-    new_teacher_subject: 'Welcome to Code.org!'
+    new_teacher_subject: 'Добро пожаловать на Code.org!'
   section:
     your_section:
       one: 'Твой раздел:'
@@ -258,7 +258,7 @@ ru:
       home: "На главную"
       my_dashboard: "My Dashboard"
       courses: "курсы"
-      course_catalog: "Course Catalog"
+      course_catalog: "Каталог курсов"
       project_gallery: "Проекты"
       sections: "Секции"
       help_support: "Помощь и поддержка"
@@ -359,14 +359,14 @@ ru:
     no_password_because_sponsored: 'Обратитесь к учителю для управления вашим паролем.'
     create_personal_login: 'Create a personal login'
     create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
-    create_personal_login_under_13_username: "Username (don't use your real name!)"
-    create_personal_login_under_13_parent_email: 'Parent/guardian email address'
+    create_personal_login_under_13_username: "Имя пользователя (не используйте своё настоящее имя!)"
+    create_personal_login_under_13_parent_email: 'Адрес электронной почты родителя/опекуна'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
-    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    enter_parent_email: "Введите адрес электронной почты своих родителей или опекунов (для восстановления пароля)"
   user_level:
     completed: 'Завершено'
     tried: 'Пытался'
@@ -497,8 +497,8 @@ ru:
     notes_coming_soon: 'Текст для этого видео находится в разработке.'
     autoplay_option: 'Автоматическое воспроизведение видео'
     download: 'Скачать видео'
-    show_notes: 'Show Notes'
-    show_video: 'Show Video'
+    show_notes: 'Показать заметки'
+    show_video: 'Показать видео'
   compatibility:
     upgrade:
       unsupported_message: "Ваш браузер не поддерживается. Пожалуйста, обновите свой браузер до <a href='%{supported_browsers_url}', target='_blank'>одного из поддерживаемых браузеров</a>. Вы можете попробовать просмотреть страницу, но будьте готовы к тому, что функциональность может быть нарушена."

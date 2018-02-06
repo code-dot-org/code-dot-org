@@ -375,7 +375,7 @@
   homepage_slot_text_link_buy: "Fatti coinvolgere"
   homepage_slot_text_link_donate: "Fai una donazione"
   homepage_slot_text_link_shop: "T-shirts, cappellini & altro"
-  homepage_slot_text_link_administrators: "Bring to your school or district"
+  homepage_slot_text_link_administrators: "Bring CS to your school"
   homepage_header_codestudio: "Creazioni degli studenti di Code Studio"
   homepage_header_donors: "Code.org ringrazia i suoi sostenitori"
   homepage_donors_seall: "Mostra tutto"
@@ -1215,7 +1215,7 @@
   touchdevelop_longdescription: 'L''editor ti guida in modo amichevole nell''arte della creazione di pixel, nel risolvere i puzzle dell''orso o nel creare la tua versione del gioco dell''uccello che salta. '
   appinventor_longdescription: "Divertenti e veloci video tutorial ti guidano attraverso la costruzione di tre semplici app per il tuo telefono o tablet Android. Progettato per principianti ed esperti, questa attività della Ora del Codice ti insegnerà a costruire da solo le tue app prima che tu te ne accorga. Immagina poter condividere  le app da te create con i tuoi amici! Queste attività sono adatte sia per singoli studenti sia per classi guidate da insegnanti."
   blockly_longdescription: "Avete PC con connessione internet lenta (o addirittura senza)? Scaricate i tutorial di Blockly che sono stati creati prima delle esercitazioni Code.org - un singolo file ZIP di 3MB che può essere caricato su qualsiasi computer o usato direttamente su una pennina USB"
-  thinkersmith2_longdescription: "Gli studenti imparano come rappresentare e memorizzare le lettere in formato binario, come funzioni di acceso e spento. Alla fine tutti gli alunni della classe potranno codificare le proprie iniziali da portare a casa con loro."
+  thinkersmith2_longdescription: "Gli studenti imparano come rappresentare e memorizzare le lettere in formato binario, come funzioni di acceso e spento. Alla fine tutti gli studenti della classe potranno codificare le proprie iniziali da portare a casa con loro."
   kodableunplugged_longdescription: 'Progettato per essere usato con semplice carta, il fuzzFamily Frenzy è un''introduzione alla logica della programmazione per bambini dai 5 anni in su. L''insegnante deve spiegare il gioco, quindi gli studenti "programmano" un compagno per completare un semplice percorso ad ostacoli. '
   projguts_longdescription: "Questa attività senza PC aiuta gli studenti a imparare come funzionano la modellazione e la simulazione facendo giocare un gruppo di studenti a diverse versioni del gioco sasso/carta/forbici e vedendo i risultati come diversi esperimenti di modellazione."
   hourofcode_longdescription: "Segnaposto per il nuovo code.org/hoc"
