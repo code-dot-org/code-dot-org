@@ -119,6 +119,40 @@ module.exports = {
   levelId: "ec_simple",
   tests: [
     {
+      description: "button image with absolute url",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        $("#designModeButton").click();
+
+        testUtils.dragToVisualization('BUTTON', 10, 20);
+
+        assertPropertyRowValue(0, 'id', 'button1', assert);
+        assertPropertyRowValue(4, 'x position (px)', 10, assert);
+
+        var assetUrl = '/blockly/media/skins/studio/small_static_avatar.png';
+        var encodedAssetUrl = assetUrl;
+        var imageInput = $("#propertyRowContainer input").last()[0];
+
+        var buttonElement = $("#design_button1")[0];
+
+        ReactTestUtils.Simulate.change(imageInput, {
+          target: { value: assetUrl }
+        });
+
+        assert.include(
+          buttonElement.style.backgroundImage,
+          encodedAssetUrl,
+          'Button background image should contain original url'
+        );
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
       description: "button image url correct with fully qualified url",
       editCode: true,
       xml: '',
