@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import color from '../../util/color';
 import BaseDialog from '../../templates/BaseDialog';
 import Button from '../../templates/Button';
-import SchoolInfoInputs from '../../templates/SchoolInfoInputs';
+import SchoolInfoInputs, {SCHOOL_TYPES_HAVING_NCES_SEARCH} from '../../templates/SchoolInfoInputs';
 
 const styles = {
   container: {
@@ -52,14 +52,23 @@ export default class SchoolInfoInterstitial extends React.Component {
   constructor(props) {
     super(props);
 
+    const {existingSchoolInfo} = this.props;
+    const initialNcesSchoolId = existingSchoolInfo.ncesSchoolId ?
+      existingSchoolInfo.ncesSchoolId :
+      (
+        SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(existingSchoolInfo.schoolType)
+        &&
+        (existingSchoolInfo.schoolName || existingSchoolInfo.schoolState || existingSchoolInfo.schoolZip)
+      ) ? '-1' : '';
+
     this.state = {
-      country: this.props.existingSchoolInfo.country || '',
-      schoolType: '',
-      schoolName: '',
-      schoolState: '',
-      schoolZip: '',
-      schoolLocation: '',
-      ncesSchoolId: '',
+      country: existingSchoolInfo.country || '',
+      schoolType: existingSchoolInfo.schoolType || '',
+      schoolName: existingSchoolInfo.schoolName || '',
+      schoolState: existingSchoolInfo.schoolState || '',
+      schoolZip: existingSchoolInfo.schoolZip || '',
+      schoolLocation: existingSchoolInfo.schoolLocation || '',
+      ncesSchoolId: initialNcesSchoolId,
       showSchoolInfoUnknownError: false,
     };
   }
@@ -69,8 +78,6 @@ export default class SchoolInfoInterstitial extends React.Component {
     let schoolData;
     if (this.state.ncesSchoolId === '-1') {
       schoolData = {
-        "user[school_info_attributes][country]": this.state.country,
-        "user[school_info_attributes][school_type]": this.state.schoolType,
         "user[school_info_attributes][school_name]": this.state.schoolName,
         "user[school_info_attributes][school_state]": this.state.schoolState,
         "user[school_info_attributes][school_zip]": this.state.schoolZip,
@@ -87,6 +94,8 @@ export default class SchoolInfoInterstitial extends React.Component {
       data: {
         '_method': 'patch',
         [this.props.authTokenName]: this.props.authTokenValue,
+        "user[school_info_attributes][country]": this.state.country,
+        "user[school_info_attributes][school_type]": this.state.schoolType,
         ...schoolData,
       },
     }).done(() => {
