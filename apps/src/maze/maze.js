@@ -78,7 +78,7 @@ module.exports = class Maze {
    */
   getAppReducers() {
     return {
-      maze: mazeReducer
+      maze: mazeReducer.default
     };
   }
 
