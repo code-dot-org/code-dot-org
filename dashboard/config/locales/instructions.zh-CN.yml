@@ -90,7 +90,7 @@
         \r
         如果在循环中每次转 60 度，一共转6次，会发生什么呢？
       2-3 Artist Functions 11_instruction: |-
-        我们将“画一个正方形”的函数改成了“画一个六边形”，但它实际上还是只能画正方形！你能把“画一个六边形”的函数改成能画边长50像素的六边形吗？\r
+        我们将`draw a square`（画一个正方形）的函数改成了`draw a hexagon`（画一个六边形），但它实际上还是只能画正方形！你能把`draw a hexagon`（画一个六边形）函数改成能画边长50像素的六边形吗？\r
         \r
         用新函数来画这个图形吧！
       2-3 Artist Functions 12 Mike_instruction: |-
@@ -3376,6 +3376,7 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      MC Agent Freeplay_instruction: "**自由游戏时间：** 是时候自行探索了！"
       MC HOC 2016 Level 10_instruction: "现在，是制作您自己的 我的世界 的时候了！生成生物，让它们做你要它们做的事。祝您玩得愉快！"
       MC HOC 2016 Level 2-2_instruction: "鸡一动不动。在`当生成时`栏中放置`移动`和`转向`方格，让它动起来。"
       MC HOC 2016 Level 3_instruction: "好极了，鸡动起来了！不过她又停了。在游戏中，鸡永远走来走去。使用`永远执行`循环，让这些鸡一直走动。"
@@ -3514,16 +3515,18 @@
       NEW Course 4 Artist Functions 1_instruction: "你能用重复循环，来画一个边长100像素的正方形吗？"
       NEW Course 4 Artist Functions 10.1_instruction: "用前一关的函数来画这个图形。"
       NEW Course 4 Artist Functions 10_instruction: "点击编辑来填写函数定义中的模块，从而画出一个边长40像素的正方形。"
-      NEW Course 4 Artist Functions 11_instruction: "现在，我们想创建一个叫做“用正方形画线”的新函数，它能在一行画出6个正方形。你能通过已经有的“画一个边长20的正方形”函数来构造它吗？"
-      NEW Course 4 Artist Functions 12_instruction: "用上一关中的“用正方形画线”函数来画这个图形。"
-      NEW Course 4 Artist Functions 13_instruction: "你能通过“用正方形画线”函数来画一个星形吗？  "
+      NEW Course 4 Artist Functions 11_instruction: "现在，我们想创建一个叫做`draw a line of squares`（用正方形画一条线）的新函数，它能在一行画出6个正方形。你能通过已经有的`draw
+        a square 20`（画一个边长20像素的正方形）函数来构造它吗？"
+      NEW Course 4 Artist Functions 12_instruction: "用上一关中的`draw a line of squares`（用正方形画一条线）函数来画这个图形。"
+      NEW Course 4 Artist Functions 13_instruction: "你能通过`draw a line of squares`（用正方形画一条线）函数来画一个星形吗？
+        \ "
       NEW Course 4 Artist Functions 14_instruction: "自由游戏时间！ "
       NEW Course 4 Artist Functions 2_instruction: "你能画三个正方形，每个之间相隔20像素吗？提示：每个正方形的边长是100像素。"
       NEW Course 4 Artist Functions 3_instruction: |-
         这是一种新的模块。叫做“函数”。点击“编辑”来添加代码，让它能画边长为100的正方形。\r
         \r
         当你编辑完成函数后，点击“关闭”来返回你的程序。
-      NEW Course 4 Artist Functions 4_instruction: 用"draw a square"（画一个正方形）函数来画这个图形。
+      NEW Course 4 Artist Functions 4_instruction: "用`draw a square`（画一个正方形）函数来画这个图形。"
       NEW Course 4 Artist Functions 5_instruction: "“画一个正方形”的函数是怎样知道要运行什么命令的呢？点击“画一个正方形”的函数的“编辑”按钮。这些在函数编辑器里定义的模块就是“画一个正方形”所需要的。当你看完后，点击“保存并关闭”，然后点击“运行”。"
       NEW Course 4 Artist Functions 6_instruction: |
         你能用“画正方形”函数来画出这个图形吗？提示：每个正方形相隔20像素。\r
@@ -6048,6 +6051,10 @@
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
+      Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
+      Valentine_playlab_01_instruction: "Program Kiki (Actor 1) to move left and\nright
+        when the left and right arrows are pressed. When Kiki is clicked, she\nshould
+        throw hearts towards her friends. "
       Vigenere_instruction: Test
       WhileAdventure_instruction: |-
         Our adventurer wants to collect coins. Can you
@@ -6695,8 +6702,8 @@
       courseC_harvester_loops_challenge1a_instruction: "收集所有的玉米。"
       courseC_harvester_loops_challenge2_instruction: "收集所有的生菜。避开树木和田野!"
       courseC_harvester_loops_forVid_instruction: |-
-        Collect all of the corn and all
-        of the pumpkins.
+        Collect all of the corn, all of
+        the lettuce, and all of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -7291,7 +7298,7 @@
       courseE_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
-      courseE_artist_functions2_instruction: '这一次, 使用 "绘制正方形" 函数来创建眼镜。 '
+      courseE_artist_functions2_instruction: "这一次, 使用`draw a square`（画一个正方形）函数来创建眼镜。 "
       courseE_artist_functions3_instruction: |-
         You can make this drawing by adding
         a repeat block.

@@ -1,5 +1,6 @@
 import React from 'react';
 import {ScreenListItem, ImportScreensDialog} from './ImportScreensDialog';
+import {action} from '@storybook/addon-actions';
 
 const exampleHtml = `
       <div>
@@ -124,8 +125,8 @@ export default storybook => {
         story: () => (
           <ImportScreensDialog
             hideBackdrop
-            onImport={storybook.action('onImport')}
-            handleClose={storybook.action('handleClose')}
+            onImport={action('onImport')}
+            handleClose={action('handleClose')}
             project={{
               id: 'poke-the-pig',
               name: 'Poke the Pig',
@@ -141,8 +142,8 @@ export default storybook => {
         story: () => (
           <ImportScreensDialog
             hideBackdrop
-            onImport={storybook.action('onImport')}
-            handleClose={storybook.action('handleClose')}
+            onImport={action('onImport')}
+            handleClose={action('handleClose')}
             project={{
               id: 'poke-the-pig',
               name: 'Poke the Pig',
@@ -158,8 +159,8 @@ export default storybook => {
         story: () => (
           <ImportScreensDialog
             hideBackdrop
-            onImport={storybook.action('onImport')}
-            handleClose={storybook.action('handleClose')}
+            onImport={action('onImport')}
+            handleClose={action('handleClose')}
             project={{
               id: 'poke-the-pig',
               name: 'Poke the Pig',
@@ -176,8 +177,8 @@ export default storybook => {
         story: () => (
           <ImportScreensDialog
             hideBackdrop
-            onImport={storybook.action('onImport')}
-            handleClose={storybook.action('handleClose')}
+            onImport={action('onImport')}
+            handleClose={action('handleClose')}
             project={{
               id: 'poke-the-pig',
               name: 'Poke the Pig',
@@ -200,8 +201,8 @@ export default storybook => {
           <ImportScreensDialog
             hideBackdrop
             isImporting={true}
-            onImport={storybook.action('onImport')}
-            handleClose={storybook.action('handleClose')}
+            onImport={action('onImport')}
+            handleClose={action('handleClose')}
             project={{
               id: 'poke-the-pig',
               name: 'Poke the Pig',

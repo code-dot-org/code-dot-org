@@ -1,9 +1,32 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/pd', media: 'all'
 
-%p
-  Hello! It looks like we've already received a TeacherCon registration from
-  your Code.org account. If you haven't submitted a registration, or you would
-  like to change your registration, please email
-  %a{ href: "mailto:#{@email}" }
-    = @email
+-if @registration.waitlisted?
+  %h1
+    Thank you for completing the TeacherCon Registration form
+  %p
+    Thank you for submitting your registration form. We’ve added you to our waitlist,
+    and we will make sure to reach out if a space becomes available. Please contact
+    = link_to(@email, "mailto:#{@email}")
+    with any questions.
+
+-elsif @registration.declined?
+  %h1
+    Thank you for completing the TeacherCon Registration form
+  %p
+    If you are not able to join the program this year, please feel free to access all of our curricula and materials at
+    = link_to("code.org/educate", "https://code.org/educate") + "."
+    We hope that you’ll consider applying again in 2019.
+
+-else
+  %h1
+    Thank you for registering for TeacherCon!
+  %p
+    We’re excited you’re planning to join the Professional Learning Program!
+    You will receive more information about travel approximately six weeks
+    before TeacherCon. In the meantime, please
+    %strong
+      do not
+    book your flight, and make sure to contact
+    = link_to(@email, "mailto:#{@email}")
+    with any questions. We look forward to meeting you this summer!

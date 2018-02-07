@@ -116,7 +116,7 @@ bs:
         title: Songwriting
         desc: Students use the concept of the chorus in a song to learn about defining and calling functions.
       DiceRace:
-        title: 'Real life algorithms: Dice Race'
+        title: 'Real Life Algorithms: Dice Race'
         desc: This lesson calls out ways we use algorithms in our daily lives. As part of that, students will identify and write down the algorithm for a dice race game.
       Internet:
         title: Internet
@@ -129,7 +129,7 @@ bs:
         desc: Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
         title: Tangram Algorithms
-        desc: This lesson shows us something important about algorithms. If you keep an algorithm simple there are lots of ways to use it. If you want to make sure everyone ends up with the same thing, then your algorithm needs more detail.
+        desc: Ova lekcija nam pokazuje nešto veoma važno o algoritmima. Ako držite algoritam jednostavnim postoji mnogo načina da ga koristiš. Ako želiš da svi završe sa istom stvari, onda Vaš algoritam treba još detalja.
       EnvelopeVariables:
         title: Envelope Variables
         desc: Variables allow for a lot of freedom in computer science.  This lesson helps to explain what variables are and how we can use them in many different ways. Use this activity before (or in conjunction with) the lesson on abstraction to really hit the idea home.
@@ -168,25 +168,25 @@ bs:
         desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
+        desc: U ovoj lekciji, Vi ćete učiti o petljama!
       courseB_unplugged_MRF:
         title: Izvanmrežna aktivnost
-        desc: In this lesson, you will 'program' your friends!
+        desc: U ovoj lekciji, Vi ćete 'programirati' Vaše prijatelje!
       courseB_unplugged_loopyMRF:
         title: Izvanmrežna aktivnost
-        desc: Just like in "My Robotic Friends", you will be "programming" your friends, but this time with loops!
+        desc: Baš kao u "Mojim robotskim prijateljima", Vi ćete "programirati" Vaše prijatelje, ali ovaj put sa petljama!
       courseC_Unplugged_ScreenOutTheMean:
         title: Izvanmrežna aktivnost
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Danas ćete naučiti šta uraditi ako se neke ponaša loše na mreži.
       courseD_unplugged_digitalCitizenship:
         title: Izvanmrežna aktivnost
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Danas ćete naučiti što znači biti digitalni građanin.
       courseE_unplugged_privateInformation:
         title: 'Common Sense Education: Private and Personal Information '
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Izvanmrežna aktivnost
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Danas ćete naučiti šta uraditi ako se neke ponaša loše na mreži.
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
@@ -246,7 +246,7 @@ bs:
         desc: Students use the concept of the chorus in a song to learn about defining and calling functions.
       courseF_unplugged_tangrams:
         title: Tangram Algorithms
-        desc: This lesson shows us something important about algorithms. If you keep an algorithm simple there are lots of ways to use it. If you want to make sure everyone ends up with the same thing, then your algorithm needs more detail.
+        desc: Ova lekcija nam pokazuje nešto veoma važno o algoritmima. Ako držite algoritam jednostavnim postoji mnogo načina da ga koristiš. Ako želiš da svi završe sa istom stvari, onda Vaš algoritam treba još detalja.
       courseF_unplugged_envelopeVariables:
         title: Envelope Variables
         desc: Variables allow for a lot of freedom in computer science.  This lesson helps to explain what variables are and how we can use them in many different ways. Use this activity before (or in conjunction with) the lesson on abstraction to really hit the idea home.

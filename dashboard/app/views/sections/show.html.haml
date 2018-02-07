@@ -84,6 +84,12 @@
   - if @section.login_type == Section::LOGIN_TYPE_PICTURE
     #secret{style: 'display: none;'}
       %h4.instructions= t('signinsection.picture')
+
+      = button_tag t('signinsection.login'), id: 'login_button', style: 'display:none', class: 'btn btn-primary'
+      #pairing_checkbox{style: 'display: none'}
+        = check_box_tag :show_pairing_dialog
+        = label_tag :show_pairing_dialog, t('signinsection.pair_programming')
+
       %ul.pictures
         - @secret_pictures.each do |secret_picture|
           %li{id: secret_picture.id}
@@ -98,10 +104,11 @@
         %h4.instructions= t('signinsection.words')
         = text_field_tag :secret_words, nil, autocomplete: 'off'
         .clear
-    #pairing_checkbox{style: 'display: none'}
-      = check_box_tag :show_pairing_dialog
-      = label_tag :show_pairing_dialog, t('signinsection.pair_programming')
-    = button_tag t('signinsection.login'), id: 'login_button', style: 'display:none', class: 'btn btn-primary'
+
+        = button_tag t('signinsection.login'), id: 'login_button', style: 'display:none', class: 'btn btn-primary'
+        #pairing_checkbox{style: 'display: none'}
+          = check_box_tag :show_pairing_dialog
+          = label_tag :show_pairing_dialog, t('signinsection.pair_programming')
 
 %br/
 %br/

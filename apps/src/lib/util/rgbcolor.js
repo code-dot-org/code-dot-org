@@ -180,7 +180,7 @@ export default function (color_string) {
         {
             re: /^rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*\)$/,
             example: ['rgb(123, 234, 45)', 'rgb(255,234,245)'],
-            process: function (bits){
+            process: function (bits) {
                 return [
                     parseInt(bits[1]),
                     parseInt(bits[2]),
@@ -191,7 +191,7 @@ export default function (color_string) {
         {
           re: /^rgba\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*((?:\d+(?:\.\d+)?)|(?:\.\d+))\s*\)$/,
           example: ['rgba(123, 234, 45, .33)', 'rgba(255,234,245,1)'],
-          process: function (bits){
+          process: function (bits) {
             return [
               parseInt(bits[1]),
               parseInt(bits[2]),
@@ -203,7 +203,7 @@ export default function (color_string) {
         {
             re: /^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/,
             example: ['#00ff00', '336699'],
-            process: function (bits){
+            process: function (bits) {
                 return [
                     parseInt(bits[1], 16),
                     parseInt(bits[2], 16),
@@ -214,7 +214,7 @@ export default function (color_string) {
         {
             re: /^([0-9a-f]{1})([0-9a-f]{1})([0-9a-f]{1})$/,
             example: ['#fb0', 'f0f'],
-            process: function (bits){
+            process: function (bits) {
                 return [
                     parseInt(bits[1] + bits[1], 16),
                     parseInt(bits[2] + bits[2], 16),

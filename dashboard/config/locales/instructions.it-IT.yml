@@ -3320,7 +3320,8 @@
         funzione `level_up` (<i>sali di un livello</i>) se la variabile `player_score`
         (<i>punteggio</i>) diventa maggiore di un certo valore (per esempio: `player_score`
         > 6). Clicca su "Esegui" per giocare e arriva al livello 3 per passare al
-        prossimo esercizio.'
+        prossimo esercizio. Nota: nella funzione `level_up` viene usata la variabile
+        `enemy_speed` che significa <i>velocità del nemico</i>.'
       Course 4 Play Lab Params 2_instruction: 'Ora le bandierine sono troppo in alto
         per poterle raggiungere con la funzione `jump` (<i>salta</i>)! Dovresti associare
         alle frecce `verso l''alto` e `verso il basso` una funzione che consenta di
@@ -3357,7 +3358,7 @@
         `score_points` (<i>segna il punteggio</i>). Modifica questa funzione in modo
         che aggiunga alla variabile  `player_score` (<i>punteggio</i>) il valore di
         un nuovo parametro `points` (<i>punti</i>). La variabile `player_score` (<i>punteggio</i>)
-        deve essere incrementata ogni volta il che il cane colpisce il gatto con una
+        deve essere incrementata ogni volta che il cane colpisce il gatto con una
         fetta di torta e decrementata ogni volta che il gatto colpisce il cane con
         un sandwich. Una volta concluse queste modifiche clicca su "Esegui" per giocare.
         Quando il punteggio arriva a 6 si passa all''esercizio successivo. '
@@ -3489,9 +3490,8 @@
         quello che hai imparato finora per creare un gioco che includa un <i>ciclo
         con contatore</i>!'
       Course 4 Playlab For Loops 4b_instruction: |-
-        Questi due personaggi devono fare una gara!<br>
-        Ognuno di essi si sposta ad ogni ripetizione di una distanza pari al valore della variabile  `counter` (<i>contatore</i>) nel proprio <i>ciclo con contatore</i> (`Actor_1_counter` = <i>contatore del personaggio 1</i>). Nei loro cicli i contatori cambiano con un passo differente.<br>
-        Puoi modificare il passo di incremento di uno dei <i>cicli con contatore</i> in modo che la corsa finisca in parità?
+        Ognuno di questi due personaggi si sposta ad ogni ripetizione di una distanza pari al valore della variabile  `counter` (<i>contatore</i>) nel proprio <i>ciclo con contatore</i> (`Actor_1_counter` = <i>contatore del personaggio 1</i>). Nei loro cicli i contatori cambiano con un passo differente.<br>
+        Puoi modificare il passo di incremento di uno dei <i>cicli con contatore</i> in modo che entrambi i personaggi riescano ad arrivare alla propria bandierina?
       Course 4 Playlab For Loops 5b_instruction: Modifica il passo di questi due <i>cicli
         con contatore</i> in modo che i due personaggi si fermino nello stesso punto.
       Course 4 Playlab For Loops 6b_instruction: "In questo esercizio il <i>ciclo
@@ -3558,7 +3558,7 @@
       Course 4 SCV 3_instruction: |-
         <b>Super Sfida sulle variabili:</b> ora hai imparato tutto quello che devi sapere per risolvere un esercizio difficile come questo! Il gioco che ti proponiamo di realizzare è complicato. Ce la fai a perseverare fino a trovare la soluzione?<br>
         <hr>
-        Questo è un gioco di inseguimenti!  Muovendo il cane, tocca il gatto per ottenere 2 punti, e il pinguino per ottenere 3 punti.  Arriva <u>esattamente</u> a 10 punti per vincere! Ma fai attenzione, quando il gatto e il pinguino si toccano, perdi 1 punto.<br>
+        Questo è un gioco di inseguimenti!  Muovendo il cane, tocca il gatto per ottenere 2 punti e il pinguino per ottenere 3 punti.  Arriva <u>esattamente</u> a 10 punti per vincere! Ma fai attenzione, quando il gatto e il pinguino si toccano, perdi 1 punto.<br>
         <b>
         Aggiungi i blocchi necessari per far funzionare il gioco nel modo in cui è stato spiegato.<br>
         - Come puoi muovere il cane (personaggio 1) in tutte le direzioni utilizzando i tasti freccia?<br>
@@ -4311,6 +4311,8 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      MC Agent Freeplay_instruction: "**Tempo di giocare:** ora tocca a te! Programma
+        l'Agente per farti aiutare ad esplorare questo mondo."
       MC HOC 2016 Level 10_instruction: Ora puoi creare il tuo Minecraft! Inserisci
         le creature nello scenario del gioco e programma le loro azioni. Buon divertimento!
       MC HOC 2016 Level 2-2_instruction: Il pollo è immobile. Per farlo muovere, metti
@@ -4584,9 +4586,9 @@
         Riesci a definire il codice per la funzione `draw a square` (<i>disegna un quadrato</i>) in modo che disegni un quadrato con i lati di 50 pixel?<br>
         <br>
         Fai clic su "modifica" per iniziare. Se vuoi, puoi cambiare anche il nome e la descrizione della funzione.
-      NEW Course 4 Artist Params 10_instruction: Crea un blocco funzione `disegna
-        un esagono`con un parametro per la lunghezza dei lati e poi disegna un esagono
-        con i lati di 100 pixel.
+      NEW Course 4 Artist Params 10_instruction: Crea un blocco funzione `draw a hexagon`
+        (<i>disegna un esagono</i>) con un parametro per la lunghezza dei lati e poi
+        disegna un esagono con i lati di 100 pixel.
       NEW Course 4 Artist Params 11_instruction: Riesci a capire come disegnare questa
         figura? Modifica la funzione `draw a polygon` (<i>disegna un poligono</i>)
         per utilizzare il parametro `lenght` (<i>lati</i>).
@@ -4612,12 +4614,12 @@
         - il lato più corto della spirale esagonale è lungo 2 pixel,<br>
         - il lato più lungo per tutte le spirali è 100 pixel.
       NEW Course 4 Artist Params 15_instruction: "Tempo di giocare: qui ci sono tutte
-        le funzioni che hai scritto e anche qualcuna in più con cui puoi giocare (`draw
-        a pinwheel (<i>disegna una girandola</i>), `draw a shape` (<i>disegna un poligono</i>).
-        Disegna qualcosa di incredibile! \nProva a cambiare lo spessore della penna
-        per vedere come cambiano i tuoi disegni!"
+        le funzioni che hai scritto e anche qualcuna in più con cui puoi giocare:
+        `draw a pinwheel` (<i>disegna una girandola</i>), `draw a shape` (<i>disegna
+        un poligono</i>). Disegna qualcosa di incredibile! \nProva a cambiare lo spessore
+        della penna per vedere come cambiano i tuoi disegni!"
       NEW Course 4 Artist Params 2_instruction: |-
-        Crea da zero la funzione `disegna un triangolo` che disegna un triangolo con lati di 50 pixel.<br>
+        Crea da zero la funzione "draw triangle" (<i>disegna un triangolo</i>) che disegna un triangolo con lati di 50 pixel.<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-14#VIDEO" target="_blank">Video doppiato in italiano</a>
       NEW Course 4 Artist Params 3_instruction: |
         Ora usa la funzione che hai creato nel precedente esercizio (`draw a triangle`, <i>disegna un triangolo</i>) per disegnare 5 triangoli di seguito.<br>
@@ -4726,8 +4728,9 @@
         ciclo for che hai appena creato.  Puoi capire quali numeri si devono raddoppiare
         per risolvere questo puzzle? Perché funziona?
       NEW Course 4 Play Lab Params 11_instruction: 'Tempo di giocare: divertiti a
-        creare il gioco che preferisci. Ecco <a href="http://programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-15">alcune
-        idee</a>. Puoi usare tutti i blocchi che trovi nella cassetta degli attrezzi.'
+        creare il gioco che preferisci. Ecco <a href="http://programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-15"
+        target="_blank">alcune idee</a>. Puoi usare tutti i blocchi che trovi nella
+        cassetta degli attrezzi.'
       NEW Course 4 Play Lab Params 5 5_instruction: Proviamo di nuovo, ma con meno
         aiuti. Cosa devi modificare questa volta per far fare la ricognizione ai personaggi?
       NEW Course 4 Play Lab Vars 4 5_instruction: Cosa pensi che faccia questo codice?
@@ -7367,6 +7370,10 @@
         ma è buio. Posiziona almeno due torce ed estrai almeno due blocchi di carbone.
       Unicorn Tag_instruction: Esamina questo progetto. Riesci a capire come è stato
         realizzato?
+      Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
+      Valentine_playlab_01_instruction: "Program Kiki (Actor 1) to move left and\nright
+        when the left and right arrows are pressed. When Kiki is clicked, she\nshould
+        throw hearts towards her friends. "
       Vigenere_instruction: Test
       WhileAdventure_instruction: |-
         Our adventurer wants to collect coins. Can you
@@ -7855,14 +7862,14 @@
         Play with the level and draw something fun.
       courseA_artist_loops10_instruction: Aiutami a posare delle pietre per non cadere
         in acqua!
-      courseA_artist_loops11_instruction: Aiutami a creare degli scalini, voglio vedere
+      courseA_artist_loops11_instruction: Aiutami a creare degli scalini per vedere
         la barca salpare.
       courseA_artist_loops12_instruction: L'artista ha visto qualcosa di buffo in
         lontananza. Disegna ciò che pensi abbia visto.
       courseA_artist_loops2_instruction: |-
         Help the artist draw this line two times
         forward.
-      courseA_artist_loops3_instruction: Disegna una linea in avanti cinque volte.
+      courseA_artist_loops3_instruction: Disegna cinque volte una linea in avanti.
       courseA_artist_loops4_instruction: |-
         Now, use a `repeat` loop to draw this line
         five times!
@@ -7877,7 +7884,7 @@
         Use the `repeat` loop to add waves
         to the water.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
-      courseA_artist_loops9_instruction: 'Sfida: Ripara le scale.'
+      courseA_artist_loops9_instruction: 'Sfida: ripara la scaletta.'
       courseA_artist_loops_challenge2_instruction: '"Puoi aiutarmi a costruire due
         casette per gli uccelli?"'
       courseA_artist_loops_challenge2a_instruction: |-
@@ -7886,14 +7893,16 @@
       courseA_artist_loops_challenge3_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
-      courseA_collector_loops1_instruction: Muovi Laurel raccogliendo più tesori che
-        puoi!
+      courseA_collector_loops1_instruction: |-
+        Muovi Laurel raccogliendo più tesori che puoi!\r
+        (Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante "Termina")
       courseA_collector_loops10_instruction: Aiuta Laurel a raccogliere tutti i tesori
         lungo questo percorso.
       courseA_collector_loops11_instruction: Aiuta Laurel a raccogliere tutti i tesori
         da questa grotta.
-      courseA_collector_loops12_instruction: Evviva! Raccogli più tesori che puoi!
-        (Non è necessario raccoglierli tutti.)
+      courseA_collector_loops12_instruction: |-
+        Evviva! Raccogli più tesori che puoi!\r
+        (Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante "Termina")
       courseA_collector_loops2_instruction: Raccogli tutte e tre le gemme per completare
         l'esercizio.
       courseA_collector_loops4_instruction: Correggi il percorso di Laurel per raccogliere
@@ -7952,8 +7961,9 @@
       courseA_maze_seq12_instruction: 'Prendi quel maialino! '
       courseA_maze_seq13_instruction: Prendi quel maialino in qualsiasi modo!
       courseA_maze_seq2_instruction: Modifica il codice per farmi arrivare al maialino!
-      courseA_maze_seq3_instruction: Fix the code to get the bird to the pig!
-      courseA_maze_seq4_instruction: REMOVE a block to get the bird to the pig!
+      courseA_maze_seq3_instruction: Modifica il codice per farmi arrivare al maialino!
+      courseA_maze_seq4_instruction: ELIMINA un blocco per far arrivare l'uccellino
+        fino al maialino!
       courseA_maze_seq4a_instruction: |-
         Get the bird to the pig using the fewest possible
         blocks.
@@ -7980,8 +7990,9 @@
       courseA_playLab_events2_instruction: |-
         Jorge the Dog wants to say "Hi there."  Can
         you help him?
-      courseA_playLab_events3_instruction: Unisci il blocco "sposta a sinistra" al
-        blocco "freccia a sinistra" che si trova già nell'area di lavoro.
+      courseA_playLab_events3_instruction: Aggancia il blocco `sposta il cane a sinistra`
+        al blocco verde `quando si preme la freccia sinistra` che si trova già nell'area
+        di lavoro.
       courseA_playLab_events4_instruction: |-
         Now, get Jorge to move right when the
         `right` button is clicked.
@@ -8045,8 +8056,9 @@
         you move her around and get treasure?
       courseB_collector_loops10_instruction: Aiuta Laurel a raccogliere tutti i tesori
         da questa grotta.
-      courseB_collector_loops11_instruction: Evviva! Raccogli più tesori che puoi!
-        (Non è necessario raccoglierli tutti.)
+      courseB_collector_loops11_instruction: |-
+        Evviva! Raccogli più tesori che puoi!\r
+        (Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante "Termina")
       courseB_collector_loops2_instruction: |-
         Collect all four piles to pass this
         level.
@@ -8433,8 +8445,8 @@
         Collect all of the lettuce.
         Avoid the trees and fields!
       courseC_harvester_loops_forVid_instruction: |-
-        Collect all of the corn and all
-        of the pumpkins.
+        Collect all of the corn, all of
+        the lettuce, and all of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -11753,7 +11765,7 @@
         `score_points` (<i>segna il punteggio</i>). Modifica questa funzione in modo
         che aggiunga alla variabile  `player_score` (<i>punteggio</i>) il valore di
         un nuovo parametro `points` (<i>punti</i>). La variabile `player_score` (<i>punteggio</i>)
-        deve essere incrementata ogni volta il che il cane colpisce il gatto con una
+        deve essere incrementata ogni volta che il cane colpisce il gatto con una
         fetta di torta e decrementata ogni volta che il gatto colpisce il cane con
         un sandwich. Una volta concluse queste modifiche clicca su "Esegui" per giocare.
         Quando il punteggio arriva a 6 si passa all''esercizio successivo. '
@@ -11762,7 +11774,8 @@
         funzione `level_up` (<i>sali di un livello</i>) se la variabile `player_score`
         (<i>punteggio</i>) diventa maggiore di un certo valore (per esempio: `player_score`
         > 6). Clicca su "Esegui" per giocare e arriva al livello 3 per passare al
-        prossimo esercizio.'
+        prossimo esercizio. Nota: nella funzione `level_up` viene usata la variabile
+        `enemy_speed` che significa <i>velocità del nemico</i>.'
       grade5_playlab_variables9_instruction: In questo esercizio c'è una funzione
         chiamata `patrol` (<i>pattuglia</i>) in cui devi inserire il codice che serve
         per far muovere il gatto prima in su e poi in giù di 400 pixel.

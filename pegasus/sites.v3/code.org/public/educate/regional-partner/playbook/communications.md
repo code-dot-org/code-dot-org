@@ -8,6 +8,7 @@ nav: regional_partner_playbook_nav
 
 ## Table of contents
 
+- [Announcements](#announce)
 - [Weekly Newsletter Archive](#archive)
 - [Regional Partner Advisory Committee Meeting Notes](#adcom)
 - [Communication to teachers from Code.org](#code.org)
@@ -15,6 +16,24 @@ nav: regional_partner_playbook_nav
 - [Tips for writing an awesome email](#tips)
 - [Branding guidelines](#branding)
 
+________________
+<a id="announce"></a>
+
+## Announcements
+
+#### Customized Email to Teachers in Your Region
+Send Teachers in your Region a Customized Recruitment Email from Code.org, Due **Monday, February 12**. Code.org would like to give all partners the opportunity to customize a Code.org recruitment message to be emailed to teachers in their state (using Code.org’s email list) on February 27, 2018. 
+
+- The template and instructions are [here](https://docs.google.com/document/d/1NWzDRdAkFsegmd0bNpcsAp5zy22ko9z5ZRaeujTmTgw/copy). Templates must be returned to your regional manager by Monday, February 12 in order to be considered.  
+- This is not required. Teachers will still receive a standard recruitment message even if partners don’t fill out the template. 
+
+<br>
+
+
+#### Promoting Local Informational Events
+Provide information about local in-person or virtual events you are doing for teachers in [this form](https://docs.google.com/forms/d/e/1FAIpQLSeJygfl_A_Nm4T4IL5mzx_SF2DXKLJ-S4XgyHgvCEmrOUtp9A/viewform) for possible inclusion on the Code.org website. If you have multiple events you would like us to consider, please complete the form once for each event. Questions? Please email Nimisha.
+
+<br/>
 ________________
 <a id="archive"></a>
 <br/>
@@ -24,6 +43,7 @@ ________________
 Each week we send out an email with important action items, new collateral, CS Education news, etc. View the [Group 1 weekly emails](https://docs.google.com/document/d/1suhDTctEfeGnXY4shwWqBmb8dIXZ603RkVfqPuVPbnU/edit?usp=sharing), [Group 2 weekly emails](https://docs.google.com/document/d/1Z1gXtCTU5Veih9gAxLw4VsAHeSC4HA_A70O1VWH_ZZI/edit?usp=sharing) and the [Group 3 weekly emails](https://docs.google.com/document/d/1DThTQqcD6Rvvl0KTeH3sRIt-sKkDGlPRzixbe55q4gc/edit).
 
 <br/>
+
 ________________
 <a id="adcom"></a>
 <br/>

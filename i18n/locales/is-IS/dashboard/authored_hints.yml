@@ -922,6 +922,8 @@ is:
         K2.0_sequence_FP_a: If the path you need is unclear, use your finger to trace your way from the bird to the pig.
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make sure blocks are connected under `when run`.
+      MC Agent Freeplay_authored_hint:
+        MC_HOC_2017_13_Cole_a: Prófaðu að láta Umbann byggja brýr svo að Alex eða Steve geti gengið um utan við jaðar kortsins.
       MC_HOC_2017_01_Cole_authored_hint:
         MC_HOC_2017_01_Cole_a: Notaðu örvarlyklana til að beina leikmanninum inn í húsið. Endaðu á appelsínugula reitnum til að sigra.
       MC_HOC_2017_01_RETRY_authored_hint:
@@ -1120,6 +1122,7 @@ is:
         mc_9_a: Snýrðu í rétta átt? Kubburinn `eyða blokk` grefur út blokkina fyrir framan þig.
         mc_9_b: Svörtu blettirnir á veggnum eru kol! Notaðu `eyða blokk` til að grafa út kolin.
         mc_9_c: Notaðu `setja kyndil` til að setja kyndil á reitinn þar sem þú stendur.
+      Valentine_artist_01_authored_hint: [ ]
       aE1_authored_hint: [ ]
       aE2_authored_hint:
         aE2_a: Taktu eftir að þar sem servíetturnar eru 20 díla langar, þarft þú að hoppa 20 díla áður en þú byrjar á næstu lykkju.
@@ -3833,9 +3836,9 @@ is:
       courseC_starWars_loops2_authored_hint:
         courseC_starWars_loops2_a: Þú getur endurtekið kóða með því að draga fram `endurtaka` lykkju og setja kóðann í hana.
       courseC_starWars_loops4_authored_hint:
+        courseC_starWars_loops4_c: Ef þú smellir á litlu píluna við hliðina á "vinstri" á `snúa til` kubbnum, getur þú breytt því í "hægri".
         courseC_starWars_loops4_a: Notaðu tvo `endurtaka` kubba.
         courseC_starWars_loops4_b: 'Í hvorri `endurtaka` lykkju verður bara ein skipun: `færa áfram`.'
-        courseC_starWars_loops4_c: Ef þú smellir á litlu píluna við hliðina á "vinstri" á `snúa til` kubbnum, getur þú breytt því í "hægri".
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: Til að færast niður þarft þú að snúa og svo fara áfram.
         courseC_starWars_loops5_a: Besta lausnin notar eina `færa niður`skipun og eina lykkju með annarri `færa` skipun.
@@ -4855,7 +4858,6 @@ is:
       courseD_playLab_cond3_authored_hint:
         courseD_playLab_cond3_a: You will need to add two blocks to your `repeat forever` loop.  One will choose a random emotion for the dragon (actor 2) and the other will wait 1 second before going through the loop again.
       courseD_playLab_cond3a_authored_hint:
-        courseD_playLab_cond3_b: 'Hvað heldur þú að þetta geri: `láta allar grímuklæddar ninjur elta leikmann`?'
         courseD_playLab_cond3_c: "- `Ef` drekinn er glaður \n   - `skora stig\n   - `skora stig`  \n   \n   \n \n- `annars` `skora stig`"
       courseD_playLab_cond3b_authored_hint:
         courseD_playLab_cond3b_a: Þú verður að bæta kubbum í `endurtaka endalaust` lykkjuna til að láta drekann halda áfram að hreyfast upp og niður
@@ -6189,7 +6191,6 @@ is:
           What do you have to do to the counter at each flower to equal the amount of nectar you need to collect?
         courseF_bee_for9_c: It looks like you will need to turn the bee at the beginning of each loop iteration if you want to solve the puzzle.
         courseF_bee_for9_b: "**Remember:** If your loop is counting up, the increment is added to your `counter` variable each time through."
-        courseF_bee_for9_d: Þetta er mjög líkt tröppumynstrinu frá því áður, en í þetta sinn á að telja niður!
       courseF_bee_for_challenge1_authored_hint: [ ]
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: "Skoðaðu þennan valkost varðandi hreyfingu:   \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"

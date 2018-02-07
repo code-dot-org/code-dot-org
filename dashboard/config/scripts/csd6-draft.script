@@ -1,4 +1,3 @@
-hidden false
 login_required true
 hideable_stages true
 student_detail_progress_view true
@@ -213,6 +212,9 @@ level 'CSD U6 params starchaser 1', progression: 'Star Chaser'
 level 'CSD U6 params starchaser 2', progression: 'Star Chaser'
 level 'CSD U6 params starchaser 3', progression: 'Star Chaser'
 level 'CSD U6 params starchaser 4', progression: 'Star Chaser'
+level 'CSD U6 params starchaser 5', progression: 'Star Chaser'
+bonus 'CSD U6 params starchaser challenge 1', progression: 'Star Chaser'
+bonus 'CSD U6 params starchaser challenge 2', progression: 'Star Chaser'
 
 stage 'Circuits and Physical Prototypes', flex_category: 'csd6_2'
 named_level 'CSD U6L15 TFMD'

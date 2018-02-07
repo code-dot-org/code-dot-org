@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import DatePicker from './date_picker';
+import {action} from '@storybook/addon-actions';
 
 export default storybook => {
   return storybook
@@ -18,7 +19,7 @@ export default storybook => {
       () => (
         <DatePicker
           date={moment()}
-          onChange={storybook.action('changed')}
+          onChange={action('changed')}
         />
       )
     )
@@ -27,7 +28,7 @@ export default storybook => {
       () => (
         <DatePicker
           date={moment()}
-          onChange={storybook.action('changed')}
+          onChange={action('changed')}
           clearable
         />
       )

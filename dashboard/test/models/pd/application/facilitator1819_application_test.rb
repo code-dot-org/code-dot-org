@@ -210,5 +210,41 @@ module Pd::Application
 
       assert_not_equal first_enrollment.id, application.auto_assigned_fit_enrollment_id
     end
+
+    test 'assign_default_workshop! saves the default workshop' do
+      application = create :pd_facilitator1819_application
+      workshop = create :pd_workshop
+      application.expects(:find_default_workshop).returns(workshop)
+
+      application.assign_default_workshop!
+      assert_equal workshop.id, application.reload.pd_workshop_id
+    end
+
+    test 'assign_default_workshop! does nothing when a workshop is already assigned' do
+      workshop = create :pd_workshop
+      application = create :pd_facilitator1819_application, pd_workshop_id: workshop.id
+      application.expects(:find_default_workshop).never
+
+      application.assign_default_workshop!
+      assert_equal workshop.id, application.reload.pd_workshop_id
+    end
+
+    test 'assign_default_fit_workshop! saves the default fit workshop' do
+      application = create :pd_facilitator1819_application
+      workshop = create :pd_workshop
+      application.expects(:find_default_fit_workshop).returns(workshop)
+
+      application.assign_default_fit_workshop!
+      assert_equal workshop.id, application.reload.fit_workshop_id
+    end
+
+    test 'assign_default_fit_workshop! does nothing when a fit workshop is already assigned' do
+      workshop = create :pd_workshop
+      application = create :pd_facilitator1819_application, fit_workshop_id: workshop.id
+      application.expects(:find_default_fit_workshop).never
+
+      application.assign_default_fit_workshop!
+      assert_equal workshop.id, application.reload.fit_workshop_id
+    end
   end
 end

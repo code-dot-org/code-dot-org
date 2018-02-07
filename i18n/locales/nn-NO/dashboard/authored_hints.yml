@@ -2660,8 +2660,8 @@ nn:
           </block>
           </xml>
       Course 4 SCV 2_authored_hint:
-        Course_4_SCV_2_a: "The completed image is made up of 10 of these \"flowers\":  \n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)\n        \n...which are made up of 10 of these decagons:  \n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
-        Course_4_SCV_2_b: 'This design uses nested loops (three deep). All loops run `sides` times. '
+        Course_4_SCV_2_a: "Det ferdige bildet er laget av 10 av disse \"blomstene\":  \n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)\n        \n...som er laget av 10 av disse tikantene:  \n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
+        Course_4_SCV_2_b: 'Dette designet bruker løkke-i-løkke (tre i dybden). Alle løkkene kjører "side"-ganger. '
         Course_4_SCV_2_c: Kunstneren svinger til venstre når for hver decagon han lager, men svinger til høyre i begge de andre løkkene.
         Course_4_SCV_2_d: For å forhindre at alle dine 10 blomsterkronblader forsvinner inn i det samme stedet, pass på å hoppefremover 'lengder'/'til side' før du kan snu 360/'til side'-grader som en del av din ytterste løkke.
         Course_4_SCV_2_e: |-
@@ -2871,7 +2871,7 @@ nn:
       Course 4 SCV 4_authored_hint:
         Course_4_SCV_4_a: Tre variabler vil hjelpe deg her. En for nektar-enheten, en for honning-enheten og en for hvor langt bien skal bevege seg for hver gjentakelse.
         Course_4_SCV_4_b: 'Det vil være svært nyttig å bruke tre løkker inne i hovedløkken din. En for å gå fremover, en for å samle nektar og den siste for å lage honning. '
-        Course_4_SCV_4_c: "Take a look at this option for movement:  \n\n![](https://images.code.org/78f8fb83da67c5b80126555a362b8b20-image-1469641782259.png)"
+        Course_4_SCV_4_c: "Ta en titt på dette alternativet for bevegelse:  \n\n![](https://images.code.org/78f8fb83da67c5b80126555a362b8b20-image-1469641782259.png)"
         Course_4_SCV_4_d: |-
           **Solution:**
           
@@ -3144,9 +3144,9 @@ nn:
           
           ![](https://images.code.org/9e30d3a87186cefe730984feee195806-image-1469642178866.png)
         Course_4_SCV_6_b: 'Du vil ha nytte av å lage 8 variabler: red1, green1, blue1, red2, green2, blue2, lengde og sider.'
-        Course_4_SCV_6_c: Each of the shape's 5 sides is broken up into pieces of `length`/`sides` where the zig is teal (rgb = 0,175,200) and the zag is purple (rgb = 100, 50, 150).
+        Course_4_SCV_6_c: Hver av figurens 5 sider er delt opp i biter av 'lengde' / 'sider' der zig er blågrønn (rgb = 0,175,200) og zag er lilla (rgb = 100, 50, 150).
         Course_4_SCV_6_d: 'To zig, turn left by `360`/`sides`.  To zag, turn right by `360`/`sides`. '
-        Course_4_SCV_6_e: 'The rest of the program is very standard for making a full 360 degree rotation from a shape, except that we are overlapping the shapes by half, so we have to turn right by `180`/`sides`, which means that we need twice as many of them as usual (`sides`*`2` repetitions). '
+        Course_4_SCV_6_e: 'Resten av programmet er veldig standard for å lage en full 360 graders rotasjon fra en form, bortsett fra at vi overlapper formene med halvering, slik at vi må snu mot høyre med "180"/"side", noe som betyr at vi trenger dobbelt så mange av dem som vanlig ("sider" * "2" repetisjoner). '
         Course_4_SCV_6_f: |-
           **Solution:**
           
@@ -3513,6 +3513,8 @@ nn:
         K2.0_sequence_FP_a: If the path you need is unclear, use your finger to trace your way from the bird to the pig.
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make sure blocks are connected under `when run`.
+      MC Agent Freeplay_authored_hint:
+        MC_HOC_2017_13_Cole_a: Prøv å få agenten til å byggje nokre spor til minevogna slik at du kan utforske verda!
       MC_HOC_2017_01_Cole_authored_hint:
         MC_HOC_2017_01_Cole_a: Bruk piltastane til å leie spelaren inn i huset. End opp på den oransje firkanten for å vinne.
       MC_HOC_2017_01_RETRY_authored_hint:
@@ -3604,9 +3606,9 @@ nn:
         NEW_Course_4_Artist_Functions_9_a: Prøv å kjøre koden før du legger til noen blokker.   Hva gjør at tegningen ser litt rar ut?
         NEW_Course_4_Artist_Functions_9_b: If you can't quite put your finger on what's going wrong, try slowing down the artist's by moving the slider to the left.
       NEW Course 4 Artist Params 11_authored_hint:
-        NEW_Course_4_Artist_Params_11_a: There is more than one number that needs to be replaced by a variable inside the function.
+        NEW_Course_4_Artist_Params_11_a: Det er mer enn et tall som må erstattes med en variabel inne i funksjonen.
       NEW Course 4 Artist Params 13_authored_hint:
-        NEW_Course_4_Artist_Params_13_a: 'You will need to divide the *perimeter* by the number of sides in order to keep the shapes the same size overall. '
+        NEW_Course_4_Artist_Params_13_a: 'Du må dele *omkretsen* med antall sider for å kunne holde figurene samlet i samme størrelse. '
       NEW Course 4 Artist Params 14_authored_hint:
         NEW_Course_4_Artist_Params_14_a: It's okay to run the program a few times to figure out how the function works with different parameters.
       NEW Course 4 Artist Params inspire_authored_hint:
@@ -3753,28 +3755,28 @@ nn:
       Overworld House Frame Chosen_authored_hint:
         mc_6_a: Click the arrow on the `place` block to choose what you want to place.
         mc_6_b: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
-        mc_6_c: You can put more than one block inside of a `repeat` loop.
+        mc_6_c: Du kan sette flere blokker inne i en 'gjenta'-løkke.
       Overworld Move to Sheep_authored_hint:
         mc_1_a: |
-          The `move forward` block is at the top of the toolbox.
+          'Gå fremover'-blokken er på toppen av verktøykassen.
         mc_1_b: |
-          Make sure both `move forward` blocks are snapped to the `when run` block.
+          Pass på at begge 'gå-fremover'-blokkene er festet til 'når-den-kjører'-blokken.
       Overworld Place Wall_authored_hint:
         mc_5_a: Use the `place` block first, and then the `move` block.
-        mc_5_b: Make sure both blocks are inside of the `repeat` loop to run the code more than once.
+        mc_5_b: Pass på at begge blokkene er på innsiden av 'gjenta'-løkken for å kunne kjøre koden mer enn en gang.
         mc_5_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
       Overworld Plant Crops_authored_hint:
         mc_7_a: Use the `plant crop` block to plant a crop in the space where you are standing.
         mc_7_b: Both stripes of dark brown land by the water need to be filled with crops.
-        mc_7_c: You can put more than one block inside of a `repeat` loop.
+        mc_7_c: Du kan sette flere blokker inne i en 'gjenta'-løkke.
       Overworld Powered Minecart_authored_hint:
         mc_13_a: Use `place rail` to lay rail on the square you are standing in.
-        mc_13_b: Use `repeat` loops to make your code shorter.
+        mc_13_b: Bruk 'gjenta'-løkken for å lage koden din kortere.
       Overworld Shear Sheep_authored_hint:
         mc_3_a: |
           The `shear` block gets the sheep in front of you. Are you facing the sheep?
         mc_3_b: |
-          If you need to change the way you are facing, use a `turn` block.
+          Dersom du trenger å forandre på hvilken vei du står, bruk en 'snu'-blokk.
         mc_3_c: |
           Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
       Pattern Bee 1_authored_hint:
@@ -3806,6 +3808,7 @@ nn:
         mc_9_a: Are you facing the right way? The `destroy block` mines the block in front of you.
         mc_9_b: The black specks in the wall are coal! Use `destroy block` on these to mine the coal.
         mc_9_c: Use `place torch` to put a torch in the space where you are standing.
+      Valentine_artist_01_authored_hint: [ ]
       aE1_authored_hint: [ ]
       aE2_authored_hint:
         aE2_a: Notice that since the napkins are 20 pixels long, you'll need to jump 20 pixels before you start your next loop.
@@ -6519,22 +6522,22 @@ nn:
         courseC_starWars_loops1_c: You will want to `move forward` five times to solve this puzzle.
       courseC_starWars_loops10_authored_hint:
         courseC_starWars_loops10_a: Doesn't this pattern look like a giant set of stair steps? See if you can use what you learned from previous puzzles to get all of the turns.
-        courseC_starWars_loops10_b: "If you want to use less code, you can put one `repeat loop` inside of another!   \nThis is called a **nested loop**."
+        courseC_starWars_loops10_b: "If you want to use less code, you can put one `repeat` loop inside of another!   \nThis is called a **nested loop**."
         courseC_starWars_loops10_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
       courseC_starWars_loops10_predict2_authored_hint: [ ]
       courseC_starWars_loops11_authored_hint: [ ]
       courseC_starWars_loops2_authored_hint:
         courseC_starWars_loops2_a: To repeat code, drag out a `repeat` loop, then put the block you want inside of it.
       courseC_starWars_loops4_authored_hint:
+        courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the turn block will let you change it to  "right".
         courseC_starWars_loops4_a: Use two `repeat` blocks.
         courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command inside of it: `move forward`.'
-        courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the turn block will let you change it to  "right".
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: To move down, you have to turn and then move forward.
         courseC_starWars_loops5_a: The best solution uses a turn, then a single `move forward`, another turn, then a loop.
       courseC_starWars_loops6_authored_hint:
         courseC_starWars_loops6_a: Try writing all of the moves down on a piece of paper and looking for a pattern.
-        courseC_starWars_loops6_b: "If you want to use less code, you can put one `repeat loop` inside of another!   \nThis is called a **nested loop**."
+        courseC_starWars_loops6_b: "If you want to use less code, you can put one `repeat` loop inside of another!   \nThis is called a **nested loop**."
       courseC_starWars_loops7_authored_hint:
         courseC_starWars_loops7_a: This pattern looks harder than it is! Start with a simple stair step. Does that cover all of the scrap metal?
         courseC_starWars_loops7_b: If you are having trouble with this puzzle, try writing all of the moves on a piece of paper and looking for a pattern.
@@ -6817,7 +6820,7 @@ nn:
       courseD_bee_conditionals6_authored_hint:
         courseD_bee_conditionals6_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for honeycomb beneath each cloud.
-        courseD_bee_conditionals6_b: In this case, you do not need to check for nectar under the clouds.
+        courseD_bee_conditionals6_b: In this case, you do not need to check for flowers under the clouds.
         courseD_bee_conditionals6_c: Is there a loop you can use to make your code simpler?
         courseD_bee_conditionals6_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals7_authored_hint:
@@ -7552,7 +7555,6 @@ nn:
       courseD_playLab_cond3_authored_hint:
         courseD_playLab_cond3_a: You will need to add two blocks to your `repeat forever` loop.  One will choose a random emotion for the dragon (actor 2) and the other will wait 1 second before going through the loop again.
       courseD_playLab_cond3a_authored_hint:
-        courseD_playLab_cond3_b: What do you think `set every masked ninja to chase actor` does?
         courseD_playLab_cond3_c: "- `If` the dragon is happy \n   - `score point`\n   - `score point`  \n   \n   \n \n- `Else` `score point`"
       courseD_playLab_cond3b_authored_hint:
         courseD_playLab_cond3b_a: Du må legge til blokker i `gjenta for alltid`-løkken din for å få dragen til å fortsette å bevege seg opp og ned
@@ -8886,7 +8888,6 @@ nn:
           What do you have to do to the counter at each flower to equal the amount of nectar you need to collect?
         courseF_bee_for9_c: It looks like you will need to turn the bee at the beginning of each loop iteration if you want to solve the puzzle.
         courseF_bee_for9_b: "**Remember:** If your loop is counting up, the increment is added to your `counter` variable each time through."
-        courseF_bee_for9_d: This is very similar to the other stair step puzzle earlier in the stage, but this time you’re counting down!
       courseF_bee_for_challenge1_authored_hint: [ ]
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: "Ta ein kikk på dette alternativet for røyrsle: \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
