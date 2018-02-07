@@ -8,8 +8,11 @@ social:
 %link{href: "/css/highlights-homepage.css", rel: "stylesheet", id: "highlight-styles"}
 
 -facebook = {:u=>"http://#{request.host}/us"}
--# We set the DCDO default to "soon-hoc" here because we can't change the DCDO flag on the test machine, but ui tests rely on hourofcode.com being in a hoc_mode consistent with production. NOTE: Erin B. needs to update this default when we flip to "actual-hoc".
--hoc_mode = DCDO.get("hoc_mode", "soon-hoc")
+
+-# We set the DCDO default to CDO.default_hoc_mode here because we can't change the DCDO flag on the test machine, but
+-# ui tests rely on hourofcode.com being in a hoc_mode consistent with production. This default needs to be updated
+-# whenever we change the hoc_mode, to make sure we're still testing what we'll see on production.
+-hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
 
 :ruby
   HIGHLIGHTS_CONSTANTS = [
