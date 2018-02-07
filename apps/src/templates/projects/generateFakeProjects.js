@@ -80,7 +80,8 @@ export const stubFakeUnfeaturedProjectData = [
     type: 'playlab',
     channel: 'abcd4',
     publishedAt: '2015-02-04T23:59:59.999-08:00',
-    featuredAt: '2016-12-31T23:59:59.999-08:00',    unfeaturedAt: '2017-12-31T23:59:59.999-08:00',
+    featuredAt: '2016-12-31T23:59:59.999-08:00',
+    unfeaturedAt: '2017-12-31T23:59:59.999-08:00',
     featured: false
   },
 ];

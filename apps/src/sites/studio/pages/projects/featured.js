@@ -7,12 +7,12 @@ $(document).ready(function () {
   const script = document.querySelector('script[data-featuredprojects]');
   const featuredProjectsData = JSON.parse(script.dataset.featuredprojects);
   const currentFeaturedProjects = featuredProjectsData.currently_featured_projects;
-  const archiveUnfeaturedProjects = featuredProjectsData.archive_unfeatured_projects;
+  const archivedUnfeaturedProjects = featuredProjectsData.archived_unfeatured_projects;
 
   ReactDOM.render(
     <FeaturedProjects
       currentFeaturedProjects={currentFeaturedProjects}
-      archiveUnfeaturedProjects={archiveUnfeaturedProjects}
+      archivedUnfeaturedProjects={archivedUnfeaturedProjects}
     />,
     document.getElementById('featured-projects-container')
   );
