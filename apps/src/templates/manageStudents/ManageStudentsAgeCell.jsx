@@ -6,9 +6,9 @@ import {editStudent} from './manageStudentsRedux';
 class ManageStudentAgeCell extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
-    age: PropTypes.number,
+    age: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     isEditing: PropTypes.bool,
-    editedValue: PropTypes.number,
+    editedValue: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     // Provided by redux
     editStudent: PropTypes.func.isRequired,
   };
