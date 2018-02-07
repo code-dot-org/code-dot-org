@@ -66,7 +66,7 @@ module Pd::Application
       teacher_application = build :pd_teacher1819_application, response_scores: {
         free_lunch_percent: '5',
         underrepresented_minority_percent: '5',
-        able_to_attend_single: 'Yes',
+        able_to_attend_single: Teacher1819ApplicationConstants::TEXT_FIELDS[:able_to_attend_single],
         csp_which_grades: nil
       }.to_json
 

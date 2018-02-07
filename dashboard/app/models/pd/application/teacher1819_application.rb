@@ -559,7 +559,7 @@ module Pd::Application
       }
 
       if responses[:able_to_attend_single]
-        scores[:able_to_attend_single] = yes_no_response_to_yes_no_score(responses[:able_to_attend_single])
+        scores[:able_to_attend_single] = able_attend_single_to_yes_no_score(responses[:able_to_attend_single])
       elsif responses[:able_to_attend_multiple]
         scores[:able_to_attend_multiple] = able_attend_multiple_to_yes_no_score(responses[:able_to_attend_multiple])
       end
@@ -788,10 +788,20 @@ module Pd::Application
 
     def able_attend_multiple_to_yes_no_score(response)
       response = response.join
-      if response.start_with?(TEXT_FIELDS[:no_explain])
+      if response.start_with?(TEXT_FIELDS[:no_explain]) || response == NO
         NO
-      elsif response && !response.include?(TEXT_FIELDS[:no_explain])
+      elsif (response && !response.include?(TEXT_FIELDS[:no_explain])) || response == YES
         YES
+      else
+        nil
+      end
+    end
+
+    def able_attend_single_to_yes_no_score(response)
+      if [TEXT_FIELDS[:able_to_attend_single], YES].include? response
+        YES
+      elsif (response && !response.include?(TEXT_FIELDS[:unable_to_attend])) || response == NO
+        NO
       else
         nil
       end
