@@ -106,10 +106,16 @@ Scenario: Basic teacher application submission
   Then I wait until element "h1" contains text "2018-2019 Code.org Principal Approval Form"
   Then I press the first "input[name='doYouApprove'][value='Yes']" element
 
-  Then I press keys "Albertville High School" for element "#school input"
+  And I press keys "nonexistent" for element "#school input"
   Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
-  Then I press keys ":arrow_down"
-  Then I press enter key
+  And I press ".VirtualizedSelectOption:contains('Other school not listed below')" using jQuery
+  Then I wait until element "input#schoolName" is visible
+  And I press keys "Code.org" for element "input#schoolName"
+  And I press keys "1501 4th Ave" for element "input#schoolAddress"
+  And I press keys "Seattle" for element "input#schoolCity"
+  And I select the "Washington" option in dropdown "schoolState"
+  And I press keys "98101" for element "input#schoolZipCode"
+  And I press the first "input[name='schoolType'][value='Other']" element
 
   Then I press keys "1000" for element "#totalStudentEnrollment"
   Then I press keys "10" for element "#freeLunchPercent"
