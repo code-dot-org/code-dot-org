@@ -39,12 +39,14 @@ self.log_resource_filter.push %w(FrontendLaunchConfig ASGCount)
 
 # Don't provision daemon where manually-provisioned daemon instances already exist.
 # TODO migrate stacks to cloudformation-provisioned instances.
-self.daemon = true unless %w(
+self.daemon = 'Daemon' unless %w(
   autoscale-prod
   test
   staging
   levelbuilder
 ).include? stack_name
+# Use alternate legacy EC2 instance resource name for standalone-adhoc stack.
+self.daemon = 'WebServer' if rack_env?(:adhoc) && !frontends
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -148,7 +150,7 @@ Resources:
         Enabled: true
         Timeout: 300
 <%   if !frontends && daemon -%>
-      Instances: [!Ref Daemon]
+      Instances: [!Ref <%=daemon%>]
 <%   end -%>
 <% end -%>
 
@@ -389,7 +391,7 @@ Resources:
             HostedZoneId: !GetAtt [LoadBalancer, CanonicalHostedZoneNameID]
 <%   else -%>
           TTL: 60
-          ResourceRecords: [!GetAtt Daemon.PublicIp]
+          ResourceRecords: [!GetAtt <%=daemon%>.PublicIp]
 <%   end -%>
 <%   if cdn_enabled -%>
   <%=app%>CDN:
@@ -425,7 +427,7 @@ Resources:
             DNSName: !GetAtt [LoadBalancer, CanonicalHostedZoneName]
 <%   else -%>
           TTL: 60
-          ResourceRecords: [!GetAtt Daemon.PublicIp]
+          ResourceRecords: [!GetAtt <%=daemon%>.PublicIp]
 <%   end -%>
 <% end -%>
 <% if frontends -%>
@@ -485,7 +487,7 @@ Resources:
       QueueName: !Sub "activities_dead-${AWS::StackName}"
 <% end -%>
 <% if daemon -%>
-  Daemon:
+  <%=daemon%>:
     Type: AWS::EC2::Instance
     CreationPolicy:
       ResourceSignal:
@@ -505,7 +507,7 @@ Resources:
             VolumeType: gp2
       UserData:
         Fn::Base64: <%=file('bootstrap_chef_stack.sh.erb',
-          resource_id: 'Daemon',
+          resource_id: daemon,
           node_name: '$STACK',
           run_list: [
             local_mode ? 'recipe[cdo-apps]' : 'role[daemon]'
