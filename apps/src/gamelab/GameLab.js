@@ -295,7 +295,7 @@ GameLab.prototype.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
-    showDebugSlider: true,
+    showDebugSlider: experiments.isEnabled('showDebugSlider'),
     showAnimationMode: !config.level.hideAnimationMode,
     startInAnimationTab: config.level.startInAnimationTab,
     allAnimationsSingleFrame: config.level.allAnimationsSingleFrame,
@@ -479,7 +479,11 @@ GameLab.prototype.startTickTimer = function () {
     console.warn('Tick timer is already running in startTickTimer()');
   }
   // Set to 1ms interval, but note that browser minimums are actually 5-16ms:
-  const intervalPeriod = this.gameLabP5.stepSpeed < 1 ? 100 : 1;
+  const fastPeriod = 1;
+  // Set to 100ms interval when we are in the experiment with the speed slider
+  // and the slider has been slowed down (we only support two speeds for now):
+  const slowPeriod = 100;
+  const intervalPeriod = this.gameLabP5.stepSpeed < 1 ? slowPeriod : fastPeriod;
   this.tickIntervalId = window.setInterval(this.onTick.bind(this), intervalPeriod);
 };
 
