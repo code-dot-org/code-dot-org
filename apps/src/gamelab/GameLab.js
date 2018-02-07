@@ -53,6 +53,11 @@ import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
+import GameLabJrLib from './GameLabJr.interpreted';
+
+const LIBRARIES = {
+  'GameLabJr': GameLabJrLib,
+};
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -157,10 +162,6 @@ GameLab.baseP5loadImage = null;
 GameLab.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error("GameLab requires a StudioApp");
-  }
-
-  if (!config.level.editCode) {
-    throw 'Game Lab requires Droplet';
   }
 
   this.skin = config.skin;
@@ -277,8 +278,9 @@ GameLab.prototype.init = function (config) {
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
 
-  var showDebugButtons = (!config.hideSource && !config.level.debuggerDisabled);
-  var showDebugConsole = !config.hideSource;
+  var showDebugButtons = config.level.editCode &&
+    (!config.hideSource && !config.level.debuggerDisabled);
+  var showDebugConsole = config.level.editCode && !config.hideSource;
 
   if (showDebugButtons || showDebugConsole) {
     getStore().dispatch(jsDebugger.initialize({
@@ -510,7 +512,7 @@ GameLab.prototype.reset = function (ignore) {
   }
 };
 
-GameLab.prototype.onPuzzleComplete = function (submit ) {
+GameLab.prototype.onPuzzleComplete = function (submit) {
   if (this.executionError) {
     this.result = ResultType.ERROR;
   } else {
@@ -540,7 +542,7 @@ GameLab.prototype.onPuzzleComplete = function (submit ) {
     // shows Continue (the proper results will be reported to the service)
     this.testResults = TestResults.ALL_PASS;
     this.message = containedLevelResultsInfo.feedback;
-  } else {
+  } else if (this.level.editCode) {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
@@ -549,6 +551,10 @@ GameLab.prototype.onPuzzleComplete = function (submit ) {
 
     program = encodeURIComponent(this.studioApp_.getCode());
     this.message = null;
+  } else {
+    // We're using blockly, report the program as xml
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = encodeURIComponent(Blockly.Xml.domToText(xml));
   }
 
   if (this.testResults >= TestResults.FREE_PLAY) {
@@ -774,7 +780,7 @@ GameLab.prototype.execute = function () {
       (this.studioApp_.hasUnwantedExtraTopBlocks() ||
         this.studioApp_.hasDuplicateVariablesInForLoops())) {
     // immediately check answer, which will fail and report top level blocks
-    this.onPuzzleComplete();
+    this.onPuzzleComplete(false);
     return;
   }
 
@@ -822,8 +828,18 @@ GameLab.prototype.initInterpreter = function () {
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
   getStore().dispatch(jsDebugger.attach(this.JSInterpreter));
+  let code = this.studioApp_.getCode();
+  if (this.level.customHelperLibrary) {
+    code = this.customHelperLibrary + code;
+  }
+  if (this.level.helperLibraries) {
+    const libs = this.level.helperLibraries
+      .map((lib) => LIBRARIES[lib])
+      .join("\n");
+    code = libs + code;
+  }
   this.JSInterpreter.parse({
-    code: this.studioApp_.getCode(),
+    code,
     blocks: dropletConfig.blocks,
     blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
     enableEvents: true,

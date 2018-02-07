@@ -81,27 +81,29 @@
   = precede '*' do
     != t('signinsection.student_privacy', student_privacy_blog: 'http://teacherblog.code.org/post/156768797364/privacy-concern-with-using-student-full-names')
 
-  - if @section.login_type == Section::LOGIN_TYPE_PICTURE
-    #secret{style: 'display: none;'}
-      %h4.instructions= t('signinsection.picture')
-      %ul.pictures
-        - @secret_pictures.each do |secret_picture|
-          %li{id: secret_picture.id}
-            = image_tag secret_picture.path, width: 90, alt: secret_picture.name
-      .clear
-
   = form_tag log_in_section_path(id: @section.code) do
     = hidden_field_tag :secret_picture_id
     = hidden_field_tag :user_id
+
+    #pairing_checkbox{style: 'display: none'}
+      = check_box_tag :show_pairing_dialog
+      = label_tag :show_pairing_dialog, t('signinsection.pair_programming')
+    = button_tag t('signinsection.login'), id: 'login_button', style: 'display:none', class: 'btn btn-primary'
+
+    - if @section.login_type == Section::LOGIN_TYPE_PICTURE
+      #secret{style: 'display: none;'}
+        %h4.instructions= t('signinsection.picture')
+        %ul.pictures
+          - @secret_pictures.each do |secret_picture|
+            %li{id: secret_picture.id}
+              = image_tag secret_picture.path, width: 90, alt: secret_picture.name
+        .clear
+
     - if @section.login_type == Section::LOGIN_TYPE_WORD
       #secret{style: 'display: none;'}
         %h4.instructions= t('signinsection.words')
         = text_field_tag :secret_words, nil, autocomplete: 'off'
         .clear
-    #pairing_checkbox{style: 'display: none'}
-      = check_box_tag :show_pairing_dialog
-      = label_tag :show_pairing_dialog, t('signinsection.pair_programming')
-    = button_tag t('signinsection.login'), id: 'login_button', style: 'display:none', class: 'btn btn-primary'
 
 %br/
 %br/
