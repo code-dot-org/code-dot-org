@@ -351,7 +351,7 @@ module Pd::Application
       assert_equal(YES, application.meets_criteria)
     end
 
-    test 'application does not meet criteria if not able to attend single workshop' do
+    test 'application does not meet criteria if unable to attend single workshop' do
       application_hash = build(:pd_teacher1819_application_hash,
         able_to_attend_single: [Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]],
         principal_approval: YES,
@@ -364,7 +364,7 @@ module Pd::Application
       assert_equal(NO, application.meets_criteria)
     end
 
-    test 'application does not meet criteria if not able to attend multiple workshops' do
+    test 'application does not meet criteria if unable to attend multiple workshops' do
       application_hash = build(:pd_teacher1819_application_hash, :with_multiple_workshops,
         able_to_attend_multiple: [Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]],
         principal_approval: YES,
