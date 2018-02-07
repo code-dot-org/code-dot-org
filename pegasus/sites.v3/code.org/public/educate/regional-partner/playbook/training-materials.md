@@ -8,6 +8,7 @@ nav: regional_partner_playbook_nav
 
 ## Table of Contents
 - [Virtual Trainings](#virtual)
+- [Regional Partner Summit - Mar 2018](#mar18)
 - [Regional Partner Summit - Sept 2017](#sept17)
 - [Regional Partner Summit - Feb 2017] (#feb17)
 - [TeacherCon - Summer 2016](#teachercon16)
@@ -123,6 +124,20 @@ January 2017:
 <br/>
 </p>
 </details>
+
+[**Back to the top**](#top)
+<br/>
+
+________________
+<a id="mar18"></a>
+<br/>
+
+## Regional Partner Summit (March 2018)
+Please review the following resources for the March 2018 Regional Partner Summit.  More resources will be added up to and through the summit. 
+
+- [High Level Agenda](https://docs.google.com/document/d/1FH4zGhL-zrP5dP6KyLspZ5xWWAV1-ApLxWGavyw0Z2U/edit)
+- Nominate your fellow Regional Partners - [form](https://goo.gl/forms/LpvgerOhqNycItj23)
+- Sign up to deliver 5-minute Lightening Talks during the summit - [form](https://goo.gl/forms/6dVAKAM9qtkVAm5G2)
 
 [**Back to the top**](#top)
 <br/>
