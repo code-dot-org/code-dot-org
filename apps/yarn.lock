@@ -93,9 +93,9 @@
   version "1.2.0-cdo"
   resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.2.0-cdo.tgz#7b6f70d7a29a34976fa66dc2758e69875fda2d71"
 
-"@code-dot-org/piskel@0.13.0-cdo.0":
-  version "0.13.0-cdo.0"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.0.tgz#75b51cb66f1de75a298ae0074263c30928f6623f"
+"@code-dot-org/piskel@0.13.0-cdo.1":
+  version "0.13.0-cdo.1"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.1.tgz#7a6b67726ddd07a163f239eed4e4dfec423b0f49"
 
 "@storybook/addon-actions@^3.2.11":
   version "3.3.11"
