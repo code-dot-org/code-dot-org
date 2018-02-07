@@ -327,6 +327,55 @@ module Pd::Application
       assert_equal(NO, application.response_scores_hash[:able_to_attend_multiple])
     end
 
+    test 'application meets criteria if able to attend single workshop' do
+      application_hash = build(:pd_teacher1819_application_hash,
+        principal_approval: YES,
+        schedule_confirmed: YES,
+        diversity_recruitment: YES
+      )
+      application = create :pd_teacher1819_application, form_data: application_hash.to_json, regional_partner: (create :regional_partner)
+      application.auto_score!
+
+      assert_equal(YES, application.meets_criteria)
+    end
+
+    test 'application meets criteria if able to attend multiple workshops' do
+      application_hash = build(:pd_teacher1819_application_hash, :with_multiple_workshops,
+        principal_approval: YES,
+        schedule_confirmed: YES,
+        diversity_recruitment: YES
+      )
+      application = create :pd_teacher1819_application, form_data: application_hash.to_json, regional_partner: (create :regional_partner)
+      application.auto_score!
+
+      assert_equal(YES, application.meets_criteria)
+    end
+
+    test 'application does not meet criteria if not able to attend single workshop' do
+      application_hash = build(:pd_teacher1819_application_hash,
+        able_to_attend_single: [Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]],
+        principal_approval: YES,
+        schedule_confirmed: YES,
+        diversity_recruitment: YES
+      )
+      application = create :pd_teacher1819_application, form_data: application_hash.to_json, regional_partner: (create :regional_partner)
+      application.auto_score!
+
+      assert_equal(NO, application.meets_criteria)
+    end
+
+    test 'application does not meet criteria if not able to attend multiple workshops' do
+      application_hash = build(:pd_teacher1819_application_hash, :with_multiple_workshops,
+        able_to_attend_multiple: [Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]],
+        principal_approval: YES,
+        schedule_confirmed: YES,
+        diversity_recruitment: YES
+      )
+      application = create :pd_teacher1819_application, form_data: application_hash.to_json, regional_partner: (create :regional_partner)
+      application.auto_score!
+      assert_equal(NO, application.meets_criteria)
+    end
+
     test 'send_decision_notification_email only sends to G3 and unmatched' do
       application = create :pd_teacher1819_application
       application.update(status: 'waitlisted')

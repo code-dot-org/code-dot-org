@@ -506,10 +506,16 @@ module Pd::Application
       response_scores = response_scores_hash
       scored_questions =
         if course == 'csd'
-          Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSD
+          Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSD.clone
         elsif course == 'csp'
-          Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSP
+          Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSP.clone
         end
+
+      if response_scores[:able_to_attend_single] && !response_scores[:able_to_attend_multiple]
+        scored_questions.delete(:able_to_attend_multiple)
+      elsif response_scores[:able_to_attend_multiple] && !response_scores[:able_to_attend_single]
+        scored_questions.delete(:able_to_attend_single)
+      end
 
       responses = scored_questions.map do |key|
         response_scores[key]
