@@ -10,6 +10,7 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
     sign_in(@teacher)
   end
   # Signed out teacher gets redirected to sign in
+  test_redirect_to_sign_in_for :new, params: -> {{application_guid: @application.application_guid}}
 
   # Accepted and locked teacher application should get appropriate script data
   test 'Accepted and locked teacher application populates script_data' do
@@ -57,8 +58,6 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
   test 'Non teachercon teacher should be redirected to invalid' do
     not_teachercon = create :pd_workshop, num_sessions: 5
     @application.update(pd_workshop_id: not_teachercon.id)
-
-    @application.update_column(:status, 'pending')
     get :new, params: {
       application_guid: @application.application_guid
     }
