@@ -373,7 +373,8 @@ GameLab.prototype.onIsDebuggingSpritesChange = function (isDebuggingSprites) {
 GameLab.prototype.onStepSpeedChange = function (stepSpeed) {
   this.gameLabP5.changeStepSpeed(stepSpeed);
 
-  if (this.pauseTickTimer()) {
+  if (this.isTickTimerRunning()) {
+    this.stopTickTimer();
     this.startTickTimer();
   }
 };
@@ -460,22 +461,23 @@ GameLab.prototype.afterEditorReady_ = function (areBreakpointsEnabled) {
 
 GameLab.prototype.haltExecution_ = function () {
   this.eventHandlers = {};
-  this.pauseTickTimer();
+  this.stopTickTimer();
   this.tickCount = 0;
 };
 
-GameLab.prototype.pauseTickTimer = function () {
+GameLab.prototype.isTickTimerRunning = function () {
+  return this.tickIntervalId !== 0;
+};
+
+GameLab.prototype.stopTickTimer = function () {
   if (this.tickIntervalId !== 0) {
     window.clearInterval(this.tickIntervalId);
     this.tickIntervalId = 0;
-    return true;
-  } else {
-    return false;
   }
 };
 
 GameLab.prototype.startTickTimer = function () {
-  if (this.tickIntervalId) {
+  if (this.isTickTimerRunning()) {
     console.warn('Tick timer is already running in startTickTimer()');
   }
   // Set to 1ms interval, but note that browser minimums are actually 5-16ms:
