@@ -103,8 +103,12 @@ const actionsFormatterUnfeatured = (actions, {rowData}) => {
 };
 
 const dateFormatter = (time) => {
-  const date = new Date(time);
-  return date.toLocaleDateString();
+  const date =  time ? new Date(time) : null;
+  if (date) {
+    return date.toLocaleDateString();
+  } else {
+    return null;
+  }
 };
 
 const typeFormatter = (type) => {

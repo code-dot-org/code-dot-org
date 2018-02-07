@@ -133,19 +133,29 @@ class ProjectsController < ApplicationController
     end
   end
 
+  # @param [Array {Hash}] Each hash is data for a row in the featured projects tables.
+  # The rows are sorted into two arrays: featured or unfeatured, based on
+  # on whether the project is currently featured or not.
   def sort_projects(featured_project_table_rows)
     @featured = []
     @unfeatured = []
     featured_project_table_rows.each do |row|
-      row[:featured?] ? @featured << row : @unfeatured << row
+      row[:featured] ? @featured << row : @unfeatured << row
     end
   end
 
-  # Takes in an array of currently featured Featured Projects and an array of the associated Projects, returns an array of data combined from the related Project and Featured Project that can be used for the currently featured projects table.
+  # @param [Hash] key is a FeaturedProject, value is the associated project
+  # Iterate through the Featured Project - Project pairs are creates a new hash # for each containing combined information specific to what the featured
+  # projects tables are expecting.
   def combine_projects_and_featured_projects_data(matched_projects_and_featured_projects)
     @featured_project_table_rows = []
     matched_projects_and_featured_projects.each do |featured_project, project|
       project_details = JSON.parse(project[:id][:value])
+      puts "project details"
+      puts
+      print project_details
+      puts
+      puts
       featured_project_row = {
         projectName: project_details['name'],
         type: project_details['projectType'],
@@ -160,7 +170,8 @@ class ProjectsController < ApplicationController
     sort_projects(@featured_project_table_rows)
   end
 
-  # Matches featured_projects with projects
+  # @param featured_projects [Array of FeaturedProjects]
+  # Iterates through featured_projects and finds the project associated with each FeaturedProject
   def fetch_projects(featured_projects)
     @matched_projects_and_featured_projects = {}
     featured_projects.each do |featured_project|
@@ -169,6 +180,7 @@ class ProjectsController < ApplicationController
     combine_projects_and_featured_projects_data(@matched_projects_and_featured_projects)
   end
 
+  # Retrieves all of the FeaturedProjects because each will either show in the currently featured projects table or in the archive of previously featured projects.
   def fetch_featured_projects
     @featured_projects = FeaturedProject.all
     fetch_projects(@featured_projects)

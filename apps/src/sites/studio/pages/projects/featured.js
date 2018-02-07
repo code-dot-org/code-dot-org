@@ -8,8 +8,6 @@ $(document).ready(function () {
   const featuredProjectsData = JSON.parse(script.dataset.featuredprojects);
   const currentFeaturedProjects = featuredProjectsData.currently_featured_projects;
   const archiveUnfeaturedProjects = featuredProjectsData.archive_unfeatured_projects;
-  console.log(currentFeaturedProjects);
-  console.log(archiveUnfeaturedProjects);
 
   ReactDOM.render(
     <FeaturedProjects
