@@ -1,6 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {QuickView} from '@cdo/apps/code-studio/pd/application_dashboard/quick_view';
+import QuickViewTable from '@cdo/apps/code-studio/pd/application_dashboard/quick_view_table';
 import {expect} from 'chai';
 import sinon from 'sinon';
 
@@ -19,51 +20,80 @@ describe("Quick View", () => {
     viewType: 'facilitator'
   };
 
-  it("Initially renders a spinner", () => {
+  describe("Initially", () => {
+    let quickView;
+    before(() => {
+      quickView = shallow(
+        <QuickView
+          regionalPartnerName="A Great Organization"
+          route={routeProps}
+        />,
+        { context },
+      );
+    });
 
-    let quickView = shallow(
-      <QuickView
-        regionalPartnerName="A Great Organization"
-        route={routeProps}
-      />,
-      { context },
-    );
-
-    expect(quickView.state('loading')).to.be.true;
-    expect(quickView.find('Row')).to.have.length(0);
-    expect(quickView.find('Spinner')).to.have.length(1);
+    it("Is loading", () => {
+      expect(quickView.state('loading')).to.be.true;
+    });
+    it("Renders a spinner", () => {
+      expect(quickView.find('Spinner')).to.have.length(1);
+    });
+    it("Does not render a table", () => {
+      expect(quickView.find(QuickViewTable)).to.have.length(0);
+    });
+    it("Renders the CSV Download button", () => {
+      expect(quickView.find("Button").findWhere(b => b.text() === 'Download CSV')).to.have.length(1);
+    });
   });
 
-  it("Generates 1 table after hearing from server", () => {
-    let server = sinon.fakeServer.create();
-    const data = JSON.stringify([{
-      "id":8,
-      "created_at":"2017-10-25T21:26:06.000Z",
-      "applicant_name":"Clare Constantine",
-      "district_name":null,
-      "school_name":null,
-      "status":"unreviewed"
-    }]);
+  describe("After receiving applications from server", () => {
+    const data = [{
+      id: 8,
+      created_at: "2017-10-25T21:26:06.000Z",
+      applicant_name: "Clare Constantine",
+      district_name: null,
+      school_name: null,
+      status: "unreviewed"
+    }];
+    let server;
+    let quickView;
+    before(() => {
+      server = sinon.fakeServer.create();
+      server.respondWith("GET", '/api/v1/pd/applications/quick_view?role=csf_facilitators&regional_partner_filter=',
+        [
+          200,
+          {"Content-Type": "application/json"},
+          JSON.stringify(data)
+        ]
+      );
 
-    server.respondWith("GET", '/api/v1/pd/applications/quick_view?role=csf_facilitators&regional_partner_filter=',
-      [
-        200,
-        {"Content-Type": "application/json"},
-        data
-      ]
-    );
+      quickView = shallow(
+        <QuickView
+          regionalPartnerName="A Great Organization"
+          route={routeProps}
+        />,
+        { context },
+      );
 
-    let quickView = shallow(
-      <QuickView
-        regionalPartnerName="A Great Organization"
-        route={routeProps}
-      />,
-      { context },
-    );
+      server.respond();
+    });
+    after(() => {
+      server.restore();
+    });
 
-    server.respond();
-    expect(quickView.state('loading')).to.be.false;
-    expect(quickView.find('Row')).to.have.length(1);
-    expect(quickView.find('Spinner')).to.have.length(0);
+    it("Is no longer loading", () => {
+      expect(quickView.state('loading')).to.be.false;
+    });
+    it("Does not render a spinner", () => {
+      expect(quickView.find('Spinner')).to.have.length(0);
+    });
+    it("Renders 1 table with the returned applications", () => {
+      const table = quickView.find(QuickViewTable);
+      expect(table).to.have.length(1);
+      expect(table.prop('data')).to.eql(data);
+    });
+    it("Renders the CSV Download button", () => {
+      expect(quickView.find("Button").findWhere(b => b.text() === 'Download CSV')).to.have.length(1);
+    });
   });
 });

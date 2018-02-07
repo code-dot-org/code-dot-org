@@ -6,6 +6,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import SummaryTable from './summary_table';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
+import ApplicantSearch from './applicant_search';
 import Spinner from '../components/spinner';
 import {
   UnmatchedFilter,
@@ -19,32 +20,41 @@ export class Summary extends React.Component {
     isWorkshopAdmin: PropTypes.bool
   };
 
-  static contextTypes = {
-    router: PropTypes.object.isRequired
-  };
+  constructor(props) {
+    super(props);
 
-  state = {
-    loading: true,
-    applications: null,
-    regionalPartnerName: this.props.regionalPartnerName,
-    regionalPartnerFilter: null
-  };
+    this.state = {
+      loading: true,
+      applications: null,
+      regionalPartnerName: this.props.regionalPartnerName,
+      regionalPartnerFilter: UnmatchedFilter
+    };
+  }
 
   componentWillMount() {
     this.load();
   }
 
-  load(selected = null) {
+  componentWillUnmount() {
+    this.abortLoad();
+  }
+
+  abortLoad() {
+    if (this.loadRequest) {
+      this.loadRequest.abort();
+    }
+  }
+
+  load(regionalPartnerFilter = this.state.regionalPartnerFilter) {
+    this.abortLoad();
+    this.setState({loading: true});
+
     let url = '/api/v1/pd/applications';
     if (this.props.isWorkshopAdmin) {
-      const regionalPartnerFilter = selected ? selected.value : null;
-      const regionalPartnerName = selected ? selected.label : this.props.regionalPartnerName;
-      this.setState({ regionalPartnerName, regionalPartnerFilter });
-
-      url += `?regional_partner_filter=${regionalPartnerFilter ? regionalPartnerFilter : UnmatchedFilter}`;
+      url += `?${$.param({regional_partner_filter: regionalPartnerFilter})}`;
     }
 
-    $.ajax({
+    this.loadRequest = $.ajax({
       method: 'GET',
       url,
       dataType: 'json'
@@ -57,7 +67,10 @@ export class Summary extends React.Component {
   }
 
   handleRegionalPartnerChange = (selected) => {
-    this.load(selected);
+    const regionalPartnerName = selected.label;
+    const regionalPartnerFilter = selected.value;
+    this.setState({regionalPartnerName, regionalPartnerFilter});
+    this.load(selected.value);
   };
 
   render() {
@@ -66,6 +79,7 @@ export class Summary extends React.Component {
     }
     return (
       <div>
+        <ApplicantSearch/>
         {this.props.isWorkshopAdmin &&
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}

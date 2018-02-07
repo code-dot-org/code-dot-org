@@ -28,12 +28,6 @@ Feature: Droplet levels work as expected
 
     And I press keys ":enter"
 
-    And the Droplet ACE text is "radioButton"
-
-    And no Tooltipster tooltip is visible
-
-    And I press keys "("
-
     And the Droplet ACE text is "radioButton()"
 
     And there is a Tooltipster tooltip with text "unique identifier"

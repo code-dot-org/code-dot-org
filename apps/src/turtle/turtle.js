@@ -218,6 +218,7 @@ var Artist = function () {
   this.currentPathPattern = new Image();
   this.loadedPathPatterns = [];
   this.isDrawingWithPattern = false;
+  this.linePatterns = [];
 
   // these get set by init based on skin.
   this.avatarWidth = 0;
@@ -305,13 +306,13 @@ Artist.prototype.preloadAllPatternImages = function () {
   const loadPattern = patternOption => new Promise(resolve => {
     const pattern = patternOption[1];
 
-    if (this.skin[pattern]) {
+    if (this.linePatterns[pattern]) {
       const img = new Image();
 
       img.onload = () => resolve();
       img.onerror = () => resolve();
 
-      img.src = this.skin[pattern];
+      img.src = this.linePatterns[pattern];
       this.loadedPathPatterns[pattern] = img;
     } else {
       resolve();
@@ -349,6 +350,8 @@ Artist.prototype.init = function (config) {
     this.level.images[0].position = [0, 0];
     this.level.images[0].scale = 1;
   }
+
+  this.linePatterns = config.skin.linePatterns;
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
@@ -1335,21 +1338,11 @@ Artist.prototype.step = function (command, values, options) {
       tupleDone = result.tupleDone;
       this.turnByDegrees_(result.distance);
       break;
-    case 'DP':  // Draw Print
-      this.ctxScratch.save();
-      this.ctxScratch.translate(this.x, this.y);
-      this.ctxScratch.rotate(utils.degreesToRadians(this.heading - 90));
-      this.ctxScratch.fillText(values[0], 0, 0);
-      this.ctxScratch.restore();
-      break;
     case 'GA':  // Global Alpha
       var alpha = values[0];
       alpha = Math.max(0, alpha);
       alpha = Math.min(100, alpha);
       this.ctxScratch.globalAlpha = alpha / 100;
-      break;
-    case 'DF':  // Draw Font
-      this.ctxScratch.font = values[2] + ' ' + values[1] + 'pt ' + values[0];
       break;
     case 'PU':  // Pen Up
       this.penDownValue = false;
@@ -1482,11 +1475,6 @@ Artist.prototype.jumpTo_ = function (pos) {
 Artist.prototype.jumpForward_ = function (distance) {
   this.x += distance * Math.sin(utils.degreesToRadians(this.heading));
   this.y -= distance * Math.cos(utils.degreesToRadians(this.heading));
-};
-
-Artist.prototype.moveByRelativePosition_ = function (x, y) {
-  this.x += x;
-  this.y += y;
 };
 
 Artist.prototype.dotAt_ = function (x, y) {

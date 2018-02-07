@@ -16,7 +16,7 @@ export default class cc_client {
       if (window.ipcRenderer !== undefined) {
         window.ipcRenderer.on('responseFromApp', (event, jsonResponse) =>{
           let response = JSON.parse(jsonResponse);
-          if (response.api === 'basic'){
+          if (response.api === 'basic') {
             if (this.keyRef !== null) {
               this.callbackRef(response [this.keyRef]);
             } else {

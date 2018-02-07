@@ -317,7 +317,7 @@
       help_support: Tulong at Suporta
       report_bug: I-report ang bug
       teacher_community: Komunidad ng mga Guro
-      professional_learning: Professional Learning
+      professional_learning: Propesyonal na Pag-aaral
       documentation: Dokumentasyon
       tutorials: Mga Tutorial
       educate_overview: Overview ng Nagtuturo
@@ -341,7 +341,7 @@
       about_contact: Kontakin Kami
       about_faqs: FAQs
       learn: Matuto
-      stats: Stats
+      stats: Mga Stats
       help_us: Tulungan Kami
       teach: Magturo
       about: Tungkol
@@ -384,7 +384,7 @@
     user_not_found: Ang guro ay hindi mahanap.
     student_teacher_disassociated: Iniwan mo ang seksyon %{section_code} ni %{teacher_name}.
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Panig ng Guro
       student: Estudyante
       viewing_solution: Tagatingin ng Solusyon
       try_it_yourself: Subukan sa sarili mo
@@ -805,7 +805,7 @@
       audience: Edad 13+
       cta: Pag-aralang kung paano
     hoc-encryption:
-      title: Simple Encryption
+      title: Simpleng Pag-encrypt
       body: Matutunan ng mga estudyante ang mga pamamaraan sa paglikha at pag-crack
         sa mga naka-encrypt na mga mensahe.
     weblab:
@@ -1171,7 +1171,7 @@
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
   flex_category:
-    required: Overview
+    required: Buod
     content: Content
     practice: Teacher Practices
     peer_review: Peer Review
@@ -1352,4 +1352,4 @@
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
-  courses_category: Full Courses
+  courses_category: Buong mga Kurso

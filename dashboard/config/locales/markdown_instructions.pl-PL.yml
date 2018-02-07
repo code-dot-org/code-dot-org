@@ -10,54 +10,49 @@
         \nszarych linii na obrazku. (Każda linia ma długość 100 pikseli)\\r\n\\r"
       2-3 Artist 11_markdown_instruction: 'Utwórz obramowanie dla znaku stop, tworząc
         ośmiokąt z bokami o długości 100 pikseli. '
-      2-3 Artist 12_markdown_instruction: "Create a circle to finish the eyeball!\n\\r\n\\r\nIf
-        the artist turns 1 degree with each loop, how many times do you\nneed to repeat
-        the code to draw a circle? "
+      2-3 Artist 12_markdown_instruction: "Utwórz okrąg, aby ukończyć gałkę oczną!\n\\r\n\\r\nJeżeli
+        artysta obróci się o 1 stopień w każdej pętli, ile razy musisz powtórzyć kod,
+        aby narysować okrąg? "
       2-3 Artist 2 new_markdown_instruction: |-
-        This house has a half-finished wall.
-        Each side is 100, but the half-finished wall is only 50. Complete the wall.
+        Ten dom ma w połowie skończoną ścianę.
+        Każda ściana ma długość 100, ale ściana która jest nie skończona ma tylko 50. Ukończ tą ścianę.
       2-3 Artist 3.4_markdown_instruction: |-
         The jump block moves the artist without
         drawing. Draw the dashed line using both the `jump forward` and `move forward`
         blocks. Each line is 50 pixels long.
       2-3 Artist 3new_markdown_instruction: |-
-        The red hat is 100 pixels tall. Finish
-        drawing a black hat that is 70 pixels shorter. \r
+        Czerwony kapelusz ma wysokość 100 pikseli. Ukończ rysowanie czarnego kapelusza, który jest o 70 pikseli krótszy.\r
         \r
-        *(Note: The width of
-        each hat is 50 pixels.)*
+        *(Zauważ, że szerokość każdego kapelusza wynosi 50 pikseli.)*
       2-3 Artist 4_markdown_instruction: Pomóż mi dokończyć domek dla tego kota.
       2-3 Artist 6_markdown_instruction: |-
-        This house needs a roof! Draw the triangle.  \r
+        Ten dom potrzebuje dachu! Narysuj trójkąt. \r
         \r
-        Hint:
-        all three sides are the same length.\r
+        Wskazówka:
+        wszystkie boki mają taką samą długość.\r
         \r
         <img src="https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif"
         width="300"/>
-      2-3 Artist 7_markdown_instruction: "Finish drawing the last set of windows\non
-        the school so that everyone in class can see outside. \\r\n\\r\nThe sides\nof
-        each square window pane are 25 pixels long. "
+      2-3 Artist 7_markdown_instruction: "Skończ rysować ostatni zestaw okien w szkole,
+        aby każdy w klasie mógł zobaczyć na zewnątrz.\\r\n\\r\nKażdy bok okna ma długość
+        25 pikseli. "
       2-3 Artist 8_markdown_instruction: |-
-        Time to build a barn!\r
+        Czas aby zbudować stajnię!\r
         \r
-        Make the rooms
-        for each animal by splitting the barn into 2 equal-sized squares. \r
+        Zrób pomieszczenie dla każdego zwierzaka, dzieląc stajnie na 2 równe kwadraty. \r
         \r
-        Hint:
-        The rectangle is 200 pixels wide and 100 pixels tall.\r
+        Wskazówka:
+        Prostokąt jest 200 pikseli szeroki i 100 pikseli długi. \r
         \r
-        There are many
-        different ways to solve this puzzle.
+        Zagadkę można rozwiązać na kilka sposobów.
       2-3 Artist 9 NEW_markdown_instruction: Dokończ ten latawiec
       2-3 Artist 9 REPLACEMENT_markdown_instruction: Zakończ rysowanie tych schodów!
       2-3 Artist 9_markdown_instruction: Dokończ ten latawiec
       2-3 Artist Assessment 1_markdown_instruction: 'Sprawdzian: Zakończ rysowanie
         ostatniego zęba, szerokiego na 25 pikseli i wysokiego na 25 pikseli.'
       2-3 Artist Debugging 1_markdown_instruction: |
-        This hat should only be 50 pixels
-        wide. \r
-        Can you fix it?\r
+        Kapelusz powinien mieć tylko 50 pikseli szerokości. \r
+        Czy możesz to poprawić?\r
         \r
         <br/>\r
       2-3 Artist Debugging 10_markdown_instruction: |-
@@ -71,36 +66,29 @@
       2-3 Artist Debugging 11_markdown_instruction: Moja śnieżynka się rozpada! \r
         \r Czy mógłbyś zobaczyć, co się złego dzieje?
       2-3 Artist Debugging 2_markdown_instruction: |-
-        This code for the cat's whiskers
-        is wrong. \r
+        Kod dla kocich wąsów jest zły. \r
         \r
-        Fix this code to draw whiskers that are all the same length.
+        Popraw kod aby narysować wąsy o takiej samej długości.
       2-3 Artist Debugging 3_markdown_instruction: |-
-        My boat has a hole! \r
+        Moja łódka ma dziurę! \r
         \r
-        What
-        do you need to fix to make the ends meet?
+        Co musisz naprawić, aby zatkać dziurę?
       2-3 Artist Debugging 5_markdown_instruction: |-
-        The code that we have for the
-        leg and foot is wrong. \r
+        Kod, który mamy dla nogi i stopy jest zły. \r
         \r
-        Can you fix it?
+        Czy możesz to naprawić?
       2-3 Artist Debugging 6_markdown_instruction: |-
-        Looks like I'm sitting on a
-        chair that’s missing a leg!\r
+        Wygląda na to, że siedzę na krześle, któremu brakuje nogi!\r
         \r
-        Edit the code to draw the last leg.
+        Edytuj kod, aby narysować brakującą nogę.
       2-3 Artist Debugging 7_markdown_instruction: |-
-        Looks like the C in code is drawn
-        backwards!\r
+        Wygląda na to, że C w kodzie (code) jest narysowane wspak!\r
         \r
-        Can you make it look like a C again?
+        Czy możesz sprawić, aby wyglądało jak C z powrotem?
       2-3 Artist Debugging 8_markdown_instruction: |-
-        My teacher says that I should
-        finish what I start!\r
+        Mój nauczyciel powiedział, że powinienem skończyć to, co zacząłem!\r
         \r
-        Help me finish my pinwheel. Can you figure out
-        what's wrong?
+        Pomóż mi skończyć mój wiatrak. Wiesz co jest źle?
       2-3 Artist Debugging 9_markdown_instruction: |-
         Something is off!\r
         \r
@@ -108,36 +96,28 @@
         code for this stem is wrong. Can you figure out how to get the artist to trace
         the stem the right way?
       2-3 Artist Debugging Assessment 1_markdown_instruction: |-
-        **Assessment:** \r
-        Why
-        does this square end up being 75 pixels too small on each side?  \r
+        **Sprawdzian:** \r
+        Dlaczego ten kwadrat jest o 75 pikseli za mały z każdej strony? \r
         \r
-        Where
-        does the code go wrong?
-      2-3 Artist Free Play_markdown_instruction: |-
-        Free-play! Draw anything you'd
-        like.
+        Co w kodzie poszło nie tak?
+      2-3 Artist Free Play_markdown_instruction: Czas na zabawę! Narysuj cokolwiek
+        zechcesz.
       2-3 Artist Functions 1_markdown_instruction: |
-        "Me zombie artist. Me love drawing!"
+        "Ja być zombie! Ja lubię rysować!"
         \r
         \r
-        Help the zombie draw square glasses.  \r
+        Pomóż zombie narysować kwadratowe okulary. \r
         \r
-        The bridge between the
-        glasses is 25 pixels shorter than the width of the squares, which is 100 pixels.\r
+        Mostek między okularami jest 25 pikseli krótszy niż szerokość okularów, która wynosi 100 pikseli.\r
         \r
       2-3 Artist Functions 10_markdown_instruction: |-
-        **Freeplay:** Here are two functions,
-        one to draw a big gear and one to draw a small gear.  \r
+        **Czas na zabawę:** Oto dwie funkcje, jedna do rysowania dużego koła zębatego, a druga do rysowania małego. \r
         \r
-        Use them to
-        draw the inside of a machine!
+        Użyj ich, by narysować wnętrze maszyny!
       2-3 Artist Functions 11.5_markdown_instruction: |-
-        Here's that same `draw a
-        hexagon` function. \r
+        Jest to ta funkcja `draw a hexagon`.\r
         \r
-        What happens if you loop the main program 6 times,
-        turning 60 degrees each time you loop?
+        Co się stanie jeśli zapętlisz program 6 razy, obracając o 60 stopni za każdą pętlą programu?
       2-3 Artist Functions 11_markdown_instruction: |-
         We've renamed the `draw a square`
         function to `draw a hexagon`, but it's still giving us squares!  \r
@@ -164,23 +144,17 @@
         The plants are all 100 pixels
         apart.
       2-3 Artist Functions 2_markdown_instruction: |-
-        Functions let you define new
-        blocks! \r
+        Funkcje pozwalają Ci definiować nowe bloki!\r
         \r
-        We've moved the blocks needed for drawing a square into a
-        function called `draw a square`. This time, use the `draw a square` function
-        to create the glasses. \r
+        Przenieśliśmy bloki potrzebne do narysowania kwadratu do funkcji nazwanej `draw a square`. Tym razem wykorzystaj funkcję `draw a square`, aby stworzyć okulary.\r
         \r
-        The squares are 75 pixels apart.
+        Kwadraty są oddalone o 75 pikseli.
       2-3 Artist Functions 3_markdown_instruction: |-
-        Edit the function to draw a square
-        with a side length of 115 to draw the bigger glasses. \r
+        Edytuj tą funkcję aby narysować kwadrat o boku 115, aby narysować większe okulary. \r
         \r
-        The squares
-        are now 45 pixels apart.
-      2-3 Artist Functions 4_markdown_instruction: |-
-        Now, put the function inside
-        of a loop to draw these three squares.
+        Kwadraty oddalone są od siebie o 45 pikseli.
+      2-3 Artist Functions 4_markdown_instruction: Umieść funkcję wewnątrz pętli aby
+        narysować te trzy kwadraty.
       2-3 Artist Functions 9_markdown_instruction: |-
         **Freeplay:** Here is a snowflake
         function. Experiment with it to create a winter scene! \r
@@ -195,13 +169,12 @@
         Now use a repeat block to make the
         cell a shell.
       2-3 Artist Loops New 1_markdown_instruction: |
-        Let's draw this robot's head!
-        Can you make a square with sides that are 100 pixels?\r
+        Narysujmy głowę tego robota!
+        Czy możesz narysować kwadrat o bokach 100 pikseli?\r
         \r
         <br/>\r
-      2-3 Artist Loops New 10_markdown_instruction: |-
-        Now let's connect a bunch of
-        V's together in a loop.
+      2-3 Artist Loops New 10_markdown_instruction: Teraz połączmy razem kilka V w
+        pętli.
       2-3 Artist Loops New 11_markdown_instruction: |-
         Czas zrobić coś odlotowego!
         \r
@@ -226,152 +199,96 @@
         <br/><br/>\r
         \r
       2-3 Artist Loops New 2_markdown_instruction: |-
-        Here is the same puzzle that
-        we just solved, but this time, we can only use one `move forward` block and
-        one `turn` block this time.\r
+        Jest to taka sama zagadka jak ta, którą przed chwilą rozwiązaliśmy, ale tym razem, możemy wykorzystać tylko jeden blok `move forward`i jeden blok `turn`.\r
         \r
-        Can you use a `repeat` to solve this puzzle?
-      2-3 Artist Loops New 9_markdown_instruction: |-
-        Draw a simple V (where both sides
-        are 50 pixels) to complete the arrow.
+        Czy możesz użyć `repeat` aby rozwiązać tą zagadkę?
+      2-3 Artist Loops New 9_markdown_instruction: Narysuj kształt V (gdzie każda
+        strona ma 50 pikseli) aby ukończyć strzałę.
       2-3 Artist Nested Loops 1_markdown_instruction: |
-        You've used loops to draw
-        shapes before, but now we're going to put loops inside of other loops!\r
+        Wcześniej do rysowania kształtów używaliśmy pętel, teraz umieścimy pętle w innych pętlach!\r
         \r
-        Put
-        a `repeat` block around this whole stack of code to draw the pattern.\r
+        Umieść blok `repeat` wokół tego całego stosu kodu, aby narysować wzór.\r
         \r
         <br/>\r
         \r
-      2-3 Artist Nested Loops 10_markdown_instruction: |-
-        Loop this code 12 times to
-        complete the pattern.
-      2-3 Artist Nested Loops 11_markdown_instruction: |-
-        Loop this code 4 times to
-        complete the pattern, turn 90 degrees after each circle.
+      2-3 Artist Nested Loops 10_markdown_instruction: Zapętl ten kod 12 razy, aby
+        uzupełnić wzór.
+      2-3 Artist Nested Loops 11_markdown_instruction: Zapętl ten kod 4 razy, aby
+        ukończyć wzór, obróć się o 90 stopni po każdym obiegu.
       2-3 Artist Nested Loops 12_markdown_instruction: Powtórz w pętli ten kod 12
         razy, aby otrzymać te loki.
       2-3 Artist Nested Loops 2_markdown_instruction: |-
-        Now loop the triangle 6 times.
+        Teraz powtórz w pętli trójkąt 6 razy.
         \r
         \r
-        After each triangle, you'll need to turn 60 degrees before drawing
-        the next.
-      2-3 Artist Nested Loops 3_markdown_instruction: |-
-        You'll need to loop your
-        triangle 12 times to draw this pattern. \r
-        \r
-        Divide the number of degrees
-        in a circle (360) by the number of shapes you're drawing (12) to figure out
-        how far to turn after each shape.
-      2-3 Artist Nested Loops 4_markdown_instruction: |-
-        Loop this diamond 12 times
-        to draw a flower!\r
-        \r
-        Note: We'll use the same angle to loop 12 diamonds
-        as we did for 12 triangles.  \r
-        How much do you need to turn after each shape?
+        Po każdym trójkącie, musisz wykonać obrót o 60 stopni przed narysowaniem kolejnego.
+      2-3 Artist Nested Loops 3_markdown_instruction: "Musisz powtórzyć twój trójkąt
+        w pętli 12 razy, aby narysować ten wzór. \\r \\r \nPodziel liczbę stopni w
+        okręgu (360) przez liczbę kształtów do narysowania (12), aby określić, ile
+        powinien wynieść obrót po każdym kształcie."
+      2-3 Artist Nested Loops 4_markdown_instruction: 'Zapętl ten diament 12 razy,
+        aby narysować kwiat. \r \r Wskazówka: Użyjemy tego samego kąta przy powtarzaniu
+        12 diamentów, jaki użyliśmy dla 12 trójkątów. \r Ile powinien wynosić obrót
+        po każdym kształcie?'
       2-3 Artist Nested Loops 5_markdown_instruction: |-
-        Fill in this building's windows
-        using a nested loop. \r
+        Wypełnij okna w tym budynku używając zagnieżdżonych pętel.\r
         \r
-        The windows are 20 pixels long and 20 pixels
-        apart.
+        Okna mają 20 pikseli długości i są oddalone od siebie o 20 pikseli.
       2-3 Artist Nested Loops 6_markdown_instruction: |-
-        This dinosaur has 8 spikes
-        running up its tail.\r
+        Ten dinozaur ma 8 kolców wystających z jego ogona. \r
         \r
-        Each spike is 30 pixels long. \r
+        Każdy kolec ma długość 30 pikseli. \r
         \r
-        Loop the
-        triangle 8 times, but make sure to jump forward after each one!
-      2-3 Artist Nested Loops 7_markdown_instruction: |-
-        Loop this triangle 10 times
-        to draw the sun. \r
-        \r
-        You'll need to move and turn after each triangle.
-        \r
-        \r
-        You can figure out how much to turn by dividing the number of degrees
-        in a circle by the number of triangles that make it up.
-      2-3 Artist Nested Loops 8_markdown_instruction: |-
-        Now let's add some grass
-        to our picture. \r
-        \r
-        Each tuft of grass is 50 pixels apart.
-      2-3 Artist Nested Loops 9_markdown_instruction: |-
-        We'll finish this picture
-        by adding our flower. \r
-        \r
-        Loop the diamond 12 times to draw the flower.
-      2-3 Artist Nested Loops Free Play_markdown_instruction: |-
-        Free play, draw something
-        cool with nested loops.
+        Powtórz trójkąt 8 razy w pętli, ale upewnij się, aby skoczyć w przód po każdym z nich!
+      2-3 Artist Nested Loops 7_markdown_instruction: "Powtórz w pętli ten trójkąt
+        10 razy, aby narysować słońce. \\r \\r \nPo każdym trójkącie będziesz musiał
+        wykonać ruch i obrót. \\r \\r \nMożesz określić o ile musisz wykonać obrót,
+        dzieląc liczbę kątów w kole przez liczbę trójkątów, które je tworzą."
+      2-3 Artist Nested Loops 8_markdown_instruction: Teraz dodajmy trochę trawy do
+        naszego obrazka. \r \r Kępy trawy są oddalone od siebie o 50 pikseli.
+      2-3 Artist Nested Loops 9_markdown_instruction: Ukończymy ten obrazek dodając
+        nasz kwiatek. \r \r Zapętl diament 12 razy, aby narysować kwiatek.
+      2-3 Artist Nested Loops Free Play_markdown_instruction: Masz wolną rękę, narysuj
+        coś fajnego używając zagnieżdżonych pętli.
       2-3 Bee Conditionals 11_markdown_instruction: 'Jestem ciekaw, co tutaj jest!
         \r \r pomóż mi oblecieć cały teren i zebrać nektar tylko z kwiatów, które
         go mają. '
       2-3 Bee Conditionals 13_markdown_instruction: Wiele się tutaj dzieje!\r \r Skorzystaj
         z tego, czego się nauczyłeś, aby zebrać cały nektar a następnie zrobić miód.
       2-3 Bee Conditionals 14_markdown_instruction: |-
-        Let's put everything together!\r
+        Połączmy wszystko razem!\r
         \r
-        Use
-        what you've learned to help me collect nectar only from flowers that have
-        it, using as few blocks as possible.  \r
+        Wykorzystaj to, czego nauczyłeś się wcześniej aby pomóc mi zebrać nektar tylko z tych kwiatów, które go mają, używając jak najmniejszej liczby bloków. \r
         \r
-        Don't forget to make honey
-        at the end.
-      2-3 Bee Conditionals 15_markdown_instruction: |-
-        This stair step pattern should
-        look familiar.  \r
-        \r
-        Can you collect nectar only from the flowers that
-        have some, using as few blocks as possible?
-      2-3 Bee Conditionals 2_markdown_instruction: |-
-        I'm a hungry bee! \r
-        \r
-        \r
-        Help
-        me collect all of the nectar from the flowers using the fewest number of blocks.
+        Nie zapomnij na koniec zrobić miodu.
+      2-3 Bee Conditionals 15_markdown_instruction: Ten wzór stopni schodów powinien
+        wyglądać znajomo. \r \r Czy potrafisz zebrać nektar tylko z tych kwiatów,
+        które go mają, używając możliwie najmniejszej liczby bloków?
+      2-3 Bee Conditionals 2_markdown_instruction: Jestem głodną pszczółką! \r\r\r
+        Pomóż mi zebrać cały nektar z kwiatów, używając możliwie najmniejszej liczby
+        bloków.
       2-3 Bee Conditionals 3_markdown_instruction: 'Patrz na cały nektar! \r \r Pomóż
         mi zebrać nektar i zrobić miód używając możliwie najmniejszej liczby bloków.  '
       2-3 Bee Conditionals 5_markdown_instruction: |-
-        These magic purple flowers change!\r
+        Te magiczne, fioletowe kwiatki się zmieniają!\r
         \r
-        Each
-        time you try the puzzle, purple flowers can have either 1 nectar or none at
-        all...but you won't know the number until you run the code! \r
+        Za każdym razem, gdy próbujesz rozwiązać zagadkę, kwiatki mogą mieć zarówno 1 nektar jak i żadnego... nie dowiesz się tego, póki nie uruchomisz kodu!\r
         \r
-        Be careful
-        not to collect nectar from a purple flower if it doesn't have any. \r
-        You
-        must first check if the nectar is equal to 1 using the `if nectar` block.
+        Bądź ostrożny, nie zbieraj nektaru z fioletowych kwiatków, jeśli nie mają żadnego.\r
+        Musisz sprawdzić czy nektar w kwiatku jest równy 1, aby to zrobić użyj bloku `if nectar`.
       2-3 Bee Conditionals Assessment 1_markdown_instruction: |-
-        **Assessment:** Collect
-        all of the nectar.  \r
-        Be careful not to try to collect nectar from a purple
-        flower if it doesn't have any.
+        **Sprawdzian:** Zbierz cały nektar. \r
+        Uważaj, aby nie próbować zbierać nektaru z fioletowego kwiatka, jeśli go nie ma.
       2-3 Bee Debugging 1_markdown_instruction: |-
-        These blocks are really bugging
-        me!\r
-        \r
-        Fix the error(s) to collect all of the nectar.
-      2-3 Bee Debugging 10_markdown_instruction: |-
-        This puzzle is making me loopy!
-        \r
-        \r
-        Fix the error(s) to collect all of the nectar and make all of the
-        honey.
+        Te bloki naprawdę mnie męczą! \r\r
+        Napraw błędy, aby zebrać cały nektar.
+      2-3 Bee Debugging 10_markdown_instruction: "Jestem zakręcony tą łamigłówką!
+        \\r \\r \nNapraw błędy, aby zebrać cały nektar i zrobić miód."
       2-3 Bee Debugging 2_markdown_instruction: |-
-        Can you find the problem here?\r
-        \r
-        Fix
-        the error(s) to collect all of the nectar.
-      2-3 Bee Debugging 3_markdown_instruction: |-
-        Ooh, this one stings!\r
-        \r
-        Fix
-        the error(s) to collect all of the nectar.
+        Czy mógłbyś znaleźć tutaj problem? \r \r
+        Napraw błędy, aby zebrać cały nektar.
+      2-3 Bee Debugging 3_markdown_instruction: "Oh, ta pszczoła żądli! \\r \\r \nNapraw
+        błędy, aby zebrać cały nektar."
       2-3 Bee Debugging 5_markdown_instruction: |-
         That flower looks tasty! \r
         \r
@@ -379,46 +296,33 @@
         the error(s) to collect all of the nectar.  \r
         You can now use both run and
         step.
-      2-3 Bee Debugging 6_markdown_instruction: |-
-        What a sweet challenge!\r
-        \r
-        Fix
-        the error(s) to collect all of the nectar.
+      2-3 Bee Debugging 6_markdown_instruction: "Jakie słodkie wyzwanie! \\r \\r \nNapraw
+        błędy, aby zebrać cały nektar."
       2-3 Bee Debugging 9_markdown_instruction: Pszczółka cierpliwa w tej łamigłówce!
         \r \r Musisz naprawić kilka miejsc w tym programie, aby zebrać cały nektar
         i zrobić miód.
-      2-3 Bee Debugging Assessment 1_markdown_instruction: |-
-        **Assessment:**  Now
-        it's time to show what you know!\r
-        \r
-        Fix the error(s) to collect all of
-        the nectar and make all of the honey.
+      2-3 Bee Debugging Assessment 1_markdown_instruction: "**Sprawdzian:** Czas,
+        byś pokazał, co wiesz! \\r \\r \nNapraw błędy, aby zebrać cały nektar i zrobić
+        miód."
       2-3 Bee Functions 1_markdown_instruction: |-
-        Functions are blocks of code that
-        perform a task.  \r
-        \r
-        Use the `get 2 nectar` function to collect the nectar
-        from each flower.
+        Funkcje są blokami kodu, które wykonują określone zadanie. \r\r
+        Użyj funkcji `get 2 nectar`, aby zebrać nektar z każdego kwiatka.
       2-3 Bee Functions 10_markdown_instruction: |-
         Purple flowers change between either
         1 or 0 nectar each time you run the puzzle.   \r
         \r
         Create a function that
         collects nectar only from purple flowers that have nectar.
-      2-3 Bee Functions 2_markdown_instruction: |-
-        Functions are blocks of code that
-        perform a task.  \r
-        \r
-        Use the `get 5` function to get 5 nectars at a time.
+      2-3 Bee Functions 2_markdown_instruction: "Funkcje są blokami kodu, które wykonują
+        określone zadanie. \\r \\r \nUżyj funkcji `get 5`, aby pobrać 5 nektarów."
       2-3 Bee Functions 4_markdown_instruction: |-
         The `move and get nectar` function
         turns the bee, collects nectar, and then returns the bee to where it started.  \r
         \r
         Use
         the function to collect all of the nectar.
-      2-3 Bee Functions Assessment 1_markdown_instruction: |-
-        **Assessment:** Use the
-        given function to collect nectar from each flower.
+      2-3 Bee Functions Assessment 1_markdown_instruction: "**Sprawdzian:** Użyj danej
+        funkcji, aby zebrać nektar z każdego kwiatka."
       2-3 Bee Functions Assessment 2_markdown_instruction: |-
         **Assessment:** Create
         a function to turn, move forward and make 3 honey, then return the bee to
@@ -428,40 +332,24 @@
         \r
         Collect
         nectar from each of the flowers using the fewest blocks possible.
-      2-3 Bee Loops 13_markdown_instruction: |-
-        **Assessment:** Collect all of the
-        nectar using the fewest blocks possible.
-      2-3 Bee Loops 3A_markdown_instruction: |-
-        Use a `repeat` loop to collect all
-        of the nectar.
-      2-3 Bee Loops 3B_markdown_instruction: |-
-        Now use the `repeat` block to collect
-        all of the nectar and make all of the honey.
-      2-3 Bee Loops 4_markdown_instruction: |-
-        Such a busy bee!\r
-        \r
-        Help Bee collect
-        all of the nectar and make all of the honey with the fewest blocks possible.
-      2-3 Bee Loops 4A_markdown_instruction: |-
-        How many times can loops help you in
-        this puzzle?  \r
-        \r
-        Loops are your friend! Use a few of them to complete
-        this puzzle with the fewest blocks possible.
-      2-3 Bee Loops 5_markdown_instruction: |-
-        The shape of this path is different
-        from the others. \r
-        \r
-        Can you collect all of the nectar using as few blocks
-        as possible?
+      2-3 Bee Loops 13_markdown_instruction: "**Sprawdzian:** Zbierz cały nektar używając
+        możliwie najmniejszej liczby bloków."
+      2-3 Bee Loops 3A_markdown_instruction: Użyj pętli `repeat`, by zebrać cały nektar.
+      2-3 Bee Loops 3B_markdown_instruction: Teraz użyj bloku `repeat`, aby zebrać
+        cały nektar i zrobić cały miód.
+      2-3 Bee Loops 4_markdown_instruction: "Jaka pracowita pszczółka! \\r \\r \nPomóż
+        pszczółce zebrać cały nektar i zrobić cały miód z wykorzystaniem możliwie
+        najmniejszej liczby bloków."
+      2-3 Bee Loops 4A_markdown_instruction: "Ile razy pętle mogą ci pomóc w tej łamigłówce?
+        \\r \\r \nPętle to twój przyjaciel! Użyj kilka z nich, aby ukończyć tę łamigłówkę
+        za pomocą możliwie najmniejszej liczby bloków."
+      2-3 Bee Loops 5_markdown_instruction: "Kształt tej drogi jest inny od pozostałych.
+        \\r \\r \nCzy potrafisz zebrać cały nektar używając możliwie najmniejszej
+        liczby bloków?"
       2-3 Bee Loops 7_markdown_instruction: |-
-        What a beautiful field of flowers!   \r
-        \r
-        Help
-        the bee visit each one.\r
-        \r
-        Can you find a way to do it with fewer than
-        7 blocks?
+        Jakie piękne pole kwiatów! \r \r
+        Pomóż pszczółce odwiedzić każdy z nich. \r \r
+        Czy potrafisz to zrobić za pomocą mniej niż 7 bloków?
       2-3 Bee Loops 8_markdown_instruction: |-
         These purple flowers have different
         amount of nectar each time you run the puzzle. \r
@@ -589,11 +477,9 @@
         How many times do you need to
         loop this to draw a half circle?
       4-5 Artist Patterns 12_markdown_instruction: |-
-        If you create another loop like
-        this one, but turn left instead of right, what happens? \r
+        Co się stanie, jeśli zrobisz kolejną pętlę jak ta, ale zamiast skręcać w prawo, skręcisz w lewo?\r
         \r
-        Can you repeat
-        all of that to draw this wave?
+        Czy możesz to wszystko powtórzyć, aby narysować tę falę?
       4-5 Artist Patterns 13_markdown_instruction: |-
         Now let's loop that whole thing
         four times to create this picture frame. Watch out for the corners - you can't
@@ -719,16 +605,14 @@
         \r
         Fix the blocks to get
         all of the nectar from the flower each time.
-      4-5 Bee Debugging Assessment 1_markdown_instruction: |-
-        **Assessment:** Fix the
-        code.
-      4-5 Bee Nested Loops 2_markdown_instruction: "Collect all of the nectar from\neach
-        flower. \\r\n\\r\nUse a nested loop. "
-      4-5 Bee Nested Loops 4_markdown_instruction: "Collect all of the nectar from\neach
-        flower and make honey at the honeycomb. \\r\n\\r\nUse a nested loop. "
-      4-5 Bee Nested Loops Assessment 1_markdown_instruction: |-
-        **Assessment:** Collect
-        all of the nectar and make all of the honey using loops.
+      4-5 Bee Debugging Assessment 1_markdown_instruction: "**Sprawdzian:** Popraw
+        kod."
+      4-5 Bee Nested Loops 2_markdown_instruction: "Zbierz cały nektar z każdego kwiatka.
+        \\r\\r\nUżyj zagnieżdżonej pętli. "
+      4-5 Bee Nested Loops 4_markdown_instruction: "Zbierz cały nektar z każdego kwiatka
+        i zrób miód na plastrze miodu. \\r\\r\nUżyj zagnieżdżonej pętli. "
+      4-5 Bee Nested Loops Assessment 1_markdown_instruction: "**Sprawdzian:** Zbierz
+        cały nektar i zrób cały miód używając pętli."
       4-5 Maze 7_markdown_instruction: |-
         Get the zombie to the sunflower quickly!  \r
         \r
@@ -738,108 +622,69 @@
         Umożliwia on powtarzanie poleceń, aż zombie dotrze do słonecznika.  \r \r
         Użyj tego bloku, aby rozwiązać tę łamigłówkę z możliwie najmniejszą liczbą
         bloków.
-      4-5 Maze Assessment 1_markdown_instruction: |-
-        **Assessment:** Get to the sunflower
-        using as few blocks as possible.
-      4-5 Maze Conditionals 1_markdown_instruction: |-
-        Use the `repeat until` block
-        to get the zombie to the sunflower.
+      4-5 Maze Assessment 1_markdown_instruction: "**Sprawdzian:** Dojdź do słonecznika
+        używając możliwie najmniejszej liczby bloków."
+      4-5 Maze Conditionals 1_markdown_instruction: Użyj bloku `repeat until`, by
+        doprowadzić zombie do słonecznika.
       4-5 Maze Conditionals 10_markdown_instruction: |-
-        Can you add just 3 blocks to
-        help the zombie solve a more complex maze? \r
-        \r
-        If you do it right, he
-        can walk any curvy path no matter the length!
-      4-5 Maze Conditionals 2_markdown_instruction: |-
-        Use the `repeat until` block
-        to get the zombie to the sunflower.
+        Czy mógłbyś dodać tylko 3 bloki, aby pomóc zombie rozwiązać bardziej złożoną łamigłówkę? \r \r
+        Jeśli zrobisz to właściwie, to będzie mógł spacerować jakąkolwiek drogą, bez względu na jej długość!
+      4-5 Maze Conditionals 2_markdown_instruction: Użyj bloku `repeat until`, by
+        doprowadzić zombie do słonecznika.
       4-5 Maze Conditionals 3_markdown_instruction: |
-        Use the `if` block to help me
-        decide when to turn. \r
+        Użyj bloku `if`, aby mi pomóc zadecydować, kiedy skręcać. \r
       4-5 Maze Conditionals 4_markdown_instruction: |-
-        Ok, solve this one just like
-        the last puzzle, but you need to remember how you used the `if` and `repeat
-        until` blocks together.
-      4-5 Maze Conditionals 5_markdown_instruction: |-
-        "Me want sunflower!"  \r
-        \r
-        Use
-        an `if` statement to get the zombie to the sunflower with the fewest number
-        of blocks.
-      4-5 Maze Conditionals 6_markdown_instruction: |-
-        "Eat sunflower!"\r
-        \r
-        Use
-        an `if` statement to get the zombie to the sunflower with the fewest number
-        of blocks.
-      4-5 Maze Conditionals 7_markdown_instruction: |-
-        The solution to this puzzle
-        isn't very different, but watch out for the chompers!
-      4-5 Maze Conditionals 8_markdown_instruction: |-
-        The `if/else` block checks a
-        condition, and then does one thing OR another. \r
-        \r
-        Use this new block
-        to get me to the sunflower.
-      4-5 Maze Conditionals 9_markdown_instruction: |-
-        One more practice puzzle with
-        the `if/else` block!\r
-        \r
-        Trace it with your finger to see if you can figure
-        it out on your first try.
-      4-5 Maze Conditionals Assessment 1_markdown_instruction: |-
-        **Assessment:** Use
-        a `repeat until` and an `if/else` block to get me to the sunflower in as few
-        blocks as possible.
+        Ok, rozwiąż tę łamigłówkę podobnie, jak poprzednią, ale musisz pamiętać, jak użyłeś bloków `if` i `repeat
+        until` razem.
+      4-5 Maze Conditionals 5_markdown_instruction: Potrzeba mi słonecznika! \r \r
+        Użyj bloku `if`, aby doprowadzić zombie do słonecznika z wykorzystaniem najmniejszej
+        liczby bloków.
+      4-5 Maze Conditionals 6_markdown_instruction: '"Jeść słonecznik!" \r \r Użyj
+        bloku `if`, aby doprowadzić zombie do słonecznika z wykorzystaniem najmniejszej
+        liczby bloków.'
+      4-5 Maze Conditionals 7_markdown_instruction: Rozwiązanie tej łamigłówki nie
+        jest bardzo trudne, ale uważaj na chrupaczy!
+      4-5 Maze Conditionals 8_markdown_instruction: Blok `if/else` sprawdza warunek,
+        a następnie wykonuje jedno ALBO drugie. \r \r Użyj tego nowego bloku, aby
+        doprowadzić mnie do słonecznika.
+      4-5 Maze Conditionals 9_markdown_instruction: Jeszcze jedno ćwiczenie z wykorzystaniem
+        bloku `if/else`. \r \r Wytycz drogę palcem i spróbuj wykonać je za pierwszym
+        razem.
+      4-5 Maze Conditionals Assessment 1_markdown_instruction: "**Sprawdzian:** Użyj
+        bloków `repeat until` i `if/else`, aby doprowadzić mnie do słonecznika za
+        pomocą możliwie najmniejszej liczby bloków."
       4-5 Nested Loops 1_markdown_instruction: |
-        Complete the code to draw these triangles.  The
-        first one is done for you.  Hint:  3 triangles in a 360 degree rotation.\r
-        \r
-      4-5 Nested Loops 11_markdown_instruction: |-
-        Can you draw these 10 squares of
-        this sidewalk using a nested loop? \r
-        \r
-        Each square is 30 pixels.
+        Uzupełnij kod do rysowania tych trójkątów.  Pierwszy z nich już wykonano dla Ciebie.  Wskazówka: 3 trójkąty w rotacji 360 stopni.\r\r
+      4-5 Nested Loops 11_markdown_instruction: Czy potrafisz narysować te 10 kwadratów
+        na tym chodniku przy użyciu zagnieżdżonej pętli? \r\rKażdy kwadrat ma bok
+        długości 30 pikseli.
       4-5 Nested Loops 12_markdown_instruction: |-
         Can you draw these 36 triangles
         using a nested loop?
-      4-5 Nested Loops 2_markdown_instruction: "Now nest this loop inside another\nloop
-        to draw 10 triangles.  \\r\nThis is called a \"nested\" loop.  "
-      4-5 Nested Loops 3_markdown_instruction: |-
-        Create a sun by nesting the starter
-        code in another loop.\r
-        \r
-        To get this cool design with a hollow center,
-        you'll need to jump forward by the length of the triangle before turning.
-      4-5 Nested Loops 5_markdown_instruction: Loop the given code to create a windmill.
-      4-5 Nested Loops 6_markdown_instruction: |-
-        Can you draw a hexagon by looping
-        the triangle code?
-      4-5 Nested Loops 7_markdown_instruction: |-
-        Loop this design 10 times. \r
-        \r
-        How
-        much do you have to turn each time you loop?
+      4-5 Nested Loops 2_markdown_instruction: 'Teraz umieść tę pętlę wewnątrz innej
+        pętli, by narysować 10 trójkątów. \r To się nazywa "zagnieżdżona" pętla.  '
+      4-5 Nested Loops 3_markdown_instruction: Utwórz słońce zagnieżdżając początkowy
+        kod w innej pętli. \r \r Aby utworzyć ten fajny wzór z pustym środkiem, będziesz
+        musiał skoczyć do przodu na długość boku trójkąta przed wykonaniem obrotu.
+      4-5 Nested Loops 5_markdown_instruction: Umieść w pętli dany kod, aby utworzyć
+        wiatrak.
+      4-5 Nested Loops 6_markdown_instruction: Czy potrafisz narysować sześciokąt
+        powtarzając kod trójkąta?
+      4-5 Nested Loops 7_markdown_instruction: Powtórz ten wzór 10 razy. \r \r O ile
+        trzeba skręcić w każdym obrocie pętli?
       4-5 Nested Loops 8_markdown_instruction: "Loop this shape 6 times. \\r\n\\r\nHow\nmuch
         do you have to turn each time you loop? "
-      4-5 Nested Loops 9_markdown_instruction: |-
-        Draw the teeth in the alligator's
-        mouth!
-      4-5 Nested Loops Assessment 1_markdown_instruction: |-
-        **Assessment:** Use a
-        nested loop to complete the design.
-      4-5 While Loops 1_markdown_instruction: |-
-        Move me to the hole and fill it with
-        two shovelfuls of dirt, using the `fill` block.
+      4-5 Nested Loops 9_markdown_instruction: Narysuj zęby w paszczy aligatora!
+      4-5 Nested Loops Assessment 1_markdown_instruction: "**Sprawdzian:** Użyj zagnieżdżonej
+        pętli, aby ukończyć wzór."
+      4-5 While Loops 1_markdown_instruction: Doprowadź mnie do otworu i wypełnij
+        go z dwoma szufelkami śmieci przy użyciu bloku `fill`.
       4-5 While Loops 2_markdown_instruction: |-
         Move me to the pile of dirt and remove
         it with 5 shovel scoops, using the `remove 1` block.
-      4-5 While Loops 3_markdown_instruction: |-
-        Use as few blocks as possible to complete
-        this puzzle!  \r
-        \r
-        Move me to the pile and remove all the dirt, then move
-        to the hole and fill it completely.
+      4-5 While Loops 3_markdown_instruction: Użyj możliwie jak najmniej bloków, aby
+        ukończyć tę łamigłówkę! \r \r. Doprowadź mnie do sterty śmieci i usuń je,
+        a następnie przemieść się do otworu i wypełnij go całkowicie.
       4-5 While Loops 4_markdown_instruction: "Wow, look at that! \\r\n\\r\nI don't\nknow
         how many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
         keeps using the `fill` block until the ground is even?  "
@@ -854,9 +699,8 @@
         Using a word problem from your existing
         curriculum or elswhere, complete the Design Recipe and program a function.
         Use a Design Recipe form from your workbook or download a copy [here]('https://code.org/curriculum/algebra/docs/worksheets/design_recipe.pdf').
-      Alien Defender_markdown_instruction: |-
-        **Project Idea**: Make a defender game
-        in Play Lab!
+      Alien Defender_markdown_instruction: "**Idea projektu**: Stwórz grę obronną
+        w Play Lab!"
       AllTheThings Applab - Turtle move with button_markdown_instruction: |-
         # Please
         sign in to test applab levels (By design, applab levels only work if signed
@@ -9715,13 +9559,13 @@
         learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
         PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png) to send it to your Projects Gallery.
-      CSD U3 L9 Freeplay_markdown_instruction: |
+      CSD U3 L9 Freeplay_markdown_instruction: |-
         # Free Play\r
         \r
         Use what you've
         learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
         PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.\r
+        PM.png) to send it to your Projects Gallery.
       CSD U3 Mouse Input Bee 1_markdown_instruction: |
         <img src="https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif"
         style="float:right">\r
@@ -10219,22 +10063,17 @@
         _Notice that the `console.log()` block is now in
         the Variables drawer and the `randomNumber()` block is in the Math drawer._
       CSD U3 Random background_markdown_instruction: |-
-        # Background\r
+        #Tło\r
         \r
-        Sometimes
-        you'll want to fill the entire screen with a color.  For that, you can use
-        `background`.  It covers everything on the screen with the color you choose.\r
+        Czasami będziesz chciał wypełnić kolorem cały ekran. Aby to zrobić, możesz wykorzystać `background`. Pokrywa ono wszystko na ekranie kolorem, który wybierzesz.\r
         \r
         #
-        Do This\r
+        Wykonaj to\r
         \r
-        * Run the code to see `background` work.\r
-        * Change the background
-        from yellow to orange.\r
+        *Uruchom kod aby zobaczyć, czy funkcja `background` działa.\r
+        * Zmień tło z koloru żółtego na pomarańczowy.\r
         \r
-        *Challenge: There is a purple square that is
-        covered up by the background.  Can you change the order of the code so you
-        can see both the purple and blue squares?*
+        *Zadanie: Fioletowy kwadrat jest w całości zakryty tłem. Czy możesz zmień kolejność kodu, aby zobaczyć jednocześnie fioletowy i niebieski kwadrat?*
       CSD U3 Random background2_markdown_instruction: |-
         <img src="https://images.code.org/a68cfd23a13b6bdeef91dc9fd584f657-image-1491332601738.03.04
         PM.png" style="float:right;height:150px">\r
@@ -12195,7 +12034,7 @@
         the opposite direction\r
         \r
         [//]: #(https://images.code.org/63b04e63fc4bc21700b64ef3d6c6b8b7-image-1471475653020.png)
-      CSD U3 abstraction decelerateX_markdown_instruction: |
+      CSD U3 abstraction decelerateX_markdown_instruction: |-
         # Slowing Things Down\r
         \r
         Now
@@ -12214,7 +12053,7 @@
         do you think will happen when the car finally stops?\r
         \r
         *Challenge: Add
-        code that makes the car slow down only if his velocityX is greater than 0.*\r
+        code that makes the car slow down only if his velocityX is greater than 0.*
       CSD U3 abstraction decelerateY_markdown_instruction: |-
         # Simulating Gravity\r
         \r
@@ -15147,10 +14986,13 @@
         the font size\r
         * Choose a color you like for the title\r
         \r
-      CSD U5 Amazon Data Video_markdown_instruction: |-
-        Watch this video to learn how
-        this problem is solved by Amazon. As you watch think about what data is being
-        collected and where it's coming from.
+      CSD U5 Amazon Data Video_markdown_instruction: Obejrzyj ten film, aby nauczyć
+        się jak z tym problemem radzi sobie Amazon. Podczas oglądania filmu, pomyśl
+        jak zbierane są dane oraz skąd pochodzą.
+      CSD U5 Netflix Data Video_markdown_instruction: |-
+        Watch this video to learn
+        how this problem is solved by Netflix. As you watch think about what data
+        is being collected and where it's coming from.
       CSD U5 Pizza 2_markdown_instruction: |-
         # Pizza Party\r
         \r
@@ -15342,9 +15184,12 @@
         # Decoding multiple numbers\r
         \r
         Here's
-        a widget that can calculate numbers up to to eight bits. (If you have a shorter
-        number, you can just leave the extra bits at the left off.) You can use it
-        to find the values of the two world records below.\r
+        a widget that can calculate numbers up to to eight bits. You can use it to
+        find the values of the two world records below.\r
+        \r
+        Don't forget to make
+        sure that the "1" bit is always the right most bit.  If you have extra bits
+        on the left side of the widget, just keep them turned off.\r
         \r
         ![](https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14
         PM.png)\r
@@ -15536,6 +15381,42 @@
         Write
         your answer in the box below, then run the code and see what happens.
       CSD U6 Catch the Mouse_markdown_instruction: Embedded Prediction
+      CSD U6 Driver pt 2_markdown_instruction: |-
+        # Limiting Turn\r
+        \r
+        You might
+        have noticed that it was really hard to steer the car unless your hands were
+        moving slowly and carefully. This is because the number that `roll` returns
+        can be a really big number depending on how much the accelerometer is being
+        turned. Remember, `roll` has a range from -90 to 90.\r
+        \r
+        # Do This\r
+        \r
+        Find
+        a way to make `roll` a smaller number while still using it to steer the car.
+        You have all of the math operators available to you for this.\r
+        \r
+        _Challenge_:
+        Can you keep the car from going off the side of the screen?
+      CSD U6 Driver pt1_markdown_instruction: |-
+        # Steering Wheel\r
+        \r
+        This game
+        is similar to the goalie game that you just played, except a little different.
+        Use your board as a steering wheel for the car (moving side to side). You
+        have to get to the checkered flag at while avoiding the red flags along the
+        way!\r
+        \r
+        \r
+        # Do This\r
+        \r
+        * Make the car move down the screen while
+        the program runs.\r
+        * Give the car the ability to steer side to side.\r
+        \r
+        Think
+        back to the programs you've made up until this point, how can you update
+        these values?
       CSD U6 LED all_markdown_instruction: |-
         # Multi-function Light\r
         \r
@@ -15592,6 +15473,23 @@
         \r
         Use the `.color()` command to set each of
         the color LEDs to a different color.
+      CSD U6 Pedometer_markdown_instruction: |-
+        # Pedometer Jog\r
+        \r
+        The `change`
+        event is useful, but it's also really sensitive to movement. `shake` is like
+        `change`, and is triggered when the board is shaken, but it has a higher threshold
+        for changes in movement before triggering the event. \r
+        \r
+        You're going
+        to use this event to make a pedometer.\r
+        \r
+        # Do This\r
+        \r
+        * Use the counter
+        pattern to move the jogger every time the board is shaken.\r
+        * Make sure
+        the jogger moves by 5 steps every time.
       CSD U6 add LED button_markdown_instruction: |-
         # Using Events\r
         \r
@@ -15630,7 +15528,7 @@
         # Change Event\r
         \r
         The data
-        even is fine if you don't mind your code running constantly, but sometimes
+        event is fine if you don't mind your code running constantly, but sometimes
         that's not the most efficient solution to your problem. The sensor "change"
         event only fires if the sensor value has changed since the last reading, which
         can make sure your program isn't running code when it's not necessary.\r
@@ -15657,7 +15555,7 @@
         the sound reading using the "data" event.\r
         \r
         * Create an event handler
-        to respond to light sensor's "data" event\r
+        to respond to sound sensor's "data" event\r
         * Move the existing code into
         your event handler
       CSD U6 analog light_markdown_instruction: |-
@@ -15872,6 +15770,71 @@
         *
         Run your program, moving the slider to see whether the LED speed changes automatically.
       CSD U6 checkbox_markdown_instruction: Predict Level
+      CSD U6 circuit createButton scratch_markdown_instruction: |-
+        <div style="float:
+        right" markdown="1">\r
+        \r
+        ![expandable](https://images.code.org/14e51a17975b1eb03a852621f9cd8cac-image-1516048913406.png)\r
+        \r
+        </div>\r
+        \r
+        #
+        Using createButton\r
+        \r
+        Just like `createLed()` lets us create LED objects
+        that can be used like the built-in `led`, you can use `createButton()` to
+        create button objects that can be used just like the built-in `buttonL` and
+        `buttonR` objects.\r
+        \r
+        # Do This\r
+        \r
+        * Connect your button circuit to
+        a new pin, or add a new button circuit.\r
+        * Using the `createButton()` block,
+        create a new button object on your chosen pin.\r
+        * Add a `onBoardEvent()`
+        block, and set it to respond to your new button's "down" event.\r
+        * Program
+        your event handler so that when your button is pressed, the color LEDs turn
+        on.\r
+        \r
+        _Hint: The button object that you create won't be in the `onBoardEvent()`
+        dropdown, so you'll need to type the name you've chosen in. Make sure not
+        to use quotation marks!_
+      CSD U6 circuit createButton_markdown_instruction: |-
+        <div style="float: right"
+        markdown="1">\r
+        \r
+        ![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/button_alligator.png)\r
+        \r
+        </div>\r
+        \r
+        #
+        Make Your Own Buttons\r
+        \r
+        Similar to LEDs, buttons are a really simple
+        circuit that you can add to your board pretty easily. Like LEDs, buttons should
+        be wired from a numbered pin to a ground pin, but unlike LEDs, a button circuit
+        should be disconnected in the middle. When you connect the circuit, it will
+        produce a button press event.\r
+        \r
+        # Do This\r
+        \r
+        * Grab two wires.\r
+        *
+        Connect one wire to an open numbered pin.\r
+        * Connect the second wire to
+        a ground pin.\r
+        * Update line 2 so that it's referencing the pin you chose.\r
+        *
+        Run the provided code.\r
+        * With the program running, touch the unconnected
+        ends of both wires together to "press" the button.\r
+        \r
+        _Tip: A button
+        circuit can be made with many different kinds of materials, as long as they
+        are electrically conductive. Try making buttons with foil, silverware, or
+        paper clips._
       CSD U6 circuit createLed_markdown_instruction: |-
         # Creating Board Objects\r
         \r
@@ -15903,41 +15866,62 @@
         * Drag out
         an `led.blink()` block below the comment `// Blink myLed`.\r
         * Replace the
-        text `led` with `myLed`.\\r
+        text `led` with `myLed`.\r
         * Test your code.
-      CSD U6 circuit multi led_markdown_instruction: |-
-        # Creating Board Objects\r
+      CSD U6 circuit mix_markdown_instruction: |-
+        # Mix and Match Circuits\r
         \r
-        You
-        might have noticed that the new blocks we're using are in a different toolbox
-        drawer. The **Circuit** drawer contains all of the board objects that are
-        built into the Circuit Playground, but when you start wiring your own circuits
-        the Maker Toolkit no longer knows where everything is.\r
-        \r
-        The new **Maker**
-        drawer contains general purpose commands instead of ones that are customized
-        for the Circuit Playground. In addition to the `pinMode()` and `digitalWrite()`
-        commands you've seen, it includes commands to create new objects on the board
-        that can be programmed in the same way as the blocks in the **Circuit** drawer.
-        The `var myLed = createLed()` command, for example, creates a new LED object
-        that behaves just like the `led` blocks you've been using.\r
+        Using
+        the 8 numbered pins around the edge of the board, you can combine as many
+        buttons and LEDs as you can fit, using a separate numbered pin for each circuit
+        and a shared ground pin for all them.\r
         \r
         # Do This\r
         \r
-        Now
-        that you're creating new board objects that we don't have blocks for, you'll
-        need to work in text mode. You can still drag out blocks that you're familiar
-        with from the **Circuit** drawer, you'll just need to change the name of
-        the object.\r
+        Disconnect any
+        circuits currently attached to your board.\r
         \r
-        * Keep your LED wired just as it was before (connected
-        to pin 2)\r
-        * Make sure you're in text mode, not block mode.\r
-        * Drag out
-        an `led.blink()` block below the comment `// Blink myLed`.\r
-        * Replace the
-        text `led` with `myLed`.\\r
-        * Test your code.
+        * Create a button circuit
+        connected to pin 0.\r
+        * Create an LED circuit connected to pin 2.\r
+        * Create
+        a new button object for your button circuit with `createButton()`.\r
+        * Create
+        a new LED object for your LED circuit with `createLed()`\r
+        * Add event handlers
+        to turn on your new LED when your button is pressed down, and turn it back
+        off when the button is released.\r
+        \r
+        _Tip: When sharing the ground pin
+        with multiple circuits it can be useful to connect a larger conductive object
+        (like a bare wire) to the pin and then connect all of your circuits to that
+        larger object._
+      CSD U6 circuit multi led_markdown_instruction: |-
+        # Wiring Multiple LEDs\r
+        \r
+        Using
+        the `createLed()` block you can connect and control as many LEDs as your board
+        has room for. Each LED needs to be connected to a separate numbered pin, but
+        they can all share the same ground pin.\r
+        \r
+        # Do This\r
+        \r
+        Leave the
+        current LED connected to pin 2, but add another one to a numbered pin of your
+        choice. For your new LED:\r
+        \r
+        * Add a `var myLed = createLed()` block.\r
+        *
+        Replace the variable label `myLed` with a unique label.\r
+        * Make sure you're
+        in text mode, not block mode.\r
+        * Add an `led.blink()` command.\r
+        * Replace
+        the text `led` with your new LED variable.\r
+        * Test your code.\r
+        \r
+        _Challenge:
+        Try adding a third LED and make all three LED blink at different intervals._
       CSD U6 circuit pinMode_markdown_instruction: |-
         # Wire a Circuit\r
         \r
@@ -15951,7 +15935,7 @@
         pin 2 to the positive (+) side of an LED\r
         * Using another wire, connect
         the negative (-) side of the LED to a ground (GND) pin (it doesn't matter
-        which run)\r
+        which one)\r
         * Run this program to test your circuit. If it worked, your
         LED should turn on.\r
         \r
@@ -15966,6 +15950,106 @@
         numbered pins! Look for **#13** on your board to see which circuit is connected
         to pin 13, then read through this code and predict what will happen when the
         program is run.
+      CSD U6 circuit project program_markdown_instruction: |-
+        # Program Your Prototype\r
+        \r
+        Using
+        your planning guide, program your prototype to simulate basic functionality.\r
+        \r
+        #
+        Do This\r
+        \r
+        Your physical prototype should by now include one of the buttons
+        wired to pin 0, and one of your location indicator LEDs connected to pin 2.
+        That's enough to model how the prototype should work, you just need program
+        the button to turn on and off the LED.\r
+        \r
+        * Create your LED and button
+        objects using the appropriate `create` commands.\r
+        * Program event handlers
+        to respond to your button going down and up, which turn on and off the LED.
+      CSD U6 circuit project template_markdown_instruction: |-
+        # Prototyping Circuit
+        Project Template
+      CSD U6 circuit smart bike blinker buttons_markdown_instruction: |-
+        # Smart Bike
+        - Blinker Controls\r
+        \r
+        With your turn signal LEDs hooked up, you just need
+        to program some buttons to control them. You may want to place buttons elsewhere
+        on the bike to make controlling your turn signals easier, but for now we'll
+        just use the built in left and right buttons.\r
+        \r
+        # Do This\r
+        \r
+        * Add
+        event handlers to blink the left turn signal when the left button is pressed.\r
+        *
+        Add event handlers to blink the right turn signal when the right button is
+        pressed.\r
+        * Test your code!
+      CSD U6 circuit smart bike blinkers_markdown_instruction: "# Smart Bike - Blinkers\\r\n\\r\nUsing\nyour
+        planning guide, wire up the two LEDs that will serve as the blinkers.\\r\n\\r\n#\nDo
+        This\\r\n\\r\nUsing alligator clips, wire, or other conductive material,\nconnect
+        two LEDs to your board, one for each turn signal blinker.\\r\n\\r\n*\nHook
+        up each LED to a different numbered pin on the board.\\r\n* Use the `createLed()`\nblock
+        to create an LED object for each blinker.\\r\n\\r\n_Tip: Make your wiring\neasier
+        by considering how your blinkers will be mounted when selecting a pin\nto
+        use._ "
+      CSD U6 circuit smart bike buzzer_markdown_instruction: |-
+        # Smart Bike - Buzzer\r
+        \r
+        Now
+        that we know how to add more buttons, you can add a button to control the
+        smart bike's horn.\r
+        \r
+        # Do This\r
+        \r
+        Using the button that you've
+        already wired the the board, find a good spot to place your horn button. Then:\r
+        \r
+        *
+        Create a button object for your horn button\r
+        * Add an event handler to buzz
+        when button is pressed\r
+        \r
+        _Tip: If you want your horn to play a song,
+        you'll need to make sure that it only plays when the button is first pressed,
+        not continually._
+      CSD U6 circuit smart bike final_markdown_instruction: |-
+        # Smart Bike - Final
+        Touches\r
+        \r
+        At this point your smart bike should have all of it's basic
+        functionality in place. Now is your chance to add any finishing touches.\r
+        \r
+        #
+        Do This\r
+        \r
+        You may want to divide and conquer at this point, allowing
+        some members of your group to focus on the physical aspects of the prototype
+        while others work on improving the code. As this is a prototype, don't worry
+        about making everything perfect, but do try to ensure that the prototype communicates
+        your design well enough to test and get feedback.
+      CSD U6 circuit smart bike light_markdown_instruction: |-
+        # Smart Bike - Headlight\r
+        \r
+        The
+        last part of the smart bike plan that we need to figure out is the automatic
+        headlight.\r
+        \r
+        # Do This\r
+        \r
+        First you'll need to decide what to use
+        for your headlight. You could add another LED circuit, or perhaps you can
+        find a way to mount the board that allows for using the color LEDs as a headlight.
+        Once you've figured out the physical layout of your lights, add code to your
+        program that turns on and off the headlight based on how light or dark it
+        is.\r
+        \r
+        _Hint: If you're using the build in color LEDs, you might need
+        to protect the light sensor to make sure that it's responding to the ambient
+        light level and not the light from the LEDs._
       CSD U6 colorLED on_markdown_instruction: |-
         <img src="//curriculum.code.org/images/circuitplayground/colorLedonoff.gif"
         style="float: right; margin: 10px;">\r
@@ -16130,25 +16214,14 @@
         # Pitch\r
         \r
         This program
-        lights the LEDs depending on if you tilt the board forward or back. If you
-        tilt the board forward, the LEDs in the front should light. If you tilt the
-        board back, the LEDs in the back should light.\r
+        lights the top LEDs (0 and 9) when you tilt the board forward. If you tilt
+        the board back, the LEDs at the bottom (4 and 5) should light.\r
         \r
-        Right now, the only
-        LEDs that light up are the two near the USB port (LEDs 0 and 9) when you tilt
-        the board forward.\r
-        \r
-        \r
-        # Do This\r
-        \r
-        * Use the board's pitch to
-        make LEDs 4 and 5 light up when you tilt the board back.\r
-        * Run your code
-        and test it a few times.\r
-        \r
-        Remember: When pitch is a positive number,
-        it means the board is tilting backward. When pitch is a negative number, the
-        board is tilting forward.
+        # Do
+        This\r
+        * Use the board's pitch to make LEDs 4 and 5 light up when you tilt
+        the board back.\r
+        * Run your code and test it a few times.
       CSD U6 emoji race demo_markdown_instruction: |-
         # Emoji Race!\r
         \r
@@ -16690,24 +16763,15 @@
         when it is clicked, but nothing seems to be working. Fix the code so that
         the program works as expected.
       CSD U6 getProperty var_markdown_instruction: |-
-        # getProperty and Variables\r
+        # Pobieranie właściwości oraz zmiennych\r
         \r
-        You
-        might have noticed in the last level that we used a _variable_ to store the
-        values collected with `getProperty()`. Using variables in this way allows
-        us to both get the properties of design elements and to use those values later
-        on.\r
+        W poprzednim poziomie mogłeś zauważyć, że użyliśmy _variable_ aby przechowywać wartości zebrane poprzez `getProperty()`. Wykorzystanie zmiennych w ten sposób pozwoliło nam pobrać właściwości elementów i wykorzystać je później.\r
         \r
-        # Do This\r
+        #Zrób\r
         \r
-        This program should get the text typed into "name_input"
-        when the Submit button is clicked, and then use that to set the text property
-        of "name_output". It does this by storing the text in a variable called
-        `name`, but it's not finished.\r
+        Program powinien pobierać tekst wpisany w "name_input", po naciśnięciu przycisku Submit. Następnie ustawić go jako właściwość "name_output". Wykonuje to poprzez przechowywanie tekstu w zmiennej `name`, ale to nie koniec.\r
         \r
-        Using a `getProperty` block, assign
-        the `name` variable to the text property of "name_input". Test your program
-        by typing in your name and clicking "Submit."
+        Korzystając z bloku `getProperty()` przypisz zmienną `name` do właściwości tekstu "name_input". Przetestuj swój program wpisując swoje imię i klikając "Zapisz."
       CSD U6 getProperty xy challenge_markdown_instruction: |-
         # Challenge: Make it
         Your Own\r
@@ -16761,6 +16825,22 @@
         * Read the program to understand how it is supposed to work.\r
         *
         Find and correct the bugs so that the program works properly.
+      CSD U6 goalie_markdown_instruction: |-
+        # Updating Values with Data\r
+        \r
+        In
+        this program the goalie trying to block the soccer ball. If he blocks the
+        ball, he gets a point. If he misses, he loses a point. This game almost works,
+        but neither the ball nor the goalie can move right now. You're going to fix
+        this.\r
+        \r
+        \r
+        # Do This\r
+        \r
+        * Use the counter pattern to update the
+        ball's `x` value.\r
+        * Update the goalie's `y` position by the pitch of
+        the board.
       CSD U6 interval predict_markdown_instruction: |-
         # Interval\r
         \r
@@ -16971,6 +17051,23 @@
          * What parameters
         should these functions have?
       CSD U6 params starchaser template_markdown_instruction: Template Level.
+      CSD U6 plane shake_markdown_instruction: |-
+        # Shaking Things Up\r
+        \r
+        Like the
+        `change` event, the `shake` event updates every time the board moves. However,
+        `shake` is a lot less sensitive than `change`. In order to actually trigger
+        it, the board has to be shaken, not just slightly moved.\r
+        \r
+        # Do This\r
+        \r
+        The
+        airplane needs to be shaken in order to take off.\r
+        \r
+        * Use the `shake`
+        event move the airplane\r
+        * Update the airplane's x and y coordinates in
+        order to move it.
       CSD U6 predict LED button_markdown_instruction: Embedded Prediction
       CSD U6 random array notes_markdown_instruction: |-
         # Random Song Generator\r
@@ -17132,8 +17229,28 @@
         that's keeping the duration from being set correctly.\r
         \t* (Hint: Hover
         over the yellow triangles for clues as to what might be wrong with the code.)
-      CSD U6 stillness game predict code_markdown_instruction: "# Change with the\nAccelerometer\\r\n\\r\nJust
-        like the sensors, the accelerometer has a change\nevent. "
+      CSD U6 stillness game predict code_markdown_instruction: |-
+        # Change with the
+        Accelerometer\r
+        \r
+        This program uses the change event to create the ultimate
+        steadiness test. Every time the board detects a change in movement, the movement
+        meter increased by 1. When the movement meter reaches 100, the alarm will
+        sound. Your goal is to pass your board to another person without setting off
+        the alarm.\r
+        \r
+        \r
+        # Do This\r
+        This program has some bugs in it. To fix
+        these, add code that will:\r
+        \r
+        * Increase the `movement` variable each
+        time the `change` event is triggered.\r
+        * Display the current value of `movement`
+        under the movement meter text.\r
+        \r
+        Get a partner and test your game to
+        make sure it works!
       CSD U6 stillness game predict_markdown_instruction: |
         # Accelerometer Events\r
         \r
@@ -24396,6 +24513,51 @@
         numbers**.\r
         * **Run the program** and confirm all values in your object
         appear as you expected.
+      CSP U5 AP Practice Choose the Algorithm_markdown_instruction: |
+        # AP Practice
+        - Identify the Algorithm\r
+        \r
+        One component of the **AP Create Performance
+        Task** is selecting an algorithm that you developed.\r
+        \r
+        <div style="width:
+        80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:
+        serif; font-size: 12pt">\r
+        \r
+        <b>3. Program Code</b>\r
+        <ul>\r
+        <li>Mark
+        with an <b>oval</b> the segment of program code that implements the algorithm
+        you created for your program that integrates other algorithms and integrates
+        mathematical and/or logical concepts.</li>\r
+        </ul>\r
+        </div>\r
+        <br>\r
+        Here's
+        the scoring guide for this question\r
+        <div style="magin:auto">\r
+        \t<img
+        src="https://images.code.org/3240bf9a7f457b8590cf28c4dd4d5418-image-1516294760622.58.32
+        AM.png">\r
+            <img src="https://images.code.org/4edd1b265ad8932a7d6b9294e5622106-image-1516294762983.58.44
+        AM.png">\r
+        </div>\r
+        \r
+        \r
+        # Choose the Student-Developed Algorithm\r
+        \r
+        The
+        program code below is taken from the Color Sleuth activity you just completed.\r
+        \r
+        ![](https://images.code.org/4708875d71e4dc7cd06e2c1e472d8fdc-image-1516311447828.png)\r
+        \r
+        **Write
+        which of the ovals (A, B, C, or D) is placed around code that best meets the
+        criteria as a student-developed algorithm.**\r
+        \r
+        **Explain your answer
+        using the criteria in the scoring guide.**\r
+        \r
       CSPPD PD goals_markdown_instruction: |
         ***Now that you've learned more about
         the CSP Professional Development, let's consider your goals***
@@ -32413,7 +32575,7 @@
 
         After you figure out the answer, if your prediction was off, try to understand
         why.  Where was your misunderstanding?\r
-      CSPU5_U3L19 - write var and string with same name v2_markdown_instruction: |
+      CSPU5_U3L19 - write var and string with same name v2_markdown_instruction: |-
         #
         Debugging Variables\r
         <img src="https://images.code.org/1363b1799cd0f70e383664b4c6359ef4-image-1445479475849.png"
@@ -32443,7 +32605,7 @@
         and fix the problems**\r
         \r
         **GOAL:** Make the app display what's shown
-        at right by only adding or removing quotation marks from the code given.\r
+        at right by only adding or removing quotation marks from the code given.
       CSPU5_U3L23 Chatbot Conditionals 1_markdown_instruction: |
         # Adding Intelligence
         Using Conditionals\r
@@ -32906,7 +33068,7 @@
           * click\r
           * mousemove\r
           *
-        movedown\r
+        mousedown\r
           * mouseup\r
           * mouseover\r
         \r
@@ -32920,7 +33082,6 @@
         \r
         Once you've have played a little bit, click Finish
         to move on.\r
-        \r
       CSPU5_predict_applab_onEventWithWrongID_markdown_instruction: |
         # Debugging
         Event-Driven Programs: IDs\r
@@ -36804,6 +36965,8 @@
         toppings)\r
         - Create a function that allows you to add a coupon code for
         a 30% discount
+      MC Agent Freeplay_markdown_instruction: 'Czas na zabawę: Użyj kodu Agenta, aby
+        ułatwić sobie eksplorację tego świata.'
       MC_2017_Ryan_02_markdown_instruction: |-
         Code like this can be made even shorter
         using loops!  \r
@@ -37092,10 +37255,8 @@
         get nectar if there's a flower.   \r
         Be careful, it can change!
       Mike Test Bee Conditionals 2_markdown_instruction: |-
-        **Assessment:** Collect
-        all of the nectar.  \r
-        Be careful not to try to collect nectar from a purple
-        flower if it doesn't have any.
+        **Sprawdzian:** Zbierz cały nektar. \r
+        Uważaj, aby nie próbować zbierać nektaru z fioletowego kwiatka, jeśli go nie ma.
       MikeTest1_markdown_instruction: Markdown
       Modular Arithmetic_markdown_instruction: |-
         # Modular Arithmetic\r
@@ -37118,13 +37279,10 @@
         Can you draw a square
         that is 100 pixels in length, using a repeat loop?\r
         \r
-      NEW Course 4 Artist Functions 10.1_markdown_instruction: |-
-        Use the functions
-        from the previous puzzles to draw this pattern.
+      NEW Course 4 Artist Functions 10.1_markdown_instruction: Użyj funkcji z poprzednich
+        łamigłówek, aby narysować ten wzór.
       NEW Course 4 Artist Functions 10_markdown_instruction: |
-        Click "edit" to fill
-        out the blocks in the function definition to make a 40 pixel square.\r
-        \r
+        Kliknij na "edytuj", by wypełnić bloki w definicji funkcji, aby utworzyć kwadrat boku 40 pikseli.\r\r
       NEW Course 4 Artist Functions 11_markdown_instruction: |-
         Now we want to create
         a new function called `draw a line of squares` that draws six squares all
@@ -37137,9 +37295,8 @@
         *Note: See that we've
         changed the pen to be much thinner. Click "edit" on the `draw a square 20`
         function to see how!*
-      NEW Course 4 Artist Functions 12_markdown_instruction: |-
-        Use the `draw a line
-        of squares` function from the last puzzle to draw this pattern.
+      NEW Course 4 Artist Functions 12_markdown_instruction: Użyj funkcji `draw a
+        line of squares` z poprzedniej łamigłówki, by narysować ten wzór.
       NEW Course 4 Artist Functions 13_markdown_instruction: |-
         Can you draw a star
         shape using the `draw a line of squares` function?  \r
@@ -37150,10 +37307,8 @@
         It's free-play time!
         Draw anything you like!
       NEW Course 4 Artist Functions 2_markdown_instruction: |-
-        Can you draw 3 squares
-        20 pixels apart from one another? \r
-        \r
-        Each square is 100 pixels in size.
+        Czy mógłbyś narysować 3 kwadraty oddalone od siebie o 20 pikseli? \r\r
+        Bok każdego kwadratu wynosi 100 pikseli.
       NEW Course 4 Artist Functions 3_markdown_instruction: |-
         Here is a new type of
         Block. It is called a `function` block. Click "edit" then fill it with the
@@ -37161,8 +37316,8 @@
         \r
         When you're done
         editing the function, click "Close" to go back to your program.
-      NEW Course 4 Artist Functions 4_markdown_instruction: "Use the `draw a square`\nfunction
-        to draw this pattern. "
+      NEW Course 4 Artist Functions 4_markdown_instruction: 'Użyj funkcji `draw a
+        square` do narysowania tego wzoru. '
       NEW Course 4 Artist Functions 5_markdown_instruction: |
         How did the `draw a
         square` block know what commands to run? Click on "edit" in the `draw a
@@ -37581,9 +37736,8 @@
         Every house starts with a wall.
         Build the first part of your house by putting the `place` and `move forward`
         commands inside the repeat loop.
-      Overworld Shear Sheep_markdown_instruction: |-
-        Sheep-shearing time! Use the `shear`
-        command to gather wool from both sheep.
+      Overworld Shear Sheep_markdown_instruction: Czas strzyżenia owiec! Użyj polecenia
+        `shear`, aby zebrać wełnę z obu owiec.
       PDAlg 13-16 Sam Extension Puzzle_markdown_instruction: |-
         Add a second parameter
         to `onscreen?` for Sam's y coordinate and update the function so it keeps
@@ -38491,6 +38645,24 @@
         \r
         How many times
         will the for loop below run?
+      Revisiting the Counter Pattern_markdown_instruction: |-
+        Today you’re going to
+        learn how to use and create **functions**.\r
+        \r
+        Creating a function lets
+        you make your own blocks! There are two parts to a function: \r
+        \r
+        Making
+        a newly named block that has all of the code you want to run inside of it.
+        \r
+        -xml of function definition- \r
+        \r
+        The single green block itself that
+        you use, or call, to run the function you created.\r
+        -xml of function call-\r
+        \r
+        Prepare
+        to get familiar with functions, learn how to edit them, and create your own!
       Robot Doodle_markdown_instruction: |-
         **Project Idea:** Create a picture of something
         familiar from the real world. This requires persistence and planning!
@@ -41196,6 +41368,24 @@
         is inserted into the text in place of the pattern.\r
         \r
         <img src="http://code.org/api/hour/begin_text_compression.png">
+      The Accelerometer_markdown_instruction: |-
+        Today you’re going to learn how to
+        use and create **functions**.\r
+        \r
+        Creating a function lets you make your
+        own blocks! There are two parts to a function: \r
+        \r
+        Making a newly named
+        block that has all of the code you want to run inside of it. \r
+        -xml of function
+        definition- \r
+        \r
+        The single green block itself that you use, or call, to
+        run the function you created.\r
+        -xml of function call-\r
+        \r
+        Prepare to
+        get familiar with functions, learn how to edit them, and create your own!
       'The Internet: IP Addresses & DNS_markdown_instruction': |-
         [Video guide and
         questions](https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing)
@@ -59735,35 +59925,36 @@
         ---\r
         \r
         **Response
-        A:** *Facial recognition technology stores data mapping a user's face. A
-        privacy concern for this technology is that it could be used by businesses
-        and governments to identify people as they walk around in their daily lives.*\r
+        A:** *Facial recognition technology stores data mapping a user's face, for
+        example to unlock a phone. A privacy concern for this technology is that governments
+        could force technology companies to turn over this data allowing them to passively
+        and continuously monitor the movements of its citizens without their knowledge
+        or consent.*\r
         \r
-        **Response
-        B:** *Software that tracks soccer player movements on the field can be used
-        to generate new statistics that help value contributions of individual players.
-        A data concern is that this information may be used to justify getting rid
-        of less productive players.*\r
+        **Response B:** *Software that tracks soccer player movements
+        on the field can be used to generate new statistics that help value contributions
+        of individual players. A data concern is that this information may be used
+        to justify getting rid of less productive players.*\r
         \r
-        **Response C:** *Social networks allow
-        users to share vast amounts of private information about their lives. A security
-        concern of this technology is that this publicly available data may enable
-        stalkers or other criminals to identify potential targets.*\r
+        **Response C:**
+        *Social networks allow users to share vast amounts of private information
+        about their lives. A security concern of this technology is that this publicly
+        available data may enable stalkers or other criminals to identify potential
+        targets.*\r
         \r
-        **Response
-        D:** *Self-driving vehicles store vast amounts of information about their
-        location and the world around them. A data concern for the trucking industry
-        is that all of this information could be coordinated to make trucks more efficient
-        causing many people who drive trucks for a living to lose their jobs.*\r
+        **Response D:** *Self-driving vehicles store vast amounts
+        of information about their location and the world around them. A data concern
+        for the trucking industry is that all of this information could be coordinated
+        to make trucks more efficient causing many people who drive trucks for a living
+        to lose their jobs.*\r
         \r
         ---\r
         \r
-        Here's
-        the scoring guide for this part of the question\r
+        Here's the scoring guide for this
+        part of the question\r
         \r
         <div style="magin:auto">\r
-        \t<img
-        src="https://images.code.org/6ff69107762c5afb27661625600d2bfb-image-1510609916491.51.42
+        \t<img src="https://images.code.org/6ff69107762c5afb27661625600d2bfb-image-1510609916491.51.42
         PM.png">\r
         </div>\r
         \r
@@ -60310,7 +60501,7 @@
         Each row is worth one point that either can or cannot be awarded.
         **Explain why you would or would NOT award the point for Row 7 based on the
         criteria given above.**
-      U5 AP Practice Create Abstraction Color Sleuth_markdown_instruction: |
+      U5 AP Practice Create Abstraction Color Sleuth_markdown_instruction: |-
         # AP
         Practice - Create PT - Abstraction\r
         \r
@@ -60338,7 +60529,7 @@
         \r
         <div style="magin:auto">\r
         \t<img
-        src="https://images.code.org/723a551269e14884f76f1d4330560d36-image-1515652835118.40.21
+        src="https://images.code.org/d994f69c99550a352de5565ee4d74f54-image-1516226857132.04.40
         PM.png">\r
         </div>\r
         \r
@@ -60351,15 +60542,14 @@
         \r
         <br>\r
         \r
-        The selection
-        above is taken from the Color Sleuth activity you just completed. The selection
-        above **would earn credit** as an abstraction. What you need to do is write
-        response 2d describing the abstraction and how it manages complexity.\r
+        The code
+        selection above is taken from the Color Sleuth activity you just completed.
+        This selection **would count as an abstraction** on the Create PT, but to
+        earn Row 8 **you will need to describe how this abstraction manages complexity**.
         \r
-        **Write
-        response 2d describing the abstraction above. Use the writing prompt and scoring
-        guidelines as a guide.**\r
         \r
+        **Write response 2d describing the abstraction above. Use the writing
+        prompt and scoring guidelines as a guide.**
       U5 AP Practice Create Algorithm Color Sleuth_markdown_instruction: |-
         # AP Practice
         - Create PT - Algorithm\r
@@ -60397,21 +60587,23 @@
         \r
         # Write the Response\r
         \r
-        ![](https://images.code.org/f3de97fa2fd3d01d25809d06407a7cc4-image-1515524889060.34.33
-        AM.png)\r
+        <img src="https://images.code.org/e841e427e8020f075c8718631bf0cfb3-image-1516228295228.31.22
+        PM.png" style="float:right">\r
         \r
-        <div style="clear:both"></div>\r
+        This code selection is taken from the
+        Color Sleuth activity you just completed and **would count as an algorithm**
+        on the Create PT.\r
         \r
-        <br>\r
+        **Write response 2c describing the algorithm above.
+        Use the writing prompt and scoring guidelines as a guide.** Here are the main
+        points to make sure you include.\r
         \r
-        The selection
-        above is taken from the Color Sleuth activity you just completed. The selection
-        above **would earn credit** as an algorithm. What you need to do is write
-        response 2c describing the algorithm, its sub-algorithms, and how it works.\r
-        \r
-        **Write
-        response 2c describing the algorithm above. Use the writing prompt and scoring
-        guidelines as a guide.**
+        * Name your main algorithm and each
+        of the two sub-algorithms\r
+        * Explain *what* each sub-algorithm does and
+        *how* the code of each actually works\r
+        * Explain how the main algorithm
+        works and how it helps achieve the purpose of the program
       U5 AP Practice Create Algorithm How vs What_markdown_instruction: |-
         # AP Practice
         - Create PT - Process\r
@@ -60514,8 +60706,11 @@
         \r
         Each
         row is worth one point that either can or cannot be awarded. **Explain why
-        you would or would not award the points for Row 2 and Row 3 based on the criteria
-        given above**
+        you would or would not award the points for Row 2 and Row 3**.\r
+        \r
+        Hint:
+        Pay particular attention to the last column of the scoring guidelines and
+        the checklists entitled "Do NOT award a point if..."
       U5 Booleans_markdown_instruction: |-
         ### Points to pay attention to:\r
         \r
@@ -62007,7 +62202,7 @@
         Is this a legal expression?  `10 > 25`?
       U5-AP-Algorithm-Does-It-Count_markdown_instruction: |-
         # AP Practice - Algorithm
-        - Grade the Response\r
+        - Score the Response\r
         \r
         One component of the **AP Create Performance Task**
         is selecting and describing an algorithm that you developed.\r
@@ -62040,7 +62235,7 @@
         PM.png">\r
         </div>\r
         \r
-        # Grade the Response\r
+        # Score the Response\r
         \r
         **Written Response:**
         *"My algorithm controls the log-in for the app. This piece of my program
@@ -62055,6 +62250,47 @@
         \r
         **Explain why you would or would not
         award the point for Row 5 based on the criteria given above**
+      U5-AP-Practice-Choose-The-Algorithm_markdown_instruction: |-
+        # AP Practice -
+        Identify the Abstraction\r
+        \r
+        One component of the **AP Create Performance
+        Task** is selecting an abstraction that you developed.\r
+        \r
+        <div style="width:
+        80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:
+        serif; font-size: 12pt">\r
+        \r
+        <b>3. Program Code</b>\r
+        <ul>\r
+        <li>Mark
+        with a <b>rectangle</b> the segment of program code that represents an abstraction
+        you developed.</li>\r
+        </ul>\r
+        </div>\r
+        <br>\r
+        \r
+        Here's the scoring
+        guide for this question\r
+        \r
+        <div style="magin:auto">\r
+        \t<img src="https://images.code.org/341764b27f16965cf27680e20c893a23-image-1508190677805.50.59
+        PM.png">\r
+        </div>\r
+        \r
+        # Choose the Student-Created Abstraction\r
+        \r
+        The
+        program code below is from a program a student developed. \r
+        \r
+        ![](https://images.code.org/86d48cfc2c9c81551aa059281e9c62f3-image-1508189804595.34.48
+        PM.png)\r
+        \r
+        **Write which of the rectangles (A, B, C, or D) is placed around
+        a student-developed abstraction.**\r
+        \r
+        **Then explain your answer using
+        the criteria in the scoring guide.**
       U5-AP-Practice-FR-manage-complexity_markdown_instruction: |-
         # AP Practice -
         Performance Task Response\r
@@ -62854,6 +63090,33 @@
         \r
         \r
         \r
+      Using Accelerometer Events_markdown_instruction: |-
+        Today you’re going to learn
+        how to use and create **functions**.\r
+        \r
+        Creating a function lets you make
+        your own blocks! There are two parts to a function: \r
+        \r
+        Making a newly
+        named block that has all of the code you want to run inside of it. \r
+        -xml
+        of function definition- \r
+        \r
+        The single green block itself that you use,
+        or call, to run the function you created.\r
+        -xml of function call-\r
+        \r
+        Prepare
+        to get familiar with functions, learn how to edit them, and create your own!
+      Valentine_artist_01_markdown_instruction: |-
+        Help the artist finish his llama
+        heart. See if you can make hearts out of other animals too!
+      Valentine_playlab_01_markdown_instruction: |-
+        Kiki the Soccer Girl wants to make
+        sure her friends are loved on Valentine's Day! Program Kiki (Actor 1) to
+        move left and right when the left and right arrows are pressed. When Kiki
+        is clicked, she should throw hearts towards her friends. How many friends
+        does she have to send love to to win the game?
       Validator_markdown_instruction: |-
         # Software Accessibility: Validator\r
         \r
@@ -63752,7 +64015,7 @@
         \r
         </tr>\r
         </table>\r
-      beeDebugVideo1_markdown_instruction: Collect all of the nectar.
+      beeDebugVideo1_markdown_instruction: Zbierz cały nektar.
       collector example_markdown_instruction: |-
         Collect all the gold using the `collect`
         block:\r
@@ -63780,8 +64043,8 @@
         Collect one pile of treasure to pass this
         level.
       course1_artist_loops_challenge2_markdown_instruction: |-
-        Let's play a game!
-        Draw as many X's as you can! Can you get 3 in a row?
+        Zagrajmy w grę!
+        Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
       course1_artist_loops_challenge3_markdown_instruction: |-
         **Tweet!**\r
         \r
@@ -63793,22 +64056,17 @@
       course1_maze_debugging_challenge1_markdown_instruction: |-
         Debug this level.
         Remove the extra blocks, and add the missing blocks. Get the bird to the pig!
-      course1_maze_debugging_challenge2_markdown_instruction: |-
-        Debug this level.
-        These are the right blocks, but they're in the wrong order!
+      course1_maze_debugging_challenge2_markdown_instruction: Debuguj ten poziom.
+        Te bloki są poprawne, ale w złej kolejności!
       course1_maze_seq_challenge2_markdown_instruction: |-
         You can only move up to
         four times in each direction. Can you find a path before you run out of blocks?
       course1_playlab_events_challenge1_markdown_instruction: |-
-        *"Where are my friends
-        hiding? In this game, clicking on me will show my friend Olive the cat!"*\r
+        *"Gdzie ukrywają się moi przyjaciele? W tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!"*\r
         \r
-        Clicking
-        Olive will make Robin appear! Can you write code to show the rest of the characters
-        too?\r
+        Klikając na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę postaci?\r
         \r
-        In this puzzle, make sure to click for hints! The hints will help
-        you do this project step-by-step!\r
+        W tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi pomogą Ci zrobić ten projekt krok po kroku!\r
         \r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
@@ -63844,10 +64102,9 @@
         - The second inner loop should make a hexagon.\r
         - The
         third inner loop should make a square.
-      course2_artist_prog_challenge1_markdown_instruction: |-
-        Draw rooms for each of
-        the animals. There are many different ways to solve this puzzle, so have some
-        fun!
+      course2_artist_prog_challenge1_markdown_instruction: Narysuj pomieszczenia dla
+        każdego ze zwierząt. Istnieje wiele sposobów, aby rozwiązać tę zagadkę, więc
+        pobaw się!
       course2_artist_prog_challenge2_markdown_instruction: |-
         *Help me paint the yellow
         lines on this road!*
@@ -63861,30 +64118,23 @@
         nectar and make all the honey. You can collect all of the nectar in one flower
         by using the `while nectar > 0` loop.
       course2_collector_loops_challenge2_markdown_instruction: |-
-        *"Let's hunt for
-        treasure - using loops!"*\r
-        \r
-        Help the collector by debugging this code.
-        Get all of the treasure!
+        *Zapolujmy na skarb - używając pętli!*\r\r
+        Pomóż zbieraczowi poprzez debugowanie tego kodu. Zbierz cały skarb!
       course2_collector_prog_challenge1_markdown_instruction: |-
         Look carefully! Can
         you collect all **10** pieces of treasure?
-      course2_collector_prog_challenge2_markdown_instruction: |-
-        There are **20** pieces
-        of treasure in this cave. Collect at least half to finish the challenge!
-      course2_harvester_loops_challenge1_markdown_instruction: |-
-        Collect all of the
-        corn.
+      course2_collector_prog_challenge2_markdown_instruction: W tej jaskini znajduje
+        się **20** części skarbu. Zbierz przynajmniej połowę aby ukończyć to wyzwanie!
+      course2_harvester_loops_challenge1_markdown_instruction: Zbierz całą kukurydzę.
       course2_harvester_loops_challenge2_markdown_instruction: |-
         Collect all of the
         lettuce. Avoid the trees and fields!
       course2_maze_programming_challenge1_markdown_instruction: |-
         *"The pig is hiding!
         Can you help me find a way around?"*
-      course2_maze_programming_challenge2_markdown_instruction: |-
-        Sometimes there
-        is more than one way to solve the same problem. Sometimes it's faster to
-        go backwards than it is to go forwards!
+      course2_maze_programming_challenge2_markdown_instruction: Czasami jest więcej
+        sposobów na rozwiązanie tego samego problemu. Czasami szybciej jest się cofnąć
+        niż iść na przód!
       course2_maze_seq_challenge2_markdown_instruction: |-
         You can only move up to
         four times in each direction. Can you find a path before you run out of blocks?
@@ -63937,10 +64187,9 @@
             <title
         name="YPOS">???</title>\r
             </block></xml>
-      course3_bee_debugging_challenge1_markdown_instruction: |-
-        Watch how the bee gets
-        the nectar. Can you use the same kind of pattern to help the bee make all
-        of the honey?
+      course3_bee_debugging_challenge1_markdown_instruction: Patrz jak pszczoły zbierają
+        nektar. Czy możesz wykorzystać ten sam wzorzec, aby pomóc pszczołom zrobić
+        cały miód?
       course3_bee_functions_challenge1_markdown_instruction: |-
         You are on your own
         for this challenge.  This could "bee" harder than it looks!
@@ -63951,9 +64200,8 @@
         Create a new function
         to collect all the nectar and honey while there is a path ahead. Use it to
         complete the puzzle!
-      course3_bee_functions_challenge4_markdown_instruction: |-
-        Use everything you
-        have learned to complete this puzzle!
+      course3_bee_functions_challenge4_markdown_instruction: Wykorzystaj wszystko
+        czego się nauczyłeś, aby rozwiązać tą zagadkę!
       course3_collector_debugging_challenge2_markdown_instruction: |-
         Are you an expert
         of nested loops? Use what you have learned so far to collect all of the treasure!
@@ -64220,10 +64468,9 @@
         How can Laurel get all five
         piles of treasure using only one <xml><block type="maze_moveEast"/></xml>
         block?
-      courseA_collector_loops_challenge1_markdown_instruction: |-
-        *"Can you help me
-        spot some bugs? I know which way I want to go, but I'm not sure how many
-        steps to take."*
+      courseA_collector_loops_challenge1_markdown_instruction: '*"Czy możesz mi pomóc
+        znaleźć błędy? Wiem którą drogą chcę iść, ale nie jestem pewien ile kroków
+        muszę zrobić."*'
       courseA_collector_preLoops1_markdown_instruction: |-
         This is Laurel the Adventurer!
         \r
@@ -64328,15 +64575,11 @@
         Add events to have Jorge move
         up and down when the up arrow and down arrow buttons are pressed.
       courseA_playlab_events_challenge1_markdown_instruction: |-
-        *"Where are my friends
-        hiding? In this game, clicking on me will show my friend Olive the cat!"*\r
+        *"Gdzie ukrywają się moi przyjaciele? W tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!"*\r
         \r
-        Clicking
-        Olive will make Robin appear! Can you write code to show the rest of the characters
-        too?\r
+        Klikając na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę postaci?\r
         \r
-        In this puzzle, make sure to click for hints! The hints will help
-        you do this project step-by-step!\r
+        W tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi pomogą Ci zrobić ten projekt krok po kroku!\r
         \r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
@@ -64390,9 +64633,8 @@
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
-      courseB_artist_loops6_markdown_instruction: |-
-        Behind the bushes there is a beautiful
-        vine full of flowers.  Can you climb the vine and see where it goes?
+      courseB_artist_loops6_markdown_instruction: Za krzakami jest piękna winorośl
+        pełna kwiatów. Czy możesz wspiąć się na winorośl i zobaczyć dokąd zmierza?
       courseB_artist_loops7_markdown_instruction: |-
         **Challenge:**  It's a hidden
         garden! Let's walk around.
@@ -64400,8 +64642,8 @@
         *"It's time to toss
         the dice! Can you help me draw these?"*
       courseB_artist_loops_challenge2_markdown_instruction: |-
-        Let's play a game!
-        Draw as many X's as you can! Can you get 3 in a row?
+        Zagrajmy w grę!
+        Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
       courseB_collector_loops1_markdown_instruction: |-
         **Free Play:** This is Laurel
         the Adventurer! Move her around and get as much treasure as you can.\r
@@ -64420,34 +64662,31 @@
         How can Laurel get all five
         piles of treasure using only one <xml><block type="maze_moveEast"/></xml>
         block?
-      courseB_collector_loops3_predict1_markdown_instruction: |-
-        How can Laurel collect
-        all five piles of gold using only one `E -->` block?
+      courseB_collector_loops3_predict1_markdown_instruction: W jaki sposób Laurel
+        może zebrać wszystkie pięć stosów złota używając tylko bloku `E-->`?
       courseB_collector_loops_challenge2a_markdown_instruction: |-
         *"Let's get the
         treasure!"*\r
         \r
         Help Laurel get at least **5** pieces of treasure to finish
         this puzzle.
-      courseB_collector_prog3_markdown_instruction: |-
-        How can Laurel collect all five
-        piles of gold using only one `E -->` block?
-      courseB_maze_seq3_markdown_instruction: '*"Fix the code to get me to the pig!"*'
+      courseB_collector_prog3_markdown_instruction: W jaki sposób Laurel może zebrać
+        wszystkie pięć stosów złota używając tylko bloku `E-->`?
+      courseB_maze_seq3_markdown_instruction: '*"Napraw kod, aby doprowadzić mnie
+        do świnki!"*'
       courseB_maze_seq9_markdown_instruction: |-
         **Challenge:** Move around the TNT
         to get the bird to the pig.
-      courseB_maze_seq9_challenge1_markdown_instruction: |-
-        *Where's that pig hiding
-        now?*
+      courseB_maze_seq9_challenge1_markdown_instruction: "*Gdzie ukrywa się teraz
+        świnia?*"
       courseB_maze_seqCold_markdown_instruction: |-
         **Challenge:** Debug this level
         by adding blocks to get the bird to the pig!
       courseB_maze_seq_challenge1_markdown_instruction: |-
         You can only move up to
         four times in each direction. Can you find a path before you run out of blocks?
-      courseB_maze_seq_challenge2_markdown_instruction: |-
-        Debug this level. These
-        are the right blocks, but they're in the wrong order!
+      courseB_maze_seq_challenge2_markdown_instruction: Debuguj ten poziom. To są
+        poprawne bloki, ale w złej kolejności!
       courseB_playLab_events1_markdown_instruction: |-
         This game is called "Play Lab".  \r
         \r
@@ -64478,17 +64717,12 @@
         Visit
         all of the goals, then run into the dragon to pass the level.
       courseB_playlab_events_challenge1_markdown_instruction: |
-        It's time for the
-        Great Animal Race! Make the animals move down when you press `▼`. \r
+        Czas na Wielki Wyścig Zwierząt! Zrób aby zwierzęta po naciśnięciu `▼` poruszały się na dół.\r
         \r
-        Who
-        will run the fastest?\r
+        Kto będzie biegł szybciej?\r
       courseB_playlab_events_challenge2_markdown_instruction: |-
-        Let's make the animals
-        disappear when you click on them! Try playing with the dog now, then help
-        the other animals join in the fun.\r
-        You can also add sounds and score points
-        to create a game of Animal Tag!\r
+        Zrób tak, aby zwierzęta po kliknięciu na nie znikły! Pobaw się teraz z psem, potem pomóż innym zwierzętom dołączyć do gry/\r
+        Możesz również dodać dźwięk oraz punktację aby stworzyć grę Animal Tag!\r
         \r
         ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
       courseB_starWars_prog1_markdown_instruction: |-
@@ -64653,11 +64887,10 @@
         Now, put this code into  a
         `repeat` block and loop it **6** times.\r
         - Notice that we have added a 60
-        degree turn at the end of each loop to get a full rotation.
-      courseC_artist_loopsPrePre1a_markdown_instruction: |-
-        Use the `jump to 200 over
-        200 down` block to get the artist to the center of the play area, then draw
-        a line 50 pixels long with the `move forward 50 pixels` block.
+        degree turn at the end of the looped code to get a full rotation.
+      courseC_artist_loopsPrePre1a_markdown_instruction: Użyj bloku `jump to 200 over
+        200 down`aby artysta znalazł się w centrum obszaru gry, następnie narysuj
+        linię o długości 50 pikseli za pomocą bloku `move forward 50 pixels`.
       courseC_artist_loopsTemplateA_markdown_instruction: "Use the `jump to 200 over\n200
         down` to get the artist to the center of the play area, then use the `draw\na
         sticker` block to make a bird appear. "
@@ -64714,10 +64947,9 @@
       courseC_artist_prog_challenge1-doghouse_markdown_instruction: |-
         Let's build
         a dog house for Jorge!
-      courseC_artist_prog_challenge1_markdown_instruction: |-
-        Draw rooms for each of
-        the animals. There are many different ways to solve this puzzle, so have some
-        fun! Each square has a side length of 100 pixels.
+      courseC_artist_prog_challenge1_markdown_instruction: Narysuj pomieszczenia dla
+        każdego ze zwierząt. Istnieje wiele sposobów, aby rozwiązać tą zagadkę, więc
+        zabaw się! Każdy kwadrat ma bok o długości 100 pikseli.
       courseC_artist_prog_challenge2_markdown_instruction: |-
         *Help me paint the yellow
         lines on this road!*
@@ -64779,7 +65011,7 @@
       courseC_collector_prog8_markdown_instruction: |-
         *"Keep up the good work! Help
         me collect all of the treasure."*
-      courseC_collector_prog9_markdown_instruction: '*"Let''s get all of the coins!"*'
+      courseC_collector_prog9_markdown_instruction: '*"Zbierzmy cały skarb!"*'
       courseC_collector_progA_markdown_instruction: |-
         Help Laurel collect all of the
         treasure.
@@ -64791,9 +65023,8 @@
       courseC_collector_prog_challenge1_markdown_instruction: |-
         Look carefully! Can
         you collect all **10** pieces of treasure?
-      courseC_collector_prog_challenge2_markdown_instruction: |-
-        There are 20 pieces
-        of treasure in this cave. Collect at least **10** to finish the challenge!
+      courseC_collector_prog_challenge2_markdown_instruction: W tej jaskini znajduje
+        się 20 części skarbu. Zbierz przynajmniej **10** aby ukończyć to wyzwanie!
       courseC_flappy_events1_markdown_instruction: |-
         Attach the `flap a normal amount`
         block to the `when click` event, then press "Run".   \r
@@ -64851,19 +65082,16 @@
         See
         if you can still score a point after making Flappy flap either a smaller or
         larger amount each time you click.
-      courseC_flappy_events7_markdown_instruction: |-
-        Next, try changing the scene
-        by attaching a block to the `when run` event.
+      courseC_flappy_events7_markdown_instruction: Następnie, spróbuj zmienić scenę
+        dołączając blok do wydarzenia `when run`.
       courseC_flappy_events8_markdown_instruction: |-
         You can set the background under
         any event, not just when the game starts. \r
         \r
         Try setting a **random**
         scene when other events happen...for example, when passing an obstacle.
-      courseC_flappy_events9_markdown_instruction: |-
-        To mix things up, instead of
-        ending the game when Flappy hits an obstacle, try setting the score back to
-        0.
+      courseC_flappy_events9_markdown_instruction: Po uderzeniu w przeszkodę, zamiast
+        kończyć grę, spróbuj ustawić wynik z powrotem na 0.
       courseC_harvester_loops1_markdown_instruction: |-
         Loops can be used to repeat
         more than moves.  \r
@@ -64902,23 +65130,18 @@
       courseC_harvester_loops9_markdown_instruction: |-
         Collect all of the corn and
         all of the pumpkins.
-      courseC_harvester_loops_challenge1_markdown_instruction: |-
-        Collect all of the
-        corn.
-      courseC_harvester_loops_challenge1a_markdown_instruction: |-
-        Collect all of the
-        corn.
+      courseC_harvester_loops_challenge1_markdown_instruction: Zbierz całą kukurydzę.
+      courseC_harvester_loops_challenge1a_markdown_instruction: Zbierz całą kukurydzę.
       courseC_harvester_loops_challenge2_markdown_instruction: |-
         Collect all of the
         lettuce. Avoid the trees and fields!
-      courseC_harvester_loops_forVid_markdown_instruction: |-
-        Collect all of the corn
-        and all of the pumpkins.
+      courseC_harvester_loops_forVid_markdown_instruction: Zbierz całą kukurydzę o
+        wszystkie dynie.
       courseC_maze_debugging1_markdown_instruction: |-
         This code isn't quite right!  \r
         \r
         Fix
-        the code to help get Scrat get to the acorn.
+        the code to help Scrat get to the acorn.
       courseC_maze_debugging3_markdown_instruction: |-
         Something is not quite right.
         \r
@@ -64968,9 +65191,8 @@
       courseC_maze_loops8_markdown_instruction: |-
         **Challenge:** Combine ideas from
         the last few puzzles to complete this level.
-      courseC_maze_loops_challenge2_markdown_instruction: |-
-        Let's hunt for treasure
-        - using loops! Help the collector by debugging this code. Get all of the treasure!
+      courseC_maze_loops_challenge2_markdown_instruction: Zapolujmy na skarb - używając
+        pętel! Pomóż zbieraczowi poprzez debugowanie tego kodu. Zbierz cały skarb!
       courseC_maze_programming1_markdown_instruction: |-
         For this puzzle, drag all
         of the blocks together and click "Run" to watch it go!
@@ -65019,10 +65241,9 @@
       courseC_maze_programming_challenge1_markdown_instruction: |-
         *"The pig is hiding!
         Can you help me find a way around?"*
-      courseC_maze_programming_challenge2_markdown_instruction: |-
-        Sometimes there
-        is more than one way to solve the same problem. Sometimes it's faster to
-        go backwards than it is to go forwards!
+      courseC_maze_programming_challenge2_markdown_instruction: Czasami jest więcej
+        sposobów na rozwiązanie tego samego problemu. Czasami szybciej jest się cofnąć
+        niż iść na przód!
       courseC_playLab_embedded_markdown_instruction: |-
         Here's a game for you to play!
         To win, get the penguin to run into the octopus. Use your arrow keys to move
@@ -65498,12 +65719,10 @@
         is a flower, the bee only needs to get nectar *once*. If there is a honeycomb,
         the bee only needs to make honey *once*.
       courseD_bee_conditionals7_predict2_markdown_instruction: |-
-        Sometimes a cloud
-        covers a flower, sometimes it covers a honeycomb! \r
+        Czasami chmura zakrywa kwiatka, a czasami zakrywa plaster miodu! \r
         \r
-        Use the `if/else`
-        block to collect nectar at flowers and make honey at honeycomb. Remember:
-        there will only ever bee *one* honeycomb or *one* flower behind each cloud.
+        Użyj bloku `if/else` aby zebrać nektar z kwiatków i miód z plastrów miodu. Pamiętaj:
+        za każdą chmurą będzie tylko *jeden* plaster miodu lub *jeden* kwiat.
       courseD_bee_conditionals8_markdown_instruction: |-
         **Challenge:** There will
         be either a flower or a honeycomb under each of those clouds!\r
@@ -65574,18 +65793,15 @@
         \r
         Help
         the bee fix the code to get all the nectar.
-      courseD_bee_debugging_challenge1_markdown_instruction: |-
-        Watch how the bees
-        gets the nectar. Can you use the same kind of pattern to help the bee make
-        all of the honey?
-      courseD_bee_debugging_challenge1a_markdown_instruction: |-
-        Watch how the bees
-        gets the nectar. Can you use the same kind of pattern to help the bee make
-        all of the honey?
-      courseD_bee_debugging_challenge2_markdown_instruction: |-
-        Watch how the bees
-        gets the nectar. Can you use the same kind of pattern to help the bee make
-        all of honey?
+      courseD_bee_debugging_challenge1_markdown_instruction: Patrz jak pszczoły zbierają
+        nektar. Czy możesz wykorzystać ten sam wzorzec aby pomóc pszczołom zrobić
+        cały miód?
+      courseD_bee_debugging_challenge1a_markdown_instruction: Patrz jak pszczoły zbierają
+        nektar. Czy możesz wykorzystać ten sam wzorzec aby pomóc pszczołom zrobić
+        cały miód?
+      courseD_bee_debugging_challenge2_markdown_instruction: Zobacz, jak pszczółki
+        zbierają nektar. Czy dasz radę użyć tego samego wzorca, żeby pomóc pszczółce
+        zrobić cały miód?
       courseD_bee_nestedLoops1_markdown_instruction: |-
         *"This is going to **BEE**
         great!"*\r
@@ -65599,9 +65815,8 @@
       courseD_bee_nestedLoops2_markdown_instruction: |-
         This time, help the bee collect
         all of the nectar using as few blocks as possible.
-      courseD_bee_nestedLoops2_predict1_markdown_instruction: |-
-        This time, help the
-        bee collect all of the nectar using as few blocks as possible.
+      courseD_bee_nestedLoops2_predict1_markdown_instruction: Tym raze, pomóż pszczołom
+        zebrać cały nektar używając jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops3_markdown_instruction: "*\"Can you BEE-lieve all of\nthese
         flowers?\"*\\r\n\\r\nCollect all of the nectar from each flower. "
       courseD_bee_nestedLoops5_markdown_instruction: "Collect all of the nectar from\neach
@@ -65622,10 +65837,8 @@
         Let's hunt for
         treasure - using loops! Help the collector reach at least two piles of treasure
         using only the blocks in your toolbox.
-      courseD_bounce_events1_markdown_instruction: |-
-        Get to the flag! Attach a block
-        to the "when left arrow" block and press "Run" to move the player to the
-        flag.
+      courseD_bounce_events1_markdown_instruction: Osiągnij flagę! Dołącz blok do
+        bloku "when left arrow" i naciśnij "Run", aby przesunąć gracza ku fladze.
       courseD_bounce_events10s_markdown_instruction: |-
         There is now a hoop at the
         top.  \r
@@ -65674,20 +65887,18 @@
         Bounce the ball until it hits the finish
         target.
       courseD_collector_debugging1_markdown_instruction: |-
-        *"Oh no! I see a problem."*\r
+        *"O nie! Zauważyłem błąd."*\r
         \r
-        Fix
-        the error(s) to collect all of the treasure.
+        Napraw błąd(błędy) aby zebrać cały skarb.
       courseD_collector_debugging10_predict1_markdown_instruction: |-
         *"It's treasure
         island!"*\r
         \r
         Help Laurel fix the code to get all the treasure.
       courseD_collector_debugging1a_markdown_instruction: |-
-        *"Oh no! I see a problem."*\r
+        *"O nie! Zauważyłem błąd."*\r
         \r
-        Fix
-        the error(s) to collect all of the treasure.
+        Napraw błąd(błędy) aby zebrać cały skarb.
       courseD_collector_debugging2_markdown_instruction: |-
         *"You can do this!"*\r
         \r
@@ -65730,10 +65941,9 @@
         \r
         All of the commands that you need are already here...now
         use your debugging skills to figure out how to solve this puzzle.
-      courseD_collector_debugging6_markdown_instruction: |-
-        **Challenge:**  All of
-        the blocks that you need are already here...Now use your debugging skills
-        to fix the errors and collect all of the treasure.
+      courseD_collector_debugging6_markdown_instruction: "**Wyzwanie:** Wszystkie
+        bloki których potrzebujesz już tutaj są...Wykorzystaj swoje umiejętności debugowania
+        aby naprawić błąd i zebrać cały skarb."
       courseD_collector_debugging6a_markdown_instruction: |-
         Challenge: Use the code
         in the work area to get at least **6** pieces of treasure!
@@ -65792,10 +66002,9 @@
       courseD_collector_ramp9_markdown_instruction: |-
         Now there's more treasure.  Can
         you help Laurel collect it all?
-      courseD_collector_until_challenge1_markdown_instruction: |-
-        Watch how the bees
-        gets the nectar. Can you use the same kind of pattern to help the bee make
-        all of honey?
+      courseD_collector_until_challenge1_markdown_instruction: Zobacz, jak pszczółki
+        zbierają nektar. Czy dasz radę użyć tego samego wzorca, żeby pomóc pszczółce
+        zrobić cały miód?
       courseD_debugging_1_markdown_instruction: |-
         *"These blocks are really bugging
         me!"*\r
@@ -65841,7 +66050,7 @@
         lettuce**!  \r
         \r
         Help the farmer harvest the items that are ready for picking.  Each
-        plant will have either **one** corn or one lettuce.
+        plant will have either **one** corn or **one** lettuce.
       courseD_farmer_condLoops3_markdown_instruction: |-
         *"Corn, lettuce, AND pumpkins!
         Help me harvest them all."*\r
@@ -65855,9 +66064,9 @@
         The farmer wants to pick everything from
         her lettuce garden. Each plant will now have more than one head of lettuce
         on it, so the farmer will need to keep picking while there is still lettuce
-        growing.\r
+        growing.  \r
         \r
-        ######(Remember: This garden only has lettuce!)
+        ##### (Remember: This garden only has lettuce!)
       courseD_farmer_condLoops4a_markdown_instruction: |-
         *"Gosh! Now the crops are
         growing in clusters!"*  \r
@@ -66853,7 +67062,7 @@
         \r
         ![](https://images.code.org/5a4eec10a53aa78ad6b12fb5e48680f8-image-1497991505852.png)
       courseF_artist_for2_markdown_instruction: |-
-        Use a `repeat` loops inside of a
+        Use a `repeat` loop inside of a
         `for` loop to create this stack of triangles that goes from 50 pixel to 100
         pixel sides.
       courseF_artist_for3_markdown_instruction: |-
@@ -66941,10 +67150,10 @@
         The triangle has 21 pixel sides,
         and the sides in each following shape are 7 pixels longer than the last.   \r
         Use
-        the `multiplication`block to make this all happen with just one function call.\r
+        the `multiplication` block to make this all happen with just one function
+        call.\r
         ___\r
-        The
-        `multipication` block looks like this <xml><block type="math_arithmetic"
+        The `multipication` block looks like this <xml><block type="math_arithmetic"
         inline="true">\r
               <title name="OP">MULTIPLY</title>\r
             </block></xml>
@@ -67329,12 +67538,9 @@
         Use your function to solve
         the puzzle!
       courseF_bee_functions4_markdown_instruction: |-
-        Did you know that you can call
-        a function from *inside* another function?  \r
+        Czy wiedziałeś, że możesz wywołać funkcję wewnątrz innej funkcji? \r
         \r
-        Use your `check nectar
-        or honey` function inside the new `move and check` function to help the bee
-        turn, go get what's under the cloud, then back-up and turn back around!
+        Użyj funkcji `check nectar or honey` wewnątrz nowej funkcji `move and check,`aby pomóc pszczole skręcić, zebrać to co jest pod chmurą i zawrócić!
       courseF_bee_functions5a_markdown_instruction: |-
         Now, build `move and check`
         so that it takes the bee to the cloud whenever there is a path to the right,
@@ -67347,12 +67553,10 @@
         and right at honeycomb.  Don't forget to collect nectar and make honey along
         the way!
       courseF_bee_functions7_markdown_instruction: |-
-        Rebuild your function from the
-        last puzzle to solve this maze.\r
+        Przebuduj funkcję z ostatniej zagadki, aby rozwiązać ten labirynt.\r
         \r
-        Turn left at the honeycomb and right
-        at the flowers.  \r
-        **Note:** Some corners are unmarked!
+        Skręć w lewo przy plastrze miodu i w prawo przy kwiatkach. \r
+        **Uwaga** Niektóre zakręty nie są nieoznaczone!
       courseF_bee_functions8a_markdown_instruction: |-
         Underneath this cloud, there
         might be a flower with an unknown amount of nectar, or a honeycomb with an
@@ -67372,9 +67576,8 @@
         Create a new function
         to collect all the nectar and honey while there is a path ahead. Use it to
         complete the puzzle!
-      courseF_bee_functions_challenge2_markdown_instruction: |-
-        Use everything you
-        have learned to complete this puzzle!
+      courseF_bee_functions_challenge2_markdown_instruction: Wykorzystaj wszystko
+        czego się nauczyłeś, aby rozwiązać tą zagadkę!
       courseF_bee_functions_challenge2_recursion_markdown_instruction: |-
         Underneath
         this cloud, there might be a flower with an unknown amount of nectar, or a
@@ -70983,15 +71186,13 @@
         In this puzzle, two `repeat` loops
         will help you get to the pig with the fewest number of blocks!
       grade2_PuppyLoops_8_markdown_instruction: |-
-        This code for the cat's whiskers
-        is wrong. \r
+        Kod dla kocich wąsów jest zły. \r
         \r
-        Fix this code to draw whiskers that are all the same length.
+        Popraw kod aby narysować wąsy o takiej samej długości.
       grade2_PuppyLoops_9_markdown_instruction: |-
-        Looks like the C in code is drawn
-        backwards!\r
+        Wygląda na to, że C w kodzie (code) jest narysowane wspak!\r
         \r
-        Can you make it look like a C again?
+        Czy możesz sprawić, aby wyglądało jak C z powrotem?
       grade2_collector_10_markdown_instruction: |-
         You're almost done!  \r
         \r
@@ -71221,32 +71422,23 @@
         block to collect nectar if there is a flower.\r
         Otherwise, make honey (because
         there is a honeycomb).
-      grade3_Conditionals_1_markdown_instruction: |-
-        I'm a hungry bee! \r
-        \r
-        \r
-        Help
-        me collect all of the nectar from the flowers using the fewest number of blocks.
+      grade3_Conditionals_1_markdown_instruction: Jestem głodną pszczółką! \r\r\r
+        Pomóż mi zebrać cały nektar z kwiatów, używając możliwie najmniejszej liczby
+        bloków.
       grade3_Conditionals_10_markdown_instruction: Wiele się tutaj dzieje!\r \r Skorzystaj
         z tego, czego się nauczyłeś, aby zebrać cały nektar a następnie zrobić miód.
       grade3_Conditionals_11 BAD_markdown_instruction: |-
         **Assessment:** Use a `while`
         loop to collect all of the nectar from these flowers.
       grade3_Conditionals_11_markdown_instruction: |-
-        Let's put everything together!\r
+        Połączmy wszystko razem!\r
         \r
-        Use
-        what you've learned to help me collect nectar only from flowers that have
-        it, using as few blocks as possible.  \r
+        Wykorzystaj to, czego nauczyłeś się wcześniej aby pomóc mi zebrać nektar tylko z tych kwiatów, które go mają, używając jak najmniejszej liczby bloków. \r
         \r
-        Don't forget to make honey
-        at the end.
-      grade3_Conditionals_12_markdown_instruction: |-
-        This stair step pattern should
-        look familiar.  \r
-        \r
-        Can you collect nectar only from the flowers that
-        have some, using as few blocks as possible?
+        Nie zapomnij na koniec zrobić miodu.
+      grade3_Conditionals_12_markdown_instruction: Ten wzór stopni schodów powinien
+        wyglądać znajomo. \r \r Czy potrafisz zebrać nektar tylko z tych kwiatów,
+        które go mają, używając możliwie najmniejszej liczby bloków?
       grade3_Conditionals_13_markdown_instruction: |-
         **Assessment:** Collect all of
         the nectar.  \r
@@ -71255,16 +71447,12 @@
       grade3_Conditionals_2_markdown_instruction: 'Patrz na cały nektar! \r \r Pomóż
         mi zebrać nektar i zrobić miód używając możliwie najmniejszej liczby bloków.  '
       grade3_Conditionals_3_markdown_instruction: |-
-        These magic purple flowers change!\r
+        Te magiczne, fioletowe kwiatki się zmieniają!\r
         \r
-        Each
-        time you try the puzzle, purple flowers can have either 1 nectar or none at
-        all...but you won't know the number until you run the code! \r
+        Za każdym razem, gdy próbujesz rozwiązać zagadkę, kwiatki mogą mieć zarówno 1 nektar jak i żadnego... nie dowiesz się tego, póki nie uruchomisz kodu!\r
         \r
-        Be careful
-        not to collect nectar from a purple flower if it doesn't have any. \r
-        You
-        must first check if the nectar is equal to 1 using the `if nectar` block.
+        Bądź ostrożny, nie zbieraj nektaru z fioletowych kwiatków, jeśli nie mają żadnego.\r
+        Musisz sprawdzić czy nektar w kwiatku jest równy 1, aby to zrobić użyj bloku `if nectar`.
       grade3_Conditionals_8_markdown_instruction: 'Jestem ciekaw, co tutaj jest! \r
         \r pomóż mi oblecieć cały teren i zebrać nektar tylko z kwiatów, które go
         mają. '
@@ -71305,11 +71493,8 @@
         the error(s) to collect all of the nectar.  \r
         You can now use both run and
         step.
-      grade3_Debugging_6_markdown_instruction: |-
-        What a sweet challenge!\r
-        \r
-        Fix
-        the error(s) to collect all of the nectar.
+      grade3_Debugging_6_markdown_instruction: "Jakie słodkie wyzwanie! \\r \\r \nNapraw
+        błędy, aby zebrać cały nektar."
       grade3_Debugging_8_markdown_instruction: |-
         *"This could be sweet!"*\r
         \r
@@ -71318,23 +71503,17 @@
       grade3_Debugging_9_markdown_instruction: Pszczółka cierpliwa w tej łamigłówce!
         \r \r Musisz naprawić kilka miejsc w tym programie, aby zebrać cały nektar
         i zrobić miód.
-      grade3_Loops_10_markdown_instruction: |-
-        Such a busy bee!\r
-        \r
-        Help Bee collect
-        all of the nectar and make all of the honey with the fewest blocks possible.
-      grade3_Loops_11_markdown_instruction: |-
-        The shape of this path is different
-        from the others. \r
-        \r
-        Can you collect all of the nectar using as few blocks
-        as possible?
+      grade3_Loops_10_markdown_instruction: "Jaka pracowita pszczółka! \\r \\r \nPomóż
+        pszczółce zebrać cały nektar i zrobić cały miód z wykorzystaniem możliwie
+        najmniejszej liczby bloków."
+      grade3_Loops_11_markdown_instruction: "Kształt tej drogi jest inny od pozostałych.
+        \\r \\r \nCzy potrafisz zebrać cały nektar używając możliwie najmniejszej
+        liczby bloków?"
       grade3_Loops_3_markdown_instruction: |-
         Use a `repeat` loop to collect all of
         the nectar.
-      grade3_Loops_4_markdown_instruction: |-
-        Now use the `repeat` block to collect
-        all of the nectar and make all of the honey.
+      grade3_Loops_4_markdown_instruction: Teraz użyj bloku `repeat`, aby zebrać cały
+        nektar i zrobić cały miód.
       grade3_Loops_5_markdown_instruction: |-
         What a beautiful field of flowers!\r
         \r
@@ -71343,12 +71522,9 @@
         \r
         Can you find a way to do it with fewer than
         7 blocks?
-      grade3_Loops_6_markdown_instruction: |-
-        How many times can loops help you in
-        this puzzle?  \r
-        \r
-        Loops are your friend! Use a few of them to complete
-        this puzzle with the fewest blocks possible.
+      grade3_Loops_6_markdown_instruction: "Ile razy pętle mogą ci pomóc w tej łamigłówce?
+        \\r \\r \nPętle to twój przyjaciel! Użyj kilka z nich, aby ukończyć tę łamigłówkę
+        za pomocą możliwie najmniejszej liczby bloków."
       grade3_Loops_7_markdown_instruction: |-
         Those flowers look tasty!\r
         \r
@@ -71543,14 +71719,11 @@
         The bridge between the glasses is 75 pixels long.\r
         \r
       grade4_artist_functions2_markdown_instruction: |-
-        Functions let you define new
-        blocks! \r
+        Funkcje pozwalają Ci definiować nowe bloki!\r
         \r
-        We've moved the blocks needed for drawing a square into a
-        function called `draw a square`. This time, use the `draw a square` function
-        to create the glasses. \r
+        Przenieśliśmy bloki potrzebne do narysowania kwadratu do funkcji nazwanej `draw a square`. Tym razem wykorzystaj funkcję `draw a square`, aby stworzyć okulary.\r
         \r
-        The squares are 75 pixels apart.
+        Kwadraty są oddalone o 75 pikseli.
       grade4_artist_functions2a_markdown_instruction: |-
         Create this image using only
         the blocks provided.\r
@@ -71781,10 +71954,8 @@
         Be careful not to try to collect nectar from
         a purple flower if it doesn't have any.
       grade4_bee_conditionals_new1_markdown_instruction: |-
-        **Assessment:** Collect
-        all of the nectar.  \r
-        Be careful not to try to collect nectar from a purple
-        flower if it doesn't have any.
+        **Sprawdzian:** Zbierz cały nektar. \r
+        Uważaj, aby nie próbować zbierać nektaru z fioletowego kwiatka, jeśli go nie ma.
       grade4_bee_conditionals_quantum1_markdown_instruction: |-
         This cloud is blocking
         my view! \r
@@ -71817,11 +71988,8 @@
         Otherwise, make honey (because
         there is a honeycomb).
       grade4_bee_functions2_markdown_instruction: |-
-        Functions are blocks of code that
-        perform a task.  \r
-        \r
-        Use the `get 2 nectar` function to collect the nectar
-        from each flower.
+        Funkcje są blokami kodu, które wykonują określone zadanie. \r\r
+        Użyj funkcji `get 2 nectar`, aby zebrać nektar z każdego kwiatka.
       grade4_bee_functions3_markdown_instruction: |-
         Build the `get 5` function to
         use in this puzzle.
@@ -71985,9 +72153,8 @@
         The jump block moves the artist
         without drawing. Draw the dashed line using both the `jump forward` and `move
         forward` blocks. Each line is 50 pixels long.
-      grade4_review_bee1_markdown_instruction: |-
-        Now use the `repeat` block to collect
-        all of the nectar and make all of the honey.
+      grade4_review_bee1_markdown_instruction: Teraz użyj bloku `repeat`, aby zebrać
+        cały nektar i zrobić cały miód.
       grade4_review_bee3_markdown_instruction: |-
         Such a busy bee!\r
         \r
@@ -73138,12 +73305,9 @@
         Help
         Bee collect all of the nectar and make all of the honey with the fewest blocks
         possible.
-      level 'grade3_Loops_11_markdown_instruction: |-
-        The shape of this path is different
-        from the others. \r
-        \r
-        Can you collect all of the nectar using as few blocks
-        as possible?
+      level 'grade3_Loops_11_markdown_instruction: "Kształt tej drogi jest inny od
+        pozostałych. \\r \\r \nCzy potrafisz zebrać cały nektar używając możliwie
+        najmniejszej liczby bloków?"
       level 'grade3_Loops_3_markdown_instruction: |-
         Use a `repeat` loop to collect
         all of the nectar.
@@ -73151,13 +73315,9 @@
         Now use the `repeat` block to
         collect all of the nectar and make all of the honey.
       level 'grade3_Loops_5_markdown_instruction: |-
-        What a beautiful field of flowers!   \r
-        \r
-        Help
-        the bee visit each one.\r
-        \r
-        Can you find a way to do it with fewer than
-        7 blocks?
+        Jakie piękne pole kwiatów! \r \r
+        Pomóż pszczółce odwiedzić każdy z nich. \r \r
+        Czy potrafisz to zrobić za pomocą mniej niż 7 bloków?
       level 'grade3_Loops_6_markdown_instruction: |-
         How many times can loops help
         you in this puzzle?  \r

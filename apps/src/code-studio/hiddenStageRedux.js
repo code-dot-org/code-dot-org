@@ -258,7 +258,7 @@ function isHiddenForSection(state, sectionId, itemId, bySectionKey) {
     return false;
   }
   // if we don't have a sectionId, we must be a student
-  if (!sectionId){
+  if (!sectionId) {
     sectionId = STUDENT_SECTION_ID;
   }
   const bySection = state.get(bySectionKey);

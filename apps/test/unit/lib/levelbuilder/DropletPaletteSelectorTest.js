@@ -13,6 +13,9 @@ describe('DropletPaletteSelector', () => {
   });
 
   afterEach(() => {
+    // Removes the CodeMirror editor and restores the original textarea.
+    // @see https://codemirror.net/doc/manual.html#api_static
+    editor.toTextArea();
     document.body.removeChild(textArea);
   });
 

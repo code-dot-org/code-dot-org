@@ -3,7 +3,9 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
   attributes :regional_partner_name, :regional_partner_id, :locked, :notes, :form_data, :status,
     :school_name, :district_name, :email, :application_type, :response_scores, :course_name,
-    :meets_criteria, :bonus_points, :pd_workshop_id, :fit_workshop_name, :fit_workshop_url
+    :meets_criteria, :bonus_points, :pd_workshop_id, :fit_workshop_name, :fit_workshop_url,
+    :meets_criteria, :bonus_points, :pd_workshop_id, :pd_workshop_name, :pd_workshop_url,
+    :fit_workshop_name, :fit_workshop_url, :application_guid
 
   def email
     object.user.email
@@ -34,12 +36,21 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     object.try(:pd_workshop_id)
   end
 
+  def pd_workshop_name
+    object.try(:workshop).try(:date_and_location_name)
+  end
+
+  def pd_workshop_url
+    workshop = object.try(:workshop)
+    url_for(controller: 'pd/workshop_dashboard', path: "workshops/#{workshop.id}") if workshop
+  end
+
   def fit_workshop_name
     object.try(:fit_workshop).try(:date_and_location_name)
   end
 
   def fit_workshop_url
     workshop = object.try(:fit_workshop)
-    url_for(controller: 'pd/workshop_dashboard', path: workshop.id) if workshop
+    url_for(controller: 'pd/workshop_dashboard', path: "workshops/#{workshop.id}") if workshop
   end
 end

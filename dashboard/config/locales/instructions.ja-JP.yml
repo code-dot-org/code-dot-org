@@ -3533,6 +3533,7 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      MC Agent Freeplay_instruction: "**自由にプレイ:**  自分の好きなようにプログラミングしてみましょう!"
       MC HOC 2016 Level 10_instruction: "自分だけの Minecraft を作ろう！羊やクリーパーをスポーンさせて、思い通りの動きさせよう！"
       MC HOC 2016 Level 2-2_instruction: "ニワトリが凍っています。「まえにすすむ」と「まがる」ブロックを「出現した時」のスロットに追加して、動かしましょう。"
       MC HOC 2016 Level 3_instruction: "素晴らしい! ニワトリが動いたね!でも、動きが止まってしまったね。Minecraftのゲーム内だと、ニワトリはずっと歩き続けるのにおかしいね。「ずっとくりかえす」ループを使ってニワトリを動かし続けよう。"
@@ -4487,7 +4488,7 @@
         Only one last direction to worry about!
         Create a "safe-down?" function and update the "on-screen?" function so
         that it checks up, down, left, and right.
-      SpecialFrozenLevel_instruction: "あなたは、マスターアーティストになったわ！じゆうに、ふゆのワンダーランドをつくりましょう。"
+      SpecialFrozenLevel_instruction: "あなたは もう、マスター アーティストよ！じゆうにブロックをつかって、冬のワンダーランドをつくってね。"
       Standalone_Artist_1_instruction: "アーティストへようこそ！はじめに、「前に うごく」ブロックと「右に まがる」ブロックで、正方形をかいてみよう。それぞれの辺は、100
         ピクセルの長さだよ。"
       Standalone_Artist_2_instruction: "「左に まがる 120度」と「左に まがる 60度」で、ダイヤモンドを書くよ。それぞれ「150ピクセル」うごかしてね。"
@@ -6389,6 +6390,10 @@
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
+      Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
+      Valentine_playlab_01_instruction: "Program Kiki (Actor 1) to move left and\nright
+        when the left and right arrows are pressed. When Kiki is clicked, she\nshould
+        throw hearts towards her friends. "
       Vigenere_instruction: Test
       WhileAdventure_instruction: |-
         Our adventurer wants to collect coins. Can you
@@ -7428,8 +7433,8 @@
         Collect all of the lettuce.
         Avoid the trees and fields!
       courseC_harvester_loops_forVid_instruction: |-
-        Collect all of the corn and all
-        of the pumpkins.
+        Collect all of the corn, all of
+        the lettuce, and all of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -9074,15 +9079,19 @@
       frozen freeplay_instruction: "あなたは、マスターアーティストになったわ！じゆうに、ふゆのワンダーランドをつくりましょう。"
       frozen line_instruction: "こんにちは！アレンデールおうこくのエルサです。１ぽんのせんをかくのをてつだってください。"
       frozen perpendicular_instruction: |-
-        つぎにせんを2ほん、90どのかくどでかいてみましょう！
-        「むく」ブロックと「うごく」ブロックをつかうといいわ。
-      frozen snowflake branch_instruction: "「ゆきのけっしょうのえだをかく」ブロックをつかって、３ぼんのえだをかいてみましょう。ゆきのけっしょうのようにみえはじめるわ。"
-      frozen snowflake full_instruction: "つぎに、８かいくりかえして、うつくしいゆきのけっしょうをかいてみましょう！"
-      frozen snowflower_instruction: "ふくざつなゆきのもようも、とてもかんたんなかたちでつくることができるわ。サイズ５のえんを５つ、サイズ１０のえんを５つで、もようをつくることができるかしら？"
-      frozen square iterative_instruction: "しかくをかくのにはんぶんのところまでできたみたいだわ。さぁ、しかくをかくために、４ほんのせんをひきましょう！"
-      frozen square loop 3x_instruction: "しかくを3つかいてみましょう。つぎのしかくをかくまえに、かならず120どむきかえるのよ。"
-      frozen square loop_instruction: "こんにちは、わたしはアレンデールおうこくのアナよ！「くりかえし」ブロックをつかって、さっきよりすくないブロックでしかくをかいてみましょう。なんかい(???)「くりかえし」ブロックのなかのブロックをくりかえせば、しかくがかけるかしら？"
-      frozen square snowflake_instruction: "ゆきのけっしょうをつくることができるかしら？「くりかえし」ブロックをつかってしかくを１０こかいて、「むく」ブロックをつかってしかくとしかくを３６どずらしてつくるのよ。"
+        つぎに 2 本の線を、90度の かくどで かいてみましょう！
+        「まがる」ブロックと「うごく」ブロックをつかうといいわ。
+      frozen snowflake branch_instruction: "「雪のけっしょうのエダをかく」ブロックをつかって、３本の えだをかいてみましょう。雪のけっしょうが
+        みえてきたかしら？"
+      frozen snowflake full_instruction: 8回くりかえして、きれいな雪のけっしょうを かきましょう！
+      frozen snowflower_instruction: "ふくざつな雪のもようも、円をつかって かけるわね。おおきさ５の円を５こ、おおきさ１０の円を５こ
+        つかって、この もようを かいてみて。"
+      frozen square iterative_instruction: "もうすこしで、四角がかけるわ。4本の線で、四角をかきましょう！"
+      frozen square loop 3x_instruction: "四角形を 3つ かいてみましょう。ひとつ四角形をかいたら、120度まがると いいわよ。"
+      frozen square loop_instruction: "こんにちは、アレンデール王国のアナよ！「くりかえし」ブロックをつかって、四角形をかいてみて。さっきより少ないブロックで
+        かけるはずよ。四角をかくには、何回くりかえせばいいか 考えて、「???」に、数をいれてみましょう。"
+      frozen square snowflake_instruction: "この雪のもようが かけるかしら？「くりかえし」ブロックで、四角形を10こ かけばいいわ。四角形をひとつ
+        かいたら、「まがる」ブロックで36度まがるのよ。"
       grade1_adventurer_loops1_instruction: Four piles of gold!  Collect all four.
       grade1_adventurer_loops10_instruction: |-
         Help me get all of the gold from this
@@ -10104,7 +10113,7 @@
         The paths are a different length. You
         can use a different type of while loop to keep the pattern going as long as
         you need to.
-      grade4_frozen_freeplay_instruction: "あなたは、マスターアーティストになったわ！じゆうに、ふゆのワンダーランドをつくりましょう。"
+      grade4_frozen_freeplay_instruction: "あなたは もう、マスター アーティストよ！じゆうにブロックをつかって、冬のワンダーランドをつくってね。"
       grade4_frozen_functions0_instruction: |-
         Can you figure out what number to replace
         the question marks with to draw a circle?
@@ -10154,7 +10163,8 @@
       grade4_frozen_square_loop2_instruction: |-
         Let's create three squares, turning
         after each square. Be sure to turn by 120 degrees before each new square.
-      grade4_frozen_square_loop3_instruction: "ゆきのけっしょうをつくることができるかしら？「くりかえし」ブロックをつかってしかくを１０こかいて、「むく」ブロックをつかってしかくとしかくを３６どずらしてつくるのよ。"
+      grade4_frozen_square_loop3_instruction: "この雪のもようが かけるかしら？「くりかえし」ブロックで、四角形を10こ
+        かけばいいわ。四角形をひとつ かいたら、「まがる」ブロックで36度まがるのよ。"
       grade4_playLab_proj_example1_instruction: instructions
       grade4_playLab_proj_example1a_instruction: |-
         Take a look at this project.  Do

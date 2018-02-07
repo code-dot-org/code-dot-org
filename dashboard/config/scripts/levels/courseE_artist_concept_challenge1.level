@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Feel free to use trial and error. You are not expected to get the image perfect the first time.   Want to see more hints?  Click here!",
+    "instructions": "Help the artist draw this unique shape. ",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -21,7 +21,7 @@
     "impressive": "true",
     "disable_sharing": "false",
     "slider_speed": ".6",
-    "markdown_instructions": "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\" width=\"200px\"/>\r\n\r\nNow for a challenge!  \r\n\r\nHere is a design that uses only blocks that you have already been shown.  Can you figure out how to recreate it?  Feel free to use trial and error. You are not expected to get it perfect the first time.",
+    "markdown_instructions": "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\" width=\"200px\"/>\r\n\r\nNow for a challenge!\r\n\r\nHere is a design that uses only blocks that you have already been shown.  Can you figure out how to recreate it?  Feel free to use trial and error. You don't have to draw it perfectly the first time.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -32,18 +32,19 @@
     "examples_required": "false",
     "ideal": "10",
     "never_autoplay_video": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The half-hexagon has a **length of 30** and turns right by **60 degrees**.  \",\"hint_id\":\"courseE_artist_concept_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/183bf357e48b4fc6498e4ac35515d45d/courseE_artist_concept_challenge1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. \",\"hint_id\":\"courseE_artist_concept_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/89e45fe1c7559eac71f506626810d849/courseE_artist_concept_challenge1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"This is the design you want to repeat to make the full shape:\\n\\n![](https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png)\",\"hint_id\":\"courseE_artist_concept_challenge1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/42ae88e9c44ad875d028868470645965/courseE_artist_concept_challenge1.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The half-hexagon has a **length of 30** and turns right by **60 degrees**.  \",\"hint_id\":\"courseE_artist_concept_challenge1_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/183bf357e48b4fc6498e4ac35515d45d/courseE_artist_concept_challenge1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. \",\"hint_id\":\"courseE_artist_concept_challenge1_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/89e45fe1c7559eac71f506626810d849/courseE_artist_concept_challenge1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"This is the design you want to repeat to make the full shape:\\n\\n![](https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png)\",\"hint_id\":\"courseE_artist_concept_challenge1_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/42ae88e9c44ad875d028868470645965/courseE_artist_concept_challenge1.mp3\"}]",
     "discard_background": "false",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/38ab1836c3e85c4a74d1850ae142c8f3=levelbuilder/26101.png",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-27 16:39:24 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-28 18:51:44 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-28 18:56:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-01 18:43:13 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-02 20:29:50 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-24 20:08:43 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-27 16:39:24 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-28 18:51:44 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-28 18:56:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-01 18:43:13 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-02 20:29:50 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-24 20:08:43 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-01-31 23:34:18 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

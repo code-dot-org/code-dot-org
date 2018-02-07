@@ -212,11 +212,6 @@ Rails/Presence:
 Rails/Present:
   Enabled: false
 
-# Offense count: 11
-# Cop supports --auto-correct.
-Rails/RedundantReceiverInWithOptions:
-  Enabled: false
-
 # Offense count: 90
 # Configuration parameters: Blacklist.
 # Blacklist: decrement!, decrement_counter, increment!, increment_counter, toggle!, touch, update_all, update_attribute, update_column, update_columns, update_counters
@@ -256,10 +251,6 @@ Style/ClassVars:
 # Cop supports --auto-correct.
 # Configuration parameters: PreferredMethods.
 Style/CollectionMethods:
-  Enabled: false
-
-# Offense count: 4
-Style/CommentedKeyword:
   Enabled: false
 
 # Offense count: 149
@@ -314,11 +305,6 @@ Style/MultilineTernaryOperator:
 # Offense count: 205
 # Cop supports --auto-correct.
 Style/MutableConstant:
-  Enabled: false
-
-# Offense count: 3
-# Cop supports --auto-correct.
-Style/OrAssignment:
   Enabled: false
 
 # Offense count: 47

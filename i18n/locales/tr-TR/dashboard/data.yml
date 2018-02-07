@@ -214,8 +214,8 @@ tr:
         'jigsaw_8': "Şekli oluşturacak biçimde blokları düzenleyin"
         'jigsaw_9': "Şekli oluşturacak biçimde blokları düzenleyin"
         'jigsaw_10': "Şekli oluşturacak biçimde blokları düzenleyin"
-        'jigsaw_11': "Şekli oluşturacak biçimde blokları düzenleyin"
-        'jigsaw_12': "Şekli oluşturacak biçimde blokları düzenleyin"
+        'jigsaw_11': "Blokları numaralarına göre sıralayın"
+        'jigsaw_12': "Blokları numaralarına göre sıralayın"
         'jigsaw_13': "Bulmacayı düzelt!"
         'mazestep_1': "Labirent adım tanımları"
         'mazestep_2': "Labirent adım tanımları"
@@ -423,15 +423,15 @@ tr:
         'infinity_playlab_intro': 'Oyun Laboratuvarı - Giriş'
         'infinity_playlab_events': 'Oyun Laboratuvarı - Olaylar'
         'infinity_playlab_repeat_forever': 'Oyun Laboratuvarı - Sonsuz Döngü'
-        'csd_concept_how_computers_work': 'Introducing How Computers Work'
+        'csd_concept_how_computers_work': 'Bilgisayarların Nasıl Çalıştığını Anlayalım'
         'csd_concept_computer': 'Bir bilgisayarı, bilgisayar yapan nedir?'
         'csd_concept_binary_data': 'Bilgisayar Nasıl İşler: İkili ve veri'
-        'csd_concept_circuits_logic': 'How Computers Work: Circuits & Logic'
-        'csd_concept_memory_cpu_input_output': 'How Computers Work: Memory, CPU, Input, & Output'
-        'csd_concept_hardware_software': 'How Computers Work: Hardware & Software'
+        'csd_concept_circuits_logic': 'Bilgisayarlar Nasıl Çalışır: Devreler & Mantık'
+        'csd_concept_memory_cpu_input_output': 'Bilgisayarlar Nasıl Çalışır: İşlemci, Giriş & Çıkışlar'
+        'csd_concept_hardware_software': 'Bilgisayarlar Nasıl Çalışır: Donanım & Yazılım'
         'csd_concept_search': 'Arama nasıl çalışır'
         'csd_external_amazon_data': 'Amazon tavsiye sistemlerinde kullanılan Büyük Veri hayatımızı değiştirmek için kullanılır'
-        'csd_external_netflix_data': 'How Does Netflix Make TV Show and Movie Suggestions?'
+        'csd_external_netflix_data': 'Netflix Nasıl TV Gösterimleri ve Film Önerileri Yapabiliyor?'
         'csd_external_waze_data': 'Neden pek çok kullanıcı ile Waze ile takıntı yaptı?'
         'csd_gamelab_animation_tab': 'Animasyon sekmesi'
         'csd_gamelab_conditionals_1': 'Introduction to Conditionals - Part 1'

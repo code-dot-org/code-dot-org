@@ -147,6 +147,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     Ascii85 (1.0.2)
+    StreetAddress (1.0.6)
     acme-client (0.3.7)
       faraday (~> 0.9, >= 0.9.1)
       json-jwt (~> 1.2, >= 1.2.3)
@@ -590,6 +591,8 @@ GEM
       ffi (>= 0.5.0)
     rdoc (4.2.2)
       json (~> 1.4)
+    recaptcha (4.6.3)
+      json
     redcarpet (3.3.4)
     redis (3.3.3)
     ref (2.0.0)
@@ -764,6 +767,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  StreetAddress
   acmesmith
   active_model_serializers!
   active_record_query_trace
@@ -859,6 +863,7 @@ DEPENDENCIES
   rails (~> 5.0.1)
   rails-controller-testing
   rambling-trie
+  recaptcha
   redcarpet (~> 3.3.4)
   redis (~> 3.3.3)
   redis-slave-read!

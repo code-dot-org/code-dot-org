@@ -15,7 +15,7 @@ nav: regional_partner_playbook_nav
 - [Example Facilitator One Pager](#page)
 - [Example Contract](#contract)
 - [Facilitator Recruitment Resources](#recruitment)
-- [Facilitator Support Documents](#support)
+- [Facilitator Support Documents](#docs)
 - [Facilitator Payments](#pay)
 
 ________________
@@ -36,9 +36,14 @@ Then:
 - Update [the list](http://bit.ly/facilitator-summer-availability) in the “Booked/Confirmed by” column when you’ve booked someone. 
 - Update your workshop dashboard with the name of your booked facilitator. 
 
-Remember, the sooner you start this the easier it will be to find an available facilitator!
+Remember, the sooner you start this the easier it will be to find an available facilitator.
 
 **Important**: Book facilitators only for workshops that have been confirmed with Code.org/Regional Manager. Do not book facilitators for additional cohorts that you may be adding later based on teacher recruitment numbers. 
+
+Since you will likely be making quick decisions, we suggest including language like this in your email to facilitators:<br/>
+
+- "I've reached out to a few facilitators who indicated they were available this week in the summer availability survey. I know there's a lot of interest in helping this week, so I'll need to move forward with the first two people who are able to respond and commit to this week."
+
 
 
 [**Back to the top**](#top)
@@ -71,7 +76,7 @@ ________________
 
 [**Back to the top**](#top)
 ________________
-<a id="support"></a>
+<a id="docs"></a>
 ## Facilitator Support Documents
 
 - [Facilitator Playbook](https://docs.google.com/document/d/1xTZkAfmjsOttqNB7uFT-Sp5yH0fVDGbQ0PPhhcU70Zk/edit) - Toolkit for facilitators of all programs

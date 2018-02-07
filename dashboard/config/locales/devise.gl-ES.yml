@@ -1,7 +1,7 @@
 "gl":
   devise:
     confirmations:
-      confirmed: O teu enderezo de e-mail foi confirmado con éxito.
+      confirmed: O teu enderezo de correo electrónico foi confirmado con éxito.
       send_instructions: Vas receber un e-mail coas instrucións de confirmación da
         túa conta dentro de algúns minutos.
       send_paranoid_instructions: Se o teu enderezo de e-mail existe na nosa base

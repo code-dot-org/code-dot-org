@@ -1,6 +1,7 @@
 import React from 'react';
 import Dialog, {Icon, Title, Body, Buttons, Cancel, Confirm, Footer} from './Dialog';
 import ExampleDialogButton from '../util/ExampleDialogButton';
+import {action} from '@storybook/addon-actions';
 
 export default storybook => {
   return storybook
@@ -20,8 +21,8 @@ export default storybook => {
             body='The "when run" block allows you to run code when your game starts.
                   Try setting the level speed and flapping to the target.'
             footer="Try not to become too addicted to flappy bird"
-            onCancel={storybook.action("go back")}
-            onConfirm={storybook.action("confirm")}
+            onCancel={action("go back")}
+            onConfirm={action("confirm")}
           />
         )
       }, {
@@ -57,8 +58,8 @@ export default storybook => {
             body='The "when run" block allows you to run code when your game starts.
                   Try setting the level speed and flapping to the target.'
             footer="Try not to become too addicted to flappy bird"
-            onCancel={storybook.action("go back")}
-            onConfirm={storybook.action("confirm")}
+            onCancel={action("go back")}
+            onConfirm={action("confirm")}
           />
         )
       }, {
@@ -70,8 +71,8 @@ export default storybook => {
             title="A big decision"
             body="Do you want to go skydiving?"
             confirmText="Yes"
-            onCancel={storybook.action("cancel")}
-            onConfirm={storybook.action("confirm")}
+            onCancel={action("cancel")}
+            onConfirm={action("confirm")}
           />
         )
       }, {
@@ -84,8 +85,8 @@ export default storybook => {
             body="Are you sure you want to delete the table?"
             confirmText="Delete"
             confirmType="danger"
-            onCancel={storybook.action("cancel")}
-            onConfirm={storybook.action("confirm")}
+            onCancel={action("cancel")}
+            onConfirm={action("confirm")}
           />
         )
       }, {
@@ -97,7 +98,7 @@ export default storybook => {
             hideBackdrop={true}
             body="Just wanted to tell you something"
             confirmText="Ok"
-            onConfirm={storybook.action("confirm")}
+            onConfirm={action("confirm")}
           />
         )
       }, {

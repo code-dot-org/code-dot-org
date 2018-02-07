@@ -910,7 +910,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
         var submitButton = sharingDiv.querySelector('#phone-submit');
         submitButton.disabled = true;
         phone.mask('(000) 000-0000', {
-            onComplete:function (){
+            onComplete:function () {
               if (!submitted) {
                 submitButton.disabled = false;
               }
@@ -1041,18 +1041,19 @@ FeedbackUtils.prototype.getGeneratedCodeString_ = function () {
 FeedbackUtils.prototype.getGeneratedCodeProperties = function (options) {
   options = options || {};
 
-  var codeInfoMsgParams = {
+  const codeInfoMsgParams = {
     berkeleyLink: "<a href='http://bjc.berkeley.edu/' target='_blank'>Berkeley</a>",
     harvardLink: "<a href='https://cs50.harvard.edu/' target='_blank'>Harvard</a>"
   };
 
-  var message = this.getGeneratedCodeDescription(codeInfoMsgParams,
+  const { message, shortMessage } = this.getGeneratedCodeDescriptions_(codeInfoMsgParams,
       options.generatedCodeDescription);
-  var code = this.studioApp_.polishGeneratedCodeString(this.getGeneratedCodeString_());
+  const code = this.studioApp_.polishGeneratedCodeString(this.getGeneratedCodeString_());
 
   return {
-    message: message,
-    code: code
+    message,
+    shortMessage,
+    code,
   };
 };
 
@@ -1063,16 +1064,25 @@ FeedbackUtils.prototype.getGeneratedCodeProperties = function (options) {
  *        instead of the default
  * @returns {string}
  */
-FeedbackUtils.prototype.getGeneratedCodeDescription = function (codeInfoMsgParams, generatedCodeDescription) {
+FeedbackUtils.prototype.getGeneratedCodeDescriptions_ = function (codeInfoMsgParams, generatedCodeDescription) {
   if (this.studioApp_.editCode) {
-    return '';
+    return {
+      message: '',
+      shortMessage: '',
+    };
   }
 
   if (generatedCodeDescription) {
-    return generatedCodeDescription;
+    return {
+      message: generatedCodeDescription,
+      shortMessage: generatedCodeDescription,
+    };
   }
 
-  return msg.generatedCodeInfo(codeInfoMsgParams);
+  return {
+    message: msg.generatedCodeInfo(codeInfoMsgParams),
+    shortMessage: msg.shortGeneratedCodeInfo(codeInfoMsgParams),
+  };
 };
 
 /**
