@@ -154,7 +154,7 @@ class ProjectsController < ApplicationController
       featured_project_row = {
         projectName: project_details['name'],
         type: project_details['projectType'],
-        publishedAt: project_details['publishedAt'],
+        publishedAt: project[:id][:published_at],
         thumbnailUrl: project_details['thumbnailUrl'],
         featuredAt: featured_project.featured_at,
         unfeaturedAt: featured_project.unfeatured_at,
