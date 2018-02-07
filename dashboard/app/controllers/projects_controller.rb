@@ -383,7 +383,11 @@ class ProjectsController < ApplicationController
   end
 
   def get_from_cache(key)
-    @@project_level_cache[key] ||= Level.find_by_key(key)
+    if Script.should_cache?
+      @@project_level_cache[key] ||= Level.find_by_key(key)
+    else
+      Level.find_by_key(key)
+    end
   end
 
   # For certain actions, check a special permission before proceeding.

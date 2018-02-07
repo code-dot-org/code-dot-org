@@ -38,7 +38,7 @@ exports.setupBlocklyFrame = function () {
   // c, n, v, p, s get added to global namespace by messageformat module, which
   // is loaded when we require our locale msg files
   studioApp = require('@cdo/apps/StudioApp').singleton;
-  studioApp().reset = function (){};
+  studioApp().reset = function () {};
 
   var blocklyAppDiv = document.getElementById('app');
   assert(blocklyAppDiv, 'blocklyAppDiv exists');

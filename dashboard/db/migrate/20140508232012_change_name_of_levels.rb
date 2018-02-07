@@ -6,7 +6,7 @@ class ChangeNameOfLevels < ActiveRecord::Migration[4.2]
     "Flappy Levels" => 'flappy',
     "Jigsaw Levels" => 'jigsaw',
     "Maze Step Levels" => 'step'
-  }
+  }.freeze
 
   def up
     OLD_TO_NEW.each do |old, new|
