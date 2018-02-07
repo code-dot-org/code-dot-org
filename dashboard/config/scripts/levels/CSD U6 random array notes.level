@@ -93,10 +93,7 @@
     "start_blocks": "var notes = [\"C#4\", \"C4\", \"F4\"];\r\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  //Make your changes below\r\n  var index = randomNumber(_, _);\r\n});\r\n",
     "markdown_instructions": "# Random Song Generator\r\n\r\nYou're going to make a random song generator. When you press a button, a random note should play. Press it enough times, and you have yourself a beautiful arrangement of bleeps and bloops. \r\n\r\nYou used `randomNumber()` to select an element from an array in the previous lesson, so this should be familiar.\r\n\r\n# Do This\r\n\r\n* Add code to randomly select a note from the `notes` array.\r\n* Run the program and press the left button to hear your buzzer sing its beautiful tune.",
     "project_template_level_name": "CSD U6 random song generator template",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
