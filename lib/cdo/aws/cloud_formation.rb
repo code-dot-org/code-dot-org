@@ -169,7 +169,16 @@ module AWS
         {
           stack_name: stack_name,
           parameters: parameters(template),
-          tags: [{key: "environment", value: rack_env}],
+          tags: [
+            {
+              key: 'environment',
+              value: rack_env
+            },
+            {
+              key: 'owner',
+              value: Aws::STS::Client.new.get_caller_identity.arn
+            }
+          ],
         }.merge(string_or_url(template)).tap do |options|
           if %w[IAM lambda].include? stack_name
             options[:capabilities] = %w[
