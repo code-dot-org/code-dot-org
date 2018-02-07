@@ -18,8 +18,6 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-#CDO.log.info "Called with options: #{options}"
-
 CDO.log.info "Exporting to: #{filename}"
 cols = %w(school_id school_year teaches_cs audit_data)
 CSV.open(filename, 'w') do |csv|
