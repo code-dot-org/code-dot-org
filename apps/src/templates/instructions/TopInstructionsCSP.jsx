@@ -246,7 +246,20 @@ var TopInstructions = React.createClass({
     ];
     const ttsUrl = this.props.ttsMarkdownInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
-    const logText = JSON.stringify({'AppType': this.props.app, 'ScriptName': this.props.scriptName, 'StagePosition': this.props.stagePosition, 'LevelPosition': this.props.levelPosition});
+    const logText = JSON.stringify({'AppType': this.props.app, 'ScriptName': this.props.scriptName,
+      'StagePosition': this.props.stagePosition, 'LevelPosition': this.props.levelPosition});
+
+    // If we are in the resources tab experiment, only display the help tab when
+    // are one or more videos
+    const resourcesTabDisplayTab = (experiments.isEnabled('resources_tab') ||
+      experiments.isEnabled('resourcesTab')) && this.props.levelVideos.length > 0;
+
+    // If we are in the additional resources experiment, only display the help tab
+    // when there are one or more videos or additional resource links.
+    const additionalResourcesDisplayTab = experiments.isEnabled('additionalResources') &&
+      (this.props.levelVideos.length > 0 || this.props.mapReference !== undefined ||
+        this.props.referenceLinks.length > 0);
+    const displayHelpTab = resourcesTabDisplayTab || additionalResourcesDisplayTab;
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
@@ -262,7 +275,9 @@ var TopInstructions = React.createClass({
                 headerHasFocus={false}
                 onClick={this.handleDocumentationClick}
               />}
-            {(experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab')) &&
+            {(experiments.isEnabled('resources_tab') ||
+              experiments.isEnabled('resourcesTab') ||
+              experiments.isEnabled('additionalResources')) &&
               <div style={styles.helpTabs}>
                 <InstructionsTab
                   className="uitest-instructionsTab"
@@ -270,7 +285,7 @@ var TopInstructions = React.createClass({
                   style={this.state.helpTabSelected ? null : styles.highlighted}
                   text={msg.instructions()}
                 />
-                {this.props.levelVideos.length > 0 &&
+                {displayHelpTab &&
                   <InstructionsTab
                     className="uitest-helpTab"
                     onClick={this.handleHelpTabClick}
