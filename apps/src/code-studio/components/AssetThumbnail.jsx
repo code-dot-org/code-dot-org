@@ -51,7 +51,7 @@ class AssetThumbnail extends React.Component {
   render() {
     const {type, name} = this.props;
     let api = this.props.useFilesApi ? filesApi : assetsApi;
-    if (this.props.projectId){
+    if (this.props.projectId) {
       api = api.withProjectId(this.props.projectId);
     }
 
