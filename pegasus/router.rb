@@ -180,7 +180,7 @@ class Documents < Sinatra::Base
 
   get '/style.css' do
     content_type :css
-    css, digest = combine_css 'styles', 'styles_min'
+    css, digest = combine_css 'styles_min', 'styles'
     etag digest
     cache :static
     css
