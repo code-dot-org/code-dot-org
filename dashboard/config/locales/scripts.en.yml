@@ -6914,6 +6914,26 @@ en:
               name: 'Programming: My Robotic Friends'
             Sequence in Maze:
               name: Sequence in Maze
+            Building a Foundation:
+              name: Building a Foundation
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops:
+              name: Nested Loops
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            'Algorithms: Dice Race':
+              name: 'Algorithms: Dice Race'
+            Introduction:
+              name: Introduction
+            Conditionals:
+              name: Conditionals
           title: Course E 2018
           description_audience: ''
           description_short: ''

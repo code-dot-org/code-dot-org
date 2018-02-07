@@ -7694,6 +7694,14 @@ en:
         The artist draws a square.: The artist draws a square.
         The artist will draw a single line.: The artist will draw a single line.
         The artist will draw a triangle with three equal sides.: The artist will draw a triangle with three equal sides.
+      courseC_multi_artist_prog6_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The artist draws a square.: Incorrect.  The artist draws a square.
+        Look carefully at the code below.  What will happen when you click "Run"?: Look carefully at the code below.  What will happen when you click "Run"?
+        The artist draws a square.: The artist draws a square.
+        The artist will draw a single line.: The artist will draw a single line.
+        The artist will draw a triangle with three equal sides.: The artist will draw a triangle with three equal sides.
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
@@ -7704,6 +7712,16 @@ en:
         Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?
         The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
       courseC_multi_maze_debugging8_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Scrat goes the wrong way after his final turn.: Incorrect. Scrat goes the wrong way after his final turn.
+        Incorrect. Taking one too few steps happens after Scrat turns the wrong way.: Incorrect. Taking one too few steps happens after Scrat turns the wrong way.
+        'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Look closely at the code below.  What is the first bug that will make this program fail? '
+        Scrat takes one too few steps and ends up short of the acorn.: Scrat takes one too few steps and ends up short of the acorn.
+        Scrat will go the wrong way after his final turn.: Scrat will go the wrong way after his final turn.
+        'The first error is that Scrat goes the wrong way after his final turn. ': 'The first error is that Scrat goes the wrong way after his final turn. '
+        The program won't fail. Scrat will get to the acorn.: The program won't fail. Scrat will get to the acorn.
+      courseC_multi_maze_debugging8_predict1_2018:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect. Scrat goes the wrong way after his final turn.: Incorrect. Scrat goes the wrong way after his final turn.
@@ -7816,7 +7834,27 @@ en:
         The bee will get all of the nectar.: The bee will get all of the nectar.
         The bee will get only 2 units of nectar.: The bee will get only 2 units of nectar.
         The bee will move forward and get nectar only one time.: The bee will move forward and get nectar only one time.
+      courseD_multi_bee_nestedLoops2_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        Look closely at the nested loops below.  What will happen when you click "Run"?: Look closely at the nested loops below.  What will happen when you click "Run"?
+        The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        The bee will get all of the nectar.: The bee will get all of the nectar.
+        The bee will get only 2 units of nectar.: The bee will get only 2 units of nectar.
+        The bee will move forward and get nectar only one time.: The bee will move forward and get nectar only one time.
       courseD_multi_bee_nestedLoops9_predict2:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        : Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        Look closely at the code below. How much honey will the bee make when you click "Run"?: Look closely at the code below. How much honey will the bee make when you click "Run"?
+        ? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        : The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+      courseD_multi_bee_nestedLoops9_predict2_2018:
         '12': '12'
         '4': '4'
         '8': '8'
@@ -7915,6 +7953,16 @@ en:
         The bird will not move at all.: The bird will not move at all.
         The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.: The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.
       courseD_multi_scrat_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.: Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.
+        Nothing. Scrat will not move at all.: Nothing. Scrat will not move at all.
+        ? Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times. He then turns and moves forward another three times, making it to the acorn!
+        : Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times. He then turns and moves forward another three times, making it to the acorn!
+        Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!: Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!
+        Scrat will move forward, then turn and crash.: Scrat will move forward, then turn and crash.
+        This code uses a new block. What do you think will happen when you press "Run"?: This code uses a new block. What do you think will happen when you press "Run"?
+      courseD_multi_scrat_predict1_2018:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.: Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.
