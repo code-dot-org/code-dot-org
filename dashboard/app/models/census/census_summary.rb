@@ -44,6 +44,16 @@ class Census::CensusSummary < ApplicationRecord
     end
   end
 
+  def self.submission_has_response(submission, is_high_school)
+    # Treat an "I don't know" response the same as not having any response
+    if is_high_school
+      !(submission.how_many_20_hours.nil? || submission.how_many_20_hours_dont_know?)
+    else
+      !(submission.how_many_10_hours.nil? || submission.how_many_10_hours_dont_know?) ||
+      !(submission.how_many_20_hours.nil? || submission.how_many_20_hours_dont_know?)
+    end
+  end
+
   #
   # Summarization is effectively implemented as a Naive Bayes Classifier
   # (https://en.wikipedia.org/wiki/Naive_Bayes_classifier)
@@ -158,18 +168,12 @@ class Census::CensusSummary < ApplicationRecord
       # Lack of a submission for a school isn't considered evidence
       # so we only look at actual submissions.
       submissions.select {|s| s.school_year == school_year}.each do |submission|
-        # Treat an "I don't know" response the same as not having any response
-        if high_school ? submission.how_many_20_hours_dont_know? : submission.how_many_10_hours_dont_know?
-          audit[:census_submissions].push(
-            {
-              id: submission.id,
-              skipped: true,
-            }
-          )
-          next
-        end
-
-        teaches = submission_teaches_cs?(submission, high_school)
+        teaches =
+          if submission_has_response(submission, high_school)
+            submission_teaches_cs?(submission, high_school)
+          else
+            nil
+          end
 
         audit[:census_submissions].push(
           {
@@ -177,6 +181,8 @@ class Census::CensusSummary < ApplicationRecord
             teaches: teaches
           }
         )
+
+        next if teaches.nil?
 
         data =
           if teaches
