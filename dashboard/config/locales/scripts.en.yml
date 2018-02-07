@@ -5399,7 +5399,7 @@ en:
           title: Course C
           description_audience: 'Ages: 6-10'
           description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: Create programs with loops, events, and conditionals. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share.
+          description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
         coursed:
           stages:
             Introduction:
@@ -6877,6 +6877,32 @@ en:
             new stage:
               name: new stage
           title: AWS Demo
+          description_audience: ''
+          description_short: ''
+          description: ''
+        halloween:
+          stages:
+            Halloween Artist:
+              name: Halloween Artist
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        valentine:
+          stages:
+            special valentine:
+              name: special valentine
+            Valentine Puzzles:
+              name: Valentine Puzzles
+          title: Valentine Special
+          description_audience: ''
+          description_short: Have fun creating valentines
+          description: ''
+        colehoc17:
+          stages:
+            new stage:
+              name: new stage
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''

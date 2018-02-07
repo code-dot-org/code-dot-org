@@ -1,5 +1,6 @@
 import React from 'react';
 import JoinSection from './JoinSection';
+import {action} from '@storybook/addon-actions';
 
 export default storybook => {
   return storybook
@@ -11,8 +12,8 @@ export default storybook => {
         story: () => (
           <JoinSection
             enrolledInASection={false}
-            updateSections={storybook.action('updateSections')}
-            updateSectionsResult={storybook.action('updateSectionsResult')}
+            updateSections={action('updateSections')}
+            updateSectionsResult={action('updateSectionsResult')}
           />
         )
       },
@@ -22,8 +23,8 @@ export default storybook => {
         story: () => (
           <JoinSection
             enrolledInASection={true}
-            updateSections={storybook.action('updateSections')}
-            updateSectionsResult={storybook.action('updateSectionsResult')}
+            updateSections={action('updateSections')}
+            updateSectionsResult={action('updateSectionsResult')}
           />
         )
       }

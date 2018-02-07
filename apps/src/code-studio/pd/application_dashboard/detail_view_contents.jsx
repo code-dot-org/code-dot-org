@@ -63,25 +63,36 @@ export class DetailViewContents extends React.Component {
       meets_criteria: PropTypes.string,
       bonus_points: PropTypes.number,
       pd_workshop_id: PropTypes.number,
+      pd_workshop_name: PropTypes.string,
+      pd_workshop_url: PropTypes.string,
       fit_workshop_name: PropTypes.string,
       fit_workshop_url: PropTypes.string,
-    }),
+      application_guid: PropTypes.string
+    }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     course: PropTypes.oneOf(['csf', 'csd', 'csp']),
     reload: PropTypes.func.isRequired,
     isWorkshopAdmin: PropTypes.bool
   };
 
-  state = {
-    status: this.props.applicationData.status,
-    locked: this.props.applicationData.locked,
-    notes: this.props.applicationData.notes,
-    response_scores: this.props.applicationData.response_scores || {},
-    editing: false,
-    regional_partner_name: this.props.applicationData.regional_partner_name || UnmatchedLabel,
-    regional_partner_filter: this.props.applicationData.regional_partner_id || UnmatchedFilter,
-    pd_workshop_id: this.props.applicationData.pd_workshop_id
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = this.getOriginalState();
+  }
+
+  getOriginalState() {
+    return {
+      editing: false,
+      status: this.props.applicationData.status,
+      locked: this.props.applicationData.locked,
+      notes: this.props.applicationData.notes,
+      response_scores: this.props.applicationData.response_scores || {},
+      regional_partner_name: this.props.applicationData.regional_partner_name || UnmatchedLabel,
+      regional_partner_filter: this.props.applicationData.regional_partner_id || UnmatchedFilter,
+      pd_workshop_id: this.props.applicationData.pd_workshop_id
+    };
+  }
 
   componentWillMount() {
     this.statuses = ApplicationStatuses[this.props.viewType];
@@ -91,14 +102,7 @@ export class DetailViewContents extends React.Component {
   }
 
   handleCancelEditClick = () => {
-    this.setState({
-      editing: false,
-      status: this.props.applicationData.status,
-      locked: this.props.applicationData.locked,
-      notes: this.props.applicationData.notes,
-      regional_partner_name: this.props.applicationData.regional_partner_name,
-      regional_partner_filter: this.props.applicationData.regional_partner_id
-    });
+    this.setState(this.getOriginalState());
   };
 
   handleEditClick = () => {
@@ -125,9 +129,9 @@ export class DetailViewContents extends React.Component {
     });
   };
 
-  handleSelectedWorkshopChange = (event) => {
+  handleSelectedWorkshopChange = (selection) => {
     this.setState({
-      pd_workshop_id: event.value
+      pd_workshop_id: selection ? selection.value : null
     });
   };
 
@@ -333,40 +337,79 @@ export class DetailViewContents extends React.Component {
     }
   };
 
-  renderTopSection = () => {
-    const fitWorkshopLink = (
-      <a href={this.props.applicationData.fit_workshop_url} target="_blank">see workshop</a>
-    );
+  renderTopSection = () => (
+    <div id="TopSection">
+      <DetailViewResponse
+        question="Email"
+        answer={this.props.applicationData.email}
+        layout="lineItem"
+      />
+      <DetailViewResponse
+        question="School Name"
+        answer={this.props.applicationData.school_name}
+        layout="lineItem"
+      />
+      <DetailViewResponse
+        question="District Name"
+        answer={this.props.applicationData.district_name}
+        layout="lineItem"
+      />
+      {this.props.applicationData.pd_workshop_name &&
+        this.renderAssignedSummerWorkshop()
+      }
+      {this.props.applicationData.application_type === 'Facilitator' &&
+        this.renderAssignedFitWorkshop()
+      }
+      {this.props.isWorkshopAdmin && this.renderRegionalPartnerPanel()}
+    </div>
+  );
+
+  renderAssignedSummerWorkshop() {
+    let answer;
+    if (this.props.applicationData.pd_workshop_url) {
+      answer = (
+        <span>
+          {this.props.applicationData.pd_workshop_name} (
+          <a href={this.props.applicationData.pd_workshop_url} target="_blank">
+            see workshop
+          </a>)
+        </span>
+      );
+    } else {
+      answer = "Unassigned";
+    }
     return (
-      <div id="TopSection">
-        <DetailViewResponse
-          question="Email"
-          answer={this.props.applicationData.email}
-          layout="lineItem"
-        />
-        <DetailViewResponse
-          question="School Name"
-          answer={this.props.applicationData.school_name}
-          layout="lineItem"
-        />
-        <DetailViewResponse
-          question="District Name"
-          answer={this.props.applicationData.district_name}
-          layout="lineItem"
-        />
-        {this.props.applicationData.application_type === 'Facilitator' &&
-          <DetailViewResponse
-            question="FIT Workshop"
-            answer={<span>
-              {this.props.applicationData.fit_workshop_name} ({fitWorkshopLink})
-            </span>}
-            layout="lineItem"
-          />
-        }
-        {this.props.isWorkshopAdmin && this.renderRegionalPartnerPanel()}
-      </div>
+      <DetailViewResponse
+        question="Summer Workshop"
+        answer={answer}
+        layout="lineItem"
+      />
     );
-  };
+  }
+
+  renderAssignedFitWorkshop() {
+    let answer;
+    if (this.props.applicationData.fit_workshop_url) {
+      answer = (
+        <span>
+          {this.props.applicationData.fit_workshop_name} (
+          <a href={this.props.applicationData.fit_workshop_url} target="_blank">
+            see workshop
+          </a>)
+        </span>
+      );
+    } else {
+      answer = "Unassigned";
+    }
+
+    return (
+      <DetailViewResponse
+        question="FIT Workshop"
+        answer={answer}
+        layout="lineItem"
+      />
+    );
+  }
 
   renderQuestions = () => {
     return (
@@ -379,6 +422,7 @@ export class DetailViewContents extends React.Component {
         courseName={this.props.applicationData.course_name}
         assignedWorkshopId={this.state.pd_workshop_id}
         handleSelectedWorkshopChange={this.handleSelectedWorkshopChange}
+        applicationGuid={this.props.applicationData.application_guid}
       />
     );
   };

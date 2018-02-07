@@ -8,9 +8,12 @@ import {actions, reducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
+import {sandboxDocumentBody} from "../../../../util/testUtils";
 
 describe('The JSDebugger component', () => {
   let root, jsDebugger, addEventSpy, removeEventSpy, codeApp;
+  const getBodyEventSpies = spyOnBodyEventMethods();
+  sandboxDocumentBody();
 
   beforeEach(() => {
     stubRedux();
@@ -34,8 +37,7 @@ describe('The JSDebugger component', () => {
     getStore().dispatch(actions.initialize({runApp}));
     getStore().dispatch(actions.open());
 
-    addEventSpy = sinon.spy(document.body, 'addEventListener');
-    removeEventSpy = sinon.spy(document.body, 'removeEventListener');
+    ({addEventSpy, removeEventSpy} = getBodyEventSpies());
     ['mousemove', 'touchmove', 'mouseup', 'touchend'].forEach(e => {
       addEventSpy.withArgs(e);
       removeEventSpy.withArgs(e);
@@ -55,10 +57,8 @@ describe('The JSDebugger component', () => {
   });
 
   afterEach(() => {
+    root.unmount();
     restoreRedux();
-    addEventSpy.restore();
-    removeEventSpy.restore();
-    document.body.removeChild(codeApp);
   });
 
   const debugAreaEl = () => root.find('#debug-area').get(0);
@@ -262,3 +262,62 @@ describe('The JSDebugger component', () => {
   });
 
 });
+
+/**
+ * Safe-spies on document.body.addEventListener and on
+ * document.body.removeEventListener. See createOrCaptureSpy() for details.
+ * @returns {function(): {addEventSpy: spy, removeEventSpy: spy}}
+ */
+function spyOnBodyEventMethods() {
+  const getAddEventSpy = createOrCaptureSpy(document.body, 'addEventListener');
+  const getRemoveEventSpy = createOrCaptureSpy(document.body, 'removeEventListener');
+
+  return () => ({
+    addEventSpy: getAddEventSpy(),
+    removeEventSpy: getRemoveEventSpy()
+  });
+}
+
+/**
+ * Helper for spying on a method that might already be spied on at some level
+ * above this test - for example, by some of our test cleanup assertions.
+ *
+ * If the method is already spied upon, we assert that it hasn't been called
+ * yet and capture a reference to that spy for use in this test, but we don't
+ * clean it up because the parent spy-er will do that.
+ *
+ * If the method is not spied upon, we spy on it and clean it up properly.
+ *
+ * This helper performs its own beforeEach/afterEach operations so it should
+ * be called directly inside a describe block.  It returns a getter for the
+ * captured spy which can be called from subsequent beforeEach blocks or in
+ * the body of the test.
+ *
+ * @param {Object} parentObj - parent of the method to be spied upon.
+ * @param {string} methodName - name of the method to be spied upon.
+ * @returns {function(): spy} Getter for the captured spy.
+ */
+function createOrCaptureSpy(parentObj, methodName) {
+  let spyFn, wasCaptured;
+
+  beforeEach(() => {
+    if (parentObj[methodName].hasOwnProperty('callCount')) {
+      // Something is already spying on this method.  Capture the spy for use
+      // in our test, and don't clean it up ourselves.
+      spyFn = parentObj[methodName];
+      expect(spyFn).not.to.have.been.called;
+      wasCaptured = true;
+    } else {
+      spyFn = sinon.spy(parentObj, methodName);
+      wasCaptured = false;
+    }
+  });
+
+  afterEach(() => {
+    if (!wasCaptured) {
+      spyFn.restore();
+    }
+  });
+
+  return () => spyFn;
+}

@@ -46,7 +46,7 @@
     "hide_view_data_button": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "pause_animations_by_default": "false",
     "callout_json": "[]",
     "markdown_instructions": "# Free Play\r\n\r\nUse what you've learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png) to send it to your Projects Gallery.\r\n\r\n\r\n\r\n",

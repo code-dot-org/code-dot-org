@@ -152,7 +152,7 @@ authoredHintUtils.finalizeHints_ = function () {
   localStorage.removeItem('last_attempt_record');
   var hints = authoredHintUtils.getFinishedHints_();
   if (finalAttemptRecord) {
-    hints = hints.map(function (hint){
+    hints = hints.map(function (hint) {
       hint = Object.assign({
         finalTime: finalAttemptRecord.time,
         finalAttempt: finalAttemptRecord.attempt,
@@ -200,7 +200,7 @@ authoredHintUtils.finishHints = function (nextAttemptRecord) {
   trySetLocalStorage('last_attempt_record', JSON.stringify(nextAttemptRecord));
   var unfinishedHintViews = authoredHintUtils.getUnfinishedHints_();
   authoredHintUtils.clearUnfinishedHints();
-  var finishedHintViews = unfinishedHintViews.map(function (hint){
+  var finishedHintViews = unfinishedHintViews.map(function (hint) {
     hint = Object.assign({
       nextTime: nextAttemptRecord.time,
       nextAttempt: nextAttemptRecord.attempt,

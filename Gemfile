@@ -267,3 +267,7 @@ gem 'auto_strip_attributes', '~> 2.1'
 
 # Used to sort UTF8 strings properly
 gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
+
+gem 'StreetAddress', require: "street_address"
+
+gem 'recaptcha', require: 'recaptcha/rails'

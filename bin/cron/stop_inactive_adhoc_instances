@@ -1,0 +1,110 @@
+#!/usr/bin/env ruby
+
+require_relative '../../dashboard/config/environment'
+require_relative '../../lib/cdo/only_one'
+require 'aws-sdk'
+require 'cdo/chat_client'
+
+StackStatus = Struct.new(
+  :name,
+  :cloudformation_status,
+  :creation_time,
+  :activity,
+  :current_instance_status,
+  :previous_instance_status,
+  :instance_status_change_reason
+)
+
+# set to :warn to notify that an adhoc environment should be stopped due to inactivity
+# set to :stop_instance to stop inactive instances
+EXECUTION_MODE = :warn
+
+# number of http requests received by environment within activity period
+# below which environment is considered to be inactive
+ACTIVITY_THRESHOLD = 1000
+
+# window of time within which activity is measured
+ACTIVITY_PERIOD_DAYS = 7
+
+# protect new instances from being terminated
+GRACE_PERIOD_DAYS = 3
+
+# This script stops AWS EC2 instances being used to run adhoc environments if they have not been used recently:
+#
+# 1) for each AWS CloudFormation Stacks with 'adhoc' at the beginning of the name
+#   a) get AWS CloudWatch Metrics to determine if it has been inactive for more than a configurable time period
+#   b) stop instance if it activity is below threshold
+# 2) publish final status to slack cron-job (list of all adhoc environments and which ones were stopped)
+def main
+  ChatClient.message 'cron-daily', 'Beginning to stop inactive adhoc instances'
+  job_status = Array.new
+
+  cloudformation_client = Aws::CloudFormation::Client.new
+  cloudformation_resource = Aws::CloudFormation::Resource.new(client: cloudformation_client)
+  cloudwatch_client = Aws::CloudWatch::Client.new
+
+  cloudformation_resource.stacks.select {|stack| stack.name.starts_with?('adhoc-')}.each do |stack|
+    begin
+      status = StackStatus.new(stack.name, stack.stack_status, stack.creation_time)
+
+      # get Unicorn active HTTP request count CloudWatch metric for the current adhoc stack
+      metric = Aws::CloudWatch::Metric.new(namespace: 'Unicorn', name: 'active', client: cloudwatch_client)
+      unicorn_metric = metric.get_statistics(
+        {
+          dimensions: [
+            {
+              name: 'Environment',
+              value: 'adhoc',
+            },
+            {
+              name: 'Host',
+              value: "#{stack.name}.cdn-code.org",
+            }
+          ],
+          start_time: Time.now - ACTIVITY_PERIOD_DAYS.days,
+          end_time: Time.now,
+          period: ACTIVITY_PERIOD_DAYS.days,
+          statistics: ['Sum'],
+          unit: 'Count'
+        }
+      )
+
+      # each datapoint in the metric statistics array contains an attribute called 'sum'
+      total_http_requests = unicorn_metric.datapoints.sum(&:sum) unless unicorn_metric.nil?
+      status[:activity] = total_http_requests
+      instance = Aws::EC2::Instance.new(id: stack.resource('WebServer').physical_resource_id)
+      status[:previous_instance_status] = instance.state.name unless instance.nil?
+
+      # stop instances with activity below threshold if they are running (state code == 16)
+      if total_http_requests.between?(1, ACTIVITY_THRESHOLD) &&
+          instance &&
+          instance.state.code == 16 &&
+          stack.creation_time < Time.now - GRACE_PERIOD_DAYS.days
+        stop_result = instance.stop(
+          {
+            dry_run: !(EXECUTION_MODE == :stop_instance),
+            force: false
+          }
+        )
+        status[:current_instance_status] = stop_result.state.name
+        status[:instance_status_change_reason] = 'Instance activity is below threshold'
+      else
+        status[:current_instance_status] = instance.reload.state.name unless instance.nil?
+        status[:instance_status_change_reason] = 'Instance is already stopped or activity is above threshold'
+      end
+
+    rescue StandardError => error
+      status[:current_instance_status] = instance.reload.state.name unless instance.nil?
+      status[:instance_status_change_reason] = error.to_s
+    ensure
+      job_status.push(status)
+    end
+  end
+  job_status_csv = CSV.generate do |csv|
+    csv << StackStatus.members
+    job_status.sort! {|a, b|  a.creation_time <=> b.creation_time}.each {|status| csv << status}
+  end
+  ChatClient.message 'cron-daily', 'Adhoc Environments Status: \\n\\n' + job_status_csv.gsub(/\n/, '\\n')
+end
+
+main if only_one_running?(__FILE__)

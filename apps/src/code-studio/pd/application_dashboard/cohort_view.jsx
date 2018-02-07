@@ -19,7 +19,7 @@ const styles = {
   }
 };
 
-class CohortView extends React.Component{
+class CohortView extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string.isRequired,
     isWorkshopAdmin: PropTypes.bool,
