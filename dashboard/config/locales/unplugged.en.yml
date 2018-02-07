@@ -266,3 +266,6 @@ en:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess as follows:\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'

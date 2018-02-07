@@ -47,10 +47,10 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
