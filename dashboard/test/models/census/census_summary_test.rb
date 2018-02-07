@@ -121,6 +121,29 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert_equal "YES", summary.teaches_cs, summary.audit_data
   end
 
+  test "School with only null survey is a null" do
+    submission = create :census_teacher_banner_v1,
+      how_many_10_hours: nil,
+      how_many_20_hours: nil
+    school = submission.school_infos[0].school
+    year = submission.school_year
+
+    summaries = Census::CensusSummary.summarize_school_data(
+      school,
+      [year],
+      [year],
+      [year],
+      {
+        school.state => [year]
+      },
+    )
+
+    assert_equal 1, summaries.length
+
+    summary = summaries[0]
+    assert_nil summary.teaches_cs, summary.audit_data
+  end
+
   test "School with one yes survey and one no survey is a maybe" do
     submission = create :census_teacher_banner_v1, how_many_20_hours: 'ALL'
     school = submission.school_infos[0].school
