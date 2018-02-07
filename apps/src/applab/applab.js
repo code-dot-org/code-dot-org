@@ -65,6 +65,7 @@ import * as thumbnailUtils from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {makeDisabledConfig} from '../dropletUtils';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
+import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
@@ -1072,6 +1073,7 @@ function onInterfaceModeChange(mode) {
       Applab.activeScreen().focus();
     }
   }
+  requestAnimationFrame(() => showHideWorkspaceCallouts());
 }
 
 /**

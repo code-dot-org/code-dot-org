@@ -3,6 +3,7 @@ import StageExtras from './StageExtras';
 import progress, { mergeProgress } from '@cdo/apps/code-studio/progressRedux';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
+import { withInfo } from '@storybook/addon-info';
 
 function configureStore() {
   const store = createStore(combineReducers({
@@ -20,10 +21,9 @@ export default storybook => {
   const store = configureStore();
   storybook
     .storiesOf('StageExtras', module)
-    .addWithInfo(
+    .add(
       'default',
-      'This is the StageExtras component.',
-      () => (
+      withInfo('This is the StageExtras component.')(() =>
         <Provider store={store}>
           <StageExtras
             stageNumber={1}

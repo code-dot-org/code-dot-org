@@ -119,7 +119,7 @@ module.exports = {
   levelId: "ec_simple",
   tests: [
     {
-      description: "button image",
+      description: "button image with absolute url",
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
@@ -130,9 +130,79 @@ module.exports = {
         assertPropertyRowValue(0, 'id', 'button1', assert);
         assertPropertyRowValue(4, 'x position (px)', 10, assert);
 
-        // take advantage of the fact that we expose the filesystem via
-        var assetUrl = '/base/test/integration/assets/applab-channel-id/flappy promo.png';
-        var encodedAssetUrl = '/base/test/integration/assets/applab-channel-id/flappy%20promo.png';
+        var assetUrl = '/blockly/media/skins/studio/small_static_avatar.png';
+        var encodedAssetUrl = assetUrl;
+        var imageInput = $("#propertyRowContainer input").last()[0];
+
+        var buttonElement = $("#design_button1")[0];
+
+        ReactTestUtils.Simulate.change(imageInput, {
+          target: { value: assetUrl }
+        });
+
+        assert.include(
+          buttonElement.style.backgroundImage,
+          encodedAssetUrl,
+          'Button background image should contain original url'
+        );
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
+      description: "button image url correct with fully qualified url",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        $("#designModeButton").click();
+
+        testUtils.dragToVisualization('BUTTON', 10, 20);
+
+        assertPropertyRowValue(0, 'id', 'button1', assert);
+        assertPropertyRowValue(4, 'x position (px)', 10, assert);
+
+        var assetUrl = 'https://studio.code.org/blockly/media/skins/studio/small_static_avatar.png';
+        var encodedAssetUrl = '/media?u=https%3A%2F%2Fstudio.code.org%2Fblockly%2Fmedia%2Fskins%2Fstudio%2Fsmall_static_avatar.png';
+        var imageInput = $("#propertyRowContainer input").last()[0];
+
+        var buttonElement = $("#design_button1")[0];
+
+        ReactTestUtils.Simulate.change(imageInput, {
+          target: { value: assetUrl }
+        });
+
+        assert.include(
+          buttonElement.style.backgroundImage,
+          encodedAssetUrl,
+          'Button background image should contain proxied, escaped url'
+        );
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
+      description: "button image name with spaces and parens is loaded and resized",
+      editCode: true,
+      // Use an asset path which we can access so that image loading will succeed
+      assetPathPrefix: '/base/test/integration/assets/',
+      xml: '',
+      runBeforeClick: function (assert) {
+        $("#designModeButton").click();
+
+        testUtils.dragToVisualization('BUTTON', 10, 20);
+
+        assertPropertyRowValue(0, 'id', 'button1', assert);
+        assertPropertyRowValue(4, 'x position (px)', 10, assert);
+
+        // take advantage of the fact that we expose the filesystem via localhost
+        var assetUrl = 'flappy (1).png';
+        var encodedAssetUrl = '/base/test/integration/assets/applab-channel-id/flappy%20%281%29.png';
         var imageInput = $("#propertyRowContainer input").last()[0];
 
         var buttonElement = $("#design_button1")[0];
@@ -145,7 +215,7 @@ module.exports = {
 
         // wait until image has loaded to do validation
         var img = new Image();
-        img.src = assetUrl;
+        img.src = encodedAssetUrl;
         img.onload = function () {
           // There's no guarantee that we hit this onload after the onload in
           // designMode.js, so the styles won't always be set immediately.
@@ -172,6 +242,7 @@ module.exports = {
           }, 1);
         };
         img.onerror = function (err) {
+          console.warn('img.onerror unexpectedly called');
           assert(false, err.message);
         };
       },

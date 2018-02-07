@@ -18,7 +18,7 @@ export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string,
   username: PropTypes.string,
-  age: PropTypes.number,
+  age: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   gender: PropTypes.string,
   secretWords: PropTypes.string,
   secretPicturePath: PropTypes.string,
@@ -36,38 +36,6 @@ export const COLUMNS = {
 };
 
 // Cell formatters.
-const nameFormatter = (name, {rowData}) => {
-  return (
-    <ManageStudentsNameCell
-      id={rowData.id}
-      sectionId={rowData.sectionId}
-      name={name}
-      loginType={rowData.loginType}
-      username={rowData.username}
-      isEditing={rowData.isEditing}
-    />
-  );
-};
-
-const ageFormatter = (age, {rowData}) => {
-  return (
-    <ManageStudentsAgeCell
-      age={age}
-      id={rowData.id}
-      isEditing={rowData.isEditing}
-    />
-  );
-};
-
-const genderFormatter = (gender, {rowData}) => {
-  return (
-    <ManageStudentsGenderCell
-      gender={gender}
-      id={rowData.id}
-      isEditing={rowData.isEditing}
-    />
-  );
-};
 
 const passwordFormatter = (loginType, {rowData}) => {
   return (
@@ -76,17 +44,17 @@ const passwordFormatter = (loginType, {rowData}) => {
         <div>
           {rowData.loginType === SectionLoginType.email &&
             <PasswordReset
-              resetAction={()=>{}}
               initialIsResetting={false}
+              id={rowData.id}
             />
           }
           {(rowData.loginType === SectionLoginType.word || rowData.loginType === SectionLoginType.picture) &&
             <ShowSecret
-              resetSecret={()=>{}}
               initialIsShowing={false}
               secretWord={rowData.secretWords}
               secretPicture={rowData.secretPicturePath}
               loginType={rowData.loginType}
+              id={rowData.id}
             />
           }
         </div>
@@ -100,21 +68,12 @@ const passwordFormatter = (loginType, {rowData}) => {
   );
 };
 
-const actionsFormatter = function (actions, {rowData}) {
-  return (
-    <ManageStudentsActionsCell
-      id={rowData.id}
-      sectionId={rowData.sectionId}
-      isEditing={rowData.isEditing}
-    />
-  );
-};
-
 class ManageStudentsTable extends Component {
   static propTypes = {
     // Provided by redux
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
+    editingData: PropTypes.object,
   };
 
   state = {
@@ -122,6 +81,58 @@ class ManageStudentsTable extends Component {
       direction: 'desc',
       position: 0
     }
+  };
+
+  ageFormatter = (age, {rowData}) => {
+    const editedValue = rowData.isEditing ? this.props.editingData[rowData.id].age : 0;
+    return (
+      <ManageStudentsAgeCell
+        age={age}
+        id={rowData.id}
+        isEditing={rowData.isEditing}
+        editedValue={editedValue}
+      />
+    );
+  };
+
+  genderFormatter = (gender, {rowData}) => {
+    const editedValue = rowData.isEditing ? this.props.editingData[rowData.id].gender : '';
+    return (
+      <ManageStudentsGenderCell
+        gender={gender}
+        id={rowData.id}
+        isEditing={rowData.isEditing}
+        editedValue={editedValue}
+      />
+    );
+  };
+
+  nameFormatter = (name, {rowData}) => {
+    const editedValue = rowData.isEditing ? this.props.editingData[rowData.id].name : '';
+    return (
+      <ManageStudentsNameCell
+        id={rowData.id}
+        sectionId={rowData.sectionId}
+        name={name}
+        loginType={rowData.loginType}
+        username={rowData.username}
+        isEditing={rowData.isEditing}
+        editedValue={editedValue}
+      />
+    );
+  };
+
+  actionsFormatter = (actions, {rowData}) => {
+    let disableSaving = rowData.isEditing ? (this.props.editingData[rowData.id].name.length === 0) : false;
+    return (
+      <ManageStudentsActionsCell
+        id={rowData.id}
+        sectionId={rowData.sectionId}
+        isEditing={rowData.isEditing}
+        isSaving={rowData.isSaving}
+        disableSaving={disableSaving}
+      />
+    );
   };
 
   getSortingColumns = () => {
@@ -160,7 +171,7 @@ class ManageStudentsTable extends Component {
           transforms: [sortable],
         },
         cell: {
-          format: nameFormatter,
+          format: this.nameFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
@@ -180,7 +191,7 @@ class ManageStudentsTable extends Component {
           transforms: [sortable],
         },
         cell: {
-          format: ageFormatter,
+          format: this.ageFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
@@ -200,7 +211,7 @@ class ManageStudentsTable extends Component {
           transforms: [sortable],
         },
         cell: {
-          format: genderFormatter,
+          format: this.genderFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
@@ -242,7 +253,7 @@ class ManageStudentsTable extends Component {
           }},
         },
         cell: {
-          format: actionsFormatter,
+          format: this.actionsFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
@@ -288,4 +299,5 @@ export const UnconnectedManageStudentsTable = ManageStudentsTable;
 export default connect(state => ({
   loginType: state.manageStudents.loginType,
   studentData: convertStudentDataToArray(state.manageStudents.studentData),
+  editingData: state.manageStudents.editingData,
 }))(ManageStudentsTable);

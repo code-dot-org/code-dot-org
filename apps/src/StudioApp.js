@@ -272,8 +272,8 @@ StudioApp.prototype.init = function (config) {
   this.configureDom(config);
 
   //Only log a page load when there are videos present
-  if (config.level.levelVideos && config.level.levelVideos.length > 0 && (config.app === 'applab' || config.app === 'gamelab')){
-    if (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab')){
+  if (config.level.levelVideos && config.level.levelVideos.length > 0 && (config.app === 'applab' || config.app === 'gamelab')) {
+    if (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab')) {
       firehoseClient.putRecord(
         'analysis-events',
         {
@@ -1200,7 +1200,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
 */
 StudioApp.prototype.onResize = function () {
   const codeWorkspace = document.getElementById('codeWorkspace');
-  if (codeWorkspace) {
+  if (codeWorkspace && $(codeWorkspace).is(':visible')) {
     var workspaceWidth = codeWorkspace.clientWidth;
 
     // Keep blocks static relative to the right edge in RTL mode
@@ -1440,6 +1440,11 @@ StudioApp.prototype.clearHighlighting = function () {
 * @param {FeedbackOptions} options
 */
 StudioApp.prototype.displayFeedback = function (options) {
+  // Special test code for edit blocks.
+  if (options.level.edit_blocks) {
+    options.feedbackType = TestResults.EDIT_BLOCKS;
+  }
+
   if (experiments.isEnabled('bubbleDialog')) {
     // eslint-disable-next-line no-unused-vars
     const { level, response, preventDialog, feedbackType, ...otherOptions } = options;
@@ -1459,12 +1464,11 @@ StudioApp.prototype.displayFeedback = function (options) {
         canShare: !this.disableSocialShare && !options.disableSocialShare,
       }));
       store.dispatch(setAchievements(getAchievements(store.getState())));
-      if (!preventDialog) {
+      if (this.shouldDisplayFeedbackDialog_(preventDialog, feedbackType)) {
         store.dispatch(showFeedback());
+        this.onFeedback(options);
+        return;
       }
-
-      this.onFeedback(options);
-      return;
     }
   }
   options.onContinue = this.onContinue;
@@ -1477,12 +1481,9 @@ StudioApp.prototype.displayFeedback = function (options) {
       project.getShareUrl();
   } catch (e) {}
 
-  // Special test code for edit blocks.
-  if (options.level.edit_blocks) {
-    options.feedbackType = TestResults.EDIT_BLOCKS;
-  }
-
-  if (this.shouldDisplayFeedbackDialog(options)) {
+  if (this.shouldDisplayFeedbackDialog_(
+      options.preventDialog,
+      options.feedbackType)) {
     // let feedback handle creating the dialog
     this.feedback_.displayFeedback(options, this.requiredBlocks_,
       this.maxRequiredBlocksToFlag_, this.recommendedBlocks_,
@@ -1514,10 +1515,11 @@ StudioApp.prototype.displayFeedback = function (options) {
 /**
  * Whether feedback should be displayed as a modal dialog or integrated
  * into the top instructions
- * @param {FeedbackOptions} options
+ * @param {boolean} preventDialog
+ * @param {TestResult} feedbackType
  */
-StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
-  if (options.preventDialog) {
+StudioApp.prototype.shouldDisplayFeedbackDialog_ = function (preventDialog, feedbackType) {
+  if (preventDialog) {
     return false;
   }
 
@@ -1525,7 +1527,7 @@ StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
   // success feedback.
   const constants = getStore().getState().pageConstants;
   if (!constants.noInstructionsWhenCollapsed) {
-    return this.feedback_.canContinueToNextLevel(options.feedbackType);
+    return this.feedback_.canContinueToNextLevel(feedbackType);
   }
   return true;
 };
@@ -1858,7 +1860,7 @@ StudioApp.prototype.configureDom = function (config) {
     // Temporarily attach an event listener to log clicks
     // Logs the type of app and the ids of the puzzle
     var videoThumbnail = document.getElementsByClassName('video_thumbnail');
-    if (videoThumbnail[0] && (config.app === 'gamelab' || config.app === 'applab')){
+    if (videoThumbnail[0] && (config.app === 'gamelab' || config.app === 'applab')) {
       videoThumbnail[0].addEventListener('click', () => {
         firehoseClient.putRecord(
           'analysis-events',
