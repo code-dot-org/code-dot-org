@@ -272,6 +272,9 @@ export default class SetupChecklist extends Component {
                   <pre>
                     sudo gpasswd --add $&#123;USER&#125; dialout
                   </pre>
+                  <p>
+                    You may need to restart your computer for changes to take effect.
+                  </p>
                 </div>
               }
               {!linuxPermissionError &&
