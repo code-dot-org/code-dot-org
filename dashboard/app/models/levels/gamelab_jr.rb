@@ -25,8 +25,8 @@
 
 class GamelabJr < Gamelab
   serialized_attrs %w(
-    use_helper_lib
-    custom_helper_lib
+    helper_libraries
+    custom_helper_library
   )
 
   def self.create_from_level_builder(params, level_params)

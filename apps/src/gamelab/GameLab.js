@@ -55,6 +55,10 @@ import {TestResults, ResultType} from '../constants';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import GameLabJrLib from './GameLabJr.interpreted';
 
+const LIBRARIES = {
+  'GameLabJr': GameLabJrLib,
+};
+
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
 // Number of ticks after which to capture a thumbnail image of the play space.
@@ -825,9 +829,14 @@ GameLab.prototype.initInterpreter = function () {
   this.consoleLogger_.attachTo(this.JSInterpreter);
   getStore().dispatch(jsDebugger.attach(this.JSInterpreter));
   let code = this.studioApp_.getCode();
-  if (this.level.useHelperLib) {
-    const lib = this.level.customHelperLib || GameLabJrLib;
-    code = lib + code;
+  if (this.level.customHelperLibrary) {
+    code = this.customHelperLibrary + code;
+  }
+  if (this.level.helperLibraries) {
+    const libs = this.level.helperLibraries
+      .map((lib) => LIBRARIES[lib])
+      .join("\n");
+    code = libs + code;
   }
   this.JSInterpreter.parse({
     code,
