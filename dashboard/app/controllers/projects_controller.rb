@@ -151,11 +151,6 @@ class ProjectsController < ApplicationController
     @featured_project_table_rows = []
     matched_projects_and_featured_projects.each do |featured_project, project|
       project_details = JSON.parse(project[:id][:value])
-      puts "project details"
-      puts
-      print project_details
-      puts
-      puts
       featured_project_row = {
         projectName: project_details['name'],
         type: project_details['projectType'],
