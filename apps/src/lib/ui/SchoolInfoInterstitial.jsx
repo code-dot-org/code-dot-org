@@ -30,7 +30,10 @@ const styles = {
   bottom: {
     display: 'flex',
     justifyContent: 'flex-end',
-  }
+  },
+  error: {
+    color: color.red,
+  },
 };
 
 export default class SchoolInfoInterstitial extends React.Component {
@@ -57,41 +60,48 @@ export default class SchoolInfoInterstitial extends React.Component {
       schoolZip: '',
       schoolLocation: '',
       ncesSchoolId: '',
+      showSchoolInfoUnknownError: false,
     };
   }
 
 
   handleSchoolInfoSubmit = () => {
-    if (this.schoolInfoInputs.isValid()) {
-      let schoolData;
-      if (this.state.ncesSchoolId === '-1') {
-        schoolData = {
-          "user[school_info_attributes][country]": this.state.country,
-          "user[school_info_attributes][school_type]": this.state.schoolType,
-          "user[school_info_attributes][school_name]": this.state.schoolName,
-          "user[school_info_attributes][school_state]": this.state.schoolState,
-          "user[school_info_attributes][school_zip]": this.state.schoolZip,
-          "user[school_info_attributes][full_address]": this.state.schoolLocation,
-        };
-      } else {
-        schoolData = {
-          "user[school_info_attributes][school_id]": this.state.ncesSchoolId,
-        };
-      }
-      $.post({
-        url: this.props.formUrl + '.json',
-        dataType: "json",
-        data: {
-          '_method': 'patch',
-          [this.props.authTokenName]: this.props.authTokenValue,
-          ...schoolData,
-        },
-      }).done(this.hideSchoolInfoForm).fail(this.updateSchoolInfoError);
+    let schoolData;
+    if (this.state.ncesSchoolId === '-1') {
+      schoolData = {
+        "user[school_info_attributes][country]": this.state.country,
+        "user[school_info_attributes][school_type]": this.state.schoolType,
+        "user[school_info_attributes][school_name]": this.state.schoolName,
+        "user[school_info_attributes][school_state]": this.state.schoolState,
+        "user[school_info_attributes][school_zip]": this.state.schoolZip,
+        "user[school_info_attributes][full_address]": this.state.schoolLocation,
+      };
     } else {
-      this.setState({
-        showSchoolInfoErrors: true,
-      });
+      schoolData = {
+        "user[school_info_attributes][school_id]": this.state.ncesSchoolId,
+      };
     }
+    $.post({
+      url: this.props.formUrl + '.json',
+      dataType: "json",
+      data: {
+        '_method': 'patch',
+        [this.props.authTokenName]: this.props.authTokenValue,
+        ...schoolData,
+      },
+    }).done(() => {
+      this.props.afterClose();
+    }).fail(() => {
+      if (!this.state.showSchoolInfoUnknownError) {
+        // First failure, display error message and give the teacher a chance
+        // to try again.
+        this.setState({showSchoolInfoUnknownError: true});
+      } else {
+        // We already failed once, let's not block the teacher any longer.
+        // TODO (bbuchanan): Gather metrics on this.
+        this.props.afterClose();
+      }
+    });
   };
 
   close = () => {
@@ -132,6 +142,9 @@ export default class SchoolInfoInterstitial extends React.Component {
           <div style={styles.heading}>
             We want to bring Computer Science to every student - help us track our progress!
           </div>
+          {this.state.showSchoolInfoUnknownError && (
+            <p style={styles.error}>We encountered an error with your submission. Please try again.</p>
+          )}
           <div style={styles.middle}>
             <p>
               Please enter your school information below.
