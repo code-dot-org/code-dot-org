@@ -52,10 +52,10 @@
     "level_verification_timeout": "0",
     "use_player": "false",
     "markdown_instructions": "Build the rest of your house from any material you'd like. The `repeat` command will come in handy.",
-    "contained_level_names": null,
     "top_level_procedure_autopopulate": "false",
     "agent_start_direction": "0",
-    "is_agent_level": "false"
+    "is_agent_level": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

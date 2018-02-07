@@ -47,14 +47,11 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "markdown_instructions": "# Circuit Piano\r\n\r\nLook at the code below. You're not going to be changing it, but try to see what it does. \r\n\r\n# Do this\r\n\r\n* Run the program and play with the piano on the screen.",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "code_functions": {
       "onEvent": null,
       "buzzer.frequency": null
-    }
+    },
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
