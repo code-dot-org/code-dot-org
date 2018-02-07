@@ -126,6 +126,7 @@ export default function manageStudents(state=initialState, action) {
       editingData: {
         ...state.editingData,
         [action.studentId]: {
+          ...state.editingData[action.studentId],
           ...action.studentData,
           id: action.studentId,
         }
