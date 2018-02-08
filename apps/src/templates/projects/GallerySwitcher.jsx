@@ -96,7 +96,7 @@ class GallerySwitcher extends Component {
 export default connect(state => ({
   selectedGallery: state.projects.selectedGallery
 }), dispatch => ({
-  selectGallery(gallery){
+  selectGallery(gallery) {
     dispatch(selectGallery(gallery));
   }
 }))(Radium(GallerySwitcher));

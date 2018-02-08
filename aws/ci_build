@@ -33,6 +33,7 @@ require 'cdo/infra_test_topic'
 require 'cdo/rake_utils'
 require 'cdo/only_one'
 require 'cdo/metrics_helper'
+require 'dynamic_config/dcdo'
 
 STARTED = 'build-started'.freeze
 S3_LOGS_BUCKET = 'cdo-build-logs'.freeze
@@ -154,6 +155,11 @@ def main
         ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
         DevelopersTopic.set_dtp 'yes'
         InfraProductionTopic.set_dtp_commit GitHub.sha('production')
+
+        # Check hoc_mode only on successful DTPs, so that we get about 1 reminder per day to bring
+        # staging, test and production to the same hoc_mode after a hoc_mode change. Note
+        # that this will only warn us if test and production (but not staging) are out of sync.
+        check_hoc_mode
       end
     else
       message = "<b>#{projects}</b> failed to build!" + time_message + log_link
@@ -174,6 +180,19 @@ def main
   # Return the same output and status code that BUILD returned.
   puts log
   status
+end
+
+def check_hoc_mode
+  hoc_mode = DCDO.get('hoc_mode', false)
+  if hoc_mode != CDO.default_hoc_mode
+    # The test machine cannot remember DCDO params, so its hoc_mode is controlled by
+    # CDO.default_hoc_mode.
+    msg = "<!here> #{rack_env} hoc_mode (#{hoc_mode.inspect}) and default_hoc_mode "\
+      "(#{CDO.default_hoc_mode.inspect}) are out of sync. Please update CDO.default_hoc_mode in "\
+      "github, DCDO hoc_mode in staging, and DCDO hoc_mode in production to the same values, so "\
+      "that our staging, test and production environments all show the same version of our site."
+    ChatClient.log msg
+  end
 end
 
 def mark_dtt_green

@@ -6898,3 +6898,23 @@ en:
           description_audience: ''
           description_short: Have fun creating valentines
           description: ''
+        colehoc17:
+          stages:
+            new stage:
+              name: new stage
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        course-e-2018:
+          stages:
+            courseB_unplugged_MRF_2018:
+              name: courseB_unplugged_MRF_2018
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+          title: Course E 2018
+          description_audience: ''
+          description_short: ''
+          description: ''
