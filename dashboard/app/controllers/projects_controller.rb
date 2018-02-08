@@ -133,6 +133,44 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def project_and_featured_project_fields
+    [
+      :storage_apps__id___id,
+      :storage_apps__storage_id___storage_id,
+      :storage_apps__value___value,
+      :storage_apps__project_type___project_type,
+      :storage_apps__published_at___published_at,
+      :featured_projects__featured_at___featured_at,
+      :featured_projects__unfeatured_at___unfeatured_at
+    ]
+  end
+
+  def combine_projects_and_featured_projects_data
+    storage_apps = "pegasus_#{CDO.rack_env}__storage_apps".to_sym
+    project_featured_project_combo_data = DASHBOARD_DB[:featured_projects].select(*project_and_featured_project_fields).
+    join(storage_apps, id: :storage_app_id).map
+    extract_data_for_tables(project_featured_project_combo_data)
+  end
+
+  def extract_data_for_tables(project_featured_project_combo_data)
+    @featured_project_table_rows = []
+    project_featured_project_combo_data.each do |project_details|
+      project_details_value = JSON.parse(project_details[:value])
+      channel = storage_encrypt_channel_id(project_details[:storage_id], project_details[:id])
+      featured_project_row = {
+        projectName: project_details_value['name'],
+        channel: channel,
+        type: project_details_value['projectType'],
+        publishedAt: project_details[:published_at],
+        thumbnailUrl: project_details_value['thumbnailUrl'],
+        featuredAt: project_details[:featured_at],
+        unfeaturedAt: project_details[:unfeatured_at],
+      }
+      @featured_project_table_rows << featured_project_row
+    end
+    sort_projects(@featured_project_table_rows)
+  end
+
   # @param [Array {Hash}] Each hash is data for a row in the featured projects tables.
   # The rows are sorted into two arrays: featured or unfeatured, based on
   # on whether the project is currently featured or not.
@@ -140,52 +178,16 @@ class ProjectsController < ApplicationController
     @featured = []
     @unfeatured = []
     featured_project_table_rows.each do |row|
-      row[:featured] ? @featured << row : @unfeatured << row
+      featured = row[:unfeaturedAt].nil? && !row[:featuredAt].nil?
+      featured ? @featured << row : @unfeatured << row
     end
-  end
-
-  # @param [Hash] key is a FeaturedProject, value is the associated project
-  # Iterate through the Featured Project - Project pairs are creates a new hash # for each containing combined information specific to what the featured
-  # projects tables are expecting.
-  def combine_projects_and_featured_projects_data(matched_projects_and_featured_projects)
-    @featured_project_table_rows = []
-    matched_projects_and_featured_projects.each do |featured_project, project|
-      project_details = JSON.parse(project[:id][:value])
-      featured_project_row = {
-        projectName: project_details['name'],
-        type: project_details['projectType'],
-        publishedAt: project[:id][:published_at],
-        thumbnailUrl: project_details['thumbnailUrl'],
-        featuredAt: featured_project.featured_at,
-        unfeaturedAt: featured_project.unfeatured_at,
-        featured: featured_project.featured?
-      }
-      @featured_project_table_rows << featured_project_row
-    end
-    sort_projects(@featured_project_table_rows)
-  end
-
-  # @param featured_projects [Array of FeaturedProjects]
-  # Iterates through featured_projects and finds the project associated with each FeaturedProject
-  def fetch_projects(featured_projects)
-    @matched_projects_and_featured_projects = {}
-    featured_projects.each do |featured_project|
-      @matched_projects_and_featured_projects[featured_project] = PEGASUS_DB[:storage_apps].where(id: featured_project.storage_app_id)
-    end
-    combine_projects_and_featured_projects_data(@matched_projects_and_featured_projects)
-  end
-
-  # Retrieves all of the FeaturedProjects because each will either show in the currently featured projects table or in the archive of previously featured projects.
-  def fetch_featured_projects
-    @featured_projects = FeaturedProject.all
-    fetch_projects(@featured_projects)
   end
 
   # GET /projects/featured
   # Access is restricted to those with project_validator permission
   def featured
     if current_user && current_user.project_validator?
-      fetch_featured_projects
+      combine_projects_and_featured_projects_data
       render template: 'projects/featured'
     else
       redirect_to '/projects/public', flash: {alert: 'Only project validators can feature projects.'}
