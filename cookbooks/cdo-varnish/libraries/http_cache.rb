@@ -97,6 +97,7 @@ class HttpCache
               /professional-development-workshop-surveys*
               /pd-program-registration*
               /poste*
+              /yourschool*
             ),
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies

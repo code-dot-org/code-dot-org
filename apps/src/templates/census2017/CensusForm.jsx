@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { PropTypes, Component } from 'react';
 import Button from '../Button';
 import i18n from "@cdo/locale";
 import _ from 'lodash';
@@ -10,6 +10,17 @@ import SchoolNotFound from '../SchoolNotFound';
 import { styles } from './censusFormStyles';
 
 class CensusForm extends Component {
+  static propTypes = {
+    userName: PropTypes.string,
+    userEmail: PropTypes.string,
+    isTeacher: PropTypes.bool,
+    schoolCountry: PropTypes.string,
+    schoolId: PropTypes.string,
+    schoolType: PropTypes.string,
+    schoolName: PropTypes.string,
+    schoolState: PropTypes.string,
+    schoolZip: PropTypes.string,
+  };
 
   state = {
     showFollowUp: false,
@@ -17,18 +28,19 @@ class CensusForm extends Component {
     selectedHowMuchCS: [],
     selectedTopics: [],
     otherTopicsDesc: '',
+    schoolName: this.props.schoolName || '',
     submission: {
-      name: '',
-      email: '',
-      role: '',
-      country: 'United States',
+      name: this.props.userName || '',
+      email: this.props.userEmail || '',
+      role: this.props.isTeacher ? 'TEACHER' : '',
+      country: this.props.schoolCountry || 'United States',
       hoc: '',
-      nces: '',
-      schoolName: '',
+      nces: this.props.schoolId || '',
+      schoolName: this.props.schoolName || '',
       schoolCity: '',
-      schoolState: '',
-      schoolZip: '',
-      schoolType: '',
+      schoolState: this.props.schoolState || '',
+      schoolZip: this.props.schoolZip || '',
+      schoolType: this.props.schoolType || '',
       afterSchool: '',
       tenHours: '',
       twentyHours: '',
