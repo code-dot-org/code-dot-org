@@ -21,6 +21,8 @@ export default class HelpTabContents extends Component {
   };
 
   render() {
+    const displayReferenceLinks = experiments.isEnabled('additionalResources') &&
+          this.props.referenceLinks;
     return (
       <div style={styles.referenceArea}>
         {this.props.videoData &&
@@ -39,7 +41,7 @@ export default class HelpTabContents extends Component {
             reference={this.props.mapReference}
           />
         }
-        {experiments.isEnabled('additionalResources') &&
+        {displayReferenceLinks &&
           this.props.referenceLinks.map((link) => (
             <ResourceLink
               key={link}
