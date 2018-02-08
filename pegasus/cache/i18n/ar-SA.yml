@@ -33,12 +33,20 @@
   twentyhours_text: أتممت أول "ساعة من البرمجة" الخاصة بك؟ تعلم المزيد عن علوم الحاسوب
     ومفاهيم البرمجة الأساسية في الدورة التالية.
   og_title: "كل طفل يستحق فرصة"
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
   og_description: "كل طالب في كل مدرسة يستحق الفرصة ليدرس علوم الحاسب . إنها تغير
     كل شيء."
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: "ساعة من البرمجةهنا مدار للتعليمات البرمجية"
   csedweek_og_description: "الساعة البرنامجية هي حركة عالمية تصل الى عشرات الملايين
     من الطلاب على كافة الاعمار في اكثر من مءة ‏وثمانين لغة وفِي كثر من خمسة وأربعين
     دولة."
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
   hoc2014_heading: انضم<a href="http://hourofcode.com"> الى ساعة البرمجة</a> <br/>
     8-14 كانون الأول/ديسمبر، عام 2014 <br/>
   hoc2014_students: "الطلاب"
@@ -338,6 +346,12 @@
   studiobar_donate_body: "طفل واحد يتعلم البرمجه مع كل دولار تتبرع به"
   studiobar_shop_title: "تسوق"
   studiobar_shop_body: "اكسر الصور النمطية. و قم بارتداء شعارنا بكل فخر."
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "&ldquo;اتحدى البنات في كل بلد تعلّم ساعة واحدة من البرمجة&rdquo;
     مالالى،  الحاصلة على جائزة نوبل للسلام"
   homepage_hero_text_susan: "&ldquo;إذا كان بإمكانك تغيير التكنولوجيا، يمكنك تغيير
@@ -371,6 +385,8 @@
   homepage_hero_text_stat_loc: "#loc  الأسطر من التعليمات البرمجية التي كتبها الطلاب"
   homepage_hero_text_stat_students: '#student_count حساب طالب في "استوديو البرمجة"'
   homepage_hero_text_stat_served: "ساعة البرمجة: #served خدمة قدمت"
+  homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: "الساعة من التعليمات البرمجية"
   homepage_slot_text_frozen: "ملكة الثلج مع أنّا و إلزا"
   homepage_slot_text_teacher: "لَوْحَة التَحَكُّم"
@@ -390,6 +406,7 @@
   homepage_action_text_girlvideo: "الهام بنت"
   homepage_action_text_learn: "ابدأ التعلم"
   homepage_action_text_signpetition: "وقّع على العريضة"
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: "أوافق &#x25BE;"
   homepage_diversity_pledge: "التعهد بالتنوع"
   homepage_banner_text_prizes: 'فعالية "ساعة برمجة" قادمة من جديد. 07 - 13 ديسمبر. '
@@ -510,10 +527,14 @@
   mc_platformtext: "المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية"
   mc_specs: "العديد من اللغات | المتصفحات الحديثة والاجهزة اللوحية | الذين تتراوح
     أعمارهم بين 6-106"
+  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: "مصمم Minecraft"
   minecraft_adventurer: "مغامر في Minecraft"
   minecraft_tutorials: Minecraft Hour of Code Tutorials
   minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
+  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
+    new activity! Journey through Minecraft with code.
+  minecraft_agent_button: "إبدأ"
   minecraft_designer_description: "برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار
     الخاص بك من ماينكرافت."
   minecraft_designer_button: "إبدأ"
@@ -522,6 +543,41 @@
   minecraft_no_internet: "ليسَ لديكَ إنتِرْنِتّ؟"
   minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
   minecraft_subtitle: "ساعة البرمجة ماين كرافت"
+  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
+    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
+    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
+    problem solving and loads of fun."
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+    facilitator quick start guide and PowerPoint presentations for younger and older
+    students now."
+  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
+    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
+    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
+    Get a head start on thinking through what you need to bring Hour of Code to young
+    people during Computer Science Education week (December 4-10) and beyond.
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
+    at the Microsoft Store'
+  minecraft_continue_learning_description: No computer science experience required!
+    Help ensure all youth can learn the valuable skills gained through computer science
+    education. Join us at the Microsoft Store to engage in a free series of three,
+    1-hour workshops where you will experience coding in a fun and stress-free environment,
+    become familiar with key computer science concepts, and get ready to lead an Hour
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
+    up today</a>.
+  minecraft_future: Help all youth become future ready
+  minecraft_future_description: Find out how other schools and nonprofits are bringing
+    digital skills, from digital literacy to computer science education, to their
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
+    the resources</a> they found most valuable.
+  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
+    Program animals and other Minecraft creatures in your own version of Minecraft.
+  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
+    Write code to journey through Minecraft biomes.
   sports_page_title: Sports Hour of Code
   sports_og_title: Hour of Code Sports Tutorials
   sports_og_description: Choose between making a basketball game or mix and match
@@ -569,6 +625,7 @@
   video_title_obama: "الرئيس أوباما في علوم الحاسوب"
   video_title_hoc_is_here: "هنا ساعة البرمجة - يمكن لأي كان أي يتعلم"
   video_title_anybody_can_learn: "يمكن لأي كان أن يتعلم"
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: "ساعة البرمجة مع درايمن كرين"
   video_title_russell_okung: "ساعة البرمجة مع راسل أوكون"
   video_title_real_madrid: "ساعة البرمجة مع ريال مدريد"
@@ -686,6 +743,10 @@
   volunteer_engineer_submission_type_task_mentor: "أنا ابحث عن مؤطر لمساعدتي في إعدادي
     للبرمجة مع طلابي"
   petition_age: "العمر"
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: "اعرف المزيد"
   dashboard_landing_title: "الصفحة الرئيسية المعلم"
   dashboard_landing_welcome: "مرحبا بكم في لوحة المعلم الجديدة والمحسنة."
   dashboard_landing_video: "شاهد هذا الفيديو"
@@ -1175,6 +1236,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Full Test - 50 questions
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
@@ -1966,3 +2029,11 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
+  dashboard_tools: 'Tools: '
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
+  gamelab_name: Game Lab

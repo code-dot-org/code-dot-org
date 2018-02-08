@@ -68,6 +68,9 @@ class Pd::Workshop < ActiveRecord::Base
     STATE_ENDED = 'Ended'.freeze
   ].freeze
 
+  SUBJECT_TEACHER_CON = 'Code.org TeacherCon'.freeze
+  SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze
+  SUBJECT_SUMMER_WORKSHOP = '5-day Summer'.freeze
   SUBJECTS = {
     COURSE_ECS => [
       SUBJECT_ECS_PHASE_2 = 'Phase 2 in-person'.freeze,
@@ -87,22 +90,22 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'.freeze
     ],
     COURSE_CSP => [
-      SUBJECT_CSP_SUMMER_WORKSHOP = '5-day Summer'.freeze,
+      SUBJECT_CSP_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
       SUBJECT_CSP_WORKSHOP_1 = 'Units 1 and 2: The Internet and Digital Information'.freeze,
       SUBJECT_CSP_WORKSHOP_2 = 'Units 2 and 3: Processing data, Algorithms, and Programming'.freeze,
       SUBJECT_CSP_WORKSHOP_3 = 'Units 4 and 5: Big Data, Privacy, and Building Apps'.freeze,
       SUBJECT_CSP_WORKSHOP_4 = 'Units 5 and 6: Building Apps and AP Assessment Prep'.freeze,
-      SUBJECT_CSP_TEACHER_CON = 'Code.org TeacherCon'.freeze,
-      SUBJECT_CSP_FIT = 'Code.org Facilitator Weekend'.freeze
+      SUBJECT_CSP_TEACHER_CON = SUBJECT_TEACHER_CON,
+      SUBJECT_CSP_FIT = SUBJECT_FIT
     ],
     COURSE_CSD => [
-      SUBJECT_CSD_SUMMER_WORKSHOP = '5-day Summer'.freeze,
+      SUBJECT_CSD_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
       SUBJECT_CSD_UNITS_2_3 = 'Units 2 and 3: Web Development and Animations'.freeze,
       SUBJECT_CSD_UNIT_3_4 = 'Units 3 and 4: Building Games and User Centered Design'.freeze,
       SUBJECT_CSD_UNITS_4_5 = 'Units 4 and 5: App Prototyping and Data & Society'.freeze,
       SUBJECT_CSD_UNIT_6 = 'Unit 6: Physical Computing'.freeze,
-      SUBJECT_CSD_TEACHER_CON = 'Code.org TeacherCon'.freeze,
-      SUBJECT_CSD_FIT = 'Code.org Facilitator Weekend'.freeze
+      SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
+      SUBJECT_CSD_FIT = SUBJECT_FIT
     ]
   }.freeze
 
@@ -253,6 +256,9 @@ class Pd::Workshop < ActiveRecord::Base
     joins(:sessions).group_by_id.having('(DATE(MIN(start)) >= ?)', date)
   end
 
+  # Filters to workshops that are scheduled on or after today and have not yet ended
+  scope :future, -> {scheduled_start_on_or_after(Time.zone.today).where(ended_at: nil)}
+
   # Orders by the scheduled start date (date of the first session),
   # @param :desc [Boolean] optional - when true, sort descending
   def self.order_by_scheduled_start(desc: false)
@@ -329,6 +335,30 @@ class Pd::Workshop < ActiveRecord::Base
 
     # Limit the friendly name to 255 chars
     "#{course_subject} workshop on #{start_time} at #{location_name}"[0...255]
+  end
+
+  # E.g. "March 1-3, 2017" or "March 30 - April 2, 2017"
+  # Assume no workshops will span a new year
+  def friendly_date_range
+    sessions.first.start.month == sessions.last.start.month ?
+      "#{sessions.first.start.strftime('%B %-d')}-#{sessions.last.start.strftime('%-d, %Y')}" :
+      "#{sessions.first.start.strftime('%B %-d')} - #{sessions.last.start.strftime('%B %-d, %Y')}"
+  end
+
+  # Friendly location string is determined by:
+  # 1. known variant of TBA? use TBA
+  # 2. processed location? use city, state
+  # 3. unprocessable location: use user-entered string
+  # 4. no location address at all? use TBA
+  def friendly_location
+    return 'Location TBA' if location_address_tba?
+    return "#{location_city} #{location_state}" if processed_location
+    location_address.presence || 'Location TBA'
+  end
+
+  def date_and_location_name
+    date_string = sessions.any? ? friendly_date_range : 'Dates TBA'
+    "#{date_string}, #{friendly_location}#{teachercon? ? ' TeacherCon' : ''}"
   end
 
   # Puts workshop in 'In Progress' state
@@ -452,10 +482,14 @@ class Pd::Workshop < ActiveRecord::Base
     end
   end
 
+  def location_address_tba?
+    %w(tba tbd n/a).include?(location_address.try(:downcase))
+  end
+
   def process_location
     result = nil
 
-    unless location_address.blank?
+    unless location_address.blank? || location_address_tba?
       begin
         Geocoder.with_errors do
           # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
@@ -484,8 +518,26 @@ class Pd::Workshop < ActiveRecord::Base
     self.processed_location = {
       latitude: result.latitude,
       longitude: result.longitude,
+      city: result.city,
+      state: result.state,
       formatted_address: result.formatted_address
     }.to_json
+  end
+
+  # Retrieve a single location value (like city or state) from the processed
+  # location hash. Attribute can be passed as a string or symbol
+  def get_processed_location_value(key)
+    return unless processed_location
+    location_hash = JSON.parse processed_location
+    location_hash[key.to_s]
+  end
+
+  def location_city
+    get_processed_location_value('city')
+  end
+
+  def location_state
+    get_processed_location_value('state')
   end
 
   # Min number of days a teacher must attend for it to count.
@@ -544,7 +596,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def local_summer?
-    course == COURSE_CSP && subject == SUBJECT_CSP_SUMMER_WORKSHOP
+    subject == SUBJECT_SUMMER_WORKSHOP
   end
 
   def teachercon?

@@ -147,6 +147,7 @@
     user_type_student: student
     field_is_required: je požadováno
     accept_terms: Musíte souhlasit pro vytvoření účtu
+    error: An error occurred.
   school_info:
     title: Název školy (nepovinné)
     school_country: Země školy
@@ -753,6 +754,9 @@
         and games with objects and characters that interact with each other.
       audience: Věk 13 +
       cta: Jak na to
+    hoc-encryption:
+      title: Jednoduché šifrování
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -772,6 +776,10 @@
     minecraft2016:
       title: Minecraft
       body: Naprogramuj zvířata a další postavy, vytvoř si svojí vlastní verzi Minecraftu.
+    hero:
+      title: Minecraft
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: Sports
       body: Make a basketball game or mix and match across sports.
@@ -852,6 +860,9 @@
     hide_survey_last_answer: Tento průzkum je anonymní. Pro souhrné informace o výsledcích
       navštiv prosím nástěnku tvého učitele. Výsledky budou zobrazené pouze při účasti
       pěti žáků.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Děkuji
     wrong_body: Děkujeme vám za odeslání odpovědí.
@@ -976,7 +987,14 @@
     rename: Přejmenovat
     save: Uložit
     delete: Odstranit
-    import: Import
+    import: Importovat
+    share_link_import_bad_link_header: Odkaz pro sdílení nebyl rozpoznán
+    share_link_import_bad_link_body: 'Daný odkaz pro sdílení se nám nepodařilo naimportovat.
+      Ověřte, zda používáte odkaz z hádanky Minecraft: Agent a zda jste zkopírovali
+      úplný odkaz.'
+    share_link_import_error_header: Něco se nepovedlo.
+    share_link_import_error_body: Došlo k problému při importu daného odkazu pro sdílení.
+      Zkuste to znovu.
     exit: Návrat ke kurzu
     my_projects: Moje projekty
     project_gallery: Projekty

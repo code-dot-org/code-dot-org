@@ -39,6 +39,7 @@ class SettingsCog extends Component {
   static propTypes = {
     isRunning: PropTypes.bool,
     runModeIndicators: PropTypes.bool,
+    showMakerToggle: PropTypes.bool,
   };
 
   // This ugly two-flag state is a workaround for an event-handling bug in
@@ -125,9 +126,12 @@ class SettingsCog extends Component {
           targetPoint={this.targetPoint}
           isOpen={this.state.open}
           beforeClose={this.beforeClose}
+          showTail={true}
         >
           <ManageAssets onClick={this.manageAssets}/>
-          <ToggleMaker onClick={this.toggleMakerToolkit}/>
+          {this.props.showMakerToggle &&
+            <ToggleMaker onClick={this.toggleMakerToolkit}/>
+          }
         </PopUpMenu>
         <ConfirmEnableMakerDialog
           isOpen={this.state.confirmingEnableMaker}

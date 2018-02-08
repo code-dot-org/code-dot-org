@@ -122,6 +122,7 @@ sv:
     user_type_student: "Student"
     field_is_required: "krävs"
     accept_terms: "Du måste godkänna för att skapa ett konto"
+    error: "An error occurred."
   school_info:
     title: 'School Information (optional)'
     school_country: 'Skolans land'
@@ -566,6 +567,9 @@ sv:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Ålder 13+"
       cta: "Läs mer"
+    hoc-encryption:
+      title: "Simple Encryption"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -584,6 +588,9 @@ sv:
     minecraft2016:
       title: "Minecraft"
       body: "Programmet djur och andra Minecraft varelser i din egen version av Minecraft."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Sport"
       body: "Make a basketball game or mix and match across sports."
@@ -647,6 +654,7 @@ sv:
     correct_title: "Tack"
     correct_body: "Tack för lämnade svar."
     hide_survey_last_answer: "Undersökningen är anonym.  Besök lärarnas statussida för det sammanfattade resultatet.  Observera att resultaten endast är synliga om minst fem elever har lämnat in enkäten."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Tack"
     wrong_body: "Tack för lämnade svar."
@@ -752,7 +760,11 @@ sv:
     rename: "Ändra namn"
     save: "Spara"
     delete: "Ta bort"
-    import: "Import"
+    import: "Importera"
+    share_link_import_bad_link_header: "Delningslänken kändes inte igen"
+    share_link_import_bad_link_body: 'Vi kunde inte importera delningslänken. Se till att du använder en länk från ett Minecraft: Agent-pussel, och att du har kopierat hela länken.'
+    share_link_import_error_header: "Någonting gick fel."
+    share_link_import_error_body: "Det gick inte att importera delningslänken. Försök igen."
     exit: "Tillbaka till kursen"
     my_projects: "Mina projekt"
     project_gallery: "Projekt"

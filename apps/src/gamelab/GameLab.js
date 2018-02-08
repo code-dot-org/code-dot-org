@@ -18,6 +18,7 @@ var utils = require('../utils');
 var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
+import * as apiTimeoutList from '../lib/util/timeoutList';
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
@@ -51,6 +52,12 @@ import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
+import {showHideWorkspaceCallouts} from '../code-studio/callouts';
+import GameLabJrLib from './GameLabJr.interpreted';
+
+const LIBRARIES = {
+  'GameLabJr': GameLabJrLib,
+};
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -127,10 +134,11 @@ module.exports = GameLab;
 /**
  * Forward a log message to both logger objects.
  * @param {?} object
+ * @param {string} logLevel
  */
-GameLab.prototype.log = function (object) {
+GameLab.prototype.log = function (object, logLevel) {
   this.consoleLogger_.log(object);
-  getStore().dispatch(jsDebugger.appendLog(object));
+  getStore().dispatch(jsDebugger.appendLog(object, logLevel));
 };
 
 /**
@@ -154,10 +162,6 @@ GameLab.baseP5loadImage = null;
 GameLab.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error("GameLab requires a StudioApp");
-  }
-
-  if (!config.level.editCode) {
-    throw 'Game Lab requires Droplet';
   }
 
   this.skin = config.skin;
@@ -228,13 +232,11 @@ GameLab.prototype.init = function (config) {
   // able to turn them on.
   config.noInstructionsWhenCollapsed = true;
 
-  // TODO (caleybrock): re-enable based on !config.level.debuggerDisabled when debug
-  // features are fixed.
-  var breakpointsEnabled = false;
+  var breakpointsEnabled = !config.level.debuggerDisabled;
   config.enableShowCode = true;
   config.enableShowLinesCount = false;
 
-  var onMount = function () {
+  const onMount = () => {
     this.setupReduxSubscribers(getStore());
     if (config.level.watchersPrepopulated) {
       try {
@@ -271,15 +273,14 @@ GameLab.prototype.init = function (config) {
     });
 
     this.setCrosshairCursorForPlaySpace();
-  }.bind(this);
+  };
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
 
-  // TODO(caleybrock): re-enable based on (!config.hideSource && !config.level.debuggerDisabled)
-  // when debug features are fixed.
-  var showDebugButtons = false;
-  var showDebugConsole = !config.hideSource;
+  var showDebugButtons = config.level.editCode &&
+    (!config.hideSource && !config.level.debuggerDisabled);
+  var showDebugConsole = config.level.editCode && !config.hideSource;
 
   if (showDebugButtons || showDebugConsole) {
     getStore().dispatch(jsDebugger.initialize({
@@ -296,7 +297,7 @@ GameLab.prototype.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
-    showDebugSlider: false,
+    showDebugSlider: experiments.isEnabled('showDebugSlider'),
     showAnimationMode: !config.level.hideAnimationMode,
     startInAnimationTab: config.level.startInAnimationTab,
     allAnimationsSingleFrame: config.level.allAnimationsSingleFrame,
@@ -311,9 +312,11 @@ GameLab.prototype.init = function (config) {
   }
 
   // Push project-sourced animation metadata into store. Always use the
-  // animations specified by the level definition for embed levels.
-  const initialAnimationList = (config.initialAnimationList && !config.embed) ?
-      config.initialAnimationList : this.startAnimations;
+  // animations specified by the level definition for embed and contained
+  // levels.
+  const initialAnimationList =
+    (config.initialAnimationList && !config.embed && !config.hasContainedLevels) ?
+    config.initialAnimationList : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
   ReactDOM.render((
@@ -339,20 +342,43 @@ GameLab.prototype.setupReduxSubscribers = function (store) {
     const awaitingContainedLevel = this.studioApp_.hasContainedLevels &&
       !hasValidContainedLevelResult();
 
-    if (state.interfaceMode !== lastState.interfaceMode &&
-        state.interfaceMode === GameLabInterfaceMode.ANIMATION &&
+    if (state.interfaceMode !== lastState.interfaceMode) {
+      if (state.interfaceMode === GameLabInterfaceMode.ANIMATION &&
         !awaitingContainedLevel) {
-      this.studioApp_.resetButtonClick();
+          this.studioApp_.resetButtonClick();
+      }
+      requestAnimationFrame(() => showHideWorkspaceCallouts());
     }
 
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
       this.onIsRunningChange(state.runState.isRunning);
+    }
+
+    if (!lastState.runState || state.runState.isDebuggingSprites !== lastState.runState.isDebuggingSprites) {
+      this.onIsDebuggingSpritesChange(state.runState.isDebuggingSprites);
+    }
+
+    if (!lastState.runState || state.runState.stepSpeed !== lastState.runState.stepSpeed) {
+      this.onStepSpeedChange(state.runState.stepSpeed);
     }
   });
 };
 
 GameLab.prototype.onIsRunningChange = function () {
   this.setCrosshairCursorForPlaySpace();
+};
+
+GameLab.prototype.onIsDebuggingSpritesChange = function (isDebuggingSprites) {
+  this.gameLabP5.debugSprites(isDebuggingSprites);
+};
+
+GameLab.prototype.onStepSpeedChange = function (stepSpeed) {
+  this.gameLabP5.changeStepSpeed(stepSpeed);
+
+  if (this.isTickTimerRunning()) {
+    this.stopTickTimer();
+    this.startTickTimer();
+  }
 };
 
 /**
@@ -437,11 +463,32 @@ GameLab.prototype.afterEditorReady_ = function (areBreakpointsEnabled) {
 
 GameLab.prototype.haltExecution_ = function () {
   this.eventHandlers = {};
+  this.stopTickTimer();
+  this.tickCount = 0;
+};
+
+GameLab.prototype.isTickTimerRunning = function () {
+  return this.tickIntervalId !== 0;
+};
+
+GameLab.prototype.stopTickTimer = function () {
   if (this.tickIntervalId !== 0) {
     window.clearInterval(this.tickIntervalId);
+    this.tickIntervalId = 0;
   }
-  this.tickIntervalId = 0;
-  this.tickCount = 0;
+};
+
+GameLab.prototype.startTickTimer = function () {
+  if (this.isTickTimerRunning()) {
+    console.warn('Tick timer is already running in startTickTimer()');
+  }
+  // Set to 1ms interval, but note that browser minimums are actually 5-16ms:
+  const fastPeriod = 1;
+  // Set to 100ms interval when we are in the experiment with the speed slider
+  // and the slider has been slowed down (we only support two speeds for now):
+  const slowPeriod = 100;
+  const intervalPeriod = this.gameLabP5.stepSpeed < 1 ? slowPeriod : fastPeriod;
+  this.tickIntervalId = window.setInterval(this.onTick.bind(this), intervalPeriod);
 };
 
 /**
@@ -459,6 +506,8 @@ GameLab.prototype.reset = function (ignore) {
   }
   */
 
+  apiTimeoutList.clearTimeouts();
+  apiTimeoutList.clearIntervals();
   Sounds.getSingleton().stopAllAudio();
 
   this.gameLabP5.resetExecution();
@@ -497,7 +546,7 @@ GameLab.prototype.reset = function (ignore) {
   }
 };
 
-GameLab.prototype.onPuzzleComplete = function (submit ) {
+GameLab.prototype.onPuzzleComplete = function (submit) {
   if (this.executionError) {
     this.result = ResultType.ERROR;
   } else {
@@ -527,7 +576,7 @@ GameLab.prototype.onPuzzleComplete = function (submit ) {
     // shows Continue (the proper results will be reported to the service)
     this.testResults = TestResults.ALL_PASS;
     this.message = containedLevelResultsInfo.feedback;
-  } else {
+  } else if (this.level.editCode) {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
@@ -536,6 +585,10 @@ GameLab.prototype.onPuzzleComplete = function (submit ) {
 
     program = encodeURIComponent(this.studioApp_.getCode());
     this.message = null;
+  } else {
+    // We're using blockly, report the program as xml
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = encodeURIComponent(Blockly.Xml.domToText(xml));
   }
 
   if (this.testResults >= TestResults.FREE_PLAY) {
@@ -761,7 +814,7 @@ GameLab.prototype.execute = function () {
       (this.studioApp_.hasUnwantedExtraTopBlocks() ||
         this.studioApp_.hasDuplicateVariablesInForLoops())) {
     // immediately check answer, which will fail and report top level blocks
-    this.onPuzzleComplete();
+    this.onPuzzleComplete(false);
     return;
   }
 
@@ -778,8 +831,7 @@ GameLab.prototype.execute = function () {
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
 
-  // Set to 1ms interval, but note that browser minimums are actually 5-16ms:
-  this.tickIntervalId = window.setInterval(this.onTick.bind(this), 1);
+  this.startTickTimer();
 };
 
 GameLab.prototype.initInterpreter = function () {
@@ -801,6 +853,7 @@ GameLab.prototype.initInterpreter = function () {
   this.JSInterpreter = new JSInterpreter({
     studioApp: this.studioApp_,
     maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
+    shouldRunAtMaxSpeed: () => (this.gameLabP5.stepSpeed >= 1),
     customMarshalGlobalProperties: this.gameLabP5.getCustomMarshalGlobalProperties(),
     customMarshalBlockedProperties: this.gameLabP5.getCustomMarshalBlockedProperties(),
     customMarshalObjectList: this.gameLabP5.getCustomMarshalObjectList(),
@@ -809,8 +862,18 @@ GameLab.prototype.initInterpreter = function () {
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
   getStore().dispatch(jsDebugger.attach(this.JSInterpreter));
+  let code = this.studioApp_.getCode();
+  if (this.level.customHelperLibrary) {
+    code = this.customHelperLibrary + code;
+  }
+  if (this.level.helperLibraries) {
+    const libs = this.level.helperLibraries
+      .map((lib) => LIBRARIES[lib])
+      .join("\n");
+    code = libs + code;
+  }
   this.JSInterpreter.parse({
-    code: this.studioApp_.getCode(),
+    code,
     blocks: dropletConfig.blocks,
     blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
     enableEvents: true,
@@ -846,6 +909,10 @@ GameLab.prototype.onTick = function () {
   if (this.JSInterpreter) {
     if (this.interpreterStarted) {
       this.JSInterpreter.executeInterpreter();
+
+      if (this.gameLabP5.stepSpeed < 1) {
+        this.gameLabP5.drawDebugSpriteColliders();
+      }
     }
 
     this.completePreloadIfPreloadComplete();
@@ -1037,6 +1104,7 @@ GameLab.prototype.completeSetupIfSetupComplete = function () {
       !this.JSInterpreter.startedHandlingEvents) {
     // Global code should run during the setup phase, but global code hasn't
     // completed.
+    this.gameLabP5.afterSetupStarted();
     return;
   }
 
@@ -1080,8 +1148,8 @@ GameLab.prototype.completeRedrawIfDrawComplete = function () {
   }
 };
 
-GameLab.prototype.handleExecutionError = function (err, lineNumber) {
-  outputError(String(err), lineNumber);
+GameLab.prototype.handleExecutionError = function (err, lineNumber, outputString) {
+  outputError(outputString, lineNumber);
   this.executionError = { err: err, lineNumber: lineNumber };
   this.haltExecution_();
 };
@@ -1105,8 +1173,6 @@ GameLab.prototype.displayFeedback_ = function () {
   var level = this.level;
 
   this.studioApp_.displayFeedback({
-    app: 'gamelab',
-    skin: this.skin.id,
     feedbackType: this.testResults,
     message: this.message,
     response: this.response,
@@ -1121,7 +1187,8 @@ GameLab.prototype.displayFeedback_ = function () {
     appStrings: {
       reinfFeedbackMsg: msg.reinfFeedbackMsg(),
       sharingText: msg.shareGame()
-    }
+    },
+    hideXButton: true,
   });
 };
 

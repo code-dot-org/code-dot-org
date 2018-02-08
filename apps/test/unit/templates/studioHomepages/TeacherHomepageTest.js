@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import {assert, expect} from '../../../util/configuredChai';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
-import { announcement, courses, topCourse } from './homepagesTestData';
+import { courses, topCourse } from './homepagesTestData';
 
 describe('TeacherHomepage', () => {
   let server;
@@ -27,11 +27,12 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={[]}
         topCourse={topCourse}
-        isRtl={false}
         joinedSections={[]}
+        isEnglish={true}
+        showCensusBanner={false}
       />
     );
-    const headerBanner = wrapper.find('HeaderBanner');
+    const headerBanner = wrapper.find('Connect(HeaderBanner)');
     assert.deepEqual(headerBanner.props(), {
       headingText: "My Dashboard",
       short: true
@@ -44,35 +45,12 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={[]}
         topCourse={topCourse}
-        isRtl={false}
         joinedSections={[]}
+        isEnglish={true}
+        showCensusBanner={false}
       />
     );
     expect(wrapper.find('ProtectedStatefulDiv')).to.have.length(2);
-  });
-
-  it('shows an announcement', () => {
-    const wrapper = shallow(
-      <TeacherHomepage
-        announcements={[announcement]}
-        courses={[]}
-        topCourse={topCourse}
-        isRtl={false}
-        joinedSections={[]}
-      />
-    );
-    const announcementContainer = wrapper.find('Notification');
-    assert.deepEqual(announcementContainer.props(), {
-      type: "bullhorn",
-      notice: announcement.heading,
-      details: announcement.description,
-      dismissible: false,
-      buttonText: announcement.buttonText,
-      buttonLink: announcement.link,
-      newWindow: true,
-      analyticId: announcement.id,
-      isRtl: false
-    });
   });
 
   it('renders a TeacherSections component', () => {
@@ -81,14 +59,13 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={[]}
         topCourse={topCourse}
-        isRtl={false}
         joinedSections={[]}
+        isEnglish={true}
+        showCensusBanner={false}
       />
     );
     expect(wrapper).to.containMatchingElement(
-      <TeacherSections
-        isRtl={false}
-      />
+      <TeacherSections/>
     );
   });
 
@@ -98,8 +75,9 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={[]}
         topCourse={topCourse}
-        isRtl={false}
         joinedSections={[]}
+        isEnglish={true}
+        showCensusBanner={false}
       />
     );
     expect(wrapper.find('StudentSections').exists()).to.be.true;
@@ -111,8 +89,9 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         topCourse={topCourse}
         courses={courses}
-        isRtl={false}
         joinedSections={[]}
+        isEnglish={true}
+        showCensusBanner={false}
       />
     );
     const recentCourses = wrapper.find('RecentCourses');
@@ -121,7 +100,6 @@ describe('TeacherHomepage', () => {
       isTeacher: true,
       courses: courses,
       topCourse: topCourse,
-      isRtl: false
     });
   });
 
@@ -132,8 +110,9 @@ describe('TeacherHomepage', () => {
         courses={courses}
         topCourse={topCourse}
         codeOrgUrlPrefix="http://localhost:3000/"
-        isRtl={false}
         joinedSections={[]}
+        isEnglish={true}
+        showCensusBanner={false}
       />
     );
     expect(wrapper.find('ProjectWidgetWithData').exists()).to.be.true;

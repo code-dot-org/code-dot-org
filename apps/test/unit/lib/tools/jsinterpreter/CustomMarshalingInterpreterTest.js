@@ -84,7 +84,7 @@ describe("The CustomMarshalingInterpreter", () => {
         requiredMethod: 'draw',
       }];
       const nativeValue = [1,2,3];
-      nativeValue.draw = function (){
+      nativeValue.draw = function () {
         return this.join(',');
       };
       value = makeAssertableObj(interpreter, nativeValue);
@@ -272,7 +272,7 @@ describe("The CustomMarshalingInterpreter", () => {
       `parseInt(someUndeclaredVariable)`,
       customMarshaler
     );
-    expect(() => interpreter.run()).to.throw('Unknown identifier: someUndeclaredVariable');
+    expect(() => interpreter.run()).to.throw('someUndeclaredVariable is not defined');
   });
 
   describe("getProperty method", () => {
@@ -700,7 +700,7 @@ describe("The CustomMarshalingInterpreter", () => {
     });
 
     it("does not give the evaluated code access to native functions", () => {
-      expect(() => CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options)).to.throw('Unknown identifier: nativeAdd');
+      expect(() => CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options)).to.throw('nativeAdd is not defined');
     });
 
     describe("when running with legacy=true", () => {

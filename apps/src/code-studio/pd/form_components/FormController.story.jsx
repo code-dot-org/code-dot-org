@@ -3,6 +3,7 @@ import {FormGroup} from 'react-bootstrap';
 import FormComponent from './FormComponent';
 import FormController from './FormController';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
+import {action} from '@storybook/addon-actions';
 
 class TestPageOne extends FormComponent {
   render() {
@@ -85,7 +86,7 @@ class TestController extends FormController {
    * @override
    */
   handleChange(newState) {
-    this.props.storybook.action('onChange')(newState);
+    this.props.action('onChange')(newState);
     super.handleChange(newState);
   }
 
@@ -93,7 +94,7 @@ class TestController extends FormController {
    * @override
    */
   handleSubmit(event) {
-    this.props.storybook.action('submit')(this.serializeFormData());
+    this.props.action('submit')(this.serializeFormData());
     event.preventDefault();
   }
 }
@@ -116,8 +117,9 @@ export default storybook => {
           options={{
             one: OPTIONS.one
           }}
-          onChange={storybook.action('onChange')}
+          onChange={action('onChange')}
           errors={[]}
+          errorMessages={{}}
           data={{}}
         />
       )
@@ -128,8 +130,9 @@ export default storybook => {
           options={{
             two: OPTIONS.two
           }}
-          onChange={storybook.action('onChange')}
+          onChange={action('onChange')}
           errors={[]}
+          errorMessages={{}}
           data={{}}
         />
       )
@@ -140,8 +143,9 @@ export default storybook => {
           options={{
             three: OPTIONS.three
           }}
-          onChange={storybook.action('onChange')}
+          onChange={action('onChange')}
           errors={[]}
+          errorMessages={{}}
           data={{}}
         />
       )
@@ -150,8 +154,9 @@ export default storybook => {
       story: () => (
         <TestPageFour
           options={{}}
-          onChange={storybook.action('onChange')}
+          onChange={action('onChange')}
           errors={[]}
+          errorMessages={{}}
           data={{}}
         />
       )

@@ -1,3 +1,0 @@
-#!/bin/sh
-
-./send-to-mailing-list 11-9-hoc-organizers hoc-2015-nov-9-mailing/2015-organizers-deduped.csv

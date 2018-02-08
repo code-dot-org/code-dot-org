@@ -18,40 +18,47 @@ require 'dynamic_config/dcdo'
 require 'google/apis/fusiontables_v2'
 require 'googleauth'
 
-DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
-
 TABLE_ID = CDO.pledge_map_table_id.freeze
-CURRENT_CENSUS_SIGNUP = "Census2017".freeze
+CENSUS_FORM_KINDS = "'Census2017','HocCensus2017'".freeze
+
+def make_location(lat, long)
+  return nil if lat.nil? || long.nil?
+
+  "#{format('%.6f', lat)}, #{format('%.6f', long)}"
+end
 
 file = Tempfile.new(['data', '.csv'])
 begin
   CSV.open(file.path, 'w') do |csv|
-    DB_READONLY[:forms].where(kind: CURRENT_CENSUS_SIGNUP).paged_each(rows_per_fetch: 10_000) do |form|
-      data = JSON.parse(form[:data])
-
-      # Was a pledge made?
-      pledged = data["pledge_b"] == "on"
-
-      # Does the school teach some kind of CS?
-      teaches_cs = ["Some", "All"].include?(data["ten_hours_s"]) || ["Some", "All"].include?(data["twenty_hours_s"])
+    DASHBOARD_DB[:census_submissions].
+      select(:census_submissions__id___census_submissions_id,
+        :how_many_10_hours,
+        :how_many_20_hours,
+        :pledged,
+        :school_infos__school_id,
+        :schools__name,
+        :schools__zip,
+        :schools__city,
+        :schools__latitude,
+        :schools__longitude
+        ).
+      join(:census_submissions_school_infos, census_submission_id: :id).
+      join(:school_infos, id: :school_info_id).
+      join(:schools, id: :school_id).
+      paged_each(rows_per_fetch: 10_000) do |submission|
+      pledged = submission[:pledged]
+      teaches_yes = ["SOME", "ALL"]
+      teaches_cs = teaches_yes.include?(submission[:how_many_10_hours]) || teaches_yes.include?(submission[:how_many_20_hours])
 
       # Only add to the map if pledge checkbox is checked or the school teaches some form of CS.
       next unless pledged || teaches_cs
 
-      # Use the school ID in the form.
-      school_id = data["school_id_s"]
+      type = pledged ? "pledged" : "teaches_cs"
 
-      # Retrieve the ZIP and city for this school district from the dashboard's database.
-      school = DASHBOARD_DB[:schools].where(id: school_id).first
-      next unless school
-
-      if pledged
-        type = "pledged"
-      else
-        type = "teaches_cs"
-      end
-
-      row = [form[:id], school[:name], school[:zip], school[:city], type]
+      next unless submission[:school_id]
+      row_id = "CENSUS_SUBMISSIONS-#{submission[:census_submissions_id]}"
+      location = make_location(submission[:latitude], submission[:longitude])
+      row = [row_id, submission[:name], submission[:zip], submission[:city], type, location]
       csv << row
     end
 
@@ -63,7 +70,8 @@ begin
         school = DASHBOARD_DB[:schools].where(id: school_id).first
         next unless school
 
-        row = [nil, school[:name], school[:zip], school[:city], "teaches_cs"]
+        location = make_location(school[:latitude], school[:longitude])
+        row = [nil, school[:name], school[:zip], school[:city], "teaches_cs", location]
 
         csv << row
       end

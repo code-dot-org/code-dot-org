@@ -122,6 +122,7 @@ es-MX:
     user_type_student: "estudiante"
     field_is_required: "es requerido"
     accept_terms: "Debes estar de acuerdo para crear una cuenta"
+    error: "An error occurred."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -560,6 +561,9 @@ es-MX:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Mayores de 13 años"
       cta: "Aprende cómo"
+    hoc-encryption:
+      title: "Encripción simple"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -578,6 +582,9 @@ es-MX:
     minecraft2016:
       title: "Minecraft"
       body: "Construye tu propia versión de Minecraft. Crea tus propias versiones de las gallinas, ovejas, Creepers, zombis y más."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Спорт"
       body: "Make a basketball game or mix and match across sports."
@@ -641,6 +648,7 @@ es-MX:
     correct_title: "Gracias"
     correct_body: "Gracias por enviar respuestas."
     hide_survey_last_answer: "Esta encuesta es anónima. Por favor visita el panel del profesor para ver los resultados acumulados. Toma en cuenta que los resultados son visibles sólo si al menos 5 estudiantes presentaron la encuesta."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Gracias"
     wrong_body: "Gracias por enviar respuestas."
@@ -746,7 +754,11 @@ es-MX:
     rename: "Renombrar"
     save: "Guardar"
     delete: "Borrar"
-    import: "Import"
+    import: "Importar"
+    share_link_import_bad_link_header: "Enlace para compartir no reconocido"
+    share_link_import_bad_link_body: 'No pudimos importar el enlace para compartir. Asegúrate de usar un enlace de acertijo de Minecraft: Agent y de haberlo copiado completo.'
+    share_link_import_error_header: "Ocurrió un error."
+    share_link_import_error_body: "Hubo un problema al importar el enlace para compartir. Intenta de nuevo."
     exit: "Regresar al Curso"
     my_projects: "Mis Proyectos"
     project_gallery: "Proyectos"

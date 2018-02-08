@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_press_kit) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ## كيفية جذب وسائل الإعلام إلى الحدث الذي ستقيمه
@@ -12,20 +11,20 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 ### نصائح الرئيسية
 
-  * اتصل بوسائل الإعلام أسبوعين قبل الحدث الخاص بك عبر البريد الإلكتروني. ثم تابع بالبريد الإلكتروني والهاتف إذا كنت لا تتلقى استجابة أولية.
-  * أطلب من أحد موظفي مدرسة أو المتطوعين التقاط الصور و مشاركتها عبر الإنترنت أو إرسالها إلى الصحافة.
-  * اكتب حول حدث "ساعة البرمجة" على الصفحة الرئيسية لموقع الويب الخاص بك، وفي صحيفة المدرسة. قم بنشر تفاصيل الحدث، وصور من الأنشطة الطلابية.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- اتصل بوسائل الإعلام أسبوعين قبل الحدث الخاص بك عبر البريد الإلكتروني. ثم تابع بالبريد الإلكتروني والهاتف إذا كنت لا تتلقى استجابة أولية.
+- أطلب من أحد موظفي مدرسة أو المتطوعين التقاط الصور و مشاركتها عبر الإنترنت أو إرسالها إلى الصحافة.
+- اكتب حول حدث "ساعة البرمجة" على الصفحة الرئيسية لموقع الويب الخاص بك، وفي صحيفة المدرسة. قم بنشر تفاصيل الحدث، وصور من الأنشطة الطلابية.
+- On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### الدليل خطوة بخطوة:
 
 **1. Plan your event**
 
-  * نظم اجتماع لاطلاق الحدث.
-  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * قم بتنظيم أنشطة للفرق (مثل الانشطة الغير موصولة)، أو عرض اهم الأنشطة التي أنشأها الطلاب.
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
+- نظم اجتماع لاطلاق الحدث.
+- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+- قم بتنظيم أنشطة للفرق (مثل الانشطة الغير موصولة)، أو عرض اهم الأنشطة التي أنشأها الطلاب.
+- Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2. Identify specific local reporters that cover education or local events.**
 

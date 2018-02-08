@@ -1,10 +1,10 @@
 {
-  "continue":"Continuar",
-  "nextLevel":"¡Felicitaciones! Has completado este puzzle.",
-  "no":"No",
-  "numBlocksNeeded":"Este puzzle puede resolverse con %1 bloques.",
-  "reinfFeedbackMsg":"Puede pulsar el botón \"Inténtalo de nuevo\" para volver a jugar su juego.",
-  "share":"Compartir",
-  "shareGame":"Comparte tu juego:",
-  "yes":"Sí"
+  "continue": "Continuar",
+  "nextLevel": "¡Felicitaciones! Has completado este puzzle.",
+  "no": "No",
+  "numBlocksNeeded": "Este puzzle puede resolverse con %1 bloques.",
+  "reinfFeedbackMsg": "Puede pulsar el botón \"Inténtalo de nuevo\" para volver a jugar su juego.",
+  "share": "Compartir",
+  "shareGame": "Comparte tu juego:",
+  "yes": "Sí"
 }

@@ -122,6 +122,7 @@ uk:
     user_type_student: "учень"
     field_is_required: "необхідне"
     accept_terms: "Потрібно погодитись, щоб створити обліковий запис"
+    error: "An error occurred."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -562,10 +563,13 @@ uk:
       title: "Галерея"
       body: "Переглянути галерею програм та художніх зображень, створених нашими користувачами"
     gamelab:
-      title: "Game Lab"
+      title: "Ігрова лабораторія"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Вік 13+"
       cta: "Почати навчання"
+    hoc-encryption:
+      title: "Просте шифрування"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -584,6 +588,9 @@ uk:
     minecraft2016:
       title: "Майнкрафт"
       body: "Запрограмуй тварин та інших істот Майнкрафт у власній версії цієї гри."
+    hero:
+      title: "Майнкрафт"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Спорт"
       body: "Make a basketball game or mix and match across sports."
@@ -647,6 +654,7 @@ uk:
     correct_title: "Дякую"
     correct_body: "Дякуємо за надсилання відповіді."
     hide_survey_last_answer: "Це опитування є анонімним.  Будь ласка, відвідайте панель вчителя для перегляду узагальнених результатів.  Зверніть увагу, що результати можна побачити, лише якщо принаймні п'ять студентів пройшли опитування."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Дякую"
     wrong_body: "Дякуємо за надсилання відповіді."
@@ -752,7 +760,11 @@ uk:
     rename: "Перейменувати"
     save: "зберегти"
     delete: "Видалити"
-    import: "Import"
+    import: "Імпорт"
+    share_link_import_bad_link_header: "Посилання на завдання не розпізнано"
+    share_link_import_bad_link_body: 'Не вдалось імпортувати посилання на завдання. Перевірте, чи це дійсно посилання із завдання Minecraft: Agent, яке ви повністю скопіювали.'
+    share_link_import_error_header: "Щось пішло не так."
+    share_link_import_error_body: "Під час імпорту цього посилання на завдання виникла проблема. Спробуйте ще раз."
     exit: "Повернутися до курсу"
     my_projects: "Мої проекти"
     project_gallery: "Проекти"

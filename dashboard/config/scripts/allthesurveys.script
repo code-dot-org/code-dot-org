@@ -1,0 +1,16 @@
+login_required true
+
+stage 'CSP pre survey 2017 staging'
+assessment 'csp-pre-survey-2017-levelgroup'
+
+stage 'CSD pre survey 2017 staging'
+assessment 'csd-pre-survey-2017-levelgroup'
+
+stage 'CSD/P pulse check survey 2017'
+assessment 'csd-pulse-check-survey-1-levelgroup', progression: 'pulse check model'
+
+stage 'CSD mid and post survey 2017 staging'
+assessment 'csd-post-survey-2017-levelgroup'
+
+stage 'CSP mid and post survey 2017 staging'
+assessment 'csp-post-survey-2017-levelgroup'

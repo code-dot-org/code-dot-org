@@ -30,7 +30,7 @@ files: [
   # e.g. ["/**/?.txt", "/**/[0-9].txt", "/**/*\?*.txt"]
   #
   "ignore" : [
-    "/source/hourofcode",
+    "/source/hourofcode/**",
     "/source/dashboard/dsls.yml"
   ],
 
@@ -43,7 +43,7 @@ files: [
   "source" : "/source/**/*.json",
   "translation" : "/%language%/**/%original_file_name%",
   "ignore" : [
-    "/source/hourofcode",
+    "/source/hourofcode/**",
     "/source/blockly-mooc/applab.json",
     "/source/blockly-mooc/calc.json",
     "/source/blockly-mooc/eval.json",

@@ -14,7 +14,6 @@ import { getStore } from './redux';
 import { authorizeLockable } from './stageLockRedux';
 import { setViewType, ViewType } from './viewAsRedux';
 import { getHiddenStages } from './hiddenStageRedux';
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { TestResults } from '@cdo/apps/constants';
 import {
   initProgress,
@@ -23,13 +22,13 @@ import {
   updateFocusArea,
   showTeacherInfo,
   disablePostMilestone,
-  setUserSignedIn,
   setIsHocScript,
   setIsAge13Required,
   setStudentDefaultsSummaryView,
   setCurrentStageId,
   setScriptCompleted,
   setStageExtrasEnabled,
+  getLevelResult,
 } from './progressRedux';
 import { setVerified } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import { renderTeacherPanel } from './teacher';
@@ -49,7 +48,7 @@ function showDisabledBubblesModal() {
  */
 progress.showDisabledBubblesAlert = function () {
   const store = getStore();
-  const { isHocScript, postMilestoneDisabled } = store.getState().progress;
+  const { postMilestoneDisabled } = store.getState().progress;
   const showAlert = postMilestoneDisabled || experiments.isEnabled('postMilestoneDisabledUI');
   if (!showAlert) {
     return;
@@ -64,28 +63,8 @@ progress.showDisabledBubblesAlert = function () {
   });
   $(document.body).append(div);
 
-  ReactDOM.render(<DisabledBubblesAlert isHocScript={isHocScript}/>, div[0]);
+  ReactDOM.render(<DisabledBubblesAlert/>, div[0]);
 };
-
-/**
- * @returns {boolean}
- */
-function getCachedIsUserSignedIn() {
-  // first check sessionStorage, where we may have cached sign in
-  let signedIn = clientState.getUserSignedIn();
-
-  // if that didn't give us anything, check the header, which uses a cookie-based
-  // approach to populate user id.
-  // This code should be kept in sync with user_header.haml
-  if (signedIn === null) {
-    const nameSpan = document.querySelector('.header_button.header_user.user_menu .user_name');
-    if (nameSpan && nameSpan.dataset.id) {
-      signedIn = true;
-    }
-  }
-
-  return signedIn;
-}
 
 /**
  * @param {object} scriptData (Note - This is only a subset of the information
@@ -111,21 +90,13 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
     name,
     stages: [stageData],
     disablePostMilestone,
-    age_13_required
+    age_13_required,
+    id: stageData.script_id,
   }, currentLevelId, false, saveAnswersBeforeNavigation);
 
   store.dispatch(mergeProgress(_.mapValues(progressData.levels,
     level => level.submitted ? TestResults.SUBMITTED_RESULT : level.result)));
 
-  // If the server didn't tell us about signIn state (i.e. because script is
-  // cached) see if we cached locally
-  if (signedIn === null) {
-    signedIn = getCachedIsUserSignedIn();
-  }
-
-  if (signedIn !== null) {
-    store.dispatch(setUserSignedIn(signedIn));
-  }
   store.dispatch(setIsHocScript(isHocScript));
   if (signedIn) {
     progress.showDisabledBubblesAlert();
@@ -163,10 +134,6 @@ progress.renderCourseProgress = function (scriptData) {
 
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({type, link}));
-
-  if (getCachedIsUserSignedIn()) {
-    store.dispatch(setUserSignedIn(true));
-  }
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
@@ -245,7 +212,6 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     // Depend on the fact that even if we have no levelProgress, our progress
     // data will have other keys
     const signedInUser = Object.keys(data).length > 0;
-    store.dispatch(setUserSignedIn(signedInUser));
     if (data.isVerifiedTeacher) {
       store.dispatch(setVerified());
     }
@@ -284,16 +250,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
     // Merge progress from server (loaded via AJAX)
     if (data.levels) {
-      const levelProgress = _.mapValues(data.levels, level => {
-        if (level.status === LevelStatus.locked) {
-          return TestResults.LOCKED_RESULT;
-        }
-        if (level.submitted || level.readonly_answers) {
-          return TestResults.SUBMITTED_RESULT;
-        }
-
-        return level.result;
-      });
+      const levelProgress = _.mapValues(data.levels, getLevelResult);
       store.dispatch(mergeProgress(levelProgress));
       if (data.peerReviewsPerformed) {
         store.dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));

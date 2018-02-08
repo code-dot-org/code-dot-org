@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_press_kit) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ## Como atraer ós medios ó teu evento da Hora do Código
@@ -14,20 +11,20 @@ nav: promote_nav
 
 ### Consellos clave
 
-  * Contacta cos medios de comunicación dúas semanas antes do teu evento vía correo electrónico. Se non recibes unha resposta incial, intentao de novo por correo electrónico ou teléfono.
-  * Pídelle a un membro do persoal do colexio ou volundario que tome fotos para publicalas en liña ou envialas á prensa.
-  * Escribe sobre a Hora do Código nos teus sitios web e no periódico do colexio. Publica os detalles do evento e imaxes de actividades dos estudantes.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Contacta cos medios de comunicación dúas semanas antes do teu evento vía correo electrónico. Se non recibes unha resposta incial, intentao de novo por correo electrónico ou teléfono.
+- Pídelle a un membro do persoal do colexio ou volundario que tome fotos para publicalas en liña ou envialas á prensa.
+- Escribe sobre a Hora do Código nos teus sitios web e no periódico do colexio. Publica os detalles do evento e imaxes de actividades dos estudantes.
+- On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Guía paso a paso:
 
 **1. Plan your event**
 
-  * Fai unha reunión para iniciar a Hora do Código.
-  * Envía [unha carta](<%= resolve_url('/promote/resources#sample-emails') %>) ós pais. Pídelles que corran a voz.
-  * Envía [unha carta](<%= resolve_url('/promote/resources#sample-emails') %>) para invitar ó teu alcalde, congresista, concelleiro, gobernador, ou empresario influinte a que asista e fale para os teus estudantes.
-  * Organiza actividades grupais (como a demostracion dunha actividade de programación 'fora de liña'), ou mostra actividades creadas e dirixidas por estudantes.
-  * Amosa o vídeo de Code.org [vídeo da Hora do Código](<%= resolve_url('/') %>) ou un [destes ](<%= resolve_url('/promote/resources#videos') %>) para motivar.
+- Fai unha reunión para iniciar a Hora do Código.
+- Envía [unha carta](<%= resolve_url('/promote/resources#sample-emails') %>) ós pais. Pídelles que corran a voz.
+- Envía [unha carta](<%= resolve_url('/promote/resources#sample-emails') %>) para invitar ó teu alcalde, congresista, concelleiro, gobernador, ou empresario influinte a que asista e fale para os teus estudantes.
+- Organiza actividades grupais (como a demostracion dunha actividade de programación 'fora de liña'), ou mostra actividades creadas e dirixidas por estudantes.
+- Amosa o vídeo de Code.org [vídeo da Hora do Código](<%= resolve_url('/') %>) ou un [destes ](<%= resolve_url('/promote/resources#videos') %>) para motivar.
 
 **2. Identify specific local reporters that cover education or local events.**
 

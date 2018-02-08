@@ -1,10 +1,10 @@
 {
-  "continue":"Pokračovať",
-  "nextLevel":"Gratulujem! Vyriešil si hádanku.",
-  "no":"Nie",
-  "numBlocksNeeded":"Táto hádanka môže byť vyriešená s %1 blokmi.",
-  "reinfFeedbackMsg":"Pre návrat k svojej hre môžeš stlačiť tlačidlo \"Skúsiť znova\".",
-  "share":"Zdieľať",
-  "shareGame":"Zdieľaj svoju hru:",
-  "yes":"Áno"
+  "continue": "Pokračovať",
+  "nextLevel": "Gratulujem! Vyriešil si hádanku.",
+  "no": "Nie",
+  "numBlocksNeeded": "Táto hádanka môže byť vyriešená s %1 blokmi.",
+  "reinfFeedbackMsg": "Pre návrat k svojej hre môžeš stlačiť tlačidlo \"Skúsiť znova\".",
+  "share": "Zdieľať",
+  "shareGame": "Zdieľaj svoju hru:",
+  "yes": "Áno"
 }

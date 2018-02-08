@@ -11,14 +11,18 @@ markdown <<MARKDOWN
 
 ## Vocabulary
 
-* **Abstraction:** Pulling out specific differences to make one solution work for multiple problems.
-* **Function:** A piece of code that you can easily call over and over again.
+* **Abstraction:** a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.
+* **Function:** a named group of programming instructions. Functions are reusable abstractions that reduce the complexity of writing and maintaining programs
 
 ## New Subgoals and Blocks
 * **Subgoal: [Define a function]** - `//define a function`
     *  **[Define a function](https://docs.code.org/applab/functionParams_none/)** - `define a function`
 * **Subgoal: [Call function]** - `//call a function`
  	*  **[Call a function](//docs.code.org/applab/callMyFunction/)** - `Call a function`
+    
+## Resources
+
+* [College Board - Assessment Overview and Performance Task Directions for Students](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf)
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

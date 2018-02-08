@@ -866,7 +866,7 @@
       4-5 While Loops Assessment 1_instruction: Siin on palju auke ja hunnikuid. Aita
         mul neid täita ja eemaldada, et saada maapind tasaseks.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
-      Alien Defender_instruction: 'Project Idea: Make a defender game in Play Lab!'
+      Alien Defender_instruction: 'Projekti idee: Tee kaitsmäng Play Lab''is!'
       AllTheThings Applab - Turtle move with button_instruction: |-
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
@@ -1320,10 +1320,40 @@
       CSD U5 black white images pixelation 4_instruction: |-
         Add eyebrows to the smiley
         face (click here to see the image)
-      CSD U5 black white images pixelation 5_instruction: Draw anything you like
+      CSD U5 black white images pixelation 5_instruction: Joonista nüüd ükskõik mida
+        soovid
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -1436,6 +1466,27 @@
       CSDU6 - for loop - why for_instruction: |-
         Write the contents of the array to
         the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays rainbow_instruction: |-
+        Write the contents of the array to the screen
+        in numerical order. (Click to see full instructions)
+      CSDU6 arrays random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select icons_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select rainbow_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_instruction: |-
+        Write a program that displays a
+        randomly chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays variable_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -1474,7 +1525,7 @@
         instructions) "
       CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions) "
-      CSP student contact info_instruction: Please enter your email address.
+      CSP student contact info_instruction: Palun sisestage e-posti aadress.
       CSPU5 Add Screens to Chaser Game_instruction: |-
         Recreate the game from the "Chaser
         Game" with a Welcome Screen and Game Over Screen. (Click to see full instructions.)
@@ -2634,12 +2685,8 @@
       Course 4 Artist Binary Free Play 2b_instruction: Kliki siia, et näha vihjeid.
       Course 4 Artist Binary Free Play_instruction: 'Vaba mäng: Joonista ükskõik mida
         soovid, kuid kasuta selleks binaarseid võimalusi!'
-      Course 4 Artist Binary pre1_instruction: Kahendkood ehk binaar võimaldab andmeid
-        tähistada, kasutades selleks ainult kaht olekut või tähist. Siin kasutame
-        olekuid „väljas“ (tähistatuna numbriga 0) ja „sees“ (tähistatuna numbriga
-        1).  \r \r Tegime sulle „pikslitest“ koosneva ruudustiku, millel sa saad liikuda
-        ja disaine luua, pöörates ainult teatud ruutudel.  Kas oskad teha nii, et
-        kunstnik joonistaks esimesel real kahendkoodis „01010101“?
+      Course 4 Artist Binary pre1_instruction: Kas oskad teha nii, et kunstnik joonistaks
+        esimesel real kahendkoodis „01010101“.
       Course 4 Artist Binary ryan_instruction: Kahendkood ehk binaar võimaldab andmeid
         tähistada, kasutades selleks ainult kaht olekut või tähist. Siin kasutame
         olekuid „väljas“ (tähistatuna numbriga 0) ja „sees“ (tähistatuna numbriga
@@ -3180,12 +3227,8 @@
       Course 4 Playlab For Loop Freeplay_instruction: 'Vaba mäng: kasuta kõike, mida
         oled siiani õppinud, et teha üks mäng, milles kasutatakse `korduste arvu`
         tsüklit!'
-      Course 4 Playlab For Loops 4b_instruction: |-
-        Nüüd hakkavad need kaks tegelast võidu jooksma! \r
-        \r
-        Kumbki neist liigub `loenduri` sammude arvu võrra korraga, kuid nende astumisel on erinev väärtus `korduste arvu`tsüklite tõttu.  \r
-        \r
-        Kas sa saad muuta lisa ühes tsüklis, et võistlus jääks viiki?
+      Course 4 Playlab For Loops 4b_instruction: Kas sa saad muuta lisa ühes tsüklis,
+        et võistlus jääks viiki?
       Course 4 Playlab For Loops 5b_instruction: Kohalda 'korduste arvu' tsüklit,
         et kaks tegelast lõpetaksid samas kohas.
       Course 4 Playlab For Loops 6b_instruction: "Muuda seda 'korduste arvu' tsüklit,
@@ -3252,6 +3295,52 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
+        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars10_instruction: |-
+        Free Play time! Here are all of the variables
+        we've played with so far in this stage, as well as a few more in case you
+        want them. \r
+        \r
+        Notice that there are now so many blocks in our toolbox
+        that they need to be organized!  Here, we've put each piece into an appropriate
+        category.  Take some time to explore everything that is available. When you're
+        done browsing, make a game or story using repeats, variables, and events.  \r
+        \r
+        Hint:
+        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars2_instruction: |-
+        The race in that last puzzle wasn't very
+        fair! Change the `dog_speed` variable to make sure you can collect more flags
+        than Cat. The first to collect 10 flags wins!
+      CourseF_PlayLab_vars3_instruction: Kasuta liikumiseks vasak- ja paremnoolt ning
+        hüppamiseks ülesnoolt. Vaata, kas sul õnnestub kõik lipud kätte saada.
+      CourseF_PlayLab_vars4_instruction: Nüüd kasutame muutujat nimega „kõrgus“, et
+        juhtida, kui kõrgele saab koer hüpata. Muuda muutujat „kõrgus“ nii, et koer
+        saaks hüpata piisavalt kõrgele kõigi lippude kättesaamiseks.
+      CourseF_PlayLab_vars5_instruction: 'Teeme ühe mängu! Kõigepealt on meil vaja
+        koodi. Koosta uuesti kood, mida sa nägid eelmisel tasemel, et määrata skooriks
+        10. '
+      CourseF_PlayLab_vars6_instruction: Kasuta paremnoolt koogitüki viskamiseks.\r
+        \r Kuidas peaksime oma mängus punkte lugema? Lisa oma muutujale „punktid“
+        1 iga kord, kui koer saab kassile koogitükiga pihta. Kasuta skoori suurendamiseks
+        sündmust „kui tegelane 2 puudutab midagi“. Saad muutujat suurendada, määrates
+        „punktid = punktid + 1“. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!).
+      CourseF_PlayLab_vars7_instruction: Kasuta paremnoolt koogitüki viskamiseks.\r
+        \r Kuidas peaksime oma mängus punkte lugema? Lisa oma muutujale „punktid“
+        1 iga kord, kui koer saab kassile koogitükiga pihta. Kasuta skoori suurendamiseks
+        sündmust „kui tegelane 2 puudutab midagi“. Saad muutujat suurendada, määrates
+        „punktid = punktid + 1“. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!).
+      CourseF_PlayLab_vars8_instruction: Kasuta paremnoolt koogitüki viskamiseks.\r
+        \r Kuidas peaksime oma mängus punkte lugema? Lisa oma muutujale „punktid“
+        1 iga kord, kui koer saab kassile koogitükiga pihta. Kasuta skoori suurendamiseks
+        sündmust „kui tegelane 2 puudutab midagi“. Saad muutujat suurendada, määrates
+        „punktid = punktid + 1“. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!).
+      CourseF_PlayLab_vars9_instruction: |-
+        Nice, now let's make sure this game isn't
+        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
+        2), you should lose a point. Start with 10 points so it's not too hard. Let
+        your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution_instruction: Juhised
       Crack a Caesar Cipher_instruction: Juhised
       ECSPD Binary Odometer_instruction: |-
@@ -3532,6 +3621,8 @@
         an example of a game you can make in play lab.
       FoodFight_instruction: This is an example of a game you can make in play lab.
       Frequency Analysis_instruction: Test
+      Function intro Ryan_instruction: Kasutage funktsiooni "ehitada sild" kaks korda,
+        et teha tee Redstone Torchini.
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -3878,26 +3969,27 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      MC Agent Freeplay_instruction: "** Vabamäng: ** Aeg uurida ise edasi!"
       MC HOC 2016 Level 10_instruction: On aeg teha oma Minecraft! Loo olendeid ja
         pane nad tegema seda, mida soovid. Lõbusat ehitamist!
       MC HOC 2016 Level 2-2_instruction: Kana on tardunud. Lisa 'liigu' ja 'pööra'
-        plokke 'kui loodud' pessa, et ta liikuma panna.
+        plokke 'when spawned' pessa, et ta liikuma panna.
       MC HOC 2016 Level 3_instruction: "Suurepärane, kana liikus! Kuid siis jäi ta
         seisma. \nMängudes liiguvad kanad igavesti. Kasuta 'tee igavesti' tsüklit,
         et kanu liikumas hoida.\\r\n"
       MC HOC 2016 Level 4_instruction: Nüüd näevad kanad ühes ja samas suunas liikudes
         veidrad välja. Mängud kasutavad juhuslikke liigutusi, et need näeksid realistlikud
         välja. Kasuta kanade jaoks 'pööra juhuslikult' plokki.
-      MC HOC 2016 Level 5_instruction: Need lehmad on eksinud! Juhata nad rohuni 'liigu
-        üks samm edasi' ja 'tee igavesti' ploki abil.
+      MC HOC 2016 Level 5_instruction: Need lehmad on eksinud! Juhata nad rohuni kasutades
+        "liigu edasi" ja "igavesti täida" plokke tsüklis.
       MC HOC 2016 Level 6_instruction: Nüüd loo zombid. Kasuta 'loo' plokki, et teha
         3 zombit siis kui öö tuleb. Pane nad enda poole liikuma. Jää hommikuni ellu.
-      MC HOC 2016 Level 8_instruction: Tee sinu lammasteni on kiviseinaga plokeeritud.
-        Õnneks on siin Creeper. Creeperid plahvatavad kui sa neid puudutad. Lase sein
+      MC HOC 2016 Level 8_instruction: Tee sinu lammasteni on kiviseinaga blokeeritud.
+        Õnneks on siin Kreeper. Kreeperid plahvatavad kui sa neid puudutad. Lase sein
         Creeperiga õhku, et oma lammaste juurde jõuda!
-      MC HOC 2016 New Drop_instruction: Minecraftis kukub lammastelt vill. Aseta 'kukuta'
-        plokk 'siis kui kasutatakse' plokki, siis jaluta edasi ja kasuta lammast,
-        et esemeid kukutada.
+      MC HOC 2016 New Drop_instruction: Minecraftis kukub lammastelt vill. Aseta ploki
+        "... kui kasutatakse" sisse "kukuta" plokk '' plokki, siis jaluta edasi ja
+        kasuta lammast, et esemeid kukutada.
       MC HOC 2016 New Spawn_instruction: Nüüd võid maailma täita sellega, millega
         soovid! Aseta 'loo' plokid 'kui käivitatakse' plokki, et luua asju kui mäng
         algab.
@@ -3913,73 +4005,82 @@
       MC_2017_Ryan_02_instruction: |-
         Help the player get out by using loops to get
         the Agent to the pressure plate.
-      MC_HOC_2017 Agent Test_instruction: |-
-        Click "Run" to move the player to the
-        orange square inside of the house.
-      MC_HOC_2017_01_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_Cole_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_Kiki_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Kiki_instruction: |-
-        Get the Agent to the pressure plate, then
-        get the player to the orange square.
-      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_instruction: |-
-        Change the loop from the last puzzle to help the
-        Agent make a path over the wider part of this river.
-      MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_05_instruction: |-
-        Use a function to help the Agent get to the pressure
-        plate.
-      MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
-      MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
-      MC_HOC_2017_06_Cole_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_06_Kiki_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_07_Cole_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07_Kiki_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07a_Kiki_instruction: Clear the path to the orange square.
-      MC_HOC_2017_08_Cole_instruction: |-
-        Change the provided function to work for
-        this biome.
-      MC_HOC_2017_08_Kiki_instruction: Change the function to work for this puzzle.
-      MC_HOC_2017_09_Cole_instruction: |-
-        Program the Agent to clear the player's
-        path.
-      MC_HOC_2017_09_Kiki_instruction: |-
-        Program the Agent to clear the player's
-        path and get to the pressure plate.
-      MC_HOC_2017_10_Cole_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_Cole_old_instruction: |-
-        Create a function to help you finish
-        this minecart.
-      MC_HOC_2017_10_Kiki_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_Ryan_03_instruction: |-
-        Now use loops to help The Agent build a bridge
-        over the river by placing blocks in the water.
-      MC_HOC_2017_Ryan_05_instruction: |-
-        Destroy these cacti so that the player can
-        get to the goal.
+      MC_HOC_2017 Agent Test_instruction: Kliki "Kävita", et liigutada mängija oranži
+        kasti sisse maja sees.
+      MC_HOC_2017_01_instruction: Kliki "Kävita", et liigutada mängija oranži kasti
+        sisse maja sees.
+      MC_HOC_2017_01_Cole_instruction: Sa pead koguma kõik vahendid sellel teekonnal.
+        Liigu ringi kasutades ** nooleklahve ** ja mine kirstu juurde oma rajal, et
+        võita
+      MC_HOC_2017_01_Kiki_instruction: Kliki "Kävita", et liigutada mängija oranži
+        kasti sisse maja sees.
+      MC_HOC_2017_01_RETRY_instruction: 'Kirjutage kood, et saada Agent surveplaadile,
+        siis vajutage "Käivita" ja kasutage nooleklahve, et viia mängija majast välja,
+        et ta saaks saaks kätte kirstu. '
+      MC_HOC_2017_02_instruction: Liiguta Agent surveplaadile.
+      MC_HOC_2017_02_Cole_instruction: 'Liiguta Agent surveplaadile, et {currentPlayerName}
+        saaks minna kaardile. '
+      MC_HOC_2017_02_Kiki_instruction: Liiguta Agent surveplaadile ja siis liiguta
+        mängija oranžile nelinurgale.
+      MC_HOC_2017_02_Will_instruction: Liiguta Agent surveplaadile.
+      MC_HOC_2017_03_Cole_instruction: 'Programmeri Agent väravat avama. '
+      MC_HOC_2017_03_Kiki_instruction: Liiguta Agent surveplaadile.
+      MC_HOC_2017_04_instruction: Muuta viimase pusle tsüklit, et aidata Agendil teha
+        rada üle jõe laiema osa.
+      MC_HOC_2017_04POINT5_Cole_instruction: Liiguta Agent surveplaadile.
+      MC_HOC_2017_04POINT5_RYAN_instruction: Liiguta Agent surveplaadile.
+      MC_HOC_2017_04_Cole_instruction: Liiguta Agent surveplaadile.
+      MC_HOC_2017_04_Kiki_instruction: Liiguta Agent surveplaadile.
+      MC_HOC_2017_05_instruction: Loo funktsiooni, et aidata Agendil liikuda surveplaadile.
+      MC_HOC_2017_05_Cole_instruction: Vii mängija kühvli juurde.
+      MC_HOC_2017_05_Josh_instruction: Vii mängija kühvli juurde.
+      MC_HOC_2017_05_Kiki_instruction: Vii mängija oranži ruudu juurde.
+      MC_HOC_2017_06_Cole_instruction: Paranda kood, et Agent saaks ehitada silla
+        üle selle jõe.
+      MC_HOC_2017_06_Josh_instruction: Paranda kood, et Agent saaks ehitada silla
+        üle selle jõe.
+      MC_HOC_2017_06_Kiki_instruction: Paranda kood, et Agent saaks ehitada silla
+        üle selle jõe.
+      MC_HOC_2017_07_Cole_instruction: Hävita jää hävitada ja saada {currentPlayerName}
+        Minecart'i juurde.
+      MC_HOC_2017_07_Kiki_instruction: Kasuta funktsiooni, et teha rada vabaks oranži
+        ruudu juurde.
+      MC_HOC_2017_07a_Kiki_instruction: Tee rada vabaks oranži ruudu juurde.
+      MC_HOC_2017_08_Cole_instruction: Muuda etteantud funktsiooni, et saaksid selle
+        puslega tööd teha.
+      MC_HOC_2017_08_Kiki_instruction: Muuda funktsiooni, et saaksid selle puslega
+        tööd teha.
+      MC_HOC_2017_08_RY_instruction: Kasutage funktsioone, et leida viis minna üle
+        laava.
+      MC_HOC_2017_08_Will_instruction: Kasutage funktsioone, et leida viis minna üle
+        laava.
+      MC_HOC_2017_09_Cole_instruction: Programmeri Agent, et ta teeks mängija raja
+        puhtaks.
+      MC_HOC_2017_09_Kiki_instruction: Programmeri Agent, et ta teeks mängija raja
+        puhtaks ja saaks minna surveplaadi juurde.
+      MC_HOC_2017_10_Cole_instruction: Koosta funktsioon, mis aitavad teil lõpetada
+        selle minecart'i.
+      MC_HOC_2017_10_Cole_old_instruction: Koosta funktsioon, mis aitavad teil lõpetada
+        selle minecart'i.
+      MC_HOC_2017_10_Kiki_instruction: Koosta funktsioon, mis aitavad teil lõpetada
+        selle Minecart'i.
+      MC_HOC_2017_10_RETRY_instruction: Kasutage funktsioone, et saaksid lõpetada
+        selle minecart'i loo.
+      MC_HOC_2017_10_RYAN_instruction: Koosta funktsioon, mis aitavad teil lõpetada
+        selle minecart'i.
+      MC_HOC_2017_10_RYAN2_instruction: Koosta funktsioon, mis aitavad teil lõpetada
+        selle Minecart'i.
+      MC_HOC_2017_13_Cole_instruction: "** Vabamäng: ** Aeg uurida ise edasi!"
+      MC_HOC_2017_4.5v2_instruction: Liiguta Agent surveplaadile.
+      MC_HOC_2017_Ali_instruction: Kasutage funktsioone, et leida viis minna üle laava.
+      MC_HOC_2017_FP10x10_instruction: "**Vaba mängimine:** kas suudad kokku koguda
+        kõik teemandid sellel mängutasemel? "
+      MC_HOC_2017_FP10x10_RE_instruction: "**Vaba mängimine:** kas suudad kokku koguda
+        kõik teemandid sellel mängutasemel? "
+      MC_HOC_2017_FP20x20_instruction: "** Vabamäng: ** Aeg uurida ise edasi!"
+      MC_HOC_2017_Ryan_03_instruction: Nüüd kasuta tsüklied, et aidata Agendil ehitada
+        silda üle jõe pannes vette plokke.
+      MC_HOC_2017_Ryan_05_instruction: Hävitada kaktused, et mängija saaks minna sihtmärgini.
       MC_HOC_Kiki_02_instruction: Get The Agent to the pressure plate.
       MSM Big Game Empty_instruction: |-
         All variables and functions are currently
@@ -4319,19 +4420,20 @@
         with a router, and explores issues in routing and DNS
       New Artist Project_instruction: Joonista midagi lahedat! Sinu projekt salvestatakse
         ning saad selle juurde alati tagasi tulla.
-      New Basketball Project_instruction: |-
-        Create your own Basketball game. You can
-        change all the rules. When you're done, click Finish to let friends try your
-        game on their phones.
-      New Bounce Project_instruction: |-
-        Create your own Bounce game. You can change
-        all the visuals and the rules. When you're done, click Finish to let friends
-        try your game on their phones.
+      New Basketball Project_instruction: Tee oma korvpallimäng. Sa võid kõiki reegleid
+        muuta. Kui oled lõpetanud vajuta "Lõpeta" ja lase sõpradel oma mängu nende
+        telefonis proovida.
+      New Bounce Project_instruction: Loo oma Bounce'i mäng. Võid kõiki visuaalseid
+        elemente ja reegleid muuta. Kui oled valmis, vajuta nuppu "Valmis" ning lase
+        sõpradel telefoni peal mängu proovida.
       New Course 4 Artist Functions Level 4_instruction: Kasuta selle mustri joonistamiseks
         funktsiooni „joonista ruut“.
       New Gumball Project_instruction: Loo midagi vabal valikul ning jaga seda!
       New Ice Age Project_instruction: Loo midagi vabal valikul ning jaga seda!
       New Infinity Project_instruction: Loo midagi vabal valikul ning jaga seda!
+      New Minecraft Hero Project_instruction: |-
+        **Freeplay:**  Time to explore on
+        your own!
       New Sports Project_instruction: |-
         Create your own game! You're in charge here:
         you can change all the rules, mix and match sports, get creative! When you're
@@ -4372,14 +4474,14 @@
       October15 stars 1_instruction: |-
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: Kolliga ei tasu kokku põrgata. Liigu kollidest
-        ettevaatlikult mööda, et jõuda oma turvalisse koju.
+      Overworld Avoid Monsters_instruction: Kreeperiga ei tasu kokku põrgata. Liigu
+        kollidest ettevaatlikult mööda, et jõuda oma turvalisse koju.
       Overworld Chop Tree - allthethings_instruction: |-
         Wood is a very important resource.
         Many things are made from it. Walk to the tree and use the “destroy block”
         command to chop it down.
-      Overworld Chop Tree_instruction: Puit on väga oluline ressurss. Paljud asjad
-        on sellest tehtud. Kõnni puu juurde ja kasuta plokki „hävita“, et see maha
+      Overworld Chop Tree_instruction: Puit on väga oluline materjal. Paljud asjad
+        on sellest tehtud. Kõnni puu juurde ja kasuta „purusta plokki“, et see maha
         raiuda.
       Overworld Chop Trees_instruction: Meil on vaja enne päikese loojumist maja ehitada.
         Maja tegemiseks on vaja palju puitu. Raiu maha kõik kolm puud.
@@ -4394,9 +4496,9 @@
         osa, pannes korduste tsüklisse käsud „aseta“ ja „liigu edasi“.
       Overworld Plant Crops_instruction: Alati tasub ette mõelda. Külva taimed mõlemale
         poole vett, et sa hiljem nälga ei jääks.
-      Overworld Powered Minecart_instruction: Tubli töö! Kogusid hulga ressursse ja
-        ehitasid tagasihoidliku maja. Nüüd pane kaardi servast oma maja ukseni maha
-        rööpad.
+      Overworld Powered Minecart_instruction: Tubli töö! Kogusid hulga ehitusmaterjali
+        ja ehitasid tagasihoidliku maja. Nüüd pane kaardi servast oma maja ukseni
+        maha rööpad.
       Overworld Shear Sheep_instruction: Aeg lambaid pügada! Kasuta käsku „püga“,
         et koguda mõlemalt lambalt villa.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |-
@@ -4687,6 +4789,10 @@
       RyanTest3_instruction: |-
         This level has shape-shifting turned on! Refresh to
         see different variants.
+      SG Add Subgoals practice_instruction: |-
+        Draw a 3x3 grid to the front and right
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
       SG U3L03 - draw rect function_instruction: |-
         Write a function called drawRectangle().\r
         (Click
@@ -4810,6 +4916,10 @@
       SG U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
+      SG U3L08 - introUnderTheSea - recovery_instruction: |-
+        Add an extra fish, starfish,
+        and piece of seagrass to the image. Look at, but don't change, the functions
+        that create them. (Click to see full instructions)
       SG U3L08 - introUnderTheSea_instruction: |-
         Add an extra fish, starfish, and
         piece of seagrass to the image. Look at, but don't change, the functions
@@ -4833,9 +4943,19 @@
       SG U3L08 comments_instruction: |-
         Use the randomNumber() blocks to test the functions
         you designed with random input. (Click to see full instructions)
+      SG U3L08 how to add comments_instruction: |-
+        Use the randomNumber() blocks to
+        test the functions you designed with random input. (Click to see full instructions)
+      SG U3L2 Using Simple Commands part 1_instruction: |-
+        Draw a 1x1 square above
+        and to the left of the turtle's starting position. Click to see full instructions.
       SG U3L2 Using Simple Commands_instruction: |-
         Draw a 1x1 square above and to
         the left of the turtle's starting position. Click to see full instructions.
+      SG U3L2_Add-subgoals_instruction: |-
+        Draw a 3x3 grid to the front and right of
+        the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
       SG U3L2_Turtle3by3Grid_instruction: |-
         Draw a 3x3 grid to the front and right
         of the turtle as efficiently as possible. The turtle should end at its original
@@ -5907,6 +6027,10 @@
       U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
+      U3L08 - introUnderTheSea with comments_instruction: |-
+        Add an extra fish, starfish,
+        and piece of seagrass to the image. Look at, but don't change, the functions
+        that create them. (Click to see full instructions)
       U3L08 - introUnderTheSea_instruction: |-
         Add an extra fish, starfish, and piece
         of seagrass to the image. Look at, but don't change, the functions that create
@@ -5937,6 +6061,9 @@
       U3L08 - triangleTwoParams_instruction: |-
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
+      U3L08 how to add comments_instruction: |-
+        Use the randomNumber() blocks to test
+        the functions you designed with random input. (Click to see full instructions)
       U3L1 - Simulation - Template_instruction: |-
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
@@ -6796,18 +6923,22 @@
         to fail by changing the ID of songToUpdate. (Click to see full instructions)
       Underground Avoiding Lava_instruction: Mõne ploki all on peidus laava, mis sul
         tuleb enne edasiliikumist kinni katta. Siin on abi käsust „kui“. Lisa õigesse
-        kohta käsk „liigu edasi“, et need plokid mineerida.
-      Underground If Statements_instruction: Nüüd lähevad asjad keeruliseks. Mineeri
+        kohta käsk „liigu edasi“, et neid plokke koguda.
+      Underground If Statements_instruction: Nüüd lähevad asjad keeruliseks. Kogu
         3 punast kivi, kuid ära kuku laavasse. Kasuta käsku „kui“, et panna sillutisekivid
         kõigi laavaaukude peale, mis sa avastad.
       Underground Iron_instruction: Sulalaavasse astumine on halb mõte. Paigalda silla
-        rajamiseks sillutisekivi ja mineeri siis vähemalt kaks raudplokki.
-      Underground Mining Coal_instruction: Kõige väärtuslikumad ressursid leiad maa
+        rajamiseks sillutisekivi ja kogu siis vähemalt kaks raudplokki.
+      Underground Mining Coal_instruction: Kõige väärtuslikumad maavarad leiad maa
         alt, kuid seal võib pimedaks minna. Pane paika vähemalt kaks tõrvikut ja kaevanda
         vähemalt kaks sütt.
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
+      Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
+      Valentine_playlab_01_instruction: "Program Kiki (Actor 1) to move left and\nright
+        when the left and right arrows are pressed. When Kiki is clicked, she\nshould
+        throw hearts towards her friends. "
       Vigenere_instruction: Test
       WhileAdventure_instruction: |-
         Our adventurer wants to collect coins. Can you
@@ -6857,6 +6988,9 @@
         If looping a 3 degree turn 60 times makes a half circle, which of
         these blocks of code will make an additional quarter circle for the corners?
       aEfreeplay_instruction: Free Play!
+      allHallows2017_instruction: |-
+        Trap the Code.org employees in the crayon box
+        by drawing a square with 320 pixel sides!
       allthethings data blocks test_instruction: |-
         Please sign in to test applab levels
         (By design, applab levels only work if signed in. Normally, we make people
@@ -6999,10 +7133,10 @@
         plokke mõlema "kui pall põrkab vastu" ploki külge, et ülesanne lahendada.
       bounce_7_instruction: Lisa plokk mõlema ploki „kui“ külge. Põrgata palli, kuni
         see jõuab sihtmärgini.
-      bounce_7_basketball_instruction: Kinnita "kui" plokkide plokke üksteise külge.
+      bounce_7_basketball_instruction: Kinnita kummagi "kui" ploki külge teisi plokke.
         Põrgata palli kuni see lipu pihta läheb.
-      bounce_7_sports_instruction: Kinnita "kui" plokkide plokke üksteise külge. Põrgata
-        palli kuni see lipu pihta läheb.
+      bounce_7_sports_instruction: Kinnita kummagi "kui" ploki külge teisi plokke.
+        Põrgata palli kuni see lipu pihta läheb.
       brendan hackathon level_instruction: |-
         these are the instructions for my level.  you
         should do this level and have a good time.
@@ -7301,11 +7435,17 @@
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_forVideo_instruction: |-
+        Use the `repeat` loop to add waves
+        to the water.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
       courseA_artist_loops_challenge2_instruction: |-
         "Can you help me make two bird
         houses?"
+      courseA_artist_loops_challenge2a_instruction: |-
+        *"Help me get these three tents
+        set up!"*
       courseA_artist_loops_challenge3_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
@@ -7336,15 +7476,42 @@
       courseA_collector_loops7_instruction: |-
         What should you add to this code to
         get all of the treasure?
-      courseA_collector_loops8_instruction: Write the code to get all of this gold.
-      courseA_collector_loops9_instruction: |-
-        **Challenge:** The treasure goes all
-        the way up these stairs!  Write the code to help Laurel get it all.
+      courseA_collector_loops8_instruction: Kirjutage kood, et saada kätte kõik aare.
+      courseA_collector_loops9_instruction: "** Väljakutse: ** Aare läheb treppide
+        üles välja! Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
       courseA_collector_loops_challenge1_instruction: |-
         *"Can you help me spot some
         bugs? I know which way I want to go, but I'm not sure how many steps to take."*
       courseA_collector_loops_challenge2_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
+      courseA_collector_loops_challenge2kp_instruction: |-
+        Collect at least *3* pieces
+        of treasure to pass this level.
+      courseA_collector_preLoops1_instruction: |-
+        This is Laurel the Adventurer! \r
+        \r
+        Press
+        "Run" to see her walk up to the treasure and grab it.
+      courseA_collector_preLoops2_instruction: |-
+        Great!  Now you get to add code yourself!  \r
+        \r
+        Snap
+        a `get treasure` block to the bottom of the program and click "Run".
+      courseA_collector_preLoops3_instruction: |-
+        Snap two `E -->` blocks and one `get
+        treasure` block to the bottom of the program, then click "Run".
+      courseA_collector_preLoops4_instruction: |-
+        Can you figure out how to solve this
+        puzzle?
+      courseA_collector_preLoops5_instruction: |-
+        Get 1 of these 2 gems to solve this
+        puzzle.
+      courseA_collector_preLoops6_instruction: |-
+        Get both pieces of treasure to solve
+        this puzzle.
+      courseA_collector_preLoops7_instruction: |-
+        Get all three piles to pass this
+        level.
       courseA_forVideoTest_artist_instruction: |-
         Use the `repeat` loop to add waves
         to the water.
@@ -7474,10 +7641,9 @@
       courseB_collector_loops6_instruction: |-
         Figure out the code to help Laurel get
         all of the treasure!
-      courseB_collector_loops7_instruction: Write the code to get all of this gold.
-      courseB_collector_loops8_instruction: |-
-        **Challenge: ** The treasure goes all
-        the way down these stairs!  Write the code to help Laurel get it all.
+      courseB_collector_loops7_instruction: Kirjutage kood, et saada kätte kõik aare.
+      courseB_collector_loops8_instruction: "** Väljakutse: ** Aare läheb treppidest
+        alla välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada."
       courseB_collector_loops9_instruction: |-
         *"Help me get the treasure from this
         deep valley."*
@@ -7486,6 +7652,9 @@
       courseB_collector_loops_challenge2_instruction: |-
         Let's get the treasure! Help
         me across each row then come back to start the next row. Can you find a pattern?
+      courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
       courseB_collector_prog1_instruction: |-
@@ -7729,9 +7898,12 @@
       courseC_artist_prog_challenge2_instruction: |-
         *Help me paint the yellow lines
         on this road!*
+      courseC_artist_prog_challenge2a_instruction: |-
+        *Help me paint the yellow lines
+        on this road!*
       courseC_collector_loops_challenge2_instruction: |-
-        Let's hunt for treasure -
-        using loops! Help the collector by debugging this code. Get all of the treasure!
+        Get at least **5** pieces
+        of treasure!
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
         you can help Laurel collect some treasure.
@@ -7765,8 +7937,8 @@
         Look carefully! Can you collect
         all *10* pieces of treasure?
       courseC_collector_prog_challenge2_instruction: |-
-        There are 20 pieces of treasure
-        to be found. Collect at least half to finish this challenge!
+        Collect at least **10** pieces
+        of treasure to finish this challenge!
       courseC_flappy_embed_events_instruction: |-
         Here's an example of a game that
         you're about to create yourself! Play through it one or two times to get
@@ -7833,9 +8005,13 @@
         Collect all of the corn and all of the
         pumpkins.
       courseC_harvester_loops_challenge1_instruction: Collect all of the corn.
+      courseC_harvester_loops_challenge1a_instruction: Collect all of the corn.
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn, all of
+        the lettuce, and all of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -7894,6 +8070,8 @@
         puzzles to complete this level.
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
       courseC_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops\nto
+        find his acorn! "
+      courseC_maze_loops_challenge1a_instruction: "Now Scrat wants to try using loops\nto
         find his acorn! "
       courseC_maze_loops_challenge2_instruction: |-
         Let's hunt for treasure - using
@@ -8014,6 +8192,8 @@
         \r
         See what happens when we start to
         get creative with the bits!
+      courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
+        binary! "
       courseD_artist_binary_challenge0_instruction: |-
         Try using nested loops to complete
         this drawing.
@@ -8077,9 +8257,9 @@
         \r
         The windows are 20 pixel
         squares, each 20 pixels apart.
-      courseD_artist_nestedLoops4_instruction: |
+      courseD_artist_nestedLoops4_instruction: |-
         Great!  Do the same thing with these
-        circles.\r
+        circles.
       courseD_artist_nestedLoops5_instruction: |-
         What happens if you also turn 90
         degrees between circles?
@@ -8108,8 +8288,8 @@
         Can you figure out how
         to make a picture like this?
       courseD_artist_nestedLoops_challenge2_instruction: |-
-        Can you figure out how
-        to make a picture like this?
+        Fix the code to make this
+        picture!
       courseD_artist_project1_instruction: "Draw a small shape, between **20 and\n50**
         pixels wide.  It can be any shape that you like.  "
       courseD_artist_project1a_instruction: |-
@@ -8152,9 +8332,10 @@
       courseD_bee_conditionals1_predict1_instruction: |-
         Check to see if there's a
         flower under the cloud. If there's a flower, get nectar.
-      courseD_bee_conditionals2_instruction: |
-        Check underneath every cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
+        it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_test_instruction: "Check underneath every cloud to\nsee
+        if it is hiding a flower before you get nectar.  "
       courseD_bee_conditionals3_instruction: |-
         Help the bee collect all of the nectar.
         \r
@@ -8213,6 +8394,10 @@
         Help the bee fix the code to get all the
         nectar.
       courseD_bee_debugging_challenge1_instruction: |-
+        Watch how the bees gets the
+        nectar. Can you use the same kind of pattern to help the bee make all of the
+        honey?
+      courseD_bee_debugging_challenge1a_instruction: |-
         Watch how the bees gets the
         nectar. Can you use the same kind of pattern to help the bee make all of the
         honey?
@@ -8368,6 +8553,10 @@
         Are you an expert of nested
         loops? Use what you have learned so far to collect all of the treasure!
       courseD_collector_nested_loops_challenge2_instruction: |-
+        Help the collector
+        reach at least two piles of treasure using only the blocks in your toolbox.
+        It is possible to collect all 4.
+      courseD_collector_nested_loops_challenge2a_instruction: |-
         Help the collector
         reach at least two piles of treasure using only the blocks in your toolbox.
         It is possible to collect all 4.
@@ -8603,13 +8792,14 @@
         Add a `repeat forever` loop that continuously
         checks if the score is greater than 5, then ends the game as a win when it
         is.
-      courseD_playLab_cond6_instruction: "1)  Slow the ninja down before you set\nhim
-        to chase the pirate.  \\r\n2)  If the pirate is greater than 225 pixels\ndown,
-        set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase**\nthe
-        pirate.  "
+      courseD_playLab_cond6_instruction: "1)  Slow the ninja (actor 3) down before\nyou
+        set him to chase the pirate.  \\r\n2)  If the pirate is greater than 225\npixels
+        down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
+        **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: |-
-        If the pirate is in the safe zone, wait
-        one second, then deduct a point as long as he stays beneath the octopus line.
+        If the pirate (actor 1) is in the safe
+        zone, wait one second, then deduct a point as long as he stays beneath the
+        octopus line.
       courseD_playLab_cond6cloneForTest_instruction: Testing
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
@@ -8705,7 +8895,11 @@
         Use what you've learned to draw this triangle
         inside of a square.
       courseE_artist_ramp8_instruction: Now make a square using Artist!
+      courseE_artist_ramp8_2_instruction: Now make a square using Artist!
       courseE_artist_ramp9_instruction: Use what you've learned to draw this triangle.
+      courseE_artist_ramp9_2_instruction: |-
+        Use what you've learned to draw this
+        triangle.
       courseE_bee_concept1_instruction: 'Kogu nektarit igalt lillelt. Kasuta korduse
         pesa. '
       courseE_bee_concept2_instruction: |-
@@ -8978,6 +9172,9 @@
       courseE_video_createFunctions_instruction: |-
         We don't have a video for creating
         functions, yet. This is a placeholder.
+      courseE_video_createFunctions2_instruction: |-
+        We don't have a video for creating
+        functions, yet. This is a placeholder.
       courseF_IceAge_1_instruction: |-
         Help Sid say "Hello!" by dragging the `actor
         1 say` block out and connecting it to the bottom of the `when run` event.
@@ -9000,18 +9197,16 @@
         and right repeatedly.
       courseF_IceAge_6_instruction: "Can you help Sid call for his friends when you\nclick
         on him? "
-      courseF_IceAge_7_instruction: |-
-        Write the code to help Scrat get all of the
-        acorns!
+      courseF_IceAge_7_instruction: Kirjutage kood, mille abil saab Scrat kõik tammetõrud
+        kätte!
       courseF_IceAge_8_instruction: |
         Can you finish this program to make it so that
         you both **play a sound** and **score a point** when Sid and Granny collide?
       courseF_IceAge_9_instruction: |-
         Change the scene to an icy background and set
         Sid’s (actor 1) speed to fast.
-      courseF_IceAge_template_instruction: |-
-        Write the code to help Scrat get all
-        of the acorns!
+      courseF_IceAge_template_instruction: Kirjutage kood, mille abil saab Scrat kõik
+        tammetõrud kätte!
       courseF_artist_embed_for7_instruction: |-
         Press Run to see a program in action!
         This one uses for loops.
@@ -9188,7 +9383,6 @@
         it is hiding a flower before you get nectar.  "
       courseF_bee_conditionals3_instruction: |
         Help the bee collect all of the nectar.
-        \r
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
         blocks as possible.
@@ -9455,6 +9649,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Kinnita ploki „kui klikid“ külge plokk ja vajuta nuppu
         „Käivita“. Kliki või puuduta ekraani, et Flappy liiguks sihtmärgi suunas.
+      flappy_11_instruction: Loo oma Bounce'i mäng. Võid muuta kõiki visuaalseid elemente,
+        reegleid ja isegi gravitatsiooni. Kui oled valmis, vajuta nuppu „Valmis“ ning
+        lase sõpradel telefonis mängu proovida.
       flappy_2_instruction: Nüüd lisasime maapinna.  Lisa ploki „kui puudutab maapinda“
         külge plokk.  Sinu kood peab 'MÄNGU LÕPETAMA', kui Flappy teeb kokkupõrke.
       flappy_3_instruction: Plokk „pärast käivitamist“ käivitab mängu alustamisel
@@ -9475,9 +9672,6 @@
         näiteks takistusest möödumiseks.
       flappy_9_instruction: Et asi oleks natuke huvitavam, proovi teha nii, et takistuse
         vastu põrgates mitte mäng ei lõppe, vaid punktid lähevad nulli.
-      flappy_11_instruction: Loo oma Bounce'i mäng. Võid muuta kõiki visuaalseid elemente,
-        reegleid ja isegi gravitatsiooni. Kui oled valmis, vajuta nuppu „Valmis“ ning
-        lase sõpradel telefonis mängu proovida.
       frozen circle function in circle_instruction: Nüüd loome 20 osaliselt kattuvat
         ringi, pöörates iga ringi vahel 18 kraadi.
       frozen circle function with parameter_instruction: Siin on "Create circle" blokk
@@ -9540,10 +9734,11 @@
       grade1_adventurer_loops5_instruction: |-
         What should you add to this code to
         get all of the gold?
-      grade1_adventurer_loops6_instruction: Write the code to get all of this gold.
-      grade1_adventurer_loops7_challenge_instruction: |-
-        **Challenge: ** The gold goes
-        all the way down these stairs!  Write the code to help me get it all.
+      grade1_adventurer_loops6_instruction: Kirjutage kood, mille abil saab kõik kulla
+        kätte.
+      grade1_adventurer_loops7_challenge_instruction: "** Väljakutse: ** Aare läheb
+        treppidest alla välja! Kirjutage kood, et  aidata Laurelil see kõik kätte
+        saada."
       grade1_adventurer_loops8_challenge_instruction: |-
         Challenge: Try this staircase
         now! It has an extra spike at the end you'll have to climb.
@@ -11163,11 +11358,12 @@
       gradek_adventurer_loops5_instruction: |-
         What should you add to this code to
         get all of the gold?
-      gradek_adventurer_loops6_instruction: Write the code to get all of this gold.
-      gradek_adventurer_loops7_instruction: Write the code to get all of this gold.
-      gradek_adventurer_loops7_challenge_instruction: |-
-        **Challenge:** The gold goes
-        all the way up these stairs!  Write the code to help me get it all.
+      gradek_adventurer_loops6_instruction: Kirjutage kood, mille abil saab kõik kulla
+        kätte.
+      gradek_adventurer_loops7_instruction: Kirjutage kood, mille abil saab kõik kulla
+        kätte.
+      gradek_adventurer_loops7_challenge_instruction: "** Väljakutse: ** Aare läheb
+        treppide üles välja! Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
       gradek_adventurer_loops8_instruction: |-
         Help me get all of the gold from this
         deep valley.
@@ -11290,9 +11486,8 @@
       iceage_hello2_instruction: |-
         Help Manny and Sid greet each other by using the
         the `actor ___ say` block twice.
-      iceage_move_events_instruction: |-
-        Write the code to help Scrat get all of the
-        acorns!
+      iceage_move_events_instruction: Kirjutage kood, mille abil saab Scrat kõik tammetõrud
+        kätte!
       iceage_move_to_actor_instruction: |-
         Connect a block to the `when actor touches`
         event to play a sound when Diego finds Manny.

@@ -122,6 +122,7 @@ hu:
     user_type_student: "Diák"
     field_is_required: "szükséges"
     accept_terms: "El kell fogadnia, hogy létre hozzon egy fiókot"
+    error: "An error occurred."
   school_info:
     title: 'Az iskolai információ (opcionális)'
     school_country: 'Iskola országa'
@@ -562,6 +563,9 @@ hu:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Kor 13+"
       cta: "Ismerd meg hogyan"
+    hoc-encryption:
+      title: "Simple Encryption"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -580,6 +584,9 @@ hu:
     minecraft2016:
       title: "Minecraft"
       body: "Programozz állatokat és egyéb Minecraft lényeket a saját Minecraft verziódban."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
@@ -643,6 +650,7 @@ hu:
     correct_title: "Köszönöm"
     correct_body: "Köszönjük az elküldött válaszokat."
     hide_survey_last_answer: "This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Köszönöm"
     wrong_body: "Köszönjük az elküldött válaszokat."
@@ -748,7 +756,11 @@ hu:
     rename: "Átnevezés"
     save: "Mentés"
     delete: "Törlés"
-    import: "Import"
+    import: "Importálás"
+    share_link_import_bad_link_header: "A megosztási hivatkozást a rendszer nem ismerte fel"
+    share_link_import_bad_link_body: 'Nem sikerült importálni a megosztási hivatkozást. Bizonyosodj meg arról, hogy a Minecraft: Agent kirakósból származó hivatkozást használsz, és hogy a teljes hivatkozást lemásoltad.'
+    share_link_import_error_header: "Hiba történt."
+    share_link_import_error_body: "Hiba történt a megosztási hivatkozás importálása során. Próbáld újra!"
     exit: "Vissza a tanfolyamhoz"
     my_projects: "Projektjeim"
     project_gallery: "Projektek"

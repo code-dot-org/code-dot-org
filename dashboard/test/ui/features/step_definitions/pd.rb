@@ -1,3 +1,13 @@
+Given(/^I am a workshop administrator with some applications of each type and status$/) do
+  require_rails_env
+  random_name = "TestWorkshopAdmin" + SecureRandom.hex(10)
+  steps %Q{
+    And I create a teacher named "#{random_name}"
+    And I make the teacher named "#{random_name}" a workshop admin
+    And I create some fake applications of each type and status
+  }
+end
+
 Given(/^I am a facilitator with started and completed courses$/) do
   random_name = "TestFacilitator" + SecureRandom.hex[0..9]
   steps %Q{
@@ -50,6 +60,17 @@ Given(/^I am a teacher who has just followed a workshop certificate link$/) do
   }
 end
 
+Given(/^I navigate to the principal approval page for "([^"]*)"$/) do |name|
+  require_rails_env
+
+  user = User.find_by_email @users[name][:email]
+  application = Pd::Application::Teacher1819Application.find_by(user: user)
+
+  steps %Q{
+    And I am on "http://studio.code.org/pd/application/principal_approval/#{application.application_guid}"
+  }
+end
+
 Given(/^I am a facilitator with completed courses$/) do
   random_name = "TestFacilitator" + SecureRandom.hex[0..9]
   steps %Q{
@@ -81,6 +102,46 @@ And(/^I make the teacher named "([^"]*)" a workshop organizer$/) do |name|
 
   user = User.find_by(name: name)
   user.permission = UserPermission::WORKSHOP_ORGANIZER
+end
+
+And(/^I make the teacher named "([^"]*)" a workshop admin$/) do |name|
+  require_rails_env
+
+  user = User.find_by(name: name)
+  user.permission = UserPermission::WORKSHOP_ADMIN
+end
+
+And(/^I create some fake applications of each type and status$/) do
+  require_rails_env
+  time_start = Time.now
+
+  # There's no need to create more applications if a lot already exist in the system
+  if Pd::Application::Facilitator1819Application.count < 100
+    %w(csf csd csp).each do |course|
+      Pd::Application::ApplicationBase.statuses.values.each do |status|
+        10.times do
+          teacher = FactoryGirl.create(:teacher, school_info: SchoolInfo.first, email: "teacher_#{SecureRandom.hex}@code.org")
+          application = FactoryGirl.create(:pd_facilitator1819_application, course: course, user: teacher)
+          application.update(status: status)
+        end
+      end
+    end
+  end
+
+  if Pd::Application::Teacher1819Application.count < 100
+    %w(csd csp).each do |course|
+      (Pd::Application::ApplicationBase.statuses.values - ['interview']).each do |status|
+        10.times do
+          teacher = FactoryGirl.create(:teacher, school_info: SchoolInfo.first, email: "teacher_#{SecureRandom.hex}@code.org")
+          application_hash = FactoryGirl.build(:pd_teacher1819_application_hash, course.to_sym, school: School.first)
+          application = FactoryGirl.create(:pd_teacher1819_application, form_data_hash: application_hash, course: course, user: teacher)
+          application.update(status: status)
+        end
+      end
+    end
+  end
+  time_end = Time.now
+  puts "Creating applications took #{time_end - time_start} seconds"
 end
 
 def create_enrollment(workshop, name=nil)
@@ -115,13 +176,14 @@ end
 
 And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) (people|facilitators)(.*)$/) do |course, role, name, number, number_type, post_create_actions|
   # Organizer
-  if role == 'organized'
-    organizer = User.find_by(name: name)
-  else
-    organizer = User.find_or_create_teacher(
-      {name: 'Organizer', email: "organizer#{SecureRandom.hex[0..5]}@code.org"}, nil, 'workshop_organizer'
-    )
-  end
+  organizer =
+    if role == 'organized'
+      User.find_by(name: name)
+    else
+      User.find_or_create_teacher(
+        {name: 'Organizer', email: "organizer#{SecureRandom.hex[0..5]}@code.org"}, nil, 'workshop_organizer'
+      )
+    end
 
   workshop = Pd::Workshop.create!(
     on_map: true,
@@ -145,12 +207,7 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
       workshop.facilitators << create_facilitator(course)
     end
   else
-    if role == 'facilitated'
-      facilitator = User.find_by(name: name)
-    else
-      facilitator = create_facilitator(course)
-    end
-
+    facilitator = role == 'facilitated' ? User.find_by(name: name) : create_facilitator(course)
     workshop.facilitators << facilitator
   end
 

@@ -73,6 +73,11 @@ $text-shadow-gray: #5a5a5a;
   @include pixelated();
 }
 
+.instructionsImage {
+  vertical-align: text-bottom;
+  height: 25px;
+}
+
 @mixin mc-x-close-button() {
   $button-centering-offset: 35px;
 
@@ -189,10 +194,6 @@ body {
   background-color: $below-header-background;
   -ms-content-zooming: none;
   -ms-touch-action: none;
-}
-
-.header-wrapper {
-  background-color: $original-background-color;
 }
 
 .workspace-header {
@@ -827,7 +828,9 @@ $height-to-width: 434 / 477;
   }
 }
 
-.dash_modal button, .minecraft button {
+// Use the .no-mc class on a button to prevent it from picking up minecraft
+// styles. This is useful in react which does not support !important.
+.dash_modal button:not(.no-mc), .minecraft button:not(.no-mc) {
   border-style: solid !important;
   border-width: 4px 5px 6px !important;
   @include pixelated();
@@ -1058,6 +1061,10 @@ $height-to-width: 434 / 477;
   p {
     line-height: 27px;
     font-size: 24px;
+    color: $lightest_gray;
+  }
+
+  span.thumbnail-warning {
     color: $lightest_gray;
   }
 

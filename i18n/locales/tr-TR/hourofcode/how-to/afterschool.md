@@ -1,81 +1,77 @@
-* * *
-
-title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_how_to) %>
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
-# Okuldan sonra bir Kodlama Saati nasıl öğretilir
+# Etüt/Sosyal etkinlik veya okul sonrası faaliyetler için Kod Saati nasıl öğretilir
 
-## 1) Bu "Nasıl Yapılır" videosunu izle <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Bir öğretici seç:
+Bu harekete katıl ve bir grup öğrenciye onların bilgisayar bilimindeki ilk saatlerinde şu adımlarla yol göster. Kod-Saati yeni başlayanlar için bile çok kolaydır! Sınıfınızda Kod-Saati eğitimleri için yardım isterseniz [ yerel bir gönüllü](%= resolve_url('https://code.org/volunteer/local') %) bulabilirsiniz.
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+## 1. "Nasıl Yapılır" videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-**Tüm Kodlama Zamanı öğreticileri:**
+## 2. Bir eğitim seçin
 
-  * Require minimal prep-time for organizers
-  * Kendi yönlendirmelerine sahiptir - çocukların kendi hızlarına ve seviyelerine uygun hareket etmelerine izin verir
+Çeşitli ortaklarımız tarafından oluşturulmuş, [eğlenceli, saatlik eğitimleri](%= resolve_url('/learn') %) her yaştan katılımcılarımıza sunuyoruz. [Bunları deneyin!](%= resolve_url('/learn') %)
+
+Çok az bir hazırlık süresi gerektiren ve kendi kendine yapılabilen - katılımcılara kendi tempo ve yetenek seviyelerinde çalışmaya izin veren **tüm Kod-Saati faaliyetleri**.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Okul sonrası Kodlama Saati için ders planına mı ihtiyaç var?** [şablona](/files/AfterschoolEducatorLessonPlanOutline.docx) bakabilirsiniz!
 
-## 3) Kendi Kodlama Saati'nizin tanıtımını yapın
+## 3. Kendi Kod-Saatinizi tanıtın
 
-[Bu araçlar ile](%= resolve_url('/promote') %) kendi Kodlama Saati'nizi tanıtın ve diğerlerini kendi etkinliklerini düzenlemeleri için teşvik edin.
+[Bu araçlar ile](%= resolve_url('/promote') %) kendi Kod- Saatinizi tanıtın ve diğerlerini kendi etkinliklerini düzenlemeleri için teşvik edin.
 
-## 4) Teknolojik ihtiyaçlarınızı planlayın - bilgisayar kullanımı isteğe bağlı
+## 4. Teknolojik ihtiyaçlarınızı planlayın - bilgisayar kullanmak isteğinize bağlı
 
-En iyi Kodlama Saati deneyimi internete bağlı olan bilgisayarları içerir. Ama her çocuk için bir bilgisayara ihtiyaç **yok** ve hiç bir bilgisayar olmadan bile Kodlama Saati yapabilirsin.
+En iyi Kod-Saati deneyimi için bilgisayarlarınız internete bağlı olmalı. Her çocuk için bir bilgisayara ihtiyaç yok **yok** hatta hiç bilgisayar olmadan bile Kod-Saati dersleri yapabilirsiniz.
 
-**Önceden planla!** Etkinlik başlamadan önce aşağıdakileri yapın:
+Etkinlik öncesinde kullanacağınız öğretici içerikleri, öğrenci bilgisayarlarında ve/veya cihazlarında deneyin, ses ve videoların tarayıcınızda düzgün bir şekilde çalıstığından emin olun. **Bağlantı hızınız düşük mü?** Videoları sınıfın ön tarafından izletin, böylece her öğrencinin kendi videosunu indirmesine gerek kalmayacaktır. Ya da internet bağlantısı gerektirmeyen içerikleri deneyin.
 
-  * Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
-  * **Yeterli ekipman yok mu?** o halde [ çift programlayı](https://www.youtube.com/watch?v=vgkahOzFH2Q) kullanın. İki kişilik takımlar halinde çalışan öğrenciler birbirlerine yardımcı olurlar ve öğretmene daha az ihtiyaç duyarlar. Ayrıca bu yöntemle öğrenciler bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklar.
-  * **Bant genişliğiniz düşük mü?** Videoları sınıfın ön tarafından izletin, böylece her öğrencinin kendi videosunu indirmesine gerek kalmayacaktır. Ya da internet bağlantısı gerektirmeyen öğreticileri deneyin.
+Seçtiğiniz içerik ses ile daha iyi öğrenilecekse sınıflarınız için kulaklıklar edinin ya da öğrencilere kendilerininkini getirmelerini söyleyin.
 
-![](/images/fit-350/group_ipad.jpg)
+**Yeterli ekipman yok mu?** o halde [ eşli programlayı](https://www.youtube.com/watch?v=vgkahOzFH2Q) kullanın. İki kişilik takımlar halinde çalışan öğrenciler birbirlerine yardımcı olurlar ve öğretmene daha az ihtiyaç duyarlar. Ayrıca bu yöntemle öğrenciler bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklar.
 
-## 5) Kodlama Saati etkinliğinizi ilham verici bir video ile başlatın
+<img src="/images/fit-350/group_ipad.jpg" />
 
-Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar biliminin hayatımızın her parçasını nasıl etkilediğini anlatarak başlayın.
+## 5. Kod-Saati etkinliğinizi ilham verici bir video ile başlatın
+
+Kod-Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar biliminin hayatımızın her parçasını nasıl etkilediğini anlatarak başlayın.
 
 **İlham verici bir video gösterin:**
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * [2013 Kodlama Saati başlangıç videosu](https://www.youtube.com/watch?v=FC5FbmsH4fw), ya da <% if @country == 'uk' %> [2015 Kodlama Saati videosu](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [2015 Kodlama Saati videosu](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Daha fazla ilham verici video için [buraya tıklayın](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Bill Gates, Mark Zuckerberg ve NBA yıldızı Chris Bosh'un olduğu orjinal Code.org videosu başlatın ([1 dakika](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 dakika](https://www.youtube.com/watch?v=nKIu9yen5nc) ve [9 dakika](https://www.youtube.com/watch?v=dU1xS07N-FA) versiyonları vardır).
+- [ Dünya geneli Kod-Saati videosu](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [ Başkan Obama tüm öğrencileri bilgisayar bilimi öğrenmeye çağırıyor](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Daha fazla ilham verici video için [buraya tıklayın](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Bilgisayar biliminde tecrübeniz yoksa sorun değil. İşte size Kod-Saati etkinliğinizi tanıtmak için birkaç fikir:**
 
-  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
-  * List things that use code in everyday life.
-  * See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
+- Teknolojinin hayatımızdaki etkisini hem erkekleri hem de kızları ilgilendirecek şekilde örneklerle açıklayınız. (Örneğin; insan hayatı kurtarmak, yardım etmek, iletişim kurmak için kullanılan uygulama ve teknolojiler hakkında konuşun).
+- Günlük hayatımızda kod kullanılan şeyleri listeleyin.
+- Kızların bilgisayar bilimi ile ilgilenmesine ilişkin ipuçları için [buraya](%= resolve_url('https://code.org/girls') %) bakın.
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Daha fazla yardıma mı ihtiyacınız var?** [Ders planı şablonu](/files/AfterschoolEducatorLessonPlanOutline.docx)nu indirin.
 
-**Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
+## 6. Kodlayın!
 
-## 6) Code!
+**Katılımcıları aktiviteye yönlendirin**
 
-**Direct participants to the activity**
+- Seçtiğiniz içeriğin linkini tahtaya yazın. [seçtiğiniz içerik hakkındaki bilgiler](%= resolve_url('/learn') %)i katılımcı listesi altındaki linkte bulabilirsiniz.
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
+**Eğer bir öğrenciniz etkinlik sırasında zorlanırsa ona şu şekilde yanıt verebilirsiniz:**
 
-**When someone comes across difficulties it's okay to respond:**
+- "Bilmiyorum. Buna birlikte bakalım."
+- "Teknoloji her zaman istediğimiz gibi çalışmaz."
+- "Programlama öğrenmek yeni bir dil öğrenmek gibidir; hemen akıcı olmayacaktır."
 
-  * “I don’t know. Let’s figure this out together.”
-  * “Technology doesn’t always work out the way we want.”
-  * “Learning to program is like learning a new language; you won’t be fluent right away.”
+**Birisi erken bitirdiğinde ne yapmak gerekir?**
 
-**What to do if someone finishes early?**
-
-  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
-  * Or, ask those who finish early to help others who are having trouble.
+- Katılımcıları başka bir Kod-Saati etkinliğini denemeleri için [hourofcode.com/learn](%= resolve_url('/learn') %) sayfasına yönlendirebilirsiniz
+- Ya da erken bitirenlerden sorun yaşayanlara yardımcı olmalarını rica edebilirsiniz.
 
 [col-33]
 
@@ -89,11 +85,9 @@ Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar bilimi
 
 [/col-33]
 
-<p style="clear:both">
-  &nbsp;
-</p>
+<p style="clear:both">&nbsp;</p>
 
-## 7) Celebrate
+## 7. Kutlama
 
 [col-33]
 
@@ -101,10 +95,10 @@ Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar bilimi
 
 [/col-33]
 
-  * [Print certificates](%= resolve_url('https://code.org/certificates') %) for your students.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
-  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Öğrencileriniz için [sertifika basın](%= resolve_url('https://code.org/certificates') %).
+- Öğrencileriniz için ["Kod-Saati!" ](%= resolve_url('/promote/resources#stickers') %) çıkartmaları yazdırın.
+- Okulunuz için [özel sipariş t-shirtler](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
+- Kod Saati etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
 
 [col-33]
 
@@ -112,23 +106,21 @@ Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar bilimi
 
 [/col-33]
 
-<p style="clear:both">
-  &nbsp;
-</p>
+<p style="clear:both">&nbsp;</p>
 
-## Other Hour of Code resources for educators:
+## Eğitimciler için diğer Kod-Saati kaynakları
 
-  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
-  * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-  * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
-  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
-  * Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+- Daha önce düzenlenmiş Kod-Saati etkinliklerinden, [en iyi uygulamalar](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)a bir göz atın. 
+- [Eğitimci rehberliğinde Kod-Saati web seminerimizi](https://youtu.be/EJeMeSW2-Mw) izleyin.
+- Diğer eğitmenlerle fikir alış-verişinde bulunmak ve birbirinizi destelemek için [ Kod-Saati Forum](http://forum.code.org/c/plc/hour-of-code)u ziyaret edin. <% if @country == 'us' %>
+- [ Kodlama Saati SSS](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). gözden geçirin. <% end %>
 
-## Kodlama Zamanından sonra ne olacak?
+## Kod Saati etkinliğinden sonra ne yapmalı?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Kodlama Saati teknolojinin nasıl çalıştığı ve yazılım uygulamalarının nasıl yapıldığını öğrenmeye giden yolculukta sadece bir ilk adımdır. Bu yolculuğa devam etmek için:
 
-  * Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-  * [Attend](%= resolve_url('https://code.org/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
-
-<%= view :signup_button %>
+- Öğrencileri,  çevrimiçi öğrenmeye </ 0> devam etmeye teşvik edin.</li> 
+    
+    - Deneyimli bir bilgisayar bilimci ile 1 günlük yüz yüze atölyeye [katılın](%= resolve_url('https://code.org/professional-development-workshops') %). (Sadece ABD eğitmenleri için)</ul> 
+    
+    <%= view :signup_button %>

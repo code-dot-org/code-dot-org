@@ -1254,19 +1254,44 @@
       CSD U4 - Events Template_instruction: |-
         Add a large red button to your screen
         using Design Mode. (Click for full instructions.)
-      CSD U5 black white images pixelation 2_instruction: |-
-        Draw a smiley face (click
-        here to see image)
-      CSD U5 black white images pixelation 3_instruction: |-
-        Change the width and height
-        sliders to find the image (click here to see more)
-      CSD U5 black white images pixelation 4_instruction: |-
-        Add eyebrows to the smiley
-        face (click here to see the image)
-      CSD U5 black white images pixelation 5_instruction: Draw anything you like
-      CSD U5 black white images pixelation_instruction: |-
-        Complete the X shape by
-        typing 0s and 1s
+      CSD U5 black white images pixelation 2_instruction: Namaluj usměváka (klikni
+        sem pro zobrazení obrázku)
+      CSD U5 black white images pixelation 3_instruction: Změň slidery pro šířku a
+        výšku abys našel obrázek (klikni sem pro více informací)
+      CSD U5 black white images pixelation 4_instruction: Doplň usměvákovi obočí (klikni
+        sem pro zobrazení obrázku)
+      CSD U5 black white images pixelation 5_instruction: Namaluj cokoliv budeš chtít
+      CSD U5 black white images pixelation_instruction: Dokonči tvar X vepsáním nul
+        a jedniček
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -1379,6 +1404,27 @@
       CSDU6 - for loop - why for_instruction: |-
         Write the contents of the array to
         the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays rainbow_instruction: |-
+        Write the contents of the array to the screen
+        in numerical order. (Click to see full instructions)
+      CSDU6 arrays random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select icons_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select rainbow_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_instruction: |-
+        Write a program that displays a
+        randomly chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays variable_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -1417,7 +1463,7 @@
         instructions) "
       CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions) "
-      CSP student contact info_instruction: Please enter your email address.
+      CSP student contact info_instruction: Zadejte svou e-mailovou adresu.
       CSPU5 Add Screens to Chaser Game_instruction: |-
         Recreate the game from the "Chaser
         Game" with a Welcome Screen and Game Over Screen. (Click to see full instructions.)
@@ -3166,7 +3212,7 @@
         a záporných čísel).
       Course 4 Variables Assessment_instruction: Dovedeš vytvořit tento obraz pomocí
         proměnné pro strany? Každý řádek by měl být dlouhý 50 pixelů.
-      Course1BeePuzzle12_instruction: Get three nectars and then make two honey
+      Course1BeePuzzle12_instruction: Získej tři nektary a pak udělej dva medy
       Course1MazeAssessment1_instruction: |-
         This is a test!\r
         Move one way, then
@@ -3175,6 +3221,53 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
+        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars10_instruction: |-
+        Free Play time! Here are all of the variables
+        we've played with so far in this stage, as well as a few more in case you
+        want them. \r
+        \r
+        Notice that there are now so many blocks in our toolbox
+        that they need to be organized!  Here, we've put each piece into an appropriate
+        category.  Take some time to explore everything that is available. When you're
+        done browsing, make a game or story using repeats, variables, and events.  \r
+        \r
+        Hint:
+        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars2_instruction: |-
+        The race in that last puzzle wasn't very
+        fair! Change the `dog_speed` variable to make sure you can collect more flags
+        than Cat. The first to collect 10 flags wins!
+      CourseF_PlayLab_vars3_instruction: Tady je nový druh hry! Použij levé a pravé
+        šipky k pohybu a šipky nahoru ke skoku. Podívej se, jestli umíš sesbírat všechny
+        vlajky.
+      CourseF_PlayLab_vars4_instruction: Nyní jsme pomocí proměnné "výška" řídili,
+        jak vysoko pes skáče. Aktualizuj proměnnou "výška" tak, aby pes mohl skočit
+        dost vysoko, aby dosáhl na na všechny vlajky.
+      CourseF_PlayLab_vars5_instruction: 'Vytvořme hru! Nejprve budeme potřebovat
+        skóre. Znovu si vytvořit kód, který jsi viděl v poslední úrovni pro nastavení
+        skóre na 10. '
+      CourseF_PlayLab_vars6_instruction: Použij pravou šipku ke střílení srdcí. \r
+        \r V naší hře, jak jsme skóre body? Přidáš 1 k proměnné "body" pokaždé, když
+        pes trefí kočku s velkým srdcem. Použij událost "kdy aktér 2 dotkne se čehokoli"
+        ke spuštění aktualizace tvého skóre. Proměnné lze zvýšit nastavením "body
+        = body + 1." Dostat skóre na 10 (jde jeden po druhém!) projdeš na další úroveň.
+      CourseF_PlayLab_vars7_instruction: Použij pravou šipku ke střílení srdcí. \r
+        \r V naší hře, jak jsme skóre body? Přidáš 1 k proměnné "body" pokaždé, když
+        pes trefí kočku s velkým srdcem. Použij událost "kdy aktér 2 dotkne se čehokoli"
+        ke spuštění aktualizace tvého skóre. Proměnné lze zvýšit nastavením "body
+        = body + 1." Dostat skóre na 10 (jde jeden po druhém!) projdeš na další úroveň.
+      CourseF_PlayLab_vars8_instruction: Použij pravou šipku ke střílení srdcí. \r
+        \r V naší hře, jak jsme skóre body? Přidáš 1 k proměnné "body" pokaždé, když
+        pes trefí kočku s velkým srdcem. Použij událost "kdy aktér 2 dotkne se čehokoli"
+        ke spuštění aktualizace tvého skóre. Proměnné lze zvýšit nastavením "body
+        = body + 1." Dostat skóre na 10 (jde jeden po druhém!) projdeš na další úroveň.
+      CourseF_PlayLab_vars9_instruction: |-
+        Nice, now let's make sure this game isn't
+        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
+        2), you should lose a point. Start with 10 points so it's not too hard. Let
+        your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution_instruction: Pokyny
       Crack a Caesar Cipher_instruction: Pokyny
       ECSPD Binary Odometer_instruction: |-
@@ -3440,9 +3533,8 @@
         Introducing the setPosition command!
         Replace the moveTo in the button-click event handler to use setPosition to
         move the button itself to a random location when it's clicked.
-      Find the Wizard_instruction: |-
-        Build whatever you want. This is an example of
-        a number-guessing game!
+      Find the Wizard_instruction: Vytvořte, co chcete. Toto je příklad hry kde hádáte
+        čísla!
       Food Fight!_instruction: "We've added one last function for you. \\r\n\\r\nUse\nan
         \"if\" statement to program your game to call the \"level_up\" function\nonly
         when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
@@ -3451,8 +3543,10 @@
       Food Fight_instruction: |-
         You can make whatever you want in play lab! This is
         an example of a game you can make in play lab.
-      FoodFight_instruction: This is an example of a game you can make in play lab.
+      FoodFight_instruction: Toto je příklad hry jakou můžete vytvořit v play lab.
       Frequency Analysis_instruction: Test
+      Function intro Ryan_instruction: Použijte dvakrát funkci „postavit most“ a udělejte
+        cestu k pochodni.
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -3463,9 +3557,8 @@
       Geometric Sun_instruction: |-
         Project Idea: Create a pattern using geometric
         ideas like shapes. This requires persistence and planning!
-      Get To The Goal_instruction: |-
-        Build whatever you want. This is an example of
-        a number-guessing game!
+      Get To The Goal_instruction: Vytvořte, co chcete. Toto je příklad hry kde hádáte
+        čísla!
       'Grade 4 Example PlayLab Project #1_instruction': |-
         Take a look at this project.  Do
         you see how it was made?
@@ -3634,13 +3727,11 @@
       K-1 Bee Assessment 1_instruction: Dostaň nektar, abys udělal med!
       K-1 Bee Assessment 2_instruction: Dostaň nektar, abys udělal med!
       K-1 Bee Loops 1_instruction: Dostaň tento nektar, abys udělal med!
-      K-1 Bee Loops 10_instruction: Použij cykly, abys dostal nektar, zlato a k pohybu!
-      K-1 Bee Loops 11_instruction: 'Hodnocení: Používej cykly a dostaneš nektar a
-        med!'
-      K-1 Bee Loops 12_instruction: 'Hodnocení: Používej cykly a dostaneš nektar,
-        med a pohyb!'
+      K-1 Bee Loops 10_instruction: Získej všechen nektar a vyrob z něj med.
+      K-1 Bee Loops 11_instruction: Získej všechen nektar a vyrob z něj med!
+      K-1 Bee Loops 12_instruction: Získej všechen nektar a vyrob z něj med.
       K-1 Bee Loops 2_instruction: Používej cyklus k pohybu a pak dostaneš nektar
-        a uděláš med!
+        a vyrobíš med!
       K-1 Bee Loops 3_instruction: Používej cykly, abys dostal nektar a udělal med!
       K-1 Bee Loops 4_instruction: Použij cykly, abys dostal nektar, udělal med a
         pohyboval!
@@ -3653,7 +3744,7 @@
         cykly!
       K-1 Bee Loops Assessment 2_instruction: Dostaň nektar, abys udělal med pomocí
         cyklů!
-      K-1 Bee Puzzle 12_instruction: Get three nectars and then make two honey
+      K-1 Bee Puzzle 12_instruction: Získej tři nektary a pak udělej dva medy
       K-1 Building a Foundation Assessment_instruction: Vytvoř tříúrovňovou pyramidu,
         neexistují žádné pokyny, takže si hraj s kousky, které si dostal až dosud!
       K-1 Maze 10_instruction: 'Jdi kolem TNT, abys mne dostal k prasátku! '
@@ -3797,6 +3888,8 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      MC Agent Freeplay_instruction: "**Volná hra:** A teď můžete objevovat na vlastní
+        pěst!"
       MC HOC 2016 Level 10_instruction: Je čas vytvořit si vlastní verzi Minecraftu!
         Vytvářej postavy a ovládej je pomocí kódu. Bav se!
       MC HOC 2016 Level 2-2_instruction: Slepice je zmrazená. Přetáhni bloky "posun"
@@ -3838,67 +3931,73 @@
         Click "Run" to move the player to the orange
         square inside of the house.
       MC_HOC_2017_01_Cole_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
+        You need to collect all the tools on this
+        journey. Move around using the **arrow keys**, and get to the chest on the
+        path to win
       MC_HOC_2017_01_Kiki_instruction: |-
         Click "Run" to move the player to the orange
         square inside of the house.
-      MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Kiki_instruction: |-
-        Get the Agent to the pressure plate, then
-        get the player to the orange square.
-      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_instruction: |-
-        Change the loop from the last puzzle to help the
-        Agent make a path over the wider part of this river.
-      MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_05_instruction: |-
-        Use a function to help the Agent get to the pressure
-        plate.
-      MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
-      MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
-      MC_HOC_2017_06_Cole_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_06_Kiki_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_07_Cole_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07_Kiki_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07a_Kiki_instruction: Clear the path to the orange square.
-      MC_HOC_2017_08_Cole_instruction: |-
-        Change the provided function to work for
-        this biome.
-      MC_HOC_2017_08_Kiki_instruction: Change the function to work for this puzzle.
-      MC_HOC_2017_09_Cole_instruction: |-
-        Program the Agent to clear the player's
-        path.
-      MC_HOC_2017_09_Kiki_instruction: |-
-        Program the Agent to clear the player's
-        path and get to the pressure plate.
-      MC_HOC_2017_10_Cole_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_Cole_old_instruction: |-
-        Create a function to help you finish
-        this minecart.
-      MC_HOC_2017_10_Kiki_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_Ryan_03_instruction: |-
-        Now use loops to help The Agent build a bridge
-        over the river by placing blocks in the water.
-      MC_HOC_2017_Ryan_05_instruction: |-
-        Destroy these cacti so that the player can
-        get to the goal.
-      MC_HOC_Kiki_02_instruction: Get The Agent to the pressure plate.
+      MC_HOC_2017_01_RETRY_instruction: Přesuňte agenta na nášlapnou desku, stiskněte
+        tlačítko „Spustit“ a pomocí kláves se šipkami přemístěte hráče z domu, aby
+        sebral truhlu.
+      MC_HOC_2017_02_instruction: Přesuňte agenta na nášlapnou desku.
+      MC_HOC_2017_02_Cole_instruction: Přesuňte agenta na nášlapnou desku, aby se
+        hráč {currentPlayerName} mohl dostat k mapě.
+      MC_HOC_2017_02_Kiki_instruction: Přesuňte agenta na nášlapnou desku a poté přesuňte
+        hráče na oranžové políčko.
+      MC_HOC_2017_02_Will_instruction: Přesuňte agenta na nášlapnou desku.
+      MC_HOC_2017_03_Cole_instruction: Napište kód, aby agent otevřel bránu.
+      MC_HOC_2017_03_Kiki_instruction: Přesuňte agenta na nášlapnou desku.
+      MC_HOC_2017_04_instruction: Upravte cyklus z poslední hádanky tak, abyste pomohli
+        agentovi udělat cestu přes širší část této řeky.
+      MC_HOC_2017_04POINT5_Cole_instruction: Přesuňte agenta na nášlapnou desku.
+      MC_HOC_2017_04POINT5_RYAN_instruction: Přesuňte agenta na nášlapnou desku.
+      MC_HOC_2017_04_Cole_instruction: Přesuňte agenta na nášlapnou desku.
+      MC_HOC_2017_04_Kiki_instruction: Přesuňte agenta na nášlapnou desku.
+      MC_HOC_2017_05_instruction: Pomozte pomocí funkce agentovi přesunout se na nášlapnou
+        desku.
+      MC_HOC_2017_05_Cole_instruction: Přesuňte hráče k lopatě.
+      MC_HOC_2017_05_Josh_instruction: Přesuňte hráče k lopatě.
+      MC_HOC_2017_05_Kiki_instruction: Přesuňte hráče na oranžové políčko.
+      MC_HOC_2017_06_Cole_instruction: Opravte tento kód, aby agent postavil most
+        přes tuto řeku.
+      MC_HOC_2017_06_Josh_instruction: Opravte tento kód, abyste pomohli agentovi
+        postavit most přes tuto řeku.
+      MC_HOC_2017_06_Kiki_instruction: Opravte tento kód, abyste pomohli agentovi
+        postavit most přes tuto řeku.
+      MC_HOC_2017_07_Cole_instruction: Zničte led a dostaňte hráče {currentPlayerName}
+        k vozíku.
+      MC_HOC_2017_07_Kiki_instruction: Uvolněte pomocí funkce cestu k oranžovému políčku.
+      MC_HOC_2017_07a_Kiki_instruction: Uvolněte cestu k oranžovému políčku.
+      MC_HOC_2017_08_Cole_instruction: Upravte uvedenou funkci tak, aby fungovala
+        v tomto biomu.
+      MC_HOC_2017_08_Kiki_instruction: Upravte funkci tak, aby vyřešila tuto hádanku.
+      MC_HOC_2017_08_RY_instruction: Najděte pomocí funkcí cestu přes lávu.
+      MC_HOC_2017_08_Will_instruction: Najděte pomocí funkcí cestu přes lávu.
+      MC_HOC_2017_09_Cole_instruction: Naprogramujte agenta, aby hráči uvolnil cestu.
+      MC_HOC_2017_09_Kiki_instruction: Naprogramujte agenta, aby hráči uvolnil cestu
+        a dostal se na nášlapnou desku.
+      MC_HOC_2017_10_Cole_instruction: Vytvořte funkci pro dokončení tohoto vozíku.
+      MC_HOC_2017_10_Cole_old_instruction: Vytvořte funkci pro dokončení tohoto vozíku.
+      MC_HOC_2017_10_Kiki_instruction: Vytvořte funkci pro dokončení tohoto vozíku.
+      MC_HOC_2017_10_RETRY_instruction: Použijte funkce pro dokončení kolejí pro vozík.
+      MC_HOC_2017_10_RYAN_instruction: Vytvořte funkci pro dokončení tohoto vozíku.
+      MC_HOC_2017_10_RYAN2_instruction: Vytvořte funkci pro dokončení tohoto vozíku.
+      MC_HOC_2017_13_Cole_instruction: "**Volná hra:** A teď můžete objevovat na vlastní
+        pěst!"
+      MC_HOC_2017_4.5v2_instruction: Přesuňte agenta na nášlapnou desku.
+      MC_HOC_2017_Ali_instruction: Najděte pomocí funkcí cestu přes lávu.
+      MC_HOC_2017_FP10x10_instruction: "**Volná hra:** Dokážete sebrat všechny diamanty
+        v této úrovni?"
+      MC_HOC_2017_FP10x10_RE_instruction: "**Volná hra:** Dokážete sebrat všechny
+        diamanty v této úrovni?"
+      MC_HOC_2017_FP20x20_instruction: "**Volná hra:** A teď můžete objevovat na vlastní
+        pěst!"
+      MC_HOC_2017_Ryan_03_instruction: Nyní pomozte pomocí cyklů agentovi postavit
+        most přes řeku tím, že umístíte bloky do vody.
+      MC_HOC_2017_Ryan_05_instruction: Zničte tyto kaktusy, aby se mohl hráč dostat
+        do cíle.
+      MC_HOC_Kiki_02_instruction: Přesuňte agenta na nášlapnou desku.
       MSM Big Game Empty_instruction: |-
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -4238,6 +4337,9 @@
       New Gumball Project_instruction: Vytvoř cokoli chceš a sdílej to!
       New Ice Age Project_instruction: Vytvoř cokoli chceš a sdílej to!
       New Infinity Project_instruction: Vytvoř cokoli chceš a sdílej to!
+      New Minecraft Hero Project_instruction: |-
+        **Freeplay:**  Time to explore on
+        your own!
       New Sports Project_instruction: |-
         Create your own game! You're in charge here:
         you can change all the rules, mix and match sports, get creative! When you're
@@ -4591,6 +4693,10 @@
       RyanTest3_instruction: |-
         This level has shape-shifting turned on! Refresh to
         see different variants.
+      SG Add Subgoals practice_instruction: |-
+        Draw a 3x3 grid to the front and right
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
       SG U3L03 - draw rect function_instruction: |-
         Write a function called drawRectangle().\r
         (Click
@@ -4667,13 +4773,11 @@
       SG U3L07 - fish_instruction: |-
         Add 15 fish to the image by writing drawAllFish
         with a loop. (Click to see full instructions)
-      SG U3L07 - introSquare_instruction: |-
-        Use a loop to draw a square. Then add
-        another loop to draw many squares each one rotated some amount. (Click to
-        see full instructions)
-      SG U3L07 - loopsWithRandom_instruction: |-
-        Increase the number of iterations
-        to fill the screen with white. (Click to see full instructions)
+      SG U3L07 - introSquare_instruction: Použijte smyčku k nakreslení čtverce. Pak
+        přidejte další smyčky k nakreslení dalších čtverců, každý o kousek pootočený.
+        (Kliknutím zobrazíte plné pokyny)
+      SG U3L07 - loopsWithRandom_instruction: Zvyšte počet iterací aby se celá obrazovka
+        vyplnila bílou brvou. (Kliknutím zobrazíte plný pokyny)
       SG U3L07 - randomDots1_instruction: |-
         Increase the number of iterations to fully
         fill the screen with random dots. (Click to see full instructions)
@@ -4686,12 +4790,10 @@
       SG U3L07 - seaStar_instruction: |-
         Add 5 sea stars to the image by writing drawAllSeaStars
         with a loop. (Click to see full instructions)
-      SG U3L07 - sunBeams_instruction: |-
-        Add 100 sunbeams to the image by writing
-        drawAllSunbeams with a loop. (Click to see full instructions)
-      SG U3L07 - topDownDesign_instruction: |-
-        Get comfortable with the structure of
-        this program, then move on to the next exercise. (Click to see full instructions)
+      SG U3L07 - sunBeams_instruction: Doplňte do obrázku 100 slunečních paprsků použitím
+        přikazu drawAllSunbeams ve smyčce. (Kliknutím zobrazíte plný pokyny)
+      SG U3L07 - topDownDesign_instruction: Seznamte se se strukturou tohoto programu,
+        pak přejděte k dalšímu cvičení. (Kliknutím zobrazíte plný pokyny)
       SG U3L07 More Subgoals_instruction: |-
         Read the documentation for penColor()
         and penWidth() before using them to draw the blue square.
@@ -4705,19 +4807,21 @@
       SG U3L08 - drawSquareWithParam_instruction: |-
         Use drawSquare() to recreate the
         image of both squares, this time using parameters. (Click to see full instructions)
-      SG U3L08 - fish_instruction: |-
-        Add a parameter to drawFish that changes the
-        size of the fish drawn. (Click to see full instructions)
+      SG U3L08 - fish_instruction: Doplňte parametr k funkci drawFish tak, aby se
+        změnila velikost nakreslené ryby. (Kliknutím zobrazíte plný pokyny)
       SG U3L08 - freePlay_instruction: |-
         Keep adding to your image by making more
         calls to your new functions with parameters. (Click to see full instructions)
       SG U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
-      SG U3L08 - introUnderTheSea_instruction: |-
-        Add an extra fish, starfish, and
-        piece of seagrass to the image. Look at, but don't change, the functions
+      SG U3L08 - introUnderTheSea - recovery_instruction: |-
+        Add an extra fish, starfish,
+        and piece of seagrass to the image. Look at, but don't change, the functions
         that create them. (Click to see full instructions)
+      SG U3L08 - introUnderTheSea_instruction: Přidejte další rybu, hvězdici a kus
+        trávy do obrázku. Podívejte se na, ale neneměňte, funkce, které je vytvářejí.
+        (Kliknutím zobrazíte plný pokyny)
       SG U3L08 - multiParamFish_instruction: |-
         Add three parameters to your drawFish
         function to accept red, green and blue values to make your fish different
@@ -4737,16 +4841,25 @@
       SG U3L08 comments_instruction: |-
         Use the randomNumber() blocks to test the functions
         you designed with random input. (Click to see full instructions)
+      SG U3L08 how to add comments_instruction: |-
+        Use the randomNumber() blocks to
+        test the functions you designed with random input. (Click to see full instructions)
+      SG U3L2 Using Simple Commands part 1_instruction: |-
+        Draw a 1x1 square above
+        and to the left of the turtle's starting position. Click to see full instructions.
       SG U3L2 Using Simple Commands_instruction: |-
         Draw a 1x1 square above and to
         the left of the turtle's starting position. Click to see full instructions.
+      SG U3L2_Add-subgoals_instruction: |-
+        Draw a 3x3 grid to the front and right of
+        the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
       SG U3L2_Turtle3by3Grid_instruction: |-
         Draw a 3x3 grid to the front and right
         of the turtle as efficiently as possible. The turtle should end at its original
         location, facing its original direction. (Click to see full instructions)
-      SG U3L2_TurtleSquare_right_instruction: |-
-        Draw a square to the front and to
-        the right of the starting location. (Click to show full instructions)
+      SG U3L2_TurtleSquare_right_instruction: Nakreslete čtverec dopředu a vpravo
+        od počátečního umístění. (Klepnutím zobrazíte podrobné pokyny)
       SGU3L07 - randomDots1_instruction: |-
         Increase the number of iterations to fully
         fill the screen with random dots. (Click to see full instructions)
@@ -5813,6 +5926,10 @@
       U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
+      U3L08 - introUnderTheSea with comments_instruction: |-
+        Add an extra fish, starfish,
+        and piece of seagrass to the image. Look at, but don't change, the functions
+        that create them. (Click to see full instructions)
       U3L08 - introUnderTheSea_instruction: |-
         Add an extra fish, starfish, and piece
         of seagrass to the image. Look at, but don't change, the functions that create
@@ -5843,6 +5960,9 @@
       U3L08 - triangleTwoParams_instruction: |-
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
+      U3L08 how to add comments_instruction: |-
+        Use the randomNumber() blocks to test
+        the functions you designed with random input. (Click to see full instructions)
       U3L1 - Simulation - Template_instruction: |-
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
@@ -6713,6 +6833,10 @@
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
+      Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
+      Valentine_playlab_01_instruction: "Program Kiki (Actor 1) to move left and\nright
+        when the left and right arrows are pressed. When Kiki is clicked, she\nshould
+        throw hearts towards her friends. "
       Vigenere_instruction: Test
       WhileAdventure_instruction: |-
         Our adventurer wants to collect coins. Can you
@@ -6762,6 +6886,8 @@
         If looping a 3 degree turn 60 times makes a half circle, which of
         these blocks of code will make an additional quarter circle for the corners?
       aEfreeplay_instruction: Free Play!
+      allHallows2017_instruction: Chytni zaměstnance Code.org v krabici na křídy tím
+        že nakreslíš čtverec o stranách dlouhých 320 pixelů!
       allthethings data blocks test_instruction: |-
         Please sign in to test applab levels
         (By design, applab levels only work if signed in. Normally, we make people
@@ -6795,10 +6921,9 @@
       allthethings_ttscsp_instruction: |-
         Debug the program by fixing the logical error
         within the program. (Click to see full instructions)
-      artistDebugVideo1_instruction: Use the `repeat` loop to add waves to the water.
-      artistFunctionsVideo1_instruction: |-
-        Follow the instructions to make your own
-        function.
+      artistDebugVideo1_instruction: Pomocí cyklu "repeat" přidej do vody vlny.
+      artistFunctionsVideo1_instruction: Postupujte podle pokynů pro vytvoření vlastní
+        funkce.
       artistLoopsK1_instruction: |-
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
@@ -6836,9 +6961,8 @@
         Picture time!  Use what you have learned to draw
         a picture of what you think the Artist saw on stage.
       beeDebugVideo1_instruction: Umíš použít cyklus sesbírat všechen tento nektar?
-      birdsDebugVideo1_instruction: |-
-        Trace the path and lead me to the silly pig.
-        Avoid TNT or feathers will fly!
+      birdsDebugVideo1_instruction: Sleduj cestu a veď mne k tomu hloupému prasátku.
+        Vyhni se TNT nebo bude peří létat!
       bounce_1_instruction: Připoj blok k bloku "šipka vlevo" a stiskni tlačítko "Run".
         Přesuň pálku pomocí levé šipky k dosažení cíle.
       bounce_10_instruction: Nyní je cíl na vrcholu. Spoj bloky "skóre" a "skóre protihráče"
@@ -6922,9 +7046,8 @@
       collector example_instruction: |-
         Put these blocks in order to collect all of
         the gold and solve the puzzle.
-      collectorDebugVideo2_instruction: |-
-        Put these blocks in order to collect all
-        of the gold and solve the puzzle.
+      collectorDebugVideo2_instruction: Seřaď bloky tak, abys posbíral všechno zlato
+        a vyřešil hádanku.
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
       course1_artist_loops_challenge1_instruction: |-
@@ -7031,9 +7154,8 @@
       course2_playlab_stage17_2_instruction: |-
         Can you make Jorge (actor 1) say something,
         then have Olive the Cat (actor 2) say something?
-      course2_playlab_stage17_3_instruction: |-
-        Can you write a program to make Jorge
-        (actor 1) move toward Olive the Cat?
+      course2_playlab_stage17_3_instruction: Můžete napsat program, aby se Jorge (pes)
+        posunul směrem k Olivii (kočka)?
       course2_playlab_stage17_4_instruction: |-
         Can you write a program that makes
         Jorge (actor 1) move to Olive the Cat, and have Olive say "Hello" when Jorge
@@ -7239,11 +7361,17 @@
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_forVideo_instruction: |-
+        Use the `repeat` loop to add waves
+        to the water.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
       courseA_artist_loops_challenge2_instruction: |-
         "Can you help me make two bird
         houses?"
+      courseA_artist_loops_challenge2a_instruction: |-
+        *"Help me get these three tents
+        set up!"*
       courseA_artist_loops_challenge3_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
@@ -7283,6 +7411,34 @@
         bugs? I know which way I want to go, but I'm not sure how many steps to take."*
       courseA_collector_loops_challenge2_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
+      courseA_collector_loops_challenge2kp_instruction: |-
+        Collect at least *3* pieces
+        of treasure to pass this level.
+      courseA_collector_preLoops1_instruction: |-
+        This is Laurel the Adventurer! \r
+        \r
+        Press
+        "Run" to see her walk up to the treasure and grab it.
+      courseA_collector_preLoops2_instruction: |-
+        Great!  Now you get to add code yourself!  \r
+        \r
+        Snap
+        a `get treasure` block to the bottom of the program and click "Run".
+      courseA_collector_preLoops3_instruction: |-
+        Snap two `E -->` blocks and one `get
+        treasure` block to the bottom of the program, then click "Run".
+      courseA_collector_preLoops4_instruction: |-
+        Can you figure out how to solve this
+        puzzle?
+      courseA_collector_preLoops5_instruction: |-
+        Get 1 of these 2 gems to solve this
+        puzzle.
+      courseA_collector_preLoops6_instruction: |-
+        Get both pieces of treasure to solve
+        this puzzle.
+      courseA_collector_preLoops7_instruction: |-
+        Get all three piles to pass this
+        level.
       courseA_forVideoTest_artist_instruction: |-
         Use the `repeat` loop to add waves
         to the water.
@@ -7424,6 +7580,9 @@
       courseB_collector_loops_challenge2_instruction: |-
         Let's get the treasure! Help
         me across each row then come back to start the next row. Can you find a pattern?
+      courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
       courseB_collector_prog1_instruction: |-
@@ -7540,9 +7699,8 @@
       courseC_PlayLab_events2_instruction: |-
         Can you make Jorge the Dog (actor 1)
         say something, then have Olive the Cat (actor 2) say something afterward?
-      courseC_PlayLab_events3_instruction: |-
-        Can you write a program to make Jorge
-        (actor 1) move toward Olive the Cat?
+      courseC_PlayLab_events3_instruction: Můžete napsat program, aby se Jorge (pes)
+        posunul směrem k Olivii (kočka)?
       courseC_PlayLab_events4_instruction: |-
         Can you write a program that makes Jorge
         (actor 1) move to Olive the Cat, and have Olive say "Hi there." when Jorge
@@ -7668,9 +7826,12 @@
       courseC_artist_prog_challenge2_instruction: |-
         *Help me paint the yellow lines
         on this road!*
+      courseC_artist_prog_challenge2a_instruction: |-
+        *Help me paint the yellow lines
+        on this road!*
       courseC_collector_loops_challenge2_instruction: |-
-        Let's hunt for treasure -
-        using loops! Help the collector by debugging this code. Get all of the treasure!
+        Get at least **5** pieces
+        of treasure!
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
         you can help Laurel collect some treasure.
@@ -7704,8 +7865,8 @@
         Look carefully! Can you collect
         all *10* pieces of treasure?
       courseC_collector_prog_challenge2_instruction: |-
-        There are 20 pieces of treasure
-        to be found. Collect at least half to finish this challenge!
+        Collect at least **10** pieces
+        of treasure to finish this challenge!
       courseC_flappy_embed_events_instruction: |-
         Here's an example of a game that
         you're about to create yourself! Play through it one or two times to get
@@ -7772,9 +7933,13 @@
         Collect all of the corn and all of the
         pumpkins.
       courseC_harvester_loops_challenge1_instruction: Collect all of the corn.
+      courseC_harvester_loops_challenge1a_instruction: Collect all of the corn.
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn, all of
+        the lettuce, and all of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -7833,6 +7998,8 @@
         puzzles to complete this level.
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
       courseC_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops\nto
+        find his acorn! "
+      courseC_maze_loops_challenge1a_instruction: "Now Scrat wants to try using loops\nto
         find his acorn! "
       courseC_maze_loops_challenge2_instruction: |-
         Let's hunt for treasure - using
@@ -7953,6 +8120,8 @@
         \r
         See what happens when we start to
         get creative with the bits!
+      courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
+        binary! "
       courseD_artist_binary_challenge0_instruction: |-
         Try using nested loops to complete
         this drawing.
@@ -8016,9 +8185,9 @@
         \r
         The windows are 20 pixel
         squares, each 20 pixels apart.
-      courseD_artist_nestedLoops4_instruction: |
+      courseD_artist_nestedLoops4_instruction: |-
         Great!  Do the same thing with these
-        circles.\r
+        circles.
       courseD_artist_nestedLoops5_instruction: |-
         What happens if you also turn 90
         degrees between circles?
@@ -8047,8 +8216,8 @@
         Can you figure out how
         to make a picture like this?
       courseD_artist_nestedLoops_challenge2_instruction: |-
-        Can you figure out how
-        to make a picture like this?
+        Fix the code to make this
+        picture!
       courseD_artist_project1_instruction: "Draw a small shape, between **20 and\n50**
         pixels wide.  It can be any shape that you like.  "
       courseD_artist_project1a_instruction: |-
@@ -8091,9 +8260,10 @@
       courseD_bee_conditionals1_predict1_instruction: |-
         Check to see if there's a
         flower under the cloud. If there's a flower, get nectar.
-      courseD_bee_conditionals2_instruction: |
-        Check underneath every cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
+        it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_test_instruction: "Check underneath every cloud to\nsee
+        if it is hiding a flower before you get nectar.  "
       courseD_bee_conditionals3_instruction: |-
         Help the bee collect all of the nectar.
         \r
@@ -8152,6 +8322,10 @@
         Help the bee fix the code to get all the
         nectar.
       courseD_bee_debugging_challenge1_instruction: |-
+        Watch how the bees gets the
+        nectar. Can you use the same kind of pattern to help the bee make all of the
+        honey?
+      courseD_bee_debugging_challenge1a_instruction: |-
         Watch how the bees gets the
         nectar. Can you use the same kind of pattern to help the bee make all of the
         honey?
@@ -8307,6 +8481,10 @@
         Are you an expert of nested
         loops? Use what you have learned so far to collect all of the treasure!
       courseD_collector_nested_loops_challenge2_instruction: |-
+        Help the collector
+        reach at least two piles of treasure using only the blocks in your toolbox.
+        It is possible to collect all 4.
+      courseD_collector_nested_loops_challenge2a_instruction: |-
         Help the collector
         reach at least two piles of treasure using only the blocks in your toolbox.
         It is possible to collect all 4.
@@ -8542,13 +8720,14 @@
         Add a `repeat forever` loop that continuously
         checks if the score is greater than 5, then ends the game as a win when it
         is.
-      courseD_playLab_cond6_instruction: "1)  Slow the ninja down before you set\nhim
-        to chase the pirate.  \\r\n2)  If the pirate is greater than 225 pixels\ndown,
-        set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase**\nthe
-        pirate.  "
+      courseD_playLab_cond6_instruction: "1)  Slow the ninja (actor 3) down before\nyou
+        set him to chase the pirate.  \\r\n2)  If the pirate is greater than 225\npixels
+        down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
+        **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: |-
-        If the pirate is in the safe zone, wait
-        one second, then deduct a point as long as he stays beneath the octopus line.
+        If the pirate (actor 1) is in the safe
+        zone, wait one second, then deduct a point as long as he stays beneath the
+        octopus line.
       courseD_playLab_cond6cloneForTest_instruction: Testing
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
@@ -8644,7 +8823,11 @@
         Use what you've learned to draw this triangle
         inside of a square.
       courseE_artist_ramp8_instruction: Now make a square using Artist!
+      courseE_artist_ramp8_2_instruction: Now make a square using Artist!
       courseE_artist_ramp9_instruction: Use what you've learned to draw this triangle.
+      courseE_artist_ramp9_2_instruction: |-
+        Use what you've learned to draw this
+        triangle.
       courseE_bee_concept1_instruction: 'Sesbírat všechen nektar z každého květu.
         Použij vnořené cykly. '
       courseE_bee_concept2_instruction: |-
@@ -8918,6 +9101,9 @@
       courseE_video_createFunctions_instruction: |-
         We don't have a video for creating
         functions, yet. This is a placeholder.
+      courseE_video_createFunctions2_instruction: |-
+        We don't have a video for creating
+        functions, yet. This is a placeholder.
       courseF_IceAge_1_instruction: |-
         Help Sid say "Hello!" by dragging the `actor
         1 say` block out and connecting it to the bottom of the `when run` event.
@@ -9128,7 +9314,6 @@
         it is hiding a flower before you get nectar.  "
       courseF_bee_conditionals3_instruction: |
         Help the bee collect all of the nectar.
-        \r
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
         blocks as possible.
@@ -9395,6 +9580,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Připoj blok k bloku "když klikneš" a potom stiskni "Spustit".
         Klikej nebo ťukej na obrazovku, abys dostal Flappyho do cíle.
+      flappy_11_instruction: Vytvoř si vlastní Flappy hru. Můžeš měnit všechen vzhled
+        a všechna pravidla, včetně gravitace. Až budeš hotov, klikni na tlačítko 'Sdílet'
+        a nech své přátele vyzkoušet tvojí hru na jejich mobilech.
       flappy_2_instruction: Teď jsme přidali terén. Připoj blok k bloku "když se dotkne
         země". Tvůj kód musí zajistit 'konec hry', když Flappy narazí.
       flappy_3_instruction: Blok "po spuštění" ti umožňuje spuštění kódu poté co hra
@@ -9414,9 +9602,6 @@
         když mine překážku.
       flappy_9_instruction: Zamíchat věci nahoru při nárazu na překážku a namísto
         ukončení hry zkuste nastavit skóre zpět na 0.
-      flappy_11_instruction: Vytvoř si vlastní Flappy hru. Můžeš měnit všechen vzhled
-        a všechna pravidla, včetně gravitace. Až budeš hotov, klikni na tlačítko 'Sdílet'
-        a nech své přátele vyzkoušet tvojí hru na jejich mobilech.
       frozen circle function in circle_instruction: Vytvořme 20 překrývajících se
         kružnic tak, že je otočíme o 18 stupňů mezi každou kružnicí.
       frozen circle function with parameter_instruction: "Tady máš blok \"vytvoř kružnici\",

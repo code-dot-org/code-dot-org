@@ -15,15 +15,16 @@
     errors:
       messages:
         blank: là bắt buộc
-        blank_plural: are required
-        invalid_plural: are invalid
+        blank_plural: bắt buộc
+        invalid_plural: không hợp lệ
     attributes:
       user:
         name: Tên hiển thị
-        name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
+        name_example: Tên hiển thị <br/>(ví dụ Cool Coder hoặc Jane S.)
         email: "Địa chỉ email"
-        parent_email: Parent/guardian email
-        personal_email: Personal email address
+        parent_email: Email của phụ huynh/người giám hộ
+        personal_email: Emaik cá nhân <a href="%{url}">(click vào đây nếu bạn chưa
+          có địa chỉ email)</a>
         username: tài khoản
         password: mật khẩu
         password_confirmation: Xác nhận mật khẩu
@@ -38,7 +39,7 @@
   welcome_back: Chào mừng trở lại, %{name}
   your_professional_learning_plan: Kế hoạch học tập chuyên nghiệp của bạn
   see_your_learning_plan: Xem kế hoạch học tập của bạn
-  submit: Chấp nhận
+  submit: Gửi
   unsubmit: Ngưng gửi
   previous_page: Trang trước
   next_page: Trang tiếp theo
@@ -53,7 +54,7 @@
       placeholder: Phần mã (ABCDEF)
       instructions: Vui lòng nhập mã được chia sẻ bởi giáo viên của bạn. Nó là một
         mã gồm 6 chữ cái như "ABCDEF".
-      instructions_short: Enter your 6 letter section code
+      instructions_short: Nhập mã 6 ký tự
     submit: Thêm giáo viên
   add_hint_form:
     placeholder: Hãy nhập gợi ý mật khẩu của bạn ở đây
@@ -66,7 +67,7 @@
   courses: Các khóa học
   courses_page:
     title_student: Học về Xưởng Code
-    title_teacher: Teach with Code Studio
+    title_teacher: Giảng dạy với Code Studio
   unplugged_activity: Hoạt động không dùng máy
   of: của
   more: NHIỀU HƠN
@@ -92,14 +93,16 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Tài khoản Microsoft
-    clever: Clever Account
+    clever: Tài khoản Clever
     forgot_password: Quên mật khẩu?
     need_confirmation: Không nhận được hướng dẫn xác nhận?
     need_unlock: Chưa nhận hướng dẫn mở khóa?
-    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
-      have to sign in by typing your password below.
-    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
-      sign in through your Clever Portal instead.
+    not_linked: Xin lỗi, tài khoản Code.org của bạn không được liên kết với nhà cung
+      cấp %{provider} của bạn. Bạn cần đăng nhập bằng cách gõ mật khẩu của bạn dưới
+      đây.
+    use_clever: Xin lỗi, tài khoản Code.org của bạn không được liên kết với nhà cung
+      cấp %{provider} của bạn. Vui lòng đăng nhập thông qua tài khoản Clever để thay
+      thế.
   signup_form:
     student_count: "%{count} sinh viên đã đăng ký."
     teacher_count: "%{count} giáo viên đã đăng ký."
@@ -115,12 +118,12 @@
       thích Hour of Code và muốn tiếp tục, bạn có thể tạo mật khẩu và tạo một tài
       khoản Code Studio để ghi danh cho học sinh của bạn tham gia các<a href="https://code.org/educate">khoá
       học dài hạn</a>.
-    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
-      To sign in to Code Studio, you’ll need to set up a password for your account.
-      This will let you save your progress and manage your classroom. You’ll be able
-      to assign courses to students and track their progress. <a href="%{studio_url}">You
-      can also continue to browse the various stages and puzzles</a> without creating
-      an account.
+    hoc_already_signed_up_content_post_hoc: Cảm ơn bản đã tổ chức Giờ Lập Trình. Để
+      đăng nhập vào Code Studio, bạn cần phải thiết lập mật khẩu cho tài khoản của
+      bạn. Điều này sẽ giúp bạn lưu lại tiến trình và quản lý lớp học của mình. Bạn
+      có thể giao các khóa học cho học sinh và kiểm tra tiến độc của các em. <a href="%{studio_url}">Bạn
+      cũng có thể tiếp tục tham gia vào các nội dung và câu đố</a> mà không cần tạo
+      tài khoản.
     teacher_educator_guide: Hãy xem chỉ dẫn
     title: Ghi danh cho Code.org
     school_name: Tên trường (tùy chọn)
@@ -155,31 +158,32 @@
     user_type_student: học sinh
     field_is_required: là bắt buộc
     accept_terms: Bạn phải đồng ý để tạo một tài khoản
+    error: Có lỗi xảy ra.
   school_info:
-    title: School Information (optional)
-    school_country: School Country
-    select_school_type: School Type
-    charter: Charter
-    private: Private
-    public: Public
-    homeschool: Homeschool
-    after_school: After School
+    title: Thôngn tin trường học (không bắt buộc)
+    school_country: Quốc gia
+    select_school_type: Bậc học của trường
+    charter: "Điều lệ"
+    private: Riêng tư
+    public: Công khai
+    homeschool: Học tại nhà
+    after_school: "Đã tốt nghiệp"
     other: Khác
-    state: State
-    district: District
-    other_district_not_listed: Other district not listed above
-    district_name: District Name
-    school: School
-    other_school_not_listed: Other school not listed above
-    school_name: School Name
-    school_zip: School Zip Code
-    school_address: School Address
-    school_organization_name: School/Organization Name
-    school_organization_zip: School/Organization Zip Code
+    state: Quốc gia
+    district: Quận
+    other_district_not_listed: Quận khác
+    district_name: Tên quận
+    school: Trường
+    other_school_not_listed: Trường học khác
+    school_name: Tên trường
+    school_zip: Zip Code của trường
+    school_address: "Địa chỉ trường"
+    school_organization_name: Tên trường/tổ chức
+    school_organization_zip: Zip Code của trường/tổ chức
   signin_form:
     title: "Đã có một tài khoản? Đăng nhập"
     login: "Địa chỉ email"
-    login_username: Email or Username
+    login_username: Email hoặc tên tài khoản
     password: Mật khẩu
     remember: Nhớ mật khẩu
     submit: "Đăng nhập"
@@ -194,19 +198,19 @@
     words: Bây giờ nhập từ bí mật của bạn
     login: "Đăng nhập"
     invalid_login: "Đăng nhập không hợp lệ, xin vui lòng thử lại"
-    pair_programming: I have a partner at my computer
-    student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
-      target='_blank'>here</a>.
+    pair_programming: Tôi có một đối tác sử dụng máy tính của tôi
+    student_privacy: Tìm hiểu thêm về việc bạn không nhìn thấy tên đầy đủ <a href='%{student_privacy_blog}'
+      target='_blank'>tại đây</a>.
   password:
     reset_form:
       title: Quên mật khẩu?
       instructions: Nhập địa chỉ email của bạn dưới đây và chúng tôi sẽ gửi cho bạn
         hướng dẫn đặt lại mật khẩu.
       email: "Địa chỉ Email"
-      submit: Chấp nhận
+      submit: Gửi
     reset_errors:
-      invalid_email: It looks like you may have signed up with an invalid email address.
-        Please email support@code.org to receive a password recovery link.
+      invalid_email: Có vẻ như bạn đã đăng nhập với một địa chỉ email không hợp lệ.
+        Vui lòng gửi email tới support@code.org để nhận được link đặt lại mật khẩu.
     change_form:
       title: Thay đổi mật khẩu của bạn
       new_password: Mật khẩu mới
@@ -221,20 +225,20 @@
       lập trình từ Bill Gates, Mark Zuckerberg, Angry Birds, Angry Birds và Plants
       vs. Zombies! :-) \n\n%{name}\n"
   parent_mailer:
-    student_associated_subject: Login information for Code.org
+    student_associated_subject: Thông tin đăng nhập vào Code.org
   teacher_mailer:
-    new_teacher_subject: Welcome to Code.org!
+    new_teacher_subject: Chào mừng tới Code.org!
   section:
     your_section:
-      one: 'Your section:'
-      other: 'Your sections:'
-    code_with_teacher: "%{section_code} with %{teacher_name}"
+      one: 'Mục của bạn:'
+      other: 'Những mục của bạn:'
+    code_with_teacher: "%{section_code} với %{teacher_name}"
     confirm:
-      remove: Are you sure you want to leave this section?
-    remove: "(remove section)"
+      remove: Bạn có chắc chắn muốn rời khỏi mục này không?
+    remove: "(xóa mục)"
     type:
-      picture: Picture Password
-      word: Secret Words
+      picture: Mật khẩu bằng ảnh
+      word: Mật khẩu bằng từ ngữ
       email: "Địa chỉ email"
       google_classroom: Google Classroom
       clever: Clever
@@ -251,9 +255,9 @@
       section_not_found: Không thể tìm thấy một phần với mã '%{section_code}'.
       blank_code: Vui lòng nhập một phần mã
       cant_join_own_section: Xin lỗi, bạn không thể tham gia phần riêng của bạn.
-      provider_managed_section: This section is managed by another provider and cannot
-        be joined. Please ask your teacher to add you via %{provider} and re-sync
-        their section.
+      provider_managed_section: Mục này được quản lý bởi nhà cung cấp khác và bạn
+        không thể tham gia. Vui lòng liên hệ giáo viên của bạn để %{provider} thêm
+        bạn vào và tham gia mục này.
     mail:
       student_disassociated:
         subject: 'Thông báo từ Code.org: %{student_name} không còn trong danh sách
@@ -268,7 +272,7 @@
     edit: Chỉnh sửa
     edit_model: Chỉnh sửa %{model}
     update: Cập nhật
-    submit: Chấp nhận
+    submit: Gửi
     destroy: Xóa
     back: Quay lại
     confirm: Bạn chắc chứ?
@@ -279,12 +283,12 @@
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: The email address you provided doesn't match
-          the email address for this account
-        personal_login_created_email: You created a personal login successfully. You
-          can now log into Code.org with your email and password
-        personal_login_created_username: You created a personal login successfully.
-          You can now log into Code.org with your username and password
+        user_type_change_email_mismatch: "Địa chỉ email bạn cung cấp không khớp với
+          địa chỉ email của tài khoản này"
+        personal_login_created_email: Bạn đã tạo tài khoản thành công. Bạn có thể
+          sử dụng thông tin đăng nhập và mật khẩu để bắt đầu đăng nhập
+        personal_login_created_username: Bạn đã tạo tài khoản thành công. Bạn có thể
+          đăng nhập với tên (%{username}) và mật khẩu đã thiết lập
   nav:
     header:
       finished_hoc: Tôi đã hoàn thành giờ mã của tôi
@@ -294,45 +298,45 @@
         artist: Vẽ một cái gì đó
         calculate: Calculate Something
         applab: Tạo một ứng dụng
-        gamelab: Make a Game Lab project
-        weblab: Make a Web Lab (beta) project
-      home: Home
-      my_dashboard: My Dashboard
+        gamelab: Tạo một dự án trò chơi
+        weblab: Tạo một dự án Web thử nghiệm (beta)
+      home: Trang chủ
+      my_dashboard: Bảng điều khiển của tôi
       courses: Các khóa học
-      course_catalog: Course Catalog
+      course_catalog: Danh mục khóa học
       project_gallery: chương trình
-      sections: Sections
-      help_support: Help and support
-      report_bug: Report bug
-      teacher_community: Teacher community
-      professional_learning: Professional Learning
-      documentation: Documentation
-      tutorials: Tutorials
-      educate_overview: Educator Overview
-      educate_elementary: Elementary School
-      educate_middle: Middle School
-      educate_high: High School
+      sections: Mục
+      help_support: Giúp đỡ và hỗ trợ
+      report_bug: Báo lỗi
+      teacher_community: Cộng đồng giáo viên
+      professional_learning: Học tập nâng cao chuyên môn
+      documentation: Tài liệu
+      tutorials: Hướng dẫn
+      educate_overview: Tổng quát về Giáo dục
+      educate_elementary: Tiểu học
+      educate_middle: Trung học
+      educate_high: Cao học
       educate_hoc: Giờ của mã
-      educate_partner: Partner with Us
-      educate_beyond: Beyond Code.org
-      educate_inspire: Inspire a Student
-      educate_community: Online Community
-      educate_tools: Tools and Videos
-      about_us: About Us
-      about_leadership: Leadership
-      about_donors: Donors
-      about_partners: Partners
-      about_team: Full Team
-      about_news: Newsroom
-      about_evaluation: Evaluation
-      about_jobs: Jobs
-      about_contact: Contact Us
-      about_faqs: FAQs
-      learn: Learn
+      educate_partner: "Đối tác của chúng tôi"
+      educate_beyond: "Đằng sau Code.org"
+      educate_inspire: Truyền cảm hứng cho Hssv
+      educate_community: Cộng đồng trực tuyến
+      educate_tools: Các công cụ và video
+      about_us: Thông tin
+      about_leadership: Khả năng lãnh đạo
+      about_donors: Người tặng
+      about_partners: "Đối tác"
+      about_team: "Đủ Thành viên"
+      about_news: Phòng tin tức
+      about_evaluation: "Đánh giá"
+      about_jobs: Công việc
+      about_contact: Liên hệ
+      about_faqs: Hỏi đáp
+      learn: Học
       stats: Stats
-      help_us: Help Us
-      teach: Teach
-      about: About
+      help_us: Giúp đỡ chúng tôi
+      teach: Dạy
+      about: Thông tin
     user:
       classroom: Trang chủ giáo viên
       district_dashboard: khu vực điều khiển
@@ -373,7 +377,7 @@
     user_not_found: Không tìm thấy giáo viên.
     student_teacher_disassociated: Bạn đã gỡ bỏ %{teacher_name} là giáo viên của bạn.
     panel:
-      answer_viewer: Xem câu trả lời
+      answer_viewer: Kênh Giáo viên
       student: học sinh
       viewing_solution: Xem đáp án
       try_it_yourself: Hãy thử làm bài tập này
@@ -397,31 +401,34 @@
     delete_text_teacher_note: 'Xin lưu ý: xóa tài khoản của bạn sẽ không xóa tài khoản
       học viên của bạn.'
     delete_confirm: Bạn có chắc rằng bạn muốn xóa tài khoản của bạn không?
-    deleted_user: deleted user
-    no_password_because_oauth: No password because you sign in with a third-party
-      provider.
-    no_password_because_sponsored: See your teacher to manage your password.
-    create_personal_login: Create a personal login
-    create_personal_login_under_13_info: If you want to keep using your Code.org account
-      even after the end of the school year, ask your parent/guardian to help you
-      create your own personal login below.
-    create_personal_login_under_13_username: Username (don't use your real name!)
-    create_personal_login_under_13_parent_email: Parent/guardian email address (to
-      recover your password)
-    create_personal_login_info: If you want to keep using your Code.org account even
-      after the end of the school year, you can create your own login below.
-    create_personal_login_terms: By creating a personal login, I agree to be bound
-      by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of
-      service</a>. If I am under 13 years of age, I confirm that I have my parent
-      or legal guardian's permission to use the Code.org services even without a teacher.
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form
-      that allows us to contact students. Students will never receive emails from
-      Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
-      target=''_blank''>privacy policy</a> for more information.'
-    enter_new_login_info: Enter your new login information
-    confirm_secret_words: Confirm that it is you by entering your current secret words
-    enter_parent_email: Enter your parent or guardian's email address (for password
-      recovery)
+    deleted_user: người dùng đã bị xóa
+    no_password_because_oauth: Không có mật khẩu vì bạn đăng nhập với một nhà cũng
+      cấp bên thứ ba.
+    no_password_because_sponsored: Hãy gặp giáo viên của bạn để quản lý mật khẩu của
+      bạn.
+    create_personal_login: Tạo đăng nhập cá nhân
+    create_personal_login_under_13_info: Nếu bạn muốn tiếp tục sử dụng tài khoản Code.org
+      của bạn sau khi kết thúc năm học, hãy nhờ bố mẹ/ người giám hộ giúp đỡ bạn tạo
+      ra đăng nhập của riêng bạn dưới đây.
+    create_personal_login_under_13_username: Tên đăng nhập (đừng dùng tên thật của
+      bạn!)
+    create_personal_login_under_13_parent_email: "Địa chỉ email của bố mẹ / người
+      giám hộ"
+    create_personal_login_info: Nếu bạn muốn tiếp tục sử dụng tài khoản Code.org của
+      bạn sau khi kết thúc năm học, bạn có thể tạo đăng nhập của mình bên dưới.
+    create_personal_login_terms: Bằng cách tạo đăng nhập cá nhân, Tôi đồng ý với <a
+      href='%{terms_of_service_url}', target='_blank'>điều khoản dịch vụ</a> của Code.org.
+      Nếu tôi dưới 13 tuổi, tôi chấp nhận rằng tôi có ba mẹ hoặc người giám hộ hợp
+      pháp để sử dụng dịch vụ Code.org mặc dù không có giáo viên.
+    create_personal_login_email_note: 'Chú ý: Địa chỉ email không được lưu trữ dưới
+      mọi hình thức mà cho phép chúng tôi liên hệ với hssv. Hssv sẽ không bao giờ
+      nhận email từ Code.org ngoại trừ email khôi phục mật khẩu. Xem <a href=''%{privacy_policy_url}'',
+      target=''_blank''>chính sách riêng tư</a> để biết thêm thì tin.'
+    enter_new_login_info: Nhập thông tin đăng nhập mới của bạn
+    confirm_secret_words: Xác minh đó là bạn bằng cách nhập những từ ngữ bí mật của
+      mình
+    enter_parent_email: Nhập địa chỉ email của bố mẹ hoặc người giám hộ (dành cho
+      việc khôi phục mật khẩu)
   user_level:
     completed: "Đã hoàn thành"
     tried: thử lại
@@ -482,7 +489,7 @@
     no_primary_course: Hãy thử một khóa học ở Code Studio
     choose_next_course: Thử một khóa Xưởng Mã bằng cách chọn một khóa bên dưới
     print_certificate: In giấy chứng nhận
-    announcement_title: Announcements
+    announcement_title: Thông báo
     announcement_message_fall2016_features: We spent the summer turning your feedback
       into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
       students' progress</a> even if they're pair programming on one device. You can
@@ -506,7 +513,7 @@
       cùng nhau trong một bức thư ngỏ yêu cầu Quốc hội Hoa Kỳ tài trợ K-12 giáo dục
       khoa học máy tính.
     announcement_petition_button: Thêm tên của bạn
-    announcement_go_beyond_button: Go beyond
+    announcement_go_beyond_button: Tiên phong
     announcement_apply_now: Apply now
     announcement_all: Cập nhật những tính năng và cập nhật trên blog của giáo viên
       của chúng tôi.<a href='%{teacher_blog_url}' target='_blank'>Xem thông báo cũ.</a>
@@ -531,38 +538,39 @@
       grade levels&mdash;and it's all free. :) You don't need any experience to start
       teaching computer science in your classroom. <b>Find the next step that's right
       for your classroom.</b>
-    announcement_teacher_recruitment: Teachers like you are leading the computer science
-      education movement. You can participate in high-quality K-12th grade professional
-      learning programs <strong>at absolutely no cost to you or your school</strong>.
-      Take the lead on computer science in your school, and apply for professional
-      learning.
-    announcement_teacher_recruitment2: Teachers like you are leading the computer
-      science education movement. You can participate in high-quality K-12th grade
-      professional learning programs <strong>at absolutely no cost to you or your
-      school</strong>. Take the lead on computer science in your school, and apply
-      for professional learning. Middle and high school teachers, apply by March 17th.
-    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part
-      of updating our CS Fundamentals courses! We're looking for teachers to pilot
-      an updated CS Fundamentals curriculum during the winter and spring of 2017.
-      We're eager to hear your feedback before these updates go live in August 2017."
-    announcement_student_privacy: At Code.org, we take student privacy very seriously.
-      To protect your students’ privacy, we have made a change to your section’s login
-      page to avoid displaying full names. Even though this update should reduce privacy
-      concerns for the login page, we still encourage users to <i>not use full names
-      for students</i>.
-    announcement_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
-      Your students could be featured in Code.org''s next viral video encouraging
-      students to take the AP CS Principles exam this year. We''re inviting all CS
-      Principles students to submit a 10-20 second video clip on Twitter, Instagram,
-      or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
-      will be featured in our video and the winning students will receive Code.org
-      swag!'
-    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
-      break records. Student participation in the exam could dramatically shift diversity
-      in AP Computer Science, but we need your help. Encourage every CS Principles
-      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
-      you a gift</a>. Students can also encourage peers across the country in our
-      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
+    announcement_teacher_recruitment: Những giáo viên như bạn có thể dẫn đầu nhưng
+      tiến bộ trong giáo dục khoa học máy tính. Bạn có thể tham gia bồi dưỡng chuyên
+      môn (hoàn toàn miễn phí) để giảng dạy chương trình chất lượng cao cho các học
+      sinh tại trường. Hãy dẫn đầu về khoa học máy tính ở trường và ứng dụng trong
+      việc học tập chuyên môn của bạn.
+    announcement_teacher_recruitment2: Những giáo viên như bạn có thể dẫn đầu nhưng
+      tiến bộ trong giáo dục khoa học máy tính. Bạn có thể tham gia bồi dưỡng chuyên
+      môn (hoàn toàn miễn phí) để giảng dạy chương trình chất lượng cao cho các học
+      sinh tại trường. Hãy dẫn đầu về khoa học máy tính ở trường và ứng dụng trong
+      việc học tập chuyên môn của bạn. Giáo viên trung học có thể đăng ký trước ngày
+      17/3.
+    announcement_csf_pilot: "<strong>Giáo viên trường tiểu học:</strong> Tham gia
+      vào cập nhật các khóa học khoa học máy tính cơ bản của chúng tôi! Chúng tôi
+      đang tìm kiếm các giáo viên triển khai thí điểm một chương trình giảng dạy khoa
+      học máy tính cơ bản vào mùa đông xuân 2017. Chúng tôi đang háo hức muốn nghe
+      phản hồi của bạn trước khi đưa ra bản cập nhật vào tháng 8 năm 2017."
+    announcement_student_privacy: Tại Code.org, chúng tôi tôn trọng sự riêng tư của
+      học sinh. Để bảo vệ quyền riêng tư của học sinh, chúng tôi có một sự thay đổi
+      trong phần đăng nhập để tránh hiển thị tên đầy đủ. Mặc dù cập nhật này sẽ giúp
+      giảm thiểu sự lo lắng về bảo mật ở trang đăng nhập, chúng tôi vẫn khuyến nghị
+      người dùng <i>không sử dụng tên đầy đủ cho các học sinh<i>.
+    announcement_apcsp_recruitment: '<strong>Nguyên tắc khoa học máy tính cho giáo
+      viên:</strong> Học sinh của bạn có thể được xem video tiếp theo trên Code.org''s
+      khuyến khích học sinh tham gia bài thi các nguyên tắc khoa học máy tính năm
+      nay. Chúng tôi đang mời tất cả các học sinh làm một video 10-20 giây đăng trên
+      Twitter, Instagram hoặc Facebook và nói "tôi đang tham gia kỳ thi #APCSP vì..."
+      Các bài thi tốt nhất sẽ được giới thiệu trong video của chúng tôi và các học
+      sinh chiến thắng sẽ được ghi nhận bởi Code.org!'
+    announcement_apcsp_recruitment2: 'Năm nay kỳ thi APCS kỳ vọng sẽ phá vỡ kỷ lục.
+      Chúng tôi cần sự trợ giúp của bạn. Hãy khuyến khích các học sinh tham gia thi
+      AP CSP và chúng tôi sẽ <a href=''%{gift_url}'' target=''_blank''> gửi cho bạn
+      một món quà</a>. Học sinh cũng có thể khuyến khích bạn bè khắp nơi tham gia
+      <a href=''%{challenge_url}'' target=''_blank''> thử thách video #APCSP</a>.'
     announcement_apcsp_recruitment3: This year's AP CS Principles exam is poised to
       break records. Student participation in the exam could dramatically shift diversity
       in AP Computer Science, but we need your help. Encourage every CS Principles
@@ -765,11 +773,14 @@
       body: Xem một bộ sưu tập các ứng dụng và họa sĩ thiết kế hình ảnh được tạo bởi
         người dùng của chúng tôi
     gamelab:
-      title: Game Lab (beta)
+      title: Kho Trò chơi
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Lứa tuổi 13 +
       cta: Học cách làm
+    hoc-encryption:
+      title: Simple Encryption
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -790,6 +801,10 @@
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    hero:
+      title: Minecraft
+      body: Minecraft đã trở lại trong Giờ Lập Trình với một hoạt động mới! Hãy bắt
+        đầu cuộc hành trình Minecraft với việc lập trình.
     sports:
       title: Sports
       body: Make a basketball game or mix and match across sports.
@@ -829,8 +844,8 @@
       các ứng dụng và hình ảnh bằng cách tự viết các chương trình máy tính. Nhấp vào
       hình ảnh và ảnh chụp màn hình để xem mỗi chương trình trong hành động.
     want_to_make_your_own: Bạn muốn tự tạo chương trình này?
-    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
-      save your work to the gallery.
+    how_to_save: Ở bài cuối cùng của những hướng dẫn này, nhấn "Hoàn thành" và "Lưu"
+      để lưu dự án của bạn vào trong thư viện.
     more: Nhiều &rarr;
     caption_by_name_age: bởi  %{name}, %{age} tuổi
     caption_time_ago: "%{time_ago} trước"
@@ -849,9 +864,9 @@
     support: Nhận trợ giúp
     support_url: "//support.code.org"
     help_resources: Trợ giúp và tài nguyên
-    help_support: Help and Support
-    documentation: Documentation
-    tutorials: Tutorials
+    help_support: Giúp đỡ và hỗ trợ
+    documentation: Tài liệu
+    tutorials: Hướng dẫn
   multi:
     wrong_title: Câu trả lời không chính xác
     wrong_body: Câu trả lời mà bạn đã nhập không chính xác.  Xin vui lòng thử lại!
@@ -874,6 +889,9 @@
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
       students submitted the survey.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Cảm ơn bạn
     wrong_body: Cảm ơn bạn đã gửi câu trả lời.
@@ -946,7 +964,7 @@
       educational programs such as Code Studio.
     tos: Các điều khoản của Code.org
     privacy: Chính sách riêng tư
-    privacy_notice: Privacy Notice
+    privacy_notice: Thông tin bảo mật
     accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
     accept: "Đồng ý"
@@ -956,13 +974,13 @@
       Please read these carefully before accepting them. Note that our tools teaching
       JavaScript may be unavailable to your students before explicitly accepting the
       updated terms.
-    review_terms: Review updated terms
+    review_terms: Xem những điều khoản mới
   school_info_interstitial:
     title: We want to bring Computer Science to every student - help us track our
       progress!
-    message: Please enter your school information below.
-    message_with_suggestion: Please verify that the following information is correct,
-      or update as necessary.
+    message: Nhập thông tin trường học của bạn ở dưới đây.
+    message_with_suggestion: Hãy chắc chắn rằng những thông tin sau đây là chính xác,
+      nếu không vui lòng cập nhật.
     save: Lưu
   race_interstitial:
     title: 'Optional: Help us track our progress toward improving diversity in computer
@@ -977,7 +995,7 @@
     - american_indian: American Indian/Alaska Native
     - other: Khác
     - opt_out: Prefer not to say
-    submit: Chấp nhận
+    submit: Gửi
     decline: "Đóng"
   zendesk_too_young_message: Rất tiếc, người dùng trẻ em không thể đăng nhập vào trang
     web hỗ trợ của chúng tôi, ban có thể duyệt<a href="http://support.code.org">support.code.org</a>
@@ -1004,6 +1022,13 @@
     save: Lưu
     delete: Xóa
     import: Import
+    share_link_import_bad_link_header: Share link not recognized
+    share_link_import_bad_link_body: 'Chúng tôi không thể truy xuất đường link chia
+      sẻ này. Hãy chắc chắn rằng bạn đang sử dụng một đường link từ Minecraft: câu
+      đố về nhiệm vụ của Đặc vụ và bạn đã copy đầy đủ đường link đó.'
+    share_link_import_error_header: Something went wrong.
+    share_link_import_error_body: There was a problem importing that share link. Please
+      try again.
     exit: Trở về khóa học
     my_projects: chương trình của tôi
     project_gallery: chương trình

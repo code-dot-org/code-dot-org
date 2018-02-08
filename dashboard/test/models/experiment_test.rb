@@ -108,10 +108,15 @@ class ExperimentTest < ActiveSupport::TestCase
     experiment2 = create :teacher_based_experiment,
       min_user_id: 50,
       max_user_id: 100
-    teacher = create :teacher, id: 1125
-    student = create :student, id: 1175
-    section = create :section, user: teacher
-    section.add_student(@user)
+
+    teacher = mock('teacher')
+    teacher.stubs(:id).returns(1125)
+    teacher.stubs(:teacher?).returns(true)
+    student = mock('student')
+    student.stubs(:id).returns(1175)
+    section = mock('section')
+    section.stubs(:user_id).returns(teacher.id)
+    teacher.stubs(:sections).returns([section])
 
     assert Experiment.enabled?(experiment_name: experiment1.name, user: teacher)
     assert Experiment.enabled?(experiment_name: experiment1.name, user: student, section: section)

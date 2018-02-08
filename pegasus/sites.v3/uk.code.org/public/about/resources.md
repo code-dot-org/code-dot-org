@@ -89,10 +89,9 @@ Logo attached.
 
 [resources-item]
 
-<div class="resources-logo"><a href="http://staffroom.educationcity.com/uk/topical-printables/freemium"><IMG src="/images/educationcity.jpg" /></a></div>
+<div class="resources-logo"><a href="https://www.educationcity.com/subjects/computing"><IMG src="/images/education_city.jpg" /></a></div>
 
-EducationCity’s new Computing module launches this summer to help primary schools meet the new National Curriculum for Computing. With its comprehensive Learn Screens, Activities and follow-up Activity Sheets, it‘s the perfect companion for teachers with no prior knowledge of coding and includes our highly acclaimed Student Tool for programming, Code Crunch. Access to the ‘Freemium’ version of the content is available now.
-
+EducationCity’s Computing module has been developed to meet the National Curriculum for Computing. With its comprehensive Learn Screens, Activities and follow-up Activity Sheets, it’s the perfect resource for teachers with no prior knowledge of coding, and includes our highly acclaimed Student Tool for programming, Code Crunch. Click here to find out more about it and try some of our content for free!
 
 [/resources-item]
 

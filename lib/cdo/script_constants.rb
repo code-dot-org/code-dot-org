@@ -39,8 +39,11 @@ module ScriptConstants
       # you must also update the Data_HocTutorials gsheet so the end of script API works
 
       nil,
+      MINECRAFT_HERO_NAME = 'hero'.freeze,
+      MINECRAFT_NAME = 'mc'.freeze,
+      MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
+      APPLAB_INTRO = 'applab-intro'.freeze,
       HOC_2013_NAME = 'Hour of Code'.freeze, # 2013 hour of code
-      HOC_NAME = 'hourofcode'.freeze, # 2014 hour of code
       FROZEN_NAME = 'frozen'.freeze,
       FLAPPY_NAME = 'flappy'.freeze,
       PLAYLAB_NAME = 'playlab'.freeze,
@@ -48,14 +51,13 @@ module ScriptConstants
       ICEAGE_NAME = 'iceage'.freeze,
       STARWARS_NAME = 'starwars'.freeze,
       STARWARS_BLOCKS_NAME = 'starwarsblocks'.freeze,
-      MINECRAFT_NAME = 'mc'.freeze,
-      MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
       INFINITY_NAME = 'infinity'.freeze,
       ARTIST_NAME = 'artist'.freeze,
       HOC_ENCRYPTION_NAME = 'hoc-encryption'.freeze,
       TEXT_COMPRESSION_NAME = 'text-compression'.freeze,
       BASKETBALL_NAME = 'basketball'.freeze,
       SPORTS_NAME = 'sports'.freeze,
+      HOC_NAME = 'hourofcode'.freeze, # 2014 hour of code
     ],
     csf_international: [
       COURSE1_NAME = 'course1'.freeze,
@@ -103,8 +105,9 @@ module ScriptConstants
       CSP17_UNIT3_NAME = 'csp3'.freeze,
       CSP17_UNIT4_NAME = 'csp4'.freeze,
       CSP17_UNIT5_NAME = 'csp5'.freeze,
-      CSP17_UNIT_AP = 'csp-ap'.freeze,
       # CSP17_UNIT6_NAME = 'csp6'.freeze,
+      CSP17_EXPORE_NAME = 'csp-explore'.freeze,
+      CSP17_CREATE_NAME = 'csp-create'.freeze,
       CSP17_POSTAP_NAME = 'csppostap'.freeze,
     ],
     cspexams: [
@@ -116,13 +119,11 @@ module ScriptConstants
     flappy: [FLAPPY_NAME],
     minecraft: [
       MINECRAFT_NAME,
-      MINECRAFT_DESIGNER_NAME
+      MINECRAFT_DESIGNER_NAME,
+      MINECRAFT_HERO_NAME,
     ],
     tts: [
       TTS_NAME = 'allthettsthings'.freeze
-    ],
-    applab_intro: [
-      APPLAB_INTRO = 'applab-intro'.freeze,
     ],
   }.freeze
 
@@ -186,7 +187,7 @@ module ScriptConstants
       # Would better be called something like assignable_name
       script_name: course_or_script[:name],
       category: first_category,
-      position: ScriptConstants.position_in_category(name, first_category),
+      position: ScriptConstants.position_in_category(course_or_script[:name], first_category),
       category_priority: ScriptConstants.category_priority(first_category),
     }
   end

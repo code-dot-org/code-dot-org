@@ -83,7 +83,7 @@ end
 Each of these activities can either be used alone or with other computer science lessons on related concepts.
 <br/>
 
-<a href="https://code.org/files/CSF_CoursesA-F_Curriculum_Guide.pdf" target="_new">Course A-F Curriculum Book</a> | <a href="http://code.org/curriculum/docs/k-5/complete_compressed.pdf" target="_new">Course 1-4 Curriculum Book</a> | <a href="http://code.org/curriculum/docs/k-5/teacherKeyComplete.pdf" target="_new">Course 1-4 Answer Keys</a>
+<a href="https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf" target="_new">Course A-F Curriculum Book (v2)</a>  | <a href="https://code.org/curriculum/docs/csf/A-F_supplies_v2.pdf" target="_new">Course A-F Supply List</a> | <a href="http://code.org/curriculum/docs/k-5/complete_compressed.pdf" target="_new">Course 1-4 Curriculum Book</a> | <a href="http://code.org/curriculum/docs/k-5/teacherKeyComplete.pdf" target="_new">Course 1-4 Answer Keys</a>
 <br/>
 
 <table cellpadding="10">
@@ -124,6 +124,9 @@ Each of these activities can either be used alone or with other computer science
         <a href="<%= lesson[:lessonPlan_t] %>" target="_new">Lesson Plan</a>
         <%	if lesson[:teacherVid_t].present? %>
 		  | <a href="<%= lesson[:teacherVid_t] %>">Teacher Video</a><br/>
+		<% end %>
+		 <%	if lesson[:answers_t].present? %>
+		   <%= lesson[:answers_t] %>
 		<% end %>
 
       </td>

@@ -299,11 +299,11 @@ function throwOnConsoleEverywhere(methodName) {
       afterEach(function () {
         if (console[methodName].restore) {
           console[methodName].restore();
-          if (firstInstance) {
-            throw new Error(firstInstance);
-          }
-          firstInstance= null;
         }
+        if (firstInstance) {
+          throw new Error(firstInstance);
+        }
+        firstInstance = null;
       });
     },
 
@@ -343,12 +343,34 @@ export function restoreOnWindow(key) {
 }
 
 /**
+ * Saves the contents of `document.body.innerHTML` before each test, and
+ * restores those contents after the test, allowing tests to do (almost)
+ * whatever they want with elements in the document body without worrying
+ * about cleanup.
+ *
+ * This is a big hammer and should be used sparingly - if you can write
+ * components that do precise setup and tear-down, you should.  In a few cases,
+ * though, this is the quickest path to test coverage.
+ *
+ * Warning: This can cause issues with event handlers.  Handlers attached
+ * to elements within the body will go away because their targets go away,
+ * but handlers attached to body, document, or window will persist - and may
+ * depend on DOM that gets removed during cleanup.
+ */
+export function sandboxDocumentBody() {
+  let originalDocumentBody;
+  beforeEach(() => originalDocumentBody = document.body.innerHTML);
+  afterEach(() => document.body.innerHTML = originalDocumentBody);
+}
+
+/**
  * Track whenever we create a timeout/interval, and then clear all timeouts/intervals
  * upon completion of each test.
  */
 export function clearTimeoutsBetweenTests() {
   let timeoutList = [];
   let intervalList = [];
+  const leftover = [];
 
   const setTimeoutNative = window.setTimeout;
   const setIntervalNative = window.setInterval;
@@ -383,16 +405,96 @@ export function clearTimeoutsBetweenTests() {
     return clearIntervalNative(id);
   };
 
-  afterEach(() => {
+  afterEach(function () {
+    // Guard carefully here, because arrow functions can steal our test context
+    // and prevent us from grabbing the test name.
+    const testName = this && this.currentTest && this.currentTest.fullTitle();
+
     timeoutList.forEach(id => {
-      console.log('clearing leftover timeout');
+      if (testName) {
+        leftover.push('(timeout)  ' + testName);
+      } else {
+        // When we don't know the test name, also print a note inline to help
+        // with debugging.
+        leftover.push('(timeout)  Unknown test');
+        console.log('clearing leftover timeout');
+      }
       clearTimeoutNative(id);
     });
     intervalList.forEach(id => {
-      console.log('clearing leftover interval');
+      if (testName) {
+        leftover.push('(interval) ' + testName);
+      } else {
+        // When we don't know the test name, also print a note inline to help
+        // with debugging.
+        leftover.push('(interval) Unknown test');
+        console.log('clearing leftover interval');
+      }
       clearIntervalNative(id);
     });
     timeoutList = [];
     intervalList = [];
+  });
+
+  after(() => {
+    console.log(
+      '\nLeftover timeouts/intervals: ' + leftover.length +
+      '\n' + leftover.map(s => '    ' + s).join('\n')
+    );
+  });
+}
+
+/**
+ * This helper checks that changes to document.body are undone before the tests
+ * are finished.  In particular, it enforces two rules:
+ *
+ * - document.body.innerHTML is the same after the tests as it was before them.
+ * - document.body.removeEventListener is called the same number of times as
+ *   document.body.addEventListener.
+ *
+ * This doesn't 100% ensure cleanup, but it catches a lot of cases.  Feel free
+ * to extend this function with more rules if you think of them.
+ *
+ * It's recommended to include this helper in the top-level describe of a test
+ * suite.
+ *
+ * @param {boolean} [checkEveryTest=false] If set, the cleanup assertions will
+ *   be run after _every_ test, instead of just once at the end of the whole
+ *   suite.  This should normally be 'false' to avoid unneeded impact on the
+ *   runtime of the suite, but setting it 'true' is very useful for isolating
+ *   the test that's causing related failures.
+ */
+export function enforceDocumentBodyCleanup({checkEveryTest = false}) {
+  let initialInnerHTML;
+  const beforeFn = checkEveryTest ? beforeEach : before;
+  const afterFn = checkEveryTest ? afterEach : after;
+
+  beforeFn(() => {
+    if (!initialInnerHTML) {
+      initialInnerHTML = document.body.innerHTML;
+    }
+    sinon.spy(document.body, 'addEventListener');
+    sinon.spy(document.body, 'removeEventListener');
+  });
+
+  afterFn(() => {
+    if (initialInnerHTML !== document.body.innerHTML) {
+      throw new Error(
+        'Test modified document.body.innerHTML:' +
+        '\n\nInitial:\n' +
+        initialInnerHTML +
+        '\n\nAfter:\n' +
+        document.body.innerHTML
+      );
+    }
+
+    if (document.body.addEventListener.callCount !== document.body.removeEventListener.callCount) {
+      throw new Error(
+        'Added ' + document.body.addEventListener.callCount + ' event listener(s)' +
+        ' to document.body, but only removed ' + document.body.removeEventListener.callCount + ' listeners'
+      );
+    }
+    document.body.addEventListener.restore();
+    document.body.removeEventListener.restore();
   });
 }

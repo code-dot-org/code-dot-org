@@ -1,10 +1,43 @@
 require 'aws-sdk'
 require 'tempfile'
+require 'active_support/core_ext/module/attribute_accessors'
+require 'active_support/core_ext/hash/slice'
+require 'honeybadger'
+require 'dynamic_config/dcdo'
 
 module AWS
   module S3
+    mattr_accessor :s3
+
+    # AWS SDK client plugin to log 'slow' (as defined by :notify_timeout) S3 responses to Honeybadger,
+    # recording the request headers in the error context for further investigation.
+    class SlowAwsResponseNotifier < Seahorse::Client::Plugin
+      option(:notify_timeout, 5) # seconds
+
+      class Handler < Seahorse::Client::Handler
+        def call(context)
+          start_time = Time.now
+          response = @handler.call(context)
+          duration = Time.now - start_time
+          if duration > context.config.notify_timeout
+            Honeybadger.notify(
+              error_class: "SlowAWSResponse",
+              error_message: "Slow AWS response",
+              context: response.context.
+                http_response.headers.to_h.
+                slice('x-amz-request-id', 'x-amz-id-2').
+                merge(duration: duration)
+            )
+          end
+          response
+        end
+      end
+      handler(Handler)
+      Aws::S3::Client.add_plugin(self)
+    end
+
     # An exception class used to wrap the underlying Amazon NoSuchKey exception.
-    class NoSuchKey < Exception
+    class NoSuchKey < RuntimeError
       def initialize(message = nil)
         super(message)
       end
@@ -14,7 +47,21 @@ module AWS
     # the credentials specified in the CDO config.
     # @return [Aws::S3::Client]
     def self.connect_v2!
-      Aws::S3::Client.new
+      self.s3 ||= Aws::S3::Client.new
+
+      # Adjust s3_timeout using a dynamic variable,
+      # updating the S3 client if the variable changes.
+      timeout = DCDO.get('s3_timeout', 15)
+      if timeout != s3.config.http_open_timeout
+        s3.config.http_open_timeout = timeout
+        s3.config.http_read_timeout = timeout
+        s3.config.http_idle_timeout = timeout / 2
+      end
+
+      notify_timeout = DCDO.get('s3_slow_request', timeout)
+      s3.config.notify_timeout = notify_timeout if s3.config.notify_timeout != notify_timeout
+
+      s3
     end
 
     # A simpler name for connect_v2!
@@ -76,26 +123,64 @@ module AWS
     end
 
     def self.public_url(bucket, filename)
-      Aws::S3::Object.new(bucket, filename, region: CDO.aws_region).public_url
+      Aws::S3::Object.new(
+        bucket,
+        filename,
+        client: create_client,
+        region: CDO.aws_region
+      ).public_url
+    end
+
+    # Downloads a file in an S3 bucket to a specified location.
+    # @param bucket [String] The S3 bucket name.
+    # @param key [String] The S3 key.
+    # @param filename [String] The filename to write to.
+    # @return [String] The filename written to.
+    def self.download_to_file(bucket, key, filename)
+      open(filename, 'wb') do |file|
+        create_client.get_object(bucket: bucket, key: key) do |chunk|
+          file.write(chunk)
+        end
+      end
+      return filename
     end
 
     # Processes an S3 file, requires a block to be executed after the data has
     # been downloaded to the temporary file (passed as argument to the block).
-    # @param bucket [String] The S3 buckt name.
+    # @param bucket [String] The S3 bucket name.
     # @param key [String] The S3 key.
     def self.process_file(bucket, key)
       CDO.log.debug "Processing #{key} from #{bucket}..."
       temp_file = Tempfile.new(["#{File.basename(key)}."])
       begin
-        open(temp_file.path, 'wb') do |file|
-          create_client.get_object(bucket: bucket, key: key) do |chunk|
-            file.write(chunk)
-          end
-        end
-        yield temp_file.path
+        yield download_to_file(bucket, key, temp_file.path)
       ensure
         temp_file.close
         temp_file.unlink
+      end
+    end
+
+    # Processes an S3 file, requires a block to be executed after the data has
+    # been downloaded to the temporary file (passed as argument to the block).
+    # The block will not be called if the exact version of the S3 object has
+    # been processed before. After processing, the bucket, key, and etag of the
+    # object are written to the database to prevent processing again.
+    # The entire execution is wrapped in a transaction.
+    # @param bucket [String] The S3 bucket name.
+    # @param key [String] The S3 key.
+    def self.seed_from_file(bucket, key)
+      etag = create_client.head_object({bucket: bucket, key: key}).etag
+      unless SeededS3Object.exists?(bucket: bucket, key: key, etag: etag)
+        AWS::S3.process_file(bucket, key) do |filename|
+          ActiveRecord::Base.transaction do
+            yield filename
+            SeededS3Object.create!(
+              bucket: bucket,
+              key: key,
+              etag: etag,
+            )
+          end
+        end
       end
     end
 

@@ -278,29 +278,29 @@
         desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
+        desc: Selles õppetunnis õpid sa tundma tsükleid!
       courseB_unplugged_MRF:
         title: Lahutatud tegevus
-        desc: In this lesson, you will 'program' your friends!
+        desc: Selles õppetunnis sa "programmeerid" koos sõpradega!
       courseB_unplugged_loopyMRF:
         title: Lahutatud tegevus
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
-          but this time with loops!
+        desc: Just nagu "My Robotic Friends" hakkad sa "programmeerima" oma sõpradega,
+          kuid seekord koos tsüklitega!
       courseC_Unplugged_ScreenOutTheMean:
         title: Lahutatud tegevus
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Täna saate teada, mida teha, kui keegi on internetis pahatahtlik.
       courseD_unplugged_digitalCitizenship:
         title: Lahutatud tegevus
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Täna saate teada, mida tähendab olla digitaalne kodanik.
       courseE_unplugged_privateInformation:
-        title: Lahutatud tegevus
-        desc: Today you will learn the difference between private and personal information!
+        title: 'Terve mõistus: Era- ja isiklik teave '
+        desc: Täna tutvustame erinevust era- ja isikliku teabe vahel!
       courseF_unplugged_powerOfWords:
         title: Lahutatud tegevus
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Täna saate teada, mida teha, kui keegi on internetis pahatahtlik.
       deeper learning description:
         title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
+        desc: 'tõlge puudub: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Päris elu algoritmid: Seemenda'
         desc: Selles õppetunnis näidatakse seemendamise näitel seda, kuidas kasutame
@@ -366,7 +366,7 @@
           kiuidas arvuti salvestab binaarandmetena veelgi komplekssemat teavet (näiteks
           pilte ja värve).
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
+        title: 'Päris elu algoritmid: Dice Race'
         desc: Selles õppetunnis tuuakse näiteid sellest, kuidas kasutame algoritme oma
           igapäevases elus. Õppetunnis õpilased tuvastavad ja kirjutavad üles algoritmi
           täringuralli mängu jaoks.
@@ -410,3 +410,38 @@
           (ka nn protseduurid) on miniprogrammid, mida saab kasutada suurema programmi
           sees uuesti ja uuesti. Selles õppetunnis aidatakse õpilastel intuitiivselt
           mõista, miks koodiosade kombineerimine funktsioonideks on nii kasulik meetod."
+      swipeRightPassThrough:
+        title: Värbamine
+        desc: |-
+          # Recruitment Scenarios Session\r
+          \r
+          ## Swipe Right for CS\r
+          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
+          \r
+          ### How it Works\r
+          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
+          \r
+          \r
+          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+      swipeRightPassThrough-test123:
+        title: Värbamine
+        desc: |-
+          # Recruitment Scenarios Session\r
+          \r
+          ## Swipe Right for CS\r
+          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
+          \r
+          ### How it Works\r
+          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
+          \r
+          \r
+          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+      brad-repro-bug-000:
+        title: Brad Repro Bug 000
+        desc: |-
+          # Brad Repro Bug 000\r
+          ## Attempt to recreate a bug Brooke reported\r
+          process as follows:\r
+          1. started with an `unplugged` level. populated with info. hit save and publish.\r
+          2. “destroyed” the level\r
+          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush

@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Collision Detection Review",
-    "reference": "/csd/collision-detection/index.html"
+    "reference": "/docs/csd/collision-detection/index.html"
   },
   "published": true,
   "notes": "",

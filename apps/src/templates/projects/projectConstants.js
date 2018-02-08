@@ -10,7 +10,6 @@ export const projectDataPropType = PropTypes.shape({
   type: PropTypes.string.isRequired,
   publishedAt: PropTypes.string.isRequired,
   publishedToPublic: PropTypes.bool.isRequired,
-  publishedToClass: PropTypes.bool.isRequired,
 });
 
 
@@ -21,6 +20,16 @@ export const personalProjectDataPropType = PropTypes.shape({
   type: PropTypes.string.isRequired,
   updatedAt: PropTypes.string.isRequired,
   isPublished: PropTypes.bool
+});
+
+export const featuredProjectDataPropType = PropTypes.shape({
+  projectName: PropTypes.string.isRequired,
+  channel: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  publishedAt: PropTypes.string.isRequired,
+  featuredAt: PropTypes.string.isRequired,
+  unfeaturedAt: PropTypes.string,
+  isFeatured: PropTypes.bool.isRequired
 });
 
 export const projectPropType = PropTypes.shape({

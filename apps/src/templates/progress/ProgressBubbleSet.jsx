@@ -54,15 +54,16 @@ const styles = {
   }
 };
 
-const ProgressBubbleSet = React.createClass({
-  propTypes: {
+class ProgressBubbleSet extends React.Component {
+  static propTypes = {
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
     style: PropTypes.object,
-  },
+    selectedSectionId: PropTypes.string,
+  };
 
   render() {
-    const { levels, disabled, style } = this.props;
+    const { levels, disabled, style, selectedSectionId } = this.props;
 
     return (
       <div style={{...styles.main, ...style}}>
@@ -91,6 +92,7 @@ const ProgressBubbleSet = React.createClass({
                 level={level}
                 disabled={disabled}
                 smallBubble={false}
+                selectedSectionId={selectedSectionId}
               />
             </div>
           </div>
@@ -98,6 +100,6 @@ const ProgressBubbleSet = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default Radium(ProgressBubbleSet);

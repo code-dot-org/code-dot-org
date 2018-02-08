@@ -6,7 +6,7 @@ import ReportTable from "./report_table";
 import Permission from "../../permission";
 import {Button} from 'react-bootstrap';
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
-import Spinner from '../components/spinner';
+import Spinner from '../../components/spinner';
 
 const QUERY_URL = "/api/v1/pd/teacher_attendance_report";
 

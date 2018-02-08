@@ -50,7 +50,7 @@ content-type: text/ng-template
         -# Just an invisible element for some padding to keep things looking good when we're not showing tabs.
         &nbsp;
 
-  .managebuttons{style: "float:right; margin-bottom: 9px;", "ng-if" => "tab == 'manage' && section.login_type !== 'google_classroom'"}
+  .managebuttons{style: "float:right; margin-bottom: 9px;", "ng-if" => "tab == 'manage' && teacher_managed_section(section)"}
     %span{"ng-if" => "section.login_type !== 'email'"}
       %button.btn.btn-white{"ng-click" => "new_student()", "ng-disabled" => "bulk_import.editing"}= I18n.t('dashboard_students_add_student')
       %button.btn.btn-white{"ng-click" => "bulk_import.editing = true", "ng-disabled" => "bulk_import.editing"}= I18n.t('dashboard_students_add_students')

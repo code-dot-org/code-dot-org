@@ -16,14 +16,14 @@ export const styles = {
  * Should be rendered inside a VisualizationOverlay.
  * @constructor
  */
-const CrosshairOverlay = React.createClass({
-  propTypes: {
+export default class CrosshairOverlay extends React.Component {
+  static propTypes = {
     // width, height, mouseX and mouseY are given in app-space, not screen-space
     width: PropTypes.number,
     height: PropTypes.number,
     mouseX: PropTypes.number,
     mouseY: PropTypes.number
-  },
+  };
 
   render() {
     if (!isPointInBounds(this.props.mouseX, this.props.mouseY,
@@ -50,5 +50,4 @@ const CrosshairOverlay = React.createClass({
       </g>
     );
   }
-});
-export default CrosshairOverlay;
+}

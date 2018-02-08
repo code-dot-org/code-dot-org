@@ -1,32 +1,29 @@
 ---
-
 title: <%= hoc_s(:title_how_to_districts) %>
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your entire school district
+# Jak wprowadzić Godzinę Kodowania do całego Twojego okręgu szkolnego
 
-## Get every school participating, every student learning!
+## Spowodujcie, by każda szkoła uczestniczyła i każdy uczeń się uczył!
 
-  1. **Recruit local schools.** Share [this email](<%= resolve_url('/promote/resources#sample-emails') %>) and [teacher how to guide](<%= resolve_url('/how-to') %>), or include a [short blurb](<%= resolve_url('/promote/stats') %>) in newsletters/district communications.
+1. **Rekrutuj miejscowe szkoły.** Udostępnij [ ten mail](<%= resolve_url('/promote/resources#sample-emails') %>) i [ poradnik nauczyciela ](<%= resolve_url('/how-to') %>), lub umieść [krótką reklamę](<%= resolve_url('/promote/stats') %>) w miejscowym biuletynie informacyjnym.
 
-  2. **Provide a sample logistics plan for schools.** Share this [sample logistics plan](<%= localized_file('/files/HOC_Logistics_plan.pdf') %>) with schools to give them ideas of how to organize whole school participation. It’s as easy as doing it in every math class, homeroom period, or rotating throughout the week through the computer lab.
+2. **Przedstaw przykładowy plan działania dla szkół. ** Udostępnij ten [ przykładowy plan działania ](<%= localized_file('/files/HOC_Logistics_plan.pdf') %>) szkołom jako przykład zorganizowania udziału całej szkoły. To jest łatwe, w klasie podczas lekcji matematyki, w czasie godzin wychowawczych lub przez cały tydzień przechodząc cyklicznie przez pracownię komputerową.
 
-  3. **Share on social media.** Post to [Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) or [Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Or share one of these inspirational [pictures and quotes](<%= resolve_url('/promote/resources#social') %>) from world leaders, or [stats](<%= resolve_url('/promote/stats') %>).
+3. **Udzielaj się w mediach społecznościowych.** Post na [Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) lub [Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Lub dziel się jednym z tych inspirujących [zdjęć i cytatów](<%= resolve_url('/promote/resources#social') %>) pochodzących od światowych przywódców, lub [statystykami](<%= resolve_url('/promote/stats') %>).
 
-  4. **Promote on your district’s homepage.** Let visitors know about your participation and Hour of Code events. Link it to [Hour of Code](<%= resolve_url('/') %>).
+4. **Promuj na stronie domowej swojego okręgu.** Powiadamiaj osoby wizytujące o Waszym uczestnictwie i wydarzeniach w ramach Godziny Kodowania. Połącz z [Godziną Kodowania](<%= resolve_url('/') %>).
 
-  5. **Host a district Hour of Code event.** See our [event how to guide](<%= resolve_url('/how-to/events') %>) for a sample run of show, media outreach kit and other supports.
+5. **Zorganizuj okręgowe wydarzenie Godziny Kodowania.** Zobacz przykładowy przebieg wydarzenia, jak kontaktować się z mediami i inne przykłady wsparcia w naszym [Przewodniku wydarzeń](<%= resolve_url('/how-to/events') %>).
 
 ## Co będzie się działo po Godzinie Kodowania?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Godzina Kodowanie jest dopiero pierwszym krokiem na drodze do poznania, jak działa technologia i jak tworzyć aplikacje komputerowe. Aby kontynuować tę podróż:
 
-  * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-  * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Zachęć uczniów do kontynuowania [nauki online](<%= resolve_url('https://code.org/learn/beyond') %>).
+- [Weź udział](<%= resolve_url('https://code.org/professional-development-workshops') %>) w jednodniowych warsztatach, aby otrzymać wskazówki od doświadczonego instruktora informatyki. (Tylko dla edukatorów z USA)
 
 <%= view :signup_button %>

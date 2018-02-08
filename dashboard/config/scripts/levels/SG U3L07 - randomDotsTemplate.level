@@ -39,7 +39,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "//Set pen properties\r\npenUp();\r\n//Write a loop\r\nfor (var i = 0; i < 100; i++) {\r\n  //Set pen properties\r\n  penRGB(randomNumber(0,255), randomNumber(0,255), randomNumber(0,255), 0.5);\r\n  //Move turtle\r\n  moveTo(randomNumber(0,320), randomNumber(0,450));\r\n  dot(randomNumber(1,20));\r\n}",
+    "start_blocks": "//Set pen properties\r\npenUp();\r\n//Write a loop\r\nfor (var i = 0; i < 100; i++) {\r\n  penRGB(randomNumber(0,255), randomNumber(0,255), randomNumber(0,255), 0.5);\r\n  moveTo(randomNumber(0,320), randomNumber(0,450));\r\n  dot(randomNumber(1,20));\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -83,7 +83,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-09 16:33:48 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-15 15:11:20 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"text_mode_at_start\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-09 16:33:48 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-15 15:11:20 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"text_mode_at_start\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-20 13:08:14 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

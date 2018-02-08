@@ -174,13 +174,13 @@ is:
         desc: Í þessum tíma munt þú 'forrita' vini þína!
       courseB_unplugged_loopyMRF:
         title: Verkefni án tölvu
-        desc: Alveg eins og í 'Vinir mínir vélmennin' munt þú 'forrita' vini þína, en í þetta sinn með lykkjum!
+        desc: Alveg eins og í "Vinir mínir vélmennin" munt þú "forrita" vini þína, en í þetta sinn með lykkjum!
       courseC_Unplugged_ScreenOutTheMean:
         title: Verkefni án tölvu
         desc: Í dag munt þú læra hvað þú getur gert ef einhver kemur illa fram við þig á netinu.
       courseD_unplugged_digitalCitizenship:
         title: Verkefni án tölvu
-        desc: Í dag munt þú læra hvað það þýðir að vera Netþegn.
+        desc: Í dag munt þú læra hvað það þýðir að hafa stafrænt ríkisfang.
       courseE_unplugged_privateInformation:
         title: 'Common Sense Education: Private and Personal Information '
         desc: Í dag munt þú læra muninn á persónulegum og ópersónulegum gögnum!
@@ -189,7 +189,7 @@ is:
         desc: Í dag munt þú læra hvað þú getur gert ef einhver kemur illa fram við þig á netinu.
       deeper learning description:
         title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
+        desc: 'þýðingu vantar: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algrím úr raunheimi: Sá fræi'
         desc: Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi og notar fræsáningu sem dæmi. Einnig er horft almennar til tölvunarfræði og hvernig algrím gegna nauðsynlegu hlutverki.
@@ -230,7 +230,7 @@ is:
         title: Tvíundarmyndir
         desc: Þó margir ímyndi sér að tvíundir takmarkist alfarið við núll og einn, kenndu fyrri námskeið nemendum okkar að það er hægt að nota ýmsar aðrar tvenndir til tákna upplýsingar. Þessi kennslustund gengur skrefi lengra með þá hugmynd þar sem hún sýnir hvernig tölva getur einnig geymt enn flóknari upplýsingar (svo sem myndir og liti) með tvíundarsniði.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
+        title: 'Algrím úr raunheimi: Teningakapp'
         desc: Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi. Meðal annars munu nemendur greina og skrifa niður algrím fyrir kappleik sem notar teningakast.
       courseE_unplugged_songwritingParameters:
         title: Lagasmíð með stikum
@@ -256,3 +256,12 @@ is:
       courseF_unplugged_songwritingParameters:
         title: Lagasmíð með stikum
         desc: 'Ein stórkostlegasta einingin í heimi tölvunarfræðinnar er fallið (function). Föll (stundum nefnd stefjur eða aðgerðir) eru smáforrit sem eru notuð aftur og aftur innan í stærra forriti. Þessi kennslustund mun hjálpa nemendum að öðlast skilning á því hvers vegna það er svona gagnlegt að setja kóðabúta í föll.  '
+      swipeRightPassThrough:
+        title: Recruitment Scenarios Session
+        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
+      swipeRightPassThrough-test123:
+        title: Recruitment Scenarios Session
+        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
+      brad-repro-bug-000:
+        title: Brad Repro Bug 000
+        desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"

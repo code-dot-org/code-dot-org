@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# 12203 contacts
-../send-to-mailing-list --limit 13000 2016-10-06-hoc-volunteer-launch ./contacts.csv

@@ -133,6 +133,7 @@
     user_type_student: "生徒"
     field_is_required: "が必要です"
     accept_terms: "アカウントを作成することに、同意が必要です。"
+    error: An error occurred.
   school_info:
     title: "学校名(任意)"
     school_country: "学校のある国"
@@ -427,7 +428,7 @@
     test_videos_help: "新しいビデオプレイヤーをテストする。"
     try_beta_courses: New! K-5生徒用のベータコースを試してみましょう
     use_as_teacher: "このサイトを教師として使用"
-    heading_hoc2014: "<h2>Hour of Code（アウア オブ コード）</h2> <h1>全ねんれい向け</h1>"
+    heading_hoc2014: "<h2>Hour of Code（アワー オブ コード）</h2> <h1>全ねんれい向け</h1>"
     heading_elementary: "<h2>20時間コース</h2> <h1>コンピュータサイエンス入門 (全ねんれい)</h1>"
     heading_apps: "<h2>お楽しみ</h2><h1>みんなの</h1>"
     heading_tools: "<h2>次のステップへの準備はできましたか?</h2><h1> JavaScript ツール （高校生向け）</h1>"
@@ -639,6 +640,9 @@
       body: "ゲーム ラボは、簡単なアニメーションや、オブジェクトとキャラクターがやり取りするゲームを作ることができるプログラミング環境です。"
       audience: 13才以上
       cta: "もっと知る"
+    hoc-encryption:
+      title: "単純な暗号化"
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web 研究室 (ベータ版)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -658,6 +662,10 @@
     minecraft2016:
       title: "マインクラフト"
       body: "ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。"
+    hero:
+      title: "マインクラフト"
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: Sports
       body: Make a basketball game or mix and match across sports.
@@ -725,6 +733,9 @@
     correct_title: "ありがとうございます"
     correct_body: "回答していただきありがとうございました。"
     hide_survey_last_answer: "アンケートは匿名です。 集計結果は先生用のダッシュ ボードを参照してください。 少なくとも 5 人の学生がアンケートに回答した場合のみ、結果が表示されることに注意してください。"
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: "ありがとうございます"
     wrong_body: "回答していただきありがとうございました。"
@@ -785,7 +796,7 @@
     accept_label: わたしは、更新された <a href="%{tos_url}"target="_blank"> サービス利用規約</a> および
       <a href="%{privacy_url}"target="_blank"> プライバシー ポリシー</a> に同意します。
     accept: "同意する"
-    print: "印刷"
+    print: "プリント"
     reminder_desc: 私たちは <a href="%{tos_url}"target="_blank"> サービス利用規約</a> および <a href="%{privacy_url}"target="_blank">
       プライバシー ポリシー</a> を更新しました。それらを受け入れる前に、これらを慎重にお読みください。更新された条項に同意されない場合、JavaScript
       を教えるツールが無いかもしれないことに、注意してください。
@@ -830,7 +841,11 @@
     rename: "名前をかえる"
     save: "保存"
     delete: "削除（さくじょ）"
-    import: Import
+    import: "インポート"
+    share_link_import_bad_link_header: "共有リンクが認識されません"
+    share_link_import_bad_link_body: "共有リンクをインポートできません。完全な Minecraft: Agent パズルのリンクをコピーしていることを確認してください。"
+    share_link_import_error_header: "問題が発生しました。"
+    share_link_import_error_body: "共有リンクのインポート時に問題が発生しました。もう一度やり直してください。"
     exit: "コースに戻る"
     my_projects: "マイプロジェクト"
     project_gallery: "プロジェクト"

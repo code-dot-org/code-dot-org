@@ -7,52 +7,52 @@ import React, {PropTypes} from 'react';
 import { castValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 
-const AddKeyRow = React.createClass({
-  propTypes: {
+const INITIAL_STATE = {
+  isAdding: false,
+  key: '',
+  value: ''
+};
+
+class AddKeyRow extends React.Component {
+  static propTypes = {
     onShowWarning: PropTypes.func.isRequired,
-  },
+  };
 
-  getInitialState() {
-    return {
-      isAdding: false,
-      key: '',
-      value: ''
-    };
-  },
+  state = {...INITIAL_STATE};
 
-  handleKeyChange(event) {
+  handleKeyChange = (event) => {
     this.setState({key: event.target.value});
-  },
+  };
 
-  handleValueChange(event) {
+  handleValueChange = (event) => {
     this.setState({value: event.target.value});
-  },
+  };
 
-  handleAdd() {
+  handleAdd = () => {
     if (this.state.key) {
       this.setState({isAdding: true});
       FirebaseStorage.setKeyValue(
         this.state.key,
         castValue(this.state.value),
-        () => this.setState(this.getInitialState()),
+        () => this.setState(INITIAL_STATE),
         msg => {
           if (msg.includes('The key is invalid') || msg.includes('The key was renamed')) {
             this.props.onShowWarning(msg);
           } else {
             console.warn(msg);
           }
-          this.setState(this.getInitialState());
+          this.setState(INITIAL_STATE);
         });
     }
-  },
+  };
 
-  handleKeyUp(event) {
+  handleKeyUp = (event) => {
     if (event.key === 'Enter') {
       this.handleAdd();
     } else if (event.key === 'Escape') {
-      this.setState(this.getInitialState());
+      this.setState(INITIAL_STATE);
     }
-  },
+  };
 
   render() {
     return (
@@ -87,6 +87,6 @@ const AddKeyRow = React.createClass({
       </tr>
     );
   }
-});
+}
 
 export default Radium(AddKeyRow);

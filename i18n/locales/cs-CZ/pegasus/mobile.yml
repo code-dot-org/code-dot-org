@@ -26,9 +26,14 @@
   twentyhours_heading: "Vyzkoušej si náš kurz Úvod do Informatiky"
   twentyhours_text: "Dokončil jsi svou první Hodinu kódu? Nauč se více o informatice a programovacích pojmech v  následujícím kurzu."
   og_title: Každé dítě si zaslouží příležitost
+  og_title_soon: "The Hour of Code is coming"
+  og_title_here: "The Hour of Code is here!"
   og_description: "Každý student v každé škole si zaslouží možnost studovat informatiku."
+  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Hodina kódu se blíží"
   csedweek_og_description: "Hodina Kódu je celosvětové hnutí, do kterého se zapojily desítky milionů žáků všech věkových kategorií z více než 180 zemí a mluvících více než 45 jazyky."
+  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Připojte se k <a href=\"http://hourofcode.com\">Hodině kódu</a> <br/> 8. až 14. prosince 2014 <br/>"
   hoc2014_students: "Studenti"
   hoc2014_try: "Zkuste to"
@@ -255,6 +260,12 @@
   studiobar_donate_body: "Jedno dítě se učí za každý dollar, který darujete"
   studiobar_shop_title: "Obchod"
   studiobar_shop_body: "Opusťte stereotypy. Noste hrdě naše logo."
+  homepage_stats_students: "of US students have accounts on Code.org"
+  homepage_stats_female: "of our students are female"
+  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
+  homepage_stats_policy: "states changed policy to support computer science"
+  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "&ldquo;Vyzývám divky v každé zemi, aby se učily jednu Hodinu kódu&rdquo; \nMalala, nosiltelka Nobelovy ceny za mír"
   homepage_hero_text_susan: |-
     &ldquo;Když umíš změnit technologii,
@@ -295,6 +306,8 @@
   homepage_hero_text_stat_loc: "2.5 milionů dívek se zapsalo na výuku v Code Studiu"
   homepage_hero_text_stat_students: "#student_count studentských účtů v Code Studiu"
   homepage_hero_text_stat_served: 'Hodinu kódu: #served si vyzkoušelo'
+  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
+  homepage_hero_hoc_is_here: "The Hour of Code is here"
   homepage_slot_text_hoc: "Hodina kódu"
   homepage_slot_text_frozen: "Kluziště s Annou a Elzou"
   homepage_slot_text_teacher: "Katedra učitele"
@@ -314,6 +327,7 @@
   homepage_action_text_girlvideo: "Inspirovat divku"
   homepage_action_text_learn: "Zahájení výuky"
   homepage_action_text_signpetition: "Podepište petici"
+  homepage_action_text_wincelebritychat: "Win a celebrity chat"
   homepage_signpetition_dropdown: "Souhlasím &#x25BE;"
   homepage_diversity_pledge: "Zajistěte rozmanitost"
   homepage_banner_text_prizes: 'Hodina kódu přichází znova, 7. -13. prosince. '
@@ -357,7 +371,7 @@
   homepage_slot_text_link_buy: "Zapojte se"
   homepage_slot_text_link_donate: "Přispějte"
   homepage_slot_text_link_shop: "Trička, čepice a další"
-  homepage_slot_text_link_administrators: "Bring to your school or district"
+  homepage_slot_text_link_administrators: "Bring CS to your school"
   homepage_header_codestudio: "Studentská tvorba v Code studiu"
   homepage_header_donors: "Code.org děkuje svým příznivcům"
   homepage_donors_seall: "Podívejte se na všechny"
@@ -420,10 +434,13 @@
   mc_gradelevel: "Věk 6 +"
   mc_platformtext: "Moderní prohlížeče, smartphony, tablety"
   mc_specs: "Mnoho jazyků | Moderní prohlížeče a tablety | Věk 6-106 let"
+  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: "Minecraft Designer"
   minecraft_adventurer: "Minecraft Adventurer"
   minecraft_tutorials: "Návody Hodiny kódu s Minecraftem"
   minecraft_specs: "Mnoho jazyků | Moderní prohlížeč a tablety | Od druhé třídy"
+  minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  minecraft_agent_button: "Spustit"
   minecraft_designer_description: "Naprogramuj zvířata a další postavy, vytvoř si svojí vlastní verzi Minecraftu."
   minecraft_designer_button: "Spustit"
   minecraft_adventurer_description: "Vezmi Alexe nebo Steva za dobrodružštvím pomocí kódu."
@@ -431,6 +448,19 @@
   minecraft_no_internet: "Nemáš internet?"
   minecraft_download_adventurer: "Stáhni si offline verzi Minecraft Adventurer."
   minecraft_subtitle: "Hodina kódu Minecraftu"
+  minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
+  minecraft_host_event: "Host a Minecraft Hour of Code Event"
+  minecraft_teach_resources: "Teacher resources and lesson plan."
+  minecraft_leader_guide: "Download resources to help you plan and lead an event."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
+  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}', target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
+  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}', target='_blank'>Sign up today</a>."
+  minecraft_future: "Help all youth become future ready"
+  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}', target='_blank'>access the resources</a> they found most valuable."
+  minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
+  minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   sports_page_title: "Hour of Code - sporty"
   sports_og_title: "Hour of Code - sportovní semináře"
   sports_og_description: "Vyberte si mezi vytvořením basketbalové hry nebo smíchejte a propojte napříč sporty."
@@ -467,6 +497,7 @@
   video_title_obama: "Prezident Obama o informatice"
   video_title_hoc_is_here: "Hodina kódu je zde - každý se může naučit"
   video_title_anybody_can_learn: "Každý se může naučit"
+  video_title_steph_curry: "Hour of Code with Steph Curry"
   video_title_draymond_green: "Hodina kódu s Draymonden Greenem"
   video_title_russell_okung: "Hodina kódu s Russellem Okungem"
   video_title_real_madrid: "Hodina kódu s Realem Madrid"
@@ -546,6 +577,8 @@
   volunteer_engineer_submission_type_task_remote: "Chci, abys pomocí Skype řekl mé třídě pár slov k inspiraci dětí"
   volunteer_engineer_submission_type_task_mentor: "Hledám mentora, aby mne pomohl připravit na kódování s mvými studenty"
   petition_age: "Věk"
+  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_learn_more_button: "Zjisti více"
   dashboard_landing_title: "Učitelská domovská stránka"
   dashboard_landing_welcome: "Vítáme vás na novém a vylepšeném řídicím panelu pro učitele."
   dashboard_landing_video: "Podívejte se na toto video"
@@ -942,6 +975,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Po testu: Databáze v aplikacích'
   cspassessment_name: "Úplný test - 50 otázek"
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: 1. část testu - 25 otázek
   cspexam2-AKwgAh1ac5_name: 2. část testu - 25 otázek
   cspunit3_gradelevel: "Věk 15-18"
@@ -1456,3 +1491,5 @@
   syncing_students: "Syncing your students"
   syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro

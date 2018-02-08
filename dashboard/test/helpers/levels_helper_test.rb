@@ -222,23 +222,50 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'applab levels should include pairing_driver and pairing_channel_id when viewed by navigator' do
     @level = create :applab
-
-    @driver = create :student, name: 'DriverName'
+    @driver = create :student
     @navigator = create :student
+    create_applab_progress_for_pair @level, @driver, @navigator
 
-    @driver_user_level = create :user_level, user: @driver, level: @level
-    @navigator_user_level = create :user_level, user: @navigator, level: @level
-    @driver_user_level.navigator_user_levels << @navigator_user_level
-    create :channel_token, level: @level, storage_id: storage_id_for_user_id(@driver.id)
-
+    # "Load the level" as the navigator
     sign_in @navigator
-
     assert_not_nil app_options[:level]['pairingDriver']
     assert_not_nil app_options[:level]['pairingChannelId']
 
     # calling app_options should not set readonly_workspace
     app_options
     assert_nil view_options[:readonly_workspace]
+  end
+
+  # Regression test for problem:
+  #   https://codeorg.zendesk.com/agent/tickets/115705
+  #   https://app.honeybadger.io/projects/3240/faults/35473924
+  #
+  # Given we have two users A and B
+  # And they have pair-programming progress on a channel-backed level where
+  #   user A was the driver and user B was the navigator
+  # When user A is deleted
+  # And user B returns to the level
+  # Then we should load the level without pair-programming information
+  test 'applab levels viewed by navigator omit pairing_driver and pairing_channel_id if the driver account was deleted' do
+    @level = create :applab
+    @driver = create :student
+    @navigator = create :student
+    create_applab_progress_for_pair @level, @driver, @navigator
+
+    # Delete the driver
+    @driver.destroy
+
+    # "Load the level" as the navigator
+    sign_in @navigator
+    assert_nil app_options[:level]['pairingDriver']
+    assert_nil app_options[:level]['pairingChannelId']
+  end
+
+  def create_applab_progress_for_pair(level, driver, navigator)
+    driver_user_level = create :user_level, user: driver, level: level
+    navigator_user_level = create :user_level, user: navigator, level: level
+    driver_user_level.navigator_user_levels << navigator_user_level
+    create :channel_token, level: level, storage_id: storage_id_for_user_id(driver.id)
   end
 
   def stub_country(code)
@@ -421,7 +448,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     script = Script.add_script(
       {name: 'test_script'},
-      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
+      script_data[:stages]
     )
 
     stage = script.stages[0]
@@ -473,7 +500,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     script = Script.add_script(
       {name: 'my_cool_script'},
-      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
+      script_data[:stages]
     )
 
     stage = script.stages[0]

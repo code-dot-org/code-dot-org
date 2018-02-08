@@ -4,6 +4,7 @@ import ImageResourceCard from './ImageResourceCard';
 export default storybook => {
   return storybook
     .storiesOf('ImageResourceCard', module)
+    .withReduxStore()
     .addStoryTable([
       {
         name: 'basic resource card',
@@ -15,21 +16,6 @@ export default storybook => {
             image="teacher-community"
             buttonText= "Connect Today"
             link= "link to teacher community"
-            isRtl={false}
-          />
-        )
-      },
-      {
-        name: 'basic resource card - RTL',
-        description: `This is an example resource card with RTL styling.`,
-        story: () => (
-          <ImageResourceCard
-            title= "Teacher Community"
-            description="Ask questions about curriculum, share ideas from your lessons, and get help from other teachers"
-            image="teacher-community"
-            buttonText= "Connect Today"
-            link= "link to teacher community"
-            isRtl={true}
           />
         )
       },

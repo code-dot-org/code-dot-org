@@ -33,10 +33,18 @@
   twentyhours_text: Hour of Code 를 모두 마쳤나요? 다음과 같은 과정들을 통해 컴퓨터과학(정보과학)의 원리나 프로그래밍
     기초개념들을 학습해 보세요.
   og_title: "모든 아이들에게 기회가 주어져야 합니다."
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
   og_description: "모든 학교의 모든 학생은 컴퓨터과학(정보과학) 을 배울 기회가 있어야 합니다. 이것은 모든 것을 변화시킬 것입니다."
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: Hour of Code 가 여기 있습니다
   csedweek_og_description: Hour of Code 는 180개 이상의 나라에서 45개 이상의 언어로, 나이에 상관없이 수천만
     명의 학생들과 함께하려는 전세계적 운동입니다.
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
   hoc2014_heading: <a href="http://hourofcode.com">Hour of Code</a><br/>를 해보세요. December
     8 - 14, 2014<br/>
   hoc2014_students: "학생들"
@@ -83,12 +91,12 @@
   congratulations_on_completing_course2: "과정2 완료를 축하합니다."
   congratulations_on_completing_course3: "과정3 완료를 축하합니다."
   congratulations_on_completing_course4: "과정4 완료를 축하합니다."
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
+  congratulations_on_completing_coursea: "과정A 완료를 축하합니다."
+  congratulations_on_completing_courseb: "과정B 완료를 축하합니다."
+  congratulations_on_completing_coursec: "과정C 완료를 축하합니다."
+  congratulations_on_completing_coursed: "과정D 완료를 축하합니다."
+  congratulations_on_completing_coursee: "과정E 완료를 축하합니다."
+  congratulations_on_completing_coursef: "과정F 완료를 축하합니다."
   congratulations_on_completing_accelerated: "속진 과정 완료를 축하합니다."
   congrats_next_tutorials_title: "이제 다음 튜토리얼들을 해보세요."
   congrats_next_tutorials_desc: 이러한 짧은 1시간짜리 튜토리얼을 해 보거나 <a href="%{current_path}/next">파트너
@@ -314,6 +322,12 @@
   studiobar_donate_body: "여러분이 기부할 때 마다 더 많은 학생들이 배울 수 있습니다."
   studiobar_shop_title: "상점"
   studiobar_shop_body: "고정관념을 깨고, 우리의 로고와 긍지를 입어보세요."
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "&ldquo;나는 모든 국가의 소녀들이 한 시간의 코드를 배우길 바란다.&rdquo; 마랄라,
     노벨 평화상 수상자"
   homepage_hero_text_susan: "&ldquo;당신이 기술을 변경할 수 있다면, 당신은 세계도 변경시킬 수 있습니다.&rdquo;
@@ -346,6 +360,8 @@
   homepage_hero_text_stat_loc: "#loc 학생들에 의해서 작성된 코드의 줄"
   homepage_hero_text_stat_students: "#student_count Code Studio에 등록된 학생 계정"
   homepage_hero_text_stat_served: 'Hour of Code: # 제공'
+  homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: "안나와 엘사가 함께 하는 겨울왕국"
   homepage_slot_text_teacher: "선생님용 대시보드"
@@ -365,6 +381,7 @@
   homepage_action_text_girlvideo: "여학생들에게 영감 주기"
   homepage_action_text_learn: "학습 시작"
   homepage_action_text_signpetition: "청원서에 서명하세요"
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: "청원서에 서명하세요"
   homepage_diversity_pledge: "다양성 존중 서약하기"
   homepage_banner_text_prizes: '12월 7일 - 13일, Hour of Code가 다시 찾아옵니다. '
@@ -477,10 +494,14 @@
   mc_gradelevel: 6세 이상
   mc_platformtext: "최신 웹브라우저, 스마트폰, 태블릿"
   mc_specs: "여러 언어 | 최신 웹브라우저, 태블릿 | 6-106 세"
+  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: Minecraft 디자이너
   minecraft_adventurer: Minecraft 모험가
   minecraft_tutorials: Minecraft Hour of Code 튜토리얼
   minecraft_specs: "여러 언어 | 최신 웹브라우저, 태블릿 | 초등학교 2학년 이상"
+  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
+    new activity! Journey through Minecraft with code.
+  minecraft_agent_button: "시작:"
   minecraft_designer_description: "자신만의 마인크래프트에서 동물들과, 또 다른 마인크래프트 생명체를 프로그램 해보세요."
   minecraft_designer_button: "시작:"
   minecraft_adventurer_description: "코드를 사용하여 Alex나 Steve와 함께 모험에 도전해보세요."
@@ -488,6 +509,41 @@
   minecraft_no_internet: "인터넷을 사용할 수 없습니까?"
   minecraft_download_adventurer: Minecraft 모험가의 오프라인 버전을 다운로드.
   minecraft_subtitle: "마인크래프트 Hour of Code"
+  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
+    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
+    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
+    problem solving and loads of fun."
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+    facilitator quick start guide and PowerPoint presentations for younger and older
+    students now."
+  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
+    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
+    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
+    Get a head start on thinking through what you need to bring Hour of Code to young
+    people during Computer Science Education week (December 4-10) and beyond.
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
+    at the Microsoft Store'
+  minecraft_continue_learning_description: No computer science experience required!
+    Help ensure all youth can learn the valuable skills gained through computer science
+    education. Join us at the Microsoft Store to engage in a free series of three,
+    1-hour workshops where you will experience coding in a fun and stress-free environment,
+    become familiar with key computer science concepts, and get ready to lead an Hour
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
+    up today</a>.
+  minecraft_future: Help all youth become future ready
+  minecraft_future_description: Find out how other schools and nonprofits are bringing
+    digital skills, from digital literacy to computer science education, to their
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
+    the resources</a> they found most valuable.
+  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
+    Program animals and other Minecraft creatures in your own version of Minecraft.
+  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
+    Write code to journey through Minecraft biomes.
   sports_page_title: Hour of Code 스포츠
   sports_og_title: Hour of Code 스포츠 튜토리얼
   sports_og_description: "챔피언과 금메달리스트들은 당신을 Hour of Code 에 도전하도록 격려합니다. 자신만의 스포츠게임을
@@ -525,6 +581,7 @@
   video_title_obama: "컴퓨터공학(정보과학)을 지지하는 오바마"
   video_title_hoc_is_here: Hour of Code 가 여기 있습니다 - 누구나 배울 수 있습니다
   video_title_anybody_can_learn: "누구나 배울 수 있습니다"
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: Draymond Green과 함께하는 Hour of Code
   video_title_russell_okung: Russell Okung과 함께하는 Hour of Code
   video_title_real_madrid: Real Madrid와 함께하는 Hour of Code
@@ -631,6 +688,10 @@
   volunteer_engineer_submission_type_task_mentor: "우리 학생들에게 코딩을 가르치기 위해서 저와 함께 준비하는데
     도움을 주실 수 있는 멘토 분들을 찾고 있습니다."
   petition_age: "나이"
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: "더 알아보기"
   dashboard_landing_title: "선생님 홈페이지"
   dashboard_landing_welcome: "새롭게 개선된 교사용 상황판"
   dashboard_landing_video: "비디오를 보세요."
@@ -1074,6 +1135,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: 앱 안의 데이터베이스'
   cspassessment_name: "전체 테스트 - 50 문항"
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: "테스트 part 1 - 25문항"
   cspexam2-AKwgAh1ac5_name: "테스트 part 2 - 25문항"
   cspunit3_gradelevel: 9-12 학년
@@ -1773,3 +1836,11 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
+  dashboard_tools: 'Tools: '
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
+  gamelab_name: Game Lab

@@ -16,6 +16,7 @@ import {
   tryGetSessionStorage,
   trySetSessionStorage,
   showGenericQtip,
+  createEvent,
 } from './utils';
 import msg from '@cdo/locale';
 
@@ -110,6 +111,15 @@ export default class AuthoredHints {
     }
     const hint = this.getUnseenHints()[0];
     this.recordUserViewedHint_(hint);
+
+    // Notify game types that implement the `displayHintPath` listener to draw
+    // hint paths in the visualization area.
+    if (hint.hintPath && hint.hintPath.length) {
+      const event = createEvent('displayHintPath');
+      event.detail = hint.hintPath;
+      window.dispatchEvent(event);
+    }
+
     return hint;
   }
 

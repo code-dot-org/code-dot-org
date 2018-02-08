@@ -71,4 +71,14 @@ class GatekeeperTest < ActiveSupport::TestCase
     Gatekeeper.delete('hint_view_request')
     assert_equal Set.new(['postMilestone', 'shareEnabled']), Gatekeeper.feature_names
   end
+
+  test 'disallows' do
+    feature_disallowed = 'test feature 1'
+    feature_allowed = 'test feature 2'
+    Gatekeeper.expects(:allows).with(feature_disallowed).returns(false)
+    Gatekeeper.expects(:allows).with(feature_allowed).returns(true)
+
+    assert Gatekeeper.disallows(feature_disallowed)
+    refute Gatekeeper.disallows(feature_allowed)
+  end
 end

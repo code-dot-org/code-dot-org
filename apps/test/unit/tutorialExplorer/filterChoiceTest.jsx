@@ -12,7 +12,8 @@ const DEFAULT_PROPS = {
   groupName: TEST_GROUP_NAME,
   name: TEST_NAME,
   selected: false,
-  text: TEST_TEXT
+  text: TEST_TEXT,
+  singleEntry: false
 };
 
 describe('FilterChoice', () => {
@@ -44,6 +45,24 @@ describe('FilterChoice', () => {
       <div>
         <label>
           <input type="checkbox" checked={true}/>
+          {TEST_TEXT}
+        </label>
+      </div>
+    );
+  });
+
+  it('renders unchecked radio button without error', () => {
+    const wrapper = shallow(
+      <FilterChoice
+        {...DEFAULT_PROPS}
+        selected={false}
+        singleEntry={true}
+      />
+    );
+    expect(wrapper).to.containMatchingElement(
+      <div>
+        <label>
+          <input type="radio" checked={false}/>
           {TEST_TEXT}
         </label>
       </div>

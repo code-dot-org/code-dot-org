@@ -1,60 +1,61 @@
 ---
-
-title: <%= hoc_s(:title_how_to_events) %>
+title: "<%= hoc_s(:title_how_to_events) %>"
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
 # Hoe kunt u een CodeUur evenement organiseren
 
-## 1) Bereid u voor op uw evenement
+## 1. Prepare for your event
 
-  * Bepaal een locatie, datum en tijd
-  * Stuur [een brief](<%= hoc_uri('https://docs. google. com/a/code. org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) om de burgemeester, een congreslid, of een andere invloedrijke bedrijfspersoon uit te nodigen om te spreken.
-  * Nodig media en pers uit zoals de locale nieuwsstation, de krant of bloggers. Bekijk onze [pers Kit](<%= hoc_uri('/resources/press-kit') %>) voor hulp.
+- Determine a venue, date, and time.
+- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=resolve_url('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
+- Nodig media en pers uit zoals de locale nieuwsstation, de krant of bloggers. Bekijk onze [pers kit](<%= resolve_url('/promote/press-kit') %>) voor hulp.
 
-## 2) Tijdens uw evenement
+## 2. During your event
 
-  * Start uw evenement met een van onze [inspirerende video 's](<%= resolve_url('/promote/resources#videos') %>).
-  * Geef een intro over het belang van programmeren, met behulp van deze [stats en infographics](<%= resolve_url('/promote/stats') %>).   
+- Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).
+- Geef een inleiding over het belang van programmeren, met behulp van deze [statistieken en infographics](<%= resolve_url('/promote/stats') %>).   
       
     
-  * Andere evenement ideeën: 
-      * Nodig een lokale industrieleider uit om zijn/haar werk te bespreken waarmee hij/zij gebruik maakt van programmeren
-      * Nodig een lokale politicus uit en laat leerlingen hem uitleggen hoe hij moet programmeren
-      * Laat een groep leerlingen een unplugged activiteit demonstreren
-      * Laat een groep leerlingen/leerkrachten de basisfundamenten leren over programmeren
-      * Als uw school al informatica geeft, laat leerlingen projecten demonstreren
+- Andere evenement ideeën: 
+    - Invite a local industry leader to discuss his or her work involving computer science.
+    - Invite a local politician and have students teach him or her how to code.
+    - Have a group of students demonstrate an unplugged activity.
+    - Have a group of students teach the principal or a group of teachers how to code.
+    - If your school already teaches computer science, have students demo projects.
 
-## 3) Deel hoe het ging
+## 3. Share how it went
 
-  * Deel foto's van je evenement op Facebook en Twitter. 
-  * Gebruik de hashtag **#HourofCode**
+- Deel foto's van je evenement op Facebook en Twitter. 
+- Use the hashtag **#HourOfCode**
 
-## Voorbeeld van een evenementsplan
+## Host a Family Code Night with the Hour of Code and invite parents to participate
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-**Date:** Dec 5th (start of Computer Science Education Week)
+## Voorbeeld van een evenementenplan
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Evenement:** Door heel de school Computer Science Education Week kick-off bijeenkomst
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Date:** Dec. 5th (start of Computer Science Education Week)
+
+**Time** Gedurende de schooldag. Het liefst in de morgen. Ongeveer 1 uur.
+
+**Location:** Bijeenkomst in een hal of grote ruimte(bv. theater, sportzaal, cafetaria)   
   
 
 
 ## Programma
 
-| Tijdstip    | Actie                                                                                                                                          |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00-10:05 | Start met één van onze [inspirerende video's](<%= resolve_url('/promote/resources#videos') %>)                                                   |
-| 10:05-10:15 | De directeur geeft een intro over het belang van programmeren. Gebruik deze [stats en infographics](<%= resolve_url('/promote/stats') %>)        |
-| 10:15-10:30 | Speciale gasten praten over hun achtergrond en welke belangrijke rol informatica in hun alledaagse leven heeft.                                |
-| 10:30-10:40 | Studenten doen een demo van CodeUur voor de school. Misschien kunnen zij het leren aan de directeur, aan de politicus of aan andere studenten. |
-| 10:40-11:00 | Studenten laten een unplugged activiteit zien om te demonstreren hoe programmeren kan worden geleerd zonder computers.                         |
-| 11:00-11:05 | De leraar die de evenement heeft georganiseerd sluit af.                                                                                       |
+| Tijdstip    | Actie                                                                                                                                            |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 10:00-10:05 | Start met één van onze [inspirerende video's](<%= resolve_url('/promote/resources#videos') %>)                                                     |
+| 10:05-10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>). |
+| 10:15-10:30 | Speciale gasten praten over hun achtergrond en welke belangrijke rol programmeren in hun alledaagse leven heeft.                                 |
+| 10:30-10:40 | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                        |
+| 10:40-11:00 | Studenten laten een unplugged activiteit zien om te demonstreren hoe programmeren kan worden geleerd zonder computers.                           |
+| 11:00-11:05 | De leraar die het evenement heeft georganiseerd sluit af.                                                                                        |
 
 <%= view :signup_button %>

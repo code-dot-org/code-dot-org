@@ -51,8 +51,8 @@
     "disable_if_else_editing": "true",
     "disable_procedure_autopopulate": "false",
     "background": "soccer",
-    "contained_level_names": null,
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

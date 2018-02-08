@@ -4,14 +4,13 @@ import { connect } from 'react-redux';
 import ImportProjectDialog from './ImportProjectDialog';
 import ImportScreensDialog from './ImportScreensDialog';
 import ApplabVisualizationColumn from './ApplabVisualizationColumn';
-import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
 import { ApplabInterfaceMode } from './constants';
 import CodeWorkspace from '../templates/CodeWorkspace';
 import DataWorkspace from '../storage/dataBrowser/DataWorkspace';
 import ProtectedDesignWorkspace from './ProtectedDesignWorkspace';
-import SignInOrAgeDialog from '../templates/SignInOrAgeDialog';
+import VisualizationResizeBar from "../lib/ui/VisualizationResizeBar";
 
 /**
  * Top-level React wrapper for App Lab.
@@ -42,7 +41,6 @@ class AppLabView extends React.Component {
     const codeWorkspaceVisible = (ApplabInterfaceMode.CODE === this.props.interfaceMode);
     return (
       <StudioAppWrapper>
-        <SignInOrAgeDialog/>
         <ImportProjectDialog />
         <ImportScreensDialog />
         <ApplabVisualizationColumn
@@ -50,10 +48,7 @@ class AppLabView extends React.Component {
           screenIds={this.props.screenIds}
           onScreenCreate={this.props.onScreenCreate}
         />
-        <ProtectedStatefulDiv
-          id="visualizationResizeBar"
-          className="fa fa-ellipsis-v"
-        />
+        <VisualizationResizeBar/>
         <InstructionsWithWorkspace>
           <CodeWorkspace withSettingsCog style={{display: codeWorkspaceVisible ? 'block' : 'none' }}/>
           {this.props.hasDesignMode && <ProtectedDesignWorkspace/>}

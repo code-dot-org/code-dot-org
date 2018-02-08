@@ -1,53 +1,58 @@
-* * *
-
-title: <%= hoc_s(:title_signup_thanks) %> layout: wide nav: how_to_nav
-
-social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png" "og:image:width": 1440 "og:image:height": 900 "og:url": "http://<%=request.host%>"
-
-"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-
-* * *
-
+---
+title: <%= hoc_s(:title_signup_thanks) %>
+layout: wide
+nav: how_to_nav
+social:
+  "og:title": <%= hoc_s(:meta_tag_og_title) %>
+  "og:description": <%= hoc_s(:meta_tag_og_description) %>
+  "og:image": http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png
+  "og:image:width": 1440
+  "og:image:height": 900
+  "og:url": http://<%=request.host%>
+  "twitter:card": player
+  "twitter:site": '@codeorg'
+  "twitter:url": http://<%=request.host%>
+  "twitter:title": <%= hoc_s(:meta_tag_twitter_title) %>
+  "twitter:description": <%= hoc_s(:meta_tag_twitter_description) %>
+  "twitter:image:src": http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png
+---
 <% facebook = {:u=>"http://#{request.host}/us"}
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
 # Tēnā koe i tō waitohu mai ki te taurima i tētahi Hour of Code!
 
-Māu, ka whai wāhi ngā ākonga puta noa i te ao ki te ako i tētahi Hour of Code mā reira e *rerekē ai ō rātou oranga*, i te wā o <%= campaign_date('full') %>. Mā mātou koe e whakapā me ngā kōrero mō ngā whakaakoranga hou me ētahi atu whakahoutanga mīharo rawa atu. Me aha rawa koe ināianei?
+As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
+<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
 
-## 1. Kawea te kupu
+<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
 
-Kātahi anō koe ka piri mai ki te kuhunga Hour of Code. Tēnā kawea atu te kupu ki ō hoa mā **#HourOfCode**!
+<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+## 1. Spread the word in your school and community
+
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](%= resolve_url('/promote/resources#sample-emails') %) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Ehara i te mea me noho ki tētahi kura ki te ako i ētahi pūkenga hou. Invite a local politician or policy maker to visit your school for the Hour of Code. Mā tēnei ka tautoko i ngā mahi pūtaiao rorohiko i tō takiwā haere ake nei.
+
+Whakamahia ēnei [pānui whakaahua, haki, tukupiri, ataata, aha atu rānei](%= resolve_url('/promote/resources') %) mō tāu takunetanga.
 
 ## 2. Kimihia he tūao o tō hapori tonu ki te āwhina i a koe me tō takunetanga.
 
-[Rapuahia he tūao i tā mātou mahere tūao](%= resolve_url('https://code.org/volunteer/local') %) e āhei ana ki te haere atu ki tō akomanga, ki te kōrero ā-tuihono rānei ki te akiaki i ō ākonga i roto i te whānuitanga o ngā mahi ka taea me te pūtaiao rorohiko.
+[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## 3. Tēnā tono atu ki tō kura kia riro mā te kura katoa tētahi takunetanga Hour of Code e hāpai
+## 3. Plan your Hour of Code
 
-[Tukuna tēnei īmēra](%= resolve_url('/promote/resources#sample-emails') %) ki tō tumuaki me te whakatakoto i te taki ki mua i ngā akomanga katoa kia hikina e rātou, kia waitohu rātou.
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](%= resolve_url('/how-to') %).
 
-## 4. Pōhiritia tō rangatira mahi
+# Go beyond an Hour of Code
 
-[Tukuna tēnei īmēra](%= resolve_url('/promote/resources#sample-emails') %) ki tō pāhi, ki te kaiurungi rānei o tō pakihi.
+<% if @country == 'us' %> An Hour of Code is just the beginning. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
 
-## 5. Whakatairangatia te Hour of Code i tō hapori
+You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-[Kimihia he rōpū i tō hapoti](%= resolve_url('/promote/resources#sample-emails') %) - karapu tāpae tama/hine, whakapono, whare wānanga, kaumātua, uniana, ka mutu ō hoa. Ehara i te mea me noho ki tētahi kura ki te ako i ētahi pūkenga hou. Whakamahia ēnei [pānui whakaahua, haki, tukupiri, ataata, aha atu rānei](%= resolve_url('/promote/resources') %) mō tāu takunetanga.
+<% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-## 6. Pōhiritia te kaitōrangapū ā-rohe ki te tautoko i te Hour of Code
-
-[Tukuna tēnei īmēra](%= resolve_url('/promote/resources#sample-emails') %) ki ngā kaitōrangapū, ki te kaunihera, ki te pōari o te kura rānei ki te pōhiri i a rātou ki tō kura mō te Hour of Code. Mā tēnei ka tautoko i ngā mahi pūtaiao rorohiko i tō takiwā haere ake nei.
-
-## 7. Whakamaheretia tō Hour of Code
-
-Kōwhiria tētahi ngohe Hour of Code kātahi ka [ arotake i tēnei puka aratohu mā-hea](%= resolve_url('/how-to') %).
-
-## 8. Ki tua o Hour of Code
-
-Kua rite koe ki te kawe i ngā mōhiotanga ki tua o Hour of Code? Tirohia [ā mātou whakaakoranga katoa me ā matou rauemi pouako](%= resolve_url('https://code.org/teach')%) ka mutu ngā mahi ngaiotanga mā ngā pouako katoa o ngā taumata ako katoa.
+Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
 
 <%= view 'popup_window.js' %>

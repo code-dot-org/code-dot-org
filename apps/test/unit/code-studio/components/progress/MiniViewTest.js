@@ -34,4 +34,14 @@ describe('MiniView', () => {
     assert.equal(wrapper.find('Connect(ScriptOverview)').length, 1);
     assert.equal(wrapper.find('Connect(ScriptOverview)').props().onOverviewPage, false);
   });
+
+  it('has larger margins in group view', () => {
+    const wrapper = shallow(
+      <MiniView {...defaultProps} hasFullProgress={true} hasGroups={true}/>
+    );
+
+    const bodyDiv = wrapper.children().last();
+    assert.equal(bodyDiv.name(), 'div');
+    assert.propertyVal(bodyDiv.prop('style'), 'margin', 20);
+  });
 });

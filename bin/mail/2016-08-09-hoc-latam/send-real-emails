@@ -1,7 +1,0 @@
-#!/bin/sh
-
-# 9055 contacts
-../send-to-mailing-list --limit 10000 08-08-16-latam-hoc .latam-es-contacts.csv
-
-# 3274 contacts
-../send-to-mailing-list --limit 4000 08-08-16-brazil-hoc .latam-pt-contacts.csv

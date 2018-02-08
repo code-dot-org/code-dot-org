@@ -1,0 +1,13 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%p
+  Thanks for your interest in the Facilitator Development Program!
+  You’re currently signed into a student account. Please either
+  = link_to('create a teacher account', '/users/sign_up?user%5Buser_type%5D=teacher')
+  or
+  = link_to('go to your user settings', '/users/edit')
+  to upgrade your account from student to teacher.
+  If you’d like more information about the program before you start your application,
+  please check out the
+  = link_to('facilitator development program description', @facilitator_program_url) + '.'

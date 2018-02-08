@@ -1,10 +1,10 @@
 {
-  "continue":"Turpināt",
-  "nextLevel":"Apsveicu! Jūs pabeidzāt šo puzli.",
-  "no":"Nē",
-  "numBlocksNeeded":"Šo puzli var atrisināt ar %1 blokiem.",
-  "reinfFeedbackMsg":"Tu vari nospiest \"Mēģināt vēlreiz\" pogu, lai atgrieztos atpakaļ pie spēles spēlēšanas.",
-  "share":"Ieteikt",
-  "shareGame":"Iesaki savu speli:",
-  "yes":"Jā"
+  "continue": "Turpināt",
+  "nextLevel": "Apsveicu! Jūs pabeidzāt šo puzli.",
+  "no": "Nē",
+  "numBlocksNeeded": "Šo puzli var atrisināt ar %1 blokiem.",
+  "reinfFeedbackMsg": "Tu vari nospiest \"Mēģināt vēlreiz\" pogu, lai atgrieztos atpakaļ pie spēles spēlēšanas.",
+  "share": "Ieteikt",
+  "shareGame": "Iesaki savu speli:",
+  "yes": "Jā"
 }

@@ -5,6 +5,7 @@ exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit4/"], ["teacherForum", "https://forum.code.org/c/csd4"], ["vocabulary", "https://curriculum.code.org/csd/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit4/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd/unit4/code/"]]
 has_verified_resources true
+script_announcements [{"notice"=>"Unit 4 Updated", "details"=>"We recently launched a revised version of this unit in response to feedback from our pilot. Click to learn more.", "link"=>"http://forum.code.org/t/updated-unit-4-released/11394", "type"=>"bullhorn"}]
 
 stage 'Analysis of Design', flex_category: 'csd4_1'
 named_level 'CSD U4L01 SFLP'

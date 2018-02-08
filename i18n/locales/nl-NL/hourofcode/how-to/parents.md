@@ -1,79 +1,79 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_how_to_parents) %>
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# Doe samen met uw kind een CodeUur
 
-Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
+Maak een CodeUur thuis, of word vrijwilliger om een CodeUur in de klas van uw kind te organiseren! Zo doet u dat:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 1) Bekijk deze how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+## 2) Kies een tutorial:
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+Wij bieden een verscheidenheid van leuke, urenlange tutorials voor studenten van alle leeftijden, gemaakt door een scala aan partners. [Probeer ze uit!](%= resolve_url('/learn') %)
+
+**Alle Hour of Code tutorials zijn zelf-sturend - zodat uw kind de mogelijkheid heeft om op zijn eigen tempo en niveau te werken**
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 3) Plan your technology needs
+## 3) plan uw technologie benodigdheden
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all.
+De beste CodeUur ervaring beleeft u met computers die met internet verbonden zijn. Maar u **heeft niet** een computer nodig. Er zijn vele activiteiten die "unplugged" zijn en kunnen worden gedaan zonder enige vorm van technologie.
 
-- Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
-- **Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+- Test vooraf tutorials op computers of andere apparatuur. Zorg ervoor dat de tutorials goed werken op browsers met audio- en videoapparatuur.
+- **Wilt u samen met uw kind leren?** Probeer [paren programmering](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Programmeren is sociaal en samenwerkend.
 
-## 4) Start your Hour of Code off with an inspiring video
+## 4) Begin uw CodeUur met een inspirerende video
 
-Kick off your Hour of Code by inspiring your child and discussing how computer science impacts every part of our lives.
+Begin uw CodeUur met het inspireren van uw kind en te bespreken hoe programmeren elk deel van ons leven beïnvloedt.
 
-**Laat inspirerende video zien:**
+**Laat een inspirerende video zien:**
 
 - De originele Code.org lanceringsvideo, in samenwerking met Bill Gates, Mark Zuckerberg en NBA ster Chris Bosh (er zijn versies van [1 minuut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuten](https://www.youtube.com/watch?v=nKIu9yen5nc), en [9 minuten](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- De [CodeUur 2013 lancering video](https://www.youtube.com/watch?v=FC5FbmsH4fw), of de <% if @country == 'uk' %> [CodeUur 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [CodeUur 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama roept alle leerlingen op om mee te doen met programmeren](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Vind meer inspirerende [middelen](%= resolve_url('https://code.org/inspire') %) en [video 's](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Het maakt niet uit als programmeren voor u en uw kind nog nieuw is. Hier zijn een paar ideeën om uw CodeUur activiteit te introduceren:
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- Maak een lijst over dingen die gebruik maken van codes in het dagelijks leven.
-- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
+- Leg uit hoe technologie impact heeft op ons leven, doe dit met behulp van voorbeelden zodat zowel jongens als meisjes interesse zullen tonen (Praat over apps en technologie dat wordt gebruikt om levens te redden, mensen te helpen, en mensen in contact brengt met elkaar etc).
+- Maak een lijst van dingen die gebruik maken van codes in het dagelijks leven.
+- Zie [hier](%= resolve_url('https://code.org/girls') %) tips om meisjes ook geïnteresseerd te krijgen in programmeren.
 
-Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
+Wilt u meer ideeën? Bekijk ons [lesplan model](/files/AfterschoolEducatorLessonPlanOutline.docx) voor de beste methoden van ervaren leraren.
 
 ## 5) Code!
 
 <img src="/images/fit-700/tutorial-short-link.png" />
 
-When you've chosen the tutorial you would like to do, you can bookmark the tutorial's short link.
+Wanneer u de tutorial die u wilt volgen heeft gekozen, kunt u de korte link van de tutorial als bladwijzer instellen.
 
-**When your child come across difficulties**
+**Wanneer uw kind moeilijkheden tegenkomt**
 
-It’s okay to respond:
+Kunt u gerust reageren met:
 
 - "Ik weet het niet. Laten we het samen oplossen."
 - "Technologie werkt niet altijd op de manier waarop we dat willen."
 - "Leren programma is als het leren van een nieuwe taal; je zal het niet gelijk onder de knie hebben."
 
-## 6) Celebrate
+## 6) Vier het
 
-[Print certificates](%= resolve_url('https://code.org/certificates') %) for your child (and yourself!).
+[Print de certificaten](%= resolve_url('https://code.org/certificates') %) voor uw kind (en uzelf!).
 
 Deel foto's en video's van uw CodeUur evenement op sociale media. Gebruik de hashtag #HourOfCode en @codeorg zodat wij ook uw succes kunnen zien!
 
-**Other Hour of Code resources:**
+**Andere bronnen van Hour of Code:**
 
 - Bekijk het [CodeUur FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 **Wat komt er na het CodeUur?**
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Het CodeUur is slechts de eerste stap op een reis naar meer informatie over hoe technologie werkt en hoe software applicaties kunt maken. Zet deze reis voort:
 
-- Encourage your child to continue [to learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
+- Moedig uw kind te blijven [leren online](%= resolve_url('https://code.org/learn/beyond') %).
+- Help programmeren te [promoten](%= resolve_url('/promote') %) in uw kind zijn scholengemeenschap.
 
 <%= view :signup_button %>

@@ -1,0 +1,154 @@
+#resources {
+  margin-top: 40px;
+}
+
+.tools-info {
+  border: 1px solid;
+  border-color: #0094ca;
+  float: left;
+  max-width: 770px;
+}
+
+.tools-info.green {
+  border-color: #b9bf15;
+}
+
+.tools-img-box {
+  float: left;
+}
+
+.tools-title-bar {
+  background-color: #0094ca;
+  padding-left: 15px;
+}
+
+.tools-title-bar.green {
+  background-color: #b9bf15;
+}
+
+h1.tools-title {
+  padding: 6px;
+  margin: 0px;
+  color: white;
+}
+
+.tools-description {
+  padding: 14px 15px;
+}
+
+.tools-img-applab {
+  width: 282px;
+}
+
+.tools-img-gamelab {
+  width: 222px;
+}
+
+.tutorial-tile {
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.tutorial-tile-img {
+  width: 100%;
+}
+
+.tutorial-info {
+  border: 1px solid #949ca2;
+  padding: 20px;
+  min-height: 200px;
+}
+
+h3.tutorial-info-h {
+  margin-top: 0px;
+}
+
+.tutorial-info-start {
+  margin-top: 20px;
+}
+
+.tutorial-info-guide {
+  float: right;
+  margin-top: 25px;
+}
+
+b.purple {
+  font-size: 14px;
+  color: #7665a0;
+}
+
+button.tutorial-gray {
+  background-color: #e7e8ea;
+  border-color: #e7e8ea;
+  color: #5b6770;
+}
+
+.pl-callout {
+  border: 1px solid #0094ca;
+  height: 72px;
+  margin: 20px 0px;
+}
+
+.pl-icon {
+  background-color: #0094ca;
+  width: 72px;
+  height: 70px;
+  float: left;
+  padding: 16px 16px;
+}
+
+.pl-book {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 38px;
+}
+
+.pl-description {
+  float: left;
+  padding: 14px 15px;
+  width: 860px;
+}
+
+.pl-text-area {
+  float: left;
+}
+
+.pl-title {
+  font-size: 18px;
+  color: #0094ca;
+}
+
+.pl-button {
+  float: right;
+  margin-left: 30px;
+}
+
+@media only screen and (max-width: 960px) {
+  .tools-img {
+  	width: 100%;
+  }
+
+  .pl-callout {
+    height: auto;
+    border: none;
+  }
+
+  .pl-icon {
+    display: none;
+  }
+
+  .pl-description {
+    float: left;
+    padding: 14px 15px;
+    width: auto;
+    border: 1px solid #0094ca;
+  }
+
+  .pl-text-area {
+    float: left;
+  }
+
+  .pl-button {
+    float: left;
+    margin-left: 0px;
+  }
+}

@@ -35,8 +35,8 @@ social:
   }
   .bannerHeading {
     font-family: 'Gotham 5r', sans-serif;
-    font-size: 56px;
-    line-height: 56px;
+    font-size: 40px;
+    line-height: 40px;
     font-style: italic;
     padding: 20px 0px 20px 0px;
   }
@@ -49,7 +49,7 @@ social:
 
 #fullwidth{style: "background-color: #2799a4"}
   - if request.site == 'code.org'
-    = view :header2
+    = view :header
   - else
     #desktop-header.desktop-feature
       = view :header, variant: "desktop"

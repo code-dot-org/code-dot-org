@@ -3,16 +3,15 @@ import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import {Table, sort} from 'reactabular';
 import i18n from '@cdo/locale';
-import { styles as tableStyles } from '@cdo/apps/templates/studioHomepages/SectionsTable';
-import styleConstants from '@cdo/apps/styleConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {getSectionRows} from './teacherSectionsRedux';
 import {sortableSectionShape, OAuthSectionTypes} from "./shapes";
-import {styles as reactTableStyles} from '../projects/PersonalProjectsTable';
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import {pegasus} from "../../lib/util/urlHelpers";
-import SectionTableButtonCell from "./SectionTableButtonCell";
+import SectionActionDropdown from "./SectionActionDropdown";
 import Button from '@cdo/apps/templates/Button';
+import { stringifyQueryParams } from '../../utils';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -26,22 +25,6 @@ export const COLUMNS = {
 };
 
 const styles = {
-  table: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.border_gray,
-    width: styleConstants['content-width'],
-    backgroundColor: color.table_light_row
-  },
-  headerRow: tableStyles.headerRow,
-  col: tableStyles.col,
-  link: tableStyles.link,
-  headerRowPadding: {
-    paddingTop: 20,
-    paddingBottom: 20,
-    color: color.charcoal,
-  },
-  cell: reactTableStyles.cell,
   currentUnit: {
     marginTop: 10
   },
@@ -55,13 +38,12 @@ const styles = {
   leftHiddenCol: {
     borderLeft: 0,
   },
-  unsortableHeader: {
-    paddingLeft: 25,
-  },
+  unsortableHeader: tableLayoutStyles.unsortableHeader,
   colButton: {
     paddingTop: 20,
     paddingLeft: 20,
     paddingBottom: 20,
+    width: 40,
   },
   sectionCol: {
     paddingLeft: 20,
@@ -75,7 +57,7 @@ const styles = {
 // Cell formatters for sortable SectionTable.
 export const sectionLinkFormatter = function (name, {rowData}) {
   const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id);
-  return <a style={styles.link} href={pegasusUrl}>{rowData.name}</a>;
+  return <a style={tableLayoutStyles.link} href={pegasusUrl}>{rowData.name}</a>;
 };
 
 export const courseLinkFormatter = function (course, {rowData}) {
@@ -83,8 +65,8 @@ export const courseLinkFormatter = function (course, {rowData}) {
   return (
     <div>
       <a
-        href={rowData.assignmentPaths[0]}
-        style={styles.link}
+        href={`${rowData.assignmentPaths[0]}${stringifyQueryParams({section_id: rowData.id})}`}
+        style={tableLayoutStyles.link}
       >
         {rowData.assignmentNames[0]}
       </a>
@@ -92,8 +74,8 @@ export const courseLinkFormatter = function (course, {rowData}) {
         <div style={styles.currentUnit}>
           <div>{i18n.currentUnit()}</div>
           <a
-            href={assignmentPaths[1]}
-            style={styles.link}
+            href={`${rowData.assignmentPaths[1]}${stringifyQueryParams({section_id: rowData.id})}`}
+            style={tableLayoutStyles.link}
           >
             {assignmentNames[1]}
           </a>
@@ -118,14 +100,14 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
   let sectionCode = '';
   let pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id + '/print_signin_cards');
   // For managed logins, just show the provider name rather than the login code.
-  if (rowData.loginType === OAuthSectionTypes.clever){
+  if (rowData.loginType === OAuthSectionTypes.clever) {
     sectionCode = i18n.loginTypeClever();
   } else if (rowData.loginType === OAuthSectionTypes.google_classroom) {
     sectionCode = i18n.loginTypeGoogleClassroom();
   } else {
     sectionCode = rowData.code;
   }
-  return <a style={styles.link} href={pegasusUrl}>{sectionCode}</a>;
+  return <a style={tableLayoutStyles.link} href={pegasusUrl}>{sectionCode}</a>;
 };
 
 export const studentsFormatter = function (studentCount, {rowData}) {
@@ -136,7 +118,7 @@ export const studentsFormatter = function (studentCount, {rowData}) {
       href={pegasusUrl}
       color={Button.ButtonColor.gray}
     /> :
-    <a style={styles.link} href={pegasusUrl}>{rowData.studentCount}</a>;
+    <a style={tableLayoutStyles.link} href={pegasusUrl}>{rowData.studentCount}</a>;
   return studentHtml;
 };
 
@@ -176,7 +158,7 @@ class SectionTable extends Component {
   };
 
   actionCellFormatter = (temp, {rowData}) => {
-    return <SectionTableButtonCell sectionData={rowData} handleEdit={this.props.onEdit}/>;
+    return <SectionActionDropdown sectionData={rowData} handleEdit={this.props.onEdit}/>;
   };
 
   // The user requested a new sorting column. Adjust the state accordingly.
@@ -200,9 +182,7 @@ class SectionTable extends Component {
   };
 
   getColumns = (sortable) => {
-    const colHeaderStyle = {...styles.headerRow, ...styles.headerRowPadding};
-    const colStyle = {...styles.cell, ...styles.sectionCol};
-
+    const colStyle = {...tableLayoutStyles.cell, ...styles.sectionCol};
     return [
       {
         //displays nothing, but used as initial sort
@@ -219,7 +199,7 @@ class SectionTable extends Component {
         property: 'name',
         header: {
           label: i18n.section(),
-          props: {style: colHeaderStyle},
+          props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
@@ -231,7 +211,7 @@ class SectionTable extends Component {
         property: 'grade',
         header: {
           label: i18n.grade(),
-          props: {style: colHeaderStyle},
+          props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
@@ -243,7 +223,7 @@ class SectionTable extends Component {
         property: 'course',
         header: {
           label: i18n.course(),
-          props: {style: {...colHeaderStyle, ...styles.unsortableHeader}},
+          props: {style: {...tableLayoutStyles.headerCell, ...styles.unsortableHeader}},
         },
         cell: {
           format: courseLinkFormatter,
@@ -254,7 +234,7 @@ class SectionTable extends Component {
         property: 'studentCount',
         header: {
           label: i18n.students(),
-          props: {style: colHeaderStyle},
+          props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
@@ -266,7 +246,7 @@ class SectionTable extends Component {
         property: 'loginType',
         header: {
           label: i18n.loginInfo(),
-          props:{style: {...colHeaderStyle, ...styles.unsortableHeader}}
+          props:{style: {...tableLayoutStyles.headerCell, ...styles.unsortableHeader}}
         },
         cell: {
           format: loginInfoFormatter,
@@ -276,22 +256,17 @@ class SectionTable extends Component {
       {
         property: 'actions',
         header: {
-          props:{style: colHeaderStyle},
+          props:{style: tableLayoutStyles.headerCell},
         },
         cell: {
           format: this.actionCellFormatter,
-          props: {style: {...styles.cell, ...styles.colButton}}
+          props: {style: {...tableLayoutStyles.cell, ...styles.colButton}}
         }
       }
     ];
   };
 
   render() {
-    const sortableOptions = {
-      // Dim inactive sorting icons in the column headers
-      default: {color: 'rgba(148, 156, 162, 0.8 )'}
-    };
-
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
@@ -305,7 +280,7 @@ class SectionTable extends Component {
     return (
       <Table.Provider
         columns={columns}
-        style={styles.table}
+        style={tableLayoutStyles.table}
       >
         <Table.Header />
         <Table.Body rows={sortedRows} rowKey="id" />

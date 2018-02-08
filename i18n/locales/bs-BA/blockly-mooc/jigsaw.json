@@ -1,10 +1,10 @@
 {
-  "continue":"Nastavi",
-  "nextLevel":"Čestitamo! Ovaj zadatak je riješen.",
-  "no":"Ne",
-  "numBlocksNeeded":"Ovaj zadatak se može riješiti sa %1 blokova.",
-  "reinfFeedbackMsg":"Možeš pritisnuti gumb \"Pokušaj ponovno\" i vratiti se igrati svoju igru.",
-  "share":"Podijeli",
-  "shareGame":"Podijeli svoju igru:",
-  "yes":"Da"
+  "continue": "Nastavi",
+  "nextLevel": "Čestitamo! Ovaj zadatak je riješen.",
+  "no": "Ne",
+  "numBlocksNeeded": "Ovaj zadatak se može riješiti sa %1 blokova.",
+  "reinfFeedbackMsg": "Možeš pritisnuti gumb \"Pokušaj ponovno\" i vratiti se igrati svoju igru.",
+  "share": "Podijeli",
+  "shareGame": "Podijeli svoju igru:",
+  "yes": "Da"
 }

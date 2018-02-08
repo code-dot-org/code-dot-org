@@ -1,3 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list  3-25-nyc-cs4all-esp ../mailing-common/test-params-us.csv

@@ -143,7 +143,7 @@
         na iedere ruit.
       2-3 Artist Loops New 15_instruction: Tekenen iets leuks.
       2-3 Artist Loops New 2_instruction: Hier is de code die je hebt gebruikt om
-        dat vierkant te tekenen. Wat gebeurt er wanneer je een REPEAT blok gebruikt
+        dat vierkant te tekenen. Wat gebeurt er wanneer je een HERHAAL blok gebruikt
         om die code 4 keer uit te voeren?
       2-3 Artist Loops New 9_instruction: Tekene een eenvoudige V waarbij de zijden
         50 pixels zijn om de pijl te voltooien.
@@ -320,10 +320,9 @@
         slechts twee blokken? (Hint: Maak een lus met een blok "herhaal keer".)'
       2-3 Maze 12 (old)_instruction: Breng me naar het varken, nu met het 'herhalen
         keer' blok!
-      2-3 Maze 12 - One Move Block_instruction: |-
-        Get to the pig! But this time, you
-        can only use one `move forward` block. Do you see any other blocks that could
-        help you?
+      2-3 Maze 12 - One Move Block_instruction: Bereik het biggetje! Ditmaal kan je
+        enkel gebruik maken van het `ga vooruit` blokje. Zie je andere blokken die
+        je zouden kunnen helpen?
       2-3 Maze 12_instruction: 'Kun je deze vijf blokken met slechts twee blokken
         vervangen? (Hint: Maak een lus met een blok "herhaal keer".)'
       2-3 Maze 13 (old)_instruction: Breng me naar het biggetje, nu met het 'herhaal
@@ -865,26 +864,21 @@
       4-5 While Loops Assessment 1_instruction: Er zijn veel gaten en hopen. Help
         me met vullen en verwijderen om de grond gelijk te krijgen.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
-      Alien Defender_instruction: 'Project Idea: Make a defender game in Play Lab!'
+      Alien Defender_instruction: 'Projectidee: Maak een defender game in Play Lab!'
       AllTheThings Applab - Turtle move with button_instruction: |-
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
-      'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_instruction': |-
-        Make
-        a 3x5 letter 'A'. The widget is setup with the incorrect dimensions. Your
-        first task is to set the second byte to the 8-bit binary code for 5: 0000
-        0101. Then start entering pixel data.
+      'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_instruction': 'Maak
+        een 3x5 letter ''A''. De widget is ingesteld met de foutieve afmetingen. Je
+        eerste taak is om de tweede byte in te stellen op de 8-bit binaire code van
+        5: 0000 0101. Begin dan pixel data in te voeren.'
       'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4_instruction': |-
-        We
-        start you out with the 4x4 image Maddie created in the video. Your task is
-        to fill a 4x4 grid with colors using 12-bits per pixel. Here are the requirements:
-        Row 1 - fill with shades of red. Row 2 - shades of green. Row 3 - shades of
-        blue. Row 4 - shades of gray.
-      'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_instruction': |-
-        We
-        start you with the 4x2 image Maddie was creating, but we've left out the
-        last two squares. Finish off the image by figuring out which two colors are
-        missing and encode them.
+        We beginnen met een 4x4 afbeelding die Maddie in de video gecreëerd heeft. Jouw taak is om het 4x4 raster op te vullen, gebruik makende van 12 bits/pixel. Dit zijn de vereisten:
+        Rij 1 - invullen met tinten rood, Rij 2 - tinten groen, Rij 3 - tinten blauw, Rij 4 - tinten grijs.
+      'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_instruction': We
+        beginnen met de 4x2 afbeelding die Maddie aan het creëren was, maar we lieten
+        de laatste twee vierkanten leeg. Vervolledig de afbeelding door uit te zoeken
+        welke twee kleuren missen en codeer ze.
       App Lab test_instruction: test
       AppLab_test02_instruction: |-
         One sentence summary of the activity. Click to
@@ -1166,8 +1160,8 @@
         Modify the code so that all of the console.log
         commands print true
       CSD U3 L5 Freeplay_instruction: |-
-        Change the value of petalSize multiple times.
-        How does it change your drawing?
+        Verander de waarde van `petalSize` meerdere keren.
+        Hoe beïnvloedt dit je tekening?
       CSD U3 Mouse Input Bee 2_instruction: Do this
       CSD U3 Random Animation_instruction: |-
         Use randomNumber() to animate Gary's
@@ -1309,19 +1303,44 @@
       CSD U4 - Events Template_instruction: |-
         Add a large red button to your screen
         using Design Mode. (Click for full instructions.)
-      CSD U5 black white images pixelation 2_instruction: |-
-        Draw a smiley face (click
-        here to see image)
-      CSD U5 black white images pixelation 3_instruction: |-
-        Change the width and height
-        sliders to find the image (click here to see more)
-      CSD U5 black white images pixelation 4_instruction: |-
-        Add eyebrows to the smiley
-        face (click here to see the image)
-      CSD U5 black white images pixelation 5_instruction: Draw anything you like
-      CSD U5 black white images pixelation_instruction: |-
-        Complete the X shape by
-        typing 0s and 1s
+      CSD U5 black white images pixelation 2_instruction: Tegen een lachend gezicht
+        (klik hier om de afbeelding te zien)
+      CSD U5 black white images pixelation 3_instruction: Verander de breedte en hoogte
+        slijders om de afbeelding te vinden (klik hier om meer te zien)
+      CSD U5 black white images pixelation 4_instruction: Voeg wenkbrauwen toe aan
+        het lachende gezicht (klik hier om een afbeelding te zien)
+      CSD U5 black white images pixelation 5_instruction: Teken wat je maar wil
+      CSD U5 black white images pixelation_instruction: Vervolledig de X vorm door
+        0'en en 1'en in te geven
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -1425,15 +1444,36 @@
       CSDU6 - Arrays - lengthMinus1_instruction: |-
         Use list.length - 1 to log the
         last item in the array to the console. (Click to see full instructions)
-      CSDU6 - for loop - color buttons with for_instruction: |-
-        Write the contents
-        of the array to the screen in numerical order. (Click to see full instructions)
+      CSDU6 - for loop - color buttons with for_instruction: Schrijf de inhoud van
+        de array naar het scherm in numerieke volgorde. (Klik hier om de volledige
+        instructies te zien)
       CSDU6 - for loop - color buttons_instruction: |-
         Write the contents of the array
         to the screen in numerical order. (Click to see full instructions)
       CSDU6 - for loop - why for_instruction: |-
         Write the contents of the array to
         the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays rainbow_instruction: |-
+        Write the contents of the array to the screen
+        in numerical order. (Click to see full instructions)
+      CSDU6 arrays random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select icons_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select rainbow_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_instruction: |-
+        Write a program that displays a
+        randomly chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays variable_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -1472,7 +1512,7 @@
         instructions) "
       CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions) "
-      CSP student contact info_instruction: Please enter your email address.
+      CSP student contact info_instruction: Gelieve je e-mailadres in te geven.
       CSPU5 Add Screens to Chaser Game_instruction: |-
         Recreate the game from the "Chaser
         Game" with a Welcome Screen and Game Over Screen. (Click to see full instructions.)
@@ -1818,9 +1858,9 @@
       CSPU5_U3 - Loops - 3_instruction: |-
         Change the if statement to a while loop
         so the program will run until it rolls a 6. (Click to see full instructions)
-      CSPU5_U3 - Loops - 4_instruction: |-
-        Use the Debug Commands to make a list of
-        all the values rolled before a 6. (Click to see full instructions)
+      CSPU5_U3 - Loops - 4_instruction: Gebruik de Foutopsporing Commando's om een
+        lijst te zien van alle gerolde waarden voor een 6. (Klik hier voor volledige
+        instructies)
       CSPU5_U3 - Loops - 5_instruction: |-
         Add code inside the while loop which will
         update the variable num so that the condition will eventually become false.
@@ -2618,8 +2658,8 @@
       Course 4 Artist Binary 3_instruction: Kan jij dit patroon tekenen met een lus
         van een drie-cijferige binaire tekenreeks?
       Course 4 Artist Binary 4_instruction: Elke binaire tekenreeks is een rij van
-        dit plaatje. Kan je ze herschikken het een glimlach tekent in plaats van de
-        frons?
+        dit plaatje. Kan je ze herschikken zodat het een lachend gezicht tekent in
+        plaats van een fronsend?
       Course 4 Artist Binary 5_instruction: Welke 6 cijferige binaire reeks, 11 keer
         herhaald, tekent dit plaatje?
       Course 4 Artist Binary 6_instruction: Wat is de korste binaire reeks die je
@@ -2712,11 +2752,9 @@
         \r
         Hint nodig? Klik hier.
       Course 4 Artist For Loops Challenge_a_instruction: |-
-        Can you figure out how
-        to use all of the things you've learned to create this image?\r
+        Kan je uitvinden hoe je alle dingen kan gebruiken die je reeds geleerd hebt om deze afbeelding te maken?\r
         \r
-        Need
-        a hint? Click here.
+        Een hint nodig? Klik hier.
       Course 4 Artist For Loops inspire_instruction: 'Vrije opdracht inspiratie: Je
         hebt nu alles geleerd wat je nodig hebt om zo''n patroon te maken! Als deze
         afbeelding je inspireert, probeer dan iets soortgelijks te maken. Of maak
@@ -3141,9 +3179,8 @@
       Course 4 Play Labs For Loops 1_instruction: Zullen we de hond alle getallen
         van 1 tot en met 100 laten uitspreken. Gebruik een rekenen met lus en de teller
         blok om de teller variabele uit te spreken bij elke uitvoering van de lus.
-      Course 4 Play Labs For Loops 2_instruction: |-
-        This time, help Olive the Cat
-        count only the odd numbers from 1 to 101.
+      Course 4 Play Labs For Loops 2_instruction: Help Olive de kat om enkel de oneven
+        nummers van 1 tot en met 101 te tellen.
       Course 4 Play Labs For Loops 3_instruction: Als we tellen met grotere getallen,
         dan kunnen verder tellen in de zelfde tijd. Probeer de hond te laten tellen
         van 10 tot en met 1000 in stappen van 10.
@@ -3201,15 +3238,13 @@
       Course 4 Playlab For Loop Freeplay_instruction: 'Vrij spelen: Gebruik alles
         wat je tot nu toe hebt geleerd om een spel te maken waarbij je een ''for''
         loop gebruikt!'
-      Course 4 Playlab For Loops 4b_instruction: |-
-        Can you change the **increment**
-        in one of the loops so that the race is a tie?
-      Course 4 Playlab For Loops 5b_instruction: |-
-        Adjust the interval on these `for`
-        loops so that the two characters end in the exact same place.
-      Course 4 Playlab For Loops 6b_instruction: "Edit this `for` loop to create\na
-        game that's fun for you to play! \\r\nPress \"Run\" and click Madame Unicorn\nas
-        many times as you can.  Can you beat our score of 24? "
+      Course 4 Playlab For Loops 4b_instruction: Kan je de **increment** wijzigen
+        in één van de lussen wijzigen zodat de wedstrijd eindigt op een gelijke stand?
+      Course 4 Playlab For Loops 5b_instruction: Pas het interval in deze `herhaal`
+        lussen aan zodat deze twee spelers op exact dezelfde plaats eindigen.
+      Course 4 Playlab For Loops 6b_instruction: "Bewerk deze `for` lus en maak\neen
+        spel dat leuk is voor jou om te spelen!\\r\nKlik op \"Uitvoeren\" en op Mevrouw
+        Eenhoorn\nzoveel je maar kan. Kan je onze topscore van 24 verslaan? "
       Course 4 SCF 1_instruction: Gebruik de functies om vier rijen zeshoeken te tekenen.
         Zie je hoe de even rijen naar rechts zijn opgeschoven?
       Course 4 SCF 1a_instruction: Kan je bedenken hoe je alle nectar kan verzamelen
@@ -3257,11 +3292,59 @@
         beneden met y pixels. X en y kunnen positief of negatief zijn.
       Course 4 Variables Assessment_instruction: Kan je deze afbeelding maken met
         een variabele voor de kanten? Elke lijn moet 50 pixels lang zijn.
-      Course1BeePuzzle12_instruction: Get three nectars and then make two honey
+      Course1BeePuzzle12_instruction: Neem drie eenheden nectar en maar vervolgens
+        twee eenheden honing
       Course1MazeAssessment1_instruction: Dit is een test!\r Beweeg me eerst één kant
         op, daarna een andere kant, om me bij het varken te krijgen
       Course1MazeAssessment2_instruction: Dit is een test!\r Beweeg me eerst één kant
         op, daarna een andere kant, om me bij het varken te krijgen.
+      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
+        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars10_instruction: |-
+        Free Play time! Here are all of the variables
+        we've played with so far in this stage, as well as a few more in case you
+        want them. \r
+        \r
+        Notice that there are now so many blocks in our toolbox
+        that they need to be organized!  Here, we've put each piece into an appropriate
+        category.  Take some time to explore everything that is available. When you're
+        done browsing, make a game or story using repeats, variables, and events.  \r
+        \r
+        Hint:
+        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars2_instruction: |-
+        The race in that last puzzle wasn't very
+        fair! Change the `dog_speed` variable to make sure you can collect more flags
+        than Cat. The first to collect 10 flags wins!
+      CourseF_PlayLab_vars3_instruction: Dit is een nieuw soort spel! Gebruik de pijltjes
+        naar links en rechts om te beweeg en het pijltje omhoog om te springen. Kijk
+        of je alle vlaggen kunt verzamelen.
+      CourseF_PlayLab_vars4_instruction: 'Nu gebruiken we de variabele "hoogte" om
+        de hoogte van de sprong te beheren. Verander de "hoogte"-variabele zodat de
+        hond hoog genoeg kan springen om alle vlaggen te pakken. Tip: de nieuwe vlaggen
+        zijn 200 pixels hoog.'
+      CourseF_PlayLab_vars5_instruction: 'Laten we een spel maken! Allereerst heb
+        je een score nodig. Gebruik de "zet punten op"-blok om de score op 10 te zetten. '
+      CourseF_PlayLab_vars6_instruction: |-
+        Hoe moeten we punten scoren in ons spel?
+        Voeg elke keer als de hond de kat raakt met een vuurbal 1 punt toe.
+        Gebruik de "wanneer actor 2 iets raakt-gebeurtenis om je score te verhogen. Je kunt je score verhogen door "score = score + 1".
+        Als je score 10 is, heb je de level gehaald.
+      CourseF_PlayLab_vars7_instruction: |-
+        Hoe moeten we punten scoren in ons spel?
+        Voeg elke keer als de hond de kat raakt met een vuurbal 1 punt toe.
+        Gebruik de "wanneer actor 2 iets raakt-gebeurtenis om je score te verhogen. Je kunt je score verhogen door "score = score + 1".
+        Als je score 10 is, heb je de level gehaald.
+      CourseF_PlayLab_vars8_instruction: |-
+        Hoe moeten we punten scoren in ons spel?
+        Voeg elke keer als de hond de kat raakt met een vuurbal 1 punt toe.
+        Gebruik de "wanneer actor 2 iets raakt-gebeurtenis om je score te verhogen. Je kunt je score verhogen door "score = score + 1".
+        Als je score 10 is, heb je de level gehaald.
+      CourseF_PlayLab_vars9_instruction: |-
+        Nice, now let's make sure this game isn't
+        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
+        2), you should lose a point. Start with 10 points so it's not too hard. Let
+        your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution_instruction: Instructies
       Crack a Caesar Cipher_instruction: Instructies
       ECSPD Binary Odometer_instruction: |-
@@ -3529,9 +3612,8 @@
         Introducing the setPosition command!
         Replace the moveTo in the button-click event handler to use setPosition to
         move the button itself to a random location when it's clicked.
-      Find the Wizard_instruction: |-
-        Build whatever you want. This is an example of
-        a number-guessing game!
+      Find the Wizard_instruction: Bouw wat je maar wilt. Dit is één voorbeeld van
+        een getal raad spelletje!
       Food Fight!_instruction: "We've added one last function for you. \\r\n\\r\nUse\nan
         \"if\" statement to program your game to call the \"level_up\" function\nonly
         when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
@@ -3540,8 +3622,11 @@
       Food Fight_instruction: |-
         You can make whatever you want in play lab! This is
         an example of a game you can make in play lab.
-      FoodFight_instruction: This is an example of a game you can make in play lab.
+      FoodFight_instruction: Dit is één voorbeeld van een spel dat je kan maken in
+        Play Lab.
       Frequency Analysis_instruction: Test
+      Function intro Ryan_instruction: Gebruik de 'brug bouwen'-functie twee keer
+        om een pad naar de fakkel te maken.
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -3552,9 +3637,8 @@
       Geometric Sun_instruction: |-
         Project Idea: Create a pattern using geometric
         ideas like shapes. This requires persistence and planning!
-      Get To The Goal_instruction: |-
-        Build whatever you want. This is an example of
-        a number-guessing game!
+      Get To The Goal_instruction: Bouw wat je maar wilt. Dit is één voorbeeld van
+        een getal raad spelletje!
       'Grade 4 Example PlayLab Project #1_instruction': |-
         Take a look at this project.  Do
         you see how it was made?
@@ -3606,8 +3690,8 @@
         try to make something similar. Otherwise, create something all your own.\\r\n\n\\r\nWant
         to know how our inspiration pattern was made? "
       InspirationalArtwork_instruction: |-
-        If this picture inspires you, try to make
-        something similar. Otherwise, create something all your own.
+        Als dit beeld jou inspireert, probeer dan iets gelijkaardigs te maken.
+        Of maak iets volledig op jezelf.
       'Internet Simulator: Broadcast Mode_instruction': |
         Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
@@ -3749,7 +3833,8 @@
         lussen om te verplaatsen!
       K-1 Bee Loops Assessment 2_instruction: Pak nectar om honing te maken met behulp
         van lussen!
-      K-1 Bee Puzzle 12_instruction: Get three nectars and then make two honey
+      K-1 Bee Puzzle 12_instruction: Neem drie eenheden nectar en maar vervolgens
+        twee eenheden honing
       K-1 Building a Foundation Assessment_instruction: Bouw een piramide van drie
         niveaus, er zijn geen andere aanwijzingen, dus speel gewoon met de stukjes
         tot het je lukt!
@@ -3909,6 +3994,8 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      MC Agent Freeplay_instruction: "**Vrij spel:**  Tijd om zelf op ontdekking te
+        gaan!"
       MC HOC 2016 Level 10_instruction: Het is tijd om je eigen Minecraft te gaan
         maken! Zet wezens neer en laat ze doen wat jij wil. Veel Plezier!
       MC HOC 2016 Level 2-2_instruction: De kip beweegt niet. Zet 'Beweeg vooruit'
@@ -3944,77 +4031,90 @@
         heb je gewonnen!
       MC HOC 2016 Village Test_instruction: Oh nee! De zombies hebben je ingesloten!
         Programmeer de ijzeren golem om de zombies op te jagen en aan te vallen!
-      MC_2017_Ryan_02_instruction: |-
-        Help the player get out by using loops to get
-        the Agent to the pressure plate.
+      MC_2017_Ryan_02_instruction: Gebruik lussen om de Agent naar de drukplaat te
+        leiden, zo help je de speler.
       MC_HOC_2017 Agent Test_instruction: |-
-        Click "Run" to move the player to the
-        orange square inside of the house.
+        Klik op "Uitvoeren" om de speler te verplaatsen
+        naar het oranje vierkantje binnenin het huis.
       MC_HOC_2017_01_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
+        Klik op "Uitvoeren" om de speler naar het oranje
+        vierkantje binnenin het huis te verplaatsen.
       MC_HOC_2017_01_Cole_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
+        Je moet tijdens deze reis alle hulpmiddelen verzamelen.
+        Beweeg rond met de **pijltjestoetsen**, en bereik de kist op het pad om te winnen
       MC_HOC_2017_01_Kiki_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Kiki_instruction: |-
-        Get the Agent to the pressure plate, then
-        get the player to the orange square.
-      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_instruction: |-
-        Change the loop from the last puzzle to help the
-        Agent make a path over the wider part of this river.
-      MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_05_instruction: |-
-        Use a function to help the Agent get to the pressure
-        plate.
-      MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
-      MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
-      MC_HOC_2017_06_Cole_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_06_Kiki_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_07_Cole_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07_Kiki_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07a_Kiki_instruction: Clear the path to the orange square.
-      MC_HOC_2017_08_Cole_instruction: |-
-        Change the provided function to work for
-        this biome.
-      MC_HOC_2017_08_Kiki_instruction: Change the function to work for this puzzle.
-      MC_HOC_2017_09_Cole_instruction: |-
-        Program the Agent to clear the player's
-        path.
-      MC_HOC_2017_09_Kiki_instruction: |-
-        Program the Agent to clear the player's
-        path and get to the pressure plate.
-      MC_HOC_2017_10_Cole_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_Cole_old_instruction: |-
-        Create a function to help you finish
-        this minecart.
-      MC_HOC_2017_10_Kiki_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_Ryan_03_instruction: |-
-        Now use loops to help The Agent build a bridge
-        over the river by placing blocks in the water.
-      MC_HOC_2017_Ryan_05_instruction: |-
-        Destroy these cacti so that the player can
-        get to the goal.
-      MC_HOC_Kiki_02_instruction: Get The Agent to the pressure plate.
+        Klik op "Uitvoeren" om de speler naar het oranje
+        vierkantje binnenin het huis te verplaatsen.
+      MC_HOC_2017_01_RETRY_instruction: 'Leid de Agent naar de drukplaat, druk op
+        ''Uitvoeren'' en gebruik vervolgens de pijltoetsen om de speler uit het huis
+        en naar de kist te bewegen. '
+      MC_HOC_2017_02_instruction: Leid de Agent naar de drukplaat.
+      MC_HOC_2017_02_Cole_instruction: 'Beweeg de Agent naar de drukplaat zodat {currentPlayerName}
+        de kaart kan bereiken. '
+      MC_HOC_2017_02_Kiki_instruction: Leid de Agent naar de drukplaat zodat de speler
+        het oranje vakje kan bereiken.
+      MC_HOC_2017_02_Will_instruction: Leid de Agent naar de drukplaat.
+      MC_HOC_2017_03_Cole_instruction: 'Geef de Agent een code om de poort te openen. '
+      MC_HOC_2017_03_Kiki_instruction: Leid de Agent naar de drukplaat.
+      MC_HOC_2017_04_instruction: Verander de lus van de vorige puzzel om de Agent
+        te helpen een brug over dit bredere deel van de rivier te bouwen.
+      MC_HOC_2017_04POINT5_Cole_instruction: Leid de Agent naar de drukplaat.
+      MC_HOC_2017_04POINT5_RYAN_instruction: Leid de Agent naar de drukplaat.
+      MC_HOC_2017_04_Cole_instruction: Leid de Agent naar de drukplaat.
+      MC_HOC_2017_04_Kiki_instruction: Leid de Agent naar de drukplaat.
+      MC_HOC_2017_05_instruction: Gebruik een functie om de Agent naar de drukplaat
+        te leiden.
+      MC_HOC_2017_05_Cole_instruction: Leid de speler naar de spade.
+      MC_HOC_2017_05_Josh_instruction: Leid de speler naar de spade.
+      MC_HOC_2017_05_Kiki_instruction: Leid de speler naar het oranje vakje.
+      MC_HOC_2017_06_Cole_instruction: Corrigeer deze code om de Agent een brug over
+        de rivier te laten bouwen.
+      MC_HOC_2017_06_Josh_instruction: Corrigeer deze code om de Agent een brug over
+        de rivier te laten bouwen.
+      MC_HOC_2017_06_Kiki_instruction: Corrigeer deze code om de Agent een brug over
+        de rivier te laten bouwen.
+      MC_HOC_2017_07_Cole_instruction: Vernietig het ijs en leid {currentPlayerName}
+        naar het mijnkarretje.
+      MC_HOC_2017_07_Kiki_instruction: Gebruik een functie om het pad naar het oranje
+        vakje vrij te maken.
+      MC_HOC_2017_07a_Kiki_instruction: Maak het pad naar het oranje vakje vrij.
+      MC_HOC_2017_08_Cole_instruction: Verander de gegeven functie zodat deze werkt
+        voor deze bioom.
+      MC_HOC_2017_08_Kiki_instruction: Verander de functie zodat deze werkt voor deze
+        puzzel.
+      MC_HOC_2017_08_RY_instruction: Gebruik de functies om voorbij de lava te komen.
+      MC_HOC_2017_08_Will_instruction: Gebruik de functies om voorbij de lava te komen.
+      MC_HOC_2017_09_Cole_instruction: Programmeer de Agent om het pad van de speler
+        vrij te maken.
+      MC_HOC_2017_09_Kiki_instruction: Programmeer de Agent om het pad van de speler
+        vrij te maken en deze naar de drukplaat te leiden.
+      MC_HOC_2017_10_Cole_instruction: Maak een functie om je te helpen dit mijnkarretje
+        af te maken.
+      MC_HOC_2017_10_Cole_old_instruction: Maak een functie om je te helpen dit mijnkarretje
+        af te maken.
+      MC_HOC_2017_10_Kiki_instruction: Maak een functie om je te helpen dit mijnkarretje
+        af te maken.
+      MC_HOC_2017_10_RETRY_instruction: Maak een functie om je te helpen dit mijnkarretje
+        af te maken.
+      MC_HOC_2017_10_RYAN_instruction: Maak een functie om je te helpen dit mijnkarretje
+        af te maken.
+      MC_HOC_2017_10_RYAN2_instruction: Maak een functie om je te helpen dit mijnkarretje
+        af te maken.
+      MC_HOC_2017_13_Cole_instruction: "**Vrij spel:**  Tijd om zelf op ontdekking
+        te gaan!"
+      MC_HOC_2017_4.5v2_instruction: Leid de Agent naar de drukplaat.
+      MC_HOC_2017_Ali_instruction: Gebruik de functies om voorbij de lava te komen.
+      MC_HOC_2017_FP10x10_instruction: "**Vrij spel:** Durf jij jezelf uit te dagen
+        om alle diamanten in dit level te verzamelen? "
+      MC_HOC_2017_FP10x10_RE_instruction: "**Vrij spel:** Durf jij jezelf uit te dagen
+        om alle diamanten in dit level te verzamelen? "
+      MC_HOC_2017_FP20x20_instruction: "**Vrij spel:**  Tijd om zelf op ontdekking
+        te gaan!"
+      MC_HOC_2017_Ryan_03_instruction: Gebruik nu lussen om de Agent te helpen een
+        brug over de rivier te plaatsen door blokken in het water te leggen.
+      MC_HOC_2017_Ryan_05_instruction: Vernietig deze cactussen zodat de speler het
+        doel kan bereiken.
+      MC_HOC_Kiki_02_instruction: Leid de Agent naar de drukplaat.
       MSM Big Game Empty_instruction: |-
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -4354,23 +4454,22 @@
         with a router, and explores issues in routing and DNS
       New Artist Project_instruction: Teken iets geweldigs! Je code wordt opgeslagen
         als een project waaraan je op elk moment kunt werken.
-      New Basketball Project_instruction: |-
-        Create your own Basketball game. You can
-        change all the rules. When you're done, click Finish to let friends try your
-        game on their phones.
-      New Bounce Project_instruction: |-
-        Create your own Bounce game. You can change
-        all the visuals and the rules. When you're done, click Finish to let friends
-        try your game on their phones.
+      New Basketball Project_instruction: Creëer je eigen basketbal spel. Je kan alle
+        regels veranderen. Wanneer je gedaan hebt, klik dan op Klaar om je vrienden
+        je spel uit te laten proberen op hun telefoons.
+      New Bounce Project_instruction: Maak je eigen Stuiterspel. Je kan alle plaatjes
+        en regels wijzigen. Klik wanneer je klaar bent op Voltooien om je vrienden
+        je spel te laten proberen op hun telefoons.
       New Course 4 Artist Functions Level 4_instruction: Gebruik de functie "teken
         een vierkant" om dit patroon te tekenen.
       New Gumball Project_instruction: Maak wat je maar wilt en deel het!
       New Ice Age Project_instruction: Maak wat je maar wilt en deel het!
       New Infinity Project_instruction: Maak wat je maar wilt en deel het!
+      New Minecraft Hero Project_instruction: "**Vrij spel:**  Tijd om zelf op ontdekking
+        te gaan!"
       New Sports Project_instruction: |-
-        Create your own game! You're in charge here:
-        you can change all the rules, mix and match sports, get creative! When you're
-        done, click Finish to let friends try your game on their phones.
+        Creëer je eigen spel! Jij bent hier de baas:
+        je kan alle regels wijzigen. Meng verschillende sporten of bouw er één na. Wees creatief! Klik wanneer je klaar bent op 'Voltooien' om je vrienden je spel te laten proberen op hun telefoons.
       Ninjacat Demo B (copy 1)_instruction: |
         \r
         Let’s begin by exploring a simple
@@ -4523,9 +4622,8 @@
         Here's another puzzle to practice loops. What happens
         if you use the repeat block to run the code already provided on the workspace
         4 times?
-      PS - test - pixelation_instruction: |-
-        Complete the X shape by typing 0s and
-        1s
+      PS - test - pixelation_instruction: Vervolledig de X vorm door 0'en en 1'en
+        in te voeren
       PS FR test 7-25_instruction: 'Here are your instructions for this free response.  '
       PS Log test - Define and use turnAround_instruction: |-
         Define a function called
@@ -4669,9 +4767,8 @@
         Extend the functionality of
         one of the effects, or create an entirely new one of your own. (Click to see
         full instructions)
-      Project - Make Your Own Clicker Game_instruction: |-
-        Complete your clicker game!
-        (Click to see full instructions)
+      Project - Make Your Own Clicker Game_instruction: Voltooi je eigen klik spel!
+        (Klik hier voor volledige instructies)
       Project - Your Own Multi Screen App_instruction: |-
         Create your multi-screen
         app. (Click to see full instructions.)
@@ -4685,12 +4782,10 @@
       Quantum Bee_instruction: Paarse bloemen hebben 1 of 0 nektar, maar je weet niet
         welke. Zorg dat je geen nektar van een paarse bloem haalt, als die geen nektar
         heeft. Controleer of de nektar gelijk is aan 1 met een "als blok".
-      Robot Doodle_instruction: |-
-        Project Idea: Create a picture of something familiar
-        from the real world. This requires persistence and planning!
-      Robot Drawing_instruction: |-
-        Project Idea: Create a picture of something familiar
-        from the real world. This requires persistence and planning!
+      Robot Doodle_instruction: 'Project Idee: Creëer een afbeelding of iets dergelijks
+        van de echte wereld. Dit vereis doorzetting en planning!'
+      Robot Drawing_instruction: 'Project Idee: Creëer een afbeelding of iets dergelijks
+        van de echte wereld. Dit vereis doorzetting en planning!'
       Robot_instruction: |-
         Project Idea: Create a picture of something familiar from
         the real world. This requires persistence and planning!
@@ -4722,6 +4817,10 @@
       RyanTest3_instruction: |-
         This level has shape-shifting turned on! Refresh to
         see different variants.
+      SG Add Subgoals practice_instruction: Teken zo efficiënt mogelijk een 3x3 rooster
+        voor en rechts van de schildpad. De schildpad zou op zijn beginpositie moeten
+        eindigen, kijkende in dezelfde richting als in het begin. (Klik voor volledige
+        instructies)
       SG U3L03 - draw rect function_instruction: |-
         Write a function called drawRectangle().\r
         (Click
@@ -4753,76 +4852,65 @@
       SG U3L04 - snowflake_instruction: |-
         Create the design by breaking it down into
         layers of functions. (Click to see full instructions)
-      SG U3L06 - moveForwardwithParams_instruction: |-
-        Use a single command to move
-        the turtle to the edge of the screen. (Click to see full instructions)
-      SG U3L06 Challenge 1 triangle_instruction: |-
-        Use the parameterized versions
-        of the turtle commands to create a triangle with sides 100 pixels long. (Click
-        to see full instructions)
-      SG U3L06 Challenge 2 purple square_instruction: |-
-        Read the documentation for
-        penColor() and penWidth() before using them to draw the blue square.
-      SG U3L06 Challenge 3 fill pink_instruction: |-
-        Fill in the background of the
-        screen with your favorite color. (Click to see full instructions)
+      SG U3L06 - moveForwardwithParams_instruction: Gebruik een enkel commando om
+        de schildpad naar de rand van het scherm te sturen. (Klik hier voor volledige
+        instructies)
+      SG U3L06 Challenge 1 triangle_instruction: Gebruik geparametriseerde versies
+        van de schildpad commando's om driehoeken te maken met zijden van 100 pixels.
+        (Klik om volledige instructies te zien)
+      SG U3L06 Challenge 2 purple square_instruction: Lees de documentatie voor penColor()
+        en penWidth() vooraleer ze te gebruiken om het blauwe vierkant te tekenen.
+      SG U3L06 Challenge 3 fill pink_instruction: Vul de achtergrond van het scherm
+        in met je favoriete kleur. (Klik om volledige instructies te zien)
       SG U3L06 Challenge 4 bullseye_instruction: |-
         Create the bullseye using hexadecimal
         colors and dot(). (Click to see full instructions)
       SG U3L06 Challenge 5 overlapping circles_instruction: |-
-        This image is created
-        just using dot() and penColor() but, how are we going to get those circles
-        to be transparent?  If you haven't gotten the hint yet: check out the documentation!
+        Deze afbeelding is gecreëerd, gebruikmakende van enkel enkel dot() en penColor(). Maar hoe gaan we die cirkels transparant krijgen?
+        Als je de hint nog niet gekregen hebt: bekijk de documentatie!
       SG U3L06 Challenge 6 squiggles_instruction: |
-        Read the documentation for the
-        "arcLeft" and "arcRight" commands and then draw the squiggles as shown.
-      SG U3L06 Challenge 7 smiley face_instruction: |-
-        Use turnTo() and moveTo() to
-        help draw a smiley face. (Click to see full instructions)
+        Bekijk de documentatie voor de "arcLeft" en "arcRight" comando's en teken vervolgens de krul zoals getoond.
+      SG U3L06 Challenge 7 smiley face_instruction: Gebruik turnTo() en moveTo() om
+        het lachend gezichtje te tekenen. (Klik hier om de volledige instructies te
+        zien)
       SG U3L06 Challenge 8 make your own_instruction: |-
         Create a drawing of your own.
         (Click to see full instructions)
-      SG U3L07 - Free Play Loops and Random_instruction: |-
-        Free Play! Use what you
-        learned from loops and random to make your own little scene. Have fun.
-      SG U3L07 - allSeaGrass_instruction: |-
-        Add 50 pieces of seagrass to the image
-        by writing drawAllSeagrass with a loop. (Click to see full instructions)
+      SG U3L07 - Free Play Loops and Random_instruction: Vrij spelen! Gebruik wat
+        je geleerd hebt van 'lussen' en 'willekeurig' en maak je eigen kleine scène.
+        Veel plezier.
+      SG U3L07 - allSeaGrass_instruction: Voeg 50 stukken zeegras toe aan de afbeelding
+        door drawAllSeagrass te schrijven in een lus. (Klik om volledige instructies
+        te zien)
       SG U3L07 - bubbles_instruction: |-
         Add 200 bubbles to the image by writing drawAllBubbles
         with a loop. (Click to see full instructions)
-      SG U3L07 - createTriangleParam_instruction: |-
-        Define a function that accepts
-        a parameter to match the function calls and complete the image. (Click to
-        see full instructions)
+      SG U3L07 - createTriangleParam_instruction: Maak een functie aan die een parameter
+        accepteert zodat deze bij de functie-aanroepen pas en vervolledig de afbeelding.
+        (Klik om alle instructies te zien)
       SG U3L07 - fish_instruction: |-
         Add 15 fish to the image by writing drawAllFish
         with a loop. (Click to see full instructions)
-      SG U3L07 - introSquare_instruction: |-
-        Use a loop to draw a square. Then add
-        another loop to draw many squares each one rotated some amount. (Click to
-        see full instructions)
-      SG U3L07 - loopsWithRandom_instruction: |-
-        Increase the number of iterations
-        to fill the screen with white. (Click to see full instructions)
+      SG U3L07 - introSquare_instruction: Gebruik een lus om een vierkant te tekenen.
+        Voeg vervolgens een andere lus toe om vele vierkanten te tekenen die elk ietwat
+        gedraaid zijn. (Klik voor volledige instructies)
+      SG U3L07 - loopsWithRandom_instruction: Verhoog het aantal herhaling om het
+        scherm te vullen met wit. (Klik voor volledige instructies)
       SG U3L07 - randomDots1_instruction: |-
         Increase the number of iterations to fully
         fill the screen with random dots. (Click to see full instructions)
-      SG U3L07 - randomSquare_instruction: |-
-        Draw the figure using a loop. (Click
-        to see full instructions)
+      SG U3L07 - randomSquare_instruction: Teken de figuur gebruik makende van een
+        lus. (Klik voor volledige instructies)
       SG U3L07 - seaGrass_instruction: |-
         Add a parameter to drawSeagrass that controls
         the number of waves in the grass. (Click to see full instructions)
       SG U3L07 - seaStar_instruction: |-
         Add 5 sea stars to the image by writing drawAllSeaStars
         with a loop. (Click to see full instructions)
-      SG U3L07 - sunBeams_instruction: |-
-        Add 100 sunbeams to the image by writing
-        drawAllSunbeams with a loop. (Click to see full instructions)
-      SG U3L07 - topDownDesign_instruction: |-
-        Get comfortable with the structure of
-        this program, then move on to the next exercise. (Click to see full instructions)
+      SG U3L07 - sunBeams_instruction: Voeg 100 zonnestralen toe aan de afbeelding
+        door drawAllSunbeams in een lus te schrijven. (Klik voor volledige instructies)
+      SG U3L07 - topDownDesign_instruction: Word vertrouwd met de structuur van dit
+        programma, ga dan door naar de volgende oefening. (Klik voor volledige instructies)
       SG U3L07 More Subgoals_instruction: |-
         Read the documentation for penColor()
         and penWidth() before using them to draw the blue square.
@@ -4836,19 +4924,20 @@
       SG U3L08 - drawSquareWithParam_instruction: |-
         Use drawSquare() to recreate the
         image of both squares, this time using parameters. (Click to see full instructions)
-      SG U3L08 - fish_instruction: |-
-        Add a parameter to drawFish that changes the
-        size of the fish drawn. (Click to see full instructions)
-      SG U3L08 - freePlay_instruction: |-
-        Keep adding to your image by making more
-        calls to your new functions with parameters. (Click to see full instructions)
+      SG U3L08 - fish_instruction: Voeg een parameter toe aan drawFish dat de grootte
+        van de getekende vis wijzigt. (Klik voor volledige instructies)
+      SG U3L08 - freePlay_instruction: Blijf dingen toevoegen aan je afbeelding door
+        je nieuwe functies meermaals aan te roepen met parameters. (Klik voor volledige
+        instructies)
       SG U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
-      SG U3L08 - introUnderTheSea_instruction: |-
-        Add an extra fish, starfish, and
-        piece of seagrass to the image. Look at, but don't change, the functions
-        that create them. (Click to see full instructions)
+      SG U3L08 - introUnderTheSea - recovery_instruction: Voeg een extra vis, zeevis,
+        en stuk zeegras toe aan de afbeelding. Bekijk de functies de ze creëert, maar
+        verander ze niet. (Klik om de volledige instructies te zien)
+      SG U3L08 - introUnderTheSea_instruction: Voeg een extra vis, zeevis en stukje
+        zeegras toe aan de afbeelding. Bekijk de functies die hen creëert, maar verander
+        ze niet. (Klik voor volledige instructies)
       SG U3L08 - multiParamFish_instruction: |-
         Add three parameters to your drawFish
         function to accept red, green and blue values to make your fish different
@@ -4856,28 +4945,35 @@
       SG U3L08 - paramsToStarfish_instruction: |-
         Add a parameter to drawStarfish that
         changes the size of the starfish drawn. (Click to see full instructions)
-      SG U3L08 - randomInput_instruction: |-
-        Use the randomNumber() blocks to test
-        the functions you designed with random input. (Click to see full instructions)
+      SG U3L08 - randomInput_instruction: Gebruik randomNumber() blokken om de functies
+        te testen die je ontworpen hebt met willekeurige invoer. (Klik voor volledige
+        instructies)
       SG U3L08 - seaGrass_instruction: |-
         Add a parameter to drawSeagrass that changes
         the size of the piece of seagrass drawn. (Click to see full instructions)
-      SG U3L08 - squareTwoParams_instruction: |-
-        Call drawSquare() to complete the
-        drawing of two squares. (Click to see full instructions)
-      SG U3L08 comments_instruction: |-
-        Use the randomNumber() blocks to test the functions
-        you designed with random input. (Click to see full instructions)
-      SG U3L2 Using Simple Commands_instruction: |-
-        Draw a 1x1 square above and to
-        the left of the turtle's starting position. Click to see full instructions.
-      SG U3L2_Turtle3by3Grid_instruction: |-
-        Draw a 3x3 grid to the front and right
-        of the turtle as efficiently as possible. The turtle should end at its original
+      SG U3L08 - squareTwoParams_instruction: Roep drawSquare() aan om de tekening
+        van twee vierkanten te vervolledigen. (Klik om volledige instructies te zien)
+      SG U3L08 comments_instruction: Gebruik randomNumber() blokken om de functies
+        te testen die je ontworpen hebt met willekeurige invoer. (Klik om volledige
+        instructies te zien)
+      SG U3L08 how to add comments_instruction: Gebruik randomNumber() blokken om
+        de functies te testen die je ontworpen hebt met willekeurige invoer. (Klik
+        om volledige instructies te zien)
+      SG U3L2 Using Simple Commands part 1_instruction: |-
+        Draw a 1x1 square above
+        and to the left of the turtle's starting position. Click to see full instructions.
+      SG U3L2 Using Simple Commands_instruction: Teken een 1x1 vierkant boven en links
+        van de schildpad zijn startpositie. Klik om alle instructies te zien.
+      SG U3L2_Add-subgoals_instruction: |-
+        Draw a 3x3 grid to the front and right of
+        the turtle as efficiently as possible. The turtle should end at its original
         location, facing its original direction. (Click to see full instructions)
-      SG U3L2_TurtleSquare_right_instruction: |-
-        Draw a square to the front and to
-        the right of the starting location. (Click to show full instructions)
+      SG U3L2_Turtle3by3Grid_instruction: Teken zo efficiënt mogelijk een 3x3 rooster
+        voor en rechts van de schildpad. De schildpad zou op zijn beginpositie moeten
+        eindigen, kijkende in dezelfde richting als in het begin. (Klik voor volledige
+        instructies)
+      SG U3L2_TurtleSquare_right_instruction: Teken een vierkant boven en rechts van
+        je startpositie. (Klik om volledige instructies te bekijken)
       SGU3L07 - randomDots1_instruction: |-
         Increase the number of iterations to fully
         fill the screen with random dots. (Click to see full instructions)
@@ -4966,7 +5062,7 @@
         blok en het ga vooruit blok. Elke zijde moet 100 pixels lang zijn.
       StepIntro_instruction: Here's how to use the "Step" button.
       Test Play Lab_instruction: This is a test play lab level.
-      Test of comment block_instruction: Drag out the subgoal label block you want.
+      Test of comment block_instruction: Versleep het subdoel blokje dat je wilt.
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
         many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
         keeps using the `fill` block until the ground is even?  "
@@ -5946,6 +6042,9 @@
       U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
+      U3L08 - introUnderTheSea with comments_instruction: Voeg een extra vis, zeevis,
+        en stuk zeegras toe aan de afbeelding. Bekijk de functies de ze creëert, maar
+        verander ze niet. (Klik om de volledige instructies te zien)
       U3L08 - introUnderTheSea_instruction: |-
         Add an extra fish, starfish, and piece
         of seagrass to the image. Look at, but don't change, the functions that create
@@ -5976,6 +6075,9 @@
       U3L08 - triangleTwoParams_instruction: |-
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
+      U3L08 how to add comments_instruction: Gebruik randomNumber() blokken om de
+        functies te testen die je ontworpen hebt met willekeurige invoer. (Klik voor
+        volledige instructies)
       U3L1 - Simulation - Template_instruction: |-
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
@@ -6750,9 +6852,8 @@
         you add are saved to the database.  Verify that after restarting your app,
         the contacts you added no longer show in the app, but still exist in the database.
         (Click to see full instructions)
-      U4 Model App_instruction: |-
-        Add a large red button to your screen using Design
-        Mode. (Click for full instructions.)
+      U4 Model App_instruction: Voeg een grote rode knop toe aan je scherm met behulp
+        van Design Mode. (Klik voor volledige instructies)
       U4 Model Design 1_instruction: |-
         Add a large red button to your screen using
         Design Mode. (Click for full instructions.)
@@ -6848,6 +6949,10 @@
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
+      Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
+      Valentine_playlab_01_instruction: "Program Kiki (Actor 1) to move left and\nright
+        when the left and right arrows are pressed. When Kiki is clicked, she\nshould
+        throw hearts towards her friends. "
       Vigenere_instruction: Test
       WhileAdventure_instruction: |-
         Our adventurer wants to collect coins. Can you
@@ -6897,6 +7002,8 @@
         If looping a 3 degree turn 60 times makes a half circle, which of
         these blocks of code will make an additional quarter circle for the corners?
       aEfreeplay_instruction: Free Play!
+      allHallows2017_instruction: Vang de Code.org werknemers in het potlodendoosje
+        door een vierkant met zijde van 320 pixels te tekenen!
       allthethings data blocks test_instruction: |-
         Please sign in to test applab levels
         (By design, applab levels only work if signed in. Normally, we make people
@@ -6930,10 +7037,10 @@
       allthethings_ttscsp_instruction: |-
         Debug the program by fixing the logical error
         within the program. (Click to see full instructions)
-      artistDebugVideo1_instruction: Use the `repeat` loop to add waves to the water.
-      artistFunctionsVideo1_instruction: |-
-        Follow the instructions to make your own
-        function.
+      artistDebugVideo1_instruction: Gebruik de `herhaal` lus om golven toe te voegen
+        aan het water.
+      artistFunctionsVideo1_instruction: Volg de instructies om je eigen functie te
+        maken.
       artistLoopsK1_instruction: |-
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
@@ -6972,8 +7079,8 @@
         a picture of what you think the Artist saw on stage.
       beeDebugVideo1_instruction: Kan je een lus gebruiken om alle nectar te verzamelen?
       birdsDebugVideo1_instruction: |-
-        Trace the path and lead me to the silly pig.
-        Avoid TNT or feathers will fly!
+        Overtrek het pad en leid me naar het zotte zwijntje.
+        Vermijd TNT of de veren zullen eraf vliegen!
       bounce_1_instruction: Plak een blok aan het "als pijltje naar links" blok en
         druk op 'Uitvoeren'. Verplaats het batje met behulp van de pijl naar links
         om het doel te bereiken.
@@ -6981,11 +7088,10 @@
         blok aan het "als bal het doel raakt" en "als de bal het batje mist" blok
         om er een spel van te maken. Zie hoeveel punten je kan krijgen voordat je
         tegenstander twee punten krijgt.
-      bounce_10_basketball_instruction: |-
-        Now there is a goal at the top! Attach the
-        "score point" and "score opponent point" blocks to the "when ball in
-        goal" and "when ball misses hand" blocks to make a game. See how many points
-        you can score before your opponent scores twice.
+      bounce_10_basketball_instruction: Het doel staat nu bovenaan. Koppel de "scoor
+        punt" en "punt voor de tegenstander" blokken aan de "Wanneer bal in het doel
+        is" en "wanneer bal hand mist" blokken om een spel te maken. Bekijk hoeveel
+        punten je kan scoren vooraleer je tegenstander tweemaal scoort.
       bounce_10_sports_instruction: |-
         Now there is a goal at the top! Attach the "score
         point" and "score opponent point" blocks to the "when ball in goal" and
@@ -7008,14 +7114,13 @@
       bounce_12_instruction: Maak je eigen stuiterspel. Je kan alle plaatjes en regels
         wijzigen. Klik wanneer je klaar bent op Voltooien om je vrienden je spel te
         laten proberen op hun telefoons.
-      bounce_12_basketball_instruction: |-
-        Create your own Basketball game. You can
-        change all the rules. When you're done, click Finish to let friends try your
-        game on their phones.
-      bounce_12_sports_instruction: |-
-        Create your own game! You're in charge here:
-        you can change all the rules, mix and match sports, get creative! When you're
-        done, click Finish to let friends try your game on their phones.
+      bounce_12_basketball_instruction: Creëer je eigen basketbal spel. Je kan alle
+        regels veranderen. Wanneer je gedaan hebt, klik dan op Klaar om je vrienden
+        je spel uit te laten proberen op hun telefoons.
+      bounce_12_sports_instruction: 'Creëer je eigen spel! Jij bent hier de baas:
+        je kan alle regels wijzigen. Meng verschillende sporten of bouw er één na.
+        Wees creatief! Klik wanneer je klaar bent op ''Voltooien'' om je vrienden
+        je spel te laten proberen op hun telefoons.'
       bounce_1_basketball_instruction: Plak een blok aan het "als pijltje naar links"
         blok en druk op 'Uitvoeren'. Verplaats de hand met behulp van de pijl naar
         links om het doel te bereiken.
@@ -7047,163 +7152,134 @@
         player! Attach a block to the "when ball hits player" block to hit the flag.
       bounce_6_instruction: Nu is het doel boven. Om deze puzzel op te lossen moet
         je blokken plakken aan het "Als de bal raakt" blok.
-      bounce_6_basketball_instruction: |-
-        Now the flag is on the top. You need to attach
-        blocks to both of the "when ball hits" blocks to solve this puzzle.
-      bounce_6_sports_instruction: |-
-        Now the flag is on the top. You need to attach
-        blocks to both of the "when ball hits" blocks to solve this puzzle.
+      bounce_6_basketball_instruction: De vlag staat nu bovenaan. Om deze puzzel op
+        te lossen dien je blokken te koppelen aan de "wanneer bal hand raakt" blok.
+      bounce_6_sports_instruction: De vlag staat nu bovenaan. Om deze puzzel op te
+        lossen dien je blokken te koppelen aan de "wanneer bal hand raakt" blok.
       bounce_7_instruction: Plak blokken aan elk "als" blok. Laat de bal stuiteren
         totdat hij het doel raakt.
-      bounce_7_basketball_instruction: |-
-        Attach blocks to each of the "when" blocks.
-        Bounce the ball until it hits the flag.
-      bounce_7_sports_instruction: |-
-        Attach blocks to each of the "when" blocks.
-        Bounce the ball until it hits the flag.
+      bounce_7_basketball_instruction: Koppel blokken aan ieder "als" blok. Stuiter
+        de bal totdat het de vlag raakt.
+      bounce_7_sports_instruction: Koppel blokken aan ieder "als" blok. Stuiter de
+        bal totdat het de vlag raakt.
       brendan hackathon level_instruction: |-
         these are the instructions for my level.  you
         should do this level and have a good time.
       collector example_instruction: |-
         Put these blocks in order to collect all of
         the gold and solve the puzzle.
-      collectorDebugVideo2_instruction: |-
-        Put these blocks in order to collect all
-        of the gold and solve the puzzle.
-      collectorSkinVideo1_instruction: Collect all four piles to pass this level.
-      collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      collectorDebugVideo2_instruction: Zet de blokken in volgorde om al het goud
+        te verzamelen en de puzzel op te lossen.
+      collectorSkinVideo1_instruction: Verzamel de vier stapels om dit level te voltooien.
+      collectorSkinVideo2_instruction: Verzamel één pot goud om dit level te voltooien.
       course1_artist_loops_challenge1_instruction: |-
-        You can use a loop to draw many
-        lines in a row.\r
+        Je kan een lus gebruiken om meerdere lijnen in één keer te tekenen.\r
         \r
-        Can you draw a house? Make it look just the way you
-        like it!  Try looking for patterns that repeat!
-      course1_artist_loops_challenge2_instruction: |-
-        Let's play a game! Draw as many
-        X's as you can! Can you get 3 in a row?
+        Kan je een huis tekenen? Pas het aan zodat je iets krijgt naar jouw smaak! Zoek naar patronen die zich herhalen!
+      course1_artist_loops_challenge2_instruction: Laten we een spel spelen! Teken
+        zoveel mogelijk X'en als je maar kan! Kan er 3 in een rij tekenen?
       course1_artist_loops_challenge3_instruction: |-
-        "Can you help me make two bird
-        houses?"
-      course1_artist_loops_challenge4_instruction: |-
-        "It's time to toss the dice!
-        Can you help me draw these?"
-      course1_collector_loops_challenge1_instruction: |-
-        "Can you help me spot some
-        bugs? I know which way I want to go, but I'm not sure how many steps to take."
-      course1_collector_loops_challenge2_instruction: "This time you can only use\none
-        of each arrow block. Get all of the treasure! "
-      course1_collector_loops_challenge3_instruction: "This time you can only use\none
-        of each arrow block. Get all of the treasure! "
+        "Kan je me helpen twee vogelhuisjes
+        te maken?"
+      course1_artist_loops_challenge4_instruction: '"Tijd om met de dobbelstenen te
+        gooien! Kan je me helpen ze te tekenen?"'
+      course1_collector_loops_challenge1_instruction: '"Kan je me helpen een paar
+        fouten te vinden? Ik weet welke richting ik uit moet, maar ik ben niet zeker
+        hoeveel stappen ik moet nemen."'
+      course1_collector_loops_challenge2_instruction: 'Je kan deze keer slechts één
+        van ieder pijltjesblok gebruiken. Verzamel alle schatten! '
+      course1_collector_loops_challenge3_instruction: 'Je kan deze keer slechts één
+        van ieder pijltjesblok gebruiken. Verzamel alle schatten! '
       course1_collector_loops_challenge4_instruction: |-
-        Let's get the treasure! Help
-        me across each row then come back to start the next row. Can you find a pattern?
-      course1_maze_debugging_challenge1_instruction: |-
-        Debug this level. Remove the
-        extra blocks and add the missing blocks. Get the bird to the pig!
+        Laten we de schatten verzamelen! Help me door iedere rij en kom iedere keer terug om aan de volgende rij te beginnen.
+        Kan jij een patroon vinden?
+      course1_maze_debugging_challenge1_instruction: Debug dit level. Verwijder de
+        extra blokken en voeg de missende blokken toe. Laat de vogel het zwijntje
+        bereiken!
       course1_maze_debugging_challenge2_instruction: |-
-        Debug this level. These are
-        the right blocks, but they're in the wrong order!
-      course1_maze_seq_challenge1_instruction: |-
-        "Trace the path and lead me to the
-        silly pig. Avoid TNT or the feathers will fly!"
-      course1_maze_seq_challenge2_instruction: |-
-        You can only move up to four times
-        in each direction. Can you find a path before you run out of blocks?
-      course1_playlab_events_challenge1_instruction: |-
-        "Where are my friends hiding?
-        Can you write code to show the rest of my friends?"
-      course1_playlab_events_challenge2_instruction: |-
-        "Let's have a party! Give
-        my friends something to do when you click or tap them."
-      course2_artist_nestedLoops_challenge1_instruction: |-
-        Can you figure out how
-        to make a picture like this?
-      course2_artist_nestedLoops_challenge2_instruction: |-
-        Can you figure out how
-        to make a picture like this?
+        Debug dit level. Dit zijn
+        de juiste blokken, maar in de verkeerde volgorde!
+      course1_maze_seq_challenge1_instruction: '"Volg het pad en leid me naar het
+        dwaze varkentje. Vermeid TNT of de veren zullen eraf vliegen!"'
+      course1_maze_seq_challenge2_instruction: Je kan slechts 4 keer bewegen in elke
+        richting. Vind je een pad voordat je blokken op zijn?
+      course1_playlab_events_challenge1_instruction: '"Waar verstoppen mijn vrienden
+        zich? Kan je code schrijven om m''n overblijvende vrienden tevoorschijn te
+        toveren?"'
+      course1_playlab_events_challenge2_instruction: '"Laten we feesten! Geef mijn
+        vrienden iets te doen wanneer je op hen klikt of tapt."'
+      course2_artist_nestedLoops_challenge1_instruction: Kan jij uitvinden hoe een
+        afbeelding als deze te maken?
+      course2_artist_nestedLoops_challenge2_instruction: Kan jij uitvinden hoe een
+        afbeelding als deze te maken?
       course2_artist_prog_challenge1_instruction: |-
-        Draw rooms for each of the animals.
-        There are many different ways to solve this puzzle, so have some fun. The
-        shortest possible solution is 6 blocks, but use as many as you like!
-      course2_artist_prog_challenge2_instruction: |-
-        *Help me paint the yellow lines
-        on this road!*
+        Teken kamers voor elk dier.
+        Er zijn vele manieren om deze puzzel op te lossen, geniet er dus van.
+        De kortst mogelijke oplossing bevat slechts 6 blokken. Je kan gebruik maken van zoveel blokken je maar wil.
+      course2_artist_prog_challenge2_instruction: Help me de gele lijnen op deze weg
+        schilderen! *
       course2_bee_conditionals_challenge1_instruction: |-
         Collect all of the nectar
         or make all the honey.
       course2_bee_conditionals_challenge2_instruction: |-
         Collect all of the nectar
         or make all the honey.
-      course2_collector_loops_challenge2_instruction: |-
-        Let's hunt for treasure -
-        using loops! Help the collector by debugging this code. Get all of the treasure!
-      course2_collector_prog_challenge1_instruction: |-
-        Look carefully! Can you collect
-        all *10* pieces of treasure?
-      course2_collector_prog_challenge2_instruction: |-
-        There are 20 pieces of treasure
-        to be found. Collect at least half to finish this challenge!
-      course2_harvester_loops_challenge1_instruction: Collect all of the corn.
+      course2_collector_loops_challenge2_instruction: Verzamel alle schatten!
+      course2_collector_prog_challenge1_instruction: Kijk aandachtig! Kan jij alle
+        *10* stukken schat verzamelen?
+      course2_collector_prog_challenge2_instruction: Der zijn 20 stukken schat te
+        vinden. Verzamelen ten minste de helft om deze uitdaging te voltooien!
+      course2_harvester_loops_challenge1_instruction: Verzamel alle maïs.
       course2_harvester_loops_challenge2_instruction: |-
-        Collect all of the lettuce.
-        Avoid the trees and fields!
-      course2_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops\nto
-        find his acorn! "
-      course2_maze_programming_challenge1_instruction: |-
-        *"The pig is hiding! Can
-        you help me find a way around?"*
-      course2_maze_programming_challenge2_instruction: |-
-        Sometimes there is more than
-        one way to solve the same problem. Sometimes it's faster to go backwards
-        than it is to go forwards!
-      course2_maze_seq_challenge1_instruction: |-
-        Trace the path and lead me to the
-        silly pig. Avoid TNT or the feathers will fly!
-      course2_maze_seq_challenge2_instruction: |-
-        You can only move up to four times
-        in each direction. Can you find a path before you run out of blocks?
+        Verzamel alle sla.
+        Vermijd de bomen en de velden!
+      course2_maze_loops_challenge1_instruction: 'Nu wil Scrat proberen gebruikmaken
+        van lussen om zijn eikel te vinden! '
+      course2_maze_programming_challenge1_instruction: '*" Het varken verstopt zich!
+        Kan jij me helpen een omweg te vinden?"*'
+      course2_maze_programming_challenge2_instruction: Soms is er meer dan één manier
+        om hetzelfde probleem op te lossen. Soms is het sneller om achterwaarts te
+        gaan dan voorwaarts!
+      course2_maze_seq_challenge1_instruction: Volg het pad en leid me naar het dwaze
+        varkentje. Vermeid TNT of de veren zullen eraf vliegen!
+      course2_maze_seq_challenge2_instruction: Je kan slechts 4 keer bewegen in elke
+        richting. Vind je een pad voordat je blokken op zijn?
       course2_playlab_stage17_1_instruction: Kun je Jorge de Hond (actor 1) "Hallo"
         laten zeggen?
       course2_playlab_stage17_10_instruction: |-
-        Add blocks to the `when run` event
-        to change the background and the speed of Waddles.\r
+        Voeg blokken toe aan de `als gestart` gebeurtenis om de achtergrond en de snelheid van Waddles te wijzigen.\r
         \r
-        Play the game and
-        move Waddles with the arrows until you score.
-      course2_playlab_stage17_11_instruction: |-
-        Create your own story. When you're
-        done, click Finish to let friends try your story on their phones.
+        Speel het spel en beweeg Waddles met de pijltjes totdat je scoort.
+      course2_playlab_stage17_11_instruction: Creëer je eigen verhaal. Wanneer je
+        gedaan hebt, klik dan op Voltooien zodat je vrienden je verhaal kunnen uitproberen
+        op hun telefoons.
       course2_playlab_stage17_2_instruction: |-
-        Can you make Jorge (actor 1) say something,
-        then have Olive the Cat (actor 2) say something?
-      course2_playlab_stage17_3_instruction: |-
-        Can you write a program to make Jorge
-        (actor 1) move toward Olive the Cat?
-      course2_playlab_stage17_4_instruction: |-
-        Can you write a program that makes
-        Jorge (actor 1) move to Olive the Cat, and have Olive say "Hello" when Jorge
-        reaches her?
-      course2_playlab_stage17_5_instruction: |-
-        Can you write a program to make Octavia
-        say "Hi" when she is clicked?
-      course2_playlab_stage17_6_instruction: |-
-        Now, write a program to make Waddles
-        move around using the up / down / left /right keys to hit all of the targets!
+        Kan je Jorge (speler 1) iets laten zeggen,
+        om vervolgens Olive de kat (speler 2) iets te laten zeggen?
+      course2_playlab_stage17_3_instruction: Kan je een programma schrijven om Jorge
+        (speler 1) voorwaarts naar Olive de kat te laten bewegen?
+      course2_playlab_stage17_4_instruction: Kan je een programma schrijven dat Jorge
+        (speler 1) naar Olive de Kat laat bewegen, en die Olive "Hello" laat zeggen
+        wanneer Jorge haar berijkt?
+      course2_playlab_stage17_5_instruction: Kan je een programma schrijven om Octavia
+        "Hi" te laten zeggen wanneer op haar wordt geklikt?
+      course2_playlab_stage17_6_instruction: Schrijf nu een programma om Waddles rond
+        te laten bewegen met de boven / onder / links / rechts toetsen om alle doelwitten
+        te raken!
       course2_playlab_stage17_7_instruction: |-
         The `repeat forever` block allows you
         to run code over and over forever. Can you attach blocks to move Chomp the
         Dino (actor 2) up and down forever?
       course2_playlab_stage17_8_instruction: |-
-        Can you have Waddles (actor 1) say
-        "Ouch!" and play a "hit" sound if he runs into Chomp? \r
+        Kan je Waddles (speler 1) "Ouch!" laten zeggen
+        en een "raak" geluid afspelen wanneer hij op Chomp loopt?\r
         \r
-        When you're
-        done, play the game to make that happen.
+        Wanneer je klaar bent, speel dan het spel om dat te laten gebeuren.
       course2_playlab_stage17_9_instruction: |-
-        Can you add a block to score a point
-        when Waddles runs into Octavia (actor 3)? \r
-        Play the game and move Waddles
-        with the arrows until you score!
+        Kan je een blok toevoegen om een punt te scoren
+        wanneer Waddles op Octavia (speler 3) loopt? \r
+        Speel het spel en verplaats Waddles
+        met de pijltjestoetsen totdat je scoort!
       course3_artist_concept_challenge1_instruction: |-
         Feel free to use trial and
         error. You are not expected to get the image perfect the first time.   Want
@@ -7217,8 +7293,8 @@
         Try this code to see how
         it works, then make the program your own!
       course3_bee_debugging_challenge1_instruction: |-
-        Watch how the bee gets the nectar.
-        Can you use the same kind of pattern to help the bee make all of the honey?
+        Bekijk hoe de bijen de nektar verzamelt.
+        Kan je hetzelfde soort patroon gebruiken om de bij alle honing te laten maken?
       course3_bee_functions_challenge1_instruction: |-
         You are on your own for this
         challenge. This could "bee" harder than it looks!
@@ -7246,71 +7322,60 @@
         Use If/Else blocks to follow
         the curvy path. At each corner, use the `remove 1` command in a loop to clear
         the piles.
-      course3_maze_debugging_challenge1_instruction: |-
-        *"Am I just going around in
-        circles?"*
-      course3_maze_debugging_challenge2_instruction: |-
-        *"If I turn too often, I might
-        get dizzy! Help me reach the acorn with only four `turn` commands."*
+      course3_maze_debugging_challenge1_instruction: '*"Ga ik enkel rond in cirkels?"*'
+      course3_maze_debugging_challenge2_instruction: '*"Als ik te vaak ronddraai,
+        kan ik duizelig worden! Helm me de eikel te bereiken met slechts vier `draai`
+        commando''s."*'
       course3_maze_until_challenge1_instruction: |-
         No hints, just challenge. Get the
         zombie to the sunflower.
       course3_playLab_challenge1_instruction: |-
-        Something should happen when you get
-        enough points or when you run out of points. Add some code to the `win game`
-        and `lose game` functions to make the game work the way it should. \r
-        Click
-        the hints for ideas!
+        Er zou iets moeten gebeuren wanneer je voldoende punten gescoord hebt of net wanneer je te weinig punten hebt.
+        Voeg code toe aan de `win spel` en `verlies spel` functies om het spel te laten werken zoals het zou moeten.\r
+        Klik op de hints voor ideeën!
       course3_playlab_challenge2_instruction: |-
         Can you figure out how this "Fortune
         Teller" app works? Click `MORE` to see your challenges.
       course3_playlab_stage16_1_instruction: Kan je deze hond "hallo wereld" laten
         zeggen?
-      course3_playlab_stage16_2_instruction: |-
-        Can you make the dog say something
-        and then have the cat say something afterwards?
-      course3_playlab_stage16_3_instruction: |-
-        Can you write a program to make this
-        dog move to the cat?
-      course3_playlab_stage16_4_instruction: |-
-        Can you write a program that makes
-        the dog move to the cat, and have the cat say "hello" when the dog reaches
-        him?
+      course3_playlab_stage16_2_instruction: Kan je de hond iets laten zeggen om daarna
+        de kat iets te laten zeggen?
+      course3_playlab_stage16_3_instruction: Kan je een programma schrijven dat deze
+        hond naar de kat laat bewegen?
+      course3_playlab_stage16_4_instruction: Kan je een programma schrijven dat de
+        hond naar de kat laat bewegen en de kat "hello" laat zeggen wanneer de hond
+        hem bereikt?
       course3_playlab_stage16_5_instruction: Kan je een blok toevoegen zodat de inktvis
         blij wordt?
-      course3_playlab_stage16_6_instruction: |-
-        Create your own story. When you're
-        done, click Finish to let friends try your story on their phones.
+      course3_playlab_stage16_6_instruction: Creëer je eigen verhaal. Wanneer je gedaan
+        hebt, klik dan op Voltooien zodat je vrienden je verhaal kunnen uitproberen
+        op hun telefoons.
       course3_playlab_stage17_1_instruction: Kan je een programma schrijven waardoor
         de inktvis "hallo" zegt wanneer je op hem klikt?
-      course3_playlab_stage17_2_instruction: |-
-        Can you write a program to make Waddles
-        move around using the up / down / left /right keys to hit all of the targets?
+      course3_playlab_stage17_2_instruction: Kan je een programma schrijven om Waddles
+        te laten bewegen met de rondbewegen met de boven / beneden / links / rechts
+        toetsen om alle doelwitten te raken?
       course3_playlab_stage17_3_instruction: |-
-        The "repeat forever" block allows
-        you to run code continuously. Can you attach blocks to move this dinosaur
-        up and down repeatedly?
-      course3_playlab_stage17_4_instruction: |-
-        Can you have Waddles say "Ouch!"
-        and play a "hit" sound if he runs into the dinosaur, and then move him with
-        the arrows to make that happen?
+        Het "blijven herhalen" blokje laat je toe
+        om code continu te laten uitvoeren. Kan je blokken toevoegen om de dinosaurus
+        continue naar boven en onder te laten bewegen?
+      course3_playlab_stage17_4_instruction: Kan je Waddles "Ouch!" laten zeggen en
+        een "raak" geluid afspelen wanneer hij de dinosaurus raakt, en hem verplaatsen
+        met de pijltjestoetsen om dat te laten gebeuren?
       course3_playlab_stage17_5_instruction: |-
-        Can you add a block to score a point
-        when Waddles runs into the octopus, and then move him with the arrows until
-        you score?
-      course3_playlab_stage17_6_instruction: |-
-        Can you add blocks to change the background
-        and the speed of Waddles, and then move him with the arrows until you score?
-      course3_playlab_stage17_7_instruction: |-
-        Create your own story. When you're
-        done, click Finish to let friends try your story on their phones.
-      course4_artist_binary_challenge1_instruction: |-
-        You can only use each binary
-        value (0 or 1) once each in this puzzle. Try using nested loops to complete
-        this drawing.
-      course4_artist_binary_challenge2_instruction: |-
-        Are you persistent enough to
-        restore this logo back to normal?
+        Kan je een blokje toevoegen om een punt te scoren
+        wanneer Waddles op de octupus loopt, en hem vervolgens te verplaatsen met de pijltjes totdat je scoort?
+      course3_playlab_stage17_6_instruction: Kan je blokken toevoegen die de snelheid
+        van Waddles en de achtergrond wijzigen? Laat hem vervolgens rond bewegen met
+        de pijltjestoetsen totdat je scoort.
+      course3_playlab_stage17_7_instruction: Creëer je eigen verhaal. Wanneer je gedaan
+        hebt, klik dan op Voltooien zodat je vrienden je verhaal kunnen uitproberen
+        op hun telefoons.
+      course4_artist_binary_challenge1_instruction: Je kan elk van de binaire waardes
+        (0 of 1) slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste
+        lussen om deze tekening te voltooien.
+      course4_artist_binary_challenge2_instruction: Ben jij volhardend genoeg om dit
+        logo terug naar normaal te herstellen?
       course4_artist_concept_challenge2_instruction: |-
         Create five pinwheel designs
         using the code below.
@@ -7318,9 +7383,9 @@
         Try this code to see how
         it works, then make the program your own!
       course4_artist_fwp_challenge1_instruction: |-
-        Try running this program, and make
-        changes to see what happens. Can you figure out how it works? (Or delete it
-        and replace it with something totally different)
+        Probeer dit programma uit te voeren,
+        en maak veranderen om te zien wat er gebeurt. Begrijp je hoe het werkt? (Of verwijder het
+        en verander het door iets totaal anders)
       course4_artist_variables_challenge1_instruction: |-
         You've now learned everything
         you need to know to make a pattern like this! This puzzle is meant to be difficult.  Can
@@ -7359,19 +7424,16 @@
       courseA_artist_loops1_instruction: |-
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
-      courseA_artist_loops10_instruction: |-
-        Help me put down stones so I don't fall
-        in!
-      courseA_artist_loops11_instruction: |-
-        Help me build steps to watch the ship
-        sail away.
-      courseA_artist_loops12_instruction: |-
-        The artist saw something funny in the
-        distance.  Draw what you think he saw.
+      courseA_artist_loops10_instruction: Help me stenen neer te zetten zodat ik niet
+        val!
+      courseA_artist_loops11_instruction: Help me een trapje te bouwen om het schip
+        te zien weg zeilen.
+      courseA_artist_loops12_instruction: De artiest zag iets grappigs in de verte.
+        Teken wat je denkt dat hij zag.
       courseA_artist_loops2_instruction: |-
         Help the artist draw this line two times
         forward.
-      courseA_artist_loops3_instruction: Draw a line forward five times.
+      courseA_artist_loops3_instruction: Teken vijfmaal een voorwaartse lijn.
       courseA_artist_loops4_instruction: |-
         Now, use a `repeat` loop to draw this line
         five times!
@@ -7382,53 +7444,67 @@
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_forVideo_instruction: Gebruik de 'herhaal` lus om golven
+        aan het water toe te voegen.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
-      courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
+      courseA_artist_loops9_instruction: 'Uitdaging: Herstel de trappen.'
       courseA_artist_loops_challenge2_instruction: |-
-        "Can you help me make two bird
-        houses?"
-      courseA_artist_loops_challenge3_instruction: |-
-        Let's play a game! Draw as many
-        X's as you can! Can you get 3 in a row?
+        "Kan je me helpen twee vogelhuisjes
+        te maken?"
+      courseA_artist_loops_challenge2a_instruction: |-
+        *"Help me get these three tents
+        set up!"*
+      courseA_artist_loops_challenge3_instruction: Laten we een spel spelen! Teken
+        zoveel mogelijk X'en als je maar kan! Kan er 3 in een rij tekenen?
       courseA_collector_loops1_instruction: |-
-        Move Laurel around and get as much treasure
-        as you can!
+        Beweeg Laurel rond en verzamel zoveel schatten
+        als je maar kan!
       courseA_collector_loops10_instruction: |-
-        Help Laurel get all of the treasure
-        along this path.
-      courseA_collector_loops11_instruction: |-
-        Help Laurel get all of the treasure
-        from this cave.
-      courseA_collector_loops12_instruction: |-
-        Eureka!  Get as much treasure as you
-        can!
-      courseA_collector_loops2_instruction: |-
-        Collect all three piles to pass this
-        level.
-      courseA_collector_loops4_instruction: |-
-        Fix Laurel's path to get all of this
-        treasure.
-      courseA_collector_loops5_instruction: |-
-        Use what you learned to get all of the
-        treasure.
-      courseA_collector_loops6_instruction: |-
-        Add blocks to this code to get all of
-        the treasure.
-      courseA_collector_loops7_instruction: |-
-        What should you add to this code to
-        get all of the treasure?
-      courseA_collector_loops8_instruction: Write the code to get all of this gold.
-      courseA_collector_loops9_instruction: |-
-        **Challenge:** The treasure goes all
-        the way up these stairs!  Write the code to help Laurel get it all.
+        Help Laurel alle schatten te verzamelen
+        op zijn pad.
+      courseA_collector_loops11_instruction: Help Laurel om alle schatten uit deze
+        grot te verzamelen.
+      courseA_collector_loops12_instruction: Eureka! Verzamel zoveel schatten als
+        je maar kan!
+      courseA_collector_loops2_instruction: Verzamel alle drie de stapels om dit niveau
+        te voltooien.
+      courseA_collector_loops4_instruction: Herstel Laurel's pad om al deze schatten
+        te verzamelen.
+      courseA_collector_loops5_instruction: Gebruik wat je geleerd hebt om alle schatten
+        te verzamelen.
+      courseA_collector_loops6_instruction: Voeg blokken toe aan deze code om alle
+        schatten verzamelen.
+      courseA_collector_loops7_instruction: Wat zou je aan deze code toevoegen om
+        alle schatten te verzamelen?
+      courseA_collector_loops8_instruction: Schrijf code om alle schatten te verzamelen.
+      courseA_collector_loops9_instruction: "**Uitdaging:** De schat bevindt zich
+        over de afstand van de hele trap! Schrijf code om Laurel alles te laten grijpen."
       courseA_collector_loops_challenge1_instruction: |-
-        *"Can you help me spot some
-        bugs? I know which way I want to go, but I'm not sure how many steps to take."*
-      courseA_collector_loops_challenge2_instruction: "This time you can only use\none
-        of each arrow block. Get all of the treasure! "
-      courseA_forVideoTest_artist_instruction: |-
-        Use the `repeat` loop to add waves
-        to the water.
+        *"Kan je me helpen enkele fouten
+        te vinden? Ik weet welke richting ik uit moet, maar ik ben niet zeker hoeveel stappen ik moet nemen."*
+      courseA_collector_loops_challenge2_instruction: 'Verzamel alle schatten! '
+      courseA_collector_loops_challenge2kp_instruction: |-
+        Verzamel ten minste *3* stukken
+        van de schat om dit level te voltooien.
+      courseA_collector_preLoops1_instruction: "Dit is Laurel de avonturier! \n\nKlik
+        op\n\"Run\" om haar naar de schat te zien wandelen en het te bemachtigen."
+      courseA_collector_preLoops2_instruction: |-
+        Geweldig! Nu kan eigen code toevoegen! \r
+        \r
+        Plak een `krijg schat` blok aan de onderkant van het programma en klik op "Start".
+      courseA_collector_preLoops3_instruction: |-
+        Snap two `E -->` blocks and one `get
+        treasure` block to the bottom of the program, then click "Run".
+      courseA_collector_preLoops4_instruction: Kan je uitzoeken hoe deze puzzel op
+        te lossen?
+      courseA_collector_preLoops5_instruction: Verzamel 1 van deze 2 edelstenen om
+        deze puzzel op te lossen.
+      courseA_collector_preLoops6_instruction: Verzamel beide stukken schat om deze
+        puzzel op te lossen.
+      courseA_collector_preLoops7_instruction: Verzamel alle drie de stapels om dit
+        level te voltooien.
+      courseA_forVideoTest_artist_instruction: Gebruik de 'herhaal` lus om golven
+        aan het water toe te voegen.
       courseA_maze_seq1_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
@@ -7437,40 +7513,37 @@
       courseA_maze_seq11_instruction: |-
         Move one way, then another to get the bird
         to the pig.
-      courseA_maze_seq12_instruction: 'Get that pig! '
-      courseA_maze_seq13_instruction: Get the pig any way you can!
+      courseA_maze_seq12_instruction: 'Grijp dat varken! '
+      courseA_maze_seq13_instruction: Grijp het varken zoals je maar wil!
       courseA_maze_seq2_instruction: Pas de code aan om me naar het varken te brengen!
-      courseA_maze_seq3_instruction: Fix the code to get the bird to the pig!
-      courseA_maze_seq4_instruction: REMOVE a block to get the bird to the pig!
-      courseA_maze_seq4a_instruction: |-
-        Get the bird to the pig using the fewest possible
-        blocks.
+      courseA_maze_seq3_instruction: Repareer de code om de vogel naar het varken
+        te krijgen!
+      courseA_maze_seq4_instruction: VERWIJDER een blok om de vogel naar het varken
+        te krijgen!
+      courseA_maze_seq4a_instruction: Krijg de vogel naar het varken gebruikmakende
+        van zo weinig mogelijk blokken.
       courseA_maze_seq5_instruction: Try this one yourself from the beginning.
       courseA_maze_seq6_instruction: |-
         Move one way, then another to get the bird
         to the pig!
-      courseA_maze_seq7_instruction: |-
-        Figure out what is missing and then add blocks
-        to get the bird to the pig!
-      courseA_maze_seq8_instruction: Solve this level and get the bird to the pig!
-      courseA_maze_seq9_instruction: |-
-        Debug this level by adding blocks to get the
-        bird to the pig!
-      courseA_maze_seq_challenge1_instruction: |-
-        Something is wrong here. Help fix
-        the code to get the bird to the pig!
-      courseA_maze_seq_challenge2_instruction: |-
-        Trace the path and lead me to the
-        pig. Avoid TNT or feathers will fly!
+      courseA_maze_seq7_instruction: Zoek uit wat er mist en voeg dan blokken toe
+        om de vogel tot aan het varken te krijgen!
+      courseA_maze_seq8_instruction: Los dit niveau op en krijg de vogel naar het
+        varken!
+      courseA_maze_seq9_instruction: Debug dit level door blokken toe te voegen om
+        de vogel naar het varken te krijgen!
+      courseA_maze_seq_challenge1_instruction: Er is iets fout hier. Repareer de code
+        om de vogel naar het varken te krijgen!
+      courseA_maze_seq_challenge2_instruction: Volg het pad, en leid me naar het varken.
+        Vermeid TNT of de veren zullen eraf vliegen!
       courseA_playLab_events1_instruction: |-
         This is a Play Lab level.  Move blocks
         to the workspace and see what happens!
       courseA_playLab_events2_instruction: |-
         Jorge the Dog wants to say "Hi there."  Can
         you help him?
-      courseA_playLab_events3_instruction: |-
-        Connect the `move left` block to the
-        `when left` event block that is already in the workspace.
+      courseA_playLab_events3_instruction: Verbind de `beweeg link` blok aan het `wanneer
+        link` evenement dat zich reeds op je werkruimte bevindt.
       courseA_playLab_events4_instruction: |-
         Now, get Jorge to move right when the
         `right` button is clicked.
@@ -7483,18 +7556,16 @@
       courseA_playLab_events7_instruction: |-
         Add anything you want to this game.  Can
         you make the dinosaur disappear when Jorge runs into him?
-      courseA_playlab_events_challenge1_instruction: |-
-        "Where are my friends hiding?
-        Can you write code to show the rest of my friends?"
-      courseA_playlab_events_challenge2_instruction: |-
-        "Let's have a party! Give
-        my friends something to do when you click or tap them."
+      courseA_playlab_events_challenge1_instruction: '"Waar verstoppen mijn vrienden
+        zich? Kan je code schrijven om m''n overblijvende vrienden tevoorschijn te
+        toveren?"'
+      courseA_playlab_events_challenge2_instruction: '"Laten we feesten! Geef mijn
+        vrienden iets te doen wanneer je op hen klikt of tapt."'
       courseA_playlab_events_challengeClone_instruction: |-
-        Where are my friends hiding?
-        Can you write code to show the rest of my friends?
-      courseA_toMakeLoopsVideo_Collector_instruction: |-
-        Loops let you do whatever
-        is inside over and over again!
+        Waar verstoppen mijn vrienden zich?
+        Kan je code schrijven om hen tevoorschijn te toveren?
+      courseA_toMakeLoopsVideo_Collector_instruction: Lussen laten je toe om dingen,
+        wat het ook is, opnieuw en opnieuw te doen!
       courseA_video_events_instruction: Need a better playlab/events combo
       courseB_artist_loops1_instruction: |-
         This is a new type of puzzle called "Artist".
@@ -7503,116 +7574,99 @@
         Use what you have learned to draw a picture
         of what you think the artist saw when he got home.
       courseB_artist_loops2_instruction: |-
-        The Artist is trying to draw a line **6**
-        times, but can't get it right.  Can you help?
-      courseB_artist_loops3_instruction: |-
-        Help the artist draw a line 7 times to
-        make a garden wall.
+        De Artiest is aan het proberen om een lijn **6** keer te tekenen, maar het lukt hem niet zo goed.
+        Kan jij hem helpen?
+      courseB_artist_loops3_instruction: Help de artiest 7 keer een lijn te tekenen
+        om een tuinmuur te maken.
       courseB_artist_loops4_instruction: "Now we need to get the soil ready to plant.\nFind
         the bugs in the code and help the artist prepare the ground. "
-      courseB_artist_loops5_instruction: |-
-        Time to fix the stairs!  Repeat this pattern
-        **5** times so the artist can reach the top of the bushes.
-      courseB_artist_loops6_instruction: Climb the vine and see where it goes?
+      courseB_artist_loops5_instruction: Tijd om de tredes te repareren! Herhaal dit
+        patroon **5** keer zodat de artiest de top van de struiken kan bereiken.
+      courseB_artist_loops6_instruction: Klim over de wijnstokken. Waar leidt het
+        naartoe?
       courseB_artist_loops7_instruction: |-
-        **Challenge:**  It's a hidden garden!
-        Let's walk around.
-      courseB_artist_loops8_instruction: |-
-        Time to head home. Can you fix this ladder
-        using only one block to help the artist get down?
+        **Uitdaging:** Dit is een verborgen tuin!
+        Laten we rondwandelen.
+      courseB_artist_loops8_instruction: Tijd om naar huis te gaan. Can je de ladder
+        repareren gebruik makende van slechts één blok om de artiest naar beneden
+        te krijgen?
       courseB_artist_loops9_instruction: |-
         Let's take the short way home, over the
         pond. Can you help the artist stay on the stones?
-      courseB_artist_loops_challenge1_instruction: |-
-        "It's time to toss the dice!
-        Can you help me draw these?"
-      courseB_artist_loops_challenge2_instruction: |-
-        Let's play a game! Draw as many
-        X's as you can! Can you get 3 in a row?
-      courseB_collector_loops1_instruction: |-
-        This is Laurel the Adventurer!  Can
-        you move her around and get treasure?
-      courseB_collector_loops10_instruction: |-
-        Help Laurel get all of the treasure
-        from this cave.
-      courseB_collector_loops11_instruction: |-
-        Eureka!  Get as much treasure as you
-        can!
-      courseB_collector_loops2_instruction: |-
-        Collect all four piles to pass this
-        level.
-      courseB_collector_loops3_instruction: |-
-        How can Laurel get all five piles of
-        treasure using only one `E -->` block?
+      courseB_artist_loops_challenge1_instruction: '"Tijd om met de dobbelstenen te
+        gooien! Kan je me helpen ze te tekenen?"'
+      courseB_artist_loops_challenge2_instruction: Laten we een spel spelen! Teken
+        zoveel mogelijk X'en als je maar kan! Kan er 3 in een rij tekenen?
+      courseB_collector_loops1_instruction: Dit is Laurel de Avonturier! Kan je haar
+        rond bewegen en de schatten verzamelen?
+      courseB_collector_loops10_instruction: Help Laurel om alle schatten uit deze
+        grot te verzamelen.
+      courseB_collector_loops11_instruction: Eureka! Verzamel zoveel schatten als
+        je maar kan!
+      courseB_collector_loops2_instruction: Verzamel alle 4 stapels om dit niveau
+        te voltooien.
+      courseB_collector_loops3_instruction: Hoe kan Laurel alle 5 stapels schatten
+        verzamelen, gebruik makende van slechts één `E -->` blok?
       courseB_collector_loops3_predict1_instruction: |-
         How can Laurel collect all
         five piles of gold using only one `E -->` block?
-      courseB_collector_loops4_instruction: |-
-        Fix Laurel's path to get all of this
-        treasure!
-      courseB_collector_loops5_instruction: "Add to the code from the last puzzle\nto
-        get all of the treasure. "
-      courseB_collector_loops6_instruction: |-
-        Figure out the code to help Laurel get
-        all of the treasure!
-      courseB_collector_loops7_instruction: Write the code to get all of this gold.
-      courseB_collector_loops8_instruction: |-
-        **Challenge: ** The treasure goes all
-        the way down these stairs!  Write the code to help Laurel get it all.
-      courseB_collector_loops9_instruction: |-
-        *"Help me get the treasure from this
-        deep valley."*
-      courseB_collector_loops_challenge1_instruction: "This time you have limited\nblocks.
-        Get all of the treasure! "
+      courseB_collector_loops4_instruction: Herstel Laurel's pad om alle schatten
+        te verzamelen!
+      courseB_collector_loops5_instruction: 'Voeg de code van de vorige puzzel toe
+        om alle schatten te verzamelen. '
+      courseB_collector_loops6_instruction: Verzin wat code om Laurel alle schatten
+        te laten verzamelen!
+      courseB_collector_loops7_instruction: Schrijf de code om alle schatten te verzamelen.
+      courseB_collector_loops8_instruction: "**Uitdaging:** De schat bevindt zich
+        over de afstand van de hele trap! Schrijf code om Laurel alles te laten grijpen."
+      courseB_collector_loops9_instruction: '*"Help me om de schat te krijgen uit
+        deze diepe vallei."*'
+      courseB_collector_loops_challenge1_instruction: 'Je krijgt deze keer een beperkt
+        aantal blokken. Verzamel alle schatten! '
       courseB_collector_loops_challenge2_instruction: |-
-        Let's get the treasure! Help
-        me across each row then come back to start the next row. Can you find a pattern?
-      courseB_collector_loops_challenge`_instruction: "This time you can only use\none
-        of each arrow block. Get all of the treasure! "
-      courseB_collector_prog1_instruction: |-
-        This is Laurel the Adventurer!  Can you
-        move her around and get gold?
+        Laten we de schatten verzamelen! Help me door iedere rij en kom iedere keer terug om aan de volgende rij te beginnen.
+        Kan jij een patroon vinden?
+      courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
+      courseB_collector_loops_challenge`_instruction: 'Je kan deze keer slechts één
+        van ieder pijltjesblok gebruiken. Verzamel alle schatten! '
+      courseB_collector_prog1_instruction: Dit is Laurel de Avonturier! Kan jij haar
+        rond bewegen en alle schatten verzamelen?
       courseB_collector_prog2_instruction: Four piles of gold!  Collect all four.
       courseB_collector_prog3_instruction: |-
         How can Laurel collect all five piles
         of gold using only one `E -->` block?
       courseB_maze_seq1_instruction: |-
-        Play with these blocks to see what they make
-        the bird do! \r
+        Speel met deze blokken om te zien wat ze de vogel laten doen! \r
         \r
-        Get the bird to the pig to complete the level.
+        Krijg de vogel tot bij het varken om dit niveau te voltooien.
       courseB_maze_seq10_instruction: Fix the bugs to get the bird to the pig.
       courseB_maze_seq11_instruction: It's all you!  Get the bird to the pig.
-      courseB_maze_seq12_instruction: Now get that pig any way you can!
-      courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
+      courseB_maze_seq12_instruction: Grijp het varken zoals je maar wil!
+      courseB_maze_seq2_instruction: '*"Een bug! Repareer de code om dat varken te
+        grijpen."*'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
       courseB_maze_seq6_instruction: |-
         Move one way, then another to get the bird
         to the pig!
-      courseB_maze_seq7_instruction: |-
-        Figure out what is missing and then add blocks
-        to get the bird to the pig!
-      courseB_maze_seq8_instruction: |-
-        Your turn!  What do you need to do to get the
-        bird to the pig?
-      courseB_maze_seq9_instruction: |-
-        Challenge: Move around the TNT to get the bird
-        to the pig.
-      courseB_maze_seq9_challenge1_instruction: "*Where's that pig hiding now?*"
-      courseB_maze_seqCold_instruction: |-
-        Challenge: Debug this level by adding blocks
-        to get the bird to the pig!
-      courseB_maze_seqOld_instruction: "Go around the TNT to get the bird to the\npig! "
-      courseB_maze_seq_challenge1_instruction: |-
-        You can only move up to four times
-        in each direction. Can you find a path before you run out of blocks?
-      courseB_maze_seq_challenge2_instruction: |-
-        Debug this level. These are the right
-        blocks, but they're in the wrong order!
-      courseB_playLab_events1_instruction: |-
-        See if you can figure out what each block
-        does.
+      courseB_maze_seq7_instruction: Zoek uit wat er mist en voeg dan blokken toe
+        om de vogel tot aan het varken te krijgen!
+      courseB_maze_seq8_instruction: Jouw beurt! Wat moet je doen om de vogel tot
+        bij het varken te krijgen?
+      courseB_maze_seq9_instruction: 'Uitdaging: Beweeg het TNT rond om de vogel tot
+        bij het varken te krijgen.'
+      courseB_maze_seq9_challenge1_instruction: "*Waar verbergt dat varken zich nu?*"
+      courseB_maze_seqCold_instruction: 'Uitdaging: Debug dit level door blokken toe
+        te voegen om de vogel tot bij het varken te krijgen!'
+      courseB_maze_seqOld_instruction: 'Ga omheen het TNT om de vogel tot bij het
+        varken te krijgen! '
+      courseB_maze_seq_challenge1_instruction: Je kan slechts 4 keer bewegen in elke
+        richting. Vind je een pad voordat je blokken op zijn?
+      courseB_maze_seq_challenge2_instruction: Debug dit level. Dit zijn de correct
+        blokken, maar ze staan in de verkeerde volgorde!
+      courseB_playLab_events1_instruction: Kan je uitvinden wat ieder blok doet?
       courseB_playlab_events2_instruction: |-
         Have Daisy the Dragon say something when
         you click "Run".
@@ -7644,48 +7698,38 @@
       courseB_playlab_eventsToolbox_instruction: |-
         Finish by playing a sound and making
         the knight vanish when he runs into the dragon!
-      courseB_playlab_events_challenge1_instruction: |-
-        It's time for the Great Animal
-        Race! Make the animals move down when you press ▼. Who will run the fastest?
+      courseB_playlab_events_challenge1_instruction: Het is tijd voor de Grote Dieren
+        Race! Laat de dieren naar beneden bewegen wanneer je op '▼' duxt. Wie zal
+        het snelste lopen?
       courseB_playlab_events_challenge2_instruction: |-
-        Let's make the animals disappear
-        when you click on them! Try playing with the dog now, then help the other
-        animals join in the fun.\r
-        You can also add sounds and score points to create
-        a game of Animal Tag!
-      courseB_playlab_events_challenge2_embed_instruction: |-
-        Here is your finished
-        game!
-      courseB_playlab_events_challenge2_template_instruction: |-
-        Let's make the animals
-        disappear when you click on them! You can also add sounds and score points
-        to create a fun game of Animal Tag!
-      courseB_starWars_prog1_instruction: Help BB-8 get the scrap metal!
-      courseB_starWars_prog10_instruction: Help BB-8 gather the glowing scrap metal
-      courseB_starWars_prog11_instruction: Help BB-8 gather the glowing scrap metal
-      courseB_starWars_prog2_instruction: |-
-        Help BB-8 gather **all** of the glowing
-        scrap metal
-      courseB_starWars_prog3_instruction: |-
-        Help BB-8 gather **all** of the glowing
-        scrap metal
-      courseB_starWars_prog4_instruction: Help BB-8 gather the glowing scrap metal
-      courseB_starWars_prog5_instruction: Help BB-8 gather the glowing scrap metal
-      courseB_starWars_prog6_instruction: Help BB-8 gather the glowing scrap metal
-      courseB_starWars_prog7_instruction: Help BB-8 gather the glowing scrap metal
-      courseB_starWars_prog8_instruction: |-
-        **Challenge:** Help BB-8 gather the glowing
-        scrap metal
-      courseB_starWars_prog9_instruction: Help BB-8 gather the glowing scrap metal
+        Laten we dieren laten verdwijnen wanneer we op hen klikken! Probeer eerst met de hond te spelen.
+        Laat vervolgens de andere dieren in de pret delen.\r
+        Je kan ook geluiden toevoegen en punten winnen. Maak een spelletje Dieren Tikkertje!
+      courseB_playlab_events_challenge2_embed_instruction: Hier is jouw voltooide
+        spel!
+      courseB_playlab_events_challenge2_template_instruction: Laten we de dieren laten
+        laten verdwijnen wanneer je op hen klikt! Je kan ook geluiden toevoegen en
+        punten scoren. Maak een leuk spelletje Dieren Tikkertje!
+      courseB_starWars_prog1_instruction: '"Verzamel schroot, BB-8!"'
+      courseB_starWars_prog10_instruction: Help BB-8 het gloeiende schoot verzamelen
+      courseB_starWars_prog11_instruction: Help BB-8 het gloeiende schoot verzamelen
+      courseB_starWars_prog2_instruction: Verzamel alle metaal.
+      courseB_starWars_prog3_instruction: Ga al het schroot halen
+      courseB_starWars_prog4_instruction: Ga al het schroot halen
+      courseB_starWars_prog5_instruction: Ge het schroot halen
+      courseB_starWars_prog6_instruction: Ga al het schroot halen
+      courseB_starWars_prog7_instruction: Ga het halen!
+      courseB_starWars_prog8_instruction: "**Uitdaging:** Help BB-8 al het gloeiende
+        schoot verzamelen"
+      courseB_starWars_prog9_instruction: Help BB-8 het gloeiende schoot verzamelen
       courseC_PlayLab_events1_instruction: |-
         Make Jorge the Dog (actor 1) say "Hi
         there."
       courseC_PlayLab_events2_instruction: |-
         Can you make Jorge the Dog (actor 1)
         say something, then have Olive the Cat (actor 2) say something afterward?
-      courseC_PlayLab_events3_instruction: |-
-        Can you write a program to make Jorge
-        (actor 1) move toward Olive the Cat?
+      courseC_PlayLab_events3_instruction: Kan je een programma schrijven om Jorge
+        (speler 1) voorwaarts naar Olive de kat te laten bewegen?
       courseC_PlayLab_events4_instruction: |-
         Can you write a program that makes Jorge
         (actor 1) move to Olive the Cat, and have Olive say "Hi there." when Jorge
@@ -7718,67 +7762,53 @@
         Play
         the game and move Waddles with the arrows until you score.
       courseC_PlayLab_eventsFP_instruction: |-
-        Create your own story. When you're
-        done, click "Finish" to share with friends. See story ideas in the hints.
+        Creëer je eigen verhaal. Wanneer je gedaan hebt, klik dan op "Voltooien" om het te delen met vrienden.
+        Zie Verhaal Ideeën voor hints.
       courseC_PlayLab_events_challenge1_instruction: |-
-        Use a new block to make Waddles
-        automatically move back to the start when he runs into the Dinosaur and when
-        he scores a point. \r
-        Play the game and move Waddles with the arrows until
-        you score enough points.
+        Gebruik een nieuwe blok om Waddles automatisch naar links te laten bewegen wanneer hij de Dinosaurus raakt en/of wanneer hij een punt scoort.\r
+        Speel het spel en beweeg Waddles met de pijltjes totdat je genoeg punten scoort.
       courseC_PlayLab_events_challenge1_xy_blocks_instruction: |-
-        Here is a new block
-        that is somewhat complicated. Use it to move Waddles back to the start when
-        he runs into the Dinosaur and when he scores a point. This will make your
-        game more challenging and fun!\r
+        Hier is een nieuwe blok dat ietwat ingewikkeld is. Gebruik het om Waddles terug naar de start te verplaatsen wanneer hij de Dinosaurus raakt of wanneer hij een punt scoort. Dit zal je spel uitdagender en leuker maken!\r
         \r
-        Play the game and move Waddles with
-        the arrows until you score enough points.
-      courseC_artist_loop1_instruction: Let's add some pizazz!
-      courseC_artist_loops1_instruction: "*\"Zombie.  Draw!\"*\\r\n\\r\nThe zombie\nwants
-        to draw a line from where he is to the garden of sunflowers.  Can you\nhelp
-        him?  \\r\n*(The garden is 250 pixels away)*  "
-      courseC_artist_loops1a_instruction: "Get the artist to the center of the play\narea,
-        then draw a bird using a sticker. "
-      courseC_artist_loops2_instruction: |-
-        Now that the zombie knows his way, help
-        him dig holes along the path to plant more flowers!
-      courseC_artist_loops2a_instruction: |-
-        Now, use a loop to spin your bird around
-        12 times with a 30 degree turn.
-      courseC_artist_loops3_instruction: |-
-        Excellent!  Now that the flowers have sprouted,
-        help the zombie place a friend every 50 pixels to guard over them until they
-        are grown.
-      courseC_artist_loops3a_instruction: Now add a bat!
-      courseC_artist_loops4_instruction: |-
-        The zombie has found an empty farm!  Can
-        you help him bring it to life by stamping animal stickers every 100 pixels
-        around the border?
-      courseC_artist_loops4a_instruction: Try jumping forward by 75 pixels.
+        Speel het spel en beweeg Waddles met de pijltjes totdat je voldoende punten scoort.
+      courseC_artist_loop1_instruction: Laten we enkele pizzaz toevoegen!
+      courseC_artist_loops1_instruction: "*\"Zombie. Teken!\"*\\r\n\\r\nDe zombie
+        wilt een lijn tekenen vanaf zijn positie naar de tuin zonnebloemen. Kan jij
+        hem helpen? \\r\n*(De tuin is 250 pixels veraf)*  "
+      courseC_artist_loops1a_instruction: 'Breng de artiest naar het centrum van het
+        speelveld. Teken dan een vogel, gebruik makende van een sticker. '
+      courseC_artist_loops2_instruction: Nu de zombie zijn weg kent, help hem gaten
+        te graven langsheen het pad om meer bloemen te planten!
+      courseC_artist_loops2a_instruction: Gebruik nu een lus om je vogel 12 keer te
+        laten draaien in een hoek van 30 graden.
+      courseC_artist_loops3_instruction: Uitstekend! Nu de bloemen zijn uitgekomen,
+        laat de zombie een vriend bij hen plaatsen om over hen te waken totdat ze
+        volgroeid zijn.
+      courseC_artist_loops3a_instruction: Voeg nu een vleermuis toe!
+      courseC_artist_loops4_instruction: De zombie heeft een lege boerderij gevonden!
+        Kan jij het tot leven brengen door elke 100 pixels een sticker te stempel
+        langsheen de rand?
+      courseC_artist_loops4a_instruction: Probeer 75 pixels vooruit te springen.
       courseC_artist_loops5_instruction: |
-        Great!  Now it's time to make a fence
-        inside to keep the animals out.   \r
+        Geweldig! Het is nu tijd om binnen een hek te maken om de dieren buiten te houden. \r
         \r
-      courseC_artist_loops5a_instruction: Try new stickers!
-      courseC_artist_loops5b_instruction: Try adding lines!
+      courseC_artist_loops5a_instruction: Probeer nieuwe stickers!
+      courseC_artist_loops5b_instruction: Probeer lijnen toe te voegen!
       courseC_artist_loops6_instruction: |
-        What should the zombie put inside of the
-        garden?  \r
+        Wat zou de zombie binnen de tuin moeten plaatsen? \r
         \r
         \r
-      courseC_artist_loops6a_instruction: Add another sticker!
-      courseC_artist_loops7a_instruction: Play with the loops and angles.
-      courseC_artist_loops8a_instruction: Now try something on your own!
-      courseC_artist_loopsPre1a_instruction: Time to spin that line around!
-      courseC_artist_loopsPrePre1a_instruction: "Get the artist to the center of\nthe
-        play area, then draw a line. "
-      courseC_artist_loopsTemplate_instruction: |-
-        Excellent!  Now that the flowers
-        have sprouted, help the zombie place a friend every 50 pixels to guard over
-        them until they are grown.
-      courseC_artist_loopsTemplateA_instruction: "Get the artist to the center of\nthe
-        play area, then draw a bird using a sticker. "
+      courseC_artist_loops6a_instruction: Voeg een andere sticker toe!
+      courseC_artist_loops7a_instruction: Speel met lussen en hoeken.
+      courseC_artist_loops8a_instruction: Probeer nu iets op jezelf!
+      courseC_artist_loopsPre1a_instruction: Tijd om die lijn rond te draaien!
+      courseC_artist_loopsPrePre1a_instruction: 'Verplaats de artiest naar het centrum
+        van het speelveld. Teken dan een lijn. '
+      courseC_artist_loopsTemplate_instruction: Uitstekend! Nu de bloemen zijn uitgekomen,
+        laat de zombie een vriend bij hen plaatsen om over hen te waken totdat ze
+        volgroeid zijn.
+      courseC_artist_loopsTemplateA_instruction: 'Breng de artiest naar het centrum
+        van het speelveld. Teken dan een vogel, gebruik makende van een sticker. '
       courseC_artist_prog1_instruction: |-
         Play with the blocks in the toolbox to see
         what they do!
@@ -7801,25 +7831,22 @@
         One more tag.  This is a triangle for Pi.\r
         (Each
         side is 150 pixels)
-      courseC_artist_prog_challenge1-doghouse_instruction: |-
-        Let's build a dog house
-        for Jorge!
+      courseC_artist_prog_challenge1-doghouse_instruction: Laten we een hondenhok
+        voor Jorge bouwen!
       courseC_artist_prog_challenge1_instruction: |-
-        Draw rooms for each of the animals.
-        There are many different ways to solve this puzzle, so have some fun. The
-        shortest possible solution is 6 blocks, but use as many as you like!
-      courseC_artist_prog_challenge2_instruction: |-
-        *Help me paint the yellow lines
-        on this road!*
-      courseC_collector_loops_challenge2_instruction: |-
-        Let's hunt for treasure -
-        using loops! Help the collector by debugging this code. Get all of the treasure!
+        Teken kamers voor elk dier.
+        Er zijn vele manieren om deze puzzel op te lossen, geniet er dus van.
+        De kortst mogelijke oplossing bevat slechts 6 blokken. Je kan gebruik maken van zoveel blokken je maar wil.
+      courseC_artist_prog_challenge2_instruction: Help me de gele lijnen op deze weg
+        schilderen! *
+      courseC_artist_prog_challenge2a_instruction: Help me de gele lijnen op deze
+        weg schilderen! *
+      courseC_collector_loops_challenge2_instruction: Verzamel alle schatten!
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
         you can help Laurel collect some treasure.
-      courseC_collector_prog2_instruction: |-
-        Move Laurel to the treasure, then use
-        `collect` to pick it up.
+      courseC_collector_prog2_instruction: Verplaats Laurel naar de schatten, maak
+        dan gebruik van `verzamel` om het op te pikken.
       courseC_collector_prog3_instruction: |-
         Order these blocks to collect the treasure
         and solve the puzzle.
@@ -7838,53 +7865,45 @@
       courseC_collector_prog8_instruction: |-
         *"Keep up the good work! Help me collect
         all of the treasure."*
-      courseC_collector_prog9_instruction: '*"Let''s get all of the coins!"*'
+      courseC_collector_prog9_instruction: '*"Laten we alle schatten verzamelen!"*'
       courseC_collector_progA_instruction: Help Laurel collect all of the treasure.
       courseC_collector_progB_instruction: |-
         Collect as many coins as you can to finish
         the stage!
-      courseC_collector_prog_challenge1_instruction: |-
-        Look carefully! Can you collect
-        all *10* pieces of treasure?
-      courseC_collector_prog_challenge2_instruction: |-
-        There are 20 pieces of treasure
-        to be found. Collect at least half to finish this challenge!
-      courseC_flappy_embed_events_instruction: |-
-        Here's an example of a game that
-        you're about to create yourself! Play through it one or two times to get
-        an idea of what you are about to make.
-      courseC_flappy_events1_instruction: |-
-        Attach the `flap normal amount` block
-        to the `when click` event, then press "Run".    Click or tap on the play
-        space to move Flappy to the target.
-      courseC_flappy_events10_instruction: 'Create your own Flappy game! '
+      courseC_collector_prog_challenge1_instruction: Kijk aandachtig! Kan jij alle
+        *10* stukken schat verzamelen?
+      courseC_collector_prog_challenge2_instruction: Der zijn 20 stukken schat te
+        vinden. Verzamelen ten minste de helft om deze uitdaging te voltooien!
+      courseC_flappy_embed_events_instruction: Hier is een voorbeeld van een spel
+        dat je zo dadelijk zelf gaat maken! Speel het één of twee keer om een idee
+        te krijgen wat je gaat maken.
+      courseC_flappy_events1_instruction: Voeg het `normaal flapperen` blokje toe
+        aan de `bij een klik` gebeurtenis, klik dan op "Start". Klik of tik op de
+        speelruimte om Flappy naar het doelwit te bewegen.
+      courseC_flappy_events10_instruction: 'Maak je eigen Flappy spel! '
       courseC_flappy_events2_instruction: |-
-        Try adding a block that sets the level
-        speed when the "Run" button is pressed.  Play the game and flap to the target
-        to continue.
-      courseC_flappy_events3_instruction: |-
-        Attach the `end game` block to the `when
-        hit the ground` event.   Play the game and crash the bird into the ground
-        to continue.
-      courseC_flappy_events4_instruction: |-
-        Attach a block to the `when hit an obstacle`
-        event so that the game ends when Flappy crashes into the first set of pipes.
+        Probeer een blok toe te voegen dat de snelheid van het level instelt wanneer op de "Start" wordt ingeduwd.
+        Speel het spel en flap naar het doelwit om verder te gaan.
+      courseC_flappy_events3_instruction: Plak het `einde spel` blok aan het `wanneer
+        grond geraakt` evenement. Speel het spel en crash de vogel op de grond om
+        door te gaan.
+      courseC_flappy_events4_instruction: Plak een blok aan het `wanneer een obstakel
+        geraakt` evenement zodat het spel eindigt wanneer Flappy crasht in de eerste
+        paar pijpen.
       courseC_flappy_events5_instruction: |-
-        Add a block to the `when pass an obstacle`
-        event, then press "Run" to score a point by flying Flappy through the first
-        set of pipes.
-      courseC_flappy_events6_instruction: |-
-        See if you can still score a point after
-        making Flappy flap either a smaller or larger amount each time you click.
-      courseC_flappy_events7_instruction: |-
-        Next, try changing the scene by attaching
-        a block to the `when run` event.
+        Voeg een blok toe aan de `bij het raken van een obstakel` gebeurtenis,
+        klik dan op "Start" om een punt te scoren door Flappy door de eerste reeks buizen te laten vliegen.
+      courseC_flappy_events6_instruction: Kijk of je nog steeds punten kan scoren
+        als je Flappy oftewel een beetje oftewel veel laat flapperen elke keer je
+        klikt.
+      courseC_flappy_events7_instruction: Probeer vervolgens het landschap te veranderen
+        door een blok toe te voegen aan de `als gestart` gebeurtenis.
       courseC_flappy_events8_instruction: |-
-        Try setting a **random** scene when other
-        events happen...for example, when passing an obstacle.
+        Probeer een **willekeurige** scene te zetten wanneer andere evenementen gebeuren.
+        Bijvoorbeeld wanneer een obstakel wordt gepasseerd.
       courseC_flappy_events9_instruction: |-
-        To mix things up, instead of ending the
-        game when Flappy hits an obstacle, try setting the score back to 0.
+        Laten we wat dingen dooreen mengen. In de plaats van het spel te beëindigen wanneer Flappy een obstakel raakt,
+        laten we de score opnieuw op 0 zetten.
       courseC_harvester_loops1_instruction: Use loops to pick all of the pumpkins.
       courseC_harvester_loops10_instruction: |-
         Collect all of the corn and all of
@@ -7914,10 +7933,14 @@
       courseC_harvester_loops9_instruction: |-
         Collect all of the corn and all of the
         pumpkins.
-      courseC_harvester_loops_challenge1_instruction: Collect all of the corn.
+      courseC_harvester_loops_challenge1_instruction: Verzamel alle maïs.
+      courseC_harvester_loops_challenge1a_instruction: Verzamel alle maïs.
       courseC_harvester_loops_challenge2_instruction: |-
-        Collect all of the lettuce.
-        Avoid the trees and fields!
+        Verzamel alle sla.
+        Vermijd de bomen en de velden!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn, all of
+        the lettuce, and all of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -7946,12 +7969,10 @@
       courseC_maze_debugging9_instruction: |-
         Debug this level to get Scrat to the
         acorn.
-      courseC_maze_debugging_challenge1_instruction: |-
-        *"Am I just going around in
-        circles?"*
-      courseC_maze_debugging_challenge2_instruction: |-
-        *"If I turn too often, I might
-        get dizzy! Help me reach the acorn with only four `turn` commands."*
+      courseC_maze_debugging_challenge1_instruction: '*"Ga ik enkel rond in cirkels?"*'
+      courseC_maze_debugging_challenge2_instruction: '*"Als ik te vaak ronddraai,
+        kan ik duizelig worden! Helm me de eikel te bereiken met slechts vier `draai`
+        commando''s."*'
       courseC_maze_loops1_instruction: |-
         Can you get the bird to the pig using 5 of
         the same kind of blocks?
@@ -7975,11 +7996,14 @@
         Challenge: Combine ideas from the last few
         puzzles to complete this level.
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
-      courseC_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops\nto
-        find his acorn! "
+      courseC_maze_loops_challenge1_instruction: 'Nu wil Scrat proberen gebruikmaken
+        van lussen om zijn eikel te vinden! '
+      courseC_maze_loops_challenge1a_instruction: 'Nu wil Scrat proberen gebruikmaken
+        van lussen om zijn eikel te vinden! '
       courseC_maze_loops_challenge2_instruction: |-
-        Let's hunt for treasure - using
-        loops! Help the collector by debugging this code. Get all of the treasure!
+        Laten we naar schatten zoeken, gebruik makende van loops!
+        Help de verzamelaar door deze code te debuggen.
+        Verzamel alle schatten!
       courseC_maze_programming1_instruction: |-
         For this puzzle, drag all of the blocks
         together and click "Run" to watch it go!
@@ -8006,19 +8030,15 @@
       courseC_maze_programming9_instruction: |-
         *"Now, help me sneak up on the pig
         any way you want to!"*
-      courseC_maze_programming_challenge1_instruction: |-
-        *"The pig is hiding! Can
-        you help me find a way around?"*
-      courseC_maze_programming_challenge2_instruction: |-
-        Sometimes there is more than
-        one way to solve the same problem. Sometimes it's faster to go backwards
-        than it is to go forwards!
+      courseC_maze_programming_challenge1_instruction: '*" Het varken verstopt zich!
+        Kan jij me helpen een omweg te vinden?"*'
+      courseC_maze_programming_challenge2_instruction: Soms is er meer dan één manier
+        om hetzelfde probleem op te lossen. Soms is het sneller om achterwaarts te
+        gaan dan voorwaarts!
       courseC_playLab_embedded_instruction: |-
-        Here's a game for you to play! To win,
-        use your arrow keys to get the penguin to run into the octopus.\r
+        Hier is een spel voor jou om te spelen! Om te winnen moet je je pijltjestoetsen gebruiken om de pinguïn op de octopus te laten lopen.\r
         \r
-        Once
-        you are done, you will learn how to make this game!
+        Eenmaal je dit gedaan hebt, zal je leren om zelf dit spel te maken!
       courseC_puppy_loops10_instruction: You are doing great! Keep it up!
       courseC_puppy_loops11_instruction: |-
         You are almost there! This time, choose
@@ -8031,39 +8051,33 @@
         from the last few puzzles to complete this level.
       courseC_puppy_loops9_instruction: You are doing great! Keep it up!
       courseC_starWars_loops1_instruction: |-
-        BB-8 will pick up any metal scraps along
-        the path where he moves. Use 5 of the same block to get BB-8 to pick up all
-        of the scrap metal in the play area.
+        BB-8 zal elk stuk schroot oprapen langsheen het pad waarin hij beweegt.
+        Gebruik 5 blokken van hetzelfde type om BB-8 al het schroot in de speelruimte te laten verzamelen.
       courseC_starWars_loops10_instruction: You are doing great! Keep it up!
       courseC_starWars_loops10_predict2_instruction: |-
-        You are doing great! Keep it
-        up!
+        Je bent geweldig bezig!
+        Doe zo voort!
       courseC_starWars_loops11_instruction: |-
         You are almost there! This time, choose
         any path you like!
       courseC_starWars_loops1_predict1_instruction: |-
-        BB-8 will pick up any metal
-        scraps along the path where he moves. Use 5 of the same block to get BB-8
-        to pick up all of the scrap metal in the play area.
-      courseC_starWars_loops2_instruction: |-
-        To get all the scrap metal, try creating
-        a loop that uses only one block inside of a `repeat` block.
-      courseC_starWars_loops4_instruction: |-
-        In this puzzle, two `repeat` loops will
-        help you get BB-8 to all of the scrap metal with the fewest number of blocks!
-      courseC_starWars_loops5_instruction: |-
-        Get BB-8 to pick up all the scrap metal
-        as quickly as possible!
+        BB-8 zal elk stuk schroot oprapen langsheen het pad waarin hij beweegt.
+        Gebruik 5 blokken van hetzelfde type om BB-8 al het schroot in de speelruimte te laten verzamelen.
+      courseC_starWars_loops2_instruction: Om al het schroot te verzamelen, probeer
+        een loop te creëren dat gebruik maakt van slechts één blok binnen een `herhaal`
+        lus.
+      courseC_starWars_loops4_instruction: In deze puzzel zullen twee `herhaal` lussen
+        je helpen om BB-8 alle schroot te laten verzamelen met het minst aantal blokken!
+      courseC_starWars_loops5_instruction: Laat BB-8 zo snel mogelijk alle stukken
+        schroot oppikken!
       courseC_starWars_loops6_instruction: |-
         Loops even work with more than one block
         inside!  Can you loop this sequence?
-      courseC_starWars_loops7_instruction: |-
-        Can you try to get all the scrap metal
-        using just one loop? Try programming it all out then finding the repeating
-        code to put in a loop.
-      courseC_starWars_loops9_instruction: |-
-        Use what you have learned to pick up
-        all of the scrap metal!
+      courseC_starWars_loops7_instruction: Kan jij alle stukken schroot oprapen binnen
+        slechts één lus? Probeer het eerst volledig zonder lus, zoek dan het stukje
+        herhaalde code en plaats het in een lus.
+      courseC_starWars_loops9_instruction: Gebruik wat je geleerd hebt om al het schroot
+        op te rapen!
       courseD_artist_binary1_instruction: |-
         Use the blocks below to have the artist
         draw "01010101" in binary in the first row.
@@ -8087,30 +8101,29 @@
       courseD_artist_binary7_instruction: Wat is de korste binaire reeks die je kan
         gebruiken om dit plaatje te tekenen?
       courseD_artist_binary8_instruction: Finish the code to create this drawing.
-      courseD_artist_binary8_predict1_instruction: |-
-        Finish the code to create this
-        drawing.
+      courseD_artist_binary8_predict1_instruction: Voltooi de code om deze afbeelding
+        te tekenen.
       courseD_artist_binaryFP_instruction: |-
         Here's a higher resolution canvas to
         draw on - 16 pixels by 16 pixels!\r
         \r
         See what happens when we start to
         get creative with the bits!
-      courseD_artist_binary_challenge0_instruction: |-
-        Try using nested loops to complete
-        this drawing.
-      courseD_artist_binary_challenge1_instruction: |-
-        You can only use each binary
-        value (0 or 1) once each in this puzzle. Try using nested loops to complete
-        this drawing.
-      courseD_artist_binary_challenge2_instruction: |-
-        Are you persistent enough to
-        restore this logo back to normal?
-      courseD_artist_binary_challenge3_instruction: |-
-        Are you persistent enough to
-        restore this logo back to normal?
-      courseD_artist_embed_frozen_instruction: Press Run to see a snowflake design!
-      courseD_artist_embed_frozen2_instruction: Press Run to see a snowflake design.
+      courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
+        binary! "
+      courseD_artist_binary_challenge0_instruction: Probeer gebruik te maken van geneste
+        lussen om deze tekening te voltooien.
+      courseD_artist_binary_challenge1_instruction: Je kan elk van de binaire waardes
+        (0 of 1) slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste
+        lussen om deze tekening te voltooien.
+      courseD_artist_binary_challenge2_instruction: Ben jij volhardend genoeg om dit
+        logo terug naar normaal te herstellen?
+      courseD_artist_binary_challenge3_instruction: Ben jij volhardend genoeg om dit
+        logo terug naar normaal te herstellen?
+      courseD_artist_embed_frozen_instruction: Klik op Uitvoeren om een sneeuwvlok
+        design te zien!
+      courseD_artist_embed_frozen2_instruction: Klik op Uitvoeren om een sneeuwvlok
+        design te zien.
       courseD_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
@@ -8159,9 +8172,9 @@
         \r
         The windows are 20 pixel
         squares, each 20 pixels apart.
-      courseD_artist_nestedLoops4_instruction: |
+      courseD_artist_nestedLoops4_instruction: |-
         Great!  Do the same thing with these
-        circles.\r
+        circles.
       courseD_artist_nestedLoops5_instruction: |-
         What happens if you also turn 90
         degrees between circles?
@@ -8177,36 +8190,30 @@
       courseD_artist_nestedLoops9_instruction: |-
         **Challenge:** Can you figure out
         how to make a picture like this?
-      courseD_artist_nestedLoops9_predict1_instruction: |-
-        **Challenge:** Can you figure
-        out how to make a picture like this?
+      courseD_artist_nestedLoops9_predict1_instruction: "**Uitdaging:** Kan jij uitvinden
+        hoe een figuur zoals deze te maken?"
       courseD_artist_nestedLoopsFP_instruction: |-
         Now it's your turn.  Take the skills
         you have learned and make something that you love!
       courseD_artist_nestedLoopsPre1_instruction: |-
         Create a triangle to kickstart
         this stage.
-      courseD_artist_nestedLoops_challenge1_instruction: |-
-        Can you figure out how
-        to make a picture like this?
-      courseD_artist_nestedLoops_challenge2_instruction: |-
-        Can you figure out how
-        to make a picture like this?
-      courseD_artist_project1_instruction: "Draw a small shape, between **20 and\n50**
-        pixels wide.  It can be any shape that you like.  "
+      courseD_artist_nestedLoops_challenge1_instruction: Kan jij uitvinden hoe een
+        afbeelding als deze te maken?
+      courseD_artist_nestedLoops_challenge2_instruction: Kan jij uitvinden hoe een
+        afbeelding als deze te maken?
+      courseD_artist_project1_instruction: "Teken een kleine vorm, tussen *20 en 50**
+        pixels breed.\nHet kan elke vorm zijn die je maar wilt.  "
       courseD_artist_project1a_instruction: |-
-        Draw a stair-step pattern that uses
-        turns between 75 and 105 degrees.
-      courseD_artist_project2_instruction: |-
-        Now take your shape and draw two or three
-        in a row!
-      courseD_artist_project2a_instruction: |-
-        Now, turn around 180 degrees and draw
-        the stair pattern again!
-      courseD_artist_project3_instruction: Let's spin that line of shapes around!
-      courseD_artist_project3a_instruction: |-
-        Spin that shape around 5 or 6 times
-        in a circle.
+        Teken een patroon in de vorm van een trap
+        dat bestaat uit draaien tussen 75 en 105 graden.
+      courseD_artist_project2_instruction: Gebruik nu jouw vorm en teken er twee of
+        drie in een rij!
+      courseD_artist_project2a_instruction: Draai nu 180 graden en teken het trap
+        patroon opnieuw!
+      courseD_artist_project3_instruction: Laten we die lijn van vormen ronddraaien!
+      courseD_artist_project3a_instruction: Draai die vorm 5 of 6 keer rond in een
+        cirkel.
       courseD_artist_project4_instruction: Time to layer those shapes!
       courseD_artist_project4a_instruction: |-
         Try playing around with what you've
@@ -8217,26 +8224,24 @@
         pattern longer or shorter?\r
         - What does it look like to draw two snowflakes
         on top of one another?
-      courseD_artist_project5_instruction: Play with the snowflakes!
-      courseD_artist_project_embedded_instruction: |-
-        Here's what you will soon be
-        making!
-      courseD_artist_ramp11_instruction: Now make a square using Artist!
-      courseD_artist_ramp12_instruction: |-
-        Use what you've learned to draw this triangle
-        inside of a square.
+      courseD_artist_project5_instruction: Speel met de sneeuwvlokken!
+      courseD_artist_project_embedded_instruction: Hier is wat je zo dadelijk zal
+        maken!
+      courseD_artist_ramp11_instruction: Teken nu een vorm met de artiest!
+      courseD_artist_ramp12_instruction: Gebruik wat je geleerd hebt om deze driehoek
+        binnenin een vierkant te tekenen.
       courseD_bee_conditionals1_instruction: |-
         Check to see if there's a flower under
         the cloud. If there's a flower, get nectar.
       courseD_bee_conditionals10_instruction: |-
         Collect all of the nectar and make
         all of the honey.
-      courseD_bee_conditionals1_predict1_instruction: |-
-        Check to see if there's a
-        flower under the cloud. If there's a flower, get nectar.
-      courseD_bee_conditionals2_instruction: |
-        Check underneath every cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseD_bee_conditionals1_predict1_instruction: Controleer of er een bloem onder
+        de wolken zit. Als zich een bloem bevindt, verzamel dan nectar.
+      courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
+        it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_test_instruction: 'Controleer onder elke wolk of het
+        een bloem verstopt voordat je nectar verzamelt.  '
       courseD_bee_conditionals3_instruction: |-
         Help the bee collect all of the nectar.
         \r
@@ -8298,6 +8303,10 @@
         Watch how the bees gets the
         nectar. Can you use the same kind of pattern to help the bee make all of the
         honey?
+      courseD_bee_debugging_challenge1a_instruction: |-
+        Watch how the bees gets the
+        nectar. Can you use the same kind of pattern to help the bee make all of the
+        honey?
       courseD_bee_debugging_challenge2_instruction: |-
         Watch how the bees gets the
         nectar. Can you use the same kind of pattern to help the bee make all of honey?
@@ -8335,9 +8344,8 @@
         move the paddle. See how many points you can get before your opponent scores
         twice!
       courseD_bounce_embedded_instruction: Write Instructions Here
-      courseD_bounce_events1_instruction: |-
-        Attach a block to the "when left arrow"
-        block and press "Run" to move the player to the flag.
+      courseD_bounce_events1_instruction: Voeg een blok toe aan de "als pijltje naar
+        links" blok en klik op "Start" om de speler naar de vlag te bewegen.
       courseD_bounce_events10_instruction: |-
         There is now a goal at the top. Attach
         the "score point" and "score opponent point" blocks to the "when ball
@@ -8347,11 +8355,8 @@
         ball in goal` event and the `score opponent point` block to the `when\nball
         misses hand` event to make a game. "
       courseD_bounce_events11_instruction: |-
-        You can now attach blocks to the "when
-        run" block. You have to attach the new "launch new ball" block in more
-        than one place. Also, try changing the scene or the speed of the paddle and
-        the ball and see how many points you can score before your opponent scores
-        twice.
+        Je kan nu blokken toevoegen aan het "als gestart" blok. Je dient de nieuwe "lanceer nieuwe bal" blok op meer dan één plaats te plakken.
+        Probeer ook het tafereel, de snelheid van het batje en de bal te veranderen en bekijk hoeveel punten je kan scoren vooraleer je tegenstander tweemaal scoort.
       courseD_bounce_events11s_instruction: "Attach the `throw new ball` block in\nall
         of the places where the game needs a new ball. "
       courseD_bounce_events12_instruction: |-
@@ -8362,9 +8367,8 @@
         Make this game your own. You can change
         all the visuals and the rules. When you're done, click "Finish" to let
         friends try your game on their phones.
-      courseD_bounce_events1s_instruction: |-
-        Attach a block to the "when left arrow"
-        block and press "Run" to move the player to the net.
+      courseD_bounce_events1s_instruction: Plak een blok aan de "als pijltje naar
+        links" gebeurtenis en klik op "Start" om de speler naar het net te bewegen.
       courseD_bounce_events2_instruction: |-
         Attach a block to the "when right arrow"
         and "when left arrow" blocks. Move the paddle to reach both finish targets.
@@ -8450,6 +8454,10 @@
         Are you an expert of nested
         loops? Use what you have learned so far to collect all of the treasure!
       courseD_collector_nested_loops_challenge2_instruction: |-
+        Help the collector
+        reach at least two piles of treasure using only the blocks in your toolbox.
+        It is possible to collect all 4.
+      courseD_collector_nested_loops_challenge2a_instruction: |-
         Help the collector
         reach at least two piles of treasure using only the blocks in your toolbox.
         It is possible to collect all 4.
@@ -8602,12 +8610,11 @@
       courseD_maze_nestedLoops6_instruction: |-
         Get the zombie to the sunflower using
         only the blocks available.
-      courseD_maze_ramp1_instruction: |-
-        For this puzzle, snap all of the blocks together
-        and click "Run" to watch it go!
-      courseD_maze_ramp2_instruction: |-
-        Drag an extra `move forward` block out of
-        the toolbox, then attach all blocks to `when run` to finish your code.
+      courseD_maze_ramp1_instruction: Plak alle blokken aaneen bij deze puzzel en
+        klik op "Start" om het te zien bewegen!
+      courseD_maze_ramp2_instruction: Versleep een extra `ga voorwaarts` blok uit
+        de gereedschapskist, en koppel alle blokken aan `als gestart` om je code te
+        vervolledigen.
       courseD_maze_ramp3_instruction: |-
         There is one extra block that is going to
         cause the bird to crash. Throw it away by dragging it back to the toolbox.
@@ -8685,13 +8692,14 @@
         Add a `repeat forever` loop that continuously
         checks if the score is greater than 5, then ends the game as a win when it
         is.
-      courseD_playLab_cond6_instruction: "1)  Slow the ninja down before you set\nhim
-        to chase the pirate.  \\r\n2)  If the pirate is greater than 225 pixels\ndown,
-        set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase**\nthe
-        pirate.  "
+      courseD_playLab_cond6_instruction: "1)  Slow the ninja (actor 3) down before\nyou
+        set him to chase the pirate.  \\r\n2)  If the pirate is greater than 225\npixels
+        down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
+        **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: |-
-        If the pirate is in the safe zone, wait
-        one second, then deduct a point as long as he stays beneath the octopus line.
+        If the pirate (actor 1) is in the safe
+        zone, wait one second, then deduct a point as long as he stays beneath the
+        octopus line.
       courseD_playLab_cond6cloneForTest_instruction: Testing
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
@@ -8703,12 +8711,11 @@
         longer you stay there, the more points you lose. \r
         \r
         Get 5 points to win!
-      courseD_scrat_ramp1_instruction: |-
-        For this puzzle, snap all of the blocks together
-        and click "Run" to watch it go!
-      courseD_scrat_ramp2_instruction: |-
-        Drag an extra `move forward` block out of
-        the toolbox, then attach all blocks to `when run` to finish your code.
+      courseD_scrat_ramp1_instruction: Plak alle blokken aaneen bij deze puzzel en
+        klik op "Start" om het te zien bewegen!
+      courseD_scrat_ramp2_instruction: Versleep een extra `ga voorwaarts` blok uit
+        de gereedschapskist, en koppel alle blokken aan `als gestart` om je code te
+        vervolledigen.
       courseD_scrat_ramp3_instruction: |-
         There is one extra block that is going to
         cause Scrat to crash. Throw it away by dragging it back to the toolbox.
@@ -8782,12 +8789,15 @@
       courseE_artist_ramp10_instruction: |-
         Now, drag the code for the last triangle
         into a new loop to spin it around and make a snowflake!
-      courseE_artist_ramp11_instruction: Now make a square using Artist!
-      courseE_artist_ramp12_instruction: |-
-        Use what you've learned to draw this triangle
-        inside of a square.
-      courseE_artist_ramp8_instruction: Now make a square using Artist!
+      courseE_artist_ramp11_instruction: Teken nu een vorm met de artiest!
+      courseE_artist_ramp12_instruction: Gebruik wat je geleerd hebt om deze driehoek
+        binnenin een vierkant te tekenen.
+      courseE_artist_ramp8_instruction: Teken nu een vorm met de artiest!
+      courseE_artist_ramp8_2_instruction: Teken nu een vorm met de artiest!
       courseE_artist_ramp9_instruction: Use what you've learned to draw this triangle.
+      courseE_artist_ramp9_2_instruction: |-
+        Use what you've learned to draw this
+        triangle.
       courseE_bee_concept1_instruction: 'Verzamel alle nectar van elke bloem. Gebruik
         een geneste lus. '
       courseE_bee_concept2_instruction: |-
@@ -8996,16 +9006,14 @@
       courseE_farmer_ramp16_instruction: |-
         **Challenge:** Solve this puzzle with the
         fewest number of blocks.
-      courseE_maze_predict1_instruction: |-
-        This code includes a new block. What do
-        you think would happen if you press the "Run" block?
-      courseE_maze_ramp1_instruction: |-
-        For this puzzle, drag all of the blocks together
-        and click "Run" to watch it go!
+      courseE_maze_predict1_instruction: Deze code bevat een nieuwe blok. Wat denk
+        je dat er zal gebeuren wanneer je op de "Start" blok duwt?
+      courseE_maze_ramp1_instruction: Versleep in deze puzzel alle blokken tezamen
+        en klik op "Start" om het te zien gaan!
       courseE_maze_ramp13_instruction: Time for one last puzzle to pull it all together!
-      courseE_maze_ramp2_instruction: |-
-        Drag an extra `move forward` block out of
-        the toolbox, then attach all blocks to `when run` to finish your code.
+      courseE_maze_ramp2_instruction: Versleep een extra `ga voorwaarts` blok uit
+        de gereedschapskist, en koppel alle blokken aan `als gestart` om je code te
+        vervolledigen.
       courseE_maze_ramp3_instruction: |-
         There is one extra block that is going to
         cause the bird to crash. Throw it away by dragging it back to the toolbox.
@@ -9017,16 +9025,13 @@
       courseE_maze_ramp7_instruction: |-
         Use what you've learned to get the bird to
         the pig!
-      courseE_maze_ramp_predict1_instruction: |-
-        This code includes a new block. What
-        do you think would happen if you press the "Run" block?
+      courseE_maze_ramp_predict1_instruction: Deze code gebruikt een nieuwe blok.
+        Wat denk je dat er zal gebeuren wanneer je op de "Start" blok klikt?
       courseE_multi_maze_ramp5_instruction: Avoid the TNT.
       courseE_playLab_challenge1_instruction: |-
-        Something should happen when you get
-        enough points or when you run out of points. Add some code to the `win game`
-        and `lose game` functions to make the game work the way it should. \r
-        Click
-        the hints for ideas!
+        Er zou iets moeten gebeuren wanneer je voldoende punten gescoord hebt of net wanneer je te weinig punten hebt.
+        Voeg code toe aan de `win spel` en `verlies spel` functies om het spel te laten werken zoals het zou moeten.\r
+        Klik op de hints voor ideeën!
       courseE_playLab_embedded_instruction: |-
         This is an example game you can play
         around with. Move the dog with your arrow keys. When the dog touches one of
@@ -9062,9 +9067,12 @@
       courseE_video_createFunctions_instruction: |-
         We don't have a video for creating
         functions, yet. This is a placeholder.
-      courseF_IceAge_1_instruction: |-
-        Help Sid say "Hello!" by dragging the `actor
-        1 say` block out and connecting it to the bottom of the `when run` event.
+      courseE_video_createFunctions2_instruction: |-
+        We don't have a video for creating
+        functions, yet. This is a placeholder.
+      courseF_IceAge_1_instruction: Help Sid "Hello!" zeggen door de `speler 1 zegt`
+        blok naar buiten te slepen en het te verbinden aan de onderkant van de `wanneer
+        gestart` gebeurtenis.
       courseF_IceAge_10_instruction: |-
         Use the `actor __ throw` command to have Sid
         (actor 1) throw hearts at Granny (actor 2) and set Granny's mood to happy
@@ -9097,11 +9105,10 @@
         Write the code to help Scrat get all
         of the acorns!
       courseF_artist_embed_for7_instruction: |-
-        Press Run to see a program in action!
-        This one uses for loops.
-      courseF_artist_embed_variables9_instruction: |-
-        Press Run to see this program
-        in action!
+        Klik op Start om je programma in actie te zien!
+        Deze gebruikt for-lussen.
+      courseF_artist_embed_variables9_instruction: Klik op Start om je programma in
+        actie te zien!
       courseF_artist_for1_instruction: |-
         Experiment with the `for` loop and play with
         the `counter` variable.
@@ -9170,16 +9177,16 @@
         Freeplay: Draw something awesome! Play with
         the pen width to see how different your drawings look!
       courseF_artist_fwp_challenge1_instruction: |-
-        Try running this program, and make
-        changes to see what happens. Can you figure out how it works? (Or delete it
-        and replace it with something totally different)
+        Probeer dit programma uit te voeren,
+        en maak veranderen om te zien wat er gebeurt. Begrijp je hoe het werkt? (Of verwijder het
+        en verander het door iets totaal anders)
       courseF_artist_fwp_challenge2_instruction: "Use what you learned in the previous\nlevel
         to draw an image like this. Note: The code becomes more simple if you\nincorporate
         parameters. "
       courseF_artist_ramp10_instruction: |-
         Now, drag the code for the last triangle
         into a new loop to spin it around and make a snowflake!
-      courseF_artist_ramp8_instruction: Now make a square using Artist!
+      courseF_artist_ramp8_instruction: Teken nu een vorm met de artiest!
       courseF_artist_ramp9_instruction: Use what you've learned to draw this triangle.
       courseF_artist_variables1_instruction: |-
         Let's draw an equilateral triangle
@@ -9265,14 +9272,12 @@
       courseF_bee_conditionals10_instruction: |-
         Collect all of the nectar and make
         all of the honey.
-      courseF_bee_conditionals1_predict1_instruction: |-
-        Check to see if there's a
-        flower under the cloud. If there's a flower, get nectar.
+      courseF_bee_conditionals1_predict1_instruction: Controleer of er een bloem onder
+        de wolken zit. Als zich een bloem bevindt, verzamel dan nectar.
       courseF_bee_conditionals2_instruction: "Check underneath each cloud to see\nif
         it is hiding a flower before you get nectar.  "
       courseF_bee_conditionals3_instruction: |
         Help the bee collect all of the nectar.
-        \r
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
         blocks as possible.
@@ -9398,9 +9403,8 @@
       courseF_farmer_ramp11_instruction: |-
         This puzzle also uses nested loops.  Can
         you figure out how?
-      courseF_maze_predict1_instruction: |-
-        This code includes a new block. What do
-        you think would happen if you press the "Run" block?
+      courseF_maze_predict1_instruction: Deze code bevat een nieuwe blok. Wat denk
+        je dat er zal gebeuren wanneer je op de "Start" blok duwt?
       courseF_maze_ramp13_instruction: |-
         Time for another Angry Birds puzzle to pull
         it all together!
@@ -9539,6 +9543,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Plak een blok aan het "bij een klik" blok, klik dan op
         "Uitvoeren". Klik of raak het scherm aan om Flappy naar zijn doel te bewegen.
+      flappy_11_instruction: Maak je eigen Flappy spel. Je kunt de vormgeving en de
+        regels helemaal veranderen, zelfs de zwaartekracht. Druk als je klaar bent
+        op afronden om je vrienden je spel te laten spelen op hun telefoons.
       flappy_2_instruction: Nu hebben we wat grond toegevoegd. Plak een blok aan het
         "bij het raken van de grond" blok. Je code moet 'Stop spel' als Flappy neerstort.
       flappy_3_instruction: Met de "bij uitvoeren" blok  kun je code uitvoeren wanneer
@@ -9560,9 +9567,6 @@
         iets gebeurt, bijvoorbeeld als Flappy een obstakel passeert.
       flappy_9_instruction: Probeer voor de verandering eens de score op 0 te zetten
         in plaats van het spel te stoppen wanneer je tegen een obstakel botst.
-      flappy_11_instruction: Maak je eigen Flappy spel. Je kunt de vormgeving en de
-        regels helemaal veranderen, zelfs de zwaartekracht. Druk als je klaar bent
-        op afronden om je vrienden je spel te laten spelen op hun telefoons.
       frozen circle function in circle_instruction: Laten we nu 20 overlappende cirkels
         maken, draai 18 graden tussen elke cirkel.
       frozen circle function with parameter_instruction: Hier is een "Maak een cirkel"
@@ -9922,9 +9926,9 @@
         solve it after several tries, don’t worry!  It will be in the Play Zone at
         the end of the stage and you can try it again when you’ve had more practice.
       grade2_maze_intro9_instruction: Solve this puzzle.
-      grade2_playlab_project_1_instruction: |-
-        Now, write a program to make Waddles
-        move around using the up / down / left /right keys to hit all of the targets!
+      grade2_playlab_project_1_instruction: Schrijf nu een programma om Waddles rond
+        te laten bewegen met de boven / onder / links / rechts toetsen om alle doelwitten
+        te raken!
       grade2_playlab_project_2_instruction: |-
         The `repeat forever` block allows you
         to run code over and over forever. Can you attach blocks to move Chomp the
@@ -9936,10 +9940,10 @@
         When you're done,
         play the game to make that happen.
       grade2_playlab_project_4_instruction: |-
-        Can you add a block to score a point
-        when Waddles runs into Octavia (actor 3)? \r
-        Play the game and move Waddles
-        with the arrows until you score!
+        Kan je een blok toevoegen om een punt te scoren
+        wanneer Waddles op Octavia (speler 3) loopt? \r
+        Speel het spel en verplaats Waddles
+        met de pijltjestoetsen totdat je scoort!
       grade2_playlab_project_5_instruction: |-
         Add blocks to the `when run` event to
         change the background and the speed of Waddles.\r
@@ -11362,9 +11366,9 @@
       iceage_free_play_instruction: 'Time to create your own game or story! '
       iceage_free_playcourseF_IceAge_11_instruction: "Time to create your own game\nor
         story! "
-      iceage_hello1_instruction: |-
-        Help Sid say "Hello!" by dragging the `say` block
-        out and connecting it to the bottom of the `when run` event.
+      iceage_hello1_instruction: Help Sid "Hello!" zeggen door de `zeg` blok naar
+        buiten te slepen en het te verbinden aan de onderkant van de `als gestart`
+        gebeurtenis.
       iceage_hello2_instruction: |-
         Help Manny and Sid greet each other by using the
         the `actor ___ say` block twice.

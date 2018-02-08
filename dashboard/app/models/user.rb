@@ -120,6 +120,7 @@ class User < ActiveRecord::Base
     oauth_token
     oauth_token_expiration
     sharing_disabled
+    next_census_display
   )
 
   # Include default devise modules. Others available are:
@@ -184,12 +185,16 @@ class User < ActiveRecord::Base
   has_many :regional_partners,
     through: :regional_partner_program_managers
 
+  has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
+
   has_many :districts_users, class_name: 'DistrictsUsers'
   has_many :districts, through: :districts_users
 
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
   validates_presence_of :school_info, unless: :school_info_optional?
+
+  has_one :circuit_playground_discount_application
 
   after_create :associate_with_potential_pd_enrollments
 
@@ -238,6 +243,10 @@ class User < ActiveRecord::Base
 
   def workshop_admin?
     permission? UserPermission::WORKSHOP_ADMIN
+  end
+
+  def project_validator?
+    permission? UserPermission::PROJECT_VALIDATOR
   end
 
   # assign a course to a facilitator that is qualified to teach it
@@ -316,6 +325,13 @@ class User < ActiveRecord::Base
 
   def district_name
     district.try(:name)
+  end
+
+  # Given a user_id, username, or email, attempts to find the relevant user
+  def self.from_identifier(identifier)
+    (identifier.to_i.to_s == identifier && where(id: identifier).first) ||
+      where(username: identifier).first ||
+      find_by_email_or_hashed_email(identifier)
   end
 
   def self.find_or_create_teacher(params, invited_by_user, permission = nil)
@@ -532,11 +548,6 @@ class User < ActiveRecord::Base
 
     hashed_email = User.hash_email(email)
     User.find_by(hashed_email: hashed_email)
-  end
-
-  def self.find_by_parent_email(email)
-    return nil if email.blank?
-    User.find_by(parent_email: email)
   end
 
   def self.find_channel_owner(encrypted_channel_id)
@@ -804,7 +815,7 @@ class User < ActiveRecord::Base
     # some of our user_levels may be for levels within level_groups, or for levels
     # that are no longer in this script. we want to ignore those, and only look
     # user_levels that have matching script_levels
-    # TODO(brent): Worth noting in the case that we have the same level appear in
+    # Worth noting in the case that we have the same level appear in
     # the script in multiple places (i.e. via level swapping) there's some potential
     # for strange behavior.
     sl_level_ids = script.script_levels.map(&:level_ids).flatten
@@ -852,10 +863,10 @@ class User < ActiveRecord::Base
 
   # Returns the most recent (via updated_at) user_level for the specified
   # level.
-  def last_attempt(level)
-    UserLevel.where(user_id: id, level_id: level.id).
-      order('updated_at DESC').
-      first
+  def last_attempt(level, script = nil)
+    query = UserLevel.where(user_id: id, level_id: level.id)
+    query = query.where(script_id: script.id) unless script.nil?
+    query.order('updated_at DESC').first
   end
 
   # Returns the most recent (via updated_at) user_level for any of the specified
@@ -988,7 +999,11 @@ class User < ActiveRecord::Base
   def age
     return @age unless birthday
     age = UserHelpers.age_from_birthday(birthday)
-    age = "21+" if age >= 21
+    if age < 4
+      age = nil
+    elsif age >= 21
+      age = '21+'
+    end
     age
   end
 
@@ -1159,18 +1174,10 @@ class User < ActiveRecord::Base
     end
   end
 
-  # Return a collection of courses and scripts for the user. First in the list will
-  # be courses enrolled in by the user's sections. Following that will be all scripts
-  # in which the user has made progress that are not in any of the enrolled courses.
-  def recent_courses_and_scripts(exclude_primary_script)
-    courses = section_courses
-    course_scripts_script_ids = courses.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
-
-    # filter out those that are already covered by a course
-    user_scripts = in_progress_and_completed_scripts.
-      select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
-
-    course_data = courses.map do |course|
+  # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
+  # @return [Array{CourseData}]
+  def assigned_courses
+    section_courses.map do |course|
       {
         name: course[:name],
         title: data_t_suffix('course.name', course[:name], 'title'),
@@ -1178,8 +1185,38 @@ class User < ActiveRecord::Base
         link: course_path(course),
       }
     end
+  end
 
+  # Checks if there are any non-hidden scripts assigned to the user.
+  # @return [Boolean]
+  def any_visible_assigned_scripts?
+    user_scripts.where("assigned_at").
+      map {|user_script| Script.where(id: user_script.script.id, hidden: 'false')}.
+      flatten.
+      any?
+  end
+
+  # Checks if there are any non-hidden scripts or courses assigned to the user.
+  # @return [Boolean]
+  def assigned_course_or_script?
+    assigned_courses.any? || any_visible_assigned_scripts?
+  end
+
+  # Return a collection of courses and scripts for the user.
+  # First in the list will be courses enrolled in by the user's sections.
+  # Following that will be all scripts in which the user has made progress that # are not in any of the enrolled courses.
+  # @param exclude_primary_script [boolean]
+  # Example: true when the primary_script is being used for a TopCourse on /home
+  # @return [Array{CourseData, ScriptData}] an array of hashes of script and
+  # course data
+  def recent_courses_and_scripts(exclude_primary_script)
     primary_script_id = primary_script.try(:id)
+
+    # Filter out user_scripts that are already covered by a course
+    course_scripts_script_ids = section_courses.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
+
+    user_scripts = in_progress_and_completed_scripts.
+      select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
 
     user_script_data = user_scripts.map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
@@ -1198,7 +1235,7 @@ class User < ActiveRecord::Base
       end
     end.compact
 
-    course_data + user_script_data
+    assigned_courses + user_script_data
   end
 
   # Figures out the unique set of courses assigned to sections that this user
@@ -1213,7 +1250,7 @@ class User < ActiveRecord::Base
   end
 
   # The section which the user most recently joined as a student, or nil if none exists.
-  # @returns [Section|nil]
+  # @return [Section|nil]
   def last_joined_section
     Follower.where(student_user: self).order(created_at: :desc).first.try(:section)
   end
@@ -1354,14 +1391,14 @@ class User < ActiveRecord::Base
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.
         where(user_id: user_id, level_id: level_id, script_id: script_id).
-        first_or_create!
+        first_or_initialize
 
       if !user_level.passing? && ActivityConstants.passing?(new_result)
         new_level_completed = true
       end
 
       script = Script.get_from_cache(script_id)
-      script_valid = script.csf? && !script.k1?
+      script_valid = script.csf? && script.name != Script::COURSE1_NAME
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
         new_result == 100 &&
         script_valid &&
@@ -1379,7 +1416,7 @@ class User < ActiveRecord::Base
         user_level.level_source_id = level_source_id
       end
 
-      user_level.save!
+      user_level.atomic_save!
     end
 
     if pairing_user_ids
@@ -1578,6 +1615,12 @@ class User < ActiveRecord::Base
       (script_level && UserLevel.find_by(user: self, level: script_level.level).try(:readonly_answers))
   end
 
+  def show_census_teacher_banner?
+    # Must have an NCES school to show the banner
+    users_school = try(:school_info).try(:school)
+    teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
+  end
+
   def show_race_interstitial?(ip = nil)
     ip_to_check = ip || current_sign_in_ip
     RaceInterstitialHelper.show_race_interstitial?(self, ip_to_check)
@@ -1585,10 +1628,6 @@ class User < ActiveRecord::Base
 
   def show_school_info_interstitial?
     SchoolInfoInterstitialHelper.show_school_info_interstitial?(self)
-  end
-
-  def school_info_suggestion?
-    !(school.blank? && full_address.blank?)
   end
 
   # Removes PII and other information from the user and marks the user as having been purged.
@@ -1620,6 +1659,61 @@ class User < ActiveRecord::Base
     if teacher?
       Pd::Enrollment.where(email: email, user: nil).each do |enrollment|
         enrollment.update(user: self)
+      end
+    end
+  end
+
+  # When creating an account, we want to look for any channels that got created
+  # for this user before they signed in, and if any of them are in our Applab HOC
+  # course, we will create a UserScript entry so that they get a course card
+  # In addition, we want to have green bubbles for the levels associated with these
+  # channels, so we create level progress.
+  def generate_progress_from_storage_id(storage_id, script_name='applab-intro')
+    # applab-intro is not seeded in our minimal test env used on test/circle. We
+    # should be able to handle this gracefully
+    script = begin
+      Script.get_from_cache(script_name)
+    rescue ActiveRecord::RecordNotFound
+      nil
+    end
+    return unless script
+
+    # Find the set of levels this user started
+    # Worth noting that because ChannelToken uses levels (rather than script_levels)
+    # if a level is used in multiple scripts, we have no way to disambiguate which
+    # one a user saw it in, which becomes a challenge if we expand the scope of
+    # this beyond our applab-intro script.
+    channel_level_ids = ChannelToken.where(storage_id: storage_id).map(&:level_id)
+
+    levels_in_script = script.levels
+
+    # host_level will be self if we don't have a template level
+    # Expanding the scope beyond applab-intro would also be a challenge for template
+    # levels, as if a template is used in multiple scripts ,we have no way to know
+    # which a user saw it in
+    hoc_level_ids = levels_in_script.map(&:host_level).map(&:id)
+
+    unless (channel_level_ids & hoc_level_ids).empty?
+      User.track_script_progress(id, Script.get_from_cache(script_name).id)
+
+      # Create user_level entries for the levels associated with channels. In the
+      # case of template backed levels, a channel for the template level will result
+      # in user_level entries for all levels that use the template
+      script.script_levels.each do |script_level|
+        script_level.levels.each do |level|
+          # When making progress on a template backed level, the channel will be
+          # attached to the template level, thus we look to see if we have a channel
+          # for the host_level
+          next unless channel_level_ids.include?(level.host_level.id)
+          User.track_level_progress_sync(
+            user_id: id,
+            level_id: level.id,
+            script_id: script_level.script_id,
+            new_result: ActivityConstants::BEST_PASS_RESULT,
+            submitted: false,
+            level_source_id: nil
+          )
+        end
       end
     end
   end

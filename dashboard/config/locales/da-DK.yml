@@ -54,7 +54,7 @@
       placeholder: Afsnitskode (SOVS)
       instructions: Indtast venligst koden din lærer har delt med dig. Det er en kode
         på 6 bogstaver som "ABCDEF".
-      instructions_short: Enter your 6 letter section code
+      instructions_short: Angiv din sektionskode (6 tegn)
     submit: Tilføj lærer
   add_hint_form:
     placeholder: Skriv dit huske-ord her
@@ -147,36 +147,37 @@
       for code.org.
     additional_information: Vi har brug for nogle ekstra oplysninger til at fortsætte
       med at logge dig.
-    user_type_label: Account Type
+    user_type_label: Kontotype
     user_type_teacher: Lærer
     user_type_student: Elev
     field_is_required: krævet
-    accept_terms: You must agree to create an account
+    accept_terms: Du skal acceptere at oprette en konto
+    error: Der opstod en fejl.
   school_info:
-    title: School Information (optional)
-    school_country: School Country
-    select_school_type: School Type
+    title: Skoleoplysninger (valgfri)
+    school_country: Skolens land
+    select_school_type: Type af skole
     charter: Charter
-    private: Private
-    public: Public
-    homeschool: Homeschool
+    private: Privat
+    public: Offentlig
+    homeschool: Hjemmeskole
     after_school: After School
     other: Andre
-    state: State
-    district: District
-    other_district_not_listed: Other district not listed above
-    district_name: District Name
-    school: School
-    other_school_not_listed: Other school not listed above
-    school_name: School Name
-    school_zip: School Zip Code
-    school_address: School Address
-    school_organization_name: School/Organization Name
-    school_organization_zip: School/Organization Zip Code
+    state: Region
+    district: Distrikt
+    other_district_not_listed: Andet distrikt, ikke er nævnt ovenfor
+    district_name: Distriktnavn
+    school: Skole
+    other_school_not_listed: Anden skole, ikke er nævnt ovenfor
+    school_name: Skolens navn
+    school_zip: Skolens postnummer
+    school_address: Skolens adresse
+    school_organization_name: Navn på skole eller organisation
+    school_organization_zip: Skoles/organisations postnummer
   signin_form:
     title: Har du allerede en konto? Log på
     login: E-mail
-    login_username: Email or Username
+    login_username: Email eller Brugernavn
     password: Adgangskode
     remember: Husk mig
     submit: Log ind
@@ -190,20 +191,20 @@
     picture: Nu find dit hemmelige billede
     words: Indtast nu dit hemmelige ord
     login: Log ind
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
-    student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
-      target='_blank'>here</a>.
+    invalid_login: Ugyldig login, prøv igen
+    pair_programming: Jeg har en partner på min computer
+    student_privacy: Læs mere om hvorfor du ikke kan se dit fulde navn <a href='%{student_privacy_blog}'
+      target='_blank'> her</a>.
   password:
     reset_form:
       title: Glemt din adgangskode?
-      instructions: Enter your email address below and we'll send you password reset
-        instructions.
+      instructions: Indtast din e-mail adresse tilknyttet kontoen nedenfor og vi vil
+        sende dig instruktioner til at nulstille din adgangskode.
       email: Email adresse
       submit: Indsend
     reset_errors:
-      invalid_email: It looks like you may have signed up with an invalid email address.
-        Please email support@code.org to receive a password recovery link.
+      invalid_email: Det ser ud, som du har tilmeldt en ugyldig e-mail-adresse. Send
+        en email til email support@code.org for at modtage et link til at få adgang.
     change_form:
       title: Skift din adgangskode
       new_password: Ny adgangskode
@@ -220,12 +221,12 @@
 
       %{name}
   parent_mailer:
-    student_associated_subject: Login information for Code.org
+    student_associated_subject: Login-oplysninger til Code.org
   teacher_mailer:
-    new_teacher_subject: Welcome to Code.org!
+    new_teacher_subject: Velkommen til Code.org!
   section:
     your_section:
-      one: 'Your section:'
+      one: 'Din afdeling:'
       other: 'Your sections:'
     code_with_teacher: "%{section_code} with %{teacher_name}"
     confirm:
@@ -405,8 +406,7 @@
       even after the end of the school year, ask your parent/guardian to help you
       create your own personal login below.
     create_personal_login_under_13_username: Username (don't use your real name!)
-    create_personal_login_under_13_parent_email: Parent/guardian email address (to
-      recover your password)
+    create_personal_login_under_13_parent_email: Forældres/værges e-mail adresse
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -757,6 +757,9 @@
         and games with objects and characters that interact with each other.
       audience: Alder 13+
       cta: Learn how
+    hoc-encryption:
+      title: Simple Encryption
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -777,6 +780,10 @@
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    hero:
+      title: Minecraft
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: Sports
       body: Make a basketball game or mix and match across sports.
@@ -858,6 +865,9 @@
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
       students submitted the survey.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Tak skal du have
     wrong_body: Thank you for submitting answers.
@@ -984,7 +994,13 @@
     rename: Omdøb
     save: Gem
     delete: Slet
-    import: Import
+    import: Importér
+    share_link_import_bad_link_header: Ukendt delingslink
+    share_link_import_bad_link_body: 'Vi kunne ikke importere delingslinket. Sørg
+      for, at du bruger et link fra en Minecraft: Agent-opgave, og at du har kopieret
+      hele linket.'
+    share_link_import_error_header: Der gik noget galt
+    share_link_import_error_body: Vi kunne ikke importere delingslinket. Prøv igen.
     exit: Vend tilbage til kursus
     my_projects: Mine projekter
     project_gallery: Projekter

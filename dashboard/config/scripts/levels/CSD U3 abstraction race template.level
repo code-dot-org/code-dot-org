@@ -66,7 +66,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "start_animations": "{\n    \"orderedKeys\": [\n        \"red_car\"\n    ],\n    \"propsByKey\": {\n        \"red_car\": {\n            \"name\": \"red_car\",\n            \"sourceUrl\": \"https://images.code.org/5f738da1a2b1ef8af124e4470e2babe7-image-1469742830481.png\",\n            \"frameSize\": {\n                \"x\": 50,\n                \"y\": 50\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        }\n    }\n}",
     "markdown_instructions": "Template for the race game",

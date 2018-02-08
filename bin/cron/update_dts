@@ -7,7 +7,7 @@ require 'cdo/github'
 require 'cdo/developers_topic'
 require 'cdo/only_one'
 
-DTS_FILE = '.dts'
+DTS_FILE = '.dts'.freeze
 
 def main
   current_dts = DevelopersTopic.dts?

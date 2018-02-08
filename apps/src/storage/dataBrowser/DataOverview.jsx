@@ -27,8 +27,8 @@ const styles = {
   }
 };
 
-const DataOverview = React.createClass({
-  propTypes: {
+class DataOverview extends React.Component {
+  static propTypes = {
     // from redux state
     tableListMap: PropTypes.object.isRequired,
     view: PropTypes.oneOf(Object.keys(DataView)),
@@ -36,9 +36,9 @@ const DataOverview = React.createClass({
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired,
     onViewChange: PropTypes.func.isRequired
-  },
+  };
 
-  onTableAdd(tableName) {
+  onTableAdd = (tableName) => {
     FirebaseStorage.createTable(
       tableName,
       () => this.props.onViewChange(DataView.TABLE, tableName),
@@ -53,7 +53,7 @@ const DataOverview = React.createClass({
            console.warn(error);
         }
       });
-  },
+  };
 
   render() {
     const visible = (DataView.OVERVIEW === this.props.view);
@@ -101,7 +101,7 @@ const DataOverview = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default connect(state => ({
   view: state.data.view,

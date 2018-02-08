@@ -46,7 +46,6 @@ export default storybook => {
             <BaseDialog
               useUpdatedStyles
               fixedWidth={300}
-              assetUrl={url => '/blockly/' + url}
             >
               {EXAMPLE_DIALOG_BODY}
             </BaseDialog>
@@ -59,7 +58,6 @@ export default storybook => {
             <BaseDialog
               useUpdatedStyles
               fixedHeight={400}
-              assetUrl={url => '/blockly/' + url}
             >
               {EXAMPLE_DIALOG_BODY}
             </BaseDialog>

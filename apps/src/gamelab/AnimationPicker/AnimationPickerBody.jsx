@@ -37,7 +37,7 @@ const animationPickerStyles = {
   }
 };
 
-export default Radium(class AnimationPickerBody extends React.Component {
+class AnimationPickerBody extends React.Component {
   static propTypes = {
     is13Plus: PropTypes.bool,
     onDrawYourOwnClick: PropTypes.func.isRequired,
@@ -149,7 +149,9 @@ export default Radium(class AnimationPickerBody extends React.Component {
       </div>
     );
   }
-});
+}
+
+export default Radium(AnimationPickerBody);
 
 export const WarningLabel = ({children}) => (
     <span style={{color: color.red}}>

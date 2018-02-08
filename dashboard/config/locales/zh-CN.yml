@@ -84,13 +84,12 @@
     twitter: "推特"
     facebook: "脸谱"
     windowslive: "微软账户"
-    clever: Clever Account
+    clever: Clever 账号
     forgot_password: "忘记密码？"
     need_confirmation: "没有收到确认的说明吗？"
     need_unlock: "未收到解锁指令吗？"
     not_linked: "对不起，你的编程一小时账户没有连接到你的%{provider}。你需要通过输入密码来登录。"
-    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
-      sign in through your Clever Portal instead.
+    use_clever: "对不起，您的 Code.org 帐号无法连接到%{provider}。请尝试通过Clever登录。"
   signup_form:
     student_count: "%{count} 位学生已经注册。"
     teacher_count: "%{count} 位教师已经注册。"
@@ -129,6 +128,7 @@
     user_type_student: "学生"
     field_is_required: "必填"
     accept_terms: "您必须同意创建一个帐户"
+    error: "发生错误。"
   school_info:
     title: "学校信息（选填）"
     school_country: "学校所在国家"
@@ -583,8 +583,8 @@
       title: "经典迷宫"
       body: "请尝试计算机科学的基本知识。数百万人尝试了它。"
     flappy:
-      title: "飞扬的代码"
-      body: "想要在 10 分钟内写你自己的游戏吗？请尝试我们飞扬的代码教程 ！"
+      title: "像素鸟编程"
+      body: "想要在 10 分钟内写你自己的游戏吗？请尝试我们像素鸟编程教程 ！"
     20-hour:
       title: "加速课程"
       body: "这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。"
@@ -600,6 +600,9 @@
       body: "游戏实验室是一个编程环境，它能让你做一些物体和角色的简单互动动画和游戏。"
       audience: 13岁以上
       cta: "了解操作方法"
+    hoc-encryption:
+      title: "简单加密"
+      body: "学生将学习技术来创建和破解加密的信息。"
     weblab:
       title: "网站实验室 （测试版）"
       body: "网站实验室是一个你能够通过html和css制作简单网页的编程环境。在几秒钟内，你就能设计并分享自己的网页。"
@@ -618,6 +621,10 @@
     minecraft2016:
       title: "我的世界"
       body: "在你自己的《我的世界》中编写各种动物和其他生物。"
+    hero:
+      title: "我的世界"
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: "运动"
       body: "创造一个篮球游戏或跨越各种运动的混合比赛。"
@@ -683,6 +690,7 @@
     hide_survey_last_answer: |-
       这个调查是匿名的。请访问教导面板以查询结果汇总。
       注意，只有至少五个学生提交了调查报告结果才会可见。
+    survey_submission_thankyou: "感谢你提交调查！调查结果已经被清空，以便保持你的回复是匿名的。注意，你的老师仍然能看到整个班级的答案，但是不会有名字出现。"
   level_group-submittable:
     wrong_title: "谢谢你"
     wrong_body: "感谢您提交答案。"
@@ -784,7 +792,11 @@
     rename: "重命名"
     save: "保存​​"
     delete: "刪除"
-    import: Import
+    import: "导入"
+    share_link_import_bad_link_header: "分享的链接无法识别"
+    share_link_import_bad_link_body: "无法导入共享链接。请确保这个链接是来源于《我的世界：代理人关卡》，并且完整复制了整个链接。"
+    share_link_import_error_header: "出错了。"
+    share_link_import_error_body: "导入该共享链接时出错。请再试一次。"
     exit: "返回课程"
     my_projects: "我的项目"
     project_gallery: "项目"

@@ -22,8 +22,9 @@
         name: Sýnilegt nafn
         name_example: Birtingarnafn<br/>(t.d. Kalli kóðari eða Anna J.)
         email: Netfang
-        parent_email: Parent/guardian email
-        personal_email: Einkanetfang
+        parent_email: Netfang foreldris/forráðamanns
+        personal_email: Einkanetfang <a href="%{url}">(smelltu hér ef þú hefur ekki
+          netfang)</a>
         username: notandanafn
         password: lykilorð
         password_confirmation: Staðfesting lykilorðs
@@ -53,7 +54,7 @@
       placeholder: Hópkóði (ABCDEF)
       instructions: Vinsamlegast færðu inn kóðann sem kennarinn lét þig hafa. Það
         er 6 stafa kóði líkur "ABCDEF".
-      instructions_short: Enter your 6 letter section code
+      instructions_short: Sláðu inn 6 stafa kóða hópsins
     submit: Bæta við kennara
   add_hint_form:
     placeholder: Færðu vísbendingu þína inn hér
@@ -66,7 +67,7 @@
   courses: Námskeið
   courses_page:
     title_student: Lærðu í Kóðastúdíóinu
-    title_teacher: Teach with Code Studio
+    title_teacher: Kenna með Kóðastúdíóinu
   unplugged_activity: Verkefni án tölvu
   of: af
   more: MEIRA
@@ -92,14 +93,14 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft reikning
-    clever: Clever Account
+    clever: Clever aðgangur
     forgot_password: Gleymt lykilorð?
     need_confirmation: Fékkstu ekki sendar leiðbeiningar um staðfestingu?
     need_unlock: Fékkstu ekki leiðbeiningar um opnun?
     not_linked: "Því miður er Code.org aðgangur þinn ekki tengur við %{provider}.
       Þú þarft því að skrá þig inn með því að rita lykilorð hér fyrir neðan."
-    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
-      sign in through your Clever Portal instead.
+    use_clever: "Því miður er Code.org aðgangurinn þinn ekki tengdur %{provider}.
+      Skráðu þig inn í gegnum Clever gáttina í staðinn."
   signup_form:
     student_count: "%{count} nemendur hafa þegar skráð sig."
     teacher_count: "%{count} kennarar hafa þegar skráð sig."
@@ -153,6 +154,7 @@
     user_type_student: nemandi
     field_is_required: er nauðsynlegt
     accept_terms: "Þú verður að samþykkja að stofna aðgang"
+    error: Villa kom upp.
   school_info:
     title: Upplýsingar skóla (val)
     school_country: Land skóla
@@ -221,9 +223,9 @@
 
       %{name}
   parent_mailer:
-    student_associated_subject: Login information for Code.org
+    student_associated_subject: Innskráningarupplýsingar fyrir Code.org
   teacher_mailer:
-    new_teacher_subject: Welcome to Code.org!
+    new_teacher_subject: Velkomin á Code.org!
   section:
     your_section:
       one: 'Hópur þinn:'
@@ -233,8 +235,8 @@
       remove: Ertu viss um að þú viljir yfirgefa þennan hóp?
     remove: "(fjarlægja hóp)"
     type:
-      picture: Picture Password
-      word: Secret Words
+      picture: Leynimynd
+      word: Leyniorð
       email: Netfang
       google_classroom: Google Classroom
       clever: Clever
@@ -251,9 +253,9 @@
       section_not_found: Fann ekki hóp með kóðann '%{section_code}'.
       blank_code: Vinsamlegast færðu inn hópkóða
       cant_join_own_section: "Því miður getur þú ekki skráð þig í eiginn hóp."
-      provider_managed_section: This section is managed by another provider and cannot
-        be joined. Please ask your teacher to add you via %{provider} and re-sync
-        their section.
+      provider_managed_section: "Þessi hópur er í umsjón annars aðila og ekki hægt
+        að tengja hann. Biddu kennarann að tengja þig í gegnum %{provider} og spegla
+        svo þann hóp."
     mail:
       student_disassociated:
         subject: 'Orðsending frá Code.org: %{student_name} er ekki lengur skráð(ur)
@@ -278,12 +280,12 @@
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: The email address you provided doesn't match
-          the email address for this account
-        personal_login_created_email: You created a personal login successfully. You
-          can now log into Code.org with your email and password
-        personal_login_created_username: You created a personal login successfully.
-          You can now log into Code.org with your username and password
+        user_type_change_email_mismatch: Netfangið sem þú gafst upp passar ekki við
+          netfangið fyrir þennan aðgang
+        personal_login_created_email: "Þér tókst að stofna persónulegan aðgang. Þú
+          getur nú skráð þig inn með netfangi og leyniorði"
+        personal_login_created_username: "Þér tókst að stofna persónulegan aðgang.
+          Þú getur nú skráð þig inn með notendanafni (%{username}) og leyniorði"
   nav:
     header:
       finished_hoc: "Ég hef lokið við mína Klukkustund kóðunar"
@@ -294,11 +296,11 @@
         calculate: Calculate Something
         applab: Búa til forrit í App Lab
         gamelab: Búa til Leikjasmiðjuverkefni
-        weblab: Make a Web Lab (beta) project
+        weblab: Búa til Vefsmiðju (beta) verkefni
       home: Forsíða
-      my_dashboard: My Dashboard
+      my_dashboard: Stjórnborðið mitt
       courses: Námskeið
-      course_catalog: Course Catalog
+      course_catalog: Námskeiðalisti
       project_gallery: Verkefni
       sections: Hópar
       help_support: Aðstoð og þjónusta
@@ -402,12 +404,11 @@
     no_password_because_sponsored: Ræddu við kennarann þinn varðandi umsjón lykilorðs
       þíns.
     create_personal_login: Búa til einkaaðgang
-    create_personal_login_under_13_info: If you want to keep using your Code.org account
-      even after the end of the school year, ask your parent/guardian to help you
-      create your own personal login below.
-    create_personal_login_under_13_username: Username (don't use your real name!)
-    create_personal_login_under_13_parent_email: Parent/guardian email address (to
-      recover your password)
+    create_personal_login_under_13_info: Ef þú vilt halda áfram að nota Code.org aðganginn
+      þó að skólinn sé búinn, getur þú beðið foreldri/forráðamann að hjálpa þér að
+      stofna þinn eigin persónulega aðgang hér fyrir neðan.
+    create_personal_login_under_13_username: Notendanafn (ekki nota þitt rétta nafn!)
+    create_personal_login_under_13_parent_email: Netfang foreldris/forráðamanns
     create_personal_login_info: Ef þú vilt halda áfram að nota Code.org eftir lok
       skólaársins, getur þú stofnað þinn eigin aðgang hér fyrir neðan.
     create_personal_login_terms: Með því að stofna minn eigin aðgang, samþykki ég
@@ -419,10 +420,11 @@
       Code.org nema þegar þeir þurfa að endurheimta aðgangsorð. Nánari upplýsingar
       má finna í <a href=''%{privacy_policy_url}'', target=''_blank''>persónuverndarstefnu</a>
       okkar.'
-    enter_new_login_info: Enter your new login information
-    confirm_secret_words: Confirm that it is you by entering your current secret words
-    enter_parent_email: Enter your parent or guardian's email address (for password
-      recovery)
+    enter_new_login_info: Færðu inn nýju innskráningarupplýsingarnar þínar
+    confirm_secret_words: Staðfestu að þetta sért þú með því að slá inn núverandi
+      leyniorð
+    enter_parent_email: Skráðu netfang foreldris eða forráðamanns (ef leyniorð skyldi
+      gleymast)
   user_level:
     completed: Lokið
     tried: Reynt
@@ -663,7 +665,7 @@
     title: Vantar þig aðstoð?
     subtitle: Skoðaðu þessi myndbönd og vísbendingar
     teacher: Sjá lausnina
-    teacher_no_solution: Stop seeing solution
+    teacher_no_solution: Fela lausn
     auth_error: "Þú hefur ekki heimild til að sjá lausnina."
     submit: Uppfæra stað listamanns
     direction: Upphafsstefna (í gráðum)
@@ -673,8 +675,8 @@
     notes_coming_soon: Textar fyrir þetta myndskeið eru í vinnslu.
     autoplay_option: Spila myndbönd sjálfvirkt
     download: Hala niður myndband
-    show_notes: Show Notes
-    show_video: Show Video
+    show_notes: Sýna athugasemdir
+    show_video: Sýna myndband
   compatibility:
     upgrade:
       unsupported_message: Vafrinn þinn er ekki studdur. Vinsamlegast uppfærðu í <a
@@ -765,10 +767,13 @@
         hreyfimyndir og leiki með hlutum og gagnvirkum leikverum.
       audience: Aldur 13+
       cta: Læra hvernig
+    hoc-encryption:
+      title: Einföld dulkóðun
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
-      title: Web Lab (beta)
-      body: Web Lab is a programming environment where you can make simple web pages
-        using HTML and CSS. Design your web pages and share your site in seconds.
+      title: Vefsmiðja (beta)
+      body: Vefsmiðjan er forritunarumhverfi þar sem þú getur búið til einfaldar vefsíður
+        með HTML og CSS. Hannaðu vefsíður og deildu vefsetrinu á augabragði.
       audience: Aldur 13+
       cta: Læra hvernig
     frozen:
@@ -784,13 +789,17 @@
     minecraft2016:
       title: Minecraft
       body: Forritaðu dýr og aðrar Minecraft verur í þinni eigin útgáfu af Minecraft.
+    hero:
+      title: Minecraft
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: "Íþróttir"
-      body: Make a basketball game or mix and match across sports.
+      body: Búðu til körfuboltaleik eða blandaðu saman íþróttum.
     text-compression:
       title: "Þjöppun texta"
-      body: In this lesson, students will use the Text Compression Widget to compress
-        text by substituting patterns with symbols.
+      body: "Í þessari kennslustund munu nemendur nota græjuna fyrir textaþjöppun
+        til að þjappa texta með skipta út mynstrum fyrir tákn."
     unplugged:
       title: Verkefni án tölvu
       audience: Aldur 6+
@@ -864,6 +873,9 @@
     hide_survey_last_answer: "Þessi könnun er nafnlaus. Þú getur séð samanteknar niðurstöður
       á stjórnborði kennara. Athugaðu að niðurstöður sjást ekki nema a.m.k. fimm nemendur
       hafi svarað."
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Takk fyrir
     wrong_body: Takk fyrir að senda inn svör.
@@ -991,7 +1003,14 @@
     rename: Endurnefna
     save: Vista
     delete: Eyða
-    import: Import
+    import: Flytja inn
+    share_link_import_bad_link_header: "Óþekktur tengill fyrir deilingu"
+    share_link_import_bad_link_body: 'Við gátum ekki flutt inn þennan tengil til að
+      deila. Gættu þess að þú sért að nota tengil úr Minecraft: Umba þraut og að þú
+      hafir afritað allan tengilinn.'
+    share_link_import_error_header: Eitthvað fór úrskeiðis.
+    share_link_import_error_body: "Það kom upp vandamál við að flytja inn þennan tengil
+      fyrir deilingu. Reyndu aftur."
     exit: Til baka í námskeið
     my_projects: Verkefni mín
     project_gallery: Verkefni
@@ -1034,9 +1053,9 @@
     remix: Endurblanda
     click_to_remix: Smelltu á "Endurblanda" til að stofna afleidda útgáfu!
     edit_project: Breyta verkefni
-    sharing_disabled: Sorry, this project is not available for sharing. If this is
-      your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
-      in</a> to your account to view the project.
+    sharing_disabled: "Því miður er ekki mögulegt að deila þessu verkefni. Ef þetta
+      er þitt verkefni eða nemanda þíns, vinsamlegast <a href='https://studio.code.org/users/sign_in'>skráðu
+      þig inn</a> á aðgang þinn til að skoða verkefnið."
     abuse:
       tos: "Þetta verkefni hefur verið tilkynnt fyrir brot á <a href='http://code.org/tos'>Þjónustuskilmálum</a>
         Code.org og þess vegna er ekki hægt að deila því."
@@ -1103,10 +1122,10 @@
     optional_stages: Optional Stages
     main_course: Aðalnámskeið
     extra_course_content: Viðbótarefni námskeiðs
-    csf_e_1: Ramp Up to Course E (Optional)
-    csf_e_2: Course E Content
-    csf_f_1: Ramp Up to Course F (Optional)
-    csf_f_2: Course F Content
+    csf_e_1: Uppfærsla í Námskeið E (val)
+    csf_e_2: Innihald Námskeiðs E
+    csf_f_1: Uppfærsla í Námskeið F (val)
+    csf_f_2: Innihald Námskeiðs F
     csd1_1: 'Kafli 1: Lausn vandamála sem ferli'
     csd1_2: 'Kafli 2: Tölvur og lausn vandamála'
     csd2_1: 'Kafli 1: Innihald vefja og HTML'
@@ -1132,7 +1151,7 @@
     csp_ap_1: 'Kafli 1: AP - Tækniumhverfið'
     csp_ap_2: 'Kafli 2: AP - Skilningsverkefni'
     csp_ap_3: 'Kafli 3: AP - Sköpunarverkefni'
-    dlp: Reflection Prompts
+    dlp: Kvaðningar um íhugun
   external_links:
     disclaimer: Afsal ábyrgðar
     leaving_domain: "Þú ert nú að yfirgefa þetta vefsvæði og fara á svæði sem Code.org
@@ -1220,9 +1239,9 @@
     með hann eða til að fara yfir svörin.
   hidden_stage: Kennarinn þinn bjóst ekki við að þú værir hér. Vinsamlegast spurðu
     kennarann í hvaða verkefni þú ættir að vera.
-  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
-    which unit you should be on.
-  return_unit_overview: Go to unit overview
+  hidden_script: Kennarinn þinn bjóst ekki við að þú værir hér. Vinsamlegast spurðu
+    kennarann í hvaða verkefni þú ættir að vera.
+  return_unit_overview: Fara í yfirlit kafla
   return_course_overview: Fara í yfirlit kafla
   view_all_units: Sjá allar einingar
   pd:

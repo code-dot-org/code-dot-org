@@ -5,7 +5,7 @@
 
 import React, {PropTypes} from 'react';
 import color from "../util/color";
-import Responsive from '../responsive';
+import {connect} from 'react-redux';
 
 const styles = {
   headerBanner: {
@@ -90,21 +90,21 @@ const styles = {
   }
 };
 
-const HeaderBanner = React.createClass({
-  propTypes: {
+class HeaderBanner extends React.Component {
+  static propTypes =  {
     headingText: PropTypes.string,
     subHeadingText: PropTypes.string,
     description: PropTypes.string,
     children: PropTypes.node,
     short: PropTypes.bool,
-    responsive: React.PropTypes.instanceOf(Responsive)
-  },
+    responsiveSize: React.PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
+  };
 
   render() {
-    const {short, headingText, subHeadingText, description, responsive} = this.props;
+    const {short, headingText, subHeadingText, description, responsiveSize} = this.props;
 
     let headerStyle, headingStyle, subHeadingStyle, descriptionStyle;
-    if (responsive && responsive.isResponsiveCategoryInactive('md')) {
+    if (responsiveSize === 'xs') {
       headerStyle = short ? styles.headerBannerShortResponsive : styles.headerBannerResponsive;
       headingStyle = short ? styles.bannerHeadingShortResponsive : styles.bannerHeadingResponsive;
       subHeadingStyle = styles.bannerSubHeadingResponsive;
@@ -133,6 +133,8 @@ const HeaderBanner = React.createClass({
       </div>
     );
   }
-});
+}
 
-export default HeaderBanner;
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+}))(HeaderBanner);

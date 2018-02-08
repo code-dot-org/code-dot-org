@@ -61,7 +61,7 @@
     "hide_view_data_button": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "pause_animations_by_default": "false",
     "callout_json": "[]",
     "markdown_instructions": "<img src=\"https://images.code.org/aa5aedbcfec082c2886d88b565e5fc09-image-1495732712591.png\" style=\"float: right; max-width: 200px; border: 1px solid grey\">\r\n# Challenge: Face\r\n\r\n_Check with your teacher before starting any of the challenges._\r\n\r\nWrite a program that uses `rect`, `ellipse`, and `fill` to create the face on the right. The colors used are \"lightblue\", \"red\", and \"lightgreen\".\r\nOnce you've finished, add your own personal touches to the image.\r\n\r\n\r\n",

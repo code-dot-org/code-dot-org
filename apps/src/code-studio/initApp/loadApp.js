@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { TestResults } from '@cdo/apps/constants';
 import { getStore } from '../redux';
-import { setUserSignedIn, SignInState, mergeProgress } from '../progressRedux';
+import { SignInState, mergeProgress } from '../progressRedux';
 import { setVerified } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import { files } from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
@@ -189,12 +189,6 @@ export function setupApp(appOptions) {
         window.location.href = lastServerResponse.nextRedirect;
       }
     },
-    backToPreviousLevel: function () {
-      var lastServerResponse = reporting.getLastServerResponse();
-      if (lastServerResponse.previousLevelRedirect) {
-        window.location.href = lastServerResponse.previousLevelRedirect;
-      }
-    },
     showInstructionsWrapper: function (showInstructions) {
       // Always skip all pre-level popups on share levels or when configured thus
       if (this.share || appOptions.level.skipInstructionsPopup) {
@@ -285,7 +279,7 @@ function tryToUploadShareImageToS3({image, level}) {
 function loadProjectAndCheckAbuse(appOptions) {
   return new Promise((resolve, reject) => {
     project.load().then(() => {
-      if (project.hideBecauseAbusive() && !appOptions.canResetAbuse) {
+      if (project.hideBecauseAbusive()) {
         renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
         return;
       }
@@ -397,17 +391,8 @@ function loadAppAsync(appOptions) {
 
       const store = getStore();
       const signInState = store.getState().progress.signInState;
-      if (signInState === SignInState.Unknown) {
-        // if script was cached, we won't have signin state until we've made
-        // our user_progress call
-        // Depend on the fact that even if we have no levelProgress, our progress
-        // data will have other keys
-        const signedInUser = Object.keys(data).length > 0;
-        store.dispatch(setUserSignedIn(signedInUser));
-        clientState.cacheUserSignedIn(signedInUser);
-        if (signedInUser) {
-          progress.showDisabledBubblesAlert();
-        }
+      if (signInState === SignInState.SignedIn) {
+        progress.showDisabledBubblesAlert();
       }
       if (data.isVerifiedTeacher) {
         store.dispatch(setVerified());
@@ -495,8 +480,12 @@ let APP_OPTIONS;
 export function setAppOptions(appOptions) {
   APP_OPTIONS = appOptions;
   // ugh, a lot of code expects this to be on the window object pretty early on.
-  /** @type {AppOptionsConfig} */
-  window.appOptions = appOptions;
+  // Don't override existing settings, for example on Multi levels with embedded
+  // blocks.
+  if (!appOptions.nonGlobal) {
+    /** @type {AppOptionsConfig} */
+    window.appOptions = appOptions;
+  }
 }
 
 /** @return {AppOptionsConfig} */
@@ -528,7 +517,7 @@ export default function loadAppOptions() {
     }
     const appOptions = getAppOptions();
     if (appOptions.embedded) {
-      // when we just "embed" an app (i.e. via embed_blocks.html.erb),
+      // when we just "embed" an app (i.e. via LevelsHelper#string_or_image),
       // we don't need to load anything else onto appOptions, so just resolve
       // immediately
       resolve(appOptions);

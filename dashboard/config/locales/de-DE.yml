@@ -158,6 +158,7 @@
     user_type_student: Schüler
     field_is_required: ist erforderlich
     accept_terms: Du musst der Erstellung eines Kontos zustimmen
+    error: An error occurred.
   school_info:
     title: Schulinformationen (optional)
     school_country: Land der Schule
@@ -783,6 +784,9 @@
         and games with objects and characters that interact with each other.
       audience: Ab 13 Jahren
       cta: Lerne wie
+    hoc-encryption:
+      title: Einfache Verschlüsselung
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -804,6 +808,10 @@
       title: Minecraft
       body: Baue dein eigene Minecraft-Version. Erschaffe deine eigene Version von
         Hühnern, Schafen, Creepern, Zombies und mehr.
+    hero:
+      title: Minecraft
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: Sports
       body: Make a basketball game or mix and match across sports.
@@ -887,6 +895,9 @@
     hide_survey_last_answer: Diese Umfrage ist anonym.  Bitte öffnen Sie das Lehrer-Dashboard,
       um die Ergebnisse anzusehen. Beachten Sie, dass Ergebnisse nur angezeigt werden,
       sofern mindesten fünf Teilnehmer an der Umfrage teilgenommen haben.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Vielen Dank
     wrong_body: Vielen Dank für das Einsenden Ihrer Fragen.
@@ -1017,7 +1028,14 @@
     rename: Umbenennen
     save: Speichern
     delete: Löschen
-    import: Import
+    import: Importieren
+    share_link_import_bad_link_header: Freigabelink nicht erkannt
+    share_link_import_bad_link_body: 'Wir konnten den Freigabelink nicht importieren.
+      Prüfe, ob du einen Link aus einem Minecraft: Agent-Rätsel verwendest. Kopiere
+      den kompletten Link.'
+    share_link_import_error_header: Etwas ist schiefgelaufen.
+    share_link_import_error_body: Es gab ein Problem beim Import des Freigabelinks.
+      Versuche es erneut.
     exit: Zurück zum Kurs
     my_projects: Meine Projekte
     project_gallery: Projekte

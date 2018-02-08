@@ -32,8 +32,14 @@ const styles = {
   }
 };
 
-const ColumnHeader = React.createClass({
-  propTypes: {
+const INITIAL_STATE = {
+  newName: undefined,
+  hasEnteredText: false,
+  isDialogOpen: false,
+};
+
+class ColumnHeader extends React.Component {
+  static propTypes = {
     coerceColumn: PropTypes.func.isRequired,
     columnName: PropTypes.string.isRequired,
     columnNames: PropTypes.array.isRequired,
@@ -43,70 +49,56 @@ const ColumnHeader = React.createClass({
     isEditing: PropTypes.bool.isRequired,
     isPending: PropTypes.bool.isRequired,
     renameColumn: PropTypes.func.isRequired,
-  },
+  };
 
-  getInitialState() {
-    return {
-      newName: undefined,
-      hasEnteredText: false,
-      isDialogOpen: false,
-    };
-  },
+  state = {...INITIAL_STATE};
 
   componentDidMount() {
     if (this.props.isEditing) {
       this.input.select();
     }
-  },
+  }
 
   componentWillReceiveProps(nextProps) {
     if (!this.props.isEditing && nextProps.isEditing) {
       // Don't display a stale value for newName.
-      this.setState(this.getInitialState());
+      this.setState(INITIAL_STATE);
     }
-  },
+  }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.props.isEditing && !this.state.hasEnteredText) {
       this.input.select();
     }
-  },
+  }
 
-  handleBlur() {
-    this.handleRenameConfirm();
-  },
+  handleBlur = () => this.handleRenameConfirm();
 
-  handleChange(event) {
+  handleChange = (event) => {
     this.setState({
       newName: event.target.value,
       hasEnteredText: true,
     });
-  },
+  };
 
-  handleClose() {
-    this.setState({isDialogOpen: false});
-  },
+  handleClose = () => this.setState({isDialogOpen: false});
 
-  handleDelete() {
-    this.setState({isDialogOpen: true});
-  },
+  handleDelete = () => this.setState({isDialogOpen: true});
 
-  handleConfirmDelete() {
+  handleConfirmDelete = () => {
     this.setState({isDialogOpen: false});
     this.props.deleteColumn(this.props.columnName);
-  },
+  };
 
-  handleKeyUp(event) {
+  handleKeyUp = (event) => {
     if (event.key === 'Enter') {
       this.handleRenameConfirm();
     } else if (event.key === 'Escape') {
       this.props.editColumn(null);
     }
-  },
+  };
 
-  handleRename() {
-    this.props.editColumn(this.props.columnName);
-  },
+  handleRename = () => this.props.editColumn(this.props.columnName);
 
   handleRenameConfirm() {
     // Make sure we only save once.
@@ -126,20 +118,18 @@ const ColumnHeader = React.createClass({
     } else {
       this.props.editColumn(null);
     }
-  },
+  }
 
   /**
    * @param {ColumnType} type
    */
-  coerceColumn(type) {
-    this.props.coerceColumn(this.props.columnName, type);
-  },
+  coerceColumn = (type) => this.props.coerceColumn(this.props.columnName, type);
 
   isInputValid() {
     // The current name is always valid.
     const newName = this.state.newName;
     return this.props.columnName === newName || !this.props.columnNames.includes(newName);
-  },
+  }
 
   render() {
     const containerStyle = [styles.container, {
@@ -192,6 +182,6 @@ const ColumnHeader = React.createClass({
       </th>
     );
   }
-});
+}
 
 export default Radium(ColumnHeader);

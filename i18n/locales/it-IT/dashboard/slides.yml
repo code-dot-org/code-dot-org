@@ -72,7 +72,7 @@ it:
     flappy_intro:
       1:
         image: 'notes/flappy01.jpg'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-16#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br>\n<br>\nCiao, io sono Katie! Una delle cose più eccitanti nell'informatica è che un programma per calcolatore può essere interattivo."
+        text: "Ciao, io sono Katie! Una delle cose più eccitanti nell'informatica è che un programma per calcolatore può essere interattivo."
       2:
         image: 'notes/flappy02.jpg'
         text: "Ogni volta che qualcuno fa clic o tocca o preme un tasto su un calcolatore o un telefono, questo genera un EVENTO, e c'è del codice che decide cosa fare quando si verifica un EVENTO."
@@ -378,14 +378,14 @@ it:
     C1_artist_intro:
       1:
         image: 'notes/C1_artist_intro_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-8#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br>\n<br>\nQuesti sono i blocchi per disegnare. Usa quello corretto per far spostare l'artista e farlo disegnare sulle linee grigie."
+        text: "Questi sono i blocchi per disegnare. Usa quello corretto per far spostare l'artista e farlo disegnare sulle linee grigie."
       2:
         image: 'notes/C1_artist_intro_2.png'
-        text: "Questi sono i blocchi per saltare (<i>jump</i>). Quando usi questi blocchi, l'artista si sposta ma non disegna. Usali per saltare alla prossima linea grigia senza disegnare."
+        text: "Questi sono i blocchi per saltare (jump). Quando usi questi blocchi, l'artista si sposta ma non disegna. Usali per saltare alla prossima linea grigia senza disegnare."
     C1_bee_level_intro:
       1:
         image: 'notes/C1_bee_level_intro_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-7#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br>\n<br>\nLe api non sono super mitiche? In questa serie di esercizi, il tuo obiettivo è quello di aiutare l'ape a raggiungere i fiori, a raccogliere il nettare dai fiori e a volare verso il favo per produrre il miele. Per questo esercizio, devi usare i blocchi \"prendi il nettare\" e \"fai il miele\"."
+        text: "Le api non sono super mitiche? In questa serie di esercizi, il tuo obiettivo è quello di aiutare l'ape a raggiungere i fiori, a raccogliere il nettare dai fiori e a volare verso il favo per produrre il miele. Per questo esercizio, devi usare i blocchi \"prendi il nettare\" e \"fai il miele\"."
       2:
         image: 'notes/C1_bee_level_intro_2.png'
         text: 'Ogni fiore ha una quantità diversa di nettare: 1, 2, 3 o più. Sappiamo quanto nettare è presente nei fiori rossi grazie al numerino visibile nell''angolo in basso. In questo modo sei sicuro di raccogliere tutto il nettare da un fiore prima di volare via. Inoltre, ogni favo può contenere solo una certa quantità di miele: 1, 2, 3 o più. In questo modo sei sicuro di produrre tanto miele quanto il favo può contenerne.'
@@ -395,7 +395,7 @@ it:
     C1_bee_loops:
       1:
         image: 'notes/C1_bee_loops_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-14#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br>\n<br>\nUn ciclo consiste nel ripetere una serie di attività. Se devo ispezionare un alveare, guardo un telaio e lo rimetto a posto, quindi ripeto queste stesse azioni più volte. E' un circuito chiuso, ripeto più volte le stesse attività."
+        text: "Un ciclo consiste nel ripetere una serie di attività. Se devo ispezionare un alveare, guardo un telaio e lo rimetto a posto, quindi ripeto queste stesse azioni più volte. E' un circuito chiuso, ripeto più volte le stesse attività."
       2:
         image: 'notes/C1_bee_loops_2.png'
         text: "In questo esercizio, l'ape deve raccogliere tre dosi di nettare dal fiore. Invece di usare tre blocchi `prendi il nettare`, prova ad usare il blocco `ripeti` per raccogliere il nettare tre volte. Premi \"Esegui\" e controlla se la soluzione è corretta. Bello, no?"
@@ -469,7 +469,7 @@ it:
     C1_maze_debugging:
       1:
         image: 'notes/C1_maze_debugging_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-5#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nLa \"correzione di errori\" (<i>debugging</i>) consiste nel trovare e risolvere i problemi. Ci sono molti modi per trovare e risolvere i problemi. Uno dei modi più semplici consiste nel muoversi passo dopo passo fino a che qualcosa non va storto. Qui sto cercando di fare una capovolta all'indietro sulla trave, ma continuo a cadere."
+        text: "La \"correzione di errori\" (debugging) consiste nel trovare e risolvere i problemi. Ci sono molti modi per trovare e risolvere i problemi. Uno dei modi più semplici consiste nel muoversi passo dopo passo fino a che qualcosa non va storto. Qui sto cercando di fare una capovolta all'indietro sulla trave, ma continuo a cadere."
       2:
         image: 'notes/C1_maze_debugging_2.png'
         text: "Ho ripercorso il mio esercizio passo dopo passo e ho capito dov'era il mio errore. Non stavo mettendo correttamente le mani sulla trave. Così ho provato a fare una nuova capovolta all'indietro sulla trave mettendo le mani in modo diverso e ce l'ho fatta. Sono stata veramente contenta di aver trovato e corretto il mio errore."
@@ -482,7 +482,7 @@ it:
     C1_maze_intro_sequencing:
       1:
         image: 'notes/C1_maze_intro_sequencing_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-4#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br>\n<br>\nPer risolvere questo esercizio, devi far arrivare l'uccellino fino al maialino. Osserva il percorso per decidere quali direzioni deve prendere l'uccellino."
+        text: "Per risolvere questo esercizio, devi far arrivare l'uccellino fino al maialino. Osserva il percorso per decidere quali direzioni deve prendere l'uccellino."
       2:
         image: 'notes/C1_maze_intro_sequencing_2.png'
         text: "Devi trascinare i blocchi dalla cassetta degli attrezzi all'area di lavoro. Assicurati di posizionare i blocchi sotto il blocco \"quando si clicca su Esegui\" (when run) e, quando pensi di aver trovato la soluzione giusta, clicca su \"Esegui\" (Run) e osserva se l'uccellino raggiunge il maialino."
@@ -531,7 +531,7 @@ it:
     C1_pair_programming:
       1:
         image: 'notes/C1_pair_programming_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-3#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nOggi imparerai la Programmazione in Coppia. Nella programmazione in coppia si lavora in squadra. Perché due persone dovrebbero usare un solo computer? Perché due teste sono meglio di una. Nella programmazione in coppia tu e il tuo compagno vi sedete insieme davanti allo stesso computer e lavorate entrambi allo stesso progetto."
+        text: "Oggi imparerai la Programmazione in Coppia. Nella programmazione in coppia si lavora in squadra. Perché due persone dovrebbero usare un solo computer? Perché due teste sono meglio di una. Nella programmazione in coppia tu e il tuo compagno vi sedete insieme davanti allo stesso computer e lavorate entrambi allo stesso progetto."
       2:
         image: 'notes/C1_pair_programming_2.png'
         text: "Nella programmazione in coppia, una persona è il conducente e l'altra è il navigatore, proprio come quando si guida una macchina. Il conducente siede davanti al computer ed è quello che usa la tastiera e il mouse, o lo schermo tattile (il touchscreen), e controlla le azioni principali del computer. L'altra persona è il navigatore. il navigatore aiuta il conducente rispondendo alle sue domande, oppure segnalando eventuali problemi o errori."
@@ -560,7 +560,7 @@ it:
     C1_playlab_storytelling:
       1:
         image: 'notes/C1_playlab_storytelling_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-16#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nE' il momento di essere creativi e usare le tue capacità di scrivere codice per raccontare una storia. La tua storia avrà dei personaggi e sarai in grado di farli parlare e interagire tra di loro. Inizia a pensare a che tipo di storia vuoi raccontare."
+        text: "E' il momento di essere creativi e usare le tue capacità di scrivere codice per raccontare una storia. La tua storia avrà dei personaggi e sarai in grado di farli parlare e interagire tra di loro. Inizia a pensare a che tipo di storia vuoi raccontare."
       2:
         image: 'notes/C1_playlab_storytelling_2.png'
         text: "I gatti hanno sempre avuto paura dei cani, ma cosa succede se il gatto capisce che il cane sta cercando di essere gentile? Il blocco \"quando si clicca su Esegui\" (when run) fa iniziare ogni attività. Il blocco \"sposta\" (move) farà muovere il tuo personaggio e il blocco \"il personaggio dice ...\" (say) farà in modo che il tuo personaggio dica qualunque cosa tu scriva."
@@ -573,7 +573,7 @@ it:
     C1_spelling_bee_intro:
       1:
         image: 'notes/C1_spelling_bee_intro_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-11#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nQuesta lezione è con l'ape sapiente. Usa i blocchi a tua disposizione per far spostare l'ape. Ogni volta che l'ape si muove raccoglie le lettere su cui si posa. Queste lettere ti permettono di scrivere le parole."
+        text: "Questa lezione è con l'ape sapiente. Usa i blocchi a tua disposizione per far spostare l'ape. Ogni volta che l'ape si muove raccoglie le lettere su cui si posa. Queste lettere ti permettono di scrivere le parole."
       2:
         image: 'notes/C1_spelling_bee_intro_2.png'
         text: "Vedi se riesci a scrivere la parola che ti appare nella casella sotto la figura. Ma stai attento! Se ti sposti nella direzione sbagliata aggiungi delle lettere che non ti servono."
@@ -612,7 +612,7 @@ it:
     C2_bee_conditionals:
       1:
         image: 'notes/C2_bee_conditionals_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-13#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nQuesto è il blocco condizionale. Questo blocco dice \"SE\" (if) c'è del nettare oppure del miele che è minore, uguale o maggiore di un certo valore, \"ALLORA\" fai (do) qualcosa."
+        text: "Questo è il blocco condizionale. Questo blocco dice \"SE\" (if) c'è del nettare oppure del miele che è minore, uguale o maggiore di un certo valore, \"ALLORA\" fai (do) qualcosa."
       2:
         image: 'notes/C2_bee_conditionals_2.png'
         text: "Questo blocco è utile quando non sai quanto nettare puoi prendere o quanto miele puoi fare, come in questo caso in cui, al posto della quantità di nettare, c'è un punto interrogativo."
@@ -651,17 +651,17 @@ it:
     C2_artist_debugging:
       1:
         image: 'notes/C2_artist_debugging_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-11#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nC'è una sequenza di blocchi già pronti nell'area di lavoro. Ma c'è qualcosa che non va."
+        text: "C'è una sequenza di blocchi già pronti nell'area di lavoro. Ma c'è qualcosa che non va."
       2:
         image: 'notes/C2_artist_debugging_2.png'
-        text: "Eseguiamo la \"correzione di errori\" (<i>debugging</i>) per questo programma rallentandone la velocità e osservando il modo in cui, passo dopo passo, viene eseguito ciascun blocco."
+        text: "Eseguiamo la \"correzione di errori\" (debugging) per questo programma rallentandone la velocità e osservando il modo in cui, passo dopo passo, viene eseguito ciascun blocco."
       3:
         image: 'notes/C2_artist_debugging_3.png'
         text: "Ah, ecco il problema! I baffi del gatto sono lunghi 75 pixel, non 25."
     C2_bee_debugging:
       1:
         image: 'notes/C2_bee_debugging_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-10#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nHai mai sentito parlare di \"correzione di errori\" (<i>debugging</i>) di un programma? È quando cerchi di capire cosa non funziona. Quando effettui la correzione di errori, identifichi e rimuovi gli errori."
+        text: "Hai mai sentito parlare di \"correzione di errori\" (debugging) di un programma? È quando cerchi di capire cosa non funziona. Quando effettui la correzione di errori, identifichi e rimuovi gli errori."
       2:
         image: 'notes/C2_bee_debugging_2.png'
         text: "Hai a tua disposizione una serie di blocchi già pronti nell'area di lavoro. Clicca su \"Fai un passo\" (step) per eseguire questi blocchi passo dopo passo e verificare se la soluzione è giusta, oppure se è necessario correggere un errore."
@@ -707,21 +707,21 @@ it:
     C2_artist_loops:
       1:
         image: 'notes/C2_artist_loops_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-7#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nOra usiamo il blocco \"ripeti ... volte\" (<i>repeat ... times</i>) per usare meno blocchi mentre programmiamo con il nostro artista. Trovi già pronti alcuni blocchi che sono solo un punto di partenza."
+        text: "Ora usiamo il blocco \"ripeti ... volte\" (repeat ... times) per usare meno blocchi mentre programmiamo con il nostro artista. Trovi già pronti alcuni blocchi che sono solo un punto di partenza."
       2:
         image: 'notes/C2_artist_loops_2.png'
         text: "Per disegnare l'intero quadrato devi ripetere questi blocchi quattro volte. Ti basta spostare nell'area di lavoro il blocco \"ripeti 4 volte\" e mettere al suo interno i blocchi \"vai avanti\" (move forward) e \"gira a destra\" (turn right) . Quando clicchi sul pulsante \"Esegui\", l'artista ripete queste istruzioni 4 volte e completa il quadrato."
     C2_bee_loops:
       1:
         image: 'notes/C2_bee_loops_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-8#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nUn ciclo consiste nel ripetere una serie di attività. Se devo ispezionare un alveare, guardo un telaio e lo rimetto a posto, quindi ripeto queste stesse azioni più volte. È un circuito chiuso, ripeto più volte le stesse attività."
+        text: "Un ciclo consiste nel ripetere una serie di attività. Se devo ispezionare un alveare, guardo un telaio e lo rimetto a posto, quindi ripeto queste stesse azioni più volte. È un circuito chiuso, ripeto più volte le stesse attività."
       2:
         image: 'notes/C2_bee_loops_2.png'
         text: "Questo è il blocco \"ripeti ... volte\" (repeat ... times). Qualunque cosa inserisci all'interno di un blocco \"ripeti ... volte\" verrà ripetuto il numero di volte che gli hai detto di eseguirlo. Ad esempio, in questo esercizio, invece di spostare nell'area di lavoro un blocco \"vai avanti\" (move forward) e un blocco \"prendi il nettare\" (get nectar) per tre volte, prova a spostarli nell'area di lavoro una sola volta e a ripetere queste azioni per tre volte. È semplice!"
     C2_maze_intro:
       1:
         image: 'notes/C2_maze_intro_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-3#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nI programmi tradizionali sono di solito del testo detto \"codice\". Tu invece scriverai programmi con Blockly, che usa blocchi colorati. I blocchi vengono attaccati per scrivere programmi. Anche se usi i blocchi, in realtà stai sempre scrivendo del codice. Per iniziare, dovrai creare il codice per un programma che aiuti l'uccellino arrabbiato (Angry Bird) a spostarsi all'interno di un labirinto per raggiungere il malvagio maialino che ha rubato le sue uova."
+        text: "I programmi tradizionali sono di solito del testo detto \"codice\". Tu invece scriverai programmi con Blockly, che usa blocchi colorati. I blocchi vengono attaccati per scrivere programmi. Anche se usi i blocchi, in realtà stai sempre scrivendo del codice. Per iniziare, dovrai creare il codice per un programma che aiuti l'uccellino arrabbiato (Angry Bird) a spostarsi all'interno di un labirinto per raggiungere il malvagio maialino che ha rubato le sue uova."
       2:
         image: 'notes/C2_maze_intro_2.png'
         text: "Blockly è diviso in tre parti principali. Sulla sinistra c'è il labirinto dell'uccellino, dove viene eseguito il programma. Le spiegazioni per ciascun esercizio sono scritte sotto il labirinto. La zona centrale è la \"cassetta degli attrezzi\"; ognuno di questi blocchi corrisponde ad un comando che l'uccellino può comprendere. Lo spazio bianco sulla destra si chiama \"area di lavoro\" e qui costruisci il tuo programma."
@@ -750,7 +750,7 @@ it:
     C2_playlab_createstory:
       1:
         image: 'notes/C2_playlab_createastory_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nFinora hai realizzato un'animazione o una storia che fanno sempre le stesse cose ogni volta che le avvii. Ora è possibile realizzare un gioco interattivo con cui puoi giocare davvero."
+        text: "Finora hai realizzato un'animazione o una storia che fanno sempre le stesse cose ogni volta che le avvii. Ora è possibile realizzare un gioco interattivo con cui puoi giocare davvero."
       2:
         image: 'notes/C2_playlab_createastory_2.png'
         text: "Ci sono dei nuovi blocchi da provare. C'è il blocco \"quando si preme la freccia ...\" ('when ... arrow') e il blocco \"sposta il personaggio ...\" ('move actor ...'). Puoi usare insieme questi due blocchi per far muovere i personaggi con i tasti freccia. E ci sono dei blocchi che realizzano azioni quando i personaggi si toccano o sono cliccati. Provali e divertiti!"
@@ -786,10 +786,10 @@ it:
     C3_artist_functions:
       1:
         image: 'notes/C3_artist_functions_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-12#VIDEO\" target=\"_blank\">Video doppiato in italiano</a> (solo la seconda parte)<br><br>\nUna delle cose più utili della programmazione è che una volta che hai insegnato ad un computer come fare un'azione, puoi richiamare nuovamente quella \"funzione\" (<i>function</i>). Le dai un nome e dopo puoi richiamarla. È proprio come ampliare il linguaggio."
+        text: "Una delle cose più utili della programmazione è che una volta che hai insegnato ad un computer come fare un'azione, puoi richiamare nuovamente quella \"funzione\" (function). Le dai un nome e dopo puoi richiamarla. È proprio come ampliare il linguaggio."
       2:
         image: 'notes/C3_artist_functions_2.png'
-        text: "Nel programma che hai costruito, hai imparato come disegnare un quadrato avanzando e poi girando per quattro volte. Puoi prendere quella funzione e darle un nome, ad esempio \"disegna un quadrato\" (<i>draw a square</i>), in modo tale che ogni volta che vorrai farlo, potrai semplicemente dire \"disegna un quadrato\" e il computer richiamerà la stessa funzione, eseguendo sempre quello stesso codice. Hai aggiunto quel concetto al tuo linguaggio di programmazione."
+        text: "Nel programma che hai costruito, hai imparato come disegnare un quadrato avanzando e poi girando per quattro volte. Puoi prendere quella funzione e darle un nome, ad esempio \"disegna un quadrato\" (draw a square), in modo tale che ogni volta che vorrai farlo, potrai semplicemente dire \"disegna un quadrato\" e il computer richiamerà la stessa funzione, eseguendo sempre quello stesso codice. Hai aggiunto quel concetto al tuo linguaggio di programmazione."
     C3_artist_intro:
       1:
         image: 'notes/C3_artist_intro_1.png'
@@ -809,14 +809,14 @@ it:
     C3_artist_nested_loops:
       1:
         image: 'notes/C3_artist_nested_loops_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-11#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nQuando inserisci un ciclo all'interno di un altro ciclo ottieni quello che in programmazione viene detto \"ciclo annidato\". Ad esempio, in questo esercizio trovi già pronto il codice per disegnare un triangolo con i lati lunghi 100 pixel che usa il blocco \"ripeti ... volte\" (<i>repeat ... times</i>) impostato a 3, cioè una volta per ogni lato del triangolo."
+        text: "Quando inserisci un ciclo all'interno di un altro ciclo ottieni quello che in programmazione viene detto \"ciclo annidato\". Ad esempio, in questo esercizio trovi già pronto il codice per disegnare un triangolo con i lati lunghi 100 pixel che usa il blocco \"ripeti ... volte\" (repeat ... times) impostato a 3, cioè una volta per ogni lato del triangolo."
       2:
         image: 'notes/C3_artist_nested_loops_2.png'
         text: "In questo esercizio vogliamo disegnare più di un triangolo. Per fare ciò, dobbiamo prendere quel ciclo e metterlo all'interno di un altro blocco \"ripeti ... volte\". Forte, no?"
     C3_bee_conditionals:
       1:
         image: 'notes/C3_bee_conditionals_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-13#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nQuesto è il blocco condizionale. Questo blocco dice \"SE\" (if) c'è del nettare oppure del miele che è minore, uguale o maggiore di un certo valore, \"ALLORA\" fai (do) qualcosa."
+        text: "Questo è il blocco condizionale. Questo blocco dice \"SE\" (if) c'è del nettare oppure del miele che è minore, uguale o maggiore di un certo valore, \"ALLORA\" fai (do) qualcosa."
       2:
         image: 'notes/C3_bee_conditionals_2.png'
         text: "Questo blocco è utile quando non sai quanto nettare puoi prendere o quanto miele puoi fare, come in questo caso in cui, al posto della quantità di nettare, c'è un punto interrogativo."
@@ -826,7 +826,7 @@ it:
     C3_bee_debugging:
       1:
         image: 'notes/C3_debugging_bee_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-10#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nHai mai sentito parlare di \"correzione di errori\" (<i>debugging</i>) di un programma? È quando cerchi di capire cosa non funziona. Quando effettui la correzione di errori, identifichi e rimuovi gli errori."
+        text: "Hai mai sentito parlare di \"correzione di errori\" (debugging) di un programma? È quando cerchi di capire cosa non funziona. Quando effettui la correzione di errori, identifichi e rimuovi gli errori."
       2:
         image: 'notes/C3_debugging_bee_2.png'
         text: "Hai a tua disposizione una serie di blocchi già pronti nell'area di lavoro. Clicca su \"Fai un passo\" (step) per eseguire questi blocchi passo dopo passo e verificare se la soluzione è giusta, oppure se è necessario correggere un errore."
@@ -836,7 +836,7 @@ it:
     C3_bee_functions:
       1:
         image: 'notes/C3_bee_functions_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-6#VIDEO\" target=\"_blank\">Video doppiato in italiano</a> (solo la seconda parte)<br><br>\nUno dei meccanismi più importanti in informatica è la definizione di nuovi comandi, la possibilità di aggiungere le tue parole ad un linguaggio di programmazione. La maggior parte dei linguaggi di programmazione hanno solo circa 100 parole o comandi. Ed è davvero arte e magia la possibilità di definire le tue nuove parole mediante i blocchi già esistenti."
+        text: "Uno dei meccanismi più importanti in informatica è la definizione di nuovi comandi, la possibilità di aggiungere le tue parole ad un linguaggio di programmazione. La maggior parte dei linguaggi di programmazione hanno solo circa 100 parole o comandi. Ed è davvero arte e magia la possibilità di definire le tue nuove parole mediante i blocchi già esistenti."
       2:
         image: 'notes/C3_bee_functions_2.png'
         text: "Nello sport noi facciamo esattamente la stessa cosa. Per esempio, nella pallacanestro si inizia imparando come dribblare, come tirare da sotto, come prendere un rimbalzo. Una volta che hai imparato i movimenti basilari, puoi impararne di nuovi e combinarli con quelli esistenti, come il \"blocco\" o il \"dai e vai\". Puoi quindi passare da questi a schemi più complessi. Una volta che impari uno schema e gli dai un nome, tutti i tuoi compagni di squadra sanno come farlo."
@@ -845,15 +845,15 @@ it:
         text: "Allo stesso modo, una volta che hai insegnato ad un computer come fare un'azione utilizzando una certa sequenza di comandi, puoi dare un tuo nome a questa azione così che sia facile ripeterla nuovamente. Quando definisci un tuo comando e gli dai un nome, hai realizzato una \"funzione\" (FUNCTION). Ora proviamo ad usare le funzioni per aiutare l'ape."
       4:
         image: 'notes/C3_bee_functions_4.png'
-        text: "In questo esempio, la nostra funzione si chiama \"prendi 2 dosi di nettare\" (<i>get 2 nectar</i>) ed è il blocco verde. Puoi sapere cosa fa \"prendi 2 dosi di nettare\" osservando questo blocco grigio che è la definizione della funzione. Se guardi al suo interno ti accorgi che \"prendi 2 dosi di nettare\" è formata da un blocco \"prendi il nettare\" (<i>get nectar</i>) seguito da un altro blocco \"prendi il nettare\". Guarda sempre cosa c'è nel blocco grigio per sapere cosa possono fare i blocchi verdi delle funzioni."
+        text: "In questo esempio, la nostra funzione si chiama \"prendi 2 dosi di nettare\" (get 2 nectar) ed è il blocco verde. Puoi sapere cosa fa \"prendi 2 dosi di nettare\" osservando questo blocco grigio che è la definizione della funzione. Se guardi al suo interno ti accorgi che \"prendi 2 dosi di nettare\" è formata da un blocco \"prendi il nettare\" (get nectar) seguito da un altro blocco \"prendi il nettare\". Guarda sempre cosa c'è nel blocco grigio per sapere cosa possono fare i blocchi verdi delle funzioni."
     C3_bee_nested_loops:
       1:
         image: 'notes/C3_bee_nested_loops_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-13#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nOra usiamo i \"cicli annidati\" con l'ape. Nell'esercizio 3 trovi del codice già pronto che dice all'ape di andare avanti e raccogliere una dose di nettare, di ripetere queste azioni per tre volte e quindi girare a destra. Prendi tutto questo codice, inseriscilo all'interno di un altro blocco \"ripeti ... volte\" (<i>repeat ... times</i>) ed impostagli a 3 il numero di ripetizioni. Hai realizzato un ciclo annidato!"
+        text: "Ora usiamo i \"cicli annidati\" con l'ape. Nell'esercizio 3 trovi del codice già pronto che dice all'ape di andare avanti e raccogliere una dose di nettare, di ripetere queste azioni per tre volte e quindi girare a destra. Prendi tutto questo codice, inseriscilo all'interno di un altro blocco \"ripeti ... volte\" (repeat ... times) ed impostagli a 3 il numero di ripetizioni. Hai realizzato un ciclo annidato!"
     C3_bounce:
       1:
         image: 'notes/C3_bounce_1.png'
-        text: "Crea la tua versione del Ping-Pong! Puoi anche condividerla con i tuoi amici! Che emozione!\n\nhttps://studio.code.org/s/course3/stage/15/puzzle/10???"
+        text: "Crea la tua versione del Ping-Pong! Puoi anche condividerla con i tuoi amici! Che emozione!"
       2:
         image: 'notes/C3_bounce_2.png'
         text: "Per iniziare, devi far sì che i blocchi per spostare la racchetta siano guidati dai tasti freccia."
@@ -908,10 +908,10 @@ it:
     C3_farmer_while:
       1:
         image: 'notes/C3_farmer_while_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-12#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br>\n<br>\nIl blocco di ripetizione \"mentre\" (<i>while</i>) è simile a ciò che si fa nella vita di tutti i giorni. Immagina che stai lavando la tua auto: continuerai a strofinarla fino a quando non sarà pulita. In altre parole, \"mentre\" è sporca, continui a strofinarla. Quindi, valuti ripetutamente lo stato della macchina."
+        text: "Il blocco di ripetizione \"mentre\" (while) è simile a ciò che si fa nella vita di tutti i giorni. Immagina che stai lavando la tua auto: continuerai a strofinarla fino a quando non sarà pulita. In altre parole, \"mentre\" è sporca, continui a strofinarla. Quindi, valuti ripetutamente lo stato della macchina."
       2:
         image: 'notes/C3_farmer_while_2.png'
-        text: "Ecco il nuovo blocco per dare una mano alla contadina. Si chiama blocco di ripetizione \"mentre\" (<i>while</i>). Il suo funzionamento è piuttosto semplice: per tutto il tempo in cui la condizione scritta a fianco al \"mentre\" è vera, \"fai\" (<i>do</i>) qualcosa. Per esempio, per tutto il tempo in cui c'è un mucchio (<i>while there is a pile</i>) rimuovi una palata di terra. Prova ad usarlo aiutare la contadina."
+        text: "Ecco il nuovo blocco per dare una mano alla contadina. Si chiama blocco di ripetizione \"mentre\" (while). Il suo funzionamento è piuttosto semplice: per tutto il tempo in cui la condizione scritta a fianco al \"mentre\" è vera, \"fai\" (do) qualcosa. Per esempio, per tutto il tempo in cui c'è un mucchio (while there is a pile) rimuovi una palata di terra. Prova ad usarlo aiutare la contadina."
     C3_functional_suncatchers:
       1:
         image: 'notes/C3_functional_suncatchers_1.png'
@@ -960,14 +960,14 @@ it:
     C3_maze_level_4:
       1:
         image: 'notes/C3_maze_level_4_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-2#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nIn questo esempio, il tuo obiettivo è quello di far arrivare lo zombie fino al girasole. Puoi raggiungere l'obiettivo dando al computer l'istruzione \"vai avanti\" (<i>move forward</i>) per cinque volte, così da far avanzare lo zombie di un passo alla volta verso il girasole. Oppure puoi ottenere lo stesso risultato usando una volta sola l'istruzione \"vai avanti\" e ripetendola 5 volte usando il blocco \"ripeti 5 volte\" (<i>repeat 5 times</i>)."
+        text: "In questo esempio, il tuo obiettivo è quello di far arrivare lo zombie fino al girasole. Puoi raggiungere l'obiettivo dando al computer l'istruzione \"vai avanti\" (move forward) per cinque volte, così da far avanzare lo zombie di un passo alla volta verso il girasole. Oppure puoi ottenere lo stesso risultato usando una volta sola l'istruzione \"vai avanti\" e ripetendola 5 volte usando il blocco \"ripeti 5 volte\" (repeat 5 times)."
       2:
         image: 'notes/C3_maze_level_4_2.png'
         text: "Questa seconda possibilità ti consente di risolvere l'esercizio in maniera più semplice e veloce. Per utilizzarla, inserisci il blocco \"vai avanti\" all'interno del blocco \"ripeti ... volte\". Clicca su \"Esegui\" e lo zombie si sposterà cinque volte in avanti fino ad arrivare al girasole saporito."
     C3_playlab_create_game:
       1:
         image: 'notes/C3_playlab_create_game_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nFinora hai realizzato un'animazione o una storia che fanno sempre le stesse cose ogni volta che le avvii. Ora è possibile realizzare un gioco interattivo con cui puoi giocare davvero."
+        text: "Finora hai realizzato un'animazione o una storia che fanno sempre le stesse cose ogni volta che le avvii. Ora è possibile realizzare un gioco interattivo con cui puoi giocare davvero."
       2:
         image: 'notes/C3_playlab_create_game_2.png'
         text: "Ci sono dei nuovi blocchi da provare. C'è il blocco \"quando si preme la freccia ...\" ('when ... arrow') e il blocco \"sposta il personaggio ...\" ('move actor ...'). Puoi usare insieme questi due blocchi per far muovere i personaggi con i tasti freccia. E ci sono dei blocchi che realizzano azioni quando i personaggi si toccano o sono cliccati. Provali e divertiti!"
@@ -984,24 +984,24 @@ it:
     C4_bee_conditional:
       1:
         image: 'notes/C4_bee_conditional_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-2#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nQuesto è il blocco condizionale. Il blocco controlla una certa condizione, ad esempio \"se sei su un fiore (<i>if at flower</i>), oppure \"se sei su un favo\" (<i>at honeycomb</i>). Se (<i>if</i>) la condizione è vera allora \"esegui\" (<i>do</i>) qualche azione. Questo blocco è utile quando non sappiamo quanto nettare possiamo raccogliere o quanto miele possiamo produrre, come nell'esercizio della figura successiva in cui vediamo solo un punto interrogativo."
+        text: "Questo è il blocco condizionale. Il blocco controlla una certa condizione, ad esempio \"se sei su un fiore (if at flower), oppure \"se sei su un favo\" (at honeycomb). Se (if) la condizione è vera allora \"esegui\" (do) qualche azione. Questo blocco è utile quando non sappiamo quanto nettare possiamo raccogliere o quanto miele possiamo produrre, come nell'esercizio della figura successiva in cui vediamo solo un punto interrogativo."
       2:
         image: 'notes/C4_bee_conditional_2.png'
         text: "Nell'esercizio di questo esempio devi usare due blocchi \"se\". Col primo blocco devi dire \"se c'è un fiore prendi il nettare\". Poi col secondo blocco devi dire \"se c'è un favo fai il miele\". Qualunque dei due trovi sotto la nuvoletta, hai risolto!"
     C4_conditionals:
       1:
         image: 'notes/C4_conditionals_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-2#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nAbbiamo un nuovo blocco chiamato blocco \"se-altrimenti\" (<i>if-else</i>). Si tratta di un'istruzione condizionale proprio come il blocco \"se\" (<i>if</i>) che hai usato nell'esercizio precedente. Il blocco \"se-altrimenti\" fa scegliere all'ape cosa fare tra due insiemi di azioni possibili. Se l'ape è su un fiore, l'ape eseguirà l'insieme di azioni che sono inserite nella prima parte, dove c'è scritto \"esegui\" (<i>do</i>). Se l'ape non è su un fiore, l'ape eseguirà l'insieme di azioni che sono inserite nella seconda parte, dove c'è scritto \"altrimenti\" (<i>else</i>)."
+        text: "Abbiamo un nuovo blocco chiamato blocco \"se-altrimenti\" (if-else). Si tratta di un'istruzione condizionale proprio come il blocco \"se\" (if) che hai usato nell'esercizio precedente. Il blocco \"se-altrimenti\" fa scegliere all'ape cosa fare tra due insiemi di azioni possibili. Se l'ape è su un fiore, l'ape eseguirà l'insieme di azioni che sono inserite nella prima parte, dove c'è scritto \"esegui\" (do). Se l'ape non è su un fiore, l'ape eseguirà l'insieme di azioni che sono inserite nella seconda parte, dove c'è scritto \"altrimenti\" (else)."
       2:
         image: 'notes/C4_conditionals_2.png'
         text: "Le istruzioni condizionali consentono ai computer di prendere delle decisioni. Le persone impostano delle condizioni che dicono al computer “SE (if) si verifica una determinata situazione fai questo. ALTRIMENTI (else), ossia in caso contrario, fai quest'altro.” Nella figura precedente il blocco “se-altrimenti” dice “se c'è un fiore” (if at flower), mentre nella figura qui accanto “se ci sono 2 dosi di nettare” (if nectar = 2), ma potremmo dire altre cose, ad esempio “se c'è strada in avanti”. Il comportamento del blocco “se-altrimenti” è sempre lo stesso, ossia, “se” l'istruzione nella parte alta del blocco è vera, allora viene eseguito il primo insieme di azioni; “altrimenti”, se l'istruzione nella parte alta del blocco è falsa, viene eseguito il secondo insieme di azioni."
     C4_for_loops:
       1:
         image: 'notes/C4_for_loops_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nQuando usi un blocco \"ripeti … volte\" per eseguire più volte una parte del tuo codice, come fa il computer a sapere quando il codice è stato ripetuto a sufficienza? Il blocco \"ripeti … volte\" in realtà utilizza un blocco più sofisticato detta \"ciclo con contatore\" che conta, a partire da un valore iniziale fino ad un valore finale, con un incremento stabilito."
+        text: "Quando usi un blocco \"ripeti … volte\" per eseguire più volte una parte del tuo codice, come fa il computer a sapere quando il codice è stato ripetuto a sufficienza? Il blocco \"ripeti … volte\" in realtà utilizza un blocco più sofisticato detta \"ciclo con contatore\" che conta, a partire da un valore iniziale fino ad un valore finale, con un incremento stabilito."
       2:
         image: 'notes/C4_for_loops_2.png'
-        text: "Per esempio, un blocco \"ripeti 3 volte\" conta da 1 a 3 con un incremento di 1. Ogni volta che conta, esegue il codice all'interno del ciclo. Il \"ciclo con contatore\" sa quante volte è stato eseguito grazie alla variabile \"contatore\" (<i>counter</i>) che viene impostata al valore iniziale all'inizio del ciclo e a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito. Non appena la variabile \"contatore\" diventa più grande del valore finale, il ciclo si arresta. Il vantaggio di usare un \"ciclo con contatore\" al posto di un blocco \"ripeti … volte\" sta nel fatto che si può vedere la variabile \"contatore\" (<i>counter</i>) e usarla nel ciclo."
+        text: "Per esempio, un blocco \"ripeti 3 volte\" conta da 1 a 3 con un incremento di 1. Ogni volta che conta, esegue il codice all'interno del ciclo. Il \"ciclo con contatore\" sa quante volte è stato eseguito grazie alla variabile \"contatore\" (counter) che viene impostata al valore iniziale all'inizio del ciclo e a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito. Non appena la variabile \"contatore\" diventa più grande del valore finale, il ciclo si arresta. Il vantaggio di usare un \"ciclo con contatore\" al posto di un blocco \"ripeti … volte\" sta nel fatto che si può vedere la variabile \"contatore\" (counter) e usarla nel ciclo."
       3:
         image: 'notes/C4_for_loops_3.png'
         text: "Il vantaggio di usare un vero \"ciclo con contatore\" (repeat counter times) al posto di un blocco \"ripeti … volte\" sta nel fatto che si può effettivamente vedere la variabile \"contatore\" (counter) e usarla nel ciclo. Per esempio, se ho una fila di fiori e il primo ha una dose di nettare, il secondo ne ha due e il terzo ne ha tre, posso usare il \"ciclo con contatore\" per dire all'ape di raccogliere \"contatore\" dosi di nettare ogni volta, ossia una dose dal primo fiore, due dal secondo e tre dal terzo."
@@ -1011,10 +1011,10 @@ it:
     C4_for_loops_bee:
       1:
         image: 'notes/C4_for_loops_bee_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nQuando usi un blocco \"ripeti … volte\" per eseguire più volte una parte del tuo codice, come fa il computer a sapere quando il codice è stato ripetuto a sufficienza? Il blocco \"ripeti … volte\" in realtà utilizza un blocco più sofisticato detta \"ciclo con contatore\" che conta, a partire da un valore iniziale fino ad un valore finale, con un incremento stabilito."
+        text: "Quando usi un blocco \"ripeti … volte\" per eseguire più volte una parte del tuo codice, come fa il computer a sapere quando il codice è stato ripetuto a sufficienza? Il blocco \"ripeti … volte\" in realtà utilizza un blocco più sofisticato detta \"ciclo con contatore\" che conta, a partire da un valore iniziale fino ad un valore finale, con un incremento stabilito."
       2:
         image: 'notes/C4_for_loops_bee_2.png'
-        text: "Per esempio, un blocco \"ripeti 3 volte\" conta da 1 a 3 con un incremento di 1. Ogni volta che conta, esegue il codice all'interno del ciclo. Il \"ciclo con contatore\" sa quante volte è stato eseguito grazie alla variabile \"contatore\" (<i>counter</i>) che viene impostata al valore iniziale all'inizio del ciclo e a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito. Non appena la variabile \"contatore\" diventa più grande del valore finale, il ciclo si arresta. Il vantaggio di usare un \"ciclo con contatore\" al posto di un blocco \"ripeti … volte\" sta nel fatto che si può vedere la variabile \"contatore\" (<i>counter</i>) e usarla nel ciclo."
+        text: "Per esempio, un blocco \"ripeti 3 volte\" conta da 1 a 3 con un incremento di 1. Ogni volta che conta, esegue il codice all'interno del ciclo. Il \"ciclo con contatore\" sa quante volte è stato eseguito grazie alla variabile \"contatore\" (counter) che viene impostata al valore iniziale all'inizio del ciclo e a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito. Non appena la variabile \"contatore\" diventa più grande del valore finale, il ciclo si arresta. Il vantaggio di usare un \"ciclo con contatore\" al posto di un blocco \"ripeti … volte\" sta nel fatto che si può vedere la variabile \"contatore\" (counter) e usarla nel ciclo."
       3:
         image: 'notes/C4_for_loops_bee_3.png'
         text: "Il vantaggio di usare un vero \"ciclo con contatore\" (repeat counter times) al posto di un blocco \"ripeti … volte\" sta nel fatto che si può effettivamente vedere la variabile \"contatore\" (counter) e usarla nel ciclo. Per esempio, se ho una fila di fiori e il primo ha una dose di nettare, il secondo ne ha due e il terzo ne ha tre, posso usare il \"ciclo con contatore\" per dire all'ape di raccogliere \"contatore\" dosi di nettare ogni volta, ossia una dose dal primo fiore, due dal secondo e tre dal terzo."
@@ -1024,14 +1024,14 @@ it:
     C4_for_loops_no_bee:
       1:
         image: 'notes/C4_for_loops_no_bee_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nQuando usi un blocco \"ripeti … volte\" per eseguire più volte una parte del tuo codice, come fa il computer a sapere quando il codice è stato ripetuto a sufficienza? Il blocco \"ripeti … volte\" in realtà utilizza un blocco più sofisticato detta \"ciclo con contatore\" che conta, a partire da un valore iniziale fino ad un valore finale, con un incremento stabilito."
+        text: "Quando usi un blocco \"ripeti … volte\" per eseguire più volte una parte del tuo codice, come fa il computer a sapere quando il codice è stato ripetuto a sufficienza? Il blocco \"ripeti … volte\" in realtà utilizza un blocco più sofisticato detta \"ciclo con contatore\" che conta, a partire da un valore iniziale fino ad un valore finale, con un incremento stabilito."
       2:
         image: 'notes/C4_for_loops_no_bee_2.png'
         text: "Per esempio, un blocco \"ripeti 3 volte\" conta da 1 a 3 con un incremento di 1. Ogni volta che conta, esegue il codice all'interno del ciclo. Il \"ciclo con contatore\" sa quante volte è stato eseguito grazie alla variabile \"contatore\" (counter) che viene impostata al valore iniziale all'inizio del ciclo e a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito. Non appena la variabile \"contatore\" diventa più grande del valore finale, il ciclo si arresta. Il vantaggio di usare un \"ciclo con contatore\" al posto di un blocco \"ripeti … volte\" sta nel fatto che si può vedere la variabile \"contatore\" (counter) e usarla nel ciclo."
     C4_function_create:
       1:
         image: 'notes/C4_function_create_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-14#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nOra che hai modificato i blocchi funzione, è arrivato il momento di provare a creare un nuovo blocco funzione partendo da zero. È davvero semplice. Guarda nella cassetta degli attrezzi: c'è una categoria chiamata \"Funzioni\" (<i>Functions</i>). Cliccandoci sopra visualizzi il blocco \"Crea un funzione\". Se lo clicchi si apre l'editor che hai già usato per modificare un blocco funzione già esistente."
+        text: "Ora che hai modificato i blocchi funzione, è arrivato il momento di provare a creare un nuovo blocco funzione partendo da zero. È davvero semplice. Guarda nella cassetta degli attrezzi: c'è una categoria chiamata \"Funzioni\" (Functions). Cliccandoci sopra visualizzi il blocco \"Crea un funzione\". Se lo clicchi si apre l'editor che hai già usato per modificare un blocco funzione già esistente."
       2:
         image: 'notes/C4_function_create_2.png'
         text: "Proprio come prima, inizia dando un nome alla tua funzione e subito dopo scrivi una descrizione di cosa la funzione dovrebbe fare, per esempio, se serve per disegnare un quadrato o un triangolo. Infine trascina i blocchi che ti servono dalla cassetta degli attrezzi all'area di lavoro (\"workspace\"), ossia lo spazio bianco più in basso. Ricordati di inserirli all'interno del blocco verde della funzione."
@@ -1041,30 +1041,30 @@ it:
     C4_function_edit:
       1:
         image: 'notes/C4_function_edit_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-12#VIDEO\" target=\"_blank\">Video doppiato in italiano</a> (solo la seconda parte)<br><br>\nUna delle cose più utili della programmazione è che una volta che hai insegnato ad un computer come fare un'azione, puoi richiamare nuovamente quella \"funzione\" (<i>function</i>). Le dai un nome e dopo puoi richiamarla. È proprio come ampliare il linguaggio."
+        text: "Una delle cose più utili della programmazione è che una volta che hai insegnato ad un computer come fare un'azione, puoi richiamare nuovamente quella \"funzione\" (function). Le dai un nome e dopo puoi richiamarla. È proprio come ampliare il linguaggio."
       2:
         image: 'notes/C4_function_edit_2.png'
-        text: "Nel programma che hai costruito, hai imparato come disegnare un quadrato avanzando e poi girando per quattro volte. Puoi prendere quella funzione e darle un nome, ad esempio \"disegna un quadrato\" (<i>draw a square</i>), in modo tale che ogni volta che vorrai farlo, potrai semplicemente dire \"disegna un quadrato\" e il computer richiamerà la stessa funzione, eseguendo sempre quello stesso codice. Hai aggiunto quel concetto al tuo linguaggio di programmazione."
+        text: "Nel programma che hai costruito, hai imparato come disegnare un quadrato avanzando e poi girando per quattro volte. Puoi prendere quella funzione e darle un nome, ad esempio \"disegna un quadrato\" (draw a square), in modo tale che ogni volta che vorrai farlo, potrai semplicemente dire \"disegna un quadrato\" e il computer richiamerà la stessa funzione, eseguendo sempre quello stesso codice. Hai aggiunto quel concetto al tuo linguaggio di programmazione."
       3:
         image: 'notes/C4_function_edit_3.png'
-        text: "In questo esercizio, trovi già pronta nella cassetta degli attrezzi il blocco funzione \"disegna un quadrato\" (<i>draw a square</i>). L'abbiamo creato noi per te, è un blocco verde, ma è vuoto. Ciò che devi fare è scrivere lo stesso codice che hai già scritto per disegnare un quadrato e metterlo in questa funzione. Per farlo, clicca sul pulsante blu \"modifica\" (<i>edit</i>). Questo ti aprirà l'editor della funzione che è suddiviso in tre parti. Una parte in alto in cui puoi dare un nome alla funzione. Poi c'è una parte centrale in cui puoi descrivere brevemente cosa dovrebbe fare la funzione."
+        text: "In questo esercizio, trovi già pronta nella cassetta degli attrezzi il blocco funzione \"disegna un quadrato\" (draw a square). L'abbiamo creato noi per te, è un blocco verde, ma è vuoto. Ciò che devi fare è scrivere lo stesso codice che hai già scritto per disegnare un quadrato e metterlo in questa funzione. Per farlo, clicca sul pulsante blu \"modifica\" (edit). Questo ti aprirà l'editor della funzione che è suddiviso in tre parti. Una parte in alto in cui puoi dare un nome alla funzione. Poi c'è una parte centrale in cui puoi descrivere brevemente cosa dovrebbe fare la funzione."
       4:
         image: 'notes/C4_function_edit_4.png'
-        text: "In questo caso, la funzione dovrebbe disegnare un quadrato. La parte bianca al di sotto della descrizione è l'area di lavoro e funziona esattamente come l'area di lavoro che stai già usando. Puoi prendere i blocchi dalla cassetta degli attrezzi e spostarli in quest'area di lavoro. Ricordati di mettere i blocchi che creano un quadrato all'interno del blocco verde della funzione. Quando hai finito clicca su \"Chiudi\" (<i>Close</i>). In questo modo ritorni all'area di lavoro dell'esercizio. Ora, per risolvere l'esercizio, puoi usare il blocco funzione \"disegna un quadrato\" (<i>draw a square</i>) proprio come qualunque altro blocco."
+        text: "In questo caso, la funzione dovrebbe disegnare un quadrato. La parte bianca al di sotto della descrizione è l'area di lavoro e funziona esattamente come l'area di lavoro che stai già usando. Puoi prendere i blocchi dalla cassetta degli attrezzi e spostarli in quest'area di lavoro. Ricordati di mettere i blocchi che creano un quadrato all'interno del blocco verde della funzione. Quando hai finito clicca su \"Chiudi\". In questo modo ritorni all'area di lavoro dell'esercizio. Ora, per risolvere l'esercizio, puoi usare il blocco funzione \"disegna un quadrato\" (draw a square) proprio come qualunque altro blocco."
     C4_function_parameters:
       1:
         image: 'notes/C4_function_parameters_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-14#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nEcco una funzione che disegna un quadrato con i lati di 50 pixel. Ottimo, ma cosa succede se voglio disegnare un quadrato con i lati di 50 pixel e un altro quadrato con i lati di 100 pixel? Non è necessario creare due funzioni distinte per fare quasi la stessa cosa. Possiamo invece usare una funzione con un parametro."
+        text: "Ecco una funzione che disegna un quadrato con i lati di 50 pixel. Ottimo, ma cosa succede se voglio disegnare un quadrato con i lati di 50 pixel e un altro quadrato con i lati di 100 pixel? Non è necessario creare due funzioni distinte per fare quasi la stessa cosa. Possiamo invece usare una funzione con un parametro."
       2:
         image: 'notes/C4_function_parameters_2.png'
-        text: "I parametri ti permettono di passare ad una funzione dei valori che vengono utilizzati come variabili all'interno della funzione stessa. Aggiungi a questa funzione un parametro chiamato \"Lunghezza\" (\"<i>Length</i>\") da utilizzare per creare quadrati di diverse dimensioni. Nell'editor della funzione, come abbiamo già visto, puoi modificare il nome e la descrizione della funzione, ma puoi anche aggiungere un parametro. Scrivi il nome del parametro nello spazio a sinistra del pulsante \"Aggiungi un parametro\" e poi clicca sul pulsante. In questo modo viene creato un blocco rosso con il nome del parametro che hai appena creato. Ora nel blocco \"vai avanti ...\" (<i>move forward</i> ...) puoi inserire il blocco \"Lunghezza\" in modo tale da andare avanti di \"Lunghezza” pixel."
+        text: "I parametri ti permettono di passare ad una funzione dei valori che vengono utilizzati come variabili all'interno della funzione stessa. Aggiungi a questa funzione un parametro chiamato \"Lunghezza\" (\"Length\") da utilizzare per creare quadrati di diverse dimensioni. Nell'editor della funzione, come abbiamo già visto, puoi modificare il nome e la descrizione della funzione, ma puoi anche aggiungere un parametro. Scrivi il nome del parametro nello spazio a sinistra del pulsante \"Aggiungi un parametro\" e poi clicca sul pulsante. In questo modo viene creato un blocco rosso con il nome del parametro che hai appena creato. Ora nel blocco \"vai avanti ...\" (move forward ...) puoi inserire il blocco \"Lunghezza\" in modo tale da andare avanti di \"Lunghezza” pixel."
       3:
         image: 'notes/C4_function_parameters_3.png'
-        text: "Quando hai finito, clicca su \"Chiudi\" per salvare le modifiche. Puoi trovare il nuovo blocco della funzione all'interno della categoria \"Funzioni\" (<i>Functions</i>) nella cassetta degli attrezzi. Noterai che c'è uno spazio vuoto vicino al parametro \"Lunghezza\" perché la funzione vuole sapere che valore dovrebbe avere il parametro. Trascina un blocco numerico dalla categoria \"Matematica\" (<i>Math</i>) e inseriscilo in questo spazio. Sai che è possibile usare la funzione più e più volte con lunghezze differenti per creare quadrati di diverse dimensioni? Prova per credere!"
+        text: "Quando hai finito, clicca su \"Chiudi\" per salvare le modifiche. Puoi trovare il nuovo blocco della funzione all'interno della categoria \"Funzioni\" (Functions) nella cassetta degli attrezzi. Noterai che c'è uno spazio vuoto vicino al parametro \"Lunghezza\" perché la funzione vuole sapere che valore dovrebbe avere il parametro. Trascina un blocco numerico dalla categoria \"Matematica\" (Math) e inseriscilo in questo spazio. Sai che è possibile usare la funzione più e più volte con lunghezze differenti per creare quadrati di diverse dimensioni? Prova per credere!"
     C4_intro:
       1:
         image: 'notes/C4_intro_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-3#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nI programmi tradizionali sono di solito del testo detto \"codice\". Tu invece scriverai programmi con Blockly, che usa blocchi colorati. I blocchi vengono attaccati per scrivere programmi. Anche se usi i blocchi, in realtà stai sempre scrivendo del codice. Per iniziare, dovrai creare il codice per un programma che aiuti l'uccellino arrabbiato (Angry Bird) a spostarsi all'interno di un labirinto per raggiungere il malvagio maialino che ha rubato le sue uova."
+        text: "I programmi tradizionali sono di solito del testo detto \"codice\". Tu invece scriverai programmi con Blockly, che usa blocchi colorati. I blocchi vengono attaccati per scrivere programmi. Anche se usi i blocchi, in realtà stai sempre scrivendo del codice. Per iniziare, dovrai creare il codice per un programma che aiuti l'uccellino arrabbiato (Angry Bird) a spostarsi all'interno di un labirinto per raggiungere il malvagio maialino che ha rubato le sue uova."
       2:
         image: 'notes/C4_intro_2.png'
         text: "Blockly è diviso in tre parti principali. Sulla sinistra c'è il labirinto dell'uccellino, dove viene eseguito il programma. Le spiegazioni per ciascun esercizio sono scritte sotto il labirinto. La zona centrale è la \"cassetta degli attrezzi\"; ognuno di questi blocchi corrisponde ad un comando che l'uccellino può comprendere. Lo spazio bianco sulla destra si chiama \"area di lavoro\" e qui costruisci il tuo programma."
@@ -1156,17 +1156,17 @@ it:
     C4_variables_artist:
       1:
         image: 'notes/C4_variables_artist_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-6#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nUna variabile è un contenitore in cui puoi memorizzare un valore. Quando usi quella variabile in un programma, questo apre il contenitore ed esamina il valore contenuto al suo interno. Questo ti permette di scrivere programmi più flessibili, che si comportano in maniera differente a seconda del valore memorizzato nella variabile."
+        text: "Una variabile è un contenitore in cui puoi memorizzare un valore. Quando usi quella variabile in un programma, questo apre il contenitore ed esamina il valore contenuto al suo interno. Questo ti permette di scrivere programmi più flessibili, che si comportano in maniera differente a seconda del valore memorizzato nella variabile."
       2:
         image: 'notes/C4_variables_artist_2.png'
-        text: "Ad esempio, se voglio scrivere un programma per dire al mio fratellino \"Buon Compleanno, sei arrivato a 10 anni!\", non ho alcun problema per quest'anno. Però vorrei che, mandandolo in esecuzione l'anno prossimo, dicesse \"Buon Compleanno, sei arrivato a 11 anni!\". Posso allora creare una variabile \"età\" (<i>age</i>) per memorizzare l'età di mio fratello e poi scrivere un programma che dica \"Buon Compleanno, sei arrivato a 'età' \" (<i>Happy birthday, you're turning \"age\"</i>). Dato che una variabile può essere modificata, ogni anno io posso aggiornare la variabile da \"età\" ad \"età\"+1 e il programma rimane sempre uguale."
+        text: "Ad esempio, se voglio scrivere un programma per dire al mio fratellino \"Buon Compleanno, sei arrivato a 10 anni!\", non ho alcun problema per quest'anno. Però vorrei che, mandandolo in esecuzione l'anno prossimo, dicesse \"Buon Compleanno, sei arrivato a 11 anni!\". Posso allora creare una variabile \"età\" (age) per memorizzare l'età di mio fratello e poi scrivere un programma che dica \"Buon Compleanno, sei arrivato a 'età' \" (Happy birthday, you're turning \"age\"). Dato che una variabile può essere modificata, ogni anno io posso aggiornare la variabile da \"età\" ad \"età\"+1 e il programma rimane sempre uguale."
       3:
         image: 'notes/C4_variables_artist_3.png'
-        text: "In questo esercizio, utilizziamo una variabile \"lunghezza\" (<i>length<i>) per impostare (<i>set</i>) la lunghezza della linea che l'artista deve disegnare. Più avanti nel codice, il blocco \"vai avanti\" (<i>move forward</i>) esamina il contenuto della variabile \"lunghezza\" per vedere a quale valore è stata impostata e l'artista si sposta di questo valore."
+        text: "In questo esercizio, utilizziamo una variabile \"lunghezza\" (length) per impostare (set) la lunghezza della linea che l'artista deve disegnare. Più avanti nel codice, il blocco \"vai avanti\" (move forward) esamina il contenuto della variabile \"lunghezza\" per vedere a quale valore è stata impostata e l'artista si sposta di questo valore."
     C4_variables_playlab:
       1:
         image: 'notes/C4_variables_playlab_1.png'
-        text: "<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-7#VIDEO\" target=\"_blank\">Video doppiato in italiano</a><br><br>\nUna variabile è un contenitore in cui puoi memorizzare un valore. Quando usi quella variabile in un programma, questo apre il contenitore ed esamina il valore contenuto al suo interno. Questo ti permette di scrivere programmi più flessibili, che si comportano in maniera differente a seconda del valore memorizzato nella variabile."
+        text: "Una variabile è un contenitore in cui puoi memorizzare un valore. Quando usi quella variabile in un programma, questo apre il contenitore ed esamina il valore contenuto al suo interno. Questo ti permette di scrivere programmi più flessibili, che si comportano in maniera differente a seconda del valore memorizzato nella variabile."
       2:
         image: 'notes/C4_variables_playlab_2.png'
         text: "Stai per provare il Laboratorio in cui ti verranno proposti diversi giochi in cui potrai cambiare i valori di alcune variabili come la velocità, l'altezza o il punteggio, in modo tale da personalizzare il gioco proposto. Non dovrai modificare il codice del gioco per cambiarne il comportamento, dovrai concentrarti solo sulle variabili."
@@ -1742,7 +1742,7 @@ it:
         text: "Nel prossimo esercizio puoi scegliere se controllare Steve o Alex. Premi i tasti di direzione sulla tastiera per muoverti in su, in giù, a sinistra e a destra. Ora puoi spostarti dove vuoi all’interno dello scenario di gioco. Per usare una creatura, avvicinati, girati verso di essa e premi la barra spaziatrice."
       2:
         image: 'notes/mc_2016_events_2.jpg'
-        text: "Se utilizzi un <i>touchscreen</i>, puoi muoverti scorrendo verso l’alto, il basso, a sinistra e a destra. Quindi tocca lo schermo per utilizzare l’oggetto che hai di fronte."
+        text: "Se utilizzi un schermo tattile (touchscreen), puoi muoverti scorrendo verso l’alto, il basso, a sinistra e a destra. Quindi tocca lo schermo per utilizzare l’oggetto che hai di fronte."
       3:
         image: 'notes/mc_2016_events_3.jpg'
         text: "Cosa succede quando usi una creatura? In Minecraft, le pecore producono lana quando le tosi, le mucche scappano se le colpisci e i Creeper esplodono quando ti avvicini. Queste reazioni sono rese possibili dai cosiddetti \"gestori di eventi\". I gestori di eventi sono blocchi che permettono al programma di attendere e riconoscere determinate circostanze, \"gli eventi\". Se gli eventi si verificano, i gestori di evento attivano delle azioni."
@@ -1763,3 +1763,456 @@ it:
       2:
         image: 'notes/mc_2016_congrats_2.jpg'
         text: "Quando hai completato il tuo gioco, clicca su \"Termina\" per ottenere un link per condividerlo con gli amici o provare il tuo gioco su smartphone. Buon divertimento! Non vedo l’ora di giocare la tua versione di Minecraft."
+    applab_intro_welcome:
+      1:
+        image: 'notes/applab_intro_welcome_1.png'
+        text: "Mi chiamo Mei'lani, studio informatica e sono una stagista in Code.org. Mi piace l'informatica perché è davvero creativa. Devo risolvere problemi. Devo far funzionare tutto come voglio. Ma devo anche essere la progettista e l'artista e fare tutte le scelte dal punto di vista creativo.\n"
+      2:
+        image: 'notes/applab_intro_welcome_2.png'
+        text: "Costruire la tua app è facile con Sviluppo App! Sia che tu sia un principiante, sia che tu abbia già programmato, Sviluppo App è un ottimo strumento per costruire nuove App e condividerle con i tuoi amici."
+      3:
+        image: 'notes/applab_intro_welcome_3.png'
+        text: "Questo è Sviluppo App. Sul lato sinistro c'è la tua app. Sulla destra c'è il codice che la fa funzionare. Tu costruisci il tuo programma trascinando blocchi dalla cassetta degli attrezzi. Per iniziare hai un unico blocco chiamato `setProperty`."
+      4:
+        image: 'notes/applab_intro_welcome_4.png'
+        text: "Il blocco `setProperty` cambia le caratteristiche degli elementi sul tuo schermo. Come i bottoni, le etichette o l'intero schermo. Prima devi definire quale elemento vuoi cambiare. Se passi sopra ad un elemento della tua app, puoi vedere il suo nome o ID. Quindi seleziona questo ID dal primo elenco a discesa."
+      5:
+        image: 'notes/applab_intro_welcome_5.png'
+        text: "Gli elementi hanno molte proprietà da gestire come il colore di sfondo, quello del testo o la sua dimensione. Puoi vedere la lista completa e scegliere quale proprietà cambiare nel secondo elenco a discesa."
+      6:
+        image: 'notes/applab_intro_welcome_6.png'
+        text: "Nell'ultimo elenco scrivi il valore da utilizzare. Il blocco ti dà un suggerimento. Ma tu puoi sempre modificare le sue proposte."
+      7:
+        image: 'notes/applab_intro_welcome_7.png'
+        text: "Quando hai terminato, il blocco si può leggere un po 'come una frase: \"Imposta il colore di sfondo di button1 a verde.\" Premi \"Esegui\" per vedere i cambiamenti che stai programmando. Se premi \"Ricomincia\", puoi trascinare altri blocchi per cambiare altre caratteristiche della tua app. Come il testo!"
+      8:
+        image: 'notes/applab_intro_welcome_8.png'
+        text: "In questa esercitazione lavoreremo con i blocchi, ma Sviluppo App supporta anche la programmazione testuale."
+      9:
+        image: 'notes/applab_intro_welcome_9.png'
+        text: "Sappi che stai programmando in JavaScript, il linguaggio del web. Ogni esercizio ha un obiettivo, le istruzioni ed un'immagine di ciò che stai cercando di creare."
+      10:
+        image: 'notes/applab_intro_welcome_10.png'
+        text: "Se ti blocchi, fai clic su questa immagine e vedrai esattamente come devi completare l'esercizio. Ma prima, provaci da solo."
+      11:
+        image: 'notes/applab_intro_welcome_11.png'
+        text: "Quando hai raggiunto l'obiettivo di questo esercizio clicca su \"Termina\" per proseguire. Questo è tutto ciò che c'è da fare! Premi il pulsante arancione \"Prosegui\" per iniziare la tua avventura con Sviluppo App!"
+    applab_intro_events:
+      1:
+        image: 'notes/applab_intro_events_1.png'
+        text: "Le App sono forti perché è un po' come avviare una nuova attività nel senso che devi progettare tutto da zero, devi gestire tutto e sei il creatore di questo capolavoro che stai realizzando con il codice."
+      2:
+        image: 'notes/applab_intro_events_2.png'
+        text: "Ora che puoi cambiare il look della tua app, rendila interattiva facendola reagire agli eventi. Gli eventi sono azioni dell'utente come cliccare un pulsante, far scorrere un menù o passare sopra un'immagine. Le app interattive devono saper come rispondere agli eventi. Come riprodurre un suono quando premo un pulsante. Per fare questo su Sviluppo App devi usare un nuovo blocco chiamato `onEvent`."
+      3:
+        image: 'notes/applab_intro_events_3.png'
+        text: "Questo programma rende lo schermo blu. Voglio che lo schermo torni verde quando premo questo pulsante. Prima devo trascinare il blocco `onEvent`. Passando sul pulsante scopro che l'ID è \"bigButton\" così lo selezionerò nel primo elenco a discesa."
+      4:
+        image: 'notes/applab_intro_events_4.png'
+        text: "Poi scelgo il tipo di evento. Ci sono molte alternative ma per ora scegliamo il caro vecchio \"click\"."
+      5:
+        image: 'notes/applab_intro_events_5.png'
+        text: 'Alla fine aggiungo all''interno del blocco `onEvent` il codice per cambiare il colore di sfondo dello schermo. Puoi leggere questo blocco come una frase: "Quando il pulsante viene premuto esegui questo codice."'
+      6:
+        image: 'notes/applab_intro_events_6.png'
+        text: "Proviamoci. I blocchi al di fuori di `onEvent` continuano a lavorare, quindi all'inizio lo schermo è blu."
+      7:
+        image: 'notes/applab_intro_events_7.png'
+        text: "E quando clicco il pulsante \"bigButton\" viene eseguito il codice all'interno di `onEvent` e lo schermo diventa verde."
+      8:
+        image: 'notes/applab_intro_events_8.png'
+        text: "Se vuoi cambiare altre cose dopo l'evento, come il testo sullo schermo aggiungi semplicemente altro codice in `onEvent`."
+      9:
+        image: 'notes/applab_intro_events_9.png'
+        text: "Per far rispondere il tuo programma a più eventi, aggiungi altri blocchi `onEvent`. Fai solo attenzione a non posizionarli uno dentro l'altro. Ora è il tuo momento. Divertiti!"
+    applab_intro_sounds:
+      1:
+        image: 'notes/applab_intro_sounds_1.png'
+        text: "Adesso imparerai come aggiungere immagini e suoni alla tua app. Iniziamo verificando le opzioni audio."
+      2:
+        image: 'notes/applab_intro_sounds_2.png'
+        text: "Nella cassetta degli attrezzi trovi un nuovo blocco chiamato `playSound`. Trascinalo nell'area di lavoro. Puoi scegliere un suono da riprodurre cliccando \"Scegli\" nell'elenco a discesa."
+      3:
+        image: 'notes/applab_intro_sounds_3.png'
+        text: "Da qui puoi sia caricare un file audio dal tuo computer, sia cercare all'interno di una libreria di suoni. La libreria è suddivisa in molte categorie come strumenti, musiche di sottofondo o animali."
+      4:
+        image: 'notes/applab_intro_sounds_4.png'
+        text: "Quando hai individuato il suono che interessa, clicca \"Choose\". Quando questo blocco viene eseguito, riproduce il suono scelto."
+      5:
+        image: 'notes/applab_intro_sounds_5.png'
+        text: "Per associare immagini ai tuoi elementi puoi usare il blocco `setProperty`. Seleziona la proprietà \"image\" nel secondo elenco a discesa."
+      6:
+        image: 'notes/applab_intro_sounds_6.png'
+        text: "Quindi clicca \"Scegli\" nel terzo elenco a discesa."
+      7:
+        image: 'notes/applab_intro_sounds_7.png'
+        text: "Qui puoi caricare un'immagine dal tuo computer o cercare tra un'ampia scelta nella libreria di icone."
+      8:
+        image: 'notes/applab_intro_sounds_8.png'
+        text: "Tornando alla modalità di programmazione, puoi usare il blocco `setProperty` per cambiare il colore della tua icona. Una volta scelta l'immagine, fai clic su \"Esegui\" per vedere come appare."
+      9:
+        image: 'notes/applab_intro_sounds_9.png'
+        text: "Questo è tutto! Ora puoi iniziare ad aggiungere immagini e suoni per rendere la tua app ancora più divertente e dinamica."
+    applab_intro_designmode:
+      1:
+        image: 'notes/applab_intro_designmode_1.png'
+        text: "Per costruire le tue app dovrai progettare da zero le tue schermate con i vari elementi. È facile farlo con la modalità \"Interfaccia\" di Sviluppo App."
+      2:
+        image: 'notes/applab_intro_designmode_2.png'
+        text: "Usa l'interruttore in alto a sinistra per passare alla modalità \"Interfaccia\"."
+      3:
+        image: 'notes/applab_intro_designmode_3.png'
+        text: "Puoi aggiungere nuovi elementi trascinandoli sullo schermo. Puoi muoverli in diverse posizioni e cambiarne le dimensioni trascinando l'angolo in basso a destra."
+      4:
+        image: 'notes/applab_intro_designmode_4.png'
+        text: "Per cambiare le proprietà di un elemento usa il pannello di controllo sulla destra. Per esempio, è davvero semplice cambiare il testo di questo pulsante, il colore e la dimensione del testo."
+      5:
+        image: 'notes/applab_intro_designmode_5.png'
+        text: "Quando aggiungi un nuovo elemento alla tua schermata ottieni un ID generico come button1. Sarebbe un'ottima cosa cambiare questo ID generico con qualcosa di più significativo come \"rightButton\" (\"pulsanteDestro\"). In modo da riconoscerlo facilmente nel programma."
+      6:
+        image: 'notes/applab_intro_designmode_6.png'
+        text: "Se aggiungi un elemento per sbaglio, basta trascinarlo via o premere \"Delete\"."
+      7:
+        image: 'notes/applab_intro_designmode_7.png'
+        text: "Puoi aggiungere nuove schermate alla tua app trascinando un elemento \"Screen\"."
+      8:
+        image: 'notes/applab_intro_designmode_8.png'
+        text: "Dall'elenco a discesa in alto puoi velocemente muoverti tra le schermate che hai creato."
+      9:
+        image: 'notes/applab_intro_designmode_9.png'
+        text: "Nella tua app, hai bisogno di un modo per commutare tra tutte queste schermate per questo è stato aggiunto il blocco `setScreen` nella cassetta degli attrezzi. Usa `setScreen` dentro al blocco `onEvent` per cambiare schermata alla pressione di un pulsante."
+      10:
+        image: 'notes/applab_intro_designmode_10.png'
+        text: "Nei prossimi esercizi lavorerai su un singolo progetto. Prima aggiungerai un pulsante, poi una schermata ed infine scriverai del codice per fare in modo che il pulsante faccia passare alla nuova schermata."
+    applab_intro_share:
+      1:
+        image: 'notes/applab_intro_share_1.png'
+        text: "Ora che hai imparato le basi di Sviluppo App come aggiungere pulsanti, suoni, immagini, testo e nuove schermate puoi creare ogni genere di app."
+      2:
+        image: 'notes/applab_intro_share_2.png'
+        text: "Nel prossimo esercizio troverai l'app che hai appena costruito. Con un po' di creatività, puoi trasformarla in quiz sulla personalità per i tuoi amici, in una cartolina di auguri da condividere con la tua famiglia oppure in un gioco di ruolo (\"choose-your-own-adventure\"). Tutte queste app sono semplicemente una combinazione delle funzionalità che hai già imparato e scommetto che puoi inventarne ancora altre."
+      3:
+        image: 'notes/applab_intro_share_3.png'
+        text: "Quando hai terminato con la tua app puoi spedirla al tuo telefono per vedere come appare. Clicca su \"Condividi\" ed inserisci il numero di telefono."
+      4:
+        image: 'notes/applab_intro_share_4.png'
+        text: "(Ma questo funziona solo negli Stati Uniti.)"
+      5:
+        image: 'notes/applab_intro_share_5.png'
+        text: "Puoi anche condividere un link alla tua app sui Social Network o pubblicarla nella galleria pubblica di Code.org così anche altre persone potranno usarla e condividerla."
+      6:
+        image: 'notes/applab_intro_share_6.png'
+        text: "Hai solo visto la punta dell'iceberg di ciò che puoi fare con Sviluppo App. Sviluppo App con funzionalità complete, interazioni più evolute con l'utente, nuovi elementi per lo schermo e anche un database incorporato, ti permetteranno di costruire app ricche di funzionalità. Su \"code.org/applab\" trovi lo strumento completo e tante idee per proseguire."
+      7:
+        image: 'notes/applab_intro_share_7.png'
+        text: "Grazie per averci seguito fin qui. Ora vai a costruire e condividere la tua prima app. E continua a creare app con Sviluppo App."
+    mc_2017_agent_intro:
+      1:
+        image: 'notes/mc_2017_agent_intro_1.png'
+        text: 'Stacy: Stampy, Lizzy, Preston grazie per essere venuti con me. Vorrei solo mostrarvi questo altopiano della mesa. Penso proprio che vi piacerà!'
+      2:
+        image: 'notes/mc_2017_agent_intro_2.png'
+        text: "Un attimo - c'è un'interruzione nelle rotaie! (urla)"
+      3:
+        image: 'notes/mc_2017_agent_intro_3.png'
+        text: 'Tutti OK? Stampy - Ah, Ecco il problema. Guardate: c''è un''interruzione nella rotaia. Stacy: Davvero, Stampy? Lizzy: Potremmo raccogliere dei blocchi per aggiustarla. Preston: Facciamo una gara. Il primo che ritorna in cima vince. Stacy: OK, pronti, attenti, VIA! OK, raccoglierò un po'' di questa terracotta. Aspetta. ragazzi, non riesco a scavare! Preston: Uguale. Lizzy: Neanch''io. Stacy: OK, è proprio strano. Stampy, tu riesci a scavare? Stampy: no, non riesco! Stacy: OK, stiamo calmi. Stampy: Il gioco si è rotto? Stacy: Se è così, come possiamo aggiustarlo? Lizzy: Non so. Stampy: Qualcuno sa programmare in Minecraft?'
+      4:
+        image: 'notes/mc_2017_agent_intro_4.png'
+        text: '(puff) Preston: Cos''è? Stampy: Non ho mai visto nulla del genere. Lizzy: È adorabile! Stacy: Si può... addomesticare? Preston: OK, cosa sta succedendo? Qualcuno dovrebbe tornare nel mondo reale e sistemare tutto. Tutti: Io no! Stacy: Io... (ooh) OK, vado.'
+      5:
+        image: 'notes/mc_2017_agent_intro_5.png'
+        text: "Ehi! Oh, OK, così ora sono nel mondo reale. Ora andrò a cercare gli uffici di Minecraft."
+      6:
+        image: 'notes/mc_2017_agent_intro_6.png'
+        text: "Ma, ho bisogno del tuo aiuto. Inizia a fare l'esercitazione, inizia ad imparare a programmare e ci vediamo più tardi tra qualche livello, OK? Auguratemi buona fortuna! Penso sia da questa parte. Ahi! Cactus! Tutto OK!"
+      7:
+        image: 'notes/mc_2017_agent_intro_7.png'
+        text: "Per completare questa sfida dell'Ora del Codice, dovrai scrivere del codice per programmare l'Agente. Lavorerai insieme all'Agente per eliminare ogni ostacolo sul tuo passaggio, così potrai raccogliere tutti gli oggetti di cui avrai bisogno nel tuo viaggio. Solo l'Agente può posizionare e rompere i blocchi e solo tu puoi collezionare oggetti. Lo schermo è diviso in tre pari. Sulla sinistra Minecraft."
+      8:
+        image: 'notes/mc_2017_agent_intro_8.png'
+        text: "La zona centrale è la cassetta degli attrezzi con i comandi che conosce l'Agente."
+      9:
+        image: 'notes/mc_2017_agent_intro_9.png'
+        text: "Sulla destra l'area di lavoro. Qui è dove concateni i comandi per creare il tuo programma per controllare l'Agente."
+      10:
+        image: 'notes/mc_2017_agent_intro_10.png'
+        text: "L'Agente può camminare, girarsi e attivare le pedane a pressione. Può anche distruggere e posizionare blocchi. Quando posa blocchi come queste rotaie, le posiziona sotto di sé."
+      11:
+        image: 'notes/mc_2017_agent_intro_11.png'
+        text: "Se non ricordi cosa fare, le istruzioni per ogni esercizio sono mostrate in alto."
+      12:
+        image: 'notes/mc_2017_agent_intro_12.png'
+        text: "Se vuoi provare di nuovo, puoi premere il pulsante blu \"Ricomincia\" per riportare tutto come all'inizio dell'esercizio. E se hai bisogno di cancellare un blocco di codice, trascinalo nella cassetta degli attrezzi. Ricorda di premere \"Esegui\" per avviare l'Agente. OK, vai avanti e prova i primi livelli. Buona fortuna!"
+    mc_2017_repeat:
+      1:
+        image: 'notes/mc_2017_repeat_1.png'
+        text: 'Stampy: Mi chiedo cosa stia facendo Stacy...'
+      2:
+        image: 'notes/mc_2017_repeat_2.png'
+        text: 'Stacy: Wow, credo di essere nel posto giusto. È incredibile!'
+      3:
+        image: 'notes/mc_2017_repeat_3.png'
+        text: "Mi sembra di essere di nuovo in Minecraft! Ciao. Come stai? Ciao?"
+      4:
+        image: 'notes/mc_2017_repeat_4.png'
+        text: 'Oh dev''essere un Creeper. Non fai niente, vero? Katie: Stacy? Stacy: Ciao, Katie? Katie: Si! Benvenuta in Minecraft!'
+      5:
+        image: 'notes/mc_2017_repeat_5.png'
+        text: 'Stacy: È incredibile! Così tu lavori qui ogni giorno come sviluppatrice, giusto? Katie: Certo, è davvero fantastico. Sono una sviluppatrice del gruppo Minecraft marketplace. Stacy: Quanti linguaggi di programmazione conosci? Katie: Probabilmente nella mia carriera ho lavorato con più di una dozzina. Satcy: Una dozzina? Katie: Oh si! Stacy: Dunque, ne sai qualcosa di questo piccolo golem che si fa chiamate "Agente"? Katie: Usiamo l''Agente per svolgere azioni che Steve o Alex non possono fare, come attraversare la lava. Stacy: Bene, voglio imparare come programmare e loro vogliono imparare a programmare, quindi, qual''è una delle prime cose da imparare?'
+      6:
+        image: 'notes/mc_2017_repeat_6.png'
+        text: 'Katie: Bene, hai bisogno di imparare i "cicli". Gli sviluppatori usano i cicli per fare in modo che i computer ripetano delle istruzioni più e più volte di seguito. Stacy: Capisco, penso che ce ne siano nei prossimi esercizi, allora andiamo avanti e facciamo qualche prova con i cicli.'
+      7:
+        image: 'notes/mc_2017_repeat_7.png'
+        text: "Nel prossimo esercizio, puoi usare un ciclo per muovere l'Agente lungo il percorso. Trascina il blocco \"ripeti...volte\" nell'area di lavoro e posiziona il blocco \"vai avanti\" dentro al blocco \"ripeti...volte\". Questo dice al computer di fare alcune cose molte volte di seguito, senza dover trascinare un mucchio di blocchi nell'area di lavoro. Puoi scegliere quante volte ripetere, scrivendo un numero nel blocco \"ripeti...volte\"."
+      8:
+        image: 'notes/mc_2017_repeat_8.png'
+        text: "Puoi anche mettere molti comandi diversi all'interno del blocco \"ripeti...volte\", ma per ora prova ad usarlo per far avanzare l'Agente di pochi passi. Ricorda, se ti blocchi su un esercizio, puoi sempre premere il pulsante blu \"ricomincia\" e provare di nuovo."
+      9:
+        image: 'notes/mc_2017_repeat_9.png'
+        text: 'Stacy: Se stai pensando che ti piacerebbe fare un lavoro come quello di Katie, vai avanti e clicca sul pulsante "mostra il codice" alla fine di ogni esercizio. Potrai vedere il codice JavaScript che qualcuno come Katie usa quando programma veramente Minecraft. Perfetto, grazie mille! Katie: Prego, buona fortuna a tutti!'
+    mc_2017_functions:
+      1:
+        image: 'notes/mc_2017_functions_1.png'
+        text: 'Preston: Non per vantarmi, ma sono abbastanza bravo in Parkour. Lizzy: Dormi, che quando sarà giorno tornerà Stacy.'
+      2:
+        image: 'notes/mc_2017_functions_2.png'
+        text: 'Stacy: OK ragazzi, eccomi di nuovo qui dagli uffici di Minecraft e penso di sapere come risolvere il problema che avevamo nel gioco. Penso di poter usare una funzione. Fammi solo aprire questo.'
+      3:
+        image: 'notes/mc_2017_functions_3.png'
+        text: "Allora, una funzione è uno specifico insieme di istruzioni per lo svolgimento di una certa attività, come una specie di ricetta. Nei prossimi esercizi, potrai usare le funzioni per portare a termine le tue missioni."
+      4:
+        image: 'notes/mc_2017_functions_4.png'
+        text: "Guarda il codice dentro alle funzioni, quando le trovi nell'area di lavoro, per capire cosa fanno."
+      5:
+        image: 'notes/mc_2017_functions_5.png'
+        text: "Quindi, cerca il blocco con quel nome nella cassetta degli attrezzi trascinalo nell'area di lavoro e aggancialo al blocco \"Quando si clicca si \"Esegui\"."
+      6:
+        image: 'notes/mc_2017_functions_6.png'
+        text: "Ricorda, puoi usare la stessa funzione ogni volta che hai bisogno di eseguire lo stesso insieme di istruzioni per fare qualcosa, come costruire un ponte. Buona fortuna, so che ce la puoi fare!"
+    mc_2017_congratulations:
+      1:
+        image: 'notes/mc_2017_congratulations_1.png'
+        text: 'Preston: Congratulazioni!'
+      2:
+        image: 'notes/mc_2017_congratulations_2.png'
+        text: 'Lizzy: Congratulazioni!'
+      3:
+        image: 'notes/mc_2017_congratulations_3.png'
+        text: 'Stampy: Congratulazioni, ce l''avete fatta!'
+      4:
+        image: 'notes/mc_2017_congratulations_4.png'
+        text: 'Stacy: Congratulazioni ragazzi, ce l''avete fatta alla grande! Ed ora che avete completato l''Ora del Codice, potete iniziare a programmare in Minecraft. Avete imparato: cicli, funzioni e cosa può fare un Agente.'
+      5:
+        image: 'notes/mc_2017_congratulations_5.png'
+        text: "Adesso è il momento dell'esercizio libero, dove tu sei il programmatore. Usa tutto il tempo che ti resta per scrivere le tue funzioni per esplorare, scavare e costruire."
+      6:
+        image: 'notes/mc_2017_congratulations_6.png'
+        text: 'Puoi portare il codice che scrivi in questo esercizio nel tuo mondo Minecraft su Minecraft: Education Edition e continuare a programmare con l''Agente. Clicca su "Termina" e segui le istruzioni per ottenere il link. Buon divertimento e buon lavoro!'
+      7:
+        image: 'notes/mc_2017_congratulations_7.png'
+        text: 'Stacy: Ed eccomi di nuovo qui! OK, questo è l''Agente! Vi faccio vedere cosa può fare. Guardate, lo sta facendo! Gli avevo detto di costruire una scala, ora possiamo usarla per uscire da questi blocchi di terra cotta. E voi ragazzi? Non si tratta solo di scale. Posso dire all''Agente di fare quello che voglio, e lui lo farà per me.'
+      8:
+        image: 'notes/mc_2017_congratulations_8.png'
+        text: 'Stampy: Come hai fatto? Stacy: È facile, in realtà. Ho semplicemente programmato!'
+    csd_concept_how_computers_work:
+      1:
+        image: 'notes/csd_concept_how_computers_work_1.png'
+        text: 'Everywhere you look, computers are changing the world. Whether they''re on our desktops, in our homes, our pockets, or just about anywhere else. But while most of us use this revolutionary technology daily, we don''t often ask: "How do computers work?" In this series, you''re going to learn how computers really work, starting with what makes a computer a computer. Then, you''ll look at how information is represented inside the computer using tiny electrical signals going on and off at mind-boggling speeds.'
+      2:
+        image: 'notes/csd_concept_how_computers_work_2.png'
+        text: "After that, you'll learn how computers use circuits to do everything from simple math to simulating entire virtual worlds. Next, you'll zoom out and look at the different parts of a computer that actually input, output, and store all that information. Finally, you'll take a look at what code actually is and how software controls hardware. So whether you're just curious about the devices you use every day or you want to design the innovations of the future, the first step is learning how computers work."
+    csd_concept_computer:
+      1:
+        image: 'notes/csd_concept_computer_1.png'
+        text: "My name is May-Li Khoe and I'm a designer and an inventor. So some of the things I've designed have been at Apple, and now I design products for kids to use so that they can have an easier time in school. My other jobs include DJ-ing and dancing."
+      2:
+        image: 'notes/csd_concept_computer_2.png'
+        text: "Computers are everywhere! They're in people's pockets, they're in people's cars, people have them on their wrists. They might be in your backpack right now. But what makes a computer a computer? What does make a computer a computer anyway? And how does it even work?"
+      3:
+        image: 'notes/csd_concept_computer_3.png'
+        text: "Hi I'm Nat! I was one of the original designers of the Xbox. I've been working with computers since I was maybe seven years old and now I work on virtual reality. As humans, we've always built tools to help us solve problems. Tools like a wheelbarrow, a hammer, or a printing press, or a tractor-trailer."
+      4:
+        image: 'notes/csd_concept_computer_4.png'
+        text: "All of these inventions helped us with manual work. Over time, people began to wonder if a machine could be designed and built to help us with the thinking work we do, like solving equations or tracking the stars in the sky. Rather than moving or manipulating physical things like dirt and stone, these machines would need to be designed to manipulate information. As the pioneers of computer science explored how to design a thinking machine, they realized that it had to perform four different tasks."
+      5:
+        image: 'notes/csd_concept_computer_5.png'
+        text: "It would need to take input, store information process it and then output the results. Now this might sound simple, but these four things are common to all computers. That's what makes a computer a computer."
+      6:
+        image: 'notes/csd_concept_computer_6.png'
+        text: "Computers started out as basic calculators, which was already really awesome at the time, and they were only manipulating numbers back then. But now we can use them to talk to each other, we can use them to play games, control robots, and do any crazy thing that you could probably imagine. Modern computers look nothing like those clunky old machines but they still do these same four things."
+      7:
+        image: 'notes/csd_concept_computer_7.png'
+        text: "First, we're going to talk about input. You can tell computers what to do with the keyboard, you can tell them what to do with the mouse, the microphone, the camera. All these different inputs give a computer information, which is then stored in memory."
+      8:
+        image: 'notes/csd_concept_computer_8.png'
+        text: "A computer's processor takes information from memory. It manipulates it or changes it using an algorithm, which is just a series of commands. And then it sends the processed information back to be stored in memory again. This continues until the processed information is ready to be output."
+      9:
+        image: 'notes/csd_concept_computer_9.png'
+        text: "How a computer outputs information depends on what the computer is designed to do. A computer display can show text, photos, videos, or interactive games -- even virtual reality! The output of a computer may even include signals to control a robot."
+      10:
+        image: 'notes/csd_concept_computer_10.png'
+        text: "And who knows what the computers of tomorrow will be like? My hope is that you get to help decide what you want the computers of tomorrow to look like. But across all computers, regardless of the different types of technology they use, they're always doing those same four things. They take in information, they store it as data, they process it, and then they output the results."
+    csd_concept_binary_data:
+      1:
+        image: 'notes/csd_concept_binary_data_1.png'
+        text: "Hi! My name is Limor Fried, and I'm an engineer here at Adafruit Industries. And this is where I do engineering and design, and I design circuits for fashion and music and technology."
+      2:
+        image: 'notes/csd_concept_binary_data_2.png'
+        text: "My name is Federico Gomez Suarez, and I'm a software developer with Microsoft Hack for Good. And I look into using technology to help us solve some of the big social problems of our times."
+      3:
+        image: 'notes/csd_concept_binary_data_3.png'
+        text: "You may have heard that computers work on ones and zeros. But almost nobody today actually deals directly with these ones and zeros. But ones and zeroes do play a big role in how computers work on the inside."
+      4:
+        image: 'notes/csd_concept_binary_data_4.png'
+        text: "Inside a computer are electric wires and circuits that carry all the information in a computer. How do you store or represent information using electricity?"
+      5:
+        image: 'notes/csd_concept_binary_data_5.png'
+        text: "Well, if you have a single wire with electricity flowing through it, the signal could either be on or off. That's not a lot of choices, but it's a really important start. With one wire, we can represent a yes or no, true or false, a one or zero, or anything else with only two options. This on/off state of a single wire is called a bit, and it's the smallest piece of information a computer can store."
+      6:
+        image: 'notes/csd_concept_binary_data_6.png'
+        text: 'If you use more wires you get more bits: more ones and zeros. With more bits you can represent more complex information. But to understand that, we need to learn about something called the binary number system.'
+      7:
+        image: 'notes/csd_concept_binary_data_7.png'
+        text: 'In the decimal number system, we have ten digits from zero to nine, and that''s how we''ve all learned to count. In the binary number system, we only have two digits: zero and one. With these two digits, we can count up to any number.'
+      8:
+        image: 'notes/csd_concept_binary_data_8.png'
+        text: "Here's how this works. In a decimal number system we're all used to, each position in a number has a different value. There's a 1 position, the 10 position, the 100 position, and so on. For example, a 9 in the 100 position is a 900. In binary, each position also carries a value. But instead of multiplying by 10 each time, we multiply by 2. So there's the 1 position, the 2 position, the 4 position, the 8 position, and so on. For example, the number 9 in binary is 1001. To calculate the value, we add 1 times 8, plus 0 times 4, plus 0 times 2, plus 1 times 1. Almost nobody does this math because computers do it for us. What's important is that any number can be represented with only ones and zeros, or by a bunch of wires that are on or off. The more wires you use, the larger the numbers you can store. With 8 wires, you can store numbers between 0 and 255. That's 8 ones. With just 32 wires, you can store all the way from 0 to over 4 billion. Using the binary number system, you can represent any number you like."
+      9:
+        image: 'notes/csd_concept_binary_data_9.png'
+        text: "But what about other types of information? Like text, images, or sound? It turns out that all these things can also be represented with numbers. Think of all the letters in the alphabet. You could assign a number to each letter. A could be 1, B could be 2, and so on. You can then represent any word or paragraph as a sequence of numbers. And as we saw, these numbers can be stored as on or off electrical signals. Every word you see on every webpage or your phone is represented using a system like this."
+      10:
+        image: 'notes/csd_concept_binary_data_10.png'
+        text: "Now, let's consider photos, videos, and all the graphics you see on a screen."
+      11:
+        image: 'notes/csd_concept_binary_data_11.png'
+        text: "All of these images are made out of teeny dots called pixels, and each pixel has a color. Each of the colors can be represented with numbers. When you consider the typical image has millions of these pixels, and the typical video shows 30 images per second now we're talking about a lot of data here."
+      12:
+        image: 'notes/csd_concept_binary_data_12.png'
+        text: "Every sound is basically a series of vibrations in the air. Vibrations can be represented graphically as a waveform. Any point on this waveform can be represented by a number. And this way, any sound can be broken down into a series of numbers. If you want higher quality sound, you will pick 32-bit audio or an 8-bit audio. More bits means a higher range of numbers."
+      13:
+        image: 'notes/csd_concept_binary_data_13.png'
+        text: "When you use a computer to write code or make your own app, you're not dealing directly with these ones and zeros. But you will be dealing with images or sound or video. So if you want to understand how computers work on the inside, it all comes down these simple ones and zeros and the electrical signals in the circuits behind them."
+    csd_concept_circuits_logic:
+      1:
+        image: 'notes/csd_concept_circuits_logic_1.png'
+        text: "One of the coolest things I've discovered about circuits is circuitry can be an art form like if I have a creative idea, I can get that creative idea out using circuits. So if you have ideas, you can use technology to make those ideas come to life."
+      2:
+        image: 'notes/csd_concept_circuits_logic_2.png'
+        text: "Every input or output of a computer is effectively a type of information, which can be represented by on or off electrical signals or ones and zeros."
+      3:
+        image: 'notes/csd_concept_circuits_logic_3.png'
+        text: "In order to process the information that comes in as input, and to make the information that is output, a computer needs to modify and combine the input signals. To do this, a computer uses millions of teeny electronic components, which come together to form circuits."
+      4:
+        image: 'notes/csd_concept_circuits_logic_4.png'
+        text: "Let's take a closer look at how circuits can modify and process information that's represented in ones and zeros. This is an incredibly simple circuit. It takes an electrical signal, on or off, and it flips it. So if the signal you give it is a 1, the circuit gives you a 0, and if you give the circuit a 0, it gives you a 1. The signal that goes in is not the same as the signal that comes out, and so we call this circuit NOT."
+      5:
+        image: 'notes/csd_concept_circuits_logic_5.png'
+        text: "More complicated circuits can take multiple signals and combine them, and give you a different result. In this example, a circuit will take two electrical signals, now each one might be a 1 or a 0. If either of the signals coming in is a 0, then the result is also a 0. This circuit will only give you a 1, if the first signal and the second signal are both a 1, and so we call the circuit AND."
+      6:
+        image: 'notes/csd_concept_circuits_logic_6.png'
+        text: "There are many small circuits like this that perform simple logical calculations. By connecting these circuits together, we can make more complex circuits that perform more complex calculations."
+      7:
+        image: 'notes/csd_concept_circuits_logic_7.png'
+        text: "For example, you can make a circuit that adds 2 bits together called an adder. This circuit takes in 2 individual bits, each one a 1 or a 0, and adds them together to calculate the sum. The sum can be 0 plus 0 equals 0, 0 plus 1 equals 1, or 1 plus 1 equals 2. You need two wires coming out because it can take up to two binary digits to represent the sum. Once you have a single adder for adding two bits of information, you can put together multiples of these adder circuits side-by-side to add together much larger numbers."
+      8:
+        image: 'notes/csd_concept_circuits_logic_8.png'
+        text: "For example, here's how an 8-bit adder adds the numbers 25 and 50. Each number is represented using 8 bits, resulting in 16 different electrical signals that go into the circuit. The circuit for an 8-bit adder has lots of little adders inside of it, which together, calculate the sum."
+      9:
+        image: 'notes/csd_concept_circuits_logic_9.png'
+        text: "Different electrical circuits can perform other simple calculations like subtraction or multiplication. In fact, all the information processing your computer does is just lots and lots of small simple operations put together. Each individual operation done by a computer is so, so simple it could be done by a human, but these circuits inside computers are way way faster."
+      10:
+        image: 'notes/csd_concept_circuits_logic_10.png'
+        text: "Back in the day, these circuits were big and clunky, and an 8-bit adder could be as big as a fridge, and it would take minutes for them to perform a simple calculation. Today, computer circuits are microscopic in size, and way way faster. Why are smaller computers also faster? Well, because the smaller the circuit is, the less distance the electrical signal has to go. Electricity moves at just about the speed of light, which is why modern circuits can perform billions of calculations per second."
+      11:
+        image: 'notes/csd_concept_circuits_logic_11.png'
+        text: "So whether you're playing a game, recording a video, or exploring the cosmos, everything you could possibly do with technology requires lots of information to be processed extremely quickly. Underneath all this complexity is just lots of teeny little circuits that turn binary signals into websites, videos, music, and games. These circuits can even help us decode DNA to diagnose and cure disease. So what would you like to do with all these circuits?"
+    csd_concept_memory_cpu_input_output:
+      1:
+        image: 'notes/csd_concept_memory_cpu_input_output_1.png'
+        text: "Hi, my name is Madison Maxey. I have a company called Loomia, and we focus on making smart fabrics for smart clothing and smart soft good products. The sky's the limit when it comes to textiles."
+      2:
+        image: 'notes/csd_concept_memory_cpu_input_output_2.png'
+        text: "My name is Danielle Applestone, and I'm CEO of Othermachine Company. We build a desktop milling machine. A milling machine takes a rotating cutting tool and moves it through material to create a 3D object."
+      3:
+        image: 'notes/csd_concept_memory_cpu_input_output_3.png'
+        text: "Under the hood, all computers do the same four basic things. They input information, store and process the information, and then, output information. Each of these things is done by a different part of the computer."
+      4:
+        image: 'notes/csd_concept_memory_cpu_input_output_4.png'
+        text: "There are input devices that take input from the outside world and convert it into binary information. There is memory to store this information. There's a central processing unit or CPU, where all the calculations are done. And, finally, there are output devices that take information and convert it into a physical output."
+      5:
+        image: 'notes/csd_concept_memory_cpu_input_output_5.png'
+        text: "Let's talk about input first. Computers can take many different types of input, like the keyboard of a computer, the touchpad of a phone, a camera, a microphone, or a GPS. But even the sensors on a car, a thermostat, or a drone are also different input devices."
+      6:
+        image: 'notes/csd_concept_memory_cpu_input_output_6.png'
+        text: "Now, let's look at a simple example of how input travels through a computer and becomes output. When you press a key on your keyboard - let's say the letter \"B\". The keyboard converts the letter to a number. That number is sent as binary, ones and zeros, into the computer."
+      7:
+        image: 'notes/csd_concept_memory_cpu_input_output_7.png'
+        text: "Starting from this number, the CPU calculates how to display the letter \"B\" pixel by pixel. The CPU requests step-by-step instructions from memory, which tell it how to draw the letter \"B\". The CPU runs these instructions and stores the results as pixels in memory."
+      8:
+        image: 'notes/csd_concept_memory_cpu_input_output_8.png'
+        text: "Finally, this pixel information is sent in binary to the screen. The screen is an output device, which converts the binary signals into the tiny lights and colors that make up what you see."
+      9:
+        image: 'notes/csd_concept_memory_cpu_input_output_9.png'
+        text: "This all happens so quickly it feels instantaneous, but to display each letter a computer runs thousands of instructions, starting from the moment your finger presses the key point."
+      10:
+        image: 'notes/csd_concept_memory_cpu_input_output_10.png'
+        text: "In that example, the output device was the screen, but there are many different types of output which take a binary signal from the computer and do something in the physical world. For example, a speaker will play sound, and a 3D printer will print an object. Output devices can also control physical motion like a robotic arm, the motor of a car, or the cutting tool of the milling machine that my company makes. New types of inputs and outputs let computers interact with the world in entirely new ways. This has been helped out by improvements to the speed and size of the memory and CPU."
+      11:
+        image: 'notes/csd_concept_memory_cpu_input_output_11.png'
+        text: "The more complicated a task is and the more information that is input or output, the more processing power and memory a computer needs. Typing letters on a screen may be easy but to do complicated 3d graphics or record a high-definition movie, modern computers often have multiple CPUs to process all that information and many gigabytes of memory to store it."
+      12:
+        image: 'notes/csd_concept_memory_cpu_input_output_12.png'
+        text: 'No matter what it is you want to do with the computer, every single action is about: inputting information from the physical world, storing and processing that information, and getting some output back into the physical world.'
+    csd_concept_hardware_software:
+      1:
+        image: 'notes/csd_concept_hardware_software_1.png'
+        text: "Hi, my name is Erica Gomez and I'm an engineering manager at Amazon.com. One of the best things about working in tech, and at Amazon in particular, is that I get to bring my dog with me to work every day. My job is to help make sure software gets out the door and her job is to nap under my desk and snore very loudly."
+      2:
+        image: 'notes/csd_concept_hardware_software_2.png'
+        text: 'My name is Jerome Holman, and I''m a Program Manager on Team Xbox and I have a really fun job: Basically bringing the hardware and the software together to give you all the games that you love on your Xbox.'
+      3:
+        image: 'notes/csd_concept_hardware_software_3.png'
+        text: "When you look inside a computing device you see a bunch of circuits, chips, wires, speakers, plugs, and all sorts of other stuff. This is the hardware."
+      4:
+        image: 'notes/csd_concept_hardware_software_4.png'
+        text: "But what you don't see is the software. Software is all of the computer programs, or code, running on this machine. Software can be anything from apps and games to webpages and the data science software that me and my teams use at Amazon to understand how customers behave."
+      5:
+        image: 'notes/csd_concept_hardware_software_5.png'
+        text: "But how do the hardware and the software interact with one another? Let's start at looking at a computer's central processing unit, or CPU."
+      6:
+        image: 'notes/csd_concept_hardware_software_6.png'
+        text: "The CPU is the master chip that controls all the other parts of the computer. A CPU needs to do different things so inside it has smaller, simpler parts that handle specific tasks. It has circuits to do simple math and logic. It has other circuits to send and receive information to and from different parts of the computer."
+      7:
+        image: 'notes/csd_concept_hardware_software_7.png'
+        text: "The real magic of the CPU is how it knows which circuits to use and when to use them. The CPU receives simple commands that tell it which circuit to use to do a specific job. For example, an \"add\" command tells the CPU to use its outer circuit to calculate a new number. And then the \"store\" command tells the CPU to use a different circuit to save that result into memory."
+      8:
+        image: 'notes/csd_concept_hardware_software_8.png'
+        text: "Just like numbers, all of these simple commands can be represented in binary ones and zeros or on and off electrical signals. The binary commands are stored in memory and the CPU fetches and executes them in sequence one after the other. This sequence of commands is, in fact, a very simple computer program."
+      9:
+        image: 'notes/csd_concept_hardware_software_9.png'
+        text: "Binary code is the most basic form of software and it controls all the hardware of a computer. These days, nobody writes software in binary. It would take forever!"
+      10:
+        image: 'notes/csd_concept_hardware_software_10.png'
+        text: "Today, the software we write looks more like this (Python), or this (Ruby), or even this (Blockly). Programming languages like these let you type in commands in something that looks a lot like English."
+      11:
+        image: 'notes/csd_concept_hardware_software_11.png'
+        text: "To draw a rectangle on the screen, you just need a single command. This high-level command is converted into hundreds, or thousands, of simpler binary commands that the CPU understands. Software tells the CPU what to do, but when you're listening to music, and browsing the web, and chatting with a friend, your computer is running multiple pieces of software all at once."
+      12:
+        image: 'notes/csd_concept_hardware_software_12.png'
+        text: "So, how do all of these programs get on the computer in the first place, and how can the CPU run them all at once? To find out we'll have to take a look at the operating system."
+      13:
+        image: 'notes/csd_concept_hardware_software_13.png'
+        text: "The operating system of the computer is the master program that manages how software gets to use the hardware of the computer. For example, I helped create the Windows operating system that runs on most personal computers."
+      14:
+        image: 'notes/csd_concept_hardware_software_14.png'
+        text: "The operating system is a program with special abilities that let it control the other software on the computer. It lets you install new programs by loading them into your computer's memory. It decides when a program is run by the central processing unit, and whether that program can access the computer's input and output devices. And when you think your computer is running many programs at once, in reality, it's the operating system that's quickly switching between programs sharing that CPU for fractions of a second."
+      15:
+        image: 'notes/csd_concept_hardware_software_15.png'
+        text: "Inside every computer is an operating system managing software that controls the computer's hardware."
+      16:
+        image: 'notes/csd_concept_hardware_software_16.png'
+        text: "The software is a series of commands made of simple binary code, and that binary code is just electrical signals flowing through billions of tiny circuits."
+      17:
+        image: 'notes/csd_concept_hardware_software_17.png'
+        text: "Computers have the potential to do all kinds of amazing things. But the only thing that makes the computer smart, or useful, is you. When you learn to code you get to define the problem you want to solve, and write the software that turns those ideas into reality."

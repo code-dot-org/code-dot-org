@@ -31,6 +31,9 @@ SKIP_UNIT_TESTS_TAG = 'skip unit'.freeze
 # Run UI tests against ChromeLatestWin7
 SKIP_CHROME_TAG = 'skip chrome'.freeze
 
+# Run UI tests against Chrome44Win7
+TEST_CHROME_44_TAG = 'test chrome 44'.freeze
+
 # Run UI tests against Firefox45Win7
 TEST_FIREFOX_TAG = 'test firefox'.freeze
 
@@ -53,6 +56,11 @@ SKIP_EYES = 'skip eyes'.freeze
 namespace :circle do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
   task :run_tests do
+    unless CircleUtils.unit_test_container?
+      ChatClient.log "Wrong container, skipping"
+      next
+    end
+
     if CircleUtils.tagged?(RUN_ALL_TESTS_TAG)
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
@@ -69,6 +77,11 @@ namespace :circle do
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
   task run_ui_tests: [:recompile_assets] do
+    unless CircleUtils.ui_test_container?
+      ChatClient.log "Wrong container, skipping"
+      next
+    end
+
     if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
@@ -138,6 +151,11 @@ namespace :circle do
   end
 
   task :seed_ui_test do
+    unless CircleUtils.ui_test_container?
+      ChatClient.log "Wrong container, skipping"
+      next
+    end
+
     if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
@@ -166,6 +184,7 @@ end
 def browsers_to_run
   browsers = []
   browsers << 'ChromeLatestWin7' unless CircleUtils.tagged?(SKIP_CHROME_TAG)
+  browsers << 'Chrome44Win7' if CircleUtils.tagged?(TEST_CHROME_44_TAG)
   browsers << 'Firefox45Win7' if CircleUtils.tagged?(TEST_FIREFOX_TAG)
   browsers << 'IE11Win10' if CircleUtils.tagged?(TEST_IE_TAG) || CircleUtils.tagged?(TEST_IE_VERBOSE_TAG)
   browsers << 'SafariYosemite' if CircleUtils.tagged?(TEST_SAFARI_TAG)

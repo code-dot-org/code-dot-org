@@ -1,4 +1,4 @@
-"no":
+no:
   data:
     unplugged:
       Unplug1:
@@ -90,7 +90,7 @@
         desc: For å lære om betingete instruksjoner skal elevene spille et kortspill og lage regler som "Hvis jeg tegner et rødt kort, får jeg et poeng" og "Hvis jeg tegner et svart kort, får du et poeng."
       BigEvent:
         title: Den store begivenheten
-        desc: Eleven blir introdusert for programmeringskonseptet "hendelse" som er handlnger som datamaskinen overfoker. Læreren trykker på knapper på en papirfjernkontroll og elevene svarer basert på hvilken knapp som er trykket.
+        desc: Eleven blir introdusert for programmeringskonseptet "hendelse" som er handlnger som datamaskinen overvåker. Læreren trykker på knapper på en papirfjernkontroll og elevene svarer basert på hvilken knapp som er trykket.
       GoingPlacesSafely:
         title: Trygg reise
         desc: Internett er en kraftig, men noen ganger farlig sted. Lærere presentere hvordan å være trygg når du navigerer på Internett.
@@ -117,10 +117,10 @@
         desc: Elever bruker konseptet med refrenget i en sang for å lære om å sende parametere (som tilpasser en funksjon uten å være nødt til å skrive om hele funksjonen).
       DiceRace:
         title: 'Virkelige algoritmer: Terningrace'
-        desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv, ved hjelp av plante et frø som et eksempel. Som en del av dette skal elevene finne og skrive ned algoritmen for terningracet.
+        desc: Denne leksjonen viser måter vi bruker algoritmer på i vårt daglige liv. Som en del av dette, vil studentene identifisere og skrive ned algoritmen for terningracet.
       Internet:
         title: Internett
-        desc: Studentene sende meldinger som representerer ulike Internett metoder bruke papirark.
+        desc: Studentene sender meldinger som representerer ulike internett overføringsmetoder ved hjelp av papirark.
       Crowdsourcing:
         title: Crowdsourcing
         desc: Elevene bruker crowdsourcing, en problemløsningsteknikk som er vanlig å bruke i informatikk, for å fullføre en oppgave sammen i et klasserom mer effektivt enn hvis en elev prøvde det alene.
@@ -168,25 +168,25 @@
         desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
+        desc: I denne oppgaven skal du lære om løkker!
       courseB_unplugged_MRF:
         title: Frakoblet Aktivitet
-        desc: In this lesson, you will 'program' your friends!
+        desc: I denne oppgaven skal du 'programmere' vennene dine!
       courseB_unplugged_loopyMRF:
         title: Frakoblet Aktivitet
-        desc: Just like in "My Robotic Friends", you will be "programming" your friends, but this time with loops!
+        desc: Akkurat som i "Mine robotvenner" skal du "programmere" vennene dine, men denne gangen med løkker!
       courseC_Unplugged_ScreenOutTheMean:
         title: Frakoblet Aktivitet
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: I dag skal du lære hva du skal gjøre hvis noen er slemme på nett.
       courseD_unplugged_digitalCitizenship:
         title: Frakoblet Aktivitet
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: I dag skal du lære hva det vil si å være en digital borger.
       courseE_unplugged_privateInformation:
-        title: 'Common Sense Education: Private and Personal Information '
-        desc: Today you will learn the difference between private and personal information!
+        title: 'Sunn fornuft opplæring: Privat og personlig informasjon '
+        desc: I dag vil du lære forskjellen mellom privat og personlig informasjon!
       courseF_unplugged_powerOfWords:
         title: Frakoblet Aktivitet
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: I dag skal du lære hva du skal gjøre hvis noen er slemme på nett.
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
@@ -201,7 +201,7 @@
         desc: Internett er en kraftig, men noen ganger farlig sted. Lærere presentere hvordan å være trygg når du navigerer på Internett.
       courseABC_unplugged_bigEvent:
         title: Den store begivenheten
-        desc: Eleven blir introdusert for programmeringskonseptet "hendelse" som er handlnger som datamaskinen overfoker. Læreren trykker på knapper på en papirfjernkontroll og elevene svarer basert på hvilken knapp som er trykket.
+        desc: Eleven blir introdusert for programmeringskonseptet "hendelse" som er handlnger som datamaskinen overvåker. Læreren trykker på knapper på en papirfjernkontroll og elevene svarer basert på hvilken knapp som er trykket.
       courseB_unplugged_digitalFootprint:
         title: Dine digitale fotavtrykk
         desc: Lærere introdusere elever ideen at sette informasjon om seg selv online skaper en digitale fotavtrykk eller "sti" som har konsekvenser.
@@ -230,14 +230,14 @@
         title: Binære Bilder
         desc: Selv om mange mennesker tenker på binærsystemet som kun 0 og 1, viser vårt forrige kurs elevene at den informasjonen kan bli representert i en rekke av binære alternativer. Denne leksjonen tar det konseptet et steg videre da det illustrerer hvordan en datamaskin kan lagre enda mer kompleks informasjon (som for eksempel bilder og farger) binært også.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
-        desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv, ved hjelp av plante et frø som et eksempel. Som en del av dette skal elevene finne og skrive ned algoritmen for terningracet.
+        title: 'Virkelige algoritmer: Terningrace'
+        desc: Denne leksjonen viser måter vi bruker algoritmer på i vårt daglige liv. Som en del av dette, vil studentene identifisere og skrive ned algoritmen for terningracet.
       courseE_unplugged_songwritingParameters:
         title: Låtskriving med parametere
         desc: Elever bruker konseptet med refrenget i en sang for å lære om å sende parametere (som tilpasser en funksjon uten å være nødt til å skrive om hele funksjonen).
       courseE_unplugged_internet:
         title: Internett
-        desc: Studentene sende meldinger som representerer ulike Internett metoder bruke papirark.
+        desc: Studentene sender meldinger som representerer ulike internett overføringsmetoder ved hjelp av papirark.
       courseE_unplugged_crowdsourcing:
         title: Crowdsourcing
         desc: Elevene bruker crowdsourcing, en problemløsningsteknikk som er vanlig å bruke i informatikk, for å fullføre en oppgave sammen i et klasserom mer effektivt enn hvis en elev prøvde det alene.
@@ -256,3 +256,12 @@
       courseF_unplugged_songwritingParameters:
         title: Låtskriving med parametere
         desc: 'En av de mest storslåtte strukturene i infromatikkens verden er funksjonen. Funksjoner (noen ganger kalt prosedyrer) er mini-programmer som du kan bruke igjen og igjen i et større program. Vi skal nå hjelpe elver med å intuitivt forstå hvorfor det å kombinere biter av kode inn i funksjoner er en veldig nyttig praksis.  '
+      swipeRightPassThrough:
+        title: Økt med rekruttering rekrutterings scenarier
+        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
+      swipeRightPassThrough-test123:
+        title: Økt med rekruttering rekrutterings scenarier
+        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
+      brad-repro-bug-000:
+        title: Brad Repro Bug 000
+        desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"

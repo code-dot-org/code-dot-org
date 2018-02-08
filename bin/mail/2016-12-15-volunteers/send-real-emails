@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# 16841 volunteers.
-../send-to-mailing-list --limit 17000 2016-12-15-volunteers ./volunteers.csv

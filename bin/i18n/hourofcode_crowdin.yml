@@ -2,38 +2,40 @@
 # Your crowdin's credentials
 #
 "project_identifier" : "hour-of-code"
-"base_path" : "../../i18n/locales"
+"base_path" : "../../i18n/locales/source/hourofcode"
 
 # API Credentials must be loaded from a separate identity file. See
 # https://support.crowdin.com/configuration-file/#split-project-configuration-and-api-credentials
 "api_key" : ""
+
+"preserve_hierarchy": true
 
 #
 # Files configuration
 #
 files: [
   {
-    "source": "/source/hourofcode/en.yml",
+    "source": "/en.yml",
     "translation": "/%language%/hourofcode/%original_file_name%",
     "update_option": "update_as_unapproved"
   }, {
-    "source": "/source/hourofcode/how-to/*.md",
+    "source": "/how-to/*.md",
     "translation": "/%language%/hourofcode/how-to/%original_file_name%",
     "update_option": "update_as_unapproved"
   }, {
-    "source": "/source/hourofcode/promote/*.md",
+    "source": "/promote/*.md",
     "translation": "/%language%/hourofcode/promote/%original_file_name%",
     "update_option": "update_as_unapproved"
   }, {
-    "source": "/source/hourofcode/*.md",
+    "source": "/*.md",
     "translation": "/%language%/hourofcode/%original_file_name%",
     "update_option": "update_as_unapproved",
     "ignore": [
-      "/source/hourofcode/whole-school.md",
-      "/source/hourofcode/activity-guidelines.md",
-      "/source/hourofcode/advisory-committee.md",
-      "/source/hourofcode/review-committee.md",
-      "/source/hourofcode/international-partners.md",
+      "/whole-school.md",
+      "/activity-guidelines.md",
+      "/advisory-committee.md",
+      "/review-committee.md",
+      "/international-partners.md",
       "/supporting-special-needs-students.md"
     ]
   }

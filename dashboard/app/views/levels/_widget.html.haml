@@ -3,7 +3,7 @@
   = stylesheet_link_tag asset_path('blockly/css/common.css'), media: 'all'
   = stylesheet_link_tag 'css/leveltype_widget', media: 'all'
 
-= render partial: 'levels/dialog', locals: {app: 'external', data: @level.properties}
+= render partial: 'levels/dialog', locals: {app: 'external'}
 
 :javascript
   dashboard.widget.setupWidgetLevel();

@@ -33,8 +33,10 @@ end
 require 'honeybadger'
 
 require src_dir 'database'
+require src_dir 'social_metadata'
 require src_dir 'forms'
 require src_dir 'curriculum_router'
+require src_dir 'homepage'
 
 def http_vary_add_type(vary, type)
   types = vary.to_s.split(',').map(&:strip)
@@ -178,15 +180,15 @@ class Documents < Sinatra::Base
 
   get '/style.css' do
     content_type :css
-    css, css_last_modified = combine_css 'styles', 'styles_min'
-    last_modified(css_last_modified) if css_last_modified > Time.at(0)
+    css, digest = combine_css 'styles', 'styles_min'
+    etag digest
     cache :static
     css
   end
 
-  # rubocop:disable Lint/Eval
+  # rubocop:disable Security/Eval
   Dir.glob(pegasus_dir('routes/*.rb')).sort.each {|path| eval(IO.read(path), nil, path, 1)}
-  # rubocop:enable Lint/Eval
+  # rubocop:enable Security/Eval
 
   # Manipulated images
   get '/images/*' do |path|
@@ -459,15 +461,12 @@ class Documents < Sinatra::Base
     end
 
     def social_metadata
-      if request.site == 'csedweek.org'
-        metadata = {
-          'og:site_name'      => 'CSEd Week',
-        }
-      else
-        metadata = {
-          'og:site_name'      => 'Code.org'
-        }
-      end
+      metadata =
+        if request.site == 'csedweek.org'
+          {'og:site_name' => 'CSEd Week'}
+        else
+          {'og:site_name' => 'Code.org'}
+        end
 
       # Metatags common to all sites.
       metadata['og:title'] = @header['title'] unless @header['title'].nil_or_empty?
@@ -485,11 +484,17 @@ class Documents < Sinatra::Base
         end
       end
 
-      unless metadata['og:image']
-        if request.site != 'csedweek.org'
+      # A few pages have specific metadata defined here.
+      metadata.merge! get_social_metadata_for_page(request)
+
+      if request.site != 'csedweek.org'
+        unless metadata['og:image']
           metadata['og:image'] = CDO.code_org_url('/images/default-og-image.png', 'https:')
           metadata['og:image:width'] = 1220
           metadata['og:image:height'] = 640
+        end
+        unless metadata['twitter:image:src']
+          metadata['twitter:image:src'] = CDO.code_org_url('/images/default-og-image.png', 'https:')
         end
       end
 

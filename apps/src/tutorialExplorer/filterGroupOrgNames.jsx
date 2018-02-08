@@ -10,7 +10,8 @@ const styles = {
   select: {
     width: '100%',
     marginTop: 10,
-    height: 26
+    height: 26,
+    fontSize: 13
   }
 };
 

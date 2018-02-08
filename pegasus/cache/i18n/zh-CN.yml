@@ -29,9 +29,17 @@
   twentyhours_heading: "看看我们对计算机科学课程的简介"
   twentyhours_text: "完成您的第一个编程一小时了吗？在此后续课程中更深入的了解计算机科学和编程的概念。"
   og_title: 'Code.org: 任何人都可以学习'
+  og_title_soon: "编程一小时活动即将开始"
+  og_title_here: "《编程一小时》在这里！"
   og_description: "每个学校的每个学生都应该有学习计算机科学的机会。计算机科学正在改变所有的东西。"
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: "计算机科学教育周"
   csedweek_og_description: 2017年12月4日至10日。计算机科学是每个学生要学习的基础课程。
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
   hoc2014_heading: 加入<a href="http://hourofcode.com">编程一小时</a><br/>2014年12月8至14日<br/>
   hoc2014_students: "学生"
   hoc2014_try: "体验一下"
@@ -56,7 +64,7 @@
     href='http://code.org/educate/k5'>教导计算机科学</a>。要求您的高中<a href='http://code.org/educate/districts'>与我们合作."
   california_button: "学习更多内容"
   flappy_heading: "给Code.org放飞生日"
-  flappy_text: Code.org 1 岁了。 <br/> <br/>制作属于你您自己 <b>Flappy</b> 游戏和我们一起庆祝吧。用代码编写您自己的规则，并与朋友分享
+  flappy_text: Code.org 1 岁了。 <br/> <br/>制作属于你您自己 <b>像素鸟</b> 游戏和我们一起庆祝吧。用代码编写您自己的规则，并与朋友分享
     ！
   view_english_site: "查看英语网站"
   non_english_tutorials: "翻译成多种语言的教程："
@@ -269,6 +277,12 @@
   studiobar_donate_body: "你捐的每一美元让一个孩子学会"
   studiobar_shop_title: "商店"
   studiobar_shop_body: "突破束缚，骄傲的戴上我们的标志。"
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: "我们正在有所作为"
   homepage_hero_text_malala: "&ldquo;我向每个国家的女孩子都发起学习《一小时编程》的挑战&rdquo;诺贝尔和平奖得主马拉拉说"
   homepage_hero_text_susan: "&ldquo;如果你能改变技术，你可以改变世界。&rdquo;苏珊，YouTube 首席执行官"
   homepage_hero_text_fistbump: "&ldquo;别总是玩电话，写上面的程序吧。&rdquo;奥巴马总统"
@@ -287,6 +301,8 @@
   homepage_hero_text_stat_loc: "八百五十万女孩已经在Code.org里注册学习了。"
   homepage_hero_text_stat_students: 'Code.org有 #student_count 个学生帐户'
   homepage_hero_text_stat_served: "编程一小时：已有 #served 次参与"
+  homepage_hero_hoc_is_coming: "编程一小时活动即将开始"
+  homepage_hero_hoc_is_here: "《编程一小时》在这里"
   homepage_slot_text_hoc: "编程一小时"
   homepage_slot_text_frozen: "与安娜与埃尔莎一起来玩冰雪奇缘"
   homepage_slot_text_teacher: "教师的仪表板"
@@ -306,6 +322,7 @@
   homepage_action_text_girlvideo: "鼓励女生参与"
   homepage_action_text_learn: "开始学习"
   homepage_action_text_signpetition: "在请愿书上签名"
+  homepage_action_text_wincelebritychat: "赢得与名人聊天的机会"
   homepage_signpetition_dropdown: "我同意 &#x25BE;"
   homepage_diversity_pledge: "承诺多样性"
   homepage_banner_text_prizes: '12月7号到13号，编程一小时即将再次到来 '
@@ -350,7 +367,7 @@
   homepage_slot_text_link_buy: "加入进来"
   homepage_slot_text_link_donate: "捐赠"
   homepage_slot_text_link_shop: T 恤，帽子，还有更多的东西
-  homepage_slot_text_link_administrators: Bring to your school or district
+  homepage_slot_text_link_administrators: "带到您的学校或地区"
   homepage_header_codestudio: Code.org学生作品
   homepage_header_donors: Code.org 感谢各位支持者
   homepage_donors_seall: "查看全部"
@@ -414,10 +431,14 @@
   mc_gradelevel: 6岁以上
   mc_platformtext: "最新的浏览器，智能手机，平板电脑"
   mc_specs: "多语言 | 最新浏览器和平板电脑 | 适用年龄6岁以上"
+  minecraft_agent: "《我的世界》: 英雄之旅"
   minecraft_designer: "《我的世界》造物主"
   minecraft_adventurer: "《我的世界》大冒险"
   minecraft_tutorials: "编程一小时《我的世界》教程"
   minecraft_specs: "多种语言|最新的浏览器或平板电脑|2年级以上"
+  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
+    new activity! Journey through Minecraft with code.
+  minecraft_agent_button: "开始"
   minecraft_designer_description: "在你自己的《我的世界》中编写各种动物和其他生物。"
   minecraft_designer_button: "开始"
   minecraft_adventurer_description: "编写代码来带领Alex或Steve开启一段冒险之旅。"
@@ -425,6 +446,25 @@
   minecraft_no_internet: "没有互联网吗？"
   minecraft_download_adventurer: "下载离线版《我的世界》大冒险"
   minecraft_subtitle: "我的世界 编程一小时"
+  minecraft_store_camps: "在微软商店里有免费的《我的世界》 编程一小时学习"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>注册
+    </a> 在澳大利亚、加拿大、波多黎各或美国的微软商店里的免费《我的世界》编程一小时研讨会。学习代码是如何通过每一个人以及群体的创造力，来解决问题、并带来乐趣。"
+  minecraft_host_event: "主持 《我的世界》 编程一小时活动"
+  minecraft_teach_resources: "教师资源和课程计划。"
+  minecraft_leader_guide: "下载资源以帮助您计划和主导活动。"
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'> 下载 </a>
+    帮助各种年龄学生的快速入门指南和演示文稿。"
+  minecraft_join_online_training: "准备好了举行自己的《我的世界》编程一小时活动，但不知道如何开始吗？查看我们的<a href='%{minecraft_webinar_url}',
+    target='_blank'>按需提供的网络研讨会</a>。你能学到最佳实践，获得直接能用的引导员材料，以及由《我的世界》团队提供的的新英雄旅行的演练。在计算机科学周（12月4-10）日之前准备好你在编程一小时要提供给年轻人的材料。"
+  minecraft_continue_learning: "大众计算机科学: 微软商店上的编程一小时以外课程"
+  minecraft_continue_learning_description: "不要求计算机科学的经验! 确保所有青年都能学习通过计算机科学教育获得的宝贵技能。加入我们在微软商店，参加免费的三个系列之一的学习。这1
+    小时的工作室学习将让您体验在一个有趣的和无压力的环境下编程, 熟悉的关键计算机科学概念, 并为您在您社区或课堂上领导学习编程一小时打好基础。你能行！<a href='%{minecraft_continue_learning_url}',
+    target='_blank'> 现在注册 </a>。"
+  minecraft_future: "帮助所有的年轻人为未来做好准备"
+  minecraft_future_description: "了解其他学校和非营利组织如何将数字技能, 从数字素养, 计算机科学教育, 带到他们的社区。考虑不同的模型,
+    获取提示和技巧, 并 <a href='%{minecraft_future_url}', target='_blank'> 访问他们发现最有价值的 资源</a>。"
+  minecraft_og_designer: "《我的世界》回来了，并且带回来一个新活动。用您自己的《我的世界》版本来编程动物和其它动物。"
+  minecraft_og_agent: "《我的世界》回到编程一小时，你是英雄了! 通过编写程序来趟《我的世界》旅行吧。"
   sports_page_title: "《编程一小时》运动"
   sports_og_title: "督促自己。任何人都可以学习。"
   sports_og_description: "冠军和金牌得主鼓励你尝试《编程一小时》。编写你自己的运动会。"
@@ -461,6 +501,7 @@
   video_title_obama: "奥巴马总统和计算机科学"
   video_title_hoc_is_here: "编程一小时来了——任何人都可以学会"
   video_title_anybody_can_learn: "任何人都可以学习"
+  video_title_steph_curry: "编程一小时和Steph Curry"
   video_title_draymond_green: "编程一小时和Draymond Green"
   video_title_russell_okung: "编程一小时和Russell Okung"
   video_title_real_madrid: "编程一小时和Real Madrid"
@@ -547,6 +588,9 @@
   volunteer_engineer_submission_type_task_remote: "我邀请你通过 Skype 参与我的课堂，说几句对孩子们富有启示的话"
   volunteer_engineer_submission_type_task_mentor: "我正在寻找一位导师，帮助我备课，以使我能与我的学生写代码。"
   petition_age: "年龄"
+  dashboard_announce_hoc_scaling_progress: "呀! 我们正经历着编程一小时的访问高峰期。本周我们暂时无法保存任何进度存档,
+    但本周之前的进度存档仍然是安全的。"
+  dashboard_announce_learn_more_button: "了解详情"
   dashboard_landing_title: "教师主页"
   dashboard_landing_welcome: "欢迎您来到我们最新改进的教师控制台。"
   dashboard_landing_video: "观看此视频"
@@ -705,7 +749,7 @@
   dashboard_students_password: "密码"
   dashboard_students_username: "用户名： %{student_username}"
   dashboard_students_email: "电子邮件: %{student_email}"
-  dashboard_students_completed_levels: "已完成的等级"
+  dashboard_students_completed_levels: "已完成的关卡"
   dashboard_students_total_lines: "代码行数"
   dashboard_students_show_secret: "显示密钥"
   dashboard_students_auto_generated: "自动生成"
@@ -953,14 +997,16 @@
   csp1_name: "第1单元：互联网"
   csp2_name: "第2单元︰ 数字信息"
   csp3_name: 'Unit 3: Algorithms and Programming'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
+  csp3-a_name: "单元 3: 编程介绍 (版本 A)"
+  csp3-research-mxghyt_name: "单元 3: 编程介绍 (子目标)"
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP 性能任务
   csppostap_name: 'Post AP: App中的数据库'
   cspassessment_name: "完整测试 - 共50题"
+  csp-explore_name: AP：探索表演任务的准备工作
+  csp-create_name: AP：创建表演任务
   cspexam1-mWU7ilDYM9_name: "测试部分 1 - 25 个问题"
   cspexam2-AKwgAh1ac5_name: "测试部分 2 - 25 个问题"
   cspunit3_gradelevel: 9-12年级
@@ -1497,53 +1543,41 @@
   view_all_sections: "查看所有小组"
   view_section: "查看小组"
   view_named_section: "查看%{section_name}"
-  privacy_doc_explanation: Click here for our privacy document that can be shared
-    or printed for your students.
-  signing_in: Signing In
-  sign_in_overview: 'Your students can sign in to their Code.org accounts by following
-    these steps:'
-  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
-    top right.
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
-    the page: %{section_code}.'
-  sign_in_instruct_name: Choose their display name.
-  sign_in_instruct_secret: Choose their secret %{secret}.
-  sign_in_instruct_button: Click the “Sign in” button.
-  sign_in_overview_cards: Students can find all of this information, including their
-    secret %{secret}, in the login cards below.
-  reset_student_password: Resetting student passwords
-  reset_student_password_instructions: You can reset the secret <word/picture> for
-    any of your students by going to the “Manage Students” tab for the section, clicking
-    the “Show secret” button under the “Password” column, and clicking the “Reset
-    secret” button.
-  login_cards: Login Cards
-  print_login_cards: Print login cards
-  joining_section: Joining your section (one-time only)
-  joining_section_overview: If a student has not already joined your section, please
-    ask them to do the following steps. Note that they only need to do this once.
-    By joining your section, students will be able see the course assigned to them
-    and you will be able to track the progress of the work they complete while they
-    are signed in.
-  joining_section_instruct_website: 'Create a Code.org account if they haven’t already
-    done so. They can do this at https://studio.code.org/users/sign_up. Note that
-    they can either sign up with an email address and password, or sign up through
-    Google, Facebook, or Microsoft by clicking on one of these buttons:'
-  joining_section_instruct_account: Sign in to their Code.org account.
-  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section
-    code: %{section_code}.'
-  joining_section_instruct_button: Once they press the “Go” button, they should be
-    added to your section.
-  signing_in_single_instruct: Your students can sign in to their Code.org accounts
-    by going to https://code.org/ and clicking on the “Sign in” button on the top
-    right corner.
-  reset_student_password_email: If your student created a Code.org account by using
-    their email address and password (instead of signing in through their Google,
-    Facebook, Microsoft, or Clever account), you can reset their password by going
-    to the “Manage Students” tab for the section, and clicking the “Reset password”
-    button under the “Password” column.
-  syncing_students: Syncing your students
-  syncing_students_instructions: 'If your Code.org section is ever out of date with
-    your list of students in Google Classroom, click on the “Sync students from Google
-    Classroom” button on the “Manage students” tab:'
-  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
-    Account” option:'
+  privacy_doc_explanation: "单击此处可为您的学生共享或打印我们的隐私文档。"
+  signing_in: "正在登录"
+  sign_in_overview: "您的学生可以通过以下步骤来登录他们的 Code.org 帐户:"
+  sign_in_instruct_website: "跳转至 %{code_org_url}"
+  sign_in_instruct_code: "输入他们的小组代码: %{section_code}。"
+  sign_in_instruct_name: "选择他们的显示名称"
+  sign_in_instruct_secret: "选择他们的秘钥 %{secret}。"
+  sign_in_instruct_button: 点击 "登录" 按钮。
+  sign_in_overview_cards: "学生可以在下面的登录卡中找到所有这些信息, 包括他们的秘钥 %{secret}。"
+  reset_student_password: "重置学生密码"
+  reset_student_password_instructions: 您可以通过进入 "管理学生" 选项卡, 单击 "密码" 栏下的 "显示密码" 按钮,
+    然后单击 "重置密码" 按钮来重置任何学生的密码 <word/picture>。
+  login_cards: "登录卡"
+  print_login_cards: "打印登录卡"
+  joining_section: "加入你的小组（只能加入一次）"
+  joining_section_overview: "如果学生尚未加入您的小组, 请要求他们执行以下步骤。请注意, 他们只需要这样做一次。通过加入您的小组, 学生将能够看到分配给他们的课程,
+    而您能够在他们登录后跟踪他们的作业完成进度。"
+  joining_section_instruct_website: "如果他们尚未注册，先创建一个 Code.org 帐户。他们可以在 https://studio.code.org/users/sign_up完成注册。请注意,
+    他们可以使用电子邮件地址和密码注册, 或通过点击以下其中一个按钮来使用谷歌, Facebook, 或微软账号来进行注册:"
+  joining_section_instruct_account: "用他们的 Code.org 帐户登录。"
+  joining_section_instruct_code: "导航到%{code_org_url} 并键入其小组代码: %{section_code}。"
+  joining_section_instruct_button: 一旦他们按下 "好的" 按钮, 他们就会被添加到您的小组。
+  signing_in_single_instruct: 您的学生可以通过访问 https://code.org/，点击右上角的"登录" 按钮来登录他们的 Code.org
+    帐户。
+  reset_student_password_email: 如果您的学生使用他们的电子邮件地址和密码创建了 Code.org 帐户 (而不是通过他们的 Google、Facebook、Microsoft
+    或Clever帐户登录), 您可以在 "管理学生" 选项卡中单击"密码" 栏下的 "重设密码" 按钮来重置其密码。
+  syncing_students: "同步您的学生信息"
+  syncing_students_instructions: '如果您的 Code.org 小组与您在 google 教室中的学生名单不够新, 请点击 "管理学生"
+    标签 上的"从 google 教室同步学生信息" 按钮:'
+  google_sign_in_instruct: '从那里, 他们应该选择 "使用谷歌帐户登录" 选项:'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: "应用程序实验室简介"
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
+  dashboard_tools: 'Tools: '
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
+  gamelab_name: Game Lab

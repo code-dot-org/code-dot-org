@@ -16,8 +16,7 @@ import Watchers from '../../../templates/watchers/Watchers';
 import PaneHeader, {PaneSection, PaneButton} from '../../../templates/PaneHeader';
 import SpeedSlider from '../../../templates/SpeedSlider';
 import FontAwesome from '../../../templates/FontAwesome';
-import {setStepSpeed} from '../../../redux/runState';
-import ProtectedStatefulDiv from '../../../templates/ProtectedStatefulDiv';
+import {setStepSpeed, setIsDebuggingSprites} from '../../../redux/runState';
 import * as utils from '../../../utils';
 import {
   add as addWatchExpression,
@@ -98,40 +97,23 @@ const MIN_CONSOLE_WIDTH = 345;
 /**
  * The parent JsDebugger component.
  */
-export default connect(
-  (state) => ({
-    debugButtons: !!state.pageConstants.showDebugButtons,
-    debugConsole: !!state.pageConstants.showDebugConsole,
-    debugWatch: !!state.pageConstants.showDebugWatch,
-    debugSlider: !!state.pageConstants.showDebugSlider,
-    isDebuggerPaused: state.runState.isDebuggerPaused,
-    stepSpeed: state.runState.stepSpeed,
-    isOpen: isOpen(state),
-    isAttached: isAttached(state),
-    canRunNext: canRunNext(state),
-    commandHistory: getCommandHistory(state),
-  }),
-  {
-    setStepSpeed,
-    addWatchExpression,
-    removeWatchExpression,
-    clearLog,
-    open,
-    close,
-  }
-)(Radium(class JsDebugger extends React.Component {
+class JsDebugger extends React.Component {
   static propTypes = {
     // from redux
     debugButtons: PropTypes.bool.isRequired,
     debugConsole: PropTypes.bool.isRequired,
     debugWatch: PropTypes.bool.isRequired,
     debugSlider: PropTypes.bool.isRequired,
+    appType: PropTypes.string.isRequired,
     isDebuggerPaused: PropTypes.bool.isRequired,
+    isDebuggingSprites: PropTypes.bool.isRequired,
+    isRunning: PropTypes.bool.isRequired,
     stepSpeed: PropTypes.number.isRequired,
     isOpen: PropTypes.bool.isRequired,
     isAttached: PropTypes.bool.isRequired,
     canRunNext: PropTypes.bool.isRequired,
     setStepSpeed: PropTypes.func.isRequired,
+    setIsDebuggingSprites: PropTypes.func.isRequired,
     clearLog: PropTypes.func.isRequired,
     open: PropTypes.func.isRequired,
     close: PropTypes.func.isRequired,
@@ -240,6 +222,37 @@ export default connect(
     });
   }
 
+  componentWillUnmount() {
+    this.onMouseUpWatchersResizeBar();
+    this.onMouseUpDebugResizeBar();
+
+    const mouseUpTouchEventName = dom.getTouchEventName('mouseup');
+
+    document.body.removeEventListener(
+      'mouseup',
+      this.onMouseUpWatchersResizeBar
+    );
+    if (mouseUpTouchEventName) {
+      document.body.removeEventListener(
+        mouseUpTouchEventName,
+        this.onMouseUpWatchersResizeBar
+      );
+    }
+
+    document.body.removeEventListener(
+      'mouseup',
+      this.onMouseUpDebugResizeBar
+    );
+    if (mouseUpTouchEventName) {
+      document.body.removeEventListener(
+        mouseUpTouchEventName,
+        this.onMouseUpDebugResizeBar
+      );
+    }
+
+    window.removeEventListener('resize', this.handleResizeConsole);
+  }
+
   onMouseUpDebugResizeBar = () => {
     // If we have been tracking mouse moves, remove the handler now:
     if (this._draggingDebugResizeBar) {
@@ -317,6 +330,13 @@ export default connect(
   onMouseMoveDebugResizeBar = (event) => {
     const codeApp = document.getElementById('codeApp');
     const codeTextbox = document.getElementById('codeTextbox');
+    if (!codeApp || !codeTextbox) {
+      // In unit tests this handler may be triggered outside its normal
+      // context, where codeApp and codeTextbox don't exist.  Also, this
+      // component isn't cleaning up mouse handlers particularly well.
+      // TODO: Add a componentWillUnmount method that cleans up all mouse handlers
+      return;
+    }
 
     const resizeBar = this._debugResizeBar;
     const rect = resizeBar.getBoundingClientRect();
@@ -419,9 +439,15 @@ export default connect(
 
   onClearDebugOutput = () => this.props.clearLog();
 
+  onToggleDebugSprites = () => {
+    this.props.setIsDebuggingSprites(!this.props.isDebuggingSprites);
+  };
+
   render() {
-    const {isAttached, canRunNext} = this.props;
+    const {appType, isAttached, canRunNext, isRunning} = this.props;
     const hasFocus = this.props.isDebuggerPaused;
+
+    const canShowDebugSprites = appType === 'gamelab';
 
     const sliderStyle = {
       marginLeft: this.props.debugButtons ? 5 : 45,
@@ -533,6 +559,16 @@ export default connect(
             isRtl={false}
             onClick={this.onClearDebugOutput}
           />
+          {isRunning && canShowDebugSprites && (
+              <PaneButton
+                iconClass="fa fa-bug"
+                label="Debug Sprites: Off"
+                headerHasFocus={hasFocus}
+                isRtl={false}
+                isPressed={this.props.isDebuggingSprites}
+                pressedLabel="Debug Sprites: On"
+                onClick={this.onToggleDebugSprites}
+              />)}
           {this.props.debugSlider && <SpeedSlider style={sliderStyle} hasFocus={hasFocus} value={this.props.stepSpeed} lineWidth={130} onChange={this.props.setStepSpeed}/>}
         </PaneHeader>
         {this.props.debugButtons &&
@@ -545,13 +581,11 @@ export default connect(
              ref={debugConsole => this._debugConsole = debugConsole}
            />)}
         <div style={{display: showWatchPane ? 'initial' : 'none'}}>
-          <ProtectedStatefulDiv>
-            <div
-              id="watchersResizeBar"
-              ref={watchersResizeBar => this._watchersResizeBar = watchersResizeBar}
-              onMouseDown={this.onMouseDownWatchersResizeBar}
-            />
-          </ProtectedStatefulDiv>
+          <div
+            id="watchersResizeBar"
+            ref={watchersResizeBar => this._watchersResizeBar = watchersResizeBar}
+            onMouseDown={this.onMouseDownWatchersResizeBar}
+          />
         </div>
         {showWatchPane &&
          <Watchers
@@ -562,4 +596,31 @@ export default connect(
       </div>
     );
   }
-}));
+}
+
+export default connect(
+  (state) => ({
+    debugButtons: !!state.pageConstants.showDebugButtons,
+    debugConsole: !!state.pageConstants.showDebugConsole,
+    debugWatch: !!state.pageConstants.showDebugWatch,
+    debugSlider: !!state.pageConstants.showDebugSlider,
+    appType: state.pageConstants.appType,
+    isRunning: state.runState.isRunning,
+    isDebuggerPaused: state.runState.isDebuggerPaused,
+    isDebuggingSprites: state.runState.isDebuggingSprites,
+    stepSpeed: state.runState.stepSpeed,
+    isOpen: isOpen(state),
+    isAttached: isAttached(state),
+    canRunNext: canRunNext(state),
+    commandHistory: getCommandHistory(state),
+  }),
+  {
+    setStepSpeed,
+    setIsDebuggingSprites,
+    addWatchExpression,
+    removeWatchExpression,
+    clearLog,
+    open,
+    close,
+  }
+)(Radium(JsDebugger));

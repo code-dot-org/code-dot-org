@@ -21,8 +21,9 @@ class PublicGallery extends Component {
       gamelab: PropTypes.arrayOf(publishedProjectPropType),
       playlab: PropTypes.arrayOf(publishedProjectPropType),
       artist: PropTypes.arrayOf(publishedProjectPropType),
+      minecraft: PropTypes.arrayOf(publishedProjectPropType),
     }),
-  }
+  };
 
   /**
    * Transform the projectLists data from the format expected by the

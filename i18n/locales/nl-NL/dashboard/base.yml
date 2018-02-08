@@ -84,18 +84,18 @@ nl:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Account'
-    clever: 'Clever Account'
+    clever: 'Slimme Account'
     forgot_password: 'Wachtwoord vergeten?'
     need_confirmation: "Geen bevestigingsinstructies ontvangen?"
     need_unlock: "Nog geen unlock instructies ontvangen?"
     not_linked: "Sorry, je Code.org account is niet gelinkt aan je %{provider}. Om in te loggen zal je onderaan je wachtwoord moeten invullen."
-    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
+    use_clever: "Sorry, uw Code.org account is niet gekoppeld aan uw %{provider}. Gelieve aan te melden via uw Clever Portal."
   signup_form:
     student_count: '%{count} studenten hebben zich reeds aangemeld.'
     teacher_count: '%{count} leraren hebben zich reeds aangemeld.'
     overview: 'Maak een account aan om je vorderingen te volgen of je klad te managen.<a href="/">Je kan de verschillende stadia en puzzels</a>browsen maar als je je vorderingen en projecten wil opslaan dan moet je ingelogd zijn.'
     hoc_already_signed_up_heading: 'Aan de slag zonder in te loggen'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
+    hoc_already_signed_up_content: 'U bent aangemeld als leraar van Hour of Code! U en uw leerlingen hoeven niet aan te melden bij Code Studio om deel te nemen aan dit project. Om te beginnen, <a href="%{learn_url}"> Kies een cursus</a> voor uw klas en deel de link met hen. <br/> <br/> Als U het leuk vond en verder wil gaan met Hour of Code, kunt u hieronder een gebruikersnaam en wachtwoord instellen voor uw leerlingen.<a href="%{educate_url}"> langere cursussen</a>.'
     hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'Kijk in de lerarengids'
     title: "Log in voor Code.org"
@@ -122,6 +122,7 @@ nl:
     user_type_student: "Leerling"
     field_is_required: "is vereist"
     accept_terms: "Je moet akkoord gaan om een account aan te maken"
+    error: "An error occurred."
   school_info:
     title: 'School informatie (optioneel)'
     school_country: 'Land van de school'
@@ -192,8 +193,8 @@ nl:
     new_teacher_subject: 'Welkom bij Code.org!'
   section:
     your_section:
-      one: 'Your section:'
-      other: 'Your sections:'
+      one: 'Jouw sectie:'
+      other: 'Jullie secties:'
     code_with_teacher: '%{section_code} met %{teacher_name}'
     confirm:
       remove: 'Ben je zeker dat je deze groep wilt verlaten?'
@@ -202,7 +203,7 @@ nl:
       picture: 'Foto wachtwoord'
       word: 'Geheime woorden'
       email: 'Email'
-      google_classroom: 'Google Classroom'
+      google_classroom: 'Google klas'
       clever: 'Slim'
   follower:
     invite_sent: 'Uitnodiging verstuurd'
@@ -252,8 +253,8 @@ nl:
         artist: 'Teken iets'
         calculate: 'Calculate something'
         applab: 'Maak een App'
-        gamelab: 'Make a Game Lab project'
-        weblab: 'Make a Web Lab (beta) project'
+        gamelab: 'Maak een Game Lab project'
+        weblab: 'Maak een Web Lab (beta) project'
       home: "Home"
       my_dashboard: "Mijn Dashboard"
       courses: "Cursussen"
@@ -263,7 +264,7 @@ nl:
       help_support: "Hulp en ondersteuning"
       report_bug: "Rapporteer bugs"
       teacher_community: "Leraar Gemeenschap"
-      professional_learning: "Professional Learning"
+      professional_learning: "Professioneel Leren"
       documentation: "Documentatie"
       tutorials: "Tutorials"
       educate_overview: "Educator Overview"
@@ -486,7 +487,7 @@ nl:
     title: 'Hulp nodig?'
     subtitle: 'Bekijk deze video''s en hints'
     teacher: 'Zie de oplossing'
-    teacher_no_solution: 'Stop seeing solution'
+    teacher_no_solution: 'Oplossing niet meer laten zien'
     auth_error: 'U bent niet gemachtigd om de oplossing te zien.'
     submit: 'Werk de locatie van de Kunstenaar bij'
     direction: 'Startrichting (in graden)'
@@ -566,6 +567,9 @@ nl:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Leeftijd 13+"
       cta: "Leer hoe"
+    hoc-encryption:
+      title: "Simple Encryption"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (bèta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -584,6 +588,9 @@ nl:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
@@ -647,6 +654,7 @@ nl:
     correct_title: "Bedankt"
     correct_body: "Dank je voor het insturen van antwoorden."
     hide_survey_last_answer: "This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Bedankt"
     wrong_body: "Dank je voor het insturen van antwoorden."
@@ -752,7 +760,11 @@ nl:
     rename: "Hernoemen"
     save: "Opslaan"
     delete: "Verwijderen"
-    import: "Import"
+    import: "Importeren"
+    share_link_import_bad_link_header: "Deelbare koppeling niet herkend"
+    share_link_import_bad_link_body: 'We kunnen die deelbare koppeling niet importeren. Zorg ervoor dat je een koppeling van een Minecraft: Agent-puzzel gebruikt en je de volledige koppeling kopieert.'
+    share_link_import_error_header: "Er is iets misgegaan."
+    share_link_import_error_body: "Er is iets misgegaan met het importeren van die deelbare koppeling. Probeer het opnieuw."
     exit: "Terug naar de Cursus"
     my_projects: "Mijn Projecten"
     project_gallery: "Projecten"
@@ -971,4 +983,4 @@ nl:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
-  courses_category: 'Full Courses'
+  courses_category: 'Volledige Cursussen'

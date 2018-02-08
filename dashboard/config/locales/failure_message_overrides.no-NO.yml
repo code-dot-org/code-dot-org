@@ -59,21 +59,21 @@
       Kiki_StarWars_Test_5_failure_message_override: Game over!
       Kiki_StarWars_Test_5_Example_failure_message_override: Game over!
       MC HOC 2016 Level 2-2_failure_message_override: |-
-        Bruk "gå fremover" og "sving" kommandoene
+        Bruk kommandoene "gå fremover" og "snu"
         for å få kyllingen til å bevege seg.
       MC HOC 2016 Level 3_failure_message_override: |-
-        Bruk "for alltid" blokk og "gå fremover" og "sving" kommandoer
+        Bruk en "for alltid"-blokk og kommandoene "gå fremover" og "snu"
         for at kyllingen skal fortsette å vandre rundt.
       MC HOC 2016 Level 4_failure_message_override: "Hvis alle kyllingene beveger
-        seg i samme retning,\nså bruk \"sving tilfeldig\" for å få kyllingene til
-        å \nsnu tilfeldig til høyre eller venstre."
+        seg i samme retning bruk \"snu tilfeldig\" for å få kyllingene til å \nsnu
+        tilfeldig til høyre eller venstre."
       MC HOC 2016 Level 5_failure_message_override: |-
         Prøv å bruke "for alltid" sammen med
-        "gå et skritt mot spilleren".
-      MC HOC 2016 Level 6_failure_message_override: "Bruk \"sett ut gjenferd\"-blokken
-        under \"om natten\" for å sette ut\nminst tre gjenferd. Deretter legger du
-        til \"gå et skritt mot spilleren\" \ni \"når satt ut\"-hendelsen med en løkke
-        for å hjelpe dem å jakte på deg.\nHvis de er for raske, legg til en \"vent\"-blokk
+        "gå et skritt mot spiller".
+      MC HOC 2016 Level 6_failure_message_override: "Bruk \"sett ut zombie\"-blokken
+        under \"når natt\" for å sette ut\nminst tre zombier. Deretter legger du til
+        \"gå et skritt mot spiller\" \ni \"når satt ut\"-hendelsen med en løkke for
+        å hjelpe dem å jakte på deg.\nHvis de er for raske, legg til en \"vent\"-blokk
         for å sinke dem."
       MC HOC 2016 Level 8_failure_message_override: |-
         Du må bruke den eksploderende Creeperen til å sprenge muren
@@ -81,30 +81,22 @@
       MC HOC 2016 New Drop_failure_message_override: "Bruk piltastene for å gå til
         sauene og trykk mellomromstasten\neller trykk klikk på spillbrettet for å
         bruke sauene. Ikke glem å \nlegge til \"Slipp\"-blokken i koden din."
-      MC HOC 2016 New Spawn_failure_message_override: Sett inn "sett ut sauer" under
+      MC HOC 2016 New Spawn_failure_message_override: Sett inn "sett ut sau" under
         "når den kjører".
       MC HOC 2016 New Walk_failure_message_override: |-
         For å åpne døren, trykk mellomromstasten eller klikk på spillbrettet når
         du står foran døren. Gå gjennom døren for å fortsette.
-      MC HOC 2016 SCORE LEVEL_failure_message_override: |-
-        If you're having trouble
-        tagging 5 Golems, try changing the score to 2 per tag.
-      MC HOC 2016 Village Test_failure_message_override: |-
-        You need to make the Iron
-        Golem chase and attack the zombies to win.
-      WhileAdventure_failure_message_override: |-
-        Congratulations!  You gathered X
-        coins!
-      courseE_playLab_scaffold3_failure_message_override: |-
-        You must add two or more
-        new actors to your game and program them to move.
-      grade4_scaffolded_project3_failure_message_override: |-
-        You must add two or more
-        new actors that move to your game.
-      kikiTesta_failure_message_override: Congratulations!  You gathered X coins!
-      sample1_failure_message_override: Congratulations!  You gathered X coins!
-      sample4_failure_message_override: Congratulations!  You gathered X coins!
-      sample6_failure_message_override: |-
-        Not quite.  Keep trying!  [Move to Play
-        Zone]
-      sample8_failure_message_override: Congratulations!  You gathered X coins!
+      MC HOC 2016 SCORE LEVEL_failure_message_override: Hvis du har problemer med
+        å merke 5 Golem, prøv å endre poengene til 2 per merking.
+      MC HOC 2016 Village Test_failure_message_override: Du må få Iron Golemen til
+        jakte på og angripe zombiene for å vinne.
+      WhileAdventure_failure_message_override: Gratulerer! Du samlet X mynter!
+      courseE_playLab_scaffold3_failure_message_override: Du må legge til to eller
+        flere nye spillere og programmere dem til å bevege seg.
+      grade4_scaffolded_project3_failure_message_override: Du må legge til to eller
+        flere nye figurer som beveger seg.
+      kikiTesta_failure_message_override: Gratulerer! Du har samlet X mynter!
+      sample1_failure_message_override: Gratulerer! Du har samlet X mynter!
+      sample4_failure_message_override: Gratulerer! Du har samlet X mynter!
+      sample6_failure_message_override: Ikke helt. Fortsett å prøve! [Gå til Spillsone]
+      sample8_failure_message_override: Gratulerer! Du har samlet X mynter!

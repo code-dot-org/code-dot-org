@@ -4,6 +4,7 @@ import * as api from './api';
 import * as dontMarshalApi from './dontMarshalApi';
 import consoleApi from '../consoleApi';
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
+import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
 import * as makerApi from '@cdo/apps/lib/kits/maker/api';
 import color from '../util/color';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
@@ -34,6 +35,7 @@ function applabExecuteCmd(...args) {
   return Applab.executeCmd.call(Applab, ...args);
 }
 audioApi.injectExecuteCmd(applabExecuteCmd);
+timeoutApi.injectExecuteCmd(applabExecuteCmd);
 makerApi.injectExecuteCmd(applabExecuteCmd);
 
 /**
@@ -67,7 +69,7 @@ var ID_DROPDOWN_PARAM_0 = {
 // NOTE : format of blocks detailed at top of apps/src/dropletUtils.js
 
 export var blocks = [
-  {func: 'onEvent', parent: api, category: 'UI controls', paletteParams: ['id','type','callback'], params: ['"id"', '"click"', "function(event) {\n  \n}"], dropdown: { 0: idDropdownWithSelector(), 1: ['"click"', '"change"', '"keyup"', '"keydown"', '"keypress"', '"mousemove"', '"mousedown"', '"mouseup"', '"mouseover"', '"mouseout"', '"input"'] } },
+  {func: 'onEvent', parent: api, category: 'UI controls', paletteParams: ['id','type','callback'], params: ['"id"', '"click"', "function(event) {\n  \n}"], allowFunctionDrop: { 2: true }, dropdown: { 0: idDropdownWithSelector(), 1: ['"click"', '"change"', '"keyup"', '"keydown"', '"keypress"', '"mousemove"', '"mousedown"', '"mouseup"', '"mouseover"', '"mouseout"', '"input"'] } },
   {func: 'button', parent: api, category: 'UI controls', paletteParams: ['id','text'], params: ['"id"', '"text"'] },
   {func: 'textInput', parent: api, category: 'UI controls', paletteParams: ['id','text'], params: ['"id"', '"text"'] },
   {func: 'textLabel', parent: api, category: 'UI controls', paletteParams: ['id','text'], params: ['"id"', '"text"'] },
@@ -90,8 +92,8 @@ export var blocks = [
   {func: 'deleteElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'setPosition', parent: api, category: 'UI controls', paramButtons: { minArgs: 3, maxArgs: 5 }, paletteParams: ['id','x','y','width','height'], params: ['"id"', "0", "0", "100", "100"], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'setSize', parent: api, category: 'UI controls', paletteParams: ['id','width','height'], params: ['"id"', "100", "100"], dropdown: ID_DROPDOWN_PARAM_0 },
-  {func: 'setProperty', parent: api, category: 'UI controls', paletteParams: ['id','property','value'], params: ['"id"', '"width"', "100"], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown(), 2: setPropertyValueSelector() } },
-  {func: 'getProperty', parent: api, category: 'UI controls', paletteParams: ['id','property'], params: ['"id"', '"width"'], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown() }, type: 'value' },
+  {func: 'setProperty', parent: api, category: 'UI controls', paletteParams: ['id','property','value'], params: ['"id"', '"width"', "100"], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown(true), 2: setPropertyValueSelector() } },
+  {func: 'getProperty', parent: api, category: 'UI controls', paletteParams: ['id','property'], params: ['"id"', '"width"'], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown(false) }, type: 'value' },
   {func: 'write', parent: api, category: 'UI controls', paletteParams: ['text'], params: ['"text"'] },
   {func: 'getXPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
   {func: 'getYPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
@@ -108,7 +110,7 @@ export var blocks = [
   {func: 'setFillColor', parent: api, category: 'Canvas', paletteParams: ['color'], params: ['"yellow"'], dropdown: { 0: ['"yellow"', 'rgb(255,255,0)', 'rgb(255,255,0,0.5)', '"#FFFF00"'] } },
   // drawImage has been deprecated in favor of drawImageURL
   {func: 'drawImage', parent: api, category: 'Canvas', paletteParams: ['id','x','y'], params: ['"id"', "0", "0"], dropdown: { 0: idDropdownWithSelector("img") }, noAutocomplete: true },
-  {func: 'drawImageURL', parent: api, category: 'Canvas', paramButtons: { minArgs: 1, maxArgs: 6 }, paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'] },
+  {func: 'drawImageURL', parent: api, category: 'Canvas', paramButtons: { minArgs: 1, maxArgs: 6 }, paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], allowFunctionDrop: { 1: true, 5: true } },
   {func: 'getImageData', parent: api, category: 'Canvas', paletteParams: ['x','y','width','height'], params: ["0", "0", DEFAULT_WIDTH, DEFAULT_HEIGHT], type: 'value' },
   {func: 'putImageData', parent: api, category: 'Canvas', paletteParams: ['imgData','x','y'], params: ["imgData", "0", "0"] },
   {func: 'clearCanvas', parent: api, category: 'Canvas', },
@@ -122,19 +124,19 @@ export var blocks = [
   {func: 'setAlpha', parent: dontMarshalApi, category: 'Canvas', paletteParams: ['imgData','x','y','a'], params: ["imgData", "0", "0", "255"], dontMarshal: true },
   {func: 'setRGB', parent: dontMarshalApi, category: 'Canvas', paramButtons: { minArgs: 6, maxArgs: 7 }, paletteParams: ['imgData','x','y','r','g','b'], params: ["imgData", "0", "0", "255", "255", "255"], dontMarshal: true },
 
-  {func: 'startWebRequest', parent: api, category: 'Data', paletteParams: ['url','callback'], params: ['"https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&page=computer&section=1&disablelimitreport=true"', "function(status, type, content) {\n  \n}"] },
-  {func: 'setKeyValue', parent: api, category: 'Data', paletteParams: ['key','value','callback'], params: ['"key"', '"value"', "function () {\n  \n}"] },
+  {func: 'startWebRequest', parent: api, category: 'Data', paletteParams: ['url','callback'], params: ['"https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&page=computer&section=1&disablelimitreport=true"', "function(status, type, content) {\n  \n}"], allowFunctionDrop: { 1: true } },
+  {func: 'setKeyValue', parent: api, category: 'Data', paletteParams: ['key','value','callback'], params: ['"key"', '"value"', "function () {\n  \n}"], allowFunctionDrop: { 2: true, 3: true } },
   {func: 'setKeyValueSync', parent: api, category: 'Data', paletteParams: ['key','value'], params: ['"key"', '"value"'], nativeIsAsync: true, noAutocomplete: true },
-  {func: 'getKeyValue', parent: api, category: 'Data', paletteParams: ['key','callback'], params: ['"key"', "function (value) {\n  \n}"] },
+  {func: 'getKeyValue', parent: api, category: 'Data', paletteParams: ['key','callback'], params: ['"key"', "function (value) {\n  \n}"], allowFunctionDrop: { 1: true, 2: true } },
   {func: 'getKeyValueSync', parent: api, category: 'Data', paletteParams: ['key'], params: ['"key"'], type: 'value', nativeIsAsync: true, noAutocomplete: true },
-  {func: 'createRecord', parent: api, category: 'Data', paletteParams: ['table','record','callback'], params: ['"mytable"', "{name:'Alice'}", "function(record) {\n  \n}"] },
-  {func: 'readRecords', parent: api, category: 'Data', paletteParams: ['table','terms','callback'], params: ['"mytable"', "{}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
-  {func: 'updateRecord', parent: api, category: 'Data', paletteParams: ['table','record','callback'], params: ['"mytable"', "{id:1, name:'Bob'}", "function(record, success) {\n  \n}"] },
-  {func: 'deleteRecord', parent: api, category: 'Data', paletteParams: ['table','record','callback'], params: ['"mytable"', "{id:1}", "function(success) {\n  \n}"] },
-  {func: 'onRecordEvent', parent: api, category: 'Data', paletteParams: ['table','callback'], params: ['"mytable"', "function(record, eventType) {\n  if (eventType === 'create') {\n    textLabel('id', 'record with id ' + record.id + ' was created');\n  } \n}"] },
+  {func: 'createRecord', parent: api, category: 'Data', paletteParams: ['table','record','callback'], params: ['"mytable"', "{name:'Alice'}", "function(record) {\n  \n}"], allowFunctionDrop: { 2: true, 3: true } },
+  {func: 'readRecords', parent: api, category: 'Data', paletteParams: ['table','terms','callback'], params: ['"mytable"', "{}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"], allowFunctionDrop: { 2: true, 3: true } },
+  {func: 'updateRecord', parent: api, category: 'Data', paletteParams: ['table','record','callback'], params: ['"mytable"', "{id:1, name:'Bob'}", "function(record, success) {\n  \n}"], allowFunctionDrop: { 2: true, 3: true } },
+  {func: 'deleteRecord', parent: api, category: 'Data', paletteParams: ['table','record','callback'], params: ['"mytable"', "{id:1}", "function(success) {\n  \n}"], allowFunctionDrop: { 2: true, 3: true } },
+  {func: 'onRecordEvent', parent: api, category: 'Data', paletteParams: ['table','callback'], params: ['"mytable"', "function(record, eventType) {\n  if (eventType === 'create') {\n    textLabel('id', 'record with id ' + record.id + ' was created');\n  } \n}"], allowFunctionDrop: { 1: true } },
   {func: 'getUserId', parent: api, category: 'Data', type: 'value' },
-  {func: 'drawChart', parent: api, category: 'Data', paramButtons: { minArgs: 3, maxArgs: 5 }, paletteParams: ['chartId', 'chartType', 'chartData'], params: ['"chartId"', '"bar"', '[\n\t{ label: "Row 1", value: 1 },\n\t{ label: "Row 2", value: 2 }\n]'], dropdown: { 0: idDropdownWithSelector(".chart"), 1: ChartApi.getChartTypeDropdown } },
-  {func: 'drawChartFromRecords', parent: api, category: 'Data', paramButtons: { minArgs: 4, maxArgs: 6 }, paletteParams: ['chartId', 'chartType', 'tableName', 'columns'], params: ['"chartId"', '"bar"', '"mytable"', '["columnOne", "columnTwo"]'], dropdown: { 0: idDropdownWithSelector(".chart"), 1: ChartApi.getChartTypeDropdown } },
+  {func: 'drawChart', parent: api, category: 'Data', paramButtons: { minArgs: 3, maxArgs: 5 }, paletteParams: ['chartId', 'chartType', 'chartData'], params: ['"chartId"', '"bar"', '[\n\t{ label: "Row 1", value: 1 },\n\t{ label: "Row 2", value: 2 }\n]'], allowFunctionDrop: { 4: true }, dropdown: { 0: idDropdownWithSelector(".chart"), 1: ChartApi.getChartTypeDropdown } },
+  {func: 'drawChartFromRecords', parent: api, category: 'Data', paramButtons: { minArgs: 4, maxArgs: 6 }, paletteParams: ['chartId', 'chartType', 'tableName', 'columns'], params: ['"chartId"', '"bar"', '"mytable"', '["columnOne", "columnTwo"]'], allowFunctionDrop: { 5: true }, dropdown: { 0: idDropdownWithSelector(".chart"), 1: ChartApi.getChartTypeDropdown } },
 
   {func: 'moveForward', parent: api, category: 'Turtle', paletteParams: ['pixels'], params: ["25"], dropdown: { 0: ["25", "50", "100", "200"] } },
   {func: 'moveBackward', parent: api, category: 'Turtle', paletteParams: ['pixels'], params: ["25"], dropdown: { 0: ["25", "50", "100", "200"] } },
@@ -158,12 +160,12 @@ export var blocks = [
   {func: 'hide', parent: api, category: 'Turtle' },
   {func: 'speed', parent: api, category: 'Turtle', paletteParams: ['value'], params: ["50"], dropdown: { 0: ["25", "50", "75", "100"] } },
 
-  {func: 'setTimeout', parent: api, category: 'Control', type: 'either', paletteParams: ['callback','ms'], params: ["function() {\n  \n}", "1000"] },
-  {func: 'clearTimeout', parent: api, category: 'Control', paletteParams: ['__'], params: ["__"] },
-  {func: 'setInterval', parent: api, category: 'Control', type: 'either', paletteParams: ['callback','ms'], params: ["function() {\n  \n}", "1000"] },
-  {func: 'clearInterval', parent: api, category: 'Control', paletteParams: ['__'], params: ["__"] },
-  {func: 'timedLoop', parent: api, category: 'Control', paletteParams: ['ms', 'callback'], params: ['1000', 'function() {\n  \n}']},
-  {func: 'stopTimedLoop', parent: api, category: 'Control', paramButtons: { minArgs: 0, maxArgs: 1 }},
+  {...timeoutApi.dropletConfig.setTimeout},
+  {...timeoutApi.dropletConfig.clearTimeout},
+  {...timeoutApi.dropletConfig.setInterval},
+  {...timeoutApi.dropletConfig.clearInterval},
+  {...timeoutApi.dropletConfig.timedLoop},
+  {...timeoutApi.dropletConfig.stopTimedLoop},
 
   {func: 'console.log', parent: consoleApi, category: 'Variables', paletteParams: ['message'], params: ['"message"'] },
   {func: 'declareAssign_str_hello_world', block: 'var str = "Hello World";', category: 'Variables', noAutocomplete: true },
@@ -174,6 +176,7 @@ export var blocks = [
   {func: 'toUpperCase', blockPrefix: stringBlockPrefix, category: 'Variables', modeOptionName: '*.toUpperCase', tipPrefix: stringMethodPrefix, type: 'value' },
   {func: 'toLowerCase', blockPrefix: stringBlockPrefix, category: 'Variables', modeOptionName: '*.toLowerCase', tipPrefix: stringMethodPrefix, type: 'value' },
   {func: 'declareAssign_list_abd', block: 'var list = ["a", "b", "d"];', category: 'Variables', noAutocomplete: true },
+  {func: 'accessListItem', block: 'list[0]', category: 'Variables', noAutocomplete: true },
   {func: 'listLength', block: 'list.length', category: 'Variables', noAutocomplete: true, tipPrefix: arrayMethodPrefix, type: 'property' },
   {func: 'insertItem', parent: dontMarshalApi, category: 'Variables', paletteParams: ['list','index','item'], params: ["list", "2", '"c"'], dontMarshal: true },
   {func: 'appendItem', parent: dontMarshalApi, category: 'Variables', paletteParams: ['list','item'], params: ["list", '"f"'], dontMarshal: true },
@@ -186,27 +189,28 @@ export var blocks = [
   {func: 'setStyle', parent: api, category: 'Advanced', params: ['"id"', '"color:red;"'] },
   {func: 'getAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"'], type: 'value', noAutocomplete: true },
   {func: 'setAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"', "200"], noAutocomplete: true},
+  {func: 'setSelectionRange', parent: api, category: 'Advanced', paletteParams: ['id', 'start', 'end'], params: ['"id"', '0', '0'], paramButtons: { minArgs: 3, maxArgs: 4 }},
 
-  {func: 'comment_Goals_1', block: '// Goal 1', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_2', block: '// Goal 2', docFunc: 'comment',category: 'Goals' },
-  {func: 'comment_Goals_3', block: '// Goal 3', docFunc: 'comment',category: 'Goals' },
-  {func: 'comment_Goals_4', block: '// Goal 4', docFunc: 'comment',category: 'Goals' },
-  {func: 'comment_Goals_5', block: '// Goal 5', docFunc: 'comment',category: 'Goals' },
-  {func: 'comment_Goals_6', block: '// Goal 6', docFunc: 'comment',category: 'Goals' },
-  {func: 'comment_Goals_7', block: '// Goal 7', docFunc: 'comment',category: 'Goals' },
-  {func: 'comment_Goals_8', block: '// Goal 8', docFunc: 'comment',category: 'Goals' },
-  {func: 'comment_Goals_9', block: '// Goal 9', docFunc: 'comment',category: 'Goals' },
-  {func: 'comment_Goals_10', block: '// Goal 10', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_11', block: '// Goal 11', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_12', block: '// Goal 12', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_13', block: '// Goal 13', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_14', block: '// Goal 14', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_15', block: '// Goal 15', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_16', block: '// Goal 16', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_17', block: '// Goal 17', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_18', block: '// Goal 18', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_19', block: '// Goal 19', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_20', block: '// Goal 20', docFunc: 'comment', category: 'Goals' },
+  {func: 'comment_Goals_1', block: '// Goal 1', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_2', block: '// Goal 2', docFunc: 'comment',category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_3', block: '// Goal 3', docFunc: 'comment',category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_4', block: '// Goal 4', docFunc: 'comment',category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_5', block: '// Goal 5', docFunc: 'comment',category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_6', block: '// Goal 6', docFunc: 'comment',category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_7', block: '// Goal 7', docFunc: 'comment',category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_8', block: '// Goal 8', docFunc: 'comment',category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_9', block: '// Goal 9', docFunc: 'comment',category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_10', block: '// Goal 10', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_11', block: '// Goal 11', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_12', block: '// Goal 12', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_13', block: '// Goal 13', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_14', block: '// Goal 14', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_15', block: '// Goal 15', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_16', block: '// Goal 16', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_17', block: '// Goal 17', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_18', block: '// Goal 18', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_19', block: '// Goal 19', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_20', block: '// Goal 20', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
 ];
 
 export const categories = {

@@ -7,7 +7,7 @@
 import $ from 'jquery';
 import React, {PropTypes} from 'react';
 import SessionTime from '../components/session_time';
-import Spinner from '../components/spinner';
+import Spinner from '../../components/spinner';
 import SessionAttendance from './session_attendance';
 import Permission from '../../permission';
 import color from '@cdo/apps/util/color';

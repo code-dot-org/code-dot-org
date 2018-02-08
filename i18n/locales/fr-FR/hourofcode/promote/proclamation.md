@@ -1,31 +1,30 @@
-* * *
-
-title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_proclamation) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
-### Ci-dessous, vous trouverez un exemple de résolution favorable à la Semaine d'éducation des Sciences Informatiques et ses objectifs qui pourraient être utilisés par une région et vos législateurs locaux.
+### Ci-dessous, vous trouverez un exemple de résolution favorable à la Semaine d'Éducation des Sciences Informatiques et ses objectifs qui pourraient être utilisés par vos législateurs locaux et régionaux.
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[RÉSOLUTION/PROCLAMATION DE GOUVERNEMENT, ÉTAT, PAYS OU VILLE ###]- Tandis que la Semaine d'Éducatio des Sciences Informatiques met à l'attention le rôle important que joue l'informatique dans l'évolution de notre société et la manière dont l'informatique facilite l'innovation et crée les opportunités financielsl;
 
-[HOUSE OR SENATE RESOLUTION ###]
+[RÉSOLUTION D'ASSEMBLÉE NATIONALE OU DE SÉNAT ###]
 
 [DATE]
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Tandis que la technologie informatique fait partie intégrale de notre culture et transforme comment on intéragit avec les autres et le monde autour de soi;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Tandis que l'informatique est en train de transformer l'industrie, rendant possible de noueaux domaines de commerce, inspirant de l'innovation en touts domaines scientifiques et en renforçant la productivité aux secteurs économiques établis;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Tandis que le domaine d'informatique soutient le secteur technologie d'information de cet économie, ce qui est un contributeur important de l'économique de ce pays;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Tandis que le domaine d'informatique est un science essentiel de l'ère numérique;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Tandis que le secteur des technologies de l'information occupe une position unique pour aider à la relance économique et au développement de nouvelles innovations;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Tandis que l'avenir des emplois d'informatique semble radieux avec plus que 500,000 postes informatiques à travers le pays;
 
 Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 

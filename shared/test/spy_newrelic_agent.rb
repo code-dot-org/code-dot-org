@@ -3,6 +3,10 @@
 
 class NewRelic
   class Agent
+    def self.config
+      {}
+    end
+
     def self.metrics
       @@metrics ||= []
     end

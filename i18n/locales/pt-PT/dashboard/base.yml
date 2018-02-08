@@ -122,6 +122,7 @@ pt:
     user_type_student: "Aluno"
     field_is_required: "é obrigatório"
     accept_terms: "Você deve concordar em criar uma conta"
+    error: "An error occurred."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -566,6 +567,9 @@ pt:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Maiores de 13 anos"
       cta: "Saber mais"
+    hoc-encryption:
+      title: "Simple Encryption"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -584,6 +588,9 @@ pt:
     minecraft2016:
       title: "Minecraft"
       body: "Programe animais e outras criaturas Minecraft na sua própria versão do Minecraft."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
@@ -647,6 +654,7 @@ pt:
     correct_title: "Obrigado"
     correct_body: "Thank you for submitting answers."
     hide_survey_last_answer: "This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Obrigado"
     wrong_body: "Thank you for submitting answers."
@@ -752,7 +760,11 @@ pt:
     rename: "Renomear"
     save: "Guardar"
     delete: "Apagar"
-    import: "Import"
+    import: "Importar"
+    share_link_import_bad_link_header: "Ligação de partilha não reconhecida"
+    share_link_import_bad_link_body: 'Não foi possível importar a ligação de partilha. Certifica-te de que estás a utilizar uma ligação do quebra-cabeças Minecraft: Agent e de que copiaste a ligação completa.'
+    share_link_import_error_header: "Algo correu mal."
+    share_link_import_error_body: "Ocorreu um problema ao importar a ligação de partilha. Tenta de novo."
     exit: "Voltar ao curso"
     my_projects: "Os meus projetos"
     project_gallery: "Projetos"

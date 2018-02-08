@@ -9,7 +9,7 @@ if ENV['COVERAGE'] || ENV['CIRCLECI'] # set this environment variable when runni
 end
 
 require 'minitest/reporters'
-reporters = [Minitest::Reporters::SpecReporter.new]
+reporters = [Minitest::Reporters::ProgressReporter.new]
 if ENV['CIRCLECI']
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/dashboard")
 end
@@ -30,7 +30,10 @@ Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.applicatio
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
+CDO.override_pegasus = nil
+CDO.override_dashboard = nil
 
+Rails.application.routes.default_url_options[:host] = CDO.dashboard_hostname
 Dashboard::Application.config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
 Devise.mailer.default_url_options = Dashboard::Application.config.action_mailer.default_url_options
 
@@ -152,9 +155,9 @@ class ActiveSupport::TestCase
     expressions = Array(expressions)
 
     exps = expressions.map do |e|
-      # rubocop:disable Lint/Eval
+      # rubocop:disable Security/Eval
       e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
-      # rubocop:enable Lint/Eval
+      # rubocop:enable Security/Eval
     end
     before = exps.map(&:call)
 
@@ -173,9 +176,9 @@ class ActiveSupport::TestCase
     expressions = Array(expressions)
 
     exps = expressions.map do |e|
-      # rubocop:disable Lint/Eval
+      # rubocop:disable Security/Eval
       e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
-      # rubocop:enable Lint/Eval
+      # rubocop:enable Security/Eval
     end
     before = exps.map(&:call)
 
@@ -310,6 +313,7 @@ class ActionController::TestCase
   #   Otherwise it will be generated based on parameter values.
   #   Note: It is recommended to supply a name when varying params or user procs,
   #     as the default generated names may be ambiguous and may conflict.
+  # @param queries [Number] optional number of expected ActiveRecord database queries.
   # @yield runs an optional block of additional test logic after asserting the response
   #   Note: name is required when providing a block.
   #
@@ -335,7 +339,7 @@ class ActionController::TestCase
   #     assert_equal :admin, assigns(:permission)
   #   end
   def self.test_user_gets_response_for(action, method: :get, response: :success,
-    user: nil, params: {}, name: nil, &block)
+    user: nil, params: {}, name: nil, queries: nil, &block)
 
     unless name.present?
       raise 'name is required when a block is provided' if block
@@ -364,8 +368,10 @@ class ActionController::TestCase
         sign_out :user
       end
 
-      send method, action, params: params
-      assert_response response
+      assert_queries queries do
+        send method, action, params: params
+        assert_response response
+      end
 
       # Run additional test logic, if supplied
       instance_exec(&block) if block

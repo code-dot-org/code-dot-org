@@ -1,10 +1,10 @@
 {
-  "continue":"Nadaljuj",
-  "nextLevel":"Čestitke! Zaključil\/a si to uganko.",
-  "no":"Ne",
-  "numBlocksNeeded":"Ta uganka je lahko rešena z %1 bloki.",
-  "reinfFeedbackMsg":"Lahko pritisnete gumb \"Poskusi znova\" in se vrnete nazaj k igranju svoje igre.",
-  "share":"Deli",
-  "shareGame":"Delite vašo igro z ostalimi:",
-  "yes":"Da"
+  "continue": "Nadaljuj",
+  "nextLevel": "Čestitke! Zaključil\/a si to uganko.",
+  "no": "Ne",
+  "numBlocksNeeded": "Ta uganka je lahko rešena z %1 bloki.",
+  "reinfFeedbackMsg": "Lahko pritisnete gumb \"Poskusi znova\" in se vrnete nazaj k igranju svoje igre.",
+  "share": "Deli",
+  "shareGame": "Delite vašo igro z ostalimi:",
+  "yes": "Da"
 }

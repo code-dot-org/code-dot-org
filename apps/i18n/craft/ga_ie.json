@@ -1,6 +1,9 @@
 {
   "absolute": "dearbhluach",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "ag",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
   "blockActionAdd": "cuir",
   "blockActionAttack": "ionsaigh",
   "blockActionClone": "cóipeáil blocanna",
@@ -110,6 +113,12 @@
   "blockTypeTree": "crann",
   "blockTypeWater": "uisce",
   "blockTypeWool": "olann",
+  "blockTypeWoolBlue": "blue wool",
+  "blockTypeWoolMagenta": "magenta wool",
+  "blockTypeWoolOrange": "orange wool",
+  "blockTypeWoolPink": "pink wool",
+  "blockTypeWoolRed": "red wool",
+  "blockTypeWoolYellow": "yellow wool",
   "blockWhileXAheadAhead": "ar aghaidh",
   "blockWhileXAheadDo": " ",
   "blockWhileXAheadWhile": "chomh fada is atá",
@@ -231,6 +240,7 @@
   "quantity": "méid",
   "reinfFeedbackMsg": "Is féidir leat \"Lean ar aghaidh ag imirt\" a chliceáil chun filleadh ar do chluiche.",
   "relative": "coibhneasta",
+  "runAgent": "Run Agent",
   "score": "Scór",
   "seconds": "soicind(í)",
   "selectChooseButton": "Roghnaigh",
@@ -286,6 +296,5 @@
   "weather": "aimsir",
   "weatherTypeClear": "glan",
   "weatherTypeRain": "báisteach",
-  "weatherTypeThunder": "toirneach",
-  "runAgent": "Run Agent"
+  "weatherTypeThunder": "toirneach"
 }

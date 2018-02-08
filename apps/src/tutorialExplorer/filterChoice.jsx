@@ -29,7 +29,8 @@ export default class FilterChoice extends React.Component {
     groupName: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     selected: PropTypes.bool.isRequired,
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
+    singleEntry: PropTypes.bool.isRequired
   };
 
   handleChange = (event) => {
@@ -41,11 +42,13 @@ export default class FilterChoice extends React.Component {
   };
 
   render() {
+    const type = this.props.singleEntry ? "radio" : "checkbox";
+
     return (
       <div style={styles.filterChoiceOuter}>
         <label style={styles.filterChoiceLabel}>
           <input
-            type="checkbox"
+            type={type}
             checked={this.props.selected}
             onChange={this.handleChange}
             style={styles.filterChoiceInput}

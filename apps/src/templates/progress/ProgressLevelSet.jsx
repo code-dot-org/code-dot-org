@@ -58,15 +58,16 @@ const styles = {
 /**
  * A set of one or more levels that are part of the same progression
  */
-const ProgressLevelSet = React.createClass({
-  propTypes: {
+class ProgressLevelSet extends React.Component {
+  static propTypes = {
     name: PropTypes.string,
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
-  },
+    selectedSectionId: PropTypes.string,
+  };
 
   render() {
-    const { name, levels, disabled } = this.props;
+    const { name, levels, disabled, selectedSectionId } = this.props;
 
     const multiLevelStep = levels.length > 1;
     const url = multiLevelStep ? undefined : levels[0].url;
@@ -92,6 +93,7 @@ const ProgressLevelSet = React.createClass({
                 icon={getIconForLevel(levels[0])}
                 text={pillText}
                 disabled={disabled}
+                selectedSectionId={selectedSectionId}
               />
             </td>
             <td style={styles.col2}>
@@ -115,6 +117,7 @@ const ProgressLevelSet = React.createClass({
                 <ProgressBubbleSet
                   levels={levels}
                   disabled={disabled}
+                  selectedSectionId={selectedSectionId}
                 />
               </td>
             </tr>
@@ -123,6 +126,6 @@ const ProgressLevelSet = React.createClass({
       </table>
     );
   }
-});
+}
 
 export default Radium(ProgressLevelSet);

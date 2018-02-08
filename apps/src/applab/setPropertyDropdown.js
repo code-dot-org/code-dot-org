@@ -49,10 +49,12 @@ var PROP_INFO = {
   checked: { friendlyName: 'checked', internalName: 'checked', type: 'boolean', defaultValue: 'true' },
   readonly: { friendlyName: 'readonly', internalName: 'readonly', type: 'boolean', defaultValue: 'true' },
   options: { friendlyName: 'options', internalName: 'options', type: 'array', defaultValue: '["option1", "etc"]' },
-  value: { friendlyName: 'value', internalName: 'defaultValue', type: 'number', defaultValue: '100' },
+  sliderValue: { friendlyName: 'value', internalName: 'sliderValue', type: 'number', defaultValue: '100' },
   min: { friendlyName: 'min', internalName: 'min', type: 'number', defaultValue: '100' },
   max: { friendlyName: 'max', internalName: 'max', type: 'number', defaultValue: '100' },
-  step: { friendlyName: 'step', internalName: 'step', type: 'number', defaultValue: '100' }
+  step: { friendlyName: 'step', internalName: 'step', type: 'number', defaultValue: '100' },
+  value: { friendlyName: 'value', internalName: 'value', type: 'uistring', defaultValue: '"text"' },
+  fit: { friendlyName: 'fit', internalName: 'objectFit', type: 'string', defaultValue: '"fill"' }
 };
 
 // When we don't know the element type, we display all possible friendly names
@@ -101,7 +103,8 @@ PROPERTIES[ElementType.TEXT_INPUT] = {
     'backgroundColor',
     'fontSize',
     'textAlign',
-    'hidden'
+    'hidden',
+    'value'
   ]
 };
 PROPERTIES[ElementType.LABEL] = {
@@ -130,7 +133,8 @@ PROPERTIES[ElementType.DROPDOWN] = {
     'backgroundColor',
     'fontSize',
     'textAlign',
-    'hidden'
+    'hidden',
+    'value'
   ]
 };
 PROPERTIES[ElementType.RADIO_BUTTON] = {
@@ -166,7 +170,8 @@ PROPERTIES[ElementType.IMAGE] = {
     'pictureImage',
     'picture', // Since this is an alias, it is not shown in the dropdown but is allowed as a value
     'iconColor',
-    'hidden'
+    'hidden',
+    'fit'
   ]
 };
 PROPERTIES[ElementType.CANVAS] = {
@@ -175,12 +180,12 @@ PROPERTIES[ElementType.CANVAS] = {
     'canvasWidth',
     'canvasHeight',
     'x',
-    'y'
+    'y',
+    'hidden',
   ]
 };
 PROPERTIES[ElementType.SCREEN] = {
   propertyNames: [
-    'text',
     'backgroundColor',
     'screenImage',
     'iconColor'
@@ -218,7 +223,7 @@ PROPERTIES[ElementType.SLIDER] = {
     'height',
     'x',
     'y',
-    'value',
+    'sliderValue',
     'min',
     'max',
     'step',
@@ -295,15 +300,20 @@ function stripQuotes(str) {
 
 /**
  * Gets the properties that should be shown in the dropdown list for elements of the given type.
+ * @param {boolean} setMode true if being used by setProperty(), false if used by getProperty()
  * @param {string} elementType Optional type of element (e.g. BUTTON, IMAGE, etc.)
  * @param {object} block Optional droplet block (will be undefined in text mode)
  * @returns {!Array<string>} list of quoted property names
  */
-function getDropdownProperties(elementType, block) {
+function getDropdownProperties(setMode, elementType, block) {
   var opts = fullDropdownOptions.slice();
 
   if (elementType in PROPERTIES) {
     opts = PROPERTIES[elementType].dropdownOptions.slice();
+  }
+
+  if (!setMode) {
+    return opts;
   }
 
   for (let [index, opt] of opts.entries()) {
@@ -346,10 +356,10 @@ export function getInternalPropertyInfo(element, friendlyPropName) {
  * @returns {!Array<string> | function} droplet dropdown array or function
  */
 function getPropertyValueDropdown(param2) {
-  const dropletConfigDefaultValue = "100";
+  const dropletConfigDefaultValue = ["0", "25", "50", "75", "100", "150", "200"];
 
   if (!param2) {
-    return [dropletConfigDefaultValue];
+    return dropletConfigDefaultValue;
   }
   const formattedParam = stripQuotes(param2);
 
@@ -360,9 +370,11 @@ function getPropertyValueDropdown(param2) {
     case "text-color":
     case "background-color":
     case "icon-color":
-      return ['"red"', 'rgb(255,0,0)', 'rgb(255,0,0,0.5)', '"#FF0000"'];
+      return ['"white"', '"red"', '"green"', '"blue"', '"yellow"', 'rgb(255,0,0)', 'rgb(255,0,0,0.5)', '"#FF0000"'];
     case "text-align":
       return ['"left"', '"right"', '"center"', '"justify"'];
+    case "fit":
+      return ['"fill"', '"cover"', '"contain"', '"none"'];
     case "hidden":
     case "checked":
     case "readonly":
@@ -374,7 +386,7 @@ function getPropertyValueDropdown(param2) {
     case "options":
       return ['["option1", "etc"]'];
     default:
-      return [dropletConfigDefaultValue];
+      return dropletConfigDefaultValue;
   }
 }
 
@@ -390,12 +402,13 @@ export function setPropertyValueSelector() {
 }
 
 /**
+ * @param {boolean} setMode true if being used by setProperty(), false if used by getProperty()
  * @returns {function} Gets the value of the first param for this block, gets
  *   the element that it refers to, and then enumerates a list of possible
  *   properties that can be set on this element. If it can't determine element
  *   types, provides full list of properties across all types.
  */
-export function setPropertyDropdown() {
+export function setPropertyDropdown(setMode) {
   return function (aceEditor) {
     var elementType;
     // Note: We depend on "this" being the droplet socket when in block mode,
@@ -410,7 +423,7 @@ export function setPropertyDropdown() {
       }
     }
 
-    return getDropdownProperties(elementType, this.parent);
+    return getDropdownProperties(setMode, elementType, this.parent);
   };
 }
 

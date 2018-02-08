@@ -331,10 +331,10 @@
               name: Tradizionale &ndash; Videogiochi e Piani Cartesiani
         infinity:
           title: Disney Infinity
-          description: Crea una storia o inventa un gioco con i personaggi di Disney
-            Infinity come protagonisti!
-          description_short: Crea una storia o inventa un gioco con i personaggi di
-            Disney Infinity come protagonisti!
+          description: Usa il Laboratorio per creare una storia o inventare un gioco
+            con i personaggi di Disney Infinity come protagonisti!
+          description_short: Usa il Laboratorio per creare una storia o inventare
+            un gioco con i personaggi di Disney Infinity come protagonisti!
           stages:
             Infinity:
               name: Infinito
@@ -486,7 +486,7 @@
           description_audience: ''
           stages:
             Applab:
-              name: Applab
+              name: Sviluppo App
             Hoc2015 Blockly:
               name: Hoc2015 Blockly
             Play Lab:
@@ -605,7 +605,7 @@
             Sending Numbers:
               name: Sending Numbers
             Text Compression:
-              name: Text Compression
+              name: Compressione del Testo
           description_audience: ''
         algebraPD:
           title: Computer Science in Algebra PD
@@ -654,13 +654,13 @@
             Your Game - Player Movement:
               name: Il vostro gioco - movimento del giocatore
         text-compression:
-          title: Text Compression
-          description: Compress text by identifying repeated patterns.
-          description_short: Compress text by identifying repeated patterns.
+          title: Compressione del Testo
+          description: Compressione del testo identificando modelli ripetuti.
+          description_short: Compressione del testo identificando modelli ripetuti.
           description_audience: ''
           stages:
             Text Compression:
-              name: Text Compression
+              name: Compressione del Testo
         CSPPD:
           title: Computer Science Principles PD
           description: 'Phase 1: Online Introduction for CSP'
@@ -1109,7 +1109,7 @@
             Anonymous student survey 2:
               name: Anonymous student survey 2
             AppLab:
-              name: Laboratorio App
+              name: Sviluppo App
             Artist:
               name: Artista
             Bee:
@@ -1125,7 +1125,7 @@
             Free Response:
               name: Free Response
             Gamelab:
-              name: Gamelab
+              name: Sviluppo Giochi
             Jigsaw:
               name: Puzzle
             Long assessment:
@@ -1151,7 +1151,7 @@
             Pixelation:
               name: Conversione di pixel
             PlayLab:
-              name: PlayLab
+              name: Laboratorio
             Public Key Cryptography:
               name: Public Key Cryptography
             Rich long assessment:
@@ -1165,11 +1165,11 @@
             Swapped Levels:
               name: Swapped Levels
             Text Compression:
-              name: Text Compression
+              name: Compressione del Testo
             TextMatch:
               name: TextMatch
             Web Lab:
-              name: Laboratorio Web
+              name: Sviluppo Web
             Multi page assessment:
               name: Multi page assessment
             Single page assessment:
@@ -1226,7 +1226,7 @@
             Text Compression Lesson:
               name: Lezione Compressione del Testo
             Text Compression Widget:
-              name: Widget Compressione del Testo
+              name: Componente per la compressione del testo
             Welcome!:
               name: Benvenuto!
         K5-OnlinePD:
@@ -2145,7 +2145,7 @@
             'Eval: Writing Contracts':
               name: 'Valutazione: Scrittura di Contratti'
             'Play Lab: Defining Functions':
-              name: 'Play Lab: Defining Functions'
+              name: 'Laboratorio: Definizione di Funzioni'
             'Unplugged: Contracts':
               name: Tradizionale &ndash; Contratti
             'Unplugged: Fast Functions':
@@ -2311,7 +2311,7 @@
             Practice PT - Tell a Data Story:
               name: Practice PT - Tell a Data Story
             Text Compression:
-              name: Text Compression
+              name: Compressione del Testo
             Unit 2 Chapter 1 Assessment:
               name: Unit 2 Chapter 1 Assessment
             Unit 2 Chapter 2 Assessment:
@@ -2326,11 +2326,10 @@
               name: Practice PT - Encode an Experience
         csp3:
           title: CSP Unit 3 - Programming
-          description: This unit introduces the foundational concepts of computer
-            programming, which unlocks the ability to make rich, interactive apps.
-            This course uses JavaScript as the programming language, and App Lab as
-            the programming environment to build apps, but the concepts learned in
-            these lessons span all programming languages and tools.
+          description: |-
+            This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\r
+            \r
+            This unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
           description_short: Programmazione
           description_audience: ''
           stages:
@@ -2366,13 +2365,18 @@
               name: CSP Student Post-Course Survey
             Creating Functions with Parameters:
               name: Creating Functions with Parameters
+            CSP End-of-Semester Mid-course survey:
+              name: CSP End-of-Semester Mid-course survey
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
-          description: The data-rich world we live in introduces many complex questions
-            related to public policy, law, ethics and societal impact. The goals of
-            this unit are to develop a well-rounded and balanced view about data in
-            the world, including the positive and negative effects of it, and to understand
-            the basics of how and why modern encryption works.
+          description: |-
+            The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r
+            \r
+            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
           description_short: Big Data and Privacy
           description_audience: ''
           stages:
@@ -2580,7 +2584,7 @@
             Draw Loop and Randomization:
               name: Draw Loop and Randomization
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Disegnare in Sviluppo Giochi
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Sprite Movement Methods:
@@ -2644,7 +2648,7 @@
           description_audience: ''
           stages:
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Disegnare in Sviluppo Giochi
         CSF_Secret_Sample:
           title: Secret Sample
           description: Test of new educational philosophy
@@ -2795,7 +2799,7 @@
             Contained Levels:
               name: Contained Levels
             Game Lab:
-              name: Game Lab
+              name: Sviluppo Giochi
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
@@ -3095,7 +3099,7 @@
             Being Safe Online:
               name: Being Safe Online
             Debugging:
-              name: Debugging
+              name: Correzione di errori (Debugging)
             Events:
               name: Eventi
             Events Unplugged:
@@ -3109,7 +3113,7 @@
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
-              name: Loops Unplugged
+              name: 'Cicli: Lezioni Tradizionali'
             Persistence & Frustration:
               name: Persistence & Frustration
             Programming:
@@ -3165,7 +3169,7 @@
             Being Safe Online:
               name: Being Safe Online
             Debugging:
-              name: Debugging
+              name: Correzione di errori (Debugging)
             Events:
               name: Eventi
             Events Unplugged:
@@ -3177,7 +3181,7 @@
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
-              name: Loops Unplugged
+              name: 'Cicli: Lezioni Tradizionali'
             More Computer Science:
               name: More Computer Science
             Persistence & Frustration:
@@ -3191,7 +3195,7 @@
             Unspotted Bugs:
               name: Bug Non Individuati
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Correzione di errori (Debugging): Bug Non Individuati'
             'Events Unplugged: The Big Event':
               name: Eventi in modalità tradizionale
         grade5:
@@ -3435,7 +3439,8 @@
             games, using the same programming concepts and the design process computer
             scientists use daily. In the final project, you’ll develop a personalized,
             interactive program."
-          description_short: Programmazione
+          description_short: Impara a programmare animazioni, arte interattiva e giochi
+            in Sviluppo Giochi.
           description_audience: ''
           stages:
             Booleans and Conditionals:
@@ -3447,7 +3452,7 @@
             Draw Loop and Randomization:
               name: Draw Loop and Randomization
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Disegnare in Sviluppo Giochi
               description_student: The class is introduced to Game Lab, the programming
                 environment for this unit, and begins to use it to position shapes
                 on the screen. Thee lesson covers the basics of sequencing and debugging,
@@ -3796,6 +3801,8 @@
               name: Parameters and Randomization
             Shapes and Randomization:
               name: Shapes and Randomization
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -4204,19 +4211,10 @@
             AP Preparation and Support:
               name: AP Preparation and Support
         basketball:
-          title: |-
-            https://studio.code.org/s/basketball/stage/
-
-            Scegli la tua squadra e fai una partita di basket
+          title: Scegli la tua squadra e fai una partita di basket
           description_audience: ''
-          description_short: |-
-            https://studio.code.org/s/basketball/stage/
-
-            Scegli la tua squadra e fai una partita di basket
-          description: |-
-            https://studio.code.org/s/basketball/stage/
-
-            Scegli la tua squadra e fai una partita di basket
+          description_short: Scegli la tua squadra e fai una partita di basket
+          description: Scegli la tua squadra e fai una partita di basket
           stages:
             Bounce:
               name: Ping-Pong
@@ -4253,7 +4251,8 @@
         csd2:
           title: 'CSD Unit 2 - The Internet: Web Development'
           description_audience: ''
-          description_short: "  Learn to build your own web site in Web Lab."
+          description_short: "  Imparare a costruire il tuo sito web con Sviluppo
+            Web."
           description: " In Unit 2, you’ll learn how to create and share the content
             on your own web pages. After deciding what content you want to share with
             the world, you’ll learn how to structure and style your pages using HTML
@@ -4345,7 +4344,8 @@
                 then explores properties that impact HTML text elements.  Finally,
                 everyone applies text styles to their personal websites.
               description_teacher: |
-                This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.
+                This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\r
+                \r
             Styling Elements with CSS:
               name: Styling Elements with CSS
               description_student: This lesson continues the introduction to CSS style
@@ -4444,15 +4444,10 @@
                 of the creator of that media. After first studying Creative Commons
                 licensing, the class learns how to add images to web pages, and how
                 to give proper attribution when doing so.
-              description_teacher: "Starting with an exploration of the song \"Happy
-                Birthday\" and its history of copyright protection, the class explores
-                the purpose and role of copyright for both creators and users of creative
-                content. After a brief discussion about the purpose of copyright,
-                we move on to an activity exploring the various Creative Commons licenses
-                as a solution to the difficulty in dealing with copyright. \n\nFinally,
-                with a common understanding of the restrictions of various Creative
-                Commons licenses, students will learn how to add images to their web
-                pages using the &lt;img&gt; tag."
+              description_teacher: |-
+                Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \r
+                \r
+                Finally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag.
             Project - Multi-Page Websites:
               name: Project - Multi-Page Websites
               description_student: 'This lesson covers hyperlinks, which allow web
@@ -4460,12 +4455,9 @@
                 will link together all the previous pages into one project, and create
                 navigation bars for each page before publishing the entire site to
                 the Web.  '
-              description_teacher: "After learning about how to link web pages to
-                one another, students are finally able to publish the website they
-                have been working on.  In this lesson, they link together all the
-                previous pages they have created into one project, create a new page,
-                and add navigation between the pages before publishing the entire
-                site to the Web.  \n\n"
+              description_teacher: |
+                After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \r
+                \r
             RGB Colors and Classes:
               name: RGB Colors and Classes
               description_student: This lesson covers classes and custom colors. The
@@ -4488,9 +4480,22 @@
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
               description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.
+                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
             Headings:
               name: Headings
+              description_student: This lesson continues the introduction to HTML
+                tags, this time with headers.  The class practices using header tags
+                to create page and section titles and learns how the different header
+                elements are displayed by default.  Next, the class plans how to organize
+                their content on the personal web pages that will be built across
+                the unit and begins the first page of the project.
+              description_teacher: In this lesson, students continue to use HTML to
+                structure text on web pages, this time with headings.  Students learn
+                how the different heading elements are displayed by default and practice
+                using them to create page and section titles.  Students then start
+                to decide how they will organize their content on their own personal
+                web pages.  In the last level, students begin the project that they
+                will continue to work on throughout the unit.
         csp2-support:
           title: CSP Unit 2 Online Support
           description_audience: ''
@@ -4559,7 +4564,7 @@
                 that user’s characteristics to choose appropriate products, critique
                 product design, and suggest improvements to design.
               description_teacher: |
-                Designers need to understand their users’ needs.  This lesson starts students thinking about how to design for another person by role-playing a user profile and reacting to a series of products.  Students will each receive a user profile describing a person. They will use that user’s characteristics to choose appropriate products, critique product design, and suggest improvements to design.\r
+                Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -4642,7 +4647,7 @@
                 some time to discuss the basic functionality of their app before using
                 3x5 index cards to develop paper prototypes.
               description_teacher: |
-                To better scope their own apps, teams start by looking through several example apps, choosing one (or more) as a basis for the type of app they will make. From there, teams will have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.
+                Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\r
             Prototype Testing:
               name: Prototype Testing
               description_student: Teams will develop a plan to test with users before
@@ -4812,6 +4817,64 @@
                 directs students through the process including building the app and
                 testing it with their user to see if their assumptions about the user
                 interfaces they created are accurate.
+            Linking Screens:
+              name: Linking Screens
+              description_student: Building on the screens that the class designed
+                in the previous lesson, teams combine screens into a single app. Simple
+                code can then be added to make button clicks change to the appropriate
+                screen.
+              description_teacher: In this lesson teams combine the screens that they
+                designed in the previous lesson into a single app, which they can
+                then link together using code. Students learn basic event driven programming
+                by building up the model app that they started in the previous lesson.
+                In addition to the screen that students designed yesterday, they'll
+                learn how to create additional screens and even import screens made
+                by others.
+            User Interfaces:
+              name: User Interfaces
+              description_student: See how a paper prototype can be used to test and
+                get feedback on software before writing any code. To help out a developer
+                with their idea, the class tests and provides an app prototype made
+                of paper.
+              description_teacher: Following the mini design project, students look
+                towards the next phase of design - prototyping a product that attempts
+                to address user needs. In teams, students examine a paper prototype
+                for a chat app called "Txt Ur Grndkdz". Through using this paper prototype,
+                students get a chance to see how a simple paper prototype can be used
+                to quickly test ideas and assumptions before we ever get to the computer.
+                After "using" the provided prototype students begin to identify ways
+                to improve the next iteration.
+            Feedback and Testing:
+              name: Feedback and Testing
+              description_student: Users have been testing an app, and they have lots
+                of feedback for the developer. The class needs to sort through all
+                of this feedback, identify the common themes and needs, and start
+                revising the prototype to make it better meet the users' needs.
+              description_teacher: In this lesson students use feedback from "users"
+                of the paper-prototyped app from the previous lesson in order to develop
+                improvements to the user interface of that paper prototype. The lesson
+                begins with a reflection on the fact that designers need to translate
+                human needs with technology into changes to the user interface or
+                experience. Students are then given a collection of feedback and requests
+                from users of the app from the previous lesson. In groups students
+                categorize the feedback and identify ways the needs expressed in the
+                feedback could be met by changes to the interface of the app. Then
+                in groups students will implement some of these changes to meet one
+                of the needs they identified.
+            Project - App Presentation:
+              name: Project - App Presentation
+              description_student: Each team prepares a presentation to "pitch" the
+                app they've developed. This is the time to share struggles, triumphs,
+                and plans for the future.
+              description_teacher: At this point teams have researched a topic of
+                personal and social importance, developed and tested both a paper
+                prototype and a digital prototype, and iterated on the initial app
+                to incorporate new features and bug fixes. Now is the time for them
+                to review what they have done and pull together a coherent presentation
+                to demonstrate their process of creation. Using the provided presentation
+                template, teams prepare to present about their process of app development,
+                including the problem they set out to solve, the ways in which they've
+                incorporated feedback from testing, and their plans for the future.
         minecraft:
           title: Programma il tuo Minecraft
           description_audience: ''
@@ -4848,33 +4911,33 @@
             'Debugging: Bugs in Codeville':
               name: 'Debugging: Bugs in Codeville'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Perseveranza & Frustrazione: Stevie e le Biglie'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Impara come Trascinare i Blocchi
             'Programming: Happy Maps':
-              name: 'Programming: Happy Maps'
+              name: 'Programmazione: Mappe Felici'
             Programming in Maze:
-              name: Programming in Maze
+              name: Programmazione nel Labirinto
             Being Safe Online:
               name: Being Safe Online
             'Loops: Happy Loops':
-              name: 'Loops: Happy Loops'
+              name: 'Cicli: Cicli Felici'
             Loops in Collector:
-              name: Loops in Collector
+              name: Cicli con il Collezionista
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli con l'Artista
             'Events: The Big Event':
               name: Eventi
             Events in Play Lab:
-              name: Events in Play Lab
+              name: 'Laboratorio: Eventi'
             Fuzz Fiesta:
               name: Fuzz Fiesta
             Going Places Safely:
               name: Visitare Luoghi in Modo Sicuro
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Correzione di errori (Debugging): Bug Non Individuati'
         courseb-draft:
           title: 'CS Fundamentals: Course B'
           description_audience: ''
@@ -4886,29 +4949,29 @@
             they can share. Recommended for 1st grade.
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Correzione di errori (Debugging): Bug Non Individuati'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Perseveranza & Frustrazione: Stevie e le Biglie'
             Sequence & Algorithms:
               name: Sequence & Algorithms
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Impara come Trascinare i Blocchi
             Being Safe Online:
               name: Being Safe Online
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
-              name: Programming in Maze
+              name: Programmazione nel Labirinto
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Collector:
-              name: Loops in Collector
+              name: Cicli con il Collezionista
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli con l'Artista
             'Events: The Big Event':
               name: Eventi
             Events in Play Lab:
-              name: Events in Play Lab
+              name: 'Laboratorio: Eventi'
             More Computer Science:
               name: More Computer Science
             Keep it Private:
@@ -4927,7 +4990,7 @@
             2nd grade.
           stages:
             Programming in Maze:
-              name: Programming in Maze
+              name: Programmazione nel Labirinto
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmi della Vita Reale: Aeroplani di Carta'
             Programming in Collector:
@@ -4951,7 +5014,7 @@
             Binary Bracelets:
               name: Braccialetti Binari
             Events in Play Lab:
-              name: Events in Play Lab
+              name: 'Laboratorio: Eventi'
             Your Digital Footprint:
               name: La tua Impronta Digitale
             Building a Foundation:
@@ -4998,7 +5061,7 @@
             More Programming with CS4FN:
               name: More Programming with CS4FN
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Realizzare un gioco col Laboratorio
             Conditionals in Bee:
               name: Conditionals in Bee
             Digital Citizenship:
@@ -5041,7 +5104,7 @@
             Determine the Concept in Bee:
               name: Determine the Concept in Bee
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Realizzare un gioco col Laboratorio
             Explore Project Ideas:
               name: Explore Project Ideas
             The Design Process:
@@ -5080,7 +5143,7 @@
             Envelope Variables:
               name: Variabili e Buste
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: 'Laboratorio: Variabili'
             Variables in Artist:
               name: Variables in Artist
             For Loop Fun:
@@ -5152,13 +5215,10 @@
             Post Hour of Code Survey:
               name: Post Hour of Code Survey
         sports:
-          title: |-
-            https://studio.code.org/s/basketball/stage/
-
-            Programma il tuo sport
+          title: Programma il tuo sport
           description_audience: ''
-          description_short: Combinare diversi sport
-          description: Combinare diversi sport
+          description_short: Combina diversi sport
+          description: Combina diversi sport
           stages:
             Sports:
               name: Sports
@@ -5490,6 +5550,28 @@
               name: Board Events
             'Project: Make a Game':
               name: 'Project: Make a Game'
+            Getting and Setting Properties:
+              name: Getting and Setting Properties
+            The Program Design Process:
+              name: The Program Design Process
+            Getters:
+              name: Getters
+            Getting Properties:
+              name: Getting Properties
+            Designing Screens with Code:
+              name: Designing Screens with Code
+            Arrays:
+              name: Arrays
+            Making Music:
+              name: Making Music
+            Arrays and For Loops:
+              name: Arrays and For Loops
+            Circuits and Physical Prototypes:
+              name: Circuits and Physical Prototypes
+            Accelerometer:
+              name: Accelerometer
+            Functions with Parameters:
+              name: Funzioni con parametri
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5617,7 +5699,7 @@
             to the breadth of App Lab and the Maker Toolkit.
           stages:
             App Lab Basics:
-              name: App Lab Basics
+              name: Le basi di Sviluppo App
             The Circuit Playground:
               name: The Circuit Playground
             Physical Input:
@@ -5635,7 +5717,10 @@
             Conditionals:
               name: Istruzioni condizionali
             'Real Life Algorithms: Dice Race':
-              name: 'Real Life Algorithms: Dice Race'
+              name: |-
+                https://studio.code.org/s/course3/stage/10/puzzle/1
+
+                Algoritmi della Vita Reale: Gara con i Dadi
         csd6:
           title: CSD Unit 6 - Physical Computing
           description_audience: ''
@@ -5810,7 +5895,7 @@
             Shapes and Randomness:
               name: Shapes and Randomness
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Disegnare in Sviluppo Giochi
             Variables:
               name: Variabili
             Programming for Entertainment:
@@ -6190,6 +6275,8 @@
                 deciding what to do with data that does not easily fit into the visualization
                 scheme that they have chosen.  Last, students look at what parts of
                 this process can be automated, and what need a human to make decisions.
+            Keeping Data Secret:
+              name: Keeping Data Secret
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -6200,7 +6287,7 @@
             - this original draft will remain available until July 1, 2017.
           stages:
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Disegnare in Sviluppo Giochi
             Draw Loop and Randomization:
               name: Draw Loop and Randomization
             Variables Unplugged:
@@ -6343,7 +6430,7 @@
             Plotting Shapes:
               name: Plotting Shapes
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Disegnare in Sviluppo Giochi
             Shapes and Randomness:
               name: Shapes and Randomness
             Variables:
@@ -6419,7 +6506,7 @@
             Plotting Shapes:
               name: Plotting Shapes
             Drawing in Game Lab:
-              name: Drawing in Game Lab
+              name: Disegnare in Sviluppo Giochi
           title: CSD - Drawing in Game Lab
           description_audience: Falmouth Middle School (Mike Harvey)
           description_short: ''
@@ -6528,6 +6615,8 @@
               name: Ping-Pong
             NewBounce:
               name: NewBounce
+            F PlayLab Variables:
+              name: F PlayLab Variables
           title: ''
           description_audience: ''
           description_short: ''
@@ -6535,90 +6624,97 @@
         coursea:
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Correzione di errori (Debugging): Bug Non Individuati'
               description_student: ''
-              description_teacher: 'This lesson will guide students through the steps
-                of debugging.  Students will learn the mantra: "What happened?  What
-                was supposed to happen? What does that tell you?"'
+              description_teacher: 'Questa lezione guiderà gli studenti attraverso
+                le fasi di ricerca degli errori (debugging).  Gli studenti impareranno
+                il mantra: "Cos''è successo? Che cosa sarebbe dovuto succedere? Questo
+                cosa ti suggerisce?"'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
               description_student: ''
               description_teacher: |-
-                When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\r
+                Quando gli studenti si imbattono in una difficoltà mentre rispondono a una domanda o lavorano su un progetto, è molto facile per loro sentirsi frustrati e rinunciare. Questa lezione introduce agli studenti il concetto che la frustrazione può essere una parte importante dell'apprendimento. Qui, la frustrazione è presentata come una fase nel processo creativo, piuttosto che un segno di fallimento. \r
                 \r
-                This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
+                Questa lezione può essere svolta in una o due sessioni con la classe. Se avete più tempo, non esitate a prolungare la durata della fase di costruzione e revisione dell'attività Corsa delle Biglie.
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
               description_student: ''
               description_teacher: |
-                In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r
+                In questa lezione, gli studenti metteranno in relazione il concetto di algoritmo con le attività di ogni giorno, nella vita reale, piantando un vero seme. L'obiettivo è quello di iniziare a costruire le competenze per tradurre le situazioni del mondo reale in algoritmi e viceversa.\r
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Sequenze Trascinando i Blocchi
               description_student: ''
-              description_teacher: This lesson will give students an idea of what
-                to expect when they head to the computer lab. It begins with a brief
-                discussion introducing them to computer lab manners, then they will
-                progress into using a computer to complete online puzzles.
+              description_teacher: Questa lezione darà agli studenti un'idea di cosa
+                aspettarsi quando andranno nel laboratorio di informatica. Si comincia
+                con una breve discussione introduttiva sui comportamenti da tenere
+                in laboratorio, poi gli studenti inizieranno ad utilizzare un computer
+                per completare degli esercizi online.
             'Programming: Happy Maps':
-              name: 'Programming: Happy Maps'
+              name: 'Programmazione: Mappe Felici'
               description_student: ''
-              description_teacher: The bridge from algorithms to programming can be
-                a short one if students understand the difference between planning
-                out a sequence and encoding that sequence into the appropriate language.  This
-                activity will help students gain experience reading and writing in
-                shorthand code.
+              description_teacher: Il passaggio da algoritmo a programmazione può
+                essere più immediato se gli studenti capiscono la differenza tra pianificare
+                una sequenza e codificare tale sequenza in un linguaggio opportuno.
+                Questa attività aiuterà gli studenti ad acquisire esperienza leggendo
+                e scrivendo del codice costituito da semplici simboli.
             Programming in Maze:
-              name: Programming in Maze
+              name: Programmazione nel Labirinto
               description_student: ''
-              description_teacher: In this series of online puzzles, students will
-                build on the understanding of algorithms, debugging, and general computer
-                literacy. Featuring characters from the game Angry Birds, students
-                will develop sequential algorithms to get the bird to the pig without
-                crashing into walls or TNT. Debugging puzzles have also been mixed
-                into this stage for added practice with problem solving and critical
-                thinking.
+              description_teacher: In questa serie di esercizi online, gli studenti
+                svilupperanno la comprensione degli algoritmi, la correzione degli
+                errori (debugging) e i primi principi generali dell'informatica. Utilizzando
+                i personaggi del gioco Angry Birds, gli studenti svilupperanno algoritmi
+                sequenziali per far arrivare l'uccellino fino al maialino senza sbattere
+                contro i muri o esplodere sulla dinamite (TNT). Alcuni esercizi di
+                ricerca degli errori sono stati mescolati in questa lezione per far
+                pratica con la risoluzione dei problemi (problem solving) e nello
+                sviluppo del pensiero critico (critical thinking).
             Going Places Safely:
-              name: Visitare Luoghi in Modo Sicuro
+              name: 'Cittadinanza Digitale: Visitare Luoghi in Modo Sicuro'
               description_student: ''
-              description_teacher: In collaboration with [r common-sense-media], this
-                lesson helps students learn that many websites ask for information
-                that is private and discusses how to responsibly handle such requests.
-                Students also find out that they can go to exciting places online,
-                but they need to follow certain rules to remain safe.
+              description_teacher: In collaborazione con Common-Sense-Media, questa
+                lezione aiuta gli studenti a imparare che molti siti Web richiedono
+                informazioni private e spiega come gestire responsabilmente tali richieste.
+                Gli studenti scoprono anche che possono raggiungere luoghi interessanti
+                online, ma devono seguire alcune regole per essere al sicuro.
             'Loops: Happy Loops':
-              name: 'Loops: Happy Loops'
+              name: 'Cicli: Cicli Felici'
               description_student: ''
-              description_teacher: Loops are a very helpful and powerful tool in programming.
-                To understand how helpful loops can be, students will need to be driven
-                to want an easier way to solve mundane problems.
+              description_teacher: I cicli sono uno strumento molto utile e potente
+                nella programmazione. Per capire quanto utili possono essere, gli
+                studenti dovranno essere condotti a desiderare un modo più semplice
+                per risolvere problemi banali.
             Loops in Collector:
-              name: Loops in Collector
+              name: Cicli con il Collezionista
               description_student: ''
-              description_teacher: Building on the concept of repeating instructions
-                from "Happy Loops," this stage will have students using loops to collect
-                treasure more efficiently on Code.org.
+              description_teacher: Basandosi sul concetto di istruzioni ripetute appreso
+                in "Cicli Felici", in questa lezione gli studenti utilizzeranno i
+                cicli per raccogliere il tesoro in modo più efficiente su Code.org.
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli con l'Artista
               description_student: ''
-              description_teacher: Returning to loops, students learn to draw images
-                by looping simple sequences of instructions. In the previous plugged
-                lesson, loops were used to traverse a maze and collect treasure. Here,
-                loops are creating patterns. At the end of this stage, students will
-                be given the opportunity to create their own images using loops.
+              description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
+                immagini ripetendo semplici sequenze di istruzioni. Nella precedente
+                lezione, i cicli sono stati utilizzati per attraversare un labirinto
+                e raccogliere il tesoro. Qui, i cicli stanno creano dei modelli. Alla
+                fine di questa lezione, gli studenti avranno l'opportunità di creare
+                le proprie immagini utilizzando i cicli.
             'Events: The Big Event':
               name: Eventi
               description_student: ''
-              description_teacher: Events are a great way to add variety to a pre-written
-                algorithm. Sometimes you want your program to be able to respond to
-                the user exactly when the user wants it to. That is what events are
-                for.
+              description_teacher: Gli eventi sono un ottimo strumento per aggiungere
+                variazioni ad un algoritmo già scritto. A volte si desidera che il
+                proprio programma risponda all'utente esattamente quando l'utente
+                ne ha bisogno. Gli eventi servono proprio a questo.
             Events in Play Lab:
-              name: Events in Play Lab
+              name: 'Laboratorio: Eventi'
               description_student: ''
-              description_teacher: In this online activity, students will have the
-                opportunity to learn how to use events in Play Lab and to apply all
-                of the coding skills they've learned to create an animated game. It's
-                time to get creative and make a story in the Play Lab!
+              description_teacher: In questa attività online, gli studenti avranno
+                l'opportunità di imparare a utilizzare gli eventi del Laboratorio
+                e di applicare tutte le competenze di programmazione che hanno imparato
+                per creare un gioco animato. È il momento di essere creativi e costruire
+                una storia nel Laboratorio!
           title: Corso A
           description_audience: ''
           description_short: An introduction to computer science for early readers.
@@ -6632,29 +6728,29 @@
         courseb:
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Correzione di errori (Debugging): Bug Non Individuati'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Sequenze Trascinando i Blocchi
             Your Digital Footprint:
               name: La tua Impronta Digitale
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
-              name: Programming in Maze
+              name: Programmazione nel Labirinto
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Collector:
-              name: Loops in Collector
+              name: Cicli con il Collezionista
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli con l'Artista
             'Events: The Big Event':
               name: Eventi
             Events in Play Lab:
-              name: Events in Play Lab
+              name: 'Laboratorio: Eventi'
             More Programming in Maze:
               name: More Programming in Maze
             Programming with Rey and BB-8:
@@ -6671,7 +6767,7 @@
             Building a Foundation:
               name: Costruire le Fondamenta
             Programming in Maze:
-              name: Programming in Maze
+              name: Programmazione nel Labirinto
             Debugging in Maze:
               name: Debugging in Maze
             'Real-life Algorithms: Paper Planes':
@@ -6691,13 +6787,13 @@
             Build a Flappy Game:
               name: Build a Flappy Game
             Events in Play Lab:
-              name: Events in Play Lab
+              name: 'Laboratorio: Eventi'
             Screen Out the Mean:
               name: Screen Out the Mean
             Binary Bracelets:
               name: Braccialetti Binari
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli con l'Artista
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
           title: Corso C
@@ -6833,7 +6929,7 @@
 
                 Students will also explore what it means to be responsible and respectful to their offline and online communities as a step toward learning how to be good digital citizens.
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Realizzare un gioco col Laboratorio
               description_student: This lesson will guide you through making your
                 very own video game.
               description_teacher: In this online activity, students will have the
@@ -6910,7 +7006,7 @@
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: 'Laboratorio: Variabili'
             For Loop Fun:
               name: Divertiti usando i Cicli con Contatore
             For Loops in Bee:
@@ -7051,7 +7147,7 @@
                 to apply. Students will review basic algorithms, debugging, `repeat`
                 loops, conditionals, `while` loops, and functions.
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Realizzare un gioco col Laboratorio
               description_student: Practice making games to share with your friends
                 and family.
               description_teacher: This lesson features Play Lab, a platform where
@@ -7101,7 +7197,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
@@ -7184,7 +7280,7 @@
                 and easier to read. After guided puzzles, students will end in a freeplay
                 level to show what they have learned and create their own designs.
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: 'Laboratorio: Variabili'
               description_student: Soon you will learn about making characters interact
                 in a game using variables!
               description_teacher: Students will get further practice with variables
@@ -7341,7 +7437,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
@@ -7654,7 +7750,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli con l'Artista
             Nested Loops Project in Artist:
               name: Nested Loops Project in Artist
             Internet:
@@ -7686,7 +7782,7 @@
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: 'Laboratorio: Variabili'
             For Loop Fun:
               name: Divertiti usando i Cicli con Contatore
             For Loops in Bee:
@@ -7744,31 +7840,31 @@
         pre-express:
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Correzione di errori (Debugging): Bug Non Individuati'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Sequenze Trascinando i Blocchi
             'Online Safety: Your Digital Footprint':
               name: 'Online Safety: Your Digital Footprint'
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
-              name: Programming in Maze
+              name: Programmazione nel Labirinto
             'Programming: Star Wars':
               name: 'Programming: Star Wars'
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Collector:
-              name: Loops in Collector
+              name: Cicli con il Collezionista
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli con l'Artista
             'Events: The Big Event':
               name: Eventi
             Events in Play Lab:
-              name: Events in Play Lab
+              name: 'Laboratorio: Eventi'
             Spelling Bee:
               name: Ape Sapiente
           title: ''
@@ -7837,6 +7933,10 @@
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey:
+              name: Please complete the CSP Mid-course survey
           title: ''
           description_audience: ''
           description_short: Programmazione
@@ -7894,16 +7994,24 @@
         applab-intro:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
-              name: Intro to AppLab - Choose Your Own Adventure
+              name: Introduzione a Sviluppo App - Scegli la Tua Avventura
             Intro to AppLab - Choose Your Own Adventure 2:
-              name: Intro to AppLab - Choose Your Own Adventure 2
+              name: Introduzione a Sviluppo App - Scegli la Tua Avventura 2
             Intro to AppLab - Your First App:
               name: Intro to AppLab - Your First App
             Intro to AppLab - Your First App 2:
               name: Intro to AppLab - Your First App 2
             Intro to AppLab - Your First App 3:
               name: Intro to AppLab - Your First App 3
-          title: Intro to App Lab
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Introduzione a Sviluppo App - Per cominciare
+            Intro to App Lab:
+              name: Introduzione a Sviluppo App
+            'Lesson 1: App Lab Intro':
+              name: 'Lesson 1: App Lab Intro'
+          title: Introduzione a Sviluppo App
           description_audience: ''
           description_short: ''
           description: These lessons introduce you to App Lab through a series of
@@ -7923,7 +8031,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli con l'Artista
             Nested Loops:
               name: Cicli Annidati
             Nested Loops with Frozen:
@@ -7951,7 +8059,7 @@
             Determine the Concept:
               name: Determine the Concept
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Realizzare un gioco col Laboratorio
             Explore Project Ideas:
               name: Explore Project Ideas
             The Design Process:
@@ -8005,7 +8113,7 @@
             Digital Citizenship:
               name: Cittadinanza Digitale
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Realizzare un gioco col Laboratorio
             'Unplugged: Binary':
               name: Binario
             Artist Binary:
@@ -8013,7 +8121,7 @@
             Building a Foundation:
               name: Costruire le Fondamenta
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli con l'Artista
             Nested Loops in Bee:
               name: Nested Loops in Bee
           title: New Course D Script
@@ -8045,7 +8153,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli con l'Artista
             Nested Loops Project in Frozen:
               name: Nested Loops Project in Frozen
             'How it Works: The Internet':
@@ -8077,7 +8185,7 @@
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: 'Laboratorio: Variabili'
             'For Loops: For Loop Fun':
               name: 'For Loops: For Loop Fun'
             For Loops in Bee:
@@ -8119,7 +8227,7 @@
         new-stages-sept-2017:
           stages:
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli con l'Artista
             Sequences with Scrat:
               name: Sequences with Scrat
             Testing Template:
@@ -8143,7 +8251,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
@@ -8169,7 +8277,7 @@
             Determine the Concept:
               name: Determine the Concept
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Realizzare un gioco col Laboratorio
             Explore Project Ideas:
               name: Explore Project Ideas
             The Design Process:
@@ -8201,7 +8309,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
@@ -8221,7 +8329,7 @@
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: 'Laboratorio: Variabili'
             For Loop Fun:
               name: Divertiti usando i Cicli con Contatore
             For Loops in Bee:
@@ -8313,6 +8421,8 @@
               name: all assessment items clustered in levelgroup as a single "test"
             dummy:
               name: dummy
+            CSP 3 updates staging ground:
+              name: CSP 3 updates staging ground
           title: ''
           description_audience: ''
           description_short: ''
@@ -8340,4 +8450,264 @@
           title: ''
           description_audience: ''
           description_short: ''
+          description: ''
+        csd4-old:
+          stages:
+            Analysis of Design:
+              name: Analysis of Design
+            Understanding Your User:
+              name: Understanding Your User
+            User-Centered Design Micro Activity:
+              name: User-Centered Design Micro Activity
+            User Interface and Prototype Testing:
+              name: User Interface and Prototype Testing
+            Feedback and Prototypes:
+              name: Feedback and Prototypes
+            Identifying User Needs:
+              name: Identifying User Needs
+            Project - Paper Prototype:
+              name: Project - Paper Prototype
+            Designing Apps for Good:
+              name: Designing Apps for Good
+            Market Research:
+              name: Market Research
+            Paper Prototypes:
+              name: Paper Prototypes
+            Prototype Testing:
+              name: Prototype Testing
+            Digital Design:
+              name: Digital Design
+            Event Driven Programming:
+              name: Event Driven Programming
+            Basic App Functionality:
+              name: Basic App Functionality
+            Testing the App:
+              name: Testing the App
+            Improving and Iterating:
+              name: Improving and Iterating
+            App Presentation:
+              name: App Presentation
+          title: "(DEPRECATED) CSD Unit 4 - The Design Process"
+          description_audience: ''
+          description_short: 2016/17 Beta version of CSD Unit 4
+          description: ''
+        csp3-staging:
+          stages:
+            The Need For Programming Languages:
+              name: The Need For Programming Languages
+            The Need for Algorithms:
+              name: The Need for Algorithms
+            Creativity in Algorithms:
+              name: Creativity in Algorithms
+            Using Simple Commands:
+              name: Using Simple Commands
+            Creating Functions:
+              name: Creazione di funzioni
+            Functions and Top-Down Design:
+              name: Functions and Top-Down Design
+            APIs and Function Parameters:
+              name: APIs and Function Parameters
+            Creating functions with Parameters:
+              name: Creating functions with Parameters
+            Looping and Random Numbers:
+              name: Looping and Random Numbers
+            Practice PT - Design a Digital Scene:
+              name: Practice PT - Design a Digital Scene
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Chapter 1 Assessment
+          title: CSP 3 Proposed Changes Temporary Staging Ground
+          description_audience: ''
+          description_short: Temporary staging ground for Oct. changes to csp3
+          description: |
+            This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r
+        pwc:
+          stages:
+            new stage:
+              name: new stage
+            'Problem Solving: Personal Innovations':
+              name: 'Problem Solving: Personal Innovations'
+            'Technology Foundations: What is a Computer?':
+              name: 'Technology Foundations: What is a Computer?'
+            'Data Science: Problem Solving with Big Data':
+              name: 'Data Science: Problem Solving with Big Data'
+            Personal Innovations:
+              name: Innovazione personale
+            What is a Computer?:
+              name: What is a Computer?
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Programming - Hour of Code:
+              name: Programming - Hour of Code
+            Simple Encryption:
+              name: Crittografia semplice
+            Web Development - Creating Webpages:
+              name: Web Development - Creating Webpages
+            App Development Unplugged - User Interfaces:
+              name: App Development Unplugged - User Interfaces
+            App Development - Intro to App Lab:
+              name: App Development - Intro to App Lab
+            Creating Webpages:
+              name: Creating Webpages
+            User Interfaces:
+              name: User Interfaces
+            Intro to App Lab:
+              name: Introduzione a Sviluppo App
+            Smart Clothing Design:
+              name: Smart Clothing Design
+            Intro to App Lab (13+):
+              name: Intro to App Lab (13+)
+          title: PwC Access Your Potential
+          description_audience: ''
+          description_short: ''
+          description: ''
+        allthesurveys:
+          stages:
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
+            CSD pulse check survey:
+              name: CSD pulse check survey
+            CSD mid-post survey staging:
+              name: CSD mid-post survey staging
+            CSP pre survey Test 2017:
+              name: CSP pre survey Test 2017
+            CSD mid-post survey 2017 staging:
+              name: CSD mid-post survey 2017 staging
+            CSP pre survey 2017 staging:
+              name: CSP pre survey 2017 staging
+            CSD pre survey 2017 staging:
+              name: CSD pre survey 2017 staging
+            CSD/P pulse check survey 2017:
+              name: CSD/P pulse check survey 2017
+            CSD mid and post survey 2017 staging:
+              name: CSD mid and post survey 2017 staging
+            CSP mid and post survey 2017 staging:
+              name: CSP mid and post survey 2017 staging
+          title: All the surveys
+          description_audience: ''
+          description_short: Place to stage and test Code.org surveys
+          description: ''
+        k1hoc2017:
+          stages:
+            Collector Hour of Code 2017:
+              name: Collector Hour of Code 2017
+          title: K-1 Hour of Code 2017
+          description_audience: ''
+          description_short: ''
+          description: ''
+        hero:
+          stages:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Minecraft\: Hero''s Journey Hour of Code'
+            Minecraft Hour of Code:
+              name: L'Ora del Codice con Minecraft
+          title: 'Minecraft: Il viaggio dell''eroe'
+          description_audience: ''
+          description_short: ''
+          description: Minecraft è tornato per l'Ora del Codice con una nuovissima
+            attività! Viaggia attraverso Minecraft grazie al coding.
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Introduzione a Sviluppo App - Scegli la Tua Avventura
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Introduzione a Sviluppo App - Scegli la Tua Avventura 2
+            Intro to AppLab - Your First App:
+              name: Intro to AppLab - Your First App
+            Intro to AppLab - Your First App 2:
+              name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Introduzione a Sviluppo App - Per cominciare
+            Intro to App Lab:
+              name: Introduzione a Sviluppo App
+          title: Intro to App Lab Staging
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-explore:
+          stages:
+            new stage:
+              name: new stage
+            Explore PT Prep - Reviewing the Task:
+              name: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan:
+              name: Explore PT - Making a Plan
+            Explore PT - Complete the Task:
+              name: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Setup: Digital Portfolio and Other Tools'
+          title: Explore - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and
+            complete the AP Explore Performance Tasks.
+          description: |-
+            These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
+            \r
+            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+        csp-create:
+          stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            Create PT Prep - Reviewing the Task:
+              name: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan:
+              name: Create PT Prep - Making a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+          title: Create - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and
+            complete the AP Create Performance Tasks.
+          description: |-
+            These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
+            \r
+            This unit was last updated December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+        csp3-reovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+          title: 'csp3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-recovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+            standalone template:
+              name: standalone template
+          title: 'CSP3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        aws-demo:
+          stages:
+            new stage:
+              name: new stage
+          title: AWS Demo
+          description_audience: ''
+          description_short: ''
+          description: ''
+        halloween:
+          stages:
+            Halloween Artist:
+              name: Halloween Artist
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        valentine:
+          stages:
+            special valentine:
+              name: special valentine
+          title: Valentine Special
+          description_audience: ''
+          description_short: Have fun creating valentines
           description: ''

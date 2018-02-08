@@ -3,6 +3,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Button from '@cdo/apps/templates/Button';
 import color from "@cdo/apps/util/color";
+import sinon from 'sinon';
 
 describe('Button', () => {
   it('renders an anchor tag when button has an href', () => {
@@ -33,7 +34,7 @@ describe('Button', () => {
   });
 
   it('renders a div when button has an onClick', () => {
-    const onClick = () => console.log('clicked');
+    const onClick = sinon.spy();
     const wrapper = shallow(
       <Button
         onClick={onClick}
@@ -45,6 +46,23 @@ describe('Button', () => {
     assert(wrapper.is('div'));
     assert.strictEqual(wrapper.props().href, undefined);
     assert.equal(wrapper.props().onClick, onClick);
+    wrapper.simulate('click');
+    assert(onClick.calledOnce);
+  });
+
+  it('doesnt respond to clicks when disabled', () => {
+    const onClick = () => console.log('clicked');
+    const wrapper = shallow(
+      <Button
+        onClick={onClick}
+        text="Click me"
+        target="_blank"
+        disabled
+      />
+    );
+
+    wrapper.simulate('click');
+    assert(!onClick.calledOnce);
   });
 
   it('renders bigger if we use a large size', () => {

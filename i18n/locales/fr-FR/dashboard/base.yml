@@ -122,6 +122,7 @@ fr:
     user_type_student: "Élève"
     field_is_required: "est obligatoire"
     accept_terms: "Vous devez accepter les conditions d'utilisation pour créer un compte"
+    error: "An error occurred."
   school_info:
     title: 'Informations de l’école (facultatif)'
     school_country: 'Pays de l’école'
@@ -566,6 +567,9 @@ fr:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Âge recommandé: 13 ans et plus"
       cta: "Apprendre comment"
+    hoc-encryption:
+      title: "Cryptage simple"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -584,6 +588,9 @@ fr:
     minecraft2016:
       title: "Minecraft"
       body: "Programmez des animaux et d'autres créatures Minecraft dans votre propre version de Minecraft."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
@@ -647,6 +654,7 @@ fr:
     correct_title: "Merci"
     correct_body: "Merci d'avoir envoyé des réponses."
     hide_survey_last_answer: "Cette enquête est anonyme. Veuillez consulter le tableau de bord de l'enseignant pour des résultats agrégés.  Notez que les résultats ne sont visibles que si au moins cinq élèves ont répondu à l’enquête."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Merci"
     wrong_body: "Merci d'avoir envoyé des réponses."
@@ -752,7 +760,11 @@ fr:
     rename: "Renommer"
     save: "Sauvegarder"
     delete: "Supprimer"
-    import: "Import"
+    import: "Importer"
+    share_link_import_bad_link_header: "Lien de partage non reconnu"
+    share_link_import_bad_link_body: 'Nous n''avons pas pu importer ce lien de partage. Assurez-vous d''utiliser un lien issu du casse-tête Minecraft: Agent et de copier le lien complet.'
+    share_link_import_error_header: "Une erreur est survenue."
+    share_link_import_error_body: "Un problème est survenu lors de l'importation de ce lien de partage. Veuillez réessayer."
     exit: "Retourner au cours"
     my_projects: "Mes projets"
     project_gallery: "Projets"

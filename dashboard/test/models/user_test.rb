@@ -75,11 +75,7 @@ class UserTest < ActiveSupport::TestCase
       state: 'CA'
     }
     teachers = create_list(:teacher, 2, school_info_attributes: school_attributes)
-    attr = teachers[0].process_school_info_attributes(school_attributes)
-    school_info = SchoolInfo.where(attr).first
-    assert teachers[0].school_info == school_info, "Teacher info: #{teachers[0].school_info.inspect} not equal to #{school_info.inspect}"
-    assert teachers[1].school_info == school_info, "Teacher info: #{teachers[1].school_info.inspect} not equal to #{school_info.inspect}"
-    assert SchoolInfo.where(attr).count == 1
+    assert_equal teachers[0].school_info, teachers[1].school_info
   end
 
   test 'normalize_email' do
@@ -1881,14 +1877,54 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'Validation failed: Age is required', e.message
   end
 
-  test 'age validation is bypassed for Google OAuth users' do
+  test 'age validation is bypassed for Google OAuth users with no birthday' do
     # Users created this way will be asked for their age when they first sign in.
-    create :user, birthday: nil, provider: 'google_oauth2'
+    user = create :user, birthday: nil, provider: 'google_oauth2'
+    assert_nil user.age
   end
 
-  test 'age validation is bypassed for Clever users' do
+  test "age is nil for Google OAuth users under age 4" do
     # Users created this way will be asked for their age when they first sign in.
-    create :user, birthday: nil, provider: 'clever'
+    three_year_old = create :user, birthday: (Date.today - 3.years), provider: 'google_oauth2'
+    assert_nil three_year_old.age
+  end
+
+  test "age is set exactly for Google OAuth users between ages 4 and 20" do
+    four_year_old = create :user, birthday: (Date.today - 4.years), provider: 'google_oauth2'
+    assert_equal 4, four_year_old.age
+
+    twenty_year_old = create :user, birthday: (Date.today - 20.years), provider: 'google_oauth2'
+    assert_equal 20, twenty_year_old.age
+  end
+
+  test "age is 21+ for Google OAuth users over the age of 20" do
+    twenty_something = create :user, birthday: (Date.today - 22.years), provider: 'google_oauth2'
+    assert_equal '21+', twenty_something.age
+  end
+
+  test 'age validation is bypassed for Clever users with no birthday' do
+    # Users created this way will be asked for their age when they first sign in.
+    user = create :user, birthday: nil, provider: 'clever'
+    assert_nil user.age
+  end
+
+  test "age is nil for Clever users under age 4" do
+    # Users created this way will be asked for their age when they first sign in.
+    three_year_old = create :user, birthday: (Date.today - 3.years), provider: 'clever'
+    assert_nil three_year_old.age
+  end
+
+  test "age is set exactly for Clever users between ages 4 and 20" do
+    four_year_old = create :user, birthday: (Date.today - 4.years), provider: 'clever'
+    assert_equal 4, four_year_old.age
+
+    twenty_year_old = create :user, birthday: (Date.today - 20.years), provider: 'clever'
+    assert_equal 20, twenty_year_old.age
+  end
+
+  test "age is 21+ for Clever users over the age of 20" do
+    twenty_something = create :user, birthday: (Date.today - 22.years), provider: 'clever'
+    assert_equal '21+', twenty_something.age
   end
 
   test 'users updating the email field must provide a valid email address' do
@@ -2021,6 +2057,72 @@ class UserTest < ActiveSupport::TestCase
       user_script = @student.assign_script(Script.first)
       assert_equal Script.first.id, user_script.script_id
       assert_equal '2017-01-02 12:00:00 UTC', user_script.assigned_at.to_s
+    end
+  end
+
+  class AssignedCoursesAndScripts < ActiveSupport::TestCase
+    setup do
+      @student = create :student
+      @course = create :course, name: 'course'
+    end
+
+    test "it returns assigned courses" do
+      teacher = create :teacher
+      section = create :section, user_id: teacher.id, course: @course
+      Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
+
+      assigned_courses = @student.assigned_courses
+      assert_equal 1, assigned_courses.length
+
+      assert_equal 'course', assigned_courses[0][:name]
+    end
+
+    test "it checks for assigned scripts, no assigned scripts" do
+      refute @student.any_visible_assigned_scripts?
+    end
+
+    test "it checks for assigned scripts, assigned hidden script" do
+      hidden_script = create :script, name: 'hidden-script', hidden: true
+      @student.assign_script(hidden_script)
+      refute @student.any_visible_assigned_scripts?
+    end
+
+    test "it checks for assigned scripts, assigned visible script" do
+      visible_script = create :script, name: 'visible-script'
+      @student.assign_script(visible_script)
+      assert @student.any_visible_assigned_scripts?
+    end
+
+    test "it checks for assigned courses and scripts, no course, no script" do
+      refute @student.assigned_course_or_script?
+    end
+
+    test "it checks for assigned courses and scripts, assigned hidden script" do
+      hidden_script = create :script, name: 'hidden-script', hidden: true
+      @student.assign_script(hidden_script)
+      refute @student.assigned_course_or_script?
+    end
+
+    test "it checks for assigned courses and scripts, assigned visible script" do
+      visible_script = create :script, name: 'visible-script'
+      @student.assign_script(visible_script)
+      assert @student.assigned_course_or_script?
+    end
+
+    test "it checks for assigned courses and scripts, assigned course" do
+      teacher = create :teacher
+      section = create :section, user_id: teacher.id, course: @course
+      Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
+      assert @student.assigned_course_or_script?
+    end
+
+    test "it checks for assigned courses and scripts, assigned course and assigned visible script" do
+      teacher = create :teacher
+      section = create :section, user_id: teacher.id, course: @course
+      Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
+      visible_script = create :script, name: 'visible-script'
+      @student.assign_script(visible_script)
+      assert @student.assigned_course_or_script?
     end
   end
 
@@ -2157,7 +2259,7 @@ class UserTest < ActiveSupport::TestCase
     section_3 = create :section, user_id: teacher.id
 
     Timecop.freeze do
-      assert_equal nil, student.last_joined_section
+      assert_nil student.last_joined_section
       Follower.create!(section_id: section_1.id, student_user_id: student.id, user: teacher)
       assert_equal section_1, student.last_joined_section
       Timecop.travel 1
@@ -2488,5 +2590,52 @@ class UserTest < ActiveSupport::TestCase
       # returns false for teacher
       assert_equal false, teacher.script_hidden?(@script)
     end
+  end
+
+  test 'generate_progress_from_storage_id' do
+    # construct our fake applab-intro script
+    script = create :script
+    stage = create :stage, script: script
+    regular_level = create :level
+    create :script_level, script: script, stage: stage, levels: [regular_level]
+
+    # two different levels, backed by the same template level
+    template_level = create :level
+    template_backed_level1 = create :level, project_template_level_name: template_level.name
+    create :script_level, script: script, stage: stage, levels: [template_backed_level1]
+    template_backed_level2 = create :level, project_template_level_name: template_level.name
+    create :script_level, script: script, stage: stage, levels: [template_backed_level2]
+
+    # Whether we have a channel for a regular level in the script, or a template
+    # level, we generate a UserScript
+    [regular_level, template_level].each do |level|
+      user = create :student
+      channel_token = create :channel_token, level: level, storage_user: user
+      user.generate_progress_from_storage_id(channel_token.storage_id, script.name)
+
+      user_scripts = UserScript.where(user: user)
+      assert_equal 1, user_scripts.length
+      assert_equal script, user_scripts.first.script
+
+      if level == regular_level
+        # we should have exactly one user_level created
+        assert_equal 1, user.user_levels.length
+        assert_equal regular_level.id, user.user_levels[0].level_id
+      elsif level == template_level
+        # Template backed levels share a channel, so when we find a channel for the
+        # template, we create user_levels for every level that uses that template
+        assert_equal 2, user.user_levels.length
+        assert user.user_levels.map(&:level_id).include?(template_backed_level1.id)
+        assert user.user_levels.map(&:level_id).include?(template_backed_level2.id)
+      end
+    end
+
+    # No UserScript if we only have channel tokens elsewhere
+    user = create :student
+    channel_token = create :channel_token, level: Script.twenty_hour_script.levels.first, storage_user: user
+    user.generate_progress_from_storage_id(channel_token.storage_id, script.name)
+
+    user_scripts = UserScript.where(user: user)
+    assert_equal 0, user_scripts.length
   end
 end

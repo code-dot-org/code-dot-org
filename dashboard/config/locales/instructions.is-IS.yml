@@ -1366,6 +1366,35 @@
       CSD U5 black white images pixelation 5_instruction: Teiknaðu hvað sem þú vilt
       CSD U5 black white images pixelation_instruction: Ljúktu við X-ið með því að
         nota 0 og 1
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -1476,6 +1505,27 @@
       CSDU6 - for loop - why for_instruction: |-
         Write the contents of the array to
         the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays rainbow_instruction: |-
+        Write the contents of the array to the screen
+        in numerical order. (Click to see full instructions)
+      CSDU6 arrays random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select icons_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select rainbow_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_instruction: |-
+        Write a program that displays a
+        randomly chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays variable_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -3185,6 +3235,48 @@
       Course1MazeAssessment2_instruction: |-
         Þetta er próf!\r
         Færðu mig í eina átt, svo í aðra, til að ég nái svíninu.
+      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
+        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars10_instruction: |-
+        Free Play time! Here are all of the variables
+        we've played with so far in this stage, as well as a few more in case you
+        want them. \r
+        \r
+        Notice that there are now so many blocks in our toolbox
+        that they need to be organized!  Here, we've put each piece into an appropriate
+        category.  Take some time to explore everything that is available. When you're
+        done browsing, make a game or story using repeats, variables, and events.  \r
+        \r
+        Hint:
+        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars2_instruction: |-
+        The race in that last puzzle wasn't very
+        fair! Change the `dog_speed` variable to make sure you can collect more flags
+        than Cat. The first to collect 10 flags wins!
+      CourseF_PlayLab_vars3_instruction: Notaðu vinstri og hægri örvarnar til að hreyfa
+        og upp örina til að stökkva. Reyndu að safna öllum flöggunum.
+      CourseF_PlayLab_vars4_instruction: Nú notum við breytuna "hæð" til að stjórna
+        hve hátt hundurinn getur stokkið. Uppfærðu breytuna "hæð" svo að hundurinn
+        geti stokkið nógu hátt til að ná öllum flöggunum.
+      CourseF_PlayLab_vars5_instruction: 'Búum til leik! Fyrst þurfum við stigaskor.
+        Endurgerðu kóðann sem þú sást í síðasta borði til að setja skorið á 10. '
+      CourseF_PlayLab_vars6_instruction: |-
+        Notaðu hægri örina til að kasta böku.\r
+        \r
+        Hvernig ættum við að skora stig í þessum leik? Bættu 1 við breytuna "stig" í hvert skipti sem hundurinn hæfir köttinn með böku. Notaðu atvikið "þegar leikmaður 2 snertir eitthvað" til að kveikja uppfærslu á skorinu. Þú getur uppfært breytuna með "stig = stig + 1". Komdu skorinu upp í 10 (um 1 í einu!) til að klára borðið.
+      CourseF_PlayLab_vars7_instruction: |-
+        Notaðu hægri örina til að kasta böku.\r
+        \r
+        Hvernig ættum við að skora stig í þessum leik? Bættu 1 við breytuna "stig" í hvert skipti sem hundurinn hæfir köttinn með böku. Notaðu atvikið "þegar leikmaður 2 snertir eitthvað" til að kveikja uppfærslu á skorinu. Þú getur uppfært breytuna með "stig = stig + 1". Komdu skorinu upp í 10 (um 1 í einu!) til að klára borðið.
+      CourseF_PlayLab_vars8_instruction: |-
+        Notaðu hægri örina til að kasta böku.\r
+        \r
+        Hvernig ættum við að skora stig í þessum leik? Bættu 1 við breytuna "stig" í hvert skipti sem hundurinn hæfir köttinn með böku. Notaðu atvikið "þegar leikmaður 2 snertir eitthvað" til að kveikja uppfærslu á skorinu. Þú getur uppfært breytuna með "stig = stig + 1". Komdu skorinu upp í 10 (um 1 í einu!) til að klára borðið.
+      CourseF_PlayLab_vars9_instruction: |-
+        Nice, now let's make sure this game isn't
+        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
+        2), you should lose a point. Start with 10 points so it's not too hard. Let
+        your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution_instruction: Leiðbeiningar
       Crack a Caesar Cipher_instruction: Leiðbeiningar
       ECSPD Binary Odometer_instruction: |-
@@ -3393,6 +3485,8 @@
         an example of a game you can make in play lab.
       FoodFight_instruction: "Þetta er dæmi um leik sem þú getur búið til í Leikjasmiðjunni."
       Frequency Analysis_instruction: Test
+      Function intro Ryan_instruction: Notaðu `byggja brú` fallið tvisvar til að búa
+        til slóð að kyndlinum.
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -3736,6 +3830,7 @@
         eru venjulega ekki í boði? Við skulum rukka 10.000 kr. fyrir sérpöntuð álegg.
       Luigi's Pizza 4_instruction: 'Frjáls æfing: Hvernig væri hægt að gera kostnaðarfall
         Luigi enn gagnlegra?'
+      MC Agent Freeplay_instruction: "**Frjáls æfing:** Kannaðu heiminn!"
       MC HOC 2016 Level 10_instruction: Nú getur þú búið til Minecraft eftir þínu
         höfði! Láttu verur kvikna og láttu þær svo gera hvaðeina sem þér dettur í
         hug. Skemmtu þér vel!
@@ -3768,77 +3863,83 @@
         þér stig þegar þú klukkar þá. Náðu 5 stigum til að vinna!
       MC HOC 2016 Village Test_instruction: "Ó nei! Uppvakningar hafa króað þig af!
         Forritaðu járnþursinn svo hann elti og ráðist á uppvakningana!"
-      MC_2017_Ryan_02_instruction: |-
-        Help the player get out by using loops to get
-        the Agent to the pressure plate.
-      MC_HOC_2017 Agent Test_instruction: |-
-        Click "Run" to move the player to the
-        orange square inside of the house.
-      MC_HOC_2017_01_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_Cole_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_Kiki_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Kiki_instruction: |-
-        Get the Agent to the pressure plate, then
-        get the player to the orange square.
-      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_instruction: |-
-        Change the loop from the last puzzle to help the
-        Agent make a path over the wider part of this river.
-      MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_05_instruction: |-
-        Use a function to help the Agent get to the pressure
-        plate.
-      MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
-      MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
-      MC_HOC_2017_06_Cole_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_06_Kiki_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_07_Cole_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07_Kiki_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07a_Kiki_instruction: Clear the path to the orange square.
-      MC_HOC_2017_08_Cole_instruction: |-
-        Change the provided function to work for
-        this biome.
-      MC_HOC_2017_08_Kiki_instruction: Change the function to work for this puzzle.
-      MC_HOC_2017_09_Cole_instruction: |-
-        Program the Agent to clear the player's
-        path.
-      MC_HOC_2017_09_Kiki_instruction: |-
-        Program the Agent to clear the player's
-        path and get to the pressure plate.
-      MC_HOC_2017_10_Cole_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_Cole_old_instruction: |-
-        Create a function to help you finish
-        this minecart.
-      MC_HOC_2017_10_Kiki_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_Ryan_03_instruction: |-
-        Now use loops to help The Agent build a bridge
-        over the river by placing blocks in the water.
-      MC_HOC_2017_Ryan_05_instruction: |-
-        Destroy these cacti so that the player can
-        get to the goal.
-      MC_HOC_Kiki_02_instruction: Get The Agent to the pressure plate.
+      MC_2017_Ryan_02_instruction: Hjálpaðu leikmanninum að komast út með því að nota
+        lykkjur til að koma Umbanum til þrýstihellunnar.
+      MC_HOC_2017 Agent Test_instruction: Smelltu á "Keyra" til að færa leikmanninn
+        að appelsínugula reitnum í húsinu.
+      MC_HOC_2017_01_instruction: Smelltu á "Keyra" til að færa leikmanninn að appelsínugula
+        reitnum í húsinu.
+      MC_HOC_2017_01_Cole_instruction: "Þú þarft að safna verkfærum í þessari ferð.
+        Notaðu **örvarlyklana** til að hreyfast og ná til kistunnar í húsinu til að
+        vinna."
+      MC_HOC_2017_01_Kiki_instruction: Smelltu á "Keyra" til að færa leikmanninn að
+        appelsínugula reitnum í húsinu.
+      MC_HOC_2017_01_RETRY_instruction: 'Komdu Umbanum til þrýstiplötunnar og smelltu
+        svo á "Keyra". Notaðu örvarlyklana til að færa leikmanninn út úr húsinu og
+        láta hann ná kistunni. '
+      MC_HOC_2017_02_instruction: Komdu Umbanum til þrýstihellunnar.
+      MC_HOC_2017_02_Cole_instruction: "Færðu Umbann að þrýstiplötunni svo að\n{currentPlayerName}
+        komist áleiðis. "
+      MC_HOC_2017_02_Kiki_instruction: Komdu Umbanum til þrýstihellunnar og færðu
+        svo leikmanninn á appelsínugula reitinn.
+      MC_HOC_2017_02_Will_instruction: Komdu Umbanum til þrýstihellunnar.
+      MC_HOC_2017_03_Cole_instruction: 'Kóðaðu Umbann til að opna hliðið. '
+      MC_HOC_2017_03_Kiki_instruction: Komdu Umbanum til þrýstihellunnar.
+      MC_HOC_2017_04_instruction: Breyttu lykkjunni úr síðustu þraut til að hjálpa
+        Umbanum að gera slóð yfir breiðari hluta þessarar ár.
+      MC_HOC_2017_04POINT5_Cole_instruction: Komdu Umbanum til þrýstihellunnar.
+      MC_HOC_2017_04POINT5_RYAN_instruction: Komdu Umbanum til þrýstihellunnar.
+      MC_HOC_2017_04_Cole_instruction: Komdu Umbanum til þrýstihellunnar.
+      MC_HOC_2017_04_Kiki_instruction: Komdu Umbanum til þrýstihellunnar.
+      MC_HOC_2017_05_instruction: Notaðu fall til að hjálpa Umbanum að komast til
+        þrýstihellunnar.
+      MC_HOC_2017_05_Cole_instruction: Komdu leikmanninum til skóflunnar.
+      MC_HOC_2017_05_Josh_instruction: Komdu leikmanninum til skóflunnar.
+      MC_HOC_2017_05_Kiki_instruction: Komdu leikmanninum til appelsínugula reitsins.
+      MC_HOC_2017_06_Cole_instruction: Lagaðu þennan kóða svo Umbinn byggi brú yfir
+        ána.
+      MC_HOC_2017_06_Josh_instruction: Lagaðu þennan kóða svo Umbinn byggi brú yfir
+        ána.
+      MC_HOC_2017_06_Kiki_instruction: Lagaðu þennan kóða svo Umbinn byggi brú yfir
+        ána.
+      MC_HOC_2017_07_Cole_instruction: "Þessir kaktusar eru fyrir! Notaðu `eyða blokk`
+        kubb til að eyða öllum kaktusum sem flækjast fyrir."
+      MC_HOC_2017_07_Kiki_instruction: Notaðu fall til að opna slóðina að appelsínugula
+        reitnum.
+      MC_HOC_2017_07a_Kiki_instruction: Opnaðu slóðina að appelsínugula reitnum.
+      MC_HOC_2017_08_Cole_instruction: Breyttu gefna fallinu svo það virki í þessu
+        vistkerfi.
+      MC_HOC_2017_08_Kiki_instruction: Breyttu fallinu svo það nýtist í þessari þraut.
+      MC_HOC_2017_08_RY_instruction: Notaðu föllin til að finna leið yfir hraunið.
+      MC_HOC_2017_08_Will_instruction: Notaðu föllin til að finna leið yfir hraunið.
+      MC_HOC_2017_09_Cole_instruction: Forritaðu Umbann svo hann opni slóð fyrir leikmanninn.
+      MC_HOC_2017_09_Kiki_instruction: Forritaðu Umbann svo hann opni slóð fyrir leikmanninn
+        og komist til þrýstihellunnar.
+      MC_HOC_2017_10_Cole_instruction: Búðu til fall til að hjálpa þér að ljúka þessum
+        námuvagni.
+      MC_HOC_2017_10_Cole_old_instruction: Búðu til fall til að hjálpa þér að ljúka
+        þessum námuvagni.
+      MC_HOC_2017_10_Kiki_instruction: Búðu til fall til að hjálpa þér að ljúka þessum
+        námuvagni.
+      MC_HOC_2017_10_RETRY_instruction: Búðu til fall til að hjálpa þér að ljúka þessum
+        námuvagni.
+      MC_HOC_2017_10_RYAN_instruction: Búðu til fall til að hjálpa þér að ljúka þessum
+        námuvagni.
+      MC_HOC_2017_10_RYAN2_instruction: Búðu til fall til að hjálpa þér að ljúka þessum
+        námuvagni.
+      MC_HOC_2017_13_Cole_instruction: "**Frjáls æfing:** Kannaðu heiminn!"
+      MC_HOC_2017_4.5v2_instruction: Komdu Umbanum til þrýstihellunnar.
+      MC_HOC_2017_Ali_instruction: Notaðu föllin til að finna leið yfir hraunið.
+      MC_HOC_2017_FP10x10_instruction: "**Frjáls æfing:** Hvernig væri að reyna að
+        ná öllum demöntunum í þessu borði? "
+      MC_HOC_2017_FP10x10_RE_instruction: "**Frjáls æfing:** Hvernig væri að reyna
+        að ná öllum demöntunum í þessu borði? "
+      MC_HOC_2017_FP20x20_instruction: "**Frjáls æfing:** Kannaðu heiminn!"
+      MC_HOC_2017_Ryan_03_instruction: Notaðu nú lykkjur til að hjálpa Umba að byggja
+        brú yfir ána með því að setja blokkir í vatnið.
+      MC_HOC_2017_Ryan_05_instruction: Eyddu þessu kaktusum svo að leikmaðurinn nái
+        markinu.
+      MC_HOC_Kiki_02_instruction: Komdu Umbanum til þrýstihellunnar.
       MSM Big Game Empty_instruction: Allar breytur og föll byrja hér sem innantómir
         stúfar. Hver þraut mun fást við að skilgreina nokkra í einu og þannig smám
         saman auka við virknina.
@@ -4142,23 +4243,24 @@
         beini (router) og kannar notkun beinunar og DNS'
       New Artist Project_instruction: Teiknaðu eitthvað flott! Kóðinn þinn er vistaður
         sem verkefni, sem þú getur haldið áfram með hvenær sem er.
-      New Basketball Project_instruction: |-
-        Create your own Basketball game. You can
-        change all the rules. When you're done, click Finish to let friends try your
-        game on their phones.
-      New Bounce Project_instruction: |-
-        Create your own Bounce game. You can change
-        all the visuals and the rules. When you're done, click Finish to let friends
-        try your game on their phones.
+      New Basketball Project_instruction: Búðu til þinn eigin körfuboltaleik. Þú getur
+        breytt öllum reglunum. Þegar leikurinn er tilbúinn getur þú smellt á Ljúka
+        til að vinir geti prófað leikinn í símunum sínum.
+      New Bounce Project_instruction: Búðu til þinn eigin Skopp leik. Þú getur breytt
+        öllu myndefninu og reglunum. Þegar leikurinn er tilbúinn getur þú smellt á
+        Ljúka til að vinir geti prófað leikinn í símunum sínum.
       New Course 4 Artist Functions Level 4_instruction: Notaðu fallið "teikna ferning"
         til að teikna þetta mynstur.
       New Gumball Project_instruction: Búðu til hvað sem þú vilt og deildu því!
       New Ice Age Project_instruction: Búðu til hvað sem þú vilt og deildu því!
       New Infinity Project_instruction: Búðu til hvað sem þú vilt og deildu því!
-      New Sports Project_instruction: |-
-        Create your own game! You're in charge here:
-        you can change all the rules, mix and match sports, get creative! When you're
-        done, click Finish to let friends try your game on their phones.
+      New Minecraft Hero Project_instruction: |-
+        **Freeplay:**  Time to explore on
+        your own!
+      New Sports Project_instruction: 'Búðu til leik eftir þínu höfði! Þú stjórnar
+        hér: þú getur breytt öllum reglunum, blandað saman íþróttum, notað ímyndunaraflið!
+        Smelltu á Ljúka þegar leikurinn er tilbúinn svo að vinir þínir geti prófað
+        hann í símunum sínum.'
       Ninjacat Demo B (copy 1)_instruction: |
         Við skulum byrja á að skoða einfaldan tölvuleik og reyna að skilja hvernig hann virkar. Þú getur notað örvarlyklana til að færa ninjuna til vinstri og hægri og stökkva - reyndu að ná einhyrningnum en forðast drekann!
       Ninjacat Demo B_instruction: Við skulum byrja á að skoða einfaldan tölvuleik
@@ -4477,9 +4579,12 @@
         only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
         \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to
         move to the next puzzle. "
-      RyanTest3_instruction: |-
-        This level has shape-shifting turned on! Refresh to
-        see different variants.
+      RyanTest3_instruction: "Á þessu borði eru hamskipti virk! Uppfærðu til að sjá
+        mismunandi afbrigði."
+      SG Add Subgoals practice_instruction: Teiknaðu 3x3 grind fyrir ofan og hægra
+        megin við skjaldbökuna. Reyndu að gera það með sem allra fæstum skipunum.
+        Skjaldbakan á að enda á upphaflega staðnum og snúa í upphaflega átt. (Smelltu
+        til að sjá ítarlegar leiðbeiningar)
       SG U3L03 - draw rect function_instruction: |-
         Write a function called drawRectangle().\r
         (Click
@@ -4490,95 +4595,78 @@
       SG U3L03 Define and use turnAround_instruction: Skrifaðu fallið turnAround.
         Kallaðu á fallið og færðu svo skjaldbökuna áfram. (Smelltu til að sjá ítarlegar
         leiðbeiningar)
-      SG U3L03 Draw a T using turnAround_instruction: |-
-        Draw a plus sign using the
-        provided version of turnAround().  (Click to see full instructions)
-      SG U3L03 Three Steps_instruction: |-
-        Define a function called drawSide() which
-        draws three steps and moves the turtle to prepare for the next side (Click
-        to see full instructions)
+      SG U3L03 Draw a T using turnAround_instruction: Teiknaðu plús merki með gefna
+        fallinu turnAround(). (Smelltu til að sjá ítarlegar leiðbeiningar)
+      SG U3L03 Three Steps_instruction: Skilgreindu fallið drawSide() (teiknaHlið),
+        sem teiknar þrjú þrep og færir pennann í stöðu fyrir næstu hlið (Smelltu til
+        að sjá ítarlegar leiðbeiningar)
       SG U3L03 define turnRight and draw a rectangle_instruction: |-
         Define a function
         called right() that turns the turtle to the right. Then use this function
         to draw a rectangle, as shown below. (Click to see full instructions)
-      SG U3L03 draw diamond_instruction: |-
-        Create a function called drawDiamond()
-        that makes use of your previous work to draw the complete diamond. (Click
-        to see full instructions)
+      SG U3L03 draw diamond_instruction: Búðu til fallið drawDiamond() (teiknaDemant)
+        sem notar fyrri vinnu þína til að teikna heilan demant. (Smelltu til að sjá
+        ítarlegar leiðbeiningar)
       SG U3L04 - 3 by 3 with functions_instruction: |-
         Make the 3x3 square as efficiently
         as you can. (Click to see full instructions)
       SG U3L04 - snowflake_instruction: |-
         Create the design by breaking it down into
         layers of functions. (Click to see full instructions)
-      SG U3L06 - moveForwardwithParams_instruction: |-
-        Use a single command to move
-        the turtle to the edge of the screen. (Click to see full instructions)
-      SG U3L06 Challenge 1 triangle_instruction: |-
-        Use the parameterized versions
-        of the turtle commands to create a triangle with sides 100 pixels long. (Click
-        to see full instructions)
-      SG U3L06 Challenge 2 purple square_instruction: |-
-        Read the documentation for
-        penColor() and penWidth() before using them to draw the blue square.
-      SG U3L06 Challenge 3 fill pink_instruction: |-
-        Fill in the background of the
-        screen with your favorite color. (Click to see full instructions)
+      SG U3L06 - moveForwardwithParams_instruction: Notaðu eina skipun til að færa
+        pennann út á brún skjásins. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      SG U3L06 Challenge 1 triangle_instruction: Notaðu þær útgáfur pennaskipana sem
+        hafa færibreytur til að búa til þríhyrning með 100 díla hliðar. (Smelltu til
+        að sjá ítarlegar leiðbeiningar)
+      SG U3L06 Challenge 2 purple square_instruction: Lestu gegnum skjölunina fyrir
+        penColor() og penWidth() áður en þú notar þau til að teikna bláa ferninginn.
+      SG U3L06 Challenge 3 fill pink_instruction: Fylltu bakgrunn skjásins með uppáhalds
+        lit. (Smelltu til að sjá ítarlegar leiðbeiningar)
       SG U3L06 Challenge 4 bullseye_instruction: Búðu til miðju marksins með hexkóðum
         lita og fallinu dot(). (Smelltu til að sjá ítarlegar leiðbeiningar)
-      SG U3L06 Challenge 5 overlapping circles_instruction: |-
-        This image is created
-        just using dot() and penColor() but, how are we going to get those circles
-        to be transparent?  If you haven't gotten the hint yet: check out the documentation!
+      SG U3L06 Challenge 5 overlapping circles_instruction: "Þessi mynd er búin til
+        eingöngu með því að nota dot() og penColor(), en hvernig fáum við hringana
+        svona gegnsæja? Ef þú áttar þig ekki á þessu, er best að lesa skjölunina!"
       SG U3L06 Challenge 6 squiggles_instruction: |
-        Read the documentation for the
-        "arcLeft" and "arcRight" commands and then draw the squiggles as shown.
-      SG U3L06 Challenge 7 smiley face_instruction: |-
-        Use turnTo() and moveTo() to
-        help draw a smiley face. (Click to see full instructions)
+        Lestu skjölunina fyrir skipanirnar "arcLeft" (vinstriBogi) og "arcRight" (hægriBogi) og teiknaðu svo línurnar sem sjást.
+      SG U3L06 Challenge 7 smiley face_instruction: Notaðu turnTo() og moveTo() til
+        að hjálpa að teikna broskall. (Smelltu til að sjá ítarlegar leiðbeiningar)
       SG U3L06 Challenge 8 make your own_instruction: Búðu til teikningu eftir eigin
         höfði. (Smelltu til að sjá ítarlegar leiðbeiningar)
-      SG U3L07 - Free Play Loops and Random_instruction: |-
-        Free Play! Use what you
-        learned from loops and random to make your own little scene. Have fun.
-      SG U3L07 - allSeaGrass_instruction: |-
-        Add 50 pieces of seagrass to the image
-        by writing drawAllSeagrass with a loop. (Click to see full instructions)
+      SG U3L07 - Free Play Loops and Random_instruction: Frjáls æfing! Notaðu það
+        sem þú hefur lært um lykkjur og handahóf til að búa til eigin sviðsmynd. Góða
+        skemmtun.
+      SG U3L07 - allSeaGrass_instruction: Bættu við 50 af marhálmi við myndina með
+        því að nota drawAllSeagrass með lykkju. (Smelltu til að sjá ítarlegar leiðbeiningar)
       SG U3L07 - bubbles_instruction: |-
         Add 200 bubbles to the image by writing drawAllBubbles
         with a loop. (Click to see full instructions)
-      SG U3L07 - createTriangleParam_instruction: |-
-        Define a function that accepts
-        a parameter to match the function calls and complete the image. (Click to
-        see full instructions)
+      SG U3L07 - createTriangleParam_instruction: Búðu til fall sem tekur viðeigandi
+        færibreytu og ljúktu við myndina. (Smelltu til að sjá ítarlegar leiðbeiningar)
       SG U3L07 - fish_instruction: |-
         Add 15 fish to the image by writing drawAllFish
         with a loop. (Click to see full instructions)
       SG U3L07 - introSquare_instruction: |-
-        Use a loop to draw a square. Then add
-        another loop to draw many squares each one rotated some amount. (Click to
-        see full instructions)
-      SG U3L07 - loopsWithRandom_instruction: |-
-        Increase the number of iterations
-        to fill the screen with white. (Click to see full instructions)
+        Notaðu lykkju til að teikna ferning. Bættu svo við annarri lykkju til að teikna marga ferninga sem hverjum er snúið einhverjar gráður.
+         (Smelltu til að sjá ítarlegar leiðbeiningar)
+      SG U3L07 - loopsWithRandom_instruction: Notaðu fleiri endurtekningar til að
+        fylla skjáinn með hvítu. (Smelltu til að sjá ítarlegar leiðbeiningar)
       SG U3L07 - randomDots1_instruction: |-
         Increase the number of iterations to fully
         fill the screen with random dots. (Click to see full instructions)
-      SG U3L07 - randomSquare_instruction: |-
-        Draw the figure using a loop. (Click
-        to see full instructions)
+      SG U3L07 - randomSquare_instruction: Notaðu lykkju til að teikna myndina. (Smelltu
+        til að sjá ítarlegar leiðbeiningar)
       SG U3L07 - seaGrass_instruction: |-
         Add a parameter to drawSeagrass that controls
         the number of waves in the grass. (Click to see full instructions)
       SG U3L07 - seaStar_instruction: |-
         Add 5 sea stars to the image by writing drawAllSeaStars
         with a loop. (Click to see full instructions)
-      SG U3L07 - sunBeams_instruction: |-
-        Add 100 sunbeams to the image by writing
-        drawAllSunbeams with a loop. (Click to see full instructions)
-      SG U3L07 - topDownDesign_instruction: |-
-        Get comfortable with the structure of
-        this program, then move on to the next exercise. (Click to see full instructions)
+      SG U3L07 - sunBeams_instruction: Bættu 100 sólargeislum við myndina með því
+        að nota drawAllSunbeams með lykkju. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      SG U3L07 - topDownDesign_instruction: Skoðaðu uppbyggingu þessa forrits þar
+        þú skilur hana og farðu svo í næstu æfingu. (Smelltu til að sjá ítarlegar
+        leiðbeiningar)
       SG U3L07 More Subgoals_instruction: Lestu gegnum skjölunina fyrir penColor()
         og penWidth() áður en þú notar þau til að teikna bláa ferninginn.
       SG U3L08 - createTwoParamTriangle_instruction: |-
@@ -4591,19 +4679,20 @@
       SG U3L08 - drawSquareWithParam_instruction: |-
         Use drawSquare() to recreate the
         image of both squares, this time using parameters. (Click to see full instructions)
-      SG U3L08 - fish_instruction: |-
-        Add a parameter to drawFish that changes the
-        size of the fish drawn. (Click to see full instructions)
-      SG U3L08 - freePlay_instruction: |-
-        Keep adding to your image by making more
-        calls to your new functions with parameters. (Click to see full instructions)
+      SG U3L08 - fish_instruction: Bættu færibreytu við drawFish sem stjórnar stærð
+        fisksins. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      SG U3L08 - freePlay_instruction: Haltu áfram að bæta við myndina með því að
+        kalla oftar á nýju föllin þín með færibreytunum. (Smelltu til að sjá ítarlegar
+        leiðbeiningar)
       SG U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
-      SG U3L08 - introUnderTheSea_instruction: |-
-        Add an extra fish, starfish, and
-        piece of seagrass to the image. Look at, but don't change, the functions
-        that create them. (Click to see full instructions)
+      SG U3L08 - introUnderTheSea - recovery_instruction: Bættu fiski, krossfiski
+        og marhálmi við myndina. Skoðaðu en ekki breyta föllunum sem búa þá til. (Smelltu
+        til að sjá ítarlegar leiðbeiningar)
+      SG U3L08 - introUnderTheSea_instruction: Bættu fiski, krossfiski og marhálmi
+        við myndina. Skoðaðu en ekki breyta föllunum sem búa þá til. (Smelltu til
+        að sjá ítarlegar leiðbeiningar)
       SG U3L08 - multiParamFish_instruction: |-
         Add three parameters to your drawFish
         function to accept red, green and blue values to make your fish different
@@ -4611,28 +4700,36 @@
       SG U3L08 - paramsToStarfish_instruction: |-
         Add a parameter to drawStarfish that
         changes the size of the starfish drawn. (Click to see full instructions)
-      SG U3L08 - randomInput_instruction: |-
-        Use the randomNumber() blocks to test
-        the functions you designed with random input. (Click to see full instructions)
+      SG U3L08 - randomInput_instruction: Notaðu randomNumber() kubbana til að prófa
+        föllin sem þú bjóst til með handahófskennsu inntaki, (Smelltu til að sjá ítarlegar
+        leiðbeiningar)
       SG U3L08 - seaGrass_instruction: |-
         Add a parameter to drawSeagrass that changes
         the size of the piece of seagrass drawn. (Click to see full instructions)
-      SG U3L08 - squareTwoParams_instruction: |-
-        Call drawSquare() to complete the
-        drawing of two squares. (Click to see full instructions)
-      SG U3L08 comments_instruction: |-
-        Use the randomNumber() blocks to test the functions
-        you designed with random input. (Click to see full instructions)
-      SG U3L2 Using Simple Commands_instruction: |-
-        Draw a 1x1 square above and to
-        the left of the turtle's starting position. Click to see full instructions.
-      SG U3L2_Turtle3by3Grid_instruction: |-
-        Draw a 3x3 grid to the front and right
-        of the turtle as efficiently as possible. The turtle should end at its original
-        location, facing its original direction. (Click to see full instructions)
-      SG U3L2_TurtleSquare_right_instruction: |-
-        Draw a square to the front and to
-        the right of the starting location. (Click to show full instructions)
+      SG U3L08 - squareTwoParams_instruction: Kallaðu á drawSquare() til að ljúka
+        við ferningana tvo. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      SG U3L08 comments_instruction: Notaðu randomNumber() kubbana til að prófa föllin
+        sem þú bjóst til með handahófskennsu inntaki, (Smelltu til að sjá ítarlegar
+        leiðbeiningar)
+      SG U3L08 how to add comments_instruction: Notaðu randomNumber() kubbana til
+        að prófa föllin, sem þú bjóst til, með handahófskenndu inntaki. (Smelltu til
+        að sjá ítarlegar leiðbeiningar)
+      SG U3L2 Using Simple Commands part 1_instruction: |-
+        Draw a 1x1 square above
+        and to the left of the turtle's starting position. Click to see full instructions.
+      SG U3L2 Using Simple Commands_instruction: Teiknaðu 1x1 ferning ofan við og
+        vinstra megin við upphafsstað skjaldbökunnar. Smelltu til að sjá ítarlegar
+        leiðbeiningar.
+      SG U3L2_Add-subgoals_instruction: Teiknaðu 3x3 grind fyrir ofan og hægra megin
+        við skjaldbökuna. Reyndu að gera það með sem allra fæstum skipunum. Skjaldbakan
+        á að enda á upphaflega staðnum og snúa í upphaflega átt. (Smelltu til að sjá
+        ítarlegar leiðbeiningar)
+      SG U3L2_Turtle3by3Grid_instruction: Teiknaðu 3x3 grind fyrir ofan og hægra megin
+        við skjaldbökuna. Reyndu að gera það með sem allra fæstum skipunum. Skjaldbakan
+        á að enda á upphaflega staðnum og snúa í upphaflega átt. (Smelltu til að sjá
+        ítarlegar leiðbeiningar)
+      SG U3L2_TurtleSquare_right_instruction: Teiknaðu ferning framan við og hægra
+        megin við upphafsstaðinn. (Smelltu til að sjá ítarlegar leiðbeiningar)
       SGU3L07 - randomDots1_instruction: |-
         Increase the number of iterations to fully
         fill the screen with random dots. (Click to see full instructions)
@@ -5674,6 +5771,9 @@
       U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
+      U3L08 - introUnderTheSea with comments_instruction: Bættu fiski, krossfiski
+        og marhálmi við myndina. Skoðaðu en ekki breyta föllunum sem búa þá til. (Smelltu
+        til að sjá ítarlegar leiðbeiningar)
       U3L08 - introUnderTheSea_instruction: |-
         Add an extra fish, starfish, and piece
         of seagrass to the image. Look at, but don't change, the functions that create
@@ -5704,6 +5804,9 @@
       U3L08 - triangleTwoParams_instruction: |-
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
+      U3L08 how to add comments_instruction: Notaðu randomNumber() kubbana til að
+        prófa föllin sem þú bjóst til með handahófskennsu inntaki, (Smelltu til að
+        sjá ítarlegar leiðbeiningar)
       U3L1 - Simulation - Template_instruction: |-
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
@@ -6466,9 +6569,8 @@
         you add are saved to the database.  Verify that after restarting your app,
         the contacts you added no longer show in the app, but still exist in the database.
         (Click to see full instructions)
-      U4 Model App_instruction: |-
-        Add a large red button to your screen using Design
-        Mode. (Click for full instructions.)
+      U4 Model App_instruction: Bættu stórum rauðum hnappi á skjáinn með Hönnunarstöðunni.
+        (Smelltu til að sjá ítarlegar leiðbeiningar)
       U4 Model Design 1_instruction: |-
         Add a large red button to your screen using
         Design Mode. (Click for full instructions.)
@@ -6563,6 +6665,10 @@
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
+      Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
+      Valentine_playlab_01_instruction: "Program Kiki (Actor 1) to move left and\nright
+        when the left and right arrows are pressed. When Kiki is clicked, she\nshould
+        throw hearts towards her friends. "
       Vigenere_instruction: Test
       WhileAdventure_instruction: |-
         Our adventurer wants to collect coins. Can you
@@ -6612,6 +6718,8 @@
         If looping a 3 degree turn 60 times makes a half circle, which of
         these blocks of code will make an additional quarter circle for the corners?
       aEfreeplay_instruction: Free Play!
+      allHallows2017_instruction: Lokaðu starfsmenn Code.org inni í litaboxinu með
+        því að teikna ferning með 320 díla hliðar!
       allthethings data blocks test_instruction: |-
         Please sign in to test applab levels
         (By design, applab levels only work if signed in. Normally, we make people
@@ -6776,11 +6884,11 @@
         Getur þú teiknað hús? Gefðu því útlit eftir eigin smekk. Reyndu að koma auga á mynstur sem endurtaka sig!
       course1_artist_loops_challenge2_instruction: Komum í leik! Teiknaðu eins mörg
         X og þú getur! Nærðu að hafa 3 í röð?
-      course1_artist_loops_challenge3_instruction: Tíst tíst! Getur þú hjálpað mér
-        að búa til tvö fuglahús?
+      course1_artist_loops_challenge3_instruction: '"Getur þú hjálpað mér að búa til
+        tvö fuglahús?"'
       course1_artist_loops_challenge4_instruction: |-
-        Kominn tími til að varpa teningunum!
-        Getur þú hjálpað mér að teikna þá?
+        "Kominn tími til að varpa teningunum!
+        Getur þú hjálpað mér að teikna þá?"
       course1_collector_loops_challenge1_instruction: Getur þú hjálpað mér að koma
         auga á villur? Ég veit í hvaða átt ég vil fara, en ég er ekki viss um skrefin
         sem þarf að taka.
@@ -6791,21 +6899,18 @@
       course1_collector_loops_challenge4_instruction: Náum þessum fjársjóði! Hjálpaðu
         mér að færast eftir hverri röð og koma svo til baka til að byrja þá næstu.
         Getur þú séð mynstur?
-      course1_maze_debugging_challenge1_instruction: |-
-        Debug this level. Remove the
-        extra blocks and add the missing blocks. Get the bird to the pig!
-      course1_maze_debugging_challenge2_instruction: |-
-        Debug this level. These are
-        the right blocks, but they're in the wrong order!
+      course1_maze_debugging_challenge1_instruction: Lagaðu þetta borð. Fjarlægðu
+        óþarfa kubba og bættu inn þeim sem vantar. Láttu fuglinn ná grísnum!
+      course1_maze_debugging_challenge2_instruction: Leiðréttu þetta borð. Þetta eru
+        réttu kubbarnir en í rangri röð!
       course1_maze_seq_challenge1_instruction: Fylgdu slóðinni og leiddu mig að svínka.
         Forðastu TNT sprengjuna annars verður fjaðrafok!
       course1_maze_seq_challenge2_instruction: "Þú mátt aðeins fara mest fjórum sinnum
         í hverja átt. Getur þú fundið leiðina áður en kubbarnir klárast?"
-      course1_playlab_events_challenge1_instruction: Hvar eru vinir mínir að fela
-        sig? Getur þú skrifað kóða svo vinir mínir komi í ljós?
-      course1_playlab_events_challenge2_instruction: Höldum partí! Láttu hvern vin
-        gera eitthvað þegar það er smellt eða slegið á hann. Hvað segja dýrin? Hvað
-        annað mun gerast?
+      course1_playlab_events_challenge1_instruction: '"Hvar eru vinir mínir að fela
+        sig? Getur þú skrifað kóða svo vinir mínir komi í ljós?"'
+      course1_playlab_events_challenge2_instruction: '"Höldum partí! Láttu hvern vin
+        gera eitthvað þegar það er smellt eða slegið á hann."'
       course2_artist_nestedLoops_challenge1_instruction: Getur þú fundið út hvernig
         svona mynd er búin til?
       course2_artist_nestedLoops_challenge2_instruction: Getur þú fundið út hvernig
@@ -6819,13 +6924,11 @@
         búðu til allt hunangið.
       course2_bee_conditionals_challenge2_instruction: Safnaðu öllum blómasafnum eða
         búðu til allt hunangið.
-      course2_collector_loops_challenge2_instruction: Leitum að fjársjóð - með lykkjum!
-        Hjálpaðu safnaranum með því að fjarlægja villur úr þessum kóða. Náðu öllum
-        fjársjóðnum!
+      course2_collector_loops_challenge2_instruction: Náðu öllum fjársjóðnum!
       course2_collector_prog_challenge1_instruction: Gáðu vandlega! Getur þú safnað
         öllum *10* fjársjóðunum?
-      course2_collector_prog_challenge2_instruction: Hér má finna *20* fjársjóði.
-        Safnaðu að minnsta kosti helmingnum til að ljúka þessari áskorun!
+      course2_collector_prog_challenge2_instruction: Hér má finna 20 gersemar. Safnaðu
+        að minnsta kosti helmingnum til að ljúka þessari áskorun!
       course2_harvester_loops_challenge1_instruction: Safnaðu öllu korninu.
       course2_harvester_loops_challenge2_instruction: |-
         Safnaðu öllu kálinu.
@@ -6880,9 +6983,9 @@
         svo til að búa til þína eigin flottu hönnun!"
       course3_artist_functions_challenge2_instruction: Prófaðu þennan kóða til að
         sjá hvernig hann virkar. Breyttu svo forritinu eins og þú vilt!
-      course3_bee_debugging_challenge1_instruction: |-
-        Watch how the bee gets the nectar.
-        Can you use the same kind of pattern to help the bee make all of the honey?
+      course3_bee_debugging_challenge1_instruction: Taktu eftir hvernig býflugan nær
+        í blómasafann. Getur þú notað eins reglu til að hjálpa henni að búa til allt
+        hunangið?
       course3_bee_functions_challenge1_instruction: "Þú þarft að leysa þessa þraut
         á eigin spýtur. Hún gæti leynt á sér!"
       course3_bee_functions_challenge2_instruction: "Þú þarft að leysa þessa þraut
@@ -6970,9 +7073,9 @@
         að safna öllu grænmetinu í röðinni. Láttu `frá` lykkjuna telja upp í mismunandi
         hámarksgildi með því að nota stikann `lengd`. Hafðu forritið eins stutt og
         hægt er með því að nota aðra `frá` lykkju utan við fallið.
-      course4_collector_nested_loops_challenge2_instruction: |-
-        Við skulum leita að fjársjóði
-        - með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er mögulegt að ná öllum 4.
+      course4_collector_nested_loops_challenge2_instruction: Hjálpaðu safnaranum að
+        ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er
+        mögulegt að ná öllum 4.
       course4_harvester_nested_loops_challenge1_instruction: '"Ég þarf aðstoð á býlinu!
         Hjálpaðu mér að slá þetta korn með kubbunum í verkfærakassanum."'
       course4_playlab_variables_challenge1_instruction: Notaðu þessa kubba til að
@@ -7003,16 +7106,21 @@
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_forVideo_instruction: Notaðu "endurtaka" lykkjuna til
+        að bæta öldum á vatnið.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: "Áskorun: Lagaðu tröppurnar."
-      courseA_artist_loops_challenge2_instruction: Tíst tíst! Getur þú hjálpað mér
-        að búa til tvö fuglahús?
+      courseA_artist_loops_challenge2_instruction: '"Getur þú hjálpað mér að búa til
+        tvö fuglahús?"'
+      courseA_artist_loops_challenge2a_instruction: |-
+        *"Help me get these three tents
+        set up!"*
       courseA_artist_loops_challenge3_instruction: Komum í leik! Teiknaðu eins mörg
         X og þú getur! Nærðu að hafa 3 í röð?
       courseA_collector_loops1_instruction: Láttu Laurel hreyfast og safna eins miklum
         fjársjóði og þú getur!
-      courseA_collector_loops10_instruction: Hjálpaðu Laurel að ná öllum fjársjóðnum
-        úr þessum djúpa dal.
+      courseA_collector_loops10_instruction: Hjálpaðu Láru að ná öllum fjársjóðum
+        á þessari slóð.
       courseA_collector_loops11_instruction: Hjálpaðu Laurel að ná öllum fjársjóðnum
         úr þessum helli.
       courseA_collector_loops12_instruction: Eureka! Náðu eins miklum fjársjóði og
@@ -7030,11 +7138,29 @@
       courseA_collector_loops8_instruction: Skrifaðu kóðann til að ná öllum fjársjóðnum.
       courseA_collector_loops9_instruction: "**Áskorun:** Fjársjóðurinn fer alla leið
         upp þessar tröppur! Hjálpaðu Laurel að ná honum öllum."
-      courseA_collector_loops_challenge1_instruction: Getur þú hjálpað mér að koma
+      courseA_collector_loops_challenge1_instruction: '*"Getur þú hjálpað mér að koma
         auga á villur? Ég veit í hvaða átt ég vil fara, en ég er ekki viss um skrefin
-        sem þarf að taka.
-      courseA_collector_loops_challenge2_instruction: "Í þetta sinn mátt þú að eins
-        nota einn af hverjum örvarkubbi. Náðu öllum fjársjóðnum! "
+        sem þarf að taka."*'
+      courseA_collector_loops_challenge2_instruction: 'Náðu öllum fjársjóðnum! '
+      courseA_collector_loops_challenge2kp_instruction: Safnaðu minnst *3* gersemum
+        til að leysa þetta borð.
+      courseA_collector_preLoops1_instruction: |-
+        Þetta er Lára ævintýramær!\r
+        \r
+        Ýttu á "Keyra" til að sjá hana ganga að fjársjóðnum og grípa hann.
+      courseA_collector_preLoops2_instruction: |-
+        Fínt! Nú getur þú bætt við kóða! \r
+        \r
+        Bættu við kubbnum `sækja fjársjóð` neðst í forritinu og smelltu á "Keyra".
+      courseA_collector_preLoops3_instruction: Tengdu tvo `A-->` kubba og einn `sækja
+        fjársjóð` kubb við forritið neðst og smelltu svo á "Keyra".
+      courseA_collector_preLoops4_instruction: Geturðu fundið lausn á þessari þraut?
+      courseA_collector_preLoops5_instruction: Náðu 1 af þessum 2 gimsteinum til að
+        leysa þrautina.
+      courseA_collector_preLoops6_instruction: Náðu báðum dýrgripunum til að leysa
+        þessa þraut.
+      courseA_collector_preLoops7_instruction: Náðu öllum þremur hrúgunum til að klára
+        þennan áfanga.
       courseA_forVideoTest_artist_instruction: Notaðu "endurtaka" lykkjuna til að
         bæta öldum á vatnið.
       courseA_maze_seq1_instruction: Komdu fuglinum til vonda svínsins!
@@ -7057,8 +7183,8 @@
       courseA_maze_seq8_instruction: Leystu þetta borð og komdu fuglinum til svínsins!
       courseA_maze_seq9_instruction: Lagaðu villur í þessu borði með þvi að bæta við
         kubbum svo fuglinn nái svíninu!
-      courseA_maze_seq_challenge1_instruction: Lagaðu þetta borð. Fjarlægðu óþarfa
-        kubba og bættu inn þeim sem vantar. Láttu fuglinn ná grísnum!
+      courseA_maze_seq_challenge1_instruction: Lagaðu þetta borð. Láttu fuglinn ná
+        grísnum!
       courseA_maze_seq_challenge2_instruction: Fylgdu slóðinni og leiddu mig að svínka.
         Forðastu TNT sprengjuna annars verður fjaðrafok!
       courseA_playLab_events1_instruction: |-
@@ -7081,14 +7207,12 @@
       courseA_playLab_events7_instruction: |-
         Add anything you want to this game.  Can
         you make the dinosaur disappear when Jorge runs into him?
-      courseA_playlab_events_challenge1_instruction: Hvar eru vinir mínir að fela
+      courseA_playlab_events_challenge1_instruction: '"Hvar eru vinir mínir að fela
+        sig? Getur þú skrifað kóða svo vinir mínir komi í ljós?"'
+      courseA_playlab_events_challenge2_instruction: '"Höldum partí! Láttu hvern vin
+        gera eitthvað þegar það er smellt eða slegið á hann."'
+      courseA_playlab_events_challengeClone_instruction: Hvar eru vinir mínir að fela
         sig? Getur þú skrifað kóða svo vinir mínir komi í ljós?
-      courseA_playlab_events_challenge2_instruction: Höldum partí! Láttu hvern vin
-        gera eitthvað þegar það er smellt eða slegið á hann. Hvað segja dýrin? Hvað
-        annað mun gerast?
-      courseA_playlab_events_challengeClone_instruction: |-
-        Where are my friends hiding?
-        Can you write code to show the rest of my friends?
       courseA_toMakeLoopsVideo_Collector_instruction: "Þú látið innihald lykkju endurtaka
         sig aftur og aftur!"
       courseA_video_events_instruction: Need a better playlab/events combo
@@ -7098,16 +7222,14 @@
       courseB_artist_loops10_instruction: |-
         Use what you have learned to draw a picture
         of what you think the artist saw when he got home.
-      courseB_artist_loops2_instruction: |-
-        The Artist is trying to draw a line **6**
-        times, but can't get it right.  Can you help?
+      courseB_artist_loops2_instruction: Listamaðurinn er að reyna að teikna línu
+        **6** sinnum en tekst það ekki. Getur þú hjálpað?
       courseB_artist_loops3_instruction: Hjálpaðu listamanninum að teikna línu 7 sinnum
         til að búa til garðvegg.
       courseB_artist_loops4_instruction: "Now we need to get the soil ready to plant.\nFind
         the bugs in the code and help the artist prepare the ground. "
-      courseB_artist_loops5_instruction: |-
-        Time to fix the stairs!  Repeat this pattern
-        **5** times so the artist can reach the top of the bushes.
+      courseB_artist_loops5_instruction: "Það þarf að laga þessar tröppur! Endurtaktu
+        þetta mynstur **5** sinnum svo að listamaðurinn nái efst í runnana."
       courseB_artist_loops6_instruction: Klifraðu upp greinina og sjáðu hvert hún
         liggur.
       courseB_artist_loops7_instruction: "**Áskorun:** Þetta er falinn garður! Göngum
@@ -7118,8 +7240,8 @@
         Let's take the short way home, over the
         pond. Can you help the artist stay on the stones?
       courseB_artist_loops_challenge1_instruction: |-
-        Kominn tími til að varpa teningunum!
-        Getur þú hjálpað mér að teikna þá?
+        "Kominn tími til að varpa teningunum!
+        Getur þú hjálpað mér að teikna þá?"
       courseB_artist_loops_challenge2_instruction: Komum í leik! Teiknaðu eins mörg
         X og þú getur! Nærðu að hafa 3 í röð?
       courseB_collector_loops1_instruction: "Þetta er Laurel ævintýrahetja! Getur
@@ -7151,6 +7273,9 @@
       courseB_collector_loops_challenge2_instruction: Náum þessum fjársjóði! Hjálpaðu
         mér að færast eftir hverri röð og koma svo til baka til að byrja þá næstu.
         Getur þú séð mynstur?
+      courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: "Í þetta sinn mátt þú að eins
         nota einn af hverjum örvarkubbi. Náðu öllum fjársjóðnum! "
       courseB_collector_prog1_instruction: "Þetta er Laurel ævintýrahetja! Getur þú
@@ -7227,11 +7352,10 @@
       courseB_playlab_events_challenge2_template_instruction: Látum dýrin hverfa þegar
         þú smellir á þau! Þú getur líka bætt við hljóðum og skorað stig til að búa
         til leikinn Dýraklukk!
-      courseB_starWars_prog1_instruction: Hjálpaðu BB-8 að safna brotamálminum!
+      courseB_starWars_prog1_instruction: '"Sæktu brotamálminn, BB-8!"'
       courseB_starWars_prog10_instruction: Hjálpaðu BB-8 að safna glóandi brotamálminum
       courseB_starWars_prog11_instruction: Hjálpaðu BB-8 að safna glóandi brotamálminum
-      courseB_starWars_prog2_instruction: Hjálpaðu BB-8 að safna **öllum** glóandi
-        brotamálminum
+      courseB_starWars_prog2_instruction: Náðu öllum málminum.
       courseB_starWars_prog3_instruction: Hjálpaðu BB-8 að safna **öllum** glóandi
         brotamálminum
       courseB_starWars_prog4_instruction: Hjálpaðu BB-8 að safna **öllum** glóandi
@@ -7301,7 +7425,7 @@
       courseC_artist_loops2_instruction: Nú þegar uppvakningurinn þekkir leiðina þarf
         að hjálpa honum að grafa holur á slóðinni til að setja niður fleiri blóm!
       courseC_artist_loops2a_instruction: Notaðu nú lykkju til að snúa fuglinum um
-        36 gráður 10 sinnum.
+        30 gráður 12 sinnum.
       courseC_artist_loops3_instruction: Fínt! Blómin eru að springa út svo nú þarf
         að hjálpa uppvakningnum að setja vin með 50 díla millibili til að verja blómin
         þar til þau eru fullvaxin.
@@ -7359,9 +7483,9 @@
         Það eru margar lausnir á þessari þraut svo þú getur haft gaman af. Stysta mögulega lausnin hefur 6 kubba, en notaðu eins marga og þér sýnist!
       courseC_artist_prog_challenge2_instruction: "*Hjálpaðu mér að teikna gulu línurnar
         á þessum vegi!*"
-      courseC_collector_loops_challenge2_instruction: Leitum að fjársjóð - með lykkjum!
-        Hjálpaðu safnaranum með því að fjarlægja villur úr þessum kóða. Náðu öllum
-        fjársjóðnum!
+      courseC_artist_prog_challenge2a_instruction: "*Hjálpaðu mér að teikna gulu línurnar
+        á þessum vegi!*"
+      courseC_collector_loops_challenge2_instruction: Náðu öllum fjársjóðnum!
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
         you can help Laurel collect some treasure.
@@ -7392,44 +7516,35 @@
         the stage!
       courseC_collector_prog_challenge1_instruction: Gáðu vandlega! Getur þú safnað
         öllum *10* fjársjóðunum?
-      courseC_collector_prog_challenge2_instruction: Hér má finna *20* fjársjóði.
-        Safnaðu að minnsta kosti helmingnum til að ljúka þessari áskorun!
-      courseC_flappy_embed_events_instruction: |-
-        Here's an example of a game that
-        you're about to create yourself! Play through it one or two times to get
-        an idea of what you are about to make.
-      courseC_flappy_events1_instruction: |-
-        Attach the `flap normal amount` block
-        to the `when click` event, then press "Run".    Click or tap on the play
-        space to move Flappy to the target.
-      courseC_flappy_events10_instruction: 'Create your own Flappy game! '
-      courseC_flappy_events2_instruction: |-
-        Try adding a block that sets the level
-        speed when the "Run" button is pressed.  Play the game and flap to the target
-        to continue.
-      courseC_flappy_events3_instruction: |-
-        Attach the `end game` block to the `when
-        hit the ground` event.   Play the game and crash the bird into the ground
-        to continue.
-      courseC_flappy_events4_instruction: |-
-        Attach a block to the `when hit an obstacle`
-        event so that the game ends when Flappy crashes into the first set of pipes.
-      courseC_flappy_events5_instruction: |-
-        Add a block to the `when pass an obstacle`
-        event, then press "Run" to score a point by flying Flappy through the first
-        set of pipes.
-      courseC_flappy_events6_instruction: |-
-        See if you can still score a point after
-        making Flappy flap either a smaller or larger amount each time you click.
-      courseC_flappy_events7_instruction: |-
-        Next, try changing the scene by attaching
-        a block to the `when run` event.
-      courseC_flappy_events8_instruction: |-
-        Try setting a **random** scene when other
-        events happen...for example, when passing an obstacle.
-      courseC_flappy_events9_instruction: |-
-        To mix things up, instead of ending the
-        game when Flappy hits an obstacle, try setting the score back to 0.
+      courseC_collector_prog_challenge2_instruction: Hér má finna 20 gersemar. Safnaðu
+        að minnsta kosti helmingnum til að ljúka þessari áskorun!
+      courseC_flappy_embed_events_instruction: Hér er dæmi um leik sem þú átt bráðum
+        að búa til á eigin spýtur! Spilaðu hann einu sinni eða tvisvar til að fá hugmynd
+        um hvað þú ert að fara að búa til.
+      courseC_flappy_events1_instruction: Festu `blaka venjulega oft` kubb til `þegar
+        smellt` atburðinn og smelltu svo á "Keyra".  Smelltu eða sláðu á leiksvæðið
+        til að koma Flappy til marksins.
+      courseC_flappy_events10_instruction: 'Búðu til þinn eigin Flappy leik! '
+      courseC_flappy_events2_instruction: Prófaðu að bæta við kubbi sem stillir hraða
+        borðsins þegar ýtt er á "Keyra". Spilaðu leikinn og fljúgðu til marksins til
+        að ljúka borðinu.
+      courseC_flappy_events3_instruction: Tengdu `ljúka leik` kubb við `þegar rekst
+        á jörð` atburðinn.  Spilaðu leikinn og láttu fuglinn hrapa til jarðar til
+        að ljúka borðinu.
+      courseC_flappy_events4_instruction: Tengdu kubb við `þegar rekst á hindrun`
+        atburðinn svo að leiknum ljúki þegar Flappy rekst á fyrstu rörin.
+      courseC_flappy_events5_instruction: Tengdu kubb við `þegar framhjá hindrun`
+        atburðinn og ýttu svo á "Keyra" til að skora stig með því að fljúga Flappy
+        í gegnum fyrstu rörin.
+      courseC_flappy_events6_instruction: Prófaðu hvort þú getir enn skorað stig eftir
+        að þú lætur Flappy blaka vængjunum annað hvort meira eða minna í hvert skipti
+        sem þú smellir.
+      courseC_flappy_events7_instruction: Prófaðu svo að breyta umhverfinu með því
+        að tengja kubb við `þegar keyrt` kubbinn.
+      courseC_flappy_events8_instruction: Prófaðu að láta umhverfið breytast af **handahófi**
+        þegar einhver atburður verður... til dæmis að komast framhjá hindrun.
+      courseC_flappy_events9_instruction: Breyttu þessu nú þannig að í stað þess að
+        leikurinn endi þegar Flappy rekst á hindrun þá stillist skorið aftur á 0.
       courseC_harvester_loops1_instruction: Use loops to pick all of the pumpkins.
       courseC_harvester_loops10_instruction: |-
         Collect all of the corn and all of
@@ -7460,9 +7575,13 @@
         Collect all of the corn and all of the
         pumpkins.
       courseC_harvester_loops_challenge1_instruction: Safnaðu öllu korninu.
+      courseC_harvester_loops_challenge1a_instruction: Safnaðu öllu korninu.
       courseC_harvester_loops_challenge2_instruction: |-
         Safnaðu öllu kálinu.
         Forðastu tré og tún!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn, all of
+        the lettuce, and all of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -7519,6 +7638,8 @@
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
       courseC_maze_loops_challenge1_instruction: 'Nú vill Scrat prófa að nota lykkjur
         til að finna akarnið! '
+      courseC_maze_loops_challenge1a_instruction: 'Nú vill Scrat prófa að nota lykkjur
+        til að finna akarnið! '
       courseC_maze_loops_challenge2_instruction: Leitum að fjársjóði - með lykkjum!
         Hjálpaðu safnaranum með því að fjarlægja villur úr þessum kóða. Náðu öllum
         fjársjóðnum!
@@ -7553,11 +7674,9 @@
       courseC_maze_programming_challenge2_instruction: Stundum er fleiri en leið til
         að leysa þraut. Stundum er fljótlegra að fara aftur á bak heldur en áfram!
       courseC_playLab_embedded_instruction: |-
-        Here's a game for you to play! To win,
-        use your arrow keys to get the penguin to run into the octopus.\r
+        Hér er leikur sem þú getur spilað! Þú sigrar ef þér tekst að nota örvarlyklana til að láta mörgæsina rekast á kolkrabbann.\r
         \r
-        Once
-        you are done, you will learn how to make this game!
+        Eftir þetta munt þú læra að búa til svona leik!
       courseC_puppy_loops10_instruction: You are doing great! Keep it up!
       courseC_puppy_loops11_instruction: |-
         You are almost there! This time, choose
@@ -7580,12 +7699,12 @@
       courseC_starWars_loops1_predict1_instruction: BB-8 mun tína upp öll málmbrot
         á slóðinni sem hann fer eftir. Notaðu 5 eins kubba til að láta BB-8 tína upp
         allan brotamálm á leiksvæðinu.
-      courseC_starWars_loops2_instruction: Getur þú látið BB-8 tína upp allan brotamálminn
-        með því að búa til lykkju sem notar aðeins einn kubb innan í "endurtaka" kubbi?
+      courseC_starWars_loops2_instruction: Náðu öllum brotamálminum með því að búa
+        til lykkju sem notar aðeins einn kubb innan í `endurtaka` kubbi.
       courseC_starWars_loops4_instruction: Í þessari þraut munu tvær "endurtaka" lykkjur
         hjálpa þér að láta BB-8 komast yfir allan brotamálminn með sem fæstum kubbum!
-      courseC_starWars_loops5_instruction: "*Láttu BB-8 tína upp allan brotamálminn
-        eins fljótt og hægt er!*"
+      courseC_starWars_loops5_instruction: Láttu BB-8 tína upp allan brotamálminn
+        eins fljótt og hægt er!
       courseC_starWars_loops6_instruction: |-
         Loops even work with more than one block
         inside!  Can you loop this sequence?
@@ -7625,6 +7744,8 @@
         \r
         See what happens when we start to
         get creative with the bits!
+      courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
+        binary! "
       courseD_artist_binary_challenge0_instruction: Prófaðu að nota faldaðar lykkjur
         til að ljúka þessari teikningu.
       courseD_artist_binary_challenge1_instruction: "Þú mátt aðeins nota hvert tvíundargildi
@@ -7634,8 +7755,10 @@
         koma þessu merki í fyrra horf?
       courseD_artist_binary_challenge3_instruction: Hefurðu nægilegt úthald til að
         koma þessu merki í fyrra horf?
-      courseD_artist_embed_frozen_instruction: Press Run to see a snowflake design!
-      courseD_artist_embed_frozen2_instruction: Press Run to see a snowflake design.
+      courseD_artist_embed_frozen_instruction: "Ýttu á Keyra til að sjá teikningu
+        af snjókorni!"
+      courseD_artist_embed_frozen2_instruction: "Ýttu á Keyra til að sjá teikningu
+        af snjókorni."
       courseD_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
@@ -7684,9 +7807,9 @@
         \r
         The windows are 20 pixel
         squares, each 20 pixels apart.
-      courseD_artist_nestedLoops4_instruction: |
+      courseD_artist_nestedLoops4_instruction: |-
         Great!  Do the same thing with these
-        circles.\r
+        circles.
       courseD_artist_nestedLoops5_instruction: |-
         What happens if you also turn 90
         degrees between circles?
@@ -7714,8 +7837,8 @@
         svona mynd er búin til?
       courseD_artist_nestedLoops_challenge2_instruction: Getur þú fundið út hvernig
         svona mynd er búin til?
-      courseD_artist_project1_instruction: |
-        Teiknaðu lítið form með breidd á milli **20 og 50** díla. Það má vera hvað sem er.\r
+      courseD_artist_project1_instruction: 'Teiknaðu lítið form með breidd á milli
+        **20 og 50** díla. Það má vera hvað sem er.  '
       courseD_artist_project1a_instruction: Teiknaðu tröppugang sem notar snúninga
         á milli 75 og 105 gráða.
       courseD_artist_project2_instruction: Teiknaðu nú tvö eða þrjú svona form í röð!
@@ -7730,9 +7853,8 @@
         - Hvað gerist ef þú styttir eða lengir tígulmynstrið?\r
         - Hvernig kemur það út að teikna eitt snjókorn yfir annað?
       courseD_artist_project5_instruction: Leiktu þér með snjókornin!
-      courseD_artist_project_embedded_instruction: |-
-        Here's what you will soon be
-        making!
+      courseD_artist_project_embedded_instruction: "Þetta er það sem þú ert að fara
+        að búa til!"
       courseD_artist_ramp11_instruction: Búðu nú til ferning með listamanninum!
       courseD_artist_ramp12_instruction: Notaðu það sem þú hefur lært til að teikna
         þennan þríhyrning innan í ferningi.
@@ -7744,9 +7866,10 @@
         all of the honey.
       courseD_bee_conditionals1_predict1_instruction: Gáðu hvort skýið feli blóm.
         Sæktu blómasafann, ef svo er.
-      courseD_bee_conditionals2_instruction: |
-        Check underneath every cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
+        it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_test_instruction: "Check underneath every cloud to\nsee
+        if it is hiding a flower before you get nectar.  "
       courseD_bee_conditionals3_instruction: |-
         Help the bee collect all of the nectar.
         \r
@@ -7803,6 +7926,9 @@
       courseD_bee_debugging_challenge1_instruction: Taktu eftir hvernig býflugan nær
         í blómasafann. Getur þú notað eins reglu til að hjálpa henni að búa til allt
         hunangið?
+      courseD_bee_debugging_challenge1a_instruction: Taktu eftir hvernig býflugan
+        nær í blómasafann. Getur þú notað eins reglu til að hjálpa henni að búa til
+        allt hunangið?
       courseD_bee_debugging_challenge2_instruction: Taktu eftir hvernig býflugan nær
         í blómasafann. Getur þú notað eins reglu til að hjálpa henni að búa til allt
         hunangið?
@@ -7833,80 +7959,59 @@
       courseD_bee_nested_loops_challenge2_instruction: Komum í fjársjóðaleit - með
         lykkjum! Hjálpaðu safnaranum að ná minnst tveimur fjársjóðshrúgum en aðeins
         með kubbunum í verkfærakassanum.
-      courseD_bounce_embed_endgame_instruction: |-
-        Use the left and right arrows to
-        move the paddle. See how many points you can get before your opponent scores
-        twice!
-      courseD_bounce_embedded_instruction: Write Instructions Here
-      courseD_bounce_events1_instruction: |-
-        Attach a block to the "when left arrow"
-        block and press "Run" to move the player to the flag.
-      courseD_bounce_events10_instruction: |-
-        There is now a goal at the top. Attach
-        the "score point" and "score opponent point" blocks to the "when ball
-        in goal" and "when ball misses paddle" blocks to make a game. See how many
-        points you can score before your opponent scores twice.
-      courseD_bounce_events10s_instruction: "Attach the `score point` block to the\n`when
-        ball in goal` event and the `score opponent point` block to the `when\nball
-        misses hand` event to make a game. "
-      courseD_bounce_events11_instruction: |-
-        You can now attach blocks to the "when
-        run" block. You have to attach the new "launch new ball" block in more
-        than one place. Also, try changing the scene or the speed of the paddle and
-        the ball and see how many points you can score before your opponent scores
-        twice.
-      courseD_bounce_events11s_instruction: "Attach the `throw new ball` block in\nall
-        of the places where the game needs a new ball. "
-      courseD_bounce_events12_instruction: |-
-        Create your own Bounce game. You can
-        change all the visuals and the rules. When you're done, click Finish to let
-        friends try your game on their phones.
-      courseD_bounce_events12s_instruction: |-
-        Make this game your own. You can change
-        all the visuals and the rules. When you're done, click "Finish" to let
-        friends try your game on their phones.
-      courseD_bounce_events1s_instruction: |-
-        Attach a block to the "when left arrow"
-        block and press "Run" to move the player to the net.
-      courseD_bounce_events2_instruction: |-
-        Attach a block to the "when right arrow"
-        and "when left arrow" blocks. Move the paddle to reach both finish targets.
-      courseD_bounce_events2s_instruction: |-
-        Now, attach a block to the `when right
-        event` so that the hand can get to both baskets.
-      courseD_bounce_events3_instruction: |-
-        Now try something similar with the "when
-        up arrow" block. Move the paddle to the finish target at the top.
-      courseD_bounce_events3s_instruction: |-
-        Now try something similar with the "when
-        up arrow" block. Move the paddle to the finish target at the top.
-      courseD_bounce_events4_instruction: |-
-        This time you need to add four blocks.
-        Move the paddle to all four finish targets to complete this puzzle.
-      courseD_bounce_events4s_instruction: |-
-        This time you need to add four blocks.
-        Move the paddle to all four finish targets to complete this puzzle.
-      courseD_bounce_events5_instruction: |-
-        We're going to send a ball flying down
-        towards the paddle. Attach a block to the "when ball hits paddle" block
-        to ensure the ball reaches the finish target.
-      courseD_bounce_events5s_instruction: |-
-        Attach a block to the `when ball hits
-        hand` event to ensure the ball reaches the basket.
-      courseD_bounce_events6_instruction: |-
-        Now the finish target is on the top. You
-        need to attach blocks to both of the "when ball hits" blocks to solve this
-        puzzle.
-      courseD_bounce_events6s_instruction: |-
-        Attach code to make the ball bounce when
-        it hits the wall so you can solve this puzzle.
-      courseD_bounce_events7_instruction: |-
-        Attach blocks to each of the "when"
-        blocks. Bounce the ball until it hits the finish target.
-      courseD_bounce_events7s_instruction: |-
-        Attach sound blocks to make the net swish
-        when you hit the basket and have the whistle blow when the ball misses your
-        hand. Bounce the ball until it hits the finish target.
+      courseD_bounce_embed_endgame_instruction: Notaðu vinstri og hægri örvarnar til
+        að hreyfa spaðann. Gáðu hvað þér tekst að skora mörg stig áður en andstæðingurinn
+        skorar tvisvar!
+      courseD_bounce_embedded_instruction: Skrifa Fyrirmæli Hér
+      courseD_bounce_events1_instruction: Festu kubb við "þegar vinstri ör" kubbinn
+        og ýttu á "Keyra" til að færa leikmanninn að flagginu.
+      courseD_bounce_events10_instruction: Nú er mark efst. Tengdu kubbana "skora
+        stig" og "skora stig andstæðings" við kubbana "þegar bolti í marki" og "þegar
+        bolti hittir ekki spaða" til að búa til leik. Reyndu að skora sem flest stig
+        áður en andstæðingurinn skorar tvisvar.
+      courseD_bounce_events10s_instruction: 'Tengdu kubbinn `skora stig` við atburðinn
+        `þegar bolti í marki` og kubbinn `skora stig andstæðings` við atburðinn `þegar
+        bolti hittir ekki hönd` til að búa til leik. '
+      courseD_bounce_events11_instruction: Þú getur núna tengt kubba við kubbinn "þegar
+        keyrt". Þú verður að tengja nýja "varpa nýjum bolta" kubbinn á fleiri en einum
+        stað. Prófaðu líka að breyta sviðinu eða hraða spaðans og boltans og gáðu
+        hvað þú getur skorað mörg stig áður en andstæðingurinn hefur skorað tvisvar.
+      courseD_bounce_events11s_instruction: 'Settu kubbinn `kasta nýjum bolta` alls
+        staðar þar sem leikurinn þarf nýjan bolta. '
+      courseD_bounce_events12_instruction: Búðu til þinn eigin Skopp leik. Þú getur
+        breytt öllu myndefninu og reglunum. Þegar leikurinn er tilbúinn getur þú smellt
+        á Ljúka til að vinir geti prófað leikinn í símunum sínum.
+      courseD_bounce_events12s_instruction: Búðu til þinn eigin leik. Þú getur breytt
+        öllu myndefninu og reglunum. Þegar leikurinn er tilbúinn getur þú smellt á
+        Ljúka til að vinir geti prófað leikinn í símunum sínum.
+      courseD_bounce_events1s_instruction: Festu kubb við "þegar vinstri ör" kubbinn
+        og ýttu á "Keyra" til að færa leikmanninn að netinu.
+      courseD_bounce_events2_instruction: Tengdu kubb við "þegar til hægri" og "þegar
+        til vinstri" kubbana. Færðu spaðann til að ná báðum endamörkum.
+      courseD_bounce_events2s_instruction: Tengdu nú kubb við atburðinn `þegar til
+        hægri` svo að höndin komist að báðum körfunum.
+      courseD_bounce_events3_instruction: Reyndu nú eitthvað svipað með kubbnum "þegar
+        upp ör". Færðu spaðann upp að endamarkinu.
+      courseD_bounce_events3s_instruction: Reyndu nú eitthvað svipað með kubbnum "þegar
+        upp ör". Færðu spaðann upp að endamarkinu.
+      courseD_bounce_events4_instruction: "Í þetta sinn þarft þú að bæta við fjórum
+        kubbum. Færðu spaðann að öllum fjórum endamörkum til að ljúka þessari þraut."
+      courseD_bounce_events4s_instruction: "Í þetta sinn þarft þú að bæta við fjórum
+        kubbum. Færðu spaðann að öllum fjórum endamörkum til að ljúka þessari þraut."
+      courseD_bounce_events5_instruction: Við ætlum að senda bolta svífandi niður
+        í átt að spaðanum. Tengdu kubb við kubbinn "þegar bolti hittir spaða" til
+        að tryggja að boltinn nái að endamarkinu.
+      courseD_bounce_events5s_instruction: Tengdu kubb við atburðinn `þegar bolti
+        hittir hönd` til að tryggja að boltinn nái til körfunnar.
+      courseD_bounce_events6_instruction: Nú er endamarkið að ofanverðu. Þú þarft
+        að tengja kubba við báða "þegar bolti hittir" kubbana til að leysa þrautina.
+      courseD_bounce_events6s_instruction: Bættu við kóða til að láta boltann skoppa
+        þegar hann rekst á vegginn svo að þú getir leyst þessa þraut.
+      courseD_bounce_events7_instruction: Tengdu kubba við hvern "þegar" kubb. Láttu
+        boltann skoppa þar til hann hittir í endamarkið.
+      courseD_bounce_events7s_instruction: Settu inn hljóðkubba til að láta heyrast
+        í netinu þegar þú hittir í körfuna og láta heyrast flaut þegar boltinn hittir
+        ekki hendina. Láttu boltann skoppa þar til hann hittir í endamarkið.
       courseD_collector_debugging1_instruction: Lagaðu forritið svo allur fjársjóðurinn
         náist.
       courseD_collector_debugging1a_instruction: Lagaðu forritið svo allur fjársjóðurinn
@@ -7931,16 +8036,18 @@
         þraut."
       courseD_collector_debugging6_instruction: "Áskorun: Hér eru allar skipanir sem
         þú þarft...notaðu nú færni þína í villuleit til að finna lausn á þessari þraut."
-      courseD_collector_debugging6a_instruction: |-
-        Challenge: Use the code in the
-        work area to get at least **6** pieces of treasure!
+      courseD_collector_debugging6a_instruction: "Áskorun: Notaðu kóðann á vinnusvæðinu
+        til að safna minnst **6** gersemum!"
       courseD_collector_debugging7_instruction: "Áskorun: Hér eru allar skipanir sem
         þú þarft...notaðu nú færni þína í villuleit til að finna lausn á þessari þraut."
       courseD_collector_debugging_challenge2_instruction: Ert þú sérfræðingur í földuðum
         lykkjum? Notaðu það sem þú hefur lært til að safna öllum fjársjóðnum!
-      courseD_collector_nested_loops_challenge2_instruction: |-
-        Við skulum leita að fjársjóði
-        - með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er mögulegt að ná öllum 4.
+      courseD_collector_nested_loops_challenge2_instruction: Hjálpaðu safnaranum að
+        ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er
+        mögulegt að ná öllum 4.
+      courseD_collector_nested_loops_challenge2a_instruction: Hjálpaðu safnaranum
+        að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það
+        er mögulegt að ná öllum 4.
       courseD_collector_ramp10_instruction: Help Laurel collect all of the treasure.
       courseD_collector_ramp8_instruction: Help Laurel collect all of the treasure.
       courseD_collector_ramp9_instruction: Help Laurel collect all of the treasure.
@@ -8077,20 +8184,17 @@
       courseD_maze_nestedLoops6_instruction: |-
         Get the zombie to the sunflower using
         only the blocks available.
-      courseD_maze_ramp1_instruction: 'Í þessari þraut: Dragðu alla kubbana saman
-        og smelltu á "Keyra" til að sjá hvað gerist!'
+      courseD_maze_ramp1_instruction: 'Í þessari þraut: Festu alla kubbana saman og
+        smelltu á "Keyra" til að sjá hvað gerist!'
       courseD_maze_ramp2_instruction: Dragðu annan "færa áfram" kubb úr verkfærakassanum
         og festu svo alla kubbana við "þegar keyrt" kubbinn til að ljúka við kóðann.
       courseD_maze_ramp3_instruction: "Það er einn aukakubbur sem veldur því að fuglinn
         mun hrapa. Hentu honum með því að draga hann aftur í verkfærakassann."
       courseD_maze_ramp4_instruction: Avoid TNT or feathers will fly!
       courseD_maze_ramp5_instruction: Avoid the TNT.
-      courseD_maze_ramp5a_instruction: |-
-        Pay attention to the sequence and see if
-        you can figure out how to get to that pig!
-      courseD_maze_ramp5b_instruction: |-
-        Navigate this maze to help the bird find
-        the pig!
+      courseD_maze_ramp5a_instruction: Taktu eftir röð kubbanna og reyndu að finna
+        út hvernig á að komast til svínsins!
+      courseD_maze_ramp5b_instruction: Finndu leið fyrir fuglinn að komast til svínsins!
       courseD_maze_ramp5c_instruction: Help the bird get to the pig.
       courseD_maze_ramp5d_instruction: Get the bird to the pig.
       courseD_maze_ramp6_instruction: '"Slakaðu á og hjálpaðu mér finna illa svínið.
@@ -8135,14 +8239,11 @@
         to the dragon. "
       courseD_playLab_cond3_instruction: "Make the dragon change between random emotions\nevery
         second.  "
-      courseD_playLab_cond3a_instruction: |-
-        Make it so when Pegleg gets to the dragon,
-        he gets 2 points if the dragon is happy and 1 otherwise.
+      courseD_playLab_cond3a_instruction: Hafðu þetta þannig að þegar Pegleg kemst
+        til drekans þá fái hann 2 stig ef drekinn er glaður en annars bara 1 stig.
       courseD_playLab_cond3b_instruction: |-
-        1) Make the dragon change between random
-        emotions every second.  \r
-        2) Make it so when Pegleg gets to the dragon,
-        he gets 2 points if the dragon is happy and 1 otherwise.
+        1) Láttu drekann skipta um skap af handahófi á sekúndu fresti. \r
+        2) Hafðu þetta þannig að þegar Pegleg kemst til drekans þá fái hann 2 stig ef drekinn er í góðu skapi annars bara 1 stig.
       courseD_playLab_cond4_instruction: |-
         Add some code so that the ninja (actor
         3) starts chasing Pegleg as soon as the game begins.  End the game as a loss
@@ -8151,38 +8252,34 @@
         Add a `repeat forever` loop that continuously
         checks if the score is greater than 5, then ends the game as a win when it
         is.
-      courseD_playLab_cond6_instruction: "1)  Slow the ninja down before you set\nhim
-        to chase the pirate.  \\r\n2)  If the pirate is greater than 225 pixels\ndown,
-        set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase**\nthe
-        pirate.  "
-      courseD_playLab_cond6a_instruction: |-
-        If the pirate is in the safe zone, wait
-        one second, then deduct a point as long as he stays beneath the octopus line.
+      courseD_playLab_cond6_instruction: "1)  Slow the ninja (actor 3) down before\nyou
+        set him to chase the pirate.  \\r\n2)  If the pirate is greater than 225\npixels
+        down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
+        **chase** the pirate.  "
+      courseD_playLab_cond6a_instruction: Ef sjóræninginn er á örugga svæðinu skal
+        bíða í 1 sekúndu en draga svo frá stig svo lengi sem hann dvelur fyrir neðan
+        kolkrabbana.
       courseD_playLab_cond6cloneForTest_instruction: Testing
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
         your friends!
       courseD_playLab_embedded_instruction: |-
-        Move Pegleg the Pirate with the arrow
-        keys. Get to the dragon to score points, but avoid the ninja! Standing below
-        the line of octopuses will make the ninja stop chasing you, but beware! The
-        longer you stay there, the more points you lose. \r
+        Færðu Peleg sjóræningja með örvarlyklunum. Náðu til drekans til að skora stig en forðastu ninjuna! Ef þú stendur fyrir neðan kolkrabbana hættir ninjan að elta þig en varaðu þig! Því lengur sem þú stendur þar því fleiri stigum taparðu.\r
         \r
-        Get 5 points to win!
-      courseD_scrat_ramp1_instruction: 'Í þessari þraut: Dragðu alla kubbana saman
+        Náðu 5 stigum til að vinna leikinn!
+      courseD_scrat_ramp1_instruction: 'Í þessari þraut: Festu alla kubbana saman
         og smelltu á "Keyra" til að sjá hvað gerist!'
       courseD_scrat_ramp2_instruction: Dragðu annan "færa áfram" kubb úr verkfærakassanum
         og festu svo alla kubbana við "þegar keyrt" kubbinn til að ljúka við kóðann.
-      courseD_scrat_ramp3_instruction: |-
-        There is one extra block that is going to
-        cause Scrat to crash. Throw it away by dragging it back to the toolbox.
-      courseD_scrat_ramp4_instruction: Avoid the cracked ice to keep Scrat safe!
-      courseD_scrat_ramp5_instruction: Avoid the cracked ice.
-      courseD_scrat_ramp6_instruction: Help Scrat get to the acorn using a loop!
-      courseD_scrat_ramp7_instruction: Help Scrat get to the acorn!
-      courseD_scrat_ramp8_instruction: |-
-        Use what you've learned to get Scrat to
-        the acorn!
+      courseD_scrat_ramp3_instruction: "Það er einn aukakubbur sem mun láta Scrat
+        hrapa. Fjarlægðu hann með því að draga hann aftur í verkfærakassann."
+      courseD_scrat_ramp4_instruction: Forðastu sprungna ísinn til að Skrat sé öruggur!
+      courseD_scrat_ramp5_instruction: Forðastu sprungna ísinn.
+      courseD_scrat_ramp6_instruction: Notaðu lykkju til að hjálpa Skrat að komast
+        til akarnsins!
+      courseD_scrat_ramp7_instruction: Hjálpaðu Skrat að komast til akarnsins!
+      courseD_scrat_ramp8_instruction: Notaðu það sem þú hefur lært til að koma Skrat
+        til akarnsins!
       courseE_artist_concept1_instruction: 'Recreate this image. '
       courseE_artist_concept4_instruction: |-
         Recreate this drawing using 13 blocks
@@ -8192,11 +8289,9 @@
         vísbendingar? Smelltu hér!
       courseE_artist_concept_challenge2_instruction: Búðu til fimm hjóllaga mynstur
         með kóðanum fyrir neðan.
-      courseE_artist_embed_functions8_instruction: |-
-        Look at this level carefully.
-        What kind of functions do you see a program needing in order to create a design
-        like this. You'll soon make this on your own, so come back here if you need
-        help.
+      courseE_artist_embed_functions8_instruction: Skoðaðu þetta borð vandlega. Hvers
+        konar föll heldur þú að forrit þurfi til að búa til svona mynd? Þú átt bráðum
+        að búa þetta til og getur þá komið aftur hingað ef þú þarft hjálp.
       courseE_artist_functions1_instruction: |-
         Help the zombie draw glasses using
         squares with sides of 100 pixels.  \r
@@ -8205,8 +8300,8 @@
       courseE_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
-      courseE_artist_functions2_instruction: "This time, use the `draw a square`\nfunction
-        to create the glasses. "
+      courseE_artist_functions2_instruction: "Í þetta skipti áttu að nota fallið `teikna
+        ferning` til að búa til gleraugun. "
       courseE_artist_functions3_instruction: |-
         You can make this drawing by adding
         a repeat block.
@@ -8244,7 +8339,10 @@
       courseE_artist_ramp12_instruction: Notaðu það sem þú hefur lært til að teikna
         þennan þríhyrning innan í ferningi.
       courseE_artist_ramp8_instruction: Búðu nú til ferning með listamanninum!
+      courseE_artist_ramp8_2_instruction: Búðu nú til ferning með listamanninum!
       courseE_artist_ramp9_instruction: Notaðu það sem þú hefur lært til að teikna
+        þennan þrihyrning.
+      courseE_artist_ramp9_2_instruction: Notaðu það sem þú hefur lært til að teikna
         þennan þrihyrning.
       courseE_bee_concept1_instruction: 'Safnaðu öllum blómasafa úr hverju blómi.
         Notaðu faldaða lykkju. '
@@ -8400,38 +8498,33 @@
       courseE_farmer_functions9_instruction: Use conditionals to simplify your program.
       courseE_farmer_functions9b_instruction: Getur þú fundið út mynstrið sem þarf
         til að leysa þessa þraut?
-      courseE_farmer_functions9b_clone_instruction: |-
-        Can you figure out the pattern
-        that you need to solve this puzzle?
+      courseE_farmer_functions9b_clone_instruction: Getur þú fundið út mynstrið sem
+        þarf til að leysa þessa þraut?
       courseE_farmer_predict1_instruction: Tíndu allt kálið (en aðeins á meðan það
         er eitthvað að tína.)
       courseE_farmer_ramp11_instruction: "Þessi þraut notar líka faldaðar lykkjur.
         Getur þú fundið út hvernig?"
-      courseE_farmer_ramp11a_instruction: 'Sæktu kál en aðeins ef það er enn kál. '
-      courseE_farmer_ramp11b_instruction: 'Sæktu kál en aðeins ef það er enn kál. '
-      courseE_farmer_ramp12_instruction: Notaðu nú faldaðar lykkjur ("endurtaka" og
-        "meðan") til að leysa þessa þraut.
-      courseE_farmer_ramp12_forswap_instruction: |-
-        Now use nested loops to solve this
-        puzzle.
+      courseE_farmer_ramp11a_instruction: Fjarlægðu mold á meðan enn er mold.
+      courseE_farmer_ramp11b_instruction: Fjarlægðu mold á meðan enn er mold.
+      courseE_farmer_ramp12_instruction: Notaðu nú faldaðar lykkjur til að leysa þessa
+        þraut.
+      courseE_farmer_ramp12_forswap_instruction: Notaðu nú faldaðar lykkjur til að
+        leysa þessa þraut.
       courseE_farmer_ramp12a_instruction: Hjálpaðu bóndanum að fylgja slóðinni rétt
         til að tína allt kálið.
-      courseE_farmer_ramp12b_instruction: While there is lettuce, pick lettuce!
-      courseE_farmer_ramp12c_instruction: |-
-        Move forward until you reach the lettuce,
-        then pick it all using a `while` loop.
-      courseE_farmer_ramp12d_instruction: |-
-        Move forward until you reach the lettuce,
-        then pick it all using a `while` loop.
-      courseE_farmer_ramp12e_instruction: |-
-        Move forward until you reach the lettuce,
-        then pick it all using a `while` loop.
-      courseE_farmer_ramp12f_instruction: |-
-        Move forward until you reach the lettuce,
-        then turn left **if** there is a path to the left.  Otherwise, turn right.
-      courseE_farmer_ramp12g_instruction: |-
-        Move forward until you reach the lettuce,
-        then turn left **if** there is a path to the left.  Otherwise, turn right.
+      courseE_farmer_ramp12b_instruction: Svo lengi sem það er kál áttu að tína það!
+      courseE_farmer_ramp12c_instruction: Farðu áfram þar til þú nærð til kálsins
+        og tíndu það allt með `meðan` lykkju.
+      courseE_farmer_ramp12d_instruction: Farðu áfram þar til þú nærð til kálsins
+        og tíndu það allt með `meðan` lykkju.
+      courseE_farmer_ramp12e_instruction: Farðu áfram þar til þú nærð til kálsins
+        og tíndu það allt með `meðan` lykkju.
+      courseE_farmer_ramp12f_instruction: Farðu áfram þar til þú nærð til kálsins
+        og snúðu svo til vinstri **ef** það er slóð til vinstri. Annars skaltu snúa
+        til hægri.
+      courseE_farmer_ramp12g_instruction: Farðu áfram þar til þú nærð til kálsins
+        og snúðu svo til vinstri **ef** það er slóð til vinstri. Annars skaltu snúa
+        til hægri.
       courseE_farmer_ramp13_instruction: Sæktu korn ef það er korn, og sæktu kál á
         meðan það er enn kál.
       courseE_farmer_ramp15_instruction: Leystu þessa þraut en aðeins með tiltækum
@@ -8460,10 +8553,9 @@
       courseE_playLab_challenge1_instruction: |-
         Eitthvað ætti að gerast þegar þú færð nóg stig eða þegar stigin klárast. Bættu kóða í föllin `vinna leik` og `tapa leik` svo leikurinn virki eins og hann á að gera.\r
         Smelltu á vísbendingar til að fá hugmyndir!
-      courseE_playLab_embedded_instruction: |-
-        This is an example game you can play
-        around with. Move the dog with your arrow keys. When the dog touches one of
-        the cats, he scores a point! Score 5 points to win!
+      courseE_playLab_embedded_instruction: "Þetta er dæmi um leik sem þú getur spilað.
+        Færðu hundinn með örvarlyklunum. Þegar hundurinn snertir kött, skorar hann
+        stig! Náðu 5 stigum til að vinna leikinn!"
       courseE_playLab_exampleProject2_instruction: |-
         Here's all of your code to choose
         a card - try adding some other fun features!
@@ -8492,46 +8584,37 @@
       courseE_video_createFunctions_instruction: |-
         We don't have a video for creating
         functions, yet. This is a placeholder.
-      courseF_IceAge_1_instruction: |-
-        Help Sid say "Hello!" by dragging the `actor
-        1 say` block out and connecting it to the bottom of the `when run` event.
-      courseF_IceAge_10_instruction: |-
-        Use the `actor __ throw` command to have Sid
-        (actor 1) throw hearts at Granny (actor 2) and set Granny's mood to happy
-        when she gets hit with them.
-      courseF_IceAge_11_instruction: 'Time to create your own game or story! '
-      courseF_IceAge_2_instruction: |-
-        Help Manny and Sid greet each other by using
-        the the `actor ___ say` block twice.
-      courseF_IceAge_3_instruction: |-
-        Scrat is looking for his acorn! Can you help
-        him move the last 200 pixels?
-      courseF_IceAge_4_instruction: |-
-        Connect a block to the `when actor touches`
-        event to play a sound when Diego finds Manny.
-      courseF_IceAge_5_instruction: |-
-        Help Granny get some exercise by moving left
-        and right repeatedly.
-      courseF_IceAge_6_instruction: "Can you help Sid call for his friends when you\nclick
-        on him? "
-      courseF_IceAge_7_instruction: |-
-        Write the code to help Scrat get all of the
-        acorns!
+      courseE_video_createFunctions2_instruction: |-
+        We don't have a video for creating
+        functions, yet. This is a placeholder.
+      courseF_IceAge_1_instruction: Hjálpaðu Sid að segja "Hæ!" með því að draga fram
+        kubbinn `leikari 1 segir` og tengja hann við `Þegar keyrt` atburðinn.
+      courseF_IceAge_10_instruction: Notaðu skipunina `leikari ___ varpar` til að
+        láta Sid (leikara 1) varpa hjörtum að Granny (leikara 2) og láttu Granny gleðjast
+        þegar hjörtun lenda á henni.
+      courseF_IceAge_11_instruction: 'Nú átt þú að búa til eigin leik eða sögu! '
+      courseF_IceAge_2_instruction: Hjálpaðu Manny og Sid að heilsast með því að nota
+        kubbinn `leikari ___ segir` tvisvar.
+      courseF_IceAge_3_instruction: Skrat er að leita að akarninu (nema hvað)! Hjálpaðu
+        honum síðustu 200 dílana.
+      courseF_IceAge_4_instruction: Tengdu kubb við atburðinn `þegar leikmaður snertir`
+        svo að hljóð sé spilað þegar Diego finnur Manny.
+      courseF_IceAge_5_instruction: Hjálpaðu Granny að fá smá hreyfingu með því að
+        fara endurtekið til vinstri og hægri.
+      courseF_IceAge_6_instruction: 'Getur þú hjálpað Sid að kalla á vini sína þegar
+        þú smellir á hann? '
+      courseF_IceAge_7_instruction: Skrifaðu kóðann sem hjálpar Skrat að ná öllum
+        akörnunum!
       courseF_IceAge_8_instruction: |
-        Can you finish this program to make it so that
-        you both **play a sound** and **score a point** when Sid and Granny collide?
-      courseF_IceAge_9_instruction: |-
-        Change the scene to an icy background and set
-        Sid’s (actor 1) speed to fast.
-      courseF_IceAge_template_instruction: |-
-        Write the code to help Scrat get all
-        of the acorns!
-      courseF_artist_embed_for7_instruction: |-
-        Press Run to see a program in action!
-        This one uses for loops.
-      courseF_artist_embed_variables9_instruction: |-
-        Press Run to see this program
-        in action!
+        Getur þú klárað þetta forrit svo að það bæði **spili hljóð** og **skori stig** þegar Sid og Granny rekast á?
+      courseF_IceAge_9_instruction: Breyttu sviðinu í íslagðan bakgrunn og láttu Sid
+        (leikara 1) hreyfast hratt.
+      courseF_IceAge_template_instruction: Skrifaðu kóðann sem hjálpar Skrat að ná
+        öllum akörnunum!
+      courseF_artist_embed_for7_instruction: "Ýttu á Keyra til að sjá forritið virka!
+        Þetta forrit notar `frá` lykkjur."
+      courseF_artist_embed_variables9_instruction: "Ýttu á Keyra til að sjá þetta
+        forrit virka!"
       courseF_artist_for1_instruction: |-
         Experiment with the `for` loop and play with
         the `counter` variable.
@@ -8680,12 +8763,10 @@
         all of the honey.
       courseF_bee_conditionals1_predict1_instruction: Gáðu hvort skýið feli blóm.
         Sæktu blómasafann, ef svo er.
-      courseF_bee_conditionals2_instruction: |
-        Gáðu hvort ský felur blóm eða ekki áður en þú reynir að sækja blómasafa. \r
+      courseF_bee_conditionals2_instruction: 'Gáðu hvort ský felur blóm eða ekki áður
+        en þú reynir að sækja blómasafa.  '
       courseF_bee_conditionals3_instruction: |
         Hjálpaðu býflugunni að safna öllum blómasafanum.
-        \r
-        \r
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
         blocks as possible.
@@ -8799,10 +8880,8 @@
         Annars gæti ég reiðst!"'
       courseF_maze_ramp7_instruction: Notaðu það sem þú hefur lært og komdu fuglinum
         til svínsins!
-      courseF_playlab_embed_vars_instruction: |-
-        Answer Pegleg the Pirate's questions.
-        What happens if you enter the codename "password"? What about some other
-        code name?
+      courseF_playlab_embed_vars_instruction: Svaraðu spurningum Pegleg sjóræningja.
+        Hvað gerist ef þú slærð inn leyniorðið "password"? Hvað með önnur leyniorð?
       courseF_playlab_variables0_instruction: |-
         This is Pirate Pegleg.  He's awfully
         hard to understand these days!
@@ -8906,6 +8985,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Tengdu kubb við "þegar smellt" kubbinn og ýttu svo á "Keyra
         forrit". Smelltu eða sláðu á skjáinn til að færa Flappy að markinu.
+      flappy_11_instruction: Búðu til þinn eiginn Flappy leik. Þú getur breytt öllu
+        umhverfi og öllum reglum, jafnvel þyngdaraflinu. Smelltu svo á Ljúka til að
+        vinir þínir geti prófað leikinn í símunum sínum.
       flappy_2_instruction: Nú höfum við  bætt við jörð. Tengdu kubb við kubbinn "þegar
         rekst á jörð". Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy hrapar til
         jarðar.
@@ -8926,9 +9008,6 @@
         t.d. þegar farið er framhjá hindrun."
       flappy_9_instruction: Prófaðu að útfæra þetta þannig að í stað þess að enda
         leikinn við árekstur þá sé skorið núllstillt.
-      flappy_11_instruction: Búðu til þinn eiginn Flappy leik. Þú getur breytt öllu
-        umhverfi og öllum reglum, jafnvel þyngdaraflinu. Smelltu svo á Ljúka til að
-        vinir þínir geti prófað leikinn í símunum sínum.
       frozen circle function in circle_instruction: Gerum nú 20 hringi sem skarast
         og snúum um 18 gráður eftir hvern hring.
       frozen circle function with parameter_instruction: Hér er "búa til hring" kubbur
@@ -10748,42 +10827,34 @@
       harvey_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.
-      harvey_snowflake_artist1_instruction: Get your snowflake ready for 3d printing!
-      harvey_snowflake_artist2_instruction: Get your snowflake ready for 3d printing!
+      harvey_snowflake_artist1_instruction: Undirbúðu snjókornið fyrir þrívíddarprentun!
+      harvey_snowflake_artist2_instruction: Undirbúðu snjókornið fyrir þrívíddarprentun!
       harvey_tictactoe_instruction: Komum í leik! Teiknaðu eins mörg X og þú getur!
         Nærðu að hafa 3 í röð?
-      iceage_click_hello_instruction: "Can you help Sid call for his friends when\nyou
-        click on him? "
-      iceage_free_play_instruction: 'Time to create your own game or story! '
-      iceage_free_playcourseF_IceAge_11_instruction: "Time to create your own game\nor
-        story! "
-      iceage_hello1_instruction: |-
-        Help Sid say "Hello!" by dragging the `say` block
-        out and connecting it to the bottom of the `when run` event.
-      iceage_hello2_instruction: |-
-        Help Manny and Sid greet each other by using the
-        the `actor ___ say` block twice.
-      iceage_move_events_instruction: |-
-        Write the code to help Scrat get all of the
-        acorns!
-      iceage_move_to_actor_instruction: |-
-        Connect a block to the `when actor touches`
-        event to play a sound when Diego finds Manny.
-      iceage_move_to_flag_instruction: |-
-        Scrat is looking for his acorn! Can you help
-        him move the last 200 pixels?
-      iceage_repeat_instruction: |-
-        Help Granny get some exercise by moving left and
-        right repeatedly.
-      iceage_sound_and_points_instruction: "Can you finish this program to make it\nso
-        that you both **play a sound** and **score a point** when Sid and Granny\ncollide? "
-      iceage_throw_hearts_instruction: |-
-        Use the `actor __ throw` command to have
-        Sid (actor 1) throw hearts at Granny (actor 2) and set Granny's mood to happy
-        when she gets hit with them.
-      iceage_warn_ice_age_instruction: |-
-        Change the scene to an icy background and
-        set Sid’s (actor 1) speed to fast.
+      iceage_click_hello_instruction: 'Getur þú hjálpað Sid að kalla á vini sína þegar
+        þú smellir á hann? '
+      iceage_free_play_instruction: 'Nú átt þú að búa til eigin leik eða sögu! '
+      iceage_free_playcourseF_IceAge_11_instruction: 'Nú átt þú að búa til eigin leik
+        eða sögu! '
+      iceage_hello1_instruction: Hjálpaðu Sid að segja "Hæ!" með því að draga fram
+        kubbinn `segir` og festa hann neðan á `Þegar keyrt` atburðinn.
+      iceage_hello2_instruction: Hjálpaðu Manny og Sid að heilsast með því að nota
+        kubbinn `leikari ___ segir` tvisvar.
+      iceage_move_events_instruction: Skrifaðu kóðann sem hjálpar Skrat að ná öllum
+        akörnunum!
+      iceage_move_to_actor_instruction: Tengdu kubb við atburðinn `þegar leikmaður
+        snertir` svo að hljóð sé spilað þegar Diego finnur Manny.
+      iceage_move_to_flag_instruction: Skrat er að leita að akarninu (nema hvað)!
+        Hjálpaðu honum síðustu 200 dílana.
+      iceage_repeat_instruction: Hjálpaðu Granny að komast í form með því að fara
+        endurtekið til vinstri og hægri.
+      iceage_sound_and_points_instruction: 'Getur þú klárað þetta forrit svo að það
+        bæði **spili hljóð** og **skori stig** þegar Sid og Granny rekast á? '
+      iceage_throw_hearts_instruction: Notaðu skipunina `leikari ___ varpar` til að
+        láta Sid (leikara 1) varpa hjörtum að Granny (leikara 2) og láttu Granny gleðjast
+        þegar hjörtun lenda á henni.
+      iceage_warn_ice_age_instruction: Breyttu sviðinu í íslagðan bakgrunn og láttu
+        Sid (leikara 1) hreyfast hratt.
       jessie-test_instruction: Lots of instructions
       k-1 maze 1_instruction: Getur þú látið mig fara í Vestur til að ná svíninu?
       k1stickerfreeplay_instruction: |-
@@ -10906,25 +10977,20 @@
       playLabDebugVideo1_instruction: |-
         Jorge the Dog wants to say "Hi there."  Can
         you help him?
-      ramp_artist_loops1_instruction: |-
-        Move forward by 60 pixels to complete this
-        puzzle.
-      ramp_artist_loops2_instruction: |-
-        Move forward five times and make this colored
-        line.
-      ramp_artist_loops3_instruction: Use a `repeat` loop to draw five colored dashes.
-      ramp_artist_loops4_instruction: |-
-        What happens when you add a 72 degree right
-        turn after everything else inside your loop?
-      ramp_artist_loops5_instruction: Use loops to draw this staircase.
-      ramp_artist_loops6_instruction: Edit your loop to draw this staircase.
-      ramp_artist_loops7_instruction: |-
-        Look for a pattern and make this code shorter
-        using loops!
-      ramp_artist_loops8_instruction: |-
-        Look for a pattern and make this code shorter
-        using loops.
-      ramp_artist_loops9_instruction: Solve this puzzle by drawing a square.
+      ramp_artist_loops1_instruction: Farðu áfram 60 díla til að ljúka þessari þraut.
+      ramp_artist_loops2_instruction: Farðu áfram fimm sinnum og búðu til þessa lituðu
+        línu.
+      ramp_artist_loops3_instruction: Notaðu `endurtaka` lykkju til að teikna fimm
+        lituð þankastrik.
+      ramp_artist_loops4_instruction: Hvað gerist þegar þú bætir við 72 gráðu hægri
+        snúningi sem síðasta kubbi í lykkjunni?
+      ramp_artist_loops5_instruction: Notaðu lykkjur til að teikna þessar tröppur.
+      ramp_artist_loops6_instruction: Breyttu lykkjunni svo hún teikni þessar tröppur.
+      ramp_artist_loops7_instruction: Leitaðu að endurtekningu og styttu þennan kóða
+        með því að nota lykkjur!
+      ramp_artist_loops8_instruction: Leitaðu að endurtekningu og styttu þennan kóða
+        með því að nota lykkjur.
+      ramp_artist_loops9_instruction: Leystu þessa þraut með því að teikna ferning.
       sample1_instruction: |-
         Our adventurer wants to collect coins.  But she can only
         use 4 blocks to get them.\r
@@ -10993,15 +11059,13 @@
         um flóknara völundarhús? Ef þú gerir það rétt, get ég ratað hvaða slóð sem
         er óháð lengd. Flýttu þér! Ísinn bráðnar!
       skratDebugVideo1_instruction: Komdu Scrat til akarnsins.
-      subgoal U3 L4 introducing subgoal labels_instruction: |-
-        Introduce orient turtle
-        and move turtle
-      subgoal U3L2 Using Simple Commands_instruction: |-
-        Draw a 1x1 square above and
-        to the left of the turtle's starting position. Click to see full instructions.
-      subgoalU3L2_TurtleSquare_right_instruction: |-
-        Draw a square to the front and
-        to the right of the starting location. (Click to show full instructions)
+      subgoal U3 L4 introducing subgoal labels_instruction: Kynning á stefnu og hreyfingum
+        skjaldböku
+      subgoal U3L2 Using Simple Commands_instruction: Teiknaðu 1x1 ferning ofan við
+        og vinstra megin við upphafsstað skjaldbökunnar. Smelltu til að sjá ítarlegar
+        leiðbeiningar.
+      subgoalU3L2_TurtleSquare_right_instruction: Teiknaðu ferning framan við og hægra
+        megin við upphafsstaðinn. (Smelltu til að sjá ítarlegar leiðbeiningar)
       template test_instruction: what up
       testArtistForTestK_instruction: |-
         The Artist is trying to draw a line five times,

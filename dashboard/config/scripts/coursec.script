@@ -1,7 +1,9 @@
 hidden false
+hideable_stages true
 stage_extras_available true
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
+script_announcements [{"notice"=>"New: Choose Which Lessons to Show or Hide for Your Section", "details"=>"Click \"Learn More\" to read the help article on showing and hiding lessons.", "link"=>"https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses", "type"=>"bullhorn"}]
 
 stage 'Building a Foundation'
 level 'BuildingAFoundation'
@@ -67,7 +69,7 @@ level 'courseC_artist_prog7', challenge: true
 level 'courseC_artist_prog8'
 assessment 'courseC_artist_prog6_predict1'
 bonus 'courseC_artist_prog_challenge1'
-bonus 'courseC_artist_prog_challenge2'
+bonus 'courseC_artist_prog_challenge2a'
 
 stage 'Loops: Getting Loopy'
 level 'GettingLoopy'
@@ -85,7 +87,7 @@ level 'courseC_starWars_loops9'
 level 'courseC_starWars_loops10'
 assessment 'courseC_starWars_loops10_predict2'
 level 'courseC_starWars_loops11'
-bonus 'courseC_maze_loops_challenge1'
+bonus 'courseC_maze_loops_challenge1a'
 bonus 'courseC_collector_loops_challenge2'
 
 stage 'Loops in Artist'
@@ -115,7 +117,7 @@ level 'courseC_harvester_loops9'
 level 'courseC_harvester_loops10'
 level 'courseC_harvester_loops11'
 assessment 'courseC_harvester_loops11_predict1'
-bonus 'courseC_harvester_loops_challenge1'
+bonus 'courseC_harvester_loops_challenge1a'
 bonus 'courseC_harvester_loops_challenge2'
 
 stage 'Events: The Big Event'

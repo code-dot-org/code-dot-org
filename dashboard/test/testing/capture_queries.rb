@@ -24,6 +24,7 @@ module CaptureQueries
   end
 
   def assert_queries(num, &block)
+    return yield if num.nil?
     queries = capture_queries(&block)
     assert_equal num, queries.count, "Wrong query count:\n#{queries.join("\n")}\n"
   end
@@ -38,10 +39,22 @@ module CaptureQueries
     queries = []
     query = lambda do |_name, start, finish, _id, payload|
       duration = finish - start
-      next if payload[:name] === 'CACHE'
-      queries << "#{QueryLogger.log(duration, payload)}\n#{Rails.backtrace_cleaner.clean(caller)[0..5].join("\n")}"
+      next if %w(CACHE SCHEMA).include? payload[:name]
+      cleaner = Rails::BacktraceCleaner.new
+      cleaner.add_silencer {|line| line.include?(__dir__.sub("#{Rails.root}/", ''))}
+      cleaner.add_silencer {|line| line =~ /application_controller.*with_locale/}
+      backtrace = cleaner.clean(caller)
+
+      # Script/course-cache related queries don't count.
+      next if backtrace.any? {|line| line =~ /(script|course)\.rb.*get_from_cache/}
+      # Ignore random updates to experiment cache.
+      next if backtrace.any? {|line| line =~ /experiment\.rb.*update_cache/}
+
+      queries << "#{QueryLogger.log(duration, payload)}\n#{backtrace.join("\n")}"
     end
-    ActiveSupport::Notifications.subscribed(query, "sql.active_record", &block)
+    ActiveRecord::Base.cache do
+      ActiveSupport::Notifications.subscribed(query, "sql.active_record", &block)
+    end
     queries
   end
 end

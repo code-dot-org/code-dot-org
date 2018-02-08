@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_op_ed) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ### Níže je vzor op-ed - podpory týdne informatiky a jeho cílů, který by mohl být použit státem, místními zákonodárci, šéfy firem, apod.

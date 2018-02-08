@@ -1,5 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 import Radium from 'radium';
+import { connect } from 'react-redux';
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
 import Button from "../Button";
@@ -48,7 +49,7 @@ const styles = {
   }
 };
 
-export default Radium(class SetUpMessage extends Component {
+class SetUpMessage extends Component {
   static propTypes = {
     isRtl: PropTypes.bool,
     headingText: PropTypes.string.isRequired,
@@ -87,4 +88,8 @@ export default Radium(class SetUpMessage extends Component {
       </div>
     );
   }
-});
+}
+
+export default connect(state => ({
+  isRtl: state.isRtl,
+}))(Radium(SetUpMessage));

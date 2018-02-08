@@ -42,7 +42,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-16 15:13:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-16 15:13:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-10-25 00:59:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-10-25 01:01:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 5,
     "repeat_loops": 3,
@@ -149,108 +149,108 @@
               </value>
             </block>
           </block>
-          <category name="Loops">
-            <block type="controls_repeat_ext" inline="true">
-              <value name="TIMES">
-                <block type="math_number">
-                  <title name="NUM">3</title>
-                </block>
-              </value>
-            </block>
-            <block type="controls_for_counter" inline="true">
-              <mutation counter="counter"/>
-              <value name="FROM">
-                <block type="math_number">
-                  <title name="NUM">1</title>
-                </block>
-              </value>
-              <value name="TO">
-                <block type="math_number">
-                  <title name="NUM">100</title>
-                </block>
-              </value>
-              <value name="BY">
-                <block type="math_number">
-                  <title name="NUM">10</title>
-                </block>
-              </value>
-            </block>
-            <block type="variables_get">
-              <title name="VAR">counter</title>
-            </block>
-          </category>
-          <category name="Math">
-            <block type="math_arithmetic" inline="true">
-              <title name="OP">ADD</title>
-              <value name="A">
-                <block type="math_number">
-                  <title name="NUM">???</title>
-                </block>
-              </value>
-              <value name="B">
-                <block type="math_number">
-                  <title name="NUM">???</title>
-                </block>
-              </value>
-            </block>
-            <block type="math_number">
-              <title name="NUM">0</title>
-            </block>
-          </category>
-          <category name="Variables ">
-            <block type="variables_set" inline="false">
-              <title name="VAR">size</title>
-            </block>
-            <block type="variables_get">
-              <title name="VAR">size</title>
-            </block>
-            <block type="variables_set" inline="false">
-              <title name="VAR">length</title>
-            </block>
-            <block type="variables_get">
-              <title name="VAR">length</title>
-            </block>
-            <block type="variables_get">
-              <title name="VAR">counter</title>
-            </block>
-          </category>
-          <category name="Functions" custom="PROCEDURE">
-            <block type="procedures_callnoreturn">
-              <mutation name="draw a square 20"/>
-            </block>
-            <block type="procedures_defnoreturn" editable="false" uservisible="false" usercreated="true">
-              <mutation>
-                <description>draw a square of size 20 pixels</description>
-              </mutation>
-              <title name="NAME">draw a square 20</title>
-              <statement name="STACK">
-                <block type="draw_width" inline="false" uservisible="false">
-                  <value name="WIDTH">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">1</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="controls_repeat" uservisible="false">
-                      <title name="TIMES">4</title>
-                      <statement name="DO">
-                        <block type="draw_move_by_constant" uservisible="false">
-                          <title name="DIR">moveForward</title>
-                          <title name="VALUE">20</title>
-                          <next>
-                            <block type="draw_turn_by_constant" uservisible="false">
-                              <title name="DIR">turnLeft</title>
-                              <title name="VALUE">90</title>
-                            </block>
-                          </next>
-                        </block>
-                      </statement>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </category>
+        </category>
+        <category name="Loops">
+          <block type="controls_repeat_ext" inline="true">
+            <value name="TIMES">
+              <block type="math_number">
+                <title name="NUM">3</title>
+              </block>
+            </value>
+          </block>
+          <block type="controls_for_counter" inline="true">
+            <mutation counter="counter"/>
+            <value name="FROM">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+            <value name="BY">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
+        </category>
+        <category name="Math">
+          <block type="math_arithmetic" inline="true">
+            <title name="OP">ADD</title>
+            <value name="A">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
+          <block type="math_number">
+            <title name="NUM">0</title>
+          </block>
+        </category>
+        <category name="Variables ">
+          <block type="variables_set" inline="false">
+            <title name="VAR">size</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">size</title>
+          </block>
+          <block type="variables_set" inline="false">
+            <title name="VAR">length</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">length</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
+        </category>
+        <category name="Functions" custom="PROCEDURE">
+          <block type="procedures_callnoreturn">
+            <mutation name="draw a square 20"/>
+          </block>
+          <block type="procedures_defnoreturn" editable="false" uservisible="false" usercreated="true">
+            <mutation>
+              <description>draw a square of size 20 pixels</description>
+            </mutation>
+            <title name="NAME">draw a square 20</title>
+            <statement name="STACK">
+              <block type="draw_width" inline="false" uservisible="false">
+                <value name="WIDTH">
+                  <block type="math_number" uservisible="false">
+                    <title name="NUM">1</title>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_repeat" uservisible="false">
+                    <title name="TIMES">4</title>
+                    <statement name="DO">
+                      <block type="draw_move_by_constant" uservisible="false">
+                        <title name="DIR">moveForward</title>
+                        <title name="VALUE">20</title>
+                        <next>
+                          <block type="draw_turn_by_constant" uservisible="false">
+                            <title name="DIR">turnLeft</title>
+                            <title name="VALUE">90</title>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
         </category>
       </xml>
     </toolbox_blocks>

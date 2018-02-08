@@ -5,6 +5,7 @@ require 'cdo/only_one'
 require 'cdo/solr'
 require 'retryable'
 require src_dir 'forms'
+require src_dir 'abort_form_error'
 
 SOLR = CDO.solr_server ? Solr::Server.new(host: CDO.solr_server) : nil
 # As the NULLness of various date columns indicates further processing is
@@ -18,17 +19,24 @@ load pegasus_dir('helpers.rb')
 def send_receipts(kind, form)
   receipts = []
   if kind.respond_to?(:receipt)
-    if kind.method(:receipt).parameters.empty?
-      receipts << kind.receipt
-    else
-      receipts << kind.receipt(JSON.load(form[:data]))
-    end
+    receipts <<
+      if kind.method(:receipt).parameters.empty?
+        kind.receipt
+      else
+        kind.receipt(JSON.load(form[:data]))
+      end
   end
   receipts = receipts.flatten.select {|i| i}
   return 0 if receipts.empty?
   return 0 if form[:email] == 'anonymous@code.org'
 
-  recipient = Poste2.create_recipient(form[:email], name: form[:name], ip_address: form[:updated_ip])
+  begin
+    recipient = Poste2.create_recipient(form[:email], name: form[:name], ip_address: form[:updated_ip])
+  rescue ArgumentError => e
+    raise e unless e.message =~ /Invalid email address/
+    ChatClient.log "Unable to send receipt for form #{form[:id]} because #{e.message}."
+    return 0
+  end
   receipts.each do |template|
     Poste2.send_message(template, recipient, form_id: form[:id])
   end

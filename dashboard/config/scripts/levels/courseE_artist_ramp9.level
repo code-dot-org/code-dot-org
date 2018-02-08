@@ -8,7 +8,7 @@
     "skin": "artist",
     "embed": "false",
     "instructions": "Use what you've learned to draw this triangle.",
-    "markdown_instructions": "Use what you've learned to draw this triangle.\r\n___\r\n#####The sides are each 100 pixels long. You will need to turn 120 degrees at each corner.",
+    "markdown_instructions": "Use what you've learned to draw this triangle.\r\n___\r\n##### The sides are each 100 pixels long. You will need to turn 120 degrees at each corner.",
     "instructions_important": "true",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -38,14 +38,15 @@
     "ideal": "4",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"How is this similar to a square?  How is it different?\",\"hint_id\":\"courseD_artist_ramp12_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/89f1d45a6f7b107fd8a2bf6648c50237/courseE_artist_ramp9.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can use the drop down menu on the `turn` blocks to see which angle you need!\",\"hint_id\":\"courseD_artist_ramp12_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b5b76af7795f852f315ac145422b8ea2/courseE_artist_ramp9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?\",\"hint_id\":\"courseD_artist_ramp12_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f0114747005cf0d59e1ff5faaf3d1f7d/courseE_artist_ramp9.mp3\"}]",
     "video_key": "CSF_artist_angles",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 21:29:51 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-12 19:56:21 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 21:29:51 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-12 19:56:21 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-11-04 00:08:35 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
-    "repeat_loops": 3
+    "repeat_loops": 2
   }
 }]]></config>
   <blocks>

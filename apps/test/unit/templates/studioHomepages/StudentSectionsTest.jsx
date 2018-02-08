@@ -12,7 +12,6 @@ import SectionsTable from "@cdo/apps/templates/studioHomepages/SectionsTable";
 describe('StudentSections', () => {
   const defaultProps = {
     initialSections: [],
-    isRtl: false,
     canLeave: false,
   };
 
@@ -28,7 +27,6 @@ describe('StudentSections', () => {
       <ContentContainer
         heading="Classroom Sections"
         description={i18n.enrollmentDescription()}
-        isRtl={defaultProps.isRtl}
       >
         <JoinSectionNotifications/>
         <JoinSection
@@ -52,12 +50,10 @@ describe('StudentSections', () => {
       <ContentContainer
         heading="Classroom Sections"
         description={i18n.enrollmentDescription()}
-        isRtl={defaultProps.isRtl}
       >
         <JoinSectionNotifications/>
         <SectionsTable
           sections={sections}
-          isRtl={defaultProps.isRtl}
           isTeacher={false}
           canLeave={defaultProps.canLeave}
           updateSections={instance.updateSections}

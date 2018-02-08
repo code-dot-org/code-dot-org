@@ -1,16 +1,65 @@
 ---
 title: Facilitator Development Program
-nav: educate_nav
 theme: responsive
 ---
 
 # Facilitating with Code.org
 
+[col-50]
+
+<img src="/images/fit-450/facilitators.png">
+
+[/col-50]
+
+[col-50]
+
+## Change the face of computer science education - become a Code.org facilitator.
+
+Code.org recognizes the need for highly-qualified, flexible, and knowledgeable facilitators who can develop and support the next generation of computer science (CS) educators. 
+
+Applications for the 2018-19 cohort have closed. **If you are interested in joining the program in 2019-2020, please sign up below.**
+
+[<button>Tell me when applications open!</button>](https://goo.gl/forms/IPyERiuLCRG6jF0G3)
+
+[/col-50]
+
+<div style="clear: both;"></div>
+
+<hr/>
+
+<link href="/css/educate.css" rel="stylesheet">
+
+<div class="col-60", style="padding-right:20px;">
+
 Code.org partners with individuals interested in developing facilitation capacity in computer science (CS) education to deliver high-quality professional development to teachers in a format that's fun and accessible.
 
-Code.org's [Facilitator Development Program](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) is a highly-selective professional learning program designed to prepare and support facilitators to deliver high-quality professional development on Code.org's curriculum. 
+<br>
+<br>
+Code.org's Facilitator Development Program is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on Code.org's curriculum. 
 
-The ideal facilitator is an enthusiastic supporter of CS education, possesses a connection to Code.org’s equity-focused mission and has a strong background in the curriculum area, preferably through teaching experience. 
+<br>
+<br>
+The ideal facilitator is an enthusiastic supporter of CS education, possesses a connection to Code.org’s equity-focused mission and has a strong background in the curriculum area, preferably through teaching experience.
+
+</div>
+
+[col-40]
+
+<div class="educate-callout-box">
+"My facilitator did an excellent job communicating complex ideas and supporting me during the session. She also had a lot of experience with the course so could provide very helpful tips. She built my confidence so much!"
+<br>
+<br>
+-- 2017 CS Principles Teacher
+<br>
+</div>
+
+[/col-40]
+
+<div style="clear:both"></div>
+
+<hr/>
+
+## Learn more about the program
 
 <details>
  <summary>**What does a Code.org Facilitator do?**</summary>
@@ -71,40 +120,41 @@ In order to be selected for this program, potential Code.org facilitators must d
 </p>
 </details>
 
+<details>
+ <summary>**What are the program-specific commitments?**</summary>
+  <p>
+  
+The <a href="https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing", target="_blank">2018-19 Code.org Facilitator Development Program Overview</a> contains additional details about program benefits, qualifications, and commitments by curriculum focus area.
+</p>
+</details>
+
+<br>
+Have a question? Let us know by writing to <facilitators@code.org>
+
+
+<!--
 
 <div class="col-50" style="padding-right: 20px;">
 
-<img src="/images/fit-370/facilitator_laura.jpg">
+<img src="/images/fit-450/facilitator_laura.jpg">
 
 </div>
 
 <div class="col-50" style="padding-right: 20px;">
 
-<img src="/images/fit-370/facilitator_kevin.jpg">
+<img src="/images/fit-450/facilitator_kevin.jpg">
 
 </div>
 
 <div style="clear: both;"></div>
 
-## Learn more about the program
-Check out the [2018-19 Facilitator Development Program description](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing)!
-
-Here, you will find additional details about program benefits, qualifications, and commitments by curriculum focus area.
-
-Have a question? Let us know by writing to <facilitators@code.org>
-
-
-## Apply to become a Code.org Facilitator
-
 **Applications for the Code.org Facilitator Development Program will be available starting in early November, 2017.** The application will close in December, 2017. 
 
 If you would like to be contacted for the 2018-2019 application cycle please fill out [this interest form](https://goo.gl/forms/5r7Ft8PwkJ45fFmt1). 
 
-In the meantime, please check out the [Facilitator Program Description](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) and be sure to visit our curriculum pages for additional information on our three courses.
+In the meantime, please check out the <a href="https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing", target="_blank">2018-19 Code.org Facilitator Development Program overview</a> and be sure to visit our curriculum pages for additional information on our three courses.
 
 - [CS Fundamentals (Grades K to 5)](/educate/curriculum/elementary-school)
 - [CS Discoveries (Grades 6 to 10)](/educate/curriculum/middle-school)
 - [CS Principles (Grades 9 to 12)](/educate/curriculum/high-school)
-
-
-
+-->

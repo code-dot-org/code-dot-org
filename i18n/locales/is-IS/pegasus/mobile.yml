@@ -26,9 +26,14 @@
   twentyhours_heading: "Prófaðu námskeiðið okkar Inngangur að tölvunarfræði"
   twentyhours_text: "Búin(n) að ljúka fyrstu Klukkustund kóðunar? Fylgdu eftir með því að læra fleiri mikilvæg hugtök í tölvunarfræði og forritun á þessu námskeiði."
   og_title: 'Code.org: Allir geta lært'
+  og_title_soon: "The Hour of Code is coming"
+  og_title_here: "The Hour of Code is here!"
   og_description: "Sérhver nemandi í sérhverjum skóla á skilið að fá tækifæri til að læra tölvunarfræði."
+  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Klukkustund kóðunar er nú"
   csedweek_og_description: "4.-10. desember 2017. Tölvunarfræði er grunnfag sem allir nemendur ættu að læra."
+  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Vertu með í <a href=\"http://hourofcode.com\">Klukkustund kóðunar</a><br/>8. - 14. desember 2014<br/>"
   hoc2014_students: "Nemendur"
   hoc2014_try: "Prófið hana"
@@ -207,18 +212,18 @@
   just_did_coursee: "Ég var að ljúka Námskeiði E - kíktu á það! @codeorg"
   just_did_coursef: "Ég var að ljúka Námskeiði F - kíktu á það! @codeorg"
   just_did_accelerated: "Ég var að ljúka Hraðnámskeiðinu - kíktu á það! @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
-  just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course4_donor: "I just finished Course 4 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursea_donor: "I just finished Course A - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_courseb_donor: "I just finished Course B - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursec_donor: "I just finished Course C - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursed_donor: "I just finished Course D - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursee_donor: "I just finished Course E - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursef_donor: "I just finished Course F - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_accelerated_donor: "I just finished the Accelerated Course - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_hoc_donor: 'Ég var að ljúka #HourOfCode - spáðu í það! (Takk %{donor_twitter} fyrir að styðja @codeorg)'
+  just_did_course1_donor: "Ég var að ljúka Námskeiði 1 - spáðu í það! Takk %{donor_twitter} fyrir að styðja @codeorg"
+  just_did_course2_donor: "Ég var að ljúka Námskeiði 2 - spáðu í það! Takk %{donor_twitter} fyrir að styðja @codeorg"
+  just_did_course3_donor: "Ég var að ljúka Námskeiði 3 - spáðu í það! Takk %{donor_twitter} fyrir að styðja @codeorg"
+  just_did_course4_donor: "Ég var að ljúka Námskeiði 4 - spáðu í það! Takk %{donor_twitter} fyrir að styðja @codeorg"
+  just_did_coursea_donor: "Ég var að ljúka Námskeiði A - spáðu í það! Takk %{donor_twitter} fyrir að styðja @codeorg"
+  just_did_courseb_donor: "Ég var að ljúka Námskeiði B - spáðu í það! Takk %{donor_twitter} fyrir að styðja @codeorg"
+  just_did_coursec_donor: "Ég var að ljúka Námskeiði C - spáðu í það! Takk %{donor_twitter} fyrir að styðja @codeorg"
+  just_did_coursed_donor: "Ég var að ljúka Námskeiði D - spáðu í það! Takk %{donor_twitter} fyrir að styðja @codeorg"
+  just_did_coursee_donor: "Ég var að ljúka Námskeiði E - spáðu í það! Takk %{donor_twitter} fyrir að styðja @codeorg"
+  just_did_coursef_donor: "Ég var að ljúka Námskeiði F - spáðu í það! Takk %{donor_twitter} fyrir að styðja @codeorg"
+  just_did_accelerated_donor: "Ég var að ljúka Hraðnámskeiðinu - spáðu í það! Takk %{donor_twitter} fyrir að styðja @codeorg"
   twitter_teach_cs: "9 af hverjum 10 eru sammála því að skólar eigi að kenna tölvunarfræði. http://youtu.be/nKIu9yen5nc. Heimsæktu https://code.org/."
   twitter_cs_foundational: "Tölvunarfræði er grunnfag sem allir nemendur ættu að læra. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Lærðu í Klukkustund kóðunar"
@@ -231,7 +236,7 @@
   lines_of_code: "MEIRA EN <b># LÍNUR AF KÓÐA</b> SKRIFAÐAR TIL ÞESSA."
   lines_of_code_alt: "<b>#</b> LÍNUR AF KÓÐA SKRIFAÐAR AF NEMENDUM"
   who_has_done_hoc: 'Hver hefur lokið #HourOfCode? @codeorg'
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
+  who_has_done_hoc_donor: 'Hver hefur klárað #HourOfCode? (Takk %{donor_twitter} fyrir að styðja @codeorg)'
   hoc_leaderboards: "Topplistar fyrir Klukkustund kóðunar"
   students_and_lines: "%{students} nemendur hafa lokið Klukkustund kóðunar og skrifað %{lines} línur af kóða."
   start_hoc: "Byrjaðu núna Klukkustund kóðunar"
@@ -255,6 +260,12 @@
   studiobar_donate_body: "Eitt barn lærir fyrir hvern dollar sem þú gefur"
   studiobar_shop_title: "Verslun"
   studiobar_shop_body: "Klæðstu merkinu okkar með stolti."
+  homepage_stats_students: "of US students have accounts on Code.org"
+  homepage_stats_female: "of our students are female"
+  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
+  homepage_stats_policy: "states changed policy to support computer science"
+  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "&ldquo;Ég skora á stúlkur í hverju einasta landi að læra Klukkustund kóðunar&rdquo; \nMalala, Nóbelsverðlaunahafi"
   homepage_hero_text_susan: |-
     &ldquo;Getir þú breytt tækninni, getur þú breytt heiminum.&rdquo;
@@ -294,6 +305,8 @@
   homepage_hero_text_stat_loc: "8,5 miljón stúlkur er skráðar til náms á Code.org"
   homepage_hero_text_stat_students: "#student_count nemendur skráðir á Code.org"
   homepage_hero_text_stat_served: 'Klukkustund kóðunar: miðlað til #served'
+  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
+  homepage_hero_hoc_is_here: "The Hour of Code is here"
   homepage_slot_text_hoc: "Klukkustund kóðunar"
   homepage_slot_text_frozen: "Frozen með Önnu og Elsu"
   homepage_slot_text_teacher: "Stjórnborð kennara"
@@ -313,6 +326,7 @@
   homepage_action_text_girlvideo: "Veittu stúlku innblástur"
   homepage_action_text_learn: "Byrjaðu að læra"
   homepage_action_text_signpetition: "Skrifa undir áskorunina"
+  homepage_action_text_wincelebritychat: "Win a celebrity chat"
   homepage_signpetition_dropdown: "Ég samþykki &#x25BE;"
   homepage_diversity_pledge: "Vinna fjölbreytniheitið"
   homepage_banner_text_prizes: 'Klukkustund kóðunar kemur aftur 7. - 13. desember. '
@@ -339,7 +353,7 @@
   homepage_slot_text_title_students: "Nemendur"
   homepage_slot_text_blurb_students: "Skoða allt kennsluefni okkar"
   homepage_slot_text_blurb_students_courses: "Kíktu á námskeiðin okkar"
-  homepage_slot_text_link_codestudio: "Prófa námskeið Code.org"
+  homepage_slot_text_link_codestudio: "Prófa Kóðastúdíóið"
   homepage_slot_text_link_local: "Finna nám í nágrenninu"
   homepage_slot_text_link_othercourses: "Önnur námskeið á netinu"
   homepage_slot_text_title_educators: "Fræðsluaðilar"
@@ -356,7 +370,7 @@
   homepage_slot_text_link_buy: "Taktu þátt"
   homepage_slot_text_link_donate: "Styrkja með peningagjöf"
   homepage_slot_text_link_shop: "Bolir, hattar og fleira"
-  homepage_slot_text_link_administrators: "Bring to your school or district"
+  homepage_slot_text_link_administrators: "Kynntu í skólanum eða umdæminu"
   homepage_header_codestudio: "Sköpunarverk nemenda á Code.org"
   homepage_header_donors: "Code.org þakkar stuðningsaðilum"
   homepage_donors_seall: "Sjá allt"
@@ -419,10 +433,13 @@
   mc_gradelevel: "Aldur 6-106"
   mc_platformtext: "Fyrir nýjustu vafra, snjallsíma, spjaldtölvur"
   mc_specs: "Mörg tungumál | Nýlegir vafrar og spjaldtölvur | Aldur 6-106"
+  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: "Minecraft Hönnuður"
   minecraft_adventurer: "Minecraft Könnuður"
   minecraft_tutorials: "Klukkustund kóðunar með Minecraft efni"
   minecraft_specs: "Mörg tungumál | Nýlegir vafrar og spjaldtölvur | 2. bekkur+"
+  minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  minecraft_agent_button: "Byrja"
   minecraft_designer_description: "Forritaðu dýr og aðrar Minecraft verur í þinni eigin útgáfu af Minecraft."
   minecraft_designer_button: "Byrja"
   minecraft_adventurer_description: "Notaðu kóða til að láta Alex eða Steve fara í ævintýraferð."
@@ -430,6 +447,19 @@
   minecraft_no_internet: "Ertu án internettengingar?"
   minecraft_download_adventurer: "Hlaða niður ónettengdu útgáfunni af Minecraft Könnuði."
   minecraft_subtitle: "Klukkustund kóðunar með Minecraft"
+  minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
+  minecraft_host_event: "Host a Minecraft Hour of Code Event"
+  minecraft_teach_resources: "Teacher resources and lesson plan."
+  minecraft_leader_guide: "Download resources to help you plan and lead an event."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
+  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}', target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
+  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}', target='_blank'>Sign up today</a>."
+  minecraft_future: "Help all youth become future ready"
+  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}', target='_blank'>access the resources</a> they found most valuable."
+  minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
+  minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   sports_page_title: "Klukkustund kóðunar - íþróttir"
   sports_og_title: "Láttu reyna á þig. Allir geta lært."
   sports_og_description: "Meistarar og gullverðlaunarhafar hvetja þig til að prófa Klukkustund kóðunar. Forritaðu þinn eigin íþróttaleik."
@@ -466,6 +496,7 @@
   video_title_obama: "Obama forseti talar um tölvunarfræði"
   video_title_hoc_is_here: "Klukkustund kóðunar er hér - Allir geta lært"
   video_title_anybody_can_learn: "Allir geta lært"
+  video_title_steph_curry: "Hour of Code with Steph Curry"
   video_title_draymond_green: "Klukkustund kóðunar með Draymond Green"
   video_title_russell_okung: "Klukkustund kóðunar með Russell Okung"
   video_title_real_madrid: "Klukkustund kóðunar með Real Madrid"
@@ -545,6 +576,8 @@
   volunteer_engineer_submission_type_task_remote: "Ég vil að þú notir Skype til að segja nokkur hvatningarorð við börnin í bekknum mínum"
   volunteer_engineer_submission_type_task_mentor: "Ég er að leita að leiðbeinanda til að hjálpa mér að undirbúa að kóða með nemendum mínum"
   petition_age: "Aldur"
+  dashboard_announce_hoc_scaling_progress: "Það er mikið álag á Klukkustund kóðunar. Við getum ekki vistað neina framvindu þessa vikuna en öll framvinda þar á undan er varðveitt."
+  dashboard_announce_learn_more_button: "Læra meira"
   dashboard_landing_title: "Heimasíða kennara"
   dashboard_landing_welcome: "Velkomin á nýtt og endurbætt stjórnborð kennara."
   dashboard_landing_video: "Horfa á þetta myndskeið"
@@ -681,7 +714,7 @@
   dashboard_students_add_student: "Bæta við nemanda"
   dashboard_students_add_students: "Bæta við mörgum nemendum"
   dashboard_students_add_multiple: 'Ritaðu eða límdu nöfn nemenda þinna, eitt í hverja línu:'
-  dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
+  dashboard_students_new_google_classroom_section: "Ef þú vilt bæta við nemendum notaðu þá <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> og smelltu svo á <b>Spegla nemendur frá Google Classroom</b> hnappinn hér fyrir ofan."
   dashboard_students_new_section: "Þú hefur búið til nýjan hóp! Bættu nemendum í hann með hnöppunum <b>Bæta við nemanda</b> eða <b>Bæta við mörgum nemendum</b> hér fyrir ofan."
   dashboard_students_placeholder_name: "Nafn nemanda"
   dashboard_students_name: "Nafn"
@@ -829,18 +862,18 @@
   carousel_heading_webpages: "Lærðu að búa til vefsíður"
   carousel_heading_robots: "Lærðu að forrita með vélmennum"
   carousel_heading_ide: "Tækni vinsæl meðal kennara"
-  carousel_heading_desktop: "Learn to code on a computer"
-  carousel_heading_mobtabelem: "For phones and tablets"
-  carousel_heading_prereader: "For pre-readers"
-  carousel_heading_beyondblocks: "Go beyond blocks - learn a programming language"
-  carousel_heading_nointernet: "Poor internet? Install these apps on your computer"
+  carousel_heading_desktop: "Lærðu að forrita á tölvu"
+  carousel_heading_mobtabelem: "Fyrir síma og spjaldtölvur"
+  carousel_heading_prereader: "Fyrir forlæsa"
+  carousel_heading_beyondblocks: "Ekki stoppa við kubbana - lærðu forritunarmál"
+  carousel_heading_nointernet: "Lélegt netsamband? Settu þessi öpp á tölvuna þína"
   educator_notes: "Minnispunktar leiðbeinenda"
   teach_led_lesson_plans: "Klukkustund kóðunar - handleiðsla kennara"
   learn_footer_all_tutorials: "Skoðaðu <a href=\"https://code.org/educate/allhourofcode\">listann yfir allt kennsluefni fyrir Klukkustund kóðunar</a>. Viðmið okkar og leiðarvísi um gerð kennsluefnis fyrir Klukkustund kóðunar <a href=\"https://hourofcode.com/tutorial-guidelines\">má finna hér.</a>"
   how_to_teach_hoc: "Hvernig á að kenna Klukkustund kóðunar"
   more_resources_educators: "Fleiri tilföng fyrir kennara og leiðbeinendur"
   beyond_submission: "Viltu leggja inn kennslueiningu fyrir Umfram klukkustund (Beyond an Hour)? Sjá viðmiðin og umsóknarformið."
-  third_party_submission: "Want to submit a tutorial to be listed here? <a href=\"%{submission_url}\">See the criteria and submission form.</a>"
+  third_party_submission: "Viltu leggja inn kennsluefni hér? <a href=\"%{submission_url}\">Hér eru skilmálar og umsóknareyðublað.</a>"
   participants: "þátttakendur"
   teachers_notes: "Minnispunktar kennara"
   teachers_notes_hoc: 'Kennarar: Hér eru mikilvægar ábendingar fyrir kennara'
@@ -917,7 +950,7 @@
   coursef_name: "Námskeið F"
   accelerated_name: "Hraðnámskeið"
   express_name: "Express Course"
-  pre-express_name: Pre-reader Express Course
+  pre-express_name: Hraðnámskeið fyrir forlæsa
   cspunit1_name: Kafli 1 - Stafrænar upplýsingar
   cspunit2_name: 'Kafli 2: Internetið'
   cspunit3_name: 'Kafli 3: Forritun'
@@ -933,14 +966,16 @@
   csp1_name: 'Kafli 1: Internetið'
   csp2_name: Kafli 2 - Stafrænar upplýsingar
   csp3_name: 'Unit 3: Algorithms and Programming'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
+  csp3-a_name: 'Kafli 3: Kynning á forritun (útgáfa A)'
+  csp3-research-mxghyt_name: 'Kafli 3: Kynning á forritun (undirmarkmið)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-ap_name: AP Performance Tasks
+  csp-ap_name: AP verkefni
   csppostap_name: 'Framhald: Gagnagrunnar í öppum'
   cspassessment_name: "Fullt próf - 50 spurningar"
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Prófhluti 1 - 25 spurningar
   cspexam2-AKwgAh1ac5_name: Prófhluti 2 - 25 spurningar
   cspunit3_gradelevel: "Bekkir 9-12"
@@ -961,7 +996,7 @@
   math_category_name: "Reikningur"
   hoc_category_name: "Klukkustund kóðunar"
   csf_category_name: "TF Grunnur"
-  csf_international_category_name: "CS Fundamentals International"
+  csf_international_category_name: "Grunnatriði TF - alþjóðlegt"
   csf2_draft_category_name: 'Í þróun: Námskeið A-F'
   csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 TF Grundvöllur"
@@ -1385,9 +1420,9 @@
   playlab_shortcode: "lab"
   artist_shortcode: "art"
   header_home: "Forsíða"
-  header_my_dashboard: "My Dashboard"
+  header_my_dashboard: "Stjórnborðið mitt"
   header_courses: "Námskeið"
-  header_course_catalog: "Course Catalog"
+  header_course_catalog: "Námskeiðalisti"
   header_project_gallery: "Verkefni"
   header_sections: "Hópar"
   header_professional_learning: "Fagnám"
@@ -1428,30 +1463,32 @@
   user_header_settings: "Reikningurinn minn"
   user_header_logout: "Skrá út"
   user_header_signin: "Innskráning"
-  view_all_sections: "View All Sections"
-  view_section: "View Section"
-  view_named_section: "View %{section_name}"
-  privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
-  signing_in: "Signing In"
-  sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
-  sign_in_instruct_website: "Go to %{code_org_url}."
-  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
-  sign_in_instruct_name: "Choose their display name."
-  sign_in_instruct_secret: "Choose their secret %{secret}."
-  sign_in_instruct_button: "Click the “Sign in” button."
-  sign_in_overview_cards: "Students can find all of this information, including their secret %{secret}, in the login cards below."
-  reset_student_password: "Resetting student passwords"
-  reset_student_password_instructions: "You can reset the secret <word/picture> for any of your students by going to the “Manage Students” tab for the section, clicking the “Show secret” button under the “Password” column, and clicking the “Reset secret” button."
-  login_cards: "Login Cards"
-  print_login_cards: "Print login cards"
-  joining_section: "Joining your section (one-time only)"
-  joining_section_overview: "If a student has not already joined your section, please ask them to do the following steps. Note that they only need to do this once. By joining your section, students will be able see the course assigned to them and you will be able to track the progress of the work they complete while they are signed in."
-  joining_section_instruct_website: 'Create a Code.org account if they haven’t already done so. They can do this at https://studio.code.org/users/sign_up. Note that they can either sign up with an email address and password, or sign up through Google, Facebook, or Microsoft by clicking on one of these buttons:'
-  joining_section_instruct_account: "Sign in to their Code.org account."
-  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section code: %{section_code}.'
-  joining_section_instruct_button: "Once they press the “Go” button, they should be added to your section."
-  signing_in_single_instruct: "Your students can sign in to their Code.org accounts by going to https://code.org/ and clicking on the “Sign in” button on the top right corner."
-  reset_student_password_email: "If your student created a Code.org account by using their email address and password (instead of signing in through their Google, Facebook, Microsoft, or Clever account), you can reset their password by going to the “Manage Students” tab for the section, and clicking the “Reset password” button under the “Password” column."
-  syncing_students: "Syncing your students"
-  syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
-  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
+  view_all_sections: "Sjá alla hópa"
+  view_section: "Sjá hóp"
+  view_named_section: "Sjá %{section_name}"
+  privacy_doc_explanation: "Smelltu hér til að fá persónuverndarskjal okkar sem þú getur deilt eða prentað fyrir nemendur þína."
+  signing_in: "Innskráning"
+  sign_in_overview: 'Nemendur þínir geta skráð sig inn á Code.org aðganga sína með því að fylgja þessum leiðbeiningum:'
+  sign_in_instruct_website: "Fara á %{code_org_url}."
+  sign_in_instruct_code: 'Slá inn hópkóðann sinn: %{section_code}.'
+  sign_in_instruct_name: "Velja sýnilegt heiti sitt."
+  sign_in_instruct_secret: "Velja leyndarmálið %{secret}."
+  sign_in_instruct_button: "Smella á \"Skrá inn\" hnappinn."
+  sign_in_overview_cards: "Nemendur geta fundið allar þessar upplýsingar, þar á meðal leyndarmálið sitt %{secret}, á innskráningarspjöldunum hér fyrir neðan."
+  reset_student_password: "Endurstilling aðgangsorða nemenda"
+  reset_student_password_instructions: "Þú getur endurstillt leynilega <orðið/myndina> fyrir nemanda þinn með því að fara á \"Umsjón hóps\" flipann fyrir hópinn, smella á \"Sýna leyndarmál\" hnappinn í dálknum \"Aðgangsorð\" og smella á hnappinn \"Endurstilla leyndarmál\"."
+  login_cards: "Innskráningarspjöld"
+  print_login_cards: "Prenta innskráningarspjöld"
+  joining_section: "Gengið í hópinn (einu sinni)"
+  joining_section_overview: "Hafi nemandi ekki þegar gerst meðlimur í hópnum þinum skaltu biðja hann að gera eftirfarandi. Taktu eftir að hann þarf aðeins að gera þetta einu sinni. Sem meðlimur hópsins mun hann geta séð námskeiðið sem lagt er fyrir og þú munt geta fylgst með vinnu sem hann klárar þegar hann er skráður inn."
+  joining_section_instruct_website: 'Stofna Code.org aðgang hafi hann ekki þegar gert það. Það er gert á https://studio.code.org/users/sign_up. Taktu eftir að hann getur skráð sig með netfangi og aðgangsorði, eða notað Google, Facebook eða Microsoft aðgang með því að smella á einn af þessum hnöppum:'
+  joining_section_instruct_account: "Skrá sig inn á Code.org aðgang."
+  joining_section_instruct_code: 'Fara á %{code_org_url} og slá inn hópkóðann: %{section_code}.'
+  joining_section_instruct_button: "Eftir að hafa ýtt á \"Gera\" hnappinn ætti hann að vera kominn í hópinn."
+  signing_in_single_instruct: "Nemendur þínir geta skráð sig inn á Code.org aðganga sína með því að fara á https://code.org/ og smella á \"Skrá inn\" hnappinn efst til hægri."
+  reset_student_password_email: "Ef nemandi hefur stofnað Code.org aðgang með því að nota netfang og aðgangsorð (í stað þess að skrá sig inn gegnum Google, Facebook, Microsoft eða Clever aðgang), getur þú endurstillt aðgangsorð fyrir hann með því að fara á flipann \"Umsjón nemenda\" fyrir hópinn og smella á \"Endurstilla aðgangsorð\" hnappinn í dálknum \"Aðgangsorð\"."
+  syncing_students: "Speglun nemenda"
+  syncing_students_instructions: 'Ef upp kemur ósamræmi milli Code.org hópsins þíns og nemendalistans í Google Classroom, getur þú smellt á "Spegla nemendur frá Google Classroom" hnappinn undir flipanum "Umsjón nemenda":'
+  google_sign_in_instruct: 'Þaðan ættu þeir að nota valkostinn "Skrá inn með Google aðgangi":'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro

@@ -156,6 +156,7 @@
     user_type_student: Dalta
     field_is_required: riachtanach
     accept_terms: Caithfidh tú glacadh leis chun cuntas a chruthú
+    error: An error occurred.
   school_info:
     title: Eolas faoin scoil (roghnach)
     school_country: Tír na Scoile
@@ -775,6 +776,9 @@
         and games with objects and characters that interact with each other.
       audience: Aois 13+
       cta: Foghlaim anois
+    hoc-encryption:
+      title: Criptiú Simplí
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -795,6 +799,10 @@
     minecraft2016:
       title: Minecraft
       body: Códáil ainmhithe agus créatúir eile i do leagan féin de Minecraft.
+    hero:
+      title: Minecraft
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: Sports
       body: Make a basketball game or mix and match across sports.
@@ -876,6 +884,9 @@
     hide_survey_last_answer: Suirbhé gan ainm é seo. Tabhair cuairt ar phainéal na
       múinteoirí chun torthaí comhbhailithe a fháil. Ní bheidh na torthaí ar fáil
       go dtí go ndéanfaidh ar a laghad cúigear daltaí an suirbhé.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Go raibh maith agat
     wrong_body: Go raibh maith agat as do fhreagraí.
@@ -1006,6 +1017,13 @@
     save: Sábháil
     delete: Scrios
     import: Import
+    share_link_import_bad_link_header: Share link not recognized
+    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
+      you are using a link from a Minecraft: Agent puzzle, and that you have copied
+      the full link.'
+    share_link_import_error_header: Something went wrong.
+    share_link_import_error_body: There was a problem importing that share link. Please
+      try again.
     exit: Fill ar an gCúrsa
     my_projects: Mo Chuid Tograí
     project_gallery: Tograí

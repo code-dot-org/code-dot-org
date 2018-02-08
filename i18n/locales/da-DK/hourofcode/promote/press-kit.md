@@ -1,31 +1,30 @@
-* * *
-
-title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_press_kit) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ## Hvordan kan du få medieopmærksomhed om dit Hour of Code arrangement
 
-*For all press and media inquiries, contact <press@code.org>*
+*For alle henvendelser fra presse og medier, kontakt venligst <press@code.org> på engelsk*
 
 ### Vigtige Tips
 
-  * Nå ud til medierne to uger før din begivenhed via e-mail. Følg op med e-mails og telefon, hvis du ikke modtager svar på den første henvendelse.
-  * Opfordre skolens ansatte til at tage billeder for at dele dem på Internettet, Facebook eller udsend trykt materiale.
-  * Skrive om Hour of Code på din hjemmeside og i din skoles avis. Skriv om dit arrangement og sæt billeder på af elevernes aktiviteter.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Send mails til medierne to uger før dit arrangement. Følg op med e-mails og telefonopkald, hvis du ikke modtager svar på den første henvendelse.
+- Bed skolens ansatte tage billeder og dele dem online eller som trykt materiale.
+- Skriv om Hour of Code på din hjemmeside og i din skoles avis. Skriv om dit arrangement og brug billeder af elevaktiviteter.
+- Del opslag om begivenheder med billeder på Facebook og Twitter fra 5. til 11. december. Brug hashtag **#HourOfCode** så Code.org kan se og dele dine opslag.
 
-### Step-by-step vejledning:
+### Trin for trin vejledning:
 
-**1. Plan your event**
+**1. Planlæg dit arrangement**
 
-  * Planlæg et fælles kick off arrangement for Hour of Code.
-  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * Organisere gruppeaktiviteter (som for eksempel en demonstration af en "unplugged" programmeringsaktivitet), eller vis elevaktiviteterne.
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
+- Planlæg et fælles kick off arrangement for Hour of Code.
+- Send [et brev](%= resolve_url('/promote/resources#sample-emails') %) til forældrene og bed dem dele videre.
+- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+- Organisere gruppeaktiviteter (som for eksempel en demonstration af en "unplugged" programmeringsaktivitet), eller vis elevaktiviteterne.
+- Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2. Identify specific local reporters that cover education or local events.**
 

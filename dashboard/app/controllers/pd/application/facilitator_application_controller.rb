@@ -1,9 +1,22 @@
 module Pd::Application
   class FacilitatorApplicationController < ApplicationController
-    load_and_authorize_resource :facilitator_application, class: 'Pd::Application::Facilitator1819Application'
+    before_action do
+      @facilitator_program_url = 'https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U'
+    end
 
     def new
-      return render :submitted if Facilitator1819Application.exists?(user: current_user)
+      # Block on production until we're ready to release and publicize the url
+      # TODO: Andrew - remove this, and the associated Gatekeeper key, after we go live
+      if Rails.env.production? && !current_user.try(:workshop_admin?) && Gatekeeper.disallows('pd_facilitator_application')
+        return head :not_found
+      end
+
+      return render :logged_out unless current_user
+      return render :not_teacher unless current_user.teacher?
+
+      @application = Facilitator1819Application.find_by(user: current_user)
+      return render :submitted if @application
+      return render :closed unless Facilitator1819Application.open?
 
       @script_data = {
         props: {

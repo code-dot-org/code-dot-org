@@ -170,6 +170,22 @@ describe('ProgressBubble', () => {
     assert.equal(div.props().style.transform, 'rotate(45deg)');
   });
 
+  it('renders a small diamond for concept levels when smallBubble is true ', () => {
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        smallBubble={true}
+        level={{
+          ...defaultProps.level,
+          isConceptLevel: true
+        }}
+      />
+    );
+    const div = wrapper.find('div').at(1);
+    assert.equal(div.props().style.transform, 'rotate(45deg)');
+    assert.equal(div.props().style.borderRadius, 2);
+  });
+
   it('uses name when specified', () => {
     const wrapper = shallow(
       <ProgressBubble
@@ -236,5 +252,92 @@ describe('ProgressBubble', () => {
       />
     );
     assert.equal(wrapper.find('ProgressPill').length, 0);
+  });
+
+  describe('href', () => {
+    let fakeLocation;
+
+    beforeEach(() => {
+      fakeLocation = document.createElement('a');
+    });
+
+    it('links to the level url', () => {
+      fakeLocation.href = "http://studio.code.org/s/csd3/stage/3/puzzle/7";
+      const wrapper = shallow(
+        <ProgressBubble
+          {...defaultProps}
+          currentLocation={fakeLocation}
+          level={{
+            ...defaultProps.level,
+            url: '/my/test/url'
+          }}
+        />
+      );
+      assert.equal(wrapper.find('a').prop('href'), '/my/test/url');
+    });
+
+    it('includes the section_id in the queryparams if selectedSectionId is present', () => {
+      fakeLocation.href = "http://studio.code.org/s/csd3/stage/3/puzzle/7";
+      const wrapper = shallow(
+        <ProgressBubble
+          {...defaultProps}
+          currentLocation={fakeLocation}
+          selectedSectionId="12345"
+        />
+      );
+      assert.include(wrapper.find('a').prop('href'), 'section_id=12345');
+    });
+
+    it('preserves the queryparams of the current location', () => {
+      fakeLocation.href = "http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559";
+      const wrapper = shallow(
+        <ProgressBubble
+          {...defaultProps}
+          currentLocation={fakeLocation}
+        />
+      );
+      const href = wrapper.find('a').prop('href');
+      assert.include(href, 'section_id=212');
+      assert.include(href, 'user_id=559');
+    });
+
+    it('if queryParam section_id and selectedSectionId are present, selectedSectionId wins', () => {
+      fakeLocation.href = "http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559";
+      const wrapper = shallow(
+        <ProgressBubble
+          {...defaultProps}
+          currentLocation={fakeLocation}
+          selectedSectionId="12345"
+        />
+      );
+      const href = wrapper.find('a').prop('href');
+      assert.notInclude(href, 'section_id=212');
+      assert.include(href, 'section_id=12345');
+      assert.include(href, 'user_id=559');
+    });
+  });
+
+  describe('currentLocation', () => {
+    // The currentLocation prop exists to provide a testing hook for functionality
+    // that depends on the window.location global.
+    it('defaults to window.location if not provided', () => {
+      assert.notProperty(defaultProps, 'currentLocation');
+      const wrapper = shallow(
+        <ProgressBubble {...defaultProps}/>
+      );
+      assert.strictEqual(wrapper.instance().props.currentLocation, window.location);
+    });
+
+    it('can be explicitly set to an anchor object', () => {
+      const fakeLocation = document.createElement('a');
+      fakeLocation.href = "http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559";
+      const wrapper = shallow(
+        <ProgressBubble
+          {...defaultProps}
+          currentLocation={fakeLocation}
+        />
+      );
+      assert.strictEqual(wrapper.instance().props.currentLocation, fakeLocation);
+    });
   });
 });

@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# 995 contacts
-../send-to-mailing-list --limit 1200 2017-01-19-new-york-PD-email ./contacts.csv

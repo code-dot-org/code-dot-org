@@ -6,20 +6,32 @@ module UsersHelper
   include SharedConstants
 
   def check_and_apply_clever_takeover(user)
-    raise 'Pagemode should be set to clever_takeover to enable feature' unless cookies['pm'] == 'clever_takeover'
     if session['clever_link_flag'].present? && session['clever_takeover_id'].present? && session['clever_takeover_token'].present?
       uid = session['clever_takeover_id']
       # TODO: validate that we're not destroying an active account?
-      existing_clever_account = User.where(uid: uid).first
+      existing_clever_account = User.where(uid: uid, provider: 'clever').first
+
+      # Move over sections that students follow
+      if user.student? && existing_clever_account
+        Follower.where(student_user_id: existing_clever_account.id).each do |follower|
+          follower.update(student_user_id: user.id)
+        end
+      end
+
       existing_clever_account.destroy! if existing_clever_account
       user.provider = 'clever'
       user.uid = uid
       user.oauth_token = session['clever_takeover_token']
       user.save
-      session.delete('clever_link_flag')
-      session.delete('clever_takeover_id')
-      session.delete('clever_takeover_token')
+      clear_clever_session_variables
     end
+  end
+
+  def clear_clever_session_variables
+    return if session.empty?
+    session.delete('clever_link_flag')
+    session.delete('clever_takeover_id')
+    session.delete('clever_takeover_token')
   end
 
   # Summarize a user and his or her progress progress within a certain script.
@@ -63,26 +75,6 @@ module UsersHelper
     return ids[0]
   end
 
-  # Summarize a user and his or her progress across all scripts.
-  # Example return value:
-  # {
-  #     "lines": 34, "linesOfCodeText": "Total lines of code: 34", "disableSocialShare": true,
-  #     "scripts": {
-  #         "course2": {
-  #             "levels": {"135": {"status": "perfect", "result": 100}}},
-  #         "artist": {
-  #             "levels": {
-  #                "1138": {"status": "attempted", "result": 5, submitted: false},
-  #                "1139": {"status": "attempted", "result": 5, submitted: true},
-  #                "1142": {"status": "attempted", "result": 5, pages_completed: [true, false, false], submitted: false},
-  #                "1147": {"status": "perfect", "result": 30, submitted: false}}}}}
-  def summarize_user_progress_for_all_scripts(user)
-    user_data = user_summary(user)
-    user_data[:scripts] = {}
-    merge_scripts_progress(user_data[:scripts], user)
-    user_data
-  end
-
   # Some summary user data we include in user_progress requests
   def user_summary(user)
     user_data = {}
@@ -96,17 +88,6 @@ module UsersHelper
       user_data[:linesOfCode] = client_state.lines
     end
     user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
-    user_data
-  end
-
-  # Merge the progress for all scripts into the specified result hash.
-  private def merge_scripts_progress(user_data, user)
-    UserLevel.where(user_id: user.id).each do |ul|
-      script_id = ul.script_id
-      script = Script.get_from_cache(script_id)
-      script_progress = (user_data[script.name] ||= {})
-      merge_script_progress(script_progress, user, script)
-    end
     user_data
   end
 
@@ -219,13 +200,14 @@ module UsersHelper
 
       # The page is considered complete if there was a valid result for each
       # embedded level.
-      if page_valid_result_count.zero?
-        page_completed_value = nil
-      elsif page_valid_result_count == page["levels"].length
-        page_completed_value = ActivityConstants::FREE_PLAY_RESULT
-      else
-        page_completed_value = ActivityConstants::UNSUBMITTED_RESULT
-      end
+      page_completed_value =
+        if page_valid_result_count.zero?
+          nil
+        elsif page_valid_result_count == page["levels"].length
+          ActivityConstants::FREE_PLAY_RESULT
+        else
+          ActivityConstants::UNSUBMITTED_RESULT
+        end
       pages_completed << page_completed_value
     end
 

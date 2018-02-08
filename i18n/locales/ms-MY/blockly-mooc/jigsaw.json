@@ -1,10 +1,10 @@
 {
-  "continue":"Teruskan",
-  "nextLevel":"Tahniah! Anda telah melengkapkan puzzle ini.",
-  "no":"Tidak",
-  "numBlocksNeeded":"Puzzle ini boleh diselesaikan dengan %1 blok.",
-  "reinfFeedbackMsg":"Anda boleh tekan butang \"Cuba lagi\" untuk kembali bermain.",
-  "share":"Kongsi",
-  "shareGame":"Kongsi permainan anda:",
-  "yes":"Ya"
+  "continue": "Teruskan",
+  "nextLevel": "Tahniah! Anda telah melengkapkan puzzle ini.",
+  "no": "Tidak",
+  "numBlocksNeeded": "Puzzle ini boleh diselesaikan dengan %1 blok.",
+  "reinfFeedbackMsg": "Anda boleh tekan butang \"Cuba lagi\" untuk kembali bermain.",
+  "share": "Kongsi",
+  "shareGame": "Kongsi permainan anda:",
+  "yes": "Ya"
 }

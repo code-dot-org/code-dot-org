@@ -27,7 +27,7 @@ class Pardot
   # Max # of prospects allowed in one batch
   MAX_PROSPECT_BATCH_SIZE = 50
   # Empirically determined safe max URL length for batch operations
-  URL_LENGTH_SEND_THRESHOLD = 6200
+  URL_LENGTH_SEND_THRESHOLD = 6000
 
   # Map of database fields to Pardot field names. "multi" refers to if the field
   # is a multi-valued type (such as checkbox list)
@@ -63,7 +63,7 @@ class Pardot
 
   # Exception to throw to ourselves if Pardot API key is invalid (which probably
   # means it needs to be re-authed)
-  class InvalidApiKeyException < Exception
+  class InvalidApiKeyException < RuntimeError
   end
 
   # Deletes a list of prospects from Pardot. For Pardot API documentation, see

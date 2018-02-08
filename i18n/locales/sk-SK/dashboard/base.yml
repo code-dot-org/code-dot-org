@@ -122,6 +122,7 @@ sk:
     user_type_student: "Študent"
     field_is_required: "sa vyžaduje"
     accept_terms: "Musíte súhlasiť s vytvorením účtu"
+    error: "An error occurred."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -566,6 +567,9 @@ sk:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Vek 13+"
       cta: "Nauč sa ako"
+    hoc-encryption:
+      title: "Simple Encryption"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -584,6 +588,9 @@ sk:
     minecraft2016:
       title: "Minecraft"
       body: "Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
@@ -647,6 +654,7 @@ sk:
     correct_title: "Ďakujeme"
     correct_body: "Ďakujeme za odoslanie odpovedí."
     hide_survey_last_answer: "Tento prieskum je anonymný. Pre súhrnné informácie o výsledkoch navštív prosím nástenku svojho učiteľa. Všimni si, že výsledky prieskumu budú zobrazené pri účasti minimálne piatich študentov."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Ďakujeme"
     wrong_body: "Ďakujeme za odoslanie odpovedí."
@@ -753,6 +761,10 @@ sk:
     save: "Uložiť"
     delete: "Odstrániť"
     import: "Import"
+    share_link_import_bad_link_header: "Prepojenie na zdieľanie sa nerozpoznalo"
+    share_link_import_bad_link_body: 'Prepojenie na zdieľanie sa nemohlo importovať. Uistite sa, že používate prepojenie z hlavolamu Minecraft: Agent a že ste skopírovali celé prepojenie.'
+    share_link_import_error_header: "Vyskytla sa chyba."
+    share_link_import_error_body: "Vyskytol sa problém s importom tohto prepojenia na zdieľanie. Skúste to znova."
     exit: "Vrátiť sa do kurzu"
     my_projects: "Moje Projekty"
     project_gallery: "Projekty"

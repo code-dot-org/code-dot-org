@@ -1,10 +1,10 @@
 {
-  "continue":"Tovább",
-  "nextLevel":"Gratulálunk! Teljesítetted ezt a feladványt.",
-  "no":"nem",
-  "numBlocksNeeded":"Ezt a puzzle-t a(z) % 1 blokkal megoldható.",
-  "reinfFeedbackMsg":"Nyomja meg a \"Játszd újra\" gombot hogy visszatérj a saját játékodhoz.",
-  "share":"Megosztás",
-  "shareGame":"Oszd meg a játékodat:",
-  "yes":"Igen"
+  "continue": "Tovább",
+  "nextLevel": "Gratulálunk! Teljesítetted ezt a feladványt.",
+  "no": "nem",
+  "numBlocksNeeded": "Ezt a puzzle-t a(z) % 1 blokkal megoldható.",
+  "reinfFeedbackMsg": "Nyomja meg a \"Játszd újra\" gombot hogy visszatérj a saját játékodhoz.",
+  "share": "Megosztás",
+  "shareGame": "Oszd meg a játékodat:",
+  "yes": "Igen"
 }

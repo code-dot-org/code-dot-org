@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import Radium from 'radium';
+import {connect} from 'react-redux';
 import Button from '../Button';
 import color from "../../util/color";
 
@@ -84,11 +84,11 @@ class ImageResourceCard extends Component {
     const imgSrc = filenameToImgUrl[image];
 
     return (
-      <div style={[styles.card, localeStyle]}>
+      <div style={{...styles.card, ...localeStyle}}>
         <div style={styles.image}>
           <img src={imgSrc}/>
         </div>
-        <div style={[styles.textbox, localeStyle, uncoverImage]}>
+        <div style={{...styles.textbox, ...localeStyle, ...uncoverImage}}>
           <div style={styles.title}>
             {title}
           </div>
@@ -108,4 +108,6 @@ class ImageResourceCard extends Component {
   }
 }
 
-export default Radium(ImageResourceCard);
+export default connect(state => ({
+  isRtl: state.isRtl,
+}))(ImageResourceCard);

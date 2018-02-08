@@ -2,29 +2,30 @@
   errors:
     messages:
       not_saved: 'Por favor, corrixe os seguintes erros:'
-      too_young: Este contido ten restricións de idade e non está disponíbel para
-        os alumnos máis novos
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
-      pair_programmer: You are currently pair programming with a student who does
-        not have access to this content. To access this content, stop pair programming
-        and try again.
+      too_young: Este contido ten restricións de idade e non está dispoñíbel para
+        o alumnado máis novo.
+      teacher_must_accept_terms: Este contido ten restricións de idade e non está
+        dispoñíbel para o alumnado máis novo. Pídelle á túa mestra que acepte os Termos
+        do Servizo actualizados para que poidas acceder ao contido. A túa mestra pode
+        facelo entrando en Code Studio e premendo o botón de "Revisar os termos actualizados"
+        na parte superior da páxina de Code Studio.
+      pair_programmer: Estás programando a medias cunha persoa que non ten acceso
+        a este contido. Para acceder a este contido, para a programación a medias
+        e téntao de novo.
   activerecord:
     errors:
       messages:
         blank: "é obrigatorio"
-        blank_plural: are required
-        invalid_plural: are invalid
+        blank_plural: obrigatorio
+        invalid_plural: inválidas
     attributes:
       user:
         name: Nome a mostrar
-        name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
+        name_example: 'Nome amosado<br/>(ex: Antía C. ou Trasno)'
         email: E-mail
-        parent_email: Parent/guardian email
-        personal_email: Personal email address
+        parent_email: Enderezo de correo electrónico da persoa responsable
+        personal_email: Enderezo do correo persoal <a href="%{url}">(preme aquí se
+          non tes un enderezo de correo)</a>
         username: Nome de usuario
         password: Contrasinal
         password_confirmation: Confirmación do contrasinal
@@ -35,26 +36,26 @@
         edit_header: Editar os Detalles da Conta
         error:
           future: non pode estar no futuro
-  hello: Olá mundo
+  hello: Ola, mundo
   welcome_back: Ola outra vez, %{name}
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: O teu plan de aprendizaxe profesional
+  see_your_learning_plan: Ver o teu plan de aprendizaxe
   submit: Enviar
   unsubmit: Cancelar envío
-  previous_page: Previous page
-  next_page: Next page
-  next_resource: Next resource
+  previous_page: Páxina anterior
+  next_page: Páxina seguinte
+  next_resource: Recurso seguinte
   done_with_module: Done with this Learning Module
   cancel: Cancelar
   okay: De acordo
-  heading_x_of_y: "%{heading} (page %{x} of %{y})"
+  heading_x_of_y: "%{heading} (páxina %{x} de %{y})"
   add_teacher_form:
     code:
       label: 'Agrega un profesor:'
       placeholder: Código da sección (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
-      instructions_short: Enter your 6 letter section code
+      instructions: Por favor, introduce o código compartido entre ti e a túa mestra.
+        O código ten 6 letras, como por exemplo "ABCDEF".
+      instructions_short: Introduce o teu código de sección de 6 letras
     submit: Agregar profesor
   add_hint_form:
     placeholder: Por favor, dixite a súa pista aquí
@@ -67,7 +68,7 @@
   courses: Cursos
   courses_page:
     title_student: Aprende no Code Studio
-    title_teacher: Teach with Code Studio
+    title_teacher: Ensina con Code Studio
   unplugged_activity: Actividade off-line
   of: de
   more: MÁIS
@@ -94,7 +95,7 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Conta da Microsoft
-    clever: Clever Account
+    clever: Conta intelixente
     forgot_password: Esqueceu o seu contrasinal?
     need_confirmation: Non recebeu as instrucións de confirmación?
     need_unlock: Non recibiches as instrucións de desbloqueo?
@@ -139,11 +140,12 @@
     valid_password: Contrasinal válido!
     invalid_password: O contrasinal  ten que ter, polo menos, 6 caracteres
     mismatch_password: Os dous contrasinais que metiches non se corresponden
-    student_terms: Concordo cos<a href='http://code.org/tos'>Termos de utilización</a>
-      da Code.org. Se tivese menos de 13 anos, declaro, ao enviar este formulario,
-      que teño autorización dos meus pais para usar os servizos da Code.org.<br/>No
-      caso dos alumnos con menos de 13 anos, os respectivos enderezos de e-mail son
-      rexistrados de forma que non poidamos entrar en contacto con eles.
+    student_terms: Acepto os <a href='http://code.org/tos'>Termos de uso</a> de Code.org.
+      Se son menor de 13 anos, declaro neste formulario que teño autorización de meus
+      pais para usar os servizos de Code.org.<br/><br/>Os enderezos de correo non
+      son gardados, o que impide a Code.org contactar cos alumnos, exceto cando para
+      recuperar o contrasinal. Consulta a nosa <a href='http://code.org/privacy'>Política
+      de privacidade</a> para saber máis.
     teacher_terms: Concordo cos<a href='http://code.org/tos'>Termos de utilización</a>
       da Code.org.
     additional_information: Necesitamos máis informacións para continuarmos o proceso
@@ -153,6 +155,7 @@
     user_type_student: Estudante
     field_is_required: "é obrigatorio"
     accept_terms: You must agree to create an account
+    error: An error occurred.
   school_info:
     title: School Information (optional)
     school_country: School Country
@@ -192,7 +195,7 @@
     words: Agora dixite as súas palabras secretas
     login: Iniciar Sesión
     invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    pair_programming: Estou traballando a medias no ordenador
     student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
       target='_blank'>here</a>.
   password:
@@ -211,7 +214,7 @@
       confirm_password: Confirmar novo contrasinal
       submit: Cambiar o meu contrasinal
   welcome_email:
-    subject: Unirme á miña clase (na Code.org)
+    subject: Unirme á miña clase (en Code.org)
     body: |
       Clica na seguinte ligazón para te inscribires nos titoriais de informática na Code.org (comigo como o teu "profesor"):
 
@@ -285,52 +288,52 @@
           You can now log into Code.org with your username and password
   nav:
     header:
-      finished_hoc: Terminei a miña Hora de Código
+      finished_hoc: Rematei a miña Hora de Código
       sign_in_to_save: Inicia sesión para gardares o teu progreso
       free_play:
-        playlab: Desenvolver unha aplicación
+        playlab: Crear unha aplicación
         artist: Debuxar algunha cousa
         calculate: Calculate Something
-        applab: Desenvolver unha aplicación
-        gamelab: Make a Game Lab project
-        weblab: Make a Web Lab (beta) project
-      home: Home
-      my_dashboard: My Dashboard
+        applab: Crea unha aplicación do Laboratorio de Aplicacións
+        gamelab: Crea un proxecto de Laboratorio de Xogos
+        weblab: Crea un proxecto (beta) de Laboratorio Web
+      home: Inicio
+      my_dashboard: O meu panel de control
       courses: Cursos
-      course_catalog: Course Catalog
+      course_catalog: Catálogo de cursos
       project_gallery: Proxectos
-      sections: Sections
+      sections: Seccións
       help_support: Help and support
-      report_bug: Report bug
-      teacher_community: Teacher community
-      professional_learning: Professional Learning
+      report_bug: Comunicar un erro
+      teacher_community: Comunidade de profesorado
+      professional_learning: Aprendizaxe profesional
       documentation: Documentation
       tutorials: Tutorials
-      educate_overview: Educator Overview
-      educate_elementary: Elementary School
-      educate_middle: Middle School
-      educate_high: High School
+      educate_overview: Resumo do docente
+      educate_elementary: Primaria
+      educate_middle: 1º e 2º de ESO
+      educate_high: Secundaria
       educate_hoc: Hora de Código
-      educate_partner: Partner with Us
-      educate_beyond: Beyond Code.org
-      educate_inspire: Inspire a Student
-      educate_community: Online Community
-      educate_tools: Tools and Videos
-      about_us: About Us
-      about_leadership: Leadership
-      about_donors: Donors
-      about_partners: Partners
-      about_team: Full Team
-      about_news: Newsroom
-      about_evaluation: Evaluation
-      about_jobs: Jobs
-      about_contact: Contact Us
-      about_faqs: FAQs
-      learn: Learn
+      educate_partner: Asóciese connosco
+      educate_beyond: Alén de Code.org
+      educate_inspire: Inspirar a un ou unha estudante
+      educate_community: Comunidade en liña
+      educate_tools: Ferramentas e vídeos
+      about_us: Quen somos
+      about_leadership: Liderado
+      about_donors: Doante
+      about_partners: Socios
+      about_team: Equipo completo
+      about_news: Sala de prensa
+      about_evaluation: Avaliación
+      about_jobs: Empregos
+      about_contact: Póñase en contacto
+      about_faqs: Preguntas frecuentes
+      learn: Aprenda
       stats: Stats
-      help_us: Help Us
-      teach: Teach
-      about: About
+      help_us: Axúdenos
+      teach: Ensinar
+      about: Sobre
     user:
       classroom: Páxina inicial do profesor
       district_dashboard: Panel do distrito
@@ -408,10 +411,10 @@
       recover your password)
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
-    create_personal_login_terms: By creating a personal login, I agree to be bound
-      by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of
-      service</a>. If I am under 13 years of age, I confirm that I have my parent
-      or legal guardian's permission to use the Code.org services even without a teacher.
+    create_personal_login_terms: Ao crear unha conta individual, acepto os <a href='%{terms_of_service_url}',
+      target='_blank'>termos de serviço</a> do Code.org. Se son menor de 13 anos,
+      declaro que teño autorización de meus pais ou responsables legais para usar
+      os servizos de Code.org incluso sen a supervisión dun profesor.
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
@@ -652,7 +655,7 @@
     secure: Versión Segura
     report_abuse: Reportar abuso
     built_on_code_studio: Creado no Code Studio
-    make_my_own_app: Facer a miña propia aplicación
+    make_my_own_app: Crear a miña propia aplicación
     how_it_works: Como funciona
     try_hour_of_code: Proba unha hora do Código!
   reference_area:
@@ -701,12 +704,12 @@
   video_coming_soon: Vídeo en breve!
   not_started: O alumno aínda non practicou este nivel.
   share_code:
-    title: Clique en 'Executar' para ver o meu programa en acción
-    bounce_og_title: Vexa o meu xogo de Ping-pong
+    title: Premer en 'Executar' para ver o meu programa en acción
+    bounce_og_title: Bota unha ollada ao meu xogo de Ping-pong
     flappy_og_title: Bota unha ollada ao meu xogo Flappy
     studio_og_title: Bota unha ollada á miña aplicación Play Lab
     check_out_what_i_made: Vexa o que eu fixen
-    og_description: Eu mesmo escribín o código coa Code.org
+    og_description: Escribín o código eu mesma con Code.org
     phone_number_not_allowed: Parece que hai un número de teléfone. Tente alterar
       o texto.
     address_not_allowed: Parece que hai un enderezo. Tente alterar o texto.
@@ -762,6 +765,9 @@
         and games with objects and characters that interact with each other.
       audience: Ages 13+
       cta: Learn how
+    hoc-encryption:
+      title: Simple Encryption
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -782,6 +788,10 @@
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    hero:
+      title: Minecraft
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: Sports
       body: Make a basketball game or mix and match across sports.
@@ -863,6 +873,9 @@
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
       students submitted the survey.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Graciñas
     wrong_body: Thank you for submitting answers.
@@ -991,6 +1004,13 @@
     save: Salvar
     delete: Eliminar
     import: Import
+    share_link_import_bad_link_header: Share link not recognized
+    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
+      you are using a link from a Minecraft: Agent puzzle, and that you have copied
+      the full link.'
+    share_link_import_error_header: Something went wrong.
+    share_link_import_error_body: There was a problem importing that share link. Please
+      try again.
     exit: Voltar ao curso
     my_projects: Os meus proxectos
     project_gallery: Proxectos
@@ -1027,9 +1047,9 @@
     not_saved: Non gardado
     cancel: Cancelar
     delete_confirm_title: Tes a certeza de que pretendes eliminar este proxecto?
-    delete_confirm_text: Ao eliminares este proxecto estás a removelo permanentemente
-      de “Os meus proxectos”. Os usuarios con quen compartiches a ligazón para este
-      proxecto deixarán de poder velo.
+    delete_confirm_text: Ao borrares este proxecto estás eliminándoo permanentemente
+      de “Os meus proxectos”. Calquera persoa coa que compartiras a ligazón para este
+      proxecto xa non poderá velo.
     view_all: Ver os meus proxectos
     remix: Remix
     click_to_remix: Clique em "Remix" para facer a súa propia versión!

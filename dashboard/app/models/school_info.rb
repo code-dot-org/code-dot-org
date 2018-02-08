@@ -1,3 +1,4 @@
+# coding: utf-8
 # == Schema Information
 #
 # Table name: school_infos
@@ -44,6 +45,8 @@ class SchoolInfo < ActiveRecord::Base
   belongs_to :school_district
   belongs_to :school
 
+  has_and_belongs_to_many :census_submissions, class_name: 'Census::CensusSubmission'
+
   # Remap what the form has (e.g. school_zip) to what we write to (e.g. zip)
   def school_zip=(input)
     self.zip = input
@@ -70,6 +73,57 @@ class SchoolInfo < ActiveRecord::Base
   before_validation do
     ATTRIBUTES.each do |attr|
       self[attr] = nil if self[attr].blank?
+    end
+  end
+
+  # Only sync from school on create to avoid unintended updates to old data
+  before_validation :sync_from_schools, on: :create
+
+  def sync_from_schools
+    # If a SchoolInfo is linked to a School then the SchoolInfo pulls its data from the School
+    # It seems like there is some code that is passing in mismatched data at times.
+    # As of Nov. 2, 2017 there were 7 rows in school_infos with non-null school_id and conflicting
+    # data between schools and school_infos. Until we better understand what is causing that we don't want
+    # to flat out fail if we get conflicting inputs. Instead we overwrite the passed in fields with what
+    # is on the School and report the mismatch to HoneyBadger.
+    unless school.nil? && school_id.nil?
+      original = {}
+      original[:country] = country
+      original[:school_type] = school_type
+      original[:state] = state
+      original[:zip] = zip
+      original[:school_district_id] = school_district_id
+      original[:school_district_other] = school_district_other
+      original[:school_district_name] = school_district_name
+      original[:school_other] = school_other
+      original[:school_name] = school_name
+      original[:full_address] = full_address
+
+      school = School.find(school_id) if school.nil?
+      self.country = 'US' # Everything in SCHOOLS is a US school
+      self.school_type = school.school_type
+      self.state = school.state
+      self.zip = nil
+      self.school_district = school.school_district
+      self.school_district_other = nil
+      self.school_district_name = nil
+      self.school_other = nil
+      self.school_name = nil
+      self.full_address = nil
+      self.validation_type = VALIDATION_FULL
+
+      # Report if we are overriding a non-nil value that was originally passed in
+      something_overwritten = original.map {|key, value| value && value != self[key]}.reduce {|acc, b| acc || b}
+      if something_overwritten
+        Honeybadger.notify(
+          error_message: "Overwriting passed in data for new SchoolInfo",
+          error_class: "SchoolInfo.sync_from_schools",
+          context: {
+            original_input: original,
+            school_id: school.id
+          }
+        )
+      end
     end
   end
 
@@ -135,16 +189,16 @@ class SchoolInfo < ActiveRecord::Base
   end
 
   def validate_private_other
-    errors.add(:state, "is required") unless state
-    errors.add(:zip, "is required") unless zip
-    errors.add(:school_name, "is required") unless school_name
+    errors.add(:state, "is required") unless state || school
+    errors.add(:zip, "is required") unless zip || school
+    errors.add(:school_name, "is required") unless school_name || school
 
     errors.add(:school_district, "is forbidden") if school_district
     errors.add(:school_district_other, "is forbidden") if school_district_other
     errors.add(:school_district_name, "is forbidden") if school_district_name
-    errors.add(:school, "is forbidden") if school
     errors.add(:school_other, "is forbidden") if school_other
     errors.add(:full_address, "is forbidden") if full_address
+    validate_school if school
   end
 
   def validate_public_charter

@@ -99,5 +99,5 @@ module.exports.categories = {
   },
 };
 
-module.exports.autocompleteFunctionsWithParens = true;
+module.exports.autocompleteFunctionsWithSemicolon= true;
 module.exports.showParamDropdowns = true;

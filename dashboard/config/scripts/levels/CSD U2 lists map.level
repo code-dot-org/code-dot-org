@@ -6,7 +6,7 @@
   "user_id": 324,
   "properties": {
     "instructions_important": "false",
-    "reference": "/csd/lists/index.html",
+    "reference": "/docs/csd/lists/index.html",
     "display_name": "Lists in HTML",
     "teacher_markdown": "# Review\r\n\r\nBring the class back together after all students have completed the previous level. You can track their progress in your Teacher Panel for that level. Review what students have learned about lists in the level progression. The previous level provides an opportunity to review both types of lists and how some common errors can affect how the list is displayed.  Students can also use this time to update their HTML tag lists with `<ul>`, `<ol>`, and `<li>`.\r\n"
   },

@@ -18,50 +18,46 @@ social:
   "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
   "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 ---
-
 <%
     facebook = {:u=>"http://#{request.host}/us"}
 
     twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
-%> - 编程一小时
+%> '#HourOfCode' %>
 
 # 感谢注册并组织编程一小时活动！
 
-你在<%= campaign_date('full') %>的帮助会让全世界的学生了解编程一小时，这有可能*改变他们的一生*。 我们会保持联系，提供新的课程和其他令人兴奋的更新。 现在你能做什么？
+为了感谢的您帮助，使学生们开始学习计算机科学成为可能，我们想为您的课堂提供一套免费的具有各种重要例题的专业印刷海报。 在结账时使用**免单劵**。 （注意：这只能用于最后的物品清单，而您需要支付运费。 由于这些海报从美国出口，如果发往加拿大或者世界各地运费将会相当高。 我们知道这可能不在您的预算中, 我们鼓励您为您的教室打印 [ PDF 文件 ](https://code.org/inspire)。  
+<br /> [ <button> 获取海报 </button> ](https://store.code.org/products/code-org-posters-set-of-12) 使用提供代码 FREEPOSTERS
 
-## 1. 帮助宣传这个活动
+<% if @country == 'us' %> 感谢ozobot，德克斯特行业，littleBits和奇幻工房的慷慨相助，超过100多间教室将被选定为他们的班级得到机器人或电路！ 为了有资格获得一套, 请务必完成从 Code.org 发送后的《编程一小时》的调查。 Code.org 将选择获奖的教室。 同时检查一部分机器人和电路的活动。 请注意，这只对美国的学校开放。 <% end %>
 
-你刚刚加入了编程一小时活动。告诉你的朋友关于**#HourOfCode**!
+<br /> **在《编程一小时》项目运行期间。我们将在新的课程和其它令人兴奋的更新推出时与您联系。同时您可以做些什么呢？**
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+## 1. 在您的学校和社区传播这个信息
+
+告诉您的朋友们您刚刚加入了**编程一小时的活动**和相关信息。
+
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> 鼓励他人与我们的示例电子邮件一起参与 [. ](<%= resolve_url('/promote/resources#sample-emails')%>)联系您的校长, 挑战您学校的每一个教室来注册。 招募当地团体\---男孩/女孩童子军俱乐部, 教会, 大学, 退伍军人团体, 工会, 甚至一些朋友。 你不必在学校学习新的技能。 邀请当地的政治家或者决策者来参观您们学校的《编程一小时》活动。 它可以帮助您的地区的计算机科学超过一小时支持。
+
+为您的活动使用这些 [ 海报, 横幅, 贴纸, 视频以及更多 ](<%= resolve_url('/promote/resources')%>) 。
 
 ## 2. 找当地的志愿者来帮助你的活动
 
-[搜索我们的志愿者分布图](<%= resolve_url('https://code.org/volunteer/local') %>)。志愿者可以到访您的教室或者通过远程视频聊天，激发你的学生了解计算机科学所能带来的广泛可能性。
+[搜索我们的志愿者分布图](https://code.org/volunteer/local) 志愿者可以到访您的教室或者通过远程视频聊天来激发您的学生了解学习计算机科学的广泛可能性。
 
-## 3. 邀请全校师生尝试编程一小时
+## 3. 计划您的《编程一小时》
 
-[发送这封电子邮件](<%= resolve_url('/promote/resources#sample-emails') %>) 给你的校长并让学校的每个班级来报名。
+为您的课堂选择一项[《编程一小时》活动](https://hourofcode.com/learn)并[查看基本指南](<%= resolve_url('/how-to') %>)。
 
-## 3.邀请你的上级参加
+# 《编程一小时》以外的更多内容
 
-[发送这封电子邮件](<%= resolve_url('/promote/resources#sample-emails') %>) 给您的经理或公司的首席执行官。
+<% if @country == 'us' %> 《编程一小时》只是一个开始。 无论您是管理者、老师还是倡导者，我们都有[专业开发、课程以及一些其它资源来帮助您将计算机科学课堂带入您的学校或者推广您的宣传。](https://code.org/yourschool)如果您已经从事计算机科学教育，在CS教育周期间使用这些资源来争取您的政府、家长和社区的支持。
 
-## 5. 在你的社区推广《编程一小时》
+您有很多选择适合您的学校。 大多数的组织提供《编程一小时》教程也提供有课程和专业发展。 如果您发现一个您喜欢的课程，去了解更多。 为了帮助您入门, 我们重点介绍了一些 [ 课程提供商将帮助您或您的学生超过一小时. ](https://hourofcode.com/beyond)
 
-[招聘本地小组](<%= resolve_url('/promote/resources#sample-emails') %>) — — 男孩/女孩童子军俱乐部、 教会、 大学、 退伍军人团体、 工会或甚至一些朋友。 你不必在学校学习新的技能。 为你的活动使用这些[海报、 横幅、 贴纸、 视频以及更多](<%= resolve_url('/promote/resources') %>)。
+<% else %> 《编程一小时》只是一个开始。 大多数提供《编程一小时》课程的组织也有更多的课程可供进一步学习。 为了帮助您入门, 我们重点介绍了一些 [ 课程提供商将帮助您或您的学生超过一小时. ](https://hourofcode.com/beyond)
 
-## 6. 邀请当地官员支持编程一小时活动
-
-[发送这封电子邮件](<%= resolve_url('/promote/resources#sample-emails') %>) 给您当地的代表、 市议会或学校董事会，并邀请他们来你们学校参观编程一小时。 它能为你在你领域的计算机科学找到一小时之外的支持。
-
-## 7. 计划你的编程一小时
-
-选择一个编程一小时活动并且[回顾本操作指南](<%= resolve_url('/how-to') %>).
-
-## 编程一小时以后
-
-想要参与比一小时更多的活动？ 看看[我们的完整课程和教师资源](<%= resolve_url('https://code.org/teach')%>)。这其中有各种面向小学，中学和高中教师的专业学习机会。
+Code.org 还提供完整的 [ 计算机科学入门课程 ](https://code.org/educate/curriculum/cs-fundamentals-international), 免费为您或您的学校翻译成超过25种的语言。 <% end %>
 
 <%= view 'popup_window.js' %>

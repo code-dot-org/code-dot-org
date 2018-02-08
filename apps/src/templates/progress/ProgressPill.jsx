@@ -4,6 +4,7 @@ import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
 import { levelType } from './progressTypes';
 import { levelProgressStyle, hoverStyle } from './progressStyles';
+import { stringifyQueryParams } from '../../utils';
 
 const styles = {
   levelPill: {
@@ -39,21 +40,25 @@ const styles = {
  * a circle with a number inside, it is an ellipse with text (and possibly an
  * icon)
  */
-const ProgressPill = React.createClass({
-  propTypes: {
+class ProgressPill extends React.Component {
+  static propTypes = {
     levels: PropTypes.arrayOf(levelType),
     icon: PropTypes.string,
     text: PropTypes.string,
     fontSize: PropTypes.number,
     tooltip: PropTypes.element,
     disabled: PropTypes.bool,
-  },
+    selectedSectionId: PropTypes.string,
+  };
 
   render() {
-    const { levels, icon, text, fontSize, tooltip, disabled } = this.props;
+    const { levels, icon, text, fontSize, tooltip, disabled, selectedSectionId } = this.props;
 
     const multiLevelStep = levels.length > 1;
-    const url = (multiLevelStep || disabled) ? undefined : levels[0].url;
+    let url = (multiLevelStep || disabled) ? undefined : levels[0].url;
+    if (url && selectedSectionId) {
+      url += stringifyQueryParams({section_id: selectedSectionId});
+    }
 
     let style = {
       ...styles.levelPill,
@@ -71,7 +76,7 @@ const ProgressPill = React.createClass({
     }
 
     return (
-      <a href={url} style={{textDecoration: 'none'}}>
+      <a href={url} style={{textDecoration: 'none'}} className="uitest-ProgressPill">
         <div
           {...tooltipProps}
           style={style}
@@ -93,6 +98,6 @@ const ProgressPill = React.createClass({
       </a>
     );
   }
-});
+}
 
 export default Radium(ProgressPill);

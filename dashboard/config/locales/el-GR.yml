@@ -163,6 +163,7 @@
     user_type_student: "φοιτητής/μαθητής"
     field_is_required: "απαιτείται"
     accept_terms: "Πρέπει να συμφωνήσετε να δημιουργήσετε έναν λογαριασμό"
+    error: An error occurred.
   school_info:
     title: "Πληροφορίες σχολείου (προαιρετικό)"
     school_country: "Χώρα σχολείου"
@@ -247,7 +248,7 @@
       word: Secret Words
       email: "Ηλεκτρονικό ταχυδρομείο"
       google_classroom: Google Classroom
-      clever: Clever
+      clever: "Εξυπνο"
   follower:
     invite_sent: "Η πρόσκληση στάλθηκε"
     added_teacher: "Ο %{name} σε πρόσθεσε ως δάσκαλο"
@@ -784,6 +785,9 @@
         and games with objects and characters that interact with each other.
       audience: "Ηλικίες 13+"
       cta: "Μάθε πώς"
+    hoc-encryption:
+      title: "Απλή Κρυπτογράφηση"
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -804,6 +808,10 @@
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    hero:
+      title: Minecraft
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: Sports
       body: Make a basketball game or mix and match across sports.
@@ -889,6 +897,9 @@
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
       students submitted the survey.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: "Ευχαριστούμε"
     wrong_body: "Ευχαριστούμε που υπέβαλες απαντήσεις."
@@ -1019,7 +1030,14 @@
     rename: "Μετονομασία"
     save: "Αποθήκευση"
     delete: "Διαγραφή"
-    import: Import
+    import: "Εισαγωγή"
+    share_link_import_bad_link_header: "Η σύνδεση κοινής χρήσης δεν αναγνωρίζεται"
+    share_link_import_bad_link_body: "Δεν ήταν δυνατή η εισαγωγή αυτής της σύνδεσης
+      κοινής χρήσης. Βεβαιώσου ότι χρησιμοποιείς σύνδεση από παζλ του Minecraft: Agent
+      και ότι αντέγραψες ολόκληρη τη σύνδεση."
+    share_link_import_error_header: "Κάτι δεν πήγε καλά."
+    share_link_import_error_body: "Παρουσιάστηκε πρόβλημα με την εισαγωγή αυτής της
+      σύνδεσης κοινής χρήσης. Δοκίμασε ξανά."
     exit: "Επιστροφή στο Μάθημα"
     my_projects: "Τα Έργα μου"
     project_gallery: "Έργα"

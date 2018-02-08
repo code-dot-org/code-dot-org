@@ -27,7 +27,7 @@ Having explored the basics of simple `if-else` statements this lesson gets into 
 ## Resources
 
 * All in code studio
-* (Optional) Worksheet - [Compound Conditionals](https://docs.google.com/document/d/1hQay7DviSRYaVQr54ijMFgNhJNrnPt4-ASzHOxic5zM)
+* (Optional) Worksheet - Compound Conditionals ([PDF](https://docs.google.com/document/d/1hQay7DviSRYaVQr54ijMFgNhJNrnPt4-ASzHOxic5zM/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hQay7DviSRYaVQr54ijMFgNhJNrnPt4-ASzHOxic5zM/export?format=doc))
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
@@ -35,5 +35,10 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 **Answer Key:**
 
+[key]
+
 [Worksheet KEY - Compound Conditionals](https://docs.google.com/document/d/1gRIUcz-g9pnZ-68cfmtgXa9V0mFIwLOVxNTNBSn5fLU)
+
+[/key]
+
 MARKDOWN

@@ -17,7 +17,7 @@ class CsrfTest < Minitest::Test
     # Make sure that a post without the CSRF token is denied
     header 'host', 'code.org'
     params = {
-      template: '2-11-recruitment-dallas',
+      template: 'dashboard',
       recipients: 'example@example.com'
     }
     response = post('/v2/poste/send-message', params)

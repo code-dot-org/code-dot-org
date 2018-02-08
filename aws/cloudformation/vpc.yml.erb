@@ -10,6 +10,16 @@ Resources:
   VpcClassicLink: <%= lambda_fn.call 'VpcClassicLink',
     VpcId: {Ref: 'VPC'},
     DnsSupport: true %>
+  S3Endpoint:
+    Type: AWS::EC2::VPCEndpoint
+    Properties:
+      RouteTableIds: <%=
+        azs.map {|az| "PrivateRouteTable#{az}"}.
+          push('PublicRouteTable').
+          map {|ref| {"Ref": ref}}.to_json
+      %>
+      ServiceName: !Sub "com.amazonaws.${AWS::Region}.s3"
+      VpcId: !Ref VPC
   InternetGateway:
     Type: AWS::EC2::InternetGateway
   Internet:
@@ -201,6 +211,14 @@ Resources:
       FromPort: 3306
       ToPort: 3306
       IpProtocol: tcp
+  DBSecurityGroupIngressDMS:
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: {Ref: DBSecurityGroup}
+      SourceSecurityGroupId: {Ref: DMSSecurityGroup}
+      FromPort: 3306
+      ToPort: 3306
+      IpProtocol: tcp
   DBSubnetGroup:
     Type: AWS::RDS::DBSubnetGroup
     Properties:
@@ -221,6 +239,26 @@ Resources:
           FromPort: 5439
           ToPort: 5439
           CidrIp: 0.0.0.0/0
+  DMSSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Outbound database access for DMS replication instance.
+      VpcId: {Ref: VPC}
+      SecurityGroupEgress:
+        - IpProtocol: tcp
+          FromPort: 3306
+          ToPort: 3306
+          DestinationSecurityGroupId: {Ref: DBSecurityGroup}
+        - IpProtocol: tcp
+          FromPort: 5439
+          ToPort: 5439
+          DestinationSecurityGroupId: {Ref: RedshiftSecurityGroup}
+  DMSSubnetGroup:
+    Type: AWS::DMS::ReplicationSubnetGroup
+    Properties:
+      ReplicationSubnetGroupDescription: DMS Private Subnet Group.
+      ReplicationSubnetGroupIdentifier: VPC-DMSSubnetGroup
+      SubnetIds: <%=azs.map{|az| {Ref: "Subnet#{az}"}}.to_json%>
 Outputs:
   VpcId:
     Description: VPC ID
@@ -266,6 +304,14 @@ Outputs:
     Description: Security group for EFS
     Value: {'Fn::GetAtt': [EFSSecurityGroup, GroupId]}
     Export: {Name: !Sub "${AWS::StackName}-EFSSecurityGroup"}
+  DMSSubnetGroup:
+    Description: Subnet group for DMS
+    Value: !Ref DMSSubnetGroup
+    Export: {Name: !Sub "${AWS::StackName}-DMSSubnetGroup"}
+  DMSSecurityGroup:
+    Description: Security group for DMS
+    Value: !Ref DMSSecurityGroup
+    Export: {Name: !Sub "${AWS::StackName}-DMSSecurityGroup"}
 <%
   AVAILABILITY_ZONES.each_with_index do |zone, i|
     az = zone[-1].upcase

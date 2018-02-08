@@ -5,7 +5,7 @@ et:
         course1:
           title: Kursus 1
           description: Kui oled aeglane lugeja, siis alusta 1. kursusega. Õpilased loovad arvutiprogramme, mis aitavad neil õppida teistega koostööd tegema, arendada probleemi lahendamise oskust ning vastupidavust raskete ülesannete lahendamisel. Selle kursuse lõpuks loovad õpilased päris oma mängu või loo, mida nad saavad jagada. Soovitatav 5-8-aastastele.
-          description_short: Alusta kursusega 1, kui õpilased on äsja lugema hakanud
+          description_short: Sissejuhatus arvutiteadusesse õpilastega, kes on just õppisid lugema.
           description_audience: Vanustele 4-6
           stages:
             'Artist: Loops':
@@ -47,7 +47,7 @@ et:
         course2:
           title: Kursus 2
           description: Kui oskad lugeda ja sul ei ole eelnevad programmeerimise kogemust, siis alusta kursus 2-ga. Selles kursuses õpilased moodustavad programme probleemide lahendamiseks ja arendavad interaktiivseid mänge või lugusid, mida nad saavad jagada. Soovitav 2. klassist kuni 5. klassini.
-          description_short: Õpilastega, kes suudavad lugeda, alustage kursus 2-ga.
+          description_short: Sissejuhatus arvutiteadusesse õpilastega, kes oskavad lugeda.
           description_audience: Vanusele 6+ (lugemisoskus vajalik)
           stages:
             'Artist: Debugging':
@@ -91,7 +91,7 @@ et:
         course3:
           title: Kursus 3
           description: Kursus 3 on loodud õpilastele, kes on läbinud kursuse 2. Õpilane läheb sügavamale programmeerimise teemadesse, mida eelmises kursuses tutvustati, ning loovad paindlike lahendusi veelgi keerulisematele probleemidele. Kursuse lõpuks loovad õpilased interaktiivseid lugusid ja mänge, mida nad saavad kõigiga jagada. Soovitatav 4.-5. klassile.
-          description_short: Kursus 3 on järg kursusele 2.
+          description_short: Kaevuma sügavamale programmeerises ehitades mänge ja interaktiivseid lugusid. See on järg Kursusele 2.
           description_audience: Vanustele 8-18
           stages:
             Artist:
@@ -168,7 +168,7 @@ et:
         course4:
           title: Kursus 4
           description: 4. kursus on mõeldud õpilastele, kes on läbinud kursused 2 ja 3. Õpilased õpivad, kuidas lahendada järjest keerulisemaid probleeme ning nad õpivad iga ülesande lahendamisel, kuidas kombineerida mitut erinevat kontseptsiooni. Kursuse lõppedes loovad õpilased programme, mis lubavad neil demonstreerida mitmekülgseid oskusi, mille hulka kuuluvad oskus kasutada tsükleid ja parameetritega funktsioone. Soovitatav 4.-6. klassidele.
-          description_short: Õpilased, kes võtavad Kursus 4-ja peaksid enne olema läbinud Kursused 2 ja 3.
+          description_short: Ehita keerulisemaid programme koos trüklite ja parameetritega ja parameetritega funktsioonid. See on järg Kursus 3le.
           description_audience: Vanustele 10-18
           stages:
             Artist:
@@ -336,7 +336,7 @@ et:
             K-5 Courses:
               name: K-5 Courses
             Next Steps:
-              name: Next Steps
+              name: Järgmised sammud
             'Programming Concept: Conditionals':
               name: 'Programming Concept: Conditionals'
             'Programming Concept: Events':
@@ -346,13 +346,13 @@ et:
             'Programming Concept: Loops':
               name: 'Programming Concept: Loops'
             Reflection:
-              name: Reflection
+              name: Peegeldus
             Teacher Dashboard:
               name: Õpetaja töölaud
             Unplugged lessons:
-              name: Unplugged lessons
+              name: Seadmeteta tunnid
             Writing computer programs:
-              name: Writing computer programs
+              name: Arvutiprogrammide kirjutamine
         netsim:
           title: Interneti simulaator
           description: Learn about how the Internet works.
@@ -366,7 +366,7 @@ et:
             Internet Simulator Freeplay:
               name: Internet Simulator Freeplay
             Manual DNS:
-              name: Manual DNS
+              name: Manuaalne DNS
             Overview and Setup Instructions:
               name: Overview and Setup Instructions
             Packets and Reliability:
@@ -474,7 +474,7 @@ et:
         flappy:
           title: Flappy kood
           description: Tahad kirjutada oma enda mängu vähem kui 10 minutiga? Proovi meie Flappy Code õpetusvideot!
-          description_short: Loo oma Flappy mäng vähem kui 10 minutiga!
+          description_short: Loo oma Flappy mäng!
           description_audience: ''
           stages:
             Flappy Code:
@@ -525,9 +525,9 @@ et:
           description_short: This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.
           stages:
             Binary Numbers:
-              name: Binary Numbers
+              name: Binaararvud
             Bytes and File Sizes:
-              name: Bytes and File Sizes
+              name: Baidid ja faili suurused
             Encode a Complex Thing:
               name: Encode an Experience
             Encoding B&W Images:
@@ -566,7 +566,7 @@ et:
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Kursuse ülevaade
             Evaluation Blocks:
               name: Hindamise plokid
             Introduction to PD:
@@ -590,7 +590,7 @@ et:
             Evaluation Blocks:
               name: Hindamise plokid
             Luigi's Pizza:
-              name: Luigi's Pizza
+              name: Luigi Pizza
             Rocket-Height:
               name: Rocket-Height
             Sam the Bat:
@@ -598,7 +598,7 @@ et:
             Strings and Images:
               name: Sõned ja kujutised
             Your Game - Animation:
-              name: Your Game - Animation
+              name: Sinu mäng - animatsioon
             Your Game - Booleans:
               name: Your Game - Booleans
             Your Game - Collision Detection:
@@ -623,15 +623,15 @@ et:
             Growth Mindset:
               name: Growth Mindset
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: Infotehnoloogia mõju
             Introduction to PD:
               name: Introduction to PD
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Õpetamise strateegiad
             What is CSP?:
-              name: What is CSP?
+              name: Mis on CSP?
         CSPLessonSamples:
           title: CSP Lesson Samples
           description: Lesson samples for CSP
@@ -639,9 +639,9 @@ et:
           description_audience: ''
           stages:
             Lesson 14:
-              name: Lesson 14
+              name: Õppetund 14
             Lesson 15:
-              name: Lesson 15
+              name: Õppetund 15
         ECSPD:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -650,15 +650,15 @@ et:
             Growth Mindset:
               name: Growth Mindset
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: Infotehnoloogia mõju
             Introduction to PD:
               name: Introduction to PD
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Õpetamise strateegiad
             What is ECS?:
-              name: What is ECS?
+              name: Mis on ECS?
         sciencePD:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -688,7 +688,7 @@ et:
             Using Models in the Classroom:
               name: Using Models in the Classroom
             What to Expect:
-              name: What to Expect
+              name: Mida oodata
         rbo-reference:
           title: rbo-reference
           description: rbo-reference
@@ -777,11 +777,11 @@ et:
             Computer Science Pedagogy:
               name: Computer Science Pedagogy
             Course Overview:
-              name: Course Overview
+              name: Kursuse ülevaade
             Evaluation Blocks:
               name: Hindamise plokid
             Next Steps:
-              name: Next Steps
+              name: Järgmised sammud
             Strings and Images:
               name: Sõned ja kujutised
             Teacher Dashboard:
@@ -799,15 +799,15 @@ et:
             Growth Mindset:
               name: Growth Mindset
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: Infotehnoloogia mõju
             Introduction to PD:
               name: Introduction to PD
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Õpetamise strateegiad
             What is ECS?:
-              name: What is ECS?
+              name: Mis on ECS?
         ECSPD-iZone:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -817,15 +817,15 @@ et:
             Growth Mindset:
               name: Growth Mindset
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: Infotehnoloogia mõju
             Introduction to PD:
               name: Introduction to PD
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Õpetamise strateegiad
             What is ECS?:
-              name: What is ECS?
+              name: Mis on ECS?
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -834,7 +834,7 @@ et:
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Kursuse ülevaade
             Evaluation Blocks:
               name: Hindamise plokid
             Introduction to PD:
@@ -853,7 +853,7 @@ et:
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Kursuse ülevaade
             Evaluation Blocks:
               name: Hindamise plokid
             Introduction to PD:
@@ -894,7 +894,7 @@ et:
             Using Models in the Classroom:
               name: Using Models in the Classroom
             What to Expect:
-              name: What to Expect
+              name: Mida oodata
         sciencePD-iZone:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -925,7 +925,7 @@ et:
             Using Models in the Classroom:
               name: Using Models in the Classroom
             What to Expect:
-              name: What to Expect
+              name: Mida oodata
         sciencePD2:
           title: 'CS in Science: Part 2'
           description: 'Faas 2 online: Blended Summer Study'
@@ -955,7 +955,7 @@ et:
             Mystery Model:
               name: Mystery Model
             Welcome Back!:
-              name: Welcome Back!
+              name: Tere tulemast tagasi!
         Testing:
           title: Testing
           description: Testing
@@ -983,7 +983,7 @@ et:
             DNS in the Real World:
               name: DNS in the Real World
             Encryption Algorithms:
-              name: Keys and Passwords
+              name: Võtmed ja paroolid
             HTTP and Abstraction:
               name: HTTP and Abstraction on the Internet
             Invent an Addressing Protocol:
@@ -1034,7 +1034,7 @@ et:
             Free Play:
               name: Tasuta mäng
             Luigi's Pizza:
-              name: Luigi's Pizza
+              name: Luigi Pizza
             Rocket-Height:
               name: Rocket-Height
             Sam the Bat:
@@ -1134,7 +1134,7 @@ et:
             Booleans:
               name: Booleans
             Course Overview:
-              name: Course Overview
+              name: Kursuse ülevaade
             Defining Functions:
               name: Ülesannete määratlemine
             Defining Variables:
@@ -1144,7 +1144,7 @@ et:
             Evaluation Blocks:
               name: Hindamise plokid
             Next Steps:
-              name: Next Steps
+              name: Järgmised sammud
             Rocket-Height:
               name: Rocket-Height
             Strings and Images:
@@ -1198,7 +1198,7 @@ et:
             'Mastering the Basics: Sequencing':
               name: 'Mastering the Basics: Sequencing'
             Next Steps:
-              name: Next Steps
+              name: Järgmised sammud
             Planning:
               name: Planning
         ECSPD2:
@@ -1321,7 +1321,7 @@ et:
             Introduction to Equity:
               name: Introduction to Equity
             Next Steps:
-              name: Next Steps
+              name: Järgmised sammud
         sciencePD2b-iZone:
           title: Computer Science in Science PD Phase 2b
           description: 'Faas 2 online: Blended Summer Study'
@@ -1493,7 +1493,7 @@ et:
             The TLO:
               name: The TLO
             Welcome Back!:
-              name: Welcome Back!
+              name: Tere tulemast tagasi!
         frequency_analysis:
           title: Frequency Analysis Widget
           description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
@@ -1517,7 +1517,7 @@ et:
             Lesson Overviews:
               name: Lesson Overviews
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Õpetamise strateegiad
             Unit 2 Challenge:
               name: Unit 2 Challenge
         ECSPD3-Unit3:
@@ -1533,7 +1533,7 @@ et:
             Intro to Unit 3:
               name: Intro to Unit 3
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Õpetamise strateegiad
             Unit 3 Challenge:
               name: Unit 3 Challenge
             Unit 3 Day-by-Day:
@@ -1551,7 +1551,7 @@ et:
             Intro to Unit 4:
               name: Intro to Unit 4
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Õpetamise strateegiad
             Unit 4 Challenge:
               name: Unit 4 Challenge
             Unit 4 Day-by-Day:
@@ -1683,15 +1683,15 @@ et:
             Getting Started:
               name: Getting Started
             Teaching Support - Lessons 1-3:
-              name: Teaching Support - Lessons 1-3
+              name: Õpetamise tugi - Tunnid 1-3
             Teaching Support - Lessons 13-16:
-              name: Teaching Support - Lessons 13-16
+              name: Õpetamise tugi - Tunnid 13-16
             Teaching Support - Lessons 17-20:
-              name: Teaching Support - Lessons 17-20
+              name: Õpetamise tugi - Tunnid 17-20
             Teaching Support - Lessons 4-7:
-              name: Teaching Support - Lessons 4-7
+              name: Õpetamise tugi - Tunnid 4-7
             Teaching Support - Lessons 8-12:
-              name: Teaching Support - Lessons 8-12
+              name: Õpetamise tugi - Tunnid 8-12
         CSPPD3-Unit2:
           title: 'Computer Science Principles: Unit 2 PD'
           description: Online Exploration of CSP Unit 2
@@ -1823,23 +1823,23 @@ et:
               name: Gumballi Play Lab
         starwars:
           title: 'Star Wars: galaktika loomine koodiga'
-          description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
-          description_short: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
+          description: Õpi programmeerima droide ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
+          description_short: Õpi programmeerima droide ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
           description_audience: ''
           stages:
             Hour of Code 2015:
               name: Kooditund 2015
         starwarsblocks:
           title: 'Star Wars: galaktika loomine koodiga'
-          description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
-          description_short: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
+          description: Õpi programmeerima droide ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
+          description_short: Õpi programmeerima droide ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
           description_audience: ''
           stages:
             Hour of Code 2015:
               name: Kooditund 2015
         mc:
           title: Minecrafti KoodiTund
-          description: Kasuta koodiplokke, et viia Steve või Alex seiklusele selles Minecrafti maailmas
+          description: Kasuta koodi plokke, et viia Steve või Alex seiklusele läbi selle Minecrafti maailma.
           description_short: Uuri Minecrafti maailma koodi kaudu
           stages:
             Hour of Code 2015:
@@ -2073,7 +2073,7 @@ et:
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: Kursuse ülevaade
             Evaluation Blocks:
               name: Hindamise plokid
             Introduction to PD:
@@ -2103,7 +2103,7 @@ et:
           description_audience: ''
           stages:
             Binary Numbers:
-              name: Binary Numbers
+              name: Binaararvud
             CS Principles Pre-survey:
               name: CS Principles Pre-survey
             Encoding and Sending Formatted Text:
@@ -2149,7 +2149,7 @@ et:
           description_audience: ''
           stages:
             Bytes and File Sizes:
-              name: Bytes and File Sizes
+              name: Baidid ja faili suurused
             Check Your Assumptions:
               name: Check Your Assumptions
             Cleaning Data:
@@ -2192,7 +2192,7 @@ et:
               name: Practice PT - Encode an Experience
         csp3:
           title: CSP Unit 3 - Intro to Programming
-          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          description: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\\r\n\\r\nThis unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
           description_audience: ''
           stages:
@@ -2228,9 +2228,15 @@ et:
               name: CSP Student Post-Course Survey
             Creating Functions with Parameters:
               name: Creating Functions with Parameters
+            CSP End-of-Semester Mid-course survey:
+              name: CSP End-of-Semester Mid-course survey
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
         csp4:
           title: CSP Unit 4 - Big Data and Privacy
-          description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
+          description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Explore the data-rich world we live, and how data impacts public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
           stages:
@@ -2489,7 +2495,7 @@ et:
             Using Models in the Classroom:
               name: Using Models in the Classroom
             What to Expect:
-              name: What to Expect
+              name: Mida oodata
         TEMP CSD Unit 3:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
           description: ''
@@ -2569,7 +2575,7 @@ et:
             Using Models in the Classroom:
               name: Using Models in the Classroom
             What to Expect:
-              name: What to Expect
+              name: Mida oodata
         cspoptional:
           title: CS Principles Optional Lessons
           description: Optional lessons and content across all of the CS Principles units are listed here
@@ -3021,7 +3027,7 @@ et:
             Sequences & Algorithms:
               name: Sequences & Algorithms
             Unspotted Bugs:
-              name: Unspotted Bugs
+              name: Märkamata vead
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Events Unplugged: The Big Event':
@@ -3109,7 +3115,7 @@ et:
             Lesson Overviews:
               name: Lesson Overviews
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Õpetamise strateegiad
             Unit 2 Challenge:
               name: Unit 2 Challenge
         ecs-unit3:
@@ -3125,7 +3131,7 @@ et:
             Intro to Unit 3:
               name: Intro to Unit 3
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Õpetamise strateegiad
             Unit 3 Challenge:
               name: Unit 3 Challenge
             Unit 3 Day-by-Day:
@@ -3143,7 +3149,7 @@ et:
             Intro to Unit 4:
               name: Intro to Unit 4
             Teaching Strategies:
-              name: Teaching Strategies
+              name: Õpetamise strateegiad
             Unit 4 Challenge:
               name: Unit 4 Challenge
             Unit 4 Day-by-Day:
@@ -3239,21 +3245,21 @@ et:
             Introduction to Teachercon:
               name: Introduction to Teachercon
             Lesson 1,10:
-              name: Lesson 1,10
+              name: Õppetund 1,10
             Lesson 1,11:
-              name: Lesson 1,11
+              name: Õppetund 1,11
             Lesson 1,4:
-              name: Lesson 1,4
+              name: Õppetund 1,4
             Lesson 1,6:
-              name: Lesson 1,6
+              name: Õppetund 1,6
             Lesson 1,9:
-              name: Lesson 1,9
+              name: Õppetund 1,9
             Lesson 2,10:
-              name: Lesson 2,10
+              name: Õppetund 2.10
             Lesson 2,2:
-              name: Lesson 2,2
+              name: Õppetund 2,2
             Lesson 2,3:
-              name: Lesson 2,3
+              name: Õppetund 2,3
             Test stage with bubbles:
               name: Test stage with bubbles
         csd3:
@@ -3381,6 +3387,8 @@ et:
               name: Parameters and Randomization
             Shapes and Randomization:
               name: Shapes and Randomization
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -3674,7 +3682,7 @@ et:
         basketball:
           title: Vali meeskond ja tee korvpallimäng
           description_audience: ''
-          description_short: Tee korvpallimäng
+          description_short: Vali oma meeskond ja tee korvpallimäng
           description: Vali meeskond ja tee korvpallimäng
           stages:
             Bounce:
@@ -3728,7 +3736,7 @@ et:
             Clean Code and Debugging:
               name: Clean Code and Debugging
               description_student: In this lesson covers common issues that arise when designing web pages in HTML. The class will correct errors in a sequence of increasingly complex web pages found on Code Studio and learn the importance of comments, whitespace, and indentation as tools for making web pages easier to read.
-              description_teacher: In this lesson students will deal with common issues that arise when designing web pages in HTML. Students will correct errors in a sequence of increasingly complex web pages found on Code Studio. In the process they will learn the importance of comments, whitespace, and indentation as tools for making web pages easier to read. At the end of the lesson students create a list of strategies for debugging web pages and ensuring they are easy to read and maintain.
+              description_teacher: Students deal with common issues that arise when designing web pages in HTML. Students will correct errors in a sequence of increasingly complex web pages. In the process they will learn the importance of comments, whitespace, and indentation as tools for making web pages easier to read. At the end of the lesson students create a list of strategies for debugging web pages and ensuring they are easy to read and maintain.
             Introduction to Styling with CSS:
               name: Introduction to Styling with CSS
             Multi-Page Websites:
@@ -3762,8 +3770,7 @@ et:
             Styling Text with CSS:
               name: Styling Text with CSS
               description_student: This lesson introduces CSS as a way to style elements on the page. The class learns the basic syntax for CSS rule-sets and then explores properties that impact HTML text elements.  Finally, everyone applies text styles to their personal websites.
-              description_teacher: |+
-                This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.
+              description_teacher: "This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\\r\n\\r\n"
             Styling Elements with CSS:
               name: Styling Elements with CSS
               description_student: This lesson continues the introduction to CSS style properties, this time focusing more on non-text elements. The class begins by investigating and modifying the new CSS styles on a Desserts of the World page. Afterwards, everyone applies this new knowledge to their personal websites.
@@ -3791,11 +3798,11 @@ et:
             Intellectual Property and Images:
               name: Intellectual Property and Images
               description_student: This lesson covers how to use media such as images, video, or music created by others a website while respecting the rights of the creator of that media. After first studying Creative Commons licensing, the class learns how to add images to web pages, and how to give proper attribution when doing so.
-              description_teacher: "Starting with an exploration of the song \"Happy Birthday\" and its history of copyright protection, the class explores the purpose and role of copyright for both creators and users of creative content. After a brief discussion about the purpose of copyright, we move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \n\nFinally, with a common understanding of the restrictions of various Creative Commons licenses, students will learn how to add images to their web pages using the &lt;img&gt; tag."
+              description_teacher: "Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \\r\n\\r\nFinally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag."
             Project - Multi-Page Websites:
               name: Project - Multi-Page Websites
               description_student: 'This lesson covers hyperlinks, which allow web developers to connect pages together into one website.  The class will link together all the previous pages into one project, and create navigation bars for each page before publishing the entire site to the Web.  '
-              description_teacher: "After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \n\n"
+              description_teacher: "After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \\r\n\\r\n"
             RGB Colors and Classes:
               name: RGB Colors and Classes
               description_student: This lesson covers classes and custom colors. The class first learns how to specify custom colors using RGB (red, green, blue) values, then applies these colors to a new Four Seasons web page, which uses CSS classes.  Using classes, the class adds more styles to the Four Seasons web page, then use them to style their personal websites.
@@ -3803,10 +3810,11 @@ et:
             Project - Personal Portfolio Website:
               name: Project - Personal Portfolio Website
               description_student: In the last few days of the unit, the class finalizes their personal websites, working with peers to get feedback, review the rubric, and put the finishing touches on the site. To cap off the unit, everyone shares their projects and how they were developed.
-              description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.
+              description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\\r\n"
             Headings:
               name: Headings
+              description_student: This lesson continues the introduction to HTML tags, this time with headers.  The class practices using header tags to create page and section titles and learns how the different header elements are displayed by default.  Next, the class plans how to organize their content on the personal web pages that will be built across the unit and begins the first page of the project.
+              description_teacher: In this lesson, students continue to use HTML to structure text on web pages, this time with headings.  Students learn how the different heading elements are displayed by default and practice using them to create page and section titles.  Students then start to decide how they will organize their content on their own personal web pages.  In the last level, students begin the project that they will continue to work on throughout the unit.
         csp2-support:
           title: Unit 2 Online Professional Learning Course
           description_audience: ''
@@ -3848,8 +3856,7 @@ et:
             Understanding Your User:
               name: Understanding Your User
               description_student: Using user profiles, the class explores how different users might react to a variety of products. Role playing as a different person, each member of the class will get to experience designs through someone else's eyes.
-              description_teacher: |
-                Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.
+              description_teacher: "Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\\r\n"
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -3877,16 +3884,15 @@ et:
             Paper Prototypes:
               name: Paper Prototypes
               description_student: Paper prototypes allow developers to quickly test ideas before investing a lot of time writing code. In this lesson teams explore some example apps created in App Lab, using those apps to help inform the first paper prototypes of their apps.
-              description_teacher: |
-                Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.
+              description_teacher: "Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\\r\n"
             Prototype Testing:
               name: Prototype Testing
               description_student: In this lesson teams test out their paper prototypes with other members of the class. With one student role playing the computer, one narrating, and the rest observing, teams will get immediate feedback on their app designs which will inform the next version of their app prototypes.
               description_teacher: The primary purpose of developing paper prototypes is that they allow for quick testing and iteration before any code is written. This lesson is focused on giving teams a chance to test their prototypes before moving to App Lab. Teams develop a plan to test with users before running prototype tests with multiple other students in the class (and potentially outside the class). In order to test the prototype with the users, the students will have to assign roles in the testing (the “narrator”, the “computer” and the “observers”) as well as have some questions prepared for the user to answer after the test is complete.
             Digital Design:
               name: Digital Design
-              description_student: Having developed, tested, and gathered feedback on a paper prototype, teams now moves to App Lab to build the next iteration of their apps. Using the drag-and-drop Design Mode, each team member builds out at least one page of their team's app, responding to feedback that was received in the previous round of testing.
-              description_teacher: Having collaboratively developed a paper prototype for their apps, groups now divide and conquer to begin implementing an interactive digital version of their prototype. Using the drag-and-drop design mode of App Lab, students individually work through a progression of skill-building levels to learn how to build digital app wireframes. From there, each group member builds out at least one page of their app in App Lab.
+              description_student: Having developed, tested, and gathered feedback on a paper prototype, teams now move to App Lab to build the next iteration of their apps. Using the drag-and-drop Design Mode, each team member builds out at least one page of their team's app, responding to feedback that was received in the previous round of testing.
+              description_teacher: Having collaboratively developed a paper prototype for their apps, groups now divide and conquer to begin work on an interactive digital version based on the paper prototype. Using the drag-and-drop design mode of App Lab, students individually work through a progression of skill-building levels to learn how to build digital versions of a paper prototype. From there, each group member builds out at least one page of their app in App Lab, to be later combined into a single app.
             Event Driven Programming:
               name: Event Driven Programming
               description_student: Building on the screens that the class designed in the previous lesson, teams combine screens into a single app. Simple code can then be added to make button clicks change to the appropriate screen.
@@ -3923,6 +3929,22 @@ et:
               name: Project - Paper Prototype
               description_student: Using the interview information from the previous lesson, the class comes up with app ideas to address the needs of their users. To express those ideas, and test out their effectiveness, each student creates and tests paper prototypes of their own.
               description_teacher: Based on the peer interview from the previous lesson, each student comes up with an idea for an app that will address their user's problem. Students then get to create their own paper prototype of their app ideas by drawing "screens" on individual notecards. A project guide directs students through the process including building the app and testing it with their user to see if their assumptions about the user interfaces they created are accurate.
+            Linking Screens:
+              name: Linking Screens
+              description_student: Building on the screens that the class designed in the previous lesson, teams combine screens into a single app. Simple code can then be added to make button clicks change to the appropriate screen.
+              description_teacher: In this lesson teams combine the screens that they designed in the previous lesson into a single app, which they can then link together using code. Students learn basic event driven programming by building up the model app that they started in the previous lesson. In addition to the screen that students designed yesterday, they'll learn how to create additional screens and even import screens made by others.
+            User Interfaces:
+              name: User Interfaces
+              description_student: See how a paper prototype can be used to test and get feedback on software before writing any code. To help out a developer with their idea, the class tests and provides an app prototype made of paper.
+              description_teacher: Following the mini design project, students look towards the next phase of design - prototyping a product that attempts to address user needs. In teams, students examine a paper prototype for a chat app called "Txt Ur Grndkdz". Through using this paper prototype, students get a chance to see how a simple paper prototype can be used to quickly test ideas and assumptions before we ever get to the computer. After "using" the provided prototype students begin to identify ways to improve the next iteration.
+            Feedback and Testing:
+              name: Feedback and Testing
+              description_student: Users have been testing an app, and they have lots of feedback for the developer. The class needs to sort through all of this feedback, identify the common themes and needs, and start revising the prototype to make it better meet the users' needs.
+              description_teacher: In this lesson students use feedback from "users" of the paper-prototyped app from the previous lesson in order to develop improvements to the user interface of that paper prototype. The lesson begins with a reflection on the fact that designers need to translate human needs with technology into changes to the user interface or experience. Students are then given a collection of feedback and requests from users of the app from the previous lesson. In groups students categorize the feedback and identify ways the needs expressed in the feedback could be met by changes to the interface of the app. Then in groups students will implement some of these changes to meet one of the needs they identified.
+            Project - App Presentation:
+              name: Project - App Presentation
+              description_student: Each team prepares a presentation to "pitch" the app they've developed. This is the time to share struggles, triumphs, and plans for the future.
+              description_teacher: At this point teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation. Using the provided presentation template, teams prepare to present about their process of app development, including the problem they set out to solve, the ways in which they've incorporated feedback from testing, and their plans for the future.
         minecraft:
           title: KoodiTund Minecraft Designer
           description_audience: ''
@@ -4086,7 +4108,7 @@ et:
             Conditionals & Loops in Maze:
               name: Conditionals & Loops in Maze
             Conditionals & Loops in Farmer:
-              name: Conditionals & Loops in Farmer
+              name: Conditionals & Loops in Harvester
             Impacts of Computing:
               name: Impacts of Computing
             More Programming with CS4FN:
@@ -4232,10 +4254,10 @@ et:
             Post Hour of Code Survey:
               name: Post Hour of Code Survey
         sports:
-          title: Tee MCode'iga oma spordimäng
+          title: Tee oma spordimäng
           description_audience: ''
-          description_short: Sega omavahel ja sobita kokku üle spordialade
-          description: Sega omavahel ja sobita kokku üle spordialade
+          description_short: Sega omavahel ja sobita kokku erinevaid spordialasid
+          description: Sega omavahel ja sobita kokku erinevaid spordialasid
           stages:
             Sports:
               name: Sports
@@ -4286,7 +4308,7 @@ et:
           description: ''
           stages:
             Welcome Back!:
-              name: Welcome Back!
+              name: Tere tulemast tagasi!
             The TLO:
               name: The TLO
             Prep With Your Modules:
@@ -4562,6 +4584,28 @@ et:
               name: Board Events
             'Project: Make a Game':
               name: 'Project: Make a Game'
+            Getting and Setting Properties:
+              name: Getting and Setting Properties
+            The Program Design Process:
+              name: The Program Design Process
+            Getters:
+              name: Getters
+            Getting Properties:
+              name: Getting Properties
+            Designing Screens with Code:
+              name: Designing Screens with Code
+            Arrays:
+              name: Arrays
+            Making Music:
+              name: Making Music
+            Arrays and For Loops:
+              name: Arrays and For Loops
+            Circuits and Physical Prototypes:
+              name: Circuits and Physical Prototypes
+            Accelerometer:
+              name: Accelerometer
+            Functions with Parameters:
+              name: Parameetritega funktsioonid
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -4695,7 +4739,7 @@ et:
             Conditionals:
               name: Tingimuslaused
             'Real Life Algorithms: Dice Race':
-              name: 'Real Life Algorithms: Dice Race'
+              name: 'Päris elu algoritmid: täringuralli'
         csd6:
           title: CSD Unit 6 - Physical Computing
           description_audience: ''
@@ -4892,6 +4936,8 @@ et:
               name: Structuring Data
               description_student: This lesson goes further into the interpretation of data, including cleaning and visualizing raw data sets.  The class first looks at the how presenting data in different ways can help people to understand it better.  After seeing how cleaning and visualization can help people make better decisions, the class looks at what parts of this process can be automated, and what need a human.
               description_teacher: In this lesson, students go further into the collection and interpretation of data, including cleaning and visualizing raw data sets.  Students first look at the how presenting data in different ways can help people to understand it better.  They then visualize their own raw data set, in the context of a pizza topping survey, deciding what to do with data that does not easily fit into the visualization scheme that they have chosen.  Last, students look at what parts of this process can be automated, and what need a human to make decisions.
+            Keeping Data Secret:
+              name: Keeping Data Secret
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -5220,6 +5266,8 @@ et:
               name: Põrkama
             NewBounce:
               name: NewBounce
+            F PlayLab Variables:
+              name: F PlayLab Variables
           title: ''
           description_audience: ''
           description_short: ''
@@ -5369,8 +5417,8 @@ et:
               description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you place a loop inside another loop.
               description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
             Nested Loops in Artist:
-              name: Nested Loops Project in Artist
-              description_student: Here you will be using nested loops to make cool projects to show to your family and friends.
+              name: Nested Loops in Artist
+              description_student: Here you will be using nested loops to make cool drawings to show to your family and friends.
               description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
             'Algorithms: Relay Programming':
               name: 'Debugging: Relay Programming'
@@ -5396,7 +5444,7 @@ et:
               description_student: You can do some amazing things when you use conditionals and loops together!
               description_teacher: 'In this lesson, students will be pairing together two key concepts: loops and conditionals. This set of puzzles bridges the gaps in understanding that occur when working on puzzles that use multiple kinds of blocks. By bringing two ideas together, students will create more complex code that shows both impressive creativity and critical thinking!'
             Conditionals & Loops in Farmer:
-              name: Conditionals & Loops in Farmer
+              name: Conditionals & Loops in Harvester
               description_student: It's not always clear when to use each conditional.  This lesson will help you get practice deciding what to do.
               description_teacher: Students will practice `while` loops, `until` loops, and `if / else` statements. All of these blocks use conditionals. By practicing all three, students will learn to write complex and flexible code.
             Digital Citizenship:
@@ -5469,11 +5517,11 @@ et:
             The Design Process:
               name: The Design Process
               description_student: Projects this big take time and plenty planning. Here, you will learn about the design process that you'll use to build your own creation.
-              description_teacher: 'Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).'
+              description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
               name: Build Your Project
               description_student: Get those hands ready for plenty of coding! It's time to start building your project.
-              description_teacher: 'Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This is likely to be the longest stage of the project. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).'
+              description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This is likely to be the longest stage of the project. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Revise Your Project:
               name: Revise Your Project
             Presentation Your Project:
@@ -5524,7 +5572,7 @@ et:
             Present Your Project:
               name: Present Your Project
               description_student: Get ready to show off! It's time to present your finished project to your peers.
-              description_teacher: 'Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).'
+              description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
               name: 'Beyond Programming: The Internet'
               description_student: Ever wondered how information travels across the internet? It's not magic! This lesson will teach you the basics of how the internet works.
@@ -5622,21 +5670,21 @@ et:
             The Design Process:
               name: The Design Process
               description_student: Projects this big take time and plenty planning. Here, you will learn about the design process that you'll use to build your own creation.
-              description_teacher: 'Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).'
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Build Your Project:
               name: Build Your Project
               description_student: Finally you can start building your project!
-              description_teacher: 'Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This will be the longest portion of the project. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).'
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This will be the longest portion of the project. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Revise Your Project:
               name: Revise Your Project
               description_student: Rome wasn't built in a day and your project shouldn't be, either. Take time to edit and revise your project to make it the best it can be.
-              description_teacher: 'Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now that the projects are built, students are given the opportunity to get feedback from peers and revise their projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).'
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now that the projects are built, students are given the opportunity to get feedback from peers and revise their projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Presentation Your Project:
               name: Presentation Your Project
             Present Your Project:
               name: Present Your Project
               description_student: Time to show your work! Here you will be presenting your awesome project to your peers.
-              description_teacher: 'Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).'
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Conditionals in Minecraft:
               name: Conditionals in Minecraft
               description_student: Avoid the lava! Here you will learn about conditionals in the world of Minecraft.
@@ -5904,7 +5952,7 @@ et:
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist (UPDATED)
+              name: Loops in Artist
             Nested Loops Project in Artist:
               name: Nested Loops Project in Artist
             Internet:
@@ -6087,7 +6135,11 @@ et:
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
-          title: CSP Unit 3 - Intro to Programming
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey:
+              name: Please complete the CSP Mid-course survey
+          title: CSP Unit 3 - Intro to Programming (subgoals)
           description_audience: ''
           description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -6153,10 +6205,18 @@ et:
               name: Intro to AppLab - Your First App 2
             Intro to AppLab - Your First App 3:
               name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
+            'Lesson 1: App Lab Intro':
+              name: 'Lesson 1: App Lab Intro'
           title: Intro to App Lab
           description_audience: ''
-          description_short: ''
-          description: These lessons introduce you to App Lab through a series of creative projects.
+          description_short: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
+          description: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
@@ -6553,6 +6613,8 @@ et:
               name: all assessment items clustered in levelgroup as a single "test"
             dummy:
               name: dummy
+            CSP 3 updates staging ground:
+              name: CSP 3 updates staging ground
           title: ''
           description_audience: ''
           description_short: ''
@@ -6580,4 +6642,254 @@ et:
           title: ''
           description_audience: ''
           description_short: ''
+          description: ''
+        csd4-old:
+          stages:
+            Analysis of Design:
+              name: Analysis of Design
+            Understanding Your User:
+              name: Understanding Your User
+            User-Centered Design Micro Activity:
+              name: User-Centered Design Micro Activity
+            User Interface and Prototype Testing:
+              name: User Interface and Prototype Testing
+            Feedback and Prototypes:
+              name: Feedback and Prototypes
+            Identifying User Needs:
+              name: Identifying User Needs
+            Project - Paper Prototype:
+              name: Project - Paper Prototype
+            Designing Apps for Good:
+              name: Designing Apps for Good
+            Market Research:
+              name: Market Research
+            Paper Prototypes:
+              name: Paper Prototypes
+            Prototype Testing:
+              name: Prototype Testing
+            Digital Design:
+              name: Digital Design
+            Event Driven Programming:
+              name: Event Driven Programming
+            Basic App Functionality:
+              name: Basic App Functionality
+            Testing the App:
+              name: Testing the App
+            Improving and Iterating:
+              name: Improving and Iterating
+            App Presentation:
+              name: App Presentation
+          title: "(DEPRECATED) CSD Unit 4 - The Design Process"
+          description_audience: ''
+          description_short: 2016/17 Beta version of CSD Unit 4
+          description: ''
+        csp3-staging:
+          stages:
+            The Need For Programming Languages:
+              name: The Need For Programming Languages
+            The Need for Algorithms:
+              name: The Need for Algorithms
+            Creativity in Algorithms:
+              name: Creativity in Algorithms
+            Using Simple Commands:
+              name: Using Simple Commands
+            Creating Functions:
+              name: Loomisfunktsioonid
+            Functions and Top-Down Design:
+              name: Functions and Top-Down Design
+            APIs and Function Parameters:
+              name: APIs and Function Parameters
+            Creating functions with Parameters:
+              name: Creating functions with Parameters
+            Looping and Random Numbers:
+              name: Looping and Random Numbers
+            Practice PT - Design a Digital Scene:
+              name: Practice PT - Design a Digital Scene
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Chapter 1 Assessment
+          title: CSP 3 Proposed Changes Temporary Staging Ground
+          description_audience: ''
+          description_short: Temporary staging ground for Oct. changes to csp3
+          description: "This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\\r\n"
+        pwc:
+          stages:
+            new stage:
+              name: new stage
+            'Problem Solving: Personal Innovations':
+              name: 'Problem Solving: Personal Innovations'
+            'Technology Foundations: What is a Computer?':
+              name: 'Technology Foundations: What is a Computer?'
+            'Data Science: Problem Solving with Big Data':
+              name: 'Data Science: Problem Solving with Big Data'
+            Personal Innovations:
+              name: Personal Innovations
+            What is a Computer?:
+              name: What is a Computer?
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Programming - Hour of Code:
+              name: Programming - Hour of Code
+            Simple Encryption:
+              name: Simple Encryption
+            Web Development - Creating Webpages:
+              name: Web Development - Creating Webpages
+            App Development Unplugged - User Interfaces:
+              name: App Development Unplugged - User Interfaces
+            App Development - Intro to App Lab:
+              name: App Development - Intro to App Lab
+            Creating Webpages:
+              name: Creating Webpages
+            User Interfaces:
+              name: User Interfaces
+            Intro to App Lab:
+              name: Intro to App Lab
+            Smart Clothing Design:
+              name: Smart Clothing Design
+            Intro to App Lab (13+):
+              name: Intro to App Lab (13+)
+          title: PwC's Access Your Potential curriculum
+          description_audience: ''
+          description_short: ''
+          description: At PwC, we believe that all students have the potential to be tomorrow’s leaders and tech-driven workforce. Access Your Potential is our commitment to help close the opportunity gap by equipping young people, especially those from disadvantaged communities, with the financial, technology and career-selection skills they need to change the trajectory of their lives. As part of our commitment, we’re excited to launch our Access Your Potential middle school technology and careers curriculum.
+        allthesurveys:
+          stages:
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
+            CSD pulse check survey:
+              name: CSD pulse check survey
+            CSD mid-post survey staging:
+              name: CSD mid-post survey staging
+            CSP pre survey Test 2017:
+              name: CSP pre survey Test 2017
+            CSD mid-post survey 2017 staging:
+              name: CSD mid-post survey 2017 staging
+            CSP pre survey 2017 staging:
+              name: CSP pre survey 2017 staging
+            CSD pre survey 2017 staging:
+              name: CSD pre survey 2017 staging
+            CSD/P pulse check survey 2017:
+              name: CSD/P pulse check survey 2017
+            CSD mid and post survey 2017 staging:
+              name: CSD mid and post survey 2017 staging
+            CSP mid and post survey 2017 staging:
+              name: CSP mid and post survey 2017 staging
+          title: All the surveys
+          description_audience: ''
+          description_short: Place to stage and test Code.org surveys
+          description: ''
+        k1hoc2017:
+          stages:
+            Collector Hour of Code 2017:
+              name: Collector Hour of Code 2017
+          title: K-1 Hour of Code 2017
+          description_audience: ''
+          description_short: ''
+          description: ''
+        hero:
+          stages:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Minecraft\: Kangelase teekond KoodiTund'
+            Minecraft Hour of Code:
+              name: Minecrafti KoodiTund
+          title: 'Minecraft: Kangelase teekond'
+          description_audience: ''
+          description_short: Minecraft on tagasi uhiuue tegevusega KoodiTunniks!
+          description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond läbi Minecrafti koos koodiga.
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+            Intro to AppLab - Your First App:
+              name: Intro to AppLab - Your First App
+            Intro to AppLab - Your First App 2:
+              name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
+          title: Intro to App Lab Staging
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-explore:
+          stages:
+            new stage:
+              name: new stage
+            Explore PT Prep - Reviewing the Task:
+              name: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan:
+              name: Explore PT - Making a Plan
+            Explore PT - Complete the Task:
+              name: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Setup: Digital Portfolio and Other Tools'
+          title: Explore - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
+          description: "These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+        csp-create:
+          stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            Create PT Prep - Reviewing the Task:
+              name: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan:
+              name: Create PT Prep - Making a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+          title: Create - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
+          description: "These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\\r\n\\r\nThis unit was last updated December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+        csp3-reovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+          title: 'csp3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-recovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+            standalone template:
+              name: standalone template
+          title: 'CSP3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        aws-demo:
+          stages:
+            new stage:
+              name: new stage
+          title: AWS Demo
+          description_audience: ''
+          description_short: ''
+          description: ''
+        halloween:
+          stages:
+            Halloween Artist:
+              name: Halloween Artist
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        valentine:
+          stages:
+            special valentine:
+              name: special valentine
+          title: Valentine Special
+          description_audience: ''
+          description_short: Have fun creating valentines
           description: ''

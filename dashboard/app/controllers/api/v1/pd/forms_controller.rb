@@ -9,10 +9,14 @@ class Api::V1::Pd::FormsController < ::ApplicationController
 
     form = new_form
     form.form_data_hash = JSON.parse(form_data_json)
-    form.save
 
-    if form.valid?
+    # Check for idempotence
+    existing_form = form.check_idempotency
+    return render json: {id: existing_form.id}, status: :ok if existing_form
+
+    if form.save
       render json: {id: form.id}, status: :created
+      on_successful_create
     else
       return_data = {
         errors: form.errors.messages
@@ -25,5 +29,12 @@ class Api::V1::Pd::FormsController < ::ApplicationController
 
   rescue_from 'ActiveRecord::RecordNotUnique' do
     head :conflict
+  end
+
+  protected
+
+  # Override to perform custom actions after a successful form creation,
+  # e.g. sending confirmation email
+  def on_successful_create
   end
 end

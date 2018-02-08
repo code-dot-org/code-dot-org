@@ -1,7 +1,15 @@
 /**
  * Main landing page and router for the application dashboard.
  */
-import React from 'react';
+import React, {PropTypes} from 'react';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import applicationDashboardReducers, {
+  setRegionalPartnerName,
+  setRegionalPartners,
+  setWorkshopAdminPermission,
+  setLockApplicationPermission,
+} from './reducers';
 import Header from '../components/header';
 import {
   Router,
@@ -13,12 +21,14 @@ import {createHistory} from 'history';
 import Summary from './summary';
 import QuickView from './quick_view';
 import DetailView from './detail_view';
+import CohortView from './cohort_view';
 import _ from 'lodash';
 
 const ROOT_PATH = '/pd/application_dashboard';
 const browserHistory = useRouterHistory(createHistory)({
   basename: ROOT_PATH
 });
+const store = createStore(applicationDashboardReducers);
 
 const ApplicationDashboardHeader = (props) => (
   <Header
@@ -28,47 +38,97 @@ const ApplicationDashboardHeader = (props) => (
 );
 
 const paths = {
-  'csd_facilitators': 'CSD Facilitator Applications',
-  'csd_teachers': 'CSD Teacher Applications',
-  'csp_facilitators': 'CSP Facilitator Applications',
-  'csp_teachers': 'CSP Teacher Applications'
+  'csf_facilitators': {type: 'facilitator', name: 'CS Fundamentals Facilitator Applications', course: 'csf'},
+  'csd_facilitators': {type: 'facilitator', name: 'CS Discoveries Facilitator Applications', course: 'csd'},
+  'csp_facilitators': {type: 'facilitator', name: 'CS Principles Facilitator Applications', course: 'csp'},
+  'csd_teachers': {type: 'teacher', name: 'CS Discoveries Teacher Applications', course: 'csd'},
+  'csp_teachers': {type: 'teacher', name: 'CS Principles Teacher Applications', course: 'csp'}
 };
 
-const ApplicationDashboard = ()=> (
-  <Router history={browserHistory} >
-    <Route path="/" component={ApplicationDashboardHeader}>
-      <IndexRedirect to="/summary"/>
-      <Route
-        path="summary"
-        breadcrumbs="Summary"
-        component={Summary}
-      />
-      {
-        _.flatten(Object.keys(paths).map((path, i) => {
-          return [
-            (
-              <Route
-                key={`detail_${i}`}
-                path={`${path}/(:applicationId)`}
-                breadcrumb={`${paths[path]},Application Details`}
-                component={DetailView}
-                title={'Application Detail'}
-              />
-            ),
-            (
-              <Route
-                key={`quick_view_${i}`}
-                path={path}
-                breadcrumbs={paths[path]}
-                component={QuickView}
-                title={paths[path]}
-              />
-            )
-          ];
-        }))
-      }
-    </Route>
-  </Router>
-);
+export default class ApplicationDashboard extends React.Component {
+  static propTypes = {
+    regionalPartnerName: PropTypes.string,
+    regionalPartners: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string
+    })),
+    isWorkshopAdmin: PropTypes.bool,
+    canLockApplications: PropTypes.bool,
+  };
 
-export default ApplicationDashboard;
+  componentWillMount() {
+    if (this.props.regionalPartnerName) {
+      store.dispatch(setRegionalPartnerName(this.props.regionalPartnerName));
+    }
+
+    if (this.props.regionalPartners) {
+      store.dispatch(setRegionalPartners(this.props.regionalPartners));
+    }
+
+    if (this.props.isWorkshopAdmin) {
+      store.dispatch(setWorkshopAdminPermission(true));
+    }
+
+    if (this.props.canLockApplications) {
+      store.dispatch(setLockApplicationPermission(true));
+    }
+  }
+
+  render() {
+    return (
+      <Provider store={store}>
+        <Router history={browserHistory} >
+          <Route path="/" component={ApplicationDashboardHeader}>
+            <IndexRedirect to="/summary" />
+            <Route
+              path="summary"
+              breadcrumbs="Summary"
+              component={Summary}
+            />
+            {
+              _.flatten(Object.keys(paths).map((path, i) => {
+                const cohort_path_name = paths[path].name.replace('Applications', 'Cohort');
+                return [
+                  (
+                    <Route
+                      key={`detail_${i}`}
+                      path={`${path}/(:applicationId)`}
+                      breadcrumbs={[
+                        {name: paths[path].name, path: path},
+                        {name: 'Application Details', path: ''}
+                      ]}
+                      component={DetailView}
+                      viewType={paths[path].type}
+                      course={paths[path].course}
+                    />
+                  ),
+                  (
+                    <Route
+                      key={`quick_view_${i}`}
+                      path={path}
+                      breadcrumbs={paths[path].name}
+                      component={QuickView}
+                      applicationType={paths[path].name}
+                      viewType={paths[path].type}
+                    />
+                  ),
+                  (
+                    <Route
+                      key={`cohort_view_${i}`}
+                      path={`${path}_cohort`}
+                      breadcrumbs={cohort_path_name}
+                      component={CohortView}
+                      applicationType={cohort_path_name}
+                      viewType={paths[path].type}
+                    />
+                  )
+                ];
+              }))
+            }
+          </Route>
+        </Router>
+      </Provider>
+    );
+  }
+}
+

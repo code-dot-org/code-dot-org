@@ -37,7 +37,7 @@ it:
         'NetSim': 'Simulatore di Internet'
         'Custom': 'Artista'
         'CustomStudio': 'Laboratorio'
-        'Gamelab': 'Game Lab'
+        'Gamelab': 'Sviluppo Giochi'
     trophy:
       name:
         'Bronze': 'Bronzo'
@@ -158,22 +158,22 @@ it:
         'maze_3_2': "Scrivi un programma che mi fa fare tutta la strada verso il maiale."
         'maze_3_3': "Come posso arrivare al maiale? Assicurati che non vada a sbattere contro la cassetta di dinamite (TNT)!"
         'maze_3_4': "Argh! Scrivi un programma che mi faccia girare alla larga della dinamite (TNT) ed arrivare al maiale."
-        'bounce_1_basketball': "https://studio.code.org/s/basketball/stage/1/puzzle/1\n\nAttacca un blocco al blocco verde `quando si preme sulla freccia verso sinistra` e premi \"Esegui\". <br>\nPoi sposta la racchetta usando la freccia verso sinistra per raggiungere la bandierina."
-        'bounce_2_basketball': "https://studio.code.org/s/basketball/stage/1/puzzle/2\n\nAttacca un blocco ad ogni blocco verde `quando si preme sulla freccia verso sinistra` e `quando si preme sulla freccia verso destra` e premi \"Esegui\".<br>\nPoi sposta la racchetta usando entrambe le frecce orizzontali per raggiungere le due bandierine."
-        'bounce_5_basketball': "https://studio.code.org/s/basketball/stage/1/puzzle/3\n\nStiamo per lanciarti una palla verso la mano. Attacca un blocco al blocco verde `quando la palla colpisce la mano` per permettere alla palla di raggiungere la bandierina."
-        'bounce_6_basketball': "https://studio.code.org/s/basketball/stage/1/puzzle/4\n\nOra la bandierina è in alto. Per risolvere questo esercizio devi attaccare dei blocchi ad entrambi i blocchi verdi `quando la palla colpisce la mano` e `quando la palla colpisce il muro`."
-        'bounce_7_basketball': "https://studio.code.org/s/basketball/stage/1/puzzle/5\n\nAttacca dei blocchi ad ognuno dei blocchi verdi `quando ...`.<br>\nFar rimbalzare la palla fino a quando non colpisce la bandiera."
-        'bounce_10_basketball': "https://studio.code.org/s/basketball/stage/1/puzzle/6\n\nOra in alto c'è il canestro! Per costruire il gioco, oltre ai blocchi usati negli esercizi precedenti, attacca il blocco `aggiungi un punto` al blocco verde `quando la palla va in rete` e quello `aggiungi un punto all'avversario` al blocco verde `quando la palla manca la mano`.<br>\nOsserva quanti punti riesci a raggiungere prima che il tuo avversario ne faccia il doppio."
-        'bounce_11_basketball': "https://studio.code.org/s/basketball/stage/1/puzzle/7\n\nAdesso puoi predisporre il gioco come vuoi, attaccando dei blocchi `imposta ...` al blocco iniziale `quando si clicca su \"Esegui\"`. Devi anche attaccare in diversi punti il blocco `lancia una nuova palla`.<br>\nProva anche a cambiare la velocità della palla e della mano: quanti punti riesci a fare prima che il tuo avversario ne faccia il doppio!"
-        'bounce_12_basketball': "https://studio.code.org/s/basketball/stage/1/puzzle/8\n\nCrea il tuo gioco di basket. Puoi modificare tutte le regole. Quando hai finito di giocare, clicca su \"Termina\" per ottenere un link da condividere con i tuoi amici o per giocare sul tuo telefono con la tua versione del gioco."
-        'bounce_1_sports': "https://studio.code.org/s/sports/stage/1/puzzle/1\n\nAttacca un blocco al blocco verde `quando si preme sulla freccia verso sinistra` e premi \"Esegui\". <br>\nPoi sposta il giocatore usando la freccia verso sinistra per raggiungere la bandierina."
-        'bounce_2_sports': "https://studio.code.org/s/sports/stage/1/puzzle/2\n\nOra ci sono due bandiere! Attacca un blocco ad ogni blocco verde `quando si preme sulla freccia verso sinistra` e `quando si preme sulla freccia verso destra` e premi \"Esegui\".<br>\nPoi sposta il giocatore usando entrambe le frecce orizzontali per raggiungere le due bandierine."
-        'bounce_5_sports': "https://studio.code.org/s/sports/stage/1/puzzle/3\n\nIl disco da hockey sta per arrivare al giocatore! Attacca un blocco al blocco verde `quando la palla colpisce il giocatore` per permettere alla palla di raggiungere la bandierina."
-        'bounce_6_sports': "https://studio.code.org/s/sports/stage/1/puzzle/4\n\nOra la bandierina è in alto. Per risolvere questo esercizio devi attaccare dei blocchi ad entrambi i blocchi verdi `quando la palla colpisce il giocatore` e `quando la palla colpisce il muro`."
-        'bounce_7_sports': "https://studio.code.org/s/sports/stage/1/puzzle/5\n\nAttacca dei blocchi ad ognuno dei blocchi verdi `quando ...`.<br>\nFar rimbalzare la palla fino a quando non colpisce la bandiera."
-        'bounce_10_sports': "https://studio.code.org/s/sports/stage/1/puzzle/6\n\nOra in alto c'è la meta! Per costruire il gioco, oltre ai blocchi usati negli esercizi precedenti, attacca il blocco `aggiungi un punto` al blocco verde `quando la palla va in rete` e quello `aggiungi un punto all'avversario` al blocco verde `quando la palla manca il giocatore`.<br>\nOsserva quanti punti riesci a raggiungere prima che il tuo avversario ne faccia il doppio."
-        'bounce_11_sports': "https://studio.code.org/s/sports/stage/1/puzzle/7\n\nAdesso puoi predisporre il gioco come vuoi, attaccando dei blocchi `imposta ...` al blocco iniziale `quando si clicca su \"Esegui\"`. Devi anche attaccare in diversi punti il blocco `lancia una nuova palla`.<br>\nProva anche a cambiare la velocità della palla e della mano: quanti punti riesci a fare prima che il tuo avversario ne faccia il doppio!"
-        'bounce_12_sports': "https://studio.code.org/s/sports/stage/1/puzzle/8\n\nOra comandi tu. Puoi modificare tutte le regole, combinando i diversi sport: sii creativo! Quando hai finito, clicca su `Termina` per consentire agli amici di provare il tuo gioco sui loro telefoni."
+        'bounce_1_basketball': "Attacca un blocco al blocco verde `quando si preme sulla freccia verso sinistra` e premi \"Esegui\". <br>\nPoi sposta la racchetta usando la freccia verso sinistra per raggiungere la bandierina."
+        'bounce_2_basketball': "Attacca un blocco ad ogni blocco verde `quando si preme sulla freccia verso sinistra` e `quando si preme sulla freccia verso destra` e premi \"Esegui\".<br>\nPoi sposta la racchetta usando entrambe le frecce orizzontali per raggiungere le due bandierine."
+        'bounce_5_basketball': "Stiamo per lanciarti una palla verso la mano. Attacca un blocco al blocco verde `quando la palla colpisce la mano` per permettere alla palla di raggiungere la bandierina."
+        'bounce_6_basketball': "Ora la bandierina è in alto. Per risolvere questo esercizio devi attaccare dei blocchi ad entrambi i blocchi verdi `quando la palla colpisce il giocatore` e `quando la palla colpisce il muro`."
+        'bounce_7_basketball': "Attacca dei blocchi ad ognuno dei blocchi verdi `quando ...`.<br>\nFai rimbalzare la palla fino a quando non colpisce la bandiera."
+        'bounce_10_basketball': "Ora in alto c'è il canestro! Per costruire il gioco, oltre ai blocchi usati negli esercizi precedenti, attacca il blocco `aggiungi un punto` al blocco verde `quando la palla va in rete` e quello `aggiungi un punto all'avversario` al blocco verde `quando la palla manca la mano`.<br>\nOsserva quanti punti riesci a raggiungere prima che il tuo avversario ne faccia due."
+        'bounce_11_basketball': "Adesso puoi predisporre il gioco come vuoi, attaccando dei blocchi `imposta ...` al blocco iniziale `quando si clicca su \"Esegui\"`. Devi anche attaccare in diversi punti il blocco `lancia una nuova palla`.<br>\nProva anche a cambiare la velocità della palla e della mano e vedi quanti punti riesci a fare prima che il tuo avversario ne faccia due!"
+        'bounce_12_basketball': "Crea il tuo gioco di basket. Puoi modificare tutte le regole. Quando hai finito di giocare, clicca su \"Termina\" per ottenere un link da condividere con i tuoi amici o per giocare sul tuo telefono con la tua versione del gioco."
+        'bounce_1_sports': "Attacca un blocco al blocco verde `quando si preme sulla freccia verso sinistra` e premi \"Esegui\". <br>\nPoi sposta il giocatore usando la freccia verso sinistra per raggiungere la bandierina."
+        'bounce_2_sports': "Ora ci sono due bandiere! Attacca un blocco ad ogni blocco verde `quando si preme sulla freccia verso sinistra` e `quando si preme sulla freccia verso destra` e premi \"Esegui\".<br>\nPoi sposta il giocatore usando entrambe le frecce orizzontali per raggiungere le due bandierine."
+        'bounce_5_sports': "Il disco da hockey sta per arrivare al giocatore! Attacca un blocco al blocco verde `quando la palla colpisce il giocatore` per permettere alla palla di raggiungere la bandierina."
+        'bounce_6_sports': "Ora la bandierina è in alto. Per risolvere questo esercizio devi attaccare dei blocchi ad entrambi i blocchi verdi `quando la palla colpisce il giocatore` e `quando la palla colpisce il muro`."
+        'bounce_7_sports': "Attacca dei blocchi ad ognuno dei blocchi verdi `quando ...`.<br>\nFai rimbalzare la palla fino a quando non colpisce la bandiera."
+        'bounce_10_sports': "Ora in alto c'è la meta! Per costruire il gioco, oltre ai blocchi usati negli esercizi precedenti, attacca il blocco `aggiungi un punto` al blocco verde `quando la palla va in rete` e quello `aggiungi un punto all'avversario` al blocco verde `quando la palla manca il giocatore`.<br>\nOsserva quanti punti riesci a raggiungere prima che il tuo avversario ne faccia due!"
+        'bounce_11_sports': "Adesso puoi predisporre il gioco come vuoi, attaccando dei blocchi `imposta ...` al blocco iniziale `quando si clicca su \"Esegui\"`. Devi anche attaccare in diversi punti il blocco `lancia una nuova palla`.<br>\nProva anche a cambiare la velocità della palla e della mano e vedi quanti punti riesci a fare prima che il tuo avversario ne faccia due!"
+        'bounce_12_sports': "Ora comandi tu. Puoi modificare tutte le regole, combinando i diversi sport: sii creativo! Quando hai finito, clicca su `Termina` per consentire agli amici di provare il tuo gioco sui loro telefoni."
         'bounce_1': "Attacca un blocco al blocco verde `quando si preme la freccia verso sinistra` e premi \"Esegui\". Poi sposta la racchetta usando la freccia verso sinistra per raggiungere la bandierina."
         'bounce_2': "Attacca un blocco ai blocchi verdi `quando si preme la freccia verso destra` e `quando si preme la freccia verso sinistra`. Poi sposta la racchetta per raggiungere entrambe le bandierine."
         'bounce_3': "Ora fai qualcosa di simile con il blocco `quando si preme la freccia verso l'alto`. Poi sposta la racchetta verso la bandierina in alto."
@@ -187,7 +187,7 @@ it:
         'Custom_builder': "Sposta i blocchi dalla cassetta degli attrezzi all'area di lavoro per disegnare il livello che vuoi creare. Premi \"Esegui\" quando hai fatto."
         'flappy_1': "Attacca un blocco al blocco `quando si clicca` e premi \"Esegui\". Clicca o tocca lo schermo per spostare Flappy verso il bersaglio.<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-16#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
         'flappy_2': "Ora nello scenario c'è anche il terreno.  Attacca un blocco di azione al blocco di evento `quando precipita a terra`.  Inoltre, il tuo codice ha bisogno del blocco `fine del gioco` quando Flappy precipita a terra."
-        'flappy_3': "Il blocco \"quando si clicca su 'Esegui' \" permette di eseguire delle specifiche istruzioni all'inizio del gioco.  Prova a cambiare la velocità con cui Flappy vola verso il bersaglio."
+        'flappy_3': "Il blocco `quando si clicca su \"Esegui\"` permette di eseguire delle specifiche istruzioni all'inizio del gioco.  Prova a cambiare la velocità con cui Flappy vola verso il bersaglio."
         'flappy_4': "Scrivi del codice per aiutare Flappy a volare attraverso i tubi che lo ostacolano. Il tuo programma deve eseguire il blocco `fine del gioco` quando Flappy si schianta contro i tubi."
         'flappy_5': "Aggiungiamo un segna-punti per contare i punti quando Flappy supera gli ostacoli. Aggiungi al blocco `quando supera un ostacolo` il blocco per segnare un punto. Guadagna un punto facendo volare Flappy attraverso la prima serie di tubi."
         'flappy_6': "Vedi se, cambiando di quanto Flappy ogni volta sbatte le ali, riesci ancora a segnare un punto."
@@ -198,7 +198,7 @@ it:
         'flappy_k1_1': "Gioca a Flappy"
         'flappy_k1_2': "Attacca un blocco al blocco \"quando si clicca\" e premi \"Esegui\". Clicca o tocca lo schermo per spostare Flappy verso il bersaglio."
         'flappy_k1_3': "Ora nello scenario c'è anche il terreno.  Attacca un blocco di quelli a sinistra al blocco \"quando precipita a terra\".  Il tuo codice ha bisogno del blocco \"fine del gioco\" quando Flappy precipita a terra."
-        'flappy_k1_4': "Il blocco \"quando si clicca su 'Esegui' \" permette di eseguire delle specifiche istruzioni all'inizio del gioco.  Prova a cambiare la velocità con cui Flappy vola verso il bersaglio."
+        'flappy_k1_4': "Il blocco `quando si clicca su \"Esegui\"` permette di eseguire delle specifiche istruzioni all'inizio del gioco.  Prova a cambiare la velocità con cui Flappy vola verso il bersaglio."
         'flappy_k1_5': "Scrivi del codice per aiutare Flappy a volare attraverso i tubi che lo ostacolano. Il tuo programma deve eseguire il blocco \"fine del gioco\" quando Flappy si schianta contro i tubi."
         'flappy_k1_6': "Aggiungiamo un segna-punti per contare i punti quando Flappy supera gli ostacoli. Aggiungi al blocco \"quando supera un ostacolo\" il blocco per segnare un punto. Guadagna un punto facendo volare Flappy attraverso la prima serie di tubi."
         'flappy_k1_7': "Vedi se riesci a segnare più punti quando Flappy supera un ostacolo"
@@ -226,20 +226,20 @@ it:
         'studio_c2_2': "Fai in modo che il cane dica qualcosa e poi il gatto gli risponda."
         'studio_c2_3': "Riesci a scrivere un programma che fa arrivare questo cane fino al gatto?"
         'studio_c2_4': "Fai arrivare il cane fino al gatto e fai in modo che il gatto dica \"Ciao\" quando il cane lo raggiunge."
-        'studio_c2_5': "Riesci a scrivere un programma per far dire \"Ciao\" al polpo quando viene cliccato?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
+        'studio_c2_5': "Riesci a scrivere un programma per far dire \"Ciao\" al polpo quando viene cliccato?"
         'studio_c2_6': "Riesci a scrivere un programma per spostare questo pinguino in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra / a destra in modo da fargli raggiungere tutte le bandierine?"
         'studio_c2_7': "Il blocco `ripeti per sempre`, aggiunto in fondo all'area di lavoro, permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il dinosauro (personaggio 2) in continuazione in su e in giù?"
         'studio_c2_8': "Riesci a far dire \"Ahi!\" al pinguino (personaggio 1) e a `riprodurre il suono di un colpo` se esso sbatte contro il dinosauro (personaggio 2), e poi a spostarlo con i tasti freccia per far sì che questo accada?"
         'studio_c2_9': "Aggiungi un blocco che segna un punto quando il pinguino (personaggio 1) sbatte contro il polpo (personaggio 3). Poi sposta il pinguino con i tasti freccia fino a che fai un punto."
         'studio_c2_10': "Aggiungi dei blocchi per cambiare lo sfondo e la velocità del pinguino (personaggio 1). Poi spostalo con i tasti freccia fino a che fai un punto."
         'studio_c2_11': "Crea una storia come vuoi tu. Quando hai fatto, clicca su \"Condividi\" per far provare la storia ai tuoi amici sui loro smartphone."
-        'studio_c3_story_1': "Riesci a far dire a questo cane \"Ciao a tutti\"?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
+        'studio_c3_story_1': "Riesci a far dire a questo cane \"Ciao a tutti\"?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-16#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
         'studio_c3_story_2': "Fai in modo che il cane dica qualcosa e poi il gatto gli risponda."
         'studio_c3_story_3': "Riesci a scrivere un programma che fa arrivare questo cane fino al gatto?"
         'studio_c3_story_4': "Fai arrivare il cane fino al gatto e fai in modo che il gatto dica \"Ciao\" quando il cane lo raggiunge."
         'studio_c3_story_5': "Riesci ad aggiungere un blocco per far sì che il polpo sia felice?"
         'studio_c3_story_6': "Crea una storia come vuoi tu. Quando hai fatto, clicca su \"Condividi\" per far provare la storia ai tuoi amici sui loro smartphone."
-        'studio_c3_game_1': "Riesci a scrivere un programma per far dire \"ciao\" al polpo quando viene cliccato?"
+        'studio_c3_game_1': "Riesci a scrivere un programma per far dire \"Ciao\" al polpo quando viene cliccato?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-17#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
         'studio_c3_game_2': "Riesci a scrivere un programma per spostare questo pinguino in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra / a destra in modo da fargli raggiungere tutte le bandierine?"
         'studio_c3_game_3': "Il blocco `ripeti per sempre`, aggiunto in fondo all'area di lavoro, permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il dinosauro (personaggio 2) in continuazione in su e in giù?"
         'studio_c3_game_4': "Riesci a far dire \"Ahi!\" al pinguino e a riprodurre il suono di \"un colpo\" se esso sbatte contro il dinosauro, e poi a spostarlo con i tasti freccia per far sì che questo accada?"
@@ -279,7 +279,7 @@ it:
         'studio_gumball_join_food_fight': "Unisciti alla battaglia del cibo! Usa l'istruzione \"il personaggio lancia l'oggetto a destra\" per far buttare a Banana Joe (il personaggio 1) del cibo verso Anton (il personaggio 2). Imposta l'umore di Anton ad arrabbiato quando viene colpito."
         'studio_gumball_free_play': "Crea un gioco o una storia per conto tuo. Quando hai fatto, clicca su \"Condividi\" per far provare il gioco ai tuoi amici sui loro smartphone, tablet o computer!"
         'studio_full_sandbox': "Crea un gioco per conto tuo. Quando hai fatto, clicca su \"Condividi\" per far provare il gioco ai tuoi amici sui loro smartphone."
-        'studio_k1_1': "Riesci a far dire a questo cane \"Ciao a tutti\"?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
+        'studio_k1_1': "Riesci a far dire a questo cane \"Ciao a tutti\"?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-16#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
         'studio_k1_2': "Fai in modo che il cane dica qualcosa e poi il gatto gli risponda."
         'studio_k1_3': "Riesci a scrivere un programma che fa arrivare questo cane fino al gatto?"
         'studio_k1_4': "Fai arrivare il cane fino al gatto e fai in modo che il gatto dica \"ciao\" quando il cane arriva là."
@@ -302,7 +302,7 @@ it:
     video:
       name:
         'maze_intro': "Introduzione a \"Il Labirinto\""
-        'artist_intro': "Introduzione a \"L'Artista\""
+        'artist_intro': "Artista - Introduzione"
         'farmer_intro': "Introduzione a \"La Contadina\""
         'flappy_intro': "Introduzione a \"Flappy\""
         'loop_times': "Blocco \"ripeti ... volte\""
@@ -334,7 +334,7 @@ it:
         'C1_maze_intro_sequencing': 'Labirinto - Corso 1: Introduzione'
         'C1_maze_debugging': 'Labirinto: Correzione di Errori'
         'C1_bee_level_intro': 'Ape: Introduzione'
-        'C1_artist_intro': 'Artista - Corso 1: Introduzione'
+        'C1_artist_intro': 'Artista - Introduzione'
         'C1_spelling_bee_intro': 'Ape Sapiente: Introduzione'
         'C1_zuck_repeat_loop': 'Labirinto: Cicli'
         'C1_bee_loops': 'Ape: Cicli'
@@ -344,7 +344,7 @@ it:
         'C1_building_foundation': 'Costruire le Fondamenta'
         'C1_going_places_safely': 'Visitare Luoghi in Modo Sicuro'
         'C2_maze_intro': 'Labirinto - Corso 2: Introduzione'
-        'C2_artist_intro': 'Artista - Corso 2: Introduzione'
+        'C2_artist_intro': 'Artista - Introduzione'
         'C2_zuck_repeat_loop': 'Labirinto: Cicli'
         'C2_artist_loops': 'Artista: Cicli'
         'C2_artist_debugging': 'Artista: Correzione di Errori'
@@ -360,7 +360,7 @@ it:
         'C2_digital_footprint': 'La tua Impronta Digitale'
         'C2_digital_footprint_v2': 'La tua Impronta Digitale'
         'C3_maze_level_4': 'Labirinto: Cicli'
-        'C3_artist_intro': 'Artista - Corso 3: Introduzione'
+        'C3_artist_intro': 'Artista - Introduzione'
         'C3_artist_functions': 'Artista: Funzioni'
         'C3_bee_functions': 'Ape: Funzioni'
         'C3_bee_conditionals': 'Ape: Istruzioni Condizionali'
@@ -396,20 +396,21 @@ it:
         'C4_unplugged_forloops': 'Cicli con Contatore'
         'C4_unplugged_parameters': 'Composizione di Canzoni - Parametri'
         'C4_unplugged_binary': 'Binario'
-        'CSF_artist_angles': 'Angles in Artist'
-        'CSF_collector_k1_blocks': 'CS Fundamentals: The Collector'
-        'CSF_collector_repeat_loops': 'Collector Repeat Loops'
-        'CSF_collector_text_blocks': 'CS Fundamentals: The Collector'
-        'CSF_create_functions': 'Create Functions'
-        'CSF_debugging_k1_blocks': 'Debugging'
-        'CSF_debugging_text_blocks': 'Debugging'
+        'CSF_a_b_artist_loops': 'Cicli con l''Artista'
+        'CSF_artist_angles': 'Angoli in Artista'
+        'CSF_collector_k1_blocks': 'Fondamenti di Informatica: Il collezionista'
+        'CSF_collector_repeat_loops': 'Collezionista: Cicli di Ripetizione'
+        'CSF_collector_text_blocks': 'Fondamenti di Informatica: Il collezionista'
+        'CSF_create_functions': 'Creazione di funzioni'
+        'CSF_debugging_k1_blocks': 'Correzione di errori (Debugging)'
+        'CSF_debugging_text_blocks': 'Correzione di errori (Debugging)'
         'CSF_EF_cs_matters': 'L''informatica conta'
         'CSF_maze_intro_k1_blocks': 'Introduzione a Code Studio'
         'CSF_maze_intro_text_blocks': 'Introduzione a Code Studio'
         'CSF_my_robotic_friends': 'I miei amici robotici'
         'CSF_Power_of_Words': 'Potere delle Parole'
         'CSF_Super_Digital_Citizen': 'Cittadino Super Digitale'
-        'CSF_stevie_big_project': 'Stevie e il grande progetto'
+        'CSF_stevie_big_project': 'Stevie e il Grande Progetto'
         'CSF_unspotted_bugs': 'Bug Non Individuati'
         'CSF_zuck_loops_short': 'I cicli Repeat'
         'frozen_intro': 'Introduzione all''Ora del Codice'
@@ -422,9 +423,16 @@ it:
         'infinity_playlab_intro': 'Laboratorio - Introduzione'
         'infinity_playlab_events': 'Laboratorio - Eventi'
         'infinity_playlab_repeat_forever': 'Laboratorio - Ripeti per sempre'
+        'csd_concept_how_computers_work': 'Introducing How Computers Work'
         'csd_concept_computer': 'Cosa rende un Computer, un Computer?'
-        'csd_concept_binary_data': 'How Computers Work: Binary & Data'
+        'csd_concept_binary_data': 'Come funzionano i computer: Logica binaria e dati'
+        'csd_concept_circuits_logic': 'How Computers Work: Circuits & Logic'
+        'csd_concept_memory_cpu_input_output': 'How Computers Work: Memory, CPU, Input, & Output'
+        'csd_concept_hardware_software': 'How Computers Work: Hardware & Software'
         'csd_concept_search': 'Come Funziona la Ricerca'
+        'csd_external_amazon_data': 'How Big Data Is Used In Amazon Recommendation Systems To Change Our Lives'
+        'csd_external_netflix_data': 'How Does Netflix Make TV Show and Movie Suggestions?'
+        'csd_external_waze_data': 'Why Are So Many Users Obsessed With Waze?'
         'csd_gamelab_animation_tab': 'La scheda dell''animazione'
         'csd_gamelab_conditionals_1': 'Introduction to Conditionals - Part 1'
         'csd_gamelab_conditionals_2': 'Introduction to Conditionals - Part 2'
@@ -436,11 +444,11 @@ it:
         'csd_gamelab_variables_1': 'Introduction to Variables - Part 1'
         'csd_gamelab_variables_2': 'Introduction to Variables - Part 2'
         'csd_gamelab_velocity': 'Velocità'
-        'csd_weblab_intro_1': 'Introduzione a Web Lab - Parte 1'
-        'csd_weblab_intro_2': 'Introduzione a Web Lab - Part 2'
+        'csd_weblab_intro_1': 'Introduzione a Sviluppo Web - Parte 1'
+        'csd_weblab_intro_2': 'Introduzione a Sviluppo Web - Parte 2'
         'csd_weblab_css_1': 'Introduzione a CSS - Parte 1'
         'csd_weblab_css_2': 'Introduzione a CSS - Parte 2'
-        'csd_weblab_intro_3': 'Introduzione a Web Lab - Part 3'
+        'csd_weblab_intro_3': 'Introduzione a Sviluppo Web - Parte 3'
         'csp_applab_objects': 'Introduction to Objects'
         'csp_applab_databases_1': 'Introduction to Databases - Part 1'
         'csp_applab_databases_2': 'Introduction to Databases - Part 2'
@@ -471,7 +479,7 @@ it:
         'csp_concept_internet_packets_reliability': 'The Internet: Packets, Routing & Reliability'
         'csp_concept_internet_wires_cables_wifi': 'The Internet: Wires, Cables & Wifi'
         'csp_concept_rgb': 'Un po '' sui pixel'
-        'csp_cs_is_changing_everything': 'Computer Science is Changing Everything'
+        'csp_cs_is_changing_everything': 'L''informatica sta cambiando ogni cosa'
         'csp_pixelation_color_1': 'Color pixelation widget - parte 1'
         'csp_pixelation_color_2': 'Color pixelation widget - parte 2'
         'csp_pixelation_color_3': 'Color pixelation widget - parte 3'
@@ -525,11 +533,38 @@ it:
         'mc_2016_events': 'L''Ora del Codice con Minecraft - Eventi'
         'mc_2016_spawn': 'L''Ora del Codice con Minecraft - Creare'
         'mc_2016_congrats': 'L''Ora del Codice con Minecraft - Complimenti'
-        'applab_hoc_welcome': 'App Lab Hour of Code - Welcome'
-        'applab_hoc_setproperty': 'App Lab Hour of Code - setProperty'
-        'applab_hoc_onevent': 'App Lab Hour of Code - onEvent'
-        'applab_hoc_designmode': 'AppLab Hour of Code - Design Mode'
-        'applab_hoc_share': 'AppLab Hour of Code - Share'
+        'applab_hoc_welcome': 'L''ora del codice in Sviluppo App - Benvenuto'
+        'applab_hoc_setproperty': 'L''ora del codice in Sviluppo App - setProperty'
+        'applab_hoc_onevent': 'L''ora del codice in Sviluppo App - onEvent'
+        'applab_hoc_designmode': 'L''Ora del Codice Sviluppo App - Modalità Interfaccia'
+        'applab_hoc_share': 'L''ora del codice in Sviluppo App - condivisione'
+        'mc_2017_agent_intro': 'L''Ora del Codice con Minecraft - L''Agente'
+        'mc_2017_repeat': 'L''Ora del Codice con Minecraft - Cicli'
+        'mc_2017_functions': 'L''Ora del Codice con Minecraft - Funzioni'
+        'mc_2017_congratulations': 'L''Ora del Codice con Minecraft - Complimenti'
+        'mc_2017_puzzle_1': 'L''Ora del Codice con Minecraft - L''Agente'
+        'mc_2017_puzzle_3': 'L''Ora del Codice con Minecraft - Cicli'
+        'mc_2017_puzzle_8': 'L''Ora del Codice con Minecraft - Funzioni'
+        'mc_2017_puzzle_12': 'Minecraft Hour of Code - Freeplay'
+        'hint_videos_d_11_3_first': 'Hint Videos: D.11.3 First'
+        'hint_videos_d_11_3_last': 'Hint Videos: D.11.3 Last'
+        'hint_videos_d_11_4_first': 'Hint Videos: D.11.4 First'
+        'hint_videos_d_11_4_last': 'Hint Videos: D.11.4 Last'
+        'hint_videos_d_11_5_first': 'Hint Videos: D.11.5 First'
+        'hint_videos_d_11_5_last': 'Hint Videos: D.11.5 Last'
+        'hint_videos_d_11_6_first': 'Hint Videos: D.11.6 First'
+        'hint_videos_d_11_6_last': 'Hint Videos: D.11.6 Last'
+        'hint_videos_d_11_7_first': 'Hint Videos: D.11.7 First'
+        'hint_videos_d_11_7_last': 'Hint Videos: D.11.7 Last'
+        'hint_videos_d_11_9_first': 'Hint Videos: D.11.9 First'
+        'hint_videos_d_11_9_last': 'Hint Videos: D.11.9 Last'
+        'hint_videos_d_11_11_first': 'Hint Videos: D.11.11 First'
+        'hint_videos_d_11_11_last': 'Hint Videos: D.11.11 Last'
+        'applab_intro_welcome': 'Sviluppo App - Per cominciare'
+        'applab_intro_events': 'Sviluppo App - Rendila interattiva'
+        'applab_intro_sounds': 'Sviluppo App - Immagini e suoni'
+        'applab_intro_designmode': 'Sviluppo App - Modalità Interfaccia'
+        'applab_intro_share': 'Sviluppo App - Condividi la tua app'
     callout:
       text:
         drag_blocks: 'Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l''altro blocco qua sopra'

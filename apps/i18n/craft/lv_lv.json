@@ -1,6 +1,9 @@
 {
   "absolute": "modulis",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "pie",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
   "blockActionAdd": "pievienot",
   "blockActionAttack": "uzbrukt",
   "blockActionClone": "clone blocks",
@@ -110,6 +113,12 @@
   "blockTypeTree": "koks",
   "blockTypeWater": "ūdens",
   "blockTypeWool": "vilna",
+  "blockTypeWoolBlue": "blue wool",
+  "blockTypeWoolMagenta": "magenta wool",
+  "blockTypeWoolOrange": "orange wool",
+  "blockTypeWoolPink": "pink wool",
+  "blockTypeWoolRed": "red wool",
+  "blockTypeWoolYellow": "yellow wool",
   "blockWhileXAheadAhead": "priekšā",
   "blockWhileXAheadDo": "darīt",
   "blockWhileXAheadWhile": "kamēr",
@@ -231,6 +240,7 @@
   "quantity": "quantity",
   "reinfFeedbackMsg": "Spied \"Turpināt spēli\" lai atgrieztos pie spēles.",
   "relative": "relative",
+  "runAgent": "Run Agent",
   "score": "Score",
   "seconds": "second(s)",
   "selectChooseButton": "Izvēlēties",
@@ -286,6 +296,5 @@
   "weather": "weather",
   "weatherTypeClear": "clear",
   "weatherTypeRain": "rain",
-  "weatherTypeThunder": "thunder",
-  "runAgent": "Run Agent"
+  "weatherTypeThunder": "thunder"
 }

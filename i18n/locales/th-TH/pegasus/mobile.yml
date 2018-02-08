@@ -26,9 +26,14 @@
   twentyhours_heading: "ทดลองเรียนหลักสูตรวิทยาศาสตร์คอมพิวเตอร์เบื้องต้นของเรา"
   twentyhours_text: "เรียนบทแรกของ Hour of Code แล้วใช่ไหม? เรียนรู้เพิ่มเติมเกี่ยวกับหลักสูตรวิทยาการคอมพิวเตอร์ และหลักการเขียนโปรแกรม (Programming Concepts) ได้ในหลักสูตรต่อไปนี้"
   og_title: เด็กทุกคนสมควรได้รับโอกาส
+  og_title_soon: "The Hour of Code is coming"
+  og_title_here: "The Hour of Code is here!"
   og_description: "นักเรียนทุกคนในทุกโรงเรียนควรได้รับโอกาสศึกษาวิทยาการคอมพิวเตอร์. มันมีการเปลี่ยนแปลงทุกๆ อย่าง."
+  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Hour of Code กำลังมา"
   csedweek_og_description: "4-10 ธันวาคม พ.ศ.2560  วิทยาศาสตร์คอมพิวเตอร์คือพื้นฐานสำหรับนักเรียนทุกคนได้เรียนรู้"
+  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "เข้าร่วม <a href=\"http://hourofcode.com\">Hour of Code</a><br/> ในวันที่ 8 - 14 ธันวาคม 2014<br/>"
   hoc2014_students: "นักเรียน"
   hoc2014_try: "ลอง"
@@ -255,6 +260,12 @@
   studiobar_donate_body: "เด็กจะได้รับการศึกษาจากแต่ละดอลลาร์ที่คุณบริจาค"
   studiobar_shop_title: "ร้านค้า"
   studiobar_shop_body: "แตกประเภทออก ใส่โลโก้ของเราด้วยความภาคภูมิใจ"
+  homepage_stats_students: "of US students have accounts on Code.org"
+  homepage_stats_female: "of our students are female"
+  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
+  homepage_stats_policy: "states changed policy to support computer science"
+  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "\"ฉันท้าทายผู้หญิงทุกประเทศ ให้ลองเรียน Hour of Code\" มาลาลา, ผู้ชนะรางวัลโนเบลสันติภาพ"
   homepage_hero_text_susan: |-
     &ldquo; ถ้าคุณสามารถเปลี่ยนแปลงเทคโนโลยี,
@@ -301,6 +312,8 @@
   homepage_hero_text_stat_loc: "มีเด็กหญิง 2.5 ล้านคนที่ได้ลงทะเบียนเรียนกับ Code Studio"
   homepage_hero_text_stat_students: "#student_count บัญชี บน Code Studio"
   homepage_hero_text_stat_served: 'มีผู้ใช้บริการ Hour of Code: #served คนแล้ว'
+  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
+  homepage_hero_hoc_is_here: "The Hour of Code is here"
   homepage_slot_text_hoc: "The Hour of Code"
   homepage_slot_text_frozen: "Frozen กับ เจ้าหญิงแอนนา และ เอลซ่า"
   homepage_slot_text_teacher: "Teacher Dashboard"
@@ -320,6 +333,7 @@
   homepage_action_text_girlvideo: "แรงบันดาลใจให้ผู้หญิง"
   homepage_action_text_learn: "เริ่มต้นการเรียนรู้กันเลย"
   homepage_action_text_signpetition: "ลงนามในคำร้อง"
+  homepage_action_text_wincelebritychat: "Win a celebrity chat"
   homepage_signpetition_dropdown: "ลงนามในคำร้อง &#x25BE;"
   homepage_diversity_pledge: "รองรับความหลากหลาย"
   homepage_banner_text_prizes: 'ชั่วโมงแห่งการโค้ดจะกลับมาอีกครั้งในวันที่ 7-13 ธันวาคม '
@@ -363,7 +377,7 @@
   homepage_slot_text_link_buy: "มาร่วมกับเราสิ"
   homepage_slot_text_link_donate: "ร่วมบริจาค"
   homepage_slot_text_link_shop: "T-shirts, hats, & more"
-  homepage_slot_text_link_administrators: "Bring to your school or district"
+  homepage_slot_text_link_administrators: "Bring CS to your school"
   homepage_header_codestudio: "Code Studio สำหรับนักเรียน"
   homepage_header_donors: "Code.org ขอขอบคุณพันธมิตร"
   homepage_donors_seall: "ดูทั้งหมด"
@@ -426,10 +440,13 @@
   mc_gradelevel: "อายุ 4 - 104 ปี"
   mc_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
   mc_specs: "หลายภาษา | เบราว์เซอร์ที่ทันสมัย แท็ปเล็ต | อายุ 6-106 ปี"
+  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: "นักออกแบบ Minecraft"
   minecraft_adventurer: "การผจญภัยใน Minecraft"
   minecraft_tutorials: "สอนชั่วโมงแห่งโค้ดด้วย Minecraft"
   minecraft_specs: "หลายภาษา | เบราว์เซอร์และแท็บเล็ตรุ่นใหม่ | เกรด 2 +"
+  minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  minecraft_agent_button: "เริ่มต้น"
   minecraft_designer_description: "เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและตัวละครอื่นๆเพื่อสร้างเกม Minecraft ในแบบฉบับของคุณเอง"
   minecraft_designer_button: "เริ่มต้น"
   minecraft_adventurer_description: "ใช้โค้ดเพื่อนำอเล็กซ์หรือสตีฟไปผจญภัย"
@@ -437,6 +454,19 @@
   minecraft_no_internet: "Don't have Internet?"
   minecraft_download_adventurer: "ดาวน์โหลด ผจญภัยใน Minecraft แบบออฟไลน์"
   minecraft_subtitle: "ชั่วโมงแห่งการโค้ดด้วย Minecraft"
+  minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
+  minecraft_host_event: "Host a Minecraft Hour of Code Event"
+  minecraft_teach_resources: "Teacher resources and lesson plan."
+  minecraft_leader_guide: "Download resources to help you plan and lead an event."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
+  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}', target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
+  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}', target='_blank'>Sign up today</a>."
+  minecraft_future: "Help all youth become future ready"
+  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}', target='_blank'>access the resources</a> they found most valuable."
+  minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
+  minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   sports_page_title: "Hour of Code Sports"
   sports_og_title: "Push yourself. Anybody can learn."
   sports_og_description: "Champions and gold medalists encourage you to try the Hour of Code. Code your own sports game."
@@ -473,6 +503,7 @@
   video_title_obama: "President Obama on computer science"
   video_title_hoc_is_here: "Hour of Code is Here - Anybody Can Learn"
   video_title_anybody_can_learn: "Anybody Can Learn"
+  video_title_steph_curry: "Hour of Code with Steph Curry"
   video_title_draymond_green: "Hour of Code with Draymond Green"
   video_title_russell_okung: "Hour of Code with Russell Okung"
   video_title_real_madrid: "Hour of Code with Real Madrid"
@@ -552,6 +583,8 @@
   volunteer_engineer_submission_type_task_remote: "ฉันต้องการให้คุณ Skype มายังห้องเรียนของฉันเพื่อพูดคำสั้น ๆ ของแรงบันดาลใจให้เด็ก ๆ"
   volunteer_engineer_submission_type_task_mentor: "ฉันมองหาปรึกษาเพื่อช่วยเตรียมฉันสำหรับเขียนโค๊ดกับนักเรียนของฉัน"
   petition_age: "อายุ"
+  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_learn_more_button: "สิ่งที่น่าเรียนรู้ยังมีอีก"
   dashboard_landing_title: "หน้าแรกของคุณครู"
   dashboard_landing_welcome: "ยินดีต้อนรับสู่แดชบอร์ดรูปแบบใหม่ ของคุณครู"
   dashboard_landing_video: "ชมวิดีโอนี้"
@@ -948,6 +981,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: "Full Test - 50 questions"
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: "Grades 9-12"
@@ -1369,7 +1404,7 @@
   teachingtree_beyond_longdescription: "TeachingTree เป็นแพลตฟอร์แบบเปิด ที่จะช่วยให้ทุกคนจัดระเบียบเนื้อหาที่จะศึกษา เป้าหมายของเราคือให้นักเรียนเข้าถึงคลิปวิดีโอได้อย่างถูกต้องและรวดเร็ว นักเรียนทุกคนจะให้การช่วยเหลือโดยการเพิ่มวิดีโอและกำหนดคอนเซ็ปต์"
   kodu_beyond_longdescription: "Kodu lets kids create games on the PC and XBox via a simple visual programming language. Kodu can be used to teach creativity, problem solving, storytelling, as well as programming. Anyone can use Kodu to make a game, young children as well as adults with no design or programming skills. Kodu for the PC is available to download for free. Kodu for the XBox is also available in the USA on the XBox Marketplace, in the Indie Games channel for about $5."
   cargobot_beyond_longdescription: "Cargo-Bot เป็นเกมปริศนาที่คุณจะสั่งหุ่นยนต์ให้เคลื่อนย้ายกล่อง ดูเหมือนจะง่ายใช่ไหม? ปริศนานี้มีถึง 36 ด่านให้คุณทดสอบ รวมทั้งเพลงและกราฟฟิคที่ตื่นเต้น คุณสามารถบันทึกวิธีการของคุณแล้วแชร์ให้เพื่อนๆดูได้ผ่าน Youtube"
-  kidsruby_beyond_longdescription: 'สนุกกับการสร้างเกม หรือ แฮกการบ้านของคุณด้วยภาษา Ruby! เพียงแค่บอกผู้ปกครองหรือคุณครูว่าคุณกำลังเรียนเขียนโปรแกรมด้วยภาษา Ruby :) ฟรีและทำงานได้บนทุกคอมพิวเตอร์ (ต้องติดตั้ง)'
+  kidsruby_beyond_longdescription: สนุกกับการสร้างเกม หรือ แฮกการบ้านของคุณด้วยภาษา Ruby! เพียงแค่บอกผู้ปกครองหรือคุณครูว่าคุณกำลังเรียนเขียนโปรแกรมด้วยภาษา Ruby :) ฟรีและทำงานได้บนทุกคอมพิวเตอร์ (ต้องติดตั้ง)
   w3schools_beyond_longdescription: "เรียนรู้วิธีสร้างเว็บไซต์บนคอมพิวเตอร์ของคุณเอง เรียนรู้พื้นฐานเซิร์ฟเวอร์ในเวลาไม่ถึงหนึ่งวัน เรียนรู้การสร้างฐานข้อมูลสำหรับเว็บไซต์ของคุณ"
   codeavengers_beyond_longdescription: "เรียนรู้วิธีการสร้างเกม แอปพลิเคชัน และเว็บไซต์โดยผู้เชี่ยวชาญ ด้วยระดับความยาก-ง่ายที่เหมาะสำหรับผู้เริ่มต้น เข้าใจง่าย คอร์สภาษา HTML, CSS และ JavaScript ของเรามีโค้ดที่มีความท้าทายและการปรับปรุงเกม ที่ทำให้การเรียนสนุกสนานและมีประสิทธิภาพเหมาะสำหรับทุกเพศทุกวัย"
   mozilla_beyond_longdescription: "Thimble เป็นเครื่องมือช่วยในการสร้างหน้าเว็บของคุณ เขียนและแก้ไขโค้ด HTML และ CSS แล้วแสดงตัวอย่างงานของคุณทันที จัดการและแชร์โปรเวจของคุณด้วยคลิกเดียว เหมาะสำหรับผู้เริ่มต้นและผู้เชี่ยวชาญ"
@@ -1462,3 +1497,5 @@
   syncing_students: "Syncing your students"
   syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro

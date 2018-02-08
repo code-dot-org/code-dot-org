@@ -129,6 +129,16 @@ EventSandboxer.prototype.sandboxEvent = function (event) {
         }
       });
 
+  // Pull selectionStart and selectionEnd from the target element, if available,
+  // and expose them on the sandboxed event object
+  if (event.target) {
+    ['selectionStart', 'selectionEnd'].forEach((eventTargetPropName) => {
+      if (event.target[eventTargetPropName] !== undefined) {
+        newEvent[eventTargetPropName] = event.target[eventTargetPropName];
+      }
+    });
+  }
+
   // Attempt to polyfill DOM element ID properties
   // Of our six DOM properties, only three are standard.
   var fillProperty = function (to, from) {

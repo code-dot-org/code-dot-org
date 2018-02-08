@@ -1,3 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list --limit 2 2016-11-14-hoc-canada-teachers-special-event ../mailing-common/test-params-international.csv

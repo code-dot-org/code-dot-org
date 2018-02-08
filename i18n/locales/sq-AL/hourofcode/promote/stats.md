@@ -1,8 +1,9 @@
-* * *
+---
+title: <%= hoc_s(:title_stats) %>
+layout: wide
+nav: promote_nav
+---
 
-title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
-
-* * *
 
 <a id="blurb"></a>
 
@@ -12,7 +13,7 @@ title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 ## Përdorni këtë njoftim të shkurtër në gazetë
 
-### Sill shkencat kompjuterike në shkollën tuaj. Filloni me Orën e Kodimit
+### Bring computer science to your school. Start with an Hour of Code!
 
 Me teknologjinë që ndryshon çdo industri në planet, njohuritë kompjuterike janë bërë një pjesë shumë e nevojshme aftësish. Por më pak se gjysmat e shkollave shpjegojnë shkencën kompjuterike! Lajmi i mirë është se jemi në rrugë a sipër për ta ndryshuar këtë. Nëse keni degjuar për Orën e Kodimit më përpara, ju mund ta dini që ka bërë histori. 100 milionë studentë kanë zbuluar tashmë se sa e arritshme dhe argëtuese mund të jenë shkencat kompjuterike thjesht duke zhvilluar një Orë Kodimi.
 

@@ -160,7 +160,6 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
  * @param {Object} config
  * @param {Object} config.skin
  * @param {NetSimLevelConfiguration} config.level
- * @param {string} config.rackEnv - development/production/etc.
  * @param {boolean} config.enableShowCode - Always false for NetSim
  * @param {function} config.loadAudio
  */
@@ -189,12 +188,6 @@ NetSim.prototype.init = function (config) {
    * @type {NetSimLevelConfiguration}
    */
   this.level = NetSimUtils.scrubLevelConfiguration_(config.level);
-
-  /**
-   * Current operating environment, used to drive certain configuration.
-   * @type {string} one of "development"|"staging"|"test"|"production"
-   */
-  this.environment = config.rackEnv;
 
   /**
    * Whether NetSim should subscribe to events using Pusher.

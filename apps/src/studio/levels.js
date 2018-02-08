@@ -3141,7 +3141,6 @@ levels.js_hoc2015_event_free = {
     sharingText: msg.hoc2015_shareGame
   },
   disablePrinting: true,
-  disableSaveToGallery: true,
   playStartSound: false
 };
 

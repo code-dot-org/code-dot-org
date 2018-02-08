@@ -1,0 +1,38 @@
+teacher_resources [["lessonPlans", "https://curriculum.code.org/pwc/ayp"]]
+
+stage 'Personal Innovations'
+named_level 'pwc_problemsolving'
+named_level 'Computer Science is Changing Everything'
+
+stage 'What is a Computer?'
+named_level 'pwc_technologyfoundations'
+named_level 'CSD What Makes a Computer a Computer Video'
+
+stage 'Problem Solving with Big Data'
+named_level 'pwc_data'
+named_level 'CSD U5 Waze Data Video', progression: 'Problem Solving'
+named_level 'CSD U5 Amazon Data Video', progression: 'Problem Solving'
+
+stage 'Programming - Hour of Code'
+named_level 'pwc_programming'
+
+stage 'Creating Webpages'
+named_level 'pwc_webdevelopment'
+
+stage 'User Interfaces'
+named_level 'pwc_appdevunplugged'
+
+stage 'Intro to App Lab (13+)'
+named_level 'pwc_appdev'
+
+stage 'Simple Encryption'
+named_level 'pwc_cybersecurity'
+named_level 'Crack a Caesar Cipher'
+named_level 'Terminology Recap'
+named_level 'New Challenge Introduction'
+named_level 'Crack Random Substitution'
+named_level 'Technique: Frequency Analysis'
+named_level 'Video - Encryption and Public Keys'
+
+stage 'Smart Clothing Design'
+named_level 'pwc_internetofthings'

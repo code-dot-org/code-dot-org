@@ -15,11 +15,11 @@ export default class MazeThumbnail extends React.Component {
     map: PropTypes.array,
     serializedMaze: PropTypes.array,
     skin: PropTypes.string.isRequired,
-  }
+  };
 
   static defaultProps = {
     scale: 1
-  }
+  };
 
   componentDidMount() {
     const skin = skins.load(assetUrl, this.props.skin);

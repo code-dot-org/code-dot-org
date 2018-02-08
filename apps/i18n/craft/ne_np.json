@@ -1,6 +1,9 @@
 {
   "absolute": "absolute",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "मा",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
   "blockActionAdd": "add",
   "blockActionAttack": "attack",
   "blockActionClone": "clone blocks",
@@ -110,6 +113,12 @@
   "blockTypeTree": "tree",
   "blockTypeWater": "water",
   "blockTypeWool": "wool",
+  "blockTypeWoolBlue": "blue wool",
+  "blockTypeWoolMagenta": "magenta wool",
+  "blockTypeWoolOrange": "orange wool",
+  "blockTypeWoolPink": "pink wool",
+  "blockTypeWoolRed": "red wool",
+  "blockTypeWoolYellow": "yellow wool",
   "blockWhileXAheadAhead": "ahead",
   "blockWhileXAheadDo": "do",
   "blockWhileXAheadWhile": "while",
@@ -231,6 +240,7 @@
   "quantity": "quantity",
   "reinfFeedbackMsg": "You can press \"Keep Playing\" to go back to playing your game.",
   "relative": "relative",
+  "runAgent": "Run Agent",
   "score": "Score",
   "seconds": "second(s)",
   "selectChooseButton": "Select",
@@ -286,6 +296,5 @@
   "weather": "weather",
   "weatherTypeClear": "clear",
   "weatherTypeRain": "rain",
-  "weatherTypeThunder": "thunder",
-  "runAgent": "Run Agent"
+  "weatherTypeThunder": "thunder"
 }

@@ -26,9 +26,14 @@
   twentyhours_heading: "Probaj naš uvod u Kurs računarskih nauka"
   twentyhours_text: "Završio si prvi Hour of Code? Nauci još o računarskim naukama i programskim konceptima u sledećem kursu."
   og_title: 'Code.org: Svako može naučiti'
+  og_title_soon: "The Hour of Code is coming"
+  og_title_here: "The Hour of Code is here!"
   og_description: "Svaki učenik u svakoj školi zaslužuje priliku studirati računarstvo."
+  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Obrazovna nedjelja računarskih nauka"
   csedweek_og_description: "Decembar 4-10, 2017. Računarstvo je temelj koji svaki student može naučiti."
+  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Pridruži se<a href=\"http://hourofcode.com\">Satu Kodiranja</a><br/>Decembar 8 - 14, 2014<br/>"
   hoc2014_students: "Učenici"
   hoc2014_try: "Isprobaj"
@@ -255,6 +260,12 @@
   studiobar_donate_body: "Sa svakim dolarom koji donirate, jedno dijete nauči"
   studiobar_shop_title: "Idi u kupovinu"
   studiobar_shop_body: "Razbij stereotipe. Nosi naš logo s ponosom."
+  homepage_stats_students: "of US students have accounts on Code.org"
+  homepage_stats_female: "of our students are female"
+  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
+  homepage_stats_policy: "states changed policy to support computer science"
+  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "&ldquo;Ja pozivam djevojke iz svake moguće države da nauče jedan Sat Kodiranja&rdquo; \nMalala, dobitnik Nobelove nagrade"
   homepage_hero_text_susan: |-
     &ldquo;Ako možeš promijeniti tehnologiju, možeš promijeniti svijet.&rdquo; Susan, generalna direktorica YouTubea
@@ -292,6 +303,8 @@
   homepage_hero_text_stat_loc: "#loc linija koda napisano od strane učenika"
   homepage_hero_text_stat_students: "#student_count učeničkih računa u Studiju Kodiranja"
   homepage_hero_text_stat_served: 'Sat Kodiranja: #served posluženo'
+  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
+  homepage_hero_hoc_is_here: "The Hour of Code is here"
   homepage_slot_text_hoc: "Sat Kodiranja"
   homepage_slot_text_frozen: "Frozen sa Anna i Elsa"
   homepage_slot_text_teacher: "Nadzorna Ploča za Nastavnike"
@@ -311,6 +324,7 @@
   homepage_action_text_girlvideo: "Inspiriši djevojčicu"
   homepage_action_text_learn: "Započni sa učenjem"
   homepage_action_text_signpetition: "Potpiši peticiju"
+  homepage_action_text_wincelebritychat: "Win a celebrity chat"
   homepage_signpetition_dropdown: "Slažem se &#x25BE;"
   homepage_diversity_pledge: "Prisegni se na raznolikost"
   homepage_banner_text_prizes: 'Sat Kodiranja dolazi opet, Decembar 7-13. '
@@ -354,7 +368,7 @@
   homepage_slot_text_link_buy: "Uključi se"
   homepage_slot_text_link_donate: "Doniraj"
   homepage_slot_text_link_shop: "T-shirts, hats, & more"
-  homepage_slot_text_link_administrators: "Bring to your school or district"
+  homepage_slot_text_link_administrators: "Bring CS to your school"
   homepage_header_codestudio: "Učeničke kreacije pomoću Studija Kodiranja"
   homepage_header_donors: "Code.org zahvaljuje svojim pristalicama"
   homepage_donors_seall: "Pogledaj sve"
@@ -417,10 +431,13 @@
   mc_gradelevel: "Dob 4-104"
   mc_platformtext: "Savremeni browser-i, mobiteli, tableti"
   mc_specs: "Many languages | Modern browsers and tablets | Ages 6-106"
+  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: "Minecraft Designer"
   minecraft_adventurer: "Minecraft Adventurer"
   minecraft_tutorials: "Minecraft Hour of Code Tutorials"
   minecraft_specs: "Many languages | Modern browsers and tablets | Grades 2+"
+  minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  minecraft_agent_button: "Počni"
   minecraft_designer_description: "Program animals and other Minecraft creatures in your own version of Minecraft."
   minecraft_designer_button: "Počni"
   minecraft_adventurer_description: "Upotrijebi kod da odvedeš Alex ili Steve u avanturu."
@@ -428,6 +445,19 @@
   minecraft_no_internet: "Nemaš Internet?"
   minecraft_download_adventurer: "Preuzmi offline verziju Minecraft Pustolov."
   minecraft_subtitle: "Sata Kodiranja Minecraft-a"
+  minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
+  minecraft_host_event: "Host a Minecraft Hour of Code Event"
+  minecraft_teach_resources: "Teacher resources and lesson plan."
+  minecraft_leader_guide: "Download resources to help you plan and lead an event."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
+  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}', target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
+  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}', target='_blank'>Sign up today</a>."
+  minecraft_future: "Help all youth become future ready"
+  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}', target='_blank'>access the resources</a> they found most valuable."
+  minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
+  minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   sports_page_title: "Sat Kodiranja - Sportovi"
   sports_og_title: "Daj sve od sebe. Svako može naučiti."
   sports_og_description: "Šampioni i dobitnici zlatnih medalja vas ohrabruju da probate Sat Kodiranja. Isprogramiraj vlastite sportske igre."
@@ -464,6 +494,7 @@
   video_title_obama: "Predsjednik Obama o računarstvu"
   video_title_hoc_is_here: "Sat Kodiranja je ovdje - Svako može naučiti"
   video_title_anybody_can_learn: "Svako može naučiti"
+  video_title_steph_curry: "Hour of Code with Steph Curry"
   video_title_draymond_green: "Sat Kodiranja sa Drazmond Green"
   video_title_russell_okung: "Sat Kodiranja sa Russell Okung"
   video_title_real_madrid: "Sat Kodiranja sa Real Madrid"
@@ -543,6 +574,8 @@
   volunteer_engineer_submission_type_task_remote: "Želim da putem Skype-a kažeš nekoliko riječi inspiracije djeci u mojoj učionici"
   volunteer_engineer_submission_type_task_mentor: "Tražim mentora koji bi me pripremio/la za kodiranje sa mojim studentima"
   petition_age: "Starost"
+  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_learn_more_button: "Nauči više"
   dashboard_landing_title: "Početna stranica za nastavnike"
   dashboard_landing_welcome: "Dobrodošli na novu i poboljšanu kontrolnu ploču za nastavnike."
   dashboard_landing_video: "Pregledaj ovaj video"
@@ -636,7 +669,7 @@
   dashboard_progress_completed_too_many_blocks: "dovršeno, previše blokova"
   dashboard_progress_completed_perfect: "dovršeno, savršeno"
   dashboard_progress_furthest_level_attempted: "pokušaj posljednjeg nivoa"
-  dashboard_progress_submitted: "submitted"
+  dashboard_progress_submitted: "predano"
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: "Progress information for %{student_name} in %{script_name}"
   dashboard_progress_pair_programming: "pair programming"
@@ -895,14 +928,14 @@
   csfirst_name: "CS First"
   boxisland_name: "Box Island"
   codesters_name: "Codesters"
-  texasinstruments_name: "10 Minutes of Code"
+  texasinstruments_name: "1o minuta koda"
   teacherled_name: "Nastavno vođeni Nastavni program Sata Kodiranja"
   course1_name: "Kurs 1"
   course2_name: "Kurs 2"
   course3_name: "Kurs 3"
   course4_name: "Kurs 4"
-  coursea-draft_name: Course A
-  coursea_name: "Course A"
+  coursea-draft_name: Kurs A
+  coursea_name: "Kurs A"
   courseb-draft_name: Course B
   courseb_name: "Course B"
   coursec-draft_name: Course C
@@ -928,7 +961,7 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
-  csp1_name: 'Unit 1: The Internet'
+  csp1_name: 'Jedinica 1: internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp3-a_name: 'Unit 3: Intro Programming (version A)'
@@ -939,6 +972,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: "Full Test - 50 questions"
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: "Grades 9-12"
@@ -1372,7 +1407,7 @@
   processing_beyond_longdescription: "Processing je programski jezik, razvojno okruženje i online zajednica. Od 2001., Processing  je promovirao softversku pismenost u vizualnim umjetnostima i vizualnu pismenost u tehnologiji. Početno zamišljen da služi kao softverska bilježnica i za poučavanje osnova računalnog programiranja u vizualnom kontekstu, Processing je evoluirao u razvojni alat za profesionalce. Danas deseci hiljada učenika, umjetnika, dizajnera, istraživača i hobista koriste Processing za učenje, izradu prototipa i proizvodnju."
   alice_beyond_longdescription: "Korištenjem inovativnog programskog okruženja koje podržava stvaranje 3D animacija, Alice Project nudi alate i materijale za podučavanje i učenje kompjuterskog razmišljanja, rješavanja problema i programiranja kompjutera za širok spektar uzrasta i nivoa znanja."
   sphero_beyond_longdescription: "Bilo da ste učitelj ili roditelj, SPRK lekcije daju djeci zabavan brzinski kurs programiranja robota dok usput poboljšavaju matematičke i naučne vještine."
-  compatibility_hide_this_warning: "Hide this warning"
+  compatibility_hide_this_warning: "Sakrij ovo upozorenje"
   compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   starwars_shortcode: "star"
   mc_shortcode: "mc"
@@ -1394,14 +1429,14 @@
   header_educate_middle: "Middle School"
   header_educate_high: "High School"
   header_educate_hoc: "Sat Kodiranja"
-  header_educate_partner: "Partner with Us"
+  header_educate_partner: "Partner sa nama"
   header_educate_beyond: "Beyond Code.org"
-  header_educate_inspire: "Inspire a Student"
+  header_educate_inspire: "Inspiriraj učenika"
   header_educate_community: "Online Community"
   header_educate_tools: "Tools and Videos"
   header_about_us: "About Us"
   header_about_leadership: "Leadership"
-  header_about_donors: "Donors"
+  header_about_donors: "Donatori"
   header_about_partners: "Partners"
   header_about_team: "Full Team"
   header_about_news: "Newsroom"
@@ -1410,12 +1445,12 @@
   header_about_contact: "Contact Us"
   header_about_faqs: "FAQs"
   header_learn: "Learn"
-  header_teach: "Teach"
+  header_teach: "Podučavaj"
   header_stats: "Stats"
-  header_help_us: "Help Us"
+  header_help_us: "Pomogni nam"
   header_about: "About"
   header_teacher_community: "Teacher community"
-  header_help_support: 'Help and support '
+  header_help_support: 'Pomoć i podrška '
   header_report_bug: "Report bug"
   header_tutorials: "Tutorials"
   header_documentation: "Documentation"
@@ -1453,3 +1488,5 @@
   syncing_students: "Syncing your students"
   syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro

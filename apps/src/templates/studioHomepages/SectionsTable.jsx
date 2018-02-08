@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import styleConstants from '../../styleConstants';
 import i18n from '@cdo/locale';
@@ -7,9 +8,9 @@ import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 import Button from '@cdo/apps/templates/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-// Many of these styles are also used by our similar SectionTable on the
-// teacher-dashboard page (which is why we export them).
-export const styles = {
+// When this table gets converted to reacttabular, it should also
+// use styles from /tables/tableConstants.js
+const styles = {
   table: {
     borderWidth: 1,
     borderStyle: 'solid',
@@ -98,16 +99,16 @@ export const styles = {
   }
 };
 
-const SectionsTable = React.createClass({
+class SectionsTable extends React.Component {
   // isTeacher will be set false for teachers who are seeing this table as a student in another teacher's section.
-  propTypes: {
+  static propTypes = {
     sections: shapes.sections,
     isRtl: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
     canLeave: PropTypes.bool.isRequired,
     updateSections: PropTypes.func,
     updateSectionsResult: PropTypes.func
-  },
+  };
 
   onLeave(sectionCode, sectionName) {
     $.post({
@@ -117,14 +118,14 @@ const SectionsTable = React.createClass({
       this.props.updateSections(data.sections);
       this.props.updateSectionsResult("leave", data.result, sectionName, sectionCode);
     });
-  },
+  }
 
   sectionHref(section) {
     if (section.numberOfStudents === 0) {
       return pegasus(`/teacher-dashboard#/sections/${section.id}/manage`);
     }
     return section.linkToProgress;
-  },
+  }
 
   render() {
     const { sections, isRtl, isTeacher, canLeave } = this.props;
@@ -178,6 +179,7 @@ const SectionsTable = React.createClass({
                 ...styles.row
               }}
               key={index}
+              className="test-row"
             >
               <td style={{...styles.col, ...styles.sectionNameCol}}>
                 {isTeacher && (
@@ -231,6 +233,8 @@ const SectionsTable = React.createClass({
       </table>
     );
   }
-});
+}
 
-export default SectionsTable;
+export default connect(state => ({
+  isRtl: state.isRtl,
+}))(SectionsTable);

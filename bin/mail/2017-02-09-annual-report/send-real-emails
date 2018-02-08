@@ -1,8 +1,0 @@
-#!/bin/sh
-
-# 2372749 contacts
-../send-to-mailing-list --start 0 --limit 500000 2017-02-09-annual-report ./contacts.csv
-../send-to-mailing-list --start 500000 --limit 500000 2017-02-09-annual-report ./contacts.csv
-../send-to-mailing-list --start 1000000 --limit 500000 2017-02-09-annual-report ./contacts.csv
-../send-to-mailing-list --start 1500000 --limit 500000 2017-02-09-annual-report ./contacts.csv
-../send-to-mailing-list --start 2000000 --limit 400000 2017-02-09-annual-report ./contacts.csv

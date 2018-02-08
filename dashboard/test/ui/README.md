@@ -8,17 +8,16 @@ Automated UI tests for the dashboard.
 
 This is the best option for rapid iteration while writing a new test. ChromeDriver will run your tests in a new window on your machine.
 
-1. [Download the chromedriver](https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver)
-2. Start the chromedriver in the background (or a separate window): `/path/to/your/downloaded/chromedriver &`
-3. `cd` to the directory of this README.
-4. `bundle install`
-5. `rbenv rehash`
-6. `./runner.rb -l`
+1. `cd` to the directory of this README.
+2. if this is your first time running tests via chromedriver, run `bundle install` and then `rbenv rehash`
+3. `./runner.rb -l`
   - `-l` makes it use the chromedriver, and specifies local dashboard and pegasus domains
   - a window will pop up in the background in which you can watch the tests happen
-7. In a separate window, run `tail -f *.log` to watch the results of your tests
+4. In a separate window, run `tail -f *.log` to watch the results of your tests
   - `-f` streams the log in your shell, so it will be updated as new lines are written
-8. To run a single ui test, you can simply run `rake test:ui feature=path/to/test.feature`
+5. To run a single ui test, you can simply run `rake test:ui feature=path/to/test.feature`
+
+If you get the error `unknown error: cannot get automation extension`, follow the [chromedriver-helper instructions](https://github.com/flavorjones/chromedriver-helper#updating-to-latest-chromedriver) to upgrade to latest chromedriver.
 
 ### With remote browsers: Saucelabs
 

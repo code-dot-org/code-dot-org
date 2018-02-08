@@ -46,6 +46,7 @@ function onYouTubeIframeAPIReady() {
 function createVideo(options) {
   return $('<iframe id="video"/>').addClass('video-player').attr({
     src: options.src,
+    allowfullscreen: 'true',
     scrolling: 'no'
   });
 }
@@ -220,11 +221,11 @@ videos.showVideoDialog = function (options, forceShowVideo) {
 
   // Don't add fallback player if a video modal has closed
   var shouldStillAdd = true;
-  videoModal.one('hidden.bs.modal', function (){
+  videoModal.one('hidden.bs.modal', function () {
     shouldStillAdd = false;
   });
 
-  setupVideoFallback(options, $div.width(), divHeight, function (){
+  setupVideoFallback(options, $div.width(), divHeight, function () {
     return shouldStillAdd;
   });
 };
@@ -305,7 +306,7 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
       }
     }
     // Properly dispose of video.js player instance when hidden
-    $fallbackPlayer.parents('.modal').one('hidden.bs.modal', function (){
+    $fallbackPlayer.parents('.modal').one('hidden.bs.modal', function () {
       videoPlayer.dispose();
     });
   });

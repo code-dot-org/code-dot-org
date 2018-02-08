@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# 227 teachers
-../send-to-mailing-list --limit 227 2017-08-30-pd-pre-workshop-survey-correction ./teachers.csv

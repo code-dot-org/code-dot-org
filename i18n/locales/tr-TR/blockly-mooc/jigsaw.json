@@ -1,10 +1,10 @@
 {
-  "continue":"Devam Et",
-  "nextLevel":"Tebrikler! Bu bulmacayı tamamladınız.",
-  "no":"Hayır",
-  "numBlocksNeeded":"Bu puzzle %1 blok ile çözülebilir.",
-  "reinfFeedbackMsg":"Oyununuzu tekrar oynamak için \"yeniden dene\" butonuna basabilirsiniz.",
-  "share":"Paylaş",
-  "shareGame":"Oyununu paylaş:",
-  "yes":"Evet"
+  "continue": "Devam Et",
+  "nextLevel": "Tebrikler! Bu bulmacayı tamamladınız.",
+  "no": "Hayır",
+  "numBlocksNeeded": "Bu puzzle %1 blok ile çözülebilir.",
+  "reinfFeedbackMsg": "Oyununuzu tekrar oynamak için \"yeniden dene\" butonuna basabilirsiniz.",
+  "share": "Paylaş",
+  "shareGame": "Oyununu paylaş:",
+  "yes": "Evet"
 }

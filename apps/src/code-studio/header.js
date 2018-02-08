@@ -11,7 +11,7 @@ import Dialog from './LegacyDialog';
 import { Provider } from 'react-redux';
 import { getStore } from '../redux';
 import { showShareDialog } from './components/shareDialogRedux';
-import { PUBLISHED_PROJECT_TYPES } from '../templates/publishDialog/publishDialogRedux';
+import { PublishableProjectTypesOver13 } from '../util/sharedConstants';
 
 import { convertBlocksXml } from '../craft/code-connection/utils';
 
@@ -153,13 +153,7 @@ header.build = function (scriptData, stageData, progressData, currentLevelId,
 
 function shareProject() {
   dashboard.project.save().then(() => {
-    var shareUrl;
-    if (appOptions.baseShareUrl) {
-      shareUrl = `${appOptions.baseShareUrl}/${dashboard.project.getCurrentId()}`;
-    } else {
-      const origin = location.protocol + '//' + location.host;
-      shareUrl = origin + dashboard.project.getPathName();
-    }
+    const shareUrl = dashboard.project.getShareUrl();
 
     var i18n = window.dashboard.i18n;
 
@@ -175,12 +169,17 @@ function shareProject() {
     const appType = dashboard.project.getStandaloneApp();
     const pageConstants = getStore().getState().pageConstants;
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
+
+    // Allow publishing for any project type that older students can publish.
+    // Younger students should never be able to get to the share dialog in the
+    // first place, so there's no need to check age against project types here.
     const canPublish = !!appOptions.isSignedIn &&
-      PUBLISHED_PROJECT_TYPES.includes(appType);
+      PublishableProjectTypesOver13.includes(appType);
 
     ReactDOM.render(
       <Provider store={getStore()}>
         <ShareDialog
+          isProjectLevel={!!dashboard.project.isProjectLevel()}
           i18n={i18n}
           shareUrl={shareUrl}
           thumbnailUrl={dashboard.project.getThumbnailUrl()}
@@ -249,45 +248,71 @@ function importProject() {
       return;
     }
 
-    let shareUrl;
+    let sharePath;
     try {
-      shareUrl = new URL(shareLink);
+      const anchor = document.createElement('a');
+      anchor.href = shareLink;
+      sharePath = anchor.pathname;
     } catch (e) {
       // a shareLink that does not represent a valid URL will throw a TypeError
       Craft.showErrorMessagePopup(dashboard.i18n.t('project.share_link_import_bad_link_header'), dashboard.i18n.t('project.share_link_import_bad_link_body'));
       return;
     }
 
-    const legacyShareRegex = /^\/c\/([^\/]*)/;
-    const obfuscatedShareRegex = /^\/r\/([^\/]*)/;
+    const legacyShareRegex = /^\/?c\/([^\/]*)/;
+    const obfuscatedShareRegex = /^\/?r\/([^\/]*)/;
+    const projectShareRegex = /^\/?projects\/minecraft_hero\/([^\/]*)/;
 
-    let levelSourcePath;
+    let levelSourcePath, channelId;
 
-    // Try a couple different kinds of share links
-    if (shareUrl.pathname.match(legacyShareRegex)) {
-      const levelSourceId = shareUrl.pathname.match(legacyShareRegex)[1];
+    // Try a couple different kinds of share links, resolving to either a level
+    // source or channel
+    if (sharePath.match(legacyShareRegex)) {
+      const levelSourceId = sharePath.match(legacyShareRegex)[1];
       levelSourcePath = `/c/${levelSourceId}.json`;
-    } else if (shareUrl.pathname.match(obfuscatedShareRegex)) {
-      const levelSourceId = shareUrl.pathname.match(obfuscatedShareRegex)[1];
+    } else if (sharePath.match(obfuscatedShareRegex)) {
+      const levelSourceId = sharePath.match(obfuscatedShareRegex)[1];
       levelSourcePath = `/r/${levelSourceId}.json`;
+    } else if (sharePath.match(projectShareRegex)) {
+      channelId = sharePath.match(projectShareRegex)[1];
     }
 
+    const onFinish = function (source) {
+      // Source data will likely be from a different project type than this one,
+      // so convert it
+
+      const convertedSource = convertBlocksXml(source);
+      dashboard.project.createNewChannelFromSource(convertedSource, function (channelData) {
+        const pathName = dashboard.project.appToProjectUrl() + '/' + channelData.id + '/edit';
+        location.href = pathName;
+      });
+    };
+
+    const onError = function () {
+      Craft.showErrorMessagePopup(dashboard.i18n.t('project.share_link_import_error_header'), dashboard.i18n.t('project.share_link_import_error_body'));
+    };
+
+    // Depending on what kind of source the share link resolved to (if it even
+    // did), retrieve the source and process it
     if (levelSourcePath) {
+      // level sources can be grabbed with a simple ajax request
       $.ajax({
         url: levelSourcePath,
         type: "get",
         dataType: "json"
       }).done(function (data) {
-        // Source data will likely be from a different project type than this one,
-        // so convert it
-
-        const convertedSource = convertBlocksXml(data.data);
-        dashboard.project.createNewChannelFromSource(convertedSource, function (channelData) {
-          const pathName = dashboard.project.appToProjectUrl() + '/' + channelData.id + '/edit';
-          location.href = pathName;
-        });
+        onFinish(data.data);
       }).error(function () {
-        Craft.showErrorMessagePopup(dashboard.i18n.t('project.share_link_import_error_header'), dashboard.i18n.t('project.share_link_import_error_body'));
+        onError();
+      });
+    } else if (channelId) {
+      // channel-backed sources need to go through the project API
+      dashboard.project.getSourceForChannel(channelId, function (source) {
+        if (source) {
+          onFinish(source);
+        } else {
+          onError();
+        }
       });
     } else {
         Craft.showErrorMessagePopup(dashboard.i18n.t('project.share_link_import_bad_link_header'), dashboard.i18n.t('project.share_link_import_bad_link_body'));
@@ -326,15 +351,22 @@ header.showMinimalProjectHeader = function () {
 // Project header for script levels that are backed by a project. Shows a
 // Share and Remix button, and places a last_modified time below the stage
 // name
-header.showHeaderForProjectBacked = function () {
-  if ($('.project_info .project_share').length !== 0) {
+/**
+ * @param {object} options{{
+ *   showShareAndRemix: boolean
+ * }}
+ */
+header.showHeaderForProjectBacked = function (options) {
+  if ($('.project_updated_at').length !== 0) {
     return;
   }
-  $('.project_info')
-      .append($('<div class="project_share header_button header_button_light">').text(dashboard.i18n.t('project.share')))
-      .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')));
-  $('.project_share').click(shareProject);
-  $('.project_remix').click(remixProject);
+  if (options.showShareAndRemix) {
+    $('.project_info')
+        .append($('<div class="project_share header_button header_button_light">').text(dashboard.i18n.t('project.share')))
+        .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')));
+    $('.project_share').click(shareProject);
+    $('.project_remix').click(remixProject);
+  }
 
   // Add updated_at below the level name. Do this by creating a new div, moving
   // the level text into it, applying some styling, and placing that div where

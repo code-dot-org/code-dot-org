@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_press_kit) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ## Làm thế nào để thu hút các phương tiện truyền thông tới sự kiện GIỜ LẬP TRÌNH 
@@ -12,20 +11,20 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 ### bí quyết
 
-  * Email liên lạc với giới truyền thông 2 tuần trước khi sự kiện diễn ra. Theo dõi Emali và điện thoại nếu chưa nhận được hồi đáp ngay.
-  * Nhờ một thành viên trường bạn hoặc tình nguyện viên chụp ảnh chia sẻ trực tuyến hoặc gửi cho báo chí.
-  * Viết về Hour of Code - Giờ lập trình trên trang web và trong tờ báo trường bạn. Gửi CHI tiết về sự kiện, những hình ảnh về các hoạt động sinh viên.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Email liên lạc với giới truyền thông 2 tuần trước khi sự kiện diễn ra. Theo dõi Emali và điện thoại nếu chưa nhận được hồi đáp ngay.
+- Nhờ một thành viên trường bạn hoặc tình nguyện viên chụp ảnh chia sẻ trực tuyến hoặc gửi cho báo chí.
+- Viết về Hour of Code - Giờ lập trình trên trang web và trong tờ báo trường bạn. Gửi CHI tiết về sự kiện, những hình ảnh về các hoạt động sinh viên.
+- Trên Facebook và Twitter, chia sẻ thông tin cập nhật về kế hoạch của bạn, công bố sự kiện và hình ảnh của bạn trong tháng mười hai 8-14. Sử dụng thẻ tag **#HourOfCode** để Code.org có thể thấy và hợp tác giúp đỡ cho sự kiện của bạn.
 
 ### Hướng dẫn từng bước:
 
 **1. Plan your event**
 
-  * Lên kế hoạch tuần tự để khởi động Hour of Code.
-  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * Tổ chức các hoạt động của nhóm (như là tổ chức một hoạt động hỏi đáp về lập trình), hoặc hướng dẫn sinh viên tự tổ chức các hoạt động.
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
+- Lên kế hoạch tuần tự để khởi động Hour of Code.
+- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+- Tổ chức các hoạt động của nhóm (như là tổ chức một hoạt động hỏi đáp về lập trình), hoặc hướng dẫn sinh viên tự tổ chức các hoạt động.
+- Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2. Identify specific local reporters that cover education or local events.**
 

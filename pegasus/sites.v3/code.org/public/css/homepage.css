@@ -54,6 +54,16 @@ body.modal-open .supreme-container{
   height: 100%;
 }
 
+#homepage #hero .widehero_do_not_hide {
+  z-index: -5;
+  position:absolute;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat; background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
 #hero #fullwidth0.widehero {
   animation: fadein 4s;
   display: block;

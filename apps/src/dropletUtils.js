@@ -34,8 +34,8 @@ import {singleton as studioApp} from './StudioApp';
  * @property {DropletBlock[]} blocks list of blocks
  * @property {Object} categories configuration of categories within which to
  *   place blocks
- * @property {boolean} autocompleteFunctionsWithParens If set, we will append
- *   "();" after functions
+ * @property {boolean} autocompleteFunctionsWithSemicolon If set, we will append
+ *   "();" after functions (vs. the "()" we always append)
  * @property {string[]} additionalPredefValues Additional keywords to add to
  *   autocomplete and consider 'defined' for linting purposes.
  */
@@ -80,19 +80,19 @@ export const globalFunctions = {
  */
 export const dropletGlobalConfigBlocks = [
   {func: 'getTime', parent: globalFunctions, category: 'Control', type: 'value' },
-  {func: 'randomNumber', parent: globalFunctions, category: 'Math', type: 'value' },
-  {func: 'prompt', parent: window, category: 'Variables', type: 'value' },
-  {func: 'promptNum', parent: globalFunctions, category: 'Variables', type: 'value' }
+  {func: 'randomNumber', parent: globalFunctions, category: 'Math', type: 'value', params: ['__']  },
+  {func: 'prompt', parent: window, category: 'Variables', type: 'value', params: ['__'] },
+  {func: 'promptNum', parent: globalFunctions, category: 'Variables', type: 'value', params: ['__'] }
 ];
 
 /**
  * @type {DropletBlock[]}
  */
 export const dropletBuiltinConfigBlocks = [
-  {func: 'Math.round', category: 'Math', type: 'value', docFunc: 'mathRound' },
-  {func: 'Math.abs', category: 'Math', type: 'value', docFunc: 'mathAbs' },
-  {func: 'Math.max', category: 'Math', type: 'value', docFunc: 'mathMax' },
-  {func: 'Math.min', category: 'Math', type: 'value', docFunc: 'mathMin' },
+  {func: 'Math.round', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathRound' },
+  {func: 'Math.abs', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathAbs' },
+  {func: 'Math.max', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathMax' },
+  {func: 'Math.min', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathMin' },
   {func: 'Math.random', category: 'Math', type: 'value', docFunc: 'mathRandom' }
 ];
 
@@ -377,6 +377,8 @@ export function generateDropletPalette(codeFunctions, dropletConfig) {
 }
 
 function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, configBlocks) {
+  const acUtil = window.ace.require("ace/autocomplete/util");
+
   for (let i = 0; i < configBlocks.length; i++) {
     const block = configBlocks[i];
     if (!block.noAutocomplete) {
@@ -388,40 +390,61 @@ function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties,
         score: 100,
         meta: block.category
       };
-      if (opts.autocompleteFunctionsWithParens) {
-        newApi.completer = {
-          insertMatch: function (value, editor) {
-            // Remove the filterText that was already typed (ace's built-in
-            // insertMatch would normally do this automatically)
-            if (editor.completer.completions.filterText) {
-              const ranges = editor.selection.getAllRanges();
-              for (let i = 0, range; !!(range = ranges[i]); i++) {
-                range.start.column -= editor.completer.completions.filterText.length;
-                editor.session.remove(range);
-              }
-            }
-            // Insert the function name plus parentheses and semicolon:
-            editor.execCommand("insertstring", value + '();');
-            if (this.params) {
-              // Move the selection back so parameters can be entered:
-              const curRange = editor.selection.getRange();
-              curRange.start.column -= 2;
-              curRange.end.column -= 2;
-              editor.selection.setSelectionRange(curRange);
-            }
-          }.bind(block, newApi.value)
-        };
-      }
-      if (newApi.value.indexOf('*.') === 0 || newApi.value.indexOf('?.') === 0) {
-        // Populate this in a special methodsAndProperties collection:
-
+      const methodOrProperty = (newApi.value.indexOf('*.') === 0 ||
+          newApi.value.indexOf('?.') === 0);
+      if (methodOrProperty) {
         // Store the original name in a docFunc property for the
         // benefit of our DropletAutocompletePopupTooltipManager:
         newApi.docFunc = newApi.value;
         // Update the value to skip over the '*.' or '?.' at the beginning:
         newApi.value = newApi.value.substring(2);
-        methodsAndProperties.push(newApi);
+      }
 
+      newApi.completer = {
+        insertMatch: function (value, editor) {
+          // Remove the filterText that was already typed (ace's built-in
+          // insertMatch would normally do this automatically) plus the rest of
+          // the identifier after the filterText...
+          let modifyingExistingFunctionCall = false;
+          if (editor.completer.completions.filterText) {
+            const ranges = editor.selection.getAllRanges();
+            for (let i = 0, range; !!(range = ranges[i]); i++) {
+              range.start.column -= editor.completer.completions.filterText.length;
+              const line = editor.session.getLine(range.end.row);
+              const lengthOfRestOfIdentifier =
+                  acUtil.retrieveFollowingIdentifier(line, range.end.column).length;
+              range.end.column += lengthOfRestOfIdentifier;
+              modifyingExistingFunctionCall = line[range.end.column] === '(';
+              editor.session.remove(range);
+            }
+          }
+          // Insert the function name plus parentheses and semicolon:
+          const isProp = block.type === 'property' || block.type === 'readonlyproperty';
+          if (isProp) {
+            editor.execCommand("insertstring", value);
+          } else {
+            const suffix = modifyingExistingFunctionCall ? '' :
+                opts.autocompleteFunctionsWithSemicolon ? '();' : '()';
+            editor.execCommand("insertstring", value + suffix);
+            if (this.params) {
+              // Move the selection back so parameters can be entered:
+              const curRange = editor.selection.getRange();
+              let moveSelectionCharCount;
+              if (modifyingExistingFunctionCall) {
+                moveSelectionCharCount = 1;
+              } else {
+                moveSelectionCharCount = -(suffix.length - 1);
+              }
+              curRange.start.column += moveSelectionCharCount;
+              curRange.end.column += moveSelectionCharCount;
+              editor.selection.setSelectionRange(curRange);
+            }
+          }
+        }.bind(block, newApi.value)
+      };
+      if (methodOrProperty) {
+        // Populate this in a special methodsAndProperties collection:
+        methodsAndProperties.push(newApi);
       } else {
         // Populate this in the "normal" apis collection:
         apis.push(newApi);
@@ -480,8 +503,9 @@ export function generateAceApiCompleter(functionFilter, dropletConfig) {
   const methodsAndProperties = [];
   const opts = {};
 
-  // If autocompleteFunctionsWithParens is set, we will append "();" after functions
-  opts.autocompleteFunctionsWithParens = dropletConfig.autocompleteFunctionsWithParens;
+  // If autocompleteFunctionsWithSemicolon is set, we will append "();" after
+  // functions, instead of the "()" we normally append
+  opts.autocompleteFunctionsWithSemicolon = dropletConfig.autocompleteFunctionsWithSemicolon;
 
   if (functionFilter) {
     const mergedBlocks = filteredBlocksFromConfig(functionFilter, dropletConfig, null, { paletteOnly: true });
@@ -495,7 +519,8 @@ export function generateAceApiCompleter(functionFilter, dropletConfig) {
 
   return {
     getCompletions(editor, session, pos, prefix, callback) {
-      if (prefix.length === 0) {
+      const token = editor.session.getTokenAt(pos.row, pos.column);
+      if (prefix.length === 0 || token.type === 'comment') {
         callback(null, []);
         return;
       }
@@ -550,6 +575,7 @@ function getModeOptionFunctionsFromConfig(config, codeFunctions) {
 
     newFunc.dropdown = block.dropdown;
     newFunc.objectDropdown = block.objectDropdown;
+    newFunc.allowFunctionDrop = block.allowFunctionDrop;
     if (block.paramButtons) {
       newFunc.minArgs = block.paramButtons.minArgs;
       newFunc.maxArgs = block.paramButtons.maxArgs;
@@ -594,6 +620,7 @@ export function generateDropletModeOptions(config) {
       // errors: { },
     },
     lockZeroParamFunctions: config.level.lockZeroParamFunctions,
+    lockFunctionDropIntoKnownParams: config.lockFunctionDropIntoKnownParams,
     paramButtonsForUnknownFunctions: true
   };
 }

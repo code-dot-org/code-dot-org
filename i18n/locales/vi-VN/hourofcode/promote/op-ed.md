@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_op_ed) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ### Dưới đây là mẫu bài báo của một tác giả hỗ trợ tuần lễ giáo dục về khoa học máy tính và mục tiêu của nó có thể được sử dụng cho các bang, các nhà lập pháp địa phương , lãnh đạo doanh nghiệp vv.
@@ -17,7 +16,7 @@ Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/
 
 **By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+Máy tính ở khắp mọi nơi. Chúng trong tầm kiểm soát chúng ta. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
 
 But who exactly is going to write this software?
 

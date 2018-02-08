@@ -296,23 +296,23 @@
             'Eval: Defining Functions':
               name: "Составные функции"
             'Eval: Functions':
-              name: Solving Word Problems with the Design Recipe
+              name: "Решение проблем с использованием рецепта дизайна"
             'Eval: Strings and Images':
               name: "Строки и картинки"
             'Eval: Writing Contracts':
-              name: Writing Contracts
+              name: "Текстовые соглашения"
             'Play Lab: Animation (Big Game)':
-              name: The Big Game - Animation
+              name: "Большая игра - Анимация"
             'Play Lab: Boolean (Big Game)':
-              name: The Big Game - Booleans
+              name: "Большая игра - Логические переменные"
             'Play Lab: Booleans':
               name: Sam the Bat
             'Play Lab: Collision Detection (Big Game)':
-              name: The Big Game - Collision Detection
+              name: "Большая игра - Обнаружение коллизий"
             'Play Lab: Defining Functions':
               name: Rocket Height
             'Play Lab: Defining Variables (Big Game)':
-              name: The Big Game - Variables
+              name: "Большая игра - Переменные"
             'Unplugged: Booleans':
               name: 'Unplugged: Booleans and Logic'
             'Unplugged: Collision Detection and the Distance Formula':
@@ -364,15 +364,15 @@
             K-5 Courses:
               name: K-5 Courses
             Next Steps:
-              name: Next Steps
+              name: "Следующие шаги"
             'Programming Concept: Conditionals':
-              name: 'Programming Concept: Conditionals'
+              name: "Понятие программирования: условия"
             'Programming Concept: Events':
-              name: 'Programming Concept: Events'
+              name: "Понятие программирования: события"
             'Programming Concept: Functions':
-              name: 'Programming Concept: Functions'
+              name: "Понятие программирования: функции"
             'Programming Concept: Loops':
-              name: 'Programming Concept: Loops'
+              name: "Понятие программирования: циклы"
             Reflection:
               name: Reflection
             Teacher Dashboard:
@@ -390,13 +390,13 @@
             Automatic DNS node:
               name: Automatic DNS node
             Broadcasting messages:
-              name: Broadcasting messages
+              name: "Широковещательные сообщения"
             Internet Simulator Freeplay:
               name: Internet Simulator Freeplay
             Manual DNS:
               name: Manual DNS
             Overview and Setup Instructions:
-              name: Overview and Setup Instructions
+              name: "Обзор и инструкция по установке"
             Packets and Reliability:
               name: Packets and Reliability
             Peer to Peer - Sending Ascii:
@@ -406,7 +406,7 @@
             Peer to Peer - Sending Numbers:
               name: Peer to Peer - Sending Numbers
             Routers and addresses:
-              name: Routers and addresses
+              name: "Маршрутизаторы и адреса"
         pixelation:
           title: "Пикселизация"
           description: "Создавайте картинки при помощи битов и байтов."
@@ -481,7 +481,7 @@
             Applab:
               name: Applab
             Hoc2015 Blockly:
-              name: Hoc2015 Blockly
+              name: "Час Кода 2015 Блокли"
             Play Lab:
               name: "Лаборатория игр"
             The Artist:
@@ -558,7 +558,7 @@
           description_short: Make Black and White Images with the pixelation tool
           stages:
             Binary Numbers:
-              name: Binary Numbers
+              name: "Двоичные числа"
             Bytes and File Sizes:
               name: Bytes and File Sizes
             Encode a Complex Thing:
@@ -814,7 +814,7 @@
             Evaluation Blocks:
               name: "Блоки оценки"
             Next Steps:
-              name: Next Steps
+              name: "Следующие шаги"
             Strings and Images:
               name: "Строки и картинки"
             Teacher Dashboard:
@@ -1182,7 +1182,7 @@
             Evaluation Blocks:
               name: "Блоки оценки"
             Next Steps:
-              name: Next Steps
+              name: "Следующие шаги"
             Rocket-Height:
               name: Rocket-Height
             Strings and Images:
@@ -1190,7 +1190,7 @@
             Teacher Dashboard:
               name: "Панель управления преподавателя"
             Writing Contracts:
-              name: Writing Contracts
+              name: "Текстовые соглашения"
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
@@ -1238,7 +1238,7 @@
             'Mastering the Basics: Sequencing':
               name: 'Mastering the Basics: Sequencing'
             Next Steps:
-              name: Next Steps
+              name: "Следующие шаги"
             Planning:
               name: Planning
         ECSPD2:
@@ -1363,7 +1363,7 @@
             Introduction to Equity:
               name: Introduction to Equity
             Next Steps:
-              name: Next Steps
+              name: "Следующие шаги"
         sciencePD2b-iZone:
           title: Computer Science in Science PD Phase 2b
           description: "Этап 2 онлайн: Смешанное летнее обучение"
@@ -2195,7 +2195,7 @@
           description_audience: ''
           stages:
             Binary Numbers:
-              name: Binary Numbers
+              name: "Двоичные числа"
             CS Principles Pre-survey:
               name: CS Principles Pre-survey
             Encoding and Sending Formatted Text:
@@ -2291,11 +2291,10 @@
               name: Practice PT - Encode an Experience
         csp3:
           title: CSP Unit 3 - Programming
-          description: This unit introduces the foundational concepts of computer
-            programming, which unlocks the ability to make rich, interactive apps.
-            This course uses JavaScript as the programming language, and App Lab as
-            the programming environment to build apps, but the concepts learned in
-            these lessons span all programming languages and tools.
+          description: |-
+            This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\r
+            \r
+            This unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
           description_short: "Программирование"
           description_audience: ''
           stages:
@@ -2331,13 +2330,18 @@
               name: CSP Student Post-Course Survey
             Creating Functions with Parameters:
               name: Creating Functions with Parameters
+            CSP End-of-Semester Mid-course survey:
+              name: CSP End-of-Semester Mid-course survey
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
-          description: The data-rich world we live in introduces many complex questions
-            related to public policy, law, ethics and societal impact. The goals of
-            this unit are to develop a well-rounded and balanced view about data in
-            the world, including the positive and negative effects of it, and to understand
-            the basics of how and why modern encryption works.
+          description: |-
+            The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r
+            \r
+            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
           description_short: Big Data and Privacy
           description_audience: ''
           stages:
@@ -3067,7 +3071,7 @@
             Loops:
               name: "Циклы"
             Loops Intro:
-              name: Loops Intro
+              name: "Введение в циклы"
             Loops Unplugged:
               name: Loops Unplugged
             Persistence & Frustration:
@@ -3135,7 +3139,7 @@
             Loops:
               name: "Циклы"
             Loops Intro:
-              name: Loops Intro
+              name: "Введение в циклы"
             Loops Unplugged:
               name: Loops Unplugged
             More Computer Science:
@@ -3751,6 +3755,8 @@
               name: Parameters and Randomization
             Shapes and Randomization:
               name: Shapes and Randomization
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -4286,7 +4292,8 @@
                 then explores properties that impact HTML text elements.  Finally,
                 everyone applies text styles to their personal websites.
               description_teacher: |
-                This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.
+                This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\r
+                \r
             Styling Elements with CSS:
               name: Styling Elements with CSS
               description_student: This lesson continues the introduction to CSS style
@@ -4385,15 +4392,10 @@
                 of the creator of that media. After first studying Creative Commons
                 licensing, the class learns how to add images to web pages, and how
                 to give proper attribution when doing so.
-              description_teacher: "Starting with an exploration of the song \"Happy
-                Birthday\" and its history of copyright protection, the class explores
-                the purpose and role of copyright for both creators and users of creative
-                content. After a brief discussion about the purpose of copyright,
-                we move on to an activity exploring the various Creative Commons licenses
-                as a solution to the difficulty in dealing with copyright. \n\nFinally,
-                with a common understanding of the restrictions of various Creative
-                Commons licenses, students will learn how to add images to their web
-                pages using the &lt;img&gt; tag."
+              description_teacher: |-
+                Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \r
+                \r
+                Finally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag.
             Project - Multi-Page Websites:
               name: Project - Multi-Page Websites
               description_student: 'This lesson covers hyperlinks, which allow web
@@ -4401,12 +4403,9 @@
                 will link together all the previous pages into one project, and create
                 navigation bars for each page before publishing the entire site to
                 the Web.  '
-              description_teacher: "After learning about how to link web pages to
-                one another, students are finally able to publish the website they
-                have been working on.  In this lesson, they link together all the
-                previous pages they have created into one project, create a new page,
-                and add navigation between the pages before publishing the entire
-                site to the Web.  \n\n"
+              description_teacher: |
+                After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \r
+                \r
             RGB Colors and Classes:
               name: RGB Colors and Classes
               description_student: This lesson covers classes and custom colors. The
@@ -4429,9 +4428,22 @@
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
               description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.
+                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
             Headings:
               name: Headings
+              description_student: This lesson continues the introduction to HTML
+                tags, this time with headers.  The class practices using header tags
+                to create page and section titles and learns how the different header
+                elements are displayed by default.  Next, the class plans how to organize
+                their content on the personal web pages that will be built across
+                the unit and begins the first page of the project.
+              description_teacher: In this lesson, students continue to use HTML to
+                structure text on web pages, this time with headings.  Students learn
+                how the different heading elements are displayed by default and practice
+                using them to create page and section titles.  Students then start
+                to decide how they will organize their content on their own personal
+                web pages.  In the last level, students begin the project that they
+                will continue to work on throughout the unit.
         csp2-support:
           title: CSP Unit 2 Online Support
           description_audience: ''
@@ -4491,7 +4503,7 @@
                 person, each member of the class will get to experience designs through
                 someone else's eyes.
               description_teacher: |
-                Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.
+                Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -4556,7 +4568,7 @@
                 teams explore some example apps created in App Lab, using those apps
                 to help inform the first paper prototypes of their apps.
               description_teacher: |
-                Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.
+                Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\r
             Prototype Testing:
               name: Prototype Testing
               description_student: In this lesson teams test out their paper prototypes
@@ -4718,6 +4730,64 @@
                 project guide directs students through the process including building
                 the app and testing it with their user to see if their assumptions
                 about the user interfaces they created are accurate.
+            Linking Screens:
+              name: Linking Screens
+              description_student: Building on the screens that the class designed
+                in the previous lesson, teams combine screens into a single app. Simple
+                code can then be added to make button clicks change to the appropriate
+                screen.
+              description_teacher: In this lesson teams combine the screens that they
+                designed in the previous lesson into a single app, which they can
+                then link together using code. Students learn basic event driven programming
+                by building up the model app that they started in the previous lesson.
+                In addition to the screen that students designed yesterday, they'll
+                learn how to create additional screens and even import screens made
+                by others.
+            User Interfaces:
+              name: User Interfaces
+              description_student: See how a paper prototype can be used to test and
+                get feedback on software before writing any code. To help out a developer
+                with their idea, the class tests and provides an app prototype made
+                of paper.
+              description_teacher: Following the mini design project, students look
+                towards the next phase of design - prototyping a product that attempts
+                to address user needs. In teams, students examine a paper prototype
+                for a chat app called "Txt Ur Grndkdz". Through using this paper prototype,
+                students get a chance to see how a simple paper prototype can be used
+                to quickly test ideas and assumptions before we ever get to the computer.
+                After "using" the provided prototype students begin to identify ways
+                to improve the next iteration.
+            Feedback and Testing:
+              name: Feedback and Testing
+              description_student: Users have been testing an app, and they have lots
+                of feedback for the developer. The class needs to sort through all
+                of this feedback, identify the common themes and needs, and start
+                revising the prototype to make it better meet the users' needs.
+              description_teacher: In this lesson students use feedback from "users"
+                of the paper-prototyped app from the previous lesson in order to develop
+                improvements to the user interface of that paper prototype. The lesson
+                begins with a reflection on the fact that designers need to translate
+                human needs with technology into changes to the user interface or
+                experience. Students are then given a collection of feedback and requests
+                from users of the app from the previous lesson. In groups students
+                categorize the feedback and identify ways the needs expressed in the
+                feedback could be met by changes to the interface of the app. Then
+                in groups students will implement some of these changes to meet one
+                of the needs they identified.
+            Project - App Presentation:
+              name: Project - App Presentation
+              description_student: Each team prepares a presentation to "pitch" the
+                app they've developed. This is the time to share struggles, triumphs,
+                and plans for the future.
+              description_teacher: At this point teams have researched a topic of
+                personal and social importance, developed and tested both a paper
+                prototype and a digital prototype, and iterated on the initial app
+                to incorporate new features and bug fixes. Now is the time for them
+                to review what they have done and pull together a coherent presentation
+                to demonstrate their process of creation. Using the provided presentation
+                template, teams prepare to present about their process of app development,
+                including the problem they set out to solve, the ways in which they've
+                incorporated feedback from testing, and their plans for the future.
         minecraft:
           title: "Редактор для «Часа Кода» Minecraft"
           description_audience: ''
@@ -4768,9 +4838,9 @@
             'Loops: Happy Loops':
               name: 'Loops: Happy Loops'
             Loops in Collector:
-              name: Loops in Collector
+              name: "Циклы в Собирателе"
             Loops in Artist:
-              name: Loops in Artist
+              name: "Циклы в исполнителе Художник"
             'Events: The Big Event':
               name: 'Events: The Big Event'
             Events in Play Lab:
@@ -4808,9 +4878,9 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Collector:
-              name: Loops in Collector
+              name: "Циклы в Собирателе"
             Loops in Artist:
-              name: Loops in Artist
+              name: "Циклы в исполнителе Художник"
             'Events: The Big Event':
               name: 'Events: The Big Event'
             Events in Play Lab:
@@ -4880,21 +4950,21 @@
             Events in Bounce:
               name: Events in Bounce
             Nested Loops in Maze:
-              name: Nested Loops in Maze
+              name: "Вложенные циклы в Лабиринте"
             Nested Loops in Artist:
-              name: Nested Loops in Artist
+              name: "Вложенные циклы в Художнике"
             'Algorithms: Relay Programming':
               name: 'Algorithms: Relay Programming'
             Debugging in Bee:
               name: Debugging in Bee
             While Loops in Farmer:
-              name: While Loops in Farmer
+              name: "Цикл while в Фермере"
             Conditionals with Cards:
               name: "Условные выражения с картами"
             Conditionals with Bee:
               name: Conditionals with Bee
             Conditionals & Loops in Maze:
-              name: Conditionals & Loops in Maze
+              name: "Условия и циклы в Лабиринте"
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             Impacts of Computing:
@@ -4912,7 +4982,7 @@
             Artist Binary:
               name: "Художник: двоичная система"
             Nested Loops in Bee:
-              name: Nested Loops in Bee
+              name: "Вложенные циклы в Пчеле"
             Nested Loops:
               name: "Вложенные циклы"
             Introduction:
@@ -4988,9 +5058,9 @@
             For Loop Fun:
               name: "Игры с циклами"
             For Loops in Bee:
-              name: For Loops in Bee
+              name: "Цикл for в Пчеле"
             For Loops in Artist:
-              name: For Loops in Artist
+              name: "Цикл for в Художнике"
             'Functions with Parameters: Songwriting with Parameters':
               name: 'Functions with Parameters: Songwriting with Parameters'
             Functions with Parameters in Artist:
@@ -5367,13 +5437,13 @@
             Physical Input:
               name: Physical Input
             List and For Loops:
-              name: List and For Loops
+              name: "Список и цикл for"
             'Project: Board Output':
               name: 'Project: Board Output'
             For Loops with UI and Board:
               name: For Loops with UI and Board
             Lists and For Loops:
-              name: Lists and For Loops
+              name: "Список и цикл for"
             Analog Input:
               name: "Иной ввод"
             Polling Events:
@@ -5388,6 +5458,28 @@
               name: Board Events
             'Project: Make a Game':
               name: 'Project: Make a Game'
+            Getting and Setting Properties:
+              name: Getting and Setting Properties
+            The Program Design Process:
+              name: The Program Design Process
+            Getters:
+              name: Getters
+            Getting Properties:
+              name: Getting Properties
+            Designing Screens with Code:
+              name: Designing Screens with Code
+            Arrays:
+              name: Arrays
+            Making Music:
+              name: Making Music
+            Arrays and For Loops:
+              name: "Множества и цикл for"
+            Circuits and Physical Prototypes:
+              name: Circuits and Physical Prototypes
+            Accelerometer:
+              name: Accelerometer
+            Functions with Parameters:
+              name: "Процедуры с параметрами"
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5533,7 +5625,7 @@
             Conditionals:
               name: "Условные операторы"
             'Real Life Algorithms: Dice Race':
-              name: 'Real Life Algorithms: Dice Race'
+              name: "Алгоритмы из повседневной жизни: Гонки кубиков"
         csd6:
           title: CSD Unit 6 - Physical Computing
           description_audience: ''
@@ -5636,7 +5728,7 @@
                 into App Lab where they write programs that rely on iteration using
                 a _for loop_.
             Lists and For Loops:
-              name: Lists and For Loops
+              name: "Список и цикл for"
               description_student: Combining _lists_ and _for loops_ allows you to
                 write code that impacts every element of a list, regardless of how
                 long it is. The class uses this structure to write programs that process
@@ -6095,6 +6187,8 @@
                 deciding what to do with data that does not easily fit into the visualization
                 scheme that they have chosen.  Last, students look at what parts of
                 this process can be automated, and what need a human to make decisions.
+            Keeping Data Secret:
+              name: Keeping Data Secret
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -6410,7 +6504,7 @@
             B8 BB8:
               name: B8 BB8
             C9 Artist Loops:
-              name: C9 Artist Loops
+              name: "Художник: Циклы"
             C8 to BB8:
               name: C8 to BB8
             D7 to Laurel:
@@ -6424,7 +6518,7 @@
             Programming with BB-8:
               name: Programming with BB-8
             Loops with BB-8:
-              name: Loops with BB-8
+              name: "Циклы с BB-8"
             D13 no If/While:
               name: D13 no If/While
             Ice Age Play Lab:
@@ -6433,6 +6527,8 @@
               name: "Прыжок"
             NewBounce:
               name: NewBounce
+            F PlayLab Variables:
+              name: F PlayLab Variables
           title: ''
           description_audience: ''
           description_short: ''
@@ -6493,17 +6589,18 @@
             'Loops: Happy Loops':
               name: 'Loops: Happy Loops'
               description_student: ''
-              description_teacher: Loops are a very helpful and powerful tool in programming.
-                To understand how helpful loops can be, students will need to be driven
-                to want an easier way to solve mundane problems.
+              description_teacher: "Циклы - это очень полезный и мощный инструмент
+                в программировании. Чтобы понять, насколько полезными могут быть циклы,
+                ученикам нужно будет водить, чтобы найти более простой способ решить
+                повседневные проблемы."
             Loops in Collector:
-              name: Loops in Collector
+              name: "Циклы в Собирателе"
               description_student: ''
               description_teacher: Building on the concept of repeating instructions
                 from "Happy Loops," this stage will have students using loops to collect
                 treasure more efficiently on Code.org.
             Loops in Artist:
-              name: Loops in Artist
+              name: "Циклы в исполнителе Художник"
               description_student: ''
               description_teacher: Returning to loops, students learn to draw images
                 by looping simple sequences of instructions. In the previous plugged
@@ -6553,9 +6650,9 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Collector:
-              name: Loops in Collector
+              name: "Циклы в Собирателе"
             Loops in Artist:
-              name: Loops in Artist
+              name: "Циклы в исполнителе Художник"
             'Events: The Big Event':
               name: 'Events: The Big Event'
             Events in Play Lab:
@@ -6602,7 +6699,7 @@
             Binary Bracelets:
               name: "Двоичные браслеты"
             Loops in Artist:
-              name: Loops in Artist
+              name: "Циклы в исполнителе Художник"
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
           title: "Курс С"
@@ -6650,9 +6747,8 @@
                 and sounds.
             Nested Loops:
               name: "Вложенные циклы"
-              description_student: Loops inside loops inside loops. What does this
-                mean? This lesson will teach you what happens when you place a loop
-                inside another loop.
+              description_student: "Цикл внутри цикла. Что это значит? Этот урок объяснит
+                вам, что происходит, когда вы помещаете цикл внутри другого цикла."
               description_teacher: In this online activity, students will have the
                 opportunity to push their understanding of loops to a whole new level.
                 Playing with the Bee and Plants vs Zombies, students will learn how
@@ -6660,7 +6756,7 @@
                 encouraged to figure out how little changes in either loop will affect
                 their program when they click `Run`.
             Nested Loops in Artist:
-              name: Nested Loops in Artist
+              name: "Вложенные циклы в Художнике"
               description_student: More nested loops! This time, you get to make some
                 AMAZING drawing with nested loops.
               description_teacher: Students will create intricate designs using Artist
@@ -6681,7 +6777,7 @@
             Debugging in Bee:
               name: Debugging in Bee
             While Loops in Farmer:
-              name: While Loops in Farmer
+              name: "Цикл while в Фермере"
               description_student: 'Loops are so useful in coding. This lesson will
                 teach you about a new kind of loop: while loops!'
               description_teacher: "By the time students reach this lesson, they should
@@ -6711,7 +6807,7 @@
                 with conditionals, allowing them to write code that functions differently
                 depending on the specific conditions the program encounters.
             Conditionals & Loops in Maze:
-              name: Conditionals & Loops in Maze
+              name: "Условия и циклы в Лабиринте"
               description_student: You can do some amazing things when you use conditionals
                 and loops together!
               description_teacher: 'In this lesson, students will be pairing together
@@ -6819,9 +6915,9 @@
             For Loop Fun:
               name: "Игры с циклами"
             For Loops in Bee:
-              name: For Loops in Bee
+              name: "Цикл for в Пчеле"
             For Loops in Artist:
-              name: For Loops in Artist
+              name: "Цикл for в Художнике"
             Songwriting with Parameters:
               name: "Написание песен с параметрами"
             Conditionals and Functions in Bee:
@@ -7006,7 +7102,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: "Циклы в исполнителе Художник"
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
@@ -7105,7 +7201,7 @@
                 have extra structures built right in. These new structures will allow
                 students to create code that is more powerful and dynamic. '
             For Loops in Bee:
-              name: For Loops in Bee
+              name: "Цикл for в Пчеле"
               description_student: Buzz buzz. In these puzzles you will be guiding
                 a bee to nectar and honey using `for` loops!
               description_teacher: Featuring Bee, this lesson focuses on for loops
@@ -7114,7 +7210,7 @@
                 walked through using for loops to more effectively solve complicated
                 problems.
             For Loops in Artist:
-              name: For Loops in Artist
+              name: "Цикл for в Художнике"
               description_student: Get ready to make your next masterpiece. Here you
                 will be using `for` loops to make some jaw-dropping pictures.
               description_teacher: In this lesson, students continue to practice for
@@ -7246,7 +7342,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: "Циклы в исполнителе Художник"
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
@@ -7559,7 +7655,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: "Циклы в исполнителе Художник"
             Nested Loops Project in Artist:
               name: Nested Loops Project in Artist
             Internet:
@@ -7579,9 +7675,9 @@
             Conditionals with Cards:
               name: "Условные выражения с картами"
             While Loops in Farmer:
-              name: While Loops in Farmer
+              name: "Цикл while в Фермере"
             Conditionals & Loops in Maze:
-              name: Conditionals & Loops in Maze
+              name: "Условия и циклы в Лабиринте"
             Conditionals in Minecraft:
               name: Conditionals in Minecraft
             Conditionals & Loops in Farmer:
@@ -7595,9 +7691,9 @@
             For Loop Fun:
               name: "Игры с циклами"
             For Loops in Bee:
-              name: For Loops in Bee
+              name: "Цикл for в Пчеле"
             For Loops in Artist:
-              name: For Loops in Artist
+              name: "Цикл for в Художнике"
             Songwriting with Parameters:
               name: "Написание песен с параметрами"
             Functions in Bee:
@@ -7631,7 +7727,7 @@
             'Conditionals: Conditionals with Cards':
               name: 'Conditionals: Conditionals with Cards'
             Conditional Loops in Maze:
-              name: Conditional Loops in Maze
+              name: "Условия и циклы в Лабиринте"
             'Variables: Envelope Variables':
               name: 'Variables: Envelope Variables'
             'For Loops: For Loop Fun':
@@ -7667,9 +7763,9 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Collector:
-              name: Loops in Collector
+              name: "Циклы в Собирателе"
             Loops in Artist:
-              name: Loops in Artist
+              name: "Циклы в исполнителе Художник"
             'Events: The Big Event':
               name: 'Events: The Big Event'
             Events in Play Lab:
@@ -7742,6 +7838,10 @@
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey:
+              name: Please complete the CSP Mid-course survey
           title: ''
           description_audience: ''
           description_short: "Программирование"
@@ -7808,6 +7908,14 @@
               name: Intro to AppLab - Your First App 2
             Intro to AppLab - Your First App 3:
               name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
+            'Lesson 1: App Lab Intro':
+              name: 'Lesson 1: App Lab Intro'
           title: Intro to App Lab
           description_audience: ''
           description_short: ''
@@ -7828,7 +7936,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: "Циклы в исполнителе Художник"
             Nested Loops:
               name: "Вложенные циклы"
             Nested Loops with Frozen:
@@ -7870,7 +7978,7 @@
             Crowdsourcing:
               name: "Краудсорсинг"
             Nested Loops in Bee:
-              name: Nested Loops in Bee
+              name: "Вложенные циклы в Пчеле"
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Sequence in Maze:
@@ -7890,7 +7998,7 @@
             Nested Loops:
               name: "Вложенные циклы"
             Nested Loops in Artist:
-              name: Nested Loops in Artist
+              name: "Вложенные циклы в Художнике"
             Nested Loops Project in Artist:
               name: Nested Loops Project in Artist
             'Algorithms: Relay Programming':
@@ -7898,13 +8006,13 @@
             Debugging in Collector:
               name: Debugging in Collector
             While Loops in Farmer:
-              name: While Loops in Farmer
+              name: "Цикл while в Фермере"
             Conditionals with Cards:
               name: "Условные выражения с картами"
             Conditionals in Bee:
               name: Conditionals in Bee
             Conditionals & Loops in Maze:
-              name: Conditionals & Loops in Maze
+              name: "Условия и циклы в Лабиринте"
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             Digital Citizenship:
@@ -7918,9 +8026,9 @@
             Building a Foundation:
               name: "Создание основы"
             Loops in Artist:
-              name: Loops in Artist
+              name: "Циклы в исполнителе Художник"
             Nested Loops in Bee:
-              name: Nested Loops in Bee
+              name: "Вложенные циклы в Пчеле"
           title: New Course D Script
           description_audience: ''
           description_short: ''
@@ -7950,7 +8058,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: "Циклы в исполнителе Художник"
             Nested Loops Project in Frozen:
               name: Nested Loops Project in Frozen
             'How it Works: The Internet':
@@ -7970,7 +8078,7 @@
             'Conditionals: Conditionals with Cards':
               name: 'Conditionals: Conditionals with Cards'
             While Loops in Farmer:
-              name: While Loops in Farmer
+              name: "Цикл while в Фермере"
             Conditional Loops in Maze:
               name: Conditional Loops in Maze
             Conditionals in Minecraft:
@@ -7986,9 +8094,9 @@
             'For Loops: For Loop Fun':
               name: 'For Loops: For Loop Fun'
             For Loops in Bee:
-              name: For Loops in Bee
+              name: "Цикл for в Пчеле"
             For Loops in Artist:
-              name: For Loops in Artist
+              name: "Цикл for в Художнике"
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
             Functions in Bee:
@@ -8024,7 +8132,7 @@
         new-stages-sept-2017:
           stages:
             Loops in Artist:
-              name: Loops in Artist
+              name: "Циклы в исполнителе Художник"
             Sequences with Scrat:
               name: Sequences with Scrat
             Testing Template:
@@ -8048,7 +8156,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: "Циклы в исполнителе Художник"
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
@@ -8106,7 +8214,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: "Циклы в исполнителе Художник"
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
@@ -8130,9 +8238,9 @@
             For Loop Fun:
               name: "Игры с циклами"
             For Loops in Bee:
-              name: For Loops in Bee
+              name: "Цикл for в Пчеле"
             For Loops in Artist:
-              name: For Loops in Artist
+              name: "Цикл for в Художнике"
             Songwriting with Parameters:
               name: "Написание песен с параметрами"
             Functions in Bee:
@@ -8218,6 +8326,8 @@
               name: all assessment items clustered in levelgroup as a single "test"
             dummy:
               name: dummy
+            CSP 3 updates staging ground:
+              name: CSP 3 updates staging ground
           title: ''
           description_audience: ''
           description_short: ''
@@ -8245,4 +8355,265 @@
           title: ''
           description_audience: ''
           description_short: ''
+          description: ''
+        csd4-old:
+          stages:
+            Analysis of Design:
+              name: Analysis of Design
+            Understanding Your User:
+              name: Understanding Your User
+            User-Centered Design Micro Activity:
+              name: User-Centered Design Micro Activity
+            User Interface and Prototype Testing:
+              name: User Interface and Prototype Testing
+            Feedback and Prototypes:
+              name: Feedback and Prototypes
+            Identifying User Needs:
+              name: Identifying User Needs
+            Project - Paper Prototype:
+              name: Project - Paper Prototype
+            Designing Apps for Good:
+              name: Designing Apps for Good
+            Market Research:
+              name: Market Research
+            Paper Prototypes:
+              name: Paper Prototypes
+            Prototype Testing:
+              name: Prototype Testing
+            Digital Design:
+              name: Digital Design
+            Event Driven Programming:
+              name: Event Driven Programming
+            Basic App Functionality:
+              name: Basic App Functionality
+            Testing the App:
+              name: Testing the App
+            Improving and Iterating:
+              name: Improving and Iterating
+            App Presentation:
+              name: App Presentation
+          title: "(DEPRECATED) CSD Unit 4 - The Design Process"
+          description_audience: ''
+          description_short: 2016/17 Beta version of CSD Unit 4
+          description: ''
+        csp3-staging:
+          stages:
+            The Need For Programming Languages:
+              name: The Need For Programming Languages
+            The Need for Algorithms:
+              name: The Need for Algorithms
+            Creativity in Algorithms:
+              name: Creativity in Algorithms
+            Using Simple Commands:
+              name: Using Simple Commands
+            Creating Functions:
+              name: "Создание функций"
+            Functions and Top-Down Design:
+              name: Functions and Top-Down Design
+            APIs and Function Parameters:
+              name: APIs and Function Parameters
+            Creating functions with Parameters:
+              name: Creating functions with Parameters
+            Looping and Random Numbers:
+              name: Looping and Random Numbers
+            Practice PT - Design a Digital Scene:
+              name: Practice PT - Design a Digital Scene
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Chapter 1 Assessment
+          title: CSP 3 Proposed Changes Temporary Staging Ground
+          description_audience: ''
+          description_short: Temporary staging ground for Oct. changes to csp3
+          description: |
+            This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r
+        pwc:
+          stages:
+            new stage:
+              name: new stage
+            'Problem Solving: Personal Innovations':
+              name: 'Problem Solving: Personal Innovations'
+            'Technology Foundations: What is a Computer?':
+              name: 'Technology Foundations: What is a Computer?'
+            'Data Science: Problem Solving with Big Data':
+              name: 'Data Science: Problem Solving with Big Data'
+            Personal Innovations:
+              name: Personal Innovations
+            What is a Computer?:
+              name: What is a Computer?
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Programming - Hour of Code:
+              name: Programming - Hour of Code
+            Simple Encryption:
+              name: "Простое шифрование"
+            Web Development - Creating Webpages:
+              name: Web Development - Creating Webpages
+            App Development Unplugged - User Interfaces:
+              name: App Development Unplugged - User Interfaces
+            App Development - Intro to App Lab:
+              name: App Development - Intro to App Lab
+            Creating Webpages:
+              name: Creating Webpages
+            User Interfaces:
+              name: User Interfaces
+            Intro to App Lab:
+              name: Intro to App Lab
+            Smart Clothing Design:
+              name: Smart Clothing Design
+            Intro to App Lab (13+):
+              name: Intro to App Lab (13+)
+          title: PwC Access Your Potential
+          description_audience: ''
+          description_short: ''
+          description: ''
+        allthesurveys:
+          stages:
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
+            CSD pulse check survey:
+              name: CSD pulse check survey
+            CSD mid-post survey staging:
+              name: CSD mid-post survey staging
+            CSP pre survey Test 2017:
+              name: CSP pre survey Test 2017
+            CSD mid-post survey 2017 staging:
+              name: CSD mid-post survey 2017 staging
+            CSP pre survey 2017 staging:
+              name: CSP pre survey 2017 staging
+            CSD pre survey 2017 staging:
+              name: CSD pre survey 2017 staging
+            CSD/P pulse check survey 2017:
+              name: CSD/P pulse check survey 2017
+            CSD mid and post survey 2017 staging:
+              name: CSD mid and post survey 2017 staging
+            CSP mid and post survey 2017 staging:
+              name: CSP mid and post survey 2017 staging
+          title: All the surveys
+          description_audience: ''
+          description_short: Place to stage and test Code.org surveys
+          description: ''
+        k1hoc2017:
+          stages:
+            Collector Hour of Code 2017:
+              name: Collector Hour of Code 2017
+          title: K-1 Hour of Code 2017
+          description_audience: ''
+          description_short: ''
+          description: ''
+        hero:
+          stages:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: "Майнкрафт\\: Путешествие Героя. Час Кода"
+            Minecraft Hour of Code:
+              name: "Час Кода с Майнкрафт"
+          title: "Майнкрафт: Путешествие Героя"
+          description_audience: ''
+          description_short: "Майнкрафт снова с вами и предлагает выполнить новые
+            задания за Час Кода!"
+          description: "Майнкрафт возвращается с новыми заданиями для Часа Кода! Путешествуй
+            и программируй с Майнкрафт."
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+            Intro to AppLab - Your First App:
+              name: Intro to AppLab - Your First App
+            Intro to AppLab - Your First App 2:
+              name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
+          title: Intro to App Lab Staging
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-explore:
+          stages:
+            new stage:
+              name: new stage
+            Explore PT Prep - Reviewing the Task:
+              name: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan:
+              name: Explore PT - Making a Plan
+            Explore PT - Complete the Task:
+              name: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Setup: Digital Portfolio and Other Tools'
+          title: Explore - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and
+            complete the AP Explore Performance Tasks.
+          description: |-
+            These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
+            \r
+            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+        csp-create:
+          stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            Create PT Prep - Reviewing the Task:
+              name: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan:
+              name: Create PT Prep - Making a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+          title: Create - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and
+            complete the AP Create Performance Tasks.
+          description: |-
+            These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
+            \r
+            This unit was last updated December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+        csp3-reovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+          title: 'csp3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-recovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+            standalone template:
+              name: standalone template
+          title: 'CSP3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        aws-demo:
+          stages:
+            new stage:
+              name: new stage
+          title: AWS Demo
+          description_audience: ''
+          description_short: ''
+          description: ''
+        halloween:
+          stages:
+            Halloween Artist:
+              name: Halloween Artist
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        valentine:
+          stages:
+            special valentine:
+              name: special valentine
+          title: Valentine Special
+          description_audience: ''
+          description_short: Have fun creating valentines
           description: ''

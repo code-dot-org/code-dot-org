@@ -42,7 +42,7 @@
   your_professional_learning_plan: Profesyonel Eğitim Planın
   see_your_learning_plan: "Öğrenme planını gör"
   submit: Gönder
-  unsubmit: Gönderme
+  unsubmit: Gönderini gerial
   previous_page: "Önceki Sayfa"
   next_page: Sonraki Sayfa
   next_resource: Sonraki Kaynak
@@ -96,14 +96,14 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft Hesabı
-    clever: Clever Account
+    clever: Akıllı Hesap
     forgot_password: "Şifrenizi mi unuttunuz?"
     need_confirmation: Onay talimatlarını almadınız mı?
     need_unlock: Kilit açma talimatlarını almadınız mı?
     not_linked: "Üzgünüz, Code.org hesabın senin %{provider}a bağlı değildir. Parolanızı
       yazarak oturum açmanız gerekecek."
-    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
-      sign in through your Clever Portal instead.
+    use_clever: "Üzgünüz, Code.org %{provider} ile bağlı değildir. Lütfen akıllı portalınız
+      üzerinden oturum açın."
   signup_form:
     student_count: "%{count}öğrenci çoktan kaydoldu."
     teacher_count: "%{count}öğretmen çoktan kaydoldu."
@@ -111,12 +111,12 @@
       <a href="/"> Farklı aşamaları ve bulmacaları inceleyebilirsiniz fakat ilerlemenizi
       ve projelerinizi saklamak için giriş yapmak gerekecektir.
     hoc_already_signed_up_heading: Giriş yapmadan başla
-    hoc_already_signed_up_content: Kodlama Saatinde öğretmek için kaydoldunuz! Siz
-      ve öğrencilerinizin bu etkinliğe katılmak için kaydolmanıza gerek yok. Başlamak
-      için <a href="https://code.org/learn">bir eğitim seçin </a> ve bu linki onlarla
-      paylaşın.<br/><br/>. Eğer Kodlama Saatinden memnun kaldıysanız bir şifre oluşturup
-      Code Studio hesabı yaratarak öğrencilerinizi aşağıdaki <a href="https://code.org/educate">daha
-      uzun </a> kurslara kaydedebilirsiniz.
+    hoc_already_signed_up_content: Kod Saatinde öğretmek için kaydoldunuz! Siz ve
+      öğrencilerinizin bu etkinliğe katılmak için kaydolmanıza gerek yok. Başlamak
+      için<a href="%{learn_url}">bir eğitim seçin </a> ve bu linki onlarla paylaşın.<br/><br/>.
+      Eğer Kod Saatinden memnun kaldıysanız ve bir adım ileri gitmek istiyorsanız,
+      bir şifre oluşturup Code Studio hesabı oluşturarak öğrencilerinizi aşağıdaki
+      <a href="%{educate_url}">daha uzun kurslara kaydedebilirsiniz</a>.
     hoc_already_signed_up_content_post_hoc: Kodlama saati düzenlediğiniz için teşekkür
       ederiz. Kod stüdyoya kayıt hesabınız için bir parola ayarlamak gerekir. Bu sizin
       ilerlemenizi kaydetmenizi ve sınıfınızı yönetmenizi sağlar. Öğrenciler için
@@ -140,13 +140,13 @@
     valid_password: Geçerli parola!
     invalid_password: Parola en az 6 karakter olmalıdır
     mismatch_password: Girdiğiniz iki parola aynı değil
-    student_terms: Code.org <a href='http://code.org/tos'> hizmet şartları</a> bağlı
-      olmayı kabul edersiniz. Eğer ben 13 yaşın altındaiseniz ebeveyn veya yasal veline
-      Code.org Hizmetleri kullanma iznine sahip bu formu gönderermesine izin veriyorsun.
-      <br/> <br/> E-posta adresleri bizim öğrenciler için izin veren  form içinde
-      depolanır. Öğrenciler  şifre kurtarma dışında Code.org e-postalar almassınız.
-      Bizim <a href='http://code.org/privacy'> Gizlilik Politikası</a> daha fazla
-      bilgi için bkz:.
+    student_terms: Code.org <a href='http://code.org/tos'> hizmet şartlarına</a> bağlı
+      olmayı kabul edersiniz. Eğer ben 13 yaşını altında isem, ebeveyn veya yasal
+      velimin Code.org Hizmetlerini kullanma izni verdiğini bu formu göndererek onaylıyorum.
+      <br/> <br/> E-posta adresleri öğrencilerle bağlantı kurmamız için herhangi bir
+      formda depolanmaz. Öğrenciler şifre kurtarma dışında Code.org'dan herhangi bir
+      e-posta almaz. Daha fazla bilgi için <a href='http://code.org/privacy'> Gizlilik
+      Politikamıza</a> bakınız.
     teacher_terms: Code.org sitesinin Hizmet ve Gizlilik politikalarını kabul ediyorum.
       Daha fazla bilgi için, <a href='http://code.org/privacy'> Hizmet ve Gizlilik
       politikamıza göz atın</a>.
@@ -157,6 +157,7 @@
     user_type_student: "öğrenci"
     field_is_required: gerekli
     accept_terms: Hesap oluşturmak için kabul etmelisiniz
+    error: Bir hata oluştu.
   school_info:
     title: Okul bilgileri (isteğe bağlı)
     school_country: Okulun bulunduğu ülke
@@ -170,7 +171,7 @@
     state: Eyalet
     district: Bölge
     other_district_not_listed: Yukarıda listelenmeyen diğer ilçe
-    district_name: ilçe adı
+    district_name: "İlçe adı"
     school: Okul
     other_school_not_listed: Yukarıda listelenmeyen diğer okul
     school_name: Okulun Adı
@@ -217,9 +218,9 @@
   welcome_email:
     subject: Sınıfıma Katıl (Code.org üzerinde)
     body: |
-      Code.org taki bilgisayar bilimleri öğretici bölümlerine kayıt olmak için aşağıda ki link'e tıklayın(sizin "öğretmeniniz" olarak benle)
+      Code.org taki bilgisayar bilimleri öğretici bölümlerine kayıt olmak için aşağıdaki bağlantıya tıklayın( sizin "öğretmeniniz" ben seçili olarak)
       %{link}
-      Öğretici bölümler eğlenceli,görsel olarak alımlı,ve bilgisayar biliminin temel konseptini basit,yönlendirerek,oyun-benzeri tecrübeleri kullanarak öğretir.Kodlamayı Bill Gates'den,Mark Zuckerberg'den,Angry Birds'den, ve Bitkilere karşı Zombiler'den öğrenin! :-)
+      Eğitimler eğlenceli,görsel olarak alımlı,ve bilgisayar biliminin temel yapı taşlarını basit, yönlendirerek, oyun-benzeri bulmacaları kullanarak öğretir. Kodlamayı Bill Gates'den,Mark Zuckerberg'den,Angry Birds'den, ve Bitkilere karşı Zombiler'den öğrenin! :-)
       %{name}
   parent_mailer:
     student_associated_subject: Code.org için oturum açma bilgileri
@@ -289,7 +290,7 @@
       finished_hoc: Kod Saati'ni tamamladım
       sign_in_to_save: "İlerleme kaydetmek için oturum açın"
       free_play:
-        playlab: Uygulama oluşturun
+        playlab: Oyun Laboratuvarında Uygulama oluşturun
         artist: Bir şeyler çizin
         calculate: Bir şey hesaplamak
         applab: Uygulama oluşturun
@@ -344,10 +345,10 @@
       already_registered: Zaten hesabınız var mı?
       pair_programming: Eşli Programlama
       team: Takım
-      driver: Sürücü
-      navigator: Gezinme
+      driver: Giriş yapılmış
+      navigator: Takım Arkadaşı
     popup:
-      progress_for_user: "%{name}'ın işleniyor"
+      progress_for_user: "%{name}'ın ilerlemesi"
       progress: "İlerlemeniz"
       lines: 'Toplam kod satırı: %{lines}'
       close: kapat
@@ -369,7 +370,8 @@
     students:
       dashboard: "Öğretmen Panosuna Git"
     user_not_found: "Öğretmen bulunamadı."
-    student_teacher_disassociated: "Öğretmenin %{teacher_name} olmayacak şekilde çıkartıldı."
+    student_teacher_disassociated: "%{teacher_name}öğretmenin %{section_code} sınıfından
+      çıktın."
     panel:
       answer_viewer: "Öğretmen Paneli"
       student: "öğrenci"
@@ -379,16 +381,16 @@
       example: "Örnek Çözüm"
       example_with_number: "Örnek Çözüm %{solution_number}"
       submitted_on: "%{date} tarihinde gönderildi"
-      unsubmit: Gönderme
+      unsubmit: Gönderini gerial
       worked_with: "İle çalıştı"
       update_lock_settings: Kilit ayarlarını burada değiştirin.
       clear_response: Net yanıt
   user:
-    email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
+    email_confirm_needed: 'E-posta adresiniz teyit edilmedi:'
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
     email_confirm_wrong_email: "(Yanlış e-posta adresi?)"
     email_resend_confirm: Onay yönergelerini yeniden gönder
-    new_password_hint: "(Eğer değiştirmek iştemiyorsanız boş bırakın)"
+    new_password_hint: "(Eğer değiştirmek istemiyorsanız boş bırakın)"
     current_password_hint: "(Değişikliklerinizi onaylamak için geçerli parolanız gerekiyor)"
     delete: Hesabını Sil
     delete_text: Aşağıdaki düğmeye tıklamak hesabınızı siler.
@@ -745,6 +747,9 @@
         beraber programlayabileceğin bir uygulama geliştirme ortamıdır.
       audience: 13 + Yaş grubu
       cta: Nasıl olduğunu öğren
+    hoc-encryption:
+      title: Basit şifreleme
+      body: "Öğrenciler şifreli mesaj yaratma ve şifre kırma tekniklerini öğrenecek."
     weblab:
       title: Web Lab (beta)
       body: Web Lab, HTML ve CSS kullanarak basit web sayfaları hazırlayabileceğin
@@ -766,6 +771,10 @@
       title: Minecraft
       body: Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sendeki sürümde
         programla.
+    hero:
+      title: Minecraft
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: Spor
       body: Ya bir basketbol ya da sporların karışımından oluşan bir oyun yapmayı
@@ -846,6 +855,9 @@
     hide_survey_last_answer: Bu anket anonimdir.  Öğretmen Pano yu  sonuçları görmek
       için ziyaret edin.  Not sonuçlar yalnızca en az beş öğrenci Anketi gönderdiyseniz
       görülebilir.
+    survey_submission_thankyou: Anketi doldurduğunuz için teşekkürler! Anket kişisel
+      bilgilerden arındırıldığından kimliğiniz anonim kalır. Fakat unutmayın ki öğretmeniniz
+      tüm sınıfa verdiğiniz yanıtları isimsiz biçimde görebilmektedir.
   level_group-submittable:
     wrong_title: Teşekkür ederiz
     wrong_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
@@ -971,7 +983,14 @@
     rename: Yeniden adlandır
     save: Kaydet
     delete: Sil
-    import: Import
+    import: "İçeri Aktar"
+    share_link_import_bad_link_header: Paylaşım bağlantısı tanınmıyor
+    share_link_import_bad_link_body: 'Bu paylaşım bağlantısını içeri aktaramadık.
+      Bir Minecraft: Agent bulmacasındaki bağlantıyı kullandığından ve tam bağlantıyı
+      kopyaladığından emin ol.'
+    share_link_import_error_header: Bir sorun oluştu.
+    share_link_import_error_body: Paylaşım bağlantısını içeri aktarırken bir sorun
+      oluştu. Lütfen tekrar dene.
     exit: Kursa dön
     my_projects: Projelerim
     project_gallery: Projeler
@@ -1013,9 +1032,10 @@
       karıştır.
     click_to_remix: Kendi sürümünüzü yaratmak için 'Remix'e basın!
     edit_project: Projeyi Düzenle
-    sharing_disabled: Sorry, this project is not available for sharing. If this is
-      your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
-      in</a> to your account to view the project.
+    sharing_disabled: "Üzgünüz, bu proje paylaşım için kullanılabilir değil. Bu sizin
+      projeniz ya da proje öğrencilerinden birinin ise, projeyi görüntülemek için
+      hesabınızda <a href='https://studio.code.org/users/sign_in'> oturum açın</a>
+      lütfen."
     abuse:
       tos: Bu projenin Code.org <a href='http://code.org/tos'> Hizmet Şartları'nı</a>
         ihlal ettiği raporlandı ve başkalarıyla paylaşılamaz.
@@ -1077,10 +1097,10 @@
     optional_stages: "İsteğe bağlı aşamalar"
     main_course: Ana ders
     extra_course_content: "İlave kurs içeriği"
-    csf_e_1: Ramp Up to Course E (Optional)
-    csf_e_2: Course E Content
-    csf_f_1: Ramp Up to Course F (Optional)
-    csf_f_2: Course F Content
+    csf_e_1: Kurs E ye hazırlık (isteğe bağlı)
+    csf_e_2: E dersi içeriği
+    csf_f_1: Kurs F'ye hazırlık (isteğe bağlı)
+    csf_f_2: F dersi içeriği
     csd1_1: 'Bölüm 1: Problem çözme süreci'
     csd1_2: 'Bölüm 2: Bilgisayar ve Problem çözme'
     csd2_1: 'Bölüm 1: Web içerik ve HTML'
@@ -1245,4 +1265,4 @@
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
-  courses_category: Tüm Dersler
+  courses_category: Tüm Kurslar

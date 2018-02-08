@@ -1,5 +1,5 @@
-var tickWrapper = require('../../util/tickWrapper');
-var TestResults = require('@cdo/apps/constants').TestResults;
+import {testApplabConsoleOutput} from '../../util/levelTestTypes';
+import {TestResults} from '@cdo/apps/constants';
 
 module.exports = {
   app: "applab",
@@ -33,225 +33,145 @@ module.exports = {
     // These exercise all of the blocks in Control category
     // It does not validate that they behave correctly, just that we don't end
     // up with any errors
-    {
-      description: "Control",
-      editCode: true,
-      xml:
-        'var count = 0;' +
-        'for (var i = 0; i < 4; i++) {' +
-        '  count++;' +
-        '}' +
-        'i = 5;' +
-        'while(i > 0) {' +
-        '  count++;' +
-        '  i--;' +
-        '}' +
-        'if (count > 0) {' +
-        '  count++;' +
-        '}' +
-        'if (count < 0) {' +
-        '  count++;' +
-        '} else {' +
-        '  count--;' +
-        '}' +
-        'getTime();' +
-        'var interval = setInterval(function() {' +
-        '  count++;' +
-        '}, 100);' +
-        'clearInterval(interval);' +
-        'var timeout = setTimeout(function() {' +
-        '  console.log(count);' +
-        '  clearTimeout(timeout);' +
-        '}, 200);',
-
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 200, function () {
-          Applab.onPuzzleComplete();
-        });
-      },
-      customValidator: function (assert) {
-        // No errors in output console
-        var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "9");
-        return true;
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      },
-    },
+    testApplabConsoleOutput({
+      testName: 'Control',
+      source: `
+        var count = 0;
+        for (var i = 0; i < 4; i++) {
+          count++;
+        }
+        i = 5;
+        while(i > 0) {
+          count++;
+          i--;
+        }
+        if (count > 0) {
+          count++;
+        }
+        if (count < 0) {
+          count++;
+        } else {
+          count--;
+        }
+        getTime();
+        var interval = setInterval(function() {
+          count++;
+        }, 100);
+        clearInterval(interval);
+        var timeout = setTimeout(function() {
+          console.log(count);
+          clearTimeout(timeout);
+        }, 200);
+      `,
+      ticks: 200,
+      expect: '9'
+    }),
 
     // These exercise all of the blocks in Control category
     // It does not validate that they behave correctly, just that we don't end
     // up with any errors
-    {
-      description: "Variables",
-      editCode: true,
-      xml:
+    testApplabConsoleOutput({
+      testName: 'Variables',
+      source: `
         // prompt and promptNum are covered in dropletUtilsTest
-        'var x = 1;\n' +
-        'var y;\n' +
-        'y = 2;\n' +
-        'console.log("message");\n' +
-        'var str = "Hello World";\n' +
-        'var a = str.substring(6, 11);\n' +
-        'var b = str.indexOf("World");\n' +
-        'var c = str.includes("World");\n' +
-        'var d = str.length;\n' +
-        'var e = str.toUpperCase();\n' +
-        'var f = str.toLowerCase();\n' +
-        'var list = ["a", "b", "d"];\n' +
-        'var g = list.length;\n' +
-        'insertItem(list, 2, "c");\n' +
-        'appendItem(list, "f");\n' +
-        'removeItem(list, 0);\n',
-
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function () {
-          Applab.onPuzzleComplete();
-        });
-      },
-      customValidator: function (assert) {
-        // No errors in output console
-        var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "message");
-        return true;
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      },
-    },
+        var x = 1;
+        var y;
+        y = 2;
+        console.log("message");
+        var str = "Hello World";
+        var a = str.substring(6, 11);
+        var b = str.indexOf("World");
+        var c = str.includes("World");
+        var d = str.length;
+        var e = str.toUpperCase();
+        var f = str.toLowerCase();
+        var list = ["a", "b", "d"];
+        var g = list.length;
+        insertItem(list, 2, "c");
+        appendItem(list, "f");
+        removeItem(list, 0);
+      `,
+      expect: 'message'
+    }),
 
     // These exercise all of the blocks in canvas category
     // It does not validate that they behave correctly, just that we don't end
     // up with any errors
-    {
-      description: "Canvas",
-      editCode: true,
-      xml:
-        'createCanvas("id", 320, 480);\n' +
-        'setActiveCanvas("id");\n' +
-        'line(0, 0, 160, 240);\n' +
-        'circle(160, 240, 100);\n' +
-        'rect(80, 120, 160, 240);\n' +
-        'setStrokeWidth(3);\n' +
-        'setStrokeColor("red");\n' +
-        'setFillColor(rgb(255,0,0));\n' +
-        'drawImage("id", 0, 0);\n' +
-        'var imgData = getImageData(0, 0, 320, 480);\n' +
-        'putImageData(imgData, 0, 0);\n' +
-        'clearCanvas();\n' +
-        'getRed(imgData, 0, 0);\n' +
-        'getGreen(imgData, 0, 0);\n' +
-        'getBlue(imgData, 0, 0);\n' +
-        'getAlpha(imgData, 0, 0);\n' +
-        'setRed(imgData, 0, 0, 255);\n' +
-        'setGreen(imgData, 0, 0, 255);\n' +
-        'setBlue(imgData, 0, 0, 255);\n' +
-        'setAlpha(imgData, 0, 0, 255);\n' +
-        'setRGB(imgData, 0, 0, 255, 255, 255);\n',
-
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function () {
-          Applab.onPuzzleComplete();
-        });
-      },
-      customValidator: function (assert) {
-        // No errors in output console
-        var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
-        return true;
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    },
+    testApplabConsoleOutput({
+      testName: 'Canvas',
+      source: `
+        createCanvas("id", 320, 480);
+        setActiveCanvas("id");
+        line(0, 0, 160, 240);
+        circle(160, 240, 100);
+        rect(80, 120, 160, 240);
+        setStrokeWidth(3);
+        setStrokeColor("red");
+        setFillColor(rgb(255,0,0));
+        drawImage("id", 0, 0);
+        var imgData = getImageData(0, 0, 320, 480);
+        putImageData(imgData, 0, 0);
+        clearCanvas();
+        getRed(imgData, 0, 0);
+        getGreen(imgData, 0, 0);
+        getBlue(imgData, 0, 0);
+        getAlpha(imgData, 0, 0);
+        setRed(imgData, 0, 0, 255);
+        setGreen(imgData, 0, 0, 255);
+        setBlue(imgData, 0, 0, 255);
+        setAlpha(imgData, 0, 0, 255);
+        setRGB(imgData, 0, 0, 255, 255, 255);
+      `,
+      expect: ''
+    }),
 
     // These exercise all of the blocks in Turtle category
     // It does not validate that they behave correctly, just that we don't end
     // up with any errors
-    {
-      description: "Turtle",
-      editCode: true,
-      xml:
-        'moveForward(25);\n' +
-        'moveBackward(25);\n' +
-        'move(25, 25);\n' +
-        'moveTo(0, 0);\n' +
-        'dot(5);\n' +
-        'turnRight(90);\n' +
-        'turnLeft(90);\n' +
-        'turnTo(0);\n' +
-        'arcRight(90, 25);\n' +
-        'arcLeft(90, 25);\n' +
-        'getX();\n' +
-        'getY();\n' +
-        'getDirection();\n' +
-        'penUp();\n' +
-        'penDown();\n' +
-        'penWidth(3);\n' +
-        'penColor("red");\n' +
-        'penRGB(120, 180, 200);\n' +
-        'show();\n' +
-        'hide();\n' +
-        'speed(50);\n',
-
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function () {
-          Applab.onPuzzleComplete();
-        });
-      },
-      customValidator: function (assert) {
-        // No errors in output console
-        var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
-        return true;
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    },
+    testApplabConsoleOutput({
+      testName: 'Turtle',
+      source: `
+        moveForward(25);
+        moveBackward(25);
+        move(25, 25);
+        moveTo(0, 0);
+        dot(5);
+        turnRight(90);
+        turnLeft(90);
+        turnTo(0);
+        arcRight(90, 25);
+        arcLeft(90, 25);
+        getX();
+        getY();
+        getDirection();
+        penUp();
+        penDown();
+        penWidth(3);
+        penColor("red");
+        penRGB(120, 180, 200);
+        show();
+        hide();
+        speed(50);
+      `,
+      expect: ''
+    }),
 
     // These exercise all of the blocks in Turtle category
     // It does not validate that they behave correctly, just that we don't end
     // up with any errors
-    {
-      description: "Functions",
-      editCode: true,
-      xml:
-        'function myFunction() {\n' +
-        '  \n' +
-        '}\n' +
-        'function myFunction2(n) {\n' +
-        '  return n;\n' +
-        '}\n' +
-        'myFunction();\n' +
-        'myFunction2(1);\n',
-
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function () {
-          Applab.onPuzzleComplete();
-        });
-      },
-      customValidator: function (assert) {
-        // No errors in output console
-        var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
-        return true;
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    },
+    testApplabConsoleOutput({
+      testName: 'Functions',
+      source: `
+        function myFunction() {
+        }
+        function myFunction2(n) {
+          return n;
+        }
+        myFunction();
+        myFunction2(1);
+      `,
+      expect: ''
+    }),
 
     {
       description: "Block palette categories",

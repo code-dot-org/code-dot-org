@@ -29,9 +29,17 @@
   twentyhours_heading: "コンピュータサイエンスコースを紹介する"
   twentyhours_text: "初めてのHour of Codeを修了しましたか？フォローアップコースでコンピュータサイエンスやプログラミング概念をさらに学びましょう。"
   og_title: "全ての子供に機会を得る権利があります"
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
   og_description: "すべての学校のすべての学生が、コンピュータ サイエンスを学ぶ機会を得られる。それはすべてを変えるでしょう。"
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: Hour of Code がやってくる
   csedweek_og_description: Hour of Codeは、すでに180 以上の国々と45 以上の言語で、数千万人の生徒を対象に行われた、世界的な運動です。
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
   hoc2014_heading: <a href="http://hourofcode.com">Hour of Code</a> に挑戦しよう <br/> 2014年12月8日から14
     日まで<br/>
   hoc2014_students: "生徒の皆さん"
@@ -290,6 +298,12 @@
   studiobar_donate_body: 1ドルの寄付ごとに、一人の子供が学びます
   studiobar_shop_title: "ショップ"
   studiobar_shop_body: "いままでの考え方を変えよう。誇りを持って私たちのロゴをつけよう。"
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "&ldquo;私はすべての国の女の子に、Hour of Code を 1 つ学ぶことを提案します。&rdquo;
     \nマララ, ノーベル平和賞受賞者"
   homepage_hero_text_susan: |-
@@ -320,6 +334,8 @@
   homepage_hero_text_stat_loc: 850万人の女の子がCode.orgに参加して学んでいます。
   homepage_hero_text_stat_students: "コードスタジオの学生アカウント #student_count  "
   homepage_hero_text_stat_served: 'Hour of Code: #served 提供'
+  homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Hour of Code
   homepage_slot_text_frozen: "「アナと雪の女王」のアナとエルサ"
   homepage_slot_text_teacher: "先生用のダッシュボード"
@@ -339,6 +355,7 @@
   homepage_action_text_girlvideo: "女子生徒を応援する"
   homepage_action_text_learn: "学習開始"
   homepage_action_text_signpetition: "請願書に署名します。"
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: "請願書に署名します &#x25BE;"
   homepage_diversity_pledge: "ダイバーシティーを認める誓約をしてください。"
   homepage_banner_text_prizes: 'Hour of Code が12月７~13日にまたやって来ます。 '
@@ -359,7 +376,7 @@
   homepage_slot_text_title_hoc: Hour of Code（コーディングを学ぶ時間）
   homepage_slot_text_blurb_hoc: "誰でも学べる！早速始めよう。"
   homepage_slot_text_link_hoc: "「コードの時間」に挑戦する"
-  homepage_slot_text_link_about_hoc: Hour of Code（アウアオブコード）について
+  homepage_slot_text_link_about_hoc: Hour of Code（アワー オブ コード）について
   homepage_slot_text_link_host: Hour of Code を主催する
   homepage_slot_text_link_hocserved: "# 人が試しました"
   homepage_solot_text_link_volunteer: Hour of Code のボランティア
@@ -446,10 +463,14 @@
   mc_gradelevel: 6歳以上
   mc_platformtext: "最新ブラウザ、スマート フォン、タブレット"
   mc_specs: "多言語対応 | 最新ブラウザ、タブレット | 6才以上"
+  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: Minecraftデザイナー
   minecraft_adventurer: Minecraftアドベンチャー
   minecraft_tutorials: MinecraftのHour of Codeチュートリアル
   minecraft_specs: "多言語対応 | 最新ブラウザ、タブレット | 小学校2年生以上"
+  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
+    new activity! Journey through Minecraft with code.
+  minecraft_agent_button: "始める"
   minecraft_designer_description: "ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。"
   minecraft_designer_button: "始める"
   minecraft_adventurer_description: "プログラムをして、スティーブかアレックスにMinecraftの世界を冒険させよう！"
@@ -457,6 +478,41 @@
   minecraft_no_internet: "インターネットが無い？"
   minecraft_download_adventurer: Minecraftアドベンチャーのオフライン版をダウンロード。
   minecraft_subtitle: Minecraft Hour of Code プログラミング入門
+  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
+    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
+    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
+    problem solving and loads of fun."
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+    facilitator quick start guide and PowerPoint presentations for younger and older
+    students now."
+  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
+    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
+    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
+    Get a head start on thinking through what you need to bring Hour of Code to young
+    people during Computer Science Education week (December 4-10) and beyond.
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
+    at the Microsoft Store'
+  minecraft_continue_learning_description: No computer science experience required!
+    Help ensure all youth can learn the valuable skills gained through computer science
+    education. Join us at the Microsoft Store to engage in a free series of three,
+    1-hour workshops where you will experience coding in a fun and stress-free environment,
+    become familiar with key computer science concepts, and get ready to lead an Hour
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
+    up today</a>.
+  minecraft_future: Help all youth become future ready
+  minecraft_future_description: Find out how other schools and nonprofits are bringing
+    digital skills, from digital literacy to computer science education, to their
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
+    the resources</a> they found most valuable.
+  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
+    Program animals and other Minecraft creatures in your own version of Minecraft.
+  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
+    Write code to journey through Minecraft biomes.
   sports_page_title: Hour of Code スポーツ
   sports_og_title: "がんばって。誰でも学ぶことができます。"
   sports_og_description: "チャンピオンや金メダリストがHour of Codeを行うことを応援します。自分のスポーツ ゲームをプログラミングしよう。"
@@ -493,6 +549,7 @@
   video_title_obama: "オバマ大統領もコンピューターサイエンスを"
   video_title_hoc_is_here: Hour of Code - 誰でも学べるプログラミング
   video_title_anybody_can_learn: "誰もが学ぶことができます"
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: "ドレイモンド・グリーンとHour of Code"
   video_title_russell_okung: "ラッセル・オコングとHour of Code"
   video_title_real_madrid: "レアル マドリードとHour of Code"
@@ -584,6 +641,10 @@
   volunteer_engineer_submission_type_task_remote: "子供たちを励ますために、私の教室に Skype のビデオ通話をして欲しいです。"
   volunteer_engineer_submission_type_task_mentor: "生徒とのプログラミング授業のために、私の準備を手伝って指導していただける方を探しています。"
   petition_age: "年齢"
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: "もっと詳しく知る"
   dashboard_landing_title: "先生用ホームページ"
   dashboard_landing_welcome: "新しく改良された先生用ダッシュ ボードへようこそ"
   dashboard_landing_video: "ビデオを見る"
@@ -907,7 +968,7 @@
   third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
     the criteria and submission form.</a>
   participants: "参加者"
-  teachers_notes: "教師のノート"
+  teachers_notes: "先生向けの説明"
   teachers_notes_hoc: "先生方：先生用の重要事項をお読みください"
   previous: "戻る"
   next: "次へ"
@@ -1010,6 +1071,8 @@
   csp-ap_name: AP パフォーマンス タスク
   csppostap_name: "ポストAP: アプリ内でのデータベース"
   cspassessment_name: "完全なテスト - 50 の質問"
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: "テストその1 - 25 の質問"
   cspexam2-AKwgAh1ac5_name: "テストその2 - 25 の質問"
   cspunit3_gradelevel: "中学3年～高校3年生向け"
@@ -1506,7 +1569,7 @@
   header_course_catalog: "コース カタログ"
   header_project_gallery: "プロジェクト"
   header_sections: "セクション"
-  header_professional_learning: "専門的な学習"
+  header_professional_learning: "プロフェッショナル ラーニング"
   header_educate_overview: "教育の概要"
   header_educate_elementary: "小学校"
   header_educate_middle: "中学校"
@@ -1597,3 +1660,11 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
+  dashboard_tools: 'Tools: '
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
+  gamelab_name: Game Lab

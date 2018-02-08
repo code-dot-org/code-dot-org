@@ -637,7 +637,7 @@
             Luigi's Pizza:
               name: "ლუიჯის პიცა"
             Rocket-Height:
-              name: "რაკეტის-სიმაღლე"
+              name: "რაკეტის სიმაღლე"
             Sam the Bat:
               name: "ღამურა სემი"
             Strings and Images:
@@ -1084,7 +1084,7 @@
             Luigi's Pizza:
               name: "ლუიჯის პიცა"
             Rocket-Height:
-              name: "რაკეტის-სიმაღლე"
+              name: "რაკეტის სიმაღლე"
             Sam the Bat:
               name: "ღამურა სემი"
             Strings and Images:
@@ -1194,7 +1194,7 @@
             Next Steps:
               name: "მომდევნო ნაბიჯები"
             Rocket-Height:
-              name: "რაკეტის-სიმაღლე"
+              name: "რაკეტის სიმაღლე"
             Strings and Images:
               name: "ხაზები და სურათები"
             Teacher Dashboard:
@@ -1607,7 +1607,7 @@
             Unit 3 Challenge:
               name: "გაძლიერებული სექცია 3"
             Unit 3 Day-by-Day:
-              name: "თავი 3 დღითი დღე"
+              name: "სექცია 3 დღითი დღე სწავლა"
         ECSPD3-Unit4:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1625,7 +1625,7 @@
             Unit 4 Challenge:
               name: "გაძლიერებული სექცია 4"
             Unit 4 Day-by-Day:
-              name: "თავი 4 დღითი დღე"
+              name: "სექცია 4 დღითი დღე სწავლა"
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -2055,7 +2055,7 @@
             Reading Records:
               name: "ჩანაწერთა წაკითხვა"
             Sample Apps:
-              name: "შაბლონური აპლიკაციები"
+              name: "აპლიკაციების ნიმუშები"
             Updating Records:
               name: "ჩანაწერთა განახლება"
             Visualizing Data:
@@ -2102,7 +2102,7 @@
             Reading Records:
               name: "ჩანაწერთა წაკითხვა"
             Sample Apps:
-              name: "შაბლონური აპლიკაციები"
+              name: "აპლიკაციების ნიმუშები"
             Updating Records:
               name: "ჩანაწერთა განახლება"
             Visualizing Data:
@@ -2309,11 +2309,10 @@
               name: Practice PT - Encode an Experience
         csp3:
           title: CSP Unit 3 - Programming
-          description: This unit introduces the foundational concepts of computer
-            programming, which unlocks the ability to make rich, interactive apps.
-            This course uses JavaScript as the programming language, and App Lab as
-            the programming environment to build apps, but the concepts learned in
-            these lessons span all programming languages and tools.
+          description: |-
+            This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\r
+            \r
+            This unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
           description_short: "პროგრამირება"
           description_audience: ''
           stages:
@@ -2349,13 +2348,18 @@
               name: CSP Student Post-Course Survey
             Creating Functions with Parameters:
               name: Creating Functions with Parameters
+            CSP End-of-Semester Mid-course survey:
+              name: CSP End-of-Semester Mid-course survey
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
-          description: The data-rich world we live in introduces many complex questions
-            related to public policy, law, ethics and societal impact. The goals of
-            this unit are to develop a well-rounded and balanced view about data in
-            the world, including the positive and negative effects of it, and to understand
-            the basics of how and why modern encryption works.
+          description: |-
+            The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r
+            \r
+            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
           description_short: Big Data and Privacy
           description_audience: ''
           stages:
@@ -2452,9 +2456,9 @@
             Make Your Own Multi-Screen App:
               name: "შექმენით თქვენი საკუთარი მრავალეკრანიანი აპლიკაცია"
             Unit 5 Assessment 1:
-              name: "თავი 5 დავალება 1"
+              name: "სექცია 5 დავალება 1"
             Unit 5 Assessment 2:
-              name: "თავი 5 დავალება 2"
+              name: "სექცია 5 დავალება 2"
             "'If' Statements Unplugged":
               name: "'If' Statements Unplugged"
             '"If" Statements Unplugged':
@@ -2464,11 +2468,11 @@
             Unit 3 Chapter 1 Assessment 3:
               name: Unit 3 Chapter 1 Assessment 3
             If statements:
-              name: "თუ ბრძანებები"
+              name: "'თუ' ბრძანებები"
             Unit 3 Assessment 3:
-              name: "თავი 3 დავალება 3"
+              name: "სექცია 3 დავალება 3"
             Unit 3 Assessment 4:
-              name: "თავი 3 დავალება 4"
+              name: "სექცია 3 დავალება 4"
             If-else-if and Conditional Logic:
               name: "თუ-სხვაგვარად-თუ და პირობითი ლოგიკა"
             'Building an App: Color Sleuth':
@@ -2476,9 +2480,9 @@
             Possibly use later:
               name: Possibly use later
             Unit 5 Assessment 3:
-              name: "თავი 5 დავალება 3"
+              name: "სექცია 5 დავალება 3"
             Unit 5 Assessment 4:
-              name: "თავი 5 დავალება 4"
+              name: "სექცია 5 დავალება 4"
             Boolean Expressions and "If" Statements:
               name: Boolean Expressions and "If" Statements
             '"if-else-if" and Conditional Logic':
@@ -2739,7 +2743,7 @@
             Encoding and Sending Numbers:
               name: "რიცხვების კოდირება და გაგზავნა"
             Intro to the Unit:
-              name: "შესავალი თავში"
+              name: "შესავალი სექციაში"
             Running a Constructive Classroom:
               name: Running a Constructive Classroom
             Sending Binary Messages:
@@ -2778,7 +2782,7 @@
             Contained Levels:
               name: Contained Levels
             Game Lab:
-              name: "თამაშების ლაბორატორია"
+              name: "თამაშების ლაბი"
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
@@ -2786,7 +2790,7 @@
           description_short: ''
           stages:
             Unit 1 Overview:
-              name: "თავი 1 - მიმოხილვა"
+              name: "სექცია 1 - მიმოხილვა"
         cspunit1-tools:
           title: netsim task completion
           description: introduction to the internet simulator and a discussion of
@@ -3090,7 +3094,7 @@
             Loops:
               name: "ციკლები"
             Loops Intro:
-              name: "ციკლების შესავალი"
+              name: "შესავალი ციკლებში"
             Loops Unplugged:
               name: Loops Unplugged
             Persistence & Frustration:
@@ -3158,7 +3162,7 @@
             Loops:
               name: "ციკლები"
             Loops Intro:
-              name: "ციკლების შესავალი"
+              name: "შესავალი ციკლებში"
             Loops Unplugged:
               name: Loops Unplugged
             More Computer Science:
@@ -3280,7 +3284,7 @@
             Unit 3 Challenge:
               name: "გაძლიერებული სექცია 3"
             Unit 3 Day-by-Day:
-              name: "თავი 3 დღითი დღე"
+              name: "სექცია 3 დღითი დღე სწავლა"
         ecs-unit4:
           title: ECS Unit 4
           description: 'Unit 4: Programming'
@@ -3298,7 +3302,7 @@
             Unit 4 Challenge:
               name: "გაძლიერებული სექცია 4"
             Unit 4 Day-by-Day:
-              name: "თავი 4 დღითი დღე"
+              name: "სექცია 4 დღითი დღე სწავლა"
         ecs-unit5:
           title: ECS Unit 5
           description: 'Unit 5: Computer and Data Analysis'
@@ -3318,7 +3322,7 @@
             Unit 5 lessons:
               name: "სექცია 5 გაკვეთილები"
             Unit 5 Challenge:
-              name: "მე-5-ე თავის გამოწვევა"
+              name: "მე-5 სექციის გამოწვევა"
             Close & Next Steps:
               name: "დახურვა და შემდეგი საფეხურები"
         ecs-unit6:
@@ -3779,6 +3783,8 @@
               name: Parameters and Randomization
             Shapes and Randomization:
               name: Shapes and Randomization
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -3982,7 +3988,7 @@
             Human vs Computer Processing:
               name: "ადამიანი კომპიუტერული დამუშავების წინააღმდეგ"
             Input and Output:
-              name: "შესაყვანი და გამოსაყვანი ინფორმაცია"
+              name: "შეყვანილი და მიღებული ინფორმაცია"
               description_student: In this the class students consider a number of
                 computing devices to determine what types of inputs and outputs they
                 use. Groups are assigned to a computing device and based on a teacher-provided
@@ -4084,7 +4090,7 @@
           description_audience: ''
           stages:
             Unit 1 Overview:
-              name: "თავი 1 - მიმოხილვა"
+              name: "სექცია 1 - მიმოხილვა"
             'Lessons 2-3: Binary Messages':
               name: "გაკვეთილები 2-3: ორობითი წერილები"
             Group Work and Peer Learning:
@@ -4166,7 +4172,7 @@
           description_audience: ''
           stages:
             Unit 1 Overview:
-              name: "თავი 1 - მიმოხილვა"
+              name: "სექცია 1 - მიმოხილვა"
             'Lessons 2 - 3: Binary Messages':
               name: "გაკვეთილები 2-3: ორობითი წერილები"
             'Lessons 4 - 6: Encoding and Sending Numbers':
@@ -4322,8 +4328,13 @@
                 სტილის განსაზღვრის გზას. კლასი შეისწავლის CSS წესების საბაზისო სინტაქსს
                 და გამოიკვლევს თვისებებს, რომლებიც ზემოქმედებენ HTML ტექსტური ელემენტებზე.
                 საბოლოოდ, ყველა გამოიყენებს ტექსტურ სტილებს საკუთარ პირად ვებსაიტებზე."
-              description_teacher: |
-                ეს დონე წარმოგიდგენთ CSS-ს, როგორც გვერდის ელემენტების სტილის განსაზღვრის გზას. კლასი შეისწავლის CSS წესების საბაზისო სინტაქსს და გამოიკვლევს თვისებებს, რომლებიც ზემოქმედებენ HTML ტექსტური ელემენტებზე. ისინი იმუშავებენ HTML გვერდზე, რომელიც გვიამბობს გინესის რეკორდების მფლობელებზე, კერძოდ კი დაამატებენ მოწოდებულ გვერდს თავის სტილებს. ბოლო დონეზე, მოსწავლეები გამოიყენებენ ახალ ინფორმაციას საკუთარ პირად ვებ გვერდზე ტექსტური ელემენტების სტილების განსასაზღვრად.
+              description_teacher: "ეს დონე წარმოგიდგენთ CSS-ს, როგორც გვერდის ელემენტების
+                სტილის განსაზღვრის გზას. კლასი შეისწავლის CSS წესების საბაზისო სინტაქსს
+                და გამოიკვლევს თვისებებს, რომლებიც ზემოქმედებენ HTML ტექსტური ელემენტებზე.
+                ისინი იმუშავებენ HTML გვერდზე, რომელიც გვიამბობს გინესის რეკორდების
+                მფლობელებზე, კერძოდ კი დაამატებენ მოწოდებულ გვერდს თავის სტილებს.
+                ბოლო დონეზე, მოსწავლეები გამოიყენებენ ახალ ინფორმაციას საკუთარ პირად
+                ვებ გვერდზე ტექსტური ელემენტების სტილების განსასაზღვრად."
             Styling Elements with CSS:
               name: "ელემენტების გასტილვა CSS-ით"
               description_student: This lesson continues the introduction to CSS style
@@ -4390,7 +4401,7 @@
                 discussion helps to solidify the understanding of content vs. structure
                 that was developed throughout the lesson.
             Headers:
-              name: "თავსართები"
+              name: "ჰედერები"
               description_student: This lesson continues the introduction to HTML
                 tags, this time with headers.  The class practices using header tags
                 to create page and section titles and learns how the different header
@@ -4424,15 +4435,10 @@
                 გამოყენებას. Creative Commons ლიცენზირების შესწავლის შემდეგ, კლასი
                 ისწავლის ვებ გვერდზებზე სურათების დამატებას და ამავე დროს საავტორო
                 უფლებების სწორად მითითებას."
-              description_teacher: "Starting with an exploration of the song \"Happy
-                Birthday\" and its history of copyright protection, the class explores
-                the purpose and role of copyright for both creators and users of creative
-                content. After a brief discussion about the purpose of copyright,
-                we move on to an activity exploring the various Creative Commons licenses
-                as a solution to the difficulty in dealing with copyright. \n\nFinally,
-                with a common understanding of the restrictions of various Creative
-                Commons licenses, students will learn how to add images to their web
-                pages using the &lt;img&gt; tag."
+              description_teacher: |-
+                Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \r
+                \r
+                Finally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag.
             Project - Multi-Page Websites:
               name: "პროექტი - მრავალგვერდიანი ვებსაიტები"
               description_student: "ეს დონე მოიცავს ჰიპერბმულებს, რომლებიც აძლევენ
@@ -4440,12 +4446,9 @@
                 ვებსაიტის შესაქმნელად. მთლიანი საიტის ვებში გამოქვეყნებამდე, კლასი
                 ააწყობს ერთ პროექტს ყველა წინა გვერდის ერთმანეთთან დაკავშირებით და
                 შექმნის სანავიგაციო პანელს ყოველი გვერდისთვის.  "
-              description_teacher: "After learning about how to link web pages to
-                one another, students are finally able to publish the website they
-                have been working on.  In this lesson, they link together all the
-                previous pages they have created into one project, create a new page,
-                and add navigation between the pages before publishing the entire
-                site to the Web.  \n\n"
+              description_teacher: |
+                After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \r
+                \r
             RGB Colors and Classes:
               name: RGB ფერები და კლასები
               description_student: This lesson covers classes and custom colors. The
@@ -4468,9 +4471,22 @@
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
               description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.
+                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
             Headings:
               name: "სათაურები"
+              description_student: This lesson continues the introduction to HTML
+                tags, this time with headers.  The class practices using header tags
+                to create page and section titles and learns how the different header
+                elements are displayed by default.  Next, the class plans how to organize
+                their content on the personal web pages that will be built across
+                the unit and begins the first page of the project.
+              description_teacher: In this lesson, students continue to use HTML to
+                structure text on web pages, this time with headings.  Students learn
+                how the different heading elements are displayed by default and practice
+                using them to create page and section titles.  Students then start
+                to decide how they will organize their content on their own personal
+                web pages.  In the last level, students begin the project that they
+                will continue to work on throughout the unit.
         csp2-support:
           title: CSP Unit 2 Online Support
           description_audience: ''
@@ -4539,7 +4555,7 @@
                 that user’s characteristics to choose appropriate products, critique
                 product design, and suggest improvements to design.
               description_teacher: |
-                Designers need to understand their users’ needs.  This lesson starts students thinking about how to design for another person by role-playing a user profile and reacting to a series of products.  Students will each receive a user profile describing a person. They will use that user’s characteristics to choose appropriate products, critique product design, and suggest improvements to design.\r
+                Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -4622,7 +4638,7 @@
                 some time to discuss the basic functionality of their app before using
                 3x5 index cards to develop paper prototypes.
               description_teacher: |
-                To better scope their own apps, teams start by looking through several example apps, choosing one (or more) as a basis for the type of app they will make. From there, teams will have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.
+                Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\r
             Prototype Testing:
               name: "პროტოტიპების ტესტირება"
               description_student: Teams will develop a plan to test with users before
@@ -4792,6 +4808,64 @@
                 directs students through the process including building the app and
                 testing it with their user to see if their assumptions about the user
                 interfaces they created are accurate.
+            Linking Screens:
+              name: "ეკრანების დაკავშირება"
+              description_student: Building on the screens that the class designed
+                in the previous lesson, teams combine screens into a single app. Simple
+                code can then be added to make button clicks change to the appropriate
+                screen.
+              description_teacher: In this lesson teams combine the screens that they
+                designed in the previous lesson into a single app, which they can
+                then link together using code. Students learn basic event driven programming
+                by building up the model app that they started in the previous lesson.
+                In addition to the screen that students designed yesterday, they'll
+                learn how to create additional screens and even import screens made
+                by others.
+            User Interfaces:
+              name: User Interfaces
+              description_student: See how a paper prototype can be used to test and
+                get feedback on software before writing any code. To help out a developer
+                with their idea, the class tests and provides an app prototype made
+                of paper.
+              description_teacher: Following the mini design project, students look
+                towards the next phase of design - prototyping a product that attempts
+                to address user needs. In teams, students examine a paper prototype
+                for a chat app called "Txt Ur Grndkdz". Through using this paper prototype,
+                students get a chance to see how a simple paper prototype can be used
+                to quickly test ideas and assumptions before we ever get to the computer.
+                After "using" the provided prototype students begin to identify ways
+                to improve the next iteration.
+            Feedback and Testing:
+              name: Feedback and Testing
+              description_student: Users have been testing an app, and they have lots
+                of feedback for the developer. The class needs to sort through all
+                of this feedback, identify the common themes and needs, and start
+                revising the prototype to make it better meet the users' needs.
+              description_teacher: In this lesson students use feedback from "users"
+                of the paper-prototyped app from the previous lesson in order to develop
+                improvements to the user interface of that paper prototype. The lesson
+                begins with a reflection on the fact that designers need to translate
+                human needs with technology into changes to the user interface or
+                experience. Students are then given a collection of feedback and requests
+                from users of the app from the previous lesson. In groups students
+                categorize the feedback and identify ways the needs expressed in the
+                feedback could be met by changes to the interface of the app. Then
+                in groups students will implement some of these changes to meet one
+                of the needs they identified.
+            Project - App Presentation:
+              name: Project - App Presentation
+              description_student: Each team prepares a presentation to "pitch" the
+                app they've developed. This is the time to share struggles, triumphs,
+                and plans for the future.
+              description_teacher: At this point teams have researched a topic of
+                personal and social importance, developed and tested both a paper
+                prototype and a digital prototype, and iterated on the initial app
+                to incorporate new features and bug fixes. Now is the time for them
+                to review what they have done and pull together a coherent presentation
+                to demonstrate their process of creation. Using the provided presentation
+                template, teams prepare to present about their process of app development,
+                including the problem they set out to solve, the ways in which they've
+                incorporated feedback from testing, and their plans for the future.
         minecraft:
           title: "მაინკრაფტის კოდის ერთი საათი: დიზაინერი"
           description_audience: ''
@@ -4820,7 +4894,8 @@
         coursea-draft:
           title: 'CS Fundamentals: Course A'
           description_audience: ''
-          description_short: "შესავალი კომპიუტერულ მეცნიერებაში დამწყებ მკითხველთათვის."
+          description_short: "შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ეს-ესაა
+            დაიწყო კითხვა."
           description: |-
             Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. \r
             Recommended for grade K.
@@ -4840,7 +4915,7 @@
             Being Safe Online:
               name: Being Safe Online
             'Loops: Happy Loops':
-              name: "ციკლები: ბედნიერე ციკლები"
+              name: "ციკლები: ბედნიერი ციკლები"
             Loops in Collector:
               name: "ციკლები შემგროვებელში"
             Loops in Artist:
@@ -4858,7 +4933,8 @@
         courseb-draft:
           title: 'CS Fundamentals: Course B'
           description_audience: ''
-          description_short: "შესავალი კომპიუტერულ მეცნიერებაში დამწყებ მკითხველთათვის."
+          description_short: "შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ეს-ესაა
+            დაიწყო კითხვა."
           description: Course B is for early readers. Students will create computer
             programs that will help them learn to collaborate with others, develop
             problem-solving skills, and persist through difficult tasks. By the end
@@ -4925,7 +5001,7 @@
             Online Internet Safety:
               name: "ონლაინ ინტერნეტ უსაფრთხოება"
             Build a Flappy Game:
-              name: "ააწყვეთ მოლივლივე თამაში"
+              name: "ააწყვეთ მოფარფატე ჩიტის თამაში"
             More CS with Run Marco:
               name: More CS with Run Marco
             Binary Bracelets:
@@ -5013,7 +5089,7 @@
             'Functions: Songwriting':
               name: "ფუნქციები: სიმღერების დაწერა"
             Functions in Artist:
-              name: "ფუნქციები მსახიობში"
+              name: "ფუნქციები მხატვარში"
             Functions in Bee:
               name: "ფუნქციები ფუტკარში"
             Functions in Farmer:
@@ -5027,7 +5103,7 @@
             The Design Process:
               name: "დიზაინის პროცესი"
             Build Your Project:
-              name: "ააწყევეთ თქვენი პროექტი"
+              name: "ააწყვეთ თქვენი პროექტი"
             Present Your Project:
               name: "წარმოადგინეთ თქვენი პროექტი"
             More Programming with Scratch:
@@ -5062,7 +5138,7 @@
             Variables in Play Lab:
               name: "ცვლადები სათამაშო ლაბორატორიაში"
             Variables in Artist:
-              name: "ცვლადები მსახიობში"
+              name: "ცვლადები მხატვარში"
             For Loop Fun:
               name: ხალისი "მიზნისთვის" ციკლით
             For Loops in Bee:
@@ -5080,7 +5156,7 @@
             The Design Process:
               name: "დიზაინის პროცესი"
             Build Your Project:
-              name: "ააწყევეთ თქვენი პროექტი"
+              name: "ააწყვეთ თქვენი პროექტი"
             Revise Your Project:
               name: "გადახედეთ თქვენს პროექტს"
             Presentation Your Project:
@@ -5303,7 +5379,7 @@
             'Functions: Songwriting':
               name: "ფუნქციები: სიმღერების დაწერა"
             Functions in Artist:
-              name: "ფუნქციები მსახიობში"
+              name: "ფუნქციები მხატვარში"
             Functions in Bee:
               name: "ფუნქციები ფუტკარში"
             Functions in Farmer:
@@ -5392,7 +5468,7 @@
             Visualizing Data:
               name: "მონაცემთა ვიზუალიზაცია"
             Sample Apps:
-              name: "შაბლონური აპლიკაციები"
+              name: "აპლიკაციების ნიმუშები"
             Final Project:
               name: "ფინალური პროექტი"
         unit6-csd-draft:
@@ -5440,9 +5516,9 @@
             Input Unplugged:
               name: Input Unplugged
             Timed Loop:
-              name: "დროზე გათვლილი ციკლი"
+              name: "ციკლი ტაიმერით"
             Timed Loops:
-              name: "დროზე გათვლილი ციკლები"
+              name: "ციკლები ტაიმერით"
             For Loops:
               name: '"მიზნისთვის" ციკლები'
             Physical Input:
@@ -5469,6 +5545,28 @@
               name: Board Events
             'Project: Make a Game':
               name: 'Project: Make a Game'
+            Getting and Setting Properties:
+              name: Getting and Setting Properties
+            The Program Design Process:
+              name: The Program Design Process
+            Getters:
+              name: Getters
+            Getting Properties:
+              name: Getting Properties
+            Designing Screens with Code:
+              name: Designing Screens with Code
+            Arrays:
+              name: Arrays
+            Making Music:
+              name: "მუსიკის შექმნა"
+            Arrays and For Loops:
+              name: Arrays and For Loops
+            Circuits and Physical Prototypes:
+              name: Circuits and Physical Prototypes
+            Accelerometer:
+              name: Accelerometer
+            Functions with Parameters:
+              name: "ფუნქციები პარამეტრებით"
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5530,7 +5628,7 @@
             8-bit Numbers:
               name: 8-ბიტიანი რიცხვები
             Encryption:
-              name: "ენკრიფცია"
+              name: "დაშიფრვა"
             Structuring Data:
               name: Structuring Data
         applab-1hour:
@@ -5731,7 +5829,7 @@
                 for each element. Towards the end of the lesson students will apply
                 this with the colorLed list on the board. '
             Timed Loops:
-              name: "დროზე გათვლილი ციკლები"
+              name: "ციკლები ტაიმერით"
               description_student: In this lesson we build on students understanding
                 of for loops to learn about a more sophisticated structure called
                 a timed loop. Unlike for loops, you can control how quickly a timed
@@ -6149,7 +6247,7 @@
                 (0-255).  After practicing with the flippy-do, students discuss how
                 they could extend that standardization to the other types of data.
             Encryption:
-              name: "ენკრიფცია"
+              name: "დაშიფრვა"
               description_student: Students have a discussion on the different levels
                 of security they would like for personal data.  Once the class has
                 developed an understanding of the importance of privacy, they learn
@@ -6180,6 +6278,8 @@
                 deciding what to do with data that does not easily fit into the visualization
                 scheme that they have chosen.  Last, students look at what parts of
                 this process can be automated, and what need a human to make decisions.
+            Keeping Data Secret:
+              name: Keeping Data Secret
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -6291,7 +6391,7 @@
             Project - Personal Portfolio Website:
               name: "პროექტი - პირადი პორტფოლიოს ვებსაიტი"
             Headers:
-              name: "თავსართები"
+              name: "ჰედერები"
             Intellectual Property and Images:
               name: "ინტელექტუალური საკუთრება და სურათები"
             Lists:
@@ -6311,7 +6411,7 @@
             What is a Computer?:
               name: "რა არის კომპიუტერი?"
             Inputs and Outputs:
-              name: "შესაყვანი და გამოსაყვანი ინფორმაცია"
+              name: "შეყვანილი და მიღებული ინფორმაცია"
             Processing:
               name: "დამუშავება"
             Storage:
@@ -6321,7 +6421,7 @@
             Project - Propose an App:
               name: "პროექტი - შემოგვთავაზეთ აპლიკაცია"
             Input and Output:
-              name: "შესაყვანი და გამოსაყვანი ინფორმაცია"
+              name: "შეყვანილი და მიღებული ინფორმაცია"
         csd3-chapters:
           title: ''
           description_audience: ''
@@ -6518,6 +6618,8 @@
               name: Bounce
             NewBounce:
               name: NewBounce
+            F PlayLab Variables:
+              name: F PlayLab Variables
           title: ''
           description_audience: ''
           description_short: ''
@@ -6577,7 +6679,7 @@
                 Students also find out that they can go to exciting places online,
                 but they need to follow certain rules to remain safe.
             'Loops: Happy Loops':
-              name: "ციკლები: ბედნიერე ციკლები"
+              name: "ციკლები: ბედნიერი ციკლები"
               description_student: ''
               description_teacher: Loops are a very helpful and powerful tool in programming.
                 To understand how helpful loops can be, students will need to be driven
@@ -6611,8 +6713,9 @@
                 კოდის წერის უნარები, რათა შექმნან ანიმირებული თამაში. დროა გავხდეთ
                 კრეატიულები და შევქმნათ ამბავი სათამაშო ლაბორატორიაში!"
           title: "კურსი A"
-          description_audience: "ასაკაბი: 4-7"
-          description_short: "შესავალი კომპიუტერულ მეცნიერებაში დამწყებ მკითხველთათვის."
+          description_audience: "ასაკი: 4-7"
+          description_short: "შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ჯერ
+            კითხვა არ იცის."
           description: "შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
             გაზიარებას შეძლებთ."
@@ -6647,7 +6750,7 @@
             Programming with Rey and BB-8:
               name: "პროგრამირება რეისთან და BB-8-სთან ერთად"
           title: "კურსი B"
-          description_audience: "ასაკები: 5-8"
+          description_audience: "ასაკი: 5-8"
           description_short: "შესავალი კომპიუტერულ მეცნიერებაში დამწყებ მკითხველთათვის.
             (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)"
           description: "შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
@@ -6676,7 +6779,7 @@
             'Events: The Big Event':
               name: "მოვლენები: დიდი მოვლენა"
             Build a Flappy Game:
-              name: "ააწყვეთ მოლივლივე თამაში"
+              name: "ააწყვეთ მოფარფატე ჩიტის თამაში"
             Events in Play Lab:
               name: "მოვლენები სათამაშო ლაბორატორიაში"
             Screen Out the Mean:
@@ -6688,7 +6791,7 @@
             Loops with Rey and BB-8:
               name: "ციკლები რეისთან და BB-8-სთან ერთად"
           title: "კურსი C"
-          description_audience: "ასაკები: 6-10"
+          description_audience: "ასაკი: 6-10"
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
           description: "შექმენით პროგრამები ციკლებით, მოვლენებით და პირობითი წინადადებებით.
@@ -6864,7 +6967,7 @@
                 და სახეცვლილებაში, რათა შეასწორონ თავსატეხები ალგორითმების, ციკლების
                 და ჩადგმული ციკლების საშუალებით.
           title: "კურსი D"
-          description_audience: "ასაკები: 7-11"
+          description_audience: "ასაკი: 7-11"
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
           description: |-
@@ -6894,7 +6997,7 @@
             Envelope Variables:
               name: "ცვლადები კონვერტებში"
             Variables in Artist:
-              name: "ცვლადები მსახიობში"
+              name: "ცვლადები მხატვარში"
             Variables in Play Lab:
               name: "ცვლადები სათამაშო ლაბორატორიაში"
             For Loop Fun:
@@ -6942,7 +7045,7 @@
                 all four stages of the process can be found in the first stage of
                 this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
-              name: "ააწყევეთ თქვენი პროექტი"
+              name: "ააწყვეთ თქვენი პროექტი"
               description_student: "მოემზადეთ ბევრი კოდის დასაწერად! დროა დაიწყოთ
                 თქვენი პროექტის აწყობა."
               description_teacher: Over the course of four lessons, students will
@@ -7006,7 +7109,7 @@
                 program. This lesson will help students intuitively understand why
                 combining chunks of code into functions can be such a helpful practice.
             Functions in Artist:
-              name: "ფუნქციები მსახიობში"
+              name: "ფუნქციები მხატვარში"
               description_student: Make complex drawings more easily with functions!
               description_teacher: მოსწავლეები გაეცნობიან ფუნქციების გამოყენებას Code.org-ზე.
                 ფუნქციების საშუალებით, "მხატვრის" პროგრამაში შეიქმნება და შესწორდება
@@ -7097,7 +7200,7 @@
             Nested Loops:
               name: "ჩასმული ციკლები"
           title: "კურსი E"
-          description_audience: "ასაკები: 8-12"
+          description_audience: "ასაკი: 8-12"
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
           description: Created with fourth grade students in mind, this course begins
@@ -7164,7 +7267,7 @@
                 to grasp, so we recommend allowing plenty of time for discussion at
                 the end of the lesson.
             Variables in Artist:
-              name: "ცვლადები მსახიობში"
+              name: "ცვლადები მხატვარში"
               description_student: Don't forget to bring creativity to class! In these
                 puzzles you will be making fantastic drawings using variables.
               description_teacher: In this lesson, students will explore the creation
@@ -7273,7 +7376,7 @@
                 all five stages of the process can be found in the beginning of the
                 project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Build Your Project:
-              name: "ააწყევეთ თქვენი პროექტი"
+              name: "ააწყვეთ თქვენი პროექტი"
               description_student: "საბოლოოდ თქვენ შეგიძლიათ დაიწყოთ თქვენი პროექტის
                 აწყობა!"
               description_teacher: Over the course of five lessons, students will
@@ -7337,7 +7440,7 @@
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
           title: "კურსი F"
-          description_audience: "ასაკები: 9-13"
+          description_audience: "ასაკი: 9-13"
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
           description: |-
@@ -7660,7 +7763,7 @@
             Events in Bounce:
               name: "მოვლენები მხტუნავში"
             Build a Flappy Game:
-              name: "ააწყვეთ მოლივლივე თამაში"
+              name: "ააწყვეთ მოფარფატე ჩიტის თამაში"
             Conditionals with Cards:
               name: "პირობები ბარათებით"
             While Loops in Farmer:
@@ -7674,7 +7777,7 @@
             Envelope Variables:
               name: "ცვლადები კონვერტებში"
             Variables in Artist:
-              name: "ცვლადები მსახიობში"
+              name: "ცვლადები მხატვარში"
             Variables in Play Lab:
               name: "ცვლადები სათამაშო ლაბორატორიაში"
             For Loop Fun:
@@ -7696,7 +7799,7 @@
             The Design Process:
               name: "დიზაინის პროცესი"
             Build Your Project:
-              name: "ააწყევეთ თქვენი პროექტი"
+              name: "ააწყვეთ თქვენი პროექტი"
             Revise Your Project:
               name: "გადახედეთ თქვენს პროექტს"
             Present Your Project:
@@ -7712,7 +7815,7 @@
             Events in Star Wars:
               name: "მოვლენები ვარსკვლავურ ომებში"
             Events with Flappy:
-              name: "მოვლენები მოლივლივესთან ერთად"
+              name: "მოვლენები მოფარფატე ჩიტთან ერთად"
             'Conditionals: Conditionals with Cards':
               name: 'Conditionals: Conditionals with Cards'
             Conditional Loops in Maze:
@@ -7728,7 +7831,7 @@
             Nested Loops:
               name: "ჩასმული ციკლები"
           title: "დაჩქარებული კურსი"
-          description_audience: "ასაკები: 9-18"
+          description_audience: "ასაკი: 9-18"
           description_short: "შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი
             სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის."
           description: "შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
@@ -7765,7 +7868,7 @@
             Spelling Bee:
               name: "შეჯიბრი დამარცვლაში"
           title: ''
-          description_audience: "ასაკები: 4-8"
+          description_audience: "ასაკი: 4-8"
           description_short: ''
           description: "შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
@@ -7832,6 +7935,10 @@
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey:
+              name: Please complete the CSP Mid-course survey
           title: ''
           description_audience: ''
           description_short: "პროგრამირება"
@@ -7900,6 +8007,14 @@
               name: Intro to AppLab - Your First App 2
             Intro to AppLab - Your First App 3:
               name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: "შესავალი აპლიკაციების ლაბორატორიაში"
+            'Lesson 1: App Lab Intro':
+              name: 'Lesson 1: App Lab Intro'
           title: "შესავალი აპლიკაციების ლაბორატორიაში"
           description_audience: ''
           description_short: ''
@@ -7940,7 +8055,7 @@
             'Functions: Songwriting':
               name: "ფუნქციები: სიმღერების დაწერა"
             Functions in Artist:
-              name: "ფუნქციები მსახიობში"
+              name: "ფუნქციები მხატვარში"
             Functions in Bee:
               name: "ფუნქციები ფუტკარში"
             Functions in Farmer:
@@ -7954,7 +8069,7 @@
             The Design Process:
               name: "დიზაინის პროცესი"
             Build Your Project:
-              name: "ააწყევეთ თქვენი პროექტი"
+              name: "ააწყვეთ თქვენი პროექტი"
             Present Your Project:
               name: "წარმოადგინეთ თქვენი პროექტი"
             Internet:
@@ -8056,7 +8171,7 @@
             Events in Star Wars:
               name: "მოვლენები ვარსკვლავურ ომებში"
             Events with Flappy:
-              name: "მოვლენები მოლივლივესთან ერთად"
+              name: "მოვლენები მოფარფატე ჩიტთან ერთად"
             Events in Bounce:
               name: "მოვლენები მხტუნავში"
             'Conditionals: Conditionals with Cards':
@@ -8072,7 +8187,7 @@
             'Variables: Envelope Variables':
               name: "ცვლადები: ცვლადები კონვერტებში"
             Variables in Artist:
-              name: "ცვლადები მსახიობში"
+              name: "ცვლადები მხატვარში"
             Variables in Play Lab:
               name: "ცვლადები სათამაშო ლაბორატორიაში"
             'For Loops: For Loop Fun':
@@ -8094,7 +8209,7 @@
             The Design Process:
               name: "დიზაინის პროცესი"
             Build Your Project:
-              name: "ააწყევეთ თქვენი პროექტი"
+              name: "ააწყვეთ თქვენი პროექტი"
             Revise Your Project:
               name: "გადახედეთ თქვენს პროექტს"
             Present Your Project:
@@ -8160,7 +8275,7 @@
             Functions in Bee:
               name: "ფუნქციები ფუტკარში"
             Functions in Artist:
-              name: "ფუნქციები მსახიობში"
+              name: "ფუნქციები მხატვარში"
             Functions in Farmer:
               name: "ფუნქციები ფერმერში"
             Determine the Concept:
@@ -8172,7 +8287,7 @@
             The Design Process:
               name: "დიზაინის პროცესი"
             Build Your Project:
-              name: "ააწყევეთ თქვენი პროექტი"
+              name: "ააწყვეთ თქვენი პროექტი"
             Present Your Project:
               name: "წარმოადგინეთ თქვენი პროექტი"
             Internet:
@@ -8216,7 +8331,7 @@
             Envelope Variables:
               name: "ცვლადები კონვერტებში"
             Variables in Artist:
-              name: "ცვლადები მსახიობში"
+              name: "ცვლადები მხატვარში"
             Variables in Play Lab:
               name: "ცვლადები სათამაშო ლაბორატორიაში"
             For Loop Fun:
@@ -8238,7 +8353,7 @@
             The Design Process:
               name: "დიზაინის პროცესი"
             Build Your Project:
-              name: "ააწყევეთ თქვენი პროექტი"
+              name: "ააწყვეთ თქვენი პროექტი"
             Revise Your Project:
               name: "გადახედეთ თქვენს პროექტს"
             Present Your Project:
@@ -8311,6 +8426,8 @@
               name: all assessment items clustered in levelgroup as a single "test"
             dummy:
               name: dummy
+            CSP 3 updates staging ground:
+              name: CSP 3 updates staging ground
           title: ''
           description_audience: ''
           description_short: ''
@@ -8338,4 +8455,265 @@
           title: ''
           description_audience: ''
           description_short: ''
+          description: ''
+        csd4-old:
+          stages:
+            Analysis of Design:
+              name: "დიზაინის ანალიზი"
+            Understanding Your User:
+              name: Understanding Your User
+            User-Centered Design Micro Activity:
+              name: "მომხმარებელზე გათვლილი დიზაინის მიკრო აქტიურობა"
+            User Interface and Prototype Testing:
+              name: User Interface and Prototype Testing
+            Feedback and Prototypes:
+              name: Feedback and Prototypes
+            Identifying User Needs:
+              name: "მომხმარებლის მოთხოვნილებების განსაზღვრა"
+            Project - Paper Prototype:
+              name: Project - Paper Prototype
+            Designing Apps for Good:
+              name: Designing Apps for Good
+            Market Research:
+              name: Market Research
+            Paper Prototypes:
+              name: "ქაღალდის პროტოტიპები"
+            Prototype Testing:
+              name: "პროტოტიპების ტესტირება"
+            Digital Design:
+              name: "ციფრული დიზაინი"
+            Event Driven Programming:
+              name: "მოვლენებზე დაფუძნებული პროგრამირება"
+            Basic App Functionality:
+              name: "აპლიკაციის საბაზისო ფუნქციონალი"
+            Testing the App:
+              name: "აპლიკაციების ტესტირება"
+            Improving and Iterating:
+              name: Improving and Iterating
+            App Presentation:
+              name: "აპლიკაციის პრეზენტაცია"
+          title: "(DEPRECATED) CSD Unit 4 - The Design Process"
+          description_audience: ''
+          description_short: 2016/17 Beta version of CSD Unit 4
+          description: ''
+        csp3-staging:
+          stages:
+            The Need For Programming Languages:
+              name: "პროგრამირების ენების საჭიროება"
+            The Need for Algorithms:
+              name: "ალგორითმების საჭიროება"
+            Creativity in Algorithms:
+              name: "შემოქმედებითობა ალგორითმებში"
+            Using Simple Commands:
+              name: "მარტივი ბრძანებების გამოყენება"
+            Creating Functions:
+              name: "ფუნქციების შექმნა"
+            Functions and Top-Down Design:
+              name: Functions and Top-Down Design
+            APIs and Function Parameters:
+              name: APIs and Function Parameters
+            Creating functions with Parameters:
+              name: Creating functions with Parameters
+            Looping and Random Numbers:
+              name: "ციკლები და შემთხვევითი რიცხვები"
+            Practice PT - Design a Digital Scene:
+              name: Practice PT - Design a Digital Scene
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Chapter 1 Assessment
+          title: CSP 3 Proposed Changes Temporary Staging Ground
+          description_audience: ''
+          description_short: Temporary staging ground for Oct. changes to csp3
+          description: |
+            This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r
+        pwc:
+          stages:
+            new stage:
+              name: "ახალი დონე"
+            'Problem Solving: Personal Innovations':
+              name: 'Problem Solving: Personal Innovations'
+            'Technology Foundations: What is a Computer?':
+              name: 'Technology Foundations: What is a Computer?'
+            'Data Science: Problem Solving with Big Data':
+              name: 'Data Science: Problem Solving with Big Data'
+            Personal Innovations:
+              name: "პირადი ინოვაციები"
+            What is a Computer?:
+              name: "რა არის კომპიუტერი?"
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Programming - Hour of Code:
+              name: Programming - Hour of Code
+            Simple Encryption:
+              name: "მარტივი შიფრირება"
+            Web Development - Creating Webpages:
+              name: Web Development - Creating Webpages
+            App Development Unplugged - User Interfaces:
+              name: App Development Unplugged - User Interfaces
+            App Development - Intro to App Lab:
+              name: App Development - Intro to App Lab
+            Creating Webpages:
+              name: Creating Webpages
+            User Interfaces:
+              name: User Interfaces
+            Intro to App Lab:
+              name: "შესავალი აპლიკაციების ლაბორატორიაში"
+            Smart Clothing Design:
+              name: Smart Clothing Design
+            Intro to App Lab (13+):
+              name: Intro to App Lab (13+)
+          title: PwC Access Your Potential
+          description_audience: ''
+          description_short: ''
+          description: ''
+        allthesurveys:
+          stages:
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
+            CSD pulse check survey:
+              name: CSD pulse check survey
+            CSD mid-post survey staging:
+              name: CSD mid-post survey staging
+            CSP pre survey Test 2017:
+              name: CSP pre survey Test 2017
+            CSD mid-post survey 2017 staging:
+              name: CSD mid-post survey 2017 staging
+            CSP pre survey 2017 staging:
+              name: CSP pre survey 2017 staging
+            CSD pre survey 2017 staging:
+              name: CSD pre survey 2017 staging
+            CSD/P pulse check survey 2017:
+              name: CSD/P pulse check survey 2017
+            CSD mid and post survey 2017 staging:
+              name: CSD mid and post survey 2017 staging
+            CSP mid and post survey 2017 staging:
+              name: CSP mid and post survey 2017 staging
+          title: All the surveys
+          description_audience: ''
+          description_short: Place to stage and test Code.org surveys
+          description: ''
+        k1hoc2017:
+          stages:
+            Collector Hour of Code 2017:
+              name: Collector Hour of Code 2017
+          title: K-1 Hour of Code 2017
+          description_audience: ''
+          description_short: ''
+          description: ''
+        hero:
+          stages:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Minecraft\: Hero''s Journey Hour of Code'
+            Minecraft Hour of Code:
+              name: "მაინკრაფტის კოდის ერთი საათი"
+          title: 'Minecraft: Hero''s Journey'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: "შესავალი აპლიკაციების ლაბორატორიაში - აირჩიეთ თქვენი საკუთარი
+                თავგადასავალი"
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: "შესავალი აპლიკაციების ლაბორატორიაში - აირჩიეთ თქვენი საკუთარი
+                თავგადასავალი 2"
+            Intro to AppLab - Your First App:
+              name: "შესავალი აპლიკაციების ლაბორატორიაში - თქვენი პირველი აპლიკაცია"
+            Intro to AppLab - Your First App 2:
+              name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: "შესავალი აპლიკაციების ლაბორატორიაში"
+          title: Intro to App Lab Staging
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-explore:
+          stages:
+            new stage:
+              name: "ახალი დონე"
+            Explore PT Prep - Reviewing the Task:
+              name: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan:
+              name: Explore PT - Making a Plan
+            Explore PT - Complete the Task:
+              name: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Setup: Digital Portfolio and Other Tools'
+          title: Explore - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and
+            complete the AP Explore Performance Tasks.
+          description: |-
+            These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
+            \r
+            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+        csp-create:
+          stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            Create PT Prep - Reviewing the Task:
+              name: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan:
+              name: Create PT Prep - Making a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+          title: Create - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and
+            complete the AP Create Performance Tasks.
+          description: |-
+            These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
+            \r
+            This unit was last updated December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+        csp3-reovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+          title: 'csp3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-recovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+            standalone template:
+              name: standalone template
+          title: 'CSP3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        aws-demo:
+          stages:
+            new stage:
+              name: "ახალი დონე"
+          title: AWS Demo
+          description_audience: ''
+          description_short: ''
+          description: ''
+        halloween:
+          stages:
+            Halloween Artist:
+              name: Halloween Artist
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        valentine:
+          stages:
+            special valentine:
+              name: special valentine
+          title: Valentine Special
+          description_audience: ''
+          description_short: Have fun creating valentines
           description: ''

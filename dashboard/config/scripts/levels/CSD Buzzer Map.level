@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Circuit Playground: Buzzer",
-    "reference": "/csd/maker_buzzer/index.html"
+    "reference": "/docs/csd/maker_buzzer/index.html"
   },
   "published": true,
   "notes": ""

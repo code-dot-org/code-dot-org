@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# 272948 contacts
-../send-to-mailing-list --limit 280000 2017-01-05-go-beyond-an-hour ./contacts.csv

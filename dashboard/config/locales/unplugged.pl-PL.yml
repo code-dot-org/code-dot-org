@@ -285,30 +285,31 @@
         title: ''
         desc: ''
       courseA_unplugged_loops:
-        title: Loops Unplugged
+        title: Pętle bez komputera
         desc: W tej lekcji dowiesz się, jak używać pętli!
       courseB_unplugged_MRF:
         title: Aktywność unplugged (bez komputera)
         desc: W tej lekcji "zaprogramujesz" swoich przyjaciół!
       courseB_unplugged_loopyMRF:
         title: Aktywność unplugged (bez komputera)
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
-          but this time with loops!
+        desc: Podobnie jak w &ldquor;Moich Robotycznych Przyjaciołach&rdquo;, będziesz
+          &ldquor;programować&rdquor; swoich przyjaciół, lecz tym razem z użyciem
+          pętli!
       courseC_Unplugged_ScreenOutTheMean:
         title: Aktywność unplugged (bez komputera)
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Dziś dowiesz się, co zrobić, jeśli ktoś jest złośliwy online.
       courseD_unplugged_digitalCitizenship:
         title: Aktywność unplugged (bez komputera)
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Dzisiaj dowiesz się, co to znaczy być Cyfrowym Obywatelem.
       courseE_unplugged_privateInformation:
-        title: Aktywność unplugged (bez komputera)
-        desc: Today you will learn the difference between private and personal information!
+        title: 'Edukacja Zdrowego Rozsądku: Prywatne i Osobiste Informacje '
+        desc: Dzisiaj poznasz różnice pomiędzy prywatnymi a osobistymi informacjami!
       courseF_unplugged_powerOfWords:
         title: Aktywność unplugged (bez komputera)
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Dziś dowiesz się, co zrobić, jeśli ktoś jest złośliwy online.
       deeper learning description:
         title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
+        desc: 'brakujące tłumaczenie: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algorytmy z życia wzięte: sadź nasiona'
         desc: Ta lekcja przywołuje sposoby stosowania algorytmów w naszym codziennym
@@ -376,7 +377,7 @@
           rozwijane jeszcze dalej i ilustrowane jest, jak komputer może przechowywać
           bardziej złożone informacje (takie jak obrazy i kolory) w postaci binarnej.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
+        title: 'Algorytmy z życia wzięte: Wyścig kości'
         desc: Ta lekcja odwołuje się do sposobów korzystania z algorytmów w naszym
           codziennym życiu. W ramach tego, uczniowie definiują i zapisują algorytm
           do gry w kości.
@@ -420,3 +421,38 @@
           używać wewnątrz większych programów. Ta lekcja pomoże uczniom intuicyjnie
           zrozumieć, dlaczego połączenie fragmentów kodu w funkcje jest tak dobrą
           praktyką.  '
+      swipeRightPassThrough:
+        title: Sesja Scenariuszy Rekrutacyjnych
+        desc: |-
+          # Recruitment Scenarios Session\r
+          \r
+          ## Swipe Right for CS\r
+          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
+          \r
+          ### How it Works\r
+          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
+          \r
+          \r
+          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+      swipeRightPassThrough-test123:
+        title: Sesja Scenariuszy Rekrutacyjnych
+        desc: |-
+          # Recruitment Scenarios Session\r
+          \r
+          ## Swipe Right for CS\r
+          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
+          \r
+          ### How it Works\r
+          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
+          \r
+          \r
+          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+      brad-repro-bug-000:
+        title: Brad Repro Bug 000
+        desc: |-
+          # Brad Repro Bug 000\r
+          ## Attempt to recreate a bug Brooke reported\r
+          process as follows:\r
+          1. started with an `unplugged` level. populated with info. hit save and publish.\r
+          2. “destroyed” the level\r
+          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush

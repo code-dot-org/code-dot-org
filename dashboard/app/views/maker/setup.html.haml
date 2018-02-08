@@ -14,7 +14,7 @@
 
 .maker-setup
   :markdown
-    # CS Discoveries Maker APIs Pilot IT Setup
+    # CS Discoveries Maker Toolkit Pilot IT Setup
 
     ## The Circuit Playground
 
@@ -22,41 +22,8 @@
 
     The Adafruit [Circuit Playground](https://www.adafruit.com/product/3399) is a programmable circuit board with built-in components that make getting started with physical computing quick and fun.
 
-    In the [Computer Science Discoveries curriculum](https://code.org/educate/csd) being piloted this school year, we will be using the Circuit Playground tethered via USB to students' computers to allow for online curriculum integration and interactive debugging of programs.
+    In the [Computer Science Discoveries curriculum](https://code.org/educate/csd) being piloted this school year, we are using the Circuit Playground tethered via USB to students' computers to allow for online curriculum integration and interactive debugging of programs.
 
-    To connect from USB to the [Code Studio App Lab website](https://code.org/educate/applab), we will need to install a Chrome App extension to support serial communication from the browser.
+    Please follow the instructions below to connect your board to Code.org.
 
     <div id="setup-status-mount"/>
-
-    ## Computer Setup Steps
-
-    1. If you're setting up a Windows computer, you will need to start by installing the [Adafruit Windows drivers](https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only).
-    1. If you already have a Circuit Playground board, ensure it has the right firmware sketch installed:
-      * if you received the board as part of a CSD pilot, the board should have the software it needs on it already.
-      * if it has not previously been set up with the Circuit Playground Firmata sketch, [install the Circuit Playground Firmata sketch with these instructions](https://learn.adafruit.com/circuit-playground-firmata/overview).
-    1. Install [Google Chrome](https://www.google.com/chrome/browser/). _Note: we plan to support other browsers including IE in Fall 2017._
-    1. Install the [Code.org Serial Connector Chrome App extension](https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg).
-      * once it is installed, come back to this page. "Open"ing the App does not do anything, it runs in the background when you use App Lab.
-    1. Plug in your Circuit Playground board, and click "re-detect" above. Does each step's setup status appear to have completed successfully?
-      * If a dialog asking for permission for Code Studio to connect to the Chrome App pops up, click Accept.
-      * Trouble on a step? See our common issues section below. If you are still having issues, please submit our survey above and we can follow up with you.
-
-    ## Using within App Lab once set up
-
-    1. Navigate to the Maker APIs w/ App Lab page:
-       * [Make an account](https://studio.code.org/users/sign_up) or [log in](https://studio.code.org/users/sign_in) to Code Studio.
-       * Navigate to the Maker APIs w/ App Lab project page: [https://studio.code.org/p/makerlab](https://studio.code.org/p/makerlab)
-    1. Plug in a Circuit Playground board, write some code (new blocks are in the “Maker” and “Circuit” tabs) and press **Run**.
-
-    ## Debugging common issues
-
-    If something seems to not be working on the App Lab webpage, try the following steps to work around issues that come up:
-
-    1. Try refreshing the App Lab webpage.
-    1. Try un-plugging and re-plugging the board, and refreshing the webpage.
-    1. Double check the Computer Setup Steps above. Is the Chrome App being detected? Is the board plugged in, and connectable?
-    1. After using the Arduino IDE to install a firmware sketch to the board, it's sometimes necessary to restart the computer before App Lab can connect to the board successfully.
-
-    #### If you see an error like “ERROR: Line: 1: Unknown identifier: touchSensor0”
-
-    This often means one of the connection steps failed. Try following the steps above, and if something still seems to be going wrong, send along a support ticket and we can debug further.

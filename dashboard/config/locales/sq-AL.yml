@@ -152,6 +152,7 @@
     user_type_student: student
     field_is_required: E domosdoshme
     accept_terms: Ju duhet të jeni dakord për të krijuar një llogari
+    error: An error occurred.
   school_info:
     title: School Information (optional)
     school_country: School Country
@@ -761,6 +762,9 @@
         and games with objects and characters that interact with each other.
       audience: Moshat 13 +
       cta: 'Mëso si '
+    hoc-encryption:
+      title: Simple Encryption
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -782,6 +786,10 @@
       title: Minecraft
       body: Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të
         Minecraft.
+    hero:
+      title: Minecraft
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: Sports
       body: Make a basketball game or mix and match across sports.
@@ -863,6 +871,9 @@
     hide_survey_last_answer: Ky studim është anonim. Ju lutem vizitoni panelin e mësuesve
       për rezultatet agregate. Vini re se rezultatet janë të dukshme vetëm në qoftë
       se të paktën pesë studentë kanë dorëzuar studimin.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Faleminderit
     wrong_body: Ju faleminderit për përgjigjen.
@@ -992,6 +1003,13 @@
     save: Ruaj
     delete: Fshi
     import: Import
+    share_link_import_bad_link_header: Share link not recognized
+    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
+      you are using a link from a Minecraft: Agent puzzle, and that you have copied
+      the full link.'
+    share_link_import_error_header: Something went wrong.
+    share_link_import_error_body: There was a problem importing that share link. Please
+      try again.
     exit: Kthehu te Kursi
     my_projects: Projektet e mia
     project_gallery: Projekte

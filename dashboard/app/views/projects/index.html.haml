@@ -1,17 +1,23 @@
 - @page_title = t('project.project_gallery')
 - is_public = local_assigns[:is_public]
+- projects_data = {}
+- if current_user
+  - projects_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
 
 = render partial: 'shared/angular'
 
+-# keep data attributes used by react and angularjs separate
 %script{src: asset_path('angularProjects.js'), data: {under13: current_user.under_13?.to_json, sharingDisabled: current_user.sharing_disabled?.to_json} }
-%script{src: asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: asset_path("js/#{js_locale}/common_locale.js"), data: {projects: projects_data.to_json}}
 %script{src: minifiable_asset_path('js/projects/index.js')}
 
 .projects-page
-  .row
-    #projects-header
-    #angular-my-projects-wrapper{'style' => ('display: none;' if is_public)}
-      %div{'ng-app' => 'projectsApp', 'ng-view' => ''}
-    #public-gallery-wrapper{'style' => ('display: none;' unless is_public)}
-      #public-gallery
-    #publish-confirm
+  #projects-header
+
+  #new-project-buttons
+
+  #angular-my-projects-wrapper{'style' => ('display: none;' if is_public)}
+    %div{'ng-app' => 'projectsApp', 'ng-view' => ''}
+  #public-gallery-wrapper{'style' => ('display: none;' unless is_public)}
+    #public-gallery
+  #publish-confirm

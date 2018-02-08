@@ -10,7 +10,6 @@
       "onEvent": null,
       "setProperty": null,
       "getProperty": null,
-      "randomNumber_min_max": null,
       "ifBlock": null,
       "ifElseBlock": null,
       "console.log": null,
@@ -21,7 +20,7 @@
     "markdown_instructions": "# Updating Properties\r\n\r\nHere's an example of an app that uses both `getProperty` and `setProperty` to update elements on the screen. Read through the code, and then test it out by filling out the input fields and clicking \"Save\"\r\n\r\n_Note: you don't need to change any code here, but read through the provided code to see how it works._",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "onEvent(\"save_button\", \"click\", function(event) {\r\n  var name = getProperty(\"name_input\", \"text\");\r\n  var color = getProperty(\"color_input\", \"text\");\r\n  var newsletter = getProperty(\"newsletter_input\", \"checked\");\r\n  \r\n  setProperty(\"name_output\", \"text\", name);\r\n  setProperty(\"color_output\", \"background-color\", color);\r\n  if (newsletter) {\r\n    setProperty(true, \"text\", \"I am on the newsletter\");\r\n  } else {\r\n    setProperty(\"newsletter_output\", \"text\", \"I am NOT on the newsletter\");\r\n  }\r\n});",
+    "start_blocks": "onEvent(\"save_button\", \"click\", function(event) {\r\n  var name = getProperty(\"name_input\", \"value\");\r\n  var color = getProperty(\"color_input\", \"value\");\r\n  var newsletter = getProperty(\"newsletter_input\", \"checked\");\r\n  \r\n  setProperty(\"name_output\", \"text\", name);\r\n  setProperty(\"color_output\", \"background-color\", color);\r\n  if (newsletter) {\r\n    setProperty(\"newsletter_output\", \"text\", \"I am on the newsletter\");\r\n  } else {\r\n    setProperty(\"newsletter_output\", \"text\", \"I am NOT on the newsletter\");\r\n  }\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -56,11 +55,12 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-17 19:16:50 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-17 21:39:27 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-17 21:40:16 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-17 19:16:50 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-17 21:39:27 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-17 21:40:16 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-16 00:56:00 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-18 01:14:46 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-01 21:44:54 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-02-01 21:46:02 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-02-02 17:41:17 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -18,8 +18,11 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
   get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
   get '/dashboardapi/hoc-courses-narrow', to: "home#hoc_courses_narrow"
+  get '/dashboardapi/hoc-courses-challenge', to: "home#hoc_courses_challenge"
 
   get "/home", to: "home#home"
+
+  get "/congrats", to: "congrats#index"
 
   resources :gallery_activities, path: '/gallery' do
     collection do
@@ -42,6 +45,12 @@ Dashboard::Application.routes.draw do
   end
 
   get 'maker/setup', to: 'maker#setup'
+  get 'maker/discountcode', to: 'maker#discountcode'
+  post 'maker/apply', to: 'maker#apply'
+  post 'maker/schoolchoice', to: 'maker#schoolchoice'
+  post 'maker/complete', to: 'maker#complete'
+  get 'maker/application_status', to: 'maker#application_status'
+  post 'maker/override', to: 'maker#override'
 
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
@@ -51,7 +60,8 @@ Dashboard::Application.routes.draw do
 
   get 'redirected_url', to: 'redirect_proxy#get', format: false
 
-  get 'docs/*docs_route', to: 'docs_proxy#get'
+  get 'docs/*path', to: 'curriculum_proxy#get_doc'
+  get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
   # User-facing section routes
   resources :sections, only: [:show, :update] do
@@ -104,7 +114,9 @@ Dashboard::Application.routes.draw do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
     patch '/dashboardapi/users', to: 'registrations#update'
     patch '/users/upgrade', to: 'registrations#upgrade'
+    patch '/users/set_age', to: 'registrations#set_age'
     get '/users/clever_takeover', to: 'sessions#clever_takeover'
+    get '/users/clever_modal_dismissed', to: 'sessions#clever_modal_dismissed'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -133,6 +145,10 @@ Dashboard::Application.routes.draw do
       get '/', to: redirect('/projects')
     end
   end
+
+  get 'projects/featured', to: 'projects#featured'
+  put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
+  put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
 
   get '/projects/public', to: 'projects#public'
   resources :projects, path: '/projects/', only: [:index] do
@@ -164,7 +180,6 @@ Dashboard::Application.routes.draw do
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
     get 'embed_level', to: 'levels#embed_level', as: 'embed_level'
-    get 'embed_blocks/:block_type', to: 'levels#embed_blocks', as: 'embed_blocks'
     post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
     post 'clone', to: 'levels#clone'
   end
@@ -236,9 +251,8 @@ Dashboard::Application.routes.draw do
 
   get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
   resources :regional_partners
-  get 'regional_partners/:id/assign_program_manager', controller: 'regional_partners', action: 'assign_program_manager'
+  post 'regional_partners/:id/assign_program_manager', controller: 'regional_partners', action: 'assign_program_manager'
   get 'regional_partners/:id/remove_program_manager/:program_manager_id', controller: 'regional_partners', action: 'remove_program_manager'
-  get 'regional_partners/:id/search_program_manager', controller: 'regional_partners', action: 'search_program_manager'
   post 'regional_partners/:id/add_mapping', controller: 'regional_partners', action: 'add_mapping'
   get 'regional_partners/:id/remove_mapping/:id', controller: 'regional_partners', action: 'remove_mapping'
 
@@ -352,6 +366,7 @@ Dashboard::Application.routes.draw do
       resources :workshops do
         collection do
           get :filter
+          get :upcoming_teachercons
         end
         member do # See http://guides.rubyonrails.org/routing.html#adding-more-restful-actions
           post :start
@@ -381,6 +396,11 @@ Dashboard::Application.routes.draw do
       get :teacher_applications, to: 'teacher_applications#index'
       post :teacher_applications, to: 'teacher_applications#create'
 
+      # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
+      post 'teachercon_registrations', to: 'teachercon1819_registrations#create'
+      post 'teachercon_partner_registrations', to: 'teachercon1819_registrations#create_partner'
+      post 'fit_weekend_registrations', to: 'fit_weekend1819_registrations#create'
+
       post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
       post :regional_partner_program_registrations, to: 'regional_partner_program_registrations#create'
 
@@ -388,9 +408,21 @@ Dashboard::Application.routes.draw do
       post :workshop_surveys, to: 'workshop_surveys#create'
       post :teachercon_surveys, to: 'teachercon_surveys#create'
       post :regional_partner_contacts, to: 'regional_partner_contacts#create'
+      get :regional_partner_workshops, to: 'regional_partner_workshops#index'
+      get 'regional_partner_workshops/find', to: 'regional_partner_workshops#find'
 
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
+        post :teacher, to: 'teacher_applications#create'
+        post :principal_approval, to: 'principal_approval_applications#create'
+      end
+
+      resources :applications, controller: 'applications', only: [:index, :show, :update] do
+        collection do
+          get :quick_view
+          get :cohort_view
+          get :search
+        end
       end
     end
   end
@@ -414,7 +446,14 @@ Dashboard::Application.routes.draw do
 
     namespace :application do
       get 'facilitator', to: 'facilitator_application#new'
+      get 'teacher', to: 'teacher_application#new'
+      get 'principal_approval/:application_guid', to: 'principal_approval_application#new', as: 'principal_approval'
     end
+
+    # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
+    get 'teachercon_registration/partner', to: 'teachercon1819_registration#partner'
+    get 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#new'
+    get 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#new'
 
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
     get 'regional_partner_program_registration', to: 'regional_partner_program_registration#new'
@@ -483,13 +522,14 @@ Dashboard::Application.routes.draw do
 
   post '/api/lock_status', to: 'api#update_lockable_state'
   get '/api/lock_status', to: 'api#lockable_state'
+  get '/dashboardapi/script_structure/:script', to: 'api#script_structure'
   get '/api/script_structure/:script', to: 'api#script_structure'
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
+  get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
   get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
   get '/api/user_progress/:script/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
   get '/api/user_progress/:script/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
-  get '/api/user_progress', to: 'api#user_progress_for_all_scripts', as: 'user_progress_for_all_scripts'
   namespace :api do
     api_methods.each do |action|
       get action, action: action
@@ -505,8 +545,12 @@ Dashboard::Application.routes.draw do
 
       post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
 
+      post 'users/:user_id/postpone_census_banner', to: 'users#postpone_census_banner'
+      post 'users/:user_id/dismiss_census_banner', to: 'users#dismiss_census_banner'
+
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
+      get 'schools/:id', to: 'schools#show', defaults: {format: 'json'}
       get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: {format: 'json'}
 
       get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
@@ -523,7 +567,17 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
-  get '/dashboardapi/v1/schoolsearch/:q/:limit', to: 'api/v1/schools#search', defaults: {format: 'json'}
+  get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
+
+  # Routes used by census
+  post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}
+
+  # We want to allow searchs with dots, for instance "St. Paul", so we specify
+  # the constraint on :q to match anything but a slash.
+  # @see http://guides.rubyonrails.org/routing.html#specifying-constraints
+  get '/dashboardapi/v1/districtsearch/:q/:limit', to: 'api/v1/school_districts#search', defaults: {format: 'json'}, constraints: {q: /[^\/]+/}
+  get '/dashboardapi/v1/schoolsearch/:q/:limit', to: 'api/v1/schools#search', defaults: {format: 'json'}, constraints: {q: /[^\/]+/}
+
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}

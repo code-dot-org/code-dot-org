@@ -92,6 +92,13 @@ Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt 
 <br>
 <hr>
 
+# Computer science lessons in other subjects
+
+Are you interested in a few lessons to demonstrate how computer science can be used in another subject area? Partners have created introductory tutorials as part of the Hour of Code. These provide an ideal way for a math, history, or other teacher to supplement their curriculum and let students explore the cross disciplinary aspects of computer science. Available for [science](https://hourofcode.com/learn?grade=6-8&subject=science), [math](https://hourofcode.com/learn?grade=6-8&subject=math), [social studies](https://hourofcode.com/learn?grade=6-8&subject=history), [language arts](https://hourofcode.com/learn?grade=6-8&subject=la), and [art/media/music](https://hourofcode.com/learn?grade=6-8&subject=art) classes.
+
+<br>
+<hr>
+
 [solid-block-header]
 
 Recommended courses from 3rd parties
@@ -100,8 +107,7 @@ Recommended courses from 3rd parties
 
 <a name="thirdparty"></a>
 
-
-[](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
+<!--- If you update the resources here, don't forget to also update /educate/curriculum/3rdparty -->
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|--------------------------|------|

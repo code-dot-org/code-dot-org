@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# 367743 total teachers
-
-../send-to-mailing-list --limit 380000 2016-08-24-updated-terms ./teachers.csv

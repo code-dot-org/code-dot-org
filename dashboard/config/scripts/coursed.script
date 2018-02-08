@@ -1,7 +1,9 @@
 hidden false
+hideable_stages true
 stage_extras_available true
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
+script_announcements [{"notice"=>"New: Choose Which Lessons to Show or Hide for Your Section", "details"=>"Click \"Learn More\" to read the help article on showing and hiding lessons.", "link"=>"https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses", "type"=>"bullhorn"}]
 
 stage 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming'
@@ -50,7 +52,7 @@ level 'courseD_bee_nestedLoops8'
 level 'courseD_bee_nestedLoops9'
 assessment 'courseD_bee_nestedLoops9_predict2'
 bonus 'courseD_harvester_nested_loops_challenge1'
-bonus 'courseD_collector_nested_loops_challenge2'
+bonus 'courseD_collector_nested_loops_challenge2a'
 
 stage 'Nested Loops in Artist'
 level 'courseD_artist_nestedLoops1'
@@ -94,7 +96,7 @@ level 'courseD_collector_debugging6', challenge: true
 level 'courseD_collector_debugging8'
 level 'courseD_collector_debugging9'
 level 'courseD_collector_debugging10_predict1'
-bonus 'courseD_bee_debugging_challenge1'
+bonus 'courseD_bee_debugging_challenge1a'
 bonus 'courseD_collector_debugging_challenge2'
 
 stage 'While Loops in Farmer'
@@ -193,6 +195,5 @@ level 'courseD_artist_binary6'
 level 'courseD_artist_binary7'
 level 'courseD_artist_binary8'
 assessment 'courseD_artist_binary8_predict1'
-level 'courseD_artist_binaryFP'
-bonus 'courseD_artist_binary_challenge1'
-bonus 'courseD_artist_binary_challenge2'
+bonus 'courseD_artist_binaryFP8'
+bonus 'courseD_artist_binaryFP'

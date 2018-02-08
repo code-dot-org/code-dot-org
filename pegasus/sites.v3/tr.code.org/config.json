@@ -5,7 +5,8 @@
   "about_nav": {
     "Hakkımızda": "/about",
     "Kaynaklar": "/about/resources",
-    "Ortaklar": "/about/partners"
+    "Ortaklar": "/about/partners",
+    "Etkinlikler":"/about/activities"
   },
   "header_links": {
     "Ana Sayfa": "/",
@@ -16,6 +17,7 @@
     "Dersler": "/learn",
     "Hakkımızda": "/about",
     "Kaynaklar": "/about/resources",
-    "Ortaklar": "/about/partners"
+    "Ortaklar": "/about/partners",
+    "Etkinlikler":"/about/activities"
   }
 }

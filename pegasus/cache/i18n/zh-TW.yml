@@ -29,9 +29,17 @@
   twentyhours_heading: "試試我們的計算機科學課程簡介"
   twentyhours_text: "完成您的第一個小時的程式設計課程了嗎？在此後續課程中你可以瞭解更多資訊科學和程式設計的核心觀念。"
   og_title: Code.org：每個人都可以學習
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
   og_description: "每一個學校的每一個學生都應該要有學習計算機科學的機會。"
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: "一小時的程式設計課程活動即將展開"
   csedweek_og_description: 2017 年 12 月的 4-10 日。計算機科學是每一個學生都要學習的基礎。
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
   hoc2014_heading: 加入<a href="http://hourofcode.com">一小時的程式設計課程</a> <br/>，2014 年 12
     月 8 日至 14 日 <br/>
   hoc2014_students: "所有學生"
@@ -287,6 +295,12 @@
   studiobar_donate_body: "你捐的每一分錢都能幫助一個孩子學習"
   studiobar_shop_title: "商店"
   studiobar_shop_body: "打破刻板印象，驕傲地穿戴我們的徽標。"
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "「我鼓勵世界各地的女孩都來參與一小時玩程式活動。」馬萊拉，諾貝爾和平獎得主。"
   homepage_hero_text_susan: "「如果你能改變科技，你也可以改變世界。」蘇珊，YouTube 執行長"
   homepage_hero_text_fistbump: "「不要只是在手機上玩遊戲，來寫程式吧。」歐巴馬，美國總統"
@@ -307,6 +321,8 @@
   homepage_hero_text_stat_loc: 250 萬名女孩已經參與了 Code.org 的程式設計活動
   homepage_hero_text_stat_students: 'Code.org 上已有 #student_count 個學生帳戶'
   homepage_hero_text_stat_served: "一小時玩程式：已有 #served 次參與"
+  homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: "一小時玩程式活動"
   homepage_slot_text_frozen: "與安娜與艾莎一同玩冰雪奇緣"
   homepage_slot_text_teacher: "教師控制台"
@@ -326,6 +342,7 @@
   homepage_action_text_girlvideo: "鼓勵女生一同參與"
   homepage_action_text_learn: "開始學習"
   homepage_action_text_signpetition: "在意願書上簽名"
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: "我同意 &#x25BE;"
   homepage_diversity_pledge: "承諾多樣性"
   homepage_banner_text_prizes: "一小時玩程式（Hour of Code）又來囉，就在 12 月的 7 - 13 日。 "
@@ -432,10 +449,14 @@
   mc_gradelevel: "年齡 6-106"
   mc_platformtext: "瀏覽器, 智慧手機, 平板"
   mc_specs: "多種語言 | 現代瀏覽器和平板電腦 | 年齡 6-106"
+  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: Minecraft 設計師
   minecraft_adventurer: Minecraft 探險家
   minecraft_tutorials: "一小時玩 Minecraft 教程"
   minecraft_specs: "多種語言 | 最新瀏覽器或平板電腦 | 年級 2+"
+  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
+    new activity! Journey through Minecraft with code.
+  minecraft_agent_button: "開始"
   minecraft_designer_description: "在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。"
   minecraft_designer_button: "開始"
   minecraft_adventurer_description: "使用程式積木與 Steve 或 Alex 一起完成冒險。"
@@ -443,6 +464,41 @@
   minecraft_no_internet: "沒有網路嗎？"
   minecraft_download_adventurer: "下載離線版的 Minecraft 探險家。"
   minecraft_subtitle: "一小時玩 Minecraft"
+  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
+    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
+    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
+    problem solving and loads of fun."
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+    facilitator quick start guide and PowerPoint presentations for younger and older
+    students now."
+  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
+    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
+    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
+    Get a head start on thinking through what you need to bring Hour of Code to young
+    people during Computer Science Education week (December 4-10) and beyond.
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
+    at the Microsoft Store'
+  minecraft_continue_learning_description: No computer science experience required!
+    Help ensure all youth can learn the valuable skills gained through computer science
+    education. Join us at the Microsoft Store to engage in a free series of three,
+    1-hour workshops where you will experience coding in a fun and stress-free environment,
+    become familiar with key computer science concepts, and get ready to lead an Hour
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
+    up today</a>.
+  minecraft_future: Help all youth become future ready
+  minecraft_future_description: Find out how other schools and nonprofits are bringing
+    digital skills, from digital literacy to computer science education, to their
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
+    the resources</a> they found most valuable.
+  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
+    Program animals and other Minecraft creatures in your own version of Minecraft.
+  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
+    Write code to journey through Minecraft biomes.
   sports_page_title: "一小時玩運動遊戲"
   sports_og_title: "只要不斷鞭策自己，你一定學得會。"
   sports_og_description: "世界體育冠軍和金牌得主們都在鼓勵你試試一小時玩程式活動（Hour of Code）。快來編寫一個你自己的運動遊戲。"
@@ -479,6 +535,7 @@
   video_title_obama: "美國總統 Obama 談計算機科學"
   video_title_hoc_is_here: "任何人都可以學得會的一小時玩程式（Hour of Code）來了"
   video_title_anybody_can_learn: "任何人都可以學習"
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: "和 Draymond Green 玩一小時程式"
   video_title_russell_okung: "和 Russell Okung 玩一小時程式"
   video_title_real_madrid: "和 Real Madrid 玩一小時程式"
@@ -564,6 +621,10 @@
   volunteer_engineer_submission_type_task_remote: "我希望您能透過 Skype 和我班上的孩子說些話，讓他們得到啟發。"
   volunteer_engineer_submission_type_task_mentor: "我在尋找一個導師，幫助我準備給學生的編程教學。"
   petition_age: "年齡"
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: "繼續學習"
   dashboard_landing_title: "教師主頁"
   dashboard_landing_welcome: "歡迎來到我們最新改版的教師控制台。"
   dashboard_landing_video: "觀看這個影片"
@@ -978,6 +1039,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: Post AP：App 的數據庫
   cspassessment_name: "完整測驗 - 共 50 題"
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: "測驗第一部分：25 題"
   cspexam2-AKwgAh1ac5_name: "測驗第二部分：25 題"
   cspunit3_gradelevel: "年級 9-12"
@@ -1474,9 +1537,9 @@
   playlab_shortcode: "玩"
   artist_shortcode: art
   header_home: "主頁"
-  header_my_dashboard: My Dashboard
+  header_my_dashboard: "我的儀表板"
   header_courses: "課程"
-  header_course_catalog: Course Catalog
+  header_course_catalog: "課程目錄"
   header_project_gallery: "所有專案"
   header_sections: "學習小組"
   header_professional_learning: "專業學習"
@@ -1570,3 +1633,11 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
+  dashboard_tools: 'Tools: '
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
+  gamelab_name: Game Lab

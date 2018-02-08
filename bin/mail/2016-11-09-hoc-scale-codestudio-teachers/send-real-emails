@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# 227717 csf_teachers
-../send-to-mailing-list --limit 228000 2016-11-09-hoc-scale-codestudio-teachers ./csf_teachers.csv

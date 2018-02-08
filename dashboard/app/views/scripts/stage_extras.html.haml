@@ -1,6 +1,7 @@
+%link{href: minifiable_asset_path('css/common.css'), rel: 'stylesheet', type: 'text/css'}
 #stage-extras
 
- - script_info = @script.summarize(false)
- - project_widget_visible = script_info[:project_widget_visible]
- - project_widget_types = script_info[:project_widget_types]
+  - script_info = @script.summarize(false)
+  - project_widget_visible = script_info[:project_widget_visible]
+  - project_widget_types = script_info[:project_widget_types]
 %script{src: minifiable_asset_path('js/scripts/stage_extras.js'), data: {extras: @stage_extras.to_json, widget: {visible: project_widget_visible.to_json, types: project_widget_types.to_json}}}

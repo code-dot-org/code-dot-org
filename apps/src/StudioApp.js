@@ -28,6 +28,7 @@ import DialogButtons from './templates/DialogButtons';
 import DialogInstructions from './templates/instructions/DialogInstructions';
 import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
 import FeedbackUtils from './feedback';
+import FinishDialog from './templates/FinishDialog';
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
 import SmallFooter from './code-studio/components/SmallFooter';
 import Sounds from './Sounds';
@@ -35,11 +36,13 @@ import VersionHistory from './templates/VersionHistory';
 import WireframeButtons from './templates/WireframeButtons';
 import annotationList from './acemode/annotationList';
 import color from "./util/color";
+import getAchievements from './achievements';
 import i18n from './code-studio/i18n';
 import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
 import project from './code-studio/initApp/project';
 import puzzleRatingUtils from './puzzleRatingUtils';
+import userAgentParser from './code-studio/initApp/userAgentParser';
 import {KeyCodes, TestResults} from './constants';
 import {assets as assetsApi} from './clientApi';
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
@@ -52,12 +55,21 @@ import {resetAniGif} from '@cdo/apps/utils';
 import {setIsRunning} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
+import {
+  setAchievements,
+  setBlockLimit,
+  setFeedbackData,
+  showFeedback,
+} from './redux/feedback';
 import experiments from '@cdo/apps/util/experiments';
 import {
   determineInstructionsConstants,
   setInstructionsConstants,
   setFeedback
 } from './redux/instructions';
+import { addCallouts } from '@cdo/apps/code-studio/callouts';
+import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 var copyrightStrings;
 
@@ -259,13 +271,47 @@ StudioApp.prototype.init = function (config) {
 
   this.configureDom(config);
 
+  //Only log a page load when there are videos present
+  if (config.level.levelVideos && config.level.levelVideos.length > 0 && (config.app === 'applab' || config.app === 'gamelab')) {
+    if (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab')) {
+      firehoseClient.putRecord(
+        'analysis-events',
+        {
+          study: 'instructions-resources-tab',
+          study_group: 'resources-tab',
+          event: 'resources-tab-load',
+          script_id: config.scriptId,
+          level_id: config.serverLevelId,
+          data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
+        }
+      );
+    } else {
+      firehoseClient.putRecord(
+        'analysis-events',
+        {
+          study: 'instructions-resources-tab',
+          study_group: 'under-app',
+          event: 'under-app-load',
+          script_id: config.scriptId,
+          level_id: config.serverLevelId,
+          data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
+        }
+      );
+    }
+  }
+
   ReactDOM.render(
     <Provider store={getStore()}>
-      <InstructionsDialogWrapper
-        showInstructionsDialog={(autoClose) => {
-            this.showInstructionsDialog_(config.level, autoClose);
-          }}
-      />
+      <div>
+        <InstructionsDialogWrapper
+          showInstructionsDialog={(autoClose) => {
+              this.showInstructionsDialog_(config.level, autoClose);
+            }}
+        />
+        <FinishDialog
+          onContinue={() => this.onContinue()}
+        />
+      </div>
     </Provider>,
     document.body.appendChild(document.createElement('div'))
   );
@@ -286,13 +332,8 @@ StudioApp.prototype.init = function (config) {
       containerId: config.containerId,
       embed: config.embed,
       level: config.level,
-      phone_share_url: config.send_to_phone_url,
-      sendToPhone: config.sendToPhone,
-      twitter: config.twitter,
-      app: config.app,
       noHowItWorks: config.noHowItWorks,
       isLegacyShare: config.isLegacyShare,
-      isResponsive: getStore().getState().pageConstants.isResponsive,
       wireframeShare: config.wireframeShare,
     });
   }
@@ -378,41 +419,25 @@ StudioApp.prototype.init = function (config) {
     showWarnings(config);
   }
 
-  if (!!config.level.projectTemplateLevelName && !config.level.isK1 &&
-      !config.readonlyWorkspace) {
-    this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
-  }
+  this.initProjectTemplateWorkspaceIconCallout();
 
   this.alertIfCompletedWhilePairing(config);
 
   // If we are in a non-english locale using our english-specific app
   // (the Spelling Bee), display a warning.
   if (config.locale !== 'en_us' && config.skinId === 'letters') {
-      this.displayWorkspaceAlert(
-        'error',
-        <div>
-          {msg.englishOnlyWarning({ nextStage: config.stagePosition + 1 })}
-        </div>
-      );
+    this.displayWorkspaceAlert(
+      'error',
+      <div>
+        {msg.englishOnlyWarning({ nextStage: config.stagePosition + 1 })}
+      </div>
+    );
   }
 
-  var vizResizeBar = document.getElementById('visualizationResizeBar');
-  if (vizResizeBar) {
-    dom.addMouseDownTouchEvent(vizResizeBar,
-                               _.bind(this.onMouseDownVizResizeBar, this));
-
-    // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
-    // all touchend events on the page, breaking click events...
-    document.body.addEventListener('mouseup',
-                                   _.bind(this.onMouseUpVizResizeBar, this));
-    var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
-    if (mouseUpTouchEventName) {
-      document.body.addEventListener(mouseUpTouchEventName,
-                                     _.bind(this.onMouseUpVizResizeBar, this));
-    }
-  }
-
-  window.addEventListener('resize', _.bind(this.onResize, this));
+  window.addEventListener('resize', this.onResize.bind(this));
+  window.addEventListener(RESIZE_VISUALIZATION_EVENT, (e) => {
+    this.resizeVisualization(e.detail);
+  });
 
   this.reset(true);
 
@@ -496,6 +521,29 @@ StudioApp.prototype.init = function (config) {
   }
 
   this.emit('afterInit');
+};
+
+StudioApp.prototype.initProjectTemplateWorkspaceIconCallout = function () {
+  if (getStore().getState().pageConstants.showProjectTemplateWorkspaceIcon) {
+    // The callouts can't appear until the DOM is 100% rendered by react. The
+    // safest method is to kick off a requestAnimationFrame from an async
+    // setTimeout()
+    setTimeout(() => {
+      requestAnimationFrame(() => {
+        addCallouts([{
+          id: 'projectTemplateWorkspaceIconCallout',
+          element_id: '.projectTemplateWorkspaceIcon:visible',
+          localized_text: msg.workspaceProjectTemplateLevel(),
+          qtip_config: {
+            position: {
+              my: 'top center',
+              at: 'bottom center',
+            },
+          },
+        }]);
+      });
+    }, 0);
+  }
 };
 
 StudioApp.prototype.alertIfCompletedWhilePairing = function (config) {
@@ -605,7 +653,7 @@ StudioApp.prototype.scaleLegacyShare = function () {
 
 StudioApp.prototype.getCode = function () {
   if (!this.editCode) {
-    throw "getCode() requires editCode";
+    return codegen.workspaceCode(Blockly);
   }
   if (this.hideSource) {
     return this.startBlocks_;
@@ -1152,7 +1200,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
 */
 StudioApp.prototype.onResize = function () {
   const codeWorkspace = document.getElementById('codeWorkspace');
-  if (codeWorkspace) {
+  if (codeWorkspace && $(codeWorkspace).is(':visible')) {
     var workspaceWidth = codeWorkspace.clientWidth;
 
     // Keep blocks static relative to the right edge in RTL mode
@@ -1244,22 +1292,6 @@ StudioApp.prototype.resizePinnedBelowVisualizationArea = function () {
   resizePinnedBelowVisualizationArea();
 };
 
-StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
-  // When we see a mouse down in the resize bar, start tracking mouse moves:
-
-  if (!this.onMouseMoveBoundHandler) {
-    this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
-    document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
-    this.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
-    if (this.mouseMoveTouchEventName) {
-      document.body.addEventListener(this.mouseMoveTouchEventName,
-                                     this.onMouseMoveBoundHandler);
-    }
-
-    event.preventDefault();
-  }
-};
-
 function applyTransformScaleToChildren(element, scale) {
   for (var i = 0; i < element.children.length; i++) {
     applyTransformScale(element.children[i], scale);
@@ -1277,30 +1309,6 @@ function applyTransformOrigin(element, origin) {
 }
 
 /**
-*  Handle mouse moves while dragging the visualization resize bar. We set
-*  styles on each of the elements directly, overriding the normal responsive
-*  classes that would typically adjust width and scale.
-*/
-StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
-  var visualizationResizeBar = document.getElementById('visualizationResizeBar');
-
-  var rect = visualizationResizeBar.getBoundingClientRect();
-  var offset;
-  var newVizWidth;
-  if (getStore().getState().isRtl) {
-    offset = window.innerWidth -
-      (window.pageXOffset + rect.left + (rect.width / 2)) -
-      parseInt(window.getComputedStyle(visualizationResizeBar).right, 10);
-    newVizWidth = (window.innerWidth - event.pageX) - offset;
-  } else {
-    offset = window.pageXOffset + rect.left + (rect.width / 2) -
-      parseInt(window.getComputedStyle(visualizationResizeBar).left, 10);
-    newVizWidth = event.pageX - offset;
-  }
-  this.resizeVisualization(newVizWidth);
-};
-
-/**
  * Resize the visualization to the given width. If no width is provided, the
  * scale of child elements is updated to the current width.
  */
@@ -1309,10 +1317,18 @@ StudioApp.prototype.resizeVisualization = function (width) {
     return;
   }
 
+  // We set styles on each of the elements directly, overriding the normal
+  // responsive classes that would typically adjust width and scale.
   var editorColumn = $(".editor-column");
   var visualization = document.getElementById('visualization');
   var visualizationResizeBar = document.getElementById('visualizationResizeBar');
   var visualizationColumn = document.getElementById('visualizationColumn');
+  if (!visualization || !visualizationResizeBar || !visualizationColumn) {
+    // In unit tests, this event may be receieved when the DOM isn't fully
+    // configured.  In those cases there's no visualization to resize, so
+    // stop here.  In production we don't expect to need this early-out.
+    return;
+  }
 
   var oldVizWidth = $(visualizationColumn).width();
   var newVizWidth = Math.max(this.minVisualizationWidth,
@@ -1370,19 +1386,6 @@ StudioApp.prototype.resizeVisualization = function (width) {
   utils.fireResizeEvent();
 };
 
-StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
-  // If we have been tracking mouse moves, remove the handler now:
-  if (this.onMouseMoveBoundHandler) {
-    document.body.removeEventListener('mousemove', this.onMouseMoveBoundHandler);
-    if (this.mouseMoveTouchEventName) {
-      document.body.removeEventListener(this.mouseMoveTouchEventName,
-                                        this.onMouseMoveBoundHandler);
-    }
-    this.onMouseMoveBoundHandler = null;
-  }
-};
-
-
 /**
 *  Updates the width of the toolbox-header to match the width of the toolbox
 *  or palette in the workspace below the header.
@@ -1437,16 +1440,50 @@ StudioApp.prototype.clearHighlighting = function () {
 * @param {FeedbackOptions} options
 */
 StudioApp.prototype.displayFeedback = function (options) {
-  options.onContinue = this.onContinue;
-  options.backToPreviousLevel = this.backToPreviousLevel;
-  options.sendToPhone = this.sendToPhone;
-
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
     options.feedbackType = TestResults.EDIT_BLOCKS;
   }
 
-  if (this.shouldDisplayFeedbackDialog(options)) {
+  if (experiments.isEnabled('bubbleDialog')) {
+    // eslint-disable-next-line no-unused-vars
+    const { level, response, preventDialog, feedbackType, ...otherOptions } = options;
+    if (Object.keys(otherOptions).length === 0) {
+      const store = getStore();
+      const generatedCodeProperties =
+        this.feedback_.getGeneratedCodeProperties(this.config.appStrings);
+      const studentCode = {
+        message: generatedCodeProperties.shortMessage,
+        code: generatedCodeProperties.code,
+      };
+      store.dispatch(setFeedbackData({
+        isPerfect: feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT,
+        blocksUsed: this.feedback_.getNumCountableBlocks(),
+        displayFunometer: response && response.puzzle_ratings_enabled,
+        studentCode,
+        canShare: !this.disableSocialShare && !options.disableSocialShare,
+      }));
+      store.dispatch(setAchievements(getAchievements(store.getState())));
+      if (this.shouldDisplayFeedbackDialog_(preventDialog, feedbackType)) {
+        store.dispatch(showFeedback());
+        this.onFeedback(options);
+        return;
+      }
+    }
+  }
+  options.onContinue = this.onContinue;
+  options.backToPreviousLevel = this.backToPreviousLevel;
+  options.sendToPhone = this.sendToPhone;
+  options.channelId = project.getCurrentId();
+
+  try {
+    options.shareLink = (options.response && options.response.level_source) ||
+      project.getShareUrl();
+  } catch (e) {}
+
+  if (this.shouldDisplayFeedbackDialog_(
+      options.preventDialog,
+      options.feedbackType)) {
     // let feedback handle creating the dialog
     this.feedback_.displayFeedback(options, this.requiredBlocks_,
       this.maxRequiredBlocksToFlag_, this.recommendedBlocks_,
@@ -1478,10 +1515,11 @@ StudioApp.prototype.displayFeedback = function (options) {
 /**
  * Whether feedback should be displayed as a modal dialog or integrated
  * into the top instructions
- * @param {FeedbackOptions} options
+ * @param {boolean} preventDialog
+ * @param {TestResult} feedbackType
  */
-StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
-  if (options.preventDialog) {
+StudioApp.prototype.shouldDisplayFeedbackDialog_ = function (preventDialog, feedbackType) {
+  if (preventDialog) {
     return false;
   }
 
@@ -1489,7 +1527,7 @@ StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
   // success feedback.
   const constants = getStore().getState().pageConstants;
   if (!constants.noInstructionsWhenCollapsed) {
-    return this.feedback_.canContinueToNextLevel(options.feedbackType);
+    return this.feedback_.canContinueToNextLevel(feedbackType);
   }
   return true;
 };
@@ -1550,12 +1588,14 @@ StudioApp.prototype.report = function (options) {
 
   this.lastTestResult = options.testResult;
 
+  const readOnly = getStore().getState().pageConstants.isReadOnlyWorkspace;
+
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
   // or call the onComplete() callback expected. The app will just sit
   // there with the Reset button as the only option.
   var self = this;
-  if (!(this.hideSource && this.share)) {
+  if (!(this.hideSource && this.share) && !readOnly) {
     var onAttemptCallback = (function () {
       return function (builderDetails) {
         for (var option in builderDetails) {
@@ -1706,11 +1746,15 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
   this.appMsg = config.appMsg;
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
+  getStore().dispatch(setBlockLimit(this.IDEAL_BLOCK_NUM));
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];
 
-  if (config.ignoreLastAttempt) {
+  // Always use the source code from the level definition for contained levels,
+  // so that changes made in levelbuilder will show up for users who have
+  // already run the level.
+  if (config.ignoreLastAttempt || config.hasContainedLevels) {
     config.level.lastAttempt = '';
   }
 
@@ -1809,9 +1853,28 @@ StudioApp.prototype.configureDom = function (config) {
   var referenceArea = document.getElementById('reference_area');
   // noInstructionsWhenCollapsed is used in TopInstructions to determine when to use CSPTopInstructions (in which case
   // display videos in the top instructions) or CSFTopInstructions (in which case the videos are appended here).
-  const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && experiments.isEnabled('resourcesTab');
+  const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab'));
   if (!referenceAreaInTopInstructions && referenceArea) {
     belowViz.appendChild(referenceArea);
+    // TODO (epeach) - remove after resources tab A/B testing
+    // Temporarily attach an event listener to log clicks
+    // Logs the type of app and the ids of the puzzle
+    var videoThumbnail = document.getElementsByClassName('video_thumbnail');
+    if (videoThumbnail[0] && (config.app === 'gamelab' || config.app === 'applab')) {
+      videoThumbnail[0].addEventListener('click', () => {
+        firehoseClient.putRecord(
+          'analysis-events',
+          {
+            study: 'instructions-resources-tab',
+            study_group: 'under-app',
+            event: 'under-app-video-click',
+            script_id: config.scriptId,
+            level_id: config.serverLevelId,
+            data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
+          }
+        );
+      });
+    }
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
@@ -1885,10 +1948,6 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   }
   workspaceDiv.style.display = 'none';
 
-  if (!options.isResponsive) {
-    document.getElementById('visualizationResizeBar').style.display = 'none';
-  }
-
   // Chrome-less share page.
   if (this.share) {
     if (options.isLegacyShare || options.wireframeShare) {
@@ -1935,9 +1994,8 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       }
 
       if (!options.embed && !options.noHowItWorks) {
-        var runButton = document.getElementById('runButton');
-        var buttonRow = runButton.parentElement;
-        var openWorkspace = document.createElement('button');
+        const buttonRow = document.getElementById('gameButtons');
+        const openWorkspace = document.createElement('button');
         openWorkspace.setAttribute('id', 'open-workspace');
         openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
 
@@ -2375,6 +2433,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     disableParamEditing: utils.valueOr(config.level.disableParamEditing, true),
     disableVariableEditing: utils.valueOr(config.level.disableVariableEditing, false),
     disableProcedureAutopopulate: utils.valueOr(config.level.disableProcedureAutopopulate, false),
+    topLevelProcedureAutopopulate: utils.valueOr(config.level.topLevelProcedureAutopopulate, false),
     useModalFunctionEditor: utils.valueOr(config.level.useModalFunctionEditor, false),
     useContractEditor: utils.valueOr(config.level.useContractEditor, false),
     disableExamples: utils.valueOr(config.level.disableExamples, false),
@@ -2408,6 +2467,14 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     config.afterInject();
   }
   this.setStartBlocks_(config, true);
+
+  if (userAgentParser.isMobile() && userAgentParser.isSafari()) {
+    // Mobile Safari resize events fire too early, see:
+    // https://openradar.appspot.com/31725316
+    // Rerun the blockly resize handler after 500ms when clientWidth/Height
+    // should be correct
+    window.setTimeout(() => Blockly.fireUiEvent(window, 'resize'), 500);
+  }
 };
 
 /**
@@ -2860,10 +2927,15 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
+    userId: config.userId,
     textToSpeechEnabled: config.textToSpeechEnabled,
     isK1: config.level.isK1,
     appType: config.app,
     nextLevelUrl: config.nextLevelUrl,
+    showProjectTemplateWorkspaceIcon: !!config.level.projectTemplateLevelName &&
+      !config.level.isK1 &&
+      !config.readonlyWorkspace,
+    serverLevelId: config.serverLevelId,
   }, appSpecificConstants);
 
   getStore().dispatch(setPageConstants(combined));

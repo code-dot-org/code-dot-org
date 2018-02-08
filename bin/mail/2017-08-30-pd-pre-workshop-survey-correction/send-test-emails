@@ -1,3 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list --limit 1 2017-08-30-pd-pre-workshop-survey-correction ./test-params.csv

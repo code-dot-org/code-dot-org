@@ -36,11 +36,12 @@ CSV.open(output_filename, 'wb') do |csv|
     name = row['Name']
     record = records_by_name[name.downcase]
     if record
-      if record.length == 1
-        csv << [name, record.first[:email]]
-      else
-        csv << [name, record]
-      end
+      csv <<
+        if record.length == 1
+          [name, record.first[:email]]
+        else
+          [name, record]
+        end
       matches[record.length] += 1
     else
       csv << [name, nil]

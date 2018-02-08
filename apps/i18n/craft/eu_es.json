@@ -1,6 +1,9 @@
 {
   "absolute": "absolutua",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "at",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
   "blockActionAdd": "gehitu",
   "blockActionAttack": "eraso egin",
   "blockActionClone": "clone blocks",
@@ -110,6 +113,12 @@
   "blockTypeTree": "zuhaitza",
   "blockTypeWater": "ura",
   "blockTypeWool": "artile",
+  "blockTypeWoolBlue": "blue wool",
+  "blockTypeWoolMagenta": "magenta wool",
+  "blockTypeWoolOrange": "orange wool",
+  "blockTypeWoolPink": "pink wool",
+  "blockTypeWoolRed": "red wool",
+  "blockTypeWoolYellow": "yellow wool",
   "blockWhileXAheadAhead": "aurrean",
   "blockWhileXAheadDo": "egin",
   "blockWhileXAheadWhile": "bitartean",
@@ -231,6 +240,7 @@
   "quantity": "kopurua",
   "reinfFeedbackMsg": "\"Jokatzen jarraitu\" sakatu dezakezu zure jokoan jokatzen jarraitzeko.",
   "relative": "erlatiboa",
+  "runAgent": "Run Agent",
   "score": "Puntuaketa",
   "seconds": "segundo",
   "selectChooseButton": "Aukeratu",
@@ -286,6 +296,5 @@
   "weather": "eguraldia",
   "weatherTypeClear": "oskarbi",
   "weatherTypeRain": "euria",
-  "weatherTypeThunder": "trumoia",
-  "runAgent": "Run Agent"
+  "weatherTypeThunder": "trumoia"
 }

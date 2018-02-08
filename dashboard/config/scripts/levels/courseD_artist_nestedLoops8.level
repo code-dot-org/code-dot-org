@@ -33,13 +33,15 @@
     "instructions_important": "false",
     "discard_background": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"To have 8 hexagons in your drawing, you'll need to turn **45 degrees** between each of them. Why? Because 360 degrees (a full turn around) divided by 8 (the number of hexagons) is 45 degrees.\",\"hint_id\":\"courseD_artist_nestedLoops8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fedcf81da410abbed3c31f7cde8188af/courseD_artist_nestedLoops8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you're stuck, start by looking at the last puzzle, then change the things that are different.\",\"hint_id\":\"courseD_artist_nestedLoops8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/566313c796c6550baeddf1d041a025ad/courseD_artist_nestedLoops8.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Use a nested loop:\\n\\n - Repeat 8 times\\n    - draw a hexagon\\n    - jump forward 50 pixels\\n    - turn right 45 degrees\",\"hint_id\":\"courseD_artist_nestedLoops8_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/aa45ff9c55722d766662e7523628d9a5/courseD_artist_nestedLoops8.mp3\"}]",
-    "markdown_instructions": "Using what you have learned in the last couple of puzzles, build this image from the beginning.\r\n\r\n- Each hexagon has **50 pixel sides** and **60 degree angles**",
+    "markdown_instructions": "Using what you have learned in the last couple of puzzles, build this image from the beginning.\r\n\r\n- Each hexagon has **50 pixel sides** and **60 degree turns**",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-10-31 20:37:48 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 5

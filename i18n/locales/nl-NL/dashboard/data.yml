@@ -161,19 +161,19 @@ nl:
         'bounce_1_basketball': "Plak een blok aan het \"als pijltje naar links\" blok en druk op 'Uitvoeren'. Verplaats de hand met behulp van de pijl naar links om het doel te bereiken."
         'bounce_2_basketball': "Plak een blok aan de \"als pijltje naar rechts\" en \"als pijltje naar links\" blokken en druk op 'Uitvoeren'. Verplaats de hand om de doelen te bereiken."
         'bounce_5_basketball': "We gaan een bal naar da hand laten vliegen. Plak een blok aan het blok \"als de bal de hand raakt\" om ervoor te zorgen dat de bal het doel bereikt."
-        'bounce_6_basketball': "Now the flag is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle."
-        'bounce_7_basketball': "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the flag."
-        'bounce_10_basketball': "Now there is a goal at the top! Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses hand\" blocks to make a game. See how many points you can score before your opponent scores twice."
+        'bounce_6_basketball': "De vlag staat nu bovenaan. Om deze puzzel op te lossen dien je blokken te koppelen aan de \"wanneer bal hand raakt\" blok."
+        'bounce_7_basketball': "Koppel blokken aan ieder \"als\" blok. Stuiter de bal totdat het de vlag raakt."
+        'bounce_10_basketball': "Het doel staat nu bovenaan. Koppel de \"scoor punt\" en \"punt voor de tegenstander\" blokken aan de \"Wanneer bal in het doel is\" en \"wanneer bal hand mist\" blokken om een spel te maken. Bekijk hoeveel punten je kan scoren vooraleer je tegenstander tweemaal scoort."
         'bounce_11_basketball': "You can now attach blocks to the \"when run\" block. You have to attach the new \"throw new ball\" block in more than one place. Also, try changing the scene or the speed of the hand and the ball and see how many points you can score before your opponent scores twice!"
-        'bounce_12_basketball': "Create your own Basketball game. You can change all the rules. When you're done, click Finish to let friends try your game on their phones."
+        'bounce_12_basketball': "Creëer je eigen basketbal spel. Je kan alle regels veranderen. Wanneer je gedaan hebt, klik dan op Klaar om je vrienden je spel uit te laten proberen op hun telefoons."
         'bounce_1_sports': "Get to the flag! Attach a block to the \"when left arrow\" block and press \"Run\" to move the player to the flag."
         'bounce_2_sports': "There are two flags now! Attach a block to the \"when left arrow\" and \"when right arrow\" blocks to make your player move in two directions."
         'bounce_5_sports': "The hockey puck is going to fly down toward the player! Attach a block to the \"when ball hits player\" block to hit the flag."
-        'bounce_6_sports': "Now the flag is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle."
-        'bounce_7_sports': "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the flag."
+        'bounce_6_sports': "De vlag staat nu bovenaan. Om deze puzzel op te lossen dien je blokken te koppelen aan de \"wanneer bal hand raakt\" blok."
+        'bounce_7_sports': "Koppel blokken aan ieder \"als\" blok. Stuiter de bal totdat het de vlag raakt."
         'bounce_10_sports': "Now there is a goal at the top! Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses hand\" blocks to make a game. See how many points you can score before your opponent scores twice!"
         'bounce_11_sports': "You can now attach blocks to the \"when run\" block. You have to attach the new \"throw new ball\" block in more than one place. Also, try changing the scene or the speed of the hand and the ball and see how many points you can score before your opponent scores twice!"
-        'bounce_12_sports': "Create your own game! You're in charge here: you can change all the rules, mix and match sports, get creative! When you're done, click Finish to let friends try your game on their phones."
+        'bounce_12_sports': "Creëer je eigen spel! Jij bent hier de baas: je kan alle regels wijzigen. Meng verschillende sporten of bouw er één na. Wees creatief! Klik wanneer je klaar bent op 'Voltooien' om je vrienden je spel te laten proberen op hun telefoons."
         'bounce_1': "Plak een blok aan het \"als pijltje naar links\" blok en druk op 'Uitvoeren'. Verplaats het batje met behulp van de pijl naar links om het doel te bereiken."
         'bounce_2': "Plak een blok aan de \"als pijltje naar rechts\"  en \"als pijltje naar links\" blokken en druk op 'Uitvoeren'. Verplaats het batje om de doelen te bereiken."
         'bounce_3': "Probeer nu iets gelijks met \"als pijltje naar boven\" blok. Verplaats het badje met behulp van de pijl naar boven om het doel te bereiken."
@@ -184,7 +184,7 @@ nl:
         'bounce_10': "Nu is het doel boven. Plak het \"Punten\" en \"Punten tegenstander\" blok aan het \"als bal het doel raakt\" en \"als de bal het batje mist\" blok om er een spel van te maken. Zie hoeveel punten je kan krijgen voordat je tegenstander twee punten krijgt."
         'bounce_11': "Je kan nu blokken plakken aan het \"als het spel start\" blok. Je moet het nieuwe \"nieuwe bal\" blok op meerdere plaatsen plakken. Probeer ook de achtergrond of de snelheid van het batje en de bal te veranderen. En zie hoeveel punten je kan krijgen voordat je tegenstander twee punten krijgt."
         'bounce_12': "Maak je eigen stuiterspel. Je kan alle plaatjes en regels wijzigen. Klik wanneer je klaar bent op Voltooien om je vrienden je spel te laten proberen op hun telefoons."
-        'Custom_builder': "Sleep blokken van de gereedschapskist naar de werkplaats om het level dat je wilt te tekenen. Drop op \"Uitvoeren\" als je klaar bent."
+        'Custom_builder': "Sleep blokken van de gereedschapskist naar de werkplaats om je level naar wens te tekenen. Druk op \"Uitvoeren\" als je klaar bent."
         'flappy_1': "Plak een blok aan het \"bij een klik\" blok, klik dan op \"Uitvoeren\". Klik of raak het scherm aan om Flappy naar zijn doel te bewegen."
         'flappy_2': "Nu hebben we wat grond toegevoegd. Plak een blok aan het \"bij het raken van de grond\" blok. Je code moet 'Stop spel' als Flappy neerstort."
         'flappy_3': "Met de \"bij uitvoeren\" blok  kun je code uitvoeren wanneer je spel start. Probeer de niveausnelheid en het fladderen naar het doel in te stellen."
@@ -314,7 +314,7 @@ nl:
         'loop_while': "Zolang Blok"
         'loop_for': "Teller Blok"
         'parameters': "Functies met Parameters"
-        'hoc_wrapup': "CodeUur Samenvatting"
+        'hoc_wrapup': "'Hour of Code' Samenvatting"
         'Unplug1': 'Wat is CS?'
         'Unplug2': 'Rekenend Denken'
         'Unplug3': 'Programmeren op Ruitjespapier'
@@ -396,22 +396,23 @@ nl:
         'C4_unplugged_forloops': 'For-lussen'
         'C4_unplugged_parameters': 'Liedjes schrijven met Parameters'
         'C4_unplugged_binary': 'Binaire'
+        'CSF_a_b_artist_loops': 'Loops in Artist'
         'CSF_artist_angles': 'Angles in Artist'
         'CSF_collector_k1_blocks': 'CS Fundamentals: The Collector'
         'CSF_collector_repeat_loops': 'Collector Repeat Loops'
         'CSF_collector_text_blocks': 'CS Fundamentals: The Collector'
         'CSF_create_functions': 'Maken van functies'
-        'CSF_debugging_k1_blocks': 'Debugging'
-        'CSF_debugging_text_blocks': 'Debugging'
+        'CSF_debugging_k1_blocks': 'Foutopsporing'
+        'CSF_debugging_text_blocks': 'Foutopsporing'
         'CSF_EF_cs_matters': 'Informatica doet ertoe'
-        'CSF_maze_intro_k1_blocks': 'Intro to Code Studio'
-        'CSF_maze_intro_text_blocks': 'Intro to Code Studio'
+        'CSF_maze_intro_k1_blocks': 'Inleiding tot Code Studio'
+        'CSF_maze_intro_text_blocks': 'Inleiding tot Code Studio'
         'CSF_my_robotic_friends': 'My Robotic Friends'
         'CSF_Power_of_Words': 'De kracht van woorden'
-        'CSF_Super_Digital_Citizen': 'Super Digital Citizen'
-        'CSF_stevie_big_project': 'Stevie and the Big Project'
+        'CSF_Super_Digital_Citizen': 'Super Digitale Inwoner'
+        'CSF_stevie_big_project': 'Stevie en het Grote Project'
         'CSF_unspotted_bugs': 'Onbekende bugs'
-        'CSF_zuck_loops_short': 'Repeat Loops'
+        'CSF_zuck_loops_short': 'Herhaal Lussen'
         'frozen_intro': 'Uur Code Intro'
         'frozen_loops': 'Inleiding tot Lussen'
         'frozen_functions': 'Inleiding tot Functies'
@@ -422,9 +423,16 @@ nl:
         'infinity_playlab_intro': 'Play Lab - Inleiding'
         'infinity_playlab_events': 'Play Lab - Gebeurtenissen'
         'infinity_playlab_repeat_forever': 'Play Lab - Oneindig Herhalen'
+        'csd_concept_how_computers_work': 'Introducing How Computers Work'
         'csd_concept_computer': 'Wat maakt een Computer, een Computer?'
-        'csd_concept_binary_data': 'How Computers Work: Binary & Data'
+        'csd_concept_binary_data': 'Hoe Computers Werken: Binair & Data'
+        'csd_concept_circuits_logic': 'How Computers Work: Circuits & Logic'
+        'csd_concept_memory_cpu_input_output': 'How Computers Work: Memory, CPU, Input, & Output'
+        'csd_concept_hardware_software': 'How Computers Work: Hardware & Software'
         'csd_concept_search': 'Hoe zoeken werkt'
+        'csd_external_amazon_data': 'Hoe Big Data Gebruikt Wordt Door Amazon''s Aanbevelingssysteem Om Onze Levens Te Veranderen'
+        'csd_external_netflix_data': 'How Does Netflix Make TV Show and Movie Suggestions?'
+        'csd_external_waze_data': 'Waarom Zijn Zoveel Gebruikers Geobsedeerd Door Waze?'
         'csd_gamelab_animation_tab': 'Het tabblad Animatie'
         'csd_gamelab_conditionals_1': 'Introduction to Conditionals - Part 1'
         'csd_gamelab_conditionals_2': 'Introduction to Conditionals - Part 2'
@@ -438,9 +446,9 @@ nl:
         'csd_gamelab_velocity': 'Snelheid'
         'csd_weblab_intro_1': 'Intro to Web Lab - Part 1'
         'csd_weblab_intro_2': 'Intro to Web Lab - Part 2'
-        'csd_weblab_css_1': 'Intro to CSS - Part 1'
-        'csd_weblab_css_2': 'Intro to CSS - Part 2'
-        'csd_weblab_intro_3': 'Intro to Web Lab - Part 3'
+        'csd_weblab_css_1': 'Introductie tot CSS - Deel 1'
+        'csd_weblab_css_2': 'Introductie tot CSS - Deel 2'
+        'csd_weblab_intro_3': 'Introductie tot Web Lab - Deel 3'
         'csp_applab_objects': 'Introduction to Objects'
         'csp_applab_databases_1': 'Introduction to Databases - Part 1'
         'csp_applab_databases_2': 'Introduction to Databases - Part 2'
@@ -525,11 +533,38 @@ nl:
         'mc_2016_events': 'Minecraft Code Uur - Evenementen'
         'mc_2016_spawn': 'Minecraft Code Uur - Neerzetten'
         'mc_2016_congrats': 'Minecraft Code Uur - Gefeliciteerd'
-        'applab_hoc_welcome': 'App Lab Hour of Code - Welcome'
+        'applab_hoc_welcome': 'App Lab Hour of Code - Welkom'
         'applab_hoc_setproperty': 'App Lab Hour of Code - setProperty'
         'applab_hoc_onevent': 'App Lab Hour of Code - onEvent'
-        'applab_hoc_designmode': 'AppLab Hour of Code - Design Mode'
-        'applab_hoc_share': 'AppLab Hour of Code - Share'
+        'applab_hoc_designmode': 'App Lab Hour of Code - Design Mode'
+        'applab_hoc_share': 'AppLab Hour of Code - Delen'
+        'mc_2017_agent_intro': 'Minecraft Hour of Code - De Agent'
+        'mc_2017_repeat': 'Minecraft Hour of Code - Herhaal Lussen'
+        'mc_2017_functions': 'Minecraft Hour of Code - Functies'
+        'mc_2017_congratulations': 'Minecraft Code Uur - Gefeliciteerd'
+        'mc_2017_puzzle_1': 'Minecraft Hour of Code - De Agent'
+        'mc_2017_puzzle_3': 'Minecraft Hour of Code - Herhaal Lussen'
+        'mc_2017_puzzle_8': 'Minecraft Hour of Code - Functies'
+        'mc_2017_puzzle_12': 'Minecraft Hour of Code - Vrij Spelen'
+        'hint_videos_d_11_3_first': 'Hint Videos: D.11.3 First'
+        'hint_videos_d_11_3_last': 'Hint Videos: D.11.3 Last'
+        'hint_videos_d_11_4_first': 'Hint Videos: D.11.4 First'
+        'hint_videos_d_11_4_last': 'Hint Videos: D.11.4 Last'
+        'hint_videos_d_11_5_first': 'Hint Videos: D.11.5 First'
+        'hint_videos_d_11_5_last': 'Hint Videos: D.11.5 Last'
+        'hint_videos_d_11_6_first': 'Hint Videos: D.11.6 First'
+        'hint_videos_d_11_6_last': 'Hint Videos: D.11.6 Last'
+        'hint_videos_d_11_7_first': 'Hint Videos: D.11.7 First'
+        'hint_videos_d_11_7_last': 'Hint Videos: D.11.7 Last'
+        'hint_videos_d_11_9_first': 'Hint Videos: D.11.9 First'
+        'hint_videos_d_11_9_last': 'Hint Videos: D.11.9 Last'
+        'hint_videos_d_11_11_first': 'Hint Videos: D.11.11 First'
+        'hint_videos_d_11_11_last': 'Hint Videos: D.11.11 Last'
+        'applab_intro_welcome': 'App Lab - Getting Started'
+        'applab_intro_events': 'App Lab - Make It Interactive'
+        'applab_intro_sounds': 'App Lab - Images and Sounds'
+        'applab_intro_designmode': 'App Lab - Design Mode'
+        'applab_intro_share': 'App Lab - Share Your App'
     callout:
       text:
         drag_blocks: 'Sleep een "vooruit" blok en plak het onder het andere blok'

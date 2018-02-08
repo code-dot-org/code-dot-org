@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_op_ed) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ### 以下はコンピューターサイエンス週間の支援のための論説例です。州議員、国会議員、ビジネスリーダーの方々に利用してもらうことを意図しています。

@@ -2,7 +2,6 @@
 @dashboard_db_access
 @as_student
 Feature: App Lab Scenarios
-# Do not re-enable on circle until https://github.com/elgalu/docker-selenium/issues/20 is addressed.
 
   Scenario: Template backed level
     # One of two levels backed by the same template
@@ -13,6 +12,7 @@ Feature: App Lab Scenarios
 
     Then I reset the puzzle to the starting version
     And I wait to see "#runButton"
+    And I wait to see ".projectTemplateWorkspaceIcon"
     And the palette has 2 blocks
     And the droplet code is "turnRight(90);\n"
 
@@ -26,6 +26,7 @@ Feature: App Lab Scenarios
     Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/11?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
+    And I wait to see ".projectTemplateWorkspaceIcon"
 
     Then the palette has 2 blocks
     And the droplet code is "turnRight(90);\nturnLeft(90);\n"
@@ -39,4 +40,5 @@ Feature: App Lab Scenarios
     Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/10?noautoplay=true"
     And I rotate to landscape
     And I wait to see "#runButton"
+    And I wait to see ".projectTemplateWorkspaceIcon"
     And the droplet code is "turnRight(90);\nturnLeft(90);\nturnRight(10);\n"

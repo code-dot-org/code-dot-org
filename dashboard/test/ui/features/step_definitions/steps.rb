@@ -21,6 +21,8 @@ end
 def element_stale?(element)
   element.enabled?
   false
+rescue Selenium::WebDriver::Error::JavascriptError => e
+  e.message.starts_with? 'Element does not exist in cache'
 rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
   true
 end
@@ -115,12 +117,6 @@ When /^I close the dialog$/ do
   STEPS
 end
 
-When /^I close the React alert$/ do
-  steps <<-STEPS
-    When I click selector ".react-alert button"
-  STEPS
-end
-
 When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
   wait_until {@browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';")}
 end
@@ -130,13 +126,13 @@ When /^I reset the puzzle to the starting version$/ do
     Then I click selector "#versions-header"
     And I wait to see a dialog titled "Version History"
     And I see "#showVersionsModal"
-    And I wait until element "button:contains(Delete Progress)" is visible
+    And I wait until element "button:contains(Start over)" is visible
     And I close the dialog
     And I wait until element "#showVersionsModal" is gone
     And I wait for 3 seconds
     Then I click selector "#versions-header"
-    And I wait until element "button:contains(Delete Progress)" is visible
-    And I click selector "button:contains(Delete Progress)"
+    And I wait until element "button:contains(Start over)" is visible
+    And I click selector "button:contains(Start over)"
     And I click selector "#confirm-button"
     And I wait until element "#showVersionsModal" is gone
     And I wait for 3 seconds
@@ -249,6 +245,23 @@ When /^I press "([^"]*)"( to load a new page)?$/ do |button, load|
     @button = @browser.find_element(id: button)
   end
   page_load(load) {@button.click}
+end
+
+When /^I press the child number (.*) of class "([^"]*)"( to load a new page)?$/ do |number, selector, load|
+  wait_short_until do
+    @elements = @browser.find_elements(:css, selector)
+    @element = @elements[number.to_i]
+  end
+
+  page_load(load) do
+    begin
+      @element.click
+    rescue
+      # Single retry to compensate for element changing between find and click
+      @element = @browser.find_element(:css, selector)
+      @element.click
+    end
+  end
 end
 
 When /^I press the first "([^"]*)" element( to load a new page)?$/ do |selector, load|
@@ -1108,11 +1121,20 @@ When /^I press enter key$/ do
   @browser.action.send_keys(:return).perform
 end
 
+When /^I press double-quote key$/ do
+  @browser.action.send_keys('"').perform
+end
+
 When /^I disable onBeforeUnload$/ do
   @browser.execute_script("window.__TestInterface.ignoreOnBeforeUnload = true;")
 end
 
 Then /^I get redirected away from "([^"]*)"$/ do |old_path|
+  wait_short_until {!/#{old_path}/.match(@browser.execute_script("return location.pathname"))}
+end
+
+Then /^I get redirected away from the current page$/ do
+  old_path = @browser.execute_script("return location.pathname")
   wait_short_until {!/#{old_path}/.match(@browser.execute_script("return location.pathname"))}
 end
 
@@ -1129,23 +1151,32 @@ Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
 
   if redirect_source == 'pushState'
     state = {"modified" => true}
-  elsif redirect_source == 'dashboard' || redirect_source == 'none'
+  elsif ['dashboard', 'none'].include? redirect_source
     state = nil
   end
   expect(@browser.execute_script("return window.history.state")).to eq(state)
 end
 
 last_shared_url = nil
-Then /^I navigate to the share URL$/ do
+Then /^I save the share URL$/ do
   wait_short_until {@button = @browser.find_element(id: 'sharing-input')}
   last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
-  @browser.navigate.to last_shared_url
-  wait_for_jquery
+end
+
+Then /^I navigate to the share URL$/ do
+  steps <<-STEPS
+    Then I save the share URL
+    And I navigate to the last shared URL
+  STEPS
 end
 
 Then /^I navigate to the last shared URL$/ do
   @browser.navigate.to last_shared_url
   wait_for_jquery
+end
+
+Then /^I enter the last shared URL into input "(.*)"$/ do |selector|
+  @browser.execute_script("document.querySelector('#{selector}').value = \"#{last_shared_url}\"")
 end
 
 Then /^I copy the embed code into a new document$/ do
@@ -1309,13 +1340,47 @@ Then /^the section table should have (\d+) rows?$/ do |expected_row_count|
   expect(row_count.to_i).to eq(expected_row_count.to_i)
 end
 
-Then /^the section table row at index (\d+) has script href "([^"]+)"$/ do |row_index, expected_href|
-  actual_href = @browser.execute_script(
+Then /^the section table row at index (\d+) has script path "([^"]+)"$/ do |row_index, expected_path|
+  href = @browser.execute_script(
     "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(1)').attr('href');"
   )
-  expect(actual_href).to eq(expected_href)
+  # ignore query params
+  actual_path = href.split('?')[0]
+  expect(actual_path).to eq(expected_path)
+end
+
+Then /^I save the section id from row (\d+) of the section table$/ do |row_index|
+  @section_id = get_section_id_from_table(row_index)
+end
+
+Then /^the url contains the section id$/ do
+  expect(@section_id).to be > 0
+  expect(@browser.current_url).to include("?section_id=#{@section_id}")
+end
+
+Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
+  href = @browser.execute_script("return $(\"#{selector}\").attr('href');")
+  expect(@section_id).to be > 0
+
+  # make sure the query params do not come after the # symbol
+  expect(href.split('#')[0]).to include("?section_id=#{@section_id}")
+end
+
+# @return [Number] the section id for the corresponding row in the sections table
+def get_section_id_from_table(row_index)
+  # e.g. https://code.org/teacher-dashboard#/sections/54
+  href = @browser.execute_script(
+    "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(1) a').attr('href')"
+  )
+  section_id = href.split('/').last.to_i
+  expect(section_id).to be > 0
+  section_id
 end
 
 Then /^I scroll the save button into view$/ do
   @browser.execute_script('$(".uitest-saveButton")[0].scrollIntoView(true)')
+end
+
+Then /^I open the section action dropdown$/ do
+  steps 'Then I click selector ".ui-test-section-dropdown" once I see it'
 end

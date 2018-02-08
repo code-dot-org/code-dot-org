@@ -4,7 +4,7 @@ title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Unit 6: Lesson 6 - Explore PT Prep - Making a Plan
+# Explore PT Prep - Making a Plan
 
 ## Background
 
@@ -12,36 +12,27 @@ Make a plan to prioritize what you will do and when in order to complete the Exp
 
 ## Lesson
 
-* Review Practice PTs.
-* Make a plan
-* Review Research Practices and Strategies
-* Check in on student preparedness guidelines.
+* Introduce The Explore PT Survival Guide
+    * Picking a Good Computing Innovation
+    * Computing Innovation Brainstorm Activity 
+    * Harmful effects v. data security concerns 
+    * Rapid Research - Harmful Effects
+* Making a plan to complete the Explore PT
+
 
 ## Resources
 
-**Review and Planning Documents**
-
-* Explore PT - [Checklist](https://docs.google.com/document/d/1_Q9D1utxDup_4yc1frFCcnEboy_THvsPeIkARZ4by0s/edit)
-* Explore PT - [Sample Timeline](https://docs.google.com/document/d/1TQaCXMkXQ-KpKmN81I4wiRDdQvUfjuaiFLzOPCyMSb8/edit)
-* Explore PT - [Guidelines before starting](https://docs.google.com/document/d/1uzylD9CNW0M6EnS3B4X3YcU9ArSNcLsO80m97lWLQ0s/edit)
-* (Optional) Explore PT - [Template for written responses](https://docs.google.com/document/d/1dEZGM8IZoT3WX4T08NS-Nh-Hi38SVtSF65htxGJpv94/edit)
-
 **College Board Documents**
 
-* [Explore Performance Task](https://drive.google.com/open?id=0B2QFqkDgv9LjLUtreXQ0a3FrWlE) - Task Description
-* [Scoring Guidelines - Explore Performance Task](https://drive.google.com/open?id=0B2QFqkDgv9LjMDlta0QzUy04NVE)
+* [AP CSP Performance Task Directions for Students](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf?course=ap-computer-science-principles) - College Board Student Handout
+* [Explore Performance Task - Scoring Guidelines 2018](https://apcentral.collegeboard.org/pdf/2018-explore-performance-tasks-sg.pdf?course=ap-computer-science-principles) - College Board Doc
 
-* *Explore PT Samples:* [Sample A ](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/232659.html)| Sample B | [Sample C](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/232661.html)
-| [Sample D](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/233027.html)
-| [Sample E](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/233028.html)
+**Review and Planning Documents**
 
-  *(note: sample B removed by College Board)*
-  
-**Other Resources**
+* [Explore PT Survival Guide](https://docs.google.com/document/d/1savzKfWdI6qszDLWDwfNWLQKsbN7021K36kjeqDxzgk/export?format=pdf) - Student Guide (copy as [MS Word](https://docs.google.com/document/d/1savzKfWdI6qszDLWDwfNWLQKsbN7021K36kjeqDxzgk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1savzKfWdI6qszDLWDwfNWLQKsbN7021K36kjeqDxzgk/copy))
+    * [Explore PT Planning Organizer -- page 5 from survival guide](https://cdo-curriculum.s3.amazonaws.com/media/uploads/explore-pt-planning-organizer-hires.pdf) - High Resolution PDF
 
-* [Explore PT - Guidelines before Starting](https://docs.google.com/document/d/1uzylD9CNW0M6EnS3B4X3YcU9ArSNcLsO80m97lWLQ0s/edit)
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

@@ -21,7 +21,7 @@ class SectionsController < ApplicationController
       # If given a course and script, make sure the script is in that course
       return head :bad_request if course_id && course_id != script.course.try(:id)
       # If script has a course and no course_id was provided, use default course
-      course_id = script.course.try(:id) unless course_id
+      course_id ||= script.course.try(:id)
     end
 
     section.update!(course_id: course_id, script_id: script_id)
@@ -38,7 +38,7 @@ class SectionsController < ApplicationController
       bypass_sign_in user
       user.update_tracked_fields!(request)
       session[:show_pairing_dialog] = true if params[:show_pairing_dialog]
-      check_and_apply_clever_takeover(user) if cookies['pm'] == 'clever_takeover'
+      check_and_apply_clever_takeover(user)
       redirect_to_section_script_or_course
     else
       flash[:alert] = I18n.t('signinsection.invalid_login')

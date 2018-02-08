@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# 13879 volunteers.
-../send-to-mailing-list --limit 14000 2016-11-29-volunteer-hoc-is-here ./volunteers.csv

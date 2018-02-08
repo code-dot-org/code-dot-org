@@ -10,7 +10,7 @@
 .dropbox
 .tmputils
 .idea/
-/bin/i18n/crowdin_credentials.yml
+/bin/i18n/*_credentials.yml
 npm-debug.log
 /.dropbox.cache
 /.gdrive_session
@@ -20,9 +20,12 @@ npm-debug.log
 /apps/build-times.log
 /apps/build-times-to-upload.log
 /apps/coverage
+/apps/log
 /apps/newrelic_agent.log
 /apps/node_modules/
 /apps/npm-debug.log
+/apps/src/generated/*
+!/apps/src/generated/README.md
 /apps/src/util/color.js
 /apps/src/util/sharedConstants.js
 /apps/src/applab/sharedApplabBlocks.js
@@ -36,6 +39,8 @@ npm-debug.log
 /aws/.code-studio-commit-built
 /aws/.shared-built
 /aws/.shared-commit-built
+/aws/offsite/lambda/*/node_modules/
+/aws/offsite/lambda/*.zip
 /bin/cron/.dts
 /bin/cron/log
 /build-started

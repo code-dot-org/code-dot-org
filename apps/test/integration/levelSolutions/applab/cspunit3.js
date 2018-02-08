@@ -178,7 +178,7 @@ module.exports = {
         Applab.onPuzzleComplete();
       },
       customValidator: function (assert) {
-        var errorText = 'Unknown identifier: turnRight';
+        var errorText = "we can’t figure out what turnRight is";
 
         var debugOutput = document.getElementById('debug-output');
         assert(debugOutput.textContent.indexOf(errorText) !== -1,

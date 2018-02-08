@@ -13,11 +13,13 @@ import LookbackLogger from './LookbackLogger';
 import _ from 'lodash';
 import five from '@code-dot-org/johnny-five';
 import PlaygroundIO from 'playground-io';
+import Button from './Button';
 import Thermometer from './Thermometer';
 import TouchSensor from './TouchSensor';
 import Piezo from './Piezo';
 import NeoPixel from './NeoPixel';
 import Led from './Led';
+import Switch from './Switch';
 import experiments from '../../../util/experiments';
 
 /**
@@ -42,7 +44,7 @@ export function createCircuitPlaygroundComponents(board) {
 
       led: new Led({board, pin: 13}),
 
-      toggleSwitch: new five.Switch({board, pin: 21}),
+      toggleSwitch: new Switch(board),
 
       buzzer: new Piezo({
         board,
@@ -58,9 +60,9 @@ export function createCircuitPlaygroundComponents(board) {
 
       accelerometer: initializeAccelerometer(board),
 
-      buttonL: initializeButton(board, '4'),
+      buttonL: new Button({board, pin: 4}),
 
-      buttonR: initializeButton(board, '19'),
+      buttonR: new Button({board, pin: 19}),
 
       ...(experiments.isEnabled('maker-captouch') && initializeTouchPads(board))
     };
@@ -86,7 +88,7 @@ export function destroyCircuitPlaygroundComponents(components) {
   }
   delete components.led;
 
-  // No reset needed for five.Switch
+  // No reset needed for Switch
   delete components.toggleSwitch;
 
   if (components.buzzer) {
@@ -114,7 +116,7 @@ export function destroyCircuitPlaygroundComponents(components) {
   }
   delete components.accelerometer;
 
-  // No reset needed for five.Button
+  // No reset needed for Button
   delete components.buttonL;
   delete components.buttonR;
 
@@ -131,11 +133,11 @@ export function destroyCircuitPlaygroundComponents(components) {
  * objects, allowing it to make methods and properties of instances available.
  */
 export const componentConstructors = {
-  Led: Led,
+  Led,
   Board: five.Board,
-  NeoPixel: NeoPixel,
-  Button: five.Button,
-  Switch: five.Switch,
+  NeoPixel,
+  Button,
+  Switch,
   Piezo,
   Sensor: five.Sensor,
   Thermometer: five.Thermometer,
@@ -233,14 +235,6 @@ function initializeThermometer(board) {
   });
 }
 
-function initializeButton(board, pin) {
-  const button = new five.Button({board, pin});
-  Object.defineProperty(button, 'isPressed', {
-    get: () => button.value === 1
-  });
-  return button;
-}
-
 function initializeAccelerometer(board) {
   const accelerometer = new five.Accelerometer({
     board,
@@ -251,9 +245,23 @@ function initializeAccelerometer(board) {
     accelerometer.io.sysexCommand([CP_COMMAND, CP_ACCEL_STREAM_ON]);
   };
   accelerometer.getOrientation = function (orientationType) {
+    if (undefined === orientationType) {
+      return [
+        accelerometer.getOrientation('x'),
+        accelerometer.getOrientation('y'),
+        accelerometer.getOrientation('z')
+      ];
+    }
     return accelerometer[orientationType];
   };
   accelerometer.getAcceleration = function (accelerationDirection) {
+    if (undefined === accelerationDirection) {
+      return [
+        accelerometer.getAcceleration('x'),
+        accelerometer.getAcceleration('y'),
+        accelerometer.getAcceleration('z')
+      ];
+    }
     if (accelerationDirection === 'total') {
       return accelerometer.acceleration;
     }

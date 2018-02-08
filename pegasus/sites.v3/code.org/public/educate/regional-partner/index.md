@@ -1,10 +1,10 @@
 ---
-title: Code.org Regional Parter Program
+title: Code.org Regional Partner Program
 nav: plc_regional_partner_nav
 video_player: true
 ---
 
-# Regional Partner Program 
+# Regional Partner Program
 
 ## About the Program
 
@@ -14,9 +14,10 @@ To begin the partnership, each partner's Program Manager will attend our Regiona
 
 The ideal Regional Partner is a U.S. based regional education unit, a non-profit, or a university with existing, positive relationships with nearby school districts and the local education community.
 
-**We are now accepting applications for partners in new regions! Check the map below to see if your region needs a partner. If it does, review the <a href="/educate/regional-partner/terms" target=_blank>partnership terms</a> and then <a href="/educate/regional-partner/apply" target=_blank>apply</a>!**
+**We will open applications for new Regional Partners in Spring 2018. Check the map below to see if your region needs a partner. If it does, please submit an Interest Form. We will notify you when applications are open.
 
-Interested in sharing this information with another organization? <a href="/files/regional-partner-one-pager-2017.pdf" target=_blank>Share our 1-pager</a> on the Regional Partner Program.
+[<button>Interest Form</button>](https://docs.google.com/forms/d/e/1FAIpQLSfuwUxlfQ7HFJ2q_X0NkZvwm-1MxNpxybrM3I2SicA-XvHmIA/viewform)
+
 
 [col-50]
 
@@ -25,8 +26,6 @@ Interested in sharing this information with another organization? <a href="/file
 [/col-50]
 
 <div style="clear: both;"></div>
-
-[<button>Apply Now!</button>](/educate/regional-partner/apply)
 
 ## What we'd expect of you
 Below is a list of program commitments:
@@ -39,7 +38,7 @@ Below is a list of program commitments:
 - Develop independent funding sources for the long-term sustainability of the work with Code.org's support
 - Establish and meet detailed metrics on: growth of number of participating teachers and students in the region, implementation of courses, diversity, and quality of workshops
 
- 
+
 ## What Code.org will provide in return
 - Funding based on demonstrated need to cover the following: an onsite staffer during workshops, facilitator compensation, food, and venue for your work in the initial year(s)
 - Marketing your organization as the official Code.org Regional Partner for your state or region
@@ -48,8 +47,10 @@ Below is a list of program commitments:
 
 <a href="/educate/regional-partner/terms" target=_blank>Click here</a> to see a more detailed term sheet with program details.
 
- 
-## <a name="partners"></a>
 
-<%= view :plp_partners_map %>
+## <a name="locations"></a>Where does Code.org have partners?
 
+Click on a location for more information on the region and the Regional Partner who serves that area.
+<br>
+
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dKLjL6y3AKo45c7weK__JI3sxijfbmzq" width="640" height="480"></iframe>

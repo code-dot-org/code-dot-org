@@ -1,6 +1,9 @@
 {
   "absolute": "բացարձակ",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "at",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
   "blockActionAdd": "ավելացնել",
   "blockActionAttack": "հարձակում",
   "blockActionClone": "clone blocks",
@@ -110,6 +113,12 @@
   "blockTypeTree": "ծառ",
   "blockTypeWater": "ջուր",
   "blockTypeWool": "բուրդ",
+  "blockTypeWoolBlue": "blue wool",
+  "blockTypeWoolMagenta": "magenta wool",
+  "blockTypeWoolOrange": "orange wool",
+  "blockTypeWoolPink": "pink wool",
+  "blockTypeWoolRed": "red wool",
+  "blockTypeWoolYellow": "yellow wool",
   "blockWhileXAheadAhead": "առաջ",
   "blockWhileXAheadDo": "անել",
   "blockWhileXAheadWhile": "ժամանակ",
@@ -231,6 +240,7 @@
   "quantity": "quantity",
   "reinfFeedbackMsg": "Դուք կարող եք սեղմել \"պահել խաղում \" է վերադառնալ խաղում ձեր խաղը.",
   "relative": "relative",
+  "runAgent": "Run Agent",
   "score": "Հաշիվ",
   "seconds": "second(s)",
   "selectChooseButton": "ընտրել",
@@ -286,6 +296,5 @@
   "weather": "weather",
   "weatherTypeClear": "clear",
   "weatherTypeRain": "rain",
-  "weatherTypeThunder": "thunder",
-  "runAgent": "Run Agent"
+  "weatherTypeThunder": "thunder"
 }

@@ -307,7 +307,7 @@
           põrkab käe pihta" ploki külge, et olla kindel, et pall jõuab lipuni.
         bounce_6_basketball: Nüüd on lipp ülemises ääres. Sa pead kinnitama plokke
           mõlema "kui pall põrkab vastu" ploki külge, et ülesanne lahendada.
-        bounce_7_basketball: Kinnita "kui" plokkide plokke üksteise külge. Põrgata
+        bounce_7_basketball: Kinnita kummagi "kui" ploki külge teisi plokke. Põrgata
           palli kuni see lipu pihta läheb.
         bounce_10_basketball: Nüüd on üleval värav. Mängu loomiseks kinnita plokid
           „lisa punkt“ ja „lisa vastase punkt“ plokkide "kui pall läheb väravasse"
@@ -328,7 +328,7 @@
           põrkab mängija vastu" ploki külge, et lipule pihta saada.
         bounce_6_sports: Nüüd on lipp ülemises ääres. Selle ülesande lahendamseks
           pead plokke kinnitama mõlema "kui pall põrkab vastu" ploki külge.
-        bounce_7_sports: Kinnita "kui" plokkide plokke üksteise külge. Põrgata palli
+        bounce_7_sports: Kinnita kummagi "kui" ploki külge teisi plokke. Põrgata palli
           kuni see lipu pihta läheb.
         bounce_10_sports: Nüüd on ülemises ääres värav! Kinnita "skoori punkt" ja
           "vastane skoorib punkti" plokid "kui pall on väravas" ja "kui pall läheb
@@ -704,22 +704,23 @@
         C4_unplugged_forloops: For tsükkel
         C4_unplugged_parameters: Laulukirjutamine parameetritega
         C4_unplugged_binary: Binaarne
-        CSF_artist_angles: Angles in Artist
-        CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
-        CSF_collector_repeat_loops: Collector Repeat Loops
-        CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
-        CSF_create_functions: Create Functions
+        CSF_a_b_artist_loops: Loops in Artist
+        CSF_artist_angles: Nurgad Artistis
+        CSF_collector_k1_blocks: 'CS alused: Koguja'
+        CSF_collector_repeat_loops: Korruta tsükleid
+        CSF_collector_text_blocks: 'CS alused: Koguja'
+        CSF_create_functions: Koosta funktsioone
         CSF_debugging_k1_blocks: Debugging
         CSF_debugging_text_blocks: Debugging
-        CSF_EF_cs_matters: Computer Science Matters
-        CSF_maze_intro_k1_blocks: Intro to Code Studio
-        CSF_maze_intro_text_blocks: Intro to Code Studio
+        CSF_EF_cs_matters: Arvutiteadus on oluline
+        CSF_maze_intro_k1_blocks: Sissejuhatus Code Studiosse
+        CSF_maze_intro_text_blocks: Sissejuhatus Code Studiosse
         CSF_my_robotic_friends: Minu robotsõbrad
-        CSF_Power_of_Words: Power of Words
-        CSF_Super_Digital_Citizen: Super Digital Citizen
-        CSF_stevie_big_project: Stevie and the Big Project
-        CSF_unspotted_bugs: Unspotted Bugs
-        CSF_zuck_loops_short: Repeat Loops
+        CSF_Power_of_Words: Sõna jõud
+        CSF_Super_Digital_Citizen: Super digitaalne kodanik
+        CSF_stevie_big_project: Stevie ja suur projekt
+        CSF_unspotted_bugs: Märkamata vead
+        CSF_zuck_loops_short: Korrake tsükleid
         frozen_intro: KoodiTunni sissejuhatus
         frozen_loops: Sissejuhatus kordustele (Loops)
         frozen_functions: Funktsioonide tutvustus
@@ -730,10 +731,19 @@
         infinity_playlab_intro: Play Lab - Sissejuhatus
         infinity_playlab_events: Play Lab - Üritused
         infinity_playlab_repeat_forever: Play Lab – korda Igavesti
-        csd_concept_computer: What Makes a Computer, a Computer?
-        csd_concept_binary_data: 'How Computers Work: Binary & Data'
-        csd_concept_search: How Search Works
-        csd_gamelab_animation_tab: The Animation Tab
+        csd_concept_how_computers_work: Introducing How Computers Work
+        csd_concept_computer: 'Kuidas töötavad arvutid: Mis teeb arvutist arvuti?'
+        csd_concept_binary_data: 'Kuidas töötavad arvutid: Binaararvud & andmed'
+        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
+        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
+          & Output'
+        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
+        csd_concept_search: Kuidas Otsing töötab
+        csd_external_amazon_data: Kui kasutatakse Big Data't Amazonis, et muuta meie
+          elu
+        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
+        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
+        csd_gamelab_animation_tab: Animatsioon
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
@@ -744,11 +754,11 @@
         csd_gamelab_variables_1: Introduction to Variables - Part 1
         csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Velocity
-        csd_weblab_intro_1: Intro to Web Lab - Part 1
-        csd_weblab_intro_2: Intro to Web Lab - Part 2
-        csd_weblab_css_1: Intro to CSS - Part 1
-        csd_weblab_css_2: Intro to CSS - Part 2
-        csd_weblab_intro_3: Intro to Web Lab - Part 3
+        csd_weblab_intro_1: Sissejuhatus Web Lab - osa 1
+        csd_weblab_intro_2: Sissejuhatus Web Lab - osa 2
+        csd_weblab_css_1: Sissejuhatus CSS - osa 1
+        csd_weblab_css_2: Sissejuhatus CSS - osa 2
+        csd_weblab_intro_3: Sissejuhatus Web Lab - osa 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -834,11 +844,38 @@
         mc_2016_events: Jääaeg KoodiTund - Sündmused
         mc_2016_spawn: Minecrafti KoodiTund - Loo
         mc_2016_congrats: Minecraft KoodiTund - Palju Õnne
-        applab_hoc_welcome: App Lab Hour of Code - Welcome
+        applab_hoc_welcome: App Lab Hour of Code - teretulemast
         applab_hoc_setproperty: App Lab Hour of Code - setProperty
         applab_hoc_onevent: App Lab Hour of Code - onEvent
-        applab_hoc_designmode: AppLab Hour of Code - Design Mode
-        applab_hoc_share: AppLab Hour of Code - Share
+        applab_hoc_designmode: App Lab Hour of Code - disain
+        applab_hoc_share: App Lab Hour of Code - jaga
+        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
+        mc_2017_repeat: App Lab Hour of Code - tsüklid
+        mc_2017_functions: Minecraft Hour of Code - funktsioonid
+        mc_2017_congratulations: Minecraft KoodiTund - Palju Õnne
+        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
+        mc_2017_puzzle_3: App Lab Hour of Code - tsüklid
+        mc_2017_puzzle_8: Minecraft Hour of Code - funktsioonid
+        mc_2017_puzzle_12: Minecraft KoodiTund - Vabamäng
+        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
+        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
+        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
+        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
+        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
+        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
+        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
+        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
+        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
+        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
+        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
+        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
+        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
+        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
+        applab_intro_welcome: App Lab - Getting Started
+        applab_intro_events: App Lab - Make It Interactive
+        applab_intro_sounds: App Lab - Images and Sounds
+        applab_intro_designmode: App Lab - Design Mode
+        applab_intro_share: App Lab - Share Your App
     callout:
       text:
         drag_blocks: Lohista plokki „liiguta“ ja kinnita see teise ploki alla
@@ -950,4 +987,4 @@
           oskad selle lõpetada?
         craft_what_is_iron: Kaevanda seda rauda!
         craft_callout_moveforward: Selle koodiga otsitakse laavat. Kas oskad lisada
-          edasiliikumiskäsu?
+          käsu edasiliikumiseks?

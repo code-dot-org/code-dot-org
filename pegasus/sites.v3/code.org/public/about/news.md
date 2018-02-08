@@ -45,7 +45,6 @@ For all press and media inquiries:
 
 - [press@code.org](mailto:press@code.org)
 - Min Yoo, Code.org - (360) 499-3250
-- Claudia Husemann, Edelman - (646) 612-8573
 
 [Download hi-res version of Code.org logo](https://www.dropbox.com/scl/fi/3qxs2z7ukocwc7apbn3mc/Code.org%20Logo.zip?dl=0)
 

@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import Responsive from '../responsive';
+import {connect} from 'react-redux';
 import styleConstants from '../styleConstants';
 import FontAwesome from './FontAwesome';
 import color from "../util/color";
@@ -16,11 +16,12 @@ const contentWidth = styleConstants['content-width'];
 const styles = {
   box: {
     width: contentWidth,
-    marginBottom: 60
   },
   boxResponsive: {
     width: '100%',
-    marginBottom: 60
+  },
+  bottomMargin: {
+    marginBottom: 60,
   },
   headingBox: {
     paddingRight: 10,
@@ -125,21 +126,28 @@ class ContentContainer extends Component {
     link: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     description: PropTypes.string,
-    responsive: PropTypes.instanceOf(Responsive)
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
+    hideBottomMargin: PropTypes.bool,
   };
 
   render() {
-    const { heading, link, linkText, description, isRtl, responsive }= this.props;
+    const {
+      heading,
+      link,
+      linkText,
+      description,
+      isRtl,
+      responsiveSize,
+      hideBottomMargin
+    } = this.props;
 
-    const showLinkTop =
-      (!responsive || responsive.isResponsiveCategoryActive('lg')) &&
-      link && linkText;
-    const showLinkBottom =
-      responsive && responsive.isResponsiveCategoryInactive('lg') &&
-      link && linkText;
+    const showLinkTop = (responsiveSize === 'lg') && link && linkText;
+    const showLinkBottom = (responsiveSize !== 'lg') && link && linkText;
+    const boxStyles = styles.boxResponsive;
+    const bottomMargin = hideBottomMargin ? '' : styles.bottomMargin;
 
     return (
-      <div style={responsive ? styles.boxResponsive : styles.box}>
+      <div style={[boxStyles, bottomMargin]}>
         {(heading || (link && linkText)) && (
           <div style={styles.headingBox}>
             <div style={isRtl ? styles.headingTextRtl : styles.headingText}>
@@ -218,4 +226,7 @@ class Link extends Component {
   }
 }
 
-export default Radium(ContentContainer);
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+  isRtl: state.isRtl,
+}))(Radium(ContentContainer));

@@ -68,7 +68,7 @@
   courses: Kursus
   courses_page:
     title_student: Belajar di Code Studio
-    title_teacher: Teach with Code Studio
+    title_teacher: Ajarin dengan kode studio
   unplugged_activity: Kegiatan tanpa komputer
   of: dari
   more: lebih
@@ -101,8 +101,8 @@
     need_unlock: Tidak menerima instruksi untuk membuka?
     not_linked: Maaf, akun Code.org Anda tidak ditautkan ke %{provider} Anda. Anda
       harus masuk dengan mengetikkan kata sandi Anda di bawah ini.
-    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
-      sign in through your Clever Portal instead.
+    use_clever: Maaf, akun Code.org Anda tidak ditautkan ke%{provider} Anda. Silahkan
+      masuk melalui Portal pintar anda.
   signup_form:
     student_count: "%{count} Pelajar telah mendaftar."
     teacher_count: "%{count} Pengajar telah mendaftar."
@@ -154,6 +154,7 @@
     user_type_student: siswa
     field_is_required: diperlukan
     accept_terms: You must agree to create an account
+    error: Sebuah kesalahan terjadi.
   school_info:
     title: Informasi sekolah (pilihan)
     school_country: Negara Sekolah
@@ -162,7 +163,7 @@
     private: Swasta
     public: Negeri
     homeschool: Homeschooling
-    after_school: After School
+    after_school: Setelah sekolah
     other: Lain
     state: Provinsi
     district: Kecamatan
@@ -192,7 +193,7 @@
     picture: Sekarang temukan gambar rahasia anda
     words: Sekarang masukkan kata-kata rahasia anda anda
     login: Masuk
-    invalid_login: Invalid login, please try again
+    invalid_login: Login tidak valid, silahkan coba lagi
     pair_programming: I have a partner at my computer
     student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
       target='_blank'>here</a>.
@@ -221,7 +222,7 @@
   parent_mailer:
     student_associated_subject: Login information for Code.org
   teacher_mailer:
-    new_teacher_subject: Welcome to Code.org!
+    new_teacher_subject: Selamat datang di Code.org!
   section:
     your_section:
       one: 'Sesi Anda:'
@@ -231,11 +232,11 @@
       remove: Anda yakin untuk meninggalkan sesi ini?
     remove: "(hapus sesi)"
     type:
-      picture: Picture Password
-      word: Secret Words
+      picture: Gambar Sandi
+      word: Kata-kata rahasia
       email: email
-      google_classroom: Google Classroom
-      clever: Clever
+      google_classroom: google classroom
+      clever: Pandai
   follower:
     invite_sent: Undangan telah dikirim
     added_teacher: "%{name} telah dicantumkan sebagai nama guru Anda"
@@ -295,7 +296,7 @@
         gamelab: Buat sebuah proyek Lab Permainan
         weblab: Make a Web Lab (beta) project
       home: Beranda
-      my_dashboard: My Dashboard
+      my_dashboard: Dasbor saya
       courses: Kursus
       course_catalog: Course Catalog
       project_gallery: Proyek
@@ -303,7 +304,7 @@
       help_support: Bantuan dan dukungan
       report_bug: Laporkan bug
       teacher_community: Komunitas guru
-      professional_learning: Professional Learning
+      professional_learning: Belajar profesional
       documentation: Dokumentasi
       tutorials: Tutorial
       educate_overview: Ikhtisar Pendidik
@@ -405,8 +406,7 @@
       even after the end of the school year, ask your parent/guardian to help you
       create your own personal login below.
     create_personal_login_under_13_username: Username (don't use your real name!)
-    create_personal_login_under_13_parent_email: Parent/guardian email address (to
-      recover your password)
+    create_personal_login_under_13_parent_email: Alamat email orang tua / wali
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -591,16 +591,16 @@
   move_students:
     new_section_dne: Maaf, tapi bagian %{new_section_code} tidak ada. Harap masukkan
       kode bagian berbeda.
-    section_code_cant_be_current_section: The current section cannot be the same as
-      the new section.
-    current_section_dne: Sorry, but section %{current_section_code} does not exist.
-      Please enter a different section code.
+    section_code_cant_be_current_section: Bagian saat ini tidak boleh sama dengan
+      bagian yang baru.
+    current_section_dne: Maaf, bagian tapi %{current_section_code} tidak ada. Mohon
+      masukkan kode bagian yang berbeda.
     student_ids_not_entered: Please provide student_ids.
     student_not_found: One or more students could not be found.
     all_students_must_be_in_current_section: All the students must currently be enrolled
       in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    already_enrolled_in_new_section: Anda tidak dapat memindahkan siswa ini karena
+      mereka sudah dalam bagian baru.
   share:
     title: Belajar di Code Studio
     description: Siapa pun bisa belajar ilmu komputer. Membuat permainan, aplikasi
@@ -662,7 +662,7 @@
     title: Perlu bantuan?
     subtitle: Lihat video ini dan tips lainnya
     teacher: Lihat solusi
-    teacher_no_solution: Stop seeing solution
+    teacher_no_solution: Berhenti melihat solusinya
     auth_error: Anda tidak diizinkan untuk melihat solusi.
     submit: Memperbarui lokasi artis
     direction: Arah Mulai (dalam derajat)
@@ -672,8 +672,8 @@
     notes_coming_soon: Catatan untuk video ini segera.
     autoplay_option: Autoplay video
     download: Ungah Video
-    show_notes: Show Notes
-    show_video: Show Video
+    show_notes: Tampilkan Catatan
+    show_video: Tampilkan Video
   compatibility:
     upgrade:
       unsupported_message: Your browser is not supported. Please upgrade your browser
@@ -681,18 +681,18 @@
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
       link: Pelajari lebih banyak
-      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
-        with a mouse and keyboard. You may experience issues using this tool on your
-        current device.
+      applab_unsupported_tablet: Aplikasi Labotarium bekerja paling baik di komputer
+        atau laptop dengan mouse dan papan ketik. Anda mungkin mengalami masalah dengan
+        menggunakan alat ini pada perangkat Anda pada saat ini.
       gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
         with a mouse and keyboard. You may experience issues using this tool on your
         current device.
       weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
         with loading Web Lab on this browser. You may want to use a different browser
         until this is resolved. Sorry for the inconvenience.
-      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
-        Private Browsing mode. Please reload your project in normal mode. Sorry for
-        the inconvenience.
+      weblab_unsupported_locale_storage: Mungkin anda mengalami masalah dengan menggunakan
+        Lab Web dalam mode Penjelajahan Pribadi. Tolong muat ulang proyek Anda dalam
+        mode normal. untuk ketidaknyamanannya mohon maaf.
   slow_loading: Harap sabar, Ternyata diperlukan waktu yang lebih lama dari biasanya...
   try_reloading: Coba tampilkan halaman lagi
   next_stage: Selesai! Lanjutkan untuk tahap berikutnya
@@ -758,11 +758,15 @@
       title: Galeri
       body: Lihat galeri gambarn aplikasi dan seniman yang dibuat oleh pengguna kami
     gamelab:
-      title: Game Lab (beta)
-      body: Game Lab is a programming environment where you can make simple animations
-        and games with objects and characters that interact with each other.
+      title: Laboratorium Game
+      body: Permainan Lab adalah sebuah lingkungan pemrograman di mana Anda dapat
+        membuat animasi sederhana dan permainan dengan benda-benda dan karakter yang
+        berinteraksi dengan satu sama lain.
       audience: Usia 13+
       cta: Pelajari caranya
+    hoc-encryption:
+      title: Simple Encryption
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -783,9 +787,14 @@
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    hero:
+      title: Minecraft
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: Sports
-      body: Make a basketball game or mix and match across sports.
+      body: Membuat sebuah pertandingan basket atau mencampur dan mencocokkan di cabang
+        olahraga.
     text-compression:
       title: kompresi Teks
       body: In this lesson, students will use the Text Compression Widget to compress
@@ -793,21 +802,22 @@
     unplugged:
       title: Pelajaran tidak terpasang
       audience: Usia 6 tahun Keatas
-      body: We've compiled a list of unplugged lessons for you to use in your classroom.
-        Now you can teach the fundamentals of computer science, whether you have computers
-        in your classroom or not! Try using these lessons as a stand-alone course
-        or as complementary lessons for any computer science course.
-      body_short: If you don't have computers, try these unplugged lessons in your
-        classroom.
+      body: Kami telah menyusun sebuah daftar pelajaran unplugged untuk Anda gunakan
+        dalam kelas. Sekarang Anda bisa mengajarkan dasar-dasar ilmu komputer, apakah
+        Anda memiliki komputer di kelas atau tidak! Coba gunakan pelajaran ini sebagai
+        suatu yang berdiri sendiri saja atau pelajaran sebagai pelengkap untuk ilmu
+        komputer saja.
+      body_short: Jika Anda tidak memiliki komputer, cobalah pelajaran unplugged ini
+        di kelas Anda.
     unplugged_conditionals:
       title: Kondisi
-      body: Learn about algorithms and conditional statements in this “unplugged”
-        activity using a deck of cards.
+      body: Pelajari tentang algoritma dan kondisional pernyataan dalam “unplugged”
+        Kegiatan yang menggunakan tumpukan kartu.
     widgets:
       title: Widget
-      body: Students can explore concepts from our Computer Science Principles course
-        hands-on using these digital tools. Use the widgets on their own, or create
-        a single-concept lesson for your class.
+      body: Siswa dapat menjelajahi konsep-konsep Ilmu Komputer dari kami Prinsip
+        tangan-menggunakan alat-alat digital saja. Gunakan widget sendiri, atau membuat
+        suatu pelajaran tunggal dan konsep untuk kelas anda.
       audience: Usia 14+
       cta: Pelajari caranya
   gallery:
@@ -820,8 +830,8 @@
       app dan gambar dengan menulis sendiri program komputer mereka. Klik pada gambar
       dan tangkapan layar untuk melihat jalannya tiap program.
     want_to_make_your_own: Mau membuat sendiri ?
-    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
-      save your work to the gallery.
+    how_to_save: Tingkat terakhir pada tutorial ini, klik "Finish" dan "Save" untuk
+      menyimpan pekerjaan ke galeri.
     more: lebih &rarr;
     caption_by_name_age: oleh %{name}, usia %{age}
     caption_time_ago: "%{time_ago} yang lalu"
@@ -861,23 +871,27 @@
     wrong_body: Terima kasih telah memberikan jawaban
     correct_title: Terima kasih
     correct_body: Terima kasih telah memberikan jawaban
-    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
-      for aggregate results.  Note that results are only visible if at least five
-      students submitted the survey.
+    hide_survey_last_answer: Survei ini adalah anonim.  Silahkan kunjungi guru dashboard
+      untuk hasil agregat. Perhatikan bahwa hasil survei hanya terlihat setidaknya
+      lima siswa aja yang menyerahkan.
+    survey_submission_thankyou: Terima kasih telah mengirimkan survei ini! survei
+      telah dibersihkan sehingga tanggapan Anda tetap anonim. Perhatikan bahwa guru
+      Anda masih dapat melihat tanggapan untuk keseluruhan kelas, walaupun tidak terlampir
+      nama.
   level_group-submittable:
     wrong_title: Terima kasih
     wrong_body: Terima kasih telah memberikan jawaban
     correct_title: Terima kasih
     correct_body: Terima kasih telah memberikan jawaban
-    unsubmit-title: Unsubmit your assessment
+    unsubmit-title: Penilaian Anda tidak diterima
     unsubmit-body: Unsubmitting your assessment will reset the submitted time and
       date.  Are you sure?
     submit-incomplete-title: Kirim penilaian Anda
-    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
-      assessment after submitting it.  Are you sure?
+    submit-incomplete-body: Ada beberapa pertanyaan yang tidak lengkap. Anda tidak
+      dapat mengedit penilaian Anda setelah mengirimkannya. Apakah kamu yakin?
     submit-complete-title: Kirim penilaian Anda
-    submit-complete-body: You cannot edit your assessment after submitting it.  Are
-      you sure?
+    submit-complete-body: Penilaian Anda tidak dapat mengedit setelah mengirimkannya.
+      Apakah kamu yakin?
   match:
     wrong_title: Solusi yang salah
     wrong_body: Solusi yang anda masukkan salah, Coba Lagi!
@@ -920,19 +934,19 @@
     sign_out: Jika Anda tidak ingin memasukkan umur kamu bisa<a href="%{url}">sign
       out</a>.
   terms_interstitial:
-    title: Updated Terms of Service and Privacy Policy
+    title: Ketentuan Layanan dan Kebijakan Privasi yang Diperbarui
     intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
       The changes are effective as of August 24, 2016.  The biggest change: we will
       <i>no longer store email addresses for student accounts on Code Studio.</i>
       This is a big deal for us, and we hope it sets a new standard for student privacy
       in education technology. We''ve sent you a summary of the other changes via
       email.'
-    intro_instructions: You'll need to accept these new terms for students under the
-      age of 13 in your classroom to have full access to all the latest features in
-      Code Studio.  When registering an account for a student under 13, you will be
-      asked to confirm that your school has parental consent for the collection of
-      the student’s personal information for the use and benefit of the school, including
-      educational programs such as Code Studio.
+    intro_instructions: Anda harus menerima persyaratan baru untuk siswa yang berusia
+      di bawah 13 tahun di kelas agar memiliki akses penuh ke semua fitur terbaru
+      di Code Studio. Ketika mendaftar  sebuah  akun untuk mahasiswa di bawah 13 tahun,
+      Anda akan diminta untuk mengkonfirmasi bahwa sekolah Anda memiliki izin orang
+      tua untuk pengumpulan informasi pribadi siswa untuk penggunaan dan manfaat dari
+      sekolah, termasuk program-program pendidikan seperti Kode Studio.
     tos: Syarat
     privacy: Kebijakan privasi
     privacy_notice: Pemberitahuan Privasi
@@ -950,12 +964,12 @@
     title: Kami ingin membawa ilmu komputer untuk setiap siswa - bantu kami memantau
       kemajuan kami!
     message: Masukkan informasi sekolah Anda di bawah ini.
-    message_with_suggestion: Please verify that the following information is correct,
-      or update as necessary.
+    message_with_suggestion: Mohon verifikasi informasi berikut ini dengan benar,
+      atau perbarui seperlunya.
     save: Simpan
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
+    title: 'Opsional: Bantu kami melacak kemajuan untuk meningkatkan keragaman dalam
+      ilmu komputer'
     message: Please tell us your race (check all that apply)
     races:
     - white: Kaukasia
@@ -992,7 +1006,14 @@
     rename: Ubah Nama
     save: Simpan
     delete: Hapus
-    import: Import
+    import: Impor
+    share_link_import_bad_link_header: Tautan berbagi tidak dikenali
+    share_link_import_bad_link_body: 'Kami tidak bisa mengimpor tautan berbagi tersebut.
+      Pastikan kamu menggunakan tautan dari teka-teki Minecraft: Agent dan bahwa kamu
+      telah menyalin tautan lengkap.'
+    share_link_import_error_header: Terjadi kesalahan.
+    share_link_import_error_body: Ada masalah saat mengimpor tautan berbagi tersebut.
+      Coba lagi.
     exit: Kembali ke Kursus
     my_projects: Project Saya
     project_gallery: Proyek
@@ -1001,14 +1022,14 @@
     share: Bagikan
     share_title: Bagikan proyek Anda
     share_copy_link: 'Salin link:'
-    share_embed_description: You can paste the embed code into an HTML page to display
-      the project on a webpage.
+    share_embed_description: Anda dapat menyisipkan kode embed ke sebuah halaman HTML
+      untuk menampilkan proyek pada sebuah halaman web.
     share_u13_warning: Ask your teacher before sharing. Only share with others in
       your school.
     embed: Sisipan
     advanced_share: Tampilkan opsi lanjutan
-    no_projects: You currently have no projects. Click on one of the buttons above
-      to start a project.
+    no_projects: Anda saat ini tidak memiliki proyek. Klik salah satu tombol di atas
+      untuk memulai sebuah proyek.
     close: Tutup
     more: Lebih
     name: Nama

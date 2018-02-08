@@ -59,7 +59,9 @@ class ScriptLevelsController < ApplicationController
       redirect_to @script.finish_url
       return
     end
-    redirect_to(build_script_level_path(next_script_level)) && return
+    path = build_script_level_path(next_script_level)
+    path += "?section_id=#{params[:section_id]}" if params[:section_id]
+    redirect_to(path) && return
   end
 
   def show
@@ -85,11 +87,7 @@ class ScriptLevelsController < ApplicationController
     # generation of the script level path.
     extra_params = {}
     if @script_level.long_assessment?
-      if params[:puzzle_page]
-        extra_params[:puzzle_page] = params[:puzzle_page]
-      else
-        extra_params[:puzzle_page] = 1
-      end
+      extra_params[:puzzle_page] = params[:puzzle_page] ? params[:puzzle_page] : 1
     end
 
     if request.path != (canonical_path = build_script_level_path(@script_level, extra_params))
@@ -112,11 +110,7 @@ class ScriptLevelsController < ApplicationController
   def hidden_stage_ids
     authorize! :read, ScriptLevel
 
-    if current_user
-      stage_ids = current_user.get_hidden_stage_ids(params[:script_id])
-    else
-      stage_ids = []
-    end
+    stage_ids = current_user ? current_user.get_hidden_stage_ids(params[:script_id]) : []
 
     render json: stage_ids
   end
@@ -153,8 +147,8 @@ class ScriptLevelsController < ApplicationController
     if params[:id]
       @script_level = Script.cache_find_script_level params[:id]
       @level = @script_level.level
-      @stage = @script_level.stage
-      @script = @script_level.script
+      @script = Script.get_from_cache(params[:script_id])
+      @stage = @script.stage_by_relative_position(params[:stage_position].to_i)
       @game = @level.game
 
       present_level
@@ -166,7 +160,7 @@ class ScriptLevelsController < ApplicationController
     @stage_extras = {
       stage_number: @stage.relative_position,
       next_level_path: @stage.next_level_path_for_stage_extras(current_user),
-      bonus_levels: @stage.script_levels.select(&:bonus).map {|sl| sl.summarize_as_bonus(current_user)},
+      bonus_levels: @script.get_bonus_script_levels(@stage),
     }.camelize_keys
 
     render 'scripts/stage_extras'
@@ -180,11 +174,12 @@ class ScriptLevelsController < ApplicationController
 
     script = Script.get_from_cache(params[:script_id])
 
-    if params[:stage_position]
-      stage = script.stage_by_relative_position(params[:stage_position])
-    else
-      stage = script.stage_by_relative_position(params[:lockable_stage_position], true)
-    end
+    stage =
+      if params[:stage_position]
+        script.stage_by_relative_position(params[:stage_position])
+      else
+        script.stage_by_relative_position(params[:lockable_stage_position], true)
+      end
 
     render json: stage.summary_for_lesson_plans
   end
@@ -230,15 +225,16 @@ class ScriptLevelsController < ApplicationController
   end
 
   def load_script_level
-    if params[:chapter]
-      @script_level = @script.get_script_level_by_chapter(params[:chapter])
-    elsif params[:stage_position]
-      @script_level = @script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
-    elsif params[:lockable_stage_position]
-      @script_level = @script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
-    else
-      @script_level = @script.get_script_level_by_id(params[:id])
-    end
+    @script_level =
+      if params[:chapter]
+        @script.get_script_level_by_chapter(params[:chapter])
+      elsif params[:stage_position]
+        @script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
+      elsif params[:lockable_stage_position]
+        @script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
+      else
+        @script.get_script_level_by_id(params[:id])
+      end
     raise ActiveRecord::RecordNotFound unless @script_level
     authorize! :read, @script_level
   end
@@ -256,7 +252,7 @@ class ScriptLevelsController < ApplicationController
       readonly_view_options
     elsif current_user
       # load user's previous attempt at this puzzle.
-      @last_activity = current_user.last_attempt(@level)
+      @last_activity = current_user.last_attempt(@level, @script)
       level_source = @last_activity.try(:level_source)
 
       user_level = current_user.user_level_for(@script_level, @level)
@@ -307,6 +303,12 @@ class ScriptLevelsController < ApplicationController
     # If there's only one level in this scriptlevel, use that
     return @script_level.levels[0] if @script_level.levels.length == 1
 
+    # If there's an override, use that
+    if params[:level_name]
+      specified_level = @script_level.levels.find {|l| l.name == params[:level_name]}
+      return specified_level if specified_level
+    end
+
     # For teachers, load the student's most recent attempt
     if @user && current_user != @user
       last_attempt = @user.last_attempt_for_any(@script_level.levels)
@@ -337,7 +339,7 @@ class ScriptLevelsController < ApplicationController
   def present_level
     # All database look-ups should have already been cached by Script::script_cache_from_db
     @game = @level.game
-    @stage = @script_level.stage
+    @stage ||= @script_level.stage
 
     load_level_source
 
@@ -372,6 +374,7 @@ class ScriptLevelsController < ApplicationController
       small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
       has_i18n: @game.has_i18n?,
       is_challenge_level: @script_level.challenge,
+      is_bonus_level: @script_level.bonus,
     )
 
     @@fallback_responses ||= {}

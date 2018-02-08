@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_op_ed) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ### По-долу е извадка от примерно планиране в подкрепа на CSEW и нейните цели, които биха могли да бъдат използвани от областта, местните законодатели, бизнес лидери и др.
@@ -13,31 +10,31 @@ nav: promote_nav
   
 
 
-Go to [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) to find state specific information about computer science.
+Отидете на [ <%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>), за да намерите конкретна информация за компютърните науки.
 
-**Title: Computing…Where the Jobs Are**
+**Заглавие: Компютинг... Когато работните места са**
 
-**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
+**От [NAME] и [В СЪАВТОРСТВО с учител, началник или бизнес лидер]**
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+Компютрите са навсякъде. Те са в нашите джобове. Те са на стената. Те са в нашите автомобили. Те са критична част от нашата инфраструктура, от електрическите мрежи за светофари и вътрешната работа на нашите финансови пазари. И всички тези компютри имат нещо общо. Те зависят от софтуер, за да им каже какво да правят.
 
-But who exactly is going to write this software?
+Но кой точно пише този софтуер?
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+Като се има предвид колко бързо нашия свят се трансформира от технологиите, може да се очаква броят на учениците, които учат компютърни науки днес да е висок. Но не е така. В действителност, по-малко ученици учат компютърни науки и по-малко училища ги преподават, отколкото преди десетилетие.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
+В момент, когато търсенето на квалифицирани програмисти никога не е било по-високо, ние създаваме по-малко компютърни специалисти. Дори в това време на висока безработица, хиляди работни места, много от тях тук, в **[Вмъкване щат/град]**, са незаети поради липса на достатъчно хора с правилни умения.
 
-Why is this? And how can we address it?
+Защо е така? И как да го променим?
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+Проблемът започва в нашите средни и висши училища. Девет от всеки десет от нашите училища не предлагат курсове по компютърно програмиране. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. Просто не правим достатъчно, за да подготвим или да окуражим курсистите ни да преследват тези високо платени, жизненоважни кариери.
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+Почти всички големи компютърни нововъведения са били измислени тук, в тази страна, но ние сме изложени на риск от загуба на ръководната роля, ако не направим нещо сега.
 
-We need to make some changes.
+Ние трябва да направим някои промени.
 
-**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
+**[НЕЗАДЪЛЖИТЕЛНО ЗА ЩАТИ, КЪДЕТО ТОВА Е ПРИЛОЖЕНО]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+Една положителна промяна е да се позволи изучаването на компютърни науки и да се изискват при завършване на математика или наука във висшите училища. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
 
 We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
 

@@ -3,9 +3,7 @@
 # Table name: channel_tokens
 #
 #  id             :integer          not null, primary key
-#  channel        :string(255)
 #  storage_app_id :integer          not null
-#  user_id        :integer
 #  level_id       :integer          not null
 #  created_at     :datetime
 #  updated_at     :datetime
@@ -16,7 +14,6 @@
 #  index_channel_tokens_on_storage_app_id           (storage_app_id)
 #  index_channel_tokens_on_storage_id               (storage_id)
 #  index_channel_tokens_on_storage_id_and_level_id  (storage_id,level_id) UNIQUE
-#  index_channel_tokens_on_user_id_and_level_id     (user_id,level_id) UNIQUE
 #
 
 class ChannelToken < ActiveRecord::Base
@@ -54,7 +51,7 @@ class ChannelToken < ActiveRecord::Base
   # @param [Hash] data Data to store in the channel.
   # @param [String] src Optional source channel to copy data from, instead of
   #   using the value from the `data` param.
-  def self.create_channel(ip, storage_app, data: {}, src: nil, type: nil)
+  def self.create_channel(ip, storage_app, data: {}, src: nil, type: nil, remix_parent_id: nil)
     if src
       data = storage_app.get(src)
       data['name'] = "Remix: #{data['name']}"
@@ -66,7 +63,8 @@ class ChannelToken < ActiveRecord::Base
     storage_app.create(
       data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
       ip: ip,
-      type: type
+      type: type,
+      remix_parent_id: remix_parent_id,
     )
   end
 end

@@ -1,7 +1,9 @@
 import $ from 'jquery';
+import React from 'react';
 import { registerGetResult, onAnswerChanged } from './codeStudioLevels';
 import { sourceForLevel } from '../clientState';
 import Sounds from '../../Sounds';
+import { TooFewDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
 
 var Multi = function (levelId, id, app, standalone, numAnswers, answers, answersFeedback, lastAttemptString, containedMode) {
 
@@ -183,12 +185,12 @@ Multi.prototype.getAppName = function () {
 
 // called by external result-posting code
 Multi.prototype.getResult = function (dontAllowSubmit) {
-  var answer;
-  var errorType = null;
-  var valid;
+  let answer;
+  let errorDialog;
+  let valid;
 
   if (this.numAnswers > 1 && this.selectedAnswers.length !== this.numAnswers) {
-    errorType = "toofew";
+    errorDialog = <TooFewDialog/>;
   }
 
   if (this.numAnswers === 1) {
@@ -214,7 +216,7 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
   return {
     response: answer,
     result: result,
-    errorType: errorType,
+    errorDialog: errorDialog,
     submitted: submitted,
     valid: valid
   };

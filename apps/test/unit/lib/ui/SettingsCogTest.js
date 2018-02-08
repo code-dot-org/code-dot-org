@@ -67,12 +67,21 @@ describe('SettingsCog', () => {
     }, 0);
   });
 
+  it('only shows manage assets when maker toggle is false', () => {
+    const wrapper = mount(<SettingsCog showMakerToggle={false} />);
+    const cog = wrapper.find(FontAwesome).first();
+    cog.simulate('click');
+    const menuWrapper = getPortalContent(wrapper);
+    const numMenuItems = menuWrapper.find(PopUpMenu.Item).length;
+    expect(numMenuItems).to.equal(1);
+  });
+
 
   describe('menu items', () => {
     let wrapper, portal, menuWrapper;
 
     beforeEach(() => {
-      wrapper = mount(<SettingsCog/>);
+      wrapper = mount(<SettingsCog showMakerToggle={true}/>);
       const cog = wrapper.find(FontAwesome).first();
       portal = wrapper.find(Portal).first();
       expect(portal).to.have.prop('isOpened', false);
@@ -96,14 +105,14 @@ describe('SettingsCog', () => {
       });
 
       it('calls showAssetManager when clicked', () => {
-        const firstMenuItem = menuWrapper.find(PopUpMenu.Item).first();
+        const firstMenuItem = menuWrapper.find(PopUpMenu.Item).first().children().first();
         expect(assets.showAssetManager).not.to.have.been.called;
         firstMenuItem.simulate('click');
         expect(assets.showAssetManager).to.have.been.calledOnce;
       });
 
       it('closes the menu when clicked', () => {
-        const firstMenuItem = menuWrapper.find(PopUpMenu.Item).first();
+        const firstMenuItem = menuWrapper.find(PopUpMenu.Item).first().children().first();
         firstMenuItem.simulate('click');
         expect(portal).to.have.prop('isOpened', false);
       });
@@ -124,16 +133,16 @@ describe('SettingsCog', () => {
         maker.isAvailable.returns(true);
         maker.isEnabled.returns(false);
         const wrapper = mount(
-          <ToggleMaker/>
+          <ToggleMaker onClick={() => {}}/>
         );
         expect(wrapper.text()).to.include(msg.enableMaker());
       });
 
-      it('renders with enable maker option if maker is available and disabled', () => {
+      it('renders with disable maker option if maker is available and enabled', () => {
         maker.isAvailable.returns(true);
         maker.isEnabled.returns(true);
         const wrapper = mount(
-          <ToggleMaker/>
+          <ToggleMaker onClick={() => {}}/>
         );
         expect(wrapper.text()).to.include(msg.disableMaker());
       });
@@ -141,7 +150,7 @@ describe('SettingsCog', () => {
       it('hides maker toggle if maker is not available', () => {
         maker.isAvailable.returns(false);
         const wrapper = mount(
-          <ToggleMaker/>
+          <ToggleMaker onClick={() => {}}/>
         );
         expect(wrapper).to.be.blank;
       });
@@ -156,7 +165,7 @@ describe('SettingsCog', () => {
         expect(wrapper.text()).to.equal(msg.enableMaker());
 
         expect(handleToggleMaker).not.to.have.been.called;
-        wrapper.simulate('click');
+        wrapper.children().first().simulate('click');
         expect(handleToggleMaker).to.have.been.calledOnce;
       });
     });

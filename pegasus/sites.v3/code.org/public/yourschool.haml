@@ -2,15 +2,18 @@
 title: Computer Science in your school or district
 theme: responsive
 social:
-  "og:title": "I'm joining the movement"
-  "og:description": "I just signed the pledge to expand computer science at my school. Does your school teach computer science? Join me and take the pledge at code.org/yourschool."
+  "og:title": "Does your school teach computer science?"
+  "og:description": "Expand computer science at your school or district. Join the thousands of schools who have already incorporated high quality computer science education into their curriculum and provide opportunities for the students in your local area."
 ---
 %script{src: "https://cdn.optimizely.com/js/400912536.js"}
 - census_announcement = DCDO.get('census_announcement', nil)
+- if 'us' != hoc_detect_country
+  - census_announcement ||= {}
+  - census_announcement['hide_map'] = 'true'
 
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: asset_path("js/#{js_locale}/common_locale.js")}
-%script{src: asset_path('js/code.org/public/yourschool.js')}
+%script{src: minifiable_asset_path('js/code.org/public/yourschool.js')}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}
 
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}

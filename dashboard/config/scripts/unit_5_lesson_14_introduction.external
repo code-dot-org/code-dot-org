@@ -40,7 +40,11 @@ It is quite possible that some of your students will not have succeeded in creat
 * Let students continue working on the text version of their app. While this lesson introduces new event types, it falls in a sequence focused on arrays. Students can still participate in discussions about refactoring code and will be exposed to the new key events.
 
 * Provide students the **exemplar version** of the text-based **My Favorite Things** app. They can Remix the project and work on it in Free Play mode (i.e., outside of the curriculum). This way, they have a clean starting point and focus on the content of the lesson. If they wish, students can copy the code into Code Studio and will only need to create the UI elements themselves. 
-    * [My Favorite Things Exemplar](https://levelbuilder-studio.code.org/projects/applab/crEIVQmJhiqUgJOEPmy8Eg/view)
 
+[key]
+
+* [My Favorite Things Exemplar](https://levelbuilder-studio.code.org/projects/applab/crEIVQmJhiqUgJOEPmy8Eg/view)
+
+[/key]
 
 MARKDOWN

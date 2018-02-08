@@ -35,7 +35,7 @@
         StudioEC: Oyun Laboratuvarı
         Applab: App Laboratuvarı
         NetSim: "İnternet Simülatörü"
-        Custom: Aktör
+        Custom: Sanatçı
         CustomStudio: Oyun Laboratuvarı
         Gamelab: Oyun Laboratuvarı
     trophy:
@@ -70,9 +70,9 @@
         maze_2_6: Sadece üç blok kullanarak beni yeşil işgalciye ulaştırmaya çalış.
         maze_2_7: En az sayıda blok kullanarak bu kötü domuzcuğu ortadan kaldırmama
           yardım et. Birden fazla "...defa tekrar et " bloğu kullanmayı dene.
-        maze_2_8: 'Eğer blok gri ise, bu onu silemeyeceğin anlamına gelir. Yapbozu
+        maze_2_8: 'Eğer blok gri ise, bu onu silemeyeceğin anlamına gelir. Bu bulmacayı
           3 defa tekrar eden "tekrar" bloğunu kullanarak çöz. Bu 3 bloğu gri renkteki
-          "tekrar" bloğunun içine yerleştir: oynat, oynat, dön.'
+          "tekrar" bloğunun içine yerleştir: ilerle, ilerle, dön.'
         maze_2_9: Tamam, yeni "e kadar tekrarla" bloğunu dene. Bu, ben yeşil domuza
           ulaşana kadar tekrarlayacak.
         maze_2_10: Tamam, pratik için son kez. Bunu sadece 4 blok kullanarak çözebilir
@@ -100,7 +100,7 @@
         turtle_1_1: Merhaba , ben bir sanatçıyım. İstediğin herhangi bir şeyi çizmek
           için beni programlayabilirsin. Resimdeki gri çizgileri çizdirmek için bir
           kaç blok kullan.
-        turtle_1_2: 'Şimdi bir kare çiz. Not: Bunu "rengi belirle" bloğununda en sevdiğin
+        turtle_1_2: 'Şimdi bir kare çiz. Not: Bunu "rengi belirle" bloğunda en sevdiğin
           rengi seçerek yapabilirsin.'
         turtle_1_3: Sadece 3 blok kullanarak bir kare yapın.
         turtle_1_4: 'Her seferinde farklı bir renk alan "rastgele renk" seçeneğini
@@ -420,8 +420,8 @@
         jigsaw_8: "Şekli oluşturacak biçimde blokları düzenleyin"
         jigsaw_9: "Şekli oluşturacak biçimde blokları düzenleyin"
         jigsaw_10: "Şekli oluşturacak biçimde blokları düzenleyin"
-        jigsaw_11: "Şekli oluşturacak biçimde blokları düzenleyin"
-        jigsaw_12: "Şekli oluşturacak biçimde blokları düzenleyin"
+        jigsaw_11: Blokları numaralarına göre sıralayın
+        jigsaw_12: Blokları numaralarına göre sıralayın
         jigsaw_13: Bulmacayı düzelt!
         mazestep_1: Labirent adım tanımları
         mazestep_2: Labirent adım tanımları
@@ -708,6 +708,7 @@
         C4_unplugged_forloops: For Döngüleri
         C4_unplugged_parameters: Parametrelerle Şarkı Yazmak
         C4_unplugged_binary: "İkili"
+        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Sanatçı açılarda
         CSF_collector_k1_blocks: 'Bilgisayar bilimleri Temelleri: Toplayıcı'
         CSF_collector_repeat_loops: Toplayıcı tekrarlama döngüleri
@@ -734,9 +735,19 @@
         infinity_playlab_intro: Oyun Laboratuvarı - Giriş
         infinity_playlab_events: Oyun Laboratuvarı - Olaylar
         infinity_playlab_repeat_forever: Oyun Laboratuvarı - Sonsuz Döngü
+        csd_concept_how_computers_work: Bilgisayarların Nasıl Çalıştığını Anlayalım
         csd_concept_computer: Bir bilgisayarı, bilgisayar yapan nedir?
-        csd_concept_binary_data: 'How Computers Work: Binary & Data'
+        csd_concept_binary_data: 'Bilgisayar Nasıl İşler: İkili ve veri'
+        csd_concept_circuits_logic: 'Bilgisayarlar Nasıl Çalışır: Devreler & Mantık'
+        csd_concept_memory_cpu_input_output: 'Bilgisayarlar Nasıl Çalışır: İşlemci,
+          Giriş & Çıkışlar'
+        csd_concept_hardware_software: 'Bilgisayarlar Nasıl Çalışır: Donanım & Yazılım'
         csd_concept_search: Arama nasıl çalışır
+        csd_external_amazon_data: Amazon tavsiye sistemlerinde kullanılan Büyük Veri
+          hayatımızı değiştirmek için kullanılır
+        csd_external_netflix_data: Netflix Nasıl TV Gösterimleri ve Film Önerileri
+          Yapabiliyor?
+        csd_external_waze_data: Neden pek çok kullanıcı ile Waze ile takıntı yaptı?
         csd_gamelab_animation_tab: Animasyon sekmesi
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
@@ -841,11 +852,38 @@
         mc_2016_events: Minecraft Kodlama Saati - Olaylar
         mc_2016_spawn: Minecraft Kodlama Saati - Spawn
         mc_2016_congrats: Minecraft Kodlama Saati - Tebrikler
-        applab_hoc_welcome: App Lab Hour of Code - Welcome
-        applab_hoc_setproperty: App Lab Hour of Code - setProperty
-        applab_hoc_onevent: App Lab Hour of Code - onEvent
-        applab_hoc_designmode: AppLab Hour of Code - Design Mode
-        applab_hoc_share: AppLab Hour of Code - Share
+        applab_hoc_welcome: App laboratuvar kod saati- hoş geldiniz
+        applab_hoc_setproperty: App laboratuvar kod saati- setProperty
+        applab_hoc_onevent: App laboratuvar kod saati- olaydurumunda
+        applab_hoc_designmode: App laboratuvar kod saati- Tasarım Modu
+        applab_hoc_share: App laboratuvar kod saati- Paylaş
+        mc_2017_agent_intro: Minecraft Kodlama Saati - Ajan
+        mc_2017_repeat: Minecraft Kodlama Saati - Döngüler
+        mc_2017_functions: Minecraft Kodlama Saati - Fonksiyonlar
+        mc_2017_congratulations: Minecraft Kodlama Saati - Tebrikler
+        mc_2017_puzzle_1: Minecraft Kodlama Saati - Ajan
+        mc_2017_puzzle_3: Minecraft Kodlama Saati - Döngüler
+        mc_2017_puzzle_8: Minecraft Kodlama Saati - Fonksiyonlar
+        mc_2017_puzzle_12: Minecraft Kodlama Saati - serbest zaman
+        hint_videos_d_11_3_first: "İpucu videolar: D.11.3 ilk"
+        hint_videos_d_11_3_last: "İpucu videolar: D.11.3 son"
+        hint_videos_d_11_4_first: "İpucu videolar: D.11.4 ilk"
+        hint_videos_d_11_4_last: "İpucu videolar: D.11.4 son"
+        hint_videos_d_11_5_first: "İpucu videolar: D.11.5 ilk"
+        hint_videos_d_11_5_last: "İpucu videolar: D.11.5 son"
+        hint_videos_d_11_6_first: "İpucu videolar: D.11.6 ilk"
+        hint_videos_d_11_6_last: "İpucu videolar: D.11.6 son"
+        hint_videos_d_11_7_first: "İpucu videolar: D.11.7 ilk"
+        hint_videos_d_11_7_last: "İpucu videolar: D.11.7 son"
+        hint_videos_d_11_9_first: "İpucu videolar: D.11.9 ilk"
+        hint_videos_d_11_9_last: "İpucu videolar: D.11.9 son"
+        hint_videos_d_11_11_first: "İpucu videolar: D.11.11 ilk"
+        hint_videos_d_11_11_last: "İpucu videolar: D.11.11 son"
+        applab_intro_welcome: App Lab - Başlarken
+        applab_intro_events: App Lab - etkileşimli
+        applab_intro_sounds: App Lab - resimler ve sesler
+        applab_intro_designmode: App Lab - tasarım modu
+        applab_intro_share: App Lab - Uygulamanı paylaş
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

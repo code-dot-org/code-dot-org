@@ -72,6 +72,12 @@ module SetupTest
         AWS::S3.stub(:random, proc {random.bytes(16).unpack('H*')[0]}, &block)
       end
     end
+
+    # Cached S3-client objects contain AWS credentials,
+    # so reset them to ensure that they are not reused across tests.
+    BucketHelper.s3 = nil if defined?(BucketHelper)
+    AWS::S3.s3 = nil
+
     # Reset AUTO_INCREMENT, since it is unaffected by transaction rollback.
     PEGASUS_TEST_TABLES.each do |table|
       PEGASUS_DB.execute("ALTER TABLE `#{table}` AUTO_INCREMENT = 1")

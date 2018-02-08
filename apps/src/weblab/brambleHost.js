@@ -39,7 +39,7 @@ function ensureProjectRootDirExists(callback) {
   const sh = new fs.Shell();
 
   // create project root directory
-  sh.mkdirp(`${weblabRoot}/${currentProjectId}`, err => {
+  sh.mkdirp(`${weblabRoot}/${currentProjectPath}`, err => {
     if (err && err.code === "EEXIST") {
       // If it already exists, treat that as a success case
       err = null;
@@ -53,12 +53,12 @@ function putFilesInBramble(sources, callback) {
   const sh = new fs.Shell();
   const Path = bramble_.Filer.Path;
 
-  sh.rm(`${weblabRoot}/${currentProjectId}`, {recursive: true}, err => {
+  sh.rm(`${weblabRoot}/${currentProjectPath}`, {recursive: true}, err => {
     // create project root directory
-    sh.mkdirp(`${weblabRoot}/${currentProjectId}`, err => {
+    sh.mkdirp(`${weblabRoot}/${currentProjectPath}`, err => {
 
       function writeFileDataAndContinue(filename, data, currentIndex) {
-        var path = Path.join(`${weblabRoot}/${currentProjectId}`, filename);
+        var path = Path.join(`${weblabRoot}/${currentProjectPath}`, filename);
         // write the data
         function onWriteComplete(err) {
           if (err) {
@@ -133,9 +133,9 @@ function removeAllFilesInBramble(callback) {
   const fs = bramble_.getFileSystem();
   const sh = new fs.Shell();
 
-  sh.rm(`${weblabRoot}/${currentProjectId}`, {recursive: true}, err => {
+  sh.rm(`${weblabRoot}/${currentProjectPath}`, {recursive: true}, err => {
     // create project root directory
-    sh.mkdirp(`${weblabRoot}/${currentProjectId}`, err => {
+    sh.mkdirp(`${weblabRoot}/${currentProjectPath}`, err => {
       if (err && err.code === "EEXIST") {
         err = null;
       }
@@ -152,7 +152,7 @@ function removeAllFilesInBramble(callback) {
 function getFileData(filename, callback) {
   const fs = bramble_.getFileSystem();
   const Path = bramble_.Filer.Path;
-  const path = Path.join(`${weblabRoot}/${currentProjectId}`, filename);
+  const path = Path.join(`${weblabRoot}/${currentProjectPath}`, filename);
   fs.readFile(path, { encoding: null }, callback);
 }
 
@@ -170,11 +170,11 @@ function syncFilesWithBramble(fileEntries, currentProjectVersion, callback) {
 
   function requestFileEntryAndWrite(fileEntry, callback) {
     // read the data
-    $.ajax(fileEntry.url, {
+    $.ajax(`${fileEntry.url}?version=${fileEntry.versionId}`, {
       dataType: 'binary',
       responseType: 'arraybuffer'
     }).done(data => {
-      var path = Path.join(`${weblabRoot}/${currentProjectId}`, fileEntry.name);
+      var path = Path.join(`${weblabRoot}/${currentProjectPath}`, fileEntry.name);
       // write the data
       fs.writeFile(path, new Buffer(data), { encoding: null }, callback);
     }).fail((jqXHR, textStatus, errorThrown) => {
@@ -287,7 +287,7 @@ function uploadAllFilesFromBramble(callback) {
   const sh = new fs.Shell();
 
   // enumerate files in the file system off the project root
-  sh.ls(`${weblabRoot}/${currentProjectId}`, function (err, entries) {
+  sh.ls(`${weblabRoot}/${currentProjectPath}`, function (err, entries) {
     // async-chained enumeration: get the file data for i-th file
     function getEntryFileData(i, callback) {
       if (i < entries.length) {
@@ -373,6 +373,13 @@ function refreshPreview() {
   brambleProxy_.refreshPreview();
 }
 
+function enableFullscreenPreview(callback) {
+  brambleProxy_.enableFullscreenPreview(callback);
+}
+
+function disableFullscreenPreview(callback) {
+  brambleProxy_.disableFullscreenPreview(callback);
+}
 function onProjectChanged(callback) {
   onProjectChangedCallback_ = callback;
 }
@@ -451,31 +458,33 @@ if (parent.getWebLab) {
 // expose object for parent window to talk to us through
 const brambleHost = {
   // return file data from the Bramble editor
-  addFileHTML: addFileHTML,
-  addFileCSS: addFileCSS,
-  undo: undo,
-  redo: redo,
-  hideTutorial: hideTutorial,
-  showTutorial: showTutorial,
-  enableInspector: enableInspector,
-  disableInspector: disableInspector,
-  refreshPreview: refreshPreview,
-  onProjectChanged: onProjectChanged,
-  onBrambleReady: onBrambleReady,
-  onInspectorChanged: onInspectorChanged,
-  startInitialFileSync: startInitialFileSync,
-  syncFiles: syncFiles,
+  addFileHTML,
+  addFileCSS,
+  undo,
+  redo,
+  hideTutorial,
+  showTutorial,
+  enableInspector,
+  disableInspector,
+  refreshPreview,
+  enableFullscreenPreview,
+  disableFullscreenPreview,
+  onProjectChanged,
+  onBrambleReady,
+  onInspectorChanged,
+  startInitialFileSync,
+  syncFiles,
 };
 
 // Give our interface to our parent
-var currentProjectId = webLab_.setBrambleHost(brambleHost);
-var removeProjectRootRegex = new RegExp(`^\\/codedotorg\/weblab\/${currentProjectId}\/`, 'g');
+var currentProjectPath = webLab_.setBrambleHost(brambleHost);
+var removeProjectRootRegex = new RegExp(`^\\/codedotorg\/weblab\/${currentProjectPath}\/`, 'g');
 
 function load(Bramble) {
   bramble_ = Bramble;
 
   Bramble.load("#bramble", {
-    url: "//downloads.computinginthecore.org/bramble_0.1.22/index.html?disableExtensions=bramble-move-file",
+    url: "//downloads.computinginthecore.org/bramble_0.1.26/index.html?disableExtensions=bramble-move-file",
     // DEVMODE: INSECURE (local) url: "../blockly/js/bramble/index.html?disableExtensions=bramble-move-file",
     // DEVMODE: INSECURE url: "http://127.0.0.1:8000/src/index.html?disableExtensions=bramble-move-file",
     useLocationSearch: true,
@@ -587,7 +596,7 @@ function load(Bramble) {
 
   startInitialFileSync(function () {
     // tell Bramble which root dir to mount
-    Bramble.mount(`${weblabRoot}/${currentProjectId}`);
+    Bramble.mount(`${weblabRoot}/${currentProjectPath}`);
   });
 }
 

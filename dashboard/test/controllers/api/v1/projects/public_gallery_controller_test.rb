@@ -93,7 +93,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
     get :index, params: {project_type: 'applab', limit: 1}
 
     assert_response :success
-    assert_equal "max-age=60, public", @response.headers["Cache-Control"]
+    assert_equal "max-age=5, public", @response.headers["Cache-Control"]
     categories_list = JSON.parse(@response.body)
     assert_equal 1, categories_list.length
     project_row = categories_list['applab'].first
@@ -122,10 +122,10 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
     get :index, params: {project_type: 'all', limit: 1}
 
     assert_response :success
-    assert_equal "max-age=60, public", @response.headers["Cache-Control"]
+    assert_equal "max-age=5, public", @response.headers["Cache-Control"]
     categories_list = JSON.parse(@response.body)
 
-    assert_equal ProjectsList::PUBLISHED_PROJECT_TYPES.sort, categories_list.keys.sort
+    assert_equal ProjectsList::PUBLISHED_PROJECT_TYPE_GROUPS.keys.map(&:to_s).sort, categories_list.keys.sort
     assert_equal 1, categories_list['applab'].length
     assert_empty categories_list['gamelab']
     assert_empty categories_list['playlab']

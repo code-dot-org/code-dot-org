@@ -1,6 +1,9 @@
 {
   "absolute": "ערך מוחלט",
+  "agentGenericFailureMessage": "Keep coding! Remember to use The Agent to help.",
+  "agentTooFewBlocksFailureMessage": "Try adding just one block at a time to get The Agent to the right spot.",
   "at": "ב",
+  "agentDiamondPathCongrats": "Congratulations, you found the diamond path! You have collected {count, plural, one {1 diamond} other {# diamonds}} so far!",
   "blockActionAdd": "הוסף",
   "blockActionAttack": "התקף",
   "blockActionClone": "clone blocks",
@@ -110,6 +113,12 @@
   "blockTypeTree": "עץ",
   "blockTypeWater": "מים",
   "blockTypeWool": "צמר",
+  "blockTypeWoolBlue": "blue wool",
+  "blockTypeWoolMagenta": "magenta wool",
+  "blockTypeWoolOrange": "orange wool",
+  "blockTypeWoolPink": "pink wool",
+  "blockTypeWoolRed": "red wool",
+  "blockTypeWoolYellow": "yellow wool",
   "blockWhileXAheadAhead": "קדימה",
   "blockWhileXAheadDo": "בצע",
   "blockWhileXAheadWhile": "כאשר",
@@ -231,6 +240,7 @@
   "quantity": "quantity",
   "reinfFeedbackMsg": "באפשרותך להקיש \"להמשיך לשחק\" על מנת לחזור לשחק את המשחק.",
   "relative": "relative",
+  "runAgent": "Run Agent",
   "score": "ניקוד",
   "seconds": "second(s)",
   "selectChooseButton": "בחר",
@@ -286,6 +296,5 @@
   "weather": "weather",
   "weatherTypeClear": "clear",
   "weatherTypeRain": "rain",
-  "weatherTypeThunder": "thunder",
-  "runAgent": "Run Agent"
+  "weatherTypeThunder": "thunder"
 }

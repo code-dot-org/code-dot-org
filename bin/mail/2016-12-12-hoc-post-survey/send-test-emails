@@ -1,4 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list --limit 2 2016-12-12-hoc-post-survey-US ../mailing-common/test-params-us.csv
-../send-to-mailing-list --limit 2 2016-12-12-hoc-post-survey-intl ../mailing-common/test-params-international.csv

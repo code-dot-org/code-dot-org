@@ -10,6 +10,9 @@ import $ from 'jquery';
 
 import { getStore } from '@cdo/apps/code-studio/redux';
 import { setRtlFromDOM } from '@cdo/apps/code-studio/isRtlRedux';
+import initSigninState from '@cdo/apps/code-studio/initSigninState';
+import initResponsive from '@cdo/apps/code-studio/responsive';
+
 const store = getStore();
 store.dispatch(setRtlFromDOM());
 
@@ -105,3 +108,5 @@ window.CDOSounds = Sounds.getSingleton();
 
 checkForUnsupportedBrowsersOnLoad();
 initHamburger();
+initSigninState();
+initResponsive();

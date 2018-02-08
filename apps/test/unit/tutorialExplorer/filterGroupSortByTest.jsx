@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../util/configuredChai';
 import sinon from 'sinon';
-import {TutorialsSortBy} from '@cdo/apps/tutorialExplorer/util';
+import {TutorialsSortByOptions} from '@cdo/apps/tutorialExplorer/util';
 import FilterGroupSortBy from '@cdo/apps/tutorialExplorer/filterGroupSortBy';
 import i18n from '@cdo/tutorialExplorer/locale';
 
@@ -18,7 +18,7 @@ describe('FilterGroupSortBy', () => {
     const wrapper = shallow(
       <FilterGroupSortBy
         {...DEFAULT_PROPS}
-        defaultSortBy={TutorialsSortBy.displayweight}
+        defaultSortBy={TutorialsSortByOptions.displayweight}
       />
     );
     expect(wrapper).to.containMatchingElement(

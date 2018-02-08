@@ -54,3 +54,19 @@ export function updateQueryParam(param, value, useReplaceState=false) {
   const method = useReplaceState ? 'replaceState' : 'pushState';
   window.history[method](null, document.title, newLocation);
 }
+
+/**
+ * We have various cookies that we want to be environment specific. We accomplish
+ * this by tacking on the rack_env (unless we're in prod). This helper gets the
+ * appropriate cookie name
+ * @param {string} name - Base cookie name
+ * @returns {string} Actual cookie name, with the rack_env appended
+ */
+export function environmentSpecificCookieName(name) {
+  const rack_env = window.dashboard.rack_env;
+  if (rack_env === 'production') {
+    return name;
+  }
+
+  return `${name}_${rack_env}`;
+}

@@ -37,11 +37,19 @@
   twentyhours_text: Selesai dengan Jam pertama 'Hour of Code? Pelajari lebih lanjut
     inti ilmu komputer dan konsep pemrograman di pelajaran selanjutnya.
   og_title: Setiap anak berhak atas kesempatan
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
   og_description: Setiap siswa di setiap sekolah layak mendapatkan kesempatan untuk
     belajar ilmu komputer. Ini mengubah segalanya.
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: Minggu pendidikan ilmu komputer
   csedweek_og_description: 4-10 Desember 2017. Ilmu komputer adalah dasar bagi setiap
     siswa untuk belajar.
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
   hoc2014_heading: Bergabung dengan <a href="http://hourofcode.com">Hour of Code</a>
     <br/> 8-14 Desember 2014 <br/>
   hoc2014_students: Siswa
@@ -93,12 +101,12 @@
   congratulations_on_completing_course2: Selamat atas penyelesaian Kursus 2
   congratulations_on_completing_course3: Selamat atas penyelesaian Kursus 3
   congratulations_on_completing_course4: Selamat atas penyelesaian Kursus 4
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
+  congratulations_on_completing_coursea: Selamat menyelesaikan Kursus A
+  congratulations_on_completing_courseb: Selamat menyelesaikan Kursus B
+  congratulations_on_completing_coursec: Selamat menyelesaikan Kursus C
+  congratulations_on_completing_coursed: Selamat menyelesaikan Kursus D
+  congratulations_on_completing_coursee: Selamat menyelesaikan Kursus E
+  congratulations_on_completing_coursef: Selamat menyelesaikan Kursus F
   congratulations_on_completing_accelerated: Selamat atas menyelesaikan Kursus Akselerasi
   congrats_next_tutorials_title: Lulus ke tingkat berikutnya
   congrats_next_tutorials_desc: Cobalah yang lebih pendek, tutorial 1 jam ini atau
@@ -171,11 +179,12 @@
     dibuat orang lain dan saling belajar satu sama lain!
   third_party_khan_btn_learn: Belajar CS bersama Khan Academy
   third_party_khan_btn_forum: Forum CS Khan Academy
-  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
-    allows everyone, even novices, to start programming and build fully functional
-    apps for Android devices. Newcomers to App Inventor can have their first app up
-    and running in an hour or less, and can program more complex apps in significantly
-    less time than with more traditional, text-based languages.
+  third_party_appinv_desc: Aplikasi MIT Inventor adalah sebuah tool pemrograman berbasis-blok
+    yang memungkinkan semua orang, bahkan pemula, untuk memulai pemrograman dan membangun
+    berfungsi penuh dengan perangkat aplikasi untuk Android. Pendatang baru ke Aplikasi
+    Inventor dapat menjalankan aplikasi pertama mereka dan berjalan dalam waktu kurang
+    lebih satu jam, dan dapat memprogram aplikasi yang lebih lengkap dalam waktu yang
+    jauh lebih singkat dari pada teks berbasis bahasa-bahasa yang tradisional.
   third_party_appinv_btn_curriculum: Unduh Kurikulum App Inventor 2
   third_party_appinv_btn_forum: Forum App Inventor 2
   third_party_appinv_btn_site: Kunjungi App Inventor 2
@@ -185,10 +194,10 @@
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
   third_party_codehs_btn_try: Introduksi CS Pelajari Lebih Lanjut untuk Sekolah
-  third_party_codecademy_desc: We are rethinking education from the bottom up. The
-    web has rethought nearly everything - commerce, social networking, healthcare,
-    and more. We are building the education the world needs - the first truly net
-    native education.
+  third_party_codecademy_desc: Kami telah memikirkan kembali pendidikan dari dasar
+    ke atas. Layanan telah memikirkan kembali hampir semua hal - perdagangan, jejaring
+    sosial, perawatan kesehatan, dan lainnya. Kami sedang membangun pendidikan kebutuhan
+    dunia - pertama pendidikan pribumi yang benar-benar bersih.
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
   third_party_codecademy_btn_site: Kunjungi Codecademy
   third_party_organization: Organisasi
@@ -200,7 +209,7 @@
   third_party_cost_free_399: Gratis untuk mencoba, $399/kelas
   third_party_cost_free_2: Gratis untuk mencoba, $2/mahasiswa
   third_party_cost_free_10: Gratis untuk mencoba, $9,99/bulan
-  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
+  third_party_desc_5_4to8: Sekitar 5 pelajaran, diarahkan ke kelas 4 sampai 8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
@@ -363,6 +372,12 @@
   studiobar_donate_body: Satu anak belajar untuk setiap US dollar yang Anda sumbangkan
   studiobar_shop_title: Belanja
   studiobar_shop_body: Pecahkan stereotip. Pakailah logo kami dengan bangga.
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "&ldquo;Saya menantang anak-anak di setiap negara untuk
     belajar mengkode selama satu jam.&rdquo; Malala, pemenang Hadiah Nobel Perdamaian"
   homepage_hero_text_susan: |-
@@ -412,6 +427,8 @@
   homepage_hero_text_stat_loc: "#loc baris kode ditulis oleh para pelajar"
   homepage_hero_text_stat_students: "#student_count akun pelajar pada kode Studio"
   homepage_hero_text_stat_served: 'Hour of Code: #served disediakan'
+  homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Jam Kode
   homepage_slot_text_frozen: Frozen bersama Anna dan Elsa
   homepage_slot_text_teacher: Dashboard untuk Guru
@@ -431,6 +448,7 @@
   homepage_action_text_girlvideo: Inspirasi seorang gadis
   homepage_action_text_learn: Mulailah belajar
   homepage_action_text_signpetition: Tandatangani petisi
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Tandatangani petisi kami &#x25BE;
   homepage_diversity_pledge: Ambil jaminan diversitas
   homepage_banner_text_prizes: 'The Hour of Code akan datang lagi, Desember 7-13. '
@@ -550,10 +568,14 @@
   mc_gradelevel: Usia 6 Keatas
   mc_platformtext: Browser modern, smartphone, tablet
   mc_specs: Berbagai bahasa | Situs pencarian | Ages 6-106
+  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: Perancang Minecraft
   minecraft_adventurer: Petualang Minecraft
   minecraft_tutorials: Tutorial Minecraft Jam Kode
   minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
+  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
+    new activity! Journey through Minecraft with code.
+  minecraft_agent_button: Mulai
   minecraft_designer_description: Program animals and enemies in your own version
     of Minecraft.
   minecraft_designer_button: Mulai
@@ -562,6 +584,41 @@
   minecraft_no_internet: Tidak ada koneksi Internet?
   minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
   minecraft_subtitle: Minecraft Hour of Code
+  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
+    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
+    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
+    problem solving and loads of fun."
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+    facilitator quick start guide and PowerPoint presentations for younger and older
+    students now."
+  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
+    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
+    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
+    Get a head start on thinking through what you need to bring Hour of Code to young
+    people during Computer Science Education week (December 4-10) and beyond.
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
+    at the Microsoft Store'
+  minecraft_continue_learning_description: No computer science experience required!
+    Help ensure all youth can learn the valuable skills gained through computer science
+    education. Join us at the Microsoft Store to engage in a free series of three,
+    1-hour workshops where you will experience coding in a fun and stress-free environment,
+    become familiar with key computer science concepts, and get ready to lead an Hour
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
+    up today</a>.
+  minecraft_future: Help all youth become future ready
+  minecraft_future_description: Find out how other schools and nonprofits are bringing
+    digital skills, from digital literacy to computer science education, to their
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
+    the resources</a> they found most valuable.
+  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
+    Program animals and other Minecraft creatures in your own version of Minecraft.
+  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
+    Write code to journey through Minecraft biomes.
   sports_page_title: Sports Hour of Code
   sports_og_title: Hour of Code Sports Tutorials
   sports_og_description: Choose between making a basketball game or mix and match
@@ -610,6 +667,7 @@
   video_title_obama: President Obama pada Ilmu Komputer
   video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
   video_title_anybody_can_learn: Siapa pun bisa belajar
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: Hour of Code with Draymond Green
   video_title_russell_okung: Hour of Code with Russell Okung
   video_title_real_madrid: Hour of Code with Real Madrid
@@ -736,6 +794,10 @@
   volunteer_engineer_submission_type_task_mentor: Saya mencari mentor untuk membantu
     mempersiapkan diri saya untuk koding dengan murid-murid saya
   petition_age: Umur
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: Pelajari lebih banyak
   dashboard_landing_title: Beranda guru
   dashboard_landing_welcome: Selamat datang di dasbot guru yang baru dan termutakhir.
   dashboard_landing_video: Tonton video ini
@@ -1246,6 +1308,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Full Test - 50 questions
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
@@ -2033,12 +2097,12 @@
   playlab_shortcode: mainkan
   artist_shortcode: art
   header_home: Beranda
-  header_my_dashboard: My Dashboard
+  header_my_dashboard: Dasbor saya
   header_courses: Kursus
   header_course_catalog: Course Catalog
   header_project_gallery: Proyek
   header_sections: Sesi
-  header_professional_learning: Professional Learning
+  header_professional_learning: Belajar profesional
   header_educate_overview: Ikhtisar Pendidik
   header_educate_elementary: Sekolah Dasar
   header_educate_middle: Sekolah Menengah Pertama
@@ -2129,3 +2193,11 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
+  dashboard_tools: 'Tools: '
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
+  gamelab_name: Game Lab

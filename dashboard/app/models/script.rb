@@ -422,6 +422,20 @@ class Script < ActiveRecord::Base
     script_levels[chapter - 1] # order is by chapter
   end
 
+  def get_bonus_script_levels(current_stage)
+    unless @all_bonus_script_levels
+      @all_bonus_script_levels = stages.map do |stage|
+        {
+          stageNumber: stage.relative_position,
+          levels: stage.script_levels.select(&:bonus).map(&:summarize_as_bonus)
+        }
+      end
+      @all_bonus_script_levels.select! {|stage| stage[:levels].any?}
+    end
+
+    @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
+  end
+
   def beta?
     Script.beta? name
   end
@@ -504,7 +518,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csp-ap text-compression netsim pixelation frequency_analysis vigenere).include?(name)
+    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csp3-research-mxghyt csd1 csd2 csd3 csd4 csd5 csd6 csp-ap text-compression netsim pixelation frequency_analysis vigenere applab-intro csp-explore csp-create).include?(name)
   end
 
   def has_lesson_pdf?
@@ -568,7 +582,7 @@ class Script < ActiveRecord::Base
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
           properties: Script.build_property_hash(script_data)
-        }, stages.map {|stage| stage[:scriptlevels]}.flatten]
+        }, stages]
       end
 
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
@@ -579,7 +593,8 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def self.add_script(options, raw_script_levels)
+  def self.add_script(options, raw_stages)
+    raw_script_levels = raw_stages.map {|stage| stage[:scriptlevels]}.flatten
     script = fetch_script(options)
     chapter = 0
     stage_position = 0; script_level_position = Hash.new(0)
@@ -716,6 +731,10 @@ class Script < ActiveRecord::Base
       if stage.lockable && !stage.script_levels.last.assessment?
         raise 'Expect lockable stages to have an assessment as their last level'
       end
+
+      raw_stage = raw_stages.find {|rs| rs[:stage].downcase == stage.name.downcase}
+      stage.stage_extras_disabled = raw_stage[:stage_extras_disabled]
+      stage.save! if stage.changed?
     end
 
     script.stages = script_stages
@@ -750,7 +769,7 @@ class Script < ActiveRecord::Base
             wrapup_video: general_params[:wrapup_video],
             properties: Script.build_property_hash(general_params)
           },
-          script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
+          script_data[:stages],
         )
         Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
       end
@@ -966,7 +985,21 @@ class Script < ActiveRecord::Base
 
   # @return {String|nil} path to the course overview page for this script if there
   #   is one.
-  def course_link
-    course_path(course) if course
+  def course_link(section_id = nil)
+    return nil unless course
+    path = course_path(course)
+    path += "?section_id=#{section_id}" if section_id
+    path
+  end
+
+  # If there is an alternate version of this script which the user should be on
+  # due to existing progress or a course experiment, return that script. Otherwise,
+  # return nil.
+  def alternate_script(user)
+    course_scripts.each do |cs|
+      alternate_cs = cs.course.select_course_script(user, cs)
+      return alternate_cs.script if cs != alternate_cs
+    end
+    nil
   end
 end

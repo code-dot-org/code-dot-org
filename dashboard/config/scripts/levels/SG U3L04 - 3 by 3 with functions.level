@@ -27,6 +27,8 @@
           ""
         ]
       },
+      "penUp": null,
+      "penDown": null,
       "comment_Goals_1": {
         "goal": "Move turtle"
       },
@@ -47,7 +49,7 @@
     "encrypted_examples": "8MrvS0E5eMdRaN0C0oU4U115dG5R7E3MEPqfHUBpkGz6shljXs6gE1aOYbCV\n6tgA\n",
     "embed": "false",
     "instructions": "Make the 3x3 square as efficiently as you can. (Click to see full instructions)",
-    "markdown_instructions": "#Do This:\r\n\r\nWe're going to revisit a familiar problem, **drawing the 3x3 square as efficiently as possible**. The only difference is that this time you are armed with the ability to create **layers of functions** to help you design more elegant and efficient solutions. Use the techniques you've learned for **breaking down problems into layers of functions** in order to improve upon your previous solution. Think about how to combine functions to use as few blocks as possible.\r\n\r\nYou'll need 4 subgoals for this task. Think about how you can define and call functions to draw most of the square, then fill in the rest using `//Move turtle` and `//Orient turtle`.\r\n\r\n![](https://images.code.org/121251ed82b4986848062abacdef6963-image-1441824892425.54.18 PM.png)",
+    "markdown_instructions": "# Do This:\r\n\r\nWe're going to revisit a familiar problem, **drawing the 3x3 square as efficiently as possible**. The only difference is that this time you are armed with the ability to create **layers of functions** to help you design more elegant and efficient solutions. Use the techniques you've learned for **breaking down problems into layers of functions** in order to improve upon your previous solution. Think about how to combine functions to use as few blocks as possible.\r\n\r\nYou'll need 4 subgoals for this task. Think about how you can `//Define function` and `//Call function` to draw most of the square, then fill in the rest using `//Move turtle` and `//Orient turtle`.\r\n\r\n![](https://images.code.org/121251ed82b4986848062abacdef6963-image-1441824892425.54.18 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -151,11 +153,12 @@
     "expand_debugger": "false",
     "teacher_markdown": "Now we revisit the 3x3 grid challenge; this time students can write much more efficient and clear solutions by using a top-down design strategy to figure out good functions to write.\r\n\r\n***Notes***: \r\n\r\n* It's very possible that in writing a solution with functions, the turtle might actually execute more primitive operations than in the student's previous version.  \r\n* That's OK, because the code should be *much* shorter and *much* easier to read.  \r\n* We will trade a well-designed, well-written program for a clumsy hard-to-read program at the cost of a few primitive operations.",
     "disable_procedure_autopopulate": "false",
+    "palette_category_at_start": "goals",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 20:24:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-02 20:05:00 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-02 20:21:43 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-15 12:53:24 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"text_mode_at_start\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:24:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-02 20:05:00 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-02 20:21:43 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-15 12:53:24 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"text_mode_at_start\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-20 12:40:51 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-20 18:29:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-20 20:29:30 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

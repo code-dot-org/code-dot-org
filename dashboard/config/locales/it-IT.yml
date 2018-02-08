@@ -97,7 +97,7 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Account Microsoft
-    clever: Clever Account
+    clever: Account Clever
     forgot_password: Hai dimenticato la tua password?
     need_confirmation: Non hai ricevuto le istruzioni di conferma?
     need_unlock: Non hai ricevuto le istruzioni di sblocco?
@@ -113,19 +113,18 @@
       <br>
       <b>Se sei in Italia, crea il tuo profilo attraverso il sito italiano <a href="https://programmailfuturo.it/chi/chi-puo-partecipare" target="_blank">Programma il Futuro</a>, sarà tutto più semplice!</b>
     hoc_already_signed_up_heading: Iniziare senza effettuare il login
-    hoc_already_signed_up_content: Ti sei iscritto per insegnare un'ora di codice!
+    hoc_already_signed_up_content: Ti sei iscritto per insegnare un'Ora del Codice!
       Tu e i tuoi studenti non avete bisogno di accedere a Code Studio per partecipare
-      a questo evento. Per iniziare, <a href="%{learn_url}">scegli un tutorial</a>
-      per la tua classe e condividi il link con loro.<br/><br/>Se ti è piaciuta l'ora
-      di codice e vuoi approfondire, puoi scegliere una password e creare un account
-      Code Studio qui sotto per iscrivere i tuoi studenti in uno dei nostri <a href="%{educate_url}">corsi
-      più estesi</a>.
-    hoc_already_signed_up_content_post_hoc: Grazie per aver partecipato a Ora di Codice.
-      Per accedere a Code Studio, avrai bisogno di impostare una password per il tuo
-      account. Questo ti permetterà di salvare i tuoi progressi e gestire i tuoi corsi.
-      Potrai assegnare corsi agli studenti e tenere traccia dei loro progressi. <a
-      href="%{studio_url}">Puoi anche continuare a navigare nelle varie fasi e puzzle</a>senza
-      creare un account.
+      a questo evento. Per iniziare, <a href="%{learn_url}">scegli un'esercitazione</a>
+      per la tua classe e condividi il link con loro.<br/><br/>Se ti è piaciuta l'Ora
+      del Codice e vuoi approfondire, puoi scegliere una password e creare un account
+      Code Studio qui sotto per iscrivere i tuoi studenti ad uno dei nostri <a href="%{educate_url}">corsi
+      completi</a>.
+    hoc_already_signed_up_content_post_hoc: Grazie per organizzare l'Ora del Codice.
+      Per accedere a Code Studio, devi impostare una password per il tuo account.
+      Questo ti permetterà di salvare i tuoi progressi e gestire le tue classi. Potrai
+      assegnare corsi agli studenti e tenere traccia dei loro progressi. <a href="%{studio_url}">Puoi
+      anche esplorare corsi e lezioni disponibili</a>senza creare un account.
     teacher_educator_guide: Vedi la guida per l'insegnante
     title: Iscriviti a Code.org
     school_name: Nome della scuola (facoltativo)
@@ -160,6 +159,7 @@
     user_type_student: Studente
     field_is_required: "è un dato obbligatorio"
     accept_terms: Devi accettare le condizioni per creare un account
+    error: Si è verificato un errore.
   school_info:
     title: Informazioni sulla scuola (opzionale)
     school_country: Paese della Scuola
@@ -232,7 +232,7 @@
   section:
     your_section:
       one: 'La tua classe:'
-      other: 'Le tue sezioni:'
+      other: 'Le tue classi:'
     code_with_teacher: "%{section_code} con %{teacher_name}"
     confirm:
       remove: Sicuro di voler abbandonare questa classe?
@@ -294,14 +294,14 @@
       finished_hoc: Ho finito la mia Ora del Codice
       sign_in_to_save: Accedi per salvare i progressi fatti
       free_play:
-        playlab: Costruisci un Gioco
+        playlab: Costruisci un Gioco nel Laboratorio
         artist: Disegna qualcosa
         calculate: Calculate Something
-        applab: Costruisci una App
-        gamelab: Crea un progetto Game Lab
-        weblab: Crea un progetto Web Lab (beta)
+        applab: Costruisci una App in Sviluppo App
+        gamelab: Crea un progetto in Sviluppo Giochi
+        weblab: Crea un progetto in Sviluppo Web (versione provvisoria)
       home: Home
-      my_dashboard: Home
+      my_dashboard: Controllo
       courses: Corsi
       course_catalog: Corsi
       project_gallery: Progetti
@@ -311,7 +311,7 @@
       teacher_community: Teacher community
       professional_learning: Professional learning
       documentation: Documentazione
-      tutorials: Tutorial
+      tutorials: Corsi
       educate_overview: Panoramica dei corsi
       educate_elementary: Scuola elementare
       educate_middle: Scuola media
@@ -425,10 +425,10 @@
       riceveranno mai email da Code.org tranne per il recupero della password. Consulta
       le nostre <a href=''%{privacy_policy_url}'', target=''_blank''>politiche per
       il rispetto della privacy</a> per ulteriori informazioni.'
-    enter_new_login_info: Enter your new login information
-    confirm_secret_words: Confirm that it is you by entering your current secret words
-    enter_parent_email: Enter your parent or guardian's email address (for password
-      recovery)
+    enter_new_login_info: Inserisci le nuove informazioni di accesso
+    confirm_secret_words: Conferma la tua identità inserendo le tue parole segrete
+    enter_parent_email: Inserisci l'email del tuo genitore o tutore (per il recupero
+      della password)
   user_level:
     completed: Completato
     tried: Provato
@@ -436,9 +436,9 @@
     title: Officina del Codice
     description: Code Studio è la base di partenza per i corsi online creati da Code.org
     lines_of_code: "%{lines_count} LINEE DI CODICE SCRITTE DAGLI STUDENTI"
-    lines_of_code_linebreak: "%{lines_count} linee di codice <br/> scritte da %{students_count}
+    lines_of_code_linebreak: "%{lines_count} di linee di codice <br/> scritte da %{students_count}
       milioni di studenti"
-    all_courses: Panoramica dei corsi 1, 2 e 3
+    all_courses: Panoramica dei corsi 1, 2, 3 e 4 (in inglese)
     lesson_plans: Piani di lavoro delle lezioni
     signin_message: Già iscritto? %{link}
     student_reg_link: Iscrizione studenti
@@ -501,11 +501,11 @@
       target="_blank">tenere i codici inutilizzati</a> nella loro area di lavoro per
       incoraggiare la sperimentazione! Scoprite tutte le nostre nuove funzionalità
       e fateci sapere che ne pensate.
-    announcement_csp_widgets_message: Stai cercando alcuni modi divertenti per insegnare
-      alla tua classe come funziona internet, come la crittografia mantiene i dati
-      sicuri, e altre nozioni? Abbiamo preso i migliori strumenti interattivi dal
-      nostro curriculum di Principi dell'Informatica e rilasciato widget autonomi
-      che puoi usare in qualunque momento!
+    announcement_csp_widgets_message: Stai cercando dei modi divertenti per insegnare
+      alla tua classe come funziona Internet, come fa la crittografia a garantire
+      la sicurezza dei dati, e altri concetti simili? Abbiamo preso i migliori strumenti
+      interattivi dal nostro corso "Principi dell'Informatica" e li abbiamo resi disponibili
+      come componenti autonomi che puoi usare in qualunque momento!
     announcement_learn_more_button: Ulteriori informazioni
     announcement_try_now_button: Prova adesso
     announcement_host_an_hour_button: Ospita un'ora
@@ -524,11 +524,11 @@
       attraverso il <a href='%{teacher_blog_url}' target='_blank'>blog degli insegnanti
       (in inglese)</a>.
     announcement_hoc_launch: Migliaia di educatori in più di 180 paesi inizieranno
-      a insegnare informatica durante l'Ora del Codice dal 5-11 dicembre. Contiamo
-      su di voi per aiutarci a raggiungere il maggior numero di studenti mai prima
-      verificatosi. <a href='%{signup_url}' target='_blank'> registra il tuo evento
-      all'Ora del Codice</a> e convinci un altro insegnante che chiunque può iniziare
-      a insegnare Informatica.
+      a insegnare informatica durante l'Ora del Codice dal 4 al 10 dicembre 2017.
+      Contiamo su di voi per aiutarci a raggiungere il maggior numero di studenti
+      possibile. <a href='%{signup_url}' target='_blank'> registra il tuo evento all'Ora
+      del Codice</a> e convinci un altro insegnante che chiunque può iniziare a insegnare
+      Informatica.
     announcement_mc_launch: Uno delle nostre esercitazioni dell'Ora del Codice più
       popolari adesso ha un seguito! Il nuovissimo <b>Programma il tuo Minecraft</b>
       permette allo studente di definire le sue regole del mondo di Minecraft. Potrà
@@ -594,10 +594,10 @@
       programmi di apprendimento professionali e di alta qualità <strong>senza assolutamente
       nessun costo per te e la tua scuola</strong>. Le richiesti di partecipazione
       si chiudono il 14 Aprile.
-    announcement_applab_export: App Lab, our web-based programming environment, now
-      supports exporting your code! You can start building apps with drag-and-drop
-      JavaScript blocks, then export the code to continue editing in any professional
-      development environment of your choice.
+    announcement_applab_export: Sviluppo App, il nostro ambiente di programmazione
+      basato sul web, ora supporta l'esportazione di codice! È possibile iniziare
+      a creare App lavorando con i blocchi, quindi esportare il codice per modificarlo
+      in qualsiasi ambiente di sviluppo professionale desiderato.
     announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your
       CS Principles students taking the AP CS Exam will join over 50,000 other students
       in the largest AP Exam launch in history. Now, let the voices of your students
@@ -680,7 +680,7 @@
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti
     teacher: Vedi la soluzione
-    teacher_no_solution: Stop seeing solution
+    teacher_no_solution: Smetti di vedere la soluzione
     auth_error: Non sei autorizzato a vedere la soluzione.
     submit: Aggiorna la posizione dell'Artista
     direction: Direzione di inizio (in gradi)
@@ -690,8 +690,8 @@
     notes_coming_soon: Le note testuali per questo video sono in corso di preparazione.
     autoplay_option: Avvia automaticamente i video
     download: Scarica il video
-    show_notes: Show Notes
-    show_video: Show Video
+    show_notes: Mostra le spiegazioni
+    show_video: Mostra il video
   compatibility:
     upgrade:
       unsupported_message: Il tuo browser non è supportato. Si prega di aggiornare
@@ -699,18 +699,18 @@
         nostri browser supportati</a>. Puoi provare a visualizzare la pagina, ma aspettati
         qualche malfunzionamento.
       link: Ulteriori informazioni
-      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
-        with a mouse and keyboard. You may experience issues using this tool on your
-        current device.
-      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
-        with a mouse and keyboard. You may experience issues using this tool on your
-        current device.
-      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
-        with loading Web Lab on this browser. You may want to use a different browser
-        until this is resolved. Sorry for the inconvenience.
-      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
-        Private Browsing mode. Please reload your project in normal mode. Sorry for
-        the inconvenience.
+      applab_unsupported_tablet: Sviluppo App funziona meglio su un PC o un portatile
+        con mouse e tastiera. Potrebbero verificarsi problemi utilizzandolo sul tuo
+        dispositivo attuale.
+      gamelab_unsupported_tablet: Sviluppo Giochi funziona meglio su un PC o un portatile
+        con mouse e tastiera. Potrebbero verificarsi problemi utilizzandolo sul tuo
+        dispositivo attuale.
+      weblab_unsupported_browser: Purtroppo, ci sono al momento dei problemi per usare
+        Sviluppo Web su questo browser. Ti consigliamo di utilizzare un altro browser,
+        finché non risolviamo i problemi attuali. Ci scusiamo per l'inconveniente.
+      weblab_unsupported_locale_storage: Potrebbero verificarsi problemi utilizzando
+        Sviluppo Web in modalità di navigazione privata. Ti preghiamo di ricaricare
+        il progetto in modalità di navigazione normale. Ci scusiamo per l'inconveniente.
   slow_loading: Questa operazione sta prendendo più tempo del solito...
   try_reloading: Prova a ricaricare la pagina
   next_stage: Finito! Prosegui con la lezione successiva
@@ -725,7 +725,7 @@
     title: Clicca su "Esegui" per vedere il mio programma in azione
     bounce_og_title: Prova la mia versione del Ping-Pong
     flappy_og_title: Prova la mia versione del gioco Flappy
-    studio_og_title: Prova la mia versione del Gioco da Laboratorio
+    studio_og_title: Prova il gioco che ho fatto col Laboratorio
     check_out_what_i_made: Guarda cosa ho fatto
     og_description: Ho scritto il codice per conto mio con Code.org
     phone_number_not_allowed: Sembra che ci sia un numero di telefono nel codice.
@@ -750,12 +750,12 @@
   upsell:
     applab:
       title: Sviluppo App
-      body: App Lab è un ambiente di programmazione dove puoi creare semplici applicazioni.
-        Sviluppa un app, programmala con i blocchi o il JavaScript per farla funzionare,
-        e infine condividila in pochi secondi.
+      body: Sviluppo App è un ambiente di programmazione in cui puoi creare semplici
+        applicazioni. Progetta una App, sviluppala usando i blocchi o JavaScript,
+        e infine condividila.
       body_short: Progetta una App, programmala con i blocchi o con Javascript, e
         poi condividila.
-      audience: Eta' 13+
+      audience: Da 13 anni in su
       cta: Scopri come
     hoc:
       title: Labirinto Classico
@@ -772,8 +772,7 @@
         l'uso nelle scuole a partire dai 10 anni, ma è divertente per imparare un
         po' di informatica a qualunque età. Fai i corsi 2, 3, 4 se vuoi imparare in
         modo più graduale ed approfondito.
-      body_short: Acquisisci le basi dell'informatica utilizzando una versione sintetica
-        dei corsi 2-4.
+      body_short: Acquisisci le basi dell'informatica con una sintesi dei corsi 2-4.
     hoc2014:
       try_new_tutorial: Prova il nuovo corso dell'Ora del Codice in versione provvisoria
       try_frozen: Artista con Anna ed Elsa, da Frozen
@@ -781,25 +780,30 @@
       title: La tua collezione
       body: Guarda una collezione di app e immagini artistiche create dai nostri utenti
     gamelab:
-      title: Game Lab (beta)
-      body: Game Lab is a programming environment where you can make simple animations
-        and games with objects and characters that interact with each other.
-      audience: Eta' 13+
+      title: Sviluppo Giochi
+      body: Sviluppo Giochi è un ambiente di programmazione in cui si possono realizzare
+        semplici animazioni e giochi con oggetti e personaggi che interagiscono tra
+        loro.
+      audience: Da 13 anni in su
       cta: Scopri come
+    hoc-encryption:
+      title: Crittografia semplice
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
-      title: Web Lab (beta)
-      body: Web Lab is a programming environment where you can make simple web pages
-        using HTML and CSS. Design your web pages and share your site in seconds.
-      audience: Eta' 13+
+      title: Sviluppo Web (versione provvisoria)
+      body: Sviluppo Web è un ambiente di programmazione in cui si possono realizzare
+        semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi
+        il tuo sito in pochi secondi.
+      audience: Da 13 anni in su
       cta: Scopri come
     frozen:
       title: Frozen
     starwars:
       title: Guerre Stellari
     infinity:
-      title: Disney Infinity
-      body: Crea una storia o inventa un gioco con i personaggi di Disney Infinity
-        come protagonisti!
+      title: Laboratorio con Disney Infinity
+      body: Usa il Laboratorio per creare una storia o inventare un gioco con i personaggi
+        di Disney Infinity come protagonisti!
     minecraft:
       title: Minecraft
       body: Esplora il mondo di Minecraft attraverso il codice.
@@ -807,13 +811,17 @@
       title: Minecraft
       body: Programma il comportamento degli animali e delle altre creature di Minecraft
         nella tua versione di questo gioco.
+    hero:
+      title: Minecraft
+      body: Minecraft è tornato per l'Ora del Codice con una nuovissima attività!
+        Viaggia attraverso Minecraft grazie al coding.
     sports:
       title: Sports
-      body: Make a basketball game or mix and match across sports.
+      body: Crea una partita di basket o abbina diversi sport.
     text-compression:
-      title: Text Compression
-      body: In questa lezione puoi imparare come si comprime un testo sostituendo
-        delle sequenze di caratteri che si ripetono con dei simboli.
+      title: Compressione del Testo
+      body: In questa lezione impari come si comprime un testo sostituendo le sequenze
+        di caratteri che si ripetono con dei simboli.
     unplugged:
       title: Lezioni Tradizionali
       audience: Età 4+
@@ -828,11 +836,11 @@
       body: Quest'attività tradizionale ti introduce algoritmi ed istruzioni condizionali
         usando un mazzo di carte.
     widgets:
-      title: Widget
+      title: Componenti
       body: Students can explore concepts from our Computer Science Principles course
         hands-on using these digital tools. Use the widgets on their own, or create
         a single-concept lesson for your class.
-      audience: Ages 14+
+      audience: Dai 14 anni in su
       cta: Scopri come
   gallery:
     students_drew_these_with_code: Gli studenti li hanno disegnati con dei programmi!
@@ -865,7 +873,7 @@
     help_resources: Aiuto e Risorse
     help_support: Aiuto e supporto
     documentation: Documentazione
-    tutorials: Tutorial
+    tutorials: Corsi
   multi:
     wrong_title: Risposta non corretta
     wrong_body: La risposta che hai scelto non è corretta.  Per favore riprova!
@@ -888,6 +896,10 @@
     hide_survey_last_answer: Questo sondaggio è anonimo. Puoi consultare i risultati
       aggregati sul cruscotto di controllo dell’ insegnante. I risultati vengono visualizzati
       solo se almeno cinque studenti hanno risposto.
+    survey_submission_thankyou: Grazie per aver presentato questo sondaggio! Abbiamo
+      fatto in modo che le risposte rimangano anonime. Tieni conto che il tuo insegnante
+      sarà ancora in grado di vedere le risposte di tutta la classe, ma senza i nomi
+      associati alle risposte.
   level_group-submittable:
     wrong_title: Grazie!
     wrong_body: Grazie per aver inviato delle risposte.
@@ -1016,7 +1028,14 @@
     rename: Rinomina
     save: Salva
     delete: Elimina
-    import: Import
+    import: Importa
+    share_link_import_bad_link_header: Collegamento di condivisione non riconosciuto
+    share_link_import_bad_link_body: 'Non siamo riusciti a importare il collegamento
+      di condivisione. Assicurati di usare un collegamento creato da un rompicapo
+      di Minecraft: Agent e di aver copiato il collegamento completo.'
+    share_link_import_error_header: Si è verificato un errore.
+    share_link_import_error_body: Si è verificato un errore durante l'importazione
+      del collegamento di condivisione. Riprova.
     exit: Ritorna al corso
     my_projects: Collezione Privata
     project_gallery: Progetti
@@ -1040,7 +1059,7 @@
     project_type: Tipo di progetto
     help_text: Clicca qui sotto su <strong>Costruisci una App</strong> o <strong>Costruisci
       un Gioco</strong> o <strong>Disegna qualcosa</strong> per creare un nuovo progetto
-      negli ambienti "AppLab" o del Laboratorio o dell'Artista! <br/> Puoi salvare
+      negli ambienti "Sviluppo App" o del Laboratorio o dell'Artista! <br/> Puoi salvare
       i progetti e riprenderli in qualsiasi momento.
     need_help: Hai bisogno di aiuto per iniziare?
     thumbnail_help: Non trovi l'anteprima del tuo progetto? Esegui la tua App per
@@ -1130,37 +1149,37 @@
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages
     main_course: Corso principale
-    extra_course_content: Extra Course Content
-    csf_e_1: Ramp Up to Course E (Optional)
-    csf_e_2: Course E Content
-    csf_f_1: Ramp Up to Course F (Optional)
-    csf_f_2: Course F Content
-    csd1_1: 'Chapter 1: The Problem Solving Process'
-    csd1_2: 'Chapter 2: Computers and Problem Solving'
-    csd2_1: 'Chapter 1: Web Content and HTML'
-    csd2_2: 'Chapter 2: Styling and CSS'
-    csd3_1: 'Chapter 1: Images and Animations'
-    csd3_2: 'Chapter 2: Building Games'
-    csd4_1: 'Chapter 1: User Centered Design'
-    csd4_2: 'Chapter 2: App Prototyping'
-    csd5_1: 'Chapter 1: Representing Information'
-    csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
-    csp1_1: 'Chapter 1: Representing and Transmitting Information'
-    csp1_2: 'Chapter 2: Inventing the Internet'
-    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
-    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
-    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
-    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
-    csp5_1: 'Chapter 1: Event-Driven Programming'
-    csp5_2: 'Chapter 2: Programming with Data Structures'
-    cspSurvey: Survey
-    cspAssessment: Chapter Assessment
-    csp_ap_1: 'Chapter 1: AP Tech Setup'
-    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
-    csp_ap_3: 'Chapter 3: AP Create Performance Task'
-    dlp: Reflection Prompts
+    extra_course_content: Contenuti extra corso
+    csf_e_1: Approfondimenti al Corso E (facoltativo)
+    csf_e_2: Contenuti del Corso E
+    csf_f_1: Approfondimenti al Corso F (facoltativo)
+    csf_f_2: Contenuti del Corso F
+    csd1_1: 'Capitolo 1: il Problem Solving'
+    csd1_2: 'Capitolo 2: Computers e Problem Solvig'
+    csd2_1: 'Capitolo 1: Contenuti Web e HTML'
+    csd2_2: 'Capitolo 2: Styling e CSS'
+    csd3_1: 'Capitolo 1: Immagini e animazioni'
+    csd3_2: 'Capitolo 2: Costruzione di Giochi'
+    csd4_1: 'Capitolo 1: Design a cura dell''Utente'
+    csd4_2: 'Capitolo 2: Prototipazione di App'
+    csd5_1: 'Capitolo 1: Rappresentazione delle informazioni'
+    csd5_2: 'Capitolo 2: Risoluzione dei problemi di dati'
+    csd6_1: 'Capitolo 1: Output Hardware'
+    csd6_2: 'Capitolo 2: Input Hardware'
+    csp1_1: 'Capitolo 1: Rappresentazione e trasmissione delle informazioni'
+    csp1_2: 'Capitolo 2: Inventare Internet'
+    csp2_1: 'Capitolo 1: Codifica e compressione delle informazioni complesse'
+    csp2_2: 'Capitolo 2: Manipolazione e Visualizzazione dei dati'
+    csp3_1: 'Capitolo 1: Linguaggi di programmazione e algoritmi'
+    csp4_1: 'Capitolo 1: Il mondo di grandi quantità di dati e la crittografia'
+    csp5_1: 'Capitolo 1: Programmazione guidata dagli eventi'
+    csp5_2: 'Capitolo 2: Programmazione con strutture di dati'
+    cspSurvey: Sondaggio
+    cspAssessment: Valutazione del Capitolo
+    csp_ap_1: 'Capitolo 1: Installazione di AP Tech'
+    csp_ap_2: 'Capitolo 2: AP analizzare il Task Performance'
+    csp_ap_3: 'Capitolo 3: AP creare il Task Performance'
+    dlp: Punti di riflessione
   external_links:
     disclaimer: Limiti di responsabilità
     leaving_domain: Stai per lasciare il nostro dominio, per entrare su un sito che
@@ -1249,11 +1268,11 @@
     il momento di lavorarci su o revisionare le tue risposte.
   hidden_stage: Il/La tuo/a insegnante non ti aspettava qui. Per favore chiedi al/alla
     tuo/a insegnante su quale lezione dovresti essere.
-  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
-    which unit you should be on.
-  return_unit_overview: Go to unit overview
+  hidden_script: Il tuo insegnante non si aspettava che tu arrivassi qui. Per favore,
+    chiedigli in quale lezione dovresti essere.
+  return_unit_overview: Vai alla panoramica della lezione
   return_course_overview: Vai alla visualizzazione delle unità
-  view_all_units: View all units
+  view_all_units: Visualizza tutte le lezioni
   pd:
     survey:
       number_teachers: Number of attending teachers
@@ -1302,4 +1321,4 @@
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
-  courses_category: Corsi Completi
+  courses_category: Corsi Avanzati

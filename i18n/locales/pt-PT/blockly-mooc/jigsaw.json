@@ -1,10 +1,10 @@
 {
-  "continue":"Continuar",
-  "nextLevel":"Parabéns! Concluíste este desafio.",
-  "no":"Não",
-  "numBlocksNeeded":"Este desafio pode ser resolvido com %1 blocos.",
-  "reinfFeedbackMsg":"Podes clicar no botão \"Voltar a tentar\" para voltares a jogar o teu jogo.",
-  "share":"Partilhar",
-  "shareGame":"Partilha o teu jogo:",
-  "yes":"Sim"
+  "continue": "Continuar",
+  "nextLevel": "Parabéns! Concluíste este desafio.",
+  "no": "Não",
+  "numBlocksNeeded": "Este desafio pode ser resolvido com %1 blocos.",
+  "reinfFeedbackMsg": "Podes clicar no botão \"Voltar a tentar\" para voltares a jogar o teu jogo.",
+  "share": "Partilhar",
+  "shareGame": "Partilha o teu jogo:",
+  "yes": "Sim"
 }

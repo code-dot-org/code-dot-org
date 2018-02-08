@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-require_relative 'mailing-list-utils'
-
-LATAM_ORGANIZERS_2015 = query_subscribed_contacts(q: 'kind_s:"HocSignup2015" && hoc_country_s:("la","ar","br")')
-
-puts "#{LATAM_ORGANIZERS_2015.count} 2015 latam organizers loaded."
-
-export_contacts_to_csv LATAM_ORGANIZERS_2015, "2015-latam-organizers.csv"

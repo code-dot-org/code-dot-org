@@ -18,7 +18,7 @@ module Cdo
     # Chef node attributes as constants
     DASHBOARD_PORT = 8080
     VARNISH_PORT = 80
-    LOCALHOST = 'localhost'
+    LOCALHOST = 'localhost'.freeze
 
     def self.setup(cloudfront=false)
       puts 'setup'
@@ -167,7 +167,7 @@ module Cdo
       end
 
       def get_header(response, header)
-        match = /#{header}: ([^\s]+)/.match(response)
+        match = /#{header}: (.+)$/.match(response)
         match && match[1]
       end
     end
@@ -461,6 +461,31 @@ module HttpCacheTest
         mock_response url, 'Hello World!', {'User-Agent' => 'Cached-Request'}
         response = proxy_request url, {}, {}
         assert_equal 'Hello World!', last_line(response)
+      end
+
+      it 'supports range requests' do
+        skip 'Development does not support range requests yet' unless environment == 'integration'
+
+        # Loop a few times since this test can fail intermittently.
+        5.times do
+          url = build_url 'x', 'sound.mp3'
+          random_string = Array.new(100_000) {[*'0'..'9', *'a'..'z', *'A'..'Z'].sample}.join
+          # Note that content-length is required
+          mock_response url, random_string, {}, {'Content-Type' => 'audio/mpeg', 'Content-Length' => '100000'}
+
+          response = proxy_request url, {'Range' => 'bytes=0-499'}
+          range = get_header(response, 'Content-Range')
+          assert_miss response
+          assert_equal 206, code(response), "Invalid response: #{response}"
+          assert_equal 'bytes 0-499/100000', range && range.chomp
+          assert_equal random_string[0..499], last_line(response)
+
+          response = proxy_request url, {'Range' => 'bytes=0-'}
+          assert_hit response
+          assert_equal 206, code(response), "Invalid response: #{response}"
+          range = get_header(response, 'Content-Range')
+          assert_equal 'bytes 0-99999/100000', range && range.chomp
+        end
       end
     end
   end

@@ -43,6 +43,10 @@ class GatekeeperBase
     default
   end
 
+  def disallows(*params)
+    !allows(*params)
+  end
+
   # Sets the value for a given feature/where combo
   # @param feature [String]
   # @param where [Hash]

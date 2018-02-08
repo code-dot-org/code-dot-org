@@ -40,6 +40,7 @@ Controlling tests:
 * CI can be skipped for a given commit by including the text `[ci skip]` in the commit message
 * By default, tests are only run for sub-projects which have been changed in your given branch. You can force-run all tests for a given commit by including the text `[test all]` in your commit message.
 * UI tests are run automatically. They can be disabled for a given run by including `[skip ui]` in your commit message
+* There are several other options for which tests are run on circle, which are documented here: https://github.com/code-dot-org/code-dot-org/blob/003a3e89e7eca48873827b53de8c69ab8808ec0d/lib/rake/circle.rake#L16-L51
 * Tests can be re-run with the "Rebuild" button on CircleCI.
 * Tests can be debugged by running "Rebuild with SSH", which enables SSH for the duration of the test and keeps it open for 30 minutes after tests are complete.
 
@@ -104,12 +105,12 @@ Pegasus tests depend on the `pegasus_test` database.  If you have database-relat
 
 Pegasus tests also depend on some local utilities being installed.  See [SETUP.md](SETUP.md) and make sure you have `pdftk` and `enscript` installed.
 
-###Dealing with test failures (non-Eyes)
+### Dealing with test failures (non-Eyes)
 Our tests are pretty reliable, but not entirely reliable. If you see a test failure, you should investigate it and not immediately assume it is spurious.
 
 Take a look at the Saucelabs replay. You can view a list of recently run tests on Saucelabs and find your error - alternatively, you can run tests with the --html or --verbose option and see a URL. Saucelabs should have a video replay of what the test looked like. If you see something like a certificate error (common when testing on localhost) or a complete CSS breakdown (sometimes specific to IE9) then this is probably because of a flakey test and its safe to ignore. Most other failures do need to be addressed.
 
-###Dealing with test failures (eyes)
+### Dealing with test failures (eyes)
 If you've made a change that caused an eyes failiure, log into Applitools and check out the replay. You can see highlighted areas indicating what parts are different. If you've done something that changes the layout, images, or text, that may cause an eyes failure. Confirm with another team member that this is okay, and you can accept the new appearance as the baseline for future tests.
 
 ## See Also

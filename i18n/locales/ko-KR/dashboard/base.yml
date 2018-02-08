@@ -46,7 +46,7 @@ ko:
       label: '선생님 추가:'
       placeholder: "섹션 코드(ABCDEF)"
       instructions: "당신의 선생님과 공유하고 있는 문자를 입력해주세요. 그 문자는 \"ABCDEF\" 와 같은 6개의 영어 문자입니다."
-      instructions_short: "Enter your 6 letter section code"
+      instructions_short: "6자리의 섹션 코드를 입력하세요."
     submit: '선생님 추가하기'
   add_hint_form:
     placeholder: '도움내용을 입력하세요.'
@@ -122,6 +122,7 @@ ko:
     user_type_student: "student"
     field_is_required: "이(가) 필요합니다."
     accept_terms: "회원가입에 동의해야 합니다."
+    error: "An error occurred."
   school_info:
     title: '학교 정보(선택사항)'
     school_country: '학교 국가정보'
@@ -566,6 +567,9 @@ ko:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "13세 이상"
       cta: "방법 알아보기"
+    hoc-encryption:
+      title: "간단한 암호화"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -584,6 +588,9 @@ ko:
     minecraft2016:
       title: "마인크래프트"
       body: "자신만의 마인크래프트에서 동물들과, 또 다른 마인크래프트 생명체를 프로그램 해보세요."
+    hero:
+      title: "마인크래프트"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
@@ -647,6 +654,7 @@ ko:
     correct_title: "고마워"
     correct_body: "답변 주셔서 감사 합니다."
     hide_survey_last_answer: "이 설문조사는 익명으로 처리됩니다. 결과를 확인하시려면 교사 대시보드를 방문하세요. 다섯 명 이상의 학생이 설문에 응해야만 결과를 볼 수 있음을 알아두시기 바랍니다."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "고마워"
     wrong_body: "답변 주셔서 감사 합니다."
@@ -752,7 +760,11 @@ ko:
     rename: "이름 바꾸기"
     save: "저장"
     delete: "삭제"
-    import: "Import"
+    import: "가져오기"
+    share_link_import_bad_link_header: "공유 링크를 인식할 수 없습니다"
+    share_link_import_bad_link_body: '공유 링크를 가져올 수 없습니다. Minecraft: Agent 퍼즐에서 제공되는 링크 전체를 복사했는지 확인해주세요.'
+    share_link_import_error_header: "오류가 발생했습니다."
+    share_link_import_error_body: "공유 링크를 가져오는 중 문제가 발생했습니다. 다시 시도해주세요."
     exit: "코스로 돌아가기"
     my_projects: "내 프로젝트"
     project_gallery: "프로젝트"

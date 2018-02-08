@@ -1,4 +1,3 @@
-import * as apiTimeoutList from '../lib/util/timeoutList';
 import ChartApi from './ChartApi';
 import EventSandboxer from './EventSandboxer';
 import sanitizeHtml from './sanitizeHtml';
@@ -20,6 +19,7 @@ import {
   outputWarning,
 } from '../lib/util/javascriptMode';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
 import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
 
 // For proxying non-https xhr requests
@@ -59,7 +59,18 @@ function apiValidateActiveCanvas(opts, funcName) {
   }
 }
 
-function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
+/**
+ * Validate that the supplied id exists. If not, output a warning.
+ * @param {object} opts
+ * @param {string} funcName
+ * @param {string} varName
+ * @param {string} id
+ * @param {boolean} shouldExist
+ * @param {function} callback optional, called if a warning is needed with a
+ *  single parameter indicating whether or not the element existsInApplab. If the
+ *  return value is true, the built-in warning is suppressed.
+ */
+function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist, callback) {
   var divApplab = document.getElementById('divApplab');
   var validatedTypeKey = 'validated_type_' + varName;
   var validatedDomKey = 'validated_id_' + varName;
@@ -81,13 +92,15 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
     if (!valid) {
       var errorString = "";
       if (existsOutsideApplab) {
-        errorString = funcName + "() " + varName + " parameter refers to an id (" + id +
-            ") which is already in use outside of Applab. Choose a different id.";
+        errorString = funcName + '() ' + varName + ' parameter refers to an id ("' + id +
+            '") which is already being used outside of App Lab. Please use a different id.';
         throw new Error(errorString);
       } else {
-        outputWarning(funcName + "() " + varName +
-            " parameter refers to an id (" + id + ") which " +
-            (existsInApplab ? "already exists." : "does not exist."));
+        if (!callback || !callback(existsInApplab)) {
+          outputWarning(funcName + '() ' + varName +
+              ' parameter refers to an id ("' + id + '") which ' +
+              (existsInApplab ? 'already exists.' : 'does not exist.'));
+        }
       }
     }
     opts[validatedDomKey] = valid;
@@ -167,6 +180,8 @@ applabCommands.image = function (opts) {
   newImage.setAttribute('data-canonical-image-url', opts.src);
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
+
+  Applab.updateProperty(newImage, 'objectFit', 'contain');
 
   return Boolean(Applab.activeScreen().appendChild(newImage));
 };
@@ -821,6 +836,28 @@ applabCommands.setAttribute = function (opts) {
   return false;
 };
 
+applabCommands.setSelectionRange = function (opts) {
+  const {
+    elementId,
+    selectionStart,
+    selectionEnd,
+    selectionDirection
+  } = opts;
+
+  apiValidateDomIdExistence(opts, 'setSelectionRange', 'elementId', elementId, true);
+  apiValidateType(opts, 'setSelectionRange', 'start', selectionStart, 'number');
+  apiValidateType(opts, 'setSelectionRange', 'end', selectionEnd, 'number');
+  apiValidateType(opts, 'setSelectionRange', 'direction', selectionDirection, 'string', OPTIONAL);
+
+  const divApplab = document.getElementById('divApplab');
+  const element = document.getElementById(elementId);
+  if (divApplab.contains(element)) {
+    element.setSelectionRange(selectionStart, selectionEnd, selectionDirection);
+    return true;
+  }
+  return false;
+};
+
 applabCommands.getText = function (opts) {
   var divApplab = document.getElementById('divApplab');
   apiValidateDomIdExistence(opts, 'getText', 'id', opts.elementId, true);
@@ -986,27 +1023,19 @@ applabCommands.deleteElement = function (opts) {
 };
 
 applabCommands.showElement = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(opts, 'showElement', 'id', opts.elementId, true);
-
-  var div = document.getElementById(opts.elementId);
-  if (divApplab.contains(div)) {
-    div.style.visibility = 'visible';
-    return true;
-  }
-  return false;
+  return applabCommands.setProperty({
+    elementId: opts.elementId,
+    property: 'hidden',
+    value: false,
+  });
 };
 
 applabCommands.hideElement = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-  apiValidateDomIdExistence(opts, 'hideElement', 'id', opts.elementId, true);
-
-  var div = document.getElementById(opts.elementId);
-  if (divApplab.contains(div)) {
-    div.style.visibility = 'hidden';
-    return true;
-  }
-  return false;
+  return applabCommands.setProperty({
+    elementId: opts.elementId,
+    property: 'hidden',
+    value: true,
+  });
 };
 
 applabCommands.setStyle = function (opts) {
@@ -1075,7 +1104,13 @@ function setSize_(elementId, width, height) {
 }
 
 applabCommands.setProperty = function (opts) {
-  apiValidateDomIdExistence(opts, 'setProperty', 'id', opts.elementId, true);
+  apiValidateDomIdExistence(opts, 'setProperty', 'id', opts.elementId, true, (exists) => {
+    outputWarning(`The setProperty() id parameter refers to an id (“${opts.elementId}”) ` +
+      `which ${exists ? 'already exists.' : 'does not exist.'} You should be able to ` +
+      'find the list of all the possible ids in the dropdown (unless you created the ' +
+      'element inside your code).');
+    return true;
+  });
   apiValidateType(opts, 'setProperty', 'property', opts.property, 'string');
 
   var elementId = opts.elementId;
@@ -1089,7 +1124,8 @@ applabCommands.setProperty = function (opts) {
 
   var info = setPropertyDropdown.getInternalPropertyInfo(element, property);
   if (!info) {
-    outputError('Cannot set property "' + property + '" on element "' + elementId + '".');
+    outputError('There is no property named "' + property + '" for element "' + elementId +
+      '". Make sure you choose a property from the dropdown.');
     return;
   }
 
@@ -1322,68 +1358,6 @@ applabCommands.startWebRequest = function (opts) {
       '&c=' + encodeURIComponent(Applab.channelId);
   req.open('GET', url, true);
   req.send();
-};
-
-applabCommands.onTimerFired = function (opts) {
-  opts.func.call(null);
-};
-
-applabCommands.setTimeout = function (opts) {
-  // PARAMNAME: setTimeout: callback vs. function
-  // PARAMNAME: setTimeout: ms vs. milliseconds
-  apiValidateType(opts, 'setTimeout', 'callback', opts.func, 'function');
-  apiValidateType(opts, 'setTimeout', 'milliseconds', opts.milliseconds, 'number');
-
-  return apiTimeoutList.setTimeout(applabCommands.onTimerFired.bind(this, opts), opts.milliseconds);
-};
-
-applabCommands.clearTimeout = function (opts) {
-  apiValidateType(opts, 'clearTimeout', 'timeout', opts.timeoutId, 'number');
-  // NOTE: we do not currently check to see if this is a timer created by
-  // our applabCommands.setTimeout() function
-  apiTimeoutList.clearTimeout(opts.timeoutId);
-};
-
-applabCommands.setInterval = function (opts) {
-  // PARAMNAME: setInterval: callback vs. function
-  // PARAMNAME: setInterval: ms vs. milliseconds
-  apiValidateType(opts, 'setInterval', 'callback', opts.func, 'function');
-  apiValidateType(opts, 'setInterval', 'milliseconds', opts.milliseconds, 'number');
-
-  return apiTimeoutList.setInterval(applabCommands.onTimerFired.bind(this, opts), opts.milliseconds);
-};
-
-applabCommands.clearInterval = function (opts) {
-  apiValidateType(opts, 'clearInterval', 'interval', opts.intervalId, 'number');
-  // NOTE: we do not currently check to see if this is a timer created by
-  // our applabCommands.setInterval() function
-  apiTimeoutList.clearInterval(opts.intervalId);
-};
-
-/**
- * Execute some code every X milliseconds.  This is effectively setInterval()
- * with a cleaner interface.
- * @param {number} opts.ms How often to invoke the code in the loop,
- *   in milliseconds.
- * @param {function(function)} opts.callback Code to invoke in each loop
- *   iteration.
- * @return {number} a timeout key
- */
-applabCommands.timedLoop = function timedLoop(opts) {
-  apiValidateType(opts, 'timedLoop', 'ms', opts.ms, 'number');
-  apiValidateType(opts, 'timedLoop', 'callback', opts.callback, 'function');
-  return apiTimeoutList.timedLoop(opts.ms, applabCommands.onTimerFired.bind(this, {
-    func: opts.callback
-  }));
-};
-
-/**
- * Stop all running intervals that were started with `timedLoop()`.
- * @param {number} [opts.key] - if omitted, stop _all_ timedLoops.
- */
-applabCommands.stopTimedLoop = function stopTimedLoop(opts) {
-  apiValidateType(opts, 'stopTimedLoop', 'key', opts.key, 'number', OPTIONAL);
-  apiTimeoutList.stopTimedLoop(opts.key);
 };
 
 applabCommands.createRecord = function (opts) {
@@ -1746,4 +1720,5 @@ function stopLoadingSpinnerFor(elementId) {
 
 // Include playSound, stopSound, etc.
 Object.assign(applabCommands, audioCommands);
+Object.assign(applabCommands, timeoutCommands);
 Object.assign(applabCommands, makerCommands);

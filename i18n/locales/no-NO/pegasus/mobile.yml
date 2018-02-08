@@ -26,9 +26,14 @@
   twentyhours_heading: "Prøv vår introduksjon til koding"
   twentyhours_text: "Fullført din første kodetime? Lær mer grunnleggende koding og programmering i dette oppfølgingskurset."
   og_title: Alle kan lære
+  og_title_soon: "Kodetimen kommer"
+  og_title_here: "Kodetimen er kommet!"
   og_description: "Alle elever i alle skoler fortjener mulighet til å lære seg å programmere."
+  og_description_celeb: "Prøv de nye opplæringsprogrammene, vinne en kjendis videochat for deg selv eller klassen!"
   csedweek_og_title: "Kodetimen kommer"
-  csedweek_og_description: "Kodetimen er en verdensomspennende bevegelse som når ut til et titalls millioner elever i alle aldre i mer enn 180 land og finnes på over 45 språk."
+  csedweek_og_description: "4.-10. desember 2017. Informatikk er grunnleggende for alle elever."
+  csedweek_og_description_soon: "Kodetimen er 4.-10. desember 2017. Programmering er en grunnleggende ferdighet for alle elever."
+  csedweek_og_description_here: "Kodetimen er kommet. Programmering er en grunnleggende ferdighet for alle elever."
   hoc2014_heading: "Bli med i <a href=\"http://hourofcode.com\">Kodetimen</a><br/> 8. – 14. desember 2014<br/>"
   hoc2014_students: "Elever"
   hoc2014_try: "Prøv"
@@ -69,12 +74,12 @@
   congratulations_on_completing_course2: "Gratulerer med fullført Kurs 2"
   congratulations_on_completing_course3: "Gratulerer med å fullføre Kurs 3"
   congratulations_on_completing_course4: "Gratulerer med fullført Kurs 4"
-  congratulations_on_completing_coursea: "Congratulations on completing Course A"
-  congratulations_on_completing_courseb: "Congratulations on completing Course B"
-  congratulations_on_completing_coursec: "Congratulations on completing Course C"
-  congratulations_on_completing_coursed: "Congratulations on completing Course D"
-  congratulations_on_completing_coursee: "Congratulations on completing Course E"
-  congratulations_on_completing_coursef: "Congratulations on completing Course F"
+  congratulations_on_completing_coursea: "Gratulerer med å ha fullført Kurs A"
+  congratulations_on_completing_courseb: "Gratulerer med å ha fullført Kurs B"
+  congratulations_on_completing_coursec: "Gratulerer med å ha fullført Kurs C"
+  congratulations_on_completing_coursed: "Gratulerer med å ha fullført Kurs D"
+  congratulations_on_completing_coursee: "Gratulerer med å ha fullført Kurs E"
+  congratulations_on_completing_coursef: "Gratulerer med å ha fullført Kurs F"
   congratulations_on_completing_accelerated: "Gratulerer med å fullføre det Akselererte Kurs"
   congrats_next_tutorials_title: "Prøv disse kursene"
   congrats_next_tutorials_desc: "Prøv disse kortere, 1-timers-kursene eller prøv et kurs fra våre <a href=\"%{current_path}/next\">samarbeidspartenere</a>."
@@ -110,9 +115,9 @@
   third_party_scratch_desc: "Med Scratch kan du programmere dine egne interaktive historier, spill og animasjoner og dele det du har laget med andre i nettsamfunnet. Scratch hjelper unge mennesker å lære hvordan de kan tenke kreativt, tenke systematisk og samarbeide - grunnleggende ferdigheter for livet i det 21. århundre."
   third_party_scratch_btn_curriculum: "Last ned Scratch Curriculum"
   third_party_scratch_btn_forum: "Scratch lærer-forum"
-  third_party_scratch_btn_site: "Besøk Bunnen"
+  third_party_scratch_btn_site: "Besøk Scratch"
   third_party_lightbot_desc: "I Lightbot må elever programmere en robot med kommandoer for å løse oppgaver. Elevene kan spille det i en nettleser (krever Flash Player), på Android- eller iOS-enheter. Elevene spiller det første settet med \"Grunnleggende\" nivåer i Lightbot. De vil lære hvordan fortelle en datamaskin hva den skal gjøre ved en serie med grunnleggende kommandoer og de vil få brukt den generelle prosessen som dataprogrammer er skrevet med."
-  third_party_lightbot_btn_curriculum: "Last ned Lightbot Curriculun"
+  third_party_lightbot_btn_curriculum: "Last ned Lightbot Curriculum"
   third_party_lightbot_btn_site: "Besøk Lightbot"
   third_party_khan_desc: "Lær hvordan du kan programmere tegninger, animasjoner og spill ved bruk av JavaScript og ProcessingJS, eller lær hvordan du kan lage nettsider med HTML og CSS. Du kan dele alt du lager, se hva andre lager og lære av hverandre!"
   third_party_khan_btn_learn: "Lær CS med Khan Akadamiet"
@@ -200,24 +205,24 @@
   just_did_course2: "Jeg fullførte nettopp Kurs 2 - sjekk det ut! @codeorg"
   just_did_course3: "Jeg fullførte nettopp Kurs 3 - sjekk det ut! @codeorg"
   just_did_course4: "Jeg fullførte nettopp Kurs 4 - sjekk det ut! @codeorg"
-  just_did_coursea: "I just finished Course A - check it out! @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! @codeorg"
+  just_did_coursea: "Jeg ble nettopp ferdig med Kurs A - sjekk det ut! @codeorg"
+  just_did_courseb: "Jeg ble nettopp ferdig med Kurs B - sjekk det ut! @codeorg"
+  just_did_coursec: "Jeg ble nettopp ferdig med Kurs C - sjekk det ut! @codeorg"
+  just_did_coursed: "Jeg ble nettopp ferdig med Kurs D - sjekk det ut! @codeorg"
+  just_did_coursee: "Jeg ble nettopp ferdig med Kurs E - sjekk det ut! @codeorg"
+  just_did_coursef: "Jeg ble nettopp ferdig med Kurs F - sjekk det ut! @codeorg"
   just_did_accelerated: "Jeg har nettopp avsluttet introduksjonskurset! Sjekk det ut! @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
-  just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course4_donor: "I just finished Course 4 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursea_donor: "I just finished Course A - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_courseb_donor: "I just finished Course B - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursec_donor: "I just finished Course C - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursed_donor: "I just finished Course D - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursee_donor: "I just finished Course E - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursef_donor: "I just finished Course F - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_hoc_donor: 'Jeg ble nettopp ferdig med #Kodetimen - sjekk det ut! (Takk %{donor_twitter} for at dere støtter @codeorg)'
+  just_did_course1_donor: "Jeg ble nettopp ferdig med Kurs 1 - sjekk det ut! Takk %{donor_twitter} for at dere støtter @codeorg"
+  just_did_course2_donor: "Jeg ble nettopp ferdig med Kurs 2 - sjekk det ut! Takk %{donor_twitter} for at dere støtter @codeorg"
+  just_did_course3_donor: "Jeg ble nettopp ferdig med Kurs 3 - sjekk det ut! Takk %{donor_twitter} for at dere støtter @codeorg"
+  just_did_course4_donor: "Jeg ble nettopp ferdig med Kurs 4 - sjekk det ut! Takk %{donor_twitter} for at dere støtter @codeorg"
+  just_did_coursea_donor: "Jeg ble nettopp ferdig med Kurs A - sjekk det ut! Takk %{donor_twitter} for at dere støtter @codeorg"
+  just_did_courseb_donor: "Jeg ble nettopp ferdig med Kurs B - sjekk det ut! Takk %{donor_twitter} for at dere støtter @codeorg"
+  just_did_coursec_donor: "Jeg ble nettopp ferdig med Kurs C - sjekk det ut! Takk %{donor_twitter} for at dere støtter @codeorg"
+  just_did_coursed_donor: "Jeg ble nettopp ferdig med Kurs D - sjekk det ut! Takk %{donor_twitter} for at dere støtter @codeorg"
+  just_did_coursee_donor: "Jeg ble nettopp ferdig med Kurs E - sjekk det ut! Takk %{donor_twitter} for at dere støtter @codeorg"
+  just_did_coursef_donor: "Jeg ble nettopp ferdig med Kurs F - sjekk det ut! Takk %{donor_twitter} for at dere støtter @codeorg"
   just_did_accelerated_donor: "Jeg fullførte nettopp introduksjonskurset! Sjekk det ut! Takk %{donor_twitter} for å støtte @codeorg"
   twitter_teach_cs: "9 av 10 personer enig, skoler bør undervise i programmering. http://youtu.be/nKIu9yen5nc. Besøk https://code.org/."
   twitter_cs_foundational: "Å lære programmering er fundamentalt for alle elever. https://youtu.be/QvyTEx1wyOY."
@@ -231,7 +236,7 @@
   lines_of_code: "OVER <b># KODELINJER</b> skrevet HITTIL."
   lines_of_code_alt: "<b>#</b> KODELINJER SKREVET AV ELEVER"
   who_has_done_hoc: 'Hvem har vært med på #kodetimen? #HourOfCode? @codeorg'
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
+  who_has_done_hoc_donor: 'Hvem har fullført #Kodetimen? (Takk %{donor_twitter} for at dere støtter @codeorg)'
   hoc_leaderboards: "Kodetime oversikt"
   students_and_lines: "%{students}, elever har gjort kodentimen og skrevet %{lines} kodelinjer."
   start_hoc: "Start  kodetimen nå"
@@ -255,6 +260,12 @@
   studiobar_donate_body: "Et barn vil få mulighet til å lære for hver 10 du bidrar med"
   studiobar_shop_title: "Butikk"
   studiobar_shop_body: "Bryt stereotyper. Bruk vår logo med stolthet."
+  homepage_stats_students: "of US students have accounts on Code.org"
+  homepage_stats_female: "of our students are female"
+  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
+  homepage_stats_policy: "states changed policy to support computer science"
+  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "\"Jeg utfordrer jenter i alle land til å lære en kodetime\" Malala, fredsprisvinner"
   homepage_hero_text_susan: |-
     "Hvis du kan endre teknologi, kan du endre verden." Susan, administrerende direktør i YouTube
@@ -265,9 +276,8 @@
   homepage_hero_text_satya: |-
     «Informatikk kan åpne for de beste mulighetene i verden.» Satya, CEO i Microsoft
   homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;Programmering gir elever mulighet til å skape morgendagens verden.&rdquo;
+    Sataya, CEO i Microsoft
   homepage_hero_text_bosh: |-
     "Hvis du kan programmere, kan du velge og vrake retningen til ditt eget liv." Chris Bosh
   homepage_hero_text_student1: |-
@@ -290,8 +300,10 @@
     engasjert, involvert og delaktige."
     Adam, lærer
   homepage_hero_text_stat_loc: "8,5 millioner jenter er registrert på Code.org"
-  homepage_hero_text_stat_students: "#elev_count elevkontoer på koden Studio"
+  homepage_hero_text_stat_students: "#student_count elevkontoer på Code.org"
   homepage_hero_text_stat_served: 'Kodetimen: #served har prøvd'
+  homepage_hero_hoc_is_coming: "Kodetimen kommer"
+  homepage_hero_hoc_is_here: "Kodetimen er kommet"
   homepage_slot_text_hoc: "Kodetimen"
   homepage_slot_text_frozen: "Frost med Anna og Elsa"
   homepage_slot_text_teacher: "Lærersider"
@@ -311,6 +323,7 @@
   homepage_action_text_girlvideo: "Inspirere en jente"
   homepage_action_text_learn: "Begynne å lære"
   homepage_action_text_signpetition: "Signér oppropet"
+  homepage_action_text_wincelebritychat: "Vinne en kjendis-chat"
   homepage_signpetition_dropdown: "Signér vår underskriftskampanje ▾"
   homepage_diversity_pledge: "Slå et slag for mangfoldet"
   homepage_banner_text_prizes: 'Kodetimen kommer igjen, 7.-13. desember. '
@@ -330,7 +343,7 @@
   homepage_slot_text_title_hoc: "Kodetimen"
   homepage_slot_text_blurb_hoc: "Alle kan lære. Start i dag"
   homepage_slot_text_link_hoc: "Prøv Kodetimen"
-  homepage_slot_text_link_about_hoc: "About the Hour of Code"
+  homepage_slot_text_link_about_hoc: "Om Kodetimen"
   homepage_slot_text_link_host: "Bli vertskap for Kodetimen"
   homepage_slot_text_link_hocserved: "# servert"
   homepage_solot_text_link_volunteer: "Meld deg som frivillig til Kodetimen"
@@ -348,13 +361,13 @@
   homepage_slot_text_link_k5: "Kurs for barnehage til 5.trinn"
   homepage_slot_text_link_fullcurriculum: "Se vår fullstendige læreplan"
   homepage_slot_text_link_pd: "Profesjonell utvikling"
-  homepage_slot_text_title_advocates: "Advokat"
+  homepage_slot_text_title_advocates: "Talsmenn"
   homepage_slot_text_blurb_advocates: "Støtt vårt arbeid"
   homepage_slot_text_link_stats: "Se statistikken"
   homepage_slot_text_link_buy: "Bli involvert"
   homepage_slot_text_link_donate: "Gi et bidrag"
   homepage_slot_text_link_shop: "T-skjorter, hatter, & mer"
-  homepage_slot_text_link_administrators: "Bring to your school or district"
+  homepage_slot_text_link_administrators: "Ta med til skolen din eller distriktet ditt"
   homepage_header_codestudio: "Code Studio elev kreasjoner"
   homepage_header_donors: "Code.org takker sine støttespillere"
   homepage_donors_seall: "Se alt"
@@ -417,17 +430,33 @@
   mc_gradelevel: "Passer for de som er 6 år og eldre"
   mc_platformtext: "Moderne nettlesere, smart-telefoner, nettbrett"
   mc_specs: "Mange språk | Moderne nettlesere og nettbrett | Alderen 6-106"
+  minecraft_agent: 'Minecraft: Heltens reise'
   minecraft_designer: "Minecraft-designer"
   minecraft_adventurer: "Minecraft-eventyrer"
   minecraft_tutorials: "Minecraft Kodetime-oppgaver"
   minecraft_specs: "Mange språk | Moderne nettlesere og nettbrett | 2. klasse og oppover"
+  minecraft_agent_description: "Minecraft er tilbake for Kodetimen med en helt ny aktivitet! Reis gjennom Minecraft med kode."
+  minecraft_agent_button: "Start"
   minecraft_designer_description: "Programmer dyr og andre Minecraft-vesener i din egen versjon av Minecraft."
   minecraft_designer_button: "Start"
-  minecraft_adventurer_description: "Bruke kode for å ta med Alex eller Steve på et eventyr."
+  minecraft_adventurer_description: "Bruk kode for å ta med Alex eller Steve på et eventyr."
   minecraft_adventurer_button: "Start"
   minecraft_no_internet: "Har du ikke internett?"
   minecraft_download_adventurer: "Last ned Minecraft-eventyrer for bruk uten internett."
   minecraft_subtitle: "Kodetimen med Minecraft"
+  minecraft_store_camps: "Gratis Minecraft Kodetime-leir på Microsoft Store"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'> Registrer deg</a> for gratis Minecraft time koden arbeidsoppgavene på Microsoft Stores i Australia, Canada, Puerto Rico eller USA. Lær hvordan koding for alle og kombinerer kreativitet, problemløsning og masse moro."
+  minecraft_host_event: "Hold en Minecraft Kodetime-arrangement"
+  minecraft_teach_resources: "Lærerressurser og oppgaveplan."
+  minecraft_leader_guide: "Last ned ressurser for å få hjelp deg til å planlegge og lede en Kodetime."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'> Last ned</a> tilrettelagt hurtigstartveiledning og PowerPoint-presentasjoner for yngre og eldre studenter nå."
+  minecraft_join_online_training: "Klar til å ha din eigen Kodetime med Minecraft, men ikke sikker på hvor du skal starte? Sjekk ut våre <a href='%{minecraft_webinar_url}'>etterspurde webinar</a>. Du vil lære de beste fremgangsmåtene, få tilgang til tilretteleggingsmateriale og få en gjennomgang av rettleiinga til den nye reisa til helten frå Minecraft-teamet. Få et forsprang på ved å gå gjennom kva du treng for å ha Kodetimen for unge under Kodetimen-veka (4.-10. desember) og etterpå."
+  minecraft_continue_learning: 'Informatikk for alle: etter Kodetimen på Microsoft Store'
+  minecraft_continue_learning_description: "Ingen programmeringserfaring trengs! Hjelp til å sikre at alle unge kan lære verdifulle ferdigheiter ein når gjennom ei utdanning i informatikk. Bli med oss på Microsoft Store for å vere med på ein gratis serie på tre seminar på ein time kor du opplev koding i eit morosamt og stressfritt miljø, bli kjent med nøkkelomgrep i datavitskap og gjer deg klar til å halde ein Kodetime i klasserommet eller i lokalsamfunnet. Du får til dette! <a href='%{minecraft_continue_learning_url}'>Registrer deg i dag</a>."
+  minecraft_future: "Hjelp alle unge med å bli klare for fremtiden"
+  minecraft_future_description: "Finn ut hvordan andre skuler og ideelle organisasjoner lærer bort digitale ferdigheter, fra digital kompetanse til informatikkutdanning, til lokalsamfunna sine. Vurder ulike modeller, få tips og triks, og <a href='%{minecraft_future_url}'>få tilgang til ressursene</a> de fant mest verdifulle."
+  minecraft_og_designer: "Minecraft er tilbake med en ny aktivitet for Kodetimen. Programmer dyr og andre Minecraft-skapninger i din egen versjon av Minecraft."
+  minecraft_og_agent: "Minecraft er tilbake til Kodetimen - og du er helten! Skriv koden for å reise gjennom Minecraft-universet."
   sports_page_title: "Kodetimen med sport"
   sports_og_title: "Press deg selv. Alle kan lære."
   sports_og_description: "Velg mellom kodeoppgaver i basketball eller andre idretter."
@@ -437,22 +466,22 @@
   sports_select_theme: "Velg ditt opplæringstema"
   sports_basketball_title: "Lag et basketball-spill"
   sports_all_sports_title: "Kode dim egen sport"
-  sports_featured_athletes: "See featured athletes"
-  sports_athletes_title: "Featured athletes"
-  sports_athlete_Draymond: "Draymond Green, Olympic Gold Medalist and NBA Champion, Golden State Warriors"
-  sports_athlete_Serena: "Serena Williams, Olympic Gold Medalist and Tennis Champion"
-  sports_athlete_Russell: "Russell Okung, Super Bowl Champion and NFL player, Denver Broncos"
-  sports_athlete_Sergio: "Sergio Ramos, World Cup Champion and Soccer/Futbol Player, Real Madrid"
-  sports_athlete_Sue: "Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm"
-  sports_athlete_Alana: "Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles Sparks"
-  sports_athlete_Angelo: "Angelo Matthews, Captain of the Sri Lankan Cricket Team"
-  sports_athlete_Nneka: "Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP, Los Angeles Sparks"
-  sports_athlete_Carmelo: "Carmelo Anthony, Olympic Gold Medalist and NBA All-Star, New York Knicks"
-  sports_athlete_Marco: "Marco Belinelli, NBA Champion, Charlotte Hornets"
-  sports_athlete_Neymar: "Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player, FC Barcelona and Brazil National Team"
-  sports_athlete_Sarah: "Sarah Quita Offringa, Windsurfing Champion"
-  sports_athlete_Marcelo: "Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil National Team"
-  sports_athlete_Erika: "Erika Olivera, Champion Marathon Runner"
+  sports_featured_athletes: "Se utvalgte idrettsutøvere"
+  sports_athletes_title: "Utvalgte idrettsutøvere"
+  sports_athlete_Draymond: "Draymond Green, OL-gullvinner og NBA-mester, Golden State Warriors"
+  sports_athlete_Serena: "Serena Williams, OL-gullvinner og tennismester"
+  sports_athlete_Russell: "Russell Okung, Super Bowl-mester og NFL-spiller, Denver Broncos"
+  sports_athlete_Sergio: "Sergio Ramos, verdensmester og fotballspiller, Real Madrid"
+  sports_athlete_Sue: "Sue Bird, OL-gullvinner og WNBA-mester, Seattle Storm"
+  sports_athlete_Alana: "Alana Beard, gullvinner og WNBA All-Star, Los Angeles Sparks"
+  sports_athlete_Angelo: "Angelo Matthews, kaptein på Sri Lankas cricket-lag"
+  sports_athlete_Nneka: "Nneka Ogwumike, gullvinner, WNBA-mester og 2016 MVP, Los Angeles Sparks"
+  sports_athlete_Carmelo: "Carmelo Anthony, OL-gullvinner og NBA All-Star, New York Knicks"
+  sports_athlete_Marco: "Marco Belinelli, NBA-mester, Charlotte Hornets"
+  sports_athlete_Neymar: "Neymar Jr, OL-gullvinner og fotballspiller, FC Barcelona og på landslaget til Brasil"
+  sports_athlete_Sarah: "Sarah Quita Offringa, vindsurfingsmester"
+  sports_athlete_Marcelo: "Marcelo, fotballspiller, Real Madrid og på landslaget til Brasil"
+  sports_athlete_Erika: "Erika Olivera, maratonløper"
   sports_athlete_John: "John Wall, NBA All-Star, Washington Wizards"
   sports_athlete_Chris: "Chris Bosh, olympisk gullvinner og NBA-mester for Miami Heat"
   sports_athlete_Harrison: "Harrison Barnes, olympisk gullvinner og NBA-vinner for Dallas Mavericks"
@@ -464,6 +493,7 @@
   video_title_obama: "President Obama om informatikk"
   video_title_hoc_is_here: "Kodetimen er her - alle kan lære"
   video_title_anybody_can_learn: "Alle kan lære"
+  video_title_steph_curry: "Hour of Code with Steph Curry"
   video_title_draymond_green: "Kodetimen med Draymond Green"
   video_title_russell_okung: "Kodetimen med Russell Okung"
   video_title_real_madrid: "Kodetimen med Real Madrid"
@@ -483,11 +513,11 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} lærere trenger frivillige som er lidenskapelig opptatt av informatikk til å hjelpe til med Kodetimen i desember. <br>%{num_volunteers} frivillige har meldt seg. Bli med."
   volunteer_engineer_submission_intro_background: "Kodetimen er en global bevegelse for å gi en times introduksjon til informatikk og programmering, som når ut til titalls millioner elever i 180+ land. Bli gjerne med under Computer Science Education Week, 7.-13. desember."
   volunteer_engineer_submission_intro_recruit: 'Disse lærerne vil gjerne ha noen <span style="font-family: ''Gotham 7r'', sans-serif;">tekonologer</span> som kan hjelpe til i klasserommet, eller noe som kan <span style="font-family: ''Gotham 7r'', sans-serif;">inspirere</span> elevene deres ved å prate om bredden av muligheter med informatikk og programmering. Dette kan f. eks. bli gjort gjennom video-chat. Hvis du ikke er en ingeniør, skal du vite at alle kan organisere Kodetimen. <a href="%{url}">Lær mer her</a>.'
-  volunteer_engineer_submission_intro_guide: "Learn more about our <a href=\"%{volunteer_guide}\">volunteer program here</a>."
+  volunteer_engineer_submission_intro_guide: "Lær mer om vårt <a href=\"%{volunteer_guide}\">program for frivillige her</a>."
   volunteer_engineer_submission_intro_signup: "Angi følgende informasjon hvis du er en informatikkelev eller jobber med programmering. Feltene markert med en <span class=\"form-required-field\">*</span> er obligatoriske."
   volunteer_engineer_submission_intro_links: "Ser du ikke etter en frivillig? <a href=\"%{learn_more}\"> Lær mer</a> om å organisere din egen \"Hour of code\" begivenhet og finne en lokal frivillig på våre <a href=\"%{volunteer_local}\"> frivillige kart</a>."
   volunteer_engineer_submission_update_information: "Oppdater din informasjon"
-  volunteer_engineer_submission_header_shared: "Informasjon deles med lærere på frivillig-kartet"
+  volunteer_engineer_submission_header_shared: "Informasjon som deles med lærere på frivillig-kartet"
   volunteer_engineer_submission_field_name: "Navn"
   volunteer_engineer_submission_field_name_placeholder: "Fullt navn"
   volunteer_engineer_submission_field_company: "Bedrift (eller universitet)"
@@ -512,7 +542,7 @@
   volunteer_engineer_submission_field_email_placeholder: "E-postadresse"
   volunteer_engineer_submission_final_paragraph: "Du vil vises på et kart slik at lokale lærere kan kontakte deg for å få hjelp til Kodetimen eller andre frivillighetstilbud. Din epostadresse og nøyaktige posisjon vil ikke bli delt, men andre opplysninger (inkludert omtrentlig plassering) vil være synlig for lokale lærere."
   volunteer_engineer_submission_checkbox_contact: 'Jeg godtar at lærere kan kontakte meg for å hjelpe til med Kodetimen (Obs: din epostadresse vil ikke bli delt)'
-  volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
+  volunteer_engineer_submission_checkbox_age_18_plus: "Jeg bekrefter at jeg minst 18 år gammel."
   volunteer_engineer_submission_submit: "Send"
   volunteer_engineer_submission_thankyou: "Takk for at du melder deg til Kodetimen. Sjekk <a href=\"%{url}\"> her</a> for å forberede deg til Kodetimen og rekruttere flere veiledere."
   volunteer_engineer_submission_commitment_uncertain: "Usikker"
@@ -543,6 +573,8 @@
   volunteer_engineer_submission_type_task_remote: "Jeg ønsker at du skal besøke mitt klasserom via Skype og si noen inspirerende ord til barna"
   volunteer_engineer_submission_type_task_mentor: "Jeg ser etter en veileder som kan hjelpe meg med forberedelsene til Kodetimen"
   petition_age: "Alder"
+  dashboard_announce_hoc_scaling_progress: "Uff! Vi opplever høg Kodetime-trafikk. Vi kan ikke lagre framgangen denne uken, men framgangen fra før denne uken er framleis trygg og lagret."
+  dashboard_announce_learn_more_button: "Lær mer"
   dashboard_landing_title: "Hjemmeside for lærere"
   dashboard_landing_welcome: "Velkommen til det nye og forbedrede lærerdashboardet."
   dashboard_landing_video: "Se denne videoen"
@@ -604,7 +636,7 @@
   dashboard_action_print_certificates: "Skriv ut diplomer"
   dashboard_assessments_view: 'Se vurderinger i:'
   dashboard_assessments_none: "Mange lærere måler sine elevers framgang ved å bruke \"Se framgang\"-fanen. Hvis du er interessert i å gi dine elever flere vurderinger kan du finne anbefalte spørsmål og områder i oppgaveplanene. Disse blir gjort utenfor CodeStudio."
-  dashboard_assessments_none_part2: "Hvis du underviser på ungdomstrinnet eller videregående, har vi vurdering spørsmål tilgjengelig som en del av Code Studio for å hjelpe studentene med å forberede AP testen. For å bruke disse vurderingene, må du først tilordne kurset til klassen og deretter velge kurset fra rullegardinmenyen ovenfor og du vil se elevsvarene her."
+  dashboard_assessments_none_part2: "Hvis du underviser på ungdomstrinnet eller videregående, har vi vurderingsspørsmål tilgjengelig som en del av Code Studio for å hjelpe elevenemed å forberede AP testen. For å bruke disse vurderingene, må du først tilordne kurset til klassen og deretter velge kurset fra rullegardinmenyen ovenfor og du vil se elevsvarene her."
   dashboard_assessments_summaries: "Vurderings-oppsummeringer"
   dashboard_assessments_answers: "Alle svar fra vurderinger"
   dashboard_surveys_answers: "Undersøkelser"
@@ -643,7 +675,7 @@
   dashboard_responses_view: 'Vis tekstsvar i:'
   dashboard_responses_none: "De fleste av våre kurs er utformet for yngre aldersgrupper og krever ikke at elevene skriver tekstsvar på spørsmål, derfor vil du ikke se noen tekstsvar her. For eldre elever i ungdomsskolen og videregående skole, kan du se elevenes innleveringer på åpent tekstsvar-spørsmål ved å velge tilordnede kurs fra rullegardinmenyen ovenfor."
   dashboard_sections_new_section: "Ny seksjon"
-  dashboard_sections_new_google_section: "Import section from Google Classroom"
+  dashboard_sections_new_google_section: "Importér seksjon fra Google Classroom"
   dashboard_sections_jumbotron_instruction: "Lag nye seksjoner og legg til elever. Seksjoner hjelper deg med å organisere elever i mindre grupper så du kan spore framgangen deres og vedlikeholde kontoene deres."
   dashboard_sections_table_section: "Seksjon"
   dashboard_sections_table_secret: "Logg inn Type"
@@ -679,7 +711,7 @@
   dashboard_students_add_student: "Legg til elev"
   dashboard_students_add_students: "Leg til flere elever"
   dashboard_students_add_multiple: 'Skriv eller lim inn navnene på dine elever, en per linje:'
-  dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
+  dashboard_students_new_google_classroom_section: "For å legge til elever, bruk <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> og klikk deretter på <b>Synkronisér elever fra Google Classroom</b>-knappen over."
   dashboard_students_new_section: "Du har nå opprettet et nytt avsnitt! Legg til elever ved å bruke knappene <b>Legg til elev</b> og <b>Legg til flere elever</b> ovenfor."
   dashboard_students_placeholder_name: "Elevnavn"
   dashboard_students_name: "Navn"
@@ -699,7 +731,7 @@
   dashboard_students_reset_secret: "Tilbakestille hemmelig"
   dashboard_students_reset_password: "Tilbakestill passord"
   dashboard_students_share_section: "Del denne gruppens påloggingsside med elevene:"
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
+  dashboard_students_share_section_secondary: 'Eventuelt kan du dele innloggingssiden til denne seksjonen med elevene:'
   dashboard_students_print_info: "Skriv ut kort med elevenes påloggingsinformasjon."
   dashboard_students_secret_picture_title: "Hemmelig bilde"
   dashboard_students_secret_picture: "Hemmelig bilde"
@@ -710,7 +742,7 @@
   dashboard_students_join_link: "Fortell elevene at de skal opprette sin egen konto og bli med i din gruppe på"
   dashboard_students_no_email: "Om elevene dine ikke har epostadresser eller du vil opprette kontoene for dem, andre denne gruppens hemmelige pålogging til <b>ord</b> eller <b>bilde</b>."
   dashboard_students_print_page: "Skriv ut denne siden"
-  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
+  dashboard_students_signin_card: "Gå til %{join_url} og skriv inn %{section_code}"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "<a href=\"/privacy/elev-privacy\", target=\"_blank\"> Klikk her</a> for vårt personverndokument som kan deles digitalt eller skrives ut til elevene."
   dashboard_curriculum_k5_title: "K-5 lærerressurser"
@@ -722,12 +754,12 @@
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
   dashboard_course4: 'Kurs 4 (beta): '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
+  dashboard_coursea: 'Kurs A: '
+  dashboard_courseb: 'Kurs B: '
+  dashboard_coursec: 'Kurs C: '
+  dashboard_coursed: 'Kurs D: '
+  dashboard_coursee: 'Kurs E: '
+  dashboard_coursef: 'Kurs F: '
   dashboard_unplugged: "Hvis dere ikke har datamaskiner i klasserommet, kan du <a href='%{unplugged_url}'>prøve disse analoge leksjonene</a>."
   dashboard_curriculum: "Skoleplan"
   dashboard_curriculum_overview: "K-5 (Barneskole) læreplanoversikt (amerikansk læreplan)"
@@ -748,7 +780,7 @@
   dashboard_curriculum_ecs: 'Utforsking av datavitenskap:'
   dashboard_grade_k: "K"
   dashboard_grade_other: "Andre"
-  dashboard_login_word: "ord"
+  dashboard_login_word: "Ord"
   dashboard_login_picture: "Bilde"
   dashboard_login_none: "E-post"
   dashboard_new_password: "nytt passord"
@@ -776,7 +808,7 @@
   dashboard_sections_account_creation_question: "Hvem lager elevens konto?"
   dashboard_sections_password_question: "Hva bruker elevene som \"passord\"?"
   dashboard_sections_picture_account_creation: "Et bilde tildelt av Code.org"
-  dashboard_sections_word_account_creation: "Et enkelt ord tildelt av Code.org"
+  dashboard_sections_word_account_creation: "Et par enkle ord tildelt av Code.org"
   dashboard_sections_sign_in_question: "Hvor logger elevene på?"
   dashboard_sections_sign_in_unique: "Unik nettside listet opp under fanen \"Administrer elever\""
   dashboard_sections_sign_in_main: "http://code.org og klikk \"Logg på\""
@@ -792,15 +824,15 @@
   learn_more: "Lær mer"
   learn_sign_up_description: "Registrer deg for å delta på Kodetimen under CS Code Week"
   learn_sign_up_button: "Meld deg på"
-  learn_videos_watch: "Se på denne inspirerende filmen"
+  learn_videos_watch: "Se på denne inspirerende filmen med klassen"
   learn_videos_show: "Vis denne inspirerende filmen til klassen din"
   learn_videos_before_hoc: "Se en inspirerende film før Kodetimen"
   learn_educator_resources_description: "Lær om hvordan du kan gjennomføre Kodetimen"
   learn_educator_resources_button: "Lærerressurser"
   learn_are_you_educator: "Du er lærer? Sjekk<a href=\"http://hourofcode.com/resources/how-to\"> hvordan du kan gjennomføre Kodetimen</a>"
-  learn_find_volunteer: "<a href=\"https://code.org/volunteer/local\"> Finn en lokal frivillig</a> å hjelpe deg under \"Hour of Code\""
+  learn_find_volunteer: "<a href=\"https://code.org/volunteer/local\"> Finn en lokal frivillig</a> som kan hjelpe deg under Kodetimen"
   learn_teacher_led_lesson_plans: "Bli inspirert av <a href=\"https://code.org/teacher-led\">Kodetimens oppgaveplaner</a>"
-  learn_how_to_hoc: "Følg <a href=\"https://hourofcode.com/how-to\"> vår \"how-to guide\"</a> for undervisning av \"Hour of Code\""
+  learn_how_to_hoc: "Følg <a href=\"https://hourofcode.com/how-to\"> vår \"how-to guide\"</a> for å gjennomføre Kodetimen"
   learn_hoc_prizes: "<a href=\"https://hourofcode.com/prizes\">Lær mer</a> om premiene for hver lærer."
   learn_inspirational_videos: "Inspirere elevene ved å vise dem <a href=\"https://code.org/educate/inspire\"> disse videoene</a>"
   hoc2014_try_new_tutorials: "Prøv våre nye Kodetime-øvinger"
@@ -827,18 +859,18 @@
   carousel_heading_webpages: "Lær hvordan å lage nettsider"
   carousel_heading_robots: "Lær å programmere med roboter"
   carousel_heading_ide: "Plattformer som er populære blant lærere"
-  carousel_heading_desktop: "Learn to code on a computer"
-  carousel_heading_mobtabelem: "For phones and tablets"
-  carousel_heading_prereader: "For pre-readers"
-  carousel_heading_beyondblocks: "Go beyond blocks - learn a programming language"
-  carousel_heading_nointernet: "Poor internet? Install these apps on your computer"
+  carousel_heading_desktop: "Lære å kode på en datamaskin"
+  carousel_heading_mobtabelem: "For telefoner og nettbrett"
+  carousel_heading_prereader: "For de som ikke kan lese enda"
+  carousel_heading_beyondblocks: "Gå videre fra blokkene - lær et programmeringsspråk"
+  carousel_heading_nointernet: "Tregt internett? Installer disse programmene på datamaskinen"
   educator_notes: "Lærernotater"
   teach_led_lesson_plans: "Planlegging av Kodetimen"
   learn_footer_all_tutorials: "Se en <a href=\"https://code.org/educate/allhourofcode\">omfattende liste over veiledninger i Kodetimen</a>. For å se kriteriene for å sende inn en Kodetimeveiledning, <a href=\"https://hourofcode.com/tutorial-guidelines\">klikk her.</a>"
   how_to_teach_hoc: "Hvordan lære bort en Kodetime"
   more_resources_educators: "Flere lærerressurser"
   beyond_submission: "Ønsker du sende inn en oppskrift til Kodetimen? Se vilkår og innlevering skjemaet."
-  third_party_submission: "Want to submit a tutorial to be listed here? <a href=\"%{submission_url}\">See the criteria and submission form.</a>"
+  third_party_submission: "Vil du registrere ett opplæringsprogram for visning her? <a href=\"%{submission_url}\">Se kriterier og registrerings skjema.</a>"
   participants: "deltakere"
   teachers_notes: "Lærernotater"
   teachers_notes_hoc: 'Lærere: Les viktig opplæringsnotater her'
@@ -868,9 +900,9 @@
   codecademy_name: "Codecademy"
   codecombat_name: "CodeCombat"
   codemonkey_name: "CodeMonkey"
-  codeavengers_name: "Bygg eit spel med JavaScript"
-  processing_name: "Å teikne med kode"
-  robomind_name: "Programmer ein virtuell robot"
+  codeavengers_name: "Bygg et spill med JavaScript"
+  processing_name: "Å tegne med kode"
+  robomind_name: "Programmer en virtuell robot"
   groklearning_name: "Chatterbot-doktotren Eliza"
   quorum_name: "Tilgjengelig koding (med skjemleserstøtte)"
   codespark_name: "Foos (velkommen, førskolebarn)"
@@ -878,14 +910,14 @@
   tynkerapp_name: "Tynker – på nettbrett"
   robomindnl_name: "Programmer ein virtuell robot"
   flappy_name: "Lag et Flappy spill"
-  bitsbox_name: "Blitsbox - lag et spill"
-  makeschool_name: "Bygg eit iphone-spel i nettlesaren din!"
+  bitsbox_name: "Bitsbox - lag et spill"
+  makeschool_name: "Lag et spill til iPhone i nettleseren!"
   touchdevelop_name: "TouchDevelop"
   appinventor_name: "AppInventor Kodetimen"
   blockly_name: "Blockly"
   thinkersmith2_name: "Binary Baubles"
   kodableunplugged_name: "fuzzFamily Frenzy"
-  projguts_name: "Stein, saks papir"
+  projguts_name: "Stein, saks, papir"
   hourofcode_name: "Klassisk labyrint"
   playlab_name: "Spill-lab"
   infinity_name: "Infinity Spill-Lab"
@@ -901,21 +933,21 @@
   course2_name: "Kurs 2"
   course3_name: "Kurs 3"
   course4_name: "Kurs 4"
-  coursea-draft_name: Course A
-  coursea_name: "Course A"
-  courseb-draft_name: Course B
-  courseb_name: "Course B"
-  coursec-draft_name: Course C
-  coursec_name: "Course C"
-  coursed-draft_name: Course D
-  coursed_name: "Course D"
-  coursee-draft_name: Course E
-  coursee_name: "Course E"
-  coursef-draft_name: Course F
-  coursef_name: "Course F"
+  coursea-draft_name: Kurs A
+  coursea_name: "Kurs A"
+  courseb-draft_name: Kurs B
+  courseb_name: "Kurs B"
+  coursec-draft_name: Kurs C
+  coursec_name: "Kurs C"
+  coursed-draft_name: Kurs D
+  coursed_name: "Kurs D"
+  coursee-draft_name: Kurs E
+  coursee_name: "Kurs E"
+  coursef-draft_name: Kurs F
+  coursef_name: "Kurs F"
   accelerated_name: "Framskyndet kurs"
   express_name: "Express Course"
-  pre-express_name: Pre-reader Express Course
+  pre-express_name: Hurtigprogram for de som ikke leser
   cspunit1_name: '(gammel) Enhet 1: Digital informasjon'
   cspunit2_name: '(gammel) Enhet 2: Internett'
   cspunit3_name: '(gammel) Enhet 3: Programmering'
@@ -926,19 +958,21 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
-  csd6_name: 'Unit 6: Physical Computing'
+  csd5_name: 'Enhet 5: Data og samfunn'
+  csd6_name: 'Enhet 6: Praktisk programmering'
   csp1_name: 'Enhet 1: Internett'
   csp2_name: 'Enhet 2: Digital informasjon'
   csp3_name: 'Unit 3: Algorithms and Programming'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
+  csp3-a_name: 'Enhet 3: Introduksjon til programmering(Versjon A)'
+  csp3-research-mxghyt_name: 'Enhet 3: Introduksjon til programmering (Del mål)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: "Full Test - 50 spørsmål"
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: 'Test del 1: 25 spørsmål'
   cspexam2-AKwgAh1ac5_name: Test del 2 - 25 spørsmål
   cspunit3_gradelevel: "9.-12. klasse"
@@ -954,13 +988,13 @@
   starwarsblocks_name: "Star Wars (blokker)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
+  hoc-encryption_name: Enkel kryptering
   text-compression_name: Text Compression
   math_category_name: "Matematikk"
   hoc_category_name: "Kodetimen"
   csf_category_name: "Grunnleggende informatikk"
-  csf_international_category_name: "CS Fundamentals International"
-  csf2_draft_category_name: 'Under Development: Courses A - F'
+  csf_international_category_name: "Grunnleggende informatikk internasjonalt"
+  csf2_draft_category_name: 'Under utvikling: Kurs A - F'
   csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 Prinsipper i informatikk"
   csp17_category_name: "'16-'17 Prinsipper i informatikk"
@@ -968,7 +1002,7 @@
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
   basketball_name: "Lag et basketball-spill"
-  sports_name: "Sport"
+  sports_name: "Kod ditt eget sportsspill"
   applab_gradelevel: "Minstealder 13 år"
   applab_shortdescription_congrats: "App Lab er et programmeringsmiljø hvor du kan lage enkle apper. Design en app, programmer med blokker eller JavaScript for å få den til å fungere og del appen din på få sekunder"
   codeorg_gradelevel: "Alder 4-104"
@@ -1025,12 +1059,12 @@
   course2_gradelevel: "Alder 6+ (leseferdigheter kreves)"
   course3_gradelevel: "Alder 8+ (etter kurs 2)"
   course4_gradelevel: "Alder 10+ (etter kurs 3)"
-  coursea_gradelevel: "Grade 5+"
-  courseb_gradelevel: "Grade 6+"
-  coursec_gradelevel: "Grade 7+"
+  coursea_gradelevel: "Klasse 5 +"
+  courseb_gradelevel: "Klasse 6 +"
+  coursec_gradelevel: "Klasse 7 +"
   coursed_gradelevel: "8.+ klasse"
-  coursee_gradelevel: "Grade 9+"
-  coursef_gradelevel: "Grade 10+"
+  coursee_gradelevel: "Klasse 9 +"
+  coursef_gradelevel: "Klasse 10 +"
   accelerated_gradelevel: "Alder 10+ (etter kurs 3)"
   codeorg_platformtext: "Moderne nettlesere, smart-telefoner, nettbrett"
   codeintl_platformtext: "Moderne nettlesere, smart-telefoner, nettbrett"
@@ -1382,74 +1416,76 @@
   infinity_shortcode: "inf"
   playlab_shortcode: "lab"
   artist_shortcode: "art"
-  header_home: "Home"
-  header_my_dashboard: "My Dashboard"
+  header_home: "Hjem"
+  header_my_dashboard: "Mitt Kontrollpanel"
   header_courses: "kurs"
-  header_course_catalog: "Course Catalog"
+  header_course_catalog: "Kurskatalog"
   header_project_gallery: "Prosjekter"
-  header_sections: "Sections"
-  header_professional_learning: "Professional Learning"
-  header_educate_overview: "Educator Overview"
-  header_educate_elementary: "Elementary School"
-  header_educate_middle: "Middle School"
-  header_educate_high: "High School"
+  header_sections: "Seksjoner"
+  header_professional_learning: "Profesjonell opplæring"
+  header_educate_overview: "Oversikt for lærere"
+  header_educate_elementary: "Barneskole"
+  header_educate_middle: "Ungdomsskole"
+  header_educate_high: "Videregående skole"
   header_educate_hoc: "Kodetimen"
-  header_educate_partner: "Partner with Us"
-  header_educate_beyond: "Beyond Code.org"
-  header_educate_inspire: "Inspire a Student"
-  header_educate_community: "Online Community"
-  header_educate_tools: "Tools and Videos"
-  header_about_us: "About Us"
-  header_about_leadership: "Leadership"
-  header_about_donors: "Donors"
-  header_about_partners: "Partners"
-  header_about_team: "Full Team"
-  header_about_news: "Newsroom"
-  header_about_evaluation: "Evaluation"
-  header_about_jobs: "Jobs"
-  header_about_contact: "Contact Us"
-  header_about_faqs: "FAQs"
-  header_learn: "Learn"
-  header_teach: "Teach"
+  header_educate_partner: "Jobb med oss"
+  header_educate_beyond: "Utover Code.org"
+  header_educate_inspire: "Inspirer en elev"
+  header_educate_community: "Nettsamfunn"
+  header_educate_tools: "Verktøy og videoer"
+  header_about_us: "Om oss"
+  header_about_leadership: "Lederskap"
+  header_about_donors: "Sponsorer"
+  header_about_partners: "Partnere"
+  header_about_team: "Hele teamet"
+  header_about_news: "Nyhetsrom"
+  header_about_evaluation: "Evaluering"
+  header_about_jobs: "Jobber"
+  header_about_contact: "Kontakt oss"
+  header_about_faqs: "Vanlige spørsmål"
+  header_learn: "Lær"
+  header_teach: "Undervis"
   header_stats: "Statistikk"
-  header_help_us: "Help Us"
-  header_about: "About"
-  header_teacher_community: "Teacher community"
-  header_help_support: 'Help and support '
-  header_report_bug: "Report bug"
-  header_tutorials: "Tutorials"
-  header_documentation: "Documentation"
+  header_help_us: "Hjelp oss"
+  header_about: "Om"
+  header_teacher_community: "Brukergruppe for lærere"
+  header_help_support: 'Hjelp og støtte '
+  header_report_bug: "Rapporter feil"
+  header_tutorials: "Guide"
+  header_documentation: "Dokumentasjon"
   csp_name: "'16-'17 Prinsipper i informatikk"
   csd_name: "CS Discoveries"
-  full_course_category_name: "Full Courses"
+  full_course_category_name: "Alle kurs"
   user_header_label: "Hei %{username}"
   user_header_settings: "Min konto"
   user_header_logout: "Logg ut"
   user_header_signin: "Logg inn"
-  view_all_sections: "View All Sections"
-  view_section: "View Section"
-  view_named_section: "View %{section_name}"
-  privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
-  signing_in: "Signing In"
-  sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
-  sign_in_instruct_website: "Go to %{code_org_url}."
-  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
-  sign_in_instruct_name: "Choose their display name."
-  sign_in_instruct_secret: "Choose their secret %{secret}."
-  sign_in_instruct_button: "Click the “Sign in” button."
-  sign_in_overview_cards: "Students can find all of this information, including their secret %{secret}, in the login cards below."
-  reset_student_password: "Resetting student passwords"
-  reset_student_password_instructions: "You can reset the secret <word/picture> for any of your students by going to the “Manage Students” tab for the section, clicking the “Show secret” button under the “Password” column, and clicking the “Reset secret” button."
-  login_cards: "Login Cards"
-  print_login_cards: "Print login cards"
+  view_all_sections: "Vis alle avsnitt"
+  view_section: "Vis avsnitt"
+  view_named_section: "Vis %{section_name}"
+  privacy_doc_explanation: "Klikk her for å se vårt personvern dokument som kan deles eller skrives ut til elevene."
+  signing_in: "Logger på"
+  sign_in_overview: 'Elevene kan logge på kontoene sine på Code.org på følgende måte:'
+  sign_in_instruct_website: "Gå til %{code_org_url}."
+  sign_in_instruct_code: 'Skriv inn seksjonskoden: %{section_code}.'
+  sign_in_instruct_name: "Velg visningsnavn."
+  sign_in_instruct_secret: "Velg hemmelighet %{secret}."
+  sign_in_instruct_button: "Klikk på \"Logg på\" knappen."
+  sign_in_overview_cards: "Elevene kan finne denne informasjonen, inkludert deres hemmelighet %{secret}, i innloggingskortet nedenfor."
+  reset_student_password: "Tilbakestille student passord"
+  reset_student_password_instructions: "Du kan tilbakestille hemmeligheten <word/picture> for dine elever ved å gå til \"Administrere elever\" kategorien for inndelingen, klikke \"Vis hemmelighet\" knappen under \"Passord\" kolonnen og så klikke \"tilbakestille hemmelighet\"."
+  login_cards: "Innloggingskort"
+  print_login_cards: "Skriv ut innloggingskort"
   joining_section: "Joining your section (one-time only)"
-  joining_section_overview: "If a student has not already joined your section, please ask them to do the following steps. Note that they only need to do this once. By joining your section, students will be able see the course assigned to them and you will be able to track the progress of the work they complete while they are signed in."
-  joining_section_instruct_website: 'Create a Code.org account if they haven’t already done so. They can do this at https://studio.code.org/users/sign_up. Note that they can either sign up with an email address and password, or sign up through Google, Facebook, or Microsoft by clicking on one of these buttons:'
-  joining_section_instruct_account: "Sign in to their Code.org account."
-  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section code: %{section_code}.'
-  joining_section_instruct_button: "Once they press the “Go” button, they should be added to your section."
-  signing_in_single_instruct: "Your students can sign in to their Code.org accounts by going to https://code.org/ and clicking on the “Sign in” button on the top right corner."
-  reset_student_password_email: "If your student created a Code.org account by using their email address and password (instead of signing in through their Google, Facebook, Microsoft, or Clever account), you can reset their password by going to the “Manage Students” tab for the section, and clicking the “Reset password” button under the “Password” column."
-  syncing_students: "Syncing your students"
-  syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
-  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
+  joining_section_overview: "Om en elev ikke allerede har blitt med i seksjonen din, be dem om å gjøre følgende steg. Merk at de bare trenger å gjøre dette én gang. Ved å bli med i seksjonen din vil elevene se hvilket kurs de er blitt tildelt og du kan spore fremdriften på det fullførte arbeidet når de er innlogget."
+  joining_section_instruct_website: 'Opprett en konto på Code.org dersom de ikke har gjort det allerede. De kan gjøre dette på https://studio.code.org/users/sign_up. Merk at de kan enten registrere seg med en epost-adresse og et passord, eller registrerer seg gjennom Google, Facebook eller Microsoft ved å klikke på en av disse knappene:'
+  joining_section_instruct_account: "Logg inn på kontoen på Code.org."
+  joining_section_instruct_code: 'Gå til %{code_org_url} og skriv inn seksjonskoden: %{section_code}.'
+  joining_section_instruct_button: "Når de trykker på \"Gå\"-knappen, blir de lagt til seksjonen din."
+  signing_in_single_instruct: "Elevene kan logge seg inn på egen Code.org-konto ved å gå til https://code.org/ og klikke på \"Logg på\"-knappen øverst til høyre."
+  reset_student_password_email: "Dersom eleven din opprettet en konto på Code.org ved hjelp av egen epost-adresse og passord (istedenfor å logge på via Google, Facebook, Microsoft eller Clever-kontoen sin), kan du tilbakestille passordet ved å gå til fanen \"Administrer elever\" i seksjonen og klikke på knappen \"Nullstill passord\" i \"Passord\"-kolonnen."
+  syncing_students: "Synkroniserer elevene"
+  syncing_students_instructions: 'Hvis Code.org-seksjonen din blir utdatert etter listen din over elever i Google Classroom, klikk på knappen "Synkroniser elever fra Google Classroom" i fanen "Administrer elever":'
+  google_sign_in_instruct: 'Derfra bør de velge alternativet "Logg på med Google-kontoen":'
+  hero_name: 'Minecraft: Heltens reise'
+  applab-intro_name: App Lab Intro

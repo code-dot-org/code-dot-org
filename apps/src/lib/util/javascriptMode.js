@@ -81,7 +81,8 @@ export function apiValidateType(opts, funcName, varName, varValue, expectedType,
     }
     properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!properType) {
-      outputWarning(`${funcName}() ${varName} parameter value (${varValue}) is not a ${expectedType}.`);
+      const outputValue = typeof varValue === 'function' ? 'function' : varValue;
+      outputWarning(`${funcName}() ${varName} parameter value (${outputValue}) is not a ${expectedType}.`);
     }
     opts[validatedTypeKey] = properType;
   }

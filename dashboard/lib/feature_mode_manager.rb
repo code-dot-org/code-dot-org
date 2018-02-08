@@ -22,17 +22,23 @@ class FeatureModeManager
   # broken down into gatekeeper_general_settings (which apply to all tutorials) and
   # gatekeeper_hoc_tutorial_settings (which apply to high-scale HOC tutorials only).
   MODE_SETTINGS_MAP = {
-    # 'green'
     normal: {
       gatekeeper_general_settings: {
         puzzle_rating: true,
         hint_view_request: true,
         postMilestone: true,
+        postFailedRunMilestone: true,
         shareEnabled: true,
         slogging: true
       },
       gatekeeper_hoc_tutorial_settings: {
         postMilestone: true,
+        postFailedRunMilestone: true,
+        shareEnabled: true,
+      },
+      gatekeeper_csf_tutorial_settings: {
+        postMilestone: true,
+        postFailedRunMilestone: true,
         shareEnabled: true,
       },
       dcdo_settings: {
@@ -42,38 +48,76 @@ class FeatureModeManager
         public_max_age: 6.minutes.to_i,
       }
     },
-    # 'yellow'
     scale: {
       gatekeeper_general_settings: {
-        puzzle_rating: false,
-        hint_view_request: false,
+        puzzle_rating: true,
+        hint_view_request: true,
         postMilestone: true,
+        postFailedRunMilestone: true,
         shareEnabled: true,
         slogging: false
       },
       gatekeeper_hoc_tutorial_settings: {
-        postMilestone: false,
+        postMilestone: true,
+        postFailedRunMilestone: true,
+        shareEnabled: true,
+      },
+      gatekeeper_csf_tutorial_settings: {
+        postMilestone: true,
+        postFailedRunMilestone: true,
         shareEnabled: true,
       },
       dcdo_settings: {
-        hoc_activity_sample_weight: 10,
+        hoc_activity_sample_weight: 1,
         hoc_learn_activity_sample_weight: 50,
         public_proxy_max_age: 4.hours.to_i,
         public_max_age: 8.hours.to_i,
       }
     },
-    # 'red'
+    fallback: {
+      gatekeeper_general_settings: {
+        puzzle_rating: false,
+        hint_view_request: true,
+        postMilestone: true,
+        postFailedRunMilestone: true,
+        shareEnabled: true,
+        slogging: false
+      },
+      gatekeeper_hoc_tutorial_settings: {
+        postMilestone: true,
+        postFailedRunMilestone: false,
+        shareEnabled: true,
+      },
+      gatekeeper_csf_tutorial_settings: {
+        postMilestone: true,
+        postFailedRunMilestone: true,
+        shareEnabled: true,
+      },
+      dcdo_settings: {
+        hoc_activity_sample_weight: 1,
+        hoc_learn_activity_sample_weight: 50,
+        public_proxy_max_age: 4.hours.to_i,
+        public_max_age: 8.hours.to_i,
+      }
+    },
     emergency: {
       gatekeeper_general_settings: {
         puzzle_rating: false,
         hint_view_request: false,
-        postMilestone: false,
-        shareEnabled: false,
+        postMilestone: true,
+        postFailedRunMilestone: true,
+        shareEnabled: true,
         slogging: false
       },
       gatekeeper_hoc_tutorial_settings: {
         postMilestone: false,
-        shareEnabled: false,
+        postFailedRunMilestone: false,
+        shareEnabled: true,
+      },
+      gatekeeper_csf_tutorial_settings: {
+        postMilestone: false,
+        postFailedRunMilestone: false,
+        shareEnabled: true,
       },
       dcdo_settings: {
         hoc_activity_sample_weight: 10,
@@ -88,7 +132,7 @@ class FeatureModeManager
   MODES = MODE_SETTINGS_MAP.keys
 
   # Updates the feature mode to the given mode.
-  def self.set_mode(mode, gatekeeper, dcdo, hoc_script_names)
+  def self.set_mode(mode, gatekeeper, dcdo, hoc_script_names, csf_script_names)
     settings = MODE_SETTINGS_MAP[mode]
     raise "Invalid mode '#{mode}'" if settings.nil?
 
@@ -106,16 +150,23 @@ class FeatureModeManager
       end
     end
 
+    settings[:gatekeeper_csf_tutorial_settings].each do |feature, value|
+      csf_script_names.each do |script_name|
+        gatekeeper.set(feature,  where: {script_name: script_name}, value: value)
+      end
+    end
+
     ChatClient.log "Set scale feature mode for environment #{Rails.env} to #{mode}"
   end
 
   # Returns the matching mode if the dcdo and gatekeeper settings match
   # a predefined mode for all of the specified HOC script names, or nil otherwise.
-  def self.get_mode(gatekeeper, dcdo, hoc_script_names)
+  def self.get_mode(gatekeeper, dcdo, hoc_script_names, csf_script_names)
     MODES.detect do |mode|
       dcdo_matches_mode?(dcdo, mode) &&
         gatekeeper_general_settings_match_mode?(gatekeeper, mode) &&
-        gatekeeper_hoc_tutorials_match_mode?(gatekeeper, mode, hoc_script_names)
+        gatekeeper_hoc_tutorials_match_mode?(gatekeeper, mode, hoc_script_names) &&
+        gatekeeper_csf_tutorials_match_mode?(gatekeeper, mode, csf_script_names)
     end
   end
 
@@ -126,7 +177,13 @@ class FeatureModeManager
     # Use the value from the mode settings map, if defined.
     settings = MODE_SETTINGS_MAP[mode]
     if settings
-      allowed = settings[:gatekeeper_hoc_tutorial_settings][feature] if script
+      if script
+        if ScriptConfig.hoc_scripts.include?(script)
+          allowed = settings[:gatekeeper_hoc_tutorial_settings][feature]
+        elsif ScriptConfig.csf_scripts.include?(script)
+          allowed = settings[:gatekeeper_csf_tutorial_settings][feature]
+        end
+      end
       allowed = settings[:gatekeeper_general_settings][feature] if allowed.nil?
       return allowed unless allowed.nil?
     end
@@ -150,9 +207,20 @@ class FeatureModeManager
   end
 
   def self.gatekeeper_hoc_tutorials_match_mode?(gatekeeper, mode, hoc_script_names)
-    expected_settings = MODE_SETTINGS_MAP[mode][:gatekeeper_hoc_tutorial_settings]
+    gatekeeper_tutorials_match_mode?(gatekeeper, hoc_script_names,
+      MODE_SETTINGS_MAP[mode][:gatekeeper_hoc_tutorial_settings]
+    )
+  end
+
+  def self.gatekeeper_csf_tutorials_match_mode?(gatekeeper, mode, csf_script_names)
+    gatekeeper_tutorials_match_mode?(gatekeeper, csf_script_names,
+      MODE_SETTINGS_MAP[mode][:gatekeeper_csf_tutorial_settings]
+    )
+  end
+
+  def self.gatekeeper_tutorials_match_mode?(gatekeeper, script_names, expected_settings)
     expected_settings.all? do |feature, expected_value|
-      hoc_script_names.all? do |script|
+      script_names.all? do |script|
         expected_value == gatekeeper.allows(feature, where: {script_name: script})
       end
     end

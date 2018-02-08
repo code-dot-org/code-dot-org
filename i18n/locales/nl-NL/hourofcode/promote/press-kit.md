@@ -1,61 +1,60 @@
-* * *
-
-title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_press_kit) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ## Hoe je de aandacht van de media trekt voor je CodeUur-evenement
 
-*For all press and media inquiries, contact <press@code.org>*
+*Voor vragen van pers en media, neem contact op met <press@code.org>*
 
 ### Belangrijke Tips
 
-  * Neem twee weken voor je evenement contact op met de media. Krijg je niet direct antwoord, bel of mail dan nog even na.
-  * Vraag of een collega of vrijwilliger fotos wil nemen om online te delen en naar de pers te sturen.
-  * Schrijf over het CodeUur op de website van de school en in het schoolblad. Schrijf over het evenement zelf en voeg afbeeldingen toe van deelnemers.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Neem twee weken voor je evenement contact op met de media. Krijg je niet direct antwoord, bel of mail dan nog even na.
+- Vraag of een collega of vrijwilliger fotos wil nemen om online te delen en naar de pers te sturen.
+- Schrijf over het CodeUur op de website van de school en in het schoolblad. Schrijf over het evenement zelf en voeg afbeeldingen toe van deelnemers.
+- Deel uw plannen en aankondigen op Facebook en Twitter. Gebruik de hashtag **#HourOfCode** zodat Code.org uw evenement kan zien en promoten.
 
 ### Stappenplan:
 
-**1. Plan your event**
+**1. Plan uw evenement**
 
-  * Plan een bijeenkomst om het CodeUur af te trappen.
-  * Stuur [een](%= resolve_url('/promote/resources#sample-emails') %) brief aan de ouders. Vraag hen om het woord te verspreiden.
-  * Verzend [ een brief](<%= hoc_uri('/resources/#sample-emails') %>)aan uw burgemeester, gouverneur, of invloedrijke ondernemer om hen uit te nodigen om dit evenement bij te wonen en te spreken met uw leerlingen.
-  * Organiseer groepsactiviteiten (zoals een demonstratie van een 'unplugged'-programmeeractiviteit), of laat door deelnemers gemaakte en geleide activiteiten zien.
-  * Toon de video van Code.org [CodeUur ](%= resolve_url('/') %) of een van [deze](%= resolve_url('/promote/resources#videos') %) om te inspireren.
+- Plan een bijeenkomst om het CodeUur af te trappen.
+- Stuur [een](%= resolve_url('/promote/resources#sample-emails') %) brief aan de ouders. Vraag hen om het woord te verspreiden.
+- Verzend [ een brief](<%= hoc_uri('/resources/#sample-emails') %>)aan uw burgemeester, gouverneur, of invloedrijke ondernemer om hen uit te nodigen om dit evenement bij te wonen en te spreken met uw leerlingen.
+- Organiseer groepsactiviteiten (zoals een demonstratie van een 'unplugged'-programmeeractiviteit), of laat door deelnemers gemaakte en geleide activiteiten zien.
+- Toon de video van Code.org [CodeUur ](%= resolve_url('/') %) of een van [deze](%= resolve_url('/promote/resources#videos') %) om te inspireren.
 
-**2. Identify specific local reporters that cover education or local events.**
+**2. Vind lokale verslaggevers die onderwijs- of lokale evenementen behandelen.**
 
-Think a local newspaper, TV station, radio station or blog.
+Denk aan de lokale kranten, TV- of radiostations of blogs.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+Kijk online of u contactinformatie kan vinden over journalisten. Als u het niet kunt vinden, bel de uitgever om ernaar te vragen, of email in het algemeen naar een email tips@PUBLICATIONNAME.COM email adres en vraag of uw bericht door kan worden gegeven naar de desbetreffende verslaggever.
 
-**3. Contact local media**
+**3. Neem contact op met lokale media**
 
-The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %).**
+De beste manier om contact op te nemen is per mail. Deze moet kort zijn en overbrengen: waarom is dit evenement interessant voor anderen? Voorzie contactinformatie (een Gsm-nummer) voor wie er naar de eventlocatie komt. **Zie een [voorbeeld pitch naar media](%= resolve_url('/promote/resources#sample-emails') %).**
 
-**4. Prepare to field questions about your school event. Here are some examples:**
+**4. Bereid u voor om vragen te beantwoorden over uw schoolevenement. Voorbeelden:**
 
-*Why is your school doing an Hour of Code?*
+*Waarom doet uw school mee aan CodeUur?*
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+We weten allemaal dat het belangrijk is dat leerlingen wegwijs worden in onze digitale wereld. Veel leraren hebben weinig ervaring met informatica en weten niet waar ze moeten beginnen. Dit evenement is een kans voor ons allemaal om te zien wat informatica inhoudt.
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+We hopen dat leerlingen de smaak te pakken krijgen en blijven leren. Onderzoek toont ook aan dat kinderen programmeerconcepten snappen nog voor ze kunnen lezen en schrijven. Hun hersenen staan op jonge leeftijd zelfs meer open voor programmeertalen, net zoals met vreemde talen.
 
-*Why is this important?*
+*Waarom is dit belangrijk?*
 
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
+Technologie verandert elke industrie op de planeet. In 2015, 7 miljoen open banen in de VS—inclusief kunst en design—die programmeervaardigheden nodig hadden. Maar 75 procent van de scholen in de VS onderwijzen niet informatica. Het wordt tijd dat we aansluiten bij de 21e eeuw. We weten dat wat onze leerlingen ook gaan doen wanneer ze groot worden, of ze nu medicijnen, het bedrijfsleven, de politiek of de kunst in gaan, als ze weten hoe ze op technologie kunnen bouwen geeft ze dat de zelfverzekerdheid en know-how om te slagen.
 
-**More details and a quote you can use in materials**
+**Meer details en een citaat dat je kunt gebruiken in materialen**
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+"Het CodeUur is ontworpen om code te ontrafelen en te laten zien dat informatica geen hocus pocus is: iedereen kan de grondbeginselen leren," aldus Hadi Partovi, oprichter en directeur van Code.org. "Meer dan 100 miljoen leerlingen wereldwijd hebben meegedaan aan een CodeUur. De vraag naar informatica onderwijs in de 21e eeuw kent geen regels of grenzen.
 
-**About Code.org**
+**Over Code.org**
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org® is een 501c3 publieke non-profit die zich richt op het uitbreiden van deelname aan programmeren en het vergroten van de deelname door vrouwen en studenten uit ondergerepresenteerde getinte leerlingen. De visie is dat elke leerling in elke school de kans moet krijgen om te leren programmeren. Na de lancering in 2013, organiseerde Code.org het CodeUur campagne – die meer dan 100 miljoen studenten geïntroduceerd heeft aan programmeren - en heeft meer dan 70 openbare schooldistricten landelijk als partners om programmeren te verspreiden. Code.org wordt ondersteund door filantropische donaties van bedrijven, stichtingen en gulle individuen, waaronder Microsoft, Infosys Foundation, VS, The Ballmer Family Giving, Omidyar Network en nog veel meer. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
 
   
 Find more resources and sample emails [here](%= resolve_url('/promote') %).

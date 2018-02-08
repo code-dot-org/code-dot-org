@@ -35,10 +35,18 @@
   twentyhours_text: Lõpetasid oma esimese KoodiTunni? Õpi rohkem informaatika ja programmeerimise
     mõistete kohta selle järgneva kursuse abil.
   og_title: Iga laps väärib võimalust
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
   og_description: Igal õpilasel igas koolis peaks olema võimalus õppida arvutiteadust.
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: Koodi Tund on siin
   csedweek_og_description: Koodi Tund on globaalne liikumine mis ühendab kümneid miljoneid
     õpilasi igas vanuses, 180+ riigis ning üle 45 keeles.
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
   hoc2014_heading: Liitu <a href="http://hourofcode.com">KoodiTunniga</a><br/>8-14
     detsembril, 2014<br/>
   hoc2014_students: "Õpilased"
@@ -88,12 +96,12 @@
   congratulations_on_completing_course2: "Õnnitleme Kursus 2 läbimise puhul"
   congratulations_on_completing_course3: "Õnnitleme Kursus 3 läbimise puhul"
   congratulations_on_completing_course4: "Õnnitleme Kursus 4 läbimise puhul"
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
+  congratulations_on_completing_coursea: "Õnnitleme Kursus A läbimise puhul"
+  congratulations_on_completing_courseb: "Õnnitleme Kursus B läbimise puhul"
+  congratulations_on_completing_coursec: "Õnnitleme Kursus C läbimise puhul"
+  congratulations_on_completing_coursed: "Õnnitleme Kursus D läbimise puhul"
+  congratulations_on_completing_coursee: "Õnnitleme Kursus E läbimise puhul"
+  congratulations_on_completing_coursef: "Õnnitleme Kursus F läbimise puhul"
   congratulations_on_completing_accelerated: "Õnnitleme kiirkursuse läbimise puhul"
   congrats_next_tutorials_title: Proovi järgnevaid õpetusi
   congrats_next_tutorials_desc: Proovi neid lühemaid 1 tunni õpetusi, või proovi <a
@@ -102,7 +110,7 @@
   view_course: Vaata kursust
   view_unit: Kuva üksus
   make_app: Loo rakendus
-  congrats_guest_speaker_title: Leia külalisesineja oma klassiruumi
+  congrats_guest_speaker_title: Leia külalisesineja oma klassi
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
     real world by inviting a guest speaker to your classroom. You can use our map
@@ -110,7 +118,7 @@
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Leia külalisesineja
-  congrats_third_party_title: Kasuta oma uusi oskusi nendek rakendustek ja veebilehtedel
+  congrats_third_party_title: Kasuta oma uusi oskusi nendes rakendustesja veebilehtedel
   third_party_gradelevel_kto8: Põhikooli klassid
   third_party_gradelevel_kto2: Algkooli klassid
   third_party_gradelevel_2to8: 2.-8. klassid
@@ -121,7 +129,7 @@
   third_party_platform_all: 'Platvorm: Veeb, iPad ja Android'
   third_party_platform_mobile: 'Platvorm: iPad ja Android'
   third_party_platform_web: 'Platvorm: Veeb'
-  third_party_price_varies: 'Hind: Hinnad varieeruvad'
+  third_party_price_varies: 'Hind: erinevad hinnad'
   third_party_price_free: 'Hind: Tasuta'
   third_party_price_299: 'Hind: $2.99/allalaadimine'
   third_party_price_individual: 'Individual Price: Free Trial & $25/month'
@@ -181,11 +189,11 @@
     native education.
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
   third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_organization: Organisatsioon
   third_party_curriculum: "Õppekava"
-  third_party_pricing: Pricing
+  third_party_pricing: Hinnad
   third_party_cost_free: Free
-  third_party_cost_5permonth: "$5/month per class"
+  third_party_cost_5permonth: "$5/ kuu klassi kohta"
   third_party_cost_299: "$2.99/download"
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
@@ -253,10 +261,10 @@
   continue_learning_body: Võimalusi on mitmesuguseid. Võid õppida veebis, kohalikus
     koolis või suvelaagris.
   learn_code_studio: Try Code Studio courses
-  learn_next_level: Proovi mõnda muud Code Studio kursust
+  learn_next_level: Proovi mõnda muud Code.org kursust
   learn_online: Proovi ka teisi veebikursusi
   learn_classes: Leia kohalikud kursused
-  learn_back_to_minecraft: Keep learning with Minecraft
+  learn_back_to_minecraft: Jätka õppimist Minecraftiga
   hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Ma läbisin just #HourOfCode - tšekka seda! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! Thanks @Microsoft for
@@ -333,7 +341,7 @@
   stats_michael: '"Ma pole <b>kunagi</b> näinud enda õpilasi nii entusiastlikult õppimas
     näinud." - Michael Clark, Õpetaja'
   studiobar_title: Avasta <a href='http://studio.code.org'>Code Studio't</a>
-  studiobar_title_nolink: Avasta Code Stuudiot
+  studiobar_title_nolink: Avasta Code.org kursuseid
   studiobar_elementary_title: Baaskursused
   studiobar_elementary_body: Meie kolm uut kursust K&#8209;5 jaoks
   studiobar_hoc_title: KoodiTund
@@ -341,13 +349,19 @@
   studiobar_flappy_title: Flappy kood
   studiobar_flappy_body: Tee valmis ja jaga oma Flappy mängu
   studiobar_teacher_title: Valmistatud õpetajate jaoks
-  studiobar_teacher_body: Tutvusta Code Studiot oma klassis
+  studiobar_teacher_body: Tutvusta oma klassile Code.org'i
   studiobar_frozen_title: KoodiTund
   studiobar_frozen_body: Loo talve võlumaa koos Anna ja Elsaga
   studiobar_donate_title: Anneta
   studiobar_donate_body: "Üks laps õpib iga dollari eest, mille te kingite"
   studiobar_shop_title: Pood
   studiobar_shop_body: Murra stereotüüpe. Kanna uhkusega meie logo.
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "&ldquo;Ma esitan väljakutse kõikide riikide tüdrukutele,
     et õppida ühte Kooditund õpetust&rdquo; - Malala, Noobeli auhinna võitja"
   homepage_hero_text_susan: "&ldquo;Kui sa suudad muuta tehnoloogiat, siis sa suudad
@@ -384,6 +398,8 @@
     õpingutele
   homepage_hero_text_stat_students: 'Code Studio kasutajate arv on #student_count'
   homepage_hero_text_stat_served: 'KoodiTund: teeninud #served'
+  homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: KoodiTund
   homepage_slot_text_frozen: Frozen koos Anna ja Elsaga
   homepage_slot_text_teacher: "Õpetaja töölaud"
@@ -403,6 +419,7 @@
   homepage_action_text_girlvideo: Inspireeri tüdrukut
   homepage_action_text_learn: Alusta õppimist
   homepage_action_text_signpetition: Allkirjasta taotlus
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Ma nõustun &#x25BE;
   homepage_diversity_pledge: Mitmekesisuse lubadus
   homepage_banner_text_prizes: 'KoodiTund tuleb taas, 7.-13. detsembril. '
@@ -450,10 +467,10 @@
   homepage_slot_text_blurb_advocates: Toetada mitmekesisust arvutiteaduses
   homepage_slot_text_link_stats: Vaata statistikat
   homepage_slot_text_link_buy: Võta osa
-  homepage_slot_text_link_donate: Tee annetus
+  homepage_slot_text_link_donate: Anneta
   homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_slot_text_link_administrators: Bring to your school or district
-  homepage_header_codestudio: Code Student õpilaste loomingud
+  homepage_header_codestudio: Code.org õpilaste loomingud
   homepage_header_donors: Code.org tänab tema toetajaid
   homepage_donors_seall: Vaata kõiki
   homepage_donors_donate: Anneta
@@ -502,7 +519,7 @@
     featuring professionals in technology fields
   playlab_choose_theme: Saate valida Play Labi kujunduse
   playlab_classic_title: Klassikaline
-  playlab_gumball_title: Gumball
+  playlab_gumball_title: Gumballi imeline maailm
   playlab_iceage_title: Jääaeg – peagi tulekul
   playlab_iceage_title_live: Jääaeg
   starwars_subtitle: Galaktika loomine koodiga
@@ -523,28 +540,60 @@
   mc_gradelevel: Vanusele 4-104
   mc_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   mc_specs: Palju keeli | Kaasaegsed brauserid ja nutiseadmed | Vanuses 6 +
-  minecraft_designer: Minecraft Designer
-  minecraft_adventurer: Minecraft Adventurer
-  minecraft_tutorials: Minecraft Hour of Code Tutorials
-  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
+  minecraft_agent: 'Minecraft: Kangelase teekond'
+  minecraft_designer: Minecraft Kujundaja
+  minecraft_adventurer: Minecraft Seikleja
+  minecraft_tutorials: Minecraft KoodiTund - juhendid
+  minecraft_specs: Palju keeli | Kaasaegsed brauserid ja nutiseadmed | Vanuses 6 +
+  minecraft_agent_description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega!
+    Teekond läbi Minecrafti koos koodiga.
+  minecraft_agent_button: Alusta
   minecraft_designer_description: Programmeeri loomi ja teisi Minecrafti tegelasi
     omaenda Minecrafti versioonis.
   minecraft_designer_button: Alusta
-  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_description: Kasuta koodi, et viia Alex või Steve seiklusele.
   minecraft_adventurer_button: Alusta
-  minecraft_no_internet: Don't have Internet?
-  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
+  minecraft_no_internet: Ei ole internetti?
+  minecraft_download_adventurer: Lae alla Minecraft Seikleja offline versioon.
   minecraft_subtitle: Minecrafti KoodiTund
-  sports_page_title: Sports Hour of Code
+  minecraft_store_camps: Tasuta Minecraft KoodiTunni laagrites Microsofti poodides
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'> registreeru</a> tasuta
+    Minecraft KoodTunni õpitoad Microsofti poodides Austraalias, Kanadas, Puerto Ricos
+    ja USAs. Õpi, kuidas programmeerimine on igaühe jaoks ja ühendab loovust, probleemide
+    lahendamist ja väga lõbus."
+  minecraft_host_event: Korralda Minecraft KoodiTunni üritus
+  minecraft_teach_resources: "Õpetaja materjalid ja tunnikava."
+  minecraft_leader_guide: Lae alla materjalid ürituse planeerimiseks ja läbiviimiseks.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'> Lae
+    alla</a> juhendaja lühike juhend ja PowerPoint esitlused noorematele ja vanematele
+    õpilastele."
+  minecraft_join_online_training: 'Valmis oma Minecrafti KoodiTunni läbiviimiseks
+    kuid ei tea kust alustada? Tutvu meie <a href=''%{minecraft_webinar_url}''> veebiniariga</a>.
+    Saad teada parimad praktikad, juhendaja materjalid, ja saad kiire ülevaate Minecraft:
+    Kangelase teekonnast. Saad ette hakata ette valmistama oma KoodiTundi noortele
+    KoodiTunni nädalal (4.-10. detsember).'
+  minecraft_continue_learning: 'Arvutiteadus kõigile: KoodiTund Microsofti poodides'
+  minecraft_continue_learning_description: Ei ole vaja arvutialaseid eelnevaid kogemusi!
+    Aita, et kõik noored saavad õppida väärtuslikke oskusi arvutiteaduses. Sa saad
+    sellega hakkama! <a href='%{minecraft_continue_learning_url}'> Ühine täna</a>.
+  minecraft_future: Aita noori saada valmis tulevikuks
+  minecraft_future_description: Vaadake, kuidas teised koolid ja mittetulundusühingud
+    toovad digipädevused oma kogukonda. Kaalu erinevaid võimalusi, saa nõuandeid ja
+    nippe ja <a href='%{minecraft_future_url}'> kasuta </a> juhendeid.
+  minecraft_og_designer: Minecraft on tagasi uue tegevuseda KoodiTunniks. Programmeeri
+    loomi ja teisi Minecrafti olendid oma enda Minecraft versioonis.
+  minecraft_og_agent: Minecraft on KoodiTunnis tagasi, ja sa oled kangelane! Kirjutage
+    kood, et läbida teekond läbi Minecraft maailma.
+  sports_page_title: KoodiTunni Sports
   sports_og_title: Hour of Code Sports Tutorials
   sports_og_description: Choose between making a basketball game or mix and match
     across sports.
-  sports_title: Tee MCode'iga oma spordimäng
+  sports_title: Tee oma spordimäng
   sports_watch_video: Vaata videot
   sports_video_title: Push yourself. Anybody can learn.
   sports_select_theme: Select your tutorial theme
   sports_basketball_title: Tee korvpallimäng
-  sports_all_sports_title: Sega omavahel ja sobita kokku üle spordialade
+  sports_all_sports_title: Sega omavahel ja sobita kokku erinevaid spordialasid
   sports_featured_athletes: See featured athletes
   sports_athletes_title: Featured athletes
   sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
@@ -579,14 +628,15 @@
   video_title_cs_is_everything: Computer Science is Changing Everything
   video_title_inspire_girl: Inspireeri tüdrukut
   video_title_cs_intro: Computer Science intro
-  video_title_schools_dont_teach: What Most Schools Don't Teach
+  video_title_schools_dont_teach: Mida enamik koole ei õpeta
   video_title_obama: President Obama on computer science
   video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
   video_title_anybody_can_learn: Anybody Can Learn
-  video_title_draymond_green: Hour of Code with Draymond Green
-  video_title_russell_okung: Hour of Code with Russell Okung
-  video_title_real_madrid: Hour of Code with Real Madrid
-  video_title_marco_belinelli: Hour of Code with Marco Belinelli
+  video_title_steph_curry: Hour of Code with Steph Curry
+  video_title_draymond_green: KoodiTund koos Draymond Green
+  video_title_russell_okung: KoodiTund koos Russell Okung
+  video_title_real_madrid: KoodiTund koos Real Madridiga
+  video_title_marco_belinelli: KoodiTund koos Marco Belinelli
   video_title_chris_bosh: Chris Bosh on Computer Science
   video_1min: 1 min
   video_2min: 2 min
@@ -601,29 +651,24 @@
   volunteer_engineer_submission_subtitle_generic: '100,000 õpetajat korraldavad 2015.
     aastal, 7.–13. detsembril, KoodiTunni oma klassis. Nad vajavad Sinu abi! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} õpetajat otsib
-    vabatahtlikke, kes armastavad arvutiteaduse õpetamist, et nad aitaks neid sellel
-    detsembril KoodiTunniga.<br>%{num_volunteers} vabatahtlikku on juba registreerinud.
-    Liitu nendega."
+    vabatahtlikke.<br>%{num_volunteers} vabatahtlikku on juba registreerinud. Liitu
+    nendega."
   volunteer_engineer_submission_intro_background: KoodiTund on globaalne liikumine,
     mille eesmärk on anda tunnine sissejuhatus arvutiteadusesse. See üritus jõuab
     sadade miljonite õpilasteni enam kui 180 riigis. Palun tule samuti osalema arvutiteaduse
     õppe nädala raames, mis toimub 7.-13. detsembril.
-  volunteer_engineer_submission_intro_recruit: 'Need õpetajad otsivad kedagi, <span
-    style="font-family: ''Gotham 7r'', sans-serif;">kes armastab arvutiteaduse õpetamist</span>
-    ja kes aitaks neid klassiruumis või kes <span style="font-family: ''Gotham 7r'',
-    sans-serif;">inspireeriks</span> nende õpilasi ja räägiks arvutiteaduse arvukatest
-    võimalustest (seda saab teha ka videovestluse teel). Kui Sa ei soovi olla vabatahtlik,
-    loe <a href="%{url}">lisateavet</a> oma enda KoodiTunni sündmuse korraldamise
-    kohta.'
+  volunteer_engineer_submission_intro_recruit: 'Õpetajad otsivad vabatahtlikke, <span
+    style="font-family: ''Gotham 7r'', sans-serif;">kes tahaksid õpetada arvutiteaduse
+    </span> ja kes aitaksid neid klassiruumis või kes <span style="font-family: ''Gotham
+    7r'', sans-serif;">inspireeriks</span> nende õpilasi ja räägiks arvutiteaduse
+    arvukatest võimalustest (seda saab teha ka videovestluse või Skype teel).'
   volunteer_engineer_submission_intro_guide: Learn more about our <a href="%{volunteer_guide}">volunteer
     program here</a>.
   volunteer_engineer_submission_intro_signup: Palun sisesta järgnev info, kui oled
     arvutiteaduse jmt tudeng või programmeerija. Väljad märgiga <span class="form-required-field">*</span>
     on kohustuslikud.
-  volunteer_engineer_submission_intro_links: Sa ei soovi olla vabatahtlik? <a href="%{learn_more}">Loe
-    lisateavet</a> oma enda KoodiTunni sündmuse korraldamise kohta ja selle kohta,
-    kuidas leida kohalik vabatahtlik meie <a href="%{volunteer_local}">vabatahtlike
-    kaardilt</a>.
+  volunteer_engineer_submission_intro_links: Kas olete õpetaja otsib vabatahtlikke?
+    Leia kohalikke vabatahtlike meie <a href="%{volunteer_local}"> vabatahtlike kaardilt</a>.
   volunteer_engineer_submission_update_information: Uuendage oma andmeid
   volunteer_engineer_submission_header_shared: Vabatahtlike kaardil õpetajatega jagatud
     informatsioon
@@ -640,15 +685,16 @@
   volunteer_engineer_submission_field_location_flexibility: Ma saan KoodiTund jooksul
     aidata... (Vali kõik mis sobivad)
   volunteer_engineer_submission_checkbox_after_hoc: Ma olen huvitatud olema KoodiTund
-    vabatahtlik
-  volunteer_engineer_submission_field_time_commitment: Ajaline panus peale KoodiTundi
+    vabatahtlik aasta ringi
+  volunteer_engineer_submission_field_time_commitment: Ajaline panus
   volunteer_engineer_submission_field_linkedin: LinkedIn kasutaja
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook kasutaja
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Kirjeldus
   volunteer_engineer_submission_field_description_desc: Kirjelda oma arvutialaseid
-    oskuseid ja kuidas sa osaleksid vabatahtlikuna kohalike õpetajatele abilisena.
+    oskuseid ja tehnilist tausta ning millist abi sooviksid kohalikule õpetajale vabatahtlikuna
+    pakkuda.
   volunteer_engineer_submission_field_description_placeholder: Osaluse ja/või kogemuse
     kirjeldus
   volunteer_engineer_submission_header_private: Informatsioon hoitakse privaatsena
@@ -706,6 +752,10 @@
   volunteer_engineer_submission_type_task_mentor: Otsin mentorit, kes aitaks mul valmistuda
     ette programmeerimiseks mu õpilastega
   petition_age: Vanus
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: Lisateave
   dashboard_landing_title: "Õpetaja kodulehekülg"
   dashboard_landing_welcome: Tere tulemast uute ja paremate õpetajate lehele.
   dashboard_landing_video: Vaata seda videot
@@ -821,7 +871,7 @@
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Lisa õpilasi
   dashboard_navigation_manage_students: "Õpilaste haldamine"
-  dashboard_navigation_lesson_plans_resources: Tunnikavad ja ressursid
+  dashboard_navigation_lesson_plans_resources: "Õppekava standardid"
   dashboard_navigation_view_stats: Vaata statistikat
   dashboard_navigation_section: 'Osa: %{section_name}'
   dashboard_navigation_student: "Õpilane: %{student_name}"
@@ -869,8 +919,8 @@
   dashboard_sections_one_per_teacher: Students can only be in one section for each
     teacher. Your students will be added to this new section and leave their old section.
   dashboard_sections_move_to_section: 'Move to section:'
-  dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_enter_code: 'Sisesta Üksuse kood:'
+  dashboard_sections_code_placeholder: 6-kohaline kood (ABCDEF)
   dashboard_sections_other_section: Other Section
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
@@ -878,7 +928,7 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_desc: Osaled KoodiTunnis?
   dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
     in this course during the week of December 3-7, due to the unprecedented level
     of traffic our site will receive for the Hour of Code.  You may still assign the
@@ -921,8 +971,8 @@
   dashboard_students_auto_generated: Automaatselt genereeritud
   dashboard_students_reset_secret: Lähtesta saladus
   dashboard_students_reset_password: Vaheta salasõna
-  dashboard_students_share_section: 'Levita selle lehe sisselogimise aadressi oma
-    õpilastega:'
+  dashboard_students_share_section: Paluge õpilastel minna <a href=%{join_url}> %{join_url}</a>
+    ja sisestada tsooni kood (%{section_code})
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s
     sign in page with your students:'
   dashboard_students_print_info: Prindi välja kaardid oma õpilaste sisselogimise infoga.
@@ -947,7 +997,7 @@
   dashboard_students_no_email: Kui su õpilastel ei ole e-posti aadresse või sa soovid
     neile kasutajakontod luua, siis määra saladuse tüübiks <b>sõna</b> või <b>pilt</b>.
   dashboard_students_print_page: Prindi see lehekülg
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
+  dashboard_students_signin_card: Külastage %{join_url} ja sisestage %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Kliki
     siia</a> meie privaatsusreeglite vaatamiseks, mida saate õpilastele saata või
@@ -956,11 +1006,11 @@
   dashboard_curriculum_middle_title: Põhikooli õpetaja materjalid
   dashboard_curriculum_high_title: Keskkooli õpetaja materjalid
   dashboard_lesson_plans: Tunniplaan
-  dashboard_view_all_lesson_plans: Vaata kõiki tunnikavasid kursustele 1-3
+  dashboard_view_all_lesson_plans: Laadi alla tunnikavad kursustele 1-4
   dashboard_course1: 'Kursus 1:'
   dashboard_course2: 'Kursus 2:'
   dashboard_course3: 'Kursus 3:'
-  dashboard_course4: '4 Kursus (beeta): '
+  dashboard_course4: 'Kursus 4: '
   dashboard_coursea: 'Course A: '
   dashboard_courseb: 'Course B: '
   dashboard_coursec: 'Course C: '
@@ -1068,19 +1118,19 @@
   carousel_heading_international: Juhendid sinu keeles
   carousel_heading_domestic: Juhendid saadaval inglise keeles
   carousel_heading_beginners: Juhendid algajatele
-  carousel_heading_beyond_beginners: Juhendid algajatele
+  carousel_heading_beyond_beginners: 'Juhendid algajatele: alusta plokk-programmeerimisega'
   carousel_heading_javascript: Juhendid, kus õpetatakse JavaScripti
-  carousel_heading_beyond_javascript: Juhendid, kus õpetatakse JavaScripti
+  carousel_heading_beyond_javascript: "Õpi JavaScripti"
   carousel_heading_unplugged: Pole seadmeid või internetti? Proovi arvutivabu tegevusi
     klassis
   carousel_heading_devices: Rakenduste juhendid telefonile ja tahvelarvutile
-  carousel_heading_beyond_devices: Rakenduste juhendid telefonile ja tahvelarvutile
+  carousel_heading_beyond_devices: Rakendused telefonile ja tahvelarvutile
   carousel_heading_languages: Teiste programmeerimiskeelte juhendid
-  carousel_heading_beyond_languages: Teiste programmeerimiskeelte juhendid
+  carousel_heading_beyond_languages: "Õpi teidi programmeerimiskeeli"
   carousel_heading_apps_games: Loo ise mobiilirakendusi või mänge
   carousel_heading_university: "Ülikooli veebipõhised kursused"
   carousel_heading_webpages: "Õpi veebilehekülgi tegema"
-  carousel_heading_robots: "Õpi roboteid programmeerima"
+  carousel_heading_robots: "Õpi programmeerima robotite ja muude seadmetega"
   carousel_heading_ide: "Õpetajate seas populaarsed platvormid"
   carousel_heading_desktop: Learn to code on a computer
   carousel_heading_mobtabelem: For phones and tablets
@@ -1201,6 +1251,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Full Test - 50 questions
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
@@ -1217,7 +1269,7 @@
   classicmaze_name: Klassikaline labürint
   iceage_name: Jääaeg
   minecraft_name: Minecraft
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: Star Wars (plokid)
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Simple Encryption
@@ -1234,7 +1286,7 @@
   research_studies_category_name: Research Studies
   applab_name: App Lab
   basketball_name: Tee korvpallimäng
-  sports_name: Tee MCode'iga oma spordimäng
+  sports_name: Tee oma spordimäng
   applab_gradelevel: Vanus 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
@@ -1570,7 +1622,7 @@
   frozen_longdescription: Kasutame koodi, et liituda Anna ja Elsa'ga seiklusega avastada
     jää maagilisust ja iludust. Sa moodustad lumehelbeid ja taustasid uisutamise ajal
     ning moodustad talvekuningriigi, mida saad jagada kõigi oma sõpradega!
-  starwars_longdescription: "Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
+  starwars_longdescription: "Õpi programmeerima droide ja loo oma Star Wars’i mäng
     kauges, kauges galaktikas."
   playlab_longdescription: Loo oma lugu või mäng Play Labi abil! Pane loomad, piraadid,
     zombid, ninjad ja paljud teised tegelased liikuma, hääli tegema, punkte koguma
@@ -1921,17 +1973,17 @@
   infinity_shortcode: inf
   playlab_shortcode: mängi
   artist_shortcode: art
-  header_home: Home
-  header_my_dashboard: My Dashboard
+  header_home: Kodu
+  header_my_dashboard: Minu töölaud
   header_courses: Kursused
-  header_course_catalog: Course Catalog
+  header_course_catalog: Kursuste kataloog
   header_project_gallery: Projektid
   header_sections: Sections
   header_professional_learning: Professional Learning
   header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
+  header_educate_elementary: Algkool
+  header_educate_middle: Põhikool
+  header_educate_high: Gümnaasium
   header_educate_hoc: KoodiTund
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
@@ -1949,15 +2001,15 @@
   header_about_contact: Contact Us
   header_about_faqs: FAQs
   header_learn: Learn
-  header_teach: Teach
+  header_teach: "Õpeta"
   header_stats: Stats
   header_help_us: Help Us
-  header_about: About
+  header_about: Info
   header_teacher_community: Teacher community
   header_help_support: 'Help and support '
   header_report_bug: Report bug
   header_tutorials: Tutorials
-  header_documentation: Documentation
+  header_documentation: Dokumentatsioon
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
@@ -1975,8 +2027,7 @@
     these steps:'
   sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
     top right.
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
-    the page: %{section_code}.'
+  sign_in_instruct_code: 'Sisesta oma Üksuse kood: %{section_code}.'
   sign_in_instruct_name: Choose their display name.
   sign_in_instruct_secret: Choose their secret %{secret}.
   sign_in_instruct_button: Click the “Sign in” button.
@@ -1995,13 +2046,13 @@
     By joining your section, students will be able see the course assigned to them
     and you will be able to track the progress of the work they complete while they
     are signed in.
-  joining_section_instruct_website: 'Create a Code.org account if they haven’t already
-    done so. They can do this at https://studio.code.org/users/sign_up. Note that
-    they can either sign up with an email address and password, or sign up through
-    Google, Facebook, or Microsoft by clicking on one of these buttons:'
-  joining_section_instruct_account: Sign in to their Code.org account.
-  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section
-    code: %{section_code}.'
+  joining_section_instruct_website: 'Loo Code.org konto, kui seda veel olemas ei ole.
+    Nad saavad seda teha https://studio.code.org/users/sign_up. Pange tähele, et registreerida
+    saab meiliaadressi ja parooliga või registreerudes läbi Google''i, Facebooki või
+    Microsofti klõpsates ühte nendest nuppudest:'
+  joining_section_instruct_account: Logi sisse oma Code.org kontole.
+  joining_section_instruct_code: 'Liikuge %{code_org_url} ja sisestage oma Üksuse
+    kood: %{section_code}.'
   joining_section_instruct_button: Once they press the “Go” button, they should be
     added to your section.
   signing_in_single_instruct: Your students can sign in to their Code.org accounts
@@ -2018,3 +2069,11 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
+  hero_name: 'Minecraft: Kangelase teekond'
+  applab-intro_name: App Lab Intro
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
+  dashboard_tools: 'Tools: '
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
+  gamelab_name: Game Lab

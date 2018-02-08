@@ -36,12 +36,20 @@
   twentyhours_text: Terminou sua primeira Hora do Código? Aprenda mais sobre a ciência
     da computação e seus conceitos nesse curso.
   og_title: A Hora do Código está chegando
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
   og_description: Cada aluno em cada escola merece a oportunidade de estudar ciência
     da computação. Isso muda tudo.
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: A Hora do Código está chegando
   csedweek_og_description: A Hora do Código é um movimento global que atinge dezenas
     de milhões de alunos de todas as idades em mais de 180 países e em mais de 45
     idiomas.
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
   hoc2014_heading: Participe da <a href="http://hourofcode.com">Hora do código</a><br/>de
     8 a 14 de dezembro de 2014<br/>
   hoc2014_students: Alunos
@@ -94,7 +102,7 @@
   congratulations_on_completing_course2: Parabéns por ter concluído o Curso 2
   congratulations_on_completing_course3: Parabéns por ter concluído o Curso 3
   congratulations_on_completing_course4: Parabéns por ter concluído o Curso 4
-  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_coursea: Parabéns por ter concluído o curso A
   congratulations_on_completing_courseb: Congratulations on completing Course B
   congratulations_on_completing_coursec: Congratulations on completing Course C
   congratulations_on_completing_coursed: Congratulations on completing Course D
@@ -367,6 +375,12 @@
   studiobar_donate_body: Para cada dólar doado, uma criança aprende
   studiobar_shop_title: Loja
   studiobar_shop_body: Quebre estereótipos. Use nosso logotipo com orgulho.
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "&ldquo;Eu desafio as meninas do mundo todo a fazer a
     Hora do Código&rdquo;  \nMalala, ganhadora do Prêmio Nobel da Paz"
   homepage_hero_text_susan: |-
@@ -420,6 +434,8 @@
     no Code Studio
   homepage_hero_text_stat_students: "#student_count contas de aluno no Code Studio"
   homepage_hero_text_stat_served: 'A hora do código: #served já experimentaram'
+  homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: A Hour of Code
   homepage_slot_text_frozen: Frozen com Anna e Elsa
   homepage_slot_text_teacher: Painel de controle do professor
@@ -439,6 +455,7 @@
   homepage_action_text_girlvideo: Inspire uma garota
   homepage_action_text_learn: Comece a aprender
   homepage_action_text_signpetition: Assine a petição
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Assinar nossa petição &#x25BE;
   homepage_diversity_pledge: Abrace a causa em favor da diversidade
   homepage_banner_text_prizes: 'A Hora do Código está voltando, de 7 a 13 dezembro. '
@@ -463,7 +480,7 @@
   homepage_slot_text_title_hoc: Hora do Código
   homepage_slot_text_blurb_hoc: Qualquer pessoa pode aprender. Comece hoje mesmo
   homepage_slot_text_link_hoc: Faça uma Hora do Código
-  homepage_slot_text_link_about_hoc: About the Hour of Code
+  homepage_slot_text_link_about_hoc: Sobre a Hora do Código
   homepage_slot_text_link_host: Organize um evento da Hora do Código
   homepage_slot_text_link_hocserved: "# served"
   homepage_solot_text_link_volunteer: Voluntário da Hora do Código
@@ -560,11 +577,15 @@
   mc_gradelevel: De 6 a 106 anos de idade
   mc_platformtext: Navegadores modernos, smartphones, tablets
   mc_specs: Muitos idiomas | Navegadores modernos e tablets | De 6 a 106 anos de idade
+  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: Designer de Minecraft
   minecraft_adventurer: Aventureiro de Minecraft
   minecraft_tutorials: Tutoriais da Hora do Código Minecraft
   minecraft_specs: Muitos idiomas | Navegadores modernos e tablets | A partir do 2º
     ano
+  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
+    new activity! Journey through Minecraft with code.
+  minecraft_agent_button: Começar
   minecraft_designer_description: Crie animais e outras criaturas de Minecraft em
     sua própria versão do Minecraft.
   minecraft_designer_button: Começar
@@ -573,6 +594,41 @@
   minecraft_no_internet: Não tem Internet?
   minecraft_download_adventurer: Baixe a versão offline do Aventureiro de Minecraft.
   minecraft_subtitle: Hora do Código Minecraft
+  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
+    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
+    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
+    problem solving and loads of fun."
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+    facilitator quick start guide and PowerPoint presentations for younger and older
+    students now."
+  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
+    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
+    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
+    Get a head start on thinking through what you need to bring Hour of Code to young
+    people during Computer Science Education week (December 4-10) and beyond.
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
+    at the Microsoft Store'
+  minecraft_continue_learning_description: No computer science experience required!
+    Help ensure all youth can learn the valuable skills gained through computer science
+    education. Join us at the Microsoft Store to engage in a free series of three,
+    1-hour workshops where you will experience coding in a fun and stress-free environment,
+    become familiar with key computer science concepts, and get ready to lead an Hour
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
+    up today</a>.
+  minecraft_future: Help all youth become future ready
+  minecraft_future_description: Find out how other schools and nonprofits are bringing
+    digital skills, from digital literacy to computer science education, to their
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
+    the resources</a> they found most valuable.
+  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
+    Program animals and other Minecraft creatures in your own version of Minecraft.
+  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
+    Write code to journey through Minecraft biomes.
   sports_page_title: Hora do Código Esportes
   sports_og_title: Esforce-se. Qualquer um pode aprender.
   sports_og_description: Campeões e medalhistas de ouro encorajá-lo a experimentar
@@ -620,6 +676,7 @@
   video_title_obama: Presidente Obama fala sobre ciência da computação
   video_title_hoc_is_here: A Hora do Código é aqui - qualquer um pode aprender
   video_title_anybody_can_learn: Qualquer um pode aprender
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: Hora do Código com Draymond Green
   video_title_russell_okung: Hora do Código com Russell Okung
   video_title_real_madrid: Hora do Código com Real Madrid
@@ -748,6 +805,10 @@
   volunteer_engineer_submission_type_task_mentor: Estou em busca de um mentor para
     me ajudar a me preparar para trabalhar com programação com meus alunos
   petition_age: Idade
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: Saiba mais
   dashboard_landing_title: Página inicial do professor
   dashboard_landing_welcome: Bem-vindo ao novo painel do professor.
   dashboard_landing_video: Assista ao vídeo
@@ -1022,10 +1083,10 @@
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
   dashboard_course4: 'Curso 4: '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
+  dashboard_coursea: 'Curso A: '
+  dashboard_courseb: 'Curso B: '
+  dashboard_coursec: 'Curso C: '
+  dashboard_coursed: 'Curso D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
   dashboard_unplugged: Se não tiver computadores, <a href='%{unplugged_url}'>use essas
@@ -1151,7 +1212,7 @@
   carousel_heading_mobtabelem: For phones and tablets
   carousel_heading_prereader: For pre-readers
   carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
+  carousel_heading_nointernet: Internet ruim? Instale esse aplicativos no seu computador
   educator_notes: Observações do Educador
   teach_led_lesson_plans: Planos de aula orientados pelo professor
   learn_footer_all_tutorials: Veja a <a href="https://code.org/educate/allhourofcode">lista
@@ -1229,18 +1290,18 @@
   course2_name: Curso 2
   course3_name: Curso 3
   course4_name: Curso 4
-  coursea-draft_name: Course A
-  coursea_name: Course A
-  courseb-draft_name: Course B
-  courseb_name: Course B
-  coursec-draft_name: Course C
-  coursec_name: Course C
-  coursed-draft_name: Course D
-  coursed_name: Course D
-  coursee-draft_name: Course E
-  coursee_name: Course E
-  coursef-draft_name: Course F
-  coursef_name: Course F
+  coursea-draft_name: Curso A
+  coursea_name: Curso A
+  courseb-draft_name: Curso B
+  courseb_name: Curso B
+  coursec-draft_name: Curso C
+  coursec_name: Curso C
+  coursed-draft_name: Curso D
+  coursed_name: Curso D
+  coursee-draft_name: Curso E
+  coursee_name: Curso E
+  coursef-draft_name: Curso F
+  coursef_name: Curso F
   accelerated_name: Curso acelerado
   express_name: Express Course
   pre-express_name: Pre-reader Express Course
@@ -1254,7 +1315,7 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
+  csd5_name: 'Unidade 5: Dados e Sociedade'
   csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unidade 1: A Internet'
   csp2_name: 'Unidade 2: Informação Digital'
@@ -1267,6 +1328,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Teste completo - 50 questões
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Teste, parte 1 - 25 questões
   cspexam2-AKwgAh1ac5_name: Teste, parte 2 - 25 questões
   cspunit3_gradelevel: Alunos do 9° ano ao Ensino Médio
@@ -1287,7 +1350,7 @@
   starwarsblocks_name: Star Wars (Blocos)
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
+  hoc-encryption_name: Criptografia simples
   text-compression_name: Compressão de texto
   math_category_name: Matemática
   hoc_category_name: Hora do Código
@@ -2056,43 +2119,43 @@
   header_home: Início
   header_my_dashboard: My Dashboard
   header_courses: percursos
-  header_course_catalog: Course Catalog
+  header_course_catalog: Catálogo do Curso
   header_project_gallery: Projetos
-  header_sections: Turmas
+  header_sections: Seções
   header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
+  header_educate_overview: Visão Geral do Educador
+  header_educate_elementary: Ensino Fundamental
+  header_educate_middle: Ensino Fundamental II
+  header_educate_high: Ensino Médio
   header_educate_hoc: Hora do Código
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
+  header_educate_partner: Envolva-se Conosco
+  header_educate_beyond: Além do Code.org
+  header_educate_inspire: Inspire um Estudante
+  header_educate_community: Comunidade On-Line
   header_educate_tools: Vídeos e ferramentas
   header_about_us: Quem Somos
-  header_about_leadership: Administração
+  header_about_leadership: Liderança
   header_about_donors: Doadores
   header_about_partners: Parceiros
-  header_about_team: Toda a equipa
-  header_about_news: Imprensa
+  header_about_team: Equipe Completa
+  header_about_news: Sala de Imprensa
   header_about_evaluation: Avaliação
-  header_about_jobs: Empregos
-  header_about_contact: Contacte-nos
+  header_about_jobs: Postos de Trabalho
+  header_about_contact: Fale Conosco
   header_about_faqs: Perguntas Frequentes (FAQ)
   header_learn: Aprenda
-  header_teach: Teach
+  header_teach: Ensinar
   header_stats: Estatísticas
-  header_help_us: Help Us
-  header_about: About
+  header_help_us: Ajude-nos
+  header_about: Sobre
   header_teacher_community: Comunidade de professores
-  header_help_support: Ajuda e suporte
-  header_report_bug: Comunicar um problema
+  header_help_support: 'Ajuda e suporte '
+  header_report_bug: Reportar um erro
   header_tutorials: Tutoriais
   header_documentation: Documentação
   csp_name: Princípios da CC - 16-17
   csd_name: CS Discoveries
-  full_course_category_name: Full Courses
+  full_course_category_name: Cursos Completos
   user_header_label: Oi, %{username}
   user_header_settings: Minha conta
   user_header_logout: Sair
@@ -2102,16 +2165,15 @@
   view_named_section: View %{section_name}
   privacy_doc_explanation: Click here for our privacy document that can be shared
     or printed for your students.
-  signing_in: Signing In
+  signing_in: Fazendo Login
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following
     these steps:'
-  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
-    top right.
+  sign_in_instruct_website: Ir para %{code_org_url}.
   sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
     the page: %{section_code}.'
-  sign_in_instruct_name: Choose their display name.
-  sign_in_instruct_secret: Choose their secret %{secret}.
-  sign_in_instruct_button: Click the “Sign in” button.
+  sign_in_instruct_name: Escolha o nome de exibição deles.
+  sign_in_instruct_secret: Escolha o segredo deles %{secret}.
+  sign_in_instruct_button: Clique no botão "Login".
   sign_in_overview_cards: Students can find all of this information, including their
     secret %{secret}, in the login cards below.
   reset_student_password: Resetting student passwords
@@ -2150,3 +2212,11 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
+  dashboard_tools: 'Tools: '
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
+  gamelab_name: Game Lab

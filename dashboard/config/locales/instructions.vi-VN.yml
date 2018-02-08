@@ -258,22 +258,16 @@
       2-3 Bee Functions 8_instruction: Bạn hãy tự tạo 1 hàm để lấy 7 phấn hoa, di
         chuyển, và tạo 7 mật ong. Sử dụng hàm bạn tạo để thu thập phấn hoa từ từng
         bông hoa và tạo mật ong ở từng tổ ong.
-      2-3 Bee Functions 9_instruction: |-
-        Create your own function that goes down a
-        path, gets nectar, makes honey, and then returns the bee to the top of the
-        path.
-      2-3 Bee Functions Assessment 1_instruction: |-
-        Assessment: Use the given function
-        to collect nectar from each flower.
-      2-3 Bee Functions Assessment 2_instruction: |-
-        Assessment: Create a function
-        to turn, move forward and make 3 honey, then return the bee to where it started
-        and turn back.
-      2-3 Bee Loops 1_instruction: |-
-        Those flowers look tasty!\r
-        \r
-        Collect nectar
-        from each of the flowers using the fewest blocks possible.
+      2-3 Bee Functions 9_instruction: Tạo ra các khối lệnh chức năng của riêng bạn
+        bao gồm hoạt động đi theo đuồng dẫn, lấy mật hoa, làm mật ong, và sau đó trở
+        về vị trí của con ong ở đầu đường dẫn.
+      2-3 Bee Functions Assessment 1_instruction: Sử dụng những khối lệnh chức năng
+        có sẵn để thu thập mật hoa từ mỗi bông hoa.
+      2-3 Bee Functions Assessment 2_instruction: Tạo ra một nhóm lệnh chức năng để
+        con ong xoay, di chuyển về phía trước và tạo ra 3 mật ong, sau đó về vị trí
+        ban đầu và quay trở lại.
+      2-3 Bee Loops 1_instruction: Những bông hoa trông thật hấp dẫn! \r \r Hãy thu
+        thập mật hoa từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể.
       2-3 Bee Loops 10_instruction: Bạn có thể dùng một vòng lặp while trong 2 vòng
         lặp khác để thu thập tất cả phấn hoa chứ?
       2-3 Bee Loops 11_instruction: Dùng vòng lặp while để thu thập tất cả phấn hoatừ
@@ -284,14 +278,12 @@
         khối nhất có thể.'
       2-3 Bee Loops 1A_instruction: 'Xin chào, tôi là một chú ong. Bạn có thể giúp
         tôi thu thập phấn hoa từ những bông hoa này không? '
-      2-3 Bee Loops 2_instruction: |-
-        Collect all the nectar and make all of the honey
-        using the fewest blocks possible.
+      2-3 Bee Loops 2_instruction: Thu thập tất cả mật hoa và làm tất cả trở thành
+        mật ong bằng cách sử dụng ít nhất các lệnh có thể.
       2-3 Bee Loops 2A_instruction: Lần này, dùng một vòng lặp để thu tập tất cả phấn
         hoa.
-      2-3 Bee Loops 3_instruction: |-
-        Collect nectar from each flower and make honey
-        at each honeycomb using the fewest blocks possible.
+      2-3 Bee Loops 3_instruction: Thu thập mật hoa từ mỗi bông hoa và làm mật ong
+        tại mỗi tổ ong và hãy sử dụng ít nhất các lệnh có thể.
       2-3 Bee Loops 3A_instruction: Dùng một vòng lặp `repeat`để thu thập tất cả phấn
         hoa.
       2-3 Bee Loops 3B_instruction: Bây giờ dùng khối `repeat` để thu thập tất cả
@@ -310,9 +302,9 @@
         Bạn có thể thu thập tất cả phấn hoa sử dụng ít khối nhất có thể chứ?
       2-3 Bee Loops 6_instruction: Bạn có thể tìm cách nhanh nhất để chú ong có thể
         thu thập tất cả phấn hoa và biến chúng thành mật ong không?
-      2-3 Bee Loops 7_instruction: |-
-        What a beautiful field of flowers!   Help the
-        bee visit each one.  Can you find a way to do it with fewer than 7 blocks?
+      2-3 Bee Loops 7_instruction: Cánh đồng hoa mới đẹp làm sao! Hãy giúp những chú
+        ong tới thăm từng bông hoa 1. Bạn có thể hoàn thành nhiệm vụ này trong vòng
+        ít hơn 7 lệnh được chứ?
       2-3 Bee Loops 8_instruction: |-
         Các bông hoa màu tím này co số lượng mật hoa khác nhau mỗi khi bạn chạy câu đố.\r
         \r
@@ -323,11 +315,12 @@
         The while loop can perform the same action as
         an if statement in a loop. Add a while loop to this code to perform the same
         task.
-      2-3 Bee Loops Assessment 1_instruction: |-
-        Assessment: Use a `while` loop to
-        collect all of the nectar from these flowers.
-      2-3 Maze 1_instruction: "Can you help me catch the naughty pig? Stack a couple\nof
-        `move forward` blocks below the `when run` block and press \"Run\". "
+      2-3 Bee Loops Assessment 1_instruction: Sử dụng vòng lặp "while" (khi) để thu
+        thập mật ong từ tất cả những bông hoa.
+      2-3 Maze 1_instruction: 'Bạn có thể giúp tôi bắt chú heo nghịch ngợm không?
+        Sử dụng một vài lệch "di chuyển về phía trước" (move forward), nằm dưới lệnh
+        "khi chạy chương trình" (when run), sau đó nhấn vào lệnh "Chạy chương trình"
+        (run). '
       2-3 Maze 10_instruction: Hãy dẫn dắt tôi tới chỗ chú heo màu xanh lá cây! (Nhớ
         coi chừng thuốc nổ)
       2-3 Maze 11_instruction: |-
@@ -441,13 +434,13 @@
         Create loop with "repeat until" block.
       2-3 maze sq14_instruction: Can you get to the sunflower using only four blocks?
       2-3 maze sq15_instruction: Can you get to the sunflower using only five blocks?
-      2-3 maze sq16_instruction: |-
-        Ok, this is similar, but slightly different. Can
-        you do it in only five blocks?
+      2-3 maze sq16_instruction: Ok, nó cũng tương tự nhưng chỉ hơi khác một chút.
+        Liệu bạn có thể thực hiện chỉ với 5 khối lệnh không?
       2-3_instruction: |-
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
-      2-3level1_instruction: Help the bird catch the naughty pig by moving it forward
+      2-3level1_instruction: Giúp con chim bắt được con lợn nghịch ngợm bằng cách
+        di chuyển về phía trước
       20hr_farmer_stage9_1_instruction: |-
         Hi, I'm a farmer. I need your help to flatten
         the field on my farm so it's ready for planting. Move me to the pile of dirt
@@ -553,56 +546,38 @@
         When a block is grey, that means you can't
         delete it. Solve this puzzle using the "repeat" block that repeats 3 times.
         Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
-      4-5 Artist 1_instruction: "Help me finish drawing my box. (Each line is 300\npixels
-        long) "
-      4-5 Artist 10_instruction: |-
-        Press "Run" to try the code. Then, repeat it
-        enough times to complete the drawing. The colors will be different every time.
-      4-5 Artist 11_instruction: |-
-        Complete the green lines. The lines are 300 pixels
-        long and 15 pixels apart.
-      4-5 Artist 2_instruction: |-
-        Loop this code using the `repeat` block to complete
-        the square.
-      4-5 Artist 3.5_instruction: |-
-        Try to figure out what happens if you run this
-        code (or just press "Run" and try it). Next, repeat the code enough times
-        to complete the drawing!
-      4-5 Artist 3_instruction: |-
-        This rectangular flower bed has a perimeter of 600.
-        The long side has a length of 200. Draw the rectangle using as few blocks
-        as possible.
-      4-5 Artist 4_instruction: |-
-        How many degrees are in a circle?  Loop the blocks
-        to create a circle of colors.
-      4-5 Artist 5_instruction: |-
-        What can we replace "???" with to make sure that
-        the zombie completes this drawing using the loop provided?
-      4-5 Artist 6_instruction: |-
-        This equilateral triangle has angles of 60, 60,
-        and 60 degrees. Each side is 200 pixels. Complete the drawing.
-      4-5 Artist 7_instruction: |-
-        This right triangle has angles of 30, 60, and 90
-        degrees. The slanted side's length (length of the hypotenuse) is 200 pixels.
-        Complete the drawing.
-      4-5 Artist 8_instruction: |-
-        The halfway line on a soccer field is perpendicular
-        to the sidelines.   \r
-        This rectangle has a perimeter of 800 pixels total,
-        and it is 240 pixels long. How tall is it?   \r
-        \r
-        Draw the bounds and the
-        halfway line.
-      4-5 Artist 9_instruction: |-
-        Draw the right half of this image so that the design
-        is symmetrical. The triangles are equilateral and have sides that are 50 pixels
-        long.
-      4-5 Artist Assessment 1_instruction: |-
-        Assessment: Use a loop to draw the equilateral
-        triangle. Each side is 300 pixels.
-      4-5 Artist For Loops 1_instruction: |-
-        Put the numbers 1 through 10 into the
-        width blocks and run the code.
+      4-5 Artist 1_instruction: 'Giúp tôi hoàn thành vẽ cái hộp của tôi. (Mỗi dòng
+        dài 300 pixel) '
+      4-5 Artist 10_instruction: Nhấn "Chạy" để thử dòng mã lệnh. Sau đó, lặp lại
+        nó đủ thời gian để hoàn tất bản vẽ. Các màu sắc sẽ khác nhau mỗi lần.
+      4-5 Artist 11_instruction: Hoàn thành các dòng màu xanh lá cây. Các dòng dài
+        300 pixel và cách nhau 15 pixel.
+      4-5 Artist 2_instruction: Tạo vòng lặp cho dòng lệnh sử dụng khối lệnh "nhắc
+        lại" để hoàn thành hình vuông.
+      4-5 Artist 3.5_instruction: Cố gắng tìm hiểu xem điều gì xảy ra nếu bạn chạy
+        đoạn mã này (hoặc chỉ cần nhấn nút "Chạy" và thử nó). Tiếp theo, lặp lại đoạn
+        mã để hoàn thành bản vẽ!
+      4-5 Artist 3_instruction: Cái giường bông hoa hình chữ nhật này có chu vi 600.
+        Chiều dài là 200. Vẽ hình chữ nhật bằng cách sử dụng càng ít khối lệnh càng
+        tốt.
+      4-5 Artist 4_instruction: Có bao nhiêu độ trong 1 vòng tròn? Tạo vòng lặp cho
+        các khối lệnh để tạo một vòng tròn màu sắc.
+      4-5 Artist 5_instruction: Những gì chúng ta có thể thay thế "???" để đảm bảo
+        rằng xác chết hoàn thành bản vẽ bằng cách sử dụng các vòng lặp được cung cấp?
+      4-5 Artist 6_instruction: Tam giác đều này có các góc là 60, 60, và 60 độ. Mỗi
+        cạnh là 200 pixel. Hoàn tất bản vẽ.
+      4-5 Artist 7_instruction: Tam giác bên phải này có các góc là 30, 60, và 90
+        độ. Chiều dài mặt nghiêng (chiều dài của cạnh huyền) là 200 pixel. Hoàn tất
+        bản vẽ.
+      4-5 Artist 8_instruction: Nửa đường kẻ trong lĩnh vực bóng đá là vuông góc với
+        lề.   \r Hình chữ nhật này có chu vi tổng cộng là 800 pixel, và nó dài 240
+        pixel. Nó cao bao nhiêu?   \r \r Vẽ các đường bao và nửa dòng kẻ.
+      4-5 Artist 9_instruction: Vẽ nửa bên phải của hình ảnh này để thiết kế trở nên
+        đối xứng. Các hình tam giác đều là tam giác đều và các cạnh dài 50 pixel.
+      4-5 Artist Assessment 1_instruction: "Đánh giá: Sử dụng một vòng lặp để vẽ hình
+        tam giác đều. Mỗi cạnh là 300 pixel."
+      4-5 Artist For Loops 1_instruction: Thử số 1 đến 10 ở trong khối lệnh chiều
+        rộng và chạy đoạn mã.
       4-5 Artist For Loops 11_instruction: |-
         Complete the "for" block so that it
         counts 0, 20, 40, 60, 80... 200.
@@ -1537,6 +1512,35 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds\r
+        \r
+        This program makes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
+      CSD U6 params modify planes_instruction: |-
+        # Multi-plane Controller\r
+        \r
+        This
+        program moves the three planes using the board accelerometer and the on-screen
+        check boxes.  Right now, only the red plane works.\r
+        \r
+        # Do This\r
+        * Create
+        a new `movePlane(name)` function that can move any plane.\r
+        * Call the `movePlane(name)`
+        function inside the event block, such that it only moves when its checkbox
+        is checked.
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -1649,6 +1653,27 @@
       CSDU6 - for loop - why for_instruction: |-
         Write the contents of the array to
         the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays rainbow_instruction: |-
+        Write the contents of the array to the screen
+        in numerical order. (Click to see full instructions)
+      CSDU6 arrays random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select icons_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select rainbow_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_instruction: |-
+        Write a program that displays a
+        randomly chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays variable_instruction: |-
+        Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -3708,6 +3733,66 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
+        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars10_instruction: |-
+        Free Play time! Here are all of the variables
+        we've played with so far in this stage, as well as a few more in case you
+        want them. \r
+        \r
+        Notice that there are now so many blocks in our toolbox
+        that they need to be organized!  Here, we've put each piece into an appropriate
+        category.  Take some time to explore everything that is available. When you're
+        done browsing, make a game or story using repeats, variables, and events.  \r
+        \r
+        Hint:
+        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars2_instruction: |-
+        The race in that last puzzle wasn't very
+        fair! Change the `dog_speed` variable to make sure you can collect more flags
+        than Cat. The first to collect 10 flags wins!
+      CourseF_PlayLab_vars3_instruction: |-
+        Use the left and right arrows to move,
+        and the up arrow to jump. See if you can collect all of the flags.
+      CourseF_PlayLab_vars4_instruction: |-
+        Now we're using a variable called "height"
+        to control how high the dog can jump. Update the "height" variable so that
+        the dog can jump high enough to reach all the flags.
+      CourseF_PlayLab_vars5_instruction: "Let's build a game! First we'll need\na
+        score. Rebuild the code that you saw in the last level to set the score\nto
+        10. "
+      CourseF_PlayLab_vars6_instruction: |-
+        Use the right arrow to throw pie.\r
+        \r
+        In
+        our game, how should we score points? Add 1 to your "points" variable each
+        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
+        event to trigger an update to your score. You can increment your variable
+        by setting "points = points + 1." Get your score up to 10 (going one at
+        a time!) to pass the level.
+      CourseF_PlayLab_vars7_instruction: |-
+        Use the right arrow to throw pie.\r
+        \r
+        In
+        our game, how should we score points? Add 1 to your "points" variable each
+        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
+        event to trigger an update to your score. You can increment your variable
+        by setting "points = points + 1." Get your score up to 10 (going one at
+        a time!) to pass the level.
+      CourseF_PlayLab_vars8_instruction: |-
+        Use the right arrow to throw pie.\r
+        \r
+        In
+        our game, how should we score points? Add 1 to your "points" variable each
+        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
+        event to trigger an update to your score. You can increment your variable
+        by setting "points = points + 1." Get your score up to 10 (going one at
+        a time!) to pass the level.
+      CourseF_PlayLab_vars9_instruction: |-
+        Nice, now let's make sure this game isn't
+        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
+        2), you should lose a point. Start with 10 points so it's not too hard. Let
+        your score drop down from 10 to 0 to pass the level.
       Crack Random Substitution_instruction: lời chỉ đẫn
       Crack a Caesar Cipher_instruction: lời chỉ đẫn
       ECSPD Binary Odometer_instruction: |-
@@ -3988,6 +4073,8 @@
         an example of a game you can make in play lab.
       FoodFight_instruction: This is an example of a game you can make in play lab.
       Frequency Analysis_instruction: Test
+      Function intro Ryan_instruction: Sử dụng nhóm lệnh chức năng 'xây cầu' hai lần
+        để tạo ra con đường đi tới với ngọn đuốc.
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -4291,7 +4378,7 @@
         Challenge: Move me around the TNT to get to
         the pig.
       K2.0 sequence 12_instruction: 'Let''s get that pig! '
-      K2.0 sequence 2_instruction: Change the code to get me to the pig!
+      K2.0 sequence 2_instruction: Sửa chữa các dòng mã để có bắt được con lợn!
       K2.0 sequence 3_instruction: |-
         Something is not quite right. REMOVE a block
         to get me to the pig!
@@ -4309,7 +4396,8 @@
       K2.0 sequence 8_instruction: |-
         Debug this level by adding blocks to get me to
         the pig!
-      K2.0 sequence 9_instruction: "Challenge: Go around the TNT to get me to the\npig! "
+      K2.0 sequence 9_instruction: 'Thách thức: Đi xung quanh khối TNT để bắt được
+        con lợn! '
       K2.0 sequence FP_instruction: |-
         Now figure out how to get the pig any way you
         can!
@@ -4324,9 +4412,8 @@
       Kiki_StarWars_Test_4_instruction: văn bản
       Kiki_StarWars_Test_5_instruction: văn bản
       Kiki_StarWars_Test_5_Example_instruction: văn bản
-      LaurelDebugging4Video1_instruction: |-
-        Move Laurel around and get as much gold
-        as you can!
+      LaurelDebugging4Video1_instruction: Di chuyển Laurel xung quanh và thu thập
+        nhiều vàng nhất có thể!
       Limited Quantity of Blocks Test_instruction: |-
         Get me to the pig by adding only
         one block
@@ -4360,119 +4447,126 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
-      MC HOC 2016 Level 10_instruction: |-
-        It's time to make your own Minecraft! Spawn
-        creatures and then make them do whatever you want. Have fun!
-      MC HOC 2016 Level 2-2_instruction: |-
-        The chicken is frozen. Place `move` and
-        `turn` blocks in the `when spawned` slot to get it to move.
+      MC Agent Freeplay_instruction: 'Chơi tự do: Thời gian để bạn tự khám phá và
+        sáng tạo!'
+      MC HOC 2016 Level 10_instruction: "Đã đến lúc bạn tạo ra Minecraft của riêng
+        mình rồi! Hãy tạo ra nhân vật và sau đó làm chúng làm bất kỳ điều gì mình
+        muốn. Chúc vui vẻ!"
+      MC HOC 2016 Level 2-2_instruction: Con gà đã bị đóng băng. Đặt khối lệnh "di
+        chuyển" và "rẽ" và trong ô "khi đẻ ra" để làm chúng di chuyển.
       MC HOC 2016 Level 3_instruction: |
-        Great, the chicken moved! But then she stopped.
-        In games, chickens walk forever. Use a `forever do` loop to keep these chickens
-        moving.\r
-      MC HOC 2016 Level 4_instruction: |-
-        Now the chickens look weird moving the same
-        way. Games use random moves to make things look real. Make the chickens `turn
-        random`.
-      MC HOC 2016 Level 5_instruction: |-
-        These cows are lost! Lead them to the grass
-        with the `move a step toward` block in a `forever do` loop.
-      MC HOC 2016 Level 6_instruction: |-
-        Now you make the zombies. Use the `spawn`
-        block to make 3 zombies when night falls. Get them to move towards you. Survive
-        until morning.
-      MC HOC 2016 Level 8_instruction: |-
-        The path to your sheep is blocked by a stone
-        wall. Luckily there is a Creeper here. Creepers explode after you touch them.
-        Get the Creeper to explode the wall so you can reach your sheep!
-      MC HOC 2016 New Drop_instruction: |-
-        In Minecraft, sheep drop wool. Place the
-        `drop` block in `when used`, then walk over and use the sheep to drop an item.
-      MC HOC 2016 New Spawn_instruction: |-
-        Now you can fill the world with what you
-        want! Place`spawn` blocks under `when run` to spawn things when the game starts.
-      MC HOC 2016 New Walk_instruction: |-
-        Let's explore our world! Move with the
-        arrows, and press the space bar or tap the game board to use items. Use the
-        door to get inside the house.
-      MC HOC 2016 SCORE LEVEL_instruction: |-
-        Some games let you keep score. Play tag
-        with these Iron Golems and use the `add 1 to score` block to give yourself
-        a point when you tag them. Reach five points to win!
-      MC HOC 2016 Village Test_instruction: |-
-        Oh no! Zombies have trapped you inside!
-        Code the Iron Golem to chase and attack the zombies!
-      MC_2017_Ryan_02_instruction: |-
-        Help the player get out by using loops to get
-        the Agent to the pressure plate.
-      MC_HOC_2017 Agent Test_instruction: |-
-        Click "Run" to move the player to the
-        orange square inside of the house.
-      MC_HOC_2017_01_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_Cole_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_01_Kiki_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
-      MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Kiki_instruction: |-
-        Get the Agent to the pressure plate, then
-        get the player to the orange square.
-      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_instruction: |-
-        Change the loop from the last puzzle to help the
-        Agent make a path over the wider part of this river.
-      MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_05_instruction: |-
-        Use a function to help the Agent get to the pressure
-        plate.
-      MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
-      MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
-      MC_HOC_2017_06_Cole_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_06_Kiki_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_07_Cole_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07_Kiki_instruction: |-
-        Use a function to clear the path to the orange
-        square.
-      MC_HOC_2017_07a_Kiki_instruction: Clear the path to the orange square.
-      MC_HOC_2017_08_Cole_instruction: |-
-        Change the provided function to work for
-        this biome.
-      MC_HOC_2017_08_Kiki_instruction: Change the function to work for this puzzle.
-      MC_HOC_2017_09_Cole_instruction: |-
-        Program the Agent to clear the player's
-        path.
-      MC_HOC_2017_09_Kiki_instruction: |-
-        Program the Agent to clear the player's
-        path and get to the pressure plate.
-      MC_HOC_2017_10_Cole_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_10_Cole_old_instruction: |-
-        Create a function to help you finish
-        this minecart.
-      MC_HOC_2017_10_Kiki_instruction: |-
-        Create a function to help you finish this
-        minecart.
-      MC_HOC_2017_Ryan_03_instruction: |-
-        Now use loops to help The Agent build a bridge
-        over the river by placing blocks in the water.
-      MC_HOC_2017_Ryan_05_instruction: |-
-        Destroy these cacti so that the player can
-        get to the goal.
-      MC_HOC_Kiki_02_instruction: Get The Agent to the pressure plate.
+        Tuyệt vời, chú gà đã di chuyển! Nhưng sau đó nó dừng lại. Trong trò chơi, chú gà sẽ đi mãi. Sử dụng vòng lặp 'làm mãi mãi' để giữ những con gà tiếp tục di chuyển. \r
+      MC HOC 2016 Level 4_instruction: Bây giờ trông những con gà di chuyển kỳ dị
+        theo cùng một cách. Trò chơi sử dụng lệnh di chuyển ngẫu nhiên để nhìn cho
+        giống thật hơn. Đặt các con gà 'rẽ một cách ngẫu nhiên'.
+      MC HOC 2016 Level 5_instruction: Những con bò này bị mất tích! Dẫn chúng tớ
+        bãi cỏ với khối lệnh "di chuyển một bước về phía trước" trong một vòng lặp
+        "thực hiện mãi mãi".
+      MC HOC 2016 Level 6_instruction: Bây giờ bạn tạo ra những thây ma. Sử dụng khối
+        lệnh 'sinh ra' để tạo ra thây ma khi đêm xuống. Làm chúng di chuyển về phía
+        bạn. Sống sót đến khi trời sáng.
+      MC HOC 2016 Level 8_instruction: Con đường dẫn đến chú cừu của bạn đã bị chặn
+        bởi một bức tường đá. May mắn thay có 1 nhân vật Creeper ở đây. Creeper phát
+        nổ sau khi bạn chạm vào chúng. Hãy làm cho Creeper phá nổ bức tường để bạn
+        có thể tới gần chú cừu của mình!
+      MC HOC 2016 New Drop_instruction: Trong Minecraft, cừu sẽ nhả ra len. Đặt khối
+        lệnh "thả" vào trong "khi được sử dụng", sau đó đi bộ qua và sử dụng chú cừu
+        để thả một đồ vật.
+      MC HOC 2016 New Spawn_instruction: Bây giờ bạn có thể lấp đầy thế giới bằng
+        những gì bạn muốn! Đặt khối lệnh 'tạo ra' bên dưới 'khi chạy' để tạo ra những
+        vật khi trò chơi bắt đầu.
+      MC HOC 2016 New Walk_instruction: Hãy khám phá thế giới của chúng tôi! Di chuyển
+        với các mũi tên, và nhấn phím cách hoặc bấm vào bảng quản trị trò chơi để
+        sử dụng các đồ vật. Sử dụng cánh cửa để vào bên trong nhà.
+      MC HOC 2016 SCORE LEVEL_instruction: Một số trò chơi cho phép bạn giữ cho điểm.
+        Dùng thẻ khóa với những golem sắt và sử dụng các khối lệnh 'thêm 1 điểm' để
+        thêm cho mình một điểm khi bạn khóa được chúng lại. Đạt được 5 điểm để giành
+        chiến thắng!
+      MC HOC 2016 Village Test_instruction: "Ồ không! Thây ma đã khiến bạn bị mắc
+        kẹt bên trong! Lập trình Golem sắt để đuổi theo và tấn công các thây ma!"
+      MC_2017_Ryan_02_instruction: Giúp nhân vật thoát khỏi bằng cách sử dụng các
+        vòng lặp cho Đặc vụ tới các tấm áp lực.
+      MC_HOC_2017 Agent Test_instruction: Nháy chuột vào "Chạy" để bắt đầu di chuyển
+        nhân vật tới ô vuông màu da cam bên trong ngôi nhà.
+      MC_HOC_2017_01_instruction: Nháy chuột vào "Chạy" để di chuyển người chơi đến
+        ô vuông màu da cam bên trong ngôi nhà.
+      MC_HOC_2017_01_Cole_instruction: Bạn cần thu thập tất cả các công cụ trong hành
+        trình này. Di chuyển nhân vật xung quanh bằng cách sử dụng các phím mũi tên
+        và di chuyển đến trung tâm của con đường để dành chiến thắng
+      MC_HOC_2017_01_Kiki_instruction: Nháy chuột vào "Chạy" để di chuyển người chơi
+        đến ô vuông màu da cam bên trong ngôi nhà.
+      MC_HOC_2017_01_RETRY_instruction: 'Viết dòng lệnh để nhân vật đặc vụ tới tấm
+        áp lực, sau đó nhấn vào "Chạy" và sử dụng các phím mũi tên để di chuyển nhân
+        vật ra khỏi ngôi nhà. '
+      MC_HOC_2017_02_instruction: Cho Đặc vụ di chuyển đến tấm áp lực.
+      MC_HOC_2017_02_Cole_instruction: 'Di chuyển Đặc vụ đến tấm áp lực để cho {currentPlayerName}
+        có thể di chuyển vào và lấy được tấm bản đồ. '
+      MC_HOC_2017_02_Kiki_instruction: Cho Đặc vụ đi đến tấm áp lực, sau đó người
+        chơi di chuyển đến ô vuông màu cam.
+      MC_HOC_2017_02_Will_instruction: Cho Đặc vụ di chuyển đến tấm áp lực.
+      MC_HOC_2017_03_Cole_instruction: 'Lập trình để Đặc vụ mở cánh cửa. '
+      MC_HOC_2017_03_Kiki_instruction: Cho Đặc vụ di chuyển đến tấm áp lực.
+      MC_HOC_2017_04_instruction: Thay đổi vòng lặp từ câu đố trước để giúp Đặc vụ
+        tạo ra một con đường đi qua phần rộng hơn của con sông.
+      MC_HOC_2017_04POINT5_Cole_instruction: Cho Đặc vụ di chuyển đến tấm áp lực.
+      MC_HOC_2017_04POINT5_RYAN_instruction: Cho Đặc vụ di chuyển đến tấm áp lực.
+      MC_HOC_2017_04_Cole_instruction: Cho Đặc vụ di chuyển đến tấm áp lực.
+      MC_HOC_2017_04_Kiki_instruction: Cho Đặc vụ di chuyển đến tấm áp lực.
+      MC_HOC_2017_05_instruction: Sử dụng một nhóm lệnh chức năng để giúp Đặc vụ đi
+        đến tấm áp lực.
+      MC_HOC_2017_05_Cole_instruction: Người chơi cần di chuyển tới chỗ cái xẻng.
+      MC_HOC_2017_05_Josh_instruction: Người chơi cần di chuyển tới chỗ cái xẻng.
+      MC_HOC_2017_05_Kiki_instruction: Người chơi cần di chuyển đến ô vuông màu cam.
+      MC_HOC_2017_06_Cole_instruction: Sửa lại các lệnh sau để Đặc vụ xây một cây
+        cầu bắc ngang qua con sông.
+      MC_HOC_2017_06_Josh_instruction: Sửa lại các lệnh sau để giúp Đặc vụ xây một
+        cây cầu bắc ngang qua con sông.
+      MC_HOC_2017_06_Kiki_instruction: Sửa lại các lệnh sau để giúp Đặc vụ xây một
+        cây cầu bắc ngang qua con sông.
+      MC_HOC_2017_07_Cole_instruction: Phá băng và để cho {currentPlayerName} di chuyển
+        tới xe chở quặng (Minecart).
+      MC_HOC_2017_07_Kiki_instruction: Sử dụng một nhóm lệnh chức năng để dọn đường
+        đi tới ô vuông màu cam.
+      MC_HOC_2017_07a_Kiki_instruction: Dọn đường đi tới ô vuông màu cam.
+      MC_HOC_2017_08_Cole_instruction: Thay đổi nhóm lệnh chức năng đã có để chúng
+        hoạt động với hoạt cảnh này.
+      MC_HOC_2017_08_Kiki_instruction: Thay đổi nhóm các lệnh chức năng để chúng hoạt
+        động trong câu đố này.
+      MC_HOC_2017_08_RY_instruction: Sử dụng các nhóm lệnh chức năng để tìm đường
+        đi qua dung nham.
+      MC_HOC_2017_08_Will_instruction: Sử dụng các nhóm lệnh chức năng để tìm đường
+        đi qua dung nham.
+      MC_HOC_2017_09_Cole_instruction: Lập trình để Đặc vụ dọn đường đi cho nhân vật.
+      MC_HOC_2017_09_Kiki_instruction: Lập trình để Đặc vụ dọn đường cho người chơi
+        đi tới tấm áp lực.
+      MC_HOC_2017_10_Cole_instruction: Tạo ra một nhóm lệnh chức năng để giúp bạn
+        hoàn thành nhiệm vụ tới xe chở quặng này.
+      MC_HOC_2017_10_Cole_old_instruction: Tạo ra một nhóm lệnh chức năng để giúp
+        bạn hoàn thành nhiệm vụ tới xe chở quặng này.
+      MC_HOC_2017_10_Kiki_instruction: Tạo ra một nhóm lệnh chức năng để giúp bạn
+        hoàn thành nhiệm vụ tới xe chở quặng này.
+      MC_HOC_2017_10_RETRY_instruction: Sử dụng các nhóm lệnh chức năng dưới đây để
+        hoàn thành nhiệm vụ tới xe chở quặng.
+      MC_HOC_2017_10_RYAN_instruction: Tạo ra một nhóm lệnh chức năng để giúp bạn
+        hoàn thành nhiệm vụ tới xe chở quặng này.
+      MC_HOC_2017_10_RYAN2_instruction: Tạo ra một nhóm lệnh chức năng để giúp bạn
+        hoàn thành nhiệm vụ tới xe chở quặng này.
+      MC_HOC_2017_13_Cole_instruction: 'Chơi tự do: Thời gian để bạn tự khám phá và
+        sáng tạo!'
+      MC_HOC_2017_4.5v2_instruction: Cho Đặc vụ di chuyển đến tấm áp lực.
+      MC_HOC_2017_Ali_instruction: Sử dụng các nhóm lệnh chức năng để tìm đường đi
+        qua dung nham.
+      MC_HOC_2017_FP10x10_instruction: 'Chơi tự do: Bạn có thể thử thách bản thân
+        tự thu thập hết các viên kim cương trong cấp độ này không? '
+      MC_HOC_2017_FP10x10_RE_instruction: 'Chơi tự do: Bạn có thể thử thách bản thân
+        tự thu thập hết các viên kim cương trong cấp độ này không? '
+      MC_HOC_2017_FP20x20_instruction: 'Chơi tự do: Thời gian để bạn tự khám phá và
+        sáng tạo!'
+      MC_HOC_2017_Ryan_03_instruction: Bây giờ sử dụng các vòng lặp để giúp Đặc vụ
+        xây một cây cầu qua sông bằng cách đặt các khối đá trong nước.
+      MC_HOC_2017_Ryan_05_instruction: Tiêu diệt những cây xương rồng để di chuyển
+        người chơi tới đích.
+      MC_HOC_Kiki_02_instruction: Lập trình cho Đặc vụ đi đến tấm áp lực.
       MSM Big Game Empty_instruction: |-
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -4548,26 +4642,24 @@
       MikeTest1_instruction: Who knows what you should do?!?!
       MikeTest2_instruction: Draw something!
       MikeTest3_instruction: Build Something
-      NEW Course 4 Artist Functions 1_instruction: |-
-        Can you draw a square that is
-        100 pixels in length, using a repeat loop?
+      NEW Course 4 Artist Functions 1_instruction: Bạn có thể vẽ một hình vuông có
+        chiều dài 100 pixels bằng cách sử dụng một vòng lặp không?
       NEW Course 4 Artist Functions 10.1_instruction: |-
         Use the functions from the
         previous puzzles to draw this pattern.
       NEW Course 4 Artist Functions 10_instruction: |-
         Click "edit" to fill out the
         blocks in the function definition to make a 40 pixel square.
-      NEW Course 4 Artist Functions 11_instruction: |-
-        Now we want to create a new
-        function called `draw a line of squares` that draws six squares all in a row.  Can
-        you build this function using this `draw a square 20` function that we created
-        for you?
-      NEW Course 4 Artist Functions 12_instruction: |-
-        Use the `draw a line of squares`
-        function from the last puzzle to draw this pattern.
-      NEW Course 4 Artist Functions 13_instruction: "Can you draw a star shape using\nthe
-        `draw a line of squares` function?  "
-      NEW Course 4 Artist Functions 14_instruction: 'Free Play time! '
+      NEW Course 4 Artist Functions 11_instruction: Bây giờ chúng tôi muốn tạo ra
+        một nhóm lệnh chức năng gọi là "vẽ một đường bao gồm các hình vuông" trong
+        đó vẽ sáu hình vuông trong 1 hàng. Bạn có thể tạo ra nhóm lệnh này bằng cách
+        sử dụng nhóm lệnh "vẽ một hình vuông 20 pixels" mà chúng tôi đã tạo sẵn cho
+        bạn không?
+      NEW Course 4 Artist Functions 12_instruction: Sử dụng nhóm lệnh chức năng "vẽ
+        một đường gồm các hình vuông" từ câu đố trước để vẽ mô hình này.
+      NEW Course 4 Artist Functions 13_instruction: 'Bạn có thể vẽ một hình ngôi sao
+        sử dụng nhóm lệnh chức năng "vẽ một đường bao gồm các hình vuông" được không?  '
+      NEW Course 4 Artist Functions 14_instruction: 'Thời gian chơi tự do! '
       NEW Course 4 Artist Functions 2_instruction: 'Bạn có thể vẽ 3 hình vuông 20
         điểm ảnh khác nhau? Gợi ý: mỗi ô vuông chứa 100 điểm ảnh'
       NEW Course 4 Artist Functions 3_instruction: |-
@@ -4875,6 +4967,8 @@
         nó!
       New Infinity Project_instruction: Tạo ra bất cứ điều gì bạn thích và chia sẻ
         nó!
+      New Minecraft Hero Project_instruction: "**Chơi tự do:** Thời gian để bạn tự
+        khám phá và sáng tạo!"
       New Sports Project_instruction: |-
         Create your own game! You're in charge here:
         you can change all the rules, mix and match sports, get creative! When you're
@@ -5236,6 +5330,10 @@
       RyanTest3_instruction: |-
         This level has shape-shifting turned on! Refresh to
         see different variants.
+      SG Add Subgoals practice_instruction: |-
+        Draw a 3x3 grid to the front and right
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
       SG U3L03 - draw rect function_instruction: |-
         Write a function called drawRectangle().\r
         (Click
@@ -5359,6 +5457,10 @@
       SG U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
+      SG U3L08 - introUnderTheSea - recovery_instruction: |-
+        Add an extra fish, starfish,
+        and piece of seagrass to the image. Look at, but don't change, the functions
+        that create them. (Click to see full instructions)
       SG U3L08 - introUnderTheSea_instruction: |-
         Add an extra fish, starfish, and
         piece of seagrass to the image. Look at, but don't change, the functions
@@ -5382,9 +5484,19 @@
       SG U3L08 comments_instruction: |-
         Use the randomNumber() blocks to test the functions
         you designed with random input. (Click to see full instructions)
+      SG U3L08 how to add comments_instruction: |-
+        Use the randomNumber() blocks to
+        test the functions you designed with random input. (Click to see full instructions)
+      SG U3L2 Using Simple Commands part 1_instruction: |-
+        Draw a 1x1 square above
+        and to the left of the turtle's starting position. Click to see full instructions.
       SG U3L2 Using Simple Commands_instruction: |-
         Draw a 1x1 square above and to
         the left of the turtle's starting position. Click to see full instructions.
+      SG U3L2_Add-subgoals_instruction: |-
+        Draw a 3x3 grid to the front and right of
+        the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
       SG U3L2_Turtle3by3Grid_instruction: |-
         Draw a 3x3 grid to the front and right
         of the turtle as efficiently as possible. The turtle should end at its original
@@ -6466,6 +6578,10 @@
       U3L08 - individualCode_instruction: |-
         Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)
+      U3L08 - introUnderTheSea with comments_instruction: |-
+        Add an extra fish, starfish,
+        and piece of seagrass to the image. Look at, but don't change, the functions
+        that create them. (Click to see full instructions)
       U3L08 - introUnderTheSea_instruction: |-
         Add an extra fish, starfish, and piece
         of seagrass to the image. Look at, but don't change, the functions that create
@@ -6496,6 +6612,9 @@
       U3L08 - triangleTwoParams_instruction: |-
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
+      U3L08 how to add comments_instruction: |-
+        Use the randomNumber() blocks to test
+        the functions you designed with random input. (Click to see full instructions)
       U3L1 - Simulation - Template_instruction: |-
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
@@ -7370,6 +7489,10 @@
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
+      Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
+      Valentine_playlab_01_instruction: "Program Kiki (Actor 1) to move left and\nright
+        when the left and right arrows are pressed. When Kiki is clicked, she\nshould
+        throw hearts towards her friends. "
       Vigenere_instruction: Test
       WhileAdventure_instruction: |-
         Our adventurer wants to collect coins. Can you
@@ -7419,6 +7542,9 @@
         If looping a 3 degree turn 60 times makes a half circle, which of
         these blocks of code will make an additional quarter circle for the corners?
       aEfreeplay_instruction: Free Play!
+      allHallows2017_instruction: |-
+        Trap the Code.org employees in the crayon box
+        by drawing a square with 320 pixel sides!
       allthethings data blocks test_instruction: |-
         Please sign in to test applab levels
         (By design, applab levels only work if signed in. Normally, we make people
@@ -7908,11 +8034,17 @@
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_forVideo_instruction: |-
+        Use the `repeat` loop to add waves
+        to the water.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
       courseA_artist_loops_challenge2_instruction: |-
         "Can you help me make two bird
         houses?"
+      courseA_artist_loops_challenge2a_instruction: |-
+        *"Help me get these three tents
+        set up!"*
       courseA_artist_loops_challenge3_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
@@ -7952,6 +8084,34 @@
         bugs? I know which way I want to go, but I'm not sure how many steps to take."*
       courseA_collector_loops_challenge2_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
+      courseA_collector_loops_challenge2kp_instruction: |-
+        Collect at least *3* pieces
+        of treasure to pass this level.
+      courseA_collector_preLoops1_instruction: |-
+        This is Laurel the Adventurer! \r
+        \r
+        Press
+        "Run" to see her walk up to the treasure and grab it.
+      courseA_collector_preLoops2_instruction: |-
+        Great!  Now you get to add code yourself!  \r
+        \r
+        Snap
+        a `get treasure` block to the bottom of the program and click "Run".
+      courseA_collector_preLoops3_instruction: |-
+        Snap two `E -->` blocks and one `get
+        treasure` block to the bottom of the program, then click "Run".
+      courseA_collector_preLoops4_instruction: |-
+        Can you figure out how to solve this
+        puzzle?
+      courseA_collector_preLoops5_instruction: |-
+        Get 1 of these 2 gems to solve this
+        puzzle.
+      courseA_collector_preLoops6_instruction: |-
+        Get both pieces of treasure to solve
+        this puzzle.
+      courseA_collector_preLoops7_instruction: |-
+        Get all three piles to pass this
+        level.
       courseA_forVideoTest_artist_instruction: |-
         Use the `repeat` loop to add waves
         to the water.
@@ -8093,6 +8253,9 @@
       courseB_collector_loops_challenge2_instruction: |-
         Let's get the treasure! Help
         me across each row then come back to start the next row. Can you find a pattern?
+      courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
       courseB_collector_prog1_instruction: |-
@@ -8337,9 +8500,12 @@
       courseC_artist_prog_challenge2_instruction: |-
         *Help me paint the yellow lines
         on this road!*
+      courseC_artist_prog_challenge2a_instruction: |-
+        *Help me paint the yellow lines
+        on this road!*
       courseC_collector_loops_challenge2_instruction: |-
-        Let's hunt for treasure -
-        using loops! Help the collector by debugging this code. Get all of the treasure!
+        Get at least **5** pieces
+        of treasure!
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
         you can help Laurel collect some treasure.
@@ -8373,8 +8539,8 @@
         Look carefully! Can you collect
         all *10* pieces of treasure?
       courseC_collector_prog_challenge2_instruction: |-
-        There are 20 pieces of treasure
-        to be found. Collect at least half to finish this challenge!
+        Collect at least **10** pieces
+        of treasure to finish this challenge!
       courseC_flappy_embed_events_instruction: |-
         Here's an example of a game that
         you're about to create yourself! Play through it one or two times to get
@@ -8441,9 +8607,13 @@
         Collect all of the corn and all of the
         pumpkins.
       courseC_harvester_loops_challenge1_instruction: Collect all of the corn.
+      courseC_harvester_loops_challenge1a_instruction: Collect all of the corn.
       courseC_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
+      courseC_harvester_loops_forVid_instruction: |-
+        Collect all of the corn, all of
+        the lettuce, and all of the pumpkins.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -8502,6 +8672,8 @@
         puzzles to complete this level.
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
       courseC_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops\nto
+        find his acorn! "
+      courseC_maze_loops_challenge1a_instruction: "Now Scrat wants to try using loops\nto
         find his acorn! "
       courseC_maze_loops_challenge2_instruction: |-
         Let's hunt for treasure - using
@@ -8624,6 +8796,8 @@
         \r
         See what happens when we start to
         get creative with the bits!
+      courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
+        binary! "
       courseD_artist_binary_challenge0_instruction: |-
         Try using nested loops to complete
         this drawing.
@@ -8687,9 +8861,9 @@
         \r
         The windows are 20 pixel
         squares, each 20 pixels apart.
-      courseD_artist_nestedLoops4_instruction: |
+      courseD_artist_nestedLoops4_instruction: |-
         Great!  Do the same thing with these
-        circles.\r
+        circles.
       courseD_artist_nestedLoops5_instruction: |-
         What happens if you also turn 90
         degrees between circles?
@@ -8718,8 +8892,8 @@
         Can you figure out how
         to make a picture like this?
       courseD_artist_nestedLoops_challenge2_instruction: |-
-        Can you figure out how
-        to make a picture like this?
+        Fix the code to make this
+        picture!
       courseD_artist_project1_instruction: "Draw a small shape, between **20 and\n50**
         pixels wide.  It can be any shape that you like.  "
       courseD_artist_project1a_instruction: |-
@@ -8762,9 +8936,10 @@
       courseD_bee_conditionals1_predict1_instruction: |-
         Check to see if there's a
         flower under the cloud. If there's a flower, get nectar.
-      courseD_bee_conditionals2_instruction: |
-        Check underneath every cloud to see
-        if it is hiding a flower before you get nectar.  \r
+      courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
+        it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_test_instruction: "Check underneath every cloud to\nsee
+        if it is hiding a flower before you get nectar.  "
       courseD_bee_conditionals3_instruction: |-
         Help the bee collect all of the nectar.
         \r
@@ -8823,6 +8998,10 @@
         Help the bee fix the code to get all the
         nectar.
       courseD_bee_debugging_challenge1_instruction: |-
+        Watch how the bees gets the
+        nectar. Can you use the same kind of pattern to help the bee make all of the
+        honey?
+      courseD_bee_debugging_challenge1a_instruction: |-
         Watch how the bees gets the
         nectar. Can you use the same kind of pattern to help the bee make all of the
         honey?
@@ -8978,6 +9157,10 @@
         Are you an expert of nested
         loops? Use what you have learned so far to collect all of the treasure!
       courseD_collector_nested_loops_challenge2_instruction: |-
+        Help the collector
+        reach at least two piles of treasure using only the blocks in your toolbox.
+        It is possible to collect all 4.
+      courseD_collector_nested_loops_challenge2a_instruction: |-
         Help the collector
         reach at least two piles of treasure using only the blocks in your toolbox.
         It is possible to collect all 4.
@@ -9213,13 +9396,14 @@
         Add a `repeat forever` loop that continuously
         checks if the score is greater than 5, then ends the game as a win when it
         is.
-      courseD_playLab_cond6_instruction: "1)  Slow the ninja down before you set\nhim
-        to chase the pirate.  \\r\n2)  If the pirate is greater than 225 pixels\ndown,
-        set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase**\nthe
-        pirate.  "
+      courseD_playLab_cond6_instruction: "1)  Slow the ninja (actor 3) down before\nyou
+        set him to chase the pirate.  \\r\n2)  If the pirate is greater than 225\npixels
+        down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
+        **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: |-
-        If the pirate is in the safe zone, wait
-        one second, then deduct a point as long as he stays beneath the octopus line.
+        If the pirate (actor 1) is in the safe
+        zone, wait one second, then deduct a point as long as he stays beneath the
+        octopus line.
       courseD_playLab_cond6cloneForTest_instruction: Testing
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
@@ -9315,7 +9499,11 @@
         Use what you've learned to draw this triangle
         inside of a square.
       courseE_artist_ramp8_instruction: Now make a square using Artist!
+      courseE_artist_ramp8_2_instruction: Now make a square using Artist!
       courseE_artist_ramp9_instruction: Use what you've learned to draw this triangle.
+      courseE_artist_ramp9_2_instruction: |-
+        Use what you've learned to draw this
+        triangle.
       courseE_bee_concept1_instruction: Collect all of the nectar from each flower.
       courseE_bee_concept2_instruction: |-
         Help the bee make all of the honey. You
@@ -9588,6 +9776,9 @@
       courseE_video_createFunctions_instruction: |-
         We don't have a video for creating
         functions, yet. This is a placeholder.
+      courseE_video_createFunctions2_instruction: |-
+        We don't have a video for creating
+        functions, yet. This is a placeholder.
       courseF_IceAge_1_instruction: |-
         Help Sid say "Hello!" by dragging the `actor
         1 say` block out and connecting it to the bottom of the `when run` event.
@@ -9798,7 +9989,6 @@
         it is hiding a flower before you get nectar.  "
       courseF_bee_conditionals3_instruction: |
         Help the bee collect all of the nectar.
-        \r
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
         blocks as possible.
@@ -10065,6 +10255,10 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Đính kèm khối "khi nhấp vào" sau đó bấm "chạy". Nhấp hoặc
         chạm vào màn hình để di chuyển Flappy đến mục tiêu.
+      flappy_11_instruction: Tạo trò chơi Flappy của riêng bạn. Bạn có thể thay đổi
+        hình ảnh, luật chơi, thậm chí là trọng lực của trò chơi. Sau khí hoàn thành,
+        nhấp vào "Hoàn thành" để giúp bạn của bạn có thể chơi thử trò chơi bạn vừa
+        làm ra.
       flappy_2_instruction: Bây giờ chúng ta thêm một vài vị trí. Đính kèm khối lệnh
         "khi quả bóng chạm vị trí". Mã của bạn cần để "kết thúc" khi Flappy rơi xuống
         đất.
@@ -10085,10 +10279,6 @@
         vượt chướng ngại vật.
       flappy_9_instruction: "Để kết hợp chúng, khi gặp một chướng ngại, thay vì kết
         thíc trò chơi hoặc thiết lập chi trở lại từ số 0."
-      flappy_11_instruction: Tạo trò chơi Flappy của riêng bạn. Bạn có thể thay đổi
-        hình ảnh, luật chơi, thậm chí là trọng lực của trò chơi. Sau khí hoàn thành,
-        nhấp vào "Hoàn thành" để giúp bạn của bạn có thể chơi thử trò chơi bạn vừa
-        làm ra.
       frozen circle function in circle_instruction: Bây giờ hãy tạo 20 vòng tròn chồng
         chéo, xoay 18 độ giữa mỗi vòng tròn.
       frozen circle function with parameter_instruction: Khối "Tạo vòng tròn" có thể
@@ -10204,7 +10394,7 @@
         of what you think the artist saw when he got home.
       grade1_maze_sequence1_instruction: A bug! Fix the code to get me to the pig.
       grade1_maze_sequence10_instruction: Move me around the TNT to get to the pig.
-      grade1_maze_sequence2_instruction: Fix the code to get me to the pig!
+      grade1_maze_sequence2_instruction: Sửa chữa các dòng mã để có bắt được con lợn!
       grade1_maze_sequence3_instruction: |
         Can you add 2 blocks to get the bird to
         the pig.
@@ -10588,9 +10778,8 @@
         Hút mật hoa để làm mật ong.
         Gợi ý: điều gì sẽ xảy ra nếu sử dụng hàm "if" để hút mật ở bông hoa đỏ?
                    bạn có thể dùng vòng lặp để hoàn thành không?
-      grade3_Conditionals_11 BAD_instruction: |-
-        Assessment: Use a `while` loop to
-        collect all of the nectar from these flowers.
+      grade3_Conditionals_11 BAD_instruction: Sử dụng vòng lặp "while" (khi) để thu
+        thập mật ong từ tất cả những bông hoa.
       grade3_Conditionals_11_instruction: Thu thập phấn hoa và làm mật ong . Cẩn thận
         không lấy phấn hoa từ hoa tím vì nó có thể không có phấn .
       grade3_Conditionals_12_instruction: Thu thập phấn hoa từ tất cả các bông.
@@ -10658,24 +10847,19 @@
       grade3_Loops_4_instruction: |-
         Now use the `repeat` block to collect all of the
         nectar and make all of the honey.
-      grade3_Loops_5_instruction: |-
-        What a beautiful field of flowers!   Help the
-        bee visit each one.  Can you find a way to do it with fewer than 7 blocks?
+      grade3_Loops_5_instruction: Cánh đồng hoa mới đẹp làm sao! Hãy giúp những chú
+        ong tới thăm từng bông hoa 1. Bạn có thể hoàn thành nhiệm vụ này trong vòng
+        ít hơn 7 lệnh được chứ?
       grade3_Loops_6_instruction: |-
         Vòng lặp có thể giúp bạn bao nhiêu lần trong trò chơi này? \r
         \r
         Các vòng lặp là bạn của bạn! Dùng một vài trong số các vòng lặp để hoàn thành trò chơi với số khối ít nhất có thể.
-      grade3_Loops_7_instruction: |-
-        Those flowers look tasty!\r
-        \r
-        Collect nectar
-        from each of the flowers using the fewest blocks possible.
-      grade3_Loops_8_instruction: |-
-        Collect all the nectar and make all of the honey
-        using the fewest blocks possible.
-      grade3_Loops_9_instruction: |-
-        Collect nectar from each flower and make honey
-        at each honeycomb using the fewest blocks possible.
+      grade3_Loops_7_instruction: Những bông hoa trông thật hấp dẫn! \r \r Hãy thu
+        thập mật hoa từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể.
+      grade3_Loops_8_instruction: Thu thập tất cả mật hoa và làm tất cả trở thành
+        mật ong bằng cách sử dụng ít nhất các lệnh có thể.
+      grade3_Loops_9_instruction: Thu thập mật hoa từ mỗi bông hoa và làm mật ong
+        tại mỗi tổ ong và hãy sử dụng ít nhất các lệnh có thể.
       grade3_Loops_TeacherIDo_instruction: |-
         Those flowers look tasty!\r
         \r
@@ -11329,9 +11513,8 @@
       grade4_review_bee1_instruction: |-
         Now use the `repeat` block to collect all
         of the nectar and make all of the honey.
-      grade4_review_bee2_instruction: |-
-        Collect nectar from each flower and make honey
-        at each honeycomb using the fewest blocks possible.
+      grade4_review_bee2_instruction: Thu thập mật hoa từ mỗi bông hoa và làm mật
+        ong tại mỗi tổ ong và hãy sử dụng ít nhất các lệnh có thể.
       grade4_review_bee3_instruction: |-
         Quả là một chú ong bận rộn!\r
         \r

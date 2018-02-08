@@ -26,7 +26,7 @@
       event.preventDefault();
       $.ajax({
         type: 'POST',
-        url: $(this).attr('action'),
+        url: $(this).attr('action') + '/set_age',
         data: $(this).serialize(),
         dataType: 'json',
         success: function(data) {$("#age-modal").modal('hide');}

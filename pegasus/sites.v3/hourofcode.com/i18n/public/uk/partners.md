@@ -1,16 +1,13 @@
 ---
-
 title: <%= hoc_s(:title_partners) %>
-
 ---
+Годину коду ведуть Дорадчий та Спостережний комітети Години коду та Тижня освіти з інформатики.
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+[Дорадчий комітет](<%= resolve_url('/advisory-committee') %>) складається з представників з K-12, академічних, неприбуткових, прибуткових та міжнародних організацій. Цей комітет керує стратегією кампанії Години коду.
 
-The [Advisory Committee](<%= resolve_url('/advisory-committee') %>) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+[Спостережний комітет](<%= resolve_url('/review-committee') %>) складається з 15 педагогів K-12 класів, які оцінюють та рекомендують заняття із застосуванням рубрик Спостережного комітету. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
-The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led tutorials and teacher-led lesson plans submitted by hundreds of tutorial partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
-
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Праця та самовідданість обох комітетів сприяла успіхові Години коду та її бачення пропонування введення до інформатики кожному учневі.
 
 <% if @country == 'la' %>
 
@@ -116,37 +113,37 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% end %>
 
-# Major Partners and Corporate Supporters
+# Основні партнери та корпоративні підтримувачі
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 ---
 
-# Major Promotional Partners
+# Основні просувальні партнери
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 ---
 
-# International Partners
+# Міжнародні партнери
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Tutorial Partners
+# Activity Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Infrastructure partners and tools
+# Infrastructure Partners and Tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 ---
 
-# Additional Partners
+# Додаткові партнери
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

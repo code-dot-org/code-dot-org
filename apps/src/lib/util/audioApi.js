@@ -98,7 +98,6 @@ export const commands = {
 /**
  * Pass-through functions that call the configured `executeCmd` method with
  * arguments converted to an options object.
- * Exported for testing - shouldn't be needed elsewhere.
  */
 export const executors = {
   playSound: (url, loop = false) => executeCmd(null, 'playSound', {url, loop}),

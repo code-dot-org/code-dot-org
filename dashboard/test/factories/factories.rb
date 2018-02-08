@@ -14,22 +14,18 @@ FactoryGirl.define do
     sequence(:name) {|n| "fancyFeature#{n}"}
 
     factory :user_based_experiment, class: 'UserBasedExperiment' do
-      type "UserBasedExperiment"
       percentage 50
     end
     factory :teacher_based_experiment, class: 'TeacherBasedExperiment' do
-      type "TeacherBasedExperiment"
       min_user_id 0
       max_user_id 0
       overflow_max_user_id 0
       script nil
     end
     factory :single_section_experiment, class: 'SingleSectionExperiment' do
-      type "SingleSectionExperiment"
       section
     end
     factory :single_user_experiment, class: 'SingleUserExperiment' do
-      type "SingleUserExperiment"
     end
   end
 
@@ -65,6 +61,9 @@ FactoryGirl.define do
       factory :admin do
         admin true
       end
+      trait :with_school_info do
+        school_info
+      end
       trait :with_terms_of_service do
         terms_of_service_version 1
       end
@@ -75,6 +74,12 @@ FactoryGirl.define do
         after(:create) do |levelbuilder|
           levelbuilder.permission = UserPermission::LEVELBUILDER
           levelbuilder.save
+        end
+      end
+      factory :project_validator do
+        after(:create) do |project_validator|
+          project_validator.permission = UserPermission::PROJECT_VALIDATOR
+          project_validator.save
         end
       end
       factory :facilitator do
@@ -95,6 +100,12 @@ FactoryGirl.define do
         sequence(:email) {|n| "testworkshoporganizer#{n}@example.com.xx"}
         after(:create) do |workshop_organizer|
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
+        end
+
+        trait :as_regional_partner_program_manager do
+          after(:create) do |workshop_organizer|
+            create :regional_partner_program_manager, program_manager: workshop_organizer
+          end
         end
       end
       factory :plc_reviewer do
@@ -328,6 +339,10 @@ FactoryGirl.define do
     game {Game.gamelab}
   end
 
+  factory :weblab, parent: :level, class: Weblab do
+    game {Game.weblab}
+  end
+
   factory :multi, parent: :level, class: Multi do
     game {create(:game, app: "multi")}
     transient do
@@ -389,6 +404,10 @@ FactoryGirl.define do
 
   factory :script do
     sequence(:name) {|n| "bogus-script-#{n}"}
+  end
+
+  factory :featured_project do
+    storage_app_id {456}
   end
 
   factory :script_level do
@@ -602,7 +621,6 @@ FactoryGirl.define do
   # school info: default to public with district and school
   # Other variations have factories below
   factory :school_info, parent: :school_info_us_public do
-    with_district
     with_school
   end
 
@@ -643,6 +661,18 @@ FactoryGirl.define do
     school_name 'Princeton Day School'
   end
 
+  factory :school_info_with_public_school_only, class: SchoolInfo do
+    association :school, factory: :public_school
+  end
+
+  factory :school_info_with_private_school_only, class: SchoolInfo do
+    association :school, factory: :private_school
+  end
+
+  factory :school_info_with_charter_school_only, class: SchoolInfo do
+    association :school, factory: :charter_school
+  end
+
   factory :school_info_us_public, class: SchoolInfo do
     country 'US'
     school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
@@ -653,7 +683,7 @@ FactoryGirl.define do
     end
 
     trait :with_school do
-      association :school, factory: :public_school
+      association :school, factory: :public_school, state: 'WA', school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC
     end
   end
 
@@ -667,7 +697,7 @@ FactoryGirl.define do
     end
 
     trait :with_school do
-      association :school, factory: :charter_school
+      association :school, factory: :charter_school, state: 'WA', school_type: SchoolInfo::SCHOOL_TYPE_CHARTER
     end
   end
 
@@ -714,12 +744,35 @@ FactoryGirl.define do
   factory :public_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
     id {(School.maximum(:id).to_i + 1).to_s}
+    # state_school_id must be unique
+    sequence(:state_school_id) do |n|
+      padded_n = format("%07d", n)
+      "WA-#{padded_n[0..2]}-#{padded_n[3..6]}"
+    end
     name "A seattle public school"
     city "Seattle"
     state "WA"
     zip "98122"
     school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
     association :school_district
+
+    trait :without_state_school_id do
+      state_school_id nil
+    end
+
+    trait :with_invalid_state_school_id do
+      state_school_id "123456789"
+    end
+  end
+
+  factory :private_school, class: School do
+    # school ids are not auto-assigned, so we have to assign one here
+    id {(School.maximum(:id).to_i + 1).to_s}
+    name "A seattle private school"
+    city "Seattle"
+    state "WA"
+    zip "98122"
+    school_type SchoolInfo::SCHOOL_TYPE_PRIVATE
   end
 
   factory :charter_school, class: School do
@@ -750,9 +803,19 @@ FactoryGirl.define do
   end
 
   factory :channel_token do
+    transient {storage_user nil}
     # Note: This creates channel_tokens where the channel is NOT an accurately
     # encrypted version of storage_app_id/app_id
     storage_app_id 1
-    storage_id 2
+    storage_id {storage_user.try(:id) || 2}
+  end
+
+  factory :circuit_playground_discount_application do
+  end
+
+  factory :seeded_s3_object do
+    bucket "Bucket containing object"
+    key "Object Key"
+    etag "Object etag"
   end
 end

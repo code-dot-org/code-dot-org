@@ -1,7 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list 2016-5-24-WA-teacher-Senator ../mailing-common/test-params-us.csv
-../send-to-mailing-list 2016-5-25-GA-Congress ../mailing-common/test-params-us.csv
-../send-to-mailing-list 2016-5-25-ID-Congress ../mailing-common/test-params-us.csv
-../send-to-mailing-list 2016-5-25-CT-Congress ../mailing-common/test-params-us.csv
-../send-to-mailing-list 2016-5-25-IL-Congress ../mailing-common/test-params-us.csv

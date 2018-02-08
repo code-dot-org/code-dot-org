@@ -94,14 +94,14 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft  ანგარიში
-    clever: Clever Account
+    clever: Clever-ის ანგარიში
     forgot_password: "დაგავიწყდათ თქვენი პაროლი?"
     need_confirmation: "არ მოგსვლიათ დადასტურების ინსტრუქციები?"
     need_unlock: "არ მოგსვლიათ განბლოკვის ინსტრუქციები?"
     not_linked: "ბოდიში, თქვენი Code.org-ის ანგარიში არაა დაკავშირებული თქვენს %{provider}-თან.
       ქვემოთ პაროლის შეყვანით თქვენ შეძლებთ ანგარიშში შესვლა."
-    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
-      sign in through your Clever Portal instead.
+    use_clever: "ბოდიშ გიხდით, მაგრამ თქვენი Code.org-ის ანგარიში არ არის დაკავშირებული
+      თქვენს %{provider}-თან. გთხოვთ შეხვიდეთ Clever-ის პორტალიდან."
   signup_form:
     student_count: "უკვე დარეგისტრირდა %{count} სტუდენტი."
     teacher_count: "უკვე დარეგისტრირდა %{count} მასწავლებელი."
@@ -155,6 +155,7 @@
     user_type_student: "მოსწავლე"
     field_is_required: "სავალდებულოა"
     accept_terms: "ანგარიშის შესაქმნელად უნდა დაეთანხმოთ"
+    error: "მოხდა შეცდომა."
   school_info:
     title: "სასკოლო ინფორმაცია (არასავალდებულო)"
     school_country: "სკოლის ქვეყანა"
@@ -300,14 +301,14 @@
       my_dashboard: "ჩემი მთავარი პანელი"
       courses: "კურსები"
       course_catalog: "კურსების კატალოგი"
-      project_gallery: "პროექტის გალერეა"
+      project_gallery: "პროექტები"
       sections: "განყოფილებები"
       help_support: "დახმარება და მხარდაჭერა"
       report_bug: "მოგვახსენეთ ტექნიკური ხარვეზის შესახებ"
       teacher_community: "მასწავლებელთა კოლექტივი"
       professional_learning: "პროფესიონალთაშორისი სწავლება"
       documentation: "დოკუმენტაცია"
-      tutorials: "გაკვეთილები"
+      tutorials: "ტუტორიალები"
       educate_overview: "პედაგოგის მიმოხილვა"
       educate_elementary: "დაწყებითი სკოლა"
       educate_middle: "საშუალო სკოლა"
@@ -690,7 +691,7 @@
     notes_coming_soon: "ამ ვიდეოს ჩანაწერები მალე დაიდება."
     autoplay_option: "ვიდეოების ავტომატური ჩართვა"
     download: "ვიდეოს გადმოწერა"
-    show_notes: "შენიშვნების ჩვენება"
+    show_notes: "ჩანიშვნების ჩვენება"
     show_video: "ვიდეოს ჩვენება"
   compatibility:
     upgrade:
@@ -775,12 +776,15 @@
       title: "გალერეა"
       body: "ნახეთ ჩვენი მომხმარებლების მეირ შექნილი აპლიკაციებისა და სურათების გალერეა"
     gamelab:
-      title: "თამაშების ლაბორატორია"
+      title: "თამაშების ლაბი"
       body: "თამაშების ლაბორატორია პროგრამირების გარემოა, რომელშიც თქვენ შეგიძლიათ
         შექმნათ მარტივი ანიმაციები და თამაშები ერთმანეთთან ურთიერთმქმედი ობიექტების
         და პერსონაჟების გამოყენებით."
       audience: "ასაკი 13+"
       cta: "ისწავლეთ, როგორ"
+    hoc-encryption:
+      title: "მარტივი შიფრირება"
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: "ვებ ლაბორატორია (ბეტა)"
       body: "თამაშების ლაბორატორია პროგრამირების გარემოა, რომელშიც თქვენ შეგიძლიათ
@@ -802,6 +806,10 @@
     minecraft2016:
       title: "მაინკრაფტი"
       body: "დააპროგრამე ცხოველები და სხვა ქმნილებები მაინკრაფტის საკუთარ სამყაროში."
+    hero:
+      title: "მაინკრაფტი"
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: "სპორტი"
       body: "შექმენით კალათბურთის თამაში ან შეურიეთ ერთმანეთს სპორტის სახეობები."
@@ -860,7 +868,7 @@
     help_resources: "დახმარება და რესურსები"
     help_support: "დახმარება და მხარდაჭერა"
     documentation: "დოკუმენტაცია"
-    tutorials: "გაკვეთილები"
+    tutorials: "ტუტორიალები"
   multi:
     wrong_title: "პასუხი არასწორია"
     wrong_body: "ეს პასუხი არასწორია. სცადეთ კიდევ ერთხელ!"
@@ -883,6 +891,9 @@
     hide_survey_last_answer: "გამოკითხვა ანონიმურია. გთხოვთ, დაგროვილი შედეგებისთვის
       ეწვიოთ თქვენი მასწავლებლის მართვის პანელს. ყურადღება მიაქციეთ, რომ შედეგები
       გამოჩნდება მხოლოდ იმ შემთხვევაში, თუ ხუთმა მოსწავლემ მაინც უპასუხა გამოკითხვას."
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: "მადლობა"
     wrong_body: "მადლობა პასუხისთვის"
@@ -1011,7 +1022,14 @@
     rename: "სახელის შეცვლა"
     save: "შენახვა"
     delete: "წაშლა"
-    import: Import
+    import: "შემოტანა"
+    share_link_import_bad_link_header: "გასაზიარებელი ბმულის ამოცნობა ვერ მოხერხდა"
+    share_link_import_bad_link_body: "ჩვენ ვერ შემოვიტანეთ ეს გასაზიარებელი ბმული.
+      დარწმუნდით, რომ იყენებთ ბმულს მაინკრაფტი: აგენტის თავსატეხიდან და ბმული სრულად
+      გადააკოპირეთ."
+    share_link_import_error_header: "მოხდა შეცდომა."
+    share_link_import_error_body: "ამ გასაზიარებელი ბმულის შემოტანის დროს მოხდა შეცდომა.
+      გთხოვთ გაიმეოროთ თავიდან."
     exit: "დავუბრუნდეთ კურსს"
     my_projects: "ჩემი პროექტები"
     project_gallery: "პროექტები"
@@ -1123,9 +1141,9 @@
     main_course: "მთავარი კურსი"
     extra_course_content: "კურსის დამატებითი მასალები"
     csf_e_1: "გაიზარდე კურს E-მდე (არჩევითი)"
-    csf_e_2: E კურსის შემცველობა
+    csf_e_2: E კურსის შიგთავსი
     csf_f_1: "გაიზარდე კურს F-მდე (არჩევითი)"
-    csf_f_2: F კურსის შემცველობა
+    csf_f_2: F კურსის შიგთავსი
     csd1_1: "თავი 1: პრობლემის გადაჭრის პროცესი"
     csd1_2: "თავი 2: კომპიუტერები და პრობლემების გადაჭრა"
     csd2_1: "თავი 1: ვებ კონტენტი და HTML"
@@ -1242,7 +1260,7 @@
     უნდა იყოთ."
   return_unit_overview: "კურსის მიმოხილვაზე გადასვლა"
   return_course_overview: "კურსის მიმოხილვაზე გადასვლა"
-  view_all_units: "ყველა ერთეულის ნახვა"
+  view_all_units: "ყველა სექციის ნახვა"
   pd:
     survey:
       number_teachers: Number of attending teachers

@@ -55,20 +55,20 @@
       placeholder: "Код по раздел(ABCDEF)"
       instructions: Моля въведете кода, споделен от учителя. Това е код от 6 букви
         като "ABCDEF".
-      instructions_short: Enter your 6 letter section code
+      instructions_short: "Въведете вашия шестбуквен код за раздел"
     submit: "Добавяне на учител"
   add_hint_form:
     placeholder: "Моля, въведете вашата препоръка"
     submit: "Добавяне на препоръка"
   appname: Code.org
   stage: "Етап"
-  stage_number: "Етап %{number}"
+  stage_number: "Урок %{number}"
   puzzle: "Пъзел"
   trophies: "Трофеи"
   courses: "Курсове"
   courses_page:
     title_student: "Обучавайте се в Code Studio"
-    title_teacher: Teach with Code Studio
+    title_teacher: "Научи с Code Studio"
   unplugged_activity: "Ънплъгд дейност"
   of: "на"
   more: "ПОВЕЧЕ"
@@ -95,14 +95,14 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft профил
-    clever: Clever Account
+    clever: "Умен профил"
     forgot_password: "Забравили сте паролата си?"
     need_confirmation: "Не сте получили инструкции за потвърждение ?"
     need_unlock: "Не сте получили инструкции за отключване?"
     not_linked: "За съжаление, твоят Code.org акаунт не е свързан с %{provider}. Ще
       се наложи да влезеш като въведеш паролата си по-долу."
-    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
-      sign in through your Clever Portal instead.
+    use_clever: "За съжаление, този Code.org акаунт не е свързан с вашият %{provider}.
+      Моля, влезте през вашия умен портал."
   signup_form:
     student_count: "%{count} ученици вече са се регистрирали."
     teacher_count: "%{count} учители вече са се регистрирали."
@@ -158,6 +158,7 @@
     user_type_student: "Ученик"
     field_is_required: "е задължително"
     accept_terms: "Вие трябва да потвърдите, за да си създадете профил"
+    error: "Възникна грешка."
   school_info:
     title: "Информацшя за училището (по избор)"
     school_country: "Училищен район"
@@ -225,7 +226,7 @@
   parent_mailer:
     student_associated_subject: "Информация за вход в Code.org"
   teacher_mailer:
-    new_teacher_subject: Welcome to Code.org!
+    new_teacher_subject: "Добре дошли в Code.org!"
   section:
     your_section:
       one: "Вашата секция:"
@@ -235,10 +236,10 @@
       remove: "Наистина ли искате да изтриете този раздел/секция?"
     remove: "(remove section)"
     type:
-      picture: Picture Password
-      word: Secret Words
+      picture: "Снимка парола"
+      word: "Тайни думи"
       email: "Имейл"
-      google_classroom: Google Classroom
+      google_classroom: Google класна стая
       clever: Clever
   follower:
     invite_sent: "Поканата изпратена"
@@ -254,9 +255,9 @@
       blank_code: "Моля въведете код за раздела"
       cant_join_own_section: "За съжаление, не можете да се присъедините към вашият
         собствен раздел."
-      provider_managed_section: This section is managed by another provider and cannot
-        be joined. Please ask your teacher to add you via %{provider} and re-sync
-        their section.
+      provider_managed_section: "Този раздел се управлява от друг доставчик и не може
+        да се присъединете. Помолете учителите си да ви добавят чрез %{provider} и
+        повторно синхронизирайте раздела."
     mail:
       student_disassociated:
         subject: 'Code.org уведомление: %{student_name} вече не свързан като ваш ученик.'
@@ -280,8 +281,8 @@
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: The email address you provided doesn't match
-          the email address for this account
+        user_type_change_email_mismatch: "Имейл адреса, който сте посочили не съвпада
+          с имейл адреса за този акаунт"
         personal_login_created_email: "Съдадохте парсонална регистрация за вход успешно.
           Сега можете да влезете в Code.org с вашия имейл и парола"
         personal_login_created_username: "Съдадохте парсонална регистрация за вход
@@ -298,7 +299,7 @@
         gamelab: "Направи Game Lab проект"
         weblab: Make a Web Lab (beta) project
       home: "Начало"
-      my_dashboard: My Dashboard
+      my_dashboard: "Моето табло"
       courses: "Курсове"
       course_catalog: Course Catalog
       project_gallery: "Проекти"
@@ -773,6 +774,9 @@
         and games with objects and characters that interact with each other.
       audience: "Възраст 13 +"
       cta: "Научете как"
+    hoc-encryption:
+      title: Simple Encryption
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -794,6 +798,10 @@
       title: Minecraft
       body: "Програмирай животни и други Minecraft същества в своя собствена версия
         на Minecraft."
+    hero:
+      title: Minecraft
+      body: Minecraft се завръща за часът на кода с чисто нова дейност! Пътешествай
+        през Minecraft с код.
     sports:
       title: "Спорт"
       body: Make a basketball game or mix and match across sports.
@@ -874,6 +882,9 @@
     hide_survey_last_answer: "Това анкета е анонимна.  Моля, посетете учителското
       таблото за обобщени резултати.  Имайте предвид, че резултатите ще се виждат
       само ако най-малко пет ученици са направили анкетата."
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: "Благодаря"
     wrong_body: "Благодаря Ви, че подадохте отговор"
@@ -1002,7 +1013,14 @@
     rename: "Преименуване"
     save: "Запазване"
     delete: "Изтриване"
-    import: Import
+    import: "Импортиране"
+    share_link_import_bad_link_header: "Връзката за споделяне не е разпозната"
+    share_link_import_bad_link_body: "Не успяхме да импортираме тази връзка за споделяне.
+      Уверете се, че използвате връзка от Minecraft: Agent puzzle и сте копирали пълната
+      връзка."
+    share_link_import_error_header: "Възникна грешка."
+    share_link_import_error_body: "Възникна проблем при импортирането на връзката
+      за споделяне. Опитайте отново."
     exit: "Връщане към курса"
     my_projects: "Моите проекти"
     project_gallery: "Проекти"

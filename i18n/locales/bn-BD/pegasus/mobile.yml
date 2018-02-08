@@ -26,9 +26,14 @@
   twentyhours_heading: "আমাদের কম্পিউটার সায়েন্স কোর্সের সূচনাটি করার চেষ্টা করুন।"
   twentyhours_text: "আপনার প্রথম Houe of Code শেষ? এরপর একাধিক কোর কম্পিউটার বিজ্ঞান এবং প্রোগ্রামিং প্রাযুক্তিক পরবর্তী কোর্স, সম্বন্ধে জানুন।"
   og_title: প্রতিটি শিশু সুযোগের দাবীদার
+  og_title_soon: "The Hour of Code is coming"
+  og_title_here: "The Hour of Code is here!"
   og_description: "প্রতিটি স্কুলে প্রত্যেক শিক্ষার্থীর কম্পিউটার সায়েন্স পড়ার সুযোগের দাবীদার।"
+  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহ"
   csedweek_og_description: "December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "যুক্ত হন <a href=\"http://hourofcode.com\"> Hour of Code</a><br/> ডিসেম্বর 8-14, ২০১৪ <br/>"
   hoc2014_students: "ছাত্র"
   hoc2014_try: "এটা চেষ্টা করুন।"
@@ -255,6 +260,12 @@
   studiobar_donate_body: "আপনার প্রতি ডলার অর্থায়নে একটি শিশু শেখে"
   studiobar_shop_title: "দোকান"
   studiobar_shop_body: "বাঁধাধরা নিয়ম থেকে বেরিয়ে এসে গর্বের সাথে আমাদের লোগো লাগাও।"
+  homepage_stats_students: "of US students have accounts on Code.org"
+  homepage_stats_female: "of our students are female"
+  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
+  homepage_stats_policy: "states changed policy to support computer science"
+  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "''আমি এক ঘন্টার মধ্যে কোড জানুন মেয়েদের প্রতি একক দেশের মোকাবিলা'' ও নোবেল শান্তি পুরস্কার বিজয়ী মালালা"
   homepage_hero_text_susan: |-
     "প্রযুক্তি পরিবর্তন করতে পারেন, তাহলে আপনি পৃথিবীর পরিবর্তন করতে পারেন" সুসান, CEO, ইউটিউব
@@ -284,6 +295,8 @@
   homepage_hero_text_stat_loc: "#লক লাইনের কোড ছাত্রছাত্রীদের দিয়ে লেখা"
   homepage_hero_text_stat_students: "#student_count  কোড স্টুডিওতে ছাত্রছাত্রীদের হিসাব"
   homepage_hero_text_stat_served: 'ঘন্টার কোড: #সেবা সেবা'
+  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
+  homepage_hero_hoc_is_here: "The Hour of Code is here"
   homepage_slot_text_hoc: "কোডিং এর এক ঘণ্টা"
   homepage_slot_text_frozen: "আন্না এবং এলসার সাথে ফ্রোজেন"
   homepage_slot_text_teacher: "শিক্ষক ড্যাশবোর্ড"
@@ -303,6 +316,7 @@
   homepage_action_text_girlvideo: "একটি মেয়েকে অনুপ্রাণিত করুন"
   homepage_action_text_learn: "শেখা শুরু করুন।"
   homepage_action_text_signpetition: "পিটিশন স্বাক্ষর করুন"
+  homepage_action_text_wincelebritychat: "Win a celebrity chat"
   homepage_signpetition_dropdown: "▾ একমত;"
   homepage_diversity_pledge: "বৈচিত্রতার অঙ্গীকার নিন"
   homepage_banner_text_prizes: 'এক ঘন্টা কোড অনুষ্ঠান আবার আসছে, ডিসেম্বর ৭ থেকে ১৩।'
@@ -346,7 +360,7 @@
   homepage_slot_text_link_buy: "জড়িত"
   homepage_slot_text_link_donate: "দান করুন"
   homepage_slot_text_link_shop: "T-shirts, hats, & more"
-  homepage_slot_text_link_administrators: "Bring to your school or district"
+  homepage_slot_text_link_administrators: "Bring CS to your school"
   homepage_header_codestudio: "কোড স্টুডিও ছাত্র সৃষ্টি"
   homepage_header_donors: "Code.org তার সমর্থকদের ধন্যবাদ দেয়"
   homepage_donors_seall: "সব দেখুন"
@@ -409,10 +423,13 @@
   mc_gradelevel: "বয়স 4-104"
   mc_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
   mc_specs: "অনেক ভাষা | আধুনিক ব্রাউজার এবং ট্যাবলেট | বয়সের 6 +"
+  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: "Minecraft Designer"
   minecraft_adventurer: "Minecraft Adventurer"
   minecraft_tutorials: "Minecraft Hour of Code Tutorials"
   minecraft_specs: "Many languages | Modern browsers and tablets | Grades 2+"
+  minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  minecraft_agent_button: "শুরু করুন"
   minecraft_designer_description: "Program animals and other Minecraft creatures in your own version of Minecraft."
   minecraft_designer_button: "শুরু করুন"
   minecraft_adventurer_description: "Use code to take Alex or Steve on an adventure."
@@ -420,6 +437,19 @@
   minecraft_no_internet: "ইন্টারনেট নেই?"
   minecraft_download_adventurer: "Download the offline version of Minecraft Adventurer."
   minecraft_subtitle: "মাইনক্র্যাফট এক ঘণ্টার কোড"
+  minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
+  minecraft_host_event: "Host a Minecraft Hour of Code Event"
+  minecraft_teach_resources: "Teacher resources and lesson plan."
+  minecraft_leader_guide: "Download resources to help you plan and lead an event."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
+  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}', target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
+  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}', target='_blank'>Sign up today</a>."
+  minecraft_future: "Help all youth become future ready"
+  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}', target='_blank'>access the resources</a> they found most valuable."
+  minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
+  minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   sports_page_title: "Hour of Code Sports"
   sports_og_title: "Push yourself. Anybody can learn."
   sports_og_description: "Champions and gold medalists encourage you to try the Hour of Code. Code your own sports game."
@@ -456,6 +486,7 @@
   video_title_obama: "কম্পিউটার বিজ্ঞান বিষয়ে প্রেসিডেন্ট ওবামা"
   video_title_hoc_is_here: "Hour of Code কোড এখানে - যেকেউ শিখতে পারে"
   video_title_anybody_can_learn: "যে কেউ শিখতে পারে"
+  video_title_steph_curry: "Hour of Code with Steph Curry"
   video_title_draymond_green: "Draymond Green এর সঙ্গে Hour of Code"
   video_title_russell_okung: "Hour of Code with Russell Okung"
   video_title_real_madrid: "Hour of Code with Real Madrid"
@@ -535,6 +566,8 @@
   volunteer_engineer_submission_type_task_remote: "আমি চাই আপনি আমার শ্রেনীতে বাচ্চাদের স্কাইপের মাধ্যমে কিছু অনুপ্রেরণীয় কথা বলুন"
   volunteer_engineer_submission_type_task_mentor: "আমার ছাত্রদের সাথে কোডিং করার জন্য প্রস্তুত হতে আমি একজন পরামর্শদাতা খুঁজছি"
   petition_age: "বয়স"
+  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_learn_more_button: "আরও জানুন"
   dashboard_landing_title: "শিক্ষক হোম পেজ"
   dashboard_landing_welcome: "নতুন ও উন্নত শিক্ষক dashboard-এ আপনাকে স্বাগতম।"
   dashboard_landing_video: "এই ভিডিও টি দেখুন"
@@ -621,7 +654,7 @@
   dashboard_navigation_lesson_plans_resources: "পাঠ পরিকাল্পনা এবং তথ্য"
   dashboard_navigation_view_stats: "পরিসংখ্যান"
   dashboard_navigation_section: 'বিভাগ: %{section_name}'
-  dashboard_navigation_student: 'শিক্ষার্থী:%{student_name}'
+  dashboard_navigation_student: শিক্ষার্থী:%{student_name}
   dashboard_progress_not_started: "শুরু হয়নি"
   dashboard_progress_in_progress: "অগ্রসর হচ্ছে"
   dashboard_progress_not_completed: "সম্পন্ন নয়"
@@ -931,6 +964,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: "Full Test - 50 questions"
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: "৯-১২ গ্রেড"
@@ -1445,3 +1480,5 @@
   syncing_students: "Syncing your students"
   syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro

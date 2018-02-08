@@ -1,7 +1,7 @@
 "tr":
   devise:
     confirmations:
-      confirmed: Eposta adresin başarıyla onaylandı.
+      confirmed: E-posta adresin başarıyla onaylandı.
       send_instructions: Birkaç dakika içinde hesabınızı nasıl onaylayacağınızı anlatan
         bir e-posta alacaksınız.
       send_paranoid_instructions: Eğer e-posta adresiniz veritabanımızda kayıtlı ise,
@@ -11,7 +11,7 @@
       already_authenticated: Zaten oturum açtınız.
       inactive: Hesap henüz aktif değil.
       invalid: Geçersiz e-posta veya şifre.
-      invalid_token: Geçersiz kimlik doğrulama belirteci.
+      invalid_token: Geçersiz kimlik doğrulama işareti.
       locked: Hesabınız kilitlendi.
       not_found_in_database: Geçersiz e-posta veya şifre.
       timeout: Oturumunun süresi doldu, lütfen devam etmek için tekrar oturum aç.
@@ -28,14 +28,14 @@
       failure: "%{kind} kimliği %{reason} nedeniyle doğrulanamadı."
       success: "%{kind} hesabından başarıyla kimlik doğrulandı."
     passwords:
-      no_token: Parola sıfırlama epostası dışından bu sayfaya erişemezsin. Eğer parola
-        sıfırlama epostasından geldiysen, lütfen verilen URL'nin tamamını kullandığından
-        emin ol.
+      no_token: "Şifre sıfırlama e-postası dışında  bu sayfaya erişemezsin. Eğer şifre
+        sıfırlama e-postasından geldiysen, lütfen verilen URL'nin tamamını kullandığına
+        emin ol."
       send_instructions: Birkaç dakika içinde parolanızı nasıl sıfırlayacağınız hakkında
         talimatlar içeren bir eposta alacaksınız.
       send_paranoid_instructions: Eğer e-posta adresiniz veritabanımızda kayıtlı ise,
         birkaç dakika içinde parola kurtarma bağlantısı içeren bir e-posta alacaksınız.
-      updated: Parolan başarıyla değiştirildi. Şu anda oturum açtın.
+      updated: "Şifreniz başarıyla değiştirildi. Şu anda oturum açtın."
       updated_not_active: "Şifreniz başarıyla değiştirildi."
     registrations:
       destroyed: Hoşçakal! Hesabın başarıyla iptal edildi. Seni tekrar aramızda görmeyi
@@ -59,8 +59,8 @@
         anlatan bir e-posta alacaksınız.
       send_paranoid_instructions: Eğer hesabınız varsa, birkaç dakika içinde hesabınızın
         kilidini nasıl kaldırılacağını anlatan bir e-posta alacaksınız.
-      unlocked: Hesabınızın kilidi başarı ile kaldırıldı. Lüfen devam etmek için giriş
-        yapınız.
+      unlocked: Hesabınızın kilidi başarı ile kaldırıldı. Lütfen devam etmek için
+        giriş yapınız.
   errors:
     messages:
       already_confirmed: zaten onaylandı, lütfen giriş yapmayı dene
@@ -75,15 +75,15 @@
     invitations:
       send_instructions: "%{email} adresine davetiye epostası gönderildi."
       invitation_token_invalid: Sağlanan davet işareti geçerli değil!
-      updated: Parolanız başarıyla değiştirildi. Şimdi giriş yaptınız.
+      updated: "Şifreniz başarıyla değiştirildi. Şimdi giriş yaptınız."
       no_invitations_remaining: Davet kalmadı
       invitation_removed: Davetin kaldırıldı.
       new:
-        header: Davet gönder
-        submit_button: Davetiye gönder
+        header: Davetiye gönder
+        submit_button: Bir davetiye gönder
       edit:
-        header: Parolanı belirle
-        submit_button: Parolamı belirle
+        header: "Şifreni belirle"
+        submit_button: "Şifremi belirle"
     mailer:
       invitation_instructions:
         subject: Davetiye yönergeleri
@@ -91,5 +91,5 @@
         someone_invited_you: Birisi seni %{url}, adresine davet etti, aşağıdaki bağlantıdan
           kabul edebilirsin.
         accept: Daveti  kabul et
-        ignore: Davetiyeyi almak istemiyorsan, lütfen bu epostayı yoksay. <br /> Aşağıdaki
-          bağlantıya tıklamadan ve parola oluşturmadan hesabın oluşturulmayacak.
+        ignore: Davetiyeyi kabul etmek istemiyorsan, lütfen bu e-postayı yok say.
+          <br /> Aşağıdaki bağlantıya tıklamadan ve şifre oluşturmadan hesabın oluşturulmayacak.

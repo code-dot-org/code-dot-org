@@ -1,5 +1,6 @@
 // This gets replaced by karma webpack with the updated files on rebuild
 import 'babel-polyfill';
+import 'whatwg-fetch';
 import {
   throwOnConsoleErrorsEverywhere,
   throwOnConsoleWarningsEverywhere,
@@ -21,9 +22,12 @@ if (!runnable.length) {
   runnable = testsContext.keys();
 }
 
-describe('unit tests', () => {
+describe('unit tests', function () {
   throwOnConsoleErrorsEverywhere();
   throwOnConsoleWarningsEverywhere();
   clearTimeoutsBetweenTests();
+  // Uncomment and import this line to perform additional test cleanup validation.
+  // In the long term, this should be permanently enabled or removed.
+  // enforceDocumentBodyCleanup({checkEveryTest: true});
   runnable.forEach(testsContext);
 });

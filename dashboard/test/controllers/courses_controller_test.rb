@@ -9,6 +9,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     @levelbuilder = create :levelbuilder
 
+    Script.stubs(:should_cache?).returns true
     plc_course = create :plc_course, name: 'My Plc'
     @course_plc = plc_course.course
     @course_regular = create :course, name: 'non-plc-course'
@@ -19,9 +20,11 @@ class CoursesControllerTest < ActionController::TestCase
 
   # Tests for index
 
-  test_user_gets_response_for :index, response: :success, user: :teacher
+  test_user_gets_response_for :index, response: :success, user: :teacher, queries: 26
 
-  test_user_gets_response_for :index, response: :success, user: :admin
+  test_user_gets_response_for :index, response: :success, user: :admin, queries: 26
+
+  test_user_gets_response_for :index, response: :success, user: :user, queries: 25
 
   # Tests for show
 
@@ -52,9 +55,9 @@ class CoursesControllerTest < ActionController::TestCase
     end
   end
 
-  test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @course_regular.name}}
+  test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @course_regular.name}}, queries: 8
 
-  test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @course_regular.name}}
+  test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @course_regular.name}}, queries: 3
 
   # Tests for create
 

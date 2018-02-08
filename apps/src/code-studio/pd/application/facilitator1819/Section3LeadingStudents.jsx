@@ -1,19 +1,18 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import {FormGroup} from "react-bootstrap";
-import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
-import {pageLabels} from './Facilitator1819Labels';
+import LabeledFormComponent from "../../form_components/LabeledFormComponent";
+import {
+  PageLabels,
+  SectionHeaders,
+  TextFields
+} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 import {YES, NONE} from '../ApplicationConstants';
 
-export default class Section3LeadingStudents extends Facilitator1819FormComponent {
-  static propTypes = {
-    ...Facilitator1819FormComponent.propTypes,
-    accountEmail: PropTypes.string.isRequired
-  };
-
-  static labels = pageLabels.Section3LeadingStudents;
+export default class Section3LeadingStudents extends LabeledFormComponent {
+  static labels = PageLabels.section3LeadingStudents;
 
   static associatedFields = [
-    ...Object.keys(pageLabels.Section3LeadingStudents),
+    ...Object.keys(PageLabels.section3LeadingStudents),
     "gradesTaught_other",
     "gradesCurrentlyTeaching_other",
     "subjectsTaught_other",
@@ -23,26 +22,26 @@ export default class Section3LeadingStudents extends Facilitator1819FormComponen
   render() {
     return (
       <FormGroup>
-        <h3>Section 3: Leading Students</h3>
-
-        {this.checkBoxesWithAdditionalTextFieldsFor("ledCsExtracurriculars", {
-          "Other (please list)" : "other"
-        })}
+        <h3>Section 3: {SectionHeaders.section3LeadingStudents}</h3>
 
         {this.radioButtonsFor("teachingExperience")}
+
+        {this.checkBoxesWithAdditionalTextFieldsFor("ledCsExtracurriculars", {
+          [TextFields.otherPleaseList] : "other"
+        })}
 
         {this.props.data.teachingExperience === YES &&
           <div>
             {this.checkBoxesWithAdditionalTextFieldsFor("gradesTaught", {
-              "Other" : "other"
+              [TextFields.otherWithText] : "other"
             })}
 
             {this.checkBoxesWithAdditionalTextFieldsFor("gradesCurrentlyTeaching", {
-              "Other" : "other"
+              [TextFields.otherWithText] : "other"
             })}
 
             {this.checkBoxesWithAdditionalTextFieldsFor("subjectsTaught", {
-              "Other" : "other"
+              [TextFields.otherWithText] : "other"
             })}
 
             {this.radioButtonsFor("yearsExperience")}
@@ -50,7 +49,7 @@ export default class Section3LeadingStudents extends Facilitator1819FormComponen
             {this.props.data.yearsExperience && this.props.data.yearsExperience !== NONE &&
               <div>
                 {this.checkBoxesWithAdditionalTextFieldsFor("experienceLeading", {
-                  "Other" : "other"
+                  [TextFields.otherWithText] : "other"
                 })}
 
                 {this.checkBoxesFor("completedPd")}
@@ -85,5 +84,26 @@ export default class Section3LeadingStudents extends Facilitator1819FormComponen
     }
 
     return requiredFields;
+  }
+
+  /**
+   * @override
+   */
+  static processPageData(data) {
+    const changes = {};
+
+    if (data.teachingExperience !== YES) {
+      changes.gradesTaught = undefined;
+      changes.gradesCurrentlyTeaching = undefined;
+      changes.subjectsTaught = undefined;
+      changes.yearsExperience = undefined;
+    }
+
+    if (!data.yearsExperience || data.yearsExperience === NONE) {
+      changes.experienceLeading = undefined;
+      changes.completedPd = undefined;
+    }
+
+    return changes;
   }
 }

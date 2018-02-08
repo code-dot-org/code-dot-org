@@ -196,4 +196,27 @@ MARKDOWN
     assert plc_evaluation.plc_evaluation?
     assert_not non_plc_evaluation.plc_evaluation?
   end
+
+  test "get_sublevel_last_attempt" do
+    level1 = create :multi
+    level2 = create :multi
+    properties = {pages: [{levels: [level1.name]}, {levels: [level2.name]}]}
+    create :level_group, name: 'level_group', properties: properties
+
+    teacher = create :teacher
+    student = create :student
+
+    student_level_source = create :level_source, data: '1'
+    teacher_level_source = create :level_source, data: '2'
+
+    create :user_level, user: student, level: level1, level_source: student_level_source
+    create :user_level, user: teacher, level: level1, level_source: teacher_level_source
+
+    # loads student's attempt when current_user and user are provided
+    assert_equal '1', LevelGroup.get_sublevel_last_attempt(teacher, student, level1)
+    # loads user's attempt if user provided
+    assert_equal '2', LevelGroup.get_sublevel_last_attempt(teacher, nil, level1)
+    # returns undefined when signed out
+    assert_nil LevelGroup.get_sublevel_last_attempt(nil, nil, level1)
+  end
 end

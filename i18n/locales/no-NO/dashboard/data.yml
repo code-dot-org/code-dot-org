@@ -1,4 +1,4 @@
-"no":
+no:
   data:
     game:
       name:
@@ -366,7 +366,7 @@
         'C3_bee_conditionals': 'Bie Betingelser'
         'C3_maze_conditionals': 'Labyrint Betingelser'
         'C3_artist_nested_loops': 'Løkker i løkker'
-        'C3_farmer_while': 'Mens Løkker'
+        'C3_farmer_while': 'Gjenta-løkker'
         'C3_bee_nested_loops': 'Løkker i løkker'
         'C3_bee_debugging': 'Bie feilsøking'
         'C3_bounce': 'sprett'
@@ -396,6 +396,7 @@
         'C4_unplugged_forloops': 'For-løkker'
         'C4_unplugged_parameters': 'Låtskriving med parametere'
         'C4_unplugged_binary': 'Binær'
+        'CSF_a_b_artist_loops': 'Loops in Artist'
         'CSF_artist_angles': 'Engler i Kunstner'
         'CSF_collector_k1_blocks': 'Grunnleggende: Samleren'
         'CSF_collector_repeat_loops': 'Samler gjenta-løkker'
@@ -409,7 +410,7 @@
         'CSF_my_robotic_friends': 'Mine robotliknende venner'
         'CSF_Power_of_Words': 'Ordenes kraft'
         'CSF_Super_Digital_Citizen': 'Superdigital innbygger'
-        'CSF_stevie_big_project': 'Stevie and the Big Project'
+        'CSF_stevie_big_project': 'Stevie og det Store Prosjektet'
         'CSF_unspotted_bugs': 'Uoppdagede feil'
         'CSF_zuck_loops_short': 'Gjenta-løkker'
         'frozen_intro': 'Kodetimen Intro'
@@ -422,9 +423,16 @@
         'infinity_playlab_intro': 'Spill-Lab – introduksjon'
         'infinity_playlab_events': 'Spill-Lab – hendelser'
         'infinity_playlab_repeat_forever': 'Spill-Lab Gjenta for alltid'
-        'csd_concept_computer': 'How Computers Work: What Makes a Computer, a Computer?'
+        'csd_concept_how_computers_work': 'Introducing How Computers Work'
+        'csd_concept_computer': 'Hvordan datamaskiner fungerer: Hva gjør en datamaskin til en datamaskin?'
         'csd_concept_binary_data': 'Hvordan datamaskiner fungerer: Binær og data'
+        'csd_concept_circuits_logic': 'How Computers Work: Circuits & Logic'
+        'csd_concept_memory_cpu_input_output': 'How Computers Work: Memory, CPU, Input, & Output'
+        'csd_concept_hardware_software': 'How Computers Work: Hardware & Software'
         'csd_concept_search': 'Hvordan søk fungerer'
+        'csd_external_amazon_data': 'Hvordan Stordata brukes i Amazon Anbefalings systemer kan endre livene våre'
+        'csd_external_netflix_data': 'How Does Netflix Make TV Show and Movie Suggestions?'
+        'csd_external_waze_data': 'Hvorfor er så mange brukere opptatt av «Waze»?'
         'csd_gamelab_animation_tab': 'Animasjons-lab'
         'csd_gamelab_conditionals_1': 'Introduction to Conditionals - Part 1'
         'csd_gamelab_conditionals_2': 'Introduction to Conditionals - Part 2'
@@ -525,11 +533,38 @@
         'mc_2016_events': 'Minecraft Kodetimen - Hendelser'
         'mc_2016_spawn': 'Minecraft Kodetimen - Sett ut'
         'mc_2016_congrats': 'Minecraft Kodetimen - Gratulerer!'
-        'applab_hoc_welcome': 'App Lab Hour of Code - Welcome'
-        'applab_hoc_setproperty': 'App Lab Hour of Code - setProperty'
-        'applab_hoc_onevent': 'App Lab Hour of Code - onEvent'
-        'applab_hoc_designmode': 'AppLab Hour of Code - Design Mode'
-        'applab_hoc_share': 'AppLab Hour of Code - Share'
+        'applab_hoc_welcome': 'App Lab Kodetimen - Velkommen'
+        'applab_hoc_setproperty': 'App Lab Kodetimen - setProperty'
+        'applab_hoc_onevent': 'App Lab Kodetimen - onEvent'
+        'applab_hoc_designmode': 'AppLab Kodetimen - Utformingsmodus'
+        'applab_hoc_share': 'AppLab Kodetimen - Del'
+        'mc_2017_agent_intro': 'Minecraft Kodetimen - Agenten'
+        'mc_2017_repeat': 'Minecraft Kodetimen - Løkker'
+        'mc_2017_functions': 'Minecraft Kodetimen - Funksjoner'
+        'mc_2017_congratulations': 'Minecraft Kodetimen - Gratulerer!'
+        'mc_2017_puzzle_1': 'Minecraft Kodetimen - Agenten'
+        'mc_2017_puzzle_3': 'Minecraft Kodetimen - Løkker'
+        'mc_2017_puzzle_8': 'Minecraft Kodetimen - Funksjoner'
+        'mc_2017_puzzle_12': 'Minecraft Kodetimen - Fritt spill'
+        'hint_videos_d_11_3_first': 'Hint-videoer: D.11.3 Først'
+        'hint_videos_d_11_3_last': 'Hint-videoer: D.11.3 Sist'
+        'hint_videos_d_11_4_first': 'Hint-videoer: D.11.4 Først'
+        'hint_videos_d_11_4_last': 'Hint-videoer: D.11.4 Sist'
+        'hint_videos_d_11_5_first': 'Hint-videoer: D.11.5 Først'
+        'hint_videos_d_11_5_last': 'Hint-videoer: D.11.5 Sist'
+        'hint_videos_d_11_6_first': 'Hint-videoer: D.11.6 Først'
+        'hint_videos_d_11_6_last': 'Hint-videoer: D.11.6 Sist'
+        'hint_videos_d_11_7_first': 'Hint-videoer: D.11.7 Først'
+        'hint_videos_d_11_7_last': 'Hint-videoer: D.11.7 Sist'
+        'hint_videos_d_11_9_first': 'Hint-videoer: D.11.9 Først'
+        'hint_videos_d_11_9_last': 'Hint-videoer: D.11.9 Sist'
+        'hint_videos_d_11_11_first': 'Hint-videoer: D.11.11 Først'
+        'hint_videos_d_11_11_last': 'Hint-videoer: D.11.11 Sist'
+        'applab_intro_welcome': 'App Lab - kom i gang'
+        'applab_intro_events': 'App Lab - Gjøre det interaktivt'
+        'applab_intro_sounds': 'App Lab - Bilder og lyder'
+        'applab_intro_designmode': 'App Lab: Design modus'
+        'applab_intro_share': 'App Lab - del Appen din'
     callout:
       text:
         drag_blocks: 'Dra en "flytt" blokk og fest den under den andre blokken'
@@ -591,7 +626,7 @@
         repeat: "Sett blokker inni gjenta-løkken for å gjenta kommandoer"
         if_bee_nectar: "Bruke \"Hvis\"-blokken for å avgjøre om bien skal få nektar"
         if_else_bee: "Bruk \"if/else\" blokken slik at bien får nektar fra en blomst og lager honning hvis det ikke er en blomst"
-        repeat_full_circle: "Angi hvor mange ganger zombien må flytte for å lage en full sirkel"
+        repeat_full_circle: "Angi hvor mange ganger zombien må flytte seg for å lage en full sirkel"
         place_length_variable: "Dra lengdevariabelen hit for å erstatte spørsmålstegnene"
         arrows_move_actor: "Bruk pilene til å flytte figuren"
         right_arrow_fireball: "Bruk pil-høyre til å skyte ildkuler"

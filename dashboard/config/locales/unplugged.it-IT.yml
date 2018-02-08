@@ -161,7 +161,7 @@
       BigEvent:
         title: Gli Eventi
         desc: |-
-          Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.<br>
+          Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.\r
           In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       GoingPlacesSafely:
         title: Visitare Luoghi in Modo Sicuro
@@ -204,7 +204,10 @@
           come passare dei parametri ad una funzione. Questo permette di personalizzare
           una funzione senza doverla riscrivere interamente.
       DiceRace:
-        title: 'Algoritmi della Vita Reale: Gara con i Dadi'
+        title: |-
+          https://studio.code.org/s/course3/stage/10/puzzle/1
+
+          Algoritmi della Vita Reale: Gara con i Dadi
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana. In questo
           contesto, gli studenti devono identificare e scrivere l'algoritmo per un
           gioco con i dadi.
@@ -244,7 +247,7 @@
           nuove storie.
       ForLoopFun:
         title: Divertiti usando i Cicli con Contatore
-        desc: Sappiamo che che i cicli permettono di svolgere azioni più e più volte,
+        desc: Sappiamo che i cicli permettono di svolgere azioni più e più volte,
           ma ora impariamo come usare i cicli con strutture aggiuntive.
       SongwritingWithParameters:
         title: Composizione di Canzoni - Parametri
@@ -302,8 +305,8 @@
         title: ''
         desc: ''
       courseA_unplugged_loops:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
+        title: 'Cicli: Lezioni Tradizionali'
+        desc: In questa lezione, si parlerà di cicli!
       courseB_unplugged_MRF:
         title: Attività Tradizionale
         desc: In this lesson, you will 'program' your friends!
@@ -343,7 +346,7 @@
       courseABC_unplugged_bigEvent:
         title: Gli Eventi
         desc: |-
-          Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.<br>
+          Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.\r
           In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       courseB_unplugged_digitalFootprint:
         title: La tua Impronta Digitale
@@ -436,7 +439,7 @@
           lezione sull'astrazione per comprendere a fondo come usare le variabili.
       courseF_unplugged_forLoopFun:
         title: Divertiti usando i Cicli con Contatore
-        desc: Sappiamo che che i cicli permettono di svolgere azioni più e più volte,
+        desc: Sappiamo che i cicli permettono di svolgere azioni più e più volte,
           ma ora impariamo come usare i cicli con strutture aggiuntive.
       courseF_unplugged_songwritingParameters:
         title: Composizione di Canzoni - Parametri
@@ -445,3 +448,38 @@
           più e più volte all'interno di un programma più grande. Questa lezione aiuta
           gli studenti a comprendere intuitivamente perché raggruppare blocchi di
           codice all'interno di funzioni è un'utile pratica.
+      swipeRightPassThrough:
+        title: Recruitment Scenarios Session
+        desc: |-
+          # Recruitment Scenarios Session\r
+          \r
+          ## Swipe Right for CS\r
+          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
+          \r
+          ### How it Works\r
+          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
+          \r
+          \r
+          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+      swipeRightPassThrough-test123:
+        title: Recruitment Scenarios Session
+        desc: |-
+          # Recruitment Scenarios Session\r
+          \r
+          ## Swipe Right for CS\r
+          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
+          \r
+          ### How it Works\r
+          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
+          \r
+          \r
+          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+      brad-repro-bug-000:
+        title: Brad Repro Bug 000
+        desc: |-
+          # Brad Repro Bug 000\r
+          ## Attempt to recreate a bug Brooke reported\r
+          process as follows:\r
+          1. started with an `unplugged` level. populated with info. hit save and publish.\r
+          2. “destroyed” the level\r
+          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush

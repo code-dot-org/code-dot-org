@@ -20,7 +20,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level: level,
       level_source: create(:level_source, level: level)
 
-    assert_cached_queries(12) do
+    assert_cached_queries(11) do
       get script_stage_script_level_path(
         script_id: script.name,
         stage_position: 1,
@@ -65,7 +65,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     sl = Script.find_by_name('course1').script_levels[2]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
-    assert_cached_queries(10) do
+    assert_cached_queries(6) do
       post milestone_path(
         user_id: student.id,
         script_level_id: sl.id
@@ -81,7 +81,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     sl = Script.find_by_name('course1').script_levels[2]
     params = {program: 'fake program', testResult: 0, result: 'false'}
 
-    assert_cached_queries(10) do
+    assert_cached_queries(6) do
       post milestone_path(
         user_id: student.id,
         script_level_id: sl.id

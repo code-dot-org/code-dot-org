@@ -63,8 +63,8 @@ const styles = {
   }
 };
 
-const ProgressLesson = React.createClass({
-  propTypes: {
+class ProgressLesson extends React.Component {
+  static propTypes = {
     lesson: lessonType.isRequired,
     levels: PropTypes.arrayOf(levelType).isRequired,
 
@@ -74,17 +74,19 @@ const ProgressLesson = React.createClass({
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     showLockIcon: PropTypes.bool.isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
-    lessonLockedForSection: PropTypes.func.isRequired
-  },
+    lessonLockedForSection: PropTypes.func.isRequired,
+    selectedSectionId: PropTypes.string,
+  };
 
-  getInitialState() {
-    return {
+  constructor(props) {
+    super(props);
+    this.state = {
       // We want teachers to start with everything uncollapsed. For students we
       // collapse everything except current stage
-      collapsed: this.props.viewAs !== ViewType.Teacher &&
-        this.props.currentStageId !== this.props.lesson.id
+      collapsed: props.viewAs !== ViewType.Teacher &&
+        props.currentStageId !== props.lesson.id
     };
-  },
+  }
 
   componentWillReceiveProps(nextProps) {
     // If we're assigned a stageId, and it is for this lesson, uncollapse
@@ -93,13 +95,11 @@ const ProgressLesson = React.createClass({
         collapsed: this.state.collapsed && nextProps.currentStageId !== this.props.lesson.id
       });
     }
-  },
+  }
 
-  toggleCollapsed() {
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
-  },
+  toggleCollapsed = () => this.setState({
+    collapsed: !this.state.collapsed
+  });
 
   render() {
     const {
@@ -109,7 +109,8 @@ const ProgressLesson = React.createClass({
       viewAs,
       showLockIcon,
       lessonIsVisible,
-      lessonLockedForSection
+      lessonLockedForSection,
+      selectedSectionId,
     } = this.props;
 
     if (!lessonIsVisible(lesson, viewAs)) {
@@ -191,6 +192,7 @@ const ProgressLesson = React.createClass({
               description={description}
               levels={levels}
               disabled={locked && viewAs !== ViewType.Teacher}
+              selectedSectionId={selectedSectionId}
             />
           }
         </div>
@@ -201,7 +203,7 @@ const ProgressLesson = React.createClass({
       </div>
     );
   }
-});
+}
 
 export const UnconnectedProgressLesson = ProgressLesson;
 
@@ -211,5 +213,6 @@ export default connect(state => ({
   viewAs: state.viewAs,
   showLockIcon: !!state.teacherSections.selectedSectionId || state.viewAs === ViewType.Student,
   lessonLockedForSection: lessonId => lessonIsLockedForAllStudents(lessonId, state),
-  lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
+  lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
+  selectedSectionId: state.teacherSections.selectedSectionId,
 }))(ProgressLesson);

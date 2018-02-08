@@ -13,6 +13,7 @@ import Piezo from '@cdo/apps/lib/kits/maker/Piezo';
 import TouchSensor from '@cdo/apps/lib/kits/maker/TouchSensor';
 import NeoPixel from '@cdo/apps/lib/kits/maker/NeoPixel';
 import Led from '@cdo/apps/lib/kits/maker/Led';
+import Switch from '@cdo/apps/lib/kits/maker/Switch';
 import {
   CP_ACCEL_STREAM_ON,
   CP_COMMAND,
@@ -181,8 +182,8 @@ describe('Circuit Playground Components', () => {
           .then((components) => toggleSwitch = components.toggleSwitch);
       });
 
-      it('creates a five.Switch', () => {
-        expect(toggleSwitch).to.be.an.instanceOf(five.Switch);
+      it('creates a Switch', () => {
+        expect(toggleSwitch).to.be.an.instanceOf(Switch);
       });
 
       it('bound to the board controller', () => {
@@ -192,9 +193,6 @@ describe('Circuit Playground Components', () => {
       it('on pin 21', () => {
         expect(toggleSwitch.pin).to.equal(21);
       });
-
-      // Note to self: Possible bug with toggleswitch.close event when it was
-      // open on app start?
     });
 
     describe('buzzer', () => {
@@ -525,12 +523,44 @@ describe('Circuit Playground Components', () => {
         expect(accelerometer.getOrientation('z')).to.equal(0);
       });
 
+      it('getOrientation returns an array if called without any arguments', () => {
+        const stub = sinon.stub(accelerometer, 'getOrientation');
+        stub.withArgs('x').returns(1);
+        stub.withArgs('y').returns(2);
+        stub.withArgs('z').returns(3);
+        stub.callThrough(); // Call original method if none of the above matched.
+
+        expect(accelerometer.getOrientation()).to.deep.equal([
+          accelerometer.getOrientation('x'),
+          accelerometer.getOrientation('y'),
+          accelerometer.getOrientation('z'),
+        ]);
+
+        stub.restore();
+      });
+
       it('and a getAcceleration method', () => {
         expect(accelerometer).to.haveOwnProperty('getAcceleration');
         expect(accelerometer.getAcceleration('x')).to.equal(0);
         expect(accelerometer.getAcceleration('y')).to.equal(0);
         expect(accelerometer.getAcceleration('z')).to.equal(0);
         expect(accelerometer.getAcceleration('total')).to.equal(0);
+      });
+
+      it('getAcceleration returns an array if called without any arguments', () => {
+        const stub = sinon.stub(accelerometer, 'getAcceleration');
+        stub.withArgs('x').returns(1);
+        stub.withArgs('y').returns(2);
+        stub.withArgs('z').returns(3);
+        stub.callThrough(); // Call original method if none of the above matched.
+
+        expect(accelerometer.getAcceleration()).to.deep.equal([
+          accelerometer.getAcceleration('x'),
+          accelerometer.getAcceleration('y'),
+          accelerometer.getAcceleration('z'),
+        ]);
+
+        stub.restore();
       });
     });
 
@@ -694,24 +724,25 @@ describe('Circuit Playground Components', () => {
       expect(spy).to.have.been.calledOnce;
     });
 
-    describe('stops Piezo.play()', () => {
-      let frequencySpy;
+    ['play', 'playSong', 'playNotes'].forEach(methodUnderTest => {
+      describe(`stops Piezo.${methodUnderTest}()`, () => {
+        let frequencySpy;
 
-      beforeEach(() => {
-        // Spy on 'frequency' which play calls internally.
-        frequencySpy = sinon.spy(Playground.Piezo.frequency, 'value');
-      });
+        beforeEach(() => {
+          // Spy on 'frequency' which play calls internally.
+          frequencySpy = sinon.spy(Playground.Piezo.frequency, 'value');
+        });
 
-      afterEach(() => {
-        frequencySpy.restore();
-      });
+        afterEach(() => {
+          frequencySpy.restore();
+        });
 
-      it('stops Piezo.play()', function () {
-        // Make a new one since we're spying on a 'prototype'
-        return createCircuitPlaygroundComponents(board).then(({buzzer}) => {
+        it('stops Piezo.play()', function () {
+          // Make a new one since we're spying on a 'prototype'
+          return createCircuitPlaygroundComponents(board).then(({buzzer}) => {
           // Set up a song
           const tempoBPM = 120;
-          buzzer.play(['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5'], tempoBPM);
+          buzzer[methodUnderTest](['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5'], tempoBPM);
           expect(frequencySpy).to.have.been.calledOnce;
 
           // Make sure the song is playing
@@ -731,6 +762,7 @@ describe('Circuit Playground Components', () => {
           expect(frequencySpy).to.have.been.calledThrice;
         });
       });
+     });
     });
 
     it('calls disable on the soundSensor', () => {

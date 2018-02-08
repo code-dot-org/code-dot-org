@@ -26,11 +26,6 @@ watch it!
 
 <iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/hfZrX5YDltU?iv_load_policy=3" style="margin-bottom: 0px; margin-top: 0px" width="640"></iframe>
 
-(Can't play it online? [Download](https://dl.dropboxusercont
-ent.com/s/6swx35qq5ljleom/HourOfCodeWalkthrough.mp4?token_hash=AAHHqIlb77DTpBo
-VYWgHV3mOCAgZ5K9MSKAUN0sHe9PBug&amp;dl=1) a local copy to watch
-offline)
-
 ## Poster to recruit participants:
 
 Print these posters (ideally on a color printer, or on nice, large poster paper at Kinko's), and hang it up where participants can see it.

@@ -435,11 +435,7 @@ class CurriculumRouter < Pegasus::Base
 
     dir = sites_dir("virtual/curriculum-#{kind}")
 
-    if filename.nil?
-      lesson_dir = dir
-    else
-      lesson_dir = File.join(dir, unit_lesson)
-    end
+    lesson_dir = filename.nil? ? dir : File.join(dir, unit_lesson)
 
     document = resolve_document(lesson_dir, filename || 'lesson')
     return render(document, unit_lesson: unit_lesson, partials_dir: lesson_dir) unless document.nil?

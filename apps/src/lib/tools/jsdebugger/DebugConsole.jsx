@@ -14,6 +14,7 @@ import {
 } from '../../../redux/watchedExpressions';
 import CommandHistory from './CommandHistory';
 import {actions, selectors} from './redux';
+import color from '../../../util/color';
 
 const DEBUG_INPUT_HEIGHT = 16;
 const DEBUG_CONSOLE_LEFT_PADDING = 3;
@@ -34,6 +35,12 @@ const style = {
     cursor: 'text',
     whiteSpace: 'pre-wrap',
     flexGrow: 1,
+  },
+  debugOutputBackgroundError: {
+    backgroundColor: color.lightest_red,
+  },
+  debugOutputBackgroundWarning: {
+    backgroundColor: color.lightest_yellow,
   },
   debugInputWrapper: {
     flexGrow: 0,
@@ -90,6 +97,7 @@ export default connect(
     commandHistory: selectors.getCommandHistory(state),
     jsInterpreter: selectors.getJSInterpreter(state),
     logOutput: selectors.getLogOutput(state),
+    maxLogLevel: selectors.getMaxLogLevel(state),
     isAttached: selectors.isAttached(state),
   }),
   {
@@ -105,6 +113,7 @@ export default connect(
     // from redux
     commandHistory: PropTypes.instanceOf(CommandHistory),
     logOutput: PropTypes.string.isRequired,
+    maxLogLevel: PropTypes.string.isRequired,
     isAttached: PropTypes.bool.isRequired,
     addWatchExpression: PropTypes.func.isRequired,
     removeWatchExpression: PropTypes.func.isRequired,
@@ -184,6 +193,15 @@ export default connect(
 
   focus = () => this._debugInput.focus();
 
+  getDebugOutputBackgroundStyle() {
+    switch (this.props.maxLogLevel) {
+      case 'error':
+        return style.debugOutputBackgroundError;
+      case 'warning':
+        return style.debugOutputBackgroundWarning;
+    }
+  }
+
   render() {
     let classes = 'debug-console';
     if (!this.props.debugButtons) {
@@ -216,7 +234,7 @@ export default connect(
           id="debug-output"
           onMouseUp={this.onDebugOutputMouseUp}
           ref={el => this._debugOutput = el}
-          style={style.debugOutput}
+          style={{...style.debugOutput,...this.getDebugOutputBackgroundStyle()}}
         >
           {this.props.logOutput}
         </div>

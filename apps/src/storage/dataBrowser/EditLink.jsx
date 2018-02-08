@@ -2,12 +2,11 @@ import Radium from 'radium';
 import React, {PropTypes} from 'react';
 import * as dataStyles from './dataStyles';
 
-
-const EditLink = React.createClass({
-  propTypes: {
+class EditLink extends React.Component {
+  static propTypes = {
     name: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired
-  },
+  };
 
   render() {
     return (
@@ -16,6 +15,6 @@ const EditLink = React.createClass({
       </a>
     );
   }
-});
+}
 
 export default Radium(EditLink);

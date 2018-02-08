@@ -22,7 +22,10 @@ require_relative '../../../dashboard/config/environment'
 require 'optparse'
 require 'tmpdir'
 
-options = {actually_update: false, interstitial_days: 0}
+CDO.log = Logger.new(STDOUT)
+ActiveRecord::Base.record_timestamps = false
+
+options = {actually_update: false, interstitial_days: nil, deleted_filter: nil}
 OptionParser.new do |opts|
   opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
   opts.on('-u', '--actually-update', 'Actually perform the update.') do
@@ -31,14 +34,15 @@ OptionParser.new do |opts|
   opts.on('-d', '--interstitial-days DAYS', 'Number of days before showing the interstitial dialog.') do |d|
     options[:interstitial_days] = Integer(d)
   end
+  opts.on('-f', '--deleted-filter [WITH|ONLY]', 'Indicates how deleted users should be included.') do |f|
+    options[:deleted_filter] = f.upcase
+  end
   opts.on('-h', '--help', 'Prints this help') do
     puts opts
     exit
   end
 end.parse!
-puts "Called with options: #{options}"
-
-start_time = Time.now
+CDO.log.info "Called with options: #{options}"
 
 info_count = 0
 user_count = 0
@@ -61,23 +65,36 @@ school_info_ids = ActiveRecord::Base.connection.execute(%Q{
   }
 ).pluck(0)
 
-ActiveRecord::Base.record_timestamps = false
-
 csv_file = "#{Dir.tmpdir}/#{File.basename(__FILE__)}.#{Time.now.strftime('%Y%m%d%H%M')}.csv"
-puts "Writting results to: #{csv_file}"
+CDO.log.info "Writting results to: #{csv_file}"
 
 CSV.open(csv_file, 'w') do |csv|
   csv << ["id", "school_info_id"]
 
   school_info_ids.each do |school_info_id|
     users = User.where("user_type = 'teacher' AND school_info_id = ?", school_info_id)
-    next unless users.count > 1
+    next unless users.with_deleted.count > 1
+
+    if options[:deleted_filter].eql?('WITH')
+      users = users.with_deleted
+    elsif options[:deleted_filter].eql?('ONLY')
+      users = users.only_deleted
+    end
 
     users.each do |user|
       csv << [user.id.to_s, user.school_info_id.to_s]
       if options[:actually_update]
-        user.last_seen_school_info_interstitial = DateTime.now + options[:interstitial_days]
+        # Clear the school_info_id from user, this will prompt the user via the
+        # interstitial diaglo to re-enter the school information.
         user.school_info_id = nil
+
+        # If number of days to show interstitial is specified, future date the
+        # last seen date so that the user will not be promoted until after;
+        # note, this doesn't include the hush time (currently at 7 days).
+        unless options[:interstitial_days].nil?
+          user.last_seen_school_info_interstitial = DateTime.now + options[:interstitial_days]
+        end
+
         # We skip validation as some of our users (particularly teachers) do not
         # pass our own validations (often because they are missing an email).
         user.save!(validate: false)
@@ -89,4 +106,4 @@ CSV.open(csv_file, 'w') do |csv|
   end
 end
 
-puts "Updated #{user_count} user(s) from #{info_count} school_info(s) in #{Time.now - start_time} second(s)."
+CDO.log.info "Updated #{user_count} user(s) from #{info_count} school_info(s)."

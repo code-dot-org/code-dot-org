@@ -13,38 +13,43 @@
         4-5_Artist_Patterns_Free_Play_1: Semua blok favorit Anda diatur dalam kategori.
           Klik pada kata-kata ini untuk melihat di mana semuanya ditempatkan!
       4-5 Bee Conditionals - FC Test_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ingat, periksa untuk melihat jika SETIAP awan yang
+          memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang.
       4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ingat, periksa untuk melihat jika SETIAP awan yang
+          memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang.
       AppLab Intro 2 - Edit place1 2_callout:
-        dragTextAreaIn: Click and drag a "Text Area" onto the screen
-        screenSelectorCallout3: Pick the screen you made
+        dragTextAreaIn: Klik dan tahan "Teks Area" ke layar
+        screenSelectorCallout3: Memilih layar yang anda buat
       AppLab Intro 2 - Edit place1_callout:
-        screenSelectorCallout2: This is the screen selector
-        changePlace1ID: Change the name of your screen here.
+        screenSelectorCallout2: Ini adalah layar pemilih
+        changePlace1ID: Mengubah id layar anda di sini.
       AppLab Intro 2 - Edit startScreen_callout:
-        applabIntro2_1: Click the title of your app
-        appLabIntro2_designMenu: Use these menus to change your app's title
-        appLabIntro2_textColor: Scroll down to change the "text color"
+        applabIntro2_1: Klik judul aplikasi anda
+        appLabIntro2_designMenu: Gunakan menu ini untuk mengubah aplikasi anda "teks"
+        appLabIntro2_textColor: Gulir ke bawah untuk mengubah "warna teks"
       AppLab Intro 2 - Edit startScreen2_callout:
-        applabIntro2storyText: Click the story text on this screen
-        appLabIntro2_editStoryText: Drag out the bottom right hand corner of this
-          text box for more space. Then fill in your story text
-        appLabIntro2_textColor: Try out some of the different properties you can change
-          below
+        applabIntro2storyText: Klik pada teks cerita pada layar ini
+        appLabIntro2_editStoryText: Untuk lebih banyak tempat tariklah sudut kanan
+          bawah kotak teks ini. Kemudian mengisi teks cerita anda
+        appLabIntro2_textColor: Cobalah beberapa properti yang berbeda bisa Anda ubah
+          di bawah ini
       AppLab Intro 2 - add Button_callout:
-        designToolboxCallOut: Drag another button into your app
+        designToolboxCallOut: Pindahkan sebuah tombol ke layar Anda.
         changeButtonID: Choose a clear "id" for your button. For example "callFriendButton"
           or "goOutsideButton"
-        screenSelectorCallout3: Go to your "startScreen"
+        screenSelectorCallout3: Pergi ke "startScreen"
       AppLab Intro 2 - add more buttons 2_callout: []
       AppLab Intro 2 - add more buttons_callout: []
       AppLab Intro 2 - add onEvent_callout:
         onEventFirstTime: Click and drag an "onEvent" block into the workspace to
           the right
         setScreenFirstTime: Click and drag into the space in your "onEvent" block
+      AppLab Intro 7 - Change Screen Color_callout:
+        applab_hoc_finish: Apakah layarnya hijau? Jika ya, tekan 'Finish'. Jika tidak,
+          tekan ' Reset ', ubah kode Anda, dan tekan 'Run' lagi.
+      AppLab Intro 7 - thisOrThatAddButton_callout:
+        AppLabHoCFinal11: Anda sekarang dalam Mode desain.
       AppLab_test02_callout: []
       Applab test_callout: []
       Big Game Animation 1 (copy 1)_callout: []
@@ -148,11 +153,11 @@
       CSD U3 Sprites text_callout: []
       CSD U3 UP_ARROW_callout: []
       CSD U3 Variables Predict Where X_callout:
-        CSD_U3_variables: Change the number here
+        CSD_U3_variables: Ubah nomornya disini
       CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: Klik di sini untuk menampilkan grid.
       CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Klik di sini untuk menampilkan grid.
       CSD U3 Variables TEMPLATE square_callout: []
       CSD U3 Variables make a big square_callout: []
       CSD U3 Variables make a square_callout: []
@@ -286,6 +291,21 @@
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Inilah kodenya
         CSD_U3_rect_c2: Tarik blok ini ke area kode.
+      CSD U6 colorLeds intensity_callout:
+        CSDU6L10_rainbow: Tambahkan kode anda disini
+      CSD U6 colorLeds predict_callout: []
+      CSD U6 getProperty input_callout:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 light show predict_callout:
+        CSDUDL03P09: What does this line do?
+      CSD U6 light show_callout:
+        CSDUDL03P09: What does this line do?
+      CSD U6 tugowar variables 1_callout:
+        CSD_U6_startGame: Define startGame here
+      CSD U6 tugowar variables 2_callout:
+        CSD_U6_movePlayer: Define movePlayer() here
+      CSD U6 tugowar variables 3_callout:
+        CSD_U6_checkWin: Periksa apakah pemain telah menang
       CSDU4 - Design Mode - 3_callout: []
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click
@@ -328,12 +348,12 @@
           can to delete them
       Code Studio Puzzle Challenge Var - Artist_callout: []
       Counting_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Klik kategori untuk melihat blok di kotak peralatan
+          Anda! Pindahkan blok ke ruang kerja untuk menambahkannya ke program Anda
         New Play Lab Project_callout2: Tekan "Run" untuk menyimpan dan menjalankan
           program Anda
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan
+          proyek ini ke akun anda!
       Course 4 Artist 4_callout:
         repeat_full_circle: Masukkan jumlah waktu zombie harus bergerak untuk membuat
           lingkaran penuh
@@ -351,9 +371,9 @@
       Course 4 Artist Functions 8_callout:
         edit_function: Klik di sini untuk mengedit fungsi Anda.
       Course 4 Artist Functions challenge_callout:
-        Course_4_Artist_Functions_challenge_1: Notice that we've sorted all of blocks
-          and put them behind categories to keep things tidy.  Click here to find
-          all of the blocks that you need.
+        Course_4_Artist_Functions_challenge_1: Perhatikan bahwa kami telah memilah
+          semua blok dan menempatkannya di belakang kategori untuk menjaga agar tetap
+          rapi.  Klik di sini untuk menemukan semua blok yang Anda butuhkan.
       Course 4 Artist Params 2_callout:
         length_parameter: Dapatkah Anda memperbarui fungsi ini sehingga dapat menggunakan
           parameter "panjang" ?
@@ -379,8 +399,8 @@
         degrees_per_side: Bagilah 360 Dari jumlah sisi untuk mendapatkan ukuran masing-masing
           sudut dalam derajat.
       Course 4 Artist Vars 8_callout:
-        Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the
-          coding area wider.
+        Course_4_Artist_Vars_8_a: Butuh lebih banyak tempat? Tarik bar ini ke atas
+          untuk membuat area pengkodean lebih lebar.
       Course 4 Artist Vars 9_callout:
         set_sides: Gunakan blok ini untuk menetapkan "sisi" jumlah yang diperlukan
           untuk menyelesaikan teka-teki.
@@ -440,6 +460,14 @@
       Course 4 SCV 6_callout:
         Course_4_SCV_6: This block allows you to customize your color to almost anything
           you want to see!  Play around with the numbers to see what happens!
+      CourseF_PlayLab_vars1_callout:
+        arrows_move_actor: Gunakan panah untuk memindahkan aktor
+      CourseF_PlayLab_vars10_callout:
+        Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories!
+          Click on a label to see the pieces inside.
+      CourseF_PlayLab_vars6_callout: []
+      CourseF_PlayLab_vars7_callout: []
+      CourseF_PlayLab_vars8_callout: []
       Eval Booleans 2_callout:
         Eval Booleans 2 1: Select a number that will make this expression evaluate
           to true
@@ -478,6 +506,9 @@
         snowflake_dropdown: Gunakan drop-down untuk membuat kepingan salju yang berbeda!
       Frozen Project Toolbox (Old)_callout:
         snowflake_dropdown: Gunakan drop-down untuk membuat kepingan salju yang berbeda!
+      Function intro Ryan_callout:
+        Function_intro_Ryan_1: Instruksi kecil ini memberi tahu komputer untuk menjalankan
+          potongan BESAR kode dengan nama yang sama di ruang kerja.
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: Semua blok favorit Anda diatur dalam kategori.
           Klik pada kata-kata ini untuk melihat di mana semuanya ditempatkan!
@@ -494,6 +525,9 @@
         Infinity_move_right_runbutton: Menambahkan blok gerak di sini
       Infinity_repeat_callout:
         Infinity_repeat_callout: Tempat blok gerak di sini
+      InspirationalArtwork_callout:
+        InspirationalArtwork_1: Try using the new `comment` block under this label
+          to leave yourself notes inside your program!
       Luigi's Pizza 1 (copy 1)_callout:
         luigi's pizza 1: Try ordering a pepperoni pizza
       Luigi's Pizza 1_callout:
@@ -512,11 +546,34 @@
       MC HOC 2016 New Spawn_callout: []
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Hit "Run" to start moving.
-      MC_HOC_2017_01_Cole_callout: []
+      MC_HOC_2017_01_Cole_callout:
+        MC_HOC_2017_01_Cole_2: Gunakan tombol panah atau klik di sini untuk mulai
+          memindahkan pemain.
       MC_HOC_2017_01_Kiki_callout: []
+      MC_HOC_2017_02_Cole_callout: []
+      MC_HOC_2017_02_Will_callout:
+        MC_HOC_2017_02_Cole_1: Sekarang pemainmu punya teman!  Kamu bisa menulis kode
+          untuk Agent untuk membantu kamu melewati level.
+      MC_HOC_2017_03_Cole_callout:
+        MC_HOC_2017_03_Cole_1: Ini adalah loop `ulangi`!  Klik untuk memasukkannya
+          ke ruang kerja dan tambahkan kode yang ingin kamu jalankan berulang kali.
+      MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: Agent bisa mengapung di atas air, tapi pemain tidak
+          bisa!
       MC_HOC_2017_04_Kiki_callout:
-        MC_HOC_2017_04_Kiki_1: Click this into the workspace and add some code to
-          repeat it over and over again!
+        MC_HOC_2017_04_Kiki_1: Klik untuk memasukkannya ke ruang kerja dan tambahkan
+          beberapa kode untuk mengulanginya lagi dan lagi!
+      MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: Kamu tidak bisa membuang blok ini, tapi kamu bisa mengeditnya!
+      MC_HOC_2017_08_RY_callout:
+        MC_HOC_2017_08_RY_1: Agent bisa mengapung di atas lahar, tapi pemain tidak
+          bisa!
+      MC_HOC_2017_08_Will_callout:
+        MC_HOC_2017_08_RY_1: Agent bisa mengapung di atas lahar, tapi pemain tidak
+          bisa!
+      MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: Agent bisa mengapung di atas lahar, tapi pemain tidak
+          bisa!
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to
           update the function
@@ -524,12 +581,12 @@
       MSM Defining Vars 3_callout:
         MSM Defining Vars 3: Click here to find your variables
       Mike Playlab Project_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Klik kategori untuk melihat blok di kotak peralatan
+          Anda! Pindahkan blok ke ruang kerja untuk menambahkannya ke program Anda
         New Play Lab Project_callout2: Tekan "Run" untuk menyimpan dan menjalankan
           program Anda
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan
+          proyek ini ke akun anda!
       Modular Arithmetic_callout: []
       NEW Course 4 Artist Functions 10_callout: []
       NEW Course 4 Artist Functions 3_callout:
@@ -570,18 +627,18 @@
           toolbox! Drag blocks to the workspace to add them to your program
         New Artist Project_callout2: Tekan "Run" untuk menyimpan dan menjalankan program
           Anda
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan
+          proyek ini ke akun anda!
       New Frozen Project_callout:
         snowflake_dropdown: Gunakan drop-down untuk membuat kepingan salju yang berbeda!
       New Maker Lab Project_callout: []
       New Play Lab Project_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Klik kategori untuk melihat blok di kotak peralatan
+          Anda! Pindahkan blok ke ruang kerja untuk menambahkannya ke program Anda
         New Play Lab Project_callout2: Tekan "Run" untuk menyimpan dan menjalankan
           program Anda
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan
+          proyek ini ke akun anda!
       Ninjacat Demo B_callout:
         Ninjacat Demo B: Click `Run` to try out the game
       Ninjacat Demo No Animate_callout:
@@ -603,13 +660,15 @@
       PDAlg Big Game History_callout: []
       PDAlg Big Game Remix_callout: []
       PDAlg Design Recipe Delete_callout: []
+      PS clone CSD U3 Variables Predict Where XY_callout:
+        grid: Klik di sini untuk menampilkan grid.
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: Klik di sini untuk menampilkan grid.
       PS copy 2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: Bunga-bunga ungu dapat memiliki 1 atau 0 nektar... tetapi Anda
           tidak akan tahu sampai Anda menjalankan kode!
       PS copy CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Klik di sini untuk menampilkan grid.
       Pizza on a Plate_callout:
         4-5_Artist_Patterns_Free_Play_1: Semua blok favorit Anda diatur dalam kategori.
           Klik pada kata-kata ini untuk melihat di mana semuanya ditempatkan!
@@ -633,8 +692,8 @@
         feeling_stuck_callout_test: " Feeling Stuck?<br />Click the lightbulb for
           a hint!"
       Robot Doodle_callout:
-        4-5_Artist_Patterns_Free_Play_1: Semua blok favorit Anda diatur dalam kategori.
-          Klik pada kata-kata ini untuk melihat di mana semuanya ditempatkan!
+        4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this
+          label to leave yourself notes inside your program!
       Robot Drawing_callout:
         4-5_Artist_Patterns_Free_Play_1: Semua blok favorit Anda diatur dalam kategori.
           Klik pada kata-kata ini untuk melihat di mana semuanya ditempatkan!
@@ -642,38 +701,47 @@
         4-5_Artist_Patterns_Free_Play_1: Semua blok favorit Anda diatur dalam kategori.
           Klik pada kata-kata ini untuk melihat di mana semuanya ditempatkan!
       Rock Paper Scissors_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Klik kategori untuk melihat blok di kotak peralatan
+          Anda! Pindahkan blok ke ruang kerja untuk menambahkannya ke program Anda
         New Play Lab Project_callout2: Tekan "Run" untuk menyimpan dan menjalankan
           program Anda
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan
+          proyek ini ke akun anda!
       Rocket Height Course A_callout:
         pass_function: This start(function) block lets you pass your function (not
           the value your function returns with some input) into the rocket animation
           library. The animation you see on screen is actually using your function
           to move the rocket!
       Ryan - 4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ingat, periksa untuk melihat jika SETIAP awan yang
+          memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang.
       Ryan - Bee Conditionals_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ingat, periksa untuk melihat jika SETIAP awan yang
+          memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang.
+      SG Add Subgoals practice_callout: []
+      SG U3L08 how to add comments_callout:
+        comment_highlight: Drag a comment block from here into your code
+      SG U3L2 Using Simple Commands part 1_callout: []
       SG U3L2 Using Simple Commands_callout: []
-      SG U3L2_Turtle3by3Grid_callout: []
+      SG U3L2_Add-subgoals_callout: []
+      SG U3L2_Turtle3by3Grid_callout:
+        pen_functions: penUp and penDown are here now if you want to use them.
+        goals_tab: drag goals out from here
       SG U3L2_TurtleSquare_right_callout: []
-      SGU3L2A Introducing Subgoals_callout: []
+      SGU3L2A Introducing Subgoals_callout:
+        goals_palette_show: Here is a list of subgoals
+        goals_workspace: Example of code with subgoals in it
       Sam the Butterfly 3_callout:
         Sam the Butterfly 3 1: Edit this function to keep Sam from going off the right
           side
       Sam the Butterfly 5_callout: []
       Test Play Lab Project With Walls_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Klik kategori untuk melihat blok di kotak peralatan
+          Anda! Pindahkan blok ke ruang kerja untuk menambahkannya ke program Anda
         New Play Lab Project_callout2: Tekan "Run" untuk menyimpan dan menjalankan
           program Anda
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan
+          proyek ini ke akun anda!
       TestLab_callout: []
       U3 - Simple Drawing - Ellipse and No Fill_callout: []
       U3 - Simple Drawing - Fill_callout: []
@@ -692,6 +760,8 @@
       U3 Variables make a square_callout: []
       U3L05_3x3GridEfficiencyChallenge_callout: []
       U3L05_draw3x3GridEfficiently_callout: []
+      U3L08 how to add comments_callout:
+        comment_highlight: Drag a comment block from here into your code
       U3L2 Using Simple Commands (no tooltips)_callout: []
       U3L2 Using Simple Commands_callout: []
       U3L2_Turtle3by3Grid_callout: []
@@ -779,6 +849,9 @@
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: This number means that only one of this kind of block
           can be used in the final answer.
+      courseA_artist_loops7_forVideo_callout:
+        courseA_artist_loops7_1: This number means that only one of this kind of block
+          can be used in the final answer.
       courseA_artist_loops8_callout:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
           you need to?
@@ -789,6 +862,23 @@
         gradek_adventurer_loops2_1: This number tells you how many of these blocks
           you can use in this puzzle.
       courseA_collector_loops3_predict1_callout: []
+      courseA_collector_preLoops1_callout:
+        courseA_collector_preLoops1_1: Click here to watch the code run!
+      courseA_collector_preLoops2_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
+      courseA_collector_preLoops3_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
+      courseA_collector_preLoops4_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
+      courseA_collector_preLoops5_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
+      courseA_collector_preLoops6_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
       courseA_forVideoTest_artist_callout: []
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Click the lightbulb when you need a hint!
@@ -796,8 +886,8 @@
         courseA_maze_seqA_callout1: Use the step button to go step-by-step through
           the program. This will help you find the bug!
       courseA_maze_seq4_callout:
-        courseA_maze_seq4_1: These blocks are made of stone.  You can move them, but
-          you can't delete them!
+        made_of_stone: These blocks are made of stone.  You can move them, but you
+          can't delete them!
       courseA_maze_seq4a_callout: []
       courseA_playLab_events2_callout: []
       courseA_playLab_events3_callout: []
@@ -870,8 +960,7 @@
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
-        courseC_maze_programming3_callout2: Use the step button to go step-by-step
-          through the program. This will help you find the bug!
+        courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
@@ -910,8 +999,14 @@
           your code.
       courseD_artist_ramp12_callout: []
       courseD_bee_conditionals2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ingat, periksa untuk melihat jika SETIAP awan yang
+          memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang.
+        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
+      courseD_bee_conditionals2_test_callout:
+        4_5_Bee_Conditionals_2_1: Ingat, periksa untuk melihat jika SETIAP awan yang
+          memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang.
+        4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO
+          HINTS!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the
           nectar (or honey) from one flower (or honeycomb).
@@ -921,6 +1016,9 @@
       courseD_bee_debugging_challenge1_callout:
         courseD_bee_debugging_challenge1_callout1: Use this command to move the bee
           backward.
+      courseD_bee_debugging_challenge1a_callout:
+        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee
+          backward.
       courseD_bee_debugging_challenge2_callout:
         courseD_bee_debugging_challenge1_callout1: Use this command to move the bee
           backward.
@@ -928,6 +1026,7 @@
       courseD_bee_nested_loops_challenge2_callout: []
       courseD_collector_debugging_challenge2_callout: []
       courseD_collector_nested_loops_challenge2_callout: []
+      courseD_collector_nested_loops_challenge2a_callout: []
       courseD_collector_ramp10_callout: []
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
@@ -945,8 +1044,7 @@
       courseD_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
-        courseC_maze_programming3_callout2: Use the step button to go step-by-step
-          through the program. This will help you find the bug!
+        stone_block_2: Grey blocks are made of stone and cannot be thrown away.
       courseD_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
@@ -1027,7 +1125,12 @@
         courseE_artist_ramp8_1: You can change this number.
         courseE_artist_ramp8_2: Click here to type in the number of times to repeat
           your code.
+      courseE_artist_ramp8_2_callout:
+        courseE_artist_ramp8_1: You can change this number.
+        courseE_artist_ramp8_2: Click here to type in the number of times to repeat
+          your code.
       courseE_artist_ramp9_callout: []
+      courseE_artist_ramp9_2_callout: []
       courseE_collector_ramp10_callout: []
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
@@ -1180,7 +1283,8 @@
         courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox
           into category mode to save space.  You will find the new `for` loop in here!
       courseF_bee_for3_predict1_callout: []
-      courseF_bee_for4_callout: []
+      courseF_bee_for4_callout:
+        courseF_bee_for4_1: You will find the `for` loop in here!
       courseF_bee_for6_callout: []
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
@@ -1198,6 +1302,8 @@
       courseF_bee_functions_challenge2_callout: []
       courseF_bee_fwp1_callout:
         courseF_bee_fwp1_1: You can find `if` statements in here.
+      courseF_bee_fwp2_callout:
+        courseF_bee_fwp2_a: The block that calls your function lives in here.
       courseF_bee_fwp3_callout:
         courseF_bee_fwp3_1: This same function can be used when checking for empty
           spaces as well as clouds.
@@ -1228,12 +1334,12 @@
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant
           to be hard and may take several tries.
       courseF_playLab_func2_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Klik kategori untuk melihat blok di kotak peralatan
+          Anda! Pindahkan blok ke ruang kerja untuk menambahkannya ke program Anda
         New Play Lab Project_callout2: Tekan "Run" untuk menyimpan dan menjalankan
           program Anda
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan
+          proyek ini ke akun anda!
       courseF_playlab_embed_vars_callout: []
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories
@@ -1251,7 +1357,8 @@
         courseF_playlab_variables5c_1: You will find your variable block in here.
       courseF_playlab_variables6c_callout:
         courseF_playlab_variables5c_1: You will find your variable block in here.
-      courseF_playlab_variables7c_callout: []
+      courseF_playlab_variables7c_callout:
+        courseF_playlab_variables7c_1: Find the `ask` block here!
       courseF_playlab_variables8c_callout: []
       courseF_playlab_variablesTemplate_callout:
         courseF_playlab_variables5c_1: You will find your variable block in here.
@@ -1362,14 +1469,14 @@
         grade2_puppy_loops2_callout1: You only have one of these blocks available
           in this puzzle.
       grade3_ConditionalsElse_2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ingat, periksa untuk melihat jika SETIAP awan yang
+          memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang.
       grade3_Conditionals_3_callout:
         Bee_Cond_5_1a: Bunga-bunga ungu dapat memiliki 1 atau 0 nektar... tetapi Anda
           tidak akan tahu sampai Anda menjalankan kode!
       grade3_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ingat, periksa untuk melihat jika SETIAP awan yang
+          memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang.
       grade3_playLab_buildGame_1_callout:
         Playlab_cond_1_1: Think of this block as the computer's way of rolling a die,
           and you get to decide how many sides the die has.
@@ -1399,8 +1506,8 @@
         add_and_drag_parameter: Tulis nama parameter Anda di sini, klik Tambahkan,
           dan kemudian tarik ke definisi fungsi Anda
       grade4_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ingat, periksa untuk melihat jika SETIAP awan yang
+          memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang.
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: Gunakan drop-down untuk membuat kepingan salju yang berbeda!
       grade4_frozen_functions3_callout:
@@ -1425,17 +1532,17 @@
         replace_questions: Gunakan drop-down untuk menggantikan "???" dengan sebuah
           angka
       grade4_playLab_proj_example1_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Klik kategori untuk melihat blok di kotak peralatan
+          Anda! Pindahkan blok ke ruang kerja untuk menambahkannya ke program Anda
         New Play Lab Project_callout2: Tekan "Run" untuk menyimpan dan menjalankan
           program Anda
       grade4_playLab_proj_example2_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Klik kategori untuk melihat blok di kotak peralatan
+          Anda! Pindahkan blok ke ruang kerja untuk menambahkannya ke program Anda
         New Play Lab Project_callout2: Tekan "Run" untuk menyimpan dan menjalankan
           program Anda
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan
+          proyek ini ke akun anda!
       grade4_playlab_test_callout: []
       grade4_review_artist1_callout: []
       grade5_artist_for_loops1b_callout:
@@ -1471,8 +1578,8 @@
         add_and_drag_parameter: Tulis nama parameter Anda di sini, klik Tambahkan,
           dan kemudian tarik ke definisi fungsi Anda
       grade5_artist_variables_freeplay10_callout:
-        Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the
-          coding area wider.
+        Course_4_Artist_Vars_8_a: Butuh lebih banyak tempat? Tarik bar ini ke atas
+          untuk membuat area pengkodean lebih lebar.
       grade5_artist_variables_octagons13_callout: []
       grade5_artist_variables_pentagons1_callout:
         place_length_variable: Tariklah panjang variabel berikut untuk menggantikan
@@ -1583,12 +1690,12 @@
           does not have "turn" or "move forward". Also, the goals are not flexible
           (size or sprites).
       small_actors_playlab_projects_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: Klik kategori untuk melihat blok di kotak peralatan
+          Anda! Pindahkan blok ke ruang kerja untuk menambahkannya ke program Anda
         New Play Lab Project_callout2: Tekan "Run" untuk menyimpan dan menjalankan
           program Anda
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan
+          proyek ini ke akun anda!
       subgoal U3 L4 introducing subgoal labels_callout: []
       subgoal U3L2 Using Simple Commands_callout: []
       subgoal-test-clone_callout:

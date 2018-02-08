@@ -1,3 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list --limit 500 2017-01-17-csd-facilitators ./contacts.csv

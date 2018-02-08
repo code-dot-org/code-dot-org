@@ -1,6 +1,0 @@
-#!/bin/sh
-
-# 17503 per experiment
-../send-to-mailing-list --limit 18000 2016-10-13-hoc-global-launch-1 ./contacts-deduped-experiment-1.csv
-../send-to-mailing-list --limit 18000 2016-10-13-hoc-global-launch-2 ./contacts-deduped-experiment-2.csv
-../send-to-mailing-list --limit 18000 2016-10-13-hoc-global-launch-3 ./contacts-deduped-experiment-3.csv

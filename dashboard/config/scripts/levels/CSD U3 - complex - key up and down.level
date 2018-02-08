@@ -97,7 +97,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "callout_json": "[]",
     "start_blocks": "var clicks = 0;\r\n\r\nfunction draw() {\r\n  // If mouseWentDown, add one to the clicks variable\r\n  \r\n  background(\"white\");\r\n  textSize(50);\r\n  textAlign(CENTER, CENTER);\r\n  text(clicks, 0, 0, 400, 400);\r\n}",
     "hide_animation_mode": "false",
@@ -106,14 +106,16 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
-    "encrypted_examples": "ZlClHbF5i/CEVY1TV8sEMlzC+HosS+IHRla5s2QEhhu2tG6zXAe71i486q3M\n3AxH\n",
+    "encrypted_examples": "GGqTz/LS/qGOLBtfVNK4d5jNBO4JGJ/SYOo3LhKsnK2nBWNKo5o9PKAmtP0l\nrfkKI1TlXowEcwS1zxqSLmSdKA==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-11-07 17:48:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-07 17:49:43 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-07 17:51:41 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-07 18:00:00 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

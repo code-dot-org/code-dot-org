@@ -1,3 +1,0 @@
-#!/bin/sh
-
-./send-to-mailing-list 11-19-teachers hoc-2015-nov-19-mailing/hoc-teachers.csv

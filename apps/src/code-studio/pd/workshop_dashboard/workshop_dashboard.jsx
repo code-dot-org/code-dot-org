@@ -40,7 +40,7 @@ const WorkshopDashboard = (
       <IndexRedirect to="/workshops"/>
       <Route
         path="reports"
-        breadcrumbs="Workshop Dashboard,Reports"
+        breadcrumbs="Reports"
         component={ReportView}
       />
       <Route

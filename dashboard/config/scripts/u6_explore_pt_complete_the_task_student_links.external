@@ -4,7 +4,7 @@ title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Unit 6: Lesson 7 - Explore PT - Complete the Task
+# Explore PT - Complete the Task
 
 ## Background
 
@@ -20,20 +20,17 @@ Best of luck!
 
 ## Resources
 
+**AP CSP Performance Task Directions for Students - quick links** 
 
-**New this lesson**
+* Page 2 - [Policy on Plagiarism](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=4)
+* Page 3 - [Preparing for the Through-Course Performance Tasks](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=5)
+* Page 7 - [Preparing for the Explore Performance Task](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=9)
+* Page 8 - [Guidelines for Completing the Explore Performance Task](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=10)
 
-* Explore PT - [Guidelines for completing the task](https://docs.google.com/document/d/1QB6vo46nJcj59OoPAlTTsA8aZ32mOc98CNbKJxTJkJM/edit)
+**College Board Documents**
 
-**Reference: College Board Documents**
-
-* [Explore Performance Task](https://drive.google.com/open?id=0B2QFqkDgv9LjLUtreXQ0a3FrWlE) - Task Description
-* [Scoring Guidelines - Explore Performance Task](https://drive.google.com/open?id=0B2QFqkDgv9LjMDlta0QzUy04NVE)
-
-* *Explore PT Samples:* [Sample A ](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/232659.html)| Sample B | [Sample C](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/232661.html)
-| [Sample D](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/233027.html)
-| [Sample E](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/233028.html)
-
+* [Explore Performance Task](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=6) - Task Description
+* [Scoring Guidelines - Explore Performance Task](https://apcentral.collegeboard.org/pdf/2018-explore-performance-tasks-sg.pdf)
 
 **Digital Portfolio**
 
@@ -42,14 +39,13 @@ Best of luck!
 
 **Review and Planning Documents**
 
-* Explore PT - [Checklist](https://docs.google.com/document/d/1_Q9D1utxDup_4yc1frFCcnEboy_THvsPeIkARZ4by0s/edit)
-* Explore PT - [Sample Timeline](https://docs.google.com/document/d/1TQaCXMkXQ-KpKmN81I4wiRDdQvUfjuaiFLzOPCyMSb8/edit)
-* Explore PT - [Guidelines before starting](https://docs.google.com/document/d/1uzylD9CNW0M6EnS3B4X3YcU9ArSNcLsO80m97lWLQ0s/edit)
-* (Optional) Explore PT - [Template for written responses](https://docs.google.com/document/d/1dEZGM8IZoT3WX4T08NS-Nh-Hi38SVtSF65htxGJpv94/edit)
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+* [Explore PT Survival Guide](https://docs.google.com/document/d/1savzKfWdI6qszDLWDwfNWLQKsbN7021K36kjeqDxzgk/export?format=pdf) - Student Guide (copy as [MS Word](https://docs.google.com/document/d/1savzKfWdI6qszDLWDwfNWLQKsbN7021K36kjeqDxzgk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1savzKfWdI6qszDLWDwfNWLQKsbN7021K36kjeqDxzgk/copy))
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
+
+For the Teacher: [AP Digital Portfolio: Teacher User Guide for AP Computer Science Principles](https://apcentral.collegeboard.org/pdf/computer-science-principles-digital-portfolio-teacher-guide.pdf)
+
 Students can find all the links they need on this page. (If you are viewing this from within the lesson plan click Student Overview to see the student view of the page).
 
 Almost all of the links here are for **student reference, to use while completing the task.**

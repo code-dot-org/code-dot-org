@@ -1,4 +1,0 @@
-#!/bin/sh
-# 11240 hoc-volunteers
-
-./send-to-mailing-list 2015-12-17-volunteers  hoc-2015-survey/volunteers.csv

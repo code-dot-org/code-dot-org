@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Hammer from 'hammerjs';
 
 import trackEvent from '../../util/trackEvent';
-import { trySetLocalStorage } from '../../utils';
+import { tryGetLocalStorage, trySetLocalStorage } from '../../utils';
 import { singleton as studioApp } from '../../StudioApp';
 import craftMsg from './locale';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
@@ -21,6 +21,8 @@ import { getStore } from '../../redux';
 import Sounds from '../../Sounds';
 
 import { TestResults } from '../../constants';
+import {captureThumbnailFromCanvas} from '../../util/thumbnail';
+import {SignInState} from '../../code-studio/progressRedux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -63,6 +65,7 @@ const MUSIC_METADATA = [
   { volume: 1, hasOgg: true, name: 'vignette5-shortpiano' },
   { volume: 1, hasOgg: true, name: 'vignette7-funky-chirps-short' },
   { volume: 1, hasOgg: true, name: 'vignette8-free-play' },
+  { volume: 1, hasOgg: true, name: 'nether2' },
 ];
 
 const CHARACTER_STEVE = 'Steve';
@@ -208,12 +211,15 @@ export default class Craft {
                 config.level.puzzle_number,
               ),
               afterAssetsLoaded: function () {
-                // Make the game solvable as soon as it loads.
-                Craft.gameController.codeOrgAPI.startAttempt(success => {
-                  if (Craft.level.freePlay) {
-                    return;
+                // Listen for hint events that draw a path in the game.
+                window.addEventListener('displayHintPath', e => {
+                  Craft.gameController.levelView.drawHintPath(e.detail);
+                });
+
+                window.addEventListener('craftCollectibleCollected', e => {
+                  if (e.blockType === "diamondMiniblock") {
+                    Craft.setSessionDiamondCollected();
                   }
-                  Craft.reportResult(success);
                 });
 
                 // preload music after essential game asset downloads completely finished
@@ -265,15 +271,25 @@ export default class Craft {
             dom.addClickTouchEvent(resetButton, Craft.resetButtonClick);
 
             const phaserGame = document.getElementById('phaser-game');
+            const hammerToButton = {
+              [Hammer.DIRECTION_LEFT]: 'leftButton',
+              [Hammer.DIRECTION_RIGHT]: 'rightButton',
+              [Hammer.DIRECTION_UP]: 'upButton',
+              [Hammer.DIRECTION_DOWN]: 'downButton',
+            };
+
             const onDrag = function (e) {
-              const hammerToButton = {
-                [Hammer.DIRECTION_LEFT]: 'leftButton',
-                [Hammer.DIRECTION_RIGHT]: 'rightButton',
-                [Hammer.DIRECTION_UP]: 'upButton',
-                [Hammer.DIRECTION_DOWN]: 'downButton',
-              };
               if (hammerToButton[e.direction]) {
                 Craft.gameController.codeOrgAPI.arrowDown(
+                  directionToFacing[hammerToButton[e.direction]],
+                );
+              }
+              e.preventDefault();
+            };
+
+            const onDragEnd = function (e) {
+              if (hammerToButton[e.direction]) {
+                Craft.gameController.codeOrgAPI.arrowUp(
                   directionToFacing[hammerToButton[e.direction]],
                 );
               }
@@ -285,6 +301,7 @@ export default class Craft {
             mc.add(new Hammer.Press({ time: 150 }));
             mc.add(new Hammer.Tap());
             mc.on('pan', onDrag);
+            mc.on('panend pancancel', onDragEnd);
             mc.on('press', () =>
               Craft.gameController.codeOrgAPI.clickDown(() => {}),
             );
@@ -334,7 +351,6 @@ export default class Craft {
     studioApp().setPageConstants(config, {
       isMinecraft: true,
       hideRunButton: config.level.specialLevelType === 'agentSpawn',
-      runButtonText: config.level.agentStartPosition ? craftMsg.runAgent() : undefined,
     });
 
     ReactDOM.render(
@@ -390,6 +406,33 @@ export default class Craft {
     return (
       window.localStorage.getItem('craftSelectedPlayer') || DEFAULT_CHARACTER
     );
+  }
+
+  /**
+   * Get the level IDs for which the player has collected a diamond this
+   * session.
+   *
+   * @return {Number[]} collectedLevels
+   */
+  static getSessionDiamondCollectedLevels() {
+    return JSON.parse(tryGetLocalStorage('craftSessionDiamondCollectedLevels', '[]')) || [];
+  }
+
+  /**
+   * Mark this level as being one for which the player has collected a diamond
+   * this session, if not already marked as such.
+   *
+   * @return {boolean} whether or not the level was newly marked
+   */
+  static setSessionDiamondCollected() {
+    const collectedLevels = Craft.getSessionDiamondCollectedLevels();
+    if (!collectedLevels.includes(Craft.initialConfig.serverLevelId)) {
+      collectedLevels.push(Craft.initialConfig.serverLevelId);
+      trySetLocalStorage('craftSessionDiamondCollectedLevels', JSON.stringify(collectedLevels));
+      return true;
+    }
+
+    return false;
   }
 
   static showPlayerSelectionPopup(onSelectedCallback) {
@@ -482,7 +525,7 @@ export default class Craft {
   static minAssetsForLevelNumber(levelNumber) {
     switch (levelNumber) {
       default:
-        return ['allAssetsMinusPlayer', 'playerAgent'];
+        return ['heroAllAssetsMinusPlayer', 'playerAgent'];
     }
   }
 
@@ -491,7 +534,7 @@ export default class Craft {
     switch (levelNumber) {
       default:
         // May want to push this to occur on level with video
-        return ['allAssetsMinusPlayer', 'playerAgent'];
+        return ['heroAllAssetsMinusPlayer', 'playerAgent'];
     }
   }
 
@@ -507,7 +550,7 @@ export default class Craft {
       case 1:
         return ['playerSteve', 'playerAlex'];
       default:
-        return ['allAssetsMinusPlayer'];
+        return ['heroAllAssetsMinusPlayer'];
     }
   }
 
@@ -519,13 +562,8 @@ export default class Craft {
     if (first) {
       return;
     }
+    captureThumbnailFromCanvas($('#minecraft-frame canvas')[0]);
     Craft.gameController.codeOrgAPI.resetAttempt();
-    Craft.gameController.codeOrgAPI.startAttempt(success => {
-      if (Craft.level.freePlay) {
-        return;
-      }
-      Craft.reportResult(success);
-    });
   }
 
   static phaserLoaded() {
@@ -546,6 +584,20 @@ export default class Craft {
    */
   static resetButtonClick() {
     $('.arrow').prop("disabled", false);
+  }
+
+  static isPreAnimationFailure(testResult) {
+    switch (testResult) {
+      case TestResults.QUESTION_MARKS_IN_NUMBER_FIELD:
+      case TestResults.EMPTY_FUNCTIONAL_BLOCK:
+      case TestResults.EXTRA_TOP_BLOCKS_FAIL:
+      case TestResults.EXAMPLE_FAILED:
+      case TestResults.EMPTY_BLOCK_FAIL:
+      case TestResults.EMPTY_FUNCTION_NAME:
+        return true;
+      default:
+        return false;
+    }
   }
 
   /**
@@ -585,9 +637,9 @@ export default class Craft {
       return;
     }
 
-    if (studioApp().hasUnwantedExtraTopBlocks()) {
-      // immediately check answer instead of executing, which will fail and
-      // report top level blocks (rather than executing them)
+    // Fail immediately for empty repeat blocks, etc.
+    const initialTestResults = studioApp().getTestResults(false);
+    if (Craft.isPreAnimationFailure(initialTestResults)) {
       Craft.reportResult(false);
       return;
     }
@@ -671,6 +723,12 @@ export default class Craft {
           blockType,
           'PlayerAgent');
       },
+      placeDirection: function (blockType, direction, blockID) {
+        appCodeOrgAPI.placeDirection(studioApp().highlight.bind(studioApp(), blockID),
+          blockType,
+          'PlayerAgent',
+          direction);
+      },
       moveDirection: function (direction, targetEntity, blockID) {
         const dirStringToDirection = {
           up: FacingDirection.North,
@@ -681,7 +739,14 @@ export default class Craft {
         appCodeOrgAPI.moveDirection(studioApp().highlight.bind(studioApp(), blockID),
             dirStringToDirection[direction], targetEntity);
       },
-    }, {legacy: true});
+    });
+
+    Craft.gameController.codeOrgAPI.startAttempt(success => {
+      if (Craft.level.freePlay) {
+        return;
+      }
+      Craft.reportResult(success);
+    });
   }
 
   static getTestResultFrom(success, studioTestResults) {
@@ -706,6 +771,20 @@ export default class Craft {
     // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
     const encodedImage = image ? encodeURIComponent(image.split(',')[1]) : null;
 
+    let message;
+    if (testResultType === TestResults.APP_SPECIFIC_FAIL) {
+      message = craftMsg.agentGenericFailureMessage();
+    } else if (testResultType === TestResults.TOO_FEW_BLOCKS_FAIL) {
+      message = craftMsg.agentTooFewBlocksFailureMessage();
+    } else if (testResultType === TestResults.ALL_PASS) {
+      const collectedLevels = Craft.getSessionDiamondCollectedLevels();
+      if (collectedLevels.includes(Craft.initialConfig.serverLevelId)) {
+        message = craftMsg.agentDiamondPathCongrats({
+          count: collectedLevels.length
+        });
+      }
+    }
+
     studioApp().report({
       app: 'craft',
       level: Craft.initialConfig.level.id,
@@ -720,13 +799,18 @@ export default class Craft {
       // typically delay feedback until response back
       // for things like e.g. crowdsourced hints & hint blocks
       onComplete: function (response) {
+        const sharing = Craft.initialConfig.level.freePlay;
+        if (sharing && response.level_source) {
+          trySetLocalStorage('craftHeroShareLink', response.level_source);
+        }
+
+        const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
         studioApp().displayFeedback({
-          app: 'craft',
-          skin: Craft.initialConfig.skin.id,
           feedbackType: testResultType,
-          response: response,
+          response,
           level: Craft.initialConfig.level,
           defaultToContinue: Craft.shouldDefaultToContinue(testResultType),
+          message,
           appStrings: {
             reinfFeedbackMsg: craftMsg.reinfFeedbackMsg(),
             nextLevelMsg: craftMsg.nextLevelMsg({
@@ -736,7 +820,9 @@ export default class Craft {
             generatedCodeDescription: craftMsg.generatedCodeDescription(),
           },
           feedbackImage: image,
-          showingSharing: Craft.initialConfig.level.freePlay,
+          showingSharing: sharing,
+          saveToProjectGallery: true,
+          disableSaveToGallery: !isSignedIn,
         });
       },
     });

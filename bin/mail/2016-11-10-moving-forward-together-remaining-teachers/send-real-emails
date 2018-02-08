@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# 226861 teachers
-../send-to-mailing-list --limit 226861 2016-11-10-moving-forward-together ./teachers.csv

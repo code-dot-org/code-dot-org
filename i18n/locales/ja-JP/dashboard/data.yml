@@ -185,24 +185,24 @@ ja:
         'bounce_11': "「実行」ブロックにブロックを足していきましょう。「新しいボールを発射する」ブロックを一箇所以上使いましょう。背景を変更したり、ラケットやボールのスピードを変えてみましょう。対戦相手が二回スコアを決める前に何ポイント得点できるでしょうか？"
         'bounce_12': "バウンス ゲームを作成してください。デザインやルールは自由に変更できます。終了したら、完了ボタンをクリックしてください。作成したゲームは、他のユーザが携帯電話からアクセスして遊ぶことができます。"
         'Custom_builder': "作成したいレベルを描画するために、ツールボックスからブロックをワークスペースにドラッグします。準備ができたら「実行」を押します。"
-        'flappy_1': "「クリックされたとき」のブロックにほかのブロックを1つくっつけて、「実行」ボタンをおしてください。クリック（またはがめんをタップ）すると、Flappyはもくひょうにむかってうごきます"
-        'flappy_2': "いくつかの面を追加します。「面にヒットしたとき」ブロックに接続します。Flappyがクラッシュしたとき「ゲームオーバー」のコードが必要です"
-        'flappy_3': "「実行時」ブロック同士をくっつけておくと、ゲームがはじまったときにそのブロックのとおりにうごきます。スピードとはねのうごきのレベルをセットしてみてください"
-        'flappy_4': "もしクラッシュさせるコードを書かない場合、Flappyは障害物を通り抜けて飛びます。「障害物にヒットしたとき」ブロックにブロックを接続します。フラッピーが最初に設置されたパイプにクラッシュするときに「ゲーム終了」のコードが必要になります。"
-        'flappy_5': "とくてんひょうをつくり、Flappyがどかんをとおりぬけたときのてんすうをかぞえましょう。「どかんをとおりぬけたとき」のブロックにぶろっくをくっつけて、とんでいるFlappyがどかんのあいだをとおりぬけたときにてんすうがふえるようにしてください"
-        'flappy_6': "フラッピーのふらふら飛ぶ量を小さくや大きくした後、まだ得点しているかどうか見てください。"
-        'flappy_7': "次に、「実行時」ブロックにもう1つのブロックをくっつけて背景を変えてみてください"
-        'flappy_8': "ゲームが開始した以外にもいつでもビジュアルを設定できます。例えば、障害物を過ぎたとき、などの状況が起こるランダムな状況を設定するようにしてください\n"
-        'flappy_9': "色々な組み合わせを試してみましょう。障害物や地面にヒットした時に、ゲーム終了のかわりにスコアが0にもどるように設定して下さい。"
-        'flappy_11': "じぶんのFlappyゲームを作ってみましょう。みためやルール、じゅうりょくもすきなようにかえられます。作りおわったら、「完了」ボタンをクリックしてともだちにおしえましょう。ともだちはけいたいでんわをつかって、あなたのゲームであそぶことができます。"
-        'flappy_k1_1': "Flappyであそぶ"
-        'flappy_k1_2': "「クリックされたとき」のブロックにほかのブロックを1つくっつけて、「実行」ボタンをおしてください。クリック（またはがめんをタップ）すると、Flappyはもくひょうにむかってうごきます"
+        'flappy_1': "「クリックしたとき」ブロックに「パタパタする」ブロックを くっつけて、「実行」ボタンを おしてください。クリック（または がめんをタップ）すると、フラッピーは もくひょうにむかって とんでいきます。"
+        'flappy_2': "こんどは、じめんを みてください。じめんに ぶつかったとき、ゲームがおわる ようにプログラミングしてみよう。「ゲームオーバー」ブロックを つかってね。"
+        'flappy_3': "フラッピーが とぶ はやさを かえてみよう。「実行したとき」ブロックに、スピードをかえるブロックを くっつければいいよ。"
+        'flappy_4': "障害物（しょうがいぶつ）にぶつかったときのプログラムがないと、Flappyは障害物を通りぬけてしまいます。「障害物にぶつかったとき」ブロックに、なにかブロックをくっつけてください。Flappyがパイプにぶつかったら、「ゲーム終了」するようにしましょう。"
+        'flappy_5': "フラッピーが しょうがいぶつを とおりぬけたら、ポイントをゲットするようにプログラミングしよう。「しょうがいぶつを とおりぬけたとき」ブロックで、「1ポイント ゲット」ブロックをつかうんだ。"
+        'flappy_6': "「すこしパタパタする」や「たくさんパタパタする」ブロックを つかってみて。そのあとも、ポイントがゲットできるかな。"
+        'flappy_7': "はいけいを かえてみよう。「実行したとき」ブロックに、どのブロックをくっつければ いいかな？"
+        'flappy_8': "はいけいは、いつでも かえることが できるよ。しょうがいぶつを とおりぬけたときに、はいけいが ランダムに てきとうに かわるように してみよう。"
+        'flappy_9': "しょうがいぶつに あたったとき、ゲームは おわらず、とくてんが 0 になるように プログラムを かえてください。"
+        'flappy_11': "じぶんのフラッピー ゲームを作ろう。みため、ルール、じゅうりょくも、ぜんぶ かえられます。作りおわったら、「おわり」ボタンをクリックして、ともだちにシェアして あそんでもらおう。"
+        'flappy_k1_1': "フラッピーであそぶ"
+        'flappy_k1_2': "「クリックしたとき」ブロックに「パタパタする」ブロックを くっつけて、「実行」ボタンを おしてください。クリック（または がめんをタップ）すると、フラッピーは もくひょうにむかって とんでいきます。"
         'flappy_k1_3': "いくつかの地面を追加します。「地面にヒットしたとき」ブロックに接続します。Flappyがクラッシュしたとき「ゲームオーバー」のコードが必要です。"
-        'flappy_k1_4': "「実行時」ブロック同士をくっつけておくと、ゲームがはじまったときにそのブロックのとおりにうごきます。スピードとはねのうごきのレベルをセットしてみてください"
+        'flappy_k1_4': "フラッピーが とぶ はやさを かえてみよう。「実行したとき」ブロックに、スピードをかえるブロックを くっつければいいよ。"
         'flappy_k1_5': "もしクラッシュさせるためのコードを書かない場合、Flappyは障害物を通り抜けて飛びます。「障害物にヒットしたとき」ブロックにブロックを接続します。フラッピーが最初に設置されtパイプにクラッシュするときに「ゲームエンド」のコードが必要になります。"
         'flappy_k1_6': "スコアボード（得点表）を追加して Flappyが障害物を過ぎたときの得点を数えましょう。「障害物と過ぎたとき」ブロックを追加して、飛んでいるフラッピーが最初の設定したパイプを過ぎるたびに得点をさせてください。"
         'flappy_k1_7': "どかんをとおりぬけるたびになんかいもてんすうがふえるかどうか、かくにんしてください。"
-        'flappy_k1_8': "次に、「実行時」ブロックにもう1つのブロックをくっつけて背景を変えてみてください"
+        'flappy_k1_8': "はいけいを かえてみよう。「実行したとき」ブロックに、どのブロックをくっつければ いいかな？"
         'flappy_k1_9': "「実行時」ブロックに「プレイヤーをセット」のブロックをくっつけて、プレイヤーのみためをかえてみてください。"
         'jigsaw_1': "ブロックをクリックします。"
         'jigsaw_2': "ブロックをターゲットにドラッグします。\nスマイル マークをうごかして、かさねてください。"
@@ -304,7 +304,7 @@ ja:
         'maze_intro': "迷路入門"
         'artist_intro': "アーティスト紹介"
         'farmer_intro': "農家入門"
-        'flappy_intro': "Flappy入門編"
+        'flappy_intro': "フラッピー入門"
         'loop_times': "回ブロックを繰り返す"
         'loop_until': "までブロックを繰り返します"
         'if': "もしブロック"
@@ -396,6 +396,7 @@ ja:
         'C4_unplugged_forloops': 'ループ用'
         'C4_unplugged_parameters': 'パラメーターで歌や曲をつくる'
         'C4_unplugged_binary': '２しんすう'
+        'CSF_a_b_artist_loops': 'アーティストくりかえし'
         'CSF_artist_angles': 'アーティストにおける角度'
         'CSF_collector_k1_blocks': 'CS の基礎: コレクター'
         'CSF_collector_repeat_loops': 'コレクター 繰り返しループ'
@@ -422,9 +423,16 @@ ja:
         'infinity_playlab_intro': 'プレイラボ：イントロダクション'
         'infinity_playlab_events': 'ゲームラボ - イベント'
         'infinity_playlab_repeat_forever': 'プレイラボ - ずっとくりかえす'
+        'csd_concept_how_computers_work': 'Introducing How Computers Work'
         'csd_concept_computer': '何がコンピュータをコンピュータにするのか。'
         'csd_concept_binary_data': 'How Computers Work: Binary & Data'
+        'csd_concept_circuits_logic': 'How Computers Work: Circuits & Logic'
+        'csd_concept_memory_cpu_input_output': 'How Computers Work: Memory, CPU, Input, & Output'
+        'csd_concept_hardware_software': 'How Computers Work: Hardware & Software'
         'csd_concept_search': '検索のしくみ'
+        'csd_external_amazon_data': 'How Big Data Is Used In Amazon Recommendation Systems To Change Our Lives'
+        'csd_external_netflix_data': 'How Does Netflix Make TV Show and Movie Suggestions?'
+        'csd_external_waze_data': 'Why Are So Many Users Obsessed With Waze?'
         'csd_gamelab_animation_tab': '[アニメーション] タブ'
         'csd_gamelab_conditionals_1': 'Introduction to Conditionals - Part 1'
         'csd_gamelab_conditionals_2': 'Introduction to Conditionals - Part 2'
@@ -530,6 +538,33 @@ ja:
         'applab_hoc_onevent': 'App Lab Hour of Code - onEvent'
         'applab_hoc_designmode': 'AppLab Hour of Code - Design Mode'
         'applab_hoc_share': 'AppLab Hour of Code - Share'
+        'mc_2017_agent_intro': 'Minecraft Hour of Code - The Agent'
+        'mc_2017_repeat': 'Minecraft Hour of Code - Repeat Loops'
+        'mc_2017_functions': 'Minecraft Hour of Code - Functions'
+        'mc_2017_congratulations': 'Minecraft Hour of Code - おめでとう'
+        'mc_2017_puzzle_1': 'Minecraft Hour of Code - The Agent'
+        'mc_2017_puzzle_3': 'Minecraft Hour of Code - Repeat Loops'
+        'mc_2017_puzzle_8': 'Minecraft Hour of Code - Functions'
+        'mc_2017_puzzle_12': 'Minecraft Hour of Code - Freeplay'
+        'hint_videos_d_11_3_first': 'Hint Videos: D.11.3 First'
+        'hint_videos_d_11_3_last': 'Hint Videos: D.11.3 Last'
+        'hint_videos_d_11_4_first': 'Hint Videos: D.11.4 First'
+        'hint_videos_d_11_4_last': 'Hint Videos: D.11.4 Last'
+        'hint_videos_d_11_5_first': 'Hint Videos: D.11.5 First'
+        'hint_videos_d_11_5_last': 'Hint Videos: D.11.5 Last'
+        'hint_videos_d_11_6_first': 'Hint Videos: D.11.6 First'
+        'hint_videos_d_11_6_last': 'Hint Videos: D.11.6 Last'
+        'hint_videos_d_11_7_first': 'Hint Videos: D.11.7 First'
+        'hint_videos_d_11_7_last': 'Hint Videos: D.11.7 Last'
+        'hint_videos_d_11_9_first': 'Hint Videos: D.11.9 First'
+        'hint_videos_d_11_9_last': 'Hint Videos: D.11.9 Last'
+        'hint_videos_d_11_11_first': 'Hint Videos: D.11.11 First'
+        'hint_videos_d_11_11_last': 'Hint Videos: D.11.11 Last'
+        'applab_intro_welcome': 'App Lab - Getting Started'
+        'applab_intro_events': 'App Lab - Make It Interactive'
+        'applab_intro_sounds': 'App Lab - Images and Sounds'
+        'applab_intro_designmode': 'App Lab - Design Mode'
+        'applab_intro_share': 'App Lab - Share Your App'
     callout:
       text:
         drag_blocks: '「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。'

@@ -10,7 +10,7 @@
   text.  It's very important that we don't lose or miss this check.
   Check that @script_level exists, because it won't for a /level/ view.
 
-- unless @script_level && @script_level.can_view_last_attempt(current_user, @user)
+- if @script_level && @script_level.should_hide_survey(current_user, @user)
   - page = @pages.first
   %h2= t('heading_x_of_y', heading: data["title"], x: page.page_number, y: @level.pages.length)
   %br/
@@ -21,6 +21,9 @@
   -# show all pages of the LevelGroup at once.  Otherwise we'll show the actual
   -# page.  The controller takes care of that for us.
   - current_page = params[:puzzle_page] || 1
+
+  -# Is this a survey where we've already submitted
+  - submitted_survey = @script_level.try(:anonymous?) && current_user && current_user.user_level_for(@script_level, @level).try(:submitted?)
 
   -# anonymous users shouldn't ever see lockable stages, but give them the locked_stage message if they do
   - if @script_level && @script_level.stage.lockable? && (!current_user || @script_level.locked?(current_user))
@@ -35,15 +38,14 @@
           %h2= t('heading_x_of_y', heading: data["title"], x: page.page_number, y: @level.pages.length)
           %br/
 
+        - if submitted_survey
+          #survey-submission-thankyou
+            = I18n.t('level_group.survey_submission_thankyou')
+
         - page.levels.each_with_index do |level, index|
-          -# Fall back to retrieving the last_attempt from the parsed levelgroup last_attempt
-          - sublevel_last_attempt = parsed_last_attempt[level.id.to_s].try(:[], 'result')
-          - if @user && current_user && @user != current_user
-            -# load other user's solution for teachers viewing their students' solution
-            - sublevel_last_attempt = @user.last_attempt(level).try(:level_source).try(:data)
-          - elsif current_user
-            -# load user's previous attempt at this puzzle.
-            - sublevel_last_attempt = current_user.last_attempt(level).try(:level_source).try(:data)
+          -# Don't show last attempt for submitted surveys, even for the current user, otherwise teachers
+          -# could access student responses
+          - sublevel_last_attempt = LevelGroup.get_sublevel_last_attempt(current_user, @user, level) unless submitted_survey
 
           -# Show any text from an external level.
           - if data["texts"]
@@ -69,7 +71,7 @@
               = render partial: 'levels/free_response', locals: {in_level_group: true, level: level, last_attempt: sublevel_last_attempt}
 
         - unless @script_level.nil?
-          = render partial: 'levels/dialog', locals: {app: app, data: data, previous_button: page.page_number > 1, next_button: page.page_number < @total_page_count}
+          = render partial: 'levels/dialog', locals: {app: app, previous_button: page.page_number > 1, next_button: page.page_number < @total_page_count}
 
 - content_for(:head) do
   - level_data = data

@@ -59,15 +59,15 @@
           về toàn bộ lớp học, bất kể loại chuỗi hay hạt nào. Để có hiệu quả, các bạn
           sẽ cần phải tóm tắt ra chi tiết những tài liệu cụ thể của họ và tạo ra những
           thuật ngữ mơ hồ cho nguồn cung cấp của một cá nhân. Sử dụng những điểm chung
-          này là một sự giới thiệu biến tuyệt vời.
+          này là một sự giới thiệu biến số tuyệt vời.
         pdfs:
         - unplug5
         video: Unplug5
       Unplug6:
         title: "Điều kiện"
-        desc: "Đây là trò chơi theo nhóm. Sau khi giới thiệu ý tưởng, mẫu if, và vòng
-          lặp, cả lớp có thể luyện tập cùng nhau sử dụng một chương trình viết trước,
-          một cỗ bài, và vẽ vận may."
+        desc: "Đây là trò chơi trong lớp. Sau khi giới thiệu ý tưởng về các điều kiện,
+          câu lệnh if, và vòng lặp, cả lớp có thể luyện tập cùng nhau sử dụng một
+          chương trình viết trước, một cỗ bài, và vẽ vận may."
         pdfs:
         - unplug6
         video: Unplug6
@@ -294,29 +294,31 @@
         desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
+        desc: Trong bài học này, bạn sẽ học về vòng lặp!
       courseB_unplugged_MRF:
         title: Hoạt động không dùng máy
-        desc: In this lesson, you will 'program' your friends!
+        desc: Trong bài học này, bạn sẽ 'lập trình' bạn bè của bạn!
       courseB_unplugged_loopyMRF:
         title: Hoạt động không dùng máy
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
-          but this time with loops!
+        desc: Giống như trong "Người bạn robot của tôi", bạn sẽ "lập trình" bạn bè
+          của bạn, nhưng lần này là với vòng lặp!
       courseC_Unplugged_ScreenOutTheMean:
         title: Hoạt động không dùng máy
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Hôm nay bạn sẽ tìm hiểu về những gì phải làm nếu một người nào đó được
+          ám chỉ là đang online.
       courseD_unplugged_digitalCitizenship:
         title: Hoạt động không dùng máy
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Hôm nay bạn sẽ tìm hiểu một công dân số là thế nào.
       courseE_unplugged_privateInformation:
-        title: Hoạt động không dùng máy
-        desc: Today you will learn the difference between private and personal information!
+        title: 'Giáo dục ý thức phổ biến: Thông tin riêng tư và cá nhân '
+        desc: Hôm nay bạn sẽ tìm hiểu sự khác biệt giữa thông tin riêng tư và cá nhân!
       courseF_unplugged_powerOfWords:
         title: Hoạt động không dùng máy
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Hôm nay bạn sẽ tìm hiểu về những gì phải làm nếu một người nào đó được
+          ám chỉ là đang online.
       deeper learning description:
         title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
+        desc: 'bản dịch thiếu: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Thuật toán đời sống: Trồng một hạt giống'
         desc: Bài học này nêu lên cách chúng ta sử dụng thuật toán trong cuộc sống
@@ -387,7 +389,7 @@
           xa hơn như cách minh họa làm thế nào một máy tính có thể lưu trữ các thông
           tin phức tạp hơn (chẳng hạn như hình ảnh và màu sắc) trong hệ nhị phân.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
+        title: 'Thuật toán trong đời thực: Chơi xúc sắc'
         desc: Bài học này chỉ ra cách chúng tôi sử dụng thuật toán trong cuộc sống
           hàng ngày. Là một phần trong đó, học sinh sẽ nhận biết và viết các thuật
           toán cho một trò chơi xúc xắc.
@@ -434,3 +436,49 @@
           nhỏ mà bạn có thể sử dụng lặp đi lặp lại bên trong của chương trình lớn
           hơn. Bài học này sẽ giúp trực giác của sinh viên hiểu tại sao kết hợp các
           khối mã hóa thành các chức năng là rất hữu ích trong thực tế.  '
+      swipeRightPassThrough:
+        title: Phần kịch bản tuyển dụng
+        desc: "# Phần kịch bản tuyển dụng\\r \n\\r \n## Swipe Right for CS\\r \nTrong
+          phần này, chúng tôi sẽ sử dụng một công cụ được gọi là \"Swipe Right for
+          CS\" (Trượt qua bên phải đến phần KHMT), đã được phát triển bởi các đối
+          tác tại MIT. Tong phần Swipe Right for CS, bạn sẽ đọc qua một số hồ sơ sinh
+          viên và xem xét câu lệnh cụ thể mà bạn có thể sử dụng để thuyết phục anh
+          ấy hoặc cô ấy ghi danh vào khóa học KHMT cơ bản của bạn. \\r \n\\r \n###
+          Nó vận hành thế nào\\r \nKhi chơi trò chơi Swipe cho CS, bạn sẽ thấy một
+          loạt các dòng ghi chú mà bạn có thể nói cho mỗi học sinh. Bạn sẽ trượt qua
+          bên phải tới các dòng ghi chú mà bạn nghĩ rằng sẽ có hiệu quả trong việc
+          thuyết phục học sinh ghi danh vào các khóa học và trượt qua bên trái vào
+          câu lệnh mà bạn nghĩ rằng sẽ không có hiệu quả. Trong nội dung này chúng
+          ta sẽ thảo luận như là một nhóm về những suy nghĩ của bạn về các loại câu
+          lệnh hiệu quả nhất trong việc giúp một học sinh tham gia vào KHMT, và bạn
+          sẽ có cơ hội để xem cách những người khác trong hội thảo của bạn phản hồi
+          trên mỗi luận điểm. \\r \n\\r \n\\r khi bạn nhấp vào tiếp tục dưới đây,
+          chúng tôi sẽ gửi cho bạn các trò chơi, và đi qua địa chỉ email Code.org
+          mà bạn dùng để đăng nhập."
+      swipeRightPassThrough-test123:
+        title: Phần kịch bản tuyển dụng
+        desc: "# Phần kịch bản tuyển dụng\\r \n\\r \n## Swipe Right for CS\\r \nTrong
+          phần này, chúng tôi sẽ sử dụng một công cụ được gọi là \"Swipe Right for
+          CS\" (Trượt qua bên phải đến phần KHMT), đã được phát triển bởi các đối
+          tác tại MIT. Tong phần Swipe Right for CS, bạn sẽ đọc qua một số hồ sơ sinh
+          viên và xem xét câu lệnh cụ thể mà bạn có thể sử dụng để thuyết phục anh
+          ấy hoặc cô ấy ghi danh vào khóa học KHMT cơ bản của bạn. \\r \n\\r \n###
+          Nó vận hành thế nào\\r \nKhi chơi trò chơi Swipe cho CS, bạn sẽ thấy một
+          loạt các dòng ghi chú mà bạn có thể nói cho mỗi học sinh. Bạn sẽ trượt qua
+          bên phải tới các dòng ghi chú mà bạn nghĩ rằng sẽ có hiệu quả trong việc
+          thuyết phục học sinh ghi danh vào các khóa học và trượt qua bên trái vào
+          câu lệnh mà bạn nghĩ rằng sẽ không có hiệu quả. Trong nội dung này chúng
+          ta sẽ thảo luận như là một nhóm về những suy nghĩ của bạn về các loại câu
+          lệnh hiệu quả nhất trong việc giúp một học sinh tham gia vào KHMT, và bạn
+          sẽ có cơ hội để xem cách những người khác trong hội thảo của bạn phản hồi
+          trên mỗi luận điểm. \\r \n\\r \n\\r khi bạn nhấp vào tiếp tục dưới đây,
+          chúng tôi sẽ gửi cho bạn các trò chơi, và đi qua địa chỉ email Code.org
+          mà bạn dùng để đăng nhập."
+      brad-repro-bug-000:
+        title: Brad Repro Bug 000
+        desc: |-
+          # Brad Repro Bug 000\r
+          ## Nỗ lực tạo lại một con bọ Brooke\r theo quy trình sau:\r
+          1. bắt đầu với cấp độ không cần máy tính. làm quen với thông tin. nhấn sao lưu và đăng tin.\r
+          2. "phá huỷ" cấp độ\r
+          3. tạo một cấp độ "đánh dấu" với cùng một nội dung và cùng tên. Kiểm tra hộp thư mã hoá nó. nhấn sao lưu

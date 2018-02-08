@@ -5,13 +5,13 @@
  */
 
 import React, {PropTypes} from 'react';
-var Radium = require('radium');
-var color = require("../../util/color");
-var styleConstants = require('../../styleConstants');
+import Radium from 'radium';
+import color from '../../util/color';
+import styleConstants from '../../styleConstants';
 
-var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
+const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
-var styles = {
+const styles = {
   main: {
     position: 'absolute',
     height: RESIZER_HEIGHT,
@@ -30,8 +30,8 @@ var styles = {
   }
 };
 
-var HeightResizer = React.createClass({
-  propTypes: {
+class HeightResizer extends React.Component {
+  static propTypes = {
     position: PropTypes.number.isRequired,
     /**
      * @param {number} delta - amount we're trying to resize by
@@ -39,16 +39,14 @@ var HeightResizer = React.createClass({
      */
     onResize: PropTypes.func.isRequired,
     style: PropTypes.object,
-  },
+  };
 
-  getInitialState: function () {
-    return {
-      dragging: false,
-      dragStart: 0
-    };
-  },
+  state = {
+    dragging: false,
+    dragStart: 0
+  };
 
-  componentDidUpdate: function (props, state) {
+  componentDidUpdate(_, state) {
     // Update listeners as dragging state changes
     if (this.state.dragging && !state.dragging) {
       document.addEventListener('mousemove', this.onMouseMove);
@@ -57,9 +55,9 @@ var HeightResizer = React.createClass({
       document.removeEventListener('mousemove', this.onMouseMove);
       document.removeEventListener('mouseup', this.onMouseUp);
     }
-  },
+  }
 
-  onMouseDown: function (event) {
+  onMouseDown = (event) => {
     if (event.button !== 0) {
       return;
     }
@@ -67,16 +65,16 @@ var HeightResizer = React.createClass({
     event.preventDefault();
 
     this.setState({ dragging: true, dragStart: event.pageY });
-  },
+  };
 
-  onMouseUp: function (event) {
+  onMouseUp = (event) => {
     event.stopPropagation();
     event.preventDefault();
 
     this.setState({ dragging: false });
-  },
+  };
 
-  onMouseMove: function (event) {
+  onMouseMove = (event) => {
     event.stopPropagation();
     event.preventDefault();
 
@@ -84,16 +82,16 @@ var HeightResizer = React.createClass({
       return;
     }
 
-    var delta = event.pageY - this.state.dragStart;
+    const delta = event.pageY - this.state.dragStart;
 
     // onResize can choose to limit how much we actually move, and will report
     // back the value
-    var actualDelta = this.props.onResize(delta);
+    const actualDelta = this.props.onResize(delta);
     this.setState({ dragStart: this.state.dragStart + actualDelta });
-  },
+  };
 
-  render: function () {
-    var mainStyle = [
+  render() {
+    const mainStyle = [
       styles.main,
       {
         top: this.props.position - RESIZER_HEIGHT
@@ -112,6 +110,6 @@ var HeightResizer = React.createClass({
       </div>
     );
   }
-});
+}
 
-module.exports = Radium(HeightResizer);
+export default Radium(HeightResizer);
