@@ -265,7 +265,7 @@ module LevelsHelper
     use_droplet = app_options[:droplet]
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
-    use_gamelab = @level.game == Game.gamelab
+    use_gamelab = @level.game.app == Game::GAMELAB
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
     use_blockly = !use_droplet && !use_netsim && !use_weblab

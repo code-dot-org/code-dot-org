@@ -74,10 +74,6 @@ class Gamelab < Blockly
     )
   end
 
-  def xml_blocks
-    %w()
-  end
-
   def update_palette
     if code_functions.present? && code_functions.is_a?(String)
       self.code_functions = JSON.parse(code_functions)

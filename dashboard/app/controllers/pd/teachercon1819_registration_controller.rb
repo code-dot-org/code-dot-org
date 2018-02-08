@@ -9,11 +9,25 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
   # non-authorized users with a custom page explaining that they must be logged
   # in as a facilitator account, rather than giving them the generic 404
   rescue_from CanCan::AccessDenied do
-    render :unauthorized
+    if current_user
+      render :unauthorized
+    else
+      redirect_to '/users/sign_in'
+    end
   end
 
   def new
     unless @application.application_type == "Teacher" || @application.application_type == "Facilitator"
+      render :invalid
+      return
+    end
+
+    unless @application.pd_workshop_id && Pd::Workshop.find(@application.pd_workshop_id).teachercon?
+      render :invalid
+      return
+    end
+
+    unless @application.locked? && @application.status == 'accepted'
       render :invalid
       return
     end
