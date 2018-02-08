@@ -91,20 +91,20 @@ describe('SchoolInfoInterstitial', () => {
         scriptData={{
           ...MINIMUM_PROPS.scriptData,
           existingSchoolInfo: {
-            ncesSchoolId: '123',
-            country: 'US',
-            schoolType: 'public',
-            schoolName: 'Test School',
-            schoolState: 'Washington',
-            schoolZip: '98109',
-            schoolLocation: 'Seattle',
+            school_id: '123',
+            country: 'United States',
+            school_type: 'public',
+            school_name: 'Test School',
+            state: 'Washington',
+            zip: '98109',
+            full_address: 'Seattle',
           },
         }}
       />
     );
     expect(wrapper).to.containMatchingElement(
       <SchoolInfoInputs
-        country={'US'}
+        country={'United States'}
         schoolType={'public'}
         ncesSchoolId={'123'}
         schoolName={'Test School'}
@@ -134,7 +134,7 @@ describe('SchoolInfoInterstitial', () => {
           scriptData={{
             ...MINIMUM_PROPS.scriptData,
             existingSchoolInfo: {
-              ncesSchoolId: '123',
+              school_id: '123',
             },
           }}
         />
@@ -149,9 +149,9 @@ describe('SchoolInfoInterstitial', () => {
           scriptData={{
             ...MINIMUM_PROPS.scriptData,
             existingSchoolInfo: {
-              country: 'UK',
-              schoolType: 'public',
-              schoolName: 'Test School Name',
+              country: 'Canada',
+              school_type: 'public',
+              school_name: 'Test School Name',
             },
           }}
         />
@@ -166,9 +166,9 @@ describe('SchoolInfoInterstitial', () => {
           scriptData={{
             ...MINIMUM_PROPS.scriptData,
             existingSchoolInfo: {
-              country: 'US',
-              schoolType: 'homeschool',
-              schoolName: 'Test School Name',
+              country: 'United States',
+              school_type: 'homeschool',
+              school_name: 'Test School Name',
             },
           }}
         />
@@ -183,11 +183,11 @@ describe('SchoolInfoInterstitial', () => {
           scriptData={{
             ...MINIMUM_PROPS.scriptData,
             existingSchoolInfo: {
-              country: 'US',
-              schoolType: 'public',
-              schoolName: '',
-              schoolState: '',
-              schoolZip: '',
+              country: 'United States',
+              school_type: 'public',
+              school_name: '',
+              state: '',
+              zip: '',
             },
           }}
         />
@@ -197,7 +197,7 @@ describe('SchoolInfoInterstitial', () => {
 
     // Matrix of conditions where NCES ID initializes to "-1":
     ['public', 'private', 'charter'].forEach((schoolType) => {
-      ['schoolName', 'schoolState', 'schoolZip'].forEach((schoolDetailFieldName) => {
+      ['school_name', 'state', 'zip'].forEach((schoolDetailFieldName) => {
         it(`is "-1" if country is US and schoolType is ${schoolType} and ${schoolDetailFieldName} was provided`, () => {
           const wrapper = shallow(
             <SchoolInfoInterstitial
@@ -205,11 +205,11 @@ describe('SchoolInfoInterstitial', () => {
               scriptData={{
                 ...MINIMUM_PROPS.scriptData,
                 existingSchoolInfo: {
-                  country: 'US',
-                  schoolType,
-                  schoolName: '',
-                  schoolState: '',
-                  schoolZip: '',
+                  country: 'United States',
+                  school_type: schoolType,
+                  school_name: '',
+                  school_state: '',
+                  school_zip: '',
                   [schoolDetailFieldName]: 'provided value',
                 },
               }}

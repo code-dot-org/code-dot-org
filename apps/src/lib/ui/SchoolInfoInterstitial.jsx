@@ -46,13 +46,16 @@ export default class SchoolInfoInterstitial extends React.Component {
       authTokenName: PropTypes.string.isRequired,
       authTokenValue: PropTypes.string.isRequired,
       existingSchoolInfo: PropTypes.shape({
-        ncesSchoolId: PropTypes.string,
+        // Note, these names intentionally match the fields on the SchoolInfo
+        // model, not their JavaScript-friendly equivalents.  The mapping
+        // occurs in the constructor, below, and back when we submit.
+        school_id: PropTypes.string,
         country: PropTypes.string,
-        schoolType: PropTypes.string,
-        schoolName: PropTypes.string,
-        schoolState: PropTypes.string,
-        schoolZip: PropTypes.string,
-        schoolLocation: PropTypes.string,
+        school_type: PropTypes.string,
+        school_name: PropTypes.string,
+        state: PropTypes.string,
+        zip: PropTypes.string,
+        full_address: PropTypes.string,
       }).isRequired,
     }).isRequired,
     onClose: PropTypes.func.isRequired,
@@ -66,23 +69,23 @@ export default class SchoolInfoInterstitial extends React.Component {
     super(props);
 
     const {existingSchoolInfo} = this.props.scriptData;
-    const initialNcesSchoolId = existingSchoolInfo.ncesSchoolId ?
-      existingSchoolInfo.ncesSchoolId :
+    const initialNcesSchoolId = existingSchoolInfo.school_id ?
+      existingSchoolInfo.school_id :
       (
-        existingSchoolInfo.country === 'US'
+        existingSchoolInfo.country === 'United States'
         &&
-        SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(existingSchoolInfo.schoolType)
+        SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(existingSchoolInfo.school_type)
         &&
-        (existingSchoolInfo.schoolName || existingSchoolInfo.schoolState || existingSchoolInfo.schoolZip)
+        (existingSchoolInfo.school_name || existingSchoolInfo.state || existingSchoolInfo.zip)
       ) ? '-1' : '';
 
     this.state = {
       country: existingSchoolInfo.country || '',
-      schoolType: existingSchoolInfo.schoolType || '',
-      schoolName: existingSchoolInfo.schoolName || '',
-      schoolState: existingSchoolInfo.schoolState || '',
-      schoolZip: existingSchoolInfo.schoolZip || '',
-      schoolLocation: existingSchoolInfo.schoolLocation || '',
+      schoolType: existingSchoolInfo.school_type || '',
+      schoolName: existingSchoolInfo.school_name || '',
+      schoolState: existingSchoolInfo.state || '',
+      schoolZip: existingSchoolInfo.zip || '',
+      schoolLocation: existingSchoolInfo.full_address || '',
       ncesSchoolId: initialNcesSchoolId,
       showSchoolInfoUnknownError: false,
     };
