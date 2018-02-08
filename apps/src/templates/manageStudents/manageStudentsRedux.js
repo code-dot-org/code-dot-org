@@ -21,16 +21,18 @@ export const removeStudent = (studentId) => ({ type: REMOVE_STUDENT, studentId }
 export const setSecretImage = (studentId, image) => ({ type: SET_SECRET_IMAGE, studentId, image });
 export const setSecretWords = (studentId, words) => ({ type: SET_SECRET_WORDS, studentId, words });
 export const editStudent = (studentId, studentData) => ({ type: EDIT_STUDENT, studentId, studentData });
+export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
+export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
 
 export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
-    dispatch({ type: START_SAVING_STUDENT, studentId });
+    dispatch(startSavingStudent(studentId));
     updateStudentOnServer(state.editingData[studentId], (error, data) => {
       if (error) {
         console.error(error);
       }
-      dispatch({ type: SAVE_STUDENT_SUCCESS, studentId });
+      dispatch(saveStudentSuccess(studentId));
     });
   };
 };
@@ -126,6 +128,7 @@ export default function manageStudents(state=initialState, action) {
       editingData: {
         ...state.editingData,
         [action.studentId]: {
+          ...state.editingData[action.studentId],
           ...action.studentData,
           id: action.studentId,
         }
