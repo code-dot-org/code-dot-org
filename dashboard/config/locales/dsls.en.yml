@@ -8228,17 +8228,6 @@ en:
         'The bee will collect three nectar or honey, then two nectar or honey in a stair-step pattern. ': 'The bee will collect three nectar or honey, then two nectar or honey in a stair-step pattern. '
         The bee will not collect any nectar or honey.: The bee will not collect any nectar or honey.
         What will happen when you click "Run"?: What will happen when you click "Run"?
-      courseF_multi_bee_fwp9_predict1_2018:
-        ? Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.
-        : Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.
-        Correct! The function is set to collect as many nectar or honey as is passed through a parameter.: Correct! The function is set to collect as many nectar or honey as is passed through a parameter.
-        I don't know.: I don't know.
-        Incorrect.  The function is set to collect as many nectar or honey as is passed through a parameter.: Incorrect.  The function is set to collect as many nectar or honey as is passed through a parameter.
-        Incorrect. The function is set to collect as many nectar or honey as is passed through a parameter.: Incorrect. The function is set to collect as many nectar or honey as is passed through a parameter.
-        'The bee will collect only one nectar or honey in each iteration of the loop. ': 'The bee will collect only one nectar or honey in each iteration of the loop. '
-        'The bee will collect three nectar or honey, then two nectar or honey in a stair-step pattern. ': 'The bee will collect three nectar or honey, then two nectar or honey in a stair-step pattern. '
-        The bee will not collect any nectar or honey.: The bee will not collect any nectar or honey.
-        What will happen when you click "Run"?: What will happen when you click "Run"?
       courseF_multi_playlab_variables4c_predictive1:
         'Correct. ': 'Correct. '
         I don't know.: I don't know.
