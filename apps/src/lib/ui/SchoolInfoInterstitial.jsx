@@ -187,7 +187,7 @@ export default class SchoolInfoInterstitial extends React.Component {
               schoolState={this.state.schoolState}
               schoolZip={this.state.schoolZip}
               schoolLocation={this.state.schoolLocation}
-              useGoogleLocationSearch={false}
+              useGoogleLocationSearch={true}
               showErrors={false}
               showRequiredIndicator={false}
             />
