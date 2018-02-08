@@ -188,7 +188,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Smart Bike - Buzzer\r\n\r\nNow that we know how to add more buttons, you can add a button to control the smart bike's horn.\r\n\r\n# Do This\r\n\r\nUsing the button that you've already wired to the board, find a good spot to place your horn button. Then:\r\n\r\n* Create a button object for your horn button\r\n* Add an event handler to buzz when button is pressed\r\n\r\n_Tip: If you want your horn to play a song, you'll need to make sure that it only plays when the button is first pressed, not continually._",
+    "markdown_instructions": "# Smart Bike - Buzzer\r\n\r\nNow that we know how to add more buttons, you can add a button to control the smart bike's horn.\r\n\r\n# Do This\r\n\r\nUsing the button that you've already wired to the board, find a good spot to place your horn button. Then:\r\n\r\n* Create a button object for your horn button\r\n* Add an event handler to buzz when button is pressed\r\n\r\n_Hint: The button object that you create won't be in the `onBoardEvent()` dropdown, so you'll need to type the name you've chosen in. Make sure not to use quotation marks!_",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -230,7 +230,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-15 22:53:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 19:06:39 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-02-02 16:52:14 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-15 22:53:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 19:06:39 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-02-02 16:52:14 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-07 21:00:53 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
