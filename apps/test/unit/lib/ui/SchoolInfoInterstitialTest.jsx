@@ -251,7 +251,6 @@ describe('SchoolInfoInterstitial', () => {
         'auth_token=fake_auth_token',
         'user%5Bschool_info_attributes%5D%5Bcountry%5D=',
         'user%5Bschool_info_attributes%5D%5Bschool_type%5D=',
-        'user%5Bschool_info_attributes%5D%5Bschool_id%5D=',
       ].join('&'));
     });
 
@@ -273,7 +272,6 @@ describe('SchoolInfoInterstitial', () => {
         'auth_token=fake_auth_token',
         'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
         'user%5Bschool_info_attributes%5D%5Bschool_type%5D=',
-        'user%5Bschool_info_attributes%5D%5Bschool_id%5D=',
       ].join('&'));
     });
 
@@ -405,6 +403,81 @@ describe('SchoolInfoInterstitial', () => {
         'user%5Bschool_info_attributes%5D%5Bschool_state%5D=Washington',
         'user%5Bschool_info_attributes%5D%5Bschool_zip%5D=98109',
         'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
+      ].join('&'));
+    });
+
+    it('submits with a country, and non-NCES school type', () => {
+      const wrapper = shallow(
+        <SchoolInfoInterstitial
+          {...MINIMUM_PROPS}
+          scriptData={{
+            ...MINIMUM_PROPS.scriptData,
+            existingSchoolInfo: {
+              country: 'United States',
+              school_type: 'organization',
+            },
+          }}
+        />
+      );
+      wrapper.find(Button).simulate('click');
+      expect(server.requests[0].requestBody).to.equal([
+        '_method=patch',
+        'auth_token=fake_auth_token',
+        'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
+        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=organization',
+        'user%5Bschool_info_attributes%5D%5Bschool_name%5D=',
+        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
+      ].join('&'));
+    });
+
+    it('submits with a country, non-NCES school type, school name', () => {
+      const wrapper = shallow(
+        <SchoolInfoInterstitial
+          {...MINIMUM_PROPS}
+          scriptData={{
+            ...MINIMUM_PROPS.scriptData,
+            existingSchoolInfo: {
+              country: 'United States',
+              school_type: 'organization',
+              school_name: 'Test School',
+            },
+          }}
+        />
+      );
+      wrapper.find(Button).simulate('click');
+      expect(server.requests[0].requestBody).to.equal([
+        '_method=patch',
+        'auth_token=fake_auth_token',
+        'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
+        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=organization',
+        'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
+        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
+      ].join('&'));
+    });
+
+    it('submits with a country, non-NCES school type, school name, location', () => {
+      const wrapper = shallow(
+        <SchoolInfoInterstitial
+          {...MINIMUM_PROPS}
+          scriptData={{
+            ...MINIMUM_PROPS.scriptData,
+            existingSchoolInfo: {
+              country: 'United States',
+              school_type: 'organization',
+              school_name: 'Test School',
+              full_address: 'Boring, OR',
+            },
+          }}
+        />
+      );
+      wrapper.find(Button).simulate('click');
+      expect(server.requests[0].requestBody).to.equal([
+        '_method=patch',
+        'auth_token=fake_auth_token',
+        'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
+        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=organization',
+        'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
+        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=Boring%2C+OR',
       ].join('&'));
     });
 
