@@ -77,7 +77,7 @@
         %br/
         - if params[:channel_id]
           - _, channel_id = storage_decrypt_channel_id(params[:channel_id])
-          - exists = FeaturedProject.exists?(:storage_app_id => channel_id
+          - exists = FeaturedProject.exists?(:storage_app_id => channel_id)
           - if exists
             - project = FeaturedProject.find_by storage_app_id: channel_id
             - currently_featured = project.unfeatured_at == nil && project.featured_at != nil
