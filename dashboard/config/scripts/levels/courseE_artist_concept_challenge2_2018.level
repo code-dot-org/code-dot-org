@@ -1,0 +1,274 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2018-02-08T00:27:16.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "artist_zombie",
+    "x": "200",
+    "y": "200",
+    "start_direction": "90",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "free_play": "false",
+    "instructions": "Create five pinwheel designs using the code below.",
+    "ideal": "0",
+    "embed": "false",
+    "markdown_instructions": "Create five pinwheel designs using the code below.",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "disable_sharing": "false",
+    "impressive": "false",
+    "never_autoplay_video": "false",
+    "permitted_errors": "0",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Once you define a function, you can call it over and over again - whenever and wherever you want!\",\"hint_id\":\"courseE_artist_concept_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5bebe45395830a4013777c8c2290e2b0/courseE_artist_concept_challenge2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can jump to different positions on the canvas using this command:\\n<xml>  <block type=\\\"jump_to\\\">\\n    <title name=\\\"VALUE\\\">???</title>\\n  </block></xml>\",\"hint_id\":\"courseE_artist_concept_challenge2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4ff4653d8066754b74b1562ada40c45b/courseE_artist_concept_challenge2.mp3\"}]",
+    "discard_background": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "callout_json": "[]",
+    "disable_procedure_autopopulate": "false",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/6d6bf04daa14e78155644916e066782d=levelbuilder/27792.png",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-02 23:24:53 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"free_play\",\"instructions\",\"markdown_instructions\",\"impressive\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:26:48 +0000\",\"changed\":[],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:27:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:29:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:29:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:29:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:30:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:32:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:32:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:34:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:34:49 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:35:16 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:38:47 +0000\",\"changed\":[\"toolbox_blocks\",\"x\",\"y\",\"ideal\",\"authored_hints\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:40:51 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:44:57 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:45:49 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:47:18 +0000\",\"changed\":[\"name\",\"toolbox_blocks\",\"authored_hints\",\"start_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-28 19:00:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-28 19:03:19 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-28 19:03:33 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-28 19:03:49 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-28 19:04:03 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-28 19:04:28 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-28 19:04:50 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-28 19:04:58 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-28 19:05:05 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-28 19:05:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-28 19:10:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"callout_json\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-28 19:11:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-28 19:13:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-28 19:14:01 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-28 19:14:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-07-28 19:21:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-24 20:08:36 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_colour" inline="true" id="draw-color">
+              <value name="COLOUR">
+                <block type="colour_picker">
+                  <title name="COLOUR">#ffff00</title>
+                </block>
+              </value>
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">8</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">5</title>
+                      <statement name="DO">
+                        <block type="draw_move_by_constant">
+                          <title name="DIR">moveForward</title>
+                          <title name="VALUE">60</title>
+                          <next>
+                            <block type="draw_turn_by_constant">
+                              <title name="DIR">turnRight</title>
+                              <title name="VALUE">72</title>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">45</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="jump_to">
+          <title name="VALUE">8</title>
+        </block>
+        <block type="jump_to_xy">
+          <title name="XPOS">200</title>
+          <title name="YPOS">0</title>
+        </block>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="draw_width_inline">
+          <title name="WIDTH">1</title>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">4</title>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw pinwheel</title>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="draw pinwheel"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_colour" inline="true" id="draw-color">
+              <value name="COLOUR">
+                <block type="colour_picker">
+                  <title name="COLOUR">#ffff00</title>
+                </block>
+              </value>
+              <next>
+                <block type="procedures_callnoreturn">
+                  <mutation name="draw pinwheel"/>
+                  <next>
+                    <block type="jump_to">
+                      <title name="VALUE">8</title>
+                      <next>
+                        <block type="draw_colour" inline="true" id="draw-color">
+                          <value name="COLOUR">
+                            <block type="colour_picker">
+                              <title name="COLOUR">#ff0000</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="procedures_callnoreturn">
+                              <mutation name="draw pinwheel"/>
+                              <next>
+                                <block type="jump_to">
+                                  <title name="VALUE">14</title>
+                                  <next>
+                                    <block type="draw_colour" inline="true" id="draw-color">
+                                      <value name="COLOUR">
+                                        <block type="colour_picker">
+                                          <title name="COLOUR">#228b22</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="procedures_callnoreturn">
+                                          <mutation name="draw pinwheel"/>
+                                          <next>
+                                            <block type="jump_to">
+                                              <title name="VALUE">18</title>
+                                              <next>
+                                                <block type="draw_colour" inline="true" id="draw-color">
+                                                  <value name="COLOUR">
+                                                    <block type="colour_picker">
+                                                      <title name="COLOUR">#0000cd</title>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="procedures_callnoreturn">
+                                                      <mutation name="draw pinwheel"/>
+                                                      <next>
+                                                        <block type="jump_to">
+                                                          <title name="VALUE">12</title>
+                                                          <next>
+                                                            <block type="draw_colour" inline="true" id="draw-color">
+                                                            <value name="COLOUR">
+                                                            <block type="colour_picker" id="pink">
+                                                            <title name="COLOUR">#ff77ff</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="procedures_callnoreturn">
+                                                            <mutation name="draw pinwheel"/>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" id="function">
+          <mutation/>
+          <title name="NAME">draw pinwheel</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">8</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">5</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">60</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">72</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">45</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>
