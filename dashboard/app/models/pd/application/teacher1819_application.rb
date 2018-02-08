@@ -506,9 +506,9 @@ module Pd::Application
       response_scores = response_scores_hash
       scored_questions =
         if course == 'csd'
-          Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSD.clone
+          CRITERIA_SCORE_QUESTIONS_CSD.dup
         elsif course == 'csp'
-          Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSP.clone
+          CRITERIA_SCORE_QUESTIONS_CSP.dup
         end
 
       if response_scores[:able_to_attend_single] && !response_scores[:able_to_attend_multiple]
@@ -794,9 +794,9 @@ module Pd::Application
 
     def able_attend_multiple_to_yes_no_score(response)
       response = response.join
-      if response.start_with?(TEXT_FIELDS[:no_explain]) || response == NO
+      if response.start_with?(TEXT_FIELDS[:no_explain])
         NO
-      elsif (response && !response.include?(TEXT_FIELDS[:no_explain])) || response == YES
+      elsif response && !response.include?(TEXT_FIELDS[:no_explain])
         YES
       else
         nil
@@ -804,9 +804,9 @@ module Pd::Application
     end
 
     def able_attend_single_to_yes_no_score(response)
-      if [TEXT_FIELDS[:able_to_attend_single], YES].include? response
+      if response == TEXT_FIELDS[:able_to_attend_single]
         YES
-      elsif (response && !response.include?(TEXT_FIELDS[:unable_to_attend])) || response == NO
+      elsif response && !response.include?(TEXT_FIELDS[:unable_to_attend])
         NO
       else
         nil
