@@ -14,20 +14,30 @@ Feature: Droplet levels work as expected
     And the Droplet ACE text is "b"
     And I press keys "utto"
     And the Droplet ACE text is "butto"
-
     And no Tooltipster tooltip is visible
 
     And I press keys ":down"
-
     And the Droplet ACE text is "butto"
     And there is a Tooltipster tooltip with text "button(id, text)"
 
     And I press keys ":down"
-
     And there is a Tooltipster tooltip with text "radioButton"
 
     And I press keys ":enter"
-
     And the Droplet ACE text is "radioButton()"
-
     And there is a Tooltipster tooltip with text "unique identifier"
+
+  Scenario: Open editcode level and verify parameter autocomplete replaces quoted text
+    When I rotate to landscape
+    And I ensure droplet is in text mode
+    And I press keys "setProperty("
+    And the Droplet ACE text is "setProperty()"
+    And there is a Tooltipster tooltip with text "the specified element"
+
+    And I press double-quote key
+    And the Droplet ACE text is 'setProperty("")'
+    And no Tooltipster tooltip is visible
+
+    And I press keys ":enter"
+    And the Droplet ACE text is 'setProperty("screen1")'
+    And no Tooltipster tooltip is visible
