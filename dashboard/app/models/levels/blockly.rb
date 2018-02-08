@@ -49,6 +49,7 @@ class Blockly < Level
     disable_param_editing
     disable_variable_editing
     disable_procedure_autopopulate
+    top_level_procedure_autopopulate
     use_modal_function_editor
     use_contract_editor
     default_num_example_blocks
@@ -216,11 +217,20 @@ class Blockly < Level
       app_options[:skinId] = skin_id if skin_id
 
       # Set some values that Blockly expects on the root of its options string
+
+      droplet = game.try(:uses_droplet?)
+      #TODO(ram) normalize or remove the edit_code field
+      if edit_code == "false"
+        droplet = false
+      elsif edit_code == true
+        droplet = true
+      end
+
       app_options.merge!(
         {
           baseUrl: Blockly.base_url,
           app: game.try(:app),
-          droplet: game.try(:uses_droplet?),
+          droplet: droplet,
           pretty: Rails.configuration.pretty_apps ? '' : '.min',
         }
       )
@@ -319,7 +329,9 @@ class Blockly < Level
   end
 
   def localized_authored_hints
-    if should_localize? && authored_hints
+    return unless authored_hints
+
+    if should_localize?
       translations = I18n.t("data.authored_hints").
         try(:[], "#{name}_authored_hint".to_sym)
 
@@ -339,6 +351,14 @@ class Blockly < Level
         hint
       end
       JSON.generate(localized_hints)
+    else
+      hints = JSON.parse(authored_hints).map do |hint|
+        if hint['hint_video'].present?
+          hint['hint_video'] = Video.find_by_key(hint['hint_video']).summarize
+        end
+        hint
+      end
+      JSON.generate(hints)
     end
   end
 

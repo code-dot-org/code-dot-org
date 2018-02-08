@@ -1,5 +1,9 @@
+- require 'geocoder'
 - require 'country_codes'
 - resource.user_type ||= params[:user].try(:fetch, :user_type) || User::TYPE_STUDENT
+
+- location = Geocoder.search(request.ip).try(:first)
+- us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
 
 -#
   Retrieve the user_return_to value from the session, which will also delete it.
@@ -58,11 +62,10 @@
         #name-block.itemblock
           #name-student.labelblock!= t('activerecord.attributes.user.name_example')
           #name-teacher.labelblock{style: "display: none"}= t('activerecord.attributes.user.name')
-          = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true, maxlength: 255
+          = f.text_field :name, class: 'input-xlarge fieldblock', maxlength: 255
           .error_in_field
 
         #schooldropdown-block.itemblock{style: "display: none;"}
-          = render partial: 'shared/school_info_registration', locals: {form_name: "user[school_info_attributes]", existing_school_info: nil, suppress_scrolling: true}
 
         #age-block.itemblock
           .labelblock= t('signup_form.age')
@@ -121,6 +124,7 @@
     %br/
 
 %script{src: minifiable_asset_path('js/signup.js')}
+%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
 
 :javascript
 
@@ -132,7 +136,8 @@
       teacherDashboardUrl: "#{teacher_dashboard_url}",
       invalidPasswordString: "#{t('signup_form.invalid_password')}",
       passwordMismatchString: "#{t('signup_form.mismatch_password')}",
-      acceptTermsString: "#{t('signup_form.accept_terms')}"
+      acceptTermsString: "#{t('signup_form.accept_terms')}",
+      usIP: #{us_ip}
     });
   });
 

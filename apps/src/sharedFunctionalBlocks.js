@@ -372,7 +372,7 @@ function installSquared(blockly, generator) {
  * condition-value pairs before the default value.
  */
 function installCond(blockly, generator) {
-  // TODO(brent) - rtl
+  // Note: These blocks likely don't support RTL
   var types = [Blockly.BlockValueType.NONE, Blockly.BlockValueType.NUMBER,
     Blockly.BlockValueType.STRING, Blockly.BlockValueType.IMAGE,
     Blockly.BlockValueType.BOOLEAN];

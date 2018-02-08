@@ -1,8 +1,14 @@
 require_relative 'test_helper'
 require 'cdo/aws/s3'
+require 'timecop'
 
 class AwsS3IntegrationTest < Minitest::Test
   include SetupTest
+
+  def setup
+    AWS::S3.create_client
+    Aws::S3::Client.expects(:new).never
+  end
 
   # A test bucket, only used for these tests.
   TEST_BUCKET = 'cdo-temp'.freeze
@@ -80,5 +86,55 @@ class AwsS3IntegrationTest < Minitest::Test
 
   def test_public_url
     assert_equal "https://cdo-temp.s3.amazonaws.com/a/filename.pdf",  AWS::S3.public_url(TEST_BUCKET, 'a/filename.pdf')
+  end
+
+  def test_s3_timeout
+    client = AWS::S3.connect_v2!
+    # Use default timeout settings by default.
+    assert_equal 60, client.config.http_read_timeout
+
+    DCDO.set('s3_timeout', 1)
+    # Slight limitation: change isn't applied until #connect_v2! is called.
+    assert_equal 60, client.config.http_read_timeout
+    assert_equal 1, AWS::S3.connect_v2!.config.http_read_timeout
+    # Existing client references are updated.
+    assert_equal 1, client.config.http_read_timeout
+
+    DCDO.set('s3_timeout', nil)
+    AWS::S3.connect_v2!
+    # Slight limitation: doesn't revert to default setting (60) if variable is set to nil.
+    assert_equal 15, client.config.http_read_timeout
+
+    assert_equal 15, client.config.notify_timeout
+    DCDO.set('s3_slow_request', 30)
+    AWS::S3.connect_v2!
+    assert_equal 30, client.config.notify_timeout
+    assert_equal 15, client.config.http_read_timeout
+    DCDO.set('s3_slow_request', nil)
+  end
+
+  # Simulate a slow AWS client response.
+  class SlowResponder < Seahorse::Client::Plugin
+    class Handler < Seahorse::Client::Handler
+      def call(context)
+        Timecop.travel(context.config.notify_timeout * 2)
+        @handler.call(context)
+      end
+    end
+    handler(Handler)
+  end
+
+  # Ensures a slow s3 request triggers a Honeybadger notification.
+  def test_s3_timeout_notify
+    Aws::S3::Client.add_plugin(SlowResponder)
+    Aws::S3::Client.unstub(:new)
+    AWS::S3.s3 = nil
+    Honeybadger.expects(:notify).once
+    client = AWS::S3.connect_v2!
+    client.head_bucket(bucket: TEST_BUCKET)
+  ensure
+    Aws::S3::Client.remove_plugin(SlowResponder)
+    AWS::S3.s3 = nil
+    Timecop.return
   end
 end

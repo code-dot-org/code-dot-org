@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-require_relative '../mailing-common/mailing-list-utils'
-
-contacts_csv = generate('contacts')
-
-# A/B test 3 variations
-puts "splitting #{contacts_csv}"
-puts `#{common_script_path('split')} #{contacts_csv} 3 3 3`

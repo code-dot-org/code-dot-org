@@ -3,13 +3,16 @@ title: Saving progress in CS Fundamentals
 theme: responsive
 ---
 
-# Saving Progress in Computer Science Fundamentals (December 3 - 11)
+# Yikes! Traffic is even higher than we anticipated!
+
+We upgraded our servers to try to ensure that all students and teachers are able to participate in this year's Hour of Code. We are seeing even more participation than we anticipated  and despite our best efforts our servers can’t handle it! We can’t store progress for this many students simultaneously.
+
+**Due to this, we unfortunately are unable to save or report student progress on our CS Fundamentals Courses (Courses 1-4, Courses A-F, Express, Pre-Reader Express, Accelerated) and Hour of Code tutorials right now.**
 
 ### For students
 This week, millions of students are trying computer science for the Hour of Code. With so many students at the same time, our systems are overloaded!  This means we can’t save progress and mark the bubbles green as you solve new puzzles. Don’t worry - all your green bubbles and progress from before this week are still stored. You can’t see it now, but it will go back to normal next week. 
 
-
-Ask your teacher if you should be working on something else this week instead.
+**Ask your teacher if you should be working on something else this week instead.**
 
 ### For teachers
 Part of Code.org’s mission is to remove the obstacles that keep students all over the world from the opportunity to learn computer science. That’s why we offer tools, curriculum, and resources for teachers at no cost. We’re also thrilled that we’ve been able to introduce millions of students to computer science through the Hour of Code campaign. During Computer Science Education Week this year, our servers will be overloaded again as organizers across the globe lead their classrooms through activities.
@@ -17,7 +20,6 @@ Part of Code.org’s mission is to remove the obstacles that keep students all o
 
 It’s an exciting time of year, but our servers can’t handle it! We can’t store progress for this many students simultaneously.
 
-**Due to this, we unfortunately will not be saving or reporting student progress on Course 1-4, our Accelerated Course or the Hour of Code tutorials from December 3-11.**
 
 <img style="width: 700px; max-width: 100%" src="images/csedweek-courses.png"/>
 

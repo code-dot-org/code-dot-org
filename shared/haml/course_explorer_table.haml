@@ -99,12 +99,12 @@
     regular_order: 2,
     responsive_small_order: 0,
     range: "Grades K-5",
-    subtitle: "14 lesson courses for each grade can be taught once a week",
+    subtitle: "12+ lesson courses for each grade can be taught once a week",
     link: CDO.code_org_url("/educate/curriculum/elementary-school"),
     img: "/shared/images/courses/logo_tall_course1.jpg",
     description: 'Designed to be fun and engaging, Code.org’s progression of CS Fundamentals courses blend online and "unplugged" non-computer activities to teach students computational thinking, problem solving, programming concepts and digital citizenship.
       <ul>
-        <li> <strong>Length:</strong> 14 lessons per course, 6 courses </li>
+        <li> <strong>Length:</strong> 12+ lessons per course, 6 courses </li>
         <li> <strong>Recommended age:</strong> Ages 4-11 </li>
         <li> <strong>Prerequisites:</strong> None </li>
         <li> <strong>Optional professional learning:</strong> Free 1-day workshop, in person in the US and online globally. </li>
@@ -151,7 +151,7 @@
         <li> <strong>Length:</strong> 30 hours </li>
         <li> <strong>Recommended age:</strong> Ages 9-18 </li>
         <li> <strong>Prerequisites:</strong> None </li>
-        <li> <strong>Optional professional learning:</strong> Free 1-day workshop, online globally. </li>
+        <li> <strong>Optional professional learning:</strong> Free 1-day workshop, in person in the US and online globally. </li>
         <li> <strong>Cost to use curriculum:</strong> None </li>
         <li> <strong>Languages:</strong> English only </li>
       </ul>',
@@ -215,6 +215,14 @@
                 = course[:range]
           = detail_containers[course[:regular_order]]
           .cleardiv{style: "clear: both"}
+      .professional-learning{style: "width: 100%; height: 56px"}
+        .left
+          .title
+            Professional Learning
+        .right{style: 'float:right; margin-top: -26px;'}
+          %a{:href => CDO.code_org_url('/educate/professional-learning')}
+            .course-explorer-gray-button.professional-learning-button.mobile-button
+              Learn more
     .cleardiv{style: "clear: both"}
 
 
@@ -268,4 +276,12 @@
 
           - unless course_index == index_course_first_same_line
             .cleardiv{style: "clear: both"}
+    .professional-learning{style: "width: 100%"}
+      .left
+        .title
+          Professional Learning for all grade levels
+      .right{style: 'float:right; margin-top: -26px;'}
+        %a{:href => CDO.code_org_url('/educate/professional-learning')}
+          .course-explorer-gray-button.professional-learning-button
+            Learn more
   .cleardiv{style: "clear: both"}

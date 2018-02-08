@@ -55,7 +55,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "start_blocks": "var redBall = createSprite(50, 20);\r\nredBall.setAnimation(\"redBall\");\r\nredBall.velocityX = 1.5;\r\nredBall.velocityY = 2;\r\nredBall.rotationSpeed = 2;\r\nconsole.log(\"red ball speed and direction:\");\r\nconsole.log(redBall.getSpeed());\r\nconsole.log(redBall.getDirection());\r\n\r\nvar blueBall = createSprite(50, 230);\r\nblueBall.setAnimation(\"blueBall\");\r\nblueBall.velocityX = 1;\r\nblueBall.velocityY = -0.4;\r\nblueBall.rotationSpeed = 2;\r\nconsole.log(\"blue ball speed and direction:\");\r\nconsole.log(blueBall.getSpeed());\r\nconsole.log(blueBall.getDirection());\r\n\r\nvar yellowBall = createSprite(50, 380);\r\nyellowBall.setAnimation(\"yellowBall\");\r\nyellowBall.velocityX = 2;\r\nyellowBall.velocityY = -2;\r\nyellowBall.rotationSpeed = 2;\r\nconsole.log(\"yellow ball speed and direction:\");\r\nconsole.log(yellowBall.getSpeed());\r\nconsole.log(yellowBall.getDirection());\r\n\r\nfunction draw() {\r\n  background(\"gray\");\r\n  drawSprites();\r\n}\r\n",
     "palette_category_at_start": "sprites",

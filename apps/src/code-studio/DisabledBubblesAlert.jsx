@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import Alert from '@cdo/apps/templates/alert';
 import i18n from '@cdo/locale';
 
@@ -12,47 +12,35 @@ const styles = {
  * Component that displays a small notification at the top of the page when
  * postMilestone is disabled (and thus progress is disabled)
  */
-const DisabledBubblesAlert = React.createClass({
-  propTypes: {
-    isHocScript: PropTypes.bool.isRequired
-  },
+export default class DisabledBubblesAlert extends React.Component {
+  constructor(props) {
+    super(props);
 
-  getInitialState() {
     // Once alert has been dismissed, don't show again.
     const disabledBubblesAlertSeen = sessionStorage.getItem('disabledBubblesAlertSeen');
-    return {
+    this.state = {
       visible: !disabledBubblesAlertSeen
     };
-  },
+  }
 
-  onClose() {
+  onClose = () => {
     this.setState({visible: false});
     sessionStorage.setItem('disabledBubblesAlertSeen', true);
-  },
+  };
 
   render() {
     if (!this.state.visible) {
       return null;
     }
 
-    let type, intro, href;
-    if (this.props.isHocScript) {
-      type = 'warning';
-      intro = i18n.disabledButtonsWhy();
-      href = '/saving-progress-hoc';
-    } else {
-      type = 'error';
-      intro = i18n.disabledButtonsWarning();
-      href = '/saving-progress-csf';
-    }
     return (
-      <Alert onClose={this.onClose} type={type}>
+      <Alert onClose={this.onClose} type={'error'}>
         <div>
-          <span style={styles.bold}>{intro + " "}</span>
+          <span style={styles.bold}>{i18n.disabledButtonsWarning() + " "}</span>
           <span>{i18n.disabledButtonsInfo()  + " "}</span>
           <a
             target="_blank"
-            href={window.dashboard.CODE_ORG_URL + href}
+            href="https://support.code.org/hc/en-us/articles/115002660852"
           >
             {i18n.learnMore()}
           </a>
@@ -60,6 +48,4 @@ const DisabledBubblesAlert = React.createClass({
       </Alert>
     );
   }
-});
-
-export default DisabledBubblesAlert;
+}

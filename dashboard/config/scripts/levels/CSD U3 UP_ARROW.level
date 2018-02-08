@@ -85,7 +85,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Add an if statement and place your movement code inside it\",\r\n  \"element_id\": \".droplet-gutter-line:nth-child(5)\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "project_template_level_name": "CSD U3- arrows template",
     "instructions_important": "false",
@@ -94,15 +94,17 @@
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "show_debug_watch": "true",
-    "encrypted_examples": "XJoQm+fF7RSkwBmlWnu/0FlEAGIymn+h73teAXjUTYNFwGsoxvjF/wBIXe9a\nVqQQ\n",
+    "encrypted_examples": "VPGz4CnhyiBplGelgsn0/TL9fHKePyJ+E/xvgThuWB9AT+nRxsd7Zkn9ku9S\nkptlqoo7VhTARzImNYmm4gc5Kw==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 19:24:35 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 19:24:35 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-17 16:15:54 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

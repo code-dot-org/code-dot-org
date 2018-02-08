@@ -34,18 +34,20 @@ module Pd::WorkshopFilters
     # optional '-' (meaning not) followed by a course name
     if course && (match = /^(-)?(.+)$/.match course)
       course_name = COURSE_MAP[match[2]]
-      if match[1]
-        workshops = workshops.where.not(course: course_name)
-      else
-        workshops = workshops.where(course: course_name)
-      end
+      workshops =
+        if match[1]
+          workshops.where.not(course: course_name)
+        else
+          workshops.where(course: course_name)
+        end
     end
 
-    if query_by == QUERY_BY_END
-      workshops = workshops.end_on_or_after(start_date).end_on_or_before(end_date)
-    else # assume by schedule
-      workshops = workshops.scheduled_start_on_or_after(start_date).scheduled_start_on_or_before(end_date)
-    end
+    workshops =
+      if query_by == QUERY_BY_END
+        workshops.end_on_or_after(start_date).end_on_or_before(end_date)
+      else # assume by schedule
+        workshops.scheduled_start_on_or_after(start_date).scheduled_start_on_or_before(end_date)
+      end
 
     workshops
   end
@@ -80,20 +82,21 @@ module Pd::WorkshopFilters
       workshops = workshops.scheduled_start_on_or_after(ensure_date(params[:start])) if params[:start]
       workshops = workshops.scheduled_start_on_or_before(ensure_date(params[:end])) if params[:end]
       workshops = workshops.where(course: params[:course]) if params[:course]
-      workshops = workshops.where(subject: params[:subject]) if params[:subject]
+      workshops = workshops.where(subject: params[:subject].split(',')) if params[:subject]
       workshops = workshops.where(organizer_id: params[:organizer_id]) if params[:organizer_id]
 
       if current_user.permission?(UserPermission::WORKSHOP_ADMIN) && params[:teacher_email]
         teacher = User.find_by(email: params[:teacher_email])
-        if teacher
-          if params[:only_attended]
-            workshops = workshops.attended_by(teacher)
+        workshops =
+          if teacher
+            if params[:only_attended]
+              workshops.attended_by(teacher)
+            else
+              workshops.enrolled_in_by(teacher)
+            end
           else
-            workshops = workshops.enrolled_in_by(teacher)
+            workshops.none
           end
-        else
-          workshops = workshops.none
-        end
       end
 
       order_by = params[:order_by]

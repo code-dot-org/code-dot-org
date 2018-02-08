@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# 530960 contacts
-
-../send-to-mailing-list --limit 550000 2016-10-13-hoc-global-launch-final ./contacts-deduped-remainder.csv

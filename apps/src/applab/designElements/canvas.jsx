@@ -1,9 +1,11 @@
 import React, {PropTypes} from 'react';
 import PropertyRow from './PropertyRow';
+import BooleanPropertyRow from './BooleanPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import * as elementUtils from './elementUtils';
+import $ from "jquery";
 
 class CanvasProperties extends React.Component {
   static propTypes = {
@@ -46,6 +48,11 @@ class CanvasProperties extends React.Component {
           isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
+        />
+        <BooleanPropertyRow
+          desc={'hidden'}
+          initialValue={$(element).hasClass('design-mode-hidden')}
+          handleChange={this.props.handleChange.bind(this, 'hidden')}
         />
         <ZOrderRow
           element={this.props.element}

@@ -89,13 +89,14 @@ const styles = {
 
 // TODO: possibly refactor AssetRow to make it work here instead of
 // or with this component
-export const AssetListItem = Radium(class extends React.Component {
+class AssetListItemUnwrapped extends React.Component {
   static propTypes = {
     asset: importableAssetShape,
+    projectId: PropTypes.string,
   };
 
   render() {
-    const {asset} = this.props;
+    const {asset, projectId} = this.props;
     return (
       <div style={styles.assetListItem}>
         <AssetThumbnail
@@ -103,6 +104,7 @@ export const AssetListItem = Radium(class extends React.Component {
           name={asset.filename}
           iconStyle={styles.assetThumbnailIcon}
           style={styles.assetThumbnail}
+          projectId={projectId}
         />
         <div style={[styles.assetListItemText, styles.subtext]}>
           {asset.filename}
@@ -114,13 +116,14 @@ export const AssetListItem = Radium(class extends React.Component {
       </div>
     );
   }
-});
+}
+export const AssetListItem = Radium(AssetListItemUnwrapped);
 
 function quotedCommaJoin(strings) {
   return strings.map(s => `"${s}"`).join(', ');
 }
 
-export const ScreenListItem = Radium(class extends React.Component {
+class ScreenListItemUnwrapped extends React.Component {
   static propTypes = {
     screen: importableScreenShape,
   };
@@ -160,7 +163,8 @@ export const ScreenListItem = Radium(class extends React.Component {
       </div>
     );
   }
-});
+}
+export const ScreenListItem = Radium(ScreenListItemUnwrapped);
 
 export class ImportScreensDialog extends React.Component {
   static propTypes = {
@@ -233,7 +237,9 @@ export class ImportScreensDialog extends React.Component {
              itemPropName="asset"
              disabled={this.props.isImporting}
            >
-             <AssetListItem/>
+             <AssetListItem
+               projectId={this.props.project.id}
+             />
            </MultiCheckboxSelector>}
           {nonImportableScreens.length > 0 &&
            <div style={styles.section}>

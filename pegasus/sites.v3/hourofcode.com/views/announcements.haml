@@ -1,28 +1,24 @@
 #joindescription
   #calltoaction
     %h2.join-us-header=hoc_s(:front_join_us_announcements)
-    %a.category-link{:href=>resolve_url('/learn')}
-      .full-width
-        %img{src: 'https://code.org/images/fit-800/learn/student1.png', style: 'width: 100%;'}
-      .category-button.teal-background
-        %b.category-header=hoc_s(:front_join_us_tutorials)
-        %span=hoc_s(:front_join_us_tutorials_link)
-    %hr
-    -# Temporarily hide robotics section until we reconfirm participating partners.
-      %a.category-link{:href=>resolve_url('/learn/robotics')}
-        .category-button.purple-background
-          %b.category-header=hoc_s(:front_join_us_robotics)
-          %span=hoc_s(:front_join_us_robotics_link)
-        %img.robotics-logo{src: '/images/fit-100x100/robotics/ozobot-logo.png'}
-        %img.robotics-logo{src: '/images/fit-100x100/robotics/sphero-logo.png'}
-        %img.robotics-logo{src: '/images/fit-100x100/robotics/wonder-workshop-logo.png'}
-        %img.robotics-logo{src: '/images/fit-100x100/robotics/birdbrain-logo.png'}
+    .category-button.purple-background
+      %b.category-header=hoc_s(:front_join_us_robotics)
+      %span=hoc_s(:front_join_us_robotics_link)
+    %br
+    %a.category-link{href: 'https://ozobot.com/'}
+      %img.robotics-logo{src: '/images/fit-100x100/robotics/ozobot-logo.png'}
+    %a.category-link{href: 'https://www.dexterindustries.com/'}
+      %img.robotics-logo{src: '/images/fit-100x100/robotics/dexter-logo.png'}
+    %a.category-link{href: 'https://littlebits.cc/education'}
+      %img.robotics-logo{src: '/images/fit-100x100/robotics/littlebits-logo.png'}
+    %p
+    %a.category-link{href: 'https://www.makewonder.com/'}
+      %img.robotics-logo{src: '/images/fit-100x100/robotics/wonder-workshop-logo.png'}
+    %a.category-link{href: 'http://bit.ly/kanohoc17'}
+      %img.robotics-logo{src: '/images/fit-100x100/robotics/kano-logo.png'}
+    -if @language == 'en'
       %hr
-    %a.category-link{:href=>resolve_url('https://code.org/volunteer/local')}
-      .category-button.cyan-background
-        %b.category-header=hoc_s(:front_join_us_teacher)
-        %span=hoc_s(:front_join_us_teacher_volunteer)
-    %a.category-link{:href=>resolve_url('https://code.org/volunteer')}
-      .category-button.green-background
-        %b.category-header=hoc_s(:front_join_us_cs_volunteer)
-        %span=hoc_s(:front_join_us_sign_up_volunteer)
+      %a.category-link{:href=>resolve_url('https://code.org/challenge')}
+        .category-button.cyan-background
+          %span=hoc_s(:front_join_us_challenge)
+          %b.category-header=hoc_s(:front_join_us_learn_more)

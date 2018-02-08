@@ -176,5 +176,25 @@ export default {
         window.focus();
       }
     });
+  },
+
+  onPropertyChange: function (element, name, value) {
+    switch (name) {
+      case 'value':
+        element.value = value;
+        break;
+      default:
+        return false;
+    }
+    return true;
+  },
+
+  readProperty: function (element, name) {
+    switch (name) {
+      case 'value':
+        return element.value;
+      default:
+        throw `unknown property name ${name}`;
+    }
   }
 };

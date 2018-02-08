@@ -87,7 +87,92 @@ module.exports = {
         testResult: TestResults.FREE_PLAY
       },
     },
-
+    {
+      description: "getProperty and setProperty for value on sliders.",
+      editCode: true,
+      // Creating the slider elements with the write() API since we don't expose
+      // an API to create sliders at runtime...
+      xml:
+          "write('<input type=\"range\" value=\"50\" min=\"0\" max=\"100\"" +
+            " step=\"1\" id=\"idSlider1\">');" +
+          "write('<input type=\"range\" value=\"50\" min=\"0\" max=\"100\"" +
+            " step=\"1\" id=\"idSlider2\">');" +
+          "setProperty('idSlider1', 'value', 25);" +
+          "setProperty('idSlider2', 'value', getProperty('idSlider1', 'value'));",
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 2, function () {
+          assert(document.getElementById('idSlider2').value === '25');
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
+      description: "getProperty and setProperty for value on text inputs.",
+      editCode: true,
+      xml:
+          "textInput('idTxt1', '');" +
+          "textInput('idTxt2', '');" +
+          "setProperty('idTxt1', 'value', 'test-value');" +
+          "setProperty('idTxt2', 'value', getProperty('idTxt1', 'value'));",
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 2, function () {
+          assert(document.getElementById('idTxt2').value === 'test-value');
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
+      description: "getProperty and setProperty for value on dropdowns.",
+      editCode: true,
+      xml:
+          "dropdown('idDrop1', 'a', 'b');" +
+          "dropdown('idDrop2', 'a', 'b');" +
+          "setProperty('idDrop1', 'value', 'b');" +
+          "setProperty('idDrop2', 'value', getProperty('idDrop1', 'value'));",
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 2, function () {
+          assert(document.getElementById('idDrop2').value === 'b');
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
+      description: "getProperty and setProperty for fit on images.",
+      editCode: true,
+      xml:
+          "image('idImage1', '');" +
+          "image('idImage2', '');" +
+          "image('idImage3', '');" +
+          "setProperty('idImage1', 'fit', 'cover');" +
+          "setProperty('idImage2', 'fit', getProperty('idImage1', 'fit'));",
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 2, function () {
+          assert(document.getElementById('idImage2').getAttribute('data-object-fit') === 'cover');
+          assert(document.getElementById('idImage3').getAttribute('data-object-fit') === 'contain');
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
     {
       description: "button",
       editCode: true,
@@ -142,7 +227,7 @@ module.exports = {
       runBeforeClick: function (assert) {
         tickWrapper.runOnAppTick(Applab, 2, function () {
           var debugOutput = document.getElementById('debug-output');
-          assert.equal(debugOutput.textContent, "WARNING: Line: 1: button() id parameter refers to an id (button1) which already exists.");
+          assert.equal(debugOutput.textContent, 'WARNING: Line: 1: button() id parameter refers to an id ("button1") which already exists.');
           Applab.onPuzzleComplete();
         });
       },
@@ -163,8 +248,8 @@ module.exports = {
       customValidator: function (assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent,
-            "ERROR: Line: 1: Error: button() id parameter refers to an id " +
-            "(runButton) which is already in use outside of Applab. Choose a different id.");
+            'ERROR: Line: 1: Error: button() id parameter refers to an id ' +
+            '("runButton") which is already being used outside of App Lab. Please use a different id.');
         assert(!$('#divApplab #runButton')[0], 'No button named runButton should appear in applab');
         return true;
       },
@@ -185,8 +270,8 @@ module.exports = {
       customValidator: function (assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent,
-          "ERROR: Line: 1: Error: button() id parameter refers to an id " +
-          "(submitButton) which is already in use outside of Applab. Choose a different id.");
+          'ERROR: Line: 1: Error: button() id parameter refers to an id ' +
+          '("submitButton") which is already being used outside of App Lab. Please use a different id.');
         assert(!$('#divApplab #submitButton')[0], 'No button named submitButton should appear in applab');
         return true;
       },

@@ -408,7 +408,7 @@ en:
         Students usually work in small groups: Students usually work in small groups
         Students usually work independently: Students usually work independently
       U5 evaluation q1:
-        Are you new to even-drive programming?: Are you new to even-drive programming?
+        Are you new to event-driven programming?: Are you new to event-driven programming?
         'No': 'No'
         'Yes': 'Yes'
       U5 evaluation q2:
@@ -462,6 +462,9 @@ en:
       A Closer Look at the Final Practice for the Explore PT: {}
       A Note On Metadata in the Curriculum Framework: {}
       AP Test Prep Guidance: {}
+      AWS Demo:
+        Demo for Amazon Curriculum: Demo for Amazon Curriculum
+        description here: description here
       Adding Functionality to your App: {}
       'Addressing in the Game of Battleship ': {}
       AlgPD Break:
@@ -487,6 +490,10 @@ en:
       AppLab Intro 5 - Video Share Keep Going: {}
       AppLab Intro 5 - Video Videos Sound: {}
       AppLab Intro 5 - Video Welcome to App Lab: {}
+      AppLab Intro 6 - Video Design Mode and Screens: {}
+      AppLab Intro 6 - Video Images and Sounds: {}
+      AppLab Intro 6 - Video Keep Going: {}
+      AppLab Intro 6 - Video Welcome SetProperty: {}
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
@@ -715,8 +722,8 @@ en:
         description here: description here
         title: title
       CSD U5 Encryption 2:
+        Decoding Binary Strings: Decoding Binary Strings
         description here: description here
-        title: title
       CSD U5 L13 SFLP Interpreting Data:
         description here: description here
         title: title
@@ -748,6 +755,12 @@ en:
       CSD U5 video2:
         description here: description here
         title: title
+      CSD U6 LED create intro:
+        Make an App Using the LED: Make an App Using the LED
+        description here: description here
+      CSD U6 circuit smart bike blinker build: {}
+      CSD U6 game project stop: {}
+      CSD U6 tugowar stop: {}
       CSD U6L03 Overview: {}
       CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
@@ -812,6 +825,9 @@ en:
       CSDU6 Innovation: {}
       CSDU6 SFLP:
         CSDU6 SFLP: CSDU6 SFLP
+      CSP Abstraction in Programming: {}
+      CSP Abstraction in Programming 2: {}
+      CSP Algorithms Map: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -1982,6 +1998,8 @@ en:
         title: title
       Rating Websites: {}
       Recipe Page Example: {}
+      Recruitment-Scenarios-Passthrough:
+        Recruitment Scenarios Session: Recruitment Scenarios Session
       Responding to User Input: {}
       Rules About Choosing Good IDs:
         description here: description here
@@ -1993,6 +2011,10 @@ en:
       SFLP - Web - Images on the Web: {}
       SFLP - Web - Quality Websites: {}
       SFLP - Web - Text on the Web: {}
+      SG CSP Abstraction in Programming 2: {}
+      SG U3 whats a comment:
+        description here: description here
+        title: title
       SG U3L04 Student Lesson Introduction:
         Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
       SG v2 U3L01 Student Lesson Introduction:
@@ -2199,6 +2221,9 @@ en:
       U3 - Simulation - Intro: {}
       U3 Simulation Updating Hypotheses: {}
       U3 Simulations Hypotheses Reflections: {}
+      U3 whats a comment:
+        description here: description here
+        title: title
       U3- L12 -Design Mode SFLP: {}
       U3- Loops - Intro: {}
       U3-Variables 2 - SFLP: {}
@@ -2717,6 +2742,12 @@ en:
         Artist Exemplar First Story: Artist Exemplar First Story
         Why are they doing this stage?: Why are they doing this stage?
       boolean logic and expressions overview: {}
+      brad-repro-bug-000:
+        Brad Repro Bug 000: Brad Repro Bug 000
+        description here: description here
+      brad-test-continue-buttons-in-markdown:
+        "(Brad) Test continue buttons in markdown": "(Brad) Test continue buttons in markdown"
+        description here: description here
       broadcast lesson plan: {}
       challenges sample:
         Give these a try: Give these a try
@@ -2836,7 +2867,13 @@ en:
         Good Job!: Good Job!
       courseF_external_ramp14: {}
       courseF_external_variableConstant: {}
+      courseF_firstFunctions_map:
+        description here: description here
+        title: title
       coursee-privateandpersonalinformation: {}
+      coursef_functionsSummary_map:
+        description here: description here
+        title: title
       coursef_powerofwords:
         description here: description here
         title: title
@@ -2844,17 +2881,30 @@ en:
         Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
         description here: description here
       csd-novice-congrats: {}
+      csd-post-survey-2017 preamble 1: {}
+      csd-post-survey-2017-implementation-student: {}
+      csd-post-survey-2017-implementation-teacher: {}
       csd-pulse-check-survey-preamble: {}
       csp deeper learning timeline:
         Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
         description here: description here
       csp-novice-congrats: {}
+      csp-post-survey-2017 preamble 1: {}
+      csp-post-survey-2017 preamble 3 this class: {}
+      csp-post-survey-2017 preamble 4 future and outlook: {}
+      csp-post-survey-2017 preamble how often did teacher ask you to: {}
+      csp-post-survey-2017 preamble how often did teacher do: {}
+      csp-post-survey-2017 preamble how often did you: {}
+      csp-post-survey-2017-preamble 5 implementation-teacher: {}
+      csp-post-survey-2017-thanks: {}
+      csp-post-survey-2017-wrapup-preamble: {}
       csp-pre-survey-2017 preamble 1: {}
       csp-pre-survey-2017 preamble 2 cs in general: {}
       csp-pre-survey-2017 preamble 3 this class: {}
       csp-pre-survey-2017 preamble 4 the future: {}
       csp-pre-survey-2017 preamble 5 demographics: {}
       csp-pre-survey-2017-q36-preamble: {}
+      csp-pt-tech-setup-and-tools: {}
       csp-pulse-check-survey-preamble: {}
       csp3_subgoal_mc_levelgroup_preamble: {}
       csp_ap_intro: {}
@@ -2875,6 +2925,9 @@ en:
       deeper learning recommendations- csp:
         Recommendations for Ramping up on Lessons: Recommendations for Ramping up on Lessons
         description here: description here
+      dsl link test:
+        description here: description here
+        title: title
       duino auduino:
         duino auduino: duino auduino
       duino battery led:
@@ -3002,6 +3055,33 @@ en:
       pre-assessment survey heading1: {}
       pre-assessment survey heading2: {}
       pre-assessment survey heading3: {}
+      pwc_appdev:
+        description here: description here
+        title: title
+      pwc_appdevunplugged:
+        description here: description here
+        title: title
+      pwc_cybersecurity:
+        description here: description here
+        title: title
+      pwc_data:
+        Data Science & Analytics - Solving Problems with Big Data: Data Science & Analytics - Solving Problems with Big Data
+        description here: description here
+      pwc_internetofthings:
+        description here: description here
+        title: title
+      pwc_problemsolving:
+        Problem Solving - Personal Innovations: Problem Solving - Personal Innovations
+        description here: description here
+      pwc_programming:
+        description here: description here
+        title: title
+      pwc_technologyfoundations:
+        Technology Foundations - What is a Computer?: Technology Foundations - What is a Computer?
+        description here: description here
+      pwc_webdevelopment:
+        description here: description here
+        title: title
       rbo-test1: {}
       sample external 1:
         sample external 1: sample external 1
@@ -3283,6 +3363,10 @@ en:
         wrapup: wrapup
       subgoal v2 U3L04 Student Lesson Introduction:
         Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
+      swipeRightPassThrough:
+        Recruitment Scenarios Session: Recruitment Scenarios Session
+      swipeRightPassThrough-test123:
+        Recruitment Scenarios Session: Recruitment Scenarios Session
       test cb level:
         description here: description here
         test cb level: test cb level
@@ -3300,9 +3384,6 @@ en:
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
-      unique level name here:
-        description here: description here
-        title: title
       v1 U1L13 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
       v2 U1 Internet is for Everyone Student Lesson Introduction:
@@ -3391,7 +3472,8 @@ en:
       v2 U3L03 Student Lesson Introduction:
         Creativity in Algorithms: Creativity in Algorithms
       v2 U3L04 Student Lesson Introduction:
-        Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
+        description here: description here
+        title: title
       v2 U3L05 Student Lesson Introduction:
         Creating Functions: Creating Functions
       v2 U3L07 Student Lesson Introduction:
@@ -3401,6 +3483,8 @@ en:
       v2 U3L09 Student Lesson Introduction:
         Looping and Random Numbers: Looping and Random Numbers
       v2 U3L10 Student Lesson Introduction:
+        Design a Digital Scene: Design a Digital Scene
+      v2 U3L10 Student Lesson Introduction - stage mods only:
         Design a Digital Scene: Design a Digital Scene
       v2 U3L6 Student Lesson Introduction:
         Functions and Top-Down Design: Functions and Top-Down Design
@@ -3452,6 +3536,7 @@ en:
         Unit 4 Self-Assessment: {}
         Unit 5 Self-Assessment: {}
         brendan test survey: {}
+        csd-post-survey-2017-levelgroup: {}
         csd-pre-survey-2017-levelgroup: {}
         csd-pulse-check-survey-1-levelgroup: {}
         csd-pulse-check-survey-1-levelgroup U1Ch2: {}
@@ -3465,6 +3550,7 @@ en:
         csd-pulse-check-survey-1-levelgroup U5Ch2: {}
         csd-pulse-check-survey-1-levelgroup U6Ch1: {}
         csd-pulse-check-survey-1-levelgroup U6Ch2: {}
+        csp-post-survey-2017-levelgroup: {}
         csp-pre-survey-2017-levelgroup: {}
         csp-pulse-check-survey-1-levelgroup-U1Ch2: {}
         csp-pulse-check-survey-2-levelgroup-U2Ch1: {}
@@ -3519,8 +3605,6 @@ en:
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
-        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Drag the blocks to match.: Drag the blocks to match.
         Instructions: Instructions
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
@@ -3629,8 +3713,6 @@ en:
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
-        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Drag the blocks to match.: Drag the blocks to match.
         Instructions: Instructions
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
@@ -3699,6 +3781,19 @@ en:
         Answer 1: Answer 1
         CSD U3 keyinput match: CSD U3 keyinput match
         Question: Question
+      CSD U6 LED match:
+        <img src="https://images.code.org/13c6f95018b1728330cf7947ca8110cf-image-1510946591584.21.16 AM.png">: <img src="https://images.code.org/13c6f95018b1728330cf7947ca8110cf-image-1510946591584.21.16 AM.png">
+        <img src="https://images.code.org/24bd83e858a1d26eb9ed90da0712b16a-image-1510946591583.21.50 AM.png">: <img src="https://images.code.org/24bd83e858a1d26eb9ed90da0712b16a-image-1510946591583.21.50 AM.png">
+        <img src="https://images.code.org/2e8634dca87b15479e96170a40183243-image-1510946781043.gif">: <img src="https://images.code.org/2e8634dca87b15479e96170a40183243-image-1510946781043.gif">
+        <img src="https://images.code.org/4e91f10e0ad896472cb39c4c20e0a6b1-image-1510946781039.gif">: <img src="https://images.code.org/4e91f10e0ad896472cb39c4c20e0a6b1-image-1510946781039.gif">
+        <img src="https://images.code.org/6862a5382c01de33f9a29b815b1d1a26-image-1510946591581.22.15 AM.png">: <img src="https://images.code.org/6862a5382c01de33f9a29b815b1d1a26-image-1510946591581.22.15 AM.png">
+        <img src="https://images.code.org/705a5d0ce82fb28f85f0e148212c43a7-image-1510946591583.21.42 AM.png">: <img src="https://images.code.org/705a5d0ce82fb28f85f0e148212c43a7-image-1510946591583.21.42 AM.png">
+        <img src="https://images.code.org/b4f013eeef4952db107708c371d2db33-image-1510946781042.gif">: <img src="https://images.code.org/b4f013eeef4952db107708c371d2db33-image-1510946781042.gif">
+        <img src="https://images.code.org/d9fa10dc211109c27223817dd4ae9ad9-image-1510946591584.21.24 AM.png">: <img src="https://images.code.org/d9fa10dc211109c27223817dd4ae9ad9-image-1510946591584.21.24 AM.png">
+        <img src="https://images.code.org/eb0ff1c31279235e91bdfed89156faf8-image-1510946781041.gif">: <img src="https://images.code.org/eb0ff1c31279235e91bdfed89156faf8-image-1510946781041.gif">
+        <img src="https://images.code.org/f636ab48d39b46096367388984f3e1e8-image-1510946781042.gif">: <img src="https://images.code.org/f636ab48d39b46096367388984f3e1e8-image-1510946781042.gif">
+        Match the Block: Match the Block
+        Match the block to the picture of what it does.: Match the block to the picture of what it does.
       CSD validator Matching:
         "&lt;!DOCTYPE html&gt;": "&lt;!DOCTYPE html&gt;"
         "&lt;head&gt;": "&lt;head&gt;"
@@ -4003,7 +4098,6 @@ en:
         Match the Map to the arrow that gets the Flurb to the treasure: Match the Map to the arrow that gets the Flurb to the treasure
         Matching: Matching
       K-1 Maze Match 1:
-        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
         "/script_assets/k_1_images/maze_images/maze_ENE.png": "/script_assets/k_1_images/maze_images/maze_ENE.png"
         "/script_assets/k_1_images/maze_images/maze_WSS.png": "/script_assets/k_1_images/maze_images/maze_WSS.png"
@@ -4012,7 +4106,6 @@ en:
         "/script_assets/k_1_images/move_blocks/ENE.png": "/script_assets/k_1_images/move_blocks/ENE.png"
         "/script_assets/k_1_images/move_blocks/WSS.png": "/script_assets/k_1_images/move_blocks/WSS.png"
         "/script_assets/k_1_images/move_blocks/WW.png": "/script_assets/k_1_images/move_blocks/WW.png"
-        Drag the blocks to match.: Drag the blocks to match.
         Instructions: Instructions
         Match the puzzles and blocks: Match the puzzles and blocks
         Matching: Matching
@@ -4400,7 +4493,6 @@ en:
         "/script_assets/matches/images/q2.jpg": "/script_assets/matches/images/q2.jpg"
         "/script_assets/matches/images/q3.jpg": "/script_assets/matches/images/q3.jpg"
         "/script_assets/matches/images/q4.jpg": "/script_assets/matches/images/q4.jpg"
-        Drag the images from right to center.: Drag the images from right to center.
         Instructions: Instructions
         Match up all the flowers by colour!: Match up all the flowers by colour!
         Matching Images Two: Matching Images Two
@@ -4416,24 +4508,10 @@ en:
         blue: blue
         salt: salt
       unique level name here:
-        ? |-
-          1dimension
-          var yLocation = 200;
-        : |-
-          1dimension
-          var yLocation = 200;
-        CSD U3 Variables name match: CSD U3 Variables name match
-        Labels can't have spaces.: Labels can't have spaces.
-        Labels can't start with a number.: Labels can't start with a number.
-        Labels should have the same capitalization.: Labels should have the same capitalization.
-        YLocation: YLocation
+        Answer 1: Answer 1
+        Question: Question
         description here: description here
-        ? |-
-          size of circle
-          var yLocation = 200;
-        : |-
-          size of circle
-          var yLocation = 200;
+        title: title
     multi:
       2-3 Algorithms Multi 1:
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
@@ -4496,7 +4574,7 @@ en:
         "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_q.png": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         Multiple Choice: Multiple Choice
-        Which program does not create this image?: Which program does not create this image?
+        Which program **does not** create this image?: Which program **does not** create this image?
       2-3 Relay Programming Multi 2:
         "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
@@ -4951,13 +5029,20 @@ en:
         The feather will continue up.: The feather will continue up.
         The feather will start to fall again.: The feather will start to fall again.
         The feather will stop moving: The feather will stop moving
+      CSD U6 array multi:
+        <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11 PM.png" width="200px" />: <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11 PM.png" width="200px" />
+        <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00 PM.png" width="200px": <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00 PM.png" width="200px"
+        <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34 PM.png" width="200px" />: <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34 PM.png" width="200px" />
+        <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54 PM.png" width="200px" />: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54 PM.png" width="200px" />
+        Using Arrays: Using Arrays
+        What will App Lab display when the code on the left is run?: What will App Lab display when the code on the left is run?
       CSD U6 setProperty predict multi:
-        '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;"': '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;"'
-        '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;"': '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;"'
-        '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;"': '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;"'
-        '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;"': '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;"'
+        '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">': '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png" style="max-width: 100px;">'
+        '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">': '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png" style="max-width: 100px;">'
+        '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;">': '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png" style="max-width: 100px;">'
+        '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;">': '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png" style="max-width: 100px;">'
         Make a Prediction: Make a Prediction
-        When run, what will this app look like?: When run, what will this app look like?
+        Read the code and predict what this app will look like when run.: Read the code and predict what this app will look like when run.
       CSDU4 Screens Predict Multi:
         About: About
         Contact Us: Contact Us
@@ -5482,6 +5567,13 @@ en:
         rearranges the variables a, b, and tmp.: rearranges the variables a, b, and tmp.
         swaps the values of a and b: swaps the values of a and b
         this code doesn't do anything: this code doesn't do anything
+      Commute Assess - comp 1 - block B:
+        This program causes an error: This program causes an error
+        a, b, and tmp are variables. What does this script do?: a, b, and tmp are variables. What does this script do?
+        makes a and b equal to each other: makes a and b equal to each other
+        rearranges the variables a, b, and tmp.: rearranges the variables a, b, and tmp.
+        swaps the values of a and b: swaps the values of a and b
+        this code doesn't do anything: this code doesn't do anything
       Commute Assess - comp 2 - block:
         Randomly returns on of the three numbers: Randomly returns on of the three numbers
         'Return the smallest of the three numbers ': 'Return the smallest of the three numbers '
@@ -5527,7 +5619,19 @@ en:
         "<pre>5</pre>": "<pre>5</pre>"
         Nothing is printed: Nothing is printed
         This script would cause an error: This script would cause an error
+      Commute Assess - func 2a - block B:
+        "<pre>10</pre>": "<pre>10</pre>"
+        "<pre>55</pre>": "<pre>55</pre>"
+        "<pre>5</pre>": "<pre>5</pre>"
+        Nothing is printed: Nothing is printed
+        This script would cause an error: This script would cause an error
       Commute Assess - func 2b - block:
+        "<pre>21</pre>": "<pre>21</pre>"
+        "<pre>81</pre>": "<pre>81</pre>"
+        "<pre>9</pre>": "<pre>9</pre>"
+        nothing is printed: nothing is printed
+        this script would cause an error: this script would cause an error
+      Commute Assess - func 2b - block B:
         "<pre>21</pre>": "<pre>21</pre>"
         "<pre>81</pre>": "<pre>81</pre>"
         "<pre>9</pre>": "<pre>9</pre>"
@@ -5556,7 +5660,21 @@ en:
         It will be different each time: It will be different each time
         Nothing will be printed: Nothing will be printed
         What will be displayed after running this code?: What will be displayed after running this code?
+      CommuteAssess - Cond 1 - block B:
+        "<pre>Inside first if</pre>": "<pre>Inside first if</pre>"
+        "<pre>Inside first if<br>Inside second if</pre>": "<pre>Inside first if<br>Inside second if</pre>"
+        "<pre>Inside second if</pre>": "<pre>Inside second if</pre>"
+        It will be different each time: It will be different each time
+        Nothing will be printed: Nothing will be printed
+        What will be displayed after running this code?: What will be displayed after running this code?
       CommuteAssess - Cond 2 - block:
+        "<pre>All done.</pre>": "<pre>All done.</pre>"
+        "<pre>Inside the else. <br>All done.</pre>": "<pre>Inside the else. <br>All done.</pre>"
+        "<pre>Inside the if. </pre>": "<pre>Inside the if. </pre>"
+        "<pre>Inside the if. <br>All done.</pre>": "<pre>Inside the if. <br>All done.</pre>"
+        "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>": "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>"
+        What will be displayed after running this code?: What will be displayed after running this code?
+      CommuteAssess - Cond 2 - block B:
         "<pre>All done.</pre>": "<pre>All done.</pre>"
         "<pre>Inside the else. <br>All done.</pre>": "<pre>Inside the else. <br>All done.</pre>"
         "<pre>Inside the if. </pre>": "<pre>Inside the if. </pre>"
@@ -5607,6 +5725,13 @@ en:
         '6': '6'
         How many times will the word "here" be displayed when this code is run?: How many times will the word "here" be displayed when this code is run?
         It will be different each time you run it: It will be different each time you run it
+      CommuteAssess - loops 1 - block B:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+        How many times will the word "here" be displayed when this code is run?: How many times will the word "here" be displayed when this code is run?
+        It will be different each time you run it: It will be different each time you run it
       CommuteAssess - loops 2 - block:
         '0': '0'
         '1': '1'
@@ -5642,7 +5767,22 @@ en:
         x is equal to 15; y is equal to 10: x is equal to 15; y is equal to 10
         x is equal to 15; y is equal to 15: x is equal to 15; y is equal to 15
         x is equal to 5; y is equal to 10: x is equal to 5; y is equal to 10
+      CumulAssess - Var 1 - block B:
+        What are the values of x and y after this script runs?: What are the values of x and y after this script runs?
+        x is equal to "x + 5"; y is equal to "x": x is equal to "x + 5"; y is equal to "x"
+        x is equal to 10, 15; y is equal to 5, 10: x is equal to 10, 15; y is equal to 5, 10
+        x is equal to 10; y is equal to 5: x is equal to 10; y is equal to 5
+        x is equal to 15; y is equal to 10: x is equal to 15; y is equal to 10
+        x is equal to 15; y is equal to 15: x is equal to 15; y is equal to 15
+        x is equal to 5; y is equal to 10: x is equal to 5; y is equal to 10
       CumulAssess - Var 2 - block:
+        "<pre>BoysHello Girls</pre>": "<pre>BoysHello Girls</pre>"
+        "<pre>Hello Boys and Girls</pre>": "<pre>Hello Boys and Girls</pre>"
+        "<pre>Hello Girls and Boys</pre>": "<pre>Hello Girls and Boys</pre>"
+        "<pre>sentence</pre>": "<pre>sentence</pre>"
+        <pre>y + z + " and " + x</pre>: <pre>y + z + " and " + x</pre>
+        What will be displayed after running this code?: What will be displayed after running this code?
+      CumulAssess - Var 2 - block B:
         "<pre>BoysHello Girls</pre>": "<pre>BoysHello Girls</pre>"
         "<pre>Hello Boys and Girls</pre>": "<pre>Hello Boys and Girls</pre>"
         "<pre>Hello Girls and Boys</pre>": "<pre>Hello Girls and Boys</pre>"
@@ -7971,6 +8111,57 @@ en:
         The artist will draw only one line of squares.: The artist will draw only one line of squares.
         The artist will solve the puzzle correctly.: The artist will solve the puzzle correctly.
         What will happen when you press the "Run" button?: What will happen when you press the "Run" button?
+      csd-post-survey-q26:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        ? Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        : Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csd-post-survey-q27:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        ? 'Connected a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
+        : 'Connected a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csd-post-survey-q28:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Asked me to problem solve when something didn't work the way I wanted it to work.: Asked me to problem solve when something didn't work the way I wanted it to work.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csd-post-survey-q29:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Asked me to explain the logic and reasoning supporting my solutions to problems.: Asked me to explain the logic and reasoning supporting my solutions to problems.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csd-post-survey-q30:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+        Worked collaboratively with other students in a small group.: Worked collaboratively with other students in a small group.
+      csd-post-survey-q31:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+        Shared responsibility for activity and project work with group members.: Shared responsibility for activity and project work with group members.
+      csd-post-survey-q32:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Made my own choices about assignments in computer science class.: Made my own choices about assignments in computer science class.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
       csd-pulse-check-survey-1-q1:
         Agree: Agree
         Disagree: Disagree
@@ -8511,6 +8702,392 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q1:
+        Agree: Agree
+        Disagree: Disagree
+        I am very good at school.: I am very good at school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q10:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q11:
+        Agree: Agree
+        Disagree: Disagree
+        'I think computer science is interesting. ': 'I think computer science is interesting. '
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q12:
+        Agree: Agree
+        Disagree: Disagree
+        'I have the ability to learn computer science. ': 'I have the ability to learn computer science. '
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q13:
+        Agree: Agree
+        Disagree: Disagree
+        I am better at computer science than other kids at my school.: I am better at computer science than other kids at my school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q14:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+        When I encounter a computer science problem without an obvious answer, I am always able to figure out some way to solve it.: When I encounter a computer science problem without an obvious answer, I am always able to figure out some way to solve it.
+      csp-post-survey-2017-q16:
+        Agree: Agree
+        Disagree: Disagree
+        It is important to me to be good at computer science.: It is important to me to be good at computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q17:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        People like me do computer science.: People like me do computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q18:
+        Agree: Agree
+        Disagree: Disagree
+        I think I could become a computer scientist one day.: I think I could become a computer scientist one day.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q19:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q2:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+        When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it.: When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it.
+      csp-post-survey-2017-q20:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q22:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Sometimes I feel unsure whether I belong in this class.: Sometimes I feel unsure whether I belong in this class.
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q23:
+        Agree: Agree
+        Disagree: Disagree
+        I am treated with as much respect as other students in this computer science class.: I am treated with as much respect as other students in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q24:
+        Agree: Agree
+        Disagree: Disagree
+        I feel like I can be myself in this computer science class.: I feel like I can be myself in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q25:
+        Agree: Agree
+        Disagree: Disagree
+        I feel like my opinions are taken seriously in this computer science class.: I feel like my opinions are taken seriously in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q26:
+        Agree: Agree
+        Disagree: Disagree
+        It has been hard for people like me to to be accepted in this computer science class.: It has been hard for people like me to to be accepted in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q28:
+        Agree: Agree
+        Disagree: Disagree
+        Learning computer science helps me in my other school subjects.: Learning computer science helps me in my other school subjects.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q29:
+        Agree: Agree
+        Computer science is important for my future.: Computer science is important for my future.
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q3:
+        Agree: Agree
+        Disagree: Disagree
+        I think my schoolwork is interesting.: I think my schoolwork is interesting.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q30:
+        Agree: Agree
+        Disagree: Disagree
+        I expect that I will use computer science in my job.: I expect that I will use computer science in my job.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q31:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q32:
+        Agree: Agree
+        Disagree: Disagree
+        I often take a step back and think about what is most important to me.: I often take a step back and think about what is most important to me.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q33:
+        Agree: Agree
+        Disagree: Disagree
+        Every person has the same ability to learn computer science, no matter what their gender, skin color, or background.: Every person has the same ability to learn computer science, no matter what their gender, skin color, or background.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q34:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Some people are just better at learning and doing computer science than others.: Some people are just better at learning and doing computer science than others.
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q35:
+        Agree: Agree
+        Disagree: Disagree
+        I worry that the teacher or students in this class think that I am not as good at computer science as other students.: I worry that the teacher or students in this class think that I am not as good at computer science as other students.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q36-a:
+        A little: A little
+        A lot: A lot
+        I worry because I'm not good at math.: I worry because I'm not good at math.
+        Not at all: Not at all
+      csp-post-survey-2017-q36-b:
+        A little: A little
+        A lot: A lot
+        I worry because I have little experience with computer science.: I worry because I have little experience with computer science.
+        Not at all: Not at all
+      csp-post-survey-2017-q36-c:
+        A little: A little
+        A lot: A lot
+        I worry because of my gender.: I worry because of my gender.
+        Not at all: Not at all
+      csp-post-survey-2017-q36-d:
+        A little: A little
+        A lot: A lot
+        I worry because of my race/ethnicity.: I worry because of my race/ethnicity.
+        Not at all: Not at all
+      csp-post-survey-2017-q4:
+        Agree: Agree
+        Disagree: Disagree
+        It is important for me to be good at my schoolwork.: It is important for me to be good at my schoolwork.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q50:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        'Analyze data (organize, process, manipulate, or evaluate data). ': 'Analyze data (organize, process, manipulate, or evaluate data). '
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q51:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Explain the logic and reasoning supporting my solutions to problems.: Explain the logic and reasoning supporting my solutions to problems.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q52:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Explain why I agreed or disagreed with the work of other students in class.: Explain why I agreed or disagreed with the work of other students in class.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q53:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Communicate my thought processes to others.: Communicate my thought processes to others.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q54:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+        Problem solve when something didn't work the way I wanted it to work.: Problem solve when something didn't work the way I wanted it to work.
+      csp-post-survey-2017-q55:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Consider alternative approaches to my work.: Consider alternative approaches to my work.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q56:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        ? Consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        : Consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q57:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        ? Connected a lesson or classroom activities to my own life (e.g., by asking about my past experiences, or applying content to my daily life).
+        : Connected a lesson or classroom activities to my own life (e.g., by asking about my past experiences, or applying content to my daily life).
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q58:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Made activities and projects interesting to me by sharing relevant stories, using humor, bringing in guest speakers, etc.: Made activities and projects interesting to me by sharing relevant stories, using humor, bringing in guest speakers, etc.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q59:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Connected lesson content with current events.: Connected lesson content with current events.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q6:
+        Agree: Agree
+        Disagree: Disagree
+        It is hard for people like me to be accepted at my school.: It is hard for people like me to be accepted at my school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q60:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Asked questions when I was confused about activities or assignments.: Asked questions when I was confused about activities or assignments.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q61:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+        'Tried new things in class even when I was not sure how to do them. ': 'Tried new things in class even when I was not sure how to do them. '
+      csp-post-survey-2017-q64:
+        ? 'Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '
+        : 'Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '
+        'No': 'No'
+        'Yes': 'Yes'
+      csp-post-survey-2017-q65:
+        I don't know: I don't know
+        Is this computer science course required for you?: Is this computer science course required for you?
+        'No': 'No'
+        'Yes': 'Yes'
+      csp-post-survey-2017-q8:
+        Agree: Agree
+        Disagree: Disagree
+        I am treated with as much respect as other students at my school.: I am treated with as much respect as other students at my school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q9:
+        Agree: Agree
+        Disagree: Disagree
+        I can really be myself at school.: I can really be myself at school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q1:
         Agree: Agree
         Disagree: Disagree
@@ -8675,7 +9252,7 @@ en:
       csp-pre-survey-2017-q26:
         Agree: Agree
         Disagree: Disagree
-        I feel like it will be hard for people like me to to be accepted in this computer science class.: I feel like it will be hard for people like me to to be accepted in this computer science class.
+        I feel like it will be hard for people like me to be accepted in this computer science class.: I feel like it will be hard for people like me to be accepted in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -9191,9 +9768,9 @@ en:
         Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">: Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">
       csp_U3_turtle_subgoal_q1_mc:
         <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">: <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">
+        <img src="https://images.code.org/0ac2007de60525613a731c7be7264de3-image-1508867676544.png">: <img src="https://images.code.org/0ac2007de60525613a731c7be7264de3-image-1508867676544.png">
         <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">: <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">
         <img src="https://images.code.org/24f044f9687625036b86caea6a8e91ec-image-1506461585574.png">: <img src="https://images.code.org/24f044f9687625036b86caea6a8e91ec-image-1506461585574.png">
-        <img src="https://images.code.org/45f52a2606143ddbe0582e656e3b8105-image-1506461568310.png">: <img src="https://images.code.org/45f52a2606143ddbe0582e656e3b8105-image-1506461568310.png">
       csp_U3_turtle_subgoal_q2_mc:
         <img src="https://images.code.org/55925716649b3728c2f0d471daa15d76-image-1506462044543.png">: <img src="https://images.code.org/55925716649b3728c2f0d471daa15d76-image-1506462044543.png">
         <img src="https://images.code.org/97bd0addc524083097425b6b83074aa9-image-1506462021794.png">: <img src="https://images.code.org/97bd0addc524083097425b6b83074aa9-image-1506462021794.png">
@@ -9665,13 +10242,13 @@ en:
       grade2_multi_collector_A_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
-        Incorrect.  Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.: Incorrect.  Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.
-        Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.: Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.
+        Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.: Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.
+        Laurel tries to collect treasure where there is none and it causes an error.: Laurel tries to collect treasure where there is none and it causes an error.
         Laurel will collect 4 pieces of treasure using this code.: Laurel will collect 4 pieces of treasure using this code.
         Laurel will collect all of the treasure.: Laurel will collect all of the treasure.
-        Laurel will only be able to collect 2 pieces of treasure using this code.: Laurel will only be able to collect 2 pieces of treasure using this code.
-        ? Look closely at the code below.  If the code were to run all the way to the end, how many pieces of treasure would Laurel collect?
-        : Look closely at the code below.  If the code were to run all the way to the end, how many pieces of treasure would Laurel collect?
+        Laurel will try to collect treasure where there is not any and it causes an error.: Laurel will try to collect treasure where there is not any and it causes an error.
+        ? Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?
+        : Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?
       image code from circle:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         "(rectangle (+ 8 2) (- 7 5) solid red)": "(rectangle (+ 8 2) (- 7 5) solid red)"

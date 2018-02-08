@@ -346,7 +346,24 @@ Maze.init = function (config) {
       finishButton.setAttribute('disabled', 'disabled');
       dom.addClickTouchEvent(finishButton, Maze.finishButtonClick);
     }
+
+    // Listen for hint events that draw a path in the game.
+    window.addEventListener('displayHintPath', e => {
+      Maze.drawHintPath(svg, e.detail);
+    });
   };
+
+  if (
+    config.embed &&
+    config.level.markdownInstructions &&
+    !config.level.instructions
+  ) {
+    // if we are an embedded level with markdown instructions but no regular
+    // instructions, we want to display CSP-style instructions and not be
+    // centered
+    config.noInstructionsWhenCollapsed = true;
+    config.centerEmbedded = false;
+  }
 
   // Push initial level properties into the Redux store
   studioApp().setPageConstants(config, {
@@ -371,6 +388,21 @@ Maze.init = function (config) {
     </Provider>,
     document.getElementById(config.containerId)
   );
+};
+
+function gridNumberToPosition(n) {
+  return (n + 0.5) * Maze.SQUARE_SIZE;
+}
+
+/**
+ * @param svg
+ * @param {Array<Array>} coordinates An array of x and y grid coordinates.
+ */
+Maze.drawHintPath = function (svg, coordinates) {
+  const path = svg.getElementById('hintPath');
+  path.setAttribute('d', 'M' + coordinates.map(([x, y]) => {
+    return `${gridNumberToPosition(x)},${gridNumberToPosition(y)}`;
+  }).join(' '));
 };
 
 /**
@@ -657,8 +689,6 @@ var displayFeedback = function (finalFeedback = false) {
     return;
   }
   var options = {
-    app: 'maze', //XXX
-    skin: skin.id,
     feedbackType: Maze.testResults,
     response: Maze.response,
     level: level

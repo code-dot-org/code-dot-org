@@ -4,45 +4,42 @@ title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Unit 6: Lesson 5 - Explore PT Prep - Reviewing the Task
+# Explore PT Prep - Reviewing the Task
 
-## Background
+## Overview
 
-Review the Explore PT, its scoring guidelines, and some sample tasks
+This lesson contains a series of activities you can use to help students familiarize themselves with Explore Performance Task, how it is scored, and some example tasks provided by the College Board.
 
 ## Lesson
 
-* Review Practice PTs.
 * Review the Explore Performance Task.
-* Review Scoring Guidelines and Sample task
+* Review Sample Tasks and Scoring Guidelines.
 
 ## Resources
 
 **College Board Documents**
 
-* [Explore Performance Task](https://drive.google.com/open?id=0B2QFqkDgv9LjLUtreXQ0a3FrWlE) - Task Description
-* [Scoring Guidelines - Explore Performance Task](https://drive.google.com/open?id=0B2QFqkDgv9LjMDlta0QzUy04NVE)
+* [AP CSP Performance Task Directions for Students](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf?course=ap-computer-science-principles) - College Board Student Handout
+* [Explore Performance Task - Scoring Guidelines 2018](https://apcentral.collegeboard.org/pdf/2018-explore-performance-tasks-sg.pdf?course=ap-computer-science-principles) - College Board Doc
 
-  *Explore PT Samples:*
-  
-  * [Sample A ](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/232659.html)
-  * Sample B (Removed by College Board)
-  * [Sample C](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/232661.html)
-  * [Sample D](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/233027.html)
-  * [Sample E](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/233028.html)
-  
-  *Scoring Commentary*
-  
-  *  For Sample A - [Commentary](https://secure-media.collegeboard.org/digitalServices/pdf/ap/high-explore-sample-commentary.pdf)
-  * For Samples C,D [Commentary](https://secure-media.collegeboard.org/digitalServices/pdf/ap/medium-explore-sample-commentary.pdf)
-  * For Sample E [Commentary](https://secure-media.collegeboard.org/digitalServices/pdf/ap/low-explore-sample-commentary.pdf)
-  * [Explore PT Q&A](https://secure-media.collegeboard.org/digitalServices/pdf/ap/explore-student-performance_q-and-a.pdf)
-  
-**Other Resources**
+**College Board Explore PT Samples**
 
-* [Explore PT - Guidelines before Starting](https://docs.google.com/document/d/1uzylD9CNW0M6EnS3B4X3YcU9ArSNcLsO80m97lWLQ0s/edit)
+* [Explore - Computational Artifact: Sample C](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-explore-sample-c-artifact.pdf)
+* [Explore - Written Responses: Sample C](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-explore-sample-c.pdf)
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+**Annotated Explore PT Samples:**
+
+* [CB Explore PT - Sample C (8/8)](https://docs.google.com/document/d/14iaqQRDIFkT4KNYT-e28COW7-TpPqVaH7dXi4pwD1SQ/export?format=pdf) - Annotated PT Sample (copy as [MS Word](https://docs.google.com/document/d/14iaqQRDIFkT4KNYT-e28COW7-TpPqVaH7dXi4pwD1SQ/export?format=doc), [Google Doc](https://docs.google.com/document/d/14iaqQRDIFkT4KNYT-e28COW7-TpPqVaH7dXi4pwD1SQ/copy))
+* [CB Explore PT - Sample D (5/8)](https://docs.google.com/document/d/1eIqblp17o77rcx6e0CoSSzeZTP18fjWewrRSp-m24xE/export?format=pdf) - Annotated PT Sample (copy as [MS Word](https://docs.google.com/document/d/1eIqblp17o77rcx6e0CoSSzeZTP18fjWewrRSp-m24xE/export?format=doc), [Google Doc](https://docs.google.com/document/d/1eIqblp17o77rcx6e0CoSSzeZTP18fjWewrRSp-m24xE/copy))
+* [CB Explore PT - Sample E (2/8) ](https://docs.google.com/document/d/1EKti2uzUlvqZWuxTB65zcNUZaqEFmYjnLR-3_kw2INw/export?format=pdf) - Annotated PT Sample (copy as [MS Word](https://docs.google.com/document/d/1EKti2uzUlvqZWuxTB65zcNUZaqEFmYjnLR-3_kw2INw/export?format=doc), [Google Doc](https://docs.google.com/document/d/1EKti2uzUlvqZWuxTB65zcNUZaqEFmYjnLR-3_kw2INw/copy))
+
+
+
+**(optional) Digital Portfolio Setup**
+
+* [AP Digital Portfolio Student Guide](https://secure-media.collegeboard.org/digitalServices/pdf/ap/computer-science-principles-digital-portfolio-student-guide.pdf) - College Board Handout
+
+
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

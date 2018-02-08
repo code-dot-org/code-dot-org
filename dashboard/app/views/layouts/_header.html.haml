@@ -5,13 +5,19 @@
   level = local_assigns[:level]
   full_width = local_assigns[:full_width]
 
+  # Whether we force the header contents on the right (i.e. sign-in button,
+  # hamburger) to show when on a mobile width device.
+  show_right_on_mobile = local_assigns[:show_right_on_mobile]
+
   show_bug_links = script_level || (level && level.try(:is_project_level))
 
   user_type = nil
 
-  header_class = 'header2-wrapper'
+  header_class = 'header-wrapper'
   header_class = header_class + (show_bug_links ? ' feedback-bug-links' : '')
   header_class = header_class + (script_level || level ? ' hide_on_mobile' : '')
+
+  header_right_class = show_right_on_mobile ? '' : 'hide_on_mobile'
 
   if current_user
     if current_user.teacher?
@@ -22,7 +28,7 @@
   end
 
   if !current_user
-    cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
+    cookie_key = environment_specific_cookie_name('_user_type')
     user_type = request.cookies[cookie_key]
   end
 
@@ -85,7 +91,7 @@
                 - Hamburger.get_header_contents(header_contents_options).each do |entry|
                   %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
 
-          .header_right.hide_on_mobile
+          .header_right{class: header_right_class}
             %span.freeplay_links
               %a.header_status_bar.level_free_play.playlab_free_play{title: t('nav.header.free_play.playlab'), href: playlab_project_projects_path, style: 'display: none;'}
                 %i.fa.fa-rocket

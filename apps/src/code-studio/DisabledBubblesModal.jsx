@@ -20,16 +20,12 @@ const styles = {
  * Component that displays a small notification at the top of the page when
  * postMilestone is disabled (and thus progress is isable)
  */
-const DisabledBubblesModal = React.createClass({
-  getInitialState() {
-    return {
-      open: true
-    };
-  },
+export default class DisabledBubblesModal extends React.Component {
+  state = {
+    open: true
+  };
 
-  handleClose() {
-    this.setState({open: false});
-  },
+  handleClose = () => this.setState({open: false});
 
   render() {
     return (
@@ -48,7 +44,7 @@ const DisabledBubblesModal = React.createClass({
             {i18n.disabledProgress3()}
           </div>
           <div style={styles.paragraph}>
-            <a target="_blank" href={window.dashboard.CODE_ORG_URL +'/saving-progress-csf'}>
+            <a target="_blank" href="https://support.code.org/hc/en-us/articles/115002660852">
               {i18n.learnMore()}
             </a>
           </div>
@@ -61,6 +57,4 @@ const DisabledBubblesModal = React.createClass({
       </BaseDialog>
     );
   }
-});
-
-export default DisabledBubblesModal;
+}

@@ -1,45 +1,38 @@
 /* globals appOptions */
 import $ from 'jquery';
-import experiments from '@cdo/apps/util/experiments';
-import msg from '@cdo/locale';
 import React from 'react';
 import PlayZone from '../components/playzone';
 import ReactDOM from 'react-dom';
-import AchievementDialog from '@cdo/apps/templates/AchievementDialog';
-import StageAchievementDialog from '@cdo/apps/templates/StageAchievementDialog';
-import Feedback from '@cdo/apps/feedback';
 import { getResult } from './codeStudioLevels';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import Sounds from '../../Sounds';
+import { ErrorDialog, SuccessDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
+import i18n from '@cdo/locale';
 
 /*
  * This file contains general logic for displaying modal dialogs
  */
 
-var dialogType = null;
 var adjustedScroll = false;
 
-function dialogHidden() {
-  var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
-  if (dialogType === "success" && lastServerResponse.nextRedirect) {
-    window.location.href = lastServerResponse.nextRedirect;
-  }
-
-  if (dialogType === "error") {
-    adjustScroll();
-  }
-}
-
-export function showDialog(type, callback, onHidden) {
-  dialogType = type;
-
-  // Use our prefabricated dialog content.
-  var content = document.querySelector("#" + type + "-dialogcontent").cloneNode(true);
-  var dialog = new LegacyDialog({
+/**
+ * @param {ReactComponent} component - a ReactComponent representing the contents
+ * @param {function} callback - Method to call when OK is clicked
+ * @param {function} onHidden - Method called when dialog is hidden/closed
+ */
+export function showDialog(component, callback, onHidden) {
+  const div = document.createElement('div');
+  ReactDOM.render(component, div);
+  const content = div.childNodes[0];
+  const dialog = new LegacyDialog({
+    // Content is a div with a specific expected structure. See LegacyDialog.
     body: content,
-    onHidden: onHidden || dialogHidden,
+    onHidden,
     autoResizeScrollableElement: '.scrollable-element'
   });
+
+  // Note: This approach of rendering a React component to the dom and then
+  // adding click handlers via jquery is very much not ideal.
 
   // Clicking the okay button in the dialog box dismisses it, and calls the callback.
   $(content).find("#ok-button").click(function () {
@@ -55,40 +48,7 @@ export function showDialog(type, callback, onHidden) {
   });
 
   dialog.show();
-}
-
-export function showStartOverDialog(callback) {
-  showDialog('startover', callback);
-}
-
-export function showInstructionsDialog() {
-  showDialog('instructions', null);
-  $('details').details();
-}
-
-function showAchievementDialog(onContinue, progress, assetUrl) {
-  const achievements = [{
-    check: true,
-    msg: msg.puzzleCompleted(),
-    progress: progress.newStageProgress - progress.oldStageProgress,
-  }];
-  const feedbackMessage = msg.nextLevel({
-    puzzleNumber: appOptions.levelPosition,
-  });
-
-  const container = document.createElement('div');
-  document.body.appendChild(container);
-  ReactDOM.render(
-    <AchievementDialog
-      achievements={achievements}
-      assetUrl={assetUrl}
-      encourageRetry={false}
-      feedbackMessage={feedbackMessage}
-      oldStageProgress={progress.oldStageProgress}
-      onContinue={onContinue}
-      showPuzzleRatingButtons={false}
-      showStageProgress={true}
-    />, container);
+  return dialog;
 }
 
 function adjustScroll() {
@@ -132,12 +92,22 @@ export function processResults(onComplete, beforeHook) {
     var results = getResult();
     var response = results.response;
     var result = results.result;
-    var errorType = results.errorType;
+    var errorDialog = results.errorDialog;
     var testResult = results.testResult ? results.testResult : (result ? 100 : 0);
     var submitted = results.submitted || false;
 
     if (!result) {
-      showDialog(errorType || "error");
+      // errorType is set by multi and by contract_match. In the case of multi,
+      // it's either "toofew" or null.
+      // contract_match generates its DOM for the possible error values here:
+      // https://github.com/code-dot-org/code-dot-org/blob/536da331a97b36824ac433ed667786c0b1e79ba2/dashboard/app/views/levels/_contract_match.html.haml#L24
+      if (errorDialog) {
+        // In this case, errorDialog should be an instance of a React class.
+        showDialog(errorDialog);
+      } else {
+        showDialog(<ErrorDialog/>, null, adjustScroll);
+      }
+
       if (!appOptions.dialog.skipSound) {
         Sounds.getSingleton().play('failure');
       }
@@ -185,41 +155,12 @@ export function processResults(onComplete, beforeHook) {
           dialog.show();
         } else if (lastServerResponse.nextRedirect) {
           if (appOptions.dialog.shouldShowDialog) {
-            if (experiments.isEnabled('gamification')) {
-              const progress = Feedback.calculateStageProgress(
-                true /* isPerfect */,
-                0 /* hintsUsed */,
-                appOptions.serverLevelId,
-                false /* finiteIdealBlocks */);
-
-              // This is a hack
-              const assetUrl = path => '/blockly/' + path;
-
-              let onContinue = dialogHidden;
-              if (Feedback.isLastLevel()) {
-                const stageInfo = lastServerResponse.previousStageInfo;
-                const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
-                onContinue = () => {
-                  const div = document.createElement('div');
-                  document.body.appendChild(div);
-                  ReactDOM.render(
-                    <StageAchievementDialog
-                      stageName={stageName}
-                      assetUrl={assetUrl}
-                      onContinue={dialogHidden}
-                      showStageProgress={experiments.isEnabled('gamification')}
-                      newStageProgress={progress.newStageProgress}
-                      numStars={Math.min(3, Math.round((progress.newStageProgress * 3) + 0.5))}
-                    />,
-                    div
-                  );
-                };
+            showDialog(getSuccessDialog(appOptions), null, () => {
+              var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
+              if (lastServerResponse.nextRedirect) {
+                window.location.href = lastServerResponse.nextRedirect;
               }
-
-              showAchievementDialog(onContinue, progress, assetUrl);
-            } else {
-              showDialog("success");
-            }
+            });
           } else {
             window.location.href = lastServerResponse.nextRedirect;
           }
@@ -227,4 +168,41 @@ export function processResults(onComplete, beforeHook) {
       }
     });
   }
+}
+
+/**
+ * Figures out the right title/body for our success dialog. This depends on our
+ * app type, and potentially a few other appOptions. Note this is only used by
+ * our non-coding levels (i.e. things like match, multi)
+ * LevelGroups should not get here, as they have skip_dialog: true
+ * @param appOptions
+ * @returns {ReactComponent}
+ */
+export function getSuccessDialog(appOptions) {
+  let title, body;
+  const data = appOptions.level;
+  const options = data.options || {};
+  const app = appOptions.dialog.app;
+
+  if (options.success_title) {
+    title = options.success_title;
+  } else if ((app === 'text_match' && !data.answers) || data.submittable) {
+    title = i18n.thankyou();
+  } else {
+    title = i18n.correct();
+  }
+
+  if (options.success_body) {
+    body = options.success_body;
+  } else if (app === 'text_match' && !data.answers) {
+    body = i18n.thanksForYourResponse();
+  } else if (data.submittable && app === 'multi') {
+    body = i18n.thankyouForAnswer();
+  } else {
+    body = i18n.correctAnswer();
+  }
+
+  return (
+    <SuccessDialog title={title} body={body}/>
+  );
 }

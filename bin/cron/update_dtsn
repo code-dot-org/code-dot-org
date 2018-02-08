@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+# This script updates the "DTSN" check on PRs
+
+require_relative '../../deployment'
+require 'cdo/github'
+require 'cdo/developers_topic'
+require 'cdo/only_one'
+
+DTSN_FILE = '.dtsn'.freeze
+
+def main
+  current_dtsn = DevelopersTopic.dtsn?
+  # Assume DTSN was 'yes' if the file is missing
+  previous_dtsn = !File.exist?(DTSN_FILE) || File.read(DTSN_FILE) == "true"
+  File.write(DTSN_FILE, current_dtsn.to_s)
+  if current_dtsn != previous_dtsn
+    if current_dtsn
+      GitHub.set_all_dtsn_check_pass
+    else
+      GitHub.set_all_dtsn_check_fail
+    end
+  end
+end
+
+main if only_one_running?(__FILE__)

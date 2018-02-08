@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../dashboard/config/environment'
+
+CDO.log = Logger.new(STDOUT)
+
+SURVEY_YEAR = '2014-2015'.freeze
+
+AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/ccd_lea_029_1415_w_0216161ar.txt") do |filename|
+  SchoolDistrict.transaction do
+    SchoolDistrict.merge_from_csv(filename) do |row|
+      {
+        id:    row['LEAID'].to_i,
+        name:  row['LEA_NAME'].upcase,
+        city:  row['LCITY'].to_s.upcase.presence,
+        state: row['LSTATE'].to_s.upcase.presence,
+        zip:   row['LZIP']
+      }
+    end
+  end
+end

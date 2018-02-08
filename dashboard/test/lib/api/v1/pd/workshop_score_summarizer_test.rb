@@ -76,11 +76,12 @@ module Api::V1::Pd
       WorkshopScoreSummarizer::FACILITATOR_SPECIFIC_QUESTIONS.each do |question|
         mixed_teacher_question_responses[question] = {}
         TEST_FACILITATORS.each_with_index do |facilitator, i|
-          if i.even?
-            mixed_teacher_question_responses[question][facilitator] = get_worst_response_for_question(question, PdWorkshopSurvey::OPTIONS)
-          else
-            mixed_teacher_question_responses[question][facilitator] = get_best_response_for_question(question, PdWorkshopSurvey::OPTIONS)
-          end
+          mixed_teacher_question_responses[question][facilitator] =
+            if i.even?
+              get_worst_response_for_question(question, PdWorkshopSurvey::OPTIONS)
+            else
+              get_best_response_for_question(question, PdWorkshopSurvey::OPTIONS)
+            end
         end
       end
 

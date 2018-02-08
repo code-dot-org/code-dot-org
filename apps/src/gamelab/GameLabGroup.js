@@ -17,9 +17,9 @@ module.exports.Group = function (baseConstructor) {
    *
    * Additional properties can be set on the state object to track state
    * across the multiple executions. If the function wants to be called again,
-   * it should set state.doneExec to false. When the function is complete and
+   * it should set state.doneExec_ to false. When the function is complete and
    * no longer wants to be called in a loop by the interpreter, it should set
-   * state.doneExec to true and return a value.
+   * state.doneExec_ to true and return a value.
    *
    * Collide each member of group against the target using the given collision
    * type.  Return true if any collision occurred.
@@ -43,17 +43,17 @@ module.exports.Group = function (baseConstructor) {
       if (!state.__subState) {
         // Before we call _collideWith (another stateful function), hang a __subState
         // off of state, so it can use that instead to track its state:
-        state.__subState = { doneExec: true };
+        state.__subState = { doneExec_: true };
       }
       var result_collideWith = this.get(state.__i)._collideWith(type, target, callback);
-      if (state.__subState.doneExec) {
+      if (state.__subState.doneExec_) {
         state.__didCollide = result_collideWith || state.__didCollide;
         delete state.__subState;
         state.__i++;
       }
-      state.doneExec = false;
+      state.doneExec_ = false;
     } else {
-      state.doneExec = true;
+      state.doneExec_ = true;
       return state.__didCollide;
     }
   }
@@ -87,17 +87,17 @@ module.exports.Group = function (baseConstructor) {
       if (!state.__subState) {
         // Before we call Sprite.isTouching which calls _collideWith (another stateful function),
         // hang a __subState off of state, so it can use that instead to track its state:
-        state.__subState = { doneExec: true };
+        state.__subState = { doneExec_: true };
       }
       var didTouch = this.get(state.__i).isTouching(target);
-      if (state.__subState.doneExec) {
+      if (state.__subState.doneExec_) {
         state.__didCollide = didTouch || state.__didCollide;
         delete state.__subState;
         state.__i++;
       }
-      state.doneExec = false;
+      state.doneExec_ = false;
     } else {
-      state.doneExec = true;
+      state.doneExec_ = true;
       return state.__didCollide;
     }
   };

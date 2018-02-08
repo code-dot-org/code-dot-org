@@ -6,8 +6,8 @@ const style = {
   },
   footer: {
     position: 'absolute',
-    height: '80px',
-    padding: '0 20px 20px 20px',
+    height: '100px',
+    padding: '0 20px',
     left: '0',
     right: '0',
     bottom: '0',

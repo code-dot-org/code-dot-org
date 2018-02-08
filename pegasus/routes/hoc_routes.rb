@@ -31,16 +31,9 @@ get '/api/hour/begin/:code' do |code|
 
   # set company to nil if not a valid company
   company = request.GET['company'] || request.cookies['company']
-  # Pass through the company param to the congrats page only if an entry exists in the forms,
-  # or for the special case of cartoon network, where we need the company to add a customized link.
-  unless company.nil? || company == CARTOON_NETWORK
+  # Pass through the company param to the congrats page only if an entry exists in the forms.
+  unless company.nil?
     company = nil unless DB[:forms].where(kind: 'CompanyProfile', name: company).first
-  end
-
-  # The lang parameter is used only by the cartoon network integration.
-  lang = request.GET['lang']
-  if company == CARTOON_NETWORK && (lang == 'ar' || lang == 'en')
-    response.set_cookie('language_', {value: lang, domain: ".code.org", path: '/', expires: Time.now + (365 * 24 * 3600)})
   end
 
   launch_tutorial(tutorial, company: company)
@@ -177,7 +170,7 @@ post '/api/hour/certificate' do
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
 
   row = DB[:hoc_activity].where(session: params[:session_s]).first
-  if row
+  if row && !row[:name]
     name = params[:name_s].to_s.strip
     DB[:hoc_activity].where(id: row[:id]).update(name: name)
     row[:name] = name
@@ -185,4 +178,8 @@ post '/api/hour/certificate' do
 
   content_type :json
   session_status_for_row(row).to_json
+end
+
+post '/v2/certificate' do
+  call(env.merge('PATH_INFO' => '/api/hour/certificate'))
 end

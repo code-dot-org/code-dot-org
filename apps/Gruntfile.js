@@ -24,6 +24,7 @@ module.exports = function (grunt) {
       `require('${path.resolve(process.env.mocha_entry)}');`;
     const file = `// Auto-generated
 import 'babel-polyfill';
+import 'whatwg-fetch';
 import { throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere } from './util/testUtils';
 ${loadContext}
 describe('entry tests', () => {
@@ -99,7 +100,7 @@ describe('entry tests', () => {
           '\n  2. cd <new-directory>' +
           '\n  3. npm install && grunt build-dev' +
           '\n  4. npm link' +
-          '\n  5. cd -' +
+          '\n  5. cd <code-dot-org apps directory>' +
           '\n  6. npm link @code-dot-org/piskel' +
           '\n  7. rerun your previous command' +
           '\n'));
@@ -430,24 +431,28 @@ describe('entry tests', () => {
     'code-studio':                  './src/sites/studio/pages/code-studio.js',
     'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
     'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
+    'levelbuilder_craft':          './src/sites/studio/pages/levelbuilder_craft.js',
     'levelbuilder_edit_script':     './src/sites/studio/pages/levelbuilder_edit_script.js',
     'levelbuilder_gamelab':         './src/sites/studio/pages/levelbuilder_gamelab.js',
     'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
     'levelbuilder_pixelation':      './src/sites/studio/pages/levelbuilder_pixelation.js',
     'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
     'levels/_curriculum_reference': './src/sites/studio/pages/levels/_curriculum_reference.js',
-    'levels/submissionHelper':      './src/sites/studio/pages/levels/submissionHelper.js',
+    'levels/_dialog':               './src/sites/studio/pages/levels/_dialog.js',
     'levels/_standalone_video':     './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/external':              './src/sites/studio/pages/levels/external.js',
     'levels/_level_group':          './src/sites/studio/pages/levels/_level_group.js',
+    'levels/_match':                './src/sites/studio/pages/levels/_match.js',
     'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
+    'levels/_external_link':        './src/sites/studio/pages/levels/_external_link.js',
     'levels/editors/_blockly':      './src/sites/studio/pages/levels/editors/_blockly.js',
     'levels/editors/_all':          './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_dsl':          './src/sites/studio/pages/levels/editors/_dsl.js',
     'projects/index':               './src/sites/studio/pages/projects/index.js',
-    'projects/public':               './src/sites/studio/pages/projects/public.js',
+    'projects/public':            './src/sites/studio/pages/projects/public.js',
+    'projects/featured':          './src/sites/studio/pages/projects/featured.js',
     'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
     'schoolInfoInterstitial':       './src/sites/studio/pages/schoolInfoInterstitial.js',
     'scripts/stage_extras':         './src/sites/studio/pages/scripts/stage_extras.js',
@@ -455,12 +460,14 @@ describe('entry tests', () => {
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
+    'maker/discountcode':           './src/sites/studio/pages/maker/discountcode.js',
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
     'home/_homepage':               './src/sites/studio/pages/home/_homepage.js',
+    'congrats/index':               './src/sites/studio/pages/congrats/index.js',
     'courses/index':                './src/sites/studio/pages/courses/index.js',
     'courses/show':                 './src/sites/studio/pages/courses/show.js',
     'courses/edit':                 './src/sites/studio/pages/courses/edit.js',
-    'devise/registrations/edit':    './src/sites/studio/pages/devise/registrations/edit.js'
+    'devise/registrations/edit':    './src/sites/studio/pages/devise/registrations/edit.js',
   };
 
   var otherEntries = {
@@ -496,6 +503,10 @@ describe('entry tests', () => {
     'pd/teachercon_survey/new': './src/sites/studio/pages/pd/teachercon_survey/new.js',
     'pd/application_dashboard/index': './src/sites/studio/pages/pd/application_dashboard/index.js',
     'pd/application/facilitator_application/new': './src/sites/studio/pages/pd/application/facilitator_application/new.js',
+    'pd/application/teacher_application/new': './src/sites/studio/pages/pd/application/teacher_application/new.js',
+    'pd/application/principal_approval_application/new': './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
+    'pd/teachercon1819_registration/new': './src/sites/studio/pages/pd/teachercon1819_registration/new.js',
+    'pd/fit_weekend1819_registration/new': './src/sites/studio/pages/pd/fit_weekend1819_registration/new.js',
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
     'pd/regional_partner_contact/new': './src/sites/studio/pages/pd/regional_partner_contact/new.js',
@@ -541,6 +552,17 @@ describe('entry tests', () => {
       externals: [
         {
           'jquery': 'var $',
+          // qtip2 doesn't actually export anything - it's a jquery extension
+          // and modifies the jquery object when present.
+          // We also want to be free to import 'qtip2' in our code (for tests)
+          // without including a copy of it in our release bundles since it's
+          // already provided by application.js.
+          // Therefore we include it as an external here (which keeps us from
+          // including the library in release bundles) but we map it to the
+          // jquery object, which will always be available when we are depending
+          // on qtip.  Tests skip this 'external' configuration and load the
+          // npm-provided copy of qtip2.
+          'qtip2': 'var $',
         }
       ],
       plugins: [
@@ -614,7 +636,6 @@ describe('entry tests', () => {
   var ext = envConstants.DEV ? 'uncompressed' : 'compressed';
   config.concat = {
     vendor: {
-      nonull: true,
       src: [
         'lib/blockly/preamble_' + ext + '.js',
         'lib/blockly/blockly_' + ext + '.js',
@@ -624,7 +645,6 @@ describe('entry tests', () => {
       dest: 'build/package/js/blockly.js'
     }
   };
-
 
   config.uglify = {
     lib: {

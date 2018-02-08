@@ -7,7 +7,7 @@
   "properties": {
     "skin": "studio",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return (Studio.victoryText == \"You win!\" ||  Studio.victoryText == \"You lose!\") && Studio.sprite[2].speed < 5;\r\n}",
-    "failure_condition": "function () {\r\n}",
+    "failure_condition": "function () {\r\n    return (Studio.victoryText == \"You win!\" ||  Studio.victoryText == \"You lose!\") && Studio.sprite[2].speed !< 5;\r\n}",
     "timeout_after_when_run": "false",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":19},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":8},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":18},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":16,\"size\":0.25,\"sprite\":4},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.25,\"sprite\":4},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
@@ -43,7 +43,7 @@
       "downButton",
       "upButton"
     ],
-    "markdown_instructions": "Wow, this game is hard to win!\r\n\r\nLet's customize this game to make it more fun.  This challenge has two parts:\r\n___\r\n\r\n1)  Slow the ninja down before you set him to chase the pirate.  \r\n\r\n2)  Use a `repeat forever` loop to check to see if the pirate is in the \"safe zone\" beneath the line of octopuses (greater than 225 pixels down).  If he is, set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the pirate.  ",
+    "markdown_instructions": "Wow, this game is hard to win!\r\n\r\nLet's customize this game to make it more fun.  This challenge has two parts:\r\n___\r\n\r\n1)  Slow down the ninja (actor 3) before you set him to chase the pirate (actor 1).  \r\n\r\n2)  Use a `repeat forever` loop to check to see if the pirate is in the \"safe zone\" beneath the line of octopuses (greater than 225 pixels down).  If he is, set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the pirate.  ",
     "instructions": "1)  Slow the ninja (actor 3) down before you set him to chase the pirate.  \r\n2)  If the pirate is greater than 225 pixels down, set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the pirate.  ",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Add the `set masked ninja speed` block to the beginning of the program to help slow the ninja down.\",\"hint_id\":\"courseD_playLab_cond6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/324e93ba7713300fb2a1979b31f88abb/courseD_playLab_cond6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to use an `if actor 1 y position > 255` block inside of a `repeat forever` block to always check if the pirate is below the octopuses.\",\"hint_id\":\"courseD_playLab_cond6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a42552de052b3fb2acb1c19dbacd69a7/courseD_playLab_cond6.mp3\"}]",
     "project_template_level_name": "courseD_playLab_condTemplate",
@@ -51,12 +51,14 @@
     "disable_if_else_editing": "true",
     "disable_procedure_autopopulate": "false",
     "background": "soccer",
-    "contained_level_names": null,
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/b817092577a66b419fbc14ad461b2a34=levelbuilder/34126.png",
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 17:23:57 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-20 17:36:43 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-20 21:16:18 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-27 02:15:54 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 02:17:00 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-24 18:50:07 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-10-18 04:31:15 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 17:23:57 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-20 17:36:43 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-20 21:16:18 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-27 02:15:54 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 02:17:00 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-24 18:50:07 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-10-18 04:31:15 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-01-02 19:03:08 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-01-02 19:03:36 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-01-02 19:03:47 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-01-02 19:04:44 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"failure_condition\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-01-02 19:09:12 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-01-02 19:09:14 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-01-02 19:27:10 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "repeat_until_while": 3,
@@ -211,12 +213,12 @@
             <block type="studio_setSpriteSpeedParams" inline="true">
               <value name="SPRITE">
                 <block type="math_number">
-                  <title name="NUM">1</title>
+                  <title name="NUM">3</title>
                 </block>
               </value>
               <value name="VALUE">
                 <block type="math_number">
-                  <title name="NUM">5</title>
+                  <title name="NUM">2</title>
                 </block>
               </value>
               <next>

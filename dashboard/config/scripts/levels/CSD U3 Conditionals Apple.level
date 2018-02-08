@@ -29,8 +29,8 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false",
-    "markdown_instructions": "# More Practice With Booleans\r\n\r\nLet's use one more Boolean expression to check the condition of a sprite.\r\n\r\n# Do This\r\nThere is a growing apple sprite created for you. It starts as green, should turn red when it gets to a scale of 2.\r\n\r\n* Add a `console.log` statement.\r\n* Add a Boolean expression inside the `console.log` that checks whether the `apple.scale` is greater than 2.",
+    "debugger_disabled": "true",
+    "markdown_instructions": "# More Practice With Booleans\r\n\r\nLet's use one more Boolean expression to check the condition of a sprite.\r\n\r\n# Do This\r\nThere is a growing apple sprite created for you. It starts as green and should turn red when it gets to a scale of 2. We won't worry about making it red yet, let's just use a `console.log` command to check whether it's scale is 2 yet.\r\n\r\n* Add a `console.log` statement.\r\n* Add a Boolean expression inside the `console.log` that checks whether the `apple.scale` is greater than 2.",
     "callout_json": "[]",
     "show_d_pad": "false",
     "project_template_level_name": "CSD U3 apple template",
@@ -83,7 +83,8 @@
       "comment_GameLab": null,
       "comment_Math": null,
       "comment_Sprites": null,
-      "console.log": null
+      "console.log": null,
+      "ifBlock": null
     },
     "show_debug_watch": "true",
     "hide_share_and_remix": "false",
@@ -91,11 +92,13 @@
     "expand_debugger": "true",
     "watchers_prepopulated": "[\"apple.scale\"]",
     "encrypted_examples": "RbHUch7BxbgkpSrOJH5P3HUPGx5t/YPfRzfVUJlbcCKeJzXs2VoXx+bWYsZu\ncnZLm5YlNHzhukTsXsV+rTKOBA==\n",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-26 16:45:41 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-26 16:45:41 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-31 21:56:59 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-30 22:02:53 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

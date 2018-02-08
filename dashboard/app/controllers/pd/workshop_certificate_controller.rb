@@ -10,18 +10,19 @@ class Pd::WorkshopCertificateController < ApplicationController
   def generate_certificate
     workshop = @enrollment.workshop
 
-    if workshop.teachercon?
-      case workshop.course
+    facilitator_names =
+      if workshop.teachercon?
+        case workshop.course
         when Pd::Workshop::COURSE_CSD
-          facilitator_names = [HARDCODED_CSD_FACILITATOR]
+          [HARDCODED_CSD_FACILITATOR]
         when Pd::Workshop::COURSE_CSP
-          facilitator_names = [HARDCODED_CSP_FACILITATOR]
+          [HARDCODED_CSP_FACILITATOR]
         else
-          facilitator_names = ["Code.org team"]
+          ["Code.org team"]
+        end
+      else
+        workshop.facilitators.map {|f| f.name.strip}.sort
       end
-    else
-      facilitator_names = workshop.facilitators.map {|f| f.name.strip}.sort
-    end
 
     begin
       image = create_workshop_certificate_helper(workshop, facilitator_names)

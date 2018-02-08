@@ -26,6 +26,7 @@ var SquareType = tiles.SquareType;
 import {TestResults, ResultType} from '../constants';
 
 import '../util/svgelement-polyfill';
+import {SignInState} from '../code-studio/progressRedux';
 
 /**
  * Create a namespace for the application.
@@ -750,6 +751,18 @@ Bounce.init = function (config) {
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
+  if (
+    config.embed &&
+    config.level.markdownInstructions &&
+    !config.level.instructions
+  ) {
+    // if we are an embedded level with markdown instructions but no regular
+    // instructions, we want to display CSP-style instructions and not be
+    // centered
+    config.noInstructionsWhenCollapsed = true;
+    config.centerEmbedded = false;
+  }
+
   var onMount = function () {
     studioApp().init(config);
 
@@ -1002,10 +1015,9 @@ Bounce.runButtonClick = function () {
  * studioApp().displayFeedback when appropriate
  */
 var displayFeedback = function () {
+  const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
   if (!Bounce.waitingForReport) {
     studioApp().displayFeedback({
-      app: 'bounce', //XXX
-      skin: skin.id,
       feedbackType: Bounce.testResults,
       response: Bounce.response,
       level: level,
@@ -1015,7 +1027,9 @@ var displayFeedback = function () {
       appStrings: {
         reinfFeedbackMsg: bounceMsg.reinfFeedbackMsg(),
         sharingText: bounceMsg.shareGame()
-      }
+      },
+      saveToProjectGallery: true,
+      disableSaveToGallery: !isSignedIn,
     });
   }
 };

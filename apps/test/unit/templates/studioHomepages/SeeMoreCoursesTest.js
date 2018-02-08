@@ -11,7 +11,7 @@ import { courses } from './homepagesTestData';
 describe('SeeMoreCourses', () => {
   it ('shows a button when closed', () => {
     const wrapper = shallow(
-      <SeeMoreCourses isRtl={false} courses={courses}/>
+      <SeeMoreCourses courses={courses}/>
     );
     assert(wrapper.containsMatchingElement(
       <Button
@@ -24,7 +24,7 @@ describe('SeeMoreCourses', () => {
 
   it ('shows CourseCards when clicked', () => {
     const wrapper = shallow(
-      <SeeMoreCourses isRtl={false} courses={courses}/>
+      <SeeMoreCourses courses={courses}/>
     );
     expect(wrapper.find('Button').exists());
     wrapper.find('Button').simulate('click');
@@ -36,14 +36,12 @@ describe('SeeMoreCourses', () => {
           linkText=""
           link=""
           showLink={false}
-          isRtl={false}
         >
           <div>
             <CourseCard
               title={courses[0].title}
               description={courses[0].description}
               link={courses[0].link}
-              isRtl={false}
             />
             <div
               style={{
@@ -60,7 +58,6 @@ describe('SeeMoreCourses', () => {
               title={courses[1].title}
               description={courses[1].description}
               link={courses[1].link}
-              isRtl={false}
             />
           </div>
         </ContentContainer>

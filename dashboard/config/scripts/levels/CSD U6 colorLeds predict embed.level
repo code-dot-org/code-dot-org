@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2017-12-07T23:04:50.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "markdown_instructions": "# colorLEDs\r\n\r\nThis program uses the colorLEDs array, which lets you control the color LEDs in your Circuit Playground.\r\n\r\nWhat do you think this code will do?  Write your prediction in the box below, then run the code to see what happens.",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-12-07 23:04:56 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

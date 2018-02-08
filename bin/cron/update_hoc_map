@@ -37,7 +37,15 @@ begin
       next if data['organization_name_s'].nil? || processed_data['location_p'].nil?
       next if form[:review] != "approved" && processed_data['location_city_s'].nil?
 
-      row = [form[:id], data['organization_name_s'], processed_data['location_city_s'], processed_data['location_p'], form[:review], data['special_event_details_s']]
+      organization_name =
+        if !processed_data['nces_school_name_s'].to_s.strip.empty?
+          processed_data['nces_school_name_s']
+        elsif !data['school_name_s'].to_s.strip.empty?
+          data['school_name_s']
+        else
+          data['organization_name_s']
+        end
+      row = [form[:id], organization_name, processed_data['location_city_s'], processed_data['location_p'], form[:review], data['special_event_details_s']]
       csv << row
     end
   end

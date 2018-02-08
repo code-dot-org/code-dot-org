@@ -157,11 +157,6 @@ class ApplicationController < ActionController::Base
       response[:script_id] = script_level.script.id
       response[:level_id] = level.id
 
-      previous_level = script_level.previous_level
-      if previous_level
-        response[:previous_level] = build_script_level_path(previous_level)
-      end
-
       # if they solved it, figure out next level
       if options[:solved?]
         response[:total_lines] = options[:total_lines]
@@ -203,7 +198,6 @@ class ApplicationController < ActionController::Base
       # which levels are worth saving)
       if options[:level_source].try(:id) &&
           options[:solved?] &&
-          options[:activity] &&
           options[:level_source_image]
         response[:save_to_gallery_url] = gallery_activities_path(
           gallery_activity: {
@@ -211,12 +205,6 @@ class ApplicationController < ActionController::Base
             user_level_id: options[:user_level] && options[:user_level].id
           }
         )
-      end
-
-      if options[:get_hint_usage]
-        response[:hints_used] =
-          HintViewRequest.hints_used(current_user.id, script_level.script.id, level.id).count +
-          AuthoredHintViewRequest.hints_used(current_user.id, script_level.script.id, level.id).count
       end
     end
 

@@ -5,6 +5,8 @@ var gameLabGroup = require('./GameLabGroup');
 import * as assetPrefix from '../assetManagement/assetPrefix';
 var GameLabWorld = require('./GameLabWorld');
 
+const defaultFrameRate = 30;
+
 /**
  * An instantiable GameLabP5 class that wraps p5 and p5play and patches it in
  * specific places to enable GameLab functionality
@@ -19,6 +21,23 @@ var GameLabP5 = function () {
     'keyPressed', 'keyReleased', 'keyTyped'
   ];
   this.p5specialFunctions = ['preload', 'draw', 'setup'].concat(this.p5eventNames);
+  this.stepSpeed = 1;
+
+  this.setP5FrameRate = () => {
+    if (!this.p5) {
+      return;
+    }
+    if (this.stepSpeed < 1) {
+      // TODO: properly handle overriding frameRate (this implementation doesn't
+      // account for any calls to frameRate() that occur while we are in the
+      // slow mode - we'll need to patch p5 to capture those and update
+      // this.prevFrameRate)
+      this.prevFrameRate = this.p5.frameRate();
+      this.p5.frameRate(1);
+    } else {
+      this.p5.frameRate(this.prevFrameRate || defaultFrameRate);
+    }
+  };
 };
 
 module.exports = GameLabP5;
@@ -429,6 +448,8 @@ GameLabP5.prototype.init = function (options) {
  */
 GameLabP5.prototype.resetExecution = function () {
 
+  gameLabSprite.setCreateWithDebug(false);
+
   if (this.p5) {
     this.p5.remove();
     this.p5 = null;
@@ -449,6 +470,19 @@ GameLabP5.prototype.registerP5EventHandler = function (eventName, handler) {
   this.p5[eventName] = handler;
 };
 
+GameLabP5.prototype.changeStepSpeed = function (stepSpeed) {
+  this.stepSpeed = stepSpeed;
+  this.setP5FrameRate();
+};
+
+GameLabP5.prototype.drawDebugSpriteColliders = function () {
+  if (this.p5) {
+    this.p5.allSprites.forEach(sprite => {
+      sprite.display(true);
+    });
+  }
+};
+
 /**
  * Instantiate a new p5 and start execution
  */
@@ -456,6 +490,7 @@ GameLabP5.prototype.startExecution = function () {
   new window.p5(function (p5obj) {
       this.p5 = p5obj;
       this.p5.useQuadTree(false);
+      this.setP5FrameRate();
       this.gameLabWorld = new GameLabWorld(p5obj);
 
       p5obj.registerPreloadMethod('gamelabPreload', window.p5.prototype);
@@ -482,7 +517,7 @@ GameLabP5.prototype.startExecution = function () {
             time_since_last >= target_time_between_frames - epsilon) {
 
           //mandatory update values(matrixs and stack) for 3d
-          if (this._renderer.isP3D){
+          if (this._renderer.isP3D) {
             this._renderer._update();
           }
 
@@ -539,14 +574,17 @@ GameLabP5.prototype.startExecution = function () {
         if (typeof context.setup === 'function') {
           context.setup();
         } else {
-          this._setupEpilogue();
+          this._setupEpiloguePhase1();
+          this._setupEpiloguePhase2();
         }
 
       }.bind(p5obj);
 
-      p5obj._setupEpilogue = function () {
+      p5obj._setupEpiloguePhase1 = function () {
         /*
-         * Copied code from p5 _setup()
+         * Modified code from p5 _setup() (safe to call multiple times in the
+         * event that the debugger has slowed down the process of completing
+         * the setup phase)
          */
 
         // unhide any hidden canvases that were created
@@ -558,6 +596,12 @@ GameLabP5.prototype.startExecution = function () {
             delete(k.dataset.hidden);
           }
         }
+      }.bind(p5obj);
+
+      p5obj._setupEpiloguePhase2 = function () {
+        /*
+         * Modified code from p5 _setup()
+         */
         this._setupDone = true;
 
       }.bind(p5obj);
@@ -591,7 +635,7 @@ GameLabP5.prototype.startExecution = function () {
 
         p5obj.angleMode(p5obj.DEGREES);
         // Set default frameRate to 30 instead of 60.
-        p5obj.frameRate(30);
+        p5obj.frameRate(defaultFrameRate);
 
         if (!this.onPreload()) {
           // If onPreload() returns false, it means that the preload phase has
@@ -794,13 +838,41 @@ GameLabP5.prototype.getFrameRate = function () {
   return this.p5 ? this.p5.frameRate() : 0;
 };
 
+/**
+ * Mark all current and future sprites as debug=true.
+ * @param {boolean} debugSprites - Enable or disable debug flag on all sprites
+ */
+GameLabP5.prototype.debugSprites = function (debugSprites) {
+  if (this.p5) {
+    gameLabSprite.setCreateWithDebug(debugSprites);
+    this.p5.allSprites.forEach(sprite => {
+      sprite.debug = debugSprites;
+    });
+  }
+};
+
 GameLabP5.prototype.afterDrawComplete = function () {
   this.p5.afterUserDraw();
   this.p5.afterRedraw();
 };
 
+/**
+ * Setup has started and the debugger may be at a breakpoint. Run Phase1 of
+ * of the epilogue so the student can see what they may be drawing in their
+ * setup code while debugging.
+ */
+GameLabP5.prototype.afterSetupStarted = function () {
+  this.p5._setupEpiloguePhase1();
+};
+
+/**
+ * Setup has completed. Run Phase1 and Phase2 of the epilogue. It is safe to
+ * call _setupEpiloguePhase1() multiple times in the event that it may already
+ * have been called.
+ */
 GameLabP5.prototype.afterSetupComplete = function () {
-  this.p5._setupEpilogue();
+  this.p5._setupEpiloguePhase1();
+  this.p5._setupEpiloguePhase2();
 };
 
 /**

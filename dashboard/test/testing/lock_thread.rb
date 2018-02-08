@@ -7,11 +7,7 @@ module ConnectionPoolLockThread
   end
 
   def lock_thread=(lock_thread)
-    if lock_thread
-      @lock_thread = Thread.current
-    else
-      @lock_thread = nil
-    end
+    @lock_thread = lock_thread ? Thread.current : nil
   end
 
   def connection(owner_thread = @lock_thread || Thread.current)

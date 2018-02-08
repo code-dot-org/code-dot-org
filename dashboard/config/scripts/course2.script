@@ -1,4 +1,8 @@
 hidden false
+hideable_stages true
+stage_extras_available true
+project_widget_visible true
+project_widget_types ["playlab", "artist"]
 
 stage 'Graph Paper Programming'
 level 'GraphPaperProgramming'

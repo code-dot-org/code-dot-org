@@ -85,7 +85,7 @@
         ],
         "matchType": "inexact",
         "minTimes": 2,
-        "message": "App Lab is expecting that you will put the pen down and pick it back up again inside your drawTriangle function."
+        "message": "App Lab is expecting that you will put the pen down and pick it back up again inside your drawTriangle function. Make sure you're calling drawTriangle() twice as well!"
       },
       {
         "entries": [
@@ -99,16 +99,22 @@
         ],
         "matchType": "inexact",
         "minTimes": 2,
-        "message": "App Lab is expecting that you will define drawTriangle to moveForward and turnLeft 3 times, with the turtle ending up back where it started facing the direction it started."
+        "message": "App Lab is expecting that you will define drawTriangle to moveForward and turnLeft 3 times, with the turtle ending up back where it started facing the direction it started. Make sure you're calling drawTriangle() twice as well!"
       }
     ],
     "instructions_important": "false",
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-11-17 00:18:08 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

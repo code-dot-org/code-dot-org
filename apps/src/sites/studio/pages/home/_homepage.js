@@ -2,7 +2,6 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import queryString from 'query-string';
-import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
@@ -20,17 +19,15 @@ import LinkCleverAccountModal from '@cdo/apps/code-studio/LinkCleverAccountModal
 $(document).ready(showHomepage);
 
 function showHomepage() {
-  const isRtl = isRtlFromDOM();
   const script = document.querySelector('script[data-homepage]');
   const homepageData = JSON.parse(script.dataset.homepage);
   const isTeacher = homepageData.isTeacher;
+  const isEnglish = homepageData.isEnglish;
   const announcementOverride = homepageData.announcement;
   const showUiTips = homepageData.showuitips;
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
-  const isEnglish = homepageData.isEnglish;
   const query = queryString.parse(window.location.search);
-
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setOAuthProvider(homepageData.provider));
@@ -52,14 +49,14 @@ function showHomepage() {
   }
 
   // Default teacher announcement.
-  let announcementHeading = i18n.announcementHeadingCoursesEFImprovements();
-  let announcementDescription = i18n.announcementDescriptionCoursesEFImprovements();
-  let announcementLink =
-    "http://teacherblog.code.org/post/165559168804/new-improvements-to-cs-fundamentals-courses-e-and";
-  let announcementId = "courses_e_f_improvements";
+  let announcementHeading = i18n.announcementHeadingFacilitatorApp();
+  let announcementDescription = i18n.announcementDescriptionFacilitatorApp();
+  let announcementLink = "https://code.org/facilitator";
+  let announcementId = "facilitator_app";
+  let announcementType = "";
 
   // Optional override of teacher announcement.
-  if (isEnglish &&
+  if (
     announcementOverride &&
     announcementOverride.teacher_announce_heading &&
     announcementOverride.teacher_announce_description &&
@@ -71,6 +68,7 @@ function showHomepage() {
     announcementDescription = announcementOverride.teacher_announce_description;
     announcementLink = announcementOverride.teacher_announce_url;
     announcementId = announcementOverride.teacher_announce_id;
+    announcementType = announcementOverride.teacher_announce_type;
   }
 
   ReactDOM.render (
@@ -142,14 +140,23 @@ function showHomepage() {
                 description: announcementDescription,
                 link: announcementLink,
                 image: "",
+                type: announcementType,
                 id: announcementId
               }
             ]}
             courses={homepageData.courses}
             joinedSections={homepageData.joined_sections}
             topCourse={homepageData.topCourse}
-            isRtl={isRtl}
             queryStringOpen={query['open']}
+            canViewAdvancedTools={homepageData.canViewAdvancedTools}
+            isEnglish={isEnglish}
+            ncesSchoolId={homepageData.ncesSchoolId}
+            censusQuestion={homepageData.censusQuestion}
+            showCensusBanner={homepageData.showCensusBanner}
+            teacherName={homepageData.teacherName}
+            teacherId={homepageData.teacherId}
+            teacherEmail={homepageData.teacherEmail}
+            schoolYear={homepageData.currentSchoolYear}
           />
         )}
         {!isTeacher && (
@@ -158,7 +165,7 @@ function showHomepage() {
             topCourse={homepageData.topCourse}
             sections={homepageData.sections}
             canLeave={homepageData.canLeave}
-            isRtl={isRtl}
+            canViewAdvancedTools={homepageData.canViewAdvancedTools}
           />
         )}
       </div>
@@ -195,6 +202,7 @@ window.CleverTakeoverManager = function (options) {
 
   function onCancelModal() {
     $("#user_user_type").val("student");
+    $.get("/users/clever_modal_dismissed");
     closeLinkCleverModal();
   }
 

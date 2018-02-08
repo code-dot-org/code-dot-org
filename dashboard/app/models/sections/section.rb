@@ -82,6 +82,7 @@ class Section < ActiveRecord::Base
 
   ADD_STUDENT_EXISTS = 'exists'.freeze
   ADD_STUDENT_SUCCESS = 'success'.freeze
+  ADD_STUDENT_FAILURE = 'failure'.freeze
 
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
@@ -149,9 +150,11 @@ class Section < ActiveRecord::Base
 
   # Adds the student to the section, restoring a previous enrollment to do so if possible.
   # @param student [User] The student to enroll in this section.
-  # @return [ADD_STUDENT_EXISTS | ADD_STUDENT_SUCCESS] Whether the student was already
-  #   in the section or has now been added.
+  # @return [ADD_STUDENT_EXISTS | ADD_STUDENT_SUCCESS | ADD_STUDENT_FAILURE] Whether the student was
+  #   already in the section or has now been added.
   def add_student(student)
+    return ADD_STUDENT_FAILURE if user_id == student.id
+
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
     if follower
       if follower.deleted?
@@ -280,6 +283,36 @@ class Section < ActiveRecord::Base
     elsif hidden_script.nil? && should_hide
       SectionHiddenScript.create(script_id: script.id, section_id: id)
     end
+  end
+
+  # One of the contstraints for teachers looking for discount codes is that they
+  # have a section in which 10+ students have made progress on 5+ levels in both
+  # csd2 and csd3
+  # Note: This code likely belongs in CircuitPlaygroundDiscountCodeApplication
+  # once such a thing exists
+  def has_sufficient_discount_code_progress?
+    return false if students.length < 10
+    csd2 = Script.get_from_cache('csd2')
+    csd3 = Script.get_from_cache('csd3')
+    raise 'Missing scripts' unless csd2 && csd3
+
+    csd2_programming_level_ids = csd2.levels.select {|level| level.is_a?(Weblab)}.map(&:id)
+    csd3_programming_level_ids = csd3.levels.select {|level| level.is_a?(Gamelab)}.map(&:id)
+
+    # Return true if 10+ students meet our progress condition
+    num_students_with_sufficient_progress = 0
+    students.each do |student|
+      csd2_progress_level_ids = student.user_levels_by_level(csd2).keys
+      csd3_progress_level_ids = student.user_levels_by_level(csd3).keys
+
+      # Count students who have made progress on 5+ programming levels in both units
+      next unless (csd2_progress_level_ids & csd2_programming_level_ids).count >= 5 &&
+          (csd3_progress_level_ids & csd3_programming_level_ids).count >= 5
+
+      num_students_with_sufficient_progress += 1
+      return true if num_students_with_sufficient_progress >= 10
+    end
+    false
   end
 
   private

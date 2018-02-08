@@ -1,14 +1,11 @@
 ---
-
 title: <%= hoc_s(:title_partners) %>
-
 ---
-
 Кодтау сағаты мен Информатика Білім Беру Апталығы мен Кодтау Сағаты және Шолу Комиттері арқылы жүргізілуде.
 
 [Консультативтік комитет](<%= resolve_url('/advisory-committee') %>) К-12, академия, халықаралық, коммерциялық және коммерциялық емес ұйымдардың жиынтығынан құралған. Бұл комитет Кодтау Сағаты науқандарының стратегиясын басқарады.
 
-[Шолу комитеті](<%= resolve_url('/review-committee') %>) Консультативтік Комитеттің рубрикаларын пайдалана отырып шараларын бағалайтын және ұсыныс жасайтын K-12 сынып тобының 15 тәрбиешілерінен құралған. Бұл тәрбиешілер студент бастаған оқулықтар мен мұғалім бастаған сабақ жоспарларының жүздеген оқулық серіктестері арқылы ұсынылғанына, шаралардың білім құндылығы жағынан бағаланғанына, оқушылармен айналасу мүмкіндіктеріне және әр түрлі студенттер жиынына ықтималды үндеулерге шолу жасайды.
+[Шолу комитеті](<%= resolve_url('/review-committee') %>) Консультативтік Комитеттің рубрикаларын пайдалана отырып шараларын бағалайтын және ұсыныс жасайтын K-12 сынып тобының 15 тәрбиешілерінен құралған. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
 Комитеттердің жұмысы мен адалдығы Кодтау Сағатының табысқа жетуіне және әрбір студентке информатиканың кіріспесіне деген көрінісін көрсетуде септігін тигізді.
 
@@ -134,13 +131,13 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-# Оқулық Серіктестері
+# Activity Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Инфрақұрылым Серіктестері және Құралдары
+# Infrastructure Partners and Tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

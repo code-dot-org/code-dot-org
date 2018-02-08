@@ -285,7 +285,7 @@ Packet.Encoder.prototype.getFieldBitWidth = function (headerType) {
  */
 Packet.Encoder.prototype.makeBinaryHeaders = function (headers) {
   var binaryHeaders = {};
-  this.headerSpec_.forEach(function (headerField){
+  this.headerSpec_.forEach(function (headerField) {
     if (headers.hasOwnProperty(headerField)) {
       // Convert differently for address and packet fields?
       if (Packet.isAddressField(headerField)) {

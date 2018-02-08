@@ -12,7 +12,7 @@
 }
 
 .highlight-img {
-  border-radius: 5px;
+  border-radius: 2px;
   background-size: cover;
   background-position: 50%;
   width: 260px;
@@ -21,7 +21,7 @@
 }
 
 .highlight-caption {
-  border-radius: 5px;
+  border-radius: 2px;
   color: white;
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
@@ -57,8 +57,8 @@
   left: 0px;
   padding: 3px;
   text-align: center;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   color: white;
 }
 

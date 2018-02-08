@@ -19,25 +19,25 @@ Rails/Delegate:
   Include:
     - dashboard/**/*
 
-Style/AlignParameters:
+Layout/AlignParameters:
   EnforcedStyle: with_fixed_indentation
 
-Style/DotPosition:
+Layout/DotPosition:
   EnforcedStyle: trailing
 
 Style/EmptyElse:
   EnforcedStyle: empty
 
-Style/EmptyLineBetweenDefs:
+Layout/EmptyLineBetweenDefs:
   AllowAdjacentOneLineDefs: true
 
 Style/EmptyMethod:
   EnforcedStyle: expanded
 
-Style/FirstParameterIndentation:
+Layout/FirstParameterIndentation:
   EnforcedStyle: consistent
 
-Style/MultilineMethodCallBraceLayout:
+Layout/MultilineMethodCallBraceLayout:
   EnforcedStyle: new_line
 
 Style/NumericLiterals:
@@ -46,11 +46,11 @@ Style/NumericLiterals:
 Style/Semicolon:
   AllowAsExpressionSeparator: true
 
-Style/SpaceInsideBlockBraces:
+Layout/SpaceInsideBlockBraces:
   EnforcedStyle: no_space
   SpaceBeforeBlockParameters: false
 
-Style/SpaceInsideHashLiteralBraces:
+Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
 
 Style/WordArray:
@@ -85,10 +85,10 @@ Style/BarePercentLiterals:
 Style/BracesAroundHashParameters:
   Enabled: false
 
-Style/ClosingParenthesisIndentation:
+Layout/ClosingParenthesisIndentation:
   Enabled: false
 
-Style/ExtraSpacing:
+Layout/ExtraSpacing:
   Enabled: false
 
 Style/IdenticalConditionalBranches:
@@ -97,7 +97,7 @@ Style/IdenticalConditionalBranches:
 Style/IfInsideElse:
   Enabled: false
 
-Style/LeadingCommentSpace:
+Layout/LeadingCommentSpace:
   Enabled: false
 
 Style/NumericPredicate:
@@ -111,5 +111,11 @@ Style/StringLiterals:
 
 Style/TrivialAccessors:
   AllowDSLWriters: true
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
 
 # END BLACKLIST

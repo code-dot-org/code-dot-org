@@ -75,6 +75,10 @@ var styles = {
   headerButtonIconRtl: {
     paddingRight: 0,
     paddingLeft: 8
+  },
+  headerButtonNoLabel: {
+    paddingRight: 0,
+    paddingLeft: 0
   }
 };
 
@@ -146,6 +150,10 @@ export const PaneButton = Radium(function (props) {
   ];
 
   var label = props.isPressed ? props.pressedLabel : props.label;
+
+  if (!label) {
+    iconStyle.push(styles.headerButtonNoLabel);
+  }
 
   return (
     <div

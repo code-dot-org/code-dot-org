@@ -27,7 +27,7 @@ rm -rf /var/tmp/aws-mon
 
 # Update frontend hostname using local-mode chef-client.
 pushd $CHEF_CACHE
-  chef-client -z -N <%=node_name%> -o 'recipe[cdo-apps::hostname]'
+  /opt/chef/bin/chef-client -z -N <%=node_name%> -o 'recipe[cdo-apps::hostname]'
 popd
 
 # Signal CompleteLifecycleAction, in case this instance was launched from an Auto Scaling process.

@@ -1,13 +1,12 @@
 import React, {Component, PropTypes} from 'react';
 import CourseBlocksGradeBands from './CourseBlocksGradeBands';
-import Responsive from '../../responsive';
 import ContentContainer from '../ContentContainer';
 import i18n from "@cdo/locale";
 
 class CourseBlocksStudentGradeBands extends Component {
   static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
+    showContainer: PropTypes.bool.isRequired,
+    hideBottomMargin: PropTypes.bool.isRequired
   };
 
   cards = [
@@ -29,19 +28,22 @@ class CourseBlocksStudentGradeBands extends Component {
   ];
 
   render() {
+    const { showContainer, hideBottomMargin } = this.props;
+    const link = showContainer ? '/home/#recent-courses' : '';
+    const linkText = showContainer ? i18n.viewMyRecentCourses() : '';
+    const heading = showContainer ? i18n.courseBlocksGradeBandsContainerHeading() : '';
+    const description = showContainer ? i18n.courseBlocksGradeBandsContainerDescription() : '';
+
     return (
       <ContentContainer
-        link={'/home/#recent-courses'}
-        linkText={i18n.viewMyRecentCourses()}
-        heading={i18n.courseBlocksGradeBandsContainerHeading()}
-        description={i18n.courseBlocksGradeBandsContainerDescription()}
-        isRtl={this.props.isRtl}
-        responsive={this.props.responsive}
+        link={link}
+        linkText={linkText}
+        heading={heading}
+        description={description}
+        hideBottomMargin={hideBottomMargin}
       >
         <CourseBlocksGradeBands
           cards={this.cards}
-          isRtl={this.props.isRtl}
-          responsive={this.props.responsive}
         />
       </ContentContainer>
     );

@@ -1,15 +1,20 @@
 require 'addressable'
 require 'active_support/core_ext/object/try'
+require 'active_support/core_ext/module/attribute_accessors'
+require 'cdo/aws/s3'
+require 'honeybadger'
 
 #
 # BucketHelper
 #
 class BucketHelper
+  cattr_accessor :s3
+
   def initialize(bucket, base_dir)
     @bucket = bucket
     @base_dir = base_dir
 
-    @s3 = Aws::S3::Client.new
+    self.s3 ||= AWS::S3.create_client
   end
 
   def allowed_file_type?(extension)
@@ -41,7 +46,7 @@ class BucketHelper
   def app_size(encrypted_channel_id)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     prefix = s3_path owner_id, channel_id
-    @s3.list_objects(bucket: @bucket, prefix: prefix).contents.map(&:size).reduce(:+).to_i
+    s3.list_objects(bucket: @bucket, prefix: prefix).contents.map(&:size).reduce(:+).to_i
   end
 
   #
@@ -58,7 +63,7 @@ class BucketHelper
     app_prefix = s3_path owner_id, channel_id
     target_object_prefix = s3_path owner_id, channel_id, target_object
 
-    objects = @s3.list_objects(bucket: @bucket, prefix: app_prefix).contents
+    objects = s3.list_objects(bucket: @bucket, prefix: app_prefix).contents
     target_object = objects.find {|x| x.key == target_object_prefix}
 
     app_size = objects.map(&:size).reduce(:+).to_i
@@ -70,7 +75,7 @@ class BucketHelper
   def list(encrypted_channel_id)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     prefix = s3_path owner_id, channel_id
-    @s3.list_objects(bucket: @bucket, prefix: prefix).contents.map do |fileinfo|
+    s3.list_objects(bucket: @bucket, prefix: prefix).contents.map do |fileinfo|
       filename = %r{#{prefix}(.+)$}.match(fileinfo.key)[1]
       category = category_from_file_type(File.extname(filename))
 
@@ -86,11 +91,13 @@ class BucketHelper
     end
     key = s3_path owner_id, channel_id, filename
     begin
-      s3_object = @s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
+      s3_object = s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
       {status: 'FOUND', body: s3_object.body, version_id: s3_object.version_id, last_modified: s3_object.last_modified, metadata: s3_object.metadata}
     rescue Aws::S3::Errors::NotModified
       {status: 'NOT_MODIFIED'}
     rescue Aws::S3::Errors::NoSuchKey
+      {status: 'NOT_FOUND'}
+    rescue Aws::S3::Errors::NoSuchVersion
       {status: 'NOT_FOUND'}
     rescue Aws::S3::Errors::InvalidArgument
       # Can happen when passed an invalid S3 version id
@@ -113,7 +120,7 @@ class BucketHelper
     dest_owner_id, dest_channel_id = storage_decrypt_channel_id(dest_channel)
 
     src_prefix = s3_path src_owner_id, src_channel_id
-    result = @s3.list_objects(bucket: @bucket, prefix: src_prefix).contents.map do |fileinfo|
+    result = s3.list_objects(bucket: @bucket, prefix: src_prefix).contents.map do |fileinfo|
       filename = %r{#{src_prefix}(.+)$}.match(fileinfo.key)[1]
       next unless (!options[:filenames] && (!options[:exclude_filenames] || !options[:exclude_filenames].include?(filename))) || options[:filenames].try(:include?, filename)
       mime_type = Sinatra::Base.mime_type(File.extname(filename))
@@ -121,7 +128,19 @@ class BucketHelper
 
       src = "#{@bucket}/#{src_prefix}#{filename}"
       dest = s3_path dest_owner_id, dest_channel_id, filename
-      response = @s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
+
+      # Temporary: Add additional context to exceptions reported here, to help
+      # diagnose a recurring issue where we pass a bad copy_source to the S3
+      # API on remix.
+      # https://app.honeybadger.io/projects/3240/faults/35329035/8aba7532-c087-11e7-8280-13b5745130ae
+      Honeybadger.context(
+        {
+          copy_source: URI.encode(src),
+          copy_dest_bucket: @bucket,
+          copy_dest_key: dest
+        }
+      )
+      response = s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
 
       {filename: filename, category: category, size: fileinfo.size, versionId: response.version_id}
     end
@@ -132,24 +151,24 @@ class BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    @s3.copy_object(bucket: @bucket, copy_source: URI.encode("#{@bucket}/#{key}?versionId=#{version}"), key: key, metadata_directive: 'REPLACE')
+    s3.copy_object(bucket: @bucket, copy_source: URI.encode("#{@bucket}/#{key}?versionId=#{version}"), key: key, metadata_directive: 'REPLACE')
   end
 
   def replace_abuse_score(encrypted_channel_id, filename, abuse_score)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    @s3.copy_object(bucket: @bucket, copy_source: URI.encode("#{@bucket}/#{key}"), key: key, metadata: {abuse_score: abuse_score.to_s}, metadata_directive: 'REPLACE')
+    s3.copy_object(bucket: @bucket, copy_source: URI.encode("#{@bucket}/#{key}"), key: key, metadata: {abuse_score: abuse_score.to_s}, metadata_directive: 'REPLACE')
   end
 
   def create_or_replace(encrypted_channel_id, filename, body, version = nil, abuse_score = 0)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
 
     key = s3_path owner_id, channel_id, filename
-    response = @s3.put_object(bucket: @bucket, key: key, body: body, metadata: {abuse_score: abuse_score.to_s})
+    response = s3.put_object(bucket: @bucket, key: key, body: body, metadata: {abuse_score: abuse_score.to_s})
 
     # Delete the old version, if doing an in-place replace
-    @s3.delete_object(bucket: @bucket, key: key, version_id: version) if version
+    s3.delete_object(bucket: @bucket, key: key, version_id: version) if version
 
     response
   end
@@ -167,14 +186,14 @@ class BucketHelper
 
     key = s3_path owner_id, channel_id, filename
     copy_source = @bucket + '/' + s3_path(owner_id, channel_id, source_filename)
-    response = @s3.copy_object(bucket: @bucket, key: key, copy_source: copy_source)
+    response = s3.copy_object(bucket: @bucket, key: key, copy_source: copy_source)
 
     # TODO: (bbuchanan) Handle abuse_score metadata for animations.
     # When copying an object, should also copy its abuse_score metadata.
     # https://www.pivotaltracker.com/story/show/117949241
 
     # Delete the old version, if doing an in-place replace
-    @s3.delete_object(bucket: @bucket, key: key, version_id: version) if version
+    s3.delete_object(bucket: @bucket, key: key, version_id: version) if version
 
     response
   end
@@ -183,21 +202,21 @@ class BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    @s3.delete_object(bucket: @bucket, key: key)
+    s3.delete_object(bucket: @bucket, key: key)
   end
 
   def delete_multiple(encrypted_channel_id, filenames)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     objects = filenames.map {|filename| {key: s3_path(owner_id, channel_id, filename)}}
 
-    @s3.delete_objects(bucket: @bucket, delete: {objects: objects, quiet: true})
+    s3.delete_objects(bucket: @bucket, delete: {objects: objects, quiet: true})
   end
 
   def list_versions(encrypted_channel_id, filename)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    @s3.list_object_versions(bucket: @bucket, prefix: key).versions.map do |version|
+    s3.list_object_versions(bucket: @bucket, prefix: key).versions.map do |version|
       {
         versionId: version.version_id,
         lastModified: version.last_modified,
@@ -212,7 +231,7 @@ class BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    @s3.copy_object(bucket: @bucket, key: key, copy_source: "#{@bucket}/#{key}?versionId=#{version_id}")
+    s3.copy_object(bucket: @bucket, key: key, copy_source: "#{@bucket}/#{key}?versionId=#{version_id}")
   end
 
   protected

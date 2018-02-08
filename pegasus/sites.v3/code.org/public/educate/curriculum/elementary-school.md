@@ -27,7 +27,7 @@ Our Computer Science Fundamentals courses have about 15 lessons that may be impl
 
 If you like teaching CS Fundamentals, invite other teachers by [sharing this handout](/files/csf-one-pager.pdf).
 
-Our curriculum [aligns to the newly revised 2017 CSTA standards](https://curriculum.code.org/csf/standards/) and is available at [no cost](/commitment) for anyone, anywhere to teach. Read more about our [curriculum values](/educate/curriculum/values).
+Our curriculum [aligns to the newly revised 2017 CSTA standards](https://curriculum.code.org/csf/standards/) and is available at [no cost](/commitment) for anyone, anywhere to teach. For more information about our goals and approach to our courses, please see our [curriculum values](/educate/curriculum/values) and our [professional learning values](/educate/professional-learning/values).
 
 [/col-60]
 
@@ -66,7 +66,7 @@ Courses
 
 <img src="/images/fit-970/CSFimages/Course_Map.png" style="max-width: 100%"/>
 
-For students new to computer science, each course begins with a grade-appropriate entry point and structured ramp-up of concepts. The progression of Courses A-F builds upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. If you’re looking for a more comprehensive course, the Express Course combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). You can download the [curriculum guide for Courses A-F here](/files/CSF_CoursesA-F_Curriculum_Guide.pdf).
+For students new to computer science, each course begins with a grade-appropriate entry point and structured ramp-up of concepts. The progression of Courses A-F builds upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. If you’re looking for a more comprehensive course, the Express Course combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). You can download version 2 of the [curriculum guide for Courses A-F here](https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf).
 
 If you've been teaching Courses 1-4 and want to know how to transition to teaching Courses A-F, check out our [Transition Guide](https://docs.google.com/document/d/1dFgrHiW-ERpNGey7yrNcoxU0LEfH9kFbdeLJn2QyJTA/edit?usp=sharing).
 
@@ -148,7 +148,7 @@ We are working on translating Courses A-F and the Express Course to languages be
 
 If you don't have computers in your classroom, these unplugged lessons can either be used alone or with other computer science lessons on related concepts.
 
-<a href="/curriculum/unplugged"><button>View unplugged lessons</button></a>
+<a href="https://code.org/curriculum/unplugged"><button>View unplugged lessons</button></a>
 
 # Examples of student creations
 
@@ -184,12 +184,12 @@ Recommended courses from 3rd parties
 
 [/solid-block-header]
 
-[](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
+<!--- If you update the resources here, don't forget to also update /educate/curriculum/3rdparty -->
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|---------------|
 | [Code Monkey](https://www.playcodemonkey.com/) | Over 300 story modes & skill mode challenges. Can be taught full year, 1/2 year, or quarterly. $10/student | Free online course, $250/webinar, $3500/onsite PD |
-| [Code Red Education](www.coderededucation.com) | 150 lessons over 7 modules, $3500/site | Online PD included with site fee |
+| [Code Red Education](http://www.coderededucation.com) | 150 lessons over 7 modules, $3500/site | Online PD included with site fee |
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-launch) | 6 10-hour computer science modules, $750/school  | Face-to-face and online, $700 for school-level lead teacher |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide) | A 6-unit intro to Scratch, FREE | In-person educator meet-ups and online MOOC, FREE |
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |

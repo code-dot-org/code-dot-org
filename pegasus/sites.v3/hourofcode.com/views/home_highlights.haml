@@ -1,0 +1,51 @@
+-if @language == 'en'
+  .row
+    .col-md-8
+      %br/
+      %h2 Hour of Code 2017
+      %a.twitter-grid{href: "https://twitter.com/codeorg/timelines/925449654308704256?limit=4?ref_src=twsrc%5Etfw?limit=4"} The Hour of Code 2017
+      %script{async: "", charset: "utf-8", src: "//platform.twitter.com/widgets.js"}
+    .col-md-3.highlights-column
+      %h2 Highlights from previous years
+      %div.highlight-tiles
+        - HIGHLIGHTS_CONSTANTS.each do |item|
+          = view :highlight_item, item: item
+        .clear
+        %a{href: "/highlights"}
+          %button See more highlights
+-else
+  -# Highlights
+  %br/
+
+  .row
+    .col-xs-6.col-sm-4
+      %img{src: localized_image("/images/fill-600x400/highlight-girl-hawaii.jpg"), style: "width: 100%;"}
+
+    .col-xs-6.col-sm-4
+      %img{src: localized_image("/images/fill-600x400/highlight-robot.jpg"), style: "width: 100%;"}
+
+    .hidden-xs.col-sm-4
+      %img{src: localized_image("/images/fill-600x400/highlight-girl-purple.jpg"), style: "width: 100%;"}
+
+  .gap{style: "height:30px"}
+
+  .row
+    .col-xs-6.col-sm-4
+      .hidden-xs
+        %img{src: localized_image("/images/fill-600x400/highlight-india.jpg"), style: "width: 100%; padding-bottom:30px"}
+      %img{src: localized_image("/images/fill-600x400/highlight-celebrate.jpg"), style: "width: 100%;"}
+
+    .col-xs-6.col-sm-8
+      %img{src: localized_image("/images/fill-800x543/highlight-nba.jpg"), style: "width: 100%;"}
+
+  .gap{style: "height:30px"}
+
+  .row
+    .col-xs-6.col-sm-4
+      %img{src: localized_image("/images/fill-600x400/highlight-stickers.jpg"), style: "width: 100%;"}
+
+    .hidden-xs.col-sm-4
+      %img{src: localized_image("/images/fill-600x400/highlight-girl-star-wars.jpg"), style: "width: 100%;"}
+
+    .col-xs-6.col-sm-4
+      %img{src: localized_image("/images/fill-600x400/highlight-kids-certificates.jpg"), style: "width: 100%;"}

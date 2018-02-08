@@ -15,7 +15,7 @@ if (window.Blockly && !data.uses_droplet) {
   const appBlocks = require('@cdo/apps/' + data.app + '/blocks');
   const skinsModule = require('@cdo/apps/' + data.app + '/skins');
   const options = {
-    skin: skinsModule.load(function (){}, data.skin_id),
+    skin: skinsModule.load(function () {}, data.skin_id),
     isK1: data.isK1,
   };
   commonBlocks.install(window.Blockly, options);
@@ -74,10 +74,9 @@ Object.keys(fieldConfig).forEach(key => {
   }
 });
 
-$("#plusanswer").on("click", () => {
-  $("#plusanswer").prev().clone().insertBefore("#plusanswer");
+$("#plusAnswerContainedLevel").on("click", () => {
+  $("#plusAnswerContainedLevel").prev().clone().insertBefore("#plusAnswerContainedLevel");
 });
-
 
 if (data.original_palette && !fieldConfig.codeFunctions.hideWhen) {
   ReactDOM.render(

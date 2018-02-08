@@ -13,7 +13,8 @@ const DEFAULT_PROPS = {
   text: TEST_TEXT,
   filterEntries: [],
   selection: [],
-  onUserInput: TEST_CALLBACK
+  onUserInput: TEST_CALLBACK,
+  singleEntry: false
 };
 
 describe('FilterGroup', () => {
@@ -42,6 +43,7 @@ describe('FilterGroup', () => {
           selected={false}
           onUserInput={TEST_CALLBACK}
           key="Martin the Warrior"
+          singleEntry={false}
         />
         <FilterChoice
           groupName={TEST_GROUP_NAME}
@@ -50,6 +52,35 @@ describe('FilterGroup', () => {
           selected={false}
           onUserInput={TEST_CALLBACK}
           key="The Legend of Luke"
+          singleEntry={false}
+        />
+      </FilterGroupContainer>
+    );
+  });
+
+  it('renders radio buttons', () => {
+    const wrapper = shallow(
+      <FilterGroup
+        {...DEFAULT_PROPS}
+        filterEntries={[
+          {
+            name: 'Martin the Warrior',
+            text: 'The Bellmaker'
+          }
+        ]}
+        singleEntry={true}
+      />
+    );
+    expect(wrapper).to.containMatchingElement(
+      <FilterGroupContainer text={TEST_TEXT}>
+        <FilterChoice
+          groupName={TEST_GROUP_NAME}
+          name="Martin the Warrior"
+          text="The Bellmaker"
+          selected={false}
+          onUserInput={TEST_CALLBACK}
+          key="Martin the Warrior"
+          singleEntry={true}
         />
       </FilterGroupContainer>
     );
@@ -85,6 +116,7 @@ describe('FilterGroup', () => {
           selected={true}
           onUserInput={TEST_CALLBACK}
           key="Mariel of Redwall"
+          singleEntry={false}
         />
         <FilterChoice
           groupName={TEST_GROUP_NAME}
@@ -93,6 +125,7 @@ describe('FilterGroup', () => {
           selected={false}
           onUserInput={TEST_CALLBACK}
           key="Mattimeo"
+          singleEntry={false}
         />
         <FilterChoice
           groupName={TEST_GROUP_NAME}
@@ -101,6 +134,7 @@ describe('FilterGroup', () => {
           selected={true}
           onUserInput={TEST_CALLBACK}
           key="Triss"
+          singleEntry={false}
         />
       </FilterGroupContainer>
     );

@@ -5,10 +5,10 @@ exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit3/"], ["teacherForum", "https://forum.code.org/c/csp3"], ["vocabulary", "https://curriculum.code.org/csp/unit3/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp/unit3/code/"], ["standardMappings", "https://curriculum.code.org/csp/unit3/standards/"], ["professionalLearning", "https://studio.code.org/s/csp3-support"]]
 has_verified_resources true
+script_announcements [{"notice"=>"Check out the mid-course survey!", "details"=>"We just added a mid-course survey to the end of unit 3.  Please ask your students to complete it.", "link"=>"", "type"=>"success"}, {"notice"=>"Encourage Your Students to Take the AP CSP Exam!", "details"=>"We have the chance to make history—again. Encourage your students to sign up for the AP exam! Check in with your AP Coordinator to find out the signup deadline for your school. Click \"Learn more\" for details.", "link"=>"http://teacherblog.code.org/post/169508999644/break-records-for-a-second-year-with-the-ap-cs", "type"=>"bullhorn"}]
 
 stage 'The Need For Programming Languages', flex_category: 'csp3_1'
 level 'v2 U3L01 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-
 assessment 'U3L01 Assessment1', progression: 'Check Your Understanding'
 assessment 'U3L01 Assessment3', progression: 'Check Your Understanding'
 assessment 'csp-pulse-check-survey-4-levelgroup-U3Ch1', progression: 'Quick Check-In'
@@ -21,7 +21,7 @@ level 'v2 U3L03 Student Lesson Introduction', progression: 'Lesson Vocabulary & 
 
 stage 'Using Simple Commands', flex_category: 'csp3_1'
 named_level 'v2 U3L04 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'csp_applab_turtle', progression: 'Turtle Programming'
+named_level 'csp_applab_turtle'
 level 'U3L2 Using Simple Commands', progression: 'Using Simple Turtle Commands'
 level 'U3L2_TurtleSquare_right', progression: 'Using Simple Turtle Commands'
 level 'U3L2_Turtle3by3Grid', progression: 'Challenge: Draw a 3x3 Grid Using Turtle Commands'
@@ -36,6 +36,7 @@ level 'csp_applab_functions', progression: 'Defining and Calling Functions'
 level 'U3L03 Define and use turnAround', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 Draw a T using turnAround', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 define turnRight and draw a rectangle', progression: 'Using Functions With Turtle Commands'
+named_level 'CSP Abstraction in Programming 2', progression: '(new) Abstraction in Programming'
 level 'U3L03 - draw rect function', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 - draw step', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 Three Steps', progression: 'Using Functions With Turtle Commands'
@@ -49,6 +50,7 @@ stage 'Functions and Top-Down Design', flex_category: 'csp3_1'
 named_level 'v2 U3L6 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'U3L04 - snowflake', progression: 'Using Functions with Turtle Commands'
 level 'U3L04 - 3 by 3 with functions', progression: 'Using Functions with Turtle Commands'
+assessment 'U3-AP-Practice-FR-design-process', progression: '(new)AP Practice Response - Design Process'
 assessment 'U3L04 Assessment1', progression: 'Check Your Understanding'
 assessment 'U3L04 Assessment2', progression: 'Check Your Understanding'
 assessment 'U3L04 Free Response Wrap Up', progression: 'Check Your Understanding'
@@ -64,6 +66,7 @@ level 'U3L06 Challenge 6 squiggles', progression: 'Introduction to Parameters'
 level 'U3L06 Challenge 5 overlapping circles', progression: 'Introduction to Parameters'
 level 'U3L06 Challenge 7 smiley face', progression: 'Introduction to Parameters'
 level 'U3L06 Challenge 8 make your own', progression: 'Make Your Own Turtle Drawing'
+assessment 'U3-AP-Practice-FR-score-abstraction-response', progression: '(new)AP Practice Response - Score a student response'
 assessment 'U3L06 Assessment2', progression: 'Check Your Understanding'
 assessment 'U3L06-API-multichoice', progression: 'Check Your Understanding'
 assessment 'U3L06 Assessment', progression: 'Check Your Understanding'
@@ -77,6 +80,8 @@ level 'U3L07 - createTriangleParam', progression: 'Drawing Shapes With Parameter
 level 'U3L08 - squareTwoParams', progression: 'Drawing Shapes With Parameters'
 level 'U3L08 - createTwoParamTriangle', progression: 'Drawing Shapes With Parameters'
 assessment 'csp_U3_turtle_subgoal_q3_mc', progression: 'Check Your Understanding: Defining Functions'
+named_level 'U3 whats a comment', progression: '(new) How to add comments to code'
+named_level 'U3L08 how to add comments', progression: '(new) How to add comments to code'
 level 'U3L08 - introUnderTheSea', progression: 'Under the Sea Drawing with Parameters'
 level 'U3L08 - paramsToStarfish', progression: 'Under the Sea Drawing with Parameters'
 level 'U3L08 - seaGrass', progression: 'Under the Sea Drawing with Parameters'
@@ -85,6 +90,7 @@ level 'U3L08 - multiParamFish', progression: 'Under the Sea Drawing with Paramet
 level 'U3L08 - randomInput', progression: 'Under the Sea Drawing with Parameters'
 assessment 'csp_U3_subgoal_q4_mc', progression: 'Check Your Understanding: Using Random Numbers'
 level 'U3L08 - freePlay', progression: 'Challenge: Continue Your Drawing With More Functions'
+assessment 'U3-AP-Practice-FR-manage-complexity', progression: '(new)AP Practice Response - Managing Complexity'
 assessment 'U3L08 Assessment1', progression: 'Check Your Understanding'
 assessment 'U3L08 Assessment2', progression: 'Check Your Understanding'
 
@@ -104,6 +110,7 @@ level 'U3L07 - seaGrass', progression: 'Using Loops to Add Detail to Your Drawin
 level 'U3L07 - allSeaGrass', progression: 'Using Loops to Add Detail to Your Drawing'
 level 'U3L07 - sunBeams', progression: 'Using Loops to Add Detail to Your Drawing'
 level 'U3L07 - Free Play Loops and Random', progression: 'Project: Under the Sea'
+assessment 'U3-AP-Practice-Choose-The-Abstraction', progression: '(new)AP Practice Response - Identify the Abstraction'
 assessment 'U3L07 - MC remove line of code loops', progression: 'Check Your Understanding'
 assessment 'U3L07 Free Response Reflection', progression: 'Check Your Understanding'
 assessment 'subgoals_u3_top_down_FR', progression: 'Check Your Understanding'
@@ -120,3 +127,6 @@ variants
   level 'csp_affirmation_intervention_3', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
 endvariants
 assessment 'CSP Unit 3 Ch1 Cumulative Assessment MC Group'
+
+stage 'Please complete the CSP Mid-course survey!', lockable: true, flex_category: 'cspSurvey'
+assessment 'csp-post-survey-2017-levelgroup'

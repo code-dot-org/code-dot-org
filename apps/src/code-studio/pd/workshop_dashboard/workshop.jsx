@@ -21,7 +21,7 @@ import {DATE_FORMAT} from './workshopConstants';
 import ConfirmationDialog from './components/confirmation_dialog';
 import WorkshopForm from './components/workshop_form';
 import WorkshopEnrollment from './components/workshop_enrollment';
-import Spinner from './components/spinner';
+import Spinner from '../components/spinner';
 
 const styles = {
   linkButton: {

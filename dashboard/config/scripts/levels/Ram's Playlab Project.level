@@ -40,6 +40,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-10-27 20:03:02 +0000\",\"changed\":[],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2017-10-27 20:03:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2017-10-27 20:06:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -335,5 +336,15 @@
         </block>
       </xml>
     </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="when_run"/>
+        <block type="studio_setScore" inline="false"/>
+        <block type="studio_getScore"/>
+        <block type="comment">
+          <title name="TEXT"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
   </blocks>
 </Studio>

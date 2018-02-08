@@ -324,16 +324,15 @@ Devise.setup do |config|
     manager.failure_app = CustomDeviseFailure
   end
 
+  require 'cookie_helpers'
   Warden::Manager.after_set_user do |user, auth|
-    env = Rails.env.production? ? '' : "_#{Rails.env}"
-    auth.cookies["_user_type#{env}"] = {value: user.teacher? ? "teacher" : "student", domain: :all, httponly: true}
-    auth.cookies["_shortName#{env}"] = {value: user.short_name, domain: :all}
+    auth.cookies[environment_specific_cookie_name("_user_type")] = {value: user.teacher? ? "teacher" : "student", domain: :all, httponly: true}
+    auth.cookies[environment_specific_cookie_name("_shortName")] = {value: user.short_name, domain: :all}
   end
 
   Warden::Manager.before_logout do |_, auth|
-    env = Rails.env.production? ? '' : "_#{Rails.env}"
-    auth.cookies["_user_type#{env}"] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
-    auth.cookies["_shortName#{env}"] = {value: "", expires: Time.at(0), domain: :all}
+    auth.cookies[environment_specific_cookie_name("_user_type")] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
+    auth.cookies[environment_specific_cookie_name("_shortName")] = {value: "", expires: Time.at(0), domain: :all}
   end
 
   # ==> Mountable engine configurations

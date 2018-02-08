@@ -22,6 +22,8 @@ import Sounds from '../../Sounds';
 
 import {TestResults} from '../../constants';
 import trackEvent from '../../util/trackEvent';
+import {captureThumbnailFromCanvas} from '../../util/thumbnail';
+import {SignInState} from '../../code-studio/progressRedux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -317,15 +319,27 @@ Craft.init = function (config) {
         Craft.hideSoftButtons();
 
         const phaserGame = document.getElementById('phaser-game');
+        const hammerToButton = {
+          [Hammer.DIRECTION_LEFT]: 'leftButton',
+          [Hammer.DIRECTION_RIGHT]: 'rightButton',
+          [Hammer.DIRECTION_UP]: 'upButton',
+          [Hammer.DIRECTION_DOWN]: 'downButton',
+        };
+
         const onDrag = function (e) {
-          const hammerToButton = {
-            [Hammer.DIRECTION_LEFT]: 'leftButton',
-            [Hammer.DIRECTION_RIGHT]: 'rightButton',
-            [Hammer.DIRECTION_UP]: 'upButton',
-            [Hammer.DIRECTION_DOWN]: 'downButton',
-          };
           if (hammerToButton[e.direction]) {
-            Craft.gameController.codeOrgAPI.arrowDown(directionToFacing[hammerToButton[e.direction]]);
+            Craft.gameController.codeOrgAPI.arrowDown(
+              directionToFacing[hammerToButton[e.direction]],
+            );
+          }
+          e.preventDefault();
+        };
+
+        const onDragEnd = function (e) {
+          if (hammerToButton[e.direction]) {
+            Craft.gameController.codeOrgAPI.arrowUp(
+              directionToFacing[hammerToButton[e.direction]],
+            );
           }
           e.preventDefault();
         };
@@ -335,6 +349,7 @@ Craft.init = function (config) {
         mc.add(new Hammer.Press({time: 150}) );
         mc.add(new Hammer.Tap() );
         mc.on("pan", onDrag);
+        mc.on('panend pancancel', onDragEnd);
         mc.on("press", () => Craft.gameController.codeOrgAPI.clickDown(() => {}));
         mc.on("tap", () => {
           Craft.gameController.codeOrgAPI.clickDown(() => {});
@@ -539,7 +554,7 @@ Craft.minAssetsForLevelNumber = function (levelNumber) {
     case 3:
       return ['levelThreeAssets'];
     default:
-      return ['allAssetsMinusPlayer'];
+      return ['designerAllAssetsMinusPlayer'];
   }
 };
 
@@ -551,7 +566,7 @@ Craft.afterLoadAssetsForLevel = function (levelNumber) {
       return Craft.minAssetsForLevelNumber(2);
     default:
       // May want to push this to occur on level with video
-      return ['allAssetsMinusPlayer'];
+      return ['designerAllAssetsMinusPlayer'];
   }
 };
 
@@ -567,7 +582,7 @@ Craft.niceToHaveAssetsForLevel = function (levelNumber) {
   if (levelNumber === FIRST_CHARACTER_LEVEL) {
     return ['playerSteveEvents', 'playerAlexEvents'];
   }
-  return ['allAssetsMinusPlayer'];
+  return ['designerAllAssetsMinusPlayer'];
 };
 
 Craft.hideSoftButtons = function () {
@@ -591,6 +606,7 @@ Craft.reset = function (first) {
   if (Craft.level.usePlayer) {
     Craft.hideSoftButtons();
   }
+  captureThumbnailFromCanvas($('#minecraft-frame canvas')[0]);
   Craft.gameController.codeOrgAPI.resetAttempt();
 };
 
@@ -827,9 +843,8 @@ Craft.reportResult = function (success) {
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function (response) {
+      const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
       studioApp().displayFeedback({
-        app: 'craft',
-        skin: Craft.initialConfig.skin.id,
         feedbackType: testResultType,
         response: response,
         level: Craft.initialConfig.level,
@@ -843,7 +858,9 @@ Craft.reportResult = function (success) {
           generatedCodeDescription: craftMsg.generatedCodeDescription()
         },
         feedbackImage: image,
-        showingSharing: Craft.initialConfig.level.freePlay
+        showingSharing: Craft.initialConfig.level.freePlay,
+        saveToProjectGallery: true,
+        disableSaveToGallery: !isSignedIn,
       });
     }
   });

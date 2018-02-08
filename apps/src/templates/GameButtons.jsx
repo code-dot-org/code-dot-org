@@ -26,19 +26,21 @@ export const FinishButton = () => (
 );
 
 export const RunButton = Radium(props => (
-  <button
-    id="runButton"
-    className={classNames(['launch', 'blocklyLaunch', props.hidden && 'invisible'])}
-    style={props.style}
-  >
-    <div>
-      {props.runButtonText || msg.runProgram()}
-    </div>
-    <img
-      src={blankImg}
-      className="run26"
-    />
-  </button>
+  <span id="runButtonWrapper">
+    <button
+      id="runButton"
+      className={classNames(['launch', 'blocklyLaunch', props.hidden && 'invisible'])}
+      style={props.style}
+    >
+      <div>
+        {props.runButtonText || msg.runProgram()}
+      </div>
+      <img
+        src={blankImg}
+        className="run26"
+      />
+    </button>
+  </span>
 ));
 RunButton.propTypes = {
   hidden: PropTypes.bool,

@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import Immutable from 'immutable';
+import RGBColor from 'rgbcolor';
 import constants from './constants';
 import './polyfills';
 
@@ -679,6 +680,18 @@ export function bisect(array, conditional) {
 }
 
 /**
+ * Recursively flatten the given array
+ * from https://stackoverflow.com/a/15030117/1810460
+ */
+export function flatten(array) {
+  return array.reduce(
+    (flat, toFlatten) =>
+      flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten),
+    [],
+  );
+}
+
+/**
  * Helper function that wraps window.location.reload, which we cannot stub
  * in unit tests if we're running them in Chrome.
  */
@@ -697,6 +710,26 @@ export function navigateToHref(href) {
 }
 
 /**
+ * Takes a simple object and returns it represented as a chain of url query
+ * params, including ? and & as necessary. Does not perform escaping. Examples:
+ * {} -> ''
+ * {a: 1} -> '?a=1'
+ * {a: 1, b: 'c'} -> '?a=1&b=c'
+ *
+ * @param {Object} params Object to stringify.
+ */
+export function stringifyQueryParams(params) {
+  if (!params) {
+    return '';
+  }
+  const keys = Object.keys(params);
+  if (!keys.length) {
+    return '';
+  }
+  return '?' + keys.map(key => `${key}=${params[key]}`).join('&');
+}
+
+/**
  * Resets the animation of an aniGif by unsetting and setting the src
  * @param {Element} element the <img> element that needs to be reset
  */
@@ -707,4 +740,23 @@ export function resetAniGif(element) {
   const src = element.src;
   element.src = '#';
   setTimeout(() => element.src = src, 0);
+}
+
+/**
+ * Compute a color an arbitrary distance between from and to, useful for
+ * react-motion based color transitions.
+ *
+ * @param {string} from a hex color string
+ * @param {string} to another hex color string
+ * @param {number} value A number between 0 and 1, expressing how far along
+ *   the way from 'from' to 'to' the returned color should be
+ * @returns {string} a color between from and to
+ */
+export function interpolateColors(from, to, value) {
+  const fromRGB = new RGBColor(from);
+  const toRGB = new RGBColor(to);
+  const r = fromRGB.r * (1 - value) + toRGB.r * value;
+  const g = fromRGB.g * (1 - value) + toRGB.g * value;
+  const b = fromRGB.b * (1 - value) + toRGB.b * value;
+  return `rgb(${r}, ${g}, ${b})`;
 }

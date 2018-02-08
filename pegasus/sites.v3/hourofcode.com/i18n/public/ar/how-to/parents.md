@@ -1,23 +1,21 @@
 ---
-
 title: <%= hoc_s(:title_how_to_parents) %>
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# كيف تكمل ساعة الكود مع طفلك
 
-Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
+اكمل ساعة الكود بالمنزل, او تطوع لتحضرها الي فصل طفلك في المدرسة! اليك كيف:
 
-## 1) شاهد هذا الفيديو "كيف تفعل ذلك" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) شاهد هذا الفيديو "كيف تفعل ذلك" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
 ## 2) اختر برنامجاً تعليمياً:
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
+نحن نوفر تشكيلة من الدروس الممتعة, التي تصل لساعة من الزمن, للطلبة من كل الاعمار, مصنوعة بيد مجموعة متنوعة من شركاؤنا. جربها!
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+**كل دروس ساعة الكود ذاتية الارشاد - مما يسمح لطفلك ان يكملها علي وتيرته و مستواه الخاص به**
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
@@ -35,7 +33,7 @@ Kick off your Hour of Code by inspiring your child and discussing how computer s
 **Show an inspirational video:**
 
 - الفيديو الرسمي ل Code.org، من تقديم بيل غاتس Bill Gates , مارك زوكربيرج Mark Zuckerberg و نجم إن بي أي NBA كريس بوش (توجد نسح [1 دقيقة واحدة](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 دقائق](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 دقائق](https://www.youtube.com/watch?v=dU1xS07N-FA) )
-- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- [الفيديو العالمي لساعة من البرمجة ](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [الرئيس الأمريكي أوباما يدعو جميع الطلاب لتعلم علوم الحاسب الآلي](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Find more inspirational [resources](<%= resolve_url('https://code.org/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 

@@ -1,5 +1,0 @@
-#!/bin/sh
-
-./send-to-mailing-list 11-9-hoc-general-1 hoc-2015-nov-9-mailing/general-deduped-test-1.csv
-./send-to-mailing-list 11-9-hoc-general-2 hoc-2015-nov-9-mailing/general-deduped-test-2.csv
-./send-to-mailing-list 11-9-hoc-general-3 hoc-2015-nov-9-mailing/general-deduped-test-3.csv

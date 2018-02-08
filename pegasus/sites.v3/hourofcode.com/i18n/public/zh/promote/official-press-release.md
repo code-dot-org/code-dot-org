@@ -1,49 +1,40 @@
 ---
-
 title: <%= hoc_s(:title_press_release) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
-# 當選官員的新聞稿草稿
+# 民選官員的新聞稿發佈內容示例
 
-For Immediate Release  
+即時消息  
 [**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+聯繫資料： [**CONTACT INFORMATION**]  
+  
+
+<strong> <center> 州長/參議員/ASSEMBLYMEMBER/代表/市長/議員[插入名字] [已與本地學生一起參加編程一小時] </strong>   
+社區一起通過參與計算機科學教育週來提高認識計算機科學教育的重要性。</center>   
   
 
 
-**
+**日期**-[**插入姓名**] 加入校長和教職員工[**插入學校名稱**]，商界領袖和當地家庭為了[**活動名稱**] 來參與作為計算機科學教育週一部分的編程一小時活動。 **日期**-[**插入姓名**] 加入校長和教職員工[**插入學校名稱**]，商界領袖和當地家庭為了[**活動名稱**] 來參與作為計算機科學教育週一部分的編程一小時活動。
 
-<center>
-  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
-</center>
+[**插入活動細節，使用描述性和具體化的語言。 例如：**]  
+「丹尼爾在小學舉辦了全校的一小時玩程式活動，讓學生們接觸到計算機科學。 超過 700 名不同年級的學生，完成了至少一個小時的程式課程。 社群中的家長和志工幫忙了一整天，帶著孩子們一起，展示了為什麼計算機科學對現代的這些學生如此重要。」
 
-  
-  
-</p> 
+[**上下文文本範例儲存：**]  
+計算機無處不在，但是和10年前相比教計算機科學的學校卻更少了。 女生和不同膚色的學生嚴重比例不均。 好消息是我們正在改善這個現況。 一小時玩程式是讓所有學生接觸高品質計算機科學教育的最佳途徑。
 
-**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
+全世界已經有超過 1 億名學生體驗了一小時玩程式課程。 感謝一小時玩程式，計算機科學（computer science）在 Google、MSN、Yahoo 愈來愈普及了！ 與迪士尼。 美國總統歐巴馬、哥倫比亞流行歌手夏奇拉，以及美國演員艾希頓·庫奇，都一起用影片為一小時玩程式活動揭開序幕。 100 多個夥伴共同支援此運動。
 
-[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
+[** 引述發言人，示例如下：**]  
+“我們需要鼓勵和擁抱我們的學生讓他們對計算機科學感興趣，”說[**插入姓名**]。 “每個學生都應當有機會學習計算機科學並擁有21世紀最好的職業。”
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
+[**插入更多活動信息/或活動組織**]
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! 與迪士尼。 President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+[**引述其他組織者或活動參與者的發言**]
 
-[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
-
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
-
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
-
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+更多信息關於[**活動/項目/其他**]，訪問 [**插入網站**]或聯繫方式[**插入聯繫信息**]
 
   
   

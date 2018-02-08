@@ -1,14 +1,19 @@
-@no_firefox
 @dashboard_db_access
 @as_student
-@no_circle
 Feature: App Lab Scenarios
-# Do not re-enable on circle until https://github.com/elgalu/docker-selenium/issues/20 is addressed.
 
   Background:
     Given I start a new Applab project
     And I wait for the page to fully load
 
+  Scenario:
+    # Project Template Workspace Icon should not appear since this is not a project template backed level
+    Then element ".projectTemplateWorkspaceIcon" is not visible
+
+  # (brad) Disabled because it appears to be hanging on test after attempting to
+  # fix an IE-specific issue this morning.  I'm on the hook to re-enable by
+  # Thursday, Nov 16th 2017.
+  @no_ie
   Scenario: App Lab Http Image
     # Create an app with an http image.
     When I ensure droplet is in text mode

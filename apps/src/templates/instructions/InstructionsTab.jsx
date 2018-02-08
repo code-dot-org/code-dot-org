@@ -13,7 +13,7 @@ const styles = {
   }
 };
 
-export default class InstructionsTab extends Component{
+export default class InstructionsTab extends Component {
   static propTypes = {
     className: PropTypes.string,
     onClick: PropTypes.func.isRequired,
@@ -21,7 +21,7 @@ export default class InstructionsTab extends Component{
     text: PropTypes.string.isRequired,
   };
 
-  render(){
+  render() {
     return (
       <a
         className={this.props.className}

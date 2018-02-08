@@ -60,7 +60,7 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "encrypted_examples": "LWhgsLs7uYom59/CnNUVNnKei0bWps+MnDHWc/IY1E04ThmI9epw094RGM0Z\n6GfG\n",
-    "markdown_instructions": "#Do This:\r\nGet some more practice **calling** a function by using `turnAround()` along with your old friend the `moveForward()` function to create a plus sign that is centered at the turtle's first position, as shown below. Even though you just wrote this function, we've already **defined** `turnAround()` for you. Remember, add lines of code that call the function *above* the definition.\r\n\r\n*NOTE: the turtle should end where it started, which is also the middle of the plus sign, as shown below. Each of the four segments of the plus sign are one `moveForward()` long.* \r\n\r\n![](https://images.code.org/9d6c2d7d69c2f1c68c5b273bdbae65c7-image-1441296690812.11.14 AM.png)",
+    "markdown_instructions": "# Do This:\r\nGet some more practice **calling** a function by using `turnAround()` along with your old friend the `moveForward()` function to create a plus sign that is centered at the turtle's first position, as shown below. Even though you just wrote this function, we've already **defined** `turnAround()` for you. Remember, add lines of code that call the function *above* the definition.\r\n\r\n*NOTE: the turtle should end where it started, which is also the middle of the plus sign, as shown below. Each of the four segments of the plus sign are one `moveForward()` long.* \r\n\r\n![](https://images.code.org/9d6c2d7d69c2f1c68c5b273bdbae65c7-image-1441296690812.11.14 AM.png)",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "submittable": "false",

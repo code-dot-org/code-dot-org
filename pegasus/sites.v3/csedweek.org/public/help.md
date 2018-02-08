@@ -28,6 +28,6 @@ If you're already a software engineer, there are many opportunities to get invol
 - [Code.org](http://code.org/volunteer/engineer) - Sign up at Code.org to hear about volunteer opportunities near you.
 - [CoderDojo](http://www.coderdojo.com) - Start a Dojo in your neighborhood, mentor children to learn to code.
 - [TEALS](http://www.tealsk12.org) - Volunteer to teach Intro and AP CS classes 2 days a week in local high schools.
-- [Citizen Schools](http://www.citizenschools.org/curriculum-category/science-technology/) - Volunteer to teach computer programming in extended-day programs at schools.
+- [Citizen Schools](https://www.citizenschools.org/volunteer) - Volunteer to teach computer programming in extended-day programs at schools.
 
 

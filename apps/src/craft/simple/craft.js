@@ -19,6 +19,8 @@ import {getStore} from '../../redux';
 import Sounds from '../../Sounds';
 
 import {TestResults} from '../../constants';
+import {captureThumbnailFromCanvas} from '../../util/thumbnail';
+import {SignInState} from '../../code-studio/progressRedux';
 
 var MEDIA_URL = '/blockly/media/craft/';
 
@@ -541,6 +543,7 @@ Craft.reset = function (first) {
   if (first) {
     return;
   }
+  captureThumbnailFromCanvas($('#minecraft-frame canvas')[0]);
   Craft.gameController.codeOrgAPI.resetAttempt();
 };
 
@@ -755,9 +758,8 @@ Craft.reportResult = function (success) {
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function (response) {
+      const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
       studioApp().displayFeedback({
-        app: 'craft',
-        skin: Craft.initialConfig.skin.id,
         feedbackType: testResultType,
         response: response,
         level: Craft.initialConfig.level,
@@ -771,7 +773,9 @@ Craft.reportResult = function (success) {
           generatedCodeDescription: craftMsg.generatedCodeDescription()
         },
         feedbackImage: image,
-        showingSharing: Craft.initialConfig.level.freePlay
+        showingSharing: Craft.initialConfig.level.freePlay,
+        saveToProjectGallery: true,
+        disableSaveToGallery: !isSignedIn,
       });
     }
   });

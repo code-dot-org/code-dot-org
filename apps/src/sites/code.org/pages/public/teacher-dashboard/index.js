@@ -8,14 +8,16 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
+import SectionProgress from '@cdo/apps/templates/teacherDashboard/SectionProgress';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   renderSyncOauthSectionControl,
   unmountSyncOauthSectionControl,
   renderLoginTypeAndSharingControls,
-  unmountLoginTypeAndSharingControls
-} from './sections';
+  unmountLoginTypeAndSharingControls,
+  renderSectionTable,
+} from '@cdo/apps/templates/teacherDashboard/sections';
 import logToCloud from '@cdo/apps/logToCloud';
 
 const script = document.querySelector('script[data-teacherdashboard]');
@@ -27,6 +29,7 @@ main(scriptData);
 // disableExperiments url params will cause a persistent setting to be stored
 // from any page in teacher dashboard.
 const showProjectThumbnails = experiments.isEnabled('showProjectThumbnails');
+const showManageStudentsReact = experiments.isEnabled(experiments.MANAGE_STUDENTS);
 
 function renderSectionProjects(sectionId) {
   const dataUrl = `/dashboardapi/v1/projects/section/${sectionId}`;
@@ -47,6 +50,16 @@ function renderSectionProjects(sectionId) {
       />,
       element);
   });
+}
+
+function renderSectionProgress(section, validScripts) {
+  ReactDOM.render(
+    <SectionProgress
+      section={section}
+      validScripts={validScripts}
+    />,
+    document.getElementById('section-progress-react')
+  );
 }
 
 //  Everything below was copied wholesale from index.haml, where we had no linting.
@@ -154,7 +167,7 @@ function main() {
 
   // Section service. see sites.v3/code.org/routes/v2_section_routes.rb
   services.factory('sectionsService', ['$resource',
-    function ($resource){
+    function ($resource) {
       return $resource('/v2/sections/:id', {}, {
       // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
       //  'get':    {method:'GET'},
@@ -181,7 +194,7 @@ function main() {
     }]);
 
   services.factory('studentsService', ['$resource',
-    function ($resource){
+    function ($resource) {
       return $resource('/v2/students/:id', {}, {
       // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
       //  'get':    {method:'GET'},
@@ -341,7 +354,7 @@ function main() {
     $scope.tab = $routeParams.tab;
 
     $scope.section.$promise.then(
-      function ( section ){
+      function ( section ) {
         if (!$scope.tab) {
           if ($scope.section.students.length > 0) {
             $location.path('/sections/' + $routeParams.id + '/progress');
@@ -355,7 +368,7 @@ function main() {
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
     $scope.sections.$promise.then(
-      function ( sections ){
+      function ( sections ) {
         $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
       }
     );
@@ -383,6 +396,12 @@ function main() {
       $scope.$on('login-type-react-rendered', () => {
         $scope.section.$promise.then(section => renderLoginTypeAndSharingControls(section.id));
       });
+
+      if (showManageStudentsReact) {
+        $scope.$on('student-table-react-rendered', () => {
+          $scope.section.$promise.then(section => renderSectionTable(section.id, section.login_type));
+        });
+      }
 
       $scope.$on('$destroy', () => {
         unmountSyncOauthSectionControl();
@@ -662,7 +681,7 @@ function main() {
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
     $scope.sections.$promise.then(
-      function ( sections ){
+      function ( sections ) {
         $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
       }
     );
@@ -673,7 +692,7 @@ function main() {
 
       //Want to apply this only to the printing frame, so add here rather than inline
       const cards = $window.frames.print_frame.document.getElementsByClassName('signin_card');
-      for (let i = 0; i < cards.length; i++){
+      for (let i = 0; i < cards.length; i++) {
         cards[i].style.width = '300px';
       }
       $window.frames.print_frame.window.focus();
@@ -729,32 +748,49 @@ function main() {
       }
     );
 
+    $scope.tab = 'progress';
+    $scope.page = {zoom: false};
+    $scope.react_progress = false;
+
+    // We want to make our sections service request whether using react or angular
+    // because our tabs haml (in nav.haml) depends on the section being loaded. It
+    // could probably be cleaned up to behave differently without too much difficulty,
+    // which would make this unnecessary.
+    $scope.section = sectionsService.get({id: $routeParams.id});
+    // sections is used by our section dropdown, which at least initially will
+    // still be in angular
+    $scope.sections = sectionsService.query();
+
+    // error handling
     $scope.genericError = function (result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
-
-    $scope.section = sectionsService.get({id: $routeParams.id});
-    $scope.sections = sectionsService.query();
-    const paginatedPromise = paginatedSectionProgressService.get($routeParams.id)
-      .then(result => {
-        $scope.progress = result;
-      })
-      .catch($scope.genericError);
-
-    $scope.tab = 'progress';
-    $scope.page = {zoom: false};
-
-    // error handling
     $scope.section.$promise.catch($scope.genericError);
     $scope.sections.$promise.catch($scope.genericError);
 
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
-    $scope.sections.$promise.then(
-      function ( sections ){
-        $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
-      }
-    );
+    $scope.sections.$promise.then(sections => {
+      $scope.selectedSection = sections.find(section => section.id.toString() === $routeParams.id);
+    });
+
+    if (experiments.isEnabled('sectionProgressRedesign')) {
+      $scope.react_progress = true;
+      $scope.$on('section-progress-rendered', () => {
+        $scope.section.$promise.then(script =>
+          renderSectionProgress(script, valid_scripts)
+        );
+      });
+      return;
+    }
+
+    // The below is not run if our sectionProgressRedesign experiment is not enabled
+
+    const paginatedPromise = paginatedSectionProgressService.get($routeParams.id)
+      .then(result => {
+        $scope.progress = result;
+      })
+      .catch($scope.genericError);
 
     $scope.progressLoadedFirst = false;
     $scope.progressLoaded = false;
@@ -763,7 +799,7 @@ function main() {
     $scope.progress_disabled_scripts = disabled_scripts;
 
     // wait until we have both the students and the student progress
-    $q.all([paginatedPromise, $scope.section.$promise]).then(function (){
+    $q.all([paginatedPromise, $scope.section.$promise]).then(function () {
       $scope.mergeProgress();
       $scope.progressLoadedFirst = true;
       $scope.progressLoaded = true;
@@ -794,23 +830,7 @@ function main() {
       return $scope.page.zoom ? Math.max(34 * $scope.progress.script.levels_count, 770) : 770;
     };
 
-    // refresh progress every 30s
-    // TODO: 'update' progress instead of replacing it
-    //$interval(function() {
-    //  if (!$scope.progressLoaded) { return; } // don't refresh if loading
-    //   $scope.progressLoaded = false;
-    //   if ($scope.scriptId) {
-    //     $scope.progress = sectionsService.progress({id: $routeParams.id, script_id: $scope.scriptId});
-    //   } else {
-    //     $scope.progress = sectionsService.progress({id: $routeParams.id});
-    //   }
-    //   $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function(data){
-    //     $scope.mergeProgress();
-    //     $scope.progressLoaded = true;
-    //   });
-    // }, 30 * 1000);
-
-    $scope.scrollToStage = function ($event){
+    $scope.scrollToStage = function ($event) {
       var doScroll = function () {
         var element = $( $event.currentTarget );
         var wrapper = $('.table-wrapper');
@@ -864,7 +884,7 @@ function main() {
         student.highest_level_in_stage = 0;
 
         // if we have progress
-        var progress_student = $.grep($scope.progress.students, function (e){ return e.id == student.id; })[0];
+        var progress_student = $.grep($scope.progress.students, function (e) { return e.id == student.id; })[0];
         if (progress_student) {
           student.levels = progress_student.levels;
 
@@ -921,7 +941,7 @@ function main() {
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
     $scope.sections.$promise.then(
-      function ( sections ){
+      function ( sections ) {
         $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
       }
     );
@@ -932,7 +952,7 @@ function main() {
     $scope.script_list = valid_scripts;
 
     // wait until we have both the students and the student progress
-    $q.all([$scope.section.$promise, $scope.responses.$promise]).then(function (){
+    $q.all([$scope.section.$promise, $scope.responses.$promise]).then(function () {
       $scope.responsesLoaded = true;
       $scope.findStages();
     });
@@ -943,7 +963,7 @@ function main() {
 
       $scope.responses = sectionsService.responses({id: $routeParams.id, script_id: scriptId});
 
-      $scope.responses.$promise.then(function (){
+      $scope.responses.$promise.then(function () {
         $scope.responsesLoaded = true;
         $scope.findStages();
       });
@@ -1015,13 +1035,13 @@ function main() {
     // The ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
     $scope.sections.$promise.then(
-      function ( sections ){
+      function ( sections ) {
         $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
       }
     );
 
     // Wait until we have initial section, assessment, and survey data.
-    $q.all([$scope.section.$promise, $scope.assessments.$promise, $scope.surveys.$promise]).then(function (){
+    $q.all([$scope.section.$promise, $scope.assessments.$promise, $scope.surveys.$promise]).then(function () {
       $scope.assessmentsLoaded = true;
       $scope.surveysLoaded = true;
       $scope.assessmentLevels = $scope.getAssessmentData($scope.assessments);
@@ -1036,7 +1056,7 @@ function main() {
       // Load assessments.
       $scope.assessmentsLoaded = false;
       $scope.assessments = sectionsService.assessments({id: $routeParams.id, script_id: scriptId});
-      $scope.assessments.$promise.then(function (){
+      $scope.assessments.$promise.then(function () {
         $scope.assessmentsLoaded = true;
         $scope.assessmentLevels = $scope.getAssessmentData($scope.assessments);
         $scope.assessmentStages = $scope.findStages($scope.assessments);

@@ -1,4 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list --limit 2 2016-11-22-hoc-US-CA-UK-moana ../mailing-common/test-params-us.csv
-../send-to-mailing-list --limit 2 2016-11-22-hoc-intl-moana ../mailing-common/test-params-international.csv

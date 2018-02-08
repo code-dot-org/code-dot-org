@@ -37,11 +37,19 @@
   twentyhours_text: Klaar met je eerste 'Hour of Code'? Leer meer over Informatica
     en programmeerconcepten in deze vervolgcursus.
   og_title: Ieder kind verdient een kans
+  og_title_soon: The Hour of Code is coming
+  og_title_here: The Hour of Code is here!
   og_description: Elke leerling op elke school moet de kans krijgen om te leren programmeren.
     Dit verandert alles.
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: Het Uur Code is hier
   csedweek_og_description: Het Uur Code is een beweging die wereldwijd tientallen
     miljoenen studenten van alle leeftijden in 180+ landen en in meer dan 45 talen.
+  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+    science is foundational for every student to learn.
+  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
+    for every student to learn.
   hoc2014_heading: Doe mee met de <a href="http://hourofcode.com">Hour of Code</a><br
     />8 - 14 december 2014<br/>
   hoc2014_students: Leerlingen
@@ -370,6 +378,12 @@
   studiobar_donate_body: Eén kind leert voor elke euro die u doneert
   studiobar_shop_title: winkel
   studiobar_shop_body: Breek stereotypes. Draag ons logo met trots.
+  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_female: of our students are female
+  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "&ldquo;Ik daag meisjes in alle landen uit om één Uur
     Code te leren&rdquo; Malala, winnares Nobelprijs voor de Vrede"
   homepage_hero_text_susan: "&ldquo;Als je technologie kunt veranderen, kun je de
@@ -420,6 +434,8 @@
     op Code Studio
   homepage_hero_text_stat_students: "#student_count studenten accounts op Code Studio"
   homepage_hero_text_stat_served: 'Uur van Code: #served geserveerd'
+  homepage_hero_hoc_is_coming: The Hour of Code is coming
+  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Het Uur Code
   homepage_slot_text_frozen: Frozen met Anna en Elsa
   homepage_slot_text_teacher: Dashboard Leerkrachten
@@ -439,6 +455,7 @@
   homepage_action_text_girlvideo: Inspireer een meisje
   homepage_action_text_learn: Begin met leren
   homepage_action_text_signpetition: Teken de petitie
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Teken onze petitie &#x25BE;
   homepage_diversity_pledge: Doe de diversiteits-belofte
   homepage_banner_text_prizes: 'Het Uur Code komt er weer aan, 7-13 december. '
@@ -463,7 +480,7 @@
   homepage_slot_text_title_hoc: Uur Code
   homepage_slot_text_blurb_hoc: Iedereen kan het leren. Begin vandaag
   homepage_slot_text_link_hoc: Probeer een Uur Code
-  homepage_slot_text_link_about_hoc: About the Hour of Code
+  homepage_slot_text_link_about_hoc: Over Hour of Code
   homepage_slot_text_link_host: Organiseer een 'Hour of Code'
   homepage_slot_text_link_hocserved: "# bediend"
   homepage_solot_text_link_volunteer: Word vrijwilliger voor het Uur Code
@@ -558,10 +575,14 @@
   mc_gradelevel: Leeftijd 6+
   mc_platformtext: Moderne browsers, smartphones, tablets
   mc_specs: Vele talen | Moderne browsers en tablets | Leeftijden 6-106
+  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: Minecraft Ontwerper
   minecraft_adventurer: Minecraft avonturier
   minecraft_tutorials: Minecraft Code Uur handleidingen
   minecraft_specs: Vele talen | Recente browsers en tablets | Leeftijd 6 - 10
+  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
+    new activity! Journey through Minecraft with code.
+  minecraft_agent_button: Start
   minecraft_designer_description: Program animals and enemies in your own version
     of Minecraft.
   minecraft_designer_button: Start
@@ -571,6 +592,41 @@
   minecraft_no_internet: Heeft u geen Internet?
   minecraft_download_adventurer: Download de offline versie van Minecraft avonturier.
   minecraft_subtitle: Minecraft Uur Code
+  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
+    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
+    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
+    problem solving and loads of fun."
+  minecraft_host_event: Plan een Minecraft Hour of Code Evenement
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+    facilitator quick start guide and PowerPoint presentations for younger and older
+    students now."
+  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
+    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
+    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
+    Get a head start on thinking through what you need to bring Hour of Code to young
+    people during Computer Science Education week (December 4-10) and beyond.
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
+    at the Microsoft Store'
+  minecraft_continue_learning_description: No computer science experience required!
+    Help ensure all youth can learn the valuable skills gained through computer science
+    education. Join us at the Microsoft Store to engage in a free series of three,
+    1-hour workshops where you will experience coding in a fun and stress-free environment,
+    become familiar with key computer science concepts, and get ready to lead an Hour
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
+    up today</a>.
+  minecraft_future: Help all youth become future ready
+  minecraft_future_description: Find out how other schools and nonprofits are bringing
+    digital skills, from digital literacy to computer science education, to their
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
+    the resources</a> they found most valuable.
+  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
+    Program animals and other Minecraft creatures in your own version of Minecraft.
+  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
+    Write code to journey through Minecraft biomes.
   sports_page_title: Sports Hour of Code
   sports_og_title: Hour of Code Sports Tutorials
   sports_og_description: Choose between making a basketball game or mix and match
@@ -619,6 +675,7 @@
   video_title_obama: President Obama on computer science
   video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
   video_title_anybody_can_learn: Anybody Can Learn
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: Hour of Code with Draymond Green
   video_title_russell_okung: Hour of Code with Russell Okung
   video_title_real_madrid: Hour of Code with Real Madrid
@@ -741,6 +798,10 @@
   volunteer_engineer_submission_type_task_mentor: Ik zoek een mentor om me te helpen
     voorbereiden om met mijn leerlingen te gaan programmeren
   petition_age: Leeftijd
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
+  dashboard_announce_learn_more_button: Leer meer
   dashboard_landing_title: Startpagina voor de leerkracht
   dashboard_landing_welcome: Welkom bij de nieuwe en verbeterde leerkracht dashboard.
   dashboard_landing_video: Bekijk deze video
@@ -827,8 +888,8 @@
   dashboard_action_remove_confirm: Verwijder?
   dashboard_action_done: Voltooid
   dashboard_action_required: verplicht
-  dashboard_action_print_certificates: Print certificates
-  dashboard_assessments_view: 'View assessments in:'
+  dashboard_action_print_certificates: Print certificaten
+  dashboard_assessments_view: 'Bekijk evaluaties in:'
   dashboard_assessments_none: Most teachers measure their students' progress using
     the "View Progress" tab. If you are interested in giving your students additional
     assessments, you can find recommended questions and areas in the lesson plans.
@@ -838,7 +899,7 @@
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
-  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_summaries: Evaluatie-samenvattingen
   dashboard_assessments_answers: All answers
   dashboard_surveys_answers: Enquêtes
   dashboard_percent: Percentage
@@ -855,7 +916,7 @@
   dashboard_navigation_all_sections: Leerlingaccounts en vooruitgang
   dashboard_navigation_view_progress: Voortgang
   dashboard_navigation_view_text_responses: Bekijk de tekstuele reacties
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments: Evaluaties
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Leerlingen Toevoegen
   dashboard_navigation_manage_students: Beheer Leerlingen
@@ -929,7 +990,7 @@
     go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
      Our teacher dashboard will let you track your student's progress every other
     week of the year.
-  dashboard_sections_assign_activity: Assign Course
+  dashboard_sections_assign_activity: Cursus Toewijzen
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -999,12 +1060,12 @@
   dashboard_course2: 'Cursus 2:'
   dashboard_course3: 'Cursus 3:'
   dashboard_course4: 'Cursus 4 (bèta): '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
+  dashboard_coursea: 'Cursus A: '
+  dashboard_courseb: 'Cursus B: '
+  dashboard_coursec: 'Cursus C: '
+  dashboard_coursed: 'Cursus D: '
+  dashboard_coursee: 'Cursus E: '
+  dashboard_coursef: 'Cursus F: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Lesprogramma
@@ -1036,11 +1097,11 @@
   dashboard_response: Antwoord
   dashboard_correctness: Juistheid
   dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_unsubmitted: Niet doorgestuurd
   dashboard_correctness_correct: Juist
   dashboard_correctness_incorrect: Incorrect
   dashboard_submission_submitted: Ingediend
-  dashboard_submission_in_progress: In progress
+  dashboard_submission_in_progress: In behandeling
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -1067,7 +1128,7 @@
   dashboard_faq_k5: K-5 Veelgestelde vragen
   code_hoc_coming: Het Uur Code is hier - van 8 -14 december!
   code_sign_up: Meld u aan om deel te nemen tijdens de CS Onderwijs Week
-  host_an_hour: Host an hour
+  host_an_hour: Organiseer een uur
   learn_banner_title: Join us for the Hour of Code
   learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
     students in more than 180 countries. Anyone, anywhere can organize an Hour of
@@ -1120,7 +1181,7 @@
   carousel_heading_webpages: Leer webpagina's te maken
   carousel_heading_robots: Leer robots te programmeren
   carousel_heading_ide: Platformen populair onder docenten
-  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_desktop: Leer te programmeren op een computer
   carousel_heading_mobtabelem: For phones and tablets
   carousel_heading_prereader: For pre-readers
   carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
@@ -1239,6 +1300,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Full Test - 50 questions
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Test deel 1-25 vragen
   cspexam2-AKwgAh1ac5_name: Test deel 2 -25 vragen
   cspunit3_gradelevel: Grades 9-12
@@ -1267,16 +1330,16 @@
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: CS Principles
-  csp17_category_name: "'16-'17 CS Principles"
-  cspexams_category_name: CS Principles Practice Test
+  csp17_category_name: CW Principes
+  cspexams_category_name: CW Principes Praktische Test
   research_studies_category_name: Research Studies
   applab_name: App Lab
   basketball_name: Make a basketball game
   sports_name: Code your own sports game
   applab_gradelevel: Leeftijd 13+
-  applab_shortdescription_congrats: App Lab is a programming environment where you
-    can make simple apps. Design an app, code with blocks or JavaScript to make it
-    work, then share your app in seconds
+  applab_shortdescription_congrats: App Lab is een programmeeromgeving waar je eenvoudige
+    apps kan maken. Ontwikkel een app, codeer met blokken of JavaScript om het te
+    laten werken, en deel je app in seconden
   codeorg_gradelevel: Leeftijden 4-104
   codeintl_gradelevel: Leeftijden 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -2003,12 +2066,12 @@
   playlab_shortcode: afspelen
   artist_shortcode: art
   header_home: Home
-  header_my_dashboard: My Dashboard
+  header_my_dashboard: Mijn Dashboard
   header_courses: Cursussen
   header_course_catalog: Cursuscatalogus
   header_project_gallery: Projecten
   header_sections: Secties
-  header_professional_learning: Professional Learning
+  header_professional_learning: Professioneel Leren
   header_educate_overview: Educator Overview
   header_educate_elementary: Basisschool
   header_educate_middle: Middelbare school
@@ -2039,9 +2102,9 @@
   header_report_bug: Rapporteer bugs
   header_tutorials: Tutorials
   header_documentation: Documentatie
-  csp_name: CS Principles
+  csp_name: CW Principes
   csd_name: CS Discoveries
-  full_course_category_name: Full Courses
+  full_course_category_name: Volledige Cursussen
   user_header_label: Hallo %{username}
   user_header_settings: Mijn account
   user_header_logout: Uitloggen
@@ -2051,7 +2114,7 @@
   view_named_section: View %{section_name}
   privacy_doc_explanation: Click here for our privacy document that can be shared
     or printed for your students.
-  signing_in: Signing In
+  signing_in: Aan Het Inloggen
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following
     these steps:'
   sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
@@ -2063,7 +2126,7 @@
   sign_in_instruct_button: Click the “Sign in” button.
   sign_in_overview_cards: Students can find all of this information, including their
     secret %{secret}, in the login cards below.
-  reset_student_password: Resetting student passwords
+  reset_student_password: Studenten paswoorden aan het resetten
   reset_student_password_instructions: You can reset the secret <word/picture> for
     any of your students by going to the “Manage Students” tab for the section, clicking
     the “Show secret” button under the “Password” column, and clicking the “Reset
@@ -2093,9 +2156,17 @@
     Facebook, Microsoft, or Clever account), you can reset their password by going
     to the “Manage Students” tab for the section, and clicking the “Reset password”
     button under the “Password” column.
-  syncing_students: Syncing your students
+  syncing_students: Studenten aan het synchroniseren
   syncing_students_instructions: 'If your Code.org section is ever out of date with
     your list of students in Google Classroom, click on the “Sync students from Google
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
+  dashboard_tools: 'Tools: '
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
+  gamelab_name: Game Lab

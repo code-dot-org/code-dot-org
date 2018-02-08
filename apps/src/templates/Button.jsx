@@ -118,8 +118,8 @@ const styles = {
   },
 };
 
-const Button = React.createClass({
-  propTypes: {
+class Button extends React.Component {
+  static propTypes = {
     className: PropTypes.string,
     href: PropTypes.string,
     text: PropTypes.string.isRequired,
@@ -131,12 +131,13 @@ const Button = React.createClass({
     target: PropTypes.string,
     style: PropTypes.object,
     disabled: PropTypes.bool,
-    onClick: PropTypes.func
-  },
+    onClick: PropTypes.func,
+    id: PropTypes.string,
+  };
 
   render() {
     const { className, href, text, icon, iconClassName, iconStyle, target,
-      style, onClick, disabled } = this.props;
+      style, onClick, disabled, id } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
     const size = this.props.size || ButtonSize.default;
@@ -154,7 +155,8 @@ const Button = React.createClass({
         href={href}
         target={target}
         disabled={disabled}
-        onClick={onClick}
+        onClick={disabled ? null : onClick}
+        id={id}
       >
         <div>
           {icon &&
@@ -169,7 +171,7 @@ const Button = React.createClass({
       </Tag>
     );
   }
-});
+}
 
 Button.ButtonColor = ButtonColor;
 Button.ButtonSize = ButtonSize;

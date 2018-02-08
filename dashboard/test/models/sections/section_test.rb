@@ -216,6 +216,13 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
+  test 'add_student returns failure for section teacher' do
+    assert_does_not_create(Follower) do
+      add_student_return = @section.add_student @teacher
+      assert_equal Section::ADD_STUDENT_FAILURE, add_student_return
+    end
+  end
+
   test 'add_and_remove_student moves enrollment' do
     old_section = create :section
     new_section = create :section
@@ -477,5 +484,91 @@ class SectionTest < ActiveSupport::TestCase
   test 'valid_grade? does not accept invalid numbers and strings' do
     refute Section.valid_grade?("Something else")
     refute Section.valid_grade?("56")
+  end
+
+  class HasSufficientDiscountCodeProgress < ActiveSupport::TestCase
+    self.use_transactional_test_case = true
+
+    def create_script_with_levels(name, level_type)
+      script = create :script, name: name
+      stage = create :stage, script: script
+      # 5 non-programming levels
+      5.times do
+        create :script_level, script: script, stage: stage, levels: [create(:unplugged)]
+      end
+
+      # 5 programming levels
+      5.times do
+        create :script_level, script: script, stage: stage, levels: [create(level_type)]
+      end
+      script
+    end
+
+    # Create progress for student in given script. Assumes all levels are either
+    # Unplugged or some form of programming level
+    # @param {Script} script
+    # @param {User} student
+    # @param {number} num_programming_levels
+    # @param {number} num_non_programming_levels
+    def simulate_student_progress(script, student, num_programming_levels, num_non_programing_levels)
+      progress_levels = script.levels.select {|level| level.is_a?(Unplugged)}.first(num_non_programing_levels) +
+        script.levels.select {|level| !level.is_a?(Unplugged)}.first(num_programming_levels)
+
+      progress_levels.each do |level|
+        create :user_level, level: level, user: student, script: script
+      end
+    end
+
+    setup_all do
+      @csd2 = create_script_with_levels('csd2', :weblab)
+      @csd3 = create_script_with_levels('csd3', :gamelab)
+    end
+
+    test 'returns true when all conditions met' do
+      section = create :section
+      10.times do
+        follower = create :follower, section: section
+        simulate_student_progress(@csd2, follower.student_user, 5, 0)
+        simulate_student_progress(@csd3, follower.student_user, 5, 0)
+      end
+      assert_equal true, section.has_sufficient_discount_code_progress?
+    end
+
+    test 'returns false if only enough progress in one script' do
+      section = create :section
+      10.times do
+        follower = create :follower, section: section
+        simulate_student_progress(@csd2, follower.student_user, 5, 0)
+        # no progress in csd3
+      end
+      assert_equal false, section.has_sufficient_discount_code_progress?
+    end
+
+    test 'return false if not enough progress in programming levels' do
+      section = create :section
+      10.times do
+        follower = create :follower, section: section
+        # Though we have 7 levels of progress in each script, only 4 of those are
+        # for programming levels
+        simulate_student_progress(@csd2, follower.student_user, 4, 3)
+        simulate_student_progress(@csd3, follower.student_user, 4, 3)
+      end
+      assert_equal false, section.has_sufficient_discount_code_progress?
+    end
+
+    test 'returns false if not enough students have progress' do
+      section = create :section
+      9.times do
+        follower = create :follower, section: section
+        # Though we have 7 levels of progress in each script, only 4 of those are
+        # for programming levels
+        simulate_student_progress(@csd2, follower.student_user, 4, 3)
+        simulate_student_progress(@csd3, follower.student_user, 4, 3)
+      end
+      # 10th student has no progress
+      create :follower, section: section
+
+      assert_equal false, section.has_sufficient_discount_code_progress?
+    end
   end
 end

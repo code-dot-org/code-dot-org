@@ -4,13 +4,17 @@ module ProjectsList
   # Maximum number of projects of each type that can be requested.
   MAX_LIMIT = 100
 
-  # List of valid project types, excluding 'all' which is also valid.
-  PUBLISHED_PROJECT_TYPES = %w(
-    applab
-    gamelab
-    playlab
-    artist
-  ).freeze
+  # A hash map from project group name to a list of publishable project types in
+  # that group.
+  PUBLISHED_PROJECT_TYPE_GROUPS = {
+    applab: ['applab'],
+    gamelab: ['gamelab'],
+    playlab: ['playlab', 'gumball', 'infinity', 'iceage'],
+    artist: ['artist', 'frozen'],
+    minecraft: ['minecraft_adventurer', 'minecraft_designer', 'minecraft_hero'],
+    events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
+    k1: ['artist_k1', 'playlab_k1'],
+  }.freeze
 
   class << self
     # Look up every project of every student in the section which is not hidden or deleted.
@@ -40,7 +44,7 @@ module ProjectsList
     #   {
     #     applab: [{...}, {...}, {...}]
     #   }
-    # when a single project type is requested, or the following when all types
+    # when a single project group is requested, or the following when all types
     # are requested:
     #   {
     #     applab: [{...}, {...}, {...}]
@@ -48,24 +52,24 @@ module ProjectsList
     #     playlab: [{...}, {...}, {...}]
     #     artist: [{...}, {...}, {...}]
     #   }
-    # @param project_type [String] Type of project to retrieve listed in
-    # PUBLISHED_PROJECT_TYPES, or 'all' to retrieve a list of each project type.
-    # @param limit [Integer] Maximum number of projects to retrieve of each type.
+    # @param project_group [String] Project group to retrieve. Must be one of
+    # PUBLISHED_PROJECT_TYPE_GROUPS.keys, or 'all' to retrieve all project groups.
+    # @param limit [Integer] Maximum number of projects to retrieve from each group.
     #   Must be between 1 and MAX_LIMIT, inclusive.
     # @param published_before [string] String representing a DateTime before
     #   which to search for the requested projects. Must not be specified
     #   when requesting all project types. Optional.
     # @return [Hash<Array<Hash>>] A hash of lists of published projects.
-    def fetch_published_projects(project_type, limit:, published_before:)
+    def fetch_published_projects(project_group, limit:, published_before:)
       unless limit && limit.to_i >= 1 && limit.to_i <= MAX_LIMIT
         raise ArgumentError, "limit must be between 1 and #{MAX_LIMIT}"
       end
-      if project_type == 'all'
+      if project_group == 'all'
         raise ArgumentError, 'Cannot specify published_before when requesting all project types' if published_before
-        return fetch_published_project_types(PUBLISHED_PROJECT_TYPES, limit: limit)
+        return fetch_published_project_types(PUBLISHED_PROJECT_TYPE_GROUPS.keys, limit: limit)
       end
-      raise ArgumentError, "invalid project type: #{project_type}" unless PUBLISHED_PROJECT_TYPES.include?(project_type)
-      fetch_published_project_types([project_type], limit: limit, published_before: published_before)
+      raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.keys.include?(project_group.to_sym)
+      fetch_published_project_types([project_group.to_s], limit: limit, published_before: published_before)
     end
 
     private
@@ -104,15 +108,16 @@ module ProjectsList
       ]
     end
 
-    def fetch_published_project_types(project_types, limit:, published_before: nil)
+    def fetch_published_project_types(project_groups, limit:, published_before: nil)
       users = "dashboard_#{CDO.rack_env}__users".to_sym
       {}.tap do |projects|
-        project_types.map do |type|
-          projects[type] = PEGASUS_DB[:storage_apps].
+        project_groups.map do |project_group|
+          project_types = PUBLISHED_PROJECT_TYPE_GROUPS[project_group]
+          projects[project_group] = PEGASUS_DB[:storage_apps].
             select(*project_and_user_fields).
             join(:user_storage_ids, id: :storage_id).
             join(users, id: :user_id).
-            where(state: 'active', project_type: type, abuse_score: 0).
+            where(state: 'active', project_type: project_types, abuse_score: 0).
             where {published_before.nil? || published_at < DateTime.parse(published_before)}.
             exclude(published_at: nil).
             order(Sequel.desc(:published_at)).

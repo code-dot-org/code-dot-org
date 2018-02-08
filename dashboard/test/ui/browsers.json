@@ -43,7 +43,7 @@
     "platformVersion": "9.2",
     "browserName": "safari",
     "deviceName": "iPhone Simulator",
-    "appiumVersion": "1.4.16",
+    "appiumVersion": "1.6.5",
     "mobile": true,
     "deviceOrientation": "landscape",
     "rotatable": true
@@ -54,7 +54,7 @@
     "platformVersion": "9.2",
     "browserName": "safari",
     "deviceName": "iPad Simulator",
-    "appiumVersion": "1.4.16",
+    "appiumVersion": "1.6.5",
     "mobile": true,
     "deviceOrientation": "landscape",
     "rotatable": true

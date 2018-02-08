@@ -93,7 +93,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   def build_expected_response(options = {})
     {
-      previous_level: build_script_level_path(@script_level_prev),
       total_lines: 35,
       redirect: build_script_level_path(@script_level_next),
     }.merge options
@@ -101,7 +100,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   def build_try_again_response(options = {})
     {
-      previous_level: build_script_level_path(@script_level_prev),
       message: 'try again',
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
     }.merge options
@@ -743,7 +741,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     user_level_finder = mock('user_level_finder')
     user_level_finder.stubs(:first).returns(nil)
     existing_user_level = UserLevel.create(user: @user, level: @script_level.level, script: @script_level.script)
-    user_level_finder.stubs(:first_or_create!).
+    user_level_finder.stubs(:first_or_initialize).
       raises(ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry '1208682-37' for key 'index_user_levels_on_user_id_and_level_id'"))).
       then.
       returns(existing_user_level)
@@ -769,7 +767,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # supposed to happen, but we shouldn't get stuck in a loop anyway)
     user_level_finder = mock('user_level_finder')
     user_level_finder.stubs(:first).returns(nil)
-    user_level_finder.stubs(:first_or_create!).
+    user_level_finder.stubs(:first_or_initialize).
       raises(ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry '1208682-37' for key 'index_user_levels_on_user_id_and_level_id'")))
 
     UserLevel.stubs(:where).returns(user_level_finder)
@@ -1105,7 +1103,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       "stage 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; stage 'Milestone Stage 2'; level 'Level 3'",
       "a filename"
     )
-    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:stages].map {|stage| stage[:scriptlevels]}.flatten)
+    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:stages])
 
     last_level_in_first_stage = script.stages.first.script_levels.last
     post :milestone,

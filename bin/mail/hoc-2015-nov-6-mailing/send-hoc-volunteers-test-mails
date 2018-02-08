@@ -1,3 +1,0 @@
-#!/bin/sh
-
-./send-to-mailing-list 11-3-volunteers mailing-common/test-params-us.csv

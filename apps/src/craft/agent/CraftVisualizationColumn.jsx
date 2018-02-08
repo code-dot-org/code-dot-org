@@ -15,10 +15,11 @@ var CraftVisualizationColumn = function (props) {
           </div>
         </div>
       </ProtectedVisualizationDiv>
-      <ArrowButtons />
       <GameButtons>
+        <ArrowButtons />
+
         {props.showFinishButton && <div id="right-button-cell">
-          <button id="rightButton" className="share mc-share-button">
+          <button id="finishButton" className="share mc-share-button">
             <div>{msg.finish()}</div>
           </button>
         </div>}

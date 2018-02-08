@@ -35,7 +35,7 @@ describe("setPropertyDropdown", function () {
     var list;
 
     // image elements should have .image but not .picture
-    list = getDropdownProperties('IMAGE');
+    list = getDropdownProperties(true, 'IMAGE');
     var foundImage = false;
     for (let item of list) {
       assert(typeof item === 'object');
@@ -49,7 +49,7 @@ describe("setPropertyDropdown", function () {
     }
     assert(foundImage);
 
-    list = getDropdownProperties('UNKNOWN');
+    list = getDropdownProperties(true, 'UNKNOWN');
     // Test two very different properties as a proxy for all properties.
     var foundGroupId = false, foundBackgroundColor = false;
     for (let item of list) {
@@ -64,7 +64,7 @@ describe("setPropertyDropdown", function () {
     assert(foundGroupId);
     assert(foundBackgroundColor);
 
-    list = getDropdownProperties();
+    list = getDropdownProperties(true);
     // Test two very different properties as a proxy for all properties.
     foundGroupId = false, foundBackgroundColor = false;
     for (let item of list) {
@@ -82,7 +82,7 @@ describe("setPropertyDropdown", function () {
 
   it('getPropertyValueDropdown', function () {
     // given all of the property types for a generic unknown element:
-    let list = getDropdownProperties('UNKNOWN');
+    let list = getDropdownProperties(false, 'UNKNOWN');
     for (let object of list) {
       let property = object.text;
       // Verify that getPropertyValueDropdown() returns a function for

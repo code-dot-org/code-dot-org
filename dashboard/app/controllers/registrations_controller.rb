@@ -1,6 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [:edit, :update, :destroy, :upgrade]
+  skip_before_action :verify_authenticity_token, only: [:set_age]
 
   def new
     session[:user_return_to] ||= params[:user_return_to]
@@ -33,6 +34,16 @@ class RegistrationsController < Devise::RegistrationsController
     end
     should_send_new_teacher_email = current_user && current_user.teacher?
     TeacherMailer.new_teacher_email(current_user).deliver_now if should_send_new_teacher_email
+    if current_user
+      storage_id = take_storage_id_ownership_from_cookie(current_user.id)
+      current_user.generate_progress_from_storage_id(storage_id) if storage_id
+    end
+  end
+
+  # Set age for the current user if empty - skips CSRF verification because this can be called
+  # from cached pages which will not populate the CSRF token
+  def set_age
+    current_user.update(age: params[:user][:age]) unless current_user.age.present?
   end
 
   def upgrade

@@ -94,25 +94,52 @@ describe('AppLabTooltipOverlay', () => {
 
   describe('when over an applab control', () => {
     const CONTROL_ID = 'fake-id';
+    const SCREEN_ID = 'screen-id';
+    let fakeElement, fakeScreen;
 
     beforeEach(() => {
-      // Create an element on the screen
-      let fakeScreen = document.createElement('div');
-      fakeScreen.className = 'screen';
+      // Create a container for the screen
+      let fakeContainer = document.createElement('div');
+      fakeContainer.className = 'withCrosshair';
 
-      let fakeElement = document.createElement('div');
+      // Create an element on the screen
+      fakeScreen = document.createElement('div');
+      fakeScreen.className = 'screen';
+      fakeScreen.id = SCREEN_ID;
+      fakeContainer.appendChild(fakeScreen);
+
+      fakeElement = document.createElement('div');
       fakeElement.id = CONTROL_ID;
       fakeScreen.appendChild(fakeElement);
 
-      let instance = ReactTestUtils.renderIntoDocument(<AppLabTooltipOverlay {...TEST_PROPS} />);
-      instance.onMouseMove({ target: fakeElement });
-      result = ReactTestUtils.findRenderedComponentWithType(instance, TooltipOverlay);
     });
 
-    it('has a second provider that returns the element ID', () => {
-      expect(result.props.providers.length).to.equal(2);
-      expect(result.props.providers[1]).to.be.a('function');
-      expect(result.props.providers[1](result.props)).to.equal(`id: ${CONTROL_ID}`);
+    describe('over an applab button', () => {
+      beforeEach(() => {
+        let instance = ReactTestUtils.renderIntoDocument(<AppLabTooltipOverlay {...TEST_PROPS} />);
+        instance.onMouseMove({ target: fakeElement });
+        result = ReactTestUtils.findRenderedComponentWithType(instance, TooltipOverlay);
+      });
+
+      it('has a second provider that returns the element ID', () => {
+        expect(result.props.providers.length).to.equal(2);
+        expect(result.props.providers[1]).to.be.a('function');
+        expect(result.props.providers[1](result.props)).to.equal(`id: ${CONTROL_ID}`);
+      });
+    });
+
+    describe('over an applab screen', () => {
+      beforeEach(() => {
+        let instance = ReactTestUtils.renderIntoDocument(<AppLabTooltipOverlay {...TEST_PROPS} />);
+        instance.onMouseMove({ target: fakeScreen });
+        result = ReactTestUtils.findRenderedComponentWithType(instance, TooltipOverlay);
+      });
+
+      it('has a second provider that returns the screen ID', () => {
+        expect(result.props.providers.length).to.equal(2);
+        expect(result.props.providers[1]).to.be.a('function');
+        expect(result.props.providers[1](result.props)).to.equal(`id: ${SCREEN_ID}`);
+      });
     });
   });
 });

@@ -9,7 +9,7 @@ theme: responsive
 
 <div class="col-66" style="padding-right: 20px;">
 
-The Circuit Playground is a small microcontroller board with LEDs, buttons, and sensors built in. Based on the popular Arduino platform, the Circuit Playground enables students to get up and running quickly with physical computing without worrying about many of the traditional barriers to entry. Developed by our friends at <a href="//adafruit.com">Adafruit</a>, the Circuit Playground is the core tool used in <a href="//studiocode.org/s/csd6">CS Discoveries Unit 6, Physical Computing</a>.
+The Circuit Playground is a small microcontroller board with LEDs, buttons, and sensors built in. Based on the popular Arduino platform, the Circuit Playground enables students to get up and running quickly with physical computing without worrying about many of the traditional barriers to entry. Developed by our friends at <a href="//adafruit.com">Adafruit</a>, the Circuit Playground is the core tool used in <a href="//studio.code.org/s/csd6">CS Discoveries Unit 6, Physical Computing</a>.
 
 </div>
 
@@ -75,6 +75,8 @@ will be subsidizing the cost of a single classroom kit for each teacher.
 * For teachers at schools with less than **50% free/reduced price meals**, the classroom kit will be **partially subsidized**, bringing the cost of the kit to $100 including shipping.
 
 Eligible teachers in our Professional Learning Program will be sent details in Winter 2017 on how to receive a coupon code that can be applied directly on the Adafruit website. 
+
+Additionally, participants in our 2018-19 Professional Learning Program who are teaching in schools with 50%+ free and reduced meal rates are eligibe to receive a subsidized Adafruit Circuit Playground classroom kit if they are implementing the full course. More details to come!
 
 ### For teachers independently using the CS Discoveries curriculum
 

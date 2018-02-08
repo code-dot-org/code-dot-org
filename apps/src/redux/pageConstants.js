@@ -28,6 +28,7 @@ var ALLOWED_KEYS = new Set([
   'showDebugConsole',
   'showDebugWatch',
   'showDebugSlider',
+  'showMakerToggle',
   'locale',
   'hasContainedLevels',
   'isDroplet',
@@ -52,11 +53,14 @@ var ALLOWED_KEYS = new Set([
   'nonResponsiveVisualizationColumnWidth',
   'is13Plus',
   'isSignedIn',
+  'userId',
   'isK1',
   'textToSpeechEnabled',
   'documentationUrl',
   'appType',
   'nextLevelUrl',
+  'showProjectTemplateWorkspaceIcon',
+  'serverLevelId',
 ]);
 
 const initialState = {

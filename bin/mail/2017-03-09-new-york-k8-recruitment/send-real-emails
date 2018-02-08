@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# 988 contacts.
-../send-to-mailing-list --limit 1000    2017-03-09-new-york-k8-recruitment ./contacts.csv

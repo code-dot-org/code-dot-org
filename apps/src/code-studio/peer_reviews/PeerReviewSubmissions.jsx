@@ -2,7 +2,7 @@ import React from 'react';
 import {Button, FormControl} from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-import Spinner from '../pd/workshop_dashboard/components/spinner';
+import Spinner from '../pd/components/spinner';
 import PeerReviewSubmissionData from "./PeerReviewSubmissionData";
 import $ from 'jquery';
 
@@ -11,14 +11,14 @@ class PeerReviewSubmissions extends React.Component {
     filterType: PropTypes.string.isRequired,
     courseList: PropTypes.arrayOf(PropTypes.array).isRequired,
     courseUnitMap: PropTypes.object.isRequired
-  }
+  };
 
   state = {
     loading: true,
     emailFilter: '',
     plcCourseId: '',
     plcCourseUnitId: ''
-  }
+  };
 
   componentWillMount() {
     this.getFilteredResults = _.debounce(this.getFilteredResults, 1000);
@@ -29,7 +29,7 @@ class PeerReviewSubmissions extends React.Component {
   handleCourseUnitFilterChange = (event) => {
     this.setState({plcCourseUnitId: event.target.value});
     this.getFilteredResults(this.state.emailFilter, this.state.plcCourseId, event.target.value);
-  }
+  };
 
   handleCourseFilterChange = (event) => {
     if (event.target.value === '') {
@@ -39,16 +39,16 @@ class PeerReviewSubmissions extends React.Component {
       this.setState({plcCourseId: event.target.value});
       this.getFilteredResults(this.state.emailFilter, event.target.value, this.state.plcCourseUnitId);
     }
-  }
+  };
 
   handleEmailFilterChange = (event) => {
     this.setState({emailFilter: event.target.value});
     this.getFilteredResults(event.target.value, this.state.plcCourseId, this.state.plcCourseUnitId);
-  }
+  };
 
   handleDownloadCsvClick = () => {
     window.open(`/api/v1/peer_review_submissions/report_csv?plc_course_unit_id=${this.state.plcCourseUnitId}`);
-  }
+  };
 
   getFilteredResults = (emailFilter, plcCourseId, plcCourseUnitId) => {
     this.setState({loading: true});
@@ -63,7 +63,7 @@ class PeerReviewSubmissions extends React.Component {
         loading: false
       });
     });
-  }
+  };
 
   renderFilterOptions() {
     return (

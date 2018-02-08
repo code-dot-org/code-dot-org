@@ -122,7 +122,7 @@ export function connect({interpreter, onDisconnect}) {
  * @returns {Promise}
  */
 function confirmSupportedBrowser() {
-  if (isCodeOrgBrowser || (isChrome() && gtChrome33())) {
+  if (isCodeOrgBrowser() || (isChrome() && gtChrome33())) {
     return Promise.resolve();
   } else {
     return Promise.reject(new UnsupportedBrowserError('Unsupported browser'));

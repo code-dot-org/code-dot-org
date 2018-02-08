@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Tester",
-    "reference": "/csf/tester/index.html"
+    "reference": "/docs/csf/tester/index.html"
   },
   "published": true,
   "notes": "This is a test. Ok to delete.",

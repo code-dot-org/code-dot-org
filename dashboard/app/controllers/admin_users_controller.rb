@@ -42,9 +42,7 @@ class AdminUsersController < ApplicationController
   end
 
   def assume_identity
-    user = User.where(id: params[:user_id]).first if params[:user_id].to_i.to_s == params[:user_id]
-    user ||= User.where(username: params[:user_id]).first
-    user ||= User.find_by_email_or_hashed_email(params[:user_id])
+    user = User.from_identifier(params[:user_id])
 
     if user
       bypass_sign_in user
@@ -74,12 +72,12 @@ class AdminUsersController < ApplicationController
     unless user
       flash[:alert] = "User (ID: #{params[:user_id]}) not found"
     end
-    script = nil
-    if params[:script_id_or_name].to_i.to_s == params[:script_id_or_name]
-      script = Script.find_by_id(params[:script_id_or_name])
-    else
-      script = Script.find_by_name(params[:script_id_or_name])
-    end
+    script =
+      if params[:script_id_or_name].to_i.to_s == params[:script_id_or_name]
+        Script.find_by_id(params[:script_id_or_name])
+      else
+        Script.find_by_name(params[:script_id_or_name])
+      end
     unless script
       flash[:alert] = "Script (ID or Name: #{params[:script_id_or_name]}) not found"
     end

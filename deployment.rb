@@ -41,6 +41,7 @@ def load_configuration
   {
     'app_servers'                 => {},
     'assets_bucket'               => 'cdo-dist',
+    'assets_bucket_prefix'        => rack_env.to_s,
     'aws_region'                  => 'us-east-1',
     'build_apps'                  => false,
     'build_dashboard'             => true,
@@ -58,6 +59,7 @@ def load_configuration
     'dashboard_enable_pegasus'    => rack_env == :development,
     'dashboard_workers'           => 8,
     'db_writer'                   => 'mysql://root@localhost/',
+    'default_hoc_mode'            => false, # overridden by 'hoc_mode' DCDO param, except in :test
     'reporting_db_writer'         => 'mysql://root@localhost/',
     'gatekeeper_table_name'       => "gatekeeper_#{rack_env}",
     'slack_log_room'              => rack_env.to_s,
@@ -68,8 +70,6 @@ def load_configuration
     'newrelic_logging'            => rack_env == :production,
     'netsim_max_routers'          => 20,
     'netsim_shard_expiry_seconds' => 7200,
-    # npm_use_sudo now controls whether to run yarn under sudo, which should be never. Remove this variable in the future.
-    'npm_use_sudo'                => false,
     'partners'                    => %w(ar br italia ro sg tr uk za),
     'pdf_port_collate'            => 8081,
     'pdf_port_markdown'           => 8081,
@@ -211,16 +211,19 @@ class CDOImpl < OpenStruct
     ''
   end
 
-  def site_url(domain, path = '', scheme = '')
+  def site_host(domain)
     host = canonical_hostname(domain)
     if (rack_env?(:development) && !CDO.https_development) ||
-        (ENV['CI'] && host.include?('localhost'))
+      (ENV['CI'] && host.include?('localhost'))
       port = ['studio.code.org'].include?(domain) ? CDO.dashboard_port : CDO.pegasus_port
       host += ":#{port}"
     end
+    host
+  end
 
+  def site_url(domain, path = '', scheme = '')
     path = '/' + path unless path.empty? || path[0] == '/'
-    "#{scheme}//#{host}#{path}"
+    "#{scheme}//#{site_host(domain)}#{path}"
   end
 
   def studio_url(path = '', scheme = '')
@@ -232,7 +235,7 @@ class CDOImpl < OpenStruct
   end
 
   def default_scheme
-    rack_env?(:development) ? 'http:' : 'https:'
+    rack_env?(:development) || ENV['CI'] ? 'http:' : 'https:'
   end
 
   def dir(*dirs)
@@ -355,6 +358,13 @@ end
 def rack_env?(*env)
   e = *env
   e.include? rack_env
+end
+
+def with_rack_env(temporary_env)
+  previous_env = CDO.rack_env
+  CDO.rack_env = temporary_env
+  yield
+  CDO.rack_env = previous_env
 end
 
 def deploy_dir(*dirs)

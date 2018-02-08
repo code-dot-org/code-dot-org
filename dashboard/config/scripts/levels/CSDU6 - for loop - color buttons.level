@@ -46,7 +46,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Write the contents of the array to the screen in numerical order. (Click to see full instructions)",
-    "markdown_instructions": "# Lists\r\n\r\n<img src=\"https://images.code.org/d3b8a9275703944808bc832c02f19fda-image-1486501806089.09.45 PM.png\" style=\"width: 150px; float: right\">\r\n\r\n**Starter code** has been provided that creates a list of colors and a list of the buttons on the screen. In addition there is code to set each button to a color.\r\n\r\n**Change the code** so that instead of the name of each button being using in the call to `setProperty` the list index is used instead.  For example:\r\n\r\n<pre>\r\nsetProperty(buttons[0],\"background-color\", colors[0]);\r\n</pre>",
+    "markdown_instructions": "# Lists\r\n\r\n<img src=\"https://images.code.org/d3b8a9275703944808bc832c02f19fda-image-1486501806089.09.45 PM.png\" style=\"width: 150px; float: right\">\r\n\r\n**Starter code** has been provided that creates a list of colors and a list of the buttons on the screen. In addition there is code to set each button to a color.\r\n\r\n**Change the code** so that instead of the name of each button being used in the call to `setProperty`, the list index is used instead.  For example:\r\n\r\n<pre>\r\nsetProperty(buttons[0],\"background-color\", colors[0]);\r\n</pre>",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -87,11 +87,13 @@
     "project_template_level_name": "CSD Template - Color Buttons List",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-17 21:24:57 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-17 21:24:57 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"},{\"changed_at\":\"2017-12-12 19:04:35 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

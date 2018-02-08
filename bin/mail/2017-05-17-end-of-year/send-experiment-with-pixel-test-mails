@@ -1,4 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list 2017-05-17-endofyear-k5nopdC ./test-params.csv
-../send-to-mailing-list 2017-05-17-endofyear-k5nopdD ./test-params.csv

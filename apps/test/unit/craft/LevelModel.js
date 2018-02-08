@@ -27,6 +27,9 @@ const mockGameController = {
   levelEntity: new LevelEntity({}),
   getIsDirectPlayerControl: () => false,
   levelData: {},
+  levelView: {
+    collectibleItems: [],
+  },
   followingPlayer: () => false,
 };
 
@@ -146,38 +149,38 @@ describe('LevelModel', () => {
     it('can check 10x10 level boundaries', () => {
       let levelModel = new LevelModel(makeLevelDefinition(10, 10), mockGameController);
 
-      assert(levelModel.inBounds(0, 0));
-      assert(levelModel.inBounds(9, 9));
-      assert(levelModel.inBounds(5, 5));
-      assert(levelModel.inBounds(0, 9));
-      assert(levelModel.inBounds(9, 0));
+      assert(levelModel.inBounds([0, 0]));
+      assert(levelModel.inBounds([9, 9]));
+      assert(levelModel.inBounds([5, 5]));
+      assert(levelModel.inBounds([0, 9]));
+      assert(levelModel.inBounds([9, 0]));
 
-      assert(!levelModel.inBounds(10, 10));
-      assert(!levelModel.inBounds(10, 0));
-      assert(!levelModel.inBounds(0, 10));
-      assert(!levelModel.inBounds(-1, -1));
-      assert(!levelModel.inBounds(-1, 0));
-      assert(!levelModel.inBounds(0, -1));
+      assert(!levelModel.inBounds([10, 10]));
+      assert(!levelModel.inBounds([10, 0]));
+      assert(!levelModel.inBounds([0, 10]));
+      assert(!levelModel.inBounds([-1, -1]));
+      assert(!levelModel.inBounds([-1, 0]));
+      assert(!levelModel.inBounds([0, -1]));
     });
 
     it('can check 20x20 level boundaries', () => {
       let largerDefinition = makeLevelDefinition(20, 20);
       let largerLevelModel = new LevelModel(largerDefinition, mockGameController);
-      assert(largerLevelModel.inBounds(0, 0));
-      assert(largerLevelModel.inBounds(19, 19));
-      assert(!largerLevelModel.inBounds(20, 20));
-      assert(!largerLevelModel.inBounds(0, 20));
-      assert(!largerLevelModel.inBounds(20, 0));
+      assert(largerLevelModel.inBounds([0, 0]));
+      assert(largerLevelModel.inBounds([19, 19]));
+      assert(!largerLevelModel.inBounds([20, 20]));
+      assert(!largerLevelModel.inBounds([0, 20]));
+      assert(!largerLevelModel.inBounds([20, 0]));
     });
 
     it('can check 10x20 level boundaries', () => {
       let rectDefinition = makeLevelDefinition(10, 20);
       rectDefinition.gridDimensions = [10, 20];
       let rectLevelModel = new LevelModel(rectDefinition, mockGameController);
-      assert(rectLevelModel.inBounds(0, 0));
-      assert(rectLevelModel.inBounds(9, 19));
-      assert(!rectLevelModel.inBounds(10, 19));
-      assert(!rectLevelModel.inBounds(9, 20));
+      assert(rectLevelModel.inBounds([0, 0]));
+      assert(rectLevelModel.inBounds([9, 19]));
+      assert(!rectLevelModel.inBounds([10, 19]));
+      assert(!rectLevelModel.inBounds([9, 20]));
     });
   });
 });

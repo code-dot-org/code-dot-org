@@ -1,12 +1,12 @@
 require_relative './form'
 
 class K5ProfessionalDevelopmentSurvey < Form
-  AGREEMENT_ANSWERS = (-2..2).map(&:to_s)
-  SCALE_ANSWERS = (1..10).map(&:to_s)
+  AGREEMENT_ANSWERS = (-2..2).map(&:to_s).freeze
+  SCALE_ANSWERS = (1..10).map(&:to_s).freeze
   SIMPLE_ANSWERS = %w(
     yes
     no
-  )
+  ).freeze
   DEGREE_TYPE = [
     'art',
     'business',
@@ -20,7 +20,7 @@ class K5ProfessionalDevelopmentSurvey < Form
     'science',
     'social science',
     'other',
-  ]
+  ].freeze
 
   def self.normalize(data)
     result = {}
@@ -28,11 +28,12 @@ class K5ProfessionalDevelopmentSurvey < Form
     result[:workshop_id_i] = required data[:workshop_id_i]
     result[:section_id_i] = required data[:section_id_i]
 
-    if data[:send_materials_email_s].nil_or_empty?
-      result[:email_s] = 'anonymous@code.org'
-    else
-      result[:email_s] = data[:send_materials_email_s]
-    end
+    result[:email_s] =
+      if data[:send_materials_email_s].nil_or_empty?
+        'anonymous@code.org'
+      else
+        data[:send_materials_email_s]
+      end
 
     result[:facilitator_prepared_i] = required enum data[:facilitator_prepared_i], AGREEMENT_ANSWERS
     result[:facilitator_knowledgeable_i] = required enum data[:facilitator_knowledgeable_i], AGREEMENT_ANSWERS

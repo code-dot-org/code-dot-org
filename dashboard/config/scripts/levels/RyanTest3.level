@@ -30,11 +30,12 @@
     "step_mode": "0",
     "shape_shift": "true",
     "instructions": "This level has shape-shifting turned on! Refresh to see different variants.",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-21 19:26:38 +0000\",\"changed\":[\"notes\",\"published\",\"maze_data\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-27 22:29:20 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-27 22:31:15 +0000\",\"changed\":[\"contained_level_names\",\"maze_data\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-21 19:26:38 +0000\",\"changed\":[\"notes\",\"published\",\"maze_data\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-27 22:29:20 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-27 22:31:15 +0000\",\"changed\":[\"contained_level_names\",\"maze_data\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-11-17 22:36:53 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

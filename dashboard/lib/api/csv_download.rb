@@ -19,9 +19,19 @@ module Api::CsvDownload
     end
   end
 
-  # Generates csv from an array of hashes (see below) and sends it as an attachment (download).
+  # Generates csv from an array of hashes (see #generate_csv below) and sends it as an attachment (download).
+  # @param [Array] json_array - array of hashes
+  # @param [String] filename
+  # @param [Boolean] :titleize (optional, default true) - when true, titleize the column headers
   def send_as_csv_attachment(json_array, filename, titleize: true)
-    send_data generate_csv(json_array, titleize: titleize), type: 'text/csv', disposition: 'attachment', filename: filename
+    send_csv_attachment generate_csv(json_array, titleize: titleize), filename
+  end
+
+  # Sends a csv (text) as a downloadable attachment
+  # @param [String] csv text
+  # @param [String] filename
+  def send_csv_attachment(csv, filename)
+    send_data csv, type: 'text/csv', disposition: 'attachment', filename: filename
   end
 
   # Converts an array of hashes to csv

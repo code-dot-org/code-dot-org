@@ -1,4 +1,8 @@
 hidden false
+hideable_stages true
+stage_extras_available true
+project_widget_visible true
+project_widget_types ["playlab", "artist"]
 
 stage 'Computational Thinking'
 level 'ComputationalThinking'
@@ -176,35 +180,15 @@ assessment '4-5 Bee Debugging Assessment 1'
 assessment '4-5 bee debug multi 1'
 
 stage 'Bounce'
-skin 'bounce'
-level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'bounce_1'
-skin 'bounce'
-level_concept_difficulty '{"sequencing":1,"events":3}'
 level 'bounce_2'
-skin 'bounce'
-level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'bounce_3'
-skin 'bounce'
-level_concept_difficulty '{"sequencing":1,"events":3}'
 level 'bounce_4'
-skin 'bounce'
-level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'bounce_5'
-skin 'bounce'
-level_concept_difficulty '{"sequencing":1,"events":3}'
 level 'bounce_6'
-skin 'bounce'
-level_concept_difficulty '{"sequencing":1,"events":4}'
 level 'bounce_7'
-skin 'bounce'
-level_concept_difficulty '{"sequencing":1,"events":4}'
 level 'bounce_10'
-skin 'bounce'
-level_concept_difficulty '{"sequencing":1,"events":4}'
 level 'bounce_11'
-skin 'bounce'
-level_concept_difficulty '{"sequencing":1,"events":1}'
 level 'bounce_12'
 
 stage 'Studio: Create a Story'

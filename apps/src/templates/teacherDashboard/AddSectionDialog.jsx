@@ -41,7 +41,6 @@ class AddSectionDialog extends Component {
       <BaseDialog
         useUpdatedStyles
         fixedWidth={1010}
-        assetUrl={() => ''}
         isOpen={isOpen}
         uncloseable
       >

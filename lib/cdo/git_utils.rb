@@ -58,6 +58,10 @@ module GitUtils
     `git rev-parse HEAD`.strip
   end
 
+  def self.git_revision_short
+    `git rev-parse --short=8 HEAD`.strip
+  end
+
   def self.git_revision_branch(branch)
     `git rev-parse #{branch}`.strip
   end
@@ -83,7 +87,7 @@ module GitUtils
 
   def self.circle_pr_branch_base_no_origin
     pr_number = ENV['CI_PULL_REQUEST'].gsub('https://github.com/code-dot-org/code-dot-org/pull/', '')
-    pr_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/pulls/#{pr_number}?access_token=#{ENV['GITHUB_PULBLIC_OAUTH2_TOKEN']}").read)
+    pr_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/pulls/#{pr_number}").read)
     pr_json['base']['ref']
   rescue => _
     nil

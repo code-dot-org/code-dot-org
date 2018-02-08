@@ -55,6 +55,19 @@ class StageTest < ActiveSupport::TestCase
     assert_equal stage.summarize[:levels].first[:uid], "#{stage.summarize[:levels].first[:ids].first}_0"
   end
 
+  test "summary for stage with and without extras" do
+    script = create :script, stage_extras_available: true
+    level = create :level
+    stage = create :stage, script: script
+    create :script_level, script: script, stage: stage, levels: [level]
+    level2 = create :level
+    stage2 = create :stage, script: script, stage_extras_disabled: true
+    create :script_level, script: script, stage: stage2, levels: [level2]
+
+    assert_match /extras$/, stage.summarize[:stage_extras_level_url]
+    assert_nil stage2.summarize[:stage_extras_level_url]
+  end
+
   test "last_progression_script_level" do
     stage = create :stage
     create :script_level, stage: stage
@@ -80,7 +93,7 @@ class StageTest < ActiveSupport::TestCase
     create :script_level, script: script, stage: stage2
     create :script_level, script: script, stage: stage2
 
-    assert /\/s\/bogus-script-\d+\/stage\/2\/puzzle\/1/.match(stage1.next_level_path_for_stage_extras(@student))
+    assert_match /\/s\/bogus-script-\d+\/stage\/2\/puzzle\/1/, stage1.next_level_path_for_stage_extras(@student)
     assert_equal '/', stage2.next_level_path_for_stage_extras(@student)
   end
 

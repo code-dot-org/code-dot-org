@@ -1,4 +1,3 @@
-hidden false
 login_required true
 
 stage 'all assessment items as standalone assessment levels'
@@ -27,3 +26,8 @@ level 'U3L03 define turnRight and draw a rectangle', progression: 'Some app lab 
 
 stage 'all assessment items clustered in levelgroup as a single "test"'
 assessment 'subgoal_assessments_levelgroup_test'
+
+stage 'CSP 3 updates staging ground'
+level 'SG CSP Abstraction in Programming 2', progression: 'Lesson 5.6 - (new) Abstraction in Programming'
+level 'SG U3 whats a comment', progression: 'Lesson 8.8 - (new) What is a comment?'
+level 'SG U3L08 how to add comments', progression: 'Lesson 8.9 - How to add comments - Review for instructions and starting code'

@@ -107,10 +107,18 @@ module Cdo
       assume_role = begin
         client = google_client
         return unless client
-        id_token = google_client.id_token ||
-          google_client.tap(&:refresh!).id_token
-        # Decode the JWT id_token to use the Google email as the AWS role session name.
-        token_params = JWT.decode(id_token, nil, false).first
+
+        begin
+          tries ||= 2
+          id_token = client.id_token
+          # Decode the JWT id_token to use the Google email as the AWS role session name.
+          token_params = JWT.decode(id_token, nil, false).first
+        rescue JWT::DecodeError, JWT::ExpiredSignature
+          # Refresh and retry once if token is expired or invalid.
+          client.refresh!
+          (tries -= 1).zero? ? raise : retry
+        end
+
         @client.assume_role_with_web_identity(
           @assume_role_params.merge(
             web_identity_token: id_token,

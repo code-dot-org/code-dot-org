@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import experiments from './util/experiments';
 import processMarkdown from 'marked';
 import renderer, { makeRenderer } from "./util/StylelessRenderer";
 import FeedbackBlocks from './feedbackBlocks';
@@ -142,11 +141,6 @@ authoredHintUtils.clearUnfinishedHints = function () {
 };
 
 authoredHintUtils.clearFinishedHints_ = function () {
-  if (experiments.isEnabled('gamification')) {
-    const oldHints = authoredHintUtils.getOldFinishedHints();
-    trySetLocalStorage('old_finished_authored_hint_views',
-        JSON.stringify(oldHints.concat(authoredHintUtils.getFinishedHints_())));
-  }
   trySetLocalStorage('finished_authored_hint_views', JSON.stringify([]));
 };
 
@@ -158,7 +152,7 @@ authoredHintUtils.finalizeHints_ = function () {
   localStorage.removeItem('last_attempt_record');
   var hints = authoredHintUtils.getFinishedHints_();
   if (finalAttemptRecord) {
-    hints = hints.map(function (hint){
+    hints = hints.map(function (hint) {
       hint = Object.assign({
         finalTime: finalAttemptRecord.time,
         finalAttempt: finalAttemptRecord.attempt,
@@ -206,7 +200,7 @@ authoredHintUtils.finishHints = function (nextAttemptRecord) {
   trySetLocalStorage('last_attempt_record', JSON.stringify(nextAttemptRecord));
   var unfinishedHintViews = authoredHintUtils.getUnfinishedHints_();
   authoredHintUtils.clearUnfinishedHints();
-  var finishedHintViews = unfinishedHintViews.map(function (hint){
+  var finishedHintViews = unfinishedHintViews.map(function (hint) {
     hint = Object.assign({
       nextTime: nextAttemptRecord.time,
       nextAttempt: nextAttemptRecord.attempt,
@@ -310,6 +304,8 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
       hintId: hint.hint_id,
       hintClass: hint.hint_class,
       hintType: hint.hint_type,
+      hintPath: JSON.parse(hint.hint_path || '[]'),
+      hintVideo: hint.hint_video,
       ttsUrl: hint.tts_url,
       alreadySeen: false
     };

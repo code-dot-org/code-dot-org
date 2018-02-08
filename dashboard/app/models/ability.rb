@@ -43,8 +43,12 @@ class Ability
       :pd_workshop_admins,
       :peer_review_submissions,
       RegionalPartner,
+      :regional_partner_workshops,
       Pd::RegionalPartnerMapping,
-      Pd::Application::Facilitator1819Application
+      Pd::Application::ApplicationBase,
+      Pd::Application::Facilitator1819Application,
+      Pd::Application::Teacher1819Application,
+      :maker_discount
     ]
 
     if user.persisted?
@@ -70,7 +74,9 @@ class Ability
       if user.teacher?
         can :manage, Section, user_id: user.id
         can :manage, :teacher
-        can :manage, user.students
+        can :manage, User do |u|
+          user.students.include?(u)
+        end
         can :manage, Follower
         can :read, Workshop
         can :manage, UserLevel do |user_level|
@@ -80,8 +86,11 @@ class Ability
         can :view_level_solutions, Script do |script|
           !script.professional_learning_course?
         end
+        can [:read, :find], :regional_partner_workshops
         can [:new, :create, :read], Pd::WorkshopMaterialOrder, user_id: user.id
         can [:new, :create, :read], Pd::Application::Facilitator1819Application, user_id: user.id
+        can [:new, :create, :read], Pd::Application::Teacher1819Application, user_id: user.id
+        can :manage, :maker_discount
       end
 
       if user.facilitator?
@@ -122,6 +131,17 @@ class Ability
         can :index, :workshop_organizer_survey_report
         can :read, :pd_workshop_summary_report
         can :read, :pd_teacher_attendance_report
+        if user.regional_partners.any?
+          # regional partners by default have read, quick_view, and update
+          # permissions
+          can [:read, :quick_view, :cohort_view, :update, :search], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
+
+          # G3 regional partners should have full management permission
+          group_3_partner_ids = user.regional_partners.where(group: 3).pluck(:id)
+          unless group_3_partner_ids.empty?
+            can :manage, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
+          end
+        end
       end
 
       if user.permission?(UserPermission::WORKSHOP_ADMIN)
@@ -137,7 +157,13 @@ class Ability
         can :manage, RegionalPartner
         can :report_csv, :peer_review_submissions
         can :manage, Pd::RegionalPartnerMapping
+        can :manage, Pd::Application::ApplicationBase
         can :manage, Pd::Application::Facilitator1819Application
+        can :manage, Pd::Application::Teacher1819Application
+      end
+
+      if user.permission?(UserPermission::PROJECT_VALIDATOR)
+        can :manage, FeaturedProject
       end
 
       if user.permission?(UserPermission::PLC_REVIEWER)
@@ -193,7 +219,7 @@ class Ability
       end
     end
 
-    if user.persisted? && user.permission?(UserPermission::RESET_ABUSE)
+    if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
       # let them change the hidden state
       can :manage, LevelSource
     end

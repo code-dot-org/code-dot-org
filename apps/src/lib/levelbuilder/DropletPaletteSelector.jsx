@@ -6,11 +6,18 @@ import React, {PropTypes} from 'react';
  * editor instance to render a select dropdown which allows you
  * to choose from a list of blocks which can be added to the editor.
  */
-const DropletPaletteSelector = React.createClass({
-  propTypes: {
+export default class DropletPaletteSelector extends React.Component {
+  static propTypes = {
     editor: PropTypes.instanceOf(CodeMirror).isRequired,
     palette: PropTypes.object.isRequired,
-  },
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentPalette: props.editor.getValue(),
+    };
+  }
 
   componentDidMount() {
     this.props.editor.on('change', () => {
@@ -18,15 +25,9 @@ const DropletPaletteSelector = React.createClass({
         currentPalette: this.props.editor.getValue(),
       });
     });
-  },
+  }
 
-  getInitialState() {
-    return {
-      currentPalette: this.props.editor.getValue(),
-    };
-  },
-
-  selectBlock(event) {
+  selectBlock = (event) => {
     const blockName = event.target.value;
     if (!blockName) {
       return;
@@ -39,7 +40,7 @@ const DropletPaletteSelector = React.createClass({
     }
     currentBlocks[blockName] = this.props.palette[blockName];
     this.props.editor.setValue(JSON.stringify(currentBlocks, null, 2));
-  },
+  };
 
   getCurrentPaletteBlocks() {
     if (this.state.currentPalette.trim()) {
@@ -47,7 +48,7 @@ const DropletPaletteSelector = React.createClass({
     } else {
       return {};
     }
-  },
+  }
 
   render() {
     let blocks = [];
@@ -72,6 +73,4 @@ const DropletPaletteSelector = React.createClass({
       </select>
     );
   }
-});
-
-export default DropletPaletteSelector;
+}

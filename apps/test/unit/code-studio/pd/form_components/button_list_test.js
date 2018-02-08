@@ -63,7 +63,7 @@ describe("ButtonList", () => {
     let checkboxList;
     let onChangeCallback;
 
-    before(() => {
+    beforeEach(() => {
       onChangeCallback = sinon.spy();
 
       checkboxList = shallow(
@@ -99,18 +99,27 @@ describe("ButtonList", () => {
       );
     });
 
-    it("Calls the onChange callback with a list of all checked when one is changed", () => {
-      // Select "Cat" from [], resulting in ["Cat"]
+    it("Calls the onChange callback with a list of all checked when one is checked", () => {
+      // Select "Cat" initially, resulting in ["Cat"]
       checkboxList.find("Checkbox[value='Cat']").simulate("change", {target: {value: "Cat", checked: true}});
       expect(onChangeCallback).to.have.been.calledOnce;
       expect(onChangeCallback).to.have.been.calledWith({favoritePet: ["Cat"]});
+    });
 
+    it("Calls the onChange callback with a list of all remaining checked when one is unchecked", () => {
       // Unselect "Cat" from ["Cat", "Dog"], resulting in ["Dog"]
       checkboxList.setProps({selectedItems: ["Cat", "Dog"]});
-      onChangeCallback.reset();
       checkboxList.find("Checkbox[value='Cat']").simulate("change", {target: {value: "Cat", checked: false}});
       expect(onChangeCallback).to.have.been.calledOnce;
       expect(onChangeCallback).to.have.been.calledWith({favoritePet: ["Dog"]});
+    });
+
+    it("Calls the onChange callback with null when the last checked item is unchecked", () => {
+      // Unselect "Cat" from ["Cat"], resulting in null
+      checkboxList.setProps({selectItems: ["Cat"]});
+      checkboxList.find("Checkbox[value='Cat']").simulate("change", {target: {value: "Cat", checked: false}});
+      expect(onChangeCallback).to.have.been.calledOnce;
+      expect(onChangeCallback).to.have.been.calledWith({favoritePet: null});
     });
   });
 

@@ -3,7 +3,7 @@ import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import StageProgress from './StageProgress';
 import stageLock from '../../stageLockRedux';
-import progress, { initProgress } from '../../progressRedux';
+import progress, { initProgress, setStageExtrasEnabled } from '../../progressRedux';
 
 const activityPuzzle = {
   ids: [
@@ -90,17 +90,21 @@ const unplugged = {
 };
 
 export default storybook => {
-  const createStoreForLevels = (levels, currentLevelIndex) => {
+  const createStoreForLevels = (levels, currentLevelIndex, showStageExtras, onStageExtras) => {
     const store = createStore(combineReducers({progress, stageLock}));
     store.dispatch(initProgress({
-      currentLevelId: levels[currentLevelIndex].ids[0].toString(),
+      currentLevelId: onStageExtras ?
+        'stage_extras' :
+        levels[currentLevelIndex].ids[0].toString(),
       scriptName: 'csp1',
       saveAnswersBeforeNavigation: false,
       stages: [{
         id: 123,
+        stage_extras_level_url: showStageExtras && 'fakeurl',
         levels
       }]
     }));
+    store.dispatch(setStageExtrasEnabled(showStageExtras));
     return store;
   };
 
@@ -157,6 +161,44 @@ export default storybook => {
             unplugged,
             assessment1
           ], 1);
+          return (
+            <div style={{display: 'inline-block'}} className="header_level">
+              <Provider store={store}>
+                <StageProgress/>
+              </Provider>
+            </div>
+          );
+        }
+      },
+
+      {
+        name: 'with stage extras',
+        // Provide an outer div to simulate some of the CSS that gets leaked into
+        // this component
+        story: () => {
+          const store = createStoreForLevels([
+            activityPuzzle,
+            conceptPuzzle,
+          ], 1, true /* showStageExtras */);
+          return (
+            <div style={{display: 'inline-block'}} className="header_level">
+              <Provider store={store}>
+                <StageProgress/>
+              </Provider>
+            </div>
+          );
+        }
+      },
+
+      {
+        name: 'with stage extras as current level',
+        // Provide an outer div to simulate some of the CSS that gets leaked into
+        // this component
+        story: () => {
+          const store = createStoreForLevels([
+            activityPuzzle,
+            conceptPuzzle,
+          ], 1, true /* showStageExtras */, true /* onStageExtras */);
           return (
             <div style={{display: 'inline-block'}} className="header_level">
               <Provider store={store}>

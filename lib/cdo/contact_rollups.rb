@@ -53,6 +53,24 @@ class ContactRollups
   # PD courses in quoted, comma-separated form for inclusion in SQL IN clauses
   COURSE_LIST = COURSE_ARRAY.map {|x| "'#{x}'"}.join(',')
 
+  CSF_SCRIPT_ARRAY = %w(
+    course1
+    course2
+    course3
+    course4
+    coursea
+    courseb
+    coursec
+    coursed
+    coursee
+    coursef
+    20-hour
+    express
+    pre-express
+  ).freeze
+
+  CSF_SCRIPT_LIST = CSF_SCRIPT_ARRAY.map {|x| "'#{x}'"}.join(',')
+
   # Values of forms.kind field with form data we care about
   FORM_KINDS_WITH_DATA = %w(
     BringToSchool2013
@@ -79,13 +97,13 @@ class ContactRollups
 
   # Information about presence of which forms submitted by a user get recorded in which
   # rollup field with which value
-  FORM_INFOS = []
-  FORM_INFOS << {kind: "'CSEdWeekEvent2013'", dest_field: "hoc_organizer_years", dest_value: "'2013'"}
+  form_infos = []
+  form_infos << {kind: "'CSEdWeekEvent2013'", dest_field: "hoc_organizer_years", dest_value: "'2013'"}
   (2014..hoc_year).each do |year|
-    FORM_INFOS << {kind: "'HocSignup#{year}'", dest_field: "hoc_organizer_years", dest_value: "'#{year}'"}
+    form_infos << {kind: "'HocSignup#{year}'", dest_field: "hoc_organizer_years", dest_value: "'#{year}'"}
   end
-  FORM_INFOS << {kind: "'Petition'", dest_field: "roles", dest_value: "'Petition Signer'"}
-  FORM_INFOS.freeze
+  form_infos << {kind: "'Petition'", dest_field: "roles", dest_value: "'Petition Signer'"}
+  FORM_INFOS = form_infos.freeze
 
   ROLE_TEACHER = "Teacher".freeze
   ROLE_FORM_SUBMITTER = "Form Submitter".freeze
@@ -337,6 +355,17 @@ class ContactRollups
     log "Updating Regional Partner role"
     append_regional_partner_to_role_list
     log_completion(start)
+
+    start = Time.now
+    log "Updating CSF/CSD/CSP teacher roles"
+    # CSF scripts don't have a course mapping - identify CSF teachers by
+    # specific scripts
+    add_role_from_script_sections_taught("CSF Teacher", CSF_SCRIPT_LIST)
+    # CSD and CSP scripts are mapped to course - identify CSD/CSP teachers
+    # that way
+    add_role_from_course_sections_taught("CSD Teacher", "csd")
+    add_role_from_course_sections_taught("CSP Teacher", "csp")
+    log_completion(start)
   end
 
   def self.append_to_role_list_from_permission(permission_name, dest_value)
@@ -359,6 +388,40 @@ class ContactRollups
     SET #{dest_field} = CONCAT(COALESCE(CONCAT(#{dest_field}, ','), ''), #{dest_value})
     WHERE forms.kind IN (#{form_kinds}) AND #{DEST_TABLE_NAME}.id > 0"
     log_completion(start)
+  end
+
+  def self.add_role_from_course_sections_taught(role_name, course_name)
+    PEGASUS_REPORTING_DB_WRITER.run "
+    UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
+    INNER JOIN (
+      select distinct id from (
+        select users.id from #{DASHBOARD_DB_NAME}.sections as sections
+          inner join #{DASHBOARD_DB_NAME}.courses as courses on courses.id = sections.course_id
+            inner join #{DASHBOARD_DB_NAME}.users as users on users.id = sections.user_id
+         where courses.name = '#{course_name}'
+        union
+        select users.id from #{DASHBOARD_DB_NAME}.sections
+          inner join #{DASHBOARD_DB_NAME}.scripts as scripts on scripts.id = sections.script_id
+          inner join #{DASHBOARD_DB_NAME}.course_scripts as course_scripts on course_scripts.script_id = scripts.id
+          inner join #{DASHBOARD_DB_NAME}.courses as courses on courses.id = course_scripts.course_id
+          inner join #{DASHBOARD_DB_NAME}.users as users on users.id = sections.user_id
+        where courses.name = '#{course_name}'
+      ) q
+    ) user_ids ON user_ids.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
+    SET roles = CONCAT(COALESCE(CONCAT(roles, ','), ''), '#{role_name}')
+    WHERE #{DEST_TABLE_NAME}.id > 0"
+  end
+
+  def self.add_role_from_script_sections_taught(role_name, script_list)
+    PEGASUS_REPORTING_DB_WRITER.run "
+    UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
+    INNER JOIN (
+        select distinct sections.user_id from #{DASHBOARD_DB_NAME}.sections AS sections
+          INNER JOIN #{DASHBOARD_DB_NAME}.scripts as scripts on scripts.id = sections.script_id
+        where scripts.name IN (#{script_list})
+    ) user_ids ON user_ids.user_id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
+    SET roles = CONCAT(COALESCE(CONCAT(roles, ','), ''), '#{role_name}')
+    WHERE #{DEST_TABLE_NAME}.id > 0"
   end
 
   def self.append_regional_partner_to_role_list

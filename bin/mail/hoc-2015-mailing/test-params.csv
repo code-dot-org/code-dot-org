@@ -1,5 +1,0 @@
-email,name,international,organizer
-laurel+organizer.international@code.org,Laurel Organizer International,true,true
-laurel+organizer.ninternational@code.org,Laurel Organizer NInternational,false,true
-laurel+norganizer.international@code.org,Laurel NOrganizer International,true,false
-laurel+norganizer.ninternational@code.org,Laurel NOrganizer NInternational,false,false

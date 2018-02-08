@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import i18n from '@cdo/locale';
 import { updateQueryParam } from '../../utils';
+import { reload } from '../../../utils';
 import { selectSection, sectionsNameAndId, NO_SECTION } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const styles = {
@@ -10,8 +11,8 @@ const styles = {
   }
 };
 
-const SectionSelector = React.createClass({
-  propTypes: {
+class SectionSelector extends React.Component {
+  static propTypes = {
     style: PropTypes.object,
     // If false, the first option is "Select Section"
     requireSelection: PropTypes.bool,
@@ -29,18 +30,18 @@ const SectionSelector = React.createClass({
     ).isRequired,
     selectedSectionId: PropTypes.string,
     selectSection: PropTypes.func.isRequired,
-  },
+  };
 
-  handleSelectChange(event) {
+  handleSelectChange = (event) => {
     const newSectionId = event.target.value;
 
     updateQueryParam('section_id', newSectionId === NO_SECTION ? undefined : newSectionId);
     if (this.props.reloadOnChange) {
-      window.location.reload();
+      reload();
     } else {
       this.props.selectSection(newSectionId);
     }
-  },
+  };
 
   render() {
     const {
@@ -77,7 +78,7 @@ const SectionSelector = React.createClass({
       </select>
     );
   }
-});
+}
 
 export const UnconnectedSectionSelector = SectionSelector;
 

@@ -53,6 +53,7 @@ import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import ArtistSkins from './skins';
 import dom from '../dom';
+import {SignInState} from '../code-studio/progressRedux';
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -175,6 +176,8 @@ const REMIX_PROPS_BY_SKIN = {
   elsa: FROZEN_REMIX_PROPS,
 };
 
+const PUBLISHABLE_SKINS = ['artist', 'artist_zombie', 'anna', 'elsa'];
+
 /**
  * An instantiable Artist class
  * @param {StudioApp} studioApp The studioApp instance to build upon.
@@ -215,6 +218,7 @@ var Artist = function () {
   this.currentPathPattern = new Image();
   this.loadedPathPatterns = [];
   this.isDrawingWithPattern = false;
+  this.linePatterns = [];
 
   // these get set by init based on skin.
   this.avatarWidth = 0;
@@ -302,13 +306,13 @@ Artist.prototype.preloadAllPatternImages = function () {
   const loadPattern = patternOption => new Promise(resolve => {
     const pattern = patternOption[1];
 
-    if (this.skin[pattern]) {
+    if (this.linePatterns[pattern]) {
       const img = new Image();
 
       img.onload = () => resolve();
       img.onerror = () => resolve();
 
-      img.src = this.skin[pattern];
+      img.src = this.linePatterns[pattern];
       this.loadedPathPatterns[pattern] = img;
     } else {
       resolve();
@@ -347,6 +351,8 @@ Artist.prototype.init = function (config) {
     this.level.images[0].scale = 1;
   }
 
+  this.linePatterns = config.skin.linePatterns;
+
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
@@ -367,6 +373,18 @@ Artist.prototype.init = function (config) {
 
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
+
+  if (
+    config.embed &&
+    config.level.markdownInstructions &&
+    !config.level.instructions
+  ) {
+    // if we are an embedded level with markdown instructions but no regular
+    // instructions, we want to display CSP-style instructions and not be
+    // centered
+    config.noInstructionsWhenCollapsed = true;
+    config.centerEmbedded = false;
+  }
 
   // Push initial level properties into the Redux store
   const appSpecificConstants = {};
@@ -1000,8 +1018,8 @@ Artist.prototype.initInterpreter = function () {
 /**
  * Handle an execution error from the interpreter
  */
-Artist.prototype.handleExecutionError = function (err, lineNumber) {
-  this.consoleLogger_.log(err);
+Artist.prototype.handleExecutionError = function (err, lineNumber, outputString) {
+  this.consoleLogger_.log(outputString);
 
   this.executionError = { err: err, lineNumber: lineNumber };
 
@@ -1041,6 +1059,14 @@ Artist.prototype.execute = function () {
   }
 
   // api.log now contains a transcript of all the user's actions.
+
+  // If this is a free play level, save the code every time the run button is
+  // clicked rather than only on finish
+  if (this.level.freePlay) {
+    this.levelComplete = true;
+    this.testResults = TestResults.FREE_PLAY;
+    this.report(false);
+  }
 
   if (this.shouldSupportNormalization()) {
     // First, draw a normalized version of the user's actions (ie, one which
@@ -1149,6 +1175,8 @@ Artist.prototype.finishExecution_ = function () {
   if (this.studioApp_.isUsingBlockly()) {
     Blockly.mainBlockSpace.highlightBlock(null);
   }
+
+  captureThumbnailFromCanvas(this.getThumbnailCanvas_());
 
   if (this.level.freePlay) {
     window.dispatchEvent(new Event('artistDrawingComplete'));
@@ -1310,21 +1338,11 @@ Artist.prototype.step = function (command, values, options) {
       tupleDone = result.tupleDone;
       this.turnByDegrees_(result.distance);
       break;
-    case 'DP':  // Draw Print
-      this.ctxScratch.save();
-      this.ctxScratch.translate(this.x, this.y);
-      this.ctxScratch.rotate(utils.degreesToRadians(this.heading - 90));
-      this.ctxScratch.fillText(values[0], 0, 0);
-      this.ctxScratch.restore();
-      break;
     case 'GA':  // Global Alpha
       var alpha = values[0];
       alpha = Math.max(0, alpha);
       alpha = Math.min(100, alpha);
       this.ctxScratch.globalAlpha = alpha / 100;
-      break;
-    case 'DF':  // Draw Font
-      this.ctxScratch.font = values[2] + ' ' + values[1] + 'pt ' + values[0];
       break;
     case 'PU':  // Pen Up
       this.penDownValue = false;
@@ -1457,11 +1475,6 @@ Artist.prototype.jumpTo_ = function (pos) {
 Artist.prototype.jumpForward_ = function (distance) {
   this.x += distance * Math.sin(utils.degreesToRadians(this.heading));
   this.y -= distance * Math.cos(utils.degreesToRadians(this.heading));
-};
-
-Artist.prototype.moveByRelativePosition_ = function (x, y) {
-  this.x += x;
-  this.y += y;
 };
 
 Artist.prototype.dotAt_ = function (x, y) {
@@ -1670,12 +1683,15 @@ Artist.prototype.isCorrect_ = function (pixelErrors, permittedErrors) {
  */
 Artist.prototype.displayFeedback_ = function () {
   var level = this.level;
-  const saveToProjectGallery = this.skin.id === 'artist' && !level.impressive;
-  const {isSignedIn} = getStore().getState().pageConstants;
+  // Don't save impressive levels as projects, because this would create too
+  // many projects. Instead store them as /c/ links, which are much more
+  // space-efficient since they store only one copy of identical projects made
+  // by different users.
+  const saveToProjectGallery = !level.impressive &&
+    PUBLISHABLE_SKINS.includes(this.skin.id);
+  const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
 
   this.studioApp_.displayFeedback({
-    app: 'turtle',
-    skin: this.skin.id,
     feedbackType: this.testResults,
     message: this.message,
     response: this.response,
@@ -1755,23 +1771,19 @@ Artist.prototype.checkAnswer = function () {
   // Test whether the student can progress to the next level. There can be no
   // errors, and this either needs to be a free play/preidction level, or they
   // need to have met success conditions.
-  var levelComplete = (!level.editCode || !this.executionError) &&
+  this.levelComplete = (!level.editCode || !this.executionError) &&
       (level.freePlay ||
       this.studioApp_.hasContainedLevels ||
       this.isCorrect_(delta, permittedErrors));
-  this.testResults = this.studioApp_.getTestResults(levelComplete);
+  this.testResults = this.studioApp_.getTestResults(this.levelComplete);
 
-  var program;
-  if (this.studioApp_.isUsingBlockly()) {
-    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-    program = Blockly.Xml.domToText(xml);
-  }
+  var program = this.getUserCode();
 
   // Make sure we don't reuse an old message, since not all paths set one.
   this.message = undefined;
 
   // In level K1, check if only lengths differ.
-  if (level.isK1 && !levelComplete && !this.studioApp_.editCode &&
+  if (level.isK1 && !this.levelComplete && !this.studioApp_.editCode &&
       level.solutionBlocks &&
       removeK1Lengths(program) === removeK1Lengths(level.solutionBlocks)) {
     this.testResults = TestResults.APP_SPECIFIC_ERROR;
@@ -1800,23 +1812,11 @@ Artist.prototype.checkAnswer = function () {
     }
   }
 
-  if (level.editCode) {
-    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
-    // identical versions of the code on the service, we could do either of these:
-
-    // do an acorn.parse and then use escodegen to generate back a "clean" version
-    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
-
-    program = this.studioApp_.editor.getValue();
-  }
-
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
     this.testResults = TestResults.FREE_PLAY;
   }
-
-  captureThumbnailFromCanvas(this.getThumbnailCanvas_());
 
   // Play sound
   if (this.testResults === TestResults.FREE_PLAY ||
@@ -1833,19 +1833,7 @@ Artist.prototype.checkAnswer = function () {
       this.onReportComplete();
     });
   } else {
-    var reportData = {
-      app: 'turtle',
-      level: level.id,
-      result: levelComplete,
-      testResult: this.testResults,
-      program: encodeURIComponent(program),
-      onComplete: _.bind(this.onReportComplete, this),
-      save_to_gallery: level.impressive
-    };
-
-    reportData = this.setReportDataImage_(level, reportData);
-
-    this.studioApp_.report(reportData);
+    this.report();
   }
 
   if (this.studioApp_.isUsingBlockly()) {
@@ -1854,6 +1842,46 @@ Artist.prototype.checkAnswer = function () {
   }
 
   // The call to displayFeedback() will happen later in onReportComplete()
+};
+
+Artist.prototype.getUserCode = function () {
+  if (this.studioApp_.isUsingBlockly()) {
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    return Blockly.Xml.domToText(xml);
+  } else if (this.level.editCode) {
+    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+    // identical versions of the code on the service, we could do either of these:
+
+    // do an acorn.parse and then use escodegen to generate back a "clean" version
+    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+    return this.studioApp_.editor.getValue();
+  }
+};
+
+/**
+ * Send the milestone post, including level progress (result and testResults)
+ * and saved user code.
+ *
+ * @param {boolean} [enableOnComplete=true] whether or not to attach the
+ *        onComplete handler to the StudioApp.report call
+ */
+Artist.prototype.report = function (enableOnComplete = true) {
+  let reportData = {
+    app: 'turtle',
+    level: this.level.id,
+    result: this.levelComplete,
+    testResult: this.testResults,
+    program: encodeURIComponent(this.getUserCode()),
+    save_to_gallery: !!this.level.impressive
+  };
+
+  if (enableOnComplete) {
+    reportData.onComplete = this.onReportComplete.bind(this);
+  }
+
+  reportData = this.setReportDataImage_(this.level, reportData);
+
+  this.studioApp_.report(reportData);
 };
 
 /**
@@ -1878,10 +1906,13 @@ Artist.prototype.setReportDataImage_ = function (level, reportData) {
     isEditingSolution ||
     (didPassLevel && !isFrozen && (level.freePlay || level.impressive))
   ) {
-    const image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
+    const image = isEditingSolution ?
+      this.getFeedbackImage_(CANVAS_WIDTH, CANVAS_HEIGHT) :
+      this.getFeedbackImage_();
+    const encodedImage = encodeURIComponent(image.split(',')[1]);
     return {
       ...reportData,
-      image,
+      image: encodedImage,
     };
   }
   return reportData;
@@ -1898,13 +1929,15 @@ Artist.prototype.getFeedbackImage_ = function (width, height) {
   // Clear the feedback layer
   this.clearImage_(this.ctxFeedback);
 
-  if (this.isFrozenSkin()) {
-    // For frozen skins, show everything - including background,
-    // characters, and pattern - along with drawing.
+  if (this.isFrozenSkin() && this.level.impressive) {
+    // For impressive levels in frozen skins, show everything - including
+    // background, characters, and pattern - along with drawing.
     this.ctxFeedback.globalCompositeOperation = 'copy';
     this.ctxFeedback.drawImage(this.ctxDisplay.canvas, 0, 0,
         this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
   } else {
+    // Frozen free play levels must not show the character, since we don't know
+    // how the drawing will look, and it could be off-brand.
     this.drawImage_(this.ctxFeedback);
   }
 

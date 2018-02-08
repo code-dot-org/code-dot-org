@@ -15,17 +15,32 @@ import projects, {
 import publishDialogReducer, {
   showPublishDialog,
 } from '@cdo/apps/templates/publishDialog/publishDialogRedux';
+import { PublishableProjectTypesUnder13, PublishableProjectTypesOver13 } from '@cdo/apps/util/sharedConstants';
+import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 
 $(document).ready(() => {
+  const script = document.querySelector('script[data-projects]');
+  const projectsData = JSON.parse(script.dataset.projects);
+
   registerReducers({projects, publishDialog: publishDialogReducer});
   const store = getStore();
   setupReduxSubscribers(store);
   const projectsHeader = document.getElementById('projects-header');
   ReactDOM.render(
     <Provider store={store}>
-      <ProjectHeader showGallery={showGallery} />
+      <ProjectHeader/>
     </Provider>,
     projectsHeader
+  );
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <StartNewProject
+        canViewFullList
+        canViewAdvancedTools={projectsData.canViewAdvancedTools}
+      />
+    </Provider>,
+    document.getElementById('new-project-buttons')
   );
 
   const isPublic = window.location.pathname.startsWith('/projects/public');
@@ -61,11 +76,16 @@ function showGallery(gallery) {
   $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
 }
 
-// Make this method available to angularProjects.js. This can go away
+// Make these available to angularProjects.js. These can go away
 // once My Projects is moved to React.
+
 window.onShowConfirmPublishDialog = function (projectId, projectType) {
   getStore().dispatch(showPublishDialog(projectId, projectType));
 };
+
+window.PublishableProjectTypesUnder13 = PublishableProjectTypesUnder13;
+
+window.PublishableProjectTypesOver13 = PublishableProjectTypesOver13;
 
 function setupReduxSubscribers(store) {
   let state = {};
@@ -88,5 +108,13 @@ function setupReduxSubscribers(store) {
       const projectType = state.publishDialog.projectType;
       store.dispatch(prependProjects([projectData], projectType));
     }
+
+    if (
+      (lastState.projects && lastState.projects.selectedGallery) !==
+      (state.projects && state.projects.selectedGallery)
+    ) {
+      showGallery(state.projects.selectedGallery);
+    }
+
   });
 }

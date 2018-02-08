@@ -6,13 +6,13 @@ import { levelType, lessonType } from './progressTypes';
  * A component that shows progress in a course with more detail than the summary
  * view
  */
-const DetailProgressTable = React.createClass({
-  propTypes: {
+export default class DetailProgressTable extends React.Component {
+  static propTypes = {
     lessons: PropTypes.arrayOf(lessonType).isRequired,
     levelsByLesson: PropTypes.arrayOf(
       PropTypes.arrayOf(levelType)
     ).isRequired
-  },
+  };
 
   render() {
     const { lessons, levelsByLesson } = this.props;
@@ -32,6 +32,4 @@ const DetailProgressTable = React.createClass({
       </div>
     );
   }
-});
-
-export default DetailProgressTable;
+}

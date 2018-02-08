@@ -1,5 +1,9 @@
 import React, { PropTypes, Component } from 'react';
 
+// Exporting ages to use in react components that need to store state internally.
+export const ages = ['', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14',
+  '15', '16', '17', '18', '19', '20', '21+'];
+
 /**
  * A dropdown with the set of ages we use across our site (4-20, 21+)
  * NOTE: this is pretty similarly to a component in dashboard's
@@ -20,9 +24,6 @@ export default class AgeDropdown extends Component {
   }
 
   render() {
-    const ages = ['', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14',
-      '15', '16', '17', '18', '19', '20', '21+'];
-
     return (
       <select
         ref={element => this.root = element}

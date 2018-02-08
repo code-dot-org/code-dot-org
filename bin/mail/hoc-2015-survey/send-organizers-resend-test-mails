@@ -1,3 +1,0 @@
-#!/bin/sh
-
-./send-to-mailing-list 12-18-hoc-organizer-survey-resend hoc-2015-survey/test-params-organizers.csv

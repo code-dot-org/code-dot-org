@@ -5,14 +5,17 @@ import commonStyles from '../commonStyles';
 import color from '../util/color';
 import PaneHeader, {PaneButton, PaneSection} from '../templates/PaneHeader';
 import SettingsCog from '../lib/ui/SettingsCog';
+import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 
 export default class DesignModeHeaders extends React.Component {
   static propTypes = {
     handleVersionHistory: PropTypes.func.isRequired,
     onToggleToolbox: PropTypes.func.isRequired,
     isToolboxVisible: PropTypes.bool.isRequired,
+    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
+    showMakerToggle: PropTypes.bool.isRequired,
   };
 
   onToggleToolbox = () => this.props.onToggleToolbox();
@@ -91,7 +94,13 @@ export default class DesignModeHeaders extends React.Component {
 
     const hasFocus = !this.props.isRunning;
 
-    const settingsCog = <SettingsCog isRunning={this.props.isRunning} runModeIndicators/>;
+    const settingsCog = (
+      <SettingsCog
+        isRunning={this.props.isRunning}
+        showMakerToggle={this.props.showMakerToggle}
+        runModeIndicators
+      />
+    );
 
     return (
       <PaneHeader
@@ -129,6 +138,7 @@ export default class DesignModeHeaders extends React.Component {
           onClick={this.props.handleVersionHistory}
         />
         <PaneSection id="design-workspace-header" className="workspace-header">
+          {this.props.showProjectTemplateWorkspaceIcon && <ProjectTemplateWorkspaceIcon/>}
           <span>{applabMsg.designWorkspaceHeader()}</span>
         </PaneSection>
       </PaneHeader>

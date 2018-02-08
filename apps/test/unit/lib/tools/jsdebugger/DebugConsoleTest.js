@@ -173,7 +173,7 @@ describe('The DebugConsole component', () => {
       });
 
       it("the error gets appended to the output", () => {
-        expect(debugOutput().text()).to.contain("< Unknown identifier: a");
+        expect(debugOutput().text()).to.contain("< ReferenceError: a is not defined");
       });
 
     });
@@ -204,6 +204,27 @@ describe('The DebugConsole component', () => {
       selection = 'some selected text';
       debugOutput().simulate('mouseup', {target: debugOutput().get(0)});
       expect(inputEl.focus).not.to.have.been.called;
+    });
+  });
+
+  describe("debug output highlighting behavior", () => {
+
+    it("normal debug output will not change background color", () => {
+      getStore().dispatch(actions.appendLog('test normal text'));
+      expect(debugOutput().get(0).style.backgroundColor).to.equal('');
+    });
+
+    it("warning debug output will change background color to lightest yellow", () => {
+      getStore().dispatch(actions.appendLog('test normal text'));
+      getStore().dispatch(actions.appendLog('test warning text', 'WARNING'));
+      expect(debugOutput().get(0).style.backgroundColor).to.equal('rgb(255, 247, 223)');
+    });
+
+    it("error debug output will change background color to lightest red", () => {
+      getStore().dispatch(actions.appendLog('test normal text'));
+      getStore().dispatch(actions.appendLog('test warning text', 'WARNING'));
+      getStore().dispatch(actions.appendLog('test error text', 'ERROR'));
+      expect(debugOutput().get(0).style.backgroundColor).to.equal('rgb(255, 204, 204)');
     });
   });
 

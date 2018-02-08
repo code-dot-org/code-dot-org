@@ -8,8 +8,8 @@ import renderer from "../../util/StylelessRenderer";
 /**
  * Component for displaying our instructions in the context of a modal dialog
  */
-const DialogInstructions = React.createClass({
-  propTypes: {
+class DialogInstructions extends React.Component {
+  static propTypes = {
     // redux
     puzzleNumber: PropTypes.number.isRequired,
     stageTotal: PropTypes.number.isRequired,
@@ -19,7 +19,8 @@ const DialogInstructions = React.createClass({
     imgURL: PropTypes.string,
     imgOnly: PropTypes.bool,
     hintsOnly: PropTypes.bool,
-  },
+  };
+
   render() {
     const renderedMarkdown = this.props.longInstructions ?
       processMarkdown(this.props.longInstructions, { renderer }) : undefined;
@@ -39,8 +40,9 @@ const DialogInstructions = React.createClass({
       />
     );
   }
-});
+}
 
+export const UnconnectedDialogInstructions = DialogInstructions;
 export default connect(state => ({
   puzzleNumber: state.pageConstants.puzzleNumber,
   stageTotal: state.pageConstants.stageTotal,

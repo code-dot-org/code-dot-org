@@ -37,7 +37,6 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
-    "maze_data": null,
     "shape_shift": "false"
   },
   "published": true,

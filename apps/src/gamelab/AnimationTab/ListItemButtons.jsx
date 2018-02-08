@@ -46,7 +46,7 @@ const sliderStyle = {
 /**
  * The delete and duplicate controls beneath an animation or frame thumbnail.
  */
-export default Radium(class ListItemButtons extends React.Component {
+class ListItemButtons extends React.Component {
   static propTypes = {
     onCloneClick: PropTypes.func.isRequired,
     onDeleteClick: PropTypes.func.isRequired,
@@ -109,4 +109,6 @@ export default Radium(class ListItemButtons extends React.Component {
       </div>
     );
   }
-});
+}
+
+export default Radium(ListItemButtons);

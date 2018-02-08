@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_proclamation) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ### Níže je ukázka řešení podporující Týden informatiky a jeho cíle, které by mohly být využity státními a místními zákonodárci.

@@ -18,7 +18,7 @@
   %br
   %br
 
-
+- TABLE_ID = CDO.pledge_map_table_id.freeze
 :javascript
   var gmap;
   var resizeZoom;
@@ -53,8 +53,8 @@
 
     var layer = new google.maps.FusionTablesLayer({
       query: {
-        select: 'type',
-        from: '1G3wfhnX2LFkgkJfDA6iw0Pq3t-6pl9wjvqUdLY7B'
+        select: 'location',
+        from: "#{TABLE_ID}"
       },
       styles: [{
         where: "type CONTAINS 'pledged'",

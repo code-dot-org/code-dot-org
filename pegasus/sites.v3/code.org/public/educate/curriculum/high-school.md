@@ -100,6 +100,25 @@ While Code.org does not have an AP Computer Science A curriculum, we have recomm
 <br>
 <hr>
 
+<a name="AppLab"></a>
+
+# Computer science in other subjects
+
+Are you interested in a few lessons to demonstrate how computer science can be used in another subject area? Partners have created introductory tutorials as part of the Hour of Code. These provide an ideal way for a math, history, or other teacher to supplement their curriculum and let students explore the cross disciplinary aspects of computer science. Available for [science](https://hourofcode.com/learn?grade=9%2B&subject=science), [math](https://hourofcode.com/learn?grade=9%2B&subject=math), [social studies](https://hourofcode.com/learn?grade=9%2B&subject=history), [language arts](https://hourofcode.com/learn?grade=9%2B&subject=la), and [art/media/music](https://hourofcode.com/learn?grade=9%2B&subject=art) classes.
+
+<br>
+<hr>
+
+<a name="AppLab"></a>
+# App Lab and other resources
+
+In addition to our courses, we have tools and resources that you can blend into your own curriculum. Teachers can use [App Lab](/applab) in any course to teach students how to create apps and games in JavaScript. If you're ready to go further, [Game Lab](/gamelab) lets students make more complex animations and games including objects and characters that interact with each other. Our [widget library](/widgets) provides lessons and tools to teach text compression, encryption, pixles/RGB, and how the internet works. And, our [video library](/educate/resources/videos) helps illustrate computer science concepts for your class.
+
+[<button>App Lab</button>](/applab)
+
+<br>
+<hr>
+
 <a name="thirdparty"></a>
 
 [solid-block-header]
@@ -108,7 +127,7 @@ Recommended courses from 3rd parties
 
 [/solid-block-header]
 
-[](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
+<!--- If you update the resources here, don't forget to also update /educate/curriculum/3rdparty -->
 
 | Organization                             | Curriculum                               | Professional Development                 |
 | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |

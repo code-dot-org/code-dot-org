@@ -6,4 +6,4 @@
 
 require_relative 'i18n_script_utils'
 
-exec "crowdin --config #{CODEORG_CONFIG_FILE} --identity #{IDENTITY_FILE} download"
+exec "crowdin --config #{CODEORG_CONFIG_FILE} --identity #{CODEORG_IDENTITY_FILE} download"

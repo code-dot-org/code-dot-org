@@ -11,4 +11,3 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById('application-container')
   );
 });
-

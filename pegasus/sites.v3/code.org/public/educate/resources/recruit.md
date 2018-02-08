@@ -31,7 +31,7 @@ Hear from current students as they talk about the topics covered in each course 
 <%=view :display_video_thumbnail, id: "intro_csp", video_code: "jQm0z894CG0", play_button: 'center' %>
 
 [**YouTube**](http://www.youtube.com/watch?v=jQm0z894CG0) | 
-[**Download**](https://www.dropbox.com/s/4olrpah7c2jo3gf/CSP_Students_v4.mp4?dl=0)
+[**Download**](https://videos.code.org/cs-principles/what-is-cs-principles.mp4)
 
 [/col-50]
 
@@ -40,9 +40,10 @@ Hear from current students as they talk about the topics covered in each course 
 
 ### **Sign up for CS Discoveries**
 
-<%=view :display_video_thumbnail, id: "signup", video_code: "xgOYvG1WAbM", play_button: 'center' %>
+<%=view :display_video_thumbnail, id: "signup", video_code: "g4qfsH8bc8s", play_button: 'center' %>
 
-[**YouTube**](http://www.youtube.com/watch?v=xgOYvG1WAbM) | [**Download**](https://www.dropbox.com/s/pkj38135cqegu29/CS-high-school-pitch-GENERAL.mp4?dl=0) (new video coming soon)
+[**YouTube**](http://www.youtube.com/watch?v=g4qfsH8bc8s) |
+[**Download**](https://videos.code.org/cs-discoveries/what-is-cs-discoveries.mp4)
 
 [/col-50]
 
@@ -56,7 +57,7 @@ Hear from current students as they talk about the topics covered in each course 
 
 <%=view :display_video_thumbnail, id: "signup", video_code: "xgOYvG1WAbM", play_button: 'center' %>
 
-[**YouTube**](http://www.youtube.com/watch?v=xgOYvG1WAbM) | [**Download**](https://www.dropbox.com/s/pkj38135cqegu29/CS-high-school-pitch-GENERAL.mp4?dl=0) 
+[**YouTube**](http://www.youtube.com/watch?v=xgOYvG1WAbM)
 
 [/col-50]
 
@@ -67,7 +68,8 @@ Hear from current students as they talk about the topics covered in each course 
 
 <%=view :display_video_thumbnail, id: "cs_changing_everything", video_code: "QvyTEx1wyOY", play_button: 'center' %>
 
-[**YouTube**](https://www.youtube.com/watch?time_continue=1&v=QvyTEx1wyOY) 
+[**YouTube**](https://www.youtube.com/watch?time_continue=1&v=QvyTEx1wyOY) |
+[**Download**](https://videos.code.org/social/cs-is-everything.mp4)
 
 [/col-50]
 
@@ -106,7 +108,6 @@ Hang these posters in the halls along with the course number for your computer s
 [![image](/images/fit-150/malala.png)](/files/malala-poster.pdf)
 [![image](/images/fit-150/obama-new.png)](/files/obama-poster-new.pdf)
 [![image](/images/fit-150/sheryl-sandberg.png)](/files/sheryl-poster.pdf)
-[![image](/images/fit-150/marissa-mayer.png)](/files/marissa-mayer-poster.pdf)
 
 <a id="info"></a>
 
@@ -166,16 +167,6 @@ No matter what you want to do one day—whether it’s art, medicine, or history
 **[SCHOOL NAME]** is offering new computer science program next fall that will unlock an entirely new future for students. With this program, even the youngest learners will begin to learn the basics of how technology works. They’ll move away from just learning how to *use* technology, and instead start to *create* their own programs with the foundations of computer science. The program will introduce computer sciecne concepts to these youngsters, such as logic, problem-solving, and creativity. **Why is this important for even elementary school students?** Introducing computer science in elementary school allows students to enjoy the possibilities of creating with code before stereotypes set in. But that’s only the beginning of why every student should have the opportunity to learn computer science. [Watch this inspiring video](http://www.youtube.com/watch?v=nKIu9yen5nc) to learn more. 
 
 We can bring this to *even more* elementary school students through a local program in partnership with Code.org, a non-profit dedicated to giving every K-12 student in the US the opportunity to learn computer science. Ask your school or district to have [more elementary school teachers trained](https://code.org/professional-development-workshops) (absolutely free, and no experience necessary)! 
-
-### Include these images on your website, letter, or email:
-
-[![image](/images/newclass.jpg)](/images/classlogoB.jpg)
-[![image](/images/newclasswide.jpg)](/images/classlogoD.jpg)
-
-[![image](/images/classlogoC.jpg)](/images/classlogoC.jpg)
-[![image](/images/classlogoA.jpg)](/images/classlogoA.jpg)
-
-[Download graphics file](https://www.dropbox.com/s/38tledlbucf0tql/New%20Class%20Graphics.zip)
 
 
 <br />

@@ -20,6 +20,7 @@ const menuStyle = {
   boxShadow: "3px 3px 3px gray",
   marginTop: TAIL_HEIGHT,
   textAlign: 'left',
+  maxWidth: 200,
 };
 const tailBorderStyle = {
   position: 'absolute',
@@ -49,6 +50,7 @@ export default class PopUpMenu extends Component {
     className: PropTypes.string,
     isOpen: PropTypes.bool,
     beforeClose: PropTypes.func,
+    showTail: PropTypes.bool,
   };
 
   render() {
@@ -63,13 +65,14 @@ export default class PopUpMenu extends Component {
           targetPoint={this.props.targetPoint}
           className={this.props.className}
           children={this.props.children}
+          showTail={this.props.showTail}
         />
       </Portal>
     );
   }
 }
 
-export const MenuBubble = Radium(class extends Component {
+class MenuBubbleUnwrapped extends Component {
   static propTypes = {
     targetPoint: PropTypes.shape({
       top: PropTypes.number.isRequired,
@@ -77,6 +80,7 @@ export const MenuBubble = Radium(class extends Component {
     }).isRequired,
     children: PropTypes.any,
     className: PropTypes.string,
+    showTail: PropTypes.bool,
   };
 
   renderMenuItems() {
@@ -116,46 +120,95 @@ export const MenuBubble = Radium(class extends Component {
       <div style={style} className={className}>
         {this.renderMenuItems()}
         {/* These elements are used to draw the 'tail' with CSS */}
-        <span style={tailBorderStyle}/>
-        <span style={tailFillStyle}/>
+        {this.props.showTail &&
+          <span style={tailBorderStyle}/>
+        }
+        {this.props.showTail &&
+          <span style={tailFillStyle}/>
+        }
       </div>
     );
   }
-});
+}
+export const MenuBubble = Radium(MenuBubbleUnwrapped);
 
-PopUpMenu.Item = Radium(class extends Component {
+export class MenuBreak extends Component {
+
+  render() {
+    const style = {
+      borderTop: '1px solid ' + color.lighter_gray,
+      marginTop: STANDARD_PADDING/2,
+      marginBottom: STANDARD_PADDING/2,
+      marginLeft: STANDARD_PADDING,
+      marginRight: STANDARD_PADDING,
+    };
+    return (
+      <div style={style}></div>
+    );
+  }
+}
+
+class Item extends Component {
   static propTypes = {
-    children: PropTypes.string.isRequired,
+    children: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.array]).isRequired,
     onClick: PropTypes.func,
+    href: PropTypes.string,
     first: PropTypes.bool,
     last: PropTypes.bool,
-  };
-
-  static style = {
-    color: color.dark_charcoal,
-    paddingLeft: STANDARD_PADDING,
-    paddingRight: STANDARD_PADDING,
-    cursor: 'pointer',
-    ':hover': {
-      backgroundColor: color.lightest_gray,
-    }
+    color: PropTypes.string,
   };
 
   render() {
-    const {first, last, onClick, children} = this.props;
-    const style = {
-      ...PopUpMenu.Item.style,
-      paddingTop: first ? STANDARD_PADDING : STANDARD_PADDING / 2,
-      paddingBottom: last ? STANDARD_PADDING : STANDARD_PADDING / 2,
+    const {first, last, onClick, children, href} = this.props;
+    if (!href && !onClick) {
+      throw new Error('Expect at least one of href/onClick');
+    }
+
+    const paddingStyle = {
+      paddingTop: first ? STANDARD_PADDING : STANDARD_PADDING / 4,
+      paddingBottom: last ? STANDARD_PADDING : STANDARD_PADDING / 4,
+      paddingLeft: STANDARD_PADDING,
+      paddingRight: STANDARD_PADDING,
+      cursor: 'pointer',
+      ':hover': {
+        backgroundColor: color.lightest_gray,
+      }
+    };
+
+    // Style for anchors tags nested in divs
+    const areaStyle = {
+      display: 'block',
+    };
+
+    const textStyle = {
+      color: this.props.color? this.props.color : color.dark_charcoal,
+      textDecoration: 'none', // Remove underline from anchor tags
     };
     return (
-      <div
-        className="pop-up-menu-item"
-        style={style}
-        onClick={onClick}
-      >
-        {children}
+      <div style={paddingStyle}>
+        {this.props.href &&
+          <a
+            className="pop-up-menu-item"
+            href={href}
+            style={{...textStyle, ...areaStyle}}
+          >
+            {children}
+          </a>
+        }
+        {!this.props.href &&
+          <div
+            className="pop-up-menu-item"
+            style={textStyle}
+            onClick={onClick}
+          >
+            {children}
+          </div>
+        }
       </div>
     );
   }
-});
+}
+
+PopUpMenu.Item = Radium(Item);

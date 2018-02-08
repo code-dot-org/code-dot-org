@@ -13,8 +13,9 @@ import {
 import {
   SONG_CHARGE,
   CP_COMMAND,
-  J5_CONSTANTS
+  J5_CONSTANTS,
 } from './PlaygroundConstants';
+import Button from './Button';
 import Led from './Led';
 import {isNodeSerialAvailable} from './portScanning';
 
@@ -78,6 +79,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         resolve();
       });
       board.on('error', reject);
+      playground.on('error', reject);
     });
   }
 
@@ -125,6 +127,8 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       // For now, these are _always_ Leds.  Complain if they're not.
       if (component instanceof Led) {
         component.stop();
+      } else if (component instanceof five.Button) {
+        // No special cleanup required for five.Button
       } else {
         throw new Error('Added an unsupported component to dynamic components');
       }
@@ -243,6 +247,12 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     return newLed;
   }
 
+  createButton(pin) {
+    const newButton = new Button({board: this.fiveBoard_, pin});
+    this.dynamicComponents_.push(newButton);
+    return newButton;
+  }
+
   /**
    * @returns {boolean} whether a real board is currently connected or not.
    */
@@ -256,19 +266,20 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {SerialPort}
    */
   static openSerialPort(portName) {
-    // Code.org Browser case: Native Node SerialPort>=4 is available on window.
-    if (isNodeSerialAvailable()) {
-     return new SerialPort(portName, {
-       autoOpen: true,
-       bitrate: SERIAL_BAUD,
-     });
-    }
-
+    // A gotcha here: These two types of SerialPort provide similar, but not
+    // exactly equivalent, interfaces.  When making changes to construction
+    // here maker sure to test both paths:
+    //
+    // Code.org Browser case: Native Node SerialPort 6 is available on window.
+    //
     // Code.org connector app case: ChromeSerialPort bridges through the Chrome
-    // app, implements SerialPort<4 API.
-    return new ChromeSerialPort.SerialPort(portName, {
-      bitrate: SERIAL_BAUD
-    }, true);
+    // app, implements SerialPort 3's interface.
+    const SerialPortType = isNodeSerialAvailable() ?
+      SerialPort : ChromeSerialPort.SerialPort;
+
+    return new SerialPortType(portName, {
+      baudRate: SERIAL_BAUD
+    });
   }
 
   /**

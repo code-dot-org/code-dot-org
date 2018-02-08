@@ -104,25 +104,26 @@ const styles = {
   }
 };
 
-const TutorialDetail = React.createClass({
-  propTypes: {
+export default class TutorialDetail extends React.Component {
+  static propTypes = {
     showing: PropTypes.bool.isRequired,
     item: shapes.tutorial,
     closeClicked: PropTypes.func.isRequired,
     changeTutorial: PropTypes.func.isRequired,
     localeEnglish: PropTypes.bool.isRequired,
-    disabledTutorial: PropTypes.bool.isRequired
-  },
+    disabledTutorial: PropTypes.bool.isRequired,
+    grade: PropTypes.string.isRequired
+  };
 
   componentDidMount() {
     document.addEventListener('keydown', this.onKeyDown);
-  },
+  }
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.onKeyDown);
-  },
+  }
 
-  onKeyDown({keyCode}) {
+  onKeyDown = ({keyCode}) => {
     if (!this.props.showing) {
       return;
     }
@@ -134,11 +135,13 @@ const TutorialDetail = React.createClass({
     } else if (keyCode === 39) {
       this.props.changeTutorial(1);
     }
-  },
+  };
 
-  startTutorialClicked(shortCode) {
+  startTutorialClicked = () => {
+    const shortCode = this.props.item.short_code;
     ga('send', 'event', 'learn', 'start', shortCode);
-  },
+    ga('send', 'event', 'learn', `start-${this.props.grade}`, shortCode);
+  };
 
   render() {
     if (!this.props.showing) {
@@ -153,19 +156,18 @@ const TutorialDetail = React.createClass({
     const tableEntries = [
       // Reserve key 0 for the optional teachers notes.
       // Reserve key 1 for the optional short link.
-      {key: 2, title: i18n.filterTeacherExperience(), body: getTagString("teacher_experience", this.props.item.tags_teacher_experience)},
-      {key: 3, title: i18n.filterStudentExperience(), body: getTagString("student_experience", this.props.item.tags_student_experience)},
-      {key: 4, title: i18n.filterPlatform(),          body: this.props.item.string_platforms},
-      {key: 5, title: i18n.filterTopics(),            body: getTagString("subject", this.props.item.tags_subject)},
-      {key: 6, title: i18n.filterActivityType(),      body: getTagString("activity_type", this.props.item.tags_activity_type)},
-      {key: 7, title: i18n.filterLength(),            body: getTagString("length", this.props.item.tags_length)},
-      {key: 8, title: i18n.tutorialDetailInternationalLanguages(), body: this.props.item.language},
-      // Reserve key 9 for the optional standards.
+      {key: 2, title: i18n.filterStudentExperience(), body: getTagString("student_experience", this.props.item.tags_student_experience)},
+      {key: 3, title: i18n.filterPlatform(),          body: this.props.item.string_platforms},
+      {key: 4, title: i18n.filterTopics(),            body: getTagString("subject", this.props.item.tags_subject)},
+      {key: 5, title: i18n.filterActivityType(),      body: getTagString("activity_type", this.props.item.tags_activity_type)},
+      {key: 6, title: i18n.filterLength(),            body: getTagString("length", this.props.item.tags_length)},
+      {key: 7, title: i18n.tutorialDetailInternationalLanguages(), body: this.props.item.language},
+      // Reserve key 8 for the optional standards.
     ];
 
     const imageSrc = this.props.item.image.replace("/images/", "/images/fill-480x360/").replace(".png", ".jpg");
 
-    var imageComponent = (
+    const imageComponent = (
       <div style={styles.tutorialDetailImageOuterContainer} className="col-xs-12 col-sm-6">
         <div style={styles.tutorialDetailImageContainer}>
           <div style={styles.tutorialDetailImageBackground}/>
@@ -219,7 +221,7 @@ const TutorialDetail = React.createClass({
                   <a
                     href={this.props.item.url}
                     target="_blank"
-                    onClick={this.startTutorialClicked.bind(this, this.props.item.short_code)}
+                    onClick={this.startTutorialClicked}
                   >
                     {imageComponent}
                   </a>
@@ -253,9 +255,9 @@ const TutorialDetail = React.createClass({
                     <a
                       href={this.props.item.url}
                       target="_blank"
-                      onClick={this.startTutorialClicked.bind(this, this.props.item.short_code)}
+                      onClick={this.startTutorialClicked}
                     >
-                      <button style={{marginTop: 20}}>Start</button>
+                      <button style={{marginTop: 20}}>{i18n.startButton()}</button>
                     </a>
                   )}
                 </div>
@@ -269,7 +271,7 @@ const TutorialDetail = React.createClass({
                         </td>
                         <td style={styles.tutorialDetailsTableBody}>
                           <a href={this.props.item.teachers_notes} target="_blank">
-                            <i className="fa fa-external-link" aria-hidden={true}></i>
+                            <i className="fa fa-external-link" aria-hidden={true}/>
                             &nbsp;
                             {i18n.tutorialDetailsTeacherNotes()}
                           </a>
@@ -300,7 +302,7 @@ const TutorialDetail = React.createClass({
                       </tr>
                     )}
                     {this.props.localeEnglish && this.props.item.string_standards && (
-                      <tr key={9}>
+                      <tr key={8}>
                         <td style={styles.tutorialDetailsTableTitle}>
                           {i18n.tutorialDetailStandards()}
                         </td>
@@ -318,7 +320,4 @@ const TutorialDetail = React.createClass({
       </div>
     );
   }
-});
-
-export default TutorialDetail;
-
+}

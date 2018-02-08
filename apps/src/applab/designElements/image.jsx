@@ -8,7 +8,9 @@ import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import {ICON_PREFIX_REGEX} from '../constants';
+import EnumPropertyRow from './EnumPropertyRow';
 import * as elementUtils from './elementUtils';
+import {applabObjectFitImages} from '../applabObjectFitImages';
 
 class ImageProperties extends React.Component {
   static propTypes = {
@@ -76,6 +78,12 @@ class ImageProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'picture')}
         />
         {iconColorPicker}
+        <EnumPropertyRow
+          desc={'fit image'}
+          initialValue={element.style.objectFit || 'fill'}
+          options={['fill','cover','contain','none']}
+          handleChange={this.props.handleChange.bind(this, 'objectFit')}
+        />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
@@ -86,12 +94,6 @@ class ImageProperties extends React.Component {
           onDepthChange={this.props.onDepthChange}
         />
       </div>);
-
-    // TODO (brent):
-    // bold/italics/underline (p2)
-    // shape (p2)
-    // textAlignment (p2)
-    // enabled (p2)
   }
 }
 
@@ -139,6 +141,24 @@ class ImageEvents extends React.Component {
   }
 }
 
+function setObjectFitStyles(element, value, forceObjectFitNow) {
+  // NOTE: neither of these will be saved (we strip these out when we serialize
+  // and rely on our custom data-object-fit attribute during save/load)
+
+  // Set a style for modern browsers:
+  element.style.objectFit = value;
+
+  // Set a style that will be picked up by objectFitImages() for old browsers:
+  element.style.fontFamily = `'object-fit: ${value};'`;
+  if (forceObjectFitNow) {
+    //
+    // Enable polyfill for this element so we can use object-fit (it relies on
+    // the style in font-family and avoid scale-down & using it in media queries)
+    // See https://www.npmjs.com/package/object-fit-images for details.
+    //
+    applabObjectFitImages(element);
+  }
+}
 
 export default {
   PropertyTab: ImageProperties,
@@ -151,6 +171,11 @@ export default {
     element.setAttribute('src', '/blockly/media/1x1.gif');
     element.setAttribute('data-canonical-image-url', '');
 
+    // New elements are created with 'contain', but the default value for
+    // existing (unadorned) images is 'fill' for compatibility reasons
+    element.setAttribute('data-object-fit', 'contain');
+    setObjectFitStyles(element, 'contain', true);
+
     return element;
   },
   onDeserialize: function (element, updateProperty) {
@@ -160,6 +185,34 @@ export default {
     } else {
       element.setAttribute('src', '/blockly/media/1x1.gif');
       element.setAttribute('data-canonical-image-url', '');
+    }
+    const objectFitValue = element.getAttribute('data-object-fit');
+    if (objectFitValue) {
+      //
+      // NOTE: not passing forceObjectFitNow because IE will crash when it
+      // is called here and also within makeDraggable() - which is called while
+      // in parseScreenFromLevelHtml()
+      //
+      setObjectFitStyles(element, objectFitValue);
+    }
+  },
+  onPropertyChange: function (element, name, value) {
+    switch (name) {
+      case 'objectFit':
+        element.setAttribute('data-object-fit', value);
+        setObjectFitStyles(element, value, true);
+        break;
+      default:
+        return false;
+    }
+    return true;
+  },
+  readProperty: function (element, name) {
+    switch (name) {
+      case 'objectFit':
+        return element.getAttribute('data-object-fit');
+      default:
+        throw `unknown property name ${name}`;
     }
   }
 };

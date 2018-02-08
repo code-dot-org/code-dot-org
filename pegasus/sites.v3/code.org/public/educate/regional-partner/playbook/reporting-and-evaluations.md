@@ -11,16 +11,17 @@ nav: regional_partner_playbook_nav
 
 ### Table of Contents
 
-[Annual Report Requirements](#requirements)<br/>
-[Post Workshop Feedback Form](#form)<br/>
-[2016-2017 Data Collection Information](#data)
-[Regional Partner Roadmap](#roadmap)<br/>
+- [Annual Report Requirements](#requirements)<br/>
+- [Post Workshop Feedback Form](#form)<br/>
+- [2016-2017 Data Collection Information](#data)
+- [Regional Partner Roadmap](#roadmap)<br/>
 
 ________________
 <a id="requirements"></a>
 <br/>
 
-### **Annual Report Requirements**
+### **2017 Annual Report Requirements**
+
 Each Partner will produce an annual report that includes the following:<br/>
 
 
@@ -30,6 +31,8 @@ Each Partner will produce an annual report that includes the following:<br/>
 - Summary of survey data provided by Code.org through the Dashboard, and how that data influenced decision making.<br/>
 
 **Please ask your Regional Manager for a copy of the annual report template specific to your group.** It is important that you use this template to complete your report.
+
+(2018 Annual Report Requirements to come)
 
 
 [**Back to the top**](#top)

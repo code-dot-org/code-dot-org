@@ -1,3 +1,5 @@
+login_required true
+
 stage 'Digital Design'
 named_level 'Building a UI with Design Mode'
 level 'CSDU4 Design Mode Video'

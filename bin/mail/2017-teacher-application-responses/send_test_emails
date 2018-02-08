@@ -1,7 +1,0 @@
-#!/bin/sh
-
-../send-to-mailing-list --limit 2 2017_teacher_application_accept_partner ./test_accept_partner.csv
-../send-to-mailing-list --limit 2 2017_teacher_application_accept_teachercon ./test_accept_teachercon.csv
-../send-to-mailing-list --limit 4 2017_teacher_application_decline_csp ./test_decline_csp.csv
-../send-to-mailing-list --limit 4 2017_teacher_application_decline_csd ./test_decline_csd.csv
-../send-to-mailing-list --limit 2 2017_teacher_application_waitlist ./test_waitlist.csv

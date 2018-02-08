@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_press_release) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 # Примерно съобщение за пресата за избрани длъжностни лица
@@ -16,34 +13,34 @@ nav: promote_nav
   
 
 
-**
+** 
 
 <center>
-  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
+  Управител/СЕНАТОР/НАРОДЕН ПРЕДСТАВИТЕЛ/представител/кмет/[УЧАСТВАХА в Часът на кода с местните ученици]</strong><br /> Общността се обединява за да повиши осведомеността за значението на компютърните науки в образованието
 </center>
 
   
   
 </p> 
 
-**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
+**Дата** - [**Име**] се присъединява към директора и членовете на факултета на [**Въведете името на училището**], бизнес лидери и местни семейства днес за [**Име на събитието**] да участват в часът на кодирането като част от CSEW. [Име] и членове на Общността са сред десетките милиона хора по света, които са взели участие в най-голямото събитие в историята.
 
-[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
+[**Вмъкнете подробни данни за събитието, използвайте ОПИСАТЕЛЕН и КОЛИЧЕСТВЕН език. ЗА пример:**]  
+"Основно училище "Даниел Рън" проведе общоучилищен час на кодирането, за да запознае своите ученици с компютърните науки. Повече от 700 ученици от всички класове преминаха един час на кодирането. Родители и доброволци от Общността помогнаха през деня и се събраха с децата за комплекс от дейности за да покажат защо компютърните науки са важни в живота на тези ученици."
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
+[**Примерен текст за връзка:**]  
+компютрите са навсякъде, но в малко училища се изучават компютърни науки. Момичета и цветнокожи ученици са слабо представени. Добрата новина е, че ние сме на път да променим това. Часът на кодирането е врата към осигуряване всички ученици с достъп до висококачествено компютърно образование.
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! и Дисни. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+Над 100 милиона ученици по света вече са пробвали Един Час кодиране. Благодарение на Един Час кодиране, Компютърните Науки се появиха на началните страници на Google, MSN, Yahoo! и Дисни. Президентът Обама, Шакира и Аштън Къчър записаха видео за своя час на кодирането. Над 100 партньори се събраха в подкрепа на това движение.
 
-[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+[**Вмъкване на ЦИТАТ от ГОВОРИТЕЛ, пример по-долу:**]  
+"Ние трябва да насърчаваме и подпомагаме интереса на нашите ученици към компютърните науки," казва [**Име**]. "Всеки ученик заслужава шанса да учи компютърни науки, за да има достъп до най-добрите кариери на 21век."
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
+[**Въведете повече информация за Вашето събитие и/или Вашата организация**]
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
+[**Въведете ЦИТАТ от друга организация или някой, които ПРИСЪСТВА на събитието**]
 
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+За повече информация относно [**Събитието/програмата/и т. н.**] посетете [**Вмъкване адрес на сайт**] или [**Вмъкване на информация за контакт**]
 
   
   

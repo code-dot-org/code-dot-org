@@ -3,91 +3,92 @@ layout: none
 theme: none
 content-type: text/ng-template
 ---
+%link{:rel => 'stylesheet', :type => 'text/css', :href => '/shared/css/teacher-announcement.css'}
 
-%link(rel='stylesheet' type='text/css' href='/shared/css/teacher-announcement.css')
+#section-progress-react{'ng-init' => '$emit("section-progress-rendered");', 'ng-show' => 'react_progress'}
+#section-progress-angular{'ng-hide' => 'react_progress'}
+  %br/
 
-%br/
+  .loading{'ng-hide' => 'progressLoadedFirst'}
+    = I18n.t('dashboard_landing_loading')
 
-.loading{'ng-hide' => 'progressLoadedFirst'}
-  = I18n.t('dashboard_landing_loading')
+  %div{'ng-show' => 'progressLoadedFirst'}
+    = I18n.t('dashboard_progress_view')
+    %select{"ng-model" => "script_id", "ng-options"=>"script.id as script.name group by script.category for script in script_list | orderBy:['category_priority', 'category', 'position', 'name']", 'ng-change' => 'changeProgress(script_id)'}
 
-%div{'ng-show' => 'progressLoadedFirst'}
-  = I18n.t('dashboard_progress_view')
-  %select{"ng-model" => "script_id", "ng-options"=>"script.id as script.name group by script.category for script in script_list | orderBy:['category_priority', 'category', 'position', 'name']", 'ng-change' => 'changeProgress(script_id)'}
+  -# This is meant to alert users to progress being disabled for this script
+  %div{'ng-show' => 'progress_disabled'}
+    .teacher-announce
+      .announce-content{style: "min-height: 0px"}
+        = I18n.t('dashboard_announce_hoc_scaling_progress')
+        .announce-learn-more{style: "margin-top: 10px"}
+          %a{"ng-href" => "https://support.code.org/hc/en-us/articles/115002660852", target: '_blank'}
+            %button.primary
+              = I18n.t('dashboard_announce_learn_more_button')
 
--# This is meant to be similar to teacher-announcements.haml and can be removed after HOC
-%div{'ng-show' => 'progress_disabled'}
-  .teacher-announce
-    .announce-content{style: "min-height: 0px"}
-      = I18n.t('dashboard_announce_hoc_scaling_progress')
-      .announce-learn-more{style: "margin-top: 10px"}
-        %a{"ng-href" => "/saving-progress-{{is_hoc_course ? 'hoc' : 'csf'}}", target: '_blank'}
-          %button.primary
-            = I18n.t('dashboard_announce_learn_more_button')
+  %h3 {{progress.script.name}}
 
-%h3 {{progress.script.name}}
+  %br
 
-%br
+  .loading{'ng-show' => 'progressLoadedFirst && !progressLoaded'}
+    = I18n.t('dashboard_landing_loading')
 
-.loading{'ng-show' => 'progressLoadedFirst && !progressLoaded'}
-  = I18n.t('dashboard_landing_loading')
-
-.table-wrapper{'ng-show' => 'progressLoadedFirst'}
-  %table#progress{'ng-class' => "page.zoom ? 'zoomed-in' : 'zoomed-out'"}
-    %colgroup
-      %col{width: '200'}
-      %col{width: '{{progressWidth()}}'}
-    %tr.progressheader
-      %th.studentname
-        %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_students_name')
-        &nbsp;
-      %th.studentprogress
-        %div{style: 'position: absolute'}
-          %a{href: "", "ng-click" => "order = 'highest_level'"}= I18n.t('dashboard_students_progress')
-          %a.zoom-control{href: "", "ng-click" => "page.zoom = true", 'ng-hide' => 'page.zoom'}
-            %i.fa.fa-search-plus
-          %a.zoom-control{href: "", "ng-click" => "page.zoom = false", 'ng-show' => 'page.zoom'}
-            %i.fa.fa-search-minus
-        &nbsp;
-    %tr.progressheader
-      %td.studentname
-      %td
-        .stage{"ng-repeat" => "stage in progress.script.stages", 'ng-style' => "{width: (99.9 * stage.length / progress.script.levels_count) + '%'}", title: '{{stage.title}}', 'ng-click' => 'scrollToStage($event)'}
-          {{stage.title}}
-    %tr.studentrow{"ng-repeat" => "student in section.students | orderBy:order"}
-      %td.studentname
-        %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}/script/{{script_id}}", title: '{{student.name}}'} {{student.name}}
-      %td.studentprogress{'ng-hide' => 'progressLoaded'} &nbsp;
-      %td.studentprogress{'ng-show' => 'progressLoaded'}
-        .stage{"ng-repeat" => "stage in progress.script.stages", 'ng-style' => "{width: (99.9 * stage.length / progress.script.levels_count) + '%'}"}
+  .table-wrapper{'ng-show' => 'progressLoadedFirst'}
+    %table#progress{'ng-class' => "page.zoom ? 'zoomed-in' : 'zoomed-out'"}
+      %colgroup
+        %col{width: '200'}
+        %col{width: '{{progressWidth()}}'}
+      %tr.progressheader
+        %th.studentname
+          %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_students_name')
           &nbsp;
-        .studentbar
-          %a.level_link{'ng-repeat' => 'level in student.levels track by $index', title: '{{level.title}}', class: '{{level.class}}', 'ng-style' => "{width: page.zoom ? '34px' : (99.9 / progress.script.levels_count) + '%'}", 'ng-href' => "{{level.url}}"}
-            {{level.title}}
-        .studentdot{'ng-style' => "{left: (99.9 * (student.highest_level + 0.5) / progress.script.levels_count) + '%'}"}
-          .dot{class: '{{student.levels[student.highest_level].class}}'}
-            {{student.highest_level_in_stage}}
+        %th.studentprogress
+          %div{style: 'position: absolute'}
+            %a{href: "", "ng-click" => "order = 'highest_level'"}= I18n.t('dashboard_students_progress')
+            %a.zoom-control{href: "", "ng-click" => "page.zoom = true", 'ng-hide' => 'page.zoom'}
+              %i.fa.fa-search-plus
+            %a.zoom-control{href: "", "ng-click" => "page.zoom = false", 'ng-show' => 'page.zoom'}
+              %i.fa.fa-search-minus
+          &nbsp;
+      %tr.progressheader
+        %td.studentname
+        %td
+          .stage{"ng-repeat" => "stage in progress.script.stages", 'ng-style' => "{width: (99.9 * stage.length / progress.script.levels_count) + '%'}", title: '{{stage.title}}', 'ng-click' => 'scrollToStage($event)'}
+            {{stage.title}}
+      %tr.studentrow{"ng-repeat" => "student in section.students | orderBy:order"}
+        %td.studentname
+          %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}/script/{{script_id}}", title: '{{student.name}}'} {{student.name}}
+        %td.studentprogress{'ng-hide' => 'progressLoaded'} &nbsp;
+        %td.studentprogress{'ng-show' => 'progressLoaded'}
+          .stage{"ng-repeat" => "stage in progress.script.stages", 'ng-style' => "{width: (99.9 * stage.length / progress.script.levels_count) + '%'}"}
+            &nbsp;
+          .studentbar
+            %a.level_link{'ng-repeat' => 'level in student.levels track by $index', title: '{{level.title}}', class: '{{level.class}}', 'ng-style' => "{width: page.zoom ? '34px' : (99.9 / progress.script.levels_count) + '%'}", 'ng-href' => "{{level.url}}"}
+              {{level.title}}
+          .studentdot{'ng-style' => "{left: (99.9 * (student.highest_level + 0.5) / progress.script.levels_count) + '%'}"}
+            .dot{class: '{{student.levels[student.highest_level].class}}'}
+              {{student.highest_level_in_stage}}
 
-.clear
+  .clear
 
-.key{'ng-class' => "page.zoom ? 'zoomed-in' : 'zoomed-out'"}
-  .studentbar
-    %dl
-      %dt
-        %span.level_link.not_tried &nbsp;
-      %dd= I18n.t('dashboard_progress_not_started')
-      %dt
-        %span.level_link.attempted &nbsp;
-      %dd= I18n.t('dashboard_progress_in_progress')
-      %dt
-        %span.level_link.passed &nbsp;
-      %dd= I18n.t('dashboard_progress_completed_too_many_blocks')
-      %dt
-        %span.level_link.perfect &nbsp;
-      %dd= I18n.t('dashboard_progress_completed_perfect')
-      %dt
-        %span.level_link.submitted &nbsp;
-      %dd= I18n.t('dashboard_progress_submitted')
-      %dt.studentdot
-        .dot 10
-      %dd.studentdot= I18n.t('dashboard_progress_furthest_level_attempted')
+  .key{'ng-class' => "page.zoom ? 'zoomed-in' : 'zoomed-out'"}
+    .studentbar
+      %dl
+        %dt
+          %span.level_link.not_tried &nbsp;
+        %dd= I18n.t('dashboard_progress_not_started')
+        %dt
+          %span.level_link.attempted &nbsp;
+        %dd= I18n.t('dashboard_progress_in_progress')
+        %dt
+          %span.level_link.passed &nbsp;
+        %dd= I18n.t('dashboard_progress_completed_too_many_blocks')
+        %dt
+          %span.level_link.perfect &nbsp;
+        %dd= I18n.t('dashboard_progress_completed_perfect')
+        %dt
+          %span.level_link.submitted &nbsp;
+        %dd= I18n.t('dashboard_progress_submitted')
+        %dt.studentdot
+          .dot 10
+        %dd.studentdot= I18n.t('dashboard_progress_furthest_level_attempted')

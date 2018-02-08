@@ -4,11 +4,23 @@ theme: responsive
 video_player: true
 ---
 
-%link{href: "/css/jumbotron-banner.css", rel: "stylesheet"}
+%link{href: "/css/tools.css", rel: "stylesheet"}
 %link{href: "/shared/css/course-blocks.css", rel: "stylesheet"}
 %link{href: "/css/highlights.css", rel: "stylesheet"}
 
-= view :jumbotron_banner, img: CDO.code_org_url("/images/app-lab/girl-cropped.jpg"), title: "Game Lab", desc: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other. Design an animation or game, code with blocks or JavaScript to make it work, then share your app in seconds.", specs: "Ages 13+, all modern browsers, English only", url: CDO.studio_url('/p/gamelab'), cta: "Make an animation or game", photo_cred: "Photo courtesy of Fundación Sadosky", nav_bar: [{text: 'Resources', url: '#resources'}, {text: 'Sample Projects', url: '#challenges'}, {text: 'Video Library', url: '#videos'}]
+.tools-banner
+  .tools-img-box
+    %img.tools-img.tools-img-gamelab{src: CDO.code_org_url("/shared/images/courses/logo_gamelab_square.png")}
+  .tools-info.green{style: "max-width: 748px;"}
+    .tools-title-bar.green
+      %h1.tools-title Game Lab
+    .tools-description
+      %p Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other. Design an animation or game, code with blocks or JavaScript to make it work, then share your app in seconds.
+      .tools-details Ages 13+, all modern browsers, English only
+      %a{href: CDO.studio_url("/projects/gamelab/new")}
+        %button Make an animation or game
+
+.clear
 
 #resources.responsive-body
   %h1 Resources
@@ -28,9 +40,8 @@ video_player: true
     = view :highlight_item, item: {image: "game-lab/example-sunset", title: "Sunset shapes", desc: "Watch the sun set. Challenge: Make the sky go dark once the sun has set.", cta: cta, url: 'https://studio.code.org/projects/gamelab/Z9QRSmJBfNY25T3ViLp0MTy4uAuXNNXpZrmhPsUdEro/remix'}
     = view :highlight_item, item: {image: "game-lab/example-trees", title: "Make your own character", desc: "Use your arrow keys to move the character around. Challenge: add more to the scene and make the character look like you.", cta: cta, url: 'https://studio.code.org/projects/gamelab/XVEFITms8-c7_F-ND-FKL8w3A-oEpFD_GKAJCB2VPCQ/remix'}
     = view :highlight_item, item: {image: "game-lab/example-bounce", title: "Bounce", desc: "Move the platform to avoid the ball hitting the bottom. Challenge: Add different obstacles and points.", cta: cta, url: 'https://studio.code.org/projects/gamelab/J2R-PHcvE4Wgb2xO2bjk0Q/remix'}
+    = view :highlight_item, item: {image: "app-lab/gallery", title: "Project gallery", desc: "Check out projects other students have made and use them as insiration for your own projet.", cta: "View project gallery", url: 'https://studio.code.org/projects/public'}
   .clear
-  %a{:href=>CDO.studio_url("/projects/public")}
-    %button.default View project gallery
 
 #videos
   %h1.responsive-body Video library

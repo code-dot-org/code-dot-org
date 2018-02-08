@@ -1,5 +1,6 @@
 @import "color";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/mixins/buttons";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "mixins";
 
 @mixin buttons() {
@@ -74,6 +75,22 @@
   form.form-inline {
     display: inline-block;
     padding: 0 2px;
+  }
+
+  // React-Select does not provide a way to override the .Select-control class for the underlying input.
+  // For consistent UI, apply the same error highlighting to .Select-control that Bootstrap uses for .form-control
+  // See https://github.com/twbs/bootstrap-sass/blob/51486a8bd836d32b9f413e911ed83b433ef4ad39/assets/stylesheets/bootstrap/_forms.scss#L432-L434
+  // and https://github.com/twbs/bootstrap-sass/blob/51486a8bd836d32b9f413e911ed83b433ef4ad39/assets/stylesheets/bootstrap/mixins/_forms.scss#L20-L29
+  .has-error {
+    .Select-control {
+      border-color: $state-danger-text;
+      @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075)); // Redeclare so transitions work
+      &:focus {
+        border-color: darken($state-danger-text, 10%);
+        $shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten($state-danger-text, 20%);
+        @include box-shadow($shadow);
+      }
+    }
   }
 }
 

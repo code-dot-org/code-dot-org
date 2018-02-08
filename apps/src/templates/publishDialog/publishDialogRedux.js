@@ -1,7 +1,5 @@
 import { channels as channelsApi } from '../../clientApi';
-
-// Only these project types can be published.
-export const PUBLISHED_PROJECT_TYPES = ['applab', 'gamelab', 'playlab', 'artist'];
+import { PublishableProjectTypesOver13 } from '../../util/sharedConstants';
 
 // Action types
 
@@ -82,7 +80,10 @@ export function hidePublishDialog() {
  */
 export function publishProject(projectId, projectType) {
   return dispatch => {
-    if (!PUBLISHED_PROJECT_TYPES.includes(projectType)) {
+    // Don't enforce restrictions here on which project types young students can
+    // publish. Instead, restrict when to show the publish button in the UI, and
+    // enforce age restrictions on the "publish" REST endpoint.
+    if (!PublishableProjectTypesOver13.includes(projectType)) {
       return Promise.reject(`Cannot publish project of type ${projectType}.`);
     }
     dispatch({type: PUBLISH_REQUEST});
@@ -97,6 +98,7 @@ export function publishProject(projectId, projectType) {
             lastPublishedAt: data.publishedAt,
             lastPublishedProjectData: data,
           });
+          resolve();
         },
         err => {
           dispatch({type: PUBLISH_FAILURE});

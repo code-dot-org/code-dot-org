@@ -1,5 +1,0 @@
-email,name,international,domestic,no_posters
-andrew+us@code.org,Andrew US,false,true,false
-andrew+international@code.org,Andrew International,true,false,false
-andrew+us_noposter@code.org,Andrew US,false,true,true
-andrew+international_noposter@code.org,Andrew International,true,false,true

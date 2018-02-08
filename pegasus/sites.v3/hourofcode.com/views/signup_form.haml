@@ -6,9 +6,8 @@
 #signupform
   %h2#signup-header= hoc_s(:signup_header).gsub(/%{campaign_date}/, campaign_date("full"))
   %h2#census-header{style: "display: none;"}= hoc_s(:census_header)
+  #error_message
   %form{:id=>"hoc-signup-form", role: "form", onsubmit: "event.preventDefault();"}
-    #error_message
-
     .main-form
       .form-group
         %label.control-label{for: "hoc-name"}
@@ -27,12 +26,14 @@
           %input#hoc-email.form-control{name: "email_s", placeholder: hoc_s(:signup_email_placeholder), type: "text"}
         #email-error.error-message{style: "display:none;"}
           = hoc_s(:signup_email_error)
+        #email-invalid-error.error-message{style: "display:none;"}
+          = hoc_s(:signup_invalid_email_error)
 
       .form-group
         %label.control-label{for: "hoc-event-country"}
           = hoc_s(:signup_event_country_label)
           %span.required*
-        %select#country.form-control{name: "hoc_country_s", type: "select"}
+        %select#country.form-control{name: "hoc_event_country_s", type: "select"}
           %option{value: "", selected: true, disabled: true}
           - get_all_countries().each do |code, name|
             %option{value: code}= name
@@ -105,9 +106,10 @@
             %input#hoc-match-volunteer-flag{name: "match_volunteer_flag_b", type: "checkbox", value: "1"}/
             = hoc_s(:signup_match_volunteer)
 
-    #submit
       %input{name:'hoc_country_s', type:'hidden', value:@country}
       %input{name:'hoc_company_s', type:'hidden', value:@company}
+
+    #submit
       %p.footnote
         = hoc_s(:signup_multiple_event_warning)
         %strong= hoc_s(:signup_registration_deadline)
@@ -122,6 +124,13 @@
 
   %form{:id=>"census-form", role: "form", onsubmit: "event.preventDefault();", style: "display: none;"}
     .main-census-form
+      %input{id:'school_year', name:'school_year', type:'hidden', value:'2017'}
+      %input{id:'census_email', name:'submitter_email_address', type:'hidden', value:''}
+      %input{id:'census_name', name:'submitter_name', type:'hidden', value:''}
+      %input{id:'census_school_id', name:'nces_school_s', type:'hidden', value:''}
+      %input{id:'census_country', name:'country_s', type:'hidden', value:''}
+      %input{id:'census_school_name', name:'school_name_s', type:'hidden', value:''}
+      %input{id:'census_location', name:'school_location', type:'hidden', value:''}
       #census-questions
         =view :census_questions
         #submit-census

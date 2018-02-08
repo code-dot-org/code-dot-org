@@ -1,0 +1,35 @@
+name 'courseF_firstFunctions_map'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+
+## Today you’re going to learn how to use and create: **functions**
+
+Creating a function lets you make your own blocks! There are two parts to a function: 
+
+* Making a newly named block that has all of the code you want to run inside of it.  
+ <xml>
+ <block type="procedures_defnoreturn" editable="false">
+    <mutation/>
+    <title name="NAME">get only nectar</title>
+    <statement name="STACK">
+      <block type="bee_ifFlower">
+        <title name="LOC">atFlower</title>
+        <statement name="DO">
+          <block type="maze_nectar" deletable="false"/>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  </xml>
+
+* The single green block itself that you use, or call, to run the function you created.  
+<xml>  
+<block type="when_run" deletable="false" movable="false"/>
+  <block type="procedures_callnoreturn" id="callMe">
+    <mutation name="get only nectar"/>
+  </block>
+  </xml>
+
+Prepare to get familiar with functions, learn how to edit them, and create your own!
+MARKDOWN

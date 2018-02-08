@@ -15,11 +15,12 @@ end
 def rename_downloads_from_crowdin_code_to_locale
   puts "Updating crowdin codes to our locale codes..."
   Languages.get_hoc_languages.each do |prop|
-    # rename downloaded folders from language to locale
-    if File.directory?("i18n/locales/#{prop[:crowdin_name_s]}/")
-      FileUtils.cp_r "i18n/locales/#{prop[:crowdin_name_s]}/.", "i18n/locales/#{prop[:locale_s]}"
-      FileUtils.rm_r "i18n/locales/#{prop[:crowdin_name_s]}"
-    end
+    # move downloaded folders to root source directory and rename from language
+    # to locale
+    next unless File.directory?("i18n/locales/source/hourofcode/#{prop[:crowdin_name_s]}/")
+
+    FileUtils.cp_r "i18n/locales/source/hourofcode/#{prop[:crowdin_name_s]}/.", "i18n/locales/#{prop[:locale_s]}"
+    FileUtils.rm_r "i18n/locales/source/hourofcode/#{prop[:crowdin_name_s]}"
 
     # rename yml file from en.yml to code
     old_path = "i18n/locales/#{prop[:locale_s]}/hourofcode/en.yml"
@@ -27,7 +28,7 @@ def rename_downloads_from_crowdin_code_to_locale
 
     File.rename(old_path, new_path)
     file = "i18n/locales/#{prop[:locale_s]}/hourofcode/#{prop[:unique_language_s]}.yml"
-    File.write(file, File.read(file).gsub(/#{prop[:crowdin_code_s]}:/, "#{prop[:unique_language_s]}:"))
+    File.write(file, File.read(file).gsub(/'#{prop[:crowdin_code_s]}':/, "#{prop[:unique_language_s]}:"))
     puts "Renaming #{prop[:locale_s]}.yml to #{prop[:unique_language_s]}.yml"
   end
 end
@@ -89,7 +90,7 @@ def clean_crowdin_markdown_errors
   # fix social media buttons in promote/index
   Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/promote/index.md").each do |file|
     puts file
-    string_replacement = '#{request.host}'
+    string_replacement = '#{request.host}'  # rubocop:disable Lint/InterpolationCheck
     social_media_buttons = "<%
     facebook = {:u=>\"http://#{string_replacement}/us\"}\n
     twitter = {:url=>\"http://hourofcode.com\", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
@@ -100,7 +101,7 @@ def clean_crowdin_markdown_errors
   # fix social media buttons in public/thanks
   Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each do |file|
     puts file
-    string_replacement = '#{request.host}'
+    string_replacement = '#{request.host}'  # rubocop:disable Lint/InterpolationCheck
     social_media_buttons = "<%
     facebook = {:u=>\"http://#{string_replacement}/us\"}\n
     twitter = {:url=>\"http://hourofcode.com\", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}

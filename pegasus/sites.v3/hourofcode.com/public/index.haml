@@ -2,33 +2,24 @@
 layout: wide_index
 title: "<%= hoc_s(:front_title).gsub(/%{campaign_date}/, campaign_date('full-year')) %>"
 social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "<%= 'https://' + request.host + '/images/social-media/athletes-thumbnail.jpg' %>"
-  "og:image:width": '1920'
-  "og:image:height": '1080'
-  "og:video:url": "<%= 'http://youtube.com/v/ip051U7Rvds' %>"
-  "og:video:secure_url": "<%= 'https://youtube.com/v/ip051U7Rvds' %>"
-  "og:video:type": "video/mp4"
-  "og:video:width": "640"
-  "og:video:height": "360"
-  "twitter:card": "player"
   "twitter:site": "@codeorg"
   "twitter:url": "https://hourofcode.com"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "<%= 'https://' + request.host + '/images/social-media/athletes-thumbnail.jpg' %>"
-  "twitter:player": "<%= 'https://youtube.com/embed/ip051U7Rvds' %>"
-  "twitter:player:width": "640"
-  "twitter:player:height": "360"
 ---
-%script{src: "https://cdn.optimizely.com/js/400912536.js"}
 %link{href: "/css/highlights-homepage.css", rel: "stylesheet", id: "highlight-styles"}
 
 -facebook = {:u=>"http://#{request.host}/us"}
--hoc_mode = DCDO.get("hoc_mode", false)
 
--HIGHLIGHTS_CONSTANTS = [{:id=>45, :heading_s=>hoc_s(:highlights_constant_alba_heading), :short_heading_s=>hoc_s(:highlights_constant_alba_short_heading), :image_url_s=>"jessica.jpg", :link_text_s=>hoc_s(:highlights_facebook), :url_s=>"https://www.facebook.com/Code.org/photos/pb.309754825787494.-2207520000.1453330310./795469473882691/"}, {:id=>16, :heading_s=>hoc_s(:highlights_constant_obama_heading), :short_heading_s=>hoc_s(:highlights_constant_obama_short_heading), :image_url_s=>"obama-fistbump.jpg", :link_text_s=>hoc_s(:highlights_watchvideo), :url_s=>"https://youtu.be/AI_dayIQWV4"}, {:id=>13, :heading_s=>hoc_s(:highlights_constant_malala_heading), :short_heading_s=>hoc_s(:highlights_constant_malala_short_heading), :image_url_s=>"video-malala.png", :link_text_s=>hoc_s(:highlights_watchvideo), :url_s=>"https://youtu.be/cFdncBMDtP8"}, {:id=>64, :heading_s=>hoc_s(:highlights_constant_trudeau_heading), :short_heading_s=>hoc_s(:highlights_constant_trudeau_short_heading), :image_url_s=>"hoc-trudeau.jpg", :link_text_s=>hoc_s(:highlights_watchvideo), :url_s=>"https://www.youtube.com/watch?v=8QwT58VTj_g"}, {:id=>63, :heading_s=>hoc_s(:highlights_constant_ny_heading), :short_heading_s=>hoc_s(:highlights_constant_ny_short_heading), :image_url_s=>"chicago-2.png", :link_text_s=>hoc_s(:highlights_readmore), :url_s=>"http://www.brooklynpaper.com/stories/39/5/dtg-hour-of-code-challenge-2016-01-29-bk.html"}, {:id=>65, :heading_s=>hoc_s(:highlights_constant_athletes_heading), :short_heading_s=>hoc_s(:highlights_constant_athletes_short_heading), :image_url_s=>"athletes.png", :link_text_s=>hoc_s(:highlights_watchvideo), :url_s=>"https://code.org/athletes"}]
+-# We set the DCDO default to CDO.default_hoc_mode here because we can't change the DCDO flag on the test machine, but
+-# ui tests rely on hourofcode.com being in a hoc_mode consistent with production. This default needs to be updated
+-# whenever we change the hoc_mode, to make sure we're still testing what we'll see on production.
+-hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
+
+:ruby
+  HIGHLIGHTS_CONSTANTS = [
+    {:id=>64, :heading_s=>hoc_s(:highlights_constant_trudeau_heading), :short_heading_s=>hoc_s(:highlights_constant_trudeau_short_heading), :image_url_s=>"hoc-trudeau.jpg", :link_text_s=>hoc_s(:highlights_watchvideo), :url_s=>"https://www.youtube.com/watch?v=8QwT58VTj_g"},
+    {:id=>63, :heading_s=>hoc_s(:highlights_constant_ny_heading), :short_heading_s=>hoc_s(:highlights_constant_ny_short_heading), :image_url_s=>"chicago-2.png", :link_text_s=>hoc_s(:highlights_readmore), :url_s=>"http://www.brooklynpaper.com/stories/39/5/dtg-hour-of-code-challenge-2016-01-29-bk.html"},
+    {:id=>65, :heading_s=>hoc_s(:highlights_constant_athletes_heading), :short_heading_s=>hoc_s(:highlights_constant_athletes_short_heading), :image_url_s=>"athletes.png", :link_text_s=>hoc_s(:highlights_watchvideo), :url_s=>"https://code.org/athletes"}
+  ]
 
 -twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
 -twitter[:hashtags] = 'HourOfCode' unless hoc_s(:front_header_banner).include? '#HourOfCode'
@@ -37,7 +28,7 @@ social:
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: asset_path("js/#{js_locale}/common_locale.js")}
-%script{type: "text/javascript", src: asset_path('js/hourofcode.com/public/index.js')}
+%script{type: "text/javascript", src: minifiable_asset_path('js/hourofcode.com/public/index.js')}
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/front-page.css"}
 
@@ -46,6 +37,16 @@ social:
     height: 100%;
     margin: 0px;
     padding: 0px;
+  }
+  .hero-image {
+    z-index: -5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
   }
 
 - imageheight = 590
@@ -60,17 +61,15 @@ social:
   - slide1 = @country == 'ca' ? '/images/fit-1500/homepage_1_canada.jpg' : localized_image('/images/fit-1500/homepage_1.jpg')
   - slide3 = @country == 'ca' ? '/images/fit-1500/homepage_3_canada.jpg' : localized_image('/images/fit-1500/homepage_3.jpg')
 
-  #fullwidth0{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/fit-1500/homepage_0.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 1; background-position: 25% 22%"}
+  #fullwidth0.hero-image{style: "background-image: url(#{localized_image('/images/fit-1500/homepage_4.jpg')}); opacity: 1; background-position: 50% 10%;"}
 
-  #fullwidth1{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/fit-1500/homepage_trudeau.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 50% 50%"}
+  #fullwidth1.hero-image{style: "background-image: url(#{localized_image('/images/fit-1500/homepage_trudeau.jpg')}); background-position: 50% 50%"}
 
-  #fullwidth2{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{slide1}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 50% 50%"}
+  #fullwidth2.hero-image{style: "background-image: url(#{slide1}); background-position: 50% 50%"}
 
-  #fullwidth3{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/fit-1500/homepage_2.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 50% 50%"}
+  #fullwidth3.hero-image{style: "background-image: url(#{localized_image('/images/fit-1500/homepage_2.jpg')}); background-position: 50% 50%"}
 
-  #fullwidth4{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{slide3}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 50% 20%"}
-
-  #fullwidth5{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/fit-1500/homepage_4.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 50% 10%;"}
+  #fullwidth4.hero-image{style: "background-image: url(#{slide3}); background-position: 50% 20%"}
 
   #fullwidth{style: "width: 100%;"}
 
@@ -139,42 +138,15 @@ social:
           %img{src: '/images/fit-1000/map.jpg', style: 'width: 100%;'}
         .footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))
 
-  -# Highlights
-  %br/
+  -# Signup and Highlights
 
-  .row
-    .col-xs-6.col-sm-4
-      %img{src: localized_image("/images/fill-600x400/highlight-girl-hawaii.jpg"), style: "width: 100%;"}
-
-    .col-xs-6.col-sm-4
-      %img{src: localized_image("/images/fill-600x400/highlight-robot.jpg"), style: "width: 100%;"}
-
-    .hidden-xs.col-sm-4
-      %img{src: localized_image("/images/fill-600x400/highlight-girl-purple.jpg"), style: "width: 100%;"}
-
-  .gap{style: "height:30px"}
-
-  .row
-    .col-xs-6.col-sm-4
-      .hidden-xs
-        %img{src: localized_image("/images/fill-600x400/highlight-india.jpg"), style: "width: 100%; padding-bottom:30px"}
-      %img{src: localized_image("/images/fill-600x400/highlight-celebrate.jpg"), style: "width: 100%;"}
-
-    .col-xs-6.col-sm-8
-      %img{src: localized_image("/images/fill-800x543/highlight-nba.jpg"), style: "width: 100%;"}
-
-  .gap{style: "height:30px"}
-
-  .row
-    .col-xs-6.col-sm-4
-      %img{src: localized_image("/images/fill-600x400/highlight-stickers.jpg"), style: "width: 100%;"}
-
-    .hidden-xs.col-sm-4
-      %img{src: localized_image("/images/fill-600x400/highlight-girl-star-wars.jpg"), style: "width: 100%;"}
-
-    .col-xs-6.col-sm-4
-      %img{src: localized_image("/images/fill-600x400/highlight-kids-certificates.jpg"), style: "width: 100%;"}
-
+  -# Show sign up form above highlights when we're trying to increase sign ups. Otherwise, feature highlights first which is more engaging and evergreen.
+  -if ["pre-hoc", "soon-hoc"].include?(hoc_mode)
+    = view :home_signup, hoc_mode: hoc_mode
+    = view :home_highlights
+  -else
+    = view :home_highlights
+    = view :home_signup, hoc_mode: hoc_mode
 
   -# Stats
 
@@ -190,41 +162,19 @@ social:
 
     .col-xs-6.col-sm-4{style: "text-align:center"}
       %p=hoc_s(:stats_global)
-      %img{src: "/images/fit-300/stats-map.jpg", style: "width: 100%;"}
+      -if @language == "en"
+        %img{src: "/images/fit-300/stats-400m.jpg", style: "width: 100%;"}
+      -else
+        %img{src: "/images/fit-300/stats-map.jpg", style: "width: 100%;"}
 
     .hidden-xs.col-sm-4{style: "text-align:center"}
-      %p=hoc_s(:stats_girls_more)
-      %img{src: "/images/fit-300/stats-info3.jpg", style: "width: 100%;"}
-        %p{style:"color: #ea7717;"}=hoc_s(:stats_girls_million)
-
-
-  -# Signup
-
-  %a#hocsignupform{name: 'signup'}
-  #join
-    %h1#join-us-header=hoc_s(:front_join_us_button)
-    %h1#thanks-header{style: "display:none;"}=hoc_s(:census_thanks)
-    %div
-      .row
-        -# During Hour of Code season, show signup form and announcements.
-        -# When it's not Hour of Code, hide signup form and show announcements and highlights.
-        -if ["pre-hoc", "soon-hoc", "actual-hoc"].include?(hoc_mode)
-          .col-md-6
-            =view :signup_form
-          .col-md-5
-            =view :announcements
-          .col-md-1
-        -else
-          .col-md-5
-            =view :announcements
-          .col-md-1
-          .col-md-6.highlights-column
-            %h2.join-us-header=hoc_s(:highlights_title)
-            - HIGHLIGHTS_CONSTANTS.reverse_each do |item|
-              = view :highlight_item, item: item
-            .clear
-            %a{href: "/highlights"}
-              %button=hoc_s(:higlights_see_more)
+      -if @language == "en"
+        %p=hoc_s(:stats_females)
+        %img{src: "/images/fit-300/stats-females.jpg", style: "width: 100%;"}
+        %p=hoc_s(:stats_females_more)
+      -else
+        %p=hoc_s(:stats_girls_more)
+        %img{src: "/images/fit-300/stats-info3.jpg", style: "width: 100%;"}
 
   -# FAQ
 
@@ -260,7 +210,7 @@ social:
     if (videoStarted)
       return;
 
-    $("<iframe allowfullscreen frameborder='0' src='https://www.youtube.com/embed/ip051U7Rvds?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
+    $("<iframe allowfullscreen frameborder='0' src='https://www.youtube.com/embed/KsOIlDT145A?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
 
     $("#videodiv").fadeTo(1000, 1);
     $("#leftbutton").fadeTo(500, 0).remove();

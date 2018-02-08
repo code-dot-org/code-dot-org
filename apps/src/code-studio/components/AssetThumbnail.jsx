@@ -38,18 +38,22 @@ export const styles = {
   },
 };
 
-const AssetThumbnail = Radium(class extends React.Component {
+class AssetThumbnail extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     type: PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
     style: PropTypes.object,
     iconStyle: PropTypes.object,
     useFilesApi: PropTypes.bool,
+    projectId: PropTypes.string
   };
 
   render() {
     const {type, name} = this.props;
     let api = this.props.useFilesApi ? filesApi : assetsApi;
+    if (this.props.projectId) {
+      api = api.withProjectId(this.props.projectId);
+    }
 
     return (
       <div className="assetThumbnail" style={[styles.wrapper, this.props.style]}>
@@ -63,5 +67,6 @@ const AssetThumbnail = Radium(class extends React.Component {
       </div>
     );
   }
-});
-export default AssetThumbnail;
+}
+
+export default Radium(AssetThumbnail);

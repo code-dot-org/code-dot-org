@@ -119,7 +119,7 @@ class AssetsTest < FilesApiTestBase
     assert_equal 20, asset_bucket.get_abuse_score(@channel_id, second_asset)
 
     # reset_abuse can decrement
-    FilesApi.any_instance.stubs(:has_permission?).with('reset_abuse').returns(true)
+    FilesApi.any_instance.stubs(:has_permission?).with('project_validator').returns(true)
     @api.patch_abuse(0)
     assert successful?
     assert_equal 0, asset_bucket.get_abuse_score(@channel_id, first_asset)

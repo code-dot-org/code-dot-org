@@ -47,12 +47,8 @@ const styles = {
 class GallerySwitcher extends Component {
   static propTypes = {
     selectedGallery: PropTypes.string.isRequired,
-
-    // showGallery hides and shows dom elements in angular and selectGallery updates redux
-    // Once the projects page is in react, we should not need both of these functions
-    showGallery: PropTypes.func.isRequired,
     selectGallery: PropTypes.func.isRequired
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -62,12 +58,10 @@ class GallerySwitcher extends Component {
   }
 
   toggleToGallery() {
-    this.props.showGallery(Galleries.PUBLIC);
     this.props.selectGallery(Galleries.PUBLIC);
   }
 
   toggleToMyProjects() {
-    this.props.showGallery(Galleries.PRIVATE);
     this.props.selectGallery(Galleries.PRIVATE);
   }
 
@@ -102,7 +96,7 @@ class GallerySwitcher extends Component {
 export default connect(state => ({
   selectedGallery: state.projects.selectedGallery
 }), dispatch => ({
-  selectGallery(gallery){
+  selectGallery(gallery) {
     dispatch(selectGallery(gallery));
   }
 }))(Radium(GallerySwitcher));

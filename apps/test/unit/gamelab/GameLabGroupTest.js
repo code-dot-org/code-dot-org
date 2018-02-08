@@ -2,9 +2,14 @@
 import {spy} from 'sinon';
 import {expect} from '../../util/configuredChai';
 import {createStatefulGameLabP5} from '../../util/gamelab/TestableGameLabP5';
+import {sandboxDocumentBody} from "../../util/testUtils";
 
 describe('GameLabGroup', function () {
   let gameLabP5, createSprite, createGroup;
+
+  // Using the aggressive sandbox here because the P5 library generates
+  // a default canvas when it's not attached to an existing one.
+  sandboxDocumentBody();
 
   beforeEach(function () {
     gameLabP5 = createStatefulGameLabP5();
@@ -37,9 +42,9 @@ describe('GameLabGroup', function () {
   describe('collision methods', function () {
     // Note: collision methods will need to be called multiple times with groups to simulate
     // what happens in GameLab. When the function is called once (but has multiple sprites
-    // in the group), it will not return a value. It's only when state.doneExec is true (so when
+    // in the group), it will not return a value. It's only when state.doneExec_ is true (so when
     // it's looped through all the sprites), that it will return the stored value on the state.
-    // With the way we setup our JSInterpreter in tests, doneExec has no effect on recalling
+    // With the way we setup our JSInterpreter in tests, doneExec_ has no effect on recalling
     // isTouching so it will only get called once (even though state gets stored). We have for
     // loops around collision methods in the tests below to mimic how the JSInterpreter behaves
     // in gamelab.

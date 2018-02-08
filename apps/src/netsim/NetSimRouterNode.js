@@ -1413,7 +1413,7 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function () {
     throw new Error("Non-simulating router got message table change notifiction");
   }
 
-  var messages = this.shard_.messageTable.readAll().map(function (row){
+  var messages = this.shard_.messageTable.readAll().map(function (row) {
     return new NetSimMessage(this.shard_, row);
   }.bind(this));
 

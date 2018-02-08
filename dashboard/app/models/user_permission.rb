@@ -32,9 +32,10 @@ class UserPermission < ActiveRecord::Base
     # Also grants access to viewing extra links related to editing these.
     # Also makes the account satisfy authorized_teacher?.
     LEVELBUILDER = 'levelbuilder'.freeze,
-    # Grants access to reseting (to 0) the abuse score for projects,
-    # and blocking and unblocking legacy shares.
-    RESET_ABUSE = 'reset_abuse'.freeze,
+    # Grants ability to (un)feature projects in the the public project gallery.
+    # Also, grants access to resetting (to 0) the abuse score for projects,
+    # and blocking and unblocking legacy shares (formerly RESET_ABUSE).
+    PROJECT_VALIDATOR = 'project_validator'.freeze,
     # Grants access to PLC workshop dashboards.
     WORKSHOP_ADMIN = 'workshop_admin'.freeze,
     # Grants access to managing professional development workshops and
@@ -47,14 +48,24 @@ class UserPermission < ActiveRecord::Base
     AUTHORIZED_TEACHER = 'authorized_teacher'.freeze
   ].freeze
 
+  # Do not log the granting/removal of these permissions to slack
+  SILENCED_PERMISSIONS = [
+    AUTHORIZED_TEACHER,
+  ].freeze
+
   validates_inclusion_of :permission, in: VALID_PERMISSIONS
 
   after_save :log_permission_save
   before_destroy :log_permission_delete
 
   def log_permission_save
+    return if changed_attributes.empty?
+
     # In particular, we do not log for adhoc or test environments.
-    return unless [:staging, :levelbuilder, :production].include? rack_env
+    return unless UserPermission.should_log?
+
+    # Do not log certain common and fairly harmless permissions
+    return if SILENCED_PERMISSIONS.include? permission
 
     ChatClient.message 'infra-security',
       'Updating UserPermission: '\
@@ -67,7 +78,10 @@ class UserPermission < ActiveRecord::Base
 
   def log_permission_delete
     # In particular, we do not log for adhoc or test environments.
-    return unless [:staging, :levelbuilder, :production].include? rack_env
+    return unless UserPermission.should_log?
+
+    # Do not log certain common and fairly harmless permissions
+    return if SILENCED_PERMISSIONS.include? permission
 
     ChatClient.message 'infra-security',
       'Deleting UserPermission: '\
@@ -76,5 +90,9 @@ class UserPermission < ActiveRecord::Base
         "email: #{user.email}, "\
         "permission: #{permission}",
       color: 'yellow'
+  end
+
+  def self.should_log?
+    [:staging, :levelbuilder, :production].include? rack_env
   end
 end

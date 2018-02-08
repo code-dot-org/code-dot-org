@@ -4,6 +4,7 @@ import YourSchoolResources from './YourSchoolResources';
 export default storybook => {
   return storybook
     .storiesOf('YourSchoolResources', module)
+    .withReduxStore()
     .addStoryTable([
       {
         name: 'YourSchoolResources',

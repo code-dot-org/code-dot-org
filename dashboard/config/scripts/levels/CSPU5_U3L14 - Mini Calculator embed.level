@@ -157,13 +157,26 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "instructions": "You will be prompted for two numbers, one right after the other.  See what happens.  Enter different numbers until you get the idea.",
-    "markdown_instructions": "# Getting User Input - A Simple Calculator\r\nPrograms become *even more interesting* when we can interact with the user. A short way to ask a user for a number is with the `promptNum` command, which pops up a dialog box asking the user to enter a number.\r\n\r\nThis very simple app demonstrates a new behavior: getting input from the user.\r\n**You will write code to re-create this program** on the next page.\r\n\r\n# Do This:\r\n* Click \"Run\" on the app.\r\n* You will be prompted for two numbers, one right after the other.  \r\n\t* If you don't enter a number it will simply re-prompt you until you do.\r\n* See what happens.  \r\n* Re-run the program and enter different numbers until you get the idea.\r\n\r\nClick **Finish** to move on.",
+    "markdown_instructions": "# Getting User Input - A Simple Calculator\r\nPrograms become *even more interesting* when we can interact with the user. A short way to ask a user for a number is with the `promptNum` command, which pops up a dialog box asking the user to enter a number.\r\n\r\nThis very simple app demonstrates a new behavior: getting input from the user.\r\n**You will write code to re-create this program** on the next page.\r\n\r\n# Do This:\r\n* Click \"Run\" on the app.\r\n* You will be prompted for two numbers, one right after the other.\r\n* See what happens.\r\n* Re-run the program and enter different numbers until you get the idea.\r\n\r\nClick **Finish** to move on.",
     "start_blocks": "write(\"My Division Calculator!\");\r\nvar num1 = promptNum(\"Enter the FIRST number to divide\");\r\nvar num2 = promptNum(\"Enter the SECOND number to divide\");\r\nvar result = num1 / num2;\r\n\r\nwrite(num1 + \" divided by \" + num2 + \" is:\");\r\nwrite(result);",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
     "contained_level_names": null
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-01-02 23:02:03 +0000\",\"changed\":[\"notes\",\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

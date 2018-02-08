@@ -1,8 +1,17 @@
 import React, {PropTypes} from 'react';
 import msg from '@cdo/locale';
+import color from "../../../util/color";
 import BonusLevels from './BonusLevels';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
-import { bonusLevel } from './shapes';
+import { stageOfBonusLevels } from './shapes';
+
+const styles = {
+  h2: {
+    fontSize: 24,
+    fontFamily: '"Gotham 4r"',
+    color: color.charcoal,
+  },
+};
 
 export default class StageExtras extends React.Component {
   static propTypes = {
@@ -10,7 +19,7 @@ export default class StageExtras extends React.Component {
     nextLevelPath: PropTypes.string.isRequired,
     showProjectWidget: PropTypes.bool,
     projectTypes: PropTypes.arrayOf(PropTypes.string),
-    bonusLevels: PropTypes.arrayOf(PropTypes.shape(bonusLevel)),
+    bonusLevels: PropTypes.arrayOf(PropTypes.shape(stageOfBonusLevels)),
   };
 
   render() {
@@ -22,20 +31,7 @@ export default class StageExtras extends React.Component {
       <div>
         <h1>{msg.extrasStageNumberCompleted({number: this.props.stageNumber})}</h1>
 
-        {(this.props.bonusLevels && this.props.bonusLevels.length > 0) ?
-          <BonusLevels bonusLevels={this.props.bonusLevels}/> :
-          <p>{msg.extrasNoBonusLevels()}</p>
-        }
-
-        {this.props.showProjectWidget &&
-          <ProjectWidgetWithData
-            projectTypes={this.props.projectTypes}
-            isRtl={false}
-          />
-        }
-        <div className="clear" />
-
-        <h2>{msg.continue()}</h2>
+        <h2 style={styles.h2}>{msg.continue()}</h2>
         <a href={this.props.nextLevelPath}>
           <button
             className="btn btn-large btn-primary"
@@ -44,6 +40,18 @@ export default class StageExtras extends React.Component {
             {nextMessage}
           </button>
         </a>
+
+        {(this.props.bonusLevels && Object.keys(this.props.bonusLevels).length > 0) ?
+          <BonusLevels bonusLevels={this.props.bonusLevels}/> :
+          <p>{msg.extrasNoBonusLevels()}</p>
+        }
+
+        {this.props.showProjectWidget &&
+          <ProjectWidgetWithData
+            projectTypes={this.props.projectTypes}
+          />
+        }
+        <div className="clear" />
       </div>
     );
   }

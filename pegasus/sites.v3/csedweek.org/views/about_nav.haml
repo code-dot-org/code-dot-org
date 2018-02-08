@@ -1,7 +1,7 @@
 #about_nav{:style=>'width:140px;'}
   %span.about_list
     -current_url = request.path_info
-    -{ 'About CSEdWeek'=>'/about','Partners'=>'/about/partners','Hour of Code and CS Ed Week Advisory Committee'=>'/about/advisory-committee','News'=>'/about/news','Contact Us'=>'/contact' }.each_pair do |label,url|
+    -{ 'About CSEdWeek'=>'/about','Partners'=>'/about/partners','Hour of Code and CS Ed Week Advisory Committee'=>'/about/advisory-committee','News'=>'/about/news','Awards'=>'/awards','Contact Us'=>'/contact' }.each_pair do |label,url|
       - if current_url == url
         %span.about_list_item_selected= label
       -else

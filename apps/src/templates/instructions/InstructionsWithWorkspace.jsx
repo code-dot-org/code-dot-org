@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 var CodeWorkspaceContainer = require('../CodeWorkspaceContainer');
-var TopInstructions = require('./TopInstructions');
+import TopInstructions from './TopInstructions';
 var instructions = require('../../redux/instructions');
 
 /**

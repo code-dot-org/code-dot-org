@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# 19630 contacts
-../send-to-mailing-list --limit 20000 2016-09-27-latam-hoc-minecraft ./latam-contacts.csv

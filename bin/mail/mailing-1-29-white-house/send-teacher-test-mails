@@ -1,5 +1,0 @@
-#!/bin/sh
-
-TEMPLATE_NAME=2016-1-30-CSforAll
-
-../send-to-mailing-list $TEMPLATE_NAME test-params.csv

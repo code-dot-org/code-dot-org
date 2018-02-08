@@ -1,8 +1,6 @@
 - @page_title = t('project.projects')
 
 .projects-table-wrapper.center
-  = render partial: 'projects/links'
-
   %div{'ng-show' => 'projects.length === 0 && projectsLoaded'}
     %div{style: "padding: 10px;"}
       = t('project.no_projects')
@@ -44,9 +42,9 @@
         %button.btn.btn-primary{'ng-click' => 'project.$save({id: project.id}); project.editing = false', 'ng-show' => 'project.editing'}= t('project.save')
 
         %span{'ng-show' => '!project.deleting && project.isPublishableProjectType()'}
-          %button.btn.btn-default{'ng-click' => 'showPublishProjectDialog(project)', 'ng-hide' => 'project.publishedAt'}
+          %button.btn.btn-default{'ng-click' => 'showPublishProjectDialog(project)', 'ng-hide' => 'project.publishedAt', style: "min-width: 100px;"}
             = t('project.publish')
-          %button.btn.btn-default{'ng-click' => 'unpublishProject(project)', 'ng-show' => 'project.publishedAt'}
+          %button.btn.btn-default{'ng-click' => 'unpublishProject(project)', 'ng-show' => 'project.publishedAt', style: "min-width: 100px;"}
             = t('project.unpublish')
 
         %button.btn.btn-danger{'ng-click'=>'project.deleting = true', 'ng-hide' => 'project.deleting'}= I18n.t('project.delete')
@@ -55,20 +53,16 @@
           %button.btn.btn-danger{'ng-click' => 'removeProject(project)'}= t('project.delete_yes')
           %button.btn.btn-white{'ng-click' => 'project.deleting = false'}= I18n.t('project.delete_no')
 
-  .row
-    .span12{'ng-show' => 'projects.length !== 0'}
-      = t('project.thumbnail_help')
+  %span{'ng-show' => 'projects.length !== 0'}
+    = t('project.thumbnail_help')
 
 -if !@gallery_activities.empty?
-  .row
-    = render partial: 'home/gallery'
+  = render partial: 'home/gallery'
 
-.row
-  .span12
-    %h3.lesson{style: 'text-align:center'}
-      = t('project.need_help')
-.row
-  .center{style: 'width: 720px;'}
-    = render partial: 'shared/course_tall_block', locals: { id: 'applab' }
-    = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
-    = render partial: 'shared/course_tall_block', locals: { id: 'artist' }
+%h3.lesson{style: 'text-align:center'}
+  = t('project.need_help')
+
+.center{style: 'width: 720px;'}
+  = render partial: 'shared/course_tall_block', locals: { id: 'applab' }
+  = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
+  = render partial: 'shared/course_tall_block', locals: { id: 'artist' }

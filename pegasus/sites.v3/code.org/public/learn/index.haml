@@ -6,20 +6,17 @@ social:
   "twitter:card": photo
   "twitter:site": "@codeorg"
   "twitter:url": "https://<%=request.host%>/learn"
-  "twitter:image:src" : "https://code.org/images/learn/og-learn-student.png"
   "twitter:title": "Hour of Code"
   "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
   "og:title": "Hour of Code"
   "og:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages for all ages."
-  "og:image" : "https://code.org/images/learn/og-learn-student.png"
-  "og:image:width": "853"
-  "og:image:height": "447"
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
   "og:video:type": ""
 style_min: false
 ---
+%script{src: "https://cdn.optimizely.com/js/400912536.js"}
 :css
   .noFocusButton:focus {
     outline: 0;
@@ -29,6 +26,14 @@ style_min: false
     margin-top: 0px;
   }
 
+  #fullwidth {
+    background: #0094a3; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#0094a3, #00adbc); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#0094a3, #00adbc); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#0094a3, #00adbc); /* For Firefox 3.6 to 15 */
+    background: background: linear-gradient(#0094a3, #00adbc); /* Standard syntax */
+    overflow: hidden;
+  }
   .banner {
     color: white;
     text-align: center;
@@ -63,9 +68,9 @@ style_min: false
     height: 278px;
   }
 
-#fullwidth{style: "background-color: #2799a4"}
+#fullwidth
   - if request.site == 'code.org'
-    = view :header2
+    = view :header
   - else
     #desktop-header.desktop-feature
       = view :header, variant: "desktop"
@@ -107,6 +112,9 @@ style_min: false
   - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
   - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
 
+- sort_by_popularity = request.site == 'code.org'
+- sort_by_popularity &&= [false, "pre-hoc"].include?(DCDO.get("hoc_mode", false))
+
 #tutorials
 
 :javascript
@@ -118,14 +126,11 @@ style_min: false
       locale: "#{request.locale}",
       roboticsButtonUrl: "/learn/robotics",
       disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])},
-      defaultSortByPopularity: #{request.site == 'code.org'}
+      defaultSortByPopularity: #{sort_by_popularity}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 
-    // Pick a random student image (1-2 inclusive) and fade it in.
-    var studentImageIndex = Math.floor(Math.random() * 2) + 1;
-    var studentImage = '/images/learn/student' + studentImageIndex + '.png';
-
+    var studentImage = '/images/learn/students.png';
     var img = $('<img>');
     img.attr('src', studentImage);
     img.attr('style', 'opacity: 0');

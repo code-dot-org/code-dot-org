@@ -3,11 +3,12 @@ experimental:
     branches:
       only:
         - staging
+        - staging-next
 
 version: 2
 jobs:
   build:
-    # parallelism: 4
+    parallelism: 2
     docker:
       - image: wjordan/code-dot-org:trusty
         environment:
@@ -22,16 +23,25 @@ jobs:
     resource_class: xlarge
 
     steps:
+      - run:
+          name: Create source cache key
+          command: "date +%D > /home/circleci/today.date"
+
       # cache source
       - restore_cache:
-          key: code-dot-org-source-v6-{{ .Branch }}-{{ .Revision }}
           keys:
-            - code-dot-org-source-v6-{{ .Branch }}-
-            - code-dot-org-source-v6-
+            - code-dot-org-source-v7-{{ checksum "/home/circleci/today.date" }}
+            - code-dot-org-source-v7-
+
       - checkout
       - run:
           name: merge staging
           command: bin/circle/merge-base
+
+      - save_cache:
+          key: code-dot-org-source-v7-{{ checksum "/home/circleci/today.date" }}
+          paths:
+            - ".git"
 
       - run:
           name: setup tests/artifacts dirs
@@ -43,13 +53,9 @@ jobs:
           name: taking these out of dockerfile to see if that fixes build issues
           command: |
             sudo mv /usr/bin/parallel /usr/bin/gnu_parallel
+            sudo apt-get update
             sudo apt-get install -y libicu-dev enscript moreutils pdftk libmysqlclient-dev libsqlite3-dev
             sudo mv /usr/bin/gnu_parallel /usr/bin/parallel
-
-      - save_cache:
-          key: code-dot-org-source-v6-{{ .Branch }}-{{ .Revision }}
-          paths:
-            - ".git"
 
       # restore gems cache
       - restore_cache:
@@ -74,7 +80,6 @@ jobs:
           command: |
             echo "
             bundler_use_sudo: false
-            npm_use_sudo: false
             properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
             applitools_eyes_api_key: $APPLITOOLS_KEY
             saucelabs_username: $SAUCE_USERNAME
@@ -135,10 +140,6 @@ jobs:
             bundle exec rake circle:check_for_unexpected_apps_changes
 
       - run:
-          name: lint js
-          command: bundle exec rake lint:javascript
-
-      - run:
           name: unit tests
           command: bundle exec rake circle:run_tests --trace
           no_output_timeout: 40m
@@ -156,7 +157,9 @@ jobs:
 
       - restore_cache:
           keys:
+            - code-dot-org-ui-test-data-v3-{{ .Branch }}-
             - code-dot-org-ui-test-data-v3-staging-
+            - code-dot-org-ui-test-data-v3-
 
       - run:
           name: seed ui tests
@@ -190,6 +193,10 @@ jobs:
       - store_artifacts:
           path: /home/circleci/project/apps/coverage
           destination: coverage
+
+      - store_artifacts:
+          path: /home/circleci/project/apps/log
+          destination: apps-test-logs
 
       - store_artifacts:
           path: /home/circleci/project/apps/yarn-error.log

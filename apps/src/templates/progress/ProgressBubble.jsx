@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import _ from 'lodash';
+import queryString from 'query-string';
 import i18n from '@cdo/locale';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '../FontAwesome';
@@ -39,6 +40,11 @@ const styles = {
     transition: 'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
     marginTop: 3,
     marginBottom: 3,
+    // ReactTooltip sets a zIndex of 999. However, because in some cases for us
+    // the ReactTooltip is inside of a rotated div, it ends up in a different
+    // stacking context, and the zIndex doesn't work. Instead we set it here on
+    // the top component
+    zIndex: 999,
   },
   largeDiamond: {
     width: DIAMOND_DOT_SIZE,
@@ -72,15 +78,23 @@ const styles = {
   },
 };
 
-const ProgressBubble = React.createClass({
-  propTypes: {
+class ProgressBubble extends React.Component {
+  static propTypes = {
     level: levelType.isRequired,
     disabled: PropTypes.bool.isRequired,
     smallBubble: PropTypes.bool,
-  },
+    selectedSectionId: PropTypes.string,
+    // This prop is provided as a testing hook, in normal use it will just be
+    // set to window.location; see defaultProps.
+    currentLocation: PropTypes.object.isRequired,
+  };
+
+  static defaultProps = {
+    currentLocation: window.location,
+  };
 
   render() {
-    const { level, smallBubble } = this.props;
+    const { level, smallBubble, selectedSectionId, currentLocation } = this.props;
 
     const number = level.levelNumber;
     const url = level.url;
@@ -99,7 +113,15 @@ const ProgressBubble = React.createClass({
 
     let href = '';
     if (!disabled && url) {
-      href = url + location.search;
+      const queryParams = queryString.parse(currentLocation.search);
+      if (selectedSectionId) {
+        queryParams.section_id = selectedSectionId;
+      }
+      const paramString = queryString.stringify(queryParams);
+      href = url;
+      if (paramString.length > 0) {
+        href += '?' + paramString;
+      }
     }
 
     const tooltipId = _.uniqueId();
@@ -168,7 +190,7 @@ const ProgressBubble = React.createClass({
     // If we have an href, wrap in an achor tag
     if (href) {
       bubble = (
-        <a href={href} style={{textDecoration: 'none'}}>
+        <a href={href} style={{textDecoration: 'none'}} className="uitest-ProgressBubble">
           {bubble}
         </a>
       );
@@ -176,6 +198,6 @@ const ProgressBubble = React.createClass({
 
     return bubble;
   }
-});
+}
 
 export default Radium(ProgressBubble);

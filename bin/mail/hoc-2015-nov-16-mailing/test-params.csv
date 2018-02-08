@@ -1,9 +1,0 @@
-email,name,international,organizer
-andrew+international+organizer@code.org,Andrew International Organizer,true,true
-roxanne+international+organizer@code.org,Roxanne International Organizer,true,true
-andrew+US+organizer@code.org,Andrew US Organizer,false,true
-roxanne+US+organizer@code.org,Roxanne US Organizer,false,true
-andrew+international+nonorganizer@code.org,Andrew International Non-organizer,true,false
-roxanne+international+nonorganizer@code.org,Roxanne International Non-organizer,true,false
-andrew+US+nonorganizer@code.org,Andrew US Non-organizer,false,false
-roxanne+US+nonorganizer@code.org,Roxanne US Non-organizer,false,false

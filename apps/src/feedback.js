@@ -3,7 +3,6 @@ import { getStore } from './redux';
 import React from 'react';
 import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
-import ClientState from './code-studio/clientState';
 import LegacyDialog from './code-studio/LegacyDialog';
 import project from './code-studio/initApp/project';
 import {dataURIToBlob} from './imageUtils';
@@ -48,18 +47,12 @@ var puzzleRatingUtils = require('./puzzleRatingUtils');
 var DialogButtons = require('./templates/DialogButtons');
 var CodeWritten = require('./templates/feedback/CodeWritten');
 var GeneratedCode = require('./templates/feedback/GeneratedCode');
-var authoredHintUtils = require('./authoredHintUtils');
 
-import experiments from './util/experiments';
-import AchievementDialog from './templates/AchievementDialog';
 import ChallengeDialog from './templates/ChallengeDialog';
-import StageAchievementDialog from './templates/StageAchievementDialog';
 
 /**
  * @typedef {Object} FeedbackOptions
  * @property {LiveMilestoneResponse} response
- * @property {string} app
- * @property {string} skin
  * @property {TestResult} feedbackType
  * @property {string} message
  * @property {Level} level
@@ -70,6 +63,8 @@ import StageAchievementDialog from './templates/StageAchievementDialog';
  * @property {boolean} defaultToContinue
  * @property {boolean} preventDialog
  * @property {ExecutionError} executionError
+ * @property {boolean} hideXButton
+ * @property {string} shareLink
  */
 
 /**
@@ -116,10 +111,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   options.level = options.level || {};
 
   var hadShareFailure = (options.response && options.response.share_failure);
-  // options.response.level_source is the url that we are sharing; can't
-  // share without it
-  var canShare = options.response && options.response.level_source;
-  var showingSharing = options.showingSharing && !hadShareFailure && canShare;
+  var showingSharing = options.showingSharing && !hadShareFailure && options.shareLink;
 
   var canContinue = this.canContinueToNextLevel(options.feedbackType);
   var displayShowCode = this.studioApp_.enableShowCode && this.studioApp_.enableShowLinesCount && canContinue && !showingSharing;
@@ -143,12 +135,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     feedback.appendChild(feedbackMessage);
   }
   if (feedbackBlocks && feedbackBlocks.div) {
-    if (feedbackMessage && this.useSpecialFeedbackDesign_(options)) {
-      // put the blocks iframe inside the feedbackMessage for this special case:
-      feedbackMessage.appendChild(feedbackBlocks.div);
-    } else {
-      feedback.appendChild(feedbackBlocks.div);
-    }
+    feedback.appendChild(feedbackBlocks.div);
   }
   if (sharingDiv) {
     feedback.appendChild(sharingDiv);
@@ -183,7 +170,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       hideTryAgain: options.hideTryAgain,
       keepPlayingText: options.keepPlayingText,
       continueText: options.continueText,
-      showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
       freePlay: options.level.freePlay,
       finalLevel: finalLevel
@@ -192,7 +178,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   var againButton = feedback.querySelector('#again-button');
   var hintRequestButton = feedback.querySelector('#hint-request-button');
-  var previousLevelButton = feedback.querySelector('#back-button');
   var continueButton = feedback.querySelector('#continue-button');
 
   // Don't show the continue button on share pages.
@@ -200,8 +185,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     continueButton.style.display = 'none';
   }
 
-  const hasNeitherBackButton = !againButton && !previousLevelButton;
-  const onlyContinue = continueButton && hasNeitherBackButton;
+  const onlyContinue = continueButton && !againButton;
   const defaultContinue = onlyContinue || options.defaultToContinue;
 
   /**
@@ -243,77 +227,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   const showPuzzleRatingButtons =
       options.response && options.response.puzzle_ratings_enabled;
 
-  if (!options.level.freePlay && experiments.isEnabled('gamification')) {
-    const container = document.createElement('div');
-    const hintsUsed = (options.response.hints_used || 0) +
-      authoredHintUtils.currentOpenedHintCount(options.response.level_id);
-
-    const lastInStage = FeedbackUtils.isLastLevel();
-    const stageName = `Stage ${window.appOptions.stagePosition}`;
-
-    const progress = FeedbackUtils.calculateStageProgress(
-        isPerfect,
-        hintsUsed,
-        options.response.level_id,
-        isFinite(idealBlocks));
-
-    const achievements = FeedbackUtils.getAchievements(
-        isPerfect,
-        hintsUsed,
-        idealBlocks,
-        actualBlocks,
-        progress);
-    const msgParams = {
-      puzzleNumber: options.level.puzzle_number || 0,
-      numBlocks: idealBlocks,
-    };
-    const feedbackMessage = isPerfect ?
-        msg.nextLevel(msgParams) :
-        msg.numBlocksNeeded(msgParams);
-
-    let onContinue = options.onContinue;
-    if (lastInStage) {
-      onContinue = () => {
-        ReactDOM.render(
-          <StageAchievementDialog
-            stageName={stageName}
-            assetUrl={this.studioApp_.assetUrl}
-            onContinue={onContinue}
-            showStageProgress={true}
-            newStageProgress={progress.newStageProgress}
-            numStars={Math.min(3, Math.round((progress.newStageProgress * 3) + 0.5))}
-          />,
-          container
-        );
-      };
-    }
-
-    if (showPuzzleRatingButtons) {
-      const prevOnContinue = onContinue;
-      onContinue = () => {
-        puzzleRatingUtils.cachePuzzleRating(container, {
-          script_id: options.response.script_id,
-          level_id: options.response.level_id,
-        });
-        prevOnContinue();
-      };
-    }
-
-    document.body.appendChild(container);
-    ReactDOM.render(
-      <AchievementDialog
-        achievements={achievements}
-        assetUrl={this.studioApp_.assetUrl}
-        encourageRetry={!isPerfect}
-        feedbackMessage={feedbackMessage}
-        oldStageProgress={progress.oldStageProgress}
-        onContinue={onContinue}
-        showPuzzleRatingButtons={showPuzzleRatingButtons}
-        showStageProgress={true}
-      />, container);
-    return;
-  }
-
   if (getStore().getState().pageConstants.isChallengeLevel) {
     const container = document.createElement('div');
     document.body.appendChild(container);
@@ -345,7 +258,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       ReactDOM.render(
         <ChallengeDialog
           title={msg.challengeLevelPassTitle()}
-          assetUrl={this.studioApp_.assetUrl}
           avatar={icon}
           handlePrimary={onContinue}
           primaryButtonLabel={msg.continue()}
@@ -360,36 +272,22 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     return;
   }
 
+  $('#feedback-dialog').remove();
+
   var feedbackDialog = this.createModalDialog({
     contentDiv: feedback,
     icon: icon,
     defaultBtnSelector: defaultBtnSelector,
     onHidden: onHidden,
-    id: 'feedback-dialog'
+    id: 'feedback-dialog',
+    showXButton: !options.hideXButton,
   });
-
-  // Update the background color if it is set to be in special design.
-  if (this.useSpecialFeedbackDesign_(options)) {
-    if (options.response.design === "white_background") {
-      document.getElementById('feedback-dialog')
-          .className += " white-background";
-      document.getElementById('feedback-content')
-          .className += " light-yellow-background";
-    }
-  }
 
   if (againButton) {
     dom.addClickTouchEvent(againButton, function () {
       feedbackDialog.hideButDontContinue = true;
       feedbackDialog.hide();
       feedbackDialog.hideButDontContinue = false;
-    });
-  }
-
-  if (previousLevelButton) {
-    dom.addClickTouchEvent(previousLevelButton, function () {
-      feedbackDialog.hide();
-      options.backToPreviousLevel();
     });
   }
 
@@ -486,15 +384,23 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   }
 
+  // Remember the project between when we save and when we publish
+  // while the dialog is open, but not between dialog openings.
+  let projectId = null;
+  let projectType = null;
+
   const saveButtonSelector = '#save-to-project-gallery-button';
   const saveButton = feedback.querySelector(saveButtonSelector);
   if (saveButton) {
     dom.addClickTouchEvent(saveButton, () => {
-      $(saveButtonSelector).prop('disabled', true).text(msg.saving());
+      $(saveButtonSelector).prop('disabled', true).text(msg.addingToProjects());
       project.copy(project.getNewProjectName())
         .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
-        .then(() => $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery()))
-        .catch(err => console.log(err));
+        .then(() => {
+          projectId = project.getCurrentId();
+          projectType = project.getStandaloneApp();
+          $(saveButtonSelector).prop('disabled', true).text(msg.addedToProjects());
+        }).catch(err => console.log(err));
     });
   }
 
@@ -507,6 +413,24 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       feedbackDialog.hide();
       feedbackDialog.hideButDontContinue = false;
 
+      const store = getStore();
+
+      if (projectId && projectType) {
+        // The user previously saved and is now publishing. Publish the project
+        // which we just saved, rather than creating a new one and publishing it.
+        store.dispatch(showPublishDialog(projectId, projectType));
+        let publishDialog = FeedbackUtils.getPublishDialogElement();
+        ReactDOM.render(
+          <Provider store={store}>
+            <PublishDialog
+              afterPublish={() => showFeedbackDialog(true)}
+            />
+          </Provider>,
+          publishDialog
+        );
+        return;
+      }
+
       // project.copy relies on state not in redux, and we want to keep this
       // badness out of our redux code. Therefore, define what happens when
       // publish dialog publish button is clicked here, outside of the publish
@@ -515,15 +439,23 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       // Once project.js is moved onto redux, the remix-and-publish operation
       // should be moved inside the publish dialog redux.
 
-      const store = getStore();
       FeedbackUtils.showConfirmPublishDialog(() => {
         store.dispatch({type: PUBLISH_REQUEST});
+        let didPublish = false;
         project.copy(project.getNewProjectName(), {shouldPublish: true})
           .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
-          .then(() => store.dispatch({type: PUBLISH_SUCCESS}))
-          .catch(err => {
+          .then(() => {
+            store.dispatch({type: PUBLISH_SUCCESS});
+            didPublish = true;
+          }).catch(err => {
             console.log(err);
             store.dispatch({type: PUBLISH_FAILURE});
+          }).then(() => {
+           if (didPublish) {
+             // Only show feedback dialog again if publishing succeeded,
+             // because we keep the publish dialog open if it failed.
+             showFeedbackDialog(true);
+           }
           });
       });
     });
@@ -554,9 +486,18 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   }
 
-  feedbackDialog.show({
-    backdrop: (options.app === 'flappy' ? 'static' : true)
-  });
+  function showFeedbackDialog(isPublished) {
+    feedbackDialog.show({
+      backdrop: (getStore().getState().pageConstants.appType === 'flappy' ? 'static' : true)
+    });
+
+    if (isPublished) {
+      $(publishButtonSelector).prop('disabled', true).text(msg.published());
+      $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
+    }
+  }
+
+  showFeedbackDialog();
 
   if (feedbackBlocks && feedbackBlocks.div) {
     feedbackBlocks.render();
@@ -564,15 +505,9 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 };
 
 FeedbackUtils.showConfirmPublishDialog = onConfirmPublish => {
-  let publishDialog = document.getElementById('legacy-share-publish-dialog');
-  if (!publishDialog) {
-    publishDialog = document.createElement('div');
-    publishDialog.id = 'legacy-share-publish-dialog';
-    document.body.appendChild(publishDialog);
-  }
-
   const store = getStore();
   store.dispatch(showPublishDialog());
+  let publishDialog = FeedbackUtils.getPublishDialogElement();
   ReactDOM.render(
     <Provider store={store}>
       <PublishDialog
@@ -583,6 +518,16 @@ FeedbackUtils.showConfirmPublishDialog = onConfirmPublish => {
   );
 };
 
+FeedbackUtils.getPublishDialogElement = function () {
+  let publishDialog = document.getElementById('legacy-share-publish-dialog');
+  if (!publishDialog) {
+    publishDialog = document.createElement('div');
+    publishDialog.id = 'legacy-share-publish-dialog';
+    document.body.appendChild(publishDialog);
+  }
+  return publishDialog;
+};
+
 /**
  * Converts the image data uri to a blob, then saves it to the server as the
  * thumbnail for the current project.
@@ -590,134 +535,13 @@ FeedbackUtils.showConfirmPublishDialog = onConfirmPublish => {
  * @returns {Promise} A promise which resolves if successful.
  */
 FeedbackUtils.saveThumbnail = function (image) {
+  if (!image) {
+    return Promise.resolve();
+  }
   return dataURIToBlob(image)
     .then(project.saveThumbnail)
     // Don't pass any arguments to project.save().
     .then(() => project.save());
-};
-
-FeedbackUtils.getAchievements = function (
-    isPerfect,
-    hintsUsed,
-    idealNumBlocks,
-    numBlocks,
-    stageProgress) {
-  const achievements = [{
-    check: true,
-    msg: msg.puzzleCompleted(),
-    progress: stageProgress.newPassedProgress,
-  }];
-  if (isFinite(idealNumBlocks)) {
-    achievements.push({
-      check: numBlocks <= idealNumBlocks,
-      msg: FeedbackUtils.blocksUsedMessage(numBlocks, idealNumBlocks),
-      progress: stageProgress.newPerfectProgress,
-    });
-  }
-  if (hintsUsed < 2) {
-    achievements.push({
-      check: true,
-      msg: FeedbackUtils.hintsMessage(hintsUsed),
-      progress: stageProgress.newHintUsageProgress,
-    });
-  }
-  return achievements;
-};
-
-FeedbackUtils.blocksUsedMessage = function (numBlocks, idealNumBlocks) {
-  if (numBlocks > idealNumBlocks) {
-    return msg.usingTooManyBlocks({numBlocks});
-  } else if (numBlocks === idealNumBlocks) {
-    return msg.exactNumberOfBlocks({numBlocks});
-  } else {
-    return msg.fewerNumberOfBlocks({numBlocks});
-  }
-};
-
-FeedbackUtils.hintsMessage = function (numHints) {
-  if (numHints === 0) {
-    return msg.withoutHints();
-  } else if (numHints === 1) {
-    return msg.usingOneHint();
-  } else {
-    return msg.usingHints();
-  }
-};
-
-// TODO(ram): split this up into something more modular
-FeedbackUtils.calculateStageProgress = function (
-    isPerfect, hintsUsed, currentLevelId, finiteIdealBlocks) {
-  const stage = getStore().getState().progress.stages[0];
-  const scriptName = stage.script_name;
-  const levels = stage.levels;
-  const progress = ClientState.allLevelsProgress();
-  const oldFinishedHints = authoredHintUtils.getOldFinishedHints();
-
-  let numLevels = 0,
-    numPassed = 0,
-    numPerfect = 0,
-    numZeroHints = 0,
-    numOneHint = 0;
-  for (let i = 0; i < levels.length; i++) {
-    if (levels[i].freePlay) {
-      continue;
-    }
-    numLevels++;
-    if (levels[i].ids.indexOf(currentLevelId) !== -1 ) {
-      continue;
-    }
-    const levelProgress = ClientState.bestProgress(levels[i].ids, scriptName, progress);
-    if (levelProgress > TestResults.MINIMUM_PASS_RESULT) {
-      numPassed++;
-      if (levelProgress > TestResults.MINIMUM_OPTIMAL_RESULT) {
-        numPerfect++;
-      }
-      const numHintsUsed = oldFinishedHints.filter(hint => levels[i].ids.indexOf(hint.levelId) !== -1).length;
-      if (numHintsUsed === 0) {
-        numZeroHints++;
-      } else if (numHintsUsed === 1) {
-        numOneHint++;
-      }
-    }
-  }
-
-  const passedScore = numPassed / numLevels;
-  const perfectScore = numPerfect / numLevels;
-  const hintScore = numZeroHints / numLevels +
-    0.5 * numOneHint / numLevels;
-  const oldStageProgress = 0.3 * passedScore +
-    0.4 * perfectScore +
-    0.3 * hintScore;
-
-  const newPassedLevels = 1;
-  const newPerfectLevels = isPerfect ? 1 : 0;
-
-  let newHintUsageLevels = 0;
-  if (hintsUsed === 0) {
-    newHintUsageLevels = 1;
-  } else if (hintsUsed === 1) {
-    newHintUsageLevels = 0.5;
-  }
-
-  const passedWeight = finiteIdealBlocks ? 0.3 : 0.7;
-  const perfectWeight = finiteIdealBlocks ? 0.4 : 0;
-
-  const newPassedProgress = newPassedLevels * passedWeight / numLevels;
-  const newPerfectProgress = newPerfectLevels * perfectWeight / numLevels;
-  const newHintUsageProgress = newHintUsageLevels * 0.3 / numLevels;
-
-  const newStageProgress = oldStageProgress +
-    newPassedProgress +
-    newPerfectProgress +
-    newHintUsageProgress;
-
-  return {
-    oldStageProgress,
-    newPassedProgress,
-    newPerfectProgress,
-    newHintUsageProgress,
-    newStageProgress,
-  };
 };
 
 FeedbackUtils.isLastLevel = function () {
@@ -793,9 +617,6 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
   }
 
   ReactDOM.render(React.createElement(DialogButtons, {
-    previousLevel:
-      !this.canContinueToNextLevel(options.feedbackType) &&
-      options.showPreviousButton,
     tryAgain: tryAgainText,
     continueText: options.continueText || (options.finalLevel ? msg.finish() : msg.continue()),
     nextLevel: this.canContinueToNextLevel(options.feedbackType),
@@ -819,14 +640,6 @@ FeedbackUtils.prototype.getShareFailure_ = function (options) {
     shareFailure: shareFailure
   });
   return shareFailureDiv;
-};
-
-/**
- *
- */
-FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
- return options.response &&
-        options.response.design;
 };
 
 /**
@@ -916,6 +729,12 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
         break;
       case TestResults.QUESTION_MARKS_IN_NUMBER_FIELD:
         message = msg.errorQuestionMarksInNumberField();
+        break;
+      case TestResults.BLOCK_LIMIT_FAIL:
+        var exceededBlockType = this.hasExceededLimitedBlocks_();
+        var limit = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits.getLimit(exceededBlockType);
+        var block = `<xml><block type='${exceededBlockType}'></block></xml>`;
+        message = msg.errorExceededLimitedBlocks({limit}) + block;
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
           // Allow apps to override the "too many blocks" failure message
@@ -1009,28 +828,6 @@ FeedbackUtils.prototype.getFeedbackMessageElement_ = function (options) {
   let message = this.getFeedbackMessage(options);
   $(feedback).text(message);
 
-  // Update the feedback box design, if the hint message came from server.
-  if (this.useSpecialFeedbackDesign_(options)) {
-    // Setup a new div
-    var feedbackDiv = document.createElement('div');
-    feedbackDiv.className = 'feedback-callout';
-    feedbackDiv.id = 'feedback-content';
-
-    // Insert an image
-    var imageDiv = document.createElement('img');
-    imageDiv.className = "hint-image";
-    imageDiv.src = this.studioApp_.assetUrl(
-      'media/lightbulb_for_' + options.response.design + '.png');
-    feedbackDiv.appendChild(imageDiv);
-    // Add new text
-    var hintHeader = document.createElement('p');
-    $(hintHeader).text(msg.hintHeader());
-    feedbackDiv.appendChild(hintHeader);
-    hintHeader.className = 'hint-header';
-    // Append the original text
-    feedbackDiv.appendChild(feedback);
-    return feedbackDiv;
-  }
   return feedback;
 };
 
@@ -1049,7 +846,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 
     // set up the twitter share url
     var twitterUrl = "https://twitter.com/intent/tweet?url=" +
-      options.response.level_source;
+      options.shareLink;
 
     if (options.twitter && options.twitter.text !== undefined) {
       twitterUrl += "&text=" + encodeURI(options.twitter.text);
@@ -1073,7 +870,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 
     // set up the facebook share url
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
-                      options.response.level_source;
+                      options.shareLink;
     options.facebookUrl = facebookUrl;
   }
 
@@ -1113,7 +910,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
         var submitButton = sharingDiv.querySelector('#phone-submit');
         submitButton.disabled = true;
         phone.mask('(000) 000-0000', {
-            onComplete:function (){
+            onComplete:function () {
               if (!submitted) {
                 submitButton.disabled = false;
               }
@@ -1128,6 +925,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
           var phone = $(sharingDiv.querySelector("#phone"));
           var params = $.param({
             level_source: options.response.level_source_id,
+            channel_id: options.channelId,
             phone: phone.val()
           });
           $(submitButton).val("Sending..");
@@ -1178,7 +976,7 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function (options, challenge=fal
       (options.response.total_lines !== numLinesWritten));
   const totalNumLinesWritten = shouldShowTotalLines ? options.response.total_lines : 0;
 
-  const generatedCodeProperties = this.getGeneratedCodeProperties_({
+  const generatedCodeProperties = this.getGeneratedCodeProperties({
     generatedCodeDescription: options.appStrings && options.appStrings.generatedCodeDescription
   });
 
@@ -1240,21 +1038,22 @@ FeedbackUtils.prototype.getGeneratedCodeString_ = function () {
  * @returns {React}
  * @private
  */
-FeedbackUtils.prototype.getGeneratedCodeProperties_ = function (options) {
+FeedbackUtils.prototype.getGeneratedCodeProperties = function (options) {
   options = options || {};
 
-  var codeInfoMsgParams = {
+  const codeInfoMsgParams = {
     berkeleyLink: "<a href='http://bjc.berkeley.edu/' target='_blank'>Berkeley</a>",
     harvardLink: "<a href='https://cs50.harvard.edu/' target='_blank'>Harvard</a>"
   };
 
-  var message = this.getGeneratedCodeDescription(codeInfoMsgParams,
+  const { message, shortMessage } = this.getGeneratedCodeDescriptions_(codeInfoMsgParams,
       options.generatedCodeDescription);
-  var code = this.studioApp_.polishGeneratedCodeString(this.getGeneratedCodeString_());
+  const code = this.studioApp_.polishGeneratedCodeString(this.getGeneratedCodeString_());
 
   return {
-    message: message,
-    code: code
+    message,
+    shortMessage,
+    code,
   };
 };
 
@@ -1265,16 +1064,25 @@ FeedbackUtils.prototype.getGeneratedCodeProperties_ = function (options) {
  *        instead of the default
  * @returns {string}
  */
-FeedbackUtils.prototype.getGeneratedCodeDescription = function (codeInfoMsgParams, generatedCodeDescription) {
+FeedbackUtils.prototype.getGeneratedCodeDescriptions_ = function (codeInfoMsgParams, generatedCodeDescription) {
   if (this.studioApp_.editCode) {
-    return '';
+    return {
+      message: '',
+      shortMessage: '',
+    };
   }
 
   if (generatedCodeDescription) {
-    return generatedCodeDescription;
+    return {
+      message: generatedCodeDescription,
+      shortMessage: generatedCodeDescription,
+    };
   }
 
-  return msg.generatedCodeInfo(codeInfoMsgParams);
+  return {
+    message: msg.generatedCodeInfo(codeInfoMsgParams),
+    shortMessage: msg.shortGeneratedCodeInfo(codeInfoMsgParams),
+  };
 };
 
 /**
@@ -1286,7 +1094,7 @@ FeedbackUtils.prototype.getGeneratedCodeDescription = function (codeInfoMsgParam
 FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
   var codeDiv = document.createElement('div');
 
-  var generatedCodeProperties = this.getGeneratedCodeProperties_({
+  var generatedCodeProperties = this.getGeneratedCodeProperties({
     generatedCodeDescription: appStrings && appStrings.generatedCodeDescription
   });
 
@@ -1751,6 +1559,9 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
     }
     return TestResults.LEVEL_INCOMPLETE_FAIL;
   }
+  if (this.hasExceededLimitedBlocks_()) {
+    return TestResults.BLOCK_LIMIT_FAIL;
+  }
   if (this.studioApp_.IDEAL_BLOCK_NUM &&
       numEnabledBlocks > this.studioApp_.IDEAL_BLOCK_NUM) {
     return TestResults.TOO_MANY_BLOCKS_FAIL;
@@ -1791,6 +1602,7 @@ function simulateClick(element) {
  * @param {function} options.onHidden
  * @param {string} options.id
  * @param {HTMLElement} options.header
+ * @param {boolean} options.showXButton
  */
 FeedbackUtils.prototype.createModalDialog = function (options) {
   var modalBody = document.createElement('div');
@@ -1829,7 +1641,8 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
     onKeydown: btn ? keydownHandler : undefined,
     autoResizeScrollableElement: elementToScroll,
     id: options.id,
-    header: options.header
+    header: options.header,
+    close: options.showXButton,
   });
 };
 
@@ -1935,4 +1748,12 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   return node.childBlocks_.some(function (child) {
     return self.hasMatchingDescendant_(child, filter);
   });
+};
+
+/**
+ * Ensure that all limited toolbox blocks aren't exceeded.
+ */
+FeedbackUtils.prototype.hasExceededLimitedBlocks_ = function () {
+  const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
+  return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
 };

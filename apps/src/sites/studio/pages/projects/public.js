@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 import projects, { setProjectLists } from '@cdo/apps/templates/projects/projectsRedux';
 import { MAX_PROJECTS_PER_CATEGORY } from '@cdo/apps/templates/projects/projectConstants';
+import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 
 $(document).ready(() => {
   registerReducers({projects});
@@ -19,16 +20,20 @@ $(document).ready(() => {
     getStore().dispatch(setProjectLists(projectLists));
     const publicGallery = document.getElementById('public-gallery');
     ReactDOM.render(
-      <div>
-        <HeaderBanner
-          headingText={i18n.projects()}
-          subHeadingText={i18n.projectsSubHeading()}
-          short={true}
-        />
-        <Provider store={getStore()}>
+      <Provider store={getStore()}>
+        <div>
+          <HeaderBanner
+            headingText={i18n.projects()}
+            subHeadingText={i18n.projectsSubHeading()}
+            short
+          />
+          <StartNewProject
+            canViewFullList
+            canViewAdvancedTools
+          />
           <PublicGallery />
-        </Provider>,
-      </div>,
+        </div>
+      </Provider>,
       publicGallery);
   });
 });

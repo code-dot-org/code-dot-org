@@ -1,7 +1,0 @@
-#!/bin/sh
-
-# 490681 us-ca-uk teachers
-../send-to-mailing-list --limit 500000 2016-11-22-hoc-US-CA-UK-moana ./teachers-us-ca-uk.csv
-
-# 274413 international teachers
-../send-to-mailing-list --limit 280000 2016-11-22-hoc-intl-moana ./teachers-intl.csv

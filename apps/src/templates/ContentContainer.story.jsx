@@ -13,6 +13,7 @@ const exampleCard = {
 export default storybook => {
   return storybook
     .storiesOf('ContentContainer', module)
+    .withReduxStore()
     .addStoryTable([
       {
         name: 'no link',
@@ -20,21 +21,18 @@ export default storybook => {
         story: () => (
           <ContentContainer
             heading="Recent Courses"
-            isRtl={false}
           >
             <CourseCard
               title={exampleCard.title}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              isRtl={false}
             />
             <CourseCard
               title={exampleCard.title}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              isRtl={false}
             />
           </ContentContainer>
         )
@@ -48,23 +46,20 @@ export default storybook => {
             linkText="View all courses"
             link="link to see all of the courses"
             showLink={true}
-            isRtl={false}
           >
             <CourseCard
               title={exampleCard.title}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              isRtl={false}
             />
             <CourseCard
               title={exampleCard.title}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              isRtl={false}
             />
-        </ContentContainer>
+          </ContentContainer>
         )
       },
       {
@@ -76,7 +71,6 @@ export default storybook => {
             linkText="View all courses"
             link="link to see all of the courses"
             showLink={true}
-            isRtl={false}
             description="These are courses that you have worked on recently"
           >
             <CourseCard
@@ -84,16 +78,14 @@ export default storybook => {
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              isRtl={false}
             />
             <CourseCard
               title={exampleCard.title}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              isRtl={false}
             />
-        </ContentContainer>
+          </ContentContainer>
         )
       },
     ]);
