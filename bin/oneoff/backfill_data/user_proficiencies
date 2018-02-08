@@ -6,7 +6,7 @@
 #
 # The data was generated via the query
 #
-#   CREATE TABLE user_proficiencies_#{start_date}_#{end_date} AS
+#   CREATE TABLE user_proficiencies_#{start_date_short}_#{end_date_short} AS
 #   SELECT
 #     user_levels.user_id,
 #
@@ -68,7 +68,7 @@
 #     SUM(IF(level_concept_difficulties.conditionals = 2, 1, 0)) AS conditionals_d2_count,
 #     SUM(IF(level_concept_difficulties.conditionals = 3, 1, 0)) AS conditionals_d3_count,
 #     SUM(IF(level_concept_difficulties.conditionals = 4, 1, 0)) AS conditionals_d4_count,
-#     SUM(IF(level_concept_difficulties.conditionals = 5, 1, 0)) AS conditionals_d5_count,
+#     SUM(IF(level_concept_difficulties.conditionals = 5, 1, 0)) AS conditionals_d5_count
 #   FROM user_levels
 #   LEFT OUTER JOIN authored_hint_view_requests
 #     ON authored_hint_view_requests.user_id = user_levels.user_id
@@ -81,7 +81,7 @@
 #   INNER JOIN level_concept_difficulties
 #     ON level_concept_difficulties.level_id = user_levels.level_id
 #   WHERE user_levels.best_result = 100
-#     AND user_levels.script_id IN (1, 18, 19, 23)
+#     AND user_levels.script_id IN (238, 239, 240, 241, 258)
 #     AND user_levels.id > #{start_id}
 #     AND user_levels.id < #{end_id}
 #     AND user_levels.created_at > #{start_date}
@@ -95,11 +95,11 @@
 #   https://docs.google.com/spreadsheets/d/12zZB003jXAivY9Dnh1VEIBdvaZXAkj0H4NU2i0bAFY8
 # and exported via the mysqldump command
 #
-#   mysqldump dashboard_production proficiencies_20160101_20160201
-#     --host=reporting.ceidnfhvpbck.us-east-1.rds.amazonaws.com
+#   mysqldump dashboard_production user_proficiencies_20170601_20170701
+#     --host=db-reporting.code.org
 #     --user=db
 #     --password
-#     --result-file=proficiencies_20160101_20160201
+#     --result-file=user_proficiencies_20170601_20170701
 #
 # and combined and imported by this script.
 
@@ -107,22 +107,15 @@ require 'csv'
 require_relative '../../../dashboard/config/environment'
 
 DATE_RANGES = [
-  ['20160101', '20160201', '2016-01-31 23:59:59'],
-  ['20160201', '20160301', '2016-02-29 23:59:59'],
-  ['20160301', '20160401', '2016-03-31 23:59:59'],
-  ['20160401', '20160501', '2016-04-30 23:59:59'],
-  ['20160501', '20160601', '2016-05-31 23:59:59'],
-  ['20160601', '20160701', '2016-06-30 23:59:59'],
-  ['20160701', '20160801', '2016-07-31 23:59:59'],
-  ['20160801', '20160901', '2016-08-31 23:59:59'],
-  ['20160901', '20161001', '2016-09-30 23:59:59'],
-  ['20161001', '20161101', '2016-10-31 23:59:59'],
-  ['20161101', '20161201', '2016-11-30 23:59:59'],
-  ['20161201', '20170101', '2016-12-31 23:59:59']
+  ['20170601', '20170701', '2017-06-30 23:59:59', false],
+  ['20170701', '20170801', '2017-07-31 23:59:59', false],
+  ['20170801', '20170901', '2017-08-31 23:59:59', false],
+  ['20170901', '20170913', '2017-09-12 23:59:59', false],
+  ['20170913', '20171001', '2017-09-30 23:59:59', true]
 ].freeze
 
-MONTHLY_FILENAME_PREFIX = '/tmp/proficiency'.freeze
-AGGREGATE_FILENAME = '/tmp/proficiency_20160101_20170101'.freeze
+MONTHLY_FILENAME_PREFIX = '/tmp/proficiency/user_proficiencies'.freeze
+AGGREGATE_FILENAME = '/tmp/proficiency/aggregate_20170601_20171001'.freeze
 
 SLICE_SIZE = 5_000
 
@@ -167,20 +160,43 @@ end
 #   values
 # @param incremental_line [Array] an array giving incremental UserProficiency
 #   values
+# @param already_recorded [Boolean] indicates whether the values were already
+#   counted in user_proficiencies, so only update basic_proficiency_at
 # @return [Array] an array representing the sum of historical_line and
 #   incremental_line
-def increment_user_proficiency(historical_line, incremental_line)
+def increment_user_proficiency(
+  historical_line,
+  incremental_line,
+  already_recorded
+)
   sum = historical_line.clone
 
-  # Add the incremental level counts to the historical level counts.
-  (1..50).each do |index|
-    sum[index] += incremental_line[index]
-  end
-  # Update last_progress_at.
-  sum[51] = incremental_line[51]
-  # Update basic_proficiency_at.
-  if sum[52].nil? && proficient?(sum)
-    sum[52] = incremental_line[51]
+  if already_recorded
+    # These completions are already counted in the user_proficiencies table, so
+    # don't add them to the sum (since the values in sum will later be added to
+    # the values in the table) but they might be enough for them to reach
+    # proficiency in September. If so, update the basic_proficiency_at
+    # timestamp.
+    if sum[52].nil?
+      new_sum = []
+      (1..50).each do |index|
+        new_sum[index] = sum[index] + incremental_line[index]
+      end
+      if proficient?(new_sum)
+        sum[52] = incremental_line[51]
+      end
+    end
+  else
+    # Add the incremental level counts to the historical level counts.
+    (1..50).each do |index|
+      sum[index] += incremental_line[index]
+    end
+    # Update last_progress_at.
+    sum[51] = incremental_line[51]
+    # Update basic_proficiency_at.
+    if sum[52].nil? && proficient?(sum)
+      sum[52] = incremental_line[51]
+    end
   end
 
   sum
@@ -202,7 +218,7 @@ def rollup_monthly_snapshots
   user_proficiency_hash = {}
 
   # Process the CSV files, populating user_proficiency_hash from their data.
-  DATE_RANGES.each do |start_date, end_date, end_timestamp|
+  DATE_RANGES.each do |start_date, end_date, end_timestamp, already_recorded|
     filename = "#{MONTHLY_FILENAME_PREFIX}_#{start_date}_#{end_date}"
 
     puts "PROCESSING #{filename}..."
@@ -231,7 +247,7 @@ def rollup_monthly_snapshots
                    end
 
       user_proficiency_hash[user_id] = increment_user_proficiency(
-        historical, line
+        historical, line, already_recorded
       )
     end
 
