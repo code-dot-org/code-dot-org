@@ -22,7 +22,6 @@ export const stubFakeFeaturedProjectData = [
     publishedAt: '2015-02-04T23:59:59.999-08:00',
     featuredAt: '2016-12-31T23:59:59.999-08:00',
     unfeaturedAt: 'null',
-    featured: true
   },
   {
     projectName: "Featured Project 2",
@@ -31,7 +30,6 @@ export const stubFakeFeaturedProjectData = [
     publishedAt: '2015-02-04T23:59:59.999-08:00',
     featuredAt: '2016-12-31T23:59:59.999-08:00',
     unfeaturedAt: 'null',
-    featured: true
   },
   {
     projectName: "Featured Project 3 has a super extra long name let's see how it looks in the table",
@@ -40,7 +38,6 @@ export const stubFakeFeaturedProjectData = [
     publishedAt: '2015-02-04T23:59:59.999-08:00',
     featuredAt: '2016-12-31T23:59:59.999-08:00',
     unfeaturedAt: 'null',
-    featured: true
   },
   {
     projectName: "Featured Project 4",
@@ -49,7 +46,6 @@ export const stubFakeFeaturedProjectData = [
     publishedAt: '2015-02-04T23:59:59.999-08:00',
     featuredAt: '2016-12-31T23:59:59.999-08:00',
     unfeaturedAt: 'null',
-    featured: true
   },
 ];
 
@@ -61,7 +57,6 @@ export const stubFakeUnfeaturedProjectData = [
     publishedAt: '2015-02-04T23:59:59.999-08:00',
     featuredAt: '2016-12-31T23:59:59.999-08:00',
     unfeaturedAt: '2017-12-31T23:59:59.999-08:00',
-    featured: false
   },
   {
     projectName: "Unfeatured Project 2",
@@ -70,7 +65,6 @@ export const stubFakeUnfeaturedProjectData = [
     publishedAt: '2015-02-04T23:59:59.999-08:00',
     featuredAt: '2016-12-31T23:59:59.999-08:00',
     unfeaturedAt: '2017-12-31T23:59:59.999-08:00',
-    featured: false
   },
   {
     projectName: "Unfeatured Project 3 has a super extra long name let's see how it looks in the table",
@@ -79,7 +73,6 @@ export const stubFakeUnfeaturedProjectData = [
     publishedAt: '2015-02-04T23:59:59.999-08:00',
     featuredAt: '2016-12-31T23:59:59.999-08:00',
     unfeaturedAt: '2017-12-31T23:59:59.999-08:00',
-    featured: false
   },
   {
     projectName: "Unfeatured Project 4",
@@ -88,6 +81,5 @@ export const stubFakeUnfeaturedProjectData = [
     publishedAt: '2015-02-04T23:59:59.999-08:00',
     featuredAt: '2016-12-31T23:59:59.999-08:00',
     unfeaturedAt: '2017-12-31T23:59:59.999-08:00',
-    featured: false
   },
 ];
