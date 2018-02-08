@@ -15,19 +15,11 @@ require 'digest'
 module AWS
   class CloudFormation
     # Hard-coded values for our CloudFormation template.
-    TEMPLATE = ENV['TEMPLATE'] || 'cloud_formation_adhoc_standalone.yml.erb'
+    TEMPLATE = ENV['TEMPLATE'] || raise('Stack template not provided in environment (TEMPLATE=[stack].yml.erb)')
     TEMPLATE_POLICY = TEMPLATE.split('.').tap {|s| s.first << '-policy'}.join('.')
     TEMP_BUCKET = ENV['TEMP_S3_BUCKET'] || 'cf-templates-p9nfb0gyyrpf-us-east-1'
 
     DOMAIN = ENV['DOMAIN'] || 'cdn-code.org'
-
-    # Lookup ACM certificate for ELB and CloudFront SSL.
-    ACM_REGION = 'us-east-1'.freeze
-    CERTIFICATE_ARN = Aws::ACM::Client.new(region: ACM_REGION).
-      list_certificates(certificate_statuses: ['ISSUED']).
-      certificate_summary_list.
-      find {|cert| cert.domain_name == "*.#{DOMAIN}" || cert.domain_name == DOMAIN}.
-      certificate_arn
 
     # A stack name can contain only alphanumeric characters (case sensitive) and hyphens.
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-console-create-stack-parameters.html
@@ -35,7 +27,7 @@ module AWS
 
     SSH_KEY_NAME = 'server_access_key'.freeze
     IMAGE_ID = ENV['IMAGE_ID'] || 'ami-c8580bdf' # ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*
-    INSTANCE_TYPE = rack_env?(:production) ? 'm4.10xlarge' : 't2.large'
+    INSTANCE_TYPE = rack_env?(:production) ? 'm4.10xlarge' : 't2.2xlarge'
     SSH_IP = '0.0.0.0/0'.freeze
     S3_BUCKET = 'cdo-dist'.freeze
     CHEF_KEY = rack_env?(:adhoc) ? 'adhoc/chef' : 'chef'
@@ -55,7 +47,9 @@ module AWS
       end
 
       def stack_name
-        (ENV['STACK_NAME'] || CDO.stack_name || "#{rack_env}#{rack_env != branch && "-#{branch}"}").gsub(STACK_NAME_INVALID_REGEX, '-')
+        name = ENV['STACK_NAME'] || CDO.stack_name
+        name += "-#{branch}" if name == 'adhoc'
+        name.gsub(STACK_NAME_INVALID_REGEX, '-')
       end
 
       # CNAME prefix to use for this stack.
@@ -80,6 +74,16 @@ module AWS
           stacks.first.outputs.
           find {|o| o.output_key == 'AMI'}.
           output_value
+      end
+
+      # Lookup ACM certificate for ELB and CloudFront SSL.
+      ACM_REGION = 'us-east-1'.freeze
+      def certificate_arn
+        Aws::ACM::Client.new(region: ACM_REGION).
+        list_certificates(certificate_statuses: ['ISSUED']).
+          certificate_summary_list.
+          find {|cert| cert.domain_name == "*.#{DOMAIN}" || cert.domain_name == DOMAIN}.
+          certificate_arn
       end
 
       # Validates that the template is valid CloudFormation syntax.
@@ -353,7 +357,6 @@ module AWS
           region: CDO.aws_region,
           environment: rack_env,
           ssh_ip: SSH_IP,
-          certificate_arn: CERTIFICATE_ARN,
           cdn_enabled: !!ENV['CDN_ENABLED'],
           domain: DOMAIN,
           cname: cname,

@@ -5,6 +5,8 @@ var gameLabGroup = require('./GameLabGroup');
 import * as assetPrefix from '../assetManagement/assetPrefix';
 var GameLabWorld = require('./GameLabWorld');
 
+const defaultFrameRate = 30;
+
 /**
  * An instantiable GameLabP5 class that wraps p5 and p5play and patches it in
  * specific places to enable GameLab functionality
@@ -19,6 +21,23 @@ var GameLabP5 = function () {
     'keyPressed', 'keyReleased', 'keyTyped'
   ];
   this.p5specialFunctions = ['preload', 'draw', 'setup'].concat(this.p5eventNames);
+  this.stepSpeed = 1;
+
+  this.setP5FrameRate = () => {
+    if (!this.p5) {
+      return;
+    }
+    if (this.stepSpeed < 1) {
+      // TODO: properly handle overriding frameRate (this implementation doesn't
+      // account for any calls to frameRate() that occur while we are in the
+      // slow mode - we'll need to patch p5 to capture those and update
+      // this.prevFrameRate)
+      this.prevFrameRate = this.p5.frameRate();
+      this.p5.frameRate(1);
+    } else {
+      this.p5.frameRate(this.prevFrameRate || defaultFrameRate);
+    }
+  };
 };
 
 module.exports = GameLabP5;
@@ -451,6 +470,19 @@ GameLabP5.prototype.registerP5EventHandler = function (eventName, handler) {
   this.p5[eventName] = handler;
 };
 
+GameLabP5.prototype.changeStepSpeed = function (stepSpeed) {
+  this.stepSpeed = stepSpeed;
+  this.setP5FrameRate();
+};
+
+GameLabP5.prototype.drawDebugSpriteColliders = function () {
+  if (this.p5) {
+    this.p5.allSprites.forEach(sprite => {
+      sprite.display(true);
+    });
+  }
+};
+
 /**
  * Instantiate a new p5 and start execution
  */
@@ -458,6 +490,7 @@ GameLabP5.prototype.startExecution = function () {
   new window.p5(function (p5obj) {
       this.p5 = p5obj;
       this.p5.useQuadTree(false);
+      this.setP5FrameRate();
       this.gameLabWorld = new GameLabWorld(p5obj);
 
       p5obj.registerPreloadMethod('gamelabPreload', window.p5.prototype);
@@ -602,7 +635,7 @@ GameLabP5.prototype.startExecution = function () {
 
         p5obj.angleMode(p5obj.DEGREES);
         // Set default frameRate to 30 instead of 60.
-        p5obj.frameRate(30);
+        p5obj.frameRate(defaultFrameRate);
 
         if (!this.onPreload()) {
           // If onPreload() returns false, it means that the preload phase has
