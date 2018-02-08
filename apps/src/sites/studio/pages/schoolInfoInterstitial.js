@@ -22,11 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   ReactDOM.render(
     <SchoolInfoInterstitial
-      formUrl={scriptData.formUrl}
-      authTokenName={scriptData.authTokenName}
-      authTokenValue={scriptData.authTokenValue}
-      existingSchoolInfo={scriptData.existingSchoolInfo}
-      afterClose={unmount}
+      scriptData={scriptData}
+      onClose={unmount}
     />,
     mountPoint
   );

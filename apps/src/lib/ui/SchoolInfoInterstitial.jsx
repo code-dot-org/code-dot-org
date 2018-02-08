@@ -38,24 +38,39 @@ const styles = {
 
 export default class SchoolInfoInterstitial extends React.Component {
   static propTypes = {
-    formUrl: PropTypes.string.isRequired,
-    authTokenName: PropTypes.string.isRequired,
-    authTokenValue: PropTypes.string.isRequired,
-    afterClose: PropTypes.func.isRequired,
-    existingSchoolInfo: PropTypes.object.isRequired,
+    // This component is tightly bound to the HAML view that renders it and
+    // populates its props, and similarly to the User update API that
+    // it uses to save entered school info.
+    scriptData: PropTypes.shape({
+      formUrl: PropTypes.string.isRequired,
+      authTokenName: PropTypes.string.isRequired,
+      authTokenValue: PropTypes.string.isRequired,
+      existingSchoolInfo: PropTypes.shape({
+        ncesSchoolId: PropTypes.string,
+        country: PropTypes.string,
+        schoolType: PropTypes.string,
+        schoolName: PropTypes.string,
+        schoolState: PropTypes.string,
+        schoolZip: PropTypes.string,
+        schoolLocation: PropTypes.string,
+      }).isRequired,
+    }).isRequired,
+    onClose: PropTypes.func.isRequired,
   };
 
   static defaultProps = {
-    afterClose: function () {},
+    onClose: function () {},
   };
 
   constructor(props) {
     super(props);
 
-    const {existingSchoolInfo} = this.props;
+    const {existingSchoolInfo} = this.props.scriptData;
     const initialNcesSchoolId = existingSchoolInfo.ncesSchoolId ?
       existingSchoolInfo.ncesSchoolId :
       (
+        existingSchoolInfo.country === 'US'
+        &&
         SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(existingSchoolInfo.schoolType)
         &&
         (existingSchoolInfo.schoolName || existingSchoolInfo.schoolState || existingSchoolInfo.schoolZip)
@@ -88,18 +103,20 @@ export default class SchoolInfoInterstitial extends React.Component {
         "user[school_info_attributes][school_id]": this.state.ncesSchoolId,
       };
     }
+
+    const {formUrl, authTokenName, authTokenValue} = this.props.scriptData;
     $.post({
-      url: this.props.formUrl + '.json',
+      url: formUrl + '.json',
       dataType: "json",
       data: {
         '_method': 'patch',
-        [this.props.authTokenName]: this.props.authTokenValue,
+        [authTokenName]: authTokenValue,
         "user[school_info_attributes][country]": this.state.country,
         "user[school_info_attributes][school_type]": this.state.schoolType,
         ...schoolData,
       },
     }).done(() => {
-      this.props.afterClose();
+      this.props.onClose();
     }).fail(() => {
       if (!this.state.showSchoolInfoUnknownError) {
         // First failure, display error message and give the teacher a chance
@@ -108,13 +125,9 @@ export default class SchoolInfoInterstitial extends React.Component {
       } else {
         // We already failed once, let's not block the teacher any longer.
         // TODO (bbuchanan): Gather metrics on this.
-        this.props.afterClose();
+        this.props.onClose();
       }
     });
-  };
-
-  close = () => {
-    this.props.afterClose();
   };
 
   onCountryChange = (_, event) => {
@@ -144,7 +157,7 @@ export default class SchoolInfoInterstitial extends React.Component {
       <BaseDialog
         useUpdatedStyles
         isOpen={true}
-        handleClose={this.close}
+        handleClose={this.props.onClose}
         uncloseable
       >
         <div style={styles.container}>
