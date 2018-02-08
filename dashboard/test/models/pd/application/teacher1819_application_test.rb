@@ -40,11 +40,11 @@ module Pd::Application
 
     test 'meets criteria says an application meets critera when all YES_NO fields are marked yes' do
       teacher_application = build :pd_teacher1819_application, course: 'csp',
-        response_scores: Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSP.map {|x| [x, 'Yes']}.to_h.to_json
+        response_scores: CRITERIA_SCORE_QUESTIONS_CSP.map {|x| [x, 'Yes']}.to_h.to_json
       assert_equal 'Yes', teacher_application.meets_criteria
 
       teacher_application = build :pd_teacher1819_application, course: 'csd',
-        response_scores: Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSD.map {|x| [x, 'Yes']}.to_h.to_json
+        response_scores: CRITERIA_SCORE_QUESTIONS_CSD.map {|x| [x, 'Yes']}.to_h.to_json
       assert_equal 'Yes', teacher_application.meets_criteria
     end
 
@@ -66,7 +66,7 @@ module Pd::Application
       teacher_application = build :pd_teacher1819_application, response_scores: {
         free_lunch_percent: '5',
         underrepresented_minority_percent: '5',
-        able_to_attend_single: Teacher1819ApplicationConstants::TEXT_FIELDS[:able_to_attend_single],
+        able_to_attend_single: TEXT_FIELDS[:able_to_attend_single],
         csp_which_grades: nil
       }.to_json
 
@@ -76,7 +76,7 @@ module Pd::Application
     test 'autoscore does not override existing scores' do
       application_hash = build :pd_teacher1819_application_hash, {
         committed: YES,
-        able_to_attend_single: YES,
+        able_to_attend_single: TEXT_FIELDS[:able_to_attend_single],
         csp_which_grades: ['12'],
         csp_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].first,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
@@ -137,7 +137,7 @@ module Pd::Application
     test 'autoscore for a CSP application where they should get YES/Points for everything' do
       application_hash = build :pd_teacher1819_application_hash, {
         committed: YES,
-        able_to_attend_single: YES,
+        able_to_attend_single: TEXT_FIELDS[:able_to_attend_single],
         principal_approval: YES,
         schedule_confirmed: YES,
         diversity_recruitment: YES,
@@ -178,7 +178,7 @@ module Pd::Application
     test 'autoscore for a CSP application where they should get NO/No points for everything' do
       application_hash = build :pd_teacher1819_application_hash, {
         committed: Pd::Application::Teacher1819Application.options[:committed].last,
-        able_to_attend_single: NO,
+        able_to_attend_single: TEXT_FIELDS[:no_explain],
         principal_approval: YES,
         schedule_confirmed: NO,
         diversity_recruitment: NO,
@@ -218,7 +218,7 @@ module Pd::Application
     test 'autoscore for a CSD application where they should get YES/Points for everything' do
       application_hash = build(:pd_teacher1819_application_hash, :csd,
         committed: YES,
-        able_to_attend_single: YES,
+        able_to_attend_single: TEXT_FIELDS[:able_to_attend_single],
         principal_approval: YES,
         schedule_confirmed: YES,
         diversity_recruitment: YES,
@@ -257,7 +257,7 @@ module Pd::Application
     test 'autoscore for a CSD application where they should get NO/No points for everything' do
       application_hash = build(:pd_teacher1819_application_hash, :csd,
         committed: Pd::Application::Teacher1819Application.options[:committed].last,
-        able_to_attend_single: NO,
+        able_to_attend_single: TEXT_FIELDS[:no_explain],
         principal_approval: YES,
         schedule_confirmed: NO,
         diversity_recruitment: NO,
@@ -305,7 +305,7 @@ module Pd::Application
       application_hash = build(:pd_teacher1819_application_hash, :csd, :with_multiple_workshops,
         able_to_attend_multiple: [
           "December 11-15, 2017 in Indiana, USA",
-          Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]
+          TEXT_FIELDS[:no_explain]
         ]
       )
 
@@ -318,7 +318,7 @@ module Pd::Application
     test 'autoscore for not able_to_attend_multiple' do
       application_hash = build(:pd_teacher1819_application_hash, :csd, :with_multiple_workshops,
         program: Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.first,
-        able_to_attend_multiple: [Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]]
+        able_to_attend_multiple: [TEXT_FIELDS[:no_explain]]
       )
 
       application = create :pd_teacher1819_application, form_data: application_hash.to_json, regional_partner: nil
@@ -353,7 +353,7 @@ module Pd::Application
 
     test 'application does not meet criteria if unable to attend single workshop' do
       application_hash = build(:pd_teacher1819_application_hash,
-        able_to_attend_single: [Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]],
+        able_to_attend_single: [TEXT_FIELDS[:no_explain]],
         principal_approval: YES,
         schedule_confirmed: YES,
         diversity_recruitment: YES
@@ -366,7 +366,7 @@ module Pd::Application
 
     test 'application does not meet criteria if unable to attend multiple workshops' do
       application_hash = build(:pd_teacher1819_application_hash, :with_multiple_workshops,
-        able_to_attend_multiple: [Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]],
+        able_to_attend_multiple: [TEXT_FIELDS[:no_explain]],
         principal_approval: YES,
         schedule_confirmed: YES,
         diversity_recruitment: YES
