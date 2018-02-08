@@ -1,36 +1,52 @@
 <%
 require 'active_support/core_ext/numeric/bytes'
 require 'cdo/aws/cloudfront'
-unless system("git ls-remote --exit-code origin #{branch} > /dev/null")
-  raise 'Current branch needs to be pushed to GitHub with the same name, otherwise deploy will fail.
-To specify an alternate branch name, run `rake stack:start branch=BRANCH`.'
+
+origin = "'https://github.com/code-dot-org/code-dot-org.git'"
+
+if rack_env?(:adhoc) && RakeUtils.git_branch == branch
+  # Current branch is the one we're deploying to the adhoc server,
+  # so check whether it's up-to-date with the remote before we get any further.
+  unless `git remote show #{origin} 2>&1 | grep \"(up to date)\" | grep \"#{branch}\" | wc -l`.strip.to_i > 0
+    raise 'Current adhoc branch needs to be up-to-date with GitHub branch of the same name, otherwise deploy will fail.
+To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
+  end
+else
+  # Either not adhoc or deploying a different branch than the current local one;
+  # simply check that the branch exists on GitHub before deploying.
+  unless system("git ls-remote --exit-code #{origin} #{branch} > /dev/null")
+    raise 'Current branch needs to be pushed to GitHub with the same name, otherwise deploy will fail.
+  To specify an alternate branch name, run `rake stack:start branch=BRANCH`.'
+  end
 end
 
 commit = ENV['COMMIT'] || `git ls-remote origin #{branch}`.split.first
-
 ami = commit[0..4]
+
+frontends = @frontends = rack_env?(:production) || ENV['FRONTENDS']
+database = @database = ENV['DATABASE']
+load_balancer = @load_balancer = !rack_env?(:adhoc)
+
 unless dry_run
+  update_certs.call unless load_balancer
   update_cookbooks.call
   update_bootstrap_script.call
 end
 
-frontends = %i(production adhoc).include?(rack_env)
-@frontends = frontends
 require 'cdo/cron'
-
-# Branch off existing AMI for adhoc.
-image_id = rack_env?(:adhoc) ? adhoc_image_id : IMAGE_ID
 
 self.log_resource_filter.push %w(FrontendLaunchConfig ASGCount)
 
 # Don't provision daemon where manually-provisioned daemon instances already exist.
 # TODO migrate stacks to cloudformation-provisioned instances.
-self.daemon = true unless %w(
+self.daemon = 'Daemon' unless %w(
   autoscale-prod
   test
   staging
   levelbuilder
 ).include? stack_name
+# Use alternate legacy EC2 instance resource name for standalone-adhoc stack.
+self.daemon = 'WebServer' if rack_env?(:adhoc) && !frontends
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -42,7 +58,7 @@ Parameters:
   Branch:
     Type: String
     Default: <%=branch%>
-<% if environment == :adhoc -%>
+<% if database -%>
   DatabaseUsername:
     Type: String
     Default: master
@@ -63,7 +79,7 @@ Resources:
   WebServerAMI:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: <%=image_id%>
+      ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref InstanceType
       IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile
       SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
@@ -102,6 +118,7 @@ Resources:
     LaunchConfiguration: {Ref: 'FrontendLaunchConfig'}
   %>
 <% end -%>
+<% if load_balancer -%>
   # TODO hourofcode.com and csedweek.org load balancers should be added to this template.
   LoadBalancer:
     Type: AWS::ElasticLoadBalancing::LoadBalancer
@@ -132,8 +149,9 @@ Resources:
       ConnectionDrainingPolicy:
         Enabled: true
         Timeout: 300
-<% if !frontends && daemon -%>
-      Instances: [!Ref Daemon]
+<%   if !frontends && daemon -%>
+      Instances: [!Ref <%=daemon%>]
+<%   end -%>
 <% end -%>
 
 <% if frontends -%>
@@ -363,13 +381,17 @@ Resources:
       RecordSets:
         - Name: <%=app_domain%>
           Type: A
-          AliasTarget:
 <%   if cdn_enabled -%>
+          AliasTarget:
             DNSName: !GetAtt [<%=app%>CDN, DomainName]
             HostedZoneId: Z2FDTNDATAQYW2 # static ID for cloudfront aliases
-<%   else -%>
+<%   elsif load_balancer -%>
+          AliasTarget:
             DNSName: !GetAtt [LoadBalancer, CanonicalHostedZoneName]
             HostedZoneId: !GetAtt [LoadBalancer, CanonicalHostedZoneNameID]
+<%   else -%>
+          TTL: 60
+          ResourceRecords: [!GetAtt <%=daemon%>.PublicIp]
 <%   end -%>
 <%   if cdn_enabled -%>
   <%=app%>CDN:
@@ -399,9 +421,14 @@ Resources:
       RecordSets:
         - Name: "<%=subdomain('origin')%>"
           Type: A
+<%   if load_balancer -%>
           AliasTarget:
             HostedZoneId: !GetAtt [LoadBalancer, CanonicalHostedZoneNameID]
             DNSName: !GetAtt [LoadBalancer, CanonicalHostedZoneName]
+<%   else -%>
+          TTL: 60
+          ResourceRecords: [!GetAtt <%=daemon%>.PublicIp]
+<%   end -%>
 <% end -%>
 <% if frontends -%>
 <%   cache_node_type = rack_env?(:production) ? 'cache.r3.large' : 'cache.t2.micro' -%>
@@ -460,15 +487,15 @@ Resources:
       QueueName: !Sub "activities_dead-${AWS::StackName}"
 <% end -%>
 <% if daemon -%>
-  Daemon:
+  <%=daemon%>:
     Type: AWS::EC2::Instance
     CreationPolicy:
       ResourceSignal:
         Timeout: PT2H
     Properties:
-      ImageId: <%=image_id%>
+      ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref InstanceType
-      IamInstanceProfile: !ImportValue IAM-<%=environment == :adhoc ? 'Frontend' : 'Staging'%>InstanceProfile
+      IamInstanceProfile: !ImportValue IAM-<%=environment == :adhoc ? 'Standalone' : 'Staging'%>InstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
       Tags:
       - Key: Name
@@ -480,7 +507,7 @@ Resources:
             VolumeType: gp2
       UserData:
         Fn::Base64: <%=file('bootstrap_chef_stack.sh.erb',
-          resource_id: 'Daemon',
+          resource_id: daemon,
           node_name: '$STACK',
           run_list: [
             local_mode ? 'recipe[cdo-apps]' : 'role[daemon]'
@@ -496,8 +523,11 @@ Resources:
         GroupSet:
           - !ImportValue VPC-FrontendSecurityGroup
           - !ImportValue VPC-GatewaySecurityGroup
+<%  unless load_balancer -%>
+          - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
+<%  end -%>
 <%end-%>
-<% if environment == :adhoc -%>
+<% if database -%>
   Database:
     Type: AWS::RDS::DBInstance
     Properties:
