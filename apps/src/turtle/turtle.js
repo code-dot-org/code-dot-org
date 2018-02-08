@@ -69,6 +69,8 @@ const JOINT_RADIUS = 4;
 const SMOOTH_ANIMATE_STEP_SIZE = 5;
 const FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
 
+const decorationAnimationWidth = 85;
+const decorationAnimationHeight = 85;
 /**
 * Minimum joint segment length
 */
@@ -223,8 +225,6 @@ var Artist = function () {
   // these get set by init based on skin.
   this.avatarWidth = 0;
   this.avatarHeight = 0;
-  this.decorationAnimationWidth = 85;
-  this.decorationAnimationHeight = 85;
   this.speedSlider = null;
 
   this.ctxAnswer = null;
@@ -364,8 +364,6 @@ Artist.prototype.init = function (config) {
   } else if (this.skin.id === "elsa") {
     this.avatarWidth = 73;
     this.avatarHeight = 100;
-    this.decorationAnimationWidth = 85;
-    this.decorationAnimationHeight = 85;
   } else {
     this.avatarWidth = 70;
     this.avatarHeight = 51;
@@ -747,8 +745,8 @@ Artist.prototype.loadTurtle = function (initializing = true) {
 Artist.prototype.loadDecorationAnimation = function () {
   if (this.skin.id === "elsa") {
     this.decorationAnimationImage.src = this.skin.decorationAnimation;
-    this.decorationAnimationImage.height = this.decorationAnimationHeight;
-    this.decorationAnimationImage.width = this.decorationAnimationWidth;
+    this.decorationAnimationImage.height = decorationAnimationHeight;
+    this.decorationAnimationImage.width = decorationAnimationWidth;
   }
 };
 
