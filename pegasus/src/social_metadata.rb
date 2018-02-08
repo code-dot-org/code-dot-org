@@ -128,8 +128,8 @@ def get_social_metadata_for_page(request)
 
   hoc_mode = DCDO.get("hoc_mode", "default")
 
-  # For now, post-hoc looks the same as the default.
-  if hoc_mode == "post-hoc"
+  # For now, post-hoc and pre-hoc look the same as the default.
+  if ["post-hoc", "pre-hoc"].include? hoc_mode
     hoc_mode = "default"
   end
 

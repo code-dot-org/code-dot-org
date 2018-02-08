@@ -6,9 +6,6 @@ module OPS
 end
 
 Dashboard::Application.routes.draw do
-  resources :featured_projects, only: [:create]
-  delete '/featured_projects/:project_id', controller: 'featured_projects', action: 'destroy_by_project_id'
-
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 
   resource :pairing, only: [:show, :update]
@@ -150,6 +147,8 @@ Dashboard::Application.routes.draw do
   end
 
   get 'projects/featured', to: 'projects#featured'
+  put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
+  put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
 
   get '/projects/public', to: 'projects#public'
   resources :projects, path: '/projects/', only: [:index] do
@@ -399,6 +398,7 @@ Dashboard::Application.routes.draw do
 
       # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
       post 'teachercon_registrations', to: 'teachercon1819_registrations#create'
+      post 'teachercon_partner_registrations', to: 'teachercon1819_registrations#create_partner'
       post 'fit_weekend_registrations', to: 'fit_weekend1819_registrations#create'
 
       post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
@@ -451,6 +451,7 @@ Dashboard::Application.routes.draw do
     end
 
     # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
+    get 'teachercon_registration/partner', to: 'teachercon1819_registration#partner'
     get 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#new'
     get 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#new'
 

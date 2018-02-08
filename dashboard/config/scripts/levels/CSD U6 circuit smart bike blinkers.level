@@ -188,7 +188,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Smart Bike - Blinkers\r\n\r\nUsing your planning guide, wire up the two LEDs that will serve as the blinkers.\r\n\r\n# Do This\r\n\r\nUsing alligator clips, wire, or other conductive material, connect two LEDs to your board, one for each turn signal blinker.\r\n\r\n* Hook up each LED to a different numbered pin on the board.\r\n* Use the `createLed()` block to create an LED object for each blinker.\r\n\r\n_Tip: Make your wiring easier by considering how your blinkers will be mounted when selecting a pin to use._ ",
+    "markdown_instructions": "# Smart Bike - Blinkers\r\n\r\nUsing your planning guide, wire up the two LEDs that will serve as the blinkers. In order to make sure that the blinkers can be mounted at the end of the handlebars, make sure you wire them so that they can stretch out in opposite directions.\r\n\r\n# Do This\r\n\r\nUsing alligator clips, wire, or other conductive material, connect two LEDs to your board, one for each turn signal blinker.\r\n\r\n* Hook up each LED to a different numbered pin on the board.\r\n* Use the `createLed()` block to create an LED object for each blinker.\r\n\r\n_Tip: Make your wiring easier by considering how your blinkers will be mounted when selecting a pin to use._ ",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -230,7 +230,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-15 22:53:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 17:31:54 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-15 22:53:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 17:31:54 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-02-05 17:41:48 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

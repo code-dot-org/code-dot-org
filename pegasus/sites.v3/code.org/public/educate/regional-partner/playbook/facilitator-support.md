@@ -11,7 +11,7 @@ nav: regional_partner_playbook_nav
 #### Facilitators are key to building a sustainable computer science community in your region. They are the bridge between your organization and the teachers you serve and impact the quality of the professional learning programs. The following resources will help you sustain and grow a strong corps of local facilitators.
 
 ## Table of Contents
-- [Booking Facilitators for Local Summer Workshops](#booking)
+- [Announcements](#announce)
 - [Example Facilitator One Pager](#page)
 - [Example Contract](#contract)
 - [Facilitator Recruitment Resources](#recruitment)
@@ -19,8 +19,30 @@ nav: regional_partner_playbook_nav
 - [Facilitator Payments](#pay)
 
 ________________
+<a id="announce"></a>
+## Announcements
+- [New Facilitators Attend Local Summer Workshops](#newfac)
+- [Booking Faciltiators for Local Summer Workshops](#booking)
+
+
+<a id="newfac"></a>
+### New Facilitators Attend Local Summer Workshops
+Due to an increase in new facilitators this year, new facilitators for Group 1 and 2 partners will be attending the local summer workshops instead of TeacherCon. A few key points:
+
+- All new facilitators (regardless of group) will still attend one of the two Code.org-hosted Facilitator-in-Training (FiT) weekends this summer, where they'll learn how to co-lead academic year workshops. This means everyone will still have the chance to meet Code.org staff in person, and get a feel for Code.org events.
+- We think it's important for new facilitators to meet and learn alongside the teachers who will be in their cohort**. The summer is an excellent time for them to start building those strong relationships locally.
+- New facilitators won’t count towards filling your teacher cohort. 
+- Code.org will cover all cost of travel for these facilitators.
+- Code.org will cover stipends, if applicable: 
+	- Novice facilitators do not receive payment from code.org for attending the 5-day workshop, because they're attending as teachers. 
+	- Apprentice facilitators will receive a $1000 stipend for attending (paid by code.org). 
+Partners are responsible for paying their lead facilitators for the week.
+
+**If your summer workshop is scheduled after the last Facilitator in Training (FiT) Weekend (July 28 - 29, 2018), we will find an alternate summer workshop date and location that falls before that training. This way, your facilitators will still experience the five-day workshop before joining the FiT weekend. If you have any questions or concerns, please contact your Regional Manager. 
+
+<br>
 <a id="booking"></a>
-## Booking Facilitators for Local Summer Workshops
+### Booking Facilitators for Local Summer Workshops
 For those who need to book extra facilitators beyond your current capacity for local summer workshops.
 
 If you:

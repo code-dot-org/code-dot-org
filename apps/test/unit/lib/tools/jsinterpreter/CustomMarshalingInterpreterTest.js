@@ -84,7 +84,7 @@ describe("The CustomMarshalingInterpreter", () => {
         requiredMethod: 'draw',
       }];
       const nativeValue = [1,2,3];
-      nativeValue.draw = function (){
+      nativeValue.draw = function () {
         return this.join(',');
       };
       value = makeAssertableObj(interpreter, nativeValue);
