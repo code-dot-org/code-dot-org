@@ -5,11 +5,25 @@ social:
   "og:title": "Does your school teach computer science?"
   "og:description": "Expand computer science at your school or district. Join the thousands of schools who have already incorporated high quality computer science education into their curriculum and provide opportunities for the students in your local area."
 ---
+- require 'country_codes'
+- require 'state_abbr'
 %script{src: "https://cdn.optimizely.com/js/400912536.js"}
 - census_announcement = DCDO.get('census_announcement', nil)
 - if 'us' != hoc_detect_country
   - census_announcement ||= {}
   - census_announcement['hide_map'] = 'true'
+- if dashboard_user && dashboard_user[:school_info_id]
+  - census_announcement ||= {}
+  - census_announcement['user_name'] = dashboard_user[:name] if dashboard_user[:name]
+  - census_announcement['user_email'] = dashboard_user[:email] if dashboard_user[:email]
+  - census_announcement['is_teacher'] = 'true' if dashboard_user[:user_type] == 'teacher'
+  - school_info = DASHBOARD_DB[:school_infos].where(id: dashboard_user[:school_info_id]).first
+  - census_announcement['school_country'] = country_name_from_code(school_info[:country]) if school_info[:country]
+  - census_announcement['school_id'] = school_info[:school_id] if school_info[:school_id]
+  - census_announcement['school_type'] = school_info[:school_type].capitalize if school_info[:school_type]
+  - census_announcement['school_name'] = school_info[:school_name] if school_info[:school_name]
+  - census_announcement['school_state'] = get_us_state_from_abbr(school_info[:state], true) if school_info[:state]
+  - census_announcement['school_zip'] = school_info[:zip] if school_info[:zip]
 
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: asset_path("js/#{js_locale}/common_locale.js")}

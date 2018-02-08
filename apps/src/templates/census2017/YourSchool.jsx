@@ -37,6 +37,15 @@ class YourSchool extends Component {
     alertHeading: PropTypes.string,
     alertText: PropTypes.string,
     alertUrl: PropTypes.string,
+    userName: PropTypes.string,
+    userEmail: PropTypes.string,
+    isTeacher: PropTypes.bool,
+    schoolCountry: PropTypes.string,
+    schoolId: PropTypes.string,
+    schoolType: PropTypes.string,
+    schoolName: PropTypes.string,
+    schoolState: PropTypes.string,
+    schoolZip: PropTypes.string,
     hideMap: PropTypes.bool
   };
 
@@ -94,7 +103,17 @@ class YourSchool extends Component {
              <ProtectedStatefulDiv ref="map"/>
            </div>
         )}
-        <CensusForm/>
+        <CensusForm
+          userName={this.props.userName}
+          userEmail={this.props.userEmail}
+          isTeacher={this.props.isTeacher}
+          schoolCountry={this.props.schoolCountry}
+          schoolId={this.props.schoolId}
+          schoolType={this.props.schoolType}
+          schoolName={this.props.schoolName}
+          schoolState={this.props.schoolState}
+          schoolZip={this.props.schoolZip}
+        />
       </div>
     );
   }
