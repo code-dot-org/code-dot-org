@@ -170,7 +170,17 @@ class Game < ActiveRecord::Base
   end
 
   def supports_sharing?
-    [TURTLE, FLAPPY, BOUNCE, STUDIO, STUDIO_EC, APPLAB, CRAFT, GAMELAB, WEBLAB].include? app
+    [
+      TURTLE,
+      FLAPPY,
+      BOUNCE,
+      STUDIO,
+      STUDIO_EC,
+      APPLAB,
+      CRAFT,
+      GAMELAB,
+      WEBLAB,
+    ].include? app
   end
 
   def sharing_filtered?

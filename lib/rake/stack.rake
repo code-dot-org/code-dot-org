@@ -3,7 +3,7 @@ namespace :stack do
     require_relative '../../deployment'
     CDO.chef_local_mode = rack_env?(:adhoc) ? !ENV['CHEF_SERVER'] : false
     ENV['TEMPLATE'] ||= 'cloud_formation_stack.yml.erb'
-    ENV['CDN_ENABLED'] ||= '1'
+    ENV['CDN_ENABLED'] ||= '1' unless rack_env?(:adhoc)
     ENV['DOMAIN'] ||= rack_env?(:adhoc) ? 'cdn-code.org' : 'code.org'
     require 'cdo/aws/cloud_formation'
   end

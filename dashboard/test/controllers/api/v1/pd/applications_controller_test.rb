@@ -300,6 +300,26 @@ module Api::V1::Pd
       ).values.any? {|x| response_csv.first.exclude?(x)}
     end
 
+    test 'cohort view returns applications that are accepted and withdrawn' do
+      expected_applications = []
+      (Pd::Application::ApplicationBase.statuses.values - ['interview']).each do |status|
+        application = create :pd_teacher1819_application, course: 'csp'
+        application.update_column(:status, status)
+        if ['accepted', 'withdrawn'].include? status
+          expected_applications << application
+        end
+      end
+
+      sign_in @workshop_admin
+      get :cohort_view, params: {role: 'csp_teachers'}
+      assert_response :success
+
+      assert_equal(
+        expected_applications.map {|application| application[:id]}.sort,
+        JSON.parse(@response.body).map {|application| application['id']}.sort
+      )
+    end
+
     test 'cohort view returns expected columns for a teacher' do
       time = Date.new(2017, 3, 15)
 
