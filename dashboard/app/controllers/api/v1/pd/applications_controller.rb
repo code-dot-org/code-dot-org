@@ -65,7 +65,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   # GET /api/v1/pd/applications/cohort_view?role=:role&regional_partner_filter=:regional_partner_name
   def cohort_view
-    applications = get_applications_by_role(params[:role].to_sym).where(status: 'accepted')
+    applications = get_applications_by_role(params[:role].to_sym).where(status: ['accepted', 'withdrawn'])
 
     unless params[:regional_partner_filter].nil? || params[:regional_partner_filter] == 'all'
       applications = applications.where(regional_partner_id: params[:regional_partner_filter] == 'none' ? nil : params[:regional_partner_filter])
