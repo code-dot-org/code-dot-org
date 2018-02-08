@@ -63,3 +63,11 @@ exports.getSubtypeForSkin = function (skinId) {
 
   return require('./subtype');
 };
+
+/**
+ * Rotate the given 2d array.
+ * @param data
+ */
+exports.rotate = function (data) {
+  return data[0].map((x, i) => data.map(x => x[data.length - i - 1]));
+};
