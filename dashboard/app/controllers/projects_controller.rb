@@ -147,8 +147,9 @@ class ProjectsController < ApplicationController
 
   def combine_projects_and_featured_projects_data
     storage_apps = "pegasus_#{CDO.rack_env}__storage_apps".to_sym
-    project_featured_project_combo_data = DASHBOARD_DB[:featured_projects].select(*project_and_featured_project_fields).
-    join(storage_apps, id: :storage_app_id).map
+    project_featured_project_combo_data = DASHBOARD_DB[:featured_projects].
+      select(*project_and_featured_project_fields).
+      join(storage_apps, id: :storage_app_id).all
     extract_data_for_tables(project_featured_project_combo_data)
   end
 
@@ -160,7 +161,7 @@ class ProjectsController < ApplicationController
       featured_project_row = {
         projectName: project_details_value['name'],
         channel: channel,
-        type: project_details_value['projectType'],
+        type: project_details[:projectType],
         publishedAt: project_details[:published_at],
         thumbnailUrl: project_details_value['thumbnailUrl'],
         featuredAt: project_details[:featured_at],
