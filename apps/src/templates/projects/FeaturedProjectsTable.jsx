@@ -78,11 +78,32 @@ const nameFormatter = (projectName, {rowData}) => {
   return <a style={tableLayoutStyles.link} href={url} target="_blank">{projectName}</a>;
 };
 
+const unfeature = (channel) => {
+  var url = `/featured_projects/${channel}/unfeature`;
+  $.ajax({
+    url: url,
+    type:'PUT',
+    dataType:'json',
+  }).done(handleSuccess).fail(handleUnfeatureFailure);
+};
+
+const handleSuccess = () => {
+  window.location.reload(true);
+};
+
+const handleUnfeatureFailure = () => {
+  alert("Shucks. Something went wrong - this project is still featured.");
+};
+
+const handleFeatureFailure = () => {
+  alert("Shucks. Something went wrong - this project wasn't featured.");
+};
+
 const actionsFormatterFeatured = (actions, {rowData}) => {
   return (
     <QuickActionsCell>
       <PopUpMenu.Item
-        onClick={() => {}}
+        onClick={() => unfeature(rowData.channel)}
       >
         {i18n.stopFeaturing()}
       </PopUpMenu.Item>
@@ -90,11 +111,20 @@ const actionsFormatterFeatured = (actions, {rowData}) => {
   );
 };
 
+const feature = (channel) => {
+  var url = `/featured_projects/${channel}/feature`;
+  $.ajax({
+    url: url,
+    type:'PUT',
+    dataType:'json',
+  }).done(handleSuccess).fail(handleFeatureFailure);
+};
+
 const actionsFormatterUnfeatured = (actions, {rowData}) => {
   return (
     <QuickActionsCell>
       <PopUpMenu.Item
-        onClick={() => {}}
+        onClick={() => feature(rowData.channel)}
       >
         {i18n.featureAgain()}
       </PopUpMenu.Item>
