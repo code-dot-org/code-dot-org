@@ -137,7 +137,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Back to Mad Libs: To get started, set up the two screens for your Mad Libs app (Click to show full instructions)",
-    "markdown_instructions": "# Back to Mad Libs: Design Your App\r\nNow that you've had some practice getting user text and making new strings with it, you're ready to turn your How-to Mad Libs into an app. To get started, you'll set up the layout. There are two main screens:\r\n\r\n__Screen 1: Collect User Input__  \r\n- On this screen, you'll use __text labels__ and __text input__ design elements to set up the different words you want the user to provide.\r\n- A __Next__ button takes you to Screen 2 to view the full Mad Libs.\r\n\r\n__Screen 2: View Mad Libs__  \r\n- On this screen, you'll use the __text area__ design element to create the space where the user's completed Mad Libs will be displayed.\r\n- A __Play again__ button takes you to back Screen 1.\r\n<br>\r\n<br>\r\n\r\n\r\n\r\n<table>\r\n<tr>\r\n<td>\r\n<strong>Screen 1:</strong>\r\n</td>\r\n<td>\r\n<strong>Screen 2:</strong>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<img src=\"https://images.code.org/ccea092b516047dff82fafa50b47bcc7-image-1447974038265.00.17 PM.png\" style=\"width:150px;float:right;\">\r\n</td>\r\n<td>\r\n<img src=\"https://images.code.org/0f832e6314ad98170a3cddb317d26e41-image-1445898480304.27.45.png\" style=\"width:151px;float:right;\">\r\n</td>\r\n</tr>\r\n</table>\r\n\r\n# Do This:\r\n\r\n- Create the two screens for your app, including the design elements in each one.\r\n- Requirement: Request at least 3 separate words from the user on Screen 1.\r\n- Create the event handlers for the __Next__ and __Play again__ buttons to respond to clicks.\r\n- Use `setScreen` in the event handlers to get the screen navigation working.\r\n",
+    "markdown_instructions": "# Back to Mad Libs: Design Your App\r\nNow that you've had some practice getting user text and making new strings with it, you're ready to turn your How-to Mad Libs into an app. To get started, you'll set up the layout. There are two main screens:\r\n\r\n__Screen 1: Collect User Input__  \r\n- On this screen, you'll use __text labels__ and __text input__ design elements to set up the different words you want the user to provide.\r\n- A __Next__ button takes you to Screen 2 to view the full Mad Libs.\r\n\r\n__Screen 2: View Mad Libs__  \r\n- On this screen, you'll use the __text area__ design element to create the space where the user's completed Mad Libs will be displayed.\r\n- A __Play again__ button takes you back to Screen 1.\r\n<br>\r\n<br>\r\n\r\n\r\n\r\n<table>\r\n<tr>\r\n<td>\r\n<strong>Screen 1:</strong>\r\n</td>\r\n<td>\r\n<strong>Screen 2:</strong>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<img src=\"https://images.code.org/ccea092b516047dff82fafa50b47bcc7-image-1447974038265.00.17 PM.png\" style=\"width:150px;float:right;\">\r\n</td>\r\n<td>\r\n<img src=\"https://images.code.org/0f832e6314ad98170a3cddb317d26e41-image-1445898480304.27.45.png\" style=\"width:151px;float:right;\">\r\n</td>\r\n</tr>\r\n</table>\r\n\r\n# Do This:\r\n\r\n- Create the two screens for your app, including the design elements in each one.\r\n- Requirement: Request at least 3 separate words from the user on Screen 1.\r\n- Create the event handlers for the __Next__ and __Play again__ buttons to respond to clicks.\r\n- Use `setScreen` in the event handlers to get the screen navigation working.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -168,9 +168,22 @@
     "encrypted_examples": "ZiPKWcq+qaAjBa14UzorDk/7llVaj+qHbe29PKYUJBXgt9A14wfzlPfbaJqG\nHb7d\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-02-07 23:31:00 +0000\",\"changed\":[\"notes\",\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

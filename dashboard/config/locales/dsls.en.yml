@@ -509,6 +509,9 @@ en:
       Begin planning your project:
         description here: description here
         title: title
+      Begin planning your project_2018:
+        description here: description here
+        title: title
       Big Data in the CSP Framework: {}
       'Big Picture: If-statements':
         description here: description here
@@ -1990,6 +1993,9 @@ en:
       Prepare for your presentation:
         description here: description here
         title: title
+      Prepare for your presentation_2018:
+        description here: description here
+        title: title
       Processing Arrays: {}
       'Project Breakdown: Building a Canvas Painter': {}
       'Project Breakdown: Clicker Game': {}
@@ -2870,6 +2876,7 @@ en:
         Good Job!: Good Job!
       courseF_external_ramp14: {}
       courseF_external_variableConstant: {}
+      courseF_external_variableConstant_2018: {}
       courseF_firstFunctions_map:
         description here: description here
         title: title
@@ -7995,7 +8002,26 @@ en:
         The bee won't collect enough honey from the flowers.: The bee won't collect enough honey from the flowers.
         The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.
         The same program will work to solve this puzzle, too.: The same program will work to solve this puzzle, too.
+      courseE_multi_bee_functions_predict1_2018:
+        Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
+        ? Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
+        : Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
+        I don't know.: I don't know.
+        Incorrect. The function is programmed to handle any amount of honey over 0.: Incorrect. The function is programmed to handle any amount of honey over 0.
+        The bee will try to collect too much honey from the flowers.: The bee will try to collect too much honey from the flowers.
+        The bee won't collect enough honey from the flowers.: The bee won't collect enough honey from the flowers.
+        The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.
+        The same program will work to solve this puzzle, too.: The same program will work to solve this puzzle, too.
       courseE_multi_farmer_functions11_predict:
+        Correct!: Correct!
+        Incorrect.  The farmer does not call "check and pick" until she gets to the corn.: Incorrect.  The farmer does not call "check and pick" until she gets to the corn.
+        Incorrect. The farmer only makes one turn, and ends at the corn.: Incorrect. The farmer only makes one turn, and ends at the corn.
+        Look at the functions defined below.  What will the farmer harvest?: Look at the functions defined below.  What will the farmer harvest?
+        The farmer will harvest all of the pumpkins.: The farmer will harvest all of the pumpkins.
+        The farmer will harvest the corn.: The farmer will harvest the corn.
+        The farmer will harvest the lettuce.: The farmer will harvest the lettuce.
+        The farmer will harvest two pumpkins.: The farmer will harvest two pumpkins.
+      courseE_multi_farmer_functions11_predict_2018:
         Correct!: Correct!
         Incorrect.  The farmer does not call "check and pick" until she gets to the corn.: Incorrect.  The farmer does not call "check and pick" until she gets to the corn.
         Incorrect. The farmer only makes one turn, and ends at the corn.: Incorrect. The farmer only makes one turn, and ends at the corn.
@@ -8059,7 +8085,25 @@ en:
         'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. ': 'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. '
         The artist will draw a straight line that increases in thickness from one side of the play space to the other.: The artist will draw a straight line that increases in thickness from one side of the play space to the other.
         What will happen when you click "Run"?: What will happen when you click "Run"?
+      courseF_multi_artist_for10_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.: Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.
+        Incorrect. The artist turns between iterations of the `for` loop.: Incorrect. The artist turns between iterations of the `for` loop.
+        The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.: The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.
+        'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. ': 'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. '
+        The artist will draw a straight line that increases in thickness from one side of the play space to the other.: The artist will draw a straight line that increases in thickness from one side of the play space to the other.
+        What will happen when you click "Run"?: What will happen when you click "Run"?
       courseF_multi_artist_fwp2_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  Using parameters lets you use a single function to create different outcomes.: Incorrect.  Using parameters lets you use a single function to create different outcomes.
+        The artist will use the same function to draw two different sized boxes.: The artist will use the same function to draw two different sized boxes.
+        The artist will use two different functions to draw the same sized box twice.: The artist will use two different functions to draw the same sized box twice.
+        The artist will use two different functions to draw two different sized boxes.: The artist will use two different functions to draw two different sized boxes.
+        The program uses parameters to allow a single function to create two different size boxes.: The program uses parameters to allow a single function to create two different size boxes.
+        What will happen when you run this program?: What will happen when you run this program?
+      courseF_multi_artist_fwp2_predict1_2018:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect.  Using parameters lets you use a single function to create different outcomes.: Incorrect.  Using parameters lets you use a single function to create different outcomes.
@@ -8092,7 +8136,29 @@ en:
         The artist will draw a triangle with 50 pixel sides.: The artist will draw a triangle with 50 pixel sides.
         The artist will draw three open sides with 50 degree turns.: The artist will draw three open sides with 50 degree turns.
         We have set the variable "length" to 50.  What will happen when you click "Run"?: We have set the variable "length" to 50.  What will happen when you click "Run"?
+      courseF_multi_artist_variables3a_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.: Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.
+        Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.: Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.
+        ? The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.
+        : The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.
+        The artist will draw a 50-sided polygon with 3 pixel sides.: The artist will draw a 50-sided polygon with 3 pixel sides.
+        The artist will draw a triangle with 50 pixel sides.: The artist will draw a triangle with 50 pixel sides.
+        The artist will draw three open sides with 50 degree turns.: The artist will draw three open sides with 50 degree turns.
+        We have set the variable "length" to 50.  What will happen when you click "Run"?: We have set the variable "length" to 50.  What will happen when you click "Run"?
       courseF_multi_bee_conditionals1_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
+        : If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
+        'The bee will move to the cloud and then do nothing, no matter what. ': 'The bee will move to the cloud and then do nothing, no matter what. '
+        'The bee will move to the cloud and try to get nectar, no matter what. ': 'The bee will move to the cloud and try to get nectar, no matter what. '
+      courseF_multi_bee_conditionals1_predict1_2018:
         Correct!: Correct!
         I don't know.: I don't know.
         ? If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
@@ -8114,7 +8180,26 @@ en:
         The bee will get nectar at each flower, otherwise it will make honey.: The bee will get nectar at each flower, otherwise it will make honey.
         The bee will try to get honey from both flowers and honeycomb.: The bee will try to get honey from both flowers and honeycomb.
         The bee will try to get nectar from both flowers and honeycomb.: The bee will try to get nectar from both flowers and honeycomb.
+      courseF_multi_bee_conditionals7_predict2_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        ? Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there's not a flower (therefore a honeycomb.).
+        : Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there's not a flower (therefore a honeycomb.).
+        Look carefully at the code below.  What do you think will happen after you click "Run"?: Look carefully at the code below.  What do you think will happen after you click "Run"?
+        The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey.: The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey.
+        The bee will get nectar at each flower, otherwise it will make honey.: The bee will get nectar at each flower, otherwise it will make honey.
+        The bee will try to get honey from both flowers and honeycomb.: The bee will try to get honey from both flowers and honeycomb.
+        The bee will try to get nectar from both flowers and honeycomb.: The bee will try to get nectar from both flowers and honeycomb.
       courseF_multi_bee_for3_predict1:
+        Correct!: Correct!
+        Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
+        Read the code below.  What will happen when you click "Run"?: Read the code below.  What will happen when you click "Run"?
+        The bee will move forward and collect all of the nectar from every flower, except for one.: The bee will move forward and collect all of the nectar from every flower, except for one.
+        'The bee will move forward and collect all of the nectar from every flower. ': 'The bee will move forward and collect all of the nectar from every flower. '
+        'The bee will move forward and collect one nectar from each flower. ': 'The bee will move forward and collect one nectar from each flower. '
+        'The bee will move forward and try to collect more nectar than is in the flowers. ': 'The bee will move forward and try to collect more nectar than is in the flowers. '
+      courseF_multi_bee_for3_predict1_2018:
         Correct!: Correct!
         Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
         Read the code below.  What will happen when you click "Run"?: Read the code below.  What will happen when you click "Run"?
@@ -8152,7 +8237,26 @@ en:
         The pirate would say, "Pleasure to meet you, Ali." and that is all.: The pirate would say, "Pleasure to meet you, Ali." and that is all.
         The pirate would say, "Pleasure to meet you." and that is all.: The pirate would say, "Pleasure to meet you." and that is all.
         What would happen if the user entered the name "Ali" at the prompt?: What would happen if the user entered the name "Ali" at the prompt?
+      courseF_multi_playlab_variables4c_predictive1_2018:
+        'Correct. ': 'Correct. '
+        I don't know.: I don't know.
+        'Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate''s sentence. ': 'Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate''s sentence. '
+        Incorrect. Notice that the `join` block inserts the provided name into the pirate's sentence.: Incorrect. Notice that the `join` block inserts the provided name into the pirate's sentence.
+        The pirate would say, "Ali" and that is all.: The pirate would say, "Ali" and that is all.
+        The pirate would say, "Pleasure to meet you, Ali." and that is all.: The pirate would say, "Pleasure to meet you, Ali." and that is all.
+        The pirate would say, "Pleasure to meet you." and that is all.: The pirate would say, "Pleasure to meet you." and that is all.
+        What would happen if the user entered the name "Ali" at the prompt?: What would happen if the user entered the name "Ali" at the prompt?
       coursee_prediction_artistfunction2:
+        Correct!: Correct!
+        Incorrect. The loop turns 90 degrees between calls to "draw polygon".: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
+        Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".: Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".
+        Incorrect. The program does not call "draw line of polygons".: Incorrect. The program does not call "draw line of polygons".
+        The artist will draw four squares in a window pattern.: The artist will draw four squares in a window pattern.
+        The artist will draw four squares on top of one another.: The artist will draw four squares on top of one another.
+        The artist will draw only one line of squares.: The artist will draw only one line of squares.
+        The artist will solve the puzzle correctly.: The artist will solve the puzzle correctly.
+        What will happen when you press the "Run" button?: What will happen when you press the "Run" button?
+      coursee_prediction_artistfunction2_2018:
         Correct!: Correct!
         Incorrect. The loop turns 90 degrees between calls to "draw polygon".: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
         Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".: Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".
