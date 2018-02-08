@@ -27,6 +27,7 @@ Feature: Droplet levels work as expected
     And the Droplet ACE text is "radioButton()"
     And there is a Tooltipster tooltip with text "unique identifier"
 
+  @no_safari
   Scenario: Open editcode level and verify parameter autocomplete replaces quoted text
     When I rotate to landscape
     And I ensure droplet is in text mode
