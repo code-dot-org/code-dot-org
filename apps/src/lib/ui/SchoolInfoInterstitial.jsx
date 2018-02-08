@@ -94,16 +94,26 @@ export default class SchoolInfoInterstitial extends React.Component {
 
   handleSchoolInfoSubmit = () => {
     let schoolData;
-    if (this.state.ncesSchoolId === '-1') {
-      schoolData = {
-        "user[school_info_attributes][school_name]": this.state.schoolName,
-        "user[school_info_attributes][school_state]": this.state.schoolState,
-        "user[school_info_attributes][school_zip]": this.state.schoolZip,
-        "user[school_info_attributes][full_address]": this.state.schoolLocation,
-      };
+    if (this.state.schoolType === '') {
+      schoolData = {};
+    } else if (SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(this.state.schoolType)) {
+      if (this.state.ncesSchoolId === '-1') {
+        // I couldn't find my school.
+        schoolData = {
+          "user[school_info_attributes][school_name]": this.state.schoolName,
+          "user[school_info_attributes][school_state]": this.state.schoolState,
+          "user[school_info_attributes][school_zip]": this.state.schoolZip,
+          "user[school_info_attributes][full_address]": this.state.schoolLocation,
+        };
+      } else {
+        schoolData = {
+          "user[school_info_attributes][school_id]": this.state.ncesSchoolId,
+        };
+      }
     } else {
       schoolData = {
-        "user[school_info_attributes][school_id]": this.state.ncesSchoolId,
+        "user[school_info_attributes][school_name]": this.state.schoolName,
+        "user[school_info_attributes][full_address]": this.state.schoolLocation,
       };
     }
 
