@@ -79,7 +79,7 @@ function handleClipPathChanges() {
 }
 
 function wrapExistingClipPaths() {
-  $('[clip-path]').each(function (i, image){
+  $('[clip-path]').each(function (i, image) {
     if ($(image).attr('class') === PEGMAN_ORDERING_CLASS) {
       // Special case for Farmer, whose class is used for element ordering
       $(image).attr('class', '');

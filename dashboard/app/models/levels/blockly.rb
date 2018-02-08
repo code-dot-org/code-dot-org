@@ -217,11 +217,20 @@ class Blockly < Level
       app_options[:skinId] = skin_id if skin_id
 
       # Set some values that Blockly expects on the root of its options string
+
+      droplet = game.try(:uses_droplet?)
+      #TODO(ram) normalize or remove the edit_code field
+      if edit_code == "false"
+        droplet = false
+      elsif edit_code == true
+        droplet = true
+      end
+
       app_options.merge!(
         {
           baseUrl: Blockly.base_url,
           app: game.try(:app),
-          droplet: game.try(:uses_droplet?),
+          droplet: droplet,
           pretty: Rails.configuration.pretty_apps ? '' : '.min',
         }
       )

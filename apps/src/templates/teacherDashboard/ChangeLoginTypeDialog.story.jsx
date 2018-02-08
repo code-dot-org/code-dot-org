@@ -1,6 +1,7 @@
 import React from 'react';
 import ChangeLoginTypeDialog from "./ChangeLoginTypeDialog";
 import {Provider} from 'react-redux';
+import {action} from '@storybook/addon-actions';
 import {combineReducers, createStore} from 'redux';
 import teacherSections, {
   setSections,
@@ -28,7 +29,7 @@ export default storybook => storybook
           <Provider store={store}>
             <ChangeLoginTypeDialog
               {...unModalForStorybook}
-              handleClose={storybook.action('close')}
+              handleClose={action('close')}
               sectionId={11}
             />
           </Provider>
@@ -46,7 +47,7 @@ export default storybook => storybook
           <Provider store={store}>
             <ChangeLoginTypeDialog
               {...unModalForStorybook}
-              handleClose={storybook.action('close')}
+              handleClose={action('close')}
               sectionId={11}
             />
           </Provider>
@@ -63,7 +64,7 @@ export default storybook => storybook
           <Provider store={store}>
             <ChangeLoginTypeDialog
               {...unModalForStorybook}
-              handleClose={storybook.action('close')}
+              handleClose={action('close')}
               sectionId={12}
             />
           </Provider>
@@ -81,7 +82,7 @@ export default storybook => storybook
           <Provider store={store}>
             <ChangeLoginTypeDialog
               {...unModalForStorybook}
-              handleClose={storybook.action('close')}
+              handleClose={action('close')}
               sectionId={12}
             />
           </Provider>
@@ -98,7 +99,7 @@ export default storybook => storybook
           <Provider store={store}>
             <ChangeLoginTypeDialog
               {...unModalForStorybook}
-              handleClose={storybook.action('close')}
+              handleClose={action('close')}
               sectionId={307}
             />
           </Provider>
@@ -116,7 +117,7 @@ export default storybook => storybook
           <Provider store={store}>
             <ChangeLoginTypeDialog
               {...unModalForStorybook}
-              handleClose={storybook.action('close')}
+              handleClose={action('close')}
               sectionId={307}
             />
           </Provider>
@@ -133,7 +134,7 @@ export default storybook => storybook
           <Provider store={store}>
             <ChangeLoginTypeDialog
               {...unModalForStorybook}
-              handleClose={storybook.action('close')}
+              handleClose={action('close')}
               sectionId={14}
             />
           </Provider>
@@ -151,7 +152,7 @@ export default storybook => storybook
           <Provider store={store}>
             <ChangeLoginTypeDialog
               {...unModalForStorybook}
-              handleClose={storybook.action('close')}
+              handleClose={action('close')}
               sectionId={14}
             />
           </Provider>

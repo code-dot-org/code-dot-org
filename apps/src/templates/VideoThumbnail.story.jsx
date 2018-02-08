@@ -4,9 +4,8 @@ import VideoThumbnail from './VideoThumbnail';
 export default storybook => {
   storybook
     .storiesOf('VideoThumbnail', module)
-    .addWithInfo(
+    .add(
       'Overview',
-      'This is the VideoThumbnail component.',
       () => (
         <VideoThumbnail
           video={{
